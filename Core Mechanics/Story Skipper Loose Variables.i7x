@@ -611,8 +611,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is CampusLoversProgressTurn;
 		-- "CampusLoversTrackingVariable":
 			now NumberVarValue entry is CampusLoversTrackingVariable;
-		-- "campuswanderfight":
-			now NumberVarValue entry is campuswanderfight;
 		-- "candytalk":
 			now NumberVarValue entry is candytalk;
 		-- "CandyUrikInteraction":
@@ -663,8 +661,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is centrallib;
 		-- "cerberusarousal":
 			now NumberVarValue entry is cerberusarousal;
-		-- "cerbfight":
-			now NumberVarValue entry is cerbfight;
 		-- "cerbmaulcount":
 			now NumberVarValue entry is cerbmaulcount;
 		-- "cfgmode":
@@ -689,8 +685,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is Cheesecakemode;
 		-- "cheetahmate":
 			now NumberVarValue entry is cheetahmate;
-		-- "choclabfight":
-			now NumberVarValue entry is choclabfight;
 		-- "ChrisPlayerOffspring":
 			now NumberVarValue entry is ChrisPlayerOffspring;
 		-- "Christyquest":
@@ -821,8 +815,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is doggyboned;
 		-- "doggyness":
 			now NumberVarValue entry is doggyness;
-		-- "dolcastlefight":
-			now NumberVarValue entry is dolcastlefight;
 		-- "dolinfloss":
 			now NumberVarValue entry is dolinfloss;
 		-- "dollfound":
@@ -833,8 +825,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is dolphinconsent;
 		-- "dolphindefeat":
 			now NumberVarValue entry is dolphindefeat;
-		-- "dolphinflatablefight":
-			now NumberVarValue entry is dolphinflatablefight;
 		-- "dolphinmode":
 			now NumberVarValue entry is dolphinmode;
 		-- "dolphintricked":
@@ -1753,8 +1743,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is laundryProgress;
 		-- "lavalamplick":
 			now NumberVarValue entry is lavalamplick;
-		-- "lbfight":
-			now NumberVarValue entry is lbfight;
 		-- "LectureCheck":
 			now NumberVarValue entry is LectureCheck;
 		-- "Leonardtimer":
@@ -1765,8 +1753,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is lessontime;
 		-- "lgnumber":
 			now NumberVarValue entry is lgnumber;
-		-- "libfight":
-			now NumberVarValue entry is libfight;
 		-- "libidomemory":
 			now NumberVarValue entry is libidomemory;
 		-- "libstealth":
@@ -1879,8 +1865,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is midnightsighted;
 		-- "MiltonRelationship":
 			now NumberVarValue entry is MiltonRelationship;
-		-- "minilabfight":
-			now NumberVarValue entry is minilabfight;
 		-- "missskip":
 			now NumberVarValue entry is missskip;
 		-- "MiyukiRelationship":
@@ -2475,8 +2459,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is snakesubm;
 		-- "SnowAmySex":
 			now NumberVarValue entry is SnowAmySex;
-		-- "snowbatfight":
-			now NumberVarValue entry is snowbatfight;
 		-- "SnowmeowSoldierStatus":
 			now NumberVarValue entry is SnowmeowSoldierStatus;
 		-- "Soldierhorsetf":
@@ -2543,8 +2525,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is strangebottledrink;
 		-- "struggleatt":
 			now NumberVarValue entry is struggleatt;
-		-- "sugarferretfight":
-			now NumberVarValue entry is sugarferretfight;
 		-- "supermarketcount":
 			now NumberVarValue entry is supermarketcount;
 		-- "survfeat":
@@ -2815,8 +2795,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is wolfhermvictory;
 		-- "WolfHorseMallCouple":
 			now NumberVarValue entry is WolfHorseMallCouple;
-		-- "wolvfightresult":
-			now NumberVarValue entry is wolvfightresult;
 		-- "workoutprice":
 			now NumberVarValue entry is workoutprice;
 		-- "wrcurseholdback":
@@ -3016,10 +2994,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is autofeatloading;
 		-- "BastetSexOrTalk":
 			now TruthVarValue entry is BastetSexOrTalk;
-		-- "bcduofightfled":
-			now TruthVarValue entry is bcduofightfled;
-		-- "bcduofightlost":
-			now TruthVarValue entry is bcduofightlost;
 		-- "bcplayroomlast":
 			now TruthVarValue entry is bcplayroomlast;
 		-- "bcseenhugeorca":
@@ -3042,8 +3016,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is beauceronmet;
 		-- "birthedwhelp":
 			now TruthVarValue entry is birthedwhelp;
-		-- "blanchefight":
-			now TruthVarValue entry is blanchefight;
 		-- "blanchetalk1":
 			now TruthVarValue entry is blanchetalk1;
 		-- "blanchetalk2":
@@ -3534,8 +3506,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is wrcurseactivity;
 		-- "wrdinoskel":
 			now TruthVarValue entry is wrdinoskel;
-		-- "wrknifefight":
-			now TruthVarValue entry is wrknifefight;
 		-- "wrwolfseen":
 			now TruthVarValue entry is wrwolfseen;
 		-- "yolandakeyfob":
@@ -4230,8 +4200,6 @@ to VariableNumberLoad:
 					now CampusLoversProgressTurn is numberVarValue entry;
 				-- "CampusLoversTrackingVariable":
 					now CampusLoversTrackingVariable is numberVarValue entry;
-				-- "campuswanderfight":
-					now campuswanderfight is numberVarValue entry;
 				-- "candytalk":
 					now candytalk is numberVarValue entry;
 				-- "CandyUrikInteraction":
@@ -4282,8 +4250,6 @@ to VariableNumberLoad:
 					now centrallib is numberVarValue entry;
 				-- "cerberusarousal":
 					now cerberusarousal is numberVarValue entry;
-				-- "cerbfight":
-					now cerbfight is numberVarValue entry;
 				-- "cerbmaulcount":
 					now cerbmaulcount is numberVarValue entry;
 				-- "cfgmode":
@@ -4308,8 +4274,6 @@ to VariableNumberLoad:
 					now Cheesecakemode is numberVarValue entry;
 				-- "cheetahmate":
 					now cheetahmate is numberVarValue entry;
-				-- "choclabfight":
-					now choclabfight is numberVarValue entry;
 				-- "ChrisPlayerOffspring":
 					now ChrisPlayerOffspring is numberVarValue entry;
 				-- "Christyquest":
@@ -4440,10 +4404,6 @@ to VariableNumberLoad:
 					now doggyboned is numberVarValue entry;
 				-- "doggyness":
 					now doggyness is numberVarValue entry;
-				-- "dolcastlefight":
-					now dolcastlefight is numberVarValue entry;
-				-- "dolinfloss":
-					now dolinfloss is numberVarValue entry;
 				-- "dollfound":
 					now dollfound is numberVarValue entry;
 				-- "dolphinbundle":
@@ -4452,8 +4412,6 @@ to VariableNumberLoad:
 					now dolphinconsent is numberVarValue entry;
 				-- "dolphindefeat":
 					now dolphindefeat is numberVarValue entry;
-				-- "dolphinflatablefight":
-					now dolphinflatablefight is numberVarValue entry;
 				-- "dolphinmode":
 					now dolphinmode is numberVarValue entry;
 				-- "dolphintricked":
@@ -5376,8 +5334,6 @@ to VariableNumberLoad:
 					now laundryProgress is numberVarValue entry;
 				-- "lavalamplick":
 					now lavalamplick is numberVarValue entry;
-				-- "lbfight":
-					now lbfight is numberVarValue entry;
 				-- "LectureCheck":
 					now LectureCheck is numberVarValue entry;
 				-- "Leonardtimer":
@@ -5388,8 +5344,6 @@ to VariableNumberLoad:
 					now lessontime is numberVarValue entry;
 				-- "lgnumber":
 					now lgnumber is numberVarValue entry;
-				-- "libfight":
-					now libfight is numberVarValue entry;
 				-- "libidomemory":
 					now libidomemory is numberVarValue entry;
 				-- "libstealth":
@@ -5502,8 +5456,6 @@ to VariableNumberLoad:
 					now midnightsighted is numberVarValue entry;
 				-- "MiltonRelationship":
 					now MiltonRelationship is numberVarValue entry;
-				-- "minilabfight":
-					now minilabfight is numberVarValue entry;
 				-- "missskip":
 					now missskip is numberVarValue entry;
 				-- "MiyukiRelationship":
@@ -6102,8 +6054,6 @@ to VariableNumberLoad:
 					now snakesubm is numberVarValue entry;
 				-- "SnowAmySex":
 					now SnowAmySex is numberVarValue entry;
-				-- "snowbatfight":
-					now snowbatfight is numberVarValue entry;
 				-- "SnowmeowSoldierStatus":
 					now SnowmeowSoldierStatus is numberVarValue entry;
 				-- "Soldierhorsetf":
@@ -6170,8 +6120,6 @@ to VariableNumberLoad:
 					now strangebottledrink is numberVarValue entry;
 				-- "struggleatt":
 					now struggleatt is numberVarValue entry;
-				-- "sugarferretfight":
-					now sugarferretfight is numberVarValue entry;
 				-- "supermarketcount":
 					now supermarketcount is numberVarValue entry;
 				-- "survfeat":
@@ -6442,8 +6390,6 @@ to VariableNumberLoad:
 					now wolfhermvictory is numberVarValue entry;
 				-- "WolfHorseMallCouple":
 					now WolfHorseMallCouple is numberVarValue entry;
-				-- "wolvfightresult":
-					now wolvfightresult is numberVarValue entry;
 				-- "workoutprice":
 					now workoutprice is numberVarValue entry;
 				-- "wrcurseholdback":
@@ -6656,10 +6602,6 @@ to VariableTruthLoad:
 					now autofeatloading is TruthVarValue entry;
 				-- "BastetSexOrTalk":
 					now BastetSexOrTalk is TruthVarValue entry;
-				-- "bcduofightfled":
-					now bcduofightfled is TruthVarValue entry;
-				-- "bcduofightlost":
-					now bcduofightlost is TruthVarValue entry;
 				-- "bcplayroomlast":
 					now bcplayroomlast is TruthVarValue entry;
 				-- "bcseenhugeorca":
@@ -6682,8 +6624,6 @@ to VariableTruthLoad:
 					now beauceronmet is TruthVarValue entry;
 				-- "birthedwhelp":
 					now birthedwhelp is TruthVarValue entry;
-				-- "blanchefight":
-					now blanchefight is TruthVarValue entry;
 				-- "blanchetalk1":
 					now blanchetalk1 is TruthVarValue entry;
 				-- "blanchetalk2":
@@ -7178,8 +7118,6 @@ to VariableTruthLoad:
 					now wrcurseactivity is TruthVarValue entry;
 				-- "wrdinoskel":
 					now wrdinoskel is TruthVarValue entry;
-				-- "wrknifefight":
-					now wrknifefight is TruthVarValue entry;
 				-- "wrwolfseen":
 					now wrwolfseen is TruthVarValue entry;
 				-- "yolandakeyfob":

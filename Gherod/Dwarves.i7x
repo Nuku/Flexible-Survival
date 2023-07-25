@@ -872,9 +872,6 @@ to say DwarfRide:
 	say "     'Fuck damn wow! That was amazing! Makes up for having lost against you, though next time things won't be so easy for you!' he chuckles as he taunts you. With a little legwork, you manage to stand up and gather your things. 'So... I guess I can go now, right? As much as it pities me... but I have places to be!' he asks you, reminding you that he's still just one defeated foe at your mercy. But as you're finished with whatever you had in mind, there's no reason to keep him. You grab your things and leave the dwarf behind, returning to your previous affairs.";
 
 to say Dwarf Desc:
-	setmongender 3;
-	if debugactive is 1:
-		say "     DEBUG: Resolution of Collapsed Tunnel: [Resolution of Collapsed Tunnel][line break]";
 	if Resolution of Collapsed Tunnel is 3: [dwarf has the greathammer]
 		say "     In front of you is a short middle-aged man, burly and muscular, wearing some kind of leather armor and armed with the golden greathammer. Scratching his long full beard, which contrasts with his short dark brown hair adorning the top of his head, he gives you a snarky look before throwing a taunt at you:[line break]";
 		say "     'Heh. Came for the hammer, or for some thick dwarven dick? Guess I'll hit you with both.' With that, he rushes at you. [bold type]That hammer will certainly hurt more![roman type][line break]";
@@ -883,9 +880,6 @@ to say Dwarf Desc:
 	else if Resolution of Collapsed Tunnel is 4 and golden greathammer is owned: [player has the greathammer and is carrying it]
 		say "     In front of you is a short middle-aged man, burly and muscular, wearing some kind of leather armor and armed with the golden greathammer. Scratching his long full beard, which contrasts with his short dark brown hair adorning the top of his head, he gives you a snarky look before throwing a taunt at you:[line break]";
 		say "     'Nice weapon you've got there. Mind if I try it out?' he laughs, but soon he's rushing at you with his own arms ready.";
-	else if Resolution of Collapsed Tunnel is 5 or Resolution of Collapsed Tunnel is 6: [player wants to handle their transformation on their own or postponed the plan]
-		say "[DwarfQuest4]";
-		now combat abort is 1;
 	else if Resolution of Collapsed Tunnel >= 7 and Wedding Wreckers is resolved:
 		if daytimer is day:
 			say "     [one of]While wandering around the urban forest, you encounter Yogdrak simply enjoying his usualy ale under a tree's shadow. 'Heyo! You found me just taking some time to relax. How have you been?' he asks, standing up and approaching you.[or]While wandering around the urban forest, you encounter Yogdrak on some hunting. He's being very sneaky, so you wait... Though, he notices you, and instead chooses to approach you. 'Damn rabbits, they're too quick. I just wanted a fancy lunch, for once!' He now stands in front of you with a friendly smile. 'Anyway, came to see me?'[or]While wandering around the urban forest, you encounter Yogdrak cutting some logs with a wood axe. Maybe he's trying to make a campfire. He sees you, and greets you as you approach him. Wiping a sweat drop off his forehead, he says 'Good to see you. Just trying to get myself some wood for the night.'[at random]";
@@ -915,6 +909,19 @@ to say YogdrakRoamingTalk:
 		LineBreak;
 		say "     Well, what can you say. You just want to beat his ass in some friendly fight, so you let him know of your intentions. 'Oh, is that so? Very well, then. I'm gonna beat you up and put you in your place, if you want that so badly.' With that, he readies himself to fight you.";
 		wait for any key;
+
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Dwarf Male"	"[PrepCombat_Dwarf Male]"
+
+to say PrepCombat_Dwarf Male:
+	setmongender 3;
+	if debugactive is 1:
+		say "     DEBUG: Resolution of Collapsed Tunnel: [Resolution of Collapsed Tunnel][line break]";
+	if Resolution of Collapsed Tunnel is 5 or Resolution of Collapsed Tunnel is 6: [player wants to handle their transformation on their own or postponed the plan]
+		say "[DwarfQuest4]";
+		now combat abort is 1;
 
 Section 3 - Creature Insertion
 
@@ -1102,6 +1109,13 @@ to say DwarfKnight loses:
 to say DwarfKnight Desc:
 	setmongender 3;
 	say "     ";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"True_Dwarf_Male"	"[PrepCombat_True_Dwarf_Male]"
+
+to say PrepCombat_True_Dwarf_Male:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

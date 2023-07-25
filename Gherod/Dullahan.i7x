@@ -15,6 +15,12 @@ to say DullahanVictory:
 to say DullahanDesc:
 	say "     You shouldn't be able to encounter the dullahan out of a situation. If you are, please let @Gherod know on the FS Discord.";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Dullahan"	"[PrepCombat_Dullahan]"
+
+to say PrepCombat_Dullahan:
+	say "";
 
 Section 2 - Creature Insertion
 

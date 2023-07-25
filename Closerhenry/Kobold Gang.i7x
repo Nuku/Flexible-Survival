@@ -258,6 +258,13 @@ to say KoboldGangOrgy:
 		CreatureSexAftermath "Kobold" receives "OralCock" from "Player";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Kobold";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Kobold"	"[PrepCombat_Kobold]"
+
+to say PrepCombat_Kobold:
+	say "";
+
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)

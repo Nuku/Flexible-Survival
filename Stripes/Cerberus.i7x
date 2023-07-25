@@ -6,25 +6,10 @@ Version 1 of Cerberus by Stripes begins here.
 
 "Adds Cerberus to Flexible Survival."
 
-cerbfight is a number that varies.
 cerberusarousal is a number that varies.
 cerbmaulcount is a number that varies.
 
-to say cerberusdesc:
-	setmongender 5; [creature is herm]
-	now cerbmaulcount is 0;
-	say "     You find yourself facing a creature of legend, a three-headed hound like Cerberus of Greek myth. This beast's large, canine body has three heads and its muscled body is covered in a coat of rough fur as black as coal. The creature pads towards you on all fours, then rises up on its hind legs, displaying its powerful body to you as it growls. The monster's chest is quite broad, expanded to make room for the three heads as well as the powerful organs to drive its altered body. It has six rows of breasts. The uppermost pair are of above-average size and they become progressively smaller until the last row are slight bumps with nipples. Its arms and legs are muscled and strong to be able to bear the weight of this large creature. Between the mythic creature's legs is a wet, dripping slit. Behind it, you catch a glimpse of its long, thick tail. As you examine the tail, you notice a slit at the very end of it from whence her male genitals are just now peeking out. Something tells you that her testicles are in that tail as well. The cock on the end of her tail is quite large, with a swelling knot and several large ridges along its canine length. The three heads growl at you again, drawing your focus back to them in time see the Cerberus herm charge at you with lust in her six wild eyes.";
-	if BodyName of Player is "Anime Babe":
-		say "     Your anime girl body, particularly vulnerable to tentacle attack, is entranced by the Cerberus's tail and cock tip, so like a tentacle eager to fill you. You moan and squeal in barely suppressed pleasure as that tail sways, quickly draining your resistance.";
-		decrease plfleebonus by 2;
-		decrease pldodgebonus by 2;
-		decrease plmindbonus by 2;
-		now HP of Player is ( 3 * HP of Player ) / 4;
-		now Libido of Player is ( 100 + Libido of Player + Libido of Player + Libido of Player ) / 4;
-
-
 to say losetocerberus:
-	now cerbfight is 2;
 	if HP of Player > 0:			[submit]
 		say "     Drawn in by this herm canine's exotic body, you give in to her and offer yourself for her amusement. She runs her paws over her body and releases a chuckle that is partially a howl from all three heads. She takes you into her arms and runs her paws over your body, groping and fondling you as she slips off your clothes and backpack to better see what her new bitch has brought her to play with.";
 	else:					[beaten]
@@ -51,7 +36,6 @@ to say beatthecerberus:
 	choose row MonsterID from the Table of Random Critters;
 	now cerberusarousal is 0;
 	let godoggygo be 0;
-	now cerbfight is 1;
 	say "     After your hard-fought battle, you manage to knock the triple-headed herm to the ground. She moans and pants, tailcock leaking precum and pussy dripping juices from her pent-up and unsatisfied arousal. You look her over, trying to decide what to do with her now that you've knocked the fight out of her.";
 	if FaceName of Player is "Cerberus":
 		say "     Your other two heads end up making the decision for you, wresting control of your body from you and pushing you into her arms. You share slobbery, canine kisses with her, quickly losing yourself in the pleasure as you somehow share in the sense of them all. You soon give in as your three brains of you become of like mind and seek to sate your collective lusts with this attractive herm.";
@@ -145,20 +129,6 @@ to say cerberusfemmeoral:
 	say "     All this licking from the competing heads, who seem to be going all out to please you so you'll let that head keep at it longer, drives you to great heights of pleasure, cumming hard several times, soaking those broad, canine muzzles in your juices again and again. Eventually, you've had as much as you can take, becoming too oversensitive and very fulfilled and have to push her heads back. They whine in frustration and she grabs her tail and they all start licking at in instead, fighting for the chance to suck it off. You leave her like that, lost in her own lustful, internal squabble.";
 	CreatureSexAftermath "Cerberus" receives "OralPussy" from "Player";
 
-
-to say cerberusdesc:
-	setmongender 5; [creature is herm]
-	now cerbmaulcount is 0;
-	say "     You find yourself facing a creature of legend, a three-headed hound like Cerberus of Greek myth. This beast's large, canine body has three heads and its muscled body is covered in a coat of rough fur as black as coal. The creature pads towards you on all fours, then rises up on its hind legs, displaying its powerful body to you as it growls. The monster's chest is quite broad, expanded to make room for the three heads as well as the powerful organs to drive its altered body. It has six rows of breasts. The uppermost pair are of above-average size and they become progressively smaller until the last row are slight bumps with nipples. Its arms and legs are muscled and strong to be able to bear the weight of this large creature. Between the mythic creature's legs is a wet, dripping slit. Behind it, you catch a glimpse of its long, thick tail. As you examine the tail, you notice a slit at the very end of it from whence her male genitals are just now peeking out. Something tells you that her testicles are in that tail as well. The cock on the end of her tail is quite large, with a swelling knot and several large ridges along its canine length. The three heads growl at you again, drawing your focus back to them in time see the Cerberus herm charge at you with lust in her six wild eyes.";
-	if BodyName of Player is "Anime Babe":
-		say "     Your anime girl body, particularly vulnerable to tentacle attack, is entranced by the Cerberus's tail and cock tip, so like a tentacle eager to fill you. You moan and squeal in barely suppressed pleasure as that tail sways, quickly draining your resistance.";
-		decrease plfleebonus by 2;
-		decrease pldodgebonus by 2;
-		decrease plmindbonus by 2;
-		now HP of Player is ( 3 * HP of Player ) / 4;
-		now Libido of Player is ( 100 + Libido of Player + Libido of Player + Libido of Player ) / 4;
-
-
 to say cerberusfacetf:
 	say "your neck and shoulders erupt into intense feelings of numbness and pinpricks. These feelings quickly shift into a burning fire as the impossible happens. Your upper shoulders actually widen as two lumps form at either side of your neck, growing and bubbling like a stew of flesh. You hear bones cracking and you find that you can't move your head as it is changing as well, becoming that of a broad-muzzled canine. Something brushes your cheeks as the lumps grow, ";
 	if BodyName of Player is "Cerberus":
@@ -184,6 +154,24 @@ to say cerberuscocktf:
 
 
 Section 2 - Creature Insertion
+
+to say cerberusdesc:
+	say "     You find yourself facing a creature of legend, a three-headed hound like Cerberus of Greek myth. This beast's large, canine body has three heads and its muscled body is covered in a coat of rough fur as black as coal. The creature pads towards you on all fours, then rises up on its hind legs, displaying its powerful body to you as it growls. The monster's chest is quite broad, expanded to make room for the three heads as well as the powerful organs to drive its altered body. It has six rows of breasts. The uppermost pair are of above-average size and they become progressively smaller until the last row are slight bumps with nipples. Its arms and legs are muscled and strong to be able to bear the weight of this large creature. Between the mythic creature's legs is a wet, dripping slit. Behind it, you catch a glimpse of its long, thick tail. As you examine the tail, you notice a slit at the very end of it from whence her male genitals are just now peeking out. Something tells you that her testicles are in that tail as well. The cock on the end of her tail is quite large, with a swelling knot and several large ridges along its canine length. The three heads growl at you again, drawing your focus back to them in time see the Cerberus herm charge at you with lust in her six wild eyes.";
+	if BodyName of Player is "Anime Babe":
+		say "     Your anime girl body, particularly vulnerable to tentacle attack, is entranced by the Cerberus's tail and cock tip, so like a tentacle eager to fill you. You moan and squeal in barely suppressed pleasure as that tail sways, quickly draining your resistance.";
+		decrease plfleebonus by 2;
+		decrease pldodgebonus by 2;
+		decrease plmindbonus by 2;
+		now HP of Player is ( 3 * HP of Player ) / 4;
+		now Libido of Player is ( 100 + Libido of Player + Libido of Player + Libido of Player ) / 4;
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Cerberus"	"[PrepCombat_Cerberus]"
+
+to say PrepCombat_Cerberus:
+	setmongender 5; [creature is herm]
+	now cerbmaulcount is 0;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

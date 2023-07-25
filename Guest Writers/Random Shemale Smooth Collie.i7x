@@ -202,8 +202,6 @@ to say CollieAnalRide:
 	CreatureSexAftermath "Player" receives "AssFuck" from "Smooth Collie Shemale";
 
 to say CollieDesc:
-	setmongender 6;
-	project Figure of Collie_clothed_icon;
 	choose a row with name of "Smooth Collie Shemale" in the Table of Random Critters;
 	if enemy type entry is 1: [unique enemy, player does not know the name]
 		say "     An enormously big figure comes walking down the street and looks at you with a grin on her muzzle. The canine beast looks quite a bit like Lassie, if Lassie were nine feet tall, walked upright and had the general shape of an attractive woman. She's wearing a sports bra that only serves to cover two of her eight nipples breasts, with a second and third pair of progressively smaller breasts running down her front to end at two basically flat nipples on her firm abs. A noticeable bulge in the front of her jeans allows you the guess that this anthro isn't exactly a regular woman either. On second thought, she doesn't look much like Lassie after all.";
@@ -213,6 +211,14 @@ to say CollieDesc:
 		say "     Once more, you run into Sharlene, the nine feet tall anthro collie. Built big and muscle-packed as she is, the canine still hasn't found anything more than her sports bra to cover the eight nipples she has, leaving six of them in open sight down her chest. Her jeans sport a respectable bulge above the crotch. 'You again,' the shemale dog says in a surprisingly high-pitched voice, her eyes roaming over your form as she hungrily takes you in. 'Come on, let's have some fun together, eh?!' And with that, she steps forward and reaches for you. Not so much to fight, but rather to just make use of your body for her pleasure.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Smooth Collie Shemale"	"[PrepCombat_Smooth Collie Shemale]"
+
+to say PrepCombat_Smooth Collie Shemale:
+	setmongender 6;
+	project Figure of Collie_clothed_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

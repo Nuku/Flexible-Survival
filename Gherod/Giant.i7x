@@ -12,14 +12,6 @@ Section 1 - Creature Responses
 giantheight is a number that varies. giantheight is usually 18.
 
 to say giantdesc:
-	setmongender 3; [creature is male]
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Female";
 	say "     You find yourself faced with a giant of a man standing well over forty feet tall. This makes him nearly as tall as the biggest trees decorating the area, though most only come up to his waist. The towering man has a burly, muscled body to help support his massive height, but not unhandsomely so. He still looks completely human, just grown to a dizzying height. Worn loosely over his chest is huge tan jacket indicating that he may have once been part of the zoo staff. Somehow enlarged or transformed to be a part of him, it is rather worse for wear and hangs loose over his chest, but is still wearable and is the only clothes he has on. He has a gruff expression on his face and has dirty blond hair atop his distant. He carries [one of]a broken telephone pole[or]a metal girder[or]a streetlight[or]an uprooted tree[at random] like a massive club. Between his legs he has another large club, this one of meaty flesh to more than match his enormous size.";
 	say "     He hasn't spotted you yet, giving you time to consider your options in the face of such a situation. It seems you could always just [bold type]ignore the giant man and get out of there[roman type] before he has the chance to see you. However, if you're interested in [bold type]observing him[roman type], there are a few areas with tall vegetation where you can conceal yourself in to watch what he's doing from a safe distance. Alternatively, if you're brave enough, you can just [bold type]go talk to him[roman type], but if you think words won't work with him, you can always attempt to [bold type]fight[roman type] the towering, forty feet tall of a burly muscular man that could probably stomp you flat with one strike... Ill-advised, unless you're into being crushed and instigating aggression.";
 	if carried of zookeeper ring > 0:
@@ -498,6 +490,20 @@ to ApproachTheGiantPickUpSex:
 	if Resolution of Missing Giant Ring is 2:
 		say "     'Oh, and... keep the ring with you, so I can tell you apart from other critters more easily,' the giant adds, before you can go grab your things and get ready to leave.";
 	CreatureSexAftermath "Player" receives "OralCock" from "Human Giant";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Human Giant"	"[PrepCombat_Human Giant]"
+
+to say PrepCombat_Human Giant:
+	setmongender 3; [creature is male]
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Female";
 
 Section 3 - Creature Insertion
 

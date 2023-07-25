@@ -48,9 +48,15 @@ to say saber_loses:
 			say "     This encounter reminds you of your deal with bounty hunter, Bradford. You should go see him about getting your share of the reward.";
 
 to say SaberKittyDesc:
-	project the Figure of Saber_Kitty_icon;
-	setmongender 4;
 	say "     As you're walking you hear a faint dripping on the ground behind you. You rapidly spin around to see a sexy anthro Saber-toothed Tiger in front of you. It doesn't take long to find the source of the dripping sound as you look down to see her red, swollen pussy dripping copious amounts of fluids onto the ground. She is obviously in heat, and the smell hits you hard in seconds. Her body is beautiful and athletic, with abs and faint but powerful muscles. 'Don't worry, love. You'll learn to enjoy the heat and being knocked up,' she adds before pouncing.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Saber Kitty"	"[PrepCombat_Saber Kitty]"
+
+to say PrepCombat_Saber Kitty:
+	setmongender 4;
+	project the Figure of Saber_Kitty_icon;
 
 Section 2 - Creature Insertion
 

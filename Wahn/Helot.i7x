@@ -210,7 +210,6 @@ to say Helot blown:
 	CreatureSexAftermath "Player" receives "OralCock" from "Helot Manservant";
 
 to say HelotDesc:
-	setmongender 3;
 	say "     You cross paths with a young man clothed in nothing but sandals and a ragged loincloth. He's has dark hair, sun-bronzed skin and is muscular, but with a lean look - likely from going hungry some days. He gives you a wary look, then says:[line break]";
 	if BodyName of Player is "Helot Manservant" and FaceName of Player is "Helot Manservant": [no honor among slaves]
 		say "     'Another slave like me, eh? Don't think that makes us friends - it's everyone for himself in this strange, cursed place... especially with how hungry - and horny - I am right now!' Having unobtrusively walked closer while he was talking, the man suddenly jumps you.";
@@ -224,6 +223,13 @@ to say HelotDesc:
 		say "     'Are you an inhabitant of this city? How can you live in this cursed place?' Before you can answer, you hear his stomach growling loudly. 'Bah, enough talk - I'm hungry... and horny.' With that, he rushes at you.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Helot Manservant"	"[PrepCombat_Helot Manservant]"
+
+to say PrepCombat_Helot Manservant:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -608,9 +614,7 @@ to say ResolveEvent Helot Captive:
 	if calcnumber is 1: [rescue]
 		LineBreak;
 		say "     You can't just let him have his way with the captured man! If you rush at the Spartan and manage to bring him down, you might just be able to save him. Calculating your route to draw the least attention possible, you carefully make your way to their spot, and you arrive just in time as the warrior goes to grab his captive victim, only to let him away in place as he's startled by your presence. 'What's the meaning of this?!' he shouts in a demanding tone, turning around to face you with his dandling erection bouncing sideways. 'I'll have to subdue you as well for this intrusion, peasant!' Without any further ado, he charges at you, and looks like it's time for a fight!";
-		now inasituation is true;
 		Challenge "Spartan Warrior";
-		now inasituation is false;
 		if fightoutcome < 20: [won]
 			now resolution of Captive Helot is 2;
 			say "     Now, there is a helot in here... On the ground, tied up, vulnerable, and with a hard-on between his legs, looking at you with puppy eyes. His mouth is covered as well, and his hands are tied on his back. The way he's spreading his legs and showing off his throbbing meat may seem like he's begging you for some other kind of [']release[']. The Spartan may come back soon with reinforcements, and it's too late to save this man, but you could show him some mercy very quickly, if you're willing to put your hands to work.";

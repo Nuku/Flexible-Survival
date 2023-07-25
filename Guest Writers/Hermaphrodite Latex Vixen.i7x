@@ -9,7 +9,6 @@ Section 1 - Creature Responses
 hermlvmeet is a number that varies.
 
 to say hermaphrodite latex vixen desc:
-	setmongender 5; [creature is herm]
 	if hermlvmeet is 0: [first time meeting Herm LV]
 		say "     She stands at least six feet tall, her glistening rubbery skin a bright contrast to the muted colors of this twisted city. She has the shading of a fox, white belly and groin, darkened paws up to the elbows and knees, but the color was far more vivid than anything in nature. The glossy skin that covers her back is a near luminous cherry red, her paws and the tip of her tail a jet black that makes them seem to disappear in the shadows. The white that covers her from the front of her muzzle to her puckered sphincter seems impossibly clean and then you notice it appears slick, almost as if she had been recently oiled. But her lustrous skin is a mere footnote compared to the remarkable equipment hanging off the front of her.";
 		say "     Four massive breasts hang from her chest, and jiggle at the slightest motion. She has a bright pink pointed cock, at least eighteen inches long, the base is covered in a glossy black sheath, inside of which you can see an already grapefruit-sized knot forming. One of her jet black paws slithers down her stomach, past her growing shaft, pushing aside her black, apple-sized balls and revealing her glowing pink lips. She takes three fingers, parting her moist lips with the outer two and starting to probe her drooling sex with the middle.";
@@ -170,6 +169,13 @@ to say hermaphrodite latex vixen victory:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Latex Vixen Herm"	"[PrepCombat_Latex Vixen Herm]"
+
+to say PrepCombat_Latex Vixen Herm:
+	setmongender 5; [creature is herm]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

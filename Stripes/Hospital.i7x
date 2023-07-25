@@ -1030,35 +1030,33 @@ to say hospbigfight1:
 
 to say hospbigfight2:
 	now hospfight is 1;
-	now inasituation is true;
 	challenge "Albino Mouse";
-	now inasituation is false;
-	if fightoutcome is 30:
-		say "[hospranaway]";
-		stop the action;
-	else if fightoutcome > 19 and fightoutcome < 30:
+	if fightoutcome < 20: [player won]
+		say "     Battered and bloodied, the mad doctor turns and runs. For a moment, you think he's trying to escape and move to cut him off from the exit, but he instead veers off to his storage unit and searches inside for a vial.";
+		say "     'I had planned to further perfect this formula before ridding myself of this feeble body,' the white mouse exclaims. 'But you! You force my hand. And you will suffer for it!'";
+		say "     With that, he slams back the formula and its effects are almost immediate. You charge, hoping to dispatch him before whatever he's doing can be completed, but he's already begun to grow and manages to slam you back a few feet with a strong backhand.";
+		WaitLineBreak;
+		say "     His muscles swell and he gains inches of height by the second. His growing body fills the lab coat so much it starts to strain to contain it until it finally fails. The buttons fly as he flexes his new, muscled body and tears the tattered remains from his shoulders.";
+		say "     His head becomes more feral and frightening, with sharp teeth, a mix of predatory canines and rodent incisors. The thick, leonine mane grows in as well as a trio or sharp horns, two on his brow and one at the end of his pointed muzzle. His hands, once cute paws, gain vicious claws and bony plates.";
+		WaitLineBreak;
+		say "     The mouse's maleness is not neglected either, gaining a large sheath and heavy balls. Thick, dark yellow fur grows to replace the white coat over them and spreads up over the monstrous mouse's chest as well. Clearly excited by the power of the changes, his cock grows hard and starts to emerge. It is thick and blood red, with a spaded tip and several firm ridges along its shaft. There's a faint swelling at the base, signs of a knot as well. Thick precum leaks down the monstrous prick.";
+		say "     He chuckles madly as he looks himself over, clearly pleased with the results. 'I am going to enjoy showing you how disappointed I am with you. In slow, agonizing detail,' he rumbles with a deep, threatening voice.";
+		now hospfight is 2;
+		challenge "Albino Mouse";
+		if fightoutcome < 20: [player won]
+			say "[hospvictory]";
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "[hosploss]";
+			stop the action;
+		else if fightoutcome is 30: [fled]
+			say "[hospranaway]";
+			stop the action;
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "[hosploss]";
 		stop the action;
-	say "     Battered and bloodied, the mad doctor turns and runs. For a moment, you think he's trying to escape and move to cut him off from the exit, but he instead veers off to his storage unit and searches inside for a vial.";
-	say "     'I had planned to further perfect this formula before ridding myself of this feeble body,' the white mouse exclaims. 'But you! You force my hand. And you will suffer for it!'";
-	say "     With that, he slams back the formula and its effects are almost immediate. You charge, hoping to dispatch him before whatever he's doing can be completed, but he's already begun to grow and manages to slam you back a few feet with a strong backhand.";
-	WaitLineBreak;
-	say "     His muscles swell and he gains inches of height by the second. His growing body fills the lab coat so much it starts to strain to contain it until it finally fails. The buttons fly as he flexes his new, muscled body and tears the tattered remains from his shoulders.";
-	say "     His head becomes more feral and frightening, with sharp teeth, a mix of predatory canines and rodent incisors. The thick, leonine mane grows in as well as a trio or sharp horns, two on his brow and one at the end of his pointed muzzle. His hands, once cute paws, gain vicious claws and bony plates.";
-	WaitLineBreak;
-	say "     The mouse's maleness is not neglected either, gaining a large sheath and heavy balls. Thick, dark yellow fur grows to replace the white coat over them and spreads up over the monstrous mouse's chest as well. Clearly excited by the power of the changes, his cock grows hard and starts to emerge. It is thick and blood red, with a spaded tip and several firm ridges along its shaft. There's a faint swelling at the base, signs of a knot as well. Thick precum leaks down the monstrous prick.";
-	say "     He chuckles madly as he looks himself over, clearly pleased with the results. 'I am going to enjoy showing you how disappointed I am with you. In slow, agonizing detail,' he rumbles with a deep, threatening voice.";
-	now hospfight is 2;
-	now inasituation is true;
-	challenge "Albino Mouse";
-	now inasituation is false;
-	if fightoutcome is 30:
+	else if fightoutcome is 30: [fled]
 		say "[hospranaway]";
 		stop the action;
-	else if fightoutcome > 19 and fightoutcome < 30:
-		say "[hosploss]";
-		stop the action;
-	say "[hospvictory]";
 
 to say hospranaway:
 	say "     Unable or unwilling to continue fighting the crazed mouse, you vault over one of the worktables and dash to the exit. You slam against the door and dash down the hall to the emergency exit. You rush down the stairs, hearing Dr. Mouse yelling above you, but don't even stop to look.";
@@ -1562,7 +1560,6 @@ Viking Longboat is a situation.
 ResolveFunction of Viking Longboat is "[ResolveEvent Viking Longboat]".
 Sarea of Viking Longboat is "Museum".
 Viking Longboat is inactive.		[unable to do this until activated]
-lbfight is a number that varies.
 longboatfind is a number that varies.
 
 to say ResolveEvent Viking Longboat:
@@ -1572,8 +1569,6 @@ to say ResolveEvent Viking Longboat:
 		now longboatfind is 1;
 	else:
 		say "     You make your way back to the Medieval History wing of the museum and approach the longboat again. The moment you put one foot over the rope barrier, the security guard is growling and charging at you with menace in his eyes.";
-	now inasituation is true;
-	now wolvfightresult is 0; [default 0 = flee]
 	challenge "Wolverine Guard";
 	if fightoutcome > 30:		[flee]
 		say "     Unable to deal with the maddened wolverine, you have fled the scene and will have to come back again later to get the gemstones.";
@@ -1608,10 +1603,8 @@ to say ResolveEvent Viking Longboat:
 			increase score by 10;
 		now nerminepackage is 3;
 		now Viking Longboat is resolved;
-	now inasituation is false;
 
 [spear moved to Core Mechanics/Weapons.i7x]
-
 
 Instead of conversing the Nermine while nerminepackage is 3:
 	say "     'Have you been finding the dragon's eyes for Nermine?' she asks. 'Wonderful. Most beautiful,' she says as she holds them up to the light and gazes through them. 'Even older than I thought, long before put on that ship. Long history. Nermine is very pleased to have these. So much so I will give you some advice.'";

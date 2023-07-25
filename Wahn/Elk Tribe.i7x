@@ -121,6 +121,14 @@ to say ElkBullDesc:
 	else:
 		say "     ...";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Elk Tribe Bull"	"[PrepCombat_Elk Tribe Bull]"
+
+to say PrepCombat_Elk Tribe Bull:
+	say "";
+
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -428,6 +436,13 @@ to say ElkCowDesc:
 	else:
 		say "     ...";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Elk Tribe Cow"	"[PrepCombat_Elk Tribe Cow]"
+
+to say PrepCombat_Elk Tribe Cow:
+	say "";
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -734,6 +749,13 @@ to say ElkHermDesc:
 		say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the hermaphrodite elk steps forward to take her pleasure from you, if you want or not.";
 	else:
 		say "     ...";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Elk Tribe Herm"	"[PrepCombat_Elk Tribe Herm]"
+
+to say PrepCombat_Elk Tribe Herm:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -1043,6 +1065,13 @@ to say ElkTransBullDesc:
 	else:
 		say "     ...";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Elk Tribe Trans Bull"	"[PrepCombat_Elk Tribe Trans Bull]"
+
+to say PrepCombat_Elk Tribe Trans Bull:
+	say "";
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -1349,6 +1378,13 @@ to say ElkTransCowDesc:
 		say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the transgendered elk steps forward to take her pleasure from you, if you want or not.";
 	else:
 		say "     ...";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Elk Tribe Trans Cow"	"[PrepCombat_Elk Tribe Trans Cow]"
+
+to say PrepCombat_Elk Tribe Trans Cow:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

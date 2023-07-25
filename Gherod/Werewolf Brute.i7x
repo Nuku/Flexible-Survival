@@ -272,7 +272,6 @@ to say WerewolfBruteLosesRanfer:
 		NPCSexAftermath Player receives "AssFuck" from Ranfer;
 
 to say Werewolf Brute Desc:
-	project Figure of WerewolfBrute_soft_icon;
 	say "     In front of you stands a really, really big and burly lupine beast, which resembles an actual werewolf from one or more fantasy stories. You can clearly tell it is a [']he['] given the sizable sheath hanging between his legs. The beastly brute is also abnormally large, being about twice as tall as an average person, and has a hulking frame capable of smothering a smaller prey into submission if caught in his grasp, covered in a coat of gray fur. His fangs are sharp, as well as his claws, a very dangerous sight to have. As his tail twitches, he looks over to you with an inquisitive look, cautiously approaching you with his intimidating presence.";
 	if scalevalue of Player < 4:
 		say "     'Now, who's this puny thing? Another playtoy?' he asks, chuckling to himself. 'You better know your place, or you're gonna get thrashed pretty badly.' With this, the werewolf brute readies his claws to attack you.";
@@ -325,6 +324,13 @@ to say WerewolfBruteLair:
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Werewolf Brute";
 	WaitLineBreak;
 	move player to Lair Of The Lupines Oubliette;
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Werewolf Brute"	"[PrepCombat_Werewolf Brute]"
+
+to say PrepCombat_Werewolf Brute:
+	project Figure of WerewolfBrute_soft_icon;
 
 Section 3 - Creature Insertion
 

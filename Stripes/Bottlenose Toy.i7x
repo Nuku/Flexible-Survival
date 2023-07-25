@@ -7,61 +7,19 @@ Version 3 of Bottlenose Toy by Stripes begins here.
 Section 1 - Creature Responses
 
 dolphinmode is a number that varies.
-dolphinflatablefight is a number that varies.
 dolinfloss is a number that varies.
 
 to say dolphinflatabledesc:
-	setmongender 4; [creature is female]
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Female";
-	if dolphinflatablefight is 3:			[event pre-set to girl mode]
-		now dolphinmode is 1;
-	else if dolphinflatablefight is 4:	[event pre-set to toy mode]
-		now dolphinmode is 2;
-	else if dolcastlefight is 3:
-		now dolphinmode is 3;
-	else if (HardMode is false and level of Player < 5) or a random chance of 3 in 4 succeeds:	[girl only at low level]
-		now dolphinmode is 1;
-	else:																			[25% of toy mode]
-		now dolphinmode is 2;
-	if dolphinmode is 1:
-		let debit be 0;
-		if HardMode is true and level of Player > 1, now debit is level of Player - 1;
-		now HP entry is 18 + ( debit * 3 );
-		now monsterHP is 18 + ( debit * 3 );
-		now wdam entry is 3 + ( debit / 4 );
-		now lev entry is 1 + debit;
-		now dex entry is 15 + ( lev entry / 5 );
-		project the figure of Bottlenose_icon;
-		say "     As you walk along the beach, you encounter another of the unusual creatures that have come into being. Rising from her playing in the water is an anthropomorphic dolphin girl, but what makes her strange is that she seems completely inflatable. Her skin is a bright pink and glossy white, with visible seams and everything. As she removes her red towel from around her waist, you can see that there are inflation nozzles where her nipples should be and another wet [']seam['] between her legs, showing her to be ready for more than innocent waterfront playing. There is a strange glisten to the towel's appearance, letting you realize that it is made of a living vinyl and has now bonded to her fin-like hand. She spins it into a rat-tail with a grin and moves in with a playful giggle.";
-	else if dolphinmode is 2:
-		let debit be 0;
-		if HardMode is true and level of Player > 5, now debit is level of Player - 5;
-		now HP entry is 38 + ( debit * 4 );
-		now monsterHP is 38 + ( debit * 4 );
-		now lev entry is 5 + debit;
-		now wdam entry is 3 + ( lev entry / 3 );
-		now dex entry is 16 + ( lev entry / 5 );
-		say "     Resting peacefully on the beach is what looks at first to be a normal, child's inflatable beach toy. Aside from being a bigger model than most, nearly a man's height in length from nose to tail, it seems like others you've seen before. It is a bright green dolphin with a white underbelly and a cartoony grin on its bottlenose face. There is a darker section of textured rubber designed like a big scarf to provide better grip as well as a pair of small handles at its side for a child to hold. It seems innocent enough, until it starts to move on its own. With an airy giggle, it floats up into the air and does a playful backwards flip. This flip lets you see there's a slick slit towards the rear its underbelly, showing that this is no pure, children's toy but another of the unusual creatures that have come into being. As it playfully swims through the air past you, you try to push it away, finding the inflated creature's skin surprisingly durable for a beach toy. Turning around, it pulls its scarf off, fusing it to the tip of its fin and spins it in the air like a large, green towel to strike at you.";
+	if dolphinmode is 1: [dolphin girl]
+		say "     Rising from her playing in the water is an anthropomorphic dolphin girl, but what makes her strange is that she seems completely inflatable. Her skin is a bright pink and glossy white, with visible seams and everything. As she removes her red towel from around her waist, you can see that there are inflation nozzles where her nipples should be and another wet [']seam['] between her legs, showing her to be ready for more than innocent waterfront playing. There is a strange glisten to the towel's appearance, letting you realize that it is made of a living vinyl and has now bonded to her fin-like hand. She spins it into a rat-tail with a grin and moves in with a playful giggle.";
+	else if dolphinmode is 2: [feral dolphin toy]
+		say "     Resting peacefully on the ground is what looks at first to be a normal, child's inflatable beach toy. Aside from being a bigger model than most, nearly a man's height in length from nose to tail, it seems like others you've seen before. It is a bright green dolphin with a white underbelly and a cartoony grin on its bottlenose face. There is a darker section of textured rubber designed like a big scarf to provide better grip as well as a pair of small handles at its side for a child to hold. It seems innocent enough, until it starts to move on its own. With an airy giggle, it floats up into the air and does a playful backwards flip. This flip lets you see there's a slick slit towards the rear its underbelly, showing that this is no pure, children's toy but another of the unusual creatures that have come into being. As it playfully swims through the air past you, you try to push it away, finding the inflated creature's skin surprisingly durable for a beach toy. Turning around, it pulls its scarf off, fusing it to the tip of its fin and spins it in the air like a large, green towel to strike at you.";
 	else if dolphinmode is 3:	[feral dolphin toy in castle]
-		let debit be 0;
-		if HardMode is true and level of Player > 5, now debit is level of Player - 5;
-		now HP entry is 38 + ( debit * 4 );
-		now monsterHP is 38 + ( debit * 4 );
-		now lev entry is 5 + debit;
-		now wdam entry is 3 + ( lev entry / 3 );
-		now dex entry is 20 + ( lev entry / 5 );
 		say "     Aside from being a bigger model than most inflatable beach toys, nearly a man's height in length from nose to tail, it seems like others you've seen before. It is a bright green dolphin with a white underbelly and a cartoony grin on its bottlenose face. There is a darker section of textured rubber designed like a big scarf to provide better grip as well as a pair of small handles at its side for a child to hold. It would seem innocent enough were it not moving on its own. With an airy giggle, it does a playful backwards flip. This flip lets you see there's a slick slit towards the rear its underbelly, showing that this is no pure, children's toy but another of the unusual creatures that have come into being. As it playfully swims through the air past you, you try to push it away, finding the inflated creature's skin surprisingly durable for a beach toy. Turning around, it pulls its scarf off, fusing it to the tip of its fin and spins it in the air like a large, green towel to strike at you.";
 		say "     As you struggle to keep your footing on the wobbly floor of the bouncy castle, you catch sight of the now empty and partially deflated dolphin suit skulking around the edge of your fight. You get the feeling that it's waiting to ensnare you and give you the same treatment which created your opponent.";
 
 to say losetodolphinflatable:
 	choose row MonsterID from Table of Random Critters;
-	now dolphinflatablefight is 2;
 	increase dolinfloss by 1;
 	if dolphinmode is 1:			[lose to girl form]
 		say "     The bottlenose girl giggles again as she wraps her towel around your neck and wrists. It squeezes around your forearms, binding them tightly behind your back. Pushing you to the sandy ground, she climbs atop you, always keeping in contact with the towel, which rebonds to her wherever she's holding it so she always knows where her towel is";
@@ -242,17 +200,13 @@ to say losetodolphinflatable:
 		else:
 			say "     The green dolphin giggles again as it wraps its vinyl towel around you, binding your arms to your sides and pulls you to the edge of the water with it. Laying on your back at the edge of the ocean, it lays itself over your body, pressing its inflated form down over you. It settles itself over your head, pressing that damp slit to your face. There is an arousing scent of its juices beyond the faint, plasticky smell. Bound as you are, you cannot really get away, not that you're really thinking about that once the bottlenose's snout finds your cunt and its tongue sets to work at your pussy. You start licking and kissing at those rubbery petals, making it trill happily. You slide your tongue into her, teasing her smooth inner walls and lapping up her strangely arousing juices. Despite being a PVC pussy, it is quite warm, slick and tasty, gripping around your tongue. Its tongue, meanwhile, is returning the favor to you. You shiver a little each time a wave splashes a little higher, sending cool water around your hot pussy, but the beach toy's tongue feels all the warmer and more pleasant after these splashes. As it rubs down onto your face, there's just something about this cute, playful toy that really drives you to please it until finally it cums with a trill of squeaky delight, spilling her slick juices across your face, pushing its bottlenose snout into your cunt to make you cum as well. After cumming hard, another big wave hits, making you cum again. Finished, the smiling inflatable slides off you, its towel unraveling on its own. It re-dons it like a dark green scarf and dives into the water to splash and play, leaving you panting at the water's edge in the afterglow of the strangely erotic toy's visit.";
 	else if dolphinmode is 3:	[lose to toy mode - castle]
-		now dolcastlefight is 2;
 		say ".";
 		if Player is male:
 			say "     The green dolphin giggles again as it wraps its vinyl towel around you, binding your arms to your sides and pulls you to the floor with it. Resting on its back, it bobs in the sway of the rubbery floor with you on top of it. Bound tightly as you are and with your bonds attached to its fins, you cannot do much to get away. And as its motion press its wet slit against your groin, you end up not really thinking about getting away at all. The rubbing teases your cock until you can't help but get hard and slide into its cunt. It trills happily and rocks on the padded floor with your thrusts as you grow more excited, fucking with the motion of the ocean. The PVC pussy is pleasantly warm and slick, gripping your cock nicely as it resizes itself to take your [cock size desc of Player] [Cock of Player] cock perfectly. As you ride the beach toy, there's just something about its soft, pliable body and smooth skin that excites you more the longer you touch it. It giggles in squeaky delight as you drive your cock hard into it while riding a large sway of the castle, pumping your hot seed into it. Finished, you pant atop the buoyant toy as the waves slowly rock you both. With a little flick of its fins, the dark green towel releases you from its rubbery grip. The creature rises upright and flicks its tail like a dolphin in a show, giving you a show of its creamy cunt leaking your seed[if daytimer is day]. The sunlight through its plastic body lets you see the sticky ropes of cum you've left on the inside of its air-filled body[end if]. It dons its towel once more like a scarf and dives out one of the doorways and makes its way into the water. You are left panting on the inflated castle's floor, bouncing and giggling in the afterglow of the strangely erotic toy's playfulness.";
 		else:
 			say "     The green dolphin giggles again as it wraps its vinyl towel around you, binding your arms to your sides and pushing you onto the soft floor of the bouncy castle. Laying on your back on its bouncy surface, the dolphin lays itself over your body, pressing its inflated form down over you. It settles itself over your head, pressing that damp slit to your face. There is an arousing scent of its juices beyond the faint, plasticky smell. Bound as you are, you cannot really get away, not that you're really thinking about that once the bottlenose's snout finds your cunt and its tongue sets to work at your pussy. You start licking and kissing at those rubbery petals, making it trill happily. You slide your tongue into her, teasing her smooth inner walls and lapping up her strangely arousing juices. Despite being a PVC pussy, it is quite warm, slick and tasty, gripping around your tongue. Its tongue, meanwhile, is returning the favor to you. You moan and sway on the soft floor you're rocked by the waves of the ocean and the waves of pleasure running through your hot pussy. As it rubs down onto your face, there's just something about this cute, playful toy that really drives you to please it until finally it cums with a trill of squeaky delight, spilling her slick juices across your face, pushing its bottlenose snout into your cunt to make you cum as well. Finished, the smiling inflatable slides off you, its towel unraveling on its own. It re-dons it like a dark green scarf and dives out one of the doorways and makes its way into the water. You are left panting on the inflated castle's floor, bouncing and giggling in the afterglow of the strangely erotic toy's playfulness.";
 
-
 to say beatthedolphinflatable:
-	now dolphinflatablefight is 1;
-	now dolcastlefight is 1;
 	if dolphinmode is 1:			[defeat girl form]
 		if Libido of Player > 45 and Player is male and a random chance of 2 in 3 succeeds:
 			say "     Having beaten the inflatable toy, you decide you want to have a little fun with her. Taking her own towel, you wind it around her wrists and push her onto the sandy beach. She squirms as if trying to get away, all while raising her tail and bubble bottom and trying to stifle her playful giggles. As she's so willing to play along, you climb atop her and line up your stiff cock with her leaking pussy. She moans softly as you sink it into her. She trills in squeaky delight as you mount her. Her PVC pussy is quite nice and warm, and resizes itself to be a perfect fit for your [cock size desc of Player] [Cock of Player] cock. You hold the playfully squirming pooltoy down as you pound away at her, her inflated body shifting and deforming a little under your weight while it supports you softly. There's just something about her cute, innocent nature that really turns you on and you fuck her hard and fast, knowing you can't hurt her stretchy body. After a nice, satisfying ride atop her smooth body, you push into her one last time and unleash your hot load, spilling a pool of your hot cum inside her[if daytimer is day]. Under the bright sun, you can see the darker streaks and pool your semen makes against her inner skin[end if]. Finished, you get up and the bottlenose girl easily unwinds her towel and runs back off into the water. She gives you a farewell wave to you before getting back to splashing around, wearing her towel now as a cute, red bonnet.";
@@ -476,6 +430,51 @@ to say dolphinflatableattack:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Bottlenose Toy"	"[PrepCombat_Bottlenose Toy]"
+
+to say PrepCombat_Bottlenose Toy:
+	setmongender 4; [creature is female]
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Female";
+	if dolphinmode is 0:
+		if (HardMode is false and level of Player < 5) or a random chance of 3 in 4 succeeds:	[girl only at low level]
+			now dolphinmode is 1;
+		else:																			[25% of toy mode]
+			now dolphinmode is 2;
+	if dolphinmode is 1:
+		let debit be 0;
+		if HardMode is true and level of Player > 1, now debit is level of Player - 1;
+		now HP entry is 18 + ( debit * 3 );
+		now monsterHP is 18 + ( debit * 3 );
+		now wdam entry is 3 + ( debit / 4 );
+		now lev entry is 1 + debit;
+		now dex entry is 15 + ( lev entry / 5 );
+		project the figure of Bottlenose_icon;
+	else if dolphinmode is 2:
+		let debit be 0;
+		if HardMode is true and level of Player > 5, now debit is level of Player - 5;
+		now HP entry is 38 + ( debit * 4 );
+		now monsterHP is 38 + ( debit * 4 );
+		now lev entry is 5 + debit;
+		now wdam entry is 3 + ( lev entry / 3 );
+		now dex entry is 16 + ( lev entry / 5 );
+	else if dolphinmode is 3:	[feral dolphin toy in castle]
+		let debit be 0;
+		if HardMode is true and level of Player > 5, now debit is level of Player - 5;
+		now HP entry is 38 + ( debit * 4 );
+		now monsterHP is 38 + ( debit * 4 );
+		now lev entry is 5 + debit;
+		now wdam entry is 3 + ( lev entry / 3 );
+		now dex entry is 20 + ( lev entry / 5 );
+
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

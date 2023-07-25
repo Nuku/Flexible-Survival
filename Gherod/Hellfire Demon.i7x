@@ -347,8 +347,6 @@ to LJockstrapPickup:
 			say "     With a shrug, you leave it where it is. It probably will not be there in a few minutes.";
 
 to say HellDemon Desc:
-	setmongender 3;
-	project Figure of HellfireDemon_clothed_icon;
 	say "     Standing in front of you is yet another intimidating creature of Hell. A deep crimson, tall and powerful demon, with large tauric horns on the top of his head, approaches you from the darkness. Your eyes inevitably land on the massive bulge barely contained by a leather jockstrap, jiggling slightly at each step that he takes. On top of that, his athletic body is covered in muscle, with a simple harness around his hairy pectorals, and while he generally looks more human in appearance than the brutish of demons, his dark sharp claws still prove a threat to you. With a grin on his face, he speaks to you:[line break]";
 	if Hellfire Club is known:
 		say "     'Look who it is! Master's special guest taking a walk during the night! How about we spar... And fuck right after?' You swear you can already see his bulge growing with the anticipation of having it with you, be it just fighting or more than that. He also doesn't waste any time, lunging himself at you with a grin on his face.";
@@ -356,6 +354,14 @@ to say HellDemon Desc:
 		say "     'Fancy meetin' you here! Did you get fucked so much that you became one of us? Should've just asked Master Mogdraz for a joining pass, I'm sure he'd provide you with enough juice... in exchange for your soul. A small price for an eternity of fun, if you ask me... Speaking of fun, wanna have a go?' With this, the demon lunges himself at you.";
 	else:
 		say "     'Oh... Are you lost? What a cutie! And I definitely could use someone to unload my balls into... Master makes us work so much...! Alright, do as you're told and I might let you suck me off! How does that sound?' Without expecting any answer, the demon lunges himself at you.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Hellfire Demon"	"[PrepCombat_Hellfire Demon]"
+
+to say PrepCombat_Hellfire Demon:
+	setmongender 3;
+	project Figure of HellfireDemon_clothed_icon;
 
 Section 3 - Creature Insertion
 

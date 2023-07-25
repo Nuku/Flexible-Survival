@@ -188,7 +188,6 @@ to say ResolveEvent Protected Supplies:
 				LineBreak;
 				let scavfight be 1;
 		if scavfight is 1:
-			now fightoutcome is 100;
 			challenge [Name entry];
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "Managing to defeat the creature, you head over and claim the [y] as your prize, adding it to your supplies.";

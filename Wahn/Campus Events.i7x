@@ -60,7 +60,6 @@ Wandering the Campus is a situation.
 ResolveFunction of Wandering the Campus is "[ResolveEvent Wandering the Campus]". The level of Wandering the Campus is 9.
 Sarea of Wandering the Campus is "Campus".
 campuswander is a list of numbers that varies.
-campuswanderfight is a number that varies.
 when play begins:
 	add Wandering the Campus to BadSpots of FurryList;
 
@@ -96,10 +95,8 @@ to say ResolveEvent Wandering the Campus:
 		challenge "Cougar";
 		add 2 to campuswander;
 	else if T is 3:
-		now campuswanderfight is 1; [minor description/scene edits]
 		say "     As you travel the campus, you hear the rustle of the hedgerow beside you moments before a large, striped feline comes pouncing out of it at you. You barely manage to avoid this sneak attack, but are now facing this large tigertaur that's found her way to the college. Perhaps she succumbed to her infection after making it here.";
 		challenge "Tigertaur";
-		now campuswanderfight is 0; [minor description/scene edits]
 		add 3 to campuswander;
 	else if T is 4:
 		say "     Your travel across the college grounds is interrupted as a red kangaroo girl bounds onto a nearby car, then off again, moving to bar your path with a look of lustful excitement in her eyes.";

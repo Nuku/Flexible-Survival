@@ -473,7 +473,7 @@ TwistedCapacity of Segis is false. [Twisted Characters can take any penetration,
 Sterile of Segis is true. [steriles can't knock people up]
 MainInfection of Segis is "Dragon Android".
 Description of Segis is "[Segisdesc]".
-Conversation of Segis is { "<This is nothing but a placeholder!>" }.
+Conversation of Segis is { "<This is nothing but a Dragon Android!>" }.
 The scent of Segis is "     Segis does not have any particular smell other than something faintly resembling metal.".
 
 to say SegisBodyType:
@@ -2408,6 +2408,14 @@ to say Dragon Android loses:
 
 to say Dragon Android desc:
 	say "     The person-sized bipedal android has the uncanny appearance of a real dragonmorph, predominantly white with synthetic scales covering its entire body. A keen eye can tell it apart from anything real due to its metallic components that shine in plain view, but concealed well enough to fool a distracted passerby. This robot seems to be able to change parts of its hands and fingers to call devices with a magnitude of different utilities right from inside its scales, and once it lays its eyes on you, they flicker in an unnatural glowing cyan light. With the fluid and swift movement of a humanoid, the android approaches you with the intent of taking you down, no sound nor voice coming out of its solid frame.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Dragon Android"	"[PrepCombat_Dragon Android]"
+
+to say PrepCombat_Dragon Android:
+	say "";
+
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

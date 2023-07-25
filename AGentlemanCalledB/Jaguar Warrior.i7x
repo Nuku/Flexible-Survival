@@ -59,8 +59,6 @@ to say beattheJaguarWarrior:
 		say "Error! HP of Tehuantl = [HP of Tehuantl]. You shouldn't be able to encounter me right now! Please report this on the forums.";
 
 to say JaguarWarriorDesc:
-	setmongender 3; [creature is male]
-	project the Figure of Tehuantl_Male_clothed_icon;
 	if HP of Tehuantl is 0 and inasituation is false:
 		say "     As you wander the halls of the museum, your attention is drawn to a large broken display case. What remains of the exhibit appears to document a powerful Aztec military unit known as jaguar warriors. As you wonder where the contents of the display case might have ended up you hear a low, rumbling growl behind you. Turning quickly to face this potential threat you [run paragraph on]";
 		now HP of Tehuantl is 1;
@@ -260,12 +258,13 @@ to say TameTehuantl:
 
 	
 Table of CombatPrep (continued)
-name(text)	PrepFunction(text)
+name	PrepFunction
 "Jaguar Warrior"	"[PrepCombat_Jaguar Warrior]"
 
 to say PrepCombat_Jaguar Warrior:
 	setmongender 3; [creature is male]
 	project the Figure of Tehuantl_Male_clothed_icon;
+
 
 Section 2 - Creature Insertion
 

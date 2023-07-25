@@ -9,7 +9,6 @@ Section 1 - Creature Responses
 WhiptailLossCount is a number that varies. WhiptailLossCount is usually 0.
 
 to say WhiptailDesc:
-	setmongender 4; [creature is female]
 	say "     As you make your way around a large rock formation, you hear a shout, which startles you. Before you stands a reptilian woman of average height, her belly and throat a pale-blue while her limbs and face are a warm-brown lined with pale stripes. Her tail is the same blue as her front and flicks around in a most unlizard-like manner. She's wearing what looks to be a running outfit; a black spandex sports bra covers modest breasts, and compression shorts hug her muscled body closely. 'You're not getting the best of me.' She crouches before charging you with surprising speed!";
 
 to say LoseToWhiptail: [Will she find a vagina? If she doesn't, she's disappointed. If she finds one with some unexpected additions... she may be willing to try new things.]
@@ -207,6 +206,13 @@ to say Whiptail VanquishedSex8:			[A strange urge overcomes you.]
 	mimpregchance;
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Whiptail"	"[PrepCombat_Whiptail]"
+
+to say PrepCombat_Whiptail:
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

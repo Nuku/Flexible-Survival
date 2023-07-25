@@ -391,6 +391,15 @@ to say DoranVictory_TurnDown: [turn down]
 	say "     'Very well; however, if my victor changes their mind, I'm always available.' He goes on to explain where he resides. Apparently there's a cave within a not-too-distant [bold type]Rocky Outcropping[roman type], and his instructions are clear enough that you should have no issue getting there, 'Doran's the name, by the way.'";
 	say "     Once he's done, he makes to leave in that direction, scaled and well-toned ass waving at you in his departure, as though to entice you to follow.";
 
+	
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Peculiar Dragon"	"[PrepCombat_Peculiar Dragon]"
+
+to say PrepCombat_Peculiar Dragon:
+	setmongender 3; [creature is male]
+	now DoranFoodType is a random number between 1 and 2;
+
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)

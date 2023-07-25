@@ -140,7 +140,6 @@ to say Smilodon Male Loses:
 		say "     Deciding that you are done with the big catman, you refuse his offer and simply turn tail to leave. He says nothing back at you, and so you part ways...";
 
 to say Smilodon Male Desc:
-	project Figure of Sabretooth_clothed_icon;
 	say "     In front of you stands a large feline male, with an appearance resembling a Smilodon from the ice age, except this one's standing on two strong legs supporting his bulky furred body, very much like a werebeast. He sports a pair of long fangs coming out of his mouth, menacingly sharp, emphasizing the fierce look in his feline and fuzzy muzzle, and his muscular body is covered in golden fur with brown stripes and spots, only attaining a lighter color around his front torso. He also has a short brown mane coming from behind his head towards his lower back, and on his behind sticks out a small but fuzzy tail, barely moving. His equipment is quite sizable, with a thick sheath and a pair of hanging nuts that would make some males jealous, inevitably drawing your eyes in as he walks towards you intimidatingly.";
 	if Player is not dominant and scalevalue of Player <= 3: [Ranfer only truly takes interest in non-dominant players who are smaller than him (he's close to the 4 value, so 3 is already smaller)]
 		if Lust of Ranfer < 2:
@@ -244,7 +243,7 @@ TwistedCapacity of Ranfer is false. [Twisted Characters can take any penetration
 Sterile of Ranfer is true. [steriles can't knock people up]
 MainInfection of Ranfer is "Smilodon Male".
 Description of Ranfer is "[Ranferdesc]".
-Conversation of Ranfer is { "<This is nothing but a placeholder!>" }.
+Conversation of Ranfer is { "<This is nothing but a Smilodon Male!>" }.
 The scent of Ranfer is "     He smells like one big cat man, masculine with an animalistic scent.".
 
 to say RanferDesc:
@@ -713,6 +712,13 @@ an everyturn rule:
 			if Player is in Makeshift Rec Room:
 				say "     You have a look at Ranfer's sleeping spot, to find out that he is already in a deep slumber, with a book open and turned down on top of his chest.";
 			now Sleeping of Ranfer is true;
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Smilodon Male"	"[PrepCombat_Smilodon Male]"
+
+to say PrepCombat_Smilodon Male:
+	project Figure of Sabretooth_clothed_icon;
 
 Section X - Creature Insertion
 

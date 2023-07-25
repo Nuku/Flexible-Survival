@@ -113,6 +113,13 @@ to say Triceratops Male Desc:
 	say "     In front of you stands a tall anthropomorphic dinosaur man, with the head of a triceratops, to be precise. His pudgy and sturdy figure is covered in hard light orange scales, some of them even providing natural armor, which must explain why this strong male wears only some dog tags around his neck and nothing more, leaving his mostly human-looking junk hanging freely down below. He could have been a soldier or simply someone who scavenged some unfortunate human's equipment, but you cannot know for sure. Judging by his stance, the saurian male is probably looking for a fight, and he is happy to see you for that very reason. 'Finally! I can hit something, now. Do your worst, come at me!'";
 	say "     He then bumps his chest before starting to walk towards you, awaiting your first move.";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Triceratops Male"	"[PrepCombat_Triceratops Male]"
+
+to say PrepCombat_Triceratops Male:
+	say "";
+
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)

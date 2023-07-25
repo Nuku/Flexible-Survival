@@ -47,8 +47,6 @@ Version 1 of Nerdy Mouse by Wahn begins here.
 Section 1 - Creature Responses
 
 to say NerdyMouseDesc:
-	setmongender 3; [creature is male]
-	project Figure of Nerdy Mouse_clothed_icon;
 	choose a row with name of "Nerdy Mouse" in the Table of Random Critters;
 	if enemy type entry is 1 and "Player-Bullied" is not listed in Traits of Wesley: [Player doesn't know him]
 		say "     As you're exploring the Campus Quad you almost run into a four foot tall anthro brown mouse, tightly clutching a messenger bag to his side, which is hanging from a strap over his shoulder. He's got a pair of  thick circular glasses with a silver-rimmed frame on his nose, giving him the appearance of having fairly large eyes. Further, he's wearing a t-shirt with a large D20 dice on it, and a pair of blue jeans - given his small size, these must have been children's clothes, possibly even girl's children clothes for the pants, as they're not quite fitting the frame of the rodent. Being proportioned like an adult despite the small stature really makes him far more slender than a little human would be. Letting out a startled squeak and jumping back as if he touched a searing-hot stove, the mouse almost hyperventilates, staring wildly at you from behind his large glasses. Clearly, he's a tightly wound ball of anxiety, and you can almost see the fight or flight impulses battle in him, by the way his gaze sweeps left and right, trying to analyze the situation.";
@@ -453,6 +451,14 @@ to say Wesley_ForcedAssRide: [copy from above AFTER editing, then adapt for anal
 
 Section 2 - Creature Insertion
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Nerdy Mouse"	"[PrepCombat_Nerdy Mouse]"
+
+to say PrepCombat_Nerdy Mouse:
+	setmongender 3; [creature is male]
+	project Figure of Nerdy Mouse_clothed_icon;
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -705,7 +711,7 @@ TwistedCapacity of Wesley is false. [Twisted Characters can take any penetration
 Sterile of Wesley is false. [steriles can't knock people up]
 MainInfection of Wesley is "Nerdy Mouse".
 Description of Wesley is "[WesleyDesc]".
-Conversation of Wesley is { "<This is nothing but a placeholder!>" }.
+Conversation of Wesley is { "<This is nothing but a Nerdy Mouse!>" }.
 The scent of Wesley is "[WesleyScent]";
 
 to say WesleyScent:

@@ -905,20 +905,28 @@ to say ResolveEvent Hunting Prides:
 		say "     As you're traveling through the park, you notice signs that a band of felines has passed by recently. Remembering your promise to Leonard to deal with these roving prides, you start tracking this one down. You follow their trail for a while before hearing some commotion ahead. Following it, you manage to catch up with the group of felines and find them in the midst of attacking another of the feline girls. While you can't be certain, she does seem familiar and may be another of your pride sisters. With a growl, you rush to her aid, charging the band of felines from behind.";
 		now Feline_type is 3;
 		challenge "Feline";
-		now Feline_type is 1;
-		if fightoutcome >= 10 and fightoutcome <= 19:
+		if fightoutcome < 20: [player won]
 			say "     You pant for breath after having fought the rival pride. With several of the girls injured and a few others knocked out, the dispersed felines should think twice before trying something like this again to oppose Leonard. As you prepare to talk away, you do spot a feline with dark hair watching you cautiously as you leave. Presuming her to be one of the band you just beat, you call out to her, telling her to stop assaulting your pride sisters or Leonard will have you deal with them again. With that warning given, you leave the clearing, recalling that there are a few other of these groups yet to be dealt with.";
 			increase HP of Leonard by 1;
 			increase level of Hunting Prides by 2;
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "[feline vict]";
+		else if fightoutcome is 30: [fled]
+			say "     You run as fast as you can and make a clean getaway.";
+		now Feline_type is 1; [reset]
 	else if HP of Leonard is 11:
 		say "     While following a wooded path, you turn a corner to find yourself facing another feline pride[if Player is felinefaced or player is felinebodied]. They smile toothily at having found another feline to capture and start moving in[else if BodyName of Player is listed in infections of FelineList or FaceName of Player is listed in infections of FelineList]. They pause for a moment, looking you over, padding slowly closer. They discuss that, while not a cat girl like them, you are still feline and may still be worth capturing[else]. They growl angrily as they notice the scent of a rival male on you and move in to capture you[end if]. Remembering your promise to Leonard, you prepare to fight this hunting pride to help keep your weaker pride sisters safe. You take up a fighting stance and growl that your pride won't stand for these attacks and you've been sent to deal with them.";
 		now Feline_type is 3;
 		challenge "Feline";
-		now Feline_type is 1;
-		if fightoutcome >= 10 and fightoutcome <= 19:
+		if fightoutcome < 20: [player won]
 			say "     Having defeated this second hunting party, you scatter the remaining felines, growling that you'll give them this same treatment if they try this again. Looking around at those lioness girls who were knocked out, you briefly consider some means to bring them back to Leonard so the handsome lion might teach them some proper manners, but you notice the dark-haired feline watching from the trees again. Knowing for certain she wasn't among the group you just fought, you call out to her, beckoning her to come forward. Presuming she might be a lone feline who's been hiding from these hunting packs, you tell her it's safe to come out and that you won't hurt her, but she moves away, slipping further into the trees and leaving. Recalling that Leonard wants you focused on dealing with these hunting bands, you decide to leave the fallen girls and move on.";
 			increase HP of Leonard by 1;
 			increase level of Hunting Prides by 2;
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "[feline vict]";
+		else if fightoutcome is 30: [fled]
+			say "     You run as fast as you can and make a clean getaway.";
+		now Feline_type is 1;
 	else if HP of Leonard is 12:
 		now HP of Leonard is 13; [encountered final hunting pride]
 		say "     Traveling through the park, you spot the dark-haired feline watching you from the edge of the trees again. You stop and smile, kneeling down and motioning for her to come forward in a friendly manner, trying to coax the nervous kitty. She cautiously steps out from behind the bushes and wrings the edge of her frilly dress nervously. You speak softly to her, trying to calm her and bring the timid girl closer.";
@@ -938,20 +946,28 @@ to say ResolveEvent Hunting Prides:
 		say "     As you get back to your feet and take stock of the situation, you find that this group is larger than the others you've dealt with before. And that's when it strikes you, several of these felines look familiar and are among those you knocked out from the other hunting groups. It seems you were all wrong about the dark-haired girl. She wasn't with the first pride nor was she a loner, but was in actuality from another hunting pride altogether - one which scooped up the felines you'd rendered unconscious to add to their own. It seems you'll have to break up this group as well if you're to prove the might of your pride over all others.";
 		now Feline_type is 3;
 		challenge "Feline";
-		now Feline_type is 1;
-		if fightoutcome >= 10 and fightoutcome <= 19:
+		if fightoutcome < 20: [player won]
 			say "     After having knocked out several of the small lionesses and sending several more running, you manage to grab the dark-haired one and toss her to the ground. With the hunting pride collapsing and the felines scattered, you'd think she'd be more upset, but she continues to giggle excitedly. 'Oh, you think you're so strong now, don't you?' she laughs. 'Well, it's too late now. Our clever master will deal with your prissy lion. He has a plan to take care of him.' As she starts giggling again, you growl angrily and punch her hard, knocking her out to silence her. From the sounds of it, you'd best rush back to Leonard as soon as possible.";
 			increase HP of Leonard by 1;
 			now Hunting Prides is resolved;
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "[feline vict]";
+		else if fightoutcome is 30: [fled]
+			say "     You run as fast as you can and make a clean getaway.";
+		now Feline_type is 1;
 	else if HP of Leonard is 13:		[encountered final pride again]
 		say "     You hear a small rustle nearby and glance over to see the tip of a golden tail moving behind a nearby bush. Suspecting trouble, you take up a fighting stance and prepare yourself to fight. Having noticed them, the feline girls surrounding you move out from behind their scattered cover, moving in to fight you again. The black-haired lioness girl among them, her hunting pride seeking to deal with you properly this time. 'Clever prey, running away like that. You should stay and join our pride,' she teases. If you come along, I know our master will welcome you,' she purrs with a smile on her cute face. It is a smile full of sharp teeth and sinister intent.";
 		now Feline_type is 3;
 		challenge "Feline";
-		now Feline_type is 1;
-		if fightoutcome >= 10 and fightoutcome <= 19:
+		if fightoutcome < 20: [player won]
 			say "     After having knocked out several of the small lionesses and sending several more running, you manage to grab the dark-haired one and toss her to the ground. With the hunting pride collapsing and the felines scattered, you'd think she'd be more upset, but she continues to giggle excitedly. 'Oh, you think you're so strong now, don't you?' she laughs. 'Well, it's too late now. Our clever master will deal with your prissy lion. He has a plan to take care of him.' As she starts giggling again, you growl angrily and punch her hard, knocking her out to silence her. From the sounds of it, you'd best rush back to Leonard as soon as possible.";
 			increase HP of Leonard by 1;
 			now Hunting Prides is resolved;
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "[feline vict]";
+		else if fightoutcome is 30: [fled]
+			say "     You run as fast as you can and make a clean getaway.";
+		now Feline_type is 1;
 	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     [if fightoutcome is 22]Having submitted to the band of lionesses[else]Unable to continue resisting the band of lionesses[end if], you are dragged to the ground by them as they purr and giggle happily. You are kissed, licked and petted by the cute felines. As they continue this loving assault upon you, you start to purr and nuzzle them back, welcoming their kisses and caressing them in return[if HP of Leonard is 12 or HP of Leonard is 13]. You find yourself French kissing the black-haired one, who rumbles happily at your increasing submission[end if]. You begin to forget why you were ever fighting with them in the first place, eventually becoming another cute feline girl like them. Eventually, after much playful teasing and fun, you're brought back to the meet their leonine pride leader, who is happy to welcome you properly into the pride by mounting you, much to your feline delight.";
 		now humanity of Player is 0;
@@ -1004,7 +1020,6 @@ to say Leonardrivalfight:
 	now inasituation is true;
 	challenge "Feline";
 	now inasituation is false;
-	now Feline_type is 1;
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		now HP of Leonard is 15;
 		say "     As you look down upon Leonard's fight, you see the exhausted but still handsome lion clock his opponent soundly in the jaw with a powerful right hook, sending him to the ground with a knock-out. As Leonard is about to roar triumphantly, your opponent's battered body tumbles over the edge of the tunnel mouth, landing atop the other fallen lion. He's surprised by this and looks up, spotting you grinning up there. Quickly assessing what was about to occur, your handsome lover smiles up at you and you both roar together, having defeated all those who would attack your pride, calling a halt to the fighting amongst the remaining females. Those from opposing prides who can either flee or give in, their prides broken.";
@@ -1061,6 +1076,7 @@ to say Leonardrivalfight:
 			follow the turnpass rule;
 		NPCSexAftermath Player receives "PussyFuck" from Leonard;
 	else if fightoutcome >= 20 and fightoutcome <= 29:
+		say "[feline vict]";
 		say "     After the male has beaten and fucked you, he grabs you roughly by both strong paws and hefts you over his head. You moan weakly, still bloated with his cum, as he hurls you over the edge moments after Leonard knocks out his opponent, sending you crashing into your lover. Struck down by your defeated, cum-stained body of his pride favorite is a terrible blow to the exhausted lion. This crushes him body and soul, turning what would have been a roar of triumph into a wail of lamentation. When the final alpha lion attacks him, he puts up almost no fight at all, his spirit broken and he is quickly dispatched. You mewl and moan weakly from the ground beside this quick and brutal fight as your master is beaten and made to service the victor.";
 		say "     As this lustful display is going on, the dark-haired feline appears beside you, giggling happily as she caresses and teases you. She tells you how she and her clever master have been looking forward to welcoming you to their pride and how much fun she's going to have with you. Other lionesses from her pride move up to join her and you are kissed, licked and petted by the cute felines. As they continue this loving assault upon you, you start to purr and nuzzle them back, welcoming their kisses and caressing them in return. You find yourself French kissing the black-haired one, who rumbles happily at your increasing submission.";
 		say "     Looking over, you see the clever lion busily tending to the three increasingly female lioness girls in his company. You feel a small attachment to the particularly pretty one he's currently fucking and are pleased that she'll be joining the pride alongside you, though you can't really remember why you feel this way about her. Soon you forget entirely about ever fighting with them in the first place, eventually becoming another cute feline girl like them. After much playful teasing and fun, you mewl happily as the sexy male comes over to mount your needy body, properly welcoming you into his new and powerful pride.";
@@ -1102,6 +1118,7 @@ to say Leonardrivalfight:
 		if Libido of Player < 30, now Libido of Player is 30;
 		WaitLineBreak;
 		end the story saying "Having been defeated and captured by the alpha lion and his dark-haired lioness, you are made to join his pride.";
+	now Feline_type is 1; [reset]
 
 
 Section 8 - Definitions

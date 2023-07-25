@@ -14,7 +14,6 @@ JackalAlphaSubmitCount is usually 0.
 Section 1 - Encounter
 
 to say Alpha Jackal Desc:
-	setmongender 3;
 	say "     Approaching you comes a fairly large anthropomorphic jackal, tall and powerful, with bulging muscles being the predominant feature about this alpha male. The thing that makes his gender clear is the one oversized endowment dandling from one thick thigh to another, complete with an absolutely gigantic sack with swollen orbs that seem to be full to the brim with his seed, which already begins to ooze out of his soft sheath. His golden eyes turn their gaze to you, as his sleek jackal ears swivel around on top of his head to catch any noise in his surroundings. He has an especially wide jaw, an evidence of his hypermasculinity, which you only notice more when he starts speaking. 'I do not intend to harm you... But I would recommend submission. I shall make sure you are well prepared...'";
 	say "     His tone is soft, albeit very deep, and has a mystic vibe to it. Complemented with the glowing light of hieroglyphs that cover his body, dimming strongly with every word, he manages to catch your full attention for a while, almost removing your will to fight in the moment. With that said, he comes closer...";
 
@@ -369,6 +368,14 @@ to say AlphaJLosesCumMilk:
 	if JackalAlphaSubmitCount > 0:
 		now JackalAlphaSubmitCount is 0;
 		say "     [bold type]Beating the alpha jackal once has released you from his magical influence completely[roman type]. You feel much more like yourself, now!";
+
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Jackal Alpha"	"[PrepCombat_Jackal Alpha]"
+
+to say PrepCombat_Jackal Alpha:
+	setmongender 3;
 
 Section 2 - Creature Insertion
 

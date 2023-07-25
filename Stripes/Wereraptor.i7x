@@ -928,18 +928,18 @@ Getting the Knife is a situation.
 ResolveFunction of Getting the Knife is "[ResolveEvent Getting the Knife]". The level of Getting the Knife is 7. Getting the Knife is inactive.
 Sarea of Getting the Knife is "Warehouse".
 
-wrknifefight is a truth state that varies. wrknifefight is usually false.
-
 to say ResolveEvent Getting the Knife:
-	say "     Doing your best to circumvent the creatures roaming around here, you make your way to the address Nermine provided. It is a non-descript warehouse like so many others in this area. You start looking around, trying to find a way into the building, only to be interrupted by a growl behind you. Turning around, you find yourself faced with a large, burly wolverine in a security guard uniform.";
-	now wrknifefight is true;
+	say "     Doing your best to circumvent the creatures roaming around here, you make your way to the address Nermine provided. It is a non-descript warehouse like so many others in this area. You start looking around, trying to find a way into the building, only to be interrupted by a growl behind you. Turning around, you find yourself facing off with a large, muscled beast. Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle. He has a battered security company jacket on his animalistic body. He is covered in dark fur with a few lighter patches. His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders. He growls angrily as he watches you, clearly intent on keeping you from breaking into the warehouse. You spot the company logo on his clothing - Wolverine Security.";
 	challenge "Wolverine Guard";
-	now wrknifefight is false;
-	if fightoutcome >= 10 and fightoutcome <= 19:
+	if fightoutcome < 20: [player won]
+		say "     You manage to knock the wolverine out, leaving you free to search for a way inside.";
 		say "[wrgetknife]";
-	else:
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you away from the warehouse he's so vigilantly guarding.";
+		if HP of Player > 0, now HP of Player is HP of Player / 2;
+		say "     Driven off by the lumbering monstrosity, you will have to try coming back another time if you want to try getting the knife.";		
+	else if fightoutcome is 30: [fled]
 		say "     Driven off by the lumbering monstrosity, you will have to try coming back another time if you want to try getting the knife.";
-
 
 to say wrgetknife:
 	say "     Checking around the building, you find a half-open window along one side of the warehouse. It is quite high up, but you thankfully there are some old crates you can stack to get up to it. After managing to get inside, you start looking around. Thankfully, there's not much being stored in here right now, so it doesn't take you very long to find the shipping crate with the silver knife in it.";

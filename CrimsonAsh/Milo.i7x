@@ -221,6 +221,13 @@ to say LoseToMilo:
 to say MiloDesc:
 	say ""; [nothing in here so far, only one event fight]
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Bobcat"	"[PrepCombat_Bobcat]"
+
+to say PrepCombat_Bobcat:
+	say "";
+
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
@@ -434,6 +441,6 @@ Description of Milo is "[Milodesc]".
 Conversation of Milo is { "Meep!" }.
 
 to say Milodesc:
-	say "<Placeholder>";
+	say "<Bobcat>";
 
 Milo ends here.

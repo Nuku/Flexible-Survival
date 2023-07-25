@@ -170,6 +170,13 @@ to say Tyrannosaurus Male Desc:
 	say "     In front of you stands a tall anthropomorphic dinosaur man, with the head of a tyrannosaurus, to be precise. His musclebound figure is covered by a black tank top, green camo pants below and combat boots, and as he seems to be carrying his tags, he could have been a soldier or someone who simply scavenged some unfortunate human's equipment. He seems to have found an iron pipe, which he is arming himself with, walking towards you ready to strike. With a cocky, toothy grin, which actually looks quite scary given the fact his mouth features many sharp teeth, he eyes you from head to feet as he throws a taunt. 'Looking to get beaten up and fucked like the rest of them? You should just be on your knees now, bitch.'";
 	say "     The dino man does not waste any time and rushes to attack you!";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Tyrannosaurus Male"	"[PrepCombat_Tyrannosaurus Male]"
+
+to say PrepCombat_Tyrannosaurus Male:
+	say "";
+
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)

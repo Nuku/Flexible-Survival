@@ -6,22 +6,6 @@ Section 1 - Creature Responses
 
 FirstDescOuter is a number that varies. [Don't know if monsters have something I can assign variables to]
 
-to say FoulS_Desc:
-	setmongender 3; [creature is male]
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Female";
-	if FirstDescOuter is 0:
-		say "     Walking through the desolate corridors that make up the basement of Trevor Labs, you can't help but feel as though the walls of the world are closing in on you, the empty rooms and silent halls overwhelming your thoughts. The claustrophobia you find yourself experiencing soon gets the better of you, and you find yourself lost in the maze of the lab complex, trying to quickly find your way out. Echoing through the halls, a low growl emanates behind you, sending shivers up your spine. Turning yourself around to face whatever is behind you, you come face to face with something you couldn't have dreamt up in your nightmares.";
-		now FirstDescOuter is 1;
-	else:
-		say "     A familiar growl echoes throughout the halls of the Trevor Lab Complex, sounding throughout the empty halls and rooms. Preparing yourself to face your attacker, you turn to face the Foul Scuttler that stalks you.";
-	LineBreak;
-	say "     You're not entirely sure what this creature is. Tall enough to reach your chest, this beast is a mass of spines with a maw of razor-sharp teeth. The creature's body is supported by six legs, using them to scuttle forward in quick jaunts. The legs supporting it are similar to triple-jointed insect legs, and end in serrated claws, perfect for cutting and rending. The skin of this being is covered in plated carapace, with ridges of thick spines protruding from the creatures back, giving it a horrific look. The head of the creature is even more disturbing. Solid [one of]black[or]yellow[or]red[or]gray[or]purple[at random] eyes stare at you, a cunning intelligence glimmering within them. The maw of the creature is gigantic, with the sides of its mouth extending to the sides of its face, ending just below the holes that serve as its ears. Thick saliva drips from its open mouth, leaking between the rows of sharp incisors that function as its teeth, while foot-length spikes grow from its lower jaw; getting anywhere near this creature's head is a bad idea. Dropping your gaze lower, you can tell that this creature is definitely male, a dripping, wriggling, fifteen-inch dick hanging beneath its mass. The head of the beast's cock seems to be made up of five separate tentacles, reminding you of a splayed-out starfish attached to the creature's shaft. Screaming at you and charging, the beast engages you, horrid intent in its emotionless eyes.";
 
 to say FoulS_PlayerVictory:
 	say "     Landing a heavy hit straight to the creature's head, pushing it back and slamming it into the ground. Letting out a mournful scream as he falls to the ground, the Foul Scuttler slams to the ground, hurt and exhausted from the long fight you both just engaged in.";
@@ -143,6 +127,29 @@ to say OuterSuck:
 
 
 Section 2 - Creature Insertion
+
+to say FoulS_Desc: [descriptions only, is suppressed by inasituation is true]
+	if FirstDescOuter is 0:
+		say "     Walking through the desolate corridors that make up the basement of Trevor Labs, you can't help but feel as though the walls of the world are closing in on you, the empty rooms and silent halls overwhelming your thoughts. The claustrophobia you find yourself experiencing soon gets the better of you, and you find yourself lost in the maze of the lab complex, trying to quickly find your way out. Echoing through the halls, a low growl emanates behind you, sending shivers up your spine. Turning yourself around to face whatever is behind you, you come face to face with something you couldn't have dreamt up in your nightmares.";
+		now FirstDescOuter is 1;
+	else:
+		say "     A familiar growl echoes throughout the halls of the Trevor Lab Complex, sounding throughout the empty halls and rooms. Preparing yourself to face your attacker, you turn to face the Foul Scuttler that stalks you.";
+	LineBreak;
+	say "     You're not entirely sure what this creature is. Tall enough to reach your chest, this beast is a mass of spines with a maw of razor-sharp teeth. The creature's body is supported by six legs, using them to scuttle forward in quick jaunts. The legs supporting it are similar to triple-jointed insect legs, and end in serrated claws, perfect for cutting and rending. The skin of this being is covered in plated carapace, with ridges of thick spines protruding from the creatures back, giving it a horrific look. The head of the creature is even more disturbing. Solid [one of]black[or]yellow[or]red[or]gray[or]purple[at random] eyes stare at you, a cunning intelligence glimmering within them. The maw of the creature is gigantic, with the sides of its mouth extending to the sides of its face, ending just below the holes that serve as its ears. Thick saliva drips from its open mouth, leaking between the rows of sharp incisors that function as its teeth, while foot-length spikes grow from its lower jaw; getting anywhere near this creature's head is a bad idea. Dropping your gaze lower, you can tell that this creature is definitely male, a dripping, wriggling, fifteen-inch dick hanging beneath its mass. The head of the beast's cock seems to be made up of five separate tentacles, reminding you of a splayed-out starfish attached to the creature's shaft. Screaming at you and charging, the beast engages you, horrid intent in its emotionless eyes.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Foul Scuttler"	"[PrepCombat_Foul Scuttler]"
+
+to say PrepCombat_Foul Scuttler: [pre-combat setup, run code and picture displays here]
+	setmongender 3; [creature is male]
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Female";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

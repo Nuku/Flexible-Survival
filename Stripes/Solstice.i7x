@@ -115,15 +115,8 @@ to say ResolveEvent Onyx Crow:
 		say "     Speaking of, in the next room in the wing, you spot a display case that looks like it's been broken into recently. The wooden case is cracked and even from here, you can see that the lid doesn't close properly anymore. There's some rope tying it shut and a tag labelled 'Restoration needed' on it. If that's her handiwork, it appears the treasure hunter was about to get her prize when she was caught in the act.";
 		WaitLineBreak;
 		say "     But unfortunately, you also won't have an easy time of it. It appears that Valerie's put a watchdog to guard the artifact. Or three watchdogs. Or three in one. Between you and the case are the three snarling heads of a giant dog beast. Like Cerberus of myth guarding the entrance to the Underworld, so does this monster bar your way to the black treasure.";
-		now cerbfight is 3;
 		challenge "Cerberus";
-		if cerbfight is 3:
-			say "     Fleeing the three-headed dog, you run from the wing and try to make your way back to the lobby. You'll have to recover and try coming back later. Maybe the dog will be gone by then, but you don't think you'll be that lucky.";
-			now Resolution of Onyx Crow is 3; [fled the cerberus]
-		else if cerbfight is 2:
-			say "     Having passed out after the lustful creature has had its way with you, you awake to find yourself ejected from the room. You are wet and sticky with canine slobber and the herm's juices, which you try your best to wipe off to remove the evidence of your fight with the guard before returning to the lobby. You'll have to recover and try returning there later. Perhaps you'll fare better next time, though part of you certainly enjoyed losing. You find yourself thinking it might just be more fun to keep losing to the creature.";
-			now Resolution of Onyx Crow is 2; [lost to cerberus]
-		else if cerbfight is 1:
+		if fightoutcome < 20: [player won]
 			say "     Having beaten the guard, you are now free to advance upon the case. Looking it over, you can see that it does indeed hold the Onyx Crow. It is a crow's head carved from a glossy, black stone. The detail is a little rough, but there is an ornate band of gold around its base as well as golden eyes. There are also thin traces of gold that run down the back of its had, forming a stylized pattern. It looks expensive enough, but there must be much more valuable pieces than this one.";
 			WaitLineBreak;
 			say "     Investigating further, you look over at the museum's description of this piece. It goes on to talk about it being found in a collection of Greek treasures. '...discovered by so-and-so... treasure vault... king of Crete in the year blah-blah-blah...' The only interesting detail comes when it talks about how the Onyx Crow was probably the headpiece to a staff or scepter and likely of ceremonial significance. Examining the carving, you do find that there is a square hole carved into the underside, which the plaque notes historians believe was used to fit it into place on the handle, but all that remains is the headpiece.";
@@ -133,7 +126,12 @@ to say ResolveEvent Onyx Crow:
 			now HP of Solstice is 2;
 			now Resolution of Onyx Crow is 1; [won and got the artifact]
 			now Onyx Crow is resolved;
-
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "     Having passed out after the lustful creature has had its way with you, you awake to find yourself ejected from the room. You are wet and sticky with canine slobber and the herm's juices, which you try your best to wipe off to remove the evidence of your fight with the guard before returning to the lobby. You'll have to recover and try returning there later. Perhaps you'll fare better next time, though part of you certainly enjoyed losing. You find yourself thinking it might just be more fun to keep losing to the creature.";
+			now Resolution of Onyx Crow is 2; [lost to cerberus]
+		else if fightoutcome is 30: [fled]
+			say "     Fleeing the three-headed dog, you run from the wing and try to make your way back to the lobby. You'll have to recover and try coming back later. Maybe the dog will be gone by then, but you don't think you'll be that lucky.";
+			now Resolution of Onyx Crow is 3; [fled the cerberus]
 
 Table of Game Objects (continued)
 name	desc	weight	object

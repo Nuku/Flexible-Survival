@@ -877,26 +877,28 @@ when play begins:
 to say ResolveEvent Beach Party:
 	say "     Traveling along the beach, you crest a small dune to find a group of bright pink, dolphin girls splashing around in the water. They seem to be throwing a [if daytimer is day]sunny[else]nighttime[end if] beach party for themselves, giggling and playing around a large dolphin pooltoy. One runs over to a small cooler and pulls out a can of soda. After shaking it up, she sprays it wildly across her friend's body, causing her to squeak and laugh as she tries to block the foamy spray[if thirst of Player > 30]. Feeling rather thirsty yourself, you find it disappointing they'd waste a drink like that[end if]. As the foam slides down her body, you notice that something is odd about their appearance. In the [if daytimer is day]sunlight, you can see that the dark cola running down her back can be seen through her[else]moonlight, you can see the foam cola running smoothly down her body[end if]. These dolphin girls are inflatable creatures and completely empty save for air.";
 	say "     It is at this point that you are spotted. And, eager for more fun, the dolphin girl on the beach tosses down the empty can and bounds her way towards you with a vapid smile on her face.";
-	now dolphinflatablefight is 3;
-	challenge "Bottlenose Toy";
-	if dolphinflatablefight is 1:
-		say "     With the first dolphin girl sent back to the water, she giggles and gets in a splashing fight with her friend who got the soda treatment to help clean her off. As this goes on, another of the dolphin girls prances out of the water with loud giggles to play with you as well.";
-		now dolphinflatablefight is 3;
-		challenge "Bottlenose Toy";
-		if dolphinflatablefight is 1:
+	let DolphinInflatableFightCounter be 0;
+	now fightoutcome is 0; [reset]
+	now dolphinmode is 1; [dolphin girl mode]
+	while fightoutcome < 20 and DolphinInflatableFightCounter < 4: [runs for 4 times or until the player loses or flees]
+		if DolphinInflatableFightCounter is 1:
+			say "     With the first dolphin girl sent back to the water, she giggles and gets in a splashing fight with her friend who got the soda treatment to help clean her off. As this goes on, another of the dolphin girls prances out of the water with loud giggles to play with you as well.";
+		else if DolphinInflatableFightCounter is 2:
 			say "     As the second is returning to the water, the one you believe was sprayed with the soda comes towards you. You don't really know how you can tell the identical dolphin girls apart, but you're fairly certain it's her coming towards you with a big smile on her bottlenose snout.";
-			now dolphinflatablefight is 3;
-			challenge "Bottlenose Toy";
-			if dolphinflatablefight is 1:
-				say "     As she prances back into the water, the girls giggle and whisper amongst themselves. They grab onto the dolphin pooltoy floating in the water around them and together toss it towards you. It floats lazily in the air, drifting all the way up the dune to land near your feet.";
-				now dolphinflatablefight is 4;
-				challenge "Bottlenose Toy";
-				if dolphinflatablefight is 1:
-					say "     With the green dolphin sent back into the water, the girls start playing around with it. Some start fingering themselves and each other, rather worked after their amusement with you. With them distracted, you decide to avail yourself of the remaining contents of their cooler, taking the last two cans before heading on your way, the sounds of their playing fading behind you as you go past a pile of rocks.";
-					ItemGain soda by 2;
-					increase score by 10;
-					now Resolution of Beach Party is 1; [Beat Bottlenose Toys and got soda]
-	if dolphinflatablefight is 2:
+		else if DolphinInflatableFightCounter is 3:
+			say "     As she prances back into the water, the girls giggle and whisper amongst themselves. They grab onto the dolphin pooltoy floating in the water around them and together toss it towards you. It floats lazily in the air, drifting all the way up the dune to land near your feet.";
+			now dolphinmode is 2; [feral dolphin toy]
+		challenge "Bottlenose Toy";
+		increase DolphinInflatableFightCounter by 1;
+	now dolphinmode is 0; [reset]
+	if fightoutcome < 20: [player won]
+		say "[beatthedolphinflatable]";
+		say "     With the green dolphin sent back into the water, the girls start playing around with it. Some start fingering themselves and each other, rather worked after their amusement with you. With them distracted, you decide to avail yourself of the remaining contents of their cooler, taking the last two cans before heading on your way, the sounds of their playing fading behind you as you go past a pile of rocks.";
+		ItemGain soda by 2;
+		increase score by 10;
+		now Resolution of Beach Party is 1; [Beat Bottlenose Toys and got soda]
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "[losetodolphinflatable]";
 		say "     Even as the dolphin who just finished playing with you heads back to the water, several of the others are all on you at once. One has the last of the sodas. But rather than give you a drink, she sprays both cans all over you, wasting their contents while the girls giggle merrily. The dolphins all huddle around you and start licking all over your body to clean the sweet soda from you. Their rubber tongues glide across your skin and seek to tease you all over. Two set to work on your nipples[if Breast Size of Player > 0], squeezing your breasts[end if]. Others kiss and lick at your face and nibble at your ears. Another, the soda girl, nuzzles her snout down between your legs, licking and kissing at your groin. Her tongue plays over your [if Player is male]sticky, throbbing [Cock of Player] cock[smn][else if Player is female]sticky, juicy puss[yfn][else]sticky thighs and barren crotch[end if]. Another enterprising girl, after sucking your fingers clean one by one, guides your hand to her groin, getting you to finger her dripping pussy until you feel her slick juices soak your hand as she cums with delighted trills. All this attention makes you laugh and giggle like a girl, sounding a lot like the inflatable females surrounding you. [if Player is neuter]Once you're finally all cleaned up[else]When you finally cum[end if], the pink dolphins release you, heading back to frolic in the water again.";
 		say "     Having the air-headed dolphin girls lavish so much attention onto you, you can't help but feel yourself fading away some, as if you're becoming more empty-headed and giggly like them. You rise to your feet easily, feeling as if buoyed by your own happy feelings and look over your body, fully that of an inflatable dolphin like those pretty girls";
 		SanLoss 20;
@@ -921,10 +923,9 @@ to say ResolveEvent Beach Party:
 		else:
 			say ". You manage to keep your mind together enough to leave the dolphin girls and with their large dolphin toy to continue their partying. As you walk back along the beach, you can hear a few cries of disappointment, but the giggling and playing starts up again moments afterwards. You're quite sure they won't pursue you, but you decide to head back and wait for them to finish their beach party before passing this way again.";
 			now Resolution of Beach Party is 2; [Lost to Bottlenose Toys]
-	if dolphinflatablefight is 3 or dolphinflatablefight is 4:
+	else if fightoutcome is 30: [fled]	
 		say "     You manage to make a break for it, running away from the waterfront. You can hear a few cries of disappointment, but the giggling and playing starts up moments afterwards. You're sure they won't pursue you, but you decide to head back and wait for them to finish their beach party before passing this way again.";
 		now Resolution of Beach Party is 3; [Ran from Bottlenose Toys]
-
 
 Section 7 - Mall Events
 

@@ -171,7 +171,6 @@ to say Spartan blown:
 	CreatureSexAftermath "Player" receives "OralCock" from "Spartan Warrior";
 
 to say SpartanDesc:
-	setmongender 3;
 	say "     You cross paths with a young man clothed in nothing but sandals, a long red cloak and a plumed Greek helmet. He holds a pretty self-confident expression as he walks up to you.";
 	if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior":
 		say "     'Welcome, brother - I see I'm not the only one selected for this test. Let us measure our strength against each other and see who is superior.'";
@@ -179,6 +178,13 @@ to say SpartanDesc:
 		say "     'Ah, a Helot. Some welcome relief for my aching balls,' he says to himself, lowering a hand to fondle them and stroke his long cock. 'Get over here, slave - I have need of you.'";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Spartan Warrior"	"[PrepCombat_Spartan Warrior]"
+
+to say PrepCombat_Spartan Warrior:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

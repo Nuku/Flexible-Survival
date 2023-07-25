@@ -40,7 +40,7 @@ to say chinvic:
 		say "     [if HP of Player < 1]Subjected to[else]Attending[end if] this creature's wanton need, the wet, loud endeavor brings her to ecstasy, squeaking out weakly as she clings to you, [if HP of Player < 1]forced to[else]having you[end if] swallow down a flood of her subsequent sexual fluids. Exhausted as she now is, [if HP of Player < 1]you toss the rodent free of you[else]you pull yourself free of the rodent[end if], who weakly scrambles off into the distance, leaving you to recover from the ordeal and retreat back from whence you came.";
 		CreatureSexAftermath "Player" receives "OralPussy" from "Chinchilla";
 
-to say chinloss: [Placeholder, player victory scenes expected to be added in later]
+to say chinloss: [Chinchilla, player victory scenes expected to be added in later]
 	if Player is not male or ( nochinchillasex > 2 and the remainder after dividing nochinchillasex by 5 is not 0 ):
 		say "     Eventually, the critter collapses, too exhausted to fight back any further. With nothing more to gain from this exchange, you choose to depart, letting the rodent retreat back from whence it came.";
 		if Player is male, increase nochinchillasex by 1;
@@ -67,6 +67,16 @@ to say chinloss: [Placeholder, player victory scenes expected to be added in lat
 			increase nochinchillasex by 1;
 
 to say chindesc:
+	say "     [if showlocale is true]Popping up from a nearby [one of]crevice[or]alcove[at random] you are met with[else]You run up against[end if] what appears a female who's succumbed to the appearance of a chinchilla. Now no more than a few feet tall, very little in the way of human attributes remain. The diminutive creature squeaks distressingly in regards to your presence, [if a random chance of 1 in 2 succeeds and chindem is true]dressed in naught but a makeshift, canvas cloak[else]stark naked before you[end if] its pelt extraordinarily soft and inviting to your sight.";
+	say "     '[if chindem is true][one of]Don't think I can't take you on[or]Leave this place, please[or]I'll get what I need, one way or another[at random][else][one of]Tcht, kst kst[or]Scree, tcht tcht[or]Kst, tcht[at random][end if]!' [if chindem is true]Still somewhat lucid[else]Completely lost to its feral influence[end if], the little beast stands on its hindpaws, bearing its forepaws threateningly at you... Though, the gesture comes off as more adorable than threatening.";
+
+Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Chinchilla"	"[PrepCombat_Chinchilla]"
+
+to say PrepCombat_Chinchilla:
 	setmongender 3; [creature is male]
 	choose row MonsterID from Table of Random Critters;
 	setmonster "Chinchilla";
@@ -82,10 +92,6 @@ to say chindesc:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Female";
-	say "     [if showlocale is true]Popping up from a nearby [one of]crevice[or]alcove[at random] you are met with[else]You run up against[end if] what appears a female who's succumbed to the appearance of a chinchilla. Now no more than a few feet tall, very little in the way of human attributes remain. The diminutive creature squeaks distressingly in regards to your presence, [if a random chance of 1 in 2 succeeds and chindem is true]dressed in naught but a makeshift, canvas cloak[else]stark naked before you[end if] its pelt extraordinarily soft and inviting to your sight.";
-	say "     '[if chindem is true][one of]Don't think I can't take you on[or]Leave this place, please[or]I'll get what I need, one way or another[at random][else][one of]Tcht, kst kst[or]Scree, tcht tcht[or]Kst, tcht[at random][end if]!' [if chindem is true]Still somewhat lucid[else]Completely lost to its feral influence[end if], the little beast stands on its hindpaws, bearing its forepaws threateningly at you... Though, the gesture comes off as more adorable than threatening.";
-
-Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

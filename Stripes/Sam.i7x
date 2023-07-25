@@ -510,7 +510,6 @@ carry out SamTest:
 
 Section 4 - Confrontation at the Mini-Lab
 
-minilabfight is a number that varies.
 featherready is a truth state that varies. featherready is usually false.
 
 instead of navigating Mini-Lab while HP of Sam is 4:
@@ -536,11 +535,9 @@ to assaultonminilab:
 			break;
 	if calcnumber is 1:
 		say "     You grab the tigertaur and struggle to pull her away from Sam. She growls in frustration and turns to confront you before getting her true prize.";
-		now minilabfight is 1;
 		now inasituation is true;
 		challenge "Tigertaur";
 		now inasituation is false;
-		now minilabfight is 0;
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			minilabvictory;
 		else if fightoutcome >= 20 and fightoutcome <= 29:

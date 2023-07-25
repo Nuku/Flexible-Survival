@@ -34,10 +34,6 @@ DemonBruteStatus is a number that varies. DemonBruteStatus is usually 0.
 Section 1 - Fighting and Capturing the Brute
 
 to say demonbrutedesc:
-	setmongender 3;
-	follow the monster combat mode rule; [select the combat mode for first-strike]
-	choose row monstercom from the table of critter combat;
-	now alt1chance entry is 10; [reset likelihood of alt attack]
 	if DBCaptureQuestVar is 5:
 		say "The large demon stretches its body, ropes of muscles rippling under dark purple skin and the spade-tipped tail whipping through the air. Then it turns its head towards you, red eyes glowing with hatred. With a roar, it rushes forward with outstretched claws.";
 	else:
@@ -1798,6 +1794,16 @@ to say CarlTalk_DB:
 		now resolution of Demonic Redemption is 99;
 
 Section 4 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Demon Brute"	"[PrepCombat_Demon Brute]"
+
+to say PrepCombat_Demon Brute:
+	setmongender 3;
+	follow the monster combat mode rule; [select the combat mode for first-strike]
+	choose row monstercom from the table of critter combat;
+	now alt1chance entry is 10; [reset likelihood of alt attack]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

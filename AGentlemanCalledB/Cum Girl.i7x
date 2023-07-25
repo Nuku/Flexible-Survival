@@ -54,6 +54,8 @@ to say beattheCumGirl:
 	if cumgirlfed < 0, now cumgirlfed is 0;
 
 to say CumGirldesc:
+	let cumgrowth be cumgirlfed / 5;
+	if cumgrowth > 10, now cumgrowth is 10;
 	say "     Before you is a creature that appears, at a glance, to be a pale-looking female human, but as she steps out of the shadows you quickly realize something is very wrong. Her entire form is slick and white, her flesh seeming to run slightly as she moves, as if reshaping itself with each motion. However, the most disturbing feature is the creature's face. While vaguely human in shape, it is almost mannequin like, devoid of any features other than her expressionless mouth and the flat, empty depressions where her eyes should be.";
 	if cumgirlfed is -1:
 		say "     The overwhelming smell of sex hits you as the creature gets within striking distance, and you realize this sickening creature appears to be made entirely of animate cum and other bodily fluids.";

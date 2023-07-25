@@ -11,10 +11,6 @@ Section 1 - Creature Responses
 cclosscount is a number that varies.
 
 to say cannon desc:
-	now cclosttarget is false;
-	now ccmiss is 0;
-	now cannonprep is 0;
-	project Figure of Cock_Cannon_icon;
 	say "     An at least nine-foot tall, perverted abomination stands before you: Literally an ambulatory, giant human cock. Its body consists of a throbbing, veiny shaft as thick as a human torso, covered in chocolate-colored skin. As impossible as that sounds, it can twist and bend its shaft any which way, aiming the mushroom-shaped dickhead as if to [']look['] around. There aren't any eyes on its head, only smooth, curved skin, with a slightly flared rim toward its upper back and a vertical slit that seems to be a sensory organ. The moist opening widens and narrows as it focuses on something it wants to study. Towards the rear, it has the most gloriously round and juicy pair of buttocks that you've ever seen on any unnatural cock-creature, with a slim, flexible tail growing out of the tailbone, about three feet long and ending in a spaded tip. A pair of firmly muscled legs that end in digitigrade, clawed feet complete the image of a creature that is quite abnormal[if Player is kinky], yet somehow hard to look away from[end if].";
 	if "Female Preferred" is listed in feats of Player:
 		say "     Becoming aware of your presence, it turns towards you, sending a tingle up your spine at the feeling of being watched. Staying perfectly still for a moment, it then tilts the head right and left a little, as if to get different viewing angles, while the tail behind its back begins to whip left and right in unruly, jerking movements. Something must have displeased it, as it immediately turns around and leaves.";
@@ -181,6 +177,16 @@ to say cannon loses:
 			say "     This encounter reminds you of your deal with bounty hunter, Bradford. You should go see him about getting your share of the reward.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Cock Cannon"	"[PrepCombat_Cock Cannon]"
+
+to say PrepCombat_Cock Cannon:
+	now cclosttarget is false;
+	now ccmiss is 0;
+	now cannonprep is 0;
+	project Figure of Cock_Cannon_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

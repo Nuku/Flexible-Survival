@@ -308,7 +308,6 @@ to say WyvernPatriarchLosesGetCockVored:
 [---]
 
 to say Wyvern Patriarch Desc:
-	project figure of Wyvern_Patriarch_soft_icon;
 	if Resolution of Ambush The Wyvern Patriarch is 1:
 		say "     As the big wyvern appears before you, you remember your deal with Diavoborg. Now that you have got him here, it would only be a matter of a [bold type]good charismatic attempt[roman type] to call for his attention before he decides to charge at you. Shall you [bold type]attempt to persuade the Wyvern Patriarch to challenge you in the Dry Plains?[roman type][line break]";
 		LineBreak;
@@ -507,7 +506,7 @@ TwistedCapacity of Vuukzasqig is false. [Twisted Characters can take any penetra
 Sterile of Vuukzasqig is true. [steriles can't knock people up]
 MainInfection of Vuukzasqig is "Wyvern Patriarch".
 Description of Vuukzasqig is "[Vuukzasqigdesc]".
-Conversation of Vuukzasqig is { "<This is nothing but a placeholder!>" }.
+Conversation of Vuukzasqig is { "<This is nothing but a Wyvern Patriarch!>" }.
 The scent of Vuukzasqig is "     Vuukzasqig's scent is particularly faint, like most wyverns. You cannot discern much about him from sniffing him alone except that he is clearly a male.".
 
 to say VuukzasqigDesc:
@@ -881,6 +880,13 @@ to say VuukzasqigSexDiavoborgFrottingDefaultEnding:
 	say "     'Oh, you say that, but you like it...' the behemoth then turns to the wyvern and gives him a lick, which causes him to protest, but deep down, it seems he enjoys it, even if just a little bit. In the meantime, you find yourself a way to get cleaned up and leave the two beasts snuggling with each other as you walk away, throwing one last glance at the two.";
 
 Section 4 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Wyvern Patriarch"	"[PrepCombat_Wyvern Patriarch]"
+
+to say PrepCombat_Wyvern Patriarch:
+	project figure of Wyvern_Patriarch_soft_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

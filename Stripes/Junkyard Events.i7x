@@ -443,25 +443,18 @@ to say dirtysnow:
 	say "     Quickly pulling off your pack, you reach into it and pull out a jug of dirty water. You toss it to the charging feline, who swats at it with his paw before realizing what it is. The container breaks open, sending the water over him. Startled, he comes to a stop and shakes his head before realizing it's water and he starts licking it from his fur. As you start to back away, his body starts to change, altered by the dirty water.";
 	say "     Fascinated, you watch as he starts to mewl softly as the sensations wash over him, causing him to fall to his knees. From the strength of his reactions, you are very grateful that you didn't end up drinking that water yourself. His body grows taller and thinner, but with a strong chest and shoulders. His shoulders and back twitch and bulge before a pair of large, fully-formed bat wings burst from them. The pain (or pleasure?) of this causes him to mrowl loudly. With his head raised to cry out, you can see his face and muzzle changing, growing longer and narrower. His ears enlarge, becoming big and pointed as he turns into some feline-bat hybrid.";
 	say "     His bat-like ears twitch as he mrowls again and they lock on you. Hearing your echo with his heightened senses, he starts to get up. This breaks the spell of watching his transformation and you turn to get away from this new and potentially dangerous creature you've spawned. You run around one mound, then dash down another path in the hopes of evading him. You start to make a third turn when he comes swooping out of the air, already able to fly on his new wings. Cut off, you will have to face him.";
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Snow Bat":
-			now area entry is "Junkyard";
-			now non-infectious entry is false;
-			now MonsterID is y;
-			break;
-	now snowbatfight is 3;
+	choose row with name of "Snow Bat" in Table of Random Critters;
+	now area entry is "Junkyard";
+	now non-infectious entry is false;
 	challenge "Snow Bat";
-	if snowbatfight is 1:
+	if fightoutcome < 20: [player won]
 		say "     Having managed to drive the vicious bat-feline off, you stumble back as your knees get weak. Taking a seat on a junked car, you shudder at what you've unleashed.";
-	else if snowbatfight is 2:
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     You get up unsteadily, woozy from the blood loss and look around. Some time has passed and the bat-feline has departed. You brush your fingers lightly over your sore neck, the wound slowly closing, and shudder at what you've unleashed.";
-	else:
-		say "     Managing to slip past him, you make a run for it again. But this time, after making a few turns, you dive onto the seats of a wrecked car in the scrapyard. You remain as still and as quiet as you can, knowing those sensitive ears are searching for you. Eventually you hear those large wings flap off into the distance. You release a shudder at what you've unleashed.";
-	now snowbatfight is 0;
+	else if fightoutcome is 30: [fled]
+		say "     Managing to slip past him, you make a run for it again. But this time, after making a few turns, you dive onto the seats of a wrecked car in the scrapyard. You remain as still and as quiet as you can, knowing those sensitive ears are searching for you. Eventually you hear those large wings flap off into the distance. You release a shudder at what you've unleashed.";	
 	increase score by 20;
 	extend game by 8;
-
 
 to say bottlesnow:
 	ItemLoss water bottle by 1;

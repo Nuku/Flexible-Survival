@@ -210,7 +210,6 @@ to say TESlaveSex7: [player's ass fucked by Lee]
 	infect "Herm Human";
 
 to say Thought_Eater_Desc:
-	setmongender 3;
 	say "     A pale-skinned humanoid creature steps out of the darkness ahead of you. Wearing a tight-fitting jumpsuit on its tall form, you can see it's got a pretty skinny build with long arms and legs, and judging from the bulge in the pubic area, is male. The head of the creature looks only vaguely human. Under a high-arching cranium a quartet of tentacles forms the lower half of its face, their ends twitching forward as if to reach for you.";
 	LineBreak;
 	say "     With a dry, hissing voice the creature tells you 'Kneel before your master!' and follows up with a brutal psychic attack that breaks over you like a powerful wave.";
@@ -224,6 +223,14 @@ to say Thought_Eater_Desc:
 		say "     Stars dance in front of your eyes and you feel as if the thought eater's tentacles were winding themselves into your head, prodding and poking your mind. When your vision clears a bit, you see the tall creature standing right in front of you, clawed hands outstretched to finish you off.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Thought Eater"	"[PrepCombat_Thought Eater]"
+
+to say PrepCombat_Thought Eater:
+	setmongender 3;
+	project Figure of ThoughtEater_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

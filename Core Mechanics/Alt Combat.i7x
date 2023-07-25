@@ -202,9 +202,6 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	now fightoutcome is 100;
 	let nam be Name entry;
 	let found be 0;
-	if there is a name of nam in the Table of CombatPrep:
-		choose row with name of nam in the Table of CombatPrep;
-		say "[PrepFunction entry]";
 	choose row MonsterID from Table of Random Critters;
 	if CreatureArtworkOverride is false:
 		follow the ngraphics_blank rule; [clear previous picture]
@@ -213,6 +210,10 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 				now found is 1;
 				project icon entry;
 				break;
+	if there is a name of nam in the Table of CombatPrep:
+		choose row with name of nam in the Table of CombatPrep;
+		say "[PrepFunction entry]";
+	choose row MonsterID from Table of Random Critters;
 	if inasituation is false: [regular creature pre and postcombat, might include artwork being shown]
 		if enemy type entry is 0: [non-unique enemies]
 			say "[bold type]You run into a [EnemyNameOrTitle].[roman type][line break][desc entry][line break]";

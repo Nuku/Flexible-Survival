@@ -98,6 +98,13 @@ to say Cambion Male fight:
 		say "You find yourself too aroused to keep fighting. The pain he has given you feels too good, leading you to fall to your knees and submit to his will.";
 
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Cambion Male"	"[PrepCombat_Cambion Male]"
+
+to say PrepCombat_Cambion Male:
+	say "";
+
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)

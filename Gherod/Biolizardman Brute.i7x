@@ -126,6 +126,13 @@ to say BiolizardmanBruteLosesSitOnFace:
 to say Biolizardman Brute Desc:
 	say "     You are standing before a very large, tall lizardman with cerulean eyes and a quite impressive physique. His features and whole body are covered with dark teal scales, except on the inner regions of his torso and thighs, which attain a color that is closer to white. However, the shade created by the forest's trees reveals a second property of these otherwise ordinary scales, as various dim glows of green are seen springing up in a pattern, almost mesmerizingly so. The big reptilian seems to be wearing only a loincloth to cover his crotch, as well as several accessories, such as bracelets and necklaces with odd-looking wooden objects and symbols engraved into them, the whole outfit being reminiscent of a tribal costume. Moreover, he employs a large makeshit quarterstaff as a weapon, one that only someone his size could wield effectively, and his defensive combative stance suggests he knows his way around a fight, besides also regarding you as a threat.";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Biolizardman Brute"	"[PrepCombat_Biolizardman Brute]"
+
+to say PrepCombat_Biolizardman Brute:
+	say "";
+
 Section 2 - Camp Of The Snake Pre-Event
 
 to say TravelToCampOfTheSnakeEvent:

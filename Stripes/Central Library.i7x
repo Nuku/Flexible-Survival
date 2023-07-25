@@ -13,7 +13,6 @@ Central Library is a situation.
 ResolveFunction of Central Library is "[ResolveEvent Central Library]". The level of Central Library is 6.
 Sarea of Central Library is "High".
 centrallib is a number that varies.
-libfight is a number that varies.
 jamesfed is a number that varies.
 jamessex is a number that varies.
 libstealth is a number that varies.
@@ -145,12 +144,6 @@ to say libraryentrance:
 [ 6 - Event over, gained negative entry       ]
 [ 7 - Event over, lost to harpies             ]
 
-[ libfight - gaining entry w/fighting         ]
-[ 0 - No attempt to fight                     ]
-[ 1 - Fight started                           ]
-[ 2 - Fight lost/fled                         ]
-[ 3 - Fight won                               ]
-
 [ jamesfed - gaining entry w/bribery          ]
 [ 0 - No bribe given                          ]
 [ 1 - Bribed w/food                           ]
@@ -268,29 +261,23 @@ to say libweaponoffer:
 				WaitLineBreak;
 
 to say libguard3:
-	say "     Deciding to opt for the direct approach, you decide to attack the wolverine.";
-	now libfight is 1;
-	now wolvfightresult is 3;
+	say "     Deciding to opt for the direct approach, you rush forward and attack. James, the wolverine guard protecting the Central Library, growls angrily at you having turned on him. He is a large, muscular beast. Were he not so tall, you'd call him stocky, nearly as wide as he is tall, but all muscle. He still wears his battered security company jacket, bearing the Wolverine Security logo on it, on his animalistic body. He is covered in dark fur with a few lighter patches and his face narrows into a dark muzzle with lighter fur above his brow and at his shoulders. Interposing himself between you and the steps up to the library, his instincts are locked on protecting his post here.";
 	challenge "Wolverine Guard";
-	if wolvfightresult is 1:
+	if fightoutcome < 20: [player won]
 		say "     James, beaten by your sudden attack, collapses onto the stairs in a heap. Passed out after the fight, it looks like you've finally made him take his much-needed rest. Quickly grabbing his keys, you unlock the library door and slip inside.";
-		now libfight is 3;
 		WaitLineBreak;
 		now Resolution of Central Library is 5; [Fought James, Won]
 		say "[libraryexplore]";
-	else if wolvfightresult is 2:
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     The wolverine growls and tosses you roughly into the street. As you're getting up, James brushes open his jacket and rests his large paw firmly on a holster hidden there. 'You need to move along and not come back,' he says with a firm growl. Even with the increased healing from the infection, you're not sure how you'd fare against a gun and are quite certain it wouldn't be pleasant even if you survived. You'll have to give up on getting in here and look elsewhere.";
-		now libfight is 2;
 		now Central Library is resolved;
 		now Resolution of Central Library is 6; [Fought James, Lost]
 		WaitLineBreak;
-	else:
+	else if fightoutcome is 30: [fled]
 		say "     Making a run for it from the crazed wolverine, you can hear him yelling at you from the steps. 'And don't you come back, or I'll give you some of this,' James yells, waving a gun in the air. Even with the increased healing from the infection, you're not sure how you'd fare against a gun and are quite certain it wouldn't be pleasant even if you survived. You'll have to give up on getting in here and look elsewhere.";
-		now libfight is 2;
 		now Central Library is resolved;
 		now Resolution of Central Library is 7; [Fought James, Fled]
 		WaitLineBreak;
-	now wolvfightresult is 0;
 
 to say libguard4:
 	setmonster "Wolverine Guard";

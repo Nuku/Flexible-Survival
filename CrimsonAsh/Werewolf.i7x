@@ -149,6 +149,15 @@ to say WerewolfDesc:
 	setmongender 4;
 	say ""; [currently unused, only event encounters with her]
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Werewolf"	"[PrepCombat_Werewolf]"
+
+to say PrepCombat_Werewolf:
+	say "";
+
+
+
 Section 3 - Creature Insertion
 
 Table of Random Critters (continued)
