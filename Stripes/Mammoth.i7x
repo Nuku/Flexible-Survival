@@ -7,12 +7,6 @@ Section 1 - Creature Responses
 
 mammoth_cv_count is a number that varies.	[number of times CV'd]
 
-to say mammothdesc:
-	setmongender 5; [creature is herm]
-	say "     Before you is a large, stocky herm creature. Her infection clearly having been affected by the woolly mammoths on display at the museum, she's become a very heavy set individual. At roughly six-and-a-half feet tall, she's also about four feet wide. She's got a head not-unlike that of an elephant, with a long, flexing trunk and a pair of large, ivory tusks. But unlike an elephant, her head and body is covered in a thick pelt of brown fur. She's got big, meaty hands with short, stubby fingers. Her feet are round, flat and have barely noticeable toes.";
-	say "     But what is clearly the most noticeable on her is her massive endowments. This mammoth is truly mammoth, with breasts, balls and cock of massive proportions. Her breasts have a shorter coat of fur on them, but even a lengthy coat wouldn't hide those beachball-sized knockers. Her balls, nearly as big, are as big as medicine balls and seem nearly as heavy to look at them. And those balls are huge to feed her enormous cock. Dragging to the floor, her member is nearly four feet long when flaccid. You gulp audibly as you notice it start to stir and swell as she looks you over with a lustful twinkle in her wild eyes.";
-
-
 to say losetomammoth:
 	let antiscale be 8 - scalevalue of Player;
 	if mammoth_cv_count > 2:
@@ -43,28 +37,58 @@ to say losetomammoth:
 		say "     A churning around you awakens you to a semi-conscious state much later. This builds quickly with a trumpeting cry from beyond the fleshy walls surrounding you. You move quickly back through her deep cunt as she gives [']birth['] to you once again, pushed along by the contractions and the torrents of femcum that comes out with you. You land in a big, sticky mess that stains the floor and wall all around you. You lay there for quite some time, overcome by your strange, yet oddly arousing, experience.";
 	else:
 		say "     The mammoth creature laughs at her victory and pushes you down to the floor. She drops her massive cock down atop you, making you release an [']Oof!['] as it slams atop you. She starts rubbing her large hands overtop of it and her balls while grinding her growing erection down atop you[if scalevalue of Player is 5]. Once erect, her cock is nearly as large as you are and drools a constant stream of her precum over you[else if scalevalue of Player > 2]. Once erect, her cock is larger than you are and drools a constant flow of precum over you[else]. Even before the fight ended, her cock was probably bigger than you and now it's utterly massive, burying you under its enormous weight and drooling what seems like mouthfuls of precum by the second all over you[end if]. The scent of this starts to cloud your mind, making you rub yourself against it as best you can, working to pleasure the hyper-endowed mammoth. Eventually, she trumpets in ecstasy and presses her cock down onto you hard before blasting a huge load that paints your upper body (and a large chunk of the floor and wall behind you) white with her semen.";
-	infect;
+	CreatureSexAftermath "Player" receives "Stroking" from "Mammoth";
 
 to say beatthemammoth:
-	if Libido of Player > 33:
-		say "     Having beaten the mammoth herm, you knock her onto her back and she moans in disappointment. Weighed down by her own endowments, she's too tired to get up and continue fighting. She pulls her cock into her arms to get some relief on her own.";
-		say "     [bold type]You find yourself wondering if perhaps you could help her along a little while having some fun as well.[roman type][line break]";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Yes.";
-		say "     ([link]N[as]n[end link]) - No.";
-		if Player consents:
+	say "     Having beaten the mammoth herm, you knock her onto her back and she moans in disappointment. Weighed down by her own endowments, she's too tired to get up and continue fighting. She pulls her cock into her arms to get some relief on her own.";
+	LineBreak;
+	say "     [bold type]You find yourself wondering if perhaps you could help her along a little while having some fun as well.[roman type][line break]";
+	LineBreak;
+	let BeatenMammoth_Choices be a list of text;
+	if Player is male:
+		add "Fuck her pussy!" to BeatenMammoth_Choices;
+	if Player is female:
+		add "Straddle and ride her cock to orgasm!" to BeatenMammoth_Choices;
+	[
+	if vorelevel > 1: [player is vore-ok]
+		add "New Vore Option 1" to BeatenMammoth_Choices;
+		add "New Vore Option 2" to BeatenMammoth_Choices;
+	]
+	add "Nah, you're good right now. Just leave." to BeatenMammoth_Choices;
+	let BeatenMammoth_Choice be what the player chooses from BeatenMammoth_Choices;
+	if BeatenMammoth_Choice is:
+		-- "Fuck her pussy!":
 			LineBreak;
-			if Player is male:
-				say "     Heaving up her balls, you catch a glimpse of her large, dripping cunt and grin. Feeling you playing with her there, she removes a meaty paw from her cock to help hold up her giant testicles while you bring your penis into position. Thrusting into her juicy hole, you slide in easily. Her huge cunt, while loose, it still delightfully warm, wet and juicy, and grips around your shaft quite well. You bring your hands back up to keep her balls boosted up, letting her bring her paw back to her massive cock. By this point, it seems nearly twice her height and most of her width as well. As you fuck her, you can feel her balls churn with semen, signaling her approaching peak. You pick up the pace, fucking her as hard as you can until she trumpets happily and blasts her load across the floor and wall behind her. Finding the massive display of virility arousing, you cum as well, pumping your load into her, [if Ball Size of Player < 10]invoking some small tremors in response[else if Ball Size of Player < 20]making her moan softly as her cunt ripples over your spurting shaft[else if Ball Size of Player < 30]making her moan loudly as her cunt squeezes down onto your spurting shaft[else]causing her to trumpet again as she cums a second time as you fill her with your huge load, making even her large body bloat noticeably to contain it all[end if]. Once you're finished, you pull out and leave her on the floor, dazed after her massive orgasm.";
-			else:
-				say "     You climb on her cock and straggle the thick, hard shaft. You move your hips, grinding your crotch against the warm skin. The mammoth does not mind at all, and keep stroking herself, while you get along for the ride. You progressively get faster and faster, emboldened by the sensation of the blood flowing under your legs, eventually grabbing the massive rod in your arms for additional leverage. The pachyderm cums eventually, around the same time as you, the soft rumble of the cum rushing in her urethra accompanying the quivers of your puss[yfn]. Once you're finished, you leave your comfortable and slowly softening seat and leave her on the floor, dazed after her massive orgasm.";
-		else:
+			say "     Heaving up her balls, you catch a glimpse of her large, dripping cunt and grin. Feeling you playing with her there, she removes a meaty paw from her cock to help hold up her giant testicles while you bring your penis into position. Thrusting into her juicy hole, you slide in easily. Her huge cunt, while loose, it still delightfully warm, wet and juicy, and grips around your shaft quite well. You bring your hands back up to keep her balls boosted up, letting her bring her paw back to her massive cock. By this point, it seems nearly twice her height and most of her width as well. As you fuck her, you can feel her balls churn with semen, signaling her approaching peak. You pick up the pace, fucking her as hard as you can until she trumpets happily and blasts her load across the floor and wall behind her. Finding the massive display of virility arousing, you cum as well, pumping your load into her, [if Ball Size of Player < 10]invoking some small tremors in response[else if Ball Size of Player < 20]making her moan softly as her cunt ripples over your spurting shaft[else if Ball Size of Player < 30]making her moan loudly as her cunt squeezes down onto your spurting shaft[else]causing her to trumpet again as she cums a second time as you fill her with your huge load, making even her large body bloat noticeably to contain it all[end if]. Once you're finished, you pull out and leave her on the floor, dazed after her massive orgasm.";
+			CreatureSexAftermath "Mammoth" receives "PussyFuck" from "Player";
+		-- "Straddle and ride her cock to orgasm!":
+			LineBreak;
+			say "     You climb on her cock and straddle the thick, hard shaft. You move your hips, grinding your crotch against the warm skin. The mammoth does not mind at all, and keep stroking herself, while you get along for the ride. You progressively get faster and faster, emboldened by the sensation of the blood flowing under your legs, eventually grabbing the massive rod in your arms for additional leverage. The pachyderm cums eventually, around the same time as you, the soft rumble of the cum rushing in her urethra accompanying the quivers of your puss[yfn]. Once you're finished, you leave your comfortable and slowly softening seat and leave her on the floor, dazed after her massive orgasm.";
+			CreatureSexAftermath "Mammoth" receives "Stroking" from "Player";
+		[
+		-- "New Vore Option 1":
+			LineBreak;
+			say "     Insert Text Here";
+		-- "New Vore Option 2":
+			LineBreak;
+			say "     Insert Text Here";
+		]
+		-- "Nah, you're good right now. Just leave.":
 			LineBreak;
 			say "     You choose to leave her to her own devices, certain that she'll be able to take care of herself.";
-	else:
-		say "     Having beaten the mammoth herm, you knock her onto her back and she moans in disappointment. Weighed down by her own endowments, she's too tired to get up and continue fighting. She pulls her cock into her arms to get some relief on her own and you leave her to it.";
 
 Section 2 - Creature Insertion
+
+to say mammothdesc:
+	say "     Before you is a large, stocky herm creature. Her infection clearly having been affected by the woolly mammoths on display at the museum, she's become a very heavy set individual. At roughly six-and-a-half feet tall, she's also about four feet wide. She's got a head not-unlike that of an elephant, with a long, flexing trunk and a pair of large, ivory tusks. But unlike an elephant, her head and body is covered in a thick pelt of brown fur. She's got big, meaty hands with short, stubby fingers. Her feet are round, flat and have barely noticeable toes.";
+	say "     But what is clearly the most noticeable on her is her massive endowments. This mammoth is truly mammoth, with breasts, balls and cock of massive proportions. Her breasts have a shorter coat of fur on them, but even a lengthy coat wouldn't hide those beachball-sized knockers. Her balls, nearly as big, are as big as medicine balls and seem nearly as heavy to look at them. And those balls are huge to feed her enormous cock. Dragging to the floor, her member is nearly four feet long when flaccid. You gulp audibly as you notice it start to stir and swell as she looks you over with a lustful twinkle in her wild eyes.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Mammoth"	"[PrepCombat_Mammoth]"
+
+to say PrepCombat_Mammoth:
+	setmongender 5; [creature is herm]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

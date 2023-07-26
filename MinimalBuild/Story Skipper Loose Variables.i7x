@@ -1901,8 +1901,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is mpregcount;
 		-- "mqcountdown":
 			now NumberVarValue entry is mqcountdown;
-		-- "mqfightresult":
-			now NumberVarValue entry is mqfightresult;
 		-- "mqpickup":
 			now NumberVarValue entry is mqpickup;
 		-- "mqstatus":
@@ -2327,8 +2325,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is sgtimer;
 		-- "sgtmarkstalk":
 			now NumberVarValue entry is sgtmarkstalk;
-		-- "ShadowBeastEventState":
-			now NumberVarValue entry is ShadowBeastEventState;
 		-- "shadowy":
 			now NumberVarValue entry is shadowy;
 		-- "SharkFountainCounter":
@@ -5391,8 +5387,6 @@ to VariableNumberLoad:
 					now mpregcount is numberVarValue entry;
 				-- "mqcountdown":
 					now mqcountdown is numberVarValue entry;
-				-- "mqfightresult":
-					now mqfightresult is numberVarValue entry;
 				-- "mqpickup":
 					now mqpickup is numberVarValue entry;
 				-- "mqstatus":
@@ -5821,8 +5815,6 @@ to VariableNumberLoad:
 					now sgtimer is numberVarValue entry;
 				-- "sgtmarkstalk":
 					now sgtmarkstalk is numberVarValue entry;
-				-- "ShadowBeastEventState":
-					now ShadowBeastEventState is numberVarValue entry;
 				-- "shadowy":
 					now shadowy is numberVarValue entry;
 				-- "SharkFountainCounter":

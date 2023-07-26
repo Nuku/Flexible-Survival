@@ -8,8 +8,6 @@ Version 2 of Minotaur by Kaleem mcintyre begins here.
 "Adds Minotaur to Flexible Survival."
 
 to say minodesc:
-	project Figure of Minotaur_naked_icon;
-	setmongender 3; [creature is male]
 	say "     Looking over the burly beast in front of you, you look over the eight foot, muscular frame of what can only be a Minotaur. With an unkempt brown furred hide, a head like that of a bull, and two huge ivory white horns jutting out above its brow, the bullman snorts loudly in your direction in an obvious sign of challenge. With arms wide enough to circle you in an unforgiving bear hug you see that the Minotaur's upper body sits atop two Adonis-like legs which are oddly jointed and covered in fur. Body packed with a dense padding of heavy muscles on a human-like frame, the bull kicks a hoof up back behind it as it lowers its head down in readiness to charge. A private peek would reveal that the bullman has a titanic, throbbing, precum-leaking bullcock and two fat, bowling ball-sized balls swaying underneath the skimpy loincloth the other has futilely wrapped around its thick waist.";
 
 to say losetomino:
@@ -79,6 +77,14 @@ to say beatthemino:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Minotaur"	"[PrepCombat_Minotaur]"
+
+to say PrepCombat_Minotaur:
+	setmongender 3; [creature is male]
+	project Figure of Minotaur_naked_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

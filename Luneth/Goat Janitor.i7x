@@ -9,7 +9,6 @@ Version 1 of Goat Janitor by Luneth begins here.
 Section 1 - Creature Responses
 
 to say Goat Janitor desc:
-	setmongender 3; [creature is male]
 	say "     Rounding a corner ahead of you is a janitor's push cart, soon followed by a goat-like man wearing a pair of dirty gray coveralls, more than likely a hospital janitor succumbed to the infection. He strokes his beard as he watches you for a moment. 'Damn kids, lookit that mess. Just leave it fer the old goat huh?' He narrows his eyes and grabs hold of his mop, 'Think I'm gonna clean up after you? You've got another thing coming.' He charges at you, wielding his mop like a long club.";
 
 to say LoseToGoatJanitor:
@@ -58,6 +57,13 @@ to say BeatTheGoatJanitor:
 		say ". Feeling that he shouldn't give you any more trouble, at least until something new has got his goat, you leave the old fellow to recover and get back to cleaning up this mess.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Anthro Goat"	"[PrepCombat_Anthro Goat]"
+
+to say PrepCombat_Anthro Goat:
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

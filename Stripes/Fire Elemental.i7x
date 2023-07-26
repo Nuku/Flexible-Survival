@@ -6,9 +6,6 @@ Version 1 of Fire Elemental by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say fireelementaldesc:
-	setmongender 4; [creature is female]
-	say "     The fiery woman before you has a curvy and decidedly feminine body with wide, child-bearing hips and wiry muscle. She has a pair of average-sized breasts. Her body is covered in supple, orange flesh with the heat and glow of fire shining through a multitude of cracks in it, encasing her in flames. Her head is rather human-like with soft features and deep, black eyes. Her hair has, however, been turned into bright and harmless flame. Her arms are wiry and slim, with the flicker of flame around them. Her legs are long, shapely human legs, flickering with fire and rippling with wiry muscle, and her footsteps singe the ground and leave black soot marks. She has a shapely rump and a wide, warm cunt, both similarly guarded by fire.";
 
 to say losetofireelemental:
 	if BodyName of Player is "Reindeer":
@@ -60,7 +57,6 @@ to say losetofireelemental:
 	else:
 		say "     The fiery woman looks down at your burnt and battered form, clearly displeased that you would oppose her. She runs a hand gently across your cheek. 'It would be better for you not to fight. Fire is light and warmth, passion and love...' Her lips are a touch searing as they press themselves to your cheeks, but your flesh is unmarred. 'You would find me much more enjoyable if you were to accept that.'";
 
-
 to say fireelsex:
 	if Player is male and Cock Length of Player > 15:
 		say "     She gently pushes you to the ground, and her fingers begin deftly stroking your cock[if Cock Count of Player > 1]s, her warm, cracked flesh oddly soothing as they work them over. She looks a little sad at their size, however. 'It's a pity they[else], her warm, cracked flesh oddly soothing as they work it over. She looks a little sad at its size, however. 'It's a pity it[end if] won't fit... But we can make do.' And no more words pass her lips, as she puts her mouth to work as well, warm tongue and lips applying themselves wildly and zealously to the task, until your world devolves into a mess of searing pleasure and warm bliss...";
@@ -71,12 +67,20 @@ to say fireelsex:
 	else:
 		say "     She gently pushes you to the ground and she lays herself atop you, grinding her cunt against one of your legs while she makes out with you, her warm, dexterous tongue working at yours with a passion. After a while, she leaves you there in your daze and heads off, continuing her wandering.";
 
-
 to say beatthefireelemental:
 	say "     Beaten, the fiery woman draws back with a hiss of a bonfire doused with water. She steps back a few steps and wraps her arms tightly around herself. Surging her flames as she does this, she rockets upwards, launching herself recklessly quite some distance away. You hear a thump in the distance and a burst of smoke from her crash landing. You beat out the remaining flames here to prevent a brushfire, hoping that she hasn't started one elsewhere just now.";
 
-
 Section 2 - Creature Insertion
+
+to say fireelementaldesc:
+	say "     The fiery woman before you has a curvy and decidedly feminine body with wide, child-bearing hips and wiry muscle. She has a pair of average-sized breasts. Her body is covered in supple, orange flesh with the heat and glow of fire shining through a multitude of cracks in it, encasing her in flames. Her head is rather human-like with soft features and deep, black eyes. Her hair has, however, been turned into bright and harmless flame. Her arms are wiry and slim, with the flicker of flame around them. Her legs are long, shapely human legs, flickering with fire and rippling with wiry muscle, and her footsteps singe the ground and leave black soot marks. She has a shapely rump and a wide, warm cunt, both similarly guarded by fire.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Fire Elemental"	"[PrepCombat_Fire Elemental]"
+
+to say PrepCombat_Fire Elemental:
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -20,21 +20,6 @@ If both guy and FemaleList is banned, a special case is reached, with a unique h
 If guy, girl and hermaphrodite are banned, the player will be punished.]
 
 to say otterdesc:
-	choose row MonsterID from Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Male";
-	if MaleList is banned and FemaleList is banned and HermList is banned:
-		setmongender 19; [creatures are mixed/variable]
-	else if MaleList is banned and FemaleList is not banned:
-		setmongender 14; [creatures are female]
-	else if FemaleList is banned and MaleList is not banned:
-		setmongender 13; [creatures are male]
-	else:
-		setmongender 19; [creatures are mixed/variable]
 	say "     Not one, but a group of playful looking otters. They spot you and move to intercept you swiftly, swimming all around you with their athletic forms rubbing amorously against your own. Your fingers can't help but brush against their aroused bodies in the rush before one grins at you, 'You want to play with us?'";
 
 to say otterstrike:
@@ -145,6 +130,27 @@ To say Otter loss:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Sea Otter"	"[PrepCombat_Sea Otter]"
+
+to say PrepCombat_Sea Otter:
+	choose row MonsterID from Table of Random Critters;
+	if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
+	if MaleList is banned and FemaleList is banned and HermList is banned:
+		setmongender 19; [creatures are mixed/variable]
+	else if MaleList is banned and FemaleList is not banned:
+		setmongender 14; [creatures are female]
+	else if FemaleList is banned and MaleList is not banned:
+		setmongender 13; [creatures are male]
+	else:
+		setmongender 19; [creatures are mixed/variable]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -4,21 +4,6 @@ Version 1 of Komodo Dragon by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say komododragondesc:
-	project Figure of Komodo_Dragon_soft_icon;
-	setmongender 3; [creature is male]
-	choose row MonsterID from Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "nochange";
-	say "     [one of]Emerging from the murky shadows of the tunnels[or]Rising from the murky waters of the sewers[at random] comes a [one of]large[or]scaly[or]frightening[at random] lizard creature. This creature, a mix of man and komodo dragon that is far more lizard than man, stands almost ten feet tall and has a powerful, stocky frame despite its increased height. It is covered in a hide of tough, brown-green scales all over its body. This armored skin hangs loose over its body in many places, though this is not from body fat.";
-	say "     The Komodo Dragon looks at you with dark, beady eyes and flicks its long, forked tongue out at you. Its head is broad and somewhat flat with a blunted nose. Its eyes are spaced on the sides of its wedge-shaped head, giving it a wide field of vision most of the way around its head. More flaps of stretchable skin hang from its neck so it can accommodate large chunks of food after unhinging its jaw. Adding to the menace of its jaws are the hooked claws at the end of its muscled arms and legs. Those legs splay out to the side, making him look a little bowlegged, but you're sure that'd also allow him to switch between his current slouching stance and moving on all fours as needed. And between those legs, he has a pair of ridged and tapered manhoods, each roughly 20 inches long and fed by a pair of hand-filling balls.";
-
 to say losetokomododragon:
 	project Figure of Komodo_Dragon_hard_icon;
 	say "     Victorious, the savage beast knocks you to the ground and hisses loudly. It rips at your clothes and gear, adding new tears as it pulls them off roughly. As it does, its long, slender tongue flicks out, tasting your scent in the air and licking your cheek. ";
@@ -76,6 +61,27 @@ to say beatthekomododragon:
 
 
 Section 2 - Creature Insertion
+
+to say komododragondesc:
+	say "     [one of]Emerging from the murky shadows of the tunnels[or]Rising from the murky waters of the sewers[at random] comes a [one of]large[or]scaly[or]frightening[at random] lizard creature. This creature, a mix of man and komodo dragon that is far more lizard than man, stands almost ten feet tall and has a powerful, stocky frame despite its increased height. It is covered in a hide of tough, brown-green scales all over its body. This armored skin hangs loose over its body in many places, though this is not from body fat.";
+	say "     The Komodo Dragon looks at you with dark, beady eyes and flicks its long, forked tongue out at you. Its head is broad and somewhat flat with a blunted nose. Its eyes are spaced on the sides of its wedge-shaped head, giving it a wide field of vision most of the way around its head. More flaps of stretchable skin hang from its neck so it can accommodate large chunks of food after unhinging its jaw. Adding to the menace of its jaws are the hooked claws at the end of its muscled arms and legs. Those legs splay out to the side, making him look a little bowlegged, but you're sure that'd also allow him to switch between his current slouching stance and moving on all fours as needed. And between those legs, he has a pair of ridged and tapered manhoods, each roughly 20 inches long and fed by a pair of hand-filling balls.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Komodo Dragon"	"[PrepCombat_Komodo Dragon]"
+
+to say PrepCombat_Komodo Dragon:
+	project Figure of Komodo_Dragon_soft_icon;
+	setmongender 3; [creature is male]
+	choose row MonsterID from Table of Random Critters;
+	if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "nochange";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

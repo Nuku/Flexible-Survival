@@ -181,10 +181,16 @@ to say FeralWolfHermVictorySex:
 		say "     Deciding against it, you turn around and head off, leaving the wolf to the mercy of any other creature that might come across it.";
 
 to say FeralWolfHermDesc:
-	setmongender 3;
 	say "     A feral-looking wolf on all fours, almost five foot tall at the shoulder, with great muscles under dense black fur. They have dark [one of]red[or]yellow[or]blue[at random] eyes and white, sharp, canine teeth. Their legs are thick and powerful looking, their whole form obviously built for hunting fast prey. Their fur is matted with grime, muck, and some other substance, giving them a very rugged look. When they sees you, their lips peel in a snarl, exposing those deadly teeth. [one of]'Grrrrrrrr!' they growls[or]They barks aggressively[or]They howls[at random], charging at you with feral rage in their eyes.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Feral Wolf Herm"	"[PrepCombat_Feral Wolf Herm]"
+
+to say PrepCombat_Feral Wolf Herm:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

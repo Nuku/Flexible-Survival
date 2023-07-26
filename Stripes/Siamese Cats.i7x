@@ -3,10 +3,7 @@ Version 2 of Siamese Cats by Stripes begins here.
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a conjoined pair of Siamese Cats as a creature to Flexible Survival's Wandering Monsters table"
 
-
 Section 1 - Creature Responses
-
-[ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 siamesegender is a text that varies.
 Siamgender is a thing.
@@ -25,48 +22,6 @@ Definition: Siamgender is female:
 
 malecatHP is a number that varies.
 femalecatHP is a number that varies.
-
-to say siamesecatdesc:
-	setmongender 19; [creatures are mixed/variable]
-	choose row MonsterID from the Table of Random Critters;
-	let debit be 0;
-	if HardMode is true and level of Player > 5, let debit be level of Player - 5;
-	now dex entry is 18 + ( debit / 5 ); [set to midpoint]
-	now wdam entry is 5 + ( debit / 3 ); [set to midpoint]
-	now malecatHP is HP entry;
-	now femalecatHP is HP entry;
-	say "     As you are moving along, a pair of felines drop down in front of you. They are a duo of slinky Siamese cats, a boy and a girl, identical save for gender. They have cream colored fur with darker fur around their faces and at the ends of their limbs. They are both quite naked, except for the red, belled collars they have around their necks. As you look them over, you notice that they are joined together at the end of their tails.";
-	if "Male Preferred" is listed in feats of Player:			[MALE-PREF PLAYER]
-		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The female speaks to her twin, 'I think I'll play with this one, if I may.' And with that, she takes the lead and attacks.";
-		decrease dex entry by 2; [as if male before swap]
-		increase wdam entry by 1;
-		say "[swaptofemale]";
-	else if "Female Preferred" is listed in feats of Player:	[FEMALE-PREF PLAYER]
-		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The male speaks to his twin, 'I think I'll play with this one, if I may.' And with that, he takes the lead and attacks.";
-		increase dex entry by 2; [as if female before swap]
-		decrease wdam entry by 1;
-		say "[swaptomale]";
-	else if Player is puremale:		[MALE PLAYER]
-		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The female speaks to her twin, 'I think I'll play with this one, if I may.' And with that, she takes the lead and attacks.";
-		decrease dex entry by 2; [as if male before swap]
-		increase wdam entry by 1;
-		say "[swaptofemale]";
-	else if Player is purefemale:		[FEMALE PLAYER]
-		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The male speaks to his twin, 'I think I'll play with this one, if I may.' And with that, he takes the lead and attacks.";
-		increase dex entry by 2; [as if female before swap]
-		decrease wdam entry by 1;
-		say "[swaptomale]";
-	else:										[HERM/NEUTER PLAYER]
-		let flip be a random number from 1 to 2;
-		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. They both start to speak up at once, wanting to be the first to go. They argue for a moment, but decide to flip for it before you can try sneaking away[if flip is 1]. It comes up heads and the male steps forward to confront you[else]. It comes up tails and the female steps forward to confront you[end if].";
-		if flip is 1:
-			increase dex entry by 2; [as if female before swap]
-			decrease wdam entry by 1;
-			say "[swaptomale]";
-		else:
-			decrease dex entry by 2; [as if male before swap]
-			increase wdam entry by 1;
-			say "[swaptofemale]";
 
 to say siameseattack:
 	if a random chance of 2 in 7 succeeds:
@@ -116,7 +71,6 @@ to say siameseattack:
 	if T is 4:
 		say "The feline drops quickly to the ground and sweeps with [if siamgender is male]his[else]her[end if] leg, knocking you to the ground. You try to get back up quickly, but have bruised your [one of]knee[or]shoulder[or]ribs[or]elbow[or]hip[at random] when you fell!";
 
-
 to say swaptomale:
 	choose row MonsterID from the Table of Random Critters;
 	now femalecatHP is monsterHP; [current HP saved as female]
@@ -127,7 +81,6 @@ to say swaptomale:
 	increase wdam entry by 2;
 	say "     The [bold type]male[roman type] cat is now your opponent![line break]";
 
-
 to say swaptofemale:
 	choose row MonsterID from the Table of Random Critters;
 	now malecatHP is monsterHP; [current HP saved as male]
@@ -137,7 +90,6 @@ to say swaptofemale:
 	increase dex entry by 4;
 	decrease wdam entry by 2;
 	say "     The [bold type]female[roman type] cat is now your opponent![line break]";
-
 
 to say losetosiamesecat:
 	say "     Having bested you, the two cats look you over. 'I beat [']em,' the [siamesegender] purrs to the other, 'so I get to go first.' That said, the [siamesegender] steps forward and grabs you, getting you into position for a little fun while they both remove your remaining clothes.";
@@ -197,7 +149,6 @@ to say losetosiamesecat:
 			say "     Watching the male cumming and feeling you set off moments later, she grinds herself against your quivering pussy, moaning happily in response. Your crotch is soaked moments later as she arches her back and cums hard, murrrowling as her orgasm shoots through her. Your hot juices intermingle with hers in an arousing scent of lust hanging around you and the two felines.";
 		say "     The three of you continue to thrust and grind against one another until you are all satisfied and your orgasms wind down. The male slides himself slowly from you, some cum dribbling out onto your lips, which you quickly lap up. He strokes a paw across your cheek before getting up. As the female gets up, they wrap their arms around one another, smiling down at their exhausted plaything. You lay there, enjoying the afterglow as they walk off, hand in hand.";
 
-
 to say beatthesiamesecat:
 	say "     As you manage to finish off your [siamesegender] opponent, the other one grows woozy and collapses as well.";
 	if (Libido of Player > 29 or "Dominant" is listed in feats of Player) and Player is not neuter:
@@ -256,14 +207,12 @@ to say beatthesiamesecat:
 	else:
 		say "     You turn away to depart, leaving the kitties there.";
 
-
 to say siamsex1:	[ride cock]
 	say "     Having come to the decision that you want something hard to fill you, you roll the male over onto his back and straddle him. With a hand on his chest and the other at his cock, you start to stroke him to erection. You grind your wet pussy down onto his shaft before lining it up so you can take him in. With a soft moan of pleasure, you ease down, feeling that russet brown shaft sliding inside you.";
 	say "     You rock your hips and start to ride the feline's cock, making him mewl cutely beneath you. Your hands stroke his chest, petting him to get him to purr louder. His cock throbs inside you as he starts to thrust up into you, starting to recover from the fight enough to join in.";
 	WaitLineBreak;
 	say "     And speaking of recovering, his female twin starts to rouse as well and moves closer. You reach over and start to play with her pussy with one paw while continuing to stroke the tom's chest with the other. They purr happily, nuzzling and kissing until finally the cute male has had enough and his hot seed shoots into you. At almost the same point, the female's pussy quivers around your fingers and her hot juices flow. Your own climax quickly follows, milking at the kitty's cock as you watch the conjoined pair orgasm.[impregchance]";
 	say "     After a moment to rest and recover, you pull off and gather your clothes and gear, leaving the exhausted felines snuggled up against one another.";
-
 
 to say siamsex2:	[fuck ass]
 	say "     Wanting to have your way with the cute kitty's bottom, you head over to the male and roll him over onto all fours. He mewls cutely and squirms a little, but doesn't pull away as you line up your cock with his tailhole. You rock your hips, grinding against his cheeks and leaking precum between them.";
@@ -273,7 +222,6 @@ to say siamsex2:	[fuck ass]
 	say "     The male mrowls as he feels your cum shooting into his bowels. You feel his ass tighten around you, spasming as he cums moments later, shooting his seed onto the ground beneath him. At that same time, his female partner moans and clenches her pussy around your fingers as her orgasm strikes alongside his.";
 	say "     Once you are spent, you take a moment to rest and recover before pulling your cock free. You gather up your clothes and gear, leaving the exhausted felines snuggled up against one another.";
 
-
 to say siamsex3:	[FF oral]
 	say "     Deciding to put that feline's raspy tongue to good use, you guide her face between your legs and press her muzzle to your pussy. She mewls softly and squirms, but quickly sets her tongue to work. You moan softly as you feel her licking along your wet folds.";
 	say "     You run your fingers through her headfur and scritch her large ears, making her purr all the more. She also gets more and more into the task before her, showing that she's clearly had some practice at this. Her tongue is playful and talented, while her lips kiss and suck at your pussy lips and clit as well.";
@@ -281,7 +229,6 @@ to say siamsex3:	[FF oral]
 	say "     The male twin has also started to recover and he comes closer. You reach over and start to play with his cock with one hand while continuing to pet the good kitty femme with the other. They purr happily, the male nuzzling and kissing his partner until you finally reach your peak and press her face to your pussy as you cum. Your hot juices flow out over her tongue and across her muzzle[if Player is male]. Your cock throbs and shoots its hot load across the back of her head and down her body[end if].";
 	say "     As your orgasm rushes through you, you can feel the tom's cock throb in your hand, spraying his seed across the ground while the female's rear trembles. It seems she's been fingering herself while playing with you and the conjoined pair mrowl in delight as they cum.";
 	say "     Once your orgasm passes, you take a moment to rest and recover before pushing the female back. You gather up your clothes and gear, leaving the exhausted felines snuggled up against one another.";
-
 
 to say siamsex4:	[fuck pussy]
 	say "     Wanting a crack at that feline's tight cunt, you roll her onto her back and spread her legs. She mewls cutely and squirms a little, but doesn't pull away as you line up your cock with her wet folds. You stroke your cock against her, then tease her pussy's lips with your tip.";
@@ -291,8 +238,57 @@ to say siamsex4:	[fuck pussy]
 	say "     The female mrowls as she feels your cum shooting into her vagina and flowing into her womb. You feel her pussy spasm around you, trembling all around you as her orgasm hits. The tom's cock throbs in your hand as well, shooting his white seed across both their bodies as his orgasm hits alongside hers.";
 	say "     Once you are spent, you take a moment to rest and recover before pulling your cock free. You gather up your clothes and gear, leaving the exhausted felines snuggled up against one another.";
 
-
 Section 2 - Creature Insertion
+
+
+to say siamesecatdesc:
+	choose row with name of "Siamese Cat" from Table of Random Critters;
+	say "     As you are moving along, a pair of felines drop down in front of you. They are a duo of slinky Siamese cats, a boy and a girl, identical save for gender. They have cream colored fur with darker fur around their faces and at the ends of their limbs. They are both quite naked, except for the red, belled collars they have around their necks. As you look them over, you notice that they are joined together at the end of their tails.";
+	if "Male Preferred" is listed in feats of Player:			[MALE-PREF PLAYER]
+		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The female speaks to her twin, 'I think I'll play with this one, if I may.' And with that, she takes the lead and attacks.";
+		decrease dex entry by 2; [as if male before swap]
+		increase wdam entry by 1;
+		say "[swaptofemale]";
+	else if "Female Preferred" is listed in feats of Player:	[FEMALE-PREF PLAYER]
+		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The male speaks to his twin, 'I think I'll play with this one, if I may.' And with that, he takes the lead and attacks.";
+		increase dex entry by 2; [as if female before swap]
+		decrease wdam entry by 1;
+		say "[swaptomale]";
+	else if Player is puremale:		[MALE PLAYER]
+		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The female speaks to her twin, 'I think I'll play with this one, if I may.' And with that, she takes the lead and attacks.";
+		decrease dex entry by 2; [as if male before swap]
+		increase wdam entry by 1;
+		say "[swaptofemale]";
+	else if Player is purefemale:		[FEMALE PLAYER]
+		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The male speaks to his twin, 'I think I'll play with this one, if I may.' And with that, he takes the lead and attacks.";
+		increase dex entry by 2; [as if female before swap]
+		decrease wdam entry by 1;
+		say "[swaptomale]";
+	else:										[HERM/NEUTER PLAYER]
+		let flip be a random number from 1 to 2;
+		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. They both start to speak up at once, wanting to be the first to go. They argue for a moment, but decide to flip for it before you can try sneaking away[if flip is 1]. It comes up heads and the male steps forward to confront you[else]. It comes up tails and the female steps forward to confront you[end if].";
+		if flip is 1:
+			increase dex entry by 2; [as if female before swap]
+			decrease wdam entry by 1;
+			say "[swaptomale]";
+		else:
+			decrease dex entry by 2; [as if male before swap]
+			increase wdam entry by 1;
+			say "[swaptofemale]";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Siamese Cat"	"[PrepCombat_Siamese Cat]"
+
+to say PrepCombat_Siamese Cat:
+	setmongender 19; [creatures are mixed/variable]
+	choose row MonsterID from the Table of Random Critters;
+	let debit be 0;
+	if HardMode is true and level of Player > 5, let debit be level of Player - 5;
+	now dex entry is 18 + ( debit / 5 ); [set to midpoint]
+	now wdam entry is 5 + ( debit / 3 ); [set to midpoint]
+	now malecatHP is HP entry;
+	now femalecatHP is HP entry;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

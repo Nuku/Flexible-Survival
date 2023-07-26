@@ -8,7 +8,6 @@ Version 1 of Feral Unicorn by Taelyn begins here.
 Section 1 - Monster description
 
 to say FeralUnicornDesc:
-	setmongender 3;
 	say "     You hear the rustle of leaves and branches as a large equine pushes its way past them and into the open. This is no normal horse though. It is as big as a daft horse. From hoof to shoulder it is almost as tall as a human. A long spiral horn grows proudly out of its forehead, and its long, elegant mane hangs down, unkept and wild. A tuft of hair hangs from its chin, almost like a beard, and its lower legs are [']feathered['] like a Clydesdale. Its tail, however, is different than a normal horse. It stretches out behind the mystical creature, only lightly furred until the end where the hair tufted out like a weird mix of a horse and lion's tail. This was a true unicorn, and if its huge equine cock and balls had anything to tell you, a very horny male unicorn. One that was now charging towards you with lewd intent!"; [encounter text]
 
 Section 2 - Creature Responses
@@ -155,6 +154,13 @@ To say FuckFeralUnicorn:
 	CreatureSexAftermath "Feral Unicorn" receives "AssFuck" from "Player";
 
 Section 2 - Infection, Loot and Stats
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Feral Unicorn"	"[PrepCombat_Feral Unicorn]"
+
+to say PrepCombat_Feral Unicorn:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

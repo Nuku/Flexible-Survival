@@ -12,11 +12,6 @@ orcafdom is a number that varies.
 
 Section 1 - Creature Responses
 
-to say orcadesc:
-	project Figure of Orca_clothed_icon;
-	setmongender 3; [creature is male]
-	say "     Looking over the killer whale, his body is covered in the distinctive patterning of an orca on thick, sleek flesh. His head is sleek and streamlined, drawing to a blunt, rounded muzzle. His mouth is filled with small, sharp, dagger-like teeth. The blowhole on the top of his head occasionally opens to take a breath. His body is large and heavily muscled, but with the sleek shape of a swimmer. He stands easily ten feet tall. The large dorsal fin projecting from his back extends nearly a foot behind him in a sharp, knife-like shape. His arms are dense with sleek muscle. His hands have a thick webbing between his fingers. His legs are humanoid in appearance, thick with powerful muscle. His ass is dense with muscle, supporting a thick and very muscular tail that is four feet in length and ends in a whale's flukes. Between his powerful swimmer's legs he has a titanic, sleek and curving cetacean cock. Beneath his impressive maleness is a large bulge, showing his swollen balls. While they would normally be internal on the oceanic creature, their apparent hugeness cannot be fully contained inside him and bulge out considerably.";
-
 to say losetoorca:
 	project Figure of Orca_hard_icon;
 	if HP of Player > 0:
@@ -42,7 +37,6 @@ to say losetoorca:
 		else:
 			say "[orcadefeatsex4]";
 
-
 to say orcadefeatsex1: [anal sex]
 	say "     Thrusting into your mouth at a slow and deliberate pace, you're made to slick his cetacean rod with your saliva while it becomes fully engorged. Eventually, you feel its immense length depart from your abused orifice before he indicates to you that he will be claiming another. He slides overtop of you, his massive form pinning you against the beach's sand as his muscular tail spreads and otherwise prepares your legs for his eager intrusion. With a sharp jab, you feel the flexible member invade your ass, worming itself deeper into you like some meaty tentacle as he proceeds to pound your vulnerable hole.";
 	say "     Influenced by whale's perverse hold on you, you're soon unable to refuse the pleasure of such a wriggling intrusion. Slickly sliding across the supple walls of your [bodytype of Player] anus, the orca-man's impressive shaft probes your depths of your fleshy labyrinth, and it's not long before your hole is sufficiently stretched to accommodate the whole of his cock within your confines. Writhing in pleasure against the wet sand, this strange sensation is enough to drive you to climax, and - like clockwork - the beast's own release is make apparent as his thick, virile cum floods the confines of your stomach.";
@@ -50,14 +44,12 @@ to say orcadefeatsex1: [anal sex]
 	CreatureSexAftermath "Player" receives "OralCock" from "Killer Whale";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Killer Whale";
 
-
 to say orcadefeatsex2: [new vaginal sex]
 	say "     Thrusting into your mouth at a slow and deliberate pace, you're made to slick his cetacean rod with your saliva while it becomes fully engorged. Eventually, you feel its immense length depart from your abused orifice before he indicates to you that he will be claiming another. He slides overtop of you, his massive form pinning you against the beach's sand as his muscular tail spreads and otherwise prepares your legs for his eager intrusion. With a sharp jab, you feel the flexible member invade your pussy, worming itself deeper into you like some meaty tentacle as he proceeds to pound your vulnerable hole.";
 	say "     Influenced by whale's perverse hold on you, you're soon unable to refuse the pleasure of such a wriggling intrusion. Slickly sliding across the supple walls of your [bodytype of Player] cunt, the orcaman's impressive shaft probes your depths before it intrudes past your cervix, and the prospect of occupying your womb is enough motivation for him to engulf the remainder of his cock within these confines. Writhing in pleasure against the wet sand, this strange sensation is enough to drive you to climax, and - like clockwork - the beast's own release is made apparent as his thick, virile cum floods the confines of your uterus.";
 	say "     Visibly bloated by such an impressive release, your feel the writhing organ soften before the whale firmly pulls himself free of your tight hole. Satisfied with what he has wrought upon you, he departs, leaving you to lay across the sand in a dizzy stupor.";
 	CreatureSexAftermath "Player" receives "OralCock" from "Killer Whale";
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Killer Whale";
-
 
 to say orcadefeatsex3: [old vaginal sex]
 	say "     He thrusts into your mouth a few times, but once it's fully engorged, he slides that slick, flexible member from your throat and pushes you over. Sliding atop you, he keeps you pinned with his massive body and spreads your legs apart with his muscular tail. He drives his cock into your pussy, squirming and wiggling his flexible member around inside you like some meaty tentacle as he pounds into you.";
@@ -68,7 +60,6 @@ to say orcadefeatsex3: [old vaginal sex]
 	say "     When he's finished draining his large balls into you, his flexible cock pulls itself from your stuffed, bloated womb and he releases you. The killer whale departs, leaving you floating on your back in a stupor.";
 	CreatureSexAftermath "Player" receives "OralCock" from "Killer Whale";
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Killer Whale";
-
 
 to say orcadefeatsex4: [oral sex]
 	say "     With an eager energy, he thrusts his writhing cock against your maw, driving him ever deeper into your throat as his arousal grows, happy to illustrate his pleasure with audible clicking noises.";
@@ -99,8 +90,6 @@ to say beattheorca:
 		else:
 			say "     Defeating the orca, you leave his exhausted form floating on the water. You're sure he'll be fine, but you feel ill-inclined to be around when he does recover.";
 
-
-
 to say orcavicsex1:
 	say "     Victorious against the muscular orca, you find your better senses ill-equipped to handle your more feral needs. Too weak to challenge your strength any further, you pull the male into a headlock. Intent on asserting your dominance, you grind your throbbing [Cock of Player] cock against his ass, pushing it under his tail. The beast can only impotently struggle as you tease his tailhole with the tip of your [cock size desc of Player] rod before you ram it into the vulnerable portal, your victim's moans his only reply.";
 	say "     Pumping your organ into him with assertive determination, you sate your lust by making an example of this lesser male and confirm your claim on this territory. Roughly abusing the orca's hole, his own lust betrays him, moaning audibly as the sheer force of your thrusts brings him to cum in the sand. The tight clenching of his abused hole enough to bring you to your own orgasm, [one of]flooding his bowels with your thick seed[or]pulling out just before to spend your seed across his back[at random]. Relinquishing him, you punctuate your violation with a hard swat on the killer whale's abused rump before he takes off. Satisfied after reasserting your territory by humiliating the muscular beast, you depart back from whence you came.";
@@ -114,8 +103,18 @@ to say orcavicsex2:
 	increase orcafdom by 1;
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Killer Whale";
 
-
 Section 2 - Creature Insertion
+
+to say orcadesc:
+	say "     Looking over the killer whale, his body is covered in the distinctive patterning of an orca on thick, sleek flesh. His head is sleek and streamlined, drawing to a blunt, rounded muzzle. His mouth is filled with small, sharp, dagger-like teeth. The blowhole on the top of his head occasionally opens to take a breath. His body is large and heavily muscled, but with the sleek shape of a swimmer. He stands easily ten feet tall. The large dorsal fin projecting from his back extends nearly a foot behind him in a sharp, knife-like shape. His arms are dense with sleek muscle. His hands have a thick webbing between his fingers. His legs are humanoid in appearance, thick with powerful muscle. His ass is dense with muscle, supporting a thick and very muscular tail that is four feet in length and ends in a whale's flukes. Between his powerful swimmer's legs he has a titanic, sleek and curving cetacean cock. Beneath his impressive maleness is a large bulge, showing his swollen balls. While they would normally be internal on the oceanic creature, their apparent hugeness cannot be fully contained inside him and bulge out considerably.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Killer Whale"	"[PrepCombat_Killer Whale]"
+
+to say PrepCombat_Killer Whale:
+	project Figure of Orca_clothed_icon;
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

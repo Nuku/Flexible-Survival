@@ -379,16 +379,6 @@ to say NekoboyVaginal:
 
 
 to say NekomimiBoydesc:
-	now NekomimiBoyForm is 1;
-	[if NekomimiBoyForm is 0:
-		let randomnumber be a random number from 1 to 3;
-		if randomnumber is:
-			-- 1:
-				now NekomimiBoyForm is 1; [Meowth]
-			-- 2:
-				now NekomimiBoyForm is 2; [Garfield]
-			-- 3:
-				now NekomimiBoyForm is 3; [Link]]
 	if NekomimiBoyForm is 1: [Meowth]
 		say "     You find yourself face to face with a cream-colored nekomimi boy who has what looks like a coin on his forehead, just like the Backpackemon Purrth. It takes you a moment to realize that he is wearing body paint and thus that his penis is unashamedly on display for all to see. You imagine that beneath the makeup he looks mostly human, but with a few feline features such as the ears, whiskers, tail and paws, though you can't be sure given the effort put into his cosplay. 'Hi there, I don't suppose you have any gold to share with me?' the catboy cosplayer asks, his eyes narrowing when you shake your head. 'Our eyes have met, now we must battle,' he informs you before dropping into a combat-ready position. With little choice for now, you ready yourself to defend against the Backpackemon cosplayer.";
 	[else if NekomimiBoyForm is 2: [Garfield]
@@ -401,6 +391,22 @@ to say NekomimiBoydesc:
 
 
 Section 2 - Monster Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Nekomimi Boy"	"[PrepCombat_Nekomimi Boy]"
+
+to say PrepCombat_Nekomimi Boy:
+	now NekomimiBoyForm is 1;
+	[if NekomimiBoyForm is 0:
+		let randomnumber be a random number from 1 to 3;
+		if randomnumber is:
+			-- 1:
+				now NekomimiBoyForm is 1; [Meowth]
+			-- 2:
+				now NekomimiBoyForm is 2; [Garfield]
+			-- 3:
+				now NekomimiBoyForm is 3; [Link]]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

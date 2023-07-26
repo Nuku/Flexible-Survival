@@ -25,11 +25,17 @@ To say Badger loses:
 	project Figure of Badger_clothed_icon;
 	say "     'I thought that'd be a doddle,' the badger complains, his voice low and lacking in gall. 'You must be quite chuffed, but leaving a badger on the ground is a botch job, you know?' Before you can quite parse his odd vernacular, he's put all paws to the ground. The dirt surges, and the defeated brock vanishes in a spray of turf and earth. All that is left of him is a dark hole in the ground and his final echoing taunt. 'Cheerio!'";
 
+Section 2 - Creature Insertion
+
 to say Badger_desc:
-	project Figure of Badger_clothed_icon;
 	say "     Wandering around the park and admiring the sights, your eyes are looking anywhere but down. This is a mistake, as you almost tumble headlong into a deep pit, barely catching your feet. The narrow pit leads into a tunnel, from which a burly anthro badger emerges! Splattered in rich, clean earth, this rugged, muscular male is wearing almost nothing, just a ripped pair of shorts and white undershirt, plus a battered helmet with a lantern on the front. [one of]'Cor! An invader, or immigrant to my kingdom?' [or]'You look like a dog's dinner. Let me bugger you better, love,' [or]'Cost of a gander is a bit of fagging, mate,' [or]'Now who's this now, looking so fit and fruity!' [or]'No need to flog your arse, I'm easy,' [or]'Not enough badgers, in my mind. I'll get that sorted now,' [or]'No time to leg it, you're in for the duration,' [or]'Trying to nick my kit? You're off your trolley,' [at random]he growls out, before tightening his helmet strap and moving in to attack!";
 
-Section 2 - Creature Insertion
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Badger"	"[PrepCombat_Badger]"
+
+to say PrepCombat_Badger:
+	project Figure of Badger_clothed_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

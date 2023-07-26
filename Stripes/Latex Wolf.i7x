@@ -122,13 +122,18 @@ to say ButtFuckLatexWolf:
 		say "     Not wanting to risk getting any of the melting wolf on you, you pull out of him, leaving the latex canine to whine, whimper and squeak at you as you finish yourself off with your hand. You spurt your cum onto the melting black mass, watching as it mixes with and is absorbed by the now-rubbery puddle. Relieved at the close call, you put your gear back on before heading back out on your travels.";
 	CreatureSexAftermath "Latex Wolf" receives "AssFuck" from "Player";
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Latex Wolf"	"[PrepCombat_Latex Wolf]"
+
+to say PrepCombat_Latex Wolf:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
@@ -151,7 +156,7 @@ When Play begins:
 	now attack entry is "The latex wolf [one of]slaps you with a rubbery pad[or]claws you with plastic nails[or]bites with rubbery teeth[or]pounces forward and bodyslams you[at random].";
 	now defeated entry is "[latex wolf loses]";
 	now victory entry is "[latex wolf wins]";
-	now desc entry is "[mongendernum 3]     You are startled when you hear a rubbery, skidding noise [if a random chance of 1 in 2 succeeds]from behind you[else if a random chance of 1 in 2 succeeds]to your left[else]to your right[end if]. Turning to face the noise, you spot a black and white latex wolf whipping around the corner."; [ Description of the creature when you encounter it.]
+	now desc entry is "     You are startled when you hear a rubbery, skidding noise [if a random chance of 1 in 2 succeeds]from behind you[else if a random chance of 1 in 2 succeeds]to your left[else]to your right[end if]. Turning to face the noise, you spot a black and white latex wolf whipping around the corner."; [ Description of the creature when you encounter it.]
 	now face entry is "elongated with a muzzle and sharp teeth"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "lupine, bent onto all fours. Your insides feel strange, as if they are made of something shifting and changing"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "rubbery latex with black, fur-like patterned"; [ skin Description, format as "Your body is covered in (your text) skin."]

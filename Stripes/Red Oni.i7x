@@ -6,7 +6,6 @@ Version 2 of Red Oni by Stripes begins here.
 Section 1 - Creature Responses
 
 to say redonidesc:
-	setmongender 3; [creature is male]
 	if HP of Hayato is 99:
 		now HP of Hayato is 100;
 		say "     Before you is a hulking red creature not unlike the one you'd encountered before. Its face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs. Atop its head is a thick mane of scraggly black hair. The red oni wears only a crude [one of]tiger-skin[or]animal-skin[or]furry[or]leather[or]hide[at random] loincloth tied by a hemp rope that imperfectly covers its enlarged and stiffening manhood. Standing roughly ten feet tall and heavily muscled, the demon ogre carries a studded iron club nearly as tall as it. It has a snarling, menacing expression on its face as it glares at you and advances.";
@@ -15,7 +14,6 @@ to say redonidesc:
 		say "     Before you is a hulking red creature not unlike Hayato - another red oni. Its face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs. Atop its head is a thick mane of scraggly black hair. This oni wears only a crude [one of]tiger-skin[or]animal-skin[or]furry[or]leather[or]hide[at random] loincloth tied by a hemp rope that imperfectly covers its enlarged and stiffening manhood. Standing roughly ten feet tall and heavily muscled, the demon ogre carries a studded iron club nearly as tall as it. It has a snarling, menacing expression on its face as it glares at you and advances.";
 	else:
 		say "     Before you is another red-skinned oni. Its face is quite demonic, with a pair of large horns pointing up, an exaggerated brow and chin, yellow eyes and large, protruding fangs. Atop its head is a thick mane of scraggly black hair. It wears only a crude [one of]tiger-skin[or]animal-skin[or]furry[or]leather[or]hide[at random] loincloth that imperfectly covers its enlarged and stiffening manhood. Standing roughly ten feet tall and heavily muscled, it carries a studded iron club nearly as tall as it. The red oni has a snarling, menacing expression on its face as it glares at you and advances.";
-
 
 to say losetoredoni:
 	if HP of Hayato is 97:		[doing Oni Lair challenges]
@@ -36,15 +34,20 @@ to say losetoredoni:
 		increase Libido of Player by 15;
 		if Libido of Player > 100, now Libido of Player is 100;
 
-
 to say beattheredoni:
 	if HP of Hayato is 97:		[doing Oni Lair challenges]
 		say "     After a hard-fought battle, you defeat your oni foe.";
 	else:
 		say "     With your final blow, the demon ogre growls angrily and stumbles back several steps. It smashes its club heavily to the earth, cracking the ground with a mighty crash. '[one of]I shall have my vengeance[or]Your kind will suffer soon[or]I shall crush you next time, [if scalevalue of Player < 4]gnat[else]wretch[end if][or]My brothers shall avenge me[or]The Oni Lord will crush you and all your kind[at random],' he snarls before storming off.";
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Red Oni"	"[PrepCombat_Red Oni]"
+
+to say PrepCombat_Red Oni:
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

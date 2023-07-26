@@ -18,8 +18,14 @@ to say Unicorn attack:
 To say Unicorn loss:
 	say "     Knocking the unicorn to the ground, you once again show that brute force can triumph over speed and precision, her lithe sprinter's body not able to take the punishment you can dish out. She scrambles away from your vicious assault, all four paws scrabbling helplessly along the ground for a second, before managing to find traction. You sigh as she darts away. Even moving as slowly and painfully as she now is, you know she is still far too fast for you to catch. You watch her as she leaves, the unicorn, constantly shooting nervous glances back at you until she is out of sight.'";
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Unicorn"	"[PrepCombat_Unicorn]"
+
+to say PrepCombat_Unicorn:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

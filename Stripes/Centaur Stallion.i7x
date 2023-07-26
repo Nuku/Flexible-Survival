@@ -12,11 +12,6 @@ Version 4 of Centaur Stallion by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say centaurstalliondesc:
-	setmongender 3; [creature is male]
-	project the Figure of CentaurStallion_soft_icon;
-	say "     A centaur approaches you, galloping across the plains and unslinging his bow. His body is covered in tan, human flesh from the waist up. From the waist down, everything is covered in the short, brown hairs of a horse. His head is mostly that of a human male at first glance, but with a broad flaring nose and pointed ears. His upper body is human and strongly built, with hard muscles and broad shoulders on that tanned, male body. His arms are human in appearance and quite muscular. Being a centaur, his legs are replaced in their entirety from the waist down by the body of a horse. His muscled, equine body has slender legs leading to a set of four shiny black hooves. A long flowing tail trails behind. Below that equine body is a massive sheath, bloated and full, as are the watermelon-sized balls behind it.";
-
 to say losetocentaurstallion:
 	project the Figure of CentaurStallion_hard_icon;
 	if wslevel is 3 and ( ( Cunt Count of Player is 0 and a random chance of 1 in 5 succeeds ) or a random chance of 1 in 4 succeeds ):
@@ -197,7 +192,6 @@ to say CentaurRimsPlayer:
 	say "     That tongue doesn't stop playing along your insides, the centaur all too happy to keep you moaning to the world. However, as it begins to fade back into a euphoric throb, rather than an ecstatic orgasm, you step forward, letting the centaur's tongue slip from your hole. You then give him a grin and a wink, gathering your things before heading off. You got what you wanted, and while the throbbing pleasure slowly fades, you feel all the more empowered to take down any more centaur's in your way.";
 	CreatureSexAftermath "Centaur Stallion" receives "Other" from "Player";
 
-
 to say SuckCentaurCock:
 	say "     You know it's a bad idea to give power to such a large beast, but now that he's defeated, maybe it'll be safe enough. Walking towards the male, you see his body shuddering, even his human half flinches away from your approach. However, when you stroke a hand down his side, calmly brushing through his fur, the flinching slows. You don't want to waste time, though, and so you get to pushing him onto his side, revealing his belly to the world. Nevertheless, that's not the most important reveal, as his semi-erect cock is now fully unveiled as well. The tip is broad and throbbing, dripping out a gooey treat for you, and even in defeat, it seems to harden by the second. Although, given that he's no doubt put two and two together, this may not feel like defeat to him.";
 	say "     Your hands are soon stroking along the centaur's stomach, tracing their way over the powerful muscles, heading right towards that eager length. You don't feel much like an overly eager mating, but a calm blowjob seems right up your alley. There's little time to waste, and so you stop the subtle movements, suddenly gripping his length in two hands, giving it several good pumps. This brings about ever more white nectar, drawing your tongue to poke at the tip of that cock, sucking the dribbling seed right down your throat. You don't stop there, however, your lips suctioning right onto the crown of that equine shaft. This draws a neighing moan from the human half above you, and that signals an onslought of more precum.";
@@ -227,6 +221,17 @@ to say CentaurSucksPlayerCock:
 	CreatureSexAftermath "Centaur Stallion" receives "OralCock" from "Player";
 
 Section 2 - Creature Insertion
+
+to say centaurstalliondesc:
+	say "     A centaur approaches you, galloping across the plains and unslinging his bow. His body is covered in tan, human flesh from the waist up. From the waist down, everything is covered in the short, brown hairs of a horse. His head is mostly that of a human male at first glance, but with a broad flaring nose and pointed ears. His upper body is human and strongly built, with hard muscles and broad shoulders on that tanned, male body. His arms are human in appearance and quite muscular. Being a centaur, his legs are replaced in their entirety from the waist down by the body of a horse. His muscled, equine body has slender legs leading to a set of four shiny black hooves. A long flowing tail trails behind. Below that equine body is a massive sheath, bloated and full, as are the watermelon-sized balls behind it.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Centaur Stallion"	"[PrepCombat_Centaur Stallion]"
+
+to say PrepCombat_Centaur Stallion:
+	setmongender 3; [creature is male]
+	project the Figure of CentaurStallion_soft_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

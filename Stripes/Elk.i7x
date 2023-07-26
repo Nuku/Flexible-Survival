@@ -8,16 +8,6 @@ Section 1 - Creature Responses
 
 noelksex is a number that varies.
 
-to say elkdesc:
-	setmongender 3; [creature is male]
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Female";
-	say "     Facing off against you is a large male creature in the form of an elk. While he stands well over six feet tall, his wide rack makes him seem even larger. He has a strong build to his body, with a powerful chest and broad shoulders. His fur is brown in color, darkening over his head and neck where it grows shaggier. He has a strong, musky scent to him, and his cock protrudes several inches from his plump package, showing the male to be in rut. He looks you over briefly, as if sizing you up, all while waving his rack [if Player is female]in an attempt to impress you[else]menacingly at you[end if]. He releases a bugling call, and stomps a hoof, before charging forward.";
 
 to say losetoelk:
 	now noelksex is 0;
@@ -41,9 +31,6 @@ to say losetoelk:
 		say "     With a loud groan of relief, his penis throbs in your mouth and unleashes blast after blast of cum. His seed, strong and musky like his scent, is thick and plentiful. You gulp it all down, rubbing his ballsack as you do, eager for all he'll give. By the time he's done, your belly is full of his heated load and you are left aroused and unsatisfied. When he drives you off after his own fun is over, your lustful daze continues for some time before your head begins to clear.";
 		if Libido of Player < 80, now Libido of Player is ( ( 3 * Libido of Player ) + 80 ) / 4;
 		CreatureSexAftermath "Player" receives "OralCock" from "Elk";
-
-[if noelksex > 2:
-	say "     Grabbing the elk by the antlers, you press twist your weight to the side, pulling him face first to the ground. As you have done with the other elk, you keep him pinned to the ground for a little while until he gives up and concedes that you've won. Wanting nothing more from him, you send him off to look for a means to slake his lust elsewhere.";]
 
 to say beattheelk:
 	say "     Grabbing the elk by the antlers, you press twist your weight to the side, pulling him face first to the ground. After pinning him to the ground for a little while, he gives up and concedes that you've won. Having forced him to submit to you, you consider your options on what to do with the horny male.";
@@ -104,7 +91,6 @@ to say beattheelk:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 
-
 to say beattheelk_1:	[fuck him]
 	now noelksex is 0;
 	say "     Keeping the defeated elk pinned down, you grab that raised ass of his with one hand and kick his legs apart. He gives a soft bleating sound but does not resist, even flagging his tail up for you. Unsurprised given the circumstances, you grin and give his rump a firm swat as you grind your manhood against it. Feeling that soft pelt squeezed around you by his firm rear gets you even harder. You line yourself up with that pucker and thrust into him, enjoying the lustful low he gives as he's mounted.";
@@ -112,14 +98,12 @@ to say beattheelk_1:	[fuck him]
 	say "     When your climax comes, you drive your [cock size desc of Player] [Cock of Player] penis deep inside him and unleash your [Cum Load Size of Player] load into him. He gives a lustful cry as he's rutted and cums as well, splattering large gobs of musky semen onto the ground. You keep going until your balls are drained, at least for the moment[if anallevel is 3 and thirst of Player < 30 and a random chance of 2 in 5 succeeds]. Suddenly feeling the urge to drain something else, you pull out but keep your cock aimed at his creamy asshole. With a chuckle, you piss over the ass you've just finished claiming, adding your musky scent to his. His short tail wags excitedly at this treatment and he makes no attempt to move away even though you're not even touching him anymore[else]. You pull your spent shaft from his creamy ass and then wipe the last traces of your semen onto his rump, adding your musky scent to his[end if]. That done, you give his messy rump a swat and send him on his way.";
 	CreatureSexAftermath "Elk" receives "AssFuck" from "Player";
 
-
 to say beattheelk_2:	[ride him - vaginal]
 	now noelksex is 0;
 	say "     With a firm grip on his antlers, you twist him back around, forcing him over onto his back. He gives a soft bleating sound but does not resist, his erection still hard and dribbling as you eye it with obvious hunger. Taking it in hand, you climb overtop the defeated cervine and aim his enlarged manhood at your cunt. You grind your pussy against it a few times to tantalize yourself before lowering down onto it, enjoying the lustful low he gives as you start to ride him.";
 	say "     His big cock pulses and throbs inside you[if Cunt Tightness of Player < 4]. Being a tight fit, you have to take it slow at first, but your body soon adapts enough to cope[end if][if Cunt Depth of Player < 12]. While you can't get it all in despite your best efforts, you have a great time ride as much of it as you can force into your needy cunt[else]. Your [cunt size desc of Player] cunt has little difficulty taking his cervine shaft into you, allowing you to glide up and down its considerable length[end if]. You both end up moaning in pleasure as your vaginal walls squeeze and milk at his impressive rod. The scent of rut hangs heavy in the air and you run your fingers through the thick fur of his chest.";
 	say "     When your climax comes, you push yourself down until his animalistic cock [if Cunt Depth of Player < 16]presses as deep into you as it can go. Milked by your cunt to orgasm, his seed splashes against your cervix, fluid pressure building until it pushes past that final barrier and splatters up into your womb[else]is buried fully inside you. Milked by your cunt to orgasm, his seed sprays up and splashes against your cervix to be drawn into your womb[end if] [if the player is impreg_able]in an attempt to breed you[else]in a failed attempt to breed you[end if]. You moan and cry out as the rutting male releases a bugling call, riding him for all he's worth. Once his balls are drained and your own orgasm ends, you pull off his cock and send him on his way, having taken what you need from him.";
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Elk";
-
 
 to say beattheelk_3:	[ride him - anal]
 	now noelksex is 0;
@@ -163,8 +147,24 @@ to say beattheelk_6:
 	say "     Having beaten the elk and forced him to submit, he is easily driven off. He heads off, looking elsewhere for a means to slake his lust.";
 	increase noelksex by 1;
 
-
 Section 2 - Creature Insertion
+
+to say elkdesc:
+	say "     Facing off against you is a large male creature in the form of an elk. While he stands well over six feet tall, his wide rack makes him seem even larger. He has a strong build to his body, with a powerful chest and broad shoulders. His fur is brown in color, darkening over his head and neck where it grows shaggier. He has a strong, musky scent to him, and his cock protrudes several inches from his plump package, showing the male to be in rut. He looks you over briefly, as if sizing you up, all while waving his rack [if Player is female]in an attempt to impress you[else]menacingly at you[end if]. He releases a bugling call, and stomps a hoof, before charging forward.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Elk"	"[PrepCombat_Elk]"
+
+to say PrepCombat_Elk:
+	setmongender 3; [creature is male]
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Female";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -8,8 +8,6 @@ firstgarg is a truth state that varies. firstgarg is usually true. [tracks for s
 Section 1 - Creature Responses
 
 to say gargoyledesc:
-	setmongender 3; [creature is male]
-	project the Figure of Gargoyle_soft_icon;
 	say "     A flutter of wings has you ducking for cover just in time for you to find a fascinating creature dropping down from the sky to land gracefully in front of you. With beautiful gray skin strapped tight over numerous muscles you look over the bare form of this inhuman monster and realize what you're dealing with. The gargoyle stands with wings spread and a menacing glare pointed in your direction. [one of]The creature warbles at you quietly, seeming to want to challenge you, though you're not sure why[or]A hissing growl has your nerves buzzing as you see the monster snarling at you heatedly[or]A hiss and then flap of the monster's wings has you on guard as you feel the need to fight come over you[at random].";
 
 to say gargoyle attack:
@@ -59,6 +57,14 @@ To say gargoyle loss:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Gargoyle"	"[PrepCombat_Gargoyle]"
+
+to say PrepCombat_Gargoyle:
+	setmongender 3; [creature is male]
+	project the Figure of Gargoyle_soft_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

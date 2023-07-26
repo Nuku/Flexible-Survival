@@ -56,10 +56,6 @@ To say teddy bear loss:
 	else:
 		say "     The strange plush animal whimpers as your last blow knocks it over. It lands with a soft, padded thump onto its back and waves its limbs in the air, having difficulty getting back up. With her temporarily indisposed, you're free to return to what you were doing before she got in your way.";
 
-[
-	say "The strange plush animal whimpers in defeat as its stuffing leaks out all over the place. It hurriedly gathers some of its stuffing up before waddling away, shooting scared glances back over its shoulder at you, making you feel vaguely guilty for beating up on a poor stuffed animal.";
-]
-
 to say teddybearsex:
 	now noteddybearsex is 0;
 	say "     Moving in on the fallen bear, you pin her down and press your [bodytype of Player] body down onto her plush form. She squirms a little at first, but giggles and settles down as you get your [Cock of Player] cock lined up with her strategically placed hole. With a gentle push, you slide your [cock size desc of Player] penis into that velvety opening. You can feel those fabric walls squeeze and caress over you each time you thrust into the pink, padded bear.";
@@ -116,8 +112,14 @@ to teddybearvored:
 		end the story saying "Having been consumed by the teddy bear, you've been turned into another of the plush bears roaming the fairgrounds.";
 		stop the action;
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Teddy Bear"	"[PrepCombat_Teddy Bear]"
+
+to say PrepCombat_Teddy Bear:
+	setmongender 4;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -140,7 +142,7 @@ When Play begins:
 	now attack entry is "[one of]The bear windmills its arms and crashes into you, knocking you down.[or]The strange plush bear takes a moment out of combat to give you a big fuzzy hug, causing you to feel vaguely unsettled.[or]Its large plush hands come down hard on your head, making you wonder through the ringing in your ears just what the heck it's stuffed with, lead?[or]Jumping up as it charges, the big fluffy bear knocks you flat as it crashes to the ground.[or]Singing along with the fair music, the fluffy bear prances around seemingly at random, until it ends up ramming into you.[or]Charging forward with its oversized head lowered, the giant bear rams right into you, knocking you both down.[at random]";
 	now defeated entry is "[teddy bear loss]";
 	now victory entry is "[teddy bear attack]";
-	now desc entry is "[mongendernum 4]     A giant teddy bear, covered in soft pink fur toddles down the midway towards you, moving surprisingly fast on its round plush legs. [one of]'Oh good, I was looking for someone to play with!' [or]'Don't you want a prize?' [or]'Take me home with you!' [or]'Don't you want a cuddle?' [or]'You would look great if you were fluffy like me!' [or]'You will be my carnival prize!' [at random]she says as she charges towards you, her large roundish arms windmilling dangerously.";
+	now desc entry is "     A giant teddy bear, covered in soft pink fur toddles down the midway towards you, moving surprisingly fast on its round plush legs. [one of]'Oh good, I was looking for someone to play with!' [or]'Don't you want a prize?' [or]'Take me home with you!' [or]'Don't you want a cuddle?' [or]'You would look great if you were fluffy like me!' [or]'You will be my carnival prize!' [at random]she says as she charges towards you, her large roundish arms windmilling dangerously.";
 	now face entry is "large teddy bear like face, with a short muzzle and rosy cheeks. Your big black eyes seem comical and cute, and your mouth is pulled upwards by your muzzle, so it seems as if you are always smiling goofily"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "rounded in the middle with somewhat round arms and legs, and plump, plush, paw-like hands, your body almost feels like it is full of some sort of strange stuffing that moves around as you walk, poking yourself you can see your clawed paw sink deeply into your stuffed side with almost no pain whatsoever"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]brown furred[or]softly furred[or]fake furred[or]strangely plush[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]

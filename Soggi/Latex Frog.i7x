@@ -42,11 +42,18 @@ to say Latex Frog Loses:
 		say "     Striking a final decisive blow to the latex frog, the feral creature quickly deforms and escapes down the nearby sewer drain. You consider following, but decide to move on for now.";
 	LineBreak;
 
+Section 2 - Creature Insertion
+
 to say Latex Frog Desc:
 	say "     As you walk down the street, you see a sudden movement out of a sewer drain right next to you. A shiny dark green form leaps out from the drain, and turns to face you with interest, before letting out a loud *ribbit*. The latex frog with a wide mouth, eyes poking out above its head, and powerful hind legs looks ready to pounce on you. Its skin appears incredibly shiny and slippery, a thin layer of moisture coating it.'";
 	say "     Suddenly the frog's thick tongue shoots out toward you with blinding speed! By luck it misses you by an inch, before zipping back into the frog's mouth.";
 
-Section 2 - Creature Insertion
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Latex Frog"	"[PrepCombat_Latex Frog]"
+
+to say PrepCombat_Latex Frog:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

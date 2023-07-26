@@ -3,7 +3,6 @@ Version 2 of Greek Nymph by Sarokcat begins here.
 
 "Adds a Greek Nymph to Flexible Survival's Wandering Monsters table, with impreg chance"
 
-
 Section 1 - Creature Responses
 
 beatgrnymph is a number that varies.
@@ -31,8 +30,14 @@ To say Greek Nymph loss:
 		say "     Knocking the naked nymph backwards, she slips and falls down with a cry. 'You're no fun!' the nymph proclaims, pouting. 'Why don't you want to play with us?' she whines pathetically at you, before bursting into tears. Not knowing what to do with a crying nymph, you just stop and stare as she picks herself up and runs off down the hallway in tears, you feel vaguely guilty at having reduced one of the perpetually happy creatures to tears. However, the feeling fades when she reaches the end of the halls, stops crying to look around for a minute, and takes off laughing again, a satyr in hot pursuit.";
 		if Player is not neuter, increase beatgrnymph by 10;
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Greek Nymph"	"[PrepCombat_Greek Nymph]"
+
+to say PrepCombat_Greek Nymph:
+	setmongender 4;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -54,7 +59,7 @@ When Play begins:
 	now attack entry is "[one of]She slaps at you playfully, and you are surprised at how much it stings.[or]She giggles and poses for a second, causing you to pause and stare in fascination at her perfect body.[or]The nymph erupts into amused laughter as she dances around you. Strangely, you find yourself doubling over in laughter as well, everything seeming so amusing for a second.[or]She runs right at you, knocking you both to the ground.[or]'Tag!' she shouts, as she whacks you upside the head.[at random]";
 	now defeated entry is "[Greek Nymph loss]";
 	now victory entry is "[Greek Nymph attack]";
-	now desc entry is "[mongendernum 4]     You encounter a lovely, naked woman darting through the halls giggling. Spotting you, she gasps in surprise. You blink as you recognize this strange, otherworldly beauty as what appears to be a classical Greek nymph! [one of]'You won't catch me so easily!' [or]'Did you come looking for me?' [or]'Tag, you're it!' [or]'Let's have some fun!' [or]'Come on! Play with me!' [at random]the nymph says, letting out another giggle, before darting forward with a mischievous glint in her eyes as she reaches for you.";
+	now desc entry is "     You encounter a lovely, naked woman darting through the halls giggling. Spotting you, she gasps in surprise. You blink as you recognize this strange, otherworldly beauty as what appears to be a classical Greek nymph! [one of]'You won't catch me so easily!' [or]'Did you come looking for me?' [or]'Tag, you're it!' [or]'Let's have some fun!' [or]'Come on! Play with me!' [at random]the nymph says, letting out another giggle, before darting forward with a mischievous glint in her eyes as she reaches for you.";
 	now face entry is "that of a beautiful female, with lovely, golden eyes and long, flowing hair. The only thing making it different from a normal woman's is the near perfection of your nymph-like visage"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "that of an extremely, perky young woman, with long, lithe legs made for running and dancing and curves so impossibly perfect that they are almost obviously unnatural, or supernatural, as the case may be"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]nymph-like[or]soft and sleek[or]beautiful[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]

@@ -10,11 +10,6 @@ Section 1 - Creature Responses
 
 GrizzlyLoseCVComply is a number that varies. GrizzlyLoseCVComply is usually 0. [@Tag:NotSaved]
 
-to say grizzlydesc:
-	setmongender 3; [creature is male]
-	say "     A large bear-man stands before you. His large stature and shaggy brown fur seem to paint him as a grizzly bear. Except for his fur, he's only wearing a ragged pair of pants, the holes in which allow some short glimpses at a thick furred sheath and hefty balls hanging between his legs. A thick ursine cock peeks out just a little from the sheath. 'Ah! Another upstart cub!' he growls. 'It's been a while since I've had some fun!'";
-	say "     Suddenly, he charges at you! It's a fight!";
-
 to say losetogrizzly:
 	if glowing mushroom is owned and vorelevel > 1:
 		say "[GrizzlyLoseCV]";
@@ -238,6 +233,17 @@ to say gbearrideanal:
 	CreatureSexAftermath "Player" receives "AssFuck" from "Grizzly Bear";
 
 Section 2 - Creature Insertion
+
+to say grizzlydesc:
+	say "     A large bear-man stands before you. His large stature and shaggy brown fur seem to paint him as a grizzly bear. Except for his fur, he's only wearing a ragged pair of pants, the holes in which allow some short glimpses at a thick furred sheath and hefty balls hanging between his legs. A thick ursine cock peeks out just a little from the sheath. 'Ah! Another upstart cub!' he growls. 'It's been a while since I've had some fun!'";
+	say "     Suddenly, he charges at you! It's a fight!";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Grizzly Bear"	"[PrepCombat_Grizzly Bear]"
+
+to say PrepCombat_Grizzly Bear:
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

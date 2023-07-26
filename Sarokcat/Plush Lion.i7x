@@ -1,9 +1,7 @@
 Version 2 of Plush Lion by Sarokcat begins here.
 [ Version 2.1.1 - Plush Lion vore loss - scene fix ]
 
-
 "Adds a Plush Lion to Flexible Survival's Wandering Monsters table."
-
 
 Section 1 - Creature Responses
 
@@ -74,7 +72,6 @@ to plushlionvored:
 		WaitLineBreak;
 		end the story saying "Having been consumed by the plush lion, you've been turned into another of the stuffed felines roaming the fairgrounds.";
 		stop the action;
-
 
 To say Plush Lion loss:
 	increase plionvic by 1;
@@ -162,8 +159,14 @@ to say plionsex_05:
 	say "     The living stuffie is quite animated in its attempts to eat your puss[yfn], its lapping tongue and nuzzling muzzle feeling delightfully soft across your sensitive flesh. With such attention from the big kitty, it isn't long before you're cumming with a loud moan. Your [if Cunt Depth of Player < 10]hot juices soak the front of its muzzle[else if Cunt Depth of Player < 20]flowing juices soak its muzzle and face[else]copiously flowing juices soak from its muzzle and into its whole head[end if] while it tries to lick up as much as it can get. When your orgasm finally passes, you push the plush lion's muzzle away and let the injured toy head off, its torn seams already starting to restitch themselves.";
 	CreatureSexAftermath "Plush Lion" receives "OralPussy" from "Player";
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Plush Lion"	"[PrepCombat_Plush Lion]"
+
+to say PrepCombat_Plush Lion:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -188,7 +191,7 @@ When Play begins:
 	now attack entry is "[one of]The plush lion crouches down on his haunches, before springing forward to attack.[or]The strange plush creature takes a moment out of combat to rub its furry mane on you, causing you to feel strangely submissive.[or]Its large plush paws suddenly swipe at you, knocking you down.[or]All of a sudden the plush lion beast pounces on you, knocking you down and rubbing its muzzle all over you.[or]Lifting its paw up, the beast pretends to be hurt for a second, causing you to drop your guard long enough for it to get in a couple good shots.[or]Charging forward with its oversized head lowered, the plush lion creature barrels right into you![or]Opening its fuzzy mouth wide, the lion creature lets out a cute little roaring noise, while not terribly intimidating, for some reason it makes your body shiver in a primal response.[at random]";
 	now defeated entry is "[Plush Lion loss]";
 	now victory entry is "[Plush Lion attack]";
-	now desc entry is "[mongendernum 3]     A life size plush lion toy approaches down the midway, its furry body seeming both cute and threatening. Its large, brown, leonine mane sticks out dramatically from around its yellow furred neck, making it seem larger and more impressive, and definitely leaving no doubt as to the gender of the stuffed toy. Not that you could have much doubt after you caught a glimpse of its stiff cock, hanging out of its furry sheath beneath its belly, leaving no doubt as to the creatures intentions as it focuses its stuffed leonine eyes on you.";
+	now desc entry is "     A life size plush lion toy approaches down the midway, its furry body seeming both cute and threatening. Its large, brown, leonine mane sticks out dramatically from around its yellow furred neck, making it seem larger and more impressive, and definitely leaving no doubt as to the gender of the stuffed toy. Not that you could have much doubt after you caught a glimpse of its stiff cock, hanging out of its furry sheath beneath its belly, leaving no doubt as to the creatures intentions as it focuses its stuffed leonine eyes on you.";
 	now face entry is "bearing a soft lioness's muzzle with overlarge lion eyes and cute fluffy ears set"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "sleek and soft. Like that of a soft plush lioness, its sleek, enticing lines advertise your readiness to one and all. Your arms and legs are more paw-like and leonine than human at this point, and walking on two legs can only be accomplished with some effort. For some reason, you find yourself pleased by this development, as being on all fours seems to excite you and make you feel even more like a submissive lioness"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]golden fabric[or]softly furred[or]fake lion furred[or]soft fabric[or]plush lioness[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]

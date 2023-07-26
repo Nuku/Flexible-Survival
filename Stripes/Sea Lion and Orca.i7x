@@ -4,7 +4,31 @@ Version 1 of Sea Lion and Orca by Stripes begins here.
 
 Section 1 - Creature Responses
 
+to say losetoslao:
+	if HP of Player > 0:
+		say "     Not wanting to resist the pair any further, you allow them to press you to the padded floor beneath them.";
+	else:
+		say "     Battered by their soft, but insistent, blows, you are knocked off your feet onto the padded floor. They quickly flop down atop you, pinning you down.";
+
+to say beattheslao:
+	say "     Your blows to the duo of inflatable toys is finally enough to weaken them to the point that they've both sprung leaks and deflated enough to flop down on the ground. Unable to keep fighting, they squirm over to one another for comfort while their hides mend and they reinflate. Successful, you're free to move on.";
+
+to say slaoattack:
+	if a random chance of 1 in 2 succeeds:	[male sea lion]
+		say "[one of]The sea lion[or]The purple inflatable[or]The plump male[at random] [one of]bumps against one of your legs[or]noses firmly at your groin[or]presses his large body against your legs[or]grabs onto your hips with his flippers and humps your leg with his inflated penis[at random], making you stumble on the unsteady footing of the padded floor.";
+	else:						[female orca]
+		say "[one of]The orca[or]The magenta inflatable[or]The floating female[at random] [one of]bumps against your shoulder[or]noses firmly at your chest[or]presses her large body against your torso[or]turns quickly and slaps the white underside of her tail into your face[at random], making you stumble on the unsteady footing of the padded floor.";
+
+Section 2 - Creature Insertion
+
 to say slaodesc:
+	say "     You find yourself facing off against two inflatable sea animals at once, a male sea lion and a female orca. The former is an opaque purple in color and the latter is a translucent magenta. The sea lion gives a squeezing bark which is answered by a trill from the orca, at which point they both rush you from opposite sides. They are attacking you together, the male striking from the ground and trying to trip up your legs while the female floats in the air, trying to push your body over from the other direction. Either on their own [if level of Player > 6]wouldn't be more than an annoyance, but together they're a bit of a hassle[else if level of Player > 3]wouldn't be much trouble, but together they're more effective than some of the other inflatables you've seen[else]would be a bit of a hassle, but together they're much more of a threat[end if].";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Sea Lion and Orca Toys"	"[PrepCombat_Sea Lion and Orca Toys]"
+
+to say PrepCombat_Sea Lion and Orca Toys:
 	setmongender 19; [creatures are mixed/variable]
 	choose row MonsterID from Table of Random Critters;
 	if HardMode is true and level of Player > 4:
@@ -14,29 +38,7 @@ to say slaodesc:
 		now lev entry is 4 + debit;
 		now wdam entry is 5 + ( lev entry / 3 );
 		now dex entry is 17 + ( ( lev entry * 2 ) / 9 );
-	say "     You find yourself facing off against two inflatable sea animals at once, a male sea lion and a female orca. The former is an opaque purple in color and the latter is a translucent magenta. The sea lion gives a squeezing bark which is answered by a trill from the orca, at which point they both rush you from opposite sides. They are attacking you together, the male striking from the ground and trying to trip up your legs while the female floats in the air, trying to push your body over from the other direction. Either on their own [if level of Player > 6]wouldn't be more than an annoyance, but together they're a bit of a hassle[else if level of Player > 3]wouldn't be much trouble, but together they're more effective than some of the other inflatables you've seen[else]would be a bit of a hassle, but together they're much more of a threat[end if].";
-
-
-to say losetoslao:
-	if HP of Player > 0:
-		say "     Not wanting to resist the pair any further, you allow them to press you to the padded floor beneath them.";
-	else:
-		say "     Battered by their soft, but insistent, blows, you are knocked off your feet onto the padded floor. They quickly flop down atop you, pinning you down.";
-
-
-to say beattheslao:
-	say "     Your blows to the duo of inflatable toys is finally enough to weaken them to the point that they've both sprung leaks and deflated enough to flop down on the ground. Unable to keep fighting, they squirm over to one another for comfort while their hides mend and they reinflate. Successful, you're free to move on.";
-
-
-to say slaoattack:
-	if a random chance of 1 in 2 succeeds:	[male sea lion]
-		say "[one of]The sea lion[or]The purple inflatable[or]The plump male[at random] [one of]bumps against one of your legs[or]noses firmly at your groin[or]presses his large body against your legs[or]grabs onto your hips with his flippers and humps your leg with his inflated penis[at random], making you stumble on the unsteady footing of the padded floor.";
-	else:						[female orca]
-		say "[one of]The orca[or]The magenta inflatable[or]The floating female[at random] [one of]bumps against your shoulder[or]noses firmly at your chest[or]presses her large body against your torso[or]turns quickly and slaps the white underside of her tail into your face[at random], making you stumble on the unsteady footing of the padded floor.";
-
-
-Section 2 - Creature Insertion
-
+	
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;

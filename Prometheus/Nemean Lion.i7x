@@ -10,12 +10,17 @@ to say losetoNemeanLion:
 to say beattheNemeanLion:
 	say "     Battered and bloody, you stand victorious over your foe. The Nemean Lion lies on its side, slipping in and out of consciousness as it tries to recover. Amazingly, despite all the punishment it has just received, its hide is still undamaged with only a few smears of dirt marring the golden fur. If the sizable feline manages to recover you aren't sure you'd be able to defeat it again as you're exhausted too. That said, you aren't sure what you are supposed to do next. Are you meant to skin the still living animal?";
 
-
 to say NemeanLiondesc:
 	say "     The giant feline glares at you in an appraising manner, possibly judging how much difficulty it is likely to face in defeating you. Its fur is a dull gold, undamaged by the centaurs['] arrows. An impressive dark brown mane surrounds its fierce face, long white fangs visible as it snarls at you. Deciding you are easy enough prey, the Nemean Lion pounces at you, dagger-like claws extended and fast approaching your face.";
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Nemean Lion"	"[PrepCombat_Nemean Lion]"
+
+to say PrepCombat_Nemean Lion:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

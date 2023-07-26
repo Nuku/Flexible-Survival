@@ -52,9 +52,6 @@ to say Tigertaur Loses:
 			say "     Deciding not to bother, as you might risk being infected, you watch the striped feline dash off into the deeper part of the zoo.";
 	say "     After a tough battle, you finally manage to drive back the lustful creature, its feline eyes staring at you reproachfully as it bunches its powerful muscles together and turns to flee.";
 
-to say TigertaurDesc:
-	say "     You find yourself face to face with a rather impressive figure, a sleek humanoid torso topped with a tiger's face, sits atop the lower body of a strong four-legged tiger. You find your eyes drawn to the several rows of breasts trailing down her body, only to have your eyes catch on her large feline cock where it hangs underneath her tiger-like paws, erect and obviously eager for action as the tigertaur moves forward with lust in her eyes.";
-
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Tigertaur"	"[PrepCombat_Tigertaur]"
@@ -65,6 +62,16 @@ to say PrepCombat_Tigertaur:
 		project the Figure of Tigertaur_soft_icon;
 
 Section 2 - Creature Insertion
+
+to say TigertaurDesc:
+	say "     You find yourself face to face with a rather impressive figure, a sleek humanoid torso topped with a tiger's face, sits atop the lower body of a strong four-legged tiger. You find your eyes drawn to the several rows of breasts trailing down her body, only to have your eyes catch on her large feline cock where it hangs underneath her tiger-like paws, erect and obviously eager for action as the tigertaur moves forward with lust in her eyes.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Tigertaur"	"[PrepCombat_Tigertaur]"
+
+to say PrepCombat_Tigertaur:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

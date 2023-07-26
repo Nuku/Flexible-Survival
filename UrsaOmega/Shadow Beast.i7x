@@ -6,16 +6,7 @@ Version 1 of Shadow Beast by UrsaOmega begins here.
 Section 1 - Creature Responses
 
 to say shadowbeastdesc:
-	setmongender 3; [creature is male]
-	increase mondodgebonus by 5;
-	if ShadowBeastEventState is 0:
-		say "     [one of]You see something shimmer out of the corner of your eye[or]You feel a strange presence behind you[or]You are overtaken by a sense of dread[at random] and you turn to see a black cat step out of the shadows. It looks like a regular panther on all fours, except for the two black tentacles which sprout from its back. They end in gripping pads, which you imagine are ideal for holding victims still. Between its legs you can see a hefty sheath and testicles, demonstrating the breeding ability of the beast. It seems to shimmer, like it's manipulating the light around it; suddenly, it disappears for a second before reappearing before you, claws extended!";
-	else if ShadowBeastEventState is 1: [Hunted Survivor Event]
-		say "     Rushing forward, you get your hands on the dark tentacle and pull, wrenching the gripping pad at its end from the man's skin. The guy doesn't waste a second of the chance you're giving him, scrambling to his feet and making a panicked dash for the exit. Meanwhile a black feline shape seems to shimmer into sight out of the darkness where the tentacle originated, growling at being cheated out of its prey. As you whirl around to make your escape from this strange beast, you see it vanishing again, somehow manipulating the shadows all around in an eye-twisting effect. Moments later, it's between you and the exit to the surface, coming back into view as it pounces you, both tentacles whipping forward through the air.";
-		now ShadowBeastEventState is 0; [pre-fight event part done, back to normal description]
-	else if ShadowBeastEventState is 2: [add other event monster appearances here and below]
-		say "     <event desc>";
-		now ShadowBeastEventState is 0; [pre-fight event part done, back to normal description]
+	say "     [one of]You see something shimmer out of the corner of your eye[or]You feel a strange presence behind you[or]You are overtaken by a sense of dread[at random] and you turn to see a black cat step out of the shadows. It looks like a regular panther on all fours, except for the two black tentacles which sprout from its back. They end in gripping pads, which you imagine are ideal for holding victims still. Between its legs you can see a hefty sheath and testicles, demonstrating the breeding ability of the beast. It seems to shimmer, like it's manipulating the light around it; suddenly, it disappears for a second before reappearing before you, claws extended!";
 
 to say losetoshadowbeast:
 	if a random chance of 1 in 3 succeeds and inheat is not true:		[creature demands oral]
@@ -74,9 +65,16 @@ to say sbdoggy style:
 	else:
 		CreatureSexAftermath "Player" receives "AssFuck" from "Shadow Beast Male";
 
-ShadowBeastEventState is a number that varies.
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Shadow Beast Male"	"[PrepCombat_Shadow Beast Male]"
+
+to say PrepCombat_Shadow Beast Male:
+	setmongender 3; [creature is male]
+	increase mondodgebonus by 5;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -278,7 +276,7 @@ to say ResolveEvent Hunted Survivor:
 		say "     As he sees you, the man shouts 'Run!', just as a long tentacle whips through the air from the darkness behind him and wraps around his left leg. With a panicked scream, the man goes down as his leg is pulled out from under him, hands scratching over the floor as he tries to hold on to something - anything, really.";
 		say "     Uh-oh - what now? Maybe try to help this man (Y)? Or would you rather get out of here before you're the next target of a hungry - or horny - monstrosity (N)?";
 		if Player consents:
-			now ShadowBeastEventState is 1; [special event description instead of the normal one]
+			say "     Rushing forward, you get your hands on the dark tentacle and pull, wrenching the gripping pad at its end from the man's skin. The guy doesn't waste a second of the chance you're giving him, scrambling to his feet and making a panicked dash for the exit. Meanwhile a black feline shape seems to shimmer into sight out of the darkness where the tentacle originated, growling at being cheated out of its prey. As you whirl around to make your escape from this strange beast, you see it vanishing again, somehow manipulating the shadows all around in an eye-twisting effect. Moments later, it's between you and the exit to the surface, coming back into view as it pounces you, both tentacles whipping forward through the air.";
 			challenge "Shadow Beast Male";
 			if fightoutcome >= 20 and fightoutcome <= 29: [lost/submitted]
 				say "[losetoshadowbeast]";

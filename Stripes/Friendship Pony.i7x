@@ -32,30 +32,6 @@ rfpclist2 is a list of text that varies.[@Tag:NotSaved] rfpclist2 is usually { "
 rfpbmlist is a list of text that varies.[@Tag:NotSaved] rfpbmlist is usually { "a dildo", "a vibrator", "an egg vibrator", "a horsecock", "a mare's pussy", "a horsecock being licked", "a pussy being licked", "a cum-slick cock", "an overflowing pussy", "an ejaculating cock", "a cock stuffing an anus", "two humping dogs", "a necklace of pearls", "a pair of tits", "a pair of cum-coated tits", "a pony head sucking cock", "a swallow", "a raised tail", "a leather whip", "a broken bed", "a set of furred handcuffs", "a pair of cocks rubbing together", "an extra-thick dildo", "a pair of nipple clamps", "a burst condom", "a strap-on", "a gimp mask", "the shocker handsign", "a finger-stuffed pussy", "a butt plug", "a ball gag", "a dripping candle", "a leather harness", "anal beads" }.
 ]
 
-
-to say fponydesc:
-	setmongender 4; [creature is female]
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else:
-		now sex entry is "nochange";
-	now rfponytype is a random number between 1 and 3;
-	if a random chance of 1 in 4 succeeds, now rfponytype is 1; [basic pony is most common, 50% chance]
-	setrfpdesc;
-[	rotate rfpclist1;
-	rotate rfpclist2;
-	rotate rfpbmList;
-	now rfponycolor1 is "[entry 1 in rfpclist1]";
-	now rfponycolor2 is "[entry 1 in rfpclist2]";
-	now rfponybm is "[entry 1 in rfpbmlist]";]
-	say "     You find yourself facing off against a vaguely equine creature with a rather strange and toyetic appearance. Its short body is slender and has only a few curves to accentuate the creature's femininity[if rfponytype is 2] and has a pair of small, feathered wings at its back[end if]. The strange, smiling pony creature stands on four flat, featureless hooves that are little more than flat stumps at the end of its legs. Its overall look is quite smooth and plasticky, having a [rfponycolor1] color to its body. Its head is large and roundish with cartoonishly oversized eyes that look at you with a vacant, happy gaze. Despite lacking any hair or fur anywhere else on its body, the pony has a lush mane and fluffy tail of [rfponycolor2] hair [if a random chance of 1 in 5 succeeds]with brighter highlights [end if]that looks stylishly brushed[if rfponytype is 3]. There is a short horn poking out the front of her hair[end if].";
-	say "     '[if Player is fponybodied and the player is fponyskinned]Oh! I loooove your booty mark! Let's be friends[else if Player is fponybodied]Come, cutie! Let's see if we can earn you a booty mark[else if Player is fponyskinned]Oh! I love your booty mark! Now let's see if we can get you looking like a proper little pony[else]Do you like my booty mark? Let's be friends[end if],' she says with a giggle before turning around to show off the design of [rfponybm] on her flanks and the dripping pussy under her raised tail. She gives her rear a shake before coming towards you at a trot. 'Oh, we'll have so much fun together, my new friend,' she says with a grin. Given how things are around here, you're pretty sure you know just what kind of a friend she's looking for and that she won't take no for an answer.";
-
 to setrfpdesc:
 	if rfpc1 is 0, now rfpc1 is a random number between 1 and 31;
 	if rfpc2 is 0, now rfpc2 is a random number between 1 and 26;
@@ -252,7 +228,6 @@ to setrfpdesc:
 		-- 34:
 			now rfponybm is "a dripping candle";
 
-
 to say fpattack:
 	if rfponytype is 1:
 		say "[one of]The pony[or]She[or]The happy pony[or]The eager equine[or]The overly-friendly pony[at random] [one of]turns around and kicks you hard with her hind legs[or]bashes herself against you, trying to knock you over[or]grinds her body against yours[or]turns around and rubs her wet pussy against you excitedly[at random].";
@@ -275,15 +250,6 @@ to say losetofpony:
 		say "     Grinning down at you, she giggles all the more as she looks over your prone form. 'Oh, we are going to be such great friends. I can tell,' the [rfponycolor1] pony says, hopping atop you. She raises her [rfponycolor2] tail and grinds her wet mare's pussy down into your face, the scent and sweetness of her juices overpowering your senses. You lick your lips, getting your first sample of her juices before diving your tongue into her juicy, mare's pussy. She moans and nickers happily[if rfponytype is 2] as her wings flutter[end if], giggling about what a good friend you are and to lick her faster.";
 		say "     Grabbing onto her ass right on those designs of [rfponybm] on each flank, you squeeze tightly and pull her delicious pussy to your face. You lap away eagerly, finding the [if rfponytype is 1]pony[else if rfponytype is 2]pegasus[else]unicorn[end if]'s taste delightful. It is sugary, saccharine, almost tooth-rottingly sweet, but it seems wonderful to you and you lick for more and more[if rfponytype is 3 and Player is female]. She uses glowing magic from her horn to tease your pussy before forming a phallic force to thrust and pound into you while you eat her out[else if rfponytype is 3]. She uses glowing magic from her horn to tease your tight pucker before forming a phallic force to thrust and pound into you while you eat her out[end if]. With your excitement and lust growing, your confused mind is happy to have met such a pretty, lovely and oh so friendly pony. Giggling merrily along with her as she climaxes, your face is covered in her sweet, sticky juices and you lap up as much of it as you can get. After a few more climaxes like that, she's finally satisfied and stands back up.";
 	say "     'I hope to see you again, my new friend. It's been magic.' That said, she [if rfponytype is 2]flies[else]trots[end if] off, probably in search of another new friends. It's some time before your head clears enough for you to get up and head on your way.";
-
-
-[
-rfponytype - type (earth/pegasus/unicorn)
-rfponycolor1 - body color
-rfponycolor2 - hair color
-rfponybm - booty mark
-]
-
 
 to say beatthefpony:
 	say "     After your last blow, you slam yourself against the staggering pony's side, knocking her over. The [rfponycolor1] [if rfponytype is 1]equine[else if rfponytype is 2]pegasus[else if rfponytype is 3]unicorn[end if] lands in the dirt with a groan. '[one of]Why are you being such a meany?' [or]That's not how friends should act!' [or]I think you need to learn a lesson about friendship,' [at random]she whines. ";
@@ -321,8 +287,30 @@ to say beatthefpony:
 	else:
 		say "With no gender of your own, you don't really feel like taking advantage of this opportunity. You decide to instead [if rfponytype is 2]send her flying away[else]drive her off[end if] with a hard swat to her flank, right on her mark of [rfponybm].";
 
-
 Section 2 - Creature Insertion
+
+to say fponydesc:
+	say "     You find yourself facing off against a vaguely equine creature with a rather strange and toyetic appearance. Its short body is slender and has only a few curves to accentuate the creature's femininity[if rfponytype is 2] and has a pair of small, feathered wings at its back[end if]. The strange, smiling pony creature stands on four flat, featureless hooves that are little more than flat stumps at the end of its legs. Its overall look is quite smooth and plasticky, having a [rfponycolor1] color to its body. Its head is large and roundish with cartoonishly oversized eyes that look at you with a vacant, happy gaze. Despite lacking any hair or fur anywhere else on its body, the pony has a lush mane and fluffy tail of [rfponycolor2] hair [if a random chance of 1 in 5 succeeds]with brighter highlights [end if]that looks stylishly brushed[if rfponytype is 3]. There is a short horn poking out the front of her hair[end if].";
+	say "     '[if Player is fponybodied and the player is fponyskinned]Oh! I loooove your booty mark! Let's be friends[else if Player is fponybodied]Come, cutie! Let's see if we can earn you a booty mark[else if Player is fponyskinned]Oh! I love your booty mark! Now let's see if we can get you looking like a proper little pony[else]Do you like my booty mark? Let's be friends[end if],' she says with a giggle before turning around to show off the design of [rfponybm] on her flanks and the dripping pussy under her raised tail. She gives her rear a shake before coming towards you at a trot. 'Oh, we'll have so much fun together, my new friend,' she says with a grin. Given how things are around here, you're pretty sure you know just what kind of a friend she's looking for and that she won't take no for an answer.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Friendship Pony"	"[PrepCombat_Friendship Pony]"
+
+to say PrepCombat_Friendship Pony:
+	setmongender 4; [creature is female]
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else:
+		now sex entry is "nochange";
+	now rfponytype is a random number between 1 and 3;
+	if a random chance of 1 in 4 succeeds, now rfponytype is 1; [basic pony is most common, 50% chance]
+	setrfpdesc;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

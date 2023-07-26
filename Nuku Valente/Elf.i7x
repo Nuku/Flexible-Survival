@@ -88,14 +88,19 @@ To say ElfLoses:
 		say ". Having nothing in particular you require from the individual, you instinctively let her go, a breeze of forest air whisking her away in a blur.";
 
 to say ElfDesc:
-	setmongender 4; [creature is female]
-	project the Figure of Wood_Elf_icon;
 	say "     [if ElfEncounters is 0]At first glance, you run into what appears to be a human, but something's a little off[else]You run into an elven woman[end if]. Vaguely Asian, lightly tanned features exposed before you, the lady's lithe build is betrayed by her voluptuous curves, barely contained within the confines of her paltry, silken attire.";
 	say "     '[one of]You've overstepped your bounds, stranger[or]These woods shall own all that dwell within[or]Ah, yes, you'll suffice[or]Just the kind of fun I was looking for[at random]!' Grinning fiercely, she makes her long, ornate bow very apparent to you, her golden hair flowing in the open air. It's clear she's not going to let you off without a fight.";
-	if ElfEncounters is 0, now ElfEncounters is 1;
-
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Wood Elf"	"[PrepCombat_Wood Elf]"
+
+to say PrepCombat_Wood Elf:
+	setmongender 4; [creature is female]
+	project the Figure of Wood_Elf_icon;
+	if ElfEncounters is 0, now ElfEncounters is 1;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

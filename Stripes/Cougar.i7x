@@ -54,14 +54,18 @@ to say beatthecougar:
 	else:
 		say "Deciding to head off while you can, you leave her to her own devices. Which is just what she does, stroking her cock needfully while fingering herself. You can hear her lustful yowls as you walk off.";
 
+Section 2 - Creature Insertion
 
 to say cougardesc:
-	project Figure of Cougar_clothed_icon;
-	setmongender 5;
 	say "     Before you is a powerful looking feline, with golden brown fur and piercing eyes. She looks at you with cold intent, claws unsheathed and teeth bared. This puma herm has two, C-cup breasts on her athletic body and a hefty cock and set of balls waiting to be used. Her cock is a deep brown and human in shape, but with stimulating barbs as well. She drops to all fours and pads slowly around you, emitting an animalistic growl before charging.";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Cougar"	"[PrepCombat_Cougar]"
 
-Section 2 - Creature Insertion
+to say PrepCombat_Cougar:
+	project Figure of Cougar_clothed_icon;
+	setmongender 5;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

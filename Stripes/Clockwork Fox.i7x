@@ -9,44 +9,6 @@ Section 1 - Creature Responses
 
 cfgmode is a number that varies. cfgmode is usually 1.
 
-to say cfgdesc:
-	choose row MonsterID from the Table of Random Critters;
-	now cfgmode is a random number between 1 and 2;
-	if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
-		say "     You come across a strange, mechanical fox. It whirrs and clicks as it looks you over, eyes scanning you in a disjointed, strange manner. As if sensing something about you, it turns and heads off, somehow knowing you don't want to play with it.";
-		now BannedStatus entry is true;
-		now fightoutcome is 19;
-		now combat abort is 1;
-		now cfgmode is 0;
-	else if MaleList is banned:
-		now cfgmode is 1;
-	else if FemaleList is banned:
-		now cfgmode is 2;
-	else if MaleList is warded and FemaleList is warded:
-		now cfgmode is a random number between 1 and 2;
-	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
-		if MaleList is warded and a random chance of 1 in 3 succeeds:
-			now cfgmode is 1;
-		else if FemaleList is warded and a random chance of 1 in 3 succeeds:
-			now cfgmode is 2;
-	else if ishunting is false:
-		if MaleList is warded:
-			now cfgmode is 1;
-		else if FemaleList is warded:
-			now cfgmode is 2;
-	if cfgmode is 1:	[female]
-		setmongender 4; [creature is female]
-		say "     Before you is one of the most unusual forms the infection has taken, a wholly mechanical fox-creature. Looking over this clockwork fox girl, her body is made from metal segments and brass wire fur, which covers the internal mechanics of tiny metal gears. She whirrs and clicks as she moves in a jerking, hesitant manner, occasionally twitching as something catches in her gears for a few seconds. Her head is drawn forward into a muzzle, and the pointed, brass ears at the top give it a very foxy look. The anthro's body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but it's also covered in plated sections and protrusions of gears. Her chestplate has two small breasts formed onto it, her arms and legs are thin and vulpine, leading down to small, clawed paws, and she has a long plumed tail that seems to be made from extremely soft wire. The tail moves with the faint clicks of cogs and gears. A private peek reveals that she has a thick-lipped cunt nestled between her legs, made of shimmering, coppery flesh. It drips a clear lubricant, that glistens like oil, as the female mechanism moves forward to attack you.";
-		now sex entry is "Male";
-		if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
-		if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
-	if cfgmode is 2:	[male]
-		setmongender 3; [creature is male]
-		say "     Before you is one of the most unusual forms the infection has taken, creating a wholly mechanical fox-creature. Looking over this clockwork fox guy, his body is made from metal segments and brass wire fur, covering internal mechanics of tiny metal gears. He whirrs and clicks as he moves in a slightly odd manner, occasionally twitching as something internal catches before releasing a moment later. His head is drawn forward into a muzzle, and the pointed, brass ears at the top give it a very foxy look. The anthro's body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but it's also covered in plated sections and protrusions of gears. His segmented chestplate gleams brightly, as if polished brass. His arms and legs are thin and vulpine, leading down to small, clawed paws, and he has a long plumed tail that seems to be made from extremely soft wire. The tail moves with the faint clicks of cogs and gears. A private peek reveals that he has a long, knotted cock made of coppery flesh, and it appears to be driven by a clockwork mechanism. It leaks a clear lubricant, that glistens like oil, as the male mechanism moves forward to attack you.";
-		now sex entry is "Female";
-		if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
-		if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
-
 to say cfgfight:
 	if cfgmode is 1:
 		say "[one of]The clockwork vixen digs her metal claws into you![or]The clockwork vixen's eyes whirr and click as they calculate a path through your defenses so she may strike you![or]With a mechanical whirr, the clockwork fox girl bends at her waist to duck a swing and grabs you. She almost tackles you down, but you pull away with several scratches![or]The mechanical vixen clicks internally, then spins her upper body around in circles, sending you tumbling from the sudden series of swings before the spinning winds down and her upper body clicks back into place![or]The metallic vixen head butts you with the resounding clang of a bell![or]The mechanical fox girl twists her nipple, releasing a squirt of scented oil across your shoulder. Its scent is arousing and weakens your resolve to keep fighting![at random]";
@@ -164,10 +126,52 @@ to say beatthecfguy2:
 	increase morale of Player by 2;
 	decrease humanity of Player by 2;
 
-
-
-
 Section 2 - Creature Insertion
+
+to say cfgdesc:
+	choose row with name of "Clockwork Fox" from Table of Random Critters;
+	if cfgmode is 1:	[female]
+		setmongender 4; [creature is female]
+		say "     Before you is one of the most unusual forms the infection has taken, a wholly mechanical fox-creature. Looking over this clockwork fox girl, her body is made from metal segments and brass wire fur, which covers the internal mechanics of tiny metal gears. She whirrs and clicks as she moves in a jerking, hesitant manner, occasionally twitching as something catches in her gears for a few seconds. Her head is drawn forward into a muzzle, and the pointed, brass ears at the top give it a very foxy look. The anthro's body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but it's also covered in plated sections and protrusions of gears. Her chestplate has two small breasts formed onto it, her arms and legs are thin and vulpine, leading down to small, clawed paws, and she has a long plumed tail that seems to be made from extremely soft wire. The tail moves with the faint clicks of cogs and gears. A private peek reveals that she has a thick-lipped cunt nestled between her legs, made of shimmering, coppery flesh. It drips a clear lubricant, that glistens like oil, as the female mechanism moves forward to attack you.";
+		now sex entry is "Male";
+		if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
+		if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
+	else if cfgmode is 2:	[male]
+		setmongender 3; [creature is male]
+		say "     Before you is one of the most unusual forms the infection has taken, creating a wholly mechanical fox-creature. Looking over this clockwork fox guy, his body is made from metal segments and brass wire fur, covering internal mechanics of tiny metal gears. He whirrs and clicks as he moves in a slightly odd manner, occasionally twitching as something internal catches before releasing a moment later. His head is drawn forward into a muzzle, and the pointed, brass ears at the top give it a very foxy look. The anthro's body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but it's also covered in plated sections and protrusions of gears. His segmented chestplate gleams brightly, as if polished brass. His arms and legs are thin and vulpine, leading down to small, clawed paws, and he has a long plumed tail that seems to be made from extremely soft wire. The tail moves with the faint clicks of cogs and gears. A private peek reveals that he has a long, knotted cock made of coppery flesh, and it appears to be driven by a clockwork mechanism. It leaks a clear lubricant, that glistens like oil, as the male mechanism moves forward to attack you.";
+		now sex entry is "Female";
+		if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
+		if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Clockwork Fox"	"[PrepCombat_Clockwork Fox]"
+
+to say PrepCombat_Clockwork Fox:
+	choose row MonsterID from the Table of Random Critters;
+	now cfgmode is a random number between 1 and 2;
+	if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
+		say "     You come across a strange, mechanical fox. It whirrs and clicks as it looks you over, eyes scanning you in a disjointed, strange manner. As if sensing something about you, it turns and heads off, somehow knowing you don't want to play with it.";
+		now BannedStatus entry is true;
+		now fightoutcome is 19;
+		now combat abort is 1;
+		now cfgmode is 0;
+	else if MaleList is banned:
+		now cfgmode is 1;
+	else if FemaleList is banned:
+		now cfgmode is 2;
+	else if MaleList is warded and FemaleList is warded:
+		now cfgmode is a random number between 1 and 2;
+	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
+		if MaleList is warded and a random chance of 1 in 3 succeeds:
+			now cfgmode is 1;
+		else if FemaleList is warded and a random chance of 1 in 3 succeeds:
+			now cfgmode is 2;
+	else if ishunting is false:
+		if MaleList is warded:
+			now cfgmode is 1;
+		else if FemaleList is warded:
+			now cfgmode is 2;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

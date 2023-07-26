@@ -7,8 +7,6 @@ Version 3 of Leopardman by Vinickus begins here.
 Section 1 - Creature Responses
 
 to say leopardman desc:
-	project Figure of Leopardman_soft_icon;
-	setmongender 3; [creature is male]
 	say "     As you wander the deserted streets of the city, all of a sudden a large form jumps down into the street in front of you. As it stalks towards you, you get a good look at the powerful feline man. His strong body is covered with leopard-like fur, and as he rises up to two feet and flexes his claw-tipped hands, you get a very good look at his rather erect feline cock. Looking around quickly, you realize the leopardman waited until it was far too late for you to run before he leaped down from his hiding spot. As you prepare to fight, you can see a playful grin cross the muzzle of the obviously aroused feline. [one of]'This should be fun,' [or]'Let's play leopard and mouse, shall we?' [or]'I like it when they struggle a bit,' [or]'You look like you will make a fine Leopardess...' [or]'Let's see how long you can resist me, little prey...' [at random]he says as he leaps forward after his prey.";
 
 to say Leopardman wins:
@@ -142,6 +140,14 @@ to say LeopardmanVictorySexFaceFuck:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Leopardman"	"[PrepCombat_Leopardman]"
+
+to say PrepCombat_Leopardman:
+	project Figure of Leopardman_soft_icon;
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

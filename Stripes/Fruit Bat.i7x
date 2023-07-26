@@ -136,15 +136,19 @@ to say frbatsex_05:
 to say frbatsex_06:
 	say "***cunnilingus";
 
+Section 2 - Creature Insertion
 
 to say fruitbatdesc:
-	setmongender 3; [creature is male]
 	say "     You are met by a slender bat creature that stands roughly six feet tall. Covered in brown fur with a bluish tinge to it, the creature is part bat and part man in form. His wings are part of his arms and hands, his arm bones and elongated fingers having webbing between them, though the thumb and an extra finger are free to provide some added dexterity. All he's wearing is a snug [one of]pink[or]purple[or]aqua[or]green[or]rainbow[at random] speedo that leaves little to the imagination, his plump package making quite the bulge in it.";
 	say "     He has a fox-like face with large, conical ears that are now focused on you. The right ear is pierced with a [one of]gold[or]amethyst[or]spinel[or]silver[or]sapphire[or]heart-shaped[at random] stud and well as another piercing in his tongue[if daytimer is day]. He's also wearing a pair of shades to keep the sun out of his eyes[end if]. The soft, fruity scent he's giving off as well the shape of his vulpine head and teeth lead you to guess that a large part of him is based on fruit bats.";
 	say "     '[one of]Hey there, honey. Let's play[or]Come on, let's hang out[or][if Player is male]Lemme see that nice cock of yours[else]Lemme see what you've got[end if][or]Come closer and I'll give you a peek in my package[or]Have a lick. It tastes like blueberries[at random],' he says with a grin while rubbing his crotch bulge, causing it to stretch the taut fabric further.";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Fruit Bat"	"[PrepCombat_Fruit Bat]"
 
-Section 2 - Creature Insertion
+to say PrepCombat_Fruit Bat:
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

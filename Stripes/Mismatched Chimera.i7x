@@ -18,8 +18,7 @@ rlegdata is a text that varies.[@Tag:NotSaved]
 breastdata is a number that varies.[@Tag:NotSaved]
 
 to say mischimdesc:
-	setmongender 5; [creature is herm]
-	say "[mixnmatch]     You have seen a variety of strange creatures and hominids in the city, but this is definitely one of the strangest. Somehow, it is a strange, cobbled-together mish-mash of other creatures. The body parts don't match and you can see stitchmarks in several places where they were grafted together. Several other spots have scars from what may have been medical procedures or experiments.";
+	say "     You have seen a variety of strange creatures and hominids in the city, but this is definitely one of the strangest. Somehow, it is a strange, cobbled-together mish-mash of other creatures. The body parts don't match and you can see stitchmarks in several places where they were grafted together. Several other spots have scars from what may have been medical procedures or experiments.";
 	say "     This unfortunate creature has the head of a [headdata] sewn onto its [torsodata] body. Its body has several smaller mismatched patches and scars. The strange chimera's right arm and shoulder are that of a [rarmdata], ending in a clawed human hand while its left forearm has that of a [larmdata] grafted on. Its left leg is fully that of a [llegdata] attached on at the hip while its right leg is that of a [rlegdata] from the knee down. Stitched to its chest are [breastdata] mismatched breasts while a [cockdata] dick hangs between its legs over a large, stitched-up scrotum. It looks at you with its mismatched, animal eyes and growls lustfully before attacking.";
 	choose row MonsterID from the Table of Random Critters;
 	if HardMode is false and ( lev entry is 8 or lev entry is 9 ) and level of Player < 10:
@@ -67,7 +66,6 @@ to say mixnmatch:
 	say "HP is [HP entry].";
 	say "Dmg is [wdam entry]. Dex is [dex entry].[line break]";]
 
-
 to say randombodypart:
 	let T be a random number between 1 and 20;
 	if T is 1:
@@ -111,7 +109,6 @@ to say randombodypart:
 	if T is 20:
 		now bodyselector is "bat";
 
-
 to say losetomischim:
 	[reset creature stats for next encounter]
 	choose row MonsterID from the Table of Random Critters;
@@ -146,8 +143,15 @@ to say beatthemischim:
 	now lev entry is 6; [ reset level for random encounter availability ]
 	say "     You manage to defeat the strange, hybrid creature, driving it off.";
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Mismatched Chimera"	"[PrepCombat_Mismatched Chimera]"
+
+to say PrepCombat_Mismatched Chimera:
+	setmongender 5; [creature is herm]
+	say "[mixnmatch]";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -9,11 +9,6 @@ Version 2 of Centaur Mare by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say centaurmaredesc:
-	setmongender 4; [creature is female]
-	project the Figure of CentaurMare_icon;
-	say "     A centaur approaches you, galloping across the plains and unslinging her bow. Her body is covered in tan, human flesh from the waist up. From the waist down, everything is covered in the short, brown hairs of a horse. Her head is mostly that of a human female at first glance, but with a broad flaring nose and pointed ears. Her upper body is human and leanly athletic. Slender and tapered at the waist, it sensually evokes the female form. She has a pair of small breasts bound in a strip of clothe, probably to keep them in check while galloping. Her arms are slender but muscular, and very human in appearance. Being a centaur, her legs are replaced in their entirety from the waist down by the body of a horse. Her muscled, equine body has slender legs leading to a set of four shiny black hooves. A long flowing tail trails behind.";
-
 to say losetocentaurmare:
 	project the Figure of CentaurMare_icon;
 	if ublevel is 3 and a random chance of 1 in 3 succeeds and scalevalue of Player < 4:
@@ -60,6 +55,17 @@ to say CentaurMareWomb:
 		say "     Deciding that this odd situation has gone on long enough, you fumble in the wet, dark pit of the centaur's womb before finally finding the exit, and you push gently to help ease it open, trying not to tear the centaur apart. With time, she slowly dilates, and you can feel yourself sliding down the lubricated channel inch by inch once it has a hold of you. Eventually, your face pokes out into the cold outside air, and with an outburst of fluids, you slide onto the grass of the Plains, the centaur panting. 'I-I don't know what that was... b-but...' She looks understandably embarrassed and shakily canters away, leaving you to lay there and recover from the experience. A small part of you wonders what would have happened if you'd stayed longer. Pushing the thoughts aside, you find that the centaur hadn't gone too far from where you had dropped stuff, and you head out after drying off.";
 
 Section 2 - Creature Insertion
+
+to say centaurmaredesc:
+	say "     A centaur approaches you, galloping across the plains and unslinging her bow. Her body is covered in tan, human flesh from the waist up. From the waist down, everything is covered in the short, brown hairs of a horse. Her head is mostly that of a human female at first glance, but with a broad flaring nose and pointed ears. Her upper body is human and leanly athletic. Slender and tapered at the waist, it sensually evokes the female form. She has a pair of small breasts bound in a strip of clothe, probably to keep them in check while galloping. Her arms are slender but muscular, and very human in appearance. Being a centaur, her legs are replaced in their entirety from the waist down by the body of a horse. Her muscled, equine body has slender legs leading to a set of four shiny black hooves. A long flowing tail trails behind.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Centaur Mare"	"[PrepCombat_Centaur Mare]"
+
+to say PrepCombat_Centaur Mare:
+	setmongender 4; [creature is female]
+	project the Figure of CentaurMare_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

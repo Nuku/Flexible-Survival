@@ -6,12 +6,8 @@ Version 2 of Reindeer by Stripes begins here.
 Section 1 - Creature Responses
 
 to say reindeerdesc:
-	setmongender 3; [creature is male]
-	choose row MonsterID from the Table of Random Critters;
-	now lootchance entry is 33;
 	say "     You can feel a disturbing chill in the air and even start to shiver as the temperature drops abruptly. As you try to bundle yourself up against the unexpected cold, you hear some jingling bells from above. Looking around you, you can see snow start to fall just as a reindeer begins to fly down. The reindeer has a few Christmas decorations hanging from its antlers and golden bells attached to red straps on his body. As he swoops lower, he laughs merrily, leaving another stream of light snow in his wake.";
 	say "     The holiday reindeer has no wings or other means to fly, he simply is, trotting lightly in the air as he does. You find yourself wondering how such an infection could come about during the middle of summer. [one of]Perhaps his office had a Christmas-in-July party[or]Maybe he worked at the mall and the holiday decorations fell on him[or]Maybe one of the reindeer from the zoo ran into someone who particularly loved the holiday[or]Perhaps he was finally getting around to taking down his Christmas lights when the infection struck[or]Perhaps a forty year old fruitcake was involved[or]Maybe there was an old carton of eggnog at the back of the fridge[in random order]. As he swoops in again, he strokes his stiff cock, firing a few shots of cum at you, intent on sharing some of his holiday cheer.";
-
 
 to say reindeerattack:
 	if a random chance of 2 in 5 succeeds:
@@ -69,8 +65,14 @@ to say Reindeer_wins:
 to say Reindeer_loses:
 	say "     'Oh, you Scrooge. Where's your holiday spirit?' he whines as your continued resistance frustrates him. Having had enough, the holiday reindeer finally flies off, heading elsewhere for someone to fill with a load of his special holiday cheer.";
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Reindeer"	"[PrepCombat_Reindeer]"
+
+to say PrepCombat_Reindeer:
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

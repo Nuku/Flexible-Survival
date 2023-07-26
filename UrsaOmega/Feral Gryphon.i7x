@@ -8,11 +8,6 @@ Section 1 - Creature Responses
 fgryphon_TFcount is a number that varies.
 lastfgryphon_TF is a number that varies. lastfgryphon_TF is usually 255.
 
-to say Gryphondesc:
-	setmongender 3; [creature is male]
-	project the Figure of FeralGryphon_soft_icon;
-	say "     Suddenly, a winged form drops down in front of you. It has the feathered head of an eagle, but the golden-furred body of a lion; a mythical gryphon! It stalks toward you predatorily and you prepare to fight.";
-
 to say losetoGryphon:
 	project the Figure of FeralGryphon_hard_icon;
 	say "     The gryphon knocks you to the floor, pinning you under his feathery weight. With an angry growl-chirp, he begins picking intently at your gear; he's trying to undress you. Not wanting to get sliced by his sharp beak and claws, you put your hands up in a motion you hope he understands as surrender and begin slowly disrobing yourself.";
@@ -174,6 +169,17 @@ to say feralgryph_milk02:
 
 
 Section 2 - Creature Insertion
+
+to say Gryphondesc:
+	say "     Suddenly, a winged form drops down in front of you. It has the feathered head of an eagle, but the golden-furred body of a lion; a mythical gryphon! It stalks toward you predatorily and you prepare to fight.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Feral Gryphon"	"[PrepCombat_Feral Gryphon]"
+
+to say PrepCombat_Feral Gryphon:
+	setmongender 3; [creature is male]
+	project the Figure of FeralGryphon_soft_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
