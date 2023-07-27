@@ -6,15 +6,6 @@ Version 2 of Latex Fox by Nuku Valente begins here.
 Section 1 - Creature Responses
 
 to say latexfoxdesc:
-	setmongender 3; [creature is male]
-	project Figure of LatexFox_soft_icon;
-	choose row MonsterID from Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Male";
 	say "     You run into [one of]what appears to be a fox made entirely of latex[or]a latex fox[stopping]. Humanoid in build, its distinctly reddish and white, rubbery skin glistens in the [if daytimer is day]day[else]dim[end if] light. Loudly squeaking and creaking as the creature approaches, he appears very eager to see you, his blatant arousal exposed against the open air.";
 
 to say latexfoxvictory:
@@ -90,6 +81,21 @@ to latexfoxdefeatsex:
 		CreatureSexAftermath "Latex Fox" receives "AssFuck" from "Player";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Latex Fox"	"[PrepCombat_Latex Fox]"
+
+to say PrepCombat_Latex Fox:
+	setmongender 3; [creature is male]
+	project Figure of LatexFox_soft_icon;
+	choose row MonsterID from Table of Random Critters;
+	if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

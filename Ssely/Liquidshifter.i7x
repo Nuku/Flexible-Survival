@@ -42,11 +42,17 @@ to say beattheLiquidshifter:
 	else:
 		say "     You walk away from the whimpering creature.";
 
+Section 2 - Creature Insertion
+
 to say Liquidshifterdesc:
 	say "     Before you stands a tall, wide, semi-liquid form. A golden, shiny goo drips constantly from its sides, falling to the floor in a pool of fluid. Its skin is like rubber, shining in the light as it approaches, grinning at you menacingly, almost taunting you closer. The various dripping parts of the creature's barely cohesive body fall to the floor as he walks closer, leaving a trail of slime. You look up at those eyes, enjoying their peaceful, relaxing gaze... No, wait! You look away, but can't help but go back to the thought of submission to this creature. It seems he wants to fight, though... Suddenly, it shifts, changing into a solid draconic form, the goo solidifying into large fists, claws, and some wings on his back. The shininess of his form is really shown off as his new snout grins at you, the menacing creature's clawed paws rubbing over his cock.";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Liquidshifter"	"[PrepCombat_Liquidshifter]"
 
-Section 2 - Creature Insertion
+to say PrepCombat_Liquidshifter:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

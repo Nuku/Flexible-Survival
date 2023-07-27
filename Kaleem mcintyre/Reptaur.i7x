@@ -3,8 +3,6 @@ Reptaur by Kaleem mcintyre begins here.
 Section 1 - Creature Responses
 
 to say Reptaurdesc:
-	setmongender 5; [creature is herm]
-	project Figure of Reptaur_soft_icon;
 	say "     The slow and quiet thumps of feet hitting the ground draws your attention just in time to see the scaly figure of a four-legged reptile-morph coming at you, its dark eyes burning with quiet rage. You swallow thickly as you note the pervasive scent of male musk and sweat that emanates from the creature's muscular form. While normally you wouldn't be too mindful of facing down an overgrown reptile mutant, this one gives you some pause for thought. With an upper body that looks like a cross between a serpent and a man, the thing is covered in [one of]green[or]red[or]brown[or]dark orange[at random] scales and has a thick eight-pack making up its torso. From the waist down, there are four horse-like legs that come to an end at clawed feet instead of hooves and a six foot tail that looks thick and heavy. You ready yourself to face this strange and dauntingly mutated beast.";
 
 to say losetoReptaur:[Defeat Scenes]
@@ -167,6 +165,14 @@ to say beattheReptaur:[Victory scenes]
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Reptaur"	"[PrepCombat_Reptaur]"
+
+to say PrepCombat_Reptaur:
+	setmongender 5; [creature is herm]
+	project Figure of Reptaur_soft_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

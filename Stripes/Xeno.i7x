@@ -6,11 +6,9 @@ Version 1 of Xeno by Stripes begins here.
 Section 1 - Creature Responses
 
 to say xenodesc:
-	setmongender 5; [creature is herm]
 	say "     Before you is a black and horrifying creature of film nightmares. Its entire body is encased in a hard, black exoskeleton that is cold to the touch and has a smooth, glistening appearance. This vaguely insectile creature has a thin, elongated skull that curves backwards towards the top. It has black eyes encased in sunken eye sockets. It has no gums; its teeth are silvery, long, straight, and densely packed in several rows. As it opens its mouth, you see a smaller mouth extend out of its larger mouth with smaller but equally fearsome razor-sharp teeth. Its animal-like body has hints of feminine curves and wide hips you can see as it shifts easily between walking upright and on all fours. Its exoskeleton shows exposed ribs and other hard, bony plates to protect it while several breathing tubes extend from its back, providing the creature with the added oxygen it needs for the hunt.";
 	say "     The alien creature's arms and legs bend in odd places and its sharp claws make almost no noise as they touch the ground or grip easy onto any surface for purchase. The creature crawls over the nearby rubble and debris with ease, moving swiftly and silently towards you. Those limbs seem lean and sleek, but also powerful with those sharp claws. It has a long tail consisting of many bony segments that hovers behind her, flashing its pointed, speared tip which it has at the ready.";
 	say "     As it approaches you, you see it extend a strange, dripping pseudopod ending in short, inch long tendrils and a gaping, vaginal hole.";
-
 
 to say losetoxeno:
 	choose row MonsterID from the Table of Random Critters;
@@ -33,7 +31,6 @@ to say losetoxeno:
 		else:
 			say "     The xenomorphic creature, as if scenting what it wants, pushes you onto your back with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe to your cock. Gripping your glans with the short tendrils, these pull your cock into the vaginal opening and start feeding your meat into its throbbing, pulsing hole. It squeezes and sucks at your shaft, stretching to fully cover your length until those tendrils are squeezing and massaging at your balls. You moan loudly and cum repeatedly until your balls are fully drained into the alien creature. Not sated, but having gotten all it can from you, it releases your cock with a wet, sticky slurp and a splatter of thick, green slime. It runs its sharp claws across your flesh almost tenderly, drooling over your face before rising and driving you from its territory.";
 	infect;
-
 
 to say beatthexeno:
 	choose row MonsterID from the Table of Random Critters;
@@ -58,6 +55,13 @@ to say beatthexeno:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Xeno Drone"	"[PrepCombat_Xeno Drone]"
+
+to say PrepCombat_Xeno Drone:
+	setmongender 5; [creature is herm]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

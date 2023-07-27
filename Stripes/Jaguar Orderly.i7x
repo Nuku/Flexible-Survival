@@ -6,32 +6,6 @@ Version 3 of Jaguar Orderly by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say jaguardesc:
-	setmongender 3; [creature is male]
-	choose row MonsterID from the Table of Random Critters;
-	let debit be 0;
-	now HP entry is 80;
-	now lev entry is 8;
-	now wdam entry is 10;
-	now int entry is 10;
-	if lev entry < level of Player and HardMode is true:
-		now debit is ( level of Player ) - lev entry;
-		increase lev entry by debit;
-		increase HP entry by debit * 4;
-		increase wdam entry by ( debit / 3 );
-	if sabtoothed is 1:		[permanent upgrade]
-		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly. But no man, this is a large jaguar creature. But unlike the ones you've seen earlier at the hospital, this one is bigger and has large, sabretoothed fangs protruding from its upper jaw. The devolved jaguarman growls and reaches to grab you with its powerful paws.";
-		increase HP entry by 15;
-		increase lev entry by 1;
-		increase wdam entry by ( square root of lev entry ) - 1; [minor increasing bonus]
-		now int entry is 8;
-	else:
-		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly. But no man, this is a large jaguar creature. He looks you over angrily and reaches to grab you, obviously feeling you are somewhere you don't belong.";
-	if triclamped is 1:		[permanent upgrade]
-		say "     Getting a closer look at the creature as it charges towards you, you can see traces of toughened scales at the top of its neck and there are three small horns on its head, one at the end of its muzzle and two over its brow. These poke just a little out from his fur.";
-		increase HP entry by 15 + debit;
-	now monsterHP is HP entry;
-
 to say losetojaguar:
 	if Player is female:
 		if a random chance of 2 in 5 succeeds:
@@ -51,7 +25,6 @@ to say losetojaguar:
 		else:
 			say "     You are battered by the brutish, feline orderly and left in a heap to recover.";
 			now HP of Player is (( HP of Player ) times 2 ) divided by 3;
-
 
 to say beatthejaguar:
 	if Libido of Player >= 30 or ( ( BodyName of Player is listed in infections of FelineList or FaceName of Player is listed in infections of FelineList ) and Libido of Player >= 15 ) or "Dominant" is listed in feats of Player:
@@ -82,10 +55,8 @@ to say beatthejaguar:
 			else:
 				say "     Deciding you should focus on more important stuff right now, you turn away from the defeated orderly and return to the matter at hand.";
 
-
 to say jagfuck:
 	say "     Pulling down the front of the orderly's scrubs, roll the big kitty onto his belly and raise up his rear. Flipping up his spotted tail, you grind your stiff erection against his fuzzy bottom before lining it up with his tailhole. He moans softly as you start pushing your [cock size desc of Player] prick into his ass. You can tell from the tightness of his hole that he's not used to this kind of treatment so it takes you [if Ball Size of Player > 2]quite some time[else]a little while[end if] to work your rod into him and really start fucking at his meaty backside. He releases soft moans and mewls as you fuck him. Reaching around, you can feel his erection throbbing and pulsing, letting you know the kitty's enjoying the ride despite being unconscious from the battle. Determined to give the big, manly kitty a sticky wet dream while being buggered, you tease his cock and balls as you thrust into him, making sure to grind your glans hard against his prostate each time you push into him. Eventually you manage to get him to cum, clenching his muscled ass down deliciously over your cock as his load is blasted across the floor. This is enough to set you off after the long, drawn out fucking and you paint the kitty's insides with your hot semen. After draining most of your load, you pull out and paint the rest of it across his fuzzy ass. Finished and feeling quite proud of yourself, you leave him like that to display your handiwork.";
-
 
 to say jagride:
 	say "     Pulling down the front of the orderly's scrubs, you roll the big kitty onto his back and stroke his sheath, coaxing out his feline erection. As you run your hand over it, spreading his precum over it, you decide to grab a quick taste before getting onto the main event. You lick slowly up those thick nine inches of manmeat before plunging your mouth down over it, getting the unconscious jaguar to moan softly. Bobbing your head over it, you find his taste strong, but pleasant and you're tempted to finish him off like that.";
@@ -98,8 +69,41 @@ to say jagride:
 	else:
 		say "     Liking your new plan better, you knead and rub his ballsack while your lips and tongue work up and down his throbbing cock. Your unconscious foe moans in pleasure and leaks more precum. It has a strong taste, virile and arousing, that makes you want more. You bob your head up and down while lavishing attention upon the kitty's cock and eventually earning your reward. The jaguar releases another growling moan and his cock pulses in your mouth, sending shot after shot of his thick seed onto your tongue. Like his pre, it has a strong taste, but not unpleasantly so, speaking of the powerful feline's virility and strength as a breeder. [if Player is female]Your cunt[sfn] quiver[sfv] in response and you find yourself longing to have him fill your needy puss[yfn] next time[else]You find yourself longing to take his meaty cock into you next time as you'd originally planned[end if]. Licking your lips as you enjoy the lingering traces of his taste in your mouth, you get up and leave the unconscious and spent kitty there.";
 
-
 Section 2 - Creature Insertion
+
+to say jaguardesc:
+	if sabtoothed is 1:		[permanent upgrade]
+		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly. But no man, this is a large jaguar creature. But unlike the ones you've seen earlier at the hospital, this one is bigger and has large, sabretoothed fangs protruding from its upper jaw. The devolved jaguarman growls and reaches to grab you with its powerful paws.";
+	else:
+		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly. But no man, this is a large jaguar creature. He looks you over angrily and reaches to grab you, obviously feeling you are somewhere you don't belong.";
+	if triclamped is 1:		[permanent upgrade]
+		say "     Getting a closer look at the creature as it charges towards you, you can see traces of toughened scales at the top of its neck and there are three small horns on its head, one at the end of its muzzle and two over its brow. These poke just a little out from his fur.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Jaguar Male"	"[PrepCombat_Jaguar Male]"
+
+to say PrepCombat_Jaguar Male:
+	setmongender 3; [creature is male]
+	choose row MonsterID from the Table of Random Critters;
+	let debit be 0;
+	now HP entry is 80;
+	now lev entry is 8;
+	now wdam entry is 10;
+	now int entry is 10;
+	if lev entry < level of Player and HardMode is true:
+		now debit is ( level of Player ) - lev entry;
+		increase lev entry by debit;
+		increase HP entry by debit * 4;
+		increase wdam entry by ( debit / 3 );
+	if sabtoothed is 1:		[permanent upgrade]
+		increase HP entry by 15;
+		increase lev entry by 1;
+		increase wdam entry by ( square root of lev entry ) - 1; [minor increasing bonus]
+		now int entry is 8;
+	if triclamped is 1:		[permanent upgrade]
+		increase HP entry by 15 + debit;
+	now monsterHP is HP entry;		
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

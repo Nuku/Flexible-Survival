@@ -1935,7 +1935,6 @@
 |Stripes|Tigress Hooker|tigressfucked|value|
 |Stripes|Tigress Hooker|tigressclient|value|
 |Stripes|Tigress Hooker|stiffedpayment|value|
-|Stripes|Tigress Hooker|mqfightresult|value|
 |Xeylef|Parasitic Plant|20140908213124/10223:Mon 8 September 2014 21:31|indexing|
 |Xeylef|Parasitic Plant|Musky Cock Flower|Grab Object|
 |Xeylef|Parasitic Plant|didsubmit|value|
@@ -2642,7 +2641,6 @@
 |Ursaomega|Feral Gryphon|20140908213124/2633:Mon 8 September 2014 21:31|indexing|
 |Ursaomega|Shadow Beast|20140908213124/5601:Mon 8 September 2014 21:31|indexing|
 |Ursaomega|Shadow Beast|Hunted Survivor|situation|
-|Ursaomega|Shadow Beast|ShadowBeastEventState|value|
 |Xenophiliac|Hermaid|20140908213124/6758:Mon 8 September 2014 21:31|indexing|
 |Xenophiliac|Hermaid|hermaid kelp|Grab Object|
 |Xenophiliac|Hermaid|HermaidSub|value|

@@ -34,69 +34,7 @@ KorvinSubmitCounter is a number that varies.
 [ 12 = recruited        ]
 [ 100 = banished        ]
 
-
 Section 1 - Monster Description
-
-to say gsd_desc:
-	setmongender 3; [male]
-	choose row MonsterID in Table of Random Critters;
-	now gsd_attack is false;
-	[
-	if gsd_male is true:
-		gsd_set_male;
-	else:
-		gsd_unset_male;
-	]
-	now gsd_special is false;
-	if gsd_encounters > 2 and gsd_pet < 12 and inasituation is false and a random chance of gsd_encounters in 7 succeeds:
-		now gsd_special is true;
-		if gsd_pet is 0:
-			say "     Approaching you is another of those aggressive German shepherds. This one is somewhat different from the others. Oh, he's physically similar to the others, if buffer than most of the others you've seen. He does bear a crooked [bold type]scar[roman type] across his cheek and muzzle. His coat is the typical brown and black of the breed as well. Like the rest, he's nude and half-hard as he strides towards you.";
-			say "     'I was hoping to find some way to amuse myself. You smell... interesting. I think I'll enjoy breaking you in,' he says with a lustful growl.";
-			say "     It is something in the look in his eyes and the set of his jaw that really distinguishes him in your eyes. While he clearly has the same crazed lust, there is more [']focus['] to him. Unfortunately, that focus is aimed squarely at you at the moment.";
-			now gsd_pet is 1;
-		else if gsd_pet is 4:
-			if KorvinSubmitCounter > 4: [new auto submit + fight]
-				let randomnumber be a random number from 1 to 3;
-				if randomnumber is:
-					-- 1:
-						say "[KorvinOrcFight]";
-					-- 2:
-						say "[KorvinTenrecFight]";
-					-- 3:
-						say "[KorvinCentaurFight]";
-				now combat abort is 1;
-			else: [current auto submit]
-				if a random chance of 2 in 3 succeeds:
-					say "     You once again cross paths with that [bold type]scarred[roman type] German shepherd... no, your Alpha, a corner of your mind quickly corrects. Perhaps he's been looking for you? Or perhaps you've been unconsciously looking for him? Regardless, seeing you, he approaches with a confident swagger.";
-					say "     The sight of the buff male coming closer makes you excited and you start moving towards him as any thoughts to resist or get away fade from your mind. When he gets near, you drop to all fours and press your head to his paw. You receive a head petting and scritch that makes you very happy. 'That's my good [if Player is female]bitch[else]pup[end if],' he says condescendingly as you submit immediately to him, though his acknowledgement of you as belonging to him pleases and excites you.";
-				else:
-					say "     That [bold type]scarred[roman type] German shepherd you met before is back, your paths having crossed once again. Perhaps he's been looking for you? And having found you, he approaches with a confident swagger. The buff male cracks his knuckles and gives a soft growl.";
-					say "     'I thought I smelled you around, pup. How about you come over here and show your alpha what a good [if gsd_slut is true and Player is female]bitch[else if gsd_slut is true]slut[else]beta[end if] you are?' Despite how you may normally feel about him and what he's done to you, being in the presence of your alpha dog triggers something inside you. The sound of his voice and his scent in your nose arouses you and makes you submit to him. He is your alpha and you obey, eager to please him.";
-				increase KorvinSubmitCounter by 1;
-				now combat abort is 1;
-				now fightoutcome is 22;
-				WaitLineBreak;
-				say "[losetogsd]";
-		else:
-			say "     That [bold type]scarred[roman type] German shepherd you met before is back, your paths having crossed once again. Perhaps he's been looking for you? And having found you, he approaches [if gsd_pet < 10]confidently[else]cautiously, but[end if] with an aggressive swagger. The buff male cracks his knuckles and gives a soft growl.";
-			if gsd_fled is true:
-				say "     'I was hoping to run into you again, cuz we've got some unfinished business. Are you gonna stick around this time or are you gonna chicken out again?' he taunts as he strides towards you.";
-			else if gsd_pet < 4:
-				say "     'I was hoping to run into you again. Let's continue your training. I'll make a loyal dog out of you yet,' he says as he strides towards you.";
-			else if gsd_pet is 10 or gsd_pet is 11:
-				say "     'If I kept looking, I knew I'd find you. You may've gotten lucky last time, but that's all it was - luck. I'm top dog around here and that's how it's gonna stay,' he barks. He strides towards you, clearly intent on taking you down a peg.";
-			else:
-				say "     'I figured you might be around here. Smelled the stink of you in the air,' he growls at you. 'I ain't gonna take this uppity shit from you no more. You're gonna learn your place this time, pup.'";
-				say "     For all his posturing, he doesn't come at you right away. More psyching himself up to dare having another go at the foe who's beaten him so many times already. It looks like you'll have to face him at least one more time. And so, rather than waiting for him to finally come at you, you take the fight to him.";
-		decrease gsd_encounters by 2;
-		if gsd_encounters < 3, now gsd_encounters is 3;
-		now gsd_fled is true; [marked as having fled, will clear on win/loss]
-	else:
-		project Figure of GermanShepherd_naked_icon;
-		say "     You're faced with a large, bipedal canine creature. Standing on digitigrade legs, the large canine sports the [one of]traditional brown and tan[or]subtle blue and tan[or]striking black and silver[at random] fur patterns. It's completely unclothed, which makes it QUITE clear that this is a [']He[']. He's got a furry canine sheath resting against his belly and a pair of golf ball-sized balls dangling beneath. He looks you over for a moment, tail starting to wag with increasing enthusiasm as he does. His cock also starts to poke free of its sheath as well, a warning as to what's on his doggified mind. The crazed canine [one of]lets out a rough growl. 'Mmmmm... playtime.'[or][if Player is female]swaggers towards you. 'Good. I was hoping to find a cunt to be my bitch[else]growls aggressively. 'I'm top dog around here. And I'll prove it[end if].'[or]pants with his tongue lolling out. 'Play!' he barks repeatedly as he rushes at you, fists raised and teeth bared - clearly willing to play rough.[or]cracks his knuckles before charging at you.[or]barks a few times before leaping at you.[or]growls aggressively as he stalks towards you.[at random]";
-		increase gsd_encounters by 1;
-		if gsd_encounters > 6, now gsd_encounters is 6;
 
 to say KorvinOrcFight:
 	say "     During your exploration you once more run across your Alpha, the [bold type]scarred[roman type] German shepherd. Quite instantly you drop onto all fours, an action that appears to please the male very much so. When he reaches you he places his paw to your head and rubs it, a feeling that you relish very much so. 'My good little [if Player is female]bitch[else]pup[end if] is rather eager to see me, aren't you?' he says, you bobbing your head eagerly. He smiles at you before speaking once more. 'I have something special for you this time. If you do good, then I'll give you a reward,' the dog tells you.";
@@ -187,6 +125,7 @@ to say KorvinTenrecFight:
 			FeatGain "Korvin's Pet - Spiked Collar";
 	now battleground is "void";
 	now inasituation is false;
+
 to say KorvinCentaurFight:
 	say "     After looking around for a while, you quickly come upon a person who you're very excited to see. You're so excited that you immediately drop to your knees. Why wouldn't you? After all, it is your Alpha, a sexy scarred German shepherd. Upon seeing you on the ground, he smiles, walks up to you, and scritches your head. 'Are you happy to see me, my pet?' he asks. You nod your head eagerly, nuzzling his hand. 'That's great, I have something for you to do this time,' he says, you looking up at him in interest.";
 	now combat abort is 1; [stops the fight]
@@ -863,13 +802,78 @@ to say gsd_special_final_06:
 	say "[gsd_recruited]";
 	now gsd_pet is 12;
 
-
-
 to say attk gsd:
 	now gsd_attack is true; [You've attacked the monster, he won't be happy!]
 	say "[one of]The dog growls, swiping at you with an open paw-like hand, dull claws leaving scratches in your skin[or]As you extend to strike, the German shepherd twists and clamps his jaws on your arm before releasing again, leaving a bloody bite[or]Dodging back, the large canine growls before charging forward, using the extra momentum to tackle and knock you over[at random].";
 
 Section 2 - Creature Insertion
+
+to say gsd_desc:
+	if gsd_encounters > 2 and gsd_pet < 12 and inasituation is false and a random chance of gsd_encounters in 7 succeeds:
+		now gsd_special is true;
+		if gsd_pet is 0:
+			say "     Approaching you is another of those aggressive German shepherds. This one is somewhat different from the others. Oh, he's physically similar to the others, if buffer than most of the others you've seen. He does bear a crooked [bold type]scar[roman type] across his cheek and muzzle. His coat is the typical brown and black of the breed as well. Like the rest, he's nude and half-hard as he strides towards you.";
+			say "     'I was hoping to find some way to amuse myself. You smell... interesting. I think I'll enjoy breaking you in,' he says with a lustful growl.";
+			say "     It is something in the look in his eyes and the set of his jaw that really distinguishes him in your eyes. While he clearly has the same crazed lust, there is more [']focus['] to him. Unfortunately, that focus is aimed squarely at you at the moment.";
+			now gsd_pet is 1;
+		else if gsd_pet is 4:
+			if KorvinSubmitCounter > 4: [new auto submit + fight]
+				let randomnumber be a random number from 1 to 3;
+				if randomnumber is:
+					-- 1:
+						say "[KorvinOrcFight]";
+					-- 2:
+						say "[KorvinTenrecFight]";
+					-- 3:
+						say "[KorvinCentaurFight]";
+				now combat abort is 1;
+			else: [current auto submit]
+				if a random chance of 2 in 3 succeeds:
+					say "     You once again cross paths with that [bold type]scarred[roman type] German shepherd... no, your Alpha, a corner of your mind quickly corrects. Perhaps he's been looking for you? Or perhaps you've been unconsciously looking for him? Regardless, seeing you, he approaches with a confident swagger.";
+					say "     The sight of the buff male coming closer makes you excited and you start moving towards him as any thoughts to resist or get away fade from your mind. When he gets near, you drop to all fours and press your head to his paw. You receive a head petting and scritch that makes you very happy. 'That's my good [if Player is female]bitch[else]pup[end if],' he says condescendingly as you submit immediately to him, though his acknowledgement of you as belonging to him pleases and excites you.";
+				else:
+					say "     That [bold type]scarred[roman type] German shepherd you met before is back, your paths having crossed once again. Perhaps he's been looking for you? And having found you, he approaches with a confident swagger. The buff male cracks his knuckles and gives a soft growl.";
+					say "     'I thought I smelled you around, pup. How about you come over here and show your alpha what a good [if gsd_slut is true and Player is female]bitch[else if gsd_slut is true]slut[else]beta[end if] you are?' Despite how you may normally feel about him and what he's done to you, being in the presence of your alpha dog triggers something inside you. The sound of his voice and his scent in your nose arouses you and makes you submit to him. He is your alpha and you obey, eager to please him.";
+				increase KorvinSubmitCounter by 1;
+				now combat abort is 1;
+				now fightoutcome is 22;
+				WaitLineBreak;
+				say "[losetogsd]";
+		else:
+			say "     That [bold type]scarred[roman type] German shepherd you met before is back, your paths having crossed once again. Perhaps he's been looking for you? And having found you, he approaches [if gsd_pet < 10]confidently[else]cautiously, but[end if] with an aggressive swagger. The buff male cracks his knuckles and gives a soft growl.";
+			if gsd_fled is true:
+				say "     'I was hoping to run into you again, cuz we've got some unfinished business. Are you gonna stick around this time or are you gonna chicken out again?' he taunts as he strides towards you.";
+			else if gsd_pet < 4:
+				say "     'I was hoping to run into you again. Let's continue your training. I'll make a loyal dog out of you yet,' he says as he strides towards you.";
+			else if gsd_pet is 10 or gsd_pet is 11:
+				say "     'If I kept looking, I knew I'd find you. You may've gotten lucky last time, but that's all it was - luck. I'm top dog around here and that's how it's gonna stay,' he barks. He strides towards you, clearly intent on taking you down a peg.";
+			else:
+				say "     'I figured you might be around here. Smelled the stink of you in the air,' he growls at you. 'I ain't gonna take this uppity shit from you no more. You're gonna learn your place this time, pup.'";
+				say "     For all his posturing, he doesn't come at you right away. More psyching himself up to dare having another go at the foe who's beaten him so many times already. It looks like you'll have to face him at least one more time. And so, rather than waiting for him to finally come at you, you take the fight to him.";
+		decrease gsd_encounters by 2;
+		if gsd_encounters < 3, now gsd_encounters is 3;
+		now gsd_fled is true; [marked as having fled, will clear on win/loss]
+	else:
+		project Figure of GermanShepherd_naked_icon;
+		say "     You're faced with a large, bipedal canine creature. Standing on digitigrade legs, the large canine sports the [one of]traditional brown and tan[or]subtle blue and tan[or]striking black and silver[at random] fur patterns. It's completely unclothed, which makes it QUITE clear that this is a [']He[']. He's got a furry canine sheath resting against his belly and a pair of golf ball-sized balls dangling beneath. He looks you over for a moment, tail starting to wag with increasing enthusiasm as he does. His cock also starts to poke free of its sheath as well, a warning as to what's on his doggified mind. The crazed canine [one of]lets out a rough growl. 'Mmmmm... playtime.'[or][if Player is female]swaggers towards you. 'Good. I was hoping to find a cunt to be my bitch[else]growls aggressively. 'I'm top dog around here. And I'll prove it[end if].'[or]pants with his tongue lolling out. 'Play!' he barks repeatedly as he rushes at you, fists raised and teeth bared - clearly willing to play rough.[or]cracks his knuckles before charging at you.[or]barks a few times before leaping at you.[or]growls aggressively as he stalks towards you.[at random]";
+		increase gsd_encounters by 1;
+		if gsd_encounters > 6, now gsd_encounters is 6;
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"German Shepherd Male"	"[PrepCombat_German Shepherd Male]"
+
+to say PrepCombat_German Shepherd Male:
+	setmongender 3; [male]
+	choose row MonsterID in Table of Random Critters;
+	now gsd_attack is false;
+	[
+	if gsd_male is true:
+		gsd_set_male;
+	else:
+		gsd_unset_male;
+	]
+	now gsd_special is false;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

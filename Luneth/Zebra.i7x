@@ -428,10 +428,16 @@ to say ZebraDommingPlayerSex4: [Mating Rut]
 	now sex entry is "Male";
 
 to say ZebraDesc:
-	setmongender 3;
 	say "     [if ndmhigh is 1]After getting slammed in the back by a surprise blow, you can hear the loud, braying chuckle behind you[else]Wandering down the zoo paths, you hear a strange thundering noise coming up on you quickly[end if]. Turning to face the noise, you find that a large anthro zebra is closing on you with an intent look in his eyes. His large, thick cock is partially erect as he lunges forward, obviously eager to be put to use. '[one of]You'll make a fine addition to the herd[or]You look like you want to be my mare[or]Soon, you'll be mine[or]Now, I have you[or]I'll make you acknowledge my dominance[or]Now, to enlarge the herd[or]You will be no match for me[or]Submit now, resistance is futile[at random]!' he calls out, before unleashing a sharp cry and attacking!";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Zebra Stallion"	"[PrepCombat_Zebra Stallion]"
+
+to say PrepCombat_Zebra Stallion:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

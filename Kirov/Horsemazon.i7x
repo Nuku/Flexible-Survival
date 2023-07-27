@@ -12,8 +12,6 @@ horsemazonVictoryCounter is usually 0.
 Section 1 - Monster Description
 
 to say horsemazonDescription:
-	setmongender 4; [creature is female]
-	project Figure of Horsemazon_clothed_icon;
 	say "     As you make your way down the streets, you hear the clop of hooves and the clinking of metal chains. 'Halt!' a powerful voice commands. You turn to see the towering figure of a woman, but with the features of a horse. She possesses a striking, muscled physique, alongside an equine head and hooves, a coat of short brown fur, and a beautiful, flowing mane of deep brown. The striking Amazon of a horse is dressed in a set of leather chaps and a small corset, though how she managed to find one in her size puzzles you, given how much she towers over the average person. In her hands, she's holding a lasso and a riding crop, which she points aggressively at you. 'Okay, mutant. You won't be getting away to harass people any longer!' It seems she's mistaken you for one of the mindless infected roaming the city!";
 
 to say horsemazonAttack:
@@ -39,10 +37,10 @@ to say horsemazonVictory:          [Scene for when the Horsemazon defeats the pl
 		if Player is male:
 			say "[horsemazonCowgirl]";
 		else if Player is female:
-			[Placeholder scene]
+			[Horsemazon scene]
 			say "     Coming to a decision, the towering horse-woman presses harder into your chest, using the tip of her riding crop to inspect your face in a dominant display of victory. 'I guess you weren't so worthy an opponent after all. Maybe next time you'll put up more of a fight.' You're terrified of what she might do with you next, but the warrior mare simply stows her weapons and walks away. You quickly stand back up and grab your stuff to depart before she changes her mind.";
 		else:
-			[Placeholder scene]
+			[Horsemazon scene]
 			say "     Coming to a decision, the towering horse-woman presses harder into your chest, using the tip of her riding crop to inspect your face in a dominant display of victory. 'I guess you weren't so worthy an opponent after all. Maybe next time you'll put up more of a fight.' You're terrified of what she might do with you next, but the warrior mare simply stows her weapons and walks away. You quickly stand back up and grab your stuff to depart before she changes her mind.";
 		increase XP of Jana by 1;
 
@@ -130,6 +128,14 @@ to say horsemazonGiveOral:
 	CreatureSexAftermath "Player" receives "OralPussy" from "Horsemazon";
 
 Section 5 - Monster Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Horsemazon"	"[PrepCombat_Horsemazon]"
+
+to say PrepCombat_Horsemazon:
+	setmongender 4; [creature is female]
+	project Figure of Horsemazon_clothed_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -118,12 +118,17 @@ To say matriarch loses:
 	say "     You feel your pleasure growing as you reach the edge of your orgasm, your thrusts stronger and more dominant as she clenches her body underneath you, her soft lips massaging your cock needily, practically begging for you to fill her with your seed. Finally she shudders underneath you with a truly wanton moan, and you can almost sense something break inside her, almost tell the moment she gives herself up to your dominance completely and surrenders herself to your will. The pleasure as you realize the completeness of your victory makes your body shudder as it floods through you, sending you over the edge in the best orgasm of your life as you explode into her. The former matriarch cries out underneath you wantonly, as she embraces her new role in life, the role of a breeding slut, the lowest of the low in the pecking order, a slut for any and all to use as they please, and she embraces it willingly. You can't help but feel completely satisfied as you rest on her back, your cock still spurting into her slowing, ensuring she is filled with your strong, virile seed. Eventually you pull yourself out, and flop down on your side as you watch the rest of your new subjects celebrating your victory with an orgy around you.";
 	increase matriarchowned by 1;
 
+Section 2 - Creature Insertion
+
 to say Hyena Matriarch Desc:
 	say "     The matriarch strides forward, a confident look on her face as she passes her defeated guards. 'Well now you have my attention,' she snarls, her magnificent spotted fur rising as the challenge circle forms around the two of you.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Hyena Matriarch"	"[PrepCombat_Hyena Matriarch]"
+
+to say PrepCombat_Hyena Matriarch:
 	project Figure of Hyena_Matriarch_clothed_icon;
-
-
-Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -34,12 +34,18 @@ To say ewe loss:
 		say "     Defeated, the slightly crazed ewe blinks for a minute before looking at you and blushing slightly. She stammers an apology, something about how being alone without a flock for so long must have affected her mind, then runs off into the city in embarrassment. Shrugging at yet another example of the craziness sweeping the city, you continue along your way, feeling somewhat proud of having knocked some sense into the strange sheep.";
 
 to say Ewe_desc:
-	setmongender 4;
-	project Figure of Ewe_icon;
 	say "     Traveling through the streets of the city, you come across a strange sheep-like person wandering around without aim, absently running her hands over her soft, fleece-covered body as she looks around. Before you can do more than wonder what an ewe is doing out here all alone, the female sheep spots you and bleats eagerly before charging right at you, her slightly-crazed eyes full of lust.";
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Ewe"	"[PrepCombat_Ewe]"
+
+to say PrepCombat_Ewe:
+	setmongender 4;
+	project Figure of Ewe_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

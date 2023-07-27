@@ -7,13 +7,6 @@ Section 0 - Monster Variables, Flags and Markers
 
 Section 1 - Monster Description
 
-to say LatexBobcatDesc:
-	setmongender 3; [creature is male]
-	say "     You hear an odd sound coming from nearby, kind of a low buzzing rumble. Looking around warily, you soon spot its source - a strange creature that is now approaching you. The thing is feline in shape, but coated in a layer of light brown latex with speckled markings. The five-and-a-half foot tall creature has limbs with seams and joints that slide over one another, yet it moves in a smooth manner. Between its legs is a very dildo-like erection that buzzes softly, mixing with the living sextoy kitty's purring motor to make the sound you heard. On its back are a pair of rubber-padded handles, likely for use when enjoying its shapely bubble-butt.";
-	say "     The living sex toy's head is reminiscent of a bobcat's, but with several features that catch your eye. Like the rest of him, the cheekruffs and ears are also cast in latex, with the former shaped for comfortable gripping while one is using its suggestively rounded open muzzle. Meanwhile, the kitty toy's ears are pointed and hold metal grills inside them over what must be audio receptors. Its eyes are plastic shells like one would find on plush toys with cat-slit pupils painted on, though they do look around and blink as normal.";
-	say "     '[one of]I come with variable speed settings to meet your every need,' it states[or]Do you need relief? Scanning[if Libido of Player > 75]. Relief required[else if Libido of Player > 25]. Relief recommended[else]. Relief unnecessary. Administering regardless[end if],' it announces[or]My batteries are fully charged. Increase power,' it states[or]Subject located. Beginning arousal protocol,' it announces[at random]. The creature moves its paw-like hands to its nipples and turns them like knobs, adjusting the speed and intensity of its buzzing dildo cock. And while the living sextoy has no visible balls, lubricated precum starts to dribble from its tip in preparation of fulfilling your needs, whether you want it to or not.";
-
-
 Section 2 - Monster Victory
 
 to say LoseToLatexBobcat:
@@ -100,9 +93,20 @@ to say LatexBobcat_pvsex03:
 		WaitLineBreak;
 		say "     Being in control, you're able to take as much time as you feel you can safely spare, drawing out your enjoyment of the pleasure-bot. Eventually though, you're bouncing on its pole hard and fast while revving the speed and intensity of the vibe up and down quickly as you push yourself to a powerful climax[if Player is male]. You grind down hard every time you lower yourself down to feel that intense buzz against your prostate[end if]. Your asshole clenches hard around the sextoy's shaft as you cry out in orgasmic release[if Player is male]. You fire thick volleys of cum across the latex feline's body[end if]. Only when you cum does it trigger the bobcat's own release, its motor rumbling and purring loudly as several spurts of latex semen into your squeezing rear. You ease the vibrators controls down as you ride out the last moments of your orgasm and the warm bliss of the afterglow of your powerful orgasm sets in. You flop onto the ground beside the sexbot, which sanitizes itself and departs quietly now that its role is complete.[mimpregchance]";
 
-
 Section 4 - Monster Stats and Infection Data
 
+to say LatexBobcatDesc:
+	say "     You hear an odd sound coming from nearby, kind of a low buzzing rumble. Looking around warily, you soon spot its source - a strange creature that is now approaching you. The thing is feline in shape, but coated in a layer of light brown latex with speckled markings. The five-and-a-half foot tall creature has limbs with seams and joints that slide over one another, yet it moves in a smooth manner. Between its legs is a very dildo-like erection that buzzes softly, mixing with the living sextoy kitty's purring motor to make the sound you heard. On its back are a pair of rubber-padded handles, likely for use when enjoying its shapely bubble-butt.";
+	say "     The living sex toy's head is reminiscent of a bobcat's, but with several features that catch your eye. Like the rest of him, the cheekruffs and ears are also cast in latex, with the former shaped for comfortable gripping while one is using its suggestively rounded open muzzle. Meanwhile, the kitty toy's ears are pointed and hold metal grills inside them over what must be audio receptors. Its eyes are plastic shells like one would find on plush toys with cat-slit pupils painted on, though they do look around and blink as normal.";
+	say "     '[one of]I come with variable speed settings to meet your every need,' it states[or]Do you need relief? Scanning[if Libido of Player > 75]. Relief required[else if Libido of Player > 25]. Relief recommended[else]. Relief unnecessary. Administering regardless[end if],' it announces[or]My batteries are fully charged. Increase power,' it states[or]Subject located. Beginning arousal protocol,' it announces[at random]. The creature moves its paw-like hands to its nipples and turns them like knobs, adjusting the speed and intensity of its buzzing dildo cock. And while the living sextoy has no visible balls, lubricated precum starts to dribble from its tip in preparation of fulfilling your needs, whether you want it to or not.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Latex Bobcat"	"[PrepCombat_Latex Bobcat]"
+
+to say PrepCombat_Latex Bobcat:
+	setmongender 3; [creature is male]
+	
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;

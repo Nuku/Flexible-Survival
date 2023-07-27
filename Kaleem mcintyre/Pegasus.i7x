@@ -5,7 +5,6 @@ Pegasus by Kaleem mcintyre begins here.
 Section 1 - Creature Responses
 
 to say PegasusDesc:
-	setmongender 4; [creature is female]
 	say "     Reminiscent of the flying mount of Bellerophon back in the myths of old, the creature folding its wings onto its side is both a thing of beauty and terror as the feral winged horse rears up at you in preparation to fight. With its luxurious gold and white hide [if daytimer is day]gleaming underneath the light of the sun[else]radiating underneath the cool glow of the moon[end if], expansive wings set on side of it, cloven hooves, and proud cerulean mane flowing in the breeze, the mutated mount is truly a beast to dwarf all equines in both ferocity and intelligence as it stares at you with blue eyes filled with almost endless wisdom. Strangely enough, the creature seems to be female, if the heated scent of equine mare in heat wafting from around it is anything to go by.";
 
 to say losetoPegasus:
@@ -71,6 +70,13 @@ to say beatthePegasus:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Pegasus"	"[PrepCombat_Pegasus]"
+
+to say PrepCombat_Pegasus:
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

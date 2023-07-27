@@ -13,13 +13,6 @@ margaymet is a number that varies.
 
 Section 1 - Creature Responses
 
-to say margaydesc:
-	setmongender 4; [creature is female]
-	increase margaymet by 1;
-	now margaydancecount is 0; [reset alt attack counter]
-	say "     It seems like one of the fair's more hefty attendees has picked up some feline traits. Looking over the margay, her Rubenesque body is covered in a soft coat of golden fur speckled by leopard-like spots. The pattern changes on her head where it becomes a pair of stripes that run down the middle of her face, brushing past the eyes and passing both sides of the nose to stop at the end of said nose. The whole is decorated with cute little spots. Her head is a small feline head with large feline eyes and small pointed feline ears. From the way she moves and stretches, her large body is both quite large and VERY elastic in the belly. Over her plump belly is three rows of breasts, all fairly small and decreasing slightly in size. Her arms are motherly feline arms with human-style hands featuring retractable claws. Her legs are plantigrade legs with plenty of jiggle and firmly toned muscles. Her legs end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads. She has wide hips that look big enough to swallow or birth people whole, easily capable of giving painless and effortless births. Your eyes drawn to there, you can see she has a pair of large, wet vaginas, gaping a little as if in need to be filled. You can see a fresh trickle of juices from them as her feline eyes stare at you with a hungry desire.";
-
-
 to say losetomargay:
 	if UBlevel is 1 or a random chance of 1 in 4 succeeds:
 		say "     The female margay looms over you, purring happily at her new prize. You are grabbed by the ample feline and your face pressed to her bosom. With your lips at her large nipple, you can't help but taste the dribbles of milk coming from it and that first taste is enough to set you to nursing. As you drink it down, it becomes all you can focus on.";
@@ -54,7 +47,6 @@ to say losetomargay:
 		SanLoss 5;
 		increase Libido of Player by 5;
 
-
 to say beatthemargay:
 	if ( BodyName of Player is "Margay" or FaceName of Player is "Margay" ) and ( Libido of Player > 25 or humanity of Player < 67 ):
 		say "     As you look down at your defeated foe, you eye those large, wet slits of hers, feeling drawn to them. You lick your lips and, seeing your interest, she mewls softly and spreads her legs further, showing off her gaping, twitching pussies to you. The full-figured female runs her furry hands over her large belly, then down to her thighs to spread her wet holes open, releasing another mewl of need. 'Mmm... dive in, kitty. I know you want to.' Your new instincts are telling you to dive on in and eat out those delicious cunts.";
@@ -83,7 +75,6 @@ to say beatthemargay:
 	else:
 		say "[margayoral]";
 
-
 to say margayoral:
 	if Player is male:
 		say "     You run a hand over your throbbing cock as you look down at the moaning feline you've defeated and decide to put that lovely muzzle of hers to work. Walking up to her, you grab her head and guide her to your groin. Soon enough, she mewls softly and starts nuzzling against your cock before taking it into her muzzle. She licks and sucks at your cock tenderly, purring and moaning happily as she bobs her muzzle over your shaft hungrily. You run your hands through her soft fur, rubbing those feline ears and scritching the underside of her muzzle, getting her to purr all the more. Which adds a very enjoyable rumble to the sensations you're receiving by the eager feline. When your climax comes, you drive your cock down her throat, which stretches easily to accommodate it, and pump shot after shot of your hot seed down her throat. When your balls are drained, you pull your cock out and leave her there, moaning and mewling in her need, fingering her gaping pussy with nothing to fill it.";
@@ -98,8 +89,19 @@ to say margayoral:
 			now area entry is "Fair";
 		say "     'If you're not going to be a good little kitty and play with me properly, I think we'll need to send Big Momma after you. The Megakitty will make sure you're brought up right as a sexy kitty,' she calls out at you as you walk off. You're not quite sure what all that means, but it could be trouble.";
 
-
 Section 2 - Creature Insertion
+
+to say margaydesc:
+	say "     It seems like one of the fair's more hefty attendees has picked up some feline traits. Looking over the margay, her Rubenesque body is covered in a soft coat of golden fur speckled by leopard-like spots. The pattern changes on her head where it becomes a pair of stripes that run down the middle of her face, brushing past the eyes and passing both sides of the nose to stop at the end of said nose. The whole is decorated with cute little spots. Her head is a small feline head with large feline eyes and small pointed feline ears. From the way she moves and stretches, her large body is both quite large and VERY elastic in the belly. Over her plump belly is three rows of breasts, all fairly small and decreasing slightly in size. Her arms are motherly feline arms with human-style hands featuring retractable claws. Her legs are plantigrade legs with plenty of jiggle and firmly toned muscles. Her legs end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads. She has wide hips that look big enough to swallow or birth people whole, easily capable of giving painless and effortless births. Your eyes drawn to there, you can see she has a pair of large, wet vaginas, gaping a little as if in need to be filled. You can see a fresh trickle of juices from them as her feline eyes stare at you with a hungry desire.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Margay"	"[PrepCombat_Margay]"
+
+to say PrepCombat_Margay:
+	setmongender 4; [creature is female]
+	increase margaymet by 1;
+	now margaydancecount is 0; [reset alt attack counter]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

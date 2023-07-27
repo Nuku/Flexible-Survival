@@ -10,21 +10,6 @@ vgeckoloss is a number that varies.		[fights lost]
 vgeckobeaten is a number that varies.		[fights won]
 vgeckoboost is a truth state that varies. vgeckoboost is usually false.	[repeated gecko victory power boost]
 
-to say voodoogeckodesc:
-	setmongender 6; [creature is shemale]
-	choose row MonsterID from the Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Male";
-	say "     You find yourself faced with a lizard-like creature in strange garb. Guessing from its appearance, with its wide-tipped digits and broad head, you'd say it's been infected by some kind of gecko. Its scales are a bright green with purple swirls and squiggles in ornate, almost ritualistic patterns. It has a long, whip-like tail covered in the same markings. It moves in quick, jerking motions that show a lot of flexibility. Atop her wide-mouthed, broad head she has a ragged shock of indigo hair.";
-	say "     The gecko is garbed in skimpy, colorful rags that are accented with small bones, feathers and little skulls. In one hand, she holds a large, poorly-stitched doll with mismatched button eyes and several pins in it. Unlike other voodoo dolls you've seen in photos or memorabilia, this one is more anatomical with holes at the mouth and crotch that have become sticky with white goo[if vgeckoloss > 3]. Even as she draws near, the doll seems to shift its shape to better resemble you. Having been affected by these totems before has only made you more susceptible to them, it seems[end if]. While she has very prominent breasts with nipple rings in them, she's also clearly got an eight inch cock rising up from her loincloth with no signs of a pussy beneath it, nor a visible ballsack for that matter. That cock has the same violet swirls on it, which start to glow as she starts to chant and shake her body. As the shemale shaman's chanting grows louder, so do the eyes of the voodoo doll.";
-	if vgeckoloss is 4 and vgeckoboost is false:
-		increase wdam entry by 1;
-		now vgeckoboost is true;
-
 to say losetovoodoogecko:
 	choose row MonsterID from the Table of Random Critters;
 	if HP of Player > 0:
@@ -192,6 +177,28 @@ to say vgeckosex_06:		[oral - pussy]
 
 
 Section 2 - Creature Insertion
+
+to say voodoogeckodesc:
+	say "     You find yourself faced with a lizard-like creature in strange garb. Guessing from its appearance, with its wide-tipped digits and broad head, you'd say it's been infected by some kind of gecko. Its scales are a bright green with purple swirls and squiggles in ornate, almost ritualistic patterns. It has a long, whip-like tail covered in the same markings. It moves in quick, jerking motions that show a lot of flexibility. Atop her wide-mouthed, broad head she has a ragged shock of indigo hair.";
+	say "     The gecko is garbed in skimpy, colorful rags that are accented with small bones, feathers and little skulls. In one hand, she holds a large, poorly-stitched doll with mismatched button eyes and several pins in it. Unlike other voodoo dolls you've seen in photos or memorabilia, this one is more anatomical with holes at the mouth and crotch that have become sticky with white goo[if vgeckoloss > 3]. Even as she draws near, the doll seems to shift its shape to better resemble you. Having been affected by these totems before has only made you more susceptible to them, it seems[end if]. While she has very prominent breasts with nipple rings in them, she's also clearly got an eight inch cock rising up from her loincloth with no signs of a pussy beneath it, nor a visible ballsack for that matter. That cock has the same violet swirls on it, which start to glow as she starts to chant and shake her body. As the shemale shaman's chanting grows louder, so do the eyes of the voodoo doll.";
+
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Voodoo Gecko"	"[PrepCombat_Voodoo Gecko]"
+
+to say PrepCombat_Voodoo Gecko:
+	setmongender 6; [creature is shemale]
+	choose row MonsterID from the Table of Random Critters;
+	if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
+	if vgeckoloss is 4 and vgeckoboost is false:
+		increase wdam entry by 1;
+		now vgeckoboost is true;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

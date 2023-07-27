@@ -65,6 +65,8 @@ To say Harpy loses:
 to say HarpyDesc:
 	say "     An athletic-looking young woman with feathery wings attached to her arms like fins and great talons for hands and feet. Her legs are also covered in feathers, and she has a fan of feathers over her butt. She has light, flawless flesh where exposed on her front and a fine, elfin face. She would be cute if she wasn't scary.";
 
+Section 2 - Creature Insertion
+
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Harpy"	"[PrepCombat_Harpy]"
@@ -73,8 +75,6 @@ to say PrepCombat_Harpy:
 	setmongender 4;
 	if CreatureArtworkOverride is false: [in case this creature is called up in an event and other artwork needs to be used]
 		project Figure of Harpy_icon;
-
-Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

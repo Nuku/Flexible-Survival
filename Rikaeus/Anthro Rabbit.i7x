@@ -12,7 +12,6 @@ LastLuckyFootTurn is a number that varies.
 Section 1 - Creature Responses
 
 to say AnthroRabbDesc:
-	setmongender 9; [creatures are mixed/variable]
 	if BodyName of Player is "Anthro Rabbit":
 		now combat abort is 1; [stops the fight]
 		say "     A small humanoid bunny appears in front of you! Less than four foot nine and completely naked, it could pass as a short adult human if it weren't for the rabbit-like qualities it had. [one of]He[or]She[at random] looks at you excitedly, obviously intrigued by the fact that you appear to share the same infection as them. Seconds later, more of them come out of various hiding places, all crowding around you, chittering about random things as they talk about you being a fellow pack member. The one that had appeared in front of you first walks closer to you, tilting its head at you. 'Does fellow rabbit want to join in some fun?' it asks curiously, gesturing to all of the rabbits present. You get the feeling that the small bunny is propositioning you so you have to think about what to do.";
@@ -40,6 +39,13 @@ to say AnthroRabbBeaten:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Anthro Rabbit"	"[PrepCombat_Anthro Rabbit]"
+
+to say PrepCombat_Anthro Rabbit:
+	setmongender 9; [creatures are mixed/variable]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

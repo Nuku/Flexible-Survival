@@ -6,10 +6,6 @@ Version 1 of Hippo Strongman by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say hippodesc:
-	setmongender 3; [creature is male]
-	say "     Traveling through the fairgrounds, your path is suddenly blocked by the appearance of a large, muscled figure. The hippo-headed man flexes his bare muscles. 'I am the Mighty [one of]Bruno[or]Maximus[or]Supremo[or]Atlas[or]Gigantus[or]Goliath[or]Granite[in random order]!' he exclaims. 'Strongest of the strong, mightiest of the mighty!' he cries out, flexing again. As this bizarre strongman continues his showman spiel, he flexes to display his impressive muscles. You spot his stall nearby and see that a crude hippo head has been painted onto the strongman poster and the name has been re-written a few times already. He's even given the crudely drawn face the same little moustache and chin beard. Aside from his hippo head and big muscles, he has gray skin and is wearing nothing but a few leather straps and an ill-fitting loincloth that cannot contain his infection-enhanced maleness. As his babbling comes to an end, you catch him saying something about fighting you to prove his strength before he charges.";
-
 to say losetohippo:
 	if BodyName of Player is "Hippo" and ( ( Player is female and a random chance of 3 in 5 succeeds ) or ( Cunt Count of Player is 0 and a random chance of anallevel in 5 succeeds ) ):
 		say "     The victorious strongman knocks you to the ground with a cheer. Raising his arms in the air in triumph, he brags about how he is the strongest of all. He then brushes aside his loincloth to release his throbbing cock. With his 16 inch member on display, you can't help but become aroused, your body starting to respond to the victor's urges. When he moves you onto all fours, you grind back against his thick, bulging member, moaning for him to prove his might again. Running his meaty hands along your muscled back and grabbing your strong shoulders, he [if Player is female]thrusts into your juicy cunt[else]ploughs into your tight asshole[end if] with a raucous laugh.";
@@ -33,8 +29,17 @@ to say losetohippo:
 to say beatthehippo:
 	say "     Your last blow sends the big hippo staggering back. 'Impossible! None is stronger than the Great [one of]Crusher[or]Giganticus[or]Monstro[or]Ultro[or]Steelfist[or]Ivan[or]Samson[in random order]!' he yells, grabbing up his show items with ease and running off with them. 'You've not seen the last of me!' he yells. Wait... didn't he have a different name earlier?";
 
-
 Section 2 - Creature Insertion
+
+to say hippodesc:
+	say "     Traveling through the fairgrounds, your path is suddenly blocked by the appearance of a large, muscled figure. The hippo-headed man flexes his bare muscles. 'I am the Mighty [one of]Bruno[or]Maximus[or]Supremo[or]Atlas[or]Gigantus[or]Goliath[or]Granite[in random order]!' he exclaims. 'Strongest of the strong, mightiest of the mighty!' he cries out, flexing again. As this bizarre strongman continues his showman spiel, he flexes to display his impressive muscles. You spot his stall nearby and see that a crude hippo head has been painted onto the strongman poster and the name has been re-written a few times already. He's even given the crudely drawn face the same little moustache and chin beard. Aside from his hippo head and big muscles, he has gray skin and is wearing nothing but a few leather straps and an ill-fitting loincloth that cannot contain his infection-enhanced maleness. As his babbling comes to an end, you catch him saying something about fighting you to prove his strength before he charges.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Hippo"	"[PrepCombat_Hippo]"
+
+to say PrepCombat_Hippo:
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

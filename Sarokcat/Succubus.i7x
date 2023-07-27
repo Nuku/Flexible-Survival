@@ -82,12 +82,18 @@ to say succubus fight:
 	if Libido of Player >= 110:
 		say "You find yourself too aroused to keep fighting the sexy seductress and drop to your knees. Having fallen under the sway of this infernal temptress, you long for her to help relieve the heat in your loins.";
 
+Section 2 - Creature Insertion
+
 to say SuccubusDesc:
-	setmongender 4; [creature is female]
 	say "     A beautiful red-headed woman steps into your way, skillfully presenting herself to enflame the interest (and possibly lust) of even the most temperate of onlookers. You can't help but look her over, taking in the long legs and shapely curves of her body. Gaze wandering up from pants seemingly painted on her legs, you see a bare midriff with flawless skin, then are captivated by two quite generous breasts cupped by a leather bra. The leather jacket she wears is pretty small, too much so to be closed - but then, it mainly serves as framing for that glorious rack of her boobs. A melodious chuckle draws your attention up to her face a moment later - gorgeously beautiful, but... not quite human, as you soon notice.";
 	say "     The woman has a pair of small horns growing out of her forehead, pointy ears and predatory eyes that have a faint amber glow to them. Blinking once or twice, you only then notice the large bat-like wings stretching out from behind her back, as well as the long and thin red tail, ending in a spaded tip. Seeing she has your undivided attention, the strange woman twists her full lips into an amused smile and says, '[one of]Oh yes, now this should be fun.'[or]You look like you need some help loosening up a bit...'[or]Let me show you how much fun a succubus can be.'[or]I wonder if you will make a better pet, or a better succubus... let's find out shall we?'[at random] Then she lifts a slender hand with rather sharp nails and steps closer - a bit like a cat closing in for the kill.";
 
-Section 2 - Creature Insertion
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Succubus"	"[PrepCombat_Succubus]"
+
+to say PrepCombat_Succubus:
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

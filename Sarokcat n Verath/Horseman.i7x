@@ -8,11 +8,6 @@ lostToHorseman is a number that varies. [utilize in later updates]
 
 Section 1 - Creature Responses
 
-to say HorsemanDesc:
-	setmongender 3; [creature is male]
-	project Figure of Horseman_clothed_icon;
-	say "     Coming around a corner you slam into what feels like a solid wall - looking up you see you have run into one of the horsemen. He looks down at you with confusion as you take a step back. Standing on digitigrade legs that are covered in a cream colored fur up to his thickly built human torso. On his right bicep is the same intricate interlocking horseshoe tattoo that the guards at the front door have. An impressive equine package bulges his ripped khaki shorts. His heavy three fingered hands are capped with hooflet-like nails. His short tail flicks behind him in annoyance. Still looking at you with confusion written all over his fully equine head and face you begin to wonder if these men were chosen more for their body mass than their brains. 'You don't look like you're supposed to be here,' he grumbles. 'I better take you back to processing so they can make a proper horsey fucktoy out of ya.'";
-
 to say Horseman wins:
 	project Figure of Horseman_hard_icon;
 	increase lostToHorseman by 1;
@@ -172,6 +167,17 @@ instead of sniffing husky alpha fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";
 
 Section 2 - Creature Insertion
+
+to say HorsemanDesc:
+	say "     Coming around a corner you slam into what feels like a solid wall - looking up you see you have run into one of the horsemen. He looks down at you with confusion as you take a step back. Standing on digitigrade legs that are covered in a cream colored fur up to his thickly built human torso. On his right bicep is the same intricate interlocking horseshoe tattoo that the guards at the front door have. An impressive equine package bulges his ripped khaki shorts. His heavy three fingered hands are capped with hooflet-like nails. His short tail flicks behind him in annoyance. Still looking at you with confusion written all over his fully equine head and face you begin to wonder if these men were chosen more for their body mass than their brains. 'You don't look like you're supposed to be here,' he grumbles. 'I better take you back to processing so they can make a proper horsey fucktoy out of ya.'";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Horseman"	"[PrepCombat_Horseman]"
+
+to say PrepCombat_Horseman:
+	setmongender 3; [creature is male]
+	project Figure of Horseman_clothed_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

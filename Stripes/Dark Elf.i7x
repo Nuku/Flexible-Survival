@@ -7,17 +7,6 @@ darkelf_dresscolor is a text that varies. [@Tag:NotSaved]
 
 Section 1 - Creature Responses
 
-to say darkelfdesc:
-	setmongender 5; [creature is herm]
-	if a random chance of 1 in 2 succeeds: [blue]
-		now darkelf_dresscolor is "blue";
-		project Figure of Darkelf_blue_clothed_icon;
-	else:
-		now darkelf_dresscolor is "red";
-		project Figure of Darkelf_red_clothed_icon;
-	say "     The dark skinned herm before you has an otherworldly quality to her. Her [one of]deep ebony[or]black[or]midnight black[at random] skin is smooth and supple, free of any flaw of blemish. She has beautiful, feminine features with an exotically beautiful face. She has wide, canted, vertically slit eyes. Her lips are plump and kissable, and her long, elfin ears stick straight out from the sides of her head. She has long, silvery white hair. Her body is thin and curvy with a narrow waist leading to wider hips and a large rack beneath her skin-tight [darkelf_dresscolor] dress. Her every move exudes feminine sensuality that cries out for attention as well as confidence that speaks of her desire to take what she wants, from you or anyone else. Her arms and legs are long and slender despite her proportionally shorter stature. Her fingers are long and agile, ending in sharp, inch-long nails. Clearly visible as a bulge beneath her tight dress is a cock that's already quite large despite not being fully aroused.";
-
-
 to say losetodarkelf:
 	if darkelf_dresscolor is "blue":
 		project Figure of Darkelf_blue_naked_icon;
@@ -107,8 +96,23 @@ to say beatthedarkelf:
 	else:
 		say "     Defeated, the dark elf collapses to the ground. She struggles to rise, but is unable to do so and can only glare up at you angrily. Satisfied that you've put her in her place, you leave her behind.";
 
-
 Section 2 - Creature Insertion
+
+to say darkelfdesc:
+	say "     The dark skinned herm before you has an otherworldly quality to her. Her [one of]deep ebony[or]black[or]midnight black[at random] skin is smooth and supple, free of any flaw of blemish. She has beautiful, feminine features with an exotically beautiful face. She has wide, canted, vertically slit eyes. Her lips are plump and kissable, and her long, elfin ears stick straight out from the sides of her head. She has long, silvery white hair. Her body is thin and curvy with a narrow waist leading to wider hips and a large rack beneath her skin-tight [darkelf_dresscolor] dress. Her every move exudes feminine sensuality that cries out for attention as well as confidence that speaks of her desire to take what she wants, from you or anyone else. Her arms and legs are long and slender despite her proportionally shorter stature. Her fingers are long and agile, ending in sharp, inch-long nails. Clearly visible as a bulge beneath her tight dress is a cock that's already quite large despite not being fully aroused.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Dark Elf"	"[PrepCombat_Dark Elf]"
+
+to say PrepCombat_Dark Elf:
+	setmongender 5; [creature is herm]
+	if a random chance of 1 in 2 succeeds: [blue]
+		now darkelf_dresscolor is "blue";
+		project Figure of Darkelf_blue_clothed_icon;
+	else:
+		now darkelf_dresscolor is "red";
+		project Figure of Darkelf_red_clothed_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

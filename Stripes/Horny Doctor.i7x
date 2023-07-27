@@ -9,73 +9,6 @@ hdmode is a number that varies.
 hdform is a number that varies.
 hdformname is a text that varies.
 
-to say hornydocdesc:
-	choose row MonsterID from the Table of Random Critters;
-	if a random chance of 1 in 2 succeeds:
-		now loot entry is "libido suppressant";
-		now lootchance entry is 20;
-	else:
-		now loot entry is "healing booster";
-		now lootchance entry is 24;
-	if hdmode is 3 or hdmode is 4:		[pre-selected gender from event]
-		increase score by 0;
-	else:
-		now hdmode is a random number between 1 and 2;
-	now hdform is a random number between 0 and 6;
-	if hdform is 0, now hdformname is "mutt";
-	if hdform is 1, now hdformname is "beagle";
-	if hdform is 2, now hdformname is "Rottweiler";
-	if hdform is 3, now hdformname is "Samoyed";
-	if hdform is 4, now hdformname is "Malamute";
-	if hdform is 5, now hdformname is "boxer";
-	if hdform is 6, now hdformname is "bulldog";
-	if hdmode is 3:				[event forces male]
-		now hdmode is 1;
-	else if hdmode is 4:	[event forces female]
-		now hdmode is 2;
-	else if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
-		say "     A dog in a doctor's coat passes by you in the hall, barely looking up from his chart. He looks you over briefly, gives you a quick sniff. 'The healthcare plan you've selected will not allow you to see a doctor here. You should consider not using banning so much and get a new provider.' And with that cryptic comment, the canine continues on his way. It seems they won't have any interest in you for some reason.";
-		now BannedStatus entry is true;
-		now fightoutcome is 19;
-		now combat abort is 1;
-		now hdmode is 0;
-	else if MaleList is banned:
-		now hdmode is 2;
-	else if FemaleList is banned:
-		now hdmode is 1;
-	else if MaleList is warded and FemaleList is warded:
-		now hdmode is a random number between 1 and 2;
-	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
-		if MaleList is warded and a random chance of 1 in 3 succeeds:
-			now hdmode is 2;
-		else if FemaleList is warded and a random chance of 1 in 3 succeeds:
-			now hdmode is 1;
-	else if ishunting is false:
-		if MaleList is warded:
-			now hdmode is 2;
-		else if FemaleList is warded:
-			now hdmode is 1;
-	if hdmode is 1:				[male]
-		setmongender 3; [creature is male]
-		project the figure of HornyDoctor_M_icon;
-		say "     You find yourself confronted by one of the denizens of the hospital, a canine doctor. Wearing a doctor's coat, stethoscope and little else, this male [hdformname] is of normal human stature, though adjusted somewhat [if hdform is 0]by his canine nature[else]to suit his breed[end if]. With his coat hanging open, his [if hdform is 0]scruffy[else if hdform is 1]brown- and black-patched white[else if hdform is 2]black[else if hdform is 3]white[else if hdform is 4]thick black and white[else if hdform is 5]brown[else if hdform is 6]tan[end if] fur can plainly be seen covering his whole body. This also gives you a clear view of his plump sheath and the pointed tip of the canine cock poking from it. Upon noticing you, his ears perk up and his [if hdform is 2 or hdform is 6]short [else if hdform is 3 or hdform is 4]fluffy [end if]tail wags and he moves to approach you. '[one of]Ooo! A patient. Let's start the examination[or]Oh my! You seem quite ill. Come over here so I can give you some proper treatment[or]Oh, for a case like yours, I'm going to have to prescribe a hot meat injection[or]I've got the cure for what ails you right here[or]Here for your full physical exam? Now be a good patient and bend over. I promise I'll even warm up my hands first[or]Hmm... this looks serious. Please bend over so I can check out that [if Player is female]hot pussy[else]tight ass[end if] of yours[or]There you are. Bend over, [']cause I've got your 50 cc's of puppy batter right here[or]I've got your medicine right here. Now open up and say 'Ahhhh'[at random],' he barks excitedly. You can see the dog's penis rising from his exposed sheath as he talks to you. Clearly he's interested in more than your typical doctor-patient relationship.";
-		now altcombat entry is "hump";
-	else if hdmode is 2:		[female]
-		setmongender 4; [creature is female]
-		say "     You find yourself confronted by one of the denizens of the hospital, a canine doctor. Wearing a doctor's coat, stethoscope and little else, this female [hdformname] is of normal human stature, though adjusted somewhat [if hdform is 0]by her canine nature[else]to suit her breed[end if]. With her coat hanging open, her [if hdform is 0]scruffy[else if hdform is 1]brown- and black-patched white[else if hdform is 2]black[else if hdform is 3]white[else if hdform is 4]thick black and white[else if hdform is 5]brown[else if hdform is 6]tan[end if] fur can plainly be seen covering her whole body. This also gives you a clear view of her shapely breasts and the damp muff between her legs. Upon noticing you, her ears perk up and her [if hdform is 2 or hdform is 6]short [else if hdform is 3 or hdform is 4]fluffy [end if]tail wags and she moves to approach you. '[one of]Ooo! A patient. Let's start the examination[or]Oh my! You seem quite ill. Come over here so I can give you some proper treatment[or][if Player is male]Oh, for a case of swelling like that, I'm going to have to prescribe a hot, juicy fucking[else if Player is female]Oh, you seem to be seeping juices badly. Come here and I'll kiss it to make it all better[else]Oh my! It seems you've misplaced your genitals. Don't worry, you can lick mine until you're all better[end if][or]I've got the cure for what ails you right here[or]Here for your full physical exam? Now be a good patient and bend over. I promise I'll even warm up my hands first[or]I've got your medicine right here[at random],' she barks excitedly. You can see the dog's pussy start to drip with her juices as she talks to you. Clearly she's interested in more than your typical doctor-patient relationship.";
-		now altcombat entry is "default";
-	now BannedStatus entry is false;
-	if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if hdmode is 1:
-		now sex entry is "Female";
-	else:
-		now sex entry is "Male";
-
 to say losetohornydoc:
 	if hdmode is 1:
 		say "[losetohdmale]";
@@ -149,7 +82,6 @@ to say hdmale_sex04:
 		say "     Largely dropping the pretense of an exam, he throws himself into pumping a few fingers into your asshole with one hand and [if Breast Size of Player > 0]groping one of your breasts[else]grabbing your ass[end if] with the other. Already very worked up by the constant teasing without proper release, you don't last for much longer, soon feeling your [bodydesc of Player] body quivering in undirected release even as your anus clutches around his thrusting digits. Clearly disappointed by your lack of genitals, he grabs his stiff canine dong, pumps it quickly and splatters a gooey mess of his own semen across your bare groin";
 	say ". When your climax ebbs and you're left basking in the afterglow, he undoes your straps and makes some excuse about [one of]having an appointment to fuck one of the nurses[or]being late for tee-off[or]there being more patients to see[or]needing to check on the lab results[or]having just been paged[or]being needed in emergency[or]you needing to return for a follow-up soon[in random order] and heads off.";
 
-
 to say losetohdfemale:
 	say "     The horny doctor eagerly pushes you backwards onto a stray gurney, climbs atop it and runs her paws roughly over you. '[if HP of Player > 0]Now that's much better. I've got the cure for what ails you right here,' she giggles, grinding her dripping pussy against your hip as she does[else]Such a troublesome patient you're being. You don't want me to call an orderly to help me with you, do you?' she giggles, grinding her dripping pussy against your hip as she does[end if]. No longer resisting her advances, she licks your neck and gives your crotch a probing caress, a quick examination while she decides what fun she might have with her new patient. You can't help but moan in response, your lustful urges rapidly overpowering your good sense.";
 	if a random chance of 1 in 4 succeeds:
@@ -203,7 +135,6 @@ to say hdfemale_sex04:
 		say "     Largely dropping the pretense of an exam, she throws herself into pumping a few fingers into your asshole with one hand and [if Breast Size of Player > 0]groping one of your breasts[else]grabbing your ass[end if] with the other. Already very worked up by the constant teasing without proper release, you don't last for much longer, soon feeling your [bodydesc of Player] body quivering in undirected release even as your anus clutches around his thrusting digits. Clearly disappointed by your lack of genitals, she stuffs a few fingers into her own cunny, works herself up to a barking climax and then wipes her stick fingers off across your bare groin";
 	say ". When your climax ebbs and you're left basking in the afterglow, she undoes your straps and makes some excuse about [one of]having an appointment to fuck one of the orderlies[or]being late for the spa[or]there being more patients to see[or]needing to check on the lab results[or]having just been paged[or]being needed in emergency[or]you needing to return for a follow-up soon[in random order] and heads off.";
 
-
 to say beatthehornydoc:
 	if hdmode is 1:
 		say "[beatthehdmale]";
@@ -216,8 +147,82 @@ to say beatthehdmale:
 to say beatthehdfemale:
 	say "     Having enough of the fight, the doctor stumbles back a few feet. There, she growls and shakes her paw at you. 'Just you wait until you get my bill. Then I'll have the last laugh!' And with that, she turns and dashes off into the dark depths of the hospital.";
 
-
 Section 2 - Creature Insertion
+
+to say hornydocdesc:
+	if hdmode is 1:				[male]
+		say "     You find yourself confronted by one of the denizens of the hospital, a canine doctor. Wearing a doctor's coat, stethoscope and little else, this male [hdformname] is of normal human stature, though adjusted somewhat [if hdform is 0]by his canine nature[else]to suit his breed[end if]. With his coat hanging open, his [if hdform is 0]scruffy[else if hdform is 1]brown- and black-patched white[else if hdform is 2]black[else if hdform is 3]white[else if hdform is 4]thick black and white[else if hdform is 5]brown[else if hdform is 6]tan[end if] fur can plainly be seen covering his whole body. This also gives you a clear view of his plump sheath and the pointed tip of the canine cock poking from it. Upon noticing you, his ears perk up and his [if hdform is 2 or hdform is 6]short [else if hdform is 3 or hdform is 4]fluffy [end if]tail wags and he moves to approach you. '[one of]Ooo! A patient. Let's start the examination[or]Oh my! You seem quite ill. Come over here so I can give you some proper treatment[or]Oh, for a case like yours, I'm going to have to prescribe a hot meat injection[or]I've got the cure for what ails you right here[or]Here for your full physical exam? Now be a good patient and bend over. I promise I'll even warm up my hands first[or]Hmm... this looks serious. Please bend over so I can check out that [if Player is female]hot pussy[else]tight ass[end if] of yours[or]There you are. Bend over, [']cause I've got your 50 cc's of puppy batter right here[or]I've got your medicine right here. Now open up and say 'Ahhhh'[at random],' he barks excitedly. You can see the dog's penis rising from his exposed sheath as he talks to you. Clearly he's interested in more than your typical doctor-patient relationship.";
+	else if hdmode is 2:		[female]
+		say "     You find yourself confronted by one of the denizens of the hospital, a canine doctor. Wearing a doctor's coat, stethoscope and little else, this female [hdformname] is of normal human stature, though adjusted somewhat [if hdform is 0]by her canine nature[else]to suit her breed[end if]. With her coat hanging open, her [if hdform is 0]scruffy[else if hdform is 1]brown- and black-patched white[else if hdform is 2]black[else if hdform is 3]white[else if hdform is 4]thick black and white[else if hdform is 5]brown[else if hdform is 6]tan[end if] fur can plainly be seen covering her whole body. This also gives you a clear view of her shapely breasts and the damp muff between her legs. Upon noticing you, her ears perk up and her [if hdform is 2 or hdform is 6]short [else if hdform is 3 or hdform is 4]fluffy [end if]tail wags and she moves to approach you. '[one of]Ooo! A patient. Let's start the examination[or]Oh my! You seem quite ill. Come over here so I can give you some proper treatment[or][if Player is male]Oh, for a case of swelling like that, I'm going to have to prescribe a hot, juicy fucking[else if Player is female]Oh, you seem to be seeping juices badly. Come here and I'll kiss it to make it all better[else]Oh my! It seems you've misplaced your genitals. Don't worry, you can lick mine until you're all better[end if][or]I've got the cure for what ails you right here[or]Here for your full physical exam? Now be a good patient and bend over. I promise I'll even warm up my hands first[or]I've got your medicine right here[at random],' she barks excitedly. You can see the dog's pussy start to drip with her juices as she talks to you. Clearly she's interested in more than your typical doctor-patient relationship.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Horny Doctor"	"[PrepCombat_Horny Doctor]"
+
+to say PrepCombat_Horny Doctor:
+	choose row MonsterID from the Table of Random Critters;
+	if a random chance of 1 in 2 succeeds:
+		now loot entry is "libido suppressant";
+		now lootchance entry is 20;
+	else:
+		now loot entry is "healing booster";
+		now lootchance entry is 24;
+	if hdmode is 3 or hdmode is 4:		[pre-selected gender from event]
+		increase score by 0;
+	else:
+		now hdmode is a random number between 1 and 2;
+	now hdform is a random number between 0 and 6;
+	if hdform is 0, now hdformname is "mutt";
+	if hdform is 1, now hdformname is "beagle";
+	if hdform is 2, now hdformname is "Rottweiler";
+	if hdform is 3, now hdformname is "Samoyed";
+	if hdform is 4, now hdformname is "Malamute";
+	if hdform is 5, now hdformname is "boxer";
+	if hdform is 6, now hdformname is "bulldog";
+	if hdmode is 3:				[event forces male]
+		now hdmode is 1;
+	else if hdmode is 4:	[event forces female]
+		now hdmode is 2;
+	else if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
+		say "     A dog in a doctor's coat passes by you in the hall, barely looking up from his chart. He looks you over briefly, gives you a quick sniff. 'The healthcare plan you've selected will not allow you to see a doctor here. You should consider not using banning so much and get a new provider.' And with that cryptic comment, the canine continues on his way. It seems they won't have any interest in you for some reason.";
+		now BannedStatus entry is true;
+		now fightoutcome is 19;
+		now combat abort is 1;
+		now hdmode is 0;
+	else if MaleList is banned:
+		now hdmode is 2;
+	else if FemaleList is banned:
+		now hdmode is 1;
+	else if MaleList is warded and FemaleList is warded:
+		now hdmode is a random number between 1 and 2;
+	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
+		if MaleList is warded and a random chance of 1 in 3 succeeds:
+			now hdmode is 2;
+		else if FemaleList is warded and a random chance of 1 in 3 succeeds:
+			now hdmode is 1;
+	else if ishunting is false:
+		if MaleList is warded:
+			now hdmode is 2;
+		else if FemaleList is warded:
+			now hdmode is 1;
+	if hdmode is 1:				[male]
+		setmongender 3; [creature is male]
+		project the figure of HornyDoctor_M_icon;
+		now altcombat entry is "hump";
+	else if hdmode is 2:		[female]
+		setmongender 4; [creature is female]
+		now altcombat entry is "default";
+	now BannedStatus entry is false;
+	if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if hdmode is 1:
+		now sex entry is "Female";
+	else:
+		now sex entry is "Male";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

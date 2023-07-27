@@ -2,9 +2,7 @@ Arctic Fox by Sarokcat begins here.
 
 "Adds a Arctic fox to Flexible Survival's Wandering Monsters table"
 
-
 Section 1 - Creature Responses
-
 
 to say Arctic fox attack:
 	if Player is female:
@@ -16,11 +14,17 @@ to say Arctic fox attack:
 		say "ment...";
 		infect "Arctic Fox";
 
-
 To say Arctic fox loss:
 	say "she loses! The horror!.'";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Arctic Fox"	"[PrepCombat_Arctic Fox]"
+
+to say PrepCombat_Arctic Fox:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -8,15 +8,6 @@ nobirdofparadisesex is a number that varies.
 bopseen is a truth state that varies. bopseen is usually false.
 bopdefeated is a number that varies.
 
-to say birdofparadisedesc:
-	setmongender 4; [creature is female]
-	if bopseen is true:
-		say "     Another of the beautifully colorful avians lands in front of you and begins her mating dance. Her exotic motions and vibrant plumage are alluring, drawing your eyes to her lovely breasts and tantalizing pussy. The slender, curvaceous bird uses her lovely call and sexy motions to try and entice you. You find yourself wanting to move with her, to touch those lovely feathers of hers. She swishes her long, colorful tail and you shake your head, trying to pull yourself together before you're drawn in by those large and lovely eyes of hers again.";
-	else:
-		say "     A beautifully colorful avian being comes soaring out of the air and lands in front of you. Making several exotic poses that show off her feminine curves and bright plumage, the bird woman gives a musical song as she dancing towards you. Her slender body is covered in long, stunning feathers of all imaginable colors and hues, making her look like a living rainbow, or perhaps a well-stocked artist's palette. Some of the feathers are exceptionally long and curl upwards at the ends, giving her the appearance of wearing an exquisite technicolor cloak. Her head is crowned with a large, almost unwieldy crest of fluffy feathers that curve forward in a range of autumn colors. Two glassy, translucent eyes peer out from above a thick, curved beak - they're so wide and empty that you feel you could easily lose yourself in the bird of paradise's rather hypnotic gaze. Her body is warm and inviting, with a definite sense of the approachable and perhaps even huggable to her. A lovely pair of wings sprouts from the bird's back, bands upon bands of soft, melding colors forming a living rainbow. She has a pair of grand breasts upon her chest, fluffy and soft with a coat of downy feathers. Her arms are long, slender and firm beneath the colorful array of feathers covering her upper arms and the sheen of golden scales that cover her forearms and hands. Her hands end in long, dexterous fingers, each one tipped with small, pointy talons that look as if they were designed for getting a good grip on various small objects. Her legs are solid and look as if they've some muscle definition to them, which is quite reasonable considering the heavy-looking claws she has on her scaled feet. Her tailfeathers are so long that they sweep the ground as she walks, yet somehow still manage to remain spotless despite that. The feathers themselves are large and broad, starting from a deep violet from within their shafts and gradually warming through all the colors of the rainbow up to the edges. Through glimpses you catch as she does her exotic dance towards you, you catch side of her large, tantalizing pussy with its soft cushion of bright feathers around it.";
-		now bopseen is true;
-
-
 to say losetobirdofparadise:
 	say "     The rather rambunctious mating dance over with, the bird woman takes a deep breath and starts to sing. The very notion sounds silly at first, but as the music begins to flow and ebb around you, you suddenly find your will to fight on rapidly draining. Surrounded by song, you're content to stand motionless with your mouth agape as the bird of paradise steps forward, her talons clicking against the ground in time with her music. Those eyes, that glassy stare, they seem to grow to fill the entire world as your surroundings melt away, leaving nothing but the clear light blue of the avian's gaze and the music - oh god, the music, you're sure that the bird of paradise hasn't so much as touched you and yet against all logic, you feel warm and good all over and there's a dull heat pulsing down below and the song, it's everywhere, EVERYWHERE!";
 	say "     You can't take it anymore; throbbing in time to bird of paradise's mesmerizing singing, you barely feel your [if Player is male]balls empty themselves as she sinks her cunt down over your pulsing shaft and your [end if][if Cunt Count of Player > 1]cunts explode in oozing wetness and[else if Cunt Count of Player is 1]cunt explode in oozing wetness and your [end if]spine tingles as shivers run down its length. Unable and unwilling to fight back, you can only lie exhausted on the ground, squirming with the last of your strength as the unearthly beauty of bird of paradise's music completely overwhelms you, and darkness slowly falls.";
@@ -25,7 +16,6 @@ to say losetobirdofparadise:
 		CreatureSexAftermath "Bird of Paradise" receives "PussyFuck" from "Player";
 	else:
 		CreatureSexAftermath "Bird of Paradise" receives "Other" from "Player";
-
 
 to say beatthebirdofparadise:
 	if bopdefeated is 3 and Player is male:
@@ -47,15 +37,27 @@ to say beatthebirdofparadise:
 		if bopdefeated < 3, increase bopdefeated by 1;
 		now Libido of Player is ( Libido of Player * 4 ) / 5;
 
-
 to say bopvictorysex1:
 	say "     With the colorful bird pinned beneath you, it is simply a matter of slipping out your cock with one hand while you hold her down with the other. When you drive your [Cock of Player] cock into her, she sings musically in delight only to be cut off by your hand wrapping around her beak. Not wanting her to captivating song to ensnare you, you keep her keep a firm grip on it while plowing into her. All she can do is moan and whimper in pleasure as you keep driving yourself into the downy ass of hers, stuffing her cunt with your [cock size desc of Player] manhood over and over again.";
 	say "     She stopped resisting long, but you keep that beak of hers shut as a precaution, though your other hand is freed to roam over her luscious body. You grope her feathered breasts, slap her pretty ass and tease her clit, delighting in her muffled moans of pleasure as you have your way with her. The bird, used to being in control and having her way the males she ensnares, is unprepared for being on the receiving end of such rough sex and finds herself cumming repeatedly. After getting to cum several times, you drive your [Cock of Player] shaft [if Cock Length of Player > 12]as deep as it'll go[else]fully[end if] into her and drain your balls into her spasming cunt. When you're done, you pull out, wipe your sticky shaft across her downy ass and leave her then in a sex-addled daze.";
 	now Libido of Player is ( Libido of Player * 2 ) / 5;
 	CreatureSexAftermath "Bird of Paradise" receives "PussyFuck" from "Player";
 
-
 Section 2 - Creature Insertion
+
+to say birdofparadisedesc:
+	if bopseen is true:
+		say "     Another of the beautifully colorful avians lands in front of you and begins her mating dance. Her exotic motions and vibrant plumage are alluring, drawing your eyes to her lovely breasts and tantalizing pussy. The slender, curvaceous bird uses her lovely call and sexy motions to try and entice you. You find yourself wanting to move with her, to touch those lovely feathers of hers. She swishes her long, colorful tail and you shake your head, trying to pull yourself together before you're drawn in by those large and lovely eyes of hers again.";
+	else:
+		say "     A beautifully colorful avian being comes soaring out of the air and lands in front of you. Making several exotic poses that show off her feminine curves and bright plumage, the bird woman gives a musical song as she dancing towards you. Her slender body is covered in long, stunning feathers of all imaginable colors and hues, making her look like a living rainbow, or perhaps a well-stocked artist's palette. Some of the feathers are exceptionally long and curl upwards at the ends, giving her the appearance of wearing an exquisite technicolor cloak. Her head is crowned with a large, almost unwieldy crest of fluffy feathers that curve forward in a range of autumn colors. Two glassy, translucent eyes peer out from above a thick, curved beak - they're so wide and empty that you feel you could easily lose yourself in the bird of paradise's rather hypnotic gaze. Her body is warm and inviting, with a definite sense of the approachable and perhaps even huggable to her. A lovely pair of wings sprouts from the bird's back, bands upon bands of soft, melding colors forming a living rainbow. She has a pair of grand breasts upon her chest, fluffy and soft with a coat of downy feathers. Her arms are long, slender and firm beneath the colorful array of feathers covering her upper arms and the sheen of golden scales that cover her forearms and hands. Her hands end in long, dexterous fingers, each one tipped with small, pointy talons that look as if they were designed for getting a good grip on various small objects. Her legs are solid and look as if they've some muscle definition to them, which is quite reasonable considering the heavy-looking claws she has on her scaled feet. Her tailfeathers are so long that they sweep the ground as she walks, yet somehow still manage to remain spotless despite that. The feathers themselves are large and broad, starting from a deep violet from within their shafts and gradually warming through all the colors of the rainbow up to the edges. Through glimpses you catch as she does her exotic dance towards you, you catch side of her large, tantalizing pussy with its soft cushion of bright feathers around it.";
+		now bopseen is true;
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Bird of Paradise"	"[PrepCombat_Bird of Paradise]"
+
+to say PrepCombat_Bird of Paradise:
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

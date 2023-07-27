@@ -11,7 +11,6 @@ cheetah_mpreg is a truth state that varies.
 specialcheetah is a truth state that varies.
 
 to say cheetahdesc:
-	setmongender 3;
 	choose row MonsterID in Table of Random Critters;
 	now specialcheetah is false;
 	if ( a random chance of 1 in 3 succeeds ): [Special Cheetah]
@@ -169,8 +168,6 @@ to say beatthecheetah07:	[Make him your mate]
 		LineBreak;
 		say "     Your denial saddens him, and he rolls over, shrugging off your touch. You decide to leave now, before the displeased cheetah catches his breath and you must fight again.";
 
-
-
 To say cheetah victory:
 	say "     The cheetah growls to affirm his dominance and pushes you over on all fours. Strong paw-hands quickly pull off your gear and clothes, leaving you naked to be sniffed and inspected by the big cat. Something about him, maybe his pleasantly musky smell wakes a very submissive side in you and you get incredibly aroused at the victorious cougar's behavior.";
 	if specialcheetah is True and cheetahmate > 0:
@@ -200,8 +197,14 @@ To say cheetah victory:
 			say "     You feel the breath through his nose against your featureless crotch as the cougar sniffs you, then gives a displeased rumble at finding a genderless being in his territory. Seems he wants to show you a lesson next, as he mounts you from behind, pushing you down as he humps against you. He doesn't fuck your ass or anything, just treats you like a female to be fucked and rubs his hard shaft against your crotch. Before long, he orgasms, blasting away with spurt after spurt of cum to splash wetly against your skin. Maybe he's hoping this will infect you, making you transform you into a female sooner or later. No matter what, having gotten his rocks off, the cougar pads off to find another female.";
 	infect "Feral Cheetah";
 
-
 Section 2 - Infection Details
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Feral Cheetah"	"[PrepCombat_Feral Cheetah]"
+
+to say PrepCombat_Feral Cheetah:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

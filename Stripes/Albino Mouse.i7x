@@ -21,13 +21,13 @@ to say beatdrmouse:
 	else if hospfight is 2:
 		say "     Your final blow strikes and causes the monstrous creature to stumble back. He reaches for one of the stools to hurl at you, but you grab one and send it flying into his head first. He staggers back a few more steps, slips in a puddle and collapses at one side of the room.";
 
+Section 2 - Creature Insertion
+
 to say drmousedesc:
 	if hospfight is 1:
 		say "     Dr. Mouse, barely four feet tall, intends to fight you. With his white fur disheveled, his blood red eyes and sharp, rodent teeth, the albino lab mouse would be quite threatening were he not so small and weak. But the murine doctor snarls angrily and charges at you, tiny paws clenched into fists. You ready to strike, prepared to deal with the mad doctor once and for all.";
 	else if hospfight is 2:
 		say "     The now monstrous mouse is attacking you. His altered body is huge, almost nine feet tall and bristling with sharp claws, teeth, horns and spikes. He has managed to give himself a powerful physique and seems to have retained his twisted mind. His hide is toughened, making it much harder to harm the mutated hybrid he's become.";
-
-Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -67,7 +67,6 @@ to say PrepCombat_Albino Mouse:
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4;
-
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

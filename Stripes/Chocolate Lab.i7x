@@ -10,10 +10,6 @@ labtimerB is a number that varies. labtimerB is usually 0. [tracks how long most
 
 Section 1 - Creature Responses
 
-to say choclabdesc:
-	setmongender 9; [creature is variable]
-	say "     Before you is a bizarre creature. At first glance, it seems like a normal dog, a brown Labrador. But it's soon apparent that it's quite unusual. This chocolate Lab is flowing and shifting, leaving brown pawprints as it walks. It seems to be quite literally a [italic type]chocolate[roman type] Lab. Its skin flows and runs like melting chocolate and you can smell the sweet, alluring scent of cocoa as it bounds closer. The creature has a gooey, brown tongue that drips chocolaty syrup. Its eyes are solid black, like pure, dark chocolate.";
-
 to say losetolab:
 	choose row MonsterID from the Table of Random Critters;
 	let labnum be 0;
@@ -85,7 +81,6 @@ to say losetolab:
 		PlayerEat 12;
 		say "[chococheck]";
 
-
 to say beatthelab:
 	say "     You manage to fend off the strange canine, exhausting it to the point that it has trouble maintaining enough physical consistency to keep fighting. It whimpers softly, looking up at you with large, puppydog eyes of dark chocolate as it flows onto its back, exposing itself to you. It has a brown, canine cock that dribbles enticingly fragrant white chocolate and a wet, dripping pussy that looks deliciously ready to be filled. Along its body are three rows of breasts, each with hard, chocolate-brown nipples. It whimpers again, offering itself to you.";
 	if hunger of Player > 24:
@@ -125,16 +120,23 @@ to say beatthelab:
 		else:
 			say "     You leave as it struggles to regain enough cohesion to get away.";
 
-
 to say chococheck:
 	if BodyName of Player is "Chocolate Lab" or FaceName of Player is "Chocolate Lab":
 		say "     During the course of the sex with the fluidic dog, you could feel some of your chocolate being intermingle with that of the dog. You feel a little more canine and a hunger for more chocolate. Or more sex. Or better yet, more chocolate sex.";
 		SanLoss 8;
 		increase hunger of Player by 5;
 
-
-
 Section 2 - Creature Insertion
+
+to say choclabdesc:
+	say "     Before you is a bizarre creature. At first glance, it seems like a normal dog, a brown Labrador. But it's soon apparent that it's quite unusual. This chocolate Lab is flowing and shifting, leaving brown pawprints as it walks. It seems to be quite literally a [italic type]chocolate[roman type] Lab. Its skin flows and runs like melting chocolate and you can smell the sweet, alluring scent of cocoa as it bounds closer. The creature has a gooey, brown tongue that drips chocolaty syrup. Its eyes are solid black, like pure, dark chocolate.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Chocolate Lab"	"[PrepCombat_Chocolate Lab]"
+
+to say PrepCombat_Chocolate Lab:
+	setmongender 9; [creature is variable]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

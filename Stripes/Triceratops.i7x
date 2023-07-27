@@ -6,7 +6,6 @@ Version 1 of Triceratops by Stripes begins here.
 Section 1 - Creature Responses
 
 to say tricdesc:
-	setmongender 4; [creature is female]
 	say "     Before you is a stunning dichotomy of anachronism! The female dinosaur woman, a triceratops with horns and a broad frill, is dressed as a disco maven. Her brown and green scaled body is only barely covered by the red disco dress she wears, exposing most of her bosom. It is made of smooth satin with rhinestones around bell-bottom-like wide ankles and pleated waves over her shoulders. The large afro behind her armored frill, the big sunglasses and high platform shoes complete the look. This double blast-from-the-past strikes a pose and strides to the beat, ready to mop the dance floor with you.";
 
 
@@ -20,7 +19,6 @@ to say losetotric:
 		increase Libido of Player by 10;
 		if Libido of Player > 100:
 			now Libido of Player is 100;
-
 
 to say beatthetric:
 	if dinonest is 1:
@@ -55,6 +53,13 @@ to say beatthetric:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Triceratops"	"[PrepCombat_Triceratops]"
+
+to say PrepCombat_Triceratops:
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

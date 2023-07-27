@@ -30,6 +30,13 @@ to say beatthedrone:
 
 Section 2 - Creature Insertion
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Drone Wasp"	"[PrepCombat_Drone Wasp]"
+
+to say PrepCombat_Drone Wasp:
+	setmongender 4;
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -56,7 +63,7 @@ When Play begins:
 	now attack entry is "[one of]The drone attacks with its small claws, leaving tiny furrows that sting slightly.[or]The drone dive bombs through the air with its stinger at the ready, spreading its venom into your body, causing you to shudder in pain and lust.[or]The drone flies in close and hugs you, not harming you but seeming to gaze longingly into your eyes.[at random]";
 	now defeated entry is "[beatthedrone]";
 	now victory entry is "[one of]The drone slips her lips onto yours, kissing deeply as she lets a small amount of honey in her mouth slip into your own.[or]The drone flies around happily before fluttering off to brag to her sisters.[or]The drone pins you down to the ground and grins, forcing your lips against her sex as she rubs her small mound against you. She moans softly as you're forced to pleasure her, lapping along her slick honeypot until she finally cums. Satisfied, the wasp giggles to herself and flies off as quickly as she came.[at random]";
-	now desc entry is "[mongendernum 4]A small, shy of four feet, wasp-like girl with delicate, buzzing wings on her back. Her skin is yellow with brown markings and a short, soft layer of fuzz. Her hands have only three fingers and small claws at the end of each digit. Out of her rear extends her wasp-like abdomen with a small stinger on the end. Her face is mostly human with cute, short, brown/blond hair. She looks at you with a soft smile on her lips, buzzing left and right.";
+	now desc entry is "     A small, shy of four feet, wasp-like girl with delicate, buzzing wings on her back. Her skin is yellow with brown markings and a short, soft layer of fuzz. Her hands have only three fingers and small claws at the end of each digit. Out of her rear extends her wasp-like abdomen with a small stinger on the end. Her face is mostly human with cute, short, brown/blond hair. She looks at you with a soft smile on her lips, buzzing left and right.";
 	now face entry is "charmingly human"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "largely human, except for the new abdomen protruding from your rump, sporting a new stinger. You are also a lot shorter, shy of four feet at best"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "black and brown striped"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]

@@ -5,7 +5,30 @@ Version 1 of Junkman by Stripes begins here.
 
 Section 1 - Creature Responses
 
+to say losetojunkman:
+	[reset creature stats for next encounter]
+	choose row MonsterID from the Table of Random Critters;
+	now lev entry is 6; [ reset level for random encounter availability ]
+	say "     Victorious, the scrapyard cyborg raises its arms in the air and emits another grinding groan. After this cry, he grabs you and pushes you down across a [one of]stray car seat[or]old washer[or]rusty engine block[in random order] and moves in behind you.";
+	say "     As you hear an odd whirring sound, you manage to glance back for a moment before you're pushed back down. You catch a glimpse of the panel over his groin folding up, uncovering his blessedly human dick made of pure flesh and blood. As he lines it up with your [if Player is female]wet pussy[else]tight pucker[end if], you [if HP of Player > 0]moan softly in anticipation[else]struggle a little in vain[end if] before he sinks it into you. You grip your improvised seat as he starts thrusting into you repeatedly, quickly making you grow excited and lustful. The feel of his seemingly human penis thrusting into you feels quite enjoyable, making your [if Player is female]pussy[else]asshole[end if] squeeze and tug at it as you long more and more for his hot seed in you.";
+	say "     Thinking of his seed makes you notice that his balls feel strange against [if Player is male]yours[else]you[end if] as they bump into you with each thrust. Reaching back, you grab his sac to fondle him and find [one of]his balls have a plastic cover[or]it protected by what feels like a brass shell[or]it reinforced by several metal plates[or]some hard, rubber tubes leading into it[at random]. The creature atop you releases a grinding moan as you rub over his ballsack, clearly enjoying your touch despite their strange form. You can feel his balls start to throb warmly inside his odd scrotum and you are rewarded moments later by a steady stream of thick, oily cum. His slick seed pumps into you as some internal pump chugs away inside him, sending large amounts of his semen into you. Much of it flows up into your [if Player is female]waiting womb[else]sexy ass[end if] while the rest overflows around his cock to run down your thighs, with more gushing out as he withdraws and paints your ass with his last few spurts. Finished, he gives your sticky rear end a pat and wanders off.[impregchance]";
+
+to say beatthejunkman:
+	say "     You manage to drive off the junk creature, forcing it to flee back into the scrapyard.";
+
+Section 2 - Creature Insertion
+
 to say junkmandesc:
+	choose row with name of "Junkman" from Table of Random Critters;
+	say "     As you round a corner, you catch sight of a strange figure. Looking vaguely human, it has several chunks of junk that have grown from or fused with its body. There are metal pipes, plates of metal, unidentifiable chunks and other assorted bits to replace parts of his skin or body. There is a [one of]plastic guard[or]metal panel[or]steel plate[or]brass globe[at random] placed over his groin to protect his junk. Despite looking like a strange cyborg made of scrap, it moves quite organically. Spotting you, he releases a groan like grinding metal and charges to attack.";
+	if HardMode is false and ( lev entry is 7 or lev entry is 8 ):
+		say "     This particular junkman seems especially powerful and dangerous. Best be careful.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Junkman"	"[PrepCombat_Junkman]"
+
+to say PrepCombat_Junkman:
 	setmongender 3; [creature is male]
 	choose row MonsterID from the Table of Random Critters;
 	let qq be a random number between 4 and 8;
@@ -30,23 +53,6 @@ to say junkmandesc:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
-	say "     As you round a corner, you catch sight of a strange figure. Looking vaguely human, it has several chunks of junk that have grown from or fused with its body. There are metal pipes, plates of metal, unidentifiable chunks and other assorted bits to replace parts of his skin or body. There is a [one of]plastic guard[or]metal panel[or]steel plate[or]brass globe[at random] placed over his groin to protect his junk. Despite looking like a strange cyborg made of scrap, it moves quite organically. Spotting you, he releases a groan like grinding metal and charges to attack.";
-	if HardMode is false and ( lev entry is 7 or lev entry is 8 ):
-		say "     This particular junkman seems especially powerful and dangerous. Best be careful.";
-
-to say losetojunkman:
-	[reset creature stats for next encounter]
-	choose row MonsterID from the Table of Random Critters;
-	now lev entry is 6; [ reset level for random encounter availability ]
-	say "     Victorious, the scrapyard cyborg raises its arms in the air and emits another grinding groan. After this cry, he grabs you and pushes you down across a [one of]stray car seat[or]old washer[or]rusty engine block[in random order] and moves in behind you.";
-	say "     As you hear an odd whirring sound, you manage to glance back for a moment before you're pushed back down. You catch a glimpse of the panel over his groin folding up, uncovering his blessedly human dick made of pure flesh and blood. As he lines it up with your [if Player is female]wet pussy[else]tight pucker[end if], you [if HP of Player > 0]moan softly in anticipation[else]struggle a little in vain[end if] before he sinks it into you. You grip your improvised seat as he starts thrusting into you repeatedly, quickly making you grow excited and lustful. The feel of his seemingly human penis thrusting into you feels quite enjoyable, making your [if Player is female]pussy[else]asshole[end if] squeeze and tug at it as you long more and more for his hot seed in you.";
-	say "     Thinking of his seed makes you notice that his balls feel strange against [if Player is male]yours[else]you[end if] as they bump into you with each thrust. Reaching back, you grab his sac to fondle him and find [one of]his balls have a plastic cover[or]it protected by what feels like a brass shell[or]it reinforced by several metal plates[or]some hard, rubber tubes leading into it[at random]. The creature atop you releases a grinding moan as you rub over his ballsack, clearly enjoying your touch despite their strange form. You can feel his balls start to throb warmly inside his odd scrotum and you are rewarded moments later by a steady stream of thick, oily cum. His slick seed pumps into you as some internal pump chugs away inside him, sending large amounts of his semen into you. Much of it flows up into your [if Player is female]waiting womb[else]sexy ass[end if] while the rest overflows around his cock to run down your thighs, with more gushing out as he withdraws and paints your ass with his last few spurts. Finished, he gives your sticky rear end a pat and wanders off.[impregchance]";
-
-to say beatthejunkman:
-	say "     You manage to drive off the junk creature, forcing it to flee back into the scrapyard.";
-
-
-Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -171,7 +171,6 @@ to say DinoBargain:
 	say "     The moment it finishes, the force keeping you from climaxing erodes, and in that same instant you immediately reach that peak as well. In the midst of repeated deluge of their dino spunk, you cry out from that perfect moment of pleasure[if Player is male], your own release lost in the mess coating you[end if]. The overwhelming feelings are finally too much, and you start to lose consciousness, your final thoughts only of the sounds of laughter and the heady scent of cum. Some time later, you awaken in a daze, to find yourself alone once again, with a thick cream coating as your parting gift.";
 
 to say DinoPackDesc:
-	setmongender 3;
 	if DinoPackEvolution > 2: [evolved desc]
 		say "     You see a large pack of reptilian creatures swarming in front of you. They bear a heavy resemblance to the tiny raptors you've fought before, but the difference in size is undeniable. Not only are the critters themselves larger, so too are their stiff members, each one wielding a truly menacing weapon clearly meant for battering holes into submission. The gleam of cunning is impossible to miss, leaving you wary of their plans.";
 	else: [normal desc]
@@ -179,6 +178,13 @@ to say DinoPackDesc:
 
 
 Section 2 - Monster Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Tiny Dino"	"[PrepCombat_Tiny Dino]"
+
+to say PrepCombat_Tiny Dino:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

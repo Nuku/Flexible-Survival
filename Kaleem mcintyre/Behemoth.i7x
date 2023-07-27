@@ -3,8 +3,6 @@ Behemoth by Kaleem mcintyre begins here.
 Section 1 - Creature Responses
 
 to say BehemothDesc:
-	setmongender 5; [creature is herm]
-	project figure of Behemoth_soft_icon;
 	say "     Charging straight for you on all fours is a beast straight out of legends. With teeth like razors, a forest green and blue hide covering its massive sixteen foot long frame, a mane of pure white trailing around its monstrous head, twin onyx horns jutting from its scalp and four clawed paws scraping at the ground beneath its gigantic form the mutant in front of you is definitely not something you would have ever hoped to come cross. The fact that this behemoth of a creature has a massive nine foot tail covered in spikes and fur that lashes through the air behind it is nothing compared to the four and a half foot long cock and the pair of medicine ball-sized testicles dangling up under its body.";
 
 to say LoseToBehemoth:
@@ -74,6 +72,14 @@ to say BeatTheBehemoth:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Behemoth"	"[PrepCombat_Behemoth]"
+
+to say PrepCombat_Behemoth:
+	setmongender 5; [creature is herm]
+	project figure of Behemoth_soft_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

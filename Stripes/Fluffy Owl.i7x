@@ -6,12 +6,6 @@ Version 1 of Fluffy Owl by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say fluffyowldesc:
-	project Figure of FluffyOwl2_icon;
-	setmongender 4; [creature is female]
-	say "     With a soft hoot, a fluffy owl creature comes swooping out at you from a dark corner. She has soft, fluffy looking feathers covering her body. Her arms are partially wings, but have taloned hands at the end. Her feet end in large, taloned bird's feet. Her piercing eyes seem to flash brightly in the dim corridors and her beak looks quite sharp. As she swoops in close, you can't ignore them any longer. On her chest are an enormous, simply titanic pair of boobs. Each the size of a large pumpkin, you have no idea how she can stand upright and walk, let alone fly with them. But somehow she does, moving with a strange lightness and grace despite her ample assets. She seems to smile at her beak as she notices your gaze and runs her taloned fingers over her huge breasts, jiggling them tantalizingly at you.";
-
-
 to say losetofluffyowl:
 	project Figure of FluffyOwl2_icon;
 	if HP of Player > 0:		[SUBMIT]
@@ -29,7 +23,6 @@ to say losetofluffyowl:
 	else:				[LOSE]
 		say "     Your fight with the fluffy bird comes to an end with her grabbing you and stuffing your face between her ample breasts, suffocating you in her soft scent and warm downy fluff. You try to push away, but you're too worn out and eventually pass out. When you come to, your crotch is soaked in sticky, feminine juices and the bird is nowhere to be found. Her soft, lingering scent is quite arousing, making you feel a little more willing to play with one of the lovely birds next time.";
 		increase Libido of Player by 5;
-
 
 to say beatthefluffyowl:		[WIN]
 	project Figure of FluffyOwl2_icon;
@@ -55,8 +48,18 @@ to say beatthefluffyowl:		[WIN]
 	else:
 		say "you choose to part ways before she recovers.";
 
-
 Section 2 - Creature Insertion
+
+to say fluffyowldesc:
+	say "     With a soft hoot, a fluffy owl creature comes swooping out at you from a dark corner. She has soft, fluffy looking feathers covering her body. Her arms are partially wings, but have taloned hands at the end. Her feet end in large, taloned bird's feet. Her piercing eyes seem to flash brightly in the dim corridors and her beak looks quite sharp. As she swoops in close, you can't ignore them any longer. On her chest are an enormous, simply titanic pair of boobs. Each the size of a large pumpkin, you have no idea how she can stand upright and walk, let alone fly with them. But somehow she does, moving with a strange lightness and grace despite her ample assets. She seems to smile at her beak as she notices your gaze and runs her taloned fingers over her huge breasts, jiggling them tantalizingly at you.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Fluffy Owl"	"[PrepCombat_Fluffy Owl]"
+
+to say PrepCombat_Fluffy Owl:
+	project Figure of FluffyOwl2_icon;
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

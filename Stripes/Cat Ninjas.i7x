@@ -7,7 +7,6 @@ Version 1 of Cat Ninjas by Stripes begins here.
 Section 1 - Creature Responses
 
 to say ninjadesc:
-	setmongender 3; [creature is male]
 	choose row MonsterID from the Table of Random Critters;
 	let bonus be ( perception of Player + dexterity of Player - 20 ) divided by 2;
 	let featbonus be 0;
@@ -32,7 +31,6 @@ to say ninjadesc:
 		else:
 			say "     As you move down the halls of the museum, you hear the soft whizz of something flying through the air too late, as a pain fills your back, causing [dammy] damage. This is quickly replaced by a warm rush of lustful excitement. You turn quickly to face your attacker as you reach back to pull the trio of poisoned shuriken from your back. There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours. Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you. The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
 
-
 to say losetoninja:
 	if Player is female and a random chance of 3 in 4 succeeds:
 		say "     The ninja grabs you by the arm as you stop fighting him. With a purring rumble, he presses you against one of the walls with one paw while the other gropes your rear. His paw moves the intervening clothes and grinds his stiff rod against your ass. You moan softly in pleasure as the feline slides his cock into your pussy slowly. As your excitement starts to build and you find yourself growing ever excited by the prospect of having this mysterious feline fuck you, his paws relax their grip and instead move across your body to tease your ass and breasts.";
@@ -52,10 +50,8 @@ to say losetoninja:
 	else:
 		say "     The ninja grabs you by the arm as you stop fighting him. He pulls you in close and blows across his palm, sending a cloud of dust into your face. Panting from the fight, you cannot help breathing in the dust and collapse to the floor. When you regain consciousness, the feline ninja is gone and your face is covered in a sticky mess of feline cum.";
 
-
 to say beattheninja:
 	say "     Your blow causes the ninja to stumble back. He hisses angrily at you and pulls something from his robes. When the smoke bomb goes off at his feet, you lunge forward to grab him before he can escape, but you find yourself clutching a wooden log. You toss it aside in frustration and continue on your way.";
-
 
 to say ninjaattack:
 [	choose row MonsterID from the Table of Random Critters;
@@ -83,8 +79,14 @@ to say ninjaattack:
 	if T is 6:
 		say "The ninja leaps from the various items on display and gets behind you. Even as you whirl to face him, his tabi boot strikes you in the side of the head!";
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Ninja Cat"	"[PrepCombat_Ninja Cat]"
+
+to say PrepCombat_Ninja Cat:
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

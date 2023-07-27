@@ -4,12 +4,6 @@ Version 1 of Quilled Tousky by Stripes begins here.
 
 "Adds Quilled Tousky to Flexible Survival."
 
-to say quilledtouskydesc:
-	setmongender 3; [creature is male]
-	say "     Before you is a strange, mish-mash creature that seems to have been cobbled together by some exceptionally confused nanites. The quilled tousky's body is covered in feathery-quilled flesh. His head is large, mostly resembling that of a husky, with a long, broad, colorful beak instead of a muzzle, big enough to take up most of his face. His canine body is solidly-built, with just a bit of adorable chubbiness to him. A cute pair of black-feathered wings (which appear far too small to support him in flight) flutters upon his back. His arms are somewhat short and pudgy, with harmless-looking claws on the tips of his paws. His legs are digitigrade, puppy-like in proportion to the rest of his body, and ending in bird claws where paws might be on a more sensibly-assembled creature. He has what looks like a cheerfully-wagging canine tail, covered in an alarming blend of long quills and feathers instead of fur. At his crotch, he has a large perky canine maleness, measuring 8 inches and a small set of balls.";
-	say "     He looks at you and tilts his head to the side. 'Marp?' it inquires before rushing towards you with a silly grin on its odd face.";
-
-
 to say losetoquilledtousky:
 	if Player is female and a random chance of 1 in 3 succeeds:
 		say "     The quilled tousky bounds over to your prone form, and attempts to lick your face. His ungainly beak interferes, and he simply winds up affectionately clonking you upside the head with it. 'Marp!' he joyfully exclaims, as if clumsily smacking his beak into you is an event worthy of triumphant celebration. As he's doing this, he ends up grinding his sheath against you, coaxing his stiffening cock out. He starts to his feet, as if surprised to have this pulsing red rod of canine cock protruding from himself. He leans in and grinds against you further, tongue lolling out.";
@@ -18,12 +12,21 @@ to say losetoquilledtousky:
 	else:
 		say "     The quilled tousky bounds over to your prone form, and attempts to lick your face. His ungainly beak interferes, and he simply winds up affectionately clonking you upside the head with it. 'Marp!' he joyfully exclaims, as if clumsily smacking his beak into you is an event worthy of triumphant celebration. He gives you an inquisitive look, then abruptly bounds away, [one of]taking a running leap from the top of a nearby mound of junk. The creature's wings flutter frantically as he hangs suspended in the air for a brief second, and then with a dismayed and puzzled 'marp?' he drops like a rock. You wince at the heavy thump that follows... but a few moments later, you hear another determined 'marp' from below, some more frantic fluttering, and, inevitably, another thud from farther away in the junkyard[or]smacking right into a nearby mound of junk. 'Marp,' he says, giving the pile an annoyed look. The creature takes a deep breath, and with an expression of keen concentration leaps at the mound again, bouncing off with a confused and dismayed 'marp?' and collapsing in a heap on the ground. He looks over at you, as if asking you to explain to the junk that it's being entirely unreasonable here[or]toward a small boulder of rubble. With an excited 'marp!' he slaps the stone with his tail, its quills making a noisy clattering sound, and then scampers away a few yards. After a moment, he looks back toward it, exasperated, and repeats the process, with the same result. He shakes his head in disappointment, muttering 'marp,' and goes to find a less grumpy rock to play tag with[or]wandering off around a scrapped car. After coming back around it, he spots you and releases a 'Marp!' of surprise, apparently already having forgotten you were here. He runs over to you excitedly and pounces atop you. His quills are a little scratchy at your skin as he pushes his cock to your face. You [if HP of Player > 0]willingly[else]are too weak to resist and[end if] open your mouth, accepting his throbbing shaft into your mouth. He rubs his paws over your head and thrusts into your mouth, cumming rather quickly. His release isn't that large, but is surprisingly tasty and you swallow it all down and suck the last drops from his shaft. He gives another happy 'marp' and runs off, this time heading in the other direction[at random]. What an odd creature.";
 
-
 to say beatthequilledtousky:
 	say "     The strange creature, as if the idea of playing with you has been knocked out of its head, staggers off in search of a new source of amusement.";
 
-
 Section 2 - Creature Insertion
+
+to say quilledtouskydesc:
+	say "     Before you is a strange, mish-mash creature that seems to have been cobbled together by some exceptionally confused nanites. The quilled tousky's body is covered in feathery-quilled flesh. His head is large, mostly resembling that of a husky, with a long, broad, colorful beak instead of a muzzle, big enough to take up most of his face. His canine body is solidly-built, with just a bit of adorable chubbiness to him. A cute pair of black-feathered wings (which appear far too small to support him in flight) flutters upon his back. His arms are somewhat short and pudgy, with harmless-looking claws on the tips of his paws. His legs are digitigrade, puppy-like in proportion to the rest of his body, and ending in bird claws where paws might be on a more sensibly-assembled creature. He has what looks like a cheerfully-wagging canine tail, covered in an alarming blend of long quills and feathers instead of fur. At his crotch, he has a large perky canine maleness, measuring 8 inches and a small set of balls.";
+	say "     He looks at you and tilts his head to the side. 'Marp?' it inquires before rushing towards you with a silly grin on its odd face.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Quilled Tousky"	"[PrepCombat_Quilled Tousky]"
+
+to say PrepCombat_Quilled Tousky:
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

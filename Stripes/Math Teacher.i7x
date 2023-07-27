@@ -5,11 +5,6 @@ Version 1 of Math Teacher by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say mathteacherdesc:
-	setmongender 5; [creature is herm]
-	let testnum be a random number between 1 and 4;
-	say "     You find yourself faced with a strangely human foe with a stern expression on her pretty female face. She has a pair of wire-framed glasses in from of her strict, watchful eyes and her brown hair is kept in a tight bun. She wears red lipstick. She is dressed in a white, button-up shirt with a brown, knee-length skirt. She has a pocket protector which holds a couple of pens and a slide rule. She holds a long, metric ruler in one hand and a heavy [one of]calculus textbook[or]textbook on complex differential equations[or]textbook on number theory[or]mathematics textbook[at random] under her other arm. Several papers, labeled as '[one of]Student Killer Exam [testnum][or]Brain Breaker Quiz [testnum][or]Impossible Assignment [testnum][or]Non-Euclidean Geometry Test of Doom[at random]' and slashed full of red F's, are sticking out of the book. Her brown heels click loudly as she steps towards you, slapping the ruler across her palm. With each slap, you notice a twitch under her skirt, warning you that there's more to this sexy math teacher than a her sexy ass and pert breasts.";
-
 
 to say losetomathteacher:
 	if Player is female:
@@ -32,7 +27,6 @@ to say losetomathteacher:
 			say "     The math teacher glares at you through her glasses. 'You have been a very disruptive young man.' She shoves you to all fours and exposes your bottom. She takes the long ruler in her hand and slaps it against your ass, again and again, until it turns pink. 'Now, young man, pull up your pants and take a seat.' She walks away, mumbling to herself about needing the proof for cream pi.";
 	else:
 		say "     The math teacher stares down at you and mumbles about the terrible state of public education before pushing you down onto all fours. 'Look at you,' she says, groping your bare groin. 'You're neither convex nor concave. Your previous professors clearly did not spend enough time preparing you before sending you to my class.' With that, she starts to slap you with her ruler. After several painful swats that leave your ass sore, you hear the rustle of clothes as she drops her skirt and panties, exposing her eight-inch cock. She lines it up with your tight pucker and slowly sinks it into you. 'This should teach you to [one of]be more mathematically interesting than zero next time[or]be more geometrically pleasing when you come to class[or]score better than a zero on the gender numerics quiz[at random],' she says with a moan as she thrusts hard into you. You groan between the pleasure of the fucking and the soreness of your tender ass. As she's about to cum, she pulls out and sprays her seed across your bottom, leaving you sticky with the professor's semen. She gives your bare crotch a swat to further emphasize her displeasure before striding away, heels clacking as she goes.";
-
 
 to say beatthemathteacher:
 	let mathnum be 0;
@@ -82,8 +76,18 @@ to say mathteachsex1:
 to say mathteachsex2:
 	say "     Tossing aside the meter stick, you push down her panties and push her down onto her tender rear. Grabbing her cock, you move over her crotch and lower your wet pussy down onto it with a moan of pleasure. As you start to ride in her lap, she tries to muffle her moans of pleasure at first, but soon she's eagerly getting into it despite her previously stern demeanor. She wraps her arms around you, mumbling something about [one of]earning extra credit[or]maybe being able to adjust your grade a little[or]correctly solving for cream pi[at random]. You ride the herm professor until you can get her to cum, shooting her hot seed into your waiting cunt as you climax as well. Once she's drained, you get up and leave her lying there on the floor, mutter numbers to herself as if evaluating your cunt and grading the quality of the fuck you gave her.[impregchance]";
 
-
 Section 2 - Creature Insertion
+
+to say mathteacherdesc:
+	let testnum be a random number between 1 and 4;
+	say "     You find yourself faced with a strangely human foe with a stern expression on her pretty female face. She has a pair of wire-framed glasses in from of her strict, watchful eyes and her brown hair is kept in a tight bun. She wears red lipstick. She is dressed in a white, button-up shirt with a brown, knee-length skirt. She has a pocket protector which holds a couple of pens and a slide rule. She holds a long, metric ruler in one hand and a heavy [one of]calculus textbook[or]textbook on complex differential equations[or]textbook on number theory[or]mathematics textbook[at random] under her other arm. Several papers, labeled as '[one of]Student Killer Exam [testnum][or]Brain Breaker Quiz [testnum][or]Impossible Assignment [testnum][or]Non-Euclidean Geometry Test of Doom[at random]' and slashed full of red F's, are sticking out of the book. Her brown heels click loudly as she steps towards you, slapping the ruler across her palm. With each slap, you notice a twitch under her skirt, warning you that there's more to this sexy math teacher than a her sexy ass and pert breasts.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Math Teacher"	"[PrepCombat_Math Teacher]"
+
+to say PrepCombat_Math Teacher:
+	setmongender 5; [creature is herm]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

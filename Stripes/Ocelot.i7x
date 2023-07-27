@@ -25,7 +25,6 @@ to say losetoocelot:
 	else:
 		say "[losetoocelot_ld]";
 
-
 to say losetoocelot_bt:
 	choose row MonsterID from the Table of Random Critters;
 	if HP of Player > 0:
@@ -89,34 +88,28 @@ to say losetoocelot_bt:
 			say "     'Purrrrr... [if Player is ocelotbodied]you poor, big kitty. Left with nothing for me to take care of[else]There it is. I smell a big, dom kitty inside you, eager to have his way with a little fucktoy like me. But he's got no toys to play with[end if],' he adds, groping your bare groin sadly. He snuggles up to you, kissing you tenderly, his paws moving to grope your ass while grinding his cock against your hip. You reach down and grab the eager kitty's crotch, fondling his balls before moving up to stroke his throbbing shaft.";
 			say "[ocelotloss_bt_j2]";
 
-
 to say ocelotloss_bt_v1:	[sub on sub - vaginal]
 	say "     The [if scalevalue of Player > 2]smaller[else]small[end if] ocelot, once this foreplay is done, guides you down onto all fours and moves atop you. 'Mrrr... I so rarely get a chance to be the one on top. I'm going to enjoy this,' he purrs in your ear, licking the edge of it. He lets his cock brush lightly against your folds, quite wet now and you eagerly push yourself back onto his rod. He runs his dainty paws over your body, tweaking and caressing every sensitive spot he can find as he thrusts into you. His cock throbs inside you, dribbling precum into your already wet hole[if Cock Count of Player > 1]. Reaching around, he wraps a paw around one of your [Cock of Player] cocks, stroking it and teasing your balls. He alternates between your shafts from time to time to build your arousal all the more without letting you cum quite yet[else if Cock Count of Player is 1]. Reaching around, he wraps a paw around your [Cock of Player] cock, stroking it and teasing your balls. He is careful to pause in his teasing from time to time, building your arousal but not letting you cum quite yet[else]. He brushes his fingertips across your folds and teases at your clit, working you to greater arousal but not letting you cum quite yet[end if][if Cunt Count of Player > 1]. The thrusting kitty even swaps cunts on you a few times, drawing it out even longer[end if]. As he's doing this all this, he's purring to you about how he'll help show you how to be a good, subby kitty and a proper fucktoy like him.";
 	say "     In time, he cums hard inside you, mrowling in pleasure. As he does, he works his paw over you vigorously, driving you to climax as well[if Player is male]. Your sticky seed splatters across the ground as he strokes you off while breeding you[end if]. Once he's done, the panting kitty gets up, strokes your ass lightly and gives you another kiss. '[one of]I need to get back to my master[or]I'd best hurry back to my master[or]I should go find my master[or]I can't wait to tell my master all about this. I have to go find him[at random], but I hope you'll come join us soon,' he purrs. '[one of]You'd make a fine playmate for me[or]I think my master would love playing with you, too[or]I know you'd love my big, sexy master[or]We could have so much fun pleasing my master together[at random].'[impregchance]";
-
 
 to say ocelotloss_bt_a1:	[sub on sub - anal]
 	say "     The [if scalevalue of Player > 2]smaller[else]small[end if] ocelot, once this foreplay is done, guides you down onto all fours and moves atop you. 'Mrrr... I so rarely get a chance to be the one on top. I'm going to enjoy this,' he purrs in your ear, licking the edge of it. He lets his cock brush lightly against your back entrance, dribbling some precum onto it. He works one of his slender fingers into your asshole, lubed from a little bottle he had tucked away somewhere. This helps you to relax your anal rings and prepare before what you're increasingly eager to have come next. Once his feline shaft is back into position, you push yourself back onto his rod, drawing a moan from both of you.";
 	say "     He runs his dainty paws over your body, tweaking and caressing every sensitive spot he can find as he thrusts into you. His cock throbs inside you, dribbling precum into your tight hole to lube you up further[if scalevalue of Player is 1]. Having an average-sized cock, his shaft is a little snug inside you, wonderfully filling for your tiny body[else if scalevalue of Player > 3]. Having an average-sized cock, his shaft is an easy fit for your [Body Size Adjective of Player] body[end if][if Cock Count of Player > 1]. Reaching around, he wraps a paw around one of your [Cock of Player] cocks, stroking it and teasing your balls. He alternates between your shafts from time to time to build your arousal all the more without letting you cum quite yet[else if Cock Count of Player is 1]. Reaching around, he wraps a paw around your [Cock of Player] cock, stroking it and teasing your balls. He is careful to pause in his teasing from time to time, building your arousal but not letting you cum quite yet[else]. He tweaks your nipples and pets your side while nibbling tenderly along your neck. All this works to turn you on all the more[end if]. As he's doing this, he's purring to you about how he'll help show you how to be a good, subby kitty and a proper fucktoy like him.";
 	say "     In time, he cums hard inside you, mrowling in pleasure. As he does, he works his paw over you vigorously[if Player is male], driving you to climax as well. Your sticky seed splatters across the ground as he strokes you off while breeding you[else], making you moan happily as you feel him spilling his load inside you[end if]. Once he's done, the panting kitty gets up, strokes your ass lightly and gives you another kiss. '[one of]I need to get back to my master[or]I'd best hurry back to my master[or]I should go find my master[or]I can't wait to tell my master all about this. I have to go find him[at random], but I hope you'll come join us soon,' he purrs. '[one of]You'd make a fine playmate for me[or]I think my master would love playing with you, too[or]I know you'd love my big, sexy master[or]We could have so much fun pleasing my master together[at random].'[impregchance]";
 
-
 to say ocelotloss_bt_o1:	[sub on sub - oral]
 	if Player is male and a random chance of 1 in 2 succeeds:
 		say "     The [if scalevalue of Player > 2]smaller[else]small[end if] ocelot rubs his dainty paws over your head, petting you as you work your mouth over his pulsing shaft. Precum wets your tongue as you continue to please him. He purrs happily at this opportunity to receive some attention, complimenting you on what a fine, subby kitty you'll make. Quite excited and eager now, you do your best to get the feline off and you're soon rewarded for your efforts with a mouthful of sticky ocelot cum. It has a soft taste that is quite pleasing, so much so you have to share it, pulling him into a kiss and pushing some of it into his mouth while your tongues wrestle. After the kiss, he strokes your ass lightly. '[one of]I need to get back to my master[or]I'd best hurry back to my master[or]I should go find my master[or]I can't wait to tell my master all about this. I have to go find him[at random], but I hope you'll come join us soon,' he purrs. '[one of]You'd make a fine playmate for me[or]I think my master would love playing with you, too[or]I know you'd love my big, sexy master[or]We could have so much fun pleasing my master together[at random].'[impregchance]";
-
 
 to say ocelotloss_bt_v2:	[sub on dom - vaginal]
 	say "     The [if scalevalue of Player > 2]smaller[else]small[end if] ocelot, once this foreplay is done, eagerly guides you to lie back and moves atop you. 'Mmm... You're just in a bad mood because you need some relief. I'll be a good, subby kitty and take care of you... give you what you need,' he purrs as he [if scalevalue of Player > 3]kisses at your chest[else]licks along the edge of your ear[end if]. He lets his cock brush lightly against your folds, quite wet now and easily parting for the spotted feline as he thrusts into you gently. His paws [if scalevalue of Player > 3]wrap as much as they can around your [Body Size Adjective of Player] body[else]run over your [bodydesc of Player] body[end if] while his hips rock and his cock pumps into you.";
 	say "     He turns out to be a very eager and obedient kitty, listening to your every request to go faster or slower, harder or softer as best suits your changing desires as your arousal grows[if Cunt Count of Player > 1]. You even have him switch cunts a few times, making sure you'll be completely satisfied[end if]. Petting his head and complimenting him for his fine work, you guide his muzzle to your breasts, encouraging him to kiss, lick, nip and suckle them as well. It makes you wish he was yours, but he's clearly already got an owner who's trained him well. You'll just have to find another to keep, then.";
 	say "     Eventually the subby kitty can't hold back any longer and, with your permission, unleashes his hot, sticky load inside your pussy. You have a powerful, deeply satisfying orgasm after the well-trained kitty's thorough attention. Left worn out, but very fulfilled, you give the kitty a kiss, a pat on the rear and send him on his way. '[one of]I need to get back to my master[or]I'd best hurry back to my master[or]I should go find my master[or]I can't wait to tell my master all about this. I have to go find him[at random],' he purrs. 'Maybe once you've got a kitty fucktoy of your own [one of]we can play again[or]you and my master can share[or]you'd like to meet him[or]you can watch us play together[at random].'[impregchance]";
 
-
 to say ocelotloss_bt_a2:	[sub on dom - anal]
 	say "     The [if scalevalue of Player > 2]smaller[else]small[end if] ocelot, once this foreplay is done, eagerly climbs back into your lap and moves atop your shaft. 'Mmm... You're just in a bad mood because you need some relief. I'll be a good, subby kitty and take care of you... let you fuck me like the big, strong dom you are,' he purrs as he [if scalevalue of Player > 3]kisses at your chest[else]licks along the edge of your ear[end if]. He lets your cock brush against his tight little pucker and starts lowering himself down onto your shaft. His hole, already lubed, spreads easily for you as he sinks down into your lap[if Cock Length of Player > 24]. Even your [cock size desc of Player] [Cock of Player] shaft can make its way into the slender kitty's bottom with little difficulty, though he's deliciously tight around you. Despite, or perhaps even because of, the phallic bulge your meat makes in him, he rumbles and purrs loudly as he rides up and down it[else if Cock Length of Player > 15]. Even your [cock size desc of Player] [Cock of Player] shaft can make its way into the slender kitty's bottom with little difficulty, though he's deliciously tight around you. Despite, or perhaps even because, he's so deeply filled, he rumbles and purrs loudly as he rides up and down it[else if Cock Length of Player > 8]. Your [cock size desc of Player] [Cock of Player] shaft is no problem for the slender kitty to take, sliding it into his well-trained bottom. He is still somehow deliciously tight around you though[else]. Despite his obvious ease at taking your [cock size desc of Player] [Cock of Player] shaft into his rear, he is still somehow deliciously tight around you[end if][if scalevalue of Player > 3]. He wraps as much of his arms as he can get around your [Body Size Adjective of Player] waist and nuzzles at your big body happily[else]. He runs his paws over your [bodydesc of Player] body[end if] while riding your cock for all he's worth.";
 	say "     He turns out to be a very eager and obedient kitty, listening to your every request to go faster or slower, harder or softer as best suits your changing desires as your arousal grows. His slinky body bends and squirms in so many delightful ways[if Player is male]. You even have him switch cocks a few times, making sure you'll be completely satisfied[end if][if Nipple Count of Player > 0 and Breast Size of Player > 0]. Petting his head and complimenting him for his fine work, you guide his muzzle to your breasts, encouraging him to kiss, lick, nip and suckle them as well[else]. Petting his head and complimenting him on his fine work, you scritch the kitty's ears and eagerly tell him to keep it up[end if]. It makes you wish he was yours, but he's clearly already got an owner who's trained him well. You'll just have to find another to keep, then.";
 	say "     Eventually you can't hold back any longer and, giving him permission to cum as well, you unleash your hot load into the kitty's bottom[if Player is male] and across his body[end if][if Ball Size of Player > 6]. You pump so much cum into the small feline that he's so bloated and overfull that some gurgles up and overflows from his mouth[else if Ball Size of Player > 6]. You pump so much cum into the small feline that he's left bloated and overfull[else if Ball Size of Player > 4]. You pump so much cum into the small feline that he has a bit of a bulge in his tummy from it all[end if]. When you're drained and [if Cock Length of Player > 24 or Ball Size of Player > 4]he's managed to pull[else]he's pulled[end if] himself off your spent shaft, you're left worn out, but very fulfilled. You give the kitty a kiss, a pat on the rear and send him on his way. '[one of]I need to get back to my master[or]I'd best hurry back to my master[or]I should go find my master[or]I can't wait to tell my master all about this. I have to go find him[at random],' he purrs. 'Maybe once you've got a kitty fucktoy of your own [one of]we can play again[or]you and my master can share[or]you'd like to meet him[or]you can watch us play together[at random][if Ball Size of Player > 6].' The overloaded ocelot staggers off slowly[else if Ball Size of Player > 4].' The stuffed ocelot sloshing slightly as he heads off[else].' The well-fucked ocelot heads off[end if], leaking your semen from his creamy hole.";
-
 
 to say ocelotloss_bt_o2:	[sub on dom - oral]
 	if Player is male:
@@ -128,12 +121,10 @@ to say ocelotloss_bt_o2:	[sub on dom - oral]
 		say "     He turns out to be a very eager and obedient kitty, listening to your every request to go faster or slower, where to rub and where to lick as best suits your changing desires as your arousal grows. His cute muzzle and agile little tongue work hard to please you in so many delightful ways[if Cunt Count of Player > 1]. You even have him switch cunts a few times, making sure you'll be completely satisfied[end if][if Nipple Count of Player > 0 and Breast Size of Player > 0]. Petting his head and complimenting him for his fine work, you bring your other hand to your breasts, playing with them as you watch the little slave kitty eat you out[else]. Petting his head and complimenting him on his fine work, you scritch the kitty's ears and eagerly tell him to keep it up[end if]. It makes you wish he was yours, but he's clearly already got an owner who's trained him well. You'll just have to find another to keep, then.";
 		say "     Eventually you can't hold back any longer and, giving him permission to cum as well, you arch your back and cry out in orgasm, soaking the kitty's muzzle and paw in your juices[if Cunt Depth of Player > 36]. In your throws of passion, you inadvertently end up pushing the kitty's head partway into your giant pussy, but he takes this in stride, licking across your inner walls as they spasm around his face[else if Cunt Depth of Player > 24]. In your throws of passion, you inadvertently end up pushing the kitty's muzzle into your enlarge pussy, but he takes this in stride, licking across your inner walls as they spasm around his furry muzzle[else if Cunt Depth of Player > 15]. In your throws of passion, you inadvertently end up pushing the kitty's muzzle squarely against your twitching folds, pulling his tongue into you, but he takes this in stride, licking and lapping inside your spasming inner walls[else]. In your throws of passion, you inadvertently end up pushing the kitty's muzzle squarely against your twitching folds, pressing his tongue against it, but he takes this in stride, lavishing attention upon your clit[end if]. When you finally release him and flop back onto the ground, he smiles up at you while licking his wet muzzle[if Cunt Depth of Player > 24]. His head is literally soaked in your juices, making a mess of the exotic kitty's fur[else if Cunt Depth of Player > 15]. His face is literally soaked in your juices, making a mess of the exotic kitty's fur[else]. His muzzle is quite soaked with your juices, making a mess of the exotic kitty's fur[end if]. You, meanwhile, are left feeling worn out, but very fulfilled. You give the kitty a kiss, a pat on the rear and send him on his way. '[one of]I need to get back to my master[or]I'd best hurry back to my master[or]I should go find my master[or]I can't wait to tell my master all about this. I have to go find him[at random],' he purrs. 'Maybe once you've got a kitty fucktoy of your own [one of]we can play again[or]you and my master can share[or]you'd like to meet him[or]you can watch us play together[at random][if Cunt Depth of Player > 24].' The rather damp ocelot pads away slowly, working to groom his face with a paw to both settle his fur and taste more of your juices[else if Cunt Depth of Player > 15].' The somewhat damp ocelot pads away slowly, working to groom his face with a paw to both settle his fur and taste more of your juices[else].' The somewhat scruffy ocelot pads away slowly, working to groom his muzzle with a paw to both settle his fur and taste more of your juices[end if].";
 
-
 to say ocelotloss_bt_j2:	[sub on dom - jerk]
 	say "     Seeking to have some fun with the [if scalevalue of Player > 2]smaller[else]small[end if] ocelot, you turn him over to lie across your lap while you stroke and pump at his cock. He mewls and moans in pleasure at this attention, very responsive to your every touch. Getting more and more into the mood, you playfully tease the kitty, smiling as he squirms in your lap every time you switch to a new spot or a new motion[if anallevel is 3]. And shivers of delight the little playtoy gives when you press a finger into his bottom, apparently already slick with lube, are a joy to behold[end if]. While you'd initially just wanted to get him off so you could go, you find yourself taking your time, wanting to enjoy this to the fullest.";
 	say "     He turns out to be a very eager and obedient kitty, listening to your every request and obeying your every whim as you play with him. His cute cock throbs and dribbles with precum, stiff with arousal but never going off early despite his obvious excitement[if Nipple Count of Player > 0 and Breast Size of Player > 0]. Petting his head and complimenting him being such an enjoyable plaything, you shift him in your lap and guide his small muzzle to your bosom, letting him lick, kiss and suck at your nipples[else]. Petting his head and complimenting being such an enjoyable plaything, you scritch the kitty's ears and work his cock all the harder[end if]. It makes you wish he was yours, but he's clearly already got an owner who's trained him well. You'll just have to find another to keep, then.";
 	say "     Eventually you can't wait any longer and, pulling out all the stops, you give him permission to cum. The kitty, mewling, moaning and purring after holding back for so long, cries out in pleasure and unleashes many spurts of white cum across his spotted tummyfur[if anallevel is 3]. Rubbing at his prostate, you[else]. You[end if] stroke and squeeze at his cock until he's fully drained, making quite the mess of himself. Several shots even flew far enough to splatter across his face. You, after such a long and intense session, are left feeling a little worn out, but very fulfilled. You give the kitty a kiss, a pat on the rear and send him on his way. '[one of]I need to get back to my master[or]I'd best hurry back to my master[or]I should go find my master[or]I can't wait to tell my master all about this. I have to go find him[at random],' he purrs. 'Maybe once you've got a kitty fucktoy of your own [one of]we can play again[or]you and my master can share[or]you'd like to meet him[or]you can watch us play together[at random][if Cunt Depth of Player > 15].' The somewhat damp ocelot pads away slowly, working to groom his face with a paw to both settle his fur and taste more of your juices[else].' The cum-streaked kitty sets to grooming himself with his paw, purring softly as he licks up the swipes of cum. Noticing some of his tasty cum on your hand, you lick your fingers clean while lying back on the ground for a moment.";
-
 
 to say losetoocelot_ld:
 	choose row MonsterID from the Table of Random Critters;
@@ -181,16 +172,11 @@ to say losetoocelot_ld:
 			else:	[oral]
 				say "[ocelotloss_bt_o1]";
 
-
-
-
-
 to say beattheocelot:
 	if ocelotsize is 0:
 		say "[beattheocelot_bt]";
 	else:
 		say "[beattheocelot_ld]";
-
 
 to say beattheocelot_bt:
 	choose row MonsterID from the Table of Random Critters;
@@ -281,34 +267,8 @@ to say beattheocelot_bt:
 			LineBreak;
 			say "     Resisting the urge to play with this kitty slut, you shake him off your leg and [if ocelotchoice is 2]give him a hard swat on the rear[else]push him away with your foot[end if]. You warn him to stay away from you in the future. He runs off with a frightened mewl.";
 
-
 to say beattheocelot_ld:
 	say "...";
-
-
-to say ocelotdesc:
-	setmongender 3; [creature is male]
-	choose row MonsterID from the Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Male";
-	now ocelotsize is 0; [only small one for now]
-	say "     You are [one of]surprised[or]startled[at random] by a small, speedy feline running out from cover. Finding himself [one of]confronted[or]blocked[at random] by you, he stops and bares his claws. This small fellow is short and slender, maybe around five feet tall. His golden-brown fur is beautifully spotted and striped, lighter at the belly, though densely filled with black spots there are well. The ocelot is wearing a black leather harness, collar, cuffs and a codpiece over what seems to be an average-sized package. In it, he looks like someone's boytoy kitty slave. He shifts from foot to foot, preparing to strike.";
-	let debit be 0;
-	if HardMode is true and level of Player > 3, let debit be level of Player - 3; [one level behind player]
-	now HP entry is 22 + ( debit * 3 );
-	now monsterHP is 22 + ( debit * 3 );
-	now wdam entry is 5 + ( debit / 3 );
-	now lev entry is 2 + debit;
-	now str entry is 8;
-	now dex entry is 19 + (debit / 4);
-	now sta entry is 8;
-	now per entry is 12;
-	now int entry is 10;
-	now cha entry is 14;
 
 [  --coming soon
 	choose row MonsterID from the Table of Random Critters;
@@ -355,12 +315,40 @@ to say ocelotattack:
 	else:
 		say "The [one of]ocelot[or]kitty dom[or]hefty feline[or]pudgy kitty[or]feline leather daddy[or]big ocelot[at random] [one of]charges at you, claws flashing![or]swings at you, claws bared![or]gives you a solid punch![or]moves in close and gives you a rather distracting grope.[or]moves in close and gives your ass a very hard swat![at random]";
 
-
 to say leghit:
 	say "[one of]ankle[or]calf[or]thigh[or]hip[purely at random]";
 
-
 Section 2 - Creature Insertion
+
+to say ocelotdesc:
+	say "     You are [one of]surprised[or]startled[at random] by a small, speedy feline running out from cover. Finding himself [one of]confronted[or]blocked[at random] by you, he stops and bares his claws. This small fellow is short and slender, maybe around five feet tall. His golden-brown fur is beautifully spotted and striped, lighter at the belly, though densely filled with black spots there are well. The ocelot is wearing a black leather harness, collar, cuffs and a codpiece over what seems to be an average-sized package. In it, he looks like someone's boytoy kitty slave. He shifts from foot to foot, preparing to strike.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Ocelot"	"[PrepCombat_Ocelot]"
+
+to say PrepCombat_Ocelot:
+	setmongender 3; [creature is male]
+	choose row MonsterID from the Table of Random Critters;
+	if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
+	now ocelotsize is 0; [only small one for now]
+	let debit be 0;
+	if HardMode is true and level of Player > 3, let debit be level of Player - 3; [one level behind player]
+	now HP entry is 22 + ( debit * 3 );
+	now monsterHP is 22 + ( debit * 3 );
+	now wdam entry is 5 + ( debit / 3 );
+	now lev entry is 2 + debit;
+	now str entry is 8;
+	now dex entry is 19 + (debit / 4);
+	now sta entry is 8;
+	now per entry is 12;
+	now int entry is 10;
+	now cha entry is 14;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

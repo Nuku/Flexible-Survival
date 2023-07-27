@@ -135,7 +135,7 @@ TwistedCapacity of Horus is false. [Twisted Characters can take any penetration,
 Sterile of Horus is true. [steriles can't knock people up]
 MainInfection of Horus is "".
 Description of Horus is "[HorusDesc]".
-Conversation of Horus is { "<This is nothing but a placeholder!>" }.
+Conversation of Horus is { "<This is nothing but a Destabilizing Mutant!>" }.
 The scent of Horus is "     Horus gives off the pleasant smell of a wonderful summer day, with the sun shining softly onward. Under it is a vague hint of an airy scent with a tinge of an earthy one.".
 
 to say HorusDesc:
@@ -344,7 +344,7 @@ AnalVirgin of Zerbo is true.
 PenileVirgin of Zerbo is false.
 SexuallyExperienced of Zerbo is true.
 Description of Zerbo is "[ZerboDesc]".
-Conversation of Zerbo is { "<This is nothing but a placeholder!>" }.
+Conversation of Zerbo is { "<This is nothing but a Destabilizing Mutant!>" }.
 The scent of Zerbo is "     Zerbo smells like electricity and chemicals, a combination which to you is a bit odd, but it probably fits the guy.".
 
 to say ZerboDesc:
@@ -715,6 +715,12 @@ to say Destabilizing Mutant Loses:
 to say Destabilizing Mutant Desc:
 	say ""; [for now]
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Destabilizing Mutant"	"[PrepCombat_Destabilizing Mutant]"
+
+to say PrepCombat_Destabilizing Mutant:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -891,6 +897,13 @@ to say Destabilizing Mass Loses:
 
 to say Destabilizing Mass Desc:
 	say ""; [for now]
+	
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Destabilizing Mass"	"[PrepCombat_Destabilizing Mass]"
+
+to say PrepCombat_Destabilizing Mass:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -1068,6 +1081,13 @@ to say GnomeWins:
 	say "";
 
 to say GnomeDesc:
+	say "";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Gnome"	"[PrepCombat_Gnome]"
+
+to say PrepCombat_Gnome:
 	say "";
 
 Table of Random Critters (continued)

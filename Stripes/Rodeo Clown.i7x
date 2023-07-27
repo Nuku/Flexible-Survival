@@ -5,10 +5,8 @@ Version 1 of Rodeo Clown by Stripes begins here.
 Section 1 - Creature Responses
 
 to say rodeoclowndesc:
-	setmongender 5; [creature is herm]
 	say "     Coming towards you is a very strange-looking person. With a face covered in greasepaint and brightly colored clothes and a stetson, they look at first glance like a rodeo clown. But things just don't quite seem right. Details quickly pile up to make it clear that they're not a regular rodeo clown bullfighter. The most obvious is the large, F-cup breasts and the smaller, but still noticeable bulge in the crotch of the dusty, baggy overalls. There's also the way she walks with arms and legs that flex and bend in arches rather than at a fixed joint. Her face, you can see when she draws closer to you, is not actually painted with make-up, but naturally has a clown's colorful markings to make it brighter and her exposed skin is a little too pink and smooth to quite be normal. Her clothes as well, it seems, are not really clothes at all, but somehow also a part of her.";
 	say "     When she notice you, she start running towards you, waving her flexible arms in the air, whooping and hollering to get your attention, almost annoyingly so. 'Woo! Woo! Here Bossy! Here Bossy! Come git me!' she calls out, taunting you to charge at her like a bull. While mostly an annoyance, she's making far too much noise, so you'd best deal with her before anything else notices the ruckus.";
-
 
 to say losetorodeoclown:
 	if HP of Player > 0:		[SUBMIT]
@@ -29,7 +27,6 @@ to say losetorodeoclown:
 			say "     Too weak to resist further and somehow starting to long for it, you are pushed onto all fours and she climbs atop you, driving her hard cock into your cunt, making you moan. She grips your shoulders firmly and pounds into you good and hard, making you moan again and again at the pounding you're getting. Pulling her cowboy hat off, she waves it in the air with yells of 'Woo-doggy!' and 'Ride [']em hard!' Your pussy quivers around her cock, cumming several times before she finally drives deep inside you and unleashes her hot load, painting your inner walls and womb with her cum. Finished, she pulls out of you and you collapse onto your side, thoroughly worn out after the fight and the victory ride afterwards. As you're passing you, you see the pleased rodeo clown walking off with a bow-legged swagger.[impregchance]";
 		else:
 			say "     Too weak to resist further and somehow starting to long for it, you are pushed onto all fours and she climbs atop you, driving her hard cock into your ass, making you moan. She grips your shoulders firmly and pounds into you good and hard, making you moan again and again at the pounding you're getting. Pulling her cowboy hat off, she waves it in the air with yells of 'Woo-doggy!' and 'Ride [']em hard!' Your anus squeezes and clenches around her cock as you cum a few times before she finally drives deep inside you and unleashes her hot load, painting your bowels with her cum. Finished, she pulls out of you and you collapse onto your side, thoroughly worn out after the fight and the victory ride afterwards. As you're passing you, you see the pleased rodeo clown walking off with a bow-legged swagger.[impregchance]";
-
 
 to say beattherodeoclown:
 	if Player is male:
@@ -55,8 +52,14 @@ to say beattherodeoclown:
 			if "Cold Fish" is listed in feats of Player, decrease Libido of Player by a random number between 0 and 2;
 			if Libido of Player > 100, now Libido of Player is 100;
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Rodeo Clown"	"[PrepCombat_Rodeo Clown]"
+
+to say PrepCombat_Rodeo Clown:
+	setmongender 5; [creature is herm]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

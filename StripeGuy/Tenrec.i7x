@@ -85,11 +85,17 @@ To say Tenrec LossOral:
 	else:
 		CreatureSexAftermath "Tenrec" receives "OralCock" from "Player";
 
+Section 2 - Creature Insertion
+
 to say TenrecDesc:
-	setmongender 3;
 	say "     A common sight around the warehouses and docks is the otter-shrew, a common member of the tenrec family. So named for their appearance of a stretched out otter crossed somewhere with a shrew, they distinguish themselves with a long vertically flattened tail they use to swim like an alligator. Between their love of the water and ability to fish, it is no surprise that crews of them operate night and day to harvest fish from the coastal waters. This one isn't working, though, and from his unbuttoned yellow coat and leaking cock, you've an idea for what he's out to catch. [one of]'Ah. My first catch of the day,' [or]'You don't want to writhe on a hook, hrm? I've got something better for you,' [or]'There can be some good trade for a bit of fish, if you like,' [or]'Whore ho! It's nautical humor. No?' [or]'Fancy that, looks like I don't need a net to catch you,' [or]'Not to imply I'm out to press gang, but we could use some more crewmates. Join us,' [or]'No use trying to run, darlin[']. You're on my line,' [at random]he chuffs quietly, opening his coat fully and taking off his hat before moving in to attack!";
 
-Section 2 - Creature Insertion
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Tenrec"	"[PrepCombat_Tenrec]"
+
+to say PrepCombat_Tenrec:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

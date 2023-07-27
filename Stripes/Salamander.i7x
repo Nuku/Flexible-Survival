@@ -6,11 +6,6 @@ Version 2 of Salamander by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say salamanderdesc:
-	setmongender 4; [creature is female]
-	say "     The salamander creature before you is a mix of animal and human body, with a definitively female form. Her body is especially effeminate, with wide hips, thighs, and a thin waist that clamors for attention. Her breasts are quite modest, being pert B-cups. Her arms and legs look quite human, but flex a little more than normal, making her seem sinuous and agile. Her fingers and toes terminate in small, dark claws. She possesses a flat, wide head with a mouth full of diminutive teeth. She has a long, narrow, fleshy tail mounted atop her soft and squishy ass cheeks. Making no effort to hide it, you can also see her moderately large pussy between her legs, wet and waiting.";
-	say "     Her smooth skin is a rich red color with yellow and black speckling, predominantly across her breasts and extremities. A shimmer of intense heat radiates from it intensely enough to make the air ripple around her. It seems the nanites have jumbled the old myths of salamanders with its amphibian nature, making this creature into one suitable for two environments, on land and in lava.";
-
 to say losetosalamander:
 	if vorelevel is 3 and scalevalue of Player < 4 and (a random chance of 1 in 4 succeeds or (Player is kinky and a random chance of 1 in 3 succeeds)):
 		if HP of Player > 0:
@@ -36,8 +31,18 @@ to say losetosalamander:
 to say beatthesalamander:
 	say "     Your final blow sends the slender creature stumbling back. The hot aura around her wavers as she's unable to maintain it any longer. She blows you a big, messy raspberry with her elongated tongue and runs off.";
 
-
 Section 2 - Creature Insertion
+
+to say salamanderdesc:
+	say "     The salamander creature before you is a mix of animal and human body, with a definitively female form. Her body is especially effeminate, with wide hips, thighs, and a thin waist that clamors for attention. Her breasts are quite modest, being pert B-cups. Her arms and legs look quite human, but flex a little more than normal, making her seem sinuous and agile. Her fingers and toes terminate in small, dark claws. She possesses a flat, wide head with a mouth full of diminutive teeth. She has a long, narrow, fleshy tail mounted atop her soft and squishy ass cheeks. Making no effort to hide it, you can also see her moderately large pussy between her legs, wet and waiting.";
+	say "     Her smooth skin is a rich red color with yellow and black speckling, predominantly across her breasts and extremities. A shimmer of intense heat radiates from it intensely enough to make the air ripple around her. It seems the nanites have jumbled the old myths of salamanders with its amphibian nature, making this creature into one suitable for two environments, on land and in lava.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Salamander"	"[PrepCombat_Salamander]"
+
+to say PrepCombat_Salamander:
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

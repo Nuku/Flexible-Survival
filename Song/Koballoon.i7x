@@ -13,29 +13,6 @@ KoballoonMet is a number that varies. KoballoonMet is usually 0.
 KoballoonLossCounter is a number that varies. KoballoonLossCounter is usually 0.
 KoballoonHyperTracker is a number that varies. KoballoonHyperTracker is usually 0.
 
-to say KoballoonDesc:
-	if KoballoonMet is 0:
-		say "     From one side, you hear a faint but increasing sound, like that of a large ball bouncing toward you. As you warily look that way, the bouncing is joined by another from a different direction, and then again from several others still. Surrounded, you take a wary stance and await whatever their sources are, but you aren't quite ready for just what has found you.";
-		say "     Bounding up comes a small gang of colorful, lizard-like creatures with rubbery hides, and they are definitely among the most extreme transformations you've seen. These little guys are each only about three feet tall, but rather than walk, they sit their very plush bottoms upon their massively inflated ballsacks. They use the latter like space hoppers and bounce in leaps of a several feet at a time. To go with these giant balls, they have equally big cocks that flop and slap against their rubbery pouches with each bound, keeping them semi-hard from the stimulation.";
-		say "     While individually, these odd kobolds don't look like they'd be much trouble to deal with given their size, there are about a half-dozen of them in their group. Their numbers and the fact that they've encircled you [if level of Player < 10]puts them at an[else]does give them some[end if] advantage. You try to sound confident, telling them that you don't want any trouble and to let you pass, but they pay your words no heed.";
-		WaitLineBreak;
-		if mdasslevel > 0:
-			say "     'Yes, this is the one I'd spotted with our former mistress. She has taken a liking to this one. We could use [ghim],' one says as he bounces in place.";
-			say "     Another grins and bounds in a ring around you from a couple yards away. 'I can see why she has. Looks like a fun ride, I'd say.'";
-		else:
-			say "     'This one looks promising. What do you think?' one says with a happy laugh as he bounces in place.";
-			say "     'Just the sort of thing that she likes,' another replies as he bounds in a ring around you from a couple yards away. 'Looks like a fun ride, I'd say.'";
-		say "     'Shall we give [ghim] a test bounce, boys?' a third asks. Not waiting for a response, he springs toward you with a lustful grin. The others all follow suit, trying to mob you beneath their bounding rubber bodies.";
-		increase KoballoonMet by 1;
-	else if KoballoonMet is 1:
-		say "     You hear the sounds of approaching bouncing, again coming from several directions at once. You're not sure how these rubbery kobolds have managed to home in on you, as they certainly seem too noisy to have snuck up and surround you. Regardless, you are soon encircled by a little group of the horny hoppers. You [if weapon object of Player is journal]raise your fists[else]ready your weapon[end if] while looking the strange mob of mutants over, taking this opportunity to get a better look at them.";
-		say "     The small lizard-like creatures are each only about three feet tall, but sit upon their inflated ballsacks. Their scrotums are so big that their three-toed feet barely touch the ground when leaning in one direction to do so. They hardly do though, seeming to prefer to remain bouncing in place rather than stay still, and from the way their big cocks keep slapping pleasurably against those air-filled orbs with every bounce, it's easy to see why.";
-		say "     Tearing your eyes away from that strangely tempting sight, you look over the rest of their forms. On the whole, they're small, spindly creatures with a mix of draconic features. While it seems that they have a scaly hide at an initial glance, it's actually made of thick rubber that's lightly textured, somewhat like a sports ball. They come in a variety of colors - reds, yellows, oranges, blues, and greens being the most common among those you've seen. Their muzzles come in a variety of draconic shapes with lizard-like tongues, frilled ears, and short horns. These horns have a slight backward curve to them and seem just the right size to grab as handholds. Speaking of hands, theirs have only four nimble digits. Their butts are quite plump, probably as padding for bouncing on their balls, and they have a thick lizard tail attached above their stretchy assholes.";
-		increase KoballoonMet by 1;
-	else:
-		say "     You hear the familiar sound of bouncing balls approaching [one of]from all around you[or]from several directions[or]toward you en masse from behind before spreading out[as decreasingly likely outcomes]. You ready yourself for another encounter with those rubber kobold creatures, raising your [if weapon object of Player is journal]fists[else]weapon[end if] while looking the strange mob of mutants over.";
-		say "     The colorful rubber kobolds bounce about on their inflated ballsacks, using them as space hoppers. Their large cocks slap against those hyper balloon balls of theirs as they bound around you, further arousing them. Some giggle, some joke with one another, and one even licks his lizard-like tongue [one of]across his dribbling glans[or]across his draconic muzzle[or]along a finger lewdly[or]under his dick's rubbery foreskin[at random] while they amuse themselves before attacking. Again, you find yourself being mobbed by about ten or so bouncing, laughing koballoons.";
-
 to say LoseToKoballoon:
 	if SkinName of Player is listed in infections of LatexList and a random chance of 1 in 3 succeeds and KoballoonLossCounter > 2: [Player is fucked and inflated into a perverted balloon. Potential bad end!]
 		if HP of Player > 0:
@@ -403,6 +380,36 @@ to KoballoonSexBadEnd:
 		end the story saying "You have given in to the koballoons and become their Rubber Drake leader.";
 
 Section 2 - Creature Insertion
+
+to say KoballoonDesc:
+	if KoballoonMet is 0:
+		say "     From one side, you hear a faint but increasing sound, like that of a large ball bouncing toward you. As you warily look that way, the bouncing is joined by another from a different direction, and then again from several others still. Surrounded, you take a wary stance and await whatever their sources are, but you aren't quite ready for just what has found you.";
+		say "     Bounding up comes a small gang of colorful, lizard-like creatures with rubbery hides, and they are definitely among the most extreme transformations you've seen. These little guys are each only about three feet tall, but rather than walk, they sit their very plush bottoms upon their massively inflated ballsacks. They use the latter like space hoppers and bounce in leaps of a several feet at a time. To go with these giant balls, they have equally big cocks that flop and slap against their rubbery pouches with each bound, keeping them semi-hard from the stimulation.";
+		say "     While individually, these odd kobolds don't look like they'd be much trouble to deal with given their size, there are about a half-dozen of them in their group. Their numbers and the fact that they've encircled you [if level of Player < 10]puts them at an[else]does give them some[end if] advantage. You try to sound confident, telling them that you don't want any trouble and to let you pass, but they pay your words no heed.";
+		WaitLineBreak;
+		if mdasslevel > 0:
+			say "     'Yes, this is the one I'd spotted with our former mistress. She has taken a liking to this one. We could use [ghim],' one says as he bounces in place.";
+			say "     Another grins and bounds in a ring around you from a couple yards away. 'I can see why she has. Looks like a fun ride, I'd say.'";
+		else:
+			say "     'This one looks promising. What do you think?' one says with a happy laugh as he bounces in place.";
+			say "     'Just the sort of thing that she likes,' another replies as he bounds in a ring around you from a couple yards away. 'Looks like a fun ride, I'd say.'";
+		say "     'Shall we give [ghim] a test bounce, boys?' a third asks. Not waiting for a response, he springs toward you with a lustful grin. The others all follow suit, trying to mob you beneath their bounding rubber bodies.";
+		increase KoballoonMet by 1;
+	else if KoballoonMet is 1:
+		say "     You hear the sounds of approaching bouncing, again coming from several directions at once. You're not sure how these rubbery kobolds have managed to home in on you, as they certainly seem too noisy to have snuck up and surround you. Regardless, you are soon encircled by a little group of the horny hoppers. You [if weapon object of Player is journal]raise your fists[else]ready your weapon[end if] while looking the strange mob of mutants over, taking this opportunity to get a better look at them.";
+		say "     The small lizard-like creatures are each only about three feet tall, but sit upon their inflated ballsacks. Their scrotums are so big that their three-toed feet barely touch the ground when leaning in one direction to do so. They hardly do though, seeming to prefer to remain bouncing in place rather than stay still, and from the way their big cocks keep slapping pleasurably against those air-filled orbs with every bounce, it's easy to see why.";
+		say "     Tearing your eyes away from that strangely tempting sight, you look over the rest of their forms. On the whole, they're small, spindly creatures with a mix of draconic features. While it seems that they have a scaly hide at an initial glance, it's actually made of thick rubber that's lightly textured, somewhat like a sports ball. They come in a variety of colors - reds, yellows, oranges, blues, and greens being the most common among those you've seen. Their muzzles come in a variety of draconic shapes with lizard-like tongues, frilled ears, and short horns. These horns have a slight backward curve to them and seem just the right size to grab as handholds. Speaking of hands, theirs have only four nimble digits. Their butts are quite plump, probably as padding for bouncing on their balls, and they have a thick lizard tail attached above their stretchy assholes.";
+		increase KoballoonMet by 1;
+	else:
+		say "     You hear the familiar sound of bouncing balls approaching [one of]from all around you[or]from several directions[or]toward you en masse from behind before spreading out[as decreasingly likely outcomes]. You ready yourself for another encounter with those rubber kobold creatures, raising your [if weapon object of Player is journal]fists[else]weapon[end if] while looking the strange mob of mutants over.";
+		say "     The colorful rubber kobolds bounce about on their inflated ballsacks, using them as space hoppers. Their large cocks slap against those hyper balloon balls of theirs as they bound around you, further arousing them. Some giggle, some joke with one another, and one even licks his lizard-like tongue [one of]across his dribbling glans[or]across his draconic muzzle[or]along a finger lewdly[or]under his dick's rubbery foreskin[at random] while they amuse themselves before attacking. Again, you find yourself being mobbed by about ten or so bouncing, laughing koballoons.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Koballoon"	"[PrepCombat_Koballoon]"
+
+to say PrepCombat_Koballoon:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

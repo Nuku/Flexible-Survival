@@ -7,17 +7,6 @@ Section 1 - Creature Responses
 
 notrashcoonsex is a number that varies.
 
-to say trashcoondesc:
-	setmongender 4; [creature is female]
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Female";
-	say "     As you wander along, a [one of]large dumpster opens up[or]mound of trash shifts[or]pile of garbage bags tumble over[at random], revealing a large, female raccoon underneath. Her nimble paws brush over one another as she stares at you with bright eyes within her dark mask. This large, scruffy raccoon woman has dirty fur and nothing else on to cover her heavy-set body. Her wide hips and ample breasts are plain to see, as is the wet pussy between her legs. She has a strong odor about her, a mix of arousal and trash from her recent dumpster diving.";
-
 to say losetotrashcoon:
 	now notrashcoonsex is 0;
 	say "     The big coon laughs merrily as she grabs you and tosses you to the ground. She pulls out a bottle of dirty water from where she was rummaging around in the trash. As she strides back towards you, she fastidiously washes her paws with the water, then pushes you back down and brings her damp paws to your ";
@@ -60,6 +49,23 @@ to say beatthetrashcoon:
 
 
 Section 2 - Creature Insertion
+
+to say trashcoondesc:
+	say "     As you wander along, a [one of]large dumpster opens up[or]mound of trash shifts[or]pile of garbage bags tumble over[at random], revealing a large, female raccoon underneath. Her nimble paws brush over one another as she stares at you with bright eyes within her dark mask. This large, scruffy raccoon woman has dirty fur and nothing else on to cover her heavy-set body. Her wide hips and ample breasts are plain to see, as is the wet pussy between her legs. She has a strong odor about her, a mix of arousal and trash from her recent dumpster diving.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Trash Coon"	"[PrepCombat_Trash Coon]"
+
+to say PrepCombat_Trash Coon:
+	setmongender 4; [creature is female]
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Female";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

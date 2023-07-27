@@ -5,10 +5,6 @@ Version 1 of Prairie Dog by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say prairiedogdesc:
-	setmongender 15; [creatures are herm]
-	say "     You hear a squeaking, barking sound coming from behind you and turn around, but find nothing there. Soon there are others all around you as the call is answered. Still seeing nothing, you try to continue on only to have your legs sink into a hole in the ground. More holes open up around you as prairie dog creatures emerge from the earth. The sandy, brown rodents are larger than normal and are about three feet tall and walk on their hind legs. Some have found toy hard hats, bandanas or small shovels to use, but most are nude save for their fur. Their breasts seem quite large on their small bodies, as do their swollen sheaths and balls. As you are pulling yourself out of the hole, they charge to attack you!";
-
 to say losetoprairiedog:
 	say "     Beaten, the prairie dogs swarm over you, pulling you to the dusty ground. They grope, fondle and tease you all over, rubbing their furry bodies over yours. One pushes her human-sized cock into your mouth while others start stroking and pumping at theirs. ";
 	if Cock Count of Player > 1: [male, herm]
@@ -47,6 +43,16 @@ to say beattheprairiedog:
 	say "     After smacking around the prairie dog horde, they eventually have enough and retreat back underground, taking their wounded with them. The holes they came out of close up behind them quickly, as if they had never been.";
 
 Section 2 - Creature Insertion
+
+to say prairiedogdesc:
+	say "     You hear a squeaking, barking sound coming from behind you and turn around, but find nothing there. Soon there are others all around you as the call is answered. Still seeing nothing, you try to continue on only to have your legs sink into a hole in the ground. More holes open up around you as prairie dog creatures emerge from the earth. The sandy, brown rodents are larger than normal and are about three feet tall and walk on their hind legs. Some have found toy hard hats, bandanas or small shovels to use, but most are nude save for their fur. Their breasts seem quite large on their small bodies, as do their swollen sheaths and balls. As you are pulling yourself out of the hole, they charge to attack you!";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Prairie Dog"	"[PrepCombat_Prairie Dog]"
+
+to say PrepCombat_Prairie Dog:
+	setmongender 15; [creatures are herm]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

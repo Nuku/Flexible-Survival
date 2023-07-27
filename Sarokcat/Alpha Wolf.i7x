@@ -11,16 +11,6 @@ Alpha Wolfdefeat is a number that varies.
 AlphaWolfBeaten is a number that varies.
 AlphaWolfReplaced is a truth state that varies. AlphaWolfReplaced is usually false.
 
-to say AlphaWolfdesc:
-	project the Figure of AlphaWolf_naked_icon;
-	setmongender 3; [creature is male]
-	say "     Sauntering through the forest towards you, a large male wolf pads on all fours, his thick black fur gleaming in the light. Spying you, he quickly raises himself up onto his digitigrade legs, a feral grin crossing his muzzle as his new upright stance reveals his semi-erect canine cock for all to see. '[one of]Oh look, a chew toy for me to play with[or]Hmm now the question is, will you submit to the packleader with or without a struggle? Either way sounds fun to me[or]I can't wait to see you on all fours beneath me[at random],' he says, dominance rolling off of him in waves[if AlphaWolfReplaced is true]. While similar to the alpha wolf you've seen before, this one is clearly a different one. Whether that means the last one had his position usurped or if this is a new pack entirely is unclear, it seems this new alpha's just as confidence of his success[else], making you shudder as you realize you have definitely managed to encounter an alpha wolf[end if].";
-	if AlphaWolfReplaced is true:			[reset for new alpha wolf]
-		now AlphaWolfReplaced is false;
-		now AlphaWolfBeaten is 0; [wins over alpha reset]
-		now Alpha Wolfdefeat is 0; [defeats for the player reset]
-
-
 to say Alpha Wolf attack:
 	project the Figure of AlphaWolf_hard_icon;
 	if Alpha Wolfdefeat is 0: [ first time losing to a wolf ]
@@ -162,6 +152,21 @@ to say AlphaWolfSex3:
 	LibidoBoost 15;
 
 Section 2 - Creature Insertion
+
+to say AlphaWolfdesc:
+	say "     Sauntering through the forest towards you, a large male wolf pads on all fours, his thick black fur gleaming in the light. Spying you, he quickly raises himself up onto his digitigrade legs, a feral grin crossing his muzzle as his new upright stance reveals his semi-erect canine cock for all to see. '[one of]Oh look, a chew toy for me to play with[or]Hmm now the question is, will you submit to the packleader with or without a struggle? Either way sounds fun to me[or]I can't wait to see you on all fours beneath me[at random],' he says, dominance rolling off of him in waves[if AlphaWolfReplaced is true]. While similar to the alpha wolf you've seen before, this one is clearly a different one. Whether that means the last one had his position usurped or if this is a new pack entirely is unclear, it seems this new alpha's just as confidence of his success[else], making you shudder as you realize you have definitely managed to encounter an alpha wolf[end if].";
+	if AlphaWolfReplaced is true:			[reset for new alpha wolf]
+		now AlphaWolfReplaced is false;
+		now AlphaWolfBeaten is 0; [wins over alpha reset]
+		now Alpha Wolfdefeat is 0; [defeats for the player reset]
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Alpha Wolf"	"[PrepCombat_Alpha Wolf]"
+
+to say PrepCombat_Alpha Wolf:
+	setmongender 3; [creature is male]
+	project the Figure of AlphaWolf_naked_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

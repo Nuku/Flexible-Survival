@@ -18,14 +18,6 @@ Humanities of Wukong:
 Section 1 - Creature Responses
 
 to say MonkeyKingdesc:
-	setmongender 3; [creature is male]
-	choose row MonsterID from the Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Male";
 	if Resolution of Monkey Duel is 1:
 		say "     You are once again in the Asian wing of the Museum, when you hear a meek voice coming from nearby. 'Ah. It's-it's you.' Wukong comes out in the open hesitantly, tugging at his uncomfortable collar. 'S-stay away from me. If the master learns that I fought without his permission again, I will be punished.'";
 	else if Loyalty of Wukong is 1:
@@ -133,6 +125,20 @@ to say beattheMonkeyKing:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Monkey"	"[PrepCombat_Monkey]"
+
+to say PrepCombat_Monkey:
+	setmongender 3; [creature is male]
+	choose row MonsterID from the Table of Random Critters;
+	if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -596,7 +602,7 @@ object	name
 Wukong	"Wukong"
 
 Wukong is a person. Wukong is in Nowhere. Description of Wukong is "[wukongDesc]".
-Conversation of Wukong is { "<Placeholder>" }.
+Conversation of Wukong is { "<Monkey>" }.
 
 to say wukongDesc:
 	if Resolution of Monkey Duel is 1:
