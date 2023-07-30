@@ -28,6 +28,10 @@ When Play begins:
 	add "Anthro Dragoness" to infections of OviImpregnatorList;
 	add "Anthro Dragoness" to infections of TailweaponList;
 
+Table of CombatPrep
+name(text)	PrepFunction(text)
+with 1 blank rows
+
 Part 3 - Table of New Infection Parts (+Expansion of the Initial Infection above)
 
 Table of New Infection Parts
@@ -47,7 +51,7 @@ Part 5 - Slut Storage
 [PaymentType 1 = Player has to pay 1 bottle/week]
 
 Table of StoredSluts
-Name(text)	PaymentType(number)	WhoredOut(truth state)	Resistant(truth state)	Constraints(truth state)	Sluttyness(number)	ProgressPercentage(number)	Sexcount(number)
+Name(text)	PaymentType(number)	WhoredOut(truth state)	Resistant(truth state)	Constraints(truth state)	Sluttyness(number)	ProgressPercentage(number)	SexCount(number)
 with 1000 blank rows
 
 [
@@ -194,6 +198,7 @@ Name(text)	Type(text)
 "leoparklist"	"list of numbers"
 "mrevents"	"list of numbers"
 "pfpclist"	"list of numbers"
+"velospostmusings"	"list of numbers"
 "Childrenbodies"	"list of text"
 "Childrenfaces"	"list of text"
 "Childrenskins"	"list of text"
@@ -272,6 +277,7 @@ Name(text)	Type(text)
 "AxelRelationship"	"number"
 "AzraelRelationship"	"number"
 "balloversize"	"number"
+"bananapeeled"	"number"
 "bargainbinusagetotal"	"number"
 "BarnabasRelationship"	"number"
 "BarryFurSuspicion"	"number"
@@ -299,6 +305,7 @@ Name(text)	Type(text)
 "BoghrimMet"	"number"
 "bonelust"	"number"
 "bonusattack"	"number"
+"bookfound"	"number"
 "boosterfeats"	"number"
 "bopdefeated"	"number"
 "bopsongcount"	"number"
@@ -478,6 +485,9 @@ Name(text)	Type(text)
 "DoranRPRevealRegard"	"number"
 "DoranSelfBlueballing"	"number"
 "DoranTitModStatus"	"number"
+"DoranVoreDischarge"	"number"
+"DoranVoreDuration"	"number"
+"DoranVoreStatus"	"number"
 "dragonessfuck"	"number"
 "dragontaurcatch"	"number"
 "dragontype"	"number"
@@ -528,6 +538,7 @@ Name(text)	Type(text)
 "FangWS"	"number"
 "fashionfight"	"number"
 "featgained"	"number"
+"Featqualified"	"number"
 "featunlock"	"number"
 "Feline_attached"	"number"
 "Feline_encountered"	"number"
@@ -688,6 +699,8 @@ Name(text)	Type(text)
 "hpM of Sylvia"	"number"
 "hsrp"	"number"
 "huntfeat"	"number"
+"hvorecount"	"number"
+"hvorelevel"	"number"
 "hydraheadcount"	"number"
 "hydramaulcount"	"number"
 "hyenaintel"	"number"
@@ -1018,6 +1031,7 @@ Name(text)	Type(text)
 "NadiaPregCounter2"	"number"
 "NadiaPregCounter3"	"number"
 "NadiaPregVisibility"	"number"
+"nanitemeter"	"number"
 "NatalieFucked"	"number"
 "ndmhigh"	"number"
 "NerdMeetings"	"number"
@@ -1125,6 +1139,7 @@ Name(text)	Type(text)
 "plfleebonus"	"number"
 "plhitbonus"	"number"
 "plionvic"	"number"
+"plionvored"	"number"
 "plmindbonus"	"number"
 "plnatarmor"	"number"
 "PLRLooted"	"number"
@@ -1167,8 +1182,8 @@ Name(text)	Type(text)
 "restoration"	"number"
 "riddlesphinx"	"number"
 "Riddlewin"	"number"
-"rodhosp"	"number"
 "RomanceBooksFound"	"number"
+"rondahosp"	"number"
 "rsc"	"number"
 "RTWinCounter"	"number"
 "RyanFucked"	"number"
@@ -1291,6 +1306,7 @@ Name(text)	Type(text)
 "TawnyaFurSuspicion"	"number"
 "TawnyaMotive"	"number"
 "tcopfight"	"number"
+"teddyvored"	"number"
 "TehuantlKorvinRelationship"	"number"
 "TehuantlSnowStatus"	"number"
 "TehuantlStatus"	"number"
@@ -1377,6 +1393,9 @@ Name(text)	Type(text)
 "vixcountdown"	"number"
 "vixentaurcatch"	"number"
 "vixgender"	"number"
+"vorechoice"	"number"
+"vorecount"	"number"
+"vorelevel"	"number"
 "vpostmusenum"	"number"
 "waiterhater"	"number"
 "WallStanding"	"number"
@@ -1541,6 +1560,7 @@ Name(text)	Type(text)
 "siamesegender"	"text"
 "slutname"	"text"
 "StellaNPCInt"	"text"
+"ubpreg"	"text"
 "VikingKidShape"	"text"
 "wolvloc"	"text"
 "wrbody"	"text"
