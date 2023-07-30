@@ -26,17 +26,19 @@ HermList is a flag.
 MaleList is a flag.
 TransList is a flag.
 
+CockVoreList is a tag.
 CuckList is a tag.
 IncestList is a tag.
 MindcontrolList is a tag.
 NonconList is a tag.
+VoreList is a tag.
 
 The player has a list of text called WardList.
 The player has a list of text called BanList.
 
 to new ban menu:
 	let FlagList be { "Body Horror", "Furry", "Males", "Females", "Transgender", "Hermaphrodite", "Humorous", "Humanoid", "Hellspawn", "Feral"};
-	let TagList be {"Noncon", "Cuck", "Incest", "Mindcontrol"};
+	let TagList be {"Noncon", "Cuck", "Incest", "Vore", "Cockvore", "Mindcontrol"};
 	let countnumber be 1;
 	let nbmexit be 0;
 	while nbmexit is 0:
@@ -103,6 +105,8 @@ to oldflagban (flagname - text):
 	if flagname is:
 		-- "Body Horror":
 			now BodyHorrorList is banned;
+		-- "Cockvore":
+			now CockVoreList is banned;
 		-- "Furry":
 			now FurryList is banned;
 		-- "Males":
@@ -127,11 +131,15 @@ to oldflagban (flagname - text):
 			now NonconList is banned;
 		-- "Mindcontrol":
 			now MindcontrolList is banned;
+		-- "Vore":
+			now VoreList is banned;
 
 to oldflagward (flagname - text):
 	if flagname is:
 		-- "Body Horror":
 			now BodyHorrorList is not warded;
+		-- "Cockvore":
+			now CockVoreList is warded;
 		-- "Furry":
 			now FurryList is warded;
 		-- "Males":
@@ -156,11 +164,15 @@ to oldflagward (flagname - text):
 			now NonconList is warded;
 		-- "Mindcontrol":
 			now MindcontrolList is warded;
+		-- "Vore":
+			now VoreList is warded;
 
 to oldflagunban (flagname - text):
 	if flagname is:
 		-- "Body Horror":
 			now BodyHorrorList is not banned;
+		-- "Cockvore":
+			now CockVoreList is not banned;
 		-- "Furry":
 			now FurryList is not banned;
 		-- "Males":
@@ -185,11 +197,15 @@ to oldflagunban (flagname - text):
 			now NonconList is not banned;
 		-- "Mindcontrol":
 			now MindcontrolList is not banned;
+		-- "Vore":
+			now VoreList is not banned;
 
 to oldflagunward (flagname - text):
 	if flagname is:
 		-- "Body Horror":
 			now BodyHorrorList is not warded;
+		-- "Cockvore":
+			now CockVoreList is not warded;
 		-- "Furry":
 			now FurryList is not warded;
 		-- "Males":
@@ -214,5 +230,7 @@ to oldflagunward (flagname - text):
 			now NonconList is not warded;
 		-- "Mindcontrol":
 			now MindcontrolList is not warded;
+		-- "Vore":
+			now VoreList is not warded;
 
 Banning ends here.
