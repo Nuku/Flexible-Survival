@@ -1,5 +1,10 @@
 Sunbathing Gator by Voidsnaps begins here.
 
+a postimport rule:
+	if Resolution of Proper Introductions is 1 or Resolution of Proper Introductions is 2:
+		change up exit of Rocky Cliff to Lazaros's Camp;
+		change down exit of Lazaros's Camp to Rocky Cliff;
+
 Section 1 - First meeting
 
 Table of GameEventIDs (continued)
