@@ -7,9 +7,7 @@ Version 2 of Spartan by Wahn begins here.
 Section 1 - Creature Responses
 
 to say Spartan wins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else if HP of Player > 0:[player submits]
+	if HP of Player > 0:[player submits]
 		if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior" and Cunt Count of Player is 0:[Spartans, but not herms and females]
 			say "     A shocked expression on his face, the young warrior stares at you as you kneel and submit to him. Then anger clouds his features and he shouts 'Impostor! How dare you disguise yourself as one of your betters, slave. I'll teach you your place, dirty Helot!' With that, he rips the helmet off your head and throws it on the ground, its metal crumpling like it's a cheap copy and not the well-crafted helmet it was seconds before. Then he shreds your cloak, its bright red color fading as he touches it and the material ripping easily in his hands.";
 			LineBreak;
@@ -65,67 +63,64 @@ to say Spartan fucks:
 	now FuckedBySpartan is 1; [for use in the Helot infection file in the endings]
 
 to say Spartan loses:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "     Breathing hard, the young Spartan takes his helmet off and lays it on the ground in front of you. 'I am defeated. Clearly I need to train more to beat this trial.' He sighs, then lets his cloak fall to the floor too. 'Do with me what you will, it is fitting punishment for my weakness to be dominated by another.'";
-		if Player is male:[male+herm]
-			LineBreak;
-			say "     Looking over the handsome Spartan, you could either mount his cock with you on top [link](1)[as]1[end link], turn the tables and fuck him [link](2)[as]2[end link], have him blow your cock [link](3)[as]3[end link], suck him off [link](4)[as]4[end link] or just leave[link](5)[as]5[end link].";
-			now calcnumber is 0;
-			while calcnumber < 1 or calcnumber > 5:
-				say "Choice? (1-5)>[run paragraph on]";
-				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
-					break;
-				else:
-					say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] to fuck him, [link]3[end link] to get sucked, [link]4[end link] to blow him or [link]5[end link] to leave.";
-			if calcnumber is 1:[mount his cock]
-				say "[Spartan ride]";
-			else if calcnumber is 2:[fuck him in the ass]
-				say "[Spartan fucked]";
-			else if calcnumber is 3:[get sucked off]
-				say "[Spartan oral]";
-			else if calcnumber is 4:[give him a blowjob]
-				say "[Spartan blown]";
-			else:[leave]
-				say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Spartan behind.";
-		else if Player is female:[female]
-			LineBreak;
-			say "     Looking over the handsome Spartan, you could either mount his cock with you on top [link](1)[as]1[end link], let him lick your pussy [link](2)[as]2[end link], suck him off [link](3)[as]3[end link] or just leave [link](4)[as]4[end link].";
-			now calcnumber is 0;
-			while calcnumber < 1 or calcnumber > 4:
-				say "Choice? (1-4)>[run paragraph on]";
-				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-					break;
-				else:
-					say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] get licked, [link]3[end link] to blow him or [link]4[end link] to leave.";
-			if calcnumber is 1:[mount his cock]
-				say "[Spartan ride]";
-			else if calcnumber is 2:[get licked]
-				say "[Spartan oral]";
-			else if calcnumber is 3:[give him a blowjob]
-				say "[Spartan blown]";
-			else:[leave]
-				say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Spartan behind.";
-		else:[neuter]
-			LineBreak;
-			say "     Looking over the handsome Spartan, you could either mount his cock with you on top [link](1)[as]1[end link], suck him off [link](2)[as]2[end link] or just leave [link](4)[as]4[end link].";
-			now calcnumber is 0;
-			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
-				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
-					say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] to blow him or [link]3[end link] to leave.";
-			if calcnumber is 1:[mount his cock]
-				say "[Spartan ride]";
-			else if calcnumber is 2:[give him a blowjob]
-				say "[Spartan blown]";
-			else:[leave]
-				say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Spartan behind.";
+	say "     Breathing hard, the young Spartan takes his helmet off and lays it on the ground in front of you. 'I am defeated. Clearly I need to train more to beat this trial.' He sighs, then lets his cloak fall to the floor too. 'Do with me what you will, it is fitting punishment for my weakness to be dominated by another.'";
+	if Player is male:[male+herm]
+		LineBreak;
+		say "     Looking over the handsome Spartan, you could either mount his cock with you on top [link](1)[as]1[end link], turn the tables and fuck him [link](2)[as]2[end link], have him blow your cock [link](3)[as]3[end link], suck him off [link](4)[as]4[end link] or just leave[link](5)[as]5[end link].";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 5:
+			say "Choice? (1-5)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] to fuck him, [link]3[end link] to get sucked, [link]4[end link] to blow him or [link]5[end link] to leave.";
+		if calcnumber is 1:[mount his cock]
+			say "[Spartan ride]";
+		else if calcnumber is 2:[fuck him in the ass]
+			say "[Spartan fucked]";
+		else if calcnumber is 3:[get sucked off]
+			say "[Spartan oral]";
+		else if calcnumber is 4:[give him a blowjob]
+			say "[Spartan blown]";
+		else:[leave]
+			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Spartan behind.";
+	else if Player is female:[female]
+		LineBreak;
+		say "     Looking over the handsome Spartan, you could either mount his cock with you on top [link](1)[as]1[end link], let him lick your pussy [link](2)[as]2[end link], suck him off [link](3)[as]3[end link] or just leave [link](4)[as]4[end link].";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 4:
+			say "Choice? (1-4)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] get licked, [link]3[end link] to blow him or [link]4[end link] to leave.";
+		if calcnumber is 1:[mount his cock]
+			say "[Spartan ride]";
+		else if calcnumber is 2:[get licked]
+			say "[Spartan oral]";
+		else if calcnumber is 3:[give him a blowjob]
+			say "[Spartan blown]";
+		else:[leave]
+			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Spartan behind.";
+	else:[neuter]
+		LineBreak;
+		say "     Looking over the handsome Spartan, you could either mount his cock with you on top [link](1)[as]1[end link], suck him off [link](2)[as]2[end link] or just leave [link](4)[as]4[end link].";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] to blow him or [link]3[end link] to leave.";
+		if calcnumber is 1:[mount his cock]
+			say "[Spartan ride]";
+		else if calcnumber is 2:[give him a blowjob]
+			say "[Spartan blown]";
+		else:[leave]
+			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Spartan behind.";
 
 
 to say Spartan ride:
@@ -176,7 +171,6 @@ to say Spartan blown:
 	CreatureSexAftermath "Player" receives "OralCock" from "Spartan Warrior";
 
 to say SpartanDesc:
-	setmongender 3;
 	say "     You cross paths with a young man clothed in nothing but sandals, a long red cloak and a plumed Greek helmet. He holds a pretty self-confident expression as he walks up to you.";
 	if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior":
 		say "     'Welcome, brother - I see I'm not the only one selected for this test. Let us measure our strength against each other and see who is superior.'";
@@ -184,6 +178,13 @@ to say SpartanDesc:
 		say "     'Ah, a Helot. Some welcome relief for my aching balls,' he says to himself, lowering a hand to fondle them and stroke his long cock. 'Get over here, slave - I have need of you.'";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Spartan Warrior"	"[PrepCombat_Spartan Warrior]"
+
+to say PrepCombat_Spartan Warrior:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -193,10 +193,16 @@ to say panthertaur ride cowgirl:
 		now Libido of Player is (Libido of Player + Libido of Player + 40) / 3;
 
 to say PantherTaurDesc:
-	project Figure of PantherTaur_clothed_icon;
 	say "An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her slitted, pretty [one of]blue[or]brown[or]green[at random] eyes, but is, overall, feline in make. She has two nicely full breasts on her upper chest, held lightly by a top wrapped around her body. On her undercarriage rest six smaller bumps with nipples, visible for short glimpses as she takes powerful steps with those large paws of hers. Behind her, tucked between her hindlegs, is a thick sheath, with respectably sized balls to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Panther Taur"	"[PrepCombat_Panther Taur]"
+
+to say PrepCombat_Panther Taur:
+	project Figure of PantherTaur_clothed_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

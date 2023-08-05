@@ -1,4 +1,4 @@
-Version 1 of Mammoth by Stripes begins here.
+Version 1 of Mammoth by MinimalBuild begins here.
 [Version 1.1 - added CV monster victory - Stripes]
 [Version 1.2 - added Unbirth loss scene - Kernog]
 "Adds a Mammoth creature to Flexible Survival's Wandering Monsters table"
@@ -131,7 +131,7 @@ When Play begins:
 	now HP entry is 125; [ The monster's starting HP. ]
 	now lev entry is 12; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 15; [ Monster's average damage when attacking. ]
-	now area entry is "Museum"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now Cock Length entry is 60; [ Length infection will make cock grow to if cocks. ]
 	now Ball Size entry is 7; [ Cock width, more commonly used for ball size. ]

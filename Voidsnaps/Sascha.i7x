@@ -157,10 +157,10 @@ to say SaschaFreerunning_Main:
 	let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Dexterity Check):[line break]";
-	if diceroll + bonus >= 12:
+	if diceroll + bonus >= 12: [success]
 		LineBreak;
 		say "     Having to improvise the logistics of keeping up with a very athletic cat boy, you looking around and thankfully notice an abandoned ladder placed nearby. Retrieving that, you lean it against the balcony and climb after Sascha, gracefully swinging yourself over the railing soon after. The cat meanwhile has already passed through a door-shaped hole in the wall nearby, grinning out at you through the opening. You step in after him and are greeted in a bare-walled apartment, with Sascha throwing his arms around your waist, hugging you tightly and tucking his head under your chin. 'You did it! I didn't expect you to keep up with me, but you did fine! Let's go for the next challenge!' Breaking the embrace, the black cat tilts his head toward the apartment's door. 'The stairs to the next floor have collapsed, so we'll have to go around. Come on!'";
-	else:
+	else: [failure]
 		LineBreak;
 		say "     Having to improvise the logistics of keeping up with a very athletic cat boy, you looking around and thankfully notice an abandoned ladder placed nearby. Retrieving that, you lean it against the balcony and try to climb after Sascha, but your fingers slip, sending you crashing to the ground. You roll out of the way before the metal ladder crashes down on you, staring up at the giggling cat with wounded pride and a bruised ass. That didn't work so well. Let's look around for another way. Heaving yourself to your feet, you have a look at the plywood construction siding, finding a piece that seems less securely attached than the surrounding boards. Sliding your fingers through a gap, you grip the side and give it a pull.";
 		let bonus be (( Dexterity of Player minus 10 ) divided by 2);

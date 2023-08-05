@@ -41,6 +41,12 @@ to say ResolveEvent Dog Walking:
 		else: [fighting]
 			LineBreak;
 			challenge "Blacktail Stag";
+			if fightoutcome < 20: [player won]
+				say "[Stag loses]";
+			else if fightoutcome > 19 and fightoutcome < 30: [lost]
+				say "[Stag wins]";
+			else if fightoutcome is 30: [fled]
+				say "     You run as fast as you can and make a clean getaway.";
 			now Resolution of Dog Walking is 2; [fought Mike]
 			now Dog Walking is resolved;
 		increase score by 5;
@@ -185,7 +191,6 @@ to say Stag loses:
 	clear the screen and hyperlink list;
 
 to say StagDesc:
-	setmongender 3;
 	if HP of Mike is 0: [first encounter]
 		say "     Seeing your aggressive stance as you come closer, the stag sighs 'Another one of these savages.' Turning to the human at his side he says 'I want you to run home, Lea, you understand? Home. You can't help me in the fight right now and have to think of your puppies...'";
 		say "     After a short hesitation and giving a pleading whine, the woman dashes off, with the stag stepping in the way to block any attempt at following her. 'Now let's deal with you,' he says and comes at you with balled fists.";
@@ -194,6 +199,12 @@ to say StagDesc:
 		say "     As the guy sees you, he sighs 'That asshole again.' Turning to the human at his side he says 'I want you to run home, Lea, you understand? Home. You can't help me in the fight right now and have to think of your puppies...'";
 		say "     After a short hesitation and giving a pleading whine, the woman dashes off, with the stag stepping in the way to block any attempt at following her. 'Now let's deal with you,' he says and comes at you with balled fists.";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Blacktail Stag"	"[PrepCombat_Blacktail Stag]"
+
+to say PrepCombat_Blacktail Stag:
+	setmongender 3;
 
 Section 3 - Creature Insertion
 

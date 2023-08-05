@@ -18,45 +18,39 @@ to say GenerateTrophyList_SharkmanBrute:
 Section 1 - Creature Responses
 
 to say Sharkman Brute Wins:
-	if inasituation is true:
-		say ""; [dealt with at the source of the event]
+	if HP of Player > 0: [player submitted]
+		say "     You figure that there is no need for a fight when there are so many other things you could be doing together to spend energy. Or, perhaps, he really is so menacingly strong that you would rather not fight him. Nevertheless, you raise your arms and beckon him to not charge at you. He does stop, tilting his head in confusion. 'What? Oh, I thought you were one of those maniacs who fight literally every creature they see. Good to know ain't one of those!' He walks up to you and pats you on the back a little harder than you would feel comfortable with, and keeps his large hand on your shoulder. 'Not that I don't like fighting, but there's more fun ways to spend pent-up energy! Like partying or sex... Actually, do you wanna have some fun?' He then pulls you against him for a bro-like hug, slightly smothering you against his big muscles.";
 	else:
-		if HP of Player > 0: [player submitted]
-			say "     You figure that there is no need for a fight when there are so many other things you could be doing together to spend energy. Or, perhaps, he really is so menacingly strong that you would rather not fight him. Nevertheless, you raise your arms and beckon him to not charge at you. He does stop, tilting his head in confusion. 'What? Oh, I thought you were one of those maniacs who fight literally every creature they see. Good to know ain't one of those!' He walks up to you and pats you on the back a little harder than you would feel comfortable with, and keeps his large hand on your shoulder. 'Not that I don't like fighting, but there's more fun ways to spend pent-up energy! Like partying or sex... Actually, do you wanna have some fun?' He then pulls you against him for a bro-like hug, slightly smothering you against his big muscles.";
-		else:
-			say "     You try to fight against this powerhouse of a sharkman, however, his strength proves to be too much for you. After hitting you several times, everything in your body hurts all over, even without any major injuries. As you are barely able to move, the sharkman takes an opportunity to tackle you while you are distracted and tired, hits you with full force and manages to bring you down to the ground. He then sits by your chest and squeezes your arms and torso between his legs, successfully immobilizing you. 'Looks like I win! You were really fighting aggressively there...! What's wrong?' he asks, and you only look back at him with a grimace. 'Oh, sorry, didn't mean to hurt you all that much, I just sorta had to, uh... Defend myself!'";
-			say "     He loosens his probably close-to-deadly thigh grip, which alleviates the pain. These guys are really strong, and something tells you they are not fully aware of how much... 'So, now that we've settled this, how about we have some fun? Surely there's better ways to spend energy that don't involve trying to knock each other off, yeah?'";
-		WaitLineBreak;
-		say "     Facing this peculiar situation, you consider your options. Shall you even think about [bold type]having sex with the sharkman?[roman type][line break]";
-		say "     ([link]Y[as]y[end link]) - Yes.";
-		say "     ([link]N[as]n[end link]) - No!";
-		if Player consents:
-			Linebreak;
-			say "[SharkmanBruteSexMenu]";
-		else:
-			Linebreak;
-			say "     Maybe you are fine with just walking away without engaging into anything sexual. The sharkman does not force you to stay and, in fact, lets you go without much insisting. 'Aw... Alright... Well, see you next time then!'";
-			now infectbypass is true;
+		say "     You try to fight against this powerhouse of a sharkman, however, his strength proves to be too much for you. After hitting you several times, everything in your body hurts all over, even without any major injuries. As you are barely able to move, the sharkman takes an opportunity to tackle you while you are distracted and tired, hits you with full force and manages to bring you down to the ground. He then sits by your chest and squeezes your arms and torso between his legs, successfully immobilizing you. 'Looks like I win! You were really fighting aggressively there...! What's wrong?' he asks, and you only look back at him with a grimace. 'Oh, sorry, didn't mean to hurt you all that much, I just sorta had to, uh... Defend myself!'";
+		say "     He loosens his probably close-to-deadly thigh grip, which alleviates the pain. These guys are really strong, and something tells you they are not fully aware of how much... 'So, now that we've settled this, how about we have some fun? Surely there's better ways to spend energy that don't involve trying to knock each other off, yeah?'";
+	WaitLineBreak;
+	say "     Facing this peculiar situation, you consider your options. Shall you even think about [bold type]having sex with the sharkman?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No!";
+	if Player consents:
+		Linebreak;
+		say "[SharkmanBruteSexMenu]";
+	else:
+		Linebreak;
+		say "     Maybe you are fine with just walking away without engaging into anything sexual. The sharkman does not force you to stay and, in fact, lets you go without much insisting. 'Aw... Alright... Well, see you next time then!'";
+		now infectbypass is true;
 
 to say Sharkman Brute Loses:
-	if inasituation is true:
-		say ""; [dealt with at the source of the event]
+	if fightoutcome is 11: [submitted by libido victory]
+		say "     As you so meticulously perform what you could only describe as a sensual dance with your best seduction abilities, you manage to evade the sharkman's attempts at bringing you down. Such skill comes with the added extra of having turned him on beyond what he, most likely, would have expected upon meeting you. 'Well, aren't you one teasing little bastard! Can't say I'm unpleasantly surprised...' he says, dropping the fight right there and then. 'So, now that you've done your thing, how about we have some fun together? Surely you weren't just doing that with no interest whatsoever on this body, right?' The enormous sharkman then starts flexing, every single one of his muscles bulging as he moves them.";
 	else:
-		if fightoutcome is 11: [submitted by libido victory]
-			say "     As you so meticulously perform what you could only describe as a sensual dance with your best seduction abilities, you manage to evade the sharkman's attempts at bringing you down. Such skill comes with the added extra of having turned him on beyond what he, most likely, would have expected upon meeting you. 'Well, aren't you one teasing little bastard! Can't say I'm unpleasantly surprised...' he says, dropping the fight right there and then. 'So, now that you've done your thing, how about we have some fun together? Surely you weren't just doing that with no interest whatsoever on this body, right?' The enormous sharkman then starts flexing, every single one of his muscles bulging as he moves them.";
-		else:
-			say "     Your skill in battle proves to be superior as you manage to defeat the sharkman, causing him to drop on his knees with a grimace. 'Ow! Ooow...! Okay, okay! You win! I surrender! No need to continue hitting me so hard like that!' he exclaims, and since you really do not see a reason to keep beating him, you simply stand put. 'Thanks! Phew, you're quite a strong fighter! I wasn't expecting to be so easily outmatched! So, uh... I guess I lost, which means you get to do whatever you want to me or something like that, yeah?' He seems willing to let you have your way with him, and so cheerfully so. While only slightly odd, perhaps you should take on the opportunity to enjoy some pleasurable time with a willing sex partner...";
-		WaitLineBreak;
-		say "     Facing this peculiar situation, you consider your options. Shall you even think about [bold type]having sex with the sharkman?[roman type][line break]";
-		say "     ([link]Y[as]y[end link]) - Yes.";
-		say "     ([link]N[as]n[end link]) - No!";
-		if Player consents:
-			Linebreak;
-			say "[SharkmanBruteSexMenu]";
-		else:
-			Linebreak;
-			say "     Maybe you are fine with just walking away without engaging into anything sexual. The sharkman does not force you to stay and, in fact, lets you go without much insisting. 'Aw... Alright... Well, see you next time then!'";
-			now infectbypass is true;
+		say "     Your skill in battle proves to be superior as you manage to defeat the sharkman, causing him to drop on his knees with a grimace. 'Ow! Ooow...! Okay, okay! You win! I surrender! No need to continue hitting me so hard like that!' he exclaims, and since you really do not see a reason to keep beating him, you simply stand put. 'Thanks! Phew, you're quite a strong fighter! I wasn't expecting to be so easily outmatched! So, uh... I guess I lost, which means you get to do whatever you want to me or something like that, yeah?' He seems willing to let you have your way with him, and so cheerfully so. While only slightly odd, perhaps you should take on the opportunity to enjoy some pleasurable time with a willing sex partner...";
+	WaitLineBreak;
+	say "     Facing this peculiar situation, you consider your options. Shall you even think about [bold type]having sex with the sharkman?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No!";
+	if Player consents:
+		Linebreak;
+		say "[SharkmanBruteSexMenu]";
+	else:
+		Linebreak;
+		say "     Maybe you are fine with just walking away without engaging into anything sexual. The sharkman does not force you to stay and, in fact, lets you go without much insisting. 'Aw... Alright... Well, see you next time then!'";
+		now infectbypass is true;
 
 to say SharkmanBruteSexMenu:
 	say "     How shall you do this?";
@@ -115,11 +109,8 @@ to say SharkmanBruteSexBlowjob:
 			say "[SharkmanBruteSBCEvent]";
 
 to say Sharkman Brute Desc:
-	if inasituation is true:
-		say ""; [dealt with at the source of the event]
-	else:
-		say "     This enormous beastman now stands before you with a menacing aura and a gleaming grin made by many sharp teeth. He is an anthropomorphic muscular shark with black and white scales, with a few battle scars scattered all over his powerful body. The strength he possesses is evident, and the way he puffs his chest demonstrates an overflowing confidence that would intimidate any average person. Wearing nothing but his own naked figure, he begins to move towards you menacingly... Though, this entire posture and apparent attitude is then contradicted by a sudden, unexpected cheerfulness. Flexing his muscles and still grinning, he greets you and prepares for what you think could be a fight. 'Hey you! How about a little sparring? It'd be cool to fight someone as a warm up!'";
-		say "     [bold type]You cannot help but think this is a really odd area for anything remotely resembling a shark to roam...[roman type][line break]";
+	say "     This enormous beastman now stands before you with a menacing aura and a gleaming grin made by many sharp teeth. He is an anthropomorphic muscular shark with black and white scales, with a few battle scars scattered all over his powerful body. The strength he possesses is evident, and the way he puffs his chest demonstrates an overflowing confidence that would intimidate any average person. Wearing nothing but his own naked figure, he begins to move towards you menacingly... Though, this entire posture and apparent attitude is then contradicted by a sudden, unexpected cheerfulness. Flexing his muscles and still grinning, he greets you and prepares for what you think could be a fight. 'Hey you! How about a little sparring? It'd be cool to fight someone as a warm up!'";
+	say "     [bold type]You cannot help but think this is a really odd area for anything remotely resembling a shark to roam...[roman type][line break]";
 
 Section 2 - Snapjaw Beach Camp Event
 
@@ -158,6 +149,14 @@ to say SharkmanBruteSBCEvent:
 	now area entry is "Nowhere";
 
 Section 3 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Sharkman Brute"	"[PrepCombat_Sharkman Brute]"
+
+to say PrepCombat_Sharkman Brute:
+	say "";
+
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

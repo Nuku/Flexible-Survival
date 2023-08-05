@@ -161,7 +161,7 @@ Hunting Party	"Hunting Party"
 Hunting Party is a situation.
 ResolveFunction of Hunting Party is "[ResolveEvent Hunting Party]". The level of Hunting Party is 9.
 Sarea of Hunting Party is "Plains".
-horsefight is a number that varies.
+
 when play begins:
 	add Hunting Party to BadSpots of MaleList;
 	add Hunting Party to BadSpots of FemaleList;
@@ -177,12 +177,12 @@ to say ResolveEvent Hunting Party:
 		now Resolution of Hunting Party is 1; [Nightmare met horsemen]
 	else:
 		say "     Their stallionhoods are hanging from their sheaths at the ready after their invigorating chase. It seems this pair has decided that you'll be a good enough to satisfy them. Clearly looking as much for a fight as they are sex, they laugh and arrogantly decide to take turns facing you, feeling quite confident.";
-		now horsefight is 1;
+		LineBreak;
+		say "     The muscular horseman steps up to you with balled fists. Standing on digitigrade legs that are covered in a cream colored fur up to his thickly built human torso, his right bicep bears an intricate interlocking horseshoe tattoo. An impressive equine package bulges his ripped khaki shorts and behind him, a short tail flicks in annoyance. He grumbles. 'By the time I'm done with you, you're gonna be a proper horsey fucktoy.'";
 		challenge "Horseman";
 		say "     With the first one finished, the other cracks his knuckles and gets ready to have a go at you as well.";
 		challenge "Horseman";
 		say "     Done with both of them, you decide to get moving before their friends come back for their comrades... and perhaps decide that you'd be a fine addition for their stables as well.";
-		now horsefight is 0;
 		increase score by 1;
 		now Resolution of Hunting Party is 2; [Fought horsemen]
 	now Hunting Party is resolved;

@@ -8,6 +8,9 @@ Section 1 - Creature Responses
 catnum is a number that varies.
 mateable is a number that varies.
 
+to say Felinoid_Desc:
+	say "     What looks like a full-sized maned lion paces up before you, nose raised in the air, sniffing at the wind. You hear the big cat purr and look your way, with a sinking feeling you realize that not only was it your scent he was following, but that he is very pleased to see you at last.";
+
 to say felinoid wins:
 	if HP of Player > 0:
 		let mchance be 4;
@@ -101,6 +104,12 @@ to say felinoid wins:
 					say "     The big cat rubs himself against you, purring deeply, without thinking your hand reaches to scritch his ears, 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin making you whine and whimper softly into his fur, breathing in more of the big animal's suddenly fiery smelling musk.";
 					increase catnum by 1;
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Felinoid"	"[PrepCombat_Felinoid]"
+
+to say PrepCombat_Felinoid:
+	setmongender 3;
 
 Section 2 - Creature Insertion
 
@@ -129,7 +138,7 @@ When Play begins:
 	now attack entry is "[one of]He rakes at you wildly, leaving you in intense pain.[or]It leaps at you, digging its teeth into your arm.[or]It leaps at you, digging its teeth into your leg.[at random]";
 	now defeated entry is "With a last roar the big cat claws out wildly, trying to hit you one last time before collapsing to the ground.";
 	now victory entry is "[felinoid wins]";
-	now desc entry is "[mongendernum 3]What looks like a full-sized maned lion paces up before you, nose raised in the air, sniffing at the wind. You hear the big cat purr and look your way, with a sinking feeling you realize that not only was it your scent he was following, but that he is very pleased to see you at last."; [ Description of the creature when you encounter it.]
+	now desc entry is "[Felinoid_Desc]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a short muzzled, female lion"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "sleek, muscled, built for surviving, just like the large feline that gave it to you"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[if looknow is 1]a thick pelt of coarse yellow-gold fur covering your thick, pliable[else]yellow-gold fur covered[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]

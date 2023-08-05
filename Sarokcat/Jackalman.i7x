@@ -2,9 +2,7 @@ Jackalman by Sarokcat begins here.
 
 "Adds a jackalman to Flexible Survival's Wandering Monsters table, with impreg chance"
 
-
 Section 1 - Creature Responses
-
 
 to say jackalman attack:
 	say "'wow you got here how did that happen.'";
@@ -16,11 +14,17 @@ to say jackalman attack:
 		say "yowza";
 		infect "Jackalman";
 
-
 To say jackalman loss:
 	say "how the heck did you manage to get this, you are just that awesome I guess.'";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Jackalman"	"[PrepCombat_Jackalman]"
+
+to say PrepCombat_Jackalman:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

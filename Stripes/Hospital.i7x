@@ -1030,35 +1030,33 @@ to say hospbigfight1:
 
 to say hospbigfight2:
 	now hospfight is 1;
-	now inasituation is true;
 	challenge "Albino Mouse";
-	now inasituation is false;
-	if fightoutcome is 30:
-		say "[hospranaway]";
-		stop the action;
-	else if fightoutcome > 19 and fightoutcome < 30:
+	if fightoutcome < 20: [player won]
+		say "     Battered and bloodied, the mad doctor turns and runs. For a moment, you think he's trying to escape and move to cut him off from the exit, but he instead veers off to his storage unit and searches inside for a vial.";
+		say "     'I had planned to further perfect this formula before ridding myself of this feeble body,' the white mouse exclaims. 'But you! You force my hand. And you will suffer for it!'";
+		say "     With that, he slams back the formula and its effects are almost immediate. You charge, hoping to dispatch him before whatever he's doing can be completed, but he's already begun to grow and manages to slam you back a few feet with a strong backhand.";
+		WaitLineBreak;
+		say "     His muscles swell and he gains inches of height by the second. His growing body fills the lab coat so much it starts to strain to contain it until it finally fails. The buttons fly as he flexes his new, muscled body and tears the tattered remains from his shoulders.";
+		say "     His head becomes more feral and frightening, with sharp teeth, a mix of predatory canines and rodent incisors. The thick, leonine mane grows in as well as a trio or sharp horns, two on his brow and one at the end of his pointed muzzle. His hands, once cute paws, gain vicious claws and bony plates.";
+		WaitLineBreak;
+		say "     The mouse's maleness is not neglected either, gaining a large sheath and heavy balls. Thick, dark yellow fur grows to replace the white coat over them and spreads up over the monstrous mouse's chest as well. Clearly excited by the power of the changes, his cock grows hard and starts to emerge. It is thick and blood red, with a spaded tip and several firm ridges along its shaft. There's a faint swelling at the base, signs of a knot as well. Thick precum leaks down the monstrous prick.";
+		say "     He chuckles madly as he looks himself over, clearly pleased with the results. 'I am going to enjoy showing you how disappointed I am with you. In slow, agonizing detail,' he rumbles with a deep, threatening voice.";
+		now hospfight is 2;
+		challenge "Albino Mouse";
+		if fightoutcome < 20: [player won]
+			say "[hospvictory]";
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "[hosploss]";
+			stop the action;
+		else if fightoutcome is 30: [fled]
+			say "[hospranaway]";
+			stop the action;
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "[hosploss]";
 		stop the action;
-	say "     Battered and bloodied, the mad doctor turns and runs. For a moment, you think he's trying to escape and move to cut him off from the exit, but he instead veers off to his storage unit and searches inside for a vial.";
-	say "     'I had planned to further perfect this formula before ridding myself of this feeble body,' the white mouse exclaims. 'But you! You force my hand. And you will suffer for it!'";
-	say "     With that, he slams back the formula and its effects are almost immediate. You charge, hoping to dispatch him before whatever he's doing can be completed, but he's already begun to grow and manages to slam you back a few feet with a strong backhand.";
-	WaitLineBreak;
-	say "     His muscles swell and he gains inches of height by the second. His growing body fills the lab coat so much it starts to strain to contain it until it finally fails. The buttons fly as he flexes his new, muscled body and tears the tattered remains from his shoulders.";
-	say "     His head becomes more feral and frightening, with sharp teeth, a mix of predatory canines and rodent incisors. The thick, leonine mane grows in as well as a trio or sharp horns, two on his brow and one at the end of his pointed muzzle. His hands, once cute paws, gain vicious claws and bony plates.";
-	WaitLineBreak;
-	say "     The mouse's maleness is not neglected either, gaining a large sheath and heavy balls. Thick, dark yellow fur grows to replace the white coat over them and spreads up over the monstrous mouse's chest as well. Clearly excited by the power of the changes, his cock grows hard and starts to emerge. It is thick and blood red, with a spaded tip and several firm ridges along its shaft. There's a faint swelling at the base, signs of a knot as well. Thick precum leaks down the monstrous prick.";
-	say "     He chuckles madly as he looks himself over, clearly pleased with the results. 'I am going to enjoy showing you how disappointed I am with you. In slow, agonizing detail,' he rumbles with a deep, threatening voice.";
-	now hospfight is 2;
-	now inasituation is true;
-	challenge "Albino Mouse";
-	now inasituation is false;
-	if fightoutcome is 30:
+	else if fightoutcome is 30: [fled]
 		say "[hospranaway]";
 		stop the action;
-	else if fightoutcome > 19 and fightoutcome < 30:
-		say "[hosploss]";
-		stop the action;
-	say "[hospvictory]";
 
 to say hospranaway:
 	say "     Unable or unwilling to continue fighting the crazed mouse, you vault over one of the worktables and dash to the exit. You slam against the door and dash down the hall to the emergency exit. You rush down the stairs, hearing Dr. Mouse yelling above you, but don't even stop to look.";
@@ -1478,19 +1476,20 @@ to say ResolveEvent Dinosaur Nest:
 	else:
 		say "     You make your way back to the dinosaur's nest to try and investigate it again. Being more watchful, you notice her coming up as you move aside a box of Abba 8-tracks to find some yo-yos. You turn away from her nest and prepare to fight the disco dino again. 'Lookin['] for another dance lesson, honey?' she asks.";
 	now dinonest is 1;
-	now dnfightresult is 0; [default 0 = flee]
+	now inasituation is true;
 	challenge "Triceratops";
 	now dinonest is 0;
-	if dnfightresult is 0:		[flee]
+	if fightoutcome > 30: [flee] 
 		say "     Unable to deal with her at this time, you have fled the scene and will have to come back again later to search.";
-	if dnfightresult is 2:		[lose]
+	else if fightoutcome > 19 and fightoutcome < 30: [lose]
 		say "     Having bested you, you can only wait and recover before trying to search her nest again later.";
-	if dnfightresult is 1:		[win]
+	else if fightoutcome < 20: [win]
 		say "     Having bested the triceratops woman, you can finish searching her nest in the hopes of finding something to satisfy the mouse doctor. You dig around in her collection of old stuff, but don't see anything for some time. Eventually, you instead smell something and soon track the scent to a lava lamp. Unplugged, the glass lamp is off its stand and is coated in a wet sheen of fluids. Guessing the strange creature has been using it for some improvised fun, you wrap it in a paisley shirt and pack it away.";
 		say "     Lava lamp collected.";
 		ItemGain lava lamp by 1;
 		increase score by 10;
 		now Dinosaur Nest is resolved;
+	now inasituation is false;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1561,7 +1560,6 @@ Viking Longboat is a situation.
 ResolveFunction of Viking Longboat is "[ResolveEvent Viking Longboat]".
 Sarea of Viking Longboat is "Museum".
 Viking Longboat is inactive.		[unable to do this until activated]
-lbfight is a number that varies.
 longboatfind is a number that varies.
 
 to say ResolveEvent Viking Longboat:
@@ -1571,15 +1569,23 @@ to say ResolveEvent Viking Longboat:
 		now longboatfind is 1;
 	else:
 		say "     You make your way back to the Medieval History wing of the museum and approach the longboat again. The moment you put one foot over the rope barrier, the security guard is growling and charging at you with menace in his eyes.";
-	now lbfight is 1;
-	now wolvfightresult is 0; [default 0 = flee]
 	challenge "Wolverine Guard";
-	now lbfight is 0;
-	if wolvfightresult is 0:		[flee]
+	if fightoutcome > 30:		[flee]
 		say "     Unable to deal with the maddened wolverine, you have fled the scene and will have to come back again later to get the gemstones.";
-	if wolvfightresult is 2:		[lose]
+	else if fightoutcome  > 19 and fightoutcome < 30:		[lose]
+		if Player is female:
+			if a random chance of 2 in 3 succeeds:
+				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you. Soon, he's buried his muzzle between your legs and sniffing your crotch. He grabs you roughly and drags you back towards the alcove he was standing guard in before you arrived.";
+				say "     Keeping you pinned down, he looks around for any other threats to his post. This gives you a moment to look around for a way out of this predicament, but find none.";
+				say "     Satisfied that he won't be interrupted, he quickly tears off your remaining clothes and presses his nose against your wet pussy, licking at it before rolling you over. He quickly mounts you, driving his large, brown cock deep inside you. He pants and growls as he pounds into you hard and fast, driving his thick meat in over and over again until he finally releases a hot blast of seed deep inside you.[impregchance]";
+				say "     As he cum inside you, he grows more gentle, nuzzling you and snuffling at your ear. He gives your neck and shoulder a few nips before dismounting and firmly sending you on your way, forcing you to leave that section of the museum and to head back to the main foyer.";
+			else:
+				say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you off from the Medieval History wing of the museum.";
+		else:
+			say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you off from the Medieval History wing of the museum.";
+			if HP of Player > 0, now HP of Player is HP of Player / 2;
 		say "     Having been bested, you can only stagger off and recover before trying to get on the boat again later.";
-	if wolvfightresult is 1:		[win]
+	else if fightoutcome < 20:		[win]
 		say "     Having bested the wolverine guard, you leave it passed out and quickly put the ladder alongside the huge ship. You climb up and head to the masthead across the old, creaking ship. The wood is incredibly old and you grit your teeth with every soft step you make, worried you'll break through the deck and fall.";
 		say "     Reaching the bow of the ship, you are glad to find handholds in it, perhaps for a sailor to act as lookout. It seems sturdier as well, thankfully. You climb up carefully and manage to eventually pry out the green gems from the wooden dragon's eyes. You climb back down and step back onto the deck just as the wooden masthead groans loudly and breaks from the ship. The deck starts to crumble away as well even as you try to run for the ladder.";
 		let bonus be ( dexterity of Player minus 10 ) divided by 2;
@@ -1599,7 +1605,6 @@ to say ResolveEvent Viking Longboat:
 		now Viking Longboat is resolved;
 
 [spear moved to Core Mechanics/Weapons.i7x]
-
 
 Instead of conversing the Nermine while nerminepackage is 3:
 	say "     'Have you been finding the dragon's eyes for Nermine?' she asks. 'Wonderful. Most beautiful,' she says as she holds them up to the light and gazes through them. 'Even older than I thought, long before put on that ship. Long history. Nermine is very pleased to have these. So much so I will give you some advice.'";

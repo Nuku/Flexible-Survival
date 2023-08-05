@@ -7,35 +7,6 @@ Section 1 - Creature Responses
 
 ymgmode is a number that varies. ymgmode is usually 1.
 
-to say ymgdesc:
-	choose row MonsterID from the Table of Random Critters;
-	if (MaleList is banned or MaleList is warded) and (FemaleList is banned or FemaleList is warded):		[if both types are banned, the fight is aborted and removed from critter table]
-		say "     Your wandering feet bring you close enough to see an aristocratic mink, albino or just royal white, puttering around the deck of their yacht. With a haughty sniff, they turn their nose up at you and vanish belowdecks.";
-		now BannedStatus entry is true;
-		now fightoutcome is 19;
-		now combat abort is 1;
-		now ymgmode is 0;
-	else if MaleList is banned or MaleList is warded:
-		now ymgmode is 1;
-	else if FemaleList is banned or FemaleList is warded:
-		now ymgmode is 2;
-	else if a random chance of 1 in 2 succeeds:
-		now ymgmode is 1;
-	else:
-		now ymgmode is 2;
-	if ymgmode is 1:
-		setmongender 4; [creature is female]
-		project figure of YuppieMink_icon;
-		say "     Moored at the docks among the industrial and commercial crafts are also several pleasure boats caught up in the military blockade. From one of them, a slender white figure appears. Some kind of mink or ermine, with shimmering white fur and a regal bearing that oozes haughty attitude. The matching white tennis ensemble she wears does little to conceal her pert breasts and shapely thighs, attractive even if she is huffy and upset. [one of]'This dock is absolutely filthy! It puts me in a crass mood,' [or]'Did you bring the fresh supplies of caviar and wine? No? Then what are you good for?' [or]'This outbreak has ruined my shed-ule! You there! Amuse me for a bit!' [or]'Ah, a replacement for my cabana boy!' [or]'Does the harbormaster know who I am? This is asinine!' [or]'I hope you brought a racquet with you,' [at random]she says it in a clipped tone, pausing before hopping from the deck to fight you!";
-		now sex entry is "Male";
-		if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
-	if ymgmode is 2:
-		setmongender 3; [creature is male]
-		project figure of YuppieMink_M_clothed_icon;
-		say "     Moored at the docks among the industrial and commercial crafts are also several pleasure boats caught up in the military blockade. From one of them, a slender white figure appears. Some kind of mink or ermine, with shimmering white fur and a regal bearing that oozes contempt. The smart blue captain's jacket he wears with the matching hat is lovely, but the lack of pants leaves his dripping cock and swinging sack on full display. He doesn't seem to mind at all, setting down his wine glass before calling to you. [one of]'Ahoy there! You must be my new sexy cabin boy!' [or]'Did you bring the fresh supplies of caviar and wine? No? Then what are you good for?' [or]'This city is so droll. Nothing like Madrid. You look a bit like a whore I knew there, though. Come aboard and remind me more!' [or]'Thank goodness, someone to scrub this decking. I am dripping all over the inlaid hardwoods.' [or]'Don't they know who I am? Why, I'll have them bent over the rail of my yacht and pound their asses until they're blue in the face. Mmm... that sounds lovely. Perhaps I'll practice a bit of that with you.' [or]'Thank goodness, someone other than these blue collar types. Come aboard for some wine and a hard fucking, will you?' [at random]He hops down from the deck, gearing up to fight!";
-		now sex entry is "Female";
-		if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
-
 to say ymgfight:
 	if ymgmode is 1:
 		say "     [one of]The mink digs her manicured claws into your flesh![or]She pulls out her racquet and gives you a firm swat with it![or]With a sudden swirl of her short skirt, she kicks you right in the shin![or]She falls back and gestures, allowing a deckhand to throw something heavy at you![or]She bites at you fiercely, then spends a moment wiping the taste of commoner from her mouth.[or]She hits you on the head with an empty bottle of champagne.[or]With a keening cry, she hurls herself at you with limited effectiveness.[or]She lifts her short skirt, exposing her needy cunt to you playfully, sapping your will to fight.[at random]";
@@ -106,8 +77,44 @@ to say beattheymguy:
 	else:
 		say "     Having nothing to work with, you leave the beaten mink to be ravaged by dock-workers or merchants as fate decides.";
 
-
 Section 2 - Creature Insertion
+
+to say ymgdesc:
+	if ymgmode is 1:
+		say "     Moored at the docks among the industrial and commercial crafts are also several pleasure boats caught up in the military blockade. From one of them, a slender white figure appears. Some kind of mink or ermine, with shimmering white fur and a regal bearing that oozes haughty attitude. The matching white tennis ensemble she wears does little to conceal her pert breasts and shapely thighs, attractive even if she is huffy and upset. [one of]'This dock is absolutely filthy! It puts me in a crass mood,' [or]'Did you bring the fresh supplies of caviar and wine? No? Then what are you good for?' [or]'This outbreak has ruined my shed-ule! You there! Amuse me for a bit!' [or]'Ah, a replacement for my cabana boy!' [or]'Does the harbormaster know who I am? This is asinine!' [or]'I hope you brought a racquet with you,' [at random]she says it in a clipped tone, pausing before hopping from the deck to fight you!";
+	else if ymgmode is 2:
+		say "     Moored at the docks among the industrial and commercial crafts are also several pleasure boats caught up in the military blockade. From one of them, a slender white figure appears. Some kind of mink or ermine, with shimmering white fur and a regal bearing that oozes contempt. The smart blue captain's jacket he wears with the matching hat is lovely, but the lack of pants leaves his dripping cock and swinging sack on full display. He doesn't seem to mind at all, setting down his wine glass before calling to you. [one of]'Ahoy there! You must be my new sexy cabin boy!' [or]'Did you bring the fresh supplies of caviar and wine? No? Then what are you good for?' [or]'This city is so droll. Nothing like Madrid. You look a bit like a whore I knew there, though. Come aboard and remind me more!' [or]'Thank goodness, someone to scrub this decking. I am dripping all over the inlaid hardwoods.' [or]'Don't they know who I am? Why, I'll have them bent over the rail of my yacht and pound their asses until they're blue in the face. Mmm... that sounds lovely. Perhaps I'll practice a bit of that with you.' [or]'Thank goodness, someone other than these blue collar types. Come aboard for some wine and a hard fucking, will you?' [at random]He hops down from the deck, gearing up to fight!";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Yuppie Mink"	"[PrepCombat_Yuppie Mink]"
+
+to say PrepCombat_Yuppie Mink:
+	choose row MonsterID from the Table of Random Critters;
+	if (MaleList is banned or MaleList is warded) and (FemaleList is banned or FemaleList is warded):		[if both types are banned, the fight is aborted and removed from critter table]
+		say "     Your wandering feet bring you close enough to see an aristocratic mink, albino or just royal white, puttering around the deck of their yacht. With a haughty sniff, they turn their nose up at you and vanish belowdecks.";
+		now BannedStatus entry is true;
+		now fightoutcome is 19;
+		now combat abort is 1;
+		now ymgmode is 0;
+	else if MaleList is banned or MaleList is warded:
+		now ymgmode is 1;
+	else if FemaleList is banned or FemaleList is warded:
+		now ymgmode is 2;
+	else if a random chance of 1 in 2 succeeds:
+		now ymgmode is 1;
+	else:
+		now ymgmode is 2;
+	if ymgmode is 1:
+		setmongender 4; [creature is female]
+		project figure of YuppieMink_icon;
+		now sex entry is "Male";
+		if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
+	else if ymgmode is 2:
+		setmongender 3; [creature is male]
+		project figure of YuppieMink_M_clothed_icon;
+		now sex entry is "Female";
+		if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

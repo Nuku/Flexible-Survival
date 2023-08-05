@@ -6,11 +6,6 @@ Version 1 of Amazonian by Stripes begins here.
 
 noamazoniansex is a number that varies.
 
-to say amazoniandesc:
-	setmongender 5;
-	say "     Before you is a tough, muscled woman with a no-nonsense expression on her beautiful face. She has a deep, bronze tan to her toned flesh. Her long, brown hair is tied back in a ponytail with a metal clasp, keeping it out of her eyes. This physically imposing woman wears a leather breastpiece with a fur ruff at her crotch. You notice a clear bulge down there, showing you just how self-sufficient this Amazonian woman is without a man.";
-	say "     Raising her weapon, she glares at you[if Player is not female]. 'You are unneeded here, worthless male. You will be shown your place,' she growls[else if Player is herm]. 'Ahh, another warrior woman to test myself against. Come, prove your might and you may be my mate,' she says with a lustful grin[else if Player is female]. 'Come here, sweet lass. Let me show you that you don't need a worthless male to please you,' she says with a lustful grin[end if].";
-
 to say losetoamazonian:
 	choose row MonsterID from the Table of Random Critters;
 	now noamazoniansex is 0;
@@ -41,7 +36,6 @@ to say losetoamazonian:
 		else:
 			CreatureSexAftermath "Player" receives "AssFuck" from "Amazonian";
 
-
 to say beattheamazonian:
 	say "     Having beaten the powerful woman, you look down at her. Beneath her loincloth you can see both her juicy cunt and her thick cock. It's clear she's gotten quite excited from the fight and is quite aroused in her defeat.";
 	if noamazoniansex > 2:
@@ -71,8 +65,18 @@ to say beattheamazonian:
 		say "     Having beaten the Amazonian woman and having no more use for her, you pull her to her feet and send her on her way with a firm swat on her rear as a reminder that she was beaten by you.";
 		increase noamazoniansex by 1;
 
-
 Section 2 - Creature Insertion
+
+to say amazoniandesc:
+	say "     Before you is a tough, muscled woman with a no-nonsense expression on her beautiful face. She has a deep, bronze tan to her toned flesh. Her long, brown hair is tied back in a ponytail with a metal clasp, keeping it out of her eyes. This physically imposing woman wears a leather breastpiece with a fur ruff at her crotch. You notice a clear bulge down there, showing you just how self-sufficient this Amazonian woman is without a man.";
+	say "     Raising her weapon, she glares at you[if Player is not female]. 'You are unneeded here, worthless male. You will be shown your place,' she growls[else if Player is herm]. 'Ahh, another warrior woman to test myself against. Come, prove your might and you may be my mate,' she says with a lustful grin[else if Player is female]. 'Come here, sweet lass. Let me show you that you don't need a worthless male to please you,' she says with a lustful grin[end if].";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Amazonian"	"[PrepCombat_Amazonian]"
+
+to say PrepCombat_Amazonian:
+	setmongender 5;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

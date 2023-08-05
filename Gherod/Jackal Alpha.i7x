@@ -14,19 +14,13 @@ JackalAlphaSubmitCount is usually 0.
 Section 1 - Encounter
 
 to say Alpha Jackal Desc:
-	setmongender 3;
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "     Approaching you comes a fairly large anthropomorphic jackal, tall and powerful, with bulging muscles being the predominant feature about this alpha male. The thing that makes his gender clear is the one oversized endowment dandling from one thick thigh to another, complete with an absolutely gigantic sack with swollen orbs that seem to be full to the brim with his seed, which already begins to ooze out of his soft sheath. His golden eyes turn their gaze to you, as his sleek jackal ears swivel around on top of his head to catch any noise in his surroundings. He has an especially wide jaw, an evidence of his hypermasculinity, which you only notice more when he starts speaking. 'I do not intend to harm you... But I would recommend submission. I shall make sure you are well prepared...'";
-		say "     His tone is soft, albeit very deep, and has a mystic vibe to it. Complemented with the glowing light of hieroglyphs that cover his body, dimming strongly with every word, he manages to catch your full attention for a while, almost removing your will to fight in the moment. With that said, he comes closer...";
+	say "     Approaching you comes a fairly large anthropomorphic jackal, tall and powerful, with bulging muscles being the predominant feature about this alpha male. The thing that makes his gender clear is the one oversized endowment dandling from one thick thigh to another, complete with an absolutely gigantic sack with swollen orbs that seem to be full to the brim with his seed, which already begins to ooze out of his soft sheath. His golden eyes turn their gaze to you, as his sleek jackal ears swivel around on top of his head to catch any noise in his surroundings. He has an especially wide jaw, an evidence of his hypermasculinity, which you only notice more when he starts speaking. 'I do not intend to harm you... But I would recommend submission. I shall make sure you are well prepared...'";
+	say "     His tone is soft, albeit very deep, and has a mystic vibe to it. Complemented with the glowing light of hieroglyphs that cover his body, dimming strongly with every word, he manages to catch your full attention for a while, almost removing your will to fight in the moment. With that said, he comes closer...";
 
 Section 1.1 - Defeat Scenes
 
 to say Alpha Jackal Wins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else if vorelevel > 1 and JackalAlphaSubmitCount is 6 and BodyName of player is "Jackal Femboy" and Player is pure: [bad end, player is fully assimilated into the jackal's cock]
+	if vorelevel > 1 and JackalAlphaSubmitCount is 6 and BodyName of player is "Jackal Femboy" and Player is pure: [bad end, player is fully assimilated into the jackal's cock]
 		say "[AlphaJBadEnd]";
 	else if vorelevel > 1 and JackalAlphaSubmitCount >= 5 and a random chance of 1 in 2 succeeds and BodyName of player is "Jackal Femboy" and Player is pure: [player is partially assimilated to the jackal's cock, corrupting their mind]
 		say "[AlphaJWinsCV2]";
@@ -286,56 +280,53 @@ to say AlphaJBadEnd: [Bad End CV + total absorption scene]
 Section 1.2 - Victory Scenes
 
 to say Alpha Jackal Loses:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "     With the beating you gave the big alpha jackal, he has no way to make any further attempts at charming you. 'You could have just accepted my gift... I am offering it to you so freely... Why must you reject it?' he asks, and you can tell by the expression in his face that he is deeply offended. Perhaps you could make ammends and offer some friendly gesture that would leave him much happier, or just... Use him and his body as you see fit, since you just brought him to the ground, defeated and vulnerable.";
-		WaitLineBreak;
-		say "     How shall you make use of this situation, if you intend to do so?";
-		Linebreak;
-		now sextablerun is 0;
-		blank out the whole of table of fucking options;
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Play with his massive cock";
-		now sortorder entry is 1;
-		now description entry is "Get your hands on his oversized equipment";
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Gather some cum from the jackal";
-		now sortorder entry is 2;
-		now description entry is "Milk him for some cum";
-		[]
-		sort the table of fucking options in sortorder order;
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]0 - Nevermind[as]0[end link][line break]";
-		while sextablerun is 0:
-			say "Pick the corresponding number> [run paragraph on]";
-			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-				now current menu selection is calcnumber;
-				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry]?";
-				if Player consents:
-					let nam be title entry;
-					now sextablerun is 1;
-					if (nam is "Play with his massive cock"):
-						say "[AlphaJLosesCockPlay]";
-					if (nam is "Gather some cum from the jackal"):
-						say "[AlphaJLosesCumMilk]";
-					wait for any key;
-			else if calcnumber is 0:
+	say "     With the beating you gave the big alpha jackal, he has no way to make any further attempts at charming you. 'You could have just accepted my gift... I am offering it to you so freely... Why must you reject it?' he asks, and you can tell by the expression in his face that he is deeply offended. Perhaps you could make ammends and offer some friendly gesture that would leave him much happier, or just... Use him and his body as you see fit, since you just brought him to the ground, defeated and vulnerable.";
+	WaitLineBreak;
+	say "     How shall you make use of this situation, if you intend to do so?";
+	Linebreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Play with his massive cock";
+	now sortorder entry is 1;
+	now description entry is "Get your hands on his oversized equipment";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Gather some cum from the jackal";
+	now sortorder entry is 2;
+	now description entry is "Milk him for some cum";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
 				now sextablerun is 1;
-				say "     Perhaps it would be best to drop it here. No way to know the risks messing with such a creature could pose to you, and it is better to be safe than sorry.";
-				if JackalAlphaSubmitCount > 0:
-					now JackalAlphaSubmitCount is 0;
-					say "     [bold type]Beating the alpha jackal once has released you from his magical influence completely[roman type]. You feel much more like yourself, now!";
+				if (nam is "Play with his massive cock"):
+					say "[AlphaJLosesCockPlay]";
+				if (nam is "Gather some cum from the jackal"):
+					say "[AlphaJLosesCumMilk]";
 				wait for any key;
-			else:
-				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-		clear the screen and hyperlink list;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     Perhaps it would be best to drop it here. No way to know the risks messing with such a creature could pose to you, and it is better to be safe than sorry.";
+			if JackalAlphaSubmitCount > 0:
+				now JackalAlphaSubmitCount is 0;
+				say "     [bold type]Beating the alpha jackal once has released you from his magical influence completely[roman type]. You feel much more like yourself, now!";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say AlphaJLosesCockPlay:
 	say "     Given the fact that he has such an especially large endowment, your mind wonders around the possibility of having some fun with it. Fortunately, the alpha won't be able to resist any of your moves, and you could potentially have your way with his cock free of any problematic situations. As you have made your choice already, you proceed to approach the mystic canine, who just blinks, incredulous at the fact you are coming closer to him with a certain naughty goal in mind. It seems like he can read through you. 'Even after all that, you still want to...?' he asks, not finished his sentence before you pull his legs to yourself, crouching next to him, and sliding your hands over his oversized sheathe, which immediately reacts to your touch, his meaty prick poking out of it and expanding forward with every movement.";
@@ -377,6 +368,14 @@ to say AlphaJLosesCumMilk:
 	if JackalAlphaSubmitCount > 0:
 		now JackalAlphaSubmitCount is 0;
 		say "     [bold type]Beating the alpha jackal once has released you from his magical influence completely[roman type]. You feel much more like yourself, now!";
+
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Jackal Alpha"	"[PrepCombat_Jackal Alpha]"
+
+to say PrepCombat_Jackal Alpha:
+	setmongender 3;
 
 Section 2 - Creature Insertion
 

@@ -6,7 +6,7 @@ Version 2 of Batcubus by Blaydrex begins here.
 
 Section 1 - Creature Responses
 
-to say Batcubus attack:
+to say Batcubus_wins:
 	if Player is female and ( Cock Count of Player is 0 or a random chance of 2 in 3 succeeds ):
 		say "     The batcubus saunters over to your defeated form. 'Well, well. Smells like somebody is a little excited,' she says as she starts to look over your body, especially your groin. She wastes no time in removing your clothes and giggles with delight when she sees your aroused cunt. She lowers her head and begins to kiss your pussy, practically making out with it. Her technique is remarkable, bringing you close to the edge countless times, but always stopping just before you can climax. She spends what seems like an eternity denying you release before she decides you are ready. You feel a little pressure against your pussy and a small insertion. You look down to see she has put her nipple in you. She squeezes her breast, making milk pour into your desire-filled fuckhole. She fills you with her milk before kissing your tummy where your uterus is. A warm feeling fills your womb as your pussy clamps down to stop the milk from leaking. You writhe on the ground as your body desires release heavily while being denied the pleasure once again. As quickly as the feeling began, it stops. You see some of her milk pour out, but for some odd reason it seems more consistent with sperm. She stands up and licks her purple lips, giggling to herself. 'That was fun. I hope we can meet again sometime,' she says before kissing you passionately on the lips and walking off, with you still needing release.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Batcubus";
@@ -23,7 +23,7 @@ to say Batcubus attack:
 		say "     'Oh, you poor thing. Perhaps I can help with that,' she says, rising back up. Grabbing your head, she mashes your face between her giant tits and squeezing them around your head. Left woozy and vaguely aroused from the experience, your lips wrap around one of her nipples when it's offered to you. You suckle hungrily from her breast, getting fed a meal of the bat woman's warm milk. By the time the bat creature has finished feeding you and heads off, you're left feeling warm and sleepy even as tingles of infection spread through you.";
 		CreatureSexAftermath "Player" receives "Other" from "Batcubus";
 
-to say beatthebatcubus:
+to say Batcubus_loses:
 	say "     The batcubus falls down to the ground, fingering herself, trying to get some form of relief. The sight of her like this is enticing, tempting you to do something naughty with her to celebrate your victory. Shall you give in to these urges?";
 	if Player consents:
 		if Player is male:
@@ -50,6 +50,16 @@ to say beatthebatcubus:
 		say "     Managing to resist this final temptation, you grab the bat creature by one arm, pull her up and shove her on her way. She pouts, clearly upset that you've not fallen for her trap and strides off indignantly in search of some new, more cooperative victim.";
 
 
+to say Batcubus_Desc:
+	say "An anthropomorphic bat, but she seems different than a normal bat. Her lips are coated in a purple lipstick, which obviously contains a powerful aphrodisiac judging by the smell. Her breasts are rather large, JJ cups it looks like. Her torso appears to be covered by some red corset, but that is obviously just fur when you spot a drop of milk come out from her nipple. Her arms are in elegant white gloves that go almost all the way to her shoulders. Her legs are covered in purple high heel boots that cover them completely. Her fur is snow white. Her face and head is that of a bat's with its upturned nose and triangular ears. She simply smiles at you, licking her lips as she saunters over to you, obviously wanting to kiss you.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Batcubus"	"[PrepCombat_Batcubus]"
+
+to say PrepCombat_Batcubus:
+	setmongender 4;
+
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
@@ -71,9 +81,9 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]She grabs your groin roughly with her gloved hand while giggling.[or]She slaps you hard on the face, leaving a red mark of a hand.[or]The batcubus knocks you down and places the heel of her purple boot hard on your chest, blowing a kiss before jumping away, giggling.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[beatthebatcubus]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is "[Batcubus attack]"; [ Text used when monster wins, can be directly entered like combat text or description. Or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 4]     An anthropomorphic bat, but she seems different than a normal bat. Her lips are coated in a purple lipstick, which obviously contains a powerful aphrodisiac judging by the smell. Her breasts are rather large, JJ cups it looks like. Her torso appears to be covered by some red corset, but that is obviously just fur when you spot a drop of milk come out from her nipple. Her arms are in elegant white gloves that go almost all the way to her shoulders. Her legs are covered in purple high heel boots that cover them completely. Her fur is snow white. Her face and head is that of a bat's with its upturned nose and triangular ears. She simply smiles at you, licking her lips as she saunters over to you, obviously wanting to kiss you."; [ Description of the creature when you encounter it.]
+	now defeated entry is "[Batcubus_loses]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is "[Batcubus_wins]"; [ Text used when monster wins, can be directly entered like combat text or description. Or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[Batcubus_Desc]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a female bat. It is beautiful and elegant, and your lips are covered with purple lipstick that is sweet when you lick it"; [ Face description, format as 'Your face is (your text)']
 	now body entry is "slender and elegant. Your torso looks like it is covered with a red corset, but it is actually fur"; [ Body Description, format as 'Your Body is (your text)']
 	now skin entry is "white furred"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]

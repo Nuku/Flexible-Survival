@@ -8,22 +8,12 @@ Version 1 of Siren by Stripes begins here.
 "Adds Siren to Flexible Survival."
 
 charcounter is a number that varies.
-sirenfight is a number that varies.
+sirenfight is a number that varies. [counts how many times the player fought a siren - used for resistance to the siren song]
 
 
 Section 1 - Creature Responses
 
 to say sirendesc:
-	setmongender 3; [creature is male]
-	project Figure of Siren_clothed_icon;
-	choose row MonsterID from the Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Male";
-	now charcounter is Charisma of Player;
 	if sirenfight is 0:
 		say "     You can hear a haunting song of longing spread out across the water. It seems to mix perfectly into the splashing waves of the sea, the perfect accompaniment to the lovely melody. Lost in the song, you start to head towards the rocks out in the water where the song is coming from. You struggle against the currents, drawn towards its source without concern for your safely. As you get closer, you briefly spot a beautiful, perfect human face, so lovely and attractive. Long, flowing blonde hair, smooth skin, perfect features.";
 		say "     As the song fills your ears until it is all you can hear, you try all the harder to make it to that jagged rock to find that beautiful singer. You love it. You love them. They are your everything.";
@@ -76,11 +66,9 @@ to say Siren wins:
 	if Player is not female, follow the sex change rule;
 	if sirenfight > 1, decrease sirenfight by 1; [losing decreases resistance to the song]
 
-
 to say Siren loses:
 	say "     The defeated siren shrieks angrily and flies off erratically to seek refuge among the sharp rocks out in the choppy waters. With the creature silenced, your head starts to clear and you are ready to continue on your journey soon enough. Having successfully resisted the siren, you feel a little more confident you could do so again.";
 	increase sirenfight by 1; [Victory makes you more resistant to the song]
-
 
 to say Siren Attack:
 	choose row MonsterID from the Table of Random Critters;
@@ -103,8 +91,23 @@ to say Siren Attack:
 	if charcounter > 0:
 		say "[one of]he swoops in and claws at you with his sharp talons![or]the siren emits a powerful shriek so loud and focused that you must clutch your hands over your ears![or]those sharp teeth dig into you painfully![or]he slams his hefty cocks against you, spurting his musky pre onto you![or]the siren banks agilely around behind you and slams his taloned feet into your back, slashing at you as he knocks you down![at random]";
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Siren"	"[PrepCombat_Siren]"
+
+to say PrepCombat_Siren:
+	setmongender 3; [creature is male]
+	project Figure of Siren_clothed_icon;
+	choose row MonsterID from the Table of Random Critters;
+	if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
+	now charcounter is Charisma of Player;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

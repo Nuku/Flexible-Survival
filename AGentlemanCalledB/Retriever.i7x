@@ -51,9 +51,6 @@ to say beattheRetriever:
 			say "After you land the final blow on the poor golden furred canine you feel a wave of remorse overcome you as she turns and scampers away, tail between her legs, crying out that she had only wanted to play with you. You consider chasing after her to apologize for a moment but decide it's probably best to leave her be and continue on your way.";
 
 to say Retrieverdesc:
-	choose row MonsterID from the Table of Random Critters;
-	let debit be 0;
-	setmongender 4; [creature is female]
 	say "     As you walk down the street you suddenly hear the sound of paws on pavement approaching you from behind. You turn towards the source just in time to avoid the golden furred canine rushing towards you from behind.";
 	say "     When the retriever circles around you get a clearer look at your assailant, she is a curvaceous female golden retriever with digitigrade legs and paw-like hand and feet as well as four firm breasts. Her canine tail wags happily behind her, obviously looking forward to playing with you.";
 
@@ -62,6 +59,13 @@ to say RetrieverAttack:
 		say "[one of]Swinging wildly[or]Lashing out[or]Striking forward[at random] [one of]With his short claws[or]with a balled fist[or]in anger[at random] Rex [one of]lands a powerful blow[or]connects painfully, nearly knocking you to the floor[or]lands a sharp strike which sends you reeling[at random].";
 	else:
 		say "[one of]The female retriever rushes you, clipping your side as you try and dive out of her way.[or]The female retriever rushes you, bowling you over as she catches you off guard, assaulting you with licks and small nibbles before you are able to push her off.[or]You find yourself awe struck by the sexy female canine's body momentarily, long enough for her to close in and plant a wet doggy kiss on your cheek.[or]The retriever bitch moves in quickly, raking across your shoulder and arm with her short claws before you can react.[at random]";
+	
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Retriever Female"	"[PrepCombat_Retriever Female]"
+
+to say PrepCombat_Retriever Female:
+	setmongender 4; [creature is female]
 
 Section 2 - Creature Insertion
 
@@ -276,6 +280,14 @@ to say retriever milk use:
 
 instead of sniffing retriever milk:
 	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
+	
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Retriever Male"	"[PrepCombat_Retriever Male]"
+
+to say PrepCombat_Retriever Male:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

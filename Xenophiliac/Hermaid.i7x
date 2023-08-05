@@ -117,7 +117,6 @@ to say HermaidNeutLoss:
 	say "     With a quiet sigh, the Hermaid lazily pulls out of your cum-stuffed belly, nuzzling the nape of your neck tenderly before plunging inaudibly under the waves. You float on the surface of the waves for some time, reclaiming your senses. You swim slowly to the nearest dock, and haul yourself onto the wooden deck. Hoisting yourself onto your feet and trudging back into the city, there's a part of you that wishes you could remain with the beautiful Hermaid.";
 
 to say Hermaiddesc:
-	setmongender 5; [creature is herm]
 	say "     As you trudge through the empty and desolate buildings lining the shore, a quiet splash breaks the silence, resounding through the buildings. Something inescapably pulls you to the water's edge to investigate what might have made that sound - and suddenly find yourself pulled over the edge and underwater by unseen hands. Breaking free from the incorporeal hand's grip, you flounder frantically until you reach the surface again. Looking around, there is no trace of who attacked you - until a large splash resonates behind you and someone surfaces from the depths. It is a stunningly beautiful sea woman, smiling at you, revealing her razor-sharp teeth.";
 	if BodyName of Player is "Hermaid":
 		say "     The mer-woman coos delightfully when she sees that you're one of them. She genuinely smiles at you, expecting you to willfully embrace her. When you take a defensive posture, however, a pout forms on her face as she prepares herself to fight you.";
@@ -127,6 +126,13 @@ to say Hermaiddesc:
 	say "     This creature is a relatively close comparison to mermaids of yore, that many seafaring men have spoke of. She has the body of a flawless human woman, with beautifully sculpted facial features that complement the voluptuous, buxom chest that she presents. Her lower body consists of two finned legs, with her webbed feet being reminiscent of flippers. Long, flowing hair grows off of her head, dark-blue and matching the ocean. Solid, dark [one of]green[or]blue[or]purple[at random] eyes stare at you, reminding you of the dark fathoms of the deep oceans. Her finned arms and webbed hands end in sharp claws, easily able to hurt or maim someone. Between her legs lie her genitals, with both the male and female parts residing within separate genital slits. As she becomes aroused at the prospect of a conflict, she begins to sprout a foot-long tapered cock, while her feminine opening begins to drool lubricant.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Hermaid"	"[PrepCombat_Hermaid]"
+
+to say PrepCombat_Hermaid:
+	setmongender 5; [creature is herm]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -98,9 +98,7 @@ to HellTrashEvent:
 	else if calcnumber is 2: [fight the imp]
 		LineBreak;
 		say "     Hidden behind the wall, you grab a nearby rock and throw it into the alleyway. It ricochets off the walls, making a loud impact sound that echoes through the narrow pathways. 'Huh?! What was this?! Is someone there?! Answer!' Your strategy worked, as the imp is now walking away from the portal and towards your position. Now's your chance to take him down!";
-		now ImpType is 1; [trash-dumping imp]
-		challenge "Imp Male";
-		now ImpType is 0; [reset to scout imps]
+		say "[FightTrashImp]";
 		if Resolution of Hellish Trashpile < 2:
 			DemonicRitualTapeGet;
 		else:
@@ -112,6 +110,29 @@ to HellTrashEvent:
 		LineBreak;
 		say "     Deciding you don't want to encounter the imp ever again, you turn your back and walk away. Carefully making your way out of the narrow pathways, you're soon through the wide roads and back to the main area of the Warehouse District. You also take note of this route, so you don't come back here by accident on your future explorations.";
 		now resolution of Hellish Trashpile is 99;
+
+to say FightTrashImp:
+	say "     A rapid flutter of wings draws your attention to an incoming threat in the shape of a small, red-skinned creature about a foot in height! The slender being has a pair of bat-like wings on his back, a spade-tipped tail, and its relatively handsome face is crowned by an unruly mop of black hair out of which two curved horns poke out of. Wearing nothing but a thin, skimpy loincloth that sways from side to side with every motion, there is little doubt that this tiny demon, who goes by the name of Krokleet, is male.";
+	say "     Swooping down on you, the imp gives you an angry frown before clearing his throat and booms out in his strangely high pitched tone. 'How dare you intrude during my duties! Isn't it enough hassle as it is, I'll have to deal with unpleasantries like yourself?!' His voice just makes it look all a bit funny, [if Libido of Skarnoth > 0]nothing like the imps you've encountered before,[end if] and you can't quite suppress a snort at how almost comical he sounds, drawing you a hateful glare from the imp. 'We'll see who's laughing after I give you a well-deserved thrashing, whelp!' he shouts and raises a hand, forming a ball of fire above his palm about an inch in diameter.";
+	challenge "Imp Male";
+	if fightoutcome < 20: [player won]
+		say "[Imp loses]";
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		if HP of Player > 0:[player submits]
+			say "     As you submit to the little demon, the imp lowers his guard, perplexed with your change of attitude. 'What?! You interrupt my work and nearly hit me with a rock... for this?! While he clearly sounds like he's annoyed with your intrusion, the slowly building protrusion beneath his loincloth gives him away. 'At least you know your place as the pathetic mortal you are! Yeah, that's right! I'm the superior race, here! His too-broad mouth pulls into a wide grin showing off a whole row of sharp teeth as he flies over to you. 'Now you'll have to make up for my wasted time! Strip naked, slave!' The hell minion puffs up his chest as he caresses his throbbing shaft, observing you taking off your gear and clothes, dropping them to the ground one by one. Fluttering around your exposed body, he demands that you take some lewd poses to show off - like shaking and spreading your ass or air-humping with your crotch - until he commands you to lie down on your back. he lands on your chest a moment later, placing tiny hooves to stand on your breastbone.";
+		else:[player loses]
+			say "     You are left swaying badly after the last hit of the little demon and the imp gives an evil chuckle as he flies right up to your face in a flutter of wings. With his too-broad mouth pulling into a wide grin showing off a whole row of sharp teeth, he reaches out to poke your forehead with one finger, then gives a small shove - enough to make you keel over backwards. 'What were you thinking?! You should have realized that you're no match for me! I'm a demon, dumb-fuck! And I am working! Now you'll have to make up for my wasted time!' With those words, the foot-tall being lands on your chest, placing tiny hooves to stand on your breastbone.";
+		say "     'I won't go easy on you, bitch! You'll be my fucktoy until I'm done screwing the hell out of you! Hah!' the red-skinned humanoid gleefully says as he taps his right hoof on your chest and rubs his crotch. Wearing nothing but a threadbare loincloth, it is painfully obvious that the demon is hard as a rock - his well-sized cock (for the small body-size) standing straight out under the fabric and tenting it. He clearly gets off on ordering others around. With the flick of a clawed hand, your little captor pulls aside the loincloth a moment later, revealing his bright red shaft and starting to jerk it off with gleeful intensity.";
+		WaitLineBreak;
+		project the figure of Imp_naked_icon;
+		WaitLineBreak;
+		say "     'You're nothing but a weak little mortal brought down by my might and power, are you? Go on - say it!' he demands from you while beating off, and given your current position you've got little choice but to obey. This arouses the imp even more, prompting him to play with his balls - squeezing them while giving his shaft a few pulls and swings. 'Let's put that mouth to good use! Yeah, you heard me! I want you to suck my dick like the good fucktoy you are!' His erection throbs even more as he leans over to your face, placing his little hands on both sides of your face and pulling your head with surprising strength. Your lips soon meet the gleaming head of his demon cock, already soaked in precum as it continuously oozes from the slit. With a quick push, your mouth is forced open to take the yet generously sized shaft inside, barely managing to hit your throat as the small imp eagerly thrusts his hips forward.";
+		say "     By holding himself half above your face, given how little he weighs, the short demon manages to effectively facefuck you, his erection pulsing with growing lust as he increases the pace. 'That's it, slave! Who's a good fucktoy?' he giggles as he pulls his cock from you with a loud 'pop' sound, stroking it faster and faster as he puts your tongue to work on his red ballsack. You do your best to lick them thoroughly, running your tongue all over his nuts. Soon, the groans and grunts of his weirdly high pitched voice build to a half-shouted roar, and he bucks his hips against the hand gripping his cock. You feel his balls retracting slightly and pulsing in your mouth as he sprays long blasts of cum all over your hair and forehead. The sheer volume of demonic seed he puts out is almost admirable, and you feel every spurt of it being forced out of his sac. Eventually you're forced to close your eyes tightly as a splashed line of cum runs down your eyebrow.";
+		WaitLineBreak;
+		say "     'Well well - it's been fun playing with you, slut. Wish I could just keep ya, but unfortunately you don't fit the only shitty hell-gate wormhole I can invoke,' the imp says to you and smiles as you carefully open the eye that hasn't got demon cum splashed on its eyelid. 'And eventually, my masters would claim you, stealing all the fun from me! So, how about you keep coming here and submit to me like the filthy weak mortal you are?' The demon flutters away, finishing up his trash dumping on the floor. As you try to stand on your feet, you fail to see a box of some sort being thrown at your face, hitting you right on your nose with surprising force. The imp throws a laughter as you fall back to the ground. 'You look like trash! Hah! See ya some other time, fuckface!' he shouts as he disappears into the portal, the whole thing vanishing together with him.";
+		say "     In one way or another, the imp is gone, and you're now free to search the trash he made once you recover your senses. The task is a little more difficult than you anticipated, but eventually, you manage to stand up and focus on your previous objective.";
+	else if fightoutcome is 30: [fled]
+		say "     You manage to run away and shake the imp, then circle back to the trashpile.";
 
 to HellTrashEvent2:
 	say "     You could [bold type]wait until he's done[roman type] with his ungrateful duty, or [bold type]draw his attention to you[roman type] and search the pile after beating him in a fight. [bold type]Leaving is also a possibility[roman type], if you prefer to stay out of this. You could also [bold type]leave and avoid this place in the future[roman type] if you're not interested in whatever this imp is dumping.";
@@ -137,9 +158,7 @@ to HellTrashEvent2:
 	else if calcnumber is 2: [fight the imp]
 		LineBreak;
 		say "     Hidden behind the wall, you grab a nearby rock and throw it into the alleyway. It ricochets off the walls, making a loud impact sound that echoes through the narrow pathways. 'Huh?! What was this?! Is someone there?! Answer!' Your strategy worked, as the imp is now walking away from the portal and towards your position. Now's your chance to take him down!";
-		now ImpType is 1; [trash-dumping imp]
-		challenge "Imp Male";
-		now ImpType is 0; [reset to scout imps]
+		say "[FightTrashImp]";
 		DemonicItemGet;
 	else if calcnumber is 3: [leave]
 		LineBreak;

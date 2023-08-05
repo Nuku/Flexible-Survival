@@ -236,23 +236,6 @@ To say fsdm loss:
 				say "     You turn to depart, having nothing else to gain from this encounter.";
 
 to say fsdm desc:
-	project the Figure of SeaDragon_soft_icon;
-	setmongender 3; [creature is male]
-	psycheeval;
-	libidoeval;
-	now FSDOPEN is 0;
-	now firebreathcount is 0;
-	now firebreathready is false;
-	now tempnum2 is 0;
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Female";
 	say "     You notice something in the water, which appears to be a large shadow on its approach towards you. Suddenly, the prior silence is shattered with the concussive crashing of waves as a massive beast hurls itself from under its surface, landing on the beach close to you. [one of]The dragon sniffs the air before seeing you, its eyes agleam with particular hunger[or]Looking at you, the dragon roars its challenge with a frightening glare[or]The dragon eyes you unnervingly as it seems to consider you for some purpose[at random]. You'd imagine its fin-like limbs would be ill-equipped to move across land, but he's quick to prove otherwise as the massive bulk begins rushing down upon you.";
 
 Section 1-2 - Player Victory
@@ -715,6 +698,29 @@ to say FSDM_6: [Oral Giving Cock]
 			say ". [if boundsegment is 2]Aiming the monster's impressive tool towards his face, he's hailed by a flood of his heady seed, quickly making an embarrassing mess of himself[else]Monster's impressive tool throbbing with each gout of heady seed, it quickly makes a bit of a mess, wasted as it's spent across the sand[end if]";
 		say ". Once his flow dies down, you pull away from the sea dragon, a spent and [if boundsegment is 2]shameful[else]exhausted[end if] mess, too weakened to really do anything but lay there now. Satisfied with your work, you choose to leave here, a fair bit lust-addled though you may be.";
 	CreatureSexAftermath "Player" receives "OralCock" from "Feral Sea Dragon";
+	
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Feral Sea Dragon"	"[PrepCombat_Feral Sea Dragon]"
+
+to say PrepCombat_Feral Sea Dragon:
+	project the Figure of SeaDragon_soft_icon;
+	setmongender 3; [creature is male]
+	psycheeval;
+	libidoeval;
+	now FSDOPEN is 0;
+	now firebreathcount is 0;
+	now firebreathready is false;
+	now tempnum2 is 0;
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Female";
 
 Section 2 - Creature Insertion
 

@@ -147,10 +147,12 @@ Include Story Skipper Loose Variables by MinimalBuild. [declares export/import s
 Book 2 - More MinimalBuild
 
 Include Alt Combat by MinimalBuild.
+Include Alt Vore by MinimalBuild.
 Include AlcoholMechanics by MinimalBuild.
 [
 Include Assorted Items by Stripes.
 ]
+Include Banning by MinimalBuild.
 Include Basic Functions by MinimalBuild.
 Include Basic Locations by MinimalBuild.
 [
@@ -165,7 +167,9 @@ Include Equipment by MinimalBuild.
 Include Feats by MinimalBuild.
 Include Fighting by MinimalBuild.
 Include Fucking by MinimalBuild.
+Include GameTables by MinimalBuild.
 Include Game Endings by MinimalBuild.
+Include Game Start by MinimalBuild.
 Include Gender Pronouns by MinimalBuild.
 Include giving in by MinimalBuild.
 Include Inventory by MinimalBuild.
@@ -203,6 +207,8 @@ Include Weapons by MinimalBuild.
 [
 Include Zephyr Phone by MinimalBuild.
 ]
+
+include Mammoth by MinimalBuild.
 
 Book 3 - Loading Placeholders referenced in MinimalBuild
 
@@ -332,6 +338,8 @@ Electricprodstatus is a number that varies.
 eptarget is a number that varies.			[hidden number of viable charges]
 eprecharge is a number that varies.			[number of times it's been recharged]
 eprodused is a truth state that varies.		[indicates whether it's been used in a fight yet or not]
+hospquest is a number that varies.
+Doctor Matt is a person.
 
 this is the zpc_lookoverride rule:
 	say "";
@@ -488,3 +496,145 @@ When play begins (this is the graphics window construction rule):
 		follow the ngraphics_blank rule;
 		follow the current graphics drawing rule;
 		now NewGraphicsOpened is true;
+		
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"infection monitor"	"     Cobbled together from various items, Dr. Matt's infection analyzer can be used to check your body's infection status. Type [bold type]pism[roman type] to use."	1	infection monitor
+
+infection monitor is a grab object.
+
+It is not temporary.
+
+monitoring is an action applying to nothing.
+understand "pism" as monitoring.
+
+instead of using infection monitor:
+	monitor;
+
+check monitoring:
+	if infection monitor is owned:
+		monitor;
+	else:
+		say "You don't have anything capable of that.";
+	stop the action;
+
+to monitor:
+	say "You hook up the infection analyzer and run the program, checking on your body's status for any changes while looking yourself over.";
+	if NewTypeInfectionActive is true: [new body parts]
+		if debugactive is 1:
+			say "DEBUG:[line break]";
+			say "Head species status: [HeadSpeciesName of Player]     Torso species status: [TorsoSpeciesName of Player][line break]";
+			say "Back species status: [BackSpeciesName of Player]     Arms species status: [ArmsSpeciesName of Player][line break]";
+			say "Legs species status: [LegsSpeciesName of Player]     Ass species status: [AssSpeciesName of Player][line break]";
+			say "Tail species status: [TailSpeciesName of Player][line break]";
+			if Player is male:
+				say "Cock species status: [CockSpeciesName of Player]     ";
+			if Player is female:
+				say "Cunt species status: [CuntSpeciesName of Player][line break]";
+			if Player is herm:
+				say "Gender: Herm[line break]";
+			else if Player is male:
+				say "Gender: Male[line break]";
+			else if Player is female:
+				say "Gender: Female[line break]";
+			else:
+				say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
+		say "Head status: [HeadName of Player]     Torso status: [TorsoName of Player][line break]";
+		say "Back status: [BackName of Player]     Arms status: [ArmsName of Player][line break]";
+		say "Legs status: [LegsName of Player]     Ass status: [AssName of Player][line break]";
+		say "Tail status: [TailName of Player][line break]";
+		if Player is male:
+			say "Cock status: [CockName of Player]     ";
+		if Player is female:
+			say "Cunt status: [CuntName of Player][line break]";
+		else:
+			say "[line break]";
+		if Player is herm:
+			say "Gender: Herm[line break]";
+		else if Player is male:
+			say "Gender: Male[line break]";
+		else if Player is female:
+			say "Gender: Female[line break]";
+		else:
+			say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
+	else: [old body parts]
+		say "Head status: [FaceSpeciesName of Player]     Body status: [BodySpeciesName of Player][line break]";
+		say "Skin status: [SkinSpeciesName of Player]     Tail status: [TailSpeciesName of Player][line break]";
+		if Player is male:
+			if Player is female:
+				say "Cock status: [CockSpeciesName of Player]     Gender: Herm[line break]";
+			else:
+				say "Cock status: [CockSpeciesName of Player]     Gender: Male[line break]";
+		else if Player is female:
+			say "Groin status: [CockSpeciesName of Player]     Gender: Female[line break]";
+		else:
+			say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
+	if ( HP of Doctor Matt >= 23 and HP of Doctor Matt < 100 ) or hospquest >= 23:
+		let defaultheat be true;
+		let heatname be "Default";
+		choose row 1 in table of infection heat;
+		if CockName of Player is a infect name listed in Table of infection heat:	[check name of heat]
+			choose a row with a infect name of (CockName of Player) in Table of infection heat;
+			if Player is female and fheat entry is false:	[no female heat for that form]
+				choose row 1 in table of infection heat;
+			else if Player is not female and mpregheat entry is false:		[no mpreg-heat for that form]
+				choose row 1 in table of infection heat;
+			else:
+				now defaultheat is false;
+		else:
+			choose row 1 in table of infection heat;
+		now heatname is infect Name entry;
+		if "Sterile" is listed in feats of Player:
+			say "Pregnancy Status: Sterile[line break]";
+		else if Player is not female and player is not mpreg_ok:
+			now score is score;
+		else if Player is impreg_now:
+			say "Pregnancy Status: Pregnant     ";
+			now tempnum is gestation of child;
+			if "Maternal" is listed in feats of Player and a random chance of 1 in 3 succeeds:
+				now tempnum is tempnum / 2;
+			else if "Fertile" is listed in feats of Player:
+				now tempnum is ( 2 * tempnum ) / 3;
+				say "Expecting: ~[tempnum] hours[line break]";
+				[Checking for visible tails]
+				let ShowTail be false;
+				if there is a name of TailName of Child in the Table of New Infection Parts: [creature already in the new table]
+					choose a row with name of TailName of Child in the Table of New Infection Parts;
+					if Tail Description entry is not "":
+						now ShowTail is true;
+				say "Current fetal form: Head: [HeadSpeciesName of Child] Torso: [TorsoSpeciesName of Child] Back: [BackSpeciesName of Child] Arms: [ArmsSpeciesName of Child] Legs: [LegsSpeciesName of Child] Ass: [AssSpeciesName of Child] [if ShowTail is true] Tail: [TailSpeciesName of Child][end if][line break]";
+		else if heat enabled is false:
+			say "Estrus Status: Inactive[line break]";
+		else if animal heat is false:
+			say "Estrus Status: Normal[line break]";
+		else if inheat is true:
+			if heat cycle entry is heat duration entry:
+				say "Estrus Status: In Heat     Heat: [heatname]     Est. Duration: Continuous[line break]";
+			else if turns in heat >= heat cycle entry or turns in heat < (heat cycle entry - heat duration entry) * 8:
+				say "Estrus Status: In Heat     Heat: [heatname]     Est. Duration: Ending[line break]";
+			else if turns in heat >= ( heat cycle entry - heat duration entry ) * 8:
+				let num be heat cycle entry * 8;
+				now num is num - turns in heat;
+				if heatlevel is 3:
+					now num is num + ( num / 4 );
+				say "Estrus Status: In Heat     Heat: [heatname]     Est. Duration: ~[num * 3] hours[line break]";
+		else:
+			if heat cycle entry is heat duration entry:
+				say "Estrus Status: In Heat     Heat: [heatname]     Est. Onset: Immediate & Continuous[line break]";
+			else if turns in heat >= heat cycle entry:
+				let num be ( heat cycle entry - heat duration entry ) * 8;
+				if heatlevel is 3:
+					now num is num - ( num / 5 );
+				say "Estrus Status: In Heat     Heat: [heatname]     Est. Onset: ~[num * 3] hours[line break]";
+			else if turns in heat >= ( heat cycle entry - heat duration entry ) * 8:
+				say "Estrus Status: In Heat     Heat: [heatname]     Est. Onset: Immediate[line break]";
+			else:
+				let num be ( heat cycle entry - heat duration entry ) * 8;
+				now num is num - turns in heat;
+				if heatlevel is 3:
+					now num is num - ( num / 5 );
+				say "Estrus Status: In Heat     Heat: [heatname]     Est. Onset: ~[num * 3] hours[line break]";
+	follow the self examine rule;
+
+

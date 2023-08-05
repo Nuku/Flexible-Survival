@@ -54,6 +54,17 @@ a postimport rule:
 		now CuntSpeciesName of Player is CockName of Player;
 	if tailSpeciesName of Player is "":
 		now tailSpeciesName of Player is TailName of Player;
+	[bugfix for replaced skunk infection]
+	if BodyName of Player is "Skunk":
+		now BodyName of Player is "Skunk Female";
+	if FaceName of Player is "Skunk":
+		now FaceName of Player is "Skunk Female";
+	if SkinName of Player is "Skunk":
+		now SkinName of Player is "Skunk Female";
+	if CockName of Player is "Skunk":
+		now CockName of Player is "Skunk Female";
+	if TailName of Player is "Skunk":
+		now TailName of Player is "Skunk Female";
 
 [----------------------------------------------------------------------------------]
 [ Testing Commands for partial Saving                                              ]
@@ -1463,6 +1474,7 @@ to BeastRestore:
 			if Beastname is "Rubber Tigress", now Beastname is "Rubber Tigress";
 			if Beastname is "Football Gorilla", now Beastname is "Football Gorilla Male";
 			if Beastname is "Feral Wolf", now Beastname is "Feral Wolf Male";
+			if Beastname is "Skunk", now Beastname is "Skunk Female";
 			if there is a Name of BeastName in the Table of Random Critters:
 				choose row with Name of BeastName in Table of Random Critters;
 				now Area entry is BeastArea;
@@ -1477,7 +1489,7 @@ to BeastRestore:
 					say "DEBUG -> [x]: BeastName: [BeastName] Area entry set to [BeastArea]!";
 				]
 			else:
-				if Beastname is not "Lernean Hydra": [error message disabled for bugged name]
+				if Beastname is not "Lernean Hydra" and Beastname is not "Skunk": [error message disabled for bugged name]
 					say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters! Please report this message on the FS Discord!";
 	else if the File of BeastSave exists:
 		read File of BeastSave into the Table of GameBeasts;

@@ -25,11 +25,17 @@ to say Rubber Tigress attack:
 To say Rubber Tigress loss:
 	say "     With a strange squeaking noise, the large rubber tigress seems to deflate slightly, her body seeming to shrink in on itself as she staggers away, looking desperately for a rubber patch kit. She gives you one last longing look over her shoulder as she flicks her tail to the side, giving you a glimpse of what you might have had before she disappears into the midway.";
 
+Section 2 - Creature Insertion
+
 to say RubberTigress_Desc:
-	project the Figure of RubberTigress_icon;
 	say "     A large and shiny tigress appears in front of you, stalking forward on two legs with an evil grin on her sleek rubber muzzle, her stripes sleek and her rubbery nipples standing out visibly in the colored fair lighting.";
 
-Section 2 - Creature Insertion
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Rubber Tigress"	"[PrepCombat_Rubber Tigress]"
+
+to say PrepCombat_Rubber Tigress:
+	project the Figure of RubberTigress_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

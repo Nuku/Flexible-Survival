@@ -86,6 +86,13 @@ to say wolfherm loses:
 
 Section 2 - Creature Insertion
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Painted Wolf Herm"	"[PrepCombat_Painted Wolf Herm]"
+
+to say PrepCombat_Painted Wolf Herm:
+	setmongender 5;
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -111,7 +118,7 @@ When Play begins:
 	now attack entry is "The painted wolf herm [one of]gouges you with her claws, leaving streaks of blood across your skin[or]leaps at you, catching your arm in her mouth. She bites down hard, leaving a muzzle-shaped wound[or]howls, causing you to tremble in fear for a moment before you regain your resolve[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[wolfherm loses]"; [Text used when player wins, can be directly entered like combat text or description. If it is more complex it can be linked with a 'To say' block as the demonstration text shows.]
 	now victory entry is "[wolfherm wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 5]     Looking over the Painted Wolf Herm, her body is covered in thick, fluffy patchwork of gold, gray, and black fur. her head is mostly canine, with rare smatterings of human and harsh, triangular ears. her body is coated in layers of powerful, flexing muscles that are made readily apparent with the slightest twist. She has four heavy breasts, the first row the size of basketballs and the second row slightly smaller. her arms are still human, with the exception of tiny claws on the tips of the fingers. her legs are digitigrade, with powerful haunches and graceful calves. She has a large, fluffy tail that, although similar to a husky, is lacking any curve or curl in it. As she stands unabashed in the open, you see that she has a thick, knotted, ten-inch canine shaft. Two heavy balls rest above her dripping female sex, the aroma of which lays thick and heady in the air around you."; [ Description of the creature when you encounter it.]
+	now desc entry is "     Looking over the Painted Wolf Herm, her body is covered in thick, fluffy patchwork of gold, gray, and black fur. her head is mostly canine, with rare smatterings of human and harsh, triangular ears. her body is coated in layers of powerful, flexing muscles that are made readily apparent with the slightest twist. She has four heavy breasts, the first row the size of basketballs and the second row slightly smaller. her arms are still human, with the exception of tiny claws on the tips of the fingers. her legs are digitigrade, with powerful haunches and graceful calves. She has a large, fluffy tail that, although similar to a husky, is lacking any curve or curl in it. As she stands unabashed in the open, you see that she has a thick, knotted, ten-inch canine shaft. Two heavy balls rest above her dripping female sex, the aroma of which lays thick and heady in the air around you."; [ Description of the creature when you encounter it.]
 	now face entry is "mostly canine, with rare smatterings of human and harsh, triangular ears"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "coated in layers of powerful, flexing muscles that are made readily apparent with the slightest twist. Your arms are still human, with the exception of tiny claws on the tips of the fingers. Your legs are digitigrade, with powerful haunches and graceful calves"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "thick, fluffy patchwork of gold, gray, and black fur that conceals the"; [ skin Description, format as "Your body is covered in (your text) skin."]

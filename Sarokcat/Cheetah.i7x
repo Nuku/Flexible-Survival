@@ -49,15 +49,18 @@ To say CheetahWomanLoses:
 	else: [Milking]
 		say "     Moving to restrain her before she can get away, you force her down onto the ground with her [one of]muzzle[or]face[or]snout[at random] pressed against the earth. You [one of]pick up a glass bottle from the ground[or]pull a glass bottle from your bag[or]pick up a plastic bottle from the ground[or]pull a plastic bottle from your bag[at random] and place the container under her [one of]right breast[or]left breast[at random], then begin to stimulate her nipples. Her breathing starts to get heavy as the stimulation to her tits intensifies. Soon she is moaning and purring as milk shoots out her tits and into the container. After you are done with her, you move her slumping body to the side and put a cap on the bottle of cheetah milk, then go on your merry way.";
 
-to say CheetahWomanDesc:
-	setmongender 4;
-	if inasituation is true:
-		say ""; [dealt with in the origin event]
-	else: [standard description]
-		say "     As you wander around the deserted paths of the zoo, you spot a blur for a second, and turning towards it you find yourself staring straight into the eyes of an almost feral-like cheetah woman. She is adorned with [one of]the tattered remains of a dress[or]the tattered remains of a zookeepers uniform[or]the tattered remains of some jeans and a shirt[or]nothing[at random], her long lean body resting on narrow paws and a long cheetah tail lashing behind her as she focuses her gaze directly on you. [one of]'Why don't you run? I love the chase,' [or]'Hmmm, not a gazelle, but you look almost as fun,' [or]'Oooo, something to chase!' [or]'Oh good, I was feeling bored,' [or]'I was feeling kind of lonely here. Maybe you can help?' [or]'Finally someone to pounce!' [at random]she says with a soft grin, her pert breasts standing out from her body as she takes a deep breath in anticipation and slips into a runner's stance, her eyes locked on her newest prey... you.";
-
 Section 2 - Creature Insertion
 
+to say CheetahWomanDesc:
+	say "     As you wander around the deserted paths of the zoo, you spot a blur for a second, and turning towards it you find yourself staring straight into the eyes of an almost feral-like cheetah woman. She is adorned with [one of]the tattered remains of a dress[or]the tattered remains of a zookeepers uniform[or]the tattered remains of some jeans and a shirt[or]nothing[at random], her long lean body resting on narrow paws and a long cheetah tail lashing behind her as she focuses her gaze directly on you. [one of]'Why don't you run? I love the chase,' [or]'Hmmm, not a gazelle, but you look almost as fun,' [or]'Oooo, something to chase!' [or]'Oh good, I was feeling bored,' [or]'I was feeling kind of lonely here. Maybe you can help?' [or]'Finally someone to pounce!' [at random]she says with a soft grin, her pert breasts standing out from her body as she takes a deep breath in anticipation and slips into a runner's stance, her eyes locked on her newest prey... you.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Cheetah Woman"	"[PrepCombat_Cheetah Woman]"
+
+to say PrepCombat_Cheetah Woman:
+	setmongender 4;
+	
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;

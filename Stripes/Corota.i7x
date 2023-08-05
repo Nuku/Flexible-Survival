@@ -6,19 +6,6 @@ Version 1 of Corota by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say corotadesc:
-	setmongender 4; [creature is female]
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Female";
-	say "     This strange, serpentine creature is covered in ocher, darkly veined flesh. Her head is snakelike, set above a long neck. Two vicious horns jut through her brow, while her fangs are longer than expected for a snake her size. Most notable is her ability to split her head down its center, forming two crude but functioning half heads each with their own neck half. Her body is lean and has a pair of leathery wings spread from her back, golden brown dust hazing around her. She has two petite breasts on her chest. Her arms are human in shape, but she is gifted with two too many. Her legs are leonine, intimidating in shape. Her tight, rump-less ass is hidden beneath a pair of tails. Each limb looks to be prehensile, nearly as long as she is tall and ending in a spiked knob. Beneath those tails is a wide, female cleft of ocher flesh.";
-	say "     As it approaches you, it waves its wings, sending a wave of that dust at you. It fills the air and stings your eyes and lungs, making it difficult to breathe. Coughing a little, you prepare to fight it off. Periodically, the creature waves its wings again, ensuring the dusty cloud remains.";
-
-
 to say losetocorota:
 	choose row MonsterID from the Table of Random Critters;
 	if a random chance of 3 in 5 succeeds:
@@ -48,12 +35,28 @@ to say losetocorota:
 		say "     Out of breath, and needing a breather, you try to pull back from the fight with the corota to regain your breath. For a moment, it looks like the corota is going to allow you to do so, turning their back on you and beginning to walk away. Then you notice the small cloud of dust forming between their wings, too late to get out of the way or close your mouth before the corota sends the dust cloud straight into your open mouth with a quick flap of their wings. Gasping now in pain as the particles cling to your throat and insides of your breathing organs, you haven't the environmental awareness to notice them repeating the action again and again. Face going blue, you pass out to wake up some time later covered in the ochre dust, throat raw and demanding a drink soon.";
 		increase thirst of Player by 5;
 
-
 to say beatthecorota:
 	say "     Your final blow causes the twin-headed creature to stumble back and hiss angrily. It uses its four arms to block further blows as it retreats a few steps. 'Good fight,' it hisses respectfully. 'I give... for now.' With that, it turns and flaps it wings, taking to the air in a burst of dusty air. You cover your mouth and back away, waiting for the air to clear as it flies off in search of sport elsewhere.";
 
-
 Section 2 - Creature Insertion
+
+to say corotadesc:
+	say "     This strange, serpentine creature is covered in ocher, darkly veined flesh. Her head is snakelike, set above a long neck. Two vicious horns jut through her brow, while her fangs are longer than expected for a snake her size. Most notable is her ability to split her head down its center, forming two crude but functioning half heads each with their own neck half. Her body is lean and has a pair of leathery wings spread from her back, golden brown dust hazing around her. She has two petite breasts on her chest. Her arms are human in shape, but she is gifted with two too many. Her legs are leonine, intimidating in shape. Her tight, rump-less ass is hidden beneath a pair of tails. Each limb looks to be prehensile, nearly as long as she is tall and ending in a spiked knob. Beneath those tails is a wide, female cleft of ocher flesh.";
+	say "     As it approaches you, it waves its wings, sending a wave of that dust at you. It fills the air and stings your eyes and lungs, making it difficult to breathe. Coughing a little, you prepare to fight it off. Periodically, the creature waves its wings again, ensuring the dusty cloud remains.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Corota"	"[PrepCombat_Corota]"
+
+to say PrepCombat_Corota:
+	setmongender 4; [creature is female]
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Female";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

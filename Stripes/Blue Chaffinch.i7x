@@ -10,18 +10,7 @@ bluechaffrape is a number that varies.
 
 Section 1 - Monster Description
 
-to say bluechaffinchdesc:
-	setmongender 3; [creature is male]
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Female";
-	say "     The avian creature before you is a covered in bright blue plumage that is very even in color across most of his body. Only the ends of his wings and tail are a much darker midnight blue on the flight feathers, and his lower belly and the underside of his narrow tail are downy and white. He has a puffy looking body compared to his slender arms and legs thanks to his soft feathers. His head is rounded and shaped like that of a finch, though his beak is thicker, showing his infection to somehow be that of an exotic blue chaffinch. His eyes are like black beads with a touch of white feathers just above and below.";
-	say "     Seeing you, he puffs out these feathers further and chirps angrily at you, trying to make himself look larger. '[one of]Come on, I can take you[or]Come and get some[or]You'll be singing a new tune once you're under me[at random],' the songbird says[if BodyName of Player is listed in infections of AvianpredList and FaceName of Player is listed in infections of AvianpredList] with a bit of trepidation in passerine's boasting, clearly concerned about your nature as a predatory bird[else if BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList] with a bit of trepidation in passerine's boasting, clearly concerned about your feline nature[end if].";
-
+[moved to section 4]
 
 Section 2 - Player Loss
 
@@ -212,8 +201,25 @@ to say bluechaffpounced:
 	now area entry is "Nowhere";
 	CreatureSexAftermath "Blue Chaffinch" receives "AssFuck" from "Player";
 
-
 Section 2 - Creature Insertion
+
+to say bluechaffinchdesc:
+	say "     The avian creature before you is a covered in bright blue plumage that is very even in color across most of his body. Only the ends of his wings and tail are a much darker midnight blue on the flight feathers, and his lower belly and the underside of his narrow tail are downy and white. He has a puffy looking body compared to his slender arms and legs thanks to his soft feathers. His head is rounded and shaped like that of a finch, though his beak is thicker, showing his infection to somehow be that of an exotic blue chaffinch. His eyes are like black beads with a touch of white feathers just above and below.";
+	say "     Seeing you, he puffs out these feathers further and chirps angrily at you, trying to make himself look larger. '[one of]Come on, I can take you[or]Come and get some[or]You'll be singing a new tune once you're under me[at random],' the songbird says[if BodyName of Player is listed in infections of AvianpredList and FaceName of Player is listed in infections of AvianpredList] with a bit of trepidation in passerine's boasting, clearly concerned about your nature as a predatory bird[else if BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList] with a bit of trepidation in passerine's boasting, clearly concerned about your feline nature[end if].";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Blue Chaffinch"	"[PrepCombat_Blue Chaffinch]"
+
+to say PrepCombat_Blue Chaffinch:
+	setmongender 3; [creature is male]
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Female";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

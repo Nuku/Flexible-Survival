@@ -7,18 +7,11 @@ Version 3 of Leopardman by Vinickus begins here.
 Section 1 - Creature Responses
 
 to say leopardman desc:
-	project Figure of Leopardman_soft_icon;
-	setmongender 3; [creature is male]
-	if inasituation is true:
-		say ""; [dealt with at the event source]
-	else:
-		say "     As you wander the deserted streets of the city, all of a sudden a large form jumps down into the street in front of you. As it stalks towards you, you get a good look at the powerful feline man. His strong body is covered with leopard-like fur, and as he rises up to two feet and flexes his claw-tipped hands, you get a very good look at his rather erect feline cock. Looking around quickly, you realize the leopardman waited until it was far too late for you to run before he leaped down from his hiding spot. As you prepare to fight, you can see a playful grin cross the muzzle of the obviously aroused feline. [one of]'This should be fun,' [or]'Let's play leopard and mouse, shall we?' [or]'I like it when they struggle a bit,' [or]'You look like you will make a fine Leopardess...' [or]'Let's see how long you can resist me, little prey...' [at random]he says as he leaps forward after his prey.";
+	say "     As you wander the deserted streets of the city, all of a sudden a large form jumps down into the street in front of you. As it stalks towards you, you get a good look at the powerful feline man. His strong body is covered with leopard-like fur, and as he rises up to two feet and flexes his claw-tipped hands, you get a very good look at his rather erect feline cock. Looking around quickly, you realize the leopardman waited until it was far too late for you to run before he leaped down from his hiding spot. As you prepare to fight, you can see a playful grin cross the muzzle of the obviously aroused feline. [one of]'This should be fun,' [or]'Let's play leopard and mouse, shall we?' [or]'I like it when they struggle a bit,' [or]'You look like you will make a fine Leopardess...' [or]'Let's see how long you can resist me, little prey...' [at random]he says as he leaps forward after his prey.";
 
 to say Leopardman wins:
 	project Figure of Leopardman_hard_icon;
-	if inasituation is true:
-		say ""; [dealt with at the event source]
-	else if Player is female:
+	if Player is female:
 		say "     'That's it, I knew you couldn't resist a sexy cat like me for much longer, and now we can have some real fun with that lusty little pussy of yours...' the leopardman says with amusement as you abandon any further attempt at resistance and lie there helplessly sprawled out in front of the male beast. You find your heart beating faster as he stalks closer to you, his powerful male scent filling your mind with lust even as he moves his spotted feline form over you. You gasp as one of his clawed hands trails up the inside of your thighs teasingly, the feel of his soft hands tracing up your [bodydesc of Player] body making you moan with arousal, and causes the leopard to grin as he reaches your already damp female mound and rubs it teasingly.";
 		say "     'Already nice and ready for me, I see. This is going to be fun,' he says with a smirk as he positions himself above you, your legs parting automatically for him as he lowers himself down onto you, your body reacting to his touch without any hesitation, your mouth open and panting with need as he guides the tip of his barbed feline cock up against your increasingly heat-filled sex. The leopardman seems increasingly amused as he thrusts himself slowly inside you, the feeling of his thick feline member spearing into you making you groan with delight as you begin to forget why you would want to resist something so pleasurable.";
 		WaitLineBreak;
@@ -45,69 +38,66 @@ to say Leopardman wins:
 
 To say Leopardman loses:
 	project Figure of Leopardman_hard_icon;
-	if inasituation is true:
-		say ""; [dealt with at the event source]
-	else:
-		say "     The leopardman staggers back, his feline muzzle scrunched up in pain as he clutches at his wounds and glares at you for a minute. You don't give him a chance to react. With quick reflexes, you soon have him pinned to a nearby brick wall. It's got holes galore, and frankly isn't that stable, but you have the advantage, and you doubt he can topple anything in his weekend state.";
-		LineBreak;
-		say "     [bold type]What do you want to do with the Leopardman?[roman type][line break]";
-		now sextablerun is 0;
-		blank out the whole of table of fucking options;
-		[]
+	say "     The leopardman staggers back, his feline muzzle scrunched up in pain as he clutches at his wounds and glares at you for a minute. You don't give him a chance to react. With quick reflexes, you soon have him pinned to a nearby brick wall. It's got holes galore, and frankly isn't that stable, but you have the advantage, and you doubt he can topple anything in his weekend state.";
+	LineBreak;
+	say "     [bold type]What do you want to do with the Leopardman?[roman type][line break]";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Immediately fall to your knees and worship this feline Adonis";
+	now sortorder entry is 1;
+	now description entry is "While he's at your mercy, why not show him true appreciation";
+	[]
+	if Player is male: [Option only visible for males]
 		choose a blank row in table of fucking options;
-		now title entry is "Immediately fall to your knees and worship this feline Adonis";
-		now sortorder entry is 1;
-		now description entry is "While he's at your mercy, why not show him true appreciation";
-		[]
-		if Player is male: [Option only visible for males]
-			choose a blank row in table of fucking options;
-			now title entry is "Beg him to let you worship his paws";
-			now sortorder entry is 2;
-			now description entry is "Slip yourself under his big paws";
-		[]
-		if Player is male: [Option only visible for males]
-			choose a blank row in table of fucking options;
-			now title entry is "Turn around and bend over, smacking your ass";
-			now sortorder entry is 3;
-			now description entry is "Feel him inside you and breed you";
-		[]
-		if Player is male: [Option only visible for males]
-			choose a blank row in table of fucking options;
-			now title entry is "Face Fuck";
-			now sortorder entry is 4;
-			now description entry is "Push him to his knees and show him the error of his ways";
-		[]
-		sort the table of fucking options in sortorder order;
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]0 - Nevermind[as]0[end link][line break]";
-		while sextablerun is 0:
-			say "Pick the corresponding number> [run paragraph on]";
-			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-				now current menu selection is calcnumber;
-				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry]?";
-				if Player consents:
-					let nam be title entry;
-					now sextablerun is 1;
-					if (nam is "Immediately fall to your knees and worship this feline Adonis"):
-						say "[LeopardmanVictorySexOral]";
-					if (nam is "Beg him to let you worship his paws"):
-						say "[LeopardmanVictorySexPaw]";
-					if (nam is "Turn around and bend over, smacking your ass"):
-						say "[LeopardmanVictorySexAnal]";
-					if (nam is "Face Fuck"):
-						say "[LeopardmanVictorySexFaceFuck]";
-					wait for any key;
-			else if calcnumber is 0:
+		now title entry is "Beg him to let you worship his paws";
+		now sortorder entry is 2;
+		now description entry is "Slip yourself under his big paws";
+	[]
+	if Player is male: [Option only visible for males]
+		choose a blank row in table of fucking options;
+		now title entry is "Turn around and bend over, smacking your ass";
+		now sortorder entry is 3;
+		now description entry is "Feel him inside you and breed you";
+	[]
+	if Player is male: [Option only visible for males]
+		choose a blank row in table of fucking options;
+		now title entry is "Face Fuck";
+		now sortorder entry is 4;
+		now description entry is "Push him to his knees and show him the error of his ways";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
 				now sextablerun is 1;
-				say "     You step back from the leopardman, shaking your head slightly as he gives a questioning look.";
+				if (nam is "Immediately fall to your knees and worship this feline Adonis"):
+					say "[LeopardmanVictorySexOral]";
+				if (nam is "Beg him to let you worship his paws"):
+					say "[LeopardmanVictorySexPaw]";
+				if (nam is "Turn around and bend over, smacking your ass"):
+					say "[LeopardmanVictorySexAnal]";
+				if (nam is "Face Fuck"):
+					say "[LeopardmanVictorySexFaceFuck]";
 				wait for any key;
-			else:
-				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-		clear the screen and hyperlink list;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the leopardman, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say LeopardmanVictorySexOral:
 	say "     With your body so close to his, you can't help but find yourself lost in the sight of the man, the feel of the man. His fur rubs against your skin, and it drives your mind wild, drawing a moan from your clenched lips. You try to keep a tough face, a war face, but the leopardman sees right through you. His lips curl up in one of the smarmiest grins of glee you have ever seen. It only drives you further from sane thought, leaving you with nothing but need. You are just about to beg to get to worship him, but he just licks his lips and pushes off the wall, forcing you to stumble a few feet back. It is then that he leans back against the wall and folds his arms. His head then nods towards his dripping erection. You now no longer have to beg, as he simply says, 'Suck,[if Player is male] boy[else] bitch[end if].' You are then on your knees before him in seconds. There's nothing left to do but give in to your screaming mind.";
@@ -150,6 +140,14 @@ to say LeopardmanVictorySexFaceFuck:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Leopardman"	"[PrepCombat_Leopardman]"
+
+to say PrepCombat_Leopardman:
+	project Figure of Leopardman_soft_icon;
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

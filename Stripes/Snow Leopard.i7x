@@ -6,19 +6,6 @@ Section 1 - Creature Responses
 
 nosnowmeowsex is a number that varies.
 
-to say snowmeowdesc:
-	project Figure of SnowLeopard_soft_icon;
-	setmongender 3; [creature is male]
-	choose row MonsterID from Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Male";
-	say "     You have encountered another citizen stricken by the infection, this one having turned into an exotic snow leopard. His five foot tall body is covered with snowy white and ash gray fur marked by coal black spots. The fur is fluffy and thick, especially on tail which has larger dark patches on it. He eyes you intently with his icy gaze. He seems rather uncomfortable in the summer heat, but the stiff erection he's sporting shows he's quite intent on slaking his lusts as well as his thirst. He strides towards you, growling aggressively in his throat.";
-
-
 to say losetosnowmeow:
 	project Figure of SnowLeopard_hard_icon;
 	now nosnowmeowsex is 0;
@@ -166,6 +153,24 @@ to say snowmeow_vsex04:
 
 Section 2 - Creature Insertion
 
+to say snowmeowdesc:
+	say "     You have encountered another citizen stricken by the infection, this one having turned into an exotic snow leopard. His five foot tall body is covered with snowy white and ash gray fur marked by coal black spots. The fur is fluffy and thick, especially on tail which has larger dark patches on it. He eyes you intently with his icy gaze. He seems rather uncomfortable in the summer heat, but the stiff erection he's sporting shows he's quite intent on slaking his lusts as well as his thirst. He strides towards you, growling aggressively in his throat.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Snow Leopard"	"[PrepCombat_Snow Leopard]"
+
+to say PrepCombat_Snow Leopard:
+	project Figure of SnowLeopard_soft_icon;
+	setmongender 3; [creature is male]
+	choose row MonsterID from Table of Random Critters;
+	if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
+	
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;

@@ -10,11 +10,7 @@ Harpyconsent is a number that varies.
 
 to say Harpy wins:
 	choose row MonsterID from the Table of Random Critters;
-	if inasituation is true:
-		stop the action; [text taken care of at the source]
-	if harpyfight is 3:
-		say "     The harpy swoops in and grabs you, running her taloned hands over your body as the others close in around you.";
-	else if HP of Player > 0:
+	if HP of Player > 0:
 		if harpyconsent is 0:
 			say "     She swoops down and grabs you up, pressing her lips to yours. Peace sweeps through this form even as your heart hammers in your chest. You pull her tight as she draws you closer, swept away in the fierce exchange. You are unsure how long you remain like that, but eventually she sets you down and shakes her head, 'We will meet again, I hope.' and she takes off.";
 			now Harpyconsent is 1;
@@ -52,13 +48,10 @@ to say Harpy wins:
 			say "     She grabs at you with her powerful talons, leaving painful marks even as your body flushes with the warm tingles of nanite infection. She shouts at you angrily, scratching until her anger passes, then, with great pumps born of her frustration, she flaps her wings and retreats.";
 	else:
 		say "     She grabs at you with her powerful talons, leaving painful marks even as your body flushes with the warm tingles of nanite infection. She shouts at you angrily, scratching until her anger passes, then, with great pumps born of her frustration, she flaps her wings and retreats.";
-	now harpyfight is 2;
 
 [ [Harpy loss] ]
 To say Harpy loses:
-	if inasituation is true:
-		stop the action; [text taken care of at the source]
-	if harpyfight is not 3 and Player is male and Libido of Player > 40 and a random chance of 1 in 3 succeeds:
+	if Player is male and Libido of Player > 40 and a random chance of 1 in 3 succeeds:
 		say "     Your final blow sends the harpy tumbling to the ground momentarily. You have a brief moment to decide if you'll take advantage of her while you can. Shall you fuck the harpy?";
 		if Player consents:
 			say "     You jump atop the harpy, pinning her down before she can take to the air again. She shrieks, but is too weak to fight you off as you get your cock lined up and thrust into her. Despite her resistance, she moans in pleasure as you start pounding into her wet pussy. As her lust builds, you relax your grip so you can fondle her breasts as well. After an enjoyable ride, you drive deep into her and release your hot seed, making her shriek in delight. You pump your hot load into her before letting her get up and leave.";
@@ -68,17 +61,20 @@ To say Harpy loses:
 				now harpyconsent is 0;
 	else:
 		say "     Emitting a sudden foul curse, the young woman takes to the air, fleeing before her wounds can ground her.";
-	now harpyfight is 1;
 
 to say HarpyDesc:
-	setmongender 4;
-	project Figure of Harpy_icon;
-	if inasituation is false:
-		say "     An athletic-looking young woman with feathery wings attached to her arms like fins and great talons for hands and feet. Her legs are also covered in feathers, and she has a fan of feathers over her butt. She has light, flawless flesh where exposed on her front and a fine, elfin face. She would be cute if she wasn't scary.";
-	else:
-		say ""; [taken care of at the event source]
+	say "     An athletic-looking young woman with feathery wings attached to her arms like fins and great talons for hands and feet. Her legs are also covered in feathers, and she has a fan of feathers over her butt. She has light, flawless flesh where exposed on her front and a fine, elfin face. She would be cute if she wasn't scary.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Harpy"	"[PrepCombat_Harpy]"
+
+to say PrepCombat_Harpy:
+	setmongender 4;
+	if CreatureArtworkOverride is false: [in case this creature is called up in an event and other artwork needs to be used]
+		project Figure of Harpy_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

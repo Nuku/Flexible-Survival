@@ -147,10 +147,16 @@ to say LoseToWerewolf:
 
 to say WerewolfDesc:
 	setmongender 4;
-	if inasituation is true:
-		say ""; [dealt with elsewhere]
-	else:
-		say ""; [currently unused, only event encounters with her]
+	say ""; [currently unused, only event encounters with her]
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Werewolf"	"[PrepCombat_Werewolf]"
+
+to say PrepCombat_Werewolf:
+	say "";
+
+
 
 Section 3 - Creature Insertion
 

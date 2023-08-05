@@ -525,7 +525,6 @@ to say Kitsune_DomRidingVag:
 	infect "Kitsune";
 	now non-infectious entry is true;]
 
-
 Section 6 - Creature Insertion
 
 to say Kitsune loss:
@@ -533,6 +532,13 @@ to say Kitsune loss:
 
 to say Kitsune attack:
 	say "These are filler messages and should not be seen, as there's no fight with Kitsune.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Kitsune"	"[PrepCombat_Kitsune]"
+
+to say PrepCombat_Kitsune:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -560,7 +566,7 @@ When Play begins:
 	now attack entry is "[one of]The tall fox man laughs while shooing you away playfully. A blue ball of flame appears in his hand when you don't back down.[at random]";
 	now defeated entry is "[Kitsune loss]";
 	now victory entry is "[Kitsune attack]";
-	now desc entry is "A silver furred vulpine stands on two digitigrade legs while looking at you calculatingly. Piercing azure eyes glare at you somewhat hotly as if the fox-man is trying to undress you with his eyes. Just exactly who or what is this creature that stands with nine soft and flowing tails at his backside? The loincloth tied over his waist tells you nothing, save that the other is well endowed."; [ Description of the creature when you encounter it.]
+	now desc entry is "     A silver furred vulpine stands on two digitigrade legs while looking at you calculatingly. Piercing azure eyes glare at you somewhat hotly as if the fox-man is trying to undress you with his eyes. Just exactly who or what is this creature that stands with nine soft and flowing tails at his backside? The loincloth tied over his waist tells you nothing, save that the other is well endowed."; [ Description of the creature when you encounter it.]
 	now face entry is "elongated, with a silver foxy muzzle. While it may appear to belong to a normal anthro at first glance, the fact that your eyes are colored in an almost otherworldly, piercing blue easily disproves that assumption. Deep and fathomless as they are, anyone meeting your gaze can say that there is an air of wisdom and mystery about you"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "now that of a creature who is one of both vulpine and human in genetic makeup. A lithe frame hides the dense muscles you have underneath your thick pelt of soft fur. On down your twin digitigrade legs hold you steadily as you balance yourself on your rough paw pads. Grace and poise seem to be the words that define you as the power inside of your veins almost sings with mystical energy"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]silver-furred[or]heavily pelted[or]kitsune-coated[or]supremely fluffy fox-furred[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]

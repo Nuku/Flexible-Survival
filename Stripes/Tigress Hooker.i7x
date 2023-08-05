@@ -12,41 +12,10 @@ stiffedpayment is a number that varies.	[marked as having failed to pay the fee 
 mqfightresult is a number that varies.	[ 1 = win / 2 = lose / 3 = fled (unchanged) ]
 
 to say tigress_desc:
-	setmongender 5; [creature is herm]
-	choose row MonsterID from the Table of Random Critters;
-	let debit be 0;
-	if mqstatus is 3:				[fighting tigresses at the motel]
-		say "     The lovely tigress is quite upset at the intruder to her motel home. She growls angrily and readies to deal with you soundly so she can have her way with you and put you in your place. Under her.";
-		if HardMode is true and level of Player > 5, let debit be level of Player - 5;
-		now HP entry is 55 + ( debit * 4 );
-		now monsterHP is 55 + ( debit * 4 );
-		now wdam entry is 7 + ( debit / 3 );
-		now lev entry is 5 + debit;
-	else if mqstatus is 6:				[fighting the matron]
-		say "     The tigress matron of the motel is a larger and more impressive female. She's got an extra foot of height on any of her girls and a much fuller rack as well. her long, flowing orange hair swishes as she pulls off the bathrobe she was wearing, baring her strong and sensual body to you. She looks at you with a strange expression, clearly not pleased that you've burst in here after hurting several of her girls, but eager to put you in your place. her dark nipples and cock are hard with her anticipation of enjoying a new plaything.";
-		if HardMode is true and level of Player > 8, let debit be level of Player - 8;
-		now HP entry is 90 + ( debit * 6 );
-		now monsterHP is 90 + ( debit * 6 );
-		now wdam entry is 12 + ( ( 4 * debit ) / 11 );
-		now lev entry is 8 + debit;
-	else:					[standard tigress]
-		say "     Leaning against a building is a striking female feline. She is wearing a skimpy outfit, a short top and even shorter skirt. This lets you see the soft orange tiger fur that covers her attractive body, rich with black stripes. Her bosom and stomach have snowy, white fur that covers them. Her ears have [one of]large hoop earrings[or]a trio of small studs[or]tattoos of stars on the inside[or]long, dangling earrings[at random]. Her [one of]long black hair is held in a pony tail[or]hair is dyed a bright red[or]orange hair is styled into fiery mane[or]dark hair has been bleached blond, though you can see the darker roots.[or]hair is neon pink and very long, hanging to her waist[or]hair is a deep blue, with green tips[at random].";
-		say "     Spotting you before you can move away, she flicks her cigarette aside and sizes you up quickly. 'So honey, you lookin['] for a little fun? For a little something, I'll show you a good time.' As she steps up, you catch the edge of something extra making a bulge under her skirt. Clearly this tigress hooker is equipped to pleasure any client she may find. And she's found you!";
-		if HardMode is true and level of Player > 5, let debit be level of Player - 5;
-		now HP entry is 55 + ( debit * 4 );
-		now monsterHP is 55 + ( debit * 4 );
-		now wdam entry is 7 + ( debit / 3 );
-		now lev entry is 5 + debit;
+	say "     Leaning against a building is a striking female feline. She is wearing a skimpy outfit, a short top and even shorter skirt. This lets you see the soft orange tiger fur that covers her attractive body, rich with black stripes. Her bosom and stomach have snowy, white fur that covers them. Her ears have [one of]large hoop earrings[or]a trio of small studs[or]tattoos of stars on the inside[or]long, dangling earrings[at random]. Her [one of]long black hair is held in a pony tail[or]hair is dyed a bright red[or]orange hair is styled into fiery mane[or]dark hair has been bleached blond, though you can see the darker roots.[or]hair is neon pink and very long, hanging to her waist[or]hair is a deep blue, with green tips[at random].";
+	say "     Spotting you before you can move away, she flicks her cigarette aside and sizes you up quickly. 'So honey, you lookin['] for a little fun? For a little something, I'll show you a good time.' As she steps up, you catch the edge of something extra making a bulge under her skirt. Clearly this tigress hooker is equipped to pleasure any client she may find. And she's found you!";
 
 to say losetotigress:
-	if mqstatus is 3:				[if on the motel run, set variable and prevent the regular scene]
-		now mqfightresult is 2;
-		say "Oh No! You are beaten up by the tigress at the motel.";
-		stop the action;
-	if mqstatus is 6:				[if fighting matron, set variable and prevent the regular scene]
-		now mqfightresult is 2;
-		say "Oh No! You are beaten up by the tigress matron.";
-		stop the action;
 	now tempnum is 0; [Reset payment flag]
 	if HP of Player > 0:									[DID THE PLAYER SUBMIT? - YES]
 		if junknum is 0:									[Normal encounter]
@@ -270,14 +239,6 @@ to say losetotigress:
 
 
 to say beattigress:
-	if mqstatus is 3:				[if on the motel run, set variable and prevent the regular scene]
-		now mqfightresult is 1;
-		say "Hurray! You beat the tigress, time to continue.";
-		stop the action;
-	if mqstatus is 6:				[if fighting matron, set variable and prevent the regular scene]
-		now mqfightresult is 1;
-		say "Hurray! You beat the tigress matron, time to celebrate.";
-		stop the action;
 	say "     As you strike a final blow to the tigress, you drive her back into the shaded alley, sending her to collapse onto a dirty mattress in the shadows of the buildings. From the smell, she's used it for her clients before. She mewls with lustful need, looking up at you with her feline eyes as she releases the easy straps of her street clothes. The slutty tigress bares her striped body for you, lost to her lustful desires but too weakened to pounce you to sate them.";
 	say "     The tigress whore is available for your amusement.";
 	say "     [bold type]Do you wish to give in and have some fun with her?[roman type][line break]";
@@ -459,6 +420,33 @@ to say paymentcheck:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Malayan Tiger Herm"	"[PrepCombat_Malayan Tiger Herm]"
+
+to say PrepCombat_Malayan Tiger Herm:
+	setmongender 5; [creature is herm]
+	choose row MonsterID from the Table of Random Critters;
+	let debit be 0;
+	if mqstatus is 3:				[fighting tigresses at the motel]
+		if HardMode is true and level of Player > 5, let debit be level of Player - 5;
+		now HP entry is 55 + ( debit * 4 );
+		now monsterHP is 55 + ( debit * 4 );
+		now wdam entry is 7 + ( debit / 3 );
+		now lev entry is 5 + debit;
+	else if mqstatus is 6:				[fighting the matron]
+		if HardMode is true and level of Player > 8, let debit be level of Player - 8;
+		now HP entry is 90 + ( debit * 6 );
+		now monsterHP is 90 + ( debit * 6 );
+		now wdam entry is 12 + ( ( 4 * debit ) / 11 );
+		now lev entry is 8 + debit;
+	else:					[standard tigress]
+		if HardMode is true and level of Player > 5, let debit be level of Player - 5;
+		now HP entry is 55 + ( debit * 4 );
+		now monsterHP is 55 + ( debit * 4 );
+		now wdam entry is 7 + ( debit / 3 );
+		now lev entry is 5 + debit;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

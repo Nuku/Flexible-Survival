@@ -38,11 +38,12 @@ when play begins:
 
 to say ResolveEvent Orcish Slave Raid:
 	project the figure of Orc_Brothers_clothed_icon;
+	now CreatureArtworkOverride is true; [takes control for displaying artwork from the enemy creature, allowin the event to shown different stuff]
 	if SlaveRaidEncounters is 0: [first time]
 		say "     Walking along a street between some warehouses, you suddenly hear claws scratching on asphalt and shouting voices from an alley ahead. Just a few seconds later, a panicky looking anthro fox guy comes dashing into view, head turned to look over his shoulder - which means he isn't looking where he's going and collides with you at full speed, bowling you over and landing on your chest. In close pursuit, a very muscular man storms out of the alley - tall and green, dressed only in a loincloth and with a necklace of wooden beads and teeth, there's no doubt that he's an orc. Two more orcs follow him, dressed in garments made from shredded police uniforms, close behind but still a step distant. From the relatively similar looks, they might be brothers. One of them grabs the would-be escapee by the neck and lifts him off the ground, then bares his sharp tusks in a smirk, nodding towards you. 'Look, our little runner got us an extra treat,' he chuckles, prompting his two friends to surround you, cutting off possible escape, while he pulls a loop of rope from over his shoulder and ties the fox up securely. You barely have time to get up and take a combat stance before the other two orcs are upon you...";
-		LineBreak;
+		WaitLineBreak;
 		now inasituation is true;
-		now OrcSpecialFightNumber is 4; [fighting Yatur]
+		project the figure of Yatur_clothed_icon;
 		challenge "Orc Warrior";
 		if fightoutcome is 22:
 			say "[SubmitToOrcSlavers]";
@@ -54,7 +55,7 @@ to say ResolveEvent Orcish Slave Raid:
 			say "     Landing a heavy blow on the orc, you send him flying to land heavily on his green ass. But there's not even a moment to catch your breath as the second brute snarls and attacks you right away.";
 			LineBreak;
 			now inasituation is true;
-			now OrcSpecialFightNumber is 6; [fighting Mul]
+			project the figure of Mul_clothed_icon;
 			challenge "Orc Warrior";
 			if fightoutcome is 22:
 				say "[SubmitToOrcSlavers]";
@@ -69,7 +70,7 @@ to say ResolveEvent Orcish Slave Raid:
 					say "     Two down, one to go. The third orc abandons his captive and comes at you with balled fists.";
 					LineBreak;
 					now inasituation is true;
-					now OrcSpecialFightNumber is 5; [fighting Koghh]
+					project the figure of Koghh_clothed_icon;
 					challenge "Orc Warrior";
 					if fightoutcome is 22:
 						say "[SubmitToOrcSlavers]";
@@ -78,14 +79,15 @@ to say ResolveEvent Orcish Slave Raid:
 					else if fightoutcome >= 30: [fled]
 						say "[RunFromOrcSlavers]";
 					else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-						now Resolution of Orcish Slave Raid is 5; [beat all orcs, fox gone]
+						now Resolution of Orcish Slave Raid is 5; [beat all orcs]
 						say "     Phew. The last orc collapses on top of the other two with the meaty thump of flesh on flesh. Looking around, you wonder where the fox ended up, then notice that he's a little distance away, having hopped along while still trying to wiggle out of the coils of rope the orcs wrapped around him. Deciding that this isn't the right location to deal with this, you quickly catch up with him, then [if Scalevalue of Player > 2]throw the fox over your shoulder[else]pull the fox tight against your side[end if] and leave before the orcs get a second wind. Before you're fully out of sight of the groaning pile of orcs, an angry shout rings out behind you, proving that it was a good idea to get moving. Even though they're unlikely to close the distance, you tightly grip the fox as you flee down the street, dodging past car wrecks and piles of garbage. After some further turns, taking one or two side alleys, you come to a stop inside the charred remains of a building. Interestingly, the fox had the presence of mind to keep working on the ropes even while you were fleeing with him, with the coils simply hanging loose now.";
 						say "[VincentPostRaid_Talk]";
+					now SlaveRaidEncounters is 1; [Vincent freed]
 	else: [repeat encounters without the fox]
 		say "     Walking along a street between some warehouses, you suddenly hear deep voices talking to each other somewhere nearby. You overhear 'Where are all those weaklings? I wanna fuck!', followed by another voice answering, 'Don't shout, brother. You'll drive [']em off. I'm sure we'll find someone else.' And with that, a trio of very muscular men step out of an alley just ahead of you - tall and green as they are, dressed only in loincloths, there's no doubt that they're orcs. And orcs you know at that: Mul, Yatur and Koghh, the orc slavers that you had a run-in with before. One of them gives you an appraising look, then smiles around his sharp tusks. [if OrcSlaverStatus is 0]'See, told ya!' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 2]'Look, it's the little bitch that escaped from the lair. What nice coincidence,' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 3]'Look, it's our runaway breeder. Come on little bitch, we'll bring you back home and give you what you really need,' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 50]'Oh, that bastard again. This time, you're going down. We'll make a breeder out of you yet,' he grunts, prompting his siblings to rush at you. [end if]They're quick for such muscular brutes, barely giving you time to taking on a combat stance before they're upon you...";
 		LineBreak;
 		now inasituation is true;
-		now OrcSpecialFightNumber is 4; [fighting Yatur]
+		project the figure of Yatur_clothed_icon;
 		challenge "Orc Warrior";
 		if fightoutcome is 22:
 			say "[SubmitToOrcSlavers]";
@@ -97,7 +99,7 @@ to say ResolveEvent Orcish Slave Raid:
 			say "     Landing a heavy blow on the orc, you send him flying to land heavily on his green ass. But there's not even a moment to catch your breath as the second brute snarls and attacks you right away.";
 			LineBreak;
 			now inasituation is true;
-			now OrcSpecialFightNumber is 6; [fighting Mul]
+			project the figure of Mul_clothed_icon;
 			challenge "Orc Warrior";
 			if fightoutcome is 22:
 				say "[SubmitToOrcSlavers]";
@@ -109,7 +111,7 @@ to say ResolveEvent Orcish Slave Raid:
 				say "     Two down, one to go. The third orc abandons his captive and comes at you with balled fists.";
 				LineBreak;
 				now inasituation is true;
-				now OrcSpecialFightNumber is 5; [fighting Koghh]
+				project the figure of Koghh_clothed_icon;
 				challenge "Orc Warrior";
 				if fightoutcome is 22:
 					say "[SubmitToOrcSlavers]";
@@ -187,7 +189,7 @@ to say KoghhRaidOffer:
 			say "     Two down, one to go. The third orc stops tying up his captive and comes at you with balled fists.";
 			LineBreak;
 			now inasituation is true;
-			now OrcSpecialFightNumber is 5; [fighting Koghh]
+			project the figure of Koghh_clothed_icon;
 			challenge "Orc Warrior";
 			if fightoutcome is 22:
 				say "[SubmitToOrcSlavers]";
@@ -1085,7 +1087,7 @@ An everyturn rule:
 		say "[BoghrimSlaveDeal]";
 	else if (player is in Dark Hallway 1 or player is in Dark Hallway 2) and a random chance of 1 in 4 succeeds:
 		now inasituation is true;
-		now OrcSpecialFightNumber is 1; [meeting Mul]
+		project the figure of Mul_clothed_icon;
 		challenge "Orc Warrior"; [fighting Mul]
 	if Mul is in Slave Cell 2 or Mul is in Slave Cell 1:
 		if (player is in Slave Cell 2 and Mul is in Slave Cell 2) or (player is in Slave Cell 1 and Mul is in Slave Cell 1):
@@ -1507,7 +1509,7 @@ instead of conversing the Orc Mob:
 					say "     [link]N[as]n[end link] - Well, he did the work - so there isn't much you can do. Just leave.";
 					if Player consents:
 						say "     The orc warrior snarls as he sees you coming, assuming correctly that you want to take his captives from him. After head-butting his already half-naked soldier Brian, the green-skinned brute puts the unconscious man down just in time to be ready for your attack.";
-						now OrcSpecialFightNumber is 3; [disabling regular scenes to deal with this stuff here]
+						project the figure of Orcwarrior_random_icon;
 						now inasituation is true;
 						challenge "Orc Warrior"; [random orc]
 						if fightoutcome >= 20 and fightoutcome <= 29:[lost]

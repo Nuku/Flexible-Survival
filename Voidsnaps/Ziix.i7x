@@ -261,22 +261,13 @@ Section 3 - Exile
 [Only if you kick him out of the hive. Possible addition to slut storage later?]
 
 to say Ziix Loses:
-	if inasituation is true:
-		say ""; [dealt with at the event source]
-	else:
-		say "<This content is not currently implemented>"; [to do: add Ziix anal rape leading to slut storage]
+	say "<This content is not currently implemented>"; [to do: add Ziix anal rape leading to slut storage]
 
 to say Ziix Wins:
-	if inasituation is true:
-		say ""; [dealt with at the event source]
-	else:
-		say "<This content is not currently implemented>"; [unsure what to add here]
+	say "<This content is not currently implemented>"; [unsure what to add here]
 
 to say Ziix Desc:
-	if inasituation is true:
-		say ""; [dealt with at the event source]
-	else:
-		say "<This content is not currently implemented>";
+	say "<This content is not currently implemented>";
 
 Section 4 - Ziix Slut Storage
 

@@ -99,13 +99,19 @@ to say RTiger loses: [TODO: Add option for asshole players]
 		say "     As you wind yourself up for the next attack, the muscled tiger suddenly takes a step back from you. 'That will be enough for now. I concede to you, my friend. Well fought, it was a pleasure to spar with you.' Bringing his hand-paws together before his chest, he grasps his right fist with the left hand, the muscular tiger gives you a half-bow, showing the respect you earned for your prowess. He gives your shoulder a friendly tap and squeezes it, then adds with a smile, 'Ever since coming to this world, I have really been missing just being able to measure up against a companion, without it having to be a life or death fight. So thank you, for this.'";
 
 to say RTigerDesc:
-	project Figure of Ryousei_clothed_icon;
 	if Royal Tiger companion is not tamed: [normal fight]
 		say "     Walking along one of the overgrown paths of the park, you meet Ryousei the tiger general, coming the other way. The muscled being gives you a nod in greeting, then says, 'You again. Good, good - I have been getting bored with the pretty lacking challenge of the creatures roaming this forest.' He unsheathes his claws and makes a ritualistic-seeming gesture, then relaxes his fingers again to let the pointy sickles slide into resting positions. 'There - a friendly duel has been declared. But no worries - I will just knock you around a bit - no claws, see!' Giving a wiggle of his fingers in front of his confidently smiling face, the tiger then rushes at you to attack.";
 	else:
 		say "     Smiling as he gets into a combat-ready posture, the muscular anthro tiger looks quite eager for some action. 'Let us measure our strength against one another then! Are you ready?' As soon as you nod, he wades into combat against you - claws sheathed though, as it is just a friendly clash.";
 
 Section 3 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Royal Tiger"	"[PrepCombat_Royal Tiger]"
+
+to say PrepCombat_Royal Tiger:
+	project Figure of Ryousei_clothed_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -359,7 +365,7 @@ TwistedCapacity of Ryousei is false. [Twisted Characters can take any penetratio
 Sterile of Ryousei is false. [steriles can't knock people up]
 MainInfection of Ryousei is "Royal Tiger".
 Description of Ryousei is "[RyouseiDesc]".
-Conversation of Ryousei is { "Placeholder!" }.
+Conversation of Ryousei is { "Royal Tiger!" }.
 
 instead of sniffing Ryousei:
 	say "[RyouseiScent]";

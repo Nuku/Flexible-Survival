@@ -265,6 +265,7 @@ carry out navigating:
 	now Player is in noun;
 	follow the ngraphics_blank rule;
 	NavInEvent_Check noun;
+	now inasituation is false; [cleaning up possible open ended flags]
 
 NavCheckReturn is a truth state that varies.
 

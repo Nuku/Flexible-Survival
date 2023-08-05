@@ -192,7 +192,6 @@ to say Spidertaur_Loses:
 		say "     As you land another blow on the spidertaur, Aelias steps back and rubs his side, looking angry and annoyed. 'That actually hurt. Are you trying to beat me? This isn't how our game is supposed to go and I'm not having it!' He swiftly turns around and sprays webbing into your face. Even though you immediately rip it off again, the moment you couldn't see was enough time for the hybrid creature to climb the wall of the nearest building. With a last glare down at you, he vanishes over the edge and you hear his legs scuttle over the roof.";
 
 to say Spidertaur_Desc:
-	setmongender 3;
 	say "     You hear something above you and look up - just in time to see a large spidertaur as he drops down behind you from the wall of the nearest building. His lower body consists of the legs and abdomen of a big spider, sheathed in gleaming black chitin, while his upper body looks human, with rippling muscles under black skin. He has pale-white hair, bound together as a long ponytail behind his back.";
 	if SpidertaurRelationship is 0: [first meeting]
 		say "     A grin spreads over his sharp features as he sees you get ready to defend yourself 'Excellent - I like when the prey struggles a bit.'";
@@ -206,6 +205,13 @@ to say Spidertaur_Desc:
 
 Section 2 - Creature Insertion
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Spidertaur Male"	"[PrepCombat_Spidertaur Male]"
+
+to say PrepCombat_Spidertaur Male:
+	setmongender 3;
+	
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;

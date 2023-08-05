@@ -69,12 +69,18 @@ To say Donkeyman loses:
 		LineBreak;
 		say "     You watch for a minute, with a kind of morbid fascination as the donkeyman continues to stroke himself with increasingly desperate strokes, before he finally lets out a loud neigh and his thick equine cum erupts from his cock like a geyser. You step back as he covers himself, his harness, and a good portion of the wall and floor with his seed, before the donkeyman collapses as limply as his cock in the spreading puddle of donkey cum. Shaking your head slightly to clear it after the strangely erotic sight, you continue along your way.";
 
+Section 2 - Creature Insertion
+
 to say DonkeymanDesc:
-	project the Figure of Donkeyman_soft_icon;
-	setmongender 3;
 	say "     Wandering through the building you are tripped by a donkeyman. Built like an amateur bodybuilder, you can't help notice that he's more human than donkey. The only parts of him that are donkey is his head, ears, tail, rough gray fur, and genitals that look like they would be more at home on a Clydesdale than a donkey. His face and head is covered with a leather hood with holes for his eyes, ears and nose. A leather harness wraps around his thick chest and the chaps he's wearing look painted on. Heavy engineer boots cover his feet. Looking down at you with a look that chills you to the bone, he says, 'I can't wait to see you all geared up and looking like a proper jack!'";
 
-Section 2 - Creature Insertion
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Donkeyman"	"[PrepCombat_Donkeyman]"
+
+to say PrepCombat_Donkeyman:
+	setmongender 3;
+	project the Figure of Donkeyman_soft_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

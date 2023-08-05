@@ -59,7 +59,7 @@ TwistedCapacity of Lingau is false. [Twisted Characters can take any penetration
 Sterile of Lingau is false. [steriles can't knock people up]
 MainInfection of Lingau is "Cane Toad Male".
 Description of Lingau is "[LingauDesc]".
-Conversation of Lingau is { "<This is nothing but a placeholder!>" }.
+Conversation of Lingau is { "<This is nothing but a Cane Toad Male!>" }.
 The scent of Lingau is "     ...".
 
 to say LingauDesc:
@@ -215,7 +215,12 @@ to say LingauSex3: [ass-fucking by Lingau]
 	say "     ...";
 	NPCSexAftermath Player receives "AssFuck" from Lingau;
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Cane Toad Male"	"[PrepCombat_Cane Toad Male]"
 
+to say PrepCombat_Cane Toad Male:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

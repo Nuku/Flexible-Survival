@@ -61,6 +61,13 @@ to say beattheequinoid:
 
 Section 2 - Creature Insertion
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Black Equinoid"	"[PrepCombat_Black Equinoid]"
+
+to say PrepCombat_Black Equinoid:
+	setmongender 5;
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -84,7 +91,7 @@ When Play begins:
 	now attack entry is "[one of]She slams you with one of her great hoof hands.[or]With a sudden snap, you find your midsection being indented by a terribly forceful hoof.[or]She hefts you up suddenly and gives a great toss![or]She stomps down sharply, smacking your foot with her hoof, ow.[at random]";
 	now defeated entry is "[beattheequinoid]";
 	now victory entry is "[equine attack]";
-	now desc entry is "[mongendernum 5]A tall, imposing figure. A horse on two feet, towering over most, with great muscles under dense black fur. She has bright [one of]brown[or]hazel[or]green[at random] eyes and white, flat teeth. She is dressed in a simple sheet, like a toga that wraps around her well-formed body. Her great breasts are tight, as taught as the beefy muscles of her arms and legs. Her hips are round and waist slim, giving a pleasing shape. When she sees you, her lips peel back to expose those teeth. '[one of]Begone from our herd lands![or]Your kind are not welcome here![or]You do not belong here![at random],' she says, charging at you with red in her eyes. In the great motion it becomes clear that she is male as well, a huge sheath wobbling along her belly, her softball-sized nuts swaying as she runs.";
+	now desc entry is "     A tall, imposing figure. A horse on two feet, towering over most, with great muscles under dense black fur. She has bright [one of]brown[or]hazel[or]green[at random] eyes and white, flat teeth. She is dressed in a simple sheet, like a toga that wraps around her well-formed body. Her great breasts are tight, as taught as the beefy muscles of her arms and legs. Her hips are round and waist slim, giving a pleasing shape. When she sees you, her lips peel back to expose those teeth. '[one of]Begone from our herd lands![or]Your kind are not welcome here![or]You do not belong here![at random],' she says, charging at you with red in her eyes. In the great motion it becomes clear that she is male as well, a huge sheath wobbling along her belly, her softball-sized nuts swaying as she runs.";
 	now face entry is "an equine face, with an elongated snout and broad, flat teeth set in your long muzzle"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "tall and well muscled, with delightful curves despite your overall toned appearance"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "[one of]black furred[or]coarsely furred[or]furry[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]

@@ -50,8 +50,8 @@ to say ResolveEvent Skunkbeast Battle:
 			say "     You are knocked down by the skunkbeast lord. Pinning you down with one of his massive paws, he slams the other down onto the gun repeatedly, shattering and grinding the hated thing into the ground. With you trapped and defeated, several of the female skunks rush up, laving attention upon the victory, nuzzling and caressing him all over. Special attention is paid to his large, throbbing cock, which they stroke and rub with lustful moans and playful grins at you. That's when you realize that they're keeping the dripping, pulsing meat pointed straight at you and you are awash in a torrent of skunk semen as the giant growls loudly and proudly in triumphant climax.";
 			now humanity of Player is 0;
 			[puts Skunk as lead monster for infection and impregnation]
-			setmonster "Skunk" silently;
-			turn the Player into a "Skunk" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
+			setmonster "Skunk Female" silently;
+			turn the Player into a "Skunk Female" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 			if hellHoundLevel is 0:
 				follow the sex change rule;
 				follow the sex change rule;
@@ -78,7 +78,7 @@ to say ResolveEvent Skunkbeast Battle:
 			[puts Skunk as lead monster for infection and impregnation]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if Name entry is "Skunk":
+				if Name entry is "Skunk Female":
 					now MonsterID is y;
 					break;
 			now non-infectious entry is true; [reg. Skunk infection closed]
@@ -152,14 +152,7 @@ to say ResolveEvent Skunkbeast Battle:
 Section 2 - Creature Responses
 
 to say sbldesc:
-	setmongender 3; [creature is male]
-	choose row MonsterID from Table of Random Critters;
-	let debit be 0;
-	if HardMode is true and level of Player > 15, let debit be level of Player - 15;
 	say "     This skunkbeast is much larger than the others you've seen in the forest. While it mostly resembles a normal skunk, it is massive and almost the size of a small elephant. It has large paws with elongated claws and large, pointed teeth filling its giant muzzle. Under its belly, you can see its huge, black cock which leaks precum that is rich with the arousing scent of the skunk creatures. Several of the other skunks and skunkbeasts move in around you both but don't interfere as this battle begins. The skunkbeast lord's dark eyes are fixed on you with an animalistic intent, though it is cunning enough to keep you from reaching the gun. You will have to try your best to fight off the creature in the hopes of reaching the weapon if you want any hope of winning this battle.";
-	now HP entry is 120 + ( debit * 6 ); [- How many HP has the monster got? -]
-	now monsterHP is 120 + ( debit * 6 );
-	now wdam entry is 16 + ( ( 2 * debit ) / 5 ); [-Amount of Damage monster Does when attacking.-]
 
 to say beatthesbl:
 	now skunkbeaststatus is 1;
@@ -174,6 +167,20 @@ to say losetosbl:
 
 
 Section 3 - Creature Insertion
+
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Skunkbeast Lord"	"[PrepCombat_Skunkbeast Lord]"
+
+to say PrepCombat_Skunkbeast Lord:
+	setmongender 3; [creature is male]
+	choose row MonsterID from Table of Random Critters;
+	let debit be 0;
+	if HardMode is true and level of Player > 15, let debit be level of Player - 15;
+	now HP entry is 120 + ( debit * 6 ); [- How many HP has the monster got? -]
+	now monsterHP is 120 + ( debit * 6 );
+	now wdam entry is 16 + ( ( 2 * debit ) / 5 ); [-Amount of Damage monster Does when attacking.-]	
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -380,7 +387,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Skunk Infection"	"Infection"	""	Skunk Infection rule	1000	false
 
 This is the Skunk with Frank rule:
-	if Player has no body of "Skunk" or Player has no body of "Skunk Taur":
+	if Player has no body of "Skunk Female" or Player has no body of "Skunk Male" or Player has no body of "Skunk Taur":
 		make no decision;
 	if Player is female and ( franksex > 2 or frankmalesex > 2 ):
 		trigger ending "Skunk with Frank"; [Here it states, that the ending has been played.]
@@ -486,7 +493,7 @@ This is the Peppy's Epilogue rule:
 		make no decision;
 	if skunk kit is tamed:
 		trigger ending "Peppy's Epilogue";
-		if Player has a non-shifting body of "Skunk":
+		if Player has a non-shifting body of "Skunk Female" or Player has a non-shifting body of "Skunk Male":
 			if humanity of Player < 10:
 				if Player is female:
 					say "     Surrendering to the infection, you make an even better mother to Peppy, as you soon give your first little skunk child several siblings to play with. Still, the first little skunk you rescued always has a special place in your skunky heart. And once he has grown up enough, he also proves to be a fine skunk mate for you in your new life, and you bear him even more wonderful skunk kits for you to raise.";
@@ -524,7 +531,7 @@ This is the Skunk Infection rule:
 	if Player has no body of "Skunk" and Player has no body of "Skunk Taur":
 		make no decision; [Use exclusion rather than changing indentation]
 	trigger ending "Skunk Infection"; [Here it states, that the ending has been played.]
-	if Player has a body of "Skunk":
+	if Player has a body of "Skunk Female" or Player has a body of "Skunk Male":
 		if humanity of Player < 10:
 			if Player is female:
 				say "     Surrendering to the infection, you are drawn back to the forest by the alluring scent of the skunkbeasts on the wind. Finding one, you are rutted repeatedly and made into one of his many mates, bred full of beautiful skunk kits[if Player is male]. You do occasionally sneak off to grab one of the busty females and slake your male needs on them, siring a few kits of your own behind your master's back[end if].";

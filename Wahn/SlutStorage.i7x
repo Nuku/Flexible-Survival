@@ -223,7 +223,7 @@ to say Mortimer_PaymentOptionsTalk:
 	say "     'Sure thing, it's a really easy payment structure. Just one bottle of the cum, femcum or milk per occupied unit, every four days. Or you can go with the alternate, comfort variant and just make an agreement to let me harvest fluids to pay for your units myself. I guarantee that milking is the only thing I'll do. This way you don't have to worry about payments, and your goods will be more comfortable too, if they're not pent up with aching udders, balls, etc. Of course, you'll be able to individually pick what you want to do for every new unit, in case you got someone 'extra special' you want treated differently.'";
 	if the number of rows in Table of StoredSluts is not 0:
 		LineBreak;
-		say "     [bold type]'Wanna make any changes about your payments?[roman type][line break]";
+		say "     [bold type]'Wanna make any changes about your payments?'[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Set all to weekly payments.";
 		say "     [link](2)[as]2[end link] - Set all to be milked for fluids.";
 		say "     [link](3)[as]3[end link] - Individually go through the list and decide.";

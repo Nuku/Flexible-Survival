@@ -11,46 +11,6 @@ metalskin is a number that varies. metalskin is usually 1.
 playermetalskin is a number that varies. playermetalskin is usually 1.
 automatonending is a number that varies.
 
-to say automatondesc:
-	choose row MonsterID from the Table of Random Critters;
-	now autogender is a random number between 1 and 2;
-	if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
-		say "     You come across a strange, metallic human. It looks you over with its glowing eyes before striding off as if recognizing that you are not what it is searching for as you don't want to play with it.";
-		now BannedStatus entry is true;
-		now fightoutcome is 19;
-		now autogender is 0;
-		now combat abort is 1;
-	else if FemaleList is banned:
-		now autogender is 1; [male]
-	else if MaleList is banned:
-		now autogender is 2; [female]
-	else if MaleList is warded and FemaleList is warded:
-		now autogender is a random number between 1 and 2;
-	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
-		if MaleList is warded and a random chance of 1 in 3 succeeds:
-			now autogender is 2;
-		else if FemaleList is warded and a random chance of 1 in 3 succeeds:
-			now autogender is 1;
-	else if ishunting is false:
-		if MaleList is warded:
-			now autogender is 2;
-		else if FemaleList is warded:
-			now autogender is 1;
-	now metalskin is a random number between 1 and 4;
-	if autogender > 0:
-		say "     Before you is a strange person, completely human in form but covered in a layer of metallic skin. This polished hide is made of [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt with a faint blue tint[else if metalskin is 4]steel[end if] and seamless. The metal [if autogender is 1]man[else]woman[end if][']s eyes are featureless [if metalskin is 1]amber[else if metalskin is 2]blue[else if metalskin is 3]green[else if metalskin is 4]red[end if] lights. [if autogender is 1]His[else]Her[end if] hair has become metallic in color to match its skin. This person looks like any normal person you might meet, but transformed into metal and sapped of their will. [if autogender is 1]He[else]She[end if] moves stiffly and without emotion, moving towards you with the intent of grabbing you[if autogender is 1]. The metal man's cock is a hard pillar of metallic flesh that it probably intends on nailing you with[else]. The metal woman's pussy is damp with an oily sheen, showing the automaton's arousal[end if].";
-		if autogender is 1:		[male]
-			setmongender 3;
-			now sex entry is "Female";
-			if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
-			now lootchance entry is 33;
-		else:
-			setmongender 4; [female]
-			now sex entry is "Male";
-			if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
-			now lootchance entry is 0;
-
-
 to say losetoautomaton:
 	if autogender is 1:
 		if HP of Player > 0:
@@ -79,12 +39,55 @@ to say losetoautomaton:
 			say "She grabs you by the head and presses your face between her legs, pushing your lips to her [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] pussy. Those folds are cool and lightly oiled, yielding to your tongue's touch as you set to work. The metal woman remains impassive as you lick her, but shows no intent on letting you go, so you continue attempting to pleasure her, working with increasing zeal as you work all the harder to get the unfeeling robot woman to cum. The only clear signs that it's working is the fact that her pussy grows warmer and wetter as you continue. Eventually, you are met with success of a kind as the automaton presses your head between her thighs and a fresh flow of oily juices soak your face. Apparently satisfied, she pushes you away and strides off.";
 			CreatureSexAftermath "Automaton" receives "OralPussy" from "Player";
 
-
 to say beattheautomaton:
 	say "     Having beaten the metal [if autogender is 1]man[else]woman[end if], the lights in its eyes go out and it crumples to the ground like an unpowered toy. There's a faint electrical hum from it, soft but slowly growing, as if it's working to charge itself up again.";
 
-
 Section 2 - Creature Insertion
+
+to say automatondesc:
+	say "     Before you is a strange person, completely human in form but covered in a layer of metallic skin. This polished hide is made of [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt with a faint blue tint[else if metalskin is 4]steel[end if] and seamless. The metal [if autogender is 1]man[else]woman[end if][']s eyes are featureless [if metalskin is 1]amber[else if metalskin is 2]blue[else if metalskin is 3]green[else if metalskin is 4]red[end if] lights. [if autogender is 1]His[else]Her[end if] hair has become metallic in color to match its skin. This person looks like any normal person you might meet, but transformed into metal and sapped of their will. [if autogender is 1]He[else]She[end if] moves stiffly and without emotion, moving towards you with the intent of grabbing you[if autogender is 1]. The metal man's cock is a hard pillar of metallic flesh that it probably intends on nailing you with[else]. The metal woman's pussy is damp with an oily sheen, showing the automaton's arousal[end if].";
+
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Automaton"	"[PrepCombat_Automaton]"
+
+to say PrepCombat_Automaton:
+	choose row MonsterID from the Table of Random Critters;
+	now autogender is a random number between 1 and 2;
+	if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
+		say "     You come across a strange, metallic human. It looks you over with its glowing eyes before striding off as if recognizing that you are not what it is searching for as you don't want to play with it.";
+		now BannedStatus entry is true;
+		now fightoutcome is 19;
+		now autogender is 0;
+		now combat abort is 1;
+	else if FemaleList is banned:
+		now autogender is 1; [male]
+	else if MaleList is banned:
+		now autogender is 2; [female]
+	else if MaleList is warded and FemaleList is warded:
+		now autogender is a random number between 1 and 2;
+	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
+		if MaleList is warded and a random chance of 1 in 3 succeeds:
+			now autogender is 2;
+		else if FemaleList is warded and a random chance of 1 in 3 succeeds:
+			now autogender is 1;
+	else if ishunting is false:
+		if MaleList is warded:
+			now autogender is 2;
+		else if FemaleList is warded:
+			now autogender is 1;
+	now metalskin is a random number between 1 and 4;
+	if autogender is 1:		[male]
+		setmongender 3;
+		now sex entry is "Female";
+		if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
+		now lootchance entry is 33;
+	else:
+		setmongender 4; [female]
+		now sex entry is "Male";
+		if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
+		now lootchance entry is 0;	
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

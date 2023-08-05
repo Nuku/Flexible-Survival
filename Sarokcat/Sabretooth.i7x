@@ -27,12 +27,18 @@ To say Sabretooth loses:
 	project figure of Sabretooth_soft_icon;
 	say "The large prehistoric beast falls back from your forceful assault, slowly backing down the museum corridors as you watch it warily, until it turns and darts down a side passageway. You relax as the creature has obviously gone off somewhere to lick its wounds, and revel in your victory over one of the greatest large predators of the past.";
 
+Section 2 - Creature Insertion
+
 to say Sabretooth Desc:
-	setmongender 3;
-	project figure of Sabretooth_soft_icon;
 	say "     You hear something softly moving behind you, and turn around to see a large sabre-toothed cat slowly stalking down the halls toward you on its wide paws. Its large feral body covered in golden striped fur as it draws closer, though you find your eyes locked to its more intimidating large teeth, as the large cat's muscles tense, and it pounces at you!";
 
-Section 2 - Creature Insertion
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Sabretooth"	"[PrepCombat_Sabretooth]"
+
+to say PrepCombat_Sabretooth:
+	setmongender 3;
+	project figure of Sabretooth_soft_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

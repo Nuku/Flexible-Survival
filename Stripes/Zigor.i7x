@@ -418,6 +418,12 @@ to say randomwolfgimp:
 
 Section 5 - infection
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Leather Wolf"	"[PrepCombat_Leather Wolf]"
+
+to say PrepCombat_Leather Wolf:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -440,10 +446,10 @@ When Play begins:
 	now enemy title entry is "Leather Wolf";
 	now enemy Name entry is "Zigor";
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "Placeholder infection";
-	now defeated entry is "Placeholder infection";
-	now victory entry is "Placeholder infection";
-	now desc entry is "Placeholder infection";
+	now attack entry is "Leather Wolf infection";
+	now defeated entry is "Leather Wolf infection";
+	now victory entry is "Leather Wolf infection";
+	now desc entry is "Leather Wolf infection";
 	now face entry is "a canine muzzle sticking out of your wolf-like head. The sharp teeth inside it make your smiles and growls pretty unforgettable for others, and the long tongue should come in handy for French kissing";
 	now body entry is "tall and well muscled, standing on two legs and showing an interesting mix of lupine and human form. While your legs are fully digitigrade and end in large paws, your arms are changed but still more human-like and end in strong, now clawed, hands";
 	now skin entry is "[one of]black furred[or]densely furred[or]furred[at random]";

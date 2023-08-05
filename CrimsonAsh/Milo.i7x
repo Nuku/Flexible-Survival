@@ -213,22 +213,20 @@ to say FledFromMilo:
 Section 2 - Infection
 
 to say BeatMilo:
-	if inasituation is true:
-		say ""; [taken care of in the event]
-	else:
-		say ""; [nothing in here so far, only one event fight]
+	say ""; [nothing in here so far, only one event fight]
 
 to say LoseToMilo:
-	if inasituation is true:
-		say ""; [taken care of in the event]
-	else:
-		say ""; [nothing in here so far, only one event fight]
+	say ""; [nothing in here so far, only one event fight]
 
 to say MiloDesc:
-	if inasituation is true:
-		say ""; [taken care of in the event]
-	else:
-		say ""; [nothing in here so far, only one event fight]
+	say ""; [nothing in here so far, only one event fight]
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Bobcat"	"[PrepCombat_Bobcat]"
+
+to say PrepCombat_Bobcat:
+	say "";
 
 Section 2 - Creature Insertion
 
@@ -443,6 +441,6 @@ Description of Milo is "[Milodesc]".
 Conversation of Milo is { "Meep!" }.
 
 to say Milodesc:
-	say "<Placeholder>";
+	say "<Bobcat>";
 
 Milo ends here.

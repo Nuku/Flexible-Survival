@@ -184,7 +184,7 @@ TwistedCapacity of Steven is false. [Twisted Characters can take any penetration
 Sterile of Steven is false. [steriles can't knock people up]
 MainInfection of Steven is "Morgan Horse Stallion".
 Description of Steven is "[StevenDesc]".
-Conversation of Steven is { "<This is nothing but a placeholder!>" }.
+Conversation of Steven is { "<This is nothing but a Morgan Horse Stallion!>" }.
 The fuckscene of Steven is "[sexwithSteven]".
 
 to say StevenDesc:
@@ -722,6 +722,13 @@ after going to Main & 7th Street while ((Charisma of Steven is 2 or Charisma of 
 		NPCSexAftermath Player receives "AssFuck" from Onyx;
 	else:
 		say "     You simply head off on your own, quickly jogging away like you didn't hear him.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Morgan Horse Stallion"	"[PrepCombat_Morgan Horse Stallion]"
+
+to say PrepCombat_Morgan Horse Stallion:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

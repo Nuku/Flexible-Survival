@@ -9,83 +9,77 @@ VixenKunoichiSubScore is a number that varies. VixenKunoichiSubScore is usually 
 
 
 to say VixenKunoichiLoss: [player loses]
-	if inasituation is true: [special event]
-		say ""; [dealt with in the file where the event is described]
-	else: [regular scene]
-		if VixenKunoichiLust is 0: [groping]
-			say "     You find yourself unable to continue the fight, and helpless before the strength of the vixen. She stands over you, leaving you caught in the huge shadow of her equally obscene erection, but contrary to the sheer arousal on display from that member her face is dusted in a blush at odds with the rest of her. 'It seems that my skills are superior to yours, distracted as you were by that lustful gaze of yours.' Her cock seems to twitch involuntarily, and you can tell she's trying her best to ignore it. 'As an honorable warrior, I would never fall prey to such base perversions, no matter what manner of curse has been placed on me.' Her words are resolute, but no matter how much she means them her lewd body seems ready to disagree, and one of her hands seems to be wandering closer to you almost of its own accord.";
-			say "     The moment she's about to make contact, she turns her head away and huffs, apparently deciding to simply not confront her own approaching hypocrisy, while instead her extremities are lightly pawing at your truly magnificent backside, a physical expression of lewd curiosity. Even while deliberately ignoring you, it seems that she can't help but enjoy your plush posterior, but eventually she composes herself just enough, and pulls away. 'I suppose there are some merits to a body like that, it's at least pleasing to look at. But don't think for a second that I'm anything like you, with your lustful thoughts.' The vixen appears too flustered to continue berating you, as following that proclamation she turns on her heel and stalks away after the brief encounter.";
-		else: [if VixenKunoichiLust < 8:[curious]]
-			say "     A";
-			increase VixenKunoichiDomScore by 1;
-			if a random chance of 1 in 3 succeeds:
-				increase VixenKunoichiLust by 1;
-		[else if VixenKunoichiLust < 15:[lusty]
-			say "     A";
-		else: [corrupt]
-			say "     A";]
+	if VixenKunoichiLust is 0: [groping]
+		say "     You find yourself unable to continue the fight, and helpless before the strength of the vixen. She stands over you, leaving you caught in the huge shadow of her equally obscene erection, but contrary to the sheer arousal on display from that member her face is dusted in a blush at odds with the rest of her. 'It seems that my skills are superior to yours, distracted as you were by that lustful gaze of yours.' Her cock seems to twitch involuntarily, and you can tell she's trying her best to ignore it. 'As an honorable warrior, I would never fall prey to such base perversions, no matter what manner of curse has been placed on me.' Her words are resolute, but no matter how much she means them her lewd body seems ready to disagree, and one of her hands seems to be wandering closer to you almost of its own accord.";
+		say "     The moment she's about to make contact, she turns her head away and huffs, apparently deciding to simply not confront her own approaching hypocrisy, while instead her extremities are lightly pawing at your truly magnificent backside, a physical expression of lewd curiosity. Even while deliberately ignoring you, it seems that she can't help but enjoy your plush posterior, but eventually she composes herself just enough, and pulls away. 'I suppose there are some merits to a body like that, it's at least pleasing to look at. But don't think for a second that I'm anything like you, with your lustful thoughts.' The vixen appears too flustered to continue berating you, as following that proclamation she turns on her heel and stalks away after the brief encounter.";
+	else: [if VixenKunoichiLust < 8:[curious]]
+		say "     A";
+		increase VixenKunoichiDomScore by 1;
+		if a random chance of 1 in 3 succeeds:
+			increase VixenKunoichiLust by 1;
+	[else if VixenKunoichiLust < 15:[lusty]
+		say "     A";
+	else: [corrupt]
+		say "     A";]
 
 to say VixenKunoichiVictory: [player wins]
-	if inasituation is true: [special event]
-		say ""; [dealt with in the file where the event is described]
-	else: [regular scene]
-		say "     With a final strike, you cause the vixen to fall to her knees, unable to continue fighting. She hangs her head in shame, but regardless of her feelings her shaft is still throbbing eagerly.";
-		say "     [bold type]You could easily have your way with her if you want to.[roman type][line break]";
+	say "     With a final strike, you cause the vixen to fall to her knees, unable to continue fighting. She hangs her head in shame, but regardless of her feelings her shaft is still throbbing eagerly.";
+	say "     [bold type]You could easily have your way with her if you want to.[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Play with the Vixen Kunoichi.";
+	say "     ([link]N[as]n[end link]) - Walk away.";
+	if Player consents:
 		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Play with the Vixen Kunoichi.";
-		say "     ([link]N[as]n[end link]) - Walk away.";
-		if Player consents:
-			LineBreak;
-			now sextablerun is 0;
-			blank out the whole of table of fucking options;
-			[]
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Suck her";
+		now sortorder entry is 1;
+		now description entry is "Have a taste of her cock";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Sit on her face";
+		now sortorder entry is 2;
+		now description entry is "Have her user her mouth";
+		[]
+		if VixenKunoichiLust > 5:
 			choose a blank row in table of fucking options;
-			now title entry is "Suck her";
-			now sortorder entry is 1;
-			now description entry is "Have a taste of her cock";
-			[]
-			choose a blank row in table of fucking options;
-			now title entry is "Sit on her face";
-			now sortorder entry is 2;
-			now description entry is "Have her user her mouth";
-			[]
-			if VixenKunoichiLust > 5:
-				choose a blank row in table of fucking options;
-				now title entry is "Ride her";
-				now sortorder entry is 3;
-				now description entry is "Use her oversized shaft";
-			sort the table of fucking options in sortorder order;
-			repeat with y running from 1 to number of filled rows in table of fucking options:
-				choose row y from the table of fucking options;
-				say "[link][y] - [title entry][as][y][end link][line break]";
-			say "[link]0 - Nevermind[as]0[end link][line break]";
-			while sextablerun is 0:
-				say "Pick the corresponding number> [run paragraph on]";
-				get a number;
-				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-					now current menu selection is calcnumber;
-					choose row calcnumber in table of fucking options;
-					say "[title entry]: [description entry]?";
-					if Player consents:
-						let nam be title entry;
-						now sextablerun is 1;
-						if (nam is "Suck her"):
-							say "[VixenKunoichiSex1]";
-						if (nam is "Sit on her face"):
-							say "[VixenKunoichiSex2]";
-						if (nam is "Ride her"):
-							say "[VixenKunoichiSex3]";
-						wait for any key;
-				else if calcnumber is 0:
+			now title entry is "Ride her";
+			now sortorder entry is 3;
+			now description entry is "Use her oversized shaft";
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					let nam be title entry;
 					now sextablerun is 1;
-					say "     You decide against it, and simply leave her there.";
+					if (nam is "Suck her"):
+						say "[VixenKunoichiSex1]";
+					if (nam is "Sit on her face"):
+						say "[VixenKunoichiSex2]";
+					if (nam is "Ride her"):
+						say "[VixenKunoichiSex3]";
 					wait for any key;
-				else:
-					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-			clear the screen and hyperlink list;
-		else:
-			WaitLineBreak;
-			say "     You're not interested, or at least not now, and so you simply ignore the Vixen shemale, and return to your adventures.";
+			else if calcnumber is 0:
+				now sextablerun is 1;
+				say "     You decide against it, and simply leave her there.";
+				wait for any key;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+		clear the screen and hyperlink list;
+	else:
+		WaitLineBreak;
+		say "     You're not interested, or at least not now, and so you simply ignore the Vixen shemale, and return to your adventures.";
 
 to say VixenKunoichiDesc:
 	if VixenKunoichiLust > 15: [corrupt desc]
@@ -117,6 +111,13 @@ to say VixenKunoichiSex3: [riding her]
 	CreatureSexAftermath "Player" receives "AssFuck" from "Vixen Kunoichi";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Vixen Kunoichi"	"[PrepCombat_Vixen Kunoichi]"
+
+to say PrepCombat_Vixen Kunoichi:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

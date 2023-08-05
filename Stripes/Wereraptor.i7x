@@ -200,59 +200,11 @@ wrcursestart is a number that varies. wrcursestart is usually 10000.
 wrcurseactivity is a truth state that varies. wrcurseactivity is normally false.
 
 to say wereraptordesc:
-	choose row MonsterID from the Table of Random Critters;
-	let debit be 0;
-	now dex entry is 19;
-	now HP entry is 45;
-	now lev entry is 8;
-	if lev entry < level of Player and HardMode is true:
-		now debit is ( level of Player ) - 8;
-		increase lev entry by debit;
-		increase dex entry by debit / 5;
-		increase HP entry by debit * 3;
-		increase wdam entry by ( debit / 3 );
-	now wrmode is a random number between 1 and 2;
-	if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
-		say "     You spot a raptor-like creature looking at you from the distance. It stares at you long with its amber eyes, twitches its claws. 'Clever girl,' it hisses before turning away, leaving you be.";
-		say "(Currently requires at least one of Guy or Girl content to be available.)[line break]";
-		now BannedStatus entry is true;
-		now fightoutcome is 19;
-		now combat abort is 1;
-		now wrmode is 0;
-	else if wrcursestatus is 0 and UtahGender is 2:
-		now wrmode is 1;
-	else if wrcurseNermine is 9 and UtahGender is 2:
-		now wrmode is 1;
-		increase dex entry by 1;
-		increase lev entry by 1;
-		increase HP entry by lev entry;
-		now monsterHP is HP entry;
-	else if UtahGender is 2:
-		now wrmode is 1;
-	else if UtahGender is 1:
-		now wrmode is 2;
-	else if MaleList is warded and FemaleList is warded:
-		now wrmode is a random number between 1 and 2;
-	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
-		if MaleList is warded and a random chance of 1 in 3 succeeds:
-			now wrmode is 1;
-		else if FemaleList is warded and a random chance of 1 in 3 succeeds:
-			now wrmode is 2;
-	else if ishunting is false:
-		if MaleList is warded:
-			now wrmode is 1;
-		else if FemaleList is warded:
-			now wrmode is 2;
 	say "     You find yourself faced with a lizard-human hybrid which you quickly realize is some kind of velociraptor creature. Its torso and arms are much like that of a human, but with the muscled legs, tail and head of a velociraptor";
-	if wrmode is 1:
-		setmongender 4; [creature is female]
-		project Figure of Wereraptor_female_icon;
+	if wrmode is 1: [female]
 		say ". And a female one at that. Leaning over in a stance typical for raptors, her breasts can clearly be seen at her chest. While her hands have smaller claws on them, those on her feet seem quite large, especially the long sickle-like one. Both have only three digits on them. Her scales are a deep blue over most of her body, shifting almost to black over her head, back and the top of her tail. She stares at you with a feral wildness to her yellow eyes and takes a step forward. She hisses at you before charging forward in a rush.";
-	else:
-		setmongender 3; [creature is male]
-		project Figure of Wereraptor_male_soft_icon;
+	else: [male]
 		say ". And a male one at that. Leaning over in a stance typical for raptors, his dripping maleness can clearly be seen between his muscular legs. While his hands have smaller claws on them, those on his feet seem quite large, especially the long sickle-like one. His scales are a deep blue over most of his body, shifting to a dark green across his head, back and the top of his tail. He stares at you with a feral wildness to his yellow eyes and takes a step forward. He hisses at you before charging forward in a rush.";
-
 
 to say losetowereraptor:
 	if BodyName of Player is "Wereraptor":
@@ -358,6 +310,61 @@ to say wrvict3:		[69 w/male]
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Wereraptor"	"[PrepCombat_Wereraptor]"
+
+to say PrepCombat_Wereraptor:
+	choose row MonsterID from the Table of Random Critters;
+	let debit be 0;
+	now dex entry is 19;
+	now HP entry is 45;
+	now lev entry is 8;
+	if lev entry < level of Player and HardMode is true:
+		now debit is ( level of Player ) - 8;
+		increase lev entry by debit;
+		increase dex entry by debit / 5;
+		increase HP entry by debit * 3;
+		increase wdam entry by ( debit / 3 );
+	now wrmode is a random number between 1 and 2;
+	if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
+		say "     You spot a raptor-like creature looking at you from the distance. It stares at you long with its amber eyes, twitches its claws. 'Clever girl,' it hisses before turning away, leaving you be.";
+		say "(Currently requires at least one of Guy or Girl content to be available.)[line break]";
+		now BannedStatus entry is true;
+		now fightoutcome is 19;
+		now combat abort is 1;
+		now wrmode is 0;
+	else if wrcursestatus is 0 and UtahGender is 2:
+		now wrmode is 1;
+	else if wrcurseNermine is 9 and UtahGender is 2:
+		now wrmode is 1;
+		increase dex entry by 1;
+		increase lev entry by 1;
+		increase HP entry by lev entry;
+		now monsterHP is HP entry;
+	else if UtahGender is 2:
+		now wrmode is 1;
+	else if UtahGender is 1:
+		now wrmode is 2;
+	else if MaleList is warded and FemaleList is warded:
+		now wrmode is a random number between 1 and 2;
+	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
+		if MaleList is warded and a random chance of 1 in 3 succeeds:
+			now wrmode is 1;
+		else if FemaleList is warded and a random chance of 1 in 3 succeeds:
+			now wrmode is 2;
+	else if ishunting is false:
+		if MaleList is warded:
+			now wrmode is 1;
+		else if FemaleList is warded:
+			now wrmode is 2;
+	if wrmode is 1:
+		setmongender 4; [creature is female]
+		project Figure of Wereraptor_female_icon;
+	else:
+		setmongender 3; [creature is male]
+		project Figure of Wereraptor_male_soft_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -928,18 +935,18 @@ Getting the Knife is a situation.
 ResolveFunction of Getting the Knife is "[ResolveEvent Getting the Knife]". The level of Getting the Knife is 7. Getting the Knife is inactive.
 Sarea of Getting the Knife is "Warehouse".
 
-wrknifefight is a truth state that varies. wrknifefight is usually false.
-
 to say ResolveEvent Getting the Knife:
-	say "     Doing your best to circumvent the creatures roaming around here, you make your way to the address Nermine provided. It is a non-descript warehouse like so many others in this area. You start looking around, trying to find a way into the building, only to be interrupted by a growl behind you. Turning around, you find yourself faced with a large, burly wolverine in a security guard uniform.";
-	now wrknifefight is true;
+	say "     Doing your best to circumvent the creatures roaming around here, you make your way to the address Nermine provided. It is a non-descript warehouse like so many others in this area. You start looking around, trying to find a way into the building, only to be interrupted by a growl behind you. Turning around, you find yourself facing off with a large, muscled beast. Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle. He has a battered security company jacket on his animalistic body. He is covered in dark fur with a few lighter patches. His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders. He growls angrily as he watches you, clearly intent on keeping you from breaking into the warehouse. You spot the company logo on his clothing - Wolverine Security.";
 	challenge "Wolverine Guard";
-	now wrknifefight is false;
-	if fightoutcome >= 10 and fightoutcome <= 19:
+	if fightoutcome < 20: [player won]
+		say "     You manage to knock the wolverine out, leaving you free to search for a way inside.";
 		say "[wrgetknife]";
-	else:
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you away from the warehouse he's so vigilantly guarding.";
+		if HP of Player > 0, now HP of Player is HP of Player / 2;
+		say "     Driven off by the lumbering monstrosity, you will have to try coming back another time if you want to try getting the knife.";		
+	else if fightoutcome is 30: [fled]
 		say "     Driven off by the lumbering monstrosity, you will have to try coming back another time if you want to try getting the knife.";
-
 
 to say wrgetknife:
 	say "     Checking around the building, you find a half-open window along one side of the warehouse. It is quite high up, but you thankfully there are some old crates you can stack to get up to it. After managing to get inside, you start looking around. Thankfully, there's not much being stored in here right now, so it doesn't take you very long to find the shipping crate with the silver knife in it.";

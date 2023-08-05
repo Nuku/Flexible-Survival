@@ -8,7 +8,6 @@ Version 1 of MPreg Platypus by Guest Writers begins here.
 Section 1 - Creature Responses
 
 to say platypusdesc:
-	setmongender 3; [creature is male]
 	say "     You hear the sound of something wet shifting through the sand. At first, you pass it off as the waves of the ocean against the beach, but after a few moments, it sounds more and more like footsteps getting closer. Concerned, you look around to find the source. Down the beach you find a gravid figure holding their belly and waddling towards you. As it gets closer you see that the figure is a male with a duck's bill on the body of a heavily pregnant otter sporting wide hips and a broad tail like a beaver.";
 	if BodyName of Player is "Platypus":
 		if gestation of child > 0 and gestation of child < 20:
@@ -71,6 +70,13 @@ to say beattheplatypus:
 		say "     You shake your head, giving the platypus a little hug. With a soft voice, you tell him that he has no reason to fear you, or any ravishings from you. As you stand and go about your way, the male seems a little confused about not being attacked for sex. Perhaps it's the start of something new in this perverted town, but things seem a little brighter for your kind act.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Platypus"	"[PrepCombat_Platypus]"
+
+to say PrepCombat_Platypus:
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

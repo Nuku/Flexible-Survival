@@ -57,8 +57,6 @@ to say knightdesc:
 		increase knightcrestnum by 1;
 		if knightcrestnum is 10, now knightcrestnum is 1;
 	[]
-	if inasituation is true:
-		stop the action; [text taken care of at the source]
 	if debugactive is 1:
 		say "DEBUG: knightcrestnum: [knightcrestnum], playercrestnum: [playercrestnum], kpstatus: [kpstatus].";
 	project Figure of Knight_clothed_armed_icon;
@@ -134,8 +132,6 @@ to say playercrestzeroed:
 	now playercrestnum is 0;
 
 to say losetoknight:
-	if inasituation is true:
-		stop the action; [text taken care of at the source]
 	project Figure of Knight_hard_icon;
 	if kpstatus is 1:
 		if HP of Player > 0:
@@ -236,8 +232,6 @@ to say knightwins_anal:
 	CreatureSexAftermath "Player" receives "OralCock" from "Knight";
 
 to say beattheknight:
-	if inasituation is true:
-		stop the action; [text taken care of at the source]
 	project Figure of Knight_clothed_icon;
 	say "     You are victorious over the knight, forcing him to yield. ";
 	if kpstatus is 1: [Player Knight]

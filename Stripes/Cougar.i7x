@@ -4,11 +4,8 @@ Version 1 of Cougar by Stripes begins here.
 
 Section 1 - Creature Responses
 
-cougarfight is a number that varies.
-
 to say losetocougar:
 	project Figure of Cougar_naked_icon;
-	now cougarfight is 2;
 	say "     Falling to your knees in front of the cougar herm, she growls triumphantly and climbs atop you. Her strong body holds you down as she rubs herself against you. Her soft fur and lovely breasts slide against your chest, and you can feel the firm press of her throbbing cock on your skin.";
 	if wslevel is 3 and a random chance of 2 in 5 succeeds:
 		say "     She rubs herself against you as she moves forward, bringing her crotch to your face. Sitting up with her legs across your arms, she slaps your cheek with her dark brown cock. Expecting her to want you to suck her off, you open your mouth. But instead of a mouthful of cock, you get a mouthful of her hot piss as she releases her bladder with a chuckle. Coughing and sputtering at the acrid surprise, she sprays more across your face before forcing her penis into your mouth to empty the rest down your throat. After your hot drink is done, she moves on to satisfying her lusts.";
@@ -34,7 +31,6 @@ to say cougartop:
 
 to say beatthecougar:
 	project Figure of Cougar_naked_icon;
-	now cougarfight is 1;
 	say "     Managing to beat the cougar herm, you stand over her slumped, panting form. The fight has gone out of her, but she still looks quite aroused. ";
 	if a random number between 30 and 125 < Libido of Player:
 		say "You ponder having a little fun with the aroused feline, now that she's calmed down a little.";
@@ -58,14 +54,18 @@ to say beatthecougar:
 	else:
 		say "Deciding to head off while you can, you leave her to her own devices. Which is just what she does, stroking her cock needfully while fingering herself. You can hear her lustful yowls as you walk off.";
 
+Section 2 - Creature Insertion
 
 to say cougardesc:
-	project Figure of Cougar_clothed_icon;
-	setmongender 5;
 	say "     Before you is a powerful looking feline, with golden brown fur and piercing eyes. She looks at you with cold intent, claws unsheathed and teeth bared. This puma herm has two, C-cup breasts on her athletic body and a hefty cock and set of balls waiting to be used. Her cock is a deep brown and human in shape, but with stimulating barbs as well. She drops to all fours and pads slowly around you, emitting an animalistic growl before charging.";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Cougar"	"[PrepCombat_Cougar]"
 
-Section 2 - Creature Insertion
+to say PrepCombat_Cougar:
+	project Figure of Cougar_clothed_icon;
+	setmongender 5;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -25,25 +25,22 @@ to say GenerateTrophyList_Hellfire_Demon:
 Section 2 - Creature Responses
 
 to say HellDemon wins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		if HP of Player > 0: [player submits]
-			say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction, as you kneel down in front of him. 'Finally someone who knows their place. That's a good start, but let's see how much you can handle.' With that said, the hellish creature prepares to use you as he sees fit...";
-			if a random chance of 1 in 2 succeeds:
-				HellDemonBJForced;
-			else if Player is male or Player is neuter:
-				HellDemonAnalForced;
-			else if Player is female:
-				HellDemonPussyForced;
-		else: [player loses]
-			say "     Unable to continue fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'You know how to put up a fight! That left me all boned up... Perfect, I was just thinking about testing your holes.' With that said, the hellish creature prepares to use you as he sees fit...";
-			if a random chance of 1 in 2 succeeds:
-				HellDemonBJForced;
-			else if Player is male or Player is neuter:
-				HellDemonAnalForced;
-			else if Player is female:
-				HellDemonPussyForced;
+	if HP of Player > 0: [player submits]
+		say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction, as you kneel down in front of him. 'Finally someone who knows their place. That's a good start, but let's see how much you can handle.' With that said, the hellish creature prepares to use you as he sees fit...";
+		if a random chance of 1 in 2 succeeds:
+			HellDemonBJForced;
+		else if Player is male or Player is neuter:
+			HellDemonAnalForced;
+		else if Player is female:
+			HellDemonPussyForced;
+	else: [player loses]
+		say "     Unable to continue fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'You know how to put up a fight! That left me all boned up... Perfect, I was just thinking about testing your holes.' With that said, the hellish creature prepares to use you as he sees fit...";
+		if a random chance of 1 in 2 succeeds:
+			HellDemonBJForced;
+		else if Player is male or Player is neuter:
+			HellDemonAnalForced;
+		else if Player is female:
+			HellDemonPussyForced;
 
 to HellDemonBJForced:
 	project Figure of HellfireDemon_hard_icon;
@@ -92,95 +89,92 @@ to HellDemonPussyForced:
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Hellfire Demon";
 
 to say HellDemon loses:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "     You successfully manage to fend off all of the demon's attacks while weakening him in the process. Though as the battle pressed on, you can't help but notice that he popped a boner out of fighting you, making his jockstrap... reduntant, to say the least, given the enormous size of his cock. '[Boygirl], you hit hard! That surely made me horny... I'll let you go, but I won't refuse some fun if you're down for it, sexy. Just a warning, though... I like it [bold type]rough[roman type].' With such a blunt proposal, [bold type]how will you proceed?[roman type][line break]";
-		now sextablerun is 0;
-		blank out the whole of table of fucking options;
-		[]
+	say "     You successfully manage to fend off all of the demon's attacks while weakening him in the process. Though as the battle pressed on, you can't help but notice that he popped a boner out of fighting you, making his jockstrap... reduntant, to say the least, given the enormous size of his cock. '[Boygirl], you hit hard! That surely made me horny... I'll let you go, but I won't refuse some fun if you're down for it, sexy. Just a warning, though... I like it [bold type]rough[roman type].' With such a blunt proposal, [bold type]how will you proceed?[roman type][line break]";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Offer to suck his dick";
+	now sortorder entry is 1;
+	now description entry is "Get a taste of his demon cock";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Worship the demon's feet";
+	now sortorder entry is 7;
+	now description entry is "Work your tongue around those crimson toes";
+	[]
+	if Player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Offer to suck his dick";
-		now sortorder entry is 1;
-		now description entry is "Get a taste of his demon cock";
-		[]
+		now title entry is "Facefuck the demon";
+		now sortorder entry is 2;
+		now description entry is "Make him blow you and take it down his throat";
+	[]
 		choose a blank row in table of fucking options;
-		now title entry is "Worship the demon's feet";
-		now sortorder entry is 7;
-		now description entry is "Work your tongue around those crimson toes";
-		[]
-		if Player is male:
+		now title entry is "Fuck his muscley ass";
+		now sortorder entry is 3;
+		now description entry is "Prepare his hole and give him a hard pounding";
+	[]
+		choose a blank row in table of fucking options;
+		now title entry is "Offer your ass for his pleasure";
+		now sortorder entry is 4;
+		now description entry is "Let him use your ass and give you a nice fuck";
+	[]
+		if demonologist is listed in companionList of Player and libido of Xaedihr > 0:
 			choose a blank row in table of fucking options;
-			now title entry is "Facefuck the demon";
-			now sortorder entry is 2;
-			now description entry is "Make him blow you and take it down his throat";
-		[]
-			choose a blank row in table of fucking options;
-			now title entry is "Fuck his muscley ass";
-			now sortorder entry is 3;
-			now description entry is "Prepare his hole and give him a hard pounding";
-		[]
-			choose a blank row in table of fucking options;
-			now title entry is "Offer your ass for his pleasure";
-			now sortorder entry is 4;
-			now description entry is "Let him use your ass and give you a nice fuck";
-		[]
-			if demonologist is listed in companionList of Player and libido of Xaedihr > 0:
-				choose a blank row in table of fucking options;
-				now title entry is "Double tag him with Xaedihr";
-				now sortorder entry is 99;
-				now description entry is "Fuck him from both sides";
-		[]
-		if Player is female:
-			choose a blank row in table of fucking options;
-			now title entry is "Sit on his face";
-			now sortorder entry is 5;
-			now description entry is "Make him lick your pussy";
-		[]
-			choose a blank row in table of fucking options;
-			now title entry is "Offer your pussy for his pleasure";
-			now sortorder entry is 6;
-			now description entry is "Let him use your pussy as he sees fit";
-		[]
-		sort the table of fucking options in sortorder order;
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]0 - Nevermind[as]0[end link][line break]";
-		while sextablerun is 0:
-			say "Pick the corresponding number> [run paragraph on]";
-			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-				now current menu selection is calcnumber;
-				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry]?";
-				if Player consents:
-					let nam be title entry;
-					now sextablerun is 1;
-					if (nam is "Offer to suck his dick"):
-						say "[HellDemonBJ]";
-					else if (nam is "Facefuck the demon"):
-						say "[HellDemonFacefuck]";
-					else if (nam is "Fuck his muscley ass"):
-						say "[HellDemonFuck]";
-					else if (nam is "Offer your ass for his pleasure"):
-						say "[HellDemonAnal]";
-					else if (nam is "Sit on his face"):
-						say "[HellDemonCun]";
-					else if (nam is "Offer your pussy for his pleasure"):
-						say "[HellDemonPussy]";
-					else if (nam is "Worship the demon's feet"):
-						say "[HellDemonFeet]";
-					else if (nam is "Double tag him with Xaedihr"):
-						say "[HellDemonXMale]";
-					wait for any key;
-			else if calcnumber is 0:
+			now title entry is "Double tag him with Xaedihr";
+			now sortorder entry is 99;
+			now description entry is "Fuck him from both sides";
+	[]
+	if Player is female:
+		choose a blank row in table of fucking options;
+		now title entry is "Sit on his face";
+		now sortorder entry is 5;
+		now description entry is "Make him lick your pussy";
+	[]
+		choose a blank row in table of fucking options;
+		now title entry is "Offer your pussy for his pleasure";
+		now sortorder entry is 6;
+		now description entry is "Let him use your pussy as he sees fit";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
 				now sextablerun is 1;
-				say "     You take a step back and shake off your head, denying his offer. 'No? Heh... Your loss. Though I'm sure you'll change your mind.' he says, before retreating back into the shadows.";
+				if (nam is "Offer to suck his dick"):
+					say "[HellDemonBJ]";
+				else if (nam is "Facefuck the demon"):
+					say "[HellDemonFacefuck]";
+				else if (nam is "Fuck his muscley ass"):
+					say "[HellDemonFuck]";
+				else if (nam is "Offer your ass for his pleasure"):
+					say "[HellDemonAnal]";
+				else if (nam is "Sit on his face"):
+					say "[HellDemonCun]";
+				else if (nam is "Offer your pussy for his pleasure"):
+					say "[HellDemonPussy]";
+				else if (nam is "Worship the demon's feet"):
+					say "[HellDemonFeet]";
+				else if (nam is "Double tag him with Xaedihr"):
+					say "[HellDemonXMale]";
 				wait for any key;
-			else:
-				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-		clear the screen and hyperlink list;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You take a step back and shake off your head, denying his offer. 'No? Heh... Your loss. Though I'm sure you'll change your mind.' he says, before retreating back into the shadows.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say HellDemonBJ:
 	project Figure of HellfireDemon_hard_icon;
@@ -353,18 +347,21 @@ to LJockstrapPickup:
 			say "     With a shrug, you leave it where it is. It probably will not be there in a few minutes.";
 
 to say HellDemon Desc:
+	say "     Standing in front of you is yet another intimidating creature of Hell. A deep crimson, tall and powerful demon, with large tauric horns on the top of his head, approaches you from the darkness. Your eyes inevitably land on the massive bulge barely contained by a leather jockstrap, jiggling slightly at each step that he takes. On top of that, his athletic body is covered in muscle, with a simple harness around his hairy pectorals, and while he generally looks more human in appearance than the brutish of demons, his dark sharp claws still prove a threat to you. With a grin on his face, he speaks to you:[line break]";
+	if Hellfire Club is known:
+		say "     'Look who it is! Master's special guest taking a walk during the night! How about we spar... And fuck right after?' You swear you can already see his bulge growing with the anticipation of having it with you, be it just fighting or more than that. He also doesn't waste any time, lunging himself at you with a grin on his face.";
+	else if BodyName of Player is "Hellfire Demon" and FaceName of Player is "Hellfire Demon": [player looks like a Hellfire Demon]
+		say "     'Fancy meetin' you here! Did you get fucked so much that you became one of us? Should've just asked Master Mogdraz for a joining pass, I'm sure he'd provide you with enough juice... in exchange for your soul. A small price for an eternity of fun, if you ask me... Speaking of fun, wanna have a go?' With this, the demon lunges himself at you.";
+	else:
+		say "     'Oh... Are you lost? What a cutie! And I definitely could use someone to unload my balls into... Master makes us work so much...! Alright, do as you're told and I might let you suck me off! How does that sound?' Without expecting any answer, the demon lunges himself at you.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Hellfire Demon"	"[PrepCombat_Hellfire Demon]"
+
+to say PrepCombat_Hellfire Demon:
 	setmongender 3;
-	if inasituation is true:
-		say ""; [taken care of in the event]
-	else: [standard scene]
-		project Figure of HellfireDemon_clothed_icon;
-		say "     Standing in front of you is yet another intimidating creature of Hell. A deep crimson, tall and powerful demon, with large tauric horns on the top of his head, approaches you from the darkness. Your eyes inevitably land on the massive bulge barely contained by a leather jockstrap, jiggling slightly at each step that he takes. On top of that, his athletic body is covered in muscle, with a simple harness around his hairy pectorals, and while he generally looks more human in appearance than the brutish of demons, his dark sharp claws still prove a threat to you. With a grin on his face, he speaks to you:[line break]";
-		if Hellfire Club is known:
-			say "     'Look who it is! Master's special guest taking a walk during the night! How about we spar... And fuck right after?' You swear you can already see his bulge growing with the anticipation of having it with you, be it just fighting or more than that. He also doesn't waste any time, lunging himself at you with a grin on his face.";
-		else if BodyName of Player is "Hellfire Demon" and FaceName of Player is "Hellfire Demon": [player looks like a Hellfire Demon]
-			say "     'Fancy meetin' you here! Did you get fucked so much that you became one of us? Should've just asked Master Mogdraz for a joining pass, I'm sure he'd provide you with enough juice... in exchange for your soul. A small price for an eternity of fun, if you ask me... Speaking of fun, wanna have a go?' With this, the demon lunges himself at you.";
-		else:
-			say "     'Oh... Are you lost? What a cutie! And I definitely could use someone to unload my balls into... Master makes us work so much...! Alright, do as you're told and I might let you suck me off! How does that sound?' Without expecting any answer, the demon lunges himself at you.";
+	project Figure of HellfireDemon_clothed_icon;
 
 Section 3 - Creature Insertion
 

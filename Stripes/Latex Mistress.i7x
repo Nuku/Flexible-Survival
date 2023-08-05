@@ -6,11 +6,6 @@ Version 1 of Latex Mistress by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say latexmistressdesc:
-	setmongender 4; [creature is female]
-	say "     You are faced with a strange latex-bound person. While looking quite human beneath the black latex suit, this covers her entirely and seems to be bonded to her or may even be completely a part of her flesh. Her head is covered completely in a black mask with only her eyes and mouth visible behind it. Her body, arms and legs are completely covered by the skin-tight latex. Even her hands are covered in claw-tipped gloves and her feet in boots with a six inch platform and a nine inch heel. These, like the rest of the latex seem melded into the suit and part of the seamless whole. The only other openings are those giving access to her wet pussy and tight anus. She looks you over for a moment, rubbing the handle of her whip across her pussy and licking her lips slowly. She then gives the whip a meaningful crack and moves in to attack you.";
-
-
 to say losetolatexmistress:
 	if a random chance of 1 in 2 succeeds:
 		say "     Having beaten you, this latex mistress pushes you roughly to the ground and grabs your head. Pinching your ear (or the closest equivalent thereof), she forces you between her latex-clad thighs and presses your face to her crotch[if HP of Player > 0]. You need no further direction, but she still twists her fingers painfully and orders you to start licking[else]. Twisting her fingers painfully, she orders you to start licking[end if]. With a close-up view, you can see the that latex kinkwear opens across her mons, but is all part of her flesh. But even her bare pussy isn't normal, having black latex folds and dripping rubbery scented juices. That scent is strangely arousing and you take a deep whiff of it.";
@@ -30,7 +25,6 @@ to say losetolatexmistress:
 	else:
 		say "     Having beaten you, this latex mistress pushes you roughly over [one of]some rubble[or]the back of a car[or]over a fallen garbage can[or]over a nearby bench[at random] and whips you several more times. Through this, she often humps against you, grinding her latex-clad body and exposed pussy against you. Having been slapped and whipped across it repeatedly, the flow of her hot juices across your thigh is delightfully soothing.";
 		say "     As the line between pleasure and pain begins to blur, she pauses for a moment to roughly manhandle your [if Player is herm][Cock of Player] cock and dripping pussy[else if Player is male][Cock of Player] cock[else if Player is female]dripping pussy[else]bare crotch[end if] while plunging the handle of her whip into her pussy. She rides it for a few thrusts while moaning. Now wet with her juices, she pulls it out and instead crams the handle of that toughened latex whip into your anus, ignoring your cries. She takes you roughly with it, driving it hard and fast into you or bending it awkwardly inside you to press uncomfortably against your sensitive inner walls. There's pleasured mixed in with her painful discipline, but you do eventually pass out from the ordeal, awakening some time later more sore than you've ever been.";
-
 
 to say beatthelatexmistress:
 	let ltxmscene be 0;
@@ -71,8 +65,17 @@ to say beatthelatexmistress:
 	else if ltxmscene is 99:
 		say "     You push her to the ground and press your heel between the latex woman's shoulders. With her pinned underheel, you growl at her to not mess with you in the future or you'll punish her more severely. You only let her rise once she moans that she's learned her lesson. When you release her, she grabs her latex whip, which was already starting to melt away, and runs off in search of easier prey to dominate.";
 
-
 Section 2 - Creature Insertion
+
+to say latexmistressdesc:
+	say "     You are faced with a strange latex-bound person. While looking quite human beneath the black latex suit, this covers her entirely and seems to be bonded to her or may even be completely a part of her flesh. Her head is covered completely in a black mask with only her eyes and mouth visible behind it. Her body, arms and legs are completely covered by the skin-tight latex. Even her hands are covered in claw-tipped gloves and her feet in boots with a six inch platform and a nine inch heel. These, like the rest of the latex seem melded into the suit and part of the seamless whole. The only other openings are those giving access to her wet pussy and tight anus. She looks you over for a moment, rubbing the handle of her whip across her pussy and licking her lips slowly. She then gives the whip a meaningful crack and moves in to attack you.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Latex Mistress"	"[PrepCombat_Latex Mistress]"
+
+to say PrepCombat_Latex Mistress:
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -403,6 +403,7 @@ to say sexwithDrMoffattSkunkPath:
 			let cuntwidthtemp be Cunt Tightness of Player;
 			if BodyName of Player is not "Hyperskunk":
 				now BodyName of Player is "Hyperskunk";
+				now BodySpeciesName of Player is "Skunk";
 				now Body of Player is body entry;
 				attributeinfect;
 				say "     You moan loudly, letting your hands roam over yourself as your body [body change entry].";
@@ -437,6 +438,7 @@ to say sexwithDrMoffattSkunkPath:
 			let cuntwidthtemp be Cunt Tightness of Player;
 			if BodyName of Player is not "Hyperskunk":
 				now BodyName of Player is "Hyperskunk";
+				now BodySpeciesName of Player is "Skunk";
 				now Body of Player is body entry;
 				attributeinfect;
 				say "     You moan loudly, letting your hands roam over yourself as your body [body change entry].";
@@ -487,6 +489,7 @@ to say sexwithDrMoffattSkunkPath:
 				let cuntwidthtemp be Cunt Tightness of Player;
 				if BodyName of Player is not "Hyperskunk":
 					now BodyName of Player is "Hyperskunk";
+					now BodySpeciesName of Player is "Skunk";
 					now Body of Player is body entry;
 					attributeinfect;
 					say "     You moan loudly, letting your hands roam over yourself as your body [body change entry].";
@@ -520,6 +523,7 @@ to say sexwithDrMoffattSkunkPath:
 				let cuntwidthtemp be Cunt Tightness of Player;
 				if BodyName of Player is not "Hyperskunk":
 					now BodyName of Player is "Hyperskunk";
+					now BodySpeciesName of Player is "Skunk";
 					now Body of Player is body entry;
 					attributeinfect;
 					say "     You moan loudly, letting your hands roam over yourself as your body [body change entry].";

@@ -132,7 +132,7 @@ to say SkarnothTalkMenu:
 	clear the screen and hyperlink list;
 
 to say SkarnothTalk1:
-	say "     <Placeholder Scene, to be filled in soon>";
+	say "     <Demon Prince Scene, to be filled in soon>";
 
 Section 3 - Sex
 
@@ -396,6 +396,16 @@ to say ResolveEvent Skarnoth_Walkin1:
 
 Section 5 - Infection for combat purposes
 
+to say DemonPrince_Desc:
+	say "     Stepping forward, the demon prince sneers at you. 'Usually people beg and whimper as they're dragged here. You see - they know what awaits them. It will be fun to make you realize the error of your ways! Oh, how you'll scream,' he chuckles darkly. Wiping a drop of blood from his last victim off his leather jacket and sucking his finger clean, the demon attacks without mercy.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Demon Prince"	"[PrepCombat_Demon Prince]"
+
+to say PrepCombat_Demon Prince:
+	say "";
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -416,7 +426,7 @@ When Play begins:
 	now attack entry is "[one of]Skarnoth[or]The demon prince[or]The powerful demon[or]The handsome demon[at random] [one of]flashes past you in a flurry of claw-slashes with his hands, leaving behind bleeding gashes in your side.[or]jumps forward and gives you a bear hug, forcing both arms against your sides in impotent immobility. As air is being driven out of your lungs, you feel his breath hotly against your cheek, followed by his tongue licking possessively along your jawline. An eye-blink later, he lets go of you, laughing as you collapse to the ground and gasp for air.[or]throws himself on you and grabs your arm, then humps his hips forward. He is playing with you, only leaving a few scratches after making sure you feel his erect cock rub against your side.[or]gets a grip on your shoulder and throws you to the ground wish a harsh shove, which puts you on all fours with your ass raised. 'That's the proper way to await your master. Maybe you'll be an amusing pet after all.'[or]gives you a head-ringing slap that dazes you for a second, then lets his clawed hands roam over your body, feeling and groping you.[or]grabs you by the neck and aggressively kisses you, with his tongue exploring your mouth.[at random]";
 	now defeated entry is "[line break]";
 	now victory entry is "[line break]";
-	now desc entry is "Stepping forward, the demon prince sneers at you. 'Usually people beg and whimper as they're dragged here. You see - they know what awaits them. It will be fun to make you realize the error of your ways! Oh, how you'll scream,' he chuckles darkly. Wiping a drop of blood from his last victim off his leather jacket and sucking his finger clean, the demon attacks without mercy";
+	now desc entry is "[DemonPrince_Desc]";
 	now face entry is "<noninfective>";
 	now body entry is "<noninfective>";
 	now skin entry is "<noninfective>";

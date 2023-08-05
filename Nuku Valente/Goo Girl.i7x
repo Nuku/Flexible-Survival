@@ -11,8 +11,6 @@ Section 1 - Creature Responses
 goocolor is a number that varies.[@Tag:NotSaved]
 
 to say goovictory:
-	if inasituation is true:
-		stop the action;
 	if HP of Player > 0:
 		say "     Surrendering to the goo girl, you allow the creature to move in closer, looking as giddy as ever. '[one of]Oh[or]Hm[or]Ah[at random], [one of]eager for a bit of fun, are we?[run paragraph on][or]it's play time![run paragraph on][or]how nice of you to offer![run paragraph on][at random]' ";
 	else:
@@ -36,8 +34,6 @@ to say goovictory:
 	now tempnum2 is 0;
 
 To say goodefeat:
-	if inasituation is true:
-		stop the action;
 	say "     Fending the goo girl off she reels back, compressing herself lowly before you and pouting in submission";
 	if Libido of Player > 30 or "Dominant" is listed in feats of Player:
 		say ". Perhaps you could have a bit of fun with her?";
@@ -73,6 +69,16 @@ To say goodefeat:
 		say ". Slowly, the creature slinks back into the darkness, freeing you to go about your business once more.";
 
 to say goodesc:
+	say "     A jiggling girl of [if tempnum2 is 1]blue[else if tempnum2 is 2]green[else]purple[end if] color appears from the darkness, having spotted you. You can see through her, mostly, her gelatin-like flesh tinting the dim light behind her with its lustrous shade. Her upper torso is well defined, with large breasts somehow jiggling just a little more noticeably than the rest of her. Her lower body seems to meld into a grand base of goop just past her thighs, her legs permanently held together. With soft slurping sounds, she propels herself at you like an incoming wave, hands outstretched for you with an unwavering smile.";
+
+
+Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Goo Girl"	"[PrepCombat_Goo Girl]"
+
+to say PrepCombat_Goo Girl:
 	setmongender 4; [creature is female]
 	choose row MonsterID from Table of Random Critters;
 	if "Male Preferred" is listed in feats of Player:
@@ -82,12 +88,6 @@ to say goodesc:
 	else:
 		now sex entry is "Female";
 	now tempnum2 is a random number between 1 and 3;
-	if inasituation is true:
-		stop the action;
-	say "     A jiggling girl of [if tempnum2 is 1]blue[else if tempnum2 is 2]green[else]purple[end if] color appears from the darkness, having spotted you. You can see through her, mostly, her gelatin-like flesh tinting the dim light behind her with its lustrous shade. Her upper torso is well defined, with large breasts somehow jiggling just a little more noticeably than the rest of her. Her lower body seems to meld into a grand base of goop just past her thighs, her legs permanently held together. With soft slurping sounds, she propels herself at you like an incoming wave, hands outstretched for you with an unwavering smile.";
-
-
-Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

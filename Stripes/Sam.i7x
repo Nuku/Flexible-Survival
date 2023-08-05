@@ -347,6 +347,7 @@ to say SamTalk:
 			say "     'What is this? What're you trying to slip me?' he asks, getting upset. 'This is from a nanite vial, isn't it?' he growls. Afraid he'll throw it away and you'll lose your chance, you grab the bottle from him. You try to force it to his mouth, insisting it's for his own good, but he growls and pushes you away[if number of bunkered people + number of booked people > 2]. The others move away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[else if number of bunkered people + number of booked people is 2]. The other person moves away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[end if]. You cap the bottle just in time before the enraged dragontaur charges.";
 			LineBreak;
 			now inasituation is true;
+			say "     Drawn into a fight with Sam, you find yourself facing off against the powerful dragontaur. He has a draconic head with a pointed muzzle filled with sharp teeth and has pointy horns at the back of it. His hands have claws and his feet are taloned. His tail is thick and has a spaded tip. Sam's hide is covered in thick, hard scales as well. Both armed and armored, the dragontaur is a dangerous enemy.";
 			challenge "Dragontaur";
 			now inasituation is false;
 			if fightoutcome >= 10 and fightoutcome <= 19:
@@ -438,10 +439,11 @@ to say SamTalk:
 			say "     'What is this? What're you trying to slip me?' she asks, getting suspicious. 'This is from a nanite vial, isn't it?' she yips. Afraid she'll throw it away and you'll lose your chance, you grab the bottle from her. You try to force it to her mouth, insisting it's for her own good, but she growls and pushes you away[if number of bunkered people + number of booked people > 2]. The others move away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[else if number of bunkered people + number of booked people is 2]. The other person moves away, uncertain what's taking place and not yet prepared to take sides in the escalating fight[end if]. You cap the bottle just in time before the enraged vixentaur charges.";
 			LineBreak;
 			now inasituation is true;
+			say "     Drawn into a fight with Samantha, you find yourself facing off against the alluring vixentaur. She has a vulpine head with a shapely muzzle filled with sharp teeth and keen eyes looking for her first opening. Her hands and feet have small claws. Her bushy tail swishes, spreading her perfumed scent. You notice it starting to make you aroused and docile, but you shake it off just as the vixentaur charges. Both tough and sexy, the vixentaur will be a dangerous enemy.";
 			challenge "Vixentaur";
 			now inasituation is false;
 			if fightoutcome >= 10 and fightoutcome <= 19:
-				say "     Your fight with the alluring female over, you pry open her vulpine muzzle and pour the vial down her throat, repeating to her that it's for her own good. She coughs and sputters a little, but swallows it down. She moans as a flash of blue washes over her eyes, soon her fluffy fur turning from pink to purple as the fluffy coat on her back begins to recede. You stroke her head soothingly as her muzzle becomes a little broader and becomes more draconic in appearance and small horns grow from the back of her head. Her hair fades to a more lilac color, but retains its long and luxurious length.";
+				say "     You manage to knock Samantha down, having beaten the fight out of her. Your fight with the alluring female over, you pry open her vulpine muzzle and pour the vial down her throat, repeating to her that it's for her own good. She coughs and sputters a little, but swallows it down. She moans as a flash of blue washes over her eyes, soon her fluffy fur turning from pink to purple as the fluffy coat on her back begins to recede. You stroke her head soothingly as her muzzle becomes a little broader and becomes more draconic in appearance and small horns grow from the back of her head. Her hair fades to a more lilac color, but retains its long and luxurious length.";
 				say "     Samantha's sleek body continues to change. The fur at her back and on her limbs disappears entirely, being replaced with smooth, lavender scales, the same color as the hard nipples. Her breasts are a little smaller than before, but are still quite generous and are covered in the soft, lilac fur that covers her chest and underbelly. Looking down there, you can see Samantha's gender changing again, growing a furry sheath and ballsack. The cock throbs and spurts precum as a pair of draconic wings burst forth suddenly from bumps on her back. They, like her scales, are a soft purple color.";
 				WaitLineBreak;
 				say "     'Ohh... mmm... I didn't know how much I'd missed having a cock until just now. I can see why you wanted me to try this,' she moans with growing excitement. 'I'm sorry I made such a fuss about it. This is great!' she adds before pulling you in for a kiss. Her tongue dives into your mouth to wrestle with yours. You can feel that it's longer and thinner now as well as forked at the tip.";
@@ -461,7 +463,7 @@ to say SamTalk:
 				now lastfuck of Sam is turns;
 				tripletaur_active; [activate all three taur creatures]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
-				say "     Unable to get up due to your injuries, you cannot stop Sam as she goes on a rampage, growling angrily. She tosses the bottle you intended for her against a wall, splattering its contents across the concrete. 'You piece of scum. I trusted you, but you're no better than Rick in the end. I don't want to have anything to do with you ever again,' she snarls as she shakes you so roughly you black out from the pain. By the time you come to, she's gathered up her remaining supplies and equipment and has left the library for good. It is some time before your body's healed enough for you to get up, leaving you plenty of time to wonder if you made the right decision while you watch a patch of blue scales grow on the wall.";
+				say "     Sam growls and charges, slamming her body into yours and [if scalevalue of Player < 4]sends you tumbling back several yards[else]knocks you over[end if]. You land half on and half off a cot, painfully injuring your back. Unable to get up due to your injuries, you cannot stop Sam as she goes on a rampage, growling angrily. She tosses the bottle you intended for her against a wall, splattering its contents across the concrete. 'You piece of scum. I trusted you, but you're no better than Rick in the end. I don't want to have anything to do with you ever again,' she snarls as she shakes you so roughly you black out from the pain. By the time you come to, she's gathered up her remaining supplies and equipment and has left the library for good. It is some time before your body's healed enough for you to get up, leaving you plenty of time to wonder if you made the right decision while you watch a patch of blue scales grow on the wall.";
 				now HP of Sam is 99;
 				now Sam is nowhere;
 				vixentaur_active; [activate Vixentaur creature]
@@ -510,7 +512,6 @@ carry out SamTest:
 
 Section 4 - Confrontation at the Mini-Lab
 
-minilabfight is a number that varies.
 featherready is a truth state that varies. featherready is usually false.
 
 instead of navigating Mini-Lab while HP of Sam is 4:
@@ -536,11 +537,9 @@ to assaultonminilab:
 			break;
 	if calcnumber is 1:
 		say "     You grab the tigertaur and struggle to pull her away from Sam. She growls in frustration and turns to confront you before getting her true prize.";
-		now minilabfight is 1;
 		now inasituation is true;
 		challenge "Tigertaur";
 		now inasituation is false;
-		now minilabfight is 0;
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			minilabvictory;
 		else if fightoutcome >= 20 and fightoutcome <= 29:

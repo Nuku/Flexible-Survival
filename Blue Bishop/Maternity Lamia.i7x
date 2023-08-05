@@ -144,6 +144,13 @@ to say mlamiavsex04:
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
 	infect;
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Lamia"	"[PrepCombat_Lamia]"
+
+to say PrepCombat_Lamia:
+	say "";
+
 
 Section 2 - Creature Insertion
 

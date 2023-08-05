@@ -2,20 +2,20 @@ Version 1 of Sakura Sato by Rikaeus begins here.
 [Version 1 - Impletation of Fight Stats of Sakura]
 
 to say SakuraSatoLoses:
-	if inasituation is true:
-		stop the action; [solved in event]
 	say ""; [for now]
 
 to say SakuraSatoWins:
-	if inasituation is true:
-		stop the action; [solved in event]
 	say ""; [for now]
 
 to say SakuraSatoDesc:
-	if inasituation is true:
-		say "     The person in front of you in the lecture hall is very different from all the other anime babes, first and foremost she has a much more toned body to her lithe form. Second of all, she's not wearing the stereotypical schoolgirl uniform. Rather, she's wearing a long sleeved blue sweater and a pair of jeans, both of which are splattered with paint. She seems very determined to get you to leave, so you better be ready for a fight.";
-	else:
-		say ""; [for now]
+	say "     The person in front of you in the lecture hall is very different from all the other anime babes, first and foremost she has a much more toned body to her lithe form. Second of all, she's not wearing the stereotypical schoolgirl uniform. Rather, she's wearing a long sleeved blue sweater and a pair of jeans, both of which are splattered with paint. She seems very determined to get you to leave, so you better be ready for a fight.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Sakura Sato"	"[PrepCombat_Sakura Sato]"
+
+to say PrepCombat_Sakura Sato:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

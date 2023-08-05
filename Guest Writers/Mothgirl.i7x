@@ -75,6 +75,16 @@ to say Mothgirl loses:[Player Victory Scenes]
 
 Section 2 - Creature Insertion
 
+to say Mothgirl_Desc:
+	say "     In your travels, you are suddenly accosted by a diminutive girl adorned in only a pair of moth wings and similarly moth-like fur around her neck. [one of]Blue[or]Gray[or]Hazel[or]Green[or]Lavender[or]Brown[at random] eyes agleam like jewels, the gray-skinned creature advances upon you, intent on attacking you, though you imagine she'd be a bit more intimidating if she wasn't stark naked.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Mothgirl"	"[PrepCombat_Mothgirl]"
+
+to say PrepCombat_Mothgirl:
+	setmongender 4;
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -98,7 +108,7 @@ When Play begins:
 	now attack entry is "[one of]She hits you on the cheek with her hand[or]A kick lands upside your face as the moth girl turns in midair[or]The mothgirl punches you in the gut with her fist[or]The mothgirl rams her butt into your face[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[Mothgirl loses]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Mothgirl wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[mongendernum 4]     In your travels, you are suddenly accosted by a diminutive girl adorned in only a pair of moth wings and similarly moth-like fur around her neck. [one of]Blue[or]Gray[or]Hazel[or]Green[or]Lavender[or]Brown[at random] eyes agleam like jewels, the gray-skinned creature advances upon you, intent on attacking you, though you imagine she'd be a bit more intimidating if she wasn't stark naked."; [ Description of the creature when you encounter it.]
+	now desc entry is "[Mothgirl_Desc]"; [ Description of the creature when you encounter it.]
 	now face entry is "a feminine visage that looks at the world with large, bright eyes"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "slender, with a willowy, curvy form. Behind your back are four semitransparent wings that you can either fold together or extend in a quite impressive display"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "glimmering gray"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]

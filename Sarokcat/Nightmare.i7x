@@ -19,12 +19,18 @@ To say Nightmare loses:
 	say "     His attentions soon shift from his neck as he moans again and begins rubbing his hands over his increasingly sexy body, and you blink as he massages his expanding chest and shrinking cock eagerly, even as the rest of his body seems to become much more slender and suitable for a mare. Which is obviously what the stablemaster is now becoming you find yourself noticing with a grin as you watch the former stallion's body continue to shift and change, her new breasts blossoming out under her hands even as her new slit finishes forming and the scent of another mare in heat fills the room. Probably the most arousing thing however, is how eagerly the new mare turns to look at you with her red eyes full of adoration, and her muzzle hanging open as she pants eagerly. 'Please master, please use your slave,' you hear her moan softly as she continues to stroke her body eagerly while she stares up at you.";
 	infect "Nightmare";
 
+Section 2 - Creature Insertion
+
 to say NightmareDesc:
-	project Figure of Nightmare_soft_icon;
-	setmongender 3;
 	say "     The stablemaster charges forward to attack, his powerful black equine form almost a mirror of your own new body as he tries to grapple you into submission!";
 
-Section 2 - Creature Insertion
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Nightmare"	"[PrepCombat_Nightmare]"
+
+to say PrepCombat_Nightmare:
+	setmongender 3;
+	project Figure of Nightmare_soft_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

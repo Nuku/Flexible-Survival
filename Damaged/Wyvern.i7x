@@ -12,101 +12,13 @@ wyvorgyroll is a number that varies.
 wyvernbias is a number that varies. [Used in recording player bias for wyvern. 1 = all female, 2 = female bias, 3 = ambivalent, 4 = male bias, 5 = all male]
 
 to say WYVDESC:
-	if WYVSF is 0:
-		now WYVSF is 2;
-	choose row MonsterID from the Table of Random Critters;
-	if a random chance of 1 in 2 succeeds:
-		now WYVGEN is 1;
-		femalepronouns;
+	say "     [if showlocale is true]As you explore the city, you suddenly[else]Suddenly, you[end if] [if ishunting is true]run into a wyvern[else]find yourself ambushed by a wyvern[end if], swooping down to confront you, the earth trembling as it lands. Looking at the beast proper, it appears to be slightly larger than a pickup truck, wings doubling as its foretalons, thick legs supporting its massive weight. From what you can tell it appears to be [bold type][if WYVGEN is 0]male[else]female[end if][roman type].";
+	if level of Player < 20:
+		say "     With a low growl it opens its great maw, hailing you with a barrage of strange, yellowish-white ooze, the strong adhesive fusing you to the ground. You manage to pry some of the viscous fluid free of you, but if feels as though contact with it has drained you slightly. This monster is simply too much for you to handle right now, and your best bet is simply to pull yourself free and make a run for it.";
+	else if WYVLEV is 0:
+		say "     Being familiar with the great creature's tactics, you dodge as it makes its attempt to catch you with an opening volley of goop. You feel a rush of excitement, of wild fervor and charge at the gigantic creature before you even realize what you're doing. Perhaps you're tired of always running from them, perhaps it is some new madness brought on by the infection, but you feel compelled to stand and fight the enormous beast. [bold type]From this point on, you will face the monster directly.[roman type][line break]";
 	else:
-		now WYVGEN is 0;
-		malepronouns;
-	if MaleList is banned and FemaleList is banned:
-		setmongender 19; [creatures are mixed/variable]
-		say "     As you explore the city you look up to the sky, watching as a pair of wyverns circle the sky. You're not rightly sure if they're minding you, but something inevitably set them off and, with a disdainful screech, they fly off into the distance. Strange, and you get the odd impression that you won't be seeing them again.";
-		now BannedStatus entry is true;
-		now fightoutcome is 19;
-		now combat abort is 1;
-		now WYVGEN is 0;
-	else:
-		if ishunting is true and (MaleList is warded or FemaleList is warded) and wyvernbias is 0:
-			say "     [italic type]Hunting for a wyvern, it appears you have one or both genders warded. In the case of this monster, what is your exact bias?[roman type][line break]";
-			wyvernbiasrequest;
-		if MaleList is banned or wyvernbias is 1:
-			now WYVGEN is 1;
-			femalepronouns;
-			now WYVSF is 3;
-		else if FemaleList is banned or wyvernbias is 5:
-			now WYVGEN is 0;
-			malepronouns;
-			now WYVSF is 1;
-		else if (MaleList is warded and FemaleList is warded) or wyvernbias is 3:
-			if a random chance of 1 in 2 succeeds:
-				now WYVGEN is 1;
-				femalepronouns;
-			else:
-				now WYVGEN is 0;
-				malepronouns;
-		else if ishunting is true: [Hunting system]
-			if wyvernbias is 2 and a random chance of 2 in 3 succeeds:
-				now WYVGEN is 1;
-				femalepronouns;
-			else if wyvernbias is 4 and a random chance of 2 in 3 succeeds:
-				now WYVGEN is 0;
-				malepronouns;
-		else if ishunting is false:
-			if MaleList is warded or (wyvernbias < 3 and wyvernbias is not 0):
-				now WYVGEN is 1;
-				femalepronouns;
-			else if FemaleList is warded or wyvernbias > 3:
-				now WYVGEN is 0;
-				malepronouns;
-		psycheeval;
-		libidoeval;
-		if "Female Preferred" is listed in feats of Player:
-			now sex entry is "Female";
-		else if "Herm Preferred" is listed in feats of Player:
-			now sex entry is "Both";
-		else if "Male Preferred" is listed in feats of Player:
-			now sex entry is "Male";
-		else if WYVGEN is 1:
-			now sex entry is "Male";
-		else:
-			now sex entry is "Female";
-		if WYVGEN is 1:
-			setmongender 4; [creature is female]
-			if Daytimer is day:
-				project the figure of Wyvern_female_day_icon;
-			else:
-				project the figure of Wyvern_female_night_icon;
-		else:
-			setmongender 3; [creature is male]
-			if Daytimer is day:
-				project the figure of Wyvern_male_day_icon;
-			else:
-				project the figure of Wyvern_male_night_icon;
-		say "     [if showlocale is true]As you explore the city, you suddenly[else]Suddenly, you[end if] [if ishunting is true]run into a wyvern[else]find yourself ambushed by a wyvern[end if], swooping down to confront you, the earth trembling as it lands. Looking at the beast proper, it appears to be slightly larger than a pickup truck, wings doubling as its foretalons, thick legs supporting its massive weight. From what you can tell it appears to be [bold type][if WYVGEN is 0]male[else]female[end if][roman type].";
-		if level of Player < 20:
-			say "     With a low growl it opens its great maw, hailing you with a barrage of strange, yellowish-white ooze, the strong adhesive fusing you to the ground. You manage to pry some of the viscous fluid free of you, but if feels as though contact with it has drained you slightly. This monster is simply too much for you to handle right now, and your best bet is simply to pull yourself free and make a run for it.";
-		else if WYVLEV is 0:
-			say "     Being familiar with the great creature's tactics, you dodge as it makes its attempt to catch you with an opening volley of goop. You feel a rush of excitement, of wild fervor and charge at the gigantic creature before you even realize what you're doing. Perhaps you're tired of always running from them, perhaps it is some new madness brought on by the infection, but you feel compelled to stand and fight the enormous beast. [bold type]From this point on, you will face the monster directly.[roman type][line break]";
-		else:
-			say "     It sets upon you with a hail of its goop, but by this point you're so adept that you easily outmaneuver it. [if scalevalue of Player < 4]You feel that same crazed compulsion to take on the creature so much larger than you. [end if]You raise your [if weapon object of Player is journal]fists[else]weapon in the air[end if] and give a wild battle cry before rushing at it.";
-		if level of Player >= 20:
-			let debit be 0;
-			if HardMode is true and level of Player > 25:
-				now debit is level of Player - 25;
-			now WYVLEV is 1;
-			now HP entry is ( a random number between 200 and 275 ) + ( debit * 5 );
-			now monsterHP is HP entry;
-			now wdam entry is 18 + ( ( 2 * debit ) / 5 );
-			now lev entry is 25 + debit;
-			now str entry is 30;
-			now dex entry is 28 + ( debit / 4 );
-			now sta entry is 20;
-			now per entry is 18;
-			now SeductionImmune entry is false;
-	now libido entry is 60;
+		say "     It sets upon you with a hail of its goop, but by this point you're so adept that you easily outmaneuver it. [if scalevalue of Player < 4]You feel that same crazed compulsion to take on the creature so much larger than you. [end if]You raise your [if weapon object of Player is journal]fists[else]weapon in the air[end if] and give a wild battle cry before rushing at it.";
 
 to say WYVATK:
 	if WYVLEV is 0:
@@ -714,6 +626,100 @@ to say wyvfem_2: [Oral Giving Cunt]
 	increase Libido of Player by 3;
 	if PlayerCunnilunguses > 0:
 		CreatureSexAftermath "Wyvern" receives "OralPussy" from "Player"; [SexAftermath NYI: Player gives the wyvern a cuntjob aka cunnilingus]
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Wyvern"	"[PrepCombat_Wyvern]"
+
+to say PrepCombat_Wyvern:
+	if WYVSF is 0:
+		now WYVSF is 2;
+	choose row MonsterID from the Table of Random Critters;
+	if a random chance of 1 in 2 succeeds:
+		now WYVGEN is 1;
+		femalepronouns;
+	else:
+		now WYVGEN is 0;
+		malepronouns;
+	if MaleList is banned and FemaleList is banned:
+		setmongender 19; [creatures are mixed/variable]
+		say "     As you explore the city you look up to the sky, watching as a pair of wyverns circle the sky. You're not rightly sure if they're minding you, but something inevitably set them off and, with a disdainful screech, they fly off into the distance. Strange, and you get the odd impression that you won't be seeing them again.";
+		now BannedStatus entry is true;
+		now fightoutcome is 19;
+		now combat abort is 1;
+		now WYVGEN is 0;
+	else:
+		if ishunting is true and (MaleList is warded or FemaleList is warded) and wyvernbias is 0:
+			say "     [italic type]Hunting for a wyvern, it appears you have one or both genders warded. In the case of this monster, what is your exact bias?[roman type][line break]";
+			wyvernbiasrequest;
+		if MaleList is banned or wyvernbias is 1:
+			now WYVGEN is 1;
+			femalepronouns;
+			now WYVSF is 3;
+		else if FemaleList is banned or wyvernbias is 5:
+			now WYVGEN is 0;
+			malepronouns;
+			now WYVSF is 1;
+		else if (MaleList is warded and FemaleList is warded) or wyvernbias is 3:
+			if a random chance of 1 in 2 succeeds:
+				now WYVGEN is 1;
+				femalepronouns;
+			else:
+				now WYVGEN is 0;
+				malepronouns;
+		else if ishunting is true: [Hunting system]
+			if wyvernbias is 2 and a random chance of 2 in 3 succeeds:
+				now WYVGEN is 1;
+				femalepronouns;
+			else if wyvernbias is 4 and a random chance of 2 in 3 succeeds:
+				now WYVGEN is 0;
+				malepronouns;
+		else if ishunting is false:
+			if MaleList is warded or (wyvernbias < 3 and wyvernbias is not 0):
+				now WYVGEN is 1;
+				femalepronouns;
+			else if FemaleList is warded or wyvernbias > 3:
+				now WYVGEN is 0;
+				malepronouns;
+		psycheeval;
+		libidoeval;
+		if "Female Preferred" is listed in feats of Player:
+			now sex entry is "Female";
+		else if "Herm Preferred" is listed in feats of Player:
+			now sex entry is "Both";
+		else if "Male Preferred" is listed in feats of Player:
+			now sex entry is "Male";
+		else if WYVGEN is 1:
+			now sex entry is "Male";
+		else:
+			now sex entry is "Female";
+		if WYVGEN is 1:
+			setmongender 4; [creature is female]
+			if Daytimer is day:
+				project the figure of Wyvern_female_day_icon;
+			else:
+				project the figure of Wyvern_female_night_icon;
+		else:
+			setmongender 3; [creature is male]
+			if Daytimer is day:
+				project the figure of Wyvern_male_day_icon;
+			else:
+				project the figure of Wyvern_male_night_icon;
+		if level of Player >= 20:
+			let debit be 0;
+			if HardMode is true and level of Player > 25:
+				now debit is level of Player - 25;
+			now WYVLEV is 1;
+			now HP entry is ( a random number between 200 and 275 ) + ( debit * 5 );
+			now monsterHP is HP entry;
+			now wdam entry is 18 + ( ( 2 * debit ) / 5 );
+			now lev entry is 25 + debit;
+			now str entry is 30;
+			now dex entry is 28 + ( debit / 4 );
+			now sta entry is 20;
+			now per entry is 18;
+			now SeductionImmune entry is false;
+	now libido entry is 60;
 
 Section 2 - Creature Insertion
 

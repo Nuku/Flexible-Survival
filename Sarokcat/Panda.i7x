@@ -6,18 +6,6 @@ Version 1 of Panda by Sarokcat begins here.
 
 Section 1 - Creature Responses
 
-to say panda appears:
-	setmongender 4; [creature is female]
-	if medeapanda is true:
-		say "     You find yourself facing off against a very pregnant female panda. She's dressed in naught but a t-shirt that's been stretched tightly over her ample belly and bosom. You can see the shadow of her black nipples through the thinned fabric. Her pussy and thighs are wet with what might be femcum or amniotic fluid, or quite possibly both. It seems you'll have to subdue her[if HP of Doctor Matt is 20 or HP of Doctor Matt is 21] with care[end if] if you don't want to be rather rudely involved in the delivery.";
-		decrease pldamagebonus by weapon damage of Player / 2;
-	else:
-		say "     Traveling down the zoo paths, you are startled to see a black and white patterned humanoid bear charge through the landscaping and end up right in front of you, panting from the exertion of running around like mad, her modest breasts heave with every breath as she scans the area";
-		if Player is male:
-			say ". The panda-like woman's eyes fix on you, and then drop down to your [Cock of Player] cock. 'Ooooh a male!' she exclaims. [one of]'Please fuck me now!' [or]'Did you know pandas are an endangered species?' she asks slyly. 'Want to help me repopulate?' [or]'Yes! Take me now!' [or]'Finally I can get laid!' [or]'You're mine!' [or]'Finally I found a man!' [or]'You would make a handsome panda!' [at random]the pandawoman says lustily. Not waiting to see your response, she charges forward clearly intent on getting laid.";
-		else:
-			say ". The panda-like woman's eyes fix on you, scanning over your female form, and seeming disappointed at what they find. 'Another woman?' the panda cries out in exasperation. [one of]'We don't need any more competition for mates around here!' [or]'You won't get the men while I'm around!' [or]'Maybe we can MAKE you a man!' [or]'You must have hidden the men for yourself! I'll beat their location out of you!' [or]'I needed someone to vent my frustration on anyways,' [at random]she says with a growl of pure frustration. Not bothering to let you respond, she charges forward, fire in her eyes.";
-
 to say panda attack:
 	choose row MonsterID from the Table of Random Critters;
 	if medeapanda is true:
@@ -35,7 +23,6 @@ to say panda attack:
 		say "     The panda gasps above you as you begin to stroke her feminine lips, her own hand starting to stroke and penetrate you harder as a reward. You find yourself starting to really get into this strange situation as her body grinds up against yours in need, enjoying how she writes at your touch, and enjoying the stroking touches she gives in return. You can feel your orgasm building as her claw scrapes softly against the depths of your passage, massaging and stimulating you in all the right places. As your orgasm threatens to overtake you, you find your hands working harder as you massage both her inner lips with one hand, while your other teases her breasts, desperate to bring her over the edge with you. Finally you gasp and orgasm around her fingers, your own diving even deeper into her and stimulating her much-needed body to its own orgasm. You lie there panting in pleasure, the strange experience making you feel amazingly good, even with just her fingers involved, as she recovers from her own orgasm, collapsed half on top of you. 'Ah, that took some of the edge off,' the pandawoman says with a happy grin as she picks herself up off you. 'And now to find a real male!' the panda declares before she charges off into the park again, leaving you lying there, still breathless.";
 		infect "Panda";
 
-
 To say panda loss:
 	if medeapanda is true:
 		say "     Despite fighting with added care and holding back some of your strength due to your foe's gravid state, you're still more than a match for the panda and are able to wear her down to the point that she's no longer trying to fight.";
@@ -43,6 +30,24 @@ To say panda loss:
 		say "You knock the already tired panda woman back on her furry ass. She sits there for a minute, a slightly puzzled look on her face, before her eyes roll up in her head and she passes out, the fight on top of the chase obviously too much for her. Her body collapses back on the zoo path, sprawled out bonelessly, you check to make sure she is still alive, and find that she is just deeply asleep. Sighing in relief, you decide to continue on your way while you can, leaving the sex crazed panda to sleep it off behind you.";
 
 Section 2 - Creature Insertion
+
+to say panda appears:
+	if medeapanda is true:
+		say "     You find yourself facing off against a very pregnant female panda. She's dressed in naught but a t-shirt that's been stretched tightly over her ample belly and bosom. You can see the shadow of her black nipples through the thinned fabric. Her pussy and thighs are wet with what might be femcum or amniotic fluid, or quite possibly both. It seems you'll have to subdue her[if HP of Doctor Matt is 20 or HP of Doctor Matt is 21] with care[end if] if you don't want to be rather rudely involved in the delivery.";
+		decrease pldamagebonus by weapon damage of Player / 2;
+	else:
+		say "     Traveling down the zoo paths, you are startled to see a black and white patterned humanoid bear charge through the landscaping and end up right in front of you, panting from the exertion of running around like mad, her modest breasts heave with every breath as she scans the area";
+		if Player is male:
+			say ". The panda-like woman's eyes fix on you, and then drop down to your [Cock of Player] cock. 'Ooooh a male!' she exclaims. [one of]'Please fuck me now!' [or]'Did you know pandas are an endangered species?' she asks slyly. 'Want to help me repopulate?' [or]'Yes! Take me now!' [or]'Finally I can get laid!' [or]'You're mine!' [or]'Finally I found a man!' [or]'You would make a handsome panda!' [at random]the pandawoman says lustily. Not waiting to see your response, she charges forward clearly intent on getting laid.";
+		else:
+			say ". The panda-like woman's eyes fix on you, scanning over your female form, and seeming disappointed at what they find. 'Another woman?' the panda cries out in exasperation. [one of]'We don't need any more competition for mates around here!' [or]'You won't get the men while I'm around!' [or]'Maybe we can MAKE you a man!' [or]'You must have hidden the men for yourself! I'll beat their location out of you!' [or]'I needed someone to vent my frustration on anyways,' [at random]she says with a growl of pure frustration. Not bothering to let you respond, she charges forward, fire in her eyes.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Panda"	"[PrepCombat_Panda]"
+
+to say PrepCombat_Panda:
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

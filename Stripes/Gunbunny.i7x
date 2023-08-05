@@ -14,39 +14,12 @@ nogunbunnysex is a number that varies.
 
 Section 1 - Monster Description
 
-to say gunbunnydesc:
-	now gb_hair is a random number from 1 to 8;
-	now gb_gun is a random number from 1 to 5;
-	now gb_gatling_counter is 0;
-	say "     You find yourself confronted by an anime-style bunny girl. She's got the typical human head and body and is dressed in [one of]a tight top, super-short skirt and striped knee-socks[or][if gb_gun is 6]a form-fitting space suit[else]a camo jumpsuit[end if][or]a bikini[or]a navy-blue school outfit[or]a skin-tight black leotard[or]a cute t-shirt skirt[in random order] that shows off her sexy bust. Her hair is [if gb_hair is 1]pink[else if gb_hair is 2]yellow[else if gb_hair is 3]green[else if gb_hair is 4]blue[else if gb_hair is 5]red[else if gb_hair is 6]black[else if gb_hair is 7]white[else]teal[end if] with matching colored rabbit ears sticking out of it. She's wearing similarly colored paw-like gloves.";
-	say "     Her large, expressive eyes watch you carefully as one hand slips behind her back. From somewhere around her fluffy [if gb_hair is 1]pink[else if gb_hair is 2]yellow[else if gb_hair is 3]green[else if gb_hair is 4]blue[else if gb_hair is 5]red[else if gb_hair is 6]black[else if gb_hair is 7]white[else]teal[end if] bunny tail, she pulls out [if gb_gun is 1]a pair of heavy pistols[else if gb_gun is 2]a pair of SMGs[else if gb_gun is 3]twin six-shooters[else if gb_gun is 4]a shotgun[else if gb_gun is 5]a heavy rifle[else]a sci-fi ray gun[end if]. Now armed and with a [one of]wild look in her eyes[or]crazy laugh[or]girlish giggle[or]untranslatable insult[or]final action pose[at random], she aims and opens fire in a spray of [if gb_gun is 5]laser fire[else]bullets[end if].";
-
-[   gb_hair   ]
-[ 1 = pink    ]
-[ 2 = yellow  ]
-[ 3 = green   ]
-[ 4 = blue    ]
-[ 5 = red     ]
-[ 6 = black   ]
-[ 7 = white   ]
-[ 8 = teal    ]
-
-[       gb_gun        ]
-[ 1 = pistols x2      ]
-[ 2 = SMGs x2         ]
-[ 3 = six-shooters x2 ]
-[ 4 = shotgun         ]
-[ 5 = heavy rifle     ]
-[ 6 = sci-fi ray gun  ]
-
-
 Section 2 - Monster Attacks
 
 [Note: See Section 6 for her Alt-Attack]
 
 to say gunbunnyattack:
 	say "[one of]The bunny girl[or]The gunbunny[or]She[or]The gun-totting rabbit[or]The rabbit-eared girl[at random] [one of]fires a volley of wild shots[or]fires at you with her [if gb_gun > 3]gun[else]guns[end if][or]giggles wildly as she chases after you with a stream of [if gb_gun < 6]bullets[else]laser blasts[end if][or]performs an acrobatic leap that has her flip upside down while ten feet in the air, firing shots all around you before landing with a superfluous jiggle of her breasts[or]dashes from side to side while shooting nearly constantly[at random][one of]. Try as you might to avoid them, one of the shots does end up hitting[or]. You do your best to dive for cover, but end up getting hit[or]. The crazed rabbit girl[if gb_gun is 6]'s blaster shot leaves a searing scorchmark where it hits[else] seems to shoot more bullets than her gun could possibly hold and you can only manage to dodge for so long before getting hit[end if][or]. She chases you from cover to cover before finally managing to hit you[at random].";
-
 
 Section 3 - Monster Victory
 
@@ -57,7 +30,6 @@ to say losetogunbunny:
 		now HP of Player is 0;
 	else:
 		say "     The gun-toting bunny mocks you while bragging about her shooting skills before leaving you to slowly, painfully recover.";
-
 
 Section 4 - Player Victory
 
@@ -94,8 +66,38 @@ to say beatthegunbunny:
 			say "     Resisting the impulse, you push the weakened bunny back down with your foot, ending her attempts to rise. At this point, you've had your fun and just leave the exhausted girl behind. Before you go, you look around for [if gb_gun > 3]it, but you cannot find her weapon[else]them, but you cannot find her guns[end if].";
 			increase nogunbunnysex by 1;
 
-
 Section 5 - Creature Insertion
+
+to say gunbunnydesc:
+	say "     You find yourself confronted by an anime-style bunny girl. She's got the typical human head and body and is dressed in [one of]a tight top, super-short skirt and striped knee-socks[or][if gb_gun is 6]a form-fitting space suit[else]a camo jumpsuit[end if][or]a bikini[or]a navy-blue school outfit[or]a skin-tight black leotard[or]a cute t-shirt skirt[in random order] that shows off her sexy bust. Her hair is [if gb_hair is 1]pink[else if gb_hair is 2]yellow[else if gb_hair is 3]green[else if gb_hair is 4]blue[else if gb_hair is 5]red[else if gb_hair is 6]black[else if gb_hair is 7]white[else]teal[end if] with matching colored rabbit ears sticking out of it. She's wearing similarly colored paw-like gloves.";
+	say "     Her large, expressive eyes watch you carefully as one hand slips behind her back. From somewhere around her fluffy [if gb_hair is 1]pink[else if gb_hair is 2]yellow[else if gb_hair is 3]green[else if gb_hair is 4]blue[else if gb_hair is 5]red[else if gb_hair is 6]black[else if gb_hair is 7]white[else]teal[end if] bunny tail, she pulls out [if gb_gun is 1]a pair of heavy pistols[else if gb_gun is 2]a pair of SMGs[else if gb_gun is 3]twin six-shooters[else if gb_gun is 4]a shotgun[else if gb_gun is 5]a heavy rifle[else]a sci-fi ray gun[end if]. Now armed and with a [one of]wild look in her eyes[or]crazy laugh[or]girlish giggle[or]untranslatable insult[or]final action pose[at random], she aims and opens fire in a spray of [if gb_gun is 5]laser fire[else]bullets[end if].";
+
+[   gb_hair   ]
+[ 1 = pink    ]
+[ 2 = yellow  ]
+[ 3 = green   ]
+[ 4 = blue    ]
+[ 5 = red     ]
+[ 6 = black   ]
+[ 7 = white   ]
+[ 8 = teal    ]
+
+[       gb_gun        ]
+[ 1 = pistols x2      ]
+[ 2 = SMGs x2         ]
+[ 3 = six-shooters x2 ]
+[ 4 = shotgun         ]
+[ 5 = heavy rifle     ]
+[ 6 = sci-fi ray gun  ]
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Gunbunny"	"[PrepCombat_Gunbunny]"
+
+to say PrepCombat_Gunbunny:
+	now gb_hair is a random number from 1 to 8;
+	now gb_gun is a random number from 1 to 5;
+	now gb_gatling_counter is 0;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

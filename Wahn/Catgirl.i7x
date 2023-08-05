@@ -61,11 +61,11 @@ TwistedCapacity of Fiona is false. [Twisted Characters can take any penetration,
 Sterile of Fiona is false. [steriles can't knock people up]
 MainInfection of Fiona is "Catgirl". [currently no infection available]
 Description of Fiona is "[FionaDesc]".
-Conversation of Fiona is { "<This is nothing but a placeholder!>" }.
+Conversation of Fiona is { "<This is nothing but a Catgirl!>" }.
 The scent of Fiona is "     Fiona has a light, floral scent with an underlying note of clean fur.".
 
 to say FionaDesc:
-	say "     Placeholder description until the catgirl is actually placed somewhere.";
+	say "     Catgirl description until the catgirl is actually placed somewhere.";
 
 to say Catgirl_Wins:
 	say "     The catgirl looks at you a bit disdainfully, then walks away with a flirt of her tail, on the lookout for a more worthy mating partner.";
@@ -97,12 +97,18 @@ to say Catgirl_Loses:
 		say "     Shaking your head at the crazy 'come-hither... but I'm gonna attack you when you try' mating behavior of this feline woman, you quickly run away, dashing down the street before the catgirl can realize that you're not actually gonna have sex with her.";
 
 to say Catgirl_Desc:
-	setmongender 4; [female]
 	say "     A slender black-furred female comes out of an alley a short distance ahead from you, meowing as she comes closer to have a look at you. She's a mixture between human and cat, having short fur covering her humanoid body, pointy ears, typical cat's eyes and a long tail. She walks with seductive grace on two digitigrade paws.";
 	say "     After a moment of studying you from a distance, it seems she comes to a decision and starts to give you a bit of a show. With flowing movements, she runs her hands over her own body, stroking over her own breasts and flirting her tail at you. Then she demonstratively bends over, flashing you her moist and ready pussy.";
 	say "     You find yourself almost hypnotized by her flowing movements and seductive demeanor and take a step closer before you can stop yourself. But as you do so, she hisses and bares her claws, though she is still showing off her body. Looks like she's in heat and wants [if Player is male]to be mated - but only by a partner who proves his strength and virility. [else]someone to soothe her desires - but nevertheless only a person who proves their worth first. [end if]And she really wants to know if you qualify, it seems - jumping you a moment later with outstretched claws.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Catgirl"	"[PrepCombat_Catgirl]"
+
+to say PrepCombat_Catgirl:
+	setmongender 4; [female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -288,6 +294,13 @@ to say Catboy_Wins:
 
 to say Catboy_Desc:
 	say "...";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Catboy"	"[PrepCombat_Catboy]"
+
+to say PrepCombat_Catboy:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

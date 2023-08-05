@@ -5,37 +5,6 @@ Version 1 of Flesh Blob by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say fleshblobdesc:
-	setmongender 9; [creature is variable]
-	choose row MonsterID from the Table of Random Critters;
-	let qq be a random number between 5 and 8; [full range 5-10]
-	if level of Player > 6 and a random chance of 2 in 3 succeeds, increase qq by 1;
-	if level of Player > 8 and a random chance of 2 in 3 succeeds, increase qq by 1;
-	if level of Player < qq and level of Player > 5, now qq is level of Player + 1;
-	let zz be a random number between 1 and 12;
-	if HardMode is true and level of Player > 8:		[Hard Mode Version!]
-		increase qq by level of Player - 8;
-		now HP entry is 18 + ( ( 4 * qq ) + zz + a random number between 0 and qq );
-		now monsterHP is HP entry;
-		now lev entry is qq;
-		if lev entry > 9:
-			now wdam entry is 8 + ( qq / 3 );
-		else:
-			now wdam entry is 1 + ( ( ( qq - 2 ) * 3 ) / 2 );
-		now dex entry is 14 + ( qq / 6 ) + ( square root of ( qq + 8 ) ) + a random number between 0 and 2; [faster initial growth, but slows down more]
-	else:								[Normal Play Version!]
-		now HP entry is ( ( 5 times qq ) + zz + 5 );
-		now monsterHP is HP entry;
-		now wdam entry is 1 + ( ( ( qq - 2 ) * 3 ) / 2 );
-		now lev entry is qq;
-		now dex entry is ( ( ( ( qq - 1 ) * 4 ) / 3 ) + 10 );
-	[testing values achieved]
-[	say "Lvl is [qq]. Variable is [zz].";
-	say "HP is [HP entry].";
-	say "Dmg is [wdam entry]. Dex is [dex entry].[line break]";]
-	say "     You find yourself being confronted by an oozing, undulating mass of flesh. It has near-white skin over its shifting mass, probably from its underground existence. It is a mound of pallid flesh roughly [if lev entry is 5]five[else if lev entry is 6]six[else if lev entry is 7]seven[else if lev entry is 8]eight[else if lev entry is 9]nine[else]ten[end if] feet in diameter that continuously forms disturbing bulges across its surface. Hands and arms, feet and legs, rise up at times, only to sink back into the mass of flesh. Eyes form in random places across itself, staring at you before closing and fading back into it. Transitory cocks, cunts and breasts are also quite common across the creature's body.";
-	say "     Most disturbing of all though are the heads and faces that push out of the blob briefly. These are of both men and women and have varied expressions of horror, terror, delight and lust. Many of these do not even fully form and look more like someone's stretching the pale flesh across their face while others stare at you with mismatched eyes or grow an eye in their screaming mouth.";
-
 to say losetofleshblob:
 	choose row MonsterID from the Table of Random Critters;
 	say "     You are grabbed by several hands growing from the blob of warm flesh and pulled down atop it. Its skin undulates against your body, sending shivers through you. You should be horrified, but you are no longer. There's something about its touch, its scent, its movement that is arousing you such that you don't resist as your clothes are pulled away, leaving your [bodydesc of Player] body rubbing against the breasts and genitals it forms.";
@@ -70,8 +39,41 @@ to say beatthefleshblob:
 	now lev entry is 6;
 	now wdam entry is 5;
 
-
 Section 2 - Creature Insertion
+
+to say fleshblobdesc:
+	choose row with name of "Flesh Blob" in Table of Random Critters;
+	say "     You find yourself being confronted by an oozing, undulating mass of flesh. It has near-white skin over its shifting mass, probably from its underground existence. It is a mound of pallid flesh roughly [if lev entry is 5]five[else if lev entry is 6]six[else if lev entry is 7]seven[else if lev entry is 8]eight[else if lev entry is 9]nine[else]ten[end if] feet in diameter that continuously forms disturbing bulges across its surface. Hands and arms, feet and legs, rise up at times, only to sink back into the mass of flesh. Eyes form in random places across itself, staring at you before closing and fading back into it. Transitory cocks, cunts and breasts are also quite common across the creature's body.";
+	say "     Most disturbing of all though are the heads and faces that push out of the blob briefly. These are of both men and women and have varied expressions of horror, terror, delight and lust. Many of these do not even fully form and look more like someone's stretching the pale flesh across their face while others stare at you with mismatched eyes or grow an eye in their screaming mouth.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Flesh Blob"	"[PrepCombat_Flesh Blob]"
+
+to say PrepCombat_Flesh Blob:
+	setmongender 9; [creature is variable]
+	choose row MonsterID from the Table of Random Critters;
+	let qq be a random number between 5 and 8; [full range 5-10]
+	if level of Player > 6 and a random chance of 2 in 3 succeeds, increase qq by 1;
+	if level of Player > 8 and a random chance of 2 in 3 succeeds, increase qq by 1;
+	if level of Player < qq and level of Player > 5, now qq is level of Player + 1;
+	let zz be a random number between 1 and 12;
+	if HardMode is true and level of Player > 8:		[Hard Mode Version!]
+		increase qq by level of Player - 8;
+		now HP entry is 18 + ( ( 4 * qq ) + zz + a random number between 0 and qq );
+		now monsterHP is HP entry;
+		now lev entry is qq;
+		if lev entry > 9:
+			now wdam entry is 8 + ( qq / 3 );
+		else:
+			now wdam entry is 1 + ( ( ( qq - 2 ) * 3 ) / 2 );
+		now dex entry is 14 + ( qq / 6 ) + ( square root of ( qq + 8 ) ) + a random number between 0 and 2; [faster initial growth, but slows down more]
+	else:								[Normal Play Version!]
+		now HP entry is ( ( 5 times qq ) + zz + 5 );
+		now monsterHP is HP entry;
+		now wdam entry is 1 + ( ( ( qq - 2 ) * 3 ) / 2 );
+		now lev entry is qq;
+		now dex entry is ( ( ( ( qq - 1 ) * 4 ) / 3 ) + 10 );
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -24,6 +24,15 @@ BlindMode is a truth state that varies. [blind mode on/off]
 anallevel is a number that varies. [player preference for anal sex]
 [anallevel is usually 2.] [normal; See MinimalBuild/Presets.i7x]
 
+vorelevel is a number that varies. [player vore preference]
+[vorelevel is usually 2.] [normal; See Core Mechanics/Presets.i7x]
+
+hvorelevel is a number that varies. [player hardvore preference]
+[hvorelevel is usually 1.] [no hard vore; See Core Mechanics/Presets.i7x]
+
+UBlevel is a number that varies. [player unbirthing preference]
+[UBlevel is usually 2.] [normal; See Core Mechanics/Presets.i7x]
+
 WSlevel is a number that varies. [player waterspots preference]
 [WSlevel is usually 2.] [normal; See MinimalBuild/Presets.i7x]
 
@@ -1070,6 +1079,7 @@ to say gsopt_4:
 		else:
 			now gsexit is 1;
 
+
 Chapter 8 - Content restrictions
 
 to contentrestrictionmenu:
@@ -1080,6 +1090,7 @@ to contentrestrictionmenu:
 		say "(1) [link]Banned/Warded Types[as]1[end link] - [menuwardlist] & [menubanlist] [line break]";
 		say "(2) [link]Anal Content[as]2[end link] - [bold type][if AnalLevel is 1]Less[else if AnalLevel is 2]Normal[else if AnalLevel is 3]More[end if][roman type][line break]";
 		say "(3) [link]WS Content[as]3[end link] - [bold type][if WSLevel is 1]None[else if WSLevel is 2]Normal[else if WSLevel is 3]Full[end if][roman type][line break]";
+		say "(4) [link]Vore/UB Content[as]4[end link] - Vore: [bold type][if vorelevel is 1]None[else if vorelevel is 2]Normal[else if vorelevel is 3]Full[end if][roman type] - Unbirth: [bold type][if UBLevel is 1]None[else if UBLevel is 2]Normal[else if UBLevel is 3]Full[end if][roman type][line break]";
 		say "(5) [link]Ovi Pregnancy[as]5[end link] - [bold type][if OvipregLevel is 1]Never[else]Normal[end if][roman type][line break]";
 		say "(6) Player character is [if Player is CoA]the [else]NOT the [end if][link]Center of Attention[as]6[end link] of relationships in the library/bunker (disables NPC sexual relations independent of the player character). [roman type][line break]";
 		say "[line break]";
@@ -1093,13 +1104,15 @@ to contentrestrictionmenu:
 				say "Invalid Entry";
 		if calcnumber is 1:
 			if clearnomore is 0, clear the screen;
-			new ban menu; [see MinimalBuild/Lists and Banning.i7x]
+			new ban menu; [see Core Mechanics/Lists and Banning.i7x]
 		else if calcnumber is 2:
-			try analadjusting; [see MinimalBuild/Settings Menus.i7x]
+			try analadjusting; [see Core Mechanics/Settings Menus.i7x]
 		else if calcnumber is 3:
-			try WSadjusting; [see MinimalBuild/Settings Menus.i7x]
+			try WSadjusting; [see Core Mechanics/Settings Menus.i7x]
+		else if calcnumber is 4:
+			try voremenuing; [see Core Mechanics/Settings Menus.i7x]
 		else if calcnumber is 5:
-			try oviadjusting; [see MinimalBuild/Settings Menus.i7x]
+			try oviadjusting; [see Core Mechanics/Settings Menus.i7x]
 		else if calcnumber is 6:
 			if "Center of Attention" is listed in Feats of player:
 				remove "Center of Attention" from Feats of Player;
@@ -1109,8 +1122,10 @@ to contentrestrictionmenu:
 			now contentrestrictionmenuexit is 1;
 
 to say menuwardlist:
-	if FurryList is warded or MaleList is warded or FemaleList is warded or HumorousList is warded or DemonList is warded or HermList is warded or CuckList is warded or IncestList is warded or TransList is warded or MindcontrolList is warded or NonconList is warded:
+	if CockVoreList is warded or FurryList is warded or MaleList is warded or FemaleList is warded or HumorousList is warded or DemonList is warded or HermList is warded or CuckList is warded or IncestList is warded or TransList is warded or MindcontrolList is warded or NonconList is warded or VoreList is warded:
 		say "[bold type]Warded: [bracket] ";
+		if CockVoreList is warded:
+			say "Cockvore ";
 		if FeralList is warded:
 			say "Feral ";
 		if FurryList is warded:
@@ -1135,13 +1150,17 @@ to say menuwardlist:
 			say "Noncon ";
 		if MindcontrolList is warded:
 			say "Mindcontrol ";
+		if VoreList is warded:
+			say "Vore ";
 		say "[close bracket][roman type][line break]";
 	else:
 		say "[bold type]None Warded[roman type][line break]";
 
 to say menubanlist:
-	if FurryList is banned or MaleList is banned or FemaleList is banned or HumorousList is banned or DemonList is banned or HermList is banned or CuckList is banned or IncestList is banned or TransList is banned or MindcontrolList is banned or NonconList is banned:
+	if CockVoreList is banned or FurryList is banned or MaleList is banned or FemaleList is banned or HumorousList is banned or DemonList is banned or HermList is banned or CuckList is banned or IncestList is banned or TransList is banned or MindcontrolList is banned or NonconList is banned or VoreList is banned:
 		say "[bold type]Banned: [bracket] ";
+		if CockVoreList is banned:
+			say "Cockvore ";
 		if FeralList is banned:
 			say "Feral ";
 		if FurryList is banned:
@@ -1166,6 +1185,8 @@ to say menubanlist:
 			say "Noncon ";
 		if MindcontrolList is banned:
 			say "Mindcontrol ";
+		if VoreList is banned:
+			say "Vore ";
 		say "[close bracket][roman type][line break]";
 	else:
 		say "[bold type]None Banned[roman type][line break]";

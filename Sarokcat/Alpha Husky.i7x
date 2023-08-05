@@ -34,28 +34,8 @@ Alphahuskypet is a number that varies.
 losttoalphahusky is a number that varies.
 MtFHuskyAlphaActive is a truth state that varies.[@Tag:NotSaved]
 
-to say Alpha Husky Desc:
-	setmongender 3;
-	project the Figure of HuskyAlpha_soft_icon;
-	if inasituation is true:
-		say ""; [dealt with at the source of the event]
-	else if Player is male and Player is not female and Resolution of MtFHuskyAlpha is 0 and a random chance of 4 in 10 succeeds: [fully male, not herm, 1st time]
-		now MtFHuskyAlphaActive is true;
-		say "[HuskyAlphaMtFdesc1]";
-	else if Resolution of MtFHuskyAlpha > 0 and Resolution of MtFHuskyAlpha < 99 and a random chance of 4 in 10 succeeds: [fully male, not herm, subsequent times]
-		now MtFHuskyAlphaActive is true;
-		say "[HuskyAlphaMtFdesc2]";
-	else if MtFHuskyAlphaActive is true and Resolution of MtFHuskyAlpha is 0:
-		say "[HuskyAlphaMtFdesc1]";
-	else if MtFHuskyAlphaActive is true and Resolution of MtFHuskyAlpha > 0 and Resolution of MtFHuskyAlpha < 99:
-		say "[HuskyAlphaMtFdesc2]"; [These latter 2 were added due to an erratic behavior occurring when the player flees this variant. The MtF Husky will keep on appearing until he is engaged with, so this forces the correct description to show up. Until this temporary variable can be deactivated upon the player 'fleeing' in the basic structure of an encounter outside a situation, this will have to do.]
-	else:
-		say "     You blink in surprise as a large, handsome anthro husky male appears in front of you, his slim canine muzzle drawn back in an amused grin as he looks you over. Returning the examination, you see that he has a handsome coat of lovely fur and a nice, perky tail wagging behind him, as he obviously enjoys what he is looking at. The beast is obviously one of the rare male alphas that take care of and probably made the many slutty husky bitches around the city. [one of]'You look like you will make a fine bitch for me...' [or]'Let's see if you know how to submit to an alpha,' [or]'Another soon-to-be husky bitch for me, I see!' [or]'Hello, my lovely little bitch. Time to get fucked!' [or]'You look like you need a pack to belong to. Let me help you with that...' [or]'It doesn't look like you have embraced your inner slut yet. Here, let me help you with that...' [or]'C'mere, Bitch!' [or]'Let's see now, do you want to do it the hard way, or the doggy style way...' [or]'I can't wait to get my paws on you!' [or]'Time to show you what an alpha can do!' [at random]the horny husky says as he rubs his paws together. His thick, erect canine cock bobs with excitement, and the knot at the base is already starting to swell with anticipation as he strides forward eagerly!";
-
 to say Alpha Husky attack:
-	if inasituation is true:
-		say ""; [dealt with at the source of the event]
-	else if Resolution of MtFHuskyAlpha is 0 and MtFHuskyAlphaActive is true:
+	if Resolution of MtFHuskyAlpha is 0 and MtFHuskyAlphaActive is true:
 		now MtFHuskyAlphaActive is false;
 		project the Figure of HuskyAlpha_hard_icon;
 		say "[HuskyAlphaMtF1]";
@@ -336,13 +316,10 @@ to say alpha pack submissive victory ending:
 to say alpha husky bitch:
 	say "     You surrender to the sensations and take off at a run until the object of your obsession comes into view. That handsome alpha husky is perched on a rock, looking out over the quiet city. He doesn't even see you until you are on him, hugging him from behind. He laughs as he turns about in your arms and gently pries you free of him. His paws rub over your face and through your hair, whispering how good you are for finding him, and how well he will treat you from now on. Your body grows warm and tingly at the words, knowing deep inside that they are true, and that this male will always look out for you. A sudden slap jerks you free of your daze, his paw having slapped you on your [BodySpeciesName of Player in lower case] ass. 'Now, let's get in gear. We need more females for our pack if we're going to rule this city.' You bob your head in agreement, imagining your alpha with a great many bitches. He deserves them, and you will gladly help him get them. But you know that you will always be his most special bitch.";
 
-
 To say Alpha Husky loss:
 	if MtFHuskyAlphaActive is true:
 		now MtFHuskyAlphaActive is false; [to deactivate this variant before going into anything]
-	if inasituation is true:
-		say ""; [dealt with at the source of the event]
-	else if SarahSlut > 3:
+	if SarahSlut > 3:
 		project the Figure of HuskyAlpha_hard_icon;
 		say "     'You're tougher than I thought,' the alpha says as he looks at you speculatively, his nose working as he sniffs around you for a second, before a grin crosses his muzzle. 'And it looks like you already have tamed a bitch or two yourself,' he says with a chuckle, obviously scenting your lusty husky pet's heat-filled odor still clinging to your body. 'If you want, I suppose I could give you a few pointers on being a proper alpha to them, one pack leader to another,' the canine says with a wink, his offer sounding surprisingly helpful as you think of how much fun it would be to be a proper alpha for your little pets back in the bunker...";
 		say "[bold type]Do you take him up on his offer?[roman type][line break]";
@@ -577,6 +554,28 @@ to HuskyAlphaMtF2Female:
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Husky Alpha";
 
 Section 2 - Creature Insertion
+
+to say Alpha Husky Desc:
+	if Player is male and Player is not female and Resolution of MtFHuskyAlpha is 0 and a random chance of 4 in 10 succeeds: [fully male, not herm, 1st time]
+		now MtFHuskyAlphaActive is true;
+		say "[HuskyAlphaMtFdesc1]";
+	else if Resolution of MtFHuskyAlpha > 0 and Resolution of MtFHuskyAlpha < 99 and a random chance of 4 in 10 succeeds: [fully male, not herm, subsequent times]
+		now MtFHuskyAlphaActive is true;
+		say "[HuskyAlphaMtFdesc2]";
+	else if MtFHuskyAlphaActive is true and Resolution of MtFHuskyAlpha is 0:
+		say "[HuskyAlphaMtFdesc1]";
+	else if MtFHuskyAlphaActive is true and Resolution of MtFHuskyAlpha > 0 and Resolution of MtFHuskyAlpha < 99:
+		say "[HuskyAlphaMtFdesc2]"; [These latter 2 were added due to an erratic behavior occurring when the player flees this variant. The MtF Husky will keep on appearing until he is engaged with, so this forces the correct description to show up. Until this temporary variable can be deactivated upon the player 'fleeing' in the basic structure of an encounter outside a situation, this will have to do.]
+	else:
+		say "     You blink in surprise as a large, handsome anthro husky male appears in front of you, his slim canine muzzle drawn back in an amused grin as he looks you over. Returning the examination, you see that he has a handsome coat of lovely fur and a nice, perky tail wagging behind him, as he obviously enjoys what he is looking at. The beast is obviously one of the rare male alphas that take care of and probably made the many slutty husky bitches around the city. [one of]'You look like you will make a fine bitch for me...' [or]'Let's see if you know how to submit to an alpha,' [or]'Another soon-to-be husky bitch for me, I see!' [or]'Hello, my lovely little bitch. Time to get fucked!' [or]'You look like you need a pack to belong to. Let me help you with that...' [or]'It doesn't look like you have embraced your inner slut yet. Here, let me help you with that...' [or]'C'mere, Bitch!' [or]'Let's see now, do you want to do it the hard way, or the doggy style way...' [or]'I can't wait to get my paws on you!' [or]'Time to show you what an alpha can do!' [at random]the horny husky says as he rubs his paws together. His thick, erect canine cock bobs with excitement, and the knot at the base is already starting to swell with anticipation as he strides forward eagerly!";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Husky Alpha"	"[PrepCombat_Husky Alpha]"
+
+to say PrepCombat_Husky Alpha:
+	setmongender 3;
+	project the Figure of HuskyAlpha_soft_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -119,7 +119,7 @@ Trickster	"Trickster"
 
 Trickster is a situation.
 ResolveFunction of Trickster is "[ResolveEvent Trickster]". The level of Trickster is 4.
-wolffight is a number that varies.
+
 when play begins:
 	add Trickster to BadSpots of FurryList;
 	add Trickster to BadSpots of MaleList;
@@ -143,44 +143,45 @@ to say ResolveEvent Trickster:
 		else:
 			decrease HP of Player by 10;
 			say "     You are slammed into by one of the wolves and knocked to the side, taking [special-style-2]10[roman type] damage. You can see as he continues past you that this wolf is the largest of them all and probably the pack alpha. He has large sections of his pelt poorly shaved off, exposing wide patches of pink skin. The bagged fur is sent flying, floating in the air all around the area. You cough and brush it out of your eyes as you get back to your feet in time to see another wolf moving in to attack you.";
-		now wolffight is 3;
-		challenge "Feral Wolf Male";
-		if wolffight is 1:
-			now wolffight is 3;
-			say "     You manage to dispatch one of the wolves and look around, seeing several of the others dealing with the struggling soldiers. Some of the men have already been taken down, but others are still putting up a fight against the lupine pack that's suddenly surrounded them. You try to make your way free and charge a second wolf at the edge of the pack.";
-			challenge "Feral Wolf Male";
-			if wolffight is 1:
-				now wolffight is 3;
+		let WolfFightCounter be 0;
+		now fightoutcome is 0; [reset]
+		while fightoutcome < 20 and WolfFightCounter < 3: [runs for 3 times or until the player loses or flees]
+			if WolfFightCounter is 0:
+				challenge "Feral Wolf Male";
+			else if WolfFightCounter is 1:
+				say "     You manage to dispatch one of the wolves and look around, seeing several of the others dealing with the struggling soldiers. Some of the men have already been taken down, but others are still putting up a fight against the lupine pack that's suddenly surrounded them. You try to make your way free and charge a second wolf at the edge of the pack.";
+				challenge "Feral Wolf Male";
+			else if WolfFightCounter is 2:
 				say "     Having beaten the second wolf, you find yourself at the edge of the fight start to move away. Most of the soldiers are down now, many of them pounced by the wolves. You can see several of the men being face-fucked or buggered by the feral wolf creatures. These soldiers are starting to show signs of transformation, gaining ears, tails, muzzles or fur. Before you can make a break for it, you are spotted by the wolfpack leader. Switching from standing upright onto all fours, the shaved wolf recognizes you as the one with the bag and growls. He leaps across some moaning piles of wolf and man to close on you to fight.";
 				challenge "Alpha Wolf";
-				if wolffight is 1:
-					say "     Having beaten the pack alpha and sent him packing, the wolves['] assault on the few remaining soldiers wavers. With a howl from their leader, they snatch up the fallen, partially transformed soldiers and drag them off into the city. They'll be taking them back to their den to finish mating them until they're fully members of the pack. Too tired from the fight, you and the other soldiers are in no shape to give pursuit. As the last of the wolves are running off, you hear some distant laughter, probably from the coyote trickster who enjoyed the show while it lasted[if Park Entrance is unknown]. You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
-					say "     The remaining soldiers thank you for the assistance. Because of the cloud of wolf fur, nearly all of them have picked up ears or tails, but their humanity is mostly intact thanks to your help. They'll have to scrub their recon mission and return to base. You're told they can't take you with them at this time, but they do give over some of their supplies, as they'll re-equip at the base earlier than planned. They keep their guns and ammo, but one of the few who remained fully unchanged passes you his combat knife with a silent nod. After packing the food and water away and strapping on the knife, you're given another round of thanks before they head off.";
-					ItemGain food by 1;
-					ItemGain water bottle by 1;
-					ItemGain combat knife by 1;
-					increase score by 20;
-					now Resolution of Trickster is 1; [Won against wolves]
-		if wolffight is 3:
-			say "     Deciding to give up on fighting entirely, you push your way free of the wild fight. You hop over one wolf who's mounted one poor soldier and are almost knocked down as your pursuer runs into a soldier getting up. Finding an [']eager volunteer['] for his cock, the wolf drives it into the soldier's mouth and starts pounding away. The wolves get the last of the soldiers as you're turning into an alleyway. You can hear the laughter of what is probably the coyote trickster, amused by the results of [if Diegochanged is 0]his[else]her[end if] prank[if Park Entrance is unknown]. You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
-			infect "Feral Wolf Male";
-			now Resolution of Trickster is 2; [Ran from wolves]
-		if wolffight is 2:
+			increase WolfFightCounter by 1;
+		if fightoutcome < 20: [player won]
+			say "     Having beaten the pack alpha and sent him packing, the wolves['] assault on the few remaining soldiers wavers. With a howl from their leader, they snatch up the fallen, partially transformed soldiers and drag them off into the city. They'll be taking them back to their den to finish mating them until they're fully members of the pack. Too tired from the fight, you and the other soldiers are in no shape to give pursuit. As the last of the wolves are running off, you hear some distant laughter, probably from the coyote trickster who enjoyed the show while it lasted[if Park Entrance is unknown]. You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
+			say "     The remaining soldiers thank you for the assistance. Because of the cloud of wolf fur, nearly all of them have picked up ears or tails, but their humanity is mostly intact thanks to your help. They'll have to scrub their recon mission and return to base. You're told they can't take you with them at this time, but they do give over some of their supplies, as they'll re-equip at the base earlier than planned. They keep their guns and ammo, but one of the few who remained fully unchanged passes you his combat knife with a silent nod. After packing the food and water away and strapping on the knife, you're given another round of thanks before they head off.";
+			ItemGain food by 1;
+			ItemGain water bottle by 1;
+			ItemGain combat knife by 1;
+			increase score by 20;
+			now Resolution of Trickster is 1; [Won against wolves]
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			if Player is female:
-				say "     Before you can get back up, you are mounted by one of the other wolves, moaning loudly as he drives his thick cock into you. He fucks you hard and fast, eager to fill you with cum and pups before moving on to another victim. His wild, feral rutting is a mix of pain and pleasure as that thick cock pumps in and out of your wet hole. 'Mmm... my bitch...' he rumbles softly, and you are surprised to hear one of the feral wolves speak. You respond to his words by pressing your ass back, moaning louder as he pounds into your abused pussy. Your excitement builds, finally peaking when he unleashes his hot, lupine seed into you with a howl[if Player is male]. Your cock throbs and sprays its load onto the pavement as you're stuffed full of creamy wolf cum[end if]. Withdrawing, he licks your cheek and growls softly before pouncing on a soldier, tearing away some partially shredded clothes to uncover a fresh pussy for him to fuck.";
+				say "     Overwhelmed, you collapse to the floor. Before you can get back up, you are mounted by one of the other wolves, moaning loudly as he drives his thick cock into you. He fucks you hard and fast, eager to fill you with cum and pups before moving on to another victim. His wild, feral rutting is a mix of pain and pleasure as that thick cock pumps in and out of your wet hole. 'Mmm... my bitch...' he rumbles softly, and you are surprised to hear one of the feral wolves speak. You respond to his words by pressing your ass back, moaning louder as he pounds into your abused pussy. Your excitement builds, finally peaking when he unleashes his hot, lupine seed into you with a howl[if Player is male]. Your cock throbs and sprays its load onto the pavement as you're stuffed full of creamy wolf cum[end if]. Withdrawing, he licks your cheek and growls softly before pouncing on a soldier, tearing away some partially shredded clothes to uncover a fresh pussy for him to fuck.";
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Wolf Male";
 			else:
-				say "     Before you can get back up, you are pushed down by one of the other wolves. He pushes your clothes aside with his paws, scratching at your back with his claws, then growls and mounts you. You can feel his wet, sticky cock slide against your ass before finding your tight pucker and pushing it open. You moan loudly as he drives his thick cock into you. He fucks you hard and fast, eager to fill you with cum before moving on to another victim. His wild, feral rutting is a mix of pain and pleasure as that thick cock pumps in and out of your tight hole. 'Mmm... my bitch...' he rumbles softly, and you are surprised to hear one of the feral wolves speak. You respond to his words by pressing your ass back, moaning louder as he pounds into your abused asshole, pressing that lupine shaft against your prostate. Your excitement builds, finally peaking when he unleashes his hot, lupine seed into you with a howl. Your cock throbs and sprays its load onto the pavement as you're stuffed full of creamy wolf cum. Withdrawing, he licks your cheek and growls softly before pouncing on a soldier, tearing away some partially shredded clothes to uncover a fresh pussy for him to fuck.";
+				say "     Overwhelmed, you collapse to the floor. Before you can get back up, you are pushed down by one of the other wolves. He pushes your clothes aside with his paws, scratching at your back with his claws, then growls and mounts you. You can feel his wet, sticky cock slide against your ass before finding your tight pucker and pushing it open. You moan loudly as he drives his thick cock into you. He fucks you hard and fast, eager to fill you with cum before moving on to another victim. His wild, feral rutting is a mix of pain and pleasure as that thick cock pumps in and out of your tight hole. 'Mmm... my bitch...' he rumbles softly, and you are surprised to hear one of the feral wolves speak. You respond to his words by pressing your ass back, moaning louder as he pounds into your abused asshole, pressing that lupine shaft against your prostate. Your excitement builds, finally peaking when he unleashes his hot, lupine seed into you with a howl. Your cock throbs and sprays its load onto the pavement as you're stuffed full of creamy wolf cum. Withdrawing, he licks your cheek and growls softly before pouncing on a soldier, tearing away some partially shredded clothes to uncover a fresh pussy for him to fuck.";
 				CreatureSexAftermath "Player" receives "AssFuck" from "Feral Wolf Male";
 			say "     Just as your head is starting to clear, another wolf moves up to you, sticky cock hanging under him. Seizing what may be your only opportunity to escape, you grab a fallen, half-transformed soldier beside you and press his growing muzzle onto the wolf's cock. He latches onto it hungrily and starts licking and sucking. Distracted, the wolf turns his attention on the changing soldier and thrusts into his muzzle. Crawling carefully past a few more distracted wolves, you make it to the edge of the orgy and dash into a nearby building. You rush out the back, having to leave the soldiers to their fate as bitches for a wolf pack - a fate you almost shared. As you run off, over the sounds of mating wolves, you catch the faint laughter of someone, probably the coyote trickster, enjoying the results of [if Diegochanged is 0]his[else]her[end if] prank[if Park Entrance is unknown]. You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
 			now Resolution of Trickster is 3; [Lost to wolves]
 			infect "Feral Wolf Male";
+		else if fightoutcome is 30: [fled]
+			say "     Deciding to give up on fighting entirely, you push your way free of the wild fight. You hop over one wolf who's mounted one poor soldier and are almost knocked down as your pursuer runs into a soldier getting up. Finding an [']eager volunteer['] for his cock, the wolf drives it into the soldier's mouth and starts pounding away. The wolves get the last of the soldiers as you're turning into an alleyway. You can hear the laughter of what is probably the coyote trickster, amused by the results of [if Diegochanged is 0]his[else]her[end if] prank[if Park Entrance is unknown]. You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
+			infect "Feral Wolf Male";
+			now Resolution of Trickster is 2; [Ran from wolves]
 	else:
 		say "     Turning tail before the coyote's trick is set off, you dash into a burned out shop and watch from there. The howls get louder and a pack of wolves come rushing around the corner, right into the soldiers. Several of the soldiers are bowled over as the wolves weren't expecting obstacles. At the head of the pack is a large wolf with large, poorly shaved patches his pelt, showing the pink skin beneath. The bag, sent flying by the collision, flips in the air and opens, spilling out what must be the shaved wolf's fur. Deciding that the soldiers must ultimately be responsible for his shaving, he and the other wolves attack.";
 		say "     The soldiers, unprepared for such an assault, are soon borne down by the powerful wolves and wild rutting ensues. You watch as soldiers are forced to suck wolfcock or are buggered by the angry pack. The humans begin to transform, gaining fur, ears or tails as the lupine infection starts to spread. As some start to gain pussies, these new holes are stuffed full of wolfcock to breed pups in them. When the soldiers succumb enough to stop resisting, they are dragged off by the wolves, probably to their den to finish mating with them until they're fully members of the pack. The remaining wolves start sniffing around the area, spreading out. Worried they'll pick up the trail of your scent you think it best to make your escape. You slip out the back of the store and make a break for it, sure that you could hear some laughing in the distance[if Park Entrance is unknown]. You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
 		increase score by 5;
 		now Resolution of Trickster is 4; [Did not engage wolves]
-	now wolffight is 0;
 	now Trickster is resolved;
 
 [combat knife moved to Core Mechanics/Weapons.i7x]
@@ -545,13 +546,11 @@ PeachTree	"PeachTree"
 PeachTree is a situation.
 ResolveFunction of PeachTree is "[ResolveEvent PeachTree]". The level of PeachTree is 7.
 Sarea of PeachTree is "Park".
-peachtreefight is a number that varies.
 
 when play begins:
 	add PeachTree to BadSpots of HermList;
 
 to say ResolveEvent PeachTree:
-	now peachtreefight is 3;
 	say "     Straying down a disused path, you find yourself approaching a large peach tree. The tree is laden with large, juicy fruit. Your mouth salivates just from the scent coming from it";
 	if HP of Joanna >= 7 and HP of Joanna < 90:		[Joanna's seed]
 		say ". As you start to step towards the tree, intent on having your fill of its fruit, your belly stirs. You stifle a groan as Joanna's seed inside you squirms in an uncomfortable way. Having not felt that reaction from it before, you stop yourself short and realize that you were about to rush up to the tree without pausing to check if it was safe. Now that you look, you can see that the earth around the base of the tree has been disturbed and proper scrutiny of the canopy shows some half-hidden vines.";
@@ -590,13 +589,16 @@ to say ResolveEvent PeachTree:
 			say ".";
 			say "     As you approach the peach tree, your mind is intent only on those delicious, juicy fruit and blind to all else until it is too late. As you reach up to grab some of the peaches, vines whip out from the canopy, wrapping around your wrists and grabbing you tightly. As you struggle against this, another tendril erupts from the soil at the base of the tree, driving itself into your [if Player is female]pussy[else]anus[end if] and swelling to try and lock itself inside you. You groan in a mix of discomfort and pleasure at this unusual intrusion and struggle to break free, but you will be fighting at a disadvantage this time as the plant's taken you by surprise.";
 			decrease HP of Player by HP of Player / 5;
+		say "     This strange plant has spread its vines through the branches of the peach tree and bonded itself to it. You, as many others probably been before, were lured in by the temptation presented by the juicy fruit. The sweet scent of peaches accompanies the dribbling juices that leak from the tips of the vines. The tendril inside you pulses and throbs as those in the tree come down to restrain you so it may complete its tentacular assault upon you. You'll need to break free of the vine locked inside you if you are to escape.";
+		say "[PlantStatBoost]";
 		challenge "Parasitic Plant";
-		if lost is 0:
-			say "     Disentangling yourself from the tendrils in the tree and freed yourself of the vine inside you, you make a quick grab for some of the fruit. You snag a couple of them and then make a run for it as more vines rustle in the canopy.";
+		say "[PlantStatReset]";
+		if fightoutcome < 20: [player won]
+			say "     Disentangling yourself from the tendrils in the tree and freed of the vine inside you, you make a quick grab for some of the fruit. You snag a couple of them and then make a run for it as more vines rustle in the canopy.";
 			ItemGain tasty peach by 3;
 			increase score by 10;
 			now Resolution of PeachTree is 3; [Won against plant]
-		else:
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			infect "Parasitic Plant";
 			say "     Unable to hold out against the vine's actions, you are held by their steely grip as the vines inside you squirm, swell and thrust until its sticky cum is pumped into you. The plant's semen has a distinct peach flavor to it that arouses you greatly, keeping you excited and compliant as the plant fucks and milks you long and hard for your juices. Given the skill the vines display in pleasing you as it gathers your sexual fluids, this plant has had numerous victims drawn in by its peach tree home. Your body is made to give all it can by those tendrils assaulting you in such a strangely arousing manner until finally you collapse to the ground and are released. Weak, you manage to crawl away slowly, your mind a haze of instinctual, sexual thoughts that take some time to clear.";
 			if Player is female:
@@ -606,10 +608,35 @@ to say ResolveEvent PeachTree:
 			CreatureSexAftermath "Player" receives "OralCock" from "Parasitic Plant";
 			now Libido of Player is Libido of Player / 2;
 			SanLoss 10;
-			now Resolution of PeachTree is 4; [Lost to plant]
-	now peachtreefight is 0;
+			now Resolution of PeachTree is 4; [Lost to plant];
+		else if fightoutcome is 30: [fled]
+			say "     Disentangling yourself from the tendrils in the tree and freed of the vine inside you, you make a quick grab for some of the fruit. You snag a couple of them and then make a run for it as more vines rustle in the canopy.";
+			ItemGain tasty peach by 3;
+			increase score by 10;
+			now Resolution of PeachTree is 3; [Won against plant]
 	now PeachTree is resolved;
 
+to say PlantStatBoost:
+	[stronger plant enemy in this event]
+	choose row with name of "Parasitic Plant" from the Table of Random Critters;
+	let debit be 0;
+	if HardMode is true and level of Player > 7, let debit be level of Player - 7;
+	now dex entry is 16 + ( debit + 2 / 5 );
+	now HP entry is 60 + ( debit * 5 );
+	now monsterHP is 60 + ( debit * 5 );
+	now lev entry is 7 + debit;
+	now wdam entry is 7 + ( ( 2 * debit ) / 5 );
+
+to say PlantStatReset:
+	[reset the plant to default values]
+	choose row with name of "Parasitic Plant" from the Table of Random Critters;
+	let debit be 0;
+	if HardMode is true and level of Player > 4, let debit be level of Player - 4;
+	now dex entry is 16 + ( ( debit + 4 ) / 5 );
+	now HP entry is 40 + ( debit * 4 );
+	now monsterHP is 40 + ( debit * 4 );
+	now lev entry is 4 + debit;
+	now wdam entry is 6 + ( debit / 3 );
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -850,26 +877,28 @@ when play begins:
 to say ResolveEvent Beach Party:
 	say "     Traveling along the beach, you crest a small dune to find a group of bright pink, dolphin girls splashing around in the water. They seem to be throwing a [if daytimer is day]sunny[else]nighttime[end if] beach party for themselves, giggling and playing around a large dolphin pooltoy. One runs over to a small cooler and pulls out a can of soda. After shaking it up, she sprays it wildly across her friend's body, causing her to squeak and laugh as she tries to block the foamy spray[if thirst of Player > 30]. Feeling rather thirsty yourself, you find it disappointing they'd waste a drink like that[end if]. As the foam slides down her body, you notice that something is odd about their appearance. In the [if daytimer is day]sunlight, you can see that the dark cola running down her back can be seen through her[else]moonlight, you can see the foam cola running smoothly down her body[end if]. These dolphin girls are inflatable creatures and completely empty save for air.";
 	say "     It is at this point that you are spotted. And, eager for more fun, the dolphin girl on the beach tosses down the empty can and bounds her way towards you with a vapid smile on her face.";
-	now dolphinflatablefight is 3;
-	challenge "Bottlenose Toy";
-	if dolphinflatablefight is 1:
-		say "     With the first dolphin girl sent back to the water, she giggles and gets in a splashing fight with her friend who got the soda treatment to help clean her off. As this goes on, another of the dolphin girls prances out of the water with loud giggles to play with you as well.";
-		now dolphinflatablefight is 3;
-		challenge "Bottlenose Toy";
-		if dolphinflatablefight is 1:
+	let DolphinInflatableFightCounter be 0;
+	now fightoutcome is 0; [reset]
+	now dolphinmode is 1; [dolphin girl mode]
+	while fightoutcome < 20 and DolphinInflatableFightCounter < 4: [runs for 4 times or until the player loses or flees]
+		if DolphinInflatableFightCounter is 1:
+			say "     With the first dolphin girl sent back to the water, she giggles and gets in a splashing fight with her friend who got the soda treatment to help clean her off. As this goes on, another of the dolphin girls prances out of the water with loud giggles to play with you as well.";
+		else if DolphinInflatableFightCounter is 2:
 			say "     As the second is returning to the water, the one you believe was sprayed with the soda comes towards you. You don't really know how you can tell the identical dolphin girls apart, but you're fairly certain it's her coming towards you with a big smile on her bottlenose snout.";
-			now dolphinflatablefight is 3;
-			challenge "Bottlenose Toy";
-			if dolphinflatablefight is 1:
-				say "     As she prances back into the water, the girls giggle and whisper amongst themselves. They grab onto the dolphin pooltoy floating in the water around them and together toss it towards you. It floats lazily in the air, drifting all the way up the dune to land near your feet.";
-				now dolphinflatablefight is 4;
-				challenge "Bottlenose Toy";
-				if dolphinflatablefight is 1:
-					say "     With the green dolphin sent back into the water, the girls start playing around with it. Some start fingering themselves and each other, rather worked after their amusement with you. With them distracted, you decide to avail yourself of the remaining contents of their cooler, taking the last two cans before heading on your way, the sounds of their playing fading behind you as you go past a pile of rocks.";
-					ItemGain soda by 2;
-					increase score by 10;
-					now Resolution of Beach Party is 1; [Beat Bottlenose Toys and got soda]
-	if dolphinflatablefight is 2:
+		else if DolphinInflatableFightCounter is 3:
+			say "     As she prances back into the water, the girls giggle and whisper amongst themselves. They grab onto the dolphin pooltoy floating in the water around them and together toss it towards you. It floats lazily in the air, drifting all the way up the dune to land near your feet.";
+			now dolphinmode is 2; [feral dolphin toy]
+		challenge "Bottlenose Toy";
+		increase DolphinInflatableFightCounter by 1;
+	now dolphinmode is 0; [reset]
+	if fightoutcome < 20: [player won]
+		say "[beatthedolphinflatable]";
+		say "     With the green dolphin sent back into the water, the girls start playing around with it. Some start fingering themselves and each other, rather worked after their amusement with you. With them distracted, you decide to avail yourself of the remaining contents of their cooler, taking the last two cans before heading on your way, the sounds of their playing fading behind you as you go past a pile of rocks.";
+		ItemGain soda by 2;
+		increase score by 10;
+		now Resolution of Beach Party is 1; [Beat Bottlenose Toys and got soda]
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "[losetodolphinflatable]";
 		say "     Even as the dolphin who just finished playing with you heads back to the water, several of the others are all on you at once. One has the last of the sodas. But rather than give you a drink, she sprays both cans all over you, wasting their contents while the girls giggle merrily. The dolphins all huddle around you and start licking all over your body to clean the sweet soda from you. Their rubber tongues glide across your skin and seek to tease you all over. Two set to work on your nipples[if Breast Size of Player > 0], squeezing your breasts[end if]. Others kiss and lick at your face and nibble at your ears. Another, the soda girl, nuzzles her snout down between your legs, licking and kissing at your groin. Her tongue plays over your [if Player is male]sticky, throbbing [Cock of Player] cock[smn][else if Player is female]sticky, juicy puss[yfn][else]sticky thighs and barren crotch[end if]. Another enterprising girl, after sucking your fingers clean one by one, guides your hand to her groin, getting you to finger her dripping pussy until you feel her slick juices soak your hand as she cums with delighted trills. All this attention makes you laugh and giggle like a girl, sounding a lot like the inflatable females surrounding you. [if Player is neuter]Once you're finally all cleaned up[else]When you finally cum[end if], the pink dolphins release you, heading back to frolic in the water again.";
 		say "     Having the air-headed dolphin girls lavish so much attention onto you, you can't help but feel yourself fading away some, as if you're becoming more empty-headed and giggly like them. You rise to your feet easily, feeling as if buoyed by your own happy feelings and look over your body, fully that of an inflatable dolphin like those pretty girls";
 		SanLoss 20;
@@ -894,10 +923,9 @@ to say ResolveEvent Beach Party:
 		else:
 			say ". You manage to keep your mind together enough to leave the dolphin girls and with their large dolphin toy to continue their partying. As you walk back along the beach, you can hear a few cries of disappointment, but the giggling and playing starts up again moments afterwards. You're quite sure they won't pursue you, but you decide to head back and wait for them to finish their beach party before passing this way again.";
 			now Resolution of Beach Party is 2; [Lost to Bottlenose Toys]
-	if dolphinflatablefight is 3 or dolphinflatablefight is 4:
+	else if fightoutcome is 30: [fled]	
 		say "     You manage to make a break for it, running away from the waterfront. You can hear a few cries of disappointment, but the giggling and playing starts up moments afterwards. You're sure they won't pursue you, but you decide to head back and wait for them to finish their beach party before passing this way again.";
 		now Resolution of Beach Party is 3; [Ran from Bottlenose Toys]
-
 
 Section 7 - Mall Events
 

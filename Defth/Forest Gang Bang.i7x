@@ -16,7 +16,6 @@ When play begins:
 to say ResolveEvent Pack Bang:
 	say "     Going around what appears to be a darker path in the south part of the forest, you find a place that looks abandoned. Leaves crack under your feet, and branches that have overgrown onto the path get in your way. The only sign that something was here is the path in itself that's big enough for walks or bicycles. It looks really peaceful, but the noises in the background means that you are not alone in here. Howls permeate the place, echoing in the dark part where your eyes can't discern, but you know that you are now likely the prey of a pack of wolves.";
 	now inasituation is true;
-	now FeralWolfSpecialFightNumber is 1; [pack members]
 	say "     You feel your heart beating faster. Quick, you need to make a choice: Do you run away, or stay and confront your enemies?";
 	say "     ([link]Y[as]y[end link]) - Run away.";
 	say "     ([link]N[as]n[end link]) - Stay and fight.";
@@ -24,7 +23,6 @@ to say ResolveEvent Pack Bang:
 		LineBreak;
 		say "     You turn tail and run as fast as you can, but the wolves notice and hunt you down. Your muscles burn and scream as branches hit your face, making small cuts on it, but you don't dare to slow down. Your hunters are left behind except for one, probably the leader of the pack. He stays close to you, his bestial stamina gaining on you, and a root in your way gives him the chance he needs to catch you, tackling you as you stumble over it. Sprawled on the ground, the wolf overtakes you easily and positions himself in the direction you had been running into, intent on driving you back towards his pack. You will need to deal with him quick, or the rest of them will catch up.";
 		wait for any key;
-		now FeralWolfSpecialFightNumber is 2; [fighting the pack leader]
 		challenge "Feral Wolf Male";
 		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 			say "     You are thrown to the ground by the pack-leader, defeated. Your only chance of escaping is now gone. You can hear the others closing in on you two. Looks like they will have a nice prey.";
@@ -39,46 +37,24 @@ to say ResolveEvent Pack Bang:
 	else:
 		LineBreak;
 		say "     You turn around, facing the pack of wolves that were hunting you. There are probably five feral wolves in different stages of the infection, with some looking almost like true wolves, while the smallest one still has some ripped clothes attached to his body as well as what looks like a normal teenager hairstyle. But they all look hungry, with their red cocks pointing out of their sheaths and right at you, almost as if saying they are going to use you for release, if you want it or not.";
-		wait for any key;
-		challenge "Feral Wolf Male";
-		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
+		let FeralWolfFightCounter be 0;
+		now fightoutcome is 0; [reset]
+		while fightoutcome < 20 and FeralWolfFightCounter < 5: [runs for 3 times or until the player loses or flees]
+			if FeralWolfFightCounter < 4:
+				say "     A member of the wolf-pack steps forward, growling as he closes up to you. He is a feral-looking wolf on four feet, almost three quarters your height, with great muscles under dense black fur. He has dark [one of]red[or]yellow[or]blue[at random] eyes and white, sharp, canine teeth. His legs are thick and powerful looking, his whole form obviously built for hunting fast prey. His fur is matted with grime, muck, and some other substance, giving him a very rugged look. As his pack's chosen prey, the beast doesn't hesitate one second before he pounces on you, lips peeled back to expose his dangerous teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], a look of feral rage in his eyes.";
+			else: [pack leader]
+				say "     Finally the last member steps forward, growling as he closes up to you. He looks bigger than the other ones, almost a third of your height, with great muscles under dense white fur. He has icy blue eyes and white, sharp, canine teeth. His legs are thick and powerful looking, his whole form obviously built for hunting fast prey. His fur is almost as dark as coal, and it doesn't shine, almost as if absorbing all the light around him. As his pack's last standing predator, the beast doesn't hesitate one second before he pounces on you, lips peeled back to expose his dangerous teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], a look of feral rage in his eyes.";
+			challenge "Feral Wolf Male";
+			increase FeralWolfFightCounter by 1;
+		if fightoutcome < 20: [player won]
+			say "     As you beat the pack leader, the rest of the bedraggled pack breaks, fleeing into the forest. A moment later, you are left behind, standing over the dazed wolf.";
+			say "[FeralWolfVictorySex]"; [No need for a prompt, as there's already a prompt where this is defined]
+			now Resolution of Pack Bang is 4; [won against the whole pack]
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "[FeralWolfGangBang]";
-		else if fightoutcome >= 30: [fled]
+		else if fightoutcome is 30: [fled]
 			say "You finally run away from the wolves, leaving this part of the forest for good this time.";
 			now Resolution of Pack Bang is 2; [fled]
-		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-			challenge "Feral Wolf Male";
-			if fightoutcome >= 20 and fightoutcome <= 29: [lost]
-				say "[FeralWolfGangBang]";
-			else if fightoutcome >= 30: [fled]
-				say "You finally run away from the wolves, leaving this part of the forest for good this time.";
-				now Resolution of Pack Bang is 2; [fled]
-			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-				challenge "Feral Wolf Male";
-				if fightoutcome >= 20 and fightoutcome <= 29: [lost]
-					say "[FeralWolfGangBang]";
-				else if fightoutcome >= 30: [fled]
-					say "You finally run away from the wolves, leaving this part of the forest for good this time.";
-					now Resolution of Pack Bang is 2; [fled]
-				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-					challenge "Feral Wolf Male";
-					if fightoutcome >= 20 and fightoutcome <= 29: [lost]
-						say "[FeralWolfGangBang]";
-					else if fightoutcome >= 30: [fled]
-						say "You finally run away from the wolves, leaving this part of the forest for good this time.";
-						now Resolution of Pack Bang is 2; [fled]
-					else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-						now FeralWolfSpecialFightNumber is 2; [fighting the pack leader]
-						challenge "Feral Wolf Male";
-						if fightoutcome >= 20 and fightoutcome <= 29: [lost]
-							say "[FeralWolfGangBang]";
-						else if fightoutcome >= 30: [fled]
-							say "You finally run away from the wolves, leaving this part of the forest for good this time.";
-							now Resolution of Pack Bang is 2; [fled]
-						else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-							say "     As you beat the pack leader, the rest of the bedraggled pack breaks, fleeing into the forest. A moment later, you are left behind, standing over the dazed wolf.";
-							say "[FeralWolfVictorySex]"; [No need for a prompt, as there's already a prompt where this is defined]
-							now Resolution of Pack Bang is 4; [won against the whole pack]
 		wait for any key;
 	now Pack bang is resolved;
 	now inasituation is false; [re-enables standard scenes]

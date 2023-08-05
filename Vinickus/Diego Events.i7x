@@ -12,7 +12,6 @@ Trickster	"Trickster"
 Trickster is a situation.
 ResolveFunction of Trickster is "[ResolveEvent Trickster]". The level of Trickster is 4.
 Sarea of Trickster is "Outside".
-wolffight is a number that varies.
 when play begins:
 	add Trickster to BadSpots of FurryList;
 	add Trickster to BadSpots of MaleList;
@@ -71,7 +70,6 @@ to say ResolveEvent Trickster:
 		say "     The soldiers, unprepared for such an assault, are soon borne down by the powerful wolves and wild rutting ensues. You watch as soldiers are forced to suck wolfcock or are buggered by the angry pack. The humans begin to transform, gaining fur, ears or tails as the lupine infection starts to spread. As some start to gain pussies, these new holes are stuffed full of wolfcock to breed pups in them. When the soldiers succumb enough to stop resisting, they are dragged off by the wolves, probably to their den to finish mating with them until they're fully members of the pack. The remaining wolves start sniffing around the area, spreading out. Worried they'll pick up the trail of your scent you think it best to make your escape. You slip out the back of the store and make a break for it, sure that you could hear some laughing in the distance[if Park Entrance is unknown]. You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
 		increase score by 5;
 		now Resolution of Trickster is 4; [Did not engage wolves]
-	now wolffight is 0;
 	now Trickster is resolved;
 
 to TricksterFeralWolfLoss:

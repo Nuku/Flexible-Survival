@@ -54,6 +54,25 @@ to say beattheCumGirl:
 	if cumgirlfed < 0, now cumgirlfed is 0;
 
 to say CumGirldesc:
+	let cumgrowth be cumgirlfed / 5;
+	if cumgrowth > 10, now cumgrowth is 10;
+	say "     Before you is a creature that appears, at a glance, to be a pale-looking female human, but as she steps out of the shadows you quickly realize something is very wrong. Her entire form is slick and white, her flesh seeming to run slightly as she moves, as if reshaping itself with each motion. However, the most disturbing feature is the creature's face. While vaguely human in shape, it is almost mannequin like, devoid of any features other than her expressionless mouth and the flat, empty depressions where her eyes should be.";
+	if cumgirlfed is -1:
+		say "     The overwhelming smell of sex hits you as the creature gets within striking distance, and you realize this sickening creature appears to be made entirely of animate cum and other bodily fluids.";
+		now cumgirlfed is 0;
+	else if cumgrowth > 5:
+		say "     Having fed off you many times, the disturbing creature before you is now frighteningly large, her large, slimy mass seeming to have trouble supporting itself as the hungry cum girl shuffles forward.";
+	else if cumgrowth > 3:
+		say "     Having fed off you several times before, the cum girl is now slightly larger than the first time you encountered her, with added bulk in her [one of]breast[or]thigh[at random]s and [one of]ass[or]belly[or]hips[at random] that jiggles enticingly as she moves forward.";
+	else:
+		say "     The overwhelming smell of sex hits you again as the cum girl steps forward, licking her lips slowly as she approaches.";
+
+	
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Cum Girl"	"[PrepCombat_Cum Girl]"
+
+to say PrepCombat_Cum Girl:
 	setmongender 4; [creature is female]
 	choose row MonsterID from the Table of Random Critters;
 	let cumgrowth be cumgirlfed / 5;
@@ -73,17 +92,6 @@ to say CumGirldesc:
 		increase dex entry by cumgrowth;
 		increase wdam entry by ( ( cumgrowth + 1 ) / 2 );
 	now monsterHP is HP entry;
-	say "     Before you is a creature that appears, at a glance, to be a pale-looking female human, but as she steps out of the shadows you quickly realize something is very wrong. Her entire form is slick and white, her flesh seeming to run slightly as she moves, as if reshaping itself with each motion. However, the most disturbing feature is the creature's face. While vaguely human in shape, it is almost mannequin like, devoid of any features other than her expressionless mouth and the flat, empty depressions where her eyes should be.";
-	if cumgirlfed is -1:
-		say "     The overwhelming smell of sex hits you as the creature gets within striking distance, and you realize this sickening creature appears to be made entirely of animate cum and other bodily fluids.";
-		now cumgirlfed is 0;
-	else if cumgrowth > 5:
-		say "     Having fed off you many times, the disturbing creature before you is now frighteningly large, her large, slimy mass seeming to have trouble supporting itself as the hungry cum girl shuffles forward.";
-	else if cumgrowth > 3:
-		say "     Having fed off you several times before, the cum girl is now slightly larger than the first time you encountered her, with added bulk in her [one of]breast[or]thigh[at random]s and [one of]ass[or]belly[or]hips[at random] that jiggles enticingly as she moves forward.";
-	else:
-		say "     The overwhelming smell of sex hits you again as the cum girl steps forward, licking her lips slowly as she approaches.";
-
 
 Section 2 - Creature Insertion
 

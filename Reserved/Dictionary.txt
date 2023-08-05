@@ -675,7 +675,6 @@
 |Stripes|Wereraptor|wrcock|value|
 |Stripes|Wereraptor|wrcurseholdback|value|
 |Stripes|Wereraptor|grhouse|value|
-|Stripes|Wereraptor|wrknifefight|value|
 |Stripes|Wereraptor|wrdinoskel|value|
 |Nuku Valente|Pets|20140908213124/756:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Pets|Pet|kind|
@@ -1032,7 +1031,6 @@
 |Stripes|Hospital|dnfightresult|value|
 |Stripes|Hospital|valhosp|value|
 |Stripes|Hospital|lavalamplick|value|
-|Stripes|Hospital|lbfight|value|
 |Stripes|Hospital|longboatfind|value|
 |Stripes|Hospital|progress|property|
 |Stripes|Equinoid Camp|20140908213124/4492:Mon 8 September 2014 21:31|indexing|
@@ -1242,30 +1240,6 @@
 |Kaleem Mcintyre|Apartment 319|20140908213124/7053:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Apartment 319|Apartment 319|situation|
 |Kaleem Mcintyre|Apartment 319|AptAid|value|
-|Kaleem Mcintyre|Reservoir|20140908213124/8279:Mon 8 September 2014 21:31|indexing|
-|Kaleem Mcintyre|Reservoir|Reservoir|room|
-|Kaleem Mcintyre|Reservoir|Reservoir Main Pathway|room|
-|Kaleem Mcintyre|Reservoir|Reservoir Main Pathway entry|door|
-|Kaleem Mcintyre|Reservoir|For Purity's Sake|situation|
-|Kaleem Mcintyre|Reservoir|Technical Assistance|situation|
-|Kaleem Mcintyre|Reservoir|Slightly Sidetracked|situation|
-|Kaleem Mcintyre|Reservoir|Flight of stairs|situation|
-|Kaleem Mcintyre|Reservoir|ThreeDoors|situation|
-|Kaleem Mcintyre|Reservoir|beast of the tainted waters|situation|
-|Kaleem Mcintyre|Reservoir|Fight to remember|situation|
-|Kaleem Mcintyre|Reservoir|PassionAfterTheBattle|situation|
-|Kaleem Mcintyre|Reservoir|Sanctuary|situation|
-|Kaleem Mcintyre|Reservoir|icicle knives|armament|
-|Kaleem Mcintyre|Reservoir|Resevquest|value|
-|Kaleem Mcintyre|Reservoir|bloblost|value|
-|Kaleem Mcintyre|Reservoir|waterworks|value|
-|Kaleem Mcintyre|Reservoir|bookfind|value|
-|Kaleem Mcintyre|Reservoir|ldoor|value|
-|Kaleem Mcintyre|Reservoir|rdoor|value|
-|Kaleem Mcintyre|Reservoir|doorsearch|value|
-|Kaleem Mcintyre|Reservoir|descriptionmessage|value|
-|Kaleem Mcintyre|Reservoir|lastResevoirfix|value|
-|Kaleem Mcintyre|Reservoir|oozing|value|
 |Kaleem Mcintyre|Misc 4|20140908213124/5746:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Misc 4|Anal Probing|situation|
 |Kaleem Mcintyre|Misc 4|Birth|situation|
@@ -1292,7 +1266,6 @@
 |Stripes|CandyShop|20140908213124/8329:Mon 8 September 2014 21:31|indexing|
 |Stripes|CandyShop|CandyShop|situation|
 |Stripes|CandyShop|Sweet Tooth|room|
-|Stripes|CandyShop|sugarferretfight|value|
 |Stripes|CandyShop|randomferret|value|
 |Stripes|CandyShop|ferretvisit|value|
 |Stripes|CandyShop|sugarfaced|adjective|
@@ -1326,7 +1299,6 @@
 |Stripes|Bouncy Castle|vixcountdown|value|
 |Stripes|Bouncy Castle|dolphinbundle|value|
 |Stripes|Bouncy Castle|dolphinlist|value|
-|Stripes|Bouncy Castle|dolcastlefight|value|
 |Stripes|Bouncy Castle|rowing|value|
 |Stripes|Bouncy Castle|bcswordplay|value|
 |Stripes|Bouncy Castle|bcseenplayroom|value|
@@ -1339,8 +1311,6 @@
 |Stripes|Bouncy Castle|lastorcasex|value|
 |Stripes|Bouncy Castle|lastbcchair|value|
 |Stripes|Bouncy Castle|lastbcduobeaten|value|
-|Stripes|Bouncy Castle|bcduofightlost|value|
-|Stripes|Bouncy Castle|bcduofightfled|value|
 |Stripes|Bouncy Castle|bcseenthroneroom|value|
 |Stripes|Bouncy Castle|bcseenpunchingpillars|value|
 |Stripes|Bouncy Castle|primarycolorlist|value|
@@ -1372,7 +1342,6 @@
 |Stripes|High Rise Events|restaurantpig|value|
 |Stripes|High Rise Events|doggyness|value|
 |Stripes|High Rise Events|kittyness|value|
-|Stripes|High Rise Events|choclabfight|value|
 |Stripes|Hyena Bikers|20140908213124/16202:Mon 8 September 2014 21:31|indexing|
 |Stripes|Hyena Bikers|Hyena Bikers|situation|
 |Stripes|Hyena Bikers|tire iron|armament|
@@ -1419,14 +1388,12 @@
 |Stripes|Dry Plains Events|Pit Trap|situation|
 |Stripes|Dry Plains Events|Watering Hole|situation|
 |Stripes|Dry Plains Events|Treasure Hunters|situation|
-|Stripes|Dry Plains Events|horsefight|value|
 |Stripes|Junkyard Events|20140908213124/2561:Mon 8 September 2014 21:31|indexing|
 |Stripes|Junkyard Events|Goblin Trap|situation|
 |Stripes|Junkyard Events|Raiding Party|situation|
 |Stripes|Junkyard Events|Stripped Car|situation|
 |Stripes|Junkyard Events|Scattered Trash|situation|
 |Stripes|Junkyard Events|Stray Cat|situation|
-|Stripes|Junkyard Events|goblinfight|value|
 |Stripes|Junkyard Events|junknum|value|
 |Stripes|Campus Events|20140908213124/3524:Mon 8 September 2014 21:31|indexing|
 |Stripes|Campus Events|Marching Band|situation|
@@ -1435,7 +1402,6 @@
 |Stripes|Campus Events|Wandering the Campus|situation|
 |Stripes|Campus Events|Anime Club|situation|
 |Stripes|Campus Events|campuswander|value|
-|Stripes|Campus Events|campuswanderfight|value|
 |Stripes|Campus Events|animeclubfight|value|
 |Stripes|Leonard Events|20140908213124/27478:Mon 8 September 2014 21:31|indexing|
 |Stripes|Leonard Events|PridePark|situation|
@@ -1618,11 +1584,9 @@
 |Stripes|Assorted Events|My Own Zoo Playset|situation|
 |Stripes|Assorted Events|Destroyed Records|situation|
 |Stripes|Assorted Events|snowmeowfight|value|
-|Stripes|Assorted Events|wolffight|value|
 |Stripes|Assorted Events|prankevent|value|
 |Stripes|Assorted Events|loversbench|value|
 |Stripes|Assorted Events|lbcomplist|value|
-|Stripes|Assorted Events|peachtreefight|value|
 |Stripes|Assorted Events|foodvendor|value|
 |Nuku Valente|Food And Water Finding|20140908213124/2241:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Food And Water Finding|Potential Resources|scavevent|
@@ -1647,7 +1611,6 @@
 |Stripes|Scavevents|tightfitcount|value|
 |Stripes|Scavevents|dentedbikecount|value|
 |Stripes|Scavevents|supermarketcount|value|
-|Stripes|Scavevents|veggiegardenfight|value|
 |Stripes|Scavevents|gardenveg|value|
 |Stripes|Scavevents|lastgardenveg|value|
 |Stripes|Scavevents|patrooms|value|
@@ -1714,8 +1677,6 @@
 |Stripes|Central Library|Wild Animals|Grab Object|
 |Stripes|Central Library|First Aid Manual|Grab Object|
 |Stripes|Central Library|centrallib|value|
-|Stripes|Central Library|libfight|value|
-|Stripes|Central Library|harpyfight|value|
 |Stripes|Central Library|jamesfed|value|
 |Stripes|Central Library|jamessex|value|
 |Stripes|Central Library|libstealth|value|
@@ -1935,7 +1896,6 @@
 |Damaged|Skunk|Skunk Goo|Grab Object|
 |Damaged|Skunk|skunkready|value|
 |Damaged|Skunk|Skunk_type|value|
-|Damaged|Skunk|skunkfight|value|
 |Stripes|Skunkbeast Lord|20140908213124/14395:Mon 8 September 2014 21:31|indexing|
 |Stripes|Skunkbeast Lord|Skunkbeast Battle|situation|
 |Stripes|Skunkbeast Lord|skunkbeaststatus|value|
@@ -1975,7 +1935,6 @@
 |Stripes|Tigress Hooker|tigressfucked|value|
 |Stripes|Tigress Hooker|tigressclient|value|
 |Stripes|Tigress Hooker|stiffedpayment|value|
-|Stripes|Tigress Hooker|mqfightresult|value|
 |Xeylef|Parasitic Plant|20140908213124/10223:Mon 8 September 2014 21:31|indexing|
 |Xeylef|Parasitic Plant|Musky Cock Flower|Grab Object|
 |Xeylef|Parasitic Plant|didsubmit|value|
@@ -2005,7 +1964,6 @@
 |Stripes|Jaguar Orderly|libsuppcount|value|
 |Stripes|Wolverine Guard|20140908213124/3720:Mon 8 September 2014 21:31|indexing|
 |Stripes|Wolverine Guard|wolvloc|value|
-|Stripes|Wolverine Guard|wolvfightresult|value|
 |Batroo|Kangaroo|20140908213124/2328:Mon 8 September 2014 21:31|indexing|
 |Batroo|Kangaroo|kangaroodefeat|value|
 |Batroo|Kangaroo|rkrcheck|value|
@@ -2032,7 +1990,6 @@
 |Tentacle Specialist|Spidergirl|spider webbing|Grab Object|
 |Stripes|Bottlenose Toy|20140908213124/12139:Mon 8 September 2014 21:31|indexing|
 |Stripes|Bottlenose Toy|dolphinmode|value|
-|Stripes|Bottlenose Toy|dolphinflatablefight|value|
 |Stripes|Bottlenose Toy|dolinfloss|value|
 |Nuku Valente|Otter|20140908213124/4232:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Otter|Tasty Fish|Grab Object|
@@ -2091,7 +2048,6 @@
 |Sarokcat|Rubber Tigress|Tiger patch|Grab Object|
 |Stripes|Vulpogryph|20140908213124/899:Mon 8 September 2014 21:31|indexing|
 |Stripes|Cerberus|20140908213124/7809:Mon 8 September 2014 21:31|indexing|
-|Stripes|Cerberus|cerbfight|value|
 |Stripes|Cerberus|cerberusarousal|value|
 |Stripes|Cerberus|cerbmaulcount|value|
 |Sarokcat|Cheetah|20140908213124/6013:Mon 8 September 2014 21:31|indexing|
@@ -2147,7 +2103,6 @@
 |Wahn|Orc Infections|20140908213124/7866:Mon 8 September 2014 21:31|indexing|
 |Wahn|Orc Infections|orc brew|Grab Object|
 |Wahn|Orc Infections|orc cum|Grab Object|
-|Wahn|Orc Infections|OrcSpecialFightNumber|value|
 |Wahn|Orc Infections|OrcCocked|adjective|
 |Stripes|Tiger Cop|20140908213124/14702:Mon 8 September 2014 21:31|indexing|
 |Stripes|Tiger Cop|Policeman|situation|
@@ -2506,8 +2461,6 @@
 |Stripes|Piggy|20140908213124/829:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Elf|20140908213124/3820:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Elf|ElfEncounters|value|
-|Stripes|Cougar|20140908213124/2269:Mon 8 September 2014 21:31|indexing|
-|Stripes|Cougar|cougarfight|value|
 |Stripes|Megakitty|20140908213124/3167:Mon 8 September 2014 21:31|indexing|
 |Stripes|Megakitty|MKunleashed|value|
 |Stripes|Megakitty|MKmet|value|
@@ -2540,7 +2493,6 @@
 |Stripes|Trash Coon|notrashcoonsex|value|
 |Stripes|Snow Bat|20140908213124/5907:Mon 8 September 2014 21:31|indexing|
 |Stripes|Snow Bat|nightcheck|value|
-|Stripes|Snow Bat|snowbatfight|value|
 |Stripes|Psycho Weasel|20140908213124/4353:Mon 8 September 2014 21:31|indexing|
 |Stripes|Psycho Weasel|weaselcount|value|
 |Stripes|Psycho Weasel|weaselcolor|value|
@@ -2689,7 +2641,6 @@
 |Ursaomega|Feral Gryphon|20140908213124/2633:Mon 8 September 2014 21:31|indexing|
 |Ursaomega|Shadow Beast|20140908213124/5601:Mon 8 September 2014 21:31|indexing|
 |Ursaomega|Shadow Beast|Hunted Survivor|situation|
-|Ursaomega|Shadow Beast|ShadowBeastEventState|value|
 |Xenophiliac|Hermaid|20140908213124/6758:Mon 8 September 2014 21:31|indexing|
 |Xenophiliac|Hermaid|hermaid kelp|Grab Object|
 |Xenophiliac|Hermaid|HermaidSub|value|
@@ -2816,7 +2767,6 @@
 |Stripes|Rodandronda|lizard juice|Grab Object|
 |Stripes|Rodandronda|Art Collector|situation|
 |Stripes|Rodandronda|artattempt|value|
-|Stripes|Rodandronda|rondafight|value|
 |Stripes|Lucy|20140908213124/7827:Mon 8 September 2014 21:31|indexing|
 |Stripes|Lucy|Lucy|woman|
 |Stripes|Lucy|Memories of the Mall|situation|
@@ -3286,7 +3236,6 @@
 |Stripes|Leonard|violinfound|value|
 |Stripes|Leonard|Leonardtimer|value|
 |Stripes|Leonard|feline_pride_defeat|value|
-|Stripes|Leonard|violinspritefight|value|
 |Stripes|Leonard|felinefaced|adjective|
 |Stripes|Leonard|felineskinned|adjective|
 |Stripes|Leonard|felinebodied|adjective|
@@ -3312,7 +3261,6 @@
 |Stripes|Sam|Mini-Lab|room|
 |Stripes|Sam|Sam|man|
 |Stripes|Sam|samformtalk|value|
-|Stripes|Sam|minilabfight|value|
 |Stripes|Sam|featherready|value|
 |Stripes|Sam|monstermemory|value|
 |Stripes|Mack|20140908213124/8222:Mon 8 September 2014 21:31|indexing|
