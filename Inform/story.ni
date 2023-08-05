@@ -942,6 +942,7 @@ Include Pretty Kitty by Xenophiliac.
 Include Ranae by Kurainyx.
 Include Randall and Brad by Rikaeus.
 Include Rane by Wahn.
+Include Raymond by Voidsnaps.
 Include Reece by Luneth.
 Include RexxyEvent by Prometheus.
 Include Richard by Wahn.
