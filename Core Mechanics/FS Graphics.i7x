@@ -381,6 +381,10 @@ Figure of Danny_face_icon is the file "Danny_face.jpg".
 Figure of Darius_face_icon is the file "Darius_face.jpg".
 Figure of Darius_clothed_icon is the file "Darius_clothed.jpg".
 Figure of Darius_hard_icon is the file "Darius_hard.jpg".
+Figure of Darius_blissed_clothed_icon is the file "Darius_blissed_clothed.jpg".
+Figure of Darius_blissed_naked_icon is the file "Darius_blissed_naked.jpg".
+Figure of Darius_blissed_hard_icon is the file "Darius_blissed_hard.jpg".
+Figure of Darius_blissed_cum_icon is the file "Darius_blissed_cum.jpg".
 Figure of DarkTyrant_icon is the file "DarkTyrant.jpg".
 Figure of Dash_icon is the file "Dash.jpg".
 Figure of David_naked_icon is the file "David_naked.jpg".
@@ -1498,6 +1502,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Demon Brute"	Figure of DemonBrute_icon	"Lay"	g-black	"normal"
 "Darius_clothed"	Figure of Darius_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Darius_hard"	Figure of Darius_hard_icon	"SteppeCrow"	g-white	"normal"
+"Darius_blissed_clothed"	Figure of Darius_blissed_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Darius_blissed_naked"	Figure of Darius_blissed_naked_icon	"SteppeCrow"	g-white	"normal"
+"Darius_blissed_hard"	Figure of Darius_blissed_hard_icon	"SteppeCrow"	g-white	"normal"
+"Darius_blissed_cum"	Figure of Darius_blissed_cum_icon	"SteppeCrow"	g-white	"normal"
 "Dark Elf"	Figure of DarkElf_icon	"Nokturnalkittie"	g-black	"normal"
 "Darkelf_red_clothed"	Figure of Darkelf_red_clothed_icon	"Moirah"	g-white	"normal"
 "Darkelf_red_hard"	Figure of Darkelf_red_hard_icon	"Moirah"	g-white	"normal"

@@ -611,7 +611,7 @@ to say sexwithDrMoffattSkunkPath:
 
 
 to say thirstdecrease:
-	decrease Thirst of Player by 10;
+	PlayerDrink 10 silently;
 
 to say MoffatHypnosisFullSex:
 	say "     'Such a nice [boygirl],' the psychologist giggles. Stuck in a trance state, the skunk's voice feels as if it was inside your head with your own mind. She circles around the couch while you look down, your body locked in place. Eventually, she stops near your face. ";

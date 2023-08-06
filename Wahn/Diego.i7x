@@ -1190,6 +1190,10 @@ to say DCollarDesc:
 instead of sniffing diego's heirloom collar:
 	say "     The collar smells like leather.";
 
+a postimport rule:
+	if diego's heirloom collar is not owned:
+		now diego's heirloom collar is not equipped;
+
 to say DCollarUse:
 	if diego's heirloom collar is equipped:
 		say "     You raise your hands and touch the leather collar around your neck, feeling around for its buckle. Yet even as you do so, the idea of how good the strap feels on your skin grows in your mind, together with the acceptance and need of having something nicely tight and proper around your neck. Your wish to be rid of it weakens by the second, and before you've done anything more than pulling a bit at the fastening, you've fully changed your mind. Fingers idly stroking along the symbol of submission around your neck, you can barely even remember why you wanted to take it off.";
@@ -1328,6 +1332,7 @@ to say DiegoCollarDeliveryAftermath:
 	else:
 		LineBreak;
 		say "     In a friendly but firm tone, you turn the coyote down. [SubjectProCap of Diego] takes your rejection well enough with little more than a slight dip of [PosAdj of Diego] tail, followed by a shrug. 'Oh well, guess I'll find someone else to help me with this specific plan then. Doesn't mean we can't enjoy hatching some other fun plans together though, alright?'";
+		now diego's heirloom collar is not equipped;
 		ItemLoss diego's heirloom collar by 1;
 		now XP of Diego is 50; [collar delivered]
 

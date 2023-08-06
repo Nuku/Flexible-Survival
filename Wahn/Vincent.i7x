@@ -1,11 +1,26 @@
 Version 1 of Vincent by Wahn begins here.
 
+[ Vincent Loyalty Points:                                                               ]
+[ Note: Plus points are one time only, minus points can be repeatedly gotten            ]
+[                                                                                       ]
+[ +1 from listening to his background story                                             ]
+[ +1 from rejecting sexual blackmail (in the sex talk with Vincent)                     ]
+[ +1 from being okay with weed, trading sex, or both                                    ]
+[ +1 from giving Vincent a BJ                                                           ]
+[ +1 from hanging out with Vincent                                                      ]
+[ +1 from smoking weed and making out with Vincent during the hangout                   ]
+[ +1 from microdosing on orc cum and mutually masturbating (second time, not the first) ]
+[                                                                                       ]
+[ -1 from drying to drug him with orc cum without an excuse                             ]
+[ -1 from interrupting him trading sex for weed                                         ]
+
+[ Energy of Vincent - Tracking for when the player hung out with him                    ]
+[ Stamina of Vincent - Tracking for how many (small) exposures to orc cum he had        ]
 
 a postimport rule: [bugfix for old imports]
 	if "Ruth & Keitao Story Told" is listed in Traits of Vincent and "Sexual Rent" is not listed in Traits of Vincent and "Sextalk Loyalty Bonus Given" is not listed in Traits of Vincent:
 		increase Loyalty of Vincent by 1; [bonus point for players who rejected sexual blackmail with Vincent before the Loyalty point for that was introduced]
 		TraitGain "Sextalk Loyalty Bonus Given" for Vincent; [to make sure the player only gets one point, retrofitted in the postimport rule, or in the scene as planned]
-
 
 Section 1 - Aftermath of the Orc Raid
 
@@ -82,6 +97,7 @@ to say VincentFirstOrcBJ:
 	say "     The anthro's sharp ears give him ample warning of your soon impending orgasm, at which point he first pushes himself all the way down on your cock, wet nose touching your pubic area. But then, he seems to think better of what he's doing, almost forcing himself to pull away, instead licking and slurping over its side, while massaging your balls with his hands. In short notice, this pushes your arousal over the edge, and you blast your load to paint white stripes over the ash-covered ground of the ruin you're in. You can hear Vincent's nose pull in a deep breath, huffing the scent of your cum, and before he can help himself, his tongue flicks out to lick up a stray drop that still clings to your mushroom head. Eyes going wide as just that little bit of your potent cum hits his system, he licks over your dickhead again several times, then glances down at the wet drabs soaking into the ash before shaking his head almost imperceptibly.";
 	say "     'Fucking hell, what're you packing in those balls! It's like a drug or something! Good thing I pulled off, or I think I might be zonked out and rolling drunkenly on the floor like an alcoholic on payday!' As you chuckle and admit that orcs are built a little differently, the Vincent seems torn between getting angry, and the desire to taste you again. In the end, he ends up picking a position somewhere in between, grumbling, 'Okay, new rule - don't even think of trying to shoot in my mouth. I'm warning you, understand?! You [bold type]must[roman type] warn me when you're getting close. As long as you're an orc at least...' Rolling your eyes, you agree, not wanting to lose out on the fox's oral services. ";
 	TraitGain "Orc Cum Aware" for Vincent;
+	increase Stamina of Vincent by 1; [small orc cum exposure]
 
 to say VincentPostRaid_RegularTalk:
 	LineBreak;
@@ -231,6 +247,12 @@ to say VincentTalkMenu:
 		now sortorder entry is 4;
 		now description entry is "Offer Vincent a creamy refreshment";
 	[]
+	if Vincent_Hangout_Intro is resolved and Loyalty of Vincent > 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Hang out with Vincent";
+		now sortorder entry is 5;
+		now description entry is "Relax and take a load off for a little while";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -261,6 +283,9 @@ to say VincentTalkMenu:
 				else if (nam is "Offer him some orc cum to drink"):
 					say "[Vincent_OrcCumOffer]";
 					now DoneTalking is true;
+				else if (nam is "Hang out with Vincent"):
+					say "[VincentHangout]";
+					now DoneTalking is true;
 				if DoneTalking is false: [looping around for more talk options]
 					say "[VincentTalkMenu]";
 				else:
@@ -274,7 +299,7 @@ to say VincentTalkMenu:
 	clear the screen and hyperlink list;
 
 to say Vincent_BackgroundTalk1: [ask about him]
-	say "     As you ask the fox about himself, Vincent blows out a breath and half raises his arms in a shrug. 'You wanna hear more about me? I'm nothing special really... just your average 22 year old guy from northeast in the desert. Hah, my home town is literally called 'wilderness' in Spanish. Nothing much to see there - its all dry, dusty and baking in the heat of the sun. Hell of a place to grow up in, with just a few houses and fuck-all around, I can tell you that. Got so bored off my gourd that I even was a boy-scout for a few years as a kid - so yeah, I can tell you which cactus you can eat (most you can't), and to keep the fuck away from scorpions, got the badges to prove it, hah!' With a sardonic chuckle, Vincent mimes a crawling arachnid with one hand while gripping his wrist with the other, raising one finger as a mock [']stinger[']. 'I had one as a pet, you know. Not that I was allowed to keep it in the house, it just kinda... lived under a rock behind our garden. But I fed it and watched it molt and all.'";
+	say "     As you ask the fox about himself, Vincent blows out a breath and half raises his arms in a shrug. 'You wanna hear more about me? I'm nothing special really... just your average 22 year old guy from northeast in the desert. Hah, my home town is literally called 'wilderness' in Spanish. Nothing much to see there - its all dry, dusty and baking in the heat of the sun. Hell of a place to grow up in, with just a few houses and fuck-all around, I can tell you that. Got so bored off my gourd that I even was a boy-scout for a bunch of years - so yeah, I can tell you which cactus you can eat (most you can't), and to keep the fuck away from scorpions, got the badges to prove it, hah!' With a sardonic chuckle, Vincent mimes a crawling arachnid with one hand while gripping his wrist with the other, raising one finger as a mock [']stinger[']. 'I had one as a pet, you know. Not that I was allowed to keep it in the house, it just kinda... lived under a rock behind our garden. But I fed it and watched it molt and all.'";
 	say "     'Anyways I got the fuck out of that town as soon as I could, came to the coast to go to college. Dropped out in the third year, then got a job downtown as a clothing store attendant last Fall.' Rolling his eyes, Vincent grumbles, 'Manning the retail trenches during Black Friday is just the worst! I was slapped, twice, by rabid shoppers! Really made me wish I'd kept some of those venomous creepy crawlies from back home. To throw them at the bitches!' Baring his fangs, he seems to imagine someone running away screaming, then chuckles and turns his attention back to you. 'Anyways, a job's a job, so you learn to smile and bear it... long hours, rude customers, picking up all sorts of stuff they dump on the ground if they don't like it, all that jazz. So yeah, that's what I was doing when this whole thing started. Putting away some of the not quite current fashion trends. Had this vintage, really gaudy vest in my hands, trimmed with red fur. Didn't really think it was real as the label was claiming, but... well, moments later I started transforming into this. Guess I should be thankful that that designer actually went with a red animal, and didn't just color some rodent fuzz red.'";
 	WaitLineBreak;
 	say "     While slowly shaking his head, Vincent looks down at his hand and arm, then strokes a finger over the fur covering it. 'So thanks to my poor foxy compatriot, not that I ever knew him in life, I guess I'm a real life furry now. Never thought I'd get into that stuff, but then... life isn't actually so bad, as an animal person. Fur's pretty nice, and I dig the tail. Of course, life's still got its upsides and downsides. Less snooty bitches these days, more rampaging orcs. But you gotta do what you have to survive. Things were mostly going my way, until... you know. And then you saved my bacon, so that worked out alright too, eh?' Giving you a friendly smile, the fox winks appreciatively.";
@@ -557,6 +582,7 @@ to say Vincent_OrcCumOffer:
 					say "     As you chug down gulp after gulp of the rich, flavorful orc cum, a mellow feeling of warmth and pleasure fills you. With a drunken grin on your face, you tell Vincent that he really missed out on a treat, and can't help yourself, planting a spontaneous kiss on his lips. Pulling back in surprise, the fox licks off a bit of wetness you left behind, getting another little dose of orc cum into his system. His gaze is drawn to the now empty bottle, followed by him biting his lip. 'I - I think I'm good, but thanks for the offer. Why don't you just... keep your stash for your own use, okay?'";
 					TraitGain "Orc Cum Aware" for Vincent;
 					TraitGain "Player Orc Cum User" for Vincent;
+					increase Stamina of Vincent by 1; [small orc cum exposure]
 				-- "He should chill out a bit, and you just wanted to offer him some good stuff so he could ride out the high.":
 					LineBreak;
 					say "     Rolling his eyes, Vincent grumbles, 'If and when I use any drugs is MY choice, and I always want to know what the hell it is beforehand! Really not cool that you've tried springing this on me as a surprise! Keep that stuff to yourself in the future! I'm out of here to get some fresh air!' With a displeased grunt, the fox stalks off.";
@@ -579,9 +605,13 @@ to say Vincent_OrcCumOffer:
 				say "Talk about actually consuming a whole bottle of orc cum";
 			else: [nope, he's not ready]
 			]
-			say "     Glancing at the bottle of orc cum, Vincent raises his eyebrows and hesitates, his tongue flicking out almost on its own accord to lick his lips. There's some hunger for the taste of orc cum in him. But then, he shakes his head, and says, 'Thanks, but... I don't usually have drug-parties with people I don't know that well. Why don't you keep your stash for your own use right, eh?'";
+			if "Hangout_OrcCum_Shared" is not listed in Traits of Vincent or Loyalty of Vincent < 3:
+				say "     Glancing at the bottle of orc cum, Vincent raises his eyebrows and hesitates, his tongue flicking out almost on its own accord to lick his lips. There's some hunger for the taste of orc cum in him. But then, he shakes his head, and says, 'Thanks, but... I don't usually have drug-parties with people I don't know that well. Why don't you keep your stash for your own use right, eh?'";
+			else:
+				say "     Glancing at the bottle of orc cum, Vincent raises an eyebrow and after a moment of hesitation, shakes his head. 'Thanks, but I'm not comfortable with just gobbling up that stuff by the bottle, and our little stash has plenty left for some fun still. So I'm good.' Snaking an arm down to your side, he gives it a friendly squeeze, then adds, 'Why don't we hang out together sometime later and share a little, hm?'";
 		else: [he has blown a player who was an orc]
 			say "     Glancing at the bottle of orc cum, Vincent raises his eyebrows and hesitates, his tongue flicking out almost on its own accord to lick his lips. There's some hunger for the taste of orc cum in him. But then, he shakes his head, and says, 'Thanks, but I told you I don't want to overindulge in that stuff. You offering a whole bottle makes it too tempting to keep drinking more. So pack it away please. I'll go get some fresh air.' That said, he wanders off to go for a walk in the garden.";
+
 
 Instead of fucking Vincent:
 	if (lastfuck of Vincent - turns < 2):
@@ -665,6 +695,7 @@ to say VincentOral1:
 				say "     Washing his talented tongue over your dickhead, the slender vulpine cleans away the traces of your cum that remain, with his pupils growing larger as the potent mixture of pheromones, aphrodisiacs and other contents of your load cover his tongue. A content hum comes from his throat, followed by Vincent almost inhaling the front half of your shaft, closing his lips around it as best as he can and suckling hungrily. Seems like he wants to drain every last drop that might still be in your cum-tubes. Sensitive after your own orgasm, you actually have to pat his shoulder and tell the fox to take things easy, which leads to him glancing up at you with a slightly un-focused expression, then blinking his eyes back into focus before pulling off in a little bit of embarrassment. 'Sorry, I - it's good stuff, as you know. But I've got this under control, if I don't swallow too much...' You can't help but focus on the long streak of fresh cum on the floor just past where the fox is, and he follows your gaze, his eyes staring longingly as if he'll bend over and clean it with his tongue.";
 				WaitLineBreak;
 				say "     Vincent holds his breath for a second, seeing the rich bounty of your cum factories glistening in white-ish spatters on the smooth wooden floor, then shakes his head and quickly pulls a little hand-towel from his back pocket. Leaning down, he wipes the cum away with the absorbent fabric, removing the undignified temptation of lapping it up himself. 'Thanks for keeping up your end, with that warning. I'm fine with sucking you off, but I don't know what'd become of me if I went hog-wild gobbling up your load. A pleasant little buzz is awesome, but you don't wanna overdose on anything as strong as [italic type]that[roman type]!' Chuckling at the compliment, you agree with Vincent and give him a thumbs up for his oral services, puffing out your chest at the implied praise of your baby-batter factories.";
+				increase Stamina of Vincent by 1; [small orc cum exposure]
 		else: [normal BJ]
 			say "The corners of his mouth twitch upwards as he takes in your [Cock of Player] manhood, his tongue slipping out to lick the side of the fox's long muzzle. Taking hold of your shaft, he jerks it in a pleasant speed, seemingly knowing how to handle a man's pride and joy just right. As you harden and stand proudly erect soon enough, the fox takes a deep breath, then starts to lap at your dickhead, with his floppy canine tongue feeling quite nice as it glides over your sensitive glans.";
 			WaitLineBreak;
@@ -683,13 +714,13 @@ to say VincentOral1:
 
 to say VincentGetsBJ: [Player goes down on him]
 	if "First BJ Received" is not listed in Traits of Vincent:
-		say "     Stepping up to the red fox, you put a hand on Vincent's chest and then let it slide down over his band t-shirt and jeans, then give the young man's bulge an appreciative squeeze. 'Someone's being frisky,' he comments with a grin, pushing his hips forward against your hand. You hook your other hand behind his neck, thumb rubbing the sensitive base of his triangular, flicking ear as you say in a breathy voice that you want to suck his cock. This has the anthro raising his eyebrows in a surprised expression for a second, before his grin is back, even broader than before. 'Guess I've been getting a bit too used to all those horny fuckers roaming the city in droves, just out for their own pleasure. More often than not, you're left hanging by one of those bastards! ";
+		say "     Getting closer to the red fox, you put a hand on Vincent's chest and then let it slide down over his band t-shirt and jeans, then give the young man's bulge an appreciative squeeze. 'Someone's being frisky,' he comments with a grin, pushing his hips forward against your hand. You hook your other hand behind his neck, thumb rubbing the sensitive base of his triangular, flicking ear as you say in a breathy voice that you want to suck his cock. This has the anthro raising his eyebrows in a surprised expression for a second, before his grin is back, even broader than before. 'Guess I've been getting a bit too used to all those horny fuckers roaming the city in droves, just out for their own pleasure. More often than not, you're left hanging by one of those bastards! ";
 		if "Sexual Rent" is listed in Traits of Vincent:
 			say "I mean, I did get something out of it usually, like our little 'arrangement' for staying here, but it still can get annoying. I'm not that much of a sub, just simping for anyone to use like a fleshlight! So yeah... I appreciate you wanting to do this!' That said, Vincent moves his hands down to his crotch.";
 		else:
 			say "I mean, I did get something out of it usually, ya know... in trade, but it still can get annoying. I'm not that much of a sub, just simping for anyone to use like a fleshlight! So yeah... I appreciate it!' That said, Vincent flicks his tongue over your cheek before he moves his hands down to his crotch.";
 	else: [repeats]
-		say "     Stepping up to the red fox, you put a hand on Vincent's chest and then let it slide down over his band t-shirt and jeans, then give the young man's bulge an appreciative squeeze. 'Someone's being frisky,' he comments with a grin, pushing his hips forward against your hand. You hook your other hand behind his neck, thumb rubbing the sensitive base of his large ear as you say in a breathy voice that you want to suck his cock. 'Been hoping you'd say that!' Vincent responds, his grin spreading even wider than before. Then the anthro begins to run his hands along your sides, stroking and caressing your body. After a quick detour to squeeze your [if Breast Size of Player > 1]breasts[else]pecs[end if] and pinch your nipples, his fingers trail further down, rubbing over your pubic area before switching over to his crotch.";
+		say "     Getting closer to the red fox, you put a hand on Vincent's chest and then let it slide down over his band t-shirt and jeans, then give the young man's bulge an appreciative squeeze. 'Someone's being frisky,' he comments with a grin, pushing his hips forward against your hand. You hook your other hand behind his neck, thumb rubbing the sensitive base of his large ear as you say in a breathy voice that you want to suck his cock. 'Been hoping you'd say that!' Vincent responds, his grin spreading even wider than before. Then the anthro begins to run his hands along your sides, stroking and caressing your body. After a quick detour to squeeze your [if Breast Size of Player > 1]breasts[else]pecs[end if] and pinch your nipples, his fingers trail further down, rubbing over your pubic area before switching over to his crotch.";
 	say "     Eager fingers pop the button of Vincent's jeans through its hole, followed by the zipper being pulled open in a rapid flick. A quick glance reveals the fact that he's going commando as he shimmies the jeans past his hips, pushing them down to his thighs. The anthro fox's cock is overall human-shaped, with a moderately thick, uncut cock resting on the two orbs of his balls in a slightly dangly sack covered in cream-colored fur. Moving your hand to touch it, then cup the velvety fur of his balls, Vincent proves to be very much a grower, as his manhood rapidly fills out, rising from its previous dangling position to stand proud and erect at an upwards angle. Meeting his eyes and wiggling your eyebrows, you then sink down into a crouch, putting you face to 'face' with the fox's throbbing dick. So close that your warm breath washes over his hard shaft, you wrap your fingers around the hard length, feeling its firmness and girth in your grasp, softly pulsing with Vincent's heartbeat.";
 	WaitLineBreak;
 	say "     'Yeah, it's waiting for your mouth!' Vincent says in a voice betraying his barely restrained lust, and you can feel his hand being put down on your head, cradling it and giving a slight push towards his crotch. The pleasantly musky scent of his crotch becomes even stronger as a thick droplet of pre-cum wells up from the vulpine's cum-slit right in front of your eyes, and you quickly slide your lips over his glans to slurp up a first taste of Vincent. 'Mmmmhh! That feels great!' he grunts in pleasure, breath quickening as your tongue flicks teasingly over his cum-slit. Vincent's rock-hard shaft swells just a little further, dickhead now fully emerging from the foreskin, and you take it in eagerly, your lips in a tight ring around the rim of the mushroom head. Slender fingers stroke your head, in between pushing it lightly towards his crotch, and you follow the suggestion happily enough, starting to bob up and down on the juicy cock.";
@@ -708,6 +739,7 @@ to say VincentGetsBJ: [Player goes down on him]
 to say VincentSex1: [fucking him]
 	say "     ";
 	NPCSexAftermath Vincent receives "AssFuck" from Player;
+	increase Stamina of Vincent by 1; [small orc cum exposure from pre-orgasm leaking into his ass]
 
 to say VincentSex2: [riding him]
 	if Player is female:
@@ -716,19 +748,6 @@ to say VincentSex2: [riding him]
 	else:
 		say "     ";
 		NPCSexAftermath Player receives "AssFuck" from Vincent;
-
-
-[
-Scene Idea:
-Player arrives at the library and sees Vincent talking to someone (making a deal of getting some weed for a BJ). Multi choice point of:
-- Walking up and saying hello (and the dealer runs off)
-- Standing back and watching what happens (V and dealer go to an alley - option to follow and watch the BJ)
-- Ignore this and anything of the kind.
-
-Followup talk options with V:
-- Player would prefer nothing of this sort while V lives at the Library
-- You're fine with things, but he should be discreet (no further visibility to the player, but stuff goes on)
-- You're totally fine with it. Might be hot to watch too.]
 
 
 Table of NavInEvents (continued)
@@ -868,5 +887,166 @@ to say Vincent_WeedTrade_Talk:
 			LineBreak;
 			say "     Giving Vincent a pointed glance, you say that you're aware of what sort of transaction he performed with that person in the alley. The fox tenses up a little bit, unsure if that means you'll have some sort of issue over things, but you quickly quell his worries with a neutral shrug. Clearing your throat, you casually comment that what he's doing his his business, but that you yourself are not keen on seeing such things happen in front of you. 'Oh. Well then, I'll be more... discreet, from now on,' the fox replies, somewhat relieved that there won't be an issue over this between you. With nothing more to be said, you both make your way back to the library.";
 			now Resolution of Vincent_WeedTrade_Intro is 97; [Player okay with weed, but doesn't want to see it]
+
+
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Vincent_Hangout_Intro"	Vincent_Hangout_Intro	"[EventConditions_Vincent_Hangout_Intro]"	Garden View	2500	2	40
+
+to say EventConditions_Vincent_Hangout_Intro:
+	if Vincent is collected and Loyalty of Vincent > 2: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Vincent_Hangout_Intro	"Vincent_Hangout_Intro"
+
+Vincent_Hangout_Intro is a situation.
+Prereq1 of Vincent_Hangout_Intro is Vincent_WeedTrade_Intro.
+ResolveFunction of Vincent_Hangout_Intro is "[ResolveEvent Vincent_Hangout_Intro]".
+Sarea of Vincent_Hangout_Intro is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Vincent_Hangout_Intro:
+	say "     Walking along the upper floor of the library, you come to the spot by the window overlooking the gardens where Vincent set up his camp. The slender fox is there right now too, sitting relaxedly on his sofa, leaned back with both arms raised and his hands behind his head. He's obviously in a cheerful mood and calls out with a smile, 'Hey[if Player is not defaultnamed], [Name of Player]! [else] there! [end if]I'm just taking a moment to wind down, ya know? Been some time since I was in any position to really relax, and not have to worry where I'd be able to bed down. Squatting in god knows what places is a bit of a drag when there's horny fuckers roaming the streets. Sleeping with one eye open, and an ear to the wind can wear someone down... so, thanks a million for giving me shelter!' Walking up towards him, you reply that you're glad he's found a place here, and chat a little about the things he's seen out there. The fox goes into some hair-raising details about what he's endured, and you can't help but thank your lucky stars that you haven't seen half of what he has!";
+	say "     'But that's all behind me now, eh? Really astonishing that this place is relatively untouched in all this chaos. Guess it might be saying something about people if they reflexively avoid going to a library even during the apocalypse, hah!' Shaking his head, the slender guy shrugs, then adds, 'Guess that's all the better for us, finding refuge in the Grey Abbey. But seriously, thanks for letting me come here. You know, why don't you sit down with me and take a load off? Can't do... well, whatever you're always off doing out there in the city if you work yourself to the bone and get a nervous breakdown. And where would I end up being, if you suddenly snap and go wild, hm?' The smirk on the fox's face tells you the last sentence was said in jest, but he seems serious about you taking a break, nodding to a place next to himself on the sofa.";
+	LineBreak;
+	say "     [bold type]Do you wanna hang out with Vincent?[roman type][line break]";
+	let Vincent_Hangout_Choices be a list of text;
+	add "Sure thing, let's relax..." to Vincent_Hangout_Choices;
+	add "Actually... you kinda are busy right now. Maybe later?" to Vincent_Hangout_Choices;
+	let Vincent_Hangout_Choice be what the player chooses from Vincent_Hangout_Choices;
+	if Vincent_Hangout_Choice is:
+		-- "Sure thing, let's relax...":
+			LineBreak;
+			say "[VincentHangout]";
+		-- "Actually... you kinda are busy right now. Maybe later?":
+			LineBreak;
+			say "     With a sigh, you explain to the fox that right now is a bad time, as you're in the middle of something. Cheeks puffing with disappointment, Vincent replies, 'Fine, fine. But don't overdo things, you hear me? And if you change your mind, just find me and say the word, alright?' Thanking him for the offer, you turn your attention to other things.";
+	now Vincent_Hangout_Intro is resolved;
+
+to say VincentHangout:
+	if Energy of Vincent - turns < 3: [waiting time, so people don't abuse the san boosts]
+		say "     As you bring up wanting to hang out with him, the fox lets out a chuckle and shakes his head apologetically. 'I did say to take a load off, but spending the whole day on my sofa might be a bit much, hah! Sorry to say, but I kinda have... an appointment out in the neighborhood. Gotta go meet someone soon, so right now isn't a great time, eh? How about later?'";
+	else:
+		say "     Deciding that spending some time with the friendly fox dude isn't actually such a bad idea, you stroll over to the sofa and set down your gear on the ground, then sit down. Leaning back against the cushions, you find them not too soft, not too hard - just right to relax on. Seems like the fox had a good eye for which piece of furniture he claimed for himself. 'See, doesn't that feel much better?' he says in a bout of camaraderie, patting your shoulder and giving it a squeeze. He's really got something there, and with Vincent starting to chat with you about about just everyday things, anything but the current situation and what it entails really, you find yourself banishing some of the worries that have been laying upon you from your mind...";
+		SanBoost 15;
+		say "     Before you know it, a bunch of time has flown by, and you can't help but wonder if you should get back to it. Vincent notices you glancing out across the library and clicks his tongue, then lets out a little chuckle. 'Can't hold still for too long, can you? Well, I do have something that we could use to keep winding down for a little while. That said, the fox leans to the side and half turns around so he can dangle over the side of the sofa and see what he's reaching for, leaving you with a very good view of his jeans-clad booty, and the gloriously fluffy tail of the main waving in the air not too far from your face. You hear some glass clinking, and the fox raises an arm triumphantly with a brown glass bottle in hand, before tossing it next to you on the sofa and commenting, 'They're not exactly cold, but a beer's a beer.' That said, he leans over again to snatch up another one from what he's got stashed behind the sofa.";
+		LineBreak;
+		say "     [bold type]How do you react to this?[roman type][line break]";
+		let Vincent_Hangout_Choices be a list of text;
+		add "Ah, you can hang out a little while longer and have a drink with your buddy..." to Vincent_Hangout_Choices;
+		if Resolution of Vincent_WeedTrade_Intro is 1 or Resolution of Vincent_WeedTrade_Intro is 3:
+			add "You wouldn't mind to share a joint instead, if he has some left..." to Vincent_Hangout_Choices;
+		if Orc Cum is owned and "Hangout_OrcCum_Shared" is listed in Traits of Vincent:
+			add "Actually, how about sharing a little orc cum between the two of you?" to Vincent_Hangout_Choices;
+		if "Sex Discussed" is listed in Traits of Vincent:
+			add "You got another idea... reach out and grope his butt." to Vincent_Hangout_Choices;
+		add "Sadly, you really gotta go now. No rest for the wicked." to Vincent_Hangout_Choices;
+		let Vincent_Hangout_Choice be what the player chooses from Vincent_Hangout_Choices;
+		if Vincent_Hangout_Choice is:
+			-- "Ah, you can hang out a little while longer and have a drink with your buddy...":
+				LineBreak;
+				say "     Accepting the bottle of beer and flicking the fancy lever lids almost in unison with him, creating a satisfying double-clunk from the bottles, you cheerfully wish your drinking buddy good health and take a pull. It's actually quite good stuff, craft beer from a local microbrewery out in the city hinterlands, going by the label. You can't help but wonder where he got it from, as you know Vincent didn't really have much of anything with him when he moved in. 'Gotta leave a man some mysteries, you know,' the fox replies in good cheer and winks at you, not elaborating any further. Still, you enjoy another nice little while with Vincent, nipping at your beers and shooting the breeze, before eventually getting up to get back to things.";
+				PlayerDrink 6;
+				addAlcPoints 1;
+			-- "You wouldn't mind to share a joint instead, if he has some left...":
+				LineBreak;
+				say "[VincentDrugTrip]";
+			-- "Actually, how about sharing a little orc cum between the two of you?":
+				LineBreak;
+				say "[VincentOrcCumTrip]";
+			-- "You got another idea... reach out and grope his butt.":
+				LineBreak;
+				say "     Making use of the easy-access opportunity, you smack one hand on Vincent's buttocks, then grope him through the pants while your other hand grabs the base of his tail. 'Nnnghh!' he half-moans, then adds, 'Careful with the tail, it's... sensitive, ya know?' As he says this, the fox wiggles his eyebrows meaningfully, leaving little doubt in which way sensitive he meant. 'So, guess someone is getting frisky if they let their hair down, eh? I'm down for it, if you are!'";
+				say "[VincentSexMenu]";
+			-- "Sadly, you really gotta go now. No rest for the wicked.":
+				LineBreak;
+				say "     As you make your excuses, Vincent rolls his eyes jokingly, then shrugs. 'Oh well, it was worth a try. Let me know once you've defeated the nanite plague, or doomed us all, hah. With the energy you're putting into things, one or the other is just bout to happen!' That said, he opens his bottle of beer by flicking off the lever lid with a satisfying clunk, then takes a sip of his drink as you get up to leave.";
+		follow the turnpass rule;
+		if "Hangout_Loyalty gained" is not listed in Traits of Vincent:
+			TraitGain "Hangout_Loyalty gained" for Vincent;
+			say "     [bold type]Hanging out with Vincent has strengthened your bond with each other, and he trusts you a little more. [roman type][line break]";
+			increase Loyalty of Vincent by 1;
+		now Energy of Vincent is turns; [timer for repeat visits]
+
+to say VincentDrugTrip:
+	say "     As you bring up smoking some weed, an amused smile grosses the red fox's muzzle and he gives your shoulder a light, friendly punch. 'Someone's really letting their hair down now, I see! Got us covered, no worries. You just gotta know how to share, alright?' As you give him an eager nod, Vincent puts down the bottle of beer he was still holding in his hand, instead snaking a hand into the crack between two sofa cushions on his far side to you. You can hear the rustle of a plastic bag, followed by the slender man raising a nicely-rolled and fairly large joint for you to see. Bringing it up to his nose, he takes a deep sniff, and grins in satisfaction. 'Razi's got good product, that's for sure! Really amped to share this one with you! Here, have a whiff!' With that, he holds his treasured joint out to you, waving it under your nose and making the scent of marijuana fill your nostrils. It's potent, alright! Smiling, Vincent gives you a wink as he brings the joint back to the end of his muzzle, then pulls a silver zippo-lighter from his pants pocket. You can make out an engraved fleur-de-lis on its side as Vincent flips the lid open, then ignites the joint.";
+	say "     He lightly sucks air through the blunt to make sure it is properly lit, then proceeds to have a proper, deeper drag and filling his lungs with the potent smoke. He hold it in for a few seconds, then blows out his breath again, creating a long and narrow stream of smoke by pursing the lips of his muzzle. Next, he holds out the joint for you to take, and you follow his example, taking in a nice amount of weed-smoke. Phew, this stuff hits quick! You can feel the effects start to noticeably mellow you out, even before the joint comes back to your eager fingers after Vincent had his turn. Taking drags and letting the joint wander back and forth fills what feels like a long, pleasant while, with you sidling up quite close to Vincent as you go along, rubbing shoulders as you lean in to not have to move the joint that far.";
+	SanBoost 20;
+	WaitLineBreak;
+	say "     Sadly, all good things come to an end eventually, and Vincent realizes that there's almost just a roach left by this point. 'Here, you finish it off,' he says generously, moving his hand over. Accepting the offer, you drag in a deep breath that burns away the last of the weed, holding the smoke inside your lungs. Stubbing out the remains of your shared blunt in a little ashtray, Vincent smiles at you, then raises an eyebrow as if [bold type]asking what you wanna do next.[roman type][line break]";
+	LineBreak;
+	let Vincent_DrugTrip_Choices be a list of text;
+	add "Do you really have to do anything? You could just lean back and relax..." to Vincent_DrugTrip_Choices;
+	add "Grab Vincent's lighter to look at and play around with. It's neat!" to Vincent_DrugTrip_Choices;
+	add "Pull his muzzle towards you and share the smoke in a kiss." to Vincent_DrugTrip_Choices;
+	if Orc Cum is owned and "Hangout_OrcCum_Shared" is not listed in Traits of Vincent:
+		add "Suggest to share some orc cum from your own stash next..." to Vincent_Hangout_Choices;
+	if "Hangout_OrcCum_Shared" is listed in Traits of Vincent:
+		add "Let's mix things up a little with some orc cum!" to Vincent_Hangout_Choices;
+	let Vincent_DrugTrip_Choice be what the player chooses from Vincent_DrugTrip_Choices;
+	if Vincent_DrugTrip_Choice is:
+		-- "Do you really have to do anything? You could just lean back and relax...":
+			LineBreak;
+			say "     In your current state, you're really just happy enough to stay just where you are. Leaning back on a comfortable sofa, with a buddy right next to you is pretty nice in its own right. Therefore, you do just that, sitting next to Vincent and chilling. As you hang out like this, you start to chat again, chuckling and laughing about very interesting topics that may or may not be making any sense to an outside observer not under the influence. The two of you stay on the sofa for a good long while, before you eventually start to feel that you really should be getting back to things, then get up to leave. ";
+			[]
+		-- "Grab Vincent's lighter to look at and play around with. It's neat!":
+			LineBreak;
+			say "     Eyes drawn to a shiny thing and mind too toasted to filter out the desire to grab it, you snatch up the lighter Vincent put down on his thigh earlier, and start to inspect it with a singular focus. It's silver metal, clicking open and shut with a flick of your fingers, and you can't help but be absolutely fascinated by it. Click - open, click - shut, click - open, then you flip your thumb down over the striker, and a really pretty flame dances over the opening at the top! It goes away when you click the zippo closed, and now your attention has switched to the other sensations you can get from the thing, brushing your thumb over the engraving on the side. So many small lines to trace and follow with your fingertips, round and round along the outlines! Your rapt attention for the lighter doesn't go unnoticed by Vincent, and he plucks it from your grasp, holding it so it shines in the light, drawing both of your gazes.";
+			say "     'Got this as a going-away present from my friends, you know. When I moved to the coast,' Vincent says in a bit of a distracted tone, dwelling in his memories. 'Man, I do miss them but I'm kinda glad that they stayed out in the boonies. Who knows what'd have happened if they were in the city too.' Tracing the stylized shape of the fleur-de-lis on the side of the zippo, he sighs. 'Smoked a few blunts, between us, the guys and me. And there were blowjobs and stuff, at the campfire. Just during the private outings with us scout leaders only of course! No cigs or weed allowed until you're eighteen, and all that...' He chuckles a little, then starts flicking the lid of the lighter open and shut himself. That simple act, and its accompanying sounds are plenty to keep both of your stoned attention tied up for a long while, in between some unfocused chatting which might not be making sense to anyone but the two of you...";
+			TraitGain "Zippo Backstory revealed" for Vincent;
+			[]
+		-- "Pull his muzzle towards you and share the smoke in a kiss.":
+			LineBreak;
+			say "     Reaching out and hooking two fingers around the underside of his muzzle, you gently draw Vincent's head over in your direction. Leaning in until your noses touch, you put your lips to his, blowing the last of the weed-smoke from your lungs into his mouth so you can share it equally. Inhaling deeply, the red fox grins at you, his eyes meeting your own gaze in a drug-fueled moment of connection. Then he kisses you back, blowing the much-diminished remnants of smoke back into your mouth, and accompanying it with his questing tongue that darts forwards between your lips. What follows is a very pleasant, if a bit giggly and spaced-out, bout of making out with one another, bringing your weed-smoking adventure to a gradual conclusion. As things slow down eventually, you just sit next to each other, grinning widely and enjoying the moment. The two of you stay on the sofa for a good long while, before you eventually start to feel that you really should be getting back to things, then get up to leave.";
+			if "Hangout_WeedMakeout_Loyalty gained" is not listed in Traits of Vincent:
+				TraitGain "Hangout_WeedMakeout_Loyalty gained" for Vincent;
+				say "     [bold type]After that shared trip, you can't help but feel more connected to Vincent, and he's clearly seeing things the same way, increasing the trust the fox has for you. [roman type][line break]";
+				increase Loyalty of Vincent by 1;
+			[]
+		-- "Suggest to share some orc cum from your own stash next...":
+			LineBreak;
+			if "Hangout_OrcCum_Shared" is not listed in Traits of Vincent:
+				say "     A grin spreads over your face and you bring up that you'd like to enjoy a little something from your own stash with him. 'That so?' Vincent replies in a bit of a stoned tone of voice, a smirk gracing his muzzle as he then adds a giggle and nods to you. Happy that he's down for it, you lean forward to pull your stuff closer, then start digging around in it until you find the bottle of orc cum you were lugging around for... reasons. Raising it so that the red fox can see, you wiggle it left and right, then sidle up close to him again and slide an arm around his shoulders. 'Can't say I'm too keen about the origin of that gunk,' Vincent comments, squinting to read the label of your bottle, 'But I'm willing to give it a try. Just a little bit.'";
+			else:
+				say "     A grin spreads over your face and you bring up that you'd like to enjoy a little something from your own stash with him. 'Oh yeaahh! Bring it on!' Vincent replies eagerly in a bit of a stoned tone of voice, a smirk gracing his muzzle as he then adds a giggle and nods to you. Happy that he's down for it, you lean forward to pull your stuff closer, then start digging around in it until you find the bottle of orc cum you were lugging around for... reasons. Raising it so that the red fox can see, you wiggle it left and right, then sidle up close to him again and slide an arm around his shoulders. 'Can't say I'm too keen about the origin of that gunk,' Vincent comments, squinting to read the label of your bottle, 'But it's so good I'm willing to overlook that. But remember, let's just use a little bit.'";
+			say "     Even moderately stoned as he is right now, the encounter with the orcs is still on the fox's mind, so you decide it'll be best if you take the first step. Unscrewing the lid of the bottle, you pour a small amount, less than quarter sized, on the back of your hand. Then, grinning at Vincent to make him watch, you slurp up the potent fluid, and the unforgettable flavor of orc cum spreads over your taste-buds. Arousal starts to build as your body starts to absorb the heady mixture, and you can't help but rub the insides of your thighs against each other and let out a moan. Interest creeps into Vincent's expression as he sees the effect that small dose had, and you make sure to capitalize on it, pouring another dab and this time raising your hand in front of his muzzle. His gaze flicks to your eyes, then back to your hand, and the fox opens his muzzle to lick up the offered treat.";
+			WaitLineBreak;
+			say "     After closing his muzzle, it takes just a few seconds before Vincent's eyebrows rise and he pants out, 'Woah! That hit me like truck! This goop's STRONG!' A grin spreads over your face as you see him lower a hand to rub the front of his pants, and you quickly pour out a bit more cum to slurp up yourself, before offering your buddy another taste. Lowering his head to lick over your skin, Vincent closes his eyes and lets out an unrestrained moan, then looks at you with an intense expression in his eyes. 'It's good - but this gotta be my last dose. Don't wanna get totally plastered and I'm already horny as fuck!' That said, he lowers his hands to the beltline of his jeans, popping the buttons front and back before hastily shoving the zipper down to allow his rapidly hardening shaft the freedom it needs. Watching your sofa-neighbor pull off his shirt, then hiking up his hips to shimmy the skinny jeans down his legs, you [if Player is not naked]quickly get rid of your own clothes before bringing [else]bring [end if]a hand to your crotch, eager to let off some steam.";
+			say "     Starting to [if Player is male]jerk off[else]stroke yourself[end if], you glance over to Vincent just as the fox finishes taking off the jeans and leans back again, making his erection swing back and forth. Something about the sight draws you in with irresistible strength, and without a second thought, you reach out to take hold of the hard shaft. 'Niiiice!' Vincent pants happily as you begin to jerk him off in rhythm with pleasuring yourself, and he moves his hand over to your thigh, squeezing and stroking it. The mixture of weed and orc cum in your systems puts the two of you in a peculiar mental state, horny but at the same time somewhat uncoordinated and giggly about the most mundane things. Thus you're both happy to just keep sitting where you are, enjoying the bout of shared masturbation and loud sounds of pleasure that echo through the library.";
+			WaitLineBreak;
+			say "     As your arousal ramps up, you intensify your self-pleasuring - and in doing so, the still-uncapped bottle of orc cum gets dislodged from where you had just wedged it between the sofa cushions. It seems to move almost in slow motion, tipping forward, then tumbling off the sofa. Vincent tries to catch it, but is a hair's breath too late in snatching for the bottle, so he only gets a leaked gush of cum on his hand, and the bottle hits the floor with a wet splat. Your attention for the treasured fluid being wasted by leaking onto the floorboards is broken as Vincent wags his hand at you, drawing slimy strings of white between his fingers and thumb and commenting cheerfully, 'You gooped me up!' Seemingly feeling the need to show you up close, he brings his hand up to just between your heads, wiggling his fingers as he does so.";
+			say "     Looking at the creamy cum sticking to Vincent's hand, the scent of the potent orc seed rises in your nose, waking the hunger for more of the fluid ambrosia. Breathing somewhat heavier as you start to feel that craving, you focus your eyes on the fox's face and recognize that you're sharing the same drive right now - so you go for it together. Both Vincent and you lean forward to lap at his hand, slurping up what tasty cum you can get. Almost inevitably, this leaves you competing for the last drabs here and there, until finally, you bump nose to nose as Vincent slurps up the last little bit. But you're not about to give in that easily! Closing the last bit of distance, you suck his appendage into your mouth to get even a tiny additional taste. Vincent's eyes go wide at that move, but he adapts quickly enough, wiggling his long tongue in your mouth to explore it, and before you know it the two of you are sloppily making out.";
+			WaitLineBreak;
+			say "     The new infusion of more orc cum into your system, together with sharing kisses and jerking off, drive your arousal past all restraint in mere moments, and you go wild pleasuring yourself and Vincent in turn. With your fingers busy, it doesn't take long at all to drive the both of you over the edge entirely, and you start to orgasm at the same time! You moan into your foxy friend's open muzzle as [if Player is male]your cock erupts with volleys of creamy cum, showering yourself, Vincent and the sofa in your own seed. [else if Player is female]you start to gush femcum, soaking the sofa cushions. [else]you tremble uncontrollably. [end if]At the same time, Vincent's prick throbs hard in your squeezing grasp, spurting out long streaks of fresh fox cum that make the mess gloriously complete.";
+			say "     After a little while, once you have caught your breaths and your minds hit the after-orgasm clarity phase, Vincent glances over the two of you, then at the bottle of orc cum that has by now mostly spread its contents over the library floor. 'What a mess, eh? But yeah, this was fun! A real treat!' He hesitates at the last word, looking at the amount of orc cum that got wasted by leaking onto the ground. 'You know, I think it should stay like that too. Just a treat. I mean, if someone chugged even what's left in that bottle in one go, they'd be a spaced-out horny slut for a long while!' Pushing himself off the sofa, the fox takes a step forward before squatting down, giving you a very nice view of his bare buttocks and tail, and he grabs the bottle, holding it up to see how much remains inside. 'How about this - I'll salvage what's left, and see if I can find a cooler bag or something to it'll keep for a while. And then we just microdose on this...'";
+			NPCSexAftermath Vincent receives "Stroking" from Player;
+			TraitGain "Orc Cum Aware" for Vincent;
+			TraitGain "Player Orc Cum User" for Vincent;
+			TraitGain "Hangout_OrcCum_Shared" for Vincent;
+			increase Stamina of Vincent by 1; [small orc cum exposure]
+			ItemLoss orc cum by 1;
+			[]
+		-- "Let's mix things up a little with some orc cum!":
+			LineBreak;
+			say "[VincentOrcCumTrip]";
+
+to say VincentOrcCumTrip:
+	say "     As you bring up wanting to go on an orc cum trip with him again, Vincent's face lights up like a neon sign as he replies, 'Yeah, totally! Let's get this party started!' That said, he scooches over to the end of the sofa and reaches an arm down and back, feeling around for something. With a broad grin, the fox pulls out a bright red square-cornered bag bearing a white cross and the printed-on label of 'Insulin - Temperature Sensitive'. That must have come from an ambulance somewhere, and you can't help but be amazed again about Vincent's ability to get uncommon, useful items. Pulling open the zipper around the lid of the container, he flicks it open, allowing you to see the silvery insulation around a squeeze bottle, as might be found in an arts and crafts store. The creamy white fluid inside that for sure isn't from anywhere that innocent though, and your fox companion did draw a warning label on the bottle too: 'Orc Cum (!) - Use in small doses!'";
+	say "     Chuckling at Vincent's craftiness, you make a grab for the bottle and pull the stopper from its squeezy tip, holding it under your nose to get a whiff of the unmistakable scent of orcish cum. Sticking out your tongue, you squeeze a small amount onto it and let the flavor spread over your tastebuds, closing your eyes to savor the stimulating effects of the white ambrosia. 'It's good stuff, if used in moderation. Thanks again for opening my eyes to that.' Vincent comments and gives your upper arm a friendly squeeze. Flicking open your eyes again, you grin at him and raise the squeeze bottle with a wiggle of your wrist. 'Give me a hit, yeah!' he responds, opening his narrow muzzle eagerly and sticking out the floppy tongue he calls his own. You're perfectly happy to squeeze a nice little dollop of nut-milk onto it, which he quickly closes his mouth around, then swishes inside his maw to enjoy. 'Love the kick of this stuff,' he pants a bit breathily, then gets busy in undoing his pants and shoving the tight garment down his long legs.";
+	WaitLineBreak;
+	say "     [if Player is not naked]You follow Vincent's example and strip down rapidly, [else]You grin at being naked already, giving you ample opportunity to ogle Vincent as he strips down, [end if]then click your tongue to draw the red fox's attention before reaching out to take hold of his shaft. It is nicely firm and warm in your grasp and you begin a slow stroke up and down, putting a pleasure-filled expression on his face. In turn, the slender fox brings his arm over to your own crotch, [if Player is male]wrapping his fingers around your own manhood and [else if Player is female]dipping a finger in between your nether lips while his thumb rubs your clit, [else]rubbing the sexless but nonetheless quite sensitive area [end if]and giving it the attention it needs after the orc cum set your arousal ablaze. After spending a moment in just reveling in the mutual stimulation, servicing each other's bodies, you bring the squeezy bottle up again.";
+	say "     Sticking out your tongue, you surprise Vincent by slathering it with a markedly large amount of tasty seed, winking at him showing you raised eyebrows. Then you plop down the bottle in its container and hook your hand behind his head, pulling the fox in for a sloppy, loaded kiss with lots of tongue. More than eager to participate, the young man welcomes you by sucking your wiggling appendage into his maw, and the two of you get busy making out in orc-cum-fueled ecstasy. At the same time, your mutual masturbation becomes wilder and wilder as arousal mounts and flares from the additional orc cum and having a really great snog with your handsome friend. Panting and moaning sounds fill your corner of the library, intermixed with slurpy noises as Vincent blindly gropes for the bottle to add just a little bit more tasty cream to your tongue-wrestling match. He almost seems hesitant to stop, but then pushes himself to shut the container before throwing the plastic bottle to the side, to land on the sofa somewhere.";
+	WaitLineBreak;
+	say "     This newest infusion of more orc cum into your systems, together with joyfully making out and jerking off, drive your arousal past all restraint. You can't help but hump against Vincent's stroking fingers, while squeezing his erection tightly in turn, and using your thumb to directly stimulate his dickhead, rubbing around its rim and brushing over the cum slit. Tongues wrestling against each other wildly as your make-out session escalates, driving you to orgasm at the same time! You moan into your foxy friend's open muzzle as [if Player is male]your cock erupts with volleys of creamy cum, showering yourself, Vincent and the sofa in your own seed. [else if Player is female]you start to gush femcum, soaking the sofa cushions. [else]you tremble uncontrollably. [end if]At the same time, Vincent's prick throbs hard in your squeezing grasp, spurting out long streaks of fresh fox cum that make the mess gloriously complete.";
+	say "     After a short while, once you have caught your breaths and your minds hit the after-orgasm clarity phase, Vincent glances over the two of you, then slumps back limply against the backrest. 'Man, this is great, you know. Just riding the high together, and taking care of each other equally.' He takes a deep breath, letting out a content sigh and just rests like that for a little while longer, before pushing himself up to his feet. Walking a few steps to the sailor bag with stuff he has sitting in the corner, he digs around in it while you idly wonder where Vincent got that thing, given that it has an anchor crest and the name of a navy ship on its side. 'Aha!' he announces victoriously, dragging a clean towel from the depth of the bag, then comes back to the sofa and offers it to you to clean up with first, waiting patiently before scrubbing himself down after you're done. The cum-soaked towel is then just dropped to the floor next to the sofa, with Vincent commenting, 'I'll throw that out later and get a clean one somewhere.' After that, he puts the orc cum bottle back in its cooler bag and stashes it away too.";
+	NPCSexAftermath Vincent receives "Stroking" from Player;
+	NPCSexAftermath Player receives "Stroking" from Vincent;
+	increase Stamina of Vincent by 1; [small orc cum exposure]
+	if "Hangout_OrcCumMutualMaturbation_Loyalty gained" is not listed in Traits of Vincent:
+		TraitGain "Hangout_OrcCumMutualMaturbation_Loyalty gained" for Vincent;
+		say "     [bold type]The stimulating experience of microdosing on orc cum, and taking care of each other strengthens your connection to Vincent. His trust in you grows. [roman type][line break]";
+		increase Loyalty of Vincent by 1;
 
 Vincent ends here.

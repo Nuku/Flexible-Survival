@@ -125,6 +125,11 @@ to PlayerDrink (N - number):
 	if thirst of Player < 0:
 		now thirst of Player is 0;
 
+to PlayerDrink (N - number) silently:
+	decrease thirst of Player by N;
+	if thirst of Player < 0:
+		now thirst of Player is 0;
+
 to PlayerThirst (N - number):
 	LineBreak;
 	say "     [bold type]Your thirst has increased by [N]![roman type][line break]";

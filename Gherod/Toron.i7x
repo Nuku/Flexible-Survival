@@ -464,7 +464,7 @@ to say DrinkHellfireSwizzle:
 		statchange "Strength" by 2 silently;
 		addAlcPoints 2;
 		now HellfireDrinkTimer is 8;
-		decrease thirst of player by 7;
+		PlayerDrink 7;
 
 to say DrinkOrcishBomber:
 	if carried of obsidian coin < 3:
@@ -479,7 +479,7 @@ to say DrinkOrcishBomber:
 		statchange "Dexterity" by -1 silently;
 		addAlcPoints 3;
 		now HellfireDrinkTimer is 8;
-		decrease thirst of player by 3;
+		PlayerDrink 3;
 
 to say DrinkHeavensKiss:
 	if carried of obsidian coin < 3:
@@ -493,7 +493,7 @@ to say DrinkHeavensKiss:
 		statchange "Charisma" by 3 silently;
 		addAlcPoints 2;
 		now HellfireDrinkTimer is 8;
-		decrease thirst of player by 9;
+		PlayerDrink 9;
 
 to say DrinkBlackAle:
 	if carried of obsidian coin < 5:
@@ -512,7 +512,7 @@ to say DrinkBlackAle:
 		statchange "Charisma" by -2 silently;
 		addAlcPoints 3;
 		now HellfireDrinkTimer is 8;
-		decrease thirst of player by 3;
+		PlayerDrink 3;
 
 to say DrinkTentacularSlushie:
 	if carried of obsidian coin < 5:
@@ -528,7 +528,7 @@ to say DrinkTentacularSlushie:
 		statchange "Charisma" by -2 silently;
 		addAlcPoints 1;
 		now HellfireDrinkTimer is 8;
-		decrease thirst of player by 3;
+		PlayerDrink 3;
 
 to say DrinkPeculiarLiqueur:
 	if carried of obsidian coin < 5:
@@ -544,7 +544,7 @@ to say DrinkPeculiarLiqueur:
 		statchange "Stamina" by -2 silently;
 		addAlcPoints 2;
 		now HellfireDrinkTimer is 8;
-		decrease thirst of player by 1;
+		PlayerDrink 1;
 
 to say DrinkSparklingWater:
 	if carried of obsidian coin < 1:
@@ -554,7 +554,7 @@ to say DrinkSparklingWater:
 		say "     You make a request for a Sparkling Water, a very plain drink that consists of water with sparkles. Tasteless, but refreshing and at room temperature, it quenches your thirst and cleanses your body. 'Right on' say Toron, as he prepares the mix. Adding the water to the glass and a single piece of null essence into it, he then shakes the drink just enough so that the bubbles cover the entire liquid, then adds a drop of some essence he has available. 'This is something I developed to counter the sickening effect of the null essences. Hope you enjoy this one.' he says, sliding the glass towards you. The drink has no smell either, and it stings your nose if you breathe it in too close, just like sparkling water. Well, time to drink it.";
 		say "     It is indeed tasteless, apart from the stinging in your tongue, but it is very refreshing.";
 		now HellfireDrinkTimer is 0;
-		decrease thirst of player by 15;
+		PlayerDrink 15;
 		now Energy of Player is 0;
 		follow the turnpass rule;
 		say "     Any effects from other drinks at the club have been removed.";
@@ -881,6 +881,6 @@ to say tonic of mountainous strength use:
 		say "     Your [bold type]Strength has increased by 10[roman type] for the next 12 hours.";
 		statchange "Strength" by 10 silently;
 		now HellfireDrinkTimer is 4;
-		decrease thirst of player by 1;
+		PlayerDrink 1;
 
 Toron ends here.

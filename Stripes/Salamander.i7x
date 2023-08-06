@@ -400,10 +400,10 @@ to salabind:
 					else:
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 						if a random chance of 2 in 3 succeeds:
-							decrease thirst of Player by 2;
+							PlayerDrink 2 silently;
 							decrease hunger of Player by 1;
 						else:
-							decrease thirst of Player by 1;
+							PlayerDrink 1 silently;
 					now boundrecover is false;
 					SanBoost 3;
 				else:
