@@ -982,9 +982,9 @@ to say VincentDrugTrip:
 	add "Grab Vincent's lighter to look at and play around with. It's neat!" to Vincent_DrugTrip_Choices;
 	add "Pull his muzzle towards you and share the smoke in a kiss." to Vincent_DrugTrip_Choices;
 	if Orc Cum is owned and "Hangout_OrcCum_Shared" is not listed in Traits of Vincent:
-		add "Suggest to share some orc cum from your own stash next..." to Vincent_Hangout_Choices;
+		add "Suggest to share some orc cum from your own stash next..." to Vincent_DrugTrip_Choices;
 	if "Hangout_OrcCum_Shared" is listed in Traits of Vincent:
-		add "Let's mix things up a little with some orc cum!" to Vincent_Hangout_Choices;
+		add "Let's mix things up a little with some orc cum!" to Vincent_DrugTrip_Choices;
 	let Vincent_DrugTrip_Choice be what the player chooses from Vincent_DrugTrip_Choices;
 	if Vincent_DrugTrip_Choice is:
 		-- "Do you really have to do anything? You could just lean back and relax...":
