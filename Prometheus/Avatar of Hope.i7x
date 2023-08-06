@@ -1,7 +1,6 @@
 Version 1 of Avatar of Hope by Prometheus begins here.
 
 [HP of Hope-Born Dragon]
-[HP of Isharielle? Iolanthe? (Angel)]
 [HP of Illiana? (Demon)]
 
 [Update for WalkinEvents table]

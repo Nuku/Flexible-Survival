@@ -99,8 +99,7 @@ to say ResolveEvent Inner Predator:
 			say "     You have the [bold type]Vore Predator[roman type] feat, increasing your hunger growth dramatically. The higher your hunger (and the more often you do it), the more likely you'll be tempted to consume your enemies whole to sate your hunger while also infecting you. You may adjust some vore related settings via the [bold type]vore menu[roman type].";
 			if "Automatic Survival" is listed in feats of Player:
 				say "     [special-style-1]NOTE:[roman type] [bold type]Automatic Survival detected:[roman type] Your hunger will not increase and you'll instead be given a base chance of 25% for vore before other factors.";
-			decrease hunger of Player by a random number between 20 and 28;
-			if hunger of Player < 0, now hunger of Player is 0;
+			PlayerEat 25;
 			SanLoss 10;
 			now researchbypass is 1;
 			infect "Husky Bitch";
@@ -121,8 +120,7 @@ to say ResolveEvent Inner Predator:
 			say "     You have the [bold type]Vore Predator[roman type] feat, increasing your hunger growth dramatically. The higher your hunger (and the more often you do it), the more likely you'll be tempted to consume your enemies whole to sate your hunger while also infecting you. You may adjust some vore related settings via the [bold type]vore menu[roman type].";
 			if "Automatic Survival" is listed in feats of Player:
 				say "     [special-style-1]NOTE:[roman type] [bold type]Automatic Survival detected:[roman type] Your hunger will not increase and you'll instead be given a base chance of 25% for vore before other factors.";
-			decrease hunger of Player by a random number between 20 and 28;
-			if hunger of Player < 0, now hunger of Player is 0;
+			PlayerEat 25;
 			SanLoss 10;
 			now researchbypass is 1;
 			infect "Latex Fox";

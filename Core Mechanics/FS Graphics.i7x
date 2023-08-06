@@ -381,6 +381,10 @@ Figure of Danny_face_icon is the file "Danny_face.jpg".
 Figure of Darius_face_icon is the file "Darius_face.jpg".
 Figure of Darius_clothed_icon is the file "Darius_clothed.jpg".
 Figure of Darius_hard_icon is the file "Darius_hard.jpg".
+Figure of Darius_blissed_clothed_icon is the file "Darius_blissed_clothed.jpg".
+Figure of Darius_blissed_naked_icon is the file "Darius_blissed_naked.jpg".
+Figure of Darius_blissed_hard_icon is the file "Darius_blissed_hard.jpg".
+Figure of Darius_blissed_cum_icon is the file "Darius_blissed_cum.jpg".
 Figure of DarkTyrant_icon is the file "DarkTyrant.jpg".
 Figure of Dash_icon is the file "Dash.jpg".
 Figure of David_naked_icon is the file "David_naked.jpg".
@@ -392,6 +396,30 @@ Figure of David_face_hurt_icon is the file "David_face_hurt.jpg".
 Figure of David_face_naked_icon is the file "David_face_naked.jpg".
 Figure of David_face_casualclothed_icon is the file "David_face_casualclothed.jpg".
 Figure of David_face_icon is the file "David_face.jpg".
+Figure of Davies_angry_clothed1_icon is the file "Davies_angry_clothed1.jpg".
+Figure of Davies_angry_clothed1_preg_icon is the file "Davies_angry_clothed1_preg.jpg".
+Figure of Davies_angry_clothed2_icon is the file "Davies_angry_clothed2.jpg".
+Figure of Davies_angry_clothed2_preg_icon is the file "Davies_angry_clothed2_preg.jpg".
+Figure of Davies_angry_naked_icon is the file "Davies_angry_naked.jpg".
+Figure of Davies_angry_naked_preg_icon is the file "Davies_angry_naked_preg.jpg".
+Figure of Davies_happy_clothed1_icon is the file "Davies_happy_clothed1.jpg".
+Figure of Davies_happy_clothed1_preg_icon is the file "Davies_happy_clothed1_preg.jpg".
+Figure of Davies_happy_clothed2_icon is the file "Davies_happy_clothed2.jpg".
+Figure of Davies_happy_clothed2_preg_icon is the file "Davies_happy_clothed2_preg.jpg".
+Figure of Davies_happy_naked_icon is the file "Davies_happy_naked.jpg".
+Figure of Davies_happy_naked_preg_icon is the file "Davies_happy_naked_preg.jpg".
+Figure of Davies_neutral_clothed1_icon is the file "Davies_neutral_clothed1.jpg".
+Figure of Davies_neutral_clothed1_preg_icon is the file "Davies_neutral_clothed1_preg.jpg".
+Figure of Davies_neutral_clothed2_icon is the file "Davies_neutral_clothed2.jpg".
+Figure of Davies_neutral_clothed2_preg_icon is the file "Davies_neutral_clothed2_preg.jpg".
+Figure of Davies_neutral_naked_icon is the file "Davies_neutral_naked.jpg".
+Figure of Davies_neutral_naked_preg_icon is the file "Davies_neutral_naked_preg.jpg".
+Figure of Davies_scared_clothed1_icon is the file "Davies_scared_clothed1.jpg".
+Figure of Davies_scared_clothed1_preg_icon is the file "Davies_scared_clothed1_preg.jpg".
+Figure of Davies_scared_clothed2_icon is the file "Davies_scared_clothed2.jpg".
+Figure of Davies_scared_clothed2_preg_icon is the file "Davies_scared_clothed2_preg.jpg".
+Figure of Davies_scared_naked_icon is the file "Davies_scared_naked.jpg".
+Figure of Davies_scared_naked_preg_icon is the file "Davies_scared_naked_preg.jpg".
 Figure of Davies_pinup_icon is the file "Davies_pinup.jpg".
 Figure of Davies_pinup_preg_icon is the file "Davies_pinup_preg.jpg".
 Figure of Dmitri_clothed_icon is the file "Dmitri_clothed.jpg".
@@ -486,6 +514,8 @@ Figure of James_icon is the file "james_ig.jpg".
 Figure of Janice_icon is the file "FS_Janice_ig.jpg".
 Figure of Jason_clothed_icon is the file "Jason_clothed.jpg".
 Figure of Jason_naked_icon is the file "Jason_naked.jpg".
+Figure of Jett_soft_icon is the file "Jett_soft.jpg".
+Figure of Jett_hard_icon is the file "Jett_hard.jpg".
 Figure of Jill_icon is the file "Jill.jpg".
 Figure of Jimmy_icon is the file "Jimmy_ig.jpg".
 Figure of Katherine_icon is the file "Katherine.jpg".
@@ -1493,11 +1523,39 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "David_face_naked"	Figure of David_face_naked_icon	"Keitaro87"	g-white	"normal"
 "David_face"	Figure of David_face_icon	"Keitaro87"	g-white	"normal"
 "David_face_casualclothed"	Figure of David_face_casualclothed_icon	"Keitaro87"	g-white	"normal"
+"Davies_angry_clothed1"	Figure of Davies_angry_clothed1_icon	"SteppeCrow"	g-white	"normal"
+"Davies_angry_clothed1_preg"	Figure of Davies_angry_clothed1_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_angry_clothed2"	Figure of Davies_angry_clothed2_icon	"SteppeCrow"	g-white	"normal"
+"Davies_angry_clothed2_preg"	Figure of Davies_angry_clothed2_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_angry_naked"	Figure of Davies_angry_naked_icon	"SteppeCrow"	g-white	"normal"
+"Davies_angry_naked_preg"	Figure of Davies_angry_naked_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_happy_clothed1"	Figure of Davies_happy_clothed1_icon	"SteppeCrow"	g-white	"normal"
+"Davies_happy_clothed1_preg"	Figure of Davies_happy_clothed1_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_happy_clothed2"	Figure of Davies_happy_clothed2_icon	"SteppeCrow"	g-white	"normal"
+"Davies_happy_clothed2_preg"	Figure of Davies_happy_clothed2_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_happy_naked"	Figure of Davies_happy_naked_icon	"SteppeCrow"	g-white	"normal"
+"Davies_happy_naked_preg"	Figure of Davies_happy_naked_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_neutral_clothed1"	Figure of Davies_neutral_clothed1_icon	"SteppeCrow"	g-white	"normal"
+"Davies_neutral_clothed1_preg"	Figure of Davies_neutral_clothed1_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_neutral_clothed2"	Figure of Davies_neutral_clothed2_icon	"SteppeCrow"	g-white	"normal"
+"Davies_neutral_clothed2_preg"	Figure of Davies_neutral_clothed2_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_neutral_naked"	Figure of Davies_neutral_naked_icon	"SteppeCrow"	g-white	"normal"
+"Davies_neutral_naked_preg"	Figure of Davies_neutral_naked_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_scared_clothed1"	Figure of Davies_scared_clothed1_icon	"SteppeCrow"	g-white	"normal"
+"Davies_scared_clothed1_preg"	Figure of Davies_scared_clothed1_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_scared_clothed2"	Figure of Davies_scared_clothed2_icon	"SteppeCrow"	g-white	"normal"
+"Davies_scared_clothed2_preg"	Figure of Davies_scared_clothed2_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_scared_naked"	Figure of Davies_scared_naked_icon	"SteppeCrow"	g-white	"normal"
+"Davies_scared_naked_preg"	Figure of Davies_scared_naked_preg_icon	"SteppeCrow"	g-white	"normal"
 "Davies_pinup"	Figure of Davies_pinup_icon	"SteppeCrow"	g-white	"normal"
 "Davies_pinup_preg"	Figure of Davies_pinup_preg_icon	"SteppeCrow"	g-white	"normal"
 "Demon Brute"	Figure of DemonBrute_icon	"Lay"	g-black	"normal"
 "Darius_clothed"	Figure of Darius_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Darius_hard"	Figure of Darius_hard_icon	"SteppeCrow"	g-white	"normal"
+"Darius_blissed_clothed"	Figure of Darius_blissed_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Darius_blissed_naked"	Figure of Darius_blissed_naked_icon	"SteppeCrow"	g-white	"normal"
+"Darius_blissed_hard"	Figure of Darius_blissed_hard_icon	"SteppeCrow"	g-white	"normal"
+"Darius_blissed_cum"	Figure of Darius_blissed_cum_icon	"SteppeCrow"	g-white	"normal"
 "Dark Elf"	Figure of DarkElf_icon	"Nokturnalkittie"	g-black	"normal"
 "Darkelf_red_clothed"	Figure of Darkelf_red_clothed_icon	"Moirah"	g-white	"normal"
 "Darkelf_red_hard"	Figure of Darkelf_red_hard_icon	"Moirah"	g-white	"normal"
@@ -1676,6 +1734,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Jennifer_preg_clothed"	Figure of Jennifer_preg_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Jennifer_preg_naked"	Figure of Jennifer_preg_naked_icon	"SteppeCrow"	g-white	"normal"
 "Jennifer"	Figure of Jennifer_icon	"Waxraven/WXRVN"	g-white	"normal"
+"Jett_soft"	Figure of Jett_soft_icon	"Gherod"	g-dark-gray	"normal"
+"Jett_hard"	Figure of Jett_hard_icon	"Gherod"	g-dark-gray	"normal"
 "Jill"	Figure of Jill_icon	"Sususmiles"	g-white	"normal"
 "Jimmy"	Figure of Jimmy_icon	"Redragon"	g-white	"normal"
 "Karel&Isaac_clothed"	Figure of Karel&Isaac_clothed_icon	"Reaper3d"	g-white	"normal"
@@ -2812,6 +2872,7 @@ carry out artistcredits:
 	say "     Janice by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Jason by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Jay by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
+	say "     Jett by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
 	say "     Jill by Sususmiles @ furaffinity.net[line break]";
 	say "     Jimmy by Redragon @ ???[line break]";
 	say "     Katherine by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";

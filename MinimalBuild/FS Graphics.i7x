@@ -572,7 +572,7 @@ Figure of Nermine_naked_icon is the file "Nermine_naked.jpg".
 Figure of Nermine_naked_face_icon is the file "Nermine_naked_face.jpg".
 Figure of Newt_icon is the file "Newt_ig.jpg".
 Figure of Micaela_icon is the file "micaela_ig.jpg".
-Figure of Orc_Brothers_clothed_icon is the file "Orc_Brothers_naked.jpg".
+Figure of Orc_Brothers_clothed_icon is the file "Orc_Brothers_clothed.jpg".
 Figure of Orc_Brothers_naked_icon is the file "Orc_Brothers_naked.jpg".
 Figure of Orbul_clothed_icon is the file "Orbul_clothed.jpg".
 Figure of Orbul_naked_icon is the file "Orbul_naked.jpg".

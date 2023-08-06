@@ -844,6 +844,7 @@ Include Gwen by Prometheus.
 Include Hadiya by Stripes.
 Include Hanu by Kernog.
 Include Harold by Sarokcat.
+Include Hazel Summers by Prometheus.
 Include Hayato by Gherod.
 Include Helen by Wahn.
 Include Hellfire Workers by Gherod.
@@ -866,6 +867,7 @@ Include Janice by Sarokcat.
 Include Jake by Rikaeus.
 Include Jay by Wahn.
 Include Jenna by Rikaeus.
+Include Jett by Gherod.
 Include Jimmy by Prometheus.
 Include Joanna by Stripes.
 Include Joey by Qazarar.
@@ -966,6 +968,7 @@ Include Sirius by Prometheus.
 Include Skarnoth by Wahn.
 Include Skarnoth Loyalty by Luneth.
 Include Skarnoth-Brutus Scenes by Luneth.
+Include Solariel by Prometheus.
 Include Solstice by Stripes.
 Include Sonny by Rikaeus.
 Include Spike by Wahn.

@@ -97,7 +97,7 @@ to say ResolveEvent loaded catapult:
 		say "You could drink some of the reeking liquids, though that would not be without consequences for your health.";
 		if Player consents:
 			say "Overcoming your disgust, you dip your [FaceSpeciesName of Player in lower case] head into the mess, slurping it up.";
-			decrease thirst of Player by 25;
+			PlayerDrink 25;
 			SanLoss 10;
 			if "Iron Stomach" is not listed in feats of Player:
 				weakrandominfect;

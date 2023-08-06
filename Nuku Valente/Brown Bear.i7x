@@ -317,9 +317,8 @@ Usedesc of honeycomb is "[honeycombuse]";
 
 to say honeycombuse:
 	say "You are overcome with the need for sweetness. The sticky goodness of the honeycomb makes you drool as you shove it into your suddenly hungry mouth.";
-	decrease hunger of Player by 6;
-	if hunger of Player < 0, now hunger of Player is 0;
-	increase thirst of Player by 1;
+	PlayerEat 6;
+	PlayerThirst 1;
 
 instead of sniffing honeycomb:
 	say "The small piece of honeycomb smells like a sweet smackerel of honey. You don't notice anything unusual or infected about its odor.";

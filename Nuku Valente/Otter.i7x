@@ -342,8 +342,7 @@ usedesc of Tasty Fish is "[Fish]".
 Purified of Tasty Fish is "food".
 
 To say Tasty Fish:
-	decrease hunger of Player by 15;
-	if hunger of Player < 0, now hunger of Player is 0;
+	PlayerEat 15;
 
 instead of sniffing Tasty Fish:
 	say "It smells like a fish, somehow still fresh if a little odd... strangely reminding you of otters.";

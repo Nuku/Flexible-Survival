@@ -150,7 +150,7 @@ CherryTea is a number that varies. CherryTea is usually 0.[@Tag:NotSaved]
 instead of conversing Cherry:
 	if CherryTea - turns < 7:
 		say "     You take a seat on her couch, on one of the sides of the small table in the center. Cherry comes by and offers you some [one of]herbal[or]black[or]green[or]infusion[at random] tea she just made. 'Here, have some.' she says, before she takes her seat on the opposite side. 'So, how is the world out there treating you? Hopefully you haven't run into too much trouble...'";
-		decrease thirst of Player by 15;
+		PlayerDrink 15;
 		now CherryTea is turns;
 	else:
 		say "     You take a seat on her couch, on one of the sides of the small table in the center. 'Did you want to talk?' she asks, focusing her attention on you.";
