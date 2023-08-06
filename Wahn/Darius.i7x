@@ -950,7 +950,7 @@ to say BlissedDariusSexMenu:
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him (old version)";
-		now sortorder entry is 5;
+		now sortorder entry is 20;
 		now description entry is "Take the Dalmatian's ass";
 	[]
 	sort the table of fucking options in sortorder order;

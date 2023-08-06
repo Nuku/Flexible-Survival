@@ -17,10 +17,13 @@ Version 1 of Vincent by Wahn begins here.
 [ Energy of Vincent - Tracking for when the player hung out with him                    ]
 [ Stamina of Vincent - Tracking for how many (small) exposures to orc cum he had        ]
 
+
 a postimport rule: [bugfix for old imports]
 	if "Ruth & Keitao Story Told" is listed in Traits of Vincent and "Sexual Rent" is not listed in Traits of Vincent and "Sextalk Loyalty Bonus Given" is not listed in Traits of Vincent:
 		increase Loyalty of Vincent by 1; [bonus point for players who rejected sexual blackmail with Vincent before the Loyalty point for that was introduced]
 		TraitGain "Sextalk Loyalty Bonus Given" for Vincent; [to make sure the player only gets one point, retrofitted in the postimport rule, or in the scene as planned]
+		if debugactive is 1:
+			say "     DEBUG -> Loyalty of Vincent is now: [Loyalty of Vincent] <- DEBUG[line break]";
 
 Section 1 - Aftermath of the Orc Raid
 
@@ -196,11 +199,14 @@ Sterile of Vincent is false. [steriles can't knock people up]
 MainInfection of Vincent is "Orc Breeder".
 Description of Vincent is "[VincentDesc]".
 Conversation of Vincent is { "Mew!" }.
+Energy of Vincent is 2500.
 
 instead of sniffing Vincent:
 	say "     Vincent has a slightly animalistic scent of clean fur.";
 
 to say VincentDesc:
+	if debugactive is 1:
+		say "     DEBUG -> Loyalty: [Loyalty of Vincent] <- DEBUG[line break]";
 	say "     Vincent is a an anthro fox with a wiry frame, wearing a black sleeveless t-shirt with some band's black and white logo printed on the front, as well as a somewhat ragged pair of jeans to cover his slender legs. Being clearly built more for speed than any great amount of strength, he must have found it a challenge to survive in a city turned feral, with all sorts of monstrous and brutish beings battling it out on the streets day by day. He has a sly look to him, with attentive eyes carefully observing his surroundings, but sometimes all the cunning in the world can't save you, as evidenced by the fact that you first met him as a captive of three orc brothers...";
 	say "     As Vincent notices your intense gaze upon him, he gives you a two-finger salute, combined with a friendly smirk on his muzzle. The scrappy fox knows to give you an appropriate level of respect to the person who saved him from a future as an orc slave, and who's now giving him refuge.";
 
@@ -307,6 +313,8 @@ to say Vincent_BackgroundTalk1: [ask about him]
 		say "     [bold type]You get the feeling that showing interest in Vincent's past has elevated you at least a little from being just a random acquaintance in his eyes. [roman type][line break]";
 		increase Loyalty of Vincent by 1;
 		TraitGain "Background Story Told" for Vincent;
+		if debugactive is 1:
+			say "     DEBUG -> Loyalty of Vincent is now: [Loyalty of Vincent] <- DEBUG[line break]";
 
 to say Vincent_BackgroundTalk2:
 	say "     The topic you bring up seems to leave a bit of a bad taste in Vincent's mouth, as he draws a grimace, then starts to talk after a little pause. 'Humanity was already a bunch of assholes before this shit went down, and most of what I've seen while living on the streets since didn't change my mind for the better. I mean, one can almost excuse all the feral critters, they don't know any better, but many of those who're still fairly human mentally are... utter gutter scum.' A scowl creeps over Vincent's features, not directed at you, but rather someone else. 'I mean - I was at work when I changed, and two coworkers also got hit, Ruth and Keitao. She turned into some sort of... marsupial? Furry, big boobs. And he became a snake-thing, but with arms and legs. Dangerous one too - Mojave green pit viper! Didn't know then that he was showing his true self, the fork-tongued bastard!'";
@@ -548,6 +556,8 @@ to say VincentSexTalk:
 			say "     'Sorry for bringing up that fucked-up story. I just - I apologize for thinking you'd... you know. All of this hasn't exactly been easy for me, and I guess I fell into a certain frame of mind. Can't be disappointed at least, if you always expect the worst from people.' He looks aside, scratching the back of his neck in embarrassment. 'So, yeah. Bet you must think I'm a total ass, but... if you still wanted to do stuff, that'd be fine by me. Would be kinda refreshing just to do it because we felt like it, instead of as a transaction.' As you raise your eyebrows at those last words, Vincent shrugs unapologetically. 'Told ya, surviving's hard out there. I'm good with my tongue, so I always had something to trade, when I needed to. Better than going hungry, that's for sure.' He presses his lips together, then quickly adds, 'Anyways, I think I'll take a walk in the garden for a while. But yeah, see ya later.' That said, he leaves for now, needing a little time alone.";
 			say "     [bold type]Pointedly rejecting Vincent's expectation of sexual blackmail has raised your status in his eyes a little. [roman type][line break]";
 			increase Loyalty of Vincent by 1;
+			if debugactive is 1:
+				say "     DEBUG -> Loyalty of Vincent is now: [Loyalty of Vincent] <- DEBUG[line break]";
 			TraitGain "Ruth & Keitao Story Told" for Vincent;
 			TraitGain "Sextalk Loyalty Bonus Given" for Vincent; [to make sure the player only gets one point, retrofitted in the postimport rule, or in the scene as planned]
 		-- "You'd have said it in somewhat nicer words, but... a little 'appreciation' for you would endear him as a long-term guest.":
@@ -588,6 +598,8 @@ to say Vincent_OrcCumOffer:
 					say "     Rolling his eyes, Vincent grumbles, 'If and when I use any drugs is MY choice, and I always want to know what the hell it is beforehand! Really not cool that you've tried springing this on me as a surprise! Keep that stuff to yourself in the future! I'm out of here to get some fresh air!' With a displeased grunt, the fox stalks off.";
 					say "     [bold type]Clearly, Vincent trusts you less now. [roman type][line break]";
 					decrease Loyalty of Vincent by 1;
+					if debugactive is 1:
+						say "     DEBUG -> Loyalty of Vincent is now: [Loyalty of Vincent] <- DEBUG[line break]";
 					TraitGain "Orc Cum Aware" for Vincent;
 					TraitGain "Drugging Attempt" for Vincent;
 				-- "Just force him to drink the cum! He'll be far mor pliable once you got him hooked on the stuff!":
@@ -599,6 +611,8 @@ to say Vincent_OrcCumOffer:
 			say "     As you approach him again with orc cum, Vincent's expression hardens and he shows you his teeth. 'Back again with that shit? I told you no, and you're not exactly making a good impression, touting that bottle around like its free samples of heroin!' With a displeased grunt, the fox stalks off.";
 			say "     [bold type]Clearly, Vincent trusts you less now. [roman type][line break]";
 			decrease Loyalty of Vincent by 1;
+			if debugactive is 1:
+				say "     DEBUG -> Loyalty of Vincent is now: [Loyalty of Vincent] <- DEBUG[line break]";
 		else if "Player Orc Cum User" is listed in Traits of Vincent: [see above]
 			[
 			if Loyalty of Vincent > 10: [TODO: adapt value as needed when the content is written]
@@ -734,6 +748,8 @@ to say VincentGetsBJ: [Player goes down on him]
 		say "     [bold type]Seeing the happy grin on the fox's face, and a bit of a special gleam in his eye, you can't help but think you earned a solid point of Vincent's favor. [roman type][line break]";
 		increase Loyalty of Vincent by 1;
 		TraitGain "First BJ Received" for Vincent;
+		if debugactive is 1:
+			say "     DEBUG -> Loyalty of Vincent is now: [Loyalty of Vincent] <- DEBUG[line break]";
 	NPCSexAftermath Player receives "OralCock" from Vincent;
 
 to say VincentSex1: [fucking him]
@@ -828,6 +844,8 @@ to say Vincent_WeedTrade_Interrupt:
 			say "     For a second, Vincent simply stares at you, eyebrows rising in disbelief. 'Are you fucking serious?' comes next, almost as a shout, followed by the scruffy fox taking a deep breath and letting it out in a hiss. 'The whole city is basically rape-fest 3000, with constant boning for anyone who can't watch out for themselves! I know the fucking place is called the 'Grey Abbey', but I didn't know I was entering a convent! What makes you think you have any right to determine what I do or do not do with someone else?!' As you open your mouth, he raises a hand and throws some more words at you: 'I don't want to hear it! Do you know how fucking difficult it is to even find a dealer who still is mostly sane and not a drooling fuck-monster? I could really have used a little something to take the edge off the awesome certainty that we're all so very fucked by this situation! Aaargh!' Growling at you, the fox then stalks off to the library, and you follow a little distance behind him.";
 	say "     [bold type]Clearly, Vincent trusts you less now. [roman type][line break]";
 	decrease Loyalty of Vincent by 1;
+	if debugactive is 1:
+		say "     DEBUG -> Loyalty of Vincent is now: [Loyalty of Vincent] <- DEBUG[line break]";
 	now Resolution of Vincent_WeedTrade_Intro is 100; [interrupted, no more deals (at least where the player sees them)]
 
 to say Vincent_WeedTrade_BJ:
@@ -865,6 +883,8 @@ to say Vincent_WeedTrade_Talk:
 			say "     Giving Vincent a pointed glance, you say that you've got a good guess at what he's got in his pockets right now. The fox tenses up a little bit, unsure if that means you'll have some sort of issue, but you quickly quell his worries with a smile while touching his shoulder in camraderie. As the two of you start walking back to the library, you casually make a comment that you could also use something to take the edge off, so if he's ever in the mood for some company while smoking, he might think of you. With a little chuckle, the fox nods and lightly pats his pants pocket. 'I'll be sure to remember that,' he says with a smile on his muzzle, just before stepping back into the building.";
 			say "     [bold type]After establishing a bit of a connection with Vincent through common interests, he trusts you a little more. [roman type][line break]";
 			increase Loyalty of Vincent by 1;
+			if debugactive is 1:
+				say "     DEBUG -> Loyalty of Vincent is now: [Loyalty of Vincent] <- DEBUG[line break]";
 			now Resolution of Vincent_WeedTrade_Intro is 1; [Player okay with weed, wants to share]
 		-- "You know what he really traded for. Not your thing personally, but he can do what he likes...":
 			LineBreak;
@@ -875,6 +895,8 @@ to say Vincent_WeedTrade_Talk:
 			say "     A smirk plays over your lips as you look at Vincent, then add that you saw what he did in the alley. 'Oh?' he replies, tensing up a little bit as he's unsure what you'll make of this. 'It was just some business. I'm not a nympho or something like that!' the fox adds somewhat defensively, then pats the side of his muzzle. 'I'm good at it, especially now since I got this thing. Trading a BJ or two kept me from going hungry more than once, and I don't really mind if the guy's at least halfway presentable, you know?' This is the point at which you reach out to reach out to give Vincent's shoulder a squeeze and tell him to relax. You're not holding this against him, but it was kinda hot to observe. Relief is written large on his face as he gives you a grin, followed by the words, 'Ah, so you like to watch? I'll keep that in mind!' With a wink and a light fist-bump against your shoulder, the slender man then gets going to the library and you follow close behind.";
 			say "     [bold type]After establishing a bit of a connection with Vincent through common interests, he trusts you a little more. [roman type][line break]";
 			increase Loyalty of Vincent by 1;
+			if debugactive is 1:
+				say "     DEBUG -> Loyalty of Vincent is now: [Loyalty of Vincent] <- DEBUG[line break]";
 			now Resolution of Vincent_WeedTrade_Intro is 2; [Player okay with sexual trades, wants to watch]
 		-- "You saw what he traded for (and wouldn't mind some yourself), and liked watching him give the guy a blowjob.":
 			LineBreak;
@@ -882,17 +904,17 @@ to say Vincent_WeedTrade_Talk:
 			say "     As the two of you move down the street, you casually make a comment that you could also use something to take the edge off, so if he's ever in the mood for some company while smoking, he might think of you. With a little chuckle, the fox nods and lightly pats his pants pocket. 'I'll be sure to remember that,' he says with a smile on his muzzle, just before stepping back into the building.";
 			say "     [bold type]After establishing a bit of a connection with Vincent through common interests, he trusts you a little more. [roman type][line break]";
 			increase Loyalty of Vincent by 1;
+			if debugactive is 1:
+				say "     DEBUG -> Loyalty of Vincent is now: [Loyalty of Vincent] <- DEBUG[line break]";
 			now Resolution of Vincent_WeedTrade_Intro is 3; [Player okay with sexual trades AND weed, wants to watch/smoke]
 		-- "You know that he traded sex. It's his decision to do so, but you don't really want to see that...":
 			LineBreak;
 			say "     Giving Vincent a pointed glance, you say that you're aware of what sort of transaction he performed with that person in the alley. The fox tenses up a little bit, unsure if that means you'll have some sort of issue over things, but you quickly quell his worries with a neutral shrug. Clearing your throat, you casually comment that what he's doing his his business, but that you yourself are not keen on seeing such things happen in front of you. 'Oh. Well then, I'll be more... discreet, from now on,' the fox replies, somewhat relieved that there won't be an issue over this between you. With nothing more to be said, you both make your way back to the library.";
 			now Resolution of Vincent_WeedTrade_Intro is 97; [Player okay with weed, but doesn't want to see it]
 
-
-
 Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-2	"Vincent_Hangout_Intro"	Vincent_Hangout_Intro	"[EventConditions_Vincent_Hangout_Intro]"	Garden View	2500	2	40
+2	"Vincent_Hangout_Intro"	Vincent_Hangout_Intro	"[EventConditions_Vincent_Hangout_Intro]"	Garden View	2500	2	100
 
 to say EventConditions_Vincent_Hangout_Intro:
 	if Vincent is collected and Loyalty of Vincent > 2: [list of conditions here]
@@ -904,6 +926,7 @@ Vincent_Hangout_Intro	"Vincent_Hangout_Intro"
 
 Vincent_Hangout_Intro is a situation.
 Prereq1 of Vincent_Hangout_Intro is Vincent_WeedTrade_Intro.
+Prereq1Resolution of Vincent_Hangout_Intro is { 1, 2, 3, 97, 98, 99, 100 }.
 ResolveFunction of Vincent_Hangout_Intro is "[ResolveEvent Vincent_Hangout_Intro]".
 Sarea of Vincent_Hangout_Intro is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
 
@@ -968,6 +991,8 @@ to say VincentHangout:
 			TraitGain "Hangout_Loyalty gained" for Vincent;
 			say "     [bold type]Hanging out with Vincent has strengthened your bond with each other, and he trusts you a little more. [roman type][line break]";
 			increase Loyalty of Vincent by 1;
+			if debugactive is 1:
+				say "     DEBUG -> Loyalty of Vincent is now: [Loyalty of Vincent] <- DEBUG[line break]";
 		now Energy of Vincent is turns; [timer for repeat visits]
 
 to say VincentDrugTrip:
@@ -1004,6 +1029,8 @@ to say VincentDrugTrip:
 				TraitGain "Hangout_WeedMakeout_Loyalty gained" for Vincent;
 				say "     [bold type]After that shared trip, you can't help but feel more connected to Vincent, and he's clearly seeing things the same way, increasing the trust the fox has for you. [roman type][line break]";
 				increase Loyalty of Vincent by 1;
+				if debugactive is 1:
+					say "     DEBUG -> Loyalty of Vincent is now: [Loyalty of Vincent] <- DEBUG[line break]";
 			[]
 		-- "Suggest to share some orc cum from your own stash next...":
 			LineBreak;
@@ -1048,5 +1075,7 @@ to say VincentOrcCumTrip:
 		TraitGain "Hangout_OrcCumMutualMaturbation_Loyalty gained" for Vincent;
 		say "     [bold type]The stimulating experience of microdosing on orc cum, and taking care of each other strengthens your connection to Vincent. His trust in you grows. [roman type][line break]";
 		increase Loyalty of Vincent by 1;
+		if debugactive is 1:
+			say "     DEBUG -> Loyalty of Vincent is now: [Loyalty of Vincent] <- DEBUG[line break]";
 
 Vincent ends here.
