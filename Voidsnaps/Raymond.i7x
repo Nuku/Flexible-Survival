@@ -149,7 +149,7 @@ when play begins:
 	now type entry is "rodent";
 	now magic entry is false;
 	now resbypass entry is false;
-	now non-infectious entry is true;
+	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0;
 	now altcombat entry is "default";
@@ -195,69 +195,72 @@ to say ResolveEvent Yours Forever:
 	Now Yours Forever is resolved;
 
 to say Raymond_FuckMenu:
-	say "     [bold type]As Raymond looks up at you with adoration shining in his eyes, you can't help but feel like taking advantage of his desire for closeness. What should you do with him?[roman type][line break]";
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Player is male:
+	if lastfuck of Raymond - turns < 4:
+		say "     Raymond stops you just as you start to think of sex, before you can express your desire out loud. 'As much as I'd truly love to please you, I'm afraid you'll have to wait a bit.' He says, his voice ringing in your head somewhat regretfully.";
+	else:
+		say "     [bold type]As Raymond looks up at you with adoration shining in his eyes, you can't help but feel like taking advantage of his desire for closeness. What should you do with him?[roman type][line break]";
+		LineBreak;
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if Player is male:
+			choose a blank row in table of fucking options;
+			now title entry is "Ask Raymond if you can fuck him";
+			now sortorder entry is 1;
+			now description entry is "That skinny mouse butt looks fun to play with.";
+		[]
+		if player is female:
+			choose a blank row in table of fucking options;
+			now title entry is "Ask Raymond if he'll breed you";
+			now sortorder entry is 2;
+			now description entry is "You've got an itch you need scratched. Ask Raymond to ease it";
+		[]
+		if "Orgy Talk" is listed in Traits of Raymond:
+			choose a blank row in table of fucking options;
+			now title entry is "Ask Raymond if he'll let his brothers join in";
+			now sortorder entry is 3;
+			now description entry is "Your libido and 6 mousey studs, which will win";
+		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Ask Raymond if you can fuck him";
-		now sortorder entry is 1;
-		now description entry is "That skinny mouse butt looks fun to play with.";
-	[]
-	if player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Ask Raymond if he'll breed you";
-		now sortorder entry is 2;
-		now description entry is "You've got an itch you need scratched. Ask Raymond to ease it";
-	[]
-	if "Orgy Talk" is listed in Traits of Raymond:
-		choose a blank row in table of fucking options;
-		now title entry is "Ask Raymond if he'll let his brothers join in";
-		now sortorder entry is 3;
-		now description entry is "Your libido and 6 mousey studs, which will win";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Suck Raymond's dick";
-	now sortorder entry is 4;
-	now description entry is "That moutwatering half-foot of mouse cock is calling your name. Answer the call";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
+		now title entry is "Suck Raymond's dick";
+		now sortorder entry is 4;
+		now description entry is "That moutwatering half-foot of mouse cock is calling your name. Answer the call";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if (nam is "Ask Raymond if he'll breed you"):
+						say "[RaymondPussyFuck]";
+					else if (nam is "Suck Raymond's dick"):
+						say "[RaymondSuckOff]";
+					else if (nam is "Ask Raymond if you can fuck him"):
+						say "[RaymondAssFuck]";
+					else if (nam is "Ask Raymond if he'll let his brothers join in"):
+						say "[RaymondOrgy]";
+					wait for any key;
+			else if calcnumber is 0:
 				now sextablerun is 1;
-				if (nam is "Ask Raymond if he'll breed you"):
-					say "[RaymondPussyFuck]";
-				else if (nam is "Suck Raymond's dick"):
-					say "[RaymondSuckOff]";
-				else if (nam is "Ask Raymond if you can fuck him"):
-					say "[RaymondAssFuck]";
-				else if (nam is "Ask Raymond if he'll let his brothers join in"):
-					say "[RaymondOrgy]";
+				say "     You step back from the mouse, deciding on a different course of action.";
 				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step back from the mouse, deciding on a different course of action.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+		clear the screen and hyperlink list;
 
 
 to say Raymond_TalkMenu:
-	say "     [bold type]As Sascha tilts his head and stares up at you from the red couch, you ponder what you want to do with him.[roman type][line break]";
+	say "     [bold type]As Raymond tilts his head and looks up at you, you ponder what you want to talk about.[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -313,7 +316,7 @@ Section 4 - Raymond Sex Scenes
 
 to say RaymondPussyFuck: [Getting a wombful of Raymond's seed.]
 	say "     Shyly, you approach the nude mouse, stumbling over your words as you try to articulate what you want him to do to you. It's strange, but you feel like a blushing bride before him. Maybe it has something to do with his ability to rifle through your thoughts. Or perhaps he's inserting this feeling himself. 'I know what you need, dearest.' Raymond says before you can get the words out, amusement written across his face as he bustles you to a nearby booth away from his brothers but still exposed enough that the exhibitionism brings a blush to your cheeks. With surprising strength for his short stature, he pushes you backward[if Player is barecrotch], spreading your knees and trailing soft pink fingers over your sex. [else]making quick work of your pants to expose you to his wandering gaze. [end if]'You're in heat, aren't you? So wet and needy that you can't resist me?'";
-	say "     You open your mouth to protest, sure that you're not feeling anything of the sort, but a gnawing feeling in your stomach starts as his words echo through your head. Instead of whatever you were planning to say, a whimper leaves your lips, and you clench your sex, suddenly aware of a flood of wetness drooling down your sopping-wet pussy and over your exposed ass. When did you get so aroused? 'There it is. So delightfully honest.' Raymond coos, his stoic expression taking on a more lusty tint as he lines himself up, letting his awakening dick grow against your aching clitoris. The slightest touch burns through you, and you barely suppress the desire to yank him toward you, to get that mouse cock to fill your needy cunt. 'Relax, dearest.' Raymond guides his dickhead to kiss against your clitoris, perching on the edge of the seat with the aid of dextrous rodent paws. [if Size of Player > 2]Despite your size difference, you can't help but feel a delicious thrill at being dominated. A tapered cock that shouldn't satisfy you feels like the best you've ever seen, and those heavy rodent balls brushing against your upturned ass make you feel like you're going to gush.[end if][line break]";
+	say "     You open your mouth to protest, sure that you're not feeling anything of the sort, but a gnawing feeling in your stomach starts as his words echo through your head. Instead of whatever you were planning to say, a whimper leaves your lips, and you clench your sex, suddenly aware of a flood of wetness drooling down your sopping-wet pussy and over your exposed ass. When did you get so aroused? 'There it is. So delightfully honest.' Raymond coos, his stoic expression taking on a more lusty tint as he lines himself up, letting his awakening dick grow against your aching clitoris. The slightest touch burns through you, and you barely suppress the desire to yank him toward you, to get that mouse cock to fill your needy cunt. 'Relax, dearest.' Raymond guides his dickhead to kiss against your clitoris, perching on the edge of the seat with the aid of dextrous rodent paws. [if scalevalue of Player > 2]Despite your size difference, you can't help but feel a delicious thrill at being dominated. A tapered cock that shouldn't satisfy you feels like the best you've ever seen, and those heavy rodent balls brushing against your upturned ass make you feel like you're going to gush.[end if][line break]";
 	WaitLineBreak;
 	say "     Raymond saws his cock between your nether lips with slow, gentle patience, bringing his cock up to gently tap against your throbbing clit and showing off the glistening layer of wetness you've coated it in. 'You're so ready for me already. I bet this is the best you've ever had.' Prodding at your entrance, he punctuates his unspoken dirty talk with mock thrusts that drive you wild. Gods, you never knew a dick could feel this good. Every inch needs to be inside you immediately, and with the heat coming over you, you can't think about anything else. Digging your fingers into the faux leather booth, you buck your hips, hoping to capture that gloriously hard cock. 'Needy thing.' Raymond says, bringing a string of pussy juice to his lips and licking it clean with an air of dominance that makes your stomach clench- your womb is begging. 'It's alright. You'll get everything you want.' He says, his mental voice taking on a lustier, huskier tone as he surges forward, filling you [if scalevalue  of Player <= 2]to the brim with melting pleasure [else]with an average amount of dick that should be nothing special but radiates sensations you've never experienced before[end if].";
 	say "     With practiced ease, Raymond explores your cunt with slow, measured thrusts, creating a wet symphony that serves as the soundtrack for your ecstasy. Every thrust is like a miniature orgasm, twisting your guts into knots, and you find yourself bucking into each one, forcing six inches of delving mouse cock to the base. You're not sure how long your pussy clenches and gushes for him, but when he pulls out, it almost hurts. Whimpering, you look down, fixing your gaze on that glistening pink cock. You need it back inside, and you don't care how you get it! With a desperate mewl, you grab his hips, slamming him home again and wrapping your thighs around his slim waist, unwilling and unable to let him stop.";
@@ -351,7 +354,7 @@ to say RaymondOrgy:
 	say "     You whimper, but your open mouth provides the perfect target for the next mouse, a soft, boyish one with eager thrusts that tap against the back of your throat without a care for your gag reflex, which seems suppressed. The others follow suit, and you find yourself mashed between rutting bodies. One grinds their dick against your chest, while two more claim your hands, thrusting against increasingly slippery fingers and holding your hips open for the pounding mouse between your legs.  Your desperate bits are hardly forgotten. [if Player is male]The pounding cock massaging your prostate forces plenty of lube for the smallest of the mice to sit on your needy dick and capture it in tight, silky depths.[end if] [if Player is female]Your sweet pussy welcomes a hard dicking from another, singing in bliss as he alternates with the man in your ass, basting your womb in liquid desire. [end if]It's already overwhelming, but a familiar voice brushes your mind like hot velvet, tinged with unadulterated lust.";
 	say "     'My sweet. You don't understand how crazy you make us. Allow me to show you.' Raymond's voice gives way instantly to something so powerful you moan around the cock pistoning your throat. Every sensation wrung from your body by the five men rushes you at once, alongside their voices, and you shudder as you realize you can feel every cock as though it were your own. 'So tight. Need more.' 'Beautiful fingers. Harder.' 'Clench for me, baby.' [if Player is male]'Cum inside me!' [end if]All at once, they beg for your attention, adjusting your efforts through dirty talk laden instructions and bringing your shared pleasure to greater heights. It's too much. Before long, you feel a white-hot fuzziness spreading across your mind. Lusty brain fog that only lets you pleasure your audience.";
 	WaitLineBreak;
-	say "     The mouse in your ass is the first to cum, (wringing a sympathetic load from your cock into the rough rider mashing his ass against your balls(and)setting your pussy to gushing around the pistoning male inside it, goading him to baste your womb in a thick load.) The mouse grinding himself on your chest is next, painting a mosaic across your nipples before the two in your hands join him, painting the mouse on your face's upturned ass and adding to the mess. The mess on his cheeks brings the final domino toppling, and you gulp down a heavy load, so cum-drunk that you feel it drooling from your nose. You whimper in confusion as the mice pull away from your grip, your pleasure-overloaded mind begging for more but instantly regretting your needy thoughts as your ass spreads again. They're far from done with you! As slick cock after slick cock penetrates every hole you offer, you grow further away from your physical shell, drowning in need and experiencing endless orgasms with the men ravaging your body. Overwhelmed and barely able to stay conscious, you let yourself drift, blacking out despite the bodies still eagerly using yours.";
+	say "     The mouse in your ass is the first to cum [if player is herm]sending your dual sexes to new heights as you experience both masculine and feminine orgasms at the same time, accompanied by the mice tending to them. [else if player is puremale]wringing a sympathetic load from your cock into the rough rider mashing his ass against your crotch.[else if player is purefemale]setting your pussy to gushing around the pistoning male inside it, goading him to baste your womb in a thick load. [end if]The mouse grinding himself on your chest is next, painting a mosaic across your nipples before the two in your hands join him, painting the mouse on your face's upturned ass and adding to the mess. The mess on his cheeks brings the final domino toppling, and you gulp down a heavy load, so cum-drunk that you feel it drooling from your nose. You whimper in confusion as the mice pull away from your grip, your pleasure-overloaded mind begging for more but instantly regretting your needy thoughts as your ass spreads again. They're far from done with you! As slick cock after slick cock penetrates every hole you offer, you grow further away from your physical shell, drowning in need and experiencing endless orgasms with the men ravaging your body. Overwhelmed and barely able to stay conscious, you let yourself drift, blacking out despite the bodies still eagerly using yours.";
 	WaitLineBreak;
 	say "     'Apologies, dearest. It seems that our efforts erased some of that fierce independence I love so much about you.' Raymond takes a shaky breath, and you realize he's on the edge. Your mental bond tells you he's been staring into the abyss for a while, and his cock will explode any second. Has he been waiting until you were awake to taste it? The thought flushes your face, and you suckle appreciatively, eager to receive everything he wants to give you. 'Yess.' Raymond's voice takes on a hiss, and he explodes against your throat, the excess sloppily bubbling from your lips to join the cum dripping from your nose and coating your chin. You swallow what you can, but you're so exhausted that all you can do is hold on, massaging his cock with your tongue.";
 	say "     You recover in silence, aided by Raymond's gentle paws cleaning your body with a towel produced from who-knows-where. He's warmer than usual, kissing your cheeks and smiling with an intensity that matches the sun. You could get used to this, but all too soon, you leave, gathering your gear and kissing your mouse's eager lips. Once outside, you realize what Raymond meant by lowering your independence. The sudden influx of mouse cum has made you look more like Raymond and his brothers! With a start, you realize you could become one of them with enough sessions. Maybe you should keep it up.";
