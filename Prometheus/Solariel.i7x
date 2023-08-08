@@ -3,6 +3,10 @@ Version 1 of Solariel by Prometheus begins here.
 [Angel of Hope]
 
 
+a postimport rule:
+	if Angelic Visitor is resolved and (Resolution of Angelic Visitor is not 1 and Resolution of Angelic Visitor is not 2):
+		now Angelic Visitor is not resolved;
+
 Section 1 - NPC Declaration
 
 Table of GameCharacterIDs (continued)
