@@ -5,6 +5,9 @@ Version 1 of Altus by Prometheus begins here.
 [ 2 - Learnt Altus's approach to sex ]
 
 
+an everyturn rule:
+	if HP of Altus > 1:
+		increase Lust of Altus by 1;
 
 Section 1 - NPC Declaration
 
