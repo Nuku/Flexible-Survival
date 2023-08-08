@@ -57,7 +57,7 @@ to say Generation Conflict:
 	WaitLineBreak;
 	say "     The four of you keep talking for some time, and eventually, Brennan decides to keep moving. Erin and Violet take their leave as well after offering you and Brennan a spare soda they salvaged from a vending machine. 'It was like the giving tree: we kept kicking, we kept winning,' Erin tells you. On your own once again, you resume your exploration.";
 	say "     Drinking the soda offered by Erin and Violet [bold type]quenched your thirst a little[roman type]. Also, [bold type]you earned an additional soda[roman type].";
-	decrease thirst of Player by 12;
+	PlayerDrink 12;
 	ItemGain soda by 1;
 	now generationConflictFlag is 1;
 

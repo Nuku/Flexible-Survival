@@ -184,9 +184,7 @@ to say ResolveEvent Destroyed Bushes:
 		if Player consents:
 			infect "Black Equinoid";
 			infect "Black Equinoid";
-			decrease thirst of Player by 75;
-			if thirst of Player < 0:
-				now thirst of Player is 0;
+			PlayerDrink 75;
 		else:
 			say "You leave them alone.";
 	say "     Do you wish to look around?";

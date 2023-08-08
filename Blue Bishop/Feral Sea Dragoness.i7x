@@ -225,7 +225,7 @@ to say fsdfeeding:
 	else:
 		say "     You watch as she begins to cough up some food for you. By this point you've been so frequently exposed to her feeding methods that, in some maddening sense, you welcome it. At least, enough so that you don't bother making any futile protests; can't really complain about a free meal, anyways.";
 		say "     Complying, you open your mouth as she descends upon you, promptly meeting it with a rush of the fish matter, offering faint chirps of approval as she feeds you. Happy that you don't cause her any trouble this time, she nuzzles you affectionately after she finishes, her tongue cleaning up any mess of fish from your face - not to much benefit as it's merely replaced with an excessive heaping of her saliva. Inevitably, she departs, letting you return to your prior endeavors.";
-	decrease hunger of Player by a random number between 10 and 24;
+	PlayerEat 15;
 	now lastfsdfeeding is turns;
 	infect; [additional infection]
 

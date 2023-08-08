@@ -35,8 +35,7 @@ to say Shemale Smooth Collie attack:
 			infect; [additional infection result]
 		else:
 			say "     You drink her milk, somewhat unwillingly at first, but with increasing desire. Once she's decided you've had enough, you're left rather full indeed. She lowers you gently into a resting position and leaves you to recover. Her milk has put you into a somewhat dazed and groggy state, and it takes some time before you regain your senses.";
-		decrease thirst of Player by 10;
-		if thirst of Player < 0, now thirst of Player is 0;
+		PlayerDrink 10;
 		if hunger of Player < 0, now hunger of Player is 0;
 	else if Player is female and ( Cunt Depth of Player < 18 or Cunt Tightness of Player < 6 ):
 		say "     'Ohhh, I knew I smelled a fresh bitch in town, and you smell absolutely delicious.' She removes your clothes easily and her tongue flicks out to lick your folds, slipping in after a couple licks to probe and prime your depths, stretching them a bit as her prick engorges and begins to drip thick pre onto the ground. You can feel your walls begin dripping with juices as she stimulates them masterfully, her tongue finding all the right places to almost make you feel like a bitch in heat.";
@@ -154,11 +153,9 @@ to say CollieSucking:
 	WaitLineBreak;
 	say "     With the collie pleasantly passed out, and not able to answer that question, you just smirk and rub at your distended stomach. Feeling very full and with your thirst sated, you leave the shemale to her fate...";
 	CreatureSexAftermath "Player" receives "OralCock" from "Smooth Collie Shemale";
-	decrease thirst of Player by 10;
-	decrease hunger of Player by 5;
+	PlayerDrink 10;
+	PlayerEat 5;
 	increase Libido of Player by 10;
-	if thirst of Player < 0, now thirst of Player is 0;
-	if hunger of Player < 0, now hunger of Player is 0;
 	if Libido of Player > 100, now Libido of Player is 100;
 
 

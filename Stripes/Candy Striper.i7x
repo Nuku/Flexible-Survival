@@ -776,7 +776,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 3	"CandyMemory4"	CandyMemory4	"[EventConditions_CandyMemory4]"	Grey Abbey Library	2500	2	100
 
 to say EventConditions_CandyMemory4:
-	if (Candy is in the Bunker and HP of Candy > 1 and HP of Candy < 3 and LastCandyWalkin - turns > 1):
+	if (Candy is in the Bunker and HP of Candy > 1 and HP of Candy < 3 and LastCandyWalkin - turns > 1 and Carl is collected):
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)

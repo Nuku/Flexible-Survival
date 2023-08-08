@@ -190,8 +190,7 @@ Check Treatbegging:
 
 Carry out Treatbegging:
 	say "     Unable to deny your hunger for the bone-shaped treats any longer, you quickly find yourself on all fours in front of Rex, whimpering and begging for one of the small cookies. He smiles intently as he pulls one of the treats from the jar, telling you to sit like a good doggy. As you sit patiently in front of him, Rex reaches out and places the treat on the end of your nose, the delicious scent of it making your mouth water even more. When Rex finally signals you to eat the treat, you drop it to the floor and pounce on it instantly, eating the entire thing in one bite. As you lick the final crumbs from your chops, you begin to think how much you'd like another, even as you realize how much of yourself you are losing to the happy retriever sexpet Rex is training you to be.";
-	decrease hunger of Player by 10;
-	if hunger of Player < 0, now hunger of Player is 0;
+	PlayerEat 10;
 	infect "Retriever Female";
 	decrease humanity of Player by a random number between 4 and 8;
 
@@ -652,8 +651,7 @@ to say RexPetScene2:
 
 to say RexPetScene3:
 	say "     Karen calls out to you and Rex as she turns from the kitchenette, carrying three small plastic dishes filled with some sort of dried kibble. You suddenly find your mouth watering as she passes one dish to Rex before placing the other two on the ground in front of him. They both motion you over as she takes a seat at one of the dishes at Rex's feet, and you eagerly join her there. You are soon crunching the dried meal happily at the feet of your master, licking the whole bowl clean before Karen collects the dishes and you return to the task at hand";
-	decrease hunger of Player by 15;
-	if hunger of Player < 0, now hunger of Player is 0;
+	PlayerEat 15;
 
 to say RexPetScene4:
 	say "     Without warning you are suddenly knocked over by a heavy weight from behind. You can hear Rex laughing out loud from the other side of the room as you try to push Karen off. She eagerly licks and nuzzles your face as you struggle beneath her. Eventually you give up resisting and return the affection, playing with her for a short while before she finally releases you, leaving you panting happily on the ground as she pads away happily.";

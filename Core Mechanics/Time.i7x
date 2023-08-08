@@ -153,7 +153,7 @@ This is the turnpass rule:
 		increase thirst of Player by 3;
 		if number of filled rows in Table of PlayerChildren > 0, increase thirst of Player by 1;
 		if "Spartan Diet" is listed in feats of Player and thirst of Player > 0:
-			decrease thirst of Player by 1;
+			PlayerDrink 1 silently;
 	if "Automatic Survival" is listed in feats of Player:
 		now thirst of Player is 0;
 		now hunger of Player is 0;

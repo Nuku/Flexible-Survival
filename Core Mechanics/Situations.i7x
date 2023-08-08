@@ -157,11 +157,17 @@ to WalkInEvent_Check:
 		repeat with X running from 1 to number of filled rows in Table of WalkinEvents:
 			choose row X from the Table of WalkinEvents;
 			now CurrentWalkinEvent_ConditionsMet is false; [reset]
-			if DebugLevel > 4:
-				say "     DEBUG: Checking Row [X]. Current Event: [name entry]; Event Room: [EventRoom Entry]";
+			if DebugLevel > 8:
+				say "     DEBUG: Checking Row [X]. Current Event: [name entry]; Event Room: [EventRoom Entry][line break]";
 			if EventRoom entry is not CurrentRoom, next; [skipping past any event that does not match the current room]
+			if DebugLevel > 6:
+				say "     DEBUG: Available Event in current Room, called: [name entry], ";
 			if EventObject entry is not WalkinAvailable, next; [resolved/inactive/not prereqcomplete events are skipped]
+			if DebugLevel > 6:
+				say "which is WalkinAvailable, ";
 			if LastEncounterTurn entry - turns <= CoolDownTurns entry, next;
+			if DebugLevel > 6:
+				say "and not on cooldown.";
 			say "[EventConditions entry]";
 			if CurrentWalkinEvent_ConditionsMet is false, next;
 			if DebugLevel > 4:

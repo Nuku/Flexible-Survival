@@ -99,7 +99,7 @@ to say fsdm attack:
 				else:
 					say "     Shifting around to give you a better view of his face, his softened expression an indication of his now-familiar intent. Beginning to cough up a meal, you find yourself ill-inclined to contest his sudden parental interests. Soon shifting to offer you this pragmatic kiss, you sheepishly abide the flood of partially digested fish.";
 					say "     Thankfully, he does appear to be getting better at this, though his more abrasive design still makes the transaction a slightly awkward one. Once satisfied he lets you off with a strangely jovial chirp, leaving you to recover from this whole ordeal. As he returns to the water's depths, you ponder the implications of what has just transpired before setting off.";
-				decrease hunger of Player by a random number between 10 and 24;
+				PlayerEat 15;
 				now lastfsdfeeding is turns;
 				infect;
 			else if "Touched by Madness" is listed in feats of Player and Player is mpreg_ok and ((Player is kinky and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds) and scalevalue of Player < 4 and inasituation is false:

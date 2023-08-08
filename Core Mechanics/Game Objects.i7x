@@ -261,11 +261,7 @@ to say journal use:
 			say " Filled with excess, manic energy, you have difficulty sitting still and focusing on your journal. ";
 		if ssmb is true:
 			now healed is ( healed * 3 ) / 2;
-		increase humanity of Player by healed;
-		if humanity of Player > 100:
-			decrease healed by humanity of Player minus 100;
-			now humanity of Player is 100;
-		say "([humanity of Player]/100).";
+		SanBoost healed;
 		now Lastjournaluse is turns;
 	follow turnpass rule;
 
