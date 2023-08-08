@@ -5,6 +5,9 @@ Version 1 of Altus by Prometheus begins here.
 [ 2 - Learnt Altus's approach to sex ]
 
 
+an everyturn rule:
+	if HP of Altus > 1:
+		increase Lust of Altus by 1;
 
 Section 1 - NPC Declaration
 
@@ -27,9 +30,9 @@ Asshole Depth of Altus is 12. [inches deep for anal fucking]
 Asshole Tightness of Altus is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 Cock Count of Altus is 1. [number of cocks]
 Cock Girth of Altus is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
-Cock Length of Altus is 12. [10 Inches] [Reduce by 2 for omega, increase by 2 for alpha]
+Cock Length of Altus is 12. [10 Inches]
 Ball Count of Altus is 2. [allowed numbers: 1 (uniball), 2 or 4]
-Ball Size of Altus is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
+Ball Size of Altus is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Altus is 0. [number of cunts]
 Cunt Depth of Altus is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Altus is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
@@ -229,6 +232,153 @@ to say AltusSex2:
 		WaitLineBreak;
 		say "     The two of you stay like this while Altus's orgasm runs its course, even as his cock begins to go soft and the flood that had previously been held back is allowed to gush forth. A deluge of cum surges from your anus, pushing the gryphon's shaft completely out from your hole and pooling on the ground by your feet. Altus steps away to allow you to regain your feet, though perhaps he also wishes to limit the amount of semen that he shall undoubtedly have to wash from his paws. As you catch your breath, he showers you with affectionate nibbles, demonstrating how much he enjoyed mating with you and likely trying to entice you to submit to him again in future. Given how much you enjoyed it too, it certainly seem a possibility.";
 		NPCSexAftermath Player receives "AssFuck" from Altus;
+
+Section 2.1 - Needy Altus Sex
+
+instead of going to Garden View while Lust of Altus > 24:
+	say "     Entering the room, your view of the garden is immediately obstructed by a very horny gryphon, Altus's knotted penis erect and dribbling beneath him. He churrs and warbles as he brushes up against you needily, flicking his tail up as he turns to show you his hole, desperate for you to sooth his lust. As he presents himself to you, you realize that his arousal has got the best of his pride and he is even willing to be submissive to you this time. With that in mind, you wonder to yourself how you're going to take advantage of this chance.";
+	say "[AltusNeedySexMenu]";
+
+to say AltusNeedySexMenu:
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	if Player is Male:
+		choose a blank row in table of fucking options;
+		now title entry is "Be Blown";
+		now sortorder entry is 1;
+		now description entry is "Have the gryphon suck your cock while you jack him off";
+	[]
+	if Player is Female:
+		choose a blank row in table of fucking options;
+		now title entry is "Be Eaten Out";
+		now sortorder entry is 1;
+		now description entry is "Have the gryphon lick your pussy while you jack him off";
+	[]
+	[if Player is Male:
+		choose a blank row in table of fucking options;
+		now title entry is "Mount Him";
+		now sortorder entry is 3;
+		now description entry is "Put the usually proud gryphon in his place and fuck his ass";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ride Him";
+	now sortorder entry is 4;
+	now description entry is "Push Altus on his back and ride his cock";]
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Be Blown"):
+					say "[AltusNeedySex1]";
+				if (nam is "Be Eaten Out"):
+					say "[AltusNeedySex2]";
+				[if (nam is "Mount Him"):
+					say "[AltusNeedySex3]";
+				if (nam is "Ride Him"):
+					say "[AltusNeedySex4]";]
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     Altus lets out a pitiful whine as you shake your head, wondering how you could be so cruel to deny him when he is so desperate to be fucked. Sullenly, the gryphon stalks into a corner and slumps to the floor, shuddering as his penis is stimulated beneath him.";
+			move Player to Garden View;
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say AltusNeedySex1: [Fellatio]
+	say "     You tell Altus to lie on his back, to show you just how much he needs this by making himself vulnerable. Though the gryphon warbles a complaint, he nonetheless complies, carefully folding his wings before rolling over, the motion causing his cock to sway and disgorge a generous load of pre to drizzle across his fur. Taking a moment to observe the slutty beast, you realize that given his predatory beak, fellatio may not have been the best idea. However, your decision has been made and you plan to carry through with it, no matter the risk. You firmly seat yourself atop Altus's face, momentarily reveling in the sensation of his feathers against your balls and backside. Swans have nothing on softness compared to gryphons apparently. However, it doesn't take long for his beak to bump up against your shaft and remind you of you goal, the accompanying peril being smothered by the arousal at dominating the gyrwolf gryphon.";
+	say "     After commanding Altus to begin sucking you off, and to be careful, you run a hand down his body, even repeating the transition from feathers to fur a few times for good measure. This also has the effect of coating your hand with his precum, lubing your fingers up so that they can slip up and down his starved shaft all the more easily. As you grasp the organ in question, it leaps in your palm and a fresh spurt of pre dribbles over your hand. You can't help but bring your fingers up to your face and give them a sniff, shuddering as the pheromones worm their way past your nostrils and down the back of your throat to fill your lungs with his potent scent. Part of you wishes that you were sucking him off too, but you tighten your grip around the gryphon's cock and steadily rub up and down, squeezing every now and then to further his stimulation.";
+	WaitLineBreak;
+	say "     Meanwhile, Altus busies himself with blowing you, curling his tongue around your cock as he makes a few shallow bobs of his head, the tip of his beak stirring your scrotum. You can feel the puff of air each time he exhales, the tickly feeling immensely arousing given the circumstances. As soon as he becomes accustomed to this, the gryphon drapes his tongue over his mandible, providing a soft, wet landing-strip for your cock to enter his mouth properly. Before he can continue, you surprise him by taking charge, thrusting down into the confines of his beak. Telling him to focus on keeping anything sharp away from your sensitive flesh, you time your thrusts with your hand movements. Each time your fingers reach the base of his penis, you hilt yourself in his mouth, and each time your digits encircle his tapered tip, you withdraw to allow him to breath unimpeded. As this continues, Altus's satisfaction becomes more obvious, both through the excited squirts of pre, and the murmurs of pleasure that increase in volume.";
+	say "     Keen to make the bird sing more, you bring your other hand forward to caress his balls, the orbs heavy in your palm and the fur particularly thick with musky sweat and body-oil. A pretty trill escapes from Altus's throat as your cock withdraws, before being stifled again when you plug the hole. With a smirk, you continue, fondling, caressing, and stroking, bringing him relentlessly closer to what he so desperately needs, but with the pleasure, may not immediately want. For a moment, you wonder whether you should play with his anus for a bit, but ultimately decide against it, tracing a finger over the base of his tail to tease him before returning it to his scrotum. You've got enough to do already and you doubt that he'll be able to last too much longer, especially with how his pre seems to be ceaselessly dribbling from his cock to flow down his length and over your hands. Altus may be close, but you have no intention of letting him cum before you do. He has to earn it first.";
+	WaitLineBreak;
+	say "     You return your focus to thrusting into the gryphon's maw, adeptly edging him while you build towards climax. The tight ring at the top of his throat is especially pleasurable for your cock to squeeze past, deliciously clamping around you each time the avian reflexively swallows. You're impressed that he has managed to keep his beak from scratching you, a combination of his tongue and the way that he tilts his head accomplishing this impressive feat while also boosting your pleasure. Fortunately, the outside of his beak isn't as much of a threat, especially with how your balls slap against his maxilla as your orgasm creeps closer and you [']breed['] his mouth with greater passion. Eventually, you can't hold off any longer, hilting yourself with a relieved gasp, flooding his throat with your seed and leaving him no choice but to swallow it.";
+	say "     Lost in your release, it takes you moment to resume jacking Altus off, though it doesn't take much to make the gryphon shoot. And shoot it does, his cock wrenching itself from your grasp to plaster you with his cum, the potent, viscous fluid splashing against your face and chest, as well as soaring past you to splatter across the floor. You can feel his balls rise and release beneath your palm, working relentlessly to produce an inordinate amount of semen for the virile male that could have been used to impregnate many mates, but is instead pooling on the ground beneath him. It takes several minutes for Altus's orgasm to ebb, giving you enough time for your own climax to finish, the gryphon surprisingly affectionate while this goes on. Eventually however, you decide that you should get on with your day and stand up, wiping yourself clean against his thick, furry pelt to get even for the hosing that you received. It's only fair after all. With a look of mild reproach, Altus begins to preen and wash himself as you walk away.";
+	NPCSexAftermath Altus receives "OralCock" from Player;
+	now Lust of Altus is 0;
+	move Player to Garden View;
+
+to say AltusNeedySex2: [Cunnilingus]
+	say "     You tell Altus to lie on his back, to show you just how much he needs this by making himself vulnerable. Though the gryphon warbles a complaint, he nonetheless complies, carefully folding his wings before rolling over, the motion causing his cock to sway and disgorge a generous load of pre to drizzle across his fur. Taking a moment to observe the slutty beast, you realize that given his predatory beak, cunnilingus really may not have been the best idea. However, your decision has been made and you plan to carry through with it, no matter the risk. You firmly seat yourself atop Altus's face, momentarily reveling in the sensation of his feathers against your vulva and backside. Swans have nothing on softness compared to gryphons apparently. Smearing your budding arousal across his head, it doesn't take long for the curve of his beak to press between your labia and remind you of you goal, the accompanying peril being smothered by the titillation at dominating the gyrwolf gryphon.";
+	say "     Shivering with a mix of arousal and apprehension, you command to begin licking, and to be careful, as you run a hand down his body, even repeating the transition from feathers to fur a few times for good measure. This also has the effect of coating your hand with his precum, lubing your fingers up so that they can slip up and down his starved shaft all the more easily. As you grasp the organ in question, it leaps in your palm and a fresh spurt of pre dribbles over your hand. You can't help but bring your fingers up to your face and give them a sniff, shuddering as the pheromones worm their way past your nostrils and down the back of your throat to fill your lungs with his potent scent. Part of you wishes that you were sucking him off too, but you tighten your grip around the gryphon's cock and steadily rub up and down, squeezing every now and then to further his stimulation.";
+	WaitLineBreak;
+	say "     Meanwhile, Altus busies himself with eating you out, flicking his tongue across your clit, lapping your labia, and plunging it in as far as it will reach. It is fortunate that his tongue seems able to extend from his mouth so far as you've yet to feel the edge of his beak against such vulnerable flesh. Given his success so far, you permit him to continue at his own pace, focusing instead on his cock while occasionally letting out a gasp as he caresses a sensitive area inside of you. You flinch as you feel something hard brush against your thigh, making you clench around his tongue, but also momentarily heightening your sensitivity as you freeze. Running your nails down his length as a warning, you quickly resume pleasuring him, alternating between encircling his tip with your fingers and squeezeing the base as you rub your hand up and down. As this continues, Altus's satisfaction becomes more obvious, both through the excited squirts of pre, and the murmurs of pleasure that increase in volume.";
+	say "     Keen to make the bird sing more, you bring your other hand forward to caress his balls, the orbs heavy in your palm and the fur particularly thick with musky sweat and body-oil. A pretty trill escapes from Altus's throat as he pulls his face from your cunt, before being stifled again when youinsistently press back. With a smirk, you continue, fondling, caressing, and stroking, bringing him relentlessly closer to what he so desperately needs, but with the pleasure, may not immediately want. For a moment, you wonder whether you should play with his anus for a bit, but ultimately decide against it, tracing a finger over the base of his tail to tease him before returning it to his scrotum. You've got enough to do already and you doubt that he'll be able to last too much longer, especially with how his pre seems to be ceaselessly dribbling from his cock to flow down his length and over your hands. Altus may be close, but you have no intention of letting him cum before you do. He has to earn it first.";
+	WaitLineBreak;
+	say "     You are, however, entirely dependant on the gryphon for this. You can't hasten it yourself without risking injury. You aren't without options though. Slowing your hand movements to a crawl, you adeptly edge the bird hybrid while egging him on to hurry up if he wants to cum. Whining in desperation, Altus flicks his tongue even faster rpeating anything that elicits a moan or muscle spasm from you. Throughout this, he still keeps his beak in check, a measure of self-control that you find impressive. You begin to praise him, though throwing in mention of him being such a slutty bird with how needy he has become. Your climax comes with a rush, causing you to grip his head with your thighs as you shudder and send fem-cum drizzling across his face, the gryphon not letting up even as your nerves become more sensitive, almost paralyzing you with pleasure.";
+	say "     Lost in your release, it takes you moment to resume jacking Altus off, though it doesn't take much to make the gryphon shoot. And shoot it does, his cock wrenching itself from your grasp to plaster you with his cum, the potent, viscous fluid splashing against your face and chest, as well as soaring past you to splatter across the floor. You can feel his balls rise and release beneath your palm, working relentlessly to produce an inordinate amount of semen for the virile male that could have been used to impregnate many mates, but is instead pooling on the ground beneath him. It takes several minutes for Altus's orgasm to ebb, giving you enough time for your own climax to finish, the gryphon surprisingly affectionate while this goes on. Eventually however, you decide that you should get on with your day and stand up, wiping yourself clean against his thick, furry pelt to get even for the hosing that you received. It's only fair after all. With a look of mild reproach, Altus begins to preen and wash himself as you walk away.";
+	NPCSexAftermath Altus receives "OralPussy" from Player;
+	now Lust of Altus is 0;
+	move Player to Garden View;
+
+[to say AltusNeedySex3: [Mount Altus]
+	say "     With Altus in a good position already, you step up behind him, slipping a couple of fingers into heis clenching ass before leaning over the top of him and whispering ";
+	say "     ";
+	WaitLineBreak;
+	say "     ";
+	say "     ";
+	WaitLineBreak;
+	say "     ";
+	say "     ";
+
+to say AltusNeedySex4: [Ride Altus]
+	if Player is Female:
+		say "     [bold type]Do you wish Altus's penis in your pussy or your ass?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Pussy.";
+		say "     ([link]N[as]n[end link]) - Ass.";
+		if Player consents: [Vaginal Penetration]
+			say "     ";
+			say "     ";
+			WaitLineBreak;
+			say "     ";
+			say "     ";
+			WaitLineBreak;
+			say "     ";
+			say "     ";
+		else: [Anal Penetration]
+			say "     ";
+			say "     ";
+			WaitLineBreak;
+			say "     ";
+			say "     ";
+			WaitLineBreak;
+			say "     ";
+			say "     ";
+	else if Player is Male: [Anal Penetration]
+		say "     ";
+		say "     ";
+		WaitLineBreak;
+		say "     ";
+		say "     ";
+		WaitLineBreak;
+		say "     ";
+		say "     ";
+	else: [Neuter. Anal Penetration]
+		say "     ";
+		say "     ";
+		WaitLineBreak;
+		say "     ";
+		say "     ";
+		WaitLineBreak;
+		say "     ";
+		say "     ";]
+
 
 Section 3 - Events
 
