@@ -522,7 +522,7 @@ to say Sascha_Talk_Menu:
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ask Sascha about Ozeg";
-	now sortorder entry is 1;
+	now sortorder entry is 2;
 	now description entry is "The demonic dragon sitting at Sascha's side seems to have taken to him, but what does Sascha think of Ozeg";
 	[]
 	sort the table of fucking options in sortorder order;
