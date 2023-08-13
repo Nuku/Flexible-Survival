@@ -1807,6 +1807,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is lustadjust;
 		-- "lustatt":
 			now NumberVarValue entry is lustatt;
+		-- "LuxUmbraMaturityCounter":
+			now NumberVarValue entry is LuxUmbraMaturityCounter;
 		-- "lwcounter":
 			now NumberVarValue entry is lwcounter;
 		-- "MalakhiRelationship":
@@ -5394,6 +5396,8 @@ to VariableNumberLoad:
 					now lustadjust is numberVarValue entry;
 				-- "lustatt":
 					now lustatt is numberVarValue entry;
+				-- "LuxUmbraMaturityCounter":
+					now LuxUmbraMaturityCounter entry is numberVarValue;
 				-- "lwcounter":
 					now lwcounter is numberVarValue entry;
 				-- "MalakhiRelationship":
