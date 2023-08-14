@@ -212,6 +212,9 @@ carry out destinationcheck:
 				-- "Seaside":
 					say "[if PrintedSeaside is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
 					increment PrintedSeaside;
+				-- "Swamp":
+					say "[if PrintedSwamp is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedSwamp;
 				-- "The Stables":
 					say "[if PrintedTheStables is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
 					increment PrintedTheStables;
