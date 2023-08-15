@@ -244,6 +244,7 @@ Include Power Plant by Hellerhound.
 Include Qytat a'th Lundrues by SgtPepper234.
 Include Red Light District by Wahn.
 Include Shag Shack by Wahn.
+Include Sinking Swamp by Voidsnaps.
 Include SlutStorage by Wahn.
 Include SlutStorage_Eric by Wahn.
 Include Snapjaw Beach Camp by Gherod.
@@ -336,6 +337,7 @@ Include Main Storyline by Wahn.
 Include Male Dorm Events by Rikaeus.
 Include Mall Events by Sarokcat.
 Include Mall Expansion by Wahn.
+Include Mimic by Voidsnaps.
 Include Misc Events by Pandemonium.
 Include Misc 10 by Kaleem mcintyre.
 Include Misc 3 by Kaleem mcintyre.
@@ -436,6 +438,7 @@ Include Butterfly by Guest Writers.
 Include Cambion Male by Gherod.
 Include Candy Striper by Stripes.
 Include Cannon by Wahn.
+Include Capybara by Voidsnaps.
 Include Cat Ninjas by Stripes.
 Include Catgirl by Wahn.
 Include Caveman by Guest Writers.
@@ -663,6 +666,7 @@ Include Sharkman Brute by Gherod.
 Include Siamese Cats by Stripes.
 Include Sierrasaur by Blue Bishop.
 Include Siren by Stripes.
+Include Sitatunga by Voidsnaps.
 Include Skunk by Damaged.
 Include Skunkbeast Lord by Stripes.
 Include Slime Cube by Kernog.
@@ -755,6 +759,7 @@ Include Anastasia by Stripes.
 Include Aster by Qazarar.
 Include Atticus by Wahn.
 Include Azari by Dys.
+Include Baron by Voidsnaps.
 Include Bastet by Wahn.
 Include Bernard by Prometheus.
 Include Bianca by Prometheus.
@@ -881,6 +886,7 @@ Include Karen by Prometheus.
 Include Katherine by Kirov.
 Include Kerr & Talov by Wahn.
 Include Kerry by Voidsnaps.
+Include Kosk by Voidsnaps.
 Include Krampus by Wahn.
 Include Kristen by Stripes.
 Include Kurt by Rikaeus.
@@ -990,6 +996,7 @@ Include Timothy by Sarokcat.
 Include Tobias by Voidsnaps.
 Include Toron by Gherod.
 Include Tristian by Verath.
+Include Uram by Voidsnaps.
 Include Urik by Wahn.
 Include Val by Wahn.
 Include Vanessa by Prometheus.
