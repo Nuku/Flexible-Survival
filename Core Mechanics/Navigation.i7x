@@ -159,6 +159,7 @@ carry out destinationcheck:
 	let PrintedRedLightDistrict be 0;
 	let PrintedSeaside be 0;
 	let PrintedTheStables be 0;
+	let PrintedSwamp be 0;
 	let PrintedTenvaleCollege be 0;
 	let PrintedUrbanForest be 0;
 	let PrintedWarehouseDistrict be 0;
