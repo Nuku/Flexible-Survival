@@ -5396,8 +5396,8 @@ to VariableNumberLoad:
 					now lustadjust is numberVarValue entry;
 				-- "lustatt":
 					now lustatt is numberVarValue entry;
-				-- "LuxUmbraMaturityCounter":
-					now LuxUmbraMaturityCounter entry is numberVarValue;
+[				-- "LuxUmbraMaturityCounter":
+					now LuxUmbraMaturityCounter entry is numberVarValue;]
 				-- "lwcounter":
 					now lwcounter is numberVarValue entry;
 				-- "MalakhiRelationship":
