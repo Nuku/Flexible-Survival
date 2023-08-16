@@ -26,6 +26,7 @@ An EveryTurn Rule:
 				say "     You get the feeling you should visit Uram soon, and maybe apologize for missing the birth of your son.";
 				TraitGain "Absent_Birth" for Uram;
 			now ImpregTimer of Uram is 0; [preg reset]
+			TraitLoss "Pregnancy Cravings" for Uram;
 
 Section 1 - Infections and NPC
 
@@ -420,6 +421,9 @@ to say OrogBreastFeed:
 			WaitLineBreak;
 			say "     'Such a big boy~.' Uram whimpers as you swell his stomach with the sheer volume of your output, breaking your savage breastfeeding to clank his tusks against yours in a sloppy, milk-tainted kiss even as you feel his cock bounce and sputter between you, covering the space between you with creamy white. Suddenly tired from your efforts and the fullness in your stomach, you yawn, resting your head against sticky muscles. Uram's body is just too comfortable, and before long, you doze off, spurred by his soft humming and the gentle way he ruffles your hair.";
 			NPCSexAftermath Uram receives "AssFuck" from Player;
+			now impregtimer of Uram is 1;
+			if Hungry Daddy is Resolved:
+				TraitGain "Pregnancy Cravings" for Uram;
 		else: [Cum on his ass.]
 			LineBreak;
 			say "     You shake your head. While Uram's offer is tempting, you don't want to fuck oroglings into him right now. The sensation against your cockhead is divine, though, and your thoughts turn from suckling to your orog daddy's ass. How would it feel wrapped around your cock? Goaded by your inner perversion, you pull free of Uram's pec, admiring the bite marks you left on the otherwise pristine skin, then summoning your strength to flip the bulky orog onto his stomach, giving you a better view of his pre-streaked grey rump and dangling, half-hard cock  with big hairless balls. With a greedy groan, you sandwich your cock between those grey mountains, grinding your cock's underbelly against his puffy hole.";
