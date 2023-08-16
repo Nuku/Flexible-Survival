@@ -3,6 +3,10 @@ Version 1 of Solariel by Prometheus begins here.
 [Angel of Hope]
 
 
+a postimport rule:
+	if Angelic Visitor is resolved and (Resolution of Angelic Visitor is not 1 and Resolution of Angelic Visitor is not 2):
+		now Angelic Visitor is not resolved;
+
 Section 1 - NPC Declaration
 
 Table of GameCharacterIDs (continued)
@@ -144,7 +148,7 @@ to say ResolveEvent Angelic Visitor:
 	add "Tell her no. You don't want to get involved with the angel's plans while she is in the city." to Solariel_Residence_Choices;
 	let Solariel_Residence_Choice be what the player chooses from Solariel_Residence_Choices;
 	if Solariel_Residence_Choice is:
-		-- "Yes. You've got enough room and Hazel seems to want this.":
+		-- "Let her stay. You've got enough room and Hazel seems to want this.":
 			LineBreak;
 			say "     'Excellent. My gratitude to you. If you need me, I'll probably be outside, probably in the [bold type]courtyard[roman type] as I much prefer the open air when I have the option. But first Hazel and I have some catching up to do, and I suppose that I should meet the hatchling too,' Solariel says, bowing. You point out that the dragon is fully grown. 'Yes, but it's a lot younger than me, so... hatchling.' With a shrug, you signal your acceptance of her logic, before properly welcoming the angel and bidding her to make herself comfortable. 'Thank you, once again. I'll be sure to introduce myself to anyone else living here when I have the time. With that, Hazel pulls her away into the bunker, talking excitedly to her, the celestial warrior listening keenly.";
 			now Resolution of Angelic Visitor is 1;
