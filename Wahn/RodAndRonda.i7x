@@ -124,7 +124,7 @@ to say RodTalkMenu:
 	[]
 	if AlexProgress is 2 and HP of Ronda is not 100:
 		choose a blank row in table of fucking options;
-		now title entry is "Ask him if he kows where Darrell is";
+		now title entry is "Ask him if he knows where Darrell is";
 		now sortorder entry is 12;
 		now description entry is "Maybe Rod can tell you where to find him";
 	[]
