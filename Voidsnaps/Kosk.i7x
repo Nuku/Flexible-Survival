@@ -264,7 +264,7 @@ to say ResolveEvent Spicy Encounter:
 [Ending during quest]
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
-"Drowned In Cock"	"BadEnd"	"Irreparably changed"	Drowned In Cock rule	1	false
+"Drowned In Cock"	"BadEnd"	"Sex Slave"	Drowned In Cock rule	1	false
 
 This is the Drowned In Cock rule:
 	if ending "Drowned In Cock" is triggered:
