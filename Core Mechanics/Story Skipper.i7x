@@ -531,6 +531,7 @@ to CharacterRestore:
 			let CharacterIdName be Name entry;
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
+				let MainInfection_Restore be MainInfection entry;
 				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
 					move CharacterObject to TargetRoom, without printing a room description;
@@ -588,7 +589,8 @@ to CharacterRestore:
 				now ImpregTimer of CharacterObject is ImpregTimer entry;
 				now OffspringCount of CharacterObject is OffspringCount entry;
 				[Texts]
-				now MainInfection of CharacterObject is MainInfection entry;
+				if there is a name of MainInfection_Restore in the Table of Random Critters:
+					now MainInfection of CharacterObject is MainInfection entry;
 				now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
 				now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
 				now FirstOralPartner of CharacterObject is FirstOralPartner entry;

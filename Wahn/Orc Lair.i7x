@@ -131,6 +131,7 @@ to say ResolveEvent Orcish Slave Raid:
 					else:
 						LineBreak;
 						say "     You walk away after checking them over for loot.";
+	now CreatureArtworkOverride is false;
 	now inasituation is false;
 
 to say KoghhRaidOffer:
@@ -1085,10 +1086,8 @@ An everyturn rule:
 		challenge "Orc Warrior"; [random orc]
 	else if BodyName of Player is "Orc Warrior" and Player is pure and (player is in Dark Hallway 1 or player is in Dark Hallway 2) and a random chance of 1 in 4 succeeds:
 		say "[BoghrimSlaveDeal]";
-	else if (player is in Dark Hallway 1 or player is in Dark Hallway 2) and a random chance of 1 in 4 succeeds:
-		now inasituation is true;
-		project the figure of Mul_clothed_icon;
-		challenge "Orc Warrior"; [fighting Mul]
+	else if (player is in Dark Hallway 1 or player is in Dark Hallway 2) and a random chance of 1 in 4 succeeds: [randomly running into Mul]
+		say "[Mul_Lair_Encounter]";
 	if Mul is in Slave Cell 2 or Mul is in Slave Cell 1:
 		if (player is in Slave Cell 2 and Mul is in Slave Cell 2) or (player is in Slave Cell 1 and Mul is in Slave Cell 1):
 			say "     Mul's brothers return some time later, opening up the cell and waking him to accompany them on another raid. Rubbing sand from his eyes, the big orc grabs his loincloth, binds it around himself and leaves with them.";
