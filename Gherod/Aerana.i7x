@@ -37,7 +37,7 @@ Object	Name
 Succubus Offspring Meeting	"Succubus Offspring Meeting"
 
 Succubus Offspring Meeting is a situation.
-ResolveFunction of Succubus Offspring Meeting is "".
+ResolveFunction of Succubus Offspring Meeting is "[ResolveEvent Succubus Offspring Meeting]".
 Sarea of Succubus Offspring Meeting is "Nowhere".
 
 when play begins:
