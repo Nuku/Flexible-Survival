@@ -754,6 +754,7 @@ Include Anthony by Wahn.
 Include Anton by Wahn.
 Include Araqiel by Gherod.
 Include Ares by Wahn.
+Include Ariel by Emerald.
 Include Arthur by Luneth.
 Include Anastasia by Stripes.
 Include Aster by Qazarar.
