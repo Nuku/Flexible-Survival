@@ -89,9 +89,9 @@ Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
-"Placeholder"	"[PrepCombat_Placeholder]"
+"Manticore"	"[PrepCombat_Manticore]"
 
-to say PrepCombat_Placeholder:
+to say PrepCombat_Manticore:
 	setmongender 3;
 
 Table of Random Critters (continued)

@@ -175,9 +175,9 @@ Chapter 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
-"Placeholder"	"[PrepCombat_Placeholder]"
+"Parasite"	"[PrepCombat_Parasite]"
 
-to say PrepCombat_Placeholder:
+to say PrepCombat_Parasite:
 	setmongender 3; [creature is male]
 	now libidomemory is Libido of Player;
 

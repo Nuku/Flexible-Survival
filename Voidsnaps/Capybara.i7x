@@ -4,7 +4,7 @@ Section 1 - Creature
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
-"capybara"	"[PrepCombat_capybara]"
+"Capybara"	"[PrepCombat_capybara]"
 
 to say PrepCombat_capybara:
 	setmongender 3;
