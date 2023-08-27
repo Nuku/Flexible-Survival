@@ -249,6 +249,7 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_German Shepherd Bitch:
 	setmongender 4; [creature is female]
+	project figure of Katherine_icon;
 	if HP of Katherine > 0 and a random chance of 1 in 3 succeeds:
 		now gsbKatherine is true;
 	else:

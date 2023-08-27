@@ -865,6 +865,7 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_German Shepherd Male:
 	setmongender 3; [male]
+	project Figure of GermanShepherd_naked_icon;
 	choose row MonsterID in Table of Random Critters;
 	now gsd_attack is false;
 	[
