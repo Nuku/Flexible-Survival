@@ -74,7 +74,7 @@ to say ToronTalkPurifier:
 		say "     ([link]Y[as]y[end link]) - Go along with the plan, at least for now.";
 		say "     ([link]N[as]n[end link]) - Tell him you don't want to do this.";
 		if Player consents:
-			LineBreak;
+			Linebreak;
 			say "     You nod, agreeing to help the process of corrupting the angel for the time being. 'Excellent. Alright, then, look around these three areas: [bold type]College Campus, Mall Sewers, and here around the Red Light District[roman type]. You will surely be able to find him before he starts the action knowing beforehand where to find him. My scouts will be ready and communicating with me, so feel free to ask me for information.' he informs you of his usual roaming spots and lets you know of his current location.";
 			if AraqielTrackerCollege is 1:
 				say "     'He's been seen lurking around the [bold type]College Campus[roman type]' last time I checked. Yes, I know, I'm quick. Just go look for him there and hopefully you will find him. If not, come back to me and I'll give you an update.'";
@@ -85,7 +85,7 @@ to say ToronTalkPurifier:
 			now Resolution of Ambush The Purifier is 1;
 			now HP of Araqiel is 2;
 		else:
-			LineBreak;
+			Linebreak;
 			say "     You have to be sincere and tell him you're not interested in hurting an angel. 'Hurting?! You wound me... I never mentioned hurting, did I? But well, maybe if he doesn't mess with our boys and girls, we won't have to watch out for him at all. I would have liked to give him a better ending, though...' he replies, showing a big disappointment in you, but lets you walk away. Well, you have no other way of approaching the angel, now. Toron was the only one who had the means to track him down easily.";
 			now Resolution of Ambush The Purifier is 99;
 	else if Resolution of Ambush The Purifier > 0 and Resolution of Ambush the Purifier < 3:
@@ -110,11 +110,11 @@ to say ToronTalkPurifier:
 			say "     ([link]Y[as]y[end link]) - Yes, you want to give them all the means to corrupt this angel.";
 			say "     ([link]N[as]n[end link]) - Keep it to yourself.";
 			if Player consents:
-				LineBreak;
+				Linebreak;
 				say "     Recalling your extra spoils, you take the feather out of your pockets and just give it to Toron, whose eyes shine with joy. 'You managed to... By the hellfires, this is... This is just what I needed! Your efforts will be rewarded, I will assure you. What a great addition to my enchantments...' he says, commending you for a job well done. Now you will have to live with the fact that you most certainly guaranteed the success of the efforts made by the demons to corrupt an angel. 'I'll provide you with a [bold type]whole new drink[roman type] to choose from, just for you... Though you will still have to pay it, of course. A... mere symbolic sum.' Well, at least if you regret this decision, you may drink to forget it in an entirely different way... but that angel was beyond help, right?";
 				add "Created Heaven's Kiss" to traits of Toron;
 			else:
-				LineBreak;
+				Linebreak;
 				say "     This is the chance to quietly forfeit this plan without making the demons mad, at least for now. You're too deep in it to completely abandon it, but this is perhaps enough to sabotage their efforts. 'Thank you so much for the work you've been doing. I will have to come up with a plan to ensure we can capture this angel... Knowing this, it will be difficult.' says Toron, who fortunately did not notice your second thoughts. You better keep it that way.";
 				now Resolution of Ambush The Purifier is 2; [Araqiel will NOT be corrupted]
 			now Resolution of Purifier Three is 2;
@@ -356,7 +356,7 @@ instead of going down from Hellfire Corridor while (Resolution of Ambush The Pur
 		say "     ([link]Y[as]y[end link]) - Make a move and rub his crotch yourself.";
 		say "     ([link]N[as]n[end link]) - Try to make some conversation.";
 		if Player consents:
-			LineBreak;
+			Linebreak;
 			say "     As he's standing right next to you, his crotch is pretty much within your reach. You're able to stretch your arm in his direction and gently place your hand around his warm throbbing bulge, which is already taking from underneath the leather. The fat, engorged meat fills your grasp with each second you spend stroking it, and while he says nothing to your advances, he lets out a soft, approving moan as you cup his voluminous bump. The view you both have of the fallen angel and the group of five hellfire demons, all clustered together fucking non-stop, is enough to set the mood for some jerking off, so why not providing your big devil friend a good time that he would certainly appreciate?";
 			say "     Mogdraz grins, with only a few words escaping his lips 'Consider it your reward, if you wish for it so badly.' Taking you in for an embrace that you're not expecting at first, your body brushes against his, your skin rubbing against his hairy torso as his thick arms hold you tight, then he leans in for a kiss, holding the back of your head and keeping you in place as he explores your mouth with his long demon tongue. A kiss that overwhelms you in so many ways, brutal in a way, but mindwrecking. You feel your mind burn to ashes as you fall into a magnetic trance, his fiery eyes looking into your soul as lust takes over you.";
 			say "     After pushing you towards the wall, he slowly pulls his tongue out, tugging on your lips playfully, before leaning his head to the side of yours and turning just enough so that both you and him can have a look at the scene that is still happening right next to you. You don't even take in the effort to process what is happening to you, your whole body seems to be bursting in sexual desire...";
@@ -373,7 +373,7 @@ instead of going down from Hellfire Corridor while (Resolution of Ambush The Pur
 				clear the screen;
 				say "     Then, you hear a snap of fingers. You find yourself looking at Mogdraz, naked, covered in cum, without any memory of what happened. 'It was just a small demonstration.' he says, and he could not sound any more cryptic about that.";
 			else: [he jerks off and slides a hand over the player's privates]
-				LineBreak;
+				Linebreak;
 				say "     You can feel his lust-driven breath tickling your forehead as the towering devil pushes his leather jockstrap down, his erection so rock hard that it jumps right out of its former prison and hitting you quite heavily. You can see how really enormous it is, even by a hellfire demon's standards, and it's pulsing and leaking already. He looks into your eyes, He looks into your eyes, and reflexively, you nod while looking back at his, a second later feeling his hand reaching down for your crotch, all ready to be caressed and brought in for the pleasure. While Mogdraz tugs on his own length, throbbing hard by now, his nimble fingers find a way to slip between your legs, grabbing your [if Player is female]feminine bits gently[else]sensitive areas[end if] and playing around them as he masturbates you both.";
 				say "     The grunting from the group of demons and the fallen seraphim continues as their climaxes keep following in sequence, the smell of demon cum so intense that makes you feel slightly lightheaded, a sensation that complements the overwhelming state Mogdraz threw you into, providing you with joyful sensations as he lets you look at him stroke his dick. Turned on as you both are, it doesn't take long until you begin to hump against each other, or bringing your lips together for a rather sloppy tongue-wrestling in each other[']s mouths. You can feel his powerful and intense heartbeat together with his deep breathing reaching a new level, indicative of a steady approach to his climax. Slipping your hand over his heavy orbs, you know he'll deliver a very messy load, and he really loves when you grope and rub him down there.";
 				WaitLineBreak;
@@ -744,7 +744,7 @@ instead of going down from Hellfire Corridor while (Resolution of Ambush The Pur
 	say "     ([link]Y[as]y[end link]) - Eavesdrop on them.";
 	say "     ([link]N[as]n[end link]) - Some things are better left alone.";
 	if Player consents:
-		LineBreak;
+		Linebreak;
 		say "     If you lean your head over the door, perhaps you could hear them more clearly... Though this seems wrong, somehow. You feel like you're wronging Mogdraz by doing this, but... There is certainly more than meets the eye between these two. Carefully, you approach the door, place your hands over the wooden surface, then your ears, and very quietly, you listen...";
 		WaitLineBreak;
 		say "     '... You have risked too much in following me here, you know that.' - that's Mogdraz speaking. Fortunately, you can hear them well - 'I only needed more time before I could reestablish our link.' The angel follows up with 'Aw... Must we talk about this again? Here? What if your special guest decides to come visit me...?' His voice sounds lighter and clearer than Mogdraz's, so they can be distinguished well. 'Don't worry about [ObjectPro], [SubjectPro] is merely a special guest. I'm sure knowing about our deal would not sever any ties nor pose any problems.' Mogdraz confirmed they were talking about [italic type]you[roman type]... But why are they, in such manner? And what is this deal he is talking about?";
@@ -758,7 +758,7 @@ instead of going down from Hellfire Corridor while (Resolution of Ambush The Pur
 		say "     Now, those... were some revelations. There is definitely a lot more to know about the relationship between Mogdraz and Araqiel. Maybe Toron will know more, if he is willing to share?";
 		now Resolution of Ambush the Purifier is 8;
 	else:
-		LineBreak;
+		Linebreak;
 		say "     Maybe you should not. They have their own affairs, and you have meddled in them way too much, already. You'd rather just enjoy the hospitality Mogdraz provided you, and whatever problems they may have, it should be their responsibility, not yours. At least, that is what you could be thinking right now, though you cannot shake away the feeling of uncertainty. What if there is more than meets the eye between these two...? Well, you guess you will never know, but maybe you should not even care.";
 		say "     You head back to the lounge and wait. The dungeons should be free for now.";
 		now Resolution of Ambush the Purifier is 49;

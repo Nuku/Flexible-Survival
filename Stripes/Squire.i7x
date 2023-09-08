@@ -12,7 +12,7 @@ squirefeature is a number that varies. squirefeature is usually 1.
 
 Section 1 - Description
 
-[see section 4]
+[see section 4] 
 
 Section 2 - Monster Victory
 
@@ -512,7 +512,7 @@ to say PlayerObservedSquireServices:
 
 to say SquireServiceScene1:
 	say "     Walking through the forest, you manage to make your way to a small clearing with a knight setting up camp. Even from this distance, you can tell the tent is large, spacious, and well made. Upon the side of the tent, you can see the crest of a [stateplayercrest]. Looking down on your thinly muscled frame sits a loose tunic bearing the same symbol. A moment of glee rushes over you as you realize that you have found your knight! You are overcome with the urge to aid the handsome man like any good squire should, do you follow the temptation?";
-	LineBreak;
+	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Get acquainted with your knight.";
 	say "     ([link]N[as]n[end link]) - Leave for now.";
 	if Player consents:
@@ -538,7 +538,7 @@ to say SquireServiceScene1:
 
 to say SquireServiceScene2:
 	say "     Walking through the forest, you can hear the muffled sound of moaning coming from beyond the brush. Sneaking through the trees and foliage, you make your way to a small clearing that contains a campsite that looks familiar to you. You can hear the distinct sounds of slurping and the quiet growls of some animal coming from the other side of the tent. You could circle around to get a better idea of what your knight is up to if you want.";
-	LineBreak;
+	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Sneak around the camp to get a better view.";
 	say "     ([link]N[as]n[end link]) - Leave for now.";
 	if Player consents:
@@ -557,7 +557,7 @@ to say SquireServiceScene2:
 
 to say SquireServiceScene3:
 	say "     Walking around the forest, you stumble upon another clearing with a familiar looking tent with a man sitting near a fire the campfire. He wears nothing more than a simple cotton shirt with a few of the buttons undone revealing a muscular chest alongside a pair of pants that does little to hide his large package. You take a moment to study his face, identifying him as the knight you have recently began squiring for. He appears to be relaxing for the moment, do you want to go see him?";
-	LineBreak;
+	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Join the knight by the campfire.";
 	say "     ([link]N[as]n[end link]) - Leave for now.";
 	if Player consents:

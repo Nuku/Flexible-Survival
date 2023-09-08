@@ -87,7 +87,7 @@ to say BeatFeralWolfMale:
 				say "     Against your better judgment, you take pity on this battered wolf and decide to take him as your own. You decide it best to show this wolf creature who's in charge right away and grab his nape roughly, holding him down while ";
 				if Player is herm:
 					say "you decide what to do with him. You are getting quite excited by the idea of making this wild beast yours. But being both male and female, there are options open to you if you wish to sexually dominate him.";
-					LineBreak;
+					Linebreak;
 					say "     [bold type]Would you prefer to fuck the wolf, ride his lupine cock, or tame him non-sexually?[roman type][line break]";
 					say "     [link](1)[as]1[end link] - Fuck the wolf.";
 					say "     [link](2)[as]2[end link] - Ride his cock.";

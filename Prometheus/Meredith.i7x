@@ -8,7 +8,7 @@ Version 2 of Meredith by Prometheus begins here.
 "Adds another member of the paratrooper squad triggered by Vanessa to Flexible Survival."
 
 [ HP of Meredith                                     ]
-[ 0 = inactivated                                    ]
+[ 0 = unactivated                                    ]
 [ 1 = saved                                          ]
 [ 2 = talked to                                      ]
 [ 3 = lectured                                       ]
@@ -71,7 +71,7 @@ to say Meredith_rescue:
 				say "     Having beaten and dealt with the first of them, you turn your attention to the other one. You hope for a moment she might break and run for it, but instead her eagerness for sex drives her to come after you as well.";
 				challenge "Red Kangaroo";
 				if fightoutcome >= 10 and fightoutcome <= 19:
-					say "     With the second of them down, you press forward in the direction they were headed. Lacking the tracking unit, you can only head in the direction of the researcher's last known position. Fortunately, you're able to catch the sounds of a struggle and turn towards it. There you find Vanessa and Colleen making their stand together to protect her squadmate. Thankfully, the woman seems uninfected for the moment. Her two protectors are worn, but so are the encroaching kangaroos. When you come in at them from behind, one of them breaks off and makes a run for it, leaving her companions to yell indignities at her. The soldiers use this opportunity to counterattack, and you wade into the fray moments later. Soon enough, the other roos are forced to retreat.";
+					say "     With the second of them down, you press forward in the direction they were headed. Lacking the tracking unit, you can only head in the direction of the reseacher's last known position. Fortunately, you're able to catch the sounds of a struggle and turn towards it. There you find Vanessa and Colleen making their stand together to protect her squadmate. Thankfully, the woman seems uninfected for the moment. Her two protectors are worn, but so are the encroaching kangaroos. When you come in at them from behind, one of them breaks off and makes a run for it, leaving her companions to yell indignities at her. The soldiers use this opportunity to counterattack, and you wade into the fray moments later. Soon enough, the other roos are forced to retreat.";
 					say "[Meredithrescue_succeed]";
 				else if fightoutcome >= 20 and fightoutcome <= 29:
 					say "[Meredithrescue_fail]";
@@ -92,7 +92,7 @@ to say Meredith_rescue:
 					say "     Having beaten and dealt with the other two, you turn your attention to the last of them. You hope for a moment she might break and run for it, but instead her eagerness for sex drives her to come after you as well.";
 					challenge "Red Kangaroo";
 					if fightoutcome >= 10 and fightoutcome <= 19:
-						say "     With the trio down, you press forward in the direction they were headed. Lacking the tracking unit, you can only head in the direction of the researcher's last known position. Fortunately, you're able to catch the sounds of a struggle and turn towards it. There you find Vanessa making her stand to protect her squadmate. Thankfully, the woman seems uninfected for the moment. Her protector is worn, but so are the encroaching kangaroos. When you come in at them from behind, one of them breaks off and makes a run for it, leaving her companions to yell indignities at her. The centaur uses this opportunity to counterattack, and you wade into the fray moments later. Soon enough, the other roos are forced to retreat.";
+						say "     With the trio down, you press forward in the direction they were headed. Lacking the tracking unit, you can only head in the direction of the reseacher's last known position. Fortunately, you're able to catch the sounds of a struggle and turn towards it. There you find Vanessa making her stand to protect her squadmate. Thankfully, the woman seems uninfected for the moment. Her protector is worn, but so are the encroaching kangaroos. When you come in at them from behind, one of them breaks off and makes a run for it, leaving her companions to yell indignities at her. The centaur uses this opportunity to counterattack, and you wade into the fray moments later. Soon enough, the other roos are forced to retreat.";
 						say "[Meredithrescue_succeed]";
 					else if fightoutcome >= 20 and fightoutcome <= 29:
 						say "[Meredithrescue_fail]";

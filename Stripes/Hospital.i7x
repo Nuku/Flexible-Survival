@@ -1479,7 +1479,7 @@ to say ResolveEvent Dinosaur Nest:
 	now inasituation is true;
 	challenge "Triceratops";
 	now dinonest is 0;
-	if fightoutcome > 30: [flee]
+	if fightoutcome > 30: [flee] 
 		say "     Unable to deal with her at this time, you have fled the scene and will have to come back again later to search.";
 	else if fightoutcome > 19 and fightoutcome < 30: [lose]
 		say "     Having bested you, you can only wait and recover before trying to search her nest again later.";

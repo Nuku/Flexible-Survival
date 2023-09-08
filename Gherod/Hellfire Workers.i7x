@@ -1438,7 +1438,7 @@ to say ToronTalkExoticEscortsDirkanor:
 		WaitLineBreak;
 		say "[ToronTalkExoticEscortsMenu]";
 	else if calcnumber is 3:
-		LineBreak;
+		Linebreak;
 		say "     Intrigued about this option, you decide to ask Toron about it, regarding what he mentioned about clients who paid extra. 'Given Dirkanor's immense size, he also happpened to have acquired vore capabilities. Clients pay an extra to be vored and kept inside his balls for a specified amount of time until they are finally released.' says Toron, in quite a stoic tone.";
 		if PlayerMet of Dirkanor is false:
 			say "     'However, I do not advise you to procure this service without first meeting him. Schedule a session with Dirkanor, first, and then we can... discuss this possibility.'";
@@ -1497,7 +1497,7 @@ to say ExoticEscortsDirkanorSession:
 					say "     ([link]Y[as]y[end link]) - Say that you would love to!";
 					say "     ([link]N[as]n[end link]) - Refuse the offer.";
 					if Player consents:
-						LineBreak;
+						Linebreak;
 						say "     'Really?!' he asks, incredulous. You could swear that his massive dick just twitched. Actually, it seems to be getting harder, again... and is not stopping. 'Fuck, hearing that turned me on so much that I got myself a boner! I'm... fuckin['] happy y'wanna please me that way! A-as y'can see...' It is not long until the sexy devil's giant penis is erect, again, which sounds really odd given how much he came, just now. One would think he would need more time to refill after such a load... 'All y'gotta do is lie down in front of my cock and slide yer feet in. It feels better for ya, that way. Some have gone head first into it and found themselves stuck upside down in my nut... Wasn't too good for them, with all that cum building up inside... Had to cum them out before they drowned!'";
 						say "     Nodding to the demon, you know what to do and that you should follow his directions. So, given what he just said, you walk over to his dick and position himself just in front of it. As you lie down, another shot of precum comes to greet you. 'That was just my dick sayin['] hi! He's gotta get ya wet and slippery...' he says, and a few more come landing on top of your body as you raise your feet over his sensitive glans. He is right, your soles slip through the pinkish surface really easily, so much that you do not think it would be hard to slip inside through that gaping slit, looking back at you with hunger as it even opens up slightly at your proximity, like a maw.";
 						WaitLineBreak;
@@ -1514,13 +1514,13 @@ to say ExoticEscortsDirkanorSession:
 						say "     You return to the Lounge a few moments later.";
 						TraitGain "Cock Vored Player" for Dirkanor;
 					else:
-						LineBreak;
+						Linebreak;
 						say "     Despite your initial interest for this extra feature, you feel inclined to refuse, for reasons only known to you. Dirkanor does not ask about them, either, and nods. 'Well, anytime y're interested in it, just let me know. Though I'll always ask ya first, though, it is in my protocol to make sure my clients leave satisfied!'";
 						say "     After he is finished, he gives your whole face an amorous lick and kiss, probably from the enthusiasm. 'Sorry bout that. Couldn't resist!' he says as he pulls away, letting go of you with a big grin on his face. 'So... See ya! And nice to have ya, too!'";
 						WaitLineBreak;
 						say "     Carefully, you make your way through the drenched floor and dripping cum by the door, which you find out detached from the wall. When Toron comes to get you, he brings his hands over his head. 'What in the...! Yet again?! Do I have to go for a vault door, next time?! And look at you...! Nearly took a bath on his cum! I'll have to get you to a high pressured shower!' he complains. There is not much choice other than follow him wherever he says, but you do get clean and fresh before you return to the Lounge.";
 				else:
-					LineBreak;
+					Linebreak;
 					say "     You are not aware of this note he speaks, or perhaps you are, but you know where this is going and you simply do not want to pursue it any further. Regardless, he simply nods in understanding. 'Well, if y're interested, ask him about it, then we can... do some fun stuff when y'come back! I'll always ask ya first, though. I ain't a dick, despite what I look like...!'";
 					say "     After he is finished, he gives your whole face an amorous lick and kiss, probably from the enthusiasm. 'Sorry bout that. Couldn't resist!' he says as he pulls away, letting go of you with a big grin on his face. 'So... See ya! And nice to have ya, too!'";
 					WaitLineBreak;
@@ -1531,7 +1531,7 @@ to say ExoticEscortsDirkanorSession:
 				say "     ([link]Y[as]y[end link]) - Let's do it!";
 				say "     ([link]N[as]n[end link]) - You are not in the mood for that, right now.";
 				if Player consents:
-					LineBreak;
+					Linebreak;
 					say "     'Yeah?!' he asks, really happy to hear it. You could even swear that his massive dick just twitched. Actually, it seems to be getting harder, again... and is not stopping. 'Fuck, I always get so fuckin['] turned on when y'wanna go in me... A-as y'can see... my dick doesn't lie!' It is not long until the sexy devil's giant penis is erect, again, which sounds really odd given how much he came, just now. One would think he would need more time to refill after such a load... 'Y'know the drill by now, right? Just lie down and stick yer feet in my slit, I'll do the rest... or my cock will! Sometimes he has a mind of his own...'";
 					say "     Nodding to the demon, you know what to do and that you should follow his directions. So, with what he just said, you walk over to his dick and position himself just in front of it. As you lie down, another shot of precum comes to greet you. 'It keeps happenin[']! Looks like he really wants ya to slide in easily!' he says, and a few more come landing on top of your body as you raise your feet over his sensitive glans. Indeed, you are very slippery as you rub your soles against the pinkish surface, so much that you do not think it would be hard to slip inside through that gaping slit, looking back at you with hunger as it even opens up slightly at your proximity, like a maw.";
 					WaitLineBreak;
@@ -1548,7 +1548,7 @@ to say ExoticEscortsDirkanorSession:
 					say "     You return to the Lounge a few moments later.";
 					increase Strength of Dirkanor by 1; [counting how many times Dirkanor CV'd the player]
 				else:
-					LineBreak;
+					Linebreak;
 					say "     Despite your initial interest for this extra feature, you feel inclined to refuse, for reasons only known to you. Dirkanor does not ask about them, either, and nods. 'Well, anytime y're interested in it, just let me know. Though I'll always ask ya first, though, it is in my protocol to make sure my clients leave satisfied!'";
 					say "     After he is finished, he gives your whole face an amorous lick and kiss, probably from the enthusiasm. 'Sorry bout that. Couldn't resist!' he says as he pulls away, letting go of you with a big grin on his face. 'So... See ya! And nice to have ya, too!'";
 					WaitLineBreak;

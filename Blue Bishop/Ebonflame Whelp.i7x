@@ -94,7 +94,7 @@ to say ebwhelpdesc:
 		say "     No more than maybe two to three feet tall and covered in coarse, deeply black and purple scales, the creature seems to struggle just to keep itself airborne with its meager wings. More distractingly, it's disproportionately large, black cock shamelessly exposed in the open air, the tapered, dangling thing oozing its glowing, molten-colored fluid.";
 		say "     The tiny, noisy thing clearly doesn't behave like normal offspring, attacking its parent with the clear intent of repeating the cycle, and forcing you to bat it away. Reeling back a few feet, the relentless little whelp only charges at you again!";
 
-
+	
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Ebonflame Whelp"	"[PrepCombat_Ebonflame Whelp]"

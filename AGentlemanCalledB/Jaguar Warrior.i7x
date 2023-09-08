@@ -256,7 +256,7 @@ to say TameTehuantl:
 	now area entry is "Nowhere";
 	now Energy of Tehuantl is turns;
 
-
+	
 Table of CombatPrep (continued)
 name	PrepFunction
 "Jaguar Warrior"	"[PrepCombat_Jaguar Warrior]"

@@ -382,7 +382,7 @@ to say PrepCombat_Sierrasaur:
 			setmongender 3; [creature is male]
 		else:
 			add { "Sierrasaur" } to infections of HermList;
-			setmongender 7; [creature is mherm]
+			setmongender 7; [creature is mherm]	
 
 Section 2 - Creature Insertion
 

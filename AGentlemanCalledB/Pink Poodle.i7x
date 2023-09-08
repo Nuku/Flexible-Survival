@@ -131,7 +131,7 @@ to say pinkpoodle_dom:
 	now Libido of Dominick is 3;
 	increase XP of Dominick by 1
 
-
+	
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Pink Poodle"	"[PrepCombat_Pink Poodle]"

@@ -67,7 +67,7 @@ to say CumGirldesc:
 	else:
 		say "     The overwhelming smell of sex hits you again as the cum girl steps forward, licking her lips slowly as she approaches.";
 
-
+	
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Cum Girl"	"[PrepCombat_Cum Girl]"

@@ -1640,13 +1640,13 @@ instead of going north from Beach Plaza while (DBCaptureQuestVar is 5 and demon 
 	say "     ([link]Y[as]y[end link]) - Command him to continue following you at once!";
 	say "     ([link]N[as]n[end link]) - Have mercy on the demon for now and consider other means to help him.";
 	if Player consents:
-		LineBreak;
+		Linebreak;
 		say "     With a directive command, you order your hellish pet to quit his tantrum and resume walking with you to the church. It appears your words are sent in vain, as the demon is simply too debilitated to follow you, and too absorbed in his pain to even hear you. You have no choice but to unsummon him, speaking the magic words Nermine taught you, then seeing him turn into a purple mist and flowing back into the amulet. The pain he was feeling was very intense, and you could clearly see its effects before your eyes. There must be something the priests can do for the poor creature, though you'll have to ask and be ready for any demands they make. If there is anything such as a purification process to be applied on demons, you don't think it'll be cheap, but whatever it may be, you'll probably save the brute from eternal torment...";
 		say "     Or, of course, you could always maintain him as your unwilling slave, mocking him and flexing your power over him, if you enjoy that.";
 		now resolution of Demonic Redemption is 99; [locked on the cleansing path]
 		remove demon brute from companionList of Player;
 	else:
-		LineBreak;
+		Linebreak;
 		say "     There has to be another way to make the demon brute a little less of a... well, an inherently evil creature of hell, other than messing with holy rituals to exorcise him, or something similar. However, considering your options, nothing really comes to mind. Perhaps it would be wise to return to a quiet and calm place, like the Library, and attempt to talk to your tamed hellish creature as soon as you arrive, in order to attempt to know more about their kind and what causes this natural hostility. Though you recall it won't be an easy task, provided the amount of hatred inside the demon that makes him act with such rebellious attitude. Were it not for the spell binding him to your will, he'd have already turned on you. Nonetheless, it should come to a path where you can preserve his primal characteristics while tuning down Hell's influence over him... You think.";
 		say "     With a directive command, you order your hellish pet to stand up, and consider your next destination... Oh, and obviously, if you want to make this work, it's probably for the best if you start being nicer to him... Why don't you begin with walking a bit with him around you, as you make your way to the [bold type]Library[roman type]? In the meantime, you can think about the words you'll use to initiate the talk. Make sure to keep him summoned, though.";
 		now resolution of Demonic Redemption is 1; [can still be cleansed, but no longer the only option]

@@ -25,7 +25,7 @@ Definition: a person is Cheesecakebodied:
 	if Player has a body of "Cheesecake", yes;
 	no;
 
-
+	
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Cheesecake"	"[PrepCombat_Cheesecake]"

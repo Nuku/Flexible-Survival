@@ -704,15 +704,15 @@ to say ElaineUniform:
 			say "     The female quartermaster takes one look at you and replies, 'You're kidding, right? I pride myself on having a well-stocked inventory, but the US army just isn't in the habit of making child- or doll-sized uniforms.'";
 		else if scalevalue of Player is 2: [small]
 			say "     The quartermaster glances at your form and then strides over to a nearby shelf, selecting several articles of clothing and a pair of boots. 'This is the best I can do, with your small size. Some things may be rather looks, but I'm sure you'll be able to manage, right?' She doesn't actually wait for an answer, just handing you the stack of gear right away.";
-			LineBreak;
+			Linebreak;
 			UniformHandout;
 		else if scalevalue of Player is 3: [normal]
 			say "     The quartermaster glances at your form and then strides over to a nearby shelf, selecting several articles of clothing and a pair of boots. 'Okay then, here's a uniform in your size.' With that, she hands you the stack of gear right away.";
-			LineBreak;
+			Linebreak;
 			UniformHandout;
 		else if scalevalue of Player is 4: [big]
 			say "     The quartermaster glances at your form and then strides over to a nearby shelf, selecting several articles of clothing and a pair of boots. 'Now then, this should mostly fit you, even if it will be a bit snug. I'm sure you'll be able to manage, right?' She doesn't actually wait for an answer, just handing you the stack of gear right away.";
-			LineBreak;
+			Linebreak;
 			UniformHandout;
 		else: [giant]
 			say "     The female quartermaster takes one look at you and replies, 'You're kidding, right? I pride myself on having a well-stocked inventory, but the US army just isn't in the habit of making giant versions of any uniform.'";

@@ -540,8 +540,8 @@ Object	Name
 `NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (GivingChar - a person)`
 
 SexAct Options: AssFuck, AssDildoFuck, PussyFuck, PussyDildoFuck, OralCock (= facefuck), OralPussy (= cunnilingus)
-* TakingChar is the one getting penetrated in ass/pussy/mouth
-* GivingChar is the one grinding their dick/pussy/dildo into the other
+* Takingchar is the one getting penetrated in ass/pussy/mouth
+* Givingchar is the one grinding their dick/pussy/dildo into the other
 
 This function does several things:
 *  Checks Virginities for all participants, showing messages if someone loses theirs

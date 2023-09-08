@@ -261,7 +261,7 @@ to say FireSpritedesc:
 		project the figure of FireSpriteMale_icon;
 		say "     The sprite before you is not much more than two feet tall, with bright orange flesh and slim features. While his exposed six inch cock is decidedly small compared to many of the creatures around, it seems quite large compared to his lithe form. His short orange and [one of]red[or]white[at random] hair seems to shimmer as he moves, flickering like a fire.";
 		say "     Small wisps of flame occasionally flare from his exposed flesh, increasing in frequency as they seem to run down his arm, pooling in his palm as a ball of flame, which he raises threateningly as he approaches you with a maniacal grin.";
-
+	
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Fire Sprite"	"[PrepCombat_Fire Sprite]"

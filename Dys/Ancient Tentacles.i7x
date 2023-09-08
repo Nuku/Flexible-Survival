@@ -37,12 +37,12 @@ to say TentacleSex:
 			else:
 				say "Invalid choice. Type [link]1[end link] to protect yourself, [link]2[end link] to reverse the spell, [link]3[end link] to go in without any magical interference, or [link]4[end link] to drop the idea of summoning the ancient tentacles.";
 		if calcnumber is 1:
-			LineBreak;
+			Linebreak;
 			say "     With a nod, you tell Xaedihr to cast the protective ward on you. He does so without a problem, with a few arcane words and magic gestures, and the spell makes you feel a little funny, though nothing unbearable. You then proceed to summon the tentacle beast, carefully following the tome's instructions.";
 			WaitLineBreak;
 			TentacleFuck;
 		else if calcnumber is 2:
-			LineBreak;
+			Linebreak;
 			say "     With a nod, you tell Xaedihr to cast the reversed version of the ward on you. He shrugs, but does so without a problem, with a few arcane words and magic gestures, and the spell makes you feel a little funny, though nothing unbearable. You then proceed to summon the tentacle beast, carefully following the tome's instructions. This will increase the likelihood of getting egg-filled by the ancient creature.";
 			WaitLineBreak;
 			if a random chance of 3 in 4 succeeds:

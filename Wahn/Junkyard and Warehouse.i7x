@@ -289,7 +289,7 @@ to say StevenTalkFeelings:
 		say "     ([link]Y[as]y[end link]) - Push the issue.";
 		say "     ([link]N[as]n[end link]) - Better back off, for now.";
 		if Player consents:
-			LineBreak;
+			Linebreak;
 			say "     'If there was some way I could get back in and talk to them, then—well I might be able to convince them I'm the same as before.' You give him the location of the alley you found, and 	the oddly convenient backdoor. 'Alright. Maybe one of these days I'll see about talking to them. But I don't think I'll want to do it alone. Can you come with me when I'm ready?' You give your assurances to him and step aside, content with where things ended up.";
 			now Resolution of Old Stallion Friendship is 2; [Event now active]
 		else:
@@ -614,12 +614,12 @@ instead of going southeast from Abandoned Lot while (Resolution of Old Stallion 
 			LineBreak;
 			say "     Steven gives a look of shock, but as you rub over his flank and reach towards his cock, his look abates towards one of confusion. His muzzle then twists into a vision of pure lust as you wrap a hand around his loincloth covered dick. The strings keeping the shaft mostly out of view snap as it hardens at a ridiculous pace. A neigh then rings out from him as he shakes his head, lightly pushing you aside as he clops over to the indisposed guards. 'So you think you could stop me from taking what I want?! Huh!' The stallion then pumps at his fully hardened dong, pre spewing out across the face of the guard nearest him. Steven then slaps the man across the face with the leaking shaft, neighing out sounds of pure lust as he grips the guards head. The still human man's eyes gloss over as his lips kiss at the stallion's tip. 'So quick to fall to your betters. Let me help you fall faster.' The musk ridden male then slams his cock down the guards throat, the human gagging momentarily before miraculously overcoming that limitation.";
 			say "     Steven quickly gets into a rhythm of throat-fucking the male before him, neighing and flehmening as his cock gets coated with ever thickening saliva. The man the stallion was previous huddled over is still in the same spot, and as you glance at him, you realize that fine hairs have begun to sprout along his neck. Hunching over, you rip his shirt open, revealing hairs all over his torso, at their thickest along his lower abdomen as they trail down into his pants.";
-			LineBreak;
+			Linebreak;
 			say "     Do you want to suck the stallion's old friend? Beware, though, as [bold type]Steven may have words with you afterwards if you do.[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents: [sucks]
-				LineBreak;
+				Linebreak;
 				say "     You quickly rip off the rest of the man's clothes, revealing an ever lengthening, and ever more equine cock between his legs. Unable to help yourself, you lap at the tip, sucking down all of the seed the man pumps out. His product seems to increase with each passing second, and soon you find your mouth regularly filled to the brim with musky cum. You have to gulp it down just to avoid drowning, but you can't help yourself as you push your mouth further down his shaft, watching as the fur along his body spreads faster as you get further down. Soon he's neighing out of a slender equine muzzle, his newly thickened fingers gripping at your head to force you down to the base. As you gulp around the tip of the shaft, you feel it edging its way deeper inside you. The length slows in its growth, but is still quite eager to get even larger within you. A loud neigh then fills the room, your eyes darting to the side so you can just barely make out the sight of Steven's ass cheeks clenching together, the muscles held tight as the sounds of gulping gets louder.";
 				say "     You refocus on your current task, gulping down around the length deep inside your throat as the changing human begins to thrust his hips, fucking your face. At first you gag, but as you work up to the rhythm of it, you take it like a champ. With the thrusting, your gulping, and the now fully grown cock, your feel new urgency in the thrusts down your throat. Before you can panic, however, the stallion shoves you to the base once more as his cock pulses and his hips still. You feel it before you taste it, the thick globs of seed firing down your gullet and into your stomach. Four, five, eight, twelve, eighteen, and then finally the globs begin to slow, your lungs burning as you desperately claw at the crotch before you, whinnies filling your ears as the hands loosen their grip on you. You yank yourself back hard enough to land on your ass, the rest of the seed from that monolith of masculinity splattering across the once human groin and cock, some even splattering against you.";
 				WaitLineBreak;
@@ -629,7 +629,7 @@ instead of going southeast from Abandoned Lot while (Resolution of Old Stallion 
 				now charisma of Steven is 1; [You made Steven a tad upset]
 				now Steven is nowhere;
 			else: [No]
-				LineBreak;
+				Linebreak;
 				say "     You simply go back to watching the great stallion defile the guards, each one falling more and more into depravity as the musk from Steven sinks in. The ones tied up the farthest from the action try and scoot closer, doing anything to get closer to their new object of worship. Before long the stallion gives out a loud neigh as he slams his hips forward, the guard before him gulping louder with each second. Steven's ass even clenches as the muscles between his legs pulse. After what feels like several minutes, the stallion pulls his saliva and cum stricken, drippy cock from the guard, continuing onto the next one. He slams his cock down that man's throat as well, seeming to have adopted a style of creating more sluts for himself. As time passes each guard feels that shaft down their throats, their need evident as they pant and moan from just being near him. Soon he would pump a load down each of their throats, the eager guards soon groaning in pain as you look on with concern.";
 				say "     Your worries are soon assuaged as Steven strips them of their clothing and gear, revealing the tan hairs sprouting all over their bodies. The new sounds from the men is that of lust and excitement. The shifting men then run their hands along their changing bodies, the more muscled ones slimming down as the others merely trim up. Each of them turn into quintessential twinks right before your eyes, only they have fine hairs all over their bodies, and cocks to almost rival Steven himself. It also doesn't take long for the new twinks to start running their hands over each other, the ropes and bindings torn off them when they'd been stripped by their stallion. Moans sound out next as they get more vulgar in their explorations. It takes no time at all for once human, presumably straight, males to descend into a pile of writhing equine desire.";
 				now Resolution of Old Stallion Friendship is 3; [The warehouse is now a whorehouse]
@@ -650,7 +650,7 @@ Section 6 - Steven Bunker events
 
 after going to Main & 7th Street while ((Charisma of Steven is 1 or Charisma of Steven is 51) and Resolution of Old Stallion Friendship is 3 and Dexterity of Steven < 1 and Player is male and daytimer is day):
 	say "     As you walk out onto the steps of the old library, you hear a man clear his throat. You then glance to the side, seeing the imposing figure of Steven. He's leaning against a pillar, his eyes drinking you in as he simply remains silent. A loincloth is the only thing blocking your view of his crotch, but even then, several inches of his equine shaft dangle in clear view, well past the edges of the small piece of fabric. Apparently, he's settling for just having your attention. The silence remains for several awkward seconds, forcing you to make the first move.";
-	LineBreak;
+	Linebreak;
 	say "     [bold type]Do you want to question him about his presence, or do you want to simply leave him to come back another time?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";

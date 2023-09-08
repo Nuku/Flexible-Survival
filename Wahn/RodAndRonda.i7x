@@ -73,13 +73,13 @@ to say roddesc:
 	project Figure of Rod_icon;
 	if Rod is in Mall FoodCourt:
 		if MaleInterest of Player is false: [no sexual interest at all, more neutral description]
-			say "     Rod is an anthro rat rocking a skater look, consisting of grey khaki-punk shorts and a tank top depicting a cow being abducted by an UFO. A shiny silver earring in his left earlobe rounds out the outfit and provides some extra cool points. He's about average height for a human, his slender rodent body mostly covered in white fur, with just his shoulders and part of his face being grey, as well as having a mop of black hair on top of his head. A pink, twitching nose surrounded by fine whiskers and sky-blue eyes are the other noticeable features of his face. Pink-skinned hands, slender feet and a long tail round out the image of the young man.";
+			say "     Rod is an anthro rat rocking a skater look, consisting of grey khaki-punk shorts and a tank top depicting a cow being abducted by an UFO. A shiny silver earring in his left earlobe rounds out the outfit and provides some extra cool points. He's about average height for a human, his slender rodent body mostly covered in white fur, with just his shoulders and part of his face being grey, as well as having a mop of black hair on top of his head. A pink, twitching nose surrounded by fine whiskers and sky-blue eyes are the other noticable features of his face. Pink-skinned hands, slender feet and a long tail round out the image of the young man.";
 			if Ronda is not in Mall Atrium:
-				say "     Currently, he's looking like a wreck, with dark circles under his eyes as he's not getting any sleep from what happened to Ronda. Worry is drawn all over his features, and he paces up and down trying to think of something to do.";
-			else:
+				say "     Currently, he's looking like a wreck, with dark circles under his eyes as he's not getting any sleep from what happened to Ronda. Worry is drawn all over his features, and he paces up and down trying to think of something to do.";	
+			else: 
 				say "     As he notices your attention, the mall rat gives you a smile and little wave. Cheerful and fairly relaxed, the young man is propped up against the wall, idly listening to some music through a pair of earphones that look fairly comical clamped over his overlarge ratty ears.";
 		else: [player interested in men and pays more attention to his body]
-			say "     Rod is a handsome anthro rat rocking a skater look, consisting of grey khaki-punk shorts and a tank top depicting a cow being abducted by an UFO. A shiny silver earring in his left earlobe rounds out the outfit and provides some extra cool points. He's about average height for a human, his slender rodent body mostly covered in white fur, with just his shoulders and part of his face being grey, as well as having a mop of black hair on top of his head. A pink, twitching nose surrounded by fine whiskers and sky-blue eyes are the other noticeable features of his face. Pink-skinned hands, slender feet and a long tail round out the image of the young man.";
+			say "     Rod is a handsome anthro rat rocking a skater look, consisting of grey khaki-punk shorts and a tank top depicting a cow being abducted by an UFO. A shiny silver earring in his left earlobe rounds out the outfit and provides some extra cool points. He's about average height for a human, his slender rodent body mostly covered in white fur, with just his shoulders and part of his face being grey, as well as having a mop of black hair on top of his head. A pink, twitching nose surrounded by fine whiskers and sky-blue eyes are the other noticable features of his face. Pink-skinned hands, slender feet and a long tail round out the image of the young man.";
 			if Ronda is not in Mall Atrium:
 				say "     Currently, he's looking like a wreck, with dark circles under his eyes as he's not getting any sleep from what happened to Ronda. Worry is drawn all over his features, and he paces up and down trying to think of something to do.";
 			else: [normal]
@@ -133,7 +133,7 @@ to say RodTalkMenu:
 		now title entry is "Talk about Ronda";
 		now sortorder entry is 13;
 		now description entry is "Discuss the things going on with Rod";
-	[]
+	[]	
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -398,7 +398,7 @@ to say RondaTalkMenu:
 		now title entry is "Talk about Ronda";
 		now sortorder entry is 13;
 		now description entry is "Discuss the things going on with Ronda";
-	]
+	]	
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -840,7 +840,7 @@ to UtilityRoomChoicePoint:
 			say "     You've seen enough horror movies to know that entering creepy underground rooms is not advisable. Though along the same lines, you wonder for a second why you're even down here in the first place, then push that thought aside and turn around, retracing your steps. As you leave the door behind, you make a firm resolution to not come back.";
 			now Resolution of Mall Utility Room is 100; [avoided for good - unless the slutrat quest is started]
 			now Mall Utility Room is resolved;
-
+	
 to say Mall_Utility_Room_Desc:
 	say "Glancing around, you see that what once was just an unremarkable utility room has been transformed into something else entirely. Lit by more than a dozen large, slow-burn candles set on the metal shelving along the walls, the place looks more like the underground lair of some sort of cult, complete with mildly disturbing paraphernalia taking the place of maintenance worker's tools: There are plenty of jars and bottles with unknown fluids in various colors, gags and various items of BDSM bondage gear, and even a human skull staring at you from hollow eye-sockets. The centerpiece of it all is a large pentagram spray-painted on the concrete floor in the middle of the room, with fresh, black candles set at each point of the symbol's central star.";
 	say "     Unsure what to make of this ritual chamber, you keep looking around and spot another door on the opposite side of the room. Instantly deciding that you should check that out first, you lay your hand on the door handle and try it, slowly and carefully, but find the metal door locked. Seems like that won't lead you on anywhere, so you turn back to investigate your surroundings instead. Stepping up to the nearest shelf, you have a look at the bottles and jars - none of them are labeled, or if they were, had their labels scraped off. Blue, green, purple - there's plenty of colors to go around with these, but more than a few are filled with milky white goop. A little closer examination of one such jar with a dried smear down its outside reveals that this is what was to be expected - cum. You can't help but idly wonder what would produce enough of the stuff to fill all the containers you see (if everything white actually is cum, that is). There must be gallons of the stuff in here!";

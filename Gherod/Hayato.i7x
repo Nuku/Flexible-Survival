@@ -438,16 +438,16 @@ to say sexwithHayato:
 	else if HP of Hayato < 10:
 		if HP of Hayato is 7 and Energy of Hayato is 1:
 			say "     You are about to proceed with the seduction path, which will lock you into attempting to introduce the oni to sex on your own terms. Do you wish to proceed?";
-			LineBreak;
+			Linebreak;
 			say "     ([link]Y[as]y[end link]) - Yes, you want to get sexual with him.";
 			say "     ([link]N[as]n[end link]) - No, you want to think about it some more.";
 			if Player consents:
-				LineBreak;
+				Linebreak;
 				say "     Well, you can help him this way, and you actually want to, so... Why not? Perhaps you will be successful... or eventually.";
 				now Energy of Hayato is 2;
 				WaitLineBreak;
 			else:
-				LineBreak;
+				Linebreak;
 				say "     Thinking twice, you back off, for now.";
 				stop the action;
 		else if Energy of Hayato is 3:
@@ -496,7 +496,7 @@ to say HayatoBeltUnlock:
 	say "     ([link]Y[as]y[end link]) - In fact, you also had another goal in mind when doing this. Make a move on the big oni.";
 	say "     ([link]N[as]n[end link]) - Pat on his shoulder and talk to him.";
 	if Player consents:
-		LineBreak;
+		Linebreak;
 		say "     It is clear that he is scared of having that freedom return to him, but you are here to make him feel comfortable... desired... And while you carefully get closer to him, you rub your hand against his broad shoulder, then down to his bulging triceps and biceps, grabbing his gaze and looking into his eyes as you reach of his hand, and once you have got his full attention, you whisper to him that everything will be okay, because you are here for him. You want him to suffer no more, and to allow himself to receive the pleasure he deserves... which you can and want to provide. He does not say anything, but does not stop you, either. Remaining on his seat, you slide in beside him and take it slow, at first. You lift your hand, and let him make the first move...";
 		say "     You do not want to force him, and you want that to be clear, so you let him take his time to come to you, instead. He eventually lifts his large hand as well, and slides it across yours, a moment you use to put your arm around his waist, laying your free hand on top of his muscular chest. His heartbeat can be felt almost humping against your palm, a strong and powerful one, as you give him a few gentle rubs across those large pectorals. He lets out a very faint, nearly inaudible moan, as you brush your fingertips across one of his red nipples, his need for stimulation building as his unsatiated arousal grows. He exhales, as if out of breath, and rapidly grabs your by the wrists, stopping any action of yours at that moment.";
 		WaitLineBreak;
@@ -521,7 +521,7 @@ to say HayatoBeltUnlock:
 		increase score by 25;
 		unleashredoni;
 	else:
-		LineBreak;
+		Linebreak;
 		say "     You reach for him, giving him a friendly pat on the shoulder and reassure him that everything will be fine. He will be able to lead a normal life without the belt, and you are here to help him achieve that. 'I suppose...' he takes a deep breath, then lets out a sigh. 'Okay. Give me the key.' he asks you, and you do as he says.";
 		say "     When the oni takes the key from you, he immediately proceeds to work it into his belt's lock. Turning it around rather easily, despite its obvious age, he then has the gears in the mechanism run so surprisingly smoothly that you begin to doubt its looks, but concerns aside, you continue to observe the procedure. The bans around his waist and between his legs step out further with each turn of the key until they finally release, and that is not the only thing that comes free. Now unrestrained from its bonds, his crimson cock surges to full erection, sending the unlatched metal clattering across the ground. 'Oh, damn! I... Suppose we won't need that anymore, right?! T-totally wasn't expecting this to happen...!'";
 		WaitLineBreak;
@@ -913,12 +913,12 @@ to YoukaiLairXaedihrPath1:
 	say "     'First of all, you have to look like you are one of them. This could be achieved in many different ways... But... right now you only have one possible way.' He takes a couple of seconds to read something on his book, and then turn to you. 'By utilizing a [bold type]visage[roman type] that I am, fortunately, able to craft. You will look like one of them without the need to become transformed the way Hayato was. This would also solve the next problem I am going to refer to. Your [bold type]essence[roman type], which is something your friend lacks despite his appearance and, which in turn, you would lack as well, will be a dead giveaway to them. This visage will provide that and more, given that you acquire what I need.' He then turns to Hayato, looks at him from head to feet, then back at you. 'It's not like your friend is a fully fake oni, by any means. It's just that the essence he carries through the transformation is negligible. It can be enhanced, however. Safely. And I do happen to know how without having to send you into a regretfully painful errand.'";
 	WaitLineBreak;
 	say "     Xaedihr then takes a moment to breathe, and follows up with a sigh... 'Anyway... I will have to extract some semen from the red oni.' Hayato's eyes widen at those words, as they were quite unexpected coming from a person like the dark mage himself. But before he can say anything, the half-demon continues 'I would of course use a technique that would make short of his stamina. I understand if you don't agree with this procedure, but it is the only option.'";
-	LineBreak;
+	Linebreak;
 	say "     With the half-demon's proposition in the air, you only have to consider if either you want it or not. 'So, shall I begin?' When you turn to Hayato, he lets you know he is fine with it, and actually seems a little curious.";
 	say "     ([link]Y[as]y[end link]) - Let Xaedihr extract Hayato's [']essence['] using that quite pleasurable technique.";
 	say "     ([link]N[as]n[end link]) - You don't agree with this. Do not allow things to proceed.";
 	if Player consents:
-		LineBreak;
+		Linebreak;
 		say "     After having considered your options, you decide to let the mage have a go with Hal, since he did not seem to mind the idea that much. 'I can work with that. Hayato, please, remove your gear. We shall begin immediately.' Before he could get naked as instructed, Xaedihr's purple tendrils were already emerging from the alternative plane of existence (and from the floor) they belong, in preparation for the task ahead. Hayato feels the need to ask 'Uh, so... How will this...?' but before he can finish, the tendrils wrap themselves around his legs and crawl towards his meat, balls and ass. His eyes widen as one gentle tentacle pokes into his ass and slips itself inside, while a few others wrap themselves around his shaft and nuts, with only delicate squeezing at first.";
 		say "     'There is nothing to fear. My tendrils are never aggressive when I don't want them to be, so just relax and enjoy yourself. It will make this procedure more quick.' While the situation seems quite... scientific, the large oni seems to be feeling quite good, as he builds quite the solid erection in a matter of a few seconds. Judging by the look on his face, he never experienced anything like this. Xaedihr turns to you and explains what is happening in high detail. 'So, what my tendrils are doing is simply precise stimulation. By providing the prostate enough poking and rubbing, males are way more susceptible to orgasm, which means they do so much more quickly. All you've got to do is to follow up with the best stroking you can give, and wetness helps a lot. It is sort of what you do when you want to milk a male.'";
 		WaitLineBreak;
@@ -944,7 +944,7 @@ to YoukaiLairXaedihrPath1:
 		now YokLairUnlock is resolved;
 		now Youkai Lair is active;
 	else:
-		LineBreak;
+		Linebreak;
 		say "     You let the mage know you don't want this to continue. Hayato does not say anything, but you can tell he finds that decision quite odd, as it would be a very harmless and easy way to acquire this so called visage. 'Well... Fine! Go about your business, then. We've nothing else to discuss.' Xaedihr dismisses you as quickly as he hears your reply, and turns to his own matters without any regard for what (and if) you have to say.";
 		say "     'I... didn't see the problem? I mean, I could have just... you know, done it myself or... He just wanted my cum, right?' You are sure that wasn't as simple as just making the oni cum, but nonetheless, you let him know you have made your decision. Perhaps you can still acquire the help of a real demon, or a certain sorceress in the [bold type]mall[roman type] with better success...";
 		now Resolution of YokLairXaedihr is 99; [failed to earn his assistance]
@@ -984,20 +984,20 @@ to say MogdrazTalkYokLair:
 		say "     A soul contract, he says. Hayato's expression shows that he really does not like the idea. 'Either you or your friend, if you care so much for that little thing you carry inside you. I would be, however, willing to take just a portion of your soul, but if your friend prefers to volunteer, I would require its entirety, instead. A mere token of loyalty, as I have previously stated. You shall be provided your freedom as long as your life is allowed to take its natural course. It's as if nothing changed, and you might even live a more... comfortable life. But once death takes you... Well. At least you'll know your fate. Any soul of mine, once it has left its shell... stays with me.'";
 		WaitLineBreak;
 		say "     'The reason I need this is that the dangers lying in that place are far more concerning than what your minds can even fathom. Your failure would pose a risk to me, and this way, I can have some control over the situation in case things go wrong. We can never be too careful, you know... Having them hold control of either of you could prove catastrophic to my people's safety, as you know of this location... and so would they. This will ensure they won't know. Like I said, a mere token of loyalty.' As Mogdraz is finished with the explanation, he prompts you with a question. 'So, are we doing a soul contract, or... should we dismiss this reunion right away?' he asks, and you are expected to answer now. Your red oni friend clearly disagrees with this deal, but he will let you do what you think is best. He won't agree on giving out his own soul, however, unless you find a way to persuade him.";
-		LineBreak;
+		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Accept the deal and choose a procedure[bold type]. Warning[roman type]: there is no way back once you accept it.";
 		say "     ([link]N[as]n[end link]) - You would rather keep your souls intact.";
 		if Player consents:
-			LineBreak;
+			Linebreak;
 			say "     You feel Mogdraz's joy hearing your words of acceptance, as he enthusiastically replies 'Splendid! Now, you just made my day...!' He then invokes a sheet of paper out of thin air with a set of quill and ink, as it was once done in older times, but before he hands it over, he looks at both you and Hayato before throwing you another question. 'Very well, then, which one of you shall I claim? Or... partially claim.' A grin draws itself across his face, one that would send shivers down your spine by just looking at it. Your oni friend really does not like this, and if you intended on providing his soul, you will still need to persuade him.";
-			LineBreak;
+			Linebreak;
 			say "     ([link]Y[as]y[end link]) - Let Mogdraz claim ownership of a portion of your soul.";
 			say "     ([link]N[as]n[end link]) - [bold type](Charisma Roll) [roman type]Convince Hayato to hand his soul over to the Demon Lord.";
 			if Player consents:
-				LineBreak;
+				Linebreak;
 				YoukaiLairMogdrazPath1;
 			else:
-				LineBreak;
+				Linebreak;
 				say "     Turning to Hayato, you politely ask him if he would be keen on giving out his soul to the Demon Lord. 'Wait, what?! You're not seriously suggesting that I...?' You stop him there, and explain things carefully, that it actually won't matter much as long as he's living, that this is merely a token of loyalty which he does not need to fear.";
 				WaitLineBreak;
 				let bonus be (( charisma of player minus 10 ) divided by 2);
@@ -1016,7 +1016,7 @@ to say MogdrazTalkYokLair:
 					WaitLineBreak;
 					YoukaiLairMogdrazPath1;
 		else:
-			LineBreak;
+			Linebreak;
 			say "     You really don't want to take any part in this. The price is too high, and Hayato really isn't comfortable with any of the options, you can tell. 'A pity. Well, I suppose this meeting is over, then. I'm not going to ask you to reconsider, as I'd rather have a willing soul... But I do wish you good luck on your quest. Which would be close to impossible without my help, but alas... Maybe you do know of another way, after all, or you would be more desperate to accept my offer.'";
 			WaitLineBreak;
 			move player to Hellfire Club;
@@ -1064,23 +1064,23 @@ to say LilithTalkYokLair:
 	WaitLineBreak;
 	say "     You explain the situation as briefly as possible, as you know best to not waste much of her time. 'Oh, my... You're saying... That you want to find this place and breach it, just like that? Well, but that would require a large amount of effort, wouldn't it? And large efforts need to be well paid... How about you let me turn your mighty oni friend into a full subservient demon? Wouldn't that be delightful...' Hayato frowns his eyebrows, and gives you a creeped out look. There is no way you would also agree with that, right? But then, she continues to speak, after giggling a bit. 'You should have seen the look on his face, just now... Oh, it would make such good use of that big and strong body of his, but I suppose... I do have another request.' You listen attentively to her next words, as they might be the only exchange you can make happen.";
 	say "     'As you may know, there is... A problem in this district. They're also big and red, but they're far from being as charming as your companion. Yes, you do know who I'm talking about, don't you? Those so called hellfire demons have been a nuisance since they moved in, and they've been causing me and my children a lot of needless trouble. Now, would you do me a big favor and retrieve something for me? Something that has been stolen by them, right under my nose. Thinking I wouldn't see them, those idiots... But that's besides the point. I need that particular object back, and they should learn their place, so... It's a double win.' An object, she says, yet she is not being clear about what kind of object it is. Perhaps you should question her in order to understand what you would be getting into?";
-	LineBreak;
+	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Question what kind of object is that.";
 	say "     ([link]N[as]n[end link]) - Just let her continue.";
 	if Player consents:
-		LineBreak;
+		Linebreak;
 		say "     Of course, you have to ask what is it that you would be retrieving for her, but you are met with a blunt response. 'Now, that's none of your business, is it? It's something that belongs to me, so it should be in my possession, as all thing one owns. Wouldn't you agree?' While she is clearly being very cryptic about what sort of trinket you would be [']stealing['] back to her, you suppose it is not actually an essential information in order to perform this job adequately, given her attitude...";
 		WaitLineBreak;
 	else:
-		LineBreak;
+		Linebreak;
 		say "     Perhaps not. You know she would not like it, so you let her proceed uninterrupted, instead.";
 		WaitLineBreak;
 	say "     'I shall provide you the location of this trinket of mine, and you will simply grab it and return it to me. Understood?' Well, that does not seem like much of an explanation, but it seems she is demanding an answer right now.";
-	LineBreak;
+	Linebreak;
 	say "     ([link]Y[as]y[end link]) - You understand, and shall do whatever she asks.";
 	say "     ([link]N[as]n[end link]) - No, you don't want to do this for her and get involved with the Hellfire Demons.";
 	if Player consents:
-		LineBreak;
+		Linebreak;
 		say "     You nod, letting her know of your consent. 'Splendid, I suppose.' she commends you, not with much enthusiasm in her tone, but rather as if something she predicted just happened. Hayato eyes you with uncertainty, suggesting that, perhaps, you would have been better seeking someone else's help, instead. 'Now, this trinket of mine has been brought to a local abandoned warehouse within the northern section of the district. Which means that I need to send someone they wouldn't suspect, at first. If you're careful enough, nobody will see you, I'm sure... So if you end up pissing them off, that's on your lack of caution...'";
 		say "     When she finishes her explanation, you still do not know what kind of trinket you are supposed to bring, so you have to ask how it looks like. She lets out a sigh. 'If it helps, it's a red colored jar. You may take this little ring as well, it will help you locate your objective.' she adds, as she hands you over a ring with a big red gem on top of it. 'Now go, before anything happens to it. I can't imagine what they would be doing to my precious artifact as we speak...'";
 		WaitLineBreak;
@@ -1118,7 +1118,7 @@ to say LilithTalkYokLair:
 		now YokLairUnlock is resolved;
 		now Youkai Lair is active;
 	else:
-		LineBreak;
+		Linebreak;
 		say "     You absolutely disagree with these terms, and Lilith pays no attention to you afterwards. 'Well now you're just wasting my time... If you don't want to do a simple favor for me, then I shall do nothing for you. Anyway, if you're done, then I suggest you leave, as I have nothing else to offer.' These are her final words before she retreats the conversation and leaves both you and Hayato alone.";
 		say "     'These demons... They're all business and favors and deals... How can you get along with them?' You don't really know how to answer him, but for now, what matters is that you cannot count with Lilith's help. Maybe some other demon could help you, or someone knowledgeable on the matter... Maybe a certain sorceress in the [bold type]mall[roman type], even... Have you tried, there?";
 		now Resolution of YokLairLilith is 99; [failed to earn Lilith's help]
@@ -1153,11 +1153,11 @@ to say NermineTalkYokLair:
 		say "     It appears that the jackal woman will only offer her aid if you agree on bringing this object back to her once you make it to the Lair, which means you will have [bold type]one additional objective[roman type] while inside, and you may not leave until that is completed.";
 		WaitLineBreak;
 		say "     [bold type]Do you wish to accept Nermine's offer and follow through her path to gain access to the Youkai Lair[roman type]? If you refuse, you will be able to explore other options, and if none suit your preferences, you may come back to accept the jackaless['] help, instead.";
-		LineBreak;
+		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Yes, accept Nermine's offer.";
 		say "     ([link]N[as]n[end link]) - No, for now.";
 		if Player consents:
-			LineBreak;
+			Linebreak;
 			YokLairNerminePath1;
 		else:
 			say "     Thinking twice, you'd rather think about this some more, so you let Nermine know that you will be back later and talk about this with her again if the need arises. 'Nermine understands that the favor she asks might be a complicated one, but should the visitor reconsider, let her know.' the jackaless adds, as you finish the conversation at once.";
@@ -1168,11 +1168,11 @@ to say NermineTalkYokLair:
 		WaitLineBreak;
 		say "     When both of you arrive at her shop, the jackaless welcomes you. 'Nermine's dear customer has returned, hopefully having reconsidered her offer?' she asks, and you are, obviously, expected to answer her question.";
 		say "     [bold type]Do you wish to accept Nermine's offer and follow through her path to gain access to the Youkai Lair[roman type]? If you refuse, you will be able to explore other options, and if none suit your preferences, you may come back to accept the jackaless['] help, instead.";
-		LineBreak;
+		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Yes, accept Nermine's offer.";
 		say "     ([link]N[as]n[end link]) - No, for now.";
 		if Player consents:
-			LineBreak;
+			Linebreak;
 			YokLairNerminePath1;
 		else:
 			say "     Thinking twice, you'd rather think about this some more, so you let Nermine know that you will be back later and talk about this with her again if the need arises. 'Nermine understands that the favor she asks might be a complicated one, but should the visitor reconsider, let her know.' the jackaless adds, as you finish the conversation at once.";

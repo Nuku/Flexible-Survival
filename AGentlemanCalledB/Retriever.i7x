@@ -59,7 +59,7 @@ to say RetrieverAttack:
 		say "[one of]Swinging wildly[or]Lashing out[or]Striking forward[at random] [one of]With his short claws[or]with a balled fist[or]in anger[at random] Rex [one of]lands a powerful blow[or]connects painfully, nearly knocking you to the floor[or]lands a sharp strike which sends you reeling[at random].";
 	else:
 		say "[one of]The female retriever rushes you, clipping your side as you try and dive out of her way.[or]The female retriever rushes you, bowling you over as she catches you off guard, assaulting you with licks and small nibbles before you are able to push her off.[or]You find yourself awe struck by the sexy female canine's body momentarily, long enough for her to close in and plant a wet doggy kiss on your cheek.[or]The retriever bitch moves in quickly, raking across your shoulder and arm with her short claws before you can react.[at random]";
-
+	
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Retriever Female"	"[PrepCombat_Retriever Female]"
@@ -281,7 +281,7 @@ to say retriever milk use:
 instead of sniffing retriever milk:
 	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
-
+	
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Retriever Male"	"[PrepCombat_Retriever Male]"

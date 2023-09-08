@@ -37,7 +37,7 @@ to say ResolveEvent Guard Gryphon:
 			say "     Seeing you coming closer, she adopts a defensive stance, looking ready to charge at you.";
 			if carried of Gryphon Milk > 0:
 				say "     She doesn't seem sex-crazed like the other gryphons you found. Perhaps you can negotiate a peaceful deal with a token of your deeds. Their kind attacked you plenty of times, already, and you actually managed to fetch some of their milk. [bold type]Will you attempt a diplomatic approach by showing her a bottle of Gryphon Milk?[roman type][line break]";
-				LineBreak;
+				Linebreak;
 				say "     ([link]Y[as]y[end link]) - Show the Gryphon Milk.";
 				say "     ([link]N[as]n[end link]) - Fight the Guard.";
 				if Player consents:
@@ -71,7 +71,7 @@ to say ResolveEvent Guard Gryphon:
 					say "     There's no use in trying to talk to her when you can just beat the guard out of the way. With your decision made, you take the initiative and charge at her. The gryphoness stands ready to fight and drive you away.";
 					GryphonGuardFight;
 			else:
-				LineBreak;
+				Linebreak;
 				say "     It seems you have no other choice but to attempt to engage her in a conversation, though she doesn't seem inclined to do so. Understanding your intrusion as an offensive act, she flies to fight you and drive you away.";
 				GryphonGuardFight;
 	else if Resolution of Guard Gryphon is 1:
@@ -88,14 +88,14 @@ to say ResolveEvent Guard Gryphon:
 			now Guard Gryphon is resolved;
 		else:
 			say "     'I see you came back! Does it mean you reconsidered my proposal?' She asks, however from a distance, cautiously assuming a defensive stance as you approach her. [bold type]It seems she'd still turn you into one of her kind, but fighting is always an option.[roman type][line break]";
-			LineBreak;
+			Linebreak;
 			say "     ([link]Y[as]y[end link]) - Accept the transformation.";
 			say "     ([link]N[as]n[end link]) - Fight the Guard.";
 			if Player consents:
-				LineBreak;
+				Linebreak;
 				GryphonGuardMilkSolution;
 			else:
-				LineBreak;
+				Linebreak;
 				GryphonGuardFight;
 	else if Resolution of Guard Gryphon is 2:
 		say "     Without any words or hesitation, the gryphoness guard flies in your direction, ready to fight and drive you away.";
@@ -121,16 +121,16 @@ to GryphonGuardFight:
 	challenge "Blue Gryphon Herm";
 	if fightoutcome < 20: [won]
 		say "     Having successfully defeated the gryphoness guard, the hostilities between seemed to drop down for brief moments. You've got the chance to engage in dialogue now. The question is, [bold type]how will you address the situation?[roman type][line break]";
-		LineBreak;
+		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Try to convince the guard you mean no harm.";
 		say "     ([link]N[as]n[end link]) - Demand to know what the hostilities are for.";
 		if Player consents: [friendly]
-			LineBreak;
+			Linebreak;
 			say "     Curious about her odd behavior, you question the gryphoness about it. At first, she is tight-beaked about it, but you turn your voice to a calm and collected tone, telling her that you don't mean any harm and you're just worried about the gryphons in general, adding that her hostile behavior greatly concerned you. Reluctantly, she starts to talk. 'I'm only here watching for new gryphons who've strayed away from the others of my kind. My duty is to point them towards the location that'd take them to our city.' You soon learn that place is a great staircase, ancient and powerful, and she reveals that it leads to some thing or some place called Qytat a'th Lundrues. Intrigued, you press further into the subject, asking if there is anything you can do to help. 'Well... you don't seem like a bad person, so... I'll tell you. It's a ghostly staircase that moves from time to time, but it comes to rest at the same spots. My job is to tell them where to go.' She starts to describe two apartment buildings, one red and one green, as well as a bright alley which are the meeting points in this part of the city.";
 			say "     'If you really want to help us, then... help us save the new gryphons that haven't succumbed yet, and tell them about us. We're in dire need of sane allies...' she says, in a clearly preoccupied manner. 'I'll give you directions in how to get there. But I swear, if you do anything that brings any harm to my kind... I'll make sure you pay for it.' Following this warning threat, she does end up giving you all the details you needed to know to enter their flying city. 'My name is Azure, by the way. Nice to meet you.' she adds before flying away, heading to another building to keep watch, with her emblem only slightly mussed as it flaps in the wind behind it. You get the feeling she'll hold you onto that deal.";
 			AddNavPoint Qytat Plaza;
 		else: [aggressive]
-			LineBreak;
+			Linebreak;
 			say "     Curious about her odd behavior, you question the gryphoness about it. At first, she is tight-beaked about it, but when you quite literally grab her by the balls, she starts to talk. 'I'm only here watching for new gryphons who've strayed away from the others of my kind. My duty is to point them towards the location that'd take them to our city.' You soon learn that place is a great staircase, ancient and powerful, and she reveals that it leads to some thing or some place called Qytat a'th Lundrues. Intrigued, you force her to develop the subject. 'T-This ghostly staircase moves from time to time, but it comes to rest at the same spots! That's my job, to tell them where to go!' She starts to describe two apartment buildings, one red and one green, as well as a bright alley which are the meeting points in this part of the city. Before you can gain more specific information on all this, she takes advantage of your interest in her tale to pull free of you. The gryphoness scrambles to the edge of the building and leaps off, taking flight to escape you and leaving her standard behind. You watch her leave, wondering if there is any truth to her tale or if the infection is actually catching up to her.";
 		now findablestairs is 1;
 		change the up exit of Red Apartment Building to Staircase Entry; [This opens then closes the entries...]

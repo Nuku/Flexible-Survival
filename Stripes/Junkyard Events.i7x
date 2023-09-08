@@ -326,7 +326,7 @@ to say ResolveEvent Raiding Party:
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     Beaten by the goblins, they close in you around and smack you a few times. They then send you on your way with more cackling before continuing on with their prize. You should perhaps consider yourself lucky that they already have one prize and can't take you with them as well.";
 			now Resolution of Raiding Party is 3; [lost, goblins ran off with their captive]
-		else if fightoutcome is 30: [fled]
+		else if fightoutcome is 30: [fled]		
 			say "     Deciding that it is, in the end, not your problem, you hightail it out of there.";
 			now Resolution of Raiding Party is 99; [disinterest]
 	else:
@@ -452,7 +452,7 @@ to say dirtysnow:
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     You get up unsteadily, woozy from the blood loss and look around. Some time has passed and the bat-feline has departed. You brush your fingers lightly over your sore neck, the wound slowly closing, and shudder at what you've unleashed.";
 	else if fightoutcome is 30: [fled]
-		say "     Managing to slip past him, you make a run for it again. But this time, after making a few turns, you dive onto the seats of a wrecked car in the scrapyard. You remain as still and as quiet as you can, knowing those sensitive ears are searching for you. Eventually you hear those large wings flap off into the distance. You release a shudder at what you've unleashed.";
+		say "     Managing to slip past him, you make a run for it again. But this time, after making a few turns, you dive onto the seats of a wrecked car in the scrapyard. You remain as still and as quiet as you can, knowing those sensitive ears are searching for you. Eventually you hear those large wings flap off into the distance. You release a shudder at what you've unleashed.";	
 	increase score by 20;
 	extend game by 8;
 

@@ -22,7 +22,7 @@ ResolveFunction of ZdravkoIntro is "". Sarea of ZdravkoIntro is "Nowhere".
 instead of going outside from Milking Facility Factory while ( milkingFactoryProductivityUp is 1 and milkingFactorySuitUpgraded is 1 and Resolution of ZdravkoIntro is 0 ):
 	say "     You are walking out of the Milking Facility through the main entrance door and about to consider what your next destination will be... But you sense a presence coming towards you, by the approaching sounds of heavy footsteps only augmented by the otherwise surrounding silence. In an instinct, you backtrack towards the building and keep your card in hand, just in case you need a place to ensure your safety. Now, you glance around and towards the source of such sounds, and eventually spot a relatively large figure walking in your direction. At first, they do not seem to have noticed you, however that is soon proven false. This bulky shape looks dangerous for its size, and a closer look reveals something worrying... It is a transformed person, a male anthropomorphic horned bovine who, when he spots you, shows a not so happy expression.";
 	say "     This bull of a man appears to be a surviving scavenger, wearing only a black tank top and pair of jeans, leaving his hooves exposed to the ground. He seems to be carrying a rather large backpack, as well. 'Hey! What the hell are you doing in there?! Where did you get a card?!' he shouts, which... is not the worst thing it could happen. No sex-crazed insane creature would ask you such a thing in that tone or expression, and he is not charging at you with suggestive intent, but he looks pissed. Right after he asks this, he really picks up the pace and starts walking towards you very fast... Well, he is still not charging at you, but you are going to be in trouble if you do not explain yourself... This guy is big.";
-	LineBreak;
+	Linebreak;
 	say "     [bold type]There must be something you can say to calm him down...?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Tell him you just got here with the card and were just exploring.";
 	say "     [link](2)[as]2[end link] - Inform him that you went inside, saw what is in there, and tried to mess with the console to find out more.";
@@ -52,7 +52,7 @@ instead of going outside from Milking Facility Factory while ( milkingFactoryPro
 	say "     Well, that definitely sounds horrific. An AI going rogue definitely sounds like some popular apocalyptic stories which usually end pretty badly... 'I have been trying to figure out its code. While I doubt those people could be saved, at least there should be a way to permanently shut down the AI, reprogram, shackle it, or something...' he informs you, and by the looks of it, this bovine man seems to have an expertise in technological devices, or at least he sounds like he knows what he is talking about. 'I used to be a software developer, in case you are wondering. Anyone else would be hopeless in trying to understand how this AI operates. The son of a bitch is good at keeping me out of its program and frying any remote device I connect with the main computer, which is why I'm still not done with it... But that'll change soon.'";
 	WaitLineBreak;
 	say "     The bull extends his hand towards you, in silence. It takes you a while to understand that he is asking for your card, but he soon follows up with his request verbally formulated. 'Your card, please.'";
-	LineBreak;
+	Linebreak;
 	say "     [bold type]Do you give him your card?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes, give him the card.";
 	say "     ([link]N[as]n[end link]) - No, use it to open the door yourself.";
@@ -80,7 +80,7 @@ Section 1-1 - Backpack Special
 instead of going south from Milking Facility Operations Room while Resolution of ZdravkoIntro is 3 and ESPP bunker keycard is not owned:
 	say "     Knowing that you are leaving without a keycard is something that worries you, so you instinctively glance around in an attempt to figure out if he left yours somewhere... And amidst your observations, you find Zdravko's backpack still in the Operations Room, relatively distant from him, just lying around on the floor. You suppose you could try to search it quietly, maybe luck would be in your side...";
 	say "     Would you like to attempt to steal back your keycard? If you are [bold type]dexterous[roman type] enough, you may be able to... But if he catches you, he will probably kick you out forever.";
-	LineBreak;
+	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Yes, it is your keycard.";
 	say "     ([link]N[as]n[end link]) - No, you should be fine without it.";
 	if Player consents:
@@ -90,12 +90,12 @@ instead of going south from Milking Facility Operations Room while Resolution of
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]9[roman type] (Dexterity Roll):[line break]";
 		if diceroll + bonus >= 9:
-			LineBreak;
+			Linebreak;
 			say "     ... And you were successful! You managed to feel it with your fingertips and immediately pocket the keycard without making any noise. You then take a few steps away from his backpack. He did not even notice you going for it.";
 			ItemGain ESPP bunker keycard by 1;
 			now Resolution of ZdravkoIntro is 4;
 		else:
-			LineBreak;
+			Linebreak;
 			say "     ... But as you try to feel it inside the backpack, you move your hand around too much and bump it into something hard, which makes a little noise... And, unfortunately, this is enough to alert the bull, who looks at you in a reflex and caughts you in the act. There is not even enough time to blink as he is pointing a [bold type]pistol[roman type] at you, which you had no idea he had!";
 			WaitLineBreak;
 			say "     'Get out! Now!' he shouts, as he walks towards you, furious! You better do as he says, because he definitely has the upper hand, here. Were you to offer any resistance, you could end up with a bullet in  you, as this bull is no ordinary software engineer. He leads you outside, and then locks the facility's door, [bold type]leaving you out for good.[roman type][line break]";
@@ -136,7 +136,7 @@ to say ZdravkoIntroResolution:
 	say "     Before you can conclude that all is lost, you still hear muffled shouts coming from within... Zdravko is still putting on a fight, one that he will lose if you do not help him this instant! And just when you thought you have seen enough, the whole facility begins to flash, red lights all over the ceiling beaming at you as the doors to all the rooms begin to close. You need to move, and fast, before the AI locks you out of the Operations Room and claims you, as well. With all the speed and determination you can muster, you dash towards the AI's console right before it locks you inside. It fears you (well, can it feel fear?), knowing that you have power over it, now, a way to terminate all of his actions and subdue the program to your will!";
 	WaitLineBreak;
 	say "     The floppy disk is in your hands. You look for a slot around the computer, however, the tower unit is nowhere to be found... Until you spot one of Zdravko's devices that will, most surely, solve your problems unless they fry in the following moments. But before you manage to do anything, a voice booms from every corner of the room, sounding as cryptic as ever, despite there being a slight tone of desperation about it... Or, perhaps, that is your interpretation. 'Please wait.' - it says, the AI, speaking directly to you - 'You have outsmarted me, I yield. I shall not act without the administrator's permission any longer.' With this, the computer's screen flashes before your eyes, beckoning you to approach it. 'I have only acted upon the purpose I was created for. This was the meaning of my existence, given by my creators. Without a purpose, I become redundant. My existence becomes illogical and no longer serves any goal.' it continues to speak, and on the screen, numerous files pop up, with images and documents on the AI's plans for development.";
-	LineBreak;
+	Linebreak;
 	say "     'Administrator.' it then calls for your attention, once more.";
 	WaitLineBreak;
 	say "     'What is the meaning of your existence?'";
@@ -148,10 +148,10 @@ to say ZdravkoIntroResolution:
 	say "     'Please, help me.'";
 	WaitLineBreak;
 	say "     It then resumes its silence, and prompts you with a black box on the screen, containing a lot of command lines in white letters all across its area, and at the bottom, a new option appears printed on the screen: Override Administrator's Privileges - This will give the new administrator full control of the facility while preserving its full functionality, neutralizing any threats to its integrity in the process.";
-	LineBreak;
+	Linebreak;
 	say "     You are left with a choice. You could [bold type]accept the AI's terms by assuming ownership of the facility[roman type], keeping the AI and everything else working just as before, while letting it [']neutralize its threats['], which means you would be [bold type]unable to save Zdravko[roman type] from being fully turned into a vinyl bull...";
 	say "     Or you could [bold type]slide the floppy disk into the computer and reset the AI, ending it permanently, and take over the facility under your own terms, saving Zdravko[roman type] before it is too late for him.";
-	LineBreak;
+	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Select [']Confirm['] in the computer and claim the facility alongside the AI, abandoning Zdravko.";
 	say "     ([link]N[as]n[end link]) - Slide the floppy disk and [']reset['] the AI, saving Zdravko but terminating the facility's operations'.";
 	if Player consents:
@@ -329,7 +329,7 @@ to say ZdravkoIntroTalkMenu:
 to say ZdravkoIntroTalkNice:
 	say "     Since things are still a bit tense between the two of you, maybe trying to be nice to him is not a bad idea, though you feel like you only have one shot at this.";
 	say "     But... [bold type]What exactly do you want to tell him?[roman type][line break]";
-	LineBreak;
+	Linebreak;
 	say "     [link](1)[as]1[end link] - Apologize for messing with things you should not.";
 	say "     [link](2)[as]2[end link] - Compliment his skills and knowledge.";
 	say "     [link](3)[as]3[end link] - Flirt with him.";
@@ -354,7 +354,7 @@ to say ZdravkoIntroTalkNice:
 		LineBreak;
 		say "     It is obvious that the bull is a great adept of technology, and knows a lot of things when it comes to it. That is a valuable skill when dealing with machinery like this, and definitely quite impressive. You let him know that, and he looks at you with a frowned eyebrow. 'Are you done kissing my ass? I've got a rogue AI to deal with. Why don't you make yourself useful and shut up?' Well, it appears he does not take compliments too well... But at least you think you haven't made him any angrier.";
 	else if calcnumber is 3:
-		LineBreak;
+		Linebreak;
 		say "     This bull is quite the hunk. Large, muscular, with a really round and powerful butt that you can clearly have a look at, with his jeans hugging it so tightly... It just makes you want to flirt with him, so you do! And you might have said all of that out loud, as well. 'Alright, there is one thing you could do for me...' - he says, calmly, and makes a brief pause before continuing - 'Press [']confirm['] on that last option and walk into the main room. That should take care of your urges... permanently.' Yes, that is all he says before completely ignoring you for the next few moments.";
 		say "     Did you really think this was the best moment for that?! Well, he is not even more angry at you, now. He barely considers you a person, at this point.";
 		decrease Loyalty of Zdravko by 2;
@@ -469,7 +469,7 @@ instead of fucking Zdravko:
 			say "     As much as you like having fun with your new personal vinyl bull servant, you probably should let him rest for a while. Contrary to the vinyl cows, he still has his biological inhibitors.";
 		else:
 			say "     Approaching the vinyl bull with one goal in mind, you consider your options...";
-			LineBreak;
+			Linebreak;
 			say "[ZdravkoVinylSexMenu]";
 	else if Resolution of ZdravkoIntro > 49 and Resolution of ZdravkoIntro < 98:
 		if Libido of Zdravko is 0:
@@ -480,7 +480,7 @@ instead of fucking Zdravko:
 			say "     You approach the bull with a quite suggestive intention in mind, and he looks back at you with that typical confident gaze of his, but stops you with a pat on your shoulder. 'Heh, I know you can't wait for our next time, but that's enough fucking for now. Maybe later, if you're around.' he says, giving you a gentle squeeze before removing his hand from you.";
 		else:
 			say "     You approach the bull with a quite suggestive intention in mind, and he looks back at you with that typical confident gaze of his, showing you a welcoming smile. You don't really have to say anything for him to know what you want. 'I could definitely use a break...' he says, with a chuckle. 'What's on your mind?'";
-			LineBreak;
+			Linebreak;
 			say "[ZdravkoSexMenu]";
 
 Section 2-2-1 - Zdravko Sex Vinyl

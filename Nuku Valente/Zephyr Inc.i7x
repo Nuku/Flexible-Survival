@@ -74,7 +74,7 @@ Carry out vialselling:
 	sort Table of OwnedVials in name order;
 	sort Table of LarissaVials in name order;
 	repeat with Y running from 1 to number of filled rows in Table of OwnedVials:
-		choose row Y in the Table of OwnedVials;
+		choose row Y in the Table of OwnedVials;	
 		if Name entry matches the text NamedVial, case insensitively:
 			now found is 1;
 			let InfectionName be Name entry;

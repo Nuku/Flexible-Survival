@@ -665,7 +665,7 @@ Section 8 - Saving Karen without Submission to Rex
 [
 Current direction of rescuing Karen:
 - Find a missing person flier with picture of Karen (Can't have succumbed to the Bone yet)
-- Approach Rex's home but realize that you don't want to break in with him there.
+- Approach Rex's home but realise that you don't want to break in with him there.
 - Return when Rex isn't there and talk to Karen. She tells you about Francois' bakery.
 - Get Francois to make dog treats to distract Rex
 - Attempt rescue of Karen, fight Rex.

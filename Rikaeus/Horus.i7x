@@ -897,7 +897,7 @@ to say Destabilizing Mass Loses:
 
 to say Destabilizing Mass Desc:
 	say ""; [for now]
-
+	
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Destabilizing Mass"	"[PrepCombat_Destabilizing Mass]"

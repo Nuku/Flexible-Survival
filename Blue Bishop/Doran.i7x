@@ -391,7 +391,7 @@ to say DoranVictory_TurnDown: [turn down]
 	say "     'Very well; however, if my victor changes their mind, I'm always available.' He goes on to explain where he resides. Apparently there's a cave within a not-too-distant [bold type]Rocky Outcropping[roman type], and his instructions are clear enough that you should have no issue getting there, 'Doran's the name, by the way.'";
 	say "     Once he's done, he makes to leave in that direction, scaled and well-toned ass waving at you in his departure, as though to entice you to follow.";
 
-
+	
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Peculiar Dragon"	"[PrepCombat_Peculiar Dragon]"
@@ -4478,15 +4478,15 @@ to say DoranDom_SubmitRoughAssFuck:
 to DomDoranOralVorePrompt:
 	WaitLineBreak;
 	say "     As he keeps having you in his grasp, the big dragon begins to lick his own lips as his breathing deepens somewhat, unconsciously pulling you closer to him. You feel yourself laying your hands on his scaled body, thicker than you are, as a true dragon would be, and gives you a glare that looks more hungry than horny. 'I'm wondering... would my [DoranPlayerRegard] appreciate a second reward? One that would also please me greatly...' he asks you, as he suggestively rubs his own belly. You know by then what he really means...";
-	LineBreak;
+	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Allow the dragon to make you his meal.";
 	say "     ([link]N[as]n[end link]) - Humbly reject his reward.";
 	if Player consents:
-		LineBreak;
+		Linebreak;
 		DoranDom_SubmitOralVore;
 	else:
 		say "     With all due respect to your draconic superior, you let him know that you will have to reject his proposal, as you do not feel worthy enough of receiving it just yet. He takes your response with utmost respect. 'Such dedication! Very well, then. There will be plenty of opportunities to prove yourself to me some more.' He lets go of you before finishing. 'For now, you may go... I must have need of you soon enough, so it would be best for both of us that you don't keep me waiting for long.' he lets you know, with his extraordinarily regal mannerisms, that you have obligations as his [DoranPlayerRegard] towards him. Perhaps you wouldn't mind doing this more regularly...?";
-
+	
 to DoranDom_SubmitOralVore: [Oral Vore for special Submit scenes]
 	say "     More like, you beg him to take you into his belly, letting him know that it would also be your pleasure to serve as his meal. He smiles, draws his long draconic tongue across his lips in anticipation, as he presses your face against his scaled body. You could swear you can feel his insides calling for you, yearning to hold you within. 'Such is the way of any [DoranPlayerRegard], caring for their master and serving them in any way possible.' he says, before leaning his head closer to yours and giving you a lick across your face, wet and sloppy as drops of his saliva run down your cheeks. He keeps doing it, his mouth getting closer by the second as he takes his time to get a taste of you. 'My [boygirl] tastes so good... Mmh... Come here, now...'";
 	say "     With a slow and tender embrace, he holds you between his large clawed paws before opening his mouth wide, pulling you in with relative ease, engulfing your head all at once inside the moist cavern, tongue twirling across your face as he continues to feel your taste. There is pulsing flesh all around you, as hot as it can get, with his jaw being able to extend so much that the dragon can actually shove you inside, up to your shoulders. After that, it's a breeze for him, simply pushing further as your head slips inside his throat, beginning to swallow you. The walls of his esophagus throb and constrict you, pulling you deeper as more of your body follows, and the dragon makes sure he doesn't hurt you in the process with his sharp teeth, masterfully bringing your weight off the ground as soon as he has got you half-way in.";

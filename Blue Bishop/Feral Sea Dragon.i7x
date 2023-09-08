@@ -698,7 +698,7 @@ to say FSDM_6: [Oral Giving Cock]
 			say ". [if boundsegment is 2]Aiming the monster's impressive tool towards his face, he's hailed by a flood of his heady seed, quickly making an embarrassing mess of himself[else]Monster's impressive tool throbbing with each gout of heady seed, it quickly makes a bit of a mess, wasted as it's spent across the sand[end if]";
 		say ". Once his flow dies down, you pull away from the sea dragon, a spent and [if boundsegment is 2]shameful[else]exhausted[end if] mess, too weakened to really do anything but lay there now. Satisfied with your work, you choose to leave here, a fair bit lust-addled though you may be.";
 	CreatureSexAftermath "Player" receives "OralCock" from "Feral Sea Dragon";
-
+	
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Feral Sea Dragon"	"[PrepCombat_Feral Sea Dragon]"
