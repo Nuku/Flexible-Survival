@@ -187,7 +187,7 @@ to say HellDemonBJ:
 	say "     ([link]Y[as]y[end link]) - Swallow it."; [gobble up his entire load... or fail trying to]
 	say "     ([link]N[as]n[end link]) - Let it shoot wherever."; [well... gets bathed instead]
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     With your resolve set on swallowing all his sweet and warm load, you start jerking the demon's cock harder and faster while keeping your lips wrapped around it. 'I hope you enjoy it... F-fuck, it's coming...!' Following his stuttering words, you're surprised with a massive surge of cum instantly filling your mouth! You urge to swallow it before more comes in, but it's so much that you end up being forced to quit this inhuman task, and feel the ridiculous amounts of warm sperm just splattering all over your face. He doesn't stop cumming for like a long minute, and you've wasted more than half of his load... 'Damned Hell! I came really hard...' - he pants, looking at you with a grin - 'Don't worry about that. They can only swallow it all if I shove my cock down their throats. But it was cute of you to try.' He whips out the last drops of cum which fall on your already drenched face as he eyes you for a while longer...";
 		say "     'This was fun. Hope we meet again. Maybe next time you won't be able to resist me at all.' With this said, the demon retreats back to the shadows. You try to walk too, but you feel strangely lightheaded and blissful out of nowhere, hindering your attempts at moving properly. You wait it out for a few until you're able to return to your journey.";
 	else:
@@ -266,7 +266,7 @@ to say HellDemonCun:
 	say "     ([link]Y[as]y[end link]) - Make him cum. After all, he licked you good.";
 	say "     ([link]N[as]n[end link]) - Just leave him like that.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     He did please you a lot, so you figure he might deserve a reward for his efforts. You slide down through his body, making your way down with a few teasing kisses of your own, before you take a hold of his monster cock, throbbing so hard and still painfully restrained by his diminutive leather jockstrap... 'I might cum just from you looking at it... Fuck...' he admits, his deep voice trembling as your hands take hold of the pulsing shaft, sliding it to the side of his kinky underwear and providing only a mere strokes before you're surprised with a massive surge of cum shooting as far as several meters from where you are now! And he keeps going with equal strength! Spurt after spurt of seed that he shoots leaves a faint hint of how sweet it must taste, and you feel tempted to reach over for some, but you can't just stop stroking that raging cock, still erupting as hard as ever for like a long minute. 'Fucking Hell! That was hot!' - he pants, looking at you with a grin - 'You should probably get a taste sometime. Some just can't have enough of it.'";
 		say "     As tempting as that sounds, you think it's time to get going. Grabbing your things, you say your goodbyes to the demon. 'See you soon, gorgeous. This was fun... maybe next time we can skip right into the fun, eh?' He throws a chuckle as he gets up, soon retreating back into the shadows as you proceed with your usual affairs.";
 	else:

@@ -1120,7 +1120,7 @@ to say onyxbsubfacefuck1:
 		say "not so considerable size of your manhood, his long equine muzzle lets him take you ballsdeep without any issue, but he doesn't just wait still as you fuck his mouth. Instead, his tongue works all over your shaft as you reach in as deep as you can in the insides of his mouth. His efforts don't end here, as he reaches for your balls with his hands at the same time he's tilting his head to provide you with more friction, giving them a soft and loving squeeze, and you can't help but want to thrust harder against his lips.";
 		WaitLineBreak;
 		say "     Feeling your own climax bulding up in your loins, you slow down, giving yourself enough time to delay it. The sensations provided by the equine stud's warm mouth all over your glans and shaft, rubbing against its length with increased intensity, have turned you on so much that you feel your cock throbbing each time you give it a slow stroke before shoving it back in. Your moves are much slower and deeper now, as you want to enjoy this as much as you can, keeping the horsey boy busy for several minutes more until you feel like you can't hold back any longer. With you so close to blast your entire load on Onyx, you stop completely, with your manhood buried inside his mouth, cum practically on the verge of surging through, with a choice to make. [bold type]Do you want to make him swallow it, or just cover his face with your jizz?[roman type][line break]";
-		Linebreak;
+		LineBreak;
 		onyxbsubfacefuckclimax;
 
 to onyxbsubfacefuck2: [Player's dick is bigger than 1 ft]
@@ -1134,10 +1134,10 @@ to onyxbsubfacefuckclimax:
 	say "     ([link]Y[as]y[end link]) - Cum down his throat.";
 	say "     ([link]N[as]n[end link]) - Give him a facial.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     Having decided to feed Onyx your entire load, you don't even pull out. A couple thrusts, with the friction from his tongue and the warm insides of his mouth, your balls tighten to release the seed stored within, blasting through your cock and down the stud's throat. While this happens, you feel the vibrations of his moans through your own prick as he too cums, stroking his equine shaft with so much intensity that you feel his powerful shots hitting part of your legs. When the last spurt oozes out, you pull your manhood out and squeeze it of any traces, which Onyx promptly licks and swallows. Looking up at you with a smile on his face, breathing heavily from the effort, you smile down at your subby lover and rub his ears affectionately, but you don't let him go until he licks the mess he made clean down your legs.";
 	else:
-		Linebreak;
+		LineBreak;
 		say "     Having decided to give Onyx a face wash of cum, you quickly pull out. A couple strokings are enough to set you off, your balls tightening to release the seed stored within, blasting through your cock and all over the stud's face, torrents of cum landing straight on top of his muzzle. With his mouth open and moaning, he too cums, stroking his equine shaft with so much intensity that you feel his powerful shots hitting part of your legs. When the last spurt oozes out, you pull your manhood out and squeeze it of any traces, which Onyx promptly licks and swallows. Looking up at you with a smile on his face, covered in cum, breathing heavily from the effort, you smile down at your subby lover and rub his ears affectionately, but you don't let him go until you have shoved what you can from your load in his face back in his mouth, and also until he licks the mess he made clean down your legs.";
 
 to say onyxbsubedging1:

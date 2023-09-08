@@ -684,53 +684,53 @@ to say FrancoisBakingMenu:
 				else if title entry is "dragon moelleux":
 					if ebonflame scale is owned and glowing ember is owned and chocolate milk is owned:
 						now sextablerun is 1;
-						say "     Francois takes the dark scale, glowing ember and chocolate milk from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a plate of small chocolate cakes, offering one to you as he places the rest into one of his displays.";
+						say "     Francois takes the dark scale, glowing ember, and chocolate milk from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a plate of small chocolate cakes, offering one to you as he places the rest into one of his displays.";
 						ItemLoss ebonflame scale by 1;
 						ItemLoss glowing ember by 1;
 						ItemLoss chocolate milk by 1;
 						ItemGain dragon moelleux by 1;
 					else:
-						say "You do not have the required ingredients: ebonflame scale, glowing ember and chocolate milk.";
+						say "You do not have the required ingredients: ebonflame scale, glowing ember, and chocolate milk.";
 				else if title entry is "fizz-aux-pommes":
 					if pony cider is owned and soda is owned and crushed candies is owned:
 						now sextablerun is 1;
-						say "     Francois takes the pony cider, soda and crushed candies from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. Rather than the usual warm aromas of his cooking, you merely hear plenty of mixing and stirring. Eventually Francois returns with a pitcher filled with a fizzing amber liquid, offering you a bottle full before pouring the rest into individual bottles.";
+						say "     Francois takes the pony cider, soda, and crushed candies from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. Rather than the usual warm aromas of his cooking, you merely hear plenty of mixing and stirring. Eventually Francois returns with a pitcher filled with a fizzing amber liquid, offering you a bottle full before pouring the rest into individual bottles.";
 						ItemLoss pony cider by 1;
 						ItemLoss soda by 1;
 						ItemLoss crushed candies by 1;
 						ItemGain fizz-aux-pommes by 1;
 					else:
-						say "You do not have the required ingredients: pony cider, soda and crushed candies.";
+						say "You do not have the required ingredients: pony cider, soda, and crushed candies.";
 				else if title entry is "vin-coeur":
 					if wyvern goop is owned and Satyr wine is owned and crushed candies is owned:
 						now sextablerun is 1;
-						say "     Francois takes the crushed candies, Satyr wine and wyvern goop from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a large cake and several dishes. He portions the cake out into several slices, offering you one with a smile before placing the rest in one of his displays";
+						say "     Francois takes the crushed candies, Satyr wine, and wyvern goop from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a large cake and several dishes. He portions the cake out into several slices, offering you one with a smile before placing the rest in one of his displays";
 						ItemLoss wyvern goop by 1;
 						ItemLoss soda by 1;
 						ItemLoss Satyr wine by 1;
 						ItemGain vin-coeur by 1;
 					else:
-						say "You do not have the required ingredients: crushed candies, Satyr wine and wyvern goop.";
+						say "You do not have the required ingredients: crushed candies, Satyr wine, and wyvern goop.";
 				else if title entry is "gingerbread": [gingerbread - eggnog + pixie dust + blue gel]
 					if egg nog is owned and pixie dust is owned and blue gel is owned:
 						now sextablerun is 1;
-						say "     Francois takes the eggnog, pixie dust and blue gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a tray full of small colorful gingerbread cookies. He offers you a couple before placing the rest into one of his displays.";
+						say "     Francois takes the eggnog, pixie dust, and blue gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a tray full of small colorful gingerbread cookies. He offers you a couple before placing the rest into one of his displays.";
 						ItemLoss egg nog by 1;
 						ItemLoss pixie dust by 1;
 						ItemLoss blue gel by 1;
 						ItemGain gingerbread by 2;
 					else:
-						say "You do not have the required ingredients: eggnog, pixie dust and blue gel.";
+						say "You do not have the required ingredients: eggnog, pixie dust, and blue gel.";
 				else if title entry is "cheesecake": [cheesecake - cheese + pixie dust + pink gel]
 					if cheese is owned and pixie dust is owned and pink gel is owned:
 						now sextablerun is 1;
-						say "     Francois takes the cheese, pixie dust and pink gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with creamy looking strawberry cheesecake. He divides the cake into several portions before wrapping a couple slices for you and placing the rest in one of his displays.";
+						say "     Francois takes the cheese, pixie dust, and pink gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with creamy looking strawberry cheesecake. He divides the cake into several portions before wrapping a couple slices for you and placing the rest in one of his displays.";
 						ItemLoss cheese by 1;
 						ItemLoss pixie dust by 1;
 						ItemLoss pink gel by 1;
 						ItemGain cheesecake by 2;
 					else:
-						say "You do not have the required ingredients, cheese, pixie dust and pink gel.";
+						say "You do not have the required ingredients: cheese, pixie dust, and pink gel.";
 				else if title entry is "Abort":
 					say "You decide not to have Francois bake anything.";
 					now sextablerun is 1;

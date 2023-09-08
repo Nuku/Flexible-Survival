@@ -310,16 +310,16 @@ instead of conversing Chase while (HP of Chase < 3): [NOTE: This is only for reg
 			else:
 				say "Invalid choice. Type [link]1[end link] to be help, [link]2[end link] to be perks, or [link]3[end link] to be joys, or [link]3[end link] to be yourself.";
 		if calcnumber is 1:
-			Linebreak;
+			LineBreak;
 			say "[Chase_Intro_Affection_001]";
 		else if calcnumber is 2:
 			LineBreak;
 			say "[Chase_Intro_Corruption_001]";
 		else if calcnumber is 3:
-			Linebreak;
+			LineBreak;
 			say "[Chase_Intro_Affection_Corruption_001]";
 		else if calcnumber is 4:
-			Linebreak;
+			LineBreak;
 			say "[Chase_Intro_Selfish_001]";
 		say "     You decide to change the direction of the conversation and ask the anthro about how his people have been faring against the chaos of the zoo, the expression on Chase's face hardens, 'Not everyone that helped build this place is still here, some weren't as lucky as I was when facing down a tigertaur, especially seeing as it was that asshole Kage.' You're about to ask the tiger more about this unknown enemy, but almost as if Chase can sense what your about to ask he cuts in, 'To be honest I don't really wanna talk about him right now if that's alright. It just brings up a lot of bad memories that I'd rather not focus on at the moment, but maybe eventually I'll fill you in on our... history.' You nod your head in understanding, 'But still the damn tigertaurs are catching more and more of us each time we go out to forage or try to find people to help. I mean we actually have a pretty good stockpile of supplies here,' he points out with a nod of his head towards to one of the locked doors. 'But as you can see, we have a decent amount of people here too, and no idea how long we need to wait for rescue, if it's even coming.'";
 		say "     Chase pats you on shoulder slightly before proceeding walk with you around the rather large basement, several of the tiger people stopping to watch as the two of you pass by. Noting your interest in all the various different tiger-like people, Chase stops for a minute to explain. 'When we first ended up down here, there were a lot of different types of minorly infected here, we even had a number of people who hadn't been infected at all yet. Still,' the tiger explains with a shrug, 'the longer we all stayed down here together, the more tiger-like everyone else seemed to become, until at one point there just didn't seem to be any non-tigers down here anymore.'";
@@ -340,7 +340,7 @@ instead of conversing Chase while (HP of Chase < 3): [NOTE: This is only for reg
 			else:
 				say "Invalid choice. Type [link]1[end link] to be compassionate, [link]2[end link] to be cruel, or [link]3[end link] to be logical.";
 		if calcnumber is 1:
-			Linebreak;
+			LineBreak;
 			say "[Chase_Intro_Nice_Player_001]";
 			add "TD_Nice_Persona" to Traits of Player;
 		else if calcnumber is 2:
@@ -348,7 +348,7 @@ instead of conversing Chase while (HP of Chase < 3): [NOTE: This is only for reg
 			say "[Chase_Intro_Mean_Player_001]";
 			add "TD_Mean_Persona" to Traits of Player;
 		else if calcnumber is 3:
-			Linebreak;
+			LineBreak;
 			say "[Chase_Intro_Survivor_Player_001]";
 			add "TD_Survivor_Persona" to Traits of Player;
 		say "     Afterwards, one of the other beastmen come over and ask Chase to help out with some supplies, 'Sure, I'll be right there!' Turning to you the tiger rubs the back of his head, 'Sorry about this, I know you wanted to prolly talk some more, but there's no rest for wicked right?' [Chase_Intro_Gender_Ending]";
@@ -393,7 +393,7 @@ to say Chase_Intro_Gender_Ending:
 			else:
 				say "Invalid choice. Type [link]1[end link] to be yes, [link]2[end link] to be lesbian, [link]3[end link] to be no.";
 		if calcnumber is 1:
-			Linebreak;
+			LineBreak;
 			say "     Looking at the tiger you can't really hide the smile creeping along your lips, and with a nod of your head you comment on the fact that you would like that a lot. The shy look on Chase's muzzle soon morphs to one of excitement, 'Seriously?! That's awesome, I mean I'd have to think of somewhere fun that isn't to dangerous to take ya, but I'm glad that you're interested to see where this new, uh... friendship?' The tiger's voice wavers for a bit, but it's cute nonetheless that he's trying to leave that ball in your court, 'Can go, hopefully we can find some common ground and who knows maybe have a little bit along the way, haha.' The wink that Chase rewards you with causes a slight giggle to escape your throat.";
 			add "Chase_Flirt_Female" to Traits of Chase;
 		else if calcnumber is 2:
@@ -421,7 +421,7 @@ to say Chase_Intro_Gender_Ending:
 			else:
 				say "Invalid choice. Type [link]1[end link] to be yes, [link]2[end link] to be straight, [link]3[end link] to be no.";
 		if calcnumber is 1:
-			Linebreak;
+			LineBreak;
 			say "     Feeling a bit playful you step up into the tiger's personal bubble, the closer you get the more Chase's expression shows that he's having a flight or fight moment. Slowly you allow your hand to creep up along the anthro's bicep and with a warm smile on your lips you tell the tiger how you would love to hang out sometime, explaining that you would enjoy having a handsome and strong guy showing you around while at the same time keeping you safe. Almost instantly Chase flexes his bicep as you refer to his strength, 'Well I think it would be fun too, plus ya'know it would be nice to maybe have a pretty friend on my arm!' Just wanting to give the feline a hard time you comment on him calling you pretty, 'Well I mean in a guy kinda way, like how there are handsome women, well you're a... pretty guy.' Once again Chase looks a bit uncomfortable and tongue tied, leaning forward you place a gentle kiss on his furry cheek while whispering to him that he's sweet. You are rewarded with a pearly-white smile, 'Well I try to be a good guy if I can, but I meant what I said about you, it really would be nice to maybe take you out and show you the sights!'";
 			add "Chase_Flirt_Male_Mpreg" to Traits of Chase;
 		else if calcnumber is 2:

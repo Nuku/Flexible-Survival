@@ -107,7 +107,7 @@ to say SquireBandage:
 	WaitLineBreak;
 	LineBreak;
 	say "      [bold type]Seems like he's preparing to go after his master. What do you want to do?[roman type][line break]";
-	LineBreak;	
+	LineBreak;
 	say "     [link](Y)[as]y[end link] - Help him look for his knight.";
 	say "     [link](N)[as]n[end link] - Wish him the best and leave.";
 	if Player consents:
@@ -116,7 +116,7 @@ to say SquireBandage:
 		else if BodyName of Player is listed in infections of HumanList and Player is pure:
 			say "     You can't help but feel bad for the squire. You're sure he's not the only one to lose someone in this crazy new world. Even if their relationship was strange and likely caused by the nanites, it wasn't any less powerful of a connection. You decide you'll help the poor guy recover a memento of his master, at least. If he's anything like the rest of the city's inhabitants, he'll have left behind clothes.";
 		else:
-			say "     Despite his insult toward your species, you can't help but feel bad for the squire. You're sure he's not the only one to lose someone in this crazy new world, and if anyone understands going through a change, it's you. Hell, you're not even human anymore! Even if their relationship was strange and likely caused by the nanites, it wasn't any less powerful of a connection.";		
+			say "     Despite his insult toward your species, you can't help but feel bad for the squire. You're sure he's not the only one to lose someone in this crazy new world, and if anyone understands going through a change, it's you. Hell, you're not even human anymore! Even if their relationship was strange and likely caused by the nanites, it wasn't any less powerful of a connection.";
 		LineBreak;
 		say "[UnicornFucksMarius]";
 		now Resolution of Loyal Lad is 1;
