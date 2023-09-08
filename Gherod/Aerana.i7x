@@ -57,7 +57,7 @@ to say ResolveEvent Succubus Offspring Meeting:
 	say "     This fully naked succubus demoness must be the daughter Lilith promised you. She notices your presence, but rather than greeting you directly, she simply makes sure you see her and waits for you to approach, twirling strands of her silky hair around her fingers while eyeing you seductively. When you come close, within reach, after having slowly walked towards her, she shows you a smile, flickering her long eyelashes across her purple eyes, which gaze is locked on yours. 'Hello, daddy. Mother already told me everything about you... I knew you'd be looking forward to meet me, so I made sure you could see your favorite new daughter in all the splendor she deserves.' she says, her soft pitched voice stroking your ears like a gentle breeze, yet sounding as seductive as you would expect from a demoness of lust.";
 	WaitLineBreak;
 	say "     Something about her just captures you in ways you would not foresee as possible. She is truly and remarkably beautiful, flaunting her breasts of just the right size, D-cups that are neither too small nor too big, complementing her sensual curves in near perfection. With how close you are standing to her, you have a feeling you could touch her... But she never lets you, snapping your hand away if she has to. 'Now that you've seen me, I'm sure you're ready to do everything I want, right? Me being your special daughter and all...' says the young woman as she bites her lip, clearly with mischief in mind. You have a feeling that she will require special attention at all times, and it will only get worse if you give in.";
-	Linebreak;
+	LineBreak;
 	say "     [bold type]How do you want to deal with her approach?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Promise to spoil her with anything she wants.";
 	say "     [link](2)[as]2[end link] - Hug and tell the succubus you will care for her as your beloved daughter.";
@@ -373,7 +373,7 @@ to AeranaSexOralCock:
 
 to say AeranaSexFuck: [let her pick or suggest, missionary or riding]
 	say "     Thinking about spending a good time with your succubus offspring, you decide to ask her if she would mind bending over of her daddy, gently brushing her silky hair as the young demoness eyes you with an amused expression. 'Such a daring request...! You're some devil, yourself.' she replies, giggling as her hands run over your chest and lower, her mere touch feeling like a tease that sends sweet shivers down your spine and blood flowing south. 'And did you have anything in mind, or are you letting your beloved daughter pick whatever she likes?' she asks, putting an obvious emphasis on the last part of her question, which leads you to believe she really wants to pick something, but the decision is ultimately yours... You think.";
-	Linebreak;
+	LineBreak;
 	say "     [bold type]How do you want to fuck her?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Go for a loving missionary sex.";
 	say "     [link](2)[as]2[end link] - Have her ride you.";
@@ -431,7 +431,7 @@ to AeranaSexFuckRiding:
 
 to say AeranaSexEdging: [let her pick or suggest, 'hand/foot/tail'job]
 	say "     Thinking about spending a good time with your succubus offspring, you decide to ask her if she would to take the lead and have some fun with you for an edging session. She loves hearing this and her eyes shine with joy. 'My, that's one lovely idea! So many possibilities... Do you have any preference, daddy?' she asks, giggling as her hands run over your chest and lower, her mere touch feeling like a tease that sends sweet shivers down your spine and blood flowing south.'";
-	Linebreak;
+	LineBreak;
 	say "     [bold type]How would you prefer to have her edging you?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Handjob.";
 	say "     [link](2)[as]2[end link] - Footjob!";
@@ -629,7 +629,7 @@ to say AeranaHellfireDemonScene:
 		else:
 			say "Invalid choice. Type [link]1[end link] to join Aerana, [link]2[end link] to just watch or [link]3[end link] to leave.";
 	if calcnumber is 1:
-		Linebreak;
+		LineBreak;
 		say "     You tell her that you would be glad to share this devil with her, and you can see that even Arad seems to be looking forward to it. 'It seems our guest is quite eager to get started...' she says, pressing her foot against his cock even harder as he lets out a soft moan. 'You like that, big boy? Getting jacked off by a succubus using only her feet, bound and helpless... You'd make such a great slave!' Aerana continues to tease the devil as she rubs his sixteen incher, throbbing under her soles. 'Fuck... this side's really fun...!' exclaims the red devil, and as you observe them, you figure that you could use Arad's mouth for your own pleasure. With this, you move over his face and bring your [Cock of Player] dick into your hands, then you grab Arad by his horns and lead him over to it. The demon is quick to take your length past his lips, twirling his long tongue all over your sensitive shaft.";
 		say "     'How pathetic... for such a mighty looking grunt to submit so easily.' says your demoness daughter as she continues to rub her feet against Arad's very hard member, now as she hovers above him with her wings stretched open, having placed his shaft between both her soles. She occasionaly slides one of her feet over his balls, pressing against them only enough to have him release a groan, which you can feel on your cock. 'You better leave my daddy satisfied, or you'll be sorry.' she adds, giggling as she uses this opportunity to slightly stomp on his orbs, though judging by how his rod continues to throb, he must really enjoy it. Definitely, Arad does not disappoint with his oral skills as he properly stimulates every sensitive spot of your manhood with both his lips and tongue, sucking it deep and appreciating every inch you have to offer.";
 		WaitLineBreak;
@@ -644,7 +644,7 @@ to say AeranaHellfireDemonScene:
 		say "     'See you later, daddy! And thank you for joining me.' You both part ways as Aerana brings Arad to a more secluded location, possibly to continue her... fun.";
 		now Resolution of AAHellfire is 1;
 	else if calcnumber is 2:
-		Linebreak;
+		LineBreak;
 		say "     You tell her that you would be glad to just watch her, and you can see that even Arad seems to be looking forward to it. 'That's fine, daddy. It seems our guest is quite eager to get started, either way...' she says, pressing her foot against his cock even harder as he lets out a soft moan. 'You like that, big boy? Getting jacked off by a succubus using only her feet, bound and helpless... You'd make such a great slave!' Aerana continues to tease the devil as she rubs his sixteen incher, throbbing under her soles. 'Fuck... this side's really fun...!' exclaims the red devil, leaning his head back as he continues to have his dick jerked off.";
 		say "     'How pathetic... for such a mighty looking grunt to submit so easily.' says your demoness daughter as she resumes rubbing her feet against Arad's very hard member, now as she hovers above him with her wings stretched open, having placed his shaft between both her soles. She occasionaly slides one of her feet over his balls, pressing against them only enough to have him release a groan. 'Nngh... s-so soft... f-feels so good...!' he says amidst several moans, and the succubus giggles as she uses this opportunity to slightly stomp on his orbs, though judging by how his rod continues to throb, he must really enjoy it. Definitely, Arad does not seem to mind being used by another demon, in fact only getting harder as time passes by.";
 		WaitLineBreak;
@@ -678,7 +678,7 @@ to say AeranaAtticusHellfireDemonScene:
 		else:
 			say "Invalid choice. Type [link]1[end link] to join Atticus and Aerana, [link]2[end link] to just watch or [link]3[end link] to leave.";
 	if calcnumber is 1:
-		Linebreak;
+		LineBreak;
 		say "     You suppose you could choose between only watching them or joining in, but the prospect of sharing a nice moment with both your son and daughter is so rare that it might seem like a good idea to enjoy this opportunity. And, of course, the fact that you are already getting hard at the idea of your three using Arad's cock and every hole to pleasure yourselves helps a lot.";
 		WaitLineBreak;
 		say "     With this in mind, you tell your daughter and son that you would be delighted to join them in this, and they are, of course, happy to hear. Arad seems to really be looking forward to it, once he knows you will also be part of the action. 'It seems our guest is quite eager to get started...' she says, pressing her foot against his cock even harder as he lets out a soft moan. 'You like that, big boy? Getting jacked off by a succubus using only her feet, bound and helpless... You'd make such a great boy toy!' Aerana continues to tease the devil as she rubs his sixteen incher, throbbing under her sole. Atticus moves on to his face with an erection of his own, and grabbing Arad by the horns, he sticks his own manhood past the red devil's lips as the latter eagerly takes it all in. 'Hope you like sucking dick as much as I do...!' he teases him with a wink.";

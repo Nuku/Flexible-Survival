@@ -944,7 +944,7 @@ to say ResolveEvent Getting the Knife:
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you away from the warehouse he's so vigilantly guarding.";
 		if HP of Player > 0, now HP of Player is HP of Player / 2;
-		say "     Driven off by the lumbering monstrosity, you will have to try coming back another time if you want to try getting the knife.";		
+		say "     Driven off by the lumbering monstrosity, you will have to try coming back another time if you want to try getting the knife.";
 	else if fightoutcome is 30: [fled]
 		say "     Driven off by the lumbering monstrosity, you will have to try coming back another time if you want to try getting the knife.";
 

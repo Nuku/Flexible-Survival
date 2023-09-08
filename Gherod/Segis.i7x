@@ -82,7 +82,7 @@ to say ResolveEvent Strange Android Seeker:
 			say "     The positive side of this is, you have found out who the suspect is, but there is also a problem... They did not like to be discovered. You leg it immediately, running at maximum speed through the streets to attempt to outrun this assaulter, but they stay on your tail well enough that they do not lose you. You were right, they are indeed a relentless pursuer, and you must find a way to evade them quickly! Taking turns around several alleys, you try to lose sight of them. You think you have managed to do it as you see them slowly walking by the same alley you have entered, and you are temporarily holding an advantage...";
 			LineBreak;
 			say "     You think you were quite fortunate that you could slip through this spot without them noticing, but they will not give up so easily. There is only one way out of this, and that is by incapacitating them, first. There are several options you could attempt...";
-			Linebreak;
+			LineBreak;
 			say "     [link](1)[as]1[end link] - Hit them as hard as you can on a weak spot. You will need to know where to strike (Intelligence Roll), then be swift and precise (Dexterity Roll).";
 			say "     [link](2)[as]2[end link] - Lead them into a nearby fluid puddle. You will need to be able to outrun them without falling on it yourself (Dexterity Roll) while tricking them into thinking they can easily continue to pursue you through it (Charisma Roll).";
 			say "     [link](3)[as]3[end link] - Convince them that you will allow them to willingly use you (Charisma Roll) and then punch them really hard (Strength Roll).";
@@ -293,7 +293,7 @@ to say ResolveEvent Activate Strange Android:
 		say "     Unfortunately, due to your previous efforts, you feel too tired to try and figure this out. Perhaps you should return later with a clearer head.";
 	else:
 		say "     You have got a few options here. As previously you have chosen to stash the android's body, you may know attempt to safely [bold type]reactivate it[roman type], hoping that you manage to shift its hostility into something less unpleasant. Alternatively, you can simply choose to [bold type]return later[roman type], now that you have seen that everything is in order. There is also the possibility of just [bold type]abandoning[roman type] the android and not bothering with it any longer. You doubt anyone around here would know what to do with it, either way.";
-		Linebreak;
+		LineBreak;
 		say "     [link](1)[as]1[end link] - Attempt reactivating the android.";
 		say "     [link](2)[as]2[end link] - Leave to return later.";
 		say "     [link](3)[as]3[end link] - Abandon the android, forever.";
@@ -1488,7 +1488,7 @@ to say SegisCosmeticLactation:
 			say "     Currently, Segis has functional lactation, at a moderate production rate of milk in his chest. A larger body type would be required to upgrade this system even further.";
 		say "     Alternatively, you can simply choose to disable this functionality at no cost.";
 		say "     What would you like to do?";
-		Linebreak;
+		LineBreak;
 		say "     [link](1)[as]1[end link] - Upgrade to Extra Milky (Requires Muscular Frame).";
 		say "     [link](2)[as]2[end link] - Deactivate Lactation.";
 		say "     [link](3)[as]3[end link] - Do nothing.";
@@ -1535,7 +1535,7 @@ to say SegisCosmeticLactation:
 			say "[SegisUpgradeMenu]";
 	else: [has both]
 		say "     Currently, Segis has this functionality active, but you may disable it at any time without additional costs. Additionally, since Segis has the Extra Milky upgrade, you can revert him back to a normal lactation mode.";
-		Linebreak;
+		LineBreak;
 		say "     [link](1)[as]1[end link] - Downgrade to normal lactation.";
 		say "     [link](2)[as]2[end link] - Deactivate Lactation.";
 		say "     [link](3)[as]3[end link] - Do nothing.";
@@ -2335,7 +2335,7 @@ to say DAMAExplore:
 
 to say DAMAExplore2:
 	say "     You are standing in front of a terminal with several entry logs you can access, if you so wish. Unfortunately, most of the data is corrupted, so you think you may only be able to access a small portion of what was originally here. Alternatively, you can wrap this up by approaching Segis.";
-	Linebreak;
+	LineBreak;
 	say "     [link](1)[as]1[end link] - Read the first log.";
 	say "     [link](2)[as]2[end link] - Read the second log.";
 	say "     [link](3)[as]3[end link] - Read the last log.";

@@ -193,7 +193,7 @@ Instead of conversing the Velos:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Ask him to stay here.";
 			say "     ([link]N[as]n[end link]) - No, you do not want him out. Tell him you are just passing by.";
-			if Player consents: 
+			if Player consents:
 				LineBreak;
 				say "     Indeed, you came here to deliver him into his temporary plant house, and ask him dearly if he would do that for you. 'Fine... I suppose I can stick around while you go... Whatever things you do without me... Would you please bend over for my vacation house, then?' You then do as he asks, leaning your ass over the strange plant and allow Velos to quickly wiggle himself out of your butt and into this organic green body. After a few moments, his head pokes out of it as he bids you farewell. 'Don't take too long to come for me, it gets lonely in here...'";
 				say "     [bold type]Velos is now staying in the Library's Garden until you come for him again.[roman type][line break]";

@@ -40,11 +40,11 @@ to say giantdesc:
 	else if calcnumber is 3:
 		if carried of zookeeper ring > 0:
 			say "     He is still a human, and you happen to have something he might like. Would you want to show the giant the ring you found?";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes, show him the ring.";
 			say "     ([link]N[as]n[end link]) - No need for that.";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				now combat abort is 1;
 				say "[ApproachTheGiant]";
 			else:
@@ -76,18 +76,18 @@ to say losetogiant:
 
 to say beatthegiant:
 	say "     It seems that during the heat of battle, the giant shows a deep anger for you, preparing for a [bold type]super hard stomp[roman type] on you! But there is a chance you could use this to your advantage...";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Simply dodge it. His move is very predictable.";
 	say "     ([link]N[as]n[end link]) - Make him come for you. Chances are that he trips and falls, as weakened as he is.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     The giant stomps his feet angrily after your final blow, making the ground shake and sending all the nearby creatures in hiding scattering to the four winds. 'You're too much trouble to deal with right now. [one of]I'll catch you later[or]I'll deal with you after I catch them[or]I've got a stampede on my hands[at random],' he booms, charging off in a random direction after the fleeing animals. Glad to be rid of him, you head off, hoping to avoid his attention in the future.";
 	else:
-		Linebreak;
+		LineBreak;
 		say "     It is a crazy plan, but a clever one nonetheless. Amidst his fury, the giant risks a step too long, even for himself, and that causes him to lose balance! You watch the titanic human fall flat on the ground, right on his back, and ceases to move. You still hear his deep, heavy breath, so apparently he just lost his senses.";
 		WaitLineBreak;
 		say "     Perhaps you could take advantage of this situation...";
-		Linebreak;
+		LineBreak;
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
@@ -220,14 +220,14 @@ to SubmitGiantAss:
 	say "     With your world enclosed in the space between the giant's enormous buttocks, things get really hot, very literally, as the musky air around nearly suffocates you with its intense humidity. 'You better wiggle for me! And start licking my ass to make up for your intrusion.' his voice booms out to you, and you have no choice but to comply. He truly has a big anus, twitching at you with every touch you lay on it, and loves to thoroughly slurp at your face every time the giant man grinds his ass against you. Sweat covers your body as you give your best to appease the giant, lest you want to risk being grinded until nothing more of you is left. With your tongue, you give it a tentative lick, which the zookeeper replies with yet another hump against your face. 'Was that your tongue? Fuck, that felt good...'";
 	say "     This continues for a while longer, with mostly you being smothered under a gigantic ass, forced to please his hole like the pint-sized plaything you are to him. Rubbing, kissing and licking are all on table when it comes to obliging his demands, and you can tell this whole situation pleases him a lot, were it not for the jerking motions that you can feel towards your side, as well as his grunts. But the more excited he gets, the more relaxed his pucker seems, and given your size difference, that could prove problematic...";
 	if vorelevel > 1 and scalevalue of Player < 5: [anal vore possibility]
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Hold yourself against his ass.";
 		say "     ([link]N[as]n[end link]) - Don't fight it.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			SubmitGiantAssNormal;
 		else:
-			Linebreak;
+			LineBreak;
 			SubmitGiantAssAV;
 	else:
 		SubmitGiantAssNormal;
@@ -351,7 +351,7 @@ to say ResolveEvent Missing Giant Ring:
 		say "     ([link]Y[as]y[end link]) - You will try to look for it, later.";
 		say "     ([link]N[as]n[end link]) - Just forget this, it is not worth your time.";
 		if Player consents: [event proceeds when found again]
-			Linebreak;
+			LineBreak;
 			say "     Maybe it could be good to have a giant friend in this place, even though there is an almost impossible task between you and it. But you have decided to give it a try after the giant retreats.";
 			now Resolution of Missing Giant Ring is 1;
 		else: [event solves here]
@@ -430,7 +430,7 @@ to say ApproachTheGiant:
 		say "     ([link]Y[as]y[end link]) - Let him pick you up.";
 		say "     ([link]N[as]n[end link]) - Just give him the ring and leave.";
 		if Player consents: [Giant picks up the player and they have some fun cuddling]
-			Linebreak;
+			LineBreak;
 			say "[ApproachTheGiantPickUp]";
 		else:
 			LineBreak;

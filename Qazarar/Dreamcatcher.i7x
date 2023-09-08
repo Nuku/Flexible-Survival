@@ -15,7 +15,7 @@ instead of sniffing dreamcatcher:
 
 Usedesc of dreamcatcher is "[perchance to dream]";
 
-Section 2 - Dreamevent Defintions
+Section 2 - Dreamevent Definitions
 
 A dreamevent is a kind of situation.
 A dreamevent has a truth state called RestfulDream. RestfulDream is usually true.

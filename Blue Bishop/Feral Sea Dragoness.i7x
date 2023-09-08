@@ -514,7 +514,7 @@ to say FSDF_5: [Oral Giving Cunt]
 	say "     Once everything dies down, you pull yourself free of the monster, a spent and exhausted mess, too weakened and lost in a haze of lingering need to really do anything but lay there now. Satisfied with your work, you choose to leave here[if tempnum2 is 0], a fair bit lust-addled though you may be[end if].";
 	CreatureSexAftermath "Player" receives "OralPussy" from "Feral Sea Dragoness";
 
-	
+
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Feral Sea Dragoness"	"[PrepCombat_Feral Sea Dragoness]"
