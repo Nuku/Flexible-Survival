@@ -532,88 +532,11 @@ This is the player attack rule:
 	else:
 		say "You miss!";
 	if Player is not lonely:
-		if "Realistic Combat" is listed in Traits of Player: [Luneth's alternate companion rules]
-			LineBreak;
-			Repeat with z running through companionList of Player:
-				if z is not NullPet:
-					if "LustAttacks" is not listed in Traits of z: [normal combat]
-						now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
-						let the combat bonus be attack bonus minus defense bonus;
-						if HardMode is true:
-							if the combat bonus > 16:
-								now combat bonus is 16;
-							else if the combat bonus < -25:
-								now combat bonus is -25;
-						else:
-							if the combat bonus > 19:
-								now combat bonus is 19;
-							else if the combat bonus < -22:
-								now combat bonus is -22;
-						now roll is a random number from 1 to 50;
-						if roll plus the combat bonus > 20:
-							let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
-							say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
-							decrease monsterHP by dam;
-							increase monsterLibidoPenalty by 10;
-						else:
-							say "[z] misses!";
-					else: [lusty combat]
-						now the seduce bonus is Charisma of z + ( level of z * 2 ) + pethitbonus - 10;
-						let the combat bonus be seduce bonus minus seduction defense bonus;
-						if HardMode is true:
-							if the combat bonus > 16:
-								now combat bonus is 16;
-							else if the combat bonus < -25:
-								now combat bonus is -25;
-						else:
-							if the combat bonus > 19:
-								now combat bonus is 19;
-							else if the combat bonus < -22:
-								now combat bonus is -22;
-						now roll is a random number from 1 to 50;
-						if the roll plus the combat bonus > 20 and SeductionImmune entry is false:
-							let LibidoIncrease be ( (Charisma of z divided by three) * ( a random number from 70 to 130 ) ) divided by 100;
-							say "[z]: [assault of z] [special-style-2][dam][roman type] [special-style-2][LibidoIncrease][roman type] libido increase!";
-							increase monsterLibido by LibidoIncrease;
-						else:
-							if SeductionImmune entry is true:
-								say "[z]'s seduction attempt fails! Doesn't look like that'll get anywhere with this tactic.";
-							else:
-								say "[z]'s seduction attempt fails!";
-						say "Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
-						increase HP of Player by 1;
-		else: [normal companion rules]
-			if ("Double Team" is listed in feats of Player and a random chance of petchance in 2000 succeeds): [normal double team with % chance, or Arthur and Reece always attacking]
-				LineBreak;
-				say "Your companions, always close by, aid you in attacking the enemy, synchronizing both their attacks against the [EnemyNameOrTitle]!";
-				LineBreak;
-				Repeat with z running through companionList of Player:
-					if z is not NullPet:
-						now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
-						let the combat bonus be attack bonus minus defense bonus;
-						if HardMode is true:
-							if the combat bonus > 16:
-								now combat bonus is 16;
-							else if the combat bonus < -25:
-								now combat bonus is -25;
-						else:
-							if the combat bonus > 19:
-								now combat bonus is 19;
-							else if the combat bonus < -22:
-								now combat bonus is -22;
-						now roll is a random number from 1 to 50;
-						if roll plus the combat bonus > 20:
-							let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
-							say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
-							decrease monsterHP by dam;
-							increase monsterLibidoPenalty by 10;
-						else:
-							say "[z] misses!";
-			else if a random chance of petchance in 1000 succeeds:
-				LineBreak;
-				let z be entry 1 of companionList of Player;
-				if z is not NullPet:
-					now attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
+		LineBreak;
+		Repeat with z running through companionList of Player:
+			if z is not NullPet:
+				if "LustAttacks" is not listed in Traits of z: [normal combat]
+					now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
 					let the combat bonus be attack bonus minus defense bonus;
 					if HardMode is true:
 						if the combat bonus > 16:
@@ -628,11 +551,36 @@ This is the player attack rule:
 					now roll is a random number from 1 to 50;
 					if roll plus the combat bonus > 20:
 						let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
-						say "[assault of z][run paragraph on]  [special-style-2][dam][roman type] damage inflicted!";
+						say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
 						decrease monsterHP by dam;
 						increase monsterLibidoPenalty by 10;
 					else:
 						say "[z] misses!";
+				else: [lusty combat]
+					now the seduce bonus is Charisma of z + ( level of z * 2 ) + pethitbonus - 10;
+					let the combat bonus be seduce bonus minus seduction defense bonus;
+					if HardMode is true:
+						if the combat bonus > 16:
+							now combat bonus is 16;
+						else if the combat bonus < -25:
+							now combat bonus is -25;
+					else:
+						if the combat bonus > 19:
+							now combat bonus is 19;
+						else if the combat bonus < -22:
+							now combat bonus is -22;
+					now roll is a random number from 1 to 50;
+					if the roll plus the combat bonus > 20 and SeductionImmune entry is false:
+						let LibidoIncrease be ( (Charisma of z divided by three) * ( a random number from 70 to 130 ) ) divided by 100;
+						say "[z]: [assault of z] [special-style-2][dam][roman type] [special-style-2][LibidoIncrease][roman type] libido increase!";
+						increase monsterLibido by LibidoIncrease;
+					else:
+						if SeductionImmune entry is true:
+							say "[z]'s seduction attempt fails! Doesn't look like that'll get anywhere with this tactic.";
+						else:
+							say "[z]'s seduction attempt fails!";
+					say "Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
+					increase HP of Player by 1;
 	LineBreak;
 	follow the monster injury rule;
 	say "[EnemyCapNameOrTitle] is [descr].";

@@ -121,6 +121,7 @@ to say Otter attack:
 			CreatureSexAftermath "Sea Otter" receives "AssFuck" from "Player";
 		if Player is Female:
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Sea Otter";
+			CreatureSexAftermath "Sea Otter" receives "PussyFuck" from "Player";
 		wait for any key;
 
 [ [Otter loss] ]
