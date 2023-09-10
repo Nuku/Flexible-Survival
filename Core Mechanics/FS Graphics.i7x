@@ -378,6 +378,8 @@ Figure of Corbin_face_icon is the file "Corbin_face.jpg".
 Figure of Danny_naked_icon is the file "Danny_naked.jpg".
 Figure of Danny_clothed_icon is the file "Danny_clothed.jpg".
 Figure of Danny_face_icon is the file "Danny_face.jpg".
+Figure of Daphne_naked_icon is the file "Daphne_naked.jpg".
+Figure of Daphne_clothed_icon is the file "Daphne_clothed.jpg".
 Figure of Darius_face_icon is the file "Darius_face.jpg".
 Figure of Darius_clothed_icon is the file "Darius_clothed.jpg".
 Figure of Darius_hard_icon is the file "Darius_hard.jpg".
@@ -1512,6 +1514,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Danny_naked"	Figure of Danny_naked_icon	"Laylo"	g-white	"normal"
 "Danny_clothed"	Figure of Danny_clothed_icon	"Dragonpunk"	g-white	"normal"
 "Danny_face_icon"	Figure of Danny_face_icon	"Dragonpunk"	g-white	"normal"
+"Daphne_naked"	Figure of Daphne_naked_icon	"SteppeCrow"	g-white	"normal"
+"Daphne_clothed"	Figure of Daphne_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Darius_face"	Figure of Darius_face_icon	"SineAlas"	g-black	"normal"
 "Dash"	Figure of Dash_icon	"Conchi"	g-white	"normal"
 "David_naked"	Figure of David_naked_icon	"Keitaro87"	g-white	"normal"

@@ -945,7 +945,6 @@ Name(text)	Type(text)
 "loversbench"	"number"
 "lustadjust"	"number"
 "lustatt"	"number"
-"LuxUmbraMaturityCounter"	"number"
 "lwcounter"	"number"
 "MalakhiRelationship"	"number"
 "malecatHP"	"number"
