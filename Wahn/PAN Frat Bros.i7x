@@ -487,13 +487,18 @@ to say PANFratBro_Talkmenu_Night:
 					say "[Angelo Introduction]";
 				else if (nam is "Express some doubts about Angelo's story"):
 					say "[Angelo Pre Video Masculine]";
+					now DoneTalking is true;
 				else if (nam is "Tell Angelo you can handle the 'full' story of his exploits"):
 					say "[Angelo Pre Video Feminine]";
+					now DoneTalking is true;
 				else if (nam is "Challenge Angelo into 'proving' his boasts"):
 					say "[Angelo Video Time]";
 					now DoneTalking is true;
 				else if (nam is "Suggest some more video time to Angelo"):
 					say "[Angelo Video Time]";
+					now DoneTalking is true;
+				else if (nam is "Suggest going up to Angelo's room for some fun"):
+					say "[Angelo Fun Time]";
 					now DoneTalking is true;
 				if DoneTalking is false:
 					say "[PANFratBro_Talkmenu_Night]"; [looping back to continue talking]

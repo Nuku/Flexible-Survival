@@ -351,7 +351,7 @@ Object	Name
 Helot Negotiation	"Helot Negotiation"
 
 Helot Negotiation is a situation.
-Helot Negotiation is not active;
+Helot Negotiation is not active.
 ResolveFunction of Helot Negotiation is "[ResolveEvent Helot Negotiation]".
 The level of Helot Negotiation is 10.
 Sarea of Helot Negotiation is "Campus".

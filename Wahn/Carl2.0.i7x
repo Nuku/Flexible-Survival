@@ -180,7 +180,7 @@ to say CarlLibraryArrival:
 	add "Carefully cover him with the blanket again, and let him work things out in his mind in peace." to Carl_Route_Choices;
 	add "Gently shake him awake, to free him from his nightmare." to Carl_Route_Choices;
 	add "Roughly awaken the man and dominate him to succumb becoming the dog he really is. Your dog!" to Carl_Route_Choices;
-	if Player is male or Player is female:
+	if Player is male:
 		add "Ram your dick into the man to fuck him into submission, until he succumbs to be nothing but the lustful dog that's inside him. Your dog!" to Carl_Route_Choices;
 	add "Climb on and impale yourself on the man's hard cock to fuck him into submission, until he succumbs to be nothing but the lustful dog that's inside him. Your dog!" to Carl_Route_Choices;
 	let Carl_Route_Choice be what the player chooses from Carl_Route_Choices;
@@ -194,6 +194,12 @@ to say CarlLibraryArrival:
 			say "     Moving closer, you lean over Carl on his cot and reach out to grab his arm - only to stop yourself and think for a second about it. Hm, might be best not to hold onto him tightly after what Allen put him through, or he might instinctively fight back. Therefore you just give the transformed soldier a light shake with straight fingers against the side of his shoulder, withdrawing your hand immediately. Letting out an alarmed bark, the tense man twitches up to half-sit in bed, blinking open his tired eyes to glance around as if something was hunting him. His attention quickly turns to you as the closest person, starting in sleep-ridden uncomprehension at your face. With an apologetic smile, you tell him that he seemed to have a bad time in a nightmare and you wanted to put a stop to that. Also mentioning that he kicked off his blanket, you tug it off the bed from where the man was half-lying on top of it, then throw it over him properly again. With a half-sleeping mixture of relief and thankfulness, Carl accepts the blanket and curls up under it, closing his eyes again as he sinks back into unconsciousness.";
 			now HP of Carl is 10; [start of True-Carl]
 		-- "Roughly awaken the man and dominate him to succumb becoming the dog he really is. Your dog!":
+			LineBreak;
+			say "     ";
+		-- "Ram your dick into the man to fuck him into submission, until he succumbs to be nothing but the lustful dog that's inside him. Your dog!":
+			LineBreak;
+			say "     ";
+		-- "Climb on and impale yourself on the man's hard cock to fuck him into submission, until he succumbs to be nothing but the lustful dog that's inside him. Your dog!":
 			LineBreak;
 			say "     ";
 

@@ -1491,7 +1491,7 @@ to BeastRestore:
 					say "DEBUG -> [x]: BeastName: [BeastName] Area entry set to [BeastArea]!";
 				]
 			else:
-				if Beastname is not "Lernean Hydra" and Beastname is not "Skunk": [error message disabled for bugged name]
+				if Beastname is not "Lernean Hydra" and Beastname is not "Skunk" and Beastname is not "Blob": [error message disabled for bugged name]
 					say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters! Please report this message on the FS Discord!";
 	else if the File of BeastSave exists:
 		read File of BeastSave into the Table of GameBeasts;

@@ -1127,9 +1127,11 @@ to say SaveCarl: [save the husky]
 		LineBreak;
 		say "     As you tell him that he could come with you, and that you got a place that is big enough for everyone, Carl's tail starts to wag by its own accord. Much to the displeasure of the man, who reaches back to hold it still with an annoyed grunt. 'See what I have to deal with? Some parts of this body just act on their own if I don't keep a tight lid on it!' With a sigh, Carl looks down at the large paws he's standing on, then shakes his head and tells you, 'Hmmmph, we should be helping people like you, not the other way around. But... I got to admit, I'm bone-tired. Not just physically, trying to figure this thing out, but also mentally. It's fucking hard to have to fight inside your own head, to keep a hold of who you are. And I don't even know if I can win this battle, in the end.' Raising his gaze to you, he adds, 'So, what I mean to say: I accept, and thank you. It's good to see that there are some decent people left in this world. Smiling and nodding, you don't say anything further about your motivations as you lead the man towards the Grey Abbey Library.";
 		say "     The way home is thankfully not that long, as the husky soldier is in no state at all for a fight: Seems like he used up all of his reserves in the flight from Allen, and he's staggering along in a sort-of zombie state right now. You actually have to stop him walking out into the middle of a street where three large feral gryphons are half-dozing in post-coital bliss, with their newest conquests still pinned beneath the leonine bodies of the beasts. Their balls might still be throbbing as they spill their seed into those they have already caught, but you have little doubt they'd rise to the occasion to pounce on Carl if he just stumbled between the group of horny beasts. Getting a firm grip on the husky's upper arm, you redirect him to a route that circles around in a safe distance. A little while later, you finally get to the Grey Abbey Library.";
+		[
 		WaitLineBreak;
 		say "[CarlLibraryArrival]";
 		TraitGain "CarlLibraryArrival Done" for Carl;
+		]
 		now HP of Carl is 2;
 		now CarlLibraryEntry is turns;
 		move Carl to Grey Abbey 2F;
