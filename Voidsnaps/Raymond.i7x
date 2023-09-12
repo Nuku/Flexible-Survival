@@ -362,6 +362,8 @@ to say RaymondPussyFuck: [Getting a wombful of Raymond's seed.]
 	say "     'Beautiful.' Raymond says, his inner voice breathless as his pistoning body. It seems there was a reason he pulled out, to savor your union and prevent himself from finishing too early, but he's as past caring as you are, giving you the pounding you needed. You nearly white-out around the point when you feel the first slosh of mouse cum against your womb, and with a start, you realize that Raymond's mind is broadcasting his orgasm into your head. You can feel how tightly you're clenching around him, how much his cock is throbbing, and even the relief of pump after pump of virile rodent seed mixed with the gushing of your fem-gasm. It's too much, and you collapse backward, your eyes rolling back and your body twitching in time with your shared orgasm.";
 	say "     When you come to, Raymond is tending to your face, wiping away sweat and caressing your cheek. He smiles down at you like an angel, and his voice echoes in your brain, warm and comforting. 'That's it. Come back to me, dearest.' Pressing a kiss to your forehead, he cradles your face against his chest, paying no mind to his still-dripping cock against your side. 'I'm afraid you're too beautiful. I couldn't restrain myself. You understand, don't you?' Weakly you nod, but you're already making plans to do this again, hardly resisting the urge to play with your dripping, well-basted pussy. Idly, you wonder if you have to leave. Sadly, your afterglow wears off eventually, and you have to walk away from the mouse's makeshift fuck-nest. You'll be back, and soon.";
 	NPCSexAftermath Player receives "PussyFuck" from Raymond;
+	TraitGain "Mental Link" for Raymond;
+	infect "Mentally Gifted Mouse";
 	if lust of Raymond < 2:
 		increase lust of Raymond by 1;
 
@@ -372,6 +374,7 @@ to say RaymondSuckOff: [Sucking his mousy cock.]
 	say "      Doubling your efforts, you spread your legs [if Player is barecrotch and Player is female]letting your pussy drip to the floor below. [else if Player is barecrotch and Player is male]feeling your cock throb its desire, growing closer by the second. [else if Player is not barecrotch]Feeling your still imprisoned genitals throb, messing the crotch of your pants with slippery liquid and threatening to leave a wet spot. [end if]You barely resist the urge to cum, but it seems you have no choice. Raymond's past the point of no return, and as he fucks your face with wild abandon, you feel orgasm settle over your mind, accompanied by the undeniable sensation of the back of your throat hosed with mouse cream. You join him in his finish, gulping gratefully and making a mess of yourself until he frees you from his grip, letting you take deep breaths tainted with mouse musk and clean sweat. 'You're quite talented.' Raymond shudders, rubbing his tip over your lips and letting you feel the oversensitive sensations it drags from his still dribbling cock. 'Please, help yourself whenever you like.' You patiently kiss away the mess of drool and cum you've left on your mouse's crotch, swallowing every drop and teasing the odd squeak from him as your tongue hits the right spot. You almost try for a second round, but it's too strong for you, and you pull back, disappointed by the short circuit your brain almost experiences. Oh well. You can do it again soon.";
 	NPCSexAftermath Player receives "OralCock" from Raymond;
 	infect "Mentally Gifted Mouse";
+	TraitGain "Mental Link" for Raymond;
 	if lust of Raymond < 2:
 		increase lust of Raymond by 1;
 
@@ -390,6 +393,7 @@ to say RaymondAssFuck:
 	say "      Overwhelmed by dual orgasms surging through your mind at once, you cling to Raymond, still buried in his softly clamping ass and emptying reserves of cum you didn't know you had. You press your lips against the rodent's in a deep kiss, desperate to melt off some of the intense desire running through you and only resisting the urge to fuck another load of creamy seed into him by the sensitivity of your cock. Moments later, unaided by the intensity of Raymond's sex appeal, you flop your softened cock free of that perfect ass, holding him close with a handful of grey ass cheeks. It's almost too much to bear when you finally have to gather your gear and leave, but Raymond's soothing thoughts let you sand up, aided by one of his pink paws. While he's the one that was fucked, you feel like you were the one used until you broke. Somehow, the thought isn't all that bad.";
 	NPCSexAftermath Raymond receives "AssFuck" from Player;
 	infect "Mentally Gifted Mouse";
+	TraitGain "Mental Link" for Raymond;
 	if lust of Raymond < 2:
 		increase lust of Raymond by 1;
 

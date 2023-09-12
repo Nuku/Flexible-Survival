@@ -157,10 +157,11 @@ to say KoskConversationMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Ask Kosk if he'll let you into the village";
-	now sortorder entry is 1;
-	now description entry is "You're curious about the village behind Kosk. Will he let you through";
+	if "Lizard Village Welcome" is not listed in Traits of Kosk:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask Kosk if he'll let you into the village";
+		now sortorder entry is 1;
+		now description entry is "You're curious about the village behind Kosk. Will he let you through";
 	[]
 	if "Lizard Village Welcome" is listed in Traits of Kosk:
 		choose a blank row in table of fucking options;
@@ -365,6 +366,7 @@ to say ResolveEvent Taste Of Home:
 	say "     Kosk looks surprised when you return to him, his eyes widening as you present him with an armful of seasoning. Leaning against his spear, he takes each jar from you like a priceless treasure, cradling them to his chest. 'Woah. I didn't expect you to come back. You're pretty determined.' He says with an infectious grin, his sharp teeth shining as he reads labels and gently trails claws over them. Suddenly, you feel those bulging biceps sweep you up, accompanied by a mashing pair of lips against yours. The excited lizard spins you around, crushing you in a scaly grip, then breaking the kiss to fix you with a smirk. 'You can walk right into the village now if you want. Visit me sometime, and I'll show you how thankful I am! Might even give you some of what I cook with these babies.' Blinking in surprise from the sudden kiss, you turn toward the open path to the village, leaving Kosk to sort through the gifts you brought him.";
 	TraitLoss "Seasonings Found" for Player;
 	TraitGain "Lizard Village Welcome" for Kosk;
+	now Taste Of Home is Resolved;
 
 Section 3 - Kosk Sex Scenes
 
