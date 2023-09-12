@@ -236,7 +236,7 @@ to say Raymond_FuckMenu:
 		now sortorder entry is 4;
 		now description entry is "That moutwatering half-foot of mouse cock is calling your name. Answer the call";
 		[]
-		if lust of Raymond > 1 and Player is submissive:
+		if lust of Raymond > 1 and Player is submissive and "Mental Link" is listed in traits of Raymond:
 			choose a blank row in table of fucking options;
 			now title entry is "Ask Raymond if you can explore your newfound bond";
 			now sortorder entry is 5;
