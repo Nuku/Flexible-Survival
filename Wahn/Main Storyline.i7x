@@ -171,7 +171,7 @@ to say DrMattTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Tell him you got some samples for him";
 	[]
-	if HP of Doctor Matt is 6:
+	if HP of Doctor Matt is 6 and Unusual Creature is resolved:
 		choose a blank row in table of fucking options;
 		now title entry is "The results of his examination";
 		now sortorder entry is 3;
@@ -621,7 +621,7 @@ to say DrMattQuestTalk:
 		now HP of Doctor Matt is 5;
 	else if HP of Doctor Matt is 5:
 		DrMattSusanQuestIntro;
-	else if HP of Doctor Matt is 6 and unusual creature is unresolved:
+	else if HP of Doctor Matt is 6 and Unusual Creature is not resolved:
 		DrMattSusanQuestReminder;
 	else if HP of Doctor Matt is 6:
 		DrMattSusanQuestReturn;

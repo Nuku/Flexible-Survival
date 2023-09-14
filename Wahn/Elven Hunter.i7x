@@ -239,54 +239,6 @@ to say Castien_Punch:
 	say "     [bold type]Castien didn't like that.[roman type][line break]";
 	decrease Charisma of Castien by 1;
 
-to say ElvenHunterDesc:
-	if PlayerMet of Castien is false:
-		say "     A tall, slender man steps silently out of the shadows a bit ahead of you. He is a very handsome man dressed in dark green leather pants and an open fur-trimmed vest on first impression. But looking closer, you realize he's too beautiful to be a human - supernaturally so. With the clearly defined muscles under his pale, flawless skin and a face bearing sharp, beautiful features he'd make any human standing beside him look like a crudely assembled puppet. The sharp points of his ears poking out from under shoulder-length black hair and the bow in his hand remove any doubts - he's an elf. While you were busy staring at him, he studied you in turn with his jade green slit-pupiled eyes... and wasn't too impressed to judge from his expression.";
-		if BodyName of Player is "Incubus" or BodyName of Player is "Succubus" or BodyName of Player is "Demon Brute" or BodyName of Player is "Hellhound":
-			say "     He snarls 'Go back to the stinking pit you call home - demon', before gracefully pulling an arrow from the quiver on his back. With the comment, 'I'll show you why you shouldn't try to spread your infestation on elven hunting grounds,' he lets it fly, purposefully missing your head by less an inch.";
-		else if BodyName of Player is "Elf" or BodyName of Player is "Elven Hunter":
-			say "     He sighs, saying 'Are you masquerading as one of us? The human phantasies of becoming something better than they are somewhat sad.' Gracefully pulling an arrow from the quiver on his back, he continues, 'Let's see if you're worthy of the shape you wear...'";
-		else if (BodyName of Player is "Human" or BodyName of Player is "Herm Human") and Player is pure:
-			say "     He sighs, saying 'A human - how droll. Still, some of you are rather inventive...' Gracefully pulling an arrow from the quiver on his back, he continues, 'Let's see if you might be worth hunting. Start running and be a bit of a challenge, will you?'";
-		else if ( BodyName of Player is listed in infections of ReptileList and SkinName of Player is listed in infections of ReptileList ):
-			say "     He sighs, saying to himself 'It's scaly and looks a bit like the big lizards of the past - but will it be a worthy heir to their legacy of cunning and strength? Only one way to find out...' Gracefully pulling an arrow from the quiver on his back, he addresses you, 'Start running and be a bit of a challenge, will you?'";
-		else:
-			say "     He sighs, saying to himself, 'It'll have to do for now', before gracefully pulling an arrow from the quiver on his back. 'You there, creature - start running and be a bit of a challenge, will you?'";
-	else:
-		say "     Castien, the elven hunter you met before, steps out of the shadows some distance ahead of you. He is a very handsome male, dressed in dark green leather pants and an open fur-trimmed vest that shows his impressive abs and chest. With the clearly defined muscles under his pale, flawless skin and a face bearing sharp, beautiful features he'd make any human standing beside him look like a crudely assembled puppet. The sharp points of his ears poking out from under shoulder-length black hair and the bow in his hand complete the look of a proud elven hunter. While you were busy staring at him, he studied you in turn with his jade green slit-pupiled eyes...";
-		if Charisma of Castien > 4 and PlayerFucked of Castien is true: [he likes the player]
-			say "     'So we meet again, out here in the forest.' A hint of a smile plays over Castien's lips as he dips his head in a nod to you. 'What shall it be then[if Player is not defaultnamed], [name of Player]? [else]? [end if]Do you want to play our game of old, becoming hunted and hunter? Shall we see which of us will claim what title this time?'";
-			say "     [bold type]What do you reply?[roman type][line break]";
-			say "     [link](1)[as]1[end link] - Smile and give him a 'Bring it on!' wave of your hand.";
-			say "     [link](2)[as]2[end link] - How about some companionship instead? And by that, you mean sex.";
-			say "     [link](3)[as]3[end link] - Why not join up with him for a little while, and roam the city together?";
-			now calcnumber is 0;
-			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
-				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
-					say "Invalid choice. Type [link]1[end link] to fight, [link]2[end link] to fuck or [link]3[end link] to wander the city together.";
-			if calcnumber is 1:
-				LineBreak;
-				say "     Castien grins at your challenge, drawing an arrow from his quiver. 'I'm sure it will be a great hunt!'";
-			else if calcnumber is 2:
-				LineBreak;
-				say "     Smiling at the handsome elf, you tell him that you've fought before, and by now he should know your prowess fairly well. While combat can be a challenge, in this instance, you both know that you'd beat him. 'Is that so?' he asks in a tone both amused and challenging. Castien keeps his gaze locked with yours for a long moment, then laughs out loud and shakes his head. 'I'll... let you believe that, for now. So, if you're such a great fighter, what will you pick as your reward for besting me?' His hands reach for his belt as he says those words.";
-				say "[ElvenHunterVictoryMenu]";
-				now combat abort is 1;
-			else if calcnumber is 3:
-				LineBreak;
-				say "     Smiling at the handsome elf, you tell him that you've fought before, and by now he should know your prowess fairly well. Therefore, you propose a different sort of amusement. Castien listens as you suggest that the two of you go and roam the city together for a while, tapping his chin thoughtfully. 'And what for, exactly?' the elf asks, to which you reply that you've only ever seen him in this forest, and that he needs to get around more if he really wants to scout more than just a little piece of the city. He takes a deep breath, then says, 'While you wouldn't necessarily have seen me if I didn't plan on it, I see your point. Maybe I have been a bit too... conservative, keeping to familiar terrain. Lead on then, and show me what you will.'";
-				say "[ElvenHunterTourism]";
-				now combat abort is 1;
-		else if Charisma of Castien > 0: [he sees the player as worthy prey]
-			say "     'Ah, good that it is you[if Player is not defaultnamed], [name of Player][end if]. I've been longing for a challenge!' A hint of a smile plays over Castien's lips as he dips his head in a nod to you.";
-		else if Charisma of Castien is 0: [neutral]
-			say "     'Oh, it's you. Going to let me down, or did you man up finally?' The elf says this with a slightly up-turned nose, telling you that he doesn't believe you'll be any challenge at all.";
-		else: [he dislikes the player]
-			say "     'Oh, it's you.' With an eye-roll, he takes an arrow from his quiver right away. 'Likely just going to be another waste of my time, but then... I've seen some extreme transformations here, so maybe you've become less worthless somehow?' The elf says this with a slightly up-turned nose, telling you that he doesn't believe you'll be any challenge at all.";
 
 to say ElvenHunterTourism:
 	let TalkDone be false;
@@ -483,6 +435,56 @@ to say Castien_Exploration_Outside:
 		increase Loyalty of Castien by 1;
 
 Section 2 - Creature Insertion
+
+to say ElvenHunterDesc:
+	if PlayerMet of Castien is false:
+		say "     A tall, slender man steps silently out of the shadows a bit ahead of you. He is a very handsome man dressed in dark green leather pants and an open fur-trimmed vest on first impression. But looking closer, you realize he's too beautiful to be a human - supernaturally so. With the clearly defined muscles under his pale, flawless skin and a face bearing sharp, beautiful features he'd make any human standing beside him look like a crudely assembled puppet. The sharp points of his ears poking out from under shoulder-length black hair and the bow in his hand remove any doubts - he's an elf. While you were busy staring at him, he studied you in turn with his jade green slit-pupiled eyes... and wasn't too impressed to judge from his expression.";
+		if BodyName of Player is "Incubus" or BodyName of Player is "Succubus" or BodyName of Player is "Demon Brute" or BodyName of Player is "Hellhound":
+			say "     He snarls 'Go back to the stinking pit you call home - demon', before gracefully pulling an arrow from the quiver on his back. With the comment, 'I'll show you why you shouldn't try to spread your infestation on elven hunting grounds,' he lets it fly, purposefully missing your head by less an inch.";
+		else if BodyName of Player is "Elf" or BodyName of Player is "Elven Hunter":
+			say "     He sighs, saying 'Are you masquerading as one of us? The human phantasies of becoming something better than they are somewhat sad.' Gracefully pulling an arrow from the quiver on his back, he continues, 'Let's see if you're worthy of the shape you wear...'";
+		else if (BodyName of Player is "Human" or BodyName of Player is "Herm Human") and Player is pure:
+			say "     He sighs, saying 'A human - how droll. Still, some of you are rather inventive...' Gracefully pulling an arrow from the quiver on his back, he continues, 'Let's see if you might be worth hunting. Start running and be a bit of a challenge, will you?'";
+		else if ( BodyName of Player is listed in infections of ReptileList and SkinName of Player is listed in infections of ReptileList ):
+			say "     He sighs, saying to himself 'It's scaly and looks a bit like the big lizards of the past - but will it be a worthy heir to their legacy of cunning and strength? Only one way to find out...' Gracefully pulling an arrow from the quiver on his back, he addresses you, 'Start running and be a bit of a challenge, will you?'";
+		else:
+			say "     He sighs, saying to himself, 'It'll have to do for now', before gracefully pulling an arrow from the quiver on his back. 'You there, creature - start running and be a bit of a challenge, will you?'";
+	else:
+		say "     Castien, the elven hunter you met before, steps out of the shadows some distance ahead of you. He is a very handsome male, dressed in dark green leather pants and an open fur-trimmed vest that shows his impressive abs and chest. With the clearly defined muscles under his pale, flawless skin and a face bearing sharp, beautiful features he'd make any human standing beside him look like a crudely assembled puppet. The sharp points of his ears poking out from under shoulder-length black hair and the bow in his hand complete the look of a proud elven hunter. While you were busy staring at him, he studied you in turn with his jade green slit-pupiled eyes...";
+		if Charisma of Castien > 4 and PlayerFucked of Castien is true: [he likes the player]
+			say "     'So we meet again, out here in the forest.' A hint of a smile plays over Castien's lips as he dips his head in a nod to you. 'What shall it be then[if Player is not defaultnamed], [name of Player]? [else]? [end if]Do you want to play our game of old, becoming hunted and hunter? Shall we see which of us will claim what title this time?'";
+			say "     [bold type]What do you reply?[roman type][line break]";
+			say "     [link](1)[as]1[end link] - Smile and give him a 'Bring it on!' wave of your hand.";
+			say "     [link](2)[as]2[end link] - How about some companionship instead? And by that, you mean sex.";
+			say "     [link](3)[as]3[end link] - Why not join up with him for a little while, and roam the city together?";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+					break;
+				else:
+					say "Invalid choice. Type [link]1[end link] to fight, [link]2[end link] to fuck or [link]3[end link] to wander the city together.";
+			if calcnumber is 1:
+				LineBreak;
+				say "     Castien grins at your challenge, drawing an arrow from his quiver. 'I'm sure it will be a great hunt!'";
+			else if calcnumber is 2:
+				LineBreak;
+				say "     Smiling at the handsome elf, you tell him that you've fought before, and by now he should know your prowess fairly well. While combat can be a challenge, in this instance, you both know that you'd beat him. 'Is that so?' he asks in a tone both amused and challenging. Castien keeps his gaze locked with yours for a long moment, then laughs out loud and shakes his head. 'I'll... let you believe that, for now. So, if you're such a great fighter, what will you pick as your reward for besting me?' His hands reach for his belt as he says those words.";
+				say "[ElvenHunterVictoryMenu]";
+				now combat abort is 1;
+			else if calcnumber is 3:
+				LineBreak;
+				say "     Smiling at the handsome elf, you tell him that you've fought before, and by now he should know your prowess fairly well. Therefore, you propose a different sort of amusement. Castien listens as you suggest that the two of you go and roam the city together for a while, tapping his chin thoughtfully. 'And what for, exactly?' the elf asks, to which you reply that you've only ever seen him in this forest, and that he needs to get around more if he really wants to scout more than just a little piece of the city. He takes a deep breath, then says, 'While you wouldn't necessarily have seen me if I didn't plan on it, I see your point. Maybe I have been a bit too... conservative, keeping to familiar terrain. Lead on then, and show me what you will.'";
+				say "[ElvenHunterTourism]";
+				now combat abort is 1;
+		else if Charisma of Castien > 0: [he sees the player as worthy prey]
+			say "     'Ah, good that it is you[if Player is not defaultnamed], [name of Player][end if]. I've been longing for a challenge!' A hint of a smile plays over Castien's lips as he dips his head in a nod to you.";
+		else if Charisma of Castien is 0: [neutral]
+			say "     'Oh, it's you. Going to let me down, or did you man up finally?' The elf says this with a slightly up-turned nose, telling you that he doesn't believe you'll be any challenge at all.";
+		else: [he dislikes the player]
+			say "     'Oh, it's you.' With an eye-roll, he takes an arrow from his quiver right away. 'Likely just going to be another waste of my time, but then... I've seen some extreme transformations here, so maybe you've become less worthless somehow?' The elf says this with a slightly up-turned nose, telling you that he doesn't believe you'll be any challenge at all.";
+
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)

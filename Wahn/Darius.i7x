@@ -945,7 +945,7 @@ to say BlissedDariusSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Work some small dildos up his asshole";
 		now sortorder entry is 8;
-		now description entry is "Train the Dalmatian for anal penetation";
+		now description entry is "Train the Dalmatian for anal penetration";
 	[]
 	if Player is male:
 		choose a blank row in table of fucking options;

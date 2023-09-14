@@ -49,7 +49,6 @@ Sarea of Hellish Trashpile is "Warehouse".
 when play begins:
 	add Hellish Trashpile to BadSpots of DemonList;
 
-
 LastTrashSearchTurn is a number that varies. [@Tag:NotSaved]
 LastTrashSearchTurn is usually 20000.
 
@@ -116,7 +115,7 @@ to say FightTrashImp:
 	say "     Swooping down on you, the imp gives you an angry frown before clearing his throat and booms out in his strangely high pitched tone. 'How dare you intrude during my duties! Isn't it enough hassle as it is, I'll have to deal with unpleasantries like yourself?!' His voice just makes it look all a bit funny, [if Libido of Skarnoth > 0]nothing like the imps you've encountered before,[end if] and you can't quite suppress a snort at how almost comical he sounds, drawing you a hateful glare from the imp. 'We'll see who's laughing after I give you a well-deserved thrashing, whelp!' he shouts and raises a hand, forming a ball of fire above his palm about an inch in diameter.";
 	challenge "Imp Male";
 	if fightoutcome < 20: [player won]
-		say "[Imp loses]";
+		say "     Taking hold of the slender little demon, you grab his head and give it a sharp twist, breaking his neck. He scowls at the pain, but then surprisingly gives a toothy smile. 'Can't kill a demon, you idiot. I'll just end up in hell and find my way back...' he croaks out as the life fades from him. Then as the body goes still, it seems to melt between your fingers, becoming a puff of red smoke that is scattered by the wind.";
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		if HP of Player > 0:[player submits]
 			say "     As you submit to the little demon, the imp lowers his guard, perplexed with your change of attitude. 'What?! You interrupt my work and nearly hit me with a rock... for this?! While he clearly sounds like he's annoyed with your intrusion, the slowly building protrusion beneath his loincloth gives him away. 'At least you know your place as the pathetic mortal you are! Yeah, that's right! I'm the superior race, here! His too-broad mouth pulls into a wide grin showing off a whole row of sharp teeth as he flies over to you. 'Now you'll have to make up for my wasted time! Strip naked, slave!' The hell minion puffs up his chest as he caresses his throbbing shaft, observing you taking off your gear and clothes, dropping them to the ground one by one. Fluttering around your exposed body, he demands that you take some lewd poses to show off - like shaking and spreading your ass or air-humping with your crotch - until he commands you to lie down on your back. he lands on your chest a moment later, placing tiny hooves to stand on your breastbone.";

@@ -40,7 +40,7 @@ Version 1 of Lux & Umbra by Prometheus begins here.
 [ 0 - Not fully grown                 ]
 [ 1 - Only just fully grown           ]
 
-[ LuxUmbraMaturityCounter             ]
+[ Charisma of Lux             ]
 [ 1 - Young Adult                     ]
 [ 40 - Teen                           ]
 [ 80 - Child                          ]
@@ -90,21 +90,21 @@ an everyturn rule:
 		move Umbra to Grey Abbey Library;
 
 An everyturn rule:
-	if LuxUmbraMaturityCounter is 80:
+	if Charisma of Lux is 80:
 		now HP of Lux is 2;
 		now HP of Umbra is 2;
 		say "     A strange feeling runs through you, and you get the sense that you should perhaps check on Lux and Umbra.";
-	if LuxUmbraMaturityCounter is 40:
+	if Charisma of Lux is 40:
 		now HP of Lux is 3;
 		now HP of Umbra is 3;
 		say "     A strange feeling runs through you, and you get the sense that you should perhaps check on Lux and Umbra.";
-	if LuxUmbraMaturityCounter is 1:
+	if Charisma of Lux is 1:
 		now HP of Lux is 4;
 		now HP of Umbra is 4;
 		say "     A strange feeling runs through you, and you get the sense that you should perhaps check on Lux and Umbra.";
-		now LuxUmbraMaturityCounter is 0;
-	if LuxUmbraMaturityCounter > 1:
-		decrease LuxUmbraMaturityCounter by 1;
+		now Charisma of Lux is 0;
+	if Charisma of Lux > 1:
+		decrease Charisma of Lux by 1;
 
 an everyturn rule:
 	if "LuxUmbra Incest Enabled" is listed in feats of player:
@@ -121,7 +121,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Umbra	"Umbra"
 
-LuxUmbraMaturityCounter is a number that varies. LuxUmbraMaturityCounter is usually 0.
+LuxUmbraMaturityCounter is a number that varies. LuxUmbraMaturityCounter is usually 0. [Should be redundant]
 Lux&UmbraResidentOpinionCount is a number that varies. Lux&UmbraResidentOpinionCount is usually 0. [Does not need to be saved..]
 
 Lux is a woman.

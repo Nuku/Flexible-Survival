@@ -20,6 +20,9 @@ Version 5 of Frank by Luneth begins here.
 [ 2 = Frank bottom  ]
 [ 3 = Frank switch  ]
 
+a postimport rule:
+	now Maininfection of Frank is "Skunk Male";
+
 Section 1 - Event and Comic Store
 
 Table of GameEventIDs (continued)
@@ -548,6 +551,7 @@ to say maleskunkinfect:
 			if Name entry is "Skunk Male":
 				now MonsterID is y;
 				break;
+		infect "Skunk Male";
 
 Section 9 - Endings
 

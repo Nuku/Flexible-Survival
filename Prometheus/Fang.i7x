@@ -3772,7 +3772,7 @@ Section 8 - Omega Fang's Interactions with Others
 
 Section 9 - Birth of Lux & Umbra for Female Fang
 
-instead of navigating Grey Abbey Library while ("Fang's Mate" is listed in feats of Player and Fang is in Grey Abbey Library and Perception of Fang is 1):
+instead of navigating Grey Abbey Library while ("Fang's Mate" is listed in feats of Player and Fang is Collected and Perception of Fang is 1):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -3780,13 +3780,13 @@ instead of navigating Grey Abbey Library while ("Fang's Mate" is listed in feats
 		say "     DEBUG: Birth of Lux and Umbra[line break]";
 	say "[FemaleFangLux&UmbraBirth]";
 
-instead of going up from Bunker while ("Fang's Mate" is listed in feats of Player and Fang is in Grey Abbey Library and Perception of Fang is 1):
+instead of going up from Bunker while ("Fang's Mate" is listed in feats of Player and Fang is Collected and Perception of Fang is 1):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Birth of Lux and Umbra[line break]";
 	say "[FemaleFangLux&UmbraBirth]";
 
-instead of going down from Grey Abbey 2F while ("Fang's Mate" is listed in feats of Player and Fang is in Grey Abbey Library and Perception of Fang is 1):
+instead of going down from Grey Abbey 2F while ("Fang's Mate" is listed in feats of Player and Fang is Collected and Perception of Fang is 1):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Birth of Lux and Umbra[line break]";

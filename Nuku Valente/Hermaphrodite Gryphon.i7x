@@ -292,9 +292,9 @@ Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
-"Blue_Gryphon_Herm"	"[PrepCombat_Blue_Gryphon_Herm]"
+"Blue Gryphon Herm"	"[PrepCombat_Blue Gryphon Herm]"
 
-to say PrepCombat_Blue_Gryphon_Herm:
+to say PrepCombat_Blue Gryphon Herm:
 	project Figure of BlueGryphon_soft_icon;
 	setmongender 5;
 

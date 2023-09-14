@@ -662,16 +662,6 @@ to say RexPetScene5:
 
 Section 8 - Saving Karen without Submission to Rex
 
-[
-Current direction of rescuing Karen:
-- Find a missing person flier with picture of Karen (Can't have succumbed to the Bone yet)
-- Approach Rex's home but realize that you don't want to break in with him there.
-- Return when Rex isn't there and talk to Karen. She tells you about Francois' bakery.
-- Get Francois to make dog treats to distract Rex
-- Attempt rescue of Karen, fight Rex.
-- Depending on outcome, take Karen back to library.
-]
-
 Table of GameEventIDs (continued)
 Object	Name
 Missing Person Flier	"Missing Person Flier"
@@ -708,13 +698,13 @@ to say ResolveEvent Lair of the Pooch:
 			if Player is Female:
 				say "'Careful, sexy. I'd rather knock you up than knock you down,' the large anthro male retriever chuckles as he puts an arm out to help you steady yourself. You feel his eyes rove across your body, lingering appreciatively on your chest and crotch. ";
 				if Player is pure and BodyName of Player is "Retriever Female":
-					say "'You remind me of my current pet. You should come by my house. My bitch gets lonely and I think you'd make a good playmate for her. We could see about putting some puppies in you,' he suggests lechorously. ";
+					say "'You remind me of my current pet. You should come by my house. My bitch gets lonely and I think you'd make a good playmate for her. We could see about putting some puppies in you,' he suggests lecherously. ";
 				else:
 					say "'Wanna come home with me? You could meet my pet and then we can work on making you prettier and more obedient. You might not want to leave afterwards though,' he laughs. ";
 			else:
 				say "'Watch it, unless you want to be taught to respect your betters,' the large anthro male retriever grumbles as you recover your balance. He lets his eyes rove over your body, not hiding his disappointment as they glide over your chest and crotch. ";
 				if Player is pure and BodyName of Player is "Retriever Female":
-					say "'You remind me of my current pet. You should come by my house. My bitch gets lonely and I think you'd make a good playmate for her. Might need to break your ass in first though, as I don't have a use for your cock,' he suggests lechorously. ";
+					say "'You remind me of my current pet. You should come by my house. My bitch gets lonely and I think you'd make a good playmate for her. Might need to break your ass in first though, as I don't have a use for your cock,' he suggests lecherously. ";
 				else:
 					say "'With a few changes, I could make you just like my other pet. If you follow me home, we could work on making you prettier and more obedient. You might not want to leave afterwards though,' he laughs. ";
 			say "You realize that this is the same dog that the retriever girl ran into and he obviously lives nearby! Not comfortable with how he phrased his invitation, you refuse as politely as you can to avoid a confrontation ant the attention that this might attract.";
