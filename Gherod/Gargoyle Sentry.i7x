@@ -183,7 +183,7 @@ to SGargoyleScene2:
 				LineBreak;
 				say "     You decide it is better not, for now. Even if you have to conduct another search to find him, at least then you should be ready.";
 			else if calcnumber is 3:
-				Linebreak;
+				LineBreak;
 				say "     You have had your misadventures with the gargoyle, and have decided that enough is enough. With this said, you simply take your leave and forget about the existence of this chapel. You have a feeling you will never encounter it again, ever.";
 				now Resolution of Gargoyle Sentry is 99;
 				now Gargoyle Sentry is resolved;
@@ -266,22 +266,22 @@ to SGargoyleScene2Explore:
 		else:
 			say "Invalid choice. Type [link]1[end link] to choose mouth, [link]2[end link] to choose cock, [link]3[end link] to ask about the ass option or [link]4[end link] to beg for mercy.";
 	if calcnumber is 1: [Oral Vore]
-		Linebreak;
+		LineBreak;
 		say "     After hearing your reply, he proceeds to give you a really long and hard lick through your entire body, leaving you coated in his saliva. 'Mmm... Is that it? Well, then...' his grip around you tightens as he gives you a scary look. 'Into my belly, you go.'";
 		WaitLineBreak;
 		SGargoyleScene2OV;
 	else if calcnumber is 2: [Cock Vore]
-		Linebreak;
+		LineBreak;
 		say "     After hearing your reply, he lets out a chuckle, as one of his hands reaches down for his member, throbbing hard by now, to give it a gentle stroke. It looks like he is really enjoying this. 'Yes...? That is the least you can do, make me enjoy it. Perhaps I might forgive you once you're stuck and held tightly in my balls.'";
 		WaitLineBreak;
 		SGargoyleScene2CV;
 	else if calcnumber is 3: [Anal Vore]
-		Linebreak;
+		LineBreak;
 		say "     Yes, you really have decided to ask him that. His eyes widen, then he lets out a laughter. 'Am I hearing it right? You actually [italic type]want[roman type] to be shoved up my ass?! What a weird one... But that is fine. If that is how you want to be punished... I hope you have a good time being pulled deep inside me.'";
 		WaitLineBreak;
 		SGargoyleScene2AV;
 	else if calcnumber is 4: [He picks one for the player]
-		Linebreak;
+		LineBreak;
 		say "     With all your might and despair, you beg the gargoyle to have mercy on you, apologizing for disturbing him with your unwanted presence. 'How miserable. You fear the consequences of your actions? You should be ashamed. More the reason for me to punish you. And you know what? You don't get to choose anymore.' With that said, the beast makes a decision for you, one that you are not allowed to regret...";
 		WaitLineBreak;
 		let randomnumber be a random number from 1 to 3;
@@ -358,20 +358,20 @@ to SGargoyleScene3:
 	say "     ([link]Y[as]y[end link]) - Do everything he says.";
 	say "     ([link]N[as]n[end link]) - Try to break free from his hold, if you're strong enough (He might not like that).";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     Trying to remember something that could interest the gargoyle, you go on about one of your really odd stories while exploring the post-apocalyptic world out there. The beast's eyes widen at your tales, amazed with how crazy that last one went for you. 'Oh... How the world has changed... I could not bear standing still exposed to its new ways... It's harder to find food this way, but much safer and peaceful...' he replies, as he contemplates your words. 'That's fair, I guess I can forgive you for intruding, since you have given me something for your freedom.' The gargoyle simply lifts his weight from your body, giving you enough space to crawl away from underneath him.";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Do that and leave.";
 		say "     ([link]N[as]n[end link]) - Point out the raging hard-on between his legs.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     Since you were given permission, you say your goodbyes to the gargoyle, who ignores your presence from that point on. Well, this didn't go too poorly, but you suppose there should be some other way of earning his trust...";
 		else:
-			Linebreak;
+			LineBreak;
 			say "     But before you do that, you must talk about that enormous boner the gargoyle got from pinning you down and having his body grinding against yours for this long. He takes note of your observation with all the naturality. 'I get like that from rubbing against something soft. It feels good, and you're soft, like most fleshy creatures.' To think of what he can do with that, provided that a creature is small enough, you can guess why this is so normal for him. Either way, the beast doesn't do much else other than repositioning himself back on his pedestal. You suppose there could be a tiny chance that he would like you to make a move, but there is no way of telling how he would react to being disturbed again, since he has already fallen dormant.";
 			say "     Now, all you have left is the option to leave, with the chapel's entrance now open, once more. Well, this didn't go too poorly, but you suppose there should be some other way of earning his trust...";
 	else: [Runs a strength check. If successful, player earns his respect. If not, he punishes the player badly.]
-		Linebreak;
+		LineBreak;
 		say "     Within a brink of determination, you have decided that you won't have any more of this. The gargoyle cannot simply pin you down every time he pleases, and you are about to teach him his place. Except... he is quite the heavy beast, and his crushing weight remains solidly above you.";
 		WaitLineBreak;
 		let bonus be (strength of player);
@@ -584,12 +584,12 @@ to say KrumirrTalkLeave:
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     Confirming your intention, you direct the request to Krumirr. 'You wish to go, already? That's fine, you know where to find me, I hope.' he says, before falling into his slumber once more, opening the door to allow you to walk away. With that done, you simply move outside into a foggy area, the chapel eventually fading away from behind you.";
 		say "     Once the fog lifts, you find yourself in the Grey Abbey Library.";
 		move player to Grey Abbey Library;
 	else:
-		Linebreak;
+		LineBreak;
 		say "     You dismiss that thought, for now.";
 	wait for any key;
 
@@ -690,22 +690,22 @@ to say KrumirrShroom:
 		else:
 			say "Invalid choice. Type [link]1[end link] to choose mouth, [link]2[end link] to choose cock, [link]3[end link] to choose ass or [link]4[end link] to show your best dramatic skills while letting him know that he can be the one doing the choosing.";
 	if calcnumber is 1: [Oral Vore]
-		Linebreak;
+		LineBreak;
 		say "     After hearing your reply, he proceeds to give you a really long and hard lick through your entire body, leaving you coated in his saliva. 'Mmm... Is that it? Well, then...' his grip around you tightens as he gives you a scary look. 'Into my belly, you go.'";
 		WaitLineBreak;
 		SGargoyleScene2OV;
 	else if calcnumber is 2: [Cock Vore]
-		Linebreak;
+		LineBreak;
 		say "     After hearing your reply, he lets out a chuckle, as one of his hands reaches down for his member, throbbing hard by now, to give it a gentle stroke. It looks like he is really enjoying this. 'Yes...? That is the least you can do, make me enjoy it. Perhaps I might forgive you once you're stuck and held tightly in my balls.'";
 		WaitLineBreak;
 		SGargoyleScene2CV;
 	else if calcnumber is 3: [Anal Vore]
-		Linebreak;
+		LineBreak;
 		say "     Once you let him know that you want to go in his ass, his cheeks blush (yes, apparently they can do that), then he lets out an exaggerated laughter. 'Am I hearing it right? You actually [italic type]want[roman type] to be shoved up my ass?! What a weird one... But that is fine. If that is how you want to be punished... I hope you have a good time being pulled deep inside me...' he says, but then whispering '... Damn, I wouldn't think I enjoyed that one [italic type]that[roman type] much...";
 		WaitLineBreak;
 		SGargoyleScene2AV;
 	else if calcnumber is 4: [He picks one for the player]
-		Linebreak;
+		LineBreak;
 		say "     With all your might and fake despair, you beg the gargoyle to have mercy on you, apologizing for disturbing him with your unwanted presence, and shouting out loud something about oh how terrible it would be if he decided your fate. He can't help but let out a chuckle, almost breaking character. 'Hah! How miserable. You fear the consequences of your actions?! You should be ashamed. More the reason for me to punish you. And you know what? You don't get to choose anymore.' With that said, the beast makes a decision for you.";
 		WaitLineBreak;
 		let randomnumber be a random number from 1 to 3;

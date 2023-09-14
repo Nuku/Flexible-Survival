@@ -923,7 +923,7 @@ to say ResolveEvent Beach Party:
 		else:
 			say ". You manage to keep your mind together enough to leave the dolphin girls and with their large dolphin toy to continue their partying. As you walk back along the beach, you can hear a few cries of disappointment, but the giggling and playing starts up again moments afterwards. You're quite sure they won't pursue you, but you decide to head back and wait for them to finish their beach party before passing this way again.";
 			now Resolution of Beach Party is 2; [Lost to Bottlenose Toys]
-	else if fightoutcome is 30: [fled]	
+	else if fightoutcome is 30: [fled]
 		say "     You manage to make a break for it, running away from the waterfront. You can hear a few cries of disappointment, but the giggling and playing starts up moments afterwards. You're sure they won't pursue you, but you decide to head back and wait for them to finish their beach party before passing this way again.";
 		now Resolution of Beach Party is 3; [Ran from Bottlenose Toys]
 

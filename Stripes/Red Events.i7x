@@ -49,7 +49,7 @@ to say ResolveEvent Fetish Store:
 	else if Resolution of Fetish Store is 1: [found it before, didn't go in]
 		say "     While wandering the streets of Red Light District, you come across a gloomy alleyway that seems familiar to you. A few moments of closer inspection reminds you of the Fetish Store you found in the past, which you chose to leave behind, hoping to return later. The place looks the same as you first found it, with shattered glass all over the ground, empty shop windows with toppled mannequins, and the still persisting ominous silence. You could now choose to search the store, if consider yourself prepared for the associated risks. Places like this are prone to receive unwanted visitors anytime, especially the rather kinky and horny ones.";
 		say "     [bold type]Are you going to enter and search the place[roman type], this time? You could also come back later, if you choose to leave.[line break]";
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Enter and search.";
 		say "     ([link]N[as]n[end link]) - Leave.";
 		if Player consents:
@@ -69,23 +69,23 @@ to say ResolveEvent Fetish Store:
 		FetishStoreExploration4;
 
 to FetishStoreExploration1:
-	Linebreak;
+	LineBreak;
 	say "     Resolving you should at least take a peek inside, you bolster up your will and approach the entrance.";
 	WaitLineBreak;
 	say "     While inspecting the half-broken glass door, you notice that its lock has definitely seen better days, as the door has already been forced open. You cautiously glance around as you step inside, already able to see and smell the debauchery that must have taken place in here, were it not for the sticky puddles and toppled displays scattered all over. You nearly trip over a broken shelf as you arrive, having to raise your legs higher in order to make it through. Stepping on the humid wood, you hear it creaking as your weight is added above the collapsed shelf.";
 	say "     Having a look around, you notice the surprising amount of space it has inside. Clearly this must have been a very sought after shop with great amounts of material, from a huge variety of sex toys and fantasy gear, to porn films and magazines. Except that now, it all seems to have been taken, and you now stand in the middle of furniture debris with little to nothing left. Behind a stained counter, where was the cash register, you see a door that probably leads to some kind of storage room. There's a corner ahead with a few boxes, the only area in the room in which the chance to find something isn't completely null.";
 	WaitLineBreak;
 	say "     With slow and steady steps, you carefully move towards the boxes, passing through the toppled furniture. This is not an easy task, as every time your foot meets the ground, it turns out to be slippery. Not falling or tripping over something on the way proves to be a challenge before you finally reach the boxes. Several of them are empty, and those who aren't have little of use. On a closer inspection, you manage to lay your eyes on a riding crop between a box and the wall, hidden from careless view. It seems to be in relatively good condition. [bold type]Do you want to take it with you?[roman type][line break]";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Take the Riding Crop.";
 	say "     ([link]N[as]n[end link]) - Leave it.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     You suppose you could at least take what you could find in the middle of this mess. You push the box out of the way and grab the riding crop, holding it firmly by its handle. Swinging it around a little to test its durability, you observe that it is still usable and serves its function. Satisfied, you place it in your inventory.";
 		ItemGain riding crop by 1;
 		increase score by 5;
 	else:
-		Linebreak;
+		LineBreak;
 		say "     Deciding that you have no use for a riding crop, you just leave it there with the rest of the useless objects.";
 	WaitLineBreak;
 	say "     Having searched the only spots you could, you head back to your initial position through the same path you took before, but this time, something calls your attention. You hear a sound similar to a tin can rolling on the floor coming from afar. The sound prolongs itself for several seconds, allowing you to locate its source. It's coming from further deep inside, most likely the room where the other door leads, which is just behind the cash register counter. ";
@@ -94,26 +94,26 @@ to FetishStoreExploration1:
 
 to FetishStoreExploration2:
 	say "     Are you going to [bold type]risk searching the storage room[roman type] and try your luck, or [bold type]leave the store[roman type] and head back to the streets?[line break]";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Go through the door."; [enter storage room]
 	say "     ([link]N[as]n[end link]) - Leave the store for now.";
 	if Player consents: [storage room]
-		Linebreak;
+		LineBreak;
 		say "     Decided, you walk towards the door, bypassing the counter and carefully stepping through the slippery floor. Cautiously, you slowly push it open, hearing it cranking as you move it further ahead. As you peek inside, you see a stairway heading deeper into what seems to be a pitch black room. You try to walk down through them as silently as possible, so that whovever is here doesn't hear you coming, holding yourself onto the wall by your left. Visibility only returns to you as you approach the end of the stairs, but you can still barely see where you're going, having to rely on your other senses to get a hold of your whereabouts.";
 		say "     As you make it to the end of the stairway, silence is the most proeminent feature. Little light creeps from the small windows at ground level, and the room's musty smell is coupled with an intense odor of sex. It's likely that numerous creatures or people came here to have their way with the toys they found, or have already been searching around. You can barely see or hear anything anymore, only shapes of what seems to be shelves, boxes and immobile human silhouettes, which are probably just lifeless mannequins. At some point, you could have sworn you saw one of them moving, but when you look again, they are as still as they could be.";
 		FetishStoreExploration3;
 	else:
-		Linebreak;
+		LineBreak;
 		say "     Better not take any chances and return only once you're ready if anything unexpected comes by. With your decision made, you carefully make it through the toppled shelves and leave through the shattered glass door, leaving the shadowy alleyway and returning to the main streets of Red Light District, tracing your steps to where you were before.";
 		now Resolution of Fetish Store is 2; [Only searched shopping room of Fetish Store]
 
 to FetishStoreExploration3:
 	say "     The stairway is just behind you. You can still [bold type]leave the store[roman type] and come back later if you wish, or press on and attempt to [bold type]search this dark room[roman type], aware of all the risks that decision poses.";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Search the dark room."; [commit to searching storage room]
 	say "     ([link]N[as]n[end link]) - Turn tail and head back, this might be dangerous."; [leave the store]
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		let randomnumber be a random number from 1 to 3;
 		if randomnumber is:
 			-- 1: [infection]
@@ -279,7 +279,7 @@ to FetishStoreExploration4:
 			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
 		else if demonologist is listed in companionList of Player: [Xaedihr]
-			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to Xaedihr and ask him if he could help you get the mask for you. 'A little needy of strong hands, aren't we? Or perhaps it is lazyness striking you? Could also be just a thought that made you consider other more reliable options...? Nevertheless, such task is simply too easy to achieve with the use of some might and magic.' he replies, with his usual sarcastic tone. He does accept to help you, however, as a purple tendril emerges from the ground, slipping through the narrow passage underneath the fallen shelf and towards the mask. With a finger snap, it quickly retracts with the mask held around its body, handling it to you directly. It is a little... sticky. 'Don't complain. I could have teleported, I could have lifted the shelf... but I didn't feel like sweating. Though there it is, as you requested.' With nothing else to be said, you simply thank him for the favor.";
+			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to Xaedihr and ask him if he could help you get the mask for you. 'A little needy of strong hands, aren't we? Or perhaps it is laziness striking you? Could also be just a thought that made you consider other more reliable options...? Nevertheless, such task is simply too easy to achieve with the use of some might and magic.' he replies, with his usual sarcastic tone. He does accept to help you, however, as a purple tendril emerges from the ground, slipping through the narrow passage underneath the fallen shelf and towards the mask. With a finger snap, it quickly retracts with the mask held around its body, handling it to you directly. It is a little... sticky. 'Don't complain. I could have teleported, I could have lifted the shelf... but I didn't feel like sweating. Though there it is, as you requested.' With nothing else to be said, you simply thank him for the favor.";
 			now Resolution of Fetish Store is 5; [got the mask]
 			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;

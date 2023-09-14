@@ -25,7 +25,7 @@ to say CherryTalkClayton:
 	say "     ([link]Y[as]y[end link]) - Assist Cherry.";
 	say "     ([link]N[as]n[end link]) - Not right now.";
 	if Player consents: [unlocks Clayton]
-		Linebreak;
+		LineBreak;
 		now CherryDoneTalking is true;
 		say "     You let Cherry know that you can very well assist her, since there is enough free time that allows you to do so. She, once more, shows a genuine smile as you declare yourself available and willing to help. 'That's wonderful news! And I must add, he may be someone you would like to get to know, depending on your tastes... But he can also be quite accommodating. Anyway, enough blabbering, I shall head straight to the point.' The pink fox readjusts herself in her couch as she places down the cup of tea she was taking sips from on her lap.";
 		say "     'This friend of mine used to be a wonderful man that I grew quite attached to, a confident of mine, if you'd like to call him that. And, well, he still is a wonderful man, except... He has sustained a quite odd mutation.' Cherry takes a deep breath as she gathers her words. 'You see, he owned a farm, and when this entire mess began, his animals went completely and utterly crazy. Obviously, nobody expects their caring herd to suddenly find them suitable as a love mate and start chasing them around to do the deed, and much less to have been mutated into bipedal creatures with more than enough skill to subdue them, if they so wished. Now, you may wonder... This is quite an anomaly, is it not? Because it is.'";
@@ -56,10 +56,10 @@ to say CherryTalkClayton:
 		say "     ([link]Y[as]y[end link]) - You are confident about your hand skills.";
 		say "     ([link]N[as]n[end link]) - Actually, you tend to be a little clumsy.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You give him a confident nod, aware of your great accomplishments using your hands and fingers. 'We'll see [']bout that if ye don't mind helpin['] me out with some stuff when y'got the time and will. If I've t'be honest, I'm a bit of a walkin['] disaster myself, hav'to watch out so I don't shite over or end up breakin['] delicate stuff. Y'know, size ain't just good things, aye, even though it brings some other perks...!'";
 		else:
-			Linebreak;
+			LineBreak;
 			say "     Well, in fact, you are sometimes a walking disaster, and you have to admit that to the bull. 'Hah! Ye're like me, if I've t'be honest! Hav'to watch myself so I don't knock shite over or end up breakin['] delicate stuff. Y'know, size ain't just good things, aye, even though it brings some other perks...!'";
 		say "     'Anyway, since you two are getting along, I shall be on my way. We've left your supplies atop that table over there, so feel free to make use of them.' Cherry then gently strokes one of Clayton's hands, before patting your shoulder as well, and begins to head towards the door. 'Aw, ye're leavin['] already? Thought we could have a meal together or somethin[']...' the bull stops her, but the pink fox seems adamant on taking her leave. 'Much appreciated, Clayton, and I shall take on that offer some other day, but I thought it'd be better to let you know each other better in a more... private setting,' she replies, chuckling and winking in your direction. 'Enjoy yourselves!'";
 		say "     After the pink fox leaves you alone with the bull, he looks over the box, then back to you. 'Well, then I guess [']tis as good a time as any for introductions, aye? Name's Clayton, used t'be a local farmer before shite hit the fans. If ye're a friend of Cherry's then ye're my friend as well.' He walks up to you and pats your shoulder with a much heavier hand than you could anticipate, then with a gentle squeeze, he pulls away before beckoning you towards the supply box. 'Now, let's see what ol' Cherry brought. She's a really sweet lass for rememberin[']. And y'helped bringin['] this stuff, too?' You nod as he checks the box's contents, and it seems it is mostly food in great condition, most in cans for better preservation, and several bottles of clean water.";
@@ -148,7 +148,7 @@ instead of going north from Clayton's Front Yard:
 	say "     ([link]Y[as]y[end link]) - Walk around (leads to the backyard).";
 	say "     ([link]N[as]n[end link]) - Stay where you are.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     With the way in front of you locked, you decide to do just that and walk around the building, soon finding yourself in the backyard of the house.";
 		move player to Clayton's Backyard Outside;
 	else:

@@ -1355,7 +1355,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 
 This is the Cum Waste rule:
 	if ending "Cum Waste" is triggered:
-		say "     You spend the rest of your days as a mere waste of cum, stuck in a neverending orgasm.";
+		say "     You spend the rest of your days as a mere waste of cum, stuck in a never-ending orgasm.";
 
 
 Section 14 - Slutty Dragoness infections

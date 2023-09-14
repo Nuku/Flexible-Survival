@@ -194,7 +194,7 @@ to say ResolveEvent Prankster's Delight:
 				say "     You hump and pound into this man even harder than the last, your mind lost to the need to breed this eager soldier. It takes even less time for your needs to reach a peak. Your cock throbs and your hips slap into his ass a few more times before slapping and holding against his cheeks, unloading what feels like pints of cum. Once more the seed spills out of the hole and around your cock, making it easier for the body to be ripped away from you and into the wall. Hunching over, you realize how exhausted you are. Turning and glancing at where the other two were, you realize they're all gone now. Not even the weird disembodied limbs remain in your sight. Sliding down the wall you were just fucking the soldier's against, you rest for a few moments. Cries in the distance remind you that you have to keep moving though, drawing you to stand and return to your exploration.";
 				now Resolution of Prankster's Delight is 3; [Player watched and partook]
 			else:
-				Linebreak;
+				LineBreak;
 				say "     You don't think you're quite equipped for this, so you watch as The hand slips back beneath the asphalt, the four men soon getting yanked into the walls and out of sight. 'Oh well,' a voice says from above. You glance up and see nothing, but are all too aware as to who, or what, it probably was. Straightening yourself up and making sure you're safe to move, you turn away from the pinned in alcove. You then head out and resume your exploration.";
 				now Resolution of Prankster's Delight is 4; [Player watched but weren't equipped to partake]
 		else:
@@ -342,7 +342,7 @@ to say ResolveEvent Spartan Usurpation:
 				say "     You back down the alley you came from, sure to be quick and yet quiet. Soon you're back on a street far from those adonises, huffing it along to explore some more.";
 				now resolution of Spartan Usurpation is 1; [Player ran]
 		else if Player is female:
-			Linebreak;
+			LineBreak;
 			say "     It is clear that this group prefers males, and looking the way you do, you would be spotted immediately and not in a very warm welcome manner. Without many options left, you simply retreat.";
 			now resolution of Spartan Usurpation is 1; [Player ran]
 		else:

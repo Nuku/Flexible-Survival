@@ -80,7 +80,7 @@ to say ebgatordesc:
 	say "     Twin pairs of eyes fixated on your [bodytype of Player] form, its drooling maw is agape, revealing its two rows of razor-sharp teeth. Without warning, it charges directly at you!";
 	if impregnatevalid is true:
 		say "     [bold type]...The creature has a slightly awkward gait, as if bloated with something...[roman type][line break]";
-	
+
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Ebonflame Dragator"	"[PrepCombat_Ebonflame Dragator]"

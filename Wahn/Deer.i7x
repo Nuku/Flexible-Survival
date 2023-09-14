@@ -822,7 +822,7 @@ to say sexwithSusan:
 		if (Loyalty of Susan < 3 or Loyalty of Susan is 5):
 			say "     [bold type]You really should talk to [Susan] and clear up what you want to do about Dr. Matt's experiment first. [roman type][line break]";
 		else if Loyalty of Susan is 3:
-			say "     [bold type]Maybe you should wrap up the experiment with Doctor Matt first. It is noticable that he's throwing you glances quite often, and that's a little unnerving. [roman type][line break]";
+			say "     [bold type]Maybe you should wrap up the experiment with Doctor Matt first. It is noticeable that he's throwing you glances quite often, and that's a little unnerving. [roman type][line break]";
 		else if Loyalty of Susan is 4:
 			say "     [Susan] smiles and lightly touches your arm, then nods to the bed. Taking a deep breath, [SubjectPro of Susan] adds, [if Cock Length of Susan < 10]'So. Do you - do we... uhm. Lie down now?' She seems a bit jittery, looking around nervously and even lightly trembling. [else]'So, guess it's time to do it then, hm?' [SubjectProCap of Susan] seems a bit nervous, looking around distractedly. [end if]At the same time though, [SubjectPro of Susan] appears eager to feel that someone doesn't see [ObjectPro of Susan] as some sort of weird creature and still wants to be with [ObjectPro of Susan] intimately.";
 			say "     [bold type]You should tell Doctor Matt that you're ready to start with the experiment now. [roman type][line break]";

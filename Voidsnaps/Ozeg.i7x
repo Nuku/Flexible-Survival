@@ -82,7 +82,7 @@ when play begins:
 	now face entry is "draconic in appearance, with a wide maw, sharp teeth, and glowing red eyes with what appear to be flames shimmering within them";
 	now body entry is "hulking and muscular, though vaguely barrel shaped";
 	now skin entry is "onyx black scales that shimmer iridescently, covering your";
-	now tail entry is "You have a long and thick tapered reptillian tail ending in a point, covered in shimmering onyx scales";
+	now tail entry is "You have a long and thick tapered reptilian tail ending in a point, covered in shimmering onyx scales";
 	now cock entry is "humanoid, but jet black";
 	now face change entry is "it grows wider and longer into a draconic muzzle with razor sharp teeth, glowing eyes and circular nostrils";
 	now body change entry is "your muscles grow thicker and stronger, resulting in a bodybuilder-like body";
@@ -236,6 +236,6 @@ to say OzegOralTonguing:
 	say "     The first touch of that thick tongue sends a shiver down your spine, then makes you gasp as it darts forward, lapping from between your ass cheeks to your wet feminine sex. Ozeg pays special attention to your clit as his jaws lock around your sex, and if you didn't know better, you'd worry about his sharp teeth, but the submission shining in his eyes dispels your worries. Before long, you're humping forward, using his horns for leverage to keep your sex squarely centered on the whirlwind of activity, slobbing your pleasure button. You're unsure how long you endure Ozeg's desperate tonguing, but every second is sweet torture that leaves you wanting more. You're so close to feeding him the sweetness of your orgasm, and you're pushed over the edge when his tongue parts your lips, unfolding and stretching your cunt, then pressing against the top, finding your sweet spot. Focused on this spot, when he hears your resulting moan, the dragon obliterates it with sloppy tonguing, setting you off and curling your toes with the crashing waves of a powerful orgasm.";
 	WaitLineBreak;
 	say "     Even Ozeg's aftercare is perfect. Gentle and soft, his foot-long tongue slowly cleans your sex, punctuated by soft kisses against your twitching entrance. Tirelessly, he extends the warm sensations radiating from your satisfied cunt until your grip loosens, letting him suck in grateful breaths and lick his lips free of your nectar. Leaving Ozeg to relieve himself, you gather your gear, watching him stroke himself on all fours and finger his ass with his spare paw, still licking his lips as though searching for more of your flavor. Honestly, being called 'master' may not be terrible if you can ride that thick tongue whenever you like.";
-	NPCSexAfterMath Player receives "OralPussy" from Ozeg;
+	NPCSexAftermath Player receives "OralPussy" from Ozeg;
 
 Ozeg ends here.

@@ -32,7 +32,7 @@ to say ResolveEvent Orcs And Ogres Junkyard Skirmish:
 	WaitLineBreak;
 	say "     'We're gonna kick your asses if we have to, scum! Those people are ours! This is our territory! You're not welcome here!' says the upset ogre, to what the orc replies 'Says who? We got here first, and it's finders keepers! Now stop talking and let's solve this the good, definitive way.' You can see that the orcs seem more powerful than the ogres, but given the number of ogres in here, you could say that it would be a close match, if they were to fight. Perhaps your intervention could influence the outcome, if you had a way to sabotage one of the groups.";
 	say "     You could [bold type]flank the orcs to aid the ogres[roman type], or, instead, [bold type]flank the ogres to help the orcs[roman type]. It is a simple choice with simple outcomes, if you do not end up getting beaten up by a bunch of them. Otherwise, you could [bold type]just let them fight[roman type] and see who comes out on top. Alternatively, if this does not interest you, you could simply leave.";
-	Linebreak;
+	LineBreak;
 	say "     [link](1)[as]1[end link] - Help the ogres.";
 	say "     [link](2)[as]2[end link] - Side with the orcs.";
 	say "     [link](3)[as]3[end link] - Just stay and watch.";
@@ -46,7 +46,7 @@ to say ResolveEvent Orcs And Ogres Junkyard Skirmish:
 		else:
 			say "Invalid choice. Type [link]1[end link] to aid the ogres, [link]2[end link] to aid the orcs, [link]3[end link] to just watch or [link]4[end link] to leave, instead.";
 	if calcnumber is 1:
-		Linebreak;
+		LineBreak;
 		say "     After giving it some thought, you have decided to assist the ogres, with your own reasons to do so. Now, if you do not want to make things worse for them, you will actually have to succeed in taking at least one orc down with you, which will be enough to cause a distraction and disorganize the group... Hopefully. But first, you have to see where the situation goes. It does not take long for it to go sideways. 'The definitive way, you say? Fine. If it's a fight you want, that's what you're getting!' shouts the ogre who, as soon as he finishes saying that, goes for a punch. The two groups begin fighting, ogres and orcs wrestling together and beating the crap out of each other in rage and fury, ones pinning down others while a few punch and kick their ways in. It is all unarmed combat, as far as you can see. Each party is trying to immobilize or incapacitate the other, and until now, things seem pretty balanced. The raw number of ogres is enough to keep up with the higher fighting skills of the orcs, but for how long?";
 		say "     Swiftly, you make haste towards the group of orcs from an angle they cannot see you approach from. Then, it is only a matter to engage one of the orcs and fight the best way you can!";
 		WaitLineBreak;
@@ -102,7 +102,7 @@ to say ResolveEvent Orcs And Ogres Junkyard Skirmish:
 			say "     Regretting your decision, you have managed to escape. However, it seems you have not accomplished anything with this, as the orcs continue to fight the ogres in the same manner as before. Perhaps you should just leave before one of them decides to chase you.";
 			now Resolution of Orcs And Ogres Junkyard Skirmish is 98; [player fled]
 	else if calcnumber is 2:
-		Linebreak;
+		LineBreak;
 		say "     After giving it some thought, you have decided to assist the orcs, with your own reasons to do so. Now, if you do not want to make things worse for them, you will actually have to succeed in taking at least one ogre down with you, which will be enough to cause a distraction and disorganize the group... Hopefully. But first, you have to see where the situation goes. It does not take long for it to go sideways. 'The definitive way, you say? Fine. If it's a fight you want, that's what you're getting!' shouts the ogre who, as soon as he finishes saying that, goes for a punch. The two groups begin fighting, ogres and orcs wrestling together and beating the crap out of each other in rage and fury, ones pinning down others while a few punch and kick their ways in. It is all unarmed combat, as far as you can see. Each party is trying to immobilize or incapacitate the other, and until now, things seem pretty balanced. The raw number of ogres is enough to keep up with the higher fighting skills of the orcs, but for how long?";
 		say "     Swiftly, you make haste towards the group of ogres from an angle they cannot see you approach from. Then, it is only a matter to engage one of the ogres and fight the best way you can!";
 		WaitLineBreak;
@@ -151,7 +151,7 @@ to say ResolveEvent Orcs And Ogres Junkyard Skirmish:
 			say "     Regretting your decision, you have managed to escape. However, it seems you have not accomplished anything with this, as the ogres continue to fight the orcs in the same manner as before. Perhaps you should just leave before one of them decides to chase you.";
 			now Resolution of Orcs And Ogres Junkyard Skirmish is 98; [player fled]
 	else if calcnumber is 3:
-		Linebreak;
+		LineBreak;
 		say "     After giving it some thought, you have decided to only watch and see where this goes. It does not take long to go sideways, either. 'The definitive way, you say? Fine. If it's a fight you want, that's what you're getting!' shouts the ogre who, as soon as he finishes saying that, goes for a punch. The two groups begin fighting, ogres and orcs wrestling together and beating the crap out of each other in rage and fury, ones pinning down others while a few punch and kick their ways in. It is all unarmed combat, as far as you can see. Each party is trying to immobilize or incapacitate the other, and until now, things seem pretty balanced. The raw number of ogres is enough to keep up with the higher fighting skills of the orcs, but for how long?";
 		say "     You see some tactics being applied as the smaller group of orcs begin to shift their focus towards specific targets and going for them in an attempt to reduce the ogres['] numbers. With a bit of effort, they seem to be successful in their task, despite the ogres['] efforts at defending this surprising change of pace. You often see more than one ganging up on a single ogre as the rest form a defensive circle around him, drawing more in while keeping a numerical advantage on each fight. It is curious how they manage to keep this up and, eventually, gain the upper hand on the skirmish, as the ogres['] side begins to weaken. However, you cannot help but notice that the thrill and excitement from the battle must have caused all the green and olive bodies of both orcs and ogres to get sweaty and pumped, and you are able to count some erections here and there.";
 		WaitLineBreak;
@@ -163,7 +163,7 @@ to say ResolveEvent Orcs And Ogres Junkyard Skirmish:
 		say "     The orcs have won, despite being outnumbered. This shows how skilled they actually are in a direct and physical confrontation.";
 		now Resolution of Orcs And Ogres Junkyard Skirmish is 50; [player watched]
 	else if calcnumber is 4:
-		Linebreak;
+		LineBreak;
 		say "     This does not really interest you. It is just a group of orcs and ogres arguing with each other, probably ending up in a fight afterwards, and something that is likely to keep happening every other day. You have more important things to do than standing here or meddling with their affairs, so you proceed to remove yourself from the area and leave this situation behind.";
 		now Resolution of Orcs And Ogres Junkyard Skirmish is 99; [player left]
 	now Orcs And Ogres Junkyard Skirmish is resolved;

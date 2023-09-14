@@ -225,7 +225,7 @@ to SFquestion1:
 				say "     Shaking your head, you tell her that it would be going too far. Infections like hers must be restrained, not spread around like she suggested, as fun as it may be to become a hybrid plant creature. 'Ow... You really think so? Not even mine?' Instantly, you stop her. You don't want her to think you dislike her own features, but you do make a thorough explanation about it not being for everyone. 'Oh, I guess that makes some sense... It's just that you said they were beautiful and I thought... Well, nevermind, you're probably right. Thank you for your honesty, sweetie...' she says, with a clear disappointed expression in her face. While she no longer talks about it, she's happy to interact with you like before. Looks like this subject has been resolved, in one way or another.";
 				now resolution of Spreading Flowers is 99; [ended the quest here]
 		else:
-			Linebreak;
+			LineBreak;
 			say "     Without getting into any significant details, you tell her while it's nice to have fun with her unique features, they do seem quite restrictive regarding the 'host' - pointing out her rooted feet, for example - and that she'd probably be faring better without them, though not without saying that you like her either way. Joanna listens to you, and gives you a contemplative look. 'You do have a point... Honestly I think this is fun, and I'm used to being a plant, it's quite fun...! But... maybe it's not for everyone, right? Well, nevermind, then. Thank you for your honesty.' she says, with a somewhat disappointed expression. Was it that she had something in her mind regarding her plant features? Regardless, you'll never know, now... Though she is happy to talk and interact with you the same way as before.";
 			now resolution of Spreading Flowers is 99; [ended the quest here]
 	else:
@@ -270,7 +270,7 @@ to HEquestion1:
 			say "     Knowing what awaits you in the other side of the room, you bolster up some courage before pushing the door open. The room looks the same, a dimming light barely illuminating its contents, though your time of being able to look at it is limited, as your well known foe is awaiting you, tentacles stretching towards you hungrier than ever. You'll have to defeat it if you want access to anything in here.";
 			HEtentaclehorrorfight;
 	else:
-		Linebreak;
+		LineBreak;
 		say "     Thinking twice, you're not ready yet for this kind of adventure. There's too much unknown danger for you to face with so little preparation, and you can always return here. Nobody comes down here, anyway, and Joanna is happy to wait what time is necessary as long as you manage to get back safely.";
 		if resolution of Hybrid Experimentations < 2:
 			now resolution of Hybrid Experimentations is 1;

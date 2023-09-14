@@ -287,7 +287,7 @@ to say SitatungaBuckLoss:
 	say "     As you deal the final blow, the sitatunga buck falls to his knees in the mud, holding himself up with his hands and barely stopping a freefall into the muck below. He pants and looks up at you with defiance in his grey eyes, and you get the idea that he'd gore you if he weren't so exhausted.The idea of a slim swamp antelope like him defeating you in the first place is laughable! You look over that swimmer's body, clicking your tongue idly as you avoid the reach of his horns, then grip one, yanking his head upward and drawing a wince from the defiant man. He's not so tough now. Idly, you wonder if you should take him down even further. After all, he attacked you! He should pay for that.";
 	say "     [bold type]How should you put the pesky antelope-man in his place?[roman type][line break]";
 	let Sitatunga_Buck_Fuck_Choices be a list of text;
-	if Player is male: 
+	if Player is male:
 		add "Make him suck your cock." to Sitatunga_Buck_Fuck_Choices;
 		add "Show him who's boss! Fuck his ass!" to Sitatunga_Buck_Fuck_Choices;
 	if Player is female:
@@ -339,7 +339,7 @@ to say SitatungaDoeLoss:
 	say "     Falling to her knees, breasts heaving as she pants with exertion, the sitatunga doe looks up at you, pleading with her eyes. 'Please don't hurt me!' she wails, tears gathering at the edges of her vision. You can't help but feel bad for her. Did she even want to attack you? Come to think of it- she looked like she wanted to run away while you tussled. Still, perhaps there's a way for you to settle things without hurting the poor creature. She's pretty enough, with perky tits topped with ebony nipples and framed by white markings, and those soft grey eyes staring up at you add to her allure, swimming with tears as they are.";
 	say "     [bold type]What do you want to do with her?[roman type][line break]";
 	let Sitatunga_Doe_Fuck_Choices be a list of text;
-	if Player is male: 
+	if Player is male:
 		add "Fuck her pussy." to Sitatunga_Doe_Fuck_Choices;
 	if Player is female:
 		add "Make her eat you out." to Sitatunga_Doe_Fuck_Choices;

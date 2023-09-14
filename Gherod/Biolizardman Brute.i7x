@@ -139,7 +139,7 @@ to say TravelToCampOfTheSnakeEvent:
 	WaitLineBreak;
 	say "     Though, right before you move away definitely, the lizardman ask you to stop. 'Wait! There is something I forgot to ask...' He then runs tries to catch up to you, and seeing him rushing prompts you to stop in place and turn towards him. 'Thank you, my apologies for keeping you. I merely wished to ask... Would you like to come with me and meet our tribe?' The sudden request makes you question its purpose, to which the bioluminescent scaled man replies, 'You are no ordinary traveler. You have great strength... And I think you would make a good ally of my people. This, I won't impose on you, though I would humbly request a bit of your time to at least meet our god, Uzial.' He bows when he says his name.";
 	say "     Hearing this, you can only ask if you heard that right, as you were under the impression he called him a god. 'Yes, God Uzial. He is our leader and our protector. If you get in His good graces, you will have protection in our swamps. And if you find Him deserving of your worship, I'm sure He would grant you many boons.' You are not so sure about this god he talks about, but at least you could accept following him into his tribe. There are no signs of this being a trap, at least, so you are pretty confident you will be fine. Or, you can simply tell him this does not interest you and proceed to walk away. You do not think he will insist if you express your will to leave.";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Accept to go with him and meet his tribe.";
 	say "     ([link]N[as]n[end link]) - Tell him you have no interest in such a thing.";
 	if Player consents:
@@ -154,7 +154,7 @@ to say TravelToCampOfTheSnakeEvent:
 		say "     'Here we bathe and take care of ourselves, which God Uziel seems to really appreciate. He even likes to watch... But who wouldn't. We are beautiful creatures, after all... Therefore, I recommend you to do the same.' He then extends his hand towards you gently. 'Come now, to my tent. We can be in relative privacy there, as I sympathize that bathing in public might come as a shock for beginners.' This stranger lizardman is asking you to bathe in his tent, and while that would not be necessarily unpleasant, it is a sensible request. These people have costumes and habits that you would have to adapt to, as you are expected to, and you believe it is going to be hard to avoid potentially embarrassing situations. Or, perhaps you will get along with their ways of living and there is a chance you could enjoy yourself quite a lot.";
 		WaitLineBreak;
 		say "     Still, you have now the opportunity to back down. If you choose to do so, you doubt you can ever return, as this would be taken as disrespectful, but it is a choice you can make. Alternatively, you can follow through with whatever is happening with an open mind. Note to yourself that these lizardmen seem to be quite of the exhibitionist types, and you do not know yet what this so called god could be.";
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Continue through this.";
 		say "     ([link]N[as]n[end link]) - Wait until he turns around and leave, never to return.";
 		if Player consents:

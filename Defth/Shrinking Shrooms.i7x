@@ -681,10 +681,10 @@ to say ResolveEvent Ballsy Hung Horseman:
 			say "     ([link]Y[as]y[end link]) - Return later, perhaps with these glowing mushrooms.";
 			say "     ([link]N[as]n[end link]) - Avoid him forever.";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				say "     He mentioned they could be find in a certain [bold type]mushroom cave[roman type]... Where could you find such a place? Perhaps some place [bold type]outside[roman type], who knows? Whatever you decide, you can always look for this [bold type]Ballsy Hung Horseman[roman type] again once you've got what he wants and discover what is so special about him...";
 			else:
-				Linebreak;
+				LineBreak;
 				say "     Perhaps avoiding him would be the best move, you think. From now on, even if you see this horseman, you shall ignore him with the best of your abilities. If you can avoid this area in general, even better! You definitely will not see him again.";
 				now Ballsy Hung Horseman is resolved; [resolves the event, to never appear again]
 		else if carried of glowing mushroom > 0: [carrying shrooms]
@@ -705,10 +705,10 @@ to say ResolveEvent Ballsy Hung Horseman:
 			say "     ([link]Y[as]y[end link]) - Return later, perhaps with these glowing mushrooms.";
 			say "     ([link]N[as]n[end link]) - Avoid him forever.";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				say "     He mentioned they could be find in a certain [bold type]mushroom cave[roman type]... Where could you find such a place? Perhaps some place [bold type]outside[roman type], who knows? Whatever you decide, you can always look for this [bold type]Ballsy Hung Horseman[roman type] again once you've got what he wants and prepare for a journey down his massive cock and balls, once more...";
 			else:
-				Linebreak;
+				LineBreak;
 				say "     Perhaps avoiding him would be the best move, you think. From now on, even if you see this horseman, you shall ignore him with the best of your abilities. If you can avoid this area in general, even better! You definitely will not see him again.";
 				now Ballsy Hung Horseman is resolved; [resolves the event, to never appear again]
 		else if carried of glowing mushroom > 0: [carrying shrooms]
@@ -729,26 +729,26 @@ to BHHShrinkingShroom:
 		else:
 			say "Invalid choice. Type [link]1[end link] to present the mushroom to him, [link]2[end link] to lie and make your leave or [link]3[end link] to simply go away and ignore him forever, for the future.";
 	if calcnumber is 1:
-		Linebreak;
+		LineBreak;
 		say "     You nod, informing him that you, indeed, have glowing mushrooms with you. He then asks you to follow him into a more [']private['] spot...";
 		say "[BHHScene1]";
 	else if calcnumber is 2:
-		Linebreak;
+		LineBreak;
 		say "     You put up your saddest expression and inform him that, sadly, you have none of those special mushrooms with you. 'I see. What a pity... I'll have to look for someone else.' he replies, as you continue on your way, not minding the hung horseman for some time.";
 	else if calcnumber is 3:
-		Linebreak;
+		LineBreak;
 		say "     You put up your saddest expression and inform him that, sadly, you have none of those special mushrooms with you. 'I see. What a pity... I'll have to look for someone else.' he replies, and perhaps, avoiding him would be the best move, you think. From now on, even if you see this horseman, you shall ignore him with the best of your abilities. If you can avoid this area in general, even better! You definitely will not see him again.";
 		now Ballsy Hung Horseman is resolved; [resolves the event, to never appear again]
 
 to say BHHScene1:
 	if Resolution of Ballsy Hung Horseman is 0: [first time]
 		say "     Pulling them out of your inventory, you show one of the strange glowing mushrooms to the horseman, and he smiles. 'That's it! Those are the ones!' You extend your hand in a gesture of offer, to let him take it off your possession, but he does not do so. 'Oh, I don't want it for myself, no. In fact, I must ask you to ingest it.' he says, very assertively. It seems like the horseman actually wanted you to [bold type]eat the mushrooms[roman type]! 'They have shrinking properties, which is what I require in order to interact with my... potential partners. Don't worry, I'll make sure you feel [italic type]very[roman type] good after your eat one.' The horseman scratches his balls through the tight leather bulging obscenely in his crotch as he explains this to you.";
-		Linebreak;
+		LineBreak;
 		say "     With this information now in mind, do you still wish to proceed? You would have to eat the mushroom, causing you to shrink to a very small size for an indefinite period of time. If you decide this, know that you [bold type]will be setting yourself at the hung horseman's mercy[roman type]! Who know what he might do to you...";
 		say "     ([link]Y[as]y[end link]) - Ingest a shrinking mushroom.";
 		say "     ([link]N[as]n[end link]) - No. Never. Leave immediately and never return.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			ItemLoss glowing mushroom by 1;
 			say "     Deciding to trust the equine guy, you let him know that you shall do as he requests, and ingest the glowing mushroom in front of him. 'Oh, good. Its effects should kick in soon.' The mischievous grin in the horseman's face are enough to unsettle you, but he never lied to you. Upon consuming the shroom, you see yourself shrinking before him, [if Player is not naked]slipping through your own clothes and gear, [end if]and as your size continues to decrease, his, in your perspective, just keeps on looking bigger. It does not cease until you are small as a mouse, standing as stall as his ankles, just above his hooves. Now, the horseman is looking over at you, unbuttoning his pants and freeing his massive endowment that comes swinging forward, growing rapidly to a full erection.";
 			say "     This is not a hung horseman. This is the [italic type]hungest[roman type] horseman you have ever seen, a dick so big that you have no idea how it could fit in those pants, and the more you think about it, the less sense it makes. And it is not just his member, he also has a very, [italic type]very[roman type] respectable pair of nuts hanging underneath, each testicle being almost the size of your current height! 'I like this area... Because nobody usually comes by to bother us. So I can show you my meat and balls and do whatever I want with you without anyone telling me to stop.' he says, giving his generous manhood and large testes some good rubs and strokes as he stands gigantic above you.";
@@ -758,7 +758,7 @@ to say BHHScene1:
 			WaitLineBreak;
 			say "     He then makes you look at him in the eyes as he is holding you above his equine shaft, and you can definitely see his expression of pure lust as he keeps you just above the tip of his cock, making you feet touch the slit... And something odd takes place as you feel them warming up all of the sudden, as if something slick, pulsing and wet is wrapping itself around them, almost pulling you down...! With the grin on the horseman's face, it becomes evident that he had very clear plans for you. When you manage to glance below you, you realize that this hung equine man is feeding you to his hungry meatlog, slowly slurping your body deeper inside feet-first, and within the blink of an eye, your calves begin to disappear into the gaping leaking cumslit.";
 			say "     'Mmmh... you're gonna feel great deep in my balls, little [guygal]... Hope you enjoy your trip down there.' he says, tightening his grip around you to make sure you have no way of escaping... And you really do not. You are utterly trapped in his hand, and being slowly consumed by the giant throbbing penis he has, eating you up like a hungry snake, pulling you in deeper with each passing second. You are sinking down to your knees into the pulsing flesh tube, and things are only going to get stickier...!";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Embrace the situation.";
 			say "     ([link]N[as]n[end link]) - Throw an useless struggle.";
 			if Player consents:
@@ -777,7 +777,7 @@ to say BHHScene1:
 			SanLoss 20;
 			CreatureSexAftermath "Player" receives "Other" from "Horseman";
 		else:
-			Linebreak;
+			LineBreak;
 			say "     You do not think this is a smart thing to do, and prefer to never see this horseman again. Time to give him an excuse and leave as fast as possible, with the mushrooms still on you, not [italic type]in[roman type] you. He does not stop you, as you simply turn tail and walk the other way.";
 			now Ballsy Hung Horseman is resolved; [resolves the event, to never appear again]
 	else if Resolution of Ballsy Hung Horseman is 1: [not the first time]
@@ -794,7 +794,7 @@ to say BHHScene1:
 		say "     There is not enough space to move, even. You are utterly trapped in his ballsack, unable to fight back nor squeeze yourself out, stuck and at the horseman's mercy. The testicle you are in continues to fill, that creamy and almost scorching hot cum beginning to make you feel... joyful, a bliss you cannot explain as your entire body reacts with sparks of pure pleasure. This strange stimulation, which feels so overwhelmingly good at first, starts making your body feel numb, but you keep diving into that warm and welcoming pool of thick jizz that yearns you to lose yourself in it... You feel your entire surroundings move around lullingly, which seems to be the horseman cupping and caressing his balls, feeling you inside him as he strokes his huge equine dong...";
 		WaitLineBreak;
 		say "     This feels so good to you, in a very addictive way. You start feeling like you belong here, after all. Maybe you just want to forget about the whole world out there and let this horseman take your whole body...";
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let him churn you.";
 		say "     ([link]N[as]n[end link]) - Try to keep awake.";
 		if Player consents:
@@ -905,7 +905,7 @@ to say BHHFistCock:
 		say "     As things are right now, you are utterly trapped in his ballsack, unable to fight back nor squeeze yourself out, stuck and at the horseman's mercy, and things begin to take a turn. The testicle you are in continues to fill, that creamy and almost scorching hot cum beginning to make you feel... joyful, a bliss you cannot explain as your entire body reacts with sparks of pure pleasure. This strange stimulation, which feels so overwhelmingly good at first, is now making your body feel numb, but you keep diving into that warm and welcoming pool of thick jizz that yearns you to lose yourself in it... You feel your entire surroundings move around lullingly, which seems to be due to the horseman caressing his giant balls, feeling you inside him as he gives his gigantic equine dong some, unfortunately for him, limited rubbing...";
 		WaitLineBreak;
 		say "     This feels so good to you, in a very addictive way. You start feeling like you belong here, after all. Maybe you just want to forget about the whole world out there and let this horseman take your whole body... You probably got yourself into this on purpose, anyway.";
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let him churn you.";
 		say "     ([link]N[as]n[end link]) - Try to keep awake.";
 		if Player consents:
@@ -963,7 +963,7 @@ to say BHHFuckCock:
 		WaitLineBreak;
 		say "     'That was really hot,' says the horseman with a huge grin. 'Yeah, I was thinking of growing it big enough to suck you in, but then realized that doing it with your dick as a starting point wouldn't be too effective. So... Hope you liked the cum bath, instead. Heheh...' He then only laughs, making fun of you for falling into a little prank of his, but you cannot deny that it actually felt really good. Though, he does not even help you get up, instead laughing every time to try and fail. 'Take too long and I'll get hard again! Then, I might just let my cock swallow you up for good, since you're so slippery. Bet it would be fucking easy.' You bolster all your focus and, finally, manage to crawl out of the puddle and into more dry ground. This allows you to get up without any additional trouble. 'Ah, so you managed. Well... that's fine. There's your stuff, clean yourself up and go. Still gotta find myself a cockmeal, now that you emptied my balls. Heh, unless... You still wanna offer yourself to me.'";
 		say "     His cock is still huge enough for you to fit in, if you ever wanted to, and you can swear you see it throb as the horseman sees you merely looking at it. 'Oh, are you having thoughts about it now? I mean... I wouldn't stop you...' he says, the giant equine dong starting to give signs that it will harden, once more.";
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Offer yourself to the horseman's cock.";
 		say "     ([link]N[as]n[end link]) - Just leave.";
 		if Player consents:
@@ -971,7 +971,7 @@ to say BHHFuckCock:
 			BBHFuckCockCV;
 		else:
 			say "     You shake your head and wish him good luck in his hunt for a [']cockmeal['], as he said himself. 'Are you sure? It'd feel really good, you know... I'd let you nap in my balls and you wouldn't have to just melt in there, you know...? I could get you out anytime! You could just say the word and I'd shoot you back out! But, in the meantime, you get to enjoy the comfort of my warm nuts... thick and tasty cum all over you... And making me feel so... so... good...' His cock throbs and thickens as he speaks, a small drop of precum oozing from its flat head as it seems almost resolute to reawaken.";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Change your mind and offer yourself to the horseman's cock.";
 			say "     ([link]N[as]n[end link]) - Reaffirm your decision and proceed to walk away.";
 			if Player consents:
@@ -992,7 +992,7 @@ to BBHFuckCockCV:
 	say "     As things are right now, you are utterly trapped in his ballsack, unable to fight back nor squeeze yourself out, stuck and at the horseman's mercy, and things begin to take a turn. The testicle you are in continues to fill, that creamy and almost scorching hot cum beginning to make you feel... joyful, a bliss you cannot explain as your entire body reacts with sparks of pure pleasure. This strange stimulation, which feels so overwhelmingly good at first, is now making your body feel even more numb, but you keep diving into that warm and welcoming pool of thick jizz that yearns you to lose yourself in it... You feel your entire surroundings move around lullingly, which seems to be due to the horseman caressing his giant balls, feeling you inside him as he gives his gigantic equine dong some, unfortunately for him, limited rubbing...";
 	WaitLineBreak;
 	say "     This feels so good to you, in a very addictive way. You start feeling like you belong here, after all. Maybe you just want to forget about the whole world out there and let this horseman take your whole body... It is not like you came here involuntarily, either way.";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Let him churn you.";
 	say "     ([link]N[as]n[end link]) - Try to keep awake.";
 	if Player consents:
