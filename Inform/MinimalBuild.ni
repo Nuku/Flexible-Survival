@@ -496,7 +496,7 @@ When play begins (this is the graphics window construction rule):
 		follow the ngraphics_blank rule;
 		follow the current graphics drawing rule;
 		now NewGraphicsOpened is true;
-		
+
 
 Table of Game Objects (continued)
 name	desc	weight	object

@@ -28,10 +28,10 @@ to say Sharkman Brute Wins:
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "[SharkmanBruteSexMenu]";
 	else:
-		Linebreak;
+		LineBreak;
 		say "     Maybe you are fine with just walking away without engaging into anything sexual. The sharkman does not force you to stay and, in fact, lets you go without much insisting. 'Aw... Alright... Well, see you next time then!'";
 		now infectbypass is true;
 
@@ -45,10 +45,10 @@ to say Sharkman Brute Loses:
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "[SharkmanBruteSexMenu]";
 	else:
-		Linebreak;
+		LineBreak;
 		say "     Maybe you are fine with just walking away without engaging into anything sexual. The sharkman does not force you to stay and, in fact, lets you go without much insisting. 'Aw... Alright... Well, see you next time then!'";
 		now infectbypass is true;
 
@@ -121,7 +121,7 @@ to say SharkmanBruteSBCEvent:
 	say "     ([link]Y[as]y[end link]) - Go with him.";
 	say "     ([link]N[as]n[end link]) - No, that is enough. You shall part ways.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     It does seem this sharkman genuinely appreciates your company and looks forward to build a friendship with you, so you see no reason to refuse his offer. Nodding along, you let him know that you shall come with him, but you do have questions regarding this underwater passage, as you cannot really breathe under these conditions... Or as far as you know. 'Oh, right! I think I can fix that. I did tell you I'm a great swimmer, so I can just hold you and take you there at full speed. Then, if you need air, I can always... give you some.' He scratches the back of his neck with mild embarrassment, and you can only wonder if that means he is suggesting some sort of mouth-to-mouth thing. 'Just in case you need it, of course! I would never take advantage of that situation...'";
 		say "     Well, with the biggest problems taken care of, you tell him to show you the way. 'Oh, sure thing! It's through here, there's a lake nearby just past these woods. I've marked the way with a few scratches on the trunks! Or more like chomps... I used my teeth.' This cunning decision might have saved you a lot of time as these woods can be quite confusing, but the sharkman finds his way pretty easily. This lake he mentioned is actually in the middle of the swamp area, where it is humid and dark. Nobody would think this could lead to a beach, so you find it important to ask him if he is sure this is the right way. 'Trust me, it is! I know what it looks like, believe me when I say I also thought it was weird as fuck!'";
 		WaitLineBreak;
@@ -142,7 +142,7 @@ to say SharkmanBruteSBCEvent:
 		now PlayerMet of Skyler is true;
 		say "     << Author's Note: This area, including Skyler himself and the Sharkmen Brute tribe, are all still under early development. More content on them will be added in the future! >>";
 	else:
-		Linebreak;
+		LineBreak;
 		say "     You end up telling the sharkman that you would prefer if you parted ways. He had a cheerful expression once, but upon hearing that, he lowers his head in sadness. 'Oh... Was it something I said? No? Okay, yeah, I... I understand. I'm just a stranger shark dude, after all... Oh well. I hope you'll be fine, at least. If we don't ever meet again, it's been nice anyway...' Now, you obviously made him sad, but he is already walking away, dragging his shark tail through the ground in such a defeated marching...";
 		say "     It almost looks like you broke his heart! And maybe you did...? But you have made your decision, thus, you shall also get moving.";
 	choose a row with name of "Sharkman Brute" in the Table of Random Critters;

@@ -245,7 +245,7 @@ Instead of conversing the Ranae:
 		project Figure of Ranae_rags_icon;
 	else:
 		project Figure of Ranae_dress_icon;
-	Linebreak;
+	LineBreak;
 	if hunger of Ranae is 9:
 		say "     'What do you want, servant?' Ranae asks haughtily";
 	else:
@@ -638,7 +638,7 @@ This is the Ranae Vore rule:
 
 This is the Ranae's Servant rule:
 	if ending "Ranae's Servant" is triggered:
-		say "     When the military comes, you and Ranae are processed together. Though your subservient attitude to your froggy mistress raises a few eyebrows, the both of you are eventually deemed safe and released back into the outside world. With you in tow, Ranae is quick to make contact with her parents. The reunion is met with all sorts of surprise on the parents' side when they find that not only is their daughter now an anthropomorphic frog, but she has a much more confident and domineering attitude, especially when she introduces you as her servant. Nonetheless, they are more than happy to welcome you and their froggy daughter. With Ranae's parents both being influential business people, the frog gets a managerial position in a small company, with you as her personal assistant. While you tend to your mistress's every need, Ranae finds great success in her new role, thanks to the assertiveness that she gained. With the money Ranae rakes in from her work, you have the opportunity to live close to the lap of luxury, but instead, you find more comfort in the stomach of your mistress whenever she has you fulfil your role as her belly filler.";
+		say "     When the military comes, you and Ranae are processed together. Though your subservient attitude to your froggy mistress raises a few eyebrows, the both of you are eventually deemed safe and released back into the outside world. With you in tow, Ranae is quick to make contact with her parents. The reunion is met with all sorts of surprise on the parents' side when they find that not only is their daughter now an anthropomorphic frog, but she has a much more confident and domineering attitude, especially when she introduces you as her servant. Nonetheless, they are more than happy to welcome you and their froggy daughter. With Ranae's parents both being influential business people, the frog gets a managerial position in a small company, with you as her personal assistant. While you tend to your mistress's every need, Ranae finds great success in her new role, thanks to the assertiveness that she gained. With the money Ranae rakes in from her work, you have the opportunity to live close to the lap of luxury, but instead, you find more comfort in the stomach of your mistress whenever she has you fulfill your role as her belly filler.";
 		the Player is enslaved;
 
 

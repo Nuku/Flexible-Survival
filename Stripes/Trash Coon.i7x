@@ -31,7 +31,7 @@ to say beatthetrashcoon:
 		if Player consents:
 			LineBreak;
 			now notrashcoonsex is 0;
-			say "     Eying the horny coon, you decide to give in to your urges. Tossing aside your gear, you pounce onto her bulky body and kiss her passionately. A little surprised by the kiss after the fight, she wraps her arms around you and welcomes the affection.";
+			say "     Eyeing the horny coon, you decide to give in to your urges. Tossing aside your gear, you pounce onto her bulky body and kiss her passionately. A little surprised by the kiss after the fight, she wraps her arms around you and welcomes the affection.";
 		else:
 			LineBreak;
 			say "     Resisting the urge to roll around in the trash with the lusty raccoon, you turn and head off, leaving her behind.";

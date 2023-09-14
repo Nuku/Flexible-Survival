@@ -410,13 +410,13 @@ to say Diana_TalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Find out how she feels about being a mythical creature";
 	[]
-	if Diana is in Mall Foodcourt and Playerfucked of Diana is false:
+	if Diana is in Mall Foodcourt and PlayerFucked of Diana is false:
 		choose a blank row in table of fucking options;
 		now title entry is "Charm her and stealthily finger Diana's pussy";
 		now sortorder entry is 10;
 		now description entry is "Stimulate the innocent young woman right here, with only the table and planter beside it hiding what's going on";
 	[]
-	if Diana is in Brookstone Books and Playerfucked of Diana is false:
+	if Diana is in Brookstone Books and PlayerFucked of Diana is false:
 		choose a blank row in table of fucking options;
 		now title entry is "Charm her and stealthily finger Diana's pussy";
 		now sortorder entry is 10;

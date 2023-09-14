@@ -143,7 +143,7 @@ to say sexwithdaisy:
 		say "     It might not be prudent for the Stablemaster to display that they have no genitals at this time.";
 	else if Daisy is in Master's Office:
 		quietrestorenightmareform;
-		say "     Eyeing Daisy, you grow aroused and approach her with lustful intent[if nmformswitch is true]. Your lust for this prize mare awakens your Nightmare form, transforming your body to that of the powerful equine[end if]. Putting your arms around the dappled beauty, you have her strip off her maid outfit so you might take your privilege with her. As the new Stablemaster, your claim on using Daisy is uncontested and she is eager to fulfil your needs";
+		say "     Eyeing Daisy, you grow aroused and approach her with lustful intent[if nmformswitch is true]. Your lust for this prize mare awakens your Nightmare form, transforming your body to that of the powerful equine[end if]. Putting your arms around the dappled beauty, you have her strip off her maid outfit so you might take your privilege with her. As the new Stablemaster, your claim on using Daisy is uncontested and she is eager to fulfill your needs";
 		if Player is male:
 			if HP of Daisy >= 5 and the remainder after dividing HP of Daisy by 3 is 2 and a random chance of 2 in 3 succeeds:
 				say ". To demonstrate this, the pregnant mare drops to her knees and lavishes attention upon your equine manhood. Her tongue licks up and down it, drooling over your virile balls. After the tongue bath, she goes for full immersion, taking it into her long, equine muzzle. The blowjob is very enjoyable, the mare clearly having taken to her training well.";
