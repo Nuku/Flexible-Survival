@@ -52,7 +52,7 @@ MainInfection of Solariel is "".
 Description of Solariel is "[SolarielDesc]".
 Conversation of Solariel is { "Celestial Choir!" }.
 
-the scent of the Solariel is "Solariel smells of some otherworldy perfume, a mix of floral bouquets and warmth, with a slight undertone of fresh sweat."
+the scent of the Solariel is "Solariel smells of some otherworldly perfume, a mix of floral bouquets and warmth, with a slight undertone of fresh sweat."
 
 to say SolarielDesc:
 	say "     Solariel has the bearing of a warrior princess, which isn't too far off the truth. Standing at a little under 8 feet tall, she towers over the majority of city's denizens, an advantage that she makes use of when intimidation can be used instead of violence. Armoured from neck to toe in white armor, though you do not know the material, with silver inlay, she is dressed for combat, though you do wonder why she doesn't have a helmet to match. Her honey-blonde hair reaches to her mid-chest, some manner of magic keeping it floating to the side and out of her soft gray eyes. Her fair skin is marked by several scars, some which look like they would have been from grievous wounds that have since healed to be little more than a ridge. Noticing your attention, she smirks and causes her [']wings['] to flare out of the back of her armor, vast feathery appendages that look to be made of light.";

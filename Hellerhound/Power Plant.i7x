@@ -170,6 +170,9 @@ activating is an action applying to nothing.
 understand "activate control panels" and "activate controls" and "activate panels" and "reactivate controls" and "reactivate panels" and "reactivate control panels" as activating.
 
 carry out activating:
+	if Player is not in Control Room:
+		say "Reactivate what?";
+		stop the action;
 	if findwires is 0:
 		if a random number between one and 20 > Intelligence of Player:
 			say "The lights stay red, even though you are trying hard to understand the buttons.";

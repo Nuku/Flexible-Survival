@@ -43,6 +43,11 @@ Version 2 of Wolfman by Wahn begins here.
 JenniferFirstKidSpecialStat is a text that varies.
 LastJenniferSoda is a number that varies. LastJenniferSoda is usually 2000.
 
+a postimport rule: [bugfix]
+	if HP of Septus is 100:
+		choose row with name of "Football Wolfman" in Table of Random Critters;
+		now area entry is "Campus";
+
 Section 1 - Creature Responses & Infection
 
 to say Septus wins:
@@ -98,12 +103,7 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Football Wolfman:
 	choose row with name of "Football Wolfman" in Table of Random Critters;
 	setmongender 3;
-	if HP of Septus is 99:
-		say "ERROR-FW99: This creature should no longer be randomly encountered.";
-		now area entry is "Nowhere";
-		now fightoutcome is 19;
-		now combat abort is 1;
-	else if HP of Septus >= 7:
+	if HP of Septus >= 7 and HP of Septus < 100:
 		say "ERROR-FW[HP of Septus]: This creature should no longer be randomly encountered.";
 		now area entry is "Nowhere";
 		now fightoutcome is 19;
@@ -1166,6 +1166,8 @@ to say WolfTeamManager:
 		move player to Grey Abbey Library;
 		now Wolfman Lair is unknown;
 		now HP of septus is 99;
+		choose row with name of "Football Wolfman" in Table of Random Critters;
+		now area entry is "Nowhere";
 	else:
 		say "     Turning tail from the pack of football wolfmen, you charge through a gap of the spectators, trying to make your way to the door. The crowd, angry and turning on you like a crowd of rugby hooligans, tackle you to the floor, crushing you under the weight of their numbers. The last of your strength is crushed out of you, leaving you exhausted while the crowd around boos and hisses at your cowardliness.";
 		say "     When the wolves finally climb off of you and Septus pulls you to your feet, you can only groan weakly. 'And here I thought you might turn out to be a star player, but no, you had to be greedy. Mom's told us that a lot of the best guys who sign big contracts just stop trying, dragging the whole team down. To be on this team, you've got to be a team player. This is the end of your career, hot shot.' With a final growl, he tosses you out the door, throwing your gear out after you. As the door is slammed shut, you can hear the start of a team victory orgy. You stagger to your feet and limp back to the library with the knowledge you'll never be welcomed back by the team.";
@@ -1173,6 +1175,8 @@ to say WolfTeamManager:
 		move player to Grey Abbey Library;
 		now Wolfman Lair is unknown;
 		now HP of septus is 99;
+		choose row with name of "Football Wolfman" in Table of Random Critters;
+		now area entry is "Nowhere";
 
 Section 7 - Cheerleading
 

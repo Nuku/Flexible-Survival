@@ -15,7 +15,6 @@ When play begins:
 
 to say ResolveEvent Pack Bang:
 	say "     Going around what appears to be a darker path in the south part of the forest, you find a place that looks abandoned. Leaves crack under your feet, and branches that have overgrown onto the path get in your way. The only sign that something was here is the path in itself that's big enough for walks or bicycles. It looks really peaceful, but the noises in the background means that you are not alone in here. Howls permeate the place, echoing in the dark part where your eyes can't discern, but you know that you are now likely the prey of a pack of wolves.";
-	now inasituation is true;
 	say "     You feel your heart beating faster. Quick, you need to make a choice: Do you run away, or stay and confront your enemies?";
 	say "     ([link]Y[as]y[end link]) - Run away.";
 	say "     ([link]N[as]n[end link]) - Stay and fight.";
@@ -57,7 +56,6 @@ to say ResolveEvent Pack Bang:
 			now Resolution of Pack Bang is 2; [fled]
 		wait for any key;
 	now Pack bang is resolved;
-	now inasituation is false; [re-enables standard scenes]
 
 to say FeralWolfGangBang:
 	now Resolution of Pack Bang is 1; [gangbang]

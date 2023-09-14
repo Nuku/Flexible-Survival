@@ -242,7 +242,7 @@ Sunbathing Goddess	"Sunbathing Goddess"
 Sunbathing Goddess is a situation.
 ResolveFunction of Sunbathing Goddess is "[ResolveEvent Sunbathing Goddess]".
 Prereq1 of Sunbathing Goddess is Birth of a Goddess.
-Prereq1Resolution of Sunbathing Goddess is { 1, 2 }.
+Prereq1Resolution of Birth of a Goddess is { 1, 2 }.
 Sarea of Sunbathing Goddess is "Beach".
 
 to say ResolveEvent Sunbathing Goddess:

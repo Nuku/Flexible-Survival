@@ -373,6 +373,12 @@ This is the player attack rule:
 	let the combat bonus be attack bonus - defense bonus;
 	if Debug is at level 10:
 		say "DEBUG: Combat Bonus (Player) [Combat bonus][line break]";
+	let the seduce bonus be Perception of Player + ( level of Player * 2 ) + plseducebonus - 10;
+	if Debug is at level 10:
+		say "DEBUG: Seduction Bonus (Player) [seduce bonus][line break]";
+	let the seduction defense bonus be ( 20 - (monsterLibido divided by 3) ) + ( lev entry * 2 ) + monmindbonus - 10;
+	if Debug is at level 10:
+		say "DEBUG: Seduction defense bonus (Enemy) [seduction defense bonus][line break]";	
 	if ktcockmatch is true:		[That's what you get for thinking with your crotch.]
 		increase Libido of Player by a random number from 0 to 2;
 	if HardMode is true:
@@ -526,13 +532,10 @@ This is the player attack rule:
 	else:
 		say "You miss!";
 	if Player is not lonely:
-		[if a random chance of petchance in 4000 succeeds and ] [TODO: Rebuild this section]
-		if "Double Team" is listed in feats of Player:[The Horde]
-			LineBreak;
-			say "Your pets, always close by, aid you in attacking the enemy, synchronizing both their attacks against the [EnemyNameOrTitle]!";
-			LineBreak;
-			Repeat with z running through companionList of Player:
-				if z is not NullPet:
+		LineBreak;
+		Repeat with z running through companionList of Player:
+			if z is not NullPet:
+				if "LustAttacks" is not listed in Traits of z: [normal combat]
 					now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
 					let the combat bonus be attack bonus minus defense bonus;
 					if HardMode is true:
@@ -550,45 +553,52 @@ This is the player attack rule:
 						let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
 						say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
 						decrease monsterHP by dam;
+						increase monsterLibidoPenalty by 10;
 					else:
 						say "[z] misses!";
-		else if a random chance of petchance in 1000 succeeds:
-			LineBreak;
-			let z be entry 1 of companionList of Player;
-			if z is not NullPet:
-				now attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
-				let the combat bonus be attack bonus minus defense bonus;
-				if HardMode is true:
-					if the combat bonus > 16:
-						now combat bonus is 16;
-					else if the combat bonus < -25:
-						now combat bonus is -25;
-				else:
-					if the combat bonus > 19:
-						now combat bonus is 19;
-					else if the combat bonus < -22:
-						now combat bonus is -22;
-				now roll is a random number from 1 to 50;
-				if roll plus the combat bonus > 20:
-					let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
-					say "[assault of z][run paragraph on]  [special-style-2][dam][roman type] damage inflicted!";
-					decrease monsterHP by dam;
-				else:
-					say "[z] misses!";
+				else: [lusty combat]
+					now the seduce bonus is Charisma of z + ( level of z * 2 ) + pethitbonus - 10;
+					let the combat bonus be seduce bonus minus seduction defense bonus;
+					if HardMode is true:
+						if the combat bonus > 16:
+							now combat bonus is 16;
+						else if the combat bonus < -25:
+							now combat bonus is -25;
+					else:
+						if the combat bonus > 19:
+							now combat bonus is 19;
+						else if the combat bonus < -22:
+							now combat bonus is -22;
+					now roll is a random number from 1 to 50;
+					if the roll plus the combat bonus > 20 and SeductionImmune entry is false:
+						let LibidoIncrease be ( (Charisma of z divided by three) * ( a random number from 70 to 130 ) ) divided by 100;
+						say "[z]: [assault of z] [special-style-2][dam][roman type] [special-style-2][LibidoIncrease][roman type] libido increase!";
+						increase monsterLibido by LibidoIncrease;
+					else:
+						if SeductionImmune entry is true:
+							say "[z]'s seduction attempt fails! Doesn't look like that'll get anywhere with this tactic.";
+						else:
+							say "[z]'s seduction attempt fails!";
+					say "Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
+					increase HP of Player by 1;
 	LineBreak;
-	if monsterHP is not currentmonHP:
-		follow the monster injury rule;
-		say "[EnemyCapNameOrTitle] is [descr].";
-	if monsterHP > 0:
+	follow the monster injury rule;
+	say "[EnemyCapNameOrTitle] is [descr].";
+	follow the monster libido rule;
+	say "[EnemyCapNameOrTitle] is [descr].";
+	if monsterHP < 1:
+		now fightoutcome is 10;
+		win;
+	else if monsterLibido minus monsterLibidoPenalty > 100:
+		now fightoutcome is 11; [monster submits to player]
+		win;
+	else:
 		if BeforeCombat is 0:
 			choose row monstercom from table of Critter Combat;
 			if Playerpoison > 0, follow the playerpoisoned rule;
 			if there is a continuous in row monstercom of the table of Critter Combat:
 				follow the continuous entry;
 			if combat abort is 0 and skipretaliate is false, follow the combat entry;
-	else:
-		now fightoutcome is 10;
-		win;
 
 to say EnemyNameOrTitle:
 	choose row MonsterID from the Table of Random Critters;
@@ -626,6 +636,12 @@ This is the player seduce rule:
 	let the combat bonus be seduce bonus - seduction defense bonus;
 	if Debug is at level 10:
 		say "DEBUG: Combat Bonus (Player) [Combat bonus][line break]";
+	let the attack bonus be dexterity of Player + ( level of Player * 2 ) + plhitbonus - 10;
+	if Debug is at level 10:
+		say "DEBUG: Attack Bonus (Player) [attack bonus][line break]";
+	let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
+	if Debug is at level 10:
+		say "DEBUG: Defense Bonus (Enemy) [defense bonus][line break]";
 	if HardMode is true:
 		if the combat bonus > 16:
 			now combat bonus is 16;
@@ -657,18 +673,73 @@ This is the player seduce rule:
 		else:
 			say "Your seduction attempt fails!";
 	LineBreak;
+	if Player is not lonely:
+		Repeat with z running through companionList of Player:
+			if z is not NullPet:
+				if "LustAttacks" is not listed in Traits of z: [normal combat]
+					now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
+					let the combat bonus be attack bonus minus defense bonus;
+					if HardMode is true:
+						if the combat bonus > 16:
+							now combat bonus is 16;
+						else if the combat bonus < -25:
+							now combat bonus is -25;
+					else:
+						if the combat bonus > 19:
+							now combat bonus is 19;
+						else if the combat bonus < -22:
+							now combat bonus is -22;
+					now roll is a random number from 1 to 50;
+					if roll plus the combat bonus > 20:
+						let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
+						say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
+						decrease monsterHP by dam;
+						increase monsterLibidoPenalty by 10;
+					else:
+						say "[z] misses!";
+				else: [lusty combat]
+					now the seduce bonus is Charisma of z + ( level of z * 2 ) + pethitbonus - 10;
+					let the combat bonus be seduce bonus minus seduction defense bonus;
+					if HardMode is true:
+						if the combat bonus > 16:
+							now combat bonus is 16;
+						else if the combat bonus < -25:
+							now combat bonus is -25;
+					else:
+						if the combat bonus > 19:
+							now combat bonus is 19;
+						else if the combat bonus < -22:
+							now combat bonus is -22;
+					now roll is a random number from 1 to 50;
+					if the roll plus the combat bonus > 20 and SeductionImmune entry is false:
+						let LibidoIncrease be ( (Charisma of z divided by three) * ( a random number from 70 to 130 ) ) divided by 100;
+						say "[z]: [assault of z] [special-style-2][dam][roman type] [special-style-2][LibidoIncrease][roman type] libido increase!";
+						increase monsterLibido by LibidoIncrease;
+					else:
+						if SeductionImmune entry is true:
+							say "[z]'s seduction attempt fails! Doesn't look like that'll get anywhere with this tactic.";
+						else:
+							say "[z]'s seduction attempt fails!";
+					say "Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
+					increase HP of Player by 1;
+	LineBreak;
+	follow the monster injury rule;
+	say "[EnemyCapNameOrTitle] is [descr].";
 	follow the monster libido rule;
 	say "[EnemyCapNameOrTitle] is [descr].";
-	if monsterLibido minus monsterLibidoPenalty < 100:
+	if monsterHP < 1:
+		now fightoutcome is 10;
+		win;
+	else if monsterLibido minus monsterLibidoPenalty > 100:
+		now fightoutcome is 11; [monster submits to player]
+		win;
+	else:
 		if BeforeCombat is 0:
 			choose row monstercom from table of Critter Combat;
 			if Playerpoison > 0, follow the playerpoisoned rule;
 			if there is a continuous in row monstercom of the table of Critter Combat:
 				follow the continuous entry;
 			if combat abort is 0 and skipretaliate is false, follow the combat entry;
-	else:
-		now fightoutcome is 11; [monster submits to player]
-		win;
 
 Chapter 3 - Item Use
 

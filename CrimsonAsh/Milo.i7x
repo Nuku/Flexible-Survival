@@ -55,7 +55,6 @@ to say ResolveEvent Bobcat Encounter:
 		else if calcnumber is 2:
 			LineBreak;
 			say "     With a manic grin on your face at the opportunity he gave you by coming out of hiding, you leap forward to grab the kitty cat. Sadly, he seems to have been waiting for just that, and before you get anywhere close enough, the lithe anthro slips back into the tree. You reach into the hole close to the ground, crouching as your hand quests around, but all you feel is rough wood. After a short moment, it becomes obvious that you won't be getting him this way, so you pull back and stand up straight again. Or you try at least, as you feel a pair of paws kick you from behind, throwing you off balance and sending you to one knee. Whirling around, you see the bobcat man standing there in some sort of martial arts stance, claws extended and apparently ready to fight! 'You big jerk!' he yells angrily before charging you on all fours!";
-			now inasituation is true;
 			challenge "Bobcat";
 			if fightoutcome < 20: [player won]
 				say "[WonAgainstMilo]";
@@ -63,7 +62,6 @@ to say ResolveEvent Bobcat Encounter:
 				say "[LostAgainstMilo]";
 			else if fightoutcome is 30: [fled]
 				say "[FledFromMilo]";
-			now inasituation is false;
 			now Bobcat Encounter is resolved;
 		else:
 			LineBreak;

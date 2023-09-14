@@ -164,7 +164,7 @@ to say ResolveEvent Wolfrape:
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
-		say "     You charge into the alley, trying to take the large creature by surprise. It growls angrily at being interrupted mid-coitus and pulls painfully out of the wolf-woman. You manage a quick blow to the creature as it kicks its previous prey into the corner to retrieve later. The wolf is stunned for the moment, leaving you to face this monster alone.";	
+		say "     You charge into the alley, trying to take the large creature by surprise. It growls angrily at being interrupted mid-coitus and pulls painfully out of the wolf-woman. You manage a quick blow to the creature as it kicks its previous prey into the corner to retrieve later. The wolf is stunned for the moment, leaving you to face this monster alone.";
 		say "     In the ash-filled haze, the imposing, dragon-humanoid figure glares angrily at you, no doubt smoldering over your surprise attack. Covered in an impenetrably dark shade of purple scales, she's almost naught but a silhouette against the[if daytimer is night] night's[end if] surroundings, save for her fiery eyes and the ample strings of the hermaphrodite's glowing, molten precum oozing from her terrifying, barbed cock. 'You have the gall to try and steal what is already mine? Well then... Perhaps you wish to take her place!' She immediately comes to life, charging at you with a shrill howl, forcing you to ready yourself for combat!";
 		choose row with name of "Ebonflame Drake" from the Table of Random Critters;
 		let temp1 be HP entry / 8;
