@@ -1458,7 +1458,7 @@ Instead of conversing the Blanche:
 
 to say blanche_pups_intro:
 	if HP of Blanche is 7: [Sturm, Bianca, Ernest, and Claude]
-		say "     You are met by a large, intimidating white wolf standing inside the rear foyer to the office building, standing just inside the back door. He stands with his thick arms crossed and gives you a stern glare as he blocks the entrance. Given his similarity to Blanche, you assume that the two must know each other somehow and begin to wonder whether he will let you pass until you watch as his nose twitchs upon inhaling your scent followed by his eyes widening. He hastily steps aside to let you enter, though the look he gives you isn't entirely warm, almost reproachful. Eager to see Blanche again, you rush down the stairs.";
+		say "     You are met by a large, intimidating white wolf standing inside the rear foyer to the office building, standing just inside the back door. He stands with his thick arms crossed and gives you a stern glare as he blocks the entrance. Given his similarity to Blanche, you assume that the two must know each other somehow and begin to wonder whether he will let you pass until you watch as his nose twitches upon inhaling your scent followed by his eyes widening. He hastily steps aside to let you enter, though the look he gives you isn't entirely warm, almost reproachful. Eager to see Blanche again, you rush down the stairs.";
 		say "     You find three more new white wolves in the basement office area, though not as big and burly as the one upstairs in the basement office area. Blanche is there as well and seems safe and sound. If anything, she's happier and more relaxed than ever. She busy directing the other wolves around, getting them to reorganize some of the furniture to make more space, when she notices you. 'My darling. You're back! Come meet my lovely pups. You met Sturm already. He's the one on guard duty. Such a big, brave boy. Mamma's favorite.' Blanche is quite cheerful and introduces the three other pups to you as Bianca, Ernest, and Claude. They nod respectfully to you, but they clearly defer to their mother.";
 		now HP of Blanche is 8;
 	else if HP of Blanche is 10: [Penelope and Wendis]
@@ -2204,7 +2204,7 @@ to say DismissBlanche:
 	move Blanche to Grey Abbey Library;
 	ShowBlancheImage;
 	if Player is not in Grey Abbey Library: [regular dismiss]
-		say "     With a word, you get Blanche's attention and tell her that she should head back to the library for now. The wolfess pouts at you a little, but nods her acceptance nonetheless. 'Be careful, darling. Don't get into too much trouble while I'm not here to protect you,' she teases as she hugs you goodbye before dashing away. You know that she can handle herself, but you still feel guilty for not escorting her home.  ";
+		say "     With a word, you get Blanche's attention and tell her that she should head back to the library for now. The wolfess pouts at you a little, but nods her acceptance nonetheless. 'Be careful, darling. Don't get into too much trouble while I'm not here to protect you,' she teases as she hugs you goodbye before dashing away. You know that she can handle herself, but you still feel guilty for not escorting her home. ";
 		if White Wolf One is listed in companionlist of Player: [Sturm]
 			say "Sturm gives you a disapproving look, but as Blanche doesn't take issue with it, and having learnt to trust his mother to know her limitations, he keeps his mouth shut. ";
 		else:

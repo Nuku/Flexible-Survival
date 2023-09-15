@@ -78,7 +78,7 @@ to say Smilodon Male Wins:
 			if Player is submissive:
 				say ". 'I really should keep you... have you worship me everyday and unload my balls inside you, feeding you lots and lots of this sweet cum down your throat... Bet you'd like that...' he teases you, licking at your neck with more of that dominant affection of his, tempting you to follow through with his words. 'I gotta go now, but make sure you are ready to kneel the next time we meet. Don't fight it... I know you'll want more of this.'";
 			else:
-				say ". 'Didn't that feel good? Just letting yourself go... Worshipping me, you swallowing my load... How long will it take for you to understand you'd be so much happier submitting to me, right away...?' he teases you, licking at your neck with more of that dominant affection of his. 'Next time we meet, just kneel and take my cock. You'll enjoy it way, way more like that, trust me...'";
+				say ". 'Didn't that feel good? Just letting yourself go... Worshiping me, you swallowing my load... How long will it take for you to understand you'd be so much happier submitting to me, right away...?' he teases you, licking at your neck with more of that dominant affection of his. 'Next time we meet, just kneel and take my cock. You'll enjoy it way, way more like that, trust me...'";
 			say "     With those being his last words, he lets go of you, getting up and leaving you kneeling down on the floor. Giving his balls another scratch, he admires the sight of you for some seconds, then turns tail and leaves, walking triumphantly.";
 			WaitLineBreak;
 			say "     It takes you some time to recover from that big cat's facefucking, and once you do, you stand up and manage to grab your things to get ready to leave.";
@@ -213,7 +213,7 @@ Body Definition of Ranfer is 8. [scale of 1-9 for body definition, grouped into 
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Ranfer is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 Mouth Length of Ranfer is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-Mouth Circumference of Ranfer is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Mouth Circumference of Ranfer is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
 Tongue Length of Ranfer is 6. [length in inches]
 Breast Size of Ranfer is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Ranfer is 2. [count of nipples]
@@ -387,7 +387,7 @@ to say RanferTalkInstincts:
 	say "     'I'd prefer just forgetting about it. I don't think I could do anything to save them, so... seeing them turned and as someone else entirely is definitely not what I want to see. I'm happy being with my kitten [boygirl].' he ends, smiling at you.";
 
 to say RanferTalkSex:
-	say "     Clearly, Ranfer prefers being a dominant, but what else does he like, you ask him. 'Oh, I love a smaller bottom. Tiny and cute, someone I can carry around, hug and squeeze tightly while I fuck them deep and lovingly... I'm down for either gender, as well, no preference there... As long as they're small cute little fuckable things.' he goes on about, and you can see his loincloth raising slightly as he speaks. 'Though I really enjoy being worshipped and serviced, as well. Nothing better than a dedicated kitten appreciating this body... muscles... everything, from head to paws... And head to feet, when I was still human. I've been doing this since I was able to fuck, quite honestly.' Seems like Ranfer gets really excited at the mere thought of that. Perhaps you should offer that kind of fun, sometime.";
+	say "     Clearly, Ranfer prefers being a dominant, but what else does he like, you ask him. 'Oh, I love a smaller bottom. Tiny and cute, someone I can carry around, hug and squeeze tightly while I fuck them deep and lovingly... I'm down for either gender, as well, no preference there... As long as they're small cute little fuckable things.' he goes on about, and you can see his loincloth raising slightly as he speaks. 'Though I really enjoy being worshiped and serviced, as well. Nothing better than a dedicated kitten appreciating this body... muscles... everything, from head to paws... And head to feet, when I was still human. I've been doing this since I was able to fuck, quite honestly.' Seems like Ranfer gets really excited at the mere thought of that. Perhaps you should offer that kind of fun, sometime.";
 
 to say RanferTalkCreatures: [Ranfer mentions what creatures he has sex scenes with]
 	say "     It is fairly obvious that Ranfer likes a good fight, and he did not offer to become your bodyguard without any personal interest attached. Besides really being into you and feeling protective towards you, he really enjoys a good fight. With that in mind, you ask him what sort of creatures he would like to meet with you. He does give it some thought before replying, 'Hm... Honestly, anything you want to fight is good enough for me. Preferably something we can safely fuck in the end, and knowing our chances, we might be able to find some eager candidates very easily. I could make a few suggestions, however...' Curiosity immediately settling in, you tell him you would like to hear his suggestions. He gives you a pat on top of your head and a gentle brush on your cheek, then pulls you to him with an arm over your shoulders.";
@@ -531,7 +531,7 @@ to say RanferSexFacefucked:
 	if Player is submissive:
 		say ". 'I really should keep you... have you worship me everyday and unload my balls inside you, feeding you lots and lots of this sweet cum down your throat... Bet you'd like that...' he teases you, licking at your neck with more of that dominant affection of his, tempting you to follow through with his words. 'Thanks for coming by. I'll definitely love to dominate you, again.'";
 	else:
-		say ". 'Didn't that feel good? Just letting yourself go... Worshipping me, you swallowing my load... Much better than fighting, yeah?' he teases you, licking at your neck with more of that dominant affection of his. 'Thanks for coming by. I'll definitely love to dominate you, again.'";
+		say ". 'Didn't that feel good? Just letting yourself go... Worshiping me, you swallowing my load... Much better than fighting, yeah?' he teases you, licking at your neck with more of that dominant affection of his. 'Thanks for coming by. I'll definitely love to dominate you, again.'";
 	WaitLineBreak;
 	say "     With those being his last words, he lets go of you, helping you up and giving your cheek an affectionate stroke. The Smilodon then simply watches you go as you grab your gear to return to your own affairs.";
 	if smilodon bodyguard is tamed:
