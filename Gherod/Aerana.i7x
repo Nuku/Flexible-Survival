@@ -95,7 +95,7 @@ Body Definition of Aerana is 5. [scale of 1-9 for body definition, grouped into 
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Aerana is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 Mouth Length of Aerana is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-Mouth Circumference of Aerana is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Mouth Circumference of Aerana is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
 Tongue Length of Aerana is 5. [length in inches]
 Breast Size of Aerana is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Aerana is 2. [count of nipples]

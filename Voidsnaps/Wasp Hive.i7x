@@ -47,7 +47,7 @@ An everyturn rule:
  Last stand:
  1 - Player exiled Ziix. Blocks off becoming royalty and expanding the hive.
  2 - Player Saved Ziix. Ziix will act grateful.
- 3 - Player ignored Ziix. Zant saves him instead. Ziix will be embarassed.
+ 3 - Player ignored Ziix. Zant saves him instead. Ziix will be embarrassed.
 
  Rude Awakening:
  1 - Player fucked Zant.
