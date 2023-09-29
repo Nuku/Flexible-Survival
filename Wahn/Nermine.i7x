@@ -58,7 +58,7 @@ NermineTalk is a number that varies.
 NermineAroused is a number that varies.
 NermineFeat is a number that varies.
 NermineQuest is a number that varies.
-NermineFucked is a number that varies. Nerminefucked is usually 0.
+NermineFucked is a number that varies. NermineFucked is usually 0.
 JackalBoyTF is a number that varies.
 JackalManTF is a number that varies.
 Nerminehelpstatus is a number that varies.

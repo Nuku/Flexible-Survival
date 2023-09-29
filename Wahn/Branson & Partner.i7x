@@ -238,7 +238,7 @@ to say ResolveEvent City Hall Offices:
 	now City Hall Offices is resolved;
 
 City Datastore is a grab object. City Datastore is not temporary.
-City Datastore has a usedesc "[DataStoreUse]".
+City Datastore has a Usedesc "[DataStoreUse]".
 
 Table of Game Objects (continued)
 name	desc	weight	object

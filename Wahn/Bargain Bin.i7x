@@ -335,10 +335,10 @@ carry out bargainhunting:
 		else if Z is 24: [Nermine lecture]
 			say "     As you start to reach into the bargain bin to search, [bold type]Nermine reaches out and stops you[roman type]. 'Nermine has bad feeling about the bin at this time. Maybe her friendly customer would like to accept a bit of advice on things from Nermine instead?' she says, and glancing down into the seemingly bottomless bin, you swear you see something moving around in the piles of strange charms and items! Feeling rather lucky that Nermine intervened, you nod absently, and listen with increasing interest as the jackaless gives you several rather useful tips and teaches you a few small tricks to help keep you alive in the city as it is now. You come out of it feeling like you learned some important things! Although strangely enough after your conversation, just what it was that you were taught is hard to recall. You do remember they were quite significant...";
 			LineBreak;
-			if a random chance of 1 in 3 succeeds and nerminefeat is 0:
+			if a random chance of 1 in 3 succeeds and NermineFeat is 0:
 				say "[bold type]Quite significant indeed...[roman type][line break]";
 				wait for any key;
-				now nerminefeat is 1;
+				now NermineFeat is 1;
 				featget;
 			else:
 				say "[bold type]You gain 75 XP![roman type][line break]";
