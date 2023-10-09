@@ -267,7 +267,7 @@ Body Definition of Rodion is 6. [scale of 1-9 for body definition, grouped into 
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Rodion is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 Mouth Length of Rodion is 14. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-Mouth Circumference of Rodion is 4.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Mouth Circumference of Rodion is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
 Tongue Length of Rodion is 8. [length in inches]
 Breast Size of Rodion is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Rodion is 2. [count of nipples]
@@ -422,7 +422,7 @@ Body Definition of Kirnon is 8. [scale of 1-9 for body definition, grouped into 
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Kirnon is 1. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 Mouth Length of Kirnon is 14. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-Mouth Circumference of Kirnon is 4.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Mouth Circumference of Kirnon is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
 Tongue Length of Kirnon is 8. [length in inches]
 Breast Size of Kirnon is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Kirnon is 2. [count of nipples]
@@ -678,7 +678,7 @@ ResolveFunction of RodionEvents is "". Sarea of RodionEvents is "Nowhere".
 
 to say RodionTalkJettGift:
 	if Loyalty of Jett < 19: [Quest doesn't trigger until Loyalty of Jett hits 19]
-		say "     As you remember one of your conversations with Rodion about Jett, the alpha werewolf, regarding a gift he would like, you decide to ask him more about that. The burly werewolf chuckles and smiles at your question, enthusiasm visible in his eyes. 'Oh, so you do want to make Jett like you, is that right? Hah, well! It is true, I could help you, but... Maybe it's best if he gets to know you a bit better first? He likes it when people offer to please him on spot, showing submission to him...' You nod and take your notes. Maybe several sessions of public worshipping would prove your good intentions? You could always [bold type]ask the alpha how you are doing in that regard[roman type]...";
+		say "     As you remember one of your conversations with Rodion about Jett, the alpha werewolf, regarding a gift he would like, you decide to ask him more about that. The burly werewolf chuckles and smiles at your question, enthusiasm visible in his eyes. 'Oh, so you do want to make Jett like you, is that right? Hah, well! It is true, I could help you, but... Maybe it's best if he gets to know you a bit better first? He likes it when people offer to please him on spot, showing submission to him...' You nod and take your notes. Maybe several sessions of public worshiping would prove your good intentions? You could always [bold type]ask the alpha how you are doing in that regard[roman type]...";
 	else:
 		now RodionDoneTalking is true;
 		say "     As you remember one of your conversations with Rodion about Jett, the alpha werewolf, regarding a gift he would like, you decide to ask him more about that. The burly werewolf chuckles and smiles at your question, enthusiasm visible in his eyes. 'Oh, so you do want to make Jett like you, is that right? Hah, well! It is true, I can help you.' He then stops what he is doing and leads you over to a counter in the deepest corner of the kitchen, and you get the feeling you are about to prepare some food with him. However, he only turns to you and begins to talk. 'There is one type of cake that Jett never refuses when presented. I must dare say, it is the only one he cannot resist. Would you please close the door as I make preparations?'";

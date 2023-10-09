@@ -623,7 +623,7 @@ to say Bucky_Person:
 		TraitGain "Bucky - Seen him" for Alexandra;
 		WaitBreakReactions;
 	if Amy is booked or Amy is bunkered:
-		say "     Amy shily approaches the buck, then hesitantly says, 'Hello there.' As he doesn't reply, the young woman looks at you in slight confusion. 'Why isn't he saying anything?' You explain again that Bucky has been through... you don't really know what exactly, but it's left him in this current state. The husky appears skittish and ready to run away, as if afraid she might be next, but you gently take her by the arm and tell her that there shouldn't be any danger. Instead, Bucky just needs help, and people treating him not as a lifeless doll but the real person that he is. Amy looks at you wide-eyed, then over at Bucky, and nods determinedly. 'I can do that! Tell him things, and maybe take him for a walk in the garden, and read to him!' With that said, she steps up to the anthro deer and gently lays a hand on his arm. Looking into his unblinking eyes, she says, 'Sorry for... being afraid of you at first. I'll be the friend you need!' Then she steps back and waves goodbye to him before moving out of sight.";
+		say "     Amy shyly approaches the buck, then hesitantly says, 'Hello there.' As he doesn't reply, the young woman looks at you in slight confusion. 'Why isn't he saying anything?' You explain again that Bucky has been through... you don't really know what exactly, but it's left him in this current state. The husky appears skittish and ready to run away, as if afraid she might be next, but you gently take her by the arm and tell her that there shouldn't be any danger. Instead, Bucky just needs help, and people treating him not as a lifeless doll but the real person that he is. Amy looks at you wide-eyed, then over at Bucky, and nods determinedly. 'I can do that! Tell him things, and maybe take him for a walk in the garden, and read to him!' With that said, she steps up to the anthro deer and gently lays a hand on his arm. Looking into his unblinking eyes, she says, 'Sorry for... being afraid of you at first. I'll be the friend you need!' Then she steps back and waves goodbye to him before moving out of sight.";
 		TraitGain "Bucky - Seen him" for Amy;
 		WaitBreakReactions;
 	if Brutus is booked or Brutus is bunkered:
@@ -662,7 +662,7 @@ to say Bucky_Person:
 			say "     Chris strolls right up to Bucky, addressing him. 'So, you're the newest member of our little group here, eh? Don't you worry, I'll keep you company so you don't get lonely.' As the anthro buck doesn't react at all, the young orc's expression falls a little, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Bucky a pat on the shoulder, then walks off for now.";
 		else if Libido of Chris is 1: [orc breeder]
 			if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
-				say "     Chris saunters up to Bucky, checking him out while still standing back a little. Then he asks shily, 'So, he needs someone to... sit with him, and talk? I can do that!' As the anthro buck doesn't react at all, the young orc's expression falls, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Bucky a pat on the shoulder, then walks off for now.";
+				say "     Chris saunters up to Bucky, checking him out while still standing back a little. Then he asks shyly, 'So, he needs someone to... sit with him, and talk? I can do that!' As the anthro buck doesn't react at all, the young orc's expression falls, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Bucky a pat on the shoulder, then walks off for now.";
 			else: [happy breeder]
 				say "     Chris strolls right up to Bucky, addressing him. 'So, you're the newest member of our little group here, eh? Don't you worry, I'll keep you company so you don't get lonely. I could be, or big bro or something, eh?' As the anthro buck doesn't react at all, the young orc's expression falls a little, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Bucky a pat on the shoulder, then walks off for now.";
 		else if Libido of Chris is 2: [orc warrior]
@@ -778,7 +778,7 @@ to say Bucky_Person:
 		else if HP of Sven > 7 and HP of Sven < 11: [collared sex pet]
 			say "     Sven shyly approaches Bucky, looking him up and down, then over to you as if to ask permission. As you smile and nod, he reaches out and touches the anthro deer's arm. 'You'll be safe here, and I'll keep you company.' Almost subconsiously it seems, the snowmeow's other hand slides down to Bucky's crotch and rubs against it, showing that sex isn't too far from the front of your pet's mind at all times. With a clearing of your throat and tap against Sven's side, the exchange student pulls back in embarrassment, then makes his goodbyes.";
 		else:
-			say "     Sven shily walks up to Bucky, looking him up and down, then reaches out and touches the anthro deer's arm. 'You'll be safe here, and I - I'll keep you company. Hope you won't get bored listening to my stories, though.' The exchange student pats Bucky again, then pulls himself back and makes his goodbyes.";
+			say "     Sven shyly walks up to Bucky, looking him up and down, then reaches out and touches the anthro deer's arm. 'You'll be safe here, and I - I'll keep you company. Hope you won't get bored listening to my stories, though.' The exchange student pats Bucky again, then pulls himself back and makes his goodbyes.";
 		TraitGain "Bucky - Seen him" for Sven;
 		WaitBreakReactions;
 	if Urik is booked or Urik is bunkered:
@@ -815,7 +815,7 @@ to say Bucky_Toy:
 			TraitGain "Bucky - Seen him" for Alexandra;
 			WaitBreakReactions;
 		if Amy is booked or Amy is bunkered:
-			say "     Amy shily approaches the buck, then hesitantly says, 'Hello there.' As he doesn't reply, the young woman looks at you in slight confusion. 'Why isn't he saying anything?' You explain again that Bucky really isn't a person, and she can make use of him sexually if she wants, but the husky is already stepping back from him, looking skittish. 'I - didn't you say he's got no, you know, down there? I don't think I could do anything with him, or really want to. It's so eerie, that he just stares like that.' With that said, she retreats from the sex doll, glancing back at it a few times before moving out of sight.";
+			say "     Amy shyly approaches the buck, then hesitantly says, 'Hello there.' As he doesn't reply, the young woman looks at you in slight confusion. 'Why isn't he saying anything?' You explain again that Bucky really isn't a person, and she can make use of him sexually if she wants, but the husky is already stepping back from him, looking skittish. 'I - didn't you say he's got no, you know, down there? I don't think I could do anything with him, or really want to. It's so eerie, that he just stares like that.' With that said, she retreats from the sex doll, glancing back at it a few times before moving out of sight.";
 			TraitGain "Bucky - Seen him" for Amy;
 			WaitBreakReactions;
 		if Brutus is booked or Brutus is bunkered:
@@ -855,7 +855,7 @@ to say Bucky_Toy:
 				TraitGain "Bucky - Seen him" for Chris;
 			else if Libido of Chris is 1: [orc breeder]
 				if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
-					say "     Chris saunters up to Bucky, checking him out with interest. Then he asks shily, 'So, [if Thirst of Val is 2]daddy, [end if]uhm... with this being a toy, could I - could I be on top? Be the one fucking his ass, you know. But... is it okay if I only use the back? Not sure about that front hole...' Chuckling and nodding, you make the young orc's day, but remind him that he needs to keep himself ready for [if Thirst of Val is 2]daddy [else]you [end if]  still. 'Of course!' Chris says with an obedient and eager nod, then walks off with a big smile on his face.";
+					say "     Chris saunters up to Bucky, checking him out with interest. Then he asks shyly, 'So, [if Thirst of Val is 2]daddy, [end if]uhm... with this being a toy, could I - could I be on top? Be the one fucking his ass, you know. But... is it okay if I only use the back? Not sure about that front hole...' Chuckling and nodding, you make the young orc's day, but remind him that he needs to keep himself ready for [if Thirst of Val is 2]daddy [else]you [end if]  still. 'Of course!' Chris says with an obedient and eager nod, then walks off with a big smile on his face.";
 					TraitGain "Bucky - Seen him" for Chris;
 				else: [happy breeder]
 					say "     Chris saunters up to Bucky, checking him out with interest and even touching the deer a little. '[if Thirst of Val is 2]Wow, daddy! [end if]He looks like he should be fun. And with him being a toy, I could be on top too, right?! Be the one fucking his ass! But... is it okay if I only use the back? Not sure about that front hole...' Chuckling and nodding, you make the young orc's day. Ruffling [if Thirst of Val is 2]your son's [else]his [end if] hair, you tell him to have fun and enjoy himself. Breeders can play around with being the dominant partner too, why not! Chris looks happy at your encouragement, walking off with a big smile on his face.";
@@ -884,7 +884,7 @@ to say Bucky_Toy:
 			TraitGain "Bucky - Seen him" for David;
 			WaitBreakReactions;
 		if Denise is booked or Denise is bunkered:
-			say "     In a flutter of wings, Denise lands a little distance away, then approaches shily. 'He's cute!' she says with a smile, then looks at you somewhat hesitantly. 'And it's really no problem if I... try some things out with him?' She half-hides her face behind one of her wings, showing embarrassment clearly even though any blush will be hidden under her feathers. You smile and nod to her, which the gryphoness accepts happily. She lets her gaze drop to his crotch, then giggles, before jumping back in the air, gliding away on outstretched wings.";
+			say "     In a flutter of wings, Denise lands a little distance away, then approaches shyly. 'He's cute!' she says with a smile, then looks at you somewhat hesitantly. 'And it's really no problem if I... try some things out with him?' She half-hides her face behind one of her wings, showing embarrassment clearly even though any blush will be hidden under her feathers. You smile and nod to her, which the gryphoness accepts happily. She lets her gaze drop to his crotch, then giggles, before jumping back in the air, gliding away on outstretched wings.";
 			TraitGain "Bucky - Seen him" for Denise;
 			WaitBreakReactions;
 		if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
@@ -1052,7 +1052,7 @@ to say Hercules_Person:
 			say "     Chris strolls right up to Hercules, addressing him. 'So, you're the newest member of our little group here, eh? Don't you worry, I'll keep you company so you don't get lonely.' As the large horseman doesn't react at all, the young orc's expression falls a little, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Hercules a pat on the shoulder, then walks off for now.";
 		else if Libido of Chris is 1: [orc breeder]
 			if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
-				say "     Chris saunters up to Hercules, checking him out while still standing back a little. Even so, you can tell that his eyes go a bit wider as he sees the well-sized cock and balls dangling between the anthro equine's legs. Then he asks shily, 'So, he needs someone to... sit with him, and talk? I can do that!' As the anthro buck doesn't react at all, the young orc's expression falls, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Hercules a pat on the shoulder, then walks off for now.";
+				say "     Chris saunters up to Hercules, checking him out while still standing back a little. Even so, you can tell that his eyes go a bit wider as he sees the well-sized cock and balls dangling between the anthro equine's legs. Then he asks shyly, 'So, he needs someone to... sit with him, and talk? I can do that!' As the anthro buck doesn't react at all, the young orc's expression falls, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Hercules a pat on the shoulder, then walks off for now.";
 			else: [happy breeder]
 				say "     Chris strolls right up to Hercules, addressing him. 'So, you're the newest member of our little group here, eh? Don't you worry, I'll keep you company so you don't get lonely. I'd love to have a - a big bro like you!' As he says this, you can see the orc's gaze flicker down to Hercules crotch, where a well-sized cock and heavy balls dangle freely. When the horseman doesn't react at all, Chris's expression falls a little, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Hercules a pat on the shoulder, then walks off for now.";
 		else if Libido of Chris is 2: [orc warrior]
@@ -1168,7 +1168,7 @@ to say Hercules_Person:
 		else if HP of Sven > 7 and HP of Sven < 11: [collared sex pet]
 			say "     Sven shyly approaches Hercules, looking him up and down, then over to you as if to ask permission. As you smile and nod, he reaches out and touches the large horseman's arm. 'You'll be safe here, and I'll keep you company.' Almost subconsiously it seems, the snowmeow's other hand slides down to Hercules's crotch and rubs against it, showing that sex isn't too far from the front of your pet's mind at all times. With a clearing of your throat and tap against Sven's side, the exchange student pulls back in embarrassment, then makes his goodbyes.";
 		else:
-			say "     Sven shily walks up to Hercules, looking him up and down, then reaches out and touches the large horseman's arm. 'You'll be safe here, and I - I'll keep you company. Hope you won't get bored listening to my stories, though.' The exchange student pats Hercules again, then pulls himself back and makes his goodbyes.";
+			say "     Sven shyly walks up to Hercules, looking him up and down, then reaches out and touches the large horseman's arm. 'You'll be safe here, and I - I'll keep you company. Hope you won't get bored listening to my stories, though.' The exchange student pats Hercules again, then pulls himself back and makes his goodbyes.";
 		TraitGain "Hercules - Seen him" for Sven;
 		WaitBreakReactions;
 	if Urik is booked or Urik is bunkered:
@@ -1207,7 +1207,7 @@ to say Hercules_Toy:
 			TraitGain "Hercules - Seen him" for Alexandra;
 			WaitBreakReactions;
 		if Amy is booked or Amy is bunkered:
-			say "     Amy shily approaches the Clydesdale, then hesitantly says, 'Hello there.' As he doesn't reply, the young woman looks at you in slight confusion. 'Why isn't he saying anything?' You explain again that Hercules really isn't a person, and she can make use of him sexually if she wants, but the husky looks a little skittish in reaction. 'I, uhm... I'm not sure I could. He does look mighty good, but... it's a bit eerie, that he just stares blankly like that.' With that said, she retreats from the sex doll, glancing back at it a few times before moving out of sight.";
+			say "     Amy shyly approaches the Clydesdale, then hesitantly says, 'Hello there.' As he doesn't reply, the young woman looks at you in slight confusion. 'Why isn't he saying anything?' You explain again that Hercules really isn't a person, and she can make use of him sexually if she wants, but the husky looks a little skittish in reaction. 'I, uhm... I'm not sure I could. He does look mighty good, but... it's a bit eerie, that he just stares blankly like that.' With that said, she retreats from the sex doll, glancing back at it a few times before moving out of sight.";
 			TraitGain "Hercules - Seen him" for Amy;
 			WaitBreakReactions;
 		if Brutus is booked or Brutus is bunkered:
@@ -1247,7 +1247,7 @@ to say Hercules_Toy:
 				TraitGain "Hercules - Seen him" for Chris;
 			else if Libido of Chris is 1: [orc breeder]
 				if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
-					say "     Chris saunters up to Hercules, checking him out with interest. Then he asks shily, 'So, [if Thirst of Val is 2]daddy, [end if]uhm... with this being a toy, could I - could I be on top? Be the one fucking his ass, you know. Not that I won't also try out this big rod at the front, but...' Chuckling and nodding, you make the young orc's day, but remind him that he needs to keep himself ready for [if Thirst of Val is 2]daddy [else]you [end if] still. 'Of course!' Chris says with an obedient and eager nod, then walks off with a big smile on his face.";
+					say "     Chris saunters up to Hercules, checking him out with interest. Then he asks shyly, 'So, [if Thirst of Val is 2]daddy, [end if]uhm... with this being a toy, could I - could I be on top? Be the one fucking his ass, you know. Not that I won't also try out this big rod at the front, but...' Chuckling and nodding, you make the young orc's day, but remind him that he needs to keep himself ready for [if Thirst of Val is 2]daddy [else]you [end if] still. 'Of course!' Chris says with an obedient and eager nod, then walks off with a big smile on his face.";
 					TraitGain "Hercules - Seen him" for Chris;
 				else: [happy breeder]
 					say "     Chris saunters up to Hercules, checking him out with interest and even touching the large horseman a little. '[if Thirst of Val is 2]Wow, daddy! [end if]He looks like he should be fun. And with him being a toy, I could be on top too, right?! Be the one fucking his ass! BBe the one fucking his ass, you know. Not that I won't also try out this big rod at the front, but...' Chuckling and nodding, you make the young orc's day. Ruffling [if Thirst of Val is 2]your son's [else]his [end if] hair, you tell him to have fun and enjoy himself. Breeders can play around with being the dominant partner too, why not! Chris looks happy at your encouragement, walking off with a big smile on his face.";
@@ -1276,7 +1276,7 @@ to say Hercules_Toy:
 			TraitGain "Hercules - Seen him" for David;
 			WaitBreakReactions;
 		if Denise is booked or Denise is bunkered:
-			say "     In a flutter of wings, Denise lands a little distance away, then approaches shily. 'He's a giant!' she says with wide eyes, then looks at you somewhat hesitantly. 'I think that would be a bit too big and intimidating for my tastes. But thank you for offering!' With that said, she jumps back in the air, gliding away on outstretched wings.";
+			say "     In a flutter of wings, Denise lands a little distance away, then approaches shyly. 'He's a giant!' she says with wide eyes, then looks at you somewhat hesitantly. 'I think that would be a bit too big and intimidating for my tastes. But thank you for offering!' With that said, she jumps back in the air, gliding away on outstretched wings.";
 			TraitGain "Hercules - Seen him" for Denise;
 			WaitBreakReactions;
 		if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
