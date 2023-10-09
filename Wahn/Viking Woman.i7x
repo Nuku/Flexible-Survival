@@ -816,7 +816,7 @@ When Play begins:
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a handsome female visage. Your hair turns into a shoulder-length blond mane"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a that of a young woman, and a fit and healthy one at that"; [  format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it smoothes out, becoming the pale tint of a northern European"; [ format as "Your skin feels funny as (your text)." ]
+	now skin change entry is "it smooths out, becoming the pale tint of a northern European"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it gets tight and firmly muscled"; [ format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes human-shaped"; [ format as "Your cock feels funny as (your text)." ]
 	now str entry is 20;

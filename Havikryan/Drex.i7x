@@ -451,7 +451,7 @@ Friend Turned Foe	"Friend Turned Foe"
 Friend Turned Foe is a situation
 Friend Turned Foe is inactive
 if White Drex is resolved Friend Turned Foe is now active
-Resolvefunction of Friend Turned Foe is "[ResolveEvent Friend Turned Foe]".
+ResolveFunction of Friend Turned Foe is "[ResolveEvent Friend Turned Foe]".
 Sarea of Friend Turned Foe is "Bunker".
 to say ResolveEvent Friend Turned foe:
 	if daytimer is day:
@@ -482,7 +482,7 @@ Bed Time Drex	"Bed Time Drex"
 Bed Time Drex is a situation
 Bed Time Drex is inactive
 if Friend Turned Foe is resolved Bed Time Drex is now active
-Resolvefunction of Bed Time Drex is "[ResolveEvent Bed Time Drex]".
+ResolveFunction of Bed Time Drex is "[ResolveEvent Bed Time Drex]".
 Sarea of Bed Time Drex is "Bunker".
 to say ResolveEvent Bed Time Drex:
 	if Player is male and daytimer is night

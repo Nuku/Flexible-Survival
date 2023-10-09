@@ -1113,7 +1113,7 @@ When Play begins:
 	now cock entry is "human";
 	now face change entry is "it shifts, becoming that of a young male's, your ears becoming pointier as well and your eyes brighter too. Your hair changes colors, from what it was previously to a vibrant red before changing into a shaggy style and splaying itself out in different directions.";
 	now body change entry is "it starts to shift as your body forms into a humanoid shape, standing at a height of four feet or so. Looking down at yourself you see that you're rather fit despite the lack of muscles.";
-	now skin change entry is "it smoothes out, becoming an olive tone that glows with health.";
+	now skin change entry is "it smooths out, becoming an olive tone that glows with health.";
 	now Ass Change entry is "it tightens up, fitting to match your current size.";
 	now cock change entry is "it shifts to a human cock.";
 	now str entry is 18;
