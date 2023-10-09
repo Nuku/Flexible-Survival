@@ -74,6 +74,10 @@ Version 1 of Carl by Wahn begins here.
 Stamina of Carl is usually 10000.
 lastCarlKorvinInteraction is a number that varies. lastCarlKorvinInteraction is usually 10000.
 
+a postimport rule:
+	if "CarlLibraryArrival Done" is not listed in Traits of Carl:
+		say "Note: Carl as an NPC has been updated to better conform to the gritty reboot of the soldier squad event chain. In his menus, you will find an option to reset him and replay the entrance into the library scene to see the new content and make your choice of which variant of him you want.";
+
 Section 1 - Description
 
 Table of GameCharacterIDs (continued)
@@ -124,6 +128,11 @@ CarlLibraryEntry is a number that varies. CarlLibraryEntry is usually 10000. [wh
 to say CarlDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Carl], LEVEL: [level of Carl], LIBRARY ENTRY TURN: [CarlLibraryEntry], Libido: [Libido of Carl], Dexterity: [dexterity of Carl], Thirst: [thirst of Carl], Lust: [lust of Carl] <- DEBUG[line break]";
+	if HP of Carl is 10: [True Carl Path - stage 1: resting]
+		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, minus the boots since his digitigrade paws wouldn't fit in them. Right now, he's in an almost coma-like sleep after his exhausting escape from Allen's clutches and the travel to the library. [bold type]You should just give him time to rest, maybe go do something else and come back later. [roman type][line break]";
+	else if HP of Carl is 30: [Dog Carl Path - stage 1: resting]
+		say "     Carl is a well-built male husky, after having formerly been a human soldier. After bringing him here to the bunker when he was fleeing from his squad leader Allen, you pushed him to make a break from his former self, taking away his dog tags in the process. The only remnants of who he was before are the dark undershirt and the camo pattern pants of a normal military uniform, minus the boots since his digitigrade paws wouldn't fit in them. Right now, he's in an almost coma-like sleep after his exhausting escape from Allen's clutches, the travel to the library and your own psychological manupulation. [bold type]You should just give him time to rest, maybe go do something else and come back later. [roman type][line break]";
+[
 	if HP of Carl is 2 or HP of Carl is 3:
 		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, though he had to give up on boots since his digitigrade paws wouldn't fit in them. [if CarlLibraryEntry - turns < 17]His behavior shows that he's a bit unsure of himself, unnerved by the automatic reactions and inherent mannerisms of his body, like movements of his tail and ears. Maybe he just needs some time to get used to it all[else]By now, he's found an equilibrium with his new shape, using his tail and ears to express himself while still maintaining most of his humanity[end if].";
 	else if HP of Carl > 9 and HP of Carl < 30:
@@ -131,6 +140,7 @@ to say CarlDesc:
 	else if HP of Carl > 29 and HP of Carl < 50:
 		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, though he had to give up on boots since his digitigrade paws wouldn't fit in them. By now, he's become a lot more dog-like in his mannerisms, often acting and reacting in canine ways more than human ones. As he sees you looking at him, he lowers his head a bit and only looks at you from the corner of his eye, showing his submissiveness to you.";
 	say "     Having carried up a mattress from the bunker and set it up as his bed near one of the front-side windows of the library, he spends much of his time on lookout over the approaches to the building, ready to give warning should any dangerous creatures approach.";
+]
 
 The scent of Carl is "     Carl smells like a husky - and clearly a male one at that.".
 
@@ -143,8 +153,20 @@ to say CarlStatus: [for use in texts - normal Carl or sub Carl]
 Section 2 - Talking
 
 instead of conversing the Carl:
-	if graphics is true:
-		project the figure of Carl_face_icon;
+	project the figure of Carl_face_icon;
+	if "CarlLibraryArrival Done" is not listed in Traits of Carl:
+		say "     [Bold Type]Do you want to reset Carl right now and play through the scene of him arriving in the library? [roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yup, let's see the new stuff!";
+		say "     ([link]N[as]n[end link]) - Not right now.";
+		if Player consents:
+			say "[CarlLibraryArrival]";
+	else:
+		if HP of Carl is 10: [True Carl Path - stage 1: resting]
+			say "     He's asleep right now, the poor guy. After everything he has gone through, it wouldn't be too much of a surprise if he slept for an exceptionally long time. [bold type]You should just give him time to rest, maybe go do something else and come back later. [roman type][line break]";
+		else if HP of Carl is 30: [Dog Carl Path - stage 1: resting]
+			say "     He's asleep right now, and it'd be best to leave him to it, giving your psychological manipulation time to settle. After everything he has gone through, it wouldn't be too much of a surprise if he slept for an exceptionally long time. [bold type]You should just give him time to rest, maybe go do something else and come back later. [roman type][line break]";
+[
 	if (HP of Carl is 2):
 		say "     Carl says 'Listen, I really appreciate the risk you took in helping me. Mighty decent to take in someone with everything that's been going on.' His lips twitch for a moment as he tries to smile, something a canine's muzzle isn't quite meant to do, then he gives a little shrug and his tail starts wagging slowly. 'Now I want to do my part in getting us through this, so I'm gonna take position up here at the window and keep watch for anything approaching the building. Just get ready for a fight if you hear me shouting, OK?'";
 		now PlayerFriended of Carl is true;
@@ -153,68 +175,62 @@ instead of conversing the Carl:
 		say "[CarlTalkMenu]";
 	else:
 		say "ERROR-Carl-[HP of Carl]C: He isn't in one of the states she should be in! Please report how you got to this message.";
+]
 
 to say CarlLibraryArrival:
-	say "     Reaching the entrance door of the library and its promise of safety, you hold it open for your husky companion and let him inside, then guide him down the stairs into the bunker. The man lets out more a groan than any understandable words as he sees the rows of cots inside, staggering forward and simply dropping what clothing he wears on the way. Carl collapses on the very first cot, pantsless but with his t-shirt still on, and barely has time to dig himself under the blanket before he finally succumbs to unconsciousness...";
-	say "     Leaving the huskified soldier to get some much-needed rest, you decide to get some fresh air, moving to the first floor of the library and then stepping out into the garden. The peaceful surroundings with plants and a fountain are a sharp contrast to where your thoughts wander to, thinking of everything that happened between the men of the soldier squad Carl was in: Davies transforming due to a malfunction of his immunity booster, then Allen's betrayal and the way he manipulated and overpowered all of his subordinates. ";
+	say "     Reaching the entrance door of the library and its promise of safety, you hold it open for your husky companion and let him inside, then guide him down the stairs into the bunker. Groaning unintelligibly as he sees the rows of cots inside, he staggers forward and simply drops what clothing he wears on the way. Carl collapses on the very first cot, pantsless but with his t-shirt still on, and barely has time to dig himself under the blanket before he finally succumbs to unconsciousness...";
+	say "     Leaving the huskified soldier to get some much-needed rest, you decide to get some fresh air, moving to the first floor of the library and then stepping out into the garden. The peaceful surroundings with plants and a fountain are a sharp contrast to where your thoughts wander. You can't stop thinking of everything that happened between the men of Carl's soldier squad: Davies transforming due to a malfunction of his immunity booster, Allen's betrayal, and the way he manipulated and overpowered all of his subordinates. ";
 	if Resolution of Soldier Squad < 10: [Player silently witnessed what happened]
 		say "You watched it all as a silent observer, waiting for the right moment to act, ";
 		if "Player - Stole Amy" is listed in Traits of Allen:
-			say "like removing Amy from the madman's grasp and ";
+			say "removing Amy from the madman's grasp and ";
 		say "helping Carl to escape. ";
 	else of Resolution of Soldier Squad > 90: [befriended Allen]
 		say "And you were there for it all, chatting up Allen and cheerfully watching what went down, until betraying the madman by ";
 		if "Player - Stole Amy" is listed in Traits of Allen:
-			say "stealing away Amy and ";
+			say "stealing away Amy, and ";
 		else if "Player - Virgin Thief" is listed in Traits of Allen:
-			say "claiming Amy's virginity and ";
+			say "claiming Amy's virginity, and ";
 		say "now helping Carl escape. ";
-	say "A future encounter with Allen might certainly get dicey, if the man finds out what really happened, but that's a worry for another day. For now, he can't track Carl by scent, and with everything going on in the city, a specific dog-person's trail can't remain traceable that long, or can it? Surely that danger will resolve itself soon, and in all this chaos, Allen won't find his way here by random chance.";
+	say "A future encounter with Allen might certainly get dicey, if the man finds out what really happened, but that's a worry for another day. For now, he can't track Carl by scent, and with everything going on in the city, a specific dog-person's trail can't remain traceable that long. Surely that danger will resolve itself soon, and in all this chaos, Allen won't find his way here by random chance.";
 	WaitLineBreak;
-	say "     Spending a long while in the garden, you do your best to banish thoughts of the treacherous husky squad leader from your mind, instead contemplating Carl's plight. The soldier really was put throught he wringer, physically and mentally. With the whole 'band of brothers' thing that is always touted in movies and so on, it must have been devastating to be abused by one of their own. As you stroll along the footpaths, the unbidden thought comes that it might just be a blessing that many of the infected simply forget about their former lives, with the new reality of their changed form taking center stage instead. At least they don't know what they lost, and something about the nanites also seems to dampen the grim reality of most likely forceful sex coming before a transformation. People do just kinda fall into 'going along with it' after a certain point, finding themselves enjoying the act, if not the circumstances. And for some, the person they were before becomes just a memory after that.";
-	say "     At some point, you realize that more than an hour, maybe two, have passed since you stepped outside, and you decide to check on Carl. Making your way down the stairs and back into the bunker, you see the husky soldier on the messy cot he fell asleep on, with him having kicked off the blanket to fall to the side. Seems like the man is wrestling with disturbing dreams, as he twitches and moves in his sleep, making some noises as he does so. Stepping closer a little, you hear some of the words he's mumbling to himself: 'No! I'm not a beast, I'm a man... Oh god, Davies... I'm sorry... That bastard lied, I only wanted to help you...' At a guess, you think he's replaying everything that happened before in his mind, and seems to be apologizing to a dream-Davies about fucking her, sobbing out the words. At the same time a glance to the side shows you that the man is hard as a rock right now, as he was when things went down.";
+	say "     Spending a long while in the garden, you do your best to banish thoughts of the treacherous husky squad leader from your mind, instead contemplating Carl's plight. The soldier really was put through the wringer, physically and mentally. With the whole 'band of brothers' thing that is always touted in movies and so on, it must have been devastating to be abused by one of their own. As you stroll along the footpaths, the unbidden thought comes that it might just be a blessing that many of the infected forget about their former lives, and the new reality of their changed form takes center stage. At least they don't know what they lost, and something about the nanites also seems to dampen the grim reality of most likely forceful sex coming before a transformation. People fall into 'going along with it' after a certain point, finding themselves enjoying the act, if not the circumstances. And for some, the person they were before becomes just a memory.";
+	say "     At some point, you realize that more than an hour, maybe two, have passed since you stepped outside, and you decide to check on Carl. Making your way down the stairs and back into the bunker, you see the husky soldier on the messy cot where you left him, with his blanket half dangling onto the floor. Seems like the man is wrestling with disturbing dreams, as he twitches and turns in his sleep, whimpering as he does so. Stepping closer, you hear some of the words he's mumbling to himself: 'No! I'm not a beast, I'm a man... Oh god, Davies... I'm sorry... That bastard lied, I only wanted to help you...' At a guess, you think he's replaying everything that happened before in his mind, and seems to be apologizing to a dream-Davies about fucking her, sobbing out the words.";
 	LineBreak;
-	say "     [bold type]Carl's uniquely vulnerable right now: Asleep, exhausted and weak, but also horny and wrestling with his guilt. How do you react to this? [roman type][line break]";
+	say "     [bold type]Carl's uniquely vulnerable right now: Asleep, exhausted and weak, wrestling with his guilt. How do you react to this? [roman type][line break]";
 	LineBreak;
 	let Carl_Route_Choices be a list of text;
 	add "Carefully cover him with the blanket again, and let him work things out in his mind in peace." to Carl_Route_Choices;
 	add "Gently shake him awake, to free him from his nightmare." to Carl_Route_Choices;
-	add "Roughly awaken the man and dominate him to succumb becoming the dog he really is. Your dog!" to Carl_Route_Choices;
-	if Player is male:
-		add "Ram your dick into the man to fuck him into submission, until he succumbs to be nothing but the lustful dog that's inside him. Your dog!" to Carl_Route_Choices;
-	add "Climb on and impale yourself on the man's hard cock to fuck him into submission, until he succumbs to be nothing but the lustful dog that's inside him. Your dog!" to Carl_Route_Choices;
+	add "Shake him awake, and use his sleep-drunk, exhausted state to convince him to give up on his old life. He can be your dog instead." to Carl_Route_Choices;
 	let Carl_Route_Choice be what the player chooses from Carl_Route_Choices;
 	if Carl_Route_Choice is:
 		-- "Carefully cover him with the blanket again, and let him work things out in his mind in peace.":
 			LineBreak;
-			say "     Moving closer, you start to tug at the blanket that Carl has kicked off himself, only to realize that he's partly lying on top of it. Thankfully, there's plenty of other cots around down here, so it is an easy task to just step up to one of those and grab another, bringing that to the husky instead. Shaking out the folded blanket, you carefully pull it over the man. There appears to be an effect too, as he seems to subconsciously relize that he's not completely exposed and vulnerable anymore. Carl calms down markedly, his cody curling in under the warmth of the cloth and his head no longer unruly lolling left and right. The transformed soldier's face relaxes from the tenseness that was visible on it a moment ago, but that is quickly followed by his eyebrows drawing together a little in confusion, followed by him sleepily opening his eyes. Caught in the man's blurry gaze, still half-leaned over him, you give Carl a friendly smile and pat his shoulder, telling him to get his rest. Mumbling something you can't make out, he does just that, closing his eyes again as he sinks back into unconsciousness.";
+			say "     Moving closer, you start to tug at the blanket that Carl has kicked off himself, only to realize that he's partly lying on top of it. Thankfully, there's plenty of other cots around down here, so it is an easy task to just step up to one of those and grab another, bringing that to the husky instead. Shaking out the folded blanket, you carefully pull it over the man, tucking the corners until he's held in place by its snug confines. There appears to be an immediate effect, as he subconsciously realizes that he's not completely exposed and vulnerable. Carl calms down markedly, his body curling in under the warmth of the cloth and his head no longer rolling left and right. The transformed soldier's face relaxes, but that is quickly followed by his eyebrows drawing together in confusion, followed by his eyes fluttering open. Caught in the man's blurry gaze, still partially leaning over him, you give Carl a friendly smile and pat his shoulder, telling him to get his rest. Mumbling something you can't make out, he does just that, closing his eyes again as he sinks back into unconsciousness.";
 			now HP of Carl is 10; [start of True-Carl]
 		-- "Gently shake him awake, to free him from his nightmare.":
 			LineBreak;
-			say "     Moving closer, you lean over Carl on his cot and reach out to grab his arm - only to stop yourself and think for a second about it. Hm, might be best not to hold onto him tightly after what Allen put him through, or he might instinctively fight back. Therefore you just give the transformed soldier a light shake with straight fingers against the side of his shoulder, withdrawing your hand immediately. Letting out an alarmed bark, the tense man twitches up to half-sit in bed, blinking open his tired eyes to glance around as if something was hunting him. His attention quickly turns to you as the closest person, starting in sleep-ridden uncomprehension at your face. With an apologetic smile, you tell him that he seemed to have a bad time in a nightmare and you wanted to put a stop to that. Also mentioning that he kicked off his blanket, you tug it off the bed from where the man was half-lying on top of it, then throw it over him properly again. With a half-sleeping mixture of relief and thankfulness, Carl accepts the blanket and curls up under it, closing his eyes again as he sinks back into unconsciousness.";
+			say "     Moving closer, you lean over Carl and reach out to grab his arm - only to stop yourself and think for a second about it. It might be best not to hold onto him tightly after what Allen put him through, or he might instinctively fight back. Bearing that in mind, you just give the transformed soldier a light shake, withdrawing your hand immediately when he starts to react. Letting out an alarmed bark, the tense man stirs, blinking open his tired eyes to glance around as if something was hunting him. His attention quickly turns to you as the closest person, staring in sleep-ridden incomprehension. With an apologetic smile, you tell him that he seemed like he was having nightmares and you wanted to put comfort him. Also mentioning that he kicked off his blanket, you tug it off the bed from where the man was half-lying on top of it, then throw it over him properly. With a half-asleep mixture of relief and thankfulness, Carl accepts the blanket and curls up under it, closing his eyes again as he sinks back into unconsciousness.";
 			now HP of Carl is 10; [start of True-Carl]
-		-- "Roughly awaken the man and dominate him to succumb becoming the dog he really is. Your dog!":
+		-- "Shake him awake, and use his sleep-drunk, exhausted state to convince him to give up on his old life. He can be your dog instead.":
 			LineBreak;
-			say "     ";
-		-- "Ram your dick into the man to fuck him into submission, until he succumbs to be nothing but the lustful dog that's inside him. Your dog!":
-			LineBreak;
-			say "     ";
-		-- "Climb on and impale yourself on the man's hard cock to fuck him into submission, until he succumbs to be nothing but the lustful dog that's inside him. Your dog!":
-			LineBreak;
-			say "     ";
-
+			say "     Moving closer, you lean over Carl on his cot and grab him firmly by the arm, shaking the husky to rouse him from the unruly sleep he's having. In response, the transformed soldier thrashes around, instinctively trying to fight you off before even opening his eyes. Openly baring his teeth and growling, he's got his free arm half-raised with a fist to punch before the man blinks away the blurryness in his eyes to focus on you, consciously registering where he is and what is going on. He gets out the single word '...fuck!' in a bone-tired voice, muscles slackening from their tension as he realizes that he's not under attack by Allen. 'Sorry,' the husky adds, lips pressed together in shame. Giving him a raised eyebrow in response and laying on a guilt trip, you mention that this wasn't the response you expected for helping him to get away safely, and even allowing him to stay in your safe haven.";
+			say "     'Shit, yeah - I, I got no excuse...' Carl responds in stumbling words, then stares groggily at you for an uncomfortable moment that lasts far too long. His mind is seemingly not able to string anything further together that would make much sense right now, since he's physically and mentally at his weakest point. That is exactly the opening you needed, mentioning that you only wanted to check on him because he seemed to be in a torturous nightmare. But if he's a danger to others, maybe it's not such a good idea to have him here, after all. 'No! I - I...' the husky barks out in almost panic, his sluggish mind imagining being thrown out onto the dangerous streets and driving him to sit bolt upright in a sudden jerk that uses up what must have been almost the last bit of energy he has in him. Laying a hand on Carl's chest and pushing him back down, you reassure him, explaining that he can stay for right now.";
+			WaitLineBreak;
+			say "     Meeting the gaze of the weak and exhausted canine, you casually mention that everything that has him riled up like this, ready to lash out at his savior at the drop of a pin, is quite horrific indeed. Not seeing through the dark plans of his treacherous superior and going along instead, contributing to Davies's anguish by fucking her without consent, and leaving all of his squadmates in Allen's hands, too. Carl is way past the point of wondering why you know this many details about everything that happened and just curls in on himself in guilt, his mind's eye no doubt swirling around all of those failures. Baiting your hook well, you then go on to say that technically, he isn't the flawed, weak man that allowed such terrible things to happen. That guy was a human, after all, and a soldier. Describing that it would be so much easier to just be a dog, a proud and strong husky, you reel him in slowly.";
+			say "     You muse aloud that you could really use a dependable guard dog, and such a guy would always have a place in the bunker, while a volatile wreck of a soldier might not be a good fit, for everyone's security. Can't depend on someone who's one step from snapping completely, after all. Clearing your throat, you bore your gaze into Carl's slightly unfocused eyes, watching the mixture of guilt and glimmer of hope inside them, then add one last point, explaining that there's really only one thing that even connects the dog you see to that other guy. A tap on the thin metal plate of his dog tags creates a dull, almost hollow sound. With a slight rise of your eyebrows, you pose an unspoken question to the soldier you've driven one step in front of the abyss, and after a long moment of hesitation, he weakly gives you a nod. Suppressing a smile from showing on your face, you undo the chain connector of Carl's dog tags, pulling them off his neck.";
+			WaitLineBreak;
+			say "     A slight shudder goes through the man, as if he feels cold or naked without the tags, and you reach down to grab the blanket he kicked off. Drawing it over him again to make Carl more comfortable, you tell him he can relax now and get the sleep he clearly needs. With a half-sleeping mixture of relief and thankfulness, Carl accepts the blanket and curls up under it, closing his eyes again as he sinks back into unconsciousness. Glancing down on the flimsy chain and the two small plates holding the identity of Carl Banning stamped into their metal, you stroll over to the restrooms and dispose of the tags by throwing them into the dark void of the shaft there. They'll be gone for good, that's for sure. Now, all you have to do is wait for the nanites to rewire the brain of your loyal dog until he's an obedient [']Good Boy['].";
+			now HP of Carl is 30; [start of dog-Carl]
+	TraitGain "CarlLibraryArrival Done" for Carl;
+	move Carl to Bunker; [just in case this hasn't happened before]
 
 to say CarlTalkMenu:
 	LineBreak;
 	say "What do you want to talk with Carl about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	[]
-	if "CarlLibraryArrival Done" is not listed in Traits of Carl:
-		choose a blank row in table of fucking options;
-		now title entry is "Update: Reset Carl and play through his new arrival scene in the library";
-		now sortorder entry is 1;
-		now description entry is "Talk about what comes to mind";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Just chat a bit";
@@ -423,100 +439,108 @@ to say CarlTalk8: [military]
 Section 3 - Sex
 
 Instead of fucking the Carl:
-	if HP of Carl is 2:
-		say "     Maybe you should talk to him a bit first. After all, he ran away from someone just wanting to fuck and control him not too long ago.";
-	else if HP of Carl is 3:
-		if CarlLibraryEntry - turns < 17: [he's still unsure about himself]
-			say "     Pulling off your clothes and gear and setting them down in a near pile, you stroll over to the transformed soldier. As you step up to Carl and offer to have sex with him, you see an eager expression come over his face, his ears perking up and his gaze hungrily wandering over your body. He starts breathing harder, panting with a half-open mouth, and the bulge of his pants starts growing noticeably. Then suddenly, he steps back, breaking out of the moment and shaking his head. He says 'I'd love to, but I - I don't think I should do that. Not now, so soon after Allen changed me. I felt it in me, you know, the urge to just let him do what he wants, submit to the alpha like a good dog.' He shudders as he notices that his tail started wagging for that last bit, something inside him clearly approving of what happened. Concentrating to make it stop, he continues 'Just - give me some time to come to terms with all this, okay?'";
-			LineBreak;
-			if graphics is true:
-				project the figure of Carl_knot_icon;
-			say "     Even though he managed to suppress his immediate urges, the flare-up of lust is clearly still bubbling strongly inside Carl's canine body.";
-			say "     [bold type]Do you want to... give him a little push over the edge?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if Player consents:
+	if "CarlLibraryArrival Done" is not listed in Traits of Carl:
+		say "     [Bold Type]Do you want to reset Carl right now and play through the scene of him arriving in the library? [roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yup, let's see the new stuff!";
+		say "     ([link]N[as]n[end link]) - Not right now.";
+		if Player consents:
+			say "[CarlLibraryArrival]";
+	else:
+		if HP of Carl is 2:
+			say "     Maybe you should talk to him a bit first. After all, he ran away from someone just wanting to fuck and control him not too long ago.";
+		else if HP of Carl is 3:
+			if CarlLibraryEntry - turns < 17: [he's still unsure about himself]
+				say "     Pulling off your clothes and gear and setting them down in a near pile, you stroll over to the transformed soldier. As you step up to Carl and offer to have sex with him, you see an eager expression come over his face, his ears perking up and his gaze hungrily wandering over your body. He starts breathing harder, panting with a half-open mouth, and the bulge of his pants starts growing noticeably. Then suddenly, he steps back, breaking out of the moment and shaking his head. He says 'I'd love to, but I - I don't think I should do that. Not now, so soon after Allen changed me. I felt it in me, you know, the urge to just let him do what he wants, submit to the alpha like a good dog.' He shudders as he notices that his tail started wagging for that last bit, something inside him clearly approving of what happened. Concentrating to make it stop, he continues 'Just - give me some time to come to terms with all this, okay?'";
 				LineBreak;
-				if Player is herm:
-					say "     [bold type]Do you want to fuck him or ride him?[roman type][line break]";
-					LineBreak;
-					say "     ([link]Y[as]y[end link]) - Fuck him.";
-					say "     ([link]N[as]n[end link]) - Ride him.";
-					if Player consents:
-						LineBreak;
-						say "[SubCarl_Assfuck]";
-					else:
-						LineBreak;
-						say "[SubCarl_PussyRide]";
-				else if Player is male:
-					say "     ";
-					say "     [bold type]Do you want to fuck him or ride him?[roman type][line break]";
-					LineBreak;
-					say "     ([link]Y[as]y[end link]) - Fuck him.";
-					say "     ([link]N[as]n[end link]) - Ride him.";
-					if Player consents:
-						LineBreak;
-						say "[SubCarl_Assfuck]";
-					else:
-						LineBreak;
-						say "[SubCarl_AssRide]";
-				else if Player is female:
-					say "[SubCarl_PussyRide]";
-				else:
-					say "[SubCarl_AssRide]";
-				now HP of Carl is 30; [subby Beta]
-				now PlayerControlled of Carl is true; [player became his master]
-			else:
+				if graphics is true:
+					project the figure of Carl_knot_icon;
+				say "     Even though he managed to suppress his immediate urges, the flare-up of lust is clearly still bubbling strongly inside Carl's canine body.";
+				say "     [bold type]Do you want to... give him a little push over the edge?[roman type][line break]";
 				LineBreak;
-				say "     Nodding, you touch Carl's arm and tell him that you understand. As even that touch made him breathe a little harder, you just step away from him for now and leave the transformed soldier to deal with his inner conflicts.";
-		else: [he's come to terms with being a husky, acts like his own person with some canine mannerisms]
-			say "     Pulling off your clothes and gear and setting them down in a near pile, you stroll over to the transformed soldier. As you step up to Carl and offer to have sex with him, you see an eager expression come over his face, his ears perking up and his gaze hungrily wandering over your body. He starts breathing harder, panting with a half-open mouth, and the bulge of his pants starts growing noticeably. Then suddenly, Carl looks behind him with a curious tilt of his eyebrows and starts to chuckle at his exuberantly wagging tail. 'You know what - I'm okay with being a dog now. This body feels strong and pretty amazing - though there are some things I still need to get the hang of.' After a last quick look at his tail, his gaze moves to the bulge in his pants, then to you. In a husky voice he adds 'If you wanna explore some of them with me, I'm game', then pulls his shirt up and over his head, revealing a furry and toned chest.";
-			if graphics is true:
-				project the figure of Carl_knot_icon;
-			if Player is herm:
-				say "     [bold type]Do you want to fuck Carl or get fucked by him?[roman type][line break]";
-				LineBreak;
-				say "     ([link]Y[as]y[end link]) - Fuck Carl.";
-				say "     ([link]N[as]n[end link]) - Get fucked.";
+				say "     ([link]Y[as]y[end link]) - Yes.";
+				say "     ([link]N[as]n[end link]) - No.";
 				if Player consents:
 					LineBreak;
-					say "[Carl_Assfuck]";
+					if Player is herm:
+						say "     [bold type]Do you want to fuck him or ride him?[roman type][line break]";
+						LineBreak;
+						say "     ([link]Y[as]y[end link]) - Fuck him.";
+						say "     ([link]N[as]n[end link]) - Ride him.";
+						if Player consents:
+							LineBreak;
+							say "[SubCarl_Assfuck]";
+						else:
+							LineBreak;
+							say "[SubCarl_PussyRide]";
+					else if Player is male:
+						say "     ";
+						say "     [bold type]Do you want to fuck him or ride him?[roman type][line break]";
+						LineBreak;
+						say "     ([link]Y[as]y[end link]) - Fuck him.";
+						say "     ([link]N[as]n[end link]) - Ride him.";
+						if Player consents:
+							LineBreak;
+							say "[SubCarl_Assfuck]";
+						else:
+							LineBreak;
+							say "[SubCarl_AssRide]";
+					else if Player is female:
+						say "[SubCarl_PussyRide]";
+					else:
+						say "[SubCarl_AssRide]";
+					now HP of Carl is 30; [subby Beta]
+					now PlayerControlled of Carl is true; [player became his master]
 				else:
+					LineBreak;
+					say "     Nodding, you touch Carl's arm and tell him that you understand. As even that touch made him breathe a little harder, you just step away from him for now and leave the transformed soldier to deal with his inner conflicts.";
+			else: [he's come to terms with being a husky, acts like his own person with some canine mannerisms]
+				say "     Pulling off your clothes and gear and setting them down in a near pile, you stroll over to the transformed soldier. As you step up to Carl and offer to have sex with him, you see an eager expression come over his face, his ears perking up and his gaze hungrily wandering over your body. He starts breathing harder, panting with a half-open mouth, and the bulge of his pants starts growing noticeably. Then suddenly, Carl looks behind him with a curious tilt of his eyebrows and starts to chuckle at his exuberantly wagging tail. 'You know what - I'm okay with being a dog now. This body feels strong and pretty amazing - though there are some things I still need to get the hang of.' After a last quick look at his tail, his gaze moves to the bulge in his pants, then to you. In a husky voice he adds 'If you wanna explore some of them with me, I'm game', then pulls his shirt up and over his head, revealing a furry and toned chest.";
+				if graphics is true:
+					project the figure of Carl_knot_icon;
+				if Player is herm:
+					say "     [bold type]Do you want to fuck Carl or get fucked by him?[roman type][line break]";
+					LineBreak;
+					say "     ([link]Y[as]y[end link]) - Fuck Carl.";
+					say "     ([link]N[as]n[end link]) - Get fucked.";
+					if Player consents:
+						LineBreak;
+						say "[Carl_Assfuck]";
+					else:
+						LineBreak;
+						say "[Carl_FucksPlayerPussy]";
+				else if Player is male:
+					say "     [bold type]Do you want to fuck Carl or get fucked by him?[roman type][line break]";
+					LineBreak;
+					say "     ([link]Y[as]y[end link]) - Fuck Carl.";
+					say "     ([link]N[as]n[end link]) - Get fucked.";
+					if Player consents:
+						LineBreak;
+						say "[Carl_Assfuck]";
+					else:
+						LineBreak;
+						say "[Carl_FucksPlayerAss]";
+				else if Player is female:
 					LineBreak;
 					say "[Carl_FucksPlayerPussy]";
-			else if Player is male:
-				say "     [bold type]Do you want to fuck Carl or get fucked by him?[roman type][line break]";
-				LineBreak;
-				say "     ([link]Y[as]y[end link]) - Fuck Carl.";
-				say "     ([link]N[as]n[end link]) - Get fucked.";
-				if Player consents:
-					LineBreak;
-					say "[Carl_Assfuck]";
 				else:
 					LineBreak;
 					say "[Carl_FucksPlayerAss]";
-			else if Player is female:
-				LineBreak;
-				say "[Carl_FucksPlayerPussy]";
+				now HP of Carl is 10; [human in canine shape]
+		else if (lastfuck of Carl - turns < 6):
+			if HP of Carl > 9 and HP of Carl < 30:
+				say "     As you walk up to Carl, he recognizes your eager stride and immediately pulls you into an embrace and a kiss. As he comes up for air, he says 'Frisky, aren't you? I'm afraid I can't quite hold your pace on that - though maybe that's a good thing, or I'd try to tempt you into staying here all day, you sexy beast.' With a chuckle, he takes his hands off you again, then silently adds 'Later, OK?'";
 			else:
-				LineBreak;
-				say "[Carl_FucksPlayerAss]";
-			now HP of Carl is 10; [human in canine shape]
-	else if (lastfuck of Carl - turns < 6):
-		if HP of Carl > 9 and HP of Carl < 30:
-			say "     As you walk up to Carl, he recognizes your eager stride and immediately pulls you into an embrace and a kiss. As he comes up for air, he says 'Frisky, aren't you? I'm afraid I can't quite hold your pace on that - though maybe that's a good thing, or I'd try to tempt you into staying here all day, you sexy beast.' With a chuckle, he takes his hands off you again, then silently adds 'Later, OK?'";
+				say "     As you walk up to Carl with lust in your eyes, he submissively lowers his head and says 'I'm sorry Alpha, but I'm not ready for another round yet. Please, I need some more time.'";
 		else:
-			say "     As you walk up to Carl with lust in your eyes, he submissively lowers his head and says 'I'm sorry Alpha, but I'm not ready for another round yet. Please, I need some more time.'";
-	else:
-		if graphics is true:
-			project the figure of Carl_knot_icon;
-		if HP of Carl > 9 and HP of Carl < 30:
-			say "     As you walk up to Carl, he recognizes your eager stride and immediately pulls you into an embrace and a kiss. As he comes up for air, he says 'Frisky, aren't you? What did you have in mind, you sexy beast?'";
-		else:
-			say "     As you walk up to Carl, he recognizes your eager stride and immediately and waits for you with his head lowered submissively 'What can I do for you, Alpha?'";
-		WaitLineBreak;
-		say "[CarlSexMenu]";
+			if graphics is true:
+				project the figure of Carl_knot_icon;
+			if HP of Carl > 9 and HP of Carl < 30:
+				say "     As you walk up to Carl, he recognizes your eager stride and immediately pulls you into an embrace and a kiss. As he comes up for air, he says 'Frisky, aren't you? What did you have in mind, you sexy beast?'";
+			else:
+				say "     As you walk up to Carl, he recognizes your eager stride and immediately and waits for you with his head lowered submissively 'What can I do for you, Alpha?'";
+			WaitLineBreak;
+			say "[CarlSexMenu]";
 
 to say SubCarl_Assfuck:
 	say "     Ignoring the transformed man's plea, you step up to him and start rubbing the bulge in his trousers, breaking what control he had over his urges. He moans as you continue to stroke and touch him, then slide a hand into his pants and fondle the husky's canine shaft and furry balls. Soon you've got him panting loudly in lust and wagging his tail - which gets even more exuberant as you tell him to be a good dog now and strip for you. Obediently, he pulls off his shirt and lets his trousers drop, baring his well-toned anthro body to you. Then he drops to all fours, expecting the same treatment that Allen gave him from you, his butt raised a bit and tail held to the side to expose his quivering pucker.";
