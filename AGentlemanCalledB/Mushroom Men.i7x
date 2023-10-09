@@ -33,7 +33,7 @@ to say MushroomMenFaceTF:
 	now MMP is a random number between 1 and 3;
 	say "the color drains out of it and all your hair falls away. Weight begins building at the top of your head as the pale, smooth flesh begins to expand, growing into a large mushroom cap covered in [if MMC is 1]white[else if MMC is 2]red[else if MMC is 3]pale yellow[else if MMC is 4]pale orange[else if MMC is 5]brown[end if] flesh[if MMP is 1] with off-white spots[else if MMP is 2] with off-white splotches[else if MMP is 3] of varying shades[end if]";
 
-	
+
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Mushroom Man"	"[PrepCombat_Mushroom Man]"

@@ -29,19 +29,19 @@ NathanielHP is a number that varies. NathanielHP is usually 0.
 
 to say ResolveEvent The Sword in the Stone (while demonologist is tamed and Player is male):
 	say "     As you wander through the forest, you find a old beaten path that leads deeper into the woods. Following this path, you enter into a section of woods that feels almost magical. The air temperature drops to that of a chilly morning, a slight frost forming over nearby folliage. Emerging from the dense overgrowth, you see a resplendent longsword sticking inside of a rock in the center of a clearing ahead of you. Letting out a relieved sigh, you begin to make your way to the clearing. The sword looks beautiful, glinting in the faint light that makes it through the canopy. You now stand infront of the sword, what do you do?";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Try to pull the sword out of the stone.";
 	say "     ([link]N[as]n[end link]) - Begin the ritual to call the sword's owner.";
 	if Player consents:
 		say "     Grabbing the hilt of this sword, you squat down and prepare to lift with all your might. Sadly, the sword doesn't budge. You sigh in defeat, the knowledge that you are not the chosen one stings your pride. What do you do now?";
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Clearly there's been some kind of mistake, leave for now and try again later.";
 		say "     ([link]N[as]n[end link]) - Begin the ritual to call the sword's true owner.";
 			if Player consents:
 				say "     You leave the area for now, determined that one day you will lift that sword! Though you can't shake the feeling that maybe it's not meant for you.";
 			else:
 				say "     Recalling what the book told you, you set up some candles in a concentric circle around the sword. Once that's settled, you strip off your pants and start playing with your cock. Pinching your own nipple, you reimagine the vision of the past you witnessed inside the catacombs. You try to focus on the man's thick cock when it was embedded in your asshole, stretching you wide as he began to orgasm. Rocking your hips back and forth as you swear you can feel long and thick pulses of cum splash against your prostate. Imagining the man giving your ass a firm slap as he finishes cumming in your man hole is enough to send you over the edge. You aim carefully, coating the sword at the hilt and letting it drip downwards. You groan as your balls start to feel empty and your skin tingles as a strange magic envelops you. You look excitedly over at the candles but they are not lit. Frowning, you wonder what you have done wrong.";
-				Linebreak;
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - The book did state that these men are depraved, maybe the sword needs something extra (WS).";
 				say "     ([link]N[as]n[end link]) - Confused, you pick up the candles and head back to contemplate things.";
 				if Player consents:
@@ -53,7 +53,7 @@ to say ResolveEvent The Sword in the Stone (while demonologist is tamed and Play
 					say "     You leave the area for now, maybe you'll try to summon the owner later.";
 	else:
 		say "     Recalling what the book told you, you set up some candles in a concentric circle around the sword. Once that's settled, you strip off your pants and start playing with your cock. Pinching your own nipple, you reimagine the vision of the past you witnessed inside the catacombs. You try to focus on the man's thick cock when it was embedded in your asshole, stretching you wide as he began to orgasm. Rocking your hips back and forth as you swear you can feel long and thick pulses of cum splash against your prostate. Imagining the man giving your ass a firm slap as he finishes cumming in your man hole is enough to send you over the edge. You aim carefully, coating the sword at the hilt and letting it drip downwards. You groan as your balls start to feel empty and your skin tingles as a strange magic envelops you. You look excitedly over at the candles but they are not lit. Frowning, you wonder what you have done wrong.";
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - The book did state that these men are depraved, maybe the sword needs something extra (WS).";
 		say "     ([link]N[as]n[end link]) - Confused, you pick up the candles and head back to contemplate things.";
 		if Player consents:

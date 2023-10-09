@@ -80,7 +80,7 @@ Object	Name
 Strange New Land	"Strange New Land"
 
 Strange New Land is a situation.
-ResolveFunction of Strange New Land is "[ResolveEvent Strange New Land]". 
+ResolveFunction of Strange New Land is "[ResolveEvent Strange New Land]".
 Sarea of Strange New Land is "Outside".
 
 to say ResolveEvent Strange New Land:

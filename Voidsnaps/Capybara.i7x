@@ -111,7 +111,7 @@ to say CapybaraLoss:
 	say "      'Woah, dude, time out!' Stopping in the middle of your battle, the capybara man gives you a grin, holding out his hand. 'You're one hell of a mud-wrestler. You beat my ass!' He seems unbothered by this fact, sitting in the mud puddle at his feet and treating you to the erotic sight of his fat shaft bobbing in the muck. 'I don't suppose you want something for your trouble? I'm sure we could figure something out.' The bout got your blood pumping, and the sight of the naked man before you, offering himself, is enough for your mind to wander. Would it be so bad to let yourself explore with a willing partner?";
 	say "      [bold type]What do you want to do with the capybara?[roman type][line break]";
 	let capybara_Fuck_Choices be a list of text;
-	if Player is male: 
+	if Player is male:
 		add "Ask for a blowjob." to capybara_Fuck_Choices;
 		add "Fuck him in the mud." to capybara_Fuck_Choices;
 	if Player is female:

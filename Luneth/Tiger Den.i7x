@@ -357,7 +357,7 @@ to say ResolveEvent TigerVSTaur:
 			else:
 				say "Invalid choice. Type [link]1[end link] to fight the tigertaur, [link]2[end link] to fight the tiger or [link]3[end link] to watch, or [link]4[end link] to run.";
 		if calcnumber is 1: [help chase]
-			Linebreak;
+			LineBreak;
 			say "[TigerVSTaur_Helped_Chase]";
 			now HP of Chase is 1;
 			now PlayerMet of Chase is true;
@@ -369,11 +369,11 @@ to say ResolveEvent TigerVSTaur:
 			say "[TigerVSTaur_Helped_Kage]";
 			now Resolution of TigerVSTaur is 2;
 		else if calcnumber is 3: [watch]
-			Linebreak;
+			LineBreak;
 			say "[TigerVSTaur_Watched]";
 			now Resolution of TigerVSTaur is 99;
 		else if calcnumber is 4: [run]
-			Linebreak;
+			LineBreak;
 			say "[TigerVSTaur_Ran]";
 			now Resolution of TigerVSTaur is 99;
 		now TigerVSTaur is resolved;
@@ -458,7 +458,7 @@ to say TigerVSTaur_Helped_Kage:
 			else:
 				say "Invalid choice. Type [link]1[end link] to tiger throat, [link]2[end link] to tiger ass or [link]3[end link] to tigertaur, or [link]4[end link] to not in the mood.";
 		if calcnumber is 1: [skullfuck Chase]
-			Linebreak;
+			LineBreak;
 			say "     [TigerVSTaur_Throat_Fuck]";
 			now HP of Chase is 99;
 			now PlayerMet of Chase is true;
@@ -467,10 +467,10 @@ to say TigerVSTaur_Helped_Kage:
 			say "     [TigerVSTaur_Ass_Fuck]";
 			now HP of Chase is 99;
 		else if calcnumber is 3: [mess around with Kage]
-			Linebreak;
+			LineBreak;
 			say "     [TigerVSTaur_Sexy_Kage]";
 		else if calcnumber is 4: [no sexy times]
-			Linebreak;
+			LineBreak;
 			say "     [TigerVSTaur_No_Sexy_Time]";
 
 to say TigerVSTaur_Throat_Fuck:

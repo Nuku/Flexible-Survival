@@ -47,7 +47,7 @@ to say ResolveEvent Fall-O-the-Wisp:
 
 to WispFollow:
 	say "     As you examine the Runestone, a glimmer of blue light catches your eye, but when you look in that direction, you find nothing. You wonder if your mind is playing tricks on you before returning to what you were doing, only to find a glowing orb of soft blue light staring back at you - or at least you think it is. Two brighter spots of light within it appear to be eyes and even blink at you. How such a thing could even exist is beyond you. The blue wisp makes a gentle whirring noise before floating back towards the edge of the glade, almost as if it is beckoning you to follow it.";
-	Linebreak;
+	LineBreak;
 	say "     [bold type]What do you want to do?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Follow the strange creature.";
 	say "     [link](2)[as]2[end link] - Leave it be for now.";
@@ -66,7 +66,7 @@ to WispFollow:
 		WaitLineBreak;
 		say "     The wisp leads you through the dense brush, pushing past branches as twigs snap beneath your feet, but progress is slow. The wisp speeds up, and you do your best to keep it in your sights, but despite your best efforts, it vanishes from your view just beyond some bushes. In one last desperate attempt to find your luminescent guide, you rush forward, only to trip on a stray root before tumbling down an incline. Coming to a sudden halt, you wait a moment for the world to stop spinning before slowly righting yourself, only to get an eyeful of something that you did not expect you would ever be presented with.";
 		say "     In front of you is a feral unicorn, balls deep in what looks to be a deer-taur girl pressed against a stone table, who seems to be greatly enjoying the experience, if her breathy moans are anything to judge by. As if the sight isn't strange enough, a small, red, anthro lizard seems to be sitting on a rock, watching the two while munching on a bag of popcorn. All three stop briefly as they notice you, but quickly resume their activities, your presence being of little bother to them.";
-		Linebreak;
+		LineBreak;
 		say "     What will you do? You can wait for the two lovers and their voyeur to finish, or try to interfere, which will likely upset them to no small degree.";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Enjoy the show.";

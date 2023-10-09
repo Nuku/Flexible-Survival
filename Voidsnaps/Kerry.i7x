@@ -266,7 +266,7 @@ Prereq1Resolution of Superior Breeding is { 1 }.
 
 to say ResolveEvent Superior Breeding:
 	say "     The crawlspace is a tight fit, but you wriggle your way through all the same, following the sounds of animalistic breeding until a breeze draws your attention, bringing the unmistakable scent of a bull rutting. Scuffling along, you follow the growing cacophony until you reach a hole in the crawlspace large enough to look through, conveniently placed above the place where Kerry's stashed Shaw. Peering through the small space, you marvel at how close the minotaurs seem. If the hole wasn't so small, you could drop directly onto their backs!";
-	Linebreak;
+	LineBreak;
 	say "     Do you want to watch Shaw being fucked?";
 	say "     ([link]Y[as]y[end link]) - Watch.";
 	say "     ([link]N[as]n[end link]) - Don't watch, but wait for the situation to change.";
@@ -314,7 +314,7 @@ to say ResolveEvent Shaw's Predicament:
 	let Shaw_Choice be what the player chooses from Shaw_Choices;
 	if Shaw_Choice is:
 		-- "Fuck him.": [sloppy seconds]
-			Linebreak;
+			LineBreak;
 			say "     Licking your lips, you spread those quivering cheeks, delighting at the fresh flow of minotaur cum that drools from Shaw's ruined hole. He won't notice if you take advantage of him in this state, and his shapely bovine rump, dotted with patches of unblemished human skin, is attractive enough. Freeing your cock, you lower yourself, lining your tip up with the sopping wet hole and hissing through your teeth as you sink in with little effort. It's like fucking a silky furnace, and the wet, sloppy slurps that follow each plunge add to the filthy thrill, coating your balls in steaming minotaur cum. Before long, you're pounding away, listening to the sweet chorus of half-awake moans from the captive hybrid.";
 			say "     You're not sure how long you abuse the poor bovine. Shaw's sloppy hole makes it easy for you to last a long time. You savor every moment, exploring Shaw's gently clenching walls at a feverish pace without worrying about the stretched creature's comfort. After all, you can't be harder to take than Kerry. Wait. Amid your fevered balls-deep humping, you recall Shaw's mate. You should try to finish before he gets back! Of course, it's too late. While you were enjoying Kerry's freshly seeded mate's loosened hole, the minotaur had returned. Feeling the hairs on the back of your neck raise, you turn your head into a steaming huff and an angry expression, attempting to pull out of Shaw despite your finish being nowhere near close. Meaty paws grab your hips, but surprisingly, they don't pull you backward, instead spreading your cheeks and lining up with your ass as he keeps your dick buried in Shaw's plundered depths. You realize what's about to happen too late, and you feel your cock surge forward as Kerry penetrates your un-defended hole, sandwiching you between his bulky form and Shaw's unresisting, limp body.";
 			WaitLineBreak;
@@ -323,12 +323,12 @@ to say ResolveEvent Shaw's Predicament:
 			NPCSexAftermath Player receives "AssFuck" from Kerry;
 			now Resolution of Shaw's Predicament is 1; [Player fucked Shaw]
 		-- "Save him.": [remove shaw from the game]
-			Linebreak;
+			LineBreak;
 			say "     Shaking off the horny thoughts, you look around for something to loosen the metal collar around Shaw's neck. A discarded screwdriver in a nearby corner catches your eye, and you grab it, prying the metal open and releasing the poor beast. It's slower than you'd hoped, but you support the half-minotaur as you walk through the destroyed apartment building, stopping once you reach the entrance. Shaw's woken up completely, and he stares, confused, at his half-transformed hand, then shoves you aside, showing a surprising amount of strength as he bellows his dismay, then runs off before you can regain your footing, disappearing into the distance. You try to follow him, but the trail of minotaur cum gives out, and without any further clues, you return to the entrance to his former prison, hoping that you didn't make things worse for Shaw. Who knows what could take advantage of him in his panicked, half-transformed state?";
 			now Shaw is nowhere;
 			now Resolution of Shaw's Predicament is 2; [Player released Shaw]
 		-- "Abandon him.": [Let Kerry keep changing him.]
-			Linebreak;
+			LineBreak;
 			say "     Shaking your head, you decide to leave the minotaur to his fate. With the changes he's already been through, it's unlikely he'll be in his right mind, and it seems merciful to leave him with Kerry. At least Kerry will take care of him. Leaving the unaware half-minotaur, you head back to the entrance to the minotaur lair, hoping you don't run into Shaw's mate on the way.";
 			now Resolution of Shaw's Predicament is 3; [Player left Shaw to be transformed]
 			Move Shaw to Minotaur Grotto;

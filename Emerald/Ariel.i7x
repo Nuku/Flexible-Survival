@@ -333,7 +333,7 @@ to say ArielSex1: [Handsy]
 to say ArielSex2: [Blowjob]
 	say "     Watching the sexy sylph move around her home, you begin to feel your [cock size desc of Player] dick becoming erect. Pulling your cock out, you call for Ariel and ask if she'd be willing to help you with your problem. She pauses momentarily, pretending to consider your request, before rushing towards you and pushing you back against a wall. Quickly falling to her knees, the sylph grabs your hands away from your crotch to give complete stares at one of her favorite things in the new ess to one of her favorite things. You cough a bit as the moment stretches on to remind her that her staring won't help you, though it's certainly not making you softer.";
 	say "     With no hands to hold it still, your cock bobs up and down with your breathing as Ariel moves her face closer to the head. You feel her breath as she hovers over your dick, the air moving around your penis in a way that makes you think the sylph is doing something with her abilities. With a final inhale, the woman looks up to meet your eyes with a mischievous smirk before opening her mouth to insert the head of your cock. The moment her lips seal around you, there's a tremendous suction like if you had stuck your dick in a vacuum. Fully leaning against the wall, with your hands held at your side, you can only whimper as the suction slowly draws the beautiful girl's face toward your pelvis. Not stopping until [if Cock Length of Player < 6] you feel her lips meet the base of your shaft [else if Cock Length of Player > 5 and Cock Length of Player < 11] you feel her lips meet the root of your rod while the rest of your penis is nestled in the nymph's throat [else if Cock Length of Player > 10] she stops, only partway swallowing your prodigious shaft despite her frustrated attempts to make it to the base [end if].";
-	WaitLineBreak;	
+	WaitLineBreak;
 	say "     You relax as the insane suction stops until you feel her moving back toward your tip. Even though she's stopped trying to suck the cum out of your balls, the intense vacuum in her mouth provides a new pleasure every time she draws back, sliding her tongue along the bottom of your shaft before slamming your cock back into her mouth down to the base. The sylph facefucking herself on your cock quickly brings you to the edge, and as your dick begins to twitch in her mouth, Ariel hilts your dick inside her throat one as deep as she can take it before the strings of white cum she's been working for erupt from your cock. The strange suction of her insides wrings your balls dry as the nymph waits for you to finish before finally sliding off and giving the underside one final long lick on her way out.";
 	LineBreak;
 	say "     Finally free from the devilish lips, you sink to the floor to recover your wits. The content sylph notices your stare but only smiles at you innocently before rising to her feet and leaving you to recover.";
@@ -428,7 +428,7 @@ to say EventConditions_Dawning:
 
 Dawning is a situation.
 ResolveFunction of Dawning is "[ResolveEvent Dawning]".
-Prereq1 of Dawning is Eos' Gift. 
+Prereq1 of Dawning is Eos' Gift.
 The level of Dawning is 0.
 The sarea of Dawning is "Nowhere".
 to say ResolveEvent Dawning:

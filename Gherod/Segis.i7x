@@ -82,7 +82,7 @@ to say ResolveEvent Strange Android Seeker:
 			say "     The positive side of this is, you have found out who the suspect is, but there is also a problem... They did not like to be discovered. You leg it immediately, running at maximum speed through the streets to attempt to outrun this assaulter, but they stay on your tail well enough that they do not lose you. You were right, they are indeed a relentless pursuer, and you must find a way to evade them quickly! Taking turns around several alleys, you try to lose sight of them. You think you have managed to do it as you see them slowly walking by the same alley you have entered, and you are temporarily holding an advantage...";
 			LineBreak;
 			say "     You think you were quite fortunate that you could slip through this spot without them noticing, but they will not give up so easily. There is only one way out of this, and that is by incapacitating them, first. There are several options you could attempt...";
-			Linebreak;
+			LineBreak;
 			say "     [link](1)[as]1[end link] - Hit them as hard as you can on a weak spot. You will need to know where to strike (Intelligence Roll), then be swift and precise (Dexterity Roll).";
 			say "     [link](2)[as]2[end link] - Lead them into a nearby fluid puddle. You will need to be able to outrun them without falling on it yourself (Dexterity Roll) while tricking them into thinking they can easily continue to pursue you through it (Charisma Roll).";
 			say "     [link](3)[as]3[end link] - Convince them that you will allow them to willingly use you (Charisma Roll) and then punch them really hard (Strength Roll).";
@@ -293,7 +293,7 @@ to say ResolveEvent Activate Strange Android:
 		say "     Unfortunately, due to your previous efforts, you feel too tired to try and figure this out. Perhaps you should return later with a clearer head.";
 	else:
 		say "     You have got a few options here. As previously you have chosen to stash the android's body, you may know attempt to safely [bold type]reactivate it[roman type], hoping that you manage to shift its hostility into something less unpleasant. Alternatively, you can simply choose to [bold type]return later[roman type], now that you have seen that everything is in order. There is also the possibility of just [bold type]abandoning[roman type] the android and not bothering with it any longer. You doubt anyone around here would know what to do with it, either way.";
-		Linebreak;
+		LineBreak;
 		say "     [link](1)[as]1[end link] - Attempt reactivating the android.";
 		say "     [link](2)[as]2[end link] - Leave to return later.";
 		say "     [link](3)[as]3[end link] - Abandon the android, forever.";
@@ -765,7 +765,7 @@ to say SegisSexMenu:
 	now description entry is "Suggest that you bend over and have him take you";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Masturbate eachother";
+	now title entry is "Masturbate each other";
 	now sortorder entry is 3;
 	now description entry is "Use your hands to please the android and have him do the same to you";
 	[]
@@ -800,7 +800,7 @@ to say SegisSexMenu:
 					say "[SegisSexBlowjob]";
 				else if (nam is "Ask him to fuck you"):
 					say "[SegisSexFuck]";
-				else if (nam is "Masturbate eachother"):
+				else if (nam is "Masturbate each other"):
 					say "[SegisSexMasturbate]";
 				else if (nam is "Drink some milk from his lactating chest"):
 					say "[SegisSexMilk]";
@@ -1092,15 +1092,15 @@ The level of dragon android is 1.
 Dexterity of dragon android is 15.
 The summondesc of dragon android is "[SummonSegis]".
 The dismissdesc of dragon android is "[DismissSegis]".
-The assault of dragon android is "[one of]Segis moves forward and performs an eletric discharge on your foe, causing them to flinch in pain.[or]With swiftness, your android companion dashes towards your foe to deliver a strike with one of its blades.[or]The dragon droid shoots at your foe with impeccable precision, using its pop-up handgun from a short distance.[or]With its mechanical and metallic frame, Segis tackles your foe, slamming them down with its heavy body.[at random]".
+The assault of dragon android is "[one of]Segis moves forward and performs an electric discharge on your foe, causing them to flinch in pain.[or]With swiftness, your android companion dashes towards your foe to deliver a strike with one of its blades.[or]The dragon droid shoots at your foe with impeccable precision, using its pop-up handgun from a short distance.[or]With its mechanical and metallic frame, Segis tackles your foe, slamming them down with its heavy body.[at random]".
 the fuckscene of dragon android is "[SexWithSegis]".
 
 to say SummonSegis:
 	if Segis is visible: [summoning while standing next to him]
 		if "Personality Himbo" is listed in traits of Segis:
-			say "     You call out Segis, inviting him to join you on your day outside. 'Fuck yeah! We're going out! Can't wait to be kicking ass alongside you, my [guygal]! Oh, I could also [one of]play some videos of fucking so we can better decide what to do with the fuckers we defeat[or]fetch you a glass of water before we go, if we've got some[or]cook you a meal, if you're hungry[or]trick a cock cannon into chasing assaulters, if we head into the Red Light District for some odd reason[or]fetch an apple[or]hurt some shitheads that get in our way[or]pet a dog[or]pet a cat[or]pet an aligator[or]pet you... Heheh~[or]get us a cute bunny jock as a pet[or]get Trixie a gift because, damn, she's always so lonely there... Wait, who's Trixie? Something's fucked in my database[or]just tempt you to fuck all day and forget about whatever we're gonna do... Heh, just a joke... Or is it? No, no, yeah, a joke[at random].' He then walks up to you, ready to leave.";
+			say "     You call out Segis, inviting him to join you on your day outside. 'Fuck yeah! We're going out! Can't wait to be kicking ass alongside you, my [guygal]! Oh, I could also [one of]play some videos of fucking so we can better decide what to do with the fuckers we defeat[or]fetch you a glass of water before we go, if we've got some[or]cook you a meal, if you're hungry[or]trick a cock cannon into chasing assaulters, if we head into the Red Light District for some odd reason[or]fetch an apple[or]hurt some shitheads that get in our way[or]pet a dog[or]pet a cat[or]pet an alligator[or]pet you... Heheh~[or]get us a cute bunny jock as a pet[or]get Trixie a gift because, damn, she's always so lonely there... Wait, who's Trixie? Something's fucked in my database[or]just tempt you to fuck all day and forget about whatever we're gonna do... Heh, just a joke... Or is it? No, no, yeah, a joke[at random].' He then walks up to you, ready to leave.";
 		else:
-			say "     You call out Segis, inviting him to join you on your day outside. 'Certainly. Allow me to run my self-defense protocols and make a quick search on foes that we'll possibly face in combat... Done. Weapons are operational. I advise caution while roaming the outer areas. I can also [one of]play numerous videos of sexual encounters stored in my database to provide you with extra expertise in how to properly claim your victories[or]fetch you a glass of water before we go, provided that we have the supplies[or]cook you a meal, if you're hungry[or]trick a cock cannon into chasing assaulters, if we venture into the Red Light District for some odd reason[or]fetch an apple[or]hurt inopportune pesterers and remove them from our way[or]pet a dog[or]pet a cat[or]pet an aligator[or]pet you... No[or]capture a cute bunny for cute therapies... Wait, I must check this malfunction[or]get Trixie a gift so we can cheat our fate and/or purposefully delay our salvation in more ways... Apologies, this seems like a malfunction[or]terminate our lives prematurely in order to escape impending doom... That was a joke[at random].' He then walks up to you, ready to leave.";
+			say "     You call out Segis, inviting him to join you on your day outside. 'Certainly. Allow me to run my self-defense protocols and make a quick search on foes that we'll possibly face in combat... Done. Weapons are operational. I advise caution while roaming the outer areas. I can also [one of]play numerous videos of sexual encounters stored in my database to provide you with extra expertise in how to properly claim your victories[or]fetch you a glass of water before we go, provided that we have the supplies[or]cook you a meal, if you're hungry[or]trick a cock cannon into chasing assaulters, if we venture into the Red Light District for some odd reason[or]fetch an apple[or]hurt inopportune pesterers and remove them from our way[or]pet a dog[or]pet a cat[or]pet an alligator[or]pet you... No[or]capture a cute bunny for cute therapies... Wait, I must check this malfunction[or]get Trixie a gift so we can cheat our fate and/or purposefully delay our salvation in more ways... Apologies, this seems like a malfunction[or]terminate our lives prematurely in order to escape impending doom... That was a joke[at random].' He then walks up to you, ready to leave.";
 	else: [regular summoning]
 		if "Personality Himbo" is listed in traits of Segis:
 			say "     You use your calling device on Segis. It takes some time for the android to arrive at your location, but it does so, eventually. 'Yoo! How's it going, bud?! Are we finally gonna kick some ass together or am I getting the boring bench again? Sucks not hanging out with you...' he says, and after a brief silence, he continues, 'Oh, right! Reports of... whatever I saw on my way here, uh... So there was a [one of]person-sized deer[or]muscular husky[or]sticky ooze[at random], a [one of]cute bunny[or]disguised burglar of unknown origin[or]impressive gargoyle[or]bear[at random], [one of]a large wyvern[or]a carrot[or]an apple[or]a mouse[or]a clown[or]a pink-dressed princess werewolf that could possibly be fake[at random] and... [one of]a cow[or]an alien[or]an abandoned car that no longer works[or]a hallucinogenic plant[or]a pile of trash[at random]. Yeah that's pretty much it. Am I doing this right? Program says so... Kinda. Anyway, we're ready to go, yeah?' He is then ready to follow you.";
@@ -1679,7 +1679,7 @@ to say SegisCosmeticLactation:
 			say "     Currently, Segis has functional lactation, at a moderate production rate of milk in his chest. A larger body type would be required to upgrade this system even further.";
 		say "     Alternatively, you can simply choose to disable this functionality at no cost.";
 		say "     What would you like to do?";
-		Linebreak;
+		LineBreak;
 		say "     [link](1)[as]1[end link] - Upgrade to Extra Milky (Requires Muscular Frame).";
 		say "     [link](2)[as]2[end link] - Deactivate Lactation.";
 		say "     [link](3)[as]3[end link] - Do nothing.";
@@ -1726,7 +1726,7 @@ to say SegisCosmeticLactation:
 			say "[SegisUpgradeMenu]";
 	else: [has both]
 		say "     Currently, Segis has this functionality active, but you may disable it at any time without additional costs. Additionally, since Segis has the Extra Milky upgrade, you can revert him back to a normal lactation mode.";
-		Linebreak;
+		LineBreak;
 		say "     [link](1)[as]1[end link] - Downgrade to normal lactation.";
 		say "     [link](2)[as]2[end link] - Deactivate Lactation.";
 		say "     [link](3)[as]3[end link] - Do nothing.";
@@ -2526,7 +2526,7 @@ to say DAMAExplore:
 
 to say DAMAExplore2:
 	say "     You are standing in front of a terminal with several entry logs you can access, if you so wish. Unfortunately, most of the data is corrupted, so you think you may only be able to access a small portion of what was originally here. Alternatively, you can wrap this up by approaching Segis.";
-	Linebreak;
+	LineBreak;
 	say "     [link](1)[as]1[end link] - Read the first log.";
 	say "     [link](2)[as]2[end link] - Read the second log.";
 	say "     [link](3)[as]3[end link] - Read the last log.";

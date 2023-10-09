@@ -118,7 +118,7 @@ to say ResolveEvent Gruff Gallant And Misguided:
 					say "     Tossing aside your gear, you take advantage of the knight's vulnerable position, gripping his hair and smirking as the exhausted man lolls in your grasp. To the victor goes the spoils, as they say. Slowly, you guide the dazed man closer, lining yourself up with his mouth and parting his lips with the tip of your cock, hissing under your breath at the silky wetness of his tongue. With a grunt, you slide to the root without asking for permission, pausing to appreciate the tight squeeze of the knight's throat and his struggle to take you. It seems like the knight's a natural at sucking cock. Besides a sputtering gag at your first plunging thrust, he barely protests, relaxing his throat and taking on a dazed, faraway look as though cockdrunk. Rather than pushing you away as he regains his strength, he grips your ass with both calloused hands, dragging you into each thrust and rolling his tongue against the underside of your cock. Before long, at his urging, you're fucking his face, slurping wet sounds from his sucking lips and painting his beard and mustache with a sloppy mix of drool and pre.";
 					say "     Widening your stance, you hump to your heart's content, gripping short black hair and ramming yourself home. Your balls slap against the knight's chin as his green eyes stare lifelessly up at you, too desperate to please to struggle, and a thought crosses your mind that nearly makes you cum on the spot- Every knight needs a squire. This knight's proven to be a cock-hungry squire, so why shouldn't you take his place as his master? You'd be doing him a favor. Unperturbed by the twisted thought of superiority that doesn't seem your own, you slam home, grunting as you empty yourself down the disgraced knight's throat. Holding him there, you wait until your cock softens, wiping it across his face and smirking as his tongue darts to clear the last pearly drops from your tip. You get the feeling that you've started something. Perhaps you should [italic type]come back here and see if you can continue to disgrace this poor knight? [roman type]Next time you might even ask his name.";
 					say "     Grabbing your gear and re-dressing, you continue on your way, leaving the nameless knight in an exhausted heap with a raging erection and a need to wash himself again. You'll have to remember this place and return to claim him later.";
-					NPCSexAfterMath Alistair receives "OralCock" from Player;
+					NPCSexAftermath Alistair receives "OralCock" from Player;
 					now thirst of Alistair is 1;
 					now Resolution of Gruff Gallant And Misguided is 1; [Fucked the knight's face as a male.]
 					AddNavPoint Mystical Falls;
@@ -128,7 +128,7 @@ to say ResolveEvent Gruff Gallant And Misguided:
 					WaitLineBreak;
 					say "     Grabbing your gear and re-dressing, you continue on your way, leaving the nameless knight in an exhausted heap with a raging erection and a need to wash himself again. You'll have to remember this place and return to claim him later.";
 					now thirst of Alistair is 1;
-					NPCSexAfterMath Player receives "OralPussy" from Alistair;
+					NPCSexAftermath Player receives "OralPussy" from Alistair;
 					now Resolution of Gruff Gallant And Misguided is 4; [Player pussy eaten. Determines sex scenes in future encounters.]
 					AddNavPoint Mystical Falls;
 			else:

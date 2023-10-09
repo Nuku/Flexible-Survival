@@ -58,7 +58,7 @@ to say ResolveEvent Paratrooper:
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
-		say "     'Thanks for the help. I'm glad I ran into you,' she says, eying you appreciatively. 'It looks like we'll have some time to get to know each other better.' When you notice her slip a hand down to rub her groin, a part of you can't help but smile at the prospect of having some fun with the changing soldier.";
+		say "     'Thanks for the help. I'm glad I ran into you,' she says, eyeing you appreciatively. 'It looks like we'll have some time to get to know each other better.' When you notice her slip a hand down to rub her groin, a part of you can't help but smile at the prospect of having some fun with the changing soldier.";
 		move Vanessa to Back Of The Library;
 		move player to Back Of The Library;
 		if Colleen is bunkered:

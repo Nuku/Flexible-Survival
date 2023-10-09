@@ -1,7 +1,7 @@
 Kosk by Voidsnaps begins here.
 
-[Hunger of Kosk: Affects exhibitionism oral scene. Higher means it's a more common occurence to see you on his cock, for various residents.]
-[Thirst of Kosk: Affects exhibitionism breeding scene. Higher means it's a more common occurence to see you on his cock, for various residents.]
+[Hunger of Kosk: Affects exhibitionism oral scene. Higher means it's a more common occurrence to see you on his cock, for various residents.]
+[Thirst of Kosk: Affects exhibitionism breeding scene. Higher means it's a more common occurrence to see you on his cock, for various residents.]
 [Traits: "Seasoning Search" Opens up quest. Gained from talking to him.]
 ["Seasonings Found": Ends seasoning quest. Gain entry to lizard village and access to Kosk sex scenes after turning them in to him.]
 ["Lizard Village Welcome": Access to village.]
@@ -55,7 +55,7 @@ The scent of Kosk is "[KoskScent]".
 Kosk is in Lizard Village Entrance.
 
 to say KoskDesc:
-	say "     An all-black, muscular lizardman with no clothes to speak of besides a loincloth that barely covers a smooth crotch with a barely visible slit that appears occassionally when he adjusts his position. Dark red eyes that shine like rubies regard you without fear, though you get a sense of danger from the guard. It would be best not to get on his bad side!";
+	say "     An all-black, muscular lizardman with no clothes to speak of besides a loincloth that barely covers a smooth crotch with a barely visible slit that appears occasionally when he adjusts his position. Dark red eyes that shine like rubies regard you without fear, though you get a sense of danger from the guard. It would be best not to get on his bad side!";
 
 to say KoskScent:
 	say "     Kosk smells like autumn leaves, mixed with a hint of mesquite wood. Does he spend a lot of time around smoke?";
@@ -88,7 +88,7 @@ When Play begins:
 	now skin entry is "smooth and scaly with dark green coloration";
 	now tail entry is "You have a long, thick tail over the tight muscular buns of your behind. It's pretty useful for sweeping aside your enemies.";
 	now cock entry is "A reptilian shaft that tapers to a point, giving you a lizard";
-	now face change entry is "it reshapes itself, giving you masculine features and a pointed muzzle. You feel your mouth filling with a predator's sharp teeth as your ears shrink and disappear, turning into reptillian ear holes";
+	now face change entry is "it reshapes itself, giving you masculine features and a pointed muzzle. You feel your mouth filling with a predator's sharp teeth as your ears shrink and disappear, turning into reptilian ear holes";
 	now body change entry is "you fall to the ground, your chest and limbs reforming into a bulky, masculine new shape. Your hands acquire sharp claws, while your feet take the shape of taloned lizard paws";
 	now skin change entry is "scales grow and cover your skin, covering you in natural armor";
 	now ass change entry is "it becomes tight and firmly muscled. This is followed by a very strange feeling as a long tail rapidly forms above it, making you stumble around for a moment before you adjust to using it for balance";
@@ -488,6 +488,6 @@ to say KoskAnalFuck:
 	WaitLineBreak;
 	say "     A few more lizard men and women pass by as Kosk stirs your innards into a froth, each pausing to chat with Kosk and barely acknowledging you. Strangely, the fact that they treat you as nothing more than the furniture turns you on, and you cover your face in their company, twitching through slow-building orgasms that last far too long, aided by Kosk's stamina and steady shoves. You swear you nearly cum half a dozen times before Kosk shows any signs of stopping, basting your innards in so much pre that you feel the excess dripping down your thighs to lubricate his second shaft's gooey thighfuck. Thankfully, you manage to hold it in, hoping to finish when the stud does. 'Usually gets pretty slow around this time.' Kosk grunts after a few minutes in panting silence. It seems he's finally lost his composure, and the way he's shoving inward, slapping your ass cheeks against his lower stomach, tells you he's close to his finish. 'Why don't we finish up? Clench for me.' With that little warning, he speeds his thrusts, slamming into you with such force that you swear he's bruising your colon.";
 	say "     Nodding emphatically, you clamp your inner muscles, going limp under the sudden onslaught of lightning-quick thrusts. It's even better than the steady fucking you've received over the past hours, and just as you crest your peak, firing off several strings into the muddy path below, you feel the cocks inside you erupt, stuffing your hole with so much hot liquid lizard that you can feel your stomach stretch to accommodate it. 'Fuck. I needed that.' Kosk pants, leaning over your back and tilting your head to favor you with a sloppy kiss that smears his drool over your face, slathering your tongue in a smoky flavor. It's a few minutes before he tugs his softening shafts out of your hole, and when he does, he spends another few playing with your stretched ass, fingering your oversensitive walls, and squeezing your cheeks as he strokes your prostate. Sadly, all good things come to an end, and you have to say goodbye to the vigilant lizard, leaving him to lean against his spear and lazily wave, his cocks still dripping outside of their slit.";
-	
+
 
 Kosk ends here.

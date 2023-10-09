@@ -198,7 +198,7 @@ to say WyvernPatriarchLosesCockSounding:
 
 to say WyvernPatriarchLosesBlowjobPlayer:
 	say "     Given the extreme arousal state of the large wyvern, you think you may be able to get him to do certain things for you as long as you place your words well. First, you decide to get your [Cock of Player] cock in hand[if Player is not naked], after fully exposing your body and remove any clothes on the way[else], ensuring your naked body is clearly visible[end if], and see if the wyvern's eyes follow your movements. Noticing the beast's rigid hard-on throbbing as he stares at your dong, you make the suggestion, stepping towards the male wyvern with overflowing confidence. 'No, you cannot possibly ask that of me! I w-would never-...' his words come to a halt as he, once more, trails the motions of your manhood with his slitted pupils as you swing it around. Besides, his very own equipment seems to show the excitement he dares not express through words and actions, such betraying the wyvern's pride.";
-	say "     He hesitantly steps towards you, his great presence making the ground beneath you tremble, and leans his head over yours with his gaze fierce and judgemental. 'Fine, if this is your way to make amends, I shall appreciate the gift you are offering me. Not that this means I thoroughly enjoy the idea, but I am a polite and respectful wyvern. Therefore, it is not in my code of honor to refuse a gift so generously presented, and that is the only reason I will accept your request. None other!' After making such declarations, he half-angrily headbutts you so that you fall with your ass on the ground. While definitely a little painful to your butt, it is not the end of the world, though you barely have time to readjust yourself as the wyvern's head hovers above you.";
+	say "     He hesitantly steps towards you, his great presence making the ground beneath you tremble, and leans his head over yours with his gaze fierce and judgmental. 'Fine, if this is your way to make amends, I shall appreciate the gift you are offering me. Not that this means I thoroughly enjoy the idea, but I am a polite and respectful wyvern. Therefore, it is not in my code of honor to refuse a gift so generously presented, and that is the only reason I will accept your request. None other!' After making such declarations, he half-angrily headbutts you so that you fall with your ass on the ground. While definitely a little painful to your butt, it is not the end of the world, though you barely have time to readjust yourself as the wyvern's head hovers above you.";
 	WaitLineBreak;
 	say "     Before you can react, his tongue comes descending upon your body and, with long and surprisingly tender licks, he caresses your entire body with that slick organ of his, decently wet and nimble. Its warm surface clashes with your outside body temperature, delivering a pleasant sensation as it rubs down on you through all the soft and sensitive spots. You feel the wyvern's damp breath brushing against you, causing your body's surface to glisten in moistness. With repeated circular motions around your torso, the wyvern continues to lick your body, sending many shivers of pleasure up and down your spine in ways you cannot even describe. It makes your penis throb with such solidity that your mindlessly lead your hands over to stroke it.";
 	say "     With his focus unabated, the wyvern then moves his very long tongue over your parts, swatting your hands away with a grunt, and what he does is twirl his tongue around your shaft and stroke it that way, wrapped around it. The sensations are incredible, as the wyvern's tongue constricts your penis and moves through it with surprising mastery, feeling way better than your hands could ever feel. The beast's saliva is gooey and serves as a good lubricant, helping you feel that friction all over your cock in a much more bearable and pleasant manner. All this encourages your hips to move on their own as you thrust into and through the tunnel of spiral flesh the wyvern's making.";
@@ -253,10 +253,10 @@ to say WyvernPatriarchLosesGetCockVored:
 	say "     ([link]Y[as]y[end link]) - Being imprisoned for an indefinite amount of time in the wyvern's balls sounds hot. You feel turned on.";
 	say "     ([link]N[as]n[end link]) - That sounds like a horrific fate! You are beginning to regret this...";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     His gaze pierces yours in all seriousness as you can only feel like this is really hot to you, which seems to have not been what the wyvern had intended. 'For the love of... You truly are a degenerate pervert! Very well, you will spent an undecided amount of time within the confines of my orbs. Perhaps until when, or if, I decide to liberate you. We shall see for how long you will find this arousing.'";
 	else:
-		Linebreak;
+		LineBreak;
 		say "     His grin only widens at the sight of your despair, which you express immediately. 'Ow, the litte runt is now scared of what might happen to them once they go missing within the confines of my orbs? TOO LATE! You will get to experience it either way! And all the way until... or IF... I decide to liberate you.'";
 	WaitLineBreak;
 	say "     'Now, I tire of your face. Get down.' With a single throb, he pulls most of your body inside him, as apparently he has complete control over how fast he can swallow you deeper into his member, and soon, you have only your head poking out of the tip. 'What a pathetic thing you are... So vulnerable, at the brink of disappearing into me with a single push... For who knows how long! And all out of his own volition... I must admit, it is the idea that has most turned me on until this very day.' The wyvern then leans his head over and puts his long tongue out to give your features a couple of lickings, filled with wet saliva that comes washing over you. Once he is satisfied with this, he places it above your head and begins to push you down with it.";
@@ -358,7 +358,7 @@ to say Wyvern Patriarch Desc:
 		else: [a failsafe]
 			say "     'You again?! Hasn't our last meeting been clarifying enough?! Must I BREAK you until you learn your place?! So be it. I will ensure you won't forget another time what it means to defy my authority! SUBMIT! Or I'll make you.'";
 		WaitLineBreak;
-		Linebreak;
+		LineBreak;
 		say "     This massive wyvern hovering above you, with loud and intimidating wings, has the same characteristics as a normal one, except much larger, and is covered in both red and golden scales. As he swoops down to confront you, the sheer force of his landing nearly knocks you off balance as the earth around you shakes, his enormous visage enough to overtake you within his shadow. From his head, two large horns extend towards the back of his long and girthy neck. Then, right at the tip of his wings, protrudes a huge and sharp foretalon on each. You also have his impossible weight, supported by a pair of extremely thick, powerful legs and huge clawed feet, all serving as natural weapons to cut and impale you with. You have never seen a wyvern this muscular and powerful-looking, way larger than even a monster truck. The nature of his voice clearly suggests he is a male.";
 
 Section 2 - Wyvern Patriarch to NPC Event
@@ -712,7 +712,7 @@ instead of fucking Vuukzasqig:
 to say VuukzasqigSexMenu:
 	WaitLineBreak;
 	say "     [bold type]What shall you do with Vuukzasqig?[roman type][line break]";
-	Linebreak;
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

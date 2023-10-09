@@ -480,7 +480,7 @@ to say DinoPackIslandEnding: [bad end culmination for the island]
 	decrease score by 25;
 	now humanity of Player is 0;
 	trigger ending "Dino Pack Idol";
-	end the story saying "You know that you will never leave this place again, and your new destiny is to lie here, part of this altar, a vessel of lust and power for those who control you. Your body will serve as a tool, a conduit, a battery, and more besides while in a never ending cycle. The endless lust will fuel the powers of this place and its new owner, until it reaches far beyond the confines of this island. Your slutty body will forever be a part of that – and you couldn't be happier.";
+	end the story saying "You know that you will never leave this place again, and your new destiny is to lie here, part of this altar, a vessel of lust and power for those who control you. Your body will serve as a tool, a conduit, a battery, and more besides while in a never-ending cycle. The endless lust will fuel the powers of this place and its new owner, until it reaches far beyond the confines of this island. Your slutty body will forever be a part of that – and you couldn't be happier.";
 	now battleground is "void";
 	follow the turnpass rule;
 

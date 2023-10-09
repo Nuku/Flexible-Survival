@@ -87,7 +87,7 @@ to say Werewolf Brute Loses:
 		say "     After pulling your best efforts at seducing and teasing this hulking werewolf, his movements become more sluggish as that massive erection swinging around between his legs really gets in his way. After so much throbbing, he finally seems to give up on trying to catch and subdue you, falling on the ground while trying to catch his breath. 'Fuck...! D-don't do this to me...! J-just come sit on this dick and we'll call it even!' he says, putting an end to the fight as he looks at you with pleading eyes.";
 	else:
 		say "     After a strenuous fight, you manage to subdue the big werewolf with the best of your abilities, bringing the beast down with your last efforts. He growls at you, unable to stand up and remaining helplessly defeated. 'Grr! There's no way you could've won!' says the lupine brute, trying his very best to find strength in himself to resist you, but he really looks exhausted. Looking at him, you are left to think if you want to do anything with the tired werewolf, now that you have got him under your thumb.";
-	Linebreak;
+	LineBreak;
 	say "[WerewolfBruteLosesSexMenu]";
 
 to say WerewolfBruteLosesSexMenu:

@@ -477,7 +477,7 @@ instead of conversing the Grant:
 			say "     The impressive male hyena spares you the briefest of glances as you come over to him, then casually shoves you away with one of his feet, not interested in talking to a gang bitch like you.";
 	else if granttalk is 0:
 		say "     You head on over to the biker leader to talk to him. He [if matriarchowned is 1]rises respectfully as his superior comes over[else if matriarchdefeated is 1]looks you over, a lesser member, and gives a soft grunt of acknowledgement[else]nods casually to you, waiting to hear what you have to say[end if]. You start talking to him and he looks over the room again, then back to you.";
-		say "     'The name's Grant. I don't think you got it earlier. I've got the mechanics working on my bike, giving her a bit of tune up. After so long out on the road, she needs some TLC. I'll be here for a little while. I've been eying the new recruits for possible riders while I've got the time, but haven't seen any I want to bother with. Slim picking lately, it seems.'";
+		say "     'The name's Grant. I don't think you got it earlier. I've got the mechanics working on my bike, giving her a bit of tune up. After so long out on the road, she needs some TLC. I'll be here for a little while. I've been eyeing the new recruits for possible riders while I've got the time, but haven't seen any I want to bother with. Slim picking lately, it seems.'";
 		increase granttalk by 1;
 	else:
 		say "[one of]'Like I said,' the biker leader states, 'I have the crew working on a tune up for my bike. It's good to take a break after being away for so long.'[or]'Look at them,' the hyena says, 'most of them are running around without any focus. Too undisciplined to be any use except as goons.'[or]'Most of this lot don't measure up to my riders. I don't think I'll be adding any new riders.'[or]'It seems that you and Gina are hitting it off. Stick with her. She's a good lieutenant.'[or]'If Gina was into bikes, I'd have her in my team.'[in random order]";
@@ -629,7 +629,7 @@ to say grantbitchsex3:
 	if Player is female:
 		say "     You are filled with pleasure as the studly male sinks his cock into your pussy, spreading your wet lips around his thick shaft. It somehow feels even better than before, like this is exactly where you belong, bent over for this dominant, loving master. Your body is meant for him and your womb is meant for his seed. That image makes your pussy quiver and you lick your lips, hopeful to feel it soon.";
 		say "[grantstretch]";
-		say "     Glancing back, you can see the hangers on are watching again, eying you both lustfully and enviously. Let them watch and be jealous all they want, you think. It is too late, you are his special bitch now";
+		say "     Glancing back, you can see the hangers on are watching again, eyeing you both lustfully and enviously. Let them watch and be jealous all they want, you think. It is too late, you are his special bitch now";
 		if "Sterile" is not listed in feats of Player, say " and his pups will be yours now";
 		say ".";
 		say "     His paws are not idle, playing with your breasts and stroking your pussy even as he tries to work his growing knot into you. 'Ngg... I knew you'd come back, slut. And I'm glad, only a special bitch like you deserves to be my personal";
@@ -646,7 +646,7 @@ to say grantbitchsex3:
 		wait for any key;
 	else:
 		say "     You are filled with pleasure as the studly male sinks his cock into your ass, spreading your tailhole wide around his thick shaft. Having stretched you out last time, there is little pain now and it somehow feels even better than before. It is like this is exactly where you belong, bent over for this dominant, loving master. Your body is meant for him and your ass is meant for his cum. That image makes your anal walls quiver and you lick your lips, longing to feel it soon.";
-		say "     Glancing back, you can see the hangers on are watching again, eying you both lustfully and enviously. Let them watch and be jealous all they want, you think. It is too late, you are his special bitch and fucktoy now.";
+		say "     Glancing back, you can see the hangers on are watching again, eyeing you both lustfully and enviously. Let them watch and be jealous all they want, you think. It is too late, you are his special bitch and fucktoy now.";
 		say "     His paws are not idle, playing with your cock and balls even as he tries to work his growing knot into you. 'Ngg... I knew you'd come back, slut. And I'm glad, only a special bitch like you deserves to be my personal fucktoy.' As he groans out that last word, his knot pops into you, sending you both over the edge.";
 		[WaitLineBreak]
 		say "     Feeling the hot rush of the stud's seed into you, you grip the wood, sinking your claws into it. His cock has pushed deep into your tight rump, blasting his thick load inside you as he claims you as his new bitch. You feel so warm and full inside as his ample load fills you while your own submissive cum paints the crate.[mimpregchance]";

@@ -671,6 +671,6 @@ to say SnapjawSexMuscleWorship:
 	NPCSexAftermath Player receives "Other" from Snapjaw;
 	if Loyalty of Snapjaw < 9:
 		increase Loyalty of Snapjaw by 1;
-	
+
 
 Snapjaw Beach Camp ends here.
