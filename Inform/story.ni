@@ -684,7 +684,7 @@ Include Spidertaur Female by Wahn.
 Include sprite by Nuku Valente.
 Include Squid by Stripes.
 Include Squire by Stripes.
-Include Stallionboi by Sarokcat n Verath.
+Include Stallionboi by Fuxi.
 Include Succubus by Sarokcat.
 Include Sugar Ferret by Stripes.
 Include Sugar Glider by AGentlemanCalledB.
@@ -780,7 +780,7 @@ Include Bubble by Stripes.
 Include Cadmea by Prometheus.
 Include Campus Gym by UrsaOmega.
 Include Callidora by Prometheus.
-Include Carl by Wahn.
+Include Carl2.0 by Wahn.
 Include Casper by Prometheus.
 Include Cassian by Voidsnaps.
 Include Cassiel by Tin Can.
