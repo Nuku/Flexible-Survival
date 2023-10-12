@@ -194,14 +194,14 @@ to say PhilipTalkTF:
 		else:
 			say "Invalid choice. Type [link]1[end link] to pick his fur or [link]2[end link] to drink some cum directly off his dick or [link]3[end link] to ask for some bottled cum instead or [link]4[end link] to go back with your request.";
 	if calcnumber is 1: [his fur]
-		Linebreak;
+		LineBreak;
 		say "     You decided that you want a safer approach and go with his own strain, which means his fur. He doesn't look too disappointed, but you know he would prefer something else. 'Alright.' he says, as he goes grab something sharp enough to cut some of his short pig fur and hand it to you. 'Handle it carefully, a little breeze could send it all flying. Best you use it now... Just a suggestion, *oink!* of course...' As he finishes speaking, you collect his offering and thank him for it. 'It was nothing. You can pay me later, in food or something else. Like offering yourself to be my [if Player is male]sowboy once you're looking studly like me[else]sow once you're a sexy pig lady[end if].' he winks and grins, before he returns to his corner.";
 		ItemGain piggy fur by 1;
 	else if calcnumber is 2: [his cum, from a blowjob]
 		if lastfuck of Philip - turns < 6:
 			say "     What better way there is to drink some cum if not from a blowjob? Philip agrees, but that's all teasing from him. 'I knew you'd pick that option. Unfortunately, I'm still drained from last time we fucked, so maybe we should do this another time. My load has to be especially big for it to take the desired effect, you see...' Sad that this was the outcome, you understand that you have to wait a bit more until he can get into action again.";
 		else:
-			Linebreak;
+			LineBreak;
 			say "     What better way there is to drink some cum if not from a blowjob? Besides, his junk looks so plump and tasty by now, as he didn't stop caressing it while you were unawarely staring at it. Or perhaps you wanted to look at those large hanging balls as his cock kept on getting harder... a big fat boar cock rising to attention as it throbs every other second. Your mouth is watering at the thought, and his large hand pig hand brushes your cheek while he pulls you closer to his large body. 'How about I give you a huge load? The biggest one... and have you swallow every drop?' he teases you, his words sounding like a blissful lullaby to your ears... 'And as a payment, you suck me off like a good little sow. Because that's what you'll be doing all the time once you turn into this sexy, big and beautiful pig slut.'";
 			say "     You look at him with all the eagerness to just drop down to your knees, and he allows you once you're literally squirming with the need to stuff your mouth with his boar meat. Now facing his hard-on, you eagerly lean your head over to taste his shaft as his hand plants itself on the back of your head, pulling you to him with as much vigor as the desire you have. Rapidly, you shove his cock past your lips, sucking on the big and fat rod that pulses with desire, leaking precum onto your tongue with each caress you give. The horny pigman puts his other hand on your head and leads you back and forth on his shaft, taking it deep in your throat with each powerful thrust. You can feel his heavy balls swinging heavily against your chin, as well, plump and full...";
 			WaitLineBreak;
@@ -212,7 +212,7 @@ to say PhilipTalkTF:
 			infect "Messy Pig";
 			NPCSexAftermath Player receives "OralCock" from Philip;
 	else if calcnumber is 3: [his cum, from a bottle]
-		Linebreak;
+		LineBreak;
 		if lastfuck of Philip - turns < 6:
 			say "     Wanting to become more of a sow but without having to get dirty, you suggestively hand Philip a bottle before you say you want some of his cum. 'What?! Are you serious? We just fucked a while ago, and you're asking me to cum into a bottle?! Not only I'm drained from that yet, but I think that's very... *oink!* *snort!* unthoughtful of you! I figured if you rubbed me for a while, I'd get enough in my balls to pump a good load...' he exclaims, clearly disappointed at your choice. 'Whatever, if you really want some bottled cum, come back later once I've got my balls full again.' he finishes, moving back to his corner slightly annoyed. You should not worry, this is temporary.";
 		else:
@@ -220,7 +220,7 @@ to say PhilipTalkTF:
 			say "     Some short minutes after, you hear him say 'It's done!' before you walk back to the shed. 'Here.' he says, handing you a quite messy, and very full, bottle of his own cum. 'Make sure you drink it all to maximize its effects. To the last drop. And lick the interior. You gotta stick your tongue reeeeally deep in there to get everything. Don't stop until it's all clean and shiny again, got it?' While his recommendation seems rather appropriate for the cause, that will be your call in the end. Philip gives you a pat on the shoulder before he returns to his corner.";
 			ItemGain piggy cum by 1;
 	else if calcnumber is 4: [nothing]
-		Linebreak;
+		LineBreak;
 		say "     You decide to not go any further with this plan, and tell Philip that you'll give him an answer later. 'Oh... alright...' he oinks sadly as he lets go of you, returning to his corner. 'I'll be waiting to feed you later, then...' the pig man teases you a bit more, giving his cock and balls another visible stroke in front of you, grinning all the time, which makes you wonder how much exactly he would like if you took his offer. Perhaps a lot, but this time, it is your call.";
 	now PhilipDoneTalking is true;
 
@@ -236,10 +236,10 @@ to say PhilipTalkPIG:
 		say "     ([link]Y[as]y[end link]) - Yes (beware of infection).";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "[pig_fratinitiation]";
 		else:
-			say "     You thank Philip for his readyness to introduce you to the fraternity, but you let him know that you won't go right now. 'Ah, I see. Maybe later, then?' he asks, ending with a snort.";
+			say "     You thank Philip for his readiness to introduce you to the fraternity, but you let him know that you won't go right now. 'Ah, I see. Maybe later, then?' he asks, ending with a snort.";
 	else if piginitiation is 3 and Philip is in large shed and Player is not neuter:
 		say "     Deciding to bring up his old fraternity again now that he's fed and safe, you get a much better response from the big piggy. 'Those were some good times back with the guys at the mighty Phi Iota Gamma,' he says with a series of loud oinking at the end. 'Mmm... I miss the ole mudhole. We had some really good parties. I wonder how the place is doing these days...' he muses, rubbing his roly-poly belly.";
 		say "     Seeing your opportunity, you tell him that it seems to be doing really well, just having had a really wild party the other day. Plenty of beer, lots of horny sows, all still there and having a good time. You add that you'd wanted to check it out, but they'd said it was for frat brothers only.";
@@ -251,10 +251,10 @@ to say PhilipTalkPIG:
 		say "     ([link]Y[as]y[end link]) - Yes (beware of infection).";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "[pig_fratinitiation]";
 		else:
-			say "     You thank Philip for his readyness to introduce you to the fraternity, but you let him know that you won't go right now. 'Ah, I see. Maybe later, then?' he asks, ending with a snort.";
+			say "     You thank Philip for his readiness to introduce you to the fraternity, but you let him know that you won't go right now. 'Ah, I see. Maybe later, then?' he asks, ending with a snort.";
 	else:
 		say "     Deciding to give it a shot, you ask Philip if he knows anything about the Phi Iota Gamma fraternity you encountered. 'Ahhh, the mighty Phi Iota Gamma... *oink* *snort* ...those were the days. I was the frat's mud wrestling champ. How do you think I got to be good?' He rolls over in the mud a few times, thinking back on those times.";
 		say "     You try to suggest that he sponsor you to join the frat, but he just rubs his tummy. 'Now, I don't know... you've not really proven yourself to be Phi Iota Gamma material. Besides, I've got some food worries to deal with. How about you just focus on [italic type]feeding[roman type] me until I'm satisfied and we'll see if you're ready for the mighty Phi Iota Gamma?' He chuckles, unleashing another wave of oinks and squeals. Perhaps he would be more inclined to help you if you gave him [bold type]food and shelter...[roman type][line break]";
@@ -329,7 +329,7 @@ to pigfeed:
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     'Here you go,' he oinks as he hands you the box, then he rolls over and promptly falls asleep in the mud.";
 			say "     It seems like a pretty normal can of food. You would thank him, but it appears he is already snorting.";
 			ItemGain food by 1;
@@ -354,7 +354,7 @@ to pigfeed:
 				say "     When he finishes eating, he eyes you appreciatively, then says, 'You seem to know how to find food. Can I come with you?'";
 				say "     Do you let him?";
 				if Player consents:
-					Linebreak;
+					LineBreak;
 					add "water bottle" to invent of large shed;
 					add "water bottle" to invent of large shed;
 					move Philip to large shed;
@@ -381,11 +381,11 @@ to pigfeed:
 			say "     ([link]Y[as]y[end link]) - Feed Philip.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				ItemLoss food by 5;
 				say "[PhilipSpecialFeed]";
 			else:
-				Linebreak;
+				LineBreak;
 				say "     You drop the idea, for now.";
 		else:
 			say "     You estimate his words on quantity of food on about [bold type]five units[roman type]. If you manage to put all of those together, maybe you could stuff the pig full of food... Certainly, he would enjoy it a lot.";
@@ -700,7 +700,7 @@ to say sexwithphilip:
 		say "     'I know it's hard to resist my charmingly good looks,' Philip smiles, 'But the way to my heart is through my stomach and you simply haven't fed me enough times yet.'";
 		stop the action;
 	if Sandra is bunkered and HP of Philip is 0 and lust of philip - turns >= 16 and lastfuck of Philip < 255:
-		say "     Approaching Philip for some more of his big, sloppy loving, you find him in Sandra's company. She's chatting to him pleasantly, but clearly has her eyes on his enlarged cock. He's also eying her quite appreciatively, quite literally salivating at the bunny girl's breasts. Shall you encourage them to have some fun so you can join in or will you let them be alone together?";
+		say "     Approaching Philip for some more of his big, sloppy loving, you find him in Sandra's company. She's chatting to him pleasantly, but clearly has her eyes on his enlarged cock. He's also eyeing her quite appreciatively, quite literally salivating at the bunny girl's breasts. Shall you encourage them to have some fun so you can join in or will you let them be alone together?";
 		if Player consents:
 			say "     You smile as you go join them, moving in beside Philip and running your hands over him. He oinks and gives you a sloppy kiss as he welcomes you. 'Mmm... hello there,' he grunts. 'The bunny and I were just getting to know each other a li-' he starts to say before getting distracted as you give his pink shaft a playful stroke, causing him to oink loudly again. Glancing over, you catch Sandra glaring at you as you manhandle her prize.";
 			say "     With an agreeing nod and a friendly, yet flirtatious smile, you remark that, indeed, you should take this opportunity to know each other better, while playfully complimenting Philip's body, hinting at his very large size. He chuckles at his, rubbing his hands over his pudgy body, though it's the hefty, dribbling cock that has Sandra's attention as you offer her a go at his erection. And she's quickly on her knees, licking and kissing at that porcine rod, her earlier anger gone as she goes down on that musky pillar of meat.";
@@ -733,7 +733,7 @@ to say sexwithphilip:
 	say "     ([link]Y[as]y[end link]) - Let Philip take charge.";
 	say "     ([link]N[as]n[end link]) - Back away.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		let piggymalefun be 8;
 		if Player is submissive, increase piggymalefun by 2;
 		if Player is mpreg_ok, increase piggymalefun by 2;

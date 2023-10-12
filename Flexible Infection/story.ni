@@ -550,7 +550,7 @@ Section - Hippo Alchemist
 
 table hippo alchemist - Hippo Shifts
 Segment	Shift Text	Desc Text	Unshift Text
-"head"	"Your cheeks balloon outwards as your face curves with newly gained fat and muscle. Long curled ears of a hippo sprout from your skull, twitching softly. Your [if destined femininity of Player is 1]eyebrows grow thicker as your lashes extend[else]facial hair grows dramatically, gaining you a styles beard and moustache[end if]."         	"You have the head of a hippo, purple and ponderous. You have [if destined femininity of Player is 1]long lashes and thick eyebrows[else]a thick beard and long moustache[end if]."	"Your hippo like head changes"
+"head"	"Your cheeks balloon outwards as your face curves with newly gained fat and muscle. Long curled ears of a hippo sprout from your skull, twitching softly. Your [if destined femininity of Player is 1]eyebrows grow thicker as your lashes extend[else]facial hair grows dramatically, gaining you a styles beard and mustache[end if]."         	"You have the head of a hippo, purple and ponderous. You have [if destined femininity of Player is 1]long lashes and thick eyebrows[else]a thick beard and long mustache[end if]."	"Your hippo like head changes"
 "chest"	"Your chest expands with muscle and fat in equal abundance as the skin turns a purple hue[if destined femininity of Player is 1]. Your chest grows forward, allowing two great mounds to occupy it[end if]."           	"You have the chest and back of a purple hippo[if destined femininity of Player is 1]. Your chest has two large breasts that rest heavily against your muscled chest[end if]."	"Your back itches as it shifts"
 "gut"	"You perhaps regret that cookie as your gut swells with what may seem to be fat before you can confirm it is equally muscle-bound."          	"You have a ponderous purple belly of a hippo, powerful and fat."	"Your huge gut shifts as it changes"
 "pelvis"	"Purple flesh turns darker the further down between your legs it goes, leaving a[if destined masculinity of Player is 1] bloated but perfectly human penis[end if][if destined femininity of Player is 1 and destined masculinity of Player is 1] and a [end if][if destined femininity of Player is 1] pouting, purple-tinged vagina[end if]."          	"You have a [if destined femininity of Player is 1]bloated but perfectly human cock [end if][if destined femininity of Player is 1 and destined masculinity of Player is 1] and [end if][if destined masculinity of Player is 1]purple-tinted vagina[end if]."	"Your cock strains as it starts to change"
@@ -567,7 +567,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"Purple flesh runs along your right shin as your muscles compete with soft fat."       	"Your right shin looks large and purple."	"Your purple skin flows as your right shin reforms"
 "right foot"	"Your foot becomes large and purple as if injured, but there is no pain there, only strength."            	"You have a large flat purple foot with big darker purple toes."	"The purple flesh of your right foot begins to change"
 "rear" 	"Purple skin pushes outwards into a little twitchy nub of a tail."              	"Your have a naked purple nub of a tail."	"Your rear feels odd as the latex shifts"
-"full" 	"hippo alchemist"	"[if destined femininity of Player is 1 and destined masculinity of Player is 0]You are a female hippo, large and round and powerful. Your fat and muscles compete for space, leaving you curved with hidden might[end if][if destined femininity of Player is 1 and destined masculinity of Player is 1]You are a hermaphroditic purple hippo. Your generous curves compete with your big purple human cock dangling between your legs[end if][if destined femininity of Player is 0 and destined masculinity of Player is 1]You are a male hippo, waddling on two great purple legs with big toes. Behind you, a little nub of a tail sways wildly. Your face is adorned with a thick moustache and beard[end if][if the pregnant of Player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
+"full" 	"hippo alchemist"	"[if destined femininity of Player is 1 and destined masculinity of Player is 0]You are a female hippo, large and round and powerful. Your fat and muscles compete for space, leaving you curved with hidden might[end if][if destined femininity of Player is 1 and destined masculinity of Player is 1]You are a hermaphroditic purple hippo. Your generous curves compete with your big purple human cock dangling between your legs[end if][if destined femininity of Player is 0 and destined masculinity of Player is 1]You are a male hippo, waddling on two great purple legs with big toes. Behind you, a little nub of a tail sways wildly. Your face is adorned with a thick mustache and beard[end if][if the pregnant of Player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
 
 Section - Kangaroo
 
@@ -3413,9 +3413,9 @@ every turn:
 						try silently dropping H;
 						remove H from play;
 					else:
-						say "     The small cat reaches up towards you and you pick her up against better judgement. She nuzzles at your chest wantingly, but your shirt is in the way. She tries to claw at it and you quickly set her back down.";
+						say "     The small cat reaches up towards you and you pick her up against better judgment. She nuzzles at your chest wantingly, but your shirt is in the way. She tries to claw at it and you quickly set her back down.";
 				else:
-					say "     The small curvy feline approaches and looks up at you imploringly. Against your better judgement, you reach down and pick her up. She leans in and begins to eagerly suckle at your chest.";
+					say "     The small curvy feline approaches and looks up at you imploringly. Against your better judgment, you reach down and pick her up. She leans in and begins to eagerly suckle at your chest.";
 					if the TF table of chest is not table 21 and the tf table of chest is not table 22:
 						infect chest with N;
 						say "     As the small cat nurses on you, your chest becomes covered with tawny brown fur and your B cup breasts begin to lactate into her eager maw. You feel your willpower ebbing as pleasure seers through your nerves at the delightful sensations.";
@@ -4420,7 +4420,7 @@ The TF description of a Lioness is "gasps in a high tone as they begin to shrink
 
 Section - Big Hippo
 
-A Big Hippo is a infection model. Description of a Big Hippo is "They are a lumbering purple biped with smooth [one of]purple[or]brown[or]purple[or]tan[or]yellow[at random] skin. They have a moustache and beard, quite thick and stylized. They also have hair, big hippo ears popping free of it. Their gut hangs free with fat and power combined." The TF table of a Big Hippo is Table hippo alchemist. Big Hippo is male.
+A Big Hippo is a infection model. Description of a Big Hippo is "They are a lumbering purple biped with smooth [one of]purple[or]brown[or]purple[or]tan[or]yellow[at random] skin. They have a mustache and beard, quite thick and stylized. They also have hair, big hippo ears popping free of it. Their gut hangs free with fat and power combined." The TF table of a Big Hippo is Table hippo alchemist. Big Hippo is male.
 
 The move rate of a Big Hippo is 1.
 The attack rate of a Big Hippo is 3.

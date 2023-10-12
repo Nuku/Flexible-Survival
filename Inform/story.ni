@@ -896,7 +896,7 @@ Include Kyrverth by Speedlover.
 Include Lance by Verath.
 Include Landon by Luneth.
 Include Larissa by Stripes.
-Include Leon by Luneth.
+Include Leon by Voidsnaps.
 Include Leonard by Stripes.
 Include Lilith by Wahn.
 Include Lindsey by Prometheus.

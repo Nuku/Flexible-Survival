@@ -81,7 +81,7 @@ Body Definition of Mogdraz is 9. [scale of 1-9 for body definition, grouped into
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Mogdraz is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 Mouth Length of Mogdraz is 9. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-Mouth Circumference of Mogdraz is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Mouth Circumference of Mogdraz is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
 Tongue Length of Mogdraz is 8. [length in inches]
 Breast Size of Mogdraz is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Mogdraz is 2. [count of nipples]
@@ -534,7 +534,7 @@ to say MogdrazRomanceMeeting:
 	say "     He continues to talk for a while longer. 'I... wanted to thank you, personally. You've got a good soul... N-not in that way, of course, I mean you're a good person! Even to us, extradimensional demons with nothing else to hold onto but our little establishment we call [']home[']... You've treated us well. Far from being just a vessel with something... admittedly tempting.' You then see the Demon Lord show a genuine and joyful smile, something rare to see. 'However...' - he then resumes - 'I don't understand exactly why. Your reasons are still a mystery, to me. There can only be something significant that drives you to do all this.' He takes a turn to the side with his chair, breaking eye contact with you as he looks to the window behind him.";
 	WaitLineBreak;
 	say "     '[bold type]What really makes you keep coming back? And be honest[roman type]. I don't want to read your mind for this answer. I want to trust your words and sense of honor, so... Please, heed my request.' Mogdraz has asked you a question, and how shall you answer it?";
-	Linebreak;
+	LineBreak;
 	say "     [link](1)[as]1[end link] - You enjoy spending time in the club, for the environment and its people.";
 	say "     [link](2)[as]2[end link] - Because you have developed a special interest for someone, in here.";
 	say "     [link](3)[as]3[end link] - There are things the club offers that benefit you, so you thought you could only reciprocate the favor.";
@@ -680,7 +680,7 @@ to say MogdrazRomanceStrollTwinsSection:
 	else if Resolution of MogdrazStrollTwins is 2:
 		say "     'Hello hello, best boss ever! Did I already tell you that you're awesome, today?' says Arad with the biggest grin on his face. Mogdraz seems unamused. 'What favor do you want to ask me, today?' he replies, and Arad follows up immediately 'No, no! Not a favor, oh no... I... I would never dare to! I mean... Maybe... Could I... Uh...' The Demon Lord does not even let him finish and is already saying 'Yes, yes, go do what you need to do, but don't abandon your post for long. And don't leave Egran to do all the work for you.' The scarred twin gives Mogdraz an even wider smile as he... nearly moves to give him a hug, but quickly realizes that it would not be very appropriate. 'Uhm, thank you so much boss! You're the best! Could kiss you right now! Eh... w-was that a bit too much?'";
 		say "     Mogdraz does not quite give him an answer, only a simple 'Carry on,' as you both continue to walk away.";
-		Linebreak;
+		LineBreak;
 		say "     He then turns to you, once they are out of earshot 'I'm sure he's attending another orgy party. Why did I hire such a himbo...'";
 		now Resolution of MogdrazStrollTwins is 3;
 	else:
@@ -801,16 +801,16 @@ to MogdrazRomanceStroll2Continued:
 	say "     ([link]Y[as]y[end link]) - Yes, accompany him to the Dry Plains.";
 	say "     ([link]N[as]n[end link]) - You shall pass this one.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     Following a period of consideration, you eventually accept his invitation and let him know that you shall accompany him. 'I'm glad to have you as a traveling partner. This may take a while, so I hope you had nothing else to take care of for the remainder of the day. Oh, and... I apologize if this looks... strange.' he says, and you do not know what he means with his last words, but you are soon to find out. First thing you see is his whole crimson demonic form being set ablaze, with an intense warmth coming from it, until it dissipates, revealing the Demon Lord as... appearing human. It looks just like his usual self, but without the horns and the red skin, nor the claws and pointy ears, just pink fleshed human. 'There. It is my human form. Convincing enough? Hm, actually, I suppose I could think of a furred one, too, given the amount of those roaming every place. Or a scaly one, perhaps? Don't you think I would make a great anthro shark?'";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - He would make a really sexy anthro shark.";
 		say "     ([link]N[as]n[end link]) - Maybe he should reconsider that.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You nod, agreeing with him. 'Hah! I knew it. Must be my eyes and my wide jaw, I have been often called [']sharkface['] during my youth, because of those. Though... it would not look inconspicuous enough in the middle of a dry and wide open terrain. We shall leave that for another time, perhaps.'";
 		else:
-			Linebreak;
+			LineBreak;
 			say "     Discouraging this idea is probably the best move, as sharks are intimidating and look quite menacing, not a good form to be considered inconspicuous. 'Hm... You're right. Although I think it would be fun having two-... Well, maybe we should just get going! How about that?'";
 		say "     With this, you both begin to walk through the Red Light District into the central area, where you can plan your route to the Dry Plains while, hopefully, avoiding unnecessary encounters. Thanks to Mogdraz's abilities, however, you manage to get by uninterrupted, as any potential threat cowers back into the corners of where they came from. Seems like he can repel anyone and anything he does not want to see come close. His human form is especially effective at passing by without alerting other demons of your presence, a perfect disguise for every occasion you would want to walk through some place without drawing attention.";
 		WaitLineBreak;
@@ -820,7 +820,7 @@ to MogdrazRomanceStroll2Continued:
 		say "     ([link]Y[as]y[end link]) - That sounded hot. Kind of makes you wish you were there.";
 		say "     ([link]N[as]n[end link]) - Really? Baiting his classmates into an orgy by superior order? You think that's shameful.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You express quite a lot of interest in this prank of his, as images of all kinds of demonic debauchery play in your mind. 'Oh, it was fun as hell. Everyone was so damn horny they made a massive mess all over the chairs and tables. Sure, I was the one to clean that afterwards, but hey, it was a really good time. It was also the hardest room to clean, as I was constantly getting a boner thinking of all that steamy sex going on right under the mentor's nose! It does make you wish you were there, right...?' he says, with the biggest and boldest grin that does not cease to be chilling even in his human face. 'I know you're a little deviant, yourself. Why else would you have liked to partake in my Club's activities?'";
 		else:
 			LineBreak;
@@ -869,7 +869,7 @@ to MogdrazRomanceStroll2Continued:
 		say "     ([link]Y[as]y[end link]) - You have enjoyed yourself, actually.";
 		say "     ([link]N[as]n[end link]) - Not the most fun you had, to be honest.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     It was not all that bad, Mogdraz is a great company and he kept you quite entertained throughout the day. 'Oh! I'm flattered you think so. But really, this is a very boring day and we could definitely be doing more fun things. I'd even say I'm sorry for dragging you into this, but... Well, maybe I'm not.' he finishes with a chuckle.";
 		else:
 			LineBreak;
@@ -918,10 +918,10 @@ to say MogdrazRomanceStroll3:
 	say "     ([link]Y[as]y[end link]) - Why not? Some would think that's kinky.";
 	say "     ([link]N[as]n[end link]) - A visual demonstration on how demons piss and poop? Whatever that is, you think it's probably nasty.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     Mogdraz just laughs at your response. 'It was a joke, I didn't mean to offer! But as I've probably said before, I've done way worse things in the past. I suppose you don't have any related kinks, by any chance? In which case, I apologize for having laughed. There is no shame in taking a like in those.'";
 	else:
-		Linebreak;
+		LineBreak;
 		say "     Mogdraz chuckles as you make that comment. 'Just joking, I wouldn't wound you by forcing you to watch that.'";
 	say "     When you are fully done with your meal and amidst your talking with Mogdraz, a small imp comes flying and crashes sloppily on your table, which was fortunately empty of any food, though the event startles you, anyway. The Demon Lord's eyes widen, and then he frowns an eyebrow as his voice raises to intimidating decibels. 'And what might you want, you preposterous imp?! Are you offering yourself as dessert?!' he asks, and demands an immediate answer from the tiny demon. 'Eeek! N-no need to be so angry, boss! I-I... I merely come to deliver a message!' Impatient, the Demon Lord crosses his arms and gives the imp a very fierce look. 'Speak. At. Once,' he says, each word with a clear pause and pronounciation.";
 	say "     'A-aye aye! M-Mister Toron says he managed to get, uh... h-he said to say a phrase, w-what was it...?' You think Mogdraz is about to incinerate the imp with his eyes as the little thing finally remembers what he was supposed to tell him. 'Ah! It was something like... Y-your request has been planted successfully! Wait, no, not [']request['], it was another word... P-Plan? No, no... Or was it not [']planted['] that he meant?' You begin to feel very sorry for the imp as Mogdraz raises his hand, slowly, as the tiny devil speaks, then the last thing you see before it is sent flying out through the window is a swipe of his hand, ending in an explosive thud that leaves a bit of smoke hanging in the air. The imp screeches as he disappears out of view.";
@@ -931,10 +931,10 @@ to say MogdrazRomanceStroll3:
 	say "     ([link]Y[as]y[end link]) - Tell him there is no need to punish him, since he delivered his message... kind of.";
 	say "     ([link]N[as]n[end link]) - Indeed, what an insolent rat, you think. Deserves all punishment!";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     You try telling Mogdraz that there is no need to punish the imp, he was just sloppy but managed to deliver his message... somewhat. 'Ugh. I could barely understand it at all, if I hadn't told Toron to let me know as soon as he managed to oblige my request. But very well, I will not assign [italic type]it[roman type] to permanent living sex toy duty.'";
 	else:
-		Linebreak;
+		LineBreak;
 		say "     You totally agree! Such rudeness! That imp deserves every punishment Mogdraz wishes to give him. 'He shall serve as a permanent living sex toy for any of my clients and staff for personal use. I'm sure that's a much more suitable role for such an insufferable pest.'";
 	say "     It is quite obvious that Mogdraz does not appreciate imps that much... You can kind of see why.";
 	say "     After this incident, you and Mogdraz get up and begin to leave, as he offers to accompany you back to the Crimson Street. 'Sadly, I cannot linger for much longer. I must meet Toron and see if everything has been arranged as I requested. But of course, once I've taken care of this matter, we could arrange some more meetings like this? And we definitely need to do the fun ones! It's unfortunate that I got stuck with issues like these... but I promise, I'll make it up for you.' You are left to wonder what the Demon Lord means by this, but supposedly, it is something good.";
@@ -948,7 +948,7 @@ to say MogdrazRomanceStroll3:
 	say "     ([link]Y[as]y[end link]) - Yes. Completely.";
 	say "     ([link]N[as]n[end link]) - No, you cannot do this.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     Your face is flushed, and as his strong hand strokes your cheek, you feel his impressive musculature pressing against you, this time not in a shy manner, at all. You are definitely feeling his body surrounding yours as he takes you in for a warm embrace, leaning his face over, grabbing yours delicately by the jaw with his index and thumb, and you close your eyes... Before you feel his lips touch yours, evolving into a slow but passionate kiss. They feel like a scorching flame, burning delightfully, as your tongues meet in between to caress at each other, rubbing and twirling around, with his being much longer and nimbler, almost like a dragon's with a pointy tip.";
 		say "     Mogdraz's arms slide onto your back as he brings one of his hands over to the back of your skull, the other remaining on the side of your waist. For a moment, you forget about the world around you, as all it matters is the demon's touch, your bodies rubbing and brushing against one another, this heat overtaking you as your lust raises above what cannot be ignored any longer. Much the same happens to the devil, whose erection threatens to tear through his dark leather pants and keeps on throbbing against you. Yet, you continue to make out with each other, your minds connected and sharing the pleasure among the both of you, something you have never experienced the same way as you do with him.";
 		LineBreak;
@@ -956,7 +956,7 @@ to say MogdrazRomanceStroll3:
 		say "     ([link]Y[as]y[end link]) - Take good care of him and drop to your knees (Sex).";
 		say "     ([link]N[as]n[end link]) - Maybe... just not here, and not right now (Skip).";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     With all of this happening, you feel Mogdraz moving his hands around the rest of your exposed body with his warm touch, a sense of urgency striking you as your arousal builds up, [if Player is male]your cock rising to attention[else if Player is female]your sex moistening[end if] and your body temperature increasing to a nearly ecstatic fever... He eventually pulls his lips from yours as he realizes what he is doing, though he does not just let you go, maintaining his close proximity with you. 'My... deepest apologies... I didn't intend to... assault you right here... All I wanted was a kiss, and then I got...' he tries to explain, words failing him in the end, though his chivalrous attitude is quickly dismissed as you encourage him to continue what he was doing. Of course, he is a gentleman, so he shall not be doing anything too wild, but he does not move away from you, and you feel his manhood in quite a lot of need for attention...";
 			WaitLineBreak;
 			say "     So, with your eyes, you make a silent suggestion of what you want to do for him. His fiery eyes look like tiny sparkling flames as he realizes what you mean, and by something so simple surges a great amount of eagerness from the devil. 'I would be the luckiest demon ever... to receive such a... gift, from you.' At this point, you do not even sugarcoat it. You want to drop down and suck his dick right here, right now, give him the best blowjob you can possibly manage, get a huge load from him and send him happy back to the Club, just the way he deserves for having been such a nice company for you. Naturally, hearing you say all that makes him throb even more. He bites his underlip, locks gaze on you, brings his hand over your cheek once more... 'You have no fucking idea how much I'd love that, right now.'";
@@ -966,7 +966,7 @@ to say MogdrazRomanceStroll3:
 			say "     You were expecting a big one to jump right off its confinements, but the view is even greater than that. A long and thick red cock, dribbling precum like mad as it still rises to a now free and solid hardness, just as you merely lay a slight touch on it. His sack does not disappoint, either, with a pair of orbs as big as lemons, hanging heavily underneath his dick and looking fuller by the second, and with such a soft dark red skin hugging them, you really feel they look inviting and proceed to feel them up. With this, you learn that the Demon Lord loves having his balls played with, once you get your hands on them and fondle them gently, nearly making the devil moan as a few generous drops of precum come dribbling down his shaft.";
 			say "     With such a wonderful piece of meat, you cannot resist it for much longer. Your mind keeps screaming at you to take it and lay your lips on that throbbing penis, and soon, you are gobbling up on the by now rock hard demonic cock with veins pulsing as blood flows through the whole cavernous body, only making that dick feel and look even bigger. All Mogdraz does is stand there, feeling your warm mouth overtaking his meatlog, almost crying out of pleasure as his so desired love interest kisses, licks and sucks his cock, having built up so much lust that not even he can confidently withstand. There are copious amounts of precum coating your lips and mouth by now, so much that you feel obliged to swallow some of it, and it tastes so sweet that you definitely do not mind gulping down some more.";
 			WaitLineBreak;
-			say "     'S-sorry for the mess...' he apologizes, though that comes out as sort of funny, giving how much he seems to love it all. Though, the fact Mogdraz comes at a loss of words while observing you worshipping his sizable cock, as you work around every bit and corner of the long and thick piece of crimson meat, and how it just won't stop leaking... is simply exhilarating. You keep a good a hold of his massive pair of testes and you can almost feel the cum sloshing inside them, as they have gotten so full only during this short period of time. A little squeeze also causes him to leak even more, enough to look like an average load of a normal human. 'P-please, it is already difficult enough to hold it in and not embarrass myself too soon...!' He lets out another moan right as he finishes saying that, feeling your hand squeezing his balls again as you work on his monstrous demon cock. 'Y-you...!' Yes, you cannot help but show a hint of a mischievous smile on the corner of your mouth, that he clearly notices.";
+			say "     'S-sorry for the mess...' he apologizes, though that comes out as sort of funny, giving how much he seems to love it all. Though, the fact Mogdraz comes at a loss of words while observing you worshiping his sizable cock, as you work around every bit and corner of the long and thick piece of crimson meat, and how it just won't stop leaking... is simply exhilarating. You keep a good a hold of his massive pair of testes and you can almost feel the cum sloshing inside them, as they have gotten so full only during this short period of time. A little squeeze also causes him to leak even more, enough to look like an average load of a normal human. 'P-please, it is already difficult enough to hold it in and not embarrass myself too soon...!' He lets out another moan right as he finishes saying that, feeling your hand squeezing his balls again as you work on his monstrous demon cock. 'Y-you...!' Yes, you cannot help but show a hint of a mischievous smile on the corner of your mouth, that he clearly notices.";
 			say "     'So that's how you want to play it...' he says...";
 			WaitLineBreak;
 			say "     You think you may have unleashed the beast, as you look up and see him grinning. 'If you want it that badly... Allow me to provide.' And just like that, his hands get a good grip of your whole skull, and he makes you look at him. Your eyes are locked onto each others, once more, and he begins to slide his member deeper in your mouth. 'Hands on the balls, now. You'll want to feel them unload, trust me.' he orders, and that really is one devilish grin that sends you heart skipping a beat. Nothing else comes to warn you of what follows next, and that is your throat being wrecked over by a massive demonic cock that comes ramming right down through it as you are held in place.";
@@ -985,10 +985,10 @@ to say MogdrazRomanceStroll3:
 			say "     ([link]Y[as]y[end link]) - Insist.";
 			say "     ([link]N[as]n[end link]) - Maybe some things are meant to not be known?";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				say "     And you question him again, because you really want to know. 'Do you really must ask...?! I mean... I-I'm sure anyone would find it quite strange due to very scientific reasons, but I was just very excited! And it just so happened that I'm a demon, so... Excited demons... can usually cum a lot! Okay, c-can we just move on?! I am already ashamed enough!' Before you make Mogdraz any more uncomfortable than he is, you decide to drop the subject, having sated your curiosity... for the better or worse.";
 			else:
-				Linebreak;
+				LineBreak;
 				say "     He clearly seems uncomfortable with that subject, so you shall just drop it and move on to the future that expects you.";
 			say "     'Anyway, feel free to take a rest and return to your affairs whenever you are able. I hope we get to hang out together in the future, some more, And... Of course, thank you for spending time with me. You are really a great company.' He leans over to give you one last kiss before you finally part ways... or, at least, until he does, since you have got a bellyful of cum to digest, still.";
 			follow the turnpass rule;
@@ -1003,11 +1003,11 @@ to say MogdrazRomanceStroll3:
 		if "Soulbound to Mogdraz" is listed in traits of Hayato:
 			MogdrazHayatoYokLairSoulCheck; [on Hayato's file]
 	else:
-		Linebreak;
+		LineBreak;
 		say "     Though, such harmony breaks the instant you begin to question his intentions, every warmth around you dropping cold as this love and tenderness shifts to fear and anxiety, all pulsing through you like a bad nightmare. Mogdraz lets go of you and backs off that instant. 'I... I apologize. I didn't mean to...' For that moment, you see the Demon Lord run out of words as he stares at you in shock, and things remain very, very awkward between the two of you. He clears his throat and manages to regain composure, though you are still left with that lingering fear, as if someone just attempted to devour your soul. 'No, it was... nothing like that. I promise that wasn't my intention!' The devil looks away, and you cannot help but notice he seems quite ashamed.";
 		say "     This connection you had with him is all gone. You do not feel a thing... not a single and faint hint of his feelings, nor his [italic type]aura[roman type], and suddenly, there is this large, figurative distance between the both of you. It is as if you no longer knew him as you were starting to. 'We should stop this nonsense, right here. This was a mistake. I allowed myself to get carried away, irresponsibly. Let's not talk about this ever again, and it is business as usual. I hope that's clear for you.'";
 		WaitLineBreak;
-		say "     These are his last words on the matter as he begins to walk away back to the Club. You follow behind, with nothing else to do about this, with a feeling that whatever you were building with Mogdraz is... gone, just like that. He is back to simply being the owner of the Hellfire Club, the one and superior Hellfire Demon, nothing more and nothing less, just as you first met him. You kept your soul, but with it, comes an emptyness, as if you have just lost someone important to you.";
+		say "     These are his last words on the matter as he begins to walk away back to the Club. You follow behind, with nothing else to do about this, with a feeling that whatever you were building with Mogdraz is... gone, just like that. He is back to simply being the owner of the Hellfire Club, the one and superior Hellfire Demon, nothing more and nothing less, just as you first met him. You kept your soul, but with it, comes an emptiness, as if you have just lost someone important to you.";
 		say "     Nobody can answer your questions, not even Mogdraz himself. But was he really...?";
 		say "     There is no use thinking of it. Any romantic advances you have accomplished with the Demon Lord were for naught, and your connection is over. This was your last private encounter, and now it is business... as usual.";
 		follow the turnpass rule;
@@ -1630,7 +1630,7 @@ to say MogdrazSexMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Worship his body";
 	now sortorder entry is 3;
-	now description entry is "Such a great strong body must enjoy being worshipped. Forward that proposal";
+	now description entry is "Such a great strong body must enjoy being worshiped. Forward that proposal";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -1690,7 +1690,7 @@ to say MogdrazBlowjob:
 	say "     After spending a good time tugging on his cum factories, squeezing and feeling them up gently while pulling them softly with your lips, you are ready to lick your way up once more, and give him what he is waiting for. Spreading your lips around the by now glistening wet tip, you allow his crimson rod to enter your mouth. Though it is far from easy, you have to really open wide in order to have a remote chance at sucking him off. He enjoys seeing you struggle with his size, and you can definitely feel his dick throbbing in your grasp as he observes you. 'Not many can take it all, especially at its true size...' he tells you, giving out a chuckle in a slight tone of mockery, but you do not let this discourage you, and he knows that you will not be. Leaking as he is, the marvelous taste of his precum is the most prominent feeling, one that simply keeps you hooked up.";
 	say "     By rubbing the rest of his shaft, you provide a thorough sensation that does not disappoint, while you suck as deep as you are able. Mogdraz is often careful as to not push your limits too much, but you know he really wants to drill your mouth with that beast of a dick, if he could. He grabs your head and often pushes you, just a little more, truly enjoying the feeling of his meat going deeper, even if for just a tiny bit, with just the right amount of force. 'Maybe I should let you teach some cocksucking manners to people around here... I bet they could learn a lot from you...' he tells you, as a compliment, and you proceed to suck on his dick even more hungrily, a bit of sloppiness inevitable as you attempt to take more in you, all the while you are stroking his shaft for maximum stimulation.";
 	WaitLineBreak;
-	say "     While you are down there worshipping his cock, the devil holds your head gently as you work him towards the edge, encouraging your sucking. There is even a hint of movement on his hips as he gets closer, and to reinforce that, you fondle his sizable gonads while his meat throbs in your mouth. Then, as you are taking a pause, you begin to lick an especially sensitive spot just around the glans of his penis while stroking the rest of his shaft with your free hand. 'That feels really good...!' he exclaims, and you just know you will get an enormous faceful of cum if you have to keep doing this until he gets there, though you cannot really help it. The way he is looking at you, so lustful, biting his underlip, eyes struggling to keep open, his powerful hand caressing the back of your head... it is just impossible to resist.";
+	say "     While you are down there worshiping his cock, the devil holds your head gently as you work him towards the edge, encouraging your sucking. There is even a hint of movement on his hips as he gets closer, and to reinforce that, you fondle his sizable gonads while his meat throbs in your mouth. Then, as you are taking a pause, you begin to lick an especially sensitive spot just around the glans of his penis while stroking the rest of his shaft with your free hand. 'That feels really good...!' he exclaims, and you just know you will get an enormous faceful of cum if you have to keep doing this until he gets there, though you cannot really help it. The way he is looking at you, so lustful, biting his underlip, eyes struggling to keep open, his powerful hand caressing the back of your head... it is just impossible to resist.";
 	say "     'Mmh... You'd better watch your eyes, cuteface,' he warns you, and just a few more strokes and licks are enough to set off the beast, making him spew an enormous spurt of jizz on your mouth and face, and he keeps going for a good while. You actually have to hold your breath and close your eyes as your face, neck and chest get completely covered in the stuff, and Mogdraz only stops cumming after it has been like a minute or so, panting deep with his head leaned backwards in absolute bliss. Only then he takes a look at you, as his dick gives some final throbbings. 'Wish I could keep you sucking my cock all day long... I feel like I can get hard again in just a few,' he says, directing some of his load into your mouth. It is actually one of the best things you have ever tasted!";
 	WaitLineBreak;
 	say "     'You like that? Guess dating me has some perks for you, right?' he says with a chuckle, then pushes you away gently while he gestures at Toron, the bartender, to come over and help clean you up. 'Don't worry, he'll get you all pristine looking in a pinch,' the Demon Lord lets you know, and it does not take long until Toron does some magic here and there and leaves you all cleaned up and ready to go.";

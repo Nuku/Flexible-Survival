@@ -213,7 +213,7 @@ When Play begins:
 	now cock entry is "human";
 	now face change entry is "it shapes itself into a handsome male visage, smooth-faced and beardless. A Greek helmet materializes out of a swirl of silvery dust to cover your head and short-cut black hair";
 	now body change entry is "it is reshaped into a that of a young man, and a fit and healthy one at that";
-	now skin change entry is "it smoothes out, becoming sun-bronzed and almost hairless";
+	now skin change entry is "it smooths out, becoming sun-bronzed and almost hairless";
 	now ass change entry is "it gets tight and firmly muscled";
 	now cock change entry is "it becomes human-shaped";
 	now str entry is 24;

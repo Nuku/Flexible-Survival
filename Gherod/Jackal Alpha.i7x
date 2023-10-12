@@ -93,7 +93,7 @@ to say AlphaJWinsFacesitting:
 to say AlphaJWinsCV:
 	say "     You notice the jackal approaching you differently, this time. And by different, you really mean... bigger. His male appendage seems thicker, meatier, heavier and throbbing harder than ever as he steps towards you. It all happens as if by magic, with not only the hieroglyphs around his muscular body glowing, but also the ones around his enormous balls, nearly dragging along the floor as they heavily swing on every movement. Once he is within reach of you, his cock has already surpassed the entirety of your being in length and girth, and is still hardening before your very eyes. The one thing you notice the most is the gaping slit at the tip, which is also getting closer and closer to you.";
 	say "     'Why not give it a kiss? I'm sure it will like you back...' he asks, the grin on his face betraying the calming nature of his voice.";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Comply and kiss his cock.";
 	say "     ([link]N[as]n[end link]) - Refuse.";
 	if Player consents:
@@ -101,16 +101,16 @@ to say AlphaJWinsCV:
 		say "     The idea pleases you, or perhaps you see no way out of this but to please the jackal to his heart's content, so with all due care, you lean over the head of his cock and give it a big kiss. A huge spurt of precum leaks immediately as you caress the tip, coating your face in his sweet slick juice. 'Mmh, that's it...' he moans, and in your mind, you're begging for more as you indulge yourself in how addicting the whole experience feels...";
 		SanLoss 15;
 	else:
-		Linebreak;
+		LineBreak;
 		say "     Before you could say anything, you find yourself face flat on his wet glans as he humps his cock towards you, the massive thick length pulsing with desire as soon as he feels you rubbing against its head. The scent of his strong pheromones and the taste of his precum caressing your tongue is enough to drop your defensive attitude, even though you try your best to hold onto your dear mind...";
 		SanLoss 5;
 	WaitLineBreak;
-	say "     By placing your hands around his girth, you give him a slow stroke that sends trembling throbs all over his meat, which only seems to get more excited as you continue to give him what he wants. 'Give it some tongue... get a good lick around that slit, like the good [boygirl] you are...' he teases you, with a hint of a demeaning tone, but all in fair play. He just wants you to be making out with his dick, kissing and licking that slit with all the love you can give, and in return, you get drenched in more precum. At some point, it really is feeling like a great trade in your mind, and you find yourself mindlessly worshipping his giant dick the way he tells you to, having your actions under his control like a puppet's.";
+	say "     By placing your hands around his girth, you give him a slow stroke that sends trembling throbs all over his meat, which only seems to get more excited as you continue to give him what he wants. 'Give it some tongue... get a good lick around that slit, like the good [boygirl] you are...' he teases you, with a hint of a demeaning tone, but all in fair play. He just wants you to be making out with his dick, kissing and licking that slit with all the love you can give, and in return, you get drenched in more precum. At some point, it really is feeling like a great trade in your mind, and you find yourself mindlessly worshiping his giant dick the way he tells you to, having your actions under his control like a puppet's.";
 	say "     Not only his manhood has grown to absurd disproportions, it is also throbbing and pulsing like mad the better you make it feel. The entire thing is making you want to kiss deeper, to slurp on all that sweet liquid that keeps pouring out of the slit, which is the only thing feeling softer as time passes. Your lips sink inside more easily, and you find the sensation exhilarating. So much in fact that you keep pushing without knowing what you are doing, the jackal releasing a prolonged grunt of ecstasy as his slit stretches to take your whole mouth in, feeling the movements you do with your tongue and lips sending pleasure all over. 'Ooh that's exactly it, [boygirl]... keep that up... a little deeper...'";
 	WaitLineBreak;
 	say "     He encourages you to keep going, pressing your mouth against his slit as you feel yourself sinking in just a bit more, and before you can realize what is happening, your whole face is being engulfed by the slippery meat, slurping at you at an alarming rate. 'Mmmmh... you're on your way there, now...'";
 	say "     The sucking force is strong, and will only get worse...";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Don't resist.";
 	say "     ([link]N[as]n[end link]) - Struggle.";
 	if Player consents:
@@ -118,7 +118,7 @@ to say AlphaJWinsCV:
 		say "     There is no point in offering any resistance to something that feels so good to you. The slippery meat of his gigantic cock slurping at your face, only pulling you deeper into its warm embrace, where you can find more of that sweet thick precum just awaiting your arrival, is actually an unforgetful experience. The jackal seems happy at your obedience, and you can definitely feel that in the way his throbbing hits your head, once you're all the way in until your neck.";
 		SanLoss 15;
 	else:
-		Linebreak;
+		LineBreak;
 		say "     No matter how much you attempt to pull out, the jackal's gigantic cock already has you in its hook. It only keeps pulling you deeper into its warm embrace, where you can find more of that sweet thick precum just awaiting your arrival. You wish you could just resist it, but after a while, you really don't anymore. It is taking your body and you mind, now your head being buried deep all the way in until your neck.";
 		SanLoss 5;
 	WaitLineBreak;
@@ -127,7 +127,7 @@ to say AlphaJWinsCV:
 	WaitLineBreak;
 	say "     Soon enough, you are dropped into his balls, already carrying a generous amount of seed that bathes you in the instant you arrive at your destination. The soft walls embrace you, forcing you to a curling position since, despite their hyper size, his balls are still not large enough to hold you comfortably. Not that this is a problem for the jackal, however. Your body bulges visibly inside his sack, a defined, moving shape that is easily seen on the furred skin of his hanging orbs. 'Ohh you feel sooo good in there... I bet you can't wait to be made into a good slutty jackal femboy...' he finally speaks to you, his voice booming from every side as your mind is thrown into bliss.";
 	say "     Within all the darkness, all you see is his thick cum sloshing around, trying to cover you entirely, and the glowing dimming light of his mystical hieroglyphs that you can still see from inside. They capture your gaze and make you feel so in peace... Like little lights drawing your full attention as they rub you to sleep, gently and tenderly...";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Give in.";
 	say "     ([link]N[as]n[end link]) - Keep it together.";
 	if Player consents:
@@ -163,7 +163,7 @@ to say AlphaJWinsButtAugment:
 	say "     There is something about this creature that renders your resisting efforts useless, if they ever get a chance to occur. Must be something about the hieroglyphs drawn in patterns around his beautifully sculpted muscles, or in his hypermasculinity that takes you over like a fly to a light bulb. 'Come, now.' he begins to speak, flipping you over so you're lying down on the ground with your ass up, that he grabs generously. 'You come here so often that, in fact, I prepared something special for you...' he says, slapping your ass playfully as your cheeks wobble with more momentum than you're used to... 'It looks thirsty, my [boygirl]... How about we give it something to drink?'";
 	say "     With a glance over your shoulder, you notice the jackal pouring a generous amount of the oil he carries in those small flasks on to his hands, rubbing them together as they gleam under the light, lubed up and ready. Then, you feel one of his fingers slide down your butthole, slipping inside so easily and feeling so... right... and good... that you reflexively let out a moan that excites the alpha. 'Glad you like it... I'm just preparing it for what is to come...' he teases you, playing with your pucker in ways that manage to make you [italic type]desperate[roman type] for more. Instinctively, you begin to wiggle your butt before you realize how low your mind is going, and the alpha takes the opportunity to follow up with another tease.";
 	say "     'Beg for it... I might slide in another finger... and another... filling your hole more... and more...' his words just feel right on your ears as he keeps saying them...";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Beg.";
 	say "     ([link]N[as]n[end link]) - Resist the urge.";
 	if Player consents:
@@ -171,14 +171,14 @@ to say AlphaJWinsButtAugment:
 		say "     And you beg, with all your might, that he continues to fill your begging ass, telling him how badly you want it and how much you need it. Perhaps you even went a bit overboard with it, but you cannot help it. You are that desperate.";
 		SanLoss 15;
 	else:
-		Linebreak;
+		LineBreak;
 		say "     With a lot of effort and struggle, you manage to fight the urge to beg him for more, but instead, you end up letting out a few suggestive moans. 'Too shy to let me know you want it so badly, huh? That's alright... No pressure, my [boygirl]... I'll give it to you, anyway...'";
 		SanLoss 5;
 	WaitLineBreak;
 	say "     He slides down another finger, moving and wiggling them against your sensitive butthole, rubbing against your moist fleshy tunnel as it continues to yearn for more. It's something you cannot resist, feeling that much pleasure focused on your ass, and you act as if your body had a mind of its own. He slides in another, filling your hole just a bit more, and it still feels like it is not enough... so he gives you yet another, and another... until all five are in. It feels so easy for you to take his whole fist inside, and you're so deep in pleasure that you only barely notice that your ass is no longer of the same size as it was when you arrived, but much, much bigger. Your cheeks bounce heavily as he rubs them, and are so swollen that his hands almost sink in your skin.";
 	say "     'Such a hot sight...' he comments, as he seems to be stroking his own hypersized prick while working on your butt. Your clouded mind forces your focus on all that sweet sensation happening in your anus, as the jackal fists you with his slippery hand that continues to assail you, leaving you with insane amounts of bliss. You hump and wiggle back and forth, as if instinctively begging for more stimulation in there, unable to help yourself... and only satisfying the jackal more.";
 	say "     'Could it be... that you want my second hand in?' he asks, without any brink of innocence visible, clearly provoking you on purpose. 'If you say please, I might do it...'";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Say [']please['].";
 	say "     ([link]N[as]n[end link]) - Fight it.";
 	if Player consents:
@@ -186,7 +186,7 @@ to say AlphaJWinsButtAugment:
 		say "     You say it, more than once, as your butt wiggles enticingly. You can't help it, you need it... Badly.";
 		SanLoss 15;
 	else:
-		Linebreak;
+		LineBreak;
 		say "     You can't go that low just yet, but your moans are suggestive enough. The jackal smiles at your apparent shyness.";
 		SanLoss 5;
 	WaitLineBreak;
@@ -195,7 +195,7 @@ to say AlphaJWinsButtAugment:
 	say "     You simply cannot bear this amount of... thirst and pleasure...";
 	infect "Jackal Femboy";
 	infect "Jackal Femboy";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Beg him to fuck your ass.";
 	say "     ([link]N[as]n[end link]) - Resist the temptation.";
 	if Player consents:
@@ -248,7 +248,7 @@ to say AlphaJWinsCV2:
 
 to say AlphaJBadEnd: [Bad End CV + total absorption scene]
 	say "     Once again, the alpha jackal won, as he stands in front of your defeated self. Your mind feels so clouded near the big alpha that you are simply compelled to fall on your knees in front of the massive male with the gigantic dong, yearning for your attention. His enormous manhood is, by now, much bigger and thicker than your entire body, as if by the anticipation of what is to come. The jackal would have been showing his true colors to you perceptively enough were not for your weakened mental state, as his now very wicked grin threatens your very safety. 'Now now... After all this time coming at me, were you really thinking you still held a grasp on your mind?' he asks, his words merely causing you to squirm like some hopeless horny slut.";
-	say "     'You've come so far, bringing me all the pleasure I seek, and being such a good jackal slut for me... Perhaps you're ready for the final step. You want to belong to me, don't you, my good [boygirl]?' He looks down at you, locking his gaze on yours as you nod helplessly, putting your hands around the exposed tip of his enormous manhood, and begin licking at it as much as you are able. The sweet taste of his precum gets you hooked up instantly as the large male observes you worshipping him. 'You really want this cock, don't you?' he asks, but his words fly by your ears like wind, as your mind is already far lost in depravity by now. You rub his veiny, throbbing shaft, licking and kissing at his sensitive tip, driving your tongue closer to the slit...";
+	say "     'You've come so far, bringing me all the pleasure I seek, and being such a good jackal slut for me... Perhaps you're ready for the final step. You want to belong to me, don't you, my good [boygirl]?' He looks down at you, locking his gaze on yours as you nod helplessly, putting your hands around the exposed tip of his enormous manhood, and begin licking at it as much as you are able. The sweet taste of his precum gets you hooked up instantly as the large male observes you worshiping him. 'You really want this cock, don't you?' he asks, but his words fly by your ears like wind, as your mind is already far lost in depravity by now. You rub his veiny, throbbing shaft, licking and kissing at his sensitive tip, driving your tongue closer to the slit...";
 	WaitLineBreak;
 	say "     'Look at you... So eager to please me... It's so...' he doesn't finish his sentence, instead throwing in a laughter as you continue to raise your head to lick deeper inside the oozing exit, already feeling an urge to climb inside. 'So, so eager... Aren't you...? This time, once you're in...' he stops, as you struggle to look at him in his eyes, still lost in the overwhelming joy that you are feeling for being almost face buried inside his giant cock. '... there's no coming out.' While his words sounded final, everything that goes in your mind is how much you want to please this jackal, just how you want to satisfy all his cravings and desires, almost as much as your own submissive eagerness urges you to give yourself in. The big alpha grins once more, proud of his unbeatable effect on you...";
 	say "     The alpha canine allows you to worship his enormous dong for a good long while, having drenched your face and body in precum with the immense droplets that keep oozing from his slit, which is opening wider the closer your lick. Something within you urges you to keep licking deeper into it as the jackal encourages you. 'You belong to me, now... Come on in... My balls are aching...' he says, your tongue wiggling around the inner walls of his cock, and before you could even blink, your surroundings become a world of darkness as your head begins to get pulled in, the slit having slurped you in just enough to get a grasp on you. With each throb, more of you is taken inside the jackal's enormous cock, hardening even more with excitement, eventually having pulled you down to your waist and raised your feet off the ground like a hungry beast.";
@@ -262,15 +262,15 @@ to say AlphaJBadEnd: [Bad End CV + total absorption scene]
 	say "     Once your consciousness returns, you feel your senses come back one by one, slowly... And something feels quite different than before. There is... a throbbing pleasure all over your body, and you feel hard... Very hard, in fact. You cannot help but want to contract and throb all the muscles in your body as you continue to drool something very sweet out of your mouth. Something is touching you, as well. It feels like a crowd of people with their hands all over you, and you cannot help but feel harder and bigger, even... hungrier. All this feels familiar to you... Too familiar. Your arms and legs are no more, and instead, your whole body has been replaced by a veiny long body that continues to pulse and throb with longing pleasure.";
 	say "     The deep manly voice of the alpha jackal storms in your mind, speaking as if they were your own thoughts. 'How does it feel? To be one with me... to feel my pleasure as much as you provide me...? To have received the honor to become my cock... Not everyone is as lucky as you. Perhaps... I should demonstrate how good it feels before you are fully integrated...' For the first time during the whole process, you actually feel like you have crossed a point of no return and that you mind find yourself in great danger, but all the throbbing pleasurable sensations challenge you to forget all about it. A scene unfolds around you, much like the one you have experienced in the other illusion, except... this one seems very real.";
 	WaitLineBreak;
-	say "     The alpha jackal's whole body is being worshipped by a harem of needy femboy jackals, slightly smaller than him. Some are licking at his armpits and chest, others remain focused on this genitals, while the remaining stand only at his feet. And all you feel is what his cock feels, all the hands around you, rubbing and caressing the shaft that is now your body, all the friction delivering unending pleasure all over you as they yearn to feel the entirety of their alpha's length. You are unable to form your own thoughts as your mind is imprisoned by your current condition, only left to experience what the jackal allows, and your cravings resume to dominating every single one of these big butt canines, stretching their holes wide one after the other...";
+	say "     The alpha jackal's whole body is being worshiped by a harem of needy femboy jackals, slightly smaller than him. Some are licking at his armpits and chest, others remain focused on this genitals, while the remaining stand only at his feet. And all you feel is what his cock feels, all the hands around you, rubbing and caressing the shaft that is now your body, all the friction delivering unending pleasure all over you as they yearn to feel the entirety of their alpha's length. You are unable to form your own thoughts as your mind is imprisoned by your current condition, only left to experience what the jackal allows, and your cravings resume to dominating every single one of these big butt canines, stretching their holes wide one after the other...";
 	say "     Eventually, one of them is brave enough to bend over for the alpha, showing those colossal buttcheeks to the big male as he throws you, his cock, between them, to rub at those soft plump bubbles of furred meat that caress your sides, his shaft, before your head, that is his tip, slides into the moist donut hole that is the femboy's anus. He moans as you feel the tight entrance stretch all over your length, as your entirety slides in deep into those warm confines, pleasure storming through every inch of your body the deeper you go in, as you get to experience the concentrated focus of ecstasy there would be on a cock but through all of your senses. Every inch of you is covered by a slick, wiggling hot wall of flesh that constricts around you and gives you pleasure like none you have experienced until this day.";
 	WaitLineBreak;
-	say "     All the friction around your whole thick veiny body brings you closer and closer to a climax, until it finally causes an outburst. The sensation is the strangest one, an enormous avalanche of jackal cum leaving what would be your mouth, the slit of that enormous manhood, feeling like an overwhelming moment of ecstasy running through your very core, as the absurdly gigantic load begins to fill the femboy canine. He, of course, is not able to take it all inside, the force and sheer quantity of spunk being too much for the submissive jackal, and he ends up being shot away from the cock that was stretching his hole, catching a cumbath instead. Their alpha continues to enjoy his first orgasm unfazed, his balls still looking as full as they were, and his muscular body worshipped by the remaining entranced feminine jackal boys.";
+	say "     All the friction around your whole thick veiny body brings you closer and closer to a climax, until it finally causes an outburst. The sensation is the strangest one, an enormous avalanche of jackal cum leaving what would be your mouth, the slit of that enormous manhood, feeling like an overwhelming moment of ecstasy running through your very core, as the absurdly gigantic load begins to fill the femboy canine. He, of course, is not able to take it all inside, the force and sheer quantity of spunk being too much for the submissive jackal, and he ends up being shot away from the cock that was stretching his hole, catching a cumbath instead. Their alpha continues to enjoy his first orgasm unfazed, his balls still looking as full as they were, and his muscular body worshiped by the remaining entranced feminine jackal boys.";
 	say "     His voice continues to invade your mind as if it was your own, his thoughts merging with yours, until your blissful consciousness threatens to disappear. You feel yourself struggling for the last few moments as yet, another eager bubbly butt impales itself on you, more of that overwhelming pleasure assaulting you, making you throb and harden with a craving for more... The fuck lasts for a couple of minutes as you feel yourself growing to an ever larger proportion, the alpha ordering the femboy to resume licking his shaft as you stand high and solid, your mouth opening as a reflex... which happens to be the alpha's cum slit, hungry to take someone inside. Without hesitation, the hole-stretched jackal throws himself onto the sensitive glans, licking and kissing it with vigor as you keep oozing the thickest drops of precum.";
 	WaitLineBreak;
 	say "     Suddenly, this hunger strikes you like none you have ever felt, the urge to feel someone inside you, wiggling within your body and aching to be filled... Or is that the alpha who is feeling this? Your doubts and confusion keep growing as it gets harder to process everything that is happening. Soon enough, your mouth is stretching around the jackal femboy's head as you slurp him inside you... Inside the jackal's cock, throbbing and pulsing at a gigantic size, simply swallowing the femboy until his shoulders, then his chest, down to his waist and beyond, as he continues to slide down your cavernous body as the alpha's balls make up space for their new arrival. The pleasure is unbelievable... as if an emptiness inside you was suddenly filled with the most sating reward, a rapturous bliss as you feel yourself, or what was left of you, slowly melt away into a one-dimensional being... It was just what you needed.";
 	WaitLineBreak;
-	say "     Your thoughts are his. Your senses are his... Your desires are his as well. There is no more you, there is only the alpha jackal. You are one with the other, and your only wishes are to be worshipped, to fuck and to devour whoever falls into your spells.";
+	say "     Your thoughts are his. Your senses are his... Your desires are his as well. There is no more you, there is only the alpha jackal. You are one with the other, and your only wishes are to be worshiped, to fuck and to devour whoever falls into your spells.";
 	wait for any key;
 	now battleground is "Void";
 	the Player was ended by "Jackal Alpha";
@@ -280,10 +280,10 @@ to say AlphaJBadEnd: [Bad End CV + total absorption scene]
 Section 1.2 - Victory Scenes
 
 to say Alpha Jackal Loses:
-	say "     With the beating you gave the big alpha jackal, he has no way to make any further attempts at charming you. 'You could have just accepted my gift... I am offering it to you so freely... Why must you reject it?' he asks, and you can tell by the expression in his face that he is deeply offended. Perhaps you could make ammends and offer some friendly gesture that would leave him much happier, or just... Use him and his body as you see fit, since you just brought him to the ground, defeated and vulnerable.";
+	say "     With the beating you gave the big alpha jackal, he has no way to make any further attempts at charming you. 'You could have just accepted my gift... I am offering it to you so freely... Why must you reject it?' he asks, and you can tell by the expression in his face that he is deeply offended. Perhaps you could make amends and offer some friendly gesture that would leave him much happier, or just... Use him and his body as you see fit, since you just brought him to the ground, defeated and vulnerable.";
 	WaitLineBreak;
 	say "     How shall you make use of this situation, if you intend to do so?";
-	Linebreak;
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -333,7 +333,7 @@ to say AlphaJLosesCockPlay:
 	say "     He simply observes you as you make his appendage harden, the more you rubbed and stroked. 'Or did you want to do this on your own terms...? It is peculiar that you still desire me, after having beaten me...' Turning to him, you let the jackal know you intend to beat him again, but in other ways, as your hands run over his manhood, caressing every inch of his gigantic cock. It grows and grows, each pulse prompting a surge in size, and you almost can't believe how big he actually is getting. The thing could wrap around your whole body if it wasn't all rock solid, and it's so heavy it curves downwards with the gravity. What is also worth mentioning is his enormous, heavy ballsack, so massive it could possibly fit a single person inside.";
 	WaitLineBreak;
 	say "     It happens to become a workout, giving attention to his full size. But you are not keen on giving up so soon, as you wrap your arms around his cock and, together with your chest, you provide him with enough friction to actually get him moaning. As you take charge of things, he says nothing, simply staring at you as you do all the work, although he says one thing with what is left of his audacity. 'Too big for you to handle? I guess you could use your mouth, too... It really works on making me bigger and harder, if that's what you're looking for...' Something in his words actually makes you consider his recommendation, however if you happen to ingest any of his fluids, you might risk infection... [bold type]How will you reply?[roman type][line break]";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stick to handjob.";
 	say "     ([link]N[as]n[end link]) - Take your chances and use your mouth.";
 	if Player consents:

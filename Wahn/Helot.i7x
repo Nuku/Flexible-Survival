@@ -258,7 +258,7 @@ When Play begins:
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a handsome male visage, smooth-faced and beardless. Shaggy black hair falls down to your shoulders"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a that of a young man, muscular, but with a lean build. Looking down, you notice sandals on your feet and a ragged loincloth around your hips - where did those come from?"; [ format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it smoothes out, becoming almost hairless and sun-bronzed"; [ format as "Your skin feels funny as (your text)." ]
+	now skin change entry is "it smooths out, becoming almost hairless and sun-bronzed"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it gets tight and firmly muscled"; [ format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes human-shaped"; [ format as "Your cock feels funny as (your text)." ]
 	now str entry is 20;
@@ -623,11 +623,11 @@ to say ResolveEvent Helot Captive:
 			say "     ([link]Y[as]y[end link]) - Provide him with a generous handjob.";
 			say "     ([link]N[as]n[end link]) - Just leave at once.";
 			if Player consents: [handjob]
-				Linebreak;
+				LineBreak;
 				say "     You suppose a quick handwork won't put you in any danger, and it seems like the poor Helot could really use your help. Crouching down, you slip your hand around the manservant's shaft, feeling it throb in your grasp as soon as you tighten your grip around it, and begin slowly stroking it up and down. He lets out a long muffled moan as he gives in to your touch, closing his eyes and resting his head against the wall. This will be very quick, after all, as he's already moving his hips matching with your own movements. You stroke it faster and faster after about a minute, and it's another couple of seconds before his moaning gets louder, becoming grunts of pleasure soon enough.";
 				say "     Breathing heavily, he starts shooting all over himself as you continue to milk his cock, not letting go of it until the very last drop leaks out of his throbbing member. You've got some of the juice in your hand, but all the rest landed right over his abs and chest, as well as the ropes keeping him in place. He now seems thrown in bliss, not even paying attention to you as you start leaving the area, and just in time! You can see an angry group of Spartans walking towards the spot, and you're glad to be far gone before they can catch you. Now you just have to keep a low profile, but it shouldn't be that much of a problem since the one you fought probably doesn't remember your face at all, anyway.";
 			else:
-				Linebreak;
+				LineBreak;
 				say "     There's no time for this, and it's no longer your business. Besides that, it's very certain that he gets his long awaited release eventually, when the Spartan warrior comes back to reclaim his property. Since there's nothing else for you here, you resume your previous doings after leaving the area.";
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     Faced with the warrior's impressive might, you feel yourself forced to give up. He points his weapon at you, locking his gaze on your eyes through his helmet. 'Now that you have learned your place, piss off before I claim you too. I would do so anyway if my hands weren't full for the moment!' Without any strength left, you let his words sink in and retreat back as the Spartan watches you carefully. You don't even get to see what happens next, as you're forced to leave the vicinity as well. Though you can imagine he might be adding a new member to his personal servantry soon enough.";

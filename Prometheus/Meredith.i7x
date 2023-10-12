@@ -8,7 +8,7 @@ Version 2 of Meredith by Prometheus begins here.
 "Adds another member of the paratrooper squad triggered by Vanessa to Flexible Survival."
 
 [ HP of Meredith                                     ]
-[ 0 = unactivated                                    ]
+[ 0 = inactivated                                    ]
 [ 1 = saved                                          ]
 [ 2 = talked to                                      ]
 [ 3 = lectured                                       ]

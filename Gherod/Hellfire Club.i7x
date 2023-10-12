@@ -30,11 +30,11 @@ to say ResolveEvent Burns Like Hell:
 			say "     ([link]Y[as]y[end link]) - A kidnapping?! You need to do something!";
 			say "     ([link]N[as]n[end link]) - Perhaps you should not. Who knows if they kidnap you too...";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				BurnsLikeHell1;
 				now Resolution of Burns Like Hell is 2;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     Sometimes it is best to keep your nose out of matters that do not concern you, and you think this is one of those. So, you back off and continue sneaking your way through the Red Light District into relative safety.";
 				now Resolution of Burns Like Hell is 1;
 		else:
@@ -49,11 +49,11 @@ to say ResolveEvent Burns Like Hell:
 			say "     ([link]Y[as]y[end link]) - Another kidnapping? Surely something is going on...";
 			say "     ([link]N[as]n[end link]) - Maybe you really should not...";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				BurnsLikeHell1;
 				now Resolution of Burns Like Hell is 2;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     Sometimes it is best to keep your nose out of matters that do not concern you, and you think this is one of those. So, you back off and continue sneaking your way through the Red Light District into relative safety.";
 		else:
 			say "     You did not get much out of this particular run. Perhaps [bold type]during the night[roman type] things will be a bit different...?";
@@ -80,7 +80,7 @@ to BurnsLikeHell2: [mid stage]
 		say "     ([link]Y[as]y[end link]) - Investigate.";
 		say "     ([link]N[as]n[end link]) - You would rather stay away from trouble.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			if demonologist is listed in companionList of Player:
 				say "     [italic type]Noting your intention, your half-demon companion nods and splits from you, disappearing into a different road around the plaza. Now you will have to be extra careful...[roman type][line break]";
 			say "     Having decided to take the risk, you proceed further into the plaza, hiding yourself in the shadows where nobody can see you. Of course, this would be easy because it is during the night, but unfortunately, there is a lot of fire lighting up the stage. Yes, you saw it right... Fire.";
@@ -346,7 +346,7 @@ Hellfire Unknown is north of Hellfire Corridor. It is sleepsafe.
 Description of Hellfire Unknown is "[HellfireUnknownDesc]".
 
 to say HellfireUnknownDesc:
-	say "     This is a place of the unknown, where emptyness meets reality. It is no longer the Club, but it is the only safe spot before you dive into uncertainty. You better [bold type]proceed with caution[roman type] before you end up losing yourself. To the [bold type]North lies the Void Realm[roman type], where not even the most experienced travelers dare to venture within without a destination.";
+	say "     This is a place of the unknown, where emptiness meets reality. It is no longer the Club, but it is the only safe spot before you dive into uncertainty. You better [bold type]proceed with caution[roman type] before you end up losing yourself. To the [bold type]North lies the Void Realm[roman type], where not even the most experienced travelers dare to venture within without a destination.";
 	if Fallen King is visible:
 		say "     [bold type]You sense a terrible presence nearby...[roman type][line break]";
 
@@ -432,7 +432,7 @@ carry out UseHRBooth:
 	if carried of obsidian coin is 0:
 		say "     Unfortunately, you have no obsidian coins with you! Maybe you should get your hands on some and try this out, later.";
 	else:
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Insert one coin and enter the booth, if you want to suck some stranger's cocks.";
 		say "     ([link]N[as]n[end link]) - Leave.";
 		if Player consents:
@@ -465,7 +465,7 @@ carry out UseHRBooth:
 					CreatureSexAftermath "Player" receives "OralCock" from "Imp Male";
 			WaitLineBreak;
 			now HRBCockCount is 1;
-			say "     Without any further ado, you lean over to it and begin to kiss and lick it, as that is what it truly wants. At first, you tease its shaft until you feel the dick throb with desire, so eager to be put past your lips and sucked like it yearns to be. Then, you grab it and aim it towards your mouth, letting it slide into you [if HRBCockLength1 < 7]all the way in down to your throat, only stopping once the entire thing disappears into you[else if HRBCockLength1 < 19]as far as you can make it, taking it inch by inch until you cannot possibly push it in any further[else if HRBCockLength1 >= 19], barely fitting in at all due to its colossal size, so you have no alternative but to focus your sucking mostly around its tip and, maybe, a few inches past it[end if]. It pulses in response, pleased with your efforts, and juice starts to come out, giving you a sweet taste of their lusts. You think you even hear them moan as you work on their meat, really showing off your oral skills and putting on a good effort at worshipping this dick.";
+			say "     Without any further ado, you lean over to it and begin to kiss and lick it, as that is what it truly wants. At first, you tease its shaft until you feel the dick throb with desire, so eager to be put past your lips and sucked like it yearns to be. Then, you grab it and aim it towards your mouth, letting it slide into you [if HRBCockLength1 < 7]all the way in down to your throat, only stopping once the entire thing disappears into you[else if HRBCockLength1 < 19]as far as you can make it, taking it inch by inch until you cannot possibly push it in any further[else if HRBCockLength1 >= 19], barely fitting in at all due to its colossal size, so you have no alternative but to focus your sucking mostly around its tip and, maybe, a few inches past it[end if]. It pulses in response, pleased with your efforts, and juice starts to come out, giving you a sweet taste of their lusts. You think you even hear them moan as you work on their meat, really showing off your oral skills and putting on a good effort at worshiping this dick.";
 			if a random chance of 1 in 2 succeeds: [a second cock comes in]
 				now HRBCockCount is 2;
 				say "     As you suck, rub and pleasure your first pulsing rod that came to greet you, a second one begins to slide in from your side...";
@@ -569,7 +569,7 @@ to say HellfireClubEscort:
 			say "     'You've gathered a few transformations here and there, but I suppose you're good enough. Would be better if you were fully human looking, though... And I know there are ways you can achieve that. We don't have to let them know you were always purely a human, either way...' he says with a mischievous smile.";
 			WaitLineBreak;
 		say "     He then starts explaining what would working for him mean. 'Very well, the rules are quite simple. Don't piss anyone off, do what you are told, and you get paid in the end. We don't talk about anything that happens while in the VIP rooms. If someone gets too abusive, however... Let me know. I have better uses for those who mess with my employees.' The instructions seem clear enough, so far, so you let him continue. 'You will be assigned a room where you shall be staying, then someone will come to you once they are sorted. Your job is to give them the best time of their life, if possible. If not, well, just make them feel... not bad. But I'm sure you can do better than that.' After listening to all the observations Mogdraz made, you are prompted with another question...";
-		Linebreak;
+		LineBreak;
 		say "     'Do you have any [bold type]gender preference[roman type] for your clients? Best I not assume that you would know how to work with everything...'";
 		say "     [link](1)[as]1[end link] - Tell him you have a preference for males.";
 		say "     [link](2)[as]2[end link] - Tell him you have a preference for males and wink at him.";
@@ -619,11 +619,11 @@ to say HellfireClubEscort:
 			say "     'You've gathered a few transformations here and there, but I suppose you're good enough. Would be better if you were fully human looking, though... And I know there are ways you can achieve that. We don't have to let them know you were always purely a human, either way...' he says with a mischievous smile.";
 			WaitLineBreak;
 	say "     'So, [bold type]are you ready to begin[roman type]? Can be anytime, void travelers pay no mind to schedules...'";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Tell Mogdraz you shall get started.";
 	say "     ([link]N[as]n[end link]) - Say you're not interested, for now.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     Claiming that you are fully available to take an escort job, Mogdraz smiles at you, nodding as he urges you to follow after him. Into the inner side of the club, you head through the back corridors, only illuminated by a dim light that is just enough to allow some vision, passing through many other bedrooms with their doors closed, until you arrive at the only one that is still open. The demon has you enter that room, and you are presented with a bed covered in crimson red sheets, an also red lighting illuminating the space and dark walls with several tools hanging, including sex toys and quite a few other kinky assets. You can hear absolutely nothing from the outside while in here, the sound isolation being extremely good.";
 		if Resolution of HellfireEscort is 1: [first time]
 			say "     'It should be a fairly normal shift for you, today. Check around the wardrobe, wear something enticing and take the opportunity to get used to how things work... But as I said, if at any point you feel like this isn't for you, or if anyone does anything... well, physically damaging to you, just have me know. A broken employee is of no use, naturally. Though be prepared for some especially demanding clients.' he says, ending with a polite bow as he takes his leave.";
@@ -669,7 +669,7 @@ to say HellfireClubEscort:
 		if Resolution of HellfireEscort < 2:
 			now Resolution of HellfireEscort is 2;
 	else:
-		Linebreak;
+		LineBreak;
 		say "     You thank him for the briefing, but excuse yourself, as you are not quite ready for this task, yet, or take no interest in doing so, at least for now.";
 
 to say MogdrazIsVeryUnhappy:
@@ -764,11 +764,11 @@ Section 3-1 - Escort Normal Scenes
 to say HellfireClubEscortNormal1a: [a shy incubus]
 	project figure of Incubus_clothed_icon;
 	say "     After some time readying yourself for what is to come, someone arrives at your room. Surprisingly, it is someone... seemingly shy. As you get a better view at your client, you notice a very handsome man, tall and lean, with plenty of demonic attributes, strongly resembling an incubus, pretty much like the ones normally seen roaming the college. But, as opposed to most who would be more than ready to provoke and seduce you, this one seems particularly faltering. He stands at the door, examining you. By the looks of it, he definitely seems to be a submissive. It appears you will have to take the lead[if player is dominant], which should be very easy for someone as dominant as you are...[else if Player is submissive], despite your submissive tendencies...[else]...[end if][line break]";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Go to him.";
 	say "     ([link]N[as]n[end link]) - Let him come to you.";
 	if Player consents: ['taking the initiative' path, leads to anal fuck if male, dom pussy ride if female (more points if dominant), starts higher on satisfaction]
-		Linebreak;
+		LineBreak;
 		now HCEClientSatisfaction is 2;
 		say "(+2)[line break]";
 		say "     Noticing his hesitation, you decide to step forward and help him come your way, receiving him with a sensual embrace. He freezes for a moment, but is receptive to it, as you have him sit besides you on the bed. He shows a smile that, despite looking devilish, you still perceive it as a quite reserved one. Knowing better than to wait for him to say or do anything, you plant your lips on his, assaulting his mouth with a deep tongue kiss as you pin him down below your [bodydesc of player] body. It does not take long until you start noticing a bump in his crotch, a clear sign of his arousal as you both continue to make out.";
@@ -778,11 +778,11 @@ to say HellfireClubEscortNormal1a: [a shy incubus]
 			if Cock Length of Player > 9: [he likes dicks bigger than his]
 				increase HCEClientSatisfaction by 1;
 				say "(+1)[line break]";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Proceed to fuck his ass.";
 			say "     ([link]N[as]n[end link]) - Suck his cock, instead.";
 			if Player consents: [male anal fuck]
-				Linebreak;
+				LineBreak;
 				if Player is dominant: [Dominant bonus]
 					say "     [italic type]Because you're Dominant, you feel particularly confident about this...[roman type][line break]";
 					increase HCEClientSatisfaction by 1;
@@ -793,17 +793,17 @@ to say HellfireClubEscortNormal1a: [a shy incubus]
 					say "(-1)[line break]";
 				HellfireClubEscortNormal1aFuck;
 			else:
-				Linebreak;
+				LineBreak;
 				HellfireClubEscortNormal1aGiveOral;
 		else if Player is female:
 			increase HCEClientSatisfaction by 1; [having a pussy is an automatic like]
 			say ". You notice the handsome demon do some tentative humps against your womanhood, his own erection stiffening as you continue to tease him, while the poor devil remains helplessly turned on. The more you grind your cooch against his junk, the more desperate he sounds for a tight wet cunt wrapped around his demonic dong, a thing only you could provide right now.";
 			say "(+1)[line break]";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Give him what he wants, but while you remain in charge.";
 			say "     ([link]N[as]n[end link]) - Suck his cock, instead.";
 			if Player consents: [female pussy catch]
-				Linebreak;
+				LineBreak;
 				if Player is dominant: [Dominant bonus]
 					say "     [italic type]Because you're Dominant, you feel particularly confident about this...[roman type][line break]";
 					increase HCEClientSatisfaction by 1;
@@ -814,32 +814,32 @@ to say HellfireClubEscortNormal1a: [a shy incubus]
 					say "(-1)[line break]";
 				HellfireClubEscortNormal1aGetFucked;
 			else:
-				Linebreak;
+				LineBreak;
 				HellfireClubEscortNormal1aGiveOral;
 	else: [Player hasn't taken initiative]
-		Linebreak;
+		LineBreak;
 		say "     Deciding not to press him, you simply wait for him in the bed. He is still watching you from his position, silently.";
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Begin to undress and tease him.";
 		say "     ([link]N[as]n[end link]) - Do nothing.";
 		if Player consents: ['letting him come to you' path, starts lower on satisfaction]
-			Linebreak;
+			LineBreak;
 			say "     Perhaps you should show him some of your attributes to encourage him to come touch you. Trying your best to motivate the shy incubus, you reveal your [if Breast Size of Player > 0][breast size desc of player] breasts to him, grabbing and playing with them by yourself for a while[else]chest to him, rubbing your pecs all over with one of your hands for a while[end if] as you lock your gaze on his eyes. You notice a bump on the incubus['] pants, and it becomes obvious that he is turned on by you, as you see go for his crotch to start rubbing at his junk, albeit cautiously.";
 			WaitLineBreak;
 			say "     This exchange lasts for about a minute, but you manage to capture his interest by continuing to remove more of your attire of choice, revealing more of your [bodydesc of player] body to the handsome devil, and showing off your [bodytype of player] characteristics just to send him the clear message that he is welcome to approach you. At some point, the demon gives in and starts walking towards you as you watch him come, tentatively spreading your legs with your feet still touching the floor, exposing the [if Player is male][cock size desc of player] bulge building up in your crotch[else]diminutive underwear that barely covers your already moist labia[end if]. He bites his lip as he gets close to touch you, but instead of actually doing so, he looks up shyly at you, as if awaiting an instruction.";
 			now HCEClientSatisfaction is 1;
 			say "(+1)[line break]";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Direct him towards your crotch.";
 			say "     ([link]N[as]n[end link]) - Simply expose your privates.";
 			if Player consents: [took initiative + satisfaction]
-				Linebreak;
+				LineBreak;
 				say "     You look at him, the handsome devil's eyes shifting towards yours, and you place your hand underneath his perfect chin, sliding it gently across his cheek towards his ear, then onto the back of his head in a very tender manner. Then, once you have got a good grip within his soft hair, you carefully pull him towards you and your crotch, having him face your sex from close and in reach of his sweet lips. Slowly, you let him take a good look at your [if Player is male]now throbbing erection[else]moist labia[end if], and let him know that you want him to put his best efforts at pleasing you down there with his mouth and tongue. The incubus['] expression is one of thirst for your joy, and while he massages your thighs, he gets ready to give you the best oraljob he is able to.";
 				increase HCEClientSatisfaction by 1;
 				say "(+1)[line break]";
 				HellfireClubEscortNormal1aReceiveOral;
 			else: [lacked initiative - satisfaction, but...]
-				Linebreak;
+				LineBreak;
 				say "     As he stares at you, your hands simply move to take whatever is left of your clothes surrounding your junk, and slide them down. Slowly, [if Player is male]your [Cock of Player] penis jumps out of its confines in a growing, throbbing erection[else]your dripping cunt is revealed to your sweet demon, engorged and ready to be taken in action, which he really seems to like[end if]. Given the fact the incubus still didn't take any move, but appears to be dying to do so, perhaps you could encourage him...";
 				if Player is male and Cock Length of Player > 9: [he likes dicks bigger than his]
 					say "     [italic type]He seems quite entranced by the size of your dick, sticking his eyes onto it for a long, long while... You can only imagine it must be bigger than what he's carrying down there.[roman type][line break]";
@@ -848,16 +848,16 @@ to say HellfireClubEscortNormal1a: [a shy incubus]
 				else if Player is female: [having a pussy is an automatic like for the incubus]
 					increase HCEClientSatisfaction by 1;
 					say "(+1)[line break]";
-				Linebreak;
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Direct him towards your crotch.";
 				say "     ([link]N[as]n[end link]) - Play with yourself until he decides to service you.";
 				if Player consents: [still gained satisfaction point]
-					Linebreak;
+					LineBreak;
 					say "     With your sexual organs now in display, you proceed to slip your hand over the back of the incubus['] head and pull it towards your groin, to which he responds by kneeling in front of you and eagerly allow himself to be led. His lips collide against your [if Player is male]shaft[else]lower ones[end if] as he takes a moment to put his tongue to work...";
 					say "(+1)[line break]";
 					increase HCEClientSatisfaction by 1;
 				else:
-					Linebreak; [lost satisfaction opportunity, he prefers initiative]
+					LineBreak; [lost satisfaction opportunity, he prefers initiative]
 					say "     You begin touching yourself in front of the incubus, getting yourself to a higher state of arousal as you feast your eyes on his sublime demonic, yet fairly human looking, body. Despite the fact he is clearly enjoying the view, he still seems to be looking at you, not moving an inch. He seeks your eyes, your hands, your lips, and just doesn't do anything. However, a simple gaze shifting on your behalf from his face to your [if Player is male][cock size desc of player] cock[else]womanhood[end if] sends him the right message, as you are greeted by his mouth that so hungrily collides with your junk, even startling you at its sudden nature. However, his soft hands massaging your thighs are an indicative that the devil boy is simply eager to please you.";
 				WaitLineBreak;
 				HellfireClubEscortNormal1aReceiveOral;
@@ -871,16 +871,16 @@ to HellfireClubEscortNormal1aReceiveOral:
 	if Player is male: [dick]
 		say "     The sexy devil boy is already hard at working with your cock and balls, softly massaging your sack with his very soft hand as he runs his lips around your shaft, seeking each throbbing vein and sensitive area with his masterful tongue. He maintains eye contact with you, his crimson demon eyes locked into yours as he teases your manhood with all the expertise he knows, twirling his tongue all over your wet cockhead before he wraps his lips around your shaft, letting it sink in his mouth. His hands continue to massage your balls as he takes your whole length in like a skilled cocksucker, sliding his lips up and down as he focuses on your pulsing erection, sucking it at an increasingly higher pace.";
 		say "     He seems hooked up on your dick, given the way he sucks it, so glad to be pleasing you with his mouth, licking it all over and sucking it as far as it goes into his throat, without gagging nor choking on it even once, a truly skilled devil. Twisting his head ever so slightly to provide you with additional stimulation as the insides of his mouth and tongue rub around your glans, whenever he pulls up and slides down your shaft, he gives you one of the best blowjobs you have ever received, at least from a demon boy. You begin to feel a heavy tension in your balls and your lust grows, your cock throbbing harder and harder as he continues to suck you at a rhythm that starts feeling monotonous for a while... Then, he looks at you in the eye.";
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Grab his head and facefuck him.";
 		say "     ([link]N[as]n[end link]) - Lean back and order him to service you.";
 		if Player consents: [+1 Satisfaction Point]
-			Linebreak;
+			LineBreak;
 			say "     You put both your hands on each side of his head and pull it all the way down your length, making him take your whole cock inside as you take charge. Well, it seems [bold type]he likes this[roman type], as a glance over his bits allows you to see his throbbing erection as well, which keeps on jumping as you thrust into his mouth. With several more poundings, you feel yourself coming closer to the point of no return, so you shift towards deeper and slower motions as your load continues to build up, right until the last second...";
 			increase HCEClientSatisfaction by 1;
 			say "(+1)[line break]";
 		else:
-			Linebreak;
+			LineBreak;
 			say "     With some impatience, you order him to continue and pick up the pace, and he does so eagerly. Sinking his mouth deeper on your shaft, he continues to suck you with diligence, pushing your dick deeper down his throat with each move. The incubus himself seems to have built a sizable erection of his own, which keeps on jumping as he blows you. After a good amount of sucking and slurping, you feel yourself coming closer to the point of no return, so you try to hold his eagerness by encouraging slower movements, which turns out to be such a horribly delightful tease for you right until the last second, as your load continues to build up...";
 		if "Horny Bastard" is listed in feats of Player:
 			say "     [italic type]You're such a horny bastard and your dick stood so hard that the devil boy was delighted during the whole process.[roman type][line break]";
@@ -891,16 +891,16 @@ to HellfireClubEscortNormal1aReceiveOral:
 	else if Player is female: [pussy]
 		say "     The sexy devil boy is already hard at working with your womanhood, softly massaging your thighs with his very soft hands as he runs his lips around your moist labia, seeking the pleasure spots with care as he delivers masterful, gentle kisses. He maintains eye contact with you, his crimson demon eyes locked into yours as he teases your sex with all the expertise he knows, twirling his tongue all over your wet cooch before he slips it deeper, his lips now fully embracing your yearning cunt as he proceeds to make out with it. You feel his tongue in you after a while, licking at the right places and providing you enough stimulation to drive you wild in pleasure.";
 		say "     He seems hooked up on your pussy, given the way he licks it, so glad to be pleasing you with his mouth as he pushes his tongue deeper inside your wet curls, effectively tonguefucking you while moving it in circles and wiggling all over. Not one time he has to stop nor interrupt this process, he does everything like a truly skilled devil, even twisting his head ever so slightly to get better angles in order to provide you with additional stimulation. This has to be one of the best cunnilingus you have ever had, at least from a demon boy, who certainly seems to know what he is doing. There is a heavy tension building in your groin and spreading all over your body, something urging you to go harder on the handsome incubus... And him looking at you in the eye really helps that feeling.";
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Grab his head and take charge.";
 		say "     ([link]N[as]n[end link]) - Lean back and order him to service you.";
 		if Player consents: [+1 Satisfaction Point]
-			Linebreak;
+			LineBreak;
 			say "     You put both your hands on each side of his head and pull it against your groin, almost smothering the demon's face with your pussy as you grind it all over, soaking him in your juices as he does his best to continue to lick you. Well, it seems [bold type]he likes this[roman type], as a glance over his bits allows you to see his throbbing erection as well, which keeps on jumping as he tastes your womanhood with all the eagerness he can bolster. After a while, the pleasure begins to take over your body, senses and thoughts, inevitably approaching you close to that sweet desired climax...";
 			increase HCEClientSatisfaction by 1;
 			say "(+1)[line break]";
 		else:
-			Linebreak;
+			LineBreak;
 			say "     With some impatience, you order him to continue and pick up the pace, and he does so eagerly. Sinking his mouth deeper in your sex, he proceeds to deeply kiss it and shove his tongue as deep as he can, trying his very best to shake the lust inside you and throw it over the edge. He does not seem to mind this, as you have given him all the freedom he could ever wanted, while the incubus himself seems to have built a sizable erection of his own, which keeps on jumping as he eats your cunt. After a good amount of time down there, you feel yourself coming closer to the point of no return, so you try to hold his eagerness by encouraging slower movements, which turns out to be such a horribly delightful tease for you right until the last second, as your climax treads close...";
 		if "Horny Bastard" is listed in feats of Player:
 			say "     [italic type]You're such a horny bastard and your cunt remained so wet that the devil boy was delighted during the whole process.[roman type][line break]";
@@ -967,11 +967,11 @@ to HellfireClubEscortNormal1aGetFucked: [females only]
 to say HellfireClubEscortNormal1b: [a shy submissive succubus]
 	project figure of Succubus_clothed_icon;
 	say "     After some time readying yourself for what is to come, someone arrives at your room. Surprisingly, it is someone... seemingly shy. As you get a better view at your client, you notice a very beautiful woman, tall and slim, with plenty of demonic attributes, strongly resembling a succubus, pretty much like the ones normally seen roaming this district. But, as opposed to most who would be more than ready to provoke and seduce you, this one seems particularly faltering. She stands at the door, examining you. By the looks of it, She definitely seems to be a submissive. It appears you will have to take the lead[if player is dominant], which should be very easy for someone as dominant as you are...[else if Player is submissive], despite your submissive tendencies...[else]...[end if][line break]";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Go to her.";
 	say "     ([link]N[as]n[end link]) - Let her come to you.";
 	if Player consents: ['taking the initiative' path, leads to anal fuck if male, dom pussy ride if female (more points if dominant), starts higher on satisfaction]
-		Linebreak;
+		LineBreak;
 		now HCEClientSatisfaction is 2;
 		say "(+2)[line break]";
 		say "     Noticing her hesitation, you decide to step forward and help her come your way, receiving her with a sensual embrace. She freezes for a moment, but is receptive to it, as you have her sit besides you on the bed. She shows a smile that, despite looking devilish, you still perceive it as a quite reserved one. Knowing better than to wait for her to say or do anything, you plant your lips on hers, assaulting her mouth with a deep tongue kiss as you pin her down below your [bodydesc of player] body. It does not take long until you start noticing a wet stain by her crotch as you slide your hand down there, a clear sign of her arousal as you both continue to make out.";
@@ -981,11 +981,11 @@ to say HellfireClubEscortNormal1b: [a shy submissive succubus]
 			if Cock Length of Player > 9: [she likes dicks bigger than her counterpart]
 				increase HCEClientSatisfaction by 1;
 				say "(+1)[line break]";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Proceed to fuck her.";
 			say "     ([link]N[as]n[end link]) - Lick her pussy, instead.";
 			if Player consents: [pussy fuck]
-				Linebreak;
+				LineBreak;
 				if Player is dominant: [Dominant bonus]
 					say "     [italic type]Because you're Dominant, you feel particularly confident about this...[roman type][line break]";
 					increase HCEClientSatisfaction by 1;
@@ -996,17 +996,17 @@ to say HellfireClubEscortNormal1b: [a shy submissive succubus]
 					say "(-1)[line break]";
 				HellfireClubEscortNormal1bFuck;
 			else:
-				Linebreak;
+				LineBreak;
 				HellfireClubEscortNormal1bGiveOral;
 		else if Player is female:
 			increase HCEClientSatisfaction by 1; [having a pussy is an automatic like]
 			say ". You notice the gorgeous demoness touching your womanhood, this time, and she seems quite entertained with the fact that you, too, are as wet and aroused as she is. That look on her face is probably trying to tell you something, as she licks her own soft lips in the most sexy manner.";
 			say "(+1)[line break]";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Sit on her face.";
 			say "     ([link]N[as]n[end link]) - Lick her pussy, instead.";
 			if Player consents: [female pussy catch]
-				Linebreak;
+				LineBreak;
 				if Player is dominant: [Dominant bonus]
 					say "     [italic type]Because you're Dominant, you feel particularly confident about this...[roman type][line break]";
 					increase HCEClientSatisfaction by 1;
@@ -1017,32 +1017,32 @@ to say HellfireClubEscortNormal1b: [a shy submissive succubus]
 					say "(-1)[line break]";
 				HellfireClubEscortNormal1bFaceSit;
 			else:
-				Linebreak;
+				LineBreak;
 				HellfireClubEscortNormal1bGiveOral;
 	else: [Player hasn't taken initiative]
-		Linebreak;
+		LineBreak;
 		say "     Deciding not to press her, you simply wait for her in the bed. She is still watching you from her position, silently.";
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Begin to undress and tease her.";
 		say "     ([link]N[as]n[end link]) - Do nothing.";
 		if Player consents: ['letting him come to you' path, starts lower on satisfaction]
-			Linebreak;
+			LineBreak;
 			say "     Perhaps you should show her some of your attributes to encourage her to come touch you. Trying your best to motivate the shy succubus, you reveal your [if Breast Size of Player > 0][breast size desc of player] breasts to her, grabbing and playing with them by yourself for a while[else]chest to her, rubbing your pecs all over with one of your hands for a while[end if] as you lock your gaze on her eyes. You notice some discomfort on the demoness as she watches you, trying to cover up the fact she is getting turned on by you, as you see her go for her crotch to start fondling at her sex, albeit cautiously.";
 			WaitLineBreak;
 			say "     This exchange lasts for about a minute, but you manage to capture her interest by continuing to remove more of your attire of choice, revealing more of your [bodydesc of player] body to the gorgeous deviless, and showing off your [bodytype of player] characteristics just to send her the clear message that she is welcome to approach you. At some point, the demoness gives in and starts walking towards you as you watch her come, tentatively spreading your legs with your feet still touching the floor, exposing the [if Player is male][cock size desc of player] bulge building up in your crotch[else]diminutive underwear that barely covers your already moist labia[end if]. She bites her lip as she gets close to touch you, but instead of actually doing so, she looks up shyly at you, as if awaiting an instruction.";
 			now HCEClientSatisfaction is 1;
 			say "(+1)[line break]";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Direct her towards your crotch.";
 			say "     ([link]N[as]n[end link]) - Simply expose your privates.";
 			if Player consents: [took initiative + satisfaction]
-				Linebreak;
+				LineBreak;
 				say "     You look at her, the gorgeous deviless['] eyes shifting towards yours, and you place your hand underneath her perfect chin, sliding it gently across her cheek towards her ear, then onto the back of her head in a very tender manner. Then, once you have got a good grip of her silky hair, you carefully pull her towards you and your crotch, having her face your sex from close and in reach of her sweet lips. Slowly, you let her take a good look at your [if Player is male]now throbbing erection[else]moist labia[end if], and let her know that you want her to put her best efforts at pleasing you down there with her mouth and tongue. The succubus['] expression is one of thirst for your joy, and while she massages your thighs, she gets ready to give you the best oraljob she is able to.";
 				increase HCEClientSatisfaction by 1;
 				say "(+1)[line break]";
 				HellfireClubEscortNormal1bReceiveOral;
 			else: [lacked initiative - satisfaction, but...]
-				Linebreak;
+				LineBreak;
 				say "     As she stares at you, your hands simply move to take whatever is left of your clothes surrounding your junk, and slide them down. Slowly, [if Player is male]your [Cock of Player] penis jumps out of its confines in a growing, throbbing erection[else]your dripping cunt is revealed to your sweet demoness, engorged and ready to be taken in action, which she really seems to like[end if]. Given the fact the succubus still didn't take any move, but appears to be dying to do so, perhaps you could encourage her...";
 				if Player is male and Cock Length of Player > 9: [she likes dicks bigger than her counterpart]
 					say "     [italic type]She seems quite entranced by the size of your dick, sticking her eyes onto it for a long, long while... You can only imagine it must be bigger than what she is used to see among her counterparts.[roman type][line break]";
@@ -1051,16 +1051,16 @@ to say HellfireClubEscortNormal1b: [a shy submissive succubus]
 				else if Player is female: [having a pussy is an automatic like for the succubus]
 					increase HCEClientSatisfaction by 1;
 					say "(+1)[line break]";
-				Linebreak;
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Direct her towards your crotch.";
 				say "     ([link]N[as]n[end link]) - Play with yourself until she decides to service you.";
 				if Player consents: [still gained satisfaction point]
-					Linebreak;
+					LineBreak;
 					say "     With your sexual organs now in display, you proceed to slip your hand over the back of the succubus['] head and pull it towards your groin, to which she responds by kneeling in front of you and eagerly allow herself to be led. Her lips collide against your [if Player is male]shaft[else]lower ones[end if] as she takes a moment to put her tongue to work...";
 					increase HCEClientSatisfaction by 1;
 					say "(+1)[line break]";
 				else:
-					Linebreak; [lost satisfaction opportunity, she prefers initiative]
+					LineBreak; [lost satisfaction opportunity, she prefers initiative]
 					say "     You begin touching yourself in front of the succubus, getting yourself to a higher state of arousal as you feast your eyes on her sublime demonic, yet fairly human looking, body. Despite the fact she is clearly enjoying the view, she still seems to be looking at you, not moving an inch. She seeks your eyes, your hands, your lips, and just doesn't do anything. However, a simple gaze shifting on your behalf from her face to your [if Player is male][cock size desc of player] cock[else]womanhood[end if] sends her the right message, as you are greeted by her mouth that so hungrily collides with your junk, even startling you at its sudden nature. However, her soft hands massaging your thighs are an indicative that the devil girl is simply eager to please you.";
 				WaitLineBreak;
 				HellfireClubEscortNormal1bReceiveOral;
@@ -1074,16 +1074,16 @@ to HellfireClubEscortNormal1bReceiveOral:
 	if Player is male: [dick]
 		say "     The sexy devil girl is already hard at working with your cock and balls, softly massaging your sack with her very soft hand as she runs her lips around your shaft, seeking each throbbing vein and sensitive area with her masterful tongue. She maintains eye contact with you, her crimson demon eyes locked into yours as she teases your manhood with all the expertise she knows, twirling hers tongue all over your wet cockhead before she wraps her lips around your shaft, letting it sink in her mouth. Her hands continue to massage your balls as she takes your whole length in like a skilled cocksucker, sliding her lips up and down as she focuses on your pulsing erection, sucking it at an increasingly higher pace.";
 		say "     She seems hooked up on your dick, given the way she sucks it, so glad to be pleasing you with her mouth, licking it all over and sucking it as far as it goes into her throat, without gagging nor choking on it even once, a truly skilled deviless. Twisting her head ever so slightly to provide you with additional stimulation as the insides of her mouth and tongue rub around your glans, whenever she pulls up and slides down your shaft, she gives you one of the best blowjobs you have ever received, at least from a demon girl. You begin to feel a heavy tension in your balls and your lust grows, your cock throbbing harder and harder as she continues to suck you at a rhythm that starts feeling monotonous for a while... Then, she looks at you in the eye.";
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Grab her head and facefuck her.";
 		say "     ([link]N[as]n[end link]) - Lean back and order her to service you.";
 		if Player consents: [+1 Satisfaction Point]
-			Linebreak;
+			LineBreak;
 			say "     You put both your hands on each side of her head and pull it all the way down your length, making her take your whole cock inside as you take charge. Well, it seems [bold type]she likes this[roman type], as a glance over her bits allows you to see her fondling herself, one hand busy stimulating her womanhood. With several more poundings, you feel yourself coming closer to the point of no return, so you shift towards deeper and slower motions as your load continues to build up, right until the last second...";
 			increase HCEClientSatisfaction by 1;
 			say "(+1)[line break]";
 		else:
-			Linebreak;
+			LineBreak;
 			say "     With some impatience, you order her to continue and pick up the pace, and she does so eagerly. Sinking her mouth deeper on your shaft, she continues to suck you with diligence, pushing your dick deeper down his throat with each move. The succubus herself seems to have built a great amount of excitement of her own, as she keeps one hand busy stimulating her womanhood while blowing you. After a good amount of sucking and slurping, you feel yourself coming closer to the point of no return, so you try to hold his eagerness by encouraging slower movements, which turns out to be such a horribly delightful tease for you right until the last second, as your load continues to build up...";
 		if "Horny Bastard" is listed in feats of Player:
 			say "     [italic type]You're such a horny bastard and your dick stood so hard that the devil girl was delighted during the whole process.[roman type][line break]";
@@ -1094,16 +1094,16 @@ to HellfireClubEscortNormal1bReceiveOral:
 	else if Player is female: [pussy]
 		say "     The sexy devil girl is already hard at working with your womanhood, softly massaging your thighs with her very soft hands as she runs her lips around your moist labia, seeking the pleasure spots with care as she delivers masterful, gentle kisses. She maintains eye contact with you, her crimson demon eyes locked into yours as she teases your sex with all the expertise she knows, twirling her tongue all over your wet cooch before she slips it deeper, her lips now fully embracing your yearning cunt as she proceeds to make out with it. You feel her tongue in you after a while, licking at the right places and providing you enough stimulation to drive you wild in pleasure.";
 		say "     She seems hooked up on your pussy, given the way she licks it, so glad to be pleasing you with her mouth as she pushes her tongue deeper inside your wet curls, effectively tonguefucking you while moving it in circles and wiggling all over. Not one time she has to stop nor interrupt this process, she does everything like a truly skilled deviless, even twisting her head ever so slightly to get better angles in order to provide you with additional stimulation. This has to be one of the best cunnilingus you have ever had, at least from a demon girl, who certainly seems to know what she is doing. There is a heavy tension building in your groin and spreading all over your body, something urging you to go harder on the beautiful succubus... And her looking at you in the eye really helps that feeling.";
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Grab her head and take charge.";
 		say "     ([link]N[as]n[end link]) - Lean back and order her to service you.";
 		if Player consents: [+1 Satisfaction Point]
-			Linebreak;
+			LineBreak;
 			say "     You put both your hands on each side of her head and pull it against your groin, almost smothering the demoness['] face with your pussy as you grind it all over, soaking her in your juices as she does her best to continue to lick you. Well, it seems [bold type]she likes this[roman type], as a glance over hers bits allows you to see fondling herself, one hand busy stimulating her womanhood as she tastes your cunt with all the eagerness she can bolster. After a while, the pleasure begins to take over your body, senses and thoughts, inevitably approaching you close to that sweet desired climax...";
 			increase HCEClientSatisfaction by 1;
 			say "(+1)[line break]";
 		else:
-			Linebreak;
+			LineBreak;
 			say "     With some impatience, you order her to continue and pick up the pace, and she does so eagerly. Sinking her mouth deeper in your sex, she proceeds to deeply kiss it and shove her tongue as deep as she can, trying her very best to shake the lust inside you and throw it over the edge. She does not seem to mind this, as you have given her all the freedom she could ever wanted, with the succubus herself fondling her own womanhood as she eats your cunt. After a good amount of time down there, you feel yourself coming closer to the point of no return, so you try to hold her eagerness by encouraging slower movements, which turns out to be such a horribly delightful tease for you right until the last second, as your climax treads close...";
 		if "Horny Bastard" is listed in feats of Player:
 			say "     [italic type]You're such a horny bastard and your cunt remained so wet that the devil girl was delighted during the whole process.[roman type][line break]";
@@ -1176,11 +1176,11 @@ to say HellfireClubEscortNormal1c:
 	if randomnumber is:
 		-- 1: [he demands foot worship]
 			say "     The demon places his hand under your chin and gently leads you towards him, so you get off the bed and walk closer to him. Then, his grasp around your jaw tightens as he plants a kiss on your lips, his long nimble tongue licking at your mouth's insides with its overwhelming presence. He then pulls out, slowly. 'Mmmh... Your mouth feels good... Perhaps I have a use for it.' he says, as he commands you to lie down on the floor in front of him. 'Come on, now. My feet need attention.' His clawed toes seem to be moving impatiently, despite his calm posture. It seems he wants you to worship his feet.";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - You oblige.";
 			say "     ([link]N[as]n[end link]) - Feet? Eww!";
 			if Player consents: [He's pleased to know of your eagerness]
-				Linebreak;
+				LineBreak;
 				say "     Of course, you will do as he says. Without any further ado, you begin to lie down on the floor by his request, your head ending up in the space between his feet as he positions himself above you. 'Ahh, that's a really good [boygirl] if I see one.'";
 				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
@@ -1191,13 +1191,13 @@ to say HellfireClubEscortNormal1c:
 					say "(+2)[line break]";
 				HellfireClubEscortNormal1cFeet;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     Okay, you really are not into this, and you won't do what he asks... So you tell him that. 'What the fuck? You're going to refuse to pleasure me? Well, if that's so, I'll have boss know that you're not performing adequately. Refusing your clients like this... What a shameful conduct. I'm in my right to not pay any extra, too, so you won't see a coin. Not to mention, boss hates losers, so forget any chance you have with him if you screw this up.'";
-				Linebreak;
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - On second thought... Maybe you'll do what he asks.";
 				say "     ([link]N[as]n[end link]) - There's no way you're going to put his feet in your mouth.";
 				if Player consents: [Reconsidering earns you partial satisfaction]
-					Linebreak;
+					LineBreak;
 					say "     Well, maybe you should reconsider and obey his request. 'Well, that's better. Should've done that in the first place instead of wasting my time.' Without any further ado, you begin to lie down on the floor by his request, your head ending up in the space between his feet as he positions himself above you. 'That's a much better place for you now, cute face.'";
 					if Player is dominant: [A dominant player will pass on a much harsher attitude to the demon, and he won't like it]
 						say "     [italic type]Because you're Dominant, your client disliked your hesitation even more...[roman type][line break]";
@@ -1208,16 +1208,16 @@ to say HellfireClubEscortNormal1c:
 						say "(+1)[line break]";
 					HellfireClubEscortNormal1cFeet;
 				else:
-					Linebreak;
+					LineBreak;
 					say "     You stand your ground, and you won't do what he asks. 'Your choice, then. I'll just let boss know you've been a bad [boygirl].' he says, before turning around and walking away, leaving you alone in the room. That could definitely have gone better...";
 					now HCEClientSatisfaction is 0;
 		-- 2: [his cock to be serviced]
 			say "     The demon places his hand under your chin and gently leads you towards him, so you get off the bed and walk closer to him. Then, his grasp around your jaw tightens as he plants a kiss on your lips, his long nimble tongue licking at your mouth's insides with its overwhelming presence. He then pulls out, slowly. 'Mmmh... Your mouth feels good... Perhaps I have a use for it.' he says, as he commands you to lie down on the bed, pushing you towards it while he nearly tramples you.";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - You oblige.";
 			say "     ([link]N[as]n[end link]) - Question him.";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				say "     Leaning back onto the bed, you let the demon climb on top of you, his thick muscular legs ending up on each side of your torso as he rests his considerable weight on top of you. He really is heavy, though he makes sure he does not crush you. Giving his cock a few stroke as he looks at you in the eye, you have an idea of what he wants...";
 				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
@@ -1228,13 +1228,13 @@ to say HellfireClubEscortNormal1c:
 					say "(+2)[line break]";
 				HellfireClubEscortNormal1cCockSuck;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     Well, you have to know what you will be doing before you are actually doing it, so you question him before doing anything he says. He is not happy. 'For starters, you are supposed to do what I say. Then, you do whatever the fuck I tell you to do. Do I need to repeat myself a third time, or is it clear enough?'";
-				Linebreak;
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Apologize and let him continue.";
 				say "     ([link]N[as]n[end link]) - You don't like his attitude.";
 				if Player consents:
-					Linebreak;
+					LineBreak;
 					say "     You apologize to the demon, and proceed to lean back onto the bed. 'That's better. Next time, don't question me. This might be even something you'd enjoy!' he says as he climbs on top of you, his thick muscular legs ending up on each side of your torso as he rests his considerable weight on top of you. He really is heavy, though he makes sure he does not crush you. Giving his cock a few stroke as he looks at you in the eye, you have an idea of what he wants...";
 					if Player is dominant: [A dominant player will pass on a much harsher attitude to the demon, and he won't like it]
 						say "     [italic type]Because you're Dominant, your client disliked your hesitation even more...[roman type][line break]";
@@ -1245,17 +1245,17 @@ to say HellfireClubEscortNormal1c:
 						say "(+1)[line break]";
 					HellfireClubEscortNormal1cCockSuck;
 				else:
-					Linebreak;
+					LineBreak;
 					say "     You shake your head and get away from his reach, telling him that you don't like his attitude and you won't have any of this. Then, you tell him about your rights as a worker and that Mogdraz told you to stop things if they got too abusive. 'Oh, abusive?! You really don't know what abusive means, do you?! Obviously, boss doesn't like when his clients literally ruin his employees and makes it impossible for them to work again. That's what he means! Do you think I'd be stupid enough to break you in some way?!' he explains, quite loudly. 'Fucking Hell, you really think you're something special, huh? Well, my dick's gone soft, so I'll leave. You're not worth the coins.'";
 					say "     Then, he angrily walks away, without looking behind. He definitely did not seem happy...";
 					now HCEClientSatisfaction is 0;
 		-- 3: [he wants to fuck your ass (both genders)]
 			say "     The demon places his hand under your chin and gently leads you towards him, so you get off the bed and walk closer to him. Then, his grasp around your jaw tightens as he plants a kiss on your lips, his long nimble tongue licking at your mouth's insides with its overwhelming presence. As you both make out, he goes for a good grab of your asscheeks, squeezing them nicely as his kissing intensifies, almost passionately. He holds you so tightly and his cock gets so hard in the process that you really feel the demon is getting into it, though as his careful finger feels your pucker, you start getting an idea of what he truly wants...";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - You oblige.";
 			say "     ([link]N[as]n[end link]) - You won't allow it. But you might have to get violent to stop him.";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				say "     It really feels good, the way he caresses your ass and spreads your cheeks around, showing how much he wants to claim it for today's session. 'Yeah, that's what I'm gonna do... Fuck that ass until you beg me to stop... Well, I lie, I wouldn't stop even if you begged me.' he says, teasing you some more, before he gives the order 'Now, bend over for me.'";
 				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
@@ -1266,7 +1266,7 @@ to say HellfireClubEscortNormal1c:
 					say "(+2)[line break]";
 				HellfireClubEscortNormal1cAssFuck;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     You really don't like the idea, so you try to stop him... though it is quite difficult. He is a big guy, and he is clearly enjoying kissing you and feeling you up. Then, you figure that the only way to catch his attention is to... bite his tongue.";
 				say "     'WHAT THE FUCK?!' he lets go of you, pushing you against the bed violently as he steps back, furious. You were lucky to have escaped an enraged swipe of his clawed hand. 'Are you fucking retarded, you fucking idiot?! You're lucky you're under boss['] protection, or I would set your shitty ass on fire and let you burn until there was nothing left of that bitch face!' He is shouting at you, absolutely mad. 'Boss will know of this. I'm sure he won't be happy, either. You fucking pile of waste.'";
 				say "     It seems you really infuriated him! That will for sure get you in trouble. Whatever the circumstances are, you should [bold type]never attack your clients![roman type][line break]";
@@ -1305,7 +1305,7 @@ to say HellfireClubEscortNormal1c:
 					say "(+1)[line break]";
 					HellfireClubEscortNormal1cFeet;
 			else if calcnumber is 2:
-				Linebreak;
+				LineBreak;
 				say "     You decide to pick the cock suck option, ";
 				if a random chance of 1 in 2 succeeds: [he might really like it, or just be 'meh' about it but do it anyway]
 					say "to which the demon grins eagerly. 'Ohhh, I could really use a blowjob right now, actually... Yeah, that sounds great! Lie down on the bed and let me claim that mouth.' he orders you, and since the idea was yours, you do not really have any issue with obliging his request.";
@@ -1323,7 +1323,7 @@ to say HellfireClubEscortNormal1c:
 					say "(+1)[line break]";
 					HellfireClubEscortNormal1cCockSuck;
 			else if calcnumber is 3:
-				Linebreak;
+				LineBreak;
 				say "     You decide to pick the ass fuck option, to which the demon grins eagerly. 'Fuck yeah! I never say no to fucking some ass! Good that you're eager to do that for me, too... Now, bend over while I prepare you for this big bad boy here...' he orders you, and since the idea was yours, you do not really have any issue with obliging his request.";
 				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
@@ -1338,7 +1338,7 @@ to HellfireClubEscortNormal1cFeet:
 	project Figure of HellfireDemon_hardnoharness_icon;
 	WaitLineBreak;
 	say "     'Hehe, you look good from here... Though I think you'll look better with one of my feet down your cute face.' he taunts you, as he raises one of his clawed crimson feet over your head, namely his right one. Then, you see it slowly descending upon your face, to cover you with its great size under the rough sole. These demons walk barefoot, so it is only natural that their feet are calloused and thick-skinned. While he is standing, he presses his foot against your face, almost stomping you, though of course that would crush your head, so he keeps it light and gentle...-ish. 'I want to feel your tongue running down all over this, you understand?' he lets you know, as he brings himself some sweet pleasure by jerking his big cock while appreciating the view.";
-	say "     Once in a while, he grinds it against you, then makes you lick his sole from every angle, including his heel, which he absolutely insists on pushing it down your mouth to feel your lips part around it. 'That feels fucking good... You're good at this, eh? I gotta let boss know you like worshipping demon feet...' he taunts you, as you are forced to merely withstand his will and oblige his desire. The red devil really seems to enjoy this, as well, as you often catch him moaning while he strokes his own dick, giving you quite a view whenever his foot isn't covering your eyes. 'Oh... you wanna see me for a bit?' he asks you, noticing your interest in watching him from below. Though he has an interesting way of letting you watch... by still covering your whole face with his large foot and letting you peek between his toes. 'Yeah, you can take a break now and look...'";
+	say "     Once in a while, he grinds it against you, then makes you lick his sole from every angle, including his heel, which he absolutely insists on pushing it down your mouth to feel your lips part around it. 'That feels fucking good... You're good at this, eh? I gotta let boss know you like worshiping demon feet...' he taunts you, as you are forced to merely withstand his will and oblige his desire. The red devil really seems to enjoy this, as well, as you often catch him moaning while he strokes his own dick, giving you quite a view whenever his foot isn't covering your eyes. 'Oh... you wanna see me for a bit?' he asks you, noticing your interest in watching him from below. Though he has an interesting way of letting you watch... by still covering your whole face with his large foot and letting you peek between his toes. 'Yeah, you can take a break now and look...'";
 	WaitLineBreak;
 	say "     His dong looks massive from your perspective, as well as his heavy sack, which he handles with care. Rubbing each orb across with his thick clawed fingers from one hand, while the other strokes his long and thick shaft up and down, almost hypnotically, as he keeps his gaze locked on your barely visible eye... He grins, as a thick drop of precum oozes from the tip of his meatlog, then falling all the way onto one of his toes. 'Aww... You've got me so excited that you made me leak... Would you mind cleaning that off for me?' he asks, which you know it is more like an order, as he directs his wet toe over to your mouth. Naturally, you let it in, wrapping your lips around the toe - carefully though, since there is a sharp black claw at the tip - and suck off the sweet precum droplet.";
 	if Player is kinky and Player is not dominant:
@@ -1363,11 +1363,11 @@ to HellfireClubEscortNormal1cCockSuck:
 	say "     His throbbing meat is pulsing harder than ever as you put your best effort at sucking his dick, though he does most of the work. You simply wiggle your tongue all over it to give him additional stimulation and hold off your breath whenever his cock nearly chokes you. It is more a matter of endurance, in this case, but he enjoys the control he has over you, grabbing your head and make your lips slide down his shaft and back up, all while he makes you look at his face. After brief moments, he makes you take his log deeper, nearly dislocating your jaw, and deeper... one time further than the last, testing your limits as you are left with no other choice but to take it. Something, however, must have removed your gag reflex, as he is able to continue pushing his cock in without you feeling the need to cough.";
 	WaitLineBreak;
 	say "     'Sometimes I feel like going slower... Lucky you, this is one of those days. Or I'd have you over the edge of the bed facefucking you like the bitch you are.' he teases you, as he accelerates the pace just a bit more, even thrusting back and forth against your mouth, but not roughly, respecting his word.";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - A facefuck over the edge of the bed? You would actually like that. Find a way to let him know that...";
 	say "     ([link]N[as]n[end link]) - Just remain still and do whatever he says.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     In an attempt to show your approval for that idea, you give him your best hopeful glare, moaning appreciatively with his cock in your mouth, and give him a gentle thigh rub in the area your hands are able to reach - since his legs are essentially around your neck, blocking any arm movement past your shoulders - in order to tell him that, at least, you wouldn't mind that. He ends up not really understanding what you are trying to say, so he pulls out and lets you speak. 'Oh, I see.' he answers, then puts his cock back in your mouth. 'I'm glad you think so. Though I never said I wouldn't fuck your face... But your eagerness has been noted.'";
 		increase HCEClientSatisfaction by 1;
 		say "(+1)[line break]";
@@ -1382,11 +1382,11 @@ to HellfireClubEscortNormal1cCockSuck:
 		say ". Naturally, you drink it all up, as you doubt the demon would be happy to see some of his precious seed leak out of your mouth, but he does not seem to pay much attention to how messy it is getting for you.";
 	WaitLineBreak;
 	say "     Eventually, the red devil comes close to shooting... and it does not take long for him to actually reach past that phase. As he continues to thrust into your throat, his big balls raise and ready themselves for the deluge of cum you are about to get. Out of mercy, or something else entirely, he pulls out and begins to stroke his dick, directing it towards your mouth. 'It would be a waste to just... make it go down your throat, right? You wouldn't get to taste it at all...' he lets you know, so indeed, it wasn't out of mercy, but out of a great desire to see you get hooked up on the taste of his sweet demonic seed. Without any further ado, he brings himself closer and closer to orgasm, and then, within a matter of seconds, he explodes into your open mouth.";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Hurry up and swallow it all!";
 	say "     ([link]N[as]n[end link]) - Let it coat your face.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     You stretch your neck to bring your head closer to the tip of his dick and circle your lips around his glans, sucking up all the cum before it has any chance to splatter in your face. The demon is surprised by this, but the way he just happens to moan much louder with several 'Ohhh fuck yeah!' shouts as his climax goes on and on, he must have liked your initiative. You then proceed to audibly gulp down his whole load, which he truly, truly seems to love. His orgasm then subsides, dropping its last spurts of that delicious spunk on your tongue, which you only swallow after savoring them. 'I could kiss you right now... Yeah, actually, you earned that.' he lets you know, as he urges to plant his lips on yours to tongue wrestle you for the next minute... and the minute after that. Actually, you don't know how long it has been, but his kisses are... delightful.";
 		increase HCEClientSatisfaction by 1;
 		say "(+1)[line break]";
@@ -1439,11 +1439,11 @@ to say HellfireClubEscortNormal1d:
 	if randomnumber is:
 		-- 1: [she demands foot worship]
 			say "     The demoness places her hand under your chin and gently leads you towards her, so you get off the bed and walk closer to her. Then, her grasp around your jaw tightens as she plants a kiss on your lips, her long nimble tongue licking at your mouth's insides with its overwhelming presence. She then pulls out, slowly. 'Mmmh... Your mouth feels good... Perhaps I have a use for it.' she says, as she commands you to lie down on the floor in front of her. 'Come on, now. My feet need attention.' Her clawed toes seem to be moving impatiently, despite her calm posture. It seems she wants you to worship her feet.";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - You oblige.";
 			say "     ([link]N[as]n[end link]) - Feet? Eww!";
 			if Player consents: [She's pleased to know of your eagerness]
-				Linebreak;
+				LineBreak;
 				say "     Of course, you will do as she says. Without any further ado, you begin to lie down on the floor by her request, your head ending up in the space between her feet as she positions himself above you. 'Ahh, that's a really good [boygirl] if I see one.'";
 				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
@@ -1454,13 +1454,13 @@ to say HellfireClubEscortNormal1d:
 					say "(+2)[line break]";
 				HellfireClubEscortNormal1dFeet;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     Okay, you really are not into this, and you won't do what she asks... So you tell her that. 'Ohhh really? You're going to refuse to pleasure me? Well, if that's so, I'll have boss know that you're not performing adequately. Refusing your clients like this... What a shameful conduct. I'm in my right to not pay any extra, too, so you won't see a coin. Not to mention, boss hates losers, so forget any chance you have with him if you screw this up.'";
-				Linebreak;
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - On second thought... Maybe you'll do what she asks.";
 				say "     ([link]N[as]n[end link]) - There's no way you're going to put her feet in your mouth.";
 				if Player consents: [Reconsidering earns you partial satisfaction]
-					Linebreak;
+					LineBreak;
 					say "     Well, maybe you should reconsider and obey her request. 'Well, that's better. Should've done that in the first place instead of wasting my time.' Without any further ado, you begin to lie down on the floor by herrequest, your head ending up in the space between her feet as she positions himself above you. 'That's a much better place for you now, cute face.'";
 					if Player is dominant: [A dominant player will pass on a much harsher attitude to the demoness, and she won't like it]
 						say "     [italic type]Because you're Dominant, your client disliked your hesitation even more...[roman type][line break]";
@@ -1471,16 +1471,16 @@ to say HellfireClubEscortNormal1d:
 						say "(+1)[line break]";
 					HellfireClubEscortNormal1dFeet;
 				else:
-					Linebreak;
+					LineBreak;
 					say "     You stand your ground, and you won't do what she asks. 'Your choice, then. I'll just let boss know you've been a bad [boygirl].' she says, before turning around and walking away, leaving you alone in the room. That could definitely have gone better...";
 					now HCEClientSatisfaction is 0;
 		-- 2: [She wants to sit on player's face]
 			say "     The demoness places her hand under your chin and gently leads you towards her, so you get off the bed and walk closer to her. Then, her grasp around your jaw tightens as she plants a kiss on your lips, her long nimble tongue licking at your mouth's insides with its overwhelming presence. She then pulls out, slowly. 'Mmmh... Your mouth feels good... Perhaps I have a use for it.' she says, as she commands you to lie down on the bed, pushing you towards it while she nearly tramples you.";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - You oblige.";
 			say "     ([link]N[as]n[end link]) - Question her.";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				say "     Leaning back onto the bed, you let the demoness climb on top of you, her thick muscular legs ending up on each side of your torso as she rests her considerable weight on top of you. She really is heavy, though she makes sure she does not crush you. Giving her already soaking wet vulva a few stroke as she looks at you in the eye, you have an idea of what she wants...";
 				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
@@ -1491,13 +1491,13 @@ to say HellfireClubEscortNormal1d:
 					say "(+2)[line break]";
 				HellfireClubEscortNormal1dFaceSit;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     Well, you have to know what you will be doing before you are actually doing it, so you question her before doing anything she says. She is not happy. 'For starters, you are supposed to do what I say. Then, you do whatever the fuck I tell you to do. Do I need to repeat myself a third time, or is it clear enough?'";
-				Linebreak;
+				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Apologize and let her continue.";
 				say "     ([link]N[as]n[end link]) - You don't like her attitude.";
 				if Player consents:
-					Linebreak;
+					LineBreak;
 					say "     You apologize to the demoness, and proceed to lean back onto the bed. 'That's better. Next time, don't question me. This might be even something you'd enjoy!' she says as she climbs on top of you, her thick muscular legs ending up on each side of your torso as she rests her considerable weight on top of you. She really is heavy, though she makes sure she does not crush you. Giving her already soaking wet vulva a few stroke as she looks at you in the eye, you have an idea of what she wants...";
 					if Player is dominant: [A dominant player will pass on a much harsher attitude to the demoness, and she won't like it]
 						say "     [italic type]Because you're Dominant, your client disliked your hesitation even more...[roman type][line break]";
@@ -1508,17 +1508,17 @@ to say HellfireClubEscortNormal1d:
 						say "(+1)[line break]";
 					HellfireClubEscortNormal1dFaceSit;
 				else:
-					Linebreak;
+					LineBreak;
 					say "     You shake your head and get away from her reach, telling her that you don't like her attitude and you won't have any of this. Then, you tell her about your rights as a worker and that Mogdraz told you to stop things if they got too abusive. 'Oh, abusive?! You really don't know what abusive means, do you?! Obviously, boss doesn't like when his clients literally ruin his employees and makes it impossible for them to work again. That's what he means! Do you think I'd be stupid enough to break you in some way?!' she explains, quite loudly. 'Fucking Hell, you really think you're something special, huh? Well, you've got me in a bad mood, so I'll leave. You're not worth the coins.'";
 					say "     Then, she angrily walks away, without looking behind. She definitely did not seem happy...";
 					now HCEClientSatisfaction is 0;
 		-- 3: [she wants to peg you, on the ass (both genders)]
 			say "     The demoness places her hand under your chin and gently leads you towards her, so you get off the bed and walk closer to her. Then, her grasp around your jaw tightens as she plants a kiss on your lips, her long nimble tongue licking at your mouth's insides with its overwhelming presence. As you both make out, she goes for a good grab of your asscheeks, squeezing them nicely as her kissing intensifies, almost passionately. She holds you so tightly that you really feel the demoness is getting into it, though as her careful finger feels your pucker, you start having questions... Does she, by any chance, wants to fuck your ass with a strap-on?!";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - You oblige.";
 			say "     ([link]N[as]n[end link]) - You won't allow it. But you might have to get violent to stop her.";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				say "     It really feels good, the way she caresses your ass and spreads your cheeks around, showing how much she wants to claim it for today's session. 'Now, wouldn't it be fun to play with your ass, this time? There are so many fun tools around here... How about a strap-on?' she says, before she gives the order 'Now, bend over for me.'";
 				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
@@ -1529,7 +1529,7 @@ to say HellfireClubEscortNormal1d:
 					say "(+2)[line break]";
 				HellfireClubEscortNormal1dPegging;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     You really don't like the idea, so you try to stop her... though it is quite difficult. She is a big girl, and she is clearly enjoying kissing you and feeling you up. Then, you figure that the only way to catch his attention is to... bite her tongue.";
 				say "     'WHAT THE FUCK?!' she lets go of you, pushing you against the bed violently as she steps back, furious. You were lucky to have escaped an enraged swipe of her clawed hand. 'How dare you attack me like that?! You're lucky you're under boss['] protection, or I would set your shitty ass on fire and let you burn until there was nothing left of that bitch face!' She is shouting at you, absolutely mad. 'Boss will know of this. I'm sure he won't be happy, either. You fucking pile of waste.'";
 				say "     It seems you really infuriated her! That will for sure get you in trouble. Whatever the circumstances are, you should [bold type]never attack your clients![roman type][line break]";
@@ -1567,7 +1567,7 @@ to say HellfireClubEscortNormal1d:
 					now HCEClientSatisfaction is 1;
 					HellfireClubEscortNormal1dFeet;
 			else if calcnumber is 2:
-				Linebreak;
+				LineBreak;
 				say "     You decide to pick the facesit option, ";
 				if a random chance of 1 in 2 succeeds: [he might really like it, or just be 'meh' about it but do it anyway]
 					say "to which the demoness grins eagerly. 'Ohhh, my pussy could use the love, actually... Yes, that sounds great! Lie down on the bed and let me claim that whole face.' she orders you, and since the idea was yours, you do not really have any issue with obliging her request.";
@@ -1585,7 +1585,7 @@ to say HellfireClubEscortNormal1d:
 					say "(+1)[line break]";
 					HellfireClubEscortNormal1dFaceSit;
 			else if calcnumber is 3:
-				Linebreak;
+				LineBreak;
 				say "     You decide to pick the ass pegging option, to which the demoness grins eagerly. 'Oh yes... Delightful! I never say no to some anal play! Good that you're eager to do that for me, too... Now, bend over while I prepare you for the biggest strap-on size...' she orders you, and since the idea was yours, you do not really have any issue with obliging her request.";
 				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
@@ -1599,7 +1599,7 @@ to say HellfireClubEscortNormal1d:
 to HellfireClubEscortNormal1dFeet:
 	WaitLineBreak;
 	say "     'Hehe, you look good from here... Though I think you'll look better with one of my feet down your cute face.' she taunts you, as she raises one of her clawed crimson feet over your head, namely her right one. Then, you see it slowly descending upon your face, to cover you with its great size under the rough sole. These demons walk barefoot, so it is only natural that their feet are calloused and thick-skinned. While she is standing, she presses his foot against your face, almost stomping you, though of course that would crush your head, so she keeps it light and gentle...-ish. 'I want to feel your tongue running down all over this, you understand?' she lets you know, as she brings herself some sweet pleasure by rubbing herself while appreciating the view.";
-	say "     Once in a while, she grinds it against you, then makes you lick her sole from every angle, including her heel, which she absolutely insists on pushing it down your mouth to feel your lips part around it. 'That feels really good... You're good at this, eh? I gotta let boss know you like worshipping demon feet...' she taunts you, as you are forced to merely withstand her will and oblige her desire. The red deviless really seems to enjoy this, as well, as you often catch her moaning while she fondles her wet cunt, giving you quite a view whenever her foot isn't covering your eyes. 'Oh... you wanna see me for a bit?' she asks you, noticing your interest in watching her from below. Though she has an interesting way of letting you watch... by still covering your whole face with her sizable foot and letting you peek between her toes. 'Yeah, you can take a break now and look...'";
+	say "     Once in a while, she grinds it against you, then makes you lick her sole from every angle, including her heel, which she absolutely insists on pushing it down your mouth to feel your lips part around it. 'That feels really good... You're good at this, eh? I gotta let boss know you like worshiping demon feet...' she taunts you, as you are forced to merely withstand her will and oblige her desire. The red deviless really seems to enjoy this, as well, as you often catch her moaning while she fondles her wet cunt, giving you quite a view whenever her foot isn't covering your eyes. 'Oh... you wanna see me for a bit?' she asks you, noticing your interest in watching her from below. Though she has an interesting way of letting you watch... by still covering your whole face with her sizable foot and letting you peek between her toes. 'Yeah, you can take a break now and look...'";
 	WaitLineBreak;
 	say "     She really looks powerful from your perspective, her vast and supple breasts bouncing around as she caresses them with one hand while the other is kept rubbing at her vulva and clit, occasionally sinking into her curls whenever she wants to finger herself. During all this time she keeps her gaze locked on your barely visible eye, grinning, as a drop of her own juices, leaking from her soaking cunt, falls all the way onto one of her toes. 'Aww... You've got me so excited that my pussy's just leaking, now... Would you mind cleaning that off for me?' she asks, which you know it is more like an order, as she directs her wet toe over to your mouth. Naturally, you let it in, wrapping your lips around the toe - carefully though, since there is a sharp black claw at the tip - and suck off the sweet precum droplet.";
 	if Player is kinky and Player is not dominant:
@@ -1678,12 +1678,12 @@ to say HellfireClubEscortNormal2:
 		HellfireClubEscortNormalWaiting;
 		WaitLineBreak;
 	say "     And before you is a purple hued, almost transparent being. It gurgles and bubbles out what you can only guess are comments on you, but there is little to nothing discernable about any of what it says. It looks and behaves like a wild void beast, and it seems to be moving towards you.";
-	Linebreak;
+	LineBreak;
 	say "     [bold type]Will you let it touch you?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes, it must be one of Mogdraz's exquisite clients.";
 	say "     ([link]N[as]n[end link]) - Is it possible that a creature from the void could have invaded the club?! Run!!!";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		if Player is male:
 			say "     You settle into the idea of having no real way to know its plans, and accept its form as it crawls up to your feet. The warm, yet slick surface of the thing sends goosebumps along your body, and as it begins to grip and crawl up your legs, a twisted feeling of excitement shoots through you. It's almost like a slug in its movements, and as it grows ever closer to your groin, you can't help but pop up a boner. Blood rushes straight to your groin as this creature rubs at your thighs with a kind of gooey, slimy touch. Then, seconds later, it lurches forward, its front point latching to your stomach as it arches over your [Cock of Player] cock. Then it seems to stop for a brief moment... at least until it suddenly suctions itself to your groin, shoving all of your length straight inside it within half a second.";
 			say "     It feels as if your whole manhood just went balls deep inside of an ass, vagina and mouth all at once. It writhes and laps at your penis as it pulses up and down, it's slick body tight around your entire length. The demon even begins to almost vacuum seal itself to you, leaving you with this purple mass encircling your meat. You can even see a hint of your length lurching and throbbing inside it. There's no doubt that you will fail to last long, but you are guessing that will not be enough for this odd beast. So you settle back, your hands clenching as you fight the urge to grab at the goo. It's doing everything on its own, and your interference could cause some issues. For now, it's keeping you building up towards what you know will be a mind-blowing orgasm. However, right as you reach the edge, it dials back.";
@@ -1716,7 +1716,7 @@ to say HellfireClubEscortNormal2:
 			say "(+3)[line break]";
 			HCEFinalSatisfactionBonus;
 	else:
-		Linebreak;
+		LineBreak;
 		say "     Yes, you just run. You run as fast as you can from that room and lock the creature inside of it. Then you go meet Mogdraz.";
 		now HCEClientSatisfaction is -2; [this one is not a bad end to the escort scenes. A very unique exception.]
 
@@ -1745,7 +1745,7 @@ to say HellfireClubEscortNormal3a: [Stallion Nightmare]
 		else:
 			say "Invalid choice. Type [link]1[end link] to choose conversation only, [link]2[end link] to grab his dick, [link]3[end link] to offer a kind of different oral services or [link]4[end link] to tell him you just fuck and don't talk.";
 	if calcnumber is 1: [Clean Conversation]
-		Linebreak;
+		LineBreak;
 		now HCEClientSatisfaction is 3; [you are so nice!]
 		say "(+3)[line break]";
 		say "     Surely this flaming man horse is just lonely, and you can provide him the company. As the ice has been broken, you are now free to ask questions and push some subjects, namely to keep your client entertained. You start with showing him some empathy regarding his loneliness in the void. 'Oh it is a sad place. Have you been there? It's just... darkness everywhere, and you can't trust what you see. Never! There was one time I was caught in a forest of funny looking plants. As you must have realized, I get quite horny and very frequently, so I've decided to shove my dong inside a pussy-shaped flower because it looked so fun! To my horror, they turned out to be maneater plants with vines thrashing all over the place, trying to grab me and, certainly, do horrible things to me! I barely escaped without being eaten by one. Never more!'";
@@ -1758,12 +1758,12 @@ to say HellfireClubEscortNormal3a: [Stallion Nightmare]
 		say "     ([link]Y[as]y[end link]) - But of course! You are here to please him.";
 		say "     ([link]N[as]n[end link]) - Fearing death by impalement, or for some other reason, you deny his request.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You tell the horseman that it would be your pleasure, and he only has to say how he wants it. 'Splendid! Don't worry, I will go in gently. I am fully aware of my monstrous size and I definitely would not want to lethally impale you on my cock. That would be a waste of such a beautiful soul like yours!' At least, he will be careful, so all you have to do is trust him. 'Bend over the bed, please. I shall try to make this pleasurable for us both.'";
 			WaitLineBreak;
 			HellfireClubEscortNormal3aFuck;
 		else:
-			Linebreak;
+			LineBreak;
 			say "     You tell him that, unfortunately, you would have to refuse, as provide the excuse that you have a limit on how much you can take, by Mogdraz's recommendation. Technically, you are recalling your right to back off if something is ought to damage you physically, which turns out to be a compelling argument for the horse man. 'I see. It is no trouble, then. You have offered me a good time, already. Is there another way we can get this cursed hard-on taken care of, though? I would very much appreciate that.'";
 			LineBreak;
 			say "     [bold type]What do you recommend?[roman type][line break]";
@@ -1779,29 +1779,29 @@ to say HellfireClubEscortNormal3a: [Stallion Nightmare]
 				else:
 					say "Invalid choice. Type [link]1[end link] to choose conversation only, [link]2[end link] to grab his dick or [link]3[end link] to offer a different kind of services.";
 			if calcnumber is 1: [Handjob]
-				Linebreak;
+				LineBreak;
 				say "     Considering your options, you suggest a handjob would do the trick, as you are quite good with your hands. 'Hm... I suppose. A pair of hands other than mine would definitely feel better, and I don't risk choking or impaling you on my sizable manhood. You may touch it, then.' he [italic type]declares[roman type] as he gives you full freedom to proceed as you see fit.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3aHandjob;
 			else if calcnumber is 2: [Blowjob]
-				Linebreak;
+				LineBreak;
 				say "     Considering your options, you suggest a blowjob would do the trick, as you are quite an expert with the oral pleasures. 'A warm mouth would be most pleasurable, indeed. I do hope you don't have much of a gag reflex, though. I would hate to have you puke and cry all over my beautiful shaft. Play around it and don't shove it in too deep, if that's the case.' Having his advice taken into account, you proceed as you see fit.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3aBlowjob;
 			else if calcnumber is 3: [Massage]
-				Linebreak;
+				LineBreak;
 				say "     Perhaps a relaxing massage would be in order? 'Ohhh, a body massage? Well, but I'm afraid that would leave me even more horny! I do like the idea, though. Perhaps... We could give it a try?' says the horseman, as you consider your next moves.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3aMassage;
 	else if calcnumber is 2: [Jump into a handjob]
-		Linebreak;
+		LineBreak;
 		now HCEClientSatisfaction is 2; [you are... quite eager to please]
 		say "(+2)[line break]";
 		say "     As he takes his seat, you reach for his cock gently with one of your hands. The anthro nightmare horse stutters at this, and immediately releases a soft moan. 'Oh, my... Ohh... Uh... I see you are quite forward with all of this. V-very well, you may... handjob me. In fact, I do believe I need that more than anything.' he says, giving you permission to proceed as you see fit.";
 		WaitLineBreak;
 		HellfireClubEscortNormal3aHandjob;
 	else if calcnumber is 3: [Jump into a blowjob]
-		Linebreak;
+		LineBreak;
 		now HCEClientSatisfaction is 2; [you are... quite eager to please]
 		say "(+2)[line break]";
 		say "     As he takes his seat, you lick your lips as you begin to lean over his massive dong, with the intent to lay your lips on that veiny shaft. He stops you, however. 'My...! How rude! Did you intend to start sucking my cock without permission?!' You urge to tell him it is nothing like that, you merely wanted to provide him some pleasure while you converse. 'Ah, you had the best intentions, then. I apologize, some creatures seem to eager to kneel before me and take my member inside their mouths, then realize it is too much for them as they so quickly indulge them into the practice. I hate cocksuckers with a gag reflex, or those who are rather unskilled and cannot work with the fact they have one. A terrible turn-off, as you must comprehend.'";
@@ -1809,7 +1809,7 @@ to say HellfireClubEscortNormal3a: [Stallion Nightmare]
 		WaitLineBreak;
 		HellfireClubEscortNormal3aBlowjob;
 	else if calcnumber is 4: [Well...]
-		Linebreak;
+		LineBreak;
 		say "     You tell him that you have no interest in conversing, and your services are strictly kept to physically pleasuring someone. 'How... rude! I paid for company, not for a sex doll! If I wanted to fuck an empty sack of organs I would have done so for free! Preposterous. I shall take my leave, then. You have offended me for thinking so lowly of my person.'";
 		say "     He does not even give you a chance to apologize, even if you wanted to. He gets off the bed like a thunder spark as he walks away, leaving you alone in the room. And of course, with a terrible review on your record. Looks like someone is not going to get paid for this one...";
 		now HCEClientSatisfaction is 0;
@@ -1826,29 +1826,29 @@ to HellfireClubEscortNormal3aHandjob:
 	if HCEscort3NightmareHorseSexRounds is 0:
 		now HCEscort3NightmareHorseSexRounds is 1;
 		say "     To your shock, however, the nightmare stallion's cock does not seem to have gone soft. It is still throbbing at a full erection, and his balls still feel quite full. 'Good foreplay, I must admit. Though for someone with my drive for sex, I usually need to cum a second time... Do you think I could use your anus to pleasure myself? I long to breed someone the good old way...' he asks, as his horsecock continues to pulse in eagerness.";
-		Linebreak;
+		LineBreak;
 		say "     [bold type]How will you respond?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - But of course! You are here to please him.";
 		say "     ([link]N[as]n[end link]) - Fearing death by impalement, or for some other reason, you deny his request.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You tell the horseman that it would be your pleasure, and he only has to say how he wants it. 'Splendid! Don't worry, I will go in gently. I am fully aware of my monstrous size and I definitely would not want to lethally impale you on my cock. That would be a waste of such a beautiful soul like yours!' At least, he will be careful, so all you have to do is trust him. 'Bend over the bed, please. I shall try to make this pleasurable for us both.'";
 			WaitLineBreak;
 			HellfireClubEscortNormal3aFuck;
 		else:
-			Linebreak;
+			LineBreak;
 			say "     You tell him that, unfortunately, you would have to refuse, as provide the excuse that you have a limit on how much you can take, by Mogdraz's recommendation. Technically, you are recalling your right to back off if something is ought to damage you physically, which turns out to be a compelling argument for the horse man. 'I see. It is no trouble, then. You have offered me a good time, already. Is there another way we can get this cursed hard-on taken care of, though? I would very much appreciate that.'";
 			LineBreak;
 			say "     [bold type]What do you recommend?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Consider sucking his cock.";
 			say "     ([link]N[as]n[end link]) - Suggest a relaxing massage.";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				say "     Considering your options, you suggest a blowjob would do the trick, as you are quite an expert with the oral pleasures. 'A warm mouth would be most pleasurable, indeed. I do hope you don't have much of a gag reflex, though. I would hate to have you puke and cry all over my beautiful shaft. Play around it and don't shove it in too deep, if that's the case.' Having his advice taken into account, you proceed as you see fit.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3aBlowjob;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     Perhaps a relaxing massage would be in order? 'Ohhh, a body massage? Well, but I'm afraid that would leave me even more horny! I do like the idea, though. Perhaps... We could give it a try?' says the horseman, as you consider your next moves.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3aMassage;
@@ -1869,29 +1869,29 @@ to HellfireClubEscortNormal3aBlowjob:
 	if HCEscort3NightmareHorseSexRounds is 0:
 		now HCEscort3NightmareHorseSexRounds is 1;
 		say "     To your shock, however, the nightmare stallion's cock does not seem to have gone soft. It is still throbbing at a full erection, and his balls still feel quite full. 'Good foreplay, I must admit. Though for someone with my drive for sex, I usually need to cum a second time... Do you think I could use your anus to pleasure myself? I long to breed someone the good old way...' he asks, as his horsecock continues to pulse in eagerness.";
-		Linebreak;
+		LineBreak;
 		say "     [bold type]How will you respond?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - But of course! You are here to please him.";
 		say "     ([link]N[as]n[end link]) - Fearing death by impalement, or for some other reason, you deny his request.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You tell the horseman that it would be your pleasure, and he only has to say how he wants it. 'Splendid! Don't worry, I will go in gently. I am fully aware of my monstrous size and I definitely would not want to lethally impale you on my cock. That would be a waste of such a beautiful soul like yours!' At least, he will be careful, so all you have to do is trust him. 'Bend over the bed, please. I shall try to make this pleasurable for us both.'";
 			WaitLineBreak;
 			HellfireClubEscortNormal3aFuck;
 		else:
-			Linebreak;
+			LineBreak;
 			say "     You tell him that, unfortunately, you would have to refuse, as provide the excuse that you have a limit on how much you can take, by Mogdraz's recommendation. Technically, you are recalling your right to back off if something is ought to damage you physically, which turns out to be a compelling argument for the horse man. 'I see. It is no trouble, then. You have offered me a good time, already. Is there another way we can get this cursed hard-on taken care of, though? I would very much appreciate that.'";
 			LineBreak;
 			say "     [bold type]What do you recommend?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Consider using just your hands.";
 			say "     ([link]N[as]n[end link]) - Suggest a relaxing massage.";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				say "     Considering your options, you suggest a handjob would do the trick, as you are quite good with your hands. 'Hm... I suppose. A pair of hands other than mine would definitely feel better, and I don't risk impaling you on my sizable manhood. You may touch it, then.' he [italic type]declares[roman type] as he gives you full freedom to proceed as you see fit.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3aHandjob;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     Perhaps a relaxing massage would be in order? 'Ohhh, a body massage? Well, but I'm afraid that would leave me even more horny! I do like the idea, though. Perhaps... We could give it a try?' says the horseman, as you consider your next moves.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3aMassage;
@@ -1913,29 +1913,29 @@ to HellfireClubEscortNormal3aMassage:
 	if HCEscort3NightmareHorseSexRounds is 0:
 		now HCEscort3NightmareHorseSexRounds is 1;
 		say "     To your shock, however, the nightmare stallion's cock does not seem to have gone soft. It is still throbbing at a full erection, and his balls still feel quite full. 'Good foreplay, I must admit. Though for someone with my drive for sex, I usually need to cum a second time... Do you think I could use your anus to pleasure myself? I long to breed someone the good old way... and after the amazing job you have done, I... really want to give you something special.' he asks, as his horsecock continues to pulse in eagerness.";
-		Linebreak;
+		LineBreak;
 		say "     [bold type]How will you respond?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - But of course! You are here to please him.";
 		say "     ([link]N[as]n[end link]) - Fearing death by impalement, or for some other reason, you deny his request.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You tell the horseman that it would be your pleasure, and he only has to say how he wants it. 'Splendid! Don't worry, I will go in gently. I am fully aware of my monstrous size and I definitely would not want to lethally impale you on my cock. That would be a waste of such a beautiful soul like yours!' At least, he will be careful, so all you have to do is trust him. 'Bend over the bed, please. I shall try to make this pleasurable for us both.'";
 			WaitLineBreak;
 			HellfireClubEscortNormal3aFuck;
 		else:
-			Linebreak;
+			LineBreak;
 			say "     You tell him that, unfortunately, you would have to refuse, as provide the excuse that you have a limit on how much you can take, by Mogdraz's recommendation. Technically, you are recalling your right to back off if something is ought to damage you physically, which turns out to be a compelling argument for the horse man. 'I see. It is no trouble, then. You have offered me a good time, already. Is there another way we can get this cursed hard-on taken care of, though? I would very much appreciate that.'";
 			LineBreak;
 			say "     [bold type]What do you recommend?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Consider using just your hands.";
 			say "     ([link]N[as]n[end link]) - Perhaps he would like a blowjob.";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				say "     Considering your options, you suggest a handjob would do the trick, as you are quite good with your hands. 'Hm... I suppose. A pair of hands other than mine would definitely feel better, and I don't risk impaling you on my sizable manhood. You may touch it, then.' he [italic type]declares[roman type] as he gives you full freedom to proceed as you see fit.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3aHandjob;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     Considering your options, you suggest a blowjob would do the trick, as you are quite an expert with the oral pleasures. 'A warm mouth would be most pleasurable, indeed. I do hope you don't have much of a gag reflex, though. I would hate to have you puke and cry all over my beautiful shaft. Play around it and don't shove it in too deep, if that's the case.' Having his advice taken into account, you proceed as you see fit.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3aBlowjob;
@@ -1989,7 +1989,7 @@ to say HellfireClubEscortNormal3b: [Herm Mare Nightmare]
 		else:
 			say "Invalid choice. Type [link]1[end link] to choose conversation only, [link]2[end link] to grab her dick, [link]3[end link] to offer a kind of different oral services or [link]4[end link] to tell her you just fuck and don't talk.";
 	if calcnumber is 1: [Clean Conversation]
-		Linebreak;
+		LineBreak;
 		now HCEClientSatisfaction is 3; [you are so nice!]
 		say "(+3)[line break]";
 		say "     Surely this flaming woman horse is just lonely, and you can provide her the company. As the ice has been broken, you are now free to ask questions and push some subjects, namely to keep your client entertained. You start with showing her some empathy regarding her loneliness in the void. 'Oh it is a sad place. Have you been there? It's just... darkness everywhere, and you can't trust what you see. Never! There was one time I was caught in a forest of funny looking plants. As you must have realized, I get quite horny and very frequently, so I've decided to shove my dong inside a pussy-shaped flower because it looked so fun! To my horror, they turned out to be maneater plants with vines thrashing all over the place, trying to grab me and, certainly, do horrible things to me! One of them even shoved itself up my own pussy, to my shock... I barely escaped without being eaten by a plant. Never more!'";
@@ -2002,12 +2002,12 @@ to say HellfireClubEscortNormal3b: [Herm Mare Nightmare]
 		say "     ([link]Y[as]y[end link]) - But of course! You are here to please her.";
 		say "     ([link]N[as]n[end link]) - Fearing death by impalement, or for some other reason, you deny her request.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You tell the horsewoman that it would be your pleasure, and she only has to say how she wants it. 'Splendid! Don't worry, I will go in gently. I am fully aware of my monstrous size and I definitely would not want to lethally impale you on my cock. That would be a waste of such a beautiful soul like yours!' At least, she will be careful, so all you have to do is trust her. 'Bend over the bed, please. I shall try to make this pleasurable for us both.'";
 			WaitLineBreak;
 			HellfireClubEscortNormal3bFuck;
 		else:
-			Linebreak;
+			LineBreak;
 			say "     You tell her that, unfortunately, you would have to refuse, as provide the excuse that you have a limit on how much you can take, by Mogdraz's recommendation. Technically, you are recalling your right to back off if something is ought to damage you physically, which turns out to be a compelling argument for the horse woman. 'I see. It is no trouble, then. You have offered me a good time, already. Is there another way we can get this cursed hard-on taken care of, though? I would very much appreciate that.'";
 			LineBreak;
 			say "     [bold type]What do you recommend?[roman type][line break]";
@@ -2023,29 +2023,29 @@ to say HellfireClubEscortNormal3b: [Herm Mare Nightmare]
 				else:
 					say "Invalid choice. Type [link]1[end link] to choose conversation only, [link]2[end link] to grab her dick or [link]3[end link] to offer a different kind of services.";
 			if calcnumber is 1: [Handjob]
-				Linebreak;
+				LineBreak;
 				say "     Considering your options, you suggest a handjob would do the trick, as you are quite good with your hands. 'Hm... I suppose. A pair of hands other than mine would definitely feel better, and I don't risk choking or impaling you on my sizable cock. You may touch it, then.' she [italic type]declares[roman type] as she gives you full freedom to proceed as you see fit.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3bHandjob;
 			else if calcnumber is 2: [Blowjob]
-				Linebreak;
+				LineBreak;
 				say "     Considering your options, you suggest a blowjob would do the trick, as you are quite an expert with the oral pleasures. 'A warm mouth would be most pleasurable, indeed. I do hope you don't have much of a gag reflex, though. I would hate to have you puke and cry all over my beautiful shaft. Play around it and don't shove it in too deep, if that's the case.' Having her advice taken into account, you proceed as you see fit.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3bBlowjob;
 			else if calcnumber is 3: [Massage]
-				Linebreak;
+				LineBreak;
 				say "     Perhaps a relaxing massage would be in order? 'Ohhh, a body massage? Well, but I'm afraid that would leave me even more horny! I do like the idea, though. Perhaps... We could give it a try?' says the horse herm, as you consider your next moves.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3bMassage;
 	else if calcnumber is 2: [Jump into a handjob]
-		Linebreak;
+		LineBreak;
 		now HCEClientSatisfaction is 2; [you are... quite eager to please]
 		say "(+2)[line break]";
 		say "     As she takes her seat, you reach for her cock gently with one of your hands. The anthro nightmare horse stutters at this, and immediately releases a soft moan. 'Oh, my... Ohh... Uh... I see you are quite forward with all of this. V-very well, you may... handjob me. In fact, I do believe I need that more than anything.' she says, giving you permission to proceed as you see fit.";
 		WaitLineBreak;
 		HellfireClubEscortNormal3bHandjob;
 	else if calcnumber is 3: [Jump into a blowjob]
-		Linebreak;
+		LineBreak;
 		now HCEClientSatisfaction is 2; [you are... quite eager to please]
 		say "(+2)[line break]";
 		say "     As she takes her seat, you lick your lips as you begin to lean over her massive dong, with the intent to lay your lips on that veiny shaft. She stops you, however. 'My...! How rude! Did you intend to start sucking my cock without permission?!' You urge to tell her it is nothing like that, you merely wanted to provide her some pleasure while you converse. 'Ah, you had the best intentions, then. I apologize, some creatures seem to eager to kneel before me and take my member inside their mouths, then realize it is too much for them as they so quickly indulge them into the practice. I hate cocksuckers with a gag reflex, or those who are rather unskilled and cannot work with the fact they have one. A terrible turn-off, as you must comprehend.'";
@@ -2053,7 +2053,7 @@ to say HellfireClubEscortNormal3b: [Herm Mare Nightmare]
 		WaitLineBreak;
 		HellfireClubEscortNormal3bBlowjob;
 	else if calcnumber is 4: [Well...]
-		Linebreak;
+		LineBreak;
 		say "     You tell her that you have no interest in conversing, and your services are strictly kept to physically pleasuring someone. 'How... rude! I paid for company, not for a sex doll! If I wanted to fuck an empty sack of organs I would have done so for free! Preposterous. I shall take my leave, then. You have offended me for thinking so lowly of my person.'";
 		say "     She does not even give you a chance to apologize, even if you wanted to. She gets off the bed like a thunder spark as she walks away, leaving you alone in the room. And of course, with a terrible review on your record. Looks like someone is not going to get paid for this one...";
 		now HCEClientSatisfaction is 0;
@@ -2070,29 +2070,29 @@ to HellfireClubEscortNormal3bHandjob:
 	if HCEscort3NightmareHorseSexRounds is 0:
 		now HCEscort3NightmareHorseSexRounds is 1;
 		say "     To your shock, however, the nightmare herm mare's cock does not seem to have gone soft. It is still throbbing at a full erection, and her balls still feel quite full. 'Good foreplay, I must admit. Though for someone with my drive for sex, I usually need to cum a second time... Do you think I could use your anus to pleasure myself? I long to breed someone the good old way...' she asks, as her horsecock continues to pulse in eagerness.";
-		Linebreak;
+		LineBreak;
 		say "     [bold type]How will you respond?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - But of course! You are here to please her.";
 		say "     ([link]N[as]n[end link]) - Fearing death by impalement, or for some other reason, you deny her request.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You tell the horse woman that it would be your pleasure, and she only has to say how she wants it. 'Splendid! Don't worry, I will go in gently. I am fully aware of my monstrous size and I definitely would not want to lethally impale you on my cock. That would be a waste of such a beautiful soul like yours!' At least, she will be careful, so all you have to do is trust her. 'Bend over the bed, please. I shall try to make this pleasurable for us both.'";
 			WaitLineBreak;
 			HellfireClubEscortNormal3bFuck;
 		else:
-			Linebreak;
+			LineBreak;
 			say "     You tell her that, unfortunately, you would have to refuse, as provide the excuse that you have a limit on how much you can take, by Mogdraz's recommendation. Technically, you are recalling your right to back off if something is ought to damage you physically, which turns out to be a compelling argument for the horse woman. 'I see. It is no trouble, then. You have offered me a good time, already. Is there another way we can get this cursed hard-on taken care of, though? I would very much appreciate that.'";
 			LineBreak;
 			say "     [bold type]What do you recommend?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Consider sucking his cock.";
 			say "     ([link]N[as]n[end link]) - Suggest a relaxing massage.";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				say "     Considering your options, you suggest a blowjob would do the trick, as you are quite an expert with the oral pleasures. 'A warm mouth would be most pleasurable, indeed. I do hope you don't have much of a gag reflex, though. I would hate to have you puke and cry all over my beautiful shaft. Play around it and don't shove it in too deep, if that's the case.' Having her advice taken into account, you proceed as you see fit.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3bBlowjob;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     Perhaps a relaxing massage would be in order? 'Ohhh, a body massage? Well, but I'm afraid that would leave me even more horny! I do like the idea, though. Perhaps... We could give it a try?' says the horse woman, as you consider your next moves.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3bMassage;
@@ -2113,29 +2113,29 @@ to HellfireClubEscortNormal3bBlowjob:
 	if HCEscort3NightmareHorseSexRounds is 0:
 		now HCEscort3NightmareHorseSexRounds is 1;
 		say "     To your shock, however, the nightmare herm mare's cock does not seem to have gone soft. It is still throbbing at a full erection, and her balls still feel quite full. 'Good foreplay, I must admit. Though for someone with my drive for sex, I usually need to cum a second time... Do you think I could use your anus to pleasure myself? I long to breed someone the good old way...' she asks, as her horsecock continues to pulse in eagerness.";
-		Linebreak;
+		LineBreak;
 		say "     [bold type]How will you respond?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - But of course! You are here to please her.";
 		say "     ([link]N[as]n[end link]) - Fearing death by impalement, or for some other reason, you deny her request.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You tell the horse woman that it would be your pleasure, and she only has to say how she wants it. 'Splendid! Don't worry, I will go in gently. I am fully aware of my monstrous size and I definitely would not want to lethally impale you on my cock. That would be a waste of such a beautiful soul like yours!' At least, she will be careful, so all you have to do is trust her. 'Bend over the bed, please. I shall try to make this pleasurable for us both.'";
 			WaitLineBreak;
 			HellfireClubEscortNormal3bFuck;
 		else:
-			Linebreak;
+			LineBreak;
 			say "     You tell her that, unfortunately, you would have to refuse, as provide the excuse that you have a limit on how much you can take, by Mogdraz's recommendation. Technically, you are recalling your right to back off if something is ought to damage you physically, which turns out to be a compelling argument for the horse woman. 'I see. It is no trouble, then. You have offered me a good time, already. Is there another way we can get this cursed hard-on taken care of, though? I would very much appreciate that.'";
 			LineBreak;
 			say "     [bold type]What do you recommend?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Consider using just your hands.";
 			say "     ([link]N[as]n[end link]) - Suggest a relaxing massage.";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				say "     Considering your options, you suggest a handjob would do the trick, as you are quite good with your hands. 'Hm... I suppose. A pair of hands other than mine would definitely feel better, and I don't risk impaling you on my sizable cock. You may touch it, then.' she [italic type]declares[roman type] as she gives you full freedom to proceed as you see fit.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3bHandjob;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     Perhaps a relaxing massage would be in order? 'Ohhh, a body massage? Well, but I'm afraid that would leave me even more horny! I do like the idea, though. Perhaps... We could give it a try?' says the horse woman, as you consider your next moves.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3bMassage;
@@ -2158,29 +2158,29 @@ to HellfireClubEscortNormal3bMassage:
 	if HCEscort3NightmareHorseSexRounds is 0:
 		now HCEscort3NightmareHorseSexRounds is 1;
 		say "     To your shock, however, the nightmare herm mare's cock does not seem to have gone soft. It is still throbbing at a full erection, and her balls still feel quite full. 'Good foreplay, I must admit. Though for someone with my drive for sex, I usually need to cum a second time... Do you think I could use your anus to pleasure myself? I long to breed someone the good old way... and after the amazing job you have done, I... really want to give you something special.' she asks, as her horsecock continues to pulse in eagerness.";
-		Linebreak;
+		LineBreak;
 		say "     [bold type]How will you respond?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - But of course! You are here to please her.";
 		say "     ([link]N[as]n[end link]) - Fearing death by impalement, or for some other reason, you deny her request.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You tell the horse woman that it would be your pleasure, and she only has to say how she wants it. 'Splendid! Don't worry, I will go in gently. I am fully aware of my monstrous size and I definitely would not want to lethally impale you on my cock. That would be a waste of such a beautiful soul like yours!' At least, she will be careful, so all you have to do is trust her. 'Bend over the bed, please. I shall try to make this pleasurable for us both.'";
 			WaitLineBreak;
 			HellfireClubEscortNormal3bFuck;
 		else:
-			Linebreak;
+			LineBreak;
 			say "     You tell her that, unfortunately, you would have to refuse, as provide the excuse that you have a limit on how much you can take, by Mogdraz's recommendation. Technically, you are recalling your right to back off if something is ought to damage you physically, which turns out to be a compelling argument for the horse woman. 'I see. It is no trouble, then. You have offered me a good time, already. Is there another way we can get this cursed hard-on taken care of, though? I would very much appreciate that.'";
 			LineBreak;
 			say "     [bold type]What do you recommend?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Consider using just your hands.";
 			say "     ([link]N[as]n[end link]) - Perhaps she would like a blowjob.";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				say "     Considering your options, you suggest a handjob would do the trick, as you are quite good with your hands. 'Hm... I suppose. A pair of hands other than mine would definitely feel better, and I don't risk impaling you on my sizable cock. You may touch it, then.' he [italic type]declares[roman type] as she gives you full freedom to proceed as you see fit.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3bHandjob;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     Considering your options, you suggest a blowjob would do the trick, as you are quite an expert with the oral pleasures. 'A warm mouth would be most pleasurable, indeed. I do hope you don't have much of a gag reflex, though. I would hate to have you puke and cry all over my beautiful shaft. Play around it and don't shove it in too deep, if that's the case.' Having her advice taken into account, you proceed as you see fit.";
 				WaitLineBreak;
 				HellfireClubEscortNormal3bBlowjob;
@@ -2219,29 +2219,29 @@ to say HellfireClubEscortNormal4a: [Male Lizardman]
 		WaitLineBreak;
 	say "     You hear a triple knock on the door to your room. Even with it being left ajar, your client seems not to dare entering without your consent. A polite one, you wonder?";
 	say "     They do not enter just yet. It seems you really are expected to do something. Maybe give them permission to come to you? Or... just... stay silent?";
-	Linebreak;
+	LineBreak;
 	say "     [bold type]What will you do?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Tell your client to enter.";
 	say "     ([link]N[as]n[end link]) - Keep your eyes peeled.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     You tell your client to just come in as soon as you hear the knocking. Now, you hear some movement, as you hear a quite ominous voice speaking...";
 		WaitLineBreak;
 		say "     'May I come in?' a red lizard face comes peeking through the door, his tongue waving like a snake's as he hisses. Is he some kind of demonic lizardman mixed with a snake of some sort? His eyes are, indeed, reptile in appearance, with a fiery yellow tone, and the rest of his body is tall and fit, covered in dark red scales and shaped into an anthropomorphic form of a lizardman. He stands completely naked as he walks in, with only a slit resting between his legs, where you would expect something dandling. Not the case for the lizard people. 'Ssss... Oh, this is most pleasant. I like a discrete encounter in a cozy establishment. Are you to be my escort for tonight?'";
 	else:
-		Linebreak;
+		LineBreak;
 		say "     You keep sitting on the bed. Your eyes are fixated on the door. Nothing else moves nor makes a noise, except... the three knocks, again, at the exact same pace as before.";
-		Linebreak;
+		LineBreak;
 		say "     [bold type]What will you do?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Just tell your client to enter.";
 		say "     ([link]N[as]n[end link]) - Keep your eyes peeled, yet again.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You tell your client to just come in as soon as you hear the knocking. Now, you hear some movement, as you hear a quite ominous voice speaking...";
 			WaitLineBreak;
 			say "     'May I come in?' a red lizard face comes peeking through the door, his tongue waving like a snake's as he hisses. Is he some kind of demonic lizardman mixed with a snake of some sort? His eyes are, indeed, reptile in appearance, with a fiery yellow tone, and the rest of his body is tall and fit, covered in dark red scales and shaped into an anthropomorphic form of a lizardman. He stands completely naked as he walks in, with only a slit resting between his legs, where you would expect something dandling. Not the case for the lizard people. 'Ssss... I apologize for taking so long to enter. I prefer a safe entry rather than being seen as impolite. Are you to be my escort for tonight?'";
 		else:
-			Linebreak;
+			LineBreak;
 			say "     And once more, you await. Your eyes are still fixated on the door, and there is absolutely nothing going on...";
 			say "     Until...";
 			WaitLineBreak;
@@ -2249,12 +2249,12 @@ to say HellfireClubEscortNormal4a: [Male Lizardman]
 	WaitLineBreak;
 	say "     Certainly, his most prevalent feature is the constant hissing through his words, which gives him an even more ominous feeling. But as the situation stands, you are to be, indeed, his escort, so you let him know that he is correct. 'I see... Sss...! I do have a few requests... regarding what we should be doing together... I'm a big fan of the oral activities, as they are the most pleasurable while simultaneously relaxing, a fine way to enjoy the luxuries of good company.' - he says, pausing with another hiss - 'Would it be appropriate if we shared a long time indulging ourselves in the art that makes most use of our mouths and tongues? I would be delighted... And would make sure your superior gets a fair payment for your s-ssservice...'";
 	say "     Either you are going to be putting your mouth on him, or he will want to put that long tongue of his to work on your privates, most likely. It is not a choice that will fall on your shoulders, but you are expected to perform stellarly and respect his wishes.";
-	Linebreak;
+	LineBreak;
 	say "     [bold type]Do you accept these terms?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure thing, you are here to please.";
 	say "     ([link]N[as]n[end link]) - His hissing creeps you out. Send him away and call it a day.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		now HCEClientSatisfaction is 2;
 		say "(+2)[line break]";
 		say "     Of course, he is the one whose whims you must satisfy, and so, you tell him you are ready for anything he desires. 'Perfect. Then I would like to get started on something...'";
@@ -2267,7 +2267,7 @@ to say HellfireClubEscortNormal4a: [Male Lizardman]
 				HellfireEscortNormal4aGetOral;
 		HCEFinalSatisfactionBonus;
 	else:
-		Linebreak;
+		LineBreak;
 		say "     Just why does he keep doing it?! It sounds ominous and sends you chills down your spine. You do not want to work with this client, and so, you send him away in the most polite manner possible. 'Oh, I... I do apologize, I thought I asked for a professional... What kind of people does Master Mogdraz employ, these days-sss...? This is such a big disappointment! Hopefully he will have another much more compliant servant to sate my needs, or he won't see any coin from me ever again. Ssss!!'";
 		say "     After his aggressive hissing at you, he leaves the room without looking behind. At least you got rid of him, but Mogdraz certainly is not going to hand you any payment. Someone else will have the coins you could have.";
 		now HCEClientSatisfaction is 0;
@@ -2341,29 +2341,29 @@ to say HellfireClubEscortNormal4b: [Female Lizardman]
 		WaitLineBreak;
 	say "     You hear a triple knock on the door to your room. Even with it being left ajar, your client seems not to dare entering without your consent. A polite one, you wonder?";
 	say "     They do not enter just yet. It seems you really are expected to do something. Maybe give them permission to come to you? Or... just... stay silent?";
-	Linebreak;
+	LineBreak;
 	say "     [bold type]What will you do?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Tell your client to enter.";
 	say "     ([link]N[as]n[end link]) - Keep your eyes peeled.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     You tell your client to just come in as soon as you hear the knocking. Now, you hear some movement, as you hear a quite ominous voice speaking...";
 		WaitLineBreak;
 		say "     'May I come in?' a red lizard face comes peeking through the door, her tongue waving like a snake's as she hisses. Is she some kind of demonic lizardwoman mixed with a snake of some sort? Her eyes are, indeed, reptile in appearance, with a bright purple tone, and the rest of her body is tall and fit, covered in dark red scales and shaped into an anthropomorphic form of a lizardwoman. She stands completely naked as she walks in, swaying her long scaly tail sensually as she approaches you. 'Ssss... Oh, this is most pleasant. I like a discrete encounter in a cozy establishment. Are you to be my escort for tonight?'";
 	else:
-		Linebreak;
+		LineBreak;
 		say "     You keep sitting on the bed. Your eyes are fixated on the door. Nothing else moves nor makes a noise, except... the three knocks, again, at the exact same pace as before.";
-		Linebreak;
+		LineBreak;
 		say "     [bold type]What will you do?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Just tell your client to enter.";
 		say "     ([link]N[as]n[end link]) - Keep your eyes peeled, yet again.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You tell your client to just come in as soon as you hear the knocking. Now, you hear some movement, as you hear a quite ominous voice speaking...";
 			WaitLineBreak;
 			say "     'May I come in?' a red lizard face comes peeking through the door, her tongue waving like a snake's as she hisses. Is she some kind of demonic lizardwoman mixed with a snake of some sort? Her eyes are, indeed, reptile in appearance, with a bright purple tone, and the rest of her body is tall and fit, covered in dark red scales and shaped into an anthropomorphic form of a lizardwoman. She stands completely naked as she walks in, swaying her long scaly tail sensually as she approaches you. 'Ssss... I apologize for taking so long to enter. I prefer a safe entry rather than being seen as impolite. Are you to be my escort for tonight?'";
 		else:
-			Linebreak;
+			LineBreak;
 			say "     And once more, you await. Your eyes are still fixated on the door, and there is absolutely nothing going on...";
 			say "     Until...";
 			WaitLineBreak;
@@ -2371,12 +2371,12 @@ to say HellfireClubEscortNormal4b: [Female Lizardman]
 	WaitLineBreak;
 	say "     Certainly, her most prevalent feature is the constant hissing through her words, which gives her an even more ominous feeling. But as the situation stands, you are to be, indeed, her escort, so you let her know that she is correct. 'I see... Sss...! I do have a few requests... regarding what we should be doing together... I'm a big fan of the oral activities, as they are the most pleasurable while simultaneously relaxing, a fine way to enjoy the luxuries of good company.' - she says, pausing with another hiss - 'Would it be appropriate if we shared a long time indulging ourselves in the art that makes most use of our mouths and tongues? I would be delighted... And would make sure your superior gets a fair payment for your s-ssservice...'";
 	say "     Either you are going to be putting your mouth on her, or she will want to put that long tongue of his to work on your privates, most likely. It is not a choice that will fall on your shoulders, but you are expected to perform stellarly and respect her wishes.";
-	Linebreak;
+	LineBreak;
 	say "     [bold type]Do you accept these terms?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure thing, you are here to please.";
 	say "     ([link]N[as]n[end link]) - Her hissing creeps you out. Send her away and call it a day.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		now HCEClientSatisfaction is 2;
 		say "(+2)[line break]";
 		say "     Of course, she is the one whose whims you must satisfy, and so, you tell her you are ready for anything she desires. 'Perfect. Then I would like to get started on something...'";
@@ -2389,7 +2389,7 @@ to say HellfireClubEscortNormal4b: [Female Lizardman]
 				HellfireEscortNormal4bGetOral;
 		HCEFinalSatisfactionBonus;
 	else:
-		Linebreak;
+		LineBreak;
 		say "     Just why does she keep doing it?! It sounds ominous and sends you chills down your spine. You do not want to work with this client, and so, you send her away in the most polite manner possible. 'Oh, I... I do apologize, I thought I asked for a professional... What kind of people does Master Mogdraz employ, these days-sss...? This is such a big disappointment! Hopefully he will have another much more compliant servant to sate my needs, or he won't see any coin from me ever again. Ssss!!'";
 		say "     After her aggressive hissing at you, she leaves the room without looking behind. At least you got rid of her, but Mogdraz certainly is not going to hand you any payment. Someone else will have the coins you could have.";
 		now HCEClientSatisfaction is 0;

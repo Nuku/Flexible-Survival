@@ -198,7 +198,7 @@ to say ResolveEvent Conflict Within the Plains:
 						LineBreak;
 						say "[SubmissiveSeraphisFirst]";
 			else if calcnumber is 3:
-				Linebreak;
+				LineBreak;
 				say "     You decide that whatever is going on here is too strange and dangerous for you, drawing you to get up and move away quickly and quietly.";
 				now HP of Seraphis is 50;
 				now Resolution of Conflict Within the Plains is 100; [player left, NPC lost]

@@ -285,7 +285,7 @@ instead of going east from Urban Forest while (HP of Percy < 1):
 	WaitLineBreak;
 	say "     The creature mumbles and hums something about [']dancing if he wanted to['] while carrying a bundle of wood. He even shuffles his feet a little to the tune in his head until a slight breeze blows from behind you. The singing creatures nose twitches a few times before he turns towards where you are hiding. He squints for a moment, followed by a look of surprise. You quickly stand up out of reflex, ready to fight or run. Your potential attacker, however, drops the bundle of wood, and for a moment, he opens his mouth and looks as if he is going to wave to you in greeting, only to stop and curl up into a tight ball of scales before suddenly rolling away into the burrow!";
 	say "     [bold type]Do you want to go after the creature?[roman type][line break]";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Follow the strange creature.";
 	say "     ([link]N[as]n[end link]) - Leave it be for now.";
 	if Player consents:[Follow]

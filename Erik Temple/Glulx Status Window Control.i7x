@@ -213,7 +213,7 @@ Include (-
 
     GGRecoverObjects();
 
-	! Sound channel initialisation, and RNG fixing, must be done now rather
+	! Sound channel initialization, and RNG fixing, must be done now rather
 	! than later in case InitGlkWindow() returns a non-zero value.
 
 	if (glk_gestalt(gestalt_Sound, 0)) {

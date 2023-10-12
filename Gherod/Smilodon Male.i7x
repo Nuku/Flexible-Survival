@@ -78,7 +78,7 @@ to say Smilodon Male Wins:
 			if Player is submissive:
 				say ". 'I really should keep you... have you worship me everyday and unload my balls inside you, feeding you lots and lots of this sweet cum down your throat... Bet you'd like that...' he teases you, licking at your neck with more of that dominant affection of his, tempting you to follow through with his words. 'I gotta go now, but make sure you are ready to kneel the next time we meet. Don't fight it... I know you'll want more of this.'";
 			else:
-				say ". 'Didn't that feel good? Just letting yourself go... Worshipping me, you swallowing my load... How long will it take for you to understand you'd be so much happier submitting to me, right away...?' he teases you, licking at your neck with more of that dominant affection of his. 'Next time we meet, just kneel and take my cock. You'll enjoy it way, way more like that, trust me...'";
+				say ". 'Didn't that feel good? Just letting yourself go... Worshiping me, you swallowing my load... How long will it take for you to understand you'd be so much happier submitting to me, right away...?' he teases you, licking at your neck with more of that dominant affection of his. 'Next time we meet, just kneel and take my cock. You'll enjoy it way, way more like that, trust me...'";
 			say "     With those being his last words, he lets go of you, getting up and leaving you kneeling down on the floor. Giving his balls another scratch, he admires the sight of you for some seconds, then turns tail and leaves, walking triumphantly.";
 			WaitLineBreak;
 			say "     It takes you some time to recover from that big cat's facefucking, and once you do, you stand up and manage to grab your things to get ready to leave.";
@@ -103,7 +103,7 @@ to say Smilodon Male Loses:
 		else:
 			say "Invalid choice. Type [link]1[end link] to join and blow him, [link]2[end link] to join and worship him or [link]3[end link] to take your leave.";
 	if calcnumber is 1:
-		Linebreak;
+		LineBreak;
 		say "     Deciding that you probably want to have fun with the big catman, you look back at him and go join him by the tree. He makes space so that you can lean against him, and immediately puts an arm around your shoulder. 'You've got some moves there. Beat me quite easily. Though I'll have you know, I wasn't trying to hurt you. I'm not much keen on fighting as I am with fucking, even though I have to claws to deal some damage... It's just that fucking is so much better.' he says, moving his paw to stroke your ear as he speaks. 'You're good looking, though. I'd definitely love to fuck you. But I guess you've earned the right to pick, with the thrashing you just gave me.' It seems the feline is giving you a choice in what to do with the time you have left with him.";
 		say "     But you already have made a decision...";
 		WaitLineBreak;
@@ -136,7 +136,7 @@ to say Smilodon Male Loses:
 		if Lust of Ranfer < 4:
 			increase Lust of Ranfer by 1;
 	else if calcnumber is 3:
-		Linebreak;
+		LineBreak;
 		say "     Deciding that you are done with the big catman, you refuse his offer and simply turn tail to leave. He says nothing back at you, and so you part ways...";
 
 to say Smilodon Male Desc:
@@ -154,7 +154,7 @@ to say Smilodon Male Desc:
 		else if Lust of Ranfer is 4:
 			say "     'I suppose we are acquaintances, at this point.' he asks, eyeing you while keeping stance over his side. 'But I'm quite tired of fighting you. I'm a feline of love, and I've got so much to give... Why don't we just drop hostilities and spend some time together? I promise I'll take good care of you... I always fill my [boygirl]s lovingly.' he adds, his sheath giving a very obvious twitch, and awaits a reply from you to his offer. It seems the big cat man is not so keen on fighting you, this time.";
 			say "     [bold type]What will you do?[roman type][line break]";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Accept his terms.";
 			say "     ([link]N[as]n[end link]) - You came here to fight him.";
 			if Player consents:
@@ -166,7 +166,7 @@ to say Smilodon Male Desc:
 				say "[RanferSexMenu]";
 				now combat abort is 1;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     All he has gained from you is a willingness to fight him even more, so you prepare yourself to strike him. 'What a bore... Seems like I'll have to knack some sense into you. Maybe you just like it rough, after all...' As soon as he finishes talking, he gets ready to tackle you.";
 				now Lust of Ranfer is 1;
 		else if Lust of Ranfer is 5:
@@ -174,9 +174,9 @@ to say Smilodon Male Desc:
 			WaitLineBreak;
 			say "     'I was wondering... Don't you get lonely out there? I think you'd benefit from having a strong bodyguard with you...' he says while stroking your cheek, keeping his muscular body close to yours, allowing you to feel the softness of his fur brushing against you. 'I'd love to be able to take care of my favorite kitten [boygirl] and make sure [SubjectPro] is safe... Wouldn't want any naughty creature to snatch [ObjectPro] away from me. I could tend to [PosAdj] every need and craving... while [SubjectPro] does [PosAdj] best to keep this big cat very happy, in return...'";
 			say "     He keeps on touching and feeling you up tenderly, arousal certainly clinging up in the air. 'Pet him a lot... Rub and massage his big muscles... Service and worship him... Anytime... anywhere... A lovely deal, wouldn't you agree? But of course, I won't be in your way if you want to change things up and relieve yourself with someone else, as long as they're not a bad influence on you. I'll make sure no harm comes your way, kitten, nor to any of your friends.'";
-			Linebreak;
+			LineBreak;
 			say "     Turns out the male Smilodon is asking you if you would have him as a [bold type]companion[roman type]. Do you take him with you?";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Of course!";
 			say "     ([link]N[as]n[end link]) - No, you'd rather keep him as an acquaintance.";
 			if Player consents:
@@ -213,7 +213,7 @@ Body Definition of Ranfer is 8. [scale of 1-9 for body definition, grouped into 
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Ranfer is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 Mouth Length of Ranfer is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-Mouth Circumference of Ranfer is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Mouth Circumference of Ranfer is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
 Tongue Length of Ranfer is 6. [length in inches]
 Breast Size of Ranfer is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Ranfer is 2. [count of nipples]
@@ -335,7 +335,7 @@ to say RanferTalkMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask him for some fur";
 		now sortorder entry is 5;
-		now description entry is "Should be okay to ask for a fluff of Smilodon fur, right";		
+		now description entry is "Should be okay to ask for a fluff of Smilodon fur, right";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -367,7 +367,7 @@ to say RanferTalkMenu:
 					say "[RanferTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You excuse yourself as Ranfer gives you a worrysome look, but lets you go.";
+			say "     You excuse yourself as Ranfer gives you a worrisome look, but lets you go.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
@@ -387,7 +387,7 @@ to say RanferTalkInstincts:
 	say "     'I'd prefer just forgetting about it. I don't think I could do anything to save them, so... seeing them turned and as someone else entirely is definitely not what I want to see. I'm happy being with my kitten [boygirl].' he ends, smiling at you.";
 
 to say RanferTalkSex:
-	say "     Clearly, Ranfer prefers being a dominant, but what else does he like, you ask him. 'Oh, I love a smaller bottom. Tiny and cute, someone I can carry around, hug and squeeze tightly while I fuck them deep and lovingly... I'm down for either gender, as well, no preference there... As long as they're small cute little fuckable things.' he goes on about, and you can see his loincloth raising slightly as he speaks. 'Though I really enjoy being worshipped and serviced, as well. Nothing better than a dedicated kitten appreciating this body... muscles... everything, from head to paws... And head to feet, when I was still human. I've been doing this since I was able to fuck, quite honestly.' Seems like Ranfer gets really excited at the mere thought of that. Perhaps you should offer that kind of fun, sometime.";
+	say "     Clearly, Ranfer prefers being a dominant, but what else does he like, you ask him. 'Oh, I love a smaller bottom. Tiny and cute, someone I can carry around, hug and squeeze tightly while I fuck them deep and lovingly... I'm down for either gender, as well, no preference there... As long as they're small cute little fuckable things.' he goes on about, and you can see his loincloth raising slightly as he speaks. 'Though I really enjoy being worshiped and serviced, as well. Nothing better than a dedicated kitten appreciating this body... muscles... everything, from head to paws... And head to feet, when I was still human. I've been doing this since I was able to fuck, quite honestly.' Seems like Ranfer gets really excited at the mere thought of that. Perhaps you should offer that kind of fun, sometime.";
 
 to say RanferTalkCreatures: [Ranfer mentions what creatures he has sex scenes with]
 	say "     It is fairly obvious that Ranfer likes a good fight, and he did not offer to become your bodyguard without any personal interest attached. Besides really being into you and feeling protective towards you, he really enjoys a good fight. With that in mind, you ask him what sort of creatures he would like to meet with you. He does give it some thought before replying, 'Hm... Honestly, anything you want to fight is good enough for me. Preferably something we can safely fuck in the end, and knowing our chances, we might be able to find some eager candidates very easily. I could make a few suggestions, however...' Curiosity immediately settling in, you tell him you would like to hear his suggestions. He gives you a pat on top of your head and a gentle brush on your cheek, then pulls you to him with an arm over your shoulders.";
@@ -415,7 +415,7 @@ to say SexWithRanfer:
 		say "     When approaching the large Smilodon male, you give him a suggestive glance over his muscular body and tell him you would love to have some fun with him.";
 		if lastfuck of Ranfer - turns < 6:
 			say "     He hears you and smiles, takes you in for a gentle embrace, tightly squeezing you around his big furred muscles and gives you a kiss on the forehead... But nothing sexual. 'I'm sorry, kitten, I'm still a little tired from last time... But we can cuddle! Love feeling you close to me...'";
-			Linebreak;
+			LineBreak;
 			say "     It seems Ranfer is not yet in the mood for sex, but you could cuddle with him. Following his suggestion, [bold type]do you want to?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Of course, cuddles are nice!";
 			say "     ([link]N[as]n[end link]) - You took the hug and that is enough, for now.";
@@ -531,7 +531,7 @@ to say RanferSexFacefucked:
 	if Player is submissive:
 		say ". 'I really should keep you... have you worship me everyday and unload my balls inside you, feeding you lots and lots of this sweet cum down your throat... Bet you'd like that...' he teases you, licking at your neck with more of that dominant affection of his, tempting you to follow through with his words. 'Thanks for coming by. I'll definitely love to dominate you, again.'";
 	else:
-		say ". 'Didn't that feel good? Just letting yourself go... Worshipping me, you swallowing my load... Much better than fighting, yeah?' he teases you, licking at your neck with more of that dominant affection of his. 'Thanks for coming by. I'll definitely love to dominate you, again.'";
+		say ". 'Didn't that feel good? Just letting yourself go... Worshiping me, you swallowing my load... Much better than fighting, yeah?' he teases you, licking at your neck with more of that dominant affection of his. 'Thanks for coming by. I'll definitely love to dominate you, again.'";
 	WaitLineBreak;
 	say "     With those being his last words, he lets go of you, helping you up and giving your cheek an affectionate stroke. The Smilodon then simply watches you go as you grab your gear to return to your own affairs.";
 	if smilodon bodyguard is tamed:
@@ -653,7 +653,7 @@ to say RanferMeetsXaedihr:
 		else:
 			say "Invalid choice. Type [link]1[end link] to listen in, [link]2[end link] to stop them or [link]3[end link] to leave them be.";
 	if calcnumber is 1:
-		Linebreak;
+		LineBreak;
 		say "     This interests you, so you decide to keep an ear out for what they are saying to each other, from a place hopefully none of them will see you.";
 		WaitLineBreak;
 		say "     'So you're what... A kind of a mage? Know some spells to help me keep my kitten safe?' asks Ranfer, though Xaedihr seems to be more interested in the book he is analyzing than in the conversation itself. 'Excuse me, your kitten? I see things between you are rather... well-developed.' he replies, with an ironic tone. This does not detain the large feline, however. 'I'm simply trying to understand what is your role in all this. Are you a friend, or simply someone trying to use my kitten's generous hospitality for your own goals?' The half-demon closes his book and looks directly at Ranfer, with quite a mean look. 'Who knows? Maybe I am the big bad guy, after all. The great villain that brought the nanites upon this cursed land and had everyone fuck each other's brains out! Maybe I'm planning for world domination in secrecy...!'";

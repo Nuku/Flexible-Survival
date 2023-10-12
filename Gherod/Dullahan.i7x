@@ -258,13 +258,13 @@ to DullahanSex:
 	clear the screen and hyperlink list;
 
 to say DullahanBlow: [player blows the Dullahan]
-	say "     Eyeing the Dullahan's muscular body, your gaze eventually ends up fixated on his meaty cock, already throbbing with anticipation as his pale blue skin remains exposed for your delight. The statuesque knight towers over you, and you don't even need to kneel in order to kiss his two feet long dick, as it stays on eye level with you while standing. As soon as you include your tongue sliding by the side of his shaft, you feel a supernatural growling coming from him, his deep sounding voice groaning in your mind as you make a real effort at worshipping his lengthy erection. Few words are exchanged between you as your hands slowly stroke his cock, licking over the sides and circling around the tip with the same steady pace, and though you feel you're pleasing the Dullahan, he appreciates your efforts patiently, without rushing you.";
+	say "     Eyeing the Dullahan's muscular body, your gaze eventually ends up fixated on his meaty cock, already throbbing with anticipation as his pale blue skin remains exposed for your delight. The statuesque knight towers over you, and you don't even need to kneel in order to kiss his two feet long dick, as it stays on eye level with you while standing. As soon as you include your tongue sliding by the side of his shaft, you feel a supernatural growling coming from him, his deep sounding voice groaning in your mind as you make a real effort at worshiping his lengthy erection. Few words are exchanged between you as your hands slowly stroke his cock, licking over the sides and circling around the tip with the same steady pace, and though you feel you're pleasing the Dullahan, he appreciates your efforts patiently, without rushing you.";
 	say "     You take this as a signal that you should take your time, and so you do exactly that. With a slight twist of your head, you place your tongue at the base of his shaft while moving your hands to the tip, and tease his glans with your thumb by gently rubbing it across the sensitive surface. Moving your lips, you go around the length's perimeter, as you're able, and lick your way back to the tip through the shaft's underline, slipping your tongue across his slit to get a taste of that oozing precum, which turns out to be a mix of saltiness and sweetness in taste, caressing your taste buds and inviting you to take more. One of your hands reach for his goose egg-sized balls, feeling heavy in your grasp, and you give them an appreciative squeeze which seems to make the Dullahan's prick pulse repeatedly.";
 	WaitLineBreak;
-	say "     It is then that you feel his still gloved hand reaching for the back of your head, almost too gently for a warrior, and a slight pressure for you to not move your lips away from the purple rosy head. You take the message, and figure it's time to allow some of the cock in your mouth, as you let your lips stretch around his considerable thickness. The difficulty is obvious when attempting to take such a big dick inside, though you do your best at managing what's humanly possible to achieve. The knight doesn't push it, aware of your physical limits, though he encourages you to do your best by caressing your cheeks and chin. You're very unfamiliar with this nice side of him, though it's a motivation to keep worshipping his manhood.";
+	say "     It is then that you feel his still gloved hand reaching for the back of your head, almost too gently for a warrior, and a slight pressure for you to not move your lips away from the purple rosy head. You take the message, and figure it's time to allow some of the cock in your mouth, as you let your lips stretch around his considerable thickness. The difficulty is obvious when attempting to take such a big dick inside, though you do your best at managing what's humanly possible to achieve. The knight doesn't push it, aware of your physical limits, though he encourages you to do your best by caressing your cheeks and chin. You're very unfamiliar with this nice side of him, though it's a motivation to keep worshiping his manhood.";
 	say "     After a few inches rammed against the back of your mouth, you stroke the rest with both your hands, ramping up the pace as your motions hasten. With vigorous movement, you move your hands through his shaft while sucking on the head, causing the demonic knight to jerk his hips slightly and his ballsac to heavily swing back and forth. You just know, by looking at the size of his cum factories, that the load you're about to get from him will be huge! Hearing his deep voice rumbling in your mind, between grunts and moans, is an indicative that the moment will soon happen, so you do your best at stroking, sucking and licking his huge meat, and not long after, you feel the almost monster-sized cock throbbing unceasingly.";
 	WaitLineBreak;
-	say "     A little of precum teases your tongue as your head is held tight between the Dullahan's large hands, and he starts thrusting into your mouth before a single, thick blast of cum coats its insides, followed by more equally sizeable spurts that are way too much for you to contain. After the third, it's your face getting splooged, and the Dullahan's orgasm is only gaining force as the next shots go over your forehead, completely covering you in the thick white cream as it drops down through your ears and neck. His climax keeps going for a good while until you're completely drenched from the neck up, a few last drops still finding their way outside through his two feet-long prick and landing right on your face. He pushes you back a little, squeezing his dick all the way towards the tip, making yet another full drop of seed slip away.";
+	say "     A little of precum teases your tongue as your head is held tight between the Dullahan's large hands, and he starts thrusting into your mouth before a single, thick blast of cum coats its insides, followed by more equally sizable spurts that are way too much for you to contain. After the third, it's your face getting splooged, and the Dullahan's orgasm is only gaining force as the next shots go over your forehead, completely covering you in the thick white cream as it drops down through your ears and neck. His climax keeps going for a good while until you're completely drenched from the neck up, a few last drops still finding their way outside through his two feet-long prick and landing right on your face. He pushes you back a little, squeezing his dick all the way towards the tip, making yet another full drop of seed slip away.";
 	say "     Once again, his speech moves itself into your mind, gently this time. 'It's been very long since I had a mortal like you please me this much. You truly are something else...' he says, patting you in the shoulder. 'Now go. We have already spent enough time and I have my duties to attend to.' With this said, he grabs his loincloth and turns around, walking away. You're left drenched and sticky, and you have no choice but to return to your realm as well.";
 
 to say DullahanFuck: [player fucks the Dullahan]
@@ -311,20 +311,20 @@ to say DullahanSummon:
 		say "     [link](N)[as]n[end link] - Let's be cautious about this.";
 		if Player consents:
 			say "     Nonsense. You consider yourself more than capable of doing this alone. With your decision made, your get ready to perform the ritual.";
-			Linebreak;
+			LineBreak;
 			DullahanSummon1;
 		else:
-			Linebreak;
+			LineBreak;
 			say "     With your decision made, you cease your actions at once.";
 			stop the action;
 	else if demonologist is listed in companionList of Player and resolution of Dullahan Knight is 1: [first time, with Xaedihr, skipping warning]
-		Linebreak;
+		LineBreak;
 		DullahanSummon1;
 	else if resolution of Dullahan Knight is 2: [Dullahan rematch]
-		Linebreak;
+		LineBreak;
 		DullahanSummon2;
 	else if resolution of Dullahan Knight > 2 and resolution of Dullahan Knight < 99: [Visiting Dullahan for sparring or sex]
-		Linebreak;
+		LineBreak;
 		DullahanSummon3;
 
 to DullahanSummon1:
@@ -334,7 +334,7 @@ to DullahanSummon1:
 		WaitLineBreak;
 		say "     'It is subsiding. The fog is getting thinner now.' informs the half-demon, who's breathing in relief. But soon, your faces come to a shock, as the world around you is a dark plain of dead trees, with nothing else around you but dirt and a straightforward road towards the horizon. There is total silence once the magic effects of the ritual are gone, and the Ancient Tome is nowhere to be found. 'Oh, we haven't summoned the Dullahan Knight, it seems.' - he murmurs, turning towards you with a grin - 'The Dullahan Knight has summoned us. Fascinating, isn't it?' You don't quite comprehend what's so fascinating about being trapped in an unknown realm with a genocidal mythical creature about to find you, so instead of agreeing, you start making all sorts of questions, namely how you're going to get out of here.";
 		say "     'We have only to wait for the arrival of the Dullahan.' he declares. Before you can say anything else, a sound of a horse at trot is heard in the distance. Each clip-clop sound drawing progressively nearer, until the point you can see an intimidating shadow far ahead. It stops at a considerable distance, one that only allows you to confirm that it is the same creature described in the tome, riding a horse made of darkness. 'Don't move an inch. He'll perceive us as enemies immediately if we do... Well, we are, but that's not the point right now. Our only chance is to let him approach and take his shadow horse down.' he tells you, but you can only turn towards him with an incredulous expression. 'What? Don't question me! I'm the expert here!' With that said, the choice is yours to make.";
-		Linebreak;
+		LineBreak;
 		DullahanSummon1Choice1;
 	else: [player is by himself. They can lose or submit to Dullahan with permanent consequences. No guidance through the event choices. Victory skips next mandatory battle, unlocking direct access to sex scenes]
 		say "     With everything now set, you are now ready to perform the ritual, that is, after you move to an open space where the rite can be executed without any major issues. With your experience, you're now able to follow the tome's instructions with relative ease. Flipping through the pages, you first train what you have to do without actually tapping into the magic energy, and only when you feel secure about it, you stand ready for a serious try. A few arcane gestures and nearly unpronounceable words, and soon, the familiar crimson energy begins enveloping the area in front of you. Soon, the environment around you becomes somewhat gloomier and darker, a misty fog surrounding you.";
@@ -359,14 +359,14 @@ to DullahanSummon1Choice1:
 		else:
 			say "Invalid choice. Type [link]1[end link] to stay put and calm, [link]2[end link] to rise your guard, [link]3[end link] to initiate the fight yourself and charge ahead, or [link]4[end link] to attempt an escape.";
 	if calcnumber is 1:
-		Linebreak;
+		LineBreak;
 		if demonologist is listed in companionList of Player:
 			say "     Following Xaedihr's recommendation, you decide to stay put and ease your breathing. The Dullahan continues to move in your direction, slowly and steadily. 'Good, he's moving this way. Let him come.'";
 		else:
 			say "     Following your best intuition, you decide to stay put and ease your breathing. The Dullahan continues to move in your direction, slowly and steadily.";
 		DullahanSummon1a;
 	else if calcnumber is 2:
-		Linebreak;
+		LineBreak;
 		say "     Your posture is stationary, but defensive. The Dullahan senses your readiness for battle and swings his greataxe around, keeping it stretched towards one side as he moves towards you.";
 		if demonologist is listed in companionList of Player:
 			say " 'Wasn't I clear when I told you not to look like a threat? You'll put us both in danger!' - exclaims the half-demon, followed by a sigh - 'But he's coming this way, I guess. Let him approach.'";
@@ -376,7 +376,7 @@ to DullahanSummon1Choice1:
 				decrease loyalty of Xaedihr by 1;
 		DullahanSummon1a;
 	else if calcnumber is 3:
-		Linebreak;
+		LineBreak;
 		say "     You have no time for this. If all you need is to take off his horse, then a head-on attack could work, if you're strong enough. With this in mind, you get ready and dash towards the Dullahan,";
 		if demonologist is listed in companionList of Player:
 			say " hearing Xaedihr cursing from behind you. 'You fool! What did I tell you?!' he tries to put some sense into you, but his voice is soon too far to be clearly audible.";
@@ -390,7 +390,7 @@ to DullahanSummon1Choice1:
 		trigger ending "Player has died";
 		end the story saying "Your body lies decapitated on the floor in a bloody mess.";
 	else if calcnumber is 4:
-		Linebreak;
+		LineBreak;
 		say "     There is no way you can face a foe like this in battle! You must run away and find a way to escape this realm before it's too late. With this in mind, you turn your tail and start running, only hearing a deep, earth-shaking shout from behind in the form of a single word 'COWARD!'. Soon the horse trot catches up to you, and his intimidating presence is made obvious, right next to you. It's not long before you're presented with the cold, sharp feeling of his heavy blade across your neck. An intense pain takes over as the world around you spins before your eyes, until you stop feeling anything at all.";
 		WaitLineBreak;
 		now battleground is "Void";
@@ -486,7 +486,7 @@ to DullahanSummon1FightSolo:
 			now resolution of Dullahan Knight is 4; [Told Dullahan they want power]
 			WaitLineBreak;
 		else if calcnumber is 2:
-			say "     The ominous voice seems to chuckle at your response, as if amused by it. 'Well well... You could have just submitted to me, and I would have taken you as my slave for all eternity. Lucky you, a capable fighter such as yourself worshipping me as I go about my duties as a soul hoarder... But sadly, I am not allowed to enslave a mortal that has defeated me in combat. However, thanks to that, you have earned the right to see me once more. Perhaps I'll give you what you seek... Who knows.' With this said, the presence within your conscience fades away, and with it, a familiar mist envelops you, obscuring your view from the dark empty plain, the sounds being not as horrific as before. Within a minute, the fog subsides and you see yourselves back to where you performed the ritual, with the Ancient Tome in your possession. You go over the respective pages in a rush, and there seems to be a change in the rituals' words. Looks like the next time you perform it, a different thing may happen.";
+			say "     The ominous voice seems to chuckle at your response, as if amused by it. 'Well well... You could have just submitted to me, and I would have taken you as my slave for all eternity. Lucky you, a capable fighter such as yourself worshiping me as I go about my duties as a soul hoarder... But sadly, I am not allowed to enslave a mortal that has defeated me in combat. However, thanks to that, you have earned the right to see me once more. Perhaps I'll give you what you seek... Who knows.' With this said, the presence within your conscience fades away, and with it, a familiar mist envelops you, obscuring your view from the dark empty plain, the sounds being not as horrific as before. Within a minute, the fog subsides and you see yourselves back to where you performed the ritual, with the Ancient Tome in your possession. You go over the respective pages in a rush, and there seems to be a change in the rituals' words. Looks like the next time you perform it, a different thing may happen.";
 			now resolution of Dullahan Knight is 5; [Told Dullahan they want to serve]
 			WaitLineBreak;
 		else if calcnumber is 3:

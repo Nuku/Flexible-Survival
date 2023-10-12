@@ -18,7 +18,7 @@ Sarea of Savage Dwarf is "Forest".
 
 to say ResolveEvent Savage Dwarf:
 	say "     During your exploration efforts within the forest, you come across a grassy path near the base of a cliff. A little further ahead, there is - or was - what seems to be an entrance to a tunnel right through the rocky walls. It has collapsed, though you hear a lot of agitation coming from there, namely a short burly man shouting and hitting on the debris with his stone hammer. You can't quite understand what he's saying from here, you're standing too far to be able to hear him decently, but whatever it is, it looks like the man is having an argument with the rubble, or maybe someone is on the other side? [bold type]You could risk approaching him, but there isn't a lot of hiding area if you get closer, and he might see you.[roman type][line break]";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Get closer.";
 	say "     ([link]N[as]n[end link]) - Ignore the situation for now.";
 	if Player consents:
@@ -268,7 +268,7 @@ to say DwarfQuest3: [continuation]
 		now Resolution of Collapsed Tunnel is 99;
 
 to DwarfQuestQuestion1: [Player presents himself with a dwarf appearance]
-	Linebreak;
+	LineBreak;
 	say "     [link](1)[as]1[end link] - Accept and begin your plan immediately.";
 	say "     [link](2)[as]2[end link] - Postpone this, you still have things to do before.";
 	say "     [link](3)[as]3[end link] - Refuse this crazy proposal.";
@@ -596,7 +596,7 @@ to WWCeremony:
 to WWEnd:
 	say "     This is it. You are now in front of the golden greathammer, still covered in a white sheet by the time you make it there, and confirming that it's the same weapon once Yogdrak lifts it partially. 'Yeah, this is it! The most beautiful, and probably valuable, greathammer of all times! Let's teach these dwarves that they cannot mess with us. We'll steal back what they steal from us!' Well, technically you stole it first, but that's irrelevant for the time being, you suppose. Although... There is still one decision to make. There's a couple out there who is getting married, and one of the grooms will receive this hammer. By taking it, you will create a stress that will most likely ruin this perfect moment. You will be no better than a bandit, but you will have a powerful and valuable weapon in your possession if you choose to take it. But [bold type]do you really need it?[roman type][line break]";
 	say "     'Alright mate, time to snatch this and head back to our world. I've had enough of underground environments.' You see him trying to take the hammer by himself, but the sheet is getting in the way. 'Ugh, could you help me out, here? I don't want to make a fuss as I'm trying to remove this.' Standing in front of him, you watch, considering your options...";
-	Linebreak;
+	LineBreak;
 	say "     [link](1)[as]1[end link] - Help him out.";
 	say "     [link](2)[as]2[end link] - Help him out by grabbing the hammer yourself... then betray him.";
 	say "     [link](3)[as]3[end link] - Do not take the greathammer.";
@@ -825,7 +825,7 @@ to say DwarfBJ:
 	say "     As you're giving the dwarf a treat of your own, there's a need in you to also please yourself, so you reach over your bits and caress yourself with one hand while the other is kept either stroking the large dick or fondling his plump ballsack. With this, you're doing your best to orally please the dwarf scavenger, soon able to take most of his length down inside, keeping a steady pace with your vertical motions while twisting your head slightly with each movement. Making sure every inch of his organ is thoroughly stimulated for a good time, there's nothing stopping you from picking up the rhythm, going down at it faster and faster... 'Oh fuck... if I knew you'd be this good, I wouldn't have fought you... I'd just let you do that all day!'";
 	say "     Hearing the stocky man praise your efforts [if Player is submissive]fills you with joy, and you even feel tempted to let him take charge for a while, but now is not the time for that[else]gives you the sign you're looking for[end if], as you feel he's actually getting closer to orgasm. You resolve that it'd be fun to slow down a bit and edge him, to make sure his load comes out as hard as possible, even though it creates great frustration on the poor dwarf, who's already grunting and begging you to don't stop. 'Please! I just need to cum... I'm not able to hold much longer...' he exclaims in a plea, but you give him a deaf ear, continuing this process for the next few minutes. 'Fuuck... P-please... I need to...!' but he tries yet again to convince you to make him blow, so you know he's on the verge of hitting his limit.";
 	say "     With all that you made him endure by now, it's probably enough to get him burst hard. Are you going to test this theory by [bold type]letting him blow is load out, or will you swallow it all?[roman type][line break]";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Let it blow!";
 	say "     ([link]N[as]n[end link]) - Drink all of that dwarf cum.";
 	if Player consents:
@@ -894,7 +894,7 @@ to say Dwarf Desc:
 			say "     'Time for you to experience what's it like to get beaten by a dwarf. You'll be on your knees and at my mercy!' With that, he rushes at you.";
 
 to say YogdrakRoamingTalk:
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Just have a chat.";
 	say "     ([link]N[as]n[end link]) - Go for a fight with all that comes with it.";
 	if Player consents:
