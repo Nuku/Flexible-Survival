@@ -1,5 +1,6 @@
-Version 1.5 of Stallionboi by Fuxi begins here. [ Originally Authored by Sarokcat n Verarh]
-[ Version 1.5 - Expansion of defeat scenes by Fuxi. Coding done by Prometheus]
+Version 2 of Stallionboi by Fuxi begins here.
+[ Originally Authored by Sarokcat n Verarh]
+[ Version 2 - Expansion of defeat scenes by Fuxi. Coding done by Prometheus]
 
 "Adds a Stallionboi to Flexible Survival's Wandering Monsters table, with impreg chance"
 
