@@ -1,4 +1,4 @@
-Version 1 of Carl by Wahn begins here.
+Version 1 of Carl2.0 by Wahn begins here.
 [Version 1.1 - Small Fix]
 [Version 1.2 - Added support for Evil Demon Brute path - Gherod]
 [Version 1.3 - Beta Fang Content added by Prometheus]
@@ -125,22 +125,24 @@ Description of Carl is "[CarlDesc]".
 Conversation of Carl is { "Woof." }.
 CarlLibraryEntry is a number that varies. CarlLibraryEntry is usually 10000. [when he was brought in]
 
+
 to say CarlDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Carl], LEVEL: [level of Carl], LIBRARY ENTRY TURN: [CarlLibraryEntry], Libido: [Libido of Carl], Dexterity: [dexterity of Carl], Thirst: [thirst of Carl], Lust: [lust of Carl] <- DEBUG[line break]";
+	if HP of Carl < 30:
+		project Figure of Carl_clothed_icon;
+	else:
+		project Figure of Carl_clothed_tagless_icon;
 	if HP of Carl is 10: [True Carl Path - stage 1: resting]
 		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, minus the boots since his digitigrade paws wouldn't fit in them. Right now, he's in an almost coma-like sleep after his exhausting escape from Allen's clutches and the travel to the library. [bold type]You should just give him time to rest, maybe go do something else and come back later. [roman type][line break]";
+	else if HP of Carl > 10 and HP of Carl < 30:
+		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, minus the boots since his digitigrade paws wouldn't fit in them. By now, he's found an equilibrium with his new shape, using his tail and ears to express himself while still maintaining most of his humanity. As he sees you looking at him, he gives you a broad smile, followed by a salacious wink.";
+		say "     Having carried up a mattress from the bunker and set it up as his bed near one of the front-side windows of the library, he spends much of his time on lookout over the approaches to the building, ready to give warning should any dangerous creatures approach.";
 	else if HP of Carl is 30: [Dog Carl Path - stage 1: resting]
 		say "     Carl is a well-built male husky, after having formerly been a human soldier. After bringing him here to the bunker when he was fleeing from his squad leader Allen, you pushed him to make a break from his former self, taking away his dog tags in the process. The only remnants of who he was before are the dark undershirt and the camo pattern pants of a normal military uniform, minus the boots since his digitigrade paws wouldn't fit in them. Right now, he's in an almost coma-like sleep after his exhausting escape from Allen's clutches, the travel to the library and your own psychological manupulation. [bold type]You should just give him time to rest, maybe go do something else and come back later. [roman type][line break]";
-[
-	if HP of Carl is 2 or HP of Carl is 3:
-		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, though he had to give up on boots since his digitigrade paws wouldn't fit in them. [if CarlLibraryEntry - turns < 17]His behavior shows that he's a bit unsure of himself, unnerved by the automatic reactions and inherent mannerisms of his body, like movements of his tail and ears. Maybe he just needs some time to get used to it all[else]By now, he's found an equilibrium with his new shape, using his tail and ears to express himself while still maintaining most of his humanity[end if].";
-	else if HP of Carl > 9 and HP of Carl < 30:
-		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, though he had to give up on boots since his digitigrade paws wouldn't fit in them. By now, he's found an equilibrium with his new shape, using his tail and ears to express himself while still maintaining most of his humanity. As he sees you looking at him, he gives you a broad smile, followed by a salacious wink.";
-	else if HP of Carl > 29 and HP of Carl < 50:
-		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, though he had to give up on boots since his digitigrade paws wouldn't fit in them. By now, he's become a lot more dog-like in his mannerisms, often acting and reacting in canine ways more than human ones. As he sees you looking at him, he lowers his head a bit and only looks at you from the corner of his eye, showing his submissiveness to you.";
-	say "     Having carried up a mattress from the bunker and set it up as his bed near one of the front-side windows of the library, he spends much of his time on lookout over the approaches to the building, ready to give warning should any dangerous creatures approach.";
-]
+	else if HP of Carl > 30 and HP of Carl < 50:
+		say "     Carl is a well-built male husky, after having formerly been a human soldier. After bringing him here to the bunker when he was fleeing from his squad leader Allen, you pushed him to make a break from his former self, taking away his dog tags in the process. The only remnants of who he was before are the dark undershirt and the camo pattern pants of a normal military uniform, minus the boots since his digitigrade paws wouldn't fit in them. By now, he's become a lot more dog-like in his mannerisms, often acting and reacting in canine ways more than human ones. As he sees you looking at him, he lowers his head a bit and only looks at you from the corner of his eye, showing his submissiveness to you.";
+		say "     Having carried up a mattress from the bunker and set it up as his bed near one of the front-side windows of the library, he spends much of his time on lookout over the approaches to the building, ready to give warning should any dangerous creatures approach.";
 
 The scent of Carl is "     Carl smells like a husky - and clearly a male one at that.".
 
@@ -166,16 +168,8 @@ instead of conversing the Carl:
 			say "     He's asleep right now, the poor guy. After everything he has gone through, it wouldn't be too much of a surprise if he slept for an exceptionally long time. [bold type]You should just give him time to rest, maybe go do something else and come back later. [roman type][line break]";
 		else if HP of Carl is 30: [Dog Carl Path - stage 1: resting]
 			say "     He's asleep right now, and it'd be best to leave him to it, giving your psychological manipulation time to settle. After everything he has gone through, it wouldn't be too much of a surprise if he slept for an exceptionally long time. [bold type]You should just give him time to rest, maybe go do something else and come back later. [roman type][line break]";
-[
-	if (HP of Carl is 2):
-		say "     Carl says 'Listen, I really appreciate the risk you took in helping me. Mighty decent to take in someone with everything that's been going on.' His lips twitch for a moment as he tries to smile, something a canine's muzzle isn't quite meant to do, then he gives a little shrug and his tail starts wagging slowly. 'Now I want to do my part in getting us through this, so I'm gonna take position up here at the window and keep watch for anything approaching the building. Just get ready for a fight if you hear me shouting, OK?'";
-		now PlayerFriended of Carl is true;
-		now HP of Carl is 3;
-	else if HP of Carl > 2:
-		say "[CarlTalkMenu]";
-	else:
-		say "ERROR-Carl-[HP of Carl]C: He isn't in one of the states she should be in! Please report how you got to this message.";
-]
+		else:
+			say "[CarlTalkMenu]";
 
 to say CarlLibraryArrival:
 	say "     Reaching the entrance door of the library and its promise of safety, you hold it open for your husky companion and let him inside, then guide him down the stairs into the bunker. Groaning unintelligibly as he sees the rows of cots inside, he staggers forward and simply drops what clothing he wears on the way. Carl collapses on the very first cot, pantsless but with his t-shirt still on, and barely has time to dig himself under the blanket before he finally succumbs to unconsciousness...";
@@ -185,7 +179,7 @@ to say CarlLibraryArrival:
 		if "Player - Stole Amy" is listed in Traits of Allen:
 			say "removing Amy from the madman's grasp and ";
 		say "helping Carl to escape. ";
-	else of Resolution of Soldier Squad > 90: [befriended Allen]
+	else if Resolution of Soldier Squad > 90: [befriended Allen]
 		say "And you were there for it all, chatting up Allen and cheerfully watching what went down, until betraying the madman by ";
 		if "Player - Stole Amy" is listed in Traits of Allen:
 			say "stealing away Amy, and ";
@@ -225,6 +219,40 @@ to say CarlLibraryArrival:
 			now HP of Carl is 30; [start of dog-Carl]
 	TraitGain "CarlLibraryArrival Done" for Carl;
 	move Carl to Bunker; [just in case this hasn't happened before]
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Carl_Awakens"	Carl_Awakens	"[EventConditions_Carl_Awakens]"	Bunker	2500	2	100
+
+to say EventConditions_Carl_Awakens:
+	if Carl is in Bunker and CarlLibraryEntry - turns > 12: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Carl_Awakens	"Carl_Awakens"
+
+Carl_Awakens is a situation.
+ResolveFunction of Carl_Awakens is "[ResolveEvent Carl_Awakens]".
+Sarea of Carl_Awakens is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Carl_Awakens:
+	if debugactive is 1:
+		say "     DEBUG: Carl wakes up in the bunker[line break]";
+	if HP of Carl < 30:
+		project Figure of Carl_clothed_icon;
+	else:
+		project Figure of Carl_clothed_tagless_icon;
+	say "     As you step into the main area of the bunker, your gaze falls upon an empty cot near the entrance. It is the one where Carl has been resting ever since his escape from Allen and being brought into the bunker. Seems like he's awakened from his almost comatose sleep after the ordeal he went through. Before you can wonder too much where he might have ended up, the husky steps back into the room from the direction of the restrooms, then walks over to you on his digitigrade paws. ";
+	if HP of Carl is 10: [True Carl]
+		say "Coming to stand in front of you in parade rest, the transformed soldier gives you a respectful nod. 'I wanted to thank you for, everything really. I mean, it's not supposed to go this way, with the army being intended to guarantee the safety of the civilian population, but...' he waves a hand do indicate his nonhuman form, 'A lot of things went wrong in a bunch of fucked-up ways. You didn't have to step in and help my sorry ass to escape, but you did, and you brought me here.'";
+		say "     Holding out a hand for you to take, Carl gives you a firm handshake and smiles, then takes a deep breath. 'Sooner or later, the army will figure out the right countermeasures against this weird infection, so it's just a question of lasting long enought to still be here, and be sane. I want to do anything I can to help us do that. For example, the bunker down here is pretty neat, but not exactly secure, if creatures can just wander into the library above. So I'm planning to set up an observation post up on the second floor, and keep an eye out on the street, alright?' Admitting that Carl's kinda got a point with what he said, you agree happily enough, and the man immediately starts to bundle up the sheets and mattress that he rested upon, to transfer them to the upper floor. 'As for anything else - just let me know if you have any ideas and need help with something, okay?' With that said, the husky starts to lug his load towards the entrance and up the stairs.";
+		now HP of Carl is 11;
+	else if HP of Carl is 30: [Dog Carl]
+		say "When he's almost reached you, the man's right hand raises up to his breastbone, as if searching for the dog tags no longer hanging there. His eyes shoot you a slightly questioning glance, which you respond to with a shake of your head. It's too late to change his mind about breaking with the past. Swallowing visibly, he comes to stand right in front of you.";
+		say "     'So...' Carl says nervously, then adds, 'Thanks again for saving me back there. I don't even want to imagine what that fucker would have done if he'd caught me again.' Shuddering and suppressing a growl as his thoughts stay to Allen, the former soldier shakes his head. 'Uhm... guess we're all in the same boat, aren't we? The struggling survivors of this mess. And I wanted to say, I'm your man - err, dog - and all that. I'm ready to put in what effort I can contribute, to make sure we get through this alright. For example, the bunker down here is pretty neat, but not exactly secure, if creatures can just wander into the library above. So I'm planning to set up an observation post up on the second floor, and keep an eye out on the street, alright?' Admitting that Carl's kinda got a point with what he said, you agree happily enough, and the man immediately starts to bundle up the sheets and mattress that he rested upon, to transfer them to the upper floor. 'As for anything else - just tell me what you want me to do, okay?' With that said, the husky starts to lug his load towards the entrance and up the stairs.";
+		now HP of Carl is 31;
+	now Carl_Awakens is resolved;
 
 to say CarlTalkMenu:
 	LineBreak;
@@ -1875,4 +1903,4 @@ TODO:
 ]
 
 
-Carl ends here.
+Carl2.0 ends here.

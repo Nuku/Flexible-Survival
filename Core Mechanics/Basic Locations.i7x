@@ -526,6 +526,8 @@ after looking while player is in Grey Abbey 2F:
 
 to say abbey 2F desc:
 	say "     The spacious second story of the library opens up in the middle, with the floor of about a third of the width of the building missing and surrounded by well-crafted wooden railings. They clearly are a part of the old abbey's features that were kept in the renovation, giving the place quite a nice atmosphere. From what therefore is basically a huge balcony, you can overlook the main stacks below. As in the rest of the building, rows of bookshelves take up most of the space, though small seating groups with sofas and cushioned chairs promise comfortable places to rest, too. There are a few secluded desks here and there, serving as quiet study places. To the [link]northeast[end link] is a shabby sitting area, while to the [link]southeast[end link] you can make out a darker spot that does not receive much light.";
+	if Carl is in Grey Abbey 2F:
+		say "     Since he joined you in the library, Carl moved one of the mattresses from the bunker up here, setting it up in a little camp near one of the front-side windows of the library. He spends much of his time on lookout over the approaches to the building, ready to give warning should any dangerous creatures approach.";
 
 Table of GameRoomIDs (continued)
 Object	Name
