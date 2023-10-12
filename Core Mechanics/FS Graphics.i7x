@@ -351,6 +351,7 @@ Figure of Candy_icon is the file "candy_ig.jpg".
 Figure of Candy_clothed_icon is the file "Candy_clothed.jpg".
 Figure of Candy_naked_icon is the file "Candy_naked.jpg".
 Figure of Carl_clothed_icon is the file "Carl_clothed.jpg".
+Figure of Carl_clothed_tagless_icon is the file "Carl_clothed_tagless.jpg".
 Figure of Carl_naked_icon is the file "Carl_naked.jpg".
 Figure of Carl_face_icon is the file "Carl_face.jpg".
 Figure of Carl_knot_icon is the file "Carl_knot.jpg".
@@ -710,6 +711,10 @@ Figure of Tehuantl_Male_Face_icon is the file "Tehuantl_Male_Face.jpg".
 Figure of Tehuantl_Male_clothed_icon is the file "Tehuantl_Male_clothed.jpg".
 Figure of Tehuantl_Male_hard_icon is the file "Tehuantl_Male_hard.jpg".
 Figure of Tehuantl_Female_Face_icon is the file "Tehuantl_Female_Face.jpg".
+Figure of Tehuantl_Female_clothed_icon is the file "Tehuantl_Female_clothed.jpg".
+Figure of Tehuantl_Female_clothed_preg_icon is the file "Tehuantl_Female_clothed_preg.jpg".
+Figure of Tehuantl_Female_naked_icon is the file "Tehuantl_Female_naked.jpg".
+Figure of Tehuantl_Female_naked_preg_icon is the file "Tehuantl_Female_naked_preg.jpg".
 Figure of Timothy_icon is the file "Timothy.jpg".
 Figure of TinyTim_icon is the file "Tiny_Solo.jpg".
 Figure of TinyTim_face_icon is the file "Tiny_Face.jpg".
@@ -1479,6 +1484,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Candy_clothed"	Figure of Candy_clothed_icon	"BeaverTyan"	g-white	"normal"
 "Candy_naked"	Figure of Candy_naked_icon	"BeaverTyan"	g-white	"normal"
 "Carl_clothed"	Figure of Carl_clothed_icon	"Hufnaar"	g-black	"normal"
+"Carl_clothed_tagless"	Figure of Carl_clothed_tagless_icon	"Hufnaar"	g-black	"normal"
 "Carl_naked"	Figure of Carl_naked_icon	"Hufnaar"	g-black	"normal"
 "Carl_face"	Figure of Carl_face_icon	"Lyttathebug"	g-black	"normal"
 "Carl_knot"	Figure of Carl_knot_icon	"Lyttathebug"	g-black	"normal"
@@ -2025,6 +2031,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Tehuantl_Male_clothed"	Figure of Tehuantl_Male_clothed_icon	"Yora"	g-black	"normal"
 "Tehuantl_Male_hard"	Figure of Tehuantl_Male_hard_icon	"Yora"	g-black	"normal"
 "Tehuantl_Female_face"	Figure of Tehuantl_Female_face_icon	"Vashaa"	g-black	"normal"
+"Tehuantl_Female_clothed"	Figure of Tehuantl_Female_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Tehuantl_Female_clothed_preg"	Figure of Tehuantl_Female_clothed_preg_icon	"SteppeCrow"	g-white	"normal"
+"Tehuantl_Female_naked"	Figure of Tehuantl_Female_naked_icon	"SteppeCrow"	g-white	"normal"
+"Tehuantl_Female_naked_preg"	Figure of Tehuantl_Female_naked_preg_icon	"SteppeCrow"	g-white	"normal"
 "Thomas_erect"	Figure of Thomas_erect_icon	"Inkydemon"	g-black	"normal"
 "Thomas_face"	Figure of Thomas_face_icon	"Inkydemon"	g-black	"normal"
 "Thomas_soft"	Figure of Thomas_soft_icon	"Inkydemon"	g-black	"normal"
