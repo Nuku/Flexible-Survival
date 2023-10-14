@@ -375,7 +375,7 @@ to say RamEweSplit:
 
 Section 4 - Bad End Scene Progression
 
-Table of WalkinEvents (continued)
+Table of NavInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
 1	"Ram's New Toy"	Ram's New Toy	"[EventConditions_Ram's New Toy]"	New Ewe Storeroom	2500	3	100
 
