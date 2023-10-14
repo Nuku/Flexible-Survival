@@ -362,6 +362,8 @@ to say LeonInfect:
 	SanLoss 10;
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by 2;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 2;
+	if Lust of Leon < 5:
+		increase Lust of Leon by 1;
 	if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
 		infect "Ewe";
 	else:
