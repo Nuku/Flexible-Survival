@@ -869,6 +869,7 @@ Include Inflatable Orca by Song.
 Include Inflatable Otter Suit by Song.
 Include Informant by Kaleem mcintyre.
 Include Jana by Kirov.
+Include Janaz by Voidsnaps.
 Include Janice by Sarokcat.
 Include Jake by Rikaeus.
 Include Jay by Wahn.
