@@ -535,9 +535,9 @@ Asshole Depth of Rodrick is 0. [inches deep for anal fucking]
 Asshole Tightness of Rodrick is 0. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 Cock Count of Rodrick is 0. [number of cocks]
 Cock Girth of Rodrick is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
-Cock Length of Rodrick is 0. [10 Inches]
+Cock Length of Rodrick is 0. [X Inches]
 Ball Count of Rodrick is 0. [allowed numbers: 1 (uniball), 2 or 4]
-Ball Size of Rodrick is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
+Ball Size of Rodrick is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Rodrick is 0. [number of cunts]
 Cunt Depth of Rodrick is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Rodrick is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
@@ -935,7 +935,7 @@ to say ResolveEvent Station Tour:
 	if HP of Hope-Born Dragon > 5:
 		say "     'I know who you are. My father must have been quite impressed with you to trust you with one of his children. I should take time to properly visit [Hope-BornDragonName] at some point[if HP of Cadmea > 1]. My sister, Cadmea, also spoke well of you. Our father is rather a... adventurous sort so we are a very large family[end if],' she muses. ";
 	else if HP of Cadmea > 1:
-		say "     'I know who you are. My sister, Cadmea, spoke well of you. Our father is rather a... adventurous sort so we are a very large family,' she muses. ";
+		say "     'I know who you are. My sister, Cadmea, spoke well of you. Our father is rather an... adventurous sort, so we are a very large family,' she muses. ";
 	else:
 		say "     'I do not believe we have had the pleasure of meeting yet, but I sense a certain aura around you as though you will accomplish great things. I shall wait and see,' she muses. You introduce yourself, surprised by the strength of her grip when she takes your hand. ";
 	say "'Where are my manners? Celeste would scold me... You may call me Belliandra, and I am the master of the arena that you find yourself in. Like Varenya, I am not of your world, though I suppose with the number of adventurers that seem to turn up, that isn't exactly much of a revelation,' she laughs. 'I am a capable combat instructor, both for entertainment and more... practical applications. There always seem to be people trying to hurt each other and people that want to be able to defend themselves from being hurt, so if you or anyone that you know wants some proper physical training, no matter their appearance and capability I can do it. Magic isn't my forte, sorry. Payment is negotiable, whether it is precious metals, food, or as some seem to prefer, intimacy,' Belliandra explains, her eyes flicking over you.";
@@ -955,9 +955,10 @@ to say ResolveEvent Station Tour:
 	change the down exit of Tunnel Underground to Tunnel Hub;
 
 
-[Resolution 1 - Stayed and helped Sarah treat Colleen
+[Resolution 1 - Stayed and helped Sarah treat Colleen - Colleen Husky
 Resolution 2 - Fought the Mole. Won. Saw Webber. Not Varenya.
 Resolution 3 - Fought Mole. Lost. Saved by Varenya.
-Resolution 4 - Fled from Mole. Saw Webber. Not Varenya.]
+Resolution 4 - Fled from Mole. Saw Webber. Not Varenya.
+Resolution 5 - Stayed and helped Sarah treat Colleen - Colleen Human]
 
 Subterranean Caves ends here.

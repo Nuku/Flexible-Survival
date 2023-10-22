@@ -684,7 +684,7 @@ Include Spidertaur Female by Wahn.
 Include sprite by Nuku Valente.
 Include Squid by Stripes.
 Include Squire by Stripes.
-Include Stallionboi by Sarokcat n Verath.
+Include Stallionboi by Fuxi.
 Include Succubus by Sarokcat.
 Include Sugar Ferret by Stripes.
 Include Sugar Glider by AGentlemanCalledB.
@@ -780,7 +780,7 @@ Include Bubble by Stripes.
 Include Cadmea by Prometheus.
 Include Campus Gym by UrsaOmega.
 Include Callidora by Prometheus.
-Include Carl by Wahn.
+Include Carl2.0 by Wahn.
 Include Casper by Prometheus.
 Include Cassian by Voidsnaps.
 Include Cassiel by Tin Can.
@@ -869,6 +869,7 @@ Include Inflatable Orca by Song.
 Include Inflatable Otter Suit by Song.
 Include Informant by Kaleem mcintyre.
 Include Jana by Kirov.
+Include Janaz by Voidsnaps.
 Include Janice by Sarokcat.
 Include Jake by Rikaeus.
 Include Jay by Wahn.
@@ -896,7 +897,7 @@ Include Kyrverth by Speedlover.
 Include Lance by Verath.
 Include Landon by Luneth.
 Include Larissa by Stripes.
-Include Leon by Luneth.
+Include Leon by Voidsnaps.
 Include Leonard by Stripes.
 Include Lilith by Wahn.
 Include Lindsey by Prometheus.
