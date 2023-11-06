@@ -231,6 +231,7 @@ Include Hyena Gang by Stripes.
 Include Junkyard and Warehouse by Wahn.
 Include Kitsune Hideaway by Shadowwolf94.
 Include Lair Of The Lupines by Gherod.
+Include Last_Chance_Map by Sundered Dragon.
 Include Mall Community Center by Wahn.
 Include Mall Residents by Rikaeus.
 Include Medical Checkups by Stripes.
@@ -588,6 +589,7 @@ Include Mannequin by Wahn.
 Include Manticore by Kaleem mcintyre.
 Include Mareslut by Sarokcat.
 Include Margay by Stripes.
+Include Margay Taur by Sundered Dragon.
 Include Maternity Lamia By Blue Bishop.
 Include Math Teacher by Stripes.
 Include Megakitty by Stripes.
@@ -753,6 +755,8 @@ Include Arthur by Luneth.
 Include Anastasia by Stripes.
 Include Aster by Qazarar.
 Include Atticus by Wahn.
+Include Augustus_Drake by Sundered Dragon.
+Include Ava by Sundered Dragon.
 Include Azari by Dys.
 Include Bastet by Wahn.
 Include Bernard by Prometheus.
@@ -873,6 +877,7 @@ Include Kai by Luneth.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
 Include Katherine by Kirov.
+Include Kathy by Sundered Dragon.
 Include Kerr & Talov by Wahn.
 Include Kerry by Voidsnaps.
 Include Krampus by Wahn.
