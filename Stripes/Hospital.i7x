@@ -737,6 +737,7 @@ to say hospquestpt2:
 	ItemGain healing booster by 1;
 	ItemGain libido suppressant by 1;
 	ItemGain water bottle by 1;
+	now Only the Lonely is active;
 	now DoctorMouseProgress is turns;
 	extend game by 6;
 	LineBreak;
