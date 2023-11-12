@@ -373,7 +373,7 @@ World He Inhabits	"World He Inhabits"
 
 Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-2	"World He Inhabits"	World He Inhabits	"[EventConditions_World_He_Inhabits]"	Sniper's Perch	2500	2	100
+2	"World He Inhabits"	World He Inhabits	"[EventConditions_The_World_He_Inhabits]"	Sniper's Perch	2500	2	100
 
 to say EventConditions_The_World_He_Inhabits:
 	if HP of Augustus Drake < 99 and HP of Kathy >= 1 and HP of Ava >= 1:
@@ -443,7 +443,7 @@ Doctor will see you now	"Doctor will see you now"
 
 Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-2	"Doctor will see you now"	Doctor will see you now	"[EventConditions_Doctor_will_see_you_now]"	Doctor's Office	2500	2	100
+2	"Doctor will see you now"	Doctor will see you now	"[EventConditions_The_Doctor_will_see_you_now]"	Doctor's Office	2500	2	100
 
 to say EventConditions_The_doctor_will_see_you_now:
 	if HP of Augustus Drake is 5:
