@@ -673,7 +673,7 @@ to say HelenBeachWalk:
 		WaitLineBreak;
 		say "     Having taken a moment to put his speedo back on, the sandman strolls back to your side and smirks broadly. 'Look how happy your girl is. That's how you can tell she got a proper beach loving, hah! Be sure to bring the cutie by some more in the future!' With that said, he walks away with an extra spring in his step. Man, the things one can see and meet on the beach these days... sexy, arousing things. Smiling yourself, you then guide your black-haired beauty over to an abandoned umbrella, sitting down for a while to rest with her. After you take a seat on one of the beach towels underneath the umbrella, Helen nuzzles her head onto your lap.";
 		say "     The two of your lie there for a short while, enjoying the sounds of the waves crashing against the shore. When Helen seems rejuvenated enough, you decide to return to the abbey. While walking back through the beach plaza you see the fox in the Bermuda shorts again, smiling he asks, 'Did you two have a fun time at the beach?' Contented, your youthful pet barks a happy reply. Softly chuckling the fox says, 'I'll take that as a yes,' he then bids you a fond farewell as you leave the plaza. It is an uneventful walk back to the Abbey. The look on Helen's face seems very appreciative of the walk you took her on.";
-		CreatureSexAftermath "Helen" receives "PussyFuck" from "Sandman";
+		CreatureSexAftermath "Helen" receives "PussyFuck" from "Sand Man";
 		if thirst of Helen is 0: [not pregnant]
 			now thirst of Helen is 1; [pregnant]
 			now Libido of Helen is 1; [...by the sandman]
