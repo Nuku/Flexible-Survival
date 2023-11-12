@@ -356,7 +356,7 @@ Crawl out through that fallout	"Crawl out through that fallout"
 
 Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-2	"Crawl out through that fallout"	Crawl out through that fallout	"[EventConditions_Crawl_out_through_the_fallout]"	Room 020	2500	2	100
+2	"Crawl out through that fallout"	Crawl out through that fallout	"[EventConditions_Crawl_out_through_that_fallout]"	Room 020	2500	2	100
 
 to say EventConditions_Crawl_out_through_that_fallout:
 	if Thirst of Kathy is 2 and HP of Augustus Drake is 99:
