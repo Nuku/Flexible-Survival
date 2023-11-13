@@ -80,7 +80,7 @@ The scent of Sniper's Perch is "Carries the smell of parched earth and dry flowe
 To say snipersperchdesc:
 	say "     Climbing up the worker's ladder, you are elevated two stories above the plains. From this vantage, you have a near perfect view of the rolling grasses, collapsed structures, and other waning symbols of humanity that litter the plains. Off in the distance, you can make out both the city limits and the quarantine line drawn by the military. Though the red tile roof top has very little going on at the moment, you spy four makeshift wind flags have been attached to the chance's awnings. At the core is a simple ring of sandbags with a tin roof scavenged from the plains anchored to it by way of cheap two by fours. Inside are several cases of ammo all of them bearing scratched up army ID tags. One in particular stands out to you as it has the words: For emergency use only, written in bold red sharpie ink.";
 
-Sniper's Perch is below Last Chance Parking Lot.
+Sniper's Perch is above Last Chance Parking Lot.
 
 Section 6 - Last Chance Auto Body
 
