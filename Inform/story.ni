@@ -269,6 +269,7 @@ Include Ancient Tome by Wahn.
 Include Apartment 319 by Kaleem Mcintyre.
 Include Assorted Events by Stripes.
 Include Avatar of Hope by Prometheus.
+Include Addicted Breeder by Voidsnaps.
 Include Beach Events by Sarokcat.
 Include Black Pearl by Guest Writers.
 Include Bouncy Castle by Stripes.
