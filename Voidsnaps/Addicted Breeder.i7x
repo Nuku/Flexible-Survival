@@ -1,6 +1,7 @@
 Addicted Breeder by Voidsnaps begins here.
 
-[Tapes unlock sequentially as you watch them. Messy Hideout Resolution controls the unlocks. 100 means you didn't take the tapes. You can rewatch them once you've seen the fourth one.]
+
+[Tapes unlock sequentially as you watch them. Messy Hideout Resolution controls the unlocks. 100 means you didn't take the tapes.]
 []
 []
 []
@@ -31,6 +32,8 @@ to say ResolveEvent Messy Hideout:
 		now resolution of Messy Hideout is 1;
 	else:
 		say "     Shaking your head, you decide against wandering into the basement. Who knows what's down there?! You don't feel like becoming a random monster's fucktoy.";
+		now Resolution of Messy Hideout is 100;
+
 	now Messy Hideout is resolved;
 
 to say AddictedBreederFucked:
