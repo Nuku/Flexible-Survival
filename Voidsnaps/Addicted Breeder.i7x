@@ -112,4 +112,4 @@ to say BreederTapeFour:
 	if Resolution of Messy Hideout < 5:
 		now Resolution of Messy Hideout is 5;
 
-Addicted Breeder by Voidsnaps begins here.
+Addicted Breeder ends here.
