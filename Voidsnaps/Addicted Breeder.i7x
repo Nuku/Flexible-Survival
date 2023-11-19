@@ -1,6 +1,6 @@
 Addicted Breeder by Voidsnaps begins here.
 
-[Tapes unlock sequentially as you watch them. Messy Hideout Resolution controls the unlocks. 100 means you didn't take the tapes. You can rewatch them once you've seen the fourth one.]
+[Tapes unlock sequentially as you watch them. Messy Hideout Resolution controls the unlocks. 100 means you didn't take the tapes.]
 []
 []
 []
@@ -31,21 +31,26 @@ to say ResolveEvent Messy Hideout:
 		now resolution of Messy Hideout is 1;
 	else:
 		say "     Shaking your head, you decide against wandering into the basement. Who knows what's down there?! You don't feel like becoming a random monster's fucktoy.";
+		now Resolution of Messy Hideout is 100;
 	now Messy Hideout is resolved;
 
 to say AddictedBreederFucked:
 	say "     Which tape would you like to watch?";
 	LineBreak;
 	let Breeder_Video_Choices be a list of text;
-	if Resolution of Messy Hideout < 100:
-		if Resolution of Messy Hideout > 0:
-			add "Watch the first tape." to Breeder_Video_Choices;
-		if Resolution of Messy Hideout > 1:
-			add "Watch the second tape." to Breeder_Video_Choices;
-		if Resolution of Messy Hideout > 2:
-			add "Watch the third tape." to Breeder_Video_Choices;
-		if Resolution of Messy Hideout > 3:
-			add "Watch the fourth (and final) tape." to Breeder_Video_Choices;
+	if Resolution of Messy Hideout is 1:
+		add "Watch the first tape." to Breeder_Video_Choices;
+	if Resolution of Messy Hideout is 2:
+		add "Watch the second tape." to Breeder_Video_Choices;
+	if Resolution of Messy Hideout is 3:
+		add "Watch the third tape." to Breeder_Video_Choices;
+	if Resolution Messy Hideout is 4:
+		add "Watch the fourth (and final) tape." to Breeder_Video_Choices;
+	if Resolution of Messy Hideout is 5:
+		add "Watch the first tape." to Breeder_Video_Choices;
+		add "Watch the second tape." to Breeder_Video_Choices;
+		add "Watch the third tape." to Breeder_Video_Choices;
+		add "Watch the fourth (and final) tape." to Breeder_Video_Choices;
 	add "Nevermind." to Breeder_Video_Choices;
 	let Breeder_Video_Choice be what the player chooses from Breeder_Video_Choices;
 	if Breeder_Video_Choice is:
@@ -112,4 +117,4 @@ to say BreederTapeFour:
 	if Resolution of Messy Hideout < 5:
 		now Resolution of Messy Hideout is 5;
 
-Addicted Breeder by Voidsnaps begins here.
+Addicted Breeder ends here.
