@@ -1961,7 +1961,7 @@ instead of sniffing feline gymnast cum:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"felinoid cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Felinoid Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	felinoid cum
+"felinoid cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort off-white cream or buttermilk, if someone hadn't written 'Felinoid Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	felinoid cum
 
 felinoid cum is a grab object.
 felinoid cum is cum.
@@ -1972,10 +1972,10 @@ Usedesc of felinoid cum is "[felinoid cum use]".
 to say felinoid cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
-	SanLoss 5;
+	PlayerEat 5;
 
 instead of sniffing felinoid cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty with a hint of mint.";
 
 
 Table of Game Objects (continued)

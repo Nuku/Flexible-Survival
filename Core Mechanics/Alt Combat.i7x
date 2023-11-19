@@ -589,7 +589,7 @@ This is the player attack rule:
 	if monsterHP < 1:
 		now fightoutcome is 10;
 		win;
-	else if monsterLibido minus monsterLibidoPenalty > 100:
+	else if monsterLibido minus monsterLibidoPenalty >= 100:
 		now fightoutcome is 11; [monster submits to player]
 		win;
 	else:
@@ -730,7 +730,7 @@ This is the player seduce rule:
 	if monsterHP < 1:
 		now fightoutcome is 10;
 		win;
-	else if monsterLibido minus monsterLibidoPenalty > 100:
+	else if monsterLibido minus monsterLibidoPenalty >= 100:
 		now fightoutcome is 11; [monster submits to player]
 		win;
 	else:

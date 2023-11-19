@@ -4185,6 +4185,28 @@ instead of sniffing mareslut milk:
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"margay taur milk"	"A glass bottle filled to the brim with rich and thick creamy milk. Oddly, the bottle and its contents never seem to get warm or even go off when left out in the sun."	1	margay taur milk
+
+margay taur milk is a grab object.
+margay taur milk is milky.
+Usedesc of margay taur milk is "[margay taur milk use]".
+
+to say margay taur milk use:
+	say "Noticing a mild dryness on the roof of your mouth, you pop open a bottle of tauric cream and hungry slurp up its rich contents. Though you feel somewhat sated, you can't help but take note of a strange tingling sensation coming from your chest and groin as your body shifts towards a radically more feminine bend.";
+	PlayerDrink 15;
+	PlayerEat 15;
+	increase Breast Size of Player by 3;
+	if Cunt Count of Player < 1:
+		increase Cunt Count of Player by 1;
+	increase Cunt Depth of Player by 3;
+	increase Cunt Tightness of Player by 3;
+	now Cock Count of Player is 0;
+	now Ball Size of Player is 0;
+	now Cock Length of Player is 0;
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "math teacher milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Math Teacher Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	math teacher milk
 
 math teacher milk is a grab object.

@@ -38,6 +38,7 @@ PALOMINO Dance Club	"PALOMINO Dance Club"	"PALOMINO Dance Club"	"Commercial Dist
 Froggy Hideout	"Froggy Hideout"	"Froggy Hideout"	"Commercial District"
 Dry Plains	"Dry Plains"	"Dry Plains"	"Dry Plains"
 Entrance to Red Rock Lair	"Entrance to Red Rock Lair"	"Entrance to Red Rock Lair"	"Dry Plains"
+Last Chance Parking Lot	"Last Chance Parking Lot"	"Last Chance Parking Lot"	"Dry Plains"
 McDermott Farm Entrance	"McDermott Farm Entrance"	"McDermott Farm Entrance"	"Dry Plains"
 Rocky Outcropping	"Rocky Outcropping"	"Rocky Outcropping"	"Dry Plains"
 State Fair	"State Fair"	"State Fair"	"Fairgrounds"
