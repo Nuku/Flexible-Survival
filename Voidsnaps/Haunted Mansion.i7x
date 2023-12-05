@@ -324,11 +324,11 @@ to say HornyHaunters:
 		-- "Fuck Sascha's ass while the ghost cock pounds his pussy.": [Anal]
 			LineBreak;
 			say "[SaschaGhostAnalFuck]";
-			NPCSexAftermath Sascha Receives "AssFuck" from Player;
+			NPCSexAftermath Sascha receives "AssFuck" from Player;
 		-- "Double stuff Sascha's Pussy.": [Double Vaginal]
 			LineBreak;
 			say "[SaschaGhostStuffed]";
-			NPCSexAftermath Sascha Receives "PussyFuck" from Player;
+			NPCSexAftermath Sascha receives "PussyFuck" from Player;
 		-- "Douse the candle and free Sascha!":
 			LineBreak;
 			say "     Returning to the moaning kitty, you step over him, ignoring his erotic gyrations and retrieving the bottle of sacramental wine from your bag. Popping the cork, you douse the otherworldly flame with it, cringing back at the distinctly unpleasant sulfur smell that emanates from the sizzling candlewick. The results are instantaneous- Sascha crumples to the ground, twitching as you release him from arcane bondage. 'Aw.' Sascha pants as you kneel to ask him if he's alright, turning his head and interrupting you before you can voice your concern. He licks his lips and grins, pushing himself up to his knees, and you can see his spare paw playing with his clit as he leans back against the wall, eyes half closed. 'You could have waited a while. That felt so good. I've never let anyone edge me that long before.'";

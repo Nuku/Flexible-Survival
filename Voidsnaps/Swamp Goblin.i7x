@@ -146,7 +146,7 @@ to say Swamp GoblinLoss:
 	say "     [link]N[as]n[end link]) - Nah. You're not in the mood for some goblin sex.";
 	if Player consents:
 		say "     Despite the goblin's coarse attitude, you can't help the rush of adrenaline that tells you to take him up on his offer. Something about a good fight always seems to get the juices flowing. Now, as you stand over the willing goblin, you ask yourself how you want to take advantage of him.";
-		Linebreak;
+		LineBreak;
 		say "     How do you want to fuck the goblin?";
 		LineBreak;
 		let Swamp_Goblin_Sex_Choices be a list of text;
