@@ -857,7 +857,7 @@ to SusanSexMenu:
 	else:
 		project Figure of Susan_MHerm_hard_icon;
 	LineBreak;
-	say "     [bold type]What do you want to do with Susan?[roman type][line break]";
+	say "     [bold type]What do you want to do with [Susan]?[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

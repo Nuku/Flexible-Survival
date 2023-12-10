@@ -377,6 +377,18 @@ to say UrikTalkMenu:
 		now sortorder entry is 103;
 		now description entry is "Discuss the orc getting pregnant - he's a breeder after all";
 	[]
+	if ("Dominance Returned_Player" is listed in Traits of Urik or "Dominance Returned_Other" is listed in Traits of Urik) and "Player_Breeding_Dom" is not listed in Traits of Urik and PlayerFriended of Urik is true:
+		choose a blank row in table of fucking options;
+		now title entry is "Giving him permission for dominant play with yourself";
+		now sortorder entry is 104;
+		now description entry is "Talk with your orc about experiencing his dom orc daddy side personally";
+	[]
+	if "Player_Breeding_Dom" is listed in Traits of Urik and PlayerFriended of Urik is true:
+		choose a blank row in table of fucking options;
+		now title entry is "Putting his free reign of breeding you on hold";
+		now sortorder entry is 105;
+		now description entry is "Talk with your orc about taking a step back from his dominant behavior with you";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -439,6 +451,10 @@ to say UrikTalkMenu:
 					say "[UrikPregDiscussion]";
 					if PlayerControlled of Urik is true:
 						now DoneTalking is true;
+				else if nam is "Giving him permission for dominant play with yourself":
+					say "[Urik_Player_Breeding_Dom_Start]";
+				else if nam is "Putting his free reign of breeding you on hold":
+					say "[Urik_Player_Breeding_Dom_Stop]";
 				wait for any key;
 				if DoneTalking is false: [looping around for more talk options]
 					say "[UrikTalkMenu]";
@@ -1556,6 +1572,14 @@ to say UrikPregDiscussion:
 	else if PlayerControlled of Urik is true:
 		say "     As you bring up knocking him up, Urik looks at you and gives a noncommittal shrug. 'Guess it'll happen if it happens, you know. Don't hold your breath, things might take some time.' With that said, he deflects to another topic, exchanging a few more words with you before moving a short distance away. Doesn't look like he's too eager to feel your children growing inside him.";
 
+to say Urik_Player_Breeding_Dom_Start:
+	say "     Stepping a little closer to the towering hunk of an orc, you stroke over Urik's washboard abs and let your hand come to rest on his crotch, right over the impressive bulge of his thick cock and weighty balls. A grin spreads over the green-skinned man's face as he reacts to your impromptou fondling, and his manhood starts to fill out a little further. Meeting Urik's gaze, you mention that you'd love to see him take on a more dominant role again - in your personal relationship with each other. He'd not be taking over or anything, you'd still be the boss around here... but you think him acting out his sexual urges would be really hot, and you'd be a more than willing recepient for them. A heavy throb of the orc's cock tells you that he's eager to hear this offer, and imagining what he might do to you when the mood strikes him. 'Oh yeah, I'm your man for that, [UrikPlayerAddress]! I've got all orc schlong you need, that's for sure! Better keep yourself prepared for some hard dickings in your future!'";
+	TraitGain "Player_Breeding_Dom" for Urik;
+
+to say Urik_Player_Breeding_Dom_Stop:
+	say "     Meeting Urik's gaze with a somewhat serious expression on your face, you tell him that it'd be best to put his free reign for deciding to dominate your ass on hold for now. You've got other things on your mind, and as much fun as sexing it up with him is, you want to postpone further sessions till later. While not exactly happy about having to give up the right of sinking his big dick into your ass whenever the mood strikes him, Urik accepts your decision readily enough. With a grunt, he replies, 'Fine, [UrikPlayerAddress]. We both know your hole will be itching for a good dicking before long, and I can wait a little while.'";
+	remove "Player_Breeding_Dom" from Traits of Urik;
+
 Section 4 - Fucking
 
 Instead of fucking Urik:
@@ -1649,13 +1673,13 @@ to say UrikSexMenu:
 			now sortorder entry is 7;
 			now description entry is "Take what pleasure you want from his thick orc cock";
 		]
-		if Urik is not in Main Hall and Player is not dominant and (ScaleValue of Player is 1 and PlayerFriended of Urik is true or PlayerControlled of Urik is true): [normal/sub player; small Player; must have chosen one route for Urik]
+		if Urik is not in Main Hall and (ScaleValue of Player is 1 and PlayerFriended of Urik is true or PlayerControlled of Urik is true): [normal/sub player; small Player; must have chosen one route for Urik]
 			choose a blank row in table of fucking options;
 			now title entry is "Submit to Urik for a pounding";
 			now sortorder entry is 8;
 			now description entry is "Lay back and present yourself for him to take";
 		[]
-		if Urik is not in Main Hall and Player is not dominant and (PlayerFriended of Urik is true or PlayerControlled of Urik is true): [normal/sub player; must have chosen one route for Urik]
+		if Urik is not in Main Hall and (PlayerFriended of Urik is true or PlayerControlled of Urik is true): [normal/sub player; must have chosen one route for Urik]
 			choose a blank row in table of fucking options;
 			now title entry is "Submit to Urik for a pounding";
 			now sortorder entry is 9;
@@ -2007,6 +2031,46 @@ to say UrikSex_Submission: [player submits to Urik - bad end if the player treat
 		say "The two of you stay like that for a little while, closely entwined and with him inside you, then eventually pull apart and clean yourselves up.";
 	if "Dominance Returned_Player" is not listed in Traits of Urik and "Dominance Returned_Other" is not listed in Traits of Urik: [hasn't been on top for fucking since he was made a breeder]
 		add "Dominance Returned_Player" to Traits of Urik; [he got to be on top again - deepening his connection to the player]
+
+an everyturn rule:
+	if "Player_Breeding_Dom" is listed in Traits of Urik and lastfuck of Urik - turns > 8 and a random chance of 1 in 3 succeeds and ((Urik is collected and Player is collected) or (orc supersized breeder is listed in companionList of Player)):
+		project Figure of Urik_happy_hard_icon;
+		say "     You suddenly feel a towering presence stepping up very close to loom over you from behind, close enough that you can feel the warmth radiating off the person that casually invaded your comfort zone. Before you even have a chance to react, a muscle-packed green arm wraps around your body and pulls you tight against Urik, sandwiching his hard and erect shaft between the two of you. 'I'm horny and need a nice, tight hole to dump a load in! Yours will do nicely!' he grunts in a firm tone that leaves no illusions for anyone that this is a request that can be denied. ";
+		if Player is dominant:
+			say "Part of you bristles at his arrogant approach and you reflexively try to shrug him off and pull away, only to be yanked right back against the orc. The conflict of your own dominant side and the fact that you asked for him to do this gives the situation an extra layer of spice, which Urik clearly picks up on, letting out a low chuckle as he keeps his arm tense around you. He likes a bit of resistance! ";
+		else if Player is submissive:
+			say "Submissive urges inside you make your arousal spike sharply, and you whimper needily in anticipation of being made the strong male's fucktoy! Urik chuckles as your next act is to snake an arm between your bodies, cupping his full, heavy balls to squeeze them and imagining their bounty of virile orc cum being pumped into your insides. ";
+		else:
+			say "Reflexes honed by having to survive in the nanite-infested city make your body tense up, which the orc answers with a tight squeeze of his arm around you. He's determined to give you a good stuffing, so you make yourself give in, knowing that this is exactly what you asked for. ";
+		say "You can feel a bit of wetness where his dickhead rests against you, as the orc's thick prick leaks copious amounts of pre-cum.";
+		if Urik is collected and Player is collected: [both in the library/bunker]
+			say "     Proving his might by bodily picking you up, the large orc simply carries you over to the nearest [if Player is bunkered]cot[else]sofa[end if] and drops you onto it. ";
+		else if orc supersized breeder is listed in companionList of Player: [elsewhere, Urik along as companion]
+			say "     Using a leg to pull your feet out from under you, while his arm keeps a firm grip around your chest to lower you to the ground instead of letting you face-plant onto it, Urik gets ready to fuck you right here and now! ";
+		say "Strong hands then flip you around to lay on your back, allowing you to get a good look of the naked orc's more than impressive physique, and his monster of an erection. Leaning over you and pinning you down with a hand on your chest, Urik says in a lust-filled tone, 'I wanna look into your eyes as I make you into my private little breeder, and see the realization dawn on you that you were made to be my cock-sheath!' He hungrily kisses you on the mouth, dominantly invading it in a deep French kiss. Sharing each other's breaths as you enjoy a little bout of tongue-wrestling, the orc then moves on to giving you some love-bites on the side of your neck and the crook of your shoulder, nipping your skin with his tusks in a very sexy, stimulating way.";
+		WaitLineBreak;
+		say "     [if Player is not naked]You're stripped down quickly by strong, firm hands that peel your clothing and gear off impatiently, though without going so far as damaging any article of clothing. As you soon lay naked before him, Urik lets his hungry gaze sweep over you and grabs his cock to smack it into the open palm of his free hand. [else]Happy about the easy access of you being already fully naked, Urik quickly pushes what gear you have aside, then continues his trail of love-bites a bit further down, lightly nipping your upper chest and nipples before pushing himself back upright. He grabs his cock to smack it into the open palm of his free hand. [end if]Climbing on top of you, with his tree-trunk thighs left and right of your torso as he kneels to loom over your head, the big brute lays his erection right over your face, making you go cross-eyed as you stare at the monstrously thick, green shaft. 'Get it good and wet, you're gonna need it!' he orders with a chuckle and starts to grind his crotch against your face, prompting you to start licking all over his prick while adding a few gobs of his own saliva dripped down from above and spread around with his fingers. Savouring the feeling of control as you worship his manhood, Urik keeps leaking pre-cum at a steady rate, which he snears over his dickhead before offering it to you as a treat to suckle on. Even though it is just pre, you can taste the orc's virility on your tongue, and feel energized by the heady mix of pheromones and aphrodisiacs contained in it.";
+		say "     After a little while of slobbering over Urik's prick, and an encore of having his balls slapped in your face to nuzzle into, the green brute grunts dominantly, 'Enough of this foreplay, time to give you the breeding you need, slut!' That said, he gets into position between your legs, pushing them apart with his knees before sliding two large hands under your thighs to raise them. His slick monster of a cock brushes over your crotch as you are man-handled into fucking position, [if Player is male]rubbing against your own hard cock[else if Player is female]rubbing along your clit and nether lips[else]rubbing over your sexless pubic area[end if] before dipping down between your buttocks. Almost bending you in half, Urik gets your ass at the ideal angle for him, then pushes his hips forward. The large mushroom head touches your body, feeling monstrously big against your trembling pucker. This is where all the pre of Urik's helps you out a little, as it appears to soak into the skin of your comparatively tiny ring and seems to relax and entice it. Good thing too, as the orc doesn't wait much longer before continuing with his slow, steady push, popping the dickhead past your last line of defense and continuing to sink himself further into your body.";
+		WaitLineBreak;
+		say "     A mix of pain and pleasure makes you gasp and writhe as your innards are spread around the wrist-thick girth of the giant cock, and you're actually thankful that Urik just keeps going without pause, not letting you focus on any individual sensation but just giving you a continuous overwhelming experience of being impaled by his shaft. ";
+		if Player is dominant:
+			say "Following your somewhat contrary nature fuelled by dominant impulses, you squeeze your muscles firmly around his prick, futilely trying to keep him out. Of course, this just makes things a little harder for yourself, and only serves to heighten Urik's enjoyment of the penetration. 'Whimpering breeding bitches are fine and good, but I just love me a guy that has some fight in him! Yeah, you just try to keep me out, haha! I'm gonna fuck some orclings into you, no matter what!' There's plenty of lust in his teasing voice, but without any trace of the callous, arrogant dominance of 'regular orcs'. Instead, he gives your thighs an almost comforting squeeze, nodding approvingly as he meets your gaze and pushes his cock deeper inch by inch.";
+		else if Player is submissive:
+			say "Following your submissive desires, you're in hog heaven at being used like this, whimpering and moaning for him to use and abuse your hole as much as he wants. At the same time, you do your best to flex your inner muscles rhythmically around the green shaft, trying to draw it deeper into you. The mixture of eager lust and stoically endured discomfort as you adjust to having him inside you clearly excites the big male, and you can hear Urik grunt, 'Hell yeah, little breeder! Gonna fuck some orclings into you!' There's plenty of lust in his voice, but without any trace of the callous, arrogant dominance of 'regular orcs'. Instead, he moves a large hand to lay on your chest, another point of connection as he meets your gaze and pushes his cock deeper inch by inch.";
+		else:
+			say "His girth is quite a lot to take, but you knew that when you asked for this, so you do your best to relax your inner muscles to allow him to slide into you. 'Hell yeah, fucking the [UrikPlayerAddress]!' There's plenty of lust in his voice, but without any trace of the callous, arrogant dominance of 'regular orcs'. Instead, he moves a large hand to lay on your chest, another point of connection as he meets your gaze and pushes his cock deeper inch by inch.";
+		say "     Breathlessly moaning as you endure being impaled on the orc cock, you feel the sensations of being fucked drift further and further towards just pleasure, most likely from all the pre he's leaking into your depths and its effects as your body absorbs it. Recognizing what's happening from your expression, and the rising pitch of your moans, Urik becomes bolder, giving a shallow thrust of his hips that sinks several more inches of his dick up your ass all at once! You're reduced to a quivering mess for a moment as his dick rubs [if Player is male]your prostate[else]sensitive spots inside you[end if], followed by a slight withdrawal and then another quick jab of his cock! It seems that the primal urges he's kept in check so far are about to break free, so you ready yourself for a wild ride! One or two more of those moves to jack-hammer into you later, you can feel some new pressure against your crotch. It takes a second or two before your foggy mind can understand what it is - Urik's huge balls, pressing against your skin.";
+		WaitLineBreak;
+		say "     Your powerful, big brute of a virile orc daddy is balls-deep inside you! [if Cock Length of Urik > Asshole Depth of Player + 2]It's almost inconceivable how he could have fit[else]You can take cocks this big, but it's still quite a lot[end if] - and the orc leaves you barely a second or two before he starts to hammer your hole in a no holds-barred fuck! 'Yeah! Take it breeder!' he bellows at the top of his voice, proudly announcing his conquest to the world as his balls smack your ass again and again. Being reduced to little more than a cock-sheath for a huge, horny orc, your gasps and moans mix with Urik's satisfied grunts and the slap of his balls to create the unmistakable sound of a needy breeding bitch being used hard, deep, and loving every minute of it. You chose to submit to him after all, and with the resulting pleasure and all the potent fluids Urik's been leaking into you, there is little doubt in your hazy mind that this is the best you've ever felt! Whimpering and asking for more, you wrap your legs around his hips and push him with your heels, literally begging for the next harsh thrust.";
+		say "     Moments of pleasure flow into each other and you couldn't even tell how long he's been fucking you by the time Urik's grunts build to a shouted crescendo, with him burying his whole length deep inside you as it starts to flood your hole with his rich seed! The sensation of his shaft pulsing against your inner walls, with thick spurts of cum painting your depths pushes you over the edge right along with Urik, and you [if Player is herm]spray strings of cum over your chest and leak femcum[else if Player is male]spray strings of cum over your chest[else if Player is female]leak a lot of femcum[else]shudder in pleasure[end if] while panting loudly. Himself breathing quickly, the orc sinks down on top of you while his shaft continues to throb inside your body, taking care to brace himself on his elbows so he doesn't crush you with his bulk.";
+		WaitLineBreak;
+		say "     After a minute or two of catching your breaths, you feel Urik pull back slowly until just his large dickhead is inside your stretched, cummy hole. Then, he suddenly thrusts all the way back into you, making your eyes go wide at the repeated penetration. Being in a cum-drunk haze of pleasure, you can do little but give an inquisitive whimper at this new development, which draws a laugh from the apparently still quite horny orc. 'Thought we were done, eh? Nah, I'm not done with you yet! Got plenty more cum to stuff your sweet little breeding hole with, now that I've got you warmed up!' Grinning broadly, Urik leans in to give you a demanding kiss, then gives the crook of your neck another love-bite, marking your skin with some more tusk-imprints while his hips go into another bout of rabbit-fucking into your stretched asshole, making loud slurping and squishing noises as he beats the mixture of his previous load and both of your saliva into a froth.";
+		say "     Your mind is pushed into lustful oblivion as Urik pushes all your buttons and floods you with another thick load of his potent seed! Surely this must be the end of his stamina, you vaguely remember thinking, but no... he keeps going after another short pause! Dominant and untamedly wild, yet at the same time posessive and protective over his new favorite breeding slut, he uses you at his heart's content until dumping a third load into your already overstuffed hole, with white goop leaking out to create a small puddle between your legs. 'Just what I needed,' the well sated orc tells you at that point, almost reluctantly withdrawing from the perfect cock-sheath for his dick he's turned you into. Laughing as he sees the vapid expression on your face, 'Knew you'd be a happy little breeder. Let me give you anotehr treat, you can clean me up.' As he then climbs over you again and the cum-dripping dick is held out before your face, you basically just suckle on it on auto-pilot, extending your orc-cum trip with another fresh dose.";
+		WaitLineBreak;
+		say "     When you are finally able to have some conscious thoughts again, who knows how long later, Urik's still there with you - though he's dressed again, and just seems to be watching over you, with your gear [if Player is not naked]and clothing[end if] lying ready in a little pile next to you. 'That was a blast, [UrikPlayerAddress]! Gotta admit that I really lucked out with ending up with you. I look forward to the next time!' he tells you happily, then helps you up and to put yourself in order again.";
+		NPCSexAftermath Player receives "AssFuck" from Urik;
+		NPCSexAftermath Player receives "AssFuck" from Urik;
+		NPCSexAftermath Player receives "AssFuck" from Urik;
 
 Section 5 - Events
 
