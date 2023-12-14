@@ -82,6 +82,7 @@ Figure of BlueGryphon_hard_icon is the file "Blue Gryphon hard.jpg".
 Figure of BlueGryphon_soft_icon is the file "Blue Gryphon soft.jpg".
 Figure of FeralGryphon_hard_icon is the file "Feral_Gryphon_hard.jpg".
 Figure of FeralGryphon_soft_icon is the file "Feral_Gryphon_soft.jpg".
+Figure of Gargoyle_stuck_icon is the file "Gargoyle_stuck.jpg".
 Figure of Gargoyle_hard_icon is the file "Gargoyle_hard.jpg".
 Figure of Gargoyle_soft_icon is the file "Gargoyle_soft.jpg".
 Figure of Gazelle_hard_icon is the file "Gazelle_hard.jpg".
@@ -1652,6 +1653,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 ["Fluffy Owl"	Figure of FluffyOwl_icon	"Waxraven/WXRVN"	g-white	"normal"]
 "Fluffy Owl 2"	Figure of FluffyOwl2_icon	"Moirah"	g-white	"normal"
 "Gabriel"	Figure of Gabriel_icon	"Darian821"	g-black	"normal"
+"Gargoyle_stuck"	Figure of Gargoyle_stuck_icon	"EmieChii"	g-white	"normal"
 "Gargoyle_soft"	Figure of Gargoyle_soft_icon	"SteppeCrow"	g-white	"normal"
 "Gargoyle_hard"	Figure of Gargoyle_hard_icon	"SteppeCrow"	g-white	"normal"
 "Garrett"	Figure of Garrett_icon	"Catmonkshiro"	g-black	"normal"
@@ -2696,6 +2698,7 @@ carry out artistcredits:
 	say "     Fluffy Owl by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Friendship Pony by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Gazelle by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Gargoyle Stuck Threesome by EmieChii @ https://www.furaffinity.net/user/emiechii/[line break]";
 	say "     German Shepherd by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Giraffe Herm by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
@@ -3025,7 +3028,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "Moirah", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sokan", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Wemd", "Wolfram Rolf", "Xenotropos, Yora"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "EmieChii", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "Moirah", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sokan", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Wemd", "Wolfram Rolf", "Xenotropos, Yora"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;
