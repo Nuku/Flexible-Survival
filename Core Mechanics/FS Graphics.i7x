@@ -82,7 +82,7 @@ Figure of BlueGryphon_hard_icon is the file "Blue Gryphon hard.jpg".
 Figure of BlueGryphon_soft_icon is the file "Blue Gryphon soft.jpg".
 Figure of FeralGryphon_hard_icon is the file "Feral_Gryphon_hard.jpg".
 Figure of FeralGryphon_soft_icon is the file "Feral_Gryphon_soft.jpg".
-[Figure of Gargoyle_stuck_icon is the file "Gargoyle_stuck.jpg".]
+Figure of Gargoyle_stuck_icon is the file "Gargoyle_stuck.jpg".
 Figure of Gargoyle_hard_icon is the file "Gargoyle_hard.jpg".
 Figure of Gargoyle_soft_icon is the file "Gargoyle_soft.jpg".
 Figure of Gazelle_hard_icon is the file "Gazelle_hard.jpg".
@@ -1653,7 +1653,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 ["Fluffy Owl"	Figure of FluffyOwl_icon	"Waxraven/WXRVN"	g-white	"normal"]
 "Fluffy Owl 2"	Figure of FluffyOwl2_icon	"Moirah"	g-white	"normal"
 "Gabriel"	Figure of Gabriel_icon	"Darian821"	g-black	"normal"
-["Gargoyle_stuck"	Figure of Gargoyle_stuck_icon	"EmieChii"	g-white	"normal"]
+"Gargoyle_stuck"	Figure of Gargoyle_stuck_icon	"EmieChii"	g-white	"normal"
 "Gargoyle_soft"	Figure of Gargoyle_soft_icon	"SteppeCrow"	g-white	"normal"
 "Gargoyle_hard"	Figure of Gargoyle_hard_icon	"SteppeCrow"	g-white	"normal"
 "Garrett"	Figure of Garrett_icon	"Catmonkshiro"	g-black	"normal"
@@ -1677,7 +1677,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Goo Girl"	Figure of GooGirl_icon	"Rastear"	g-black	"normal"
 "Hadiya"	Figure of Hadiya_0_icon	"lionsilverwolf"	g-white	"normal"
 "Hadiya_icon"	Figure of Hadiya_icon	""	g-black	"normal"
-["Harold"	Figure of Harold_icon	"Hufnaar"	g-black	"normal"]
+"Harold"	Figure of Harold_icon	"Hufnaar"	g-black	"normal"
 "Harold_naked"	Figure of Harold_naked_icon	"Hufnaar"	g-black	"normal"
 "Harpy"	Figure of Harpy_icon	"Vashaa"	g-white	"normal"
 "Hawkman Male"	Figure of Hawkman_naked_icon	"Vashaa"	g-white	"normal"
