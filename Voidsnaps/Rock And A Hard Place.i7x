@@ -13,7 +13,7 @@ when play begins:
 	add Stuck to BadSpots of FurryList;
 
 to say ResolveEvent Stuck:
-	project the figure of Gargoyle_stuck_icon;
+	[project the figure of Gargoyle_stuck_icon;]
 	say "     A pitiful, hoarse voice draws you from the street as you wander, searching for nothing in particular. Curious, you follow it to its source, raising an eyebrow at what you find. In the middle of an alley, two stone statues entangle a very naked, weakly struggling man. He's pinned between them, and a closer look shows their twin shafts stretching the poor guy open, dripping with what looks like multiple loads of fresh cum. His bare chest drips with streaks of his enjoyment, and though he's trying his best to escape, his cock still slaps wetly against his stomach, appearing perfectly content with his predicament. If it weren't for his incoherent pleading, you'd almost believe he put himself in this position. 'No more... Please.' The lost soul whimpers as you cross his field of view. He pushes at the horned head of the statue in front of him, but the way the thing's arms encircle his, he's stuck fast, only able to stir his insides with twin cocks and beg you for help, his eyes glazed over and spit trickling from the corner of his mouth.";
 	say "     [italic type] Do you want to help him?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Try to save the poor guy.";
