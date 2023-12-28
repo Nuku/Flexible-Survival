@@ -32,6 +32,7 @@ to say Latex Frog Wins:
 	else:
 		say "     The frog releases you now that you're wrapped in its slippery green latex, watching you wriggle for a few moments before forcing you onto your stomach. You feel the frog's wide mouth up against your face as it grinds its hips down against yours, when suddenly the long tongue shoots forward through a seam in the latex, plunging into your mouth! You let out a helpless muffled cry as the tongue wraps sensually around your tongue and starts to wriggle deeper into your throat. The latex wrapped around you seems to squeeze and caress all over you[if Cock Count of Player > 0], squeezing and massaging the length of your cock[smn],[end if][if Player is male and Ball Size of Player > 0], gripping your balls and giving them slow rhythmic tugs[end if][if Cunt Count of Player > 0], vibrating rapidly against your clit[sfn][end if][if Nipple Count of Player > 1 and Player is female], groping your chest and squeezing your nipples repeatedly[end if], fondling your ass cheeks and caressing up and down your thighs.";
 		say "     The latex's molesting becomes overwhelming as you wriggle helplessly in place, and the deep French kiss of the latex frog sinks down deep into your throat, plunging in and out slowly. You make one last feeble struggle against the tightly wrapped latex suit before the material all squeezes in at once, locking you tight in place as you cum.[if Cock Count of Player > 0] The tight latex seems to milk you as your cum pumps out, trapped inside with you smearing all over your thighs and belly.[end if][if Cunt Count of Player > 0] The hot juices from your cunt[sfn] dribble out into the suit with you, leaving a mess spread all over your hips and ass.[end if]";
+		CreatureSexAftermath "Player" receives "OralCock" from "Latex Frog";
 	WaitLineBreak;
 	say "     Seemingly satisfied, the frog leaves you wrapped snugly in your latex cocoon with your own sex juices inside with you. The latex continues to pulsate and massage you, occasionally teasing you toward a second orgasm before relaxing again. After an hour, the latex has absorbed your [if Cock Count of Player > 0]seed[else if Cunt Count of Player > 0]wet girlcum[else if Player is female and Nipple Count of Player > 0]milk[else]sweat[end if] and releases you. In your exhausted state you watch the strange latex form hop off down into the nearby sewer drain, just starting to take the form of another latex frog...";
 
@@ -82,7 +83,7 @@ When Play begins:
 	now skin entry is "slippery dark green latex";
 	now tail entry is "";
 	now cock entry is "";
-	now face change entry is "your mouth stretches to an incredible wide shape, and your eyes shift slightly further apart and almost poke out from your head, life a frog's";
+	now face change entry is "your mouth stretches to an incredible wide shape, and your eyes shift slightly further apart and almost poke out from your head, like a frog's";
 	now body change entry is "your hands and feet grow webbing between your digits";
 	now skin change entry is "it shifts to a deep shiny green latex, some added moisture keeping your skin unnaturally slippery";
 	now ass change entry is "it shrinks, making room for your swelling powerful thighs";
