@@ -81,7 +81,7 @@ to say Swamp GoblinDesc:
 to say GenerateTrophyList_Swamp Goblin:
 	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
 	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
-		add "Swamp Goblin hair" to CombatTrophyList;
+		add "Swamp Goblin Hair" to CombatTrophyList;
 	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
 		add "dirty water" to CombatTrophyList;
 	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]

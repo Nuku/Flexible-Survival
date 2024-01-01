@@ -965,6 +965,7 @@ Include Rane by Wahn.
 Include Raymond by Voidsnaps.
 Include Reece by Luneth.
 Include RexxyEvent by Prometheus.
+Include Rhidall by Voidsnaps.
 Include Richard by Wahn.
 Include RodAndRonda by Wahn.
 Include Roman by Kernog.
