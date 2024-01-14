@@ -24,19 +24,6 @@ Ankhtepi: [anthro fennec twink: Bastet's high priest / devoted follower - comes 
 - Gender-switching Ankhtepi through Nermine's powers to give the Player three sexy ladies at their beck and call (any of the above options with Ankhtepi could come after, with a different flavor now)
 ]
 
-[
-hmm how about Bastet's pregnancy content along the positive approval path? Bonus points if the feline keeps the player from being able to pull out (either by making sure their knot is stuck inside, pinning them down or just wrapping her legs around them) just after informing them about her fertile status
-
-I'm thinking there could be an event where a group of worshipers comes to the store, wanting to talk to Bastet (inspired by Ankhtepi making his rounds in the mall) - and Nermine is about to send them away, with the player having the chance to intervene - if you do, you can either let Bastet go for a while to meet with them, or join her to see what the people want - and they made up a shrine to her in one of the empty stores, with a private chamber for her
-and she sees that she can build things from the small up, as jumping back into full goddesshood didn't work out so well
-with the Player being an ally to build her foundation with
-as in, offspring and worshipers
-they could also take care of the babies later on
-]
-
-
-
-
 BastetSexBattleCount is a number that varies.
 BastetSexOrTalk is a truth state that varies. [true for being in her sex menu, false for talk menu]
 BastetApproval is a number that varies.
