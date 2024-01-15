@@ -1,6 +1,7 @@
 Kathy by Sundered Dragon begins here.
 [Version 1 corrupted Drake route test]
 [Version 1.1 MVP Build]
+[Version 1.11 Pre-Pride update]
 "Adds a devious NPC to the Flexible Survival game."
 
 [ HP of Kathy                          ]
@@ -264,6 +265,12 @@ to say KathySex:
 		now sortorder entry is 3;
 		now description entry is "Service Kathy.";
 	[]
+	if Player is female and BodyName of Player is listed in infections of TaurList and BodyName of Player is not listed in infections of EquineList:
+		choose a blank row in table of fucking options;
+		now title entry is "Taur Sub";
+		now sortorder entry is 1;
+		now description entry is "Let Kathy have her way with your tauric half.";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -285,6 +292,8 @@ to say KathySex:
 					say "[KathySex2]";
 				else if nam is "Pussy play":
 					say "[KathySex3]";
+				else if nam is "Taur Sub":
+					say "[KathySex4]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -347,6 +356,28 @@ to say KathySex3: [Pussy play]
 		say "Maybe next update. ";
 	say "Oh well suit yourself. More for me I guess,' Kathy replies, bringing them to her lips. She wastes no time in suckling from her own supply and seems to forget your presence as she gluts herself, leaving you to see yourself out.";
 	NPCSexAftermath Kathy receives "OralPussy" from Player;
+
+to say KathySex4: [Taur Sub]
+	say "     'Aw is my girl feeling a little pent up again?' Kathy asks with a caring look in her eyes. You nod in the affirmative. 'Well, I don't mind helping you out dear, so long as I'm on top,' she says, sizing up your larger form. 'No offense sweetie, but you, um might be a little heavy for me and the kittens,' she adds, patting the bed sheets beside her. Grinning happily, you bound up beside your leonine playmate and roll on your back exposing the length of your [bodytype of player] body to her with your forelegs tucked neatly to your chest in a cute begging pose. 'Oh, I love that look, it's so cute,' Kathy trills, as she takes in the sight of exotic form on full display. 'You know,' she smirks, tapping a clawed finger to her lip, 'I was going to use my tail on you, but I think my girl deserves a special treat instead. Would you like that dear?' Kathy says, leaning over to her nightstand. Nodding, you watch as she opens one of the draws and pulls out a pink double sided ";
+	if "Touched by Madness" is listed in feats of player:
+		say "sixty centimeter long ";
+	else:
+		say "two foot long ";
+	say "dildo shaped like a comically-oversized pink canine's pecker, knot and all, alongside a clear packet of hypoallergenic water-based lube.";
+	say "     '*Sigh* I still can't believe Ava never lets me use this thing on her. Poor thing,' Kathy tuts, tapping a clawed finger against her toy. 'She keeps saying it looks too much like the real one, but,' Kathy smirks, 'something tells me you don't mind now, do you sweetie?' Kathy asks, slicing open the packet of lubricant with one clean swipe of her claws. She smears the contents along the length of the thing in long drawn out practiced strokes. Flashing her a lustful grin, you inform Kathy that you're fine with this. 'Wonderful, now you just relax and let mommy take care of you,' Kathy purrs, saddling her gravid body behind you. 'Mh [Name of Player], has anyone ever told you taurs make great pillows?' Kathy queries, gently propping her heavy brood-swollen midriff on your animalistic half while she wedges her not so little toy between you two with her tail. Shaking your head as her well-lubed tapered toy brushes your sex, you tell her not often enough. 'Well,' Kathy titters, running her fuzzy padded fingers down the breadth of the inner thigh of your dominant hindleg, 'it's true. You cuties are just perfect for my needs.'";
+	WaitLineBreak;
+	say "     'You're soft where it counts,' Kathy teases, tracing a lazy circle in the [skinname of player] skin of your [bodytype of player] undercarriage with her pointer claw, 'and supportive where I need it.' She swoons, giving your legs a squeeze as she eases her groin next to yours. 'But, you know what I love most about taurs?' she asks, flashing you a lascivious single-fanged grin. No, you tell her. 'Why,' she pauses to lean over your rear and kiss the center of your paw, 'it's the look they make when they get fucked.' Kathy rumbles as bucks her hips forward slamming her toy home. F-f-fuck, you simper, as that dripping knotted toy penetrates your feral sex with a low wet squelching sound. 'Ah, that's the one,' Kathy mews as she works her voluptuous hips, jamming the slick toy almost to the faux knot. Her body ripples like a bowl of tawny jello with every motion. Though she's not merely content to simply pound your puddling sex.";
+	say "     The busty cat girl brings her tail to bear as well as she roughly pistons the length of her toy between you, swaying her broodmare hips like a woman possessed. Your tauric body takes this all in stride, reveling in sensation of that buttery-smooth plastic knotted tool splaying your sex wide. Your eager cunny almost sings with elation as Kathy's toy massages your needy [cunt size desc of player] folds. You watch the heavy set lioness['] fecund figure bounce beautifully upon your lower half with each gesticulation. Enthralled by the sight and sensation of her taut glowing pelt caress your hide, you can't resist reaching out with your forepaws to tenderly caress her heaving collection of sweater puppies. God damn she's stacked, you tease delightedly at how her perky flush furry orbs fit so perfectly in your grasp. 'W-why th-thank dear,' Kathy stammers as she rocks her hips back and forth along the length of her toy.";
+	WaitLineBreak;
+	say "     Her heavy body wobbles delightfully in your eager paws. A part of you can't resist indulging in this rare tactile treat as your mitts comb her fecund figure. The sensation of her doughy form brushing your paws pairs so perfectly with the exotic shape of her toy moiling your receptive sexes as the matronly lionesses jackhammers the faux-knot between you with her tail with ever increasing vigor. With each sordid thrust, you sense the exotic knotted toy sinking deeper and deeper past your well-lubed vulva, innervating the lurid depth of your hybrid passage. Even your clit is rocked with replete rapture as that girthy buttery-smooth knot graces your taurhood. Panting with unrepressed delight as the blissful sensations of your well-used sex and the gentle touch of Kathy's fur caressing your lower half blends together in a heady emulsion that almost overcomes your senses. Your forelimbs languidly massage the gravid cat girl's flared hips and tender bubbly bottom.";
+	say "     Much to her apparent pleasure as Kathy presses her form against your roving peets, saying, 'Ah your paws feels heavenly sweetie, you really know just how to treat a girl, don't you?' as she fondly strokes your inquisitive pawbs with her taloned fingers while she bounces upon your tauric form. Giggling coyly, you remark that certainly have been getting a lot more practice since the nanite outbreak, although few of the local ferals appreciate it the same way that she seems to. 'Tsk, s-silly brutes don't know a g-good thing when they s-see it,' the seeded lioness moans playfully, rubbing one of your hind paws with her free hands. 'Why, if you keep this up, I might be tempted to take you on as my own personal pillow, or maybe a cute little tauric palanquin,' Kathy mews, patting your lower half affectionately and grinding her cub-swollen middle along your lengthy body with each thrust of her hips. Blushing as much as your [SkinName of Player] hide will allow at her touch, you reply through pleasure-gritted teeth as the slick toy slides between your sodden cunt, that might you like that.";
+	WaitLineBreak;
+	say "     Especially if she keeps pounding your cunny like this, you swoon, feeling the faux knot brush a particularly sensitive spot, sending flares of molten toe-clenching Elysium coursing through your tauric form. 'Of course dear, I *huff* love *huff* taking care of my girls,' Kathy gasps in blissful tenor as she takes hold of your handlebar-like legs for support. You watch as she pushes herself harder and harder with every thrust of her shelf-like ass. You can tell she's nearing her limits as her tongue lolls from the side of her muzzle in a base expression of bliss and your own animalistic sex thrums with elation as your [cunt size desc of player] muff hungrily clenches around her knotted tool. You pant with unrepressed joy as your tender muscles milk the bestial lascivious curves of the toy's animalistic taper with every motion of Kathy's fecund hips. The fem honey drenched knot is almost hilted in your toasty nether lips, nearly packing your sex to the brim with her sordid tool. Your heart races, ears pound, and body thrums with jolts of ecstasy.";
+	say "     As the entwining sensation of Kathy's fecund form pressing against you melds with the heady echoes of her tool ravaging your sex, waves of bestial bliss wash over you like the ripples in a still pound. You try to hold on, to crest each pulse of fresh delight, but your willpower can only out so long till you finally climax with a great bestial roar of satisfaction as you finish. In seconds, Kathy's voice mingles with yours as she eases herself into the welcoming embrace of your feral half, totally spent. 'Ah, mommy needed that, hope it was fun for you too sweetie,' Kathy mews, gently crawling over your lower half. The pleased cat girl seats herself on your anthro waist, before leaning in and nuzzling her face against your [breast size desc of Player] chest, saying, 'We should do this again sometime.'";
+	WaitLineBreak;
+	say "     Rumbling happily at the touch of her whiskers teasing your core, you affectionately stroke her adorable feline ears while your forepaws gently grope her sizable ass and pillowy thighs. You tell her that you just might. 'Good, just don't make me wait too long. You have no idea how frisky the cubs can make me. Ha, or maybe you do,' Kathy swoons, rolling off your upper torso with a well-pleased smirk on her catty face as she gives her tummy a loving pat. Shrugging you turn to face her, and drape your arms about her for a quick goodbye hug, replying that you'll keep that in mind.";
+	NPCSexAftermath Player receives "PussyDildoFuck" from Kathy;
+	NPCSexAftermath Kathy receives "PussyDildoFuck" from Player;
 
 
 Section - 3 I'd be a silly so and so, if I should ever let it go

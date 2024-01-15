@@ -555,6 +555,7 @@ Include Human Infections by Wahn.
 Include Hydra Beast by Stripes.
 Include Hyena Matriarch by Stripes.
 Include Hyperskunk by Stripes.
+Include Hypno Spider by Soggi.
 Include Imp by Wahn.
 Include Impala by UrsaOmega.
 Include Incubus by Stripes.
