@@ -82,7 +82,6 @@ an everyturn rule:
 			if Susan is not visible: [player isn't anywhere near him]
 				say "     [bold type]Your thoughts wander back to Susan, and you feel like you missed something.[roman type][line break]";
 				add "Absent_Birth" to Traits of Susan; [memory of the birth of human dog offspring without the player present]
-			else: [player is next to Susan]
 				say "<Placeholder Deergirl/boy birth scene>";
 			increase OffspringCount of Susan by 1; [one more human dog birthed]
 			now ImpregTimer of Susan is 0; [pregnancy reset]
@@ -233,7 +232,6 @@ Description of Susan is "[Susandesc]".
 understand "Samson" as Susan.
 Conversation of Susan is { "Bleat!" }.
 The fuckscene of Susan is "[sexwithSusan]".
-ImpregFunction of Susan is "[impregSusanChance]".
 
 when game begins:
 	SetFemalePronouns for Susan;
@@ -924,7 +922,7 @@ to SusanSexMenu:
 			now sortorder entry is 1;
 			now description entry is "Have your sweet doe go down on you";
 	[]
-	if Player is male and SusanDom is true:
+	if Player is male:
 		if "Samson Active" is listed in Traits of Susan:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck Samson's pussy";
@@ -1022,7 +1020,7 @@ to SusanSexMenu:
 				else if (nam is "Get Fucked by Samson"):
 					say "[Player receives SamsonFuck]";
 				else if (nam is "Fuck Samson's ass" or nam is "Fuck Susan's ass"):
-					say "[Samson receives AssFuck]";
+					say "[Susan receives AssFuck]";
 				else if (nam is "Go down on Samson's cock" or nam is "Go down on Susan's cock"):
 					say "[Susan receives BJ]";
 				else if (nam is "Go down on Samson's cock" or nam is "Go down on Susan's cock"):
