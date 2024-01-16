@@ -1034,7 +1034,7 @@ to SusanSexMenu:
 					say "[Susan gives Cunni]";
 				else if (nam is "Fuck Samson's pussy"):
 					say "[Samson receives PussyFuck]";
-				else if (nam is "Get Fucked by Samson"):
+				else if (nam is "Get fucked by Samson"):
 					say "[Player receives SamsonFuck]";
 				else if (nam is "Fuck Samson's ass" or nam is "Fuck Susan's ass"):
 					say "[Susan receives AssFuck]";
