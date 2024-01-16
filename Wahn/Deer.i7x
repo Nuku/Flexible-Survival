@@ -328,6 +328,11 @@ to SusanTalkMenu: [TODO: Add talk option about sexual orientation]
 		now title entry is "His life";
 		now sortorder entry is 1;
 		now description entry is "Get to know Samson a bit more";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Switching his role";
+		now sortorder entry is 3;
+		now description entry is "Ask if Samson wants to switch things up";
 	else:
 		choose a blank row in table of fucking options;
 		now title entry is "Her life";
@@ -421,6 +426,8 @@ to SusanTalkMenu: [TODO: Add talk option about sexual orientation]
 				else if (nam is "Starting Dr. Matt's Experiment"):
 					say "[SusanExperimentTalk]";
 					now DoneTalking is true;
+				else if (nam is "Switching his role"):
+					say "[SamsonRoleSwitch]";
 				if DoneTalking is false and Affection of Susan >= 0:
 					SusanTalkMenu; [looping back to continue talking]
 				else:
@@ -432,6 +439,16 @@ to SusanTalkMenu: [TODO: Add talk option about sexual orientation]
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
+
+to say SamsonRoleSwitch:
+	if SusanSub is true:
+		say "     Asking Samson if he'd like to change things up and try domming for a while, you watch his face for a reaction, hoping that your change of heart isn't too wishy-washy. 'I suppose I could try being dominant again, if you're sure.' Flexing one bicep, the former-doe poses for you as he answers, then looks away with a barely-hidden grin. 'You missed that side of me, huh? If you're not careful I might get a big head!'";
+		TraitLoss "Submissive" for Susan;
+		TraitGain "Dominant" for Susan;
+	else:
+		say "     Asking Samson if he'd like to try bottoming for a while, you watch his face for a reaction, hoping you aren't insulting the newly transformed man by asking him to return to his submissive roots. 'You could have told me if you wanted a buck to fuck.' Flexing one bicep, the former-doe poses for you as he answers with a short chuckle, then looks away with a coy smile. 'I let you choose who I was going to be anyway... It's not like I would have minded.'";
+		TraitLoss "Dominant" for Susan;
+		TraitGain "Submissive" for Susan;
 
 to say SusanBackgroundTalk:
 	if "Background Talk Done" is not listed in Traits of Susan: [note: no varying texts needed in this, as Samson cannot exist without this being talked about]
@@ -932,7 +949,7 @@ to SusanSexMenu:
 			choose a blank row in table of fucking options;
 			now title entry is "Get fucked by Samson";
 			now sortorder entry is 3;
-			now description entry is "Get fucked by your muscular buck.";
+			now description entry is "Get fucked by your muscular buck";
 		[else:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck Susan's pussy";
@@ -1149,7 +1166,7 @@ to say Player receives SamsonFuck: [Added by voidsnaps December 2023. Anal only.
 		say "     What feels like hours later, you awaken, sprawled atop the buck, cradled in his arms with a half-had cock plugging your ruined hole and a face buried in your neck. You're not sure how long you've been there, but he's certainly succeeded in his goal of impregnating you, if only in terms of looks, swelling your stomach into a sloshing dome of buck-batter. Lounging in his strong arms, you take a moment to return his silent affection, sharing in a passionate kiss before dismounting your former doe, leaving him to clean the mess coating every inch of his crotch and making sure to show off his handiwork as you bend to gather your scattered gear. You certainly made the right choice in bringing Samson to life!";
 	NPCSexAftermath Player receives "AssFuck" from Susan;
 
-to say Samson receives AssFuck:
+to say Susan receives AssFuck:
 	if Cock Length of Susan > 10: [M-Herm]
 		say "     Making your way closer to Samson, you pat his bare ass as you press yourself against his front, shedding your belongings before taking hold of both cheeks and squeezing them. With a cheeky grin, you mention that Samson's ass is looking especially appetizing today and ask whether he would let you take it for a test drive. Your erection butting against his balls leaves no room for misunderstanding, but hopefully, he's as excited as you are!";
 		if SusanSub is true:
