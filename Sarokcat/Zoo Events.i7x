@@ -73,7 +73,8 @@ to say ResolveEvent Pachyderm Predicament:
 	say "     Sadly, you really don't see any way you can reach the employee to help with anything short of a helicopter, and you certainly aren't up to taking on two large foes of that size. Shaking your head, you move off into the zoo, trying not to shudder at the soon-to-be-elephantine employee's cries.";
 	now Pachyderm Predicament is resolved;
 
-Section 4 - Snake knot
+Section 4 - Snake Knot 
+[ Rewritten by Alexeo in February 2024]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -85,7 +86,65 @@ ResolveFunction of Snake Knot is "[ResolveEvent Snake Knot]".
 Sarea of Snake Knot is "Zoo".
 
 to say ResolveEvent Snake Knot:
-	say "     Traveling past the snake house, you decide to chance a glance inside, only to stare in amazement at a writhing knot of snakes of various sizes filling the room. The smell of snakes and sex fills the area, and their hissing is only broken by the occasional moan or cry of ecstasy, proving that there are a few non-snakes caught up in their mating knot as well, though you are sure they're soon to transform. Carefully, you back away from the door, not desiring to get caught up in their mating frenzy, though it could be fun to try if there were fewer of them...";
+	say "     Traveling past the snake house, you decide to chance a glance inside, only to stare in amazement at a writhing knot of snakes of various sizes filling the room. They are a mix from pretty tiny to the truly enormous bulk of a fully grown anaconda, and there are enough of them to fill the room hip high for a normal human. The smell of snakes and sex fills the area, and their hissing is only broken by the occasional moan or cry of ecstasy, proving that there are a few non-snakes caught up in their mating knot as well, though you are sure they're soon to transform.";
+	LineBreak;
+	say "     [bold type]What do you do now?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Watch the orgy and enjoy the sights inside the snake house.";
+	say "     [link](2)[as]2[end link] - Wade in and let the snakes have their way with you too.";
+	say "     [link](3)[as]3[end link] - Attempt to rescue one of the victims of the fuckpile.";
+	say "     [link](4)[as]4[end link] - You're not interested in this. Just leave.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to just watch, [link]2[end link] to join in, [link]3[end link] to try to save someone or [link]4[end link] to walk away.";
+	if calcnumber is 1: [Option A]
+		LineBreak;
+		say "     Choosing not to participate yourself, but still interested, you decide to watch and see what happens. Crouching down to avoid detection, you peer over the edge of the pit and see the mass of squirming reptiles as well as a few humans and anthropomorphic animals in varying degrees of transformation. As the orgy begins, some of them already have forked tongues which dart out of their untainted mouths lustfully, while others take on a more naga-like appearance with their relatively humanlike upper bodies with the lower bodies of giant snakes. As you continue to gaze into the crowd of serpents, you can see flashes of dicks and pussies between the crevices of coils, every so often spotting a glimpse of penetration. Any individual act within the sex pile is difficult to spy, however, as their twisting forms move and roll over each other in an undulating mess of sex. After several moments, [if Lust of Player > 80]you realize you have begun to drool in desire [else]you find yourself oddly aroused by the show [end if]before eventually coming to your senses. You then stand up and turn your back on the lot, thoroughly turned on despite not getting directly involved.";
+		LibidoBoost 15;
+		now Resolution of Snake Knot is 1; [player watched]
+	else if calcnumber is 2: [Option B]
+		LineBreak;
+		say "     Gazing into the snake ball, you can feel your loins react to the sexy scene playing out before you and it is then and there you decide that you want to have some fun too. You shuck off your [if Player is not naked]clothing and [end if]gear and step into the knot of snakes, one foot in front of the other. As soon as half of your body is inside, the mass of slithering serpents pull you into their horde, covering you completely. You can feel the writhing group of reptiles squirming and twisting against you, their smooth scales pressing onto your bare flesh, causing your senses to spark with delight as their coils wrap around your body. It is then you feel something much smoother and wetter pressing against your backside. You quickly realize that it's a hard cock as it slides between your asscheeks, hotdogging you lewdly. It continues to grind and press there for a few moments, before finally it moves back and poises against [if Player is female]the lips if your pussy[else]your rear entrance[end if]. The cock pauses for an agonizing moment, before finally cramming deep inside you all at once! ";
+		say "     Meanwhile, you can feel another of the reptiles grinding against your front, and you feel its hot entrance pressing against your [if Player is purefemale]belly[else if Player is male]throbbing dick[else]bare, genderless groin[end if]. You can't tell if it's a cunt or an anus, but it seems to radiate heat against you. At the same time, another dick presses against your lips and shoves inside, burying itself down your throat. On your other end, the cock inside your [if Player is female]pussy[else]ass[end if] starts sliding back and forth languidly, building up pleasure deep in your core. The one in your mouth does the same as it twitches against your tongue repeatedly. [if Player is male]Furthermore, the hole on your pulsing member shoves itself down your length, taking you fully inside its depths. [end if]As you are stimulated from all angles, the folds of multiple vipers and pythons are covering your entire body, blocking out your vision and making hearing difficult, except for the moist sounds of fucking which constantly flood your ears. You can do nothing but let out a choked moan around the shaft in your mouth as your body is used and abused by the sexy snakes, being completely at their mercy.";
+		WaitLineBreak;
+		say "     The frantic fucking goes on for about half an hour as the serpents build up speed, until they are rapidly hammering your hot holes, making you squeal with delight. As your orgasm reaches its fever pitch, the first of you to explode is the snake in your [if Player is female]pussy[else]ass[end if]. It shoves and crams against your sweltering tunnel before planting itself as far as it can before finally, it begins gushing rope after rope of creamy spunk deep into your [if Player is female]womb[else]intestines[end if]. As it does so, the one in your maw spews down your gullet, repeatedly spurting a direct injection of jizz down your throat and into your stomach. [if Player is male]While the two hard fuck-sticks overflow your passages, the steamy hole embeds itself on your manhood all the way to the root, and you feel yourself unloading inside. You fill and are filled [else]You are filled [end if]for nearly an entire minute, and your combined climaxes set off a chain reaction of orgasms.";
+		say "     You can hear multiple snakes and captured victims inside the tangled knot all spasming at once in ecstasy before finally, everyone slumps in a mass of post-pleasure bliss. Only then do the still turgid lengths slide forth from your holes[if Player is male] and the one on your cock detaches itself from your lap[end if]. You are prepared to make your exit when the den of snakes start to move and grind once again and you perceive even more cocks forcing against you cavities, heralding another round of fucking begins. The sheer number of ophidian participants means there's plenty of snakes who want to get some, and others are eagerly taking a second turn. It isn't until several hours have passed that the reptiles end their massive binge-fuck and you are able to make your way out of the pile. You crawl for a few paces before collapsing in a heap, covered in sexual juices. Panting in exertion, you make your way as far from the group of creatures as you can, resuming your adventure after a bit more rest.";
+		LibidoReset;
+		if Player is female:
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Naga";
+		else if Player is male:
+			CreatureSexAftermath "Naga" receives "PussyFuck" from "Player";
+			CreatureSexAftermath "Naga" receives "AssFuck" from "Player";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Naga";
+		CreatureSexAftermath "Player" receives "OralCock" from "Naga";
+		CreatureSexAftermath "Player" receives "OralPussy" from "Naga";
+		infect "Naga";
+		now Resolution of Snake Knot is 2; [player joined in]
+	else if calcnumber is 3: [Option C]
+		LineBreak;
+		say "     It comes to your mind that some of the forms in the pile might not be willing occupants. So, you decide to throw caution to the wind and slide into the crowd of cobras, sidewinders, and constrictors in hopes of pulling out a person or two. As you make your way into the group of ophidians, your vision becomes filled with scales as well as different sizes and shapes of serpent pricks and twats. It's nearly impossible to see as the coils block out most of the light, and hearing is difficult as the writhing forms began to grind and squelch up against each other, beginning their sexual foray. Reaching out, your digits brush against slick malehoods and sopping cunnys before eventually, you feel something akin to a human hand latching onto your fingers. So, you tug with all your might in an attempt to rescue what you hope is an untransformed human.";
+		say "     As you pull them into your arms, you realize it's a woman who still retains her human figure. Before you can make your way out of the batch of snakes however, you can feel a tail [if Player is barecrotch]slide along your loins, teasing you and pushing you into unplanned arousal. [else]slip under your clothes before quickly pulling away, yanking the garments from your body. Following touches tease your body and push you into unplanned arousal. [end if] Afterwards, you perceive a pair of hard, slippery phalluses pressing onto your crotch. One of them squirms against the cleft of your ass while the other slips along your [if Player is female]twat. [else if Player is male]your own hardening prick. [else]your bare, genderless groin. [end if]At the same time, the woman in your arms is pressed tightly against you by the grind of bodies.";
+		WaitLineBreak;
+		say "     Suddenly, the mob of writhing serpents ramp up into another urgent breeding session, and the snake pressing against your backside pulls down just a bit before penetrating you fully in one swift forceful motion. The cock that was on your ass hastily buries itself deep into your guts while the other [if Player is female]plumbs the innermost reaches of your hot sex. [else if Player is male]presses flush with your own turgid length. [else]rubs on your doll-like groin. [end if]Meanwhile, the untransformed female is forced to grind up onto your flesh and [if Player is female]your overstuffed pussy is shoved up onto her own quivering cunt, smearing yours and the snake's combined sexual fluids against it. [else if Player is male], all at once, her sauna-hot gash is speared on your leaking cock. [else]the snake angles itself just a bit more to spear her on its second member. [end if]";
+		say "     It is then that the fuck-pile really kicks into gear and you, the woman, and your serpentine fuck-mate all rock and grind against each other rapidly. The agitated breeding frenzy goes on for roughly twenty minutes before finally, the snake spews in, on, and around you and your would-be rescuee. Sensing a lull in the orgy, you steel your resolve and hurriedly drag her from the coils, finding your way out of the snake pit by reacting on blind instinct alone. Finally, you manage to free yourselves from the massive sex-spree just as another round of breeding begins. Quickly hauling her around a corner, you only then get a chance to look upon her form. In the process of escaping, you failed to notice her bottom half had become that of a snake already, a long scaled tail having replaced her legs. The rest of her body seems relatively average for a human.";
+		WaitLineBreak;
+		say "     The naga woman looks at you while panting lightly for breath. 'Thank you so much! If it wasn't for you, I would have probably been doomed to spend the rest of my life in that pit. I think I can make my way from here. Good luck to you!' With that, she slithers off a bit uneasily on her new tail, as if trying to figure out how to balance on the fresh appendage without any legs. With a sigh, you turn and prepare to resume your adventures.";
+		LibidoReset;
+		if Player is female:
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Naga";
+		else if Player is male:
+			CreatureSexAftermath "Player" receives "AssFuck" from "Naga";
+			CreatureSexAftermath "Naga" receives "PussyFuck" from "Player";
+		infect "Naga";
+		now Resolution of Snake Knot is 3; [player saved someone]
+	else if calcnumber is 4: [Option D]
+		LineBreak;
+		say "     Carefully, you back away from the door, not desiring to get caught up in their mating frenzy, though it could be fun to try if there were fewer of them...";
+		now Resolution of Snake Knot is 4; [player just left]
 	now Snake Knot is resolved;
 
 
