@@ -6,7 +6,7 @@ Dmitri the Peacock by Aureas Gigas begins here.
 [ 99: stopped the charmer cold                                     ]
 
 a postimport rule: [this adds the newly named navpoint]
-	if peacocked is > 7 and peacocked is < 98: [values set this way to future proof it after changing teh room name in code. Please use values above 98 for content that SHOULDNT link this area.]
+	if Peacocked > 7 and Peacocked < 98: [values set this way to future proof it after changing teh room name in code. Please use values above 98 for content that SHOULDNT link this area.]
 		AddNavPoint Argos's Antiques;
 
 Table of GameEventIDs (continued)

@@ -237,12 +237,12 @@ to say Argos_Pet_Fuck_Menu:
 	say "     Whistling for Argos, you watch him appear from a nearby doorway, fresh from exploring. He tilts his head at you and sits, prominently displaying his manhood in the process. Licking his lips, he stares at you expectantly with the space where eyes would be on anyone else, blatantly staring at your crotch. It's not hard to tell what he wants, but the question is: What do you want to do?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-[]
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Tend to Argos's needs";
 	now sortorder entry is 1;
 	now description entry is "It's been a while since you've let Argos fuck you. Maybe you should take care of him";
-[]
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -256,8 +256,9 @@ to say Argos_Pet_Fuck_Menu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Tend to Argos's needs":
+				if (nam is "Tend to Argos's needs"):
 					say "[ArgosFuck]";
 				wait for any key;
 		else if calcnumber is 0:
