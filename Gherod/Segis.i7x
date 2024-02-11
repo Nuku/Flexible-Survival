@@ -4,6 +4,73 @@ Version 1 of Segis by Gherod begins here.
 
 [Version 1 - File Created: Pre-Events]
 
+[Code to facilitate the project figure system for Segis, as it has a lot of variations according to his upgrades]
+[only Muscular art is available for now]
+
+to ProjectFigureSegisSoft:
+	if "Muscular Body Type" is listed in traits of Segis:
+		if "External Genitalia" is listed in traits of Segis:
+			if cock length of Segis is 9:
+				if ball size of Segis <= 3: [11]
+					project figure of Segis_muscular_soft_11_icon;
+				else if ball size of Segis is 4: [12]
+					project figure of Segis_muscular_soft_12_icon;
+				else if ball size of Segis is 5: [13]
+					project figure of Segis_muscular_soft_13_icon;
+			else if cock length of Segis is 12:
+				if ball size of Segis <= 3: [21]
+					project figure of Segis_muscular_soft_21_icon;
+				else if ball size of Segis is 4: [22]
+					project figure of Segis_muscular_soft_22_icon;
+				else if ball size of Segis is 5: [23]
+					project figure of Segis_muscular_soft_23_icon;
+			else if cock length of Segis is 16:
+				if ball size of Segis <= 3: [31]
+					project figure of Segis_muscular_soft_31_icon;
+				else if ball size of Segis is 4: [32]
+					project figure of Segis_muscular_soft_32_icon;
+				else if ball size of Segis is 5: [33]
+					project figure of Segis_muscular_soft_33_icon;
+		else:
+			project figure of Segis_muscular_default_icon; [default]
+	else:
+		say "";
+
+
+to ProjectFigureSegisHard:
+	if "Muscular Body Type" is listed in traits of Segis:
+		if "External Genitalia" is listed in traits of Segis:
+			if cock length of Segis is 9:
+				if ball size of Segis <= 3: [11]
+					project figure of Segis_muscular_hard_11_icon;
+				else if ball size of Segis is 4: [12]
+					project figure of Segis_muscular_hard_12_icon;
+				else if ball size of Segis is 5: [13]
+					project figure of Segis_muscular_hard_13_icon;
+			else if cock length of Segis is 12:
+				if ball size of Segis <= 3: [21]
+					project figure of Segis_muscular_hard_21_icon;
+				else if ball size of Segis is 4: [22]
+					project figure of Segis_muscular_hard_22_icon;
+				else if ball size of Segis is 5: [23]
+					project figure of Segis_muscular_hard_23_icon;
+			else if cock length of Segis is 16:
+				if ball size of Segis <= 3: [31]
+					project figure of Segis_muscular_hard_31_icon;
+				else if ball size of Segis is 4: [32]
+					project figure of Segis_muscular_hard_32_icon;
+				else if ball size of Segis is 5: [33]
+					project figure of Segis_muscular_hard_33_icon;
+		else:
+			if cock length of Segis is 9: [def 11]
+				project figure of Segis_muscular_default_hard_1_icon;
+			else if cock length of Segis is 12: [def 12]
+				project figure of Segis_muscular_default_hard_2_icon;
+			else if cock length of Segis is 16: [def 13]
+				project figure of Segis_muscular_default_hard_3_icon;
+	else:
+		say "";
+
 Section 1 - Pre-Event
 
 Table of GameEventIDs (continued)
@@ -484,6 +551,7 @@ to say SegisBodyType:
 
 
 to say SegisDesc:
+	ProjectFigureSegisSoft;
 	say "     Segis, by codename, is a mechanical, white-colored and anthropomorphic dragon in an almost uncanny and organic way, looking male with his [SegisBodyType] physique, though one could say he is technically genderless, as he is a robot. Being a tall android of very high technology, his cyan-colored optical units trace your movements with clear sentience. Segis seems completely autonomous and capable of speaking like any other person, possessing an advanced and artificial intelligence that seems completely otherworldly. While initially hostile, the android recognizes you as his new owner after you found a way to get him fixed, responding and acting with utmost loyalty. When he moves, you can hear his mechanical joints behind you, reminding you of his artificial nature. He also possesses a variety of self-defense equipment attached to his limbs, allowing him to perform electric discharges, substance injections, strike with blades and shoot with a pop-up handgun, though some of these seem inoperative.";
 	if "Has Cock Upgrade" is listed in traits of Segis:
 		say "     Segis has acquired some modding possibilities, allowing for more customization...";
@@ -819,6 +887,7 @@ to say SegisSexMenu:
 	clear the screen and hyperlink list;
 
 to say SegisSexBlowjob:
+	ProjectFigureSegisHard;
 	if "Personality Himbo" is listed in traits of Segis:
 		say "     As you consider your options, you take hold of the robotic draconic penis in Segis['] crotch and give it a nice squeeze, then tell him about your intentions. He seems quite interested in your proposal, and the way his artificial cock throbs is the confirmation you would need to assume such. 'Yo, you wanna suck my cock? Fuck yes! That seems like a fucking great idea! You need me to take the lead on this or you're fine on your own?' You tell him you will be just fine and he only has to worry about how he feels. 'I'll feel fucking great, I'm sure! I mean, your hand feels good already... Can't wait to try your mouth... Eh, mind kneeling down already? Starting to get pent up...'";
 		say "     His cock feels like some sort of warm metal with ridges like a dragon's would have, and not far from how a dildo would actually feel, except more metallic and dense, even. It is almost as if it were the real deal, only heavier and slightly less bendable. You kneel in front of the android and have a closer look, admiring this black draconic nine-inch cock in all its splendor. It is quite a sizable organ, and not only by length, having quite the girth to make it look almost intimidating to some. Carefully, you slide your fingers across the shaft and give it a bit of stroking, which causes Segis to lean his head backwards and let out a pleased moan. You feel his hand touching the back of your head, as if encouraging you to move in, which eventually you do, wrapping your lips around his tip.";
@@ -898,6 +967,7 @@ to say SegisSexFuck:
 		else:
 			say "     As you consider your options, you take hold of the robotic draconic penis in Segis['] crotch and give it a nice squeeze, then tell him about your intentions. He seems quite interested in your proposal, and the way his artificial cock throbs is the confirmation you would need to assume such. 'Fuck yeah! I'd love to fuck you into the next world! Heh, I mean, not literally, but you know, I wanna fuck you a lot...!' The android's seeming eagerness is all you need to kickstart your gears as you wonder how this powerful robot is going to take you...";
 			WaitLineBreak;
+		ProjectFigureSegisHard;
 		say "     But first, you keep hold of his [if Cock Length of Segis is 16]big and thick[else if Cock Length of Segis is 12]large[else]good-sized[end if] black shaft while giving it a couple of steady strokes, gently yet firmly, as you ensure your android is fully hard and ready for the task at hand. You know he enjoys this due to his configurations, and so, you really do not mind providing him with pleasure until that rod of his feels lubricated enough, which is possible thanks to the constant leaking of precum-like liquid oozing out from his tip. After a good while, it starts to feel much more slippery, giving you enough confidence that it can easily slide into you.";
 		say "     'Can't wait to get started! Can I fuck you now?' You nod, giving Segis permission to take the lead in this, and the android eagerly follows, gently placing his hands over your hips to push you to turn around. You, of course, let him, giving the android a good view of your rear side as you bend over in front of him,";
 		if player is not naked:
@@ -936,6 +1006,7 @@ to say SegisSexFuck:
 		else:
 			say "     As you consider your options, you take hold of the robotic draconic penis in Segis['] crotch and give it a nice squeeze, then tell him about your intentions. He seems quite interested in your proposal, and the way his artificial cock throbs is the confirmation you would need to assume such. 'It would be my pleasure to breed you, [sir]!' The android's seeming eagerness is all you need to kickstart your gears as you wonder how this powerful robot is going to take you...";
 		WaitLineBreak;
+		ProjectFigureSegisHard;
 		say "     But first, you keep hold of his [if Cock Length of Segis is 16]big and thick[else if Cock Length of Segis is 12]large[else]good-sized[end if] black shaft while giving it a couple of steady strokes, gently yet firmly, as you ensure your android is fully hard and ready for the task at hand. You know he enjoys this due to his configurations, and so, you really do not mind providing him with pleasure until that rod of his feels lubricated enough, which is possible thanks to the constant leaking of precum-like liquid oozing out from his tip. After a good while, it starts to feel much more slippery, giving you enough confidence that it can easily slide into you.";
 		say "     'I should be ready, [sir]. Perhaps you would like for me to initiate?' You nod, giving Segis permission to take the lead in this, and the android eagerly follows, gently placing his hands over your hips to push you to turn around. You, of course, let him, giving the android a good view of your rear side as you bend over in front of him,";
 		if player is not naked:
@@ -970,6 +1041,7 @@ to say SegisSexFuck:
 		NPCSexAftermath Player receives "AssFuck" from Segis;
 
 to say SegisSexMasturbate:
+	ProjectFigureSegisHard;
 	say "     As you consider your options, you take hold of the robotic draconic penis in Segis['] crotch and give it a nice squeeze, then tell him about your intentions. He seems quite interested in your proposal, and the way his artificial cock throbs is the confirmation you would need to assume such. 'Most certainly, [sir]! This seems to be a good activity to bring each other mutual pleasure! Might I add, an excellent idea, even! My receptors are thriving!' A happy android is definitely a plus at getting started, and by the way his member throbs in your grip, you could definitely tell he thoroughly enjoys it. 'Perhaps you would like me to touch you back, [sir]? I promise I'm quite dexterous with my hands if need be. Satisfaction guaranteed!' It does not take much for the android to sell it to you successfully, and quickly enough, [if player is not naked]you expose your private areas[else]you present your already exposed privates[end if] to him.";
 	say "     Adding to this, while you tug on his member, you move your free hand over his arm and lead him to you, his fingers soon finding themselves [if player is male]wrapped around your shaft[else if player is female]fondling your lower lips[else]moving through your taint to caress your butthole[end if]. Segis is as diligent in his task as you would expect, putting his entire focus on providing you the promised pleasure. You can only reciprocate, tugging on the android's cock and rubbing it all over, his throbbing shaft responding to your affections accordingly as your palm runs across its length, a little bit of lubricating liquid leaking out from its tip aiding your efforts. It is clear the he enjoys this too, in whatever sense a synthetic enjoys pleasure, and so do you with his masterful touch.";
 	WaitLineBreak;
@@ -1018,6 +1090,7 @@ to say SegisSexMilk:
 		say "     'Someone's looking to drink from my man tits, eh? I've got a lot of milk just for you...' The dragon android then reaches over you, with the biggest smile, and slides one hand over the back of your head. He knows you want it, so he does not even ask, instead choosing to press your face against his chest, which feels really soft and smooth. 'Get sucking! I stored a lot in them just for you!' Segis['] mechanical arm is actually quite strong, so much that you find yourself effectively locked, head pressed against his pecs and lips squished around the nipples. As soon as your tongue touches them, a steady gush of milk comes out to greet you, warm, thick and just a tad sweetened.";
 		say "     'Feels really damn good to feed you!' Segis eagerly says as he puffs his chest out and lets you suckle on him. You think that, with his current personality module, that he somehow seems extremely eager to give you his milk, and if an AI can get this excited about something, he is the definition of it. Once stimulated, he begins to pump copious amounts of milk into your mouth, and both his arms curl around your head as he presses his synthetic pecs against your face. You even feel a slight throb across his entire chest every time some of his milk is released, seeming almost like he was flexing them like a real person. It is easy to forget that Segis is an android when you close your eyes and focus on fully enjoying this...";
 		WaitLineBreak;
+		ProjectFigureSegisHard;
 		say "     During this whole process, something else seems to have been brought to attention, as there is this hard and throbbing shaft poking against you from below. It seems the android's excitement is not confined to his hypothetical psyche, but also physical. You figure that tugging on that [if Cock Length of Segis is 16]big and thick[else if Cock Length of Segis is 12]large[else]good-sized[end if] black shaft will only encourage the android to give you all he has got, and you are not wrong. As soon as you wrap your hand around his artificial cock, you definitely notice an increase in milk flow... And him just hugging you tighter. 'Yeess! You're only getting out of here until these are empty, you hear?'";
 		if "Extra Milky" is listed in traits of Segis:
 			say "     You provide him with the pleasure and he gives you the milk... A lot of it. So much that it keeps on giving you mouthfuls to swallow. You have no idea how Segis can fit this much inside of him, but he can, and he is making sure everything gets pumped into your mouth. There is still a consistent, steady stream of it, which goes on for about a few long minutes before it gives signs of reaching its end. By then, you have a full belly with so much of that tasty milk in you, and you suck on his nipples until the very last few drops arrive at your tongue, swallowing it all before licking them clean. 'Mmh... Feeling much better now... Much lighter! These big pecs were so fucking full of milk! You gotta suck on me more, I'm always happy to feed you...!' says Segis as he simply lets you rest your head atop his chest, patting you affectionately.";
@@ -1033,6 +1106,7 @@ to say SegisSexMilk:
 		say "     'Greetings, [sir]. I presume you wish to extract some milk from me? I've got plenty in store just for you.' The dragon android then approaches you with his arms open, allowing you to come really close to him and embrace his figure. Now finally in reach, you lean in and press your face against his chest, which feels really soft and smooth, and get your lips around his artificial nipples, ready to get sucking. 'I hope it is to your liking. I've sweetened it slightly to improve your experience, and have taken care to ensure it suits your nutritious needs.' Since the android so promptly offers you his chest, you are quick to greet his nips with your tongue, and as soon as you do, a steady gush of milk comes out to greet you back. It is warm, thick and just a tad sweetened, as advertised.";
 		say "     'My receptors are in favor of this interaction. I feel... Pleased,' Segis['] informative tone may sometimes sound off-putting, but it is clear that his software supports positive feelings. With the proper stimulation, he begins to pump copious amounts of milk into your mouth. Sometimes it is easy to forget that Segis is an android when you close your eyes and focus on fully enjoying this, as his movements seem so natural you would not be able to distinguish them from a real person, save the slight artificial feeling of the synthetic material covering the android's chest...";
 		WaitLineBreak;
+		ProjectFigureSegisHard;
 		say "     During this whole process, something else seems to have been brought to attention, as there is this hard and throbbing shaft poking against you from below. It seems the android's promptness to serve is not confined to his hypothetical psyche, but also physical. You figure that tugging on that [if Cock Length of Segis is 16]big and thick[else if Cock Length of Segis is 12]large[else]good-sized[end if] black shaft will only encourage the android to give you all he has got, and you are not wrong. As soon as you wrap your hand around his artificial cock, you definitely notice an increase in milk flow... And him just hugging you tighter. 'It seems you have activated it further by providing me with a handjob. This... Feels very pleasant. I recommend you continue!'";
 		if "Extra Milky" is listed in traits of Segis:
 			say "     You provide him with the pleasure and he gives you the milk... A lot of it. So much that it keeps on giving you mouthfuls to swallow. You have no idea how Segis can fit this much inside of him, but he can, and he is making sure everything gets pumped into your mouth. There is still a consistent, steady stream of it, which goes on for about a few long minutes before it gives signs of reaching its end. By then, you have a full belly with so much of that tasty milk in you, and you suck on his nipples until the very last few drops arrive at your tongue, swallowing it all before licking them clean. 'My reservoirs have finally emptied! With such a high rate of milk production, I estimate they shall be refilled in no time, however,' says Segis as he simply lets you rest your head atop his chest, patting you affectionately.";
@@ -1050,6 +1124,7 @@ to say SegisSexFootWorship: [only himbo for now]
 	say "     Looking over the android's entire body, from head to feet, your eyes linger towards the latter as you imagine what you could be doing. Despite Segis being an artificial being, his entire figure is actually carefully sculpted, and the same goes for his digitigrade legs and feet. Catching up on this, Segis tilts his head and eyes you curiously, his cerulean eyes blinking as he draws a smile. 'What's the matter, bud? See something you like below my waist? Or is it something even lower...?' he asks as he wiggles his mechanical toes, and noticing how your eyes react to the sudden movement, his excitement peaks. 'I see what you want... Aren't you the kinky one! Though I think it's a pretty common one, people who have it usually don't admit it, heh...'";
 	say "     He then places an arm over your neck and shoulders, pulling you to him tight as he rubs his muzzle against your cheek, 'So... You want my foot on your face?' As this is exactly what you wanted, you nod, albeit the way he is so eager to indulge you makes you blush a little, your body quickly turning itself on as blood rushes down south. 'Well, you'd like to know I've got some uh... Sensors down there. It's gonna feel good for me if you lick them. And get your lips around my toes. And hm... Maybe suck on them too... Fuck, I just wanna grind my feet all over your face, honestly! How about you... Get down?' His voice is enthusiastic and his smile huge and genuine, he really wants you to worship his feet now. This turned out to go better than you anticipated...";
 	WaitLineBreak;
+	ProjectFigureSegisHard;
 	say "     Not wanting to make your android companion wait any further, as his excitable nature already prompted him to get an erection over the promise of a good time, you just get down on the floor and lean your face over this feet, planting a kiss on top of them. From a kiss, you move into straight up a makeout session with the top part of his toes as he wiggles them excitedly. 'Right where I want you...' he teases, his personality shifting his demeanor into a more and more dominant one, unknown if by a feature of its module or by the type of stimulation you are giving him, but he surely is embracing his newly established role. You give in to your cravings and continue to kiss and lick his foot, and eventually, you move to one of the sides as you lie down beneath them.";
 	say "     You are presented with the towering view of your android friend with his [if Cock Length of Segis is 16]huge and thick[else if Cock Length of Segis is 12]large[else]good-sized[end if] black shaft fully erect, throbbing and leaking, and a pleased grin on his muzzle, which is quickly replaced by a dark blur as he moves his foot on top of your face. 'This really feels good... Can't blame you kinky organics for getting off from this! Mmh, yeah, right on that spot...' He then covers your whole face with his foot as he presses down on you, to then grind his surprisingly soft sole all over your features. You do your best to follow through with lots of kissing and licking, and out of excitement, the android takes the liberty to jerk himself off as he enjoys your service.";
 	WaitLineBreak;
