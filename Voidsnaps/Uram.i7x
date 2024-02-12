@@ -225,6 +225,9 @@ to say orog cum use:
 	PlayerDrink 15;
 	SanLoss 5;
 	turn Player into "Incestuous Orog Father" silently;
+	now cunt count of Player is 0;
+	now cock count of Player is 1;
+	now breast size of Player is 0;
 
 instead of sniffing orog cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty and a little sweet.";
@@ -436,6 +439,9 @@ to say OrogBreastFeed:
 		say "     With a dry throat and a wandering eye, you ask the orog if he'll let you drink from his never-ending milk fountains, shuffling in place and trying your best to ignore the arousal growing in your lower stomach. You remember the last time he let you drink, and you can't help but hope for an encore, but you'd settle for just falling asleep in those muscular arms with a full stomach. 'Oh, poor baby boy. Did you get bullied by one of those meanies in the city?' Uram says as if noticing your body isn't the same smooth grey twink he saw last. 'Come here. Let daddy feed you!' Plopping down in a groaning wheeled chair, he pats his lap, letting his loincloth flutter to the floor and offering you a set next to the massive cock drooling against his stomach. It seems he's just as excited by the prospect as you are.";
 		say "     Following his lead, you toss aside your gear, leaving yourself in the nude and hopping onto the offered seat. Greedily, you mash your open mouth against his pec, taking long pulls of sweet, ice-cream-like milk and spreading your legs as heat overtakes your body, heralding the changes you've come to expect. Within moments, you've returned to a form that matches your daddy's, aided by his stroking hand on your cock. 'That's it, sweetie. Drink as much as you like~!' Uram encourages you, smearing his cock over your stomach as he milks your needy manhood with patient fingers. The scent of his manly musk is so strong, mixed with that heady sweetness of ever-present milk, that you lose track of time, your body helplessly relaxing into the pleasure. Before long, you groan your release, painting his fingers, and close your eyes, dazed by the twisting knot of desire in your swollen, milk-filled stomach. He strokes you for what feels like hours, licking his fingers clean whenever you squirt for him, and by the time you pass out from exhaustion, you're half-hard, drooling between fingers that have stilled, just holding your manhood in a comforting grasp, and you've lost all your strength. Thankfully, those full pecs make a nice pillow, so you snuggle between them, listening to your daddy's heartbeat in contented bliss.";
 	turn Player into "Incestuous Orog Son" silently;
+	now cunt count of Player is 0;
+	now cock count of Player is 1;
+	now breast size of Player is 0;
 	follow the turnpass rule;
 	say "     Awakening feeling fresh and clean, you notice your gear is neatly placed on a nearby desk. A quick whiff tells you it's been washed, and it even smells like fabric softener! How he managed to clean your things so well without power is a mystery, but you're grateful nonetheless. You'll have to remember to thank him later.";
 
