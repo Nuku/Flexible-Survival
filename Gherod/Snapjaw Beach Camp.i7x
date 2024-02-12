@@ -146,10 +146,15 @@ to say SkylerTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Ask the big sharkman about his people";
 	[]
+		choose a blank row in table of fucking options;
+		now title entry is "Helping the camp";
+		now sortorder entry is 3;
+		now description entry is "Inquire on how to assist them";
+	[]
 	if Energy of Skyler > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask him for a scale";
-		now sortorder entry is 2;
+		now sortorder entry is 4;
 		now description entry is "Ask Skyler to give you one of his scales";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -171,6 +176,8 @@ to say SkylerTalkMenu:
 					say "[SkylerTalkHimself]";
 				else if (nam is "The camp and the other sharkmen"):
 					say "[SkylerTalkCamp]";
+				else if (nam is "Helping the camp"):
+					say "[SkylerTalkHelpCamp]";
 				else if (nam is "Ask him for a scale"):
 					say "[SkylerTalkScale]";
 				wait for any key;
@@ -199,6 +206,12 @@ to say SkylerTalkCamp:
 	say "     You then ask about all the others, already having an idea about the answer... 'Yeah... Uh... Yeah. I... Fuck, I'm embarrassed, sorry...' It is obvious that he fucked them all. 'I might have accidentally created a sharkman community, is that so bad? Probably... It is... But hey, at least we're all happy! If you wanna be one too, maybe we just have to keep fucking! Or you take some of my scales. Honestly, I'm never sure how it works, myself... Sometimes it does, sometimes it doesn't... Weird science, huh?'";
 	if Energy of Skyler is 1:
 		now Energy of Skyler is 2;
+
+to say SkylerTalkHelpCamp:
+	say "     It is true that these sharkmen seem to be getting by just well enough, but it seems they could still use some help. You ask Skyler how you could achieve that by inquiring on what he needs done around here. He smiles seeing your interest, and is happy to reply, 'There's a lot that can be done around here, like getting us some supplies to improve some of our cottages, make them a little more interesting... We're trying to build an outpost for ourselves here that connects back to Avalon, but the entrance is underwater, so... We'd need some infrastructures to ensure anyone can go through. But basics first, we need to be sustaining ourselves, we're all big shark men and boys here after all!'";
+	say "     Food and materials seems to be what they need, for the most part. Their most complex projects seem to be a plan for much later, once they are established enough in this beach. 'You could maybe talk it through with Snapjaw over there?' he says, pointing at where the biggest sharkmen of them all, who is usually keeping watch for any possible intruders, 'I think he could use the help if you go about it carefully. Just don't suggest he [italic type]needs[roman type] the help, but that you'd gladly... Do something for him. If you can convince him to go to the city with you, he'd definitely be useful getting rid of all the rubble, which is where we struggle searching around the most. Us and other people, so it's likely you'll find useful stuff in those situations.'";
+	WaitLineBreak;
+	say "     You suppose you could [bold type]ask Snapjaw[roman type] about helping the camp.";
 
 to say SkylerTalkScale:
 	say "     Since he mentioned it, you decide to ask him for a scale. 'Sure! I can give you one.' When you think he would just try to pluck one for you, he goes fetch a box where he keeps some. You ask no further questions as he hands you over exactly one scale. 'There's other things that work, too... Though those you might have to come get it yourself. It's more fun that way...' he says as his eyes glance over his crotch, then back to your face. 'Tastes better when drank right from the tap,' he adds with a wink.";
@@ -475,6 +488,11 @@ to say SnapjawTalkMenu:
 		now title entry is "Superstrength";
 		now sortorder entry is 6;
 		now description entry is "You did see him bend metal with his own hands before. Ask him about it";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Scavenge in the city";
+		now sortorder entry is 7;
+		now description entry is "Whether to help yourself or the camp, scavenge with Snapjaw";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -503,6 +521,8 @@ to say SnapjawTalkMenu:
 					say "[SnapjawTalkGenitals]";
 				else if (nam is "Superstrength"):
 					say "[SnapjawTalkSuperstrength]";
+				else if (nam is "Scavenge in the city"):
+					say "[SnapjawTalkScavenge]";
 				wait for any key;
 				if SnapjawDoneTalking is false:
 					say "[SnapjawTalkMenu]"; [looping back to keep talking with him]
@@ -671,6 +691,112 @@ to say SnapjawSexMuscleWorship:
 	NPCSexAftermath Player receives "Other" from Snapjaw;
 	if Loyalty of Snapjaw < 9:
 		increase Loyalty of Snapjaw by 1;
+
+
+[SCAVENGE EVENT]
+
+to say SnapjawTalkScavenge:
+	if Stamina of Snapjaw is 0:
+		say "     You bring a subject you have discussed with Skyler regarding the camp's supplies to Snapjaw, who immediately gives you a side look as he scratches his wide jaw. 'Yeah, what about it?' he asks, and you explain what you have previously talked through, that the sharkmen around here could use more materials for construction and food, and that you thought of asking him for help as his immense strength would definitely be useful in searching through the rubble in the city. 'Sounds to me like you need a favor from me to do a favor for everyone, me included. Yeah, I suppose that works as a deal, though I gotta phrase something to you...' he then pauses, looking at you up and down. 'I'm really gonna be doing all the fucking work here, let's be real. You gotta be ready to do everything I say.'";
+		say "     So, you then ask if that means he would go scavenge with you to the city while you... Help him in whatever way he needs. Snapjaw chuckles in response, then a long smirk, as he puts a heavy hand over your shoulder which hits harder than you expected, and also grips it harder than you are comfortable with, staring at you dead in the eye, 'Are you suggesting I need help?' You quickly say you would not dare to say such a thing, he clearly does not need any help! But you would be very glad to do things for him, obviously. He seems content with your words, not because he totally believes you, but because he can use those words against you. 'Right, let me know when you're around. You better be ready to work hard.'";
+		now Stamina of Snapjaw is 1;
+	else if Stamina of Snapjaw > 0:
+		if lastfuck of Snapjaw - turns < 4:
+			say "     You do not think it would be a good time for that, as you have recently been with Snapjaw already. Perhaps later would be best, you also have to give the sharkman some time for himself...";
+		else:
+			say "     Finding yourself with some free time, you ask if Snapjaw would like your generous services to assist him with some scavenging around the city. 'Eager to help aren't you? Yeah, I suppose we could get some of that done. You ready or what?'"; 
+			say "     ([link]Y[as]y[end link]) - Yes, you are ready to go with him.";
+			say "     ([link]N[as]n[end link]) - No, you changed your mind.";
+			if Player consents:
+				LineBreak;
+				SnapjawScavengeEvent;
+			else:
+				LineBreak;
+				say "     You tell him not yet, and he is quick to dismiss you with an annoyed grunt.";
+
+to SnapjawScavengeEvent:
+	say "     Impatiently, he urges you to start walking towards the city while he trails behind. You feel like he is watching your every step as you walk through the camp and towards the exit that leads into the city, namely the High Rise District neighboring this location. Once you are out, you feel that heavy hand over your shoulder as the large sharkman makes you stop on your tracks, then takes over the march. 'Now you try to keep up, we gotta be quick if we don't wanna catch some motherfuckers along the way to fuck up our plans. Then I have to smash our way through and it's just fucking unnecessary. Waste of energy.' You cannot say you want to argue with his methods, as you are used to scavenge this way until, and if, trouble finds you.";
+	say "     And so, you eventually reach the city streets, already facing its abandonment as the empty silence fills the air...";
+	WaitLineBreak;
+	[There will be various possible situations branching from here, from now there will be only one]
+	[Car Lift]
+	say "     'Funny how some of these horny fuckers crashed their cars into venues like that, just to get inside them and get someone to screw. Imagine that shit making you so needy you drive through a fucking wall to find some piece of ass...' Snapjaw's tone of amusement is obvious as you hear him speak, though there is an underlining factor of anger. 'All those corps['] fault, that's why I'm good living on a beach and sleeping under some wooden stakes. Beats that shit for sure.' You get across numerous streets, passing through nothing but rubble, empty stores and broken windows, until you find your way to what seems to have been a small vending area. Usually these are the first to be ransacked, but there seems to have been quite a few crashes around the area. Several cars were driven into the vending machines, making them mostly inaccessible.";
+	say "     'That's a lot of cars... Doubt anyone gave a shit about trying to check those machines... Not that it'd be easy if they weren't me, heh.' Well, usually you can try and push some cars around to see if they roll, as you doubt anyone would pull the brakes in a state of frenzy to get out, but Snapjaw is mostly referring to a specific cluster of vehicles that are pretty much stuck. Two cars crashed into a van, and one of its wheels sank into the vending machine, blocking any access to its contents. It would require a great amount of strength to even have a chance at lifting that van, but then you realize you have just that... In the shape of an enormous and powerful sharkman standing right next to you. 'Hah, you'd be helpless if it wasn't for me. There's no way your little arms could hope to get that van out of the way... Which is true for most other scavengers.'";
+	WaitLineBreak;
+	say "     He then walks over the van, noticing the wheel, and examines it to see if it is worth your time. 'Yeah, there's probably something we can get outta there. Since you're, well, smaller, you have a look underneath while I keep holding this shit.' The sharkman plants his feet on solid ground, then slides his hands under the front of the van by one of the corners, and using his whole body as a lifter, you see every muscle tense up and pop visibly as he puts them to work. His legs squat, his back tenses up and his arms flex, almost dramatically as he takes his time with the stance. One would expect this to take a great amount of effort from just about anyone, even someone strong enough to be able to do this, but suddenly, you see him stand up, making that van seem like the lightest thing in the world with a proud grin on his muzzle. And raises it above his head too! You swear he could just flip it over if he wanted to, easily.";
+	say "     'Are you done admiring me? Time to get to work, we gotta run soon,' he commands, not even bothering to look back at you. Every single muscle in his body is pumped as he performs this feat of strength, and you could really spend a long time just staring, you are pretty sure he could hold that van for quite a while, but perhaps you should not risk angering the sharkman. As you approach him and the broken vending machine, a quick glance reveals some potential supplies that you will have to check if they are still worth taking. Any packets that were torn or crushed would not work as edible food, and there is the possibility of some products being expired.";
+	WaitLineBreak;
+	if Libido of Snapjaw > 0:
+		say "     However... A thought crosses your mind, seeing Snapjaw so exposed, his hands busy doing such heavy lifting. You could seize this opportunity to have some fun with that big body of his. There is no way he is not putting on a show for you, so there is very little chance he will stay angry at you for long. There is the chance of forfeiting those supplies, but perhaps it would be worth it for the thrill...";
+		LineBreak;
+		say "     [bold type]Would you like to give Snapjaw some body worshipping here and now? Who knows where it might lead...[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Caress the sharkman and be ready to offer your holes.";
+		say "     ([link]N[as]n[end link]) - You came here for the supplies.";
+		if Player consents:
+			say "     He is quite a strong bulwark of muscle, it gets harder to take your eyes off those throbbing muscles, seemingly yearning for a generous touch only you could give at the moment. As you let these thoughts flow in your mind, you get closer and closer to the sharkman, disregarding the initial motive you came here for. You are dead set on giving him a good time, and before you can even think about your next move, your hand is already groping at one of his pecs. 'Uuuh... What the fuck are you doing?' he asks, looking down at you from above with an expression that could pierce your very soul, but it is too late to back off now. You tell him you could not resist groping those massive slabs of meat when the chance was there, all too easy to skip on.";
+			say "     'Is that so? Well, you're lucky my hands are the only thing keeping you from getting crushed under a van.' You note that, while that is true, he would be missing out on someone who really wants to please him right now, as you keep massaging those huge pectorals of his. You are pretty confident only because you notice the cock in his stretched speedos twitch, otherwise you would probably be running for your life from his glare alone. 'You little shit... You're really damn lucky I can't grab and open up that fucking ass of yours right now, because you're begging to become a cocksleeve...' All this talk makes it even more satisfying for you as you step in front of him, now getting both your hands on both his pecs.";
+			WaitLineBreak;
+			say "     It really does not take that long until the sharkman's thick shaft slips out of his speedo, rapidly growing enough to keep poking at you as your hands run all over those pecs, fingers pressing against and around his nipples while his erection rages on. But with so much body to worship, you show intentions of moving elsewhere when Snapjaw stops you in your tracks, 'No. Nowhere else...' he says with a domineering tone, causing you to freeze up as you look back at him, but then he continues, '... Just down. Right there,' and his meat throbs out visible at you, a drop of precum already leaking down the thick glans of his dick, 'You better worship it like your fucking life depends on it, because it fucking does.'";
+			say "     Despite how threatening he sounds, you are not one to deny him the pleasure of your warm mouth around that thick monster cock of his. You keep your hands on him and, as you begin to lower yourself, you trace down the lines of his abs, feeling up those powerful core muscles as you line yourself up with his waiting member. Now, you move your hands down to his muscular thighs, so impossibly big and even more due to how tense they are, quadriceps so pumped you think he could crush just about anything between them. While you do not want to be said thing, the temptation to take your time appreciating those massive leg muscles takes over as you spend a little too long groping and massaging his thighs. His cock gets so impatient it shoots a drop of precum in your face.";
+			WaitLineBreak;
+			say "     Suddenly, you feel a hand on the back of your head, which really means Snapjaw is just holding the van with a single arm. The thought of it both arouses and terrifies you, but you do not have time to react as, obviously, he pushes your face against his cock. 'What didn't you understand about SUCKING MY FUCKING DICK, you fucking cum rag?!' He is not gentle with it, not even slightly, as you are forced to open really wide to take just the tip in your mouth. Another blast of precum floods its inside, causing you nearly choke while you try your best to swallow it, but soon, more of his cock pushes in, your jaw holding for its dear life as it tries desperately to keep up. 'With the amount of dick you must suck daily, I was expecting that mouth to be loose by now. Gotta snap your jaw too? Heheh...' While that pun definitely seemed to have been intended, you are more worried about actually managing to take the entire thing rather than paying attention to his dirty talking, which proves to be indeed a difficult task.";
+			say "     He pushes and pushes, holding your head in place and giving you no way out of this, until his length begins to rub against the back of your tongue, your whole jaw aching as you strain your facial muscles to accomodate such size. There is a grunt of pleasure from the huge sharkman, who has pretty much not a single care for your struggles, and proceeds to push further and further, sliding his cock down your throat and deeper still. You are pretty certain that huge meat of his is starting to make your neck bulge outwards with the filling it is getting, and in all honesty, you are not even sure how it managed to fit, but the intense throbbing is all the evidence to ascertain the sharkman's enjoyment, despite his initial protests. Though, the fact there is only one arm of his keeping that van from crushing you is rather concerning, yet thrilling.";
+			WaitLineBreak;
+			say "     'You know what... Beats working if I get to fuck your brains out! But that's what you wanted anyway... Glad we get to help each other, eh?' Amidst your struggling, you grope on Snapjaw's thighs as his monster cock throbs deep inside your throat, his nutsack bouncing back and forth only a few inches away from your face. From a glimpse, you get the idea they had gotten bigger since before, and it is not because they are so close to your eyes. The sharkman definitely has a big load building up, and it seems he is saving it up. He then pulls away from your throat as a string of saliva hangs between the tip and your lips, finally giving you a break to breathe. 'Turn around, cockslut. I'm taking your ass too,' he declares as his shaft throbs, eager to put those words into action.";
+			say "     Figuring that you should do as he says, you present him your rear as you turn around, receiving you immediately with an enthusiasmed butt smack that shakes your entire body as he pulls you to him, rubbing the underside of his shaft between your buttocks. You feel it really hot, pulsating and wet, the sharkman barely able to contain his urge to thrust into you. 'Sure you can line that up yourself? Can't see too well from here...' he orders, his tone almost mocking, or maybe he does really get something out of seeing you handle his cock and pointing it at your anus, which immediately receives a gush of precum almost as if detected the spot on its own. It is true that there is not much space for you to maneuver, but once you get in position, Snapjaw brings both his hands back on the van and puts his whole energy on the hips.";
+			WaitLineBreak;
+			say "     'Make sure to relax, it gotta fit all the way in... Otherwise we're gonna be here for a while. Not a problem for me though, this van's light as a feather!' You have trouble picturing a van being light, but it sure does like it for the sharkman, who so nonchalantly keeps perfect hold of it. He might have even be able to flip it over at this point and save himself the trouble, but maybe he really just likes to show off. No, the troubles are only for you, who has to endure the thickest insertion: a monstrous, throbbing, thick meatlog attempting to force entry into your backdoor. Luckily for you, it is wet enough to slide in its first few inches, but where you would expect pain, you feel only pleasure. Perhaps a skillful fucker or simply by the work of the nanites, your insides ease in well enough to allow such a sizable cock inside.";
+			say "     You let out a moan as he thrusts, burying more of his length inside you, and it is almost like you can [italic type]feel[roman type] him grin, but you can certainly feel his member throb. 'It ain't even half way in... You're gonna make me work for it? Heh, you're the one supposed to be pleasing me... But I want to fuck that ass now.' Even with just that much inside you, Snapjaw begins to slide in back out and inside, thrusting into you while grunting in lustful joy, and every time he goes in, his cock reaches deeper in you. Naturally, such an enormous intrusion makes your belly bulge once he is all the way inside, something only someone as hung as he is could achieve.";
+			WaitLineBreak;
+			say "     'Aren't you taking me so easily now...? You're actually a big cockslut aren't you?', he asks, taunting you as he smacks your ass hard, the sound of the slap even piercing your ears as much as the pain of the spanking he just gave you, 'Most would be screaming by now... But you're different. Born to be a cocksleeve.' Maybe he is correct, as your body just feels so good taking his dick like that, throwing you into a state of bliss as he drills you deep. His cock keeps on throbbing all the way through your insides, in and out, banging against that prostate just right, and then further in, filling you up like you crave to be filled. Nothing else matters but that enormous pulsating assbreaker of a cock, as it continuously ravages you until your brain stops working and you become just a drooling, moaning mess, begging him for more.";
+			say "     'Oh, what's that? Letting the bitch in you take over? Heh... Cute.' His thrusting is so powerful you get the feeling he is about to send you flying forward. Instead, the sharkman makes a sudden move, followed by a loud grunt as he lets the van come down slightly, bringing his arms lower, before launching the vehicle forward and finally flipping it over. It crashes against another car and makes the loudest noise as the metals collide before the van flips to the side and stops in its tracks. Were you not in a complete cock-drunk status, you would be impressed by actually how much strength Snapjaw has to have accomplished such a feat, but he actually never really stopped rocking your hips ever since. He did it all during that, never stopping once nor breaking the pace.";
+			WaitLineBreak;
+			say "     But why did he do it? You get your answer before you can even wonder, as his hands come down on your waist and you feel your feet being raised off the ground. You briefly consider whether he has just thrown you up in the air before you fall back into his arms, which slide behind your knees to bring his palms against each side of your head and slightly from the back. Supporting your weight against his body and waist, he resumes fucking you as you remain locked into what would be best described as a vertical full nelson position. You are thoroughly immobilized, but carried around by Snapjaw without any effort whatsoever as he bounces you on his dick, mixed with thrusting that he holds in full control. It really feels like you weigh nothing for him.";
+			say "     You feel your insides thoroughly stretched with each thrust, his cock invading your body in ways you thought impossible in another life, pounding into you over and over with little regard for your comfort, as the sharkman fully dives into this lustful trance, his mind set only on fucking you. In fact, you get no input in the matter whatsoever, like a sex toy being used by someone immeasurably stronger than you, making way inside you to fit that beast of a cock all the way in and ram it into you, hard and deep. Your eyes catch only that ballsac swinging back and forth, looking even heavier and fuller than before, soon moving up and down intermittently, matching the occasional slowing down of the sharkman's pace. He keeps thrusting deep into you, but slower, and you feel his meat throb, threatening to flood your body.";
+			WaitLineBreak;
+			say "     'In... or out?' he asks you, almost whispering into your ear with that rough, deep voice, and it sends a shiver down your spine. You quickly realize he is asking if you want him to cum inside you or not. Though, judging by how he keeps thrusting into you, barely able to hold himself back, continuously bringing himself to the edging point again and again, you know you have to decide fast if you want to have a say in it.";
+			say "     ([link]Y[as]y[end link]) - Beg him to fill you up.";
+			say "     ([link]N[as]n[end link]) - Ask to cum outside.";
+			if Player consents:
+				LineBreak;
+				say "     You cannot wait anymore either, you desperately want this sharkman to give you the filling of your life, one only he can deliver. With the words he wants to hear you wash him, a request he is more than glad to oblige. His grasp on you tightens significantly, to a point you cannot even squirm as he goes all out, drilling your ass at the highest pace, overcoming the edging point almost immediately as he starts grunting loud. He does not need to speak nor warn you for you to know what is about to happen, as his load floods into you with only its first spurts. The sharkman's orgasm goes on and on, filling your insides in an obscene way, your belly swelling to accomodate the sheer quantity of cum that is being pumped into you... He keeps going, it does not stop, until your body really cannot hold any more and, instead, it leaks out of your hole and starts making a mess on the vending machine below.";
+				say "     It is still a good long minute until Snapjaw finally gives signs of slowing down, and there is so much cum sloshing inside of you that, from realizing the mess he has down all over... Everything below you both, that he could have probably filled your entire digestive track all the way to your mouth if he had not pulled away in time. That would have been (even more) messy... 'Heh, look at you, don't think you'll be able to walk after getting stuffed like that...' he says, still carrying you in his arms with that shit-eating grin of his. 'And looks like I came all over the stuff we could get from this, so good job making me horny, you fucking slut. Hope that was worth it,' the sharkman adds as he taps your swollen belly, almost making you cough out some of his cum in the process.";
+				say "     He then simply walks away while carrying you, his cum still leaking from your ass. All the other sharkmen are going to see you and know exactly what happened...";
+			else:
+				LineBreak;
+				say "     The sheer size of Snapjaw's balls makes you really scared of how much exactly this sharkman has saved up for you, so you tell him you would prefer if he shot his load outside. He looks down at you disapprovingly, still with half a grin, muttering 'Coward,' as he pulls out his cock from your gaping butthole and, instead, rubs it against your buttocks from below. This takes him a while longer than if he just fucked you, but the sharkman is so horned up that merely rubbing against your ass is enough for him to blow. As he grunts loudly, his orgasm is so powerful that the very first spurts are shot all across the toppled vending machine and the van he just flipped over. It goes so wildly it even archs upwards to hit you as he leans back, hitting you all over your body and his as he keeps using your ass and legs for additional stimulation.";
+				say "     It is still a good long minute until Snapjaw finally gives signs of slowing down, and there is so much cum all over you and everywhere... Whatever you were hoping to scavenge from here is now covered in Snapjaw's special, an enormous amount of shark load. And you could definitely use a shower, unless you like being covered in the stuff yourself. 'Look at what you've done... Maybe I could've avoided cumming all over our stuff if you'd just take my cum like a good slut, now you get nothing. Hope that was worth it,' he says as he puts you over his shoulder, not even bothering putting you down as you keep leaking his jizz from your body.";
+				say "     He then simply walks away while carrying you, as you both are still covered in his cum. All the other sharkmen are going to see you and know exactly what happened...";
+			WaitLineBreak;
+			NPCSexAftermath Player receives "OralCock" from Snapjaw;
+			NPCSexAftermath Player receives "AssFuck" from Snapjaw;
+			say "     Fortunately, they happen to live in a beach, and there is plenty of sea for you to get cleaned up once you arrive. All eyes are on you as Snapjaw puts you down and goes for a swim, leaving you to care for yourself without a word. None are necessary, you have just arrived from a scavenging round with empty hands and a load from the sharkman himself. Maybe you really should not try to explain...";
+		else:
+			say "     You perish the thought and get your mind back on track. You should be checking those supplies and then leave, not wasting your time with funny ideas... And so, you get under the van and proceed to browse through the products in this machine. Most of them are expired or damaged, but you still try your luck...";
+			WaitLineBreak;
+			SnapjawScavengeEventRoll1;
+	else:
+		say "     Without any further ado, you get under the van and proceed to browse through the products in this machine. Most of them are expired or damaged, but you still try your luck...";
+		WaitLineBreak;
+		SnapjawScavengeEventRoll1;
+	now lastfuck of Snapjaw is turns;
+
+
+to SnapjawScavengeEventRoll1:
+	let randomnumber be a random number from 1 to 3; [adjust the latter number for the number of options]
+	if randomnumber is:
+		-- 1: [get junk scrap]
+			say "     Sadly, to no avail. There is nothing here worth taking. Perhaps someone else got to this one, despite how difficult it seemed, or it really was tough luck. 'Nothing? Bah... Too bad I guess. Well, if there ain't supplies, maybe just take some junk from the cars,' Snapjaw suggests, and he does have a point. At least you could bring something useful for building or crafting... You figure it out before you leave, some of the cars have parts you can access, but you really have no idea what to do with them other than label your haul as a couple of junk scraps.";
+			ItemGain junk scrap by 3;
+		-- 2: [get some food]
+			say "     There is this can of something... The exterior is a bit damaged, but it seems sealed and in good conditions, so there is a high chance that its contents are edible. 'Found some food? Well well, that's lucky. Keep it for yourself, though. There's enough fish in the sea for all of us,' Snapjaw says, and you gladly stash a can of food in your pockets.";
+			ItemGain food by 1;
+		-- 3: [get a soda]
+			say "     Oh, you find a soda can! And it is the good kind, too! Definitely not the healthiest with its huge amounts of sugar, but a find like this does wonders for the soul. You happily inform Snapjaw of your findings, and he chuckles at your joy. 'Guess that wasn't much of a waste of time then. Keep it, I won't tell anyone,' he says, and you cannot help but be surprised at how nice he is being, but he then continues, 'Know that you'll owe me to keep that secret, though. Heheh...' and then you are not so surprised.";
+			ItemGain soda by 1;
+	WaitLineBreak;
+	say "     'You done yet? We gotta head back,' informs Snapjaw as you get ready to leave. He does not talk much on your way back to the beach, but at least you have not arrived from that empty-handed. Staying on his good side does seem to benefit you in more ways than one. Once you have returned, Snapjaw goes back to his usual spot, and you have a bit more supplies for yourself. Perhaps someday you will be able to provide significant help for all the sharkmen here...";
+	
 
 
 Snapjaw Beach Camp ends here.

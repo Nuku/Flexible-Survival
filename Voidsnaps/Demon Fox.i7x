@@ -8,6 +8,7 @@ Version 2 of Demon Fox by Voidsnaps begins here.
 
 [DemonFoxInteractions tracks the number of times the player interacted with the demon fox.]
 [DemonFoxRead indicates whether or not the player has read about the demon fox]
+[Stamina of Kal Ren controls the Janaz storyline.]
 
 DemonFox_PlayerDefeated is a truth state that varies. DemonFox_PlayerDefeated is usually false.
 DemonFox_PlayerSubmitted is a truth state that varies. DemonFox_PlayerSubmitted is usually false.
@@ -563,7 +564,7 @@ to say PlayerWon_KalRen_Arc:
 	say "     'Now... You've called me here. Is there anything you want to do?'";
 	LineBreak;
 	say "     [bold type]It seems he's willing to let you control the flow of your interactions, to some degree. What would you like to suggest?[roman type][line break]";
-	say "     [link](1)[as]1[end link] - You beat kal Ren, fair and square. You'd like to explore your options on a more even footing.";
+	say "     [link](1)[as]1[end link] - You beat Kal Ren, fair and square. You'd like to explore your options on a more even footing.";
 	say "     [link](2)[as]2[end link] - Perhaps there's another way you could serve him...";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 2:
@@ -584,43 +585,103 @@ to say PlayerWon_KalRen_Arc:
 	say "[KalRen_PlayerWonFuckMenu]";
 
 to say KalRen_PlayerWonFuckMenu:
+	say "     Do you want to talk to the vulpine menace, or do you just wish to serve him?";
+	say "     [link](Y)[as]y[end link] - You have something to say that doesn't involve wet-slapping noises...";
+	say "     [link](N)[as]n[end link] - No, you're here to kneel and serve.";
+	if Player consents:
+		say "[KalRenPlayerWonTalkMenu]";
+	else:
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		if hunger of Kal Ren is 1:
+			choose a blank row in table of fucking options;
+			now title entry is "Suck his Cock";
+			now sortorder entry is 1;
+			now description entry is "You can't resist the call of that musky fox cock. You're not willing to become his pet, but a taste wouldn't hurt, would it?";
+		[]
+		if hunger of Kal Ren is 1:
+			choose a blank row in table of fucking options;
+			now title entry is "Ride his Cock";
+			now sortorder entry is 2;
+			now description entry is "Sit on Ren's cock. It just looks so inviting...";
+		[]
+		if hunger of Kal Ren is 1:
+			choose a blank row in table of fucking options;
+			now title entry is "Present Yourself";
+			now sortorder entry is 3;
+			now description entry is "Bend over and present yourself. You can't take it anymore! You need that dick inside you.";
+		[]
+		if thirst of Kal Ren is 1:
+			choose a blank row in table of fucking options;
+			now title entry is "Worship his Ass with your Tongue";
+			now sortorder entry is 4;
+			now description entry is "Ren's muscled ass has caught your eye. Just a taste...";
+		[]
+		if thirst of Kal Ren is 2:
+			choose a blank row in table of fucking options;
+			now title entry is "Offer your Cock as a Toy";
+			now sortorder entry is 5;
+			now description entry is "You don't care whether you sound desperate, you need your cock in his hole, now!";
+		[]
+		if stamina of Kal Ren is 1:
+			choose a blank row in table of fucking options;
+			now title entry is "????";
+			now sortorder entry is 6;
+			now description entry is "????????";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: Shall you [description entry]?";
+				if Player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if nam is "Suck his Cock":
+						say "[KalRen_PlayerWon_Fuck1]";
+					else if nam is "Ride his Cock":
+						say "[KalRen_PlayerWon_Fuck2]";
+					else if nam is "Present Yourself":
+						say "[KalRen_PlayerWon_Fuck3]";
+					else if nam is "Worship his Ass with your Tongue":
+						say "[KalRen_PlayerWon_Fuck4]";
+					else if nam is "Offer your Cock as a Toy":
+						say "[KalRen_PlayerWon_Fuck5]";
+					else if nam is "????":
+						say "[KalRenPregnancy]";
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		now TomeTimer is turns;
+		wait for any key;
+		clear the screen and hyperlink list;
+
+
+to say KalRenPlayerWonTalkMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	if hunger of Kal Ren is 1:
-		choose a blank row in table of fucking options;
-		now title entry is "Suck his Cock";
-		now sortorder entry is 1;
-		now description entry is "You can't resist the call of that musky fox cock. You're not willing to become his pet, but a taste wouldn't hurt, would it?";
+	choose a blank row in table of fucking options;
+	now title entry is "Ask why Kal Ren won't take you seriously";
+	now sortorder entry is 2;
+	now description entry is "You always feel like Kal Ren is talking down to you, despite the fact that you defeated him once. Why is that?";
 	[]
-	if hunger of Kal Ren is 1:
+	if stamina of Kal Ren is 2:
 		choose a blank row in table of fucking options;
-		now title entry is "Ride his Cock";
+		now title entry is "Discuss Janaz";
 		now sortorder entry is 2;
-		now description entry is "Sit on Ren's cock. It just looks so inviting...";
+		now description entry is "Ask Kal Ren why he felt the need to create Janaz?";
 	[]
-	if hunger of Kal Ren is 1:
+	if stamina of Kal Ren is 3:
 		choose a blank row in table of fucking options;
-		now title entry is "Present Yourself";
+		now title entry is "Demand Janaz's freedom";
 		now sortorder entry is 3;
-		now description entry is "Bend over and present yourself. You can't take it anymore! You need that dick inside you.";
-	[]
-	if thirst of Kal Ren is 1:
-		choose a blank row in table of fucking options;
-		now title entry is "Worship his Ass with your Tongue";
-		now sortorder entry is 4;
-		now description entry is "Ren's muscled ass has caught your eye. Just a taste...";
-	[]
-	if thirst of Kal Ren is 2:
-		choose a blank row in table of fucking options;
-		now title entry is "Offer your Cock as a Toy";
-		now sortorder entry is 5;
-		now description entry is "You don't care whether you sound desperate, you need your cock in his hole, now!";
-	[]
-	if stamina of Kal Ren is 1:
-		choose a blank row in table of fucking options;
-		now title entry is "????";
-		now sortorder entry is 5;
-		now description entry is "????????";
+		now description entry is "Demand your son's freedom.";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -635,22 +696,19 @@ to say KalRen_PlayerWonFuckMenu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Suck his Cock":
-					say "[KalRen_PlayerWon_Fuck1]";
-				else if nam is "Ride his Cock":
-					say "[KalRen_PlayerWon_Fuck2]";
-				else if nam is "Present Yourself":
-					say "[KalRen_PlayerWon_Fuck3]";
-				else if nam is "Worship his Ass with your Tongue":
-					say "[KalRen_PlayerWon_Fuck4]";
-				else if nam is "Offer your Cock as a Toy":
-					say "[KalRen_PlayerWon_Fuck5]";
-				else if nam is "????":
-					say "[KalRenPregnancy]";
+				if nam is "Ask why Kal Ren won't take you seriously":
+					say "[KalRenMockingPlayer]";
+				else if nam is "Discuss Janaz":
+					say "[KalRenJanazTalk]";
+				else if nam is "Demand Janaz's freedom":
+					say "[KalRenJanazFreedomTalk]";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the demon fox, deciding on a different course of action. He disappears into a puff of smoke with a shrug at your indecision, looking a bit annoyed, but says nothing. You'll probably have to wait to summon him again. [bold type] Maybe you should make sure you know what you want to do next time? Kal Ren doesn't seem like the sort you want to anger. At the very least, he's likely to give you the cold shoulder.[roman type][line break]";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	now TomeTimer is turns;
-	wait for any key;
+			say "Please choose a valid option!";
+	now tometimer is turns;
 	clear the screen and hyperlink list;
 
 to say KalRen_PlayerWon_Fuck1: [Suck his Cock]
@@ -765,5 +823,25 @@ to say KalRenPregnancy:
 	TraitGain "Hunting" for Janaz;
 	now Stamina of Kal Ren is 2;
 
+to say KalRenMockingPlayer:
+	say "     Grimacing at the fox demon's usual mocking demeanor, you confront him about it. In no uncertain terms, you ask why he's such an asshole to you. You won his little 'game,' so what more is there for you to do? You don't appreciate his disrespect. 'And yet... You summon me again and again.' Kal Ren perches on his tails like a fuzzy throne, akin to a kangaroo rearing back, his fist holding up his chin as he regards you with an amused expression. 'Disrespect, dehumanization, all these imagined slights against a hero's immaculate character, and you come crawling back, legs spread and tail between your legs. I'd wager that says more about your character than mine.'";
+	say "     Revealing sharp teeth in a mocking grin, Kal Ren stretches languidly, blatantly showing off the oversized manhood between muscular thighs. 'In fact, it appears you enjoy every second of my 'abuse.' Perhaps you'd be more comfortable if you'd accept your place. I promise I take good care of my toys...' Shuddering at your body's instinctual desire to do as asked, you shake your head. You're not sure why you keep summoning the fox, but it's not because you're some addicted slut looking for a fix of cock. Is it? The more you think about it, the more you regret pursuing this conversation. Thankfully for your bruised ego, you don't have to suffer any more of Kal Ren's mocking laughter, and he disappears in a puff of smoke as you go quiet, as though stating your conversation is no longer worth his time.";
+
+to say KalRenJanazTalk:
+	say "     Still reeling from the forced birth of Kal Ren's newest amusement, you confront him, demanding to know why he violated you! It's one thing when you willingly submit to him- You can rationalize that. You're just horny! However, it's much more insulting that he forced a constant stalking reminder of your submission to follow you. 'Still denying our deepest desires, are we?' Inspecting his claws, Kal Ren regards you with a look similar to an adult admonishing a child. 'You've given yourself to me time and again- prostrated yourself- debased yourself- and yet you're still holding onto this indignant facade?' Darting forward, the fox cups your chin in his paw, tilting your face upward toward his with a sneer. 'Your deepest, darkest desires birthed that mongrel. I molded him for my amusement. A walking example of the sins of his father, reflected in their most lustful form. If your soul were spotless, the seed wouldn't take.' Leaning in, the fox murmurs in your ear. 'You deserve everything our son gives you and more.' Dissolving into smoke before you can gather your wits, he leaves you with mocking laughter and his scent surrounding you.";
+
+to say KalRenJanazFreedomTalk:
+	say "     Steeling your nerves, you confront Kal Ren about your son's fate, broaching the subject of Janaz's newfound freedom from indoctrination. Despite his originally lewd purpose, you'd like to show Janaz there's more to life than punishing you and being the demon fox's puppet. You're even willing to fight for him if you need to! After all, you've fought and won against Kal Ren once already. Suddenly sharpening his gaze, Kal Ren crosses the slight distance between you, teeth flashing in a silent snarl. So close you can feel his breath on your face, he leans in until your fingers twitch toward your weapon, then breaks character, laughing and falling backward onto his nest of tails. Holding his sides and cackling hard enough that tears gather in his eyes, he takes a moment to compose himself. 'You've fallen in love with it? Oh, that's rich! A soulless creation imbued with your darkest desires, designed entirely to break your spirit and bring you crawling back to me- and you're playing house with it!' Kal Ren laughs at you long enough that you start to feel insulted, then holds up his paw and snaps his fingers, bringing a bewildered-looking Janaz to his side. 'Father, I-' Janaz attempts to advocate for himself, tails between his legs and ears back, but a reproachful look sends him hiding behind you. Cowering there like a frightened puppy, he shakes against your legs.";
+	say "     That expression is enough to bring forth fatherly instincts, and you rise to the challenge. Should you [bold type]bargain with Kal Ren for Janaz's freedom, or attempt to fight for it?[roman type][line break]";
+	say "     [link](Y)[as]y[end link] - The demon fox won't react well to threats- attempt to bargain with him.";
+	say "     [link](N)[as]n[end link] - Fuck this. You're tired of being made a joke!";
+	if Player consents:
+		say "     Kneeling before Kal Ren, you beg for Janaz's life before the amused fox, staring defiantly at the floor. Declaring that you'll do anything for your son's freedom, you pat Janaz's head to steady his shaking without looking up. 'Now, now, little hero. Calm yourself.' Waving his hand, Kal Ren surprises you with a show of placation. 'It's far too amusing to end this farce now. I'll play my role without the need for groveling, though I must admit you look delicious.' Contemplating the cowed feral behind you, he sighs. 'However, I won't waste my power on your parental whim. You'll have to [bold type]find a way to sustain him yourself.[roman type]' Disappearing in a puff of smoke, the fox leaves you with one last warning, no doubt hinting at the lengths you'll have to go to for Janaz. 'Do be sure to take care of that soul of yours. I plan to savor it someday.'";
+	else:
+		say "     Taking a stance and readying yourself for battle, you stand before the amused fox, staring defiantly at his Cheshire grin. Declaring that you'll fight for your son's freedom, you pat Janaz's head to steady his shaking. 'Now, now, little hero. Calm yourself.' Waving his hand, Kal Ren surprises you with a show of placation. 'It's far too amusing to end this farce now. I'll play my role without the need for bloodshed.' Contemplating the cowed feral behind you, he sighs. 'However, I won't waste my power on your parental whim. You'll have to [bold type]find a way to sustain him yourself.[roman type]' Disappearing in a puff of smoke, the fox leaves you with one last warning. 'Do be sure to take care of that soul of yours. I plan to savor it someday.'";
+	if debugactive is 1:
+		say "     {For those struggling with this, just go to Baron! He'll continue the questline. Baron is in the swamps in the Lizardman village!}";
+	TraitGain "Almost Free" for Janaz;
+	now HP of Baron is 1;
 
 Demon Fox ends here.

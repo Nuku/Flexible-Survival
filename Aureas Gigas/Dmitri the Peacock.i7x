@@ -5,6 +5,10 @@ Dmitri the Peacock by Aureas Gigas begins here.
 [  1: first event (sexual massage) completed                       ]
 [ 99: stopped the charmer cold                                     ]
 
+a postimport rule: [this adds the newly named navpoint]
+	if Peacocked > 7 and Peacocked < 98: [values set this way to future proof it after changing teh room name in code. Please use values above 98 for content that SHOULDNT link this area.]
+		AddNavPoint Argos's Antiques;
+
 Table of GameEventIDs (continued)
 Object	Name
 Captivating Plumage	"Captivating Plumage"
@@ -165,8 +169,8 @@ to say ResolveEvent Captivating Plumage:
 		WaitLineBreak;
 		say "     After all the rowdy rabbits have left the store, Dmitri takes a seat on a leather chair and exhales loudly, as if a massive weight has just been taken off his chest. With a contented sigh, the peacock says, 'It's finally over, all that time and effort finally paid off.' You take a seat close by, feeling much more relaxed now that your little heist is out of the way. The avian looks deeply into your eyes and says in a tone that echoes through your nerves, 'You did a wonderful job. Feel free to come by anytime, and I'll make sure you feel good.' Somehow, a part of your mind feels like you've gained back a small modicum of control. You are now able to visit Argos Antiques whenever you want.";
 		WaitLineBreak;
-		move player to Argos Antiques;
-		AddNavPoint Argos Antiques;
+		move player to Argos's Antiques;
+		AddNavPoint Argos's Antiques;
 		now battleground is "void";
 		now peacocked is 8;
 		now Resolution of Captivating Plumage is 8;
@@ -174,11 +178,11 @@ to say ResolveEvent Captivating Plumage:
 
 Table of GameRoomIDs (continued)
 Object	Name
-Argos Antiques	"Argos Antiques"
+Argos's Antiques	"Argos's Antiques"
 
-Argos Antiques is a room. It is fasttravel. It is private. It is sleepsafe.
-Description of Argos Antiques is "[argosantdesc]".
-the scent of Argos Antiques is "The antique store smells of aged wood and soft fragrances.".
+Argos's Antiques is a room. It is fasttravel. It is private. It is sleepsafe.
+Description of Argos's Antiques is "[argosantdesc]".
+the scent of Argos's Antiques is "The antique store smells of aged wood and soft fragrances.".
 
 to say argosantdesc:
 	say "     The peacock's antique store is in surprising well-kept condition. With the exception of the barricaded windows and front door, everything else seems to be neatly organized. A suit of medieval steel armor, colored black and wielding a halberd, guards the entrance. Display cases show a veritable cornucopia of antique and valuable items. On a weapon rack hanging on the wall are various arms from the nineteenth century like repeaters, pistols, nunchucks, and sabers. Dmitri stands close by, eyeing your form with a fond look in his eye.";
@@ -187,7 +191,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Dmitri	"Dmitri"
 
-Dmitri is a person. Dmitri is in Argos Antiques.
+Dmitri is a person. Dmitri is in Argos's Antiques.
 ScaleValue of Dmitri is 3. [human sized]
 Body Weight of Dmitri is 2. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Dmitri is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
