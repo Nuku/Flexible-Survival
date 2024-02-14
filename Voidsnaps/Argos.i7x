@@ -68,6 +68,9 @@ to say ArgosDesc:
 		say "DEBUG -> HP: [HP of Argos] <- DEBUG[line break]";
 	say "Argos looks like a  regular pewter consort, though there's something different in the way that he holds himself. There's no doubt that he's a breeder, and every movement accentuates his heavy, dangling balls and humanoid, foreskin hooded cock, which drips intermittenly, marking things with pre. When he notices you looking, he lifts his leg slightly, as if inviting you to climb under him and get a closer look, a low, sensual growl rolling through his half-open maw. Smooth pewter skin catches the light, and a prehensile tail capable of moving like a whip curves above his back, showing his mood with its undulations.";
 
+instead of fucking Argos:
+	say "[Argos_Pet_Fuck_Menu]";
+
 Section 2 - Introducing Argos
 
 Table of WalkInEvents (continued)
@@ -183,6 +186,7 @@ to say ResolveEvent Grown Up:
 	say "     Grabbing your things from where the amorous monster tossed them, you wince, limping slightly. Argos's done a number on you, and you doubt you'll forget about the breeding you've suffered, but he seems tame enough, following you around with a curious air. You could even take him with you into the city! Those teeth and claws seem like they'd help in a fight. Maybe you should [bold type]Summon Argos [roman type]to get him to come with you!";
 	now Resolution of Grown Up is 1;
 	now Grown Up is resolved;
+	now Personal Pewter is tamed;
 
 to connect Argos's Nest:
 	change the southeast exit of Argos's Nest to Trevor Labs Lobby;
@@ -321,5 +325,19 @@ to say ArgosFaceFuck:
 		say "Shortly after, you notice Argos lifting his leg, showing off his manhood once again, and before you can react, you feel warmth trickling down your chest. He's pissing on you! With nothing to do but blush as he marks you with his light yellow stream, you close your eyes, an involuntary moan bringing the salty taste of pure musk to your tongue as he splashes your face. The deluge doesn't stop until your body is completely soaked and you're sitting in a puddle, thoroughly marked as Argos's bitch."; [no 5 spaces on this one. connects to another paragraph earlier.]
 	TraitGain "Argos Slut" for Argos;
 	NPCSexAftermath Player receives "OralCock" from Argos;
+
+argostest is an action applying to nothing.
+
+understand "zargostest" as argostest.
+
+check argostest:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out argostest:
+	say "     Don't use this command as part of normal play. It is only for testing. It WILL break your save.";
+	now HP of Doctor Matt is 15;
+	FeatGain "Submissive";
+	now PewterPet is Resolved;
+
 
 Argos ends here.

@@ -130,6 +130,7 @@ to say TrainingJanaz:
 	WaitLineBreak;
 	say "     Pondering the ethics of your situation passes the time, and at some point, while you doze, Janaz leaves, sparing you a strange glance backward as he wanders off. Was that regret on his face? You try to crush the guilt you feel for lying to him as you gather your gear, wiping the remnants of your fun from your body and wondering what your next meeting will bring.";
 	NPCSexAftermath Player receives "OralCock" from Janaz;
+	now lust of Janaz is 3;
 
 to say FreeingJanaz:
 	say "     A familiar feeling creeps up your back, and sure enough, Janaz appears within moments, though his demeanor is very different. Rather than his usual pushy behavior, he pads over and sits before you, tilting his head. Greeting you with an ever-present erection, he stamps his foot with an oddly adorable, excited air. 'More. I demand you teach me more of this 'foreplay.' I can think of nothing else.' Telling the excited fox that waiting is part of the experience, you take time setting aside your things, shivering at the slutty thrill of bending over before the over-sexed brute. With anything breakable out of the way, you cross the distance between you, pondering what you should teach him this time. Your experiences prove how good he is with his tongue, but you wonder whether he'd catch on if you tried something less invasive.";
