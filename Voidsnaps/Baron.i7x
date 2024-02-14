@@ -70,6 +70,7 @@ Description of Baron is "[BaronDesc]".
 Conversation of Baron is { "<This is nothing but a placeholder!>" }.
 The scent of Baron is "[BaronScent]".
 Baron is in Baron's Apothecary.
+Energy of Baron is usually 5000.
 
 to say BaronDesc:
 	say "     A strangely muscular green scaled iguana draped in animal bones, beads, and a shamanistic mask. The very picture of a witch doctor, he walks and talks with confidence, unafraid to show off his empty crotch and bubble butt, along with pecs that bounce with supernatural perkiness. You don't know much about him, but he seems friendly enough, though when he wants to experiment, you find yourself a bit afraid of him. Who knows what sort of strange hexes he's capable of!";
@@ -325,15 +326,13 @@ to say ResolveEvent Payment:
 	WaitLineBreak;
 	say "     Quickening your pace as that paw comes down, claws extended, you can only watch it make contact with a resounding thud, knocking the feral demon fox from his feet and sending him reeling toward you, lifeless and limp. The wraith smiles, all brimstone and teeth, as it kicks Janaz's body, and an echoing voice fills your ears as it fades, leaving nothing but the faintest glow where its eyes were. 'Have your toy.' Cradling Janaz in your arms, you hold back the panic rising in you. It can't be real. It isn't what you want. Is this all your fault? You can't think- can't speak- what's happening to you? 'The link's severed.' Baron's voice brings you back from your grief, like a warm hand on your shoulder, and the floating shaman's mask appears before you, worn by a ghostly figure you can't quite make out. 'Make him yours before he fades. The terms of the contract are clear.'";
 	say "     Before you can question what to do, you see a tendril of glowing, bluish-green light extending from just out of your view, where your chest would be. It quests like a freshly grown root, meandering toward Janaz, then splits, surrounding his body and infusing him with the same light. An impossible-to-describe feeling comes over you as you watch, as though you're in two places at once, and suddenly, the flaming hellscape around you dissolves, leaving you kneeling on the floor of Baron's apothecary next to Janaz's warm, furry side, your face buried in the musky fluff. The iguana beams at you, no trace of the witchy appearance you saw in your vision marring his handsome features, and offers a hand, heaving you to your feet before you can question what just happened. 'All according to plan. Leave here and come back in a few hours. Your boy'll need to sleep it off.' Waving you off, he pushes you outside, then slides a piece of corrugated metal over the doorway, shutting you out. It seems you'll have to wait and see what happens!";
-	now hunger of Janaz is turns;
+	now energy of Janaz is turns;
 	now Payment is resolved;
 	TraitLoss "Herb Search" for Baron;
 	TraitLoss "Glowfern Found" for Baron;
 	TraitLoss "Cloudberries Found" for Baron;
 	move Janaz to Baron's Apothecary;
 
-instead of going up from Lizard Village Thoroughfare when hunger of Janaz - turns < 3:
-	say "      Baron's place is still closed. You'll have to wait to see Janaz until he's recovered a bit.";
 
 
 Baron ends here.

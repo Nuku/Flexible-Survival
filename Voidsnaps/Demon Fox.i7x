@@ -563,26 +563,31 @@ to say PlayerWon_KalRen_Arc:
 	say "     Removing his paw, he lets those words sink in, his deep chuckle bringing a flush to your cheeks. Soon enough, he returns to his previous size, tugging you to your feet with one fluffy tail. You blink, slightly bewildered and somewhat frightened, as his vulpine grin adds to your embarrassment. 'You...' he says breathlessly, 'you should've seen the look on your muzzle, kit! It looked like you were going to [italic type]piss yourself![roman type]' You look away as he continues laughing for far too long, finally settling down as he sits on his haunches, sharp teeth bared in a teasing grin.";
 	say "     'Now... You've called me here. Is there anything you want to do?'";
 	LineBreak;
-	say "     [bold type]It seems he's willing to let you control the flow of your interactions, to some degree. What would you like to suggest?[roman type][line break]";
-	say "     [link](1)[as]1[end link] - You beat Kal Ren, fair and square. You'd like to explore your options on a more even footing.";
-	say "     [link](2)[as]2[end link] - Perhaps there's another way you could serve him...";
-	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 2:
-		say "Choice? (1-2)>[run paragraph on]";
-		get a number;
-		if calcnumber is 1 or calcnumber is 2:
-			break;
-		else:
-			say "Invalid choice. Type [link]1[end link] to explore your options, or [link]2[end link] to serve.";
-	if calcnumber is 1: [Explore options]
-		LineBreak;
-		say "     You ponder the fox's fearsome visage, mulling over your options. You beat him, and despite his dominant appearance sending a shudder through you, you are no one's bitch. If you give yourself to him, it will be on your terms. Hoping he'll understand your intent, you tell him so, attempting to keep your voice from wavering. Crossing his arms, the fox taps his foot, mulling over your proposal. 'It's an intriguing thought. I suppose there's no harm in allowing you some freedom.' Showing those terrifyingly sharp teeth with a cocky grin, he tilts your face upward, a perverse sort of affection infusing his words. 'You'll learn to submit, either way. Why not allow you to serve?'";
-		now hunger of Kal Ren is 1;
-	else if calcnumber is 2: [Serve]
-		LineBreak;
-		say "     While kal Ren's ferocious charms excite and scare you in equal measure, there's something you've been gathering the courage to ask. In your many interactions, you couldn't help but notice that the demon fox's ass is perfectly muscled, with its trio of prehensile tails. If his ever-present musk is any indication, more of his dizzying scent hides beneath those tails, and you would love to taste what he has to offer. Choosing your words carefully, you ask if he'd be interested in letting you worship his ass. 'Daring little kit, aren't you?' Crossing the distance between you and tilting your chin with one paw, kal Ren searches your eyes for something, his heated breath inches from your face. His eyes seem deep enough to devour you, and you can't look away. 'Alright. I'll allow this one indulgence. If you abuse the privilege, I will make sure you pay. Do not test me.'";
-		now thirst of Kal Ren is 1;
-	say "[KalRen_PlayerWonFuckMenu]";
+	if thirst of kal ren is 0:
+		say "     [bold type]It seems he's willing to let you control the flow of your interactions, to some degree. What would you like to suggest?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - You beat Kal Ren, fair and square. You'd like to explore your options on a more even footing.";
+		say "     [link](2)[as]2[end link] - Perhaps there's another way you could serve him...";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 2:
+			say "Choice? (1-2)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to explore your options, or [link]2[end link] to serve.";
+		if calcnumber is 1: [Explore options]
+			LineBreak;
+			say "     You ponder the fox's fearsome visage, mulling over your options. You beat him, and despite his dominant appearance sending a shudder through you, you are no one's bitch. If you give yourself to him, it will be on your terms. Hoping he'll understand your intent, you tell him so, attempting to keep your voice from wavering. Crossing his arms, the fox taps his foot, mulling over your proposal. 'It's an intriguing thought. I suppose there's no harm in allowing you some freedom.' Showing those terrifyingly sharp teeth with a cocky grin, he tilts your face upward, a perverse sort of affection infusing his words. 'You'll learn to submit, either way. Why not allow you to serve?'";
+			now hunger of Kal Ren is 1;
+			say "[KalRen_PlayerWonFuckMenu]";
+		else if calcnumber is 2: [Serve]
+			LineBreak;
+			say "     While kal Ren's ferocious charms excite and scare you in equal measure, there's something you've been gathering the courage to ask. In your many interactions, you couldn't help but notice that the demon fox's ass is perfectly muscled, with its trio of prehensile tails. If his ever-present musk is any indication, more of his dizzying scent hides beneath those tails, and you would love to taste what he has to offer. Choosing your words carefully, you ask if he'd be interested in letting you worship his ass. 'Daring little kit, aren't you?' Crossing the distance between you and tilting your chin with one paw, kal Ren searches your eyes for something, his heated breath inches from your face. His eyes seem deep enough to devour you, and you can't look away. 'Alright. I'll allow this one indulgence. If you abuse the privilege, I will make sure you pay. Do not test me.'";
+			now thirst of Kal Ren is 1;
+			now hunger of Kal Ren is 1;
+			say "[KalRen_PlayerWonFuckMenu]";
+	else:
+		say "[KalRen_PlayerWonFuckMenu]";
 
 to say KalRen_PlayerWonFuckMenu:
 	say "     Do you want to talk to the vulpine menace, or do you just wish to serve him?";
@@ -611,13 +616,13 @@ to say KalRen_PlayerWonFuckMenu:
 			now sortorder entry is 3;
 			now description entry is "Bend over and present yourself. You can't take it anymore! You need that dick inside you.";
 		[]
-		if thirst of Kal Ren is 1:
+		if thirst of Kal Ren >= 1:
 			choose a blank row in table of fucking options;
 			now title entry is "Worship his Ass with your Tongue";
 			now sortorder entry is 4;
 			now description entry is "Ren's muscled ass has caught your eye. Just a taste...";
 		[]
-		if thirst of Kal Ren is 2:
+		if thirst of Kal Ren >= 2:
 			choose a blank row in table of fucking options;
 			now title entry is "Offer your Cock as a Toy";
 			now sortorder entry is 5;
@@ -628,6 +633,12 @@ to say KalRen_PlayerWonFuckMenu:
 			now title entry is "????";
 			now sortorder entry is 6;
 			now description entry is "????????";
+		[]
+		if thirst of Kal Ren is 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Offer your services in a different way";
+			now sortorder entry is 7;
+			now description entry is "You've been thinking about Kal Ren's ass for a while. Shoot your shot?";
 		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -656,11 +667,13 @@ to say KalRen_PlayerWonFuckMenu:
 						say "[KalRen_PlayerWon_Fuck5]";
 					else if nam is "????":
 						say "[KalRenPregnancy]";
+					else if nam is "Offer your services in a different way":
+						say "[KalRenAnalOffer]";
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-		now TomeTimer is turns;
-		wait for any key;
-		clear the screen and hyperlink list;
+	now TomeTimer is turns;
+	wait for any key;
+	clear the screen and hyperlink list;
 
 
 to say KalRenPlayerWonTalkMenu:
@@ -668,7 +681,7 @@ to say KalRenPlayerWonTalkMenu:
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
 	now title entry is "Ask why Kal Ren won't take you seriously";
-	now sortorder entry is 2;
+	now sortorder entry is 1;
 	now description entry is "You always feel like Kal Ren is talking down to you, despite the fact that you defeated him once. Why is that?";
 	[]
 	if stamina of Kal Ren is 2:
@@ -708,6 +721,7 @@ to say KalRenPlayerWonTalkMenu:
 			wait for any key;
 		else:
 			say "Please choose a valid option!";
+	wait for any key;
 	now tometimer is turns;
 	clear the screen and hyperlink list;
 
@@ -718,6 +732,7 @@ to say KalRen_PlayerWon_Fuck1: [Suck his Cock]
 	say "     Praising your efforts in a huffing voice, the demonic fox meets each worshipful bob of your stuffed mouth with a slow thrust, dumping claiming globs of approval down your throat. 'Ah, this is somewhat of a rarity. Was your pride what drove you to defeat me, despite your love of cock?' Drool dripping from his open mouth, kal Ren increased his pace, taking over and leaving you with little to do but stare up at him, relaxing your throat for his pointed tip. The heavy rhythm of balls slapping against your chin, the enticing aroma of demonic musk, and whispered (though vaguely insulting) praise mix into a submissive cocktail, scrambling your brain and reducing you to nothing more than a bundle of desperate nerves. It isn't until Kal Ren's cock has worked your lips into a lather of orange pre, covering your chest in spiderwebs of mixed fluids and bringing you to the edge, that you recognize the telltale throb of an impending meal.";
 	say "     Opening your throat, you gurgle as he unleashes a flood of searing cum, your eyes slipping closed as you endeavor to swallow every drop, releasing your meager contribution to the mess on the ground below as your stomach swells with his demonic offering. His departure saddens you, but a final belch of cum rewards your devotion, marking your nose with powerful musk. A flash of light leaves you alone with your sloshing stomach and sloppy reminders of your devotion to the fox's cock, festooning your naked body. Shaky and musk drunk, you re-equip yourself, thankful that nothing happens upon you in your moment of weakness.";
 	NPCSexAftermath Player receives "OralCock" from Kal Ren;
+	now hunger of Kal Ren is 1;
 
 to say KalRen_PlayerWon_Fuck2: [Ride his Cock]
 	say "     'Finished playing the hero, are you? I can't say I blame you. I am rather irresistible.' Smirking as he speaks, the fox sits, his legs spread to show off those churning orbs. Patting his knee, he beckons to you. 'Pants off, then. It's time to show that you deserve my attention.' Scrambling to disrobe, you throw yourself into the fox's waiting lap, settling your rump against that peeking tip before you realize how eager you are for it. It's too late to rethink your choices, though. Seconds after, that slick cock slots itself against your hole, and clawed fingers clamp around your waist, holding you in place for a piercing thrust that spills kal Ren's length into your waiting hole. 'What's the matter, kit? Is it too much for you?' Taunting you with his muzzle inches from your ear, kal Ren slaps your stuffed ass, growling his pleasure as your hole reflexively tightens, wringing his shaft. 'You wanted to ride me, so why not get to work?' Loosening his grip, he pants, his hips bucking insistently to stir your innards.";
@@ -757,6 +772,10 @@ to say KalRen_PlayerWon_Fuck5: [offer your cock]
 	say "     'Fuck.' With only a single word, snarled through clenched teeth and accompanied by drool dripping from the corners of his mouth, the demonic fox fires his satisfaction over your chest, raining down gooey strings of orange cum that mark you with his scent. Before you know it, his inner walls clamp like an angry gorilla's fist, ripping your orgasm from your sore balls. Milking you for every drop, he traps your gushing member in place, his tightness letting nothing escape[if Player is kinky]. Cool air assaults your cock as it's ripped from the comfortably steaming depths, but before you can protest, the fox covers your mouth with his drooling hole. Rocking his hips, he wordlessly demands you clean up your mess, grunting his pleasure as your tongue sets to work. You ride out the afterglow beneath that muscled ass, his grinding rhythm rolling a mixture of sweat and cum over your face, leaving you with a reminder of your place[end if]. Soon enough, a familiar flash leaves you alone with your thoughts, panting in a puddle of orange cum. Your muscles ache, and it's several minutes before you can move your legs, but you can't help but think it was worth it. Idly, you wonder if the nanites could repair a broken pelvis.";
 	NPCSexAftermath Kal Ren receives "AssFuck" from Player;
 
+to say KalRenAnalOffer:
+	LineBreak;
+	say "     While kal Ren's ferocious charms excite and scare you in equal measure, there's something you've been gathering the courage to ask. In your many interactions, you couldn't help but notice that the demon fox's ass is perfectly muscled, with its trio of prehensile tails. If his ever-present musk is any indication, more of his dizzying scent hides beneath those tails, and you would love to taste what he has to offer. Choosing your words carefully, you ask if he'd be interested in letting you worship his ass. 'Daring little kit, aren't you?' Crossing the distance between you and tilting your chin with one paw, kal Ren searches your eyes for something, his heated breath inches from your face. His eyes seem deep enough to devour you, and you can't look away. 'Alright. I'll allow this one indulgence. If you abuse the privilege, I will make sure you pay. Do not test me.'";
+	now thirst of Kal Ren is 1;
 
 Section 10 - NPC Declaration
 

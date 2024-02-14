@@ -50,6 +50,7 @@ MainInfection of Ozeg is "Demonic Dragon".
 Description of Ozeg is "[OzegDesc]".
 Conversation of Ozeg is { "<This is nothing but a placeholder!>" }.
 The scent of Ozeg is "[OzegScent]".
+Energy of Ozeg is usually 2500.
 
 to say OzegScent:
 	say "He smells strangely clean, but musk-heavy.";
