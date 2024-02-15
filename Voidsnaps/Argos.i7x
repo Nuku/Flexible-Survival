@@ -54,7 +54,7 @@ PenileVirgin of Argos is true.
 SexuallyExperienced of Argos is true.
 TwistedCapacity of Argos is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Argos is true. [steriles can't knock people up]
-MainInfection of Argos is "Pewter Consort".
+MainInfection of Argos is PewterConsortPet.
 Description of Argos is "[ArgosDesc]".
 Conversation of Argos is { "<This is nothing but a placeholder!>" }.
 The scent of Argos is "[ArgosScent]".
@@ -302,7 +302,7 @@ to say ArgosDelayedGratification:
 			TraitGain "Argos Slut" for Argos;
 		else:
 			say "     Barely managing to escape from that dripping dick before it shoves past your lips, you roll out from under the pewter consort, scolding him for attempting to force himself on you. You may have allowed it the first time, but you're not willing to let him have unfettered access to your body without your consent! Unfortunately, Argos seems unwilling to take no for an answer, and as you stand up, he squares off with you, his tail twitching like an annoyed cat's. Growling low in his throat, the pissed off pewter pet takes a swipe at you, clearly angry at being denied and ready to show you your place.";
-			challenge "Pewter Consort";
+			challenge PewterConsortPet;
 			if fightoutcome >= 20 and fightoutcome <= 29: [Player lost]
 				say "     As Argos knocks you to the ground, he struts toward you, hips swaying and tail hiked as if parading the fact that he won. With one heavy paw, he pushes you back, squaring his hips and bringing his dangling cock to bear. This time, there's no question what he wants, and rather than grinding against your face, he aims the head squarely between your lips. ";
 				say "[ArgosFaceFuck]";
@@ -339,5 +339,87 @@ carry out argostest:
 	FeatGain "Submissive";
 	now PewterPet is Resolved;
 
+Section 3 - Dummy Infection
+
+[PLEASE READ THIS BEFORE ATTEMPTING TO CHANGE THIS SECTION OF THE FILE.]
+[This infection was created because the pewter consort infection automatically causes certain events to happen when defeated by reducing HP to 0. Throwing the fight, or losing normally. Because of this, I created this in place of the generic infection as a way to bypass the coding booby traps. This also prevents a vore scene where you eat poor Argos like a common enemy!]
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"PewterConsortPet"	"[PrepCombat_PewterConsortPet]"
+
+to say PrepCombat_PewterConsortPet:
+	say "";
+
+Table of Random Critters (continued)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of Random Critters;
+	now NewTypeInfection entry is false;
+	now Species Name entry is PewterConsortPet; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
+	add PewterConsortPet to infections of NonOrganicList;
+	add PewterConsortPet to infections of FeralList;
+	add PewterConsortPet to infections of MaleList;
+	add PewterConsortPet to infections of QuadrupedalList;
+	add PewterConsortPet to infections of TailList;
+	add PewterConsortPet to infections of TailweaponList;
+	add PewterConsortPet to infections of FeralmindList;
+	now Name entry is PewterConsortPet;
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is "Argos"; [ Specific name of unique enemy. ]
+	now enemy type entry is 2; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
+	now attack entry is "The [one of]beast[or]creature[or]consort[at random] [one of]pounces onto you, lashing and nipping you into submission until you finally pry him off[or]bounds nearby to lash you sharply with its tail, driving you backwards[or]clings onto you in an attempt to pin you to the ground, forcing you to pull yourself free[or]grabs one of your appendages with its tail and stumbles you to the ground, quickly scrambling back to your feet[at random].";
+	now defeated entry is "[beattheconsort]";
+	now victory entry is "[losetopewter]";
+	now desc entry is "[pewterdesc]";
+	now face entry is "featureless save for a toothy maw. Your vision is strangely grayscale, save for the alluring, entrancing hues emitted from other living beings";
+	now body entry is "lean and feral in build, though thankfully your forehands retain their articulation";
+	now skin entry is "[consortskinentry]";
+	now tail entry is "You are adorned with a lengthy, prehensile tail, which whistles through the air with a lash.";
+	now cock entry is "[one of]normal-looking[or]seemingly human[at random] and uncut";
+	now face change entry is "[consortfacechange]";
+	now body change entry is "the infection takes hold. Tensing up, your body shifts and adjusts to take on the structure of a feral beast, lean and agile. Looking at your forehands, this strain at least gives you fully articulate digits";
+	now skin change entry is "[consortskinchange]";
+	now ass change entry is "a long tail sprouts from it. Fairly strong and prehensile, it sings as it's lashed through the air";
+	now cock change entry is "it tingles with a strange sensation. Checking it out, it appears to be strangely human, but the change compels it to slightly ooze from its uncut head, your seed taking on a silvery appearance";
+	now str entry is 17; [17]
+	now dex entry is 17; [17]
+	now sta entry is 17; [14]
+	now per entry is 13; [13]
+	now int entry is 12; [13]
+	now cha entry is 15; [15]
+	now sex entry is "Male";
+	now HP entry is 45; [45]
+	now lev entry is 6; [6]
+	now wdam entry is 6; [6]
+	now area entry is "Nowhere";
+	now Cock Count entry is 1;
+	now Cock Length entry is 9;
+	now Ball Size entry is 3;
+	now Nipple Count entry is 0;
+	now Breast Size entry is 0;
+	now Male Breast Size entry is 0;
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+	now SeductionImmune entry is false;
+	now libido entry is 60;
+	now loot entry is "pewter seed"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 45; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "pewter consort milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "pewter consort cum"; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 3;
+	now body descriptor entry is "[one of]lean[or]feral[or]bestial[at random]";
+	now type entry is "[one of]feral[or]bestial[at random]";
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0;
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Argos ends here.
