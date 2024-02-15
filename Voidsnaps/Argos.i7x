@@ -54,7 +54,7 @@ PenileVirgin of Argos is true.
 SexuallyExperienced of Argos is true.
 TwistedCapacity of Argos is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Argos is true. [steriles can't knock people up]
-MainInfection of Argos is PewterConsortPet.
+MainInfection of Argos is "PewterConsortPet".
 Description of Argos is "[ArgosDesc]".
 Conversation of Argos is { "<This is nothing but a placeholder!>" }.
 The scent of Argos is "[ArgosScent]".
@@ -183,7 +183,7 @@ to say ResolveEvent Grown Up:
 		say "     Swollen to an almost heavily-pregnant size, you groan as the pressure becomes too much, destroying your poor hole with a hot cock and even hotter cum. Jets of it squirt out around your union, wet sounds drowning out your desperate moans as he thrusts through his finish, the gooey refrain echoing off the walls. Your body doesn't let you ignore your orgasm, spasming and milking that bestial shaft for all its worth. Looking satisfied with himself, Argos yanks himself free of your ruined hole, shaking himself softly like a dog in the rain as he pads around to inspect your sweat-drenched face. Tilting his head, he sits back on his haunches and brings his drooping meat to bear, leaving his manhood to squelch wetly between your eyes. Thankfully, he seems spent despite the display, though he smears his rod over your face, covering every inch in the last drippings of his manhood.";
 		NPCSexAftermath Player receives "AssFuck" from Argos;
 	LineBreak;
-	say "     Grabbing your things from where the amorous monster tossed them, you wince, limping slightly. Argos's done a number on you, and you doubt you'll forget about the breeding you've suffered, but he seems tame enough, following you around with a curious air. You could even take him with you into the city! Those teeth and claws seem like they'd help in a fight. Maybe you should [bold type]Summon Argos [roman type]to get him to come with you!";
+	say "     Grabbing your things from where the amorous monster tossed them, you wince, limping slightly. Argos's done a number on you, and you doubt you'll forget about the breeding you've suffered, but he seems tame enough, following you around with a curious air. You could even take him with you into the city! Those teeth and claws seem like they'd help in a fight. Maybe you should summon your [bold type]Pet Argos [roman type]to get him to come with you!";
 	now Resolution of Grown Up is 1;
 	now Grown Up is resolved;
 	now Personal Pewter is tamed;
@@ -302,7 +302,9 @@ to say ArgosDelayedGratification:
 			TraitGain "Argos Slut" for Argos;
 		else:
 			say "     Barely managing to escape from that dripping dick before it shoves past your lips, you roll out from under the pewter consort, scolding him for attempting to force himself on you. You may have allowed it the first time, but you're not willing to let him have unfettered access to your body without your consent! Unfortunately, Argos seems unwilling to take no for an answer, and as you stand up, he squares off with you, his tail twitching like an annoyed cat's. Growling low in his throat, the pissed off pewter pet takes a swipe at you, clearly angry at being denied and ready to show you your place.";
-			challenge PewterConsortPet;
+			now inasituation is true;
+			challenge "PewterConsortPet";
+			now inasituation is false;
 			if fightoutcome >= 20 and fightoutcome <= 29: [Player lost]
 				say "     As Argos knocks you to the ground, he struts toward you, hips swaying and tail hiked as if parading the fact that he won. With one heavy paw, he pushes you back, squaring his hips and bringing his dangling cock to bear. This time, there's no question what he wants, and rather than grinding against your face, he aims the head squarely between your lips. ";
 				say "[ArgosFaceFuck]";
@@ -358,22 +360,22 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is PewterConsortPet; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
-	add PewterConsortPet to infections of NonOrganicList;
-	add PewterConsortPet to infections of FeralList;
-	add PewterConsortPet to infections of MaleList;
-	add PewterConsortPet to infections of QuadrupedalList;
-	add PewterConsortPet to infections of TailList;
-	add PewterConsortPet to infections of TailweaponList;
-	add PewterConsortPet to infections of FeralmindList;
-	now Name entry is PewterConsortPet;
+	now Species Name entry is "PewterConsortPet"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
+	add "PewterConsortPet" to infections of NonOrganicList;
+	add "PewterConsortPet" to infections of FeralList;
+	add "PewterConsortPet" to infections of MaleList;
+	add "PewterConsortPet" to infections of QuadrupedalList;
+	add "PewterConsortPet" to infections of TailList;
+	add "PewterConsortPet" to infections of TailweaponList;
+	add "PewterConsortPet" to infections of FeralmindList;
+	now Name entry is "PewterConsortPet";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is "Argos"; [ Specific name of unique enemy. ]
 	now enemy type entry is 2; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "The [one of]beast[or]creature[or]consort[at random] [one of]pounces onto you, lashing and nipping you into submission until you finally pry him off[or]bounds nearby to lash you sharply with its tail, driving you backwards[or]clings onto you in an attempt to pin you to the ground, forcing you to pull yourself free[or]grabs one of your appendages with its tail and stumbles you to the ground, quickly scrambling back to your feet[at random].";
-	now defeated entry is "[beattheconsort]";
-	now victory entry is "[losetopewter]";
-	now desc entry is "[pewterdesc]";
+	now defeated entry is "";
+	now victory entry is "";
+	now desc entry is "";
 	now face entry is "featureless save for a toothy maw. Your vision is strangely grayscale, save for the alluring, entrancing hues emitted from other living beings";
 	now body entry is "lean and feral in build, though thankfully your forehands retain their articulation";
 	now skin entry is "[consortskinentry]";
