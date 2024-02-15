@@ -313,7 +313,6 @@ to say ArgosDelayedGratification:
 				say "     Running away from the sex-crazed beast, you manage to put some distance between you, only to find that, as you stop to catch your breath, he's right on your heels. There's not enough time to react as he leaps at you, and before long, you find yourself in the same place as you started, staring up at a massive cock that almost appears angry that you denied it. There's no way out- you're going to have to do what Argos wants! ";
 				say "[ArgosFaceFuck]";
 	else: [Once you're his slut you show more agency.]
-		say "      As Argos noses at your side and huffs, licking drool from his chops and blatantly staring at your ass despite his eyelessness, you realize that he's gone a while without a good draining. Sighing, you pat his head, knowing better than to deny him what he wants. Setting aside your pack, you squat down, confronting the already steel-hard shaft dangling between his legs and pressing a soft peck to the head, kissing away a pearl of pre. Despite your feigned exasperation, you're just as excited as he is, swallowing that gooey treat with gusto and attempting to excite the horny beast with your tongue.";
 		say "[ArgosFaceFuck]";
 
 
