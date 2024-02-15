@@ -78,7 +78,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 2	"Strange Birth"	Strange Birth	"[EventConditions_Strange Birth]"	Charred Streets	2500	2	100
 
 to say EventConditions_Strange Birth:
-	if HP of Doctor Matt >= 15 and PewterPet is Resolved and Player is submissive: [list of conditions here]
+	if HP of Doctor Matt >= 15 and HP of Doctor Matt < 100 and PewterPet is Resolved and Player is submissive: [list of conditions here] [Don't side with doctor mouse or you get locked out of this.]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
