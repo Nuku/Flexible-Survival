@@ -46,8 +46,9 @@ Ava by Sundered Dragon begins here.
 [ 100 = Ava was stopped from blowing Alex           ]
 
 [Energy of Ava]
-[ 0 = Matt is not around to assist in her quest     ]
-[ 1 = Player can learn where Alp-69 is              ]
+[ 0 = baseline                                      ]
+[ 1 = Matt showed the Player where Alp-69 is        ]
+[ 2 = Player can find Alph-69                       ]
 
 [ libido of Ava                                     ]
 [ 0 = not pregnant                                  ]
@@ -881,7 +882,7 @@ to say ResolveEvent Mirror_mirror_on_Ava's_wall:
 			if HP of Anthony >= 1:
 				say "Offering Ava a reassuring smile, you tell her not to beat herself up. The nanites are quite adept at putting strange intrusive thoughts in people's heads. Why they once tried to get you fuck a cow! As in the dumb four-legged feral animal kind, and not the two legged versions slumming it up at the Park, or the ones living on the local farms. 'Ew, that's so weird, why would they do that, who would that even work!?' Ava gags as hackles of her back rise in disgust. Shrugging, you tell her you're not sure, but it's probably to help them spread. Actually, now that you think about it, that probably explains why people are developing bi and pan curious tendencies all of a sudden too. Or why people's standards are set lower than limbo-bar at an army ant convention.";
 			now Mirror mirror on Ava's wall is resolved;
-			now A penny for your thoughts is active;
+			now Penny for your thoughts is active;
 			now HP of Ava is 99;
 		-- "She isn't ready.":
 			say "     Thinking on it, you tactfully tell Ava that despite how cute she might look knocked up. You just don't think she's ready for the responsibility, yet. 'I don't understand, what do you mean?' Ava pouts, flicks her ears at odd angles. Well for starters, you ask her, if the kitten comes out as big as she is, where are they going to sleep? Her room could probably hold one or two at best. You lecture, gesturing to Ava's living area. Then you mention the issue of food, sure your kids can scavenge just fine, but that's because you're constantly on the move, or letting them stay somewhere safe. How is she going to keep them fed if she doesn't leave The Chance? 'Uh,' Ava pauses to tap her chin, 'maybe Daddy could help,' she replies, swishing her tail on the floor behind her in an aggravated tattoo. Shaking your head you tell her how selfish that sounds, the guy is already housing and feeding her, for free. Throwing more kittens on his lap especially when he's expecting a litter of his own soon is well kind of a dick move.'";
@@ -889,7 +890,7 @@ to say ResolveEvent Mirror_mirror_on_Ava's_wall:
 			WaitLineBreak;
 			say "     'I mean Drake, are way older than me. You guys probably know so much more about the world and how to raise kids. I-I-I shouldn't rush into it should I?' Nodding, you tell her that's true, but when she's finally ready, and maybe she has a place of her own. She could absolutely start a family. You'd love to set up a playdate with her kittens and your own kids, or potentially grandkids with the rate you're going one day. And you wouldn't be opposed to having a little [']mommy time['] with her when she's ready. You tease, sneaking a quick kiss on her cheek. 'Ah, thanks,' Ava purrs happily.";
 			now Mirror mirror on Ava's wall is resolved;
-			now A penny for your thoughts is active;
+			now Penny for your thoughts is active;
 		-- "Sexy as hell.":
 			if "Horny Bastard" is listed in feats of player and HermList is not banned:
 				say "     Ruminating on it, you tell Ava that you think she'd look absolutely stunning, waddling around with a pair of big preggy taur tums, brushing your tail against her lower belly. 'Really? You think so?' Ava purrs happily, pressing out her midriff as far as she can while she poses for your playful inspection. Of course, but she needs to make sure to get knocked up with a nice big litter. With a body like this, you tease, tracing a clawed finger along the delectable curve of Ava's prodigious mammaries, she needs to make sure her mate is the right size. She can't just go around with a puny litter of tiny latex foxes. She would barely even be able to see them under all her cute pudge, you joke pinching Ava's love handles. Maybe you can find her extra hung Wolftaur, knots are pretty amazing. Once she's ridden on a good one you doubt she'll ever want to go back. Plus, you bet she'd look adorable weighed down by a litter of cat-dogs weighing you down. You hear they're pretty frisky too. You tease. 'I-I um don't like guys or canines,' Ava peeps.";
@@ -899,13 +900,13 @@ to say ResolveEvent Mirror_mirror_on_Ava's_wall:
 					say "     It'd be wonderful if the two of you could subdue a whole pack of them. The pair of you could spend the whole day laying on our backs, getting serviced by an entire pride of taurs as they use your bodies to their heart's content till our every hole is packed to the brim with spunk, your bodies hopelessly swollen with dozens of their cubs and milk as they-, '[Name of Player]!' Ava screams, shocking you out of your fantasy. What!? You grumble. 'I don't like dicks,' Ava says flatly. Well, that makes things difficult. You pause to ponder what you know of the infected reproduction till your mental rolodex eventually lands on the anthro dragoness guarding Trevor labs. Well she could go see Orthas then, you proffer. 'Who or what's an Orthas?' Ava asks, flicking her ears. Gesturing towards the city, you tell Ava that they're an anthro black dragoness that works at Trevor labs before the infection he-, er she... You start to trail off, catching yourself before revealing Orthas was a man, knowing that Ava will immediately shoot your idea down. You instead tell Ava that they have ovipositor in their cunt and-.";
 					say "     'Wait, an ovi what?' Ava questions, tilting her head in confusion. An Ovipositor, it's this, well tentacle sort of thing in her pussy she can use to lay eggs inside people. You explain, giving her a condensed version of how Orthas's unique biology came to be and its requirements. You go on to tell her she might like a big eggy tummy. It'd be a nice basic pregnancy for her, no kicking or squirming, just a bunch of quiet eggs nestled in your womb. True Orthas might not be able to lay enough eggs to give her a real bump like Kathy's, but everyone has to start somewhere. You proffer. 'That would be nice, I am not sure I'd want to be as big as you or mommy on my first try. Maybe you can introduce me one day?' Ava says patting her lower belly with her paw, no doubt imagining having a clutch of tauric dragon-kitty taurs growing inside her.";
 					now Mirror mirror on Ava's wall is resolved;
-					now A penny for your thoughts is active;
+					now Penny for your thoughts is active;
 					increase hunger of Ava by 1;
 				else:
 					say "     It'd be wonderful if the pair of you could subdue a whole pack of them. You two could spend the whole day together laying on your backs, getting serviced by an entire pride of taurs as they use your bodies to their heart's content till your every hole is packed to the brim with spunk and your bodies hopelessly swollen with dozens of their cubs and milk as they-. '[Name of Player]!' Ava screams, shocking you out of your fantasy. What!? You grumble. 'I don't like dicks,' Ava says flatly. Well that makes things difficult, huh, you pause to ponder what you know of the infected reproduction till you recall some of the more exotic infected are oviparous. True, many of them may not be to Ava's very narrow likings.";
 					say "     Regardless, you suggest that a nice simple eggy pregnancy might be a bit easier on a first timer like her than live young. 'Hm, I didn't know there were ferals that did that,' Ava remarks in a thoughtful tone. Shrugging, you tell her she'd be surprised at some of the weird stuff the nanites have cooked up. 'Ha ya,' Ava titters, patting her tummy fur, 'but it might be worth a try one day.'";
 					now Mirror mirror on Ava's wall is resolved;
-					now A penny for your thoughts is active;
+					now Penny for your thoughts is active;
 					increase hunger of Ava by 1;
 			else:
 				say "     Taking on a warm and caring smile, you tell Ava that of course she'd look stunning with a bun or two in the oven. Why, you'd bet she'd rock the cutest bumps in town. Well second cutest, you add with a proud trill running your dominant hand over the supple swell of your anthro midriff. But, you note gazing appreciatively at your larger lover's natural voluptuous curves, she's also absolutely adorable just the way she is. She should never feel any pressure to change herself to please you, or anyone else for that matter. 'Really?' Ava mews with a pleased trill as she corrects her posture. Of course, you tell her as you saunter her next to her and hook your forelegs around her tauric waist. You pull yourself close and affectionately nuzzle your catty chin against soft fuzzy chest, telling her. She's a kind, sweet, innocent [']little['] kitten, anyone would be lucky to have her in their lives. 'Aw,' Ava sniffles, 'thanks [name of player], you really know how to make a girl feel loved.'";
@@ -913,7 +914,7 @@ to say ResolveEvent Mirror_mirror_on_Ava's_wall:
 				WaitLineBreak;
 				say "     No further words pass between you two, as the pair of you wrap your anthro arms about one another and simply cuddle in place for minutes more, feeling safe and warm in each other's loving embrace. When you at last build the resolve to let go, you do so almost begrudgingly. Still, the lingering tendrils of heat left behind by your brief encounter clings to your core like the calming rays of the morning sun playing across the whole of your comforted being. You can't say why, but on some level, you feel just a bit certain and prepared for whatever curveball life can throw at you next.";
 				now Mirror mirror on Ava's wall is resolved;
-				now A penny for your thoughts is active;
+				now Penny for your thoughts is active;
 				increase hunger of Ava by 1;
 				increase humanity of player by 15;
 				increase morale of player by 15;
@@ -922,22 +923,22 @@ to say ResolveEvent Mirror_mirror_on_Ava's_wall:
 
 Table of GameEventIDs (continued)
 Object	Name
-A penny for your thoughts	"A penny for your thoughts"
+Penny for your thoughts	"Penny for your thoughts" 
 
 Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-4	"A penny for your thoughts"	A penny for your thoughts	"[EventConditions_A penny_for_your_thoughts]"	Last Chance Auto Body	2500	2	10
+4	"Penny for your thoughts"	Penny for your thoughts	"[EventConditions_Penny_for_your_thoughts]"	Last Chance Auto Body	2500	2	10
 
-to say EventConditions_A penny_for_your_thoughts:
+to say EventConditions_Penny_for_your_thoughts:
 	if Lust of Ava is 3 and player is impreg_now and BodyName of player is "Margay Taur" and Player is pure and Player is female and ScaleValue of Player is 5 and "Propositioned" is not listed in Traits of Ava:
 		now CurrentWalkinEvent_ConditionsMet is true;
 
-A penny for your thoughts is a situation.
-ResolveFunction of A penny for your thoughts is "[ResolveEvent Apennyforyourthoughts]". It is inactive.
-Sarea of A penny for your thoughts is "Nowhere".
-A penny for your thoughts is inactive.
+Penny for your thoughts is a situation.
+ResolveFunction of Penny for your thoughts is "[ResolveEvent Pennyforyourthoughts]". It is inactive.
+Sarea of Penny for your thoughts is "Nowhere".
+Penny for your thoughts is inactive.
 
-to say ResolveEvent Apennyforyourthoughts:
+to say ResolveEvent Pennyforyourthoughts:
 	say "     'Hey [if Player is not defaultnamed][Name of Player][end if], I have a personal question for you,' Ava asks, eyeing up your fecund figure as you saunter into her room. Shrugging, you tell her to shoot. 'Well, I um,' Ava stammers, as she starts twiddling her fingers nervously, 'I want to know what's it feels like, you know, being a pregnant taur?' Well, now that is a personal question.";
 	LineBreak;
 	say "     [bold type]How do you respond to this?[roman type][line break]";
@@ -953,12 +954,12 @@ to say ResolveEvent Apennyforyourthoughts:
 			WaitLineBreak;
 			say "     Ruminating on it, you reply a large part of it is due to your heats, which you point out, you have no idea how Ava deals with it, that makes it very hard to keep off the D. 'What's heat,' Ava asks, cocking back her ears. Sighing, you try explaining the estrus cycle, the differences between the human and animal versions to her as well as how the nanites have overcharged it to aid in their propagation. That you routinely have to struggle not to seek out the nearest feline with a dick every couple of days, in order to quench the burning need the nanites force upon you. 'Oh you mean the tingle, dad, er Drake gave me something for that.' Ava replies, sauntering over to one of the tool cabinets and pulls out a bright pink circular pill container. Looking it over, you instantly recognize the design as generic birth control pills, like the ones schools or women's health groups occasionally hand out. You surmise Drake must be giving them Ava to keep her heats or [']the tingle['] as she childishly calls it in check.";
 			say "     As for what you enjoy or at least find the most useful though, you tell it would have to be the effect it has on your lactation. Already, you can almost entirely slake your thirst on your own supply, but when you're expecting your rich cream becomes even more nourishing and seems to improve your nanite-induced healing factor. 'That does sound super useful,' Ava says, sounding a tad impressed with your ingenuity, but also a little let down by your answers.";
-			now A penny for your thoughts is resolved;
+			now Penny for your thoughts is resolved;
 			now Broodmother threshold is active;
 		-- "You hardly notice it.":
 			say "     Wait, you're pregnant again, you ask looking down at your slightly swollen anthro half and notice for the first time the subtle swell of your tummy. Oh guess you are, you chuckle. Hey babies didn't see you guys down there, you jokingly as you lift the weight of your gravid upper womb in your paws as if to confirm its existence. 'Huh, how do you not notice something that big?' Ava asks, tilting her head questioningly. Shrugging, you tell her you're not sure, the nanites sort of take care of everything, so you never really have to think about a pregnancy until it's time to give birth. Even then it's pretty tame compared to what people normally had to go through before. You just have to find a place to lay down then let nature take its course. In a few minutes, the kids are full grown so the whole affair it's really anything special, or difficult to you at this point. 'Are you kidding me? You really don't notice a thing.' Ava queries, poking your tummy.";
 			say "     Not really, your margay taur body is a bit big boned, so you don't kind of don't notice a few more layers of padding unless someone points it out. Or if you're waddling through a narrow door, then you definitely noticed the extra weight. It's not all bad though, you sort of like the way it feels when your body brushes against something soft, you simper, patting your plush feral womb with your forepaws. One of these days you wouldn't mind heading down to the beach and walking in the surf letting the soft sand cushion your paws, and the gentle cool waves lapping along your taut skin, you trill, running your hands along the supple length of your feral half. 'Hm, that does sound kind of nice. Maybe we could go down there together one day?' Ava asks, with a thoughtful look on her muzzle as her paws drift down to a vacant womb.";
-			now a Penny for your thoughts is resolved;
+			now Penny for your thoughts is resolved;
 			if Hunger of Ava < 3:
 				increase Hunger of Ava by 1;
 			now Broodmother threshold is active;
@@ -967,7 +968,7 @@ to say ResolveEvent Apennyforyourthoughts:
 			say "     Not to mention the hormones, you exclaim. You knew pregnancy was supposed to make you crazy hungry and horny all the time, but the nanites have really kicked things up a notch. Everything just tastes and feels so good now. She has no idea how blissful it is just to have someone pet your fur or massage your paws. 'Really? Then can I, um, touch you?' Ava asks bashfully as she rocks back and forth nervously on her paws. Chuckling mirthfully, you tell her you'd be offended if she didn't. Go on, say hi, you joke, arching your back so that your pregnant belly sticks out more, gesturing for her to have a feel. 'Thank you,' Ava purrs, cupping your furry belly in her massive paw as she massages the tender tissue, 'Tee-hee you're so soft and oh I think I felt a kick. That was a kick right,' Ava gushes excitedly, as midriff squirms lightly at her touch. Yep that was, you gasp feeling the light quickening of your latest litter. 'Do you think they know you're talking about them? Does it feel good?' Ava asks as her paw graces the hem of your tummy.";
 			WaitLineBreak;
 			say "     You nod, telling her, if only for show, that it's quite an experience having all those little paws kicking inside you as you waddle around town. 'I bet that makes people stare at you a lot,' Ava asks, sounding a touch nervous at the prospect of the center of attention. You might, but a part of you loves having that power over mutants. You get to watch men, women, herms, and creatures of non-specific genders drool over your big milfy body is incredibly affirming in some way. And you know what Ava? You ask, flashing her a toothy grin. 'What?' She replies. You have her to thank for it, this body is just perfect for you. You simper, as you stand on the tips of your toes and steal a quick kiss on her cheek. 'Oh,' Ava blushes, 'I really didn't mean to infect you, but I am glad you like the results.' You do, you purr contentedly giving your tummy a loving pat, and tell her you hope that answers her questions. 'You did, and you've given me something to think about,' Ava remarks thoughtfully as she runs her paws over the cute little curve of her midriff.";
-			now a Penny for your thoughts is resolved;
+			now Penny for your thoughts is resolved;
 			now Broodmother threshold is active;
 			if Hunger of Ava < 3:
 				increase Hunger of Ava by 1;
@@ -1098,6 +1099,5 @@ to say ResolveEvent Broodmotherthreshold:
 			if nipple count of Player < 12:
 				increase nipple count of Player by 1;
 			Increase Cunt Depth of Player by 3;
-
 
 Ava ends here.

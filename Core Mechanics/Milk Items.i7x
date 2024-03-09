@@ -2968,6 +2968,32 @@ instead of sniffing hentai fan milk:
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"Hermacore Cream"	"A generic plastic bottle filled to the rim with your unique one-of-a-kind cream, that could almost pass for regular milk. Were it not for the unusual prismatic oily hues reflected in the alabaster liquids surface, or the words [']Hermacore Cream['] you wrote on the side."	1	Hermacore Cream
+
+Hermacore Cream is a grab object.
+Hermacore Cream is milky.
+Hermacore Cream is infectious.
+Strain of Hermacore Cum is "Hermacore".
+Usedesc of Hermacore Cream is "[Hermacore Cream use]".
+
+to say Hermacore Cream use:
+	say "Tilting the creamy vessel to lips, and take a deep greedy pull of your exotic milk. Your inner sommelier detects hints of subtle oaks, interspliced with effervescent spear mints, and a light undercurrent of fresh vanilla playing across your palate. Swallowing, your tastebuds note aftertaste leaves on uncanny but not wholly unwelcome sour bite evocative of some high proof liquor.";
+	PlayerDrink 7;
+	PlayerEat 7;
+	increase Breast Size of Player by 3;
+	if Cunt Count of Player is 0:
+		increase Cunt Count of Player by 1;
+	increase Cunt Depth of Player by 3;
+	increase Cunt Tightness of Player by 3;
+	decrease turns in heat by 8;
+	infect "Hermacore";
+	SanLoss 5;
+
+instead of sniffing Hermacore Cream:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "hermaid milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Hermaid Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	hermaid milk
 
 hermaid milk is a grab object.
