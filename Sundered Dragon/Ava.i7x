@@ -46,8 +46,9 @@ Ava by Sundered Dragon begins here.
 [ 100 = Ava was stopped from blowing Alex           ]
 
 [Energy of Ava]
-[ 0 = Matt is not around to assist in her quest     ]
-[ 1 = Player can learn where Alp-69 is              ]
+[ 0 = baseline                                      ]
+[ 1 = Matt showed the Player where Alp-69 is        ]
+[ 2 = Player can find Alph-69                       ]
 
 [ libido of Ava                                     ]
 [ 0 = not pregnant                                  ]
@@ -1098,6 +1099,5 @@ to say ResolveEvent Broodmotherthreshold:
 			if nipple count of Player < 12:
 				increase nipple count of Player by 1;
 			Increase Cunt Depth of Player by 3;
-
 
 Ava ends here.

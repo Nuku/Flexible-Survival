@@ -2,6 +2,11 @@ Swamp Goblin by Voidsnaps begins here.
 
 Section 1 - Creature Insertion
 
+a postimport rule:
+	choose row with name of "Swamp Goblin" from the Table of Random Critters;
+	now non-infectious entry is false;
+
+
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Swamp Goblin"	"[PrepCombat_Swamp Goblin]"
