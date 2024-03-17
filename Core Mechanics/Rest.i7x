@@ -63,7 +63,7 @@ check resting:
 			say "You are thankfully able to complete your nap in peace.";
 
 carry out resting:
-	if "Player_Breeding_Dom" is listed in Traits of Urik and lastfuck of Urik - turns > 8 and a random chance of 1 in 3 succeeds and ((Urik is collected and Player is collected) or (orc supersized breeder is listed in companionList of Player)):
+	if "Player_Breeding_Dom" is listed in Traits of Urik and lastfuck of Urik - turns > 2 and a random chance of 2 in 3 succeeds and ((Urik is collected and Player is collected) or (orc supersized breeder is listed in companionList of Player)):
 		Urik_rest_breeding;
 		if NoHealMode is true:
 			increase HP of Player by (level of orc supersized breeder) / 3; [grants additional rest]
