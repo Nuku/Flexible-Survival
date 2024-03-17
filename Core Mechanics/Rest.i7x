@@ -63,7 +63,13 @@ check resting:
 			say "You are thankfully able to complete your nap in peace.";
 
 carry out resting:
-	if rubber tigress companion is listed in companionList of Player:
+	if "Player_Breeding_Dom" is listed in Traits of Urik and lastfuck of Urik - turns > 2 and a random chance of 2 in 3 succeeds and ((Urik is collected and Player is collected) or (orc supersized breeder is listed in companionList of Player)):
+		Urik_rest_breeding;
+		if NoHealMode is true:
+			increase HP of Player by (level of orc supersized breeder) / 3; [grants additional rest]
+		else:
+			increase HP of Player by (level of orc supersized breeder) / 2; [grants additional rest]
+	else if rubber tigress companion is listed in companionList of Player:
 		artemisnap;
 		if NoHealMode is true:
 			increase HP of Player by (level of rubber tigress companion) / 3; [grants additional rest]
