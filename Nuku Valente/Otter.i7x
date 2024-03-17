@@ -337,7 +337,7 @@ name	desc	weight	object
 Tasty Fish is a grab object.
 
 Tasty Fish is infectious. Strain of Tasty Fish is "Sea Otter".
-usedesc of Tasty Fish is "[Fish]".
+Usedesc of Tasty Fish is "[Fish]".
 Purified of Tasty Fish is "food".
 
 To say Tasty Fish:

@@ -303,7 +303,7 @@ to say awesome bat proc:
 [awesome bat moved to Core Mechanics/Weapons.i7x]
 
 awesomest fruit is a grab object.
-awesomest fruit has a usedesc "[awesomest fruit use]".
+awesomest fruit has a Usedesc "[awesomest fruit use]".
 
 To say awesomest fruit use:
 	let omonster be MonsterID;
@@ -324,7 +324,7 @@ To say awesomest fruit use:
 	now MonsterID is omonster;
 
 awesomer fruit is a grab object.
-awesomer fruit has a usedesc "[awesomer fruit use]".
+awesomer fruit has a Usedesc "[awesomer fruit use]".
 
 To say awesomer fruit use:
 	let omonster be MonsterID;
@@ -345,7 +345,7 @@ To say awesomer fruit use:
 	now MonsterID is omonster;
 
 awesome fruit is a grab object.
-awesome fruit has a usedesc "[awesome fruit use]".
+awesome fruit has a Usedesc "[awesome fruit use]".
 
 To say awesome fruit use:
 	let omonster be MonsterID;
