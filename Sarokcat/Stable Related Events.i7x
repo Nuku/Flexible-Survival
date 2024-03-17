@@ -344,7 +344,7 @@ to say ResolveEvent Transformationledger:
 					now Resolution of Transformationledger is 1;
 					now Transformationledger is resolved;
 				if (nam is "Cut page"):
-					say "     You carefully run the blade neatly along the spine of the book and begin to tear along the line left behind, leaving almost no discernable trace of the missing page. Before you can finish, however, a guard passes by the open door and, stopping, notices you at the desk. 'Hey! You're not supposed to be here,' he growls as he strides into the room. Looks like you're going to have to fight!";
+					say "     You carefully run the blade neatly along the spine of the book and begin to tear along the line left behind, leaving almost no discernible trace of the missing page. Before you can finish, however, a guard passes by the open door and, stopping, notices you at the desk. 'Hey! You're not supposed to be here,' he growls as he strides into the room. Looks like you're going to have to fight!";
 					challenge "Horseman";
 					if fightoutcome >= 10 and fightoutcome <= 19: [player won]
 						say "     With the distraction taken care of, you resume your prior work, and in no time at all you have that page neatly cut out and stuffed inside your bag. Hmm... there seems to be a token attached to the page, specifying a location and a code. Perhaps you should find someone who can figure out what this means.";
