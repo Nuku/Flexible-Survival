@@ -46,26 +46,30 @@ to say Dobermandesc:
 	if dobielibido < 0:
 		say "     The female Doberman cop has found you again and growls firmly for you to halt and be searched. She strides over with confidence, a determined look upon her long muzzle. It doesn't appear like she's yet recognized you, seeming too focused on being the cop to realize that you've met before.";
 		say "     She's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet. Her head is fully that of a Doberman Pinscher, with a long muzzle, and her short fur has the two-tone black and tan markings of the breed. She is wearing a light blue shirt, darker pants and a policeman's hat. She has an average-sized rack under her shirt.";
+		say "[Alexandra_TalkOrFight]";
 	else if dobielibido < 50:
 		say "     A female Doberman in a cop's uniform charges at you, growling firmly for you to halt and be searched. In the brief moment before she's upon you, you can see that she's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet. Her head is fully that of a Doberman Pinscher, with a long muzzle, and her short fur has the two-tone black and tan markings of the breed. She is wearing a light blue shirt, darker pants and a policeman's hat. She has an average-sized rack under her shirt.";
-		if the player is bodily human and the player is facially human and the player is skintone human and the tail of Player is "":
-			say "     '[one of]Halt, citizen[or]Freeze! Police[or]Stand down, citizen[at random]!' she calls out one last time, pulling out her nightstick.";
-		else:
-			say "     '[one of]Halt, mutant[or]Freeze! Police[or]Surrender, creature[or]Come quietly[or]I order you to stand down, mutant[at random]!' she calls out one last time, pulling out her nightstick.";
-		if PlayerFucked of Alexandra is false:
-			LineBreak;
-			say "     [bold type]Given that the woman seems fairly sane, despite being nonhuman, and you're a (more or less) innocent citizen, you wonder if it might be a good idea to give in?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Show your peaceful side, don't provoke her and see where things go from there.";
-			say "     ([link]N[as]n[end link]) - Fuck the police! Maybe even literally, these days...";
-			if Player consents:
-				say "[Alexandra_NonResist]";
-			else:
-				say "     Nah, why talk if violence can solve this matter much faster? You ready yourself for taking her down...";
+		say "[Alexandra_TalkOrFight]";
 	else if dobielibido < 100 or inasituation is true:
 		say "     The female Doberman cop has found you again and growls angrily, pulling out her nightstick. She's looking more disheveled and wild-eyed than before, her lusts starting to take hold of her. She still has her uniform on, but her shirt's half unbuttoned to show off her breasts better and you can see moist juices soaking her thighs. Despite her attempts to restrain it, her tail wags excitedly at having found you again, regardless of her apparent anger at you.";
 	else:
 		say "     The female Doberman cop has found you again and snarls at you. She's looking rather rougher now, with her shirt hanging open to expose her bare breasts and the crotch of her pants soaked and stained with her fluids. From the wild look in her eyes and the way she slaps her palm with her nightstick, it looks like she's through being the good cop and intends to come down on you hard. Her tail wags and you catch the scent of fresh arousal coming from her, clearly her body wanting to play some more - one way or another.";
+
+to say Alexandra_TalkOrFight:
+	if the player is bodily human and the player is facially human and the player is skintone human and the tail of Player is "":
+		say "     '[one of]Halt, citizen[or]Freeze! Police[or]Stand down, citizen[at random]!' she calls out one last time, pulling out her nightstick.";
+	else:
+		say "     '[one of]Halt, mutant[or]Freeze! Police[or]Surrender, creature[or]Come quietly[or]I order you to stand down, mutant[at random]!' she calls out one last time, pulling out her nightstick.";
+	if PlayerFucked of Alexandra is false:
+		LineBreak;
+		say "     [bold type]Given that the woman seems fairly sane, despite being nonhuman, and you're a (more or less) innocent citizen, you wonder if it might be a good idea to give in?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Show your peaceful side, don't provoke her and see where things go from there.";
+		say "     ([link]N[as]n[end link]) - Fuck the police! Maybe even literally, these days...";
+		if Player consents:
+			say "[Alexandra_NonResist]";
+		else:
+			say "     Nah, why talk if violence can solve this matter much faster? You ready yourself for taking her down...";
 
 to say dobermanattack:
 	if dobielibido < 50:
