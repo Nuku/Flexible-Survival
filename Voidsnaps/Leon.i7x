@@ -411,7 +411,7 @@ to say ResolveEvent Ram's New Toy:
 	TraitGain "Bondage Slut" for Leon;
 
 to say LeonBondage: [Repeatable scene.]
-	if Thirst of Leon > 10:
+	if Thirst of Leon >= 10:
 		say "[LeonBadEnding]";
 	else:
 		say "     Shuffling in place, you mention that you liked the rough treatment you received from your ram last time. With your mind wandering to that musky leather bondage set up, you can't help the erection growing in your pants, but you doubt that Leon wants to see it. Surprisingly though, when you meet his eyes, a certain level of hunger shines in his eyes, and he's staring directly at your crotch. 'Let me call one of the girls over. Hope you're ready.' His words echo like a warning, clenching your innards as if he's already inside you, and you follow him to the back, almost limping from your erection's painful throb.";

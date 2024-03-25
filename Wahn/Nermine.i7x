@@ -209,11 +209,10 @@ instead of conversing the Nermine:
 	now sortorder entry is 7;
 	now description entry is "Ask Nermine about the counter with rare treasures she has laid out";
 	[]
-	if NewTypeInfectionActive is true:
-		choose a blank row in table of fucking options;
-		now title entry is "Rare Infections";
-		now sortorder entry is 8;
-		now description entry is "Ask Nermine if she can help you gain some unique and exceptional infections";
+	choose a blank row in table of fucking options;
+	now title entry is "Rare Infections";
+	now sortorder entry is 8;
+	now description entry is "Ask Nermine if she can help you gain some unique and exceptional infections";
 	[]
 	if Carried of Demon Tooth > 0:
 		choose a blank row in table of fucking options;

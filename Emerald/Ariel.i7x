@@ -79,6 +79,7 @@ Object	Name
 Ariel's Aria	"Ariel's Aria"
 
 Ariel's Aria is a room. It is fasttravel.
+Ariel's Aria is private.
 Description of Ariel's Aria is "[Ariel'sAriaDesc]"
 
 to say Ariel'sAriaDesc:

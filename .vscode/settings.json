@@ -1,0 +1,19 @@
+{
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "inform7extension"
+    ],
+    "spellright.parserByClass": {
+        "inform7extension": {
+            "parser": "plain"
+        }
+    },
+    "cSpell.enableFiletypes": [
+        "inform7extension"
+    ]
+}
