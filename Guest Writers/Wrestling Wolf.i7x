@@ -20,7 +20,9 @@ to say wrestlingwolfattack:
 		say "     With a howl the Wrestler Wolf unloads his load all over your [BodyType of Player] body. The wrestler grins in satisfaction as he watches some of his cum seep through your [SkinSpeciesName of Player in lower case] hide. 'This will make finding you a lot easier,' the wrestler says pulling back up his briefs. He picks you up and tosses you out of his makeshift ring. 'Next time you're definitely gonna give me a workout. One way or another,' the Wrestler Wolf says, eyeing you lustfully as you walk away, still a bit sore and covered in his hot seed.";
 		if "Male Preferred" is not listed in feats of Player:
 			if Player is not female:
-				if "Microwaved" is listed in feats of Player:
+				if "Single Sexed" is listed in feats of Player and Player is male:
+					say "Thankfully, your body resists growing a new vagina since you already have male parts.";
+				else if "Microwaved" is listed in feats of Player:
 					say "WARNING: Sex shifting nanites detected! Allow?";
 					if Player consents:
 						say "OK.";
@@ -85,7 +87,9 @@ to say wrestlingwolfattack:
 				say "     'Tch, looks like ya haven't the right type of equipment for this,' he sighs, pulling down his Wrestling Briefs and revealing his erect shaft. 'Guess the last time wasn't enough,' he says as he began to rub his shaft above you. 'Ya see, I've noticed that whenever my seed gets onto or into someone, they grow a nice little pussy for me to use,' he says, pumping his shaft even harder. With a howl, the Wrestling Wolf unloads his load all over your [BodyType of Player] body. The wrestler grins in satisfaction as he watches ome of his cum seep through your [SkinName of Player].";
 				say "     'There we go. Maybe now you'll grow a nice little pussy for me,' the wrestler says before pulling his briefs back up. He picks you up and tosses you out of his makeshift ring. 'I'll be expecting a little something from ya the next time we fight,' the Wrestler Wolf says, eyeing you lustfully as you walk away, still a bit sore and covered in his hot seed.";
 				if "Male Preferred" is not listed in feats of Player:
-					if Player is not female:
+					if "Single Sexed" is listed in feats of Player and Player is male:
+						say "Thankfully, your body resists growing a new vagina since you already have male parts.";
+					else if Player is not female:
 						say "     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
 						now Cunt Count of Player is 1;
 						now Cunt Tightness of Player is 1;

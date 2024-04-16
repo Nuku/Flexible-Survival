@@ -1437,7 +1437,7 @@ An everyturn rule:
 	else:
 		if JackalBoyTF >= 1:
 			if TailName of Player is not "Jackalboy":
-				say "     Your ass tingles as it shifts and changes while you watch, the power of that strange totem you used obviously still strongly affecting your body. It doesn't take long for your jackal-like tail to reform. Its sleek dark presence behind you proves that its form is stronger then your more recent infection.";
+				say "     Your ass tingles as it shifts and changes while you watch, the power of that strange totem you used obviously still strongly affecting your body. It doesn't take long for your jackal-like tail to reform. Its sleek dark presence behind you proves that its form is stronger than your more recent infection.";
 				now TailName of Player is "Jackalboy";
 				now tail of Player is "You have a sleek black-furred jackal's tail attached to your rear. It seems to sway happily over your tight sexy ass with every step you take.";
 		if JackalBoyTF >= 2:
