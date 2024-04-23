@@ -304,7 +304,7 @@ Payment	"Payment"
 Payment is a situation.
 ResolveFunction of Payment is "[ResolveEvent Payment]".
 The level of Payment is 0.
-Sarea of Payment is "Sinking Swamps".
+Sarea of Payment is "Nowhere".
 
 to say ResolveEvent Payment:
 	say "     As you return to Baron's apothecary, you stop at the door, intrigued by the litany of sound you hear from within. Is that Janaz whining? It's not hard to guess what's going on just past the flimsy entryway.";

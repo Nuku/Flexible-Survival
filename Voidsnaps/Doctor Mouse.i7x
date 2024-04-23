@@ -163,12 +163,12 @@ SexuallyExperienced of DrMouse is true.
 TwistedCapacity of DrMouse is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of DrMouse is true. [steriles can't knock people up]
 MainInfection of DrMouse is "Albino Mouse".
-Description of DrMouse is "[DrMousedesc]".
+Description of DrMouse is "[DrMouseChimeradesc]".
 Conversation of DrMouse is { "<This is nothing but a placeholder!>" }.
 The scent of DrMouse is "     He smells masculine, with a strange mix of scents that makes it impossible to nail down his species. If you were to describe him in one word, you think 'musky' would be the most applicable.".
 Energy of DrMouse is 2500.
 
-to say DrMousedesc:
+to say DrMouseChimeradesc:
 	say "     Standing at the upper limit of a regular human's height, roughly seven feet tall, Doctor Mouse is significantly larger than his original size. Muscles bulge from all of his extremities, and a handsome square jaw framed by horns stares down at you. His species is hard to pinpoint, with the horns of a ram, a mane like a lion, and various other bits and bobs borrowed from other creatures all patchworked together into what can only be described as an anthro chimera.";
 	if "Boyfriend" is listed in Traits of DrMouse:
 		say "     His expression as he stares at you softens, and you catch him looking at you like a lost puppy. There's no doubt he's your boyfriend now.";
