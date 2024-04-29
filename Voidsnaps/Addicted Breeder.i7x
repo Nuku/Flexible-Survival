@@ -33,7 +33,6 @@ to say ResolveEvent Messy Hideout:
 	else:
 		say "     Shaking your head, you decide against wandering into the basement. Who knows what's down there?! You don't feel like becoming a random monster's fucktoy.";
 		now Resolution of Messy Hideout is 100;
-
 	now Messy Hideout is resolved;
 
 to say AddictedBreederFucked:

@@ -99,65 +99,6 @@ Capitol Ruins	"Capitol Ruins"
 The Capitol Ruins is a room. "     This area once housed numerous government offices as well as some businesses, but now it lies in partial ruin, devastated by whatever happened here.".
 The earea of Capitol Ruins is "Capitol".
 
-
-Section 3 - Roaming Creatures
-
-[There are dangerous creatures roaming around the area. Simply walking from one area to the next brings the risk of being attacked by one of them.]
-
-instead of going north from Approaching the Capitol Building:
-	follow the capitol wandering rule;
-	move player to Charred Streets;
-
-instead of going south from Charred Streets:
-	follow the capitol wandering rule;
-	move player to Approaching the Capitol Building;
-
-instead of going north from Charred Streets:
-	follow the capitol wandering rule;
-	move player to Path of Ashes;
-
-instead of going south from Path of Ashes:
-	follow the capitol wandering rule;
-	move player to Charred Streets;
-
-instead of going east from Path of Ashes:
-	follow the capitol wandering rule;
-	move player to A Volcanic Crater;
-
-instead of going west from Path of Ashes:
-	follow the capitol wandering rule;
-	move player to Rusty Walkways;
-
-instead of going west from A Volcanic Crater:
-	follow the capitol wandering rule;
-	move player to Path of Ashes;
-
-instead of going east from Rusty Walkways:
-	follow the capitol wandering rule;
-	move player to Path of Ashes;
-
-this is the capitol wandering rule:
-	now battleground is "Capitol";
-	let bonus be 20; [base 20% chance of random fight while simply moving]
-	if "Curious" is listed in feats of Player, increase bonus by 4;
-	if "Stealthy" is listed in feats of Player, decrease bonus by 4 + (( perception of Player - 10 ) / 2);
-	if "Bad Luck" is listed in feats of Player, increase bonus by 4;
-	if a random number from 1 to 100 <= bonus:
-		if level of Player > 3:
-			say "     As you are trying to traverse the area, you are spotted by a roaming creature which moves in to confront you.";
-			fight;
-			if ( ( HardMode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
-				say "     As you are trying to recover from your last encounter, another roving creature finds you.";
-				fight;
-			say "     After that delay, you continue on your way, hoping to find someplace to a little safer, if at least only for the moment.";
-			follow the turnpass rule;
-		else:
-			say "     As you are trying to traverse the area, you spot a powerful creature roaming nearby. You are forced to take cover and wait for it to eventually leave. After that delay, you continue on your way, hoping to find someplace a little safer, if at least only for the moment.";
-			follow the turnpass rule;
-
-
-Section 4 - Situations
-
 [Wolfrape event moved to Blanche file. (Stripes)]
 
 [Other events moved to Capitol Events file. (Blue Bishop)]

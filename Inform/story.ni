@@ -369,6 +369,7 @@ Include Random Events by Guest Writers.
 Include Rane Events by Wahn.
 Include Recordings by Wahn.
 Include Red Events by Stripes.
+Include Rock And A Hard Place by Voidsnaps.
 Include Rubber Sneakers by Kernog.
 Include Satyr Frat by Wahn.
 Include Save the Dame by Kaleem Mcintyre.
@@ -538,6 +539,7 @@ Include Hawkman by Sarokcat.
 Include Hellfire Demon by Gherod.
 Include Helot by Wahn.
 Include Hentai Fan by Stripes.
+Include Hermacore by Sundered Dragon.
 Include Herm Dolphin by Hellerhound.
 Include Herm Hyena by Guest Writers.
 Include Hermaid by Xenophiliac.
@@ -554,6 +556,7 @@ Include Human Infections by Wahn.
 Include Hydra Beast by Stripes.
 Include Hyena Matriarch by Stripes.
 Include Hyperskunk by Stripes.
+Include Hypno Spider by Soggi.
 Include Imp by Wahn.
 Include Impala by UrsaOmega.
 Include Incubus by Stripes.
@@ -759,6 +762,7 @@ Include Anthony by Wahn.
 Include Anton by Wahn.
 Include Araqiel by Gherod.
 Include Ares by Wahn.
+Include Argos by Voidsnaps.
 Include Ariel by Emerald.
 Include Arthur by Luneth.
 Include Anastasia by Stripes.
@@ -963,6 +967,7 @@ Include Rane by Wahn.
 Include Raymond by Voidsnaps.
 Include Reece by Luneth.
 Include RexxyEvent by Prometheus.
+Include Rhidall by Voidsnaps.
 Include Richard by Wahn.
 Include RodAndRonda by Wahn.
 Include Roman by Kernog.

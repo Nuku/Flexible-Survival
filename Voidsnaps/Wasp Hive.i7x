@@ -47,7 +47,7 @@ An everyturn rule:
  Last stand:
  1 - Player exiled Ziix. Blocks off becoming royalty and expanding the hive.
  2 - Player Saved Ziix. Ziix will act grateful.
- 3 - Player ignored Ziix. Zant saves him instead. Ziix will be embarrassed.
+ 3 - Player ignored Ziix. Zant saves him instead. Ziix will be embarassed.
 
  Rude Awakening:
  1 - Player fucked Zant.
@@ -650,6 +650,7 @@ to say ResolveEvent Last Stand:
 				say "[ZiixSodaChoice]";
 			else:
 				say "     Sadly, you don't have anything that could help. Maybe another of the warrior's hivemates survived the purge and could help you rouse him? You don't think you have time to scavenge and return!";
+				now Resolution of Last Stand is 2;
 		else:
 			say "     The wasp man charges you before you convince him that you aren't a threat, saying something intelligible about dragging you to death with him. It seems you have no choice but to fight him. Thankfully, despite his muscles and size, he's unsteady and unable to focus on you, let alone aim his attacks. It shouldn't be hard to take him down.";
 			now inasituation is true;
@@ -768,7 +769,7 @@ Object	Name
 Broken But Alive	"Broken But Alive"
 
 Broken But Alive is a situation.
-ResolveFunction of Broken But Alive is "[ResolveEvent Broken  But Alive]".
+ResolveFunction of Broken But Alive is "[ResolveEvent Broken But Alive]".
 Sarea of Broken But Alive is "Nowhere".
 Prereq1 of Broken But Alive is Last Stand.
 Prereq1Resolution of Broken But Alive is { 1, 2, 3 }.

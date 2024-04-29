@@ -97,7 +97,7 @@ carry out treasurehunt:
 					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
 					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
-						if loot entry is not " " and loot entry is not "journal":
+						if loot entry is not "" and loot entry is not " " and loot entry is not "journal":
 							ItemGain loot entry by 1;
 							ItemGain dirty water by 1;
 						else:
@@ -126,7 +126,7 @@ carry out treasurehunt:
 					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
 					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
-						if loot entry is not " " and loot entry is not "journal":
+						if loot entry is not "" and loot entry is not " " and loot entry is not "journal":
 							ItemGain loot entry by 1;
 							ItemGain dirty water by 1;
 						else:
@@ -136,7 +136,7 @@ carry out treasurehunt:
 					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
 					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
-						if loot entry is not " " and loot entry is not "" and loot entry is not "journal":
+						if loot entry is not "" and loot entry is not " " and loot entry is not "journal":
 							ItemGain loot entry by 1;
 							ItemGain dirty water by 1;
 						else:

@@ -130,6 +130,7 @@ to say TrainingJanaz:
 	WaitLineBreak;
 	say "     Pondering the ethics of your situation passes the time, and at some point, while you doze, Janaz leaves, sparing you a strange glance backward as he wanders off. Was that regret on his face? You try to crush the guilt you feel for lying to him as you gather your gear, wiping the remnants of your fun from your body and wondering what your next meeting will bring.";
 	NPCSexAftermath Player receives "OralCock" from Janaz;
+	now lust of Janaz is 3;
 
 to say FreeingJanaz:
 	say "     A familiar feeling creeps up your back, and sure enough, Janaz appears within moments, though his demeanor is very different. Rather than his usual pushy behavior, he pads over and sits before you, tilting his head. Greeting you with an ever-present erection, he stamps his foot with an oddly adorable, excited air. 'More. I demand you teach me more of this 'foreplay.' I can think of nothing else.' Telling the excited fox that waiting is part of the experience, you take time setting aside your things, shivering at the slutty thrill of bending over before the over-sexed brute. With anything breakable out of the way, you cross the distance between you, pondering what you should teach him this time. Your experiences prove how good he is with his tongue, but you wonder whether he'd catch on if you tried something less invasive.";
@@ -141,7 +142,13 @@ to say FreeingJanaz:
 	say "     Despite your rising desire to take advantage of Janaz's eagerness and newfound trust for you, you pat his cheeks, remaining chaste for the moment. There will be plenty of time for exploring [italic type]that [roman type]type of relationship with him after things have had time to settle. More importantly, you think back to what Janaz said about reporting back to Kal Ren. It seems that you won't be able to keep the mutiny you coaxed him into secret for long, but for now, you embrace your overexcited vulpine son, telling him that he doesn't have to do anything. You'll let him decide what he wants from now on.";
 	now Thirst of Janaz is 1;
 	now Lust of Janaz is 4;
-	say "<Content ends here for now. You will not encounter Janaz again until content has been added onto this path again. If you would like to revist scenes, please use the debug code 'ZJanazReset' to reset him to default. You will need to start over from his birth scene with Kal Ren.>";
+	now Stamina of Kal Ren is 3;
+	say "     If you want to keep Janaz around without Kal Ren's interference it might be a good idea to [bold type]demand your son's freedom [roman type]before the vulpine demon decides to take things into his own hands. You shudder to think of what he'll do if he thinks his authority is challenged!";
+	
+	[say "<Content ends here for now. You will not encounter Janaz again until content has been added onto this path again. If you would like to revist scenes, please use the debug code 'ZJanazReset' to reset him to default. You will need to start over from his birth scene with Kal Ren.>";]
+
+
+
 
 JanazReset is an action applying to nothing.
 
@@ -159,7 +166,11 @@ carry out JanazReset:
 	TraitLoss "Hunting" for Janaz;
 	say "<Janaz is now reset for your viewing pleasure. Please go to Kal Ren to reinitiate his birth.>";
 
+instead of conversing Janaz:
+	say "     'Hey, can this wait a little while? I still feel really weird.' Janaz says as you walk up to him, before you can say or do anything, shaking his head from side to side as though clearing fog from his brain. It doesn't seem to matter what your business is with him, and you can see he's still having some trouble coming to terms with his new circumstances. It's best to leave him alone for a while. <Author's note: Content ends here. Upcoming: Sex menu and talk menu! If you would like to revisit scenes, please use the debug code 'ZJanazReset' to reset him to default. You will need to start over from his birth scene with Kal Ren.>";
 
+instead of fucking Janaz:
+	say "     'Hey, can this wait a little while? I still feel really weird.' Janaz says as you walk up to him, before you can say or do anything, shaking his head from side to side as though clearing fog from his brain. It doesn't seem to matter what your business is with him, and you can see he's still having some trouble coming to terms with his new circumstances. It's best to leave him alone for a while. <Author's note: Content ends here. Upcoming: Sex menu and talk menu! If you would like to revisit scenes, please use the debug code 'ZJanazReset' to reset him to default. You will need to start over from his birth scene with Kal Ren.>";
 
 
 Janaz ends here.

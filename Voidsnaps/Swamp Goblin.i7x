@@ -2,6 +2,11 @@ Swamp Goblin by Voidsnaps begins here.
 
 Section 1 - Creature Insertion
 
+a postimport rule:
+	choose row with name of "Swamp Goblin" from the Table of Random Critters;
+	now non-infectious entry is false;
+
+
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Swamp Goblin"	"[PrepCombat_Swamp Goblin]"
@@ -69,7 +74,7 @@ When Play begins:
 	now type entry is "goblin";
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;
+	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
@@ -81,7 +86,7 @@ to say Swamp GoblinDesc:
 to say GenerateTrophyList_Swamp Goblin:
 	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
 	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
-		add "Swamp Goblin hair" to CombatTrophyList;
+		add "Swamp Goblin Hair" to CombatTrophyList;
 	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
 		add "dirty water" to CombatTrophyList;
 	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
@@ -159,7 +164,7 @@ to say Swamp GoblinLoss:
 		if Swamp_Goblin_Sex_Choice is:
 			-- "Punish the thief with your cock.": [Ass fuck.]
 				say "     Whipping out your cock, you show it off to the kneeling goblin, watching his eyes glitter for a moment before he regains his composure. Tapping your tip against your palm, you demand to see the goblin's ass, leaving no doubt what you want from him. Someone as petite as he has to be tight, but you're not worried. Anyone with that expression, when confronted with cock, has to be a seasoned slut! ";
-				if Cock Length of Player < 10:
+				if Cock Length of Player > 10:
 					say "'How'm I s'posed to fit that?' Looking horrified at your suggestion but unable to take his eyes off your proportionally massive shaft, the goblin nonetheless strips off his lower garments, looking back at you with a regretful glance as he widens his stance and leans over a nearby stump. 'Hope you're satisfied with a bit 'a rubbin' instead. That'll break me in half!' Still, his hole clenches between those muscular cheeks, and you're unsure if it's in anticipation or fear.";
 					say "     Spreading those cheeks further, you slot your cock between them, grinding your tip against his petite hole. His proportions are perfect for taking hold of his hips, and it feels like having a warm, breathing fleshlight in your grip. Sadly though, he seems correct, his hole resisting your tip and pained grunts leaving his mouth whenever you test him, your cock inevitably sliding upward to hotdog his cheeks. After several failed attempts, his cheeks drip with translucent pre-strings, and his gooey hole shimmers, taunting your dick with its proximity. Grunting, you double your efforts, determined to seed that stubborn hole. 'Told you. Now why don't you just finish up, and I can be on my-' Face screwing up in disbelief as a strangled sound leaves his throat; the goblin holds his stomach, staring up at you in fear. Your efforts have paid off, and your cock forces into his unprepared innards with a wet squelch, swelling his stomach out into a lewd bulge.";
 					say "     Triumphant, you grip the squirming goblin firmly, feeding more of your oversized cock into his crushingly tight depths. You told him you would fuck him, and you plan to keep your promise! First, you want to feel how deep you can get before you bottom out! Grinding deeper, you eventually hilt, relaxing your grip and enjoying the sight of your cock's heavy throb forcing the goblin's torso upward. That green stomach's bulge twitches in time with your cock, and arms hang limply at the goblin's side while that emerald cock sputters its approval, spraying the cum your dick forces out of him with each prostate-crushing shove. It's easy enough to take a better hold, placing your arms under his pits and bouncing him on your dick as you grow closer to flooding his guts.";

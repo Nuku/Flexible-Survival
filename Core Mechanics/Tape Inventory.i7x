@@ -85,6 +85,8 @@ carry out tapeing:
 			say "[Hyena Breakout Video]";
 		-- "Canine Hazing Vid":
 			say "[CanineHazingVid]";
+		-- "Demented Video Diary":
+			say "[AddictedBreederFucked]"; [Source: Voidsnaps/AddictedBreeder.i7x]
 [ Template to fill for new tapes ]
 [
 		-- "TAPE NAME":

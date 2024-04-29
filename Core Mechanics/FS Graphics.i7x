@@ -82,6 +82,7 @@ Figure of BlueGryphon_hard_icon is the file "Blue Gryphon hard.jpg".
 Figure of BlueGryphon_soft_icon is the file "Blue Gryphon soft.jpg".
 Figure of FeralGryphon_hard_icon is the file "Feral_Gryphon_hard.jpg".
 Figure of FeralGryphon_soft_icon is the file "Feral_Gryphon_soft.jpg".
+Figure of Gargoyle_stuck_icon is the file "Gargoyle_stuck.jpg".
 Figure of Gargoyle_hard_icon is the file "Gargoyle_hard.jpg".
 Figure of Gargoyle_soft_icon is the file "Gargoyle_soft.jpg".
 Figure of Gazelle_hard_icon is the file "Gazelle_hard.jpg".
@@ -316,6 +317,7 @@ Figure of Atticus_jeans_neutral_arms_crossed_icon is the file "Atticus_jeans_neu
 Figure of Atticus_jeans_smile_arms_lowered_icon is the file "Atticus_jeans_smile_arms lowered.jpg".
 Figure of Atticus_jeans_smile_arm_raised_icon is the file "Atticus_jeans_smile_arm raised.jpg".
 Figure of Atticus_jeans_frown_arms_crossed_icon is the file "Atticus_jeans_frown_arms crossed.jpg".
+Figure of Augustus_Drake_icon is the file "Augustus_Drake.png".
 Figure of Aurora_clothed_icon is the file "Aurora.png".
 Figure of Bastet_neutral_dress_seethrough_icon is the file "Bastet_neutral_dress_seethrough.jpg".
 Figure of Bastet_neutral_dress_seethrough_nojewelry_icon is the file "Bastet_neutral_dress_seethrough_nojewelry.jpg".
@@ -648,6 +650,28 @@ Figure of Sarah_clothed_icon is the file "Sarah_clothed.jpg".
 Figure of Sarah_face_icon is the file "Sarah_face.jpg".
 Figure of Sarah_face_naked_icon is the file "Sarah_face_naked.jpg".
 Figure of Sarah_naked_icon is the file "Sarah_naked.jpg".
+Figure of Segis_muscular_default_icon is the file "Segis_muscular_default_0.png".
+Figure of Segis_muscular_default_hard_1_icon is the file "Segis_muscular_default_hard_1.png".
+Figure of Segis_muscular_default_hard_2_icon is the file "Segis_muscular_default_hard_2.png".
+Figure of Segis_muscular_default_hard_3_icon is the file "Segis_muscular_default_hard_3.png".
+Figure of Segis_muscular_soft_11_icon is the file "Segis_muscular_soft_11.png".
+Figure of Segis_muscular_soft_12_icon is the file "Segis_muscular_soft_12.png".
+Figure of Segis_muscular_soft_13_icon is the file "Segis_muscular_soft_13.png".
+Figure of Segis_muscular_soft_21_icon is the file "Segis_muscular_soft_21.png".
+Figure of Segis_muscular_soft_22_icon is the file "Segis_muscular_soft_22.png".
+Figure of Segis_muscular_soft_23_icon is the file "Segis_muscular_soft_23.png".
+Figure of Segis_muscular_soft_31_icon is the file "Segis_muscular_soft_31.png".
+Figure of Segis_muscular_soft_32_icon is the file "Segis_muscular_soft_32.png".
+Figure of Segis_muscular_soft_33_icon is the file "Segis_muscular_soft_33.png".
+Figure of Segis_muscular_hard_11_icon is the file "Segis_muscular_hard_11.png".
+Figure of Segis_muscular_hard_12_icon is the file "Segis_muscular_hard_12.png".
+Figure of Segis_muscular_hard_13_icon is the file "Segis_muscular_hard_13.png".
+Figure of Segis_muscular_hard_21_icon is the file "Segis_muscular_hard_21.png".
+Figure of Segis_muscular_hard_22_icon is the file "Segis_muscular_hard_22.png".
+Figure of Segis_muscular_hard_23_icon is the file "Segis_muscular_hard_23.png".
+Figure of Segis_muscular_hard_31_icon is the file "Segis_muscular_hard_31.png".
+Figure of Segis_muscular_hard_32_icon is the file "Segis_muscular_hard_32.png".
+Figure of Segis_muscular_hard_33_icon is the file "Segis_muscular_hard_33.png".
 Figure of Septus_icon is the file "Septus.jpg".
 Figure of Septus_face_icon is the file "Septus_face.jpg".
 Figure of SgtMarks_clothed_icon is the file "Sgt. Marks_clothed.jpg".
@@ -1431,6 +1455,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Atticus_jeans_smile_arms_lowered"	Figure of Atticus_jeans_smile_arms_lowered_icon	"Lyttathebug"	g-black	"normal"
 "Atticus_jeans_smile_arm_raised"	Figure of Atticus_jeans_smile_arm_raised_icon	"Lyttathebug"	g-black	"normal"
 "Atticus_jeans_frown_arms_crossed"	Figure of Atticus_jeans_frown_arms_crossed_icon	"Lyttathebug"	g-black	"normal"
+"Augustus_Drake"	Figure of Augustus_Drake_icon	"Gherod"	g-dark-gray	"normal"
 "Aurora_clothed"	Figure of Aurora_clothed_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Badger clothed"	Figure of Badger_clothed_icon	"SteppeCrow"	g-White	"normal"
 "Badger soft"	Figure of Badger_soft_icon	"SteppeCrow"	g-White	"normal"
@@ -1652,6 +1677,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 ["Fluffy Owl"	Figure of FluffyOwl_icon	"Waxraven/WXRVN"	g-white	"normal"]
 "Fluffy Owl 2"	Figure of FluffyOwl2_icon	"Moirah"	g-white	"normal"
 "Gabriel"	Figure of Gabriel_icon	"Darian821"	g-black	"normal"
+"Gargoyle_stuck"	Figure of Gargoyle_stuck_icon	"EmieChii"	g-white	"normal"
 "Gargoyle_soft"	Figure of Gargoyle_soft_icon	"SteppeCrow"	g-white	"normal"
 "Gargoyle_hard"	Figure of Gargoyle_hard_icon	"SteppeCrow"	g-white	"normal"
 "Garrett"	Figure of Garrett_icon	"Catmonkshiro"	g-black	"normal"
@@ -1943,6 +1969,28 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sea Dragoness SFW"	Figure of SeaDragoness_SFW_icon	"Vashaa"	g-white	"normal"
 "Sea Dragon Hard"	Figure of SeaDragon_hard_icon	"Vashaa"	g-white	"normal"
 "Sea Dragon Soft"	Figure of SeaDragon_soft_icon	"Vashaa"	g-white	"normal"
+"Segis Muscular Default 0"	Figure of Segis_muscular_default_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Default Hard 1"	Figure of Segis_muscular_default_hard_1_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Default Hard 2"	Figure of Segis_muscular_default_hard_2_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Default Hard 3"	Figure of Segis_muscular_default_hard_3_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 11"	Figure of Segis_muscular_soft_11_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 12"	Figure of Segis_muscular_soft_12_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 13"	Figure of Segis_muscular_soft_13_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 21"	Figure of Segis_muscular_soft_21_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 22"	Figure of Segis_muscular_soft_22_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 22"	Figure of Segis_muscular_soft_23_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 31"	Figure of Segis_muscular_soft_31_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 32"	Figure of Segis_muscular_soft_32_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 32"	Figure of Segis_muscular_soft_33_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 11"	Figure of Segis_muscular_hard_11_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 12"	Figure of Segis_muscular_hard_12_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 13"	Figure of Segis_muscular_hard_13_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 21"	Figure of Segis_muscular_hard_21_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 22"	Figure of Segis_muscular_hard_22_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 22"	Figure of Segis_muscular_hard_23_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 31"	Figure of Segis_muscular_hard_31_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 32"	Figure of Segis_muscular_hard_32_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 32"	Figure of Segis_muscular_hard_33_icon	"Gherod"	g-dark-gray	"normal"
 "Septus"	Figure of Septus_icon	"Feralise"	g-black	"normal"
 "Septus_face"	Figure of Septus_face_icon	"Cirrusthecloud"	g-black	"normal"
 "Sgt Marks_clothed"	Figure of SgtMarks_clothed_icon	"SteppeCrow"	g-white	"normal"
@@ -2696,6 +2744,7 @@ carry out artistcredits:
 	say "     Fluffy Owl by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Friendship Pony by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Gazelle by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Gargoyle Stuck Threesome by EmieChii @ https://www.furaffinity.net/user/emiechii/[line break]";
 	say "     German Shepherd by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Giraffe Herm by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
@@ -2808,6 +2857,7 @@ carry out artistcredits:
 	say "     Artemis by FaroreNightclaw @ furaffinity.net[line break]";
 	say "     Anastasia by SandySchreiber @ furaffinity.net[line break]";
 	say "     Atticus by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
+	say "     Augustus Drake by Gherod @  https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
 	say "     Aurora by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Blanche (standing & preg) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Blanche (color) by The_Negative @ furaffinity.net[line break]";
@@ -2943,6 +2993,7 @@ carry out artistcredits:
 	say "     Santa Claws by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Sandra by Trav @ ???[line break]";
 	say "     Sarah by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
+	say "     Segis by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
 	say "     Septus by Feralise @ furaffinity.net[line break]";
 	say "     Septus (face) by Cirrusthecloud @ https://www.furaffinity.net/user/cirrusthecloud/[line break]";
 	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";
@@ -3025,7 +3076,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "Moirah", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sokan", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Wemd", "Wolfram Rolf", "Xenotropos, Yora"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "EmieChii", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "Moirah", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sokan", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Wemd", "Wolfram Rolf", "Xenotropos, Yora"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;

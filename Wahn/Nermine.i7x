@@ -209,11 +209,10 @@ instead of conversing the Nermine:
 	now sortorder entry is 7;
 	now description entry is "Ask Nermine about the counter with rare treasures she has laid out";
 	[]
-	if NewTypeInfectionActive is true:
-		choose a blank row in table of fucking options;
-		now title entry is "Rare Infections";
-		now sortorder entry is 8;
-		now description entry is "Ask Nermine if she can help you gain some unique and exceptional infections";
+	choose a blank row in table of fucking options;
+	now title entry is "Rare Infections";
+	now sortorder entry is 8;
+	now description entry is "Ask Nermine if she can help you gain some unique and exceptional infections";
 	[]
 	if Carried of Demon Tooth > 0:
 		choose a blank row in table of fucking options;
@@ -1438,7 +1437,7 @@ An everyturn rule:
 	else:
 		if JackalBoyTF >= 1:
 			if TailName of Player is not "Jackalboy":
-				say "     Your ass tingles as it shifts and changes while you watch, the power of that strange totem you used obviously still strongly affecting your body. It doesn't take long for your jackal-like tail to reform. Its sleek dark presence behind you proves that its form is stronger then your more recent infection.";
+				say "     Your ass tingles as it shifts and changes while you watch, the power of that strange totem you used obviously still strongly affecting your body. It doesn't take long for your jackal-like tail to reform. Its sleek dark presence behind you proves that its form is stronger than your more recent infection.";
 				now TailName of Player is "Jackalboy";
 				now tail of Player is "You have a sleek black-furred jackal's tail attached to your rear. It seems to sway happily over your tight sexy ass with every step you take.";
 		if JackalBoyTF >= 2:

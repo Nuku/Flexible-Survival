@@ -50,6 +50,43 @@ Version 4 of Deer by Wahn begins here.
 SusanDom is a truth state that varies.[@Tag:NotSaved]SusanDom is usually false.
 SusanSub is a truth state that varies.[@Tag:NotSaved]SusanSub is usually false.
 
+[Samson specific pregnancy section.]
+To say impregSusanChance:
+	if debugactive is 1:
+		say "     DEBUG: Impregnation chance for Susan, base chance 40%, ";
+		if "Fertility Treatments" is listed in Traits of Susan:
+			say "'Fertility Treatment' bonus 20%, ";
+		say "Father: [LastSexualPartner of Susan]";
+	let SusanPregChance be 4; [40% base chance]
+	if "Fertility Treatments" is listed in Traits of Susan:
+		increase SusanPregChance by 2; [20% extra chance]
+	if a random chance of SusanPregChance in 10 succeeds:
+		if debugactive is 1:
+			say "     DEBUG: Impregnation successful! A new deer is growing in Susan now!";
+		now ImpregTimer of Susan is 1; [starts the pregnancy timer]
+	else:
+		if debugactive is 1:
+			say "     DEBUG: Impregnation fail! A chance of [SusanPregChance] in 10 didn't succeed.";
+
+an everyturn rule:
+	if ImpregTimer of Susan > 0: [Susan is pregnant]
+		increase ImpregTimer of Susan by 1; [counting up towards 24]
+		if debugactive is 1:
+			say "     DEBUG: Susan's pregnancy advanced one turn. Current Turn: [ImpregTimer of Susan], Target Value: 24";
+		if ImpregTimer of Susan is 20 and skipturnblocker is 0: [announcement that birthing time is coming closer]
+			if Susan is visible:
+				say "     <Placeholder going into labor scene.>";
+			else:
+				say "     <Placeholder Birth Scene.>";
+		else if ImpregTimer of Susan >= 24 and skipturnblocker is 0: [birthing time]
+			if Susan is not visible: [player isn't anywhere near him]
+				say "     [bold type]Your thoughts wander back to Susan, and you feel like you missed something.[roman type][line break]";
+				add "Absent_Birth" to Traits of Susan; [memory of the birth of human dog offspring without the player present]
+				say "<Placeholder Deergirl/boy birth scene>";
+			increase OffspringCount of Susan by 1; [one more human dog birthed]
+			now ImpregTimer of Susan is 0; [pregnancy reset]
+
+
 Section 1 - Event
 
 Table of GameEventIDs (continued)
@@ -220,24 +257,23 @@ to say SusanDesc:
 		say "     Ignoring the stare, you let your gaze roam over Susan's body, following the curves of her cream-colored breasts barely hidden by a fairly ripped tank top. The protruding nipples of the anthro are clearly visible through the thin fabric. Further down on the level of her crotch, you can see a noticeable bulge in her short-shorts, leaving little doubt that this young woman is packing something extra down there. An audible huff draws your attention back up to her face, looking annoyed and unimpressed at having been inspected by you like a piece of meat.";
 	else if Cock Length of Susan < 10 and Susan is in Primary Lab: [femherm mode in trevor labs]
 		SusanFemHerm_Base; [Used both for Dr. Matt & Dr. Mouse form - moved below as a callout so the text isn't duplicated]
-		say "     You let your gaze roam over Susan's body, following the curves of her cream-colored breasts barely hidden by a fairly ripped tank top. The protruding nipples of the anthro are clearly visible through the thin fabric. Further down on the level of her crotch, you can see a noticeable bulge in her short-shorts, leaving little doubt that this young woman is packing something extra down there. Casually observing her, you notice that from time to time, she lets a hand stray down to the bulge of her short shorts, lightly rubbing and adjusting it.";
+		say "     You let your gaze roam over Susan's body, following the curves of her cream-colored breasts barely hidden by a fairly ripped tank top. The protruding nipples of the anthro are clearly visible through the thin fabric. Further down on the level of her crotch, you can see a noticeable bulge in her short-shorts, leaving little doubt that this young woman is packing something extra down there. Casually observing her, you notice that from time to time, she lets a hand stray down to the bulge of her short shorts, lightly rubbing and adjusting it. [OffspringCount of Susan] of your children follow her around, doting on their mother and greeting you warmly.";
 	else if Cock Length of Susan > 10 and Susan is in Primary Lab: [buck mode in Trevor Labs]
 		SusanMaleHerm_Base; [Used both for Dr. Matt & Dr. Mouse form - moved below as a callout so the text isn't duplicated]
+		project Figure of Susan_MHerm_shortshorts_icon;
 		if "Samson Active" is listed in Traits of Susan: [Samson description, male pronouns]
-			project Figure of Susan_MHerm_shorts_icon;
-			say "     Having physically grown in size since you first found him, Samson's body is now conforming to much more of a masculine shape that includes broadened shoulders and chest, as well as more muscle tone of the arms and legs. His bosom appears to have shrunk a bit - or maybe it's just that the anthro's pectoral muscles have filled in, catching up to stick out above a flat belly and well-defined abs. That's not to say that he's turned completely male though, as you can still see some rounded curves of Samson's breasts at the lower edge of his pecs, with nicely large areolas and protruding nipples. He's still a herm, but a decidedly masculine one now. Glancing down at the crotch of your deer friend, you can see that the bulge in the short-shorts is larger than it was before too, and you know full well that an 11-inch cock is just waiting for you within.";
+			say "     Having physically grown in size since you first found him, Samson's body is now conforming to much more of a masculine shape that includes broadened shoulders and chest, as well as more muscle tone of the arms and legs. His bosom appears to have shrunk a bit - or maybe it's just that the anthro's pectoral muscles have filled in, catching up to stick out above a flat belly and well-defined abs. That's not to say that he's turned completely male though, as you can still see some rounded curves of Samson's breasts at the lower edge of his pecs, with nicely large areolas and protruding nipples. He's still a herm, but a decidedly masculine one now. Glancing down at the crotch of your deer friend, you can see that the bulge in the short-shorts is larger than it was before too, and you know full well that an 11-inch cock is just waiting for you within. [OffspringCount of Susan] of your children follow him around, doting on their father and greeting you warmly.";
 		else: [Susan description, female pronouns]
-			project Figure of Susan_MHerm_shortshorts_icon;
-			say "     Having physically grown in size since you first found her, Susan's body is now conforming to much more of a masculine shape that includes broadened shoulders and chest, as well as more muscle tone of the arms and legs. Her bosom appears to have shrunk a bit - or maybe it's just that the anthro's pectoral muscles have filled in, catching up to stick out above a flat belly and well-defined abs. That's not to say that she's turned completely male though, as you can still see some rounded curves of Susan's breasts at the lower edge of her pecs, with nicely large areolas and protruding nipples visible through the thin fabric of her ripped tank top. She's still a herm, but a decidedly masculine one now. Glancing down at the crotch of your deer friend, you can see that the bulge in the short-shorts is larger than it was before too, and you know full well that an 11-inch cock is just waiting for you within.";
+			say "     Having physically grown in size since you first found her, Susan's body is now conforming to much more of a masculine shape that includes broadened shoulders and chest, as well as more muscle tone of the arms and legs. Her bosom appears to have shrunk a bit - or maybe it's just that the anthro's pectoral muscles have filled in, catching up to stick out above a flat belly and well-defined abs. That's not to say that she's turned completely male though, as you can still see some rounded curves of Susan's breasts at the lower edge of her pecs, with nicely large areolas and protruding nipples visible through the thin fabric of her ripped tank top. She's still a herm, but a decidedly masculine one now. Glancing down at the crotch of your deer friend, you can see that the bulge in the short-shorts is larger than it was before too, and you know full well that an 11-inch cock is just waiting for you within. [OffspringCount of Susan] of your children follow her around, doting on their mother and greeting you warmly.";
 	else if HP of Susan > 50 and HP of Susan < 73: [doe mode with labcoat in the hospital]
 		SusanFemHerm_Base; [Used both for Dr. Matt & Dr. Mouse form - moved below as a callout so the text isn't duplicated]
-		say "     Being somewhat of a hospital lab assistant now, she's been provided a lab coat while working with Dr. Mouse. Susan has hemmed it slightly so it better shows her effeminate body. It covers her well-rounded breasts and hangs down over her body and crotch, not quite hiding a bulge there. Casually observing her, you notice that she frequently slips a hoofed hand into her coat to absentmindedly fondle it.";
+		say "     Being somewhat of a hospital lab assistant now, she's been provided a lab coat while working with Dr. Mouse. Susan has hemmed it slightly so it better shows her effeminate body. It covers her well-rounded breasts and hangs down over her body and crotch, not quite hiding a bulge there. Casually observing her, you notice that she frequently slips a hoofed hand into her coat to absentmindedly fondle it. [OffspringCount of Susan] of your children follow her around, doting on their mother and greeting you warmly.";
 	else if HP of Susan > 72: [buck mode in the hospital]
 		SusanMaleHerm_Base; [Used both for Dr. Matt & Dr. Mouse form - moved below as a callout so the text isn't duplicated]
 		if "Samson Active" is listed in Traits of Susan: [Samson description, male pronouns]
-			say "     Having physically grown in size since you first found him, Samson's body is now conforming to much more of a masculine shape that includes broadened shoulders and chest, as well as more muscle tone of the arms and legs. Being somewhat of a hospital lab assistant now, he's been provided a lab coat while working with Dr. Mouse. Under the white coat, you can see that his bosom seems to be flatter and less pointy than it appeared before - maybe it's shrunk a bit, it could just be that the anthro's pectoral muscles have filled in, catching up to stick out above a flat belly and well-defined abs. That's not to say that he's turned completely male though, as you catch a glimpse of some rounded curves of Samson's breasts at the lower edge of his pecs, with nicely large areolas and protruding nipples. He's still a herm, but a decidedly masculine one now. Glancing down at the crotch of your deer friend, you can see that the bulge in the short-shorts is larger than it was before too, and you know full well that an 11-inch cock is just waiting for you within.";
+			say "     Having physically grown in size since you first found him, Samson's body is now conforming to much more of a masculine shape that includes broadened shoulders and chest, as well as more muscle tone of the arms and legs. Being somewhat of a hospital lab assistant now, he's been provided a lab coat while working with Dr. Mouse. Under the white coat, you can see that his bosom seems to be flatter and less pointy than it appeared before - maybe it's shrunk a bit, it could just be that the anthro's pectoral muscles have filled in, catching up to stick out above a flat belly and well-defined abs. That's not to say that he's turned completely male though, as you catch a glimpse of some rounded curves of Samson's breasts at the lower edge of his pecs, with nicely large areolas and protruding nipples. He's still a herm, but a decidedly masculine one now. Glancing down at the crotch of your deer friend, you can see that the bulge in the short-shorts is larger than it was before too, and you know full well that an 11-inch cock is just waiting for you within. [OffspringCount of Susan] of your children follow him around, doting on their father and greeting you warmly.";
 		else: [Susan description, female pronouns]
-			say "     Having physically grown in size since you first found her, Susan's body is now conforming to much more of a masculine shape that includes broadened shoulders and chest, as well as more muscle tone of the arms and legs. Being somewhat of a hospital lab assistant now, she's been provided a lab coat while working with Dr. Mouse. Under the white coat, you can see that her bosom seems to be flatter and less pointy than it appeared before - maybe it's shrunk a bit, it could just be that the anthro's pectoral muscles have filled in, catching up to stick out above a flat belly and well-defined abs. That's not to say that she's turned completely male though, as you can still see some rounded curves of Susan's breasts at the lower edge of her pecs, with nicely large areolas and protruding nipples visible through the thin fabric of her ripped tank top. She's still a herm, but a decidedly masculine one now. Glancing down at the crotch of your deer friend, you can see that the bulge in the short-shorts is larger than it was before too, and you know full well that an 11-inch cock is just waiting for you within.";
+			say "     Having physically grown in size since you first found her, Susan's body is now conforming to much more of a masculine shape that includes broadened shoulders and chest, as well as more muscle tone of the arms and legs. Being somewhat of a hospital lab assistant now, she's been provided a lab coat while working with Dr. Mouse. Under the white coat, you can see that her bosom seems to be flatter and less pointy than it appeared before - maybe it's shrunk a bit, it could just be that the anthro's pectoral muscles have filled in, catching up to stick out above a flat belly and well-defined abs. That's not to say that she's turned completely male though, as you can still see some rounded curves of Susan's breasts at the lower edge of her pecs, with nicely large areolas and protruding nipples visible through the thin fabric of her ripped tank top. She's still a herm, but a decidedly masculine one now. Glancing down at the crotch of your deer friend, you can see that the bulge in the short-shorts is larger than it was before too, and you know full well that an 11-inch cock is just waiting for you within. [OffspringCount of Susan] of your children follow her around, doting on their mother and greeting you warmly.";
 
 to SusanFemHerm_Base:
 	project the Figure of Susan_FHerm_clothed_icon;
@@ -292,6 +328,11 @@ to SusanTalkMenu: [TODO: Add talk option about sexual orientation]
 		now title entry is "His life";
 		now sortorder entry is 1;
 		now description entry is "Get to know Samson a bit more";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Switching his role";
+		now sortorder entry is 3;
+		now description entry is "Ask if Samson wants to switch things up";
 	else:
 		choose a blank row in table of fucking options;
 		now title entry is "Her life";
@@ -385,6 +426,8 @@ to SusanTalkMenu: [TODO: Add talk option about sexual orientation]
 				else if (nam is "Starting Dr. Matt's Experiment"):
 					say "[SusanExperimentTalk]";
 					now DoneTalking is true;
+				else if (nam is "Switching his role"):
+					say "[SamsonRoleSwitch]";
 				if DoneTalking is false and Affection of Susan >= 0:
 					SusanTalkMenu; [looping back to continue talking]
 				else:
@@ -396,6 +439,16 @@ to SusanTalkMenu: [TODO: Add talk option about sexual orientation]
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
+
+to say SamsonRoleSwitch:
+	if SusanSub is true:
+		say "     Asking Samson if he'd like to change things up and try domming for a while, you watch his face for a reaction, hoping that your change of heart isn't too wishy-washy. 'I suppose I could try being dominant again, if you're sure.' Flexing one bicep, the former-doe poses for you as he answers, then looks away with a barely-hidden grin. 'You missed that side of me, huh? If you're not careful I might get a big head!'";
+		TraitLoss "Submissive" for Susan;
+		TraitGain "Dominant" for Susan;
+	else:
+		say "     Asking Samson if he'd like to try bottoming for a while, you watch his face for a reaction, hoping you aren't insulting the newly transformed man by asking him to return to his submissive roots. 'You could have told me if you wanted a buck to fuck.' Flexing one bicep, the former-doe poses for you as he answers with a short chuckle, then looks away with a coy smile. 'I let you choose who I was going to be anyway... It's not like I would have minded.'";
+		TraitLoss "Dominant" for Susan;
+		TraitGain "Submissive" for Susan;
 
 to say SusanBackgroundTalk:
 	if "Background Talk Done" is not listed in Traits of Susan: [note: no varying texts needed in this, as Samson cannot exist without this being talked about]
@@ -823,7 +876,7 @@ to say sexwithSusan:
 		if (Loyalty of Susan < 3 or Loyalty of Susan is 5):
 			say "     [bold type]You really should talk to [Susan] and clear up what you want to do about Dr. Matt's experiment first. [roman type][line break]";
 		else if Loyalty of Susan is 3:
-			say "     [bold type]Maybe you should wrap up the experiment with Doctor Matt first. It is noticeable that he's throwing you glances quite often, and that's a little unnerving. [roman type][line break]";
+			say "     [bold type]Maybe you should wrap up the experiment with Doctor Matt first. It is noticable that he's throwing you glances quite often, and that's a little unnerving. [roman type][line break]";
 		else if Loyalty of Susan is 4:
 			say "     [Susan] smiles and lightly touches your arm, then nods to the bed. Taking a deep breath, [SubjectPro of Susan] adds, [if Cock Length of Susan < 10]'So. Do you - do we... uhm. Lie down now?' She seems a bit jittery, looking around nervously and even lightly trembling. [else]'So, guess it's time to do it then, hm?' [SubjectProCap of Susan] seems a bit nervous, looking around distractedly. [end if]At the same time though, [SubjectPro of Susan] appears eager to feel that someone doesn't see [ObjectPro of Susan] as some sort of weird creature and still wants to be with [ObjectPro of Susan] intimately.";
 			say "     [bold type]You should tell Doctor Matt that you're ready to start with the experiment now. [roman type][line break]";
@@ -872,7 +925,7 @@ to SusanSexMenu:
 			choose a blank row in table of fucking options;
 			now title entry is "Ask Susan for a blowjob";
 			now sortorder entry is 0;
-			now description entry is "Fill your sweet doe go down on you";
+			now description entry is "Have your sweet doe go down on you";
 	[]
 	if Player is female:
 		if "Samson Active" is listed in Traits of Susan:
@@ -884,15 +937,20 @@ to SusanSexMenu:
 			choose a blank row in table of fucking options;
 			now title entry is "Ask Susan to go down on your pussy";
 			now sortorder entry is 1;
-			now description entry is "Fill your sweet doe go down on you";
-	[
-	if Player is male and SusanDom is true:
+			now description entry is "Have your sweet doe go down on you";
+	[]
+	if Player is male:
 		if "Samson Active" is listed in Traits of Susan:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck Samson's pussy";
 			now sortorder entry is 2;
 			now description entry is "Fill your muscular buck's pussy with your cock";
-		else:
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Get fucked by Samson";
+			now sortorder entry is 3;
+			now description entry is "Get fucked by your muscular buck";
+		[else:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck Susan's pussy";
 			now sortorder entry is 2;
@@ -974,8 +1032,10 @@ to SusanSexMenu:
 					say "[Susan gives BJ]";
 				else if (nam is "Ask Samson to go down on your pussy" or nam is "Ask Susan to go down on your pussy"):
 					say "[Susan gives Cunni]";
-				else if (nam is "Fuck Samson's pussy" or nam is "Fuck Susan's pussy"):
-					say "[Susan receives PussyFuck]";
+				else if (nam is "Fuck Samson's pussy"):
+					say "[Samson receives PussyFuck]";
+				else if (nam is "Get fucked by Samson"):
+					say "[Player receives SamsonFuck]";
 				else if (nam is "Fuck Samson's ass" or nam is "Fuck Susan's ass"):
 					say "[Susan receives AssFuck]";
 				else if (nam is "Go down on Samson's cock" or nam is "Go down on Susan's cock"):
@@ -1066,40 +1126,61 @@ to say Susan gives Cunni:
 			say "     'Hope you liked it,' you hear the anthro doe say with a bashful smile, even as she digs two fingers into her own pussy, frigging it hard. The next thing coming from her mouth is a lustful pant as she pushes herself to join you in orgasm, leaking femcum all over her own fingers and having her cock blast streaks of cum over the floor between your feet. You stroke over her hair, telling Susan that you enjoyed doing this with her. She leans her head into your touch for a second, smiling, then stands up and kisses you right on the lips, sharing a little of your own taste with you.";
 	NPCSexAftermath Susan receives "OralPussy" from Player;
 
-to say Susan receives PussyFuck:
-	if Cock Length of Susan > 10: [M-Herm]
-		if SusanDom is true and Affection of Susan < 10: [high bar for dom Samson/Susan]
-			say "Yeah, not happening!";
-		else if Affection of Susan < 5: [moderate high bar for Samson/Susan]
-			say "Yeah, not happening!";
+to say Samson receives PussyFuck:
+	if Cock Length of Susan > 10: [M-Herm. Added December 2023 by Voidsnaps.]
+		say "     Stepping up to the herm buck, you hint that you'd like to give his cunt the breeding it deserves. After all, why have a pussy if he's not going to use it? Hell, you think he might look cute carrying a litter!";
+		if SusanSub is true:
+			Linebreak;
+			say "     Samson shifts a bit as you mention what you want to do to him, blatantly touching the space behind his balls. He nibbles at his lower lip as his eyes roam downward, and you can tell that he's on board with your idea as his gaze fixates on your crotch. Breathlessly, he nods, his voice breaking as he speaks. 'It's been a while since I've thought about it, but sure. I wouldn't say no to revisiting my days as a doe.' The buck helps you with your gear, crossing the distance between you without hesitation, his body so close that you can feel the heat pouring off his fur. Ever-seeking your affection, he presses his lips to yours, guiding your hand lower until your fingers brush over his damp lower sex, bypassing the throbbing member above it and the heavy balls below his maleness.";
+			say "     Eagerly, you slip two fingers into the buck's cunt, swirling them through silken juices and slipping them in and out until his breath comes in soft, hitched moans against your lips. You can tell he's ready for you when his legs spread, shaking with every touch of your thumb against his clit, and you take the lead, pressing him against a nearby wall and lining yourself up. Supple lips swallow your manhood with no issue, sheathing you in wet, hot tightness, and you can't help yourself, taking a firmer grip of furred hips and roaming your tongue over his neck, coaxing more desperate sounds from his husky voice. 'Don't stop!' Samson begs as you leverage your position, slamming your hips against furry thighs and sandwiching his coc between your stomach and his. His arms have migrated from your back to your shoulders, and he stands on his tip toes to give you full access to his fertile pussy, inner muscles clamping with every thrust and wetness drooling down your shaft to pitter-patter on the ground below. Wetness so copious that you're not sure if he's cumming coats every inch of your shaft, and you can feel the tip ram against his cervix with every increasingly ragged hump, lost in the pillowy softness of the entrance to his womb and basting it in your dripping pre.";
+			WaitLineBreak;
+			say "     Soon enough, you fall in a heap on the ground as Samson's weight proves too much for you to hold up, but you hardly miss a beat, dragging his legs around your waist and biting at his neck while you beat your crotch off of his muscular butt, crouching over him in a mating press. You can feel your orgasm welling up, and the slick tightness around your shaft wouldn't let you pull out if you wanted to, so you announce that you're about to breed your doe-turned-buck, promising him a swollen stomach and a litter of his own. 'I need it!' Feeding off of your energy, Samson begs you to impregnate him, scratching hoofed fingertips along your back as his body melts like butter around you, every movement begging you to slide further into him, even as you feel his cock jump and slap against your stomach, splashing a river of Samson's enjoyment against well-defined abs and dripping into his open mouth. His feminine sex isn't far behind, gushing around your cock and gripping it like an angry gorilla's fist, determined to keep you hilted.";
+			say "     Biting Samson's neck as softly as you can in your feral state, you give one last titanic thrust, bruising his cervix, only to soothe it with a hot rush of seed. You're so deep inside that there's no doubt about the success of your breeding, and judging by the overflowing seed dribbling out around your coupling, there's no room for more. Raw and friction-burned, you slip out of his lower lips, grinding against them as they ooze with your seed and resting on his contorted body, sharing a lazy kiss with the over-fucked buck. 'Fuck. How does it feel even better this way than it used to?' Breathlessly, Samson squirms as you grind along his clit, shamelessly fingering his cummy hole and licking away the remnants of his orgasm, staring up at you with a needy expression. Stroking your softening cock, he looks up at you with a pleading expression at odds with his muscular appearance, then lines you up with his sopping cunt, swirling your tip over quivering lips. 'You know... We could try for twins.' He says with a groan, playing with himself as if begging for more.";
+			WaitLineBreak;
+			say "     You resist as long as you can, but Samson's fingers are too insistent, and before long, you settle between his legs, cramming your cock into the cummy mess you made of his needy pussy and ramming yourself home once more. You lose count of how often you explode into those welcoming depths, losing yourself in sweaty, greedy movements. By the time you finish with him, your stomachs connect with sloppy strands of buck-cum, and your seed has whipped into a musky foam coating your coupling. Spent, you cuddle with the buck for a while until your cock softens, leaving him lying against the wall and rubbing his sticky stomach with a dreamy expression, no doubt imagining the litter he'll swell with soon enough. The thought has your sore cock throbbing as you walk away, but you're too exhausted to go again, shaking your head. Your slutty buck will have to wait.";
 		else:
-			say "     ";
-			NPCSexAftermath Susan receives "PussyFuck" from Player;
-	else: [F-Herm]
-		if SusanSub is true: [sub scene]
-			say "     ";
-		else: [regular scene]
-			say "     ";
+			say "     Samson chuckles at your mention, crossing the distance between you and tilting your chin up with one hand. His other hand sneaks around you, cupping your ass, as he blatantly presses himself against your front, letting you feel the heat of his twin sexes. 'Who says I'm yours to breed? Maybe I like the idea of someone being my doe instead.' Pressing you against a nearby wall, he sheds your gear, roaming one hand down to cup your growing erection. 'Though I suppose you've got me feeling nostalgic... Mind if I take you for a ride?' Backed into a proverbial corner with your manhood in one strong hand, you swallow, staring into the intense, dominating gaze of your big, strong buck. Squeaking out a reply, you apologize for being too forward, shivering as that cervine palm strokes along your shaft and squeezes your balls, working you to full mast. Samson knows how to please you and has taken to his role as a dominant buck. Even the hands roaming over your chest feel as though they're taking their pleasure from you rather than giving it away!";
+			say "     Even as Samson pushes you down to your knees and straddles you, you feel as though he's in control, swallowing your cock into hot, wet tightness and smearing his manhood over your bare stomach, marking you with his scent. The only thing betraying his enjoyment is his breathless, husky voice whispering in your ear. 'I want you to breed me. Harder and longer than you've ever bred anyone else.' Possessively tightening his grip on your shoulders, he sits down, taking every inch of you and butting your dripping tip against the entrance to his womb. Swept up in the dominant buck's desire to milk your balls dry, you grip his muscular ass, groaning your enjoyment into his hair as his tongue roams over your neck. Meeting each roll of his hips, you try your best to please him, slamming your crotch into his thighs hard enough that you swear you hear his wetness spraying the floor with each slap. His pace is hard to follow, but you're rock-hard, and those tight muscles stroking your manhood like a velvet-gloved hand demand that you try, pulling you into suction that puts the most seasoned whore to shame.";
+			WaitLineBreak;
+			say "     Pushing you onto your back, Samson looms over you, licking his lips and placing his hands on your chest. With a grunt, he grins down at you, slamming his ass down with a speeding rhythm that stirs your coupling into a foamy mess of mixed fluids. 'Cum for me. I want every drop.' He moans out, his cock thudding on your stomach with every downward movement. You try to hold out as long as possible, floating on the edge of release and desperate to continue the frenzied mating. It feels so good that you don't want it to stop, but eventually, that wringing pussy drags your orgasm out of you, bottoming out just as you bathe that greedy cervine cervix in baby batter, crying out as your balls draw up and loose everything deep inside. It's so good that it almost hurts, and the desperate bounce of that muscular body as Samson joins you in your finish prolongs your pleasure until you're sure you'll break.";
+			say "     Thankfully, Samson slows down before you lose your mind, wiping sweat from his brow and running his hand over his stomach, stroking his still-hard manhood as he perches on your crotch, pinning your legs to the floor. 'Mmm. Somehow, that feels even better than when I was a doe.' With a devious smirk, he leans back, clamping his inner muscles and releasing his drooling cock as he steadies himself on your legs. 'But... I want a litter.' Without giving your cock a chance to go soft, he lifts his hips in a steady rhythm, polishing your shaft with renewed vigor and stirring the thick coat of seed you've already given his pussy into musky foam. You try to protest, but it's impossible to think with your cock savaged by that tight cunt, and before long, you're thrusting your hips upward, your oversensitive shaft plunging to the root again and again. You lose track of time in that desperately clutching pussy, with nothing but the heated spray of Samson's fountaining cock to track how often you make each other orgasm, adding to the growing puddle beneath your bare ass. It isn't until he's gone soft, his package flopping with every thrust, that you cum for the last time in that greedy cunt, your meager contribution barely noticeable in the sloppy mess. Exhausted, you beg him to stop, clutching his hips to hold him in place and panting heavily.";
+			WaitLineBreak;
+			say "     Samson seems just as overfucked as you are, and he slumps forward to press his lips against yours as you cuddle in the afterglow, still in control despite his overstuffed womb. Licking a stray cumshot from your cheek, he rolls off of you, staring up at the ceiling and chuckling as he speaks in a tired, husky whisper. 'We're doing that again later. Hope you're ready. Groaning, you smile to yourself, promising the cervine stud that you'll pump him full of fawns whenever he wants but cautioning him that he'll have to pace himself if he doesn't want your dick to fall off. Chuckling along with his grumbling reaction, you spend the next few minutes in silent companionship until your legs regain enough feeling to walk, then gather your things, leaving him to rest.";
 		NPCSexAftermath Susan receives "PussyFuck" from Player;
+
+to say Player receives SamsonFuck: [Added by voidsnaps December 2023. Anal only.]
+	say "     Approaching Samson, you slip your hand down to his sheath, juggling his balls in your palm and playing with the cock that slips free, stroking it as it throbs and grows in your palm. Pressing close, you ask if he wants to put his newfound manhood to good use, guiding his hand down to your ass and rubbing up against him.";
+	if SusanSub is true:
+		say "     Swallowing, Samson strokes over your ass with a soft groan, looking down at your hand's slippery progress around his growing pole. 'If that's what you want... I could try.' His excitement grows as he helps you out of your gear, and he presses his lips against yours as he gains unrestricted access to your rump, massaging your cheeks and dipping two fingers between them to test your rear entrance. Satisfied with Samson's hardness, you turn around, presenting your rump and arching your back to push it back against that thick cock. He's hesitant, but you know just how to get the buck ready to go, reaching behind to guide his drippy cockhead against your entrance and nuzzling it in until you feel a wet pop. It's big. Almost too big, but he's so excited that you're well-lubed and ready to go in seconds, sheathing him to the root.";
+		say "     'Woah. Fuck.' Speechless at the relatively new sensation of using his manhood, Samson grips your hips, resting his weight on you and stroking his fingers along your skin. After a moment, he withdraws, shivering and throbbing with each inch slipping through your tight entrance. He's a quick study, though, grunting with effort as he ruts away at your ass, balls slapping against your cheeks with growing excitement. Widening your stance, you beg for more, fighting to stay on your feet as the horny buck speeds toward orgasm, his hot breath against your neck only adding to the experience as your dick flops in time with every ragged thrust. He's inexperienced, but his shaft's so thick that he can't help but hit your prostate with every ramming thrust, his grip on your midsection growing tighter as he nearly lifts you off your feet in an attempt to fit more of his shaft than is humanly possible. It's too much, and the constant manhandling of your poor prostate sends you over the edge, spraying the wall in front of you with proof of your enjoyment.";
+		WaitLineBreak;
+		say "     Samson isn't far behind, his breath growing ragged and his fingers gripping your thighs as he drags you back to the hilt one final time. Those hefty balls draw up, and before you know it, the heated squirt of concentrated buck drowns your innards, steeping your inner walls in cum. There's so much that it drips down your thighs, but you clamp tightly, demanding more, until his cock stills, its heavy throbs slowing to a weak twitch. 'I'll never get used to that feeling.' Samson groans, nuzzling into your ear and wrapping his arms around your midsection in a makeshift hug. He's still buried deep inside you, and it seems he has no intention of pulling out, soaking his cock in the mess he made. You sway in gentle harmony as he feels the rounded bulge in your stomach where he deposited his seed until you feel his cock pulse back to life, followed by a soft, questioning voice. 'Can we go again? I don't think I'm ready for this to end.'";
+		say "     Before you can answer, you feel Samson's cock take another gentle jab at your pleasure button, coaxing you to spear yourself on his member with a hasty nod. You're not ready for that sensation to end, either! Slowly, you work yourself back against him, working in tandem with the horny buck to fuck yourself on that plump member. You're not sure how long you stay there in Samson's arms, subjected to what feels like half a dozen orgasms until your stomach sloshes with horny buck spunk. By the time his soft cock flops free of your ruined hole, you couldn't get erect if you wanted to, and you can barely feel your legs, but thankfully his masculine physique gives you something to hang onto, snuggling back into his cut physique until you can move once more. 'How was I?' Samson asks once you have enough agency to turn around, enfolding you in his arms and squishing his softened cock against yours. He looks so cute and desperate to please that you answer him with a kiss, leaving him there to rest as you gather your gear and prepare to leave. You might walk with a limp for a short while, but it was worth it!";
+	else:
+		say "     Samson doesn't bother with foreplay, stripping away your gear and slapping your bare ass. With a cocky grin, he hoists you by the waist, pressing you against the wall and placing his cock tip between your cheeks. With one hard thrust, the buck sheaths himself in your ass, crushing your prostate with the thickness of his shaft and trickling pre into your innermost depths, his sheer size stinging your freshly violated hole. Burying his face in your neck, he murmurs into your ear, his voice husky and full of desire. 'Don't tease me. Just ask instead. I'm always ready to breed you.' Before you can retort, Samson sets up a rough rhythm, pounding deep enough into your stomach that you swear you can feel your skin stretch into the stark outline of his shaft, butting against the surface. It's what you wanted, but you can't do much but hold on for the ride, gripping his shoulders. You can't help yourself, desperately begging for more even as your poor savaged hole begs for mercy.";
+		say "     Samson abandons the wall long before he finishes with you, giving your burning muscles a chance to relax as he sinks to the ground with you still cradled in his lap, his hips flexing to cram every inch of excited buck as deep into you as he can manage. Punctuated by deep grunts and soft kisses along your cheek that undercut his roughness, he murmurs in your ear, his hair falling in his face and shrouding you in the scent of sweaty buck. 'Fuck. Close.' Before you can prepare yourself, he hilts himself, teeth digging into your shoulder in a gentle love bite as you feel him explode deep inside you, filling your hole with gush after gush of pure buck. Panting from the speedy, rough nature of desperate lovemaking, you melt in Samson's arms, patting him on the back and thanking him for his 'services.' It might not have lasted long, but it was certainly passionate. If he'll let you up, you can finish yourself off and be on your way.";
+		WaitLineBreak;
+		say "     'Not done.' Samson breathes in your ear as you attempt to disengage, his hands moving to your ass and clutching it possessively. Pulling your body forward until he's leaning over you, he pushes your legs backward until they're almost wreathing your ears, swiveling his hips as his manhood swells back to full mast. 'You're not leaving until you're pregnant, or I get sick of trying. I want you so pregnant you can barely walk.' He growls his words, though you can still see a hint of affection in his expression. Your erection gives away your desire as Samson pounds himself to the root, your fingernails scrabbling at his back in feigned surprise. He's even rougher than before, though his first load slickens your innermost depths, letting him bash his balls off of your upturned rump to his heart's content, smashing your prostate with every feral hump. It's too much to bear, and before you know it, you're clamping around his cock, spraying yourself with cum, only to cling to his muscles as he demands more of your body, like an avalanche bearing down on you.";
+		say "     You soon lose track of how long Samson spends inside of you, inflating your poor stomach with load after load in every position you can imagine, from pounding you with your head between your feet to ramming your cock against the floor below as he bears his entire weight on your backside, filling the air with lewd, sloshing thrusts that squirt cum from your abused hole. You don't bother asking him to stop, instead following his lead and trying your best to stay lucid, though eventually failing and blacking out in his embrace.";
+		WaitLineBreak;
+		say "     What feels like hours later, you awaken, sprawled atop the buck, cradled in his arms with a half-had cock plugging your ruined hole and a face buried in your neck. You're not sure how long you've been there, but he's certainly succeeded in his goal of impregnating you, if only in terms of looks, swelling your stomach into a sloshing dome of buck-batter. Lounging in his strong arms, you take a moment to return his silent affection, sharing in a passionate kiss before dismounting your former doe, leaving him to clean the mess coating every inch of his crotch and making sure to show off his handiwork as you bend to gather your scattered gear. You certainly made the right choice in bringing Samson to life!";
+	NPCSexAftermath Player receives "AssFuck" from Susan;
 
 to say Susan receives AssFuck:
 	if Cock Length of Susan > 10: [M-Herm]
-		if SusanDom is true and Affection of Susan < 10: [high bar for dom Samson/Susan]
-			say "Yeah, not happening!";
-		else if Affection of Susan < 5: [moderate high bar for Samson/Susan]
-			say "Yeah, not happening!";
+		say "     Making your way closer to Samson, you pat his bare ass as you press yourself against his front, shedding your belongings before taking hold of both cheeks and squeezing them. With a cheeky grin, you mention that Samson's ass is looking especially appetizing today and ask whether he would let you take it for a test drive. Your erection butting against his balls leaves no room for misunderstanding, but hopefully, he's as excited as you are!";
+		if SusanSub is true:
+			say "     Melting against your touch, Samson returns your affection, twining his arms around your neck and wiggling his rear in your groping hands. 'Mmm. Always so forward. If that's all you wanted, I could have stayed a doe.' Grinding his growing erection against yours, he leans in for a kiss, his fluffy little tail dusting your fingertips for a moment before he breaks your grip. 'Though judging by this, you have your reasons.' He says as he turns around, showing off his muscular rump and lifting his tail to flash his puckered tail hole. Massaging those cheeks, you spread them apart, slotting your dripping tip against his hole with an experimental prod. Velvety flesh flexes against your tip, winking then relaxing just enough to slip over the first inch, and you're already smitten by that perfect hole, ignoring the dripping slit just below it. It's enough to entice you deeper, forgoing a tease in favor of bottoming out in heated silk.";
+			say "     'Mmm. I don't remember it feeling this good when I was a' Breaking off as you bottom out, Samson groans aloud, his innards flexing to suckle at your shaft. The cause of his delight becomes apparent as the pillowy softness of his prostate caresses the underside of your cock, and as you give an experimental thrust, he groans out, placing both hands on the wall and arching his back. Unable to resist a moment longer, you square your hips, ramming away at the buck's perky cheeks and grunting as his tight inner walls attempt to hold you in place. He feels heavenly, and it takes everything you have not to cum as quickly as you can, but you grit your teeth, swiveling your hips to explore his colon and draw more desperate moans from his open mouth. If you're going to breed your handsome buck, you'll do it right!";
+			WaitLineBreak;
+			say "     Samson claws for purchase at the wall, his free hand blatantly stroking his manhood. He seems to be enjoying himself even more than you are, his voice growing higher pitched and needy as you work his hole into a precum-coated lather. It's clear that he wants more of you, and his hips only grow more insistent, pressing backward as his impending orgasm wrings your dick, demanding its due. Eager to please, you up your tempo, giving Samson's upturned cheeks a soft slap and ramming yourself home as he clamps down like a silken vice. It's too much for you, and right as you feel the tide of your orgasm rising to the surface, you sheath yourself to the root, burying your face in sweaty back fur. Your balls explode through your tip in such volume that you wonder if you'll have anything left in you after you finish, marking every inch of his innards and backfiring down your balls to drip down muscular thighs, basting Samson's poor untouched cunt in the remainder as you flop free of his ruined rear, leaving his hole gaping and clasping at an invisible cock.";
+			say "     'Fuck. That was... Fuck.' At a loss for words, Samson drags you into a soft kiss, holding you tight as nothing but the wet sound of cum dripping to the floor below can be heard. 'Let's do that again, sometime.' He says as you pull away, leaving you to gather your gear as he strokes his still dripping manhood, leaning heavily against the wall as if worried he'll collapse. You leave him to clean things up, feeling refreshed and more than happy with your efforts.";
 		else:
-			if AnalVirgin of Susan is true: [first time fucking]
-				say "     ";
-				TraitGain "Fucked a pussy" for Susan;
-			else: [repeat]
-				say "     ";
-			NPCSexAftermath Susan receives "AssFuck" from Player;
-	else: [F-Herm]
-		if AnalVirgin of Susan is true: [first time fucking]
-			say "     ";
-		else: [repeat]
-			say "     ";
+			say "     Leaning into your touch, Samson returns your affection, grabbing your ass in return and wiggling his rear in your groping hands. 'Mmm. Always so forward. If that's all you wanted, I could have stayed a doe.' Grinding his growing erection against yours, he leans in for a dominating kiss that slips his tongue almost into your throat, his fluffy little tail dusting your fingertips for a moment before he breaks your grip. 'Though I guess a doe wouldn't be nearly as tight as I am.' He says as he turns around, showing off his muscular rump and lifting his tail to flash his puckered tail hole. Massaging those cheeks, you spread them apart, slotting your dripping tip against his hole with an experimental prod. Velvety flesh flexes against your tip, winking then relaxing just enough to slip over the first inch, and you're already smitten by that perfect hole, ignoring the dripping slit just below it. It's enough to entice him to shove backward, forgoing a tease in favor of bottoming you out in heated silk.";
+			say "     'Mmm. Feels even better now.' Breaking off as you bottom out, Samson groans aloud, his innards flexing to suckle at your shaft. The cause of his delight becomes apparent as the pillowy softness of his prostate caresses the underside of your cock, and as you give an experimental thrust, he groans out, placing both hands on the wall and arching his back to ram himself back against your cock. Unable to resist a moment longer, you square your hips, slamming away at the buck's perky cheeks and grunting as his tight inner walls attempt to hold you in place. He feels heavenly, and it takes everything you have not to cum as quickly as you can, but you grit your teeth, swiveling your hips to explore his colon and draw more desperate moans from his open mouth. If you're going to breed your handsome buck, you'll do it right!";
+			WaitLineBreak;
+			say "     Samson meets every thrust with one of his own, fucking himself on your cock so hard that you wonder who's fucking who, his free hand blatantly stroking his manhood. He seems to be enjoying himself even more than you are, his voice growing deeper and more demanding as you work his hole into a precum-coated lather. It's clear that he wants more of you, and his hips only grow more insistent, pressing backward as his impending orgasm wrings your dick, demanding its due. Eager to please, you up your tempo, giving Samson's upturned cheeks a soft slap and ramming yourself home as he clamps down like a silken vice. It's too much for you, and right as you feel the tide of your orgasm rising to the surface, you sheath yourself to the root, burying your face in sweaty back fur. Your balls explode through your tip in such volume that you wonder if you'll have anything left in you after you finish, marking every inch of his innards and backfiring down your balls to drip down muscular thighs, basting Samson's poor untouched cunt in the remainder as you flop free of his ruined rear, leaving his hole gaping and clasping at an invisible cock.";
+			say "     'Fuck. Good boy.' Praising you for seeding his greedy hole even as it leaves your spent shaft, Samson drags you into a soft kiss, holding you tight as nothing but the wet sound of cum dripping to the floor below can be heard. 'Let's do that again, sometime.' He says as you pull away, leaving you to gather your gear as he strokes his still-dripping manhood, leaning heavily against the wall with his legs spread to show off your handiwork. You leave him to clean things up, feeling refreshed and more than happy with your efforts.";
 	NPCSexAftermath Susan receives "AssFuck" from Player;
 
 
