@@ -639,13 +639,13 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Sturm - Potential Fuck" for Candy;
 			WaitBreakReactions;
 		if Carl is booked or Carl is bunkered:
-			if HP of Carl is 30: [subby carl]
+			if HP of Carl > 30 and HP of Carl < 40: [subby carl]
 				say "     Carl approaches the pair with a hand already stuck out ready to shake. 'Hi there. I'm Carl. It's nice to see some new faces around here,' he greets them with a handshake before turning to you. 'Will they be joining the pack or are they just sheltering here?' You explain that the decision is up to them, but that you expect so. 'Sure thing. I'll be able to show them the ropes.' Sturm looks interested in this proposition while his mother looks a little surprised. 'Um. I don't think that I'll be doing much fighting with anyone, so you probably won't want to waste your time on me,' she mumbles. Carl gives her a supportive smile, 'A little self-defense knowledge can help anyone and we're a pack. We help each other. I don't think I caught your names though,' the husky replies. 'My apologies. I'm Blanche and this is my son, Sturm,' she responded quickly. 'As I said, nice to meet you, but I should return to watch-duty. Don't want any nasty surprises,' Carl says before, with a nod to all of you, retreats upstairs again.";
 				TraitGain "Carl - Willing to Teach" for Blanche;
 				TraitGain "Carl - Capable Trainer" for Sturm;
 				TraitGain "Blanche - In Need of Training" for Carl;
 				TraitGain "Sturm - Eager Pupil" for Carl;
-			else:
+			else if HP of Carl > 10 and HP of Carl < 30:
 				say "     Carl approaches the pair, giving them a quick look up and down, before offering a hand. 'Hello. I'm Carl. It's nice to meet you,' he greets them with a handshake. 'A pleasure to meet you too. I'm Blanche and this is my son, Sturm. The rest of my family is finding a corner for us in the computer lab,' Blanche replies, her eyes lingering as they gaze at the husky. 'I saw them as you arrived. I spend a lot of my time as lookout, you see. You seem like a close family,' he says with a smile. 'You are in the military, yes? Would you be able to teach me some things to better protect my family,' Sturm hesitantly asks. 'I was in the military, though whether I still am may be debated when this is all over,' Carl replies, scratching the back of his head. 'But sure, I suppose I can give you some pointers at some point. It may be easier if you join me on watch now and then though. That way I can still keep half an eye out the window at the same time. The offer's open to you too ma'am. Self-defense can be of use to everyone. That said, I should really get back to sentry duty. I look forward to talking with you more later.' Giving a nod, the husky soldier returns upstairs again.";
 				TraitGain "Carl - Toned Sentry" for Blanche;
 				TraitGain "Carl - Combat Tutor" for Sturm;

@@ -320,21 +320,21 @@ to say alexandradesc_bg:
 		else if AlexandraKorvinPups > 1: [some are Korvin's offspring]
 			say "In the group, [AlexandraKorvinPups] are recognizably Korvin's offspring, as the young dogs show some German shepherd fur color mixed in. They keep straying off individually or in pairs, almost as if competing with each other as they test out their strength. From time to time, they keep looking over to the Makeshift Rec Room, apparently hoping to catch their dad leaving or entering.";
 		if AlexandraCarlPups is Libido of Alexandra: [all are the Carl's offspring]
-			if HP of Carl is 10: [sane Carl]
+			if HP of Carl > 9 and HP of Carl < 30: [sane Carl]
 				say "You can recognize a bit of Carl in the group of them, as the young dogs show the longer, thicker fur of having a husky father, with fluffy tails instead of the slender ones of a regular dobie. They keep close together, almost moving as a unit in whatever they do, combining their strength and depending on each other in a close-knit team. From time to time, they keep raising their heads to glance at the railing to the upper floor, apparently hoping to catch their dad looking down at them.";
-			else if HP of Carl is 30:
+			else if HP of Carl > 30 and HP of Carl < 40:
 				say "You can recognize a bit of Carl in the group of them, as the young dogs show the longer, thicker fur of having a husky father, with fluffy tails instead of the slender ones of a regular dobie. They hang around fairly close to each other, moving as a small pack in whatever they do, going at whatever stands in their way together even as they play around and explore. From time to time, they keep raising their heads to glance at the railing to the upper floor, apparently hoping to catch their dad looking down at them.";
 		else if AlexandraCarlPups is 1: [one is Carl's offspring]
 			say "In the group, one is recognizably Carl's offspring, as the young dog shows the longer, thicker fur of having a husky father, with a fluffy tail instead of the slender one of a regular dobie. ";
-			if HP of Carl is 10: [sane Carl]
+			if HP of Carl > 9 and HP of Carl < 30: [sane Carl]
 				say "The canine keeps close to Alexandra, standing ready by her side and wanting to provide support.";
-			else if HP of Carl is 30:
+			else if HP of Carl > 30:
 				say "The canine keeps close to Alexandra, circling around her in an unruly fashion and often asking for attention.";
 		else if AlexandraCarlPups > 1: [some are Carl's offspring]
 			say "In the group, [AlexandraCarlPups] are recognizably Carl's offspring, as the young dogs show the longer, thicker fur of having a husky father, with fluffy tails instead of the slender ones of a regular dobie. ";
-			if HP of Carl is 10: [sane Carl]
+			if HP of Carl > 9 and HP of Carl < 30: [sane Carl]
 				say "They keep close together, almost moving as a unit in whatever they do, combining their strength and depending on each other in a close-knit team. From time to time, they keep raising their heads to glance at the railing to the upper floor, apparently hoping to catch their dad looking down at them.";
-			else if HP of Carl is 30:
+			else if HP of Carl > 30:
 				say "They hang around fairly close to each other, moving as a small pack in whatever they do, going at whatever stands in their way together even as they play around and explore. From time to time, they keep raising their heads to glance at the railing to the upper floor, apparently hoping to catch their dad looking down at them.";
 		if AlexandraBrutusPups is Libido of Alexandra: [all are the Brutus's offspring]
 			say "You can recognize a bit of Brutus in the group of them, as the young dogs have a purple shimmer to the black of their fur when the light hits it just right. On top of that, they seem fairly big and muscular, extraordinarily so for anthro Doberman, as the breed usually is more slender. The canines seem to have an independent streak, usually staying a bit apart from each other as they explore the world around them.";
