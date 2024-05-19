@@ -702,7 +702,7 @@ To say CeryneianTransformation:
 				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 					break;
 				else:
-					say "Invalid choice. Type [link]1[end link] to simply watch, [link]2[end link] to get in the room, [link]3[end link] to knock on the window, [link]4[end link] to continue, or [link]5[end link] to leave and avoid the area in the future.";
+					say "Invalid choice. Type [link]1[end link] for Anthro, [link]2[end link] for Feral, or [link]3[end link] for Tauric.";
 			if calcnumber is 1: [Anthro]
 				LineBreak;
 				say "     With the bipedal deer-person in mind, you feel your body begin to shift, beginning with your hands and spreading from there. Your fingers toughen and appear to become gleaming bronze, while a layer of dappled brown fur begins to grow from the rest of your hand and up your arms. It continues to spread until it reaches your feet, which compact themselves until they form cloven hooves, forcing you to readjust your balance as you momentarily feel like you are standing on tiptoe. This feeling of instability soon passes as the rest of your leg shifts to become unguligrade and your mind rapidly seems to acclimatize. As your limbs lengthen and become more slender, you also feel your muscles become denser, especially around your shoulders and hips, though outwardly you don't seem to be any more bulky, being left looking graceful but with the occasional ripple of muscle visible through your dappled brown fur as you move.";
