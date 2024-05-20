@@ -162,7 +162,10 @@ to WalkInEvent_Check:
 			if EventRoom entry is not CurrentRoom, next; [skipping past any event that does not match the current room]
 			if DebugLevel > 6:
 				say "     DEBUG: Available Event in current Room, called: [name entry], ";
-			if EventObject entry is not WalkinAvailable, next; [resolved/inactive/not prereqcomplete events are skipped]
+			if EventObject entry is not WalkinAvailable:
+				if DebugLevel > 6:
+					say "which is NOT WalkinAvailable.";
+				next; [resolved/inactive/not prereqcomplete events are skipped]
 			if DebugLevel > 6:
 				say "which is WalkinAvailable, ";
 			if LastEncounterTurn entry - turns <= CoolDownTurns entry, next;

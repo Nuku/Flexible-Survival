@@ -947,15 +947,21 @@ to say BlissedDariusSexMenu:
 		now sortorder entry is 8;
 		now description entry is "Train the Dalmatian for anal penetration";
 	[]
-	if Player is male and "Blissed_Fingered" is listed in Traits of Darius and "Toybox Obtained" is listed in Traits of Darius:
+	if Player is male and "Blissed_Fingered" is listed in Traits of Darius and "Toybox Obtained" is listed in Traits of Darius and "Dildo Trained (Small)" is listed in Traits of Darius:
 		choose a blank row in table of fucking options;
-		now title entry is "Work some small dildos up his asshole";
+		now title entry is "Work some bigger dildos up his asshole";
 		now sortorder entry is 8;
 		now description entry is "Train the Dalmatian for anal penetration";
-	[]	
-	if Player is male:
+	[]
+	if Player is male and "Fucked & Bred" is not listed in Traits of Darius:
 		choose a blank row in table of fucking options;
-		now title entry is "Fuck him (old version)";
+		now title entry is "Contemplate fucking Darius";
+		now sortorder entry is 19;
+		now description entry is "Spend a moment on the thought of pounding the Dalmatian's ass";
+	[]
+	if Player is male and "Dildo Trained (Big)" is listed in Traits of Darius:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck him";
 		now sortorder entry is 20;
 		now description entry is "Take the Dalmatian's ass";
 	[]
@@ -996,7 +1002,11 @@ to say BlissedDariusSexMenu:
 					say "[BlissedDarius_FaceFuck]";
 				else if (nam is "Work some small dildos up his asshole"):
 					say "[BlissedDarius_SmallToys]";
-				else if (nam is "Fuck him (old version)"):
+				else if (nam is "Work some bigger dildos up his asshole"):
+					say "[BlissedDarius_BigToys]";
+				else if (nam is "Contemplate fucking Darius"):
+					say "[BlissedDarius_Pre-Fucking]";
+				else if (nam is "Fuck him"):
 					say "[BlissedDarius_Fucking]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -1319,6 +1329,15 @@ to say BlissedDarius_BigToys:
 
 [Stage 3]
 
+to say BlissedDarius_Pre-Fucking:
+	say "     Looking at the Dalmatian, you imagine what it would take to enjoy his asshole. Given that he's a straight guy, just going for it would leave him feeling sore and stretched the next morning, which would be sure to betray what you did. As such, you'd for sure lose access to the hunky dog. Better to take things slow, getting his ass used to being penetrated in stages. Some fingering, followed by small and big sex toys - yeah, that should do the trick! ";
+	if "Dildo Trained (Small)" is listed in Traits of Darius:
+		say "[bold type]You've made a good start already with small toys, now just to expand on that in another go with something a little girthier...[roman type][line break]";
+	else if "Dildo Trained (Big)" is listed in Traits of Darius:
+		say "[bold type]Thinking about it - you already HAVE done all of that. So he should be ready for proper fucking now![roman type][line break]";
+	else:
+		LineBreak;
+
 to say BlissedDarius_Vibro: [for long term training and buttsluttness]
 	say "...";
 	NPCSexAftermath Darius receives "AssDildoFuck" from Player;
@@ -1338,7 +1357,7 @@ to say BlissedDarius_Fucking:
 		say "     Loudly grunting your lust, not even caring anymore if anyone overhears you as you savor your moment of triumph, you drive your whole shaft home inside its doggy sheath and grind your crotch against his body! [if Player is knotted]Especially feeling the pre-knot bulge at the base of your shaft being squeezed by his pucker is amazing and almost takes your breath away! [end if]Even in his drugged-out state, Darius can't help but react - tossing and turning in his sleep while the muscles of his ass twitch and spasm as they accomodate the first actual cock to penetrate the man. Letting your eyes wander over the Dalmatian's prone form, you use both hands to grope and fondle his muscular chest, then brace yourself on his meaty pecs as you begin to thrust. There's a saying that straight men really do have the best, most amazing holes to ravage - something you can agree with whole-heartedly as you sink yourself into this muscular hunk, then feeling his tight opening cling around your shaft on each withdraw, as if it was reluctant to letting you go.";
 		WaitLineBreak;
 		say "     Your vigorous fucking fills the drug-dealer's apartment with grunts and moans, slurping noises of penetration as well as slaps of your thighs hitting his buttocks - which would be par for the course in this place, except that Darius isn't the one doing the deed, but on the receiving end. Losing all caution as your mind is dominated by the need to pound this virgin asshole into oblivion, you rabbit-fuck the canine thug as hard as you can, firmly squeezing his pecs with every thrust. While you made him cum through anal stimulation, the scale of your anal assault is far beyond anything that Darius has experienced, and his knotted prick throbs and flings off whispy strings of pre-cum as it whips back and forth due to the force of your thrusts. There's only so much the big, muscular anal virgin can take before his body is driven over the edge and a massive orgasm breaks over him.";
-		say "     Even while unconscious, some parts of the man follow instinctive reflexes: His muscles tense to thrust up his hips, while that tight hole spasms wildly around your erection, heightening your pleasure immensely. Seeing the domineering thug make a mess of himself is more than a little satisfying, cumming all over the formerly pristine white fur of his chest and messing the gold chain he's using to show off his wealth. Now pulling out out all the stops, you withdraw your shaft all the way, then ram it back home fully with lightning-fast thrusts, which sends you rapidly barreling towards your own climax. Plunging into Darius with a victorious bellow[if Player is knotted] and forcing your rapidly expanding knot past his pucker just barely in time[end if], you flood his insides with a deluge of creamy cum, cementing your ownership of that sweet cocksheath that he's got between his buttocks. The man himself is, of course, unaware of all of this, but his body will surely remember being used as a bitch, with your hard cock stretching and filling his asshole[if Player is knotted] and even knotting it! [else]. [end if]";
+		say "     Even while unconscious, some parts of the man follow instinctive reflexes: His muscles tense to thrust up his hips, while that tight hole spasms wildly around your erection, heightening your pleasure immensely. Seeing the domineering thug make a mess of himself is more than a little satisfying, cumming all over the formerly pristine white fur of his chest and messing the gold chain he's using to show off his wealth. Now pulling out out all the stops, you withdraw your shaft all the way, then ram it back home fully with lightning-fast thrusts, which sends you rapidly barreling towards your own climax. Plunging into Darius with a victorious bellow[if Player is knotted] and forcing your rapidly expanding knot past his pucker just barely in time[end if], you flood his insides with a deluge of creamy cum, cementing your ownership of that sweet cocksheath that he's got between his buttocks. The man himself is, of course, unaware of all of this, but his body will surely remember being used as a bitch, with your hard cock stretching and filling his asshole[if Player is knotted] and even knotting it! [else]. [end if][line break]";
 		WaitLineBreak;
 		if Player is knotted:
 			say "     Tied to your newly bred Dalmatian sex pet, you continue to send further spurts of cum deep into his guts. It's almost breathtaking to have the tightness of his hole squeezing all around the swollen knot of ";
@@ -1361,7 +1380,7 @@ to say BlissedDarius_Fucking:
 		say "     As you lean forward and cover the Dalmatian's muscular body with your own, you brace your hands onto his meaty pecs, giving you something firm to hold on to and play with as you fuck the man. His insides are just as amazing as before, clinging to your thrusting cock a little each time that you withdraw, as if hesitant to let go of the cock that's stole Darius's virginity. The obvious sounds of sex fill the drug-dealer's apartment, from grunts and moans to squishing noises and the rapid slapping noises of your bodies coming together. Needful of relieving the growing pressure in your balls and giving the dog-cumslut his accustomed injection, you rabbit-fuck Darius vigorously. At the same time, the stimulation of his prostate pushes the Dalmatian to increased arousal as well, and his flagpole of a cock leaks pre-cum, flicking strings of it all over the place as his shaft whips back and forth from you jostling the man with your rapid thrusts.";
 		WaitLineBreak;
 		say "     As is to be expected from a needy bottom getting his fuck-hole railed good and hard, Darius is the first to come, as the anal stimulation builds up quickly and he isn't conscious enough to use any self-control. The man's muscles tense up as his fuckhole spasms and squeezes your thrusting cock, making plunging yourself into his body all the more pleasurable. On top of that, the usually so dominant thug is cumming all over his chest and even the gold chain around his neck, making a mess of himself before your eyes and setting a crown on your satisfaction at having found a way to own his ass! Eager to join your dog-toy in climax, you pull out all the stops after that. Moaning loudly, you withdraw all the way out of his hole before plunging back into the man with a urgent thrusts, speeding you along towards a rapidly building climax. Finally, you hammer into him with full force and let out the bellow of a conquering hero.";
-		say "     [if Player is knotted]Forcing your rapidly expanding knot past his pucker just barely in time[else]Pushing inside him as deep as you can[end if], you fill Darius with a massive flood of baby-makers, painting his insides white to once again stake your claim of his asshole. As if to answer that sentiment, the Dalmatian's inner muscles throb and squeeze around you reflexively[if Player is knotted] while your knot swells up further and further and locks the two of you together. [else]. [end if]";
+		say "     [if Player is knotted]Forcing your rapidly expanding knot past his pucker just barely in time[else]Pushing inside him as deep as you can[end if], you fill Darius with a massive flood of baby-makers, painting his insides white to once again stake your claim of his asshole. As if to answer that sentiment, the Dalmatian's inner muscles throb and squeeze around you reflexively[if Player is knotted] while your knot swells up further and further and locks the two of you together. [else]. [end if][line break]";
 		if Player is knotted:
 			say "Securely connected now, Darius couldn't even get you off him if he woke up right this very second. It's the perfect and natural way to ensure that all of your cum is going where it's supposed to go, filling the receptive bottom bitch that you've made of the drug dealer.";
 		else:
@@ -1372,7 +1391,7 @@ to say BlissedDarius_Fucking:
 		WaitLineBreak;
 		say "     After having your fun, now the time has come to clean up. You stroll over towards the kitchen and snatch a roll of paper towels, then return to your unconscious play-toy. First rubbing down the lube bottle from to make sure it's not sticky, you place it back into the toybox and retrieve the wet-wipes that Lisa so thoughtfully packed for you. Then you get started in wiping up the copious amounts of cum on Darius and the sofa, and temporarily stuff a paper towel between his cheeks, to absorb further leakage. Even removing everything that hasn't soaked into his fur and the sofa cushions, the dog still smells like a whorehouse and is a total mess, you've got little choice but to do another pass with both wet wipes and paper towels, just to make sure that he's halfway presentable. As for the sofa - there'll be further stains, but looking at the state of this thing, this was far from the first time someone had sex on the piece of furniture. Some additional drabs of cum will hardly be noticeable.";
 		say "     After a good long cleanup, you bunch up all of the cleaning supplies and resolve to discard them well away from Darius's apartment, then get to tugging and sliding his jeans back into place. It's fairly exhausting, with him being so heavy with muscle, but you manage to get him mostly dressed again, lying on the sofa. All of your cleanup tasks now dealt with, you put your gear back in order and take a step towards the door leading outside. Throwing Darius a glance over your shoulder, you grin broadly. This was fun!";
-
+[
 to say BlissedDarius_Fucking_old:
 	say "     [bold type]<Writer's Note: Darius is being expanded to allow for a more involved, gradual process of getting him to be a buttslut. As such, there are training scenes with sex toys intended to come before actual fucking, but those haven't been written yet. For now, you'll get the 'old' sex scene straight away, which does not contain any mentions of the training that is supposed to have happened before.>[roman type]";
 	LineBreak;
@@ -1409,7 +1428,7 @@ to say BlissedDarius_Fucking_old:
 		WaitLineBreak;
 		say "     With a grin at the easy cleanup, you bunch up all the paper towels to discard them well away from Darius's apartment, then get to tugging and sliding his jeans back into place. It's fairly exhausting, especially after just having orgasmed, but you manage to get him mostly dressed again and stretched out on the sofa, lying on his back. All of your cleanup tasks now dealt with, you get dressed and take up your gear once more.";
 	NPCSexAftermath Darius receives "AssFuck" from Player;
-
+]
 to say BlissedDariusHarvest1: [fur harvest]
 	say "     Approaching the unconscious canine, your eyes wander over his muscular form leaning back against the backrest of the sofa. Darius's broad chest rises and falls in a slow and even rhythm, with the thuggish man's face looking more relaxed and peaceful now, no sign of the sneer or cruel grin usually on his features. The dog looks like he's simply in a deep sleep, with his left ear twitching a little bit from time to time. But of course, he's not going to wake up right now, no matter what you do to him. Sitting down next to him, you rest your hand on one of his firm pecs, feeling the warmth of his fur, and the faint beat of his heart under your fingertips. Then you slowly move the hand down, reaching the curve of the bulging pec before tracing over the dips and rises of Darius's hard abs, contrasted by the softness of his coat. You savor the moment of having this hunk all to yourself for now, passed out and docile.";
 	say "     Teasing his nips and pinching them draws a soft groan from Darius, with the little nubs getting delightfully hard and sticking out. You snicker at seeing the rough thug with stiff nipples, like an innocent virgin - while he would likely punch you in the face if he were awake for this. Seeing the short fur covering his muscular chest, you find yourself momentarily stumped for what you're going to do, as there isn't really any suitable tuft to grab and pull off his coat. He doesn't have hair on his head or a beard, so you turn your attention lower, where the sexy anthro's cock is barely hidden by a half-drawn zipper. It is an easy task to just pull it the rest of the way and tug the sides of his jeans aside, revealing the proudly erect red rocket of your unconscious dog. Nothing like proper pubes though, it's all just the same short fur all over his body. Hmpf - it's not like you can just grab a razor and shave him, that much of an invasion of his person would be noticed for sure!";
