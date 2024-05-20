@@ -555,7 +555,7 @@ carry out ListFollowingChildren:
 		say "Trailing behind come your children:[line break]";
 	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
 		say "Trailing behind comes your child:[line break]";
-	if the number of entries in childrenfaces > 0:
+	if the number of entries in childrenfaces > 0: [player has old style children]
 		if the number of entries in childrenfaces is 1:
 			if ( entry 1 of childrenskins is not entry 1 of childrenbodies ) or ( entry 1 of childrenskins is not entry 1 of childrenfaces ):
 				say "Your child has a [entry 1 of childrenfaces] face, and a [entry 1 of childrenbodies] body covered in [entry 1 of childrenskins] skin.";
