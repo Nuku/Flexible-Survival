@@ -387,6 +387,7 @@ Include Stable Related Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
 Include Sugar Feud by AGentlemanCalledB.
 Include Sunbathing Gator by Voidsnaps.
+Include Swamp Storyline by Voidsnaps.
 Include TFTG Feats by Luneth.
 Include Tidepool Event by Guest Writers.
 Include Toy Store by Song.
@@ -747,6 +748,7 @@ Include Aerana by Gherod.
 Include Alex by Stripes.
 Include Alpha by Wahn.
 Include Arcanologist by Taelyn.
+Include Argos by Voidsnaps.
 Include Bad Alexandra by Wahn.
 Include Allen by Wahn.
 Include Alexandra Breeding by Wahn.
@@ -762,7 +764,6 @@ Include Anthony by Wahn.
 Include Anton by Wahn.
 Include Araqiel by Gherod.
 Include Ares by Wahn.
-Include Argos by Voidsnaps.
 Include Ariel by Emerald.
 Include Arthur by Luneth.
 Include Anastasia by Stripes.
@@ -876,6 +877,7 @@ Include Hyper Squirrel by Nuku Valente.
 Include HypnoGeeks by Luneth.
 Include Icarus by Luneth.
 Include Ice Fox by Wahn.
+Include Ignacio by Voidsnaps.
 Include Inflatable Orca by Song.
 Include Inflatable Otter Suit by Song.
 Include Informant by Kaleem mcintyre.
@@ -898,6 +900,7 @@ Include Kara by Sarokcat.
 Include Karen by Prometheus.
 Include Katherine by Kirov.
 Include Kathy by Sundered Dragon.
+Include Keiran by Voidsnaps.
 Include Kerr & Talov by Wahn.
 Include Kerry by Voidsnaps.
 Include Kosk by Voidsnaps.
@@ -926,6 +929,7 @@ Include Mary by Luneth.
 Include Master Mind by Stripes.
 Include Master-of-Hell-Quest by Luneth.
 Include Matriarch NPC by Stripes.
+Include Matteo by Voidsnaps.
 Include Meredith by Prometheus.
 Include Micaela by Stripes.
 Include Midnight by Luneth.
