@@ -53,7 +53,7 @@ to connect Suspicious Swimming Hole:
 	change the west exit of Suspicious Swimming Hole to Lizard Village Entrance;
 
 
-Table of NavInEvents (continued)
+Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
 1	"Still Water"	Still Water	"[EventConditions_Still Water]"	Suspicious Swimming Hole	2500	8	100
 
