@@ -123,9 +123,11 @@ to say AmphibianQuestFirstFight:
 	else if fightoutcome >= 20 and fightoutcome <= 29: [lose]
 		say "     Staggering backward, you realize that the frog has managed to herd you toward the water. All strength has drained from your limbs after the fight, and you can barely raise your arms to block the frog's next attack, reeling as the amphibian uses that dextrous tongue to wrap around your neck. Within seconds, you see black around the edge of your vision, and before you pass out, you hear a muffled voice above you. 'Wait for me, Matty. This asshole will tell me where you are.'";
 		TraitGain "Hostile" for Ignacio;
+		say "[AmphibianKidnapping]";
 	else: [flee]
 		say "     Unwilling to fight, you race to report back to Kosk, running in the opposite direction without delay. Sadly, that leaves your back open to attack, and before you can make it to the safety of the path back to the village, you feel something wrap around your legs, sending you crashing to the ground. You hit your head on a rock on the way down, and as you fade into unconsciousnss, you hear the frog murmuring something unintelligible from above.";
 		TraitGain "Hostile" for Ignacio;
+		say "[AmphibianKidnapping]";
 
 
 Table of CombatPrep (continued)
