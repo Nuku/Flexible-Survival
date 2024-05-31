@@ -512,13 +512,13 @@ to say FionaFangSex:
 			say "     Keeping your distance from the area the sounds are coming from, you see Fiona streak out from between the bookshelves a moment later, tail all bushy and thick. She dashes down between two other rows of shelves, closely followed by Fang. A moment later, you fan hear the chase come to a sudden end, followed by a low growl and then a lust-filled mrowl. You do your best to filter out the sounds of their animalistic mating after that...";
 		NPCSexAftermath Fiona receives "PussyFuck" from Fang;
 
-instead of going up from Bunker while (HP of Fiona > 3 and Strength of Fiona is 0 and Carl is in Grey Abbey 2F and (LastFuck of Fiona - Turns) > 10 and HP of Carl is 10):
+instead of going up from Bunker while (HP of Fiona > 3 and Strength of Fiona is 0 and Carl is in Grey Abbey 2F and (LastFuck of Fiona - Turns) > 10 and HP of Carl > 10 and HP of Carl < 30):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA CARL WALKIN [line break]";
 	say "[FionaCarlMeet]";
 
-instead of navigating Grey Abbey Library while (HP of Fiona > 3 and Strength of Fiona is 0 and Carl is in Grey Abbey 2F and (LastFuck of Fiona - Turns) > 10 and HP of Carl is 10):
+instead of navigating Grey Abbey Library while (HP of Fiona > 3 and Strength of Fiona is 0 and Carl is in Grey Abbey 2F and (LastFuck of Fiona - Turns) > 10 and HP of Carl > 10 and HP of Carl < 30):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -561,13 +561,13 @@ to say FionaCarlMeet:
 				now Strength of Fiona is 1; [they fucked, player didn't watch]
 		NPCSexAftermath Fiona receives "PussyFuck" from Carl;
 
-instead of going up from Bunker while (HP of Fiona > 3 and Strength of Fiona > 0 and Strength of Fiona < 100 and Carl is in Grey Abbey 2F and (LastFuck of Fiona - Turns) > 10 and HP of Carl is 10 and a random chance of 1 in 4 succeeds):
+instead of going up from Bunker while (HP of Fiona > 3 and Strength of Fiona > 0 and Strength of Fiona < 100 and Carl is in Grey Abbey 2F and (LastFuck of Fiona - Turns) > 10 and HP of Carl > 10 and HP of Carl < 30 and a random chance of 1 in 4 succeeds):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA CARL REPEAT WALKIN [line break]";
 	say "[FionaCarlRepeatFuck]";
 
-instead of navigating Grey Abbey Library while (HP of Fiona > 3 and Strength of Fiona > 0 and Strength of Fiona < 100 and Carl is in Grey Abbey 2F and (LastFuck of Fiona - Turns) > 10 and HP of Carl is 10 and a random chance of 1 in 4 succeeds):
+instead of navigating Grey Abbey Library while (HP of Fiona > 3 and Strength of Fiona > 0 and Strength of Fiona < 100 and Carl is in Grey Abbey 2F and (LastFuck of Fiona - Turns) > 10 and HP of Carl > 10 and HP of Carl < 30 and a random chance of 1 in 4 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

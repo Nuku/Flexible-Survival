@@ -370,7 +370,7 @@ to say Vincent_Introduction:
 		TraitGain "Vincent - New Target" for Candy;
 		WaitBreakReactions;
 	if Carl is collected:
-		if HP of Carl is 30: [beta carl]
+		if HP of Carl > 30 and HP of Carl < 40: [beta carl]
 			say "     Carl walks up to Vincent, letting his gaze wander up and down over the fox as he approaches, taking in the clothes and tail of the slender male. 'New guy in the pack?' he asks you, indirectly broadcasting that he expects Vincent to be lower than him by not addressing him. As you simply nod, the husky soldier then finally acknowledges Vincent. 'Welcome, brother. I'm Carl.' The red fox takes in the interaction somewhat suspiciously, then says, 'Hi dude. Nice to meet ya, I guess - but just to let you know, I'm not too much into that whole pack bonding thing and all that. Perfectly happy on my own, you know.' Carl looks at him with a somewhat puzzled expression, then leaves after giving you a respectful nod.";
 			TraitGain "Carl - Dog Nut" for Vincent;
 		else:
