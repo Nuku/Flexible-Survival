@@ -979,6 +979,7 @@ Include Ryan by Fuxi.
 Include Sally by Stripes.
 Include Sakura Sato by Rikaeus.
 Include Sam by Stripes.
+Include Sandy by Voidsnaps.
 Include Santa Claws by Wahn.
 Include Sarah by Wahn.
 Include Sascha by Voidsnaps.
