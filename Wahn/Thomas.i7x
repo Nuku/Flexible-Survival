@@ -513,6 +513,7 @@ to say ThomasTalk9:
 	now ThomasQuestVar is turns;
 	now SandySaved is turns;
 	increase Libido of Thomas by 1; [Sandy]
+	move Sandy to Dry Plains;
 
 Table of NavInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
