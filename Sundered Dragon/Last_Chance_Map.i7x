@@ -25,6 +25,7 @@ Object	Name
 Last Chance Parking Lot	"Last Chance Parking Lot"
 
 Last Chance Parking Lot is a room. It is fasttravel.
+Last Chance Parking Lot is private.
 Description of Last Chance Parking Lot is "[lastchanceparkinglotdesc]".
 the scent of The Last Chance Parking Lot is "Dusty with a weakening current of burnt rubber and fouling gasoline.".
 

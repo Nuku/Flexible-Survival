@@ -54,6 +54,10 @@ Figure of Collie_naked_icon is the file "Collie_naked.jpg".
 Figure of Cougar_clothed_icon is the file "Cougar_clothed.jpg".
 Figure of Cougar_naked_icon is the file "Cougar_naked.jpg".
 Figure of DarkElf_icon is the file "Dark Elf.jpg".
+Figure of Darkelf_red_clothed_icon is the file "Darkelf_red_clothed.jpg".
+Figure of Darkelf_red_hard_icon is the file "Darkelf_red_hard.jpg".
+Figure of Darkelf_blue_clothed_icon is the file "Darkelf_blue_clothed.jpg".
+Figure of Darkelf_blue_naked_icon is the file "Darkelf_blue_naked.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.jpg".
 Figure of Donkeywoman_clothed_icon is the file "Donkeywoman_clothed.jpg".
 Figure of Donkeyman_soft_icon is the file "Donkeyman_soft.jpg".
@@ -69,6 +73,7 @@ Figure of Feline_F2_icon is the file "FS_SmallLioness_02.jpg".
 Figure of FeralShaftBeast_icon is the file "FeralSB_ig.jpg".
 Figure of FireSpriteMale_icon is the file "FireSprite_male.jpg".
 Figure of FluffyOwl_icon is the file "FluffyOwl.png".
+Figure of FluffyOwl2_icon is the file "FluffyOwl2.jpg".
 Figure of FrPony_icon is the file "fs_afriendshippony.jpg".
 Figure of GooGirl_icon is the file "GooGirl.jpg".
 Figure of BlueGryphon_icon is the file "BlueGryphon.jpg".
@@ -77,6 +82,7 @@ Figure of BlueGryphon_hard_icon is the file "Blue Gryphon hard.jpg".
 Figure of BlueGryphon_soft_icon is the file "Blue Gryphon soft.jpg".
 Figure of FeralGryphon_hard_icon is the file "Feral_Gryphon_hard.jpg".
 Figure of FeralGryphon_soft_icon is the file "Feral_Gryphon_soft.jpg".
+Figure of Gargoyle_stuck_icon is the file "Gargoyle_stuck.jpg".
 Figure of Gargoyle_hard_icon is the file "Gargoyle_hard.jpg".
 Figure of Gargoyle_soft_icon is the file "Gargoyle_soft.jpg".
 Figure of Gazelle_hard_icon is the file "Gazelle_hard.jpg".
@@ -186,9 +192,6 @@ Figure of Sabretooth_soft_icon is the file "Sabretooth_soft.jpg".
 Figure of Sabretooth_hard_icon is the file "Sabretooth_hard.jpg".
 Figure of Sabretooth_clothed_icon is the file "Sabretooth_clothed.jpg".
 Figure of Sabretooth_naked_icon is the file "Sabretooth_naked.jpg".
-Figure of Sascha_turtleneck_icon is the file "Sascha_turtleneck.jpg".
-Figure of Sascha_shirt_icon is the file "Sascha_shirt.jpg".
-Figure of Sascha_bottomless_icon is the file "Sascha_bottomless.jpg".
 Figure of SeaDragoness_NSFW_icon is the file "Sea Dragoness_NSFW.jpg".
 Figure of SeaDragoness_SFW_icon is the file "Sea Dragoness_SFW.jpg".
 Figure of SeaDragon_hard_icon is the file "Sea Dragon hard.jpg".
@@ -221,6 +224,10 @@ Figure of TyrannosaurusMale_hard_icon is the file "TyrannosaurusMale_hard.jpg".
 Figure of TyrannosaurusMale_soft_icon is the file "TyrannosaurusMale_soft.jpg".
 Figure of TyrannosaurusMale_clothed_icon is the file "TyrannosaurusMale_clothed.jpg".
 Figure of VixenNurse_icon is the file "VixenNurse_ig.jpg".
+Figure of VixenNurse_herm_clothed_icon is the file "VixenNurse_herm_clothed.jpg".
+Figure of VixenNurse_herm_naked_icon is the file "VixenNurse_herm_naked.jpg".
+Figure of VixenNurse_fem_clothed_icon is the file "VixenNurse_fem_clothed.jpg".
+Figure of VixenNurse_fem_naked_icon is the file "VixenNurse_fem_naked.jpg".
 Figure of Vixentaur_icon is the file "vixentaur_ig.jpg".
 Figure of Wolftaur_hard_icon is the file "Wolftaur_hard.jpg".
 Figure of Wolftaur_soft_icon is the file "Wolftaur_soft.jpg".
@@ -267,6 +274,7 @@ Figure of Zebra_face_icon is the file "Zebra_face.jpg".
 Figure of Ace_icon is the file "Ace.jpg".
 Figure of Adam_icon is the file "Adam.jpg".
 Figure of Aerana_naked_icon is the file "Aerana_naked.jpg".
+Figure of Alexandra&Amy_icon is the file "Alexandra & Amy.jpg".
 Figure of Alexandra_clothed_icon is the file "Alexandra_clothed.jpg".
 Figure of Alexandra_clothed_preg_icon is the file "Alexandra_clothed_preg.jpg".
 Figure of Alexandra_face_icon is the file "Alexandra_face.jpg".
@@ -284,8 +292,8 @@ Figure of Alpha_soft_icon is the file "Alpha_soft.jpg".
 Figure of Alpha_Fang_fem_icon is the file "Alpha_Fang_fem.jpg".
 Figure of Alpha_Fang_hard_icon is the file "Alpha_Fang_hard.jpg".
 Figure of Alpha_Fang_soft_icon is the file "Alpha_Fang_soft.jpg".
-Figure of Alpha_Fang_hyper_hard_icon is the file "Alpha_Fang_hard.jpg".
-Figure of Alpha_Fang_hyper_soft_icon is the file "Alpha_Fang_soft.jpg".
+Figure of Alpha_Fang_hyper_hard_icon is the file "Alpha_Fang_hyper_hard.jpg".
+Figure of Alpha_Fang_hyper_soft_icon is the file "Alpha_Fang_hyper_soft.jpg".
 Figure of Amy_icon is the file "Amy.jpg".
 Figure of Amy_face_icon is the file "Amy_face.jpg".
 Figure of Anastasia_icon is the file "Anastasia_ig.jpg".
@@ -310,6 +318,8 @@ Figure of Atticus_jeans_smile_arms_lowered_icon is the file "Atticus_jeans_smile
 Figure of Atticus_jeans_smile_arm_raised_icon is the file "Atticus_jeans_smile_arm raised.jpg".
 Figure of Atticus_jeans_frown_arms_crossed_icon is the file "Atticus_jeans_frown_arms crossed.jpg".
 Figure of Augustus_Drake_icon is the file "Augustus_Drake.png".
+Figure of Augustus_Drake_lion_form_hard_icon is the file "Augustus_Drake_lion_form_hard.png".
+Figure of Augustus_Drake_lion_form_soft_icon is the file "Augustus_Drake_lion_form_soft.png".
 Figure of Aurora_clothed_icon is the file "Aurora.png".
 Figure of Bastet_neutral_dress_seethrough_icon is the file "Bastet_neutral_dress_seethrough.jpg".
 Figure of Bastet_neutral_dress_seethrough_nojewelry_icon is the file "Bastet_neutral_dress_seethrough_nojewelry.jpg".
@@ -345,6 +355,7 @@ Figure of Candy_icon is the file "candy_ig.jpg".
 Figure of Candy_clothed_icon is the file "Candy_clothed.jpg".
 Figure of Candy_naked_icon is the file "Candy_naked.jpg".
 Figure of Carl_clothed_icon is the file "Carl_clothed.jpg".
+Figure of Carl_clothed_tagless_icon is the file "Carl_clothed_tagless.jpg".
 Figure of Carl_naked_icon is the file "Carl_naked.jpg".
 Figure of Carl_face_icon is the file "Carl_face.jpg".
 Figure of Carl_knot_icon is the file "Carl_knot.jpg".
@@ -372,7 +383,15 @@ Figure of Corbin_face_icon is the file "Corbin_face.jpg".
 Figure of Danny_naked_icon is the file "Danny_naked.jpg".
 Figure of Danny_clothed_icon is the file "Danny_clothed.jpg".
 Figure of Danny_face_icon is the file "Danny_face.jpg".
+Figure of Daphne_naked_icon is the file "Daphne_naked.jpg".
+Figure of Daphne_clothed_icon is the file "Daphne_clothed.jpg".
 Figure of Darius_face_icon is the file "Darius_face.jpg".
+Figure of Darius_clothed_icon is the file "Darius_clothed.jpg".
+Figure of Darius_hard_icon is the file "Darius_hard.jpg".
+Figure of Darius_blissed_clothed_icon is the file "Darius_blissed_clothed.jpg".
+Figure of Darius_blissed_naked_icon is the file "Darius_blissed_naked.jpg".
+Figure of Darius_blissed_hard_icon is the file "Darius_blissed_hard.jpg".
+Figure of Darius_blissed_cum_icon is the file "Darius_blissed_cum.jpg".
 Figure of DarkTyrant_icon is the file "DarkTyrant.jpg".
 Figure of Dash_icon is the file "Dash.jpg".
 Figure of David_naked_icon is the file "David_naked.jpg".
@@ -384,6 +403,32 @@ Figure of David_face_hurt_icon is the file "David_face_hurt.jpg".
 Figure of David_face_naked_icon is the file "David_face_naked.jpg".
 Figure of David_face_casualclothed_icon is the file "David_face_casualclothed.jpg".
 Figure of David_face_icon is the file "David_face.jpg".
+Figure of Davies_angry_clothed1_icon is the file "Davies_angry_clothed1.jpg".
+Figure of Davies_angry_clothed1_preg_icon is the file "Davies_angry_clothed1_preg.jpg".
+Figure of Davies_angry_clothed2_icon is the file "Davies_angry_clothed2.jpg".
+Figure of Davies_angry_clothed2_preg_icon is the file "Davies_angry_clothed2_preg.jpg".
+Figure of Davies_angry_naked_icon is the file "Davies_angry_naked.jpg".
+Figure of Davies_angry_naked_preg_icon is the file "Davies_angry_naked_preg.jpg".
+Figure of Davies_happy_clothed1_icon is the file "Davies_happy_clothed1.jpg".
+Figure of Davies_happy_clothed1_preg_icon is the file "Davies_happy_clothed1_preg.jpg".
+Figure of Davies_happy_clothed2_icon is the file "Davies_happy_clothed2.jpg".
+Figure of Davies_happy_clothed2_preg_icon is the file "Davies_happy_clothed2_preg.jpg".
+Figure of Davies_happy_naked_icon is the file "Davies_happy_naked.jpg".
+Figure of Davies_happy_naked_preg_icon is the file "Davies_happy_naked_preg.jpg".
+Figure of Davies_neutral_clothed1_icon is the file "Davies_neutral_clothed1.jpg".
+Figure of Davies_neutral_clothed1_preg_icon is the file "Davies_neutral_clothed1_preg.jpg".
+Figure of Davies_neutral_clothed2_icon is the file "Davies_neutral_clothed2.jpg".
+Figure of Davies_neutral_clothed2_preg_icon is the file "Davies_neutral_clothed2_preg.jpg".
+Figure of Davies_neutral_naked_icon is the file "Davies_neutral_naked.jpg".
+Figure of Davies_neutral_naked_preg_icon is the file "Davies_neutral_naked_preg.jpg".
+Figure of Davies_scared_clothed1_icon is the file "Davies_scared_clothed1.jpg".
+Figure of Davies_scared_clothed1_preg_icon is the file "Davies_scared_clothed1_preg.jpg".
+Figure of Davies_scared_clothed2_icon is the file "Davies_scared_clothed2.jpg".
+Figure of Davies_scared_clothed2_preg_icon is the file "Davies_scared_clothed2_preg.jpg".
+Figure of Davies_scared_naked_icon is the file "Davies_scared_naked.jpg".
+Figure of Davies_scared_naked_preg_icon is the file "Davies_scared_naked_preg.jpg".
+Figure of Davies_pinup_icon is the file "Davies_pinup.jpg".
+Figure of Davies_pinup_preg_icon is the file "Davies_pinup_preg.jpg".
 Figure of Dmitri_clothed_icon is the file "Dmitri_clothed.jpg".
 Figure of Dmitri_naked_icon is the file "Dmitri_naked.jpg".
 Figure of Diego_icon is the file "Diego.jpg".
@@ -476,6 +521,8 @@ Figure of James_icon is the file "james_ig.jpg".
 Figure of Janice_icon is the file "FS_Janice_ig.jpg".
 Figure of Jason_clothed_icon is the file "Jason_clothed.jpg".
 Figure of Jason_naked_icon is the file "Jason_naked.jpg".
+Figure of Jett_soft_icon is the file "Jett_soft.jpg".
+Figure of Jett_hard_icon is the file "Jett_hard.jpg".
 Figure of Jill_icon is the file "Jill.jpg".
 Figure of Jimmy_icon is the file "Jimmy_ig.jpg".
 Figure of Katherine_icon is the file "Katherine.jpg".
@@ -485,6 +532,8 @@ Figure of Karel_clothed_icon is the file "Karel_clothed.jpg".
 Figure of Karel_hard_icon is the file "Karel_hard.jpg".
 Figure of Karel_soft_icon is the file "Karel_soft.jpg".
 Figure of Karel_face_icon is the file "Karel_face.jpg".
+Figure of Karen_clothed_icon is the file "Karen_clothed.jpg".
+Figure of Karen_naked_icon is the file "Karen_naked.jpg".
 Figure of Katya_clothed_icon is the file "Katya.png".
 Figure of Klauz_face_icon is the file "Klauz_face.jpg".
 Figure of Koghh_clothed_icon is the file "Koghh_clothed.jpg".
@@ -560,7 +609,7 @@ Figure of Nermine_naked_icon is the file "Nermine_naked.jpg".
 Figure of Nermine_naked_face_icon is the file "Nermine_naked_face.jpg".
 Figure of Newt_icon is the file "Newt_ig.jpg".
 Figure of Micaela_icon is the file "micaela_ig.jpg".
-Figure of Orc_Brothers_clothed_icon is the file "Orc_Brothers_naked.jpg".
+Figure of Orc_Brothers_clothed_icon is the file "Orc_Brothers_clothed.jpg".
 Figure of Orc_Brothers_naked_icon is the file "Orc_Brothers_naked.jpg".
 Figure of Orbul_clothed_icon is the file "Orbul_clothed.jpg".
 Figure of Orbul_naked_icon is the file "Orbul_naked.jpg".
@@ -592,6 +641,10 @@ Figure of Ryousei_face_icon is the file "Ryousei_face.jpg".
 Figure of Ryousei_fundoshi_icon is the file "Ryousei_fundoshi.jpg".
 Figure of Ryousei_naked_icon is the file "Ryousei_naked.jpg".
 Figure of Ryousei_wink_icon is the file "Ryousei_wink.jpg".
+Figure of Sascha_crouch_icon is the file "Sascha_crouch.jpg".
+Figure of Sascha_turtleneck_icon is the file "Sascha_turtleneck.jpg".
+Figure of Sascha_shirt_icon is the file "Sascha_shirt.jpg".
+Figure of Sascha_bottomless_icon is the file "Sascha_bottomless.jpg".
 Figure of Sally_icon is the file "sally_ig.jpg".
 Figure of SantaClaws_face_icon is the file "Santa Claws.jpg".
 Figure of sandy_icon is the file "sandra.jpg".
@@ -599,6 +652,28 @@ Figure of Sarah_clothed_icon is the file "Sarah_clothed.jpg".
 Figure of Sarah_face_icon is the file "Sarah_face.jpg".
 Figure of Sarah_face_naked_icon is the file "Sarah_face_naked.jpg".
 Figure of Sarah_naked_icon is the file "Sarah_naked.jpg".
+Figure of Segis_muscular_default_icon is the file "Segis_muscular_default_0.png".
+Figure of Segis_muscular_default_hard_1_icon is the file "Segis_muscular_default_hard_1.png".
+Figure of Segis_muscular_default_hard_2_icon is the file "Segis_muscular_default_hard_2.png".
+Figure of Segis_muscular_default_hard_3_icon is the file "Segis_muscular_default_hard_3.png".
+Figure of Segis_muscular_soft_11_icon is the file "Segis_muscular_soft_11.png".
+Figure of Segis_muscular_soft_12_icon is the file "Segis_muscular_soft_12.png".
+Figure of Segis_muscular_soft_13_icon is the file "Segis_muscular_soft_13.png".
+Figure of Segis_muscular_soft_21_icon is the file "Segis_muscular_soft_21.png".
+Figure of Segis_muscular_soft_22_icon is the file "Segis_muscular_soft_22.png".
+Figure of Segis_muscular_soft_23_icon is the file "Segis_muscular_soft_23.png".
+Figure of Segis_muscular_soft_31_icon is the file "Segis_muscular_soft_31.png".
+Figure of Segis_muscular_soft_32_icon is the file "Segis_muscular_soft_32.png".
+Figure of Segis_muscular_soft_33_icon is the file "Segis_muscular_soft_33.png".
+Figure of Segis_muscular_hard_11_icon is the file "Segis_muscular_hard_11.png".
+Figure of Segis_muscular_hard_12_icon is the file "Segis_muscular_hard_12.png".
+Figure of Segis_muscular_hard_13_icon is the file "Segis_muscular_hard_13.png".
+Figure of Segis_muscular_hard_21_icon is the file "Segis_muscular_hard_21.png".
+Figure of Segis_muscular_hard_22_icon is the file "Segis_muscular_hard_22.png".
+Figure of Segis_muscular_hard_23_icon is the file "Segis_muscular_hard_23.png".
+Figure of Segis_muscular_hard_31_icon is the file "Segis_muscular_hard_31.png".
+Figure of Segis_muscular_hard_32_icon is the file "Segis_muscular_hard_32.png".
+Figure of Segis_muscular_hard_33_icon is the file "Segis_muscular_hard_33.png".
 Figure of Septus_icon is the file "Septus.jpg".
 Figure of Septus_face_icon is the file "Septus_face.jpg".
 Figure of SgtMarks_clothed_icon is the file "Sgt. Marks_clothed.jpg".
@@ -652,12 +727,20 @@ Figure of Susan_MHerm_shorts_icon is the file "Susan_MHerm_shorts.jpg".
 Figure of Susan_MHerm_hard_icon is the file "Susan_MHerm_hard.jpg".
 Figure of Sven_naked_icon is the file "Sven_naked.jpg".
 Figure of Sven_tail_icon is the file "Sven_tail.jpg".
+Figure of Sylvia_clothed_icon is the file "Sylvia_clothed.jpg".
+Figure of Sylvia_clothed_tongue_icon is the file "Sylvia_clothed_tongue.jpg".
+Figure of Sylvia_naked_icon is the file "Sylvia_naked.jpg".
+Figure of Sylvia_naked_tongue_icon is the file "Sylvia_naked_tongue.jpg".
 Figure of Tanuki_Dad_hard_icon is the file "Tanuki_Dad_hard.jpg".
 Figure of Tanuki_Dad_soft_icon is the file "Tanuki_Dad_soft.jpg".
 Figure of Tehuantl_Male_Face_icon is the file "Tehuantl_Male_Face.jpg".
 Figure of Tehuantl_Male_clothed_icon is the file "Tehuantl_Male_clothed.jpg".
 Figure of Tehuantl_Male_hard_icon is the file "Tehuantl_Male_hard.jpg".
 Figure of Tehuantl_Female_Face_icon is the file "Tehuantl_Female_Face.jpg".
+Figure of Tehuantl_Female_clothed_icon is the file "Tehuantl_Female_clothed.jpg".
+Figure of Tehuantl_Female_clothed_preg_icon is the file "Tehuantl_Female_clothed_preg.jpg".
+Figure of Tehuantl_Female_naked_icon is the file "Tehuantl_Female_naked.jpg".
+Figure of Tehuantl_Female_naked_preg_icon is the file "Tehuantl_Female_naked_preg.jpg".
 Figure of Timothy_icon is the file "Timothy.jpg".
 Figure of TinyTim_icon is the file "Tiny_Solo.jpg".
 Figure of TinyTim_face_icon is the file "Tiny_Face.jpg".
@@ -1327,6 +1410,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Adam"	Figure of Adam_icon	"Kadel"	g-white	"normal"
 "Aerana"	Figure of Aerana_naked_icon	"Gherod"	g-black	"normal"
 "Ace"	Figure of Ace_icon	"Waxraven/WXRVN"	g-white	"normal"
+"Alexandra_&_Amy"	Figure of Alexandra&Amy_icon	"Corbee"	g-black	"normal"
 "Alexandra_clothed"	Figure of Alexandra_clothed_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_clothed_preg"	Figure of Alexandra_clothed_preg_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_face"	Figure of Alexandra_face_icon	"Lyttathebug"	g-black	"normal"
@@ -1374,6 +1458,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Atticus_jeans_smile_arm_raised"	Figure of Atticus_jeans_smile_arm_raised_icon	"Lyttathebug"	g-black	"normal"
 "Atticus_jeans_frown_arms_crossed"	Figure of Atticus_jeans_frown_arms_crossed_icon	"Lyttathebug"	g-black	"normal"
 "Augustus_Drake"	Figure of Augustus_Drake_icon	"Gherod"	g-dark-gray	"normal"
+"Augustus_Drake_lion_form_hard"	Figure of Augustus_Drake_lion_form_hard_icon	"Gherod"	g-dark-gray	"normal"
+"Augustus_Drake_lion_form_soft"	Figure of Augustus_Drake_lion_form_soft_icon	"Gherod"	g-dark-gray	"normal"
 "Aurora_clothed"	Figure of Aurora_clothed_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Badger clothed"	Figure of Badger_clothed_icon	"SteppeCrow"	g-White	"normal"
 "Badger soft"	Figure of Badger_soft_icon	"SteppeCrow"	g-White	"normal"
@@ -1427,6 +1513,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Candy_clothed"	Figure of Candy_clothed_icon	"BeaverTyan"	g-white	"normal"
 "Candy_naked"	Figure of Candy_naked_icon	"BeaverTyan"	g-white	"normal"
 "Carl_clothed"	Figure of Carl_clothed_icon	"Hufnaar"	g-black	"normal"
+"Carl_clothed_tagless"	Figure of Carl_clothed_tagless_icon	"Hufnaar"	g-black	"normal"
 "Carl_naked"	Figure of Carl_naked_icon	"Hufnaar"	g-black	"normal"
 "Carl_face"	Figure of Carl_face_icon	"Lyttathebug"	g-black	"normal"
 "Carl_knot"	Figure of Carl_knot_icon	"Lyttathebug"	g-black	"normal"
@@ -1462,6 +1549,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Danny_naked"	Figure of Danny_naked_icon	"Laylo"	g-white	"normal"
 "Danny_clothed"	Figure of Danny_clothed_icon	"Dragonpunk"	g-white	"normal"
 "Danny_face_icon"	Figure of Danny_face_icon	"Dragonpunk"	g-white	"normal"
+"Daphne_naked"	Figure of Daphne_naked_icon	"SteppeCrow"	g-white	"normal"
+"Daphne_clothed"	Figure of Daphne_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Darius_face"	Figure of Darius_face_icon	"SineAlas"	g-black	"normal"
 "Dash"	Figure of Dash_icon	"Conchi"	g-white	"normal"
 "David_naked"	Figure of David_naked_icon	"Keitaro87"	g-white	"normal"
@@ -1473,8 +1562,44 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "David_face_naked"	Figure of David_face_naked_icon	"Keitaro87"	g-white	"normal"
 "David_face"	Figure of David_face_icon	"Keitaro87"	g-white	"normal"
 "David_face_casualclothed"	Figure of David_face_casualclothed_icon	"Keitaro87"	g-white	"normal"
+"Davies_angry_clothed1"	Figure of Davies_angry_clothed1_icon	"SteppeCrow"	g-white	"normal"
+"Davies_angry_clothed1_preg"	Figure of Davies_angry_clothed1_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_angry_clothed2"	Figure of Davies_angry_clothed2_icon	"SteppeCrow"	g-white	"normal"
+"Davies_angry_clothed2_preg"	Figure of Davies_angry_clothed2_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_angry_naked"	Figure of Davies_angry_naked_icon	"SteppeCrow"	g-white	"normal"
+"Davies_angry_naked_preg"	Figure of Davies_angry_naked_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_happy_clothed1"	Figure of Davies_happy_clothed1_icon	"SteppeCrow"	g-white	"normal"
+"Davies_happy_clothed1_preg"	Figure of Davies_happy_clothed1_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_happy_clothed2"	Figure of Davies_happy_clothed2_icon	"SteppeCrow"	g-white	"normal"
+"Davies_happy_clothed2_preg"	Figure of Davies_happy_clothed2_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_happy_naked"	Figure of Davies_happy_naked_icon	"SteppeCrow"	g-white	"normal"
+"Davies_happy_naked_preg"	Figure of Davies_happy_naked_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_neutral_clothed1"	Figure of Davies_neutral_clothed1_icon	"SteppeCrow"	g-white	"normal"
+"Davies_neutral_clothed1_preg"	Figure of Davies_neutral_clothed1_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_neutral_clothed2"	Figure of Davies_neutral_clothed2_icon	"SteppeCrow"	g-white	"normal"
+"Davies_neutral_clothed2_preg"	Figure of Davies_neutral_clothed2_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_neutral_naked"	Figure of Davies_neutral_naked_icon	"SteppeCrow"	g-white	"normal"
+"Davies_neutral_naked_preg"	Figure of Davies_neutral_naked_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_scared_clothed1"	Figure of Davies_scared_clothed1_icon	"SteppeCrow"	g-white	"normal"
+"Davies_scared_clothed1_preg"	Figure of Davies_scared_clothed1_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_scared_clothed2"	Figure of Davies_scared_clothed2_icon	"SteppeCrow"	g-white	"normal"
+"Davies_scared_clothed2_preg"	Figure of Davies_scared_clothed2_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_scared_naked"	Figure of Davies_scared_naked_icon	"SteppeCrow"	g-white	"normal"
+"Davies_scared_naked_preg"	Figure of Davies_scared_naked_preg_icon	"SteppeCrow"	g-white	"normal"
+"Davies_pinup"	Figure of Davies_pinup_icon	"SteppeCrow"	g-white	"normal"
+"Davies_pinup_preg"	Figure of Davies_pinup_preg_icon	"SteppeCrow"	g-white	"normal"
 "Demon Brute"	Figure of DemonBrute_icon	"Lay"	g-black	"normal"
+"Darius_clothed"	Figure of Darius_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Darius_hard"	Figure of Darius_hard_icon	"SteppeCrow"	g-white	"normal"
+"Darius_blissed_clothed"	Figure of Darius_blissed_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Darius_blissed_naked"	Figure of Darius_blissed_naked_icon	"SteppeCrow"	g-white	"normal"
+"Darius_blissed_hard"	Figure of Darius_blissed_hard_icon	"SteppeCrow"	g-white	"normal"
+"Darius_blissed_cum"	Figure of Darius_blissed_cum_icon	"SteppeCrow"	g-white	"normal"
 "Dark Elf"	Figure of DarkElf_icon	"Nokturnalkittie"	g-black	"normal"
+"Darkelf_red_clothed"	Figure of Darkelf_red_clothed_icon	"Moirah"	g-white	"normal"
+"Darkelf_red_hard"	Figure of Darkelf_red_hard_icon	"Moirah"	g-white	"normal"
+"Darkelf_blue_clothed"	Figure of Darkelf_blue_clothed_icon	"Moirah"	g-white	"normal"
+"Darkelf_blue_naked"	Figure of Darkelf_blue_naked_icon	"Moirah"	g-white	"normal"
 "DarkTyrant"	Figure of DarkTyrant_icon	"Gherod"	g-black	"normal"
 "Diego"	Figure of Diego_icon	"valdericblackstag"	g-black	"normal"
 "Diego_face"	Figure of Diego_face_icon	"valdericblackstag"	g-black	"normal"
@@ -1553,8 +1678,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Frank"	Figure of Frank_icon	"Dolphpup"	g-black	"normal"
 "Feral Shaft Beast"	Figure of FeralShaftBeast_icon	"Demon-Man"	g-white	"normal"
 "Fiona"	Figure of Fiona_icon	"Valen"	g-white	"normal"
-"Fluffy Owl"	Figure of FluffyOwl_icon	"Waxraven/WXRVN"	g-white	"normal"
+["Fluffy Owl"	Figure of FluffyOwl_icon	"Waxraven/WXRVN"	g-white	"normal"]
+"Fluffy Owl 2"	Figure of FluffyOwl2_icon	"Moirah"	g-white	"normal"
 "Gabriel"	Figure of Gabriel_icon	"Darian821"	g-black	"normal"
+"Gargoyle_stuck"	Figure of Gargoyle_stuck_icon	"EmieChii"	g-white	"normal"
 "Gargoyle_soft"	Figure of Gargoyle_soft_icon	"SteppeCrow"	g-white	"normal"
 "Gargoyle_hard"	Figure of Gargoyle_hard_icon	"SteppeCrow"	g-white	"normal"
 "Garrett"	Figure of Garrett_icon	"Catmonkshiro"	g-black	"normal"
@@ -1647,6 +1774,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Jennifer_preg_clothed"	Figure of Jennifer_preg_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Jennifer_preg_naked"	Figure of Jennifer_preg_naked_icon	"SteppeCrow"	g-white	"normal"
 "Jennifer"	Figure of Jennifer_icon	"Waxraven/WXRVN"	g-white	"normal"
+"Jett_soft"	Figure of Jett_soft_icon	"Gherod"	g-dark-gray	"normal"
+"Jett_hard"	Figure of Jett_hard_icon	"Gherod"	g-dark-gray	"normal"
 "Jill"	Figure of Jill_icon	"Sususmiles"	g-white	"normal"
 "Jimmy"	Figure of Jimmy_icon	"Redragon"	g-white	"normal"
 "Karel&Isaac_clothed"	Figure of Karel&Isaac_clothed_icon	"Reaper3d"	g-white	"normal"
@@ -1761,6 +1890,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Nermine_clothed_face"	Figure of Nermine_clothed_face_icon	"Lytta"	g-black	"normal"
 "Nermine_naked"	Figure of Nermine_naked_icon	"Lytta"	g-black	"normal"
 "Nermine_naked_face"	Figure of Nermine_naked_face_icon	"Lytta"	g-black	"normal"
+"Karen clothed"	Figure of Karen_clothed_icon	"SteppeCrow"	g-White	"normal"
+"Karen naked"	Figure of Karen_naked_icon	"SteppeCrow"	g-White	"normal"
 "Newt"	Figure of Newt_icon	"Anyare"	g-white	"normal"
 "Nightmare_hard"	Figure of Nightmare_hard_icon	"Vashaa"	g-White	"normal"
 "Nightmare_soft"	Figure of Nightmare_soft_icon	"Vashaa"	g-white	"normal"
@@ -1774,7 +1905,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Orc Brothers_clothed"	Figure of Orc_Brothers_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Orc Brothers_naked"	Figure of Orc_Brothers_naked_icon	"Kupo Klein"	g-white	"normal"
 "Orc Female"	Figure of Katya_clothed_icon	"Waxraven/WXRVN"	g-white	"normal"
-"Orc Warrior"	Figure of OrcWarrior_random_icon	"Gene Lightfoot"	g-white	"normal"
+"Orc Warrior_random"	Figure of OrcWarrior_random_icon	"Gene Lightfoot"	g-white	"normal"
 "Orthas_face"	Figure of Orthas_face_icon	"SineAlas"	g-white	"normal"
 "PantherTaur_clothed"	Figure of PantherTaur_clothed_icon	"SteppeCrow"	g-white	"normal"
 "PantherTaur_hard"	Figure of PantherTaur_hard_icon	"SteppeCrow"	g-white	"normal"
@@ -1821,6 +1952,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sabretooth_soft"	Figure of Sabretooth_soft_icon	"Vashaa"	g-White	"normal"
 "Sabretooth_clothed"	Figure of Sabretooth_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Sabretooth_naked"	Figure of Sabretooth_naked_icon	"SteppeCrow"	g-white	"normal"
+"Sascha_crouch"	Figure of Sascha_crouch_icon	"Sokan"	g-black	"normal"
 "Sascha_turtleneck"	Figure of Sascha_turtleneck_icon	"CastBound"	g-black	"normal"
 "Sascha_shirt"	Figure of Sascha_shirt_icon	"CastBound"	g-black	"normal"
 "Sascha_bottomless"	Figure of Sascha_bottomless_icon	"CastBound"	g-black	"normal"
@@ -1841,6 +1973,28 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sea Dragoness SFW"	Figure of SeaDragoness_SFW_icon	"Vashaa"	g-white	"normal"
 "Sea Dragon Hard"	Figure of SeaDragon_hard_icon	"Vashaa"	g-white	"normal"
 "Sea Dragon Soft"	Figure of SeaDragon_soft_icon	"Vashaa"	g-white	"normal"
+"Segis Muscular Default 0"	Figure of Segis_muscular_default_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Default Hard 1"	Figure of Segis_muscular_default_hard_1_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Default Hard 2"	Figure of Segis_muscular_default_hard_2_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Default Hard 3"	Figure of Segis_muscular_default_hard_3_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 11"	Figure of Segis_muscular_soft_11_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 12"	Figure of Segis_muscular_soft_12_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 13"	Figure of Segis_muscular_soft_13_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 21"	Figure of Segis_muscular_soft_21_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 22"	Figure of Segis_muscular_soft_22_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 22"	Figure of Segis_muscular_soft_23_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 31"	Figure of Segis_muscular_soft_31_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 32"	Figure of Segis_muscular_soft_32_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Soft 32"	Figure of Segis_muscular_soft_33_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 11"	Figure of Segis_muscular_hard_11_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 12"	Figure of Segis_muscular_hard_12_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 13"	Figure of Segis_muscular_hard_13_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 21"	Figure of Segis_muscular_hard_21_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 22"	Figure of Segis_muscular_hard_22_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 22"	Figure of Segis_muscular_hard_23_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 31"	Figure of Segis_muscular_hard_31_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 32"	Figure of Segis_muscular_hard_32_icon	"Gherod"	g-dark-gray	"normal"
+"Segis Muscular Hard 32"	Figure of Segis_muscular_hard_33_icon	"Gherod"	g-dark-gray	"normal"
 "Septus"	Figure of Septus_icon	"Feralise"	g-black	"normal"
 "Septus_face"	Figure of Septus_face_icon	"Cirrusthecloud"	g-black	"normal"
 "Sgt Marks_clothed"	Figure of SgtMarks_clothed_icon	"SteppeCrow"	g-white	"normal"
@@ -1917,6 +2071,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Susan_MHerm_hard"	Figure of Susan_MHerm_hard_icon	"Vashaa"	g-white	"normal"
 "Sven_naked"	Figure of Sven_naked_icon	"Brun69"	g-black	"normal"
 "Sven_tail"	Figure of Sven_tail_icon	"Brun69"	g-black	"normal"
+"Sylvia clothed"	Figure of Sylvia_clothed_icon	"SteppeCrow"	g-White	"normal"
+"Sylvia clothed + tongue"	Figure of Sylvia_clothed_tongue_icon	"SteppeCrow"	g-White	"normal"
+"Sylvia naked"	Figure of Sylvia_naked_icon	"SteppeCrow"	g-White	"normal"
+"Sylvia naked + tongue"	Figure of Sylvia_naked_tongue_icon	"SteppeCrow"	g-White	"normal"
 "Talov_Kerr_Barrel"	Figure of Talov_Kerr_Barrel_icon	"Kupo Klein"	g-black	"normal"
 "Talov_Kerr_Party"	Figure of Talov_Kerr_Party_icon	"Kupo Klein"	g-black	"normal"
 "Tanuki Dad_soft"	Figure of Tanuki_Dad_soft_icon	"SteppeCrow"	g-White	"normal"
@@ -1925,6 +2083,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Tehuantl_Male_clothed"	Figure of Tehuantl_Male_clothed_icon	"Yora"	g-black	"normal"
 "Tehuantl_Male_hard"	Figure of Tehuantl_Male_hard_icon	"Yora"	g-black	"normal"
 "Tehuantl_Female_face"	Figure of Tehuantl_Female_face_icon	"Vashaa"	g-black	"normal"
+"Tehuantl_Female_clothed"	Figure of Tehuantl_Female_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Tehuantl_Female_clothed_preg"	Figure of Tehuantl_Female_clothed_preg_icon	"SteppeCrow"	g-white	"normal"
+"Tehuantl_Female_naked"	Figure of Tehuantl_Female_naked_icon	"SteppeCrow"	g-white	"normal"
+"Tehuantl_Female_naked_preg"	Figure of Tehuantl_Female_naked_preg_icon	"SteppeCrow"	g-white	"normal"
 "Thomas_erect"	Figure of Thomas_erect_icon	"Inkydemon"	g-black	"normal"
 "Thomas_face"	Figure of Thomas_face_icon	"Inkydemon"	g-black	"normal"
 "Thomas_soft"	Figure of Thomas_soft_icon	"Inkydemon"	g-black	"normal"
@@ -1980,7 +2142,11 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Valerie"	Figure of Valerie_icon	"Sususmiles"	g-white	"normal"
 "Violet_face"	Figure of Violet_face_icon	"SineAlas"	g-black	"normal"
 "Vixentaur"	Figure of Vixentaur_icon	"Anymouse1968"	g-white	"normal"
-"Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-white	"normal"
+["Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-white	"normal"]
+"Vixen Nurse Herm"	Figure of VixenNurse_herm_clothed_icon	"Moirah"	g-white	"normal"
+"Vixen Nurse Herm naked"	Figure of VixenNurse_herm_naked_icon	"Moirah"	g-white	"normal"
+"Vixen Nurse Herm"	Figure of VixenNurse_fem_clothed_icon	"Moirah"	g-white	"normal"
+"Vixen Nurse Herm naked"	Figure of VixenNurse_fem_naked_icon	"Moirah"	g-white	"normal"
 "Voodoo Gecko"	Figure of Voodoo_Gecko_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Chris_warrior_clothed"	Figure of Chris_warrior_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Chris_warrior_naked"	Figure of Chris_warrior_naked_icon	"Kupo Klein"	g-white	"normal"
@@ -2560,7 +2726,9 @@ carry out artistcredits:
 	say "     Chocolate Lab by SparklePens @ furaffinity.net[line break]";
 	say "     Cougar (anthro) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 [	say "     Cougar by catnamedfish @ furaffinity.net[line break]";]
-	say "     Dark Elf by Nokturnalkittie @ https://www.furaffinity.net/user/nokturnalkittie/[line break]";
+[	say "     Dark Elf by Nokturnalkittie @ https://www.furaffinity.net/user/nokturnalkittie/[line break]";]
+	say "     Dark Elf (Red) by Moirah @ https://www.furaffinity.net/gallery/moirah/[line break]";
+	say "     Dark Elf (Blue) by Moirah @ https://www.furaffinity.net/gallery/moirah/[line break]";
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
 	say "     Donkeywoman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
@@ -2576,9 +2744,11 @@ carry out artistcredits:
 	say "     Feral Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
 	say "     Fiona by Valen[line break]";
 	say "     Fire Sprite Male by Genelightfoot @ y-gallery.net[line break]";
+	say "     Fluffy Owl 2 by Moirah @ https://www.furaffinity.net/gallery/moirah/[line break]";
 	say "     Fluffy Owl by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Friendship Pony by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Gazelle by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Gargoyle Stuck Threesome by EmieChii @ https://www.furaffinity.net/user/emiechii/[line break]";
 	say "     German Shepherd by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Giraffe Herm by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
@@ -2691,7 +2861,9 @@ carry out artistcredits:
 	say "     Artemis by FaroreNightclaw @ furaffinity.net[line break]";
 	say "     Anastasia by SandySchreiber @ furaffinity.net[line break]";
 	say "     Atticus by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
-	say "     Augustus Drake by Gherod @  https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
+	say "     Augustus Drake by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
+	say "     Augustus_Drake_lion_form_hard @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
+	say "     Augustus_Drake_lion_form_soft @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
 	say "     Aurora by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Blanche (standing & preg) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Blanche (color) by The_Negative @ furaffinity.net[line break]";
@@ -2721,6 +2893,7 @@ carry out artistcredits:
 	say "     Danny (naked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
 	say "     Danny (design + dressed) by Dragonpunk @ furaffinity.net[line break]";
 	say "     Darius by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
+	say "     Darius (dressed + naked) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Dark Tyrant (Fallen King) by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
 	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
 	say "     Diego by valdericblackstag @ furaffinity.net[line break]";
@@ -2769,6 +2942,7 @@ carry out artistcredits:
 	say "     Janice by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Jason by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Jay by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
+	say "     Jett by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
 	say "     Jill by Sususmiles @ furaffinity.net[line break]";
 	say "     Jimmy by Redragon @ ???[line break]";
 	say "     Katherine by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
@@ -2817,6 +2991,7 @@ carry out artistcredits:
 	say "     Ruby by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Ryousei (clothed) by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Ryousei by ValdericBlackstag @ https://www.furaffinity.net/user/valdericblackstag/[line break]";
+	say "     Sascha (crouch) by Sokan/Sweet Firelis @ https://www.furaffinity.net/user/sweetfirelis/[line break]";
 	say "     Sascha (jogging) by CastBound @ https://www.furaffinity.net/user/castbound/[line break]";
 	say "     Sally by Furball @ furaffinity.net[line break]";
 	say "     Sam (as Dracovixentaur) by Anymouse1968 @ furaffinity.net[line break]";
@@ -2824,6 +2999,7 @@ carry out artistcredits:
 	say "     Santa Claws by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Sandra by Trav @ ???[line break]";
 	say "     Sarah by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
+	say "     Segis by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
 	say "     Septus by Feralise @ furaffinity.net[line break]";
 	say "     Septus (face) by Cirrusthecloud @ https://www.furaffinity.net/user/cirrusthecloud/[line break]";
 	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";
@@ -2906,7 +3082,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Wemd", "Wolfram Rolf", "Xenotropos, Yora"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "EmieChii", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "Moirah", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sokan", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Wemd", "Wolfram Rolf", "Xenotropos, Yora"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;
