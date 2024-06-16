@@ -86,7 +86,6 @@ Augustus_Drake by Sundered Dragon begins here.
 [ 5 = Fifth message       ]
 [ 6 = sixth message       ]
 
-
 [ Humanity of Augustus Drake ]
 [ 0 = first message          ]
 [ 1 = second message         ]
@@ -111,6 +110,13 @@ Augustus_Drake by Sundered Dragon begins here.
 [ 5 = Fifth message            ]
 [ 6 = sixth message            ]
 
+[   Loyalty of Augustus Drake  ]
+[ 0 = Quest not completed/TF   ]
+[ 1 = Quest completed/not TF'ed]
+
+
+
+
 [             TODO List                 ]
 [ Port skin diff and cunt diff          ]
 [ Pet Candy walk in event               ]
@@ -123,6 +129,11 @@ Augustus_Drake by Sundered Dragon begins here.
 A postimport rule:
 	if HP of Doctor Matt >= 5 and Only the Lonely is not resolved:
 		now Only the Lonely is active;
+
+A postimport rule:
+	if HP of Augustus Drake is 7 and Loyalty of Augustus Drake is 0:
+		now Loyalty of Augustus Drake is 1;
+
 
 Section 1 - What is a man
 
@@ -210,6 +221,7 @@ to say augustusdrakedesc:
 	else if HP of Augustus Drake is 99:
 		say "     Forcefully stripped of his humanity, due in large part to your meddling, Drake has transformed into a patriarchal lion. Initially a tall man, Augustus's infection has imbued him with an extra six inches putting the man at a towering seven feet. After being warped by the nanites you indirectly infected him with, Drake's impassive face has taken on the hardened boxy muzzle and dark blunted nose of a feral male lion. Adding to the effect is a mane of liquid bronze fur growing from around his neck. The ends of which appear to have a ring of flowing crimson highlights circumscribing his mane. His torso, humanoid in shape and covered in a pelt of burnished gold, has become a dense sea of finely hewed muscles you could lecture an anatomy class on. Altered by the infection, Drake's digits have become an efficient hybrid of leonine paws and sapiens hands. That allows him the benefit of his long retractable claws; while preserving his ability to operate sensitive equipment.";
 		say "     Much in the order of his mane, Drake's fingers and toes are tipped with bright sanguine hairs. Sprouting from his chiseled ass is a long Felidae tail, which just like his digits ends in a tuft of rich blood red fur. Resting upon Drake's carved digitigrade legs is a plump pair of cantaloupe sized furry balls that hang close to his knees. In contrast, his meaty feline sheath appears to be around two inches thick and less than three inches long. As he's no longer able to fit into most pre-infection attire, Augustus has to walk about in the nude. The sole exception being a wrap-around holster he wears around his chest that at the moment is playing host to a large pocket knife. Hoisted over Drake's shoulder is his Anti-material rifle, the words: [italic type]Now, I am become death, the destroyer of worlds[roman type] coiling around the barrel.";
+		project Figure of Augustus_Drake_lion_form_soft_icon;
 
 instead of conversing the Augustus Drake:
 	say "[Draketalk]";
@@ -308,6 +320,7 @@ to say Draketalk:
 		Move player to Dry Plains;
 		ItemGain Driver carbine by 1;
 		now HP of Augustus Drake is 7;
+		now Loyalty of Augustus Drake is 1;
 	else if HP of Augustus Drake >= 7:
 		say "[AugustusDrakeTalkMenu]";
 
@@ -424,6 +437,7 @@ to say sexwithdrake:
 
 to say DrakeSexMenu:
 	say "     Eyeing up the patriarchal lion man, you wonder if you should.";
+	project Figure of Augustus_Drake_lion_form_hard_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
