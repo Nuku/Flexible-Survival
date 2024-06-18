@@ -186,7 +186,7 @@ name	desc	weight	object
 "ancient tome"	"A large book, bound in black leather. There is no title on its cover, only a triangle-symbol with a slit-pupiled eye branded into the leather."	1	ancient tome
 
 Ancient Tome is a grab object. Ancient Tome is not temporary.
-Ancient Tome has a usedesc "[TomeUse]".
+Ancient Tome has a Usedesc "[TomeUse]".
 
 to say TomeUse:
 	LineBreak;

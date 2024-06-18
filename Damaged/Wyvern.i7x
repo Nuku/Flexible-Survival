@@ -2156,6 +2156,6 @@ To say wyvern goop use:
 	increase Libido of Player by 1;
 
 wyvern goop is a grab object. wyvern goop is infectious. Strain of wyvern goop is "Wyvern".
-wyvern goop has a usedesc "[wyvern goop use]".
+wyvern goop has a Usedesc "[wyvern goop use]".
 
 Wyvern ends here.

@@ -439,16 +439,16 @@ instead of sniffing Nightmare Vial:
 Usedesc of Nightmare Vial is "[nightmaremagic].";
 
 To say nightmaremagic:
-	if jackalmantf > 0:
+	if JackalManTF > 0:
 		say "For some reason your body seems to fight with itself for a minute as you ingest the vial of strange liquid, and you get flashes of dark images and strange places in your eyes as your body convulses helplessly. Eventually though the tremors fade, and you lie there panting on the ground for several minutes before you are able to move again, though looking yourself over you can't see that the strange vial of liquid changed any of your nice and sexy jackal-like features...";
 		stop the action;
 	if "Ceryneian Blessed - Anthro" is listed in traits of Player or "Ceryneian Blessed - Feral" is listed in traits of Player or "Ceryneian Blessed - Taur" is listed in traits of Player:
 		say "     As you swallow the liquid, you begin to retch, your body seemingly rejecting the foul fluid. Convulsing, you see images flash before your eyes, dark rituals and visions of terror that you don't remember a moment later. 'Resist the taint,' a voice spits, though you are unable to see who said it. Eventually, your body calms and you look down, panting from exertion, to see what effect the vial's contents has had on your body, finding that you look exactly the same, the blessing of the Olympians seemingly protecting you against the Nightmare's influence while you are in Ceryneian deer. Surprisingly, as you look down at your hand, you see that the vial is still full, making you wonder whether you even drank it in the first place. You decide to stow it away again, wondering whether you would be better off trying again when you are in another form...";
 		ItemGain Nightmare Vial by 1;
 		stop the action;
-	if jackalboytf > 0:
-		now nerminetalk is 1;
-		now jackalboytf is 5;
+	if JackalBoyTF > 0:
+		now NermineTalk is 1;
+		now JackalBoyTF is 5;
 		say "You feel strange as the liquid runs down your throat, feeling strangely more dominant and less like a good little jackal slut as the changes begin to run through your body.";
 		say "The strange salty yet delicious taste of the strange mixture washes over your tongue, and burns like fire or fine whiskey as it slides down your throat easily. Before you know it you have drank the whole vial and are licking your lips looking for more. It isn't long however, before you are distracted by a strange warmth growing within as what feels like a dim coal of power burning within you ignites. And you moan as your body begins to shift and reshape itself, your spine seeming to crack slightly and become more flexible, as a silken waterfall of fine horsehair erupts from your rear, spilling forth to form a surprisingly comfortable and handsome long black equine tail, with just the hint of a dark reddish color when the light reflects off of it. You swish your new tail behind you experimentally for a minute, finding it surprisingly easy to move and control, the new balance your tail provides to be quite helpful as well as handsome. You grin slightly with a strange pleasure at your new appendage, as well as the new sense of power burning within you awoken by the strange but delicious liquid.";
 		now TailName of Player is "Nightmare";

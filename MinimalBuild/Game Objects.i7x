@@ -10,7 +10,7 @@ A thing can be restful. A thing is usually not restful.
 
 Grab Object is a kind of thing.
 A grab object has a number called objsize. Objsize of grab object is usually 3.	[Used only for armaments and journal.]
-A grab object has a text called usedesc. [function call for using the item]
+A grab object has a text called Usedesc. [function call for using the item]
 A grab object can be temporary. A grab object is usually temporary. [destroyed upon use]
 A grab object can be fast. A grab object is usually not fast. [usable in combat]
 A grab object can be infectious. [infects upon use]
@@ -159,10 +159,10 @@ To process (x - a grab object):
 		ItemLoss x by 1 silently;
 	else:
 		say "You use the [x].";
-	if usedesc of x is empty:
+	if Usedesc of x is empty:
 		now x is x;
 	else:
-		say "[usedesc of x]";
+		say "[Usedesc of x]";
 	if x is infectious and "Iron Stomach" is not listed in feats of Player:
 		let found be 0;
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
