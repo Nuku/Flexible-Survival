@@ -12,5 +12,8 @@
         "inform7extension": {
             "parser": "plain"
         }
-    }
+    },
+    "cSpell.enableFiletypes": [
+        "inform7extension"
+    ]
 }

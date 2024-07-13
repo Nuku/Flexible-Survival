@@ -922,7 +922,7 @@ to say EricaCarlScene3:
 
 to say EricaCarlScene4:
 	say "     Coming into the library, you see Carl and Erica do another stint of jogging together, coming out of the long rows of shelves side by side in casual conversation as they go along. Seeing you as they reach the end of their run, the human and husky wave in greeting, then Carl tells his friend with a smile, 'Nice workout. I'm so glad to have someone to hang out with.' Erica gives him a beaming grin and replies, 'Right back at you. Always a pleasure Carl.' And with that, the young woman says she wants to cool down a bit and read, then starts walking to the bunker entrance door. The canine soldier gives you a sidelong glance that tells you he wants to talk, but you notice his eyes barely leave Erica's backside. He is checking the young woman out as she walks away, tail wagging excitedly as he clearly likes what he sees.";
-	if HP of Carl < 11: [regular Carl]
+	if HP of Carl > 10 and HP of Carl < 30: [regular Carl]
 		say "     By the time you've walked over to Carl, Erica is through the bunker door and on her way down, leaving your resident soldier to turn to you. 'She's quite something, isn't she?' Carl says distractedly with a last glance at the door as it closes slowly on its own. It is clear that he doesn't really expect an answer, and he shakes off whatever thought was in his mind a second later, then turns his whole attention to you. 'Hey there, I wanted to ask you something. With you kinda being the landlord here, giving me a place to stay in all this chaos... would you be okay with it if I had some fun with... someone? Just hypothetically, you know. Don't worry, I don't plan to build a husky harem.'";
 		LineBreak;
 		say "     It is fairly clear who he's alluding to. What's your reply?";
@@ -936,7 +936,7 @@ to say EricaCarlScene4:
 			LineBreak;
 			say "     Reaching out to give the muscular soldier's shoulder a firm squeeze, you put on a serious expression and tell him that he should focus on his duty. Some of the people in the city are hanging on to their humanity by the barest thread, and it'd be bad to have someone succumb right here in the library. It is easily visible how disappointed the man his - from his drooping tail and flopping-down ears to a little grimace on his muzzle, but he accepts your decision nonetheless. With a nod, he trots off towards the stairs and makes his way to the upper story of the library.";
 			now CarlEricInteraction is 50;
-	else if HP of Carl is 30: [subby Carl]
+	else if HP of Carl > 30 and HP of Carl < 40: [subby Carl]
 		say "     By the time you've walked over to Carl, Erica is through the bunker door and on his way down, leaving your resident soldier to turn to you. 'She's quite something, isn't she?' Carl says distractedly with a last glance at the door as it closes slowly on its own. Then a visible change goes through Carl as he remembers your status over him - lowering his head submissively, the anthro husky turns to you. 'Alpha, I wanted to ask you something. With you giving me a place to stay in all this chaos and being my pack-leader... would you be okay with it if I had some fun with... someone? Just hypothetically, you know.'";
 		LineBreak;
 		say "     It is fairly clear who he's eluding to. What's your reply?";

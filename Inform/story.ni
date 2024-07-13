@@ -540,6 +540,7 @@ Include Hawkman by Sarokcat.
 Include Hellfire Demon by Gherod.
 Include Helot by Wahn.
 Include Hentai Fan by Stripes.
+Include Hermacore by Sundered Dragon.
 Include Herm Dolphin by Hellerhound.
 Include Herm Hyena by Guest Writers.
 Include Hermaid by Xenophiliac.

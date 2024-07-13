@@ -29,7 +29,7 @@ to say Hypno Spider Wins:
 
 to say Hypno Spider Loses:
 	if fightoutcome is 11: [submitted by libido victory]
-		say "     As the Hypno Spider becomes more and more aroused it seems increasingly confused, unsure whether to attack or submit to your advances. Flustered, the frog escapes quickly down the nearby sewer drain. You consider following, but decide to move on for now.";
+		say "     As the Hypno Spider becomes more and more aroused it seems increasingly confused, unsure whether to attack or submit to your advances. Flustered, the spider escapes quickly down the nearby sewer drain. You consider following, but decide to move on for now.";
 	else:
 		say "     Striking a final decisive blow to the Hypno Spider, the creature curls its legs up on itself and a puddle of sticky slime oozes out from its erect ovipositor. Examining the creature it seems entirely desiccated. You decide to move on for now.";
 	LineBreak;
