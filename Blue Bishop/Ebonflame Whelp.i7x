@@ -86,9 +86,6 @@ to say ebwhelpdef:
 		say "     Letting out one last, mournful cry, the whelp finally falls to the ground with a soft thud. Faintly chirping and stirring, it looks like it'll take a while to recover. You choose this time to go about your business once more, before it wakes.";
 
 to say ebwhelpdesc:
-	setmongender 3; [creature is male]
-	now firebreathcount is 0;
-	now firebreathready is false;
 	if birthedwhelp is false:
 		say "     The sound of a low squeal filling the air, [one of]what appears to be a small dragon[or]an ebonflame whelp[stopping] dives at you. No more than maybe two to three feet tall and covered in coarse, deeply black and purple scales, the creature seems to struggle just to keep itself airborne with its meager wings. More distractingly, [one of]you nearly mistake its disproportionately large, black cock for its tail,[or]it's disproportionately large, black cock[stopping] shamelessly exposed in the open air, the tapered, dangling thing oozing its glowing, molten-colored fluid.";
 		say "     The tiny thing is a noise of growls and chirps as it claws at you, forcing you to bat it away. Reeling back a few feet, the relentless little whelp only charges at you again!";
@@ -96,6 +93,16 @@ to say ebwhelpdesc:
 		say "     Still lowly squealing, the ebonflame whelp wheels around to face its [']mother['] before it immediately dives at you!";
 		say "     No more than maybe two to three feet tall and covered in coarse, deeply black and purple scales, the creature seems to struggle just to keep itself airborne with its meager wings. More distractingly, it's disproportionately large, black cock shamelessly exposed in the open air, the tapered, dangling thing oozing its glowing, molten-colored fluid.";
 		say "     The tiny, noisy thing clearly doesn't behave like normal offspring, attacking its parent with the clear intent of repeating the cycle, and forcing you to bat it away. Reeling back a few feet, the relentless little whelp only charges at you again!";
+
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Ebonflame Whelp"	"[PrepCombat_Ebonflame Whelp]"
+
+to say PrepCombat_Ebonflame Whelp:
+	setmongender 3; [creature is male]
+	now firebreathcount is 0;
+	now firebreathready is false;
 
 Section 2 - Creature Insertion
 

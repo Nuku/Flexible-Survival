@@ -50,7 +50,7 @@ to say ResolveEvent Rooftop Rumble:
 				say "     You fight off the bloodthirsty leopardman and slam him to the ground, this time definitely too bruised and battered to get up anytime soon. He sputters a few breaths and then you hear him mumble, '...god-damned blue devil...', before he goes out like a light. Looking down upon the fallen opponent, you are left with the open questions of what on earth he meant, let alone what actually transpired here on this roof. In that instant however, you come to be aware of two things. First, the sense of being watched has not abated at all, in fact it is as strong as ever before. Second, you feel a definite presence on the roof, and it is not any of the bodies around you. Whirling around with grim determination to face down who- or whatever else might have shown up, you are greeted with a sight that suddenly makes the words of the fallen assailant ring true.";
 				say "     Standing on the edge of the rooftop one building over is a towering figure that looks over seven feet tall, with deep sky blue skin. The figure appears to be a male, with a muscular but not overly bulky body that is extremely well defined - from his broad shoulders and strong arms, over a chiseled chest down to remarkably toned legs. He is adorned with a white loincloth that flutters slightly in the breeze, held in place by a metal belt around his hips, and also is wearing some kind of ribbon around his left bicep. Some kind of bandage-wraps are tied around palms and wrists, stained red with blood in some places. Looking up at his face, you find that he has sharp and attractive human features plus a pair of long slender horns emerging from his forehead and arching slightly backwards. A mass of shoulder-length spiky white hair frames the picture, some of which seems done up in braids. A 'Blue Devil' indeed.";
 				WaitLineBreak;
-				say "     The being standing before you and calmly eying you up and down is likely responsible for the carnage that befell all on this rooftop, yet somehow you don't feel threatened by him at all. Meeting the blue devil's gaze head on, you see him cock his head to the side with what almost looks like an amused expression, then bare a side-grin and even ever so subtly licks his lip. In the next instant, he makes a step forward - right off the roof. Exhaling the breath you finally realize you had been holding onto all this time, you rush over to the edge and... see only an empty street below - well, except the still recuperating leopardman pancaked on the sidewalk, who won't be getting up anytime soon.";
+				say "     The being standing before you and calmly eyeing you up and down is likely responsible for the carnage that befell all on this rooftop, yet somehow you don't feel threatened by him at all. Meeting the blue devil's gaze head on, you see him cock his head to the side with what almost looks like an amused expression, then bare a side-grin and even ever so subtly licks his lip. In the next instant, he makes a step forward - right off the roof. Exhaling the breath you finally realize you had been holding onto all this time, you rush over to the edge and... see only an empty street below - well, except the still recuperating leopardman pancaked on the sidewalk, who won't be getting up anytime soon.";
 				say "     Finding yourself alone on the roof, not counting the unconscious bodies, you finally decide that enough is enough and make your way back to the roof access door exit, only stopping briefly to grab a bottle of water that lies on the way. Exiting the building a few minutes later, you ignore the unconscious leopardman still on the ground and look back up towards the roof, the memory of the carnage and the creature who likely caused it still strong and fresh in your mind. The look he gave you before he vanished is something you won't forget anytime soon.";
 				WaitLineBreak;
 				say "     A part of you can only help but wonder if there is a way to find out more about what you witnessed. Maybe returning to this location at another time could yield some information. The inhabitants of the area no doubt fled when things started to get hairy, but they're likely be back at some point.";
@@ -164,7 +164,7 @@ to say MeetRane:
 	say "     'You did good,' he says before adding, 'I'm a bit surprised they jumped you instead of trolling around for me. Hah - maybe I hit [']em a bit too hard in the head last time and knocked a few screws loose. And still it didn't help [']em any - they sure know whom to pick for their daily beatings.' The demonic-looking man gives a casual shrug as he looks over the unconscious gang-members, then turns back to you, his eyes still shining as he gives you a once-over. Placing one hand on his chest while the other clasps your shoulder, he gruffly states, 'Call me Rane,' followed by a slight nod and the question, 'And you?' Taking note of his firm grip of his large hand, you offer up your name, but before you can state anything more, you find yourself drawn against him, as Rane has quickly slipped his arm around your waist.";
 	WaitLineBreak;
 	say "     Grabbing a handful of your rear, he continues, 'You're strong. I like strong people, that's why I've been watching you.' His hand starts to appreciatively squeeze your butt a few times. 'I'm strong myself. I love kicking ass... love fucking ass too.' In a show of emphasis he flexes the muscles in his free arm and legs while tightening his grip around your ass, his gaze is wandering up and down your body. Before you can react to his brazen touches, he suddenly removes his hand and takes up a more neutral stance. He's a pretty direct and physical guy, clearly liking to play grab-ass, but it seems that (unlike most creatures out on the streets) Rane knows the boundary between being a somewhat pushy charmer and flat out forcing sex on people.";
-	say "     Meeting your gaze with his own and giving an inquisitive, yet amused expression, the blue man smiles and asks in an enticingly rough voice, 'What's a nice piece of tail like you doing in this area, mixing it up with the gutter rats?' You offer a brief summary of your time in the city, glossing over the more 'interesting' adventures, not wanting to encourage this clearly horny devil eying you like a piece of meat. You get to the part where you first met up with Rane, pointing out how he almost dropped a leopardman on your head. The devil says with a snicker, 'Wasn't aiming for you,' then cranes his neck a bit to look at your ass and continues in a joking tone, 'Believe me, I don't miss if I set my mind to hit... on someone.' He shrugs and says, 'It was a lucky throw. Might not have run into you otherwise. Still... I guess I'll have to be more careful when I throw people off buildings in the future.' You're not sure if he is actually joking with that last part. Given just the little bit of Rane's track-record that you know, things like that could be a common occurrence for him.";
+	say "     Meeting your gaze with his own and giving an inquisitive, yet amused expression, the blue man smiles and asks in an enticingly rough voice, 'What's a nice piece of tail like you doing in this area, mixing it up with the gutter rats?' You offer a brief summary of your time in the city, glossing over the more 'interesting' adventures, not wanting to encourage this clearly horny devil eyeing you like a piece of meat. You get to the part where you first met up with Rane, pointing out how he almost dropped a leopardman on your head. The devil says with a snicker, 'Wasn't aiming for you,' then cranes his neck a bit to look at your ass and continues in a joking tone, 'Believe me, I don't miss if I set my mind to hit... on someone.' He shrugs and says, 'It was a lucky throw. Might not have run into you otherwise. Still... I guess I'll have to be more careful when I throw people off buildings in the future.' You're not sure if he is actually joking with that last part. Given just the little bit of Rane's track-record that you know, things like that could be a common occurrence for him.";
 	WaitLineBreak;
 	say "     You're about to ask Rane more about those guys who are after him, but he interrupts you, 'It's good to find someone who knows how to fight! I like seeing that.' He licks his lips, showing a row of sharp teeth in the progress, then says 'It really gets me hard.' Your eyes are reflexively drawn to his crotch and notice a very prominent bulge on display there, showing this demon is not all talk. Before anything else can happen, Rane suddenly raises a finger to his lips, making a 'shhh' sound and turns his head a bit, listening intently with pointy ears. You don't hear anything, but he says, 'What fucking timing. Several large groups of more shitheads are on the way. As much as I love a good fight, I'm 'distracted' with something better.' You jump a bit as you again feel Rane give your ass another quick squeeze. 'Let's continue this somewhere more 'private'...' With an inviting wave of his hand, Rane takes off, bounding over the asphalt with large steps.";
 	LineBreak;
@@ -198,27 +198,34 @@ to say ResolveEvent Wandering Blue Oni:
 		say "then his eyes go wide as the image changes. The mirror now shows you on your hands and knees, with the hellhound you made your deal with mounting you, hips thrusting mercilessly as he knots and breeds you. The beast gives a silent howl in the reflection, then turns its head to look straight at you out of the mirror, eyes burning in an unholy fire. Then suddenly, from one blink to the next, the mirror returns to just showing the normal reflection of what's in front of it.";
 		say "     Rane looks at you with a shocked expression, then says 'You made a deal with that beast? I would never have expected something so vile from you. Stay away from me.' After a quick murmur in Japanese and a bowing towards the mirror, the blue oni then dashes off, vanishing between the bamboo poles before you can do or say anything.";
 		now HP of Rane is 99;
-		move player to shrine;
 		now Rane is nowhere;
 		now Resolution of Wandering Blue Oni is 1; [rejected because of hellhound]
 	else if jackalmantf is 4: [Jackalman Transformation]
 		say "then his eyes go wide as the image changes. The mirror now shows someone standing behind you - it's the jackal-headed man you met in the museum, with one hand-paw resting on your shoulder. The image turns his head to look out of the mirror at you, then vanishes after giving you a nod with an amused expression on his face.";
 		say "     After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. He looks at you with a somewhat more respectful tone in his eyes, then says 'Anubis is watching out for you? That's a powerful patron you have there. You'll have to tell me sometime how you managed to attract his attention and favor.' Looks like he's now ready to talk... and do other things with you.";
-		move Rane to shrine;
+		move Rane to Shrine;
 		now HP of Rane is 6;
-		move player to shrine;
 		now Resolution of Wandering Blue Oni is 2; [comment about Jackalman]
 	else if Nightmaremastery is 1: [Player is Stablemaster]
 		say "then his eyes go wide as the image changes. The mirror now shows you sitting on a large horse made of fire and shadows. It's clearly male, with an erect horsecock dangling between its legs, dripping cum from the tip. The stallion turns his head to look out of the mirror at you with flaming eyes, then nods its head at you as if promising that together you will mount and rule over everything.";
 		say "     After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. He looks at you with a somewhat more respectful tone in his eyes, then says 'So, the Nightmare spirit infuses you. Fine by me - but don't think you'll be able to make me your bitch. This oni is made from tougher stuff.' Now knowing who and what you are, he nevertheless stays where he is, looking ready to talk... or do other things with you.";
+		move Rane to Shrine;
+		now HP of Rane is 6;
 		now Resolution of Wandering Blue Oni is 3; [comment about Nightmare]
 	else:
 		say "then the usual open smile creeps back over his face and he nods to your reflection. After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. Looks like he's now ready to talk... and do other things with you.";
-		move Rane to shrine;
+		move Rane to Shrine;
 		now HP of Rane is 6;
-		move player to shrine;
 		now Resolution of Wandering Blue Oni is 4; [regular join]
+	move Player to Shrine;
 	now Wandering Blue Oni is resolved;
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Human Gangmember"	"[PrepCombat_Human Gangmember]"
+
+to say PrepCombat_Human Gangmember:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -388,7 +395,12 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Blue Oni"	"[PrepCombat_Blue Oni]"
 
+to say PrepCombat_Blue Oni:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -775,13 +787,13 @@ Instead of fucking Rane:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Rane's cock";
 		now sortorder entry is 1;
-		now description entry is "Give him a blow-job";
+		now description entry is "Give him a blowjob";
 		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
-			now description entry is "Get a blow-job";
+			now description entry is "Get a blowjob";
 		[]
 		if Player is female:
 			choose a blank row in table of fucking options;

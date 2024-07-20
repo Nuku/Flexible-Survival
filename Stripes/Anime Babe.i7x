@@ -11,18 +11,6 @@ Definition: a person is animebabebodied:
 	if BodyName of Player is "Anime Babe", yes;
 	no;
 
-to say animebabedesc:
-	setmongender 4;
-	say "     You find yourself facing off with a cartoonishly proportioned woman. Her body is covered in shiny, perfectly smooth, pink skin, looking exactly the same in any light. Her head is fairly large in proportion to her body and has long, blue hair. Her face has a small, near invisible nose and gargantuan, shining eyes that are very expressive. Her body is rail thin without any visible body fat or apparent room for most of her vital organs. When at rest, no part of her seems to move at all. Her arms are exceptionally scrawny, almost skeletal. Her elbows are extremely angular, and her hands are quite dainty. Her legs are disproportionately lengthy, making up a full two thirds of her height. Each is extremely slender, tapering down to feet so small it's a wonder she can stand.";
-	say "     The girl is dressed in a small shirt and short skirt, much like a Japanese school girl outfit. This [one of]pink[or]white[or]blue[at random] shirt does little to cover her plump breasts. To go with her large bosom, she has a tight little ass, and constantly seem to be bending over to give you a clear view of either those lovely jugs or her pert bottom.";
-	say "     She giggles and says something which sounds Japanese, full of 'Desu', 'Kawaii' and 'Keki'. She runs towards you, breasts swaying as holds her arms up at her sides";
-	if ( Player is male and ( CockName of Player is "Tentacle Horror" or CockName of Player is "Parasitic Plant" or CockName of Player is "Squid" or TailName of Player is "Cerberus" ) ) or BodyName of Player is "Squid":
-		say ". She seems particularly excited and attacks you with wild abandon";
-		increase monhitbonus by 2;
-		decrease mondodgebonus by 2;
-		decrease monmindbonus by 2;
-	say ".";
-
 to say losetoanimebabe:
 	now noanimebabesex is 0;
 	if HP of Player > 0:
@@ -85,7 +73,6 @@ to say losetoanimebabe:
 	else:
 		say "Looking you over, she grabs your hand and presses it to her pussy, urging you to finger her dripping cunt. As you do this, she presses your face to her bosom. Your lips wrap around her nipple and suckles on it, causing additional moans from the sexy girl riding you. She grinds down onto your hand and has several quick climaxes that leave your hand and lap soaked in her juices by the time she's done with you and satisfied. Once she's gotten what she wants, she swats you with her paper fan, calling you a pervert and driving you off with several angry bashes.";
 		CreatureSexAftermath "Player" receives "OralPussy" from "Anime Babe";
-
 
 to say beattheanimebabe:
 	say "     Having defeated the anime babe, you knock her to the ground and consider your next course of action. ";
@@ -174,8 +161,25 @@ to say beattheanimebabe:
 			say "     Able to restrain yourself, you let the beaten girl run away crying.";
 			increase noanimebabesex by 1;
 
-
 Section 2 - Creature Insertion
+
+to say animebabedesc:
+	say "     You find yourself facing off with a cartoonishly proportioned woman. Her body is covered in shiny, perfectly smooth, pink skin, looking exactly the same in any light. Her head is fairly large in proportion to her body and has long, blue hair. Her face has a small, near invisible nose and gargantuan, shining eyes that are very expressive. Her body is rail thin without any visible body fat or apparent room for most of her vital organs. When at rest, no part of her seems to move at all. Her arms are exceptionally scrawny, almost skeletal. Her elbows are extremely angular, and her hands are quite dainty. Her legs are disproportionately lengthy, making up a full two thirds of her height. Each is extremely slender, tapering down to feet so small it's a wonder she can stand.";
+	say "     The girl is dressed in a small shirt and short skirt, much like a Japanese school girl outfit. This [one of]pink[or]white[or]blue[at random] shirt does little to cover her plump breasts. To go with her large bosom, she has a tight little ass, and constantly seem to be bending over to give you a clear view of either those lovely jugs or her pert bottom.";
+	say "     She giggles and says something which sounds Japanese, full of 'Desu', 'Kawaii' and 'Keki'. She runs towards you, breasts swaying as holds her arms up at her sides";
+	if ( Player is male and ( CockName of Player is "Tentacle Horror" or CockName of Player is "Parasitic Plant" or CockName of Player is "Squid" or TailName of Player is "Cerberus" ) ) or BodyName of Player is "Squid":
+		say ". She seems particularly excited and attacks you with wild abandon";
+		increase monhitbonus by 2;
+		decrease mondodgebonus by 2;
+		decrease monmindbonus by 2;
+	say ".";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Anime Babe"	"[PrepCombat_Anime Babe]"
+
+to say PrepCombat_Anime Babe:
+	setmongender 4;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

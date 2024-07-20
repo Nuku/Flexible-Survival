@@ -12,71 +12,11 @@ squirefeature is a number that varies. squirefeature is usually 1.
 
 Section 1 - Description
 
-to say squiredesc:
-	setmongender 3; [creature is male]
-	now kpstatus is 0;
-	choose row MonsterID from Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Male";
-	if BodyName of Player is "Knight":
-		now kpstatus is 1;
-	else if BodyName of Player is "Squire":
-		now kpstatus is 2;
-	else if Player is bodily human and player is facially human and player is skintone human and tail of Player is "":
-		now kpstatus is 3;
-	else:
-		now kpstatus is 4;
-	now knightcrestnum is a random number between 1 and 10;
-	if kpstatus is 2 and knightcrestnum is playercrestnum:
-		increase knightcrestnum by 1;
-		if knightcrestnum is 10, now knightcrestnum is 1;
-	now squirefeature is a random number between 1 and 5;
-	if debugactive is 1:
-		say "DEBUG: knightcrestnum: [knightcrestnum], playercrestnum: [playercrestnum], kpstatus: [kpstatus], squirefeature: [squirefeature].";
-	project Figure of Squire_neutral_shirt_pants_shoes_armed_icon;
-	say "     Before you is a handsome young man with a smooth, beardless face, short blond hair and pale blue eyes, dressed in medieval garb. He has a happy eagerness to his face that tells you he's no longer quite right in the head. He is wearing simple leather shoes tied with a string, blue breeches and a white string-tied shirt. A thin leather strip is tied around his waist, holding the sheath of a fairly short sword, while the blade itself is in his hands, looking well-polished, if having a few nicks.";
-	say "     Sizing you up, he raises his sword towards you.";
-	if kpstatus is 1:				[player is Knight]
-		say "     'A knight? You would challenge my master? I think not! I am his brave squire and shall defeat you myself,' he says boldly, only a slight quaver in his voice and a few moment's pause before attacking.";
-	else if kpstatus is 2:		[player is Squire]
-		say "     'You are a knight's squire, like myself? Let us train together. My master is the greatest knight of all and has trained me well. I shall come out on top,' he boasts with an eager smile.";
-	else if kpstatus is 3:		[player is human-like]
-		say "     He takes a nervous step back. 'A brigand[if showlocale is true]! I knew I would find your ilk when I joined my knight on his quest through these dark woods[end if]. You shall not escape, bandit! My master is the bravest knight around and he has trained me well,' he yells, psyching himself up enough to charge at you.";
-	else:						[player is somehow non-human = monster!]
-		say "     He nervously looks over your transformed state. 'A fearsome beast! I- I warn you, monster,' he says with an audible quaver in his voice. 'I am squire to the strongest knight around and he has trained me well[if showlocale is true]. We have come here to do br-brave battle against monstrous foes for glory and honor[end if]. I shall defeat you and prove myself to him,' he says with a mix of nervous eagerness before charging at you with zeal.";
-
-to say stateknightcrest_new:
-	if knightcrestnum is 1:
-		say "an ejaculating cock ringed by ivy";
-	else if knightcrestnum is 2:
-		say "a horse carnally riding a knight";
-	else if knightcrestnum is 3:
-		say "a sword between two dangling dicks";
-	else if knightcrestnum is 4:
-		say "a charging knight with a butt-plug-tipped lance";
-	else if knightcrestnum is 5:
-		say "two downward-pointing dildos on a yellow field";
-	else if knightcrestnum is 6:
-		say "a set of anal beads";
-	else if knightcrestnum is 7:
-		say "a pair of tits between crossed sword and mace";
-	else if knightcrestnum is 8:
-		say "a passant guardant hound with visible cock";
-	else if knightcrestnum is 9:
-		say "twin maidens dancing nude together";
-	else:
-		say "a radiant pussy dribbling juices into a golden bowl";
-
+[see section 4]
 
 Section 2 - Monster Victory
 
 to say losetosquire:
-	if inasituation is true:
-		stop the action; [text taken care of at the source]
 	project Figure of Squire_smile_hard_icon;
 	if kpstatus is 1:
 		if HP of Player > 0:
@@ -263,8 +203,6 @@ to say squirewins_anal_n:
 Section 3 - Player Victory
 
 to say beatthesquire:
-	if inasituation is true:
-		stop the action; [text taken care of at the source]
 	say "     Sending his sword skittering away and knocking him to his knees, you are victorious over the squire. He scrambles backwards and back to his feet. ";
 	if kpstatus is 1:
 		say "'You are indeed a brave and powerful knight. Perhaps you should face off against my master in honorable combat. He would surely best even you,' he proclaims as he recovers his sword and departs quickly.";
@@ -277,6 +215,71 @@ to say beatthesquire:
 
 
 Section 4 - Creature Insertion
+
+to say squiredesc:
+	say "     Before you is a handsome young man with a smooth, beardless face, short blond hair and pale blue eyes, dressed in medieval garb. He has a happy eagerness to his face that tells you he's no longer quite right in the head. He is wearing simple leather shoes tied with a string, blue breeches and a white string-tied shirt. A thin leather strip is tied around his waist, holding the sheath of a fairly short sword, while the blade itself is in his hands, looking well-polished, if having a few nicks.";
+	say "     Sizing you up, he raises his sword towards you.";
+	if kpstatus is 1:				[player is Knight]
+		say "     'A knight? You would challenge my master? I think not! I am his brave squire and shall defeat you myself,' he says boldly, only a slight quaver in his voice and a few moment's pause before attacking.";
+	else if kpstatus is 2:		[player is Squire]
+		say "     'You are a knight's squire, like myself? Let us train together. My master is the greatest knight of all and has trained me well. I shall come out on top,' he boasts with an eager smile.";
+	else if kpstatus is 3:		[player is human-like]
+		say "     He takes a nervous step back. 'A brigand[if showlocale is true]! I knew I would find your ilk when I joined my knight on his quest through these dark woods[end if]. You shall not escape, bandit! My master is the bravest knight around and he has trained me well,' he yells, psyching himself up enough to charge at you.";
+	else:						[player is somehow non-human = monster!]
+		say "     He nervously looks over your transformed state. 'A fearsome beast! I- I warn you, monster,' he says with an audible quaver in his voice. 'I am squire to the strongest knight around and he has trained me well[if showlocale is true]. We have come here to do br-brave battle against monstrous foes for glory and honor[end if]. I shall defeat you and prove myself to him,' he says with a mix of nervous eagerness before charging at you with zeal.";
+
+to say stateknightcrest_new:
+	if knightcrestnum is 1:
+		say "an ejaculating cock ringed by ivy";
+	else if knightcrestnum is 2:
+		say "a horse carnally riding a knight";
+	else if knightcrestnum is 3:
+		say "a sword between two dangling dicks";
+	else if knightcrestnum is 4:
+		say "a charging knight with a butt-plug-tipped lance";
+	else if knightcrestnum is 5:
+		say "two downward-pointing dildos on a yellow field";
+	else if knightcrestnum is 6:
+		say "a set of anal beads";
+	else if knightcrestnum is 7:
+		say "a pair of tits between crossed sword and mace";
+	else if knightcrestnum is 8:
+		say "a passant guardant hound with visible cock";
+	else if knightcrestnum is 9:
+		say "twin maidens dancing nude together";
+	else:
+		say "a radiant pussy dribbling juices into a golden bowl";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Squire"	"[PrepCombat_Squire]"
+
+to say PrepCombat_Squire:
+	setmongender 3; [creature is male]
+	now kpstatus is 0;
+	choose row MonsterID from Table of Random Critters;
+	if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
+	if BodyName of Player is "Knight":
+		now kpstatus is 1;
+	else if BodyName of Player is "Squire":
+		now kpstatus is 2;
+	else if Player is bodily human and player is facially human and player is skintone human and tail of Player is "":
+		now kpstatus is 3;
+	else:
+		now kpstatus is 4;
+	now knightcrestnum is a random number between 1 and 10;
+	if kpstatus is 2 and knightcrestnum is playercrestnum:
+		increase knightcrestnum by 1;
+		if knightcrestnum is 10, now knightcrestnum is 1;
+	now squirefeature is a random number between 1 and 5;
+	if debugactive is 1:
+		say "DEBUG: knightcrestnum: [knightcrestnum], playercrestnum: [playercrestnum], kpstatus: [kpstatus], squirefeature: [squirefeature].";
+	project Figure of Squire_neutral_shirt_pants_shoes_armed_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -509,7 +512,7 @@ to say PlayerObservedSquireServices:
 
 to say SquireServiceScene1:
 	say "     Walking through the forest, you manage to make your way to a small clearing with a knight setting up camp. Even from this distance, you can tell the tent is large, spacious, and well made. Upon the side of the tent, you can see the crest of a [stateplayercrest]. Looking down on your thinly muscled frame sits a loose tunic bearing the same symbol. A moment of glee rushes over you as you realize that you have found your knight! You are overcome with the urge to aid the handsome man like any good squire should, do you follow the temptation?";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Get acquainted with your knight.";
 	say "     ([link]N[as]n[end link]) - Leave for now.";
 	if Player consents:
@@ -535,7 +538,7 @@ to say SquireServiceScene1:
 
 to say SquireServiceScene2:
 	say "     Walking through the forest, you can hear the muffled sound of moaning coming from beyond the brush. Sneaking through the trees and foliage, you make your way to a small clearing that contains a campsite that looks familiar to you. You can hear the distinct sounds of slurping and the quiet growls of some animal coming from the other side of the tent. You could circle around to get a better idea of what your knight is up to if you want.";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sneak around the camp to get a better view.";
 	say "     ([link]N[as]n[end link]) - Leave for now.";
 	if Player consents:
@@ -554,7 +557,7 @@ to say SquireServiceScene2:
 
 to say SquireServiceScene3:
 	say "     Walking around the forest, you stumble upon another clearing with a familiar looking tent with a man sitting near a fire the campfire. He wears nothing more than a simple cotton shirt with a few of the buttons undone revealing a muscular chest alongside a pair of pants that does little to hide his large package. You take a moment to study his face, identifying him as the knight you have recently began squiring for. He appears to be relaxing for the moment, do you want to go see him?";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Join the knight by the campfire.";
 	say "     ([link]N[as]n[end link]) - Leave for now.";
 	if Player consents:

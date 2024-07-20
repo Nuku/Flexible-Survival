@@ -9,43 +9,10 @@ Section 1 - Creature Responses
 pitbullgender is a number that varies.
 
 to say pitbulldesc:
-	choose row MonsterID from the Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Female";
-	now pitbullgender is a random number between 1 and 2;
-	if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
-		setmongender 0; [creature is neuter-X]
-		say "     You run into what looks to be a fairly muscular canine creature. The pit bull growls softly as it glares at you before barking a few times. When you stand your ground, it heads off. Hopefully it'll tell the others to leave you alone as well.";
-		now BannedStatus entry is true;
-		now fightoutcome is 19;
-		now combat abort is 1;
-		now pitbullgender is 0;
-	else if MaleList is banned:
-		now pitbullgender is 1;
-	else if FemaleList is banned:
-		now pitbullgender is 2;
-	else if MaleList is warded and FemaleList is warded:
-		now pitbullgender is a random number between 1 and 2;
-	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
-		if MaleList is warded and a random chance of 1 in 3 succeeds:
-			now pitbullgender is 1;
-		else if FemaleList is warded and a random chance of 1 in 3 succeeds:
-			now pitbullgender is 2;
-	else if ishunting is false:
-		if MaleList is warded:
-			now pitbullgender is 1;
-		else if FemaleList is warded:
-			now pitbullgender is 2;
 	if pitbullgender is 1:
 		setmongender 4; [creature is female]
-		say "     You run into what looks to be a fairly muscular canine, her body adorned in dirty and unkempt attire. The female growls deeply, making it clear that you've encroached upon her territory. Her transparently fiery temperament ill-equipped to abide trespassers, she lunges forward to attack!";
 	else if pitbullgender is 2:
 		setmongender 3; [creature is male]
-		say "     You run into what looks to be a fairly muscular canine, his body adorned in dirty and unkempt attire. The male growls deeply, making it clear that you've encroached upon his territory. His transparently fiery temperament ill-equipped to abide trespassers, he lunges forward to attack!";
 
 to say losetopitbull:
 	if pitbullgender is 1:
@@ -361,6 +328,47 @@ To say pit bull attack:
 
 Section 2 - Creature Insertion
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Pit Bull"	"[PrepCombat_Pit Bull]"
+
+to say PrepCombat_Pit Bull:
+	choose row MonsterID from the Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Female";
+	now pitbullgender is a random number between 1 and 2;
+	if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
+		setmongender 0; [creature is neuter-X]
+		say "     You run into what looks to be a fairly muscular canine creature. The pit bull growls softly as it glares at you before barking a few times. When you stand your ground, it heads off. Hopefully it'll tell the others to leave you alone as well.";
+		now BannedStatus entry is true;
+		now fightoutcome is 19;
+		now combat abort is 1;
+		now pitbullgender is 0;
+	else if MaleList is banned:
+		now pitbullgender is 1;
+	else if FemaleList is banned:
+		now pitbullgender is 2;
+	else if MaleList is warded and FemaleList is warded:
+		now pitbullgender is a random number between 1 and 2;
+	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
+		if MaleList is warded and a random chance of 1 in 3 succeeds:
+			now pitbullgender is 1;
+		else if FemaleList is warded and a random chance of 1 in 3 succeeds:
+			now pitbullgender is 2;
+	else if ishunting is false:
+		if MaleList is warded:
+			now pitbullgender is 1;
+		else if FemaleList is warded:
+			now pitbullgender is 2;
+	if pitbullgender is 1:
+		setmongender 4; [creature is female]
+	else if pitbullgender is 2:
+		setmongender 3; [creature is male]
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -584,7 +592,7 @@ This is the Pit Bull Infection rule:
 			if Player is purefemale:	[Succumb - F]
 				say "     Losing your mind to the infection, you wander off into the city and are drawn to a run-down neighborhood. There, you find one of the female pit bulls you've seen around guarding a junkyard. She approaches cautiously, but as you get on all fours and offer your wet pussy to her, she relaxes and moves in to welcome you properly. Her tongue dives deep into your pussy until you cum before she gets you to return the favor. You settle down with her. When the military move through, you both take hide together among the junk, but do venture out at night to drag away a few more female soldiers to make into horny pit bulls to pleasure your alpha.";
 			if Player is puremale:	[Succumb - M]
-				say "     Losing your mind to the infection, you wander off into the city where you are found by a mostly-unchanged human. She has four enlarged breasts and featureless golden eyes, but no other visible changes. You approach her eagerly, but there is something about her stance and how she looks at you that cuts your charge short. Clearly experienced at handling dogs, she soon has you obediently taking treats and is calling you by pet names. She trains you well over the remaining time in the city; teaching you to be a good dog and rewarding you with treats or hand jobs. Your mind slips further and further away during this time until you're nothing be an obedient pet for your mistress.";
+				say "     Losing your mind to the infection, you wander off into the city where you are found by a mostly-unchanged human. She has four enlarged breasts and featureless golden eyes, but no other visible changes. You approach her eagerly, but there is something about her stance and how she looks at you that cuts your charge short. Clearly experienced at handling dogs, she soon has you obediently taking treats and is calling you by pet names. She trains you well over the remaining time in the city; teaching you to be a good dog and rewarding you with treats or handjobs. Your mind slips further and further away during this time until you're nothing be an obedient pet for your mistress.";
 				say "     When the military comes through, she is extracted along with you. They briefly have some concern about taking you along, but she's quite persuasive and has you demonstrate what a good doggy you are. Eventually released, she sets up a new life for herself with you as her loyal pet. Having been treated to prevent infection, she now happily takes you into her bed, letting you rut your mistress, eventually filling her with pit bull puppies with lovely, alluring, golden eyes.";
 			else if Player is herm:		[Succumb - H]
 				say "     Losing your mind to the infection, you wander off into the city. You come across a small pack of other mixed canines and join their group, soon fighting your way to the top to be the leader. You breed the females and let the deposed male leader fill your womb with his seed, taking him as your loyal beta and breeder. Your pack, like many others in the city, struggles for territory and dominance, eventually growing larger and stronger over time under your leadership.";

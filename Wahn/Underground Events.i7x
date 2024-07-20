@@ -457,7 +457,14 @@ to say ResolveEvent Holding Cell Four:[repeatable event]
 		setmonster "Thought Eater";
 		choose row MonsterID from the Table of Random Critters;
 		now area entry is "Sealed";
+		say "[Thought_Eater_Desc]";
 		challenge "Thought Eater";
+		if fightoutcome < 20: [player won]
+			say "[Thought_Eater_Loses]";
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "[Thought_Eater_Wins]";
+		else if fightoutcome is 30: [fled]
+			say "     Taking your arms under your legs, you run as fast as you can, shaking the monster.";
 		increase CellFourVisits by 1;
 		now Resolution of Holding Cell Four is 3;
 	else:
@@ -667,7 +674,7 @@ To say CellFour7: [fuck ass]
 			say "     You're left standing before the bed, still naked and with your clothes in hand. Your eyes wander over your sexual partner for a while - or partners, as you look at his bulging belly again - then you shake your head and get dressed. This might get rather strange before it's over. With that thought in mind, you leave the cell and make your way back up to the surface through the dark corridors of the underground.";
 			add "Herm_AssFucked" to Traits of AlphaOne;
 		else:
-			say "     Going hard and deep in his tight and gripping snatch, you feel the researcher do everything he can to make the fuck a memorable for you. He really has a nice bit of control over his inner muscles, as it almost feels like he's herking you off while getting fucked. Lust burning in your veins, you speed up your thrusts even more, leading to quickly approaching your orgasm. Then finally, as the man under you gasps as he reaches his own climax, with his anal muscles twitching around your manhood and one hand reaching back to hold you against him, you can't hold back anymore. With a loud lust-filled scream, you grind your hips forward against the pregnant herm's, hands gripping his hips tightly as your balls send forth their stored up load. Burst after burst of cum shoot deep into the man's rear passage while he squirts his load all over the sheets.";
+			say "     Going hard and deep in his tight and gripping snatch, you feel the researcher do everything he can to make the fuck a memorable one for you. He really has a nice bit of control over his inner muscles, as it almost feels like he's jerking you off while getting fucked. Lust burning in your veins, you speed up your thrusts even more, leading to quickly approaching your orgasm. Then finally, as the man under you gasps as he reaches his own climax, with his anal muscles twitching around your manhood and one hand reaching back to hold you against him, you can't hold back anymore. With a loud lust-filled scream, you grind your hips forward against the pregnant herm's, hands gripping his hips tightly as your balls send forth their stored up load. Burst after burst of cum shoot deep into the man's rear passage while he squirts his load all over the sheets.";
 			WaitLineBreak;
 			say "     After your orgasm winds down and the last shots of cum have been shot into the researcher, you rest a little while longer inside him while you catch your breath. As you eventually pull out and go to grab your clothes and gear, the herm guy just lies on his back, breathing hard, and wipes the sweat off his brow. After that, the man falls asleep, satisfied and exhausted. You're left standing before the bed, still naked and with your clothes in hand. Your eyes wander over your sexual partner for a while, then you shake your head and get dressed. you leave the cell and make your way back up to the surface through the dark corridors of the underground.";
 	else:

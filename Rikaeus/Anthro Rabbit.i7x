@@ -3,6 +3,7 @@ Version 5 of Anthro Rabbit by Rikaeus begins here.
 [ Version 3.1 - Updated to extended heat table - Stripes ]
 [ Version 4.0 - Restructured the infection and mob so that they aren't split identities but rather an actual pack, changed the looks a tiny bit for the infection. Changed the name - by Rikaeus]
 [ Version 5.0 - New Scenes with Female Rabbits and for Female Player - by CrimsonAsh ]
+[ Version 5.1 - Added Fur Infection Item - Fenekku]
 
 "Adds a Anthro Rabbit to Flexible Survival's Wandering Monsters table."
 
@@ -11,7 +12,6 @@ LastLuckyFootTurn is a number that varies.
 Section 1 - Creature Responses
 
 to say AnthroRabbDesc:
-	setmongender 9; [creatures are mixed/variable]
 	if BodyName of Player is "Anthro Rabbit":
 		now combat abort is 1; [stops the fight]
 		say "     A small humanoid bunny appears in front of you! Less than four foot nine and completely naked, it could pass as a short adult human if it weren't for the rabbit-like qualities it had. [one of]He[or]She[at random] looks at you excitedly, obviously intrigued by the fact that you appear to share the same infection as them. Seconds later, more of them come out of various hiding places, all crowding around you, chittering about random things as they talk about you being a fellow pack member. The one that had appeared in front of you first walks closer to you, tilting its head at you. 'Does fellow rabbit want to join in some fun?' it asks curiously, gesturing to all of the rabbits present. You get the feeling that the small bunny is propositioning you so you have to think about what to do.";
@@ -39,6 +39,13 @@ to say AnthroRabbBeaten:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Anthro Rabbit"	"[PrepCombat_Anthro Rabbit]"
+
+to say PrepCombat_Anthro Rabbit:
+	setmongender 9; [creatures are mixed/variable]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -96,7 +103,7 @@ When Play begins:
 	now Cunt Tightness entry is 3; [ Width of female sex infection will try and give you ]
 	now SeductionImmune entry is false;
 	now libido entry is 70; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
+	now loot entry is "Anthro Rabbit fur"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
@@ -523,5 +530,22 @@ to say AnthroRabbitHeatStart:
 to say AnthroRabbitHeatEnd:
 	say "You go a bit light headed briefly, grabbing ahold of your throbbing cranium and after a moment the haze fades. You notice almost immediately your senses have cleared and the heat radiating through your body and groin dissipates.";
 	now Libido of Player is ( Libido of Player * 9 ) / 10;
+
+Section 6 - Loot Table
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Anthro Rabbit fur"	"A tuft of short, velvety fur that looks like it has been pulled out of the coat of a anthro rabbit. It's short and has a slight sheen to it."	1	Anthro Rabbit fur
+
+Anthro Rabbit fur is a grab object.
+It is temporary.
+Usedesc of Anthro Rabbit fur is "[Anthro Rabbit fur use]".
+
+to say Anthro Rabbit fur use:
+	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its velvety texture. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	Infect "Anthro Rabbit";
+
+instead of sniffing Anthro Rabbit fur:
+	say "The fur has a pleasing, not too strong, animal-like scent.";
 
 Anthro Rabbit ends here.

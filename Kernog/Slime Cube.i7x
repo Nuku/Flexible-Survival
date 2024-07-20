@@ -6,18 +6,22 @@ Section 1 - Creature Responses
 
 [ Slime falls upon you while you explore the island. Big cube of translucent material, which reminds you of the goo girl]
 to say slimeCubeDesc:
-	if inasituation is false:
-		say "     A big and gooey translucent cube stands in front of you. Despite making you remember the goo girls of the city, its body is completely featureless, save the few boney remnants of previous victims floating inside. It wobbles slowly in your direction, and it seems it will relentlessly do so until it absorbs you into its body.";
-	else:
-		say ""; [dealt with in the event]
+	say "     A big and gooey translucent cube stands in front of you. Despite making you remember the goo girls of the city, its body is completely featureless, save the few boney remnants of previous victims floating inside. It wobbles slowly in your direction, and it seems it will relentlessly do so until it absorbs you into its body.";
+
 
 to say beatSlimeCube:
-	if inasituation is false:
-		say "     Mortally wounded, the slime loses its coherency, and dissolves into a pile of smelly goop.";
-	else: [event]
-		say ""; [dealt with at the event source]
+	say "     Mortally wounded, the slime loses its coherency, and dissolves into a pile of smelly goop.";
+
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Slime Cube"	"[PrepCombat_Slime Cube]"
+
+to say PrepCombat_Slime Cube:
+	say "";
+
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

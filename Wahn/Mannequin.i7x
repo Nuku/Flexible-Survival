@@ -6,33 +6,30 @@ Version 2 of Mannequin by Wahn begins here.
 Section 1 - Creature Responses
 
 to say mannequin wins:
-	if inasituation is true:
-		say "";
-	else:
-		say "     The living doll grips you tightly and a strange sensation washes over you, as if part of your being is drained away. Before your eyes, its features change, making it look a bit more like yourself. You take your chance while it's distracted with checking out its new body and run away.";
+	say "     The living doll grips you tightly and a strange sensation washes over you, as if part of your being is drained away. Before your eyes, its features change, making it look a bit more like yourself. You take your chance while it's distracted with checking out its new body and run away.";
 
 to say mannequin loses:
-	if inasituation is true:
-		say "";
-	else:
-		say "     The mannequin silently collapses at your feet. Even though it's thoroughly beaten, it still weakly reaches for you, its face showing a desperate expression. You quickly get some road between it and you before it stands up again.";
+	say "     The mannequin silently collapses at your feet. Even though it's thoroughly beaten, it still weakly reaches for you, its face showing a desperate expression. You quickly get some road between it and you before it stands up again.";
 
 to say mannequinDesc:
-	setmongender 0;
-	if inasituation is true:
-		say "";
+	if "Mannequin" is not listed in EncounteredEnemies of Player: [first encounter]
+		say "     Passing by a loading-dock in the warehouse district, you spot two humanoid dogs cutting a hole in the fence and slip through. Curious what the bulldog and German shepherd are doing in there, you inconspicuously follow them between the long rows and stacks of shipping containers. 'Which one did the coyote say the food was in?' the shepherd asks gruffly, to which the bulldog replies 'A red one, with Transglobal on the side.' Looking up and down the lines of containers, the shepherd wails 'But almost all of them are red!' The bulldog shrugs and walks over to the nearest container and opens it up. 'Oh hey, seventy flatsceen TVs - how... useless, without electricity. Let's check the next one.' The two of them open up several more containers, but find nothing of use in this post-apocalyptic city.";
+		say "     'I'm beginning to think Diego sent us on a wild goose chase,' the shepherd growls. 'OK, OK... let's just open up this last one, then go back to the park and have some words with that coyote...' his buddy replies, then pulls open another container and yelps in surprise. 'Now that's freaky - for a moment I thought this container was full of people.' The German shepherd steps in front of the door and looks in too. 'Nah, those are just those dress dummies they use in stores. Normal lifeless puppets, see...' and pokes the first mannequin in the container in the chest - which promptly grabs him by the arm. Within moments, dozens of mannequins pour out of the container and wrestle both dogs to the ground. They jostle against each other with a desperate tenacity, each trying to touch one of their captives. Then you see them change, taking on characteristics of the dogs - one growing out a muzzle, another suddenly sprouting fur, with all of them jostling against each other, in a frantic way.";
+		WaitLineBreak;
+		say "     After the changes stabilize, all of the mannequins lose interest in their captives and start to disperse, each striking out on its own. Left behind on the ground are two more mannequins - those must be the two former dogs, their essence drained away. As they start to get up too, you decide it's time to leave and make your way back to the hole in the fence. One of the mannequins got there before you, though. It might have absorbed the knowledge of its location from the dogs, or just have been lucky. Now it turns to you, eager to make your shape its own.";
 	else:
-		if "Mannequin" is not listed in EncounteredEnemies of Player: [first encounter]
-			say "     Passing by a loading-dock in the warehouse district, you spot two humanoid dogs cutting a hole in the fence and slip through. Curious what the bulldog and German shepherd are doing in there, you inconspicuously follow them between the long rows and stacks of shipping containers. 'Which one did the coyote say the food was in?' the shepherd asks gruffly, to which the bulldog replies 'A red one, with Transglobal on the side.' Looking up and down the lines of containers, the shepherd wails 'But almost all of them are red!' The bulldog shrugs and walks over to the nearest container and opens it up. 'Oh hey, seventy flatsceen TVs - how... useless, without electricity. Let's check the next one.' The two of them open up several more containers, but find nothing of use in this post-apocalyptic city.";
-			say "     'I'm beginning to think Diego sent us on a wild goose chase,' the shepherd growls. 'OK, OK... let's just open up this last one, then go back to the park and have some words with that coyote...' his buddy replies, then pulls open another container and yelps in surprise. 'Now that's freaky - for a moment I thought this container was full of people.' The German shepherd steps in front of the door and looks in too. 'Nah, those are just those dress dummies they use in stores. Normal lifeless puppets, see...' and pokes the first mannequin in the container in the chest - which promptly grabs him by the arm. Within moments, dozens of mannequins pour out of the container and wrestle both dogs to the ground. They jostle against each other with a desperate tenacity, each trying to touch one of their captives. Then you see them change, taking on characteristics of the dogs - one growing out a muzzle, another suddenly sprouting fur, with all of them jostling against each other, in a frantic way.";
-			WaitLineBreak;
-			say "     After the changes stabilize, all of the mannequins lose interest in their captives and start to disperse, each striking out on its own. Left behind on the ground are two more mannequins - those must be the two former dogs, their essence drained away. As they start to get up too, you decide it's time to leave and make your way back to the hole in the fence. One of the mannequins got there before you, though. It might have absorbed the knowledge of its location from the dogs, or just have been lucky. Now it turns to you, eager to make your shape its own.";
-		else:
-			say "     You cross paths with an animated mannequin which looks like an idealized male in his mid-twenties, with muscled arms, legs and chest and a featureless crotch. It has a pale flesh-colored skin-tone and a chiseled-looking face including sculpted wavy hair. As the mannequin notices you, an almost desperate, needful look crosses its face and it rushes at you.";
-		if Stolen Lives is not resolved:
-			now Stolen Lives is active;
+		say "     You cross paths with an animated mannequin which looks like an idealized male in his mid-twenties, with muscled arms, legs and chest and a featureless crotch. It has a pale flesh-colored skin-tone and a chiseled-looking face including sculpted wavy hair. As the mannequin notices you, an almost desperate, needful look crosses its face and it rushes at you.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Mannequin"	"[PrepCombat_Mannequin]"
+
+to say PrepCombat_Mannequin:
+	setmongender 0;
+	if Stolen Lives is not resolved:
+		now Stolen Lives is active;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -305,11 +302,11 @@ to say nullpowderuse:
 				say "     At this point, the powder will have no effect on you. It seems you'll need to remove your cock[smn] or develop internal genitalia if you want to make them disappear.";
 			else:
 				if Ball Size of Player > 5:
-					decrease Ball Size of Player by 3;
+					BallsShrink Player by 3;
 				else if Ball Size of Player > 4:
-					decrease Ball Size of Player by 2;
+					BallsShrink Player by 2;
 				else:
-					decrease Ball Size of Player by 1;
+					BallsShrink Player by 1;
 				follow the cock descr rule;
 				say "     You apply the powder to [if Player is internalBalls]where your sack might be[else]your sack[end if]. After a while, they[if Player is internalBalls] seem to[end if] shrink down to the point where you[if Player is internalBalls], presumably,[end if] have [Ball Size Adjective of Player] [Balls].";
 			now Trixieexit is 1;
@@ -626,7 +623,7 @@ to say Bucky_Person:
 		TraitGain "Bucky - Seen him" for Alexandra;
 		WaitBreakReactions;
 	if Amy is booked or Amy is bunkered:
-		say "     Amy shily approaches the buck, then hesitantly says, 'Hello there.' As he doesn't reply, the young woman looks at you in slight confusion. 'Why isn't he saying anything?' You explain again that Bucky has been through... you don't really know what exactly, but it's left him in this current state. The husky appears skittish and ready to run away, as if afraid she might be next, but you gently take her by the arm and tell her that there shouldn't be any danger. Instead, Bucky just needs help, and people treating him not as a lifeless doll but the real person that he is. Amy looks at you wide-eyed, then over at Bucky, and nods determinedly. 'I can do that! Tell him things, and maybe take him for a walk in the garden, and read to him!' With that said, she steps up to the anthro deer and gently lays a hand on his arm. Looking into his unblinking eyes, she says, 'Sorry for... being afraid of you at first. I'll be the friend you need!' Then she steps back and waves goodbye to him before moving out of sight.";
+		say "     Amy shyly approaches the buck, then hesitantly says, 'Hello there.' As he doesn't reply, the young woman looks at you in slight confusion. 'Why isn't he saying anything?' You explain again that Bucky has been through... you don't really know what exactly, but it's left him in this current state. The husky appears skittish and ready to run away, as if afraid she might be next, but you gently take her by the arm and tell her that there shouldn't be any danger. Instead, Bucky just needs help, and people treating him not as a lifeless doll but the real person that he is. Amy looks at you wide-eyed, then over at Bucky, and nods determinedly. 'I can do that! Tell him things, and maybe take him for a walk in the garden, and read to him!' With that said, she steps up to the anthro deer and gently lays a hand on his arm. Looking into his unblinking eyes, she says, 'Sorry for... being afraid of you at first. I'll be the friend you need!' Then she steps back and waves goodbye to him before moving out of sight.";
 		TraitGain "Bucky - Seen him" for Amy;
 		WaitBreakReactions;
 	if Brutus is booked or Brutus is bunkered:
@@ -654,7 +651,7 @@ to say Bucky_Person:
 		TraitGain "Bucky - Seen him" for Candy;
 		WaitBreakReactions;
 	if Carl is booked or Carl is bunkered:
-		if HP of Carl is 30: [beta carl]
+		if HP of Carl > 29 and HP of Carl < 40: [beta carl]
 			say "     Carl comes up to you, glancing aside at Bucky with interest but keeping most of his attention on yourself. 'So, you want us to talk to and hang out with him, Alpha?' the husky soldier asks, and as you confirm, he gives you a dutiful nod, tail wagging behind his back. 'Sure thing, what you say is best!' Then he steps up to Bucky and gives him a friendly bump of his fist against the shoulder, saying, 'I guess we'll be spending some time together in the future, until you get better.' With that said, Carl gives you a nod, then walks off.";
 		else:
 			say "     Carl comes up to you, then glances aside at Bucky. 'I - uhm, do you really think this has a chance of helping? I mean... there doesn't seem to be anyone... in there?' You reply that you want to try, and would appreciate his help. The husky soldier hesitates for a second, looking down at the ground before raising his head again, 'I'm not sure if I'm the best person for this, but... yeah, I'll do it.' Having made his decision, he then steps up to Bucky and pats him on the shoulder a little helplessly, 'Sorry for... kinda just talking over you, before. I guess we'll be spending some time together in the future, until you get better.' With that said, he gives you a nod, then walks off.";
@@ -665,7 +662,7 @@ to say Bucky_Person:
 			say "     Chris strolls right up to Bucky, addressing him. 'So, you're the newest member of our little group here, eh? Don't you worry, I'll keep you company so you don't get lonely.' As the anthro buck doesn't react at all, the young orc's expression falls a little, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Bucky a pat on the shoulder, then walks off for now.";
 		else if Libido of Chris is 1: [orc breeder]
 			if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
-				say "     Chris saunters up to Bucky, checking him out while still standing back a little. Then he asks shily, 'So, he needs someone to... sit with him, and talk? I can do that!' As the anthro buck doesn't react at all, the young orc's expression falls, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Bucky a pat on the shoulder, then walks off for now.";
+				say "     Chris saunters up to Bucky, checking him out while still standing back a little. Then he asks shyly, 'So, he needs someone to... sit with him, and talk? I can do that!' As the anthro buck doesn't react at all, the young orc's expression falls, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Bucky a pat on the shoulder, then walks off for now.";
 			else: [happy breeder]
 				say "     Chris strolls right up to Bucky, addressing him. 'So, you're the newest member of our little group here, eh? Don't you worry, I'll keep you company so you don't get lonely. I could be, or big bro or something, eh?' As the anthro buck doesn't react at all, the young orc's expression falls a little, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Bucky a pat on the shoulder, then walks off for now.";
 		else if Libido of Chris is 2: [orc warrior]
@@ -712,7 +709,7 @@ to say Bucky_Person:
 		TraitGain "Bucky - Seen him" for Eric;
 		WaitBreakReactions;
 	if Fang is booked or Fang is bunkered:
-		say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6]lowers his chest and [end if]sticks his muzzle between Bucky's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the pointed tip already emerging from his sheath. The canine lets out a half-barked woof as you explain that Bucky's a new friend, and not meant for... that. Giving the deer another sniff, Fang trots off soon after, tail wagging behind his back.";
+		say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6 or HP of Fang is 7]lowers his chest and [end if]sticks his muzzle between Bucky's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the pointed tip already emerging from his sheath. The canine lets out a half-barked woof as you explain that Bucky's a new friend, and not meant for... that. Giving the deer another sniff, Fang trots off soon after, tail wagging behind his back.";
 		TraitGain "Bucky - Seen him" for Fang;
 		WaitBreakReactions;
 	if HP of Fiona > 4:
@@ -781,7 +778,7 @@ to say Bucky_Person:
 		else if HP of Sven > 7 and HP of Sven < 11: [collared sex pet]
 			say "     Sven shyly approaches Bucky, looking him up and down, then over to you as if to ask permission. As you smile and nod, he reaches out and touches the anthro deer's arm. 'You'll be safe here, and I'll keep you company.' Almost subconsiously it seems, the snowmeow's other hand slides down to Bucky's crotch and rubs against it, showing that sex isn't too far from the front of your pet's mind at all times. With a clearing of your throat and tap against Sven's side, the exchange student pulls back in embarrassment, then makes his goodbyes.";
 		else:
-			say "     Sven shily walks up to Bucky, looking him up and down, then reaches out and touches the anthro deer's arm. 'You'll be safe here, and I - I'll keep you company. Hope you won't get bored listening to my stories, though.' The exchange student pats Bucky again, then pulls himself back and makes his goodbyes.";
+			say "     Sven shyly walks up to Bucky, looking him up and down, then reaches out and touches the anthro deer's arm. 'You'll be safe here, and I - I'll keep you company. Hope you won't get bored listening to my stories, though.' The exchange student pats Bucky again, then pulls himself back and makes his goodbyes.";
 		TraitGain "Bucky - Seen him" for Sven;
 		WaitBreakReactions;
 	if Urik is booked or Urik is bunkered:
@@ -818,7 +815,7 @@ to say Bucky_Toy:
 			TraitGain "Bucky - Seen him" for Alexandra;
 			WaitBreakReactions;
 		if Amy is booked or Amy is bunkered:
-			say "     Amy shily approaches the buck, then hesitantly says, 'Hello there.' As he doesn't reply, the young woman looks at you in slight confusion. 'Why isn't he saying anything?' You explain again that Bucky really isn't a person, and she can make use of him sexually if she wants, but the husky is already stepping back from him, looking skittish. 'I - didn't you say he's got no, you know, down there? I don't think I could do anything with him, or really want to. It's so eerie, that he just stares like that.' With that said, she retreats from the sex doll, glancing back at it a few times before moving out of sight.";
+			say "     Amy shyly approaches the buck, then hesitantly says, 'Hello there.' As he doesn't reply, the young woman looks at you in slight confusion. 'Why isn't he saying anything?' You explain again that Bucky really isn't a person, and she can make use of him sexually if she wants, but the husky is already stepping back from him, looking skittish. 'I - didn't you say he's got no, you know, down there? I don't think I could do anything with him, or really want to. It's so eerie, that he just stares like that.' With that said, she retreats from the sex doll, glancing back at it a few times before moving out of sight.";
 			TraitGain "Bucky - Seen him" for Amy;
 			WaitBreakReactions;
 		if Brutus is booked or Brutus is bunkered:
@@ -846,7 +843,7 @@ to say Bucky_Toy:
 			TraitGain "Bucky - Seen him" for Candy;
 			WaitBreakReactions;
 		if Carl is booked or Carl is bunkered:
-			if HP of Carl is 30: [beta carl]
+			if HP of Carl > 29 and HP of Carl < 40: [beta carl]
 				say "     Carl comes up to you, glancing aside at Bucky with interest but keeping most of his attention on yourself. 'Thank you for this fun toy, Alpha!' the husky soldier says happily, tail wagging behind his back. He brushes a hand over the deer's chest, feeling him through the tank top. 'Bit flat on top, but...' You can almost see the thoughts of what he wants to do with the sex doll in the broadness of his smile as he wanders off afterwards. You can hear him say to himself, 'Wonder if it'd work to knock him up...'";
 			else:
 				say "     Carl comes up to you, mostly staring straight ahead, but not quite managing his eyes from flicking aside at Bucky several times. 'A sex doll? I, uhm... I don't think I could, you know. He's cute and all, and having a pussy would give something familiar if I was with a guy, you know. But... I always thought just sexual deviants get something like th- err, oh, sorry - no offense meant!' You wave his worried expression away casually, then shrug and say he shouldn't discount something he hasn't tried so quickly. Carl raises his eyebrows, hesitates, then finally says, 'Uhm... I should get back to the observation post.' With that said, he walks off. You notice that he pauses for a second before moving completely out of sight, throwing a furtive glance at Bucky and slowly wagging the tail behind his back. Maybe the husky isn't quite as down on the sex doll as he says openly.";
@@ -858,7 +855,7 @@ to say Bucky_Toy:
 				TraitGain "Bucky - Seen him" for Chris;
 			else if Libido of Chris is 1: [orc breeder]
 				if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
-					say "     Chris saunters up to Bucky, checking him out with interest. Then he asks shily, 'So, [if Thirst of Val is 2]daddy, [end if]uhm... with this being a toy, could I - could I be on top? Be the one fucking his ass, you know. But... is it okay if I only use the back? Not sure about that front hole...' Chuckling and nodding, you make the young orc's day, but remind him that he needs to keep himself ready for [if Thirst of Val is 2]daddy [else]you [end if]  still. 'Of course!' Chris says with an obedient and eager nod, then walks off with a big smile on his face.";
+					say "     Chris saunters up to Bucky, checking him out with interest. Then he asks shyly, 'So, [if Thirst of Val is 2]daddy, [end if]uhm... with this being a toy, could I - could I be on top? Be the one fucking his ass, you know. But... is it okay if I only use the back? Not sure about that front hole...' Chuckling and nodding, you make the young orc's day, but remind him that he needs to keep himself ready for [if Thirst of Val is 2]daddy [else]you [end if]  still. 'Of course!' Chris says with an obedient and eager nod, then walks off with a big smile on his face.";
 					TraitGain "Bucky - Seen him" for Chris;
 				else: [happy breeder]
 					say "     Chris saunters up to Bucky, checking him out with interest and even touching the deer a little. '[if Thirst of Val is 2]Wow, daddy! [end if]He looks like he should be fun. And with him being a toy, I could be on top too, right?! Be the one fucking his ass! But... is it okay if I only use the back? Not sure about that front hole...' Chuckling and nodding, you make the young orc's day. Ruffling [if Thirst of Val is 2]your son's [else]his [end if] hair, you tell him to have fun and enjoy himself. Breeders can play around with being the dominant partner too, why not! Chris looks happy at your encouragement, walking off with a big smile on his face.";
@@ -887,7 +884,7 @@ to say Bucky_Toy:
 			TraitGain "Bucky - Seen him" for David;
 			WaitBreakReactions;
 		if Denise is booked or Denise is bunkered:
-			say "     In a flutter of wings, Denise lands a little distance away, then approaches shily. 'He's cute!' she says with a smile, then looks at you somewhat hesitantly. 'And it's really no problem if I... try some things out with him?' She half-hides her face behind one of her wings, showing embarrassment clearly even though any blush will be hidden under her feathers. You smile and nod to her, which the gryphoness accepts happily. She lets her gaze drop to his crotch, then giggles, before jumping back in the air, gliding away on outstretched wings.";
+			say "     In a flutter of wings, Denise lands a little distance away, then approaches shyly. 'He's cute!' she says with a smile, then looks at you somewhat hesitantly. 'And it's really no problem if I... try some things out with him?' She half-hides her face behind one of her wings, showing embarrassment clearly even though any blush will be hidden under her feathers. You smile and nod to her, which the gryphoness accepts happily. She lets her gaze drop to his crotch, then giggles, before jumping back in the air, gliding away on outstretched wings.";
 			TraitGain "Bucky - Seen him" for Denise;
 			WaitBreakReactions;
 		if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
@@ -914,7 +911,7 @@ to say Bucky_Toy:
 			TraitGain "Bucky - Seen him" for Eric;
 			WaitBreakReactions;
 		if Fang is booked or Fang is bunkered:
-			say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6]lowers his chest and [end if]sticks his muzzle between Bucky's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the pointed tip already emerging from his sheath. Still,  it seems like the wolf doesn't feel like mounting him right now, so he trots off soon after, tail wagging behind his back.";
+			say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6 or HP of Fang is 7]lowers his chest and [end if]sticks his muzzle between Bucky's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the pointed tip already emerging from his sheath. Still,  it seems like the wolf doesn't feel like mounting him right now, so he trots off soon after, tail wagging behind his back.";
 			TraitGain "Bucky - Seen him" for Fang;
 			WaitBreakReactions;
 		if HP of Fiona > 4:
@@ -1044,7 +1041,7 @@ to say Hercules_Person:
 		TraitGain "Hercules - Seen him" for Candy;
 		WaitBreakReactions;
 	if Carl is booked or Carl is bunkered:
-		if HP of Carl is 30: [beta carl]
+		if HP of Carl > 29 and HP of Carl < 40: [beta carl]
 			say "     Carl comes up to you, glancing aside at Hercules with interest but keeping most of his attention on yourself. 'So, you want us to talk to and hang out with him, Alpha?' the husky soldier asks, and as you confirm, he gives you a dutiful nod, tail wagging behind his back. 'Sure thing, what you say is best!' Then he steps up to Hercules and gives him a friendly bump of his fist against the shoulder, saying, 'I guess we'll be spending some time together in the future, until you get better.' With that said, Carl gives you a nod, then walks off.";
 		else:
 			say "     Carl comes up to you, then glances aside at Hercules. 'I - uhm, do you really think this has a chance of helping? I mean... there doesn't seem to be anyone... in there? And do you actually know anything about this dude? I mean, what if he turns out to be as lust-obsessed as some of the more bestial things out there?' You reply that you're confident he'll be fine if everyone just treats him well, you want to try helping, and would appreciate his assistance. The husky soldier hesitates for a second, looking down at the ground before raising his head again, 'I'm not sure if I'm the best person for this, but... yeah, I'll do it.' Having made his decision, he then steps up to Hercules and pats him on the shoulder a little helplessly, 'Sorry for... kinda just talking over you, before. I guess we'll be spending some time together in the future, until you get better.' With that said, he gives you a nod, then walks off.";
@@ -1055,7 +1052,7 @@ to say Hercules_Person:
 			say "     Chris strolls right up to Hercules, addressing him. 'So, you're the newest member of our little group here, eh? Don't you worry, I'll keep you company so you don't get lonely.' As the large horseman doesn't react at all, the young orc's expression falls a little, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Hercules a pat on the shoulder, then walks off for now.";
 		else if Libido of Chris is 1: [orc breeder]
 			if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
-				say "     Chris saunters up to Hercules, checking him out while still standing back a little. Even so, you can tell that his eyes go a bit wider as he sees the well-sized cock and balls dangling between the anthro equine's legs. Then he asks shily, 'So, he needs someone to... sit with him, and talk? I can do that!' As the anthro buck doesn't react at all, the young orc's expression falls, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Hercules a pat on the shoulder, then walks off for now.";
+				say "     Chris saunters up to Hercules, checking him out while still standing back a little. Even so, you can tell that his eyes go a bit wider as he sees the well-sized cock and balls dangling between the anthro equine's legs. Then he asks shyly, 'So, he needs someone to... sit with him, and talk? I can do that!' As the anthro buck doesn't react at all, the young orc's expression falls, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Hercules a pat on the shoulder, then walks off for now.";
 			else: [happy breeder]
 				say "     Chris strolls right up to Hercules, addressing him. 'So, you're the newest member of our little group here, eh? Don't you worry, I'll keep you company so you don't get lonely. I'd love to have a - a big bro like you!' As he says this, you can see the orc's gaze flicker down to Hercules crotch, where a well-sized cock and heavy balls dangle freely. When the horseman doesn't react at all, Chris's expression falls a little, and he gives you a sidelong glance, but doesn't let himself get discouraged too much. With the words, 'See ya later,' he gives Hercules a pat on the shoulder, then walks off for now.";
 		else if Libido of Chris is 2: [orc warrior]
@@ -1102,7 +1099,7 @@ to say Hercules_Person:
 		TraitGain "Hercules - Seen him" for Eric;
 		WaitBreakReactions;
 	if Fang is booked or Fang is bunkered:
-		say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6]lowers his chest and [end if]sticks his muzzle between Hercules's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the pointed tip already emerging from his sheath. The canine lets out a half-barked woof as you explain that Hercules's a new friend, and not meant for... that. Giving the Clydesdale another sniff, Fang trots off soon after, tail wagging behind his back.";
+		say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6 or HP of Fang is 7]lowers his chest and [end if]sticks his muzzle between Hercules's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the pointed tip already emerging from his sheath. The canine lets out a half-barked woof as you explain that Hercules's a new friend, and not meant for... that. Giving the Clydesdale another sniff, Fang trots off soon after, tail wagging behind his back.";
 		TraitGain "Hercules - Seen him" for Fang;
 		WaitBreakReactions;
 	if HP of Fiona > 4:
@@ -1171,7 +1168,7 @@ to say Hercules_Person:
 		else if HP of Sven > 7 and HP of Sven < 11: [collared sex pet]
 			say "     Sven shyly approaches Hercules, looking him up and down, then over to you as if to ask permission. As you smile and nod, he reaches out and touches the large horseman's arm. 'You'll be safe here, and I'll keep you company.' Almost subconsiously it seems, the snowmeow's other hand slides down to Hercules's crotch and rubs against it, showing that sex isn't too far from the front of your pet's mind at all times. With a clearing of your throat and tap against Sven's side, the exchange student pulls back in embarrassment, then makes his goodbyes.";
 		else:
-			say "     Sven shily walks up to Hercules, looking him up and down, then reaches out and touches the large horseman's arm. 'You'll be safe here, and I - I'll keep you company. Hope you won't get bored listening to my stories, though.' The exchange student pats Hercules again, then pulls himself back and makes his goodbyes.";
+			say "     Sven shyly walks up to Hercules, looking him up and down, then reaches out and touches the large horseman's arm. 'You'll be safe here, and I - I'll keep you company. Hope you won't get bored listening to my stories, though.' The exchange student pats Hercules again, then pulls himself back and makes his goodbyes.";
 		TraitGain "Hercules - Seen him" for Sven;
 		WaitBreakReactions;
 	if Urik is booked or Urik is bunkered:
@@ -1210,7 +1207,7 @@ to say Hercules_Toy:
 			TraitGain "Hercules - Seen him" for Alexandra;
 			WaitBreakReactions;
 		if Amy is booked or Amy is bunkered:
-			say "     Amy shily approaches the Clydesdale, then hesitantly says, 'Hello there.' As he doesn't reply, the young woman looks at you in slight confusion. 'Why isn't he saying anything?' You explain again that Hercules really isn't a person, and she can make use of him sexually if she wants, but the husky looks a little skittish in reaction. 'I, uhm... I'm not sure I could. He does look mighty good, but... it's a bit eerie, that he just stares blankly like that.' With that said, she retreats from the sex doll, glancing back at it a few times before moving out of sight.";
+			say "     Amy shyly approaches the Clydesdale, then hesitantly says, 'Hello there.' As he doesn't reply, the young woman looks at you in slight confusion. 'Why isn't he saying anything?' You explain again that Hercules really isn't a person, and she can make use of him sexually if she wants, but the husky looks a little skittish in reaction. 'I, uhm... I'm not sure I could. He does look mighty good, but... it's a bit eerie, that he just stares blankly like that.' With that said, she retreats from the sex doll, glancing back at it a few times before moving out of sight.";
 			TraitGain "Hercules - Seen him" for Amy;
 			WaitBreakReactions;
 		if Brutus is booked or Brutus is bunkered:
@@ -1238,7 +1235,7 @@ to say Hercules_Toy:
 			TraitGain "Hercules - Seen him" for Candy;
 			WaitBreakReactions;
 		if Carl is booked or Carl is bunkered:
-			if HP of Carl is 30: [beta carl]
+			if HP of Carl > 29 and HP of Carl < 40: [beta carl]
 				say "     Carl comes up to you, glancing aside at Hercules with interest but keeping most of his attention on yourself. 'Thank you for this fun toy, Alpha!' the husky soldier says happily, tail wagging behind his back. He brushes a hand over the horseman's chest, feeling his muscles and being surprised in the lifelike warmth that the doll has. You can almost see the thoughts of what he wants to do with the sex doll in the broadness of his smile as he wanders off afterwards.";
 			else:
 				say "     Carl comes up to you, mostly staring straight ahead, but not quite managing his eyes from flicking aside at Hercules several times. 'A sex doll? I, uhm... I always thought just sexual deviants get something like th- err, oh, sorry - no offense meant!' You wave his worried expression away casually, then shrug and say he shouldn't discount something he hasn't tried so quickly. Carl raises his eyebrows, hesitates, then finally says, 'Uhm... I should get back to the observation post.' With that said, he walks off. You notice that he pauses for a second before moving completely out of sight, throwing a furtive glance at Hercules and slowly wagging the tail behind his back. Maybe the husky isn't quite as down on the sex doll as he says openly.";
@@ -1250,7 +1247,7 @@ to say Hercules_Toy:
 				TraitGain "Hercules - Seen him" for Chris;
 			else if Libido of Chris is 1: [orc breeder]
 				if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
-					say "     Chris saunters up to Hercules, checking him out with interest. Then he asks shily, 'So, [if Thirst of Val is 2]daddy, [end if]uhm... with this being a toy, could I - could I be on top? Be the one fucking his ass, you know. Not that I won't also try out this big rod at the front, but...' Chuckling and nodding, you make the young orc's day, but remind him that he needs to keep himself ready for [if Thirst of Val is 2]daddy [else]you [end if] still. 'Of course!' Chris says with an obedient and eager nod, then walks off with a big smile on his face.";
+					say "     Chris saunters up to Hercules, checking him out with interest. Then he asks shyly, 'So, [if Thirst of Val is 2]daddy, [end if]uhm... with this being a toy, could I - could I be on top? Be the one fucking his ass, you know. Not that I won't also try out this big rod at the front, but...' Chuckling and nodding, you make the young orc's day, but remind him that he needs to keep himself ready for [if Thirst of Val is 2]daddy [else]you [end if] still. 'Of course!' Chris says with an obedient and eager nod, then walks off with a big smile on his face.";
 					TraitGain "Hercules - Seen him" for Chris;
 				else: [happy breeder]
 					say "     Chris saunters up to Hercules, checking him out with interest and even touching the large horseman a little. '[if Thirst of Val is 2]Wow, daddy! [end if]He looks like he should be fun. And with him being a toy, I could be on top too, right?! Be the one fucking his ass! BBe the one fucking his ass, you know. Not that I won't also try out this big rod at the front, but...' Chuckling and nodding, you make the young orc's day. Ruffling [if Thirst of Val is 2]your son's [else]his [end if] hair, you tell him to have fun and enjoy himself. Breeders can play around with being the dominant partner too, why not! Chris looks happy at your encouragement, walking off with a big smile on his face.";
@@ -1279,7 +1276,7 @@ to say Hercules_Toy:
 			TraitGain "Hercules - Seen him" for David;
 			WaitBreakReactions;
 		if Denise is booked or Denise is bunkered:
-			say "     In a flutter of wings, Denise lands a little distance away, then approaches shily. 'He's a giant!' she says with wide eyes, then looks at you somewhat hesitantly. 'I think that would be a bit too big and intimidating for my tastes. But thank you for offering!' With that said, she jumps back in the air, gliding away on outstretched wings.";
+			say "     In a flutter of wings, Denise lands a little distance away, then approaches shyly. 'He's a giant!' she says with wide eyes, then looks at you somewhat hesitantly. 'I think that would be a bit too big and intimidating for my tastes. But thank you for offering!' With that said, she jumps back in the air, gliding away on outstretched wings.";
 			TraitGain "Hercules - Seen him" for Denise;
 			WaitBreakReactions;
 		if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
@@ -1306,7 +1303,7 @@ to say Hercules_Toy:
 			TraitGain "Hercules - Seen him" for Eric;
 			WaitBreakReactions;
 		if Fang is booked or Fang is bunkered:
-			say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6]lowers his chest and [end if]sticks his muzzle between Hercules's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the pointed tip already emerging from his sheath. Still, it seems like the wolf doesn't feel like mounting him right now, so he trots off soon after, tail wagging behind his back.";
+			say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6 or HP of Fang is 7]lowers his chest and [end if]sticks his muzzle between Hercules's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the pointed tip already emerging from his sheath. Still, it seems like the wolf doesn't feel like mounting him right now, so he trots off soon after, tail wagging behind his back.";
 			TraitGain "Hercules - Seen him" for Fang;
 			WaitBreakReactions;
 		if HP of Fiona > 4:

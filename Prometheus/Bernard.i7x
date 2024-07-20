@@ -11,7 +11,7 @@ Version 2 of Bernard by Prometheus begins here.
 
 [ hunger of Bernard - Gender Reveal           ]
 [ 0 - Assumed to be physically male           ]
-[ 1 - Revealed to be aphysically  herm        ]
+[ 1 - Revealed to be physically herm          ]
 
 FamilyMealCooldown is a number that varies. FamilyMealCooldown is usually 0.
 
@@ -41,7 +41,7 @@ an everyturn rule:
 			if Player is in Breakroom:
 				say "     [bold type]Carefully stowing his cooker for later, Bernard moves towards the door. He hugs you before he leaves, telling you that he is going to the computer room.[roman type][line break]";
 			else if Player is in Computer Lab:
-				say "     [bold type]Bernard enters the computer room, giving you a wide smile before moving over to join his family in cocconing themselves in blankets.[roman type][line break]";
+				say "     [bold type]Bernard enters the computer room, giving you a wide smile before moving over to join his family in cocooning themselves in blankets.[roman type][line break]";
 			move Bernard to Computer Lab;
 		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
 			if Player is in Computer Lab:
@@ -145,7 +145,7 @@ Section 2 - Talking
 
 instead of conversing the Bernard:
 	if "First Talk" is not listed in Traits of Bernard:
-		say "     Hello [BlancheMommyDaddyTitle]! Bernard says as he engulfs you in the soft confines of his customary bear-hug, the scents of the seasonings he tends to use when cooking or baking wafting from his fur to tickle your nose. The fragrant smells causes you to nuzzle into his fur in an attempt to figure what exactly you are smelling. Bernard begins to laugh heartily from the tickilish sensation as he says 'I'm glad to know that mommy and my siblings aren't the only ones to enjoy my cooking hobby, though I'm sorry that I didn't manage to save anything from the meal earlier. Considering that you are always out you probably never get to eat properly cooked meals, next time for sure I will give you a taste of eating a home-cooked meal surrounded by family.'";
+		say "     Hello [BlancheMommyDaddyTitle]! Bernard says as he engulfs you in the soft confines of his customary bear-hug, the scents of the seasonings he tends to use when cooking or baking wafting from his fur to tickle your nose. The fragrant smells causes you to nuzzle into his fur in an attempt to figure what exactly you are smelling. Bernard begins to laugh heartily from the ticklish sensation as he says 'I'm glad to know that mommy and my siblings aren't the only ones to enjoy my cooking hobby, though I'm sorry that I didn't manage to save anything from the meal earlier. Considering that you are always out you probably never get to eat properly cooked meals, next time for sure I will give you a taste of eating a home-cooked meal surrounded by family.'";
 		TraitGain "First Talk" for Bernard;
 	else:
 		say "[BernardTalkMenu]";
@@ -221,7 +221,7 @@ to say BernardTalk1: [Small Talk]
 	say "     '[one of]Could you keep an eye out for any seasonings in the city? They really help with my cooking and I really enjoy collecting them for their aroma as well as their taste[or]I'm happy that Mommy and all my siblings seem to love my cooking ability. Though Mommy seems to like reminding me to exercise to keep up with my culinary crusade[or]I read in a book that somewhere in the world people greet each other with a kiss, though Bianca said that nowadays many greet each other with sex instead[or]Life never seems to be stuck in a rut with Maeve around, though some of her plans tend to be... incredibly adventurous[or]If you ever want to join me cooking or to exercise, I'd be more than happy to accommodate you. Though I hope you don't mind the smell[at random].'";
 
 to say BernardTalk2: [Boop]
-	say "     The way that Bernard looks as he revels in your incoming attention reminds you of a shiba inu, leading you to boop him on the nose and causing him to squint his eyes and stick out his tongue. Chuckling at how silly he is being, you begin to take your finger away, only to have Bernard engulf your finger using his muzzle with a playful [']nom['] before slowly suckling upon it. Looking at your finger, you raise an eyebrow at Bernard's antics. 'I heard from Bianca this is supposed to bring you closer together with that certain someone that does the nose poke,' he replies after releasing your finger. With a grin, you pat him on the head.";
+	say "     The way that Bernard looks as he revels in your incoming attention reminds you of a Shiba Inu, leading you to boop him on the nose and causing him to squint his eyes and stick out his tongue. Chuckling at how silly he is being, you begin to take your finger away, only to have Bernard engulf your finger using his muzzle with a playful [']nom['] before slowly suckling upon it. Looking at your finger, you raise an eyebrow at Bernard's antics. 'I heard from Bianca this is supposed to bring you closer together with that certain someone that does the nose poke,' he replies after releasing your finger. With a grin, you pat him on the head.";
 
 to say BernardTalk3: [Family Meal]
 	if TimekeepingVar is 7 or TimekeepingVar is -1: [Early Morning] [Bianca, Ernest, Penelope, Wendis, Bernard, Maeve]
@@ -266,7 +266,44 @@ instead of fucking Bernard:
 
 Section 4 - Events
 
-[]
+Table of GameEventIDs (continued)
+Object	Name
+Musky But Not Husky	"Musky But Not Husky"
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Musky But Not Husky"	Musky But Not Husky	"[EventConditions_MuskyButNotHusky]"	Communal Shower	2500	2	100
+
+to say EventConditions_MuskyButNotHusky:
+	if Hunger of Bernard is 1 and HP of Sturm > 1 and Player is not CoA and White Wolf Seven is not listed in CompanionList of Player: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Musky But Not Husky is a situation.
+ResolveFunction of Musky But Not Husky is "[ResolveEvent Musky But Not Husky]".
+The level of Musky But Not Husky is 0.
+The sarea of Musky But Not Husky is "Nowhere".
+
+to say ResolveEvent Musky But Not Husky: [Bernard in the shower]
+	say "     With the intention of washing off some of the grime of the city, you enter the shower room. You are immediately assaulted by the steam and the smell of wet dog, however, another breath reveals that there is more to the odor than soaked fur. Tickling your nose and causing your body to warm up, the pheromone-laced scent fills your lungs, gradually becoming more appealing. It would seem that you aren't the only one who feels that they need a wash. [if Player is not naked]After stripping, you step around the dividing wall and immediately see Bernard rubbing the hot water into his fur, your son cheerfully and unshamedly waving to you when he spys you through the mist. 'Hi [BlancheMomDadTitle]. Here for a wash too? Sorry about the smell, I have to wash fairly frequently to keep it to a minimum, but I've been a bit lax recently, not that anyone has complained, but I want to be sure,' he explains, barely pausing for breath.";
+	say "     You confirm that you are here to use the showers too, standing beneath a nozzle beside him. 'Um, would you mind helping me with my back?' Bernard asks. 'Between my gut and muscles, it can be difficult to reach everywhere. I can do the same for you afterwards if you want.' Not seeing much reason to refuse, you nod and step up behind him[if ScaleValue of Player < 3], smiling as he cups his hands behind him without hesitation to boost you. You wonder whether he learnt from Penelope with Wendis or whether he figured it out independently[end if]. From behind, you can see just how muscular he is without the fat obscuring it and you trace a hand from his neck down to his waist. 'Mmm, that feels nice. I don't suppose that you're available for massages[if Charisma of Blanche > 3], though I suppose Claude might get jealous[end if]?' Bernard chuckles.";
+	WaitLineBreak;
+	say "     You laugh with him and reply that you are here to help him wash and that you merely got distracted by the amount of dedication that he must put into exercise. 'It's mostly strength training,' he admits. 'Lumi would win any competition involving speed, Penelope can hold a plank pose for longer than any of us, and Sturm... well, I'm not sure what to say Sturm would win. A triathlon? Martial arts of some kind?' he continues with graceful humility. 'Bianca and Claude would probably compete for pole-dancing master. I don't know if sex can be competitive, but I'm sure they'd find a way.' You share another laugh before you begin working your fingers through the thick fur and press into the muscle. After he passes you a bar of soap, you tease him that he's only mentioned half of his family. What about the rest of them?";
+	say "     'The analogy sort of breaks down after that. Casper enjoys sewing more than exercise and Maeve, as much as I love her, would probably take steroids well before she did weight training. Ernest exercises quite a bit, but the logic behind what he does each day is beyond me. He's probably thoroughly researched it though. Wendis practices throwing rocks, but I would hardly call that physical training[if Charisma of Blanche > 3]. She spends more time painting than working out[end if]. And Mommy just does what she feels like. She's happy with who she is and I think we are all a little envious of that. A perfect role model for us all in that regard.' Almost regretfully, you inform your son that you think that you've finished with his back. 'Thanks, now turn around and I'll do your. You can wash your front while I do it and we can continue talking. This is nice,' Bernard replies.";
+	WaitLineBreak;
+	say "     You briefly ponder what you should discuss next, before a thought comes to you. What does he think about Sturm being Blanche's favorite? 'Oh, we tease both of them about that. Maeve will feign indignity, Wendis will do puppy eyes, and Bianca will ask Sturm who [italic type]his[roman type] favorite person is, but none of us actually think of it beyond an expression of affection between them. [if IncestList is not warded and IncestList is not banned]Incestuous affection if you ask my eldest sister[else]Familial affection, I might add, despite my eldest sister's hopes[end if]. Lumi suggested a child of the day award complete with a prize, but nothing has come of that yet. I think that she just wants more treasure, though Ernest said that competing for it might benefit the family as a whole. We have to be careful not to push the teasing too far or Mom starts to get flustered. We all know that she's the best Mommy in the world.'";
+	say "     As he talks, Bernard runs [if ScaleValue of Player > 1]his hands [else]a hand [end if] over your back, surprisingly gentle despite his bulging muscles. You have to agree, it is a lot easier with assistance and it doesn't take long for you to feel fresh and clean again. Turning off the flow of water, you and Bernard return to the dressing room to dry yourselves, the large wolf having a lot of fur to cover. Without the water to wash it away, his natural musk is quick to re-emerge as a prominent smell, though he doesn't seem to notice, too engrossed with telling you about one of his recent trips into the city while he works his towel down his body from head to toe. 'Anyway, that's why I'm not going to let Maeve talk me into charging through walls any more,' he finshes as he turns around, tossing his towel towards a hook without thinking. A hook that you are standing in front of.";
+	say "     [bold type]Caught off guard, do you step out of the way?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Yes. What are reflexes for if not to avoid wet towels.";
+	say "     ([link]N[as]n[end link]) - No. You get a face full of Bernard's musky towel.";
+	if Player consents:
+		say "     Your time in the city has boosted your reaction time and you manage to step to the side just in time for the towel to fly past your shoulder to land perfectly on the hook. 'Sorry. I'm not used to other people being around after my showers. Nice reflexes though,' Bernard praises you. 'Anyway, I'm going to head out. It was nice talking to you. I'll save you an extra slice of pie next time we eat together.' Bernard gives you a warm (if slightly damp) hug before leaving you alone to finish drying yourself.";
+		now resolution of Musky But Not Husky is 1; [Not into Bernard's musk]
+	else:
+		say "     You take a sharp intake of breath just as the towel collides with your face, flooding your lungs with the potent scent of his armpits, gut, and groin. 'Sorry, sorry,' you hear Bernard apologizing as he rushes towards you, but you hold a hand up to reassure him. With the other, you gently unravel the towel, still breathing in the pheromones that impregnate the fabric. Slightly in a daze, you ask Bernard when he last washed it. 'Um, don't tell Mom, but not for a while, and that's my workout towel,' he mumbles. 'I only need it to dry off and I don't care about the smell. I didn't mean to get you with it, I promise. I was just showing off and forgot that you were standing in front of that exact hook,' he babbles, trying to defend his actions. Seeing no better way to reassure him, you smile and blatantly bury your face in the sweat-laced towel and take another sniff of it, stopping him mid-word. He stares at you for a moment, opening and closing his mouth while he processes what he has just seen.";
+		say "     'You don't think it's gross?' Bernard finally asks, perhaps a little hopefully. You shake your head and tell him that you've always found his scent irresistable but of course you couldn't just ask to bury your face in his fur. 'You could have asked,' he replies in a small voice. Curious, you enquire whether any of the others feel similar about this. 'I can neither confirm nor deny having promised not to share such secrets without permission.' Such cheek from your own son! Throwing his towel back at him you advance menacingly. Giggling he retreats from you, calling over his shoulder as he vanishes out into the bunker, 'It was nice talking to you. I'll save you an extra slice of pie next time we eat together. Though perhaps you would prefer I save a towel from next time I'm lifting weights.' With a snort, you finish drying off[if Player is not naked] before redressing[end if] and preparing to continue your day, all the while plotting how to get back at Bernard.";
+		now resolution of Musky But Not Husky is 2; [Like Bernard's musk]
+	now Musky But Not Husky is resolved;
 
 
 Section 5 - Companion

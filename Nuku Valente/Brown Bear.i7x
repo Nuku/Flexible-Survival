@@ -15,11 +15,7 @@ Section 1 - Creature Responses
 UrsineDefeatCount is a number that varies.
 
 to say UrsineDesc:
-	setmongender 4; [creature is female]
-	if HP of bee girl is 3:
-		say "     You are faced with a towering figure. While her head and body are much like that of a wild bear, her legs are somewhat longer and she's gotten quite pudgy from eating the stolen honey. The plain red t-shirt she wears is barely able to fit her enlarged body as it is, her six busty breasts pressed tightly against the taut fabric such that there's a clear impression of her hard nipples. She is no cute teddy bear, though. Her muzzle is filled with sharp teeth, and her powerful limbs end in paws equipped with claws. The big bruin, eager to defend her ill-gotten gains, is ready to attack.";
-	else:
-		say "     A towering figure comes into view. At first you assume it's a wild bear standing on its hind legs, but on closer inspection, you realize that its legs are somewhat long and its black claws are painted with nail polish. The infected woman has bright [one of]brown[or]blue[or]green[at random] eyes and huge, pointed teeth. A dense coat of shaggy fur covers her tall and wide body completely. Her muscular chest is padded with three rows of flattish breasts, and long nipples peek out through her fur. On seeing you, she exposes more of her teeth and speaks, [one of]'Run! I don't want to break another one!'[or]'Not now, you idiot!'[or]'Are you stalking me?'[at random]";
+	say "     A towering figure comes into view. At first you assume it's a wild bear standing on its hind legs, but on closer inspection, you realize that its legs are somewhat long and its black claws are painted with nail polish. The infected woman has bright [one of]brown[or]blue[or]green[at random] eyes and huge, pointed teeth. A dense coat of shaggy fur covers her tall and wide body completely. Her muscular chest is padded with three rows of flattish breasts, and long nipples peek out through her fur. On seeing you, she exposes more of her teeth and speaks, [one of]'Run! I don't want to break another one!'[or]'Not now, you idiot!'[or]'Are you stalking me?'[at random]";
 
 
 to say UrsineAttack:
@@ -30,9 +26,7 @@ to say UrsineAttack:
 
 
 to say UrsineWins:
-	if HP of bee girl is 3:
-		say "     [if fightoutcome is 21]Ignoring your lusts, the[else if fightoutcome is 22]Ignoring your attempt to submit, the[else]The[end if] large bear grabs you roughly and tosses you to the ground with an angry roar. Hearing the bear roar terrifies poor Honey, and she flees off into the trees to hide while the bear has her way with you. By the time she's done with you, you're very tired and very sticky with both honey and female juices.";
-	else if UrsineDefeatCount is 0: [ first time losing to a bear ]
+	if UrsineDefeatCount is 0: [ first time losing to a bear ]
 		say "     [if fightoutcome is 21 or fightoutcome is 22]Succumbing to your lusts, you submit and offer yourself to the bear. She[else]You realize that the bear has been holding back on you when she[end if] easily hefts you up towards her broad, well-padded chest and presses your face into her thick, coarse fur. The pressure of her furry grip engulfs you, and you fear you are about to be crushed out of existence. As your consciousness fades, you realize it's not the worst way to go, and you begin to feel oddly comfortable as the pressure decreases.";
 		say "     While you wonder what she has planned, you realize you are being rocked back and forth against the bear's increasingly hard nipples. A low rumble spills from her throat as you're held taut to her bosom. 'No, Phyllis. You mustn't...' she murmurs to herself as she grows increasingly aroused. Her strong paws rub you through the thick, sweetly musky fur covering her muscular body, drenching you in her arousing scent. 'Oh... feels so good...'";
 		say "     You feel a heat and dampness covering your lower half. The sweet smell of sex fills the air, and with some small feeling of [if fightoutcome is 21 or fightoutcome is 22]perverse enjoyment[else]horror[end if], you realize that she is masturbating herself with you, her words becoming increasingly incoherent and noisy as orgasm approaches. In the throes of climax, the pressure around you increases again until you pass out. You awaken sometime later, your body bruised, tingling, and soaked in the juices of the bear's orgasm.";
@@ -111,13 +105,17 @@ to say UrsineWins:
 
 
 to say UrsineLoses:
-	if HP of bee girl is 3:
-		say "     Your final blow makes the large bear lose her footing and she staggers back.";
-	else:
-		say "     [one of]The beaten bear comes back to her senses. 'Oh. That's better.' and then slumps over, apparently peacefully asleep.[or]You find yourself watching the motion of her big furry backside as the defeated bear hurriedly ambles off.[at random]";
+	say "     [one of]The beaten bear comes back to her senses. 'Oh. That's better.' and then slumps over, apparently peacefully asleep.[or]You find yourself watching the motion of her big furry backside as the defeated bear hurriedly ambles off.[at random]";
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Brown Bear Female"	"[PrepCombat_Brown Bear Female]"
+
+to say PrepCombat_Brown Bear Female:
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -319,9 +317,8 @@ Usedesc of honeycomb is "[honeycombuse]";
 
 to say honeycombuse:
 	say "You are overcome with the need for sweetness. The sticky goodness of the honeycomb makes you drool as you shove it into your suddenly hungry mouth.";
-	decrease hunger of Player by 6;
-	if hunger of Player < 0, now hunger of Player is 0;
-	increase thirst of Player by 1;
+	PlayerEat 6;
+	PlayerThirst 1;
 
 instead of sniffing honeycomb:
 	say "The small piece of honeycomb smells like a sweet smackerel of honey. You don't notice anything unusual or infected about its odor.";

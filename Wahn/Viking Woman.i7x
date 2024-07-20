@@ -672,9 +672,6 @@ to say AffectionateVikingLossSex: [3+ times with the player]
 		say "     As she pulls her clothes back on, Sonya gives your naked body a glance that lingers for a moment, and you can almost see lust and desire flickering up in her eyes again. Then she shakes her head with a sigh. 'I'd have another go with you, my outlander warrior, but... there's my duty to be done. Raiding targets don't scout themselves, you know...' She kneels next to you for a quick kiss, then stands up and walks away, turning her head for one last look back as she climbs over the crest of the dune.";
 
 to say VikingDesc:
-	setmongender 4;
-	if debugactive is 1:
-		say "DEBUG -> VIKINGRELATIONSHIP: [VikingRelationship], VIKINGPREGNANCY: [VikingPregnancy], PREGCOUNTER: [VikingPregCounter], KIDCOUNTER: [VikingKidCounter] <- DEBUG[line break]";
 	if VikingRelationship is 0: [first meeting]
 		say "     As you walk along the beach, you notice something moving out on the water. Turning your gaze toward it and straining your eyes a bit, you recognize it as a Viking longboat with a big square sail. Where did that thing come from? On the other hand... with all the things happening these days, the sudden appearance of Vikings isn't all that surprising. As you watch, you see a smaller boat being rowed towards the bigger one. Looks like they went ashore a while ago - or maybe dropped off som-[line break][line break]";
 		say "     *thunk, thunk* sounds come from behind you, and as you turn around you find yourself confronted with a female Viking, hitting the broad side of her sword against her round wooden shield to attract your attention. She's got shoulder-length blond hair, the impressive physique of a seasoned fighter and is dressed in light scale mail. Her gaze wanders over you appraisingly, then she says:[line break]";
@@ -783,6 +780,15 @@ to say VikingWomanAttacks:
 
 Section 2 - Creature Insertion
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Viking Woman"	"[PrepCombat_Viking Woman]"
+
+to say PrepCombat_Viking Woman:
+	setmongender 4;
+	if debugactive is 1:
+		say "DEBUG -> VIKINGRELATIONSHIP: [VikingRelationship], VIKINGPREGNANCY: [VikingPregnancy], PREGCOUNTER: [VikingPregCounter], KIDCOUNTER: [VikingKidCounter] <- DEBUG[line break]";
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -810,7 +816,7 @@ When Play begins:
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a handsome female visage. Your hair turns into a shoulder-length blond mane"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a that of a young woman, and a fit and healthy one at that"; [  format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it smoothes out, becoming the pale tint of a northern European"; [ format as "Your skin feels funny as (your text)." ]
+	now skin change entry is "it smooths out, becoming the pale tint of a northern European"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it gets tight and firmly muscled"; [ format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes human-shaped"; [ format as "Your cock feels funny as (your text)." ]
 	now str entry is 20;

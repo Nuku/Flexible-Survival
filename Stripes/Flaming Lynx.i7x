@@ -7,14 +7,10 @@ Version 1 of Flaming Lynx by Stripes begins here.
 
 Section 1 - Creature Responses
 
-to say flaminglynxdesc:
-	setmongender 3; [creature is male]
-	say "     Before you is an oversized lynx-like creature that is vibrantly visible even in these dark, underground tunnels. This strange animal is roughly the size of a large dog or wolf and covered in rippling flames. These short flames flicker across its furred body with an occasional rainbow sheen to them without harm to the large feline. The coat itself is a blend of reds, yellows and oranges with charcoal black markings mixed in. The flames are stronger at the lynx's characteristic cheek ruffs and across the tufts atop its ears as well as the tip of its short tail. Beneath the creature's belly you can see the hanging bulge of his sheath and balls. He growls softly and pads closer to you, the lamplight fire around its body swelling to full flames.";
 
 to say flaminglynxattack:
 	let randomtarget be "[one of]ankle[or]leg[or]thigh[or]rear[or]forearm[or]wrist[or]arm[or]side[or]belly[at random]";
 	say "The [one of]fiery creature strikes at you with one of his paws[or]large lynx growls and bites your [randomtarget][or]flaming lynx tries to tackle you with his body as his flames surge higher[or]feral feline slashes at you with his claws, digging them into your [randomtarget][or]flames across the creature's back rise higher moments before a wave of fire blasts into you[at random]!";
-
 
 to say losetoflaminglynx:
 	choose row MonsterID from the Table of Random Critters;
@@ -86,7 +82,6 @@ to say losetoflaminglynx:
 		say "     He paws at your clothes and gear, forcing you to divest yourself of them lest they be damaged by his claws. Once he's gotten any obstructions away from your loins, he nuzzles at your cock and starts licking over it with his rough, warm tongue. You moan in response, the heat from his breath and sliding tongue exciting you further until you're fully hard and the feline is licking and sucking on your cock eagerly[if Player is female]. He pays your pussy no mind, his attention clearly focused on your maleness[end if].";
 		say "     Bringing your hands to the lustful feline's head, you run your carefully over his fiery head, which happily doesn't burn you. You can feel the gentle flickering of the flames against your fingers and the warmth from the fire, but it only feels warm and not burning hot. You start thrusting up into the feline's muzzle while stroking its ears and running your fingers through its fur. It purrs all the more, which adds a pleasant rumbling sensation through your loins that soon has you cumming hard down the lynx's throat as you feed him your creamy load until your balls are drained. His tasty meal over, the flaming lynx licks his muzzle and nuzzles you before padding away, his flames brighter and more vibrant than when he arrived. You flop back onto the ground, panting softly as you feel the delightful warmth from your encounter slowly fading from you.";
 
-
 to say beattheflaminglynx:
 	let lynxfun be 0;
 	if Player is male:
@@ -135,8 +130,17 @@ to say beattheflaminglynx:
 		say "     You moan softly as you push down onto him, his slick shaft sliding into your tight bottom and filling you nicely. His fur gives another ripple of color as you stroke his tummy and scritch his ears while riding him. Warmth begins to suffuse into you from your stuffed ass, increasing your pleasure and arousing you greatly. The feline's paws twitch in the air, trying in vain to find purchase to fuck you harder, but you're setting the pace and work to ensure your own enjoyment foremost. Regardless of his instincts wanting him to be mounting you, he's still quite happy being ridden like this, if his rumbling purr is to be an accurate sign.";
 		say "     You have a very enjoyable time riding the animalistic mutant, squeeze down on his feline shaft and working it to rub at all your most sensitive spots just the way you like it. When you finally cum and splatter your seed across his fur, his flames seem to surge and ripple with a rainbow excitement. His shaft pulses and throbs in you as this rush of energy sends him over the edge, the heat filling you as he cums, sending shot after shot of deliciously hot semen into your bowels. You wait until you're both done before easing off of the flaming lynx and letting him up. His flames seem more vibrant and colorful after your fun and he dashes off while purring loudly.[mimpregchance]";
 
-
 Section 2 - Creature Insertion
+
+to say flaminglynxdesc:
+	say "     Before you is an oversized lynx-like creature that is vibrantly visible even in these dark, underground tunnels. This strange animal is roughly the size of a large dog or wolf and covered in rippling flames. These short flames flicker across its furred body with an occasional rainbow sheen to them without harm to the large feline. The coat itself is a blend of reds, yellows and oranges with charcoal black markings mixed in. The flames are stronger at the lynx's characteristic cheek ruffs and across the tufts atop its ears as well as the tip of its short tail. Beneath the creature's belly you can see the hanging bulge of his sheath and balls. He growls softly and pads closer to you, the lamplight fire around its body swelling to full flames.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Flaming Lynx"	"[PrepCombat_Flaming Lynx]"
+
+to say PrepCombat_Flaming Lynx:
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -340,7 +344,7 @@ This is the Flaming Lynx Infection rule:
 			else:
 				say "     Having retained your sense of identity until the military arrives, you find yourself detained like so many others while the survivors are processed. It seems your form is unique among those rescued from the city and so is subject to additional testing. You are questioned about the creature that infected you, though you can give little in the way of answers. Eventually, you are released and left to find a place for yourself in this new world. Able to endure heat better than most, you get employment in a foundry which works to recycle the large amounts of metal trash left behind into fresh materials for reconstruction.";
 				if Player is not neuter and charisma of Player > 14:
-					say "     You become quite popular among the staff, taking on the unofficial role of company mascot. Breaktime often involves one or more of your fellow employees slaking their fiery lusts upon you after several hours working the smelters and forges[if the player is impreg_ok]. You bear many offspring from your coworkers, often having no idea whose child you're having at any given time. Many of your children grow up to join the company, working alongside you - both at the job and in the break room, further expanding the company's workforce as they become pregnant as well[end if].";
+					say "     You become quite popular among the staff, taking on the unofficial role of company mascot. Break time often involves one or more of your fellow employees slaking their fiery lusts upon you after several hours working the smelters and forges[if the player is impreg_ok]. You bear many offspring from your coworkers, often having no idea whose child you're having at any given time. Many of your children grow up to join the company, working alongside you - both at the job and in the break room, further expanding the company's workforce as they become pregnant as well[end if].";
 
 
 Flaming Lynx ends here.

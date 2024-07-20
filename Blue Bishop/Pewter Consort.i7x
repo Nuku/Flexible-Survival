@@ -26,18 +26,6 @@ pewterassvar2 is a number that varies.
 scaledr is a number that varies. [Scale Diminishing Return, ensures larger players aren't completely overwhelmed]
 
 to say pewterdesc:
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Male";
-	psycheeval;
-	libidoeval;
-	setmongender 3; [creature is male]
 	say "     Met with the sound of a low, droning growl, you are suddenly beset upon by a peculiar beast. The well-toned quadruped's lean flesh a distinct, faintly metallic gray hue, it's no animal you've ever seen, the alien-looking creature's head utterly devoid of any features save for a toothy, slightly agape, and grinning maw. Slowly circling around you, clearly sizing you up, its somewhat long and flexible tail sways patiently, and you're soon given a clear view of his apparent arousal, oozing a silvery fluid onto the ground.";
 
 to say losetopewter:
@@ -110,7 +98,7 @@ to say losetopewter:
 		CreatureSexAftermath "Player" receives "OralCock" from "Pewter Consort";
 
 to say beattheconsort:
-	say "     Hissing and growling, it immediately chooses to turn and run the second things turn sour for them, running off into the distance and freeing you to go about your business once more."; [placeholder]
+	say "     Hissing and growling, it immediately chooses to turn and run the second things turn sour for them, running off into the distance and freeing you to go about your business once more."; [Pewter Consort]
 
 Section 1.1 - Pewter Consort Bind
 
@@ -666,6 +654,24 @@ to say pewtercharacterassess:
 					say "your ass is being rimmed by one of them";
 				else if pewterassvar2 > 0:
 					say "your ass is being pounded by one of them";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Pewter Consort"	"[PrepCombat_Pewter Consort]"
+
+to say PrepCombat_Pewter Consort:
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
+	psycheeval;
+	libidoeval;
+	setmongender 3; [creature is male]
 
 
 Section 2 - Creature Insertion

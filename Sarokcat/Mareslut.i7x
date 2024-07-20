@@ -3,7 +3,6 @@ Version 1 of Mareslut by Sarokcat begins here.
 
 "Adds a Mareslut to Flexible Survival's Wandering Monsters table"
 
-
 Section 1 - Creature Responses
 
 to say Mareslut attack:
@@ -24,7 +23,6 @@ to say Mareslut attack:
 		infect "Mareslut";
 		decrease humanity of Player by 2;
 
-
 To say Mareslut loss:
 	if Player is not male or ( BodyName of Player is not "Mareslut" and BodyName of Player is not "Horseman" and BodyName of Player is not "Nightmare" and BodyName of Player is not "Stallionboi" ):
 		say "     Driven back by your powerful assault, the slutty mare groans with pain as she staggers backwards and shoots you a rather dirty and sexy look as she says '[one of]Well you didn't have to be so rude!' [or]Maybe you will be more fun next time, sexy,' [or]Why don't you want to fuck me?' [or]Damn sweetie, that's a little rough for me. Maybe you should try one of the donkeys?' [at random]before staggering off down the corridor, shooting you a last teasing glance over her shoulder as she does so.";
@@ -37,8 +35,14 @@ To say Mareslut loss:
 		else:
 			say "     Having managed to fight off her advances thus far, you resist the temptation of your own infected body as well. With a final aggressive motion, you send the wanton female running off down the halls. She can throw herself upon the lustful desires of some other stud, for all you care.";
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Mareslut"	"[PrepCombat_Mareslut]"
+
+to say PrepCombat_Mareslut:
+	setmongender 4;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -63,7 +67,7 @@ When Play begins:
 	now attack entry is "[one of]She rubs her large, sexy breasts teasingly as she slides up against you.[or]The mare reaches out and strokes her hands over your body teasingly[or]The powerful mare moves surprisingly fast as she slams one of her hoof-like fists into your body![or]The sexy mare charges forward, running right into you![or]She gives you an equine grin for a minute, confusing you slightly, as she slowly stretches and poses teasingly in front of you, your body growing hot and aroused from the sexy show.[or]The mare reaches out with her powerful arms, and tries to pin you up against her sexy body, rubbing her soft fur all over your skin as she moans with excitement![or]She charges forward, and her hoof-like hands reach around your head, and pull you forward until your face is buried in her ample cleavage while she moans with excitement as she rubs her soft breasts up against your face.[at random]";
 	now defeated entry is "[Mareslut loss]";
 	now victory entry is "[Mareslut attack]";
-	now desc entry is "[mongendernum 4]     Traveling through the strangely empty halls of the building, you nearly run into a large equine female coming out of one of the side rooms. 'Well what do we have here?' the sexy looking mare asks, as she looks you up and down. You find yourself examining her in return, your eyes trailing over the ample equine curves and large bosom of the [one of]sleek black[or]sexy gray[or]slutty roan[or]suede brown[or]beautiful white[at random] mare as she balances easily on her silvery hooves, her long equine tail flicking behind her in excitement as the naked and sexy mare looks you over. '[one of]I have time for a little fun,[or]You look like you need a bit of fun,[or]What a sexy looking customer. Why don't I show you around my body?[no line break][or]Why don't you stop and stay a while sexy?[no line break][or]I think you would make a very sexy looking mare, nice and sexy and slutty just like me![no line break][or]Oooh you look like you want to play! C'mon then![no line break][or]Hey sexy, care to mount up and go for a ride?[no line break][or]I just knew that [if daytimer is day]today was going to be a good day[else]tonight was going to be a good night[end if]![no line break][at random]' the mare says, before reaching out towards you eagerly.";
+	now desc entry is "     Traveling through the strangely empty halls of the building, you nearly run into a large equine female coming out of one of the side rooms. 'Well what do we have here?' the sexy looking mare asks, as she looks you up and down. You find yourself examining her in return, your eyes trailing over the ample equine curves and large bosom of the [one of]sleek black[or]sexy gray[or]slutty roan[or]suede brown[or]beautiful white[at random] mare as she balances easily on her silvery hooves, her long equine tail flicking behind her in excitement as the naked and sexy mare looks you over. '[one of]I have time for a little fun,[or]You look like you need a bit of fun,[or]What a sexy looking customer. Why don't I show you around my body?[no line break][or]Why don't you stop and stay a while sexy?[no line break][or]I think you would make a very sexy looking mare, nice and sexy and slutty just like me![no line break][or]Oooh you look like you want to play! C'mon then![no line break][or]Hey sexy, care to mount up and go for a ride?[no line break][or]I just knew that [if daytimer is day]today was going to be a good day[else]tonight was going to be a good night[end if]![no line break][at random]' the mare says, before reaching out towards you eagerly.";
 	now face entry is "rather equine like, with a large kissable muzzle, and beautiful brown eyes staring out of your expressive equine "; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "curved and full-bodied, with sensuous and sleek curves begging to be stroked and touched, you balance easily on your new equine legs even as your slightly hoof-like hands stroke your sensitive sides absently"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]softly furred[or]chestnut furred[or]tan colored horsehide[or]short fur covered[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]

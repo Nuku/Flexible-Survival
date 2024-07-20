@@ -4,8 +4,15 @@ Version 1 of Hentai Fan by Stripes begins here.
 
 Section 1 - Creature Responses
 
+to say losetohentaifan:
+	say "     Having beaten you, the tentacled creature grabs you and pulls you fully into the room and pushes you down in front of the television.";
+
+to say beatthehentaifan:
+	say "     Your final blow leaves the tentacled creature stunned, swirls in his eyes.";
+
+Section 2 - Creature Insertion
+
 to say hentaifandesc:
-	setmongender 3; [creature is male]
 	say "     The young man before you has become a strange, mutated creature, possibly because of his exposure to the contents of the anime being shown. Like the girls, his proportions are a little cartoonishly skewed and his eyes are unusually large. Similarly, his skin unnaturally smooth and even in tone, though a paler shade of pink than the girls. Unlike them, this guy would have much difficulty passing himself off as human even at a glance thanks to the foursome of fleshy tentacles growing from his back. Phallic-tipped and dripping with precum as they undulate, they move towards you with obvious intent, an intent echoed by the horny fellow's stiff 9 inch cock.";
 	if BodyName of Player is "Anime Babe":
 		say "     The sight of those squirming tendrils as well as the sights and sounds of tentacular sex on the television is very distracting to your anime girl body. You moan and squeal in barely suppressed pleasure as those tentacles draw nearer, your eyes drawn between them and the images on the screen. A growing part of you longs for what you're seeing in the animation to be re-enacted right now.";
@@ -15,14 +22,12 @@ to say hentaifandesc:
 		now HP of Player is ( 3 * HP of Player ) / 4;
 		now Libido of Player is ( 100 + Libido of Player + Libido of Player + Libido of Player ) / 4;
 
-to say losetohentaifan:
-	say "     Having beaten you, the tentacled creature grabs you and pulls you fully into the room and pushes you down in front of the television.";
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Hentai Fan"	"[PrepCombat_Hentai Fan]"
 
-to say beatthehentaifan:
-	say "     Your final blow leaves the tentacled creature stunned, swirls in his eyes.";
-
-
-Section 2 - Creature Insertion
+to say PrepCombat_Hentai Fan:
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

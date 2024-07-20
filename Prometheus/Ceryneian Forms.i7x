@@ -4,6 +4,13 @@ Version 1 of Ceryneian Forms by Prometheus begins here.
 
 Section 1 - Anthro Ceryneian Deer
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Anthro Ceryneian Deer"	"[PrepCombat_Anthro Ceryneian Deer]"
+
+to say PrepCombat_Anthro Ceryneian Deer:
+	say "";
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -29,7 +36,7 @@ When Play begins:
 	now defeated entry is ""; [ Text when monster loses. Change 'template' as above. ]
 	now victory entry is ""; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is ""; [ Description of the creature when you encounter it. ]
-	now face entry is "that of a deer, with magnificent golden antlers on top of your head and an almost otherworldy glow to your eyes"; [ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "that of a deer, with magnificent golden antlers on top of your head and an almost otherworldly glow to your eyes"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "graceful in appearance, though wiry muscles flex beneath your skin suggesting that there is hidden strength. You have long delicate arms and hands, capped with bronze fingertips, not dissimilar to the Hind of Ceryneia herself, and with proper hooves instead of feet at the ends of your legs, once again, bronze and gleaming"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "dappled brown-furred"; [ Skin desc., format as the text "Your body is covered in (your text) skin." Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "Your backside has a deer's tail over it, fluffy and cute with soft cream along the underside. The rest of your ass is quite curvy, your tail hiding nothing."; [ Tail desc., written as a full sentence or left blank for none. ]
@@ -182,6 +189,13 @@ When Play begins:
 
 Section 2 - Feral Ceryneian Deer
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Feral Ceryneian Deer"	"[PrepCombat_Feral Ceryneian Deer]"
+
+to say PrepCombat_Feral Ceryneian Deer:
+	say "";
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -207,7 +221,7 @@ When Play begins:
 	now defeated entry is ""; [ Text when monster loses. Change 'template' as above. ]
 	now victory entry is ""; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is ""; [ Description of the creature when you encounter it. ]
-	now face entry is "that of a deer, with magnificent golden antlers on top of your head and an almost otherworldy glow to your eyes"; [ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "that of a deer, with magnificent golden antlers on top of your head and an almost otherworldly glow to your eyes"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "graceful in appearance, though wiry muscles flex beneath your skin suggesting that there is hidden strength. You have four long delicate legs, capped with bronze hooves, not dissimilar the Hind of Ceryneia herself. When it becomes necessary, you fore-hooves seem to mould into fingers, shifting back as soon as you have completed the task"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "dappled brown-furred"; [ Skin desc., format as the text "Your body is covered in (your text) skin." Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "Your backside has a deer's tail over it, fluffy and cute with soft cream along the underside. The rest of your ass is quite curvy, your tail hiding nothing."; [ Tail desc., written as a full sentence or left blank for none. ]
@@ -360,6 +374,13 @@ When Play begins:
 
 Section 3 - Tauric Ceryneian Deer
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Ceryneian Deer-taur"	"[PrepCombat_Ceryneian Deer-taur]"
+
+to say PrepCombat_Ceryneian Deer-taur:
+	say "";
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -386,7 +407,7 @@ When Play begins:
 	now defeated entry is ""; [ Text when monster loses. Change 'template' as above. ]
 	now victory entry is ""; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is ""; [ Description of the creature when you encounter it. ]
-	now face entry is "that of a deer, with magnificent golden antlers on top of your head and an almost otherworldy glow to your eyes"; [ Face Description, format as the text "Your face is (your text)." ]
+	now face entry is "that of a deer, with magnificent golden antlers on top of your head and an almost otherworldly glow to your eyes"; [ Face Description, format as the text "Your face is (your text)." ]
 	now body entry is "graceful in appearance, though wiry muscles flex beneath your skin suggesting that there is hidden strength. Your lower half has four long delicate legs, capped with bronze hooves, not dissimilar the Hind of Ceryneia herself, but being a deer-taur, you still have a more humanoid upper body, complete with hands"; [ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "dappled brown-furred"; [ Skin desc., format as the text "Your body is covered in (your text) skin." Note: the word 'skin' is automatically included at the end. ]
 	now tail entry is "Your backside has a deer's tail over it, fluffy and cute with soft cream along the underside. The rest of your ass is quite curvy, your tail hiding nothing."; [ Tail desc., written as a full sentence or left blank for none. ]

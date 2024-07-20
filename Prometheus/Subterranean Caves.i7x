@@ -535,9 +535,9 @@ Asshole Depth of Rodrick is 0. [inches deep for anal fucking]
 Asshole Tightness of Rodrick is 0. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 Cock Count of Rodrick is 0. [number of cocks]
 Cock Girth of Rodrick is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
-Cock Length of Rodrick is 0. [10 Inches]
+Cock Length of Rodrick is 0. [X Inches]
 Ball Count of Rodrick is 0. [allowed numbers: 1 (uniball), 2 or 4]
-Ball Size of Rodrick is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
+Ball Size of Rodrick is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Rodrick is 0. [number of cunts]
 Cunt Depth of Rodrick is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Rodrick is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
@@ -792,6 +792,8 @@ Description of Belliandra is "[BelliandraDesc]".
 Conversation of Belliandra is { "Meow Nya Mew" }.
 The scent of Belliandra is "     Belliandra smells of clean fur, though there is a subtle scent hanging about her of something that you can't quite identify."
 
+BelliandraBlancheTrainingCooldown is a number that varies. BelliandraBlancheTrainingCooldown is usually 0.
+
 to say BelliandraDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Belliandra] <- DEBUG[line break]";
@@ -799,7 +801,75 @@ to say BelliandraDesc:
 	say "     Amused by your observation, she winks at you and flicks her tail. She seems to have a cheerful personality and you have yet to see her not smiling, smirking, or teasing. Confident in her capability, she cultivates an aura of competence and safety. Much of her time seems to be spent training combatants in the arena, patiently tutoring them on the finer points of fighting with sword, spear, as well as unarmed combat, though the weapons are decidedly blunted in order to reduce lasting harm. You are not sure how much of the Station's security is due to her presence compared to the efforts of the Ant Colony and Dungeoneering Guild, but you have little doubt that the people living here appreciate the safety that she provides.";
 
 instead of conversing the Belliandra:
-	say "     '[one of]Don't let your guard down anywhere, not even when you are surrounded by friends. Always be ready to protect those that you care about[or]Strength is wasted if you can't strike your foe. Speed is a much better tool[or]Your world lacks heroes though it still seems to have tyrants. Are your gods so uncaring? Perhaps things will change soon[or]I plan on providing combat training for those that want it. If you know anyone that might be interested, feel free to bring them with you. I still have a few things to finish before I'm ready for that though[at random].'";
+	say "[BelliandraTalkMenu]";
+
+to say BelliandraTalkMenu:
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Small Talk";
+	now sortorder entry is 1;
+	now description entry is "Make small talk with the warrior kitty";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Training";
+	now sortorder entry is 2;
+	now description entry is "Have Belliandra train one of your companions";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Small Talk"):
+					say "[BelliandraTalk1]";
+				else if (nam is "Training"):
+					say "[BelliandraTalk2]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the feline woman, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say BelliandraTalk1:
+	say "     '[one of]Don't let your guard down anywhere, not even when you are surrounded by friends. Always be ready to protect those that you care about[or]Strength is wasted if you can't strike your foe. Speed is a much better tool[or]Your world lacks heroes though it still seems to have tyrants. Are your gods so uncaring? Perhaps things will change soon[or]I plan on providing combat training for those that want it. If you know anyone that might be interested, feel free to bring them with you. I still have a few things to finish before I'm ready for anyone other than novices[at random].'";
+
+to say BelliandraTalk2:
+	if White Wolf Zero is listed in CompanionList of Player:
+		if BelliandraBlancheTrainingCooldown is 0:
+			if "Belliandra Initial Training" is listed in traits of Blanche: [Been trained before]
+				say "     Belliandra continues to work on Blanche's stance and strikes, patiently adjusting her posture when necessary, praising her when she succeeds, and complimenting her on her beauty. The white wolf matriarch makes excellent progress under her tutelage and you can see improvement by the time the two of them call an end to the lesson. (Placeholder)";
+				pet level up White Wolf Zero;
+			else: [First Time]
+				say "     Belliandra looks at Blanche before turning back to you and raising an eyebrow. 'You want me to train... a mother of [Thirst of Blanche]?' she asks with surprise. You nod, though ask how she knew how many children the white wolf has. 'Aura reading. She defines herself through family, so her offspring are part of who she is.' With that answered, you enquire as to whether that will be a problem. 'Not at all. It's just been quite some time since I trained someone with such a large family who wasn't immortal.' Feeling left out of the conversation, Blanche walks over, hearing the last sentence. 'I'm not immortal as far as I know, but I certainly want to protect my pups. Should I assume that you are some sort of cat-demon?' the wolfess asks, pressing herself against your back when Belliandra begins to laugh. 'Demon? No. Not that there's anything inherently wrong with being a demon. Some of my siblings are, but others are celestials, dragons, or kitsune among other beasties, but I'm just a catperson. Felinoi we are called.'";
+				say "     'I think that you'd like our father, though progenitor may be a better term considering they aren't male or female in the same way as mortals. Makes time for his family despite how it grows with each lover he takes, but I'm getting distracted. You're here for training. Don't worry, there's no price either material or spiritual. I do this purely for my own enjoyment and because I like to help people,' Belliandra reassures Blanche, the white wolfess looking much more relaxed now. 'Then let us get started. I gather that this is your first time receiving formal training in combat, so we'll refrain from using weapons for now. Is this acceptable?' the feline asks, gently guiding the wolf a few feet away from you so that they have space to move unimpeded. When Blanche nods, the arena master continues, 'Excellent. Now, I usually advise wearing armor, but given the circumstances of the city above, I will make an exception and and adapt the training to suit a more... seductive style. It would be a shame to cover such beauty after all.'";
+				WaitLineBreak;
+				say "     Blanche grins at the compliment, eyeing up her tutor-to-be unashamedly. You're not sure whether the form-fitting nature of Belliandra's armor adds to the wolfess's attraction, but she certainly finds the cat pleasing to the eye, not that she seems to mind. 'When you've finished imagining me as vulnerable to penetrative weapons as you, perhaps we could continue the lesson?' the feline teases. 'Once you reach a certain level, perhaps I can find ways to make it more interesting for you, but for today, we'll mostly be working on your stance and technique for striking the dummies. Ready? Now here's what you should be doing...'";
+				say "     What follows is a rather dull few hours for you, though fortunately Blanche seems too focused on what she is being taught to notice the time go by. Belliandra works on the wolf matriarch's stance and strikes, patiently adjusting her posture when necessary, praising her when she succeeds, and complimenting her on her beauty in between. Blanche makes excellent progress under her tutelage and you can see significant improvement by the time the two of them call an end to the lesson. 'Be sure to work on what I have taught you so that it can properly take root, but I look forward to your return so that we might fully realize your potential,' Belliandra informs the wolf. 'Thank you. I can't wait,' Blanche replies, panting but in high spirits.";
+				TraitGain "Belliandra Initial Training" for Blanche;
+				pet level up White Wolf Zero;
+				increase weapon damage of White Wolf Zero by 2;
+				increase dexterity of White Wolf Zero by 2;
+			follow turnpass rule;
+		else:
+			say "     'I admire her enthusiasm, but give Blanche some time for the training to sink in. A lot of it needs to become instinctual and forcing too much on her at once will interfere with that, not to mention cause her stress. Twenty four hours from last time should be sufficient for her current proficiency,' Belliandra informs you while inspecting her claws.";
+	else:
+		say "     'Sorry, you don't seem to have anyone with you that I can train at the moment,' Belliandra apologizes, clutching her tail in her paws.[if debugactive is 1] (Currently limited to Blanche)[end if]";
+
 
 instead of fucking Belliandra:
 	say "     Belliandra laughs as soon as you start to proposition her. 'Perhaps some day, but I haven't had nearly enough time to get to know you. Don't take it too hard. You aren't the first to ask and won't be the last.' Realizing that her rebuff may have been a bit blunt, she pats you reassuringly before combing her whiskers again.";
@@ -865,7 +935,7 @@ to say ResolveEvent Station Tour:
 	if HP of Hope-Born Dragon > 5:
 		say "     'I know who you are. My father must have been quite impressed with you to trust you with one of his children. I should take time to properly visit [Hope-BornDragonName] at some point[if HP of Cadmea > 1]. My sister, Cadmea, also spoke well of you. Our father is rather a... adventurous sort so we are a very large family[end if],' she muses. ";
 	else if HP of Cadmea > 1:
-		say "     'I know who you are. My sister, Cadmea, spoke well of you. Our father is rather a... adventurous sort so we are a very large family,' she muses. ";
+		say "     'I know who you are. My sister, Cadmea, spoke well of you. Our father is rather an... adventurous sort, so we are a very large family,' she muses. ";
 	else:
 		say "     'I do not believe we have had the pleasure of meeting yet, but I sense a certain aura around you as though you will accomplish great things. I shall wait and see,' she muses. You introduce yourself, surprised by the strength of her grip when she takes your hand. ";
 	say "'Where are my manners? Celeste would scold me... You may call me Belliandra, and I am the master of the arena that you find yourself in. Like Varenya, I am not of your world, though I suppose with the number of adventurers that seem to turn up, that isn't exactly much of a revelation,' she laughs. 'I am a capable combat instructor, both for entertainment and more... practical applications. There always seem to be people trying to hurt each other and people that want to be able to defend themselves from being hurt, so if you or anyone that you know wants some proper physical training, no matter their appearance and capability I can do it. Magic isn't my forte, sorry. Payment is negotiable, whether it is precious metals, food, or as some seem to prefer, intimacy,' Belliandra explains, her eyes flicking over you.";
@@ -885,9 +955,10 @@ to say ResolveEvent Station Tour:
 	change the down exit of Tunnel Underground to Tunnel Hub;
 
 
-[Resolution 1 - Stayed and helped Sarah treat Colleen
+[Resolution 1 - Stayed and helped Sarah treat Colleen - Colleen Husky
 Resolution 2 - Fought the Mole. Won. Saw Webber. Not Varenya.
 Resolution 3 - Fought Mole. Lost. Saved by Varenya.
-Resolution 4 - Fled from Mole. Saw Webber. Not Varenya.]
+Resolution 4 - Fled from Mole. Saw Webber. Not Varenya.
+Resolution 5 - Stayed and helped Sarah treat Colleen - Colleen Human]
 
 Subterranean Caves ends here.

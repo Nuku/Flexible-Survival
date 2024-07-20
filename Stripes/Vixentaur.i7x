@@ -6,31 +6,17 @@ Section 1 - Creature Responses
 
 vixentaurcatch is a number that varies. vixentaurcatch is usually -35.
 
-to say vixentaurdesc:
-	setmongender 4; [creature is female]
-	if HP of Sam is 15:	[Fight w/Sam]
-		say "     Drawn into a fight with Samantha, you find yourself facing off against the alluring vixentaur. She has a vulpine head with a shapely muzzle filled with sharp teeth and keen eyes looking for her first opening. Her hands and feet have small claws. Her bushy tail swishes, spreading her perfumed scent. You notice it starting to make you aroused and docile, but you shake it off just as the vixentaur charges. Both tough and sexy, the vixentaur will be a dangerous enemy.";
-	else:			[Random Vixentaur]
-		say "     Before you is a vulpine taur creature, definitely one of Sam's many descendants. The creature's vulpine head has a sexy smile on its long, slender muzzle and fox ears. It has long lashes, pretty coral eyes and long, flowing cerise hair. Its upper body is generally human in form, but covered in pink fur and with a painted claws on its fingertips. It's quite curvaceous, with a lovely bosom, slender waist and round hips blending into its tauric lower half.";
-		say "     Its lower body is fully vulpine, a slender creature with shapely legs and cute paws. Its pink fur becomes a very light shade at its chest and underbelly, as does the tip of its tail. What would normally be the black of its socks is a deep pink. Beneath its lower body hang several more breasts and under its tail waits its wet, pink pussy. It drips with her juices as her fluffy tail spreads the arousing scent coming from it.";
-
-
 to say losetovixentaur:
-	if HP of Sam is 15:
-		say "     Sam growls and charges, slamming her body into yours and [if scalevalue of Player < 4]sends you tumbling back several yards[else]knocks you over[end if]. You land half on and half off a cot, painfully injuring your back.";
+	if Player is male and a random chance of 2 in 3 succeeds:
+		say "     Having defeated you, the vixentaur giggles excitedly and presses you to the ground. She murrs in your ear about how [if Player is male]she wants you to breed some kits in her[else]much fun she's going to have with you[end if]. You are beyond resisting her advances at this point, wrapping your arms around her and burying your face in her bosom. You kiss and licks at her many nipples, drawing excited yips from the vulpine.";
+		say "     She gets your [cock size desc of Player] [Cock of Player] shaft lined up and sinks down onto your throbbing rod with ease. She giggles and yips as she rides up and down. Her inner walls squeeze and ripple across your manmeat in so many delightful ways. She presses your face to her breast, coaxing you to start suckling from her, drinking down her tasty, perfumy milk. The vixen fucks you with wild, animalistic abandon, pounding her hips down onto yours until you're nearly insensate with lust and finally climax as her pussy clamps down around your shaft as she cums. You blast your [if Ball Size of Player > 5]large [end if]load into her, breeding the lustful vixen, possibly siring more of these alluring creatures. Having got what she wanted, she giggles and heads off after flashing you her pussy with your cum [if Ball Size of Player > 5]flowing[else]leaking[end if] out of it.";
 	else:
-		if Player is male and a random chance of 2 in 3 succeeds:
-			say "     Having defeated you, the vixentaur giggles excitedly and presses you to the ground. She murrs in your ear about how [if Player is male]she wants you to breed some kits in her[else]much fun she's going to have with you[end if]. You are beyond resisting her advances at this point, wrapping your arms around her and burying your face in her bosom. You kiss and licks at her many nipples, drawing excited yips from the vulpine.";
-			say "     She gets your [cock size desc of Player] [Cock of Player] shaft lined up and sinks down onto your throbbing rod with ease. She giggles and yips as she rides up and down. Her inner walls squeeze and ripple across your manmeat in so many delightful ways. She presses your face to her breast, coaxing you to start suckling from her, drinking down her tasty, perfumy milk. The vixen fucks you with wild, animalistic abandon, pounding her hips down onto yours until you're nearly insensate with lust and finally climax as her pussy clamps down around your shaft as she cums. You blast your [if Ball Size of Player > 5]large [end if]load into her, breeding the lustful vixen, possibly siring more of these alluring creatures. Having got what she wanted, she giggles and heads off after flashing you her pussy with your cum [if Ball Size of Player > 5]flowing[else]leaking[end if] out of it.";
-		else:
-			say "     Having defeated you, the vixentaur giggles excitedly and presses you to the ground. She murrs in your ear about how [one of]much fun she's going to have with you[or]she's been looking for some fun[at random]. You are beyond resisting her advances at this point, wrapping your arms around her and burying your face in her bosom. You kiss and licks at her many nipples, drawing excited yips from the vulpine.";
-			say "     She grinds her hips down onto you, rubbing her wet, dripping pussy against your [Skin of Player] flesh. Her paws rub and knead over you, [if Player is herm]one of them wrapping around your [cock size desc of Player] cock while the other goes for your juicy pussy[else if Player is male]one of them wrapping around your [cock size desc of Player] [Cock of Player] cock[else if Player is female]one of them slipping between your legs to tease your [cunt size desc of Player] pussy[else]teasing every sensitive spot they can find[end if]. She presses your face to her breast, coaxing you to start suckling from her, drinking down her tasty, perfumy milk. She continues to rub against you until she finally cums, soaking you in her juices. Having had her fun, she gets up with a giggle, presses her sticky crotch into your face and trots off merrily.";
+		say "     Having defeated you, the vixentaur giggles excitedly and presses you to the ground. She murrs in your ear about how [one of]much fun she's going to have with you[or]she's been looking for some fun[at random]. You are beyond resisting her advances at this point, wrapping your arms around her and burying your face in her bosom. You kiss and licks at her many nipples, drawing excited yips from the vulpine.";
+		say "     She grinds her hips down onto you, rubbing her wet, dripping pussy against your [Skin of Player] flesh. Her paws rub and knead over you, [if Player is herm]one of them wrapping around your [cock size desc of Player] cock while the other goes for your juicy pussy[else if Player is male]one of them wrapping around your [cock size desc of Player] [Cock of Player] cock[else if Player is female]one of them slipping between your legs to tease your [cunt size desc of Player] pussy[else]teasing every sensitive spot they can find[end if]. She presses your face to her breast, coaxing you to start suckling from her, drinking down her tasty, perfumy milk. She continues to rub against you until she finally cums, soaking you in her juices. Having had her fun, she gets up with a giggle, presses her sticky crotch into your face and trots off merrily.";
 
 
 to say beatthevixentaur:
-	if HP of Sam is 15:
-		say "     You manage to knock Samantha down, having beaten the fight out of her.";
-	else if a random number between 1 and 100 < vixentaurcatch and ( Player is not neuter):
+	if a random number between 1 and 100 < vixentaurcatch and ( Player is not neuter):
 		say "     The beaten vixentaur backs away from you, stumbling somewhat from her wounds. Like the others, she prepares to shove you back, but you move in time to grab her and push her to the ground. With her caught, you consider having some fun with her.";
 		say "     [bold type]Shall you go ahead with that plan?[roman type][line break]";
 		LineBreak;
@@ -53,8 +39,18 @@ to say beatthevixentaur:
 		increase vixentaurcatch by 33;
 		if vixentaurcatch > 90, now vixentaurcatch is 90;
 
-
 Section 2 - Creature Insertion
+
+to say vixentaurdesc:
+	say "     Before you is a vulpine taur creature, definitely one of Sam's many descendants. The creature's vulpine head has a sexy smile on its long, slender muzzle and fox ears. It has long lashes, pretty coral eyes and long, flowing cerise hair. Its upper body is generally human in form, but covered in pink fur and with a painted claws on its fingertips. It's quite curvaceous, with a lovely bosom, slender waist and round hips blending into its tauric lower half.";
+	say "     Its lower body is fully vulpine, a slender creature with shapely legs and cute paws. Its pink fur becomes a very light shade at its chest and underbelly, as does the tip of its tail. What would normally be the black of its socks is a deep pink. Beneath its lower body hang several more breasts and under its tail waits its wet, pink pussy. It drips with her juices as her fluffy tail spreads the arousing scent coming from it.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Vixentaur"	"[PrepCombat_Vixentaur]"
+
+to say PrepCombat_Vixentaur:
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -18,130 +18,127 @@ Humanities of Wukong:
 Section 1 - Creature Responses
 
 to say MonkeyKingdesc:
-	if inasituation is true:
-		say "";
+	if Resolution of Monkey Duel is 1:
+		say "     You are once again in the Asian wing of the Museum, when you hear a meek voice coming from nearby. 'Ah. It's-it's you.' Wukong comes out in the open hesitantly, tugging at his uncomfortable collar. 'S-stay away from me. If the master learns that I fought without his permission again, I will be punished.'";
+	else if Loyalty of Wukong is 1:
+		say "     You find your way to the imperial China exposition, and Wukong is there to greet you, as usual: 'If it is not my favorite servant. You arrive at a good time. I am hard as a rock, and I need someone to take care of this for me,' the monkey says, pointing at the noticeable bulge into his pants. 'And I shall not take no for an answer.'";
+	else if Loyalty of Wukong is 2:
+		say "     You are once again in the Asian wing of the Museum. 'Oh my, look who has come to visit me.' The Monkey King appears from behind a pillar. Friend or foe? Wukong slaps your shoulder: 'It's good to see you, my friend! Now, let's have some fun together!' You try to interject, but the primate is already taking a fighting stance. 'Let's spar! On your guard, [BodySpeciesName of Player in lower case]!' You sigh. Neither friend, nor foe, Wukong is more like an annoyance by this point.";
+	else if Loyalty of Wukong is -1:
+		say "     You are once again in the Asian wing of the Museum. 'You [BodySpeciesName of Player in lower case] bastard! Stay where you are!' A furious Wukong jumps in your way, intent on taking his revenge. It seems the humiliation from last time was not enough for him...";
 	else:
-		setmongender 3; [creature is male]
-		choose row MonsterID from the Table of Random Critters;
-		if "Female Preferred" is listed in feats of Player:
-			now sex entry is "Female";
-		else if "Herm Preferred" is listed in feats of Player:
-			now sex entry is "Both";
+		if BodyName of Player is "Monkey":
+			say "     You find your way to [one of]an[or]the[stopping] imperial China exposition. You take a look around the fake Asian decoration, when [one of]an angry[or]a familiar[stopping] voice reverberates on the walls of the in the big room: 'Who dares trespass the kingdom of the mighty Monk... Oh my, that's interesting. The prideful monkey-man startles you as he jumps down from the roof of a plaster pagoda and lands right in front of you. 'Aren't you one of my subjects? Your timing is perfect. Kneel before your King and prepare yourself. I need an outlet,' he says, grinning.";
 		else:
-			now sex entry is "Male";
-		if Resolution of Monkey Duel is 1:
-			say "     You are once again in the Asian wing of the Museum, when you hear a meek voice coming from nearby. 'Ah. It's-it's you.' Wukong comes out in the open hesitantly, tugging at his uncomfortable collar. 'S-stay away from me. If the master learns that I fought without his permission again, I will be punished.'";
-		else if Loyalty of Wukong is 1:
-			say "     You find your way to the imperial China exposition, and Wukong is there to greet you, as usual: 'If it is not my favorite servant. You arrive at a good time. I am hard as a rock, and I need someone to take care of this for me,' the monkey says, pointing at the noticeable bulge into his pants. 'And I shall not take no for an answer.'";
-		else if Loyalty of Wukong is 2:
-			say "     You are once again in the Asian wing of the Museum. 'Oh my, look who has come to visit me.' The Monkey King appears from behind a pillar. Friend or foe? Wukong slaps your shoulder: 'It's good to see you, my friend! Now, let's have some fun together!' You try to interject, but the primate is already taking a fighting stance. 'Let's spar! On your guard, [BodySpeciesName of Player in lower case]!' You sigh. Neither friend, nor foe, Wukong is more like an annoyance by this point.";
-		else if Loyalty of Wukong is -1:
-			say "     You are once again in the Asian wing of the Museum. 'You [BodySpeciesName of Player in lower case] bastard! Stay where you are!' A furious Wukong jumps in your way, intent on taking his revenge. It seems the humiliation from last time was not enough for him...";
-		else:
-			if BodyName of Player is "Monkey":
-				say "     You find your way to [one of]an[or]the[stopping] imperial China exposition. You take a look around the fake Asian decoration, when [one of]an angry[or]a familiar[stopping] voice reverberates on the walls of the in the big room: 'Who dares trespass the kingdom of the mighty Monk... Oh my, that's interesting. The prideful monkey-man startles you as he jumps down from the roof of a plaster pagoda and lands right in front of you. 'Aren't you one of my subjects? Your timing is perfect. Kneel before your King and prepare yourself. I need an outlet,' he says, grinning.";
-			else:
-				say "     You find your way to [one of]an[or]the[stopping] imperial China exposition. You take a look around the fake Asian decoration, when [one of]an angry[or]a familiar[stopping] voice reverberates on the walls of the in the big room: '[italic type]Halt, peasant![roman type]'. A golden-furred monkey dressed in a martial arts vest and pants jumps in front of you. He wields a wooden staff, and twirls it a few times around his body to show off his skills.";
-				say "     With an arrogant grin on his face, the kung-fu artist challenges you: 'Low life! You are now graced by the presence of the illustrious, mighty Monkey King! Obey your betters and service me at once! Of course, you can also do that after I whacked you a little with my staff. Actually, do try to resist; claiming you will feel even more pleasurable.'";
+			say "     You find your way to [one of]an[or]the[stopping] imperial China exposition. You take a look around the fake Asian decoration, when [one of]an angry[or]a familiar[stopping] voice reverberates on the walls of the in the big room: '[italic type]Halt, peasant![roman type]'. A golden-furred monkey dressed in a martial arts vest and pants jumps in front of you. He wields a wooden staff, and twirls it a few times around his body to show off his skills.";
+			say "     With an arrogant grin on his face, the kung-fu artist challenges you: 'Low life! You are now graced by the presence of the illustrious, mighty Monkey King! Obey your betters and service me at once! Of course, you can also do that after I whacked you a little with my staff. Actually, do try to resist; claiming you will feel even more pleasurable.'";
 
 to say losetoMonkeyKing:
-	if inasituation is true:
-		say "";
+	if Resolution of Monkey Duel is 1:
+		say "     Instead of his usual arrogant dance, Wukong looks at your defeated person with anxiety. 'Oh no... Please don't tell master Hanu,' he asks you. 'He will use the collar again.' Before you can say anything else, the monkey runs away from you.";
 	else:
-		if Resolution of Monkey Duel is 1:
-			say "     Instead of his usual arrogant dance, Wukong looks at your defeated person with anxiety. 'Oh no... Please don't tell master Hanu,' he asks you. 'He will use the collar again.' Before you can say anything else, the monkey runs away from you.";
-		else:
-			say "     The arrogant fighter grins over your defeated body while juggling with his staff. 'I win, as it should be. So now just lay there and let the great Monkey King give you pleasure.' The victorious simian promptly puts down his staff and walks towards you.";
-			if Player is not neuter:
-				if a random chance of 1 in 2 succeeds and (Player is female or anallevel > 1):
-					if Player is not female:
-						say "     You try to crawl away from him but the smirking monkey jumps on your back. You feel his cock brushing against your buttcheeks and lining with your ass. 'Relax yourself and bask in pleasure,' the Monkey King whispers in your ear, before forcing himself inside of you. You moan as he fucks you in a quick, steady pace.";
-						say "     Suddenly, the agile primate's feet leave the ground and grab your cock. Having to suddenly support the entire weight of the simian fighter, you fall forward, your shoulders and your head pinned on the ground. The Monkey King hugs your chest tight as he fucks you while his prehensile paws stroke your [cock size desc of Player] penis. The pleasure is really indescribable and, in a few minutes, your cock spurts its load on the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your innards signals that he came as well. Satiated, he dismounts you and apply his paws on your face, forcing you to lick them clean of your own cum, before he takes his leave in a short, taunting victory dance.";
-						CreatureSexAftermath "Player" receives "AssFuck" from "Monkey";
-					else:
-						say "     You try to crawl away from him but the smirking monkey jumps on your back. You feel his cock brushing against your thighs and lining with your vagina. 'Relax yourself and bask in pleasure,' the Monkey King whispers in your ear, before forcing himself inside of you. You moan as he fucks you at a quick, steady pace.";
-						if Player is male:
-							say "     Suddenly, the agile primate's feet leave the ground and grab your cock. Having to suddenly support the entire weight of the simian fighter, you fall forward, your shoulders and your head pinned on the ground. The Monkey King hugs your chest tight as he fucks you while his prehensile paws stroke your [cock size desc of Player] penis. The pleasure is really indescribable and you orgasm in a few minutes, your cock spurting its load on the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your innards signals that he came as well. Satiated, he dismounts you and apply his paws on your face, having you lick them clean, before he takes his leave in a short, taunting victory dance.";
-						else:
-							say "     Suddenly, the agile primate's feet leave the ground and grab on your legs while his arms hug your upper body tight. Riding you like a jockey rides a horse, you stumble forward as the speed and the intensity of his fucking doubles. The deserted halls resonate with your moans and the monkey's grunts. The pleasure is really indescribable and you orgasm in a few minutes, your cunt spasming around the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your vagina signals that he came as well. Satiated, he dismounts you and takes his leave in a short, taunting victory dance.";
-						CreatureSexAftermath "Player" receives "PussyFuck" from "Monkey";
+		say "     The arrogant fighter grins over your defeated body while juggling with his staff. 'I win, as it should be. So now just lay there and let the great Monkey King give you pleasure.' The victorious simian promptly puts down his staff and walks towards you.";
+		if Player is not neuter:
+			if a random chance of 1 in 2 succeeds and (Player is female or anallevel > 1):
+				if Player is not female:
+					say "     You try to crawl away from him but the smirking monkey jumps on your back. You feel his cock brushing against your buttcheeks and lining with your ass. 'Relax yourself and bask in pleasure,' the Monkey King whispers in your ear, before forcing himself inside of you. You moan as he fucks you in a quick, steady pace.";
+					say "     Suddenly, the agile primate's feet leave the ground and grab your cock. Having to suddenly support the entire weight of the simian fighter, you fall forward, your shoulders and your head pinned on the ground. The Monkey King hugs your chest tight as he fucks you while his prehensile paws stroke your [cock size desc of Player] penis. The pleasure is really indescribable and, in a few minutes, your cock spurts its load on the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your innards signals that he came as well. Satiated, he dismounts you and apply his paws on your face, forcing you to lick them clean of your own cum, before he takes his leave in a short, taunting victory dance.";
+					CreatureSexAftermath "Player" receives "AssFuck" from "Monkey";
 				else:
-					if Player is female:
-						say "     He sits on you, putting his growing cock against your face. 'Make it hard, servant!' he orders as he pushes the head of his cock in your mouth. You start to protest, but the feeling of a tongue on your clitoris replaces that protest by a moan. The monkey goes to town on your pussy, sucking on your clit and exploring your passage with his tongue while he pistons his hips in your moaning, twitching face. Once he's sated, the rock-hard martial artist sits up and have you sit in his lap. Then, he aligns his member with your opening and spears your [if anallevel is 3]ass[else]cunt[end if] with it. He starts fucking you in a slow, but steady and deep rhythm, making sure the only words coming from your mouth are moans of pleasure. 'Mmm, yes. This sound is music to my ears...' His hands caress your body, focusing on your breasts and your nipples.";
-						say "     Suddenly, you gasp in surprise as the Monkey King folds one of his legs and uses his prehensile foot to play with your[if Player is male]cock, stroking it and playing with its head[else]pleasure button, introducing one or two of his toes in your pussy while doing that[end if]. The new sensation is rapidly too much for you, and your muscles contract around his dick as you climax. Your mate cums shortly after, filling your insides with his sperm. The satisfied monkey takes his leave in a short, taunting victory dance.";
-						if anallevel < 3:
-							CreatureSexAftermath "Player" receives "PussyFuck" from "Monkey";
-						else:
-							CreatureSexAftermath "Player" receives "AssFuck" from "Monkey";
+					say "     You try to crawl away from him but the smirking monkey jumps on your back. You feel his cock brushing against your thighs and lining with your vagina. 'Relax yourself and bask in pleasure,' the Monkey King whispers in your ear, before forcing himself inside of you. You moan as he fucks you at a quick, steady pace.";
+					if Player is male:
+						say "     Suddenly, the agile primate's feet leave the ground and grab your cock. Having to suddenly support the entire weight of the simian fighter, you fall forward, your shoulders and your head pinned on the ground. The Monkey King hugs your chest tight as he fucks you while his prehensile paws stroke your [cock size desc of Player] penis. The pleasure is really indescribable and you orgasm in a few minutes, your cock spurting its load on the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your innards signals that he came as well. Satiated, he dismounts you and apply his paws on your face, having you lick them clean, before he takes his leave in a short, taunting victory dance.";
 					else:
-						say "     Having you lay on your back, he frots his lithe body against yours. His mouth locks with your own in a sloppy kiss while his hands explore your chest. You feel your cocks quickly grow from arousal and touch each other. After a few minutes, the simian creature breaks the kiss and sits on your lap. 'Now, let's get serious,' says the golden-furred lover as he aligns his ass with your cock and lets himself slowly fall down. He moans loudly. You moan as well, as his insides feel like silk on your [Cock of Player] dick. Then he pushes up, only to let himself fall down on your lap, and so on.";
-						say "     The two of you quickly build a steady rhythm and you even start pushing up against your partner's ass. Suddenly, you muffle in surprise as the flexible creature puts one of his foot against your face, his toes entering your mouth. 'Lick, peasant,' he orders smugly. To his great pleasure, you comply and start to lick the sole of his prehensile foot and suck on his toes.";
-						say "     After long minutes of this treatment, worshiping one foot, then the other, you feel the monkey's ass tighten as he reaches his climax and splatters your chest with long ropes of sperm, almost gagging you as his foot reflexively slips further in your mouth. The vice-like pressure on your cock makes you cum as well and your partner makes sure to milk you of everything you've got. The satisfied monkey takes his leave in a short, taunting victory dance.";
+						say "     Suddenly, the agile primate's feet leave the ground and grab on your legs while his arms hug your upper body tight. Riding you like a jockey rides a horse, you stumble forward as the speed and the intensity of his fucking doubles. The deserted halls resonate with your moans and the monkey's grunts. The pleasure is really indescribable and you orgasm in a few minutes, your cunt spasming around the primate's paws. The arrogant monkey on your back lasts a little longer before his body tenses and a warm sensation in your vagina signals that he came as well. Satiated, he dismounts you and takes his leave in a short, taunting victory dance.";
+					CreatureSexAftermath "Player" receives "PussyFuck" from "Monkey";
 			else:
-				say "     The monkey sighs as you lack anything he could play with. 'Aw... Too bad. I won't be able to grace you with the exquisite pleasure of my carnal skills.' With these words, he leaves you, panting and laying on the ground, as he looks for another victim to satiate his lust.";
+				if Player is female:
+					say "     He sits on you, putting his growing cock against your face. 'Make it hard, servant!' he orders as he pushes the head of his cock in your mouth. You start to protest, but the feeling of a tongue on your clitoris replaces that protest by a moan. The monkey goes to town on your pussy, sucking on your clit and exploring your passage with his tongue while he pistons his hips in your moaning, twitching face. Once he's sated, the rock-hard martial artist sits up and have you sit in his lap. Then, he aligns his member with your opening and spears your [if anallevel is 3]ass[else]cunt[end if] with it. He starts fucking you in a slow, but steady and deep rhythm, making sure the only words coming from your mouth are moans of pleasure. 'Mmm, yes. This sound is music to my ears...' His hands caress your body, focusing on your breasts and your nipples.";
+					say "     Suddenly, you gasp in surprise as the Monkey King folds one of his legs and uses his prehensile foot to play with your[if Player is male]cock, stroking it and playing with its head[else]pleasure button, introducing one or two of his toes in your pussy while doing that[end if]. The new sensation is rapidly too much for you, and your muscles contract around his dick as you climax. Your mate cums shortly after, filling your insides with his sperm. The satisfied monkey takes his leave in a short, taunting victory dance.";
+					if anallevel < 3:
+						CreatureSexAftermath "Player" receives "PussyFuck" from "Monkey";
+					else:
+						CreatureSexAftermath "Player" receives "AssFuck" from "Monkey";
+				else:
+					say "     Having you lay on your back, he frots his lithe body against yours. His mouth locks with your own in a sloppy kiss while his hands explore your chest. You feel your cocks quickly grow from arousal and touch each other. After a few minutes, the simian creature breaks the kiss and sits on your lap. 'Now, let's get serious,' says the golden-furred lover as he aligns his ass with your cock and lets himself slowly fall down. He moans loudly. You moan as well, as his insides feel like silk on your [Cock of Player] dick. Then he pushes up, only to let himself fall down on your lap, and so on.";
+					say "     The two of you quickly build a steady rhythm and you even start pushing up against your partner's ass. Suddenly, you muffle in surprise as the flexible creature puts one of his foot against your face, his toes entering your mouth. 'Lick, peasant,' he orders smugly. To his great pleasure, you comply and start to lick the sole of his prehensile foot and suck on his toes.";
+					say "     After long minutes of this treatment, worshiping one foot, then the other, you feel the monkey's ass tighten as he reaches his climax and splatters your chest with long ropes of sperm, almost gagging you as his foot reflexively slips further in your mouth. The vice-like pressure on your cock makes you cum as well and your partner makes sure to milk you of everything you've got. The satisfied monkey takes his leave in a short, taunting victory dance.";
+		else:
+			say "     The monkey sighs as you lack anything he could play with. 'Aw... Too bad. I won't be able to grace you with the exquisite pleasure of my carnal skills.' With these words, he leaves you, panting and laying on the ground, as he looks for another victim to satiate his lust.";
 
 to say beattheMonkeyKing:
-	if inasituation is true:
-		say "";
+	if Resolution of Monkey Duel is 1:
+		say "     Wukong falls on the ground, his staff bouncing away with a few loud, woody noises. 'P-Please. Master Hanu will know.'";
+	else if Loyalty of Wukong is 1:
+		say "     Wukong falls on the ground, his staff bouncing away with a few loud, woody noises. 'You caught me by surprise, servant. Don't get any ideas...'";
+	else if Loyalty of Wukong is 2:
+		say "     Wukong falls on the ground, his staff bouncing away with a few loud, woody noises. 'That was a nice workout.'";
 	else:
-		if Resolution of Monkey Duel is 1:
-			say "     Wukong falls on the ground, his staff bouncing away with a few loud, woody noises. 'P-Please. Master Hanu will know.'";
-		else if Loyalty of Wukong is 1:
-			say "     Wukong falls on the ground, his staff bouncing away with a few loud, woody noises. 'You caught me by surprise, servant. Don't get any ideas...'";
-		else if Loyalty of Wukong is 2:
-			say "     Wukong falls on the ground, his staff bouncing away with a few loud, woody noises. 'That was a nice workout.'";
-		else:
-			say "     The beaten fighter falls on the ground, his staff bouncing away with a few loud, woody noises. 'Impossible... How could I, the Great Monkey King, be defeated by the likes of you...'";
-		if Player is not neuter:
-			say "     He lays on the ground, his ripped clothes exposing his nude body.";
-			say "     [bold type]This gives you a few ideas. Are you going to go through with them?[roman type][line break]";
-			say "     ([link]Y[as]y[end link]) - Time for some monkey business!";
-			say "     ([link]N[as]n[end link]) - He is not worth your time.";
+		say "     The beaten fighter falls on the ground, his staff bouncing away with a few loud, woody noises. 'Impossible... How could I, the Great Monkey King, be defeated by the likes of you...'";
+	if Player is not neuter:
+		say "     He lays on the ground, his ripped clothes exposing his nude body.";
+		say "     [bold type]This gives you a few ideas. Are you going to go through with them?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Time for some monkey business!";
+		say "     ([link]N[as]n[end link]) - He is not worth your time.";
+		if Player consents:
+			LineBreak;
+			if Loyalty of Wukong is 1 or Loyalty of Wukong is 2:
+				say "     With a smirk, you take off your cloth, then rip off what remains of your opponent's. 'Fair game,' he says, relaxing a little.";
+			else:
+				say "     With a smirk, you take off your cloth, then rip off what remains of your opponent's. 'Wh... What are you doing?' he asks, visibly intimidated.";
+			say "     [bold type]How will you claim him?[roman type][line break]";
+			say "     ([link]Y[as]Gentle[end link]) - Make peace and love; mostly love.";
+			say "     ([link]N[as]Rough[end link]) - Let us teach him a lesson!";
 			if Player consents:
 				LineBreak;
-				if Loyalty of Wukong is 1 or Loyalty of Wukong is 2:
-					say "     With a smirk, you take off your cloth, then rip off what remains of your opponent's. 'Fair game,' he says, relaxing a little.";
+				say "     You crawl on your former opponent, intent on teaching him that letting the other one handle the things can also be pleasurable. You kiss him and fondle his body. Your mate is surprised but nonetheless pleased by what happens. After a few minutes kissing and groping, the monkey's prehensile feet give you an idea. Sitting at the opposite of the now erect simian, you apply your feet on his groin and, slowly, you use them to stroke his cock. Visibly aroused, the Monkey King moans; he calms down, lies on his back and lets himself enjoy your footjob. At first a little clumsy, you quickly get the hang of things, even starting to use your toes in the action. The primate's moans become louder and louder as you massage his penis with your foot soles or circle his cock-head with your big toe.";
+				if Player is herm:
+					say "     You do not forget to pleasure yourself as well with your free hands but soon, your partner decide to reciprocate as his feet grab your cock and shows you how it's done, jerking your [Cock of Player] rod with one paw while frotting your [cunt size desc of Player] pussy with the other.";
+				else if Player is male:
+					say "     You do not forget to pleasure yourself as well with your free hands but soon, your partner decide to reciprocate as his feet grab your cock and shows you how it's done, fondling your ballsack and jerking your [Cock of Player] rod.";
 				else:
-					say "     With a smirk, you take off your cloth, then rip off what remains of your opponent's. 'Wh... What are you doing?' he asks, visibly intimidated.";
-				say "     [bold type]How will you claim him?[roman type][line break]";
-				say "     ([link]Y[as]Gentle[end link]) - Make peace and love; mostly love.";
-				say "     ([link]N[as]Rough[end link]) - Let us teach him a lesson!";
-				if Player consents:
-					LineBreak;
-					say "     You crawl on your former opponent, intent on teaching him that letting the other one handle the things can also be pleasurable. You kiss him and fondle his body. Your mate is surprised but nonetheless pleased by what happens. After a few minutes kissing and groping, the monkey's prehensile feet give you an idea. Sitting at the opposite of the now erect simian, you apply your feet on his groin and, slowly, you use them to stroke his cock. Visibly aroused, the Monkey King moans; he calms down, lies on his back and lets himself enjoy your footjob. At first a little clumsy, you quickly get the hang of things, even starting to use your toes in the action. The primate's moans become louder and louder as you massage his penis with your foot soles or circle his cock-head with your big toe.";
-					if Player is herm:
-						say "     You do not forget to pleasure yourself as well with your free hands but soon, your partner decide to reciprocate as his feet grab your cock and shows you how it's done, jerking your [Cock of Player] rod with one paw while frotting your [cunt size desc of Player] pussy with the other.";
-					else if Player is male:
-						say "     You do not forget to pleasure yourself as well with your free hands but soon, your partner decide to reciprocate as his feet grab your cock and shows you how it's done, fondling your ballsack and jerking your [Cock of Player] rod.";
-					else:
-						say "     You do not forget to pleasure yourself as well with your free hands but soon, your partner decide to reciprocate and shows you how it's done, frotting against your [cunt size desc of Player] pussy and massaging your clit.";
-					say "     After several minutes, you both come to a climax, and the monkey's penis launching several ropes of cum in the air. The once-arrogant man is now calmed down and pants. His smile is not arrogant anymore; instead, it feels genuinely thankful. It looks like he learnt the lesson.";
-				else:
-					LineBreak;
-					if Player is female:
-						say "     Ordering him to stay still, handle the Monkey King's dick. You caress it, fondle it and you can see it getting bigger and harder. You start using your mouth and lick the monkey's human-shaped shaft. The impertinent boy is visibly pleasured: 'Oooh yeaaah... Suck it, baby.' Does he still think he is in charge? You turn over and smother this prick's face with your nether regions; at the same time, your hand squeezes his ballsack, making him wince. Time to put his potty mouth to good use! A few mumbles and ball squeezes later, you feel the monkey's tongue licking your cunt, and doing a very good job at it. As a reward, you resume your blowjob.";
-						say "     Minutes pass in this torrid 69, with for only sounds your tongues going on each other's privates. The Monkey King is about to cum several times, and each time you deny him. Finally, you reach your own climax, and your pussy spasms on the poor simian's face[if Player is male] and your cock paints his chest white with your spunk[end if]. You rise up, letting the creature under you with a face dripping of fem-juice and a raging hard-on.";
-						say "     As a finisher, you plant your foot on his dick and starts massaging it and playing with his member with your toes. Eventually, with a big moan coming from his mouth, the monkey's cock explodes, launching jets of spunk all over his fur and your feet. After making sure he licked your foot clean, you leave the panting, spent loser and resume your exploration.";
-						CreatureSexAftermath "Monkey" receives "OralPussy" from "Player";
-					else:
-						if anallevel is 1:
-							say "     For such a small monkey, he has a big mouth. It is time to give it a better use! You grab the weakened fighter's head with both hands and force your cock in his mouth. He gags, protests, and tries to push away but your grip his strong, and you pump his mouth, going deeper and deeper until all your cock is in and his face is mashed against your pubis. Too weak to resist, he can do nothing but emit gargled moans as he gags on your member. Several minutes of uninterrupted face-fucking pass, until you reach your limits. With a gargled cry of surprise, the monkey tries to pull out but it's too late and during long, agonizing seconds he is forced to swallow your entire cock as you empty your gonads in him. After you made sure every single drop went in his stomach, you let the Monkey King go. He coughs, looking very tired and visibly humiliated. You complete the humiliation by using his pretty face to clean your cock, smearing saliva and spunk all over it. Satisfied, you leave the panting, spent loser and resume your exploration.";
-							CreatureSexAftermath "Monkey" receives "OralCock" from "Player";
-						else:
-							if Loyalty of Wukong is 2:
-								say "     Without a word, you turn the monkey around and line your cock with his smooth ass. 'Wooh, wait, not so uuung!' The poor chap does not have time to finish his sentence as you push inside of him. His inner walls feel very good, but they are less tight than you thought. This arrogant monkey is quite used to that, isn't he? You make the remark to him, and he blushes, obviously humiliated. 'S... Slow down.' But you do not care. He's no king right now. He's your toy.";
-							else:
-								say "     Without a word, you turn the monkey around and line your cock with his smooth ass. 'Wait... What are you?!' The poor chap does not have time to finish his sentence as you push inside of him. His inner walls feel very good, but they are less tight than you thought. This arrogant monkey is quite used to that, isn't he? You make the remark to him, and he blushes, obviously humiliated. 'S... Stop...' But you do not care. He's no king right now. He's your toy.";
-							say "     You fuck him mercilessly, while your hands play with the now powerless warrior. Once your hand finds his now erect cock, you do not let it go and jack him off until his ass contracts around you and he spills his load on the ground. Pulling out, you finish yourself on the wannabe king and, grunting, you paint his back white with your cum. Worn out, the monkey falls on the ground, drenching his chest with his own cum. Satisfied, you leave the panting, spent loser and resume your exploration.";
-							CreatureSexAftermath "Monkey" receives "AssFuck" from "Player";
+					say "     You do not forget to pleasure yourself as well with your free hands but soon, your partner decide to reciprocate and shows you how it's done, frotting against your [cunt size desc of Player] pussy and massaging your clit.";
+				say "     After several minutes, you both come to a climax, and the monkey's penis launching several ropes of cum in the air. The once-arrogant man is now calmed down and pants. His smile is not arrogant anymore; instead, it feels genuinely thankful. It looks like he learnt the lesson.";
 			else:
 				LineBreak;
-				say "     You change your mind and leave the monkey as he is.";
+				if Player is female:
+					say "     Ordering him to stay still, handle the Monkey King's dick. You caress it, fondle it and you can see it getting bigger and harder. You start using your mouth and lick the monkey's human-shaped shaft. The impertinent boy is visibly pleasured: 'Oooh yeaaah... Suck it, baby.' Does he still think he is in charge? You turn over and smother this prick's face with your nether regions; at the same time, your hand squeezes his ballsack, making him wince. Time to put his potty mouth to good use! A few mumbles and ball squeezes later, you feel the monkey's tongue licking your cunt, and doing a very good job at it. As a reward, you resume your blowjob.";
+					say "     Minutes pass in this torrid 69, with for only sounds your tongues going on each other's privates. The Monkey King is about to cum several times, and each time you deny him. Finally, you reach your own climax, and your pussy spasms on the poor simian's face[if Player is male] and your cock paints his chest white with your spunk[end if]. You rise up, letting the creature under you with a face dripping of fem-juice and a raging hard-on.";
+					say "     As a finisher, you plant your foot on his dick and starts massaging it and playing with his member with your toes. Eventually, with a big moan coming from his mouth, the monkey's cock explodes, launching jets of spunk all over his fur and your feet. After making sure he licked your foot clean, you leave the panting, spent loser and resume your exploration.";
+					CreatureSexAftermath "Monkey" receives "OralPussy" from "Player";
+				else:
+					if anallevel is 1:
+						say "     For such a small monkey, he has a big mouth. It is time to give it a better use! You grab the weakened fighter's head with both hands and force your cock in his mouth. He gags, protests, and tries to push away but your grip his strong, and you pump his mouth, going deeper and deeper until all your cock is in and his face is mashed against your pubis. Too weak to resist, he can do nothing but emit gargled moans as he gags on your member. Several minutes of uninterrupted face-fucking pass, until you reach your limits. With a gargled cry of surprise, the monkey tries to pull out but it's too late and during long, agonizing seconds he is forced to swallow your entire cock as you empty your gonads in him. After you made sure every single drop went in his stomach, you let the Monkey King go. He coughs, looking very tired and visibly humiliated. You complete the humiliation by using his pretty face to clean your cock, smearing saliva and spunk all over it. Satisfied, you leave the panting, spent loser and resume your exploration.";
+						CreatureSexAftermath "Monkey" receives "OralCock" from "Player";
+					else:
+						if Loyalty of Wukong is 2:
+							say "     Without a word, you turn the monkey around and line your cock with his smooth ass. 'Wooh, wait, not so uuung!' The poor chap does not have time to finish his sentence as you push inside of him. His inner walls feel very good, but they are less tight than you thought. This arrogant monkey is quite used to that, isn't he? You make the remark to him, and he blushes, obviously humiliated. 'S... Slow down.' But you do not care. He's no king right now. He's your toy.";
+						else:
+							say "     Without a word, you turn the monkey around and line your cock with his smooth ass. 'Wait... What are you?!' The poor chap does not have time to finish his sentence as you push inside of him. His inner walls feel very good, but they are less tight than you thought. This arrogant monkey is quite used to that, isn't he? You make the remark to him, and he blushes, obviously humiliated. 'S... Stop...' But you do not care. He's no king right now. He's your toy.";
+						say "     You fuck him mercilessly, while your hands play with the now powerless warrior. Once your hand finds his now erect cock, you do not let it go and jack him off until his ass contracts around you and he spills his load on the ground. Pulling out, you finish yourself on the wannabe king and, grunting, you paint his back white with your cum. Worn out, the monkey falls on the ground, drenching his chest with his own cum. Satisfied, you leave the panting, spent loser and resume your exploration.";
+						CreatureSexAftermath "Monkey" receives "AssFuck" from "Player";
 		else:
-			say "     Teaching this arrogant monkey a lesson was more than enough for you, and you go back on your way.";
+			LineBreak;
+			say "     You change your mind and leave the monkey as he is.";
+	else:
+		say "     Teaching this arrogant monkey a lesson was more than enough for you, and you go back on your way.";
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Monkey"	"[PrepCombat_Monkey]"
+
+to say PrepCombat_Monkey:
+	setmongender 3; [creature is male]
+	choose row MonsterID from the Table of Random Critters;
+	if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -605,7 +602,7 @@ object	name
 Wukong	"Wukong"
 
 Wukong is a person. Wukong is in Nowhere. Description of Wukong is "[wukongDesc]".
-Conversation of Wukong is { "<Placeholder>" }.
+Conversation of Wukong is { "<Monkey>" }.
 
 to say wukongDesc:
 	if Resolution of Monkey Duel is 1:

@@ -488,7 +488,6 @@ Cameo	"Cameo"
 Cameo is a situation.
 ResolveFunction of Cameo is "[ResolveEvent Cameo]". The level of Cameo is 4.
 Sarea of Cameo is "High".
-choclabfight is a number that varies.
 when play begins:
 	add Cameo to BadSpots of HermList;
 	add Cameo to BadSpots of HumorousList;
@@ -496,13 +495,12 @@ when play begins:
 
 to say ResolveEvent Cameo:
 	say "     Passing past a collection of deluxe shops, your eye is caught by a premiere chocolate store. Glancing up that the face of the woman for which the store is named, you remember their fine quality products. Your sweet tooth suddenly needs to be satisfied and you go in before you have a chance to think it over. A quick glance around shows the store has been ransacked, with several creamy pools of white or dark chocolate on the floor. The glass displays have chocolate pawprints, both inside and out. You do spot a couple of display boxes and a cameo collection that seem undisturbed at the back of the store and head towards them. But when you reach the middle of the store, those dark puddles reshape themselves, forming into gooey canids made of chocolate. It seems you came across this place as they were cleaning it out and they set a trap for you. You are surrounded by a trio of chocolatey canines.";
-	now choclabfight is 0;
-	challenge "Chocolate Lab";
-	if choclabfight is 1:
-		say "     After having finished with the lead dog, the others are moving in around the displays to get at you even as you keep moving to try and deal with them one on one. It is difficult going as you have to avoid those white chocolate cream puddles of what you now know to be chocolate dog cum. You manage to hop the sales counter and prepare to face the next one.";
-		now choclabfight is 0;
-		challenge "Chocolate Lab";
-		if choclabfight is 1:
+	let ChocolateLabradorFightCounter be 0;
+	now fightoutcome is 0; [reset]
+	while fightoutcome < 20 and ChocolateLabradorFightCounter < 3: [runs for 3 times or until the player loses or flees]
+		if ChocolateLabradorFightCounter is 1:
+			say "     After having finished with the lead dog, the others are moving in around the displays to get at you even as you keep moving to try and deal with them one on one. It is difficult going as you 	have to avoid those white chocolate cream puddles of what you now know to be chocolate dog cum. You manage to hop the sales counter and prepare to face the next one.";
+		else if ChocolateLabradorFightCounter is 2:
 			say "     With a second down, you ready yourself to face the last of them. As you look first to the gap your previous opponent took, you catch sight of it out of the corner of your eye. It quietly flowed up the counter as your last fight ended and makes a leap at you.";
 			let bonus be (( perception of Player + dexterity of Player minus 20 ) divided by 2 );
 			if "Wary Watcher" is listed in feats of Player, increase bonus by 3;
@@ -516,32 +514,30 @@ to say ResolveEvent Cameo:
 				say "The chocolate dog slams itself into you, flowing itself across your body. It squeezes around your chest, pushing out your breath even as its flowing body starts teasing at your nipples and groin. As you are forced to exhale, the chocolate canine presses its gooey face to yours, pushing its chocolatey tongue into your mouth and humping against your body. As its arousing taste fills your mouth, you moan softly and find yourself giving in before you snap back control of yourself and push the semi-solid dog back and off of you. It growls in frustration at you denying its lustful urges and charges to attack. But its assault on you has weakened you further as well as gotten you more aroused. (15 dmg taken)[line break]";
 				decrease HP of Player by 15;
 				increase Libido of Player by 12;
-			now choclabfight is 0;
-			challenge "Chocolate Lab";
-			if choclabfight is 1:
-				say "     Having defeated the last of them, you pant for breath as the chocolate dogs slink off like beaten curs. They press themselves to the ground so much that their legs melt away beneath them and flow out as dog-shaped blobs. With them dispatched, you are free to look around the remains of the store. It seems that much of the merchandise has already been consumed by the dogs or tainted by them during their lustful gorging. The boxes of chocolates and cameos on display at the back are thankfully still good, so you snatch them up and exit the store before the strong scent of chocolates and sex arouses you into sampling from the tainted wares.";
-				if "Junk Food Junky" is listed in feats of Player:
-					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack. The fine chocolates are quite delicious. You store the rest for later consumption. Your junk food fueled metabolism finds the chocolates quite satisfying and you still have enough chocolates and almond bark to be equivalent to roughly two more snacks.";
-					PlayerEat 15;
-					if morale of Player < 0:
-						increase morale of Player by 36;
-						if morale of Player > 0, now morale of Player is 0;
-						say "You feel much better after having your snack.";
-					increase morale of Player by 1;
-					ItemGain chips by 2 silently;
-					increase score by 15;
-				else:
-					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack. The fine chocolates are quite delicious. You store the rest for later consumption. While not very nutritious, you still have enough chocolates and almond bark to be equivalent to roughly one meal.";
-					PlayerEat 6;
-					if morale of Player < 0:
-						increase morale of Player by 15;
-						if morale of Player > 0, now morale of Player is 0;
-						say "You feel better having eaten.";
-					ItemGain food by 1 silently;
-					increase score by 5;
-	if choclabfight is 0:
-		say "     Managing to outmaneuver the chocolate dogs, you push your way out of the store and into the courtyard around the shops. Looking back, you spot the dogs pressed up against the glass, leaving chocolate streaks on windows before they hop down and return to their lustful consumption of the chocolates. You are quite certain there will be nothing left in the store except for the white chocolate stains from their sexual play as they celebrate their victory at defending their delicious prize.";
-	else if choclabfight is 2:
+		challenge "Chocolate Lab";
+		increase ChocolateLabradorFightCounter by 1;
+	if fightoutcome < 20: [player won]
+		say "     Having defeated the last of them, you pant for breath as the chocolate dogs slink off like beaten curs. They press themselves to the ground so much that their legs melt away beneath them and flow out as dog-shaped blobs. With them dispatched, you are free to look around the remains of the store. It seems that much of the merchandise has already been consumed by the dogs or tainted by them during their lustful gorging. The boxes of chocolates and cameos on display at the back are thankfully still good, so you snatch them up and exit the store before the strong scent of chocolates and sex arouses you into sampling from the tainted wares.";
+		if "Junk Food Junky" is listed in feats of Player:
+			say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack. The fine chocolates are quite delicious. You store the rest for later consumption. Your junk food fueled metabolism finds the chocolates quite satisfying and you still have enough chocolates and almond bark to be equivalent to roughly two more snacks.";
+			PlayerEat 15;
+			if morale of Player < 0:
+				increase morale of Player by 36;
+				if morale of Player > 0, now morale of Player is 0;
+				say "You feel much better after having your snack.";
+			increase morale of Player by 1;
+			ItemGain chips by 2 silently;
+			increase score by 15;
+		else:
+			say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack. The fine chocolates are quite delicious. You store the rest for later consumption. While not very nutritious, you still have enough chocolates and almond bark to be equivalent to roughly one meal.";
+			PlayerEat 6;
+			if morale of Player < 0:
+				increase morale of Player by 15;
+				if morale of Player > 0, now morale of Player is 0;
+				say "You feel better having eaten.";
+			ItemGain food by 1 silently;
+			increase score by 5;
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     When the victorious Labrador moves back, you look up to find yourself surrounded by the trio who look at you lustfully. The other two flow atop you and start humping at your body. You are buried in flowing chocolate as they cover you completely[if Cunt Count of Player > 1]. You can feel their creamy tendrils flow into your every orifice, fucking your mouth, pussies and asshole with a hard chocolate cock for each[else if Cunt Count of Player is 1]. You can feel their creamy tendrils flow into your every orifice, fucking your mouth, pussy and asshole with a hard chocolate cock for each[else]. You can feel their creamy tendrils flow into your mouth and asshole, fucking you at both ends with a hard chocolate cock[end if][if Cock Count of Player > 1]. Their flowing bodies form warm, wet cunts around your cocks, sucking and squeezing at them as they pound into you[else if Cock Count of Player is 1]. Their flowing bodies form a warm, wet cunt around your cock, sucking and squeezing at them as they pound into you[end if].";
 		WaitLineBreak;
 		say "     As this goes on, you can feel them flowing over your whole body, sliding off your clothes and backpack. Completely naked, you can feel their flowing, rippling chocolate flesh sliding all over you, stimulating you so fully you sink further and further into a haze. You barely notice the added weight of the third Labrador joining in, but you are somehow keenly aware that he's finished off the last of those chocolates as more and more of that creamy, white chocolate seed is pumped into you[if Player is male] while you pump your own cum out for them to enjoy[end if]";
@@ -578,8 +574,9 @@ to say ResolveEvent Cameo:
 			stop the action;
 		else:
 			say ". You manage to keep your mind together enough to pull yourself into a somewhat more solid and bipedal form. Still deeply infected and weakened, you manage to hold onto enough of your humanity to continue your quest for survival. You do feel a strong longing for more sex or more chocolate. Or best of all, more chocolate sex. You stumble away, trying to pull yourself into enough cohesion to walk as you rub your cream-filled tummy.[impregchance][impregchance]";
+	else if fightoutcome is 30: [fled]
+		say "     Managing to outmaneuver the chocolate dogs, you push your way out of the store and into the courtyard around the shops. Looking back, you spot the dogs pressed up against the glass, leaving chocolate streaks on windows before they hop down and return to their lustful consumption of the chocolates. You are quite certain there will be nothing left in the store except for the white chocolate stains from their sexual play as they celebrate their victory at defending their delicious prize.";
 	now Cameo is resolved;
-
 
 Section 9 - Raul's Wild Kingdom
 

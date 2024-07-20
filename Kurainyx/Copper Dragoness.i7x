@@ -6,78 +6,68 @@ Version 2 of Copper Dragoness by Kurainyx begins here.
 Section 1 - Creature Responses
 
 to say CopperDragonessDesc:
-	setmongender 4; [female]
-	if inasituation is true:
-		say ""; [dealt with at the event source]
-	else:
-		say "     Loud rustling is the only warning you get before a truck-sized dragon bursts through a nearby thicket of trees. Its scales are a reddish-brown, having a metallic sheen that makes them look like copper while two horns jut out from the top of its head with frills adorning the sides. Noting the curves and sleek form of the beast, you realize that the dragon is a dragoness, a dragoness who is leering at you with a hungry glint in her eyes as she unfurls her wings to charge toward you.";
+	say "     Loud rustling is the only warning you get before a truck-sized dragon bursts through a nearby thicket of trees. Its scales are a reddish-brown, having a metallic sheen that makes them look like copper while two horns jut out from the top of its head with frills adorning the sides. Noting the curves and sleek form of the beast, you realize that the dragon is a dragoness, a dragoness who is leering at you with a hungry glint in her eyes as she unfurls her wings to charge toward you.";
 
 to say LoseToCopperDragoness:
-	if inasituation is true:
-		say ""; [dealt with at the event source]
-	else:	[Random chance of unbirth or anal vore scene]
-		if a random chance of 1 in 2 succeeds:	[unbirth]
-			if scalevalue of Player > 4:	[Too big for unbirth]
-				say "     You fall to the ground from the dragoness's advances, and the leering beast saunters over to your beaten form; however, she frowns slightly when she looks over your large [bodydesc of Player] body. Grabbing you with her claws, the reptile flips onto her back, taking you with her as she directs your face to her gaping pussy. At first, you think that she just wants you to merely service her, but because of her incessant pushing, you realize that she's actually trying to shove you into her cunt. However, after a minute without any progress, it becomes clear that you're simply too big to fit inside of the female. With a disgruntled growl, the dragoness kicks you off of her and stomps away.";
-			else:
-				say "     You fall to the ground from the dragoness's advances, and the leering beast saunters over to your beaten form, picking you up with one of her claws as she reclines her back against a thick tree. After her other claw divests you of your gear, she brings you close to her mouth, and her tongue darts out from between her scaly lips to drag across your face, then to the rest of your body. Once you're coated with saliva, the beast brings you to between her legs, and her other claw moves below you to part her slit, revealing the pink, cavernous depths of her pussy. Realizing the dragoness's plan, you try to resist by pushing against the soft scales surrounding her cunt while you're lowered toward her sex, but between your slathered body and her strength, your head is effortlessly shoved inside of the damp tunnel.";
-				say "     The salacious female rumbles in delight as you sink into her, and you can't do anything to halt your progress into the darkness, slick flesh eagerly engulfing you and contouring to your body. Inch by inch, you are slowly fed into the slit, the scaly beast huskily crooning from using your helpless form. Even as the last of you passes through the dragoness's lower lips, her claw tips follow you, continuing to gently push you further down the tight tunnel. Eventually, the claws retreat, and your journey into the dragoness's sex comes to a stop, but with you so deep inside of her, you can barely move, the pliant walls pressing into you from all sides. And yet, despite being trapped in the sweltering, confined space, you can't help but get aroused from stewing in the rapacious reptile's musk, as well as the oddly erotic caresses of the encompassing soft tissue.";
-				say "     With no way to tend to yourself, you are kept in a suspended state of lust, but eventually, the fleshy prison begins to shake as the surrounding walls clench down on you. Only when femcum starts to pool around you, accompanied by the dragoness's lustful growls, do you realize that your captor must be pleasuring herself because of the new toy inside of her. The walls press down on you one final time before you are rapidly shot back the way you came from, suddenly releasing you back into the outside world when you are forcibly ejected out of the dragoness's pussy, along with a torrent of her juices. Reeking of sex and exhausted, you shakily stand back up, only to balk when you see the lecherous beast eyeing you. Fortunately, she simply gives you a satisfied smirk and makes no effort to pursue you while you stumble off to recover from your twisted ordeal.";
-				LibidoBoost 20;
-		else:	[anal vore]
-			if scalevalue of Player > 4:	[Too big for anal vore]
-				say "     You fall to the ground from the dragoness's advances, and the leering beast saunters over to your beaten form; however, she frowns slightly when she looks over your large [bodydesc of Player] body. She moves around until all that you can see above is a voluptuous, scaly booty. You are propped upright by the reptile's sinuous tail just as her ample rear crashes into you, grinding her anus into your face. At first, you think that she just wants you to merely service her, but because of her incessant pushing, you realize that she's actually trying to shove you into her ass. However, after a minute without any progress, it becomes clear that you're simply too big to fit inside of the female. With a disgruntled growl, the dragoness throws you to the side and stomps away.";
-			else:
-				say "     You fall to the ground from the dragoness's advances, and the leering beast saunters over to your beaten form. One of her massive claws pins your prone form, but thankfully not rough enough to cause any further injuries. Her head then lowers to your trapped body, and her tongue darts out from between her scaly lips to drag across your face, then to the rest of your body. Once you're coated with saliva, the beast picks you up in her claw as she lowers her body, arching her back to leave only her rear end off of the ground. You are then brought to the dragoness's behind, and when she lifts her tail high into the air, you are treated to the sight of her puckered asshole. Realizing what lies in wait, you try to escape your captor's grasp, but your feeble struggles are no match for her raw strength.";
-				say "     You can only watch in horror as your lower half is fed into her hungry sphincter, the hot, pliant tissue stretching to accommodate your helpless form. More and more of you disappears into the depraved female's depths as she slowly pushes you in, prolonging her pleasure while dragging out your abuse. Eventually, when only your head is awaiting to sink into her ass, the dragoness stands back up and lowers her tail, letting the clenching muscles at the base of her tail finish taking you in. The light of the outside world shrinks away as you are ferried deeper into the reptile's anus until everything fades into darkness. The sweltering confines completely immobilize you, hot dragon meat clenching down on you from every angle amidst a din of squelching flesh. And yet, despite being trapped in the depraved prison, the encompassing walls squeezing down on you is strangely erotic.";
-				say "     Eventually, through the ever-present clenches from your surroundings, you can feel your fleshy prison shift as the dragoness flops onto her side, followed by even more movement as everything begins to shake. Muffled as they are, ragged breathing and lustful growls tell you that your captor is greatly enjoying the new toy inside of her. With a mighty roar, and one final squeeze on your helpless form, you are expelled from the dragoness's anus, back into the outside world, and unceremoniously dumped onto the ground. Exhausted, you shakily stand back up, only to balk when you see the lecherous beast eyeing you. Fortunately, she simply gives you a satisfied smirk and makes no effort to pursue you while you stumble off to recover from your twisted ordeal.";
-				LibidoBoost 20;
+	if a random chance of 1 in 2 succeeds:	[unbirth]
+		if scalevalue of Player > 4:	[Too big for unbirth]
+			say "     You fall to the ground from the dragoness's advances, and the leering beast saunters over to your beaten form; however, she frowns slightly when she looks over your large [bodydesc of Player] body. Grabbing you with her claws, the reptile flips onto her back, taking you with her as she directs your face to her gaping pussy. At first, you think that she just wants you to merely service her, but because of her incessant pushing, you realize that she's actually trying to shove you into her cunt. However, after a minute without any progress, it becomes clear that you're simply too big to fit inside of the female. With a disgruntled growl, the dragoness kicks you off of her and stomps away.";
+		else:
+			say "     You fall to the ground from the dragoness's advances, and the leering beast saunters over to your beaten form, picking you up with one of her claws as she reclines her back against a thick tree. After her other claw divests you of your gear, she brings you close to her mouth, and her tongue darts out from between her scaly lips to drag across your face, then to the rest of your body. Once you're coated with saliva, the beast brings you to between her legs, and her other claw moves below you to part her slit, revealing the pink, cavernous depths of her pussy. Realizing the dragoness's plan, you try to resist by pushing against the soft scales surrounding her cunt while you're lowered toward her sex, but between your slathered body and her strength, your head is effortlessly shoved inside of the damp tunnel.";
+			say "     The salacious female rumbles in delight as you sink into her, and you can't do anything to halt your progress into the darkness, slick flesh eagerly engulfing you and contouring to your body. Inch by inch, you are slowly fed into the slit, the scaly beast huskily crooning from using your helpless form. Even as the last of you passes through the dragoness's lower lips, her claw tips follow you, continuing to gently push you further down the tight tunnel. Eventually, the claws retreat, and your journey into the dragoness's sex comes to a stop, but with you so deep inside of her, you can barely move, the pliant walls pressing into you from all sides. And yet, despite being trapped in the sweltering, confined space, you can't help but get aroused from stewing in the rapacious reptile's musk, as well as the oddly erotic caresses of the encompassing soft tissue.";
+			say "     With no way to tend to yourself, you are kept in a suspended state of lust, but eventually, the fleshy prison begins to shake as the surrounding walls clench down on you. Only when femcum starts to pool around you, accompanied by the dragoness's lustful growls, do you realize that your captor must be pleasuring herself because of the new toy inside of her. The walls press down on you one final time before you are rapidly shot back the way you came from, suddenly releasing you back into the outside world when you are forcibly ejected out of the dragoness's pussy, along with a torrent of her juices. Reeking of sex and exhausted, you shakily stand back up, only to balk when you see the lecherous beast eyeing you. Fortunately, she simply gives you a satisfied smirk and makes no effort to pursue you while you stumble off to recover from your twisted ordeal.";
+			LibidoBoost 20;
+	else:	[anal vore]
+		if scalevalue of Player > 4:	[Too big for anal vore]
+			say "     You fall to the ground from the dragoness's advances, and the leering beast saunters over to your beaten form; however, she frowns slightly when she looks over your large [bodydesc of Player] body. She moves around until all that you can see above is a voluptuous, scaly booty. You are propped upright by the reptile's sinuous tail just as her ample rear crashes into you, grinding her anus into your face. At first, you think that she just wants you to merely service her, but because of her incessant pushing, you realize that she's actually trying to shove you into her ass. However, after a minute without any progress, it becomes clear that you're simply too big to fit inside of the female. With a disgruntled growl, the dragoness throws you to the side and stomps away.";
+		else:
+			say "     You fall to the ground from the dragoness's advances, and the leering beast saunters over to your beaten form. One of her massive claws pins your prone form, but thankfully not rough enough to cause any further injuries. Her head then lowers to your trapped body, and her tongue darts out from between her scaly lips to drag across your face, then to the rest of your body. Once you're coated with saliva, the beast picks you up in her claw as she lowers her body, arching her back to leave only her rear end off of the ground. You are then brought to the dragoness's behind, and when she lifts her tail high into the air, you are treated to the sight of her puckered asshole. Realizing what lies in wait, you try to escape your captor's grasp, but your feeble struggles are no match for her raw strength.";
+			say "     You can only watch in horror as your lower half is fed into her hungry sphincter, the hot, pliant tissue stretching to accommodate your helpless form. More and more of you disappears into the depraved female's depths as she slowly pushes you in, prolonging her pleasure while dragging out your abuse. Eventually, when only your head is awaiting to sink into her ass, the dragoness stands back up and lowers her tail, letting the clenching muscles at the base of her tail finish taking you in. The light of the outside world shrinks away as you are ferried deeper into the reptile's anus until everything fades into darkness. The sweltering confines completely immobilize you, hot dragon meat clenching down on you from every angle amidst a din of squelching flesh. And yet, despite being trapped in the depraved prison, the encompassing walls squeezing down on you is strangely erotic.";
+			say "     Eventually, through the ever-present clenches from your surroundings, you can feel your fleshy prison shift as the dragoness flops onto her side, followed by even more movement as everything begins to shake. Muffled as they are, ragged breathing and lustful growls tell you that your captor is greatly enjoying the new toy inside of her. With a mighty roar, and one final squeeze on your helpless form, you are expelled from the dragoness's anus, back into the outside world, and unceremoniously dumped onto the ground. Exhausted, you shakily stand back up, only to balk when you see the lecherous beast eyeing you. Fortunately, she simply gives you a satisfied smirk and makes no effort to pursue you while you stumble off to recover from your twisted ordeal.";
+			LibidoBoost 20;
 
 to say BeatCopperDragoness:
-	if inasituation is true:
-		say "     "; [dealt with at the event source]
-	else:
-		say "     Unable to withstand your blows any longer, the dragoness slumps over in defeat. Given the winged beast's massive size, it would be difficult for you to effectively have your way with the fallen dragoness[if scalevalue of Player > 4], even for your sizable stature[end if]. Still, that doesn't mean that you can't play with the dragoness.";
-		now sextablerun is 0;
-		blank out the whole of table of fucking options;
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Tend to the dragoness's cunt";
-		now sortorder entry is 1;
-		now description entry is "Use your hands and tongue to play with some dragon pussy";
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Play with the dragoness's ass";
-		now sortorder entry is 2;
-		now description entry is "Service the dragoness's rear with your tongue and hands";
-		[]
-		sort the table of fucking options in sortorder order;
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]0 - Nevermind[as]0[end link][line break]";
-		while sextablerun is 0:
-			say "Pick the corresponding number> [run paragraph on]";
-			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-				now current menu selection is calcnumber;
-				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry]?";
-				if Player consents:
-					let nam be title entry;
-					now sextablerun is 1;
-					if nam is "Tend to the dragoness's cunt":
-						say "[CopperDragonessVictoryCunt]";
-					if nam is "Play with the dragoness's ass":
-						say "[CopperDragonessVictoryAss]";
-				wait for any key;
-			else if calcnumber is 0:
+	say "     Unable to withstand your blows any longer, the dragoness slumps over in defeat. Given the winged beast's massive size, it would be difficult for you to effectively have your way with the fallen dragoness[if scalevalue of Player > 4], even for your sizable stature[end if]. Still, that doesn't mean that you can't play with the dragoness.";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Tend to the dragoness's cunt";
+	now sortorder entry is 1;
+	now description entry is "Use your hands and tongue to play with some dragon pussy";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Play with the dragoness's ass";
+	now sortorder entry is 2;
+	now description entry is "Service the dragoness's rear with your tongue and hands";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
 				now sextablerun is 1;
-				say "     The dragoness whines in disappointment when you turn to leave, but she doesn't make a move to follow you. After a bit of walking, you don't see any sign of her, and you resume your exploration.";
-				wait for any key;
-			else:
-				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-		clear the screen and hyperlink list;
+				if nam is "Tend to the dragoness's cunt":
+					say "[CopperDragonessVictoryCunt]";
+				if nam is "Play with the dragoness's ass":
+					say "[CopperDragonessVictoryAss]";
+			wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     The dragoness whines in disappointment when you turn to leave, but she doesn't make a move to follow you. After a bit of walking, you don't see any sign of her, and you resume your exploration.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
 
 to say CopperDragonessVictoryCunt:
 	say "     It takes a few moments, but the dragoness eventually understands your gestures to lay on her back. The scaly female obeys without a fuss, although you're pretty sure that it's not just because you bested her in combat, given the glint of lust you see in her eyes. You slowly approach the dragoness and straddle her tail, offering you a front row seat of her gaping pussy. Up close, you can see that her cunt is already drenched, the pulsating pink walls almost begging you for your touch, and the arousing scent of her sex stirs a heat within you. Enticed by the promising pussy, you mash your face up against her lower lips, the dragoness rumbling softly in satisfaction as your tongue reaches inside of her. As you lick the velvety folds, you taste an odd yet enjoyable mix of sweet, salty, and spicy, and it only drives you to probe for more. However, the dragoness whines needily, your ministrations only arousing her further.";
@@ -138,6 +128,13 @@ to say CopperDragonessEnterAss:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Copper Dragoness"	"[PrepCombat_Copper Dragoness]"
+
+to say PrepCombat_Copper Dragoness:
+	setmongender 4; [female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

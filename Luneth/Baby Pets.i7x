@@ -359,7 +359,7 @@ Virgin of Peppy is true.
 AnalVirgin of Peppy is true.
 PenileVirgin of Peppy is true.
 SexuallyExperienced of Peppy is false.
-MainInfection of Peppy is "Skunk".
+MainInfection of Peppy is "Skunk Male".
 Description of Peppy is "[Peppydesc]".
 
 instead of sniffing the skunk kit:
@@ -383,7 +383,7 @@ An everyturn rule:
 			if skunkbeaststatus is 1:
 				sblinfect;
 			else:
-				infect "Skunk";
+				infect "Skunk Female";
 
 instead of conversing the Peppy:
 	if Player is in Computer Lab and Peppy is in Computer Lab:
@@ -467,7 +467,7 @@ to say ResolveEvent Lost Skunk Kit:
 		say "     Wandering through the woods, you come across what was obviously the remains of a recent combat, the ground torn and savaged, and spots of blood staining the ground, looking around you find it hard to tell exactly what happened here, but you know it was violent. You glance around to see if there is anything of use in the area, or if you can determine what the combatants were and why they fought, finding several strange boot prints and what you think might be a bullet casing, but that makes no sense... Sighing you prepare to go on about your business, when you hear a small whimpering noise from under a nearby bush. Considering the state of the area investigating could be dangerous, do you look anyways?";
 		if Player consents:
 			say "     Looking under the thorny bushy you note a small hollow dug out underneath, far too small for anyone your size to fit in, but just the right size for the shaking little skunk kit that is currently occupying it, quite possibly the offspring of one of those large skunk beasts in the area as even though it is obviously just a child, it is still almost the size of a full grown dog. Seeing you the little thing whimpers and shudders some more, and you can smell a soft whiff of skunk smell from the area, you quickly back off so as not to panic the little creature. Taking a new look at the site of the battle now that you know what to look for, you imagine something was after the skunk beasts young and it objected, somehow this one managed to hide from whatever or whoever took the rest though. You feel a bit sorry for the little skunk kit, as it obviously is all alone now, but as it seems terrified of your looks and your smell, you aren't sure what you can do to help.";
-			if BodyName of Player is "Skunk" or BodyName of Player is "Skunk Taur" or BodyName of Player is "Skunkbeast Lord":
+			if BodyName of Player is "Skunk Male" or BodyName of Player is "Skunk Female" or BodyName of Player is "Skunk Taur" or BodyName of Player is "Skunkbeast Lord":
 				say "Looking down at yourself you focus on your skunk-like attributes, and wonder if just maybe if you are careful the little skunk might not be drawn to them, you try to decide if you should try drawing the little creature out again.";
 				if Player consents:
 					say "     Deciding to try again, you once more approach the little creature, this time emphasizing your skunk-like attributes, you carefully try coaxing the little kit out of its hiding spot, offering it flashes of your skunk-like body and scent until finally it nervously emerges. Sitting down within easy reach, you wait while the obviously young skunk kit inspects you carefully. Seeming to find something familiar about you, the little beast then throws itself into your lap, whimpering. Feeling oddly maternal and protective of the little creature, you stroke its smooth fur and tell it that it will be all right, checking it over for damage as you do. The lucky little skunk seems to have come through its ordeal with only a few small scratches from the thornbush, and it is mostly just scared.";
@@ -481,7 +481,7 @@ to say ResolveEvent Lost Skunk Kit:
 					if skunkbeaststatus is 1:
 						sblinfect;
 					else:
-						infect "Skunk";
+						infect "Skunk Female";
 					say "     (Peppy the skunk kit is now a possible ally! You can make him your active ally by typing [bold type][link]ally Peppy[end link][roman type] or [bold type][link]ally skunk kit[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 					now Resolution of Lost skunk kit is 1; [adopted the skunk]
 					now Lost skunk kit is resolved;
@@ -503,7 +503,7 @@ to say ResolveEvent Lost Skunk Kit:
 					if skunkbeaststatus is 1:
 						sblinfect;
 					else:
-						infect "Skunk";
+						infect "Skunk Female";
 					say "[bold type](The skunk kit is now tamed! You can make it your active pet by typing pet skunk kit. You can see all the pets you have tamed with the pet command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type][line break]";
 					now Resolution of Lost skunk kit is 1; [adopted the skunk]
 					now Lost skunk kit is resolved;
@@ -519,7 +519,7 @@ to say ResolveEvent Lost Skunk Kit:
 			now Lost skunk kit is resolved;
 	else if littlelostskunk is 1:
 		say "     Traveling through the forest again, you realize that you are near the site of the skunks battle from earlier, curiosity getting the better of you, you decide to go see if that little skunk kit is still OK. Returning to the battle site easily enough, you note that other creatures have passed this way recently, probably looking to scavenge something as well, so you probably shouldn't stay too long. Still as you approach the little skunks hiding spot, you hear the telltale whimpering that tells you the little creature is still hanging in there. Feeling even sorrier for having left the little creature alone, you quickly check to see if you might have any way to get it to trust you better this time.";
-		if BodyName of Player is "Skunk" or BodyName of Player is "Skunk Taur" or BodyName of Player is "Skunkbeast Lord":
+		if TailName of Player is "Skunk Female" or BodyName of Player is "Skunk Male" or BodyName of Player is "Skunk Taur" or BodyName of Player is "Skunkbeast Lord":
 			say "     Looking down at yourself you focus on your skunk-like attributes, and wonder if just maybe if you are careful the little skunk might not be drawn to them, you try to decide if you should try drawing the little creature out again.";
 			if Player consents:
 				say "     Deciding to try again, you once more approach the little creature, this time emphasizing your skunk-like attributes, you carefully try coaxing the little kit out of its hiding spot, offering it flashes of your skunk-like body and scent until finally it nervously emerges. Sitting down within easy reach, you wait while the obviously young skunk kit inspects you carefully. Seeming to find something familiar about you, the little beast then throws itself into your lap, whimpering. Feeling oddly maternal and protective of the little creature, you stroke its smooth fur and tell it that it will be all right, checking it over for damage as you do. The lucky little skunk seems to have come through its ordeal with only a few small scratches from the thornbush, and it is mostly just scared.[line break]";
@@ -532,7 +532,7 @@ to say ResolveEvent Lost Skunk Kit:
 				if skunkbeaststatus is 1:
 					sblinfect;
 				else:
-					infect "Skunk";
+					infect "Skunk Female";
 				say "[bold type](The skunk kit is now tamed! You can make it your active pet by typing pet skunk kit. You can see all the pets you have tamed with the pet command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type][line break]";
 				now Lost skunk kit is resolved;
 			else:
@@ -552,7 +552,7 @@ to say ResolveEvent Lost Skunk Kit:
 				if skunkbeaststatus is 1:
 					sblinfect;
 				else:
-					infect "Skunk";
+					infect "Skunk Female";
 				say "[bold type](The skunk kit is now tamed! You can make it your active pet by typing pet skunk kit. You can see all the pets you have tamed with the pet command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type][line break]";
 				now Lost skunk kit is resolved;
 			else:

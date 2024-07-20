@@ -322,7 +322,7 @@ to say sexwithsnow01:	[Vaginal on Snow]
 		increase Cock Length of Player by 2;
 		follow cock descr rule;
 		say "     As pleasure radiates from your groin, she looks up into your eyes, smiling around your [descr] shaft as it swells slowly against her lustful attentions, pressing all the more firmly against you. With a wet pop, she draws free, flicking tongue over the tip one last time. 'See, already getting better,' she says encouragingly as she strokes in long lazy motions over your excited flesh, other hand moving to rub at your [Skin of Player] balls, caressing the [Ball Size Adjective of Player] orbs gently as they begin to tingle and grow as well. The pleasure of it is too much, and you explode in thick strands of fertile spunk, painting Snow across her snout. She yelps out a laugh before sealing her lips around that bulging opening, swallowing the rest down eagerly before letting your satisfied member settle down. With a final nuzzle, she rises up, 'You get used to that bad boy, and we can continue later.'";
-		increase Ball Size of Player by 2;
+		BallsGrow Player by 2;
 		now CockName of Player is "Hyper Squirrel";
 		now Cock of Player is "bright pink";
 	else:
@@ -530,6 +530,12 @@ to say ResolveEvent Wild Squirrels:
 	now SleepRhythm of Player is 0;
 	now Wild Squirrels is inactive;
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Hyper Squirrel"	"[PrepCombat_Hyper Squirrel]"
+
+to say PrepCombat_Hyper Squirrel:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

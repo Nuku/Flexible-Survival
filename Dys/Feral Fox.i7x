@@ -31,6 +31,13 @@ to say FeralFoxDesc:
 	say "     Monster description paragraph 1.";
 	say "     Monster description paragraph 2.";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Feral Fox"	"[PrepCombat_Feral Fox]"
+
+to say PrepCombat_Feral Fox:
+	say "";
+
 
 Section 2 - Creature Insertion
 

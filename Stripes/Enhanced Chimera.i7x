@@ -12,8 +12,6 @@ horndata is a text that varies.
 ec_fullcount is a number that varies.
 
 to say enhancedchimeradesc:
-	setmongender 5; [creature is herm]
-	say "[ec_mixnmatch]";
 	choose row MonsterID from the Table of Random Critters;
 	say "     [if showlocale is true]As you're snooping around in the hospital, you're[else]You[end if] are come across by one of those enhanced chimeras of Dr. Mouse's. The hybrid herm could be one of those from the photos or she might be an offspring of theirs. This one is [if lev entry < 13]a little over eight feet tall[else if lev entry < 15]roughly eight and a half feet tall[else]almost nine feet tall[end if] with a powerful and imposing body typical of the designed infection.";
 	say "     The creature's face and muzzle are [headdata]-like, but with a leonine mane that cascades over her broad shoulders and the horns of a [horndata]. Her chest is armored with thick, scaly hide that follows the curves of her big breasts to preserve their buxom form and show off her perky nipples. The remainder of her body and limbs are covered in [furdata] fur, save for some armored plates on the exterior of the arms and legs. Her paw-like hands and feet have plated digits ending in claws and thicker tufts of fur at the wrists and ankles. Growing from the base of her spine is a thick tail with scale and spiny ridges. Protruding from her sheath and resting above her plump ballsack is her big, meaty cock. It is blood red in color, with a spaded tip and several firm ridges along its shaft. There's a faint swelling at the base, signs of a knot as well. Thick precum leaks down the monstrous prick as she eyes you with arousal, moving closer.";
@@ -174,8 +172,15 @@ to say beattheenhancedchimera:
 	say "[ec_reset]";
 	say "     Having defeated the enhanced chimera, you drive the creature off.";
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Enhanced Chimera"	"[PrepCombat_Enhanced Chimera]"
+
+to say PrepCombat_Enhanced Chimera:
+	setmongender 5; [creature is herm]
+	say "[ec_mixnmatch]";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

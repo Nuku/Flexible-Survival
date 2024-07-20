@@ -5,19 +5,20 @@ Version 1 of Man-eating Plant by Kernog begins here.
 Section 1 - Creature Responses
 
 to say beattheplant:
-	if inasituation is false:
-		say "     As you give one last blow to the flower, you watch it ted progressively, a sappy substance escaping from the wounds.";
-	else:
-		say ""; [dealt with in the event]
+	say "     As you give one last blow to the flower, you watch it ted progressively, a sappy substance escaping from the wounds.";
 
 
 to say ManEatingPlantDesc:
-	if inasituation is false:
-		say "     You attempt to walk around the big trees on your path, when movement in the corner of your vision alerts you. Rooted into the bark of one of the trees, a large plant opens its petals, showing a multi-color inner pattern, going deep inside the tree. Vines begin to flail dangerously around you, trying to snatch you. You stay on your guard, as you decide what to do with the mutated vegetal.";
-	else: [event]
-		say ""; [dealt with at the event source]
+	say "     You attempt to walk around the big trees on your path, when movement in the corner of your vision alerts you. Rooted into the bark of one of the trees, a large plant opens its petals, showing a multi-color inner pattern, going deep inside the tree. Vines begin to flail dangerously around you, trying to snatch you. You stay on your guard, as you decide what to do with the mutated vegetal.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Man-eating Plant"	"[PrepCombat_Man-eating Plant]"
+
+to say PrepCombat_Man-eating Plant:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

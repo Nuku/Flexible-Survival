@@ -13,7 +13,6 @@ CandyShop	"CandyShop"
 CandyShop is a situation.
 ResolveFunction of CandyShop is "[ResolveEvent CandyShop]". The level of CandyShop is 9.
 Sarea of CandyShop is "Fair".
-sugarferretfight is a number that varies.
 
 when play begins:
 	add CandyShop to BadSpots of FemaleList;
@@ -43,15 +42,17 @@ to say ResolveEvent CandyShop:
 		else:
 			say "     Shaking your head, you tell him that you don't have any pop. 'Oh, pop?' another of the ferrets pipes up. 'I've still got some,' he says, taking a bottle out from the cabinet behind him. 'Ooo! Cola!' the first ferret says, snatching the bottle from his friend's hands before poinging away, attracting the attention of the others. 'PopPopPop!' 'Hey gimme!' 'Cola!' 'Come on, share!' 'Caffeine!' The others quickly take notice and start demanding of their friend as they bouncing up and down excitedly. Struggling a little, the maize ferret frantically grabs the cap in his teeth and twists it open to the cheers of his brethren. After taking a big swig, the bottle is snatched away and is soon getting passed around, everyone demanding a drink.";
 			say "     At first, their antics over the cola are amusing, but you notice things getting more rambunctious as the ferrets start pushing and shoving to get another drink. Their fur gets ruffled and scraggly and their colors grow richer, becoming vibrant reds, yellows, greens, blues and their eyes turn a bright, fiery red. Sheaths swell and cocks start to poke free. Pussies grow wet and dripping. You start backing away towards the door when one of them notices you, turning to look at you with a demonic, pointy-toothed grin. While several of the ferrets in here have already paired off into groups for lustful sex, the others turn their attention on you. They poing towards you in a manner which would be cute if it weren't for the sinister, lustful looks and their fanged grins.";
-		now sugarferretfight is 3;
+		say "     Once cute and cuddly little ferrets, the pastel mustelids have become vibrantly colored. Their cute paws-like hands have gained large, sharp claws and their too-wide grins are filled with pointed teeth. They look at you with sinister intent in their bright, red eyes as they move in to surround you.";
 		challenge "Sugar Ferret";
-		if sugarferretfight is 3:
-			say "     Managing to weave between a pair of the ferrets, you dive out the door and make a run from the CandyShop. The manic ferrets pursue you briefly, but veer off to raid another of the nearby shops.";
-		else if sugarferretfight is 1:
-			say "     Aside from those you've dazed, the other colorful ferrets are lustfully fucking all around you. Feeling you only have a moment before those finishing up take notice of you, you grab your pack and stuff a few handfuls of candy into it before rushing out the door.";
+		if fightoutcome < 20: [player won]
+			say "     Over the course of your fight with them, you manage to temporarily daze several of the crazed ferrets attacking you and toss several others over to the others having lustful sex, where they're grabbed and pulled into playing with those couples. Once the last of them is dealt with, you have a brief moment to take in what's happening. Aside from those you've dazed, the other colorful ferrets are lustfully fucking all around you. Feeling you only have a moment before those finishing up take notice of you, you grab your pack and stuff a few handfuls of candy into it before rushing out the door.";
 			ItemGain chips by 2;
 			increase score by 10;
-		else:
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			if fightoutcome is 21 or fightoutcome is 22:
+				say "     Unwilling to keep fighting, you give yourself over to the manic ferrets. Cheering, they bounce onto you, grabbing your limbs and body, pulling you down by sheer numbers. Even as you're going down, you're groped and fondled by the over-excited ferrets.";
+			else:
+				say "     As your strength wanes, you are tackled by several of the ferrets at once. They grab onto your arms, legs and body, pulling you down by sheer numbers. Even as you're going down, you're groped and fondled by the over-excited ferrets.";
 			say "     Pinned down by a swarm of pointy-toothed ferrets overcome by a rush of manic energy, you find yourself being groped and fondled by numerous little paws. As your lust builds, a pair of blue paws grab your head, guiding it to the crimson cock of another ferret. The taste of his pre is very sweet, exciting you further. You can feel hard cocks and wet pussies grinding against you[if Player is male]. Paws grab your erect penis and balls, stroking and fondling them[end if][if Player is female]. Furry fingers are stuffed into your pussy, thankfully careful with those sharp claws of theirs[end if]. You are teased and fondled until you the ferret cock stuffed in your mouth throbs and pulses its sticky load down your throat. You are then pushed over and another of the males mounts you, driving his cock into your [if Player is female]pussy[else]ass[end if], fucking you wildly. After a quick, but frantic romp, his load is sprayed deep inside you as well. After that, things get hazy, being made to lick pussies, suck cocks and have sex with the ferrets, who seem to have unending energy. Eventually, they tire of you and you're tossed out to make room for another big romp on a pile of candy.";
 			if Player is female:
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Sugar Ferret";
@@ -75,6 +76,8 @@ to say ResolveEvent CandyShop:
 				now tail of Player is tail entry;
 			now Libido of Player is ( Libido of Player + 50 ) / 2;
 			SanLoss 5;
+		else if fightoutcome is 30: [fled]
+			say "     Managing to weave between a pair of the ferrets, you dive out the door and make a run from the CandyShop. The manic ferrets pursue you briefly, but veer off to raid another of the nearby shops.";
 		say "     You can now find your way back to the Sweet Tooth CandyShop, though you'd best wait until the ferrets come off their caffeine buzz before doing so.";
 		AddNavPoint Sweet Tooth;
 		increase ferretvisit by 1;
@@ -105,11 +108,7 @@ to say Sweet Tooth scene:
 			say "     Swinging by the shops on the fairgrounds, you take a peek in the CandyShop. You can see the ferrets inside are still manic with excess energy. You decide it'd be best to not enter right now.";
 	else if ferretvisit is 1:
 		[puts Sugar Ferret as lead monster for impregnation]
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Sugar Ferret":
-				now MonsterID is y;
-				break;
+		choose row with name of "Sugar Ferret" in Table of Random Critters;
 		if "Female Preferred" is listed in feats of Player:
 			now sex entry is "Female";
 		else if "Herm Preferred" is listed in feats of Player:
@@ -119,7 +118,6 @@ to say Sweet Tooth scene:
 		now area entry is "Fair";
 		now non-infectious entry is false;
 		now resbypass entry is true;
-		now sugarferretfight is 0;
 		if BodyName of Player is "Sugar Glider" or FaceName of Player is "Sugar Glider":
 			say "     Returning to the CandyShop, you look inside to find that the ferrets have settled down. Back to their previous, cute selves, they bounce around happily as they share candy with one another. One of them, the yellow fellow from before, spots you looking in and quickly dashes outside. Poinging atop you, he runs his paws over your marsupial form. 'And now you come back to us as one of those candy assed thieves. Did you at least bring us some pop this time?' Before you can respond, you're pulled inside by him and a few of his brethren. 'Come on, let's have a little fun and do a little trading, you sugary scoundrel.'";
 			say "     As they pull you inside in some strange mix of welcoming you and capturing you, the yellow one continues talking. 'We should have done some proper trading to go along with the sweet fun we had, but we got a little over-excited. I just wanted a quick drink, but things got out of hand. Cola just so good that we get a little crazy.'";
@@ -127,8 +125,7 @@ to say Sweet Tooth scene:
 		else:
 			say "     Returning to the CandyShop, you look inside to find that the ferrets have settled down. Back to their previous, cute selves, they bounce around happily as they share candy with one another. One of them, the yellow fellow from before spots you looking in and quickly dashes outside. Taking your hand in his little paws, he starts pulling you towards the shop. 'Oh, we're really sorry about what happened the other day. I just wanted a quick drink, but things got out of hand. Cola just so good that we get a little crazy. But it's okay now.'";
 			say "     Following him inside, you are greeted merrily by the rest of the business who give you some happy snuggles and also apologize, promising to be good. Many of them even give you some choice candies as apology gifts. Finding them just so cute, you can't help but accept their apologies and sit down to join them for a bit. 'Yay!' they cheer, poinging around the room in celebration, making you chuckle.";
-			decrease hunger of Player by 6;
-			if hunger of Player < 0, now hunger of Player is 0;
+			PlayerEat 6;
 			say "     As you munch on the candies you were given, the yellow ferret and a few others snuggle up to you. They chirr happily at having their new friend back and run their paws over your body. 'Let us make it up to you,' one of the hobs says, which is followed by a chorus of yeah's from the others. When a paw slips between your legs to fondle you, you open your mouth to say something, but a pink jill pushes her muzzle to your lips, kissing you. The sweet taste of her kiss makes you moan and momentarily forget what you were going to say. The soft paws roaming your body help you slip your clothes off. As you're fondled, several of the pastel ferrets take turns kissing you while the others nuzzle and kiss you all over.";
 		say "     You grow increasingly excited as the ferrets play with you, soon eagerly sliding your tongue into each fresh muzzle that's presented to you for a kiss[if Cock Count of Player is 1]. During one deep kiss, you feel another muzzle slide down over your cock, licking and sucking at it eagerly[else if Cock Count of Player > 1]. During one deep kiss, you feel warm muzzles slide down over your cocks, licking and sucking at them[else if Cunt Count of Player is 1]. You feel a soft muzzle nuzzle at your pussy and a tongue start licking your folds[else if Cunt Count of Player > 1]. You feel a soft muzzle nuzzle at your pussies and a tongue start licking your folds[else]. You feel a soft muzzle nuzzle at your bare crotch, licking it with soft, tender motions. 'Oh, you poor sprite!' the ferret down there says[end if]. Reaching down, you rub a hands over the ferret's head and chirr happily.";
 		say "     As all this attention continues, you can feel a pleasant giddiness spreading through you. The ferret head you're stroking starts to feel different. At first you think it's changing, but you soon realize that it is your hand changing shape, becoming a cute little paw like those of your friends. This change spreads up your arm and to your body. Your proportions change, becoming under five feet tall, but with an elongated, tubular body on short limbs. The pleasant sensations spread down to your groin.";
@@ -144,7 +141,7 @@ to say Sweet Tooth scene:
 			ItemLoss soda by 1;
 			now lastcaffeine of Sweet Tooth is turns;
 			now caffeinehigh of Player is 8;
-			decrease thirst of Player by 6;
+			PlayerDrink 6;
 			say "     You hear some rustling in your pack as one of them starts ferreting through it. A pale blue jill pulls out some cola. Popping it open, she says 'Yay! A new friend. Let's celebrate.' She takes a big swig from the can before pressing it to your lips. You momentarily consider resisting, but as that sweet, carbonated ambrosia touches your lips, you can't help but open wide and swallow it down. As the cola flows down your throat and into your body, you can feel a rush of excitement overtake you. You twitch as the caffeine rushes into your bloodstream and make grabby paws to get the can back as another ferret tries to take a drink. 'Oh! That's gooood! Gimme more!' you say excitedly. The blue girl buries her head in your pack, tossing out all the soda she can find while others pull bottles and cans out from hidden stashes.";
 			while carried of soda is not 0:
 				ItemLoss soda by 1;
@@ -152,13 +149,13 @@ to say Sweet Tooth scene:
 				if a random chance of 2 in 5 succeeds, increase caffeinehigh of Player by 1;
 				if a random chance of 2 in 5 succeeds, decrease caffeinehigh of Player by 1;
 				decrease lastcaffeine of Sweet Tooth by 2;
-				decrease thirst of Player by 3;
+				PlayerDrink 3;
 				decrease humanity of Player by 3;
 				increase Libido of Player by 3;
 		else:
 			say "     You hear some rustling in your pack as one of them starts ferreting through it. The pale blue jill even stuffs her head inside, but comes up with nothing. 'Aww! I was hoping for a drink to celebrate!' 'Here! I've got you covered,' a hob says excitedly, pulling out a can of Mountain Don't. He takes a big swig from the can before pressing it to your lips. You momentarily consider resisting, but as that sweet, carbonated ambrosia touches your lips, you can't help but open wide and swallow it down. As the caffeinated drink flows down your throat and into your body, you can feel a rush of excitement overtake you. You twitch as the caffeine rushes into your bloodstream and make grabby paws to get the can back as another ferret tries to take a drink. 'Oh! That's gooood! Gimme more!' you say excitedly. The others pull bottles and cans out from hidden stashes and soon everyone's gulping down soda.";
 			now lastcaffeine of Sweet Tooth is turns;
-			decrease thirst of Player by 6;
+			PlayerDrink 6;
 		sfcaffeine; [activates effects of Sugar Ferret caffeine high]
 		say "     An orgy of wild, ferrety sex breaks out as the hobs and jills get aroused in their caffeine-induced excitement. The place if filled with groups of vibrantly colorful ferrets licking, sucking and fucking one another wildly. And you're at the center of this, jills and hobs lustfully welcoming you to their group[if Player is herm]. You fuck and are fucked several times over the course of the orgiastic event[else if Player is male]. You fuck several of the ferrets over the course of the orgiastic event[else]. You are fucked several times by the hobs over the course of the orgiastic event[end if], though the details all quickly become a blur of bright colors and sweet, sweet soda. Eventually it winds down somewhat when a large mob of ferrets rush outside with plans to scour the fairground for more soda. Still having a little self-control, you bound away with a surplus of energy.";
 		if Player is female or Player is herm:
@@ -170,11 +167,7 @@ to say Sweet Tooth scene:
 		if HumorousList is not banned, now Caught Glider is active;
 	else:
 		[puts Sugar Ferret as lead monster for impregnation]
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Sugar Ferret":
-				now MonsterID is y;
-				break;
+		setmonster "Sugar Ferret";
 		if "Female Preferred" is listed in feats of Player:
 			now sex entry is "Female";
 		else if "Herm Preferred" is listed in feats of Player:
@@ -218,7 +211,7 @@ to say Sweet Tooth scene:
 		if soda is owned:
 			ItemLoss soda by 1 silently;
 			now lastcaffeine of Sweet Tooth is turns;
-			decrease thirst of Player by 6;
+			PlayerDrink 6;
 			say "     Remembering that you have some soda in your pack and too excited to think reasonably, you pull out the cola and start drinking it, then end up sharing around your entire soda collection as you and the other ferrets begin to change. More pop is brought out from hidden stashes. You moan excitedly as a manic energy starts to suffuse you, filling you with a rush that's half lust and half a craving for more[if the player is sugarfaced]. Your eyes turn a bright red like those of the other ferrets around you as the caffeine makes you manic. Your teeth grow sharp and pointed and you gain a wide, toothy grin[end if][if the player is sugarskinned]. Your pastel fur grows richer in color, becoming a vibrant purple[end if]. You can't sit still at this point, filled with so much wild energy.";
 			while carried of soda is not 0:
 				ItemLoss soda by 1 silently;
@@ -226,14 +219,14 @@ to say Sweet Tooth scene:
 				if a random chance of 2 in 5 succeeds, increase caffeinehigh of Player by 1;
 				if a random chance of 2 in 5 succeeds, decrease caffeinehigh of Player by 1;
 				decrease lastcaffeine of Sweet Tooth by 2;
-				decrease thirst of Player by 3;
+				PlayerDrink 3;
 				decrease humanity of Player by 3;
 				increase Libido of Player by 3;
 			say "[bold type]You lose all your soda![roman type]";
 		else:
 			say "     One of the ferrets pulls out a big bottle of cola and starts passing it around. Too excited to think clearly, you grab the bottle as soon as it gets close enough, taking a big swig and enjoying the wild rush the caffeine in it gives you. The others around you bounce around excitedly and more pop is pulled out from hidden stashes. You moan excitedly as a manic energy starts to suffuse you, filling you with a rush that's half lust and half a craving for more[if the player is sugarfaced]. Your eyes turn a bright red like those of the other ferrets around you as the caffeine makes you manic. Your teeth grow sharp and pointed and you gain a wide, toothy grin[end if][if the player is sugarskinned]. Your pastel fur grows richer in color, becoming a vibrant purple[end if]. You can't sit still at this point, filled with so much wild energy.";
 			now lastcaffeine of Sweet Tooth is turns;
-			decrease thirst of Player by 6;
+			PlayerDrink 6;
 		sfcaffeine; [activates effects of Sugar Ferret caffeine high]
 		follow the cock descr rule;
 		follow the cunt descr rule;
@@ -260,11 +253,7 @@ to say Sweet Tooth scene:
 			say "[CandyShopsex7]";
 		say "     The wild orgy of ferrety sex goes on like this for some time. Lost in your manic, over-caffeinated state, most of it is hazy, but filled with arousing imagery. The sex is finally broken up as most of the group heads off in search of more cola, moving out in packs to rampage across the fairgrounds in search of more carbonated happiness. With what little clarity of thought you have left, you take this opportunity to leave the ferrets behind. Partially, you want to get your head back on straight, though part of you says to go searching for more soda so you can have it all to yourself.";
 		infect "Sugar Ferret";
-		decrease hunger of Player by 6;
-		if hunger of Player < 0:
-			now hunger of Player is 0;
-		if thirst of Player < 0:
-			now thirst of Player is 0;
+		PlayerEat 6;
 		LineBreak;
 		increase ferretvisit by 1;
 	say "     With your visit to the Sweet Tooth CandyShop over, you head back to the entrance area to the State Fair to decide you next course of action.";

@@ -65,7 +65,7 @@ PenileVirgin of Janice is true.
 SexuallyExperienced of Janice is true.
 TwistedCapacity of Janice is false. [can not take oversized members without pain]
 Sterile of Janice is false.
-MainInfection of Janice is "Arctic fox".
+MainInfection of Janice is "Arctic Fox".
 Description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eyeing you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.".
 Conversation of Janice is { "Foxy!" }.
 The icon of Janice is figure of Janice_icon.
@@ -121,7 +121,7 @@ instead of conversing the Janice:
 	else if HP of Kristen is 11:
 		say "     'Oh, so you've given Kristen my gift? Wonderful. Simply wonderful. You're such an eager, helpful friend. You deserve a special reward for your willingness to help a poor, lonely vixen.' She puts her arms around you and pulls you down onto her divan while licking slowly across her muzzle as she eyes you lustfully.";
 		if Player is male:
-			say "     Soon her paw finds its way to your manhood, stroking your cock to erection and getting it dribbling with pre. As she strokes your [cock size desc of Player] cock, she nuzzles along your neck. She gives you small nips and nibbles while rubbing her softly furred fur against your [bodydesc of Player] body. Her touch is sensual and her scent is intense with arousal. The hand job eventually has you cum hard, emptying your [Cum Load Size of Player] load across your chest and hers. 'Mmm... you did very well, my dear. If all goes well, I should be able to see my dear friend again soon,' she grins as licks her paw clean, then moves on to grooming her fluffy fur.";
+			say "     Soon her paw finds its way to your manhood, stroking your cock to erection and getting it dribbling with pre. As she strokes your [cock size desc of Player] cock, she nuzzles along your neck. She gives you small nips and nibbles while rubbing her softly furred fur against your [bodydesc of Player] body. Her touch is sensual and her scent is intense with arousal. The handjob eventually has you cum hard, emptying your [Cum Load Size of Player] load across your chest and hers. 'Mmm... you did very well, my dear. If all goes well, I should be able to see my dear friend again soon,' she grins as licks her paw clean, then moves on to grooming her fluffy fur.";
 			say "     Something about the vixen's words make you uneasy. You should probably go check on Kristen.";
 		else if Player is female:
 			say "     Soon her paw finds its way to your pussy, stroking your juicy folds and getting if dripping wet. As she fingers your [cunt size desc of Player] pussy, she nuzzles along your neck. She gives you small nips and nibbles while rubbing her softly furred fur against your [bodydesc of Player] body. Her touch is sensual and her scent is intense with arousal. The fingering eventually has you cum hard, soaking her paw and your crotch with your femme juices. 'Mmm... you did very well, my dear. If all goes well, I should be able to see my dear friend again soon,' she grins as licks her paw clean, then moves on to grooming her fluffy fur.";
@@ -129,7 +129,7 @@ instead of conversing the Janice:
 		else:
 			say "     Finding your crotch lacking in a gender, she seems a little disappointed, but instead lets her paws roam across your [bodytype of Player] form. As she caresses your body, she grinds her juicy pussy against your leg and nuzzles along your neck. She gives you small nips and nibbles while rubbing her softly furred fur against your [bodydesc of Player] body. Her touch is sensual and her scent is intense with arousal. She lavishes attention upon you while rubbing her wet petals against your thigh until she cries out in orgasm. 'Mmm... you did very well, my dear. If all goes well, I should be able to see my dear friend again soon,' she grins as wipes up some juices from her crotch and sucks them from her fingertips before moving onto grooming her fluffy fur.";
 			say "     Something about the vixen's words make you uneasy. You should probably go check on Kristen.";
-		infect "Arctic fox";
+		infect "Arctic Fox";
 		if janicearoused is 0, now janicearoused is 1; [player now passed Janice's test, willing or not]
 		if janicetalk < 4, now janicetalk is 4;
 		now HP of Kristen is 12;
@@ -147,7 +147,7 @@ instead of conversing the Janice:
 			now janicearoused is 1;
 			increase score by 25;
 		else if BodyName of Player is "Latex Vixen Herm":
-			say "     'Well, with a body like that, it's certainly clear that you have something on your mind,' Janice says with a coy smile as she takes in your changed body. 'A soft, pretty fox playtoy,' she adds with some amusement as she eyes you up and down. Her eyes linger over your changed form as she seems to size you up for a minute before giving you a rather feral vulpine grin. 'I'm glad I suggested you go looking for proof, as it's clear you're off to a good start in becoming a sexy lover for a vixen as lovely as I. And what a lovely idea that is. Perhaps you should join me here and we can see about making you even more beautiful.' She stretches out on her divan and strokes the cushions, eying you with considerable arousal.";
+			say "     'Well, with a body like that, it's certainly clear that you have something on your mind,' Janice says with a coy smile as she takes in your changed body. 'A soft, pretty fox playtoy,' she adds with some amusement as she eyes you up and down. Her eyes linger over your changed form as she seems to size you up for a minute before giving you a rather feral vulpine grin. 'I'm glad I suggested you go looking for proof, as it's clear you're off to a good start in becoming a sexy lover for a vixen as lovely as I. And what a lovely idea that is. Perhaps you should join me here and we can see about making you even more beautiful.' She stretches out on her divan and strokes the cushions, eyeing you with considerable arousal.";
 			now janicetalk is 4;
 			now janicearoused is 1;
 			increase score by 15;
@@ -208,7 +208,7 @@ to say sexwithjanice:
 		say "     'Sorry, but even us lusty little vixens need a bit of time to recover after such a lovely bit of fun,' Janice says teasingly as she plants a soft kiss on the side of your face before lying back on the wide couch and stretching theatrically. 'And besides my lovely little soon-to-be fox, haven't you heard that anticipation makes everything better? And I am certainly already anticipating our next little romp eagerly...' she purrs sensually as she gives you a vulpine grin and a soft wink before sending you on your way.";
 	else if Janicearoused > 0:
 		if Player is male:
-			if CockName of Player is "Arctic fox":
+			if CockName of Player is "Arctic Fox":
 				if a random chance of 1 in 3 succeeds:
 					say "[janiceoral]";
 				else:
@@ -217,8 +217,8 @@ to say sexwithjanice:
 					say "     Unable to pull out fully anymore, you find yourself rocking your hips against her with increased vigor even as her wonderfully tight passage squeezes your knot with every movement, your balls churning with anticipation even as your pointed tip presses deeply into her body. Her soft fur underneath you feels absolutely amazing as she rocks back against you eagerly, and you can't hold back any longer, and you bury your face in her soft fur as your vulpine rod begins to spill its load into her soft womb. The pleasure is almost overwhelming as her passage rocks and tightens around your vulpine cock as Janice cries out in orgasm as well, her body squeezing and massaging your knot as she tries to milk every last bit of fertile sperm out of you.";
 					say "     Gasping with pleasure as you lie on top of her, still tied together by your swollen knot, you find yourself moaning happily as the sexy vixen shifts underneath you, and looking up you see a mischievous twinkle in her eye as she grins back over her shoulder at you. You moan with surprise and pleasure as she shifts forward, pulling you up onto the couch with her by your still buried cock, the sensation nearly making you pass out with pleasure as she pulls you close and cuddles her soft body up against you murring happily. Your arms full of soft sexy vixen, you find yourself smiling happily as well, as you lie there with your soft sexy mate waiting for your knot to deflate...";
 					NPCSexAftermath Janice receives "PussyFuck" from Player;
-					infect "Arctic fox";
-					infect "Arctic fox";
+					infect "Arctic Fox";
+					infect "Arctic Fox";
 					now lastfuck of Janice is turns;
 			else:
 				if a random chance of 3 in 5 succeeds:
@@ -227,13 +227,13 @@ to say sexwithjanice:
 					say "     'Why I thought you would never ask,' Janice says with a teasing smile on her muzzle as she traces one of her slim vulpine paws down her soft white fur teasingly, 'why don't you come over here and put that lovely cock of yours to good use...' she says teasingly as she spreads her legs out to the side slightly, giving you a perfect view of her soft damp pink sex, even as the aroma of a vixen in heat fills your head, causing your cock to grow increasingly aroused in anticipation. You find yourself grinning with delight as you take in the sexy white vixen spread open before you for your pleasure, the sight far too enticing for your lust-filled body to refuse as you move onto the couch with her. You can swear you see a rather vixenish grin cross Janice's muzzle as she reaches her paws up and runs them over your [Skin of Player] chest, her soft touch making you moan as she wraps her arms around you and pulls you down into her embrace. The feel of her silken soft white fur as it rubs against your sensitive body is amazing, and you groan with pleasure as she lifts her hips up teasingly to rub her damp sex against the base of your cock.";
 					say "     Unable to hold back the burning desire building in your cock, you shift your hips on her next teasing pass. This slides you into her waiting cunt and you both share a gasp of delight. Janice moans happily as your cock sheaths itself in her warm willing body, her long legs wrapping around your waist as she rubs up against you encouragingly. Though with the amazing feeling of her tight needy body massaging your cock, you need little encouragement to begin thrusting into her harder and faster than ever. Your body burning with building pleasure even as the vixen underneath you pants and yips in response to every one of your thrusts, her small noises of pleasure making you grin happily, even as the pleasure begins to grow almost too great to contain. You cry out as you bury your head against her softly furred shoulder, your body tensing against Janice's soft form as your orgasm spills over you. The feel of your cock spilling its seed inside her warm depths is absolutely amazing, her inner walls gripping you tight even as she cries out in pleasure as well, her soft claws running down your back as you hold onto each other tightly. Eventually you find yourself panting for breath as your orgasm begins to subside, and you smile as you feel a small lick on the side of your face as a smiling Janice gives you a soft kiss of thanks. Slowly the two of you pull apart from each other, with the vixen giving you a sly teasing smile as you both relax on the couch and try to recover from the amazingly intense experience.";
 					NPCSexAftermath Janice receives "PussyFuck" from Player;
-					infect "Arctic fox";
-					infect "Arctic fox";
+					infect "Arctic Fox";
+					infect "Arctic Fox";
 					now lastfuck of Janice is turns;
 		else:
 			say "     'Ah you want me to show you how to be a proper little foxy lady, do you?' Janice says teasingly as she strokes your face with one of her soft dainty paws teasingly. 'Well I think I could enjoy sharing my love for my new fur with a fellow fox lover like you...' she says with amusement as she begins to pull you down onto the couch next to her. You open your mouth to comment, only to find her narrow vulpine muzzle pressed up against your mouth as her sexy vulpine tongue explores your mouth adventurously. You can only moan into her muzzle as she rubs her soft silken white fur up against your desperately aroused body, something about the situation seeming increasingly right to your lust-filled mind as you begin to kiss her back eagerly. Before long you are both cuddling and kissing each other happily on the rather large couch, the feel of her soft white fur on your skin making you burn with desire for a lovely coat of sexy white fur all your own. After several minutes of heavy petting, Janice eventually lets you go, and she looks up at you teasingly as you barely manage to stand on your strangely shaky legs. 'Enjoy that did you? Just think how much more fun it will be as a proper vixen just like me... or even better, as a handsome stud fox... though a sexy pair of vixens could always find a nice stud to share, don't you think?' Janice whispers to you teasingly, her enticing words making you almost pant with desire as you think about all the sexy possibilities.";
-			infect "Arctic fox";
-			infect "Arctic fox";
+			infect "Arctic Fox";
+			infect "Arctic Fox";
 	else:
 		say "     'Sorry, but I am a bit more... selective in my choices of mates than that,' Janice says with a theatrical sigh, as she rubs her white furred legs together teasingly. 'Maybe once you have proven yourself a bit more... interesting, we can see...' she adds teasingly as she reaches out with one of her soft dainty paws to stroke your [Skin of Player] cheek for a second, before reclining back on her backless couch again.";
 
@@ -242,7 +242,7 @@ to say janiceoral:
 	say "     The snow white vixen presses her bosom down around your [Cock of Player] cock[smn], mashing those soft, warm globes around your meat. She rocks her chest forward, rubbing those beautiful tits of hers against your pulsing shaft[smn][if Cock Length of Player < 4], releasing it from time to time so she can lick and suck at your [cock size desc of Player] manhood[else] while running her tongue along it as well[end if]. She works her tongue expertly over your shaft, sliding sensually over your aroused flesh while sensually gazing up at you with a sexy smile on her muzzle.";
 	say "     Between her tonguework and the titty-fuck, it's not too long before you're moaning that you're about to cum. She brings her muzzle up to the top of your pulsing shaft, wrapping her lips around it while her paw finishes stroking you off. You blast your hot cream into her muzzle and down her throat, feeding the lustful vixen your cum. Once you're done, she grins and licks her lips slowly and runs her paws down her sexy body[if Ball Size of Player > 6], now greatly bloated from your huge output[else if Ball Size of Player > 5], now with a plumper belly from your large load[end if].";
 	NPCSexAftermath Janice receives "OralCock" from Player;
-	infect "Arctic fox";
+	infect "Arctic Fox";
 	now lastfuck of Janice is turns;
 
 
@@ -285,7 +285,7 @@ carry out Vixenposing:
 		increase diceroll by bonus;
 		if diceroll > 16:
 			say "'That's it! Now you are getting it!' Janice exclaims happily, as you begin to move and sway your body with an increasing amount of control[if Kristen is visible]. Kristen assists you as well, caressing a paw here or there to help you find the desired poses[end if]. The new positions become much more natural as [if Kristen is visible]Janice[else]she[end if] makes a few small corrections to your form, before pulling you to her in a happy kiss. Soon you find yourself grinning as she settles back down on her couch to watch you strut your new stuff, and as you strike an increasingly slutty and sexy pose for the lusty vixen[if Kristen is visible]s[end if], you find yourself sure that it will be hard for anyone to resist your charms now!";
-			infect "Arctic fox";
+			infect "Arctic Fox";
 			if charisma of Player < 24:
 				StatChange "charisma" by 1;
 		else:

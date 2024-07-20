@@ -223,7 +223,7 @@ to say Mortimer_PaymentOptionsTalk:
 	say "     'Sure thing, it's a really easy payment structure. Just one bottle of the cum, femcum or milk per occupied unit, every four days. Or you can go with the alternate, comfort variant and just make an agreement to let me harvest fluids to pay for your units myself. I guarantee that milking is the only thing I'll do. This way you don't have to worry about payments, and your goods will be more comfortable too, if they're not pent up with aching udders, balls, etc. Of course, you'll be able to individually pick what you want to do for every new unit, in case you got someone 'extra special' you want treated differently.'";
 	if the number of rows in Table of StoredSluts is not 0:
 		LineBreak;
-		say "     [bold type]'Wanna make any changes about your payments?[roman type][line break]";
+		say "     [bold type]'Wanna make any changes about your payments?'[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Set all to weekly payments.";
 		say "     [link](2)[as]2[end link] - Set all to be milked for fluids.";
 		say "     [link](3)[as]3[end link] - Individually go through the list and decide.";
@@ -374,7 +374,7 @@ to say Mortimer_MaleSlutsMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if "Joshiro" is listed in StoredSluts_Male:
+	if there is a name of "Joshiro" in the Table of StoredSluts:
 		choose a blank row in table of fucking options;
 		now title entry is "Joshiro";
 		now sortorder entry is 1;
@@ -412,7 +412,7 @@ to say Mortimer_OtherSlutsMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if "Snow" is listed in StoredSluts_Other:
+	if there is a name of "Snow" in the Table of StoredSluts:
 		choose a blank row in table of fucking options;
 		now title entry is "Snow";
 		now sortorder entry is 1;
@@ -421,8 +421,14 @@ to say Mortimer_OtherSlutsMenu:
 	if there is a name of "Eric" in the Table of StoredSluts:
 		choose a blank row in table of fucking options;
 		now title entry is "Eric";
-		now sortorder entry is 1;
+		now sortorder entry is 2;
 		now description entry is "Visit the cuntboy to have some fun";
+	[]
+	if there is a name of "Doctor Mouse" in the Table of StoredSluts:
+		choose a blank row in table of fucking options;
+		now title entry is "Doctor Mouse";
+		now sortorder entry is 3;
+		now description entry is "Visit the hulking mouse to have some fun";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -443,6 +449,8 @@ to say Mortimer_OtherSlutsMenu:
 					say "[StoredSlut_Snow]";
 				else if nam is "Eric":
 					say "[Eric_StorageVisit]";
+				else if nam is "Doctor Mouse":
+					say "[Mouse_StorageVisit]";
 				TraitGain "SlutUsed" for Mortimer;
 		else if calcnumber is 0:
 			now sextablerun is 1;

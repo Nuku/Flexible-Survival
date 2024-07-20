@@ -6,11 +6,6 @@ Version 1 of Amazonian by Stripes begins here.
 
 noamazoniansex is a number that varies.
 
-to say amazoniandesc:
-	setmongender 5;
-	say "     Before you is a tough, muscled woman with a no-nonsense expression on her beautiful face. She has a deep, bronze tan to her toned flesh. Her long, brown hair is tied back in a ponytail with a metal clasp, keeping it out of her eyes. This physically imposing woman wears a leather breastpiece with a fur ruff at her crotch. You notice a clear bulge down there, showing you just how self-sufficient this Amazonian woman is without a man.";
-	say "     Raising her weapon, she glares at you[if Player is not female]. 'You are unneeded here, worthless male. You will be shown your place,' she growls[else if Player is herm]. 'Ahh, another warrior woman to test myself against. Come, prove your might and you may be my mate,' she says with a lustful grin[else if Player is female]. 'Come here, sweet lass. Let me show you that you don't need a worthless male to please you,' she says with a lustful grin[end if].";
-
 to say losetoamazonian:
 	choose row MonsterID from the Table of Random Critters;
 	now noamazoniansex is 0;
@@ -41,7 +36,6 @@ to say losetoamazonian:
 		else:
 			CreatureSexAftermath "Player" receives "AssFuck" from "Amazonian";
 
-
 to say beattheamazonian:
 	say "     Having beaten the powerful woman, you look down at her. Beneath her loincloth you can see both her juicy cunt and her thick cock. It's clear she's gotten quite excited from the fight and is quite aroused in her defeat.";
 	if noamazoniansex > 2:
@@ -71,8 +65,18 @@ to say beattheamazonian:
 		say "     Having beaten the Amazonian woman and having no more use for her, you pull her to her feet and send her on her way with a firm swat on her rear as a reminder that she was beaten by you.";
 		increase noamazoniansex by 1;
 
-
 Section 2 - Creature Insertion
+
+to say amazoniandesc:
+	say "     Before you is a tough, muscled woman with a no-nonsense expression on her beautiful face. She has a deep, bronze tan to her toned flesh. Her long, brown hair is tied back in a ponytail with a metal clasp, keeping it out of her eyes. This physically imposing woman wears a leather breastpiece with a fur ruff at her crotch. You notice a clear bulge down there, showing you just how self-sufficient this Amazonian woman is without a man.";
+	say "     Raising her weapon, she glares at you[if Player is not female]. 'You are unneeded here, worthless male. You will be shown your place,' she growls[else if Player is herm]. 'Ahh, another warrior woman to test myself against. Come, prove your might and you may be my mate,' she says with a lustful grin[else if Player is female]. 'Come here, sweet lass. Let me show you that you don't need a worthless male to please you,' she says with a lustful grin[end if].";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Amazonian"	"[PrepCombat_Amazonian]"
+
+to say PrepCombat_Amazonian:
+	setmongender 5;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -130,7 +134,7 @@ When Play begins:
 	now lootchance entry is 12; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
-	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now TrophyFunction entry is "[GenerateTrophyList_Amazonian]"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[or]toned[or]feminine[at random]";
 	now type entry is "[one of]human[or]Amazonian[as decreasingly likely outcomes]";
@@ -246,7 +250,16 @@ When Play begins:
 
 
 
-Section 3 - Estosterogen Pill
+Section 3 - Loot table
+
+to say GenerateTrophyList_Amazonian:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "Amazonian hair" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "estosterogen pill" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -267,7 +280,7 @@ before using a grab object (called x):
 to say estosterogen pill use:
 	if Player is herm:		[HERM]
 		increase Cock Length of Player by 2;
-		increase Ball Size of Player by 1;
+		BallsGrow Player by 1;
 		increase Cunt Depth of Player by 2;
 		increase Cunt Tightness of Player by 1;
 		say "You feel a rush of warmth to your loins as your dual-gendered genitals grow suddenly. ";
@@ -286,7 +299,7 @@ to say estosterogen pill use:
 		say "As this is occurring, a twinge centered at your clit increases rapidly. With a sudden surge of growth, your love button enlarges into a phallic growth, soon becoming separate from the cunt from which it spawned to become a [cock size desc of Player] [Cock of Player] cock with its own set of balls[if CockName of Player is listed in infections of InternalCockList] forming inside you[end if]. ";
 	else if Player is male:				[MALE]
 		increase Cock Length of Player by 2;
-		increase Ball Size of Player by 1;
+		BallsGrow Player by 1;
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 6;
 		now Cunt Tightness of Player is 4;
@@ -316,6 +329,21 @@ to say estosterogen pill use:
 			if Breast Size of Player > 26, now Breast Size of Player is 26;
 			follow the breast descr rule;
 			say "With a feeling of tightness and a flush of warmth at your chest, you see your breasts inflating, giving you a set of [descr] tits.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Amazonian hair"	"A few strands of brown hair, deceptively simple and harmless despite where it came from. The strands feel smooth but tough."	1	Amazonian hair
+
+Amazonian hair is a grab object.
+It is temporary.
+Usedesc of Amazonian hair is "[Amazonian hair use]".
+
+to say Amazonian hair use:
+	say "Holding the strands of hair between your fingers, you find yourself with a sudden inexplicable urge to gain the strength held within. Bringing the hairs up to your head, you intermingle the brown strands close to the base of your own. Almost immediately, the strands escape your fingers, disappearing and leaving you moving your hands away in confusion.";
+	infect "Amazonian";
+
+instead of sniffing Amazonian hair:
+	say "The strands tickle at your nostrils, and you get the distinct scent of feminine strength, it burns a bit, as if a warning."
 
 
 [

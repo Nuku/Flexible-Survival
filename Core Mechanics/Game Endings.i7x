@@ -141,7 +141,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "rainy" as supersponsor.
+understand "summer" as supersponsor.
 
 when play ends:
 	clear the screen;

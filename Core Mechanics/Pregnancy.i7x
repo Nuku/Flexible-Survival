@@ -134,11 +134,11 @@ Definition: A person (called X) is fem_vacant: [Disregarding fertility, is X's c
 Definition: A person (called X) is mpreg_ok: [Can X become pregnant in general. Male]
 	if X is Player:
 		if Player is sterile, no; [not fertile]
-		if "MPreg" is listed in feats of Player and ( level of Velos is not 1 or HP of Velos < 3 ), yes;
+		if ("MPreg" is listed in feats of Player or "Mpreg" is listed in feats of Player) and ( level of Velos is not 1 or HP of Velos < 3 ), yes;
 		no;
 	else:
 		if X is sterile, no;
-		if "MPreg" is listed in traits of X, yes; [mpreg capable]
+		if ("MPreg" is listed in traits of X or "Mpreg" is listed in traits of X), yes; [mpreg capable]
 		no;
 
 Definition: A person (called X) is mpreg_able: [Can X be impregnated RIGHT NOW. Male]
@@ -147,12 +147,12 @@ Definition: A person (called X) is mpreg_able: [Can X be impregnated RIGHT NOW. 
 		if gestation of child > 0 or child is born, no; [currently pregnant]
 		if mpreghijack is true, no; [Velos]
 		if insectlarva is true and larvaegg is 2, no; [parasites]
-		if "MPreg" is listed in feats of Player, yes; [mpreg capable]
+		if ("MPreg" is listed in feats of Player or "Mpreg" is listed in feats of Player), yes; [mpreg capable]
 		no;
 	else:
 		if X is sterile, no; [not fertile]
 		if ImpregTimer of X > 0, no; [currently pregnant]
-		if "MPreg" is listed in traits of X, yes; [mpreg capable]
+		if ("MPreg" is listed in traits of X or "Mpreg" is listed in traits of X), yes; [mpreg capable]
 		no;
 
 Definition: A person (called X) is mpreg_now: [Is X currently pregnant. Male]
@@ -160,7 +160,7 @@ Definition: A person (called X) is mpreg_now: [Is X currently pregnant. Male]
 		if gestation of child > 0 and pregtype is 2, yes; [currently pregnant]
 		no;
 	else:
-		if "MPreg" is listed in traits of X and ImpregTimer of X > 0, yes; [currently pregnant]
+		if ("MPreg" is listed in traits of X or "Mpreg" is listed in traits of X) and ImpregTimer of X > 0, yes; [currently pregnant]
 		no;
 
 Definition: A person (called X) is male_vacant: [Disregarding fertility, is X's ass occupied by something]
@@ -170,7 +170,7 @@ Definition: A person (called X) is male_vacant: [Disregarding fertility, is X's 
 		if (gestation of child > 0 and pregtype is 2) or child is born, no;
 		yes;
 	else:
-		if "MPreg" is listed in traits of X and ImpregTimer of X > 0, no; [currently pregnant]
+		if ("MPreg" is listed in traits of X or "Mpreg" is listed in traits of X) and ImpregTimer of X > 0, no; [currently pregnant]
 		yes;
 
 preghijack is a truth state that varies. preghijack is usually false. [General-purpose variable for detailing a hijacked pregnancy]
@@ -528,6 +528,7 @@ To Birth:
 		LineBreak;
 		say "As you spend a little time with your 'offspring', you get the feeling that they have a [ChildPersonality] personality.";
 	else if "Chase's Breeder" is listed in feats of Player: [special NPC impregnation]
+		now IsFeral is false;
 		if Player is female and pregtype < 2:
 			say "     Vagina birth of the chosen one.";
 		else if Nipple Count of Player > 0:
@@ -542,6 +543,7 @@ To Birth:
 			say "regulars";
 		increase ChaseOffspring by 1;
 	else if "Chris's Breeder Slut" is listed in feats of Player: [Special Pregnancy from Warrior Chris]
+		now IsFeral is false;
 		if Player is female and pregtype < 2:
 			if Nipple Count of Player > 0:
 				say "     Your child [if ovipregnant is true]pushes free of the flexible shell enclosing it and you gather it into your arms so it may suckle[else]suckles[end if] at your [breast size desc of Player] breast. Strange sensations sweep over your [bodytype of Player] body as it drinks down its new mother's milk. ";
@@ -564,6 +566,7 @@ To Birth:
 		increase Stamina of Chris by 1;
 		increase ChrisPlayerOffspring by 1;
 	else if "Hive Breeder" is listed in feats of Player: [Special Pregnancy from wasp warrors]
+		now IsFeral is false;
 		if Player is female and pregtype < 2:
 			if Nipple Count of Player > 0:
 				say "     Your child pushes free of the flexible shell enclosing it and you gather the strange larva into your arms so it may suckle at your [breast size desc of Player] breast. Strange sensations sweep over your [bodytype of Player] body as it drinks down its new mother's milk, growing from a featureless lump of pale flesh into something more wasp-like. ";
@@ -581,6 +584,7 @@ To Birth:
 			say "     Stretching his wings, your offspring entwines antennae with you as if thanking you for his birth, then buzzes off in the direction of the hive, his nude body glistening in the [if daytimer is day]sunlight[else]moonlight[end if], still smooth and devoid of any of the fuzz you've grown used to seeing on yourself.";
 		increase thirst of Zant by 1;
 	else if Fang is Male and "Fang's Mate" is listed in feats of Player: [Special Pregnancy from Fang]
+		now IsFeral is false;
 		if hunger of Fang is 1:
 			if "All-Mother's Blessing" is listed in feats of Player: [Appeared in arms]
 				say "You and Fang watch in wonder as [if ovipregnant is true]the egg disintegrates, revealing a pair of wolf pups huddled together, [else]the pair of wolf pups disentangle themselves from each other in your arms, [end if]the two of you sharing a loving glance with each other. [if scalevalue of Player > 1]You hold them against your chest, their mouths eagerly searching for a nipple. [else]They appear to still be growing, and you are forced to place them on the ground as they reach a size similar to your own, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
@@ -604,7 +608,7 @@ To Birth:
 			now HP of Umbra is 1;
 			move Lux to Grey Abbey Library;
 			move Umbra to Grey Abbey Library;
-			now LuxUmbraMaturityCounter is 120;
+			now Charisma of Lux is 120;
 		else if hunger of Fang is 3:
 			increase Charisma of Fang by FangNewPuppies;
 			now FangNewPuppies is 0;
@@ -753,7 +757,7 @@ Chapter 3-1 - Impregnation and Ovi-Impreg Subroutines
 To impregnate with (x - text):
 	if child is born or gestation of child > 0 or "Sterile" is listed in feats of Player or larvaegg is 2 or ( Cunt Count of Player is 0 and player is not mpreg_ok ):
 		stop the action;
-	if Player is not female and "MPreg" is listed in feats of Player and ( level of Velos is 1 and HP of Velos > 2 ):
+	if Player is not female and ("MPreg" is listed in feats of Player or "Mpreg" is listed in feats of Player) and ( level of Velos is 1 and HP of Velos > 2 ):
 		stop the action;
 	if there is a name of x in the Table of Random Critters:
 		choose a row with Name of x in the Table of Random Critters;
@@ -966,7 +970,7 @@ to selfimpregnate:
 		say "     DEBUG: Self-Impregnation.";
 	if Player is not mpreg_able and player is not fpreg_able:
 		stop the action;
-	[if Player is not female and "MPreg" is listed in feats of Player and level of Velos is 1 and HP of Velos > 2:
+	[if Player is not female and ("MPreg" is listed in feats of Player or "Mpreg" is listed in feats of Player) and level of Velos is 1 and HP of Velos > 2:
 		stop the action;]
 	if "Selective Mother" is listed in feats of Player:
 		say "Do you wish to be self-impregnated?";

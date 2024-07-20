@@ -12,10 +12,39 @@ Definition: A person (Called x) is inWaspHive:
 
 An everyturn rule:
 	if "Wasp Royalty" is listed in feats of Player:
-		turn player into "Wasp King" silently;
+		if Nightmaretf > 0: [Nightmare]
+			if debugactive is 1:
+				say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Nightmare infection blocking it!>";
+			stop the action;
+		if wrcursestatus >= 7 and wrcursestatus < 100: [Were-raptor]
+			if debugactive is 1:
+				say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Wereraptor infection blocking it!>";
+			stop the action;
+		if (JackalManTF > 0 and JackalManTF < 5) or (JackalBoyTF > 0): [Jackalman Transformation]
+			if debugactive is 1:
+				say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Jackalman infection blocking it!>";
+			stop the action;
+		if isHellhound is true: [Hellhound]
+			if debugactive is 1:
+				say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Hellhound infection blocking it!>";
+			stop the action;
+		if "Ceryneian Blessed - Anthro" is listed in feats of Player:
+			if debugactive is 1:
+				say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Anthro Ceryneian infection blocking it!>";
+			stop the action;
+		if "Ceryneian Blessed - Feral" is listed in feats of Player:
+			if debugactive is 1:
+				say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Feral Ceryneian infection blocking it!>";
+			stop the action;
+		if "Ceryneian Blessed - Taur" is listed in feats of Player:
+			if debugactive is 1:
+				say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Taur Ceryneian infection blocking it!>";
+			stop the action;
+		else:
+			turn player into "Wasp King" silently;
 
 [Resolution Variables:
- Last stand: 
+ Last stand:
  1 - Player exiled Ziix. Blocks off becoming royalty and expanding the hive.
  2 - Player Saved Ziix. Ziix will act grateful.
  3 - Player ignored Ziix. Zant saves him instead. Ziix will be embarassed.
@@ -23,7 +52,7 @@ An everyturn rule:
  Rude Awakening:
  1 - Player fucked Zant.
  2 - Player declined Zant.
- 
+
  Broken But Alive:
  1 - Ziix has been exiled. Content involving becoming king is walled off. Slut storage content possible?
  2 - Ziix and Zant reunited. Player saved Ziix so he's awake.
@@ -33,6 +62,7 @@ An everyturn rule:
  Thirst of Zant: Number of wasps that the player has birthed as the Wasp King. Changes the hive's appearance and layout. Also unlocks Byz.
 
  Hunger of Ziix: Whether you declined to be king or became king. Walls off that path if it's at 100.
+ 81 - Convinced to stay in an apartment as your fucktoy.
  99 - Became King. (Unlocks another scene to regain king infection.)
  100 - Brought up being the king and then decided against it.
 
@@ -620,6 +650,7 @@ to say ResolveEvent Last Stand:
 				say "[ZiixSodaChoice]";
 			else:
 				say "     Sadly, you don't have anything that could help. Maybe another of the warrior's hivemates survived the purge and could help you rouse him? You don't think you have time to scavenge and return!";
+				now Resolution of Last Stand is 2;
 		else:
 			say "     The wasp man charges you before you convince him that you aren't a threat, saying something intelligible about dragging you to death with him. It seems you have no choice but to fight him. Thankfully, despite his muscles and size, he's unsteady and unable to focus on you, let alone aim his attacks. It shouldn't be hard to take him down.";
 			now inasituation is true;
@@ -679,7 +710,7 @@ to say ZiixSodaChoice:
 					say "Shrugging, you walk away, letting the poor thing sleep it off.";
 				-- "Kick him out. How dare he attack you!":
 					say "[ZiixExile]";
-		else: 
+		else:
 			LineBreak;
 			say "     You decide against giving the half-conscious wasp soda. What if he chokes? However, you're sure that you need to do SOMETHING. Maybe one of his hivemates survived and can help you rouse the poor wretch.";
 			now Resolution of Last Stand is 2; [player didn't help the soldier wasp]
@@ -738,7 +769,7 @@ Object	Name
 Broken But Alive	"Broken But Alive"
 
 Broken But Alive is a situation.
-ResolveFunction of Broken But Alive is "[ResolveEvent Broken  But Alive]".
+ResolveFunction of Broken But Alive is "[ResolveEvent Broken But Alive]".
 Sarea of Broken But Alive is "Nowhere".
 Prereq1 of Broken But Alive is Last Stand.
 Prereq1Resolution of Broken But Alive is { 1, 2, 3 }.

@@ -87,6 +87,13 @@ To say Manticore loss:
 
 Section 2 - Creature Insertion
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Manticore"	"[PrepCombat_Manticore]"
+
+to say PrepCombat_Manticore:
+	setmongender 3;
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -113,7 +120,7 @@ When Play begins:
 	now attack entry is "[one of]A quick strike of a clawed hand sends you reeling back![or]The manticore charges into you in an attempt to headbutt you![or]Roaring loudly the manticore makes you freeze for a split second![or]Using his powerful tail the manticore deflects you incoming attack and the counters with his own![or]Pouncing on you the winged lion savagely strikes you twice before moving off of you![or]Flying up into the air the manticore dive-bombs at you![at random]";
 	now defeated entry is "[Manticore loss]";
 	now victory entry is "[Manticore attack]";
-	now desc entry is "[mongendernum 3]The beat of red wings has you looking around and then up for danger. However, nothing can prepare you for what you find as a large black maned lion with rust red fur and a long scorpion tail drops down onto the ground in front of you. Larger than a normal lion and covered in a spiky crimson pelt, the creature glares at you hotly while folding its large wings behind its back and then roars a challenge at you.";
+	now desc entry is "     The beat of red wings has you looking around and then up for danger. However, nothing can prepare you for what you find as a large black maned lion with rust red fur and a long scorpion tail drops down onto the ground in front of you. Larger than a normal lion and covered in a spiky crimson pelt, the creature glares at you hotly while folding its large wings behind its back and then roars a challenge at you.";
 	now face entry is "strong and angular, the likes of which you can be proud of as it shows off your leonine features. Rounded furry ears twitching curiously up above on your head, you possess a jet black mane framing the outer edges of your face to hide said ears from being seen by most. Narrow golden eyes look out to the world around you as your feline features jut out almost arrogantly at all those who would look upon your face"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "thrums with ancient power as the blood of the legendary manticore sings throughout your veins. With the quadrupedal frame of a normal lion, you stand almost half a foot taller than the average king of beasts as thick muscular legs hold up your powerfully built, if not slightly bulky frame. A pair of red, bat-like wings flap slightly against your back"; [ Body Description, format as "Your Body (your text)"]
 	now skin entry is "[one of]rust red furred[or]spiky furred[or]a dense and course pelt covers your[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]

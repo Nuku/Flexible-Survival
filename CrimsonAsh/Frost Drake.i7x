@@ -5,7 +5,6 @@ Version 1 of Frost Drake by CrimsonAsh begins here.
 Section 1 - Creature Responses
 
 to say FrostDrakeDesc:
-	setmongender 3;
 	say "     Walking along the forest landscape, you hear an aggressive, reptilian-like bark. Turning around, you manage to quickly move to the side as a large figure shoots past you until it slows to a stop and turns to face you. The creature before you is a quadrupedal drake that moves with wicked sharp claws. It stands nearly six feet off the ground and is about ten feet in length, including another six feet of tail. It has silver-white scales, glowing yellow eyes, and is definitely a [']he['] if his slowly hardening, foot-long dragon cock is anything to go off of. He lets out another bark and a low growl before pouncing forward toward you.";
 
 to say LoseToFrostDrake:
@@ -191,6 +190,13 @@ to say FrostDrakeRide:
 		WaitLineBreak;
 		say "     Your galloping of the drake's hips eventually come to an end. You slow to a stop and again look down with a smile at the passed out drake, dark tongue lolled out of his toothy maw. You withdraw even slower, letting the spunk slowly ooze out of your ass, sending little shivers down your back that then drip out of you. Standing above the beaten draconic monster you give a stretch and step away from his warm fuck-mass. Collecting your things and cleaning yourself off as best you can you walk off, thinking of warm scaly lovers writhing beneath your body while you do.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Frost Drake";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Frost Drake"	"[PrepCombat_Frost Drake]"
+
+to say PrepCombat_Frost Drake:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

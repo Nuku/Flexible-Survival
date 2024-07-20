@@ -6,35 +6,31 @@ Version 1 of Xeno by Stripes begins here.
 Section 1 - Creature Responses
 
 to say xenodesc:
-	setmongender 5; [creature is herm]
 	say "     Before you is a black and horrifying creature of film nightmares. Its entire body is encased in a hard, black exoskeleton that is cold to the touch and has a smooth, glistening appearance. This vaguely insectile creature has a thin, elongated skull that curves backwards towards the top. It has black eyes encased in sunken eye sockets. It has no gums; its teeth are silvery, long, straight, and densely packed in several rows. As it opens its mouth, you see a smaller mouth extend out of its larger mouth with smaller but equally fearsome razor-sharp teeth. Its animal-like body has hints of feminine curves and wide hips you can see as it shifts easily between walking upright and on all fours. Its exoskeleton shows exposed ribs and other hard, bony plates to protect it while several breathing tubes extend from its back, providing the creature with the added oxygen it needs for the hunt.";
 	say "     The alien creature's arms and legs bend in odd places and its sharp claws make almost no noise as they touch the ground or grip easy onto any surface for purchase. The creature crawls over the nearby rubble and debris with ease, moving swiftly and silently towards you. Those limbs seem lean and sleek, but also powerful with those sharp claws. It has a long tail consisting of many bony segments that hovers behind her, flashing its pointed, speared tip which it has at the ready.";
 	say "     As it approaches you, you see it extend a strange, dripping pseudopod ending in short, inch long tendrils and a gaping, vaginal hole.";
 
-
 to say losetoxeno:
 	choose row MonsterID from the Table of Random Critters;
-	if inasituation is false:
-		say "     You are knocked down by the powerful creature and pinned beneath it. It hisses at you, extending its inner mouth and dripping thick slime onto your cheek as it stares down at you, small nasal holes flaring as it takes in your scent.";
-		if Player is kinky and a random chance of 1 in 3 succeeds: [Link with Xenomorph Nest (bound inside nest)]
-			say "     Instead of having its way with you, the creature violently bashes your head on the floor, knocking you out on the spot. As your consciousness fades, you feel the monster grab your leg and drag you to an unknown place.";
-			xenoNestFailure;
-		else if Player is female:
-			say "     The xenomorphic creature, as if scenting what it wants, pushes your legs apart with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe into you, pushing into your pussy and sliding up to your womb. The black flesh pulses and shoots a thick, green goo into your cunt, making it slick and easy to penetrate. At your cervix, its tendrils squirm and rub, working your cervix until it opens and allows it entry. Once inside your womb, you feel a much thicker bulge pressing into you as an egg starts to travel up the ovipositor and into you to be deposited into your womb. More eggs follow after the first as your belly is stuffed with as many of the fleshy orbs as you can take[if Player is male]. As these push past your clit, you can't help but cum, moaning loudly as the alien creature violates you[end if].";
-			say "     After the ovipositor is withdrawn and you're released, you stumble away as best you can being so laden down with eggs. Feeling your belly squirm and seeing the eggs already writhing and shifting inside you, you find somewhere secluded and deposit them, hoping you've managed to get them all out.[ovichance]";
+	say "     You are knocked down by the powerful creature and pinned beneath it. It hisses at you, extending its inner mouth and dripping thick slime onto your cheek as it stares down at you, small nasal holes flaring as it takes in your scent.";
+	if Player is kinky and a random chance of 1 in 3 succeeds: [Link with Xenomorph Nest (bound inside nest)]
+		say "     Instead of having its way with you, the creature violently bashes your head on the floor, knocking you out on the spot. As your consciousness fades, you feel the monster grab your leg and drag you to an unknown place.";
+		xenoNestFailure;
+	else if Player is female:
+		say "     The xenomorphic creature, as if scenting what it wants, pushes your legs apart with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe into you, pushing into your pussy and sliding up to your womb. The black flesh pulses and shoots a thick, green goo into your cunt, making it slick and easy to penetrate. At your cervix, its tendrils squirm and rub, working your cervix until it opens and allows it entry. Once inside your womb, you feel a much thicker bulge pressing into you as an egg starts to travel up the ovipositor and into you to be deposited into your womb. More eggs follow after the first as your belly is stuffed with as many of the fleshy orbs as you can take[if Player is male]. As these push past your clit, you can't help but cum, moaning loudly as the alien creature violates you[end if].";
+		say "     After the ovipositor is withdrawn and you're released, you stumble away as best you can being so laden down with eggs. Feeling your belly squirm and seeing the eggs already writhing and shifting inside you, you find somewhere secluded and deposit them, hoping you've managed to get them all out.[ovichance]";
+	else:
+		let mchance be 4;
+		if Player is submissive, increase mchance by 2;
+		if anallevel is 3, increase mchance by 2;
+		if Player is mpreg_ok, increase mchance by 2;
+		if anallevel is 1, now mchance is 0;
+		if Player is not male or a random chance of mchance in 12 succeeds:
+			say "     The xenomorphic creature, as if scenting what it wants, pushes onto all fours with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe into you, pushing into your ass and sliding into your bowels. The black flesh pulses and shoots a thick, green goo into your ass, making it slick and easy to penetrate. Its tendrils squirm and rub, teasing your [if Player is male]prostate[else]inner walls[end if] and exciting you despite the horrifying situation. But it doesn't thrust into you, instead staying buried deep inside you and stimulating you from within. As it does so, you feel a much thicker bulge pressing into you as an egg starts to travel up the ovipositor and into you to be deposited into your belly. More eggs follow after the first as your belly is stuffed with as many of the fleshy orbs as you can take[if Player is male]. As these push past your prostate, you can't help but cum, moaning loudly as the alien creature violates you[end if].";
+			say "     After the ovipositor is withdrawn and you're released, you stumble away as best you can being so laden down with eggs. Feeling your belly squirm and seeing the eggs already writhing and shifting inside you, you find somewhere secluded and deposit them, hoping you've managed to get them all out.[movichance]";
 		else:
-			let mchance be 4;
-			if Player is submissive, increase mchance by 2;
-			if anallevel is 3, increase mchance by 2;
-			if Player is mpreg_ok, increase mchance by 2;
-			if anallevel is 1, now mchance is 0;
-			if Player is not male or a random chance of mchance in 12 succeeds:
-				say "     The xenomorphic creature, as if scenting what it wants, pushes onto all fours with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe into you, pushing into your ass and sliding into your bowels. The black flesh pulses and shoots a thick, green goo into your ass, making it slick and easy to penetrate. Its tendrils squirm and rub, teasing your [if Player is male]prostate[else]inner walls[end if] and exciting you despite the horrifying situation. But it doesn't thrust into you, instead staying buried deep inside you and stimulating you from within. As it does so, you feel a much thicker bulge pressing into you as an egg starts to travel up the ovipositor and into you to be deposited into your belly. More eggs follow after the first as your belly is stuffed with as many of the fleshy orbs as you can take[if Player is male]. As these push past your prostate, you can't help but cum, moaning loudly as the alien creature violates you[end if].";
-				say "     After the ovipositor is withdrawn and you're released, you stumble away as best you can being so laden down with eggs. Feeling your belly squirm and seeing the eggs already writhing and shifting inside you, you find somewhere secluded and deposit them, hoping you've managed to get them all out.[movichance]";
-			else:
-				say "     The xenomorphic creature, as if scenting what it wants, pushes you onto your back with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe to your cock. Gripping your glans with the short tendrils, these pull your cock into the vaginal opening and start feeding your meat into its throbbing, pulsing hole. It squeezes and sucks at your shaft, stretching to fully cover your length until those tendrils are squeezing and massaging at your balls. You moan loudly and cum repeatedly until your balls are fully drained into the alien creature. Not sated, but having gotten all it can from you, it releases your cock with a wet, sticky slurp and a splatter of thick, green slime. It runs its sharp claws across your flesh almost tenderly, drooling over your face before rising and driving you from its territory.";
-		infect;
-
+			say "     The xenomorphic creature, as if scenting what it wants, pushes you onto your back with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe to your cock. Gripping your glans with the short tendrils, these pull your cock into the vaginal opening and start feeding your meat into its throbbing, pulsing hole. It squeezes and sucks at your shaft, stretching to fully cover your length until those tendrils are squeezing and massaging at your balls. You moan loudly and cum repeatedly until your balls are fully drained into the alien creature. Not sated, but having gotten all it can from you, it releases your cock with a wet, sticky slurp and a splatter of thick, green slime. It runs its sharp claws across your flesh almost tenderly, drooling over your face before rising and driving you from its territory.";
+	infect;
 
 to say beatthexeno:
 	choose row MonsterID from the Table of Random Critters;
@@ -59,6 +55,13 @@ to say beatthexeno:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Xeno Drone"	"[PrepCombat_Xeno Drone]"
+
+to say PrepCombat_Xeno Drone:
+	setmongender 5; [creature is herm]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

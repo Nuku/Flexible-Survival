@@ -20,7 +20,9 @@ to say wrestlingwolfattack:
 		say "     With a howl the Wrestler Wolf unloads his load all over your [BodyType of Player] body. The wrestler grins in satisfaction as he watches some of his cum seep through your [SkinSpeciesName of Player in lower case] hide. 'This will make finding you a lot easier,' the wrestler says pulling back up his briefs. He picks you up and tosses you out of his makeshift ring. 'Next time you're definitely gonna give me a workout. One way or another,' the Wrestler Wolf says, eyeing you lustfully as you walk away, still a bit sore and covered in his hot seed.";
 		if "Male Preferred" is not listed in feats of Player:
 			if Player is not female:
-				if "Microwaved" is listed in feats of Player:
+				if "Single Sexed" is listed in feats of Player and Player is male:
+					say "Thankfully, your body resists growing a new vagina since you already have male parts.";
+				else if "Microwaved" is listed in feats of Player:
 					say "WARNING: Sex shifting nanites detected! Allow?";
 					if Player consents:
 						say "OK.";
@@ -85,7 +87,9 @@ to say wrestlingwolfattack:
 				say "     'Tch, looks like ya haven't the right type of equipment for this,' he sighs, pulling down his Wrestling Briefs and revealing his erect shaft. 'Guess the last time wasn't enough,' he says as he began to rub his shaft above you. 'Ya see, I've noticed that whenever my seed gets onto or into someone, they grow a nice little pussy for me to use,' he says, pumping his shaft even harder. With a howl, the Wrestling Wolf unloads his load all over your [BodyType of Player] body. The wrestler grins in satisfaction as he watches ome of his cum seep through your [SkinName of Player].";
 				say "     'There we go. Maybe now you'll grow a nice little pussy for me,' the wrestler says before pulling his briefs back up. He picks you up and tosses you out of his makeshift ring. 'I'll be expecting a little something from ya the next time we fight,' the Wrestler Wolf says, eyeing you lustfully as you walk away, still a bit sore and covered in his hot seed.";
 				if "Male Preferred" is not listed in feats of Player:
-					if Player is not female:
+					if "Single Sexed" is listed in feats of Player and Player is male:
+						say "Thankfully, your body resists growing a new vagina since you already have male parts.";
+					else if Player is not female:
 						say "     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
 						now Cunt Count of Player is 1;
 						now Cunt Tightness of Player is 1;
@@ -113,16 +117,22 @@ to say beatthewrwolf:
 
 
 to say wrwolfdesc:
-	project Figure of WrestlingWolf_clothed_icon;
-	setmongender 3; [creature is male]
 	if wrwolfseen is false:
 		say "     Your wandering across the campus is interrupted as you hear a loud voice call out. Looking over, you spot a large, muscled wolf in a wrestling outfit. He's set up an impromptu ring beside the building you just passed. 'Ahh! My alma mater! It's good to be back,' he says. 'I should be able to have a few good matches here,' he says, looking around. You try to sneak away, but he spots you. 'You should do fine for a warm-up match.'";
 		now wrwolfseen is true;
-	say "     You are grabbed from behind and carried not too far off to the makeshift wrestling ring set up by that wrestling wolf. You are tossed into the ring, followed by the tall male wolf bounding over the ropes to join you. His thick black fur a bit rugged and unkempt. He stands over eight feet tall and is impressively muscled. He wears what appears to be a wrestling mask and a pair of wrestling briefs; you figure he was some kind of wrestler before the infection took place. '[one of]Sorry ta treat ya like that, but I just couldn't wait any longer I have ta fight ya[or]Ya looked strong. Maybe you can make this fight not a bore[or]Finally someone to fight. Everyone else around here is too much of a coward to fight me again[at random],' he says before getting into a fighting position, his wolven tail swinging excitedly behind him.";
+	say "     You are grabbed from behind and carried not too far off to the makeshift wrestling ring set up by that wrestling wolf. You are tossed into the ring, followed by the tall male wolf bounding over the ropes to join you. His thick black fur a bit rugged and unkempt. He stands over eight feet tall and is impressively muscled. He wears what appears to be a wrestling mask and a pair of wrestling briefs; you figure he was some kind of wrestler before the infection took place. '[one of]Sorry ta treat ya like that, but I just couldn't wait any longer I have ta fight ya[or]Ya looked strong. Maybe you can make this fight not a bore[or]Finally someone to fight. Everyone else around here is too much of a coward to fight me again[at random],' he says before getting into a fighting position, his wolfen tail swinging excitedly behind him.";
 	now chargeup is 0;
 	now wwheal is 0;
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Wrestling Wolf"	"[PrepCombat_Wrestling Wolf]"
+
+to say PrepCombat_Wrestling Wolf:
+	project Figure of WrestlingWolf_clothed_icon;
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -251,7 +251,6 @@ Instead of conversing the Sgt Marks:
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
-		now mqstatus is 3;
 		now Sgt Marks is nowhere;
 		say "[line break][motelquest]";
 	else if mqcountdown < 8:
@@ -275,6 +274,7 @@ the fuckscene of Sgt Marks is "     'Smarten up and save it for those fine pussi
 Section 3 - Motel Quest
 
 to say motelquest:
+	now mqstatus is 3;
 	say "     Having agreed to join him, you follow the tiger cop across the city, traveling to the motel where the tigress hookers are holed up. On the way, he doesn't talk much, just telling you that there are quite a few of them, but they're never all at the motel at once. There are always some on duty, as it were. You both will split the rooms, taking care of any tigresses in there and then you two can double-team the others as they return home.";
 	say "     The intimidating tiger seems to keep the other creatures at bay and you are not harassed on your journey. Perhaps word in the neighborhood has gotten around that he's trouble. You remain on edge, but aside from a few creatures fleeing from the sight of him, you are not interrupted.";
 	WaitLineBreak;
@@ -289,67 +289,68 @@ to say motelquest:
 	else:
 		say "     You head over to the tigress, acting as if you intend to be a client until you get close to her, then engage her in combat. While you fight the tigress, you can see Sergeant Marks head to the nearest room on the ground floor.";
 		LineBreak;
-		now mqfightresult is 3; [set to fled by default]
 		now inasituation is true;
+		say "     The lovely tigress is quite upset at the intruder to her motel home. She growls angrily and readies to deal with you soundly so she can have her way with you and put you in your place. Under her.";
 		challenge "Malayan Tiger Herm";
 		now inasituation is false;
-		if mqfightresult is 3:
-			say "[mqranaway]";
-			stop the action;
-		else if mqfightresult is 2:
+		if fightoutcome < 20: [player won]
+			say "     You manage to subdue the tigress on guard and take look at the rooms and a quick glance up the stairs. No one seems to have noticed the disturbance. There's some noise coming from the first ground floor room where your ally has gone in, but it's hard to tell if it's fighting or sex. With two randy tiger creatures in there, you can't really be sure.";
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "[mqlostfight]";
 			stop the action;
-		say "     You manage to subdue the tigress on guard and take look at the rooms and a quick glance up the stairs. No one seems to have noticed the disturbance. There's some noise coming from the first ground floor room where your ally has gone in, but it's hard to tell if it's fighting or sex. With two randy tiger creatures in there, you can't really be sure.";
+		else if fightoutcome is 30: [fled]
+			say "[mqranaway]";
+			stop the action;
 	WaitLineBreak;
 	say "     You dash up the stairs and onto the second floor balcony. You burst through the first door, weapon raised, but find it empty. Well, good. Fewer for you to deal with. You move to the next and find it empty as well. Two for two.";
 	say "     At the third, your luck runs out. There is a tigress sprawled across the bed, pumping a large dildo she's picked up somewhere while working a paw over her thick, feline cock. With her filled, stuffed pussy facing right at you, you are stopped short in shock. Seeing you at the door, she glances from you to the sextoy a few times, then yanks the plastic thing out, eyeing the live toy that's come to play.";
 	LineBreak;
-	now mqfightresult is 3; [set to fled by default]
 	now inasituation is true;
+	say "     The lovely tigress is quite upset at the intruder to her motel home. She growls angrily and readies to deal with you soundly so she can have her way with you and put you in your place. Under her.";
 	challenge "Malayan Tiger Herm";
 	now inasituation is false;
-	if mqfightresult is 3:
-		say "[mqranaway]";
-		stop the action;
-	else if mqfightresult is 2:
+	if fightoutcome < 20: [player won]
+		say "     After beating the tigress, you shove her back down onto the bed, face first. You grab the glistening dildo and sink it into her tailhole, making her mewl in painful pleasure. You pump it into her again and again until she's a quivering ball of lust pleasuring herself on the bed once again, laying in a wet puddle of her own cum. You'd play with your new kitty toy more, but you remember that you have more rooms to deal with.";
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "[mqlostfight]";
 		stop the action;
-	say "     After beating the tigress, you shove her back down onto the bed, face first. You grab the glistening dildo and sink it into her tailhole, making her mewl in painful pleasure. You pump it into her again and again until she's a quivering ball of lust pleasuring herself on the bed once again, laying in a wet puddle of her own cum. You'd play with your new kitty toy more, but you remember that you have more rooms to deal with.";
+	else if fightoutcome is 30: [fled]
+		say "[mqranaway]";
+		stop the action;
 	WaitLineBreak;
 	say "     You open the door to the next room, number 10, and find another female tigress on the bed. This one has what you presume is, or was, a client in bed with her. On the bed is a strange mouse-tiger hybrid with a collar around her neck and a leash tied to the bedpost. The hybrid has blue fur, but tiger stripes and has rather feline features, though the ears and tail are still mouse-like. Under the mouse's balls is a small, wet snatch. Presumably the feline lured this john back to her room and has been using him like her playtoy while making another tigress herm of him.";
 	say "     The tigress growls at the interruption, pulling her cock from the striped mouse's muzzle, then pushes her back as she climbs off the bed to deal with you for interrupting her playtime. The hybrid on the bed only mewls and squeaks, reaching out imploringly from the end of her leash to either of you in lustful need, fingering herself as you both fight.";
 	LineBreak;
-	now mqfightresult is 3; [set to fled by default]
 	now inasituation is true;
+	say "     The lovely tigress is quite upset at the intruder to her motel home. She growls angrily and readies to deal with you soundly so she can have her way with you and put you in your place. Under her.";
 	challenge "Malayan Tiger Herm";
 	now inasituation is false;
-	if mqfightresult is 3:
-		say "[mqranaway]";
-		stop the action;
-	else if mqfightresult is 2:
+	if fightoutcome < 20: [player won]
+		say "     Having dealt with the tigress, you shove her back onto the bed, right on top of the hybrid, then step up to them both. Grabbing both their heads, you press them to your groin. They start to lick and kiss at your genitals eagerly, with moans, mewls and squeaks of desire. You rub their ears and let them tend to you until you finally cum.";
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "[mqlostfight]";
 		stop the action;
-	say "     Having dealt with the tigress, you shove her back onto the bed, right on top of the hybrid, then step up to them both. Grabbing both their heads, you press them to your groin. They start to lick and kiss at your genitals eagerly, with moans, mewls and squeaks of desire. You rub their ears and let them tend to you until you finally cum.";
-	say "     Your desires met, you shove the tigress down onto the transforming herm, telling her to get back to work and that you'll back to play with them both later. You stay to watch the tigress's cock sinking into the virgin mouse hole before heading out to finish your work. You expect there'll be another tigress among the girls quite shortly.";
-	WaitLineBreak;
-	say "     You smile as you continue on. Things have gone quite well. You can hear the sounds of rutting felines somewhere beneath you. The cop has been continuing on the other rooms as well. You're almost done. The next room along is empty and chances are looking good that you'll be able to get back to the previous room and watch the mouse finish changing. You grow aroused at the thought of watching what remains of the mouse guy turn into another lusty tigress.";
+	else if fightoutcome is 30: [fled]
+		say "[mqranaway]";
+		stop the action;
+	say "     Your desires met, you shove the tigress down onto the transforming herm, telling her to get back to work and that you'll back to play with them both later. You stay to watch the tigress's cock sinking into the virgin mouse hole before heading out to finish your work. You expect there'll be another tigress among the girls quite shortly. You smile as you continue on. Things have gone quite well. You can hear the sounds of rutting felines somewhere beneath you. The cop has been continuing on the other rooms as well. You're almost done. The next room along is empty and chances are looking good that you'll be able to get back to the previous room and watch the mouse finish changing. You grow aroused at the thought of watching what remains of the mouse guy turn into another lusty tigress.";
 	WaitLineBreak;
 	say "     With images of that playing out in your mind, you go in the final room on the upper floor. In there, your hopes of getting back to room 10 are dashed. Seated on the large bed in what was once the motel's luxury suite, is a tigress much larger than any of the others. This strong looking woman has a good foot more height on any of her girls. She's loosely wearing a silk robe over her ample bosom. Poking from it is her large, twelve inch ebon member, which is being attended to by blonde-haired tigress. Another tigress is spread out on the floor, with one of the large tigress's feet rubbing her sticky cock. Others are sprawled out on the bed or snuggling in the corner.";
 	say "     All feline eyes in the room lock on you and narrow into tight slits. Several of the girls start to get up, but their matron motions for them to wait as she gets up instead, ready to deal with this upstart intruder, this rude interruption, this new toy.";
 	now mqstatus is 6;
 	LineBreak;
-	now mqfightresult is 3; [set to fled by default]
 	now inasituation is true;
+	say "     The tigress matron of the motel is a larger and more impressive female. She's got an extra foot of height on any of her girls and a much fuller rack as well. her long, flowing orange hair swishes as she pulls off the bathrobe she was wearing, baring her strong and sensual body to you. She looks at you with a strange expression, clearly not pleased that you've burst in here after hurting several of her girls, but eager to put you in your place. her dark nipples and cock are hard with her anticipation of enjoying a new plaything.";
 	challenge "Malayan Tiger Herm"; [mqstatus 6 will adjust stats to Matron level]
 	now inasituation is false;
-	if mqfightresult is 3:
-		say "[mqranaway]";
-		stop the action;
-	else if mqfightresult is 2:
+	if fightoutcome < 20: [player won]
+		say "[mqsuccess]";
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "[mqlostfight]";
 		stop the action;
-	say "[mqsuccess]";
-
+	else if fightoutcome is 30: [fled]
+		say "[mqranaway]";
+		stop the action;
 
 to say mqranaway:
 	say "     Fleeing the motel, you hear the alarm sound as you get to safety in a nearby building. From the shadows, you see the mob of tigresses from the top floor spill down to the ground floor, charging to tackle the cop as he tries to get away while the alarm is sounded. They bear him down by sheer numbers and tear the clothes from him as he screams your name in anger at your betrayal.";
@@ -357,7 +358,6 @@ to say mqranaway:
 	decrease score by 25;
 	now mqstatus is 4;
 	stop the action;
-
 
 Section 4 - Lost at Motel
 
@@ -642,15 +642,6 @@ to say turning tricks:
 Section 8 - Monster Desc for Tiger Cop
 
 to say tigercopdesc:
-	project Figure of SgtMarks_clothed_icon;
-	setmongender 3; [creature is male]
-	choose row MonsterID from the Table of Random Critters;
-	let debit be 0;
-	if HardMode is true and level of Player > 8, let debit be level of Player - 8; [Boss hard mode growth rates]
-	now HP entry is 90 + ( debit * 6 );
-	now monsterHP is 90 + ( debit * 6 );
-	now wdam entry is 12 + ( ( 4 * debit ) / 11 );
-	now lev entry is 8 + debit;
 	if mqstatus is 98:
 		say "     The feline policeman growls as he looms over you, ready to take another swing. The large tigerman appears to be done with talking and is quite intent on fighting. You dodge back a step and ready your weapon to try and deal with the animalistic cop. Unlike your other foes, he's not fallen into being an instinctual creature of lust, so you're unsure what to expect.";
 	else:
@@ -765,6 +756,21 @@ To say beattigercop:
 			increase tcopfight by 1;
 
 Section 9 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Malayan Tiger Male"	"[PrepCombat_Malayan Tiger Male]"
+
+to say PrepCombat_Malayan Tiger Male:
+	project Figure of SgtMarks_clothed_icon;
+	setmongender 3; [creature is male]
+	choose row MonsterID from the Table of Random Critters;
+	let debit be 0;
+	if HardMode is true and level of Player > 8, let debit be level of Player - 8; [Boss hard mode growth rates]
+	now HP entry is 90 + ( debit * 6 );
+	now monsterHP is 90 + ( debit * 6 );
+	now wdam entry is 12 + ( ( 4 * debit ) / 11 );
+	now lev entry is 8 + debit;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -8,11 +8,11 @@ Use slow route-finding.
 [ The following adjust Informs compiler settings so that it allocates enough space. If these values are incorrect, inform will fail to compile.]
 [ To determine if one of these is your issue, use the Errors tab in the inform 7 window. ]
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
-Use MAX_PROP_TABLE_SIZE of 51000000.
+Use MAX_PROP_TABLE_SIZE of 8000000.
 use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1700.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
-use MAX_NUM_STATIC_STRINGS of 370000. [ Code 10 ]
+use MAX_NUM_STATIC_STRINGS of 500000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 250000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 5000.
@@ -245,6 +245,7 @@ Include Power Plant by Hellerhound.
 Include Qytat a'th Lundrues by SgtPepper234.
 Include Red Light District by Wahn.
 Include Shag Shack by Wahn.
+Include Sinking Swamp by Voidsnaps.
 Include SlutStorage by Wahn.
 Include SlutStorage_Eric by Wahn.
 Include Snapjaw Beach Camp by Gherod.
@@ -269,6 +270,7 @@ Include Ancient Tome by Wahn.
 Include Apartment 319 by Kaleem Mcintyre.
 Include Assorted Events by Stripes.
 Include Avatar of Hope by Prometheus.
+Include Addicted Breeder by Voidsnaps.
 Include Beach Events by Sarokcat.
 Include Black Pearl by Guest Writers.
 Include Bouncy Castle by Stripes.
@@ -311,6 +313,7 @@ Include Forest Events by Defth.
 Include Forest Gang Bang by Defth.
 Include Gildwing Kobold Events by Taelyn.
 Include Greek Mythos by Prometheus.
+Include Haunted Mansion by Voidsnaps.
 Include HellHound by Speedlover.
 Include High Rise Events by Stripes.
 Include High Rise Events by Wahn.
@@ -336,6 +339,7 @@ Include Main Storyline by Wahn.
 Include Male Dorm Events by Rikaeus.
 Include Mall Events by Sarokcat.
 Include Mall Expansion by Wahn.
+Include Mimic by Voidsnaps.
 Include Misc Events by Pandemonium.
 Include Misc 10 by Kaleem mcintyre.
 Include Misc 3 by Kaleem mcintyre.
@@ -365,7 +369,7 @@ Include Random Events by Guest Writers.
 Include Rane Events by Wahn.
 Include Recordings by Wahn.
 Include Red Events by Stripes.
-Include Reservoir by Kaleem Mcintyre.
+Include Rock And A Hard Place by Voidsnaps.
 Include Rubber Sneakers by Kernog.
 Include Satyr Frat by Wahn.
 Include Save the Dame by Kaleem Mcintyre.
@@ -383,6 +387,7 @@ Include Stable Related Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
 Include Sugar Feud by AGentlemanCalledB.
 Include Sunbathing Gator by Voidsnaps.
+Include Swamp Storyline by Voidsnaps.
 Include TFTG Feats by Luneth.
 Include Tidepool Event by Guest Writers.
 Include Toy Store by Song.
@@ -425,7 +430,6 @@ Include Behemoth by Kaleem mcintyre.
 Include Bird of Paradise by Stripes.
 Include Black Equinoid by Song.
 Include Black Wolf by Stripes.
-Include Blob by Kaleem Mcintyre.
 Include Blue Chaffinch by Stripes.
 Include Latex Bobcat by Stripes.
 Include Bottlenose Toy by Stripes.
@@ -438,6 +442,7 @@ Include Butterfly by Guest Writers.
 Include Cambion Male by Gherod.
 Include Candy Striper by Stripes.
 Include Cannon by Wahn.
+Include Capybara by Voidsnaps.
 Include Cat Ninjas by Stripes.
 Include Catgirl by Wahn.
 Include Caveman by Guest Writers.
@@ -530,6 +535,7 @@ Include Gray Squirrel by Stripes.
 Include Grizzly Bear by UrsaOmega.
 Include Gryphons Plot by Guest Writers.
 Include Gunbunny by Stripes.
+Include Gyrwolf Gryphon by Prometheus.
 Include Harpy by Nuku Valente.
 Include Hawkman by Sarokcat.
 Include Hellfire Demon by Gherod.
@@ -552,6 +558,7 @@ Include Human Infections by Wahn.
 Include Hydra Beast by Stripes.
 Include Hyena Matriarch by Stripes.
 Include Hyperskunk by Stripes.
+Include Hypno Spider by Soggi.
 Include Imp by Wahn.
 Include Impala by UrsaOmega.
 Include Incubus by Stripes.
@@ -608,7 +615,7 @@ Include Mutant Centaur by Hellerhound.
 Include Mutated Islanders by Kernog.
 Include Naga by Nuku Valente.
 Include Naiad by Wahn.
-Include Naughty Nurse by Stripes.
+Include Naughty Nurse by Fuxi.
 Include Nekomimi Boy by Prometheus.
 Include Nemean Lion by Prometheus.
 Include Nerdy Mouse by Wahn.
@@ -655,7 +662,6 @@ Include Rubber Tigress by Sarokcat.
 Include Ruby by CrimsonAsh.
 Include Saber Kitty by Blaydrex.
 Include Sabretooth by Sarokcat.
-Include Sascha by Voidsnaps.
 Include Salamander by Stripes.
 Include Sand Man by Wahn.
 Include Satyr by Sarokcat.
@@ -668,6 +674,7 @@ Include Sharkman Brute by Gherod.
 Include Siamese Cats by Stripes.
 Include Sierrasaur by Blue Bishop.
 Include Siren by Stripes.
+Include Sitatunga by Voidsnaps.
 Include Skunk by Damaged.
 Include Skunkbeast Lord by Stripes.
 Include Slime Cube by Kernog.
@@ -685,10 +692,11 @@ Include Spidertaur Female by Wahn.
 Include sprite by Nuku Valente.
 Include Squid by Stripes.
 Include Squire by Stripes.
-Include Stallionboi by Sarokcat n Verath.
+Include Stallionboi by Fuxi.
 Include Succubus by Sarokcat.
 Include Sugar Ferret by Stripes.
 Include Sugar Glider by AGentlemanCalledB.
+Include Swamp Goblin by Voidsnaps.
 Include Taurus by Defth.
 Include Teddy Bear by Sarokcat.
 Include Tenrec by StripeGuy.
@@ -735,16 +743,20 @@ Part 4 - NPCs
 Include Absinthe by Bigfish15079.
 Include Ace by Aureas Gigas.
 Include Adam by Wahn.
+Include Addicted Breeder by Voidsnaps.
 Include Aeca by Wahn.
 Include Aerana by Gherod.
 Include Alex by Stripes.
 Include Alpha by Wahn.
 Include Arcanologist by Taelyn.
+Include Argos by Voidsnaps.
 Include Bad Alexandra by Wahn.
 Include Allen by Wahn.
 Include Alexandra Breeding by Wahn.
 Include Alexandra Cuckolding by Wahn.
 Include Alpha Fang Scenes by Prometheus.
+Include Alistair by Voidsnaps.
+Include Altus by Prometheus.
 Include Amaryllis by Song.
 Include Amy by Wahn.
 Include Andrew by Gherod.
@@ -753,6 +765,7 @@ Include Anthony by Wahn.
 Include Anton by Wahn.
 Include Araqiel by Gherod.
 Include Ares by Wahn.
+Include Ariel by Emerald.
 Include Arthur by Luneth.
 Include Anastasia by Stripes.
 Include Aster by Qazarar.
@@ -760,6 +773,7 @@ Include Atticus by Wahn.
 Include Augustus_Drake by Sundered Dragon.
 Include Ava by Sundered Dragon.
 Include Azari by Dys.
+Include Baron by Voidsnaps.
 Include Bastet by Wahn.
 Include Bernard by Prometheus.
 Include Bianca by Prometheus.
@@ -779,8 +793,9 @@ Include Bubble by Stripes.
 Include Cadmea by Prometheus.
 Include Campus Gym by UrsaOmega.
 Include Callidora by Prometheus.
-Include Carl by Wahn.
+Include Carl2.0 by Wahn.
 Include Casper by Prometheus.
+Include Cassian by Voidsnaps.
 Include Cassiel by Tin Can.
 Include Claude by Prometheus.
 Include Cherry by Gherod.
@@ -795,6 +810,7 @@ Include Coura by Wahn.
 Include Cynthia by Prometheus.
 Include Daisy by Sarokcat n Verath.
 Include Damien by Gherod.
+Include Daphne by Fuxi.
 Include Danny by Wahn.
 Include Darius by Wahn.
 Include Darren by Qazarar.
@@ -807,6 +823,7 @@ Include Desperate Bunny by Nuku Valente.
 Include Diana by Wahn.
 Include Diavoborg by Gherod.
 Include Diego by Wahn.
+Include Doctor Mouse by Voidsnaps.
 Include Dominick by Stripes.
 Include Doran by Blue Bishop.
 Include Drelgoth by Gherod.
@@ -847,6 +864,7 @@ Include Gwen by Prometheus.
 Include Hadiya by Stripes.
 Include Hanu by Kernog.
 Include Harold by Sarokcat.
+Include Hazel Summers by Prometheus.
 Include Hayato by Gherod.
 Include Helen by Wahn.
 Include Hellfire Workers by Gherod.
@@ -861,14 +879,17 @@ Include Hyper Squirrel by Nuku Valente.
 Include HypnoGeeks by Luneth.
 Include Icarus by Luneth.
 Include Ice Fox by Wahn.
+Include Ignacio by Voidsnaps.
 Include Inflatable Orca by Song.
 Include Inflatable Otter Suit by Song.
 Include Informant by Kaleem mcintyre.
 Include Jana by Kirov.
+Include Janaz by Voidsnaps.
 Include Janice by Sarokcat.
 Include Jake by Rikaeus.
 Include Jay by Wahn.
 Include Jenna by Rikaeus.
+Include Jett by Gherod.
 Include Jimmy by Prometheus.
 Include Joanna by Stripes.
 Include Joey by Qazarar.
@@ -878,11 +899,13 @@ Include Juergen by Wahn.
 Include Julian by Prometheus.
 Include Kai by Luneth.
 Include Kara by Sarokcat.
-Include Karen by AGentlemanCalledB.
+Include Karen by Prometheus.
 Include Katherine by Kirov.
 Include Kathy by Sundered Dragon.
+Include Keiran by Voidsnaps.
 Include Kerr & Talov by Wahn.
 Include Kerry by Voidsnaps.
+Include Kosk by Voidsnaps.
 Include Krampus by Wahn.
 Include Kristen by Stripes.
 Include Kurt by Rikaeus.
@@ -891,7 +914,7 @@ Include Kyrverth by Speedlover.
 Include Lance by Verath.
 Include Landon by Luneth.
 Include Larissa by Stripes.
-Include Leon by Luneth.
+Include Leon by Voidsnaps.
 Include Leonard by Stripes.
 Include Lilith by Wahn.
 Include Lindsey by Prometheus.
@@ -908,6 +931,7 @@ Include Mary by Luneth.
 Include Master Mind by Stripes.
 Include Master-of-Hell-Quest by Luneth.
 Include Matriarch NPC by Stripes.
+Include Matteo by Voidsnaps.
 Include Meredith by Prometheus.
 Include Micaela by Stripes.
 Include Midnight by Luneth.
@@ -932,6 +956,7 @@ Include Orc Female by Wahn.
 Include Orc Lair by Wahn.
 Include Orthas by Wahn.
 Include Otto Fuchs by Prometheus.
+Include Ozeg by Voidsnaps.
 Include Palomino by Verath.
 Include PAN Frat Bros by Wahn.
 Include Paula by Prometheus.
@@ -945,17 +970,21 @@ Include Pretty Kitty by Xenophiliac.
 Include Ranae by Kurainyx.
 Include Randall and Brad by Rikaeus.
 Include Rane by Wahn.
+Include Raymond by Voidsnaps.
 Include Reece by Luneth.
-Include RexxyEvent by AGentlemanCalledB.
+Include RexxyEvent by Prometheus.
+Include Rhidall by Voidsnaps.
 Include Richard by Wahn.
-Include RodAndRonda by Stripes.
+Include RodAndRonda by Wahn.
 Include Roman by Kernog.
 Include Ryan by Fuxi.
 Include Sally by Stripes.
 Include Sakura Sato by Rikaeus.
 Include Sam by Stripes.
+Include Sandy by Voidsnaps.
 Include Santa Claws by Wahn.
 Include Sarah by Wahn.
+Include Sascha by Voidsnaps.
 Include Savina by Kurainyx.
 Include Segis by Gherod.
 Include Serafino by Rikaeus.
@@ -967,6 +996,7 @@ Include Sirius by Prometheus.
 Include Skarnoth by Wahn.
 Include Skarnoth Loyalty by Luneth.
 Include Skarnoth-Brutus Scenes by Luneth.
+Include Solariel by Prometheus.
 Include Solstice by Stripes.
 Include Sonny by Rikaeus.
 Include Spike by Wahn.
@@ -988,6 +1018,7 @@ Include Timothy by Sarokcat.
 Include Tobias by Voidsnaps.
 Include Toron by Gherod.
 Include Tristian by Verath.
+Include Uram by Voidsnaps.
 Include Urik by Wahn.
 Include Val by Wahn.
 Include Vanessa by Prometheus.

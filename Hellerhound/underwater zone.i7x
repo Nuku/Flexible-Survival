@@ -33,10 +33,8 @@ name	desc	weight	object
 to say gill fruit use:
 	say "You eagerly gulp the fruit.";
 	now hasgills is 1;
-	decrease thirst of Player by 10;
-	decrease hunger of Player by 10;
-	if thirst of Player < 0, now thirst of Player is 0;
-	if hunger of Player < 0, now hunger of Player is 0;
+	PlayerDrink 10;
+	PlayerEat 10;
 	increase score by 10;
 	say "You feel a tingling in your neck, and somehow understand that if you were to go underwater you could breathe.";
 	follow the turnpass rule;

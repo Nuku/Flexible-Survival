@@ -55,7 +55,6 @@ to say ResolveEvent Bobcat Encounter:
 		else if calcnumber is 2:
 			LineBreak;
 			say "     With a manic grin on your face at the opportunity he gave you by coming out of hiding, you leap forward to grab the kitty cat. Sadly, he seems to have been waiting for just that, and before you get anywhere close enough, the lithe anthro slips back into the tree. You reach into the hole close to the ground, crouching as your hand quests around, but all you feel is rough wood. After a short moment, it becomes obvious that you won't be getting him this way, so you pull back and stand up straight again. Or you try at least, as you feel a pair of paws kick you from behind, throwing you off balance and sending you to one knee. Whirling around, you see the bobcat man standing there in some sort of martial arts stance, claws extended and apparently ready to fight! 'You big jerk!' he yells angrily before charging you on all fours!";
-			now inasituation is true;
 			challenge "Bobcat";
 			if fightoutcome < 20: [player won]
 				say "[WonAgainstMilo]";
@@ -63,7 +62,6 @@ to say ResolveEvent Bobcat Encounter:
 				say "[LostAgainstMilo]";
 			else if fightoutcome is 30: [fled]
 				say "[FledFromMilo]";
-			now inasituation is false;
 			now Bobcat Encounter is resolved;
 		else:
 			LineBreak;
@@ -213,22 +211,20 @@ to say FledFromMilo:
 Section 2 - Infection
 
 to say BeatMilo:
-	if inasituation is true:
-		say ""; [taken care of in the event]
-	else:
-		say ""; [nothing in here so far, only one event fight]
+	say ""; [nothing in here so far, only one event fight]
 
 to say LoseToMilo:
-	if inasituation is true:
-		say ""; [taken care of in the event]
-	else:
-		say ""; [nothing in here so far, only one event fight]
+	say ""; [nothing in here so far, only one event fight]
 
 to say MiloDesc:
-	if inasituation is true:
-		say ""; [taken care of in the event]
-	else:
-		say ""; [nothing in here so far, only one event fight]
+	say ""; [nothing in here so far, only one event fight]
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Bobcat"	"[PrepCombat_Bobcat]"
+
+to say PrepCombat_Bobcat:
+	say "";
 
 Section 2 - Creature Insertion
 
@@ -410,7 +406,7 @@ Body Definition of Milo is 5. [scale of 1-9 for body definition, grouped into lo
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Milo is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 Mouth Length of Milo is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-Mouth Circumference of Milo is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Mouth Circumference of Milo is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
 Tongue Length of Milo is 4. [length in inches]
 Breast Size of Milo is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Milo is 2. [count of nipples]
@@ -443,6 +439,6 @@ Description of Milo is "[Milodesc]".
 Conversation of Milo is { "Meep!" }.
 
 to say Milodesc:
-	say "<Placeholder>";
+	say "<Bobcat>";
 
 Milo ends here.

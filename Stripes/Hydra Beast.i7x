@@ -12,27 +12,6 @@ hydraheadcheck3 is a truth state that varies. [@Tag:NotSaved] hydraheadcheck3 is
 hydraheadregrowth is a truth state that varies. hydraheadregrowth is usually true.
 hydramaulcount is a number that varies.
 
-to say hydrabeastdesc:
-	setmongender 3; [creature is male]
-	choose row MonsterID from the Table of Random Critters;
-	let debit be 0;
-	if HardMode is true and level of Player > 12, let debit be level of Player - 12;
-	now lev entry is 12 + debit;
-	now HP entry is 100 + ( debit * 5 );
-	now monsterHP is 100 + ( debit * 5 );
-	now wdam entry is 12 + ( ( 2 * debit ) / 5 );
-	now per entry is 18;
-	increase monhitbonus by 3;
-	now hydraheadcount is 6;
-	now hydraheadcheck1 is false;
-	now hydraheadcheck2 is false;
-	now hydraheadcheck3 is false;
-	now hydraheadregrowth is true;
-	now hydramaulcount is 0;
-	let debit be 0;
-	say "     Before you is a large, monstrous creature of scales and jaws. The multi-headed hydra has a half-dozen heads on long, serpentine necks. Each head is very reptilian, draconic even, with a thick muzzle filled with sharp fangs and a long, tapered tongue. Its predatory eyes watch the world through its many slitted pupils. It has a wide, stocky body and trundles forward on four legs. The many twining necks of its heads are attached to these widened shoulders and upper back, allowing it to fit them all. These necks are slender and flexible, allowing the hydra to bring them all into position as needed. Its heavy, armored hide is covered in thick, emerald scales to guard its body. There is also a heavy, musky scent of male arousal in the air around the creature as well, telling you that, despite its fearsome appearance, it seeks sex like most other creatures roaming about.";
-
-
 to say hydraharming:
 	now hydraheadregrowth is false;
 
@@ -77,7 +56,6 @@ to say losetohydrabeast:
 		say "     The hydra beast moves overtop of you, trapping you as one of its numerous cocks finds its way to your crinkled pucker. It grinds the tapered tip against your back door and, after releasing a gush of slick precum, forces your tight hole open to accept it. The unused shafts rub and slap against your belly as their brethren fucks you wildly. Its subtle ridges and tapered glans send shivers of pleasure through your body as the powerful creature thrusts into you again and again. While it fucks you, its many heads roam across your body in search of any sensitive, sexual spot to lick or tease[if Breast Size of Player > 0]. They start by focusing on your nipples, licking and sucking on them, causing you to moan in delight[end if][if Player is male]. Those toothy maws are surprisingly pleasurable as they take turns giving blowjobs to your cock[smn][end if]. The hydra's heads even engulf its own unused penises, working to suck itself off even as it fucks you.";
 		say "     As the beast fucks you thoroughly, its many heads swap positions often, taking turns enjoying the many pleasures your body can provide. Subject to such constant, all-encompassing stimulation, you are pushed to climax several times until you're left weak and moaning by the time it's ready to cum. The hydra drives its rod deep into you, stuffing you so delightfully full of reptilian cock that you cry out loudly and lustfully. The hot rush of its tainted semen from its ridged cock, pumped from its heavy ballsack, shoots into your stuffed hole and down the throats of its sucking heads. You are left feeling full and bloated with the beasts torrential load, your ass filled to the brim with its virile seed.[movichance]";
 		say "     When its climax finally comes to an end, it pulls its cock from you, your emptied asshole releasing a gush of excess semen that pools beneath you. You are left sticky and soaking in a large puddle of the creature's cum as it moves off of you. You are too weak and tired from such a thorough fucking that you [if hydraheadcount > 6]can barely make out its extra heads falling off as it trundles off. Left it with its original count of six, the excess heads melt away into fleshy goop[else if hydraheadcount < 6]can barely make out the bulges of new heads starting to form as it trundles off. Regrowing heads at the severed stumps, the creature will be back up to a half-dozen soon enough[else]barely notice it heading off[end if]. You end up passing out briefly, your worn body out from the bestial mating.";
-
 
 to say beatthehydrabeast:
 	if Player is not neuter:
@@ -130,7 +108,6 @@ to say beatthehydrabeast:
 	else:
 		say "     You manage to fight your way to what you perceive to be the central head and grapple it, twisting it in a painful lock. The other heads hiss angrily at you, but do not attack for fear of you harming its true head. You force the weakened creature to submit and then drive it off. Many of its red, reptilian eyes glare at you as it trundles off[if hydraheadcount > 6]. As it departs, you can see its extra heads already decaying away, dropping off and melting into fleshy goop until it's down to its original half-dozen[else if hydraheadcount < 6]. As it departs, you can see the bulges of new heads starting to form at the severed stumps, the creature soon to be back up to a half-dozen[end if].";
 
-
 to say beathydrabeast1:	[oral]
 	say "     Pulling the beast's primary head up to yours, you give it a kiss. It makes a surprised rumble, but makes no attempt to resist, even sliding its slick tongue into your mouth. After you break the kiss, the creature seems more at ease and compliant. You guide its head down to your crotch, ordering it to start licking. ";
 	if Cock Count of Player + Cunt Count of Player > 1:
@@ -150,7 +127,6 @@ to say beathydrabeast2:	[fuck it]
 		say "     You suck down on a pair of your fingers, getting them wet before pressing them to that dark ring. You rub and tease across it a few times before starting to prod at the creature's hole. The great beast rumbles in pleasure as you knead its rear with your free hand while working your slick digits into his back passage, opening him up and getting him ready for what's to come. Though you certainly keep going at it longer than is necessary, having switched your hand to his huge, heavy ballsack. Each nut feels like a cluster of testicles clumped together to provide enough cum for the creature's many cocks. Only after you've had your fun playing with its balls and hearing it moan and rumble as you do are you ready to get to the main event.";
 	say "     [if anallevel is 3]Having gotten its back entrance ready, you[else]You[end if] move into position, lining up your cock with its [if anallevel is 3]slick [end if]hole and push your [cock size desc of Player] shaft into the beast. It releases rumbling moans from its many heads and grinds itself back onto your cock. Putting an arm around its thick tail, you starts thrusting into it. As you fuck the monster, its primary head twists back around, coming in to kiss you. Its long tongue dives into your mouth and down your throat, and you suck on it happily, thrusting all the harder as you do. Its other heads twist around as well, some of them coming to [if Breast Size of Player > 0]suck on your nipples and [end if]lick across your [bodydesc of Player] body while others move underneath so the creature can suck itself off while getting pounded by you.";
 	say "     After giving the monster a good, hard pounding, you bury your [cock size desc of Player] cock into it and moan in release. You shoot your [Cum Load Size of Player] load into its clenching asshole[if Player is male] and across its meaty backside[end if]. This causes the creature's many heads to growl lustfully as it climaxes, spraying gushers of cum from each of its [hydraheadcount] penises. Much of its load is sucked up by its additional heads, but plenty ends up leaving a sticky mess on the ground. When you're done and pull out, the hydra's many heads set themselves to licking you clean before you give it another long, tongue-filled kiss before sending it on its way[if hydraheadcount > 6]. As it departs, you can see its extra heads already decaying away, dropping off and melting into fleshy goop until it's down to its original half-dozen[else if hydraheadcount < 6]. As it departs, you can see the bulges of new heads starting to form at the severed stumps, the creature soon to be back up to a half-dozen[end if].";
-
 
 to say beathydrabeast3:	[get fucked]
 	say "     Pulling the beast's primary head up to yours, you give it a kiss. It makes a surprised rumble, but makes no attempt to resist, even sliding its slick tongue into your mouth. After you break the kiss, the creature seems more at ease and compliant. Despite being the victor, you do have to admit that what you want the most right now is for it to just fuck you. Glancing beneath it, you look over of the large, dripping cocks dangling at its underside, noting that it has as many cocks as it does heads, all fueled by a massive set of balls. While not nearly as flexible as its necks, they do seem somewhat prehensile, sometimes rubbing up against one another in their excitement. Having made your decision, you move onto all fours and wave your ass in the air, telling the creature that if it really wants to fuck you, for it to mount up.";
@@ -202,13 +178,36 @@ to say beathydrabeast3:	[get fucked]
 		say "     As the beast fucks you thoroughly, its many heads move around often, almost as if each wants to partake in all of you. Subject to such constant, all-encompassing stimulation, you are pushed to great heights of pleasure as they work cooperatively to build you up slowly to one powerful, vision-blurring climax that makes you cry out in ecstasy. As your asshole quivers and clenches down upon the ridged shafts filling it, the hydra is driven over the edge and drives it rod deep into you, stuffing you so delightfully full of reptilian cock that your orgasmic delight surges again. The hot rush of its tainted semen from its cock, pumped from its heavy ballsack, shoots into your stuffed hole and down the throats of its sucking heads. You are left feeling full and bloated with the beasts torrential load, your ass filled to the brim with its virile seed.[movichance]";
 		say "     When its climax finally comes to an end, it pulls its cocks from you slowly, your emptied asshole releasing a gush of excess semen that pools beneath you. Sticky with the creature's cum, it takes some effort to pull yourself to your feet after that, your knees weak and your body positively tingling with the afterglow of your climax. The creature seems similarly dazed and happy, giving you a deep, tongue-filled kiss before you send it on its way[if hydraheadcount > 6]. As it departs, you can see its extra heads already decaying away, dropping off and melting into fleshy goop until it's down to its original half-dozen[else if hydraheadcount < 6]. As it departs, you can see the bulges of new heads starting to form at the severed stumps, the creature soon to be back up to a half-dozen[end if].";
 
-
 to say beathydrabeast99:	[no sex - leave]
 	say "     Pushing aside your baser urges, you give the creature's head another painful twist before driving it off. Many of its red, reptilian eyes glare at you as it trundles off[if hydraheadcount > 6]. As it departs, you can see its extra heads already decaying away, dropping off and melting into fleshy goop until it's down to its original half-dozen[else if hydraheadcount < 6]. As it departs, you can see the bulges of new heads starting to form at the severed stumps, the creature soon to be back up to a half-dozen[end if].";
 
-
-
 Section 2 - Creature Insertion
+
+to say hydrabeastdesc:
+	say "     Before you is a large, monstrous creature of scales and jaws. The multi-headed hydra has a half-dozen heads on long, serpentine necks. Each head is very reptilian, draconic even, with a thick muzzle filled with sharp fangs and a long, tapered tongue. Its predatory eyes watch the world through its many slitted pupils. It has a wide, stocky body and trundles forward on four legs. The many twining necks of its heads are attached to these widened shoulders and upper back, allowing it to fit them all. These necks are slender and flexible, allowing the hydra to bring them all into position as needed. Its heavy, armored hide is covered in thick, emerald scales to guard its body. There is also a heavy, musky scent of male arousal in the air around the creature as well, telling you that, despite its fearsome appearance, it seeks sex like most other creatures roaming about.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Hydra Beast"	"[PrepCombat_Hydra Beast]"
+
+to say PrepCombat_Hydra Beast:
+	setmongender 3; [creature is male]
+	choose row MonsterID from the Table of Random Critters;
+	let debit be 0;
+	if HardMode is true and level of Player > 12, let debit be level of Player - 12;
+	now lev entry is 12 + debit;
+	now HP entry is 100 + ( debit * 5 );
+	now monsterHP is 100 + ( debit * 5 );
+	now wdam entry is 12 + ( ( 2 * debit ) / 5 );
+	now per entry is 18;
+	increase monhitbonus by 3;
+	now hydraheadcount is 6;
+	now hydraheadcheck1 is false;
+	now hydraheadcheck2 is false;
+	now hydraheadcheck3 is false;
+	now hydraheadregrowth is true;
+	now hydramaulcount is 0;
+	let debit be 0;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

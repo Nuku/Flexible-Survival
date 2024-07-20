@@ -56,7 +56,7 @@ the scent of Tehuantl is "Tehuantl has an exotic earthy aroma which reminds you 
 
 to say TehuantlDesc:
 	if HP of Tehuantl < 50: [female Tehuantl]
-		project the Figure of Tehuantl_Female_Face_icon;
+		project the Figure of Tehuantl_Female_clothed_icon;
 		say "     Tehuantl is an exotic-looking female jaguar, with wide hips, long legs and an alluring figure. Her long dark hair, which matches the black rosettes in her golden yellow fur, is tied up in a long ponytail which reaches down to the middle of her back. Noticing your eyes upon her, she saunters over to you, showing off her naked body to full effect. There is a deep purr in her voice as she greets her [if Player is female]mistress[else]master[end if] and leans in to rub her furred cheek against your shoulder.";
 	else: [male Tehuantl]
 		project the Figure of Tehuantl_Male_clothed_icon;
@@ -92,11 +92,11 @@ to say TehuantlSex:
 			project the Figure of Tehuantl_Male_clothed_icon;
 			say "     Tehuantl rubs himself against you and purrs, but then pulls back a little and says, 'Mmm, as much as I would love my big warrior to make use of [PosAdj of Player] servant again, I need some time to recuperate please.'";
 		else: [female]
-			project the Figure of Tehuantl_Female_Face_icon;
+			project Figure of Tehuantl_Female_clothed_icon;
 			say "     Tehuantl rubs herself against you and purrs, but then pulls back a little and says, 'Mmm, as much as I would love my big warrior to make use of [PosAdj of Player] pussycat again, I think it would be nicer for both of us if we took a break.'";
 	else:
 		if HP of Tehuantl < 50:
-			project the Figure of Tehuantl_Female_Face_icon;
+			project Figure of Tehuantl_Female_naked_icon;
 			say "     Spotting your feline pet [one of]stretching suggestively[or]bathing herself, paying particular attention to her groin[or]lounging around the library[at random], you consider having some fun with her.";
 			say "[TehuantlSexMenu]";
 		else:
@@ -322,6 +322,7 @@ to say TehuantlandSven:
 		say "     As you make your way into the library, you hear the heavy bunker door creak open on the far side of the room. Ducking out of sight for a moment, you watch with curious interest as Sven quietly slips out and makes his way towards the stairs to the library's upper level with his nose high in the air. Taking a breath yourself, you realize the scent of Tehuantl's heat still permeates the room.";
 		say "     Seeing how distracted he seems, you could probably follow Sven upstairs and see what happens without him noticing pretty easily ([link]Y[as]y[end link]), or you could leave it be ([link]N[as]n[end link]).";
 		if Player consents:
+			project Figure of Tehuantl_Female_naked_icon;
 			say "     As Sven's long snow-leopard tail disappears upstairs, you slowly, quietly make your way over to the steps to see what your feline pets are up to. Peeking over the top of the stairs, you see Sven lurking down one the aisles of books, wringing his tail nervously as he peers at Tehuantl from between the volumes. Tehuantl meanwhile, apparently well aware of the hidden kitty, is lounging on the couch near the balcony teasing her wet, swollen cunt as she watches the shy snowmeow spying on her.";
 			say "     Finally tired of waiting, Tehuantl rises from her seat and makes her way over to where Sven is lurking. Realizing she's approaching, he quickly tries to make himself look busy, shuffling through the books in front of him as if he's looking for a specific title. With a predatory glint in her eye, Tehuantl pads up beside Sven, rumbling softly as she steps in close to him.";
 			WaitLineBreak;
@@ -345,6 +346,7 @@ to say TehuantlandSnow:
 		say "     Snow meanwhile seems to be unaware of the feline slinking towards her, distracted with some small project she's tinkering with at the table she's claimed as a workbench, though based on the way she is idly rubbing her groin with a free paw while she works, it seems the arousing scent of Tehuantl's feline heat filling the room is still having an effect on her.";
 		say "     As Tehuantl reaches the bottom of the stairs, she spots you looking at her and realizes she hasn't gone unnoticed. Glancing back at Snow, then towards you once again, she waits patiently at base of the steps as if waiting for your reaction to her apparent interest. Will you let your feline pet try and entice the unsuspecting squirrel into some fun?";
 		if Player consents:
+			project Figure of Tehuantl_Female_naked_icon;
 			say "     With a knowing grin you nod at Tehuantl, who gives you a naughty smirk in return before resuming her silent approach. You settle down into your seat, getting comfortable for what promises to be quite a show as she stalks across the library towards Snow.";
 			say "     Even from across the room, you hear Snow chitter in surprise as the alluring jaguar taps her on the shoulder and she abruptly spins around to face the feline, revealing the painfully large erection straining her pants. Snow fidgets uncomfortably as she and Tehuantl make small talk for a while, obviously distracted by the pretty kitty's attractive assets and arousing scent. Tehuantl seems to take a perverse delight in watching the poor squirrel squirm, drawing out the awkward introduction for some time before she finally leans in close to the busty squirrel and whispers something in her ear. Snow's expression lightens instantly and she quickly sets about clearing a space at her workbench.";
 			say "     Tehuantl pulls Snow into a tight embrace, dragging her towards the now cleared table before slowly descending down her squirrine form towards her groin. Her deft paws work quickly to remove Snow's tight pants, finally allowing her engorged pink member to spring free. Marveling at Snow's massive cock, Tehuantl takes a hold of it with one paw, stroking it gently as her rough tongue plays teasingly across her glans.";
@@ -362,6 +364,7 @@ to say TehuantlandSnow:
 		if Player is not neuter:
 			say "     Once again taking a moment to relax in the relative safety of the library, you spot Tehuantl slinking down the stairs once more with her eyes set on Snow. As she reaches the bottom of the stairs you consider following her to join in on the fun this time.";
 			if Player consents:
+				project Figure of Tehuantl_Female_naked_icon;
 				if Player is male:
 					say "     Tehuantl gives you another naughty smirk as she sees you rising from your seat, making sure to swish her tail wide as you follow behind her, giving you a clear view of her tight bottom. While Tehuantl is once again warming up Snow, you stop to consider how you want to proceed; you could mount Snow as she screws the kitty ([link]Y[as]y[end link]), or get some attention from that rough feline tongue ([link]N[as]n[end link]).";
 					if Player consents: [ male mounting Snow]
@@ -382,6 +385,7 @@ to say TehuantlandSnow:
 					NPCSexAftermath Tehuantl receives "PussyFuck" from Snow;
 				say "     The three of you lay there together in a temporarily sated pile as you bask in the afterglow of your release. Tehuantl is the first to get up and leave, giving you both a quick grope before she struts back up to her favorite spot upstairs, leaving you and Snow to collect your things and get back to your earlier tasks.";
 			else:
+				project Figure of Tehuantl_Female_naked_icon;
 				say "     Tehuantl gives you another naughty smirk as she passes by, obviously pleased that you're not stopping her from returning to the well-hung squirrel. The small talk is much quicker this time, and soon Tehuantl is sitting up on the counter before Snow with her legs spread wide. As Snow steps closer, her paws quickly working to strip off her pants, Tehuantl pulls her into a tight embrace before pushing her downward. With no further instruction, Snow quickly dives into Tehuantl's needy muff, kissing those needy swollen folds tenderly with one paw massaging the feline's clit and the other stroking her own sizable member.";
 				say "     Snow's long, deliberate work at the feline's crotch soon has her moaning and mewling in delight, pushing her towards climax with surprising ease. Before long Tehuantl releases a feline yowl of ecstasy and soaks the squirrel's muzzle with her powerful-smelling juices.";
 				WaitLineBreak;
@@ -410,6 +414,7 @@ to say TehuantlandFelinoid:
 	say "     You hear a low, lusty growl as you walk into the library. Turning towards the noise, you see the end of your felinoid companion's tail as he vanishes up the stairs a bit to your right. A quick sniff of the air in here makes clear what's up - the scent of Tehuantl's heat just wafts down from above. Looks like the big cat went to follow his natural urges.";
 	say "     Do you want to follow the felinoid upstairs and see what happens ([link]Y[as]y[end link]), or do you just leave them be ([link]N[as]n[end link]).";
 	if Player consents:
+		project Figure of Tehuantl_Female_naked_icon;
 		say "     Hurrying up the stairs so you don't miss anything, you see Tehuantl lying on the ground, several fingers buried in her pussy as she strokes herself. Meanwhile, the felinoid pads over to her and lowers his head, taking a deep sniff of her crotch before starting to lick her there. You can see the big cat's spined shaft dangling under his body, already fully hard and twitching in anticipation.";
 		say "     Your felinoid keeps using his tongue on the jaguar-woman's pussy for a minute or two, making her writhe on the ground in lust, then he nuzzles the side of her hip. Tehuantl immediately understands what the large cat wants to say by rubbing his furry cheeks against her and lifts herself up from the ground. Panting in need, she takes position on all fours, presenting herself to be mounted. With a very satisfied roar, the felinoid does just that, moving his large form to cover her smaller body and bending his legs a bit to thrust his hard shaft into Tehuantl's dripping cunt.";
 		WaitLineBreak;
@@ -424,6 +429,7 @@ to say TehuantlandFelinoid:
 to say TehuantlandSarah:
 	say "     You notice Sarah, who's slipped her leash, near the stairs to the second floor. She's sniffing the air with interest and soon starts padding up the steps. Given how strongly you can smell the jaguar's heat from here, it's no surprise her canine nose picked it up. The dog-woman goes up the stairs on all fours. Shall you head over to see how things go between the cat and dog?";
 	if Player consents:
+		project Figure of Tehuantl_Female_naked_icon;
 		say "     Watching from the base of the stairs, you see Sarah pause near the top to poke her head over. Her tail wags frantically as she checks out the source of the enticing odor, but her friendly bark is returned with a threatening snarl from Tehuantl. Sarah ducks back down out of sight, but her playful interest won't be so easily discouraged. She pokes her head up soon and barks again, getting chased back down by another snarl.";
 		say "     This exchange goes on for a little while, Sarah's tail wagging more and more at the game it's become for her. You've come about halfway up the stairs by this point, watching and waiting. And sure enough, Tehuantl yowls in lustful need as another pang of her heat distracts her from the canine intruder long enough for Sarah to come up and pad over to her. Continuing up the stairs, you find Sarah's muzzle sniffing between the masturbating feline's legs, lapping at her pussy even as the spotted kitty pumps a sticky toy into herself. Feeling the dog's tongue on her wet folds, she mrowls and shivers. Pulling out the toy and spreading her legs, she leaves herself open for the husky's tongue to dive right in to replace the dildo.";
 		WaitLineBreak;
@@ -509,6 +515,7 @@ to say TehuantlBunkerScenes:
 		say "     The air is thick with the powerful scent of feline arousal. It would seem Tehuantl is still in heat once again.";
 
 to say TehuantlHeatIntro:
+	project Figure of Tehuantl_Female_naked_icon;
 	say "     Tehuantl is laying on the ground as you approach her, mrowling and mewling as she furiously works several fingers in and out of her swollen cunt. By the look of the large wet spot on the carpet below her, and overwhelming scent of her feminine juices, it seems she been at this for a while.";
 	say "     Tehuantl squeaks in surprise as you reach down and place a hand on her shoulder. She releases a sigh of relief as she turns and sees you standing over her, quickly rising to her knees and wrapping her arms tightly around your leg. 'Oh master, please use me. My entire body aches to be filled. I've been trying to soothe the need myself, but it's just not enough... please.' As you look down upon the begging kitty you realize she must be in heat, and she doesn't seem to be handling it so well, perhaps due to her previous male form.";
 	if Player is neuter:
@@ -586,7 +593,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 2	"Tehuantl_Carl_Encounter1"	Tehuantl_Carl_Encounter1	"[EventConditions_Tehuantl_Carl_Encounter1]"	Grey Abbey 2F	2500	2	100
 
 to say EventConditions_Tehuantl_Carl_Encounter1:
-	if ((LastTehuantlCarlScene - turns > 6) and (Tehuantl is in Grey Abbey 2F and Libido of Tehuantl < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F)) and Player is not CoA: [list of conditions here]
+	if ((LastTehuantlCarlScene - turns > 6) and (Tehuantl is in Grey Abbey 2F and Libido of Tehuantl < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (HP of Carl > 10 and HP of Carl < 50 and HP of Carl is not 30 and Carl is in Grey Abbey 2F)) and Player is not CoA: [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)

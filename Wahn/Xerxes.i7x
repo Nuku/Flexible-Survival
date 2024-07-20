@@ -234,13 +234,13 @@ Instead of fucking Xerxes:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Xerxes cock";
 		now sortorder entry is 1;
-		now description entry is "Give him a blow-job.";
+		now description entry is "Give him a blowjob.";
 		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
-			now description entry is "Get a blow-job.";
+			now description entry is "Get a blowjob.";
 		[]
 		if Player is not neuter:
 			choose a blank row in table of fucking options;
@@ -271,7 +271,7 @@ Instead of fucking Xerxes:
 			now sortorder entry is 7;
 			now description entry is "Hot sex with Klauz fucking Xerxes.";
 		[]
-		if (Player is male and Fang is in the Grey Abbey Library and Fang is Male and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
+		if (Player is male and Fang is in the Grey Abbey Library and Fang is Male and (HP of Xerxes is 10 or HP of Xerxes is 12) and HP of Fang < 7 ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Xerxes & Fang";
 			now sortorder entry is 8;
@@ -283,7 +283,7 @@ Instead of fucking Xerxes:
 			now sortorder entry is 9;
 			now description entry is "Hot sex with Klauz fucking Xerxes.";
 		[]
-		if (Player is female and Fang is in the Grey Abbey Library and Fang is Male and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
+		if (Player is female and Fang is in the Grey Abbey Library and Fang is Male and (HP of Xerxes is 10 or HP of Xerxes is 12) and HP of Fang < 7 ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Xerxes & Fang";
 			now sortorder entry is 10;
@@ -369,12 +369,12 @@ Chapter 3 - Xerxes Sex Scenes
 
 to say XerxesSex1: [player sucks him]
 	say "     You step beside the cot you put in here for him and whistle to call Xerxes. The dog with the buck-naked body of a young man immediately rushes to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand beside you, happy to get his master's attention[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds]. 'Master play?' he says with a wide grin[end if]. 'Good dog' you say as you crouch down beside him, patting his head and stroking his shoulders and muscular back. Your hand strays lower and lower until you touch the smooth curves of his [if lust of Xerxes >= 7]tattooed [end if]bubble butt, then reach under him and grab his hardening cock. Xerxes gives you a pleased yip, his cock throbbing in your hand. Patting the cot, you tell him 'Up here, boy' and reward him with some more stroking as he obeys.";
-	say "     You push softly against him so he lies on his side, then back, with his human erection now standing proudly upwards. Pumping your hand up and down on it again, you put your lips to its tip, then go down on him. Xerxes [if lust of Xerxes >= 4]moans 'Good master' and yips while rubbing his hands lightly across your shoulders[else]gives a lust-filled growl[end if] and starts to instinctively thrust with his hips, putting his cock deeper into your mouth and making the most of your blow-job. It's not too much longer before he orgasms, body twitching as his human seed gushes into your mouth. You wait until you get it all, every last shot, then swallow it down. Giving your dog a last quick belly-rub over his hard abs, you stand back up and turn back to everyday survival[if lust of Xerxes >= 4] while he runs off to rummage around in the stacks some more[end if].";
+	say "     You push softly against him so he lies on his side, then back, with his human erection now standing proudly upwards. Pumping your hand up and down on it again, you put your lips to its tip, then go down on him. Xerxes [if lust of Xerxes >= 4]moans 'Good master' and yips while rubbing his hands lightly across your shoulders[else]gives a lust-filled growl[end if] and starts to instinctively thrust with his hips, putting his cock deeper into your mouth and making the most of your blowjob. It's not too much longer before he orgasms, body twitching as his human seed gushes into your mouth. You wait until you get it all, every last shot, then swallow it down. Giving your dog a last quick belly-rub over his hard abs, you stand back up and turn back to everyday survival[if lust of Xerxes >= 4] while he runs off to rummage around in the stacks some more[end if].";
 	NPCSexAftermath Player receives "OralCock" from Xerxes;
 
 to say XerxesSex2: [he sucks the player]
 	say "     You step beside the cot you put in here for him and whistle to call Xerxes. The dog with the buck-naked body of a young man immediately rushes to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand beside you, happy to get his master's attention[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds]. 'Master play?' he says with a wide grin[end if]. 'Good dog' you say as you crouch down beside him, patting his head and stroking his shoulders and muscular back. Your hand strays lower and lower until you touch the smooth curves of his [if lust of Xerxes >= 7]tattooed [end if]bubble butt and give it a squeeze. Standing back up, you quickly strip off your clothes and hold your erect manhood up for Xerxes, who gives you a happy yip, then starts licking it.";
-	say "     He runs his talented tongue along your shaft, then laps at your balls before returning to the tip of your cock and taking it in his mouth. As Xerxes starts giving you a pretty nice blow-job, you resolve to thank Mike the next time you see him for your expertly trained pet. Your human dog is very careful not to touch your best bit with his teeth and uses his tongue to caress your cock as he bobs up and down on it";
+	say "     He runs his talented tongue along your shaft, then laps at your balls before returning to the tip of your cock and taking it in his mouth. As Xerxes starts giving you a pretty nice blowjob, you resolve to thank Mike the next time you see him for your expertly trained pet. Your human dog is very careful not to touch your best bit with his teeth and uses his tongue to caress your cock as he bobs up and down on it";
 	if lust of Xerxes < 4:
 		say ". With his eager sucking, it doesn't take much longer until the need to cum rises in your balls.";
 	else if lust of Xerxes < 7:
@@ -450,7 +450,7 @@ to say XerxesSex6: [male player and felinoid + Xerxes]
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Looks like he's not happy that the big cat is getting ass he hasn't had. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang slinks back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if HP of Xerxes is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Seeing the felinoid fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Xerxes closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, Klauz seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		else if HP of Fang is 3 or HP of Fang is 4: [Alpha Fang]
+		else if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 7: [Alpha Fang]
 			if HP of Xerxes is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Xerxes a hostile stare. Looks like he's not happy that the big cat is getting ass he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if HP of Xerxes is 12:

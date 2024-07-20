@@ -5,121 +5,137 @@ PAN Frat Brothers
 
 Up to 22 frat brothers living in the PAN frat building (by room numbers)
 
-President, Right-Hand Man and 3 Pledges are out in the Grove
+President, Right-Hand Man and 3 Pledges are out in the Grove, 4 rooms are unclaimed
 
+1 - Frat President (Star Wrestler): Nicholas Alexander (absent - turned into a male dryad in the Grove)
+		Target Infection: Dryad
+		Age: 23 (5th year)
+		Ancestry: Greek
+		Relations: Father, grandfather were members
+		Orientation: Bisexual (openly - had the respect from others to not be teased about it)
+		Cock: uncut; 7 inch (human), 14 (dryad) - others can gape at his cock, "look at that log of a dick!"
 
-1 - Frat President: Nicholas Alexander (turned into a male dryad in the Grove)
-			Age: 23 (5th year)
-			Ancestry: Greek
-			Relations: Father, grandfather were members
-			Orientation: Bisexual (openly - had the respect from others to not be teased about it)
-			Cock: uncut; 7 inch (human), 14 (dryad) - others can gape at his cock, "look at that log of a dick!"
-
-2 - Right-Hand Man: Thiago
-			Age: 22 (3rd year)
-			Ancestry: Brazilian
-			Relations:
-			Orientation: straight (human), bisexual (dryad) - finding himself drawn to Nicholas since their transformation; struggling with it a little
-			Cock: cut; 9 inch (human), 8+8 (dryad) - branching dick
+2 - Right-Hand Man: Thiago (absent - turned into a male dryad in the Grove)
+		Target Infection: Dryad
+		Age: 22 (3rd year)
+		Ancestry: Brazilian
+		Relations:
+		Orientation: straight (human), bisexual (dryad) - finding himself drawn to Nicholas since their transformation; struggling with it a little
+		Cock: cut; 9 inch (human), 8+8 (dryad) - branching dick
 
 3 - Swim-Team Captain: River
-			Age: 22 (3rd year)
-			Ancestry: Nordic (tall, blond)
-			Background:
-				Best friend (as kids) almost drowned and River couldn't get him out of the water, someone else dragged them both out of the dangerous current in the sea they got in - that got him motivated to be the best in swimming and he really pushes himself, now being a star athlete in college
-			Relations:
-				Kai ("Sea") - their mother was really into nature so she named her sons River and Sea (just Kai was luckier to get a hawaiian sea)
-				Brook - sister
-			Orientation: mostly gay (powerbottom), publicly bi - can get it up for females to keep his image (imagines dudes, asked women to finger his ass/peg him)
-			Cock: cut; 10 inch (human), 11 inch (nymph)
-			Notes:
-				Protective over Sylvanus
+		Target Infection: Nymph (male)
+		Age: 22 (3rd year)
+		Ancestry: Nordic (tall, blond)
+		Background:
+			Best friend (as kids) almost drowned and River couldn't get him out of the water, someone else dragged them both out of the dangerous current in the sea they got in - that got him motivated to be the best in swimming and he really pushes himself, now being a star athlete in college
+		Relations:
+			Kai ("Sea") - their mother was really into nature so she named her sons River and Sea (just Kai was luckier to get a hawaiian sea)
+			Brook - sister
+		Orientation: mostly gay (powerbottom), publicly bi - can get it up for females to keep his image (imagines dudes, asked women to finger his ass/peg him)
+		Cock: cut; 10 inch (human), 11 inch (nymph)
+		Notes:
+			Protective over Sylvanus
 
 4 - Football Team Captain: Han
-			Age: 21 (3rd year)
-			Ancestry: Asian
-			Relations:
+		Target Infection: Cyclops
+		Age: 21 (3rd year)
+		Ancestry: Asian
+		Relations:
 			Grandfather immigrated from Asia, father was born in the US
 			Traditional upbringing
-			Orientation: Straight (human), Bi (cyclops) - somewhat freaked out over it (and having one eye), but he can't stay away from the guys
-			Cock Size: cut; 6 inch; 15 inch (cyclops)
-			Idea: He drinks with an orc breeder from the nerd frat (slut npc), the orc slips some bottled orc cum into the satyr wine, Han gets super horny
-						Choice: stand back and watch as the orc and Han vanish into his room; slip in and take Han by the arm to bring him to his room (he'll be "painfully hard" and at the same time discombobulated - asking for "help" from the player to get his dick taken care of - BJ or jerking him off)
+		Orientation: Straight (human), Bi (cyclops) - somewhat freaked out over it (and having one eye), but he can't stay away from the guys
+		Cock Size: cut; 6 inch; 15 inch (cyclops)
+		Idea: He drinks with an orc breeder from the nerd frat (slut npc), the orc slips some bottled orc cum into the satyr wine, Han gets super horny
+			Choice: stand back and watch as the orc and Han vanish into his room; slip in and take Han by the arm to bring him to his room (he'll be "painfully hard" and at the same time discombobulated - asking for "help" from the player to get his dick taken care of - BJ or jerking him off)
 
 5 - Rising Star: Richard
-			Age: 19 (1st year)
-			Ancestry: Greek/British
-			Relations:
-			Orientation: Bisexual (doesn't talk about it much)
-			Cock Size: cut; 8 inch (human); 10 inch (satyr)
-			Sports: Lacrosse Player
-			Background: Legacy (father + grandfather were members)
-									Got a sports scholarship to pay his own way
-			Notes:
-			Include a "yeah, approaching an infected was stupid" (referring to Sylvanus) in his training sessions with the expedition crew
-			Secret pregnancy fetish (from overhearing him as he was in rut)
+		Target Infection: Satyr
+		Age: 19 (1st year)
+		Ancestry: Greek/British
+		Relations:
+		Orientation: Bisexual (doesn't talk about it much)
+		Cock Size: cut; 8 inch (human); 10 inch (satyr)
+		Sports: Lacrosse Player
+		Background: Legacy (father + grandfather were members)
+					Got a sports scholarship to pay his own way
+		Notes:
+		Include a "yeah, approaching an infected was stupid" (referring to Sylvanus) in his training sessions with the expedition crew
+		Secret pregnancy fetish (from overhearing him as he was in rut)
 
-6 - Lost Pledge: Maddox
-			Age: 20
-			Relations: Irish
-			Orientation:
-			Cock Size:
+6 - Lost Pledge: Maddox (turned into a male dryad in the Grove)
+		Target Infection: Dryad
+		Age: 20 (pledge)
+		Ancestry: Irish
+		Orientation: Straight
+		Cock: uncut; 5 inch (human), 8 (dryad)
 
-7 - Lost Pledge: Clay
-			Age: 20
-			Relations: Irish
-			Orientation:
-			Cock Size:
+7 - Lost Pledge: Clay (turned into a male dryad in the Grove)
+		Target Infection: Dryad
+		Age: 20 (pledge)
+		Ancestry: Irish
+		Orientation: Straight
+		Cock: cut; 6 inch (human), 8 (dryad)
 
-8 - Lost Pledge Yisroel
-			Age: 20
-			Relations: Israeli
-			Orientation:
-			Cock Size: cut; 10 inch (human), none (dryad cuntboy)
+8 - Lost Pledge Yisroel (turned into a male dryad in the Grove)
+		Target Infection: Dryad
+		Age: 20 (pledge)
+		Ancestry: Israeli
+		Orientation: Straight
+		Cock Size: cut; 10 inch (human), none (dryad cuntboy)
 
 Subelements of the Frat Brothers Group NPC
 9 - Angelo Silva (latin lover, sleeps with any girl he can)
-			Age: 20
-			Ancestry: Portugese
-			Orientation: straight
-			Cock Size: cut; 7 inch (human); uncut; 8 inch (satyr - future transformation should be as part of his story, not random)
-			Background: Soccer Player (but its not his primary interest)
-									Really likes music, plays electric guitar
-									One of the nerd frat guys set up his phone-camera connection for him (with which he takes his porn vids)
-			Notes:
-			Secretly loves the taste of cum (eats his own regularly)
+		Target Infection: Human, actually (just to keep things fresh and have some variety)
+		Age: 20
+		Ancestry: Portuguese
+		Orientation: straight
+		Cock Size: cut; 7 inch (human); uncut; 8 inch (satyr - future transformation should be as part of his story, not random)
+		Background: Soccer Player (but its not his primary interest)
+					Really likes music, plays electric guitar
+					One of the nerd frat guys set up his phone-camera connection for him (with which he takes his porn vids)
+		Notes:
+		Secretly loves the taste of cum (eats his own regularly)
 
 10 - Big John (offensive guard football player, knows Roman)
-			Age: 20
-			Relations: English
-			Orientation:
-			Cock Size:
-			Info:
-			Uses somewhat corny/cringy words during sex - "babycakes" and whatnot"
+		Target Infection: Satyr
+		Age: 20
+		Relations: English
+		Orientation:
+		Cock Size:
+		Info:
+		Uses somewhat corny/cringy words during sex - "babycakes" and whatnot"
 
 11 - Little John (fireplug shaped wrestler)
-			Age: 20
-			Relations: English
-			Orientation:
-			Cock Size:
+		Target Infection: Satyr
+		Age: 20
+		Relations: English
+		Orientation:
+		Cock Size:
 
 12 - Nate (gymnast)
+		Target Infection: Satyr
+
 13 - Paul (wrestler)
+		Target Infection: Satyr
+
 14 - Eric
+		Target Infection: Satyr
+
 15 - Oliver (swims)
-16 -
-17 -
-18 -
-19 - free
-20 - free
-21 - free
-22 - free
+		Target Infection: Nymph (male)
+
+16 - TBD (char slot open)
+17 - TBD (char slot open)
+18 - TBD (char slot open)
+19 - free (pledge slot not filled)
+20 - free (pledge slot not filled)
+21 - free (pledge slot not filled)
+22 - free (pledge slot not filled)
 
 -----
 
 TODO: Add Walk-in event about nudist players (some other people were already nude, so they're not that concerned)
-
-
 
 ]
 
@@ -441,11 +457,17 @@ to say PANFratBro_Talkmenu_Night:
 		now sortorder entry is 4;
 		now description entry is "(Note: Your gender is important and will lock you into a male/female path.) Tease him into a sexy situation";
 	[]
-	if PlayerMet of Angelo is true and Player is not neuter and "Player Got Cohunes" is listed in Traits of Angelo and "First Video Time" is listed in Traits of Angelo:
+	if PlayerMet of Angelo is true and Player is not neuter and "Player Got Cohunes" is listed in Traits of Angelo and "First Video Time" is listed in Traits of Angelo and "Angelo Satyr Transformation Stage 1 End" is not listed in Traits of Angelo:
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest some more video time to Angelo";
 		now sortorder entry is 5;
 		now description entry is "Step into his room and watch some of his recordings";
+	[]
+	if "Angelo Satyr Transformation Stage 1 End" is listed in Traits of Angelo:
+		choose a blank row in table of fucking options;
+		now title entry is "Suggest going up to Angelo's room for some fun";
+		now sortorder entry is 6;
+		now description entry is "Get it on with the sexy Latino satyr";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -465,13 +487,18 @@ to say PANFratBro_Talkmenu_Night:
 					say "[Angelo Introduction]";
 				else if (nam is "Express some doubts about Angelo's story"):
 					say "[Angelo Pre Video Masculine]";
+					now DoneTalking is true;
 				else if (nam is "Tell Angelo you can handle the 'full' story of his exploits"):
 					say "[Angelo Pre Video Feminine]";
+					now DoneTalking is true;
 				else if (nam is "Challenge Angelo into 'proving' his boasts"):
 					say "[Angelo Video Time]";
 					now DoneTalking is true;
 				else if (nam is "Suggest some more video time to Angelo"):
 					say "[Angelo Video Time]";
+					now DoneTalking is true;
+				else if (nam is "Suggest going up to Angelo's room for some fun"):
+					say "[Angelo Fun Time]";
 					now DoneTalking is true;
 				if DoneTalking is false:
 					say "[PANFratBro_Talkmenu_Night]"; [looping back to continue talking]
@@ -484,21 +511,20 @@ to say PANFratBro_Talkmenu_Night:
 	clear the screen and hyperlink list;
 
 to say Angelo Introduction:
-	say "     Making your way over to the group of people standing in one corner of the large room, you overhear the handsome Latino dude say, '...sure I did her! And she was sweet as fuck!' Moving a little closer still and circling the gathering of people, you catch full sight of him from the side, allowing you to let your eyes wander up and down over the guy's body: He's about five foot eight, with a slender but fit build, fairly well-developed legs and thighs. The low-cut, black skinny jeans reveal just a bit of skin and the top of his crimson-red underwear. Your eyes are naturally drawn to his perky, rounded ass by that little splash of red. Above, a V-neck muscle shirt shows his chest off very well. His skin is a few shades darker than most of the other frat guys around, with curly locks framing his handsome face. Attentive dark-brown eyes flick back and forth over his audience while he bears a winning smile as he tells his boastful tale. Then, one of his friends snorts and shakes his head while exclaiming, 'No way! You can't have gotten Doctor Liz into bed that quickly! Hell, she only started in the medical center a week before this thing with the infection kicked off!'";
+	say "     Making your way over to the group of people standing in one corner of the large room, you overhear the handsome Latino dude say, '...sure I did her! And she was sweet as fuck!' Moving a little closer still and circling the gathering of people, you catch full sight of him from the side, allowing you to let your eyes wander up and down over the guy's body: He's about five foot eight, with a slender but fit build, fairly well-developed legs and thighs. The low-cut, black skinny jeans reveal just a bit of skin and the top of his crimson-red underwear. Your eyes are naturally drawn to his perky, rounded ass by that little splash of red. Above, a V-neck muscle shirt shows his chest off very well. His skin is a few shades darker than most of the other frat guys around, with curly locks framing his handsome face. Attentive dark-brown eyes flick back and forth over his audience while he bears a winning smile as he tells his boastful tale, in between taking swigs from a cup of something alcoholic. Then, one of his friends snorts and shakes his head while exclaiming, 'No way! You can't have gotten Doctor Liz into bed that quickly! Hell, she only started in the medical center a week before this thing with the infection kicked off!'";
 	say "     'I never said it was in a bed,' the first frat brother retorts with a smirk, earning him laughs, whistles and acknowledging nods from several others. Smiling, he looks around and wiggles his eyebrows at his friends, in the course of which he spots you. 'Hey ";
 	if SubjectPro of Player is "he": [men/trans-males]
 		say "dude, you're new! I'm Angelo. Welcome to story-time in my little corner of the house, haha! Why don't you stay a while and listen to my [italic type]completely true and accurate[roman type] tale?' While saying the last few words in a proud tone, he throws looks to some others who roll their eyes disbelievingly.";
 		WaitLineBreak;
 		say "     After introducing yourself in turn, curiosity gets the better of you. Joining the group of people around Angelo, you can't help but want to know how his tale went on. Seeing himself surrounded by avid listeners, the studly Latino grins and continues to say, 'So yeah, wasn't in a bed. I made my move that week when we were all being called in for health checks, hah! Took the last of the appointment slots on a Friday so there'd be no interruptions, then... did my magic. Had her smiling and a little bit blushing before we even stepped into the examination room. And inside... well, let's say I was prepared when she asked me to take some clothes off so she could check me out.' One of the onlookers snorts, poking his neighbor in the side, 'Yeah, its like Gel's pervy superpower. He can go from a normal outfit and all to absolutely naked in three seconds flat!'";
-		say "     Smirking, Angelo continues, 'What can I say - snap-off briefs are your friend! Anyways, Lizzy'd turned away to make a note on my chart, then glanced back at me when she heard the belt buckle hit the floor. Let's just say she was properly impressed, you should have seen her face!' To underline the tale, the Latino brushes a hand down his front, letting his fingers play over the muscles clearly outlined by his skin-tight shirt. Then he cups the bulge of his pants and gives it a demonstrative squeeze. 'Little bit of flirting, complimenting, then showing off this awesome bod, and Angelo Junior, you know... that really hit the mark! A minute later we were kissing and I was exploring her mouth with my tongue. Then another three minutes, and I had her on the exam table, on her back with legs spread!' His excited tone of voice as he adds a few more saucy details seems to be enough for most to believe him, but there's still a few who seem skeptical.";
+		say "     Smirking, Angelo continues, 'What can I say - snap-off briefs are your friend! Anyways, Lizzy'd turned away to make a note on my chart, then glanced back at me when she heard the belt buckle hit the floor. Let's just say she was properly impressed, you should have seen her face!' To underline the tale, the Latino brushes a hand down his front, letting his fingers play over the muscles clearly outlined by his skin-tight shirt. Then he cups the bulge of his pants and gives it a demonstrative squeeze. 'Little bit of flirting, complimenting, then showing off this awesome bod, and Angelo Junior, you know... that really hit the mark! A minute later we were kissing and I was exploring her mouth with my tongue. Then another three minutes, and I had her on the exam table, lying back with her legs spread!' His excited tone of voice as he adds a few more saucy details seems to be enough for most to believe him, but there's still a few who seem skeptical.";
 	else:
 		say "babe, you're new! Because I sure would have noticed a sexy thing as yourself before otherwise!' With a flirty wink, he takes your hand and brings it to his lips for a light kiss, then adds, 'I'm Angelo. Welcome to story-time in my little corner of the house, haha! Why don't you stay a while and listen to my [italic type]completely true and accurate[roman type] tale?' While saying the last few words in a proud tone, he throws looks to some others who roll their eyes disbelievingly.";
 		WaitLineBreak;
 		say "     After introducing yourself in turn, curiosity gets the better of you. Joining the group of people around Angelo, you can't help but want to know how his tale went on. Focusing his attention to you, the studly Latino puts on a friendly smile and continues to say in his rich, charming voice, 'It almost seemed like fate. I met her when we were called in for checkups recently. Told the scheduler to put my appointment at the next open time, and he gave me a slot late in that same week. My appointment was on a humid Friday afternoon, over in the campus health center.' He smiles at you in a flirtatious manner as his voice rolls all of those R's in the tale in that oddly enticing way that makes a pleasant shiver go down your spine. In the corner of your view, you can vaguely see the other frat brothers exchanging some meaningful looks with each other, the corners of their mouths twitching a little as they suppress grins.";
-		WaitLineBreak;
 		say "     'The doctor welcomed me in the health center and took my info, then told me to step into the examination room. Once inside, she asked me to strip down...' As he says this, Angelo brushes a hand down his front, fingers playing over the muscles clearly outlined by his skin-tight shirt, then lightly grazing the bulge of his pants before pulling away again. You almost think you see a throb from within the skinny jeans. One of the listeners comments, 'Hah, Angel's got a superpower in that regard. He can go from a normal outfit and all to absolutely naked in three seconds flat!' The sexy Latino glances aside at the other guy, his gaze hardening for a second, prompting the frat brother to quickly shut up and clear his throat. 'We had a friendly talk and then she started to go through her checklist, listening to my heart and breathing. But before long I noticed that her hands were touching me more and more... it went beyond an examination after that.'";
-		say "     'What can I say... Angelo Junior started rising to the occasion, I'm only a man, you know. With her wrapping her hand around it, the doctor then kissed me, pushing herself against my body. A gentleman doesn't really tell details.' With that, he leans towards you a little bit, smiling as he gives you a nod that drives your imagination to new heights. Angelo waits a moment for the mental images in your head to settle, then goes on to say in his charming voice, 'I can say that I did take good care of her after that. A little while later, when we were basking in the afterglow, I offered to take her out for dinner sometime. Then she told me that it wasn't really something appropriate to be between a doctor and patient, in public.' One of the frat brothers shakes his head in disbelief, commenting, 'So she just wanted you to be her dirty secret? Bro, that's unbelievable!' Angelo gives a slightly overacted sad nod to him, followed by a reply of, 'Yeah, that wasn't for me. I need something real, you know. Who cares if the world knows, if you meet your true soulmate?'";
 		WaitLineBreak;
+		say "     'What can I say... Angelo Junior started rising to the occasion, I'm only a man, you know. With her wrapping her hand around it, the doctor then kissed me, pushing herself against my body. A gentleman doesn't really tell details.' With that, he leans towards you a little bit, smiling as he gives you a nod that drives your imagination to new heights. Angelo waits a moment for the mental images in your head to settle, then goes on to say in his charming voice, 'I can say that I did take good care of her after that. A little while later, when we were basking in the afterglow, I offered to take her out for dinner sometime. Then she told me that it wasn't really something appropriate to be between a doctor and patient, in public.' One of the frat brothers shakes his head in disbelief, commenting, 'So she just wanted you to be her dirty secret? Bro, that's unbelievable!' Angelo gives a slightly overacted sad nod to him, followed by a reply of, 'Yeah, that wasn't for me. I need something real, you know. Who cares if the world knows, if you meet your true soulmate?'";
 		say "     As the young Latino's story ends, you become aware of several of the other listeners around you having somewhat disappointed expressions. Seems like they wanted to have some more actual details, not the more flowery version that he addressed to you. With your imagination still working overtime, you can't help but feel curious about that too. With everything that you've seen and done so far in the city, getting the full, lewd details actually seems an oddly exciting option, if you think about it.";
 	say "     [bold type]Angelo is clearly proud of his conquests, and this might just be an opportunity to have some fun. Though first you'll have to get him to open up a bit more...[roman type]";
 	now PlayerMet of Angelo is true;
@@ -520,7 +546,7 @@ to say Angelo Pre Video Masculine:
 
 to say Angelo Dick-smack Choice Masculine:
 	LineBreak;
-	say "     [bold type]It is clear that this isn't sexual - not really, despite him almost rubbing up against you with an erection. No, Angelo's making a show of dominance right now. The question is how you'll react to it.[roman type][line break]";
+	say "     [bold type]It is clear that this isn't meant to be sexual - not really, despite him almost rubbing up against you with an erection. No, Angelo's making a show of dominance right now. The question is how you'll react to it. [roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Don't back down, whip out your own and smack it in top of his!";
 	say "     ([link]N[as]n[end link]) - Bah, this is childish. You're out of here!";
@@ -528,12 +554,12 @@ to say Angelo Dick-smack Choice Masculine:
 		LineBreak;
 		say "     Picking what you think is the right thing to do, you [if Player is not barecrotch]bare your crotch, then [end if]";
 		if Player is not male: [male pronouns, but no cock - so transguys]
-			say "slide a hand to your clit. Taking it between your fingers, you shuffle even closer to Angelo and thrust your hips forward, smacking his dick lightly from above. He raises his eyebrows at your response, followed by a grin and a respectful nod, then the words, 'Gotta give it to you: You got balls!' He pauses for a second after that, glancing down at your feminine crotch and adding, 'Err... you know what I mean, right?' You can't help but tease him for a short moment, putting on an offended look while trying to keep a smirk off your face. As Angelo's eyebrows start to draw together in worry, you can't help but burst out in laughter. 'Hey, not funny dude!' he complains, lightly smacking your upper arm, but then moving on to grab your shoulder and giving it a friendly squeeze.";
+			say "slide a hand to your clit. Taking it between your fingers, you shuffle even closer to Angelo and thrust your hips forward, smacking his dick lightly from above. He raises his eyebrows at your response, followed by a grin and a respectful nod, then the words, 'Gotta give it to you: You got balls!' He pauses for a second after that, glancing down at your crotch and adding, 'Err... you know what I mean, right?' You can't help but tease him for a short moment, putting on an offended look while trying to keep a smirk off your face. As Angelo's eyebrows start to draw together in worry, you can't help but burst out in laughter. 'Hey, not funny dude!' he complains, lightly smacking your upper arm, but then moving on to grab your shoulder and giving it a friendly squeeze.";
 			say "     'Well, it's good to know that you can give as well as you get. But believe me - its all true! I don't boast about things I didn't do!' the handsome stud tells you with a serious tone for the last words. [bold type]Making a mental note of the fact that you can likely use his pride to push further[roman type], you wait for him to get dressed again. As he tugs his clothing back into place, Angelo comments to you, 'Sorry if that made you a bit uncomfortable. I just had to know that you could hang, because me and the guys don't waste our time with pussies.' Eyes flicking down to your crotch for just a second, he comments with a flirty edge to his voice, 'Not that I don't like looking at some pussy,' giving you a smooth wink, before adding, '...just not someone acting like one.' Nodding to him, you then follow the Latino stud back into the main room of the second floor. As you step up to the group of his friends, Angelo lays an arm around your shoulder and loudly exclaims to them, 'Sorry to keep you guys waiting. Me and this loser had something to discuss. But really, he's a good guy. Anyone got a drink for the two of us?' As one of the other frat guys hands out two bottles of beer, Angelo clinks his against yours with a smile, then takes a pull.";
 			ItemGain TodtGrains Beer by 1;
 			TraitGain "Player = Transdude" for Angelo;
 		else: [normal guys]
-			say "slide a hand to your own [Cock of Player] manhood. After a little bit of stroking and rubbing to get it hard, you shuffle close to Angelo and thrust your hips forward, smacking his dick lightly from above. He raises his eyebrows at your response, followed by a grin and a respectful nod, then the words, 'Gotta give it to you: You got balls! It's good to know that you can give as well as you get. But believe me - its all true! I don't boast about things I didn't do!' the handsome stud tells you with a serious tone for the last words.";
+			say "slide a hand to your own [Cock of Player] manhood. After a little bit of stroking and rubbing to get it hard, you shuffle close to Angelo and thrust your hips forward, smacking his dick lightly from above. He raises his eyebrows at your response, followed by a grin and a respectful nod, then the words, 'Gotta give it to you: You got balls! It's good to know that you can give as well as you get. But believe me - its all true! I don't boast about things I didn't do!' the handsome stud tells you with a serious tone.";
 			say "     [bold type]Making a mental note of the fact that you can likely use his pride to push further[roman type], you wait for him to get dressed again. As he tugs his clothing back into place, Angelo comments to you, 'Sorry if that made you a bit uncomfortable. I just had to know that you could hang, because me and the guys don't waste our time with pussies.' Nodding to him, you then follow the Latino stud back into the main room of the second floor. As you step up to the group of his friends, Angelo lays an arm around your shoulder and loudly exclaims to them, 'Sorry to keep you guys waiting. Me and this loser had something to discuss. But really, he's a good guy. Anyone got a drink for the two of us?' As one of the other frat guys hands out two bottles of beer, Angelo clinks his against yours with a smile, then takes a pull.";
 			ItemGain TodtGrains Beer by 1;
 			TraitGain "Player = Dude" for Angelo;
@@ -576,9 +602,21 @@ to say Angelo Dick-smack Choice Feminine:
 		TraitGain "Player Lacks Cohunes" for Angelo;
 
 to say Angelo Video Time:
-	if "First Video Time" is listed in Traits of Angelo:
-		say "[bold type]<Writer's Note: As there currently are no additional sex scenes for Angelo, you'll get a repeat of the initial scene as a treat for now.>[roman type][line break]";
-		LineBreak;
+	if "First Video Time" is not listed in Traits of Angelo:
+		say "[Angelo_Video_Time_1]";
+	else if "Angelo Satyr Transformation Stage 1 Start" is not listed in Traits of Angelo: ['normal' video time without him being exposed to satyr wine before - Player can pour satyr wine over him here]
+		say "[Angelo_Video_Time_2]";
+	else if "Angelo Satyr Transformation Stage 1 End" is not listed in Traits of Angelo: [after the exposure to satyr wine - he grows a tail]
+		say "[Angelo_Satyr_Transformation_Stage_1]";
+
+to say Angelo Fun Time:
+	if "Angelo Satyr Transformation Stage 2 End" is not listed in Traits of Angelo:
+		say "[Angelo_Satyr_Transformation_Stage_2]";
+	else:
+		say "<Writer's Note: The next stage of Angelo's further transformation into a satyr is still in the works. Therefore, you'll get the previous scene for now, until the new one is ready.>";
+		say "[Angelo_Satyr_Transformation_Stage_2]";
+
+to say Angelo_Video_Time_1:
 	say "     Chatting a little bit with the hangers-on near Angelo, you voice some doubts about his claims of fucking the sexy Doctor Liz right in her own examination room. It doesn't take much effort before one of the guys quietly moves over to Angelo and alerts him to what you're doing. The prideful young man picks up the gauntlet immediately, stepping up to deflect you throwing doubts at his claims. Holding your own, you glance left and right, tying in his friends and forcing him to respond to retain his status before the guys. You argue that sure, he might have balls, and the skills to just strip down in seconds like he claimed - but would a doctor, a professional, just drop her panties for him in a single instant? It's an unlikely story! You keep at it, challenging Angelo, then drive things to a point and call out that it's only his say-so after all, and he's got no proof...";
 	say "     The frat's Don Juan jumps at those words, grinning widely. 'That's what you think...' he says, then pats your arm and indicates you should follow him. With a smirk, you reply that you're good without him wagging his dick at you again. Quelling the chuckle or two that bubbles up among his followers with a single look, Angelo rolls his eyes a little and tells you, 'That's not what I mean. You've proven you can hang. It's just that I wanna show you something.' Then he gives a casual wave to the other guys and says, 'Talk to you later. And you - ya coming? Or are you just gonna stand there and keep yammering?' Relenting, you follow Angelo, with the two of you climbing to the third floor, where he leads you down the northern hallway and into his room. It is nicely spacious for student accommodation, with high quality furniture, demonstrating the fairly well-off status of the PAN fraternity.";
 	WaitLineBreak;
@@ -627,6 +665,7 @@ to say Angelo Video Time:
 			WaitLineBreak;
 			say "     Chuckling and keeping to yourself that it's a pretty gay thing to do, for a straight guy, you simply watch him finish off eating the cum. As he soon is finished, he glances over to you, then stretches himself across the bed to snatch up a box of tissues, handing it to you so you can clean up yourself. While you're doing that, Angelo nods to the TV screen, where his video-self is just enjoying himself being orally serviced, building up to a second wind of fucking the doctor again. With a snort, he comments, 'Too bad Lizzy's no longer around hereabouts, she was a wild fuck! Last I heard, she was carried off by a minotaur, happily rocking up and down on his shaft as they went.' Giving a shrug, the young man adds, 'Knew right away Lizzy was pretty thirsty for it when I heard from a buddy that she'd given his balls a bit of a fondle, when doing his checkup. So I took the bold approach, and it worked!'";
 			say "     As you chuckle and give Angelo a thumbs-up to acknowledge his conquest, the frat member says in a bit more serious tone, 'Just so we understand each other... this didn't happen! We just watched a vid, no touching. I'm not gay!' At that statement, his eyes meet your own in a sharp expression, underlining that he's concerned about rumors getting started. Then he softens his seriousness a bit again and adds, 'I mean, just keep a lid on it, alright?' After seeing you nodding to acknowledge his request, the frat member adds, 'It's fun to relive some memories, so... if you wanna watch another vid or so in the future, just let me know, eh? I got plenty.' With that, you smile and slip out of the room, then walk back down to the second floor.";
+			TraitGain "Cumeater" for Angelo;
 		else if calcnumber is 2:
 			LineBreak;
 			say "     [if Player is not barecrotch]Quickly baring your own crotch, you [else]You [end if]move one hand to";
@@ -639,6 +678,7 @@ to say Angelo Video Time:
 			WaitLineBreak;
 			say "     Breathlessly [if Player is male]holding your shaft in an iron grip as it begins to let loose long streaks of creamy cum to splat down on yourself, as well as a few onto Angelo's sheets, [else]frigging your clit and feeling your pussy go moist and dripping, [end if]you ride out the pleasure-filled high of climax. Besides you, the Latino stud is tightly gripping his erection, holding the other hand over the throbbing dickhead. Then, once he stops twitching and grunting as the last of his seed has erupted from the piece of man-meat in his grasp, the young man does something surprising - he lifts the hand to his face, licking off the fresh cum from it. 'What? It's just protein!' he says as he sees you stare at him, then slurps up some more with a sweep of his tongue. 'The way I see it, it's a waste if it isn't going into a pussy. So this stuff goes right back into me if I'm not seeding a girl. Gotta keep up your energy to be ready when the time to strike comes, hah!'";
 			say "     Chuckling and keeping to yourself that it's a pretty gay thing to do, for a straight guy, you simply watch him finish off eating the cum. As he soon is finished, he glances over to you,  then half-slides his chest onto the bed, to stretch and snatch up a box of tissues, handing it to you so you can clean up yourself. While you're doing that, Angelo nods to the TV screen, where his video-self is just enjoying himself being orally serviced, building up to a second wind of fucking the doctor again. With a snort, he comments, 'Too bad Lizzy's no longer around hereabouts, she was a wild fuck! Last I heard, she was carried off by a minotaur, happily rocking up and down on his shaft as they went.' Giving a shrug, the young man adds, 'Knew right away Lizzy was pretty thirsty for it when I heard from a buddy that she'd given his balls a bit of a fondle, when doing his checkup. So I took the bold approach, and it worked!' As you chuckle and give Angelo a thumbs-up to acknowledge his conquest, the frat member says, 'It's fun to relive some memories, so... if you wanna watch another vid or so in the future, just let me know, eh? I got plenty.' Nodding to him, you then slip out of the room and walk back down to the second floor.";
+			TraitGain "Cumeater" for Angelo;
 		else if calcnumber is 3:
 			LineBreak;
 			say "     Pushing yourself up from the floor, you turn to look at Angelo, who holds his gaze on the TV for a moment longer before glancing up at you. 'Told ya!' he says with a grin, never stopping the jerking movements of his hand. Nodding to him, you acknowledge that he did tell the truth and get it on with that doctor - a fact that is underlined by a breathy moan coming from the TV, where you can see video-Angelo just slide into the woman's pussy for the first time. 'She was a wild minx to fuck, I can tell you that! Too bad Lizzy's no longer around hereabouts. Last I heard, she was carried off by a minotaur, happily rocking up and down on his shaft as they went.' Giving a shrug, the young man adds, 'Knew right away Lizzy was pretty thirsty for it when I heard from a buddy that she'd given his balls a bit of a fondle, when doing his checkup. So I took the bold approach, and it worked!' With a grin, he nods to the screen, where the examination room is still in quite active use for extracurricular activities.";
@@ -676,6 +716,7 @@ to say Angelo Video Time:
 				WaitLineBreak;
 				say "     From then on, you settle into a fun bout of pleasing each other, touching and stroking as you watch the video, and also watch Angelo's body. Your mutual pleasure builds higher and higher, until he eventually says in an urgent tone, 'I'm really close now!' It doesn't take much longer before your double masturbation session reaches its inevitable conclusion of driving both of you over the edge to full-throated moans announcing your climax. Breathlessly trembling and twitching as Angelo frigs your clit with an expert's touch, your pussy goes moist and dripping as you ride out the pleasure-filled high of orgasm. Besides you, the Latino stud quickly cupped his erection with one hand, covering its throbbing dickhead. Then, once he stops twitching and grunting as the last of his seed has erupted from the piece of man-meat in your grasp, the young man does something surprising - he lifts his hand to his face, licking off the fresh cum from it. 'What? It's just protein!' he says as he sees you stare at him, then slurps up some more with a sweep of his tongue. 'The way I see it, it's a waste if it isn't going into a pussy. So this stuff goes right back into me if I'm not seeding a girl! Gotta keep up your energy to be ready when the time to strike comes, hah!'";
 				say "     Chuckling and keeping to yourself that it's a pretty gay thing to do, for a straight guy, you simply watch him finish off eating the cum. As he soon is finished, he glances over to you, then half-slides his chest onto the bed, to stretch and snatch up a box of tissues, handing it to you so you can clean up yourself. While you're doing that, Angelo nods to the TV screen, where his video-self is just enjoying himself being orally serviced, building up to a second wind of fucking the doctor again. With a snort, he comments, 'Too bad Lizzy's no longer around hereabouts, she was a wild fuck! Last I heard, she was carried off by a minotaur, happily rocking up and down on his shaft as they went.' Giving a shrug, the young man adds, 'Knew right away Lizzy was pretty thirsty for it when I heard from a buddy that she'd given his balls a bit of a fondle, when doing his checkup. So I took the bold approach, and it worked!' As you chuckle and give Angelo a thumbs-up to acknowledge his conquest, the frat member says, 'It's fun to relive some memories, so... if you wanna watch another vid or so in the future, just let me know, eh? I got plenty.' Nodding to him, you then slip out of the room and walk back down to the second floor.";
+				TraitGain "Cumeater" for Angelo;
 			else:
 				LineBreak;
 				say "     You intercept Angelo's reaching hand, gently but firmly pushing it away from your crotch as you shake your head at him. He takes this well enough, telling you in a charmingly smooth voice, 'I just had to try, it is difficult to keep one's hands to yourself when in the presence of such a beautiful woman.' A very well-trained smile with just a hint of a suggestive smirk to it leads over to his next words of, 'My offer stands, now and in the future. You know I'm not one to give up too easily, and I'd love to show you so many pleasures...' Seeing that he'll keep his attempts to charm you up relentlessly, for as long as you're here with him, and exposed to boot, you push yourself up from the floor and take a step away[if Player is not barecrotch], then quickly get dressed again. [else]. [end if]After a quick wave and goodbye to Angelo, you leave his room and move back to the second floor.";
@@ -685,11 +726,253 @@ to say Angelo Video Time:
 			say "     As you chuckle and give Angelo a thumbs-up to acknowledge his conquest, the frat member says, 'It's fun to relive some memories, so... if you wanna watch another vid or so in the future, just let me know, eh? I got plenty.' Nodding to him, you tell him to enjoy his wank, then slip out of the room and walk back down to the second floor.";
 		TraitGain "Player = Girl" for Angelo;
 	TraitGain "First Video Time" for Angelo;
-	[
-	else:
-		say "Repeat/Buildup Scenes";
-	]
 
+to say Angelo_Video_Time_2:
+	say "     Stepping up to Angelo in an opportune moment when his buddies have gone get some drinks, you clear your throat to get his attention and step closer to the frat's Don Juan. He's happy enough to see you and the two of you talk casually, leaning in close to understand each other over the loud music. It's almost inevitable that the topic of conversation veers back to the further conquests he's made, and you suggest that it'd be fun to check out another of his videos. 'Yeah, I knew you'd say that,' he replies with a broad grin and a wink. 'Wanna see the master at work, hahaha!' Clapping a hand on your shoulder, Angelo nods towards the stairwell leading up to the third floor. The two of you set out towards it, but before you can take more than a few steps, another of the PAN frat guys steps into your way, 'Little' John, a wrestler among the very sporty fraternity guys. Balancing a tray of drinks on one strong arm, he's clearly just back from a trip down to the bar, and calling out, 'Got fresh booze, guys!'",
+	say "     As John hands out beer bottles and red cups to anyone who'll take them off his hands, you find yourself holding one of the cups a moment later, and see that it is filled with a rich, dark red liquid - satyr wine, you're fairly certain. Kerr and Talov are still at it, spreading joy with their seemingly inexhaustable barrel of the sweet, alcoholic grape juice. When the throng of people that flocked towards John are all satisfied and disperse again, you're free to continue on, soon climbing the stairs to the third floor. Already knowing which way to go, you walk down the northern hallway and step into Angelo's room. It is nicely spacious for student accommodation, with high quality furniture, demonstrating the fairly well-off status of the PAN fraternity. The room allows you a glimpse at the Latino's true self, in the way he decorates his private place. Besides some obligatory bikini babe posters on the walls, there's also two big band posters with Portuguese writing on them, for what looks to be a Brazilian rock band. An electric guitar hangs from a prime spot in the middle of the back wall, with loudspeakers to go with it wired into the corners of the room.";
+	WaitLineBreak;
+	say "     Bumping aside the soccer ball on the ground with a foot, your Latino stud of a host waves you over towards his bed, then closes the door behind himself. 'Just plant your ass down, I'll find a good one for us to watch.' As you walk over and sit down on the edge of the bed this time, the young man pulls out the bottom drawer of his dresser and takes the lid of a shoebox inside, then lets his finger sweep over the video camera tapes that are tightly packed inside it. 'Here we go!' Angelo says cheerfully, victoriously raising a tape in one hand. Snatching up a video camera to go with it, he then bumps the drawer shut with his knee, and walks over to the television, connecting the camera to it and sliding the tape into the side flap, then pushing it closed with a click. Smirking at you, he presses the play button, which makes Angelo's grinning face appear on the TV. You can see this very room in the picture behind him, as well as the backside of a young woman that's currently unclasping her bra behind her back.";
+	say "     '[one of]Amanda[or]Jess[or]Jillian[or]Leah[or]Irene[or]Olga[or]Evie[or]Vicky[or]Uma[at random] was a really sexy lay, you'll see!' Angelo says in an amused as well as proud tone, and you can see from the corner of your eye that he's got a noticeable bulge in his pants, and is rubbing the side of his hand casually against it. Looks like he's getting quite excited from the memory of his conquest. Given that you're in his room, watching one of his sex tapes, and the fact that he's not shy at all about showing off his body, it doesn't take much longer before he peels off his shirt, then sits down besides you to have a better view of the action going on in the TV. With the sound of a zipper drowning out the woman on the screen's moans, Angelo pulls out his cock and starts to jerk off.";
+	LineBreak;
+	if SubjectPro of Player is "he": [men/trans-males]
+		say "     [bold type]What do you do now?[roman type][line break]";
+		LineBreak;
+		let Angelo_Video_Choices be a list of text;
+		add "'Accidentally' spill your cup of satyr wine all over his front." to Angelo_Video_Choices;
+		add "Join him in self-pleasure, then attempt to grasp his cock at an opportune moment." to Angelo_Video_Choices;
+		add "Stroke yourself right along with him." to Angelo_Video_Choices;
+		add "Change your mind and watch the video long enough not to offend, then leave." to Angelo_Video_Choices;
+		let Angelo_Video_Choice be what the player chooses from Angelo_Video_Choices;
+		if Angelo_Video_Choice is:
+			-- "'Accidentally' spill your cup of satyr wine all over his front.":
+				LineBreak;
+				say "[Angelo_SatyrWine_Spill]";
+			-- "Join him in self-pleasure, then attempt to grasp his cock at an opportune moment.":
+				LineBreak;
+				say "     [if Player is not barecrotch]Quickly baring your own crotch, you [else]You [end if]move one hand to";
+				if Player is male:
+					say "grab hold of your [Cock of Player] shaft, stroking up and down along its length and letting out breathy grunts as you masturbate. ";
+				else if Player is female:
+					say "lay on top of your pubic mound, then start to rub and lightly pinch your clit, letting out breathy pants as you stimulate yourself. ";
+				say "A loud moan coming from the TV draws your attention up to the screen, where you can see video-Angelo just slide into the woman's pussy for the first time. Watching him work her body with the skillful experience of a true ladies['] man is a sight to see, as is the flexing of his muscular buttocks with every thrust. Though of course you've got something better than just a video, sitting right next to you with his dick in hand, jerking it with unhurried strokes. Casually glancing to the side, you look at his mostly naked body, letting your gaze wand over his dark skin and down to the hard cock in his hand. It is a long shot from the biggest you've seen before, especially recently, but... the boy sure knows how to use it, as the video still playing on the TV screen proves.";
+				say "     Seems like you weren't as stealthy as you thought in checking Angelo out, as he turns his head to half look at you and half keep the TV in his field of vision. A grin spreads on his face as he says 'She was a wild minx to fuck, I can tell you that! Feeling those silky-smooth legs around my waist as I was thrusting into her, man, that was amazing! And the pussy... man, I think she must have been into gymnastics, yoga or something like that. Chicks who're fit and have muscle tone all over the place really know how to flex around ya, hah!' Listening to the young man's excited praise for the female doctor he fucked - and is fucking in the video - you ask him some leading questions about what he liked about being with her. He chuckles and answers, 'Oh, she had great boobs. Really jiggly as I was thrusting, haha!' Then, as Angelo is miming in the air with both hands how big she was in his grasp, you confidently reach over and take hold of his cock.";
+				WaitLineBreak;
+				if Player is male:
+					say "     There is a little bit of tension in the air for a second, but as you begin to jerk the already quite horny student, and ask him to keep talking of the doctor's breasts, he relaxes pretty quickly. ";
+				else:
+					say "     There is a moment of silence in the air, as Angelo seems to contemplate asking for something more between you, letting his gaze wander over your body. You gloss over that possibility for now by starting to jerk the already quite horny student, and ask him to keep talking about the doctor's breasts. ";
+				say "Sitting side by side, you keep one hand wrapped around his hard shaft, the other working on your own sex, stimulating both of you in unison. Once or twice over the next little while, he tries to get a hand back around his own shaft, but as you keep shooing it away, Angelo relents. From then on, he's fairly vocal in communicating his state of arousal, asking you to move faster, or grip his dick more firmly. You keep at your own pace, enjoying the chance to tease the Latino stud a little bit, mentioning that giving back some pleasure would be appreciated. He ";
+				if SubjectPro of Player is "he": [men/trans-males]
+					say "pauses for a second, hesitating from touching another dude, then gives himself a push to reach out for your crotch. 'Man, feels odd to be doing this to another dude,' he comments somewhat embarrassedly. [if Player is female]Slipping two fingers into your pussy, he relaxes before long as you at least have parts he's familiar with. [else]Wrapping his fingers around the [Cock of Player] shaft between your legs, he begins to jerk up and down. ";
+				else:
+					say "reaches out to touch your pussy without delay, smirking a little as he slips his fingers into you. ";
+				say "From then on, you settle into a fun bout of pleasing each other, touching and stroking as you watch the video, and also watch Angelo's body. Your mutual stroking but still being nice by giving him what he asks when he pleads with truly urgent arousal in his voice. It doesn't take much longer before your double masturbation session reaches its inevitable conclusion of driving both of you over the edge to full-throated moans announcing your climax.";
+				say "     Breathlessly [if Player is male]holding your shaft in an iron grip as it begins to let loose long streaks of creamy cum to splat down on yourself, as well as a few onto Angelo's sheets, [else]frigging your clit and feeling your pussy go most and dripping, creating a small wet spot on Angelo's sheets, [end if]you ride out the pleasure-filled high of orgasm. Besides you, the Latino stud quickly cupped his erection with one hand, covering its throbbing dickhead. Then, once he stops twitching and grunting as the last of his seed has erupted from the piece of man-meat in your grasp, the young man does something surprising - he lifts his hand to his face, licking off the fresh cum from it. 'What? It's just protein!' he says as he sees you stare at him, then slurps up some more with a sweep of his tongue. 'The way I see it, it's a waste if it isn't going into a pussy. So this stuff goes right back into me if I'm not seeding a girl! Gotta keep up your energy to be ready when the time to strike comes, hah!'";
+				WaitLineBreak;
+				say "     Chuckling and keeping to yourself that it's a pretty gay thing to do, for a straight guy, you simply watch him finish off eating the cum. As he soon is finished, he glances over to you, then stretches himself across the bed to snatch up a box of tissues, handing it to you so you can clean up yourself. While you're doing that, Angelo nods to the TV screen, where his video-self is just enjoying himself being orally serviced, building up to a second wind of fucking the doctor again. With a snort, he comments, 'Too bad Lizzy's no longer around hereabouts, she was a wild fuck! Last I heard, she was carried off by a minotaur, happily rocking up and down on his shaft as they went.' Giving a shrug, the young man adds, 'Knew right away Lizzy was pretty thirsty for it when I heard from a buddy that she'd given his balls a bit of a fondle, when doing his checkup. So I took the bold approach, and it worked!'";
+				say "     As you chuckle and give Angelo a thumbs-up to acknowledge his conquest, the frat member says in a bit more serious tone, 'Just so we understand each other... this didn't happen! We just watched a vid, no touching. I'm not gay!' At that statement, his eyes meet your own in a sharp expression, underlining that he's concerned about rumors getting started. Then he softens his seriousness a bit again and adds, 'I mean, just keep a lid on it, alright?' After seeing you nodding to acknowledge his request, the frat member adds, 'It's fun to relive some memories, so... if you wanna watch another vid or so in the future, just let me know, eh? I got plenty.' With that, you smile and slip out of the room, then walk back down to the second floor.";
+				TraitGain "Cumeater" for Angelo;
+				NPCSexAftermath Angelo receives "Stroking" from Player;
+				NPCSexAftermath Player receives "Stroking" from Angelo;
+			-- "Touch yourself right along with him.":
+				LineBreak;
+				say "     [if Player is not barecrotch]Quickly baring your own crotch, you [else]You [end if]move one hand to";
+				if Player is male:
+					say "grab hold of your [Cock of Player] shaft, stroking up and down along its length and letting out breathy grunts as you masturbate. ";
+				else if Player is female:
+					say "lay on top of your pubic mound, then start to rub and lightly pinch your clit, letting out breathy pants as you stimulate yourself. ";
+				say "A loud moan coming from the TV draws your attention up to the screen, where you can see video-Angelo just slide into the woman's pussy for the first time. Watching him work her body with the skillful experience of a true ladies['] man is a sight to see, as is the flexing of his muscular buttocks with every thrust. Though of course you've got something better than just a video, sitting right next to you with his dick in hand, jerking it with unhurried strokes. Casually glancing to the side, you look at his mostly naked body, letting your gaze wand over his dark skin and down to the hard cock in his hand. It is a long shot from the biggest you've seen before, especially recently, but... the boy sure knows how to use it, as the video still playing on the TV screen proves.";
+				say "     Seems like you weren't as stealthy as you thought in checking Angelo out, as he turns his head to half look at you and half keep the TV in his field of vision. A grin spreads on his face as he says 'She was a wild minx to fuck, I can tell you that! Feeling those silky-smooth legs around my waist as I was thrusting into her, man, that was amazing! And the pussy... man, I think she must have been into gymnastics, yoga or something like that. Chicks who're fit and have muscle tone all over the place really know how to flex around ya, hah!' Listening to the young man's excited praise for the female doctor he fucked - and is fucking in the video - you keep pleasuring yourself while looking back and forth between him and the TV screen. As you soon start getting kinda close to coming, you realize that Angelo picked up on that too, and he's speeding up his own jerking to match. Side by side, your pants and moans come mostly in unison, until he pushes himself over the edge just a moment after your own orgasm breaks.";
+				WaitLineBreak;
+				say "     Breathlessly [if Player is male]holding your shaft in an iron grip as it begins to let loose long streaks of creamy cum to splat down on yourself, as well as a few onto Angelo's sheets, [else]frigging your clit and feeling your pussy go moist and dripping, [end if]you ride out the pleasure-filled high of climax. Besides you, the Latino stud is tightly gripping his erection, holding the other hand over the throbbing dickhead. Then, once he stops twitching and grunting as the last of his seed has erupted from the piece of man-meat in his grasp, the young man does something surprising - he lifts the hand to his face, licking off the fresh cum from it. 'What? It's just protein!' he says as he sees you stare at him, then slurps up some more with a sweep of his tongue. 'The way I see it, it's a waste if it isn't going into a pussy. So this stuff goes right back into me if I'm not seeding a girl. Gotta keep up your energy to be ready when the time to strike comes, hah!'";
+				say "     Chuckling and keeping to yourself that it's a pretty gay thing to do, for a straight guy, you simply watch him finish off eating the cum. As he soon is finished, he glances over to you,  then half-slides his chest onto the bed, to stretch and snatch up a box of tissues, handing it to you so you can clean up yourself. While you're doing that, Angelo nods to the TV screen, where his video-self is just enjoying himself being orally serviced, building up to a second wind of fucking the doctor again. With a snort, he comments, 'Too bad Lizzy's no longer around hereabouts, she was a wild fuck! Last I heard, she was carried off by a minotaur, happily rocking up and down on his shaft as they went.' Giving a shrug, the young man adds, 'Knew right away Lizzy was pretty thirsty for it when I heard from a buddy that she'd given his balls a bit of a fondle, when doing his checkup. So I took the bold approach, and it worked!' As you chuckle and give Angelo a thumbs-up to acknowledge his conquest, the frat member says, 'It's fun to relive some memories, so... if you wanna watch another vid or so in the future, just let me know, eh? I got plenty.' Nodding to him, you then slip out of the room and walk back down to the second floor.";
+				TraitGain "Cumeater" for Angelo;
+			-- "Change your mind and watch the video long enough not to offend, then leave.":
+				LineBreak;
+				say "     Yeah, maybe this was a bad idea after all. Staying where you are for a little while, you watch the recording of Angelo fucking the young woman with feigned interest, while you mostly keep an eye on the stud himself from the corner of your eye. Besides you, Angelo goes to town on himself, quite into the action on the TV sceen, and before long, he cup his erection with one hand, covering its throbbing dickhead as he comes, panting and grunting in satisfaction. Then, once he stops twitching and the last of his seed has erupted from the long piece of man-meat Angelo's grasp, the young man lifts his hand to his face, licking off the fresh cum from it. 'What? It's just protein!' he says as he sees you raise an eyebrow, then slurps up some more with a sweep of his tongue. 'The way I see it, it's a waste if it isn't going into a pussy. So this stuff goes right back into me if I'm not seeding a girl! Gotta keep up your energy to be ready when the time to strike comes, hah!'";
+				say "     As you chuckle and give Angelo a thumbs-up to acknowledge his conquest, the frat member says, 'It's fun to relive some memories, so... if you wanna watch another vid or so in the future, just let me know, eh? I got plenty.' Nodding to him, say you had a fun time, then slip out of the room and walk back down to the second floor.";
+	else: [female Players]
+		say "     [bold type]What do you do now?[roman type][line break]";
+		LineBreak;
+		let Angelo_Video_Choices be a list of text;
+		add "'Accidentally' spill your cup of satyr wine all over his front." to Angelo_Video_Choices;
+		add "Touch yourself right along with him." to Angelo_Video_Choices;
+		add "Change your mind and watch the video long enough not to offend, then leave." to Angelo_Video_Choices;
+		let Angelo_Video_Choice be what the player chooses from Angelo_Video_Choices;
+		if Angelo_Video_Choice is:
+			-- "'Accidentally' spill your cup of satyr wine all over his front.":
+				LineBreak;
+				say "[Angelo_SatyrWine_Spill]";
+			-- "Touch yourself right along with him.":
+				LineBreak;
+				say "     [if Player is not barecrotch]Quickly baring your own crotch, you [else]You [end if]move one hand to lay on top of your pubic mound, then start to rub and lightly pinch your clit, letting out breathy pants as you stimulate yourself. A loud moan coming from the TV draws your attention up to the screen, where you can see video-Angelo just slide into the woman's pussy for the first time. Watching him work her body with the skillful experience of a true ladies['] man is a sight to see, as is the flexing of his muscular buttocks with every thrust. Though of course you've got something better than just a video, sitting right next to you with his dick in hand, jerking it with unhurried strokes. The fraternity Casanova's attention is fully on you too, as he feasts his eyes on your crotch, followed by him giving a nod to the TV. 'I can show how all of that feels. You'll love it, I can promise you that!' With that said, he starts to reach out towards your pussy, in an eager but intentionally slow and casual way.";
+				LineBreak;
+				say "     [bold type]How do you react to the horny Latino's approach?[roman type][line break]";
+				LineBreak;
+				say "     [link](1)[as]1[end link] - Allow him to finger you and jerk him off in turn.";
+				say "     [link](2)[as]2[end link] - Softly reject Angelo, and leave the room.";
+				now calcnumber is 0;
+				while calcnumber < 1 or calcnumber > 2:
+					say "Choice? (1-2)>[run paragraph on]";
+					get a number;
+					if calcnumber is 1 or calcnumber is 2:
+						break;
+					else:
+						say "Invalid choice. Type [link]1[end link] to let him finger you or [link]2[end link] to leave.";
+				if calcnumber is 1:
+					LineBreak;
+					say "     A grin spreads on Angelo's face as his fingertips gently brush over your sensitive nether lips for the first time, then seek out the pleasure-button of your clit. 'Just imagine how it'd feel if we did the things there in the video. I know very well how to treat a woman.' As he says this, the young man's fingertip starts to rub in a circle around the edge of your clit, stimulating you very, very nicely. He keeps making connections to the video, stroking you in tandem with what you can see there, drawing sighs and moans that echo the doctor he was fucking. He leans closer and closer as he does so, whispering sweet words into your ears. He's trying to seduce you into letting him take control, to take you on a wild, sexual ride. But for now, you've still got your wits to yourself, so you decide to push back a little. As Angelo has both his hands busy, stroking your cheek  and side, you confidently reach over and take hold of his cock.";
+					say "     His eyebrows rise a bit as you don't follow his plan, but given that he's still half-naked with a new partner, the fraternity's Don Juan seems to count it as a win and just goes with the changed situation. As he touches and strokes you, your hand begins to jerk the already quite horny student, and you tell him that you've got some things to show him too. His erection throbs in your grasp as you teasingly tell him to imagine sliding his shaft inside you. Sitting side by side, you keep one hand wrapped around his hard shaft, the other stroking the side of his arm as he works on your own sex, stimulating both of you in unison. Once or twice over the next little while, he tries to get a hand back around his own shaft, but as you keep shooing it away, Angelo relents. From then on, he's fairly vocal in communicating his state of arousal, asking you to move faster, or grip his dick more firmly. You keep at your own pace, enjoying the chance to tease the Latino stud even more.";
+					WaitLineBreak;
+					say "     From then on, you settle into a fun bout of pleasing each other, touching and stroking as you watch the video, and also watch Angelo's body. Your mutual pleasure builds higher and higher, until he eventually says in an urgent tone, 'I'm really close now!' It doesn't take much longer before your double masturbation session reaches its inevitable conclusion of driving both of you over the edge to full-throated moans announcing your climax. Breathlessly trembling and twitching as Angelo frigs your clit with an expert's touch, your pussy goes moist and dripping as you ride out the pleasure-filled high of orgasm. Besides you, the Latino stud quickly cupped his erection with one hand, covering its throbbing dickhead. Then, once he stops twitching and grunting as the last of his seed has erupted from the piece of man-meat in your grasp, the young man does something surprising - he lifts his hand to his face, licking off the fresh cum from it. 'What? It's just protein!' he says as he sees you stare at him, then slurps up some more with a sweep of his tongue. 'The way I see it, it's a waste if it isn't going into a pussy. So this stuff goes right back into me if I'm not seeding a girl! Gotta keep up your energy to be ready when the time to strike comes, hah!'";
+					say "     Chuckling and keeping to yourself that it's a pretty gay thing to do, for a straight guy, you simply watch him finish off eating the cum. As he soon is finished, he glances over to you, then half-slides his chest onto the bed, to stretch and snatch up a box of tissues, handing it to you so you can clean up yourself. While you're doing that, Angelo nods to the TV screen, where his video-self is just enjoying himself being orally serviced, building up to a second wind of fucking the doctor again. With a snort, he comments, 'Too bad Lizzy's no longer around hereabouts, she was a wild fuck! Last I heard, she was carried off by a minotaur, happily rocking up and down on his shaft as they went.' Giving a shrug, the young man adds, 'Knew right away Lizzy was pretty thirsty for it when I heard from a buddy that she'd given his balls a bit of a fondle, when doing his checkup. So I took the bold approach, and it worked!' As you chuckle and give Angelo a thumbs-up to acknowledge his conquest, the frat member says, 'It's fun to relive some memories, so... if you wanna watch another vid or so in the future, just let me know, eh? I got plenty.' Nodding to him, you then slip out of the room and walk back down to the second floor.";
+					TraitGain "Cumeater" for Angelo;
+				else:
+					LineBreak;
+					say "     You intercept Angelo's reaching hand, gently but firmly pushing it away from your crotch as you shake your head at him. He takes this well enough, telling you in a charmingly smooth voice, 'I just had to try, it is difficult to keep one's hands to yourself when in the presence of such a beautiful woman.' A very well-trained smile with just a hint of a suggestive smirk to it leads over to his next words of, 'My offer stands, now and in the future. You know I'm not one to give up too easily, and I'd love to show you so many pleasures...' Seeing that he'll keep his attempts to charm you up relentlessly, for as long as you're here with him, and exposed to boot, you push yourself up from the floor and take a step away[if Player is not barecrotch], then quickly get dressed again. [else]. [end if]After a quick wave and goodbye to Angelo, you leave his room and move back to the second floor.";
+				TraitGain "Player = Girl" for Angelo;
+			-- "Change your mind and watch the video long enough not to offend, then leave.":
+				LineBreak;
+				say "     Yeah, maybe this was a bad idea after all. Staying where you are for a little while, you watch the recording of Angelo fucking the young woman with feigned interest, while you mostly keep an eye on the stud himself from the corner of your eye. Besides you, Angelo goes to town on himself, quite into the action on the TV sceen, and before long, he cup his erection with one hand, covering its throbbing dickhead as he comes, panting and grunting in satisfaction. Then, once he stops twitching and the last of his seed has erupted from the long piece of man-meat Angelo's grasp, the young man lifts his hand to his face, licking off the fresh cum from it. 'What? It's just protein!' he says as he sees you raise an eyebrow, then slurps up some more with a sweep of his tongue. 'The way I see it, it's a waste if it isn't going into a pussy. So this stuff goes right back into me if I'm not seeding a girl! Gotta keep up your energy to be ready when the time to strike comes, hah!'";
+				say "     As you chuckle and give Angelo a thumbs-up to acknowledge his conquest, the frat member says, 'It's fun to relive some memories, so... if you wanna watch another vid or so in the future, just let me know, eh? I got plenty.' Nodding to him, say you had a fun time, then slip out of the room and walk back down to the second floor.";
+
+to say Angelo_SatyrWine_Spill:
+	say "     Waiting a little while until Angelo's pretty into his jerkoff session, pretending to watch the video while in truth watching Angelo's hand pump up and down through your peripheral vision, you lick your lips demonstratively and say that you're getting thirsty. That said, you turn to the side and stretch a little to grab the red cup of satyr wine you set down on his bedside table. Afterwards, it's just a question of turning back very quickly, all while having raised the cup halfway to your lips, and physics takes care of the rest, causing the potent liquid to slosh out and arc through the air before splashing all over Angelo's midriff and crotch. Throwing his hands up at the sudden shower of wine, Angelo bursts out, 'Hey! You made me all wet and sticky!' His gaze flicks down to his abs and lap, drenched in red wine, the already red-speckled bedsheets, and the light-colored carpet on the floor, before coming to rest on the stack of folded towels on the dresser on the other side of the room.";
+	LineBreak;
+	say "     [bold type]You've got a second to decide what you want to do before Angelo can pick something to do.[roman type][line break]";
+	LineBreak;
+	let Angelo_Video_Choices be a list of text;
+	add "Snatch up his t-shirt and pat him 'dry' all over. It's not that absorbent, so you'd basically just be rubbing the satyr wine over Angelo's skin." to Angelo_Video_Choices;
+	add "Clean up the most important bit - his dick - with your tongue! Angelo surely won't complain once your lips are wrapped around it." to Angelo_Video_Choices;
+	let Angelo_Video_Choice be what the player chooses from Angelo_Video_Choices;
+	if Angelo_Video_Choice is:
+		-- "Snatch up his t-shirt and pat him 'dry' all over. It's not that absorbent, so you'd basically just be rubbing the satyr wine over Angelo's skin.":
+			LineBreak;
+			say "     Putting down the now empty cup, you lean forward to pull Angelo's discarded t-shirt off the ground, feeling its quite thin fabric under your fingertips. With the lover-boy wanting to show off his body, he chose to wear something very light for tonight, which would stretch over his muscular chest. It's just perfect for you, as barely any wine is absorbed by the bunched-up shirt as you start dabbing at Angelo's body, then brushing the cloth over his skin. Not wanting to spread red stains around further, the college students leaves his hands in the air and more or less patiently lets you do your thing, though he does complain a litte: ";
+			if SubjectPro of Player is "he": [men/trans-males]
+				say "'Dude, you gotta take a bit more care! Such a mess, I'm all sticky and the mood's pretty much gone now. Better watch out in the future, or there might be some rumours that you can't 'hold your liquor'!' His last words were added with a slight eyeroll and a chuckle, showing you that Angelo isn't really all that cross with you over the little 'accident'.";
+			else: [female Players]
+				say "'Babe, if you wanted to get your hands on me, you just had to ask, haha! Such a mess, I'm all sticky and the mood's pretty much gone now. Better watch out in the future, or there might be some rumours that you can't 'hold your liquor'!' His last words were added with a slight eyeroll and a chuckle, showing you that Angelo isn't really all that cross with you over the little 'accident'.";
+			say "     You spend a minute or two rubbing the crumpled shirt all over Angelo's lower half, including 'chasing' some nonexistent trickles down his legs and spreading the contact with satyr wine even further. Interestingly enough, he's dry before much longer, and not so much because of your efforts, but rather the fluid being absorbed by his skin. This doesn't mean that he's not still sticky from left-behind sugar though, and so Angelo quickly pulls his pants back on, then hangs a towel over his shoulder as he says, 'Okay, sorry - gotta cut our video watching short. I wanna take a shower to clean up.' With a shrug, he shepherds you out of his room, and the two of you get going to the second floor, where Angelo steps aside to take a turn in the shower.";
+		-- "Clean up the most important bit - his dick - with your tongue! Angelo surely won't complain once your lips are wrapped around it.":
+			LineBreak;
+			say "     Showing yourself apologetic about the mess, you lean forward to pull Angelo's discarded t-shirt off the ground, feeling its quite thin fabric under your fingertips. With the lover-boy wanting to show off his body, he chose to wear something very light for tonight, which would stretch over his muscular chest. As you dab the bunched-together garment against his abs, you're spreading the wine more than absorbing it - which wasn't your true plan anyways. No, you just lean closer and closer to your college student buddy while rubbing over his chest, then open your mouth and bring it down over the hard pole of his cock, still mostly hard from the jerk-off session you unterrupted. ";
+			if SubjectPro of Player is "he": [men/trans-males]
+				say "'Dude! What the fuck?!' he calls out in surprise as you gulp down his erection, sliding your lips over his shaft in as smooth a glide as you can. At the same time, your free hand moves to cup his full, shaved balls, rolling them stimulatingly between your fingers. Looks like you chose your moment well. Your Latin lover is already quite horny and itching to shoot his load, as you blast right past his initial reluctance of having a guy suck his dick.";
+				say "     'Damn,' he says under his breath as his dickhead hits the back of your throat, and you can feel a pleasure-induced tremble go through his abs as you keep going, sliding your lips another inch down his shaft after that. 'Gnnnhhh!' Angelo grunts out when your nose bumps against his neatly trimmed pubes and you swallow intentionally, letting the ripples of your throat muscles squeezs his dick. 'Fuck it, this is good! Keep going!' he pants out, half to himself and half to you, and a hand comes to rest on the back of your head, pushing you further. It only takes that moment of decision for the moment of shock to be overcome, and your college stud begins to enthusiastically go for it, rolling his hips and grinding against your face while moaning out loud. In a fluctuating mixture of you going down on him and Angelo facefucking you, you service him expertly until the young man lets out a grunt of, 'I'm gonna come!' Maybe thinking you can take it, his firm grip on your head never lessens and just keeps pushing you against his crotch as he begins to unload, balls rising and throbbing hard as a potent load of cum shoots right down your throat!";
+				WaitLineBreak;
+				say "     You keep going for as long as you can hold your breath, enjoying the feeling of his shaft pulsing against your tongue as another and another splash of seed pulses into your stomach, before eventually having to pull back. For a second, Angelo tries to hold you firm, but then he relents, allowing you to pull off his dick with an audible pop, followed by your own gasping breaths. The last few spurts of his load therefore well up and splash onto his abs. By the time you stop seeing stars in front of your eyes and look up, Angelo is clearly in the state of post-orgasm clarity, and he eyes you with a bit of a wary expression. 'So uhm, yeah... gotta tell you: I'm not gay. You gotta remember that!' As you nod to him, the young man blows out a breath he had been holding, before he adds, 'I - uhm, that was... pretty well done, gotta admit that.' Scratching the back of his neck, Angelo looks to the side and pressing his lips together, not wanting to admit just how much he enjoyed himself. After a few seconds, he then bursts out, 'And you gotta keep quiet about this! I got a reputation to lose!'";
+				say "     Knowing what to do not to ruin the situation, you agree as convincingly as you can. There'll be plenty of opportunities to revise your agreement later, after all. You telling him that you won't out him for enjoying a BJ from a guy makes Angelo's worries melt away and he relaxes, which you use as your opportunity to duck your head over his crotch one more time, your tongue scooping up the cum he spurt over himself in the end. Then you give his dickhead a final, light suck before pulling back, giving Angelo a wink that gets him a little embarrassed now. 'Okay, I - sorry, but we got to cut our video watching short. I know you didn't come yet, but... I gotta a shower to clean up.' With a shrug, he hastily gets dressed again and grabs a towel, then shepherds you out of his room, and the two of you get going to the second floor, where Angelo steps aside to take a turn in the shower.";
+			else: [female Players]
+				say "'What the fuck?!' he calls out in surprise as you gulp down his erection, sliding your lips over his shaft in as smooth a glide as you can. At the same time, your free hand moves to cup his full, shaved balls, rolling them stimulatingly between your fingers. Looks like you chose your moment well, with the Latin lover already quite horny and itching to shoot his load, so he just moans out loud as you suck his dick.";
+				say "     'Damn,' he says under his breath as his dickhead hits the back of your throat, and you can feel a pleasure-induced tremble go through his abs as you keep going, sliding your lips another inch down his shaft after that. 'Gnnnhhh!' Angelo grunts out when your nose bumps against his neatly trimmed pubes and you swallow intentionally, letting the ripples of your throat muscles squeezs his dick. 'Fuck yeah! Keep going!' he pants out eagerly, and a hand comes to rest on the back of your head, pushing you further. Your college stud begins to enthusiastically go for it, rolling his hips as he grinds against your face while moaning out loud. In a fluctuating mixture of you going down on him and Angelo facefucking you, you service him expertly until the young man lets out a grunt of, 'I'm gonna come!' With a little bit of reluctance, he lets go of your head, leaving you free to pull off, only to moan happily as you simply keep sucking him off. His hand returns to the top of your head, so Angelo can steady himself as he begins to unload, balls rising and throbbing hard as a potent load of cum shoots right down your throat!";
+				WaitLineBreak;
+				say "     You keep going for as long as you can hold your breath, enjoying the feeling of his shaft pulsing against your tongue as another and another splash of seed pulses into your stomach, before eventually having to pull back. For a second, Angelo seems to battle the instinct to try to hold you firm, but he quickly relents and pulls his hand away, allowing you to pull off his dick with an audible pop, followed by your own gasping breaths. The last few spurts of his load therefore well up and splash onto his abs. By the time you stop seeing stars in front of your eyes and look up, Angelo is clearly in the state of post-orgasm clarity, and he eyes you with smug grin on his face. 'You do know that you could just have asked, right? No need to go through all this trouble, and get me all sticky, haha!' With a shrug, you duck your head over his crotch one more time, your tongue scooping up the cum he spurt over himself in the end. Then you give his dickhead a final, light suck before pulling back, giving Angelo a wink. 'Man, you're something else. Though now, I'm sorry, but we got to cut our video watching short. I gotta a shower to clean up.' With a shrug, he hastily gets dressed again and grabs a towel, then shepherds you out of his room, and the two of you get going to the second floor, where Angelo steps aside to take a turn in the shower.";
+				TraitGain "Player = Girl" for Angelo;
+			NPCSexAftermath Player receives "OralCock" from Angelo;
+	TraitGain "Angelo Satyr Transformation Stage 1 Start" for Angelo;
+
+to say Angelo_Satyr_Transformation_Stage_1:
+	say "     Stepping up to where Angelo is hanging out with buddies, you lean in close to the frat's Don Juan so he can understand you over the music. He's happy enough to chat, though before long, he puts a hand on your arm and pulls you aside. 'Hey, you in the mood to stop by my room for a little video time? I've been horny as fuck since the last time. Just sitting around alone jerking off isn't my style, and the girls on campus only put out so many times, so... how about we have some fun watching my fav conquests together?' Grinning, you mention that you wanted to suggest the same, causing Angelo to clap a hand on your shoulder and nod towards the stairwell. The two of you set out towards it, but a call comes from the side. It's 'Little' John saying, 'Got fresh booze guys!' Eager to get wasted, your Latino buddy swings by his fraternity brother, liberating two cups of satyr wine from the platter being held out to him, then handing you one as he starts to sip on his own.";
+	ItemGain satyr wine by 1;
+	say "     With lots of people flocking towards John to get more alcoholic beverages for themselves, moving towards the stairs is slow going, especially as Angelo's a popular guy and all his frat buddies want to chat. By the time you're climbing the stairs to the third floor, he's already downed half his satyr wine. Soon you're upstairs and walk down the northern hallway and step into Angelo's room. It is nicely spacious for student accommodation, with high quality furniture to demonstrate the well-off status of the PAN fraternity. The room allows you a glimpse at the Latino's true self, in the way he decorates his private place. Besides some obligatory bikini babe posters on the walls, there's also two big band posters with Portuguese writing on them, for what looks to be a Brazilian rock band. An electric guitar hangs from a prime spot in the middle of the back wall, with loudspeakers wired into the corners of the room to use with it.";
+	WaitLineBreak;
+	say "     Waving you over towards the bed, your Latino stud closes the door behind himself, then takes another deep gulp of satyr wine, finishing off his cup and throwing it in the bin. He smacks his lips and licks the last droplets off them, then loudly says, 'Ah, that hit the spot! Kerr and Talov brought some good stuff with them!' Somewhat giddily, he takes a few steps and pulls out the bottom drawer of his dresser, taking the lid of a shoebox inside and rifling through his video collection. 'Here we go!' Angelo says with a grin, victoriously raising a tape in one hand. Snatching up a video camera to go with it, he then bumps the drawer shut with his knee, and walks over to the television, connecting the camera to it and sliding the tape into the side flap, then pushing it closed with a click. Smirking at you, he presses the play button, which makes Angelo's grinning face appear on the TV. You can see this very room in the picture behind him, as well as the backside of a young woman that's currently unclasping her bra behind her back.";
+	say "     '[one of]Amanda[or]Jess[or]Jillian[or]Leah[or]Irene[or]Olga[or]Evie[or]Vicky[or]Uma[at random] is a sexy fox, you'll see!' Angelo says in an amused as well as proud tone, and you can see that he's got a noticeable bulge in his pants, and is rubbing the side of his hand casually against it. Looks like he's getting quite excited from the memory of his conquest. Without any further hesitation, the frat guy then peels off the shirt covering his chest, throwing it on the ground with a casual flick of his arm. Bare-chested, the handsome guy then strolls over to you, plopping himself down on the edge of the bed, close enough for the sides of your legs to tough. Giving you a friendly grin, he then points at the TV and says, 'Check her out! That was one hot lay, I can tell you!' Not to disappoint his expectation, you glance at the screen showing the action between Angelo and his girl, then give an impressed-looking nod.";
+	say "     Your gaze wanders away from the picture, to observe Angelo instead, from the corner of your eye, as he relaxedly pops the button of his jeans, then pulls the zipper down with a quick flick. Having gone commando today, he pulls out his cock easily and starts to jerk off. 'Hah, she was so wet when I bent her over the desk! And her pussy - soft like a skilk glove! Gotta love them country girls, wanting to let loose for the first time when they come to the coast!' Angelo happily tells you, grunting as he audibly smacks his hard dick into the cupped palm of his left hand. At that point, you join him in pleasuring yourself, [if Player is not barecrotch]quickly baring your crotch and [end if]caressing your [if Player is male]cock and stroking up and down along its length[else if Player is female]rubbing your clit[else]rubbing your genderless self[end if]. Side by side, but focusing on very different things, you and Angelo masturbate together, filling the room with some pants and pleased groans.";
+	WaitLineBreak;
+	say "     The air of sexual arousal is thick enough to be cut with a knife in the frat guy's room, with both of you quickly making the fires of your libido crackle and soar. The hunky Latino by your side starts to pant even louder, only to say, 'Man, is it hot in here or what? Did someone play around with the AC?' Not feeling all that warm yourself, you glance over at him, seeing to your surprise that Angelo's chest is beaded in sweat - far more than one would expect even from the most strenuous jerkoff session. Wiping the back of one hand over his wet forehead, Angelo adds, 'Feeling a bit weird too. Tailbone's itching something fierce!' As he says this, the young man reaches behind his back to scratch himself, only to have his eyebrows draw together in alarm as he leaps to his feet. 'What the fuck? I don't know what's... uhm, I think I'll need a moment to check this out!'";
+	say "     There is a second of hesitation - he's clearly less eager to drop his trousers than he was just pulling out his pride and joy earlier. His concern about what's going on quickly pushes that thought aside, and you're treated to the sight of him shoving his jeans down hastily. Inadvertently pushing out his buttocks in your direction and wiggling very nicely, he kicks off his jeans, giving you an eyeful of perky tanned cheeks and a flash of could be pink. Then you see what's got him in a tizzy right now - there's a patch of black hair on his lower back, right above where the crack of Angelo's ass begins. Twisting in an attempt to look at the offending fuzzy spot, the frat guy groans out, 'Where the hell did that come from? I usually shave all over, the chicks dig it if you're not a mountain man, you know. And what about this fucking bump?!' The sharply rising pitch of Angelo's voice as he's feeling over his fur patch prompts you to offer your services to check it out.";
+	WaitLineBreak;
+	say "     'Fuck, would you? I mean, this is far from the good time we wanted to have up here, so I wouldn't hold it against you if you'd rather step out,' he tells you, embarrassment at his surprise 'issue' rearing its head. With a snort, you simply point at the carpet in front of where you're sitting and order him to step up. This brings his cock right into your field of view, swinging around at half-mast with every step as Angelo obeys, shyly turning his back to you. Leaning in close, you see that the college student indeed has a patch of maybe half an inch long black hair over his tailbone. It's fairly soft as you brush your fingertip over it, and you can feel the skin underneath bulging out a little. 'Man, it's weird to have you rubbing me there, and... god, why is it so hot in here?!'";
+	say "     Almost as soon as those words are out of his mouth, Angelo's hair emergency kicks into overdrive. Longer strands push out of his skin, rapidly lengthening to maybe two inches. And that's not the only thing pushing out, as what was a skin bulge rapidly grows from Angelo's tailbone, turning into a full-on, six inch goat tail! Pulling up and wagging this way or that, more in confusion than consciously being moved, the frat guy's new piece of anatomy seems to finish its growth spurt. Curiosity and the drive to confirm it's real has your hand sliding over the tail, then wrapping its fingers around the extra appendage on the Latino. 'Hey, that feels weird!' Angelo says in an oddly breathy voice, turning himself just a little to look back at you. This allows you another glimpse at his cock - which appears to also have been subject to the sudden change, gaining at least an inch of length! Further, it is gloriously erect and standing stiffly upwards, with a thick bead of precum welling up at the slit right before your eyes.";
+	LineBreak;
+	say "     [bold type]Angelo's horny and confused. What do you do now?[roman type][line break]";
+	LineBreak;
+	let Angelo_Transformation_Choices be a list of text;
+	add "Talk to him about what just happened and do your best to calm him down afterwards." to Angelo_Transformation_Choices;
+	add "He needs some help to think clearly again - calm him down and jerk him off!" to Angelo_Transformation_Choices;
+	add "He needs some help to think clearly again - jerk him off while fingering his asshole!" to Angelo_Transformation_Choices;
+	let Angelo_Transformation_Choice be what the player chooses from Angelo_Transformation_Choices;
+	if Angelo_Transformation_Choice is:
+		-- "Talk to him about what just happened and do your best to calm him down afterwards.":
+			LineBreak;
+			say "     Giving the goat tail a small tug to gain Angelo's attention, you tell him that he just grew a goat tail, with black fur and all. 'I did what?!' the young man yelps in surprise and looks over his shoulder again, disbelief written on his face. 'I mean, okay, there's something back there. I can feel it, and your fingers around it. Try pinching me or something.' With a shrug, you let go of the frat guy's newly grown appendage, then trace the tip of your index finger alongs its side. 'That tickles!' Angelo comments, prompting you to do so again, before moving on to rub the root of his tail experimentally. 'Whoa! Do that again!' With the advent of these new sensations comes an immediate reaction, said in a suddenly quite breathless tone. Looks like someone's quite sensitive! With a chuckle, you rub Angelo a bit more, sending a pleasure-filled shudder up his spine. So much for having to talk him down - just a tickle and his mind is on something else entirely.";
+			say "     As you think about things for a second, you realize that using arousal to distract him might not be the best idea. You've seen plenty of infected fall completely under the control of their base desires, losing all humanity they had left. Deciding to stop touching his tail, you stand up next to Angelo and put your hand on his shoulder, squeezing it as you tell him to focus, and that you should talk about this development instead of just playing around with it. Meeting your stoic expression with a somewhat unfocused gaze, the frat stud blinks and seems to sober up. 'Yeahh... you're right. Okay, okay.' Taking a deep breath and then letting it out slowly, Angelo meets your eyes and says, 'I want you to be honest with me now, just lay it out straight. I can take it. This thing back there, the tail. Do you think that the chicks will dig it? I mean, I'm not a dog or anything, but if I wag it... Maybe they'll want to [']pet['] me!'";
+			WaitLineBreak;
+			say "     It takes a few seconds for your mind to catch up with Angelo's lust-fogged, ludicrous reasoning, and you can't help but chuckle at the narrow focus of his thinking. Transform into something no longer completely human? Who cares, as long as it draws some womanly attention! Glancing down to where he's wiggling his whole ass, as he's apparently not quite mastered control of the tail yet, you can honestly tell him that that'll draw a lot of admiring looks - from either gender. 'Oh? Oooh!' Angelo replies, patting the side of his nose with a finger, then wagging it at you as he laughs, taking your words as a joke. 'So yeah, guess I got a tail now. That's not bad, at least it's a cute one!' Then another thought seems to strike him, and his eyebrows draw together in thought. 'Hmm...' Angelo says, more to himself, then strides over to his desk, snatching up a pair of scissors.";
+			say "     Opening and closing them for a few 'practice' snaps, he nods at you, then comes back to pick up the pants he kicked off earlier. After a quick moment of impromptou tailoring, the jeans acquire a new hole, just under the beltline. With that out of the way, Angelo steps back into his pants, pulling them up and fishing the tail through that hole before buttoning and zipping up. 'Not bad, I think I can roll with this!' he says with a charming grin, then slips his feet into some shoes and nods to the door. 'Let's see what people from the party think!' Following Angelo, the two of you make your way back down to the second floor, where Angelo's transformation is accepted with surprising ease, and even cheered. Happily, the lover-boy does on the prowl, seeing sorority girls, to whom he can offer his fluffy rump-duster.";
+		-- "He needs some help to think clearly again - calm him down and jerk him off!":
+			LineBreak;
+			say "     Going straight for the sure-fire way of distracting pretty much any virile young man, you slide one arm around Angelo's body to grab his hard cock. His eyebrows raise [if Player is male]in surprise [else]before an eager grin appears on his face [end if]as you begin to jerk his manhood, and he lets out a moan as you squeeze the shaft, then play your fingers over his sensitive dickhead. At the same time, you snake a hand between the legs of the sexy Latino and cup his balls. It is funny to see and feel him react to what you're doing, and you can't help but almost feel as if you took control of the college student by 'grabbing his joystick'. Interestingly enough, the sensation of smoothly shaved testicles in your hand changes - they fill out into a lower-hanging, hairy sack that makes it much easier to roll his family jewels gently between your fingers. 'Oooh yeah, that feels great!' Angelo pants out while lightly humping his hips against your hand, all worries over his sudden transformation pushed aside in an instant.";
+			say "     Taking care of your naked frat bro, you let your hand glide over his shaft with long strokes, first in a slow and unhurried tempo, then more urgently as he humps against your grasping hand. You can feel his balls churn and pulse as they seem to work in overdrve. Listening to the quickening breaths from Angelo, you can tell that he won't last long right now, after the way the partial transformation enflamed his libido. Your fingers glide up and down along his prick, working the young man's needy body for both of your enjoyment as you give him pleasure, advancing your own plans at the same time. He's begun his path to become a fullly formed horny goat-man, and setting ablaze the embers of the relentless satyr-lust inside him can only hasten the process! He transformed a little bit further as you touch him, so you cheerfully keep jerking him off.";
+			WaitLineBreak;
+			say "     The hairy balls you're cupping buck and churn, which heralds the inevitable end of your jerk-off session, combined with an in-drawn breath from Angelo. Letting out a shocked, very intense moan, the college student goes through a full-body spasm as his erection throbs [italic type]hard[roman type]. A thick, creamy spurt of cum rockets across the room, hitting the side of his wardrobe with a wet splat! You're still staring, trying to gauge the distance which must be at least six feet, when the next heavy throb goes through his balls and another eruption of cum arcs from his pulsing tip! This one creates a wet smear across Angelo's TV screen, not that either of you is playing the scene playing there any attention. Holding his cum-cannon in your hand, you realize that you should try to limit the amount of mess raining down all over Angelo's room... pulling on his dick, you aim it up just in time for the next blast, creating a goopy streak across your friend's chest.";
+			say "     Leaning around Angelo to see what you're doing, you redirect the rest of his climax at himself, which creates a wild criss-cross pattern on his abs and pecs: streaks of cum going up, and lines of his load then starting to trickle down over the young man's pecs and abs. By the time his orgasm has run its course, Angelo's sticky and covered in cum. Breathing heavily, he lowers his head with closed eyes, and looks down over himself. 'Maaan! I haven't shot like that since the end of last finals week. Girls were all too busy studying to ride my cock. What a mess! Hm? What are you giggling about?' He looks at you as you're unable to suppress an amused chuckle when you spot a glob of cum sticking to the underside of his chin, slowly stretching down in a long string before dripping toward the floor. 'Oh!' Angelo grunts, then wipes at his chin and automatically licking the cum off his fingers before trying to clean himself up further.";
+			WaitLineBreak;
+			say "     'That was... quite something,' Angelo says breathily, slurping away at his fingers as he scoops more of his creamy spend from his chest. 'Thanks for the assistance. I really needed a good pull! Got horny as fuck when the thing with the... with the tail happened.' Reminding himself of the new appendage to his body, Angelo twists this upper body to glance at his rear end, sticking it up to make that easier. He pulls a face of concentration and the tail moves a little, somewhat uncoordinated as the Latino tries to figure out what it can do. 'Yeah, that's definitely part of me, I can feel it and all.' Taking a deep breath and then letting it out slowly, Angelo meets your eyes and says, 'I want you to be honest with me now. Just lay it out straight. I can take it. This thing back there, the tail. Do you think that the chicks will dig it? I mean, I'm not a dog or anything, but if I wag it... Maybe they'll want to [']pet['] me!'";
+			say "     It takes a few seconds for your mind to catch up with Angelo's horndog reasoning, and you can't help but chuckle at the narrow focus of his thinking. Transform into something no longer completely human? No matter, as long as it helps him pick up chicks. Glancing down to where he's wiggling his whole ass right now, as he's apparently not quite mastered control of the tail yet, you can honestly tell him that that'll draw a lot of admiring looks - from either gender. 'Oh? Oooh!' Angelo replies, patting the side of his nose with a finger, then wagging his new fuzzy appendage at you as he laughs, taking your words as a joke. 'So yeah, guess I got a tail now. That's not bad. At least it's a cute one!' Then another thought seems to strike him, and his eyebrows draw together in thought. 'Hmm...' Angelo says, more to himself, then strides over to his desk, snatching up a pair of scissors.";
+			WaitLineBreak;
+			say "     Opening and closing them for a few 'practice' snaps, he nods at you, then comes back to pick up the pants he kicked off earlier. After a quick moment of impromptou tailoring, the jeans acquire a new hole, just under the beltline. Then Angelo steps back into his pants, pulling them up and fishing the tail through that hole before buttoning and zipping up. 'Not bad, I think I can roll with this!' he says with a charming grin, then slips his feet into some shoes and nods to the door. 'Let's see what people from the party think!' Following Angelo, the two of you make your way back down to the second floor, where Angelo's little transformation is accepted with surprising ease, and even cheered along. Happily, the lover-boy goes on the prowl, seeing sorority girls, to whom he can offer his fluffy rump-duster.";
+			NPCSexAftermath Angelo receives "Stroking" from Player;
+		-- "He needs some help to think clearly again - jerk him off while fingering his asshole!":
+			LineBreak;
+			say "     Going straight for the sure-fire way of distracting pretty much any virile young man, you drape one arm around Angelo's body to grab his hard cock. His eyebrows rise [if Player is male]in surprise [else]before an eager grin appears on his face [end if]as you begin to jerk his manhood, and he lets out a moan as you squeeze the shaft, then play your fingers over his sensitive dickhead. While he's distracted with you working on his dick, you gather a gob of spit and let that drip onto your fingers, then bring your hand to his crack to trace up and down along it. Stroking over his pucker, you feel it twitch and tighten reflexively, clearly unaccustomed to being touched. Thankfully, he's far too busy enjoying your gripping hand on his cock to complain or comment, and you can't help but almost feel as if you took complete control of the college student by grabbing his 'joystick.' Angelo pants, 'Oooh yeah, that feels great!' while you handle his dick, all worries over his sudden transformation pushed aside.";
+			say "     Taking care of your naked frat bro, you stroke his dick with long strokes, first in a slow and unhurried tempo, then faster and faster as he humps against your grasping hand. In an opportune moment, you slide your fingertip into his wrinkled pucker. His virginal hole clamps tight around the unexpected invasion and trapping your digit in a vice-like grip, taking a while to relax again before you can push in another inch. You keep at it, patiently and gently working your digit deeper into Angelo's rear until you feel the pad of your fingertip brush against his prostate. As you give it a first rub, a tremble goes through your Latin boy's body, and he gasps, 'Whoa! What was that? Do it again!' Someone's backside is sensitive!";
+			WaitLineBreak;
+			say "     Listening to the quickening breaths from the handsome college student, you can tell that he won't last long under your ministrations, his libido enflamed by his partial transformation. Your fingers glide up and down his prick and tickle the pleasure-button of his prostate, working the young man's needy body for both of your enjoyment as you give him pleasure and also advance your own plans. He's begun his path to become a fullly formed horny goat-man, and setting ablaze the embers of the relentless satyr-lust can only hasten the process! Feeling the gripping hole around your finger squeeze reflexively, combined with a gasp from Angelo, heralds the inevitable end of your jerk-off session. Letting out a shocked, overstimulated moan, the college student goes through a full-body spasm as his erection throbs [italic type]hard[roman type]. A thick, creamy spurt of cum rockets across the room, hitting the side of his wardrobe with a wet splat!";
+			say "     You're still looking at where the spurt landed, trying to gauge the distance, which must be at least six feet, when the next heavy throb goes through his balls and another eruption of cum is sent flying! This one creates a wet smear across Angelo's TV screen, bathing the still-plying scene of him fucking a young woman in a fresh dose of cum, not that either of you is paying it too much attention. Holding his cum-cannon in your hand, you realize that you should try to limit the amount of mess raining down all over Angelo's room... pulling on his dick, you aim it up just in time for the next blast, creating a goopy streak across your friend's chest. Leaning around Angelo to see what you're doing, you redirect the rest of his climax at himself, which creates a wild criss-cross pattern on his abs and pecs: streaks of cum going up, and lines of his load then starting to trickle down over the young man's pecs and abs.";
+			WaitLineBreak;
+			say "     By the time his orgasm has run its course, Angelo's sticky and covered in cum. Breathing heavily, he lowers his head with closed eyes, and looks down over himself. 'Maaan! I haven't shot like that since the end of last finals week. Girls were all too busy studying to ride my cock. What a mess! Hm? What are you giggling about?' He looks at you as you're unable to suppress an amused chuckle when you spot a glob of cum sticking to the underside of his chin, slowly stretching down in a long string before dripping down. 'Oh!' Angelo grunts, then wipes at his chin and automatically licking the cum off his fingers before trying to clean himself up further.";
+			say "     'That was... quite something,' Angelo says breathily, slurping away at his fingers as he scoops more of his creamy spend from his chest. 'A bit unexpected at times,' he adds, and you can feel a squeeze around your finger still resting on his prostate, making it clear where the young man's attention lies right now. With a grin, you give the sensitive spot another small rub, drawing a fresh moan, before slowly pulling out of him and tapping your fingertip on his rosebud. 'Nnnghh, that's... uhm, yeah. Anyways, thanks for the assistance. I really needed that! Got horny as fuck when the thing with the... with the tail happened.' Reminding himself of the new appendage to his body, Angelo twists his upper body to glance at his rear end, sticking it up to make that a little bit easier. He pulls a face of concentration and the tail moves a little, somewhat uncoordinated as the Latino tries to figure out what it can do. 'Yeah, that's definitely part of me, I can feel it and all.'";
+			WaitLineBreak;
+			say "     Taking a deep breath and then letting it out slowly, Angelo meets your eyes and says, 'I want you to be honest with me now, just lay it out straight. I can take it. This thing back there, the tail. Do you think that the chicks will dig it? I mean, I'm not a dog or anything, but if I wag it... Maybe they'll want to [']pet['] me!' It takes a few seconds for your mind to catch up with Angelo's horndog reasoning, and you can't help but chuckle at the narrow focus of his thinking. Transform into something no longer completely human? No matter, as long as it gets him some pussy. Glancing down to where he's wiggling his whole ass right now, as he's apparently not quite mastered control of the tail yet, you can honestly tell him that that'll draw a lot of admiring looks - from either gender. 'Oh? Oooh!' Angelo replies, patting the side of his nose with a finger, then wagging his new fuzzy appendage at you as he laughs, taking your words as a joke. 'So yeah, guess I got a tail now. That's not bad, at least it's a cute one!' Then another thought seems to strike him, and his eyebrows draw together in thought. 'Hmm...' Angelo says, more to himself, then strides over to his desk, snatching up a pair of scissors.";
+			say "     Opening and closing them for a few 'practice' snaps, he nods at you, then comes back to pick up the pants he kicked off earlier. After a quick moment of impromptu tailoring, the jeans acquire a new hole, just under the beltline. Then Angelo steps back into his pants, pulling them up and fishing the tail through that hole before buttoning and zipping up. 'Not bad, I think I can roll with this!' he says with a charming grin, then slips his feet into some shoes and nods to the door. 'Let's see what people from the party think!' Following Angelo, the two of you make your way back down to the second floor, where Angelo's little transformation is accepted with surprising ease, and even cheered along. Happily, the lover-boy goes on the prowl, seeing sorority girls whom he can offer to 'feel his tail'.";
+			NPCSexAftermath Angelo receives "Stroking" from Player;
+			TraitGain "Fingered" for Angelo;
+	TraitGain "Angelo Satyr Transformation Stage 1 End" for Angelo;
+
+to say Angelo_Satyr_Transformation_Stage_2:
+	say "     Moving up to where Angelo usually hangs out, you look around but don't see him anywhere. Aiming to ask one of his buddies where the Latino might have gone, you walk toward another of his haunts, only to find an arm suddenly sliding around your shoulders, and your side pressed against the very man you wanted to find. 'Hey there! John and I were just on a booze run! I was hoping you'd come by!' Angelo tells you with a smirk, raising his other hand with a wine bottle in hand. Someone peeled the label off, and the cork is just loosely stuck in the opening - looks like it has been re-filled, with satyr wine judging from the rich, red tone of the liquid inside. The broad-shouldered 'Little' John steps into view past Angelo at that point, bearing a serving tray of cups and bottles in his strong arms. 'Grab em while they're full!' he calls out, and Angelo lets go of you at that point, snatches up a satyr wine cup to hand to you, followed by getting one for himself and taking a good sip from it.";
+	ItemGain satyr wine by 1;
+	say "     With lots of people flocking towards John to get more alcoholic beverages for themselves and loudly talking with one another, it's best to step out of the way for right now, and so you and Angelo end up a little to the side. Your buddy keeps drinking and vibing to the music, quickly finishing off what is in his cup. Looking back and forth between it and the wine bottle, he contemplates for a second, then leans in closer so you can understand him. 'How about we take this thing up to my room for a private party? You're nice to hang out with and it'd be fun to watch another video together, eh?!' You simply nod, replying that that is exactly what you wanted, and Angelo grins happily at you, then starts to make a beeline for the stairs. Soon, you're climbing up to the third floor, then walk down the northern hallway and step into Angelo's room.";
+	WaitLineBreak;
+	say "     Taking in the room, with its spacious accommodation and high quality furniture, you can't help but be reminded about the fairly well-off status of the PAN fraternity. The room allows you a glimpse at the Latino's true self, in the way he decorates his private place. Besides some obligatory bikini babe posters on the walls, there's also two big band posters with Portuguese writing on them, for what looks to be a Brazilian rock band. An electric guitar hangs from a prime spot in the middle of the back wall, with loudspeakers wired into the corners of the room to use with it. Striding up to his desk, Angelo sets down his empty cup and un-corks the wine, then fills it almost to the brim before offering you a refill in turn. That done, he sets down the bottle and takes a swig of sweet wine himself. 'Ah, that hits the spot!' he says and smacks his lips, 'Love the stuff that Kerr and Talov brought with them! Crazy that there's anything left in that barrel!'";
+	say "     Something about what Angelo said makes you wonder yourself about all of the satyr wine being drunk in the party. It was a full barrel, but with dozens and dozens of thirsty college students drinking their nights away, it feels weird that the wine supply hasn't run out yet. On the other hand, satyrs are from myth and legend, and surely Pan must greatly enjoy their intention of spreading the joy of drunken sex parties far and wide. Maybe he blessed the guys with a miraculous endless wine supply? While you are contemplating, Angelo finishes off his wine and sets the cup down, then says, 'Let's see what babe I can find for us this time...' Yet as he starts to step over to his dresser, wanting to retrieve one of the tapes, you simply grab him by the arm and pull him towards the bed, sitting down right next to you on its side. Giving him a lewd smile, you tell the young man that you don't need an excuse to get frisky, and that you can have all the fun you want with just the two of you.";
+	WaitLineBreak;
+	say "     Moderately drunk and quite horny after downing several cups of satyr wine, Angelo replies, ";
+	if SubjectPro of Player is "he": [men/trans-males]
+		say "'Never thought I'd say this to a guy, but... ah, fuck it. I'm hard as a rock! Wanna jerk me off, or give a blowjob?' ";
+	else:
+		say "'Yeah babe, I'm down for some fun! Wanna take care of me?' ";
+	say "He doesn't wait for a reply either, simply pulling his t-shirt over his head and flinging it to the side. You can see the dick-shaped outline of his hard cock going down one leg of his trousers, and when the Latino undoes his zipper and pushes the pants down, the erection snaps up and whacks his abs with a satisfying thud!";
+	LineBreak;
+	say "     [bold type]What do you want to do with Angelo?[roman type][line break]";
+	LineBreak;
+	let Angelo_Transformation2_Choices be a list of text;
+	add "Kneel between his legs and jerk him off." to Angelo_Transformation2_Choices;
+	add "Kneel between his legs and blow him." to Angelo_Transformation2_Choices;
+	let Angelo_Transformation2_Choice be what the player chooses from Angelo_Transformation2_Choices;
+	if Angelo_Transformation2_Choice is:	
+		-- "Kneel between his legs and jerk him off.":
+			LineBreak;
+			say "     Putting a hand on Angelo's chest and pushing him until his back hits the mattress, you move into position between his legs, spreading them to make room for yourself. As you kneel down, you find yourself face to face with his crotch, hard cock and dangling pair of hairy balls on glorious display. Remembering his manhood from when he first flashed you, one can say that Angelo really benefited from his ongoing transformation. His dick was far from small to begin with, and now it has become downright impressive - long and girthy, with a weighty pair of balls to match. Looking past the proudly standing pillar of man-meat, you meet Angelo's eyes and see eager anticipation burning above his dopey grin. With a chuckle on your lips, you reach out to grab hold of his dick and start to jerk it in long strokes. Your other hand cups his balls, feeling their heft and rolling the overflowing orbs gently between your fingers.";
+			say "     'Fuck yeah, that's good!' Angelo pants out loud as you service his cock and balls, doing your best to rile the young man up by paying special attention to his dickhead. Sliding your fingers up and down over his dick, you fill the room with his moans and grunts as he gives in to the pleasure, throwing back his head and letting it all out. His erect shaft throbs and pulses in your grasp, worryingly hot... just like the rest of your college stud. In fact, now that you think of it, there are beads of sweat on his skin, much more that you'd have expected from just a little bit of touching. Angelo doesn't appear to notice anything amiss, or maybe he's too blissed out to care, starting to hump his hips up in reaction to you slowing your ministrations.";
+			WaitLineBreak;
+			say "     Suddenly, you realize something from the corner of your eyes - black hair is growing in across the young man's thighs, sprouting from his toned skin! At first, it's only a light downy fuzz covering his previously smoothly shaved skin, but it doesn't take long before the hair gets longer and thicker! Distractedly keeping up your masturbation of Angelo's hard cock, you let your gaze sweep up and down over his body. The transformation spreads from his crotch downward, with what seems to be the final fur length already completed around the hips, while the wave of change is still rolling downwards. Heat radiates off him as the changes progress, and you can hear the disconcerting crackling sounds of bones reshaping themselves as the rapid wave of change passes his calves. All the while as this is happening, he's bucking up against your stroking hand like a wild mustang.";
+			NPCSexAftermath Angelo receives "Stroking" from Player;
+		-- "Kneel between his legs and blow him.":
+			LineBreak;
+			say "     Putting a hand on Angelo's chest and softly pushing him until his back hits the mattress, you move into position between his legs, spreading them to make room for yourself. As you kneel down, you find yourself face to face with his crotch, hard cock and dangling pair of hairy balls on glorious display. Remembering his manhood from when he first flashed you, one can say that Angelo really benefited from his ongoing transformation. His dick wasn't exactly small to begin with, and now it has become downright impressive - long and girthy, with a weighty pair of balls to match. Looking past the proudly standing pillar of man-meat, you meet Angelo's eyes and see eager anticipation burning above his dopey grin. With a chuckle on your lips, you reach out to grab hold of his dick and start to jerk it with long strokes. Your other hand cups his balls, feeling their heft and rolling the swollen orbs gently between your fingers.";
+			say "     'Fuck yeah, that's good!' Angelo pants as you lean forward to lick his dickhead, then take it into your mouth. Starting to bob on his erection, you play your tongue over its shaft, doing your best to rile the young man up. Going down on Angelo, you fill the room with slurps and moans as he gives in to the pleasure, throwing back his head and letting it all out. His erect shaft throbs and pulses against your tongue and it feels worryingly hot... as does the rest of your college stud. In fact, now that you think of it, you can see beads of sweat on his abs and pecs, much more that you'd have expected from just a little bit of blowing his dick so far. Angelo doesn't appear to notice anything amiss, or maybe he's too blissed out to care, starting to hump his hips up in reaction to you slowing your ministrations.";
+			WaitLineBreak;
+			say "     Suddenly, you realize something from the corner of your eyes - black hair is growing in all across the young man's thighs, sprouting from his toned skin! Pulling off his dick with a pop, you jerk it instead while turning your head to check out what is going on. At first, it's only a light downy fuzz covering his previously smoothly shaved skin, but it doesn't take long before the hair gets longer and thicker! Distractedly keeping up your masturbation of Angelo's hard cock, you let your gaze sweep up and down over his body. Looks like the transformation spreads from his crotch downward, with what seems to be the final fur length already completed around the hips, while the wave of change is still rolling downwards. Heat radiates off him as the changes progress, and you can hear the disconcerting crackling sounds of bones reshaping themselves as the rapid wave of change passes his calves. All the while as this is happening, he's bucking up against your stroking hand like a wild mustang.";
+			NPCSexAftermath Player receives "OralCock" from Angelo;
+	say "     Angelo's transformation reaches its climax at the same time as he does, and the young man's body spasms as his cock erupts, gushing forth a rich bounty of creamy seed to splatter all over his heaving chest. At the same time, his legs tremble and flail around, pushing up from the floor and wrapping around your shoulders. You can feel warm fur and the hard edge of... something against your skin as he reflexively pulls you closer while riding out his orgasm. Curiosity dives you to reach back and feel along the newly formed satyr legs, to confirm what you expected - Angelo has hooves now instead of feet! The panting and grunts from the college student continue for a little while longer, as he covers himself with more spurts of fresh cum, until Angelo finally sinks back against his crumpled bedsheets and lets out a satisfied breath.";
+	WaitLineBreak;
+	say "     'Man, ever since I started hanging out with you, I've had the most amazing orgasms!' the hunky Latino says in a happy but exhausted tone, smiling at you. Then his eyebrows draw together, and he adds, 'Wait, what's that?!' while staring in shock as his fur-covered legs. Putting your hands on his thighs, you give them a squeeze so he can feel that they're part of him, no matter that they look a bit different now, then explain what went on while he was distracted. 'Huh, that's kinda wild. Guess I'm like K and T now, eh?' he responds in a fairly calm tone, curiously unconcerned about sudden bodily changes. Reaching back, you un-hook his legs from where they wrapped around your torso, then stand up to allow him to check his new anatomy out. 'Hooves now, huh? That'll be hell on the hardwood floors, haha! But at least I'm still human where it counts, you know.' The last sentence is said as he grabs his dick and balls, soothed by their familiar shape.";
+	say "     Asking Angelo about how it feels to be a satyr now, he shrugs and says, 'Well, it feels pretty natural to me. I mean, I know I had feet and no fur ten minutes ago, but... this feels right too. Nice bit of fuzz down there, and the hooves too. Oh, let me try them out!' That said, he sits up and then stands, taking several steps into the center of the room before turning around. 'It's like walking on tiptoe. A bit weird not to set my heels on the ground at all, but that's really it. Don't even have to think about how to balance or anything, it's just automatic...' The two of you continue chatting a while about his transformation, before Angelo eventually says, 'You know what? I wanna show this to the guys and try these legs out on the dance floor! Come on!' With that said, he snatches up a pair of shorts, cramming his wilting cock into them and leading you down to the main party. As it turns out, his frat brothers readily accept the new satyr Angelo, and he manages to entice several sorority girls with his killer dance moves.";
+	TraitGain "Angelo Satyr Transformation Stage 2 End" for Angelo;
 
 Section 3 - Sex
 

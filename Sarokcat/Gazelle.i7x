@@ -70,12 +70,18 @@ to say gazelleride:
 	say "     Moving atop the strange person, you grab the weakened gazelle's arms and push her onto her back. Slipping off your pack and any obstructing clothes, you grind your [if Player is female]wet pussy[else]ass[end if] onto her crotch, making her release a moaning bleat as you brush it against her stiffening cock. She starts to calm down a little, perhaps realizing you're not going to eat her. Her fearful panting is replaced by lustful moaning as you continue to ride her erection, driving her cock into you again and again. Pretty confident that she's not going to struggle to get away now that she's bucking into you, you move your hands to her chest, fondling her cute breasts and teasing her nipples. Feeling your climax approaching, you ride her harder, squeezing your [if Player is female]cunt[else]asshole[end if] down around her cock until you get her to drain her balls into you. [if Player is female and Cunt Depth of Player < 5]You weren't able to get much of her elongated, animalistic penis into you, but you still cum hard as her seed fills your womb[else if Player is female and Cunt Depth of Player > 15]Even though her elongated, animalistic penis was not enough to fill your deep pussy, you still cum hard as her seed fills the depths of your vagina[else if Player is female]You cum hard as you ride up and down as her elongated, animalistic penis pulses inside you, sending her hot seed into your womb[else if Player is male]You cum hard as you ride up and down as her elongated, animalistic penis pulses inside you, sending her hot seed into your bowels[else]You moan in satisfaction as you ride up and down as her elongated, animalistic penis pulses inside you, sending her hot seed into your bowels[end if]. After she'd been drained of her seed[if Player is not neuter] and your orgasm subsides[end if], you release her and watch her rush off in search of the rest of her herd.";
 	CreatureSexAftermath "Player" receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from "Gazelle";
 
+Section 2 - Creature Insertion
+
 to say GazelleDesc:
-	project the Figure of Gazelle_soft_icon;
-	setmongender 5;
 	say "     Wandering down the zoo paths, you come across a small group of rather human-like gazelles. Their short muzzles and sharp horns move happily as they graze on the topiary with thin cocks sprouting from between their legs, above their obviously female openings, with soft pert breasts resting on their chests. Spotting you they immediately freeze. Before you can even open your mouth to speak, most of them bolt in different directions, although one of them charges right at you, intent on protecting the rest of the herd! You have no choice but to brace yourself for battle!";
 
-Section 2 - Creature Insertion
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Gazelle"	"[PrepCombat_Gazelle]"
+
+to say PrepCombat_Gazelle:
+	setmongender 5;
+	project the Figure of Gazelle_soft_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

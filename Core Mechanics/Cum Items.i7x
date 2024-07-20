@@ -5843,7 +5843,7 @@ name	desc	weight	object
 skunk cum is a grab object.
 skunk cum is cum.
 skunk cum is infectious.
-Strain of skunk cum is "Skunk".
+Strain of skunk cum is "Skunk Male".
 Usedesc of skunk cum is "[skunk cum use]".
 
 to say skunk cum use:

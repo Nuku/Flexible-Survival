@@ -1,5 +1,6 @@
 Version 1 of Automaton by Stripes begins here.
 [Version 1.1 - Added player loss oral w/male and randomized outcomes]
+[ Version 1.2 - Added Automaton gear loot item & trophy list - Fenekku]
 
 "Adds Automaton to Flexible Survival."
 
@@ -9,46 +10,6 @@ autogender is a number that varies.
 metalskin is a number that varies. metalskin is usually 1.
 playermetalskin is a number that varies. playermetalskin is usually 1.
 automatonending is a number that varies.
-
-to say automatondesc:
-	choose row MonsterID from the Table of Random Critters;
-	now autogender is a random number between 1 and 2;
-	if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
-		say "     You come across a strange, metallic human. It looks you over with its glowing eyes before striding off as if recognizing that you are not what it is searching for as you don't want to play with it.";
-		now BannedStatus entry is true;
-		now fightoutcome is 19;
-		now autogender is 0;
-		now combat abort is 1;
-	else if FemaleList is banned:
-		now autogender is 1; [male]
-	else if MaleList is banned:
-		now autogender is 2; [female]
-	else if MaleList is warded and FemaleList is warded:
-		now autogender is a random number between 1 and 2;
-	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
-		if MaleList is warded and a random chance of 1 in 3 succeeds:
-			now autogender is 2;
-		else if FemaleList is warded and a random chance of 1 in 3 succeeds:
-			now autogender is 1;
-	else if ishunting is false:
-		if MaleList is warded:
-			now autogender is 2;
-		else if FemaleList is warded:
-			now autogender is 1;
-	now metalskin is a random number between 1 and 4;
-	if autogender > 0:
-		say "     Before you is a strange person, completely human in form but covered in a layer of metallic skin. This polished hide is made of [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt with a faint blue tint[else if metalskin is 4]steel[end if] and seamless. The metal [if autogender is 1]man[else]woman[end if][']s eyes are featureless [if metalskin is 1]amber[else if metalskin is 2]blue[else if metalskin is 3]green[else if metalskin is 4]red[end if] lights. [if autogender is 1]His[else]Her[end if] hair has become metallic in color to match its skin. This person looks like any normal person you might meet, but transformed into metal and sapped of their will. [if autogender is 1]He[else]She[end if] moves stiffly and without emotion, moving towards you with the intent of grabbing you[if autogender is 1]. The metal man's cock is a hard pillar of metallic flesh that it probably intends on nailing you with[else]. The metal woman's pussy is damp with an oily sheen, showing the automaton's arousal[end if].";
-		if autogender is 1:		[male]
-			setmongender 3;
-			now sex entry is "Female";
-			if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
-			now lootchance entry is 33;
-		else:
-			setmongender 4; [female]
-			now sex entry is "Male";
-			if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
-			now lootchance entry is 0;
-
 
 to say losetoautomaton:
 	if autogender is 1:
@@ -78,12 +39,55 @@ to say losetoautomaton:
 			say "She grabs you by the head and presses your face between her legs, pushing your lips to her [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] pussy. Those folds are cool and lightly oiled, yielding to your tongue's touch as you set to work. The metal woman remains impassive as you lick her, but shows no intent on letting you go, so you continue attempting to pleasure her, working with increasing zeal as you work all the harder to get the unfeeling robot woman to cum. The only clear signs that it's working is the fact that her pussy grows warmer and wetter as you continue. Eventually, you are met with success of a kind as the automaton presses your head between her thighs and a fresh flow of oily juices soak your face. Apparently satisfied, she pushes you away and strides off.";
 			CreatureSexAftermath "Automaton" receives "OralPussy" from "Player";
 
-
 to say beattheautomaton:
 	say "     Having beaten the metal [if autogender is 1]man[else]woman[end if], the lights in its eyes go out and it crumples to the ground like an unpowered toy. There's a faint electrical hum from it, soft but slowly growing, as if it's working to charge itself up again.";
 
-
 Section 2 - Creature Insertion
+
+to say automatondesc:
+	say "     Before you is a strange person, completely human in form but covered in a layer of metallic skin. This polished hide is made of [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt with a faint blue tint[else if metalskin is 4]steel[end if] and seamless. The metal [if autogender is 1]man[else]woman[end if][']s eyes are featureless [if metalskin is 1]amber[else if metalskin is 2]blue[else if metalskin is 3]green[else if metalskin is 4]red[end if] lights. [if autogender is 1]His[else]Her[end if] hair has become metallic in color to match its skin. This person looks like any normal person you might meet, but transformed into metal and sapped of their will. [if autogender is 1]He[else]She[end if] moves stiffly and without emotion, moving towards you with the intent of grabbing you[if autogender is 1]. The metal man's cock is a hard pillar of metallic flesh that it probably intends on nailing you with[else]. The metal woman's pussy is damp with an oily sheen, showing the automaton's arousal[end if].";
+
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Automaton"	"[PrepCombat_Automaton]"
+
+to say PrepCombat_Automaton:
+	choose row MonsterID from the Table of Random Critters;
+	now autogender is a random number between 1 and 2;
+	if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
+		say "     You come across a strange, metallic human. It looks you over with its glowing eyes before striding off as if recognizing that you are not what it is searching for as you don't want to play with it.";
+		now BannedStatus entry is true;
+		now fightoutcome is 19;
+		now autogender is 0;
+		now combat abort is 1;
+	else if FemaleList is banned:
+		now autogender is 1; [male]
+	else if MaleList is banned:
+		now autogender is 2; [female]
+	else if MaleList is warded and FemaleList is warded:
+		now autogender is a random number between 1 and 2;
+	else if ishunting is true:	[hunting results in 2/3rds chance to get unwarded option]
+		if MaleList is warded and a random chance of 1 in 3 succeeds:
+			now autogender is 2;
+		else if FemaleList is warded and a random chance of 1 in 3 succeeds:
+			now autogender is 1;
+	else if ishunting is false:
+		if MaleList is warded:
+			now autogender is 2;
+		else if FemaleList is warded:
+			now autogender is 1;
+	now metalskin is a random number between 1 and 4;
+	if autogender is 1:		[male]
+		setmongender 3;
+		now sex entry is "Female";
+		if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
+		now lootchance entry is 33;
+	else:
+		setmongender 4; [female]
+		now sex entry is "Male";
+		if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
+		now lootchance entry is 0;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -93,7 +97,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Automaton"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
-	add "Automaton" to infections of FurryList;
+	add "Automaton" to infections of FemaleList;
 	add "Automaton" to infections of MachineList;
 	add "Automaton" to infections of MaleList;
 	add "Automaton" to infections of BipedalList;
@@ -137,11 +141,11 @@ When Play begins:
 	now Cunt Tightness entry is 4; [ Width of female sex the infection will try to give a player. ]
 	now SeductionImmune entry is true;
 	now libido entry is 0; [ Target libido the infection will rise towards. ]
-	now loot entry is "automaton cum"; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "Automaton gear"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
-	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now MilkItem entry is "automaton milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "automaton cum"; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "[GenerateTrophyList_Automaton]"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]normal[or]unchanged[at random]";
 	now type entry is "[one of]human[or]humanoid[or]robotic[at random]";
@@ -259,6 +263,34 @@ When Play begins:
 to say autoskinchange:
 	now playermetalskin is metalskin;
 	say "grows hard and metallic, stiffening into a shifting, flexing skin made of [if Playermetalskin is 1]bronze[else if Playermetalskin is 2]aluminum[else if Playermetalskin is 3]cobalt[else if Playermetalskin is 4]steel[end if]";
+
+Section 3 - Loot
+
+to say GenerateTrophyList_Automaton:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception ]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "Automaton gear" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "automaton cum" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "automaton milk" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Automaton gear"	"A copper gear that looks like it has been pulled out of an automaton."	1	Automaton gear
+
+Automaton gear is a grab object.
+It is temporary.
+Usedesc of Automaton gear is "[Automaton gear use]".
+
+to say Automaton gear use:
+	say "Holding the automaton gear on a finger, you spin it idly with your other hand, curious as to how well it turns. Strangely, the gear disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	Infect "Automaton";
+
+instead of sniffing Automaton gear:
+	say "The gear has a coppery, metallic scent.";
 
 Table of Game Objects (continued)
 name	desc	weight	object

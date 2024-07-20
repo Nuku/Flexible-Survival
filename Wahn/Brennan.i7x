@@ -848,6 +848,13 @@ Section 3 - Enemy Definition
 [***********************************************************]
 [***********************************************************]
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Human Survivor"	"[PrepCombat_Human Survivor]"
+
+to say PrepCombat_Human Survivor:
+	say "";
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -1123,7 +1130,7 @@ PenileVirgin of Brennan is true.
 SexuallyExperienced of Brennan is true.
 MainInfection of Brennan is "Jackalman". [if he becomes able to impregnate people it is through Nermine's magical cock - and the kids won't be human]
 Description of Brennan is "[BrennanDesc]".
-Conversation of Brennan is { "<This is nothing but a placeholder!>" }.
+Conversation of Brennan is { "<This is nothing but a Human Survivor!>" }.
 The scent of Brennan is "     Brennan smells nicely masculine, with a little hint of sweat on his muscular chest, as well as... something else, rather hard to place your finger on.".
 
 to say BrennanDesc:

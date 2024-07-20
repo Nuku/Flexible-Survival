@@ -89,6 +89,7 @@ to say ResolveEvent Strange Serpent:
 				now level of Velos is 1;
 				now HP of Velos is 3;
 				now mpreghijack is true;
+				TraitGain "Inside Player" for Velos;
 				now Resolution of Strange Serpent is 2; [Velos taken in]
 			else:
 				say "     You decide not to help the bizarre creature, stepping away. Thankfully, annoyed as he may appear, it doesn't seem to challenge you for the gesture.";
@@ -169,28 +170,62 @@ to say velosdesc:
 
 
 Instead of conversing the Velos:
-	if FaceName of Player is "Cerberus" or skrp > 0 and velosheadstalk is false:		[multiple heads]
-		add -3 to velospostmusings, if absent;
-	else if velospostmusings is not empty:		[remove if unused and doesn't apply]
-		if -3 is listed in velospostmusings, remove -3 from velospostmusings;
-	if insectlarva is true and velosparasitetalk is false:					[parasite]
-		add -1 to velospostmusings, if absent;
-	if level of velos > 1 and velosapology is false:						[apology]
-		add -2 to velospostmusings, if absent;
-	if velossavedyes is true and velossavedtalk is false:						[guardian angel]
-		add -4 to velospostmusings, if absent;
-	if velospostmusings is not empty:
-		sort velospostmusings in random order;
-		now vpostmusenum is entry 1 of velospostmusings;
-		postmuse vpostmusenum;
-	else if a random chance of 2 in 5 succeeds:
-		say "     '[one of][if location of Player is Volcanic Cave]Ughh... it's terribly hot in here!'[else if location of Player is Volcanic Crater]Now the temperature almost bearable, but these wretched fumes are getting to me!'[else if location of Player is Slut Rat Den]With you to support me, this place is almost comfortable. But now we're back into the sewers again. How is that progress?'[else]It's right freezing out here!'[end if][or]I'm feeling queasy already...'[or]What's that over there? Bring me a little closer... Yeah, nevermind, it was nothing. My apologies.'[or]You're probably curious as to how I can anchor myself within you and yet still hang out like this... a magician never shares his secrets!'[or]I sometimes long to eat on my own again...'[or]Oh, I think I see a quarter on the ground! Though I wager it'll be of little use.'[or]Wait... Did you hear something? Hm... Probably nothing.'[or]Why is it that I sometimes feel like I'm the only sane person here?'[at random]";
-	else if level of Velos is 1:
-		say "     '[one of]Hope you're fond of playing tour guide, because I would very much prefer you take me around the place, perhaps letting me muse over other people - assuming they don't flee in terror, of course.'[or]Don't give me that look. What do you want?'[or]I assure you, if you're just going to stare at me, I'm just going to go right back in.'[or]What?'[or]No, I won't go away, stop asking.'[or]If you gaze long into an abyss, the abyss will gaze back into you.'[or]You have the worst eating habits. Do you know that?'[or]Try not to get raped too much; it's very disconcerting for me when it happens!'[or]Can I go back in now?'[or]I'm sorry, I don't like this arrangement as much as you do.'[or]You're stuck with me, so you'll just have to learn to deal with me.'[at random]";
-	else if level of Velos is 2:
-		say "     '[one of]Things look like they're rubbish all over. What are your plans?'[or]I'm fairly certain things couldn't get any worse around here.'[or]What do you wager is taking the military?'[or]I really do wish I didn't need someone to carry me around, but I suppose my predicament could be worse...'[or]You're not a bad kid... Unless you're doing something you shouldn't be when I'm not looking?'[or]Try to stay out of trouble, please?'[or]You have any idea how infuriating it is for me to watch all this happening and not be able to do anything about it?'[or]Such desolation...'[at random]";
-	else if level of Velos is 3:
-		say "     '[one of]I hate to admit it, but I don't think I was going to linger on for much longer until you came along.'[or]I'm glad it was you who found me.'[or]Take care of yourself out there, and I'm not saying that because I must share your pain.'[or]I don't care what you look like, I appreciate you for what's inside... Heh, sorry, that was quite the bad joke.'[or]I'd try to make less of a mess of things if I could, really.'[or]I'll probably be able to find someone else to have me carry around when this is through. I-If that's what you want, I mean.'[or]I feel a bit ill at ease when outside like this; I feel a lot safer when I'm inside...'[or]Try to stay out of the sewers, terrible things scheme at its deepest depths.'[or]I wish I could protect you as well as you for me.'[at random]";
+	if Odd Green Patches is not resolved and Odd Green Patches is inactive:
+		now Odd Green Patches is active;
+	if player is in Grey Abbey Garden:
+		if "Inside Player" is not listed in traits of Velos:
+			say "     You look at Velos['] improvised home in the library's garden and consider whether you should take him in you. Almost as if sensing your presence once you approach the rather odd-looking plant, his head pops out to look at you. 'Ah, so my bigger portable home has arrived. Were you interested in taking me for a stroll? How considerate of you...!' He seems to want to come back to you, but that decision is ultimately yours.";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Allow him to wiggle his way into your ass.";
+			say "     ([link]N[as]n[end link]) - Tell him you simply came to check on him.";
+			if Player consents:
+				LineBreak;
+				say "     As the opportunity provides itself, you agree on letting him inside you. 'Marvelous. Get your ass over here so I can wiggle myself right in, then.' With a nod, you do so, leaning your butt over the strange plant and allow Velos to quickly squeeze himself into your ass and out of the organic green body. Once he gets comfortable inside you, he lets out a pleased sigh. 'There we go... Now, onto some new, exciting adventures, I wonder?'";
+				say "     [bold type]Velos is now with you.[roman type][line break]";
+				TraitGain "Inside Player" for Velos;
+				now HP of Velos is 3;
+				now mpreghijack is true;
+			else:
+				LineBreak;
+				say "     You have no plans on taking him in you yet, and simply decide to ask how he is doing. 'Not too shabby, I'd say. This isn't as exciting, but it isn't uncomfortable. Still, I much prefer to be in something that moves around and does things, has thoughts and... You get what I mean.' Despite his loneliness, he seems alright. Perhaps sometime you should take him on a stroll.";
+		else:
+			say "     You look at Velos['] improvised home in the library's garden and consider whether you should ask him to stay here for a while. However, almost as if he could sense your thoughts, you hear his little voice speaking to you before you can even utter a word. 'Are you wanting me to stay here? All you have to do is ask, I don't bite... Often,' he says, awaiting a response from you.";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Ask him to stay here.";
+			say "     ([link]N[as]n[end link]) - No, you do not want him out. Tell him you are just passing by.";
+			if Player consents:
+				LineBreak;
+				say "     Indeed, you came here to deliver him into his temporary plant house, and ask him dearly if he would do that for you. 'Fine... I suppose I can stick around while you go... Whatever things you do without me... Would you please bend over for my vacation house, then?' You then do as he asks, leaning your ass over the strange plant and allow Velos to quickly wiggle himself out of your butt and into this organic green body. After a few moments, his head pokes out of it as he bids you farewell. 'Don't take too long to come for me, it gets lonely in here...'";
+				say "     [bold type]Velos is now staying in the Library's Garden until you come for him again.[roman type][line break]";
+				TraitLoss "Inside Player" for Velos;
+				now HP of Velos is -1;
+				now mpreghijack is false;
+				move Velos to Grey Abbey Garden;
+			else:
+				say "     You tell him it is nothing, as you are simply walking by the garden.";
+	else:
+		if FaceName of Player is "Cerberus" or skrp > 0 and velosheadstalk is false:		[multiple heads]
+			add -3 to velospostmusings, if absent;
+		else if velospostmusings is not empty:		[remove if unused and doesn't apply]
+			if -3 is listed in velospostmusings, remove -3 from velospostmusings;
+		if insectlarva is true and velosparasitetalk is false:					[parasite]
+			add -1 to velospostmusings, if absent;
+		if level of velos > 1 and velosapology is false:						[apology]
+			add -2 to velospostmusings, if absent;
+		if velossavedyes is true and velossavedtalk is false:						[guardian angel]
+			add -4 to velospostmusings, if absent;
+		if velospostmusings is not empty:
+			sort velospostmusings in random order;
+			now vpostmusenum is entry 1 of velospostmusings;
+			postmuse vpostmusenum;
+		else if a random chance of 2 in 5 succeeds:
+			say "     '[one of][if location of Player is Volcanic Cave]Ughh... it's terribly hot in here!'[else if location of Player is Volcanic Crater]Now the temperature almost bearable, but these wretched fumes are getting to me!'[else if location of Player is Slut Rat Den]With you to support me, this place is almost comfortable. But now we're back into the sewers again. How is that progress?'[else]It's right freezing out here!'[end if][or]I'm feeling queasy already...'[or]What's that over there? Bring me a little closer... Yeah, nevermind, it was nothing. My apologies.'[or]You're probably curious as to how I can anchor myself within you and yet still hang out like this... a magician never shares his secrets!'[or]I sometimes long to eat on my own again...'[or]Oh, I think I see a quarter on the ground! Though I wager it'll be of little use.'[or]Wait... Did you hear something? Hm... Probably nothing.'[or]Why is it that I sometimes feel like I'm the only sane person here?'[at random]";
+		else if level of Velos is 1:
+			say "     '[one of]Hope you're fond of playing tour guide, because I would very much prefer you take me around the place, perhaps letting me muse over other people - assuming they don't flee in terror, of course.'[or]Don't give me that look. What do you want?'[or]I assure you, if you're just going to stare at me, I'm just going to go right back in.'[or]What?'[or]No, I won't go away, stop asking.'[or]If you gaze long into an abyss, the abyss will gaze back into you.'[or]You have the worst eating habits. Do you know that?'[or]Try not to get raped too much; it's very disconcerting for me when it happens!'[or]Can I go back in now?'[or]I'm sorry, I don't like this arrangement as much as you do.'[or]You're stuck with me, so you'll just have to learn to deal with me.'[at random]";
+		else if level of Velos is 2:
+			say "     '[one of]Things look like they're rubbish all over. What are your plans?'[or]I'm fairly certain things couldn't get any worse around here.'[or]What do you wager is taking the military?'[or]I really do wish I didn't need someone to carry me around, but I suppose my predicament could be worse...'[or]You're not a bad kid... Unless you're doing something you shouldn't be when I'm not looking?'[or]Try to stay out of trouble, please?'[or]You have any idea how infuriating it is for me to watch all this happening and not be able to do anything about it?'[or]Such desolation...'[at random]";
+		else if level of Velos is 3:
+			say "     '[one of]I hate to admit it, but I don't think I was going to linger on for much longer until you came along.'[or]I'm glad it was you who found me.'[or]Take care of yourself out there, and I'm not saying that because I must share your pain.'[or]I don't care what you look like, I appreciate you for what's inside... Heh, sorry, that was quite the bad joke.'[or]I'd try to make less of a mess of things if I could, really.'[or]I'll probably be able to find someone else to have me carry around when this is through. I-If that's what you want, I mean.'[or]I feel a bit ill at ease when outside like this; I feel a lot safer when I'm inside...'[or]Try to stay out of the sewers, terrible things scheme at its deepest depths.'[or]I wish I could protect you as well as you for me.'[at random]";
 
 
 instead of fucking the Velos:
@@ -199,39 +234,83 @@ instead of fucking the Velos:
 
 Section 3 - Dragging him Around + Effects
 
+a postimport rule:
+	if Resolution of Strange Serpent is 2 and HP of Velos > 2:
+		TraitGain "Inside Player" for Velos;
+
 Every turn while HP of Velos > 2:
 	if Velos is not in the Location of Player:		[traveling w/player]
 		now Velos is in the Location of Player;
 		say "[one of][link]Velos[as]look Velos[end link] shifts around inside you slightly.[or]You arrive here with [link]Velos[as]look Velos[end link].[or][link]Velos[as]look Velos[end link], roused by you moving about, shifts his position.[or]Your travels elicit some shifting from [link]Velos[as]look Velos[end link].[or][link]Velos[as]look Velos[end link] twitches in response to your travels.[or]You're forced to contend with [link]Velos[as]look Velos[end link][']s subtle protests in lieu of your movement.[cycling]";
 
-
 an everyturn rule:
-	veloslevelcheck;
-	if HP of Velos > 2 and HP of Velos < 8:			[daily favor growth]
-		if lastfuck of velos - turns >= 8:
-			now lastfuck of Velos is turns;
-			increase HP of Velos by 1;
-			increase XP of Velos by 1;
-			veloslevelcheck;
-			if HP of Velos is 8, now lastfuck of Velos is turns + 40;
-		if a random chance of 3 in 10 succeeds:
-			increase Libido of Player by 8;
-			if Libido of Player > 100, now Libido of Player is 99;
-			if velospostmusings is not empty and a random chance of 2 in 3 succeeds:
-				say "[one of]Struck with the pangs of rather ponderous prodding by [link]Velos[as]talk Velos[end link], you get the impression that he may want to talk to you, likely preferring not to just pop out when you might be in the middle of something.[or]You find yourself infrequently pestered by your occupant in a rather deliberate manner, giving you the impression that [link]Velos[as]talk Velos[end link] might want to talk to you.[or]You're forced to contend with [link]Velos[as]talk Velos[end link][']s attempts to draw your attention, maybe he has something to talk to you about?[at random]";
-			if HP of Velos < 9 and a random chance of HP of velos in 10 succeeds:
-				increase score by 0; [skipping message]
-			else:
-				if a random chance of 1 in 3 succeeds:
-					say "     [one of]Quizzically, you prod your stomach, eliciting an occasional twitch from your passenger, who's probably resting right now[or]Your stomach twitches slightly with the shifting of your residence, such activity relenting as quickly as it started[or]You're forced to contend with slight discomfort as your resident twists and writhes within your confines - perhaps out of boredom - forcing you to prod him in discontent until he relents[cycling].";
-				else if scalevalue of Player < 3:		[small player]
-					say "     [one of]You're briefly distracted by your excessively pregnant-looking belly, your occupant's irreverent movements sending bolts of twisted pleasure across your diminutive frame[or]Suddenly, you're jolted with a pangs of perverse bliss. Apparently, the serpent had to push some of itself out of you for a moment to shift positions within your tiny frame[or]You're forced to sit down for a moment, resting from the ponderous weight of your inhabitant[cycling].";
-				else if scalevalue of Player is 3:				[average-sized player]
-					say "     [one of]You're briefly distracted by your somewhat pregnant-looking belly, your occupant's irreverent movements sending bolts of twisted pleasure across your form[or]You're forced to tense a bit as your distended torso twitches with a sudden jolt of movement by your residence[or]Though you can handle your inhabitant's weight far better than any normal person rightly should, you're occasionally forced to catch your breath before moving on[cycling].";
-				else:							[large player]
-					say "     [one of]You tense slightly as your occupant makes a rather sudden jolt within your confines, though it's not enough to be a substantial distraction[or]Your briefly forced to grit your teeth in a wave of tense, twisted pleasure, the serpent readjusting himself a fair bit. A little embarrassed afterwards, you hope nobody saw that, as his occupancy isn't made outwardly apparent[or]You're lightly assaulted with some rather erratic movement by your resident. Aimless as it is, you get the impression he's lost track of his orientation[cycling].";
+	if "Inside Player" is listed in traits of Velos:
+		veloslevelcheck;
+		if HP of Velos > 2 and HP of Velos < 8:			[daily favor growth]
+			if lastfuck of velos - turns >= 8:
+				now lastfuck of Velos is turns;
+				increase HP of Velos by 1;
+				increase XP of Velos by 1;
+				veloslevelcheck;
+				if HP of Velos is 8, now lastfuck of Velos is turns + 40;
+			if a random chance of 3 in 10 succeeds:
+				increase Libido of Player by 8;
+				if Libido of Player > 100, now Libido of Player is 99;
+				if velospostmusings is not empty and a random chance of 2 in 3 succeeds:
+					say "[one of]Struck with the pangs of rather ponderous prodding by [link]Velos[as]talk Velos[end link], you get the impression that he may want to talk to you, likely preferring not to just pop out when you might be in the middle of something.[or]You find yourself infrequently pestered by your occupant in a rather deliberate manner, giving you the impression that [link]Velos[as]talk Velos[end link] might want to talk to you.[or]You're forced to contend with [link]Velos[as]talk Velos[end link][']s attempts to draw your attention, maybe he has something to talk to you about?[at random]";
+				if HP of Velos < 9 and a random chance of HP of velos in 10 succeeds:
+					increase score by 0; [skipping message]
+				else:
+					if a random chance of 1 in 3 succeeds:
+						say "     [one of]Quizzically, you prod your stomach, eliciting an occasional twitch from your passenger, who's probably resting right now[or]Your stomach twitches slightly with the shifting of your residence, such activity relenting as quickly as it started[or]You're forced to contend with slight discomfort as your resident twists and writhes within your confines - perhaps out of boredom - forcing you to prod him in discontent until he relents[cycling].";
+					else if scalevalue of Player < 3:		[small player]
+						say "     [one of]You're briefly distracted by your excessively pregnant-looking belly, your occupant's irreverent movements sending bolts of twisted pleasure across your diminutive frame[or]Suddenly, you're jolted with a pangs of perverse bliss. Apparently, the serpent had to push some of itself out of you for a moment to shift positions within your tiny frame[or]You're forced to sit down for a moment, resting from the ponderous weight of your inhabitant[cycling].";
+					else if scalevalue of Player is 3:				[average-sized player]
+						say "     [one of]You're briefly distracted by your somewhat pregnant-looking belly, your occupant's irreverent movements sending bolts of twisted pleasure across your form[or]You're forced to tense a bit as your distended torso twitches with a sudden jolt of movement by your residence[or]Though you can handle your inhabitant's weight far better than any normal person rightly should, you're occasionally forced to catch your breath before moving on[cycling].";
+					else:							[large player]
+						say "     [one of]You tense slightly as your occupant makes a rather sudden jolt within your confines, though it's not enough to be a substantial distraction[or]Your briefly forced to grit your teeth in a wave of tense, twisted pleasure, the serpent readjusting himself a fair bit. A little embarrassed afterwards, you hope nobody saw that, as his occupancy isn't made outwardly apparent[or]You're lightly assaulted with some rather erratic movement by your resident. Aimless as it is, you get the impression he's lost track of his orientation[cycling].";
 	if level of velos > 2:
 		now velossaved is false; [reset velos's fight saving feature]
+
+Section 3-1 - Leaving him behind temporarily
+
+Table of GameEventIDs (continued)
+Object	Name
+Odd Green Patches	"Odd Green Patches"
+
+Odd Green Patches is a situation. Odd Green Patches is inactive.
+ResolveFunction of Odd Green Patches is "[ResolveEvent Odd Green Patches]".
+Sarea of Odd Green Patches is "Outside".
+
+to say ResolveEvent Odd Green Patches:
+	say "     Stepping through a pile of wet dirt, the humidity in the soil forming mud the further ahead you walk, you take a glance at what seems to be a... Displaced plant biome in the middle of nothing but pebbles and more dirt. The abnormality of it all makes you keen on investigating these patches of green, spotting some odd looking herbs, flowers and trunks covered in a yellow-ish moss. Upon a closer inspection, a presence announces itself, one that sometimes is easy to forget about when you are focused on some task. 'What did you find?' you hear your snake butt-tail speak inquisitively as it turns over your leg to have a look at what you are staring at, this one strange trunk. 'I had a feeling something strange was going on. Let me have a closer look at that,' he asks you.";
+	say "     Upon hearing his request, you turn around to allow Velos some freedom from the comfort of your warm insides, as strange as that feels still up to this moment. He inspects the small trunk-like structure, phrased in your head as such because, frankly, you are starting to doubt this is a trunk at all. 'This isn't moss. It's not even exactly a plant... But I don't know what it is. I have an idea, though...' he says, and beckons you to bring him closer. You simply take a step back, and once Velos is in reach of this odd organism, you feel a sudden emptiness in your butthole. To your surprise, you see the small snake-thing disappear into the organic mass, and you do not see him again until a few seconds pass. It is then that Velos['] head pops out of a small hole, which... Admittedly looks pretty similar to an anus.";
+	WaitLineBreak;
+	say "     'It isn't as comfortable as you, I think. But not unlivable... In fact, I think I could get used to it. Under a necessity...' he states, and under your confusion, you ask him if he knows more about this weird thing. 'I don't really know, to be honest. I only know it's alive, warm and kind of wet inside. Feels almost like being in you, just a tad worse.' You then ask if this could be a sort of new home for him, arguing that he might enjoy some privacy. 'Well, yes, though we both know you'd probably enjoy that too. Which is fine, I guess. Maybe you can take this thing with you and plant it in the Library or something. Don't you have a garden there?' You know this is a possibility, but you really do not know anything about this... Organism.";
+	say "     'Just put it in moist soil, that should suffice. I can sort of... Communicate with it, even. It's weird, but I feel like I can influence it somehow... It's very dormant right now, though. Anyway, I think it'll be fine if you do what I just said.' You stare a it for a while, not really knowing how to exactly bring this thing with you, as you look around it trying to figure out where to place your hands and pull it off the ground... 'Hey, let me out of here before you do that! I don't want to risk getting squashed due to your sloppiness,' he demands, and you stop whatever you are doing to let Velos back into your rear. He does so quickly, the odd presence in your butt now returned, though its renewed warmth feels strangely comforting to you.";
+	WaitLineBreak;
+	say "     'Now, back to the task at hand. You try to place your hands around this odd trunk, for the lack of a better name for it. Its texture is mossy, as expected, but more than that, it feels warm and alive, a sensation that creeps you out at first. Its surface is also slightly slimey, slippery even, and to pull it off the ground, you need to have a good grip on it. To your surprise, it comes off without any resistance, as it does not seem to have roots. A new problem presents itself, however, as you realize this is also somewhat heavy. You could simply carry this over back to the Library immediately, but before you consider it, you hear the voice again. 'Just do it now, you don't want to risk leaving it here at the mercy of the elements, do you?' says Velos almost imperatively, and given that he is, essentially, in your ass, you feel inclined to oblige him.";
+	say "     Without any further ado, you do your best to carry the organic mass back to Grey Abbey Library, with its new destination in mind...";
+	WaitLineBreak;
+	move player to Grey Abbey Garden;
+	say "     After a harduous way back to the Library, and fortunately without any other issues, you rush to the garden in order to... Plant, you guess, this weird thing. You find it some soil and get some moisture on it, which does not take much out of your personal supplies. As you place it down, it seems to throb lively... A slightly disturbing sight that you are wary of. Velos perks up as soon as you finish the job, 'Yeah, that should do it. Let me into it again,' he asks, and once more, you let him exit your butt and reach for the odd trunk. You wait... And, eventually, Velos returns, popping his head out. 'Works. I guess you can enjoy your lonely time for a while, but make sure to keep coming back for me for at least a chat. I wouldn't mind a walk on occasion, either. Unless you miss me so much you want me back in you indefinitely...' For some reason, you feel like he really would not mind the latter.";
+	say "     You suppose you could always just let him in before you go, unless you would rather have him stay in there.";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Allow him to wiggle his way back into your ass.";
+	say "     ([link]N[as]n[end link]) - Leave him be, for now.";
+	if Player consents:
+		LineBreak;
+		say "     You tell him there is no need for him to stay and would rather have him hop into you now. 'Oh, is that it? Marvelous, then! Get your ass over here so I can wiggle myself right back in, then.' With a nod, you do so, leaning your butt over the strange plant and allow Velos to quickly squeeze himself into your ass and out of the organic green body. Once he gets comfortable inside you, he lets out a pleased sigh. 'There we go... Now, onto some new, exciting adventures, I wonder?'";
+		say "     [bold type]Velos is still with you, but you can return here anytime if you would rather have him stay out.[roman type][line break]";
+	else:
+		LineBreak;
+		say "     You shall leave him to his own devices for the time being, but [bold type]you can always come back for him later.[roman type][line break]";
+		TraitLoss "Inside Player" for Velos;
+		now HP of Velos is -1;
+		now mpreghijack is false;
+		move Velos to Grey Abbey Garden;
+	now Odd Green Patches is resolved;
+
 
 Section 4 - Musing w/Velos
 
@@ -529,7 +608,7 @@ to say fangmusing:
 		say "     'You talk a lot but say little.' Velos is a bit at odds with the wolf's curt response, but ultimately attempts to coax more out of him. 'Oh, that's right rude! Surely you could offer me a more elaborate response? I wouldn't want to make you too uncomfortable, and we're all friends here.' The wolf looks skeptical at this. 'At best you just take up space, at worst a parasite. Nor do you seem to remember how vulnerable you are outside like this. Especially when you are using someone I care about as a host.' Fang emphasizes this last comment with a brief glimpse of his teeth before walking away. Velos remains silent for a moment before speaking again. 'He seemed nice. I'll try not to give him any more reason to dislike me. As well as try to prove him wrong about my usefulness.'";
 	else: [Gentle Alpha Fang]
 		say "     [if fangvelos1 is true]Once more[else]Reluctantly[end if], you conjure up Velos from his confines, Fang raising an eyebrow at his appearance[if fangvelos1 is false]. You find it strange that he would be so fine with his presence but decide that perhaps he already knew the snake was in there, or maybe he was just keeping his composure[end if]. 'Oh, hello[if fangvelos1 is true] again[end if], little doggie. Who's a cute pooch? You are!' Velos's attempt at condescension is met with a disinterested glance. [if fangvelos1 is true]Oh, what's this? You were frightened by me a while ago. Have you undergone some manner of change when I wasn't looking[else]Oh, you're a lot braver than I thought you would be, or perhaps you lack the cognitive capacity to understand what I could do to you while you're having your [']fun['][end if]?";
-		say "     'You talk a lot but say little.' Velos is a bit at odds with the wolf's curt response, but ultimately attempts to coax more out of him. 'Oh, that's right rude! Surely you could offer me a more elaborate response? I wouldn't want to make you too uncomfortable, and we're all friends here.' The wolf looks skeptical at this. 'You earn friendship, not take it. Some might call you a parasite. I'll reserve judgement for now, but if you hurt [ObjectPro of Player]...' Fang emphasizes this last comment with a brief glimpse of his teeth before walking away. Velos remains silent for a moment before speaking again. 'He seemed nice. I'll try not to give him any more reason to dislike me. As well as try to prove him wrong about my usefulness.'";
+		say "     'You talk a lot but say little.' Velos is a bit at odds with the wolf's curt response, but ultimately attempts to coax more out of him. 'Oh, that's right rude! Surely you could offer me a more elaborate response? I wouldn't want to make you too uncomfortable, and we're all friends here.' The wolf looks skeptical at this. 'You earn friendship, not take it. Some might call you a parasite. I'll reserve judgment for now, but if you hurt [ObjectPro of Player]...' Fang emphasizes this last comment with a brief glimpse of his teeth before walking away. Velos remains silent for a moment before speaking again. 'He seemed nice. I'll try not to give him any more reason to dislike me. As well as try to prove him wrong about my usefulness.'";
 
 
 Part 10 - Harold

@@ -12,7 +12,6 @@ Section 1 - Creature Responses
 squidcolor is a number that varies.
 
 to say squiddesc:
-	setmongender 4; [creature is female]
 	if a random chance of 1 in 2 succeeds:
 		say "     Rising from the waters is a female squid creature. Her sleek and smooth body, made for gliding through the water with ease, is covered in wet-looking yellow flesh. Her head is almost human, except for having an elongated crown and large, dark eyes. The squid girl's chest is a slightly lighter color than the rest of her body and has a pair of small, flat breasts. Her arms are long tentacles lined with rows of suckers and ending in pad-like hands. Her legs are a collection of tentacles, eight in number, that twist and roll as she moves around. Her ass is small and compact, barely disturbing the silhouette of her body. Beneath the shifting tentacles, you spot her wet pussy, quivering with need.";
 	else:
@@ -48,10 +47,8 @@ to say losetosquid:
 		say "     She watched you as you writhe against her perverse affections, very much amused by your protests as she arouses you, lacking any sexual outlet to sate her relentless assault. You're about to pass out from exhaustion before she finally relents, slowly prying her limbs from your beleaguered form, and departing with a merry giggle and a gentle kiss.";
 	say "     'Come back soon,' she whispers to you, 'I'll be waiting,' before she descends back into the depths of the coast. Regardless of how you feel about the circumstances which unfurled before you, you have to admit that it's a little embarrassing to be covered in all these welts from the abuse of the squid girl's suckers.";
 
-
 to say beatthesquid:
 	say "     You strike the aquatic creature down, and - seeing this as a losing fight - she quickly tumbles back into the depths of the waters from whence she came, releasing a cloud of ink to hide her escape.";
-
 
 to say squidskinchange:
 	let tempnum be squidcolor;
@@ -60,8 +57,14 @@ to say squidskinchange:
 	if squidcolor is 4, now squidcolor is 0;
 	say "a sensation like cold, rushing water flooding through your veins as your skin sheds away revealing slick smooth red flesh below. As you admire your new skin with wonder, it suddenly shifts to blue. Your surprise brings on a yellow hue. With a bit of practice, you settle on a color that suits you";
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Squid"	"[PrepCombat_Squid]"
+
+to say PrepCombat_Squid:
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -43,6 +43,11 @@ Version 2 of Wolfman by Wahn begins here.
 JenniferFirstKidSpecialStat is a text that varies.
 LastJenniferSoda is a number that varies. LastJenniferSoda is usually 2000.
 
+a postimport rule: [bugfix]
+	if HP of Septus is 100:
+		choose row with name of "Football Wolfman" in Table of Random Critters;
+		now area entry is "Campus";
+
 Section 1 - Creature Responses & Infection
 
 to say Septus wins:
@@ -72,54 +77,13 @@ To say Septus loses:
 			now Entrance to the Lair is active;
 
 to say Wolfmandesc:
-	setmongender 3;
 	choose row MonsterID from the Table of Random Critters;
 	if HP of Septus is 100:
 		say "     As you explore the ruined city, a tall figure suddenly steps into sight in front of you and gives you a calculating look. It's a well-toned male wolf-morph, standing on two digitigrade legs. His fur is almost completely black, except for a blood red section on his chest that forms the number 7.";
 		say "     He nods his lupine head at you, saying 'I'm Septus, the talent scout of the Fairhaven Wolves. You don't look half bad - but are you worth joining the best football team of this changed world?' He gives you a toothy grin, then pounces at you.";
 		now HP of Septus is 0;
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Football Wolfman":
-				now MonsterID is y;
-				break;
-		choose row MonsterID from the Table of Random Critters;
+		choose row with name of "Football Wolfman" in Table of Random Critters;
 		now enemy type entry is 2; [name known]
-	else if HP of Septus is 6:
-		let debit be 0;
-		if HardMode is true and level of Player > 12, let debit be level of Player - 12;
-		now dex entry is 20 + ( ( debit * 2 ) / 5 );
-		now HP entry is 95 + ( debit * 5 );
-		now monsterHP is 95 + ( debit * 5 );
-		now lev entry is 12 + debit;
-		now wdam entry is 14 + ( ( debit * 3 ) / 10 );
-		now lootchance entry is 0;
-		now area entry is "Nowhere";
-		say "     Septus and several of the nearest wolves move in to fight out, growling angrily and intent on throwing you out for good. The others clear the area and start cheering and howling in excitement like a rowdy crowd of football fans. At this point, the wolfmen aren't going to hold back like they have been during the recruitment and training, rushing at you like an offensive line. You growl back and flex your powerful, lupine body and charge as well, your wild instincts pumping adrenaline into your blood while a small corner of your mind hopes you haven't gotten in over your head.";
-		if jenniferwolves is 1:
-			say "     At least you do have at least one supporter out among the wolves encircling the fight and awaiting its outcome. The wolfman son you had with Jennifer is cheering you on from the edge of the area cleared from the match. A few of the other spectators push and growl at him, eventually a fight breaking out between him and another";
-		else if jenniferwolves is 2:
-			say "     At least you do have a pair of supporters out among the wolves encircling the fight and awaiting its outcome. The wolfman sons you had with Jennifer are cheering you on from the edge of the area cleared from the match. A few of the other spectators push and growl at them, eventually a fight breaking out between them and a couple of others";
-		else if jenniferwolves > 2:
-			say "     At least you do have a cluster of supporters out among the wolves encircling the fight and awaiting its outcome. The wolfman sons you had with Jennifer are cheering you on from the edge of the area cleared from the match. A few of the other spectators push and growl at them, but their numbers keep the others around them from daring to outright fight these opposition fans";
-		if jenniferwolves > 0:
-			say ". The sight of [if jenniferwolves > 1]them[else]him[end if] rooting for you boosts your determination to fight and win this battle.";
-			if jenniferwolves > 4:
-				increase morale of Player by 4;
-				increase HP of Player by 15;
-			else:
-				increase morale of Player by jenniferwolves;
-				increase HP of Player by jenniferwolves * 3;
-	else if HP of Septus is 99:
-		say "ERROR-FW99: This creature should no longer be randomly encountered.";
-		now area entry is "Nowhere";
-		now fightoutcome is 19;
-		now combat abort is 1;
-	else if HP of Septus >= 7:
-		say "ERROR-FW[HP of Septus]: This creature should no longer be randomly encountered.";
-		now area entry is "Nowhere";
-		now fightoutcome is 19;
-		now combat abort is 1;
 	else:
 		say "     Before you is the strong, muscled wolf you've seen before with 7 emblazoned in red right into his black-furred chest. Septus, the well-toned wolfman talent scout rushes at you, growling [one of]'Let's see what you're made of!'[or]'Let's spar a bit.'[or]'Time for some endurance training.'[at random]";
 
@@ -131,6 +95,19 @@ to say fw_attack:
 
 
 Section A - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Football Wolfman"	"[PrepCombat_Football Wolfman]"
+
+to say PrepCombat_Football Wolfman:
+	choose row with name of "Football Wolfman" in Table of Random Critters;
+	setmongender 3;
+	if HP of Septus >= 7 and HP of Septus < 100:
+		say "ERROR-FW[HP of Septus]: This creature should no longer be randomly encountered.";
+		now area entry is "Nowhere";
+		now fightoutcome is 19;
+		now combat abort is 1;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -1020,13 +997,13 @@ Instead of fucking Septus:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Septus's cock";
 		now sortorder entry is 1;
-		now description entry is "Give him a blow-job.";
+		now description entry is "Give him a blowjob.";
 		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
-			now description entry is "Get a blow-job.";
+			now description entry is "Get a blowjob.";
 		[]
 		if Player is female:
 			choose a blank row in table of fucking options;
@@ -1128,7 +1105,31 @@ to say WolfTeamManager:
 	say "     Septus looks at you with a thoughtful expression and slowly nods - at least until you put an arm around Jennifer and continue with 'Of course, there needs to be some compensation for my hard work - part of the team being mine, I'd say. As team manager, from now on, I'll be the only one fucking Jennifer to father our new top players. And of course get to jump the line with the other cheerleaders when I want.'";
 	say "     Baring his fangs in anger, Septus growls 'WHAT? Hell no! She's my... they're our... she wouldn't agree to this anyways.' Some of the other players, having overheard what's going on, growl and move in behind the team's talent scout to back him up. But there isn't any such opposition on the slender head-cheerleader's part - in fact, Jennifer seems to be reminiscing about your last coupling, softly moaning as she strokes her breasts. That really rises the wolfman's hackles. He growls 'Get out!' and when you don't immediately start going, he continues with a snarled 'I'll drag your beaten ass out of here if I have to!'";
 	WaitLineBreak;
-	now HP of Septus is 6;
+	choose row with name of "Football Wolfman" in Table of Random Critters;
+	let debit be 0;
+	if HardMode is true and level of Player > 12, let debit be level of Player - 12;
+	now dex entry is 20 + ( ( debit * 2 ) / 5 );
+	now HP entry is 95 + ( debit * 5 );
+	now monsterHP is 95 + ( debit * 5 );
+	now lev entry is 12 + debit;
+	now wdam entry is 14 + ( ( debit * 3 ) / 10 );
+	now lootchance entry is 0;
+	now area entry is "Nowhere";
+	say "     Septus and several of the nearest wolves move in to fight, growling angrily and intent on throwing you out for good. The others clear the area and start cheering and howling in excitement like a rowdy crowd of football fans. At this point, the wolfmen aren't going to hold back like they have been during the recruitment and training, rushing at you like an offensive line. You growl back and flex your powerful, lupine body and charge as well, your wild instincts pumping adrenaline into your blood while a small corner of your mind hopes you haven't gotten in over your head.";
+	if jenniferwolves is 1:
+		say "     At least you do have at least one supporter out among the wolves encircling the fight and awaiting its outcome. The wolfman son you had with Jennifer is cheering you on from the edge of the area cleared from the match. A few of the other spectators push and growl at him, eventually a fight breaking out between him and another";
+	else if jenniferwolves is 2:
+		say "     At least you do have a pair of supporters out among the wolves encircling the fight and awaiting its outcome. The wolfman sons you had with Jennifer are cheering you on from the edge of the area cleared from the match. A few of the other spectators push and growl at them, eventually a fight breaking out between them and a couple of others";
+	else if jenniferwolves > 2:
+		say "     At least you do have a cluster of supporters out among the wolves encircling the fight and awaiting its outcome. The wolfman sons you had with Jennifer are cheering you on from the edge of the area cleared from the match. A few of the other spectators push and growl at them, but their numbers keep the others around them from daring to outright fight these opposition fans";
+	if jenniferwolves > 0:
+		say ". The sight of [if jenniferwolves > 1]them[else]him[end if] rooting for you boosts your determination to fight and win this battle.";
+		if jenniferwolves > 4:
+			increase morale of Player by 4;
+			increase HP of Player by 15;
+		else:
+			increase morale of Player by jenniferwolves;
+			increase HP of Player by jenniferwolves * 3;
 	challenge "Football Wolfman";
 	if fightoutcome >= 10 and fightoutcome < 19:
 		say "     After parading you around for a while, the wolves drop you off with Jennifer atop a platform of crates. You pull her to your lupine chest and kiss her wildly, groping her ass as you do. This prompts a fresh wave of cheering, howling and wolf whistles from the crowd. With some effort, you get them to settle down so you can give a victory speech. During this, you tell them that you're the team manager now and that you're going to lead them to the top. It is chock full of trite and cliché sayings about giving 110%, their being the best team you've ever seen and the like, but in the heat of the moment, it all sounds very inspiring to you and to the team. You feel tougher after your victory and are truly eager to lead your team to greatness.";
@@ -1165,6 +1166,8 @@ to say WolfTeamManager:
 		move player to Grey Abbey Library;
 		now Wolfman Lair is unknown;
 		now HP of septus is 99;
+		choose row with name of "Football Wolfman" in Table of Random Critters;
+		now area entry is "Nowhere";
 	else:
 		say "     Turning tail from the pack of football wolfmen, you charge through a gap of the spectators, trying to make your way to the door. The crowd, angry and turning on you like a crowd of rugby hooligans, tackle you to the floor, crushing you under the weight of their numbers. The last of your strength is crushed out of you, leaving you exhausted while the crowd around boos and hisses at your cowardliness.";
 		say "     When the wolves finally climb off of you and Septus pulls you to your feet, you can only groan weakly. 'And here I thought you might turn out to be a star player, but no, you had to be greedy. Mom's told us that a lot of the best guys who sign big contracts just stop trying, dragging the whole team down. To be on this team, you've got to be a team player. This is the end of your career, hot shot.' With a final growl, he tosses you out the door, throwing your gear out after you. As the door is slammed shut, you can hear the start of a team victory orgy. You stagger to your feet and limp back to the library with the knowledge you'll never be welcomed back by the team.";
@@ -1172,8 +1175,17 @@ to say WolfTeamManager:
 		move player to Grey Abbey Library;
 		now Wolfman Lair is unknown;
 		now HP of septus is 99;
+		choose row with name of "Football Wolfman" in Table of Random Critters;
+		now area entry is "Nowhere";
 
 Section 7 - Cheerleading
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Wolfman Cheerleader"	"[PrepCombat_Wolfman Cheerleader]"
+
+to say PrepCombat_Wolfman Cheerleader:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -1578,7 +1590,7 @@ This is the Septus' Epilogue rule:
 [
 	else if HP of Septus > 49 and HP of Septus < 52:
 		trigger ending "Septus['] Epilogue"; [Here it states, that the ending has been played.]
-		say "     <Placeholder for Wolfman Cheerleader Ending>";
+		say "     <Wolfman Cheerleader for Wolfman Cheerleader Ending>";
 ]
 
 Wolfman ends here.

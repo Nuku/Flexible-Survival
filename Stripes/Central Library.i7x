@@ -13,8 +13,6 @@ Central Library is a situation.
 ResolveFunction of Central Library is "[ResolveEvent Central Library]". The level of Central Library is 6.
 Sarea of Central Library is "High".
 centrallib is a number that varies.
-libfight is a number that varies.
-harpyfight is a number that varies.
 jamesfed is a number that varies.
 jamessex is a number that varies.
 libstealth is a number that varies.
@@ -146,12 +144,6 @@ to say libraryentrance:
 [ 6 - Event over, gained negative entry       ]
 [ 7 - Event over, lost to harpies             ]
 
-[ libfight - gaining entry w/fighting         ]
-[ 0 - No attempt to fight                     ]
-[ 1 - Fight started                           ]
-[ 2 - Fight lost/fled                         ]
-[ 3 - Fight won                               ]
-
 [ jamesfed - gaining entry w/bribery          ]
 [ 0 - No bribe given                          ]
 [ 1 - Bribed w/food                           ]
@@ -269,29 +261,23 @@ to say libweaponoffer:
 				WaitLineBreak;
 
 to say libguard3:
-	say "     Deciding to opt for the direct approach, you decide to attack the wolverine.";
-	now libfight is 1;
-	now wolvfightresult is 3;
+	say "     Deciding to opt for the direct approach, you rush forward and attack. James, the wolverine guard protecting the Central Library, growls angrily at you having turned on him. He is a large, muscular beast. Were he not so tall, you'd call him stocky, nearly as wide as he is tall, but all muscle. He still wears his battered security company jacket, bearing the Wolverine Security logo on it, on his animalistic body. He is covered in dark fur with a few lighter patches and his face narrows into a dark muzzle with lighter fur above his brow and at his shoulders. Interposing himself between you and the steps up to the library, his instincts are locked on protecting his post here.";
 	challenge "Wolverine Guard";
-	if wolvfightresult is 1:
+	if fightoutcome < 20: [player won]
 		say "     James, beaten by your sudden attack, collapses onto the stairs in a heap. Passed out after the fight, it looks like you've finally made him take his much-needed rest. Quickly grabbing his keys, you unlock the library door and slip inside.";
-		now libfight is 3;
 		WaitLineBreak;
 		now Resolution of Central Library is 5; [Fought James, Won]
 		say "[libraryexplore]";
-	else if wolvfightresult is 2:
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     The wolverine growls and tosses you roughly into the street. As you're getting up, James brushes open his jacket and rests his large paw firmly on a holster hidden there. 'You need to move along and not come back,' he says with a firm growl. Even with the increased healing from the infection, you're not sure how you'd fare against a gun and are quite certain it wouldn't be pleasant even if you survived. You'll have to give up on getting in here and look elsewhere.";
-		now libfight is 2;
 		now Central Library is resolved;
 		now Resolution of Central Library is 6; [Fought James, Lost]
 		WaitLineBreak;
-	else:
+	else if fightoutcome is 30: [fled]
 		say "     Making a run for it from the crazed wolverine, you can hear him yelling at you from the steps. 'And don't you come back, or I'll give you some of this,' James yells, waving a gun in the air. Even with the increased healing from the infection, you're not sure how you'd fare against a gun and are quite certain it wouldn't be pleasant even if you survived. You'll have to give up on getting in here and look elsewhere.";
-		now libfight is 2;
 		now Central Library is resolved;
 		now Resolution of Central Library is 7; [Fought James, Fled]
 		WaitLineBreak;
-	now wolvfightresult is 0;
 
 to say libguard4:
 	setmonster "Wolverine Guard";
@@ -391,34 +377,18 @@ to say libraryexplore:
 		level up;
 	say "     You turn back to the stacks, but bump the shelf behind you with your pack, sending several tomes onto the floor. Their thumps on the stone floor reverberate through the quiet library. Before the sound has a chance to fade, you start to hear a loud [']Shhh!['] from somewhere in the distance, then another, and another. The sound of flapping fills the air as the shushing sounds start to travel around the room. You try to make your way back to your exit, but a pair of taloned feet swoop in. You manage to dodge to the side, getting pushed into the open reading area. You quickly note that this area is overlooked by all the floors above and that you are not alone here.";
 	say "     You find yourself surrounded by harpies whirling around in the air and swooping down to attack you. The one who chased you out from the stacks is similar to the others you've seen outside, but with her gray hair in a tight bun and a pair of reading glasses dangling on a chain. Her eyes are wild with anger at the disturbance to her library.";
-	now harpyfight is 3;
 	LineBreak;
-	challenge "Harpy";
-	if harpyfight is 1 or harpyfight is 3:
-		if harpyfight is 1, say "     With the assault of the first one ended, another is upon you. This one is younger and has managed to keep a low-cut top and skirt despite her radical changes. She wears glasses as well, giving you a naughty librarian look before leaping at you.";
-		if harpyfight is 3, say "     Diving under one of the long reading tables as the harpy swoops in, you hear her thump against it. You scurry quickly between two chairs and try to make a break for it, but another is upon you. This one is younger and has managed to keep a low-cut top and skirt despite her radical changes. She wears glasses as well, giving you a naughty librarian look before leaping at you.";
-		now harpyfight is 3;
-		LineBreak;
+	let HarpyFightCounter be 0;
+	now fightoutcome is 0; [reset]
+	while fightoutcome < 20 and HarpyFightCounter < 2: [runs for 2 times or until the player loses or flees]
+		if HarpyFightCounter is 1:
+			say "     With the assault of the first one ended, another is upon you. This one is younger and has managed to keep a low-cut top and skirt despite her radical changes. She wears glasses as well, giving you a naughty librarian look before leaping at you.";
 		challenge "Harpy";
-		if harpyfight is 1 or harpyfight is 3:
-			say "     Having [if harpyfight is 1]beaten[else]evaded[end if] the second one, you continue to try reaching the exit, but are cut off at every turn. You dodge around one of the small tables with more of the winged librarians shrieking [']Shhhh!['] at you when in charges James";
-			if centrallib is 4 or jamesfed is 2 or jamessex is 3:		[positive entry]
-				say ". The big wolverine manages to drive off the harpies long enough for you to get outside, then backs himself out. 'I told you to watch out for them,' he grumbles, rushing you down the steps. He rubs the back of his head. 'Look, I'm grateful and everything, but I can't have anyone getting them riled up. You should probably stick clear of here or they may try dropping a big rock or a bookcase on you. Did that to the last guy who upset them.'";
-				say "     You nod and head on your way, deciding to steer clear of the area from now on. As you head away, you [if bookfound > 0]flip through your new book, pleased with your find[else]are glad that you at least made it out of there with a little something[end if].";
-				increase score by 10;
-				now harpyfight is 0;
-				now centrallib is 5;
-				WaitLineBreak;
-				now Central Library is resolved;
-			else:									[negative entry]
-				say ". The big wolverine growls angrily at finding you inside, and fighting the harpies to make matters worse. He bellows in rage and charges at you, pulling out a gun from under his coat. You dive for cover under a table and hustle as quickly as you can through the chaos. Thankfully, his arrival distracted the harpies enough that you're able to try getting past them. You dodge a few close calls and have to dive under a second table before you can make a rush for the front door. You push yourself free and leap down the steps three at a time. A gunshot rings out, chipping one of the stone lions as you run past it. You charge into an alley across the street, then make your way to cover.";
-				say "     You're fairly certain that James won't follow, but the librarian harpies might. The angry wolverine may even tell them to go after you. You certainly can't go back there. Even with your enhanced healing, you don't want to be at the wrong end of a gun. Stuck in your temporary hideout for a while, you [if bookfound > 0]spend the time flipping through your new book[else]are glad that you at least made it out of there with a little something, if at all[end if].";
-				increase score by 10;
-				now harpyfight is 0;
-				now centrallib is 6;
-				WaitLineBreak;
-				now Central Library is resolved;
-	if harpyfight is 2:
+		increase HarpyFightCounter by 1;
+	if fightoutcome < 20: [player won]
+		say "     Having beaten the second one, you continue to try reaching the exit, but are cut off at every turn. You dodge around one of the small tables with more of the winged librarians shrieking [']Shhhh!['] at you when in charges James";
+		say "[CentralLibraryWon_or_Evaded]";
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     The harpies swoop in around you and grab you, carrying you aloft in their talons. With each of your limbs gripped in their strong talons, you cannot struggle, especially as they fly up several stories in the large, central area. James, drawn by the commotion, comes running in and spots you being carried off[if centrallib is 4 or jamesfed is 2 or jamessex is 3]. He shakes his fist at the harpies and growls. 'I told you not to upset them. I'm sorry, but they won't let me up there.' With no hope of rescue from him, you[else]. He growls and shakes his fist. 'Serves you right! I told you this library is closed!' You[end if] are carried up to the top floor and dropped onto a large nest made of books. Looking to the stairwell for an exit, you see that this is where the fire occurred and that several bookshelves have been knocked over to bury the only way down. You are trapped with them and at their mercy.";
 		say "     The librarian harpies lick, kiss, claw and fondle you incessantly, playing with your body with quiet whispers of pleasure. You are made to nurse from the breasts of those heavy with eggs while a young and sultry librarian plays with you, [if Player is male]licking and sucking at your cock[else]licking at your pussy while fingering you with her taloned hand[end if]. Trapped as you are in there nest, there is no escape from it and they make use of your body as they please until you are fully transformed and lose yourself to become one of them.";
 		[puts harpy as lead monster for infection and impregnation]
@@ -443,7 +413,21 @@ to say libraryexplore:
 		WaitLineBreak;
 		follow the turnpass rule;
 		stop the action;
+	else if fightoutcome is 30: [fled]
+		say "     Having evaded the second one, you continue to try reaching the exit, but are cut off at every turn. You dodge around one of the small tables with more of the winged librarians shrieking [']Shhhh!['] at you when in charges James";
+		say "[CentralLibraryWon_or_Evaded]";
 
+to say CentralLibraryWon_or_Evaded:
+	if centrallib is 4 or jamesfed is 2 or jamessex is 3: [positive entry]
+		say ". The big wolverine manages to drive off the harpies long enough for you to get outside, then backs himself out. 'I told you to watch out for them,' he grumbles, rushing you down the steps. He rubs the back of his head. 'Look, I'm grateful and everything, but I can't have anyone getting them riled up. You should probably stick clear of here or they may try dropping a big rock or a bookcase on you. Did that to the last guy who upset them.'";
+		say "     You nod and head on your way, deciding to steer clear of the area from now on. As you head away, you [if bookfound > 0]flip through your new book, pleased with your find[else]are glad that you at least made it out of there with a little something[end if].";
+		now centrallib is 5;
+	else: [negative entry]
+		say ". The big wolverine growls angrily at finding you inside, and fighting the harpies to make matters worse. He bellows in rage and charges at you, pulling out a gun from under his coat. You dive for cover under a table and hustle as quickly as you can through the chaos. Thankfully, his arrival distracted the harpies enough that you're able to try getting past them. You dodge a few close calls and have to dive under a second table before you can make a rush for the front door. You push yourself free and leap down the steps three at a time. A gunshot rings out, chipping one of the stone lions as you run past it. You charge into an alley across the street, then make your way to cover.";
+		say "     You're fairly certain that James won't follow, but the librarian harpies might. The angry wolverine may even tell them to go after you. You certainly can't go back there. Even with your enhanced healing, you don't want to be at the wrong end of a gun. Stuck in your temporary hideout for a while, you [if bookfound > 0]spend the time flipping through your new book[else]are glad that you at least made it out of there with a little something, if at all[end if].";
+		now centrallib is 6;
+	increase score by 10;
+	now Central Library is resolved;
 
 Section 4 - Books
 

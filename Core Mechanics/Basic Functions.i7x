@@ -125,6 +125,11 @@ to PlayerDrink (N - number):
 	if thirst of Player < 0:
 		now thirst of Player is 0;
 
+to PlayerDrink (N - number) silently:
+	decrease thirst of Player by N;
+	if thirst of Player < 0:
+		now thirst of Player is 0;
+
 to PlayerThirst (N - number):
 	LineBreak;
 	say "     [bold type]Your thirst has increased by [N]![roman type][line break]";
@@ -321,6 +326,20 @@ to FeatGain (Featname - text):
 			now vampiric is true;
 	else if debugactive is 1:
 		say "ERROR: Trying to add '[Featname]', which the player already has.";
+
+to BallsGrow (TargetChar - a person) by (IncreaseNum - a number):
+	increase Ball Size of TargetChar by IncreaseNum;
+	if Ball Size of TargetChar < 0:
+		now Ball Size of TargetChar is 0;
+	if Ball Size of TargetChar > 7:
+		now Ball Size of TargetChar is 7;
+
+to BallsShrink (TargetChar - a person) by (DecreaseNum - a number):
+	decrease Ball Size of TargetChar by DecreaseNum;
+	if Ball Size of TargetChar < 0:
+		now Ball Size of TargetChar is 0;
+	if Ball Size of TargetChar > 7:
+		now Ball Size of TargetChar is 7;
 
 to TraitGain (TraitName - a text) for (TraitChar - a person):
 	if TraitName is not listed in Traits of TraitChar: [no duplicates]
@@ -610,7 +629,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 						mimpregchance;
 					[
 					if Player is mpreg_now: [player has _just_ been impregnated]
-						<set the Givingchar as father somehow>
+						<set the GivingChar as father somehow>
 					]
 			increase AssFuckTaken of Player by 1;
 		else if SexAct is "PussyFuck":
@@ -629,7 +648,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 						fimpregchance;
 					[
 					if Player is fpreg_now: [player has _just_ been impregnated]
-						<set the Givingchar as father somehow>
+						<set the GivingChar as father somehow>
 					]
 			increase PussyFuckTaken of Player by 1;
 		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]

@@ -6,12 +6,6 @@ Section 1 - Creature Responses
 
 DVtaurcatch is a number that varies. DVtaurcatch is usually -40.
 
-to say DVtaurdesc:
-	setmongender 5; [creature is herm]
-	say "     Before you is a hybrid taur creature, definitely one of Sam's many descendants. The creature's draconic head has a slender, pointed muzzle with a foxish look on it. Its lavender scales change to lilac fur at the back of its head as they approach the base of the ivory horns which jut from the back of its head. Aside from the pair at the top, there are three smaller horns on each side. Behind those are a pair of vulpine ears and flowing hair, both lilac in color. Its upper body is generally human in shape, but covered in more lilac fur over the shoulders and the front and in lavender scales protecting the rest. It is quite curvaceous, with an ample bosom, slender waist and round hips blending into its tauric lower half. But you can also see hidden strength in it as well, toned muscles and abs under those scales and fur.";
-	say "     Its lower body is a similar mix of dragon and fox, a sleek but powerful beast with shapely limbs and a powerful frame to support its weight. Similarly covered in a mix of scales and fur, most of its body is armored in scales with fur at its underside and covering its taloned, vulpine paws. Atop the back of its tauric body are a pair of draconic wings that are folded alongside its sides at the moment. Its fluffy fox tail ends in a spaded tip, warning you there's a powerful, draconic tail lurking beneath that fluff. Beneath that tail is her damp pussy and plump sheath and balls, the arousing scent of which is being wafted around by her fluffy tail. Its ridged cock has started to emerge from that furry sheath, growing hard in anticipation of some lustful fun with its current prey. Along her underbelly, she has three pairs of smaller breasts with perky, lavender nipples.";
-
-
 to say losetoDVtaur0:
 	if Player is herm:		[HERM]
 		let T be a random number between 1 and 6;
@@ -137,8 +131,18 @@ to say beatDVtaur4:
 to say beatDVtaur0:
 	say "     Not in the mood to play with the purple dracovixentaur, you give her ass a hard swat and warn her not to get in your way again. She yips at the swat and slinks a few feet away before taking to the air and flying off.";
 
-
 Section 2 - Creature Insertion
+
+to say DVtaurdesc:
+	say "     Before you is a hybrid taur creature, definitely one of Sam's many descendants. The creature's draconic head has a slender, pointed muzzle with a foxish look on it. Its lavender scales change to lilac fur at the back of its head as they approach the base of the ivory horns which jut from the back of its head. Aside from the pair at the top, there are three smaller horns on each side. Behind those are a pair of vulpine ears and flowing hair, both lilac in color. Its upper body is generally human in shape, but covered in more lilac fur over the shoulders and the front and in lavender scales protecting the rest. It is quite curvaceous, with an ample bosom, slender waist and round hips blending into its tauric lower half. But you can also see hidden strength in it as well, toned muscles and abs under those scales and fur.";
+	say "     Its lower body is a similar mix of dragon and fox, a sleek but powerful beast with shapely limbs and a powerful frame to support its weight. Similarly covered in a mix of scales and fur, most of its body is armored in scales with fur at its underside and covering its taloned, vulpine paws. Atop the back of its tauric body are a pair of draconic wings that are folded alongside its sides at the moment. Its fluffy fox tail ends in a spaded tip, warning you there's a powerful, draconic tail lurking beneath that fluff. Beneath that tail is her damp pussy and plump sheath and balls, the arousing scent of which is being wafted around by her fluffy tail. Its ridged cock has started to emerge from that furry sheath, growing hard in anticipation of some lustful fun with its current prey. Along her underbelly, she has three pairs of smaller breasts with perky, lavender nipples.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Dracovixentaur"	"[PrepCombat_Dracovixentaur]"
+
+to say PrepCombat_Dracovixentaur:
+	setmongender 5; [creature is herm]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

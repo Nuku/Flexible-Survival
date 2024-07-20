@@ -10,43 +10,11 @@ sierramem is a number that varies. sierramem is usually 0. [Used to ward repetit
 sierramale is a truth state that varies. sierramale is usually false. [A trigger used as shorthand to determine if the player banned herms]
 
 to say sierradesc:
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else if sierramale is true:
-		now sex entry is "Male";
+	if sierramem is 0:
+		say "     You happen upon what - at first - appears to be a large boulder randomly jutting up from the ground, [if scalevalue of Player > 4]even a bit larger[else if scalevalue of Player is 4]markedly larger[else]much, much larger[end if] than you in size, until the mass begins to stir to life! Crawling to its feet, you see before yourself a bulky and wide-set beast, stout and covered in an earthen-colored, tough, almost chitinous hide as its back spires upwards to make a craggy peak. Directing its attention to the one who disrupted its rest, clearly not at all pleased, it attempts to slowly approach and subdue you, forcing you to keep your distance and deal with this matter.";
+		now sierramem is 1;
 	else:
-		now sex entry is "Both";
-	if BodyName of Player is "Sierrasaur" and Player is pure: [purity check shorthand]
-		now sierrapure is true;
-	else:
-		now sierrapure is false;
-	psycheeval;
-	libidoeval;
-	if MaleList is banned and HermList is banned:
-		say "     You happen upon what appears to be a large boulder jutting from the ground. Prodding it, you find yourself shocked to have the thing grumble at you in response. That's all it appears to do, however, and you eventually choose to depart, minding to avoid such a fixture in the future.";
-		now BannedStatus entry is true;
-		now fightoutcome is 19;
-		now combat abort is 1;
-	else:
-		project Figure of Sierrasaur_soft_icon;
-		if HermList is banned:
-			add { "Sierrasaur" } to infections of MaleList;
-			now sierramale is true;
-			setmongender 3; [creature is male]
-		else:
-			add { "Sierrasaur" } to infections of HermList;
-			setmongender 7; [creature is mherm]
-		if sierramem is 0:
-			say "     You happen upon what - at first - appears to be a large boulder randomly jutting up from the ground, [if scalevalue of Player > 4]even a bit larger[else if scalevalue of Player is 4]markedly larger[else]much, much larger[end if] than you in size, until the mass begins to stir to life! Crawling to its feet, you see before yourself a bulky and wide-set beast, stout and covered in an earthen-colored, tough, almost chitinous hide as its back spires upwards to make a craggy peak. Directing its attention to the one who disrupted its rest, clearly not at all pleased, it attempts to slowly approach and subdue you, forcing you to keep your distance and deal with this matter.";
-			now sierramem is 1;
-		else:
-			say "     You happen upon another sierran reptile. [one of]Minding its own business, it doesn't take too kindly to your presence, the craggy beast ponderously attempting[or]Your presence disrupting its rest, it's none too pleased by this, the craggy beast ponderously attempting[or]This one seems to be hunting for prey. Perhaps gauging that you might suffice, the craggy beast ponderously attempts[at random] to approach and subdue you, forcing you to keep your distance and deal with them.";
-
+		say "     You happen upon another sierran reptile. [one of]Minding its own business, it doesn't take too kindly to your presence, the craggy beast ponderously attempting[or]Your presence disrupting its rest, it's none too pleased by this, the craggy beast ponderously attempting[or]This one seems to be hunting for prey. Perhaps gauging that you might suffice, the craggy beast ponderously attempts[at random] to approach and subdue you, forcing you to keep your distance and deal with them.";
 
 to say losetosierra:
 	project Figure of Sierrasaur_hard_icon;
@@ -379,6 +347,42 @@ to sierrasex:
 to say beathesierra:
 	say "     After struggling with the beast for a while, it disengages from you entirely. Looking it over, it doesn't seem you've put a dent into it, but it does at least appear to have conceded to your will. If you step closer to it, its demeanor is mildly sheepish, inferring a slight submissive gesture from the otherwise indifferent-appearing creature. Matter resolved, you choose to depart."; [Victory sex NYI]
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Sierrasaur"	"[PrepCombat_Sierrasaur]"
+
+to say PrepCombat_Sierrasaur:
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else if sierramale is true:
+		now sex entry is "Male";
+	else:
+		now sex entry is "Both";
+	if BodyName of Player is "Sierrasaur" and Player is pure: [purity check shorthand]
+		now sierrapure is true;
+	else:
+		now sierrapure is false;
+	psycheeval;
+	libidoeval;
+	if MaleList is banned and HermList is banned:
+		say "     You happen upon what appears to be a large boulder jutting from the ground. Prodding it, you find yourself shocked to have the thing grumble at you in response. That's all it appears to do, however, and you eventually choose to depart, minding to avoid such a fixture in the future.";
+		now BannedStatus entry is true;
+		now fightoutcome is 19;
+		now combat abort is 1;
+	else:
+		project Figure of Sierrasaur_soft_icon;
+		if HermList is banned:
+			add { "Sierrasaur" } to infections of MaleList;
+			now sierramale is true;
+			setmongender 3; [creature is male]
+		else:
+			add { "Sierrasaur" } to infections of HermList;
+			setmongender 7; [creature is mherm]
 
 Section 2 - Creature Insertion
 

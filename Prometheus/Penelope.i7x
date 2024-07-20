@@ -245,6 +245,7 @@ to say SummonPenelope:
 		say "     Walking over to Penelope, you ask whether she would be interested in coming with you out into the city. The ground shudders as she charges over to scoop you up in a hug. 'Thank you, [BlancheMommyDaddyTitle]. I'll protect you to the best of my ability, but I apologize if anyone gets past me. I seem to be better at defending Wendis than anyone else.' You reassure her that you can take a few hits and that you won't blame her when you do.";
 	else: [regular summoning]
 		say "     Penelope for all her many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see her.";
+		now SummonFailure is true;
 
 to say DismissPenelope:
 	move Penelope to Grey Abbey Library;

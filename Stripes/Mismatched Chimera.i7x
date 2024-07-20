@@ -18,8 +18,7 @@ rlegdata is a text that varies.[@Tag:NotSaved]
 breastdata is a number that varies.[@Tag:NotSaved]
 
 to say mischimdesc:
-	setmongender 5; [creature is herm]
-	say "[mixnmatch]     You have seen a variety of strange creatures and hominids in the city, but this is definitely one of the strangest. Somehow, it is a strange, cobbled-together mish-mash of other creatures. The body parts don't match and you can see stitchmarks in several places where they were grafted together. Several other spots have scars from what may have been medical procedures or experiments.";
+	say "     You have seen a variety of strange creatures and hominids in the city, but this is definitely one of the strangest. Somehow, it is a strange, cobbled-together mish-mash of other creatures. The body parts don't match and you can see stitchmarks in several places where they were grafted together. Several other spots have scars from what may have been medical procedures or experiments.";
 	say "     This unfortunate creature has the head of a [headdata] sewn onto its [torsodata] body. Its body has several smaller mismatched patches and scars. The strange chimera's right arm and shoulder are that of a [rarmdata], ending in a clawed human hand while its left forearm has that of a [larmdata] grafted on. Its left leg is fully that of a [llegdata] attached on at the hip while its right leg is that of a [rlegdata] from the knee down. Stitched to its chest are [breastdata] mismatched breasts while a [cockdata] dick hangs between its legs over a large, stitched-up scrotum. It looks at you with its mismatched, animal eyes and growls lustfully before attacking.";
 	choose row MonsterID from the Table of Random Critters;
 	if HardMode is false and ( lev entry is 8 or lev entry is 9 ) and level of Player < 10:
@@ -67,7 +66,6 @@ to say mixnmatch:
 	say "HP is [HP entry].";
 	say "Dmg is [wdam entry]. Dex is [dex entry].[line break]";]
 
-
 to say randombodypart:
 	let T be a random number between 1 and 20;
 	if T is 1:
@@ -111,49 +109,49 @@ to say randombodypart:
 	if T is 20:
 		now bodyselector is "bat";
 
-
 to say losetomischim:
-	if inasituation is true:
-		say ""; [dealt with in the source event]
+	[reset creature stats for next encounter]
+	choose row MonsterID from the Table of Random Critters;
+	now dex entry is 15; [ reset dexterity for random infection ]
+	now lev entry is 6; [ reset level for random encounter availability ]
+	if Player is female and a random chance of 1 in 2 succeeds:
+		say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, it gets itself lined up with your pussy and mounts you with a throaty purr. The creature's [headdata] muzzle nips along your neck as it thrusts its [cockdata] cock into you again and again with increasing vigor. The chimera's heavy ballsack feels strange as it slaps against you again and again, quite full and heavy.";
+		say "     You soon realize that it has at least four balls in there of various size, probably from a variety of creatures like the rest of its body. This leads you to the realization that the creature could contain almost any seed or strain of infection to alter you. You struggle for a moment, but the creature keeps you pinned with its clawed hand and [larmdata] paw. The pleasure of its mating starts to get to you and you find yourself growing less concerned about that and even more and more turned on by it as the strange creature's myriad scents excite you. The idea of it changing you in random ways or siring almost anything inside you arouses you greatly. As you push back into its final thrusts, you both moan in pleasure as you feel its hot seed, thick and plentiful from its many balls being shot deep into your womb.";
+		say "[randomimpreg]";
+	else if anallevel > 1 and ( Cunt Count of Player is 0 or anallevel is 3 ) and a random chance of anallevel in 5 succeeds:
+		say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, it gets itself lined up with your anal ring and mounts you with a throaty purr. The creature's [headdata] muzzle nips along your neck as it thrusts its [cockdata] cock into you again and again with increasing vigor. The chimera's heavy ballsack feels strange as it slaps against you again and again, quite full and heavy.";
+		say "     You soon realize that it has at least four balls in there of various size, probably from a variety of creatures like the rest of its body. This leads you to the realization that the creature could contain almost any seed or strain of infection to alter you. You struggle for a moment, but the creature keeps you pinned with its clawed hand and [larmdata] paw. The pleasure of its mating starts to get to you and you find yourself growing less concerned about that and even more and more turned on by it as the strange creature's myriad scents excite you. The idea of it changing you in random ways ";
+		if Player is mpreg_ok:
+			say "or siring almost anything inside you ";
+		say "arouses you greatly. As you push back into its final thrusts, you both moan in pleasure as you feel its hot seed, thick and plentiful from its many balls being shot deep into your bowels.";
+		if Player is mpreg_ok, say "[randomimpreg]";
 	else:
-		[reset creature stats for next encounter]
-		choose row MonsterID from the Table of Random Critters;
-		now dex entry is 15; [ reset dexterity for random infection ]
-		now lev entry is 6; [ reset level for random encounter availability ]
-		if Player is female and a random chance of 1 in 2 succeeds:
-			say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, it gets itself lined up with your pussy and mounts you with a throaty purr. The creature's [headdata] muzzle nips along your neck as it thrusts its [cockdata] cock into you again and again with increasing vigor. The chimera's heavy ballsack feels strange as it slaps against you again and again, quite full and heavy.";
-			say "     You soon realize that it has at least four balls in there of various size, probably from a variety of creatures like the rest of its body. This leads you to the realization that the creature could contain almost any seed or strain of infection to alter you. You struggle for a moment, but the creature keeps you pinned with its clawed hand and [larmdata] paw. The pleasure of its mating starts to get to you and you find yourself growing less concerned about that and even more and more turned on by it as the strange creature's myriad scents excite you. The idea of it changing you in random ways or siring almost anything inside you arouses you greatly. As you push back into its final thrusts, you both moan in pleasure as you feel its hot seed, thick and plentiful from its many balls being shot deep into your womb.";
-			say "[randomimpreg]";
-		else if anallevel > 1 and ( Cunt Count of Player is 0 or anallevel is 3 ) and a random chance of anallevel in 5 succeeds:
-			say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, it gets itself lined up with your anal ring and mounts you with a throaty purr. The creature's [headdata] muzzle nips along your neck as it thrusts its [cockdata] cock into you again and again with increasing vigor. The chimera's heavy ballsack feels strange as it slaps against you again and again, quite full and heavy.";
-			say "     You soon realize that it has at least four balls in there of various size, probably from a variety of creatures like the rest of its body. This leads you to the realization that the creature could contain almost any seed or strain of infection to alter you. You struggle for a moment, but the creature keeps you pinned with its clawed hand and [larmdata] paw. The pleasure of its mating starts to get to you and you find yourself growing less concerned about that and even more and more turned on by it as the strange creature's myriad scents excite you. The idea of it changing you in random ways ";
-			if Player is mpreg_ok:
-				say "or siring almost anything inside you ";
-			say "arouses you greatly. As you push back into its final thrusts, you both moan in pleasure as you feel its hot seed, thick and plentiful from its many balls being shot deep into your bowels.";
-			if Player is mpreg_ok, say "[randomimpreg]";
-		else:
-			say "     The hybrid creature, quite aroused by its workout and victory, pushes you to your knees before it. It presses its [Name entry] cock to your face and into your mouth. It moans softly and strokes your head, coaxing you to lick and suck it. Its arousing scent, such a strong and virile mix, excites you and you comply willingly enough. It starts to thrust into you, holding your head steady with its clawed hand and [larmdata] paw while pumping its 8 inch cock into your eager mouth. Its precum leaks onto your tongue, thick with an array of arousing flavors.";
-			say "     You slide a hand up to fondle its large, sewn-together ballsack and find it very full and heavy. As you fondle it, you come to realize that the heavy sac contains at least four different balls of various sizes, probably from a variety of creatures like the rest of its body. You soon realize as well that this means it could carry almost any strain of the infection and change you in unpredictable ways. You struggle for a moment, but the creature keeps you pinned with its strong grip and soon its mix of precum has done its job, filling you with lust and hunger for the chimera's mix of seed. The idea starts to fill you with excitement even. You start to picture yourself changing in random ways while these creatures have their way with you again and again.";
-			say "     You moan in delight at the creature growls in climax, pumping a hot, thick medley of cum into your mouth and down your throat. You swallow down as much as you can of its impressive load, then sag to the ground as it releases you. Sated for now, the mismatched hybrid wanders off, leaving you to the infection's changes.";
-		weakrandominfect;
+		say "     The hybrid creature, quite aroused by its workout and victory, pushes you to your knees before it. It presses its [Name entry] cock to your face and into your mouth. It moans softly and strokes your head, coaxing you to lick and suck it. Its arousing scent, such a strong and virile mix, excites you and you comply willingly enough. It starts to thrust into you, holding your head steady with its clawed hand and [larmdata] paw while pumping its 8 inch cock into your eager mouth. Its precum leaks onto your tongue, thick with an array of arousing flavors.";
+		say "     You slide a hand up to fondle its large, sewn-together ballsack and find it very full and heavy. As you fondle it, you come to realize that the heavy sac contains at least four different balls of various sizes, probably from a variety of creatures like the rest of its body. You soon realize as well that this means it could carry almost any strain of the infection and change you in unpredictable ways. You struggle for a moment, but the creature keeps you pinned with its strong grip and soon its mix of precum has done its job, filling you with lust and hunger for the chimera's mix of seed. The idea starts to fill you with excitement even. You start to picture yourself changing in random ways while these creatures have their way with you again and again.";
+		say "     You moan in delight at the creature growls in climax, pumping a hot, thick medley of cum into your mouth and down your throat. You swallow down as much as you can of its impressive load, then sag to the ground as it releases you. Sated for now, the mismatched hybrid wanders off, leaving you to the infection's changes.";
+	weakrandominfect;
+	increase MonsterID by 1;
+	choose row MonsterID from Table of Random Critters;
+	while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
 		increase MonsterID by 1;
 		choose row MonsterID from Table of Random Critters;
-		while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
-			increase MonsterID by 1;
-			choose row MonsterID from Table of Random Critters;
 
 to say beatthemischim:
-	if inasituation is true:
-		say ""; [dealt with in the source event]
-	else:
-		[reset creature stats for next encounter]
-		choose row MonsterID from the Table of Random Critters;
-		now dex entry is 15; [ reset dexterity for random infection ]
-		now lev entry is 6; [ reset level for random encounter availability ]
-		say "     You manage to defeat the strange, hybrid creature, driving it off.";
-
+	[reset creature stats for next encounter]
+	choose row MonsterID from the Table of Random Critters;
+	now dex entry is 15; [ reset dexterity for random infection ]
+	now lev entry is 6; [ reset level for random encounter availability ]
+	say "     You manage to defeat the strange, hybrid creature, driving it off.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Mismatched Chimera"	"[PrepCombat_Mismatched Chimera]"
+
+to say PrepCombat_Mismatched Chimera:
+	setmongender 5; [creature is herm]
+	say "[mixnmatch]";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

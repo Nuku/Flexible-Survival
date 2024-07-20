@@ -6,14 +6,13 @@ Version 1 of Triceratops by Stripes begins here.
 Section 1 - Creature Responses
 
 to say tricdesc:
-	setmongender 4; [creature is female]
 	say "     Before you is a stunning dichotomy of anachronism! The female dinosaur woman, a triceratops with horns and a broad frill, is dressed as a disco maven. Her brown and green scaled body is only barely covered by the red disco dress she wears, exposing most of her bosom. It is made of smooth satin with rhinestones around bell-bottom-like wide ankles and pleated waves over her shoulders. The large afro behind her armored frill, the big sunglasses and high platform shoes complete the look. This double blast-from-the-past strikes a pose and strides to the beat, ready to mop the dance floor with you.";
 
 
 to say losetotric:
 	if dinonest is 1:
-		now dnfightresult is 2;
-	if Player is male and CockName of Player is "Triceratops":
+		say "     Having bested you, you can only wait and recover before trying to search her nest again later.";
+	else if Player is male and CockName of Player is "Triceratops":
 		say "     Having exhausted your will to resist, you fall to your knees before her. She strides up to you and pushes you to lay back with one of her platform shoes. Her saurian paws run over your body, going for the triceratops cock she can smell enticing her. With a few strokes, she has you to full hardness, then slips herself out of her beautiful dress. She lowers herself down onto your cock, taking you in to her wide pussy with a loud moan of pleasure. She grips your shoulders and writhes atop you, moving her body to a beat that you can't quite hear. Your bodies move in time as her inner walls squeeze and tug at your cock in rhythm to her motions, exciting you further. Eventually, you can take no more and shoot your hot seed deep inside the beautiful female riding you. After panting to recover, she pulls herself up and off of you. She then grabs you and pulls you up, shoving you on your way. As you stagger off, she returns to dancing to that unheard beat.";
 	else:
 		say "     The dinosaur woman growls angrily and knocks you to the ground with a swipe of her heavy tail. She then strides overtop of you as she slides out of her disco dress. She reaches down and grabs your head roughly with one of her large, saurian hands, jamming it between her thighs. The scent of her wet pussy fills your nose and soon you are compelled to lick at it. As you lap at her dripping folds, she rocks her body with a quickening rhythm. Her hot juices flow out over your face as she cries out 'Ah yeah, baby!' in climax. Finished with you, she pushes you roughly away, slamming your head against the floor, making lights swirl in your eyes. When you come to, you are elsewhere, she is gone and you are left aroused and unsatisfied.";
@@ -21,11 +20,14 @@ to say losetotric:
 		if Libido of Player > 100:
 			now Libido of Player is 100;
 
-
 to say beatthetric:
 	if dinonest is 1:
-		now dnfightresult is 1;
-	if Player is male and Libido of Player > 24 and CockName of Player is "Triceratops":
+		say "     Having bested the triceratops woman, you can finish searching her nest in the hopes of finding something to satisfy the mouse doctor. You dig around in her collection of old stuff, but don't see anything for some time. Eventually, you instead smell something and soon track the scent to a lava lamp. Unplugged, the glass lamp is off its stand and is coated in a wet sheen of fluids. Guessing the strange creature has been using it for some improvised fun, you wrap it in a paisley shirt and pack it away.";
+		say "     Lava lamp collected.";
+		ItemGain lava lamp by 1;
+		increase score by 10;
+		now Dinosaur Nest is resolved;
+	else if Player is male and Libido of Player > 24 and CockName of Player is "Triceratops":
 		say "     After the struggle with the powerful female, you look down at her, feeling a stirring in your loins. It feels as if you haven't had sex in 65 million years and it's time to get funky! Your balls start to ache for it and soon you are atop her with a growl, lining up your shaft with her dripping pussy. She is quite aroused, excited by the rich scent of a mate to breed her, and has pulled open her dress, unveiling her scaled body for you.";
 		follow the sex change rule;
 		LineBreak;
@@ -51,6 +53,13 @@ to say beatthetric:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Triceratops"	"[PrepCombat_Triceratops]"
+
+to say PrepCombat_Triceratops:
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

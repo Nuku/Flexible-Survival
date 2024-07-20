@@ -153,7 +153,7 @@ This is the turnpass rule:
 		increase thirst of Player by 3;
 		if number of filled rows in Table of PlayerChildren > 0, increase thirst of Player by 1;
 		if "Spartan Diet" is listed in feats of Player and thirst of Player > 0:
-			decrease thirst of Player by 1;
+			PlayerDrink 1 silently;
 	if "Automatic Survival" is listed in feats of Player:
 		now thirst of Player is 0;
 		now hunger of Player is 0;
@@ -271,6 +271,7 @@ This is the turnpass rule:
 	else if ( turns minus targetturns ) < 20 and a random chance of 1 in 3 succeeds and skipturnblocker is 0 and playon is 0:
 		say "[one of]You see an airplane soar overhead at jet speeds.[or]A peek from a roof shows what looks like some kind of vehicle approaching the city.[or]You have an unending sense of anticipation.[or]It's all coming to a close soon, just hang in there![at random]";
 	follow the everyturn rules;
+	now inasituation is false; [cleaning up possible open ended flags]
 	rule succeeds;
 
 Part 2 - Time Functions

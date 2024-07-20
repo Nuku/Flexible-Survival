@@ -14,35 +14,6 @@ snakehijacktimer is a number that varies. snakehijacktimer is usually 300.
 fsnakevalid is a truth state that varies. fsnakevalid is usually false.
 msnakevalid is a truth state that varies. msnakevalid is usually false.
 
-to say snakedesc:
-	setmongender 0; [creature is neuter-X]
-	if showlocale is true:
-		say "     As you travel across the plains, there is a rustle in the grass beside you. Turning quickly, you spot";
-	else:
-		say "     Suddenly, you're assailed by";
-	say " what would be a common ring-necked snake, were it not for its great size. This serpent has grown to the size of a boa and is almost two meters in length. This one has silvery scales across its body with bright yellow-orange along the underbelly. Its dark gray head has an orange band at its neck and a pale yellow jaw, which blends into the brighter underside. The enlarged snake hisses at you and attacks.";
-	choose row MonsterID from the Table of Random Critters;
-	if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if Player is herm:
-		now sex entry is "Both";
-	else if Player is male:
-		now sex entry is "Male";
-	else if Player is female:
-		now sex entry is "Female";
-	else:
-		now sex entry is "nochange";
-	[set all size values to match existing so only number of cocks/cunts may change]
-	now Cock Length entry is Cock Length of Player;
-	now Ball Size entry is Ball Size of Player;
-	now Cunt Depth entry is Cunt Depth of Player;
-	now Cunt Tightness entry is Cunt Tightness of Player;
-
-
 to say losetosnake:
 	theserpentchecks;
 	if HP of Player > 0:
@@ -232,6 +203,40 @@ to say beatthesnake:
 
 
 Section 2 - Creature Insertion
+
+to say snakedesc:
+	if showlocale is true:
+		say "     As you travel across the plains, there is a rustle in the grass beside you. Turning quickly, you spot";
+	else:
+		say "     Suddenly, you're assailed by";
+	say " what would be a common ring-necked snake, were it not for its great size. This serpent has grown to the size of a boa and is almost two meters in length. This one has silvery scales across its body with bright yellow-orange along the underbelly. Its dark gray head has an orange band at its neck and a pale yellow jaw, which blends into the brighter underside. The enlarged snake hisses at you and attacks.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Snake"	"[PrepCombat_Snake]"
+
+to say PrepCombat_Snake:
+	setmongender 0; [creature is neuter-X]
+	choose row MonsterID from the Table of Random Critters;
+	if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if Player is herm:
+		now sex entry is "Both";
+	else if Player is male:
+		now sex entry is "Male";
+	else if Player is female:
+		now sex entry is "Female";
+	else:
+		now sex entry is "nochange";
+	[set all size values to match existing so only number of cocks/cunts may change]
+	now Cock Length entry is Cock Length of Player;
+	now Ball Size entry is Ball Size of Player;
+	now Cunt Depth entry is Cunt Depth of Player;
+	now Cunt Tightness entry is Cunt Tightness of Player;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

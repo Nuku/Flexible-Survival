@@ -520,7 +520,9 @@ to say BoghrimSex1: [get fucked]
 			say "     As you quietly ask the mighty orc to fuck you, he eyes you with surprise on his face and... interest in his eyes. 'Never thought I'd see a strong orc warrior ask to be my bottom boy. What are you then? A weak little breeder who chugged orc brew to gain the confidence to ask the boss-man for a fuck, or a real man with some deviant tastes?' Reaching over to casually grope the orc breeder leaning against his side and make him suckle on two fingers pushed into his mouth, Boghrim continues, 'I have enough sluts really, but... if you prove you're an actual warrior, I'll take you up as a fuck-buddy. You'd be someone to enjoy as a treat... pounding a real man's ass for a change. Go on then - prove yourself! Punch out Glarbuk.' Following the orc's pointing finger, your gaze falls on a big brute of an orc - who just at that moment head-butts another orc into unconsciousness to take his beer. Not someone you'd look forward to fighting, but something tells you it is far too late to back out of this...";
 			say "     Swallowing reflexively as your gaze wanders over the bulging muscles of the monstrously built orc, you steel your resolve and step down from Boghrim's platform, walking towards your designated target. On the way, you pick up an empty beer stein, nice and heavy - perfect to assist in a sucker punch. As you step up to the hulking orc and tap him on the shoulder, you smash the mug over his head as soon as he turns around - which only dents the mug and leaves the orc pretty unimpressed. Uh Oh. This won't be over as quickly as you hoped...";
 			now inasituation is true;
-			now OrcSpecialFightNumber is 2;
+			project the figure of Orcwarrior_random_icon;
+			say "     Glarbuk towers even over the other green-skinned orc warriors, having at least half a foot extra on top of their already impressive stature. His bicep is at least as thick as a normal human's thigh and he has hands large enough to fully enclose a human head - and crush it like an egg. At the moment, the powerful male's eyes are focusing on you, and his drawn-together eyebrows and annoyed expression tell you that you're in for a beating. Maybe you shouldn't have smashed the beer stein over his head...";
+			[power up]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if Name entry is "Orc Warrior":
@@ -532,6 +534,7 @@ to say BoghrimSex1: [get fucked]
 			now lev entry is 16;
 			now wdam entry is 25;
 			challenge "Orc Warrior";
+			[reset the stats]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if Name entry is "Orc Warrior":
@@ -542,6 +545,18 @@ to say BoghrimSex1: [get fucked]
 			now monsterHP is 125;
 			now lev entry is 14;
 			now wdam entry is 15;
+			if fightoutcome < 20: [player won]
+				say "     After your last blow, the brutish orc warrior's yellow eyes become somewhat unfocused as he looks at you, surprise on his face about how this fight is going. Then, after another moment or two of staring at you, his eyes roll up in their sockets and he keels over backwards, hitting the floor with a resounding thud. Cheers erupt from the watching orcs and you soon find yourself surrounded by quite a few who congratulate you and want to drink a brew with you. There is a small celebration of your victory, with lots of booze being offered and quaffed, but eventually you can extract yourself from the throng of orcs and make your way to Boghrim, who awaits you sitting on his large couch, giving an approving nod as you step up on the platform.";
+				say "     'You're not bad in a fight,' the orc boss says, while at the same time casually groping his human slave Jason's as he lies stretched out over his lap. Giving Jason's ass a playful slap that makes the young man pant in arousal, Boghrim pulls him aside, making his own orcish prick whip up, now that there isn't a submissive human lying on it anymore. While Jason automatically starts to worship his Master's shaft, stroking and licking it, Boghrim gives a telling look from the thick pole of man-meat to you and back. 'You do you still want to go through with the... arrangement we talked about?' he asks, chuckling at your eager nod a moment later.";
+				WaitLineBreak;
+				say "[BoghrimFirstFuck]";
+				now HP of Boghrim is 1; [fuck buddy status reached]
+			else if fightoutcome > 19 and fightoutcome < 30: [lost]
+				say "     Feeling faint and with stars dancing in front of your eyes, you can only uncoordinately flail about as the big orc grabs you by the throat and lifts you off your feet. The last thing you see of this fight is his brutish face, combat-lust flaring in its yellow eyes, then the warrior gives you a resounding headbutt that sends you into unconsciousness.";
+				LineBreak;
+				say "     You awake quite a while later, bruised and hurting all over, still lying on the floor of the drinking hall. Looks like Glarbuk just dropped your limp body where he stood after finishing you off, and no one bothered to help you up or even drag you aside since. In fact, you find yourself pretty wet and sticky, smelling of orc brew... someone must have stumbled over your prone form and spilled their drink all over you. After standing up and gingerly taking stock of where you hurt the most, your gaze turns to Boghrim. After your weak showing just now, he doesn't seem impressed, giving you only a casual glance before pulling Jason on his lap and making the human slave ride his thick, green cock.";
+			else if fightoutcome is 30: [fled]
+				say "     Deciding that you've had enough, you duck under the next blow of Glarbuk and flee the drinking hall, much to the amusement of the gathered brutes.";
 		else:
 			say "     You decide to better play it safe and put those plans on ice - for now...";
 	else if HP of Boghrim is 1: [fuck buddy]
@@ -625,6 +640,8 @@ to say BoghrimSex3: [fuck him]
 		else:
 			say "     Before things go any further and these two distract you what your real plans are, you snake your arm around Boghrim's broad frame and get a grip on his firm and naked behind, then tell him in a lusty voice that YOU want to fuck HIM now. Interest flares up in Boghrim's eyes and a smile starts to spread over his face, showing off the orc's sharp tusks. Meanwhile, Jason starts to fondle your balls while slurping on your shaft with new élan, as if to prepare you to fuck his master hard. The young man pulls off your shaft and pants quickly while looking up at the two of you with a happy submissive's expression, then buries his nose in your pubes again, your erect cock sliding easily into his well-trained throat. Boghrim gives your naked body a long, lusty look, then says, 'You certainly were... impressive on that hunting trip we took and kinda saved my bacon, so... I'll give you a chance. Get on the bed and we'll wrestle, the winner gets to pound the other's fuckhole.'";
 		WaitLineBreak;
+		say "Stepping up on the large bed, the mighty orc leader stands waiting for you in all his naked glory, flexing bulging muscles under his green skin to show off a bit. Meanwhile, Jason stands beside you and watches his master with an eager expression, sporting a rock-hard cock as he can barely contain the urge to climb after the orc and worship him. 'Patience. Gonna enjoy your fine ass a bit later sweet-cheeks,' Boghrim tells his human bitch with a chuckle and wags his massive prick towards the young man, then he turns his gaze on you and says, 'Bring it on! I'm waiting...'[line break][line break]Time to get what you wanted. It only takes seconds for you to hurriedly throw off your remaining clothes and gear, then you step up on the round bed and join the other orc.";
+		wait for any key;
 		challenge "Orc Boss";
 		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 			say "     Finally getting a good grip on you, the mighty orc pulls you close, with your back against his chest and both arms trapped against your body as he by his arms wrapped around you. You keep struggling for a moment longer, using any way you can to break his grip - without success, until you have to admit defeat 'Not bad,' you hear Boghrim say right next to your head, then lick the side of your neck and nibble at it before continuing, 'This little bit of action has really gotten me in the mood to fuck your prime ass long and hard. We both knew this was how it was going to end, didn't we? And the great thing is - I won't have to hold back - you can take it, that much I know!' The orc chuckles loudly and you can feel the hot length of his erection sliding between your buttcheeks.";
@@ -924,6 +941,13 @@ instead of sniffing Jason:
 	say "     Jason has got an attractive male scent, with a definite undertone of orc cum - no wonder, with how often he gets fucked.";
 
 Section 4 - Infection for combat purposes
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Orc Boss"	"[PrepCombat_Orc Boss]"
+
+to say PrepCombat_Orc Boss:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

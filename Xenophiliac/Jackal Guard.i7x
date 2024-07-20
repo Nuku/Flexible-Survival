@@ -5,7 +5,6 @@ Jackal Guard by Xenophiliac begins here.
 Section 1 - Creature Responses
 
 to say stoneguardiandesc:
-	setmongender 3; [creature is male]
 	say "     The beast standing before you is composed completely of stone, animated through some unseen force. It looks like a human man from the neck down; none of its body has any clothing carved into it, except for an Egyptian-style skirt shielding it down to its knees. The statue's head, however, is that of an Egyptian jackal, a very canine-esque face staring at you with stone eyes. Raising his massive metal sword, the statue marches purposefully forwards, intent on preventing your desecration of the altar. From the way these beasts are shambling forward, you're pretty sure that they are only animated guardians, not at all interested in sex.";
 
 
@@ -17,6 +16,13 @@ to say beatthestoneguardian:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Jackal Guard"	"[PrepCombat_Jackal Guard]"
+
+to say PrepCombat_Jackal Guard:
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

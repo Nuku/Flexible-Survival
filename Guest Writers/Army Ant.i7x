@@ -2,13 +2,13 @@ Version 1 of Army Ant by Guest Writers begins here.
 [Original by Glitch]
 [ Version 1 - Transformations and descriptions - Glitch]
 [Version 1.1 - Moved to Guest Writers]
+[ Version 1.2 - Added Army Ant chitin infection item - Fenekku ]
 
 "Adds an army ant infection to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Creature Responses
 
 to say armyantdesc:
-	setmongender 3; [creature is male]
 	say "     Before you is the fit and ready figure of an Army Ant. His body is covered in army camo-patterned, gleaming chitin-plated flesh that is sculpted for tone, compact muscle. His face is smooth and planed with chitin bands arching across the center, concealing where a nose would normally be. Fine, articulated plates form the brow and jawline, and the features are lean and stoic. Paired antennae jut from the scalp, and a pair of mandibular pincers flanks the mouth, which is otherwise humanoid. The eyes are ovoid and segmented, a honeycomb of fine gems forming otherwise homogeneous orbs. His insectile body excessively toned and trim with segmented indentations between the chest, abdomen, and hips. The musculature is chiseled, as if comprised of polished stones and hewn into a single, polished piece. His arms span out from his shoulders and where the abdomen and chest join. The upper pair are slightly larger, but both pairs are coated in polished, hunter green chitin, segmented and powerfully built but lean.";
 	say "     The knuckles have thicker knots of chitin while his digits end in fine-honed talons. His legs are like his arms, segmented and chitin-plated and are built powerfully. The fit form of his legs are broad in the quads and calves, but narrow at the joints with arced and barbed, bug-like feet. Behind him is the long, insect abdomen of an ant, bulbous and encased in shiny chitin. Between his legs, his groin sports segmented plates that conceal his pocketed genitals.";
 
@@ -35,12 +35,17 @@ to say losetoarmyant:
 	else:
 		say "     Once you are no longer able to fight, the army ant looks over you, antennae twitching. Not finding much of interest in either your bearing or just something else, he backs away with an air of menace still about him, as if ready to strike again should you take any untoward action.";
 
-
-
 to say beatthearmyant:
 	say "     Staggering back and taking a knee, the army ant shows little weakness otherwise. He glares with those alien, insect eyes before backing away, rising form the stooped position slowly. Soon as there's an exit, he ducks out of sight.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Army Ant"	"[PrepCombat_Army Ant]"
+
+to say PrepCombat_Army Ant:
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -98,7 +103,7 @@ When Play begins:
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 5;
-	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "Army Ant chitin"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
@@ -217,7 +222,24 @@ When Play begins:
 ]
 
 
-Section 3 - Endings
+Section 3 - Loot
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Army Ant chitin"	"A small piece of hard chitin that looks like it has been pulled off of an army ant. It's hard and unyielding."	1	Army Ant chitin
+
+Army Ant chitin is a grab object.
+It is temporary.
+Usedesc of Army Ant chitin is "[Army Ant chitin use]".
+
+to say Army Ant chitin use:
+	say "Holding the piece of chitin in your hand, you rub over it, marvelling in its strength. Strangely, the chitin disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	Infect "Army Ant";
+
+instead of sniffing Army Ant chitin:
+	say "The chitin smells of earth and strength.";
+
+Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

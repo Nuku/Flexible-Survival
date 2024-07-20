@@ -210,7 +210,7 @@ to say DannyTalk2:
 				say "     'Wow, you sure showed the thing what's what!' Danny says with a sparkle in his eyes, 'You might be the hero of the apocalypse. I can't wait to show everyone the video of how good at cock-beating you are.' He snickers a little after his sentence and gives you a beaming smile. You shake your head and wave for him to follow, then start on your trek back to the mall. On the way, you have a word or three with him about not dashing forward without you and getting himself into trouble like with the cock cannon. It remains to be seen if the young rodent will take that to heart...";
 		WaitLineBreak;
 		say "     When the two of you arrive back at the mall and make your way to the back room of the local photo shop, Danny says, 'Thank you so much for your help!' Then he sprints over to his charger, plugging in the smartphone and setting it to download his newest video to the laptop standing right next on the table. 'I took some great photos on our trip and didn't get hurt. This was the best time ever!' You tell Danny to calm down, which has become a common phrase for you as of late. He looks at you with his sparkling eyes and says, 'We should do this again sometime. I had a really good time and you looked like a super hero stepping up to face the cock cannon when... erm, I got us into a bit of trouble with that thing. But yeah - you rock!' You hide a faint blush from his high praise. It isn't every day that someone says such things to you, especially with the current situation and whatnot. Feels pretty good.";
-		say "     In fact... it feels so good that despite your better judgement, you can't help but agree as he asks, 'You are going to take me out there again sometime, right?' As you chuckle and nod, he throws his arms around you and gives you a tight hug. 'Wow you're the best,' Danny says happily, then adds, 'I'll come up with a whole list of monsters for us to find! And maybe we can have more than just images of them standing around... all the excitement at the end with the cock cannon gave me the idea that some... 'action shots' would be awesome too. You wouldn't mind appearing in those, would you?' He gives you a wink after finishing the last sentence.";
+		say "     In fact... it feels so good that despite your better judgment, you can't help but agree as he asks, 'You are going to take me out there again sometime, right?' As you chuckle and nod, he throws his arms around you and gives you a tight hug. 'Wow you're the best,' Danny says happily, then adds, 'I'll come up with a whole list of monsters for us to find! And maybe we can have more than just images of them standing around... all the excitement at the end with the cock cannon gave me the idea that some... 'action shots' would be awesome too. You wouldn't mind appearing in those, would you?' He gives you a wink after finishing the last sentence.";
 		WaitLineBreak;
 		say "     Raising an eyebrow, you ask Danny what exactly he's planning to photograph in an 'action sequence'. The male rodent scratches the back of his neck and smiles suggestively, then replies, 'Oh, that. Just some... fun, okay? I bet you've done lots of things with the creatures out there before, right? We can see about specifics when we get out there - but before that I have to figure out what monsters I want to photograph next.' You don't reply and just stand there with your arms folded shaking your head. 'I'm sure you'll enjoy it,' the mall rat goes on, 'So you'll help me out and have a lot of fun at the same time, alright?'";
 		say "     You're still contemplating if you want to not only guide Danny to the creatures he seeks but also to... perform with them... when he leans in close and puts his hand on your chest. 'That reminds me,' he says with a smile, 'I do owe you a reward.' With little more warning than that, he kisses you right on the lips, his tongue darting in to wrestle with yours for a few seconds. After pulling back from kissing you, he says a moment later, 'I'm all yours if you want to have some fun.' With a nod over to the mattress set up in a corner of the room, Danny smiles at you confidently, then walks over to his work table and starts working on that list of monsters he wants to photograph.";
@@ -340,19 +340,19 @@ to say DannySexMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Danny's cock";
 	now sortorder entry is 1;
-	now description entry is "Give him a blow-job";
+	now description entry is "Give him a blowjob";
 	[
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him suck your cock";
 		now sortorder entry is 2;
-		now description entry is "Get a blow-job";
+		now description entry is "Get a blowjob";
 	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him eat you out";
 		now sortorder entry is 3;
-		now description entry is "Get a blow-job";
+		now description entry is "Get a blowjob";
 	]
 	if Player is male:
 		choose a blank row in table of fucking options;

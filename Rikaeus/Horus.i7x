@@ -135,7 +135,7 @@ TwistedCapacity of Horus is false. [Twisted Characters can take any penetration,
 Sterile of Horus is true. [steriles can't knock people up]
 MainInfection of Horus is "".
 Description of Horus is "[HorusDesc]".
-Conversation of Horus is { "<This is nothing but a placeholder!>" }.
+Conversation of Horus is { "<This is nothing but a Destabilizing Mutant!>" }.
 The scent of Horus is "     Horus gives off the pleasant smell of a wonderful summer day, with the sun shining softly onward. Under it is a vague hint of an airy scent with a tinge of an earthy one.".
 
 to say HorusDesc:
@@ -344,7 +344,7 @@ AnalVirgin of Zerbo is true.
 PenileVirgin of Zerbo is false.
 SexuallyExperienced of Zerbo is true.
 Description of Zerbo is "[ZerboDesc]".
-Conversation of Zerbo is { "<This is nothing but a placeholder!>" }.
+Conversation of Zerbo is { "<This is nothing but a Destabilizing Mutant!>" }.
 The scent of Zerbo is "     Zerbo smells like electricity and chemicals, a combination which to you is a bit odd, but it probably fits the guy.".
 
 to say ZerboDesc:
@@ -707,20 +707,20 @@ to say ResolveEvent Nightmare Showdown:
 Section C - Code for Destabilizing Mutant and Its Boss Form
 
 to say Destabilizing Mutant Wins:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Destabilizing Mutant Loses:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Destabilizing Mutant Desc:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Destabilizing Mutant"	"[PrepCombat_Destabilizing Mutant]"
+
+to say PrepCombat_Destabilizing Mutant:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -890,19 +890,20 @@ When Play begins:
 [ Row used to designate any special combat features, "default" for standard combat. ]
 
 to say Destabilizing Mass Wins:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Destabilizing Mass Loses:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Destabilizing Mass Desc:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Destabilizing Mass"	"[PrepCombat_Destabilizing Mass]"
+
+to say PrepCombat_Destabilizing Mass:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -1082,6 +1083,13 @@ to say GnomeWins:
 to say GnomeDesc:
 	say "";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Gnome"	"[PrepCombat_Gnome]"
+
+to say PrepCombat_Gnome:
+	say "";
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -1105,7 +1113,7 @@ When Play begins:
 	now cock entry is "human";
 	now face change entry is "it shifts, becoming that of a young male's, your ears becoming pointier as well and your eyes brighter too. Your hair changes colors, from what it was previously to a vibrant red before changing into a shaggy style and splaying itself out in different directions.";
 	now body change entry is "it starts to shift as your body forms into a humanoid shape, standing at a height of four feet or so. Looking down at yourself you see that you're rather fit despite the lack of muscles.";
-	now skin change entry is "it smoothes out, becoming an olive tone that glows with health.";
+	now skin change entry is "it smooths out, becoming an olive tone that glows with health.";
 	now Ass Change entry is "it tightens up, fitting to match your current size.";
 	now cock change entry is "it shifts to a human cock.";
 	now str entry is 18;

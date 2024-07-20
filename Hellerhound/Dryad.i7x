@@ -108,6 +108,12 @@ To say dryad attack:
 		say "     She looks at you with horror. 'Nothing? Nothing for me to play with?' she exclaims. Well, you will just have to fix that and come back later. She turns toward the trees with a huff, leaving you to pick yourself up.";
 		infect "Dryad";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Dryad"	"[PrepCombat_Dryad]"
+
+to say PrepCombat_Dryad:
+	setmongender 5;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -129,7 +135,7 @@ When Play begins:
 	now defeated entry is "[dryad defeat]";
 	[ Text or say command used when Monster is defeated.]
 	now victory entry is "[dryad attack]";
-	now desc entry is "[mongendernum 5]Walking through the urban forest, you pass along a road filled with trees. You can see the signs of many having had sex nearby. One tree seems normal enough, despite the enormous amounts of cum around its base, but you note the twisted shape of its branches and the pinkish tinge to its bark. As you walk closer, the tree fades, and a dryad jumps in front of you."; [ Description of the creature when you encounter it.]
+	now desc entry is "     Walking through the urban forest, you pass along a road filled with trees. You can see the signs of many having had sex nearby. One tree seems normal enough, despite the enormous amounts of cum around its base, but you note the twisted shape of its branches and the pinkish tinge to its bark. As you walk closer, the tree fades, and a dryad jumps in front of you."; [ Description of the creature when you encounter it.]
 	now face entry is "cute, with green hair and branches growing behind your ears"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "vine-wrapped and very feminine, milk leaking from shapely breasts"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "unblemished"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]

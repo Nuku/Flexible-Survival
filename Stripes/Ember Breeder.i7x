@@ -8,10 +8,6 @@ embervicsex is a number that varies.
 
 Section 1 - Creature Responses
 
-to say emberbreederdesc:
-	setmongender 5;
-	say "     Before you is another strange mutant, a rather dog-like creature this time. Her long, floppy ears perk up as she notices you. She has [one of]red[or]pink[at random] eyes and looks at you with obvious lust. She is completely unclothed and you can see just by looking at her that she is built to pleasure whoever she comes in contact with; her large breasts drip milk at a steady rate and she has a cock that makes your mouth water. Her penis is starkly inhuman, with ridges, bumps, spines and a knot at its base - yet somehow all that seems tantalizing, a source of myriad pleasures to anyone she fucks. She lets out a moan and strokes herself for a moment before rushing at you.";
-
 to say losttoemberbreeder:
 	if Player is female and player is impreg_able:
 		if a random chance of 1 in 2 succeeds:
@@ -61,7 +57,6 @@ to say beattheemberbreeder:
 	else:
 		say "She gropes herself briefly, then her paws drop to her sides, too weak to continue. With a sad look in her eyes, she falls to the ground and slips unconscious, milk still leaking steadily from her swollen tits.";
 
-
 to say emberbreedersex01:
 	if Cock Length of Player > 18:
 		say ". Her pussy stretches open to accommodate your massive shaft, bulging at the belly to fit you in. She brings a paw to the bulge, rubbing over it with happy chirps, glad to be taken by such a virile and well-hung male";
@@ -74,8 +69,17 @@ to say emberbreedersex02:
 	say ". You briefly manhandle her leaking breasts, drawing spurts of her milk before moving to her hips to grab them so you can fuck her all the harder.";
 	say "     You drive your [Cock of Player] cock into her needy pussy over and over again, losing yourself in the lustful breeding. And no matter how rough you get, the horny herm only chirps and pants in her need for more, her body longing for your seed. You give her plump bottom a few slaps which cause her cunt to squeeze down around you with each blow. After a short set of these, you're ready to blow in a different manner and drive yourself fully into her, pushing your cock into her accommodating womb and unleashing your [Cum Load Size of Player] load. She moans in delight and her vagina clamps down firmly on your cock, milking it for all you'll give[if Ball Size of Player > 5]. Your large balls drain into her, making her belly swell with your semen, almost certain to impregnate the needy, breeding bitch[end if]. Her penis twitches and her balls pull up, spraying her own seed onto the ground beneath her. When you withdraw your cock, the breeding slut passes out in the puddle of her own fluids with a dazed expression of happiness on her muzzled face.";
 
-
 Section 2 - Creature Insertion
+
+to say emberbreederdesc:
+	say "     Before you is another strange mutant, a rather dog-like creature this time. Her long, floppy ears perk up as she notices you. She has [one of]red[or]pink[at random] eyes and looks at you with obvious lust. She is completely unclothed and you can see just by looking at her that she is built to pleasure whoever she comes in contact with; her large breasts drip milk at a steady rate and she has a cock that makes your mouth water. Her penis is starkly inhuman, with ridges, bumps, spines and a knot at its base - yet somehow all that seems tantalizing, a source of myriad pleasures to anyone she fucks. She lets out a moan and strokes herself for a moment before rushing at you.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Ember Breeder"	"[PrepCombat_Ember Breeder]"
+
+to say PrepCombat_Ember Breeder:
+	setmongender 5;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -144,7 +144,6 @@ to say HHNerdSex2:
 	CreatureSexAftermath "Player" receives "OralCock" from "Horseman";
 
 to say HHNerdDesc:
-	setmongender 3;
 	if NerdMeetings is 0:
 		say "     A tall and pretty slender guy comes into your line of sight on the campus grounds, some distance ahead of you. Dressed in tight jeans and a t-shirt, your first impression of him says human, though as he walks closer to you with swaggering steps, you do notice some qualities that show at least a partial infection with some strain of the nanites. He's got hooves, for example, as well as pointed and very mobile horse's ears. The young man's hair might be called a mane and seems to have been part of the transformation too. And finally, as your eyes wander lower again, you spot something that's definitively not human - as he's got a pretty big bulge in his pants and the outline of an enormous schlong of a cock is visible stuffed down one of his pants legs.";
 		WaitLineBreak;
@@ -160,6 +159,13 @@ to say HHNerdDesc:
 		say "     Shouting the words 'Come here and worship my cock!', Clyde throws himself on you, clearly wanting to force the issue.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Horse-Hung Nerd"	"[PrepCombat_Horse-Hung Nerd]"
+
+to say PrepCombat_Horse-Hung Nerd:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

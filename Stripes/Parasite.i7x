@@ -59,7 +59,6 @@ to say ResolveEvent Insect Hive:
 		now Resolution of Insect Hive is 99; [disinterest]
 	now Insect Hive is resolved;
 
-
 Section 2 - Parasite
 
 an everyturn rule:
@@ -150,10 +149,7 @@ Section 3 - Black Wasp creature
 Chapter 1 - Creature Responses
 
 to say blackwaspdesc:
-	setmongender 3; [creature is male]
 	say "     As you travel along, you hear a growing buzzing sound, looking up in time to see one of the black wasps [if larvaegg is 1 and gestation of Child is 0]drawn to you by your scent[else]coming in towards you[end if]. The giant insect is nearly as long as an average person's height. Shaped much like a yellowjacket but completely black, this wasp has large, oval eyes, three pairs of legs ending in small, clawed feet and a large, segmented abdomen. Looking at its abdomen, you can see its rather phallic stinger is out and dripping fluid. It is much like their queen's knotted one, though somewhat smaller. Your belly squirms as a wave of arousal washes through you, the larva inside you pumping something into you, making you increasingly aroused and eager to submit to this insect.";
-	now libidomemory is Libido of Player;
-
 
 to say losetoblackwasp:
 	if HP of Player > 0:
@@ -171,13 +167,19 @@ to say losetoblackwasp:
 		say "Your [if Player is female]womb[else]belly[end if] is filled with a satisfying warmth as its seed flows into you, causing the larva inside you to squirm excitedly.";
 		now Libido of Player is ( Libido of Player + libidomemory + libidomemory ) / 3;
 
-
 to say beattheblackwasp:
 	say "     You manage to resist the urge to give in to the wasp throughout the fight. Battering the big bug, you eventually manage to drive the creature off, too injured to continue seeking to mate with you for the moment. Your intense arousal drops somewhat as the big insect leaves the area and the larva's movements subside for now.";
 	now Libido of Player is ( Libido of Player + libidomemory + libidomemory ) / 3;
 
-
 Chapter 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Black Wasp"	"[PrepCombat_Black Wasp]"
+
+to say PrepCombat_Black Wasp:
+	setmongender 3; [creature is male]
+	now libidomemory is Libido of Player;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

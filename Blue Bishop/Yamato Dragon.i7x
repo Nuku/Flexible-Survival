@@ -68,31 +68,19 @@ to say Yamato Dragon attack:
 				if "Microwaved" is listed in feats of Player:
 					say "WARNING: Ball size change detected! Allow?";
 					if Player consents:
-						if Ball Size of Player < 20:
-							if "Horny Bastard" is listed in feats of Player:
-								increase Ball Size of Player by 4;
-							else:
-								increase Ball Size of Player by 2;
+						if "Horny Bastard" is listed in feats of Player:
+							BallsGrow Player by 4;
 						else:
-							if "Horny Bastard" is listed in feats of Player:
-								increase Ball Size of Player by 2;
-							else:
-								increase Ball Size of Player by 1;
+							BallsGrow Player by 2;
 						follow the cock descr rule;
 						say "You can [if Player is internalBalls]feel your internal[else]see your[end if] [one of]testes[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if Player is internalBalls]body straining to abide this[else]your skin becoming taut with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls]!";
 					else:
 						say "     It looks like you recover to their original size after treating it.";
 				else:
-					if Ball Size of Player < 20:
-						if "Horny Bastard" is listed in feats of Player:
-							increase Ball Size of Player by 4;
-						else:
-							increase Ball Size of Player by 2;
+					if "Horny Bastard" is listed in feats of Player:
+						BallsGrow Player by 4;
 					else:
-						if "Horny Bastard" is listed in feats of Player:
-							increase Ball Size of Player by 2;
-						else:
-							increase Ball Size of Player by 1;
+						BallsGrow Player by 2;
 					follow the cock descr rule;
 					say "You can [if Player is internalBalls]feel your internal[else]see your[end if] [one of]testes[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if Player is internalBalls]body straining to abide this[else]your skin becoming taut with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls]!";
 		else if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":
@@ -347,28 +335,6 @@ to yamatbiasshift:
 				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female dragon. Surely your fate is tied to her, should you succumb[roman type].";
 
 to say yamato dragon desc:
-	now YDEnemyColor is a random number between 0 and 2;
-	ProjectYamatoDragon_soft;
-	setmongender 3; [creature is male]
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else if Player is herm:
-		now sex entry is "Both";
-	else if Player is male:
-		now sex entry is "Male";
-	else if Player is female:
-		now sex entry is "Female";
-	else:
-		now sex entry is "nochange";
-	now firebreathcount is 0;
-	now firebreathready is false;
-	psycheeval;
-	libidoeval;
 	say "     [if showlocale is true]Traveling through the park[else]Suddenly[end if], you find yourself beset by a dragon of eastern myth. Massive and serpentine in frame, airborne in spite of being wingless, his [if YDEnemyColor is 0]red[else if YDEnemyColor is 1]blue[else]green[end if] scales and yellow underbelly shimmering in the [if daytimer is night]starlight[else]sunlight[end if]. You instinctively attempt to find cover, but this only encourages him to pursue you on ground, a lustful hunger agleam in his eyes.";
 
 to say ydskinchange:
@@ -900,6 +866,34 @@ to yamatbiasshift:
 			now YDSF is 4;
 			if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":
 				say "     [italic type]Your tainted mind echoes with your defeat, reveling in your exposure to the female beast. Surely your fate is tied to her, should you succumb[roman type].";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Yamato Dragon"	"[PrepCombat_Yamato Dragon]"
+
+to say PrepCombat_Yamato Dragon:
+	now YDEnemyColor is a random number between 0 and 2;
+	ProjectYamatoDragon_soft;
+	setmongender 3; [creature is male]
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else if Player is herm:
+		now sex entry is "Both";
+	else if Player is male:
+		now sex entry is "Male";
+	else if Player is female:
+		now sex entry is "Female";
+	else:
+		now sex entry is "nochange";
+	now firebreathcount is 0;
+	now firebreathready is false;
+	psycheeval;
+	libidoeval;
 
 
 Section 2 - Creature Insertion

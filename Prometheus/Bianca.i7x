@@ -135,7 +135,7 @@ Section 2 - Talking
 
 instead of conversing the Bianca:
 	if "First Talk" is not listed in Traits of Bianca:
-		say "     'I don't think we've talked like this before. Mommy seemed to take all of your attention. I'm glad that you have time now, but don't forget about them or the others,' Bianca says, cuddling up to your side. 'Now that we're here, perhaps we can liven up this place and improve on the decorating. You've rather let the dust and dirt get away on you.' You ask how she plans on fixing that. 'I don't know, but Ernest will likely have some ideas and I should be able to get some of my other siblings to put in the work.' Unimpressed, you tell her that she should be helping too. 'I would make a joke about there being two kinds of people, but I get the impression that you want a serious answer. Labor assignment and scheduling is Mom's speciality and none of us have had any reason to complain so far. Given my talent for the aesthetic, I'm still planning out our bedroom design. If I get time, I suppose I can lend a paw dusting.' With a sigh, you accept that Blanche likely knows her children better than you. Sturm is unlikely to complain even if he has to do it all by himself.";
+		say "     'I don't think we've talked like this before. Mommy seemed to take all of your attention. I'm glad that you have time now, but don't forget about them or the others,' Bianca says, cuddling up to your side. 'Now that we're here, perhaps we can liven up this place and improve on the decorating. You've rather let the dust and dirt get away on you.' You ask how she plans on fixing that. 'I don't know, but Ernest will likely have some ideas and I should be able to get some of my other siblings to put in the work.' Unimpressed, you tell her that she should be helping too. 'I would make a joke about there being two kinds of people, but I get the impression that you want a serious answer. Labor assignment and scheduling is Mom's specialty and none of us have had any reason to complain so far. Given my talent for the aesthetic, I'm still planning out our bedroom design. If I get time, I suppose I can lend a paw dusting.' With a sigh, you accept that Blanche likely knows her children better than you. Sturm is unlikely to complain even if he has to do it all by himself.";
 		TraitGain "First Talk" for Bianca;
 	else:
 		say "[BiancaTalkMenu]";
@@ -242,6 +242,7 @@ to say SummonBianca:
 		say "     Walking over to Bianca, you ask whether she would be interested in coming with you out into the city. Your daughter snuggles against, frantically wagging her tail. 'I'd love to, [BlancheMommyDaddyTitle]. I always enjoy watching you doing what you're good at.' You laugh at the implication behind this, sure that your daughter knew exactly what she was saying.";
 	else: [regular summoning]
 		say "     Bianca for all her many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see her.";
+		now SummonFailure is true;
 
 to say DismissBianca:
 	move Bianca to Grey Abbey Library;

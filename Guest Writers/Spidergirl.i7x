@@ -44,7 +44,7 @@ to say spidergirl_male:
 		[ since penis was small, increase it ]
 		increase Cock Length of Player by 1;
 		if a random chance of 1 in 2 succeeds:
-			increase Ball Size of Player by 1;
+			BallsGrow Player by 1;
 
 to say spidergirl_female:
 	if Cunt Tightness of Player >= 5: [ if Player's vagina is large enough, oviposition ]
@@ -102,6 +102,13 @@ to say spidergirl defeat:
 
 Section 2 - Creature Insertion [ Huh huh, insertion ]
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Spidergirl"	"[PrepCombat_Spidergirl]"
+
+to say PrepCombat_Spidergirl:
+	setmongender 5;
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -124,7 +131,7 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[mongendernum 5][one of]She skitters up the wall and over the ceiling. As you try to follow, she sprays webbing down onto you![or]She leaps to one side and turns her abdomen to face you, and sticky strands spray over your form![or]She suddenly charges and knocks you down with the weight of her body, then she stands over you and sprays webbing over your prone form![at random]";
+	now attack entry is "[one of]She skitters up the wall and over the ceiling. As you try to follow, she sprays webbing down onto you![or]She leaps to one side and turns her abdomen to face you, and sticky strands spray over your form![or]She suddenly charges and knocks you down with the weight of her body, then she stands over you and sprays webbing over your prone form![at random]";
 	now defeated entry is "[spidergirl defeat]";
 	now victory entry is "[spidergirl attack]";
 	now desc entry is "A hybrid of human and arachnid. From the waist up, the picture of a voluptuous woman, with smooth skin and heavy breasts topped with delicate pink nipples; she also has eight luminous [one of]violet[or]green[or]orange[or]magenta[at random] pupil-less eyes blinking from behind her [one of]short gray[or]long golden[or]raven-black[at random] hair. Down below she is a giant spider, with eight hairy, twitching legs and an abdomen armored with [one of]dull brown[or]shiny black[or]black and red[at random] chitin. At the tip of her abdomen can be seen an opening with spinnerets, and between the front pair of legs a set of armor plates look like they might be hiding something...";

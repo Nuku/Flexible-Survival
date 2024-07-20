@@ -5,25 +5,6 @@ Version 2 of Snow Bat by Stripes begins here.
 Section 1 - Creature Responses
 
 nightcheck is a number that varies.
-snowbatfight is a number that varies.
-
-to say snowbatdesc:
-	setmongender 3; [creature is male]
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Female";
-	say "[daynightcheck]";
-	let debit be 0;
-	if HardMode is true and level of Player > 9, let debit be level of Player - 9;
-	now dex entry is 20 + nightcheck + ( ( debit + 4 ) / 5 ); [equivalent to +4 dex at night]
-	now wdam entry is 10 + ( ( 4 * debit / 11 ) ); [strong dmg growth rate for hard mode]
-	now HP entry is 70 + ( debit * 5 ); [strong HP growth rate for hard mode]
-	now monsterHP is HP entry;
-	say "     Swooping from the sky is a hybrid snow bat, a cross between a snow leopard and a bat. The bat wings which allow this snowmeow to fly are covered in an even gray fur, lacking the spots and markings of his feline body. His feline face is distorted into the sharper and more pointed shape of a bat's, with an upturned nose, pointed muzzle, fangs and large ears. His footpaws have been reshaped for perching as well as grasping its prey. He's got a sizable sheath and large balls between his legs and may be hoping to use them on you[if daytimer is day]. With the bright daytime sun out, his sensitive eyes water as he tries to shield them from the light[else]. In dark of the night, this bat-hybrid has a definite advantage with its echolocation[end if].";
 
 
 to say daynightcheck:
@@ -34,7 +15,6 @@ to say daynightcheck:
 
 
 to say losetosnowbat:
-	now snowbatfight is 2; [lost]
 	if scalevalue of Player > 0 and ( Player is female or anallevel is 3 or Player is mpreg_ok ) and daytimer is night and a random chance of 2 in 5 succeeds:
 		say "     As you [if HP of Player > 0]submit[else]fall[end if] to the snow bat, he quickly grabs and pulls you into the sky[if HP of Player > 0]. You show no protest, lest the twisted feline release its hold upon you[else]. You briefly struggle, but you quickly refrain as the earth below you grows ever distant[end if]. There, suspended in the twilight, he would have his way with you, pulling you tightly into his arms. Sharing his irreverent affection with you, he caressing your neck with his fanged muzzle, his coarse tongue teasing your [bodytype of Player] surface before he sinks his teeth into you.";
 		if Player is female:
@@ -71,7 +51,6 @@ to say losetosnowbat:
 
 
 to say beatthesnowbat:
-	now snowbatfight is 1; [victory]
 	let skipx be 0;
 	let resistance be ( 100 + humanity of Player ) - ( Libido of Player + ( thirst of Player * 2 ) );
 	if BodyName of Player is "Snow Bat" and FaceName of Player is "Snow Bat" and a random number between 1 and 200 >= resistance:
@@ -100,6 +79,30 @@ to say beatthesnowbat:
 
 
 Section 2 - Creature Insertion
+
+to say snowbatdesc:
+	say "     Swooping from the sky is a hybrid snow bat, a cross between a snow leopard and a bat. The bat wings which allow this snowmeow to fly are covered in an even gray fur, lacking the spots and markings of his feline body. His feline face is distorted into the sharper and more pointed shape of a bat's, with an upturned nose, pointed muzzle, fangs and large ears. His footpaws have been reshaped for perching as well as grasping its prey. He's got a sizable sheath and large balls between his legs and may be hoping to use them on you[if daytimer is day]. With the bright daytime sun out, his sensitive eyes water as he tries to shield them from the light[else]. In dark of the night, this bat-hybrid has a definite advantage with its echolocation[end if].";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Snow Bat"	"[PrepCombat_Snow Bat]"
+
+to say PrepCombat_Snow Bat:
+	setmongender 3; [creature is male]
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Female";
+	say "[daynightcheck]";
+	let debit be 0;
+	if HardMode is true and level of Player > 9, let debit be level of Player - 9;
+	now dex entry is 20 + nightcheck + ( ( debit + 4 ) / 5 ); [equivalent to +4 dex at night]
+	now wdam entry is 10 + ( ( 4 * debit / 11 ) ); [strong dmg growth rate for hard mode]
+	now HP entry is 70 + ( debit * 5 ); [strong HP growth rate for hard mode]
+	now monsterHP is HP entry;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -413,7 +413,7 @@ carry out Diegotricking:
 			if Spartan Usurpation is inactive:
 				now Spartan Usurpation is active;
 	else:
-		say "     As you lay out the (admittedly pretty lame) plan you've come up with, Diego says derisively, 'You call that a trick?' Snickering at your pathetic attempt, the coyote waves you closer in a conspiratory way and adds, 'Now listen well - THIS is how a master trickster does things!' [SubjectProCap of Diego] whips out a trick that almost makes you stagger back in shock from the sheer nerve and lewdness that Diego possesses in spades. Even just imagining the chaos he'll create makes you feel a bit less human and more used to the new reality of this city...";
+		say "     As you lay out the (admittedly pretty lame) plan you've come up with, Diego says derisively, 'You call that a trick?' Snickering at your pathetic attempt, the coyote waves you closer in a conspiratorial way and adds, 'Now listen well - THIS is how a master trickster does things!' [SubjectProCap of Diego] whips out a trick that almost makes you stagger back in shock from the sheer nerve and lewdness that Diego possesses in spades. Even just imagining the chaos he'll create makes you feel a bit less human and more used to the new reality of this city...";
 		SanLoss 10;
 
 Section 4 - Sex
@@ -458,7 +458,7 @@ to say DiegoSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Diego's cock";
 		now sortorder entry is 1;
-		now description entry is "Give [if Diegochanged is 0]him[else]her[end if] a blow-job";
+		now description entry is "Give [if Diegochanged is 0]him[else]her[end if] a blowjob";
 	[]
 	if (Player is male and (Diegochanged > 0 or DiegoButtSlut > 0) and 1 > 2): [disabled for now]
 		choose a blank row in table of fucking options;
@@ -1190,6 +1190,10 @@ to say DCollarDesc:
 instead of sniffing diego's heirloom collar:
 	say "     The collar smells like leather.";
 
+a postimport rule:
+	if diego's heirloom collar is not owned:
+		now diego's heirloom collar is not equipped;
+
 to say DCollarUse:
 	if diego's heirloom collar is equipped:
 		say "     You raise your hands and touch the leather collar around your neck, feeling around for its buckle. Yet even as you do so, the idea of how good the strap feels on your skin grows in your mind, together with the acceptance and need of having something nicely tight and proper around your neck. Your wish to be rid of it weakens by the second, and before you've done anything more than pulling a bit at the fastening, you've fully changed your mind. Fingers idly stroking along the symbol of submission around your neck, you can barely even remember why you wanted to take it off.";
@@ -1328,6 +1332,7 @@ to say DiegoCollarDeliveryAftermath:
 	else:
 		LineBreak;
 		say "     In a friendly but firm tone, you turn the coyote down. [SubjectProCap of Diego] takes your rejection well enough with little more than a slight dip of [PosAdj of Diego] tail, followed by a shrug. 'Oh well, guess I'll find someone else to help me with this specific plan then. Doesn't mean we can't enjoy hatching some other fun plans together though, alright?'";
+		now diego's heirloom collar is not equipped;
 		ItemLoss diego's heirloom collar by 1;
 		now XP of Diego is 50; [collar delivered]
 

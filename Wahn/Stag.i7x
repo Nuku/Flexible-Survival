@@ -41,6 +41,12 @@ to say ResolveEvent Dog Walking:
 		else: [fighting]
 			LineBreak;
 			challenge "Blacktail Stag";
+			if fightoutcome < 20: [player won]
+				say "[Stag loses]";
+			else if fightoutcome > 19 and fightoutcome < 30: [lost]
+				say "[Stag wins]";
+			else if fightoutcome is 30: [fled]
+				say "     You run as fast as you can and make a clean getaway.";
 			now Resolution of Dog Walking is 2; [fought Mike]
 			now Dog Walking is resolved;
 		increase score by 5;
@@ -116,7 +122,7 @@ to say Stag loses:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him suck you off";
 		now sortorder entry is 3;
-		now description entry is "Get a blow-job";
+		now description entry is "Get a blowjob";
 	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
@@ -185,7 +191,6 @@ to say Stag loses:
 	clear the screen and hyperlink list;
 
 to say StagDesc:
-	setmongender 3;
 	if HP of Mike is 0: [first encounter]
 		say "     Seeing your aggressive stance as you come closer, the stag sighs 'Another one of these savages.' Turning to the human at his side he says 'I want you to run home, Lea, you understand? Home. You can't help me in the fight right now and have to think of your puppies...'";
 		say "     After a short hesitation and giving a pleading whine, the woman dashes off, with the stag stepping in the way to block any attempt at following her. 'Now let's deal with you,' he says and comes at you with balled fists.";
@@ -194,6 +199,12 @@ to say StagDesc:
 		say "     As the guy sees you, he sighs 'That asshole again.' Turning to the human at his side he says 'I want you to run home, Lea, you understand? Home. You can't help me in the fight right now and have to think of your puppies...'";
 		say "     After a short hesitation and giving a pleading whine, the woman dashes off, with the stag stepping in the way to block any attempt at following her. 'Now let's deal with you,' he says and comes at you with balled fists.";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Blacktail Stag"	"[PrepCombat_Blacktail Stag]"
+
+to say PrepCombat_Blacktail Stag:
+	setmongender 3;
 
 Section 3 - Creature Insertion
 
@@ -481,13 +492,13 @@ Instead of fucking Mike:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Mike's cock";
 		now sortorder entry is 1;
-		now description entry is "Give him a blow-job.";
+		now description entry is "Give him a blowjob.";
 		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
-			now description entry is "Get a blow-job.";
+			now description entry is "Get a blowjob.";
 		[]
 		if Player is female:
 			choose a blank row in table of fucking options;
@@ -546,11 +557,11 @@ Instead of fucking Mike:
 to say MikeSex1: [player sucks him]
 	if HP of Mike is 0 or HP of Mike is 99: [post-combat, dominating]
 		say "     You step closer to the stag, a bit wary at first, and run your hands over his chest and arms, feeling hard muscles and pinching his nipples. He just stands there and takes your groping, holding his arms at his sides. Looks like he's resigned himself to obeying you - for now. Pushing your hands down the front of his jeans, you feel for his cock and balls, groping them before you open up his zipper and pull down his pants. He's got a human-like cock halfway out of a furred sheath and a nice pair of balls, both covered in cream-colored fur. You kneel down in front of him and stroke his shaft some more until he's fully hard.";
-		say "     Running your tongue over his cock-head and shaft slowly between pumping your hand up and down its length, you tease the stag until he's breathing hard and looks pleadingly down at you. You smile, then take his manhood into your mouth and start giving him an amazing blow-job, going down all the way on his cock and massaging his balls. With how you worked him up beforehand, it's not too long before he suddenly shouts 'I'm coming!' and starts to shoot strings of cum into your mouth. You wait until he stops twitching and the last spurt of semen leaves his cock, then stand up and pull his head to yours for a deep kiss, pushing the cum into Mike's mouth with your tongue. His eyes get wide as he tastes his own cum and even wider as you pull his head back a bit and say 'Now swallow!' After a moment's hesitation, he gulps down the cum and shows you his empty mouth as you ask for it.";
+		say "     Running your tongue over his cock-head and shaft slowly between pumping your hand up and down its length, you tease the stag until he's breathing hard and looks pleadingly down at you. You smile, then take his manhood into your mouth and start giving him an amazing blowjob, going down all the way on his cock and massaging his balls. With how you worked him up beforehand, it's not too long before he suddenly shouts 'I'm coming!' and starts to shoot strings of cum into your mouth. You wait until he stops twitching and the last spurt of semen leaves his cock, then stand up and pull his head to yours for a deep kiss, pushing the cum into Mike's mouth with your tongue. His eyes get wide as he tastes his own cum and even wider as you pull his head back a bit and say 'Now swallow!' After a moment's hesitation, he gulps down the cum and shows you his empty mouth as you ask for it.";
 		say "     Satisfied in giving him a load of cum in his stomach, you give the stag a slap on his ass and leave.";
 	else: [post-quest, friendly]
 		say "     You step closer to Mike and pull his head to yours to give him a kiss, then run your hands over his chest and arms, feeling the muscles of his stag body and softly pinching his nipples. Looking down, you see a bulge in his jeans showing his growing arousal at your ministrations. Pushing your hands down the front of his pants, you feel for his cock and balls, groping them as Mike puts his arms around you and kisses you back. After making out a bit and stroking each other's bodies, you open up his zipper and pull down his pants. He's got an impressive human-like cock halfway out of a furred sheath and a nice pair of balls, both covered in cream-colored fur. Licking your lips in anticipation, you kneel down in front of Mike and stroke his shaft some more until he's fully hard.";
-		say "     Running your tongue over his cock-head and shaft slowly between pumping your hand up and down its length, you tease the stag until he's breathing hard and looks pleadingly down at you. You smile, then take his manhood into your mouth and start giving him an amazing blow-job, going down all the way on his cock and massaging his balls. With how you worked him up beforehand, it's not too long before he moans 'I'm getting close...' You continue going down on him and go for some deep-throat action until he can't hold back any more and shouts in lust as his balls pump spurt after spurt of seed into your stomach. You wait until he stops twitching and the last spurt of semen leaves his cock, pull off and take a deep breath. Holding his slowly softening cock in your hand, you give it a quick kiss on the tip, then stand up and pull Mike's mouth to yours. With his arms around you and stroking your back as you make out with each other, Mike says, 'Thank you, that was an amazing blow-job,' in between the kisses.";
+		say "     Running your tongue over his cock-head and shaft slowly between pumping your hand up and down its length, you tease the stag until he's breathing hard and looks pleadingly down at you. You smile, then take his manhood into your mouth and start giving him an amazing blowjob, going down all the way on his cock and massaging his balls. With how you worked him up beforehand, it's not too long before he moans 'I'm getting close...' You continue going down on him and go for some deep-throat action until he can't hold back any more and shouts in lust as his balls pump spurt after spurt of seed into your stomach. You wait until he stops twitching and the last spurt of semen leaves his cock, pull off and take a deep breath. Holding his slowly softening cock in your hand, you give it a quick kiss on the tip, then stand up and pull Mike's mouth to yours. With his arms around you and stroking your back as you make out with each other, Mike says, 'Thank you, that was an amazing blowjob,' in between the kisses.";
 	NPCSexAftermath Player receives "OralCock" from Mike;
 
 to say MikeSex2: [he sucks the player]
@@ -559,7 +570,7 @@ to say MikeSex2: [he sucks the player]
 		say "     With a bit of a sullen expression, the stag opens his mouth and takes your manhood into it, bobbing up and down on your shaft. You let him suck you a while, then feel the need for something more rise inside you and grab his antlers like handholds and use them to hold his head as you start fucking his face. Going deeper and deeper, he has to cough a few times before he manages to relax his throat enough when you push all your cock inside him. It's an amazingly tight feeling as you bottom out and hold his head with your cock down his throat for a moment, then start thrusting in and out. All too soon you feel your orgasm approaching and push your shaft one last time into the stag's throat as you start shooting your seed - straight into his stomach. After the first few shots, you pull out of his mouth and spray the rest of your cum all over his cervine face. With a smile on your lips, you leave the cum-splattered stag kneeling there on the street and walk away.";
 	else: [post-quest, friendly]
 		say "     You step closer to Mike and pull his head to yours to give him a kiss, then run your hands over his chest and arms, feeling the muscles of his stag body and softly pinching his nipples. Grinding your crotch against his, you show him pretty directly how hot and hard his presence makes you. Pushing your hands down the front of his pants, you feel for his cock and balls, groping them as Mike puts his arms around you and kisses you back. After making out a bit and stroking each other's bodies, you softly push down on his shoulders, to which he quite readily kneels down in front of you. As you pull out your cock, he takes it into a large hand, stroking it until you're fully hard, then gives its tip a quick lick.";
-		say "     Running his tongue over your shaft slowly between pumping his hand up and down its length, Mike teases you until you're breathing hard and almost begging for release. Then he has mercy on you and takes your manhood into his mouth and starts giving you an amazing blow-job, going down all the way on your cock and massaging your balls. With all the kissing and stroking beforehand, it's not too long before you moan 'I'm getting close...' Mike just continues going down on you, even going for some deep-throat action until you can't hold back any more and shout in lust as your balls pump spurt after spurt of seed into his stomach. He waits a moment, then pulls back a bit, taking your last few shots in his mouth. Then he stands up and gives you a deep kiss, allowing you to taste your own cum on his lips and tongue.";
+		say "     Running his tongue over your shaft slowly between pumping his hand up and down its length, Mike teases you until you're breathing hard and almost begging for release. Then he has mercy on you and takes your manhood into his mouth and starts giving you an amazing blowjob, going down all the way on your cock and massaging your balls. With all the kissing and stroking beforehand, it's not too long before you moan 'I'm getting close...' Mike just continues going down on you, even going for some deep-throat action until you can't hold back any more and shout in lust as your balls pump spurt after spurt of seed into his stomach. He waits a moment, then pulls back a bit, taking your last few shots in his mouth. Then he stands up and gives you a deep kiss, allowing you to taste your own cum on his lips and tongue.";
 	NPCSexAftermath Mike receives "OralCock" from Player;
 
 to say MikeSex3: [player pussy fucked]
@@ -757,7 +768,7 @@ This is the Helen's Epilogue rule:
 				if Libido of Helen is 1: [by the player]
 					say "The first of her children - a boy - being yours from before you lost your humanity, quickly develops into a quite bright teenager. Growing to maturity in a pack of horny dogs and having absorbed their morals, he soon tricks the Alpha into an unwinnable fight against a flock of gryphons. With his rival being carried away to the gryphon's flying city to serve as a submissive egg carrier, your son takes over the pack. As new Alpha, he goes on to fuck them all regularly, impregnating the female huskies as well as his human-shape half-sisters and mother while dominating the males by fucking their asses daily.";
 				else if Libido of Helen is 2: [by Fang]
-					say "The first of her children - a boy - being the offspring of[if (HP of Fang is 1 or HP of Fang is 2)] your pet wolf[else if (HP of Fang is 3 or HP of Fang is 4)] your dominant wolf[else] your faithful friend[end if] Fang from before you lost your humanity, quickly develops into a relatively bright teenager. Growing to maturity in a pack of horny dogs and having absorbed their morals, he soon shows the ferocious nature inherited from his father and challenges the pack's Alpha husky for dominance. It's a long fight with several quite close calls, but in the end the former pack-master can only limp away, beaten, as Fang's son takes over the pack. As new Alpha, he goes on to fuck them all regularly, impregnating the female huskies as well as his human-shape half-sisters and mother while dominating the males by fucking their asses daily.";
+					say "The first of her children - a boy - being the offspring of[if (HP of Fang is 1 or HP of Fang is 2)] your pet wolf[else if (HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 7)] your dominant wolf[else] your faithful friend[end if] Fang from before you lost your humanity, quickly develops into a relatively bright teenager. Growing to maturity in a pack of horny dogs and having absorbed their morals, he soon shows the ferocious nature inherited from his father and challenges the pack's Alpha husky for dominance. It's a long fight with several quite close calls, but in the end the former pack-master can only limp away, beaten, as Fang's son takes over the pack. As new Alpha, he goes on to fuck them all regularly, impregnating the female huskies as well as his human-shape half-sisters and mother while dominating the males by fucking their asses daily.";
 				else if Libido of Helen is 3: [by the Felinoid]
 					say "The first of her children - a boy - being the offspring of Klauz from before you lost your humanity, quickly develops into a relatively bright teenager. As he matures, he develops the ability to create a seductive, pheromone-laden smell, almost as strong as his father's was. Growing up in a pack of horny dogs and having absorbed their morals, he makes relentless use of this ability, dominating the whole pack though sexual dependence. Even though the old Alpha is still around, protecting the pack, it's now the felinoid's son who has the power. He fucks them all regularly, males and females, impregnating the female huskies as well as his human-shape half-sisters and mother.";
 				else if Libido of Helen is 4: [by Kara]
@@ -774,7 +785,7 @@ This is the Helen's Epilogue rule:
 				if Libido of Helen is 1: [by the player]
 					say "Several months later, she gives birth to your child, a beautiful human boy. He develops quickly over the following weeks and months, and you're relieved when he turns out to be a quite bright kid - able to understand his mother's canine growls as well as human language. It's quite a bit of work to keep up with him, especially when he enters puberty and starts having sex with Alice, his first girlfriend, as well as her female golden retriever - thankfully using the condoms you buy him by the box, so neither of them end up pregnant. His growth spurts eventually slow to human levels and by the time he's a year old, your by then teenage looking son gets into college...";
 				else if Libido of Helen is 2: [by Fang]
-					say "Several months later, she gives birth to the offspring of[if (HP of Fang is 1 or HP of Fang is 2)] your pet wolf[else if (HP of Fang is 3 or HP of Fang is 4)] your dominant wolf[else] your faithful friend[end if] Fang, a beautiful human boy. He develops quickly over the following weeks and months, and you're relieved when he turns out to be a relatively bright kid - able to understand his mother's canine growls as well as human language. It's quite a bit of work to keep up with him, especially when he enters puberty and starts getting into fights at school over girlfriends - as well as boyfriends, whoever strikes his fancy. Over time, he acquires a few scars that give him a dashing appearance, as well as a small gang of friends and lovers, and you have to buy condoms by the box for their wild parties on most weekends. His growth spurts eventually slow to human levels and by the time he's a year old, the by then teenage looking kid starts working as a car mechanic at a nearby garage...";
+					say "Several months later, she gives birth to the offspring of[if (HP of Fang is 1 or HP of Fang is 2)] your pet wolf[else if (HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 7)] your dominant wolf[else] your faithful friend[end if] Fang, a beautiful human boy. He develops quickly over the following weeks and months, and you're relieved when he turns out to be a relatively bright kid - able to understand his mother's canine growls as well as human language. It's quite a bit of work to keep up with him, especially when he enters puberty and starts getting into fights at school over girlfriends - as well as boyfriends, whoever strikes his fancy. Over time, he acquires a few scars that give him a dashing appearance, as well as a small gang of friends and lovers, and you have to buy condoms by the box for their wild parties on most weekends. His growth spurts eventually slow to human levels and by the time he's a year old, the by then teenage looking kid starts working as a car mechanic at a nearby garage...";
 				else if Libido of Helen is 3: [by the Felinoid]
 					say "Several months later, she gives birth to the offspring of Klauz, a beautiful human boy. He develops quickly over the following weeks and months, and you're relieved when he turns out to be a relatively bright kid - able to understand his mother's canine growls as well as human language. It's quite a bit of work to keep up with him, especially when he enters puberty and an inheritance of his father comes through - the ability to create a seductive pheromone-laden musk around himself. By the time you realize what's happening and have a stern talk with him about holding back a bit and using condoms, he managed to impregnate two teachers, five cheerleaders, one of your neighbors and her two German shepherd bitches. Thankfully he went through half the football team too over the course of that weekend, otherwise there'd have been even more knocked up teenagers. His growth spurts eventually slow to human levels and by the time he's a year old, the by then teenage looking kid gets discovered as an actor, owing his good looks and 'charming' personality...";
 				else if Libido of Helen is 4: [by Kara]

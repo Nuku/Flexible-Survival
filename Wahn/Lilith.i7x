@@ -472,7 +472,7 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith > 0: [not t
 				LineBreak;
 				say "     Licking her lips, Lilith moves a hand to take hold of your by now fully erect manhood, giving it a soft pull to make you move closer. Sticking out her tongue, she runs it up the underside of your shaft, then teasingly brushes it over just the edge of your cockhead before finally taking it between her soft lips and gently sucking on it. 'Mmmh,' she hums in obvious satisfaction as she tastes the precum leaking out of your slit and gives your balls an appreciative squeeze. Pulling off your cock with a pop a moment later, the demoness looks up at you and says, 'You're gonna be tasty', then adds with a little nod over her shoulder '...or did you want to take the back door instead?'";
 				LineBreak;
-				say "     Which shall it be? Get a blow-job from Lilith ([link]Y[as]y[end link]), or butt-fuck her ([link]N[as]n[end link])?";
+				say "     Which shall it be? Get a blowjob from Lilith ([link]Y[as]y[end link]), or butt-fuck her ([link]N[as]n[end link])?";
 				if Player consents: [bj from Lilith]
 					LineBreak;
 					say "     Perfectly happy to have this hot seductress go down on your cock, you just put a hand on her head as an answer and pull her back against your crotch. Lilith's incredibly soft succubus lips immediately slide back down your shaft, then sink down its length deeper and deeper until she finally has all of it in her mouth. Her hands stroke up and down your sides for a moment, then she grabs your hips to hold on to something and starts sliding up and down on Elijah's shaft again while she gives you your blowjob.";

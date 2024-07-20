@@ -7,9 +7,7 @@ Version 2 of Wildcat by Stripes begins here.
 Section 1 - Creature Responses
 
 to say wildcatdesc:
-	setmongender 5; [creature is herm]
 	say "     [if showlocale is true]Emerging from a pile of junk, rises[else]You are suddenly ambushed by[end if] a looming, feline form. This gigantic feline is over seven feet tall and about five wide at the shoulders, [if scalevalue of Player < 4]it towers over your smaller form[else if scalevalue of Player > 4]it's clearly the largest thing around here, smaller to you as it may be[else if scalevalue of Player is 4]it approximately matches your own size[end if]. Her head is shaped much like a housecat's, but much larger and more feral. She has some striped markings and [one of]a notched ear[or]a scarred muzzle[or]a scratched nose[or]is using a Buick hood ornament as an eyepatch[at random]. The big kitty has loose pieces of junk, mostly car panels, parts and hubcaps strapped on to act as both camouflage and armor over her brown and rust-colored fur. She has warped and bent a car hood into a chestplate, covering her large breasts and midriff. Given the marks on it and the size of her massive paws, she probably did it by hand. Looking down further, you spot another bulging plate between her legs. Given you experience with creatures in this city, you don't need to see underneath it to know what's waiting there for you if this wildcat has her way.";
-
 
 to say losetowildcat:
 	if HP of Player > 0:
@@ -66,8 +64,14 @@ to say losetowildcat:
 to say beatthewildcat:
 	say "     Managing several strong hits on the armored feline, you force her back. She growls makes to swing at you again, but then pounces ten feet up onto a pile of junk, then leaps off somewhere on the other side, making her escape.";
 
-
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Wildcat"	"[PrepCombat_Wildcat]"
+
+to say PrepCombat_Wildcat:
+	setmongender 5; [creature is herm]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

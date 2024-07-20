@@ -115,15 +115,8 @@ to say ResolveEvent Onyx Crow:
 		say "     Speaking of, in the next room in the wing, you spot a display case that looks like it's been broken into recently. The wooden case is cracked and even from here, you can see that the lid doesn't close properly anymore. There's some rope tying it shut and a tag labelled 'Restoration needed' on it. If that's her handiwork, it appears the treasure hunter was about to get her prize when she was caught in the act.";
 		WaitLineBreak;
 		say "     But unfortunately, you also won't have an easy time of it. It appears that Valerie's put a watchdog to guard the artifact. Or three watchdogs. Or three in one. Between you and the case are the three snarling heads of a giant dog beast. Like Cerberus of myth guarding the entrance to the Underworld, so does this monster bar your way to the black treasure.";
-		now cerbfight is 3;
 		challenge "Cerberus";
-		if cerbfight is 3:
-			say "     Fleeing the three-headed dog, you run from the wing and try to make your way back to the lobby. You'll have to recover and try coming back later. Maybe the dog will be gone by then, but you don't think you'll be that lucky.";
-			now Resolution of Onyx Crow is 3; [fled the cerberus]
-		else if cerbfight is 2:
-			say "     Having passed out after the lustful creature has had its way with you, you awake to find yourself ejected from the room. You are wet and sticky with canine slobber and the herm's juices, which you try your best to wipe off to remove the evidence of your fight with the guard before returning to the lobby. You'll have to recover and try returning there later. Perhaps you'll fare better next time, though part of you certainly enjoyed losing. You find yourself thinking it might just be more fun to keep losing to the creature.";
-			now Resolution of Onyx Crow is 2; [lost to cerberus]
-		else if cerbfight is 1:
+		if fightoutcome < 20: [player won]
 			say "     Having beaten the guard, you are now free to advance upon the case. Looking it over, you can see that it does indeed hold the Onyx Crow. It is a crow's head carved from a glossy, black stone. The detail is a little rough, but there is an ornate band of gold around its base as well as golden eyes. There are also thin traces of gold that run down the back of its had, forming a stylized pattern. It looks expensive enough, but there must be much more valuable pieces than this one.";
 			WaitLineBreak;
 			say "     Investigating further, you look over at the museum's description of this piece. It goes on to talk about it being found in a collection of Greek treasures. '...discovered by so-and-so... treasure vault... king of Crete in the year blah-blah-blah...' The only interesting detail comes when it talks about how the Onyx Crow was probably the headpiece to a staff or scepter and likely of ceremonial significance. Examining the carving, you do find that there is a square hole carved into the underside, which the plaque notes historians believe was used to fit it into place on the handle, but all that remains is the headpiece.";
@@ -133,7 +126,12 @@ to say ResolveEvent Onyx Crow:
 			now HP of Solstice is 2;
 			now Resolution of Onyx Crow is 1; [won and got the artifact]
 			now Onyx Crow is resolved;
-
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "     Having passed out after the lustful creature has had its way with you, you awake to find yourself ejected from the room. You are wet and sticky with canine slobber and the herm's juices, which you try your best to wipe off to remove the evidence of your fight with the guard before returning to the lobby. You'll have to recover and try returning there later. Perhaps you'll fare better next time, though part of you certainly enjoyed losing. You find yourself thinking it might just be more fun to keep losing to the creature.";
+			now Resolution of Onyx Crow is 2; [lost to cerberus]
+		else if fightoutcome is 30: [fled]
+			say "     Fleeing the three-headed dog, you run from the wing and try to make your way back to the lobby. You'll have to recover and try coming back later. Maybe the dog will be gone by then, but you don't think you'll be that lucky.";
+			now Resolution of Onyx Crow is 3; [fled the cerberus]
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -155,7 +153,7 @@ an everyturn rule:
 
 an everyturn rule:
 	if ( HP of Solstice is 3 or HP of Solstice is 4 ) and Solstice is in Makeshift Rec Room and the player is in the Grey Abbey Library:
-		say "     Returning to the central room of the library, you are startled to find a new person casually waiting for you. Solstice is here, leaning against one of the bookshelves, glancing through a book. The vulpogryph smiles and tucks the book back on the shelf as you come striding over[if HP of Fang is 1 or HP of Fang is 2]. Sparing a quick glance to Fang, who seems as surprised to find the intruder here, the guard wolf dips [PosPro of Fang] ears and slinks back, clearly having failed in [PosPro of Fang] guard duties somehow[else if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 5 or HP of Fang is 6]. Fang growls a little from [PosPro of Fang] post at the door, clearly upset that this intruder somehow managed to get past [ObjectPro of Fang] unnoticed[end if].";
+		say "     Returning to the central room of the library, you are startled to find a new person casually waiting for you. Solstice is here, leaning against one of the bookshelves, glancing through a book. The vulpogryph smiles and tucks the book back on the shelf as you come striding over[if HP of Fang is 1 or HP of Fang is 2]. Sparing a quick glance to Fang, who seems as surprised to find the intruder here, the guard wolf dips [PosPro of Fang] ears and slinks back, clearly having failed in [PosPro of Fang] guard duties somehow[else if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 5 or HP of Fang is 6 or HP of Fang is 7]. Fang growls a little from [PosPro of Fang] post at the door, clearly upset that this intruder somehow managed to get past [ObjectPro of Fang] unnoticed[end if].";
 		say "     'Hey there. Pretty nice setup [if ( number of booked people + number of bunkered people ) > 2]you and your pals have[else]you've[end if] got going here. Not much interest to the critters out there and a reinforced bunker in case things get really bad. Definitely need to get some more supplies for that, though. Things got rather hectic back at my old place, so I figured I could move in here with you, sweetie.' She runs a taloned paw along your side.";
 		if HP of Solstice is 3:
 			say "     Still upset with her about the feather, you push her hand away. 'What? Oh, I'm so sorry, hon. I didn't mean for anything like that to happen. It must've fallen out,' she says apologetically[if the player is partvg]. 'It certainly looks good on you though,' she adds with a grin and another stroke to your altered body[end if]. You calm down, accepting that it could very well have been an accident.";

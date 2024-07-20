@@ -5863,7 +5863,7 @@ name	desc	weight	object
 skunk milk is a grab object.
 skunk milk is milky.
 skunk milk is infectious.
-Strain of skunk milk is "Skunk".
+Strain of skunk milk is "Skunk Female".
 Usedesc of skunk milk is "[skunk milk use]".
 
 to say skunk milk use:

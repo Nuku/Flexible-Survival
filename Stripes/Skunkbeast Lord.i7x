@@ -40,35 +40,9 @@ to say ResolveEvent Skunkbeast Battle:
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
 		LineBreak;
-		now skunkbeaststatus is 3;
 		say "     You jump from the bushes, making a dash for the rifle, but as you're picking it up, the giant beast is there and knocks it from your hands. The enormous skunk growls menacingly and tries to bash you with its paw, but narrowly dodge out of the way. You and the beast end up in a circle of the other skunks, locked in a match to grab or destroy the gun.";
 		challenge "Skunkbeast Lord";
-		if skunkbeaststatus is 3:		[run away]
-			say "     Unable to keep going against the fearsome might of the giant skunk, you fake it out with a final feint towards the gun and then make a break for the loose cordon of skunk creatures which gathered to watch their lord's battle. As you weave between the skunk girls and beast, they cheer to the sounds of those giant paws crushing the gun into rubble. You are disappointed that you weren't able to gain the strange weapon, but are glad to make it out of there alive and intact after facing such a foe.";
-			now Resolution of Skunkbeast Battle is 2; [ran away]
-		else if skunkbeaststatus is 2:	[defeated]
-			say "     You are knocked down by the skunkbeast lord. Pinning you down with one of his massive paws, he slams the other down onto the gun repeatedly, shattering and grinding the hated thing into the ground. With you trapped and defeated, several of the female skunks rush up, laving attention upon the victory, nuzzling and caressing him all over. Special attention is paid to his large, throbbing cock, which they stroke and rub with lustful moans and playful grins at you. That's when you realize that they're keeping the dripping, pulsing meat pointed straight at you and you are awash in a torrent of skunk semen as the giant growls loudly and proudly in triumphant climax.";
-			now humanity of Player is 0;
-			[puts Skunk as lead monster for infection and impregnation]
-			setmonster "Skunk" silently;
-			turn the Player into a "Skunk" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
-			if hellHoundLevel is 0:
-				follow the sex change rule;
-				follow the sex change rule;
-				follow the sex change rule;
-			WaitLineBreak;
-			if Libido of Player < 75, now Libido of Player is 75;
-			say "     The thick, musky seed soaks into you, flooding your mouth and nose, forcing you to swallow it down as you struggle to breathe. Your body soaks up the infected cum, changing rapidly, gaining a sexy, womanly figure like the skunk girls around you[if Player is herm]. Your ebon cock is stiff and leaking cum, but it is your hot, dripping pussy that aches for attention[else if Player is male]. Your ebon, skunk cock is stiff and leaking cum[else if Player is female]. Your pussy is hot and dripping, aching for attention[end if]. When the skunkbeast moves its paw to release you, your paws move to your groin, playing with yourself lustfully as your flesh becomes the same glossy black of the skunk girls. As your transformation continues, you notice the skunkbeast lord, whom you are starting to identify as your master, still standing over you with his large, throbbing cock. You are up in an instant, licking and kissing at it, lavishing attention upon that wonderful cock. He permits you to service him like this for a few minutes before releasing a soft growl. Obediently you turn and present yourself, raising your tail and letting your new lord and master mount you and mate you as he takes you as his latest fucktoy pet.";
-			if skunk kit is tamed:
-				say "     You briefly take notice of Peppy running around. He is soon taken into the arms of several of the skunk girls, who nurse him and lavish attention on him. When you look over again later, he has grown considerably, well on his way to becoming a skunkbeast as he fucks one of the buxom skunks. After you're bred several times by your new lord, he pushes you over to the new skunkbeast, allowing you to suck its cock for a tasty load of skunk cum while your lord mounts another of the new girls.";
-			wait for any key;
-			trigger ending "Skunkbeast Lord Fucktoy";
-			end the story saying "Having become a fucktoy for the Skunkbeast Lord, you lose yourself to the infection.";
-			now Resolution of Skunkbeast Battle is 3; [lost]
-			wait for any key;
-			follow the turnpass rule;
-			stop the action;
-		else if skunkbeaststatus is 1:		[victory]
+		if fightoutcome < 20: [player won]
 			say "     With the skunkbeast lord charging at you, you waste no time in firing the power rifle at the creature. The giant staggers, struggling to keep charging as your weapon sends a stream of green energy that washes over it. Each step it tries to make gets slower as you can see it starting to lose cohesion. You laugh triumphantly as it falls and the deterioration accelerates.";
 			say "     But your success is short lived as the mob of skunk creatures, momentarily forgotten in your moment of triumph, swarm over you. You are held down by a mass of squirming, black and white flesh, feeling groping paws, plump breasts, buxom bottoms, throbbing cocks and juicy cunts all over you. Even as you try to point it at them, the rifle is pulled from your arms and you can hear it being shattered despite being too buried to see it. You are briefly worried that they're out for revenge, but they all lavish attention on you, almost fighting one another to get an opportunity to touch you. But the reason for this hardly seems to matter now, the pleasure of all that sexy skunk flesh against yours becoming all you can think about as you start to change, feeling their infection rapidly taking hold.";
 			WaitLineBreak;
@@ -78,7 +52,7 @@ to say ResolveEvent Skunkbeast Battle:
 			[puts Skunk as lead monster for infection and impregnation]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if Name entry is "Skunk":
+				if Name entry is "Skunk Female":
 					now MonsterID is y;
 					break;
 			now non-infectious entry is true; [reg. Skunk infection closed]
@@ -135,6 +109,7 @@ to say ResolveEvent Skunkbeast Battle:
 				say "     Several of the skunk girls move in to lavish attention upon you, grooming your fur, stroking your face, licking your dripping pussy and teasing your clit[if skrp is 1]. The skunk head at your waist shares sexy kisses with the skunk girls as well and even has one of them press her pussy to her muzzle to be eaten out[end if]. Several of the busty girls take turns suckling from your breasts, drawing out your milk. Once they get you well and truly aching for it, you raise your tail and give it an enticing swish towards the waiting skunkbeasts. They start to growl and scuffle playfully, vying for the right to mount you. Eventually a winner is chosen and you moan loudly as his cock is pressed into your heated folds. The others aren't left unsatisfied, with many other girls around eager to get their share of skunkbeast cock. They mate loudly and wildly all around you, providing a lovely show that fills you with pride.";
 				say "     You get fucked good and hard by him, and several others, over the course of the wild orgy of skunk sex that's broken out to celebrate their victory over the mercenaries and the coronation of their new skunkbeast lady. Eventually, the lustful fucking comes to an end and the skunks, satisfied (and in the case of all the girls, stuffed to overflowing with cum) disperse back into the woods.[impregchance]";
 			now Resolution of Skunkbeast Battle is 1; [won]
+			now skunkbeaststatus is 1;
 			if humanity of Player < 10:
 				wait for any key;
 				end the story saying "Having become the new Skunkbeast Lord, you lose yourself to the infection.";
@@ -142,38 +117,66 @@ to say ResolveEvent Skunkbeast Battle:
 				wait for any key;
 				follow the turnpass rule;
 				stop the action;
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "     You are knocked down by the skunkbeast lord. Pinning you down with one of his massive paws, he slams the other down onto the gun repeatedly, shattering and grinding the hated thing into the ground. With you trapped and defeated, several of the female skunks rush up, laving attention upon the victory, nuzzling and caressing him all over. Special attention is paid to his large, throbbing cock, which they stroke and rub with lustful moans and playful grins at you. That's when you realize that they're keeping the dripping, pulsing meat pointed straight at you and you are awash in a torrent of skunk semen as the giant growls loudly and proudly in triumphant climax.";
+			now humanity of Player is 0;
+			[puts Skunk as lead monster for infection and impregnation]
+			setmonster "Skunk Female" silently;
+			turn the Player into a "Skunk Female" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
+			if hellHoundLevel is 0:
+				follow the sex change rule;
+				follow the sex change rule;
+				follow the sex change rule;
+			WaitLineBreak;
+			if Libido of Player < 75, now Libido of Player is 75;
+			say "     The thick, musky seed soaks into you, flooding your mouth and nose, forcing you to swallow it down as you struggle to breathe. Your body soaks up the infected cum, changing rapidly, gaining a sexy, womanly figure like the skunk girls around you[if Player is herm]. Your ebon cock is stiff and leaking cum, but it is your hot, dripping pussy that aches for attention[else if Player is male]. Your ebon, skunk cock is stiff and leaking cum[else if Player is female]. Your pussy is hot and dripping, aching for attention[end if]. When the skunkbeast moves its paw to release you, your paws move to your groin, playing with yourself lustfully as your flesh becomes the same glossy black of the skunk girls. As your transformation continues, you notice the skunkbeast lord, whom you are starting to identify as your master, still standing over you with his large, throbbing cock. You are up in an instant, licking and kissing at it, lavishing attention upon that wonderful cock. He permits you to service him like this for a few minutes before releasing a soft growl. Obediently you turn and present yourself, raising your tail and letting your new lord and master mount you and mate you as he takes you as his latest fucktoy pet.";
+			if skunk kit is tamed:
+				say "     You briefly take notice of Peppy running around. He is soon taken into the arms of several of the skunk girls, who nurse him and lavish attention on him. When you look over again later, he has grown considerably, well on his way to becoming a skunkbeast as he fucks one of the buxom skunks. After you're bred several times by your new lord, he pushes you over to the new skunkbeast, allowing you to suck its cock for a tasty load of skunk cum while your lord mounts another of the new girls.";
+			wait for any key;
+			trigger ending "Skunkbeast Lord Fucktoy";
+			end the story saying "Having become a fucktoy for the Skunkbeast Lord, you lose yourself to the infection.";
+			now Resolution of Skunkbeast Battle is 3; [lost]
+			now skunkbeaststatus is 2;
+			wait for any key;
+			follow the turnpass rule;
+			stop the action;
+		else if fightoutcome is 30: [fled]
+			say "     Unable to keep going against the fearsome might of the giant skunk, you fake it out with a final feint towards the gun and then make a break for the loose cordon of skunk creatures which gathered to watch their lord's battle. As you weave between the skunk girls and beast, they cheer to the sounds of those giant paws crushing the gun into rubble. You are disappointed that you weren't able to gain the strange weapon, but are glad to make it out of there alive and intact after facing such a foe.";
+			now Resolution of Skunkbeast Battle is 2; [ran away]
 	else:
 		LineBreak;
 		say "     You slink further into the bushes, catching a glimpse of the skunkbeast lord slamming his two large forepaws down onto the advanced rifle, reducing it to advanced rubble. It vehemently strikes it several more times, grinding the pieces into the ground before turning around and approaching his collection of new busty skunk girls who, having given into their infection, start lavishing attention upon him and vying for his cock to fill them. You watch him fuck one of them while the others settle for the few remaining skunkbeasts, all lustfully screaming as they're fucked and bred by their bestial lovers.";
 		now Resolution of Skunkbeast Battle is 99; [disinterest]
 	now Skunkbeast Battle is resolved;
 
-
 Section 2 - Creature Responses
 
 to say sbldesc:
-	setmongender 3; [creature is male]
-	choose row MonsterID from Table of Random Critters;
-	let debit be 0;
-	if HardMode is true and level of Player > 15, let debit be level of Player - 15;
 	say "     This skunkbeast is much larger than the others you've seen in the forest. While it mostly resembles a normal skunk, it is massive and almost the size of a small elephant. It has large paws with elongated claws and large, pointed teeth filling its giant muzzle. Under its belly, you can see its huge, black cock which leaks precum that is rich with the arousing scent of the skunk creatures. Several of the other skunks and skunkbeasts move in around you both but don't interfere as this battle begins. The skunkbeast lord's dark eyes are fixed on you with an animalistic intent, though it is cunning enough to keep you from reaching the gun. You will have to try your best to fight off the creature in the hopes of reaching the weapon if you want any hope of winning this battle.";
-	now HP entry is 120 + ( debit * 6 ); [- How many HP has the monster got? -]
-	now monsterHP is 120 + ( debit * 6 );
-	now wdam entry is 16 + ( ( 2 * debit ) / 5 ); [-Amount of Damage monster Does when attacking.-]
 
 to say beatthesbl:
-	now skunkbeaststatus is 1;
 	say "     Your final blow causes the skunkbeast to stagger back a few steps. It roars angrily and pulls itself back to its feet, far from defeated, but you take advantage of the opportunity to secure the strange rifle and train it on the skunkbeast lord.";
 
 to say losetosbl:
-	now skunkbeaststatus is 2;
 	if HP of Player > 0:
 		say "     The alluring scent and powerful, masculine might of this creature become too tempting for you and you drop to your knees before it, unwilling to keep resisting it.";
 	else:
 		say "     Feeling worn down by the skunkbeast's attack, you make a final rush for the rifle. But just as you're about to put your hand on it, a big paw comes swinging in, knocking you to the ground with the rifle just out of reach.";
 
-
 Section 3 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Skunkbeast Lord"	"[PrepCombat_Skunkbeast Lord]"
+
+to say PrepCombat_Skunkbeast Lord:
+	setmongender 3; [creature is male]
+	choose row MonsterID from Table of Random Critters;
+	let debit be 0;
+	if HardMode is true and level of Player > 15, let debit be level of Player - 15;
+	now HP entry is 120 + ( debit * 6 ); [- How many HP has the monster got? -]
+	now monsterHP is 120 + ( debit * 6 );
+	now wdam entry is 16 + ( ( 2 * debit ) / 5 ); [-Amount of Damage monster Does when attacking.-]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -380,7 +383,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Skunk Infection"	"Infection"	""	Skunk Infection rule	1000	false
 
 This is the Skunk with Frank rule:
-	if Player has no body of "Skunk" or Player has no body of "Skunk Taur":
+	if Player has no body of "Skunk Female" or Player has no body of "Skunk Male" or Player has no body of "Skunk Taur":
 		make no decision;
 	if Player is female and ( franksex > 2 or frankmalesex > 2 ):
 		trigger ending "Skunk with Frank"; [Here it states, that the ending has been played.]
@@ -486,7 +489,7 @@ This is the Peppy's Epilogue rule:
 		make no decision;
 	if skunk kit is tamed:
 		trigger ending "Peppy's Epilogue";
-		if Player has a non-shifting body of "Skunk":
+		if Player has a non-shifting body of "Skunk Female" or Player has a non-shifting body of "Skunk Male":
 			if humanity of Player < 10:
 				if Player is female:
 					say "     Surrendering to the infection, you make an even better mother to Peppy, as you soon give your first little skunk child several siblings to play with. Still, the first little skunk you rescued always has a special place in your skunky heart. And once he has grown up enough, he also proves to be a fine skunk mate for you in your new life, and you bear him even more wonderful skunk kits for you to raise.";
@@ -524,7 +527,7 @@ This is the Skunk Infection rule:
 	if Player has no body of "Skunk" and Player has no body of "Skunk Taur":
 		make no decision; [Use exclusion rather than changing indentation]
 	trigger ending "Skunk Infection"; [Here it states, that the ending has been played.]
-	if Player has a body of "Skunk":
+	if Player has a body of "Skunk Female" or Player has a body of "Skunk Male":
 		if humanity of Player < 10:
 			if Player is female:
 				say "     Surrendering to the infection, you are drawn back to the forest by the alluring scent of the skunkbeasts on the wind. Finding one, you are rutted repeatedly and made into one of his many mates, bred full of beautiful skunk kits[if Player is male]. You do occasionally sneak off to grab one of the busty females and slake your male needs on them, siring a few kits of your own behind your master's back[end if].";

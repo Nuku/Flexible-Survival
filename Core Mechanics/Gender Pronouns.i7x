@@ -762,6 +762,13 @@ to say sir:
 	else:
 		say "ma'am";
 
+to say dude:
+	if PronounSet of Player is "Female" or PronounSet of Player is "Herm":
+		say "dudette";
+	else:
+		say "dude";
+
+
 [Being verbs]
 
 to say isare:

@@ -368,7 +368,7 @@ To mousefuck:
 				say "     'Oh yes, that's wonderful dear, right, right, oh yes right there,' she murmurs delightfully as you warm to the task. Working your fingers around her you hold her open as you begin to work your tongue deeper and deeper, delving for the source of the amazingly flavored honey that greets your sense of taste at every lick. As you continue, you find the little places that seem to make her quiver, taking stock of them as it were. Without warning the mouse you begin to play at each of them, changing the order, again and again. All too soon a mousy scream can be heard and your whole face becomes damp with her discharge. 'Oh... oh yes dear, come, let me clean you up,' she urges, helping you into a cuddle as she turns, lapping at your face. 'Let me take good care of you,' she adds with a smile, tongue pausing for just a moment to speak.";
 			say "     Waking up, you find yourself laying in the mouse's arms. 'Morning,' she whispers softly when she notices you awake. With a kiss she settles your feet to the floor and gives you a little swat on the rear, sending you back to your tasks.";
 			if "Male Preferred" is listed in feats of Player:
-				say "     Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";
+				say "     Your body hums loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";
 				increase mousespot by 1;
 			else:
 				follow the sex change rule;

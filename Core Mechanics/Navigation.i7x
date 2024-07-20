@@ -46,7 +46,7 @@ Sweet Tooth	"Sweet Tooth"	"Sweet Tooth"	"Fairgrounds"
 Entrance to the High Rise District	"Entrance to the High Rise District"	"Entrance to the High Rise District"	"High Rise District"
 Agency	"Agency"	"Agency"	"High Rise District"
 Alex's Condo	"Alex's Condo"	"Alex's Condo"	"High Rise District"
-Argos Antiques	"Argos Antiques"	"Argos Antiques"	"High Rise District"
+Argos's Antiques	"Argos Antiques"	"Argos Antiques"	"High Rise District"
 Bone-Appetit	"Bone-Appetit"	"Bone-Appetit"	"High Rise District"
 Butterfly Grove	"Butterfly Grove"	"Butterfly Grove"	"High Rise District"
 Cherry's Apartment	"Cherry's Apartment"	"Cherry's Apartment"	"High Rise District"
@@ -54,7 +54,7 @@ Clayton's Front Yard	"Clayton's Front Yard"	"Clayton's Front Yard"	"High Rise Di
 Flower Garden	"Flower Garden"	"Flower Garden"	"High Rise District"
 Lizard Parlor	"Lizard Parlor"	"Lizard Parlor"	"High Rise District"
 Rex's Place	"Rex's Place"	"Rex's Place"	"High Rise District"
-Snapjaw_Beach_Camp	"Snapjaw_Beach_Camp"	"Snapjaw Beach Camp"	"High Rise District"
+Snapjaw_Beach_Camp	"Snapjaw Beach Camp"	"Snapjaw_Beach_Camp"	"High Rise District"
 Zephyr Lobby	"Zephyr"	"Zephyr Lobby"	"High Rise District"
 City Hospital	"City Hospital"	"City Hospital"	"Hospital"
 Psych Department	"Psych Department"	"Psych Department"	"Hospital"
@@ -66,7 +66,9 @@ Hyena Shack	"Hyena Shack"	"Hyena Shack"	"Junkyard"
 Ogre's Camp	"Ogre's Camp"	"Ogre's Camp"	"Junkyard"
 Steven's Home	"Steven's Home"	"Steven's Home"	"Junkyard"
 Foxy Hideaway	"Foxy Hideaway"	"Foxy Hideaway"	"Misc"
+Haunted House Entrance	"Haunted House Entrance"	"Haunted House Entrance"	"Misc"
 Ruined Apartments	"Ruined Apartments"	"Ruined Apartments"	"Misc"
+Ruined Restaurant	"Ruined Restaurant"	"Ruined Restaurant"	"Misc"
 Qytat Plaza	"Qytat Plaza"	"Qytat Plaza"	"Misc"
 Shifting Room	"Shifting Room"	"Shifting Room"	"Misc"
 Museum Foyer	"Museum Foyer"	"Museum Foyer"	"Museum"
@@ -90,6 +92,7 @@ Island Pier	"Island Pier"	"Island Pier"	"Seaside"
 Kai's Campsite	"Kai's Campsite"	"Kai's Campsite"	"Seaside"
 Pirate Island	"Pirate Island"	"Pirate Island"	"Seaside"
 Viking Ship	"Viking Ship"	"Viking Ship"	"Seaside"
+Sinking Swamps	"Sinking Swamps"	"Sinking Swamps"	"Swamp"
 Stables Hotel	"Stables Hotel"	"Stables Hotel"	"The Stables"
 Master's Office	"Master's Office"	"Master's Office"	"The Stables"
 College Campus	"College Campus"	"College Campus"	"Tenvale College"
@@ -98,12 +101,14 @@ Campus Gym	"Campus Gym"	"Campus Gym"	"Tenvale College"
 Paleontology Office	"Paleontology Office"	"Paleontology Office"	"Tenvale College"
 Phi Iota Gamma	"Phi Iota Gamma"	"Phi Iota Gamma"	"Tenvale College"
 Urban Forest	"Urban Forest"	"Urban Forest"	"Urban Forest"
+Ariel's Aria	"Ariel's Aria"	"Ariel's Aria"	"Urban Forest"
 Bunny House	"Bunny House"	"Bunny House"	"Urban Forest"
 Deep Forest	"Deep Forest"	"Deep Forest"	"Urban Forest"
 Staghorn	"Staghorn"	"Staghorn"	"Urban Forest"
 Happy Puppy Kennel	"Happy Puppy Kennel"	"Happy Puppy Kennel"	"Urban Forest"
 Ironscale Hollow	"Ironscale Hollow"	"Ironscale Hollow"	"Urban Forest"
 Avalon-Crossroads	"Avalon-Crossroads"	"Avalon-Crossroads"	"Urban Forest"
+Mystical Falls	"Mystical Falls"	"Mystical Falls"	"Urban Forest"
 Camp Of The Snake	"Camp Of The Snake"	"Camp Of The Snake"	"Urban Forest"
 Hidden Rock Cavern Entrance	"Hidden Rock Cavern Entrance"	"Hidden Rock Cavern Entrance"	"Urban Forest"
 Warehouse District	"Warehouse District"	"Warehouse District"	"Warehouse District"
@@ -156,6 +161,7 @@ carry out destinationcheck:
 	let PrintedRedLightDistrict be 0;
 	let PrintedSeaside be 0;
 	let PrintedTheStables be 0;
+	let PrintedSwamp be 0;
 	let PrintedTenvaleCollege be 0;
 	let PrintedUrbanForest be 0;
 	let PrintedWarehouseDistrict be 0;
@@ -209,6 +215,9 @@ carry out destinationcheck:
 				-- "Seaside":
 					say "[if PrintedSeaside is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
 					increment PrintedSeaside;
+				-- "Swamp":
+					say "[if PrintedSwamp is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
+					increment PrintedSwamp;
 				-- "The Stables":
 					say "[if PrintedTheStables is 0][line break][bold type][NavList entry][roman type]: [else] | [end if][link][bracket][RoomName entry][close bracket][as]nav [NavText entry][end link]";
 					increment PrintedTheStables;
@@ -264,6 +273,7 @@ carry out navigating:
 	now Player is in noun;
 	follow the ngraphics_blank rule;
 	NavInEvent_Check noun;
+	now inasituation is false; [cleaning up possible open ended flags]
 
 NavCheckReturn is a truth state that varies.
 

@@ -646,7 +646,7 @@ Instead of fucking Monty:
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
-			now description entry is "Get a blow-job";
+			now description entry is "Get a blowjob";
 		]
 		if Player is female:
 			choose a blank row in table of fucking options;

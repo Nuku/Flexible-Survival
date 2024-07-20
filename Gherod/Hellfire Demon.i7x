@@ -25,25 +25,22 @@ to say GenerateTrophyList_Hellfire_Demon:
 Section 2 - Creature Responses
 
 to say HellDemon wins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		if HP of Player > 0: [player submits]
-			say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction, as you kneel down in front of him. 'Finally someone who knows their place. That's a good start, but let's see how much you can handle.' With that said, the hellish creature prepares to use you as he sees fit...";
-			if a random chance of 1 in 2 succeeds:
-				HellDemonBJForced;
-			else if Player is male or Player is neuter:
-				HellDemonAnalForced;
-			else if Player is female:
-				HellDemonPussyForced;
-		else: [player loses]
-			say "     Unable to continue fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'You know how to put up a fight! That left me all boned up... Perfect, I was just thinking about testing your holes.' With that said, the hellish creature prepares to use you as he sees fit...";
-			if a random chance of 1 in 2 succeeds:
-				HellDemonBJForced;
-			else if Player is male or Player is neuter:
-				HellDemonAnalForced;
-			else if Player is female:
-				HellDemonPussyForced;
+	if HP of Player > 0: [player submits]
+		say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction, as you kneel down in front of him. 'Finally someone who knows their place. That's a good start, but let's see how much you can handle.' With that said, the hellish creature prepares to use you as he sees fit...";
+		if a random chance of 1 in 2 succeeds:
+			HellDemonBJForced;
+		else if Player is male or Player is neuter:
+			HellDemonAnalForced;
+		else if Player is female:
+			HellDemonPussyForced;
+	else: [player loses]
+		say "     Unable to continue fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'You know how to put up a fight! That left me all boned up... Perfect, I was just thinking about testing your holes.' With that said, the hellish creature prepares to use you as he sees fit...";
+		if a random chance of 1 in 2 succeeds:
+			HellDemonBJForced;
+		else if Player is male or Player is neuter:
+			HellDemonAnalForced;
+		else if Player is female:
+			HellDemonPussyForced;
 
 to HellDemonBJForced:
 	project Figure of HellfireDemon_hard_icon;
@@ -92,95 +89,92 @@ to HellDemonPussyForced:
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Hellfire Demon";
 
 to say HellDemon loses:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "     You successfully manage to fend off all of the demon's attacks while weakening him in the process. Though as the battle pressed on, you can't help but notice that he popped a boner out of fighting you, making his jockstrap... reduntant, to say the least, given the enormous size of his cock. '[Boygirl], you hit hard! That surely made me horny... I'll let you go, but I won't refuse some fun if you're down for it, sexy. Just a warning, though... I like it [bold type]rough[roman type].' With such a blunt proposal, [bold type]how will you proceed?[roman type][line break]";
-		now sextablerun is 0;
-		blank out the whole of table of fucking options;
-		[]
+	say "     You successfully manage to fend off all of the demon's attacks while weakening him in the process. Though as the battle pressed on, you can't help but notice that he popped a boner out of fighting you, making his jockstrap... reduntant, to say the least, given the enormous size of his cock. '[Boygirl], you hit hard! That surely made me horny... I'll let you go, but I won't refuse some fun if you're down for it, sexy. Just a warning, though... I like it [bold type]rough[roman type].' With such a blunt proposal, [bold type]how will you proceed?[roman type][line break]";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Offer to suck his dick";
+	now sortorder entry is 1;
+	now description entry is "Get a taste of his demon cock";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Worship the demon's feet";
+	now sortorder entry is 7;
+	now description entry is "Work your tongue around those crimson toes";
+	[]
+	if Player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Offer to suck his dick";
-		now sortorder entry is 1;
-		now description entry is "Get a taste of his demon cock";
-		[]
+		now title entry is "Facefuck the demon";
+		now sortorder entry is 2;
+		now description entry is "Make him blow you and take it down his throat";
+	[]
 		choose a blank row in table of fucking options;
-		now title entry is "Worship the demon's feet";
-		now sortorder entry is 7;
-		now description entry is "Work your tongue around those crimson toes";
-		[]
-		if Player is male:
+		now title entry is "Fuck his muscley ass";
+		now sortorder entry is 3;
+		now description entry is "Prepare his hole and give him a hard pounding";
+	[]
+		choose a blank row in table of fucking options;
+		now title entry is "Offer your ass for his pleasure";
+		now sortorder entry is 4;
+		now description entry is "Let him use your ass and give you a nice fuck";
+	[]
+		if demonologist is listed in companionList of Player and libido of Xaedihr > 0:
 			choose a blank row in table of fucking options;
-			now title entry is "Facefuck the demon";
-			now sortorder entry is 2;
-			now description entry is "Make him blow you and take it down his throat";
-		[]
-			choose a blank row in table of fucking options;
-			now title entry is "Fuck his muscley ass";
-			now sortorder entry is 3;
-			now description entry is "Prepare his hole and give him a hard pounding";
-		[]
-			choose a blank row in table of fucking options;
-			now title entry is "Offer your ass for his pleasure";
-			now sortorder entry is 4;
-			now description entry is "Let him use your ass and give you a nice fuck";
-		[]
-			if demonologist is listed in companionList of Player and libido of Xaedihr > 0:
-				choose a blank row in table of fucking options;
-				now title entry is "Double tag him with Xaedihr";
-				now sortorder entry is 99;
-				now description entry is "Fuck him from both sides";
-		[]
-		if Player is female:
-			choose a blank row in table of fucking options;
-			now title entry is "Sit on his face";
-			now sortorder entry is 5;
-			now description entry is "Make him lick your pussy";
-		[]
-			choose a blank row in table of fucking options;
-			now title entry is "Offer your pussy for his pleasure";
-			now sortorder entry is 6;
-			now description entry is "Let him use your pussy as he sees fit";
-		[]
-		sort the table of fucking options in sortorder order;
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]0 - Nevermind[as]0[end link][line break]";
-		while sextablerun is 0:
-			say "Pick the corresponding number> [run paragraph on]";
-			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-				now current menu selection is calcnumber;
-				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry]?";
-				if Player consents:
-					let nam be title entry;
-					now sextablerun is 1;
-					if (nam is "Offer to suck his dick"):
-						say "[HellDemonBJ]";
-					else if (nam is "Facefuck the demon"):
-						say "[HellDemonFacefuck]";
-					else if (nam is "Fuck his muscley ass"):
-						say "[HellDemonFuck]";
-					else if (nam is "Offer your ass for his pleasure"):
-						say "[HellDemonAnal]";
-					else if (nam is "Sit on his face"):
-						say "[HellDemonCun]";
-					else if (nam is "Offer your pussy for his pleasure"):
-						say "[HellDemonPussy]";
-					else if (nam is "Worship the demon's feet"):
-						say "[HellDemonFeet]";
-					else if (nam is "Double tag him with Xaedihr"):
-						say "[HellDemonXMale]";
-					wait for any key;
-			else if calcnumber is 0:
+			now title entry is "Double tag him with Xaedihr";
+			now sortorder entry is 99;
+			now description entry is "Fuck him from both sides";
+	[]
+	if Player is female:
+		choose a blank row in table of fucking options;
+		now title entry is "Sit on his face";
+		now sortorder entry is 5;
+		now description entry is "Make him lick your pussy";
+	[]
+		choose a blank row in table of fucking options;
+		now title entry is "Offer your pussy for his pleasure";
+		now sortorder entry is 6;
+		now description entry is "Let him use your pussy as he sees fit";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
 				now sextablerun is 1;
-				say "     You take a step back and shake off your head, denying his offer. 'No? Heh... Your loss. Though I'm sure you'll change your mind.' he says, before retreating back into the shadows.";
+				if (nam is "Offer to suck his dick"):
+					say "[HellDemonBJ]";
+				else if (nam is "Facefuck the demon"):
+					say "[HellDemonFacefuck]";
+				else if (nam is "Fuck his muscley ass"):
+					say "[HellDemonFuck]";
+				else if (nam is "Offer your ass for his pleasure"):
+					say "[HellDemonAnal]";
+				else if (nam is "Sit on his face"):
+					say "[HellDemonCun]";
+				else if (nam is "Offer your pussy for his pleasure"):
+					say "[HellDemonPussy]";
+				else if (nam is "Worship the demon's feet"):
+					say "[HellDemonFeet]";
+				else if (nam is "Double tag him with Xaedihr"):
+					say "[HellDemonXMale]";
 				wait for any key;
-			else:
-				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-		clear the screen and hyperlink list;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You take a step back and shake off your head, denying his offer. 'No? Heh... Your loss. Though I'm sure you'll change your mind.' he says, before retreating back into the shadows.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say HellDemonBJ:
 	project Figure of HellfireDemon_hard_icon;
@@ -193,7 +187,7 @@ to say HellDemonBJ:
 	say "     ([link]Y[as]y[end link]) - Swallow it."; [gobble up his entire load... or fail trying to]
 	say "     ([link]N[as]n[end link]) - Let it shoot wherever."; [well... gets bathed instead]
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     With your resolve set on swallowing all his sweet and warm load, you start jerking the demon's cock harder and faster while keeping your lips wrapped around it. 'I hope you enjoy it... F-fuck, it's coming...!' Following his stuttering words, you're surprised with a massive surge of cum instantly filling your mouth! You urge to swallow it before more comes in, but it's so much that you end up being forced to quit this inhuman task, and feel the ridiculous amounts of warm sperm just splattering all over your face. He doesn't stop cumming for like a long minute, and you've wasted more than half of his load... 'Damned Hell! I came really hard...' - he pants, looking at you with a grin - 'Don't worry about that. They can only swallow it all if I shove my cock down their throats. But it was cute of you to try.' He whips out the last drops of cum which fall on your already drenched face as he eyes you for a while longer...";
 		say "     'This was fun. Hope we meet again. Maybe next time you won't be able to resist me at all.' With this said, the demon retreats back to the shadows. You try to walk too, but you feel strangely lightheaded and blissful out of nowhere, hindering your attempts at moving properly. You wait it out for a few until you're able to return to your journey.";
 	else:
@@ -272,7 +266,7 @@ to say HellDemonCun:
 	say "     ([link]Y[as]y[end link]) - Make him cum. After all, he licked you good.";
 	say "     ([link]N[as]n[end link]) - Just leave him like that.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     He did please you a lot, so you figure he might deserve a reward for his efforts. You slide down through his body, making your way down with a few teasing kisses of your own, before you take a hold of his monster cock, throbbing so hard and still painfully restrained by his diminutive leather jockstrap... 'I might cum just from you looking at it... Fuck...' he admits, his deep voice trembling as your hands take hold of the pulsing shaft, sliding it to the side of his kinky underwear and providing only a mere strokes before you're surprised with a massive surge of cum shooting as far as several meters from where you are now! And he keeps going with equal strength! Spurt after spurt of seed that he shoots leaves a faint hint of how sweet it must taste, and you feel tempted to reach over for some, but you can't just stop stroking that raging cock, still erupting as hard as ever for like a long minute. 'Fucking Hell! That was hot!' - he pants, looking at you with a grin - 'You should probably get a taste sometime. Some just can't have enough of it.'";
 		say "     As tempting as that sounds, you think it's time to get going. Grabbing your things, you say your goodbyes to the demon. 'See you soon, gorgeous. This was fun... maybe next time we can skip right into the fun, eh?' He throws a chuckle as he gets up, soon retreating back into the shadows as you proceed with your usual affairs.";
 	else:
@@ -299,7 +293,7 @@ to say HellDemonFeet:
 	say "     He then picks a toppled container that happens to be nearby and sits on it with a manspread, letting his cock poke out of his leather jockstrap as he stretches his legs forward, raising his soles off the ground. Following his previous words without thinking much on the matter, you step closer to the demon and kneel in front of him. Placing one hand behind his ankle, you lift one of his feet and inspect it from a closer distance, already thinking of the things you could do to it. You start by rubbing it a bit all over with your fingers and thumb, providing him with a sort of foot massage. It surprises you how soft his skin is down there, perhaps due to the quick regenerative characteristics of these demons, since they walk barefoot.";
 	WaitLineBreak;
 	project Figure of HellfireDemon_hard_icon;
-	say "     'Well, that feels great, but... I'm sure you had something more in mind, right?' He gives you his other foot to hold, moving both closer to your face as you absentmindedly touch them. Your eyes continue to follow those wiggling toes and the temptation to bring them closer to your mouth increases... to the point you simply just do it, placing your lips atop one of his big toes and slowly wrapping them around it, though carefully to avoid that sharp claw. 'Mmh, well... That's more like it. I probably should let you know that I'm into this.' The demon rips his jockstrap off and frees the monster within, jerking his cock while he observes you worshipping his feet. You do not pay much attention to that, though, as for now your focus is that big toe you have your tongue wiggling around.";
+	say "     'Well, that feels great, but... I'm sure you had something more in mind, right?' He gives you his other foot to hold, moving both closer to your face as you absentmindedly touch them. Your eyes continue to follow those wiggling toes and the temptation to bring them closer to your mouth increases... to the point you simply just do it, placing your lips atop one of his big toes and slowly wrapping them around it, though carefully to avoid that sharp claw. 'Mmh, well... That's more like it. I probably should let you know that I'm into this.' The demon rips his jockstrap off and frees the monster within, jerking his cock while he observes you worshiping his feet. You do not pay much attention to that, though, as for now your focus is that big toe you have your tongue wiggling around.";
 	say "     It slowly escalates into a full-on toe sucking as you get your mouth between them. One at a time, you allow them to enter your mouth while rubbing the rest of the foot, and the demon finds himself in the freedom to rub the other's sole against your cheek. As things get more intense, so does your desire for the devil's pleasure, and you are quick to add the other foot to the action, jumping from one's toes to the other's with your tongue and lips always ready to suck on them. 'Oh, you're doing so good... I'm in luck to have found a foot lover like you...' he teases, now watching you put your tongue under the toes and kissing the sides of the soles. Soon, you go all out, stretching your tongue and moving it in circles around the entire underside of both feet, alternating between them, causing the demon to feel more than happy to start press them against your face.";
 	WaitLineBreak;
 	say "     'Mmmh... Keep going... Feels great...' he moans as he jerks his cock with long and steady strokes, pushing against your face with his feet until you simply find it easier to lie down and let him take the lead. He leans forward to look at you as now both of his feet are on top of your face, giving you generous access to the toes once more. He slides one entire set of them into your mouth and only stops until your lips are resting by their base. 'Suck on them good for me... That really makes me throb...' The rest of the sole remains atop your chin while he rubs the rest of your face with the other foot, and he is not exactly gentle with it. You feel the motions of him jerking off, the momentum being carried all the way through his legs, as he grows more and more excited...";
@@ -353,18 +347,21 @@ to LJockstrapPickup:
 			say "     With a shrug, you leave it where it is. It probably will not be there in a few minutes.";
 
 to say HellDemon Desc:
+	say "     Standing in front of you is yet another intimidating creature of Hell. A deep crimson, tall and powerful demon, with large tauric horns on the top of his head, approaches you from the darkness. Your eyes inevitably land on the massive bulge barely contained by a leather jockstrap, jiggling slightly at each step that he takes. On top of that, his athletic body is covered in muscle, with a simple harness around his hairy pectorals, and while he generally looks more human in appearance than the brutish of demons, his dark sharp claws still prove a threat to you. With a grin on his face, he speaks to you:[line break]";
+	if Hellfire Club is known:
+		say "     'Look who it is! Master's special guest taking a walk during the night! How about we spar... And fuck right after?' You swear you can already see his bulge growing with the anticipation of having it with you, be it just fighting or more than that. He also doesn't waste any time, lunging himself at you with a grin on his face.";
+	else if BodyName of Player is "Hellfire Demon" and FaceName of Player is "Hellfire Demon": [player looks like a Hellfire Demon]
+		say "     'Fancy meetin' you here! Did you get fucked so much that you became one of us? Should've just asked Master Mogdraz for a joining pass, I'm sure he'd provide you with enough juice... in exchange for your soul. A small price for an eternity of fun, if you ask me... Speaking of fun, wanna have a go?' With this, the demon lunges himself at you.";
+	else:
+		say "     'Oh... Are you lost? What a cutie! And I definitely could use someone to unload my balls into... Master makes us work so much...! Alright, do as you're told and I might let you suck me off! How does that sound?' Without expecting any answer, the demon lunges himself at you.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Hellfire Demon"	"[PrepCombat_Hellfire Demon]"
+
+to say PrepCombat_Hellfire Demon:
 	setmongender 3;
-	if inasituation is true:
-		say ""; [taken care of in the event]
-	else: [standard scene]
-		project Figure of HellfireDemon_clothed_icon;
-		say "     Standing in front of you is yet another intimidating creature of Hell. A deep crimson, tall and powerful demon, with large tauric horns on the top of his head, approaches you from the darkness. Your eyes inevitably land on the massive bulge barely contained by a leather jockstrap, jiggling slightly at each step that he takes. On top of that, his athletic body is covered in muscle, with a simple harness around his hairy pectorals, and while he generally looks more human in appearance than the brutish of demons, his dark sharp claws still prove a threat to you. With a grin on his face, he speaks to you:[line break]";
-		if Hellfire Club is known:
-			say "     'Look who it is! Master's special guest taking a walk during the night! How about we spar... And fuck right after?' You swear you can already see his bulge growing with the anticipation of having it with you, be it just fighting or more than that. He also doesn't waste any time, lunging himself at you with a grin on his face.";
-		else if BodyName of Player is "Hellfire Demon" and FaceName of Player is "Hellfire Demon": [player looks like a Hellfire Demon]
-			say "     'Fancy meetin' you here! Did you get fucked so much that you became one of us? Should've just asked Master Mogdraz for a joining pass, I'm sure he'd provide you with enough juice... in exchange for your soul. A small price for an eternity of fun, if you ask me... Speaking of fun, wanna have a go?' With this, the demon lunges himself at you.";
-		else:
-			say "     'Oh... Are you lost? What a cutie! And I definitely could use someone to unload my balls into... Master makes us work so much...! Alright, do as you're told and I might let you suck me off! How does that sound?' Without expecting any answer, the demon lunges himself at you.";
+	project Figure of HellfireDemon_clothed_icon;
 
 Section 3 - Creature Insertion
 

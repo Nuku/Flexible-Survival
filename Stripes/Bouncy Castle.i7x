@@ -25,7 +25,6 @@ Section 1 - Starting Event
 vixcountdown is a number that varies. [Amount of turns allotted before the vixen (Bubble) can no longer be saved]
 dolphinbundle is a number that varies. [Increases the difficulty of escaping the Inflatable Dolphin bound state, ranging from 0-2]
 dolphinlist is a list of text that varies. [Creates a quasi-random pool of dolphins to check while searching for Bubble]
-dolcastlefight is a number that varies. [Determines Bottlenose Toy scenes. 1 = win, 2 = loss (normal), 3 = loss (in castle)]
 bclatearrival is a number that varies. [Normally 0, set to 1 when visiting the castle after vixcountdown ends while away. Hides initial prompt after agreeing]
 bcuntethered is a number that varies. [Determines whether or not the Bouncy Castle is still tethered]
 [Previously included dolcastleturn, which elapses 1 hour (turn/3) per empty dolphin suit checked. Since this was unrealistically long for something that would take a minute to do at most, I've removed the stat entirely]
@@ -167,8 +166,6 @@ lastoctofight is a number that varies. lastoctofight is usually 255.
 lastbcchair is a number that varies. lastbcchair is usually 255.
 lastbcduobeaten is a number that varies. lastbcduobeaten is usually 255.
 lastsnakefight is a number that varies. lastsnakefight is usually 255.
-bcduofightlost is a truth state that varies. bcduofightlost is usually false.
-bcduofightfled is a truth state that varies. bcduofightfled is usually false.
 bcseenthroneroom is a truth state that varies. bcseenthroneroom is usually false.
 
 Table of GameRoomIDs (continued)
@@ -1442,7 +1439,7 @@ to say bcduofight:
 		now Libido of Player is ( Libido of Player + Libido of Player + 100 ) / 3;
 		move player to Castle Throne Room;
 		WaitLineBreak;
-		now bcduofightlost is true;
+		say "     While you're still dazed and aroused from your encounter with the two inflatables, one of the inflated dolphin suits comes off the wall. Moving under its own power, it tries to ensnare you while you're in a weakened state. Were you able to concentrate, you'd probably realize that was their plan all along.";
 		say "[dolcheckA]";
 	else if fightoutcome >= 30:
 		if a random chance of 1 in 4 succeeds:
@@ -1457,7 +1454,7 @@ to say bcduofight:
 			say "     Having gotten all turned around during the fight, you end up diving through one of the doorways and find yourself tumbling out into the [if bcseenthroneroom is true]throne room[else]final upper room[end if].";
 			WaitLineBreak;
 			move player to Castle Throne Room;
-			now bcduofightfled is true;
+			say "     Unfortunately though, your escape sends you tumbling right into one of the inflatable dolphin suits. Moving under its own power, it tries to ensnare you while you're still surprised. It's almost like they planned this.";
 			say "[dolcheckA]";
 
 
@@ -1526,6 +1523,7 @@ carry out dolchecking: [Picks events from dolphinlist, defined earlier in the do
 	let status be "";
 	let status be entry x of dolphinList;
 	if status is "A":
+		say "     With some effort, you make your way over to one of the large dolphin inflatables and start looking for the seam to open it. You are able to find it readily and start opening it up. As you do so, it starts to shift and move[if HP of Bubble is 2]. You are momentarily hopeful that it contains the struggling vixen, but[else], but you can't help but feel disappointed when[end if] you instead find it empty. Moving under its own power, the inflated dolphin suit tries to envelop you.";
 		say "[dolcheckA]";
 	else if status is "B":
 		now entry x of dolphinlist is "A";
@@ -1539,6 +1537,7 @@ carry out dolchecking: [Picks events from dolphinlist, defined earlier in the do
 		if HP of Bubble is 2: [No need to check for 1, since navigating to the castle inherently sets this to 2]
 			say "[dolcheckE]";
 		else if HP of Bubble > 2 and HP of Bubble < 99: [Adjusts event after Bubble is saved]
+			say "     With some effort, you make your way over to one of the large dolphin inflatables and start looking for the seam to open it. You are able to find it readily and start opening it up. As you do so, it starts to shift and move[if HP of Bubble is 2]. You are momentarily hopeful that it contains the struggling vixen, but[else], but you can't help but feel disappointed when[end if] you instead find it empty. Moving under its own power, the inflated dolphin suit tries to envelop you.";
 			say "[dolcheckA]";
 		else: [Adjusts event after Bubble is lost]
 			say "[dolcheckD]";
@@ -1756,24 +1755,8 @@ to say bottlestrugglebar:
 		say "[close bracket][if struggleatt > 0]X[else]-[end if][bracket]";
 	say " [if boundmod > 0]{[end if][if boundmod > 1]{[end if]";
 
-to say dolcheckA:		[empty]
-	[puts Bottlenose Toy as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Bottlenose Toy":
-			now MonsterID is y;
-			break;
-	if bcduofightlost is true:
-		say "     While you're still dazed and aroused from your encounter with the two inflatables, one of the inflated dolphin suits comes off the wall. Moving under its own power, it tries to ensnare you while you're in a weakened state. Were you able to concentrate, you'd probably realize that was their plan all along.";
-		now bcduofightlost is false;
-	else if bcduofightfled is true:
-		say "     Unfortunately though, your escape sends you tumbling right into one of the inflatable dolphin suits. Moving under its own power, it tries to ensnare you while you're still surprised. It's almost like they planned this.";
-		now bcduofightfled is false;
-	else if dolcastlefight is not 2:		[empty suit]
-		say "     With some effort, you make your way over to one of the large dolphin inflatables and start looking for the seam to open it. You are able to find it readily and start opening it up. As you do so, it starts to shift and move[if HP of Bubble is 2]. You are momentarily hopeful that it contains the struggling vixen, but[else], but you can't help but feel disappointed when[end if] you instead find it empty. Moving under its own power, the inflated dolphin suit tries to envelop you.";
-	else:					[lost to released toy dolphin - D]
-		say "     After having had its fun, the inflatable dolphin dives into the water to frolic and look for some new amusement. Still a little fuzzy headed after the romp with the dolphin toy, you momentarily forget about the dolphin suit which once held your recent playmate. It makes a grab for you and wraps itself partially over you before you have a chance to react. Moving under its own power, the strange suit tries to envelop you within itself.";
-		now dolcastlefight is 0;
+to say dolcheckA: [empty]
+	setmonster "Bottlenose Toy";
 	say "     [bold type]Shall you resist?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
@@ -1869,27 +1852,26 @@ to say dolcheckA:		[empty]
 		trigger ending "Dolphin Suit Trapped";
 		end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";]
 
-
 to say dolcheckB:		[free victim]
 	say "     With some effort, you make your way over to one of the large dolphin inflatables and start looking for the seam to open it. It takes a little time to find it, having partially melded itself shut, but you manage to start working it open. As you begin to get it open, it starts to shift and move with the struggles of someone inside. Your hopes are quickly dashed as a gray, flippered paw pushes free and the leopard seal inside starts to force its way to freedom. Pulling the breathing piece from its mouth, the anthropomorphic seal gasps for fresh air. 'Ahhh! Gimme out of here!' The inflatable suit seems to struggle against its victim's escape attempt, but can't stop him (you realize as you spot his sheath) as you aid in his escape.";
 	say "     As the seal gets out further, he starts squeezing on the inflatable dolphin, pushing the air out of it until it eventually sags to the colorful floor. You are given a kiss and a grope by the seal. 'Thanks, hon,' he rumbles. 'I'd thank you properly, but I'm not sticking around here. Mmm... too bad, too. I think you'd make a lovely seal cow. Oh well, plenty of others to find and breed,' he adds before leaping from the doorway and making a rush for the slide. As you watch, he swims quickly out to sea, probably off to find an unprotected town to infect. You are uncertain how you feel about having put others at risk by saving him. Brushing your fingertips across your lips, remembering his kiss, you can't help but find the way his form cuts through the water sexy. Certainly they'd be better off as seals than some of the other infections you've encountered.";
 	increase score by 10;
 	LibidoBoost 10;
 
-
 to say dolcheckC:		[mostly tf victim]
 	say "     With some effort, you make your way over to one of the large dolphin inflatables and start looking for the seam to open it. It takes a little time to find it, having partially melded itself shut, but you manage to start working it open. As you begin to get it open, it starts to shift and move a little. But as you open it up further, you find a mostly transformed victim inside. They simply moan softly, not bothering to struggle against the strange suit encapsulating them. The victim has a few traces of having once been [one of]a canine[or]a feline[or]a bovine[or]an equine[or]an avian[at random] creature. The being inside is now mostly transformed into an inflatable dolphin creature, only giggling with a vapid, chirping trill and asking if you'd like to play. You seal it back up since it's too far gone[if HP of Bubble is 2] and hope you can find the vixen before it's too late[end if].";
 
-
 to say dolcheckD:		[complete tf - fight]
 	say "     With some effort, you make your way over to one of the large dolphin inflatables and start looking for the seam to open it. At first, you struggle to find the seam, but then it pops into sharp relief. But as you begin to open it, things start to go wrong. The inflatable dolphin starts to move and open on its own, releasing its transformed victim upon you. Whatever it was before, the victim has fully become an animated, inflatable dolphin toy. '[one of]Ooo! A playmate[or]Happy birthday to me[or]A new friend[or]I want to play[at random]!' the floating dolphin trills with a clicking laugh. The balloon toy floats up into the air and moves to attack you while the now empty suit shuffles around, waiting for its opportunity to strike.";
-	now dolcastlefight is 3;
+	now dolphinmode is 3; [castle feral]
 	challenge "Bottlenose Toy";
-	if dolcastlefight is 1:				[victory]
+	now dolphinmode is 0; [reset]
+	if fightoutcome < 20: [player won]
 		say "     Despite the added difficulty of standing to fight on the wobbly castle floor, you've managed to beat the dolphin toy and toss it out of the room. It giggles happily at the sight of the waterslide and takes it down into the water below. With it swimming off to find some new amusement for itself, you turn your attention on the inflatable dolphin suit that created it. Still partially deflated after performing its duty, it puts up a bit of a struggle, but you are able to squeeze it until fully deflated.";
-	else if dolcastlefight is 2:		[lose]
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		say "     After having had its fun, the inflatable dolphin dives into the water to frolic and look for some new amusement. Still a little fuzzy headed after the romp with the dolphin toy, you momentarily forget about the dolphin suit which once held your recent playmate. It makes a grab for you and wraps itself partially over you before you have a chance to react. Moving under its own power, the strange suit tries to envelop you within itself.";
 		say "[dolcheckA]";
-	else:						[flee]
+	else if fightoutcome is 30: [fled]
 		say "     Taking your only option for escape from the fight, you dive out onto the parapets and quickly rush to the waterslide. You hop onto the slide, take it down into the water and start swimming for it[if boatfound is 3]. You swim as quickly as you can to your boat. The dolphin toy, thinking this is all part of some game or race, she swims along with you, bumping her nose against you and nuzzling your groin. You manage to stay focused despite this distraction and make it to the boat, pull up your anchor and sail off, much to the playful creature's momentary disappointment before the thought leaves its airy mind and it splashes off for fun elsewhere. You pull back to shore to take a break before possibly returning, hoping the dolphin will have left the waters around the castle by then[else if boatfound is 2]. You swim the short distance to your rowboat and detach your line. You begin the hard row back to shore while the playful dolphin swims and dives around and even over your boat. As you're approaching the shore, its airy mind thankfully gets distracted and it splashes off for fun elsewhere. You continue to shore and pull your boat aground to take a break to recover your strength after your rush to shore before possibly returning[else]. You swim as quickly as you can back to shore, but it is a long trip with the dolphin toy harassing you the whole time. Thinking this is all part of some game or race, she swims along with you, bumping her nose against you and nuzzling your groin. You manage to stay focused with some effort despite the distraction and eventually make it back to shore. The playful creature follows you all the way back, only getting distracted and splashing off for fun elsewhere as you're approaching the beach. Tired after the long swim, you pull yourself onto the sandy shore and have to take a break before possibly returning[end if].";
 		if boatfound is not 3:
 			let dam be 15 - ( strength of Player / 2 ) - ( stamina of Player / 2 );
@@ -1899,7 +1881,6 @@ to say dolcheckD:		[complete tf - fight]
 				LibidoBoost 10;
 		move player to Public Beach;
 		follow the turnpass rule;
-
 
 to say dolcheckE:		[vixen]
 	let compnumber be ( (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces) / 3 );

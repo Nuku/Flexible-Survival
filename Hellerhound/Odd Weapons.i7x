@@ -39,7 +39,7 @@ to say ResolveEvent Fallen Survivor:
 		ItemGain garbage can shield by 1;
 	else:
 		LineBreak;
-		say "     Deciding with your better judgement, you resolve to leave the garbage can shield behind. However, you do drag it over and prop it up next to its mind-broken owner, as a bit of a warning sign for someone who might stumble over him. Sadly, this is the only tribute you can give this resourceful survivor...";
+		say "     Deciding with your better judgment, you resolve to leave the garbage can shield behind. However, you do drag it over and prop it up next to its mind-broken owner, as a bit of a warning sign for someone who might stumble over him. Sadly, this is the only tribute you can give this resourceful survivor...";
 	now Fallen Survivor is resolved;
 
 Section 2 - Infected Sword
@@ -184,9 +184,7 @@ to say ResolveEvent Destroyed Bushes:
 		if Player consents:
 			infect "Black Equinoid";
 			infect "Black Equinoid";
-			decrease thirst of Player by 75;
-			if thirst of Player < 0:
-				now thirst of Player is 0;
+			PlayerDrink 75;
 		else:
 			say "You leave them alone.";
 	say "     Do you wish to look around?";

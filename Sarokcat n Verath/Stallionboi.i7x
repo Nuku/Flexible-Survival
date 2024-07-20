@@ -27,12 +27,18 @@ To say Stallionboi loses:
 	project the Figure of Stallionboi_clothed_icon;
 	say "     Driven back by your powerful assault, the stallionboi groans with pain as he staggers backwards and shoots you a rather dirty and sexy look, before bursting into tears as he says '[one of]Well you didn't have to be so mean!'[or]Maybe you will be more fun next time sexy,'[or]Why don't you want to fuck me?'[or]Damn sweetie, that's a little rough for me, maybe you should try one of the donkeys,'[at random] before staggering off down the corridor, shooting you a last teasing glance over his shoulder as he does so.";
 
+Section 2 - Creature Insertion
+
 to say Stallionboi_Desc:
-	project the Figure of Stallionboi_clothed_icon;
-	setmongender 3;
 	say "     Wandering through the building you encounter a horny stallionboi. You see that he is wearing black silk stockings and a skimpy tight black thong that isn't hiding his fully equine manhood. His look is finished off with long black silk gloves and black choker collar around his neck. The stallionboi has a slender almost girlish figure. His human body is starting to sprout dark chocolate colored fur, a long black horsetail flicks eagerly behind him. His face is stretched out into a slender, feminine half equine muzzle and his ears are more equine than human. His dark hair is shoulder length with bright blue frosted tips. Giving you a slutty grin, he strides towards you and says, 'You are going to look so hot when I get done with you!'";
 
-Section 2 - Creature Insertion
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Stallionboi"	"[PrepCombat_Stallionboi]"
+
+to say PrepCombat_Stallionboi:
+	project the Figure of Stallionboi_clothed_icon;
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -1031,35 +1031,33 @@ to say hospbigfight1:
 
 to say hospbigfight2:
 	now hospfight is 1;
-	now inasituation is true;
 	challenge "Albino Mouse";
-	now inasituation is false;
-	if fightoutcome is 30:
-		say "[hospranaway]";
-		stop the action;
-	else if fightoutcome > 19 and fightoutcome < 30:
+	if fightoutcome < 20: [player won]
+		say "     Battered and bloodied, the mad doctor turns and runs. For a moment, you think he's trying to escape and move to cut him off from the exit, but he instead veers off to his storage unit and searches inside for a vial.";
+		say "     'I had planned to further perfect this formula before ridding myself of this feeble body,' the white mouse exclaims. 'But you! You force my hand. And you will suffer for it!'";
+		say "     With that, he slams back the formula and its effects are almost immediate. You charge, hoping to dispatch him before whatever he's doing can be completed, but he's already begun to grow and manages to slam you back a few feet with a strong backhand.";
+		WaitLineBreak;
+		say "     His muscles swell and he gains inches of height by the second. His growing body fills the lab coat so much it starts to strain to contain it until it finally fails. The buttons fly as he flexes his new, muscled body and tears the tattered remains from his shoulders.";
+		say "     His head becomes more feral and frightening, with sharp teeth, a mix of predatory canines and rodent incisors. The thick, leonine mane grows in as well as a trio or sharp horns, two on his brow and one at the end of his pointed muzzle. His hands, once cute paws, gain vicious claws and bony plates.";
+		WaitLineBreak;
+		say "     The mouse's maleness is not neglected either, gaining a large sheath and heavy balls. Thick, dark yellow fur grows to replace the white coat over them and spreads up over the monstrous mouse's chest as well. Clearly excited by the power of the changes, his cock grows hard and starts to emerge. It is thick and blood red, with a spaded tip and several firm ridges along its shaft. There's a faint swelling at the base, signs of a knot as well. Thick precum leaks down the monstrous prick.";
+		say "     He chuckles madly as he looks himself over, clearly pleased with the results. 'I am going to enjoy showing you how disappointed I am with you. In slow, agonizing detail,' he rumbles with a deep, threatening voice.";
+		now hospfight is 2;
+		challenge "Albino Mouse";
+		if fightoutcome < 20: [player won]
+			say "[hospvictory]";
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "[hosploss]";
+			stop the action;
+		else if fightoutcome is 30: [fled]
+			say "[hospranaway]";
+			stop the action;
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "[hosploss]";
 		stop the action;
-	say "     Battered and bloodied, the mad doctor turns and runs. For a moment, you think he's trying to escape and move to cut him off from the exit, but he instead veers off to his storage unit and searches inside for a vial.";
-	say "     'I had planned to further perfect this formula before ridding myself of this feeble body,' the white mouse exclaims. 'But you! You force my hand. And you will suffer for it!'";
-	say "     With that, he slams back the formula and its effects are almost immediate. You charge, hoping to dispatch him before whatever he's doing can be completed, but he's already begun to grow and manages to slam you back a few feet with a strong backhand.";
-	WaitLineBreak;
-	say "     His muscles swell and he gains inches of height by the second. His growing body fills the lab coat so much it starts to strain to contain it until it finally fails. The buttons fly as he flexes his new, muscled body and tears the tattered remains from his shoulders.";
-	say "     His head becomes more feral and frightening, with sharp teeth, a mix of predatory canines and rodent incisors. The thick, leonine mane grows in as well as a trio or sharp horns, two on his brow and one at the end of his pointed muzzle. His hands, once cute paws, gain vicious claws and bony plates.";
-	WaitLineBreak;
-	say "     The mouse's maleness is not neglected either, gaining a large sheath and heavy balls. Thick, dark yellow fur grows to replace the white coat over them and spreads up over the monstrous mouse's chest as well. Clearly excited by the power of the changes, his cock grows hard and starts to emerge. It is thick and blood red, with a spaded tip and several firm ridges along its shaft. There's a faint swelling at the base, signs of a knot as well. Thick precum leaks down the monstrous prick.";
-	say "     He chuckles madly as he looks himself over, clearly pleased with the results. 'I am going to enjoy showing you how disappointed I am with you. In slow, agonizing detail,' he rumbles with a deep, threatening voice.";
-	now hospfight is 2;
-	now inasituation is true;
-	challenge "Albino Mouse";
-	now inasituation is false;
-	if fightoutcome is 30:
+	else if fightoutcome is 30: [fled]
 		say "[hospranaway]";
 		stop the action;
-	else if fightoutcome > 19 and fightoutcome < 30:
-		say "[hosploss]";
-		stop the action;
-	say "[hospvictory]";
 
 to say hospranaway:
 	say "     Unable or unwilling to continue fighting the crazed mouse, you vault over one of the worktables and dash to the exit. You slam against the door and dash down the hall to the emergency exit. You rush down the stairs, hearing Dr. Mouse yelling above you, but don't even stop to look.";
@@ -1230,44 +1228,6 @@ to say drmousesex:
 		say "     The mouse's large paws fondling your breasts brings you back to focusing on him. His gloved paws tease your nipples and he laughs happily, aroused with his power over you. His monstrous cock is quite stimulating and you can feel your excitement growing as his heavy balls slap against your thighs with each thrust the mutated mouse makes. That spaded tip presses at your cervix, trying to spread it open while the ridges along his shaft feel so delightful against your vaginal walls.";
 		say "     'Mmm... I am almost tempted to keep you as a little fucktoy. I'd breed you full of cute little mice over and over again. I bet you'd like that, you slut,' he teases, tweaking your nipples. 'But I can't afford any distractions right now. I'll just have to stuff you full of hot mouse cum and dump you like the trash you are.' And with that, he slams hard into you, unleashing a torrent of thick mouse cum from his oversized balls. His spaded glans, pressed against your cervix, forces it to spread open, allowing the bulk of his mutated load to flow up into your womb in an attempt to breed you.[impregchance][impregchance]";
 	say "     Panting, the mad doctor withdraws his spent shaft and hops down with a grin. He raises his arms to the crowd, who manage some dignified clapping despite the major orgy that's broken out across most of the audience section.";
-
-
-to say hospvictory:
-	say "     The monstrous Dr. Mouse has been dazed by your final blow and has collapsed against a worktable at the far end of the room. He's overturned the nearby water dish and broken the chemical toilet. As the pair of mismatched chimera poke their heads around behind it, having hidden during the fight, you realize just where he's landed.";
-	say "     They scramble over to him, moaning softly with sexual need. Their hard cocks and dripping pussies leak their fluids onto him. One presses its breast to his lips and the addled doctor soon nurses from it, making the chimera coo happily. The other grabs the doctor's cock and sinks itself down onto it, spurting cum onto his chest as it does.";
-	WaitLineBreak;
-	if HP of Doctor Matt is 100:
-		say "     Feeling that the doctor is in good hands, you quickly look around the room, gathering any notes and samples you can find from the doctor's work area into one big pile. Worried that someone may notice the commotion and come up to investigate, you don't take any time to look at the stuff. You toss the contents from the doctor's storage case onto the heap. After tearing open his notebook and breaking his laptop, you add them to it.";
-		say "     Reluctant to set a fire that could spread and take out the whole hospital, you instead pour a variety of chemicals onto the accumulated research. Thankfully there are several strong acids used for testing which do an effective job of destroying the material. Having seen what this twisted work has created, you don't want to leave someone else finding it and restarting it, nor do you know anyone you could trust with it. That done, you turn back to check in on the mad doctor and his mismatched lovers.";
-	else:
-		say "     Feeling that the doctor is in good hands, you quickly look around the room, grabbing what notes and samples you can from the doctor's work area. Worried that someone may notice the commotion and come up to investigate, you rush to find as much as you can carry. You take several interesting vials and concoctions from the storage case, carefully stowing them in some padding. The doctor's laptop and research notebook go in there as well.";
-		say "     Having gathered what you could and breaking or spilling chemicals onto the other stuff to keep anyone from following Dr. Mouse's research, you turn back to see take another look at the mad doctor and his mismatched lovers.";
-	WaitLineBreak;
-	say "     The chimeras have continued to feed and fuck him, resulting in a seemingly random array of changes to his body starting to arise. His head has lost its mouse-like qualities entirely and becomes leonine. While his right arm becomes that of some kind of lizard, his left one bifurcates into a pair of smaller limbs, one an avian wing and the other a monkey's arm. One leg gains a horse's hoof while the other has a goat's. His tail becomes long and serpentine, covered in red scales.";
-	say "     When breasts start to form on what was once the mouse's chest, the chimera riding him pulls off his cock, which is now wholly canine in form, and drives its cock into the new pussy under his balls. That is enough to stir Dr. Mouse to wakefulness, but what little intelligence there is in those eyes is fading rapidly as the infection takes over fully. The new herm moans lustfully and wraps her mismatched legs around the chimera's waist, yowling with mindless need.";
-	say "     The second hybrid pulls its breast from their captive's muzzle and replaces it with its cock instead. The ex-mouse takes it into its mouth eagerly, licking and sucking with need. As the new hybrid continues to be mated by the fractured creatures of its own creation, there is nothing but lust in those vacant eyes as she succumbs fully.";
-	WaitLineBreak;
-	say "     Satisfied that the mouse is no longer a threat, you step over to the worktable and break off the anchor points for the chains. The trio, too engrossed in sex, don't react more than looking up at you and mewling enticingly for you to join them. Now freed, you are satisfied that the two unfortunate creatures will not be trapped to starve, and that they and their new companion can instead join the others like them in the hospital, where the doctor will never be heard from again.";
-	say "     Your task done, you decide to linger no longer and quickly go down the stairs. Acting as if nothing is amiss, you walk past the jaguar guarding the stairwell and exit the hospital.";
-	WaitLineBreak;
-	now the player is in City Hospital;
-	if hospquest is 10:		[Refused upon offer]
-		say "     Outside, you find the pink raccoon waiting for you fretfully on the steps. Seeing you come out alive and well, he dashes into your arms and hugs you tightly. Not wanting to cause a scene, you whisper to him to be quiet and come with you. He takes your hand in his, prancing happily beside you.";
-		if pink raccoon is tamed:
-			say "     You go down a side street with him and duck into a vacant building to collect your thoughts safely away from the hospital. The pink coon cuddles up to you, vacant eyes looking up at you with admiration, somehow knowing that you've dealt with the mouse that filled him with such fear. You pet his ears and he churrs softly[if HP of Doctor Matt is not 100]. You know that you need to go see Dr. Matt right away, wanting to turn over the research material to him before doing anything else[else]. Now without scientific help, you wonder what to do next[end if].";
-		else:
-			say "     You go down a side street with him and duck into a vacant building to collect your thoughts safely away from the hospital. The pink coon cuddles up to you, thanking you again for helping to get him out of there. While he doesn't say anything about it, he looks at you with considerable admiration, somehow knowing that you've dealt with the mouse that filled him with such fear. As he starts to fret about where he can now go, you decide, on impulse to tell him about the bunker under the abbey library and give him directions[if HP of Doctor Matt is not 100]. You know that you need to go see Dr. Matt right away, wanting to turn over the research material to him before doing anything else[else]. Now without scientific help, you wonder what to do next[end if].";
-	else:
-		say "     Outside, you go down the steps and walk across the large parking lot quietly but quickly. You try not to draw attention to yourself, but want to flee the area as soon as possible, lest the events upstairs are discovered sooner rather than later. As you walk off down a side street, you [if HP of Doctor Matt is not 100]know that you need to go see Dr. Matt right away, wanting to turn over the research material to him before doing anything else[else]wonder what to do next now that you are without scientific help[end if].";
-	wait for any key;
-	now HP of Doctor Mouse is 2;
-	now Locked stairwell is locked;
-	now hospquest is 13;
-	if mattcollection is 0: [player did not finish bringing Dr. Matt all the samples before kicking off the fight with Dr. Mouse]
-		now mattcollection is 2; [incomplete sample handin, no further samples available]
-	increase the score by 50;
-	if HP of Doctor Matt is not 100:
-		now player is in Primary Lab;
 
 to say tlabsbigfight:
 	say "     You silently step up behind Dr. Matt and stab the needle into him. He cries out for Orthas and jabs a finger into an emergency button, sounding an alarm as well. Trying to free himself from your grip, he struggles to reach the anti-infection microwave device he has on his desk. As you fight to hold him, his now useless environment suit starts to come off.";
@@ -1517,19 +1477,20 @@ to say ResolveEvent Dinosaur Nest:
 	else:
 		say "     You make your way back to the dinosaur's nest to try and investigate it again. Being more watchful, you notice her coming up as you move aside a box of Abba 8-tracks to find some yo-yos. You turn away from her nest and prepare to fight the disco dino again. 'Lookin['] for another dance lesson, honey?' she asks.";
 	now dinonest is 1;
-	now dnfightresult is 0; [default 0 = flee]
+	now inasituation is true;
 	challenge "Triceratops";
 	now dinonest is 0;
-	if dnfightresult is 0:		[flee]
+	if fightoutcome > 30: [flee]
 		say "     Unable to deal with her at this time, you have fled the scene and will have to come back again later to search.";
-	if dnfightresult is 2:		[lose]
+	else if fightoutcome > 19 and fightoutcome < 30: [lose]
 		say "     Having bested you, you can only wait and recover before trying to search her nest again later.";
-	if dnfightresult is 1:		[win]
+	else if fightoutcome < 20: [win]
 		say "     Having bested the triceratops woman, you can finish searching her nest in the hopes of finding something to satisfy the mouse doctor. You dig around in her collection of old stuff, but don't see anything for some time. Eventually, you instead smell something and soon track the scent to a lava lamp. Unplugged, the glass lamp is off its stand and is coated in a wet sheen of fluids. Guessing the strange creature has been using it for some improvised fun, you wrap it in a paisley shirt and pack it away.";
 		say "     Lava lamp collected.";
 		ItemGain lava lamp by 1;
 		increase score by 10;
 		now Dinosaur Nest is resolved;
+	now inasituation is false;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1591,16 +1552,6 @@ Instead of conversing the Nermine while nerminepackage is 1 and Nerminetalk > 0:
 	now nerminepackage is 2;
 	now Viking Longboat is active;
 
-[  - Moved to their dialog sets
-Instead of conversing Rod Mallrat while nerminepackage > 0 and rodhosp is 0:
-	say "     'Those big, spotted hairballs that rolled in here the other day? That was a bad scene, dude. They started to get fresh with some of the girls in the atrium and tried to drag them off. Well, we wouldn't put up with that. Never try to force a mall rat from their mall, man. We don't want none of them goons and their friends in here again.'";
-	now rodhosp is 1;
-
-Instead of conversing the Ronda Mallrat while nerminepackage > 0 and rondahosp is 0:
-	say "     'You asking about those macho hairball rejects from Shock Therapy? Suzie and Anna were talking to them after they rolled in here like they owned the place. Just a little playful flirting to tease their boys. No harm in it. But the kitties started getting fresh. They offered them a ride in their swanky helicopter, which was tempting, but that'd mean leaving the mall, so the girls said [']No way['].'";
-	say "     'Well, those kitty-litter heads didn't like that and started to get pushy about it. By that point, their boyfriends had had enough and rallied the troops to deal with them. That slutty vixen came running out of the store and the dude on her radio was squawking to know what was happening. We kicked the lot of them out. They came poking back once or twice, but they're not allowed to shop here anymore. We told Bruno, he's security, on them and that crazy wolverine and a few of the boys sent them packing.'";
-	now rondahosp is 1;
-]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -1610,10 +1561,7 @@ Viking Longboat is a situation.
 ResolveFunction of Viking Longboat is "[ResolveEvent Viking Longboat]".
 Sarea of Viking Longboat is "Museum".
 Viking Longboat is inactive.		[unable to do this until activated]
-lbfight is a number that varies.
 longboatfind is a number that varies.
-rondahosp is a number that varies.
-rodhosp is a number that varies.
 
 to say ResolveEvent Viking Longboat:
 	if longboatfind is 0:
@@ -1622,15 +1570,23 @@ to say ResolveEvent Viking Longboat:
 		now longboatfind is 1;
 	else:
 		say "     You make your way back to the Medieval History wing of the museum and approach the longboat again. The moment you put one foot over the rope barrier, the security guard is growling and charging at you with menace in his eyes.";
-	now lbfight is 1;
-	now wolvfightresult is 0; [default 0 = flee]
 	challenge "Wolverine Guard";
-	now lbfight is 0;
-	if wolvfightresult is 0:		[flee]
+	if fightoutcome > 30:		[flee]
 		say "     Unable to deal with the maddened wolverine, you have fled the scene and will have to come back again later to get the gemstones.";
-	if wolvfightresult is 2:		[lose]
+	else if fightoutcome  > 19 and fightoutcome < 30:		[lose]
+		if Player is female:
+			if a random chance of 2 in 3 succeeds:
+				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you. Soon, he's buried his muzzle between your legs and sniffing your crotch. He grabs you roughly and drags you back towards the alcove he was standing guard in before you arrived.";
+				say "     Keeping you pinned down, he looks around for any other threats to his post. This gives you a moment to look around for a way out of this predicament, but find none.";
+				say "     Satisfied that he won't be interrupted, he quickly tears off your remaining clothes and presses his nose against your wet pussy, licking at it before rolling you over. He quickly mounts you, driving his large, brown cock deep inside you. He pants and growls as he pounds into you hard and fast, driving his thick meat in over and over again until he finally releases a hot blast of seed deep inside you.[impregchance]";
+				say "     As he cum inside you, he grows more gentle, nuzzling you and snuffling at your ear. He gives your neck and shoulder a few nips before dismounting and firmly sending you on your way, forcing you to leave that section of the museum and to head back to the main foyer.";
+			else:
+				say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you off from the Medieval History wing of the museum.";
+		else:
+			say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you off from the Medieval History wing of the museum.";
+			if HP of Player > 0, now HP of Player is HP of Player / 2;
 		say "     Having been bested, you can only stagger off and recover before trying to get on the boat again later.";
-	if wolvfightresult is 1:		[win]
+	else if fightoutcome < 20:		[win]
 		say "     Having bested the wolverine guard, you leave it passed out and quickly put the ladder alongside the huge ship. You climb up and head to the masthead across the old, creaking ship. The wood is incredibly old and you grit your teeth with every soft step you make, worried you'll break through the deck and fall.";
 		say "     Reaching the bow of the ship, you are glad to find handholds in it, perhaps for a sailor to act as lookout. It seems sturdier as well, thankfully. You climb up carefully and manage to eventually pry out the green gems from the wooden dragon's eyes. You climb back down and step back onto the deck just as the wooden masthead groans loudly and breaks from the ship. The deck starts to crumble away as well even as you try to run for the ladder.";
 		let bonus be ( dexterity of Player minus 10 ) divided by 2;
@@ -1650,7 +1606,6 @@ to say ResolveEvent Viking Longboat:
 		now Viking Longboat is resolved;
 
 [spear moved to Core Mechanics/Weapons.i7x]
-
 
 Instead of conversing the Nermine while nerminepackage is 3:
 	say "     'Have you been finding the dragon's eyes for Nermine?' she asks. 'Wonderful. Most beautiful,' she says as she holds them up to the light and gazes through them. 'Even older than I thought, long before put on that ship. Long history. Nermine is very pleased to have these. So much so I will give you some advice.'";
@@ -1774,7 +1729,7 @@ to say ec_activation:
 			if Cock Length of Player > 16:
 				now Cock Length of Player is 16;
 		if Ball Size of Player < 3:
-			increase Ball Size of Player by 1;
+			BallsGrow Player by 1;
 			if Ball Size of Player > 3:
 				now Ball Size of Player is 3;
 	if Player is female:

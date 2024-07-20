@@ -90,36 +90,6 @@ to say ResolveEvent Totally Lost:
 	now Totally Lost is resolved;
 
 
-Section 5 - Captive Rat
-
-Table of GameEventIDs (continued)
-Object	Name
-Captive Rat	"Captive Rat"
-
-Captive Rat is a situation.
-ResolveFunction of Captive Rat is "[ResolveEvent Captive Rat]". The level of Captive Rat is 6.
-Sarea of Captive Rat is "Mall".
-when play begins:
-	add Captive Rat to BadSpots of MaleList;
-	add Captive Rat to BadSpots of HermList;
-	add Captive Rat to BadSpots of FurryList;
-	add Captive Rat to BadSpots of DemonList;
-
-
-to say ResolveEvent Captive Rat:
-	say "     Traveling the sewers, you hear a strange chanting noise in the distance, and you almost think you hear a call for help. Do you want to investigate?";
-	if Player consents:
-		say "     Carefully heading down a side passageway, you find it opens up into a small room where a Demon Brute seems to have captured a struggling mall rat. The demon brute is chanting over the bound rat, and the girl is begging and pleading for someone to help free it. Before you can do anything more, the brutes chant finishes and it shoots its seed all over the trapped rat. The beast then turns to look directly at you, 'Did you like watching?' it asks sarcastically as it charges. 'You can be next!'";
-		challenge "Demon Brute";
-		say "     Driving off the foul demon, you turn to free the captive mall rat, only to discover that it has not only managed to free itself, but it seems to have undergone a surprising transformation as well!";
-		challenge "Slut Rat";
-		say "     After that last fight, you definitely have more questions than answers. Maybe you should give a sample of the strange demon's seed to Rod or Ronda back in the mall. Then again, thinking about what it did to that other rat, maybe you shouldn't.";
-		now Resolution of Captive Rat is 1; [fought]
-	else:
-		say "     Discretion definitely being the better part of valor, you quickly hurry along the tunnels, ignoring the strange sounds.";
-		now Resolution of Captive Rat is 2; [did not fight]
-	now Captive rat is resolved;
-
 Section 6 - puddle of goo
 
 Table of GameEventIDs (continued)

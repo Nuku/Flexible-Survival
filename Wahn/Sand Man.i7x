@@ -92,7 +92,6 @@ to say sandman fucked:
 	CreatureSexAftermath "Sand Man" receives "AssFuck" from "Player";
 
 to say sandmanDesc:
-	setmongender 3;
 	if "Sand Man" is not listed in EncounteredEnemies of Player: [first encounter]
 		say "     Walking over the beach, you come upon a large towel on which a handsome man lies sleeping, wearing nothing but a pair of stylish sunglasses and tight speedos. He has a ripped body and nice muscles - and is sculpted from sand. Amazingly life-like, even up to the hairs which almost look like they consist out of single strands. He's got even the smallest details a human would have...";
 		LineBreak;
@@ -103,6 +102,13 @@ to say sandmanDesc:
 		say "     You cross paths with a handsome beach stud wearing nothing but a pair of stylish sunglasses and a pair of tight speedos on his sculpted body. Perfectly sculpted into an Adonis-like shape that is - out of finely grained sand. He takes a striking pose in front of you and runs a hand through shoulder-length hair. '[one of]Wanna make out in the dunes, baby?'[or]You're even more beautiful up close. Let's do it - right here.'[or]Hey baby, you're hot. I can't wait to hold you in my arms.'[or]How about a little fling in the sand? No strings attached.'[or]Beach Patrol. Do you know mouth-to-mouth resuscitation? Come here and I'll show you how it's done.'[at random]";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Sand Man"	"[PrepCombat_Sand Man]"
+
+to say PrepCombat_Sand Man:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -29,7 +29,7 @@ to say ResolveEvent Pink Furred Scavenger:
 	say "     ([link]Y[as]y[end link]) - Stay and watch from a safe position.";
 	say "     ([link]N[as]n[end link]) - Just get the hell out of here.";
 	if Player consents: [unlock Cherry events]
-		Linebreak;
+		LineBreak;
 		say "     From your position, you do not think either of them can detect your presence, and you have a front seat for the scene that develops before your eyes. The leopardman seems to have no other choice but to keep taking that thick cock of hers deep in his tight hole, but his expression is of ecstatic bliss... as if he was actually enjoying being assfucked by the pink fox. She continues to thrust in deep and hard until, you think, she hits the climax, unloading her heavy balls inside the feline until the very last spurt is safely deposited inside the male. He cums too, over the floor underneath him, at the same time the furred herm's meaty member gives its final throbs inside the leopardman's ass.";
 		say "     'You did well, but you don't deserve to be my pet. Naughties like you deserve only punishment.' she says, as she dismisses the feline, who can barely crawl away. 'Shoo, now. Hope you learned your lesson.' She has quite a feminine, sexy but sweet, tone in her voice, which tells you she is not just some sex-crazed creature. But before you wonder if you should talk to her, she seems to have noticed you while brushing her fur with her foxy paws. She sighs... 'Ahh, well... A lady can't take a day to do some scavenging without being pestered by opportunists. You know what happened to that one, so don't even try.' While you clearly have been warned, she sees you still standing in the same place, without having attacked her by now. Not like you had time to process any of this, but she lowers her guard as soon as she has a better look at you.";
 		WaitLineBreak;
@@ -39,7 +39,7 @@ to say ResolveEvent Pink Furred Scavenger:
 		say "     ([link]Y[as]y[end link]) - She seems nice enough.";
 		say "     ([link]N[as]n[end link]) - Pass, but thank her for the invitation.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You let her know that you would be delighted to accompany her in a very polite way, influenced by her manners. 'Oh, I do love to see a nice [if Player is male]gentleman[else]person[end if], for a change. Follow me, then. I hope you can keep up.' Well, she really means she hopes you can keep up with her incredible agility, leaping through rubble and jumping around so swiftly it is even mesmerizing. You do your best, though, until you can make it out of the mall and safe from any further pursuers. After you run for a while, you take shelter by taking a small detour over to an empty corridor between two buildings, and manage to keep out of sight of any possible foes.";
 			say "     'This should be far enough. There's no way they could follow us, now.' While she naturally seems to be running away from the group of felines, you do not get why she is having all the extra caution, so you ask her about that. 'This group of felines aren't like your typical unfortunate miscreant who happens to pick a bad time to try and assault you, no. These ones are a gang, and I've had a few... misadventures with some of them. They seem to have taken a special liking in me, or something. To be honest, I couldn't care less. I don't take any personal interest in them.' As she finishes speaking, she starts walking through the corridor, her fluffy tail swinging from one side to another in front of you, and you merely follow her.";
 			WaitLineBreak;
@@ -49,24 +49,24 @@ to say ResolveEvent Pink Furred Scavenger:
 			say "     ([link]Y[as]y[end link]) - Yes, accept her invitation.";
 			say "     ([link]N[as]n[end link]) - Thank her, but say you have to refuse due to some urgent matters.";
 			if Player consents:
-				Linebreak;
+				LineBreak;
 				say "     With a nod, you accept her invitation and set yourself on following her. 'Splendid. I live in the third floor, so I hope you don't mind the climbing.' After you two walk up the stairs, Cherry unlocks the door to her modest apartment, which strikes you as quite cozy, with tasteful decoration. 'Take a seat and make yourself at home.'";
 				wait for any key;
 				now Resolution of Pink Furred Scavenger is 2; [accompanied Cherry to her apartment]
 				AddNavPoint Cherry's Apartment;
 				move Player to Cherry's Apartment;
 			else:
-				Linebreak;
+				LineBreak;
 				say "     Being invited over is always a pleasure, but you tell her that, unfortunately, you have to take care of a few urgent matters. 'No problem. You now know where I live, so whenever you want to visit me, my doors are open. Not literally, though, as that would be quite stupid, but you can knock. Third floor, to the right.' You see her smile before she goes inside, saying goodbye, and leaving you alone outside. At least, if you ever want to pursue any sort of relationship with Cherry, you now know where to find her.";
 				now Resolution of Pink Furred Scavenger is 2; [accompanied Cherry to her apartment]
 				AddNavPoint Cherry's Apartment;
 		else:
-			Linebreak;
+			LineBreak;
 			say "     You shake your head, denying her invitation but thanking her for extending it to you. 'Hm, perhaps I was too forward... My apologies. I shall get going, then, and you should do the same, lest you want to get gangbanged by a group of angry horny cats.' After she says goodbye, she disappears through the mall with incredible agility, and you never see her again.";
 			say "     And perhaps, you should really follow her recommendation. You see a group of leopardmen approaching your position, and before they can notice you, you take some hiding spots towards an exit and get out of there. Better safe than sorry.";
 			now Resolution of Pink Furred Scavenger is 1; [Met Cherry, but didn't follow her]
 	else: [leave, Cherry goes missing]
-		Linebreak;
+		LineBreak;
 		say "     You really do not want to spend any longer in here. Some sneaky creature could catch you anytime while you were not looking, and most stores you passed through have nothing of use for you to loot, so you decide to just go away.";
 		say "     On your way back, though, you see a group of leopardmen running past you. They do not see you, but you have got a feeling that the one you found earlier, getting fucked by the pink fox, was not alone. However, it is too late to warn her. You cannot help but wonder if she will make it out of that situation...";
 	now Pink Furred Scavenger is resolved;
@@ -104,7 +104,7 @@ Body Definition of Cherry is 6. [scale of 1-9 for body definition, grouped into 
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Cherry is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 Mouth Length of Cherry is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-Mouth Circumference of Cherry is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Mouth Circumference of Cherry is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
 Tongue Length of Cherry is 5. [length in inches]
 Breast Size of Cherry is 8. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Cherry is 2. [count of nipples]
@@ -150,7 +150,7 @@ CherryTea is a number that varies. CherryTea is usually 0.[@Tag:NotSaved]
 instead of conversing Cherry:
 	if CherryTea - turns < 7:
 		say "     You take a seat on her couch, on one of the sides of the small table in the center. Cherry comes by and offers you some [one of]herbal[or]black[or]green[or]infusion[at random] tea she just made. 'Here, have some.' she says, before she takes her seat on the opposite side. 'So, how is the world out there treating you? Hopefully you haven't run into too much trouble...'";
-		decrease thirst of Player by 15;
+		PlayerDrink 15;
 		now CherryTea is turns;
 	else:
 		say "     You take a seat on her couch, on one of the sides of the small table in the center. 'Did you want to talk?' she asks, focusing her attention on you.";
@@ -291,7 +291,7 @@ to say CherryTalkDomination:
 		say "     ([link]Y[as]y[end link]) - Yes, you would allow her to transform you.";
 		say "     ([link]N[as]n[end link]) - No, you are not into that.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You say that you are definitely into it and that she could feel free to do so. She nods with a smile and a hint of blush appears on her cheeks, but she tries hard to not show it. 'That is most delightful, my dear... I do appreciate your permission on that. Although, this is not a requirement. If you, for some reason, wish to not keep getting transformative effects from our encounters, just let me know.'";
 			TraitGain "Transformative Sex" for Cherry;
 		else:

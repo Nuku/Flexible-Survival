@@ -8,7 +8,6 @@ Section 1 - Creature Responses
 bunnyjocknosex is a number that varies.
 
 to say bunnyjockdesc:
-	setmongender 3; [creature is male]
 	say "     Before you is a decently sized lapine male standing at six foot tall with bulging muscles and a clear six pack. Beyond that, he is wearing a pair of basketball shorts and a jersey that lists his number at the back. When you direct your attention at the guy's face, you see that he's smiling rather happily at you, making it clear that he's pleaded to have found you. 'Hey! You look like you can tussle around. How about we have some fun before I have to get to basketball practice?' he asks, giving you a laidback look. From the large bulge in his shorts, you can tell that the bunny jock wishes to do more than just wrestle with you. However, before you can give a response, he charges at you, intent on starting the fun.";
 
 to say losetobunnyjock:
@@ -63,7 +62,7 @@ to say beatthebunnyjock:
 to say bjockvicsex01:
 	now bunnyjocknosex is 0;
 	say "     Planting your hands on the big bunny's muscled shoulders, you push him back onto the ground. He gives a soft eep as you pin him down beneath you. He's all to eager to participate, moaning a little as you grab his butt and give it a squeeze. 'Ooh yeah that's a great idea! [if Player is female]I love me a tough chick[else]Mmmm, I love receiving just as much as I love giving. Give me your best[end if]!' he says with a mix of eagerness and lust. He plants his elbows and raises his lower back with his paws and wiggles his shorts partway down. You grab them and pull them off the rest of the way, giving you a fine view of the bunny's meaty cock, muscular butt, fluffy tail and the crinkled hole nestled between all of these.";
-	say "     With his ass raised and waiting for you, you decide not to tarry with enjoying the view and instead move on to enjoying bunny's butt. Lining up your [Cock of Player] cock, you press it to his back door and thrust into him. He gives a soft moan when you first penetrate him, but soon he's panting and moaning with lust as you pound away at him. The sight of the tough jock moaning as you drive your cock into him makes you grin and turns you on all the more. All it takes is for you to grab his cock and stroke it a few times to get him to cum all over himself. His lapine seed splatters his face and chest as the combination ass-fuck and hand job milk his balls dry. As he's finishing up, you plough hard into him and cry out in climax, pumping your [Cum Load Size of Player] load into his well-fucked ass. You pull out before you're done, adding a few last shots of your semen to the sticky mess already covering him before leaving the panting jock covered in your combined semen.";
+	say "     With his ass raised and waiting for you, you decide not to tarry with enjoying the view and instead move on to enjoying bunny's butt. Lining up your [Cock of Player] cock, you press it to his back door and thrust into him. He gives a soft moan when you first penetrate him, but soon he's panting and moaning with lust as you pound away at him. The sight of the tough jock moaning as you drive your cock into him makes you grin and turns you on all the more. All it takes is for you to grab his cock and stroke it a few times to get him to cum all over himself. His lapine seed splatters his face and chest as the combination ass-fuck and handjob milk his balls dry. As he's finishing up, you plough hard into him and cry out in climax, pumping your [Cum Load Size of Player] load into his well-fucked ass. You pull out before you're done, adding a few last shots of your semen to the sticky mess already covering him before leaving the panting jock covered in your combined semen.";
 
 to say bjockvicsex02:
 	now bunnyjocknosex is 0;
@@ -81,6 +80,13 @@ to say bunnyjockattack:
 		say "[one of]The bunny jock grabs you roughly and gropes you![or]The bunny jock grabs your ass and squeezes![or]The muscled bunny tackles you to the ground, then hops up and cheers himself on.[or]The big jock puts you in a headlock that threatens to crush your skull.[or]The rabbit slams his shoulder against you, pushing you into the wall.[at random]";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Bunny Jock"	"[PrepCombat_Bunny Jock]"
+
+to say PrepCombat_Bunny Jock:
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

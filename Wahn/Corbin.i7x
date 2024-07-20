@@ -236,7 +236,7 @@ instead of going southwest from Central Farm Square while (HP of Corbin is 4 and
 	move player to Worker Barracks;
 	say "     As you walk into the barracks, you notice a group of horsemen standing around Corbin in the back, blocking him in with his back to one of the bunk beds. Their leader is saying '...keeping your pussy from us. You've been fucking around with some stranger instead of one of us[if CorbinPregnancy > 1] and even let him knock you up[end if]!' Corbin replies with 'Yes, but -', only to be interrupted by the horseman farmhand almost immediately. 'What, do you think we're not good enough for you? Pretending you're just one of the guys all this time because your pussy is too precious?! I guess we'll have to show this little slut what he's been missing, don't we guys?' There is a general angry murmur of agreement in the room and you hear the sound of a zipper or two being pulled down. Seems that while these guys aren't usually a bad bunch, the 'betrayal' of not getting any pussy from Corbin all this time enraged some of them quite a bit. Mobs being what they are, this could escalate quickly.";
 	if Alexandra is in Worker Barracks:
-		say "     While the riled-up horsemen are crowding in around Corbin, you see Alexandra get up from where she was sitting on the edge of her bed and glance over at what is going on. Eyebrows drawing together, her lips peel back, showing the doberwoman's teeth in a show of hostility, with a low growl rising from her throat. Seems that while she's become your bad dog bitch, there are some things that still rub her in a wrong way. 'So much for this being a safe place. Stupid bullshit for me to think it was,' she mutters under her breath. A determined expression crosses her face and the former cop smoothes out her snarl as good as she can, then steps forward to approach Corbin and the leader of the group of horsemen.";
+		say "     While the riled-up horsemen are crowding in around Corbin, you see Alexandra get up from where she was sitting on the edge of her bed and glance over at what is going on. Eyebrows drawing together, her lips peel back, showing the doberwoman's teeth in a show of hostility, with a low growl rising from her throat. Seems that while she's become your bad dog bitch, there are some things that still rub her in a wrong way. 'So much for this being a safe place. Stupid bullshit for me to think it was,' she mutters under her breath. A determined expression crosses her face and the former cop smooths out her snarl as good as she can, then steps forward to approach Corbin and the leader of the group of horsemen.";
 		LineBreak;
 		say "     [bold type]What do you want to do about all of this?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Step in yourself and stop this! (with backup from Alexandra)[line break]";
@@ -293,7 +293,6 @@ instead of going southwest from Central Farm Square while (HP of Corbin is 4 and
 			NPCSexAftermath Corbin receives "PussyFuck" from Farmhand Horsemen;
 			now HP of Corbin is 90;
 		else: [fight]
-			now horsefight is 2;
 			LineBreak;
 			say "     Getting a grip on the shoulder of the farmhand preparing to fuck Corbin, you pull him back, much to the annoyance of the muscled equine. Enraged at you cock-blocking him, he comes at you with balled fists.";
 			LineBreak;
@@ -305,9 +304,11 @@ instead of going southwest from Central Farm Square while (HP of Corbin is 4 and
 				else if GroupFightCounter is 2:
 					say "     That's a second one of the group of horsemen out of the fight. But still, another equine farmhand steps right up, hands raised in a boxing pose.";
 				now inasituation is true;
+				say "     'Fuck off,' the farmhand growls and swings a punch at you.";
 				challenge "Horseman";
 				increase GroupFightCounter by 1;
 			if fightoutcome > 19 and fightoutcome < 30: [lost]
+				say "     The muscled equine farmhand knocks you to the ground with a punch to the stomach, looking down on you in disdain as you cough and try to catch your breath. 'Just stay out of things that don't concern you,' he growls, then turns away from you and joins the crowd around Corbin.";
 				say "[LoseInBarracksfight]";
 			else if fightoutcome is 30: [fled]
 				say "[RunFromBarracksfight]";
@@ -316,7 +317,6 @@ instead of going southwest from Central Farm Square while (HP of Corbin is 4 and
 				say "     The confrontation over, the gathered horsemen help up their bruised buddies and go back to what they were doing before. That just leaves you and a pretty relieved-looking Corbin standing in the bunks area. He hugs you close, then says 'Thank you. That'll show them I'm not just a slut to be used.' He kisses you, then lets his hand wander down to your crotch, giving it a squeeze as he adds 'Not that I'm opposed to regular rolls in the hay - with the right person and on my schedule, not theirs.' With a suggestive wink, the cowboy cuntboy saunters over to his bed and lies back on it, grabbing a magazine to read.";
 				now HP of Corbin is 5;
 			now inasituation is false;
-			now horsefight is 0;
 
 instead of going southwest from Central Farm Square while (CorbinPregnancy is 4 and daytimer is day):
 	project the Figure of Corbin_face_icon;

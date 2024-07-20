@@ -740,6 +740,7 @@ Understand "scale up" as Firepolescaling.
 Check Firepolescaling:
 	If LowerFirepole is not visible:
 		say "[if PALOMINO Dance Club is known and a random chance of 1 in 2 succeeds]If you want to play around on a pole, try the PALOMINO.[else]Thinking about monkeying around on a fire pole, are we?[end if]";
+		stop the action;
 
 carry out Firepolescaling:
 	say "     Figuring that you could do with a light workout, you decide to climb the fire pole.";

@@ -76,6 +76,16 @@ impregnatevalid is a truth state that varies. impregnatevalid is usually false.
 ebgatorcarrying is a number that varies. ebgatorcarrying is usually 1.
 
 to say ebgatordesc:
+	say "     A loud, low hissing sound echoes from the open air as a monstrous, feral alligator lurches from the shadow. Twisted by an unholy influence, the six-legged beast is an abyssal shade of purple, hard scales and ridges jutting from its coarse frame, a soft red flame visibly glowing in the cracks and crevices.";
+	say "     Twin pairs of eyes fixated on your [bodytype of Player] form, its drooling maw is agape, revealing its two rows of razor-sharp teeth. Without warning, it charges directly at you!";
+	if impregnatevalid is true:
+		say "     [bold type]...The creature has a slightly awkward gait, as if bloated with something...[roman type][line break]";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Ebonflame Dragator"	"[PrepCombat_Ebonflame Dragator]"
+
+to say PrepCombat_Ebonflame Dragator:
 	setmongender 3; [creature is male]
 	now firebreathcount is 0;
 	now firebreathready is false;
@@ -96,10 +106,6 @@ to say ebgatordesc:
 				now tempnum2 is 2;
 			else:
 				increase ebgatorcarrying by 1;
-	say "     A loud, low hissing sound echoes from the open air as a monstrous, feral alligator lurches from the shadow. Twisted by an unholy influence, the six-legged beast is an abyssal shade of purple, hard scales and ridges jutting from its coarse frame, a soft red flame visibly glowing in the cracks and crevices.";
-	say "     Twin pairs of eyes fixated on your [bodytype of Player] form, its drooling maw is agape, revealing its two rows of razor-sharp teeth. Without warning, it charges directly at you!";
-	if impregnatevalid is true:
-		say "     [bold type]...The creature has a slightly awkward gait, as if bloated with something...[roman type][line break]";
 
 Section 2 - Creature Insertion
 

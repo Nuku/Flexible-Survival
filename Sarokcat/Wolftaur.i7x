@@ -93,12 +93,18 @@ to say WolftaurRidingAss:
 	WaitLineBreak;
 	say "     You lie there panting on his chest for a while, your hands instinctively stroking his soft fur as you both try to regain your wits. Eventually his knot shrinks enough that you are able to pull yourself off him, his cock slipping out and leaving you feeling sadly empty as you stand up on shaky legs. While you're collecting your stuff, the wolftaur says, 'That was... something else. Can't remember when I last came that much. But... I'm not really into that ass stuff. That's for gay sissies - and I'm a real man!', looking up at you with a weak grin, then lets his head sink back on the floor. 'Since you like to fuck anyways, how about if next time, you just submit and I show you a good time on my terms?' You just give him a meaningful grin, then walk off, leaving him to pick himself up later.";
 
+Section 2 - Creature Insertion
+
 to say WolftaurDesc:
-	project the Figure of Wolftaur_soft_icon;
-	setmongender 3;
 	say "     Wandering through the zoo pathways, you begin to get the feeling that something is following you, looking around you in panic, you spot a large gray-furred Wolftaur following you down the path. The large beast is making little effort to hide, his wolfish lower body moving swiftly down the trail after you, while his fur covered upper body is flexing its clawed hands in anticipation of getting them on you, and there is a rather lusty look on the beasts canine face as it eyes you. [one of]'I don't suppose you are on the way to your grandma's house now, because I see the treat I want...' [or]'Heh heh heh, now the question is, will you submit quietly or struggle? Either way, you will be mine,' [or]'I can't wait to see you on all fours underneath me,' [or]'How about I show you what a large cock I have? It's all the better to stick into you, my dear...' [or]'You look like you would make a fine bitch...' [or]'Why don't you come join my pack?' [at random]he says, a lusty canine musk filling the air as he abandons any pretense of stealth and pads forward eagerly, his canine cock bouncing underneath his lower body eagerly.";
 
-Section 2 - Creature Insertion
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Wolftaur"	"[PrepCombat_Wolftaur]"
+
+to say PrepCombat_Wolftaur:
+	setmongender 3;
+	project the Figure of Wolftaur_soft_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

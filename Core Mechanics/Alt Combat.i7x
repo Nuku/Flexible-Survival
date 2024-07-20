@@ -10,6 +10,7 @@ Dam is a number that varies.
 monstercom is a number that varies.		[ This represents the row on the table of Critter Combat to be used in this fight. ]
 altattackmade is a number that varies.	[ This tracks whether an alternate attack what chosen. ]
 combat abort is a number that varies.	[ 0 = combat continues / 1 = combat will be aborted. ]
+CreatureArtworkOverride is a truth state that varies. [@Tag:NotSaved]
 ktspeciesbonus is a number that varies.	[ Applies a species bonus while using the 'Know Thyself' feat. ]
 ktcockmatch is a truth state that varies.
 ktcockmatch is usually false.          [ Checks for matching player cock while using the 'Know Thyself' feat. ]
@@ -201,19 +202,25 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	now fightoutcome is 100;
 	let nam be Name entry;
 	let found be 0;
-	follow the ngraphics_blank rule;
-	repeat through the table of game art:
-		if title entry is nam:
-			now found is 1;
-			project icon entry;
-			break;
 	choose row MonsterID from Table of Random Critters;
-	if enemy type entry is 0: [non-unique enemies]
-		say "[bold type]You run into a [EnemyNameOrTitle].[roman type][line break][desc entry][line break]";
-	else if enemy type entry is 1: [unique enemies whose name is not known]
-		say "[bold type]You run into a [EnemyNameOrTitle].[roman type][line break][desc entry][line break]";
-	else if enemy type entry is 2: [unique enemies whose name is known]
-		say "[bold type]You run into [enemy Name entry].[roman type][line break][desc entry][line break]";
+	if CreatureArtworkOverride is false:
+		follow the ngraphics_blank rule; [clear previous picture]
+		repeat through the table of game art: [display picture from the artwork table, if available]
+			if title entry is nam:
+				now found is 1;
+				project icon entry;
+				break;
+	if there is a name of nam in the Table of CombatPrep:
+		choose row with name of nam in the Table of CombatPrep;
+		say "[PrepFunction entry]";
+	choose row MonsterID from Table of Random Critters;
+	if inasituation is false: [regular creature pre and postcombat, might include artwork being shown]
+		if enemy type entry is 0: [non-unique enemies]
+			say "[bold type]You run into a [EnemyNameOrTitle].[roman type][line break][desc entry][line break]";
+		else if enemy type entry is 1: [unique enemies whose name is not known]
+			say "[bold type]You run into a [EnemyNameOrTitle].[roman type][line break][desc entry][line break]";
+		else if enemy type entry is 2: [unique enemies whose name is known]
+			say "[bold type]You run into [enemy Name entry].[roman type][line break][desc entry][line break]";
 
 Part 3 - Combat
 
@@ -366,6 +373,12 @@ This is the player attack rule:
 	let the combat bonus be attack bonus - defense bonus;
 	if Debug is at level 10:
 		say "DEBUG: Combat Bonus (Player) [Combat bonus][line break]";
+	let the seduce bonus be Perception of Player + ( level of Player * 2 ) + plseducebonus - 10;
+	if Debug is at level 10:
+		say "DEBUG: Seduction Bonus (Player) [seduce bonus][line break]";
+	let the seduction defense bonus be ( 20 - (monsterLibido divided by 3) ) + ( lev entry * 2 ) + monmindbonus - 10;
+	if Debug is at level 10:
+		say "DEBUG: Seduction defense bonus (Enemy) [seduction defense bonus][line break]";	
 	if ktcockmatch is true:		[That's what you get for thinking with your crotch.]
 		increase Libido of Player by a random number from 0 to 2;
 	if HardMode is true:
@@ -519,13 +532,10 @@ This is the player attack rule:
 	else:
 		say "You miss!";
 	if Player is not lonely:
-		[if a random chance of petchance in 4000 succeeds and ] [TODO: Rebuild this section]
-		if "Double Team" is listed in feats of Player:[The Horde]
-			LineBreak;
-			say "Your pets, always close by, aid you in attacking the enemy, synchronizing both their attacks against the [EnemyNameOrTitle]!";
-			LineBreak;
-			Repeat with z running through companionList of Player:
-				if z is not NullPet:
+		LineBreak;
+		Repeat with z running through companionList of Player:
+			if z is not NullPet:
+				if "LustAttacks" is not listed in Traits of z: [normal combat]
 					now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
 					let the combat bonus be attack bonus minus defense bonus;
 					if HardMode is true:
@@ -543,45 +553,52 @@ This is the player attack rule:
 						let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
 						say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
 						decrease monsterHP by dam;
+						increase monsterLibidoPenalty by 10;
 					else:
 						say "[z] misses!";
-		else if a random chance of petchance in 1000 succeeds:
-			LineBreak;
-			let z be entry 1 of companionList of Player;
-			if z is not NullPet:
-				now attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
-				let the combat bonus be attack bonus minus defense bonus;
-				if HardMode is true:
-					if the combat bonus > 16:
-						now combat bonus is 16;
-					else if the combat bonus < -25:
-						now combat bonus is -25;
-				else:
-					if the combat bonus > 19:
-						now combat bonus is 19;
-					else if the combat bonus < -22:
-						now combat bonus is -22;
-				now roll is a random number from 1 to 50;
-				if roll plus the combat bonus > 20:
-					let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
-					say "[assault of z][run paragraph on]  [special-style-2][dam][roman type] damage inflicted!";
-					decrease monsterHP by dam;
-				else:
-					say "[z] misses!";
+				else: [lusty combat]
+					now the seduce bonus is Charisma of z + ( level of z * 2 ) + pethitbonus - 10;
+					let the combat bonus be seduce bonus minus seduction defense bonus;
+					if HardMode is true:
+						if the combat bonus > 16:
+							now combat bonus is 16;
+						else if the combat bonus < -25:
+							now combat bonus is -25;
+					else:
+						if the combat bonus > 19:
+							now combat bonus is 19;
+						else if the combat bonus < -22:
+							now combat bonus is -22;
+					now roll is a random number from 1 to 50;
+					if the roll plus the combat bonus > 20 and SeductionImmune entry is false:
+						let LibidoIncrease be ( (Charisma of z divided by three) * ( a random number from 70 to 130 ) ) divided by 100;
+						say "[z]: [assault of z] [special-style-2][dam][roman type] [special-style-2][LibidoIncrease][roman type] libido increase!";
+						increase monsterLibido by LibidoIncrease;
+					else:
+						if SeductionImmune entry is true:
+							say "[z]'s seduction attempt fails! Doesn't look like that'll get anywhere with this tactic.";
+						else:
+							say "[z]'s seduction attempt fails!";
+					say "Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
+					increase HP of Player by 1;
 	LineBreak;
-	if monsterHP is not currentmonHP:
-		follow the monster injury rule;
-		say "[EnemyCapNameOrTitle] is [descr].";
-	if monsterHP > 0:
+	follow the monster injury rule;
+	say "[EnemyCapNameOrTitle] is [descr].";
+	follow the monster libido rule;
+	say "[EnemyCapNameOrTitle] is [descr].";
+	if monsterHP < 1:
+		now fightoutcome is 10;
+		win;
+	else if monsterLibido minus monsterLibidoPenalty >= 100:
+		now fightoutcome is 11; [monster submits to player]
+		win;
+	else:
 		if BeforeCombat is 0:
 			choose row monstercom from table of Critter Combat;
 			if Playerpoison > 0, follow the playerpoisoned rule;
 			if there is a continuous in row monstercom of the table of Critter Combat:
 				follow the continuous entry;
 			if combat abort is 0 and skipretaliate is false, follow the combat entry;
-	else:
-		now fightoutcome is 10;
-		win;
 
 to say EnemyNameOrTitle:
 	choose row MonsterID from the Table of Random Critters;
@@ -619,6 +636,12 @@ This is the player seduce rule:
 	let the combat bonus be seduce bonus - seduction defense bonus;
 	if Debug is at level 10:
 		say "DEBUG: Combat Bonus (Player) [Combat bonus][line break]";
+	let the attack bonus be dexterity of Player + ( level of Player * 2 ) + plhitbonus - 10;
+	if Debug is at level 10:
+		say "DEBUG: Attack Bonus (Player) [attack bonus][line break]";
+	let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
+	if Debug is at level 10:
+		say "DEBUG: Defense Bonus (Enemy) [defense bonus][line break]";
 	if HardMode is true:
 		if the combat bonus > 16:
 			now combat bonus is 16;
@@ -650,18 +673,73 @@ This is the player seduce rule:
 		else:
 			say "Your seduction attempt fails!";
 	LineBreak;
+	if Player is not lonely:
+		Repeat with z running through companionList of Player:
+			if z is not NullPet:
+				if "LustAttacks" is not listed in Traits of z: [normal combat]
+					now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
+					let the combat bonus be attack bonus minus defense bonus;
+					if HardMode is true:
+						if the combat bonus > 16:
+							now combat bonus is 16;
+						else if the combat bonus < -25:
+							now combat bonus is -25;
+					else:
+						if the combat bonus > 19:
+							now combat bonus is 19;
+						else if the combat bonus < -22:
+							now combat bonus is -22;
+					now roll is a random number from 1 to 50;
+					if roll plus the combat bonus > 20:
+						let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
+						say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
+						decrease monsterHP by dam;
+						increase monsterLibidoPenalty by 10;
+					else:
+						say "[z] misses!";
+				else: [lusty combat]
+					now the seduce bonus is Charisma of z + ( level of z * 2 ) + pethitbonus - 10;
+					let the combat bonus be seduce bonus minus seduction defense bonus;
+					if HardMode is true:
+						if the combat bonus > 16:
+							now combat bonus is 16;
+						else if the combat bonus < -25:
+							now combat bonus is -25;
+					else:
+						if the combat bonus > 19:
+							now combat bonus is 19;
+						else if the combat bonus < -22:
+							now combat bonus is -22;
+					now roll is a random number from 1 to 50;
+					if the roll plus the combat bonus > 20 and SeductionImmune entry is false:
+						let LibidoIncrease be ( (Charisma of z divided by three) * ( a random number from 70 to 130 ) ) divided by 100;
+						say "[z]: [assault of z] [special-style-2][dam][roman type] [special-style-2][LibidoIncrease][roman type] libido increase!";
+						increase monsterLibido by LibidoIncrease;
+					else:
+						if SeductionImmune entry is true:
+							say "[z]'s seduction attempt fails! Doesn't look like that'll get anywhere with this tactic.";
+						else:
+							say "[z]'s seduction attempt fails!";
+					say "Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
+					increase HP of Player by 1;
+	LineBreak;
+	follow the monster injury rule;
+	say "[EnemyCapNameOrTitle] is [descr].";
 	follow the monster libido rule;
 	say "[EnemyCapNameOrTitle] is [descr].";
-	if monsterLibido minus monsterLibidoPenalty < 100:
+	if monsterHP < 1:
+		now fightoutcome is 10;
+		win;
+	else if monsterLibido minus monsterLibidoPenalty >= 100:
+		now fightoutcome is 11; [monster submits to player]
+		win;
+	else:
 		if BeforeCombat is 0:
 			choose row monstercom from table of Critter Combat;
 			if Playerpoison > 0, follow the playerpoisoned rule;
 			if there is a continuous in row monstercom of the table of Critter Combat:
 				follow the continuous entry;
 			if combat abort is 0 and skipretaliate is false, follow the combat entry;
-	else:
-		now fightoutcome is 11; [monster submits to player]
-		win;
 
 Chapter 3 - Item Use
 
@@ -765,7 +843,7 @@ This is the flee rule:
 		let the defense bonus be dex entry + ( lev entry * 2 ) + monhitbonus - 10;
 		let the combat bonus be attack bonus - defense bonus;
 		if "Gas Cloud" is listed in feats of Player and gascloud is 0 and peppereyes is 0:
-			if TailName of Player is "Skunk" or TailName of Player is "Skunkbeast Lord" or TailName of Player is "Skunk Taur" or TailName of Player is "Hyperskunk":
+			if TailName of Player is "Skunk Female" or TailName of Player is "Skunk Male" or TailName of Player is "Skunkbeast Lord" or TailName of Player is "Skunk Taur" or TailName of Player is "Hyperskunk":
 				say "You give your striped tail a meaningful wave at your enemy before releasing your spray and trying to escape.";
 				increase gascloud by 5;
 			else if TailName of Player is "Squid":
@@ -1260,11 +1338,11 @@ to win:
 		if a random chance of vorechance in 300 succeeds:					[chance for ub]
 			if Name entry is not listed in infections of VoreExclusion and enemy type entry is 0: [not on the exclude list and non-unique infection]
 				now ubprompted is true; [player will be prompted for ub]
-	if Carnivorous Plant is listed in companionList of Player and hunger of Voria > 7 and Name entry is not listed in infections of VoreExclusion and enemy type entry is 0:
+	if Carnivorous Plant is listed in companionList of Player and hunger of Voria > 7 and Name entry is not listed in infections of VoreExclusion and inasituation is false and enemy type entry is 0:
 		now ok is 0;
 		VoriaPostCombat; [Carnivorous Plant vore scene. Scenes in Voria file]
 		now fightoutcome is 15; [Voria vored foe]
-	else if voreprompted is true and ubprompted is true: [both vore and ub are possible]
+	else if voreprompted is true and ubprompted is true and inasituation is false: [both vore and ub are possible]
 		if vorechoice is 0 and ubchoice is 0: [player has full choice]
 			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself, tempted to fill that emptiness you're feeling inside with the [EnemyNameOrTitle]. Shall you give in to your desire to [link]consume (1)[as]1[end link] them, [link]unbirth (2)[as]2[end link] them or [link]suppress (0)[as]0[end link] the urge?";
 			now calcnumber is -1;
@@ -1334,7 +1412,7 @@ to win:
 			ubbyplayer; [See Alt Vore file]
 			now fightoutcome is 14; [player ub'ed foe]
 	[Vampirism]
-	if ok is 1 and vampiric is true:
+	if ok is 1 and vampiric is true and inasituation is false:
 		if NoHealMode is true:
 			increase HP of Player by ( 2 * lev entry ) / 3;
 		else:
@@ -1343,15 +1421,16 @@ to win:
 		PlayerEat 1;
 		if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 	[Trophies and Looting]
-	TrophyLootFunction;
+	if inasituation is false:
+		TrophyLootFunction;
 	[Postcombat Scene]
-	if ok is 1 and "Control Freak" is listed in feats of Player:
+	if ok is 1 and "Control Freak" is listed in feats of Player and inasituation is false:
 		say "Do you want to perform after combat scene?";
 		if Player consents:
 			now ok is 1;
 		else:
 			now ok is 0;
-	if ok is 1:
+	if ok is 1 and inasituation is false:
 		say "[defeated entry]";
 		[
 		if fightoutcome is 10:
@@ -1411,7 +1490,8 @@ To lose:
 	follow the breast descr rule;
 	now lastfightround is turns;
 	now lost is 1;
-	say "[victory entry][line break]";
+	if inasituation is false:
+		say "[victory entry][line break]";
 	if the story has not ended:
 		if scenario is "Researcher" and ( there is no resbypass in row MonsterID of Table of Random Critters or resbypass entry is false ):
 			say "";

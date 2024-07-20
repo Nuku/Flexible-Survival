@@ -20,6 +20,9 @@ Version 5 of Frank by Luneth begins here.
 [ 2 = Frank bottom  ]
 [ 3 = Frank switch  ]
 
+a postimport rule:
+	now Maininfection of Frank is "Skunk Male";
+
 Section 1 - Event and Comic Store
 
 Table of GameEventIDs (continued)
@@ -60,31 +63,30 @@ to say ResolveEvent Mephitness:
 			now Resolution of Mephitness is 1; [Player is Skunklord, Rescued Frank]
 		else:
 			say "     Yelling for their attention, you charge the skunks. The one at the back turns to face you while the others tackle their fallen prey. He yells and screams, trying to push them back and get back up while they try to kiss and fondle him.";
-			now skunkfight is 3;
-			challenge "Skunk";
-			if skunkfight is 1:
-				now skunkfight is 3;
-				say "     With the first of them finished, you move in on the other two. They notice you coming, and after some shoving between the pair, one gets up and heads to deal with you while the other keeps at their prey. He's become much more skunk-like now, with black and white fur starting to grow in over his body as the femme starts bobbing her muzzle over his stiff cock. His struggles have stopped and he's moaning in pleasure. You pull your eyes away from the erotic sight and focus on the one coming at you.";
-				challenge "Skunk";
-				if skunkfight is 1:
-					now skunkfight is 3;
+			let SkunkFightCounter be 0;
+			now fightoutcome is 0; [reset]
+			while fightoutcome < 20 and SkunkFightCounter < 3: [runs for 3 times or until the player loses or flees]
+				if SkunkFightCounter is 1:
+					say "     With the first of them finished, you move in on the other two. They notice you coming, and after some shoving between the pair, one gets up and heads to deal with you while the other keeps at their prey. He's become much more skunk-like now, with black and white fur starting to grow in over his body as the femme starts bobbing her muzzle over his stiff cock. His struggles have stopped and he's moaning in pleasure. You pull your eyes away from the erotic sight and focus on the one coming at you.";
+				else if SkunkFightCounter is 2:
 					say "     The last skunk girl releases the now ebon flesh of her prey's cock to face you. The large fellow moans softly in disappointment, trying to reach for her. She presses her foot down on his chest. 'Oh, I'll be back for you shortly, sweetie.' Grinning, she licks her gooey lips and turns to face you.";
-					challenge "Skunk";
-					if skunkfight is 1:
-						say "     With the final skunk girl defeated, you turn to the large skunk fellow, weapon at the ready just in case. But he smiles and thanks you for your help, seeming still at least partially in control of his faculties. He looks down at his discarded clothes and shrugs, deciding they're unneeded now. He tosses his pack over his shoulder and motions for you to follow him.";
-						say "     'Thanks again for the help back there. They got a little upset when I threw a can of tomato juice onto one of those big beasts. Stupid coyote didn't know what he was talking about. Been chasing and throwing goo at me almost the whole way back to my store. Almost made it, too. Never would have been able to run that far before this whole crazy thing started.' He only stops talking when he pulls a big bottle of cola from his pack and starts downing it. He leads you over a few more streets and ushers you into a comic shop, chatting the whole time.";
-						wait for any key;
-						now battleground is "void";
-						move player to Comic Shop;
-						AddNavPoint Comic Shop;
-						increase score by 20;
-						now Resolution of Mephitness is 2; [Rescued Frank]
-			if skunkfight is 3:
-				say "     Deciding you've had enough of this, not really being your fight in the first place, you break away from the skunk girl and make a run for it. As you are not their intended prize, the skunk doesn't pursue you and instead heads back to the rapidly-changing fellow who is well on his way to becoming and other skunk girl.";
-				now Resolution of Mephitness is 3; [Tried to rescue Frank, Fled]
-			if skunkfight is 2:
+				challenge "Skunk Female";
+				increase SkunkFightCounter by 1;
+			if fightoutcome < 20: [player won]
+				say "     With the final skunk girl defeated, you turn to the large skunk fellow, weapon at the ready just in case. But he smiles and thanks you for your help, seeming still at least partially in control of his faculties. He looks down at his discarded clothes and shrugs, deciding they're unneeded now. He tosses his pack over his shoulder and motions for you to follow him.";
+				say "     'Thanks again for the help back there. They got a little upset when I threw a can of tomato juice onto one of those big beasts. Stupid coyote didn't know what he was talking about. Been chasing and throwing goo at me almost the whole way back to my store. Almost made it, too. Never would have been able to run that far before this whole crazy thing started.' He only stops talking when he pulls a big bottle of cola from his pack and starts downing it. He leads you over a few more streets and ushers you into a comic shop, chatting the whole time.";
+				wait for any key;
+				now battleground is "void";
+				move player to Comic Shop;
+				AddNavPoint Comic Shop;
+				increase score by 20;
+				now Resolution of Mephitness is 2; [Rescued Frank]
+			else if fightoutcome > 19 and fightoutcome < 30: [lost]
 				say "     Defeated, the skunk girl grinds her body against yours, dripping goo onto your crotch and fondling you. 'Mmm... I wish we had more time to play, but we need to get this fool back to receive his just punishment. He'll make a fine skunk girl for our sexy master to breed.' She kisses your cheek and runs a paw down your chest. 'You should come see him in the forest. I'd enjoy seeing you made into another slut for him to breed, too.' With that, she gets up and starts dragging off the sex-dazed skunk. He's already started to gain a shapely, feminine figure and will likely be another skunk slut soon enough.";
 				now Resolution of Mephitness is 4; [Tried to rescue Frank, Lost]
+			else if fightoutcome is 30: [fled]
+				say "     Deciding you've had enough of this, not really being your fight in the first place, you break away from the skunk girl and make a run for it. As you are not their intended prize, the skunk doesn't pursue you and instead heads back to the rapidly-changing fellow who is well on his way to becoming another skunk girl.";
+				now Resolution of Mephitness is 3; [Tried to rescue Frank, Fled]
 	else:
 		say "     More enticed by the backpack and its potential contents than the certainty of a fight with the trio of skunk girls, you slip out and grab the backpack before making your escape. You can hear the excited moans of their prey getting louder and more feminine as they transform him into another sultry skunk girl like themselves. Once you have some safe distance between you and them, you open up the pack to find a collection of snack foods and drinks, through there is a tin of ravioli as well. A side pocket has a canister of pepperspray which may be useful.";
 		ItemGain pepperspray by 1;
@@ -93,7 +95,6 @@ to say ResolveEvent Mephitness:
 		ItemGain soda by 2;
 		increase score by 15;
 		now Resolution of Mephitness is 5; [Ignored Frank, Stole bag]
-	now skunkfight is 0;
 	now Mephitness is resolved;
 
 Table of GameRoomIDs (continued)
@@ -154,7 +155,7 @@ PenileVirgin of Frank is true.
 SexuallyExperienced of Frank is false.
 TwistedCapacity of Frank is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Frank is false. [steriles can't knock people up]
-MainInfection of Frank is "Skunk".
+MainInfection of Frank is "Skunk Male".
 Description of Frank is "[frankdesc]".
 Conversation of Frank is { "NERD!" }.
 The scent of the Frank is "The large skunk fellow smells of musty comics, Cheetohs and male skunk.".
@@ -405,7 +406,7 @@ to say Frank_MF_sex00:
 	if skunkbeaststatus is 1:
 		sblinfect;
 	else:
-		infect "Skunk";
+		infect "Skunk Female";
 
 
 Section 5 - MM Seduction
@@ -547,19 +548,10 @@ to say maleskunkinfect:
 		[puts Skunk as lead monster for possible impregnation]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
-			if Name entry is "Skunk":
+			if Name entry is "Skunk Male":
 				now MonsterID is y;
 				break;
-		now sex entry is "Male"; [temporarily make target gender male]
-		now Cock Count entry is 1;
-		now Cock Length entry is 9;
-		now Ball Size entry is 2;
-		infect;
-		now sex entry is "Female"; [now back to female]
-		now Cock Count entry is 0;
-		now Cock Length entry is 0;
-		now Ball Size entry is 0;
-
+		infect "Skunk Male";
 
 Section 9 - Endings
 
@@ -570,7 +562,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Frank's Epilogue"	"NPC"	""	Frank's Epilogue rule	900	false
 
 This is the Frank's Epilogue rule:
-	if ( franksex > 2 or frankmalesex > 2 ) and Player has no non-shifting body of "Skunk" and Player has no non-shifting body of "Skunk Taur" and Player has no non-shifting body of "Skunkbeast Lord":
+	if ( franksex > 2 or frankmalesex > 2 ) and Player has no non-shifting body of "Skunk Female" and Player has no non-shifting body of "Skunk Male" and Player has no non-shifting body of "Skunk Taur" and Player has no non-shifting body of "Skunkbeast Lord":
 		if humanity of Player > 9:
 			trigger ending "Frank's Epilogue";
 			say "     When the soldiers come through the city to rescue you and the others, you tell them about Frank secure in his comic shop. But when they go to retrieve him, he opts not to leave, unable to part with his precious store and collection. You remain in contact with Frank through correspondence from time to time carried by those brave enough to enter the infected city. He has reopened the store, stocking his shelves with more books he scavenges from his one-time competitors['] abandoned locations and private collections left among the fallen city. He only has a few customers, as most of the people living there now have little interest in such pursuits, but it makes him happy just to be open again. He does remember his time with you fondly. From his letters, he seems a little lonely, though he does have a few [']special customers['] who come to enjoy his company as well as his wares. You are happy that he has at least some companionship as well as his books.";

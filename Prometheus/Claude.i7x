@@ -14,7 +14,7 @@ an everyturn rule:
 	if Charisma of Blanche > 3:
 		if TimekeepingVar is 1 or TimekeepingVar is -7: [Midnight]
 			if Player is in Computer Lab:
-				say "     [bold type]Claude waves goodbye to you as he rushes out mumbling something about getting the best spot. You see him heading for the staits to the second floor.[roman type][line break]";
+				say "     [bold type]Claude waves goodbye to you as he rushes out mumbling something about getting the best spot. You see him heading for the stairs to the second floor.[roman type][line break]";
 			else if Player is in Grey Abbey 2F:
 				say "     [bold type]Claude brightly waves to you before going over to snuggle with Blanche and Bianca on the sofa.[roman type][line break]";
 			move Claude to Grey Abbey 2F;
@@ -32,7 +32,7 @@ an everyturn rule:
 			move Claude to Computer Lab;
 		else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]
 			if Player is in Computer Lab:
-				say "     [bold type]Reluctantly leaving the warmth of his blanket coccoon, Claude hugs you and tells you that he and Ernest are going out scavenging. He brightens up a little as he remembers that he might get to makes ome new friends.[roman type][line break]";
+				say "     [bold type]Reluctantly leaving the warmth of his blanket cocoon, Claude hugs you and tells you that he and Ernest are going out scavenging. He brightens up a little as he remembers that he might get to makes ome new friends.[roman type][line break]";
 			move Claude to Nowhere;
 		[else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon] [Covered in Ernest's time table]
 			if a random chance of 4 in 5 succeeds:
@@ -58,7 +58,7 @@ an everyturn rule:
 			if Player is in Grey Abbey Library:
 				say "     [bold type]Claude puts his book back on the shelf before walking past you back tot he computer lab, kissing you on the cheek as he passes by.[roman type][line break]";
 			else if Player is in Computer Lab:
-				say "     [bold type]Claude enters the computer room and snuggles in a blanket, keeping an eye on Erenest's activity as he dozes.[roman type][line break]";
+				say "     [bold type]Claude enters the computer room and snuggles in a blanket, keeping an eye on Ernest's activity as he dozes.[roman type][line break]";
 			move Claude to Computer Lab;
 	else if Charisma of Blanche > 0:
 		if HP of Claude is 0:
@@ -237,10 +237,10 @@ to say ClaudeTalkMenu:
 	clear the screen and hyperlink list;
 
 to say ClaudeTalk1: [Small Talk]
-		say "     '[one of]I think that you understand me better than the rest of my family when it comes to the importnace of making friends out in the city. If you hadn't helped Mom when you did, none of us would have ever been born[or]Sometimes when I meet up with friends we end up playing games together. Board games, Tabletop games, and sometimes if they find batteries, we take turns playing handheld video games. I gotta say, it's a great way to have fun. One day I want to have things like that.[or]I have the worst time trying to pull Ernest away from whatever he is doing to go scavenging out in the city. If he were invested any further into his work or reading, he may end up never coming out of the library[or]If you ever want a massage, I'd be more than happy to help you to relax and forget the hardships of the city for a while. While you could have the massage with your clothes on, for a more deep seated relaxation it's better if you are naked. Though I say that, none of my siblings actually wear anything so I'm not sure what the difference wearing clothes would make[at random].'";
+		say "     '[one of]I think that you understand me better than the rest of my family when it comes to the importance of making friends out in the city. If you hadn't helped Mom when you did, none of us would have ever been born[or]Sometimes when I meet up with friends we end up playing games together. Board games, Tabletop games, and sometimes if they find batteries, we take turns playing handheld video games. I gotta say, it's a great way to have fun. One day I want to have things like that.[or]I have the worst time trying to pull Ernest away from whatever he is doing to go scavenging out in the city. If he were invested any further into his work or reading, he may end up never coming out of the library[or]If you ever want a massage, I'd be more than happy to help you to relax and forget the hardships of the city for a while. While you could have the massage with your clothes on, for a more deep seated relaxation it's better if you are naked. Though I say that, none of my siblings actually wear anything so I'm not sure what the difference wearing clothes would make[at random].'";
 
 to say ClaudeTalk2: [Boop]
-	say "     From the moment you look Claude in the eyes, you find yourself filled with the urge to give him a boop to see how he would react, only to find yourself getting your snoot booped instead. Momentarily going cross-eyed looking at the furry digit now having pre-emptively booped your snoot, Claude giggles and says 'Nothing says family closeness like a boop to the snoot!' his demonstration of familial affection brings a smile to your face as you reward him with head floofing pats and finish with a boop to his snoot in return.";
+	say "     From the moment you look Claude in the eyes, you find yourself filled with the urge to give him a boop to see how he would react, only to find yourself getting your snoot booped instead. Momentarily going cross-eyed looking at the furry digit now having preemptively booped your snoot, Claude giggles and says 'Nothing says family closeness like a boop to the snoot!' his demonstration of familial affection brings a smile to your face as you reward him with head floofing pats and finish with a boop to his snoot in return.";
 
 to say ClaudeTalk3: [Companion]
 	say "     You ask Claude whether he would be interested in coming with you out into the city. He pumps a fist in the air before rushing over to give you a hug. 'Thanks, [BlancheMomDadTitle]. No one will be able to complain about me making new friends if I'm with you.' You don't know about that, but you'll at least be there to protect him.";
@@ -281,18 +281,19 @@ to say SummonClaude:
 		say "     Walking over to Claude, you ask whether he would be interested in coming with you out into the city. He pumps a fist in the air before rushing over to give you a hug. 'Thanks, [BlancheMomDadTitle]. No one will be able to complain about me making new friends if I'm with you.' You don't know about that, but you'll at least be there to protect him.";
 	else: [regular summoning]
 		say "     Claude for all his many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see him.";
+		now SummonFailure is true;
 
 to say DismissClaude:
 	move Claude to Grey Abbey Library;
 	if Player is not in Grey Abbey Library: [regular dismiss]
 		say "     With a word, you get Claude's attention and tell him that he should head back to the library for now. He opens his mouth to argue before letting his gaze slip from yours. 'Ok. I guess I can be a bit overpowering to be around for long periods of time, personality-wise,' he concedes. 'Make me proud and try to make a few new friends while you're out, won't you, [BlancheMomDadTitle]?' he continues teasingly as he hugs you before turning to leave. You know that he can handle herself, but you still feel guilty as he walks away. ";
 		if White Wolf Three is listed in companionlist of Player: [Ernest]
-			say "'Are you sure that you wouldn't have prefered to send me back instead? You definitely help me with my research, but Claude needs the positive socialization,' Ernest confides. ";
+			say "'Are you sure that you wouldn't have preferred to send me back instead? You definitely help me with my research, but Claude needs the positive socialization,' Ernest confides. ";
 		else:
 			say "You would imagine that he and Ernest will soon be squabbling when he gets back. ";
 		say "With that in mind, you continue your exploration.";
 	else: [dismissing Claude in the abbey]
-		say "     With a word, you get Claude's attention and tell him that he should stay here at the library for now. He opens his mouth to argue before letting his gaze slip from yours. 'Ok. I guess I can be a bit overpowering to be around for long periods of time, personality-wise,' he concedes. 'Make me proud and try to make a few new friends while you're out, won't you, [BlancheMomDadTitle]?' he continues teasinglyas he hugs you before turning to leave. You know that he can handle himself, but even he needs a rest from time to time. ";
+		say "     With a word, you get Claude's attention and tell him that he should stay here at the library for now. He opens his mouth to argue before letting his gaze slip from yours. 'Ok. I guess I can be a bit overpowering to be around for long periods of time, personality-wise,' he concedes. 'Make me proud and try to make a few new friends while you're out, won't you, [BlancheMomDadTitle]?' he continues teasingly as he hugs you before turning to leave. You know that he can handle himself, but even he needs a rest from time to time. ";
 		if White Wolf Three is listed in companionlist of Player: [Ernest]
 			say "'Are you sure that you wouldn't rather take him than me? You definitely help me with my research, but Claude needs the positive socialization,' Ernest confides. ";
 		else:

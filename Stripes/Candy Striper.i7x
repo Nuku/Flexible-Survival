@@ -17,11 +17,6 @@ nocandycoonsex is a number that varies.
 coonstatus is a number that varies.
 LastCandyWalkin is a number that varies.
 
-to say candycoondesc:
-	setmongender 3; [creature is male]
-	project Figure of Candy_clothed_icon;
-	say "     You have encountered a cute raccoon in a pink, candy striper outfit. The raccoon has a slender, feminine build. The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears. The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body. That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt. The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
-
 to say losetocandycoon:
 	choose row MonsterID from the Table of Random Critters;
 	now nocandycoonsex is 0;
@@ -61,7 +56,6 @@ to say losetocandycoon:
 		say "     This upsets you a little and makes you try all the harder to please him, eager to get this gay boi to cum for you. Your tongue plays over his cock as you fondle his balls, making him release more girly moans and squeaks until he finally does cum, shooting his sugary seed down your throat. He strokes your head and smiles down at you as he slips his cock from your lips. You can see that the dangling strand of cum connecting you has a light, rose tint to it before it snaps. He grins down at you and dashes off, yelling 'Not bad... for [if Player is female]a girl[else]whatever you are[end if].'";
 		CreatureSexAftermath "Player" receives "OralCock" from "Raccoon";
 
-
 to say beatthecandycoon:
 	project Figure of Candy_naked_icon;
 	if nocandycoonsex > 2 and ( the remainder after dividing nocandycoonsex by 5 is not 0 ):
@@ -84,8 +78,18 @@ to say beatthecandycoon:
 			say "     You decide it best to just leave the horny coon to his own devices.";
 			increase nocandycoonsex by 1;
 
+Section 2 - Creature Insertio
 
-Section 2 - Creature Insertion
+to say candycoondesc:
+	say "     You have encountered a cute raccoon in a pink, candy striper outfit. The raccoon has a slender, feminine build. The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears. The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body. That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt. The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Raccoon"	"[PrepCombat_Raccoon]"
+
+to say PrepCombat_Raccoon:
+	setmongender 3; [creature is male]
+	project Figure of Candy_clothed_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -772,7 +776,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 3	"CandyMemory4"	CandyMemory4	"[EventConditions_CandyMemory4]"	Grey Abbey Library	2500	2	100
 
 to say EventConditions_CandyMemory4:
-	if (Candy is in the Bunker and HP of Candy > 1 and HP of Candy < 3 and LastCandyWalkin - turns > 1):
+	if (Candy is in the Bunker and HP of Candy > 1 and HP of Candy < 3 and LastCandyWalkin - turns > 1 and Carl is collected):
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)

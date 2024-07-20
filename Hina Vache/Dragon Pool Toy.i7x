@@ -8,12 +8,11 @@ Version 1 of Dragon Pool Toy by Hina Vache begins here.
 Section 1 - Creature Responses
 
 to say DragonPoolToyDesc:
-	setmongender 5; [creature is herm]
 	if dragonpooltoyfound is true:  [If the player had already encountered a Dragon Pool Toy]
 		say "     As you wander the area, you soon find yourself back at the trash pile. Just as before, the Dragon Pool Toy remains motionless on top of the junk. Knowing full well that it is a trap, you merely stare at the beast for a few moments before turning and starting to walk away. A quick series of squeaks is heard behind you. Turning around rapidly, you have just enough time to dodge its attempted tackle. Once more, the dragon rears up and lets out its 'ferocious' squeak of a roar as it prepares to attack.";
-		now dragonpooltoyfound is true;
 	else:   [First time meeting. Surprises player with a sneak attack]
-		say "     As you explore the surrounding area, you are forced to stifle a laugh. Before you, lying on a pile of junk, is a fully-inflated and very cartoonish dragon toy. The thing is positively massive, standing a good ten feet tall, being the kind of pool toy people place in the waters of a lake or beach to ride on. The object is a neon-purple with fins instead of normal legs, a 'sail' atop its head, and a long tail. Deciding that it is safe to check out, you begin to walk around the toy, inspecting it closely. As you make your way to its rear, you groan and slap your hand into your face, shaking your head slightly. Either this crazy infection got to an innocent toy, or some sick company decided to get real creative by adding both a vagina and a penis, both impressively sized, to the toy. Against your better judgement, you decide to push your hand into the large slit experimentally. Grimacing as you feel the damp walls of the toy, you begin to remove your hand only to see the toy swing at you with its rear flipper.";
+		now dragonpooltoyfound is true;
+		say "     As you explore the surrounding area, you are forced to stifle a laugh. Before you, lying on a pile of junk, is a fully-inflated and very cartoonish dragon toy. The thing is positively massive, standing a good ten feet tall, being the kind of pool toy people place in the waters of a lake or beach to ride on. The object is a neon-purple with fins instead of normal legs, a 'sail' atop its head, and a long tail. Deciding that it is safe to check out, you begin to walk around the toy, inspecting it closely. As you make your way to its rear, you groan and slap your hand into your face, shaking your head slightly. Either this crazy infection got to an innocent toy, or some sick company decided to get real creative by adding both a vagina and a penis, both impressively sized, to the toy. Against your better judgment, you decide to push your hand into the large slit experimentally. Grimacing as you feel the damp walls of the toy, you begin to remove your hand only to see the toy swing at you with its rear flipper.";
 		choose row MonsterID from the Table of Random Critters;
 		let bonus be ( perception of Player + dexterity of Player - 20 ) divided by 2;
 		let featbonus be 0;
@@ -65,6 +64,13 @@ to say BeatTheDragonPoolToy:
 Section 2 - Creature Insertion
 
 dragonpooltoyfound is a truth state that varies. dragonpooltoyfound is usually false.
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Dragon Pool Toy"	"[PrepCombat_Dragon Pool Toy]"
+
+to say PrepCombat_Dragon Pool Toy:
+	setmongender 5; [creature is herm]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

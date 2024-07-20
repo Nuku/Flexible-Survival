@@ -138,13 +138,13 @@ Instead of fucking Helen:
 		choose a blank row in table of fucking options;
 		now title entry is "Lick Helen's pussy";
 		now sortorder entry is 1;
-		now description entry is "Give her a blow-job.";
+		now description entry is "Give her a blowjob.";
 		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Have her suck your cock";
 			now sortorder entry is 2;
-			now description entry is "Get a blow-job.";
+			now description entry is "Get a blowjob.";
 		[]
 		if Player is not neuter and lust of Helen >= 4:
 			choose a blank row in table of fucking options;
@@ -164,7 +164,7 @@ Instead of fucking Helen:
 			now sortorder entry is 5;
 			now description entry is "Hot sex with Klauz fucking Helen.";
 		[]
-		if (Player is male and Fang is in the Grey Abbey Library and Fang is Male and (HP of Helen is 10 or HP of Helen is 12) ):
+		if (Player is male and Fang is in the Grey Abbey Library and Fang is Male and (HP of Helen is 10 or HP of Helen is 12) and HP of Fang < 7 ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Helen & Fang";
 			now sortorder entry is 6;
@@ -176,7 +176,7 @@ Instead of fucking Helen:
 			now sortorder entry is 7;
 			now description entry is "Hot sex with Klauz fucking Helen.";
 		[]
-		if (Player is female and Fang is in the Grey Abbey Library and Fang is Male and (HP of Helen is 10 or HP of Helen is 12) ):
+		if (Player is female and Fang is in the Grey Abbey Library and Fang is Male and (HP of Helen is 10 or HP of Helen is 12) and HP of Fang < 7 ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Helen & Fang";
 			now sortorder entry is 8;
@@ -277,7 +277,7 @@ to say HelenSex1: [player licks her]
 
 to say HelenSex2: [she sucks the player]
 	say "     You step beside the cot you put in here for her and whistle to call Helen. The dog with the buck-naked body of a young woman immediately rushes to you from where she was patrolling through the long rows of bookshelves in the library. She comes to stand beside you, happy to get her master's attention[if lust of Helen >= 4 and a random chance of 2 in 5 succeeds]. 'Master play?' she says with a wide grin[end if]. 'Good dog' you say as you crouch down beside her, patting her head and stroking her shoulders. Your hands stray lower and under her [if lust of Helen >= 7]tattooed [end if]body, cupping her shapely breasts and fondling them. Standing back up, you quickly strip off your clothes and hold your erect manhood up for Helen, who gives you a happy yip, then starts licking.";
-	say "     She runs her talented tongue along your shaft, then laps at your balls before returning to the tip of your cock and taking it in her mouth. As Helen starts giving you a pretty nice blow-job, you resolve to thank Mike the next time you see him for your expertly trained pet. Your human dog is very careful not to touch your best bit with her teeth and uses her tongue to caress your cock as she bobs up and down on it";
+	say "     She runs her talented tongue along your shaft, then laps at your balls before returning to the tip of your cock and taking it in her mouth. As Helen starts giving you a pretty nice blowjob, you resolve to thank Mike the next time you see him for your expertly trained pet. Your human dog is very careful not to touch your best bit with her teeth and uses her tongue to caress your cock as she bobs up and down on it";
 	if lust of Helen < 4:
 		say ". With her eager sucking, it doesn't take much longer until the need to cum rises in your balls.";
 	else if lust of Helen < 7:
@@ -334,7 +334,7 @@ to say HelenSex4: [Player fucks the felinoid as he shafts Helen]
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Helen a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Noting the wolf's interest, the big feline snarls and Fang slinks back to his post for the moment. Oh well, the felinoid seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if HP of Helen is 12:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Helen a hostile stare. Seeing the felinoid fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Helen closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, Klauz seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		else if HP of Fang is 3 or HP of Fang is 4: [Alpha Fang]
+		else if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 7: [Alpha Fang]
 			if HP of Helen is 11:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Helen a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if HP of Helen is 12:
@@ -673,7 +673,7 @@ to say HelenBeachWalk:
 		WaitLineBreak;
 		say "     Having taken a moment to put his speedo back on, the sandman strolls back to your side and smirks broadly. 'Look how happy your girl is. That's how you can tell she got a proper beach loving, hah! Be sure to bring the cutie by some more in the future!' With that said, he walks away with an extra spring in his step. Man, the things one can see and meet on the beach these days... sexy, arousing things. Smiling yourself, you then guide your black-haired beauty over to an abandoned umbrella, sitting down for a while to rest with her. After you take a seat on one of the beach towels underneath the umbrella, Helen nuzzles her head onto your lap.";
 		say "     The two of your lie there for a short while, enjoying the sounds of the waves crashing against the shore. When Helen seems rejuvenated enough, you decide to return to the abbey. While walking back through the beach plaza you see the fox in the Bermuda shorts again, smiling he asks, 'Did you two have a fun time at the beach?' Contented, your youthful pet barks a happy reply. Softly chuckling the fox says, 'I'll take that as a yes,' he then bids you a fond farewell as you leave the plaza. It is an uneventful walk back to the Abbey. The look on Helen's face seems very appreciative of the walk you took her on.";
-		CreatureSexAftermath "Helen" receives "PussyFuck" from "Sandman";
+		CreatureSexAftermath "Helen" receives "PussyFuck" from "Sand Man";
 		if thirst of Helen is 0: [not pregnant]
 			now thirst of Helen is 1; [pregnant]
 			now Libido of Helen is 1; [...by the sandman]
@@ -799,7 +799,7 @@ to say ResolveEvent Helen_Fang_Encounter1:
 			say "     Stepping in, you shoo Fang away from Helen, then take your human dog to the side and try to explain to her that the wolf is to be avoided. The young woman looks at your face with a somewhat curious expression, but after a few repetitions of what you want to get across, she seems to understand.";
 	else if (HP of Fang is 3 or HP of Fang is 4): [Alpha Fang]
 		say "you notice that Fang isn't in sight at any of his usual spots. Wary of unannounced visitors, you look around for signs of a fight or any other indication of what happened. Nothing out of the ordinary. Then you hear something from further back in the rows of bookshelves - growling. Readying yourself for a fight, you hurry over - to find Fang standing in a mildly threatening pose in front of Helen, who looks to the ground, then rolls over and bares her breasts and moist pussy. Your strong Alpha wolf gives a satisfied growl and goes to stand over the dog turned teenage human, allowing Helen to lick his muzzle. Looks like he wants to dominate your pet too - as is his right. Helen seems to be readily accepting the submissive role, just like you did in the end. Arousal wells up inside you as you think back to your own first time under a dominating Fang and you can't wait to see your human dog have the same experience.";
-		say "     With a commanding growl, Fang pokes Helen in the side with his muzzle, making her roll over and stand on all fours again. Mounting the teenage human body of the transformed dog, his rock-hard wolf cock penetrates Helen's pussy in one deep thrust. Licking and lightly nipping Helen's neck, he pounds into her with an animal's ferocity. Your human-dog pet gives loud moans of lust as she is penetrated deeply again and again and you can see her rock backwards to get more of that wolf shaft inside her. What a hot show you're getting here - you just wish you were the one getting fucked by that powerful wolf's shaft.  After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Helen, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and her body shudders as she orgasms, giving lust-filled moans and whimpers. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
+		say "     With a commanding growl, Fang pokes Helen in the side with his muzzle, making her roll over and stand on all fours again. Mounting the teenage human body of the transformed dog, his rock-hard wolf cock penetrates Helen's pussy in one deep thrust. Licking and lightly nipping Helen's neck, he pounds into her with an animal's ferocity. Your human-dog pet gives loud moans of lust as she is penetrated deeply again and again and you can see her rock backwards to get more of that wolf shaft inside her. What a hot show you're getting here - you just wish you were the one getting fucked by that powerful wolf's shaft. After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Helen, then holds still as it expands. Getting tied to Fang was the last straw for the human dog, and her body shudders as she orgasms, giving lust-filled moans and whimpers. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, sealing the deal of dominance and submission.";
 		LineBreak;
 		say "     You step back out from between the bookshelves and leave the two of them to wait until Fang's knot goes down. With this new development, new opportunities for fun with your canine master and human dog pet come to your mind as you walk away...";
 		if HP of Helen is 11:

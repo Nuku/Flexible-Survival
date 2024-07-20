@@ -162,10 +162,12 @@ to say AresWalk_Park:
 	else: [fight]
 		say "     It's a rather pleasant [if daytimer is day]day[else]night[end if] during this nanite apocalypse and everything is nice and quiet as you stroll along with the human dog. Or so you think at least, until you hear the warning growl from Ares, who spotted something coming your way from one of the side streets.";
 		LineBreak;
+		now human dog is tamed;
 		ForceCompanionJoin "Ares";
 		now battleground is "Outside";
 		fight;
 		ForceCompanionDismiss "Ares";
+		now human dog is not tamed;
 		if fightoutcome >= 20 and fightoutcome <= 29:[lost]
 			say "     Looks as if Ares managed to flee when you lost the fight, but remained in the area. Now that the attacker is gone, he trots up to you, showing his own bruises from the fight. With a supportive whine to get up, the human dog rubs his head against your side, then takes a guarding position to protect you from any new threats. Not really in the mood to continue this excursion after getting a beating, you return to Mike's home soon after and bring Ares back to his kennel.";
 		else if fightoutcome >= 30:[fled]
@@ -333,7 +335,7 @@ to say AresHelenParkFuck:
 				else:
 					say "Invalid choice. Type [link]1[end link] to get blown, [link]2[end link] to fuck Helen or [link]3[end link] to fuck Ares.";
 			if calcnumber is 1:[BJ]
-				say "     Saying 'Good dog' you crouch down in front of Helen, patting her head and stroking over her shoulders. Your hands stray deeper and under her [if lust of Helen >= 7]tattooed [end if]body, cupping her shapely breasts and fondling them. Sitting down, you lean back a bit while holding your erect manhood up for the young woman, who gives you a happy yip, then starts licking. She runs her talented tongue along your shaft, then laps at your balls before returning to the tip of your cock and taking it in her mouth. As Helen starts giving you a pretty nice blow-job, you resolve to thank Mike the next time you see him for your expertly trained pet. Your human dog is very careful not to touch your best bit with her teeth and uses her tongue to caress your cock as she bobs up and down on it";
+				say "     Saying 'Good dog' you crouch down in front of Helen, patting her head and stroking over her shoulders. Your hands stray deeper and under her [if lust of Helen >= 7]tattooed [end if]body, cupping her shapely breasts and fondling them. Sitting down, you lean back a bit while holding your erect manhood up for the young woman, who gives you a happy yip, then starts licking. She runs her talented tongue along your shaft, then laps at your balls before returning to the tip of your cock and taking it in her mouth. As Helen starts giving you a pretty nice blowjob, you resolve to thank Mike the next time you see him for your expertly trained pet. Your human dog is very careful not to touch your best bit with her teeth and uses her tongue to caress your cock as she bobs up and down on it";
 				if lust of Helen < 4:
 					say ". With her eager sucking, it doesn't take much longer until the need to cum rises in your balls.";
 				else if lust of Helen < 7:
@@ -536,7 +538,7 @@ to say AresXerxesParkFuck:
 				else:
 					say "Invalid choice. Type [link]1[end link] to get blown, [link]2[end link] to fuck Xerxes or [link]3[end link] to fuck Ares.";
 			if calcnumber is 1:[BJ]
-				say "     Saying 'Good dog' you crouch down in front of Xerxes, patting his head and stroking over his shoulders. Your hands stray deeper and under his [if lust of Xerxes >= 7]tattooed [end if]body, gliding over his muscled chest and playing with his nipples. Sitting down, you lean back a bit while holding your erect manhood up for the young man, who gives you a happy yip, then starts licking. He runs his talented tongue along your shaft, then laps at your balls before returning to the tip of your cock and taking it in his mouth. As Xerxes starts giving you a pretty nice blow-job, you resolve to thank Mike the next time you see him for your expertly trained pet. Your human dog is very careful not to touch your best bit with his teeth and expertly uses his tongue to caress your cock as he bobs up and down on it";
+				say "     Saying 'Good dog' you crouch down in front of Xerxes, patting his head and stroking over his shoulders. Your hands stray deeper and under his [if lust of Xerxes >= 7]tattooed [end if]body, gliding over his muscled chest and playing with his nipples. Sitting down, you lean back a bit while holding your erect manhood up for the young man, who gives you a happy yip, then starts licking. He runs his talented tongue along your shaft, then laps at your balls before returning to the tip of your cock and taking it in his mouth. As Xerxes starts giving you a pretty nice blowjob, you resolve to thank Mike the next time you see him for your expertly trained pet. Your human dog is very careful not to touch your best bit with his teeth and expertly uses his tongue to caress your cock as he bobs up and down on it";
 				if lust of Xerxes < 4:
 					say ". With his eager sucking, it doesn't take much longer until the need to cum rises in your balls.";
 				else if lust of Xerxes < 7:

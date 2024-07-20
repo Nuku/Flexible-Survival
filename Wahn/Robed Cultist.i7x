@@ -6,21 +6,22 @@ Version 1 of Robed Cultist by Wahn begins here.
 Section 1 - Creature Responses
 
 to say Robed Cultist Wins:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Robed Cultist Loses:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Robed Cultist Desc:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Robed Cultist"	"[PrepCombat_Robed Cultist]"
+
+to say PrepCombat_Robed Cultist:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -194,19 +195,20 @@ When Play begins:
 
 
 to say Deep One Wins:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Deep One Loses:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Deep One Desc:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Deep One"	"[PrepCombat_Deep One]"
+
+to say PrepCombat_Deep One:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

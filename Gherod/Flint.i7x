@@ -127,16 +127,16 @@ to say FlintTalkJob:
 	if Energy of Flint is 1:
 		say "     Wondering what it's like to work at the farm, you ask Flint about his main responsibilities. 'In general, I make sure every machine and device is working properly, but I'm mostly just doing maintenance at the milking shed. The milking machines seem to be one of the most profitable sources of income for the farm. I actually enjoy it, to be honest. Fixing stuff has always been my passion...' he replies with a smile. You can actually see the joy in his eyes, slit pupils slightly thickened as he talks about what he enjoys working with. But suddenly, they shrink back to a thin black as he realizes his mind is dwelling in the past. With a brief silence interrupting the flow of the conversation, he then apologizes.";
 		say "     'Sorry about that. I keep bringing this up... Heh, it's hard to forget some things, as they don't leave our minds so easily... But I guess it's okay to tell you that my past events had me forsake this passion of mine, hence why I'm enjoying my time here so much. Despite the whole apocalypse, I found relative peace for once in my life...' - he makes another pause, then shrugs before continuing - 'Anyway, wouldn't like this to get dark again. I could probably show you around the farm, sometime! Maybe... Do you happen to take [bold type]an interest in how the machines work?'[roman type] he asks you in the end. You think that perhaps he would like to find someone with common interests, but you could always be honest if that isn't the case.";
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Say yes, it is a subject of your interest.";
 		say "     ([link]N[as]n[end link]) - Say no, it doesn't particularly call your attention.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     The cougar smiles at your response, feeling the excitement in both his expression and voice. 'That's great! Usually I worry about boring people with this stuff... But I'm glad we have that in common. So... whenever you find yourself at the Milking Shed during my shift, I could show you around.' he says, seeming happy for having you there. Perhaps you could pass by during the afternoon and catch him there. Surely he would appreciate your effort.";
 			if Loyalty of Flint is 0:
 				now Loyalty of Flint is 1; [Showing common interest makes him like the Player more]
 		else:
-			Linebreak;
+			LineBreak;
 			say "     'Ah, I see...' he tries, but he cannot hide his disappointment in this fact. 'People don't have to like the same things, of course, but I admit it would be nice to share this with someone. Nobody around here seems to take an interest in my work, they simply want me to keep doing whatever I'm doing... Anyway, thanks for the talk!' he finishes, before politely turning away.";
 			[No changes to Flint's loyalty]
 		now FlintDoneTalking is true;
@@ -152,24 +152,24 @@ to say FlintTalkSex:
 		WaitLineBreak;
 		say "     You now know that he was actually turned by someone else, another cougar man like he now is, who forced himself upon him, and while he may have been partially enjoying the event, he now regrets having even thought about submitting entirely. He currently holds his mind sane, and seems afraid of pursuing any further sexual relationship with anyone. But you actually can't ignore the sizable bump between his legs, which he seems ashamed about.";
 		say "     Do you want to delicately push the subject and perhaps attempt to have him see other ways?";
-		Linebreak;
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Carefully, as you don't want to harm him.";
 		say "     ([link]N[as]n[end link]) - Back away, for now.";
 		if Player consents: [Actively help Flint overcome his fears]
-			Linebreak;
+			LineBreak;
 			say "     Showing empathy for him, you tell him you completely understand his situation, but argue that maybe it would be best if he came to terms with what happened, as he for sure wouldn't be the only one going through similar things around here. 'I know what you mean, but... how? Every time I think about how that felt, I just...' he looks down to his by now solid erection, still covered underneath his jumpsuit, and stutters during the next few words. 'T-this happens...' You tell him it's okay, and that he is certainly strong enough to deal with this. There is enough to conclude that whatever transformation he had to go through, he already did, and any fears he is having are purely psychological, which is... good, within a certain perspective.";
 			say "     Besides that, his boner won't go away, which causes a somewhat awkward situation between you both. What occurs to you is saying that, in order for him to be able to surpass this, he must actually accept he enjoyed part of the intercourse with the manly cougar and let that fact rest on the back of his mind. 'You think it's okay to... think that way? That doesn't make me a slut... does it?' Again, you tell him it's fine to like to shake things up a bit, sometimes, and it doesn't mean he's a slut. But regarding that subject, you ask him about his preferences, as well, once you've got him to open up slightly.";
 			WaitLineBreak;
 			say "     'I mean... I didn't know I liked being fucked, actually. I didn't know I liked dudes, even. But I admit I've been checking out some boys, besides girls and other [']genders[']... I guess I'm bi? Pansexual? Something around that...' You nod, and encourage him to continue. 'I think I would consider myself a top, before, even though I thought I was straight, but... well, now things are different. I think I'd be open to both sides and all genders.' He says, and you both find yourselves looking into each other[']s eyes for a while...";
 			say "     [bold type]What is your next move?[roman type][line break]";
-			Linebreak;
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Go for it and kiss him.";
 			say "     ([link]N[as]n[end link]) - Better not.";
 			if Player consents: [Going for the kiss leads to sex]
-				Linebreak;
+				LineBreak;
 				say "[FlintFirstSex]";
 			else: [Stopping it has the same effect as backing away, with slightly different text]
-				Linebreak;
+				LineBreak;
 				say "     Perhaps backing away would be the most sane thing to do, right now. Messing with someone from the farm could get you in trouble, and this seems like Flint's situation needs a very, very delicate approach... You've done what you could for him, and feel like you may have actually helped him, somewhat. 'Thanks... Really. I... know I have to come to terms with what happened, but it was all fairly recent, and... I just need some time. Talking helped, so... thank you, again.'";
 				if Loyalty of Flint is 0:
 					say "     Before you close the subject at once, however, Flint still adds something. 'If you'd like to come by the Milking Shed while I'm working, I... I'd like to show you around. The milking machines can be quite interesting, I think... ... I don't mean this as any sexual proposition! It's just my work! And... we could spend some more time knowing each other, I think.' he hurries to say, chuckling along his last words. You nod, and let him know you'll consider.";
@@ -177,7 +177,7 @@ to say FlintTalkSex:
 				now Libido of Flint is 1;
 				now FlintDoneTalking is true;
 		else: [Let Flint work out his fears on his own, he approves this still]
-			Linebreak;
+			LineBreak;
 			say "     Perhaps backing away would be the most sane thing to do, right now. Messing with someone from the farm could get you in trouble, and this seems like Flint's situation needs a very, very delicate approach... You start with letting Flint know that everything's fine, and that you don't have to be having this conversation, right now. 'Thanks... Really. I... know I have to come to terms with what happened, but it was all fairly recent, and... I just need some time. Talking helped, so... thank you, again.'";
 			if Loyalty of Flint is 0:
 				say "     Well, that took an unexpected turn, as it feels like you actually helped him somewhat. But before you close the subject at once, Flint still adds something. 'If you'd like to come by the Milking Shed while I'm working, I... I'd like to show you around. The milking machines can be quite interesting, I think... ... I don't mean this as any sexual proposition! It's just my work! And... we could spend some more time knowing each other, I think.' he hurries to say, chuckling along his last words. You nod, and let him know you'll consider.";
@@ -265,7 +265,7 @@ to say FlintGiveBlowjob:
 	say "     The cougar leans his head back and closes his eyes, trying to deal with all the lust that's taking him over as you simply pleasure his cock, undeniably giving him a great time. Taking his member deep inside your throat and out as much as you are able, you begin to make the handyman shake in ecstasy as you pick up the pace, playing with his balls to leave him even more turned on. Judging by how hard his erection is right now, you would guess he is pretty close to release, but decide to edge him for a while, lurking around the point of no return and back, driving him to madness very, very quickly... 'I-I can't take that for much longer...' he says, tempted to grab your head as you feel his hand hovering over you.";
 	say "     But you decide to pick up the pace once and for all, sucking him faster and deeper, now holding his cock with one hand as you give yourself the angle to jerk him off with your mouth. Soon, you notice his breathing getting more intense. 'I'm close...' he warns, and while you appreciate his consideration, that is exactly what you are going for. Within seconds, the cougar's rod pulses and throb at a much higher rate, followed by a generous amount of sweet feline cum that ends up coating your teeth and tongue entirely. He looks down on you with a silly smile on his face as his orgasm slowly subsides, still having some drops of spunk fall on your lips and cheek as his dick rests against your face.";
 	say "     Now, what will you do with his load in your mouth?";
-	Linebreak;
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Surprise him with a cum-filled kiss.";
 	say "     ([link]N[as]n[end link]) - Swallow his load.";
 	if Player consents:

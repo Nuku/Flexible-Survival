@@ -225,7 +225,7 @@ to say fsdfeeding:
 	else:
 		say "     You watch as she begins to cough up some food for you. By this point you've been so frequently exposed to her feeding methods that, in some maddening sense, you welcome it. At least, enough so that you don't bother making any futile protests; can't really complain about a free meal, anyways.";
 		say "     Complying, you open your mouth as she descends upon you, promptly meeting it with a rush of the fish matter, offering faint chirps of approval as she feeds you. Happy that you don't cause her any trouble this time, she nuzzles you affectionately after she finishes, her tongue cleaning up any mess of fish from your face - not to much benefit as it's merely replaced with an excessive heaping of her saliva. Inevitably, she departs, letting you return to your prior endeavors.";
-	decrease hunger of Player by a random number between 10 and 24;
+	PlayerEat 15;
 	now lastfsdfeeding is turns;
 	infect; [additional infection]
 
@@ -252,22 +252,6 @@ To say fsdf loss:
 				say "     You choose to leave the dragoness with her need unsated, going about your business once more.";
 
 to say fsdf desc:
-	project Figure of SeaDragoness_SFW_icon;
-	setmongender 4; [creature is female]
-	psycheeval;
-	libidoeval;
-	now FSDOPEN is 0;
-	now firebreathcount is 0;
-	now firebreathready is false;
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Male";
 	say "     You notice something in the water, which appears to be a large shadow on its approach towards you. Suddenly, the prior silence is shattered with the concussive crashing of waves as a massive beast hurls itself from under its surface, landing on the beach close to you. [one of]The dragoness looks around briefly before seeing you, softly cooing[or]Looking at you, the dragoness briefly sings at you, the influence of which sends a jolt of pleasure though you[or]The dragoness chirps, tilting her finned head at you. She probably thinks she can pull off looking cute while still being a massive monster[at random]. You'd imagine its fin-like limbs would be ill-equipped to move across land, but she's quick to prove otherwise as the massive bulk begins rushing down upon you.";
 
 Section 1-2 - Player Victory
@@ -530,6 +514,28 @@ to say FSDF_5: [Oral Giving Cunt]
 	say "     Once everything dies down, you pull yourself free of the monster, a spent and exhausted mess, too weakened and lost in a haze of lingering need to really do anything but lay there now. Satisfied with your work, you choose to leave here[if tempnum2 is 0], a fair bit lust-addled though you may be[end if].";
 	CreatureSexAftermath "Player" receives "OralPussy" from "Feral Sea Dragoness";
 
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Feral Sea Dragoness"	"[PrepCombat_Feral Sea Dragoness]"
+
+to say PrepCombat_Feral Sea Dragoness:
+	project Figure of SeaDragoness_SFW_icon;
+	setmongender 4; [creature is female]
+	psycheeval;
+	libidoeval;
+	now FSDOPEN is 0;
+	now firebreathcount is 0;
+	now firebreathready is false;
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
 
 Section 2 - Creature Insertion
 

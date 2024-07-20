@@ -223,12 +223,12 @@ to say ToronTalkDrinks:
 		say "     ([link]Y[as]y[end link]) - Yes, drink some Sparkling Water.";
 		say "     ([link]N[as]n[end link]) - No, you're fine as you are.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "[DrinkSparklingWater]";
 			wait for any key;
 			say "[HellfireClubDrinksMenu]";
 		else:
-			Linebreak;
+			LineBreak;
 			say "     If that is so, then you will have to try again later if you want to order another drink.";
 			wait for any key;
 			say "[ToronTalkMenu]";
@@ -298,7 +298,7 @@ to say ToronTalkAE:
 		say "     ([link]Y[as]y[end link]) - Yes, you have what you need.";
 		say "     ([link]N[as]n[end link]) - You are not ready to do this, yet.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     Having enough of the stuff with you, it is time to restore this useless weapon into its glorious former shape. 'Very well, this shouldn't take long. Would you wait here?' he asks, as he takes the abyssal remnant and the pack of null essences with him to the back room.";
 			ItemLoss null essence by 25;
 			ItemLoss abyssal remnant by 1;
@@ -310,7 +310,7 @@ to say ToronTalkAE:
 			ItemGain abyssal edge by 1 silently;
 			now Resolution of AbyssEdgeEnchantLevel is 19;
 		else:
-			Linebreak;
+			LineBreak;
 			say "     You tell Toron that you would like to postpone this, and he doesn't question you. 'Do what you think it is best.' he says, before returning to his duties.";
 	else:
 		WaitLineBreak;
@@ -464,7 +464,7 @@ to say DrinkHellfireSwizzle:
 		statchange "Strength" by 2 silently;
 		addAlcPoints 2;
 		now HellfireDrinkTimer is 8;
-		decrease thirst of player by 7;
+		PlayerDrink 7;
 
 to say DrinkOrcishBomber:
 	if carried of obsidian coin < 3:
@@ -479,7 +479,7 @@ to say DrinkOrcishBomber:
 		statchange "Dexterity" by -1 silently;
 		addAlcPoints 3;
 		now HellfireDrinkTimer is 8;
-		decrease thirst of player by 3;
+		PlayerDrink 3;
 
 to say DrinkHeavensKiss:
 	if carried of obsidian coin < 3:
@@ -493,7 +493,7 @@ to say DrinkHeavensKiss:
 		statchange "Charisma" by 3 silently;
 		addAlcPoints 2;
 		now HellfireDrinkTimer is 8;
-		decrease thirst of player by 9;
+		PlayerDrink 9;
 
 to say DrinkBlackAle:
 	if carried of obsidian coin < 5:
@@ -512,7 +512,7 @@ to say DrinkBlackAle:
 		statchange "Charisma" by -2 silently;
 		addAlcPoints 3;
 		now HellfireDrinkTimer is 8;
-		decrease thirst of player by 3;
+		PlayerDrink 3;
 
 to say DrinkTentacularSlushie:
 	if carried of obsidian coin < 5:
@@ -528,7 +528,7 @@ to say DrinkTentacularSlushie:
 		statchange "Charisma" by -2 silently;
 		addAlcPoints 1;
 		now HellfireDrinkTimer is 8;
-		decrease thirst of player by 3;
+		PlayerDrink 3;
 
 to say DrinkPeculiarLiqueur:
 	if carried of obsidian coin < 5:
@@ -544,7 +544,7 @@ to say DrinkPeculiarLiqueur:
 		statchange "Stamina" by -2 silently;
 		addAlcPoints 2;
 		now HellfireDrinkTimer is 8;
-		decrease thirst of player by 1;
+		PlayerDrink 1;
 
 to say DrinkSparklingWater:
 	if carried of obsidian coin < 1:
@@ -554,7 +554,7 @@ to say DrinkSparklingWater:
 		say "     You make a request for a Sparkling Water, a very plain drink that consists of water with sparkles. Tasteless, but refreshing and at room temperature, it quenches your thirst and cleanses your body. 'Right on' say Toron, as he prepares the mix. Adding the water to the glass and a single piece of null essence into it, he then shakes the drink just enough so that the bubbles cover the entire liquid, then adds a drop of some essence he has available. 'This is something I developed to counter the sickening effect of the null essences. Hope you enjoy this one.' he says, sliding the glass towards you. The drink has no smell either, and it stings your nose if you breathe it in too close, just like sparkling water. Well, time to drink it.";
 		say "     It is indeed tasteless, apart from the stinging in your tongue, but it is very refreshing.";
 		now HellfireDrinkTimer is 0;
-		decrease thirst of player by 15;
+		PlayerDrink 15;
 		now Energy of Player is 0;
 		follow the turnpass rule;
 		say "     Any effects from other drinks at the club have been removed.";
@@ -644,7 +644,7 @@ to say GiveToronOrcBrew:
 		say "     ([link]Y[as]y[end link]) - Hand him some.";
 		say "     ([link]N[as]n[end link]) - Better not, for now.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     Might as well give this a try. You take the bottle of Orc Cum out and hand it to Toron, who gladly accepts your offer. 'Good! I needed this. Very well, I'll be able to create something new with this. If it's a success, I'll just... send someone to harvest the ingredients. Oh, don't look at me like that, I bet they would enjoy having some eager demons milking them for their cum... since this land is as strange as it is. Anyway, I'll bring these in, though I'll need some time until I can get something done. Come back later, perhaps I'll have news.' Taking both ingredients you have just provided him with, Toron takes them inside, returning to his duties shortly after.";
 			ItemLoss orc cum by 1;
 			ItemLoss orc brew by 1;
@@ -652,7 +652,7 @@ to say GiveToronOrcBrew:
 			wait for any key;
 			say "[HellfireClubDrinksMenu]";
 		else:
-			Linebreak;
+			LineBreak;
 			say "     You shake your head, telling him that you don't have one available at the moment. 'Ah, I see... Then have the brew back, I can't do anything with it without this specific ingredient. Though feel free to come back to me with it whenever you get some orc cum. I might just be able to improve this brew...'";
 			wait for any key;
 			say "[HellfireClubDrinksMenu]";
@@ -742,7 +742,7 @@ to say HellfireClubMSTonic:
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     You answer positively, letting Toron bring all the items over to the backroom. 'I won't be long.'";
 			WaitLineBreak;
 			say "     He is true to his word. A little while after, he comes with a small flask filled a yellow-green liquid, not too different from the orc brew you gave him. 'The ingredients don't change the appearance of the brew much, but I assure you, this will give your muscles a huge temporary boost with all safety.'";
@@ -752,7 +752,7 @@ to say HellfireClubMSTonic:
 			ItemGain tonic of mountainous strength by 1 silently;
 			say "     [bold type]You have acquired a Tonic Of Mountainous Strength in exchange for 1 giant essence, 1 orc brew and 1 testosterone pill.[roman type][line break]";
 		else:
-			Linebreak;
+			LineBreak;
 			say "     You let Toron know that you do not wish to craft the tonic yet, to which he nods understandingly.";
 	else:
 		say "     You look over the Tonic of Mountainous Strength, and pay attention to its requirements. Toron explains everything as necessary.";
@@ -881,6 +881,6 @@ to say tonic of mountainous strength use:
 		say "     Your [bold type]Strength has increased by 10[roman type] for the next 12 hours.";
 		statchange "Strength" by 10 silently;
 		now HellfireDrinkTimer is 4;
-		decrease thirst of player by 1;
+		PlayerDrink 1;
 
 Toron ends here.

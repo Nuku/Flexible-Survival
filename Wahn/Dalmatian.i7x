@@ -10,6 +10,13 @@ Section 1 - Creature Responses
 
 Section 2 - Creature Insertion
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Dalmatian Male"	"[PrepCombat_Dalmatian Male]"
+
+to say PrepCombat_Dalmatian Male:
+	say "";
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -60,17 +67,17 @@ When Play begins:
 	now Cock Length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now Ball Size entry is 3; [ Cock width, more commonly used for ball size. ]
 	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
-	now Breast Size entry is 5; [ Size of breasts the infection will try to attain. ]
+	now Breast Size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 9; [ Depth of female sex the infection will attempt to give a player. ]
-	now Cunt Tightness entry is 6; [ Width of female sex the infection will try to give a player. ]
+	now Cunt Depth entry is 0; [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 0; [ Width of female sex the infection will try to give a player. ]
 	now SeductionImmune entry is false;
 	now libido entry is 55; [ Target libido the infection will rise towards. ]
-	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now loot entry is "dalmatian male fur"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 60; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "dalmatian male man-milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "dalmatian male cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -78,7 +85,7 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now Cross-Infection entry is "Dalmatian Bitch"; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -186,6 +193,63 @@ When Play begins:
 ]
 
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"dalmatian male fur"	"Some black and white fur that looks like it has been pulled out of the coat of a Dalmatian. It's not so much a tuft of it, but rather a small pile of fairly short hairs."	0	dalmatian male fur
+
+dalmatian male fur is a grab object.
+It is temporary.
+Usedesc of dalmatian male fur is "[DalmatianMaleFurUse]";
+
+to say DalmatianMaleFurUse:
+	say "Pouring the pile of fur into your cupped palm, you rub it with a fingertip. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Dalmatian Male";
+
+instead of sniffing dalmatian male fur:
+	say "The fur has a pleasing, not too strong, animal-like scent.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"dalmatian male cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Dalmatian Male Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	dalmatian male cum
+
+dalmatian male cum is a grab object.
+dalmatian male cum is cum.
+dalmatian male cum is infectious.
+Strain of dalmatian male cum is "Dalmatian Bitch".
+Usedesc of dalmatian male cum is "[dalmatian male cum use]";
+
+to say dalmatian male cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing dalmatian male cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"dalmatian male man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Dalmatian Male Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	dalmatian male man-milk
+
+dalmatian male man-milk is a grab object.
+dalmatian male man-milk is milky.
+Purified of dalmatian male man-milk is "distilled milk".
+dalmatian male man-milk is infectious.
+Strain of dalmatian male man-milk is "Dalmatian Male".
+Usedesc of dalmatian male man-milk is "[dalmatian male man-milk use]";
+
+to say dalmatian male man-milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing dalmatian male man-milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Dalmatian Bitch"	"[PrepCombat_Dalmatian Bitch]"
+
+to say PrepCombat_Dalmatian Bitch:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -255,7 +319,7 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now Cross-Infection entry is "Dalmatian Male"; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -360,6 +424,13 @@ When Play begins:
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5 (very small/small/average/large/very large)] [Size of Clit (1-5); very small/small/average/large/very large]
 ]
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Dalmatian Herm"	"[PrepCombat_Dalmatian Herm]"
+
+to say PrepCombat_Dalmatian Herm:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -535,6 +606,12 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5 (very small/small/average/large/very large)] [Size of Clit (1-5); very small/small/average/large/very large]
 ]
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Dalmatian Transman"	"[PrepCombat_Dalmatian Transman]"
+
+to say PrepCombat_Dalmatian Transman:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -710,6 +787,12 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5 (very small/small/average/large/very large)] [Size of Clit (1-5); very small/small/average/large/very large]
 ]
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Dalmatian Transbitch"	"[PrepCombat_Dalmatian Transbitch]"
+
+to say PrepCombat_Dalmatian Transbitch:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -771,7 +854,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is "dalmatian cum";
+	now CumItem entry is "";
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -905,6 +988,7 @@ to SetMonsterRandomDalOffspring:
 
 Section 3 - Items
 
+[
 Table of Game Objects (continued)
 name	desc	weight	object
 "dalmatian cum"	"A tiny plastic shampoo bottle as you might find in a motel, filled with something milky white, thick and creamy. If you didn't know where it's from, you'd almost think it to be liquid soap rather than Darius's cum. You could drink it to quench your thirst, but who knows what else it might do to you..."	1	dalmatian cum
@@ -948,7 +1032,7 @@ to say dalmatian fur use:
 			say "'Let's hope the stuff mans you up a bit. I could use some reliable help later on, when I expand this operation.' The anthro canine steps up to give you a fist bump.";
 	SanLoss 2;
 	infect "Dalmatian Male";
-
+]
 
 Section 4 - Endings
 
@@ -970,7 +1054,7 @@ This is the Dalmatian Male Infection rule:
 				say "     A faint ringing in your mind has you pulling out the firefighting coat Kenaz had given you and then tossing the heavy jacket over your furry white form.";
 				say "     Ten minutes of searching leads you to finding several older people in the basement, two teenagers hiding in the back rooms of suite 108, and a single shy cougar female almost scared to death from the flames licking at the area surrounding her inside of room 309. Using your dexterity and strength to herd the others out of the building, your sense of smell being invaluable to help you to find the safest routes back out after some of the building's roof collapses in on your previous pathway, as well as your basic knowledge of fire safety, you manage to get everyone out of the building just as the local firefighting department is speeding its way down the side of the street.";
 				LineBreak;
-				say "     Working with the other Dalmatians of fire station 86 you and the rest of the team hook up hoses and then spray down the burning building with as much water as you can in order to make the laughing flames receded back into the edifice. All of you are silently thankful that the water to the city is now working again, though no one makes a comment on this as you are all busy working to get the thrashing flames battling against you under some kind of control[if waterworks is 1]. You don't spend time gloating about how you were the one who fought to get the water to the city back on as you literally have bigger fish to fry at the moment[end if].";
+				say "     Working with the other Dalmatians of fire station 86 you and the rest of the team hook up hoses and then spray down the burning building with as much water as you can in order to make the laughing flames receded back into the edifice. All of you are silently thankful that the water to the city is now working again, though no one makes a comment on this as you are all busy working to get the thrashing flames battling against you under some kind of control.";
 				say "     [if kto is 2]Humorously you find yourself chuckling into the back of your heads as you watch how Kenaz literally takes command of the situation as he barks out orders. You do the other Dalmatian proud by standing your ground and helping them finish up spraying down the building until at last, some thirty minutes later, the fire has finally died out[else]Watching as Othala and Kenaz work together to try and control this situation you chuckle mirthfully as you notice how all of the other Dalmatians follow the leadership of the former female without question. Othala wastes no time as she barks out orders amongst the pack while having Kenaz stand beside you to help shoulder some of the burden of having you hold onto the gushing hose in between your padded hands. The other male says nothing to you as you and he work together to put out the fire, however, you don't fail to notice the twinkle of pride shining in Kenaz's green orbs as he glances at you when he thinks you're not looking[end if]. Once the hungry flames of the fire have been completely drowned out the Dalmatians quickly turn to those around you, asking everyone the standard questions that go along with having survived an ordeal like this and giving medical aid to those that they can while waiting for the ambulance to get there.";
 				LineBreak;
 				if kto is 2:
@@ -982,7 +1066,7 @@ This is the Dalmatian Male Infection rule:
 					say "The offer is very tempting, considering that Kenaz and the others have decided to all buy a large condo together to make into their new den. However, you have a lot to think over first...";
 			else:
 				say "     Ten minutes of searching leads you to finding several older people in the basement, two teenagers hiding in the back rooms of suite 108, and a single shy cougar female almost scared to death from the flames licking at the area surrounding her inside of room 309. Using your dexterity and strength to herd the others out of the building, your sense of smell being invaluable to help you to find the safest routes back out after some of the building's roof collapses in on your previous pathway, as well as your basic knowledge of fire safety, you manage to get everyone out of the building just as the local firefighting department is speeding its way down the side of the street.";
-				say "     Working with the other Dalmatians of fire station 86 you and the rest of the team hook up hoses and then spray down the burning building with as much water as you can in order to make the laughing flames receded back into the edifice. All of you are silently thankful that the water to the city is now working again, though no one makes a comment on this as you are all busy working to get the thrashing flames battling against you under some kind of control[if waterworks is 1]. You don't spend time gloating about how you were the one who fought to get the water to the city back on as you literally have bigger fish to fry at the moment[end if].";
+				say "     Working with the other Dalmatians of fire station 86 you and the rest of the team hook up hoses and then spray down the burning building with as much water as you can in order to make the laughing flames receded back into the edifice. All of you are silently thankful that the water to the city is now working again, though no one makes a comment on this as you are all busy working to get the thrashing flames battling against you under some kind of control.";
 				say "     [if kto is 2]Humorously you find yourself chuckling into the back of your heads as you watch how Kenaz literally takes command of the situation as he barks out orders. You do the other Dalmatian proud by standing your ground and helping them finish up spraying down the building until at last, some thirty minutes later, the fire has finally died out[else]Watching as Othala and Kenaz work together to try and control this situation you chuckle mirthfully as you notice how all of the other Dalmatians follow the leadership of the former female without question. Othala wastes no time as she barks out orders amongst the pack while having Kenaz stand beside you to help shoulder some of the burden of having you hold onto the gushing hose in between your padded hands. The other male says nothing to you as you and he work together to put out the fire, however, you don't fail to notice the twinkle of pride shining in Kenaz's green orbs as he glances at you when he thinks you're not looking[end if]. Once the hungry flames of the fire have been completely drowned out the Dalmatians quickly turn to those around you, asking everyone the standard questions that go along with having survived an ordeal like this and giving medical aid to those that they can while waiting for the ambulance to get there.";
 				LineBreak;
 				if kto is 2:

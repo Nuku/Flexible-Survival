@@ -9,18 +9,6 @@ nopoodlesex is a number that varies.
 poodleapproved is a number that varies.
 
 to say PinkPoodledesc:
-	setmongender 4; [creature is female]
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Female";
-	if BodyName of Player is listed in infections of CanineList or FaceName of Player is listed in infections of CanineList or SkinName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList or TailName of Player is listed in infections of CanineList:
-		now poodleapproved is 1;
-	else:
-		now poodleapproved is 0;
 	say "     As you wander through the high rise district, a figure steps out of a [one of]designer clothing store[or]high end shop[or]salon[at random] into view just ahead of you. She is an elegant-looking poodle girl with bright pink fur. The pink fluff does little to conceal the presence of her ample breasts, and her shaven lower half exposes her shapely torso and wet canine cunt. Her fashionable appearance is completed by large fluffy pompoms covering your forearms and calves as well as the tip of her tail.[run paragraph on]";
 	if poodleapproved is 1:
 		say " As she returns your inspection, a sultry smile creeps across her muzzle. [one of]'Your place or mine?' she says with a refined French accent before striding forward confidently. 'How about right here?'[or]'Ah, mon cher,' she says with a refined French accent before striding forward confidently. 'Looking for some company?'[or]'Ah, my lonely one,' she says with a refined French accent before striding forward confidently. 'You look like you could use some company.'[at random]";
@@ -142,6 +130,25 @@ to say pinkpoodle_dom:
 	say "     By this point, she's panting on the edge of a powerful release, she practically begs you to tell her where to find this perfect stud. As you drive her to a yipping orgasm, you give her directions to Dom's kennel home and tell her to go to him. You reiterate one last time how a beauty such as she deserves the perfect breeding stud and that Dominick is that handsome hunk for her. By the time her extended climax has finally waned, she's lost in an afterglow daze filled with only thoughts of seeking out this ideal lover. Releasing her, you feel quite pleased with yourself in knowing you've provided your master with another lovely breeder pet.";
 	now Libido of Dominick is 3;
 	increase XP of Dominick by 1
+
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Pink Poodle"	"[PrepCombat_Pink Poodle]"
+
+to say PrepCombat_Pink Poodle:
+	setmongender 4; [creature is female]
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Female";
+	if BodyName of Player is listed in infections of CanineList or FaceName of Player is listed in infections of CanineList or SkinName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList or TailName of Player is listed in infections of CanineList:
+		now poodleapproved is 1;
+	else:
+		now poodleapproved is 0;
 
 
 Section 2 - Creature Insertion

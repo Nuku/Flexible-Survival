@@ -155,7 +155,7 @@ carry out ballgrowing:
 		say "Your tanuki magic forms a set a balls for you, growing a tiny cock to go with them.";
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 2;
-	increase Ball Size of Player by 1;
+	BallsGrow Player by 1;
 	say "Your tanuki magic surges down into your balls as they begin to swell rapidly! Your balls feel like they have become [Ball Size Adjective of Player] balls!";
 
 ballshrinking is an action applying to nothing.
@@ -166,7 +166,7 @@ check ballshrinking:
 	if FaceName of Player is not "Tanuki", say "You need to have your head on right to do that." instead;
 
 carry out ballshrinking:
-	decrease Ball Size of Player by 1;
+	BallsShrink Player by 1;
 	if Ball Size of Player < 1:
 		say "You have no more balls! Your [if Cock Count of Player > 1]cocks go[else]cock goes[end if] away as well for now!";
 		now Cock Count of Player is 0;
@@ -243,6 +243,13 @@ carry out breastshrinking:
 		say "Your tanuki magic surges up into your chest as it begin to shrink rapidly, leaving you with [descr] breasts!";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Tanuki"	"[PrepCombat_Tanuki]"
+
+to say PrepCombat_Tanuki:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

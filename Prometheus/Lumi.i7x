@@ -236,6 +236,7 @@ to say SummonLumi:
 		say "     Walking over to Lumi, you ask whether she would be interested in coming with you out into the city. Her tail wagging wildly, she bounds around you, eventually leaping up to give you a lick. 'Of course, [BlancheMomDadTitle]. I'm sure that you find the best treasures and I get to find them with you.' With her at your side, perhaps you'll find even better loot than before.";
 	else: [regular summoning]
 		say "     Lumi for all her many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see her.";
+		now SummonFailure is true;
 
 to say DismissLumi:
 	move Lumi to Grey Abbey Library;

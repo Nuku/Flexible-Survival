@@ -233,6 +233,7 @@ to say SummonMaeve:
 		say "     Walking over to Maeve, you ask whether she would be interested in coming with you out into the city. With a mischievous smile, she rushes over and gives you a cuddle. 'If you're taking me, [BlancheMomDadTitle], you're obviously planning on getting up to something fun. Obviously I'm in.' You can't be sure about that, but who knows what the future brings?";
 	else: [regular summoning]
 		say "     Maeve for all her many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see her.";
+		now SummonFailure is true;
 
 to say DismissMaeve:
 	move Maeve to Grey Abbey Library;

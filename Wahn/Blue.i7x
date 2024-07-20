@@ -71,7 +71,7 @@ PenileVirgin of Blue Speaker is false.
 SexuallyExperienced of Blue Speaker is true.
 MainInfection of Blue Speaker is "Blue Gel".
 Description of Blue Speaker is "[Blue SpeakerDesc]".
-Conversation of Blue Speaker is { "<This is nothing but a placeholder!>" }.
+Conversation of Blue Speaker is { "<This is nothing but a Blue Goo!>" }.
 The scent of Blue Speaker is "     The aquamarine goo person smells somewhat fruity, making you wonder if the goo would taste that way too.".
 
 when play begins:
@@ -466,6 +466,13 @@ to say BlueSex6: [pussy fucked by Blue]
 Section 3 - Infection
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Blue Goo"	"[PrepCombat_Blue Goo]"
+
+to say PrepCombat_Blue Goo:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

@@ -6,19 +6,6 @@ Section 1 - Creature Responses
 
 nosnowmeowsex is a number that varies.
 
-to say snowmeowdesc:
-	project Figure of SnowLeopard_soft_icon;
-	setmongender 3; [creature is male]
-	choose row MonsterID from Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Male";
-	say "     You have encountered another citizen stricken by the infection, this one having turned into an exotic snow leopard. His five foot tall body is covered with snowy white and ash gray fur marked by coal black spots. The fur is fluffy and thick, especially on tail which has larger dark patches on it. He eyes you intently with his icy gaze. He seems rather uncomfortable in the summer heat, but the stiff erection he's sporting shows he's quite intent on slaking his lusts as well as his thirst. He strides towards you, growling aggressively in his throat.";
-
-
 to say losetosnowmeow:
 	project Figure of SnowLeopard_hard_icon;
 	now nosnowmeowsex is 0;
@@ -29,7 +16,7 @@ to say losetosnowmeow:
 		CreatureSexAftermath "Player" receives "OralCock" from "Snow Leopard";
 		if Ball Size of Player > 9:
 			infect "Snow Leopard"; [additional infection from large load]
-			decrease hunger of Player by a random number between 2 and 5;
+			PlayerEat 5;
 	else if ( Player has a body of "Snow Leopard" or Player has a body of "Panther Taur" ):
 		if Breast Size of Player > 2 and lastmilking - turns > 7:
 			say "     Taking in your desirable, feline form, the sexy snowmeow licks his lips as he gazes upon your lovely bosom. When a few playful pinches to your nipples brings forth some milk, his eyes widen with lustful thirst at them and has his lips around them almost instantly. You moan and start to purr softly as his fingers run over your body and move to tease your pussy. He strokes your wet folds and spreads them before plunging his cock into you, making your body tremble at the sudden but pleasurable intrusion.";
@@ -138,8 +125,8 @@ to say snowmeow_vsex02:
 	say "     His paws stroke your head and shoulders lightly as he rumbles and purrs happily at all the attention you're giving him, though he does growl weakly in frustration as you keep him from climaxing. Eventually, you decide the poor kitty's had enough. Licking, sucking and fondling him vigorously, you drive him quickly over the edge. His big cock throbs in your mouth, spraying blast after blast of feline seed down your throat. It is very thick and flavorful, a satisfying treat.";
 	say "     Drained in more ways than one, the exhausted snowmeow passes out in the shadows of the city to eventually recover. Licking your lips, you find yourself hoping to find more of these sexy kitties to play with in the future.";
 	CreatureSexAftermath "Player" receives "OralCock" from "Snow Leopard";
-	decrease thirst of Player by a random number between 4 and 8;
-	decrease hunger of Player by a random number between 2 and 5;
+	PlayerDrink 5;
+	PlayerEat 5;
 
 to say snowmeow_vsex03:
 	say "     Eager to take advantage of the sexy kitty now that the tables have turned, you grab him from behind and press him down. He mewls softly as you pin him down and wrap your fingers around his cock. His shaft is a steely gray and has a slightly pointed, feline-shaped glans. Beneath his above-average length are an impressive pair of balls. As more pre dribbles down his throbbing cock, the scent of feline arousal builds, exciting you further. You lick your lips in anticipation of having a ride on that hard pole of his.";
@@ -165,6 +152,24 @@ to say snowmeow_vsex04:
 	CreatureSexAftermath "Player" receives "AssFuck" from "Snow Leopard";
 
 Section 2 - Creature Insertion
+
+to say snowmeowdesc:
+	say "     You have encountered another citizen stricken by the infection, this one having turned into an exotic snow leopard. His five foot tall body is covered with snowy white and ash gray fur marked by coal black spots. The fur is fluffy and thick, especially on tail which has larger dark patches on it. He eyes you intently with his icy gaze. He seems rather uncomfortable in the summer heat, but the stiff erection he's sporting shows he's quite intent on slaking his lusts as well as his thirst. He strides towards you, growling aggressively in his throat.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Snow Leopard"	"[PrepCombat_Snow Leopard]"
+
+to say PrepCombat_Snow Leopard:
+	project Figure of SnowLeopard_soft_icon;
+	setmongender 3; [creature is male]
+	choose row MonsterID from Table of Random Critters;
+	if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

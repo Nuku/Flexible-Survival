@@ -1,7 +1,7 @@
 Version 6 of Desperate Bunny by Nuku Valente begins here.
 [ Version 1.0 - Unknown content - Unknown author                                ]
 [ Version 2.0 - Placed in Nuku Valente folder, unknown changes - Nuku Valente   ]
-[ Version 3.0 - Sandra and Colleen interaction - Stripes                         ]
+[ Version 3.0 - Sandra and Colleen interaction - Stripes                        ]
 [ Version 3.1 - Fang-specific ending - Stripes                                  ]
 [ Version 4.0 - Added sex menu - Stripes                                        ]
 [ Version 4.1 - Added 69 option - Stripes                                       ]
@@ -328,12 +328,14 @@ to say sandrasex_leadin: [devnote: amend]
 				if Player consents:
 					say "     Complying with her, she pulls you closer. Softly fondling between your legs, you feel her irreverent touch probe and tease you. Over time, your ass begins to change, reverting once more to that familiar rabbit tail. Once finished, she sets you back up. 'There we go, good as new!'";
 					now TailName of Player is "Rabbit Girl";
+					now TailSpeciesName of Player is "Rabbit";
 					now tail of Player is "You have a short white rabbit's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
 				else:
 					say "     'Hmpf, alright...' She seems a little cross about your refusal, but she obliges it for the time being.";
 			else:
 				say "     Sandra frowns as she notices your lack of rabbit tail. She grabs you suddenly and hauls you across her lap[if scalevalue of Player > 3], a feat particularly amusing given your impressive size[end if]. Without word or warning, she slaps your bottom firmly and begins to spank you on the spot. Her stinging blows make your ass warm and red even as it begins to change, slowly regaining that lost rabbit tail. When it is completely restored, she waves a finger at you. 'And don't you go losing it again, [if rabbitsibling is 6]little [end if][sangr].'";
 				now TailName of Player is "Rabbit Girl";
+				now TailSpeciesName of Player is "Rabbit";
 				now tail of Player is "You have a short white rabbit's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
 		say "     She starts to strip naked in front of you, exposing the smooth flesh of her skin to your hungry eyes. She only has fur in a few places, across her short tail, long ears, and covering her large, pouting vulva. She smiles, running her hands across her six breasts, starting at the small B cups and working up towards her hefty Ds as she waits for you. Catching up to her, and feeling ready yourself, you start to follow, exposing your [Skin of Player] body to her. She eyes you appraisingly...";
 	if thirst of Player > 50:
@@ -430,8 +432,9 @@ to say sandrasex2: [become bunny siblings]
 		say "     Without thinking much about it, you flick your tongue over it. As the sweet substance is swallowed, prickles run over your [Skin of Player] skin. Your head tingles intensely as your ears begin to go warm. Sandra giggles as she watches you, then pulls out a mirror quickly, letting you watch. A large pair of white rabbit ears gradually begins to sprout from your head, replacing what old ones you might've had. They grow long and sensitive, new sounds reaching you. Even Sandra's excited heartbeat seems to softly tick in those great furry limbs.";
 		StatChange "perception" by 1;
 		now rabbitified is true;
-		[now Face of Player is "set of two long white rabbit ears twitching above your head, looking odd compared to your normal";
-		now FaceName of Player is "Rabbit Girl";]
+		now Face of Player is "set of two long white rabbit ears twitching above your head, looking odd compared to your normal";
+		now FaceName of Player is "Rabbit Girl";
+		now FaceSpeciesName of Player is "Rabbit";
 	else if rabbitsibling is 2:
 		say "     'Are you ready for the next step? There's rumor of a certain [bold type]gooey[roman type] creature in the [bold type]sewers[roman type] that allows for certain people who aren't normally infectious to more easily spread their appearance to others. We'll probably need that, if you can nab some of the stuff.'";
 		say "     Check to see if you have any?";
@@ -445,6 +448,7 @@ to say sandrasex2: [become bunny siblings]
 				say "     'I would ask you to lick again, but even I know that would be nasty.' She gives an odd expression, then laughs, moving away from you to clean off her hands. You eventually get up and start acclimating to the change. Upon returning, Sandra says, 'There's just one final phase and everything is set! I guess you could say it's more of a formality, but who says formality can't be fun?'";
 				say "     'I think that's as much as I can do, but it feels like we're missing something in order for this to feel complete, you know?' Pondering over the notion, you imagine you'll have to figure it out for yourself. Perhaps a [bold type]lewd toy[roman type] of some sort is what she's looking for? Searching for something exactly appropriate is very unlikely in this mess of a city, so perhaps you should find a [bold type]store[roman type] that sells them?";
 				now TailName of Player is "Rabbit Girl";
+				now TailSpeciesName of Player is "Rabbit Girl";
 				now tail of Player is "You have a short white rabbit's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
 				StatChange "dexterity" by 1;
 				increase score by 10;
@@ -644,11 +648,13 @@ to say sandraColleentrio:
 		say "     'Oh your ears!' she exclaims, approaching and cooing at you. She snuggles firmly, then leans in to kiss, pressing lips tightly for a moment before you feel her sharp teeth sinking into your lip. Brief pain flares before her infection spreads to you rapidly, regaining your rabbit ears.";
 		now Face of Player is "set of two long white rabbit ears twitching above your head, looking odd compared to your normal";
 		now FaceName of Player is "Rabbit Girl";
+		now FaceSpeciesName of Player is "Rabbit";
 	if rabbitsibling > 1 and ( TailName of Player is "Husky Bitch" or TailName of Player is "Husky Alpha" ):
 		say "     Sandra runs a paw over your fluffy, husky tail. 'And a cute husky tail is nice and soft as well. I'll let you hang onto it for now,' she says, winking to Colleen[if ColleenCollared > 0]. Your husky pet[else]. The stray husky slut[end if] barks in agreement, winking back.";
 	else if rabbitsibling > 1 and ( TailName of Player is not "Rabbit Girl" ):
 		say "     Sandra frowns as she notices your lack of rabbit tail. She grabs you suddenly and hauls you across your lap. Without word or warning, she slaps your bottom firmly and begins to spank you on the spot. Her stinging blows make your ass warm and red even as it begins to change, slowly regaining that lost rabbit tail. When it is completely restored, she waves a finger at you. 'And don't you go losing it again.'";
 		now TailName of Player is "Rabbit Girl";
+		now TailSpeciesName of Player is "Rabbit";
 		now tail of Player is "You have a short white rabbit's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
 	if thirst of Player > 50:
 		say "     The bunny girl puts her arms around you and pulls your face into her ample bosom, pressing you against her firm breasts and brushing her nipple against your lips. 'You should take better care to drink enough out there, hon.' Feeling quite thirsty, you start to suckle from her breast, drinking down the milk it quickly starts giving you. There is a bark beside you and Colleen nuzzles against you, going for the other breast. 'Oh, and I know how much you like my milk, sweetie,' the bunny girl says, scritching the husky's ears. You both nurse from her bosom, filling your bellies with her sweet cream as the bunny pets and coos at you both encouragingly. After you've each had a good drink, she gently pushes you back.";

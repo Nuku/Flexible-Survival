@@ -45,6 +45,14 @@ Section 2 - Creature Responses
 
 Section 3 - Creature Insertion
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Ice Fox"	"[PrepCombat_Ice Fox]"
+
+to say PrepCombat_Ice Fox:
+	say "";
+
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -547,7 +555,7 @@ TwistedCapacity of Miyuki is false. [Twisted Characters can take any penetration
 Sterile of Miyuki is false. [steriles can't knock people up]
 MainInfection of Miyuki is "Ice Fox".
 Description of Miyuki is "[MiyukiDesc]".
-Conversation of Miyuki is { "placeholder" }.
+Conversation of Miyuki is { "Ice Fox" }.
 
 instead of sniffing Miyuki:
 	say "     Miyuki has an interesting scent - crisp and fresh, reminding you of fallen snow. There are some undertones of a pleasant furry smell, as well as a faint hint at... peppermint?";

@@ -169,7 +169,7 @@ Body Definition of Felix is 6. [scale of 1-9 for body definition, grouped into l
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Felix is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 Mouth Length of Felix is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-Mouth Circumference of Felix is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Mouth Circumference of Felix is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
 Tongue Length of Felix is 4. [length in inches]
 Breast Size of Felix is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Felix is 2. [count of nipples]
@@ -510,7 +510,7 @@ Body Definition of Andre is 8. [scale of 1-9 for body definition, grouped into l
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Andre is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 Mouth Length of Andre is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-Mouth Circumference of Andre is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Mouth Circumference of Andre is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
 Tongue Length of Andre is 4. [length in inches]
 Breast Size of Andre is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Andre is 2. [count of nipples]
@@ -616,6 +616,13 @@ to say Plains Lizard wins:
 
 to say Plains Lizard loses:
 	say "     After having taken quite a few of your blows, the big lizard turns and flees, dashing off quickly through the high grass. With the beating you've given him, you don't think he'll be back anytime soon. Oh, and seems like he dropped something - a leather pouch, with Felix name written on it. You take it with you. Might be best to ask the young centaur about it.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Plains Lizard Male"	"[PrepCombat_Plains Lizard Male]"
+
+to say PrepCombat_Plains Lizard Male:
+	say "";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

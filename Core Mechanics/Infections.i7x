@@ -49,7 +49,7 @@ This is the sex change rule:
 	if ( the sex entry is "Male" or the sex entry is "Both" ) and Ball Size of Player < Ball Size entry and Cock Count of Player is not 0 and "Female Preferred" is not listed in feats of Player:
 		[Grows existing balls, unless "Female Preferred" is selected]
 		let prevcock be Ball Size of Player;
-		increase Ball Size of Player by 1;
+		BallsGrow Player by 1;
 		if "Modest Organs" is listed in feats of Player and Ball Size of Player > 4:
 			now Ball Size of Player is 4;
 		if prevcock < Ball Size of Player:		[did balls actually grow?]
@@ -58,7 +58,7 @@ This is the sex change rule:
 	else if ( the sex entry is "Male" or the sex entry is "Both" ) and Ball Size of Player > ( ( Ball Size entry times 150 ) / 100 ) and "One Way" is not listed in feats of Player:
 		[Shrinks existing balls, unless "Female Preferred" is selected]
 		let prevcock be Ball Size of Player;
-		decrease Ball Size of Player by 1;
+		BallsShrink Player by 1;
 		if "Male Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
 			if Ball Size of Player < 3, now Ball Size of Player is 3;
 		if "Modest Organs" is listed in feats of Player and Ball Size of Player > 3:
@@ -95,7 +95,7 @@ This is the sex change rule:
 		let prevcock2 be Ball Size of Player;
 		decrease Cock Length of Player by 1;
 		decrease Cock Length of Player by Cock Length of Player divided by 3;
-		decrease Ball Size of Player by 1;
+		BallsShrink Player by 1;
 		if "Male Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
 			if Cock Length of Player < 5, now Cock Length of Player is 5;
 			if Ball Size of Player < 3, now Ball Size of Player is 3;
@@ -236,11 +236,11 @@ to grow cock by (x - a number):
 to grow balls by (x - a number):
 	if "Female Preferred" is listed in feats of Player or Cock Count of Player is 0:
 		continue the action;
-	let prevcock be Ball Size of Player;
-	increase Ball Size of Player by a random number from 1 to x;
+	let prevballs be Ball Size of Player;
+	BallsGrow Player by x;
 	if "Modest Organs" is listed in feats of Player and Ball Size of Player > 5:
 		now Ball Size of Player is 5;
-	if prevcock < Ball Size of Player:		[did balls actually grow?]
+	if prevballs < Ball Size of Player:		[did balls actually grow?]
 		follow the cock descr rule;
 		say "You can [if Player is internalBalls]feel your internal[else]see your[end if] [one of]testicles[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if Player is internalBalls]body straining to abide this[else]your skin becoming taut with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [Ball Size Adjective of Player] balls!";
 
@@ -270,21 +270,25 @@ This is the breast change rule:
 		if Nipple Count of Player is 0:
 			increase score by 0; [do nothing]
 		else if the sex entry is "Female" or the sex entry is "Both":
+			let breast_change_text be "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your ";
 			if Breast Size of Player < Breast Size entry and ( ( "Male Preferred" is not listed in feats of Player and "Flat Chested" is not listed in feats of Player and singlesexadjust is not 2) or "Breasts" is listed in feats of Player ):
 				follow the breast descr rule;
-				let oldbreast be descr;
+				now breast_change_text is "[breast_change_text][descr] breasts ";
 				increase Breast Size of Player by 1;
 				increase Breast Size of Player by ( Breast Size entry minus Breast Size of Player ) divided by 3;
 				follow the breast descr rule;
-				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				now breast_change_text is "[breast_change_text]become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "[breast_change_text]";
 			else if Breast Size of Player > Breast Size entry and "One Way" is not listed in feats of Player:
 				follow the breast descr rule;
-				let oldbreast be descr;
+				now breast_change_text is "[breast_change_text][descr] breasts ";
 				decrease Breast Size of Player by 1;
 				decrease Breast Size of Player by ( Breast Size of Player minus Breast Size entry ) divided by 3;
 				follow the breast descr rule;
-				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				now breast_change_text is "[breast_change_text]become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "[breast_change_text]";
 		else if the sex entry is "Male":
+			let breast_change_text be "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your ";
 			let breasttarget be male breast size entry;
 			if "Breasts" is listed in feats of Player:
 				if Male Breast Size entry is 0, now breasttarget is breast size entry;
@@ -292,18 +296,20 @@ This is the breast change rule:
 				now breasttarget is 0;
 			if Breast Size of Player < breasttarget:
 				follow the breast descr rule;
-				let oldbreast be descr;
+				now breast_change_text is "[breast_change_text][descr] breasts ";
 				increase Breast Size of Player by 1;
 				increase Breast Size of Player by ( breasttarget minus Breast Size of Player ) divided by 3;
 				follow the breast descr rule;
-				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				now breast_change_text is "[breast_change_text]become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "[breast_change_text]";
 			else if Breast Size of Player > breasttarget and "One Way" is not listed in feats of Player:
 				follow the breast descr rule;
-				let oldbreast be descr;
+				now breast_change_text is "[breast_change_text][descr] breasts ";
 				decrease Breast Size of Player by 1;
 				decrease Breast Size of Player by ( Breast Size of Player minus breasttarget ) divided by 3;
 				follow the breast descr rule;
-				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				now breast_change_text is "[breast_change_text]become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "[breast_change_text]";
 		if PronounChoice of Player is "Auto", follow the SetPlayerPronouns rule;
 	else: [old style]
 		if Nipple Count of Player is not Nipple Count entry:
@@ -319,54 +325,61 @@ This is the breast change rule:
 		if Nipple Count of Player is 0:
 			increase score by 0; [do nothing]
 		else if the sex entry is "Female" or the sex entry is "Both":
+			let breast_change_text be "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your ";
 			if Breast Size of Player < Breast Size entry and ( ( "Male Preferred" is not listed in feats of Player and "Flat Chested" is not listed in feats of Player ) or "Breasts" is listed in feats of Player ):
 				[breast growth if smaller than infection size, and "Breasts" and NOT either "Male Preferred" or "Flat Chested"]
 				follow the breast descr rule;
-				let oldbreast be descr;
+				now breast_change_text is "[breast_change_text][descr] breasts ";
 				increase Breast Size of Player by 1;
 				increase Breast Size of Player by ( Breast Size entry minus Breast Size of Player ) divided by 3;
 				follow the breast descr rule;
-				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				now breast_change_text is "[breast_change_text]become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "[breast_change_text]";
 			else if Breast Size of Player > Breast Size entry and "One Way" is not listed in feats of Player:
 				[breast shrinkage if bigger than infection size, and "One Way" not selected]
 				follow the breast descr rule;
-				let oldbreast be descr;
+				now breast_change_text is "[breast_change_text][descr] breasts ";
 				decrease Breast Size of Player by 1;
 				decrease Breast Size of Player by ( Breast Size of Player minus Breast Size entry ) divided by 3;
 				follow the breast descr rule;
-				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				now breast_change_text is "[breast_change_text]become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "[breast_change_text]";
 		else if the sex entry is "Male":
 			let breasttarget be male breast size entry;
+			let breast_change_text be "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your ";
 			if "Breasts" is listed in feats of Player: [pulls the female breast size if this feat is selected]
 				if Male Breast Size entry is 0, now breasttarget is breast size entry;
 			else if "Male Preferred" is listed in feats of Player or "Flat Chested" is listed in feats of Player:
 				now breasttarget is 0;
 			if Breast Size of Player < breasttarget:
 				follow the breast descr rule;
-				let oldbreast be descr;
+				now breast_change_text is "[breast_change_text][descr] breasts ";
 				increase Breast Size of Player by 1;
 				increase Breast Size of Player by ( breasttarget minus Breast Size of Player ) divided by 3;
 				follow the breast descr rule;
-				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				now breast_change_text is "[breast_change_text]become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "[breast_change_text]";
 			else if Breast Size of Player > breasttarget and "One Way" is not listed in feats of Player:
 				follow the breast descr rule;
-				let oldbreast be descr;
+				now breast_change_text is "[breast_change_text][descr] breasts ";
 				decrease Breast Size of Player by 1;
 				decrease Breast Size of Player by ( Breast Size of Player minus breasttarget ) divided by 3;
 				follow the breast descr rule;
-				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				now breast_change_text is "[breast_change_text]become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+				say "[breast_change_text]";
 		if PronounChoice of Player is "Auto", follow the SetPlayerPronouns rule;
 
 To grow breasts by (x - a number):
 	if "Flat Chested" is listed in feats of Player or Breast Size of Player >= 26:
 		continue the action;
+	let breast_change_text be "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your ";
 	follow the breast descr rule;
-	let oldbreast be descr;
-	say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts ";
+	now breast_change_text is "[breast_change_text][descr] breasts ";
 	increase Breast Size of Player by a random number from 1 to x;
 	if Breast Size of Player > 26, now Breast Size of Player is 26;
 	follow the breast descr rule;
-	say "become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+	now breast_change_text is "[breast_change_text]become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]!";
+	say "[breast_change_text]";
 	if PronounChoice of Player is "Auto", follow the SetPlayerPronouns rule;
 
 Part 3 - Infect Code

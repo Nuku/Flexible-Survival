@@ -54,6 +54,17 @@ a postimport rule:
 		now CuntSpeciesName of Player is CockName of Player;
 	if tailSpeciesName of Player is "":
 		now tailSpeciesName of Player is TailName of Player;
+	[bugfix for replaced skunk infection]
+	if BodyName of Player is "Skunk":
+		now BodyName of Player is "Skunk Female";
+	if FaceName of Player is "Skunk":
+		now FaceName of Player is "Skunk Female";
+	if SkinName of Player is "Skunk":
+		now SkinName of Player is "Skunk Female";
+	if CockName of Player is "Skunk":
+		now CockName of Player is "Skunk Female";
+	if TailName of Player is "Skunk":
+		now TailName of Player is "Skunk Female";
 
 [----------------------------------------------------------------------------------]
 [ Testing Commands for partial Saving                                              ]
@@ -217,7 +228,7 @@ to EventRestore:
 					say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [ResolveState entry], [ActiveState entry], Resolution: [Resolution entry]";
 				]
 			else:
-				if EventIDName is not "Let's Party": [override for deleted event]
+				if EventIDName is not "Let's Party" and EventIDName is not "Captive Rat" and EventIDName is not "Locked Utility Room": [override for deleted event]
 					say "DEBUG -> [x]: EventIdName: [EventIdName] not found in Table of GameEventIDs! Please report this message on the FS Discord!";
 	else:
 		say "No Event Save File Found!";
@@ -520,6 +531,7 @@ to CharacterRestore:
 			let CharacterIdName be Name entry;
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
+				let MainInfection_Restore be MainInfection entry;
 				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
 					move CharacterObject to TargetRoom, without printing a room description;
@@ -577,7 +589,8 @@ to CharacterRestore:
 				now ImpregTimer of CharacterObject is ImpregTimer entry;
 				now OffspringCount of CharacterObject is OffspringCount entry;
 				[Texts]
-				now MainInfection of CharacterObject is MainInfection entry;
+				if there is a name of MainInfection_Restore in the Table of Random Critters:
+					now MainInfection of CharacterObject is MainInfection entry;
 				now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
 				now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
 				now FirstOralPartner of CharacterObject is FirstOralPartner entry;
@@ -1463,6 +1476,7 @@ to BeastRestore:
 			if Beastname is "Rubber Tigress", now Beastname is "Rubber Tigress";
 			if Beastname is "Football Gorilla", now Beastname is "Football Gorilla Male";
 			if Beastname is "Feral Wolf", now Beastname is "Feral Wolf Male";
+			if Beastname is "Skunk", now Beastname is "Skunk Female";
 			if there is a Name of BeastName in the Table of Random Critters:
 				choose row with Name of BeastName in Table of Random Critters;
 				now Area entry is BeastArea;
@@ -1477,7 +1491,7 @@ to BeastRestore:
 					say "DEBUG -> [x]: BeastName: [BeastName] Area entry set to [BeastArea]!";
 				]
 			else:
-				if Beastname is not "Lernean Hydra": [error message disabled for bugged name]
+				if Beastname is not "Lernean Hydra" and Beastname is not "Skunk" and Beastname is not "Blob": [error message disabled for bugged name]
 					say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters! Please report this message on the FS Discord!";
 	else if the File of BeastSave exists:
 		read File of BeastSave into the Table of GameBeasts;

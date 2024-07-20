@@ -288,26 +288,6 @@ to say Yamato Dragoness vic:
 		yamatbiasshift;
 
 to say yamato dragoness desc:
-	now YDEnemyColor is a random number between 0 and 2;
-	ProjectYamatoDragoness_SFW;
-	setmongender 4; [creature is female]
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else if Player is herm:
-		now sex entry is "Both";
-	else if Player is male:
-		now sex entry is "Male";
-	else if Player is female:
-		now sex entry is "Female";
-	else:
-		now sex entry is "nochange";
-	now firebreathcount is 0;
-	now firebreathready is false;
 	say "     [if showlocale is true]Traveling through the park[else]Suddenly[end if], you find yourself beset by a dragoness of eastern myth. Massive and serpentine in frame, airborne in spite of being wingless, her [if YDEnemyColor is 0]red[else if YDEnemyColor is 1]blue[else]green[end if] scales and yellow underbelly shimmering in the [if daytimer is night]starlight[else]sunlight[end if]. You instinctively attempt to find cover, but this only encourages her to pursue you on ground, a lascivious hunger agleam in her eyes.";
 
 to say ydskinchange:
@@ -591,6 +571,32 @@ to say YamatF_5: [Oral Giving Cunt]
 		else:
 			say "     Just as she's no longer able to hold back, you try to put at least a little distance between the monster and her aching geyser. Roaring out loudly, her taut portal aches against the open, the air humid with her intense body heat and the scent of her sweet honey. Once her fervor dies down, you step off and make an effort to clean yourself before the dragoness takes to the air once more.";
 			say "     '[one of]Hmm[or]Yes[or]Mhm[at random], [one of]you are certainly a strange one[or]I hope you enjoyed yourself[or]that was certainly entertaining[at random].' Slowly, the creature flies off into the distance, no doubt satisfied by your endeavors. You gather your things and set off to return from whence you came.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Yamato Dragoness"	"[PrepCombat_Yamato Dragoness]"
+
+to say PrepCombat_Yamato Dragoness:
+	now YDEnemyColor is a random number between 0 and 2;
+	ProjectYamatoDragoness_SFW;
+	setmongender 4; [creature is female]
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else if Player is herm:
+		now sex entry is "Both";
+	else if Player is male:
+		now sex entry is "Male";
+	else if Player is female:
+		now sex entry is "Female";
+	else:
+		now sex entry is "nochange";
+	now firebreathcount is 0;
+	now firebreathready is false;
 
 Section 2 - Creature Insertion
 

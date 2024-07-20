@@ -70,13 +70,18 @@ To say Donkeywoman loses:
 			say "     Rather than give in to the temptation, you give the donkeywoman a rough shove with your heel even as she tries to rise. She bites back a whimper and forces herself to her feet defiantly. 'You would make for a fine jenny. Clearly you're in no mood for that lesson right now. But don't worry, I'll try again when you're in a less obstinate mood, my recalcitrant plaything.' With that, she staggers off down the dimly lit corridor, doing her best to maintain her authoritative poise despite her defeat.";
 			increase nodonkeywomansex by 1;
 
+Section 2 - Creature Insertion
+
 to say DonkeywomanDesc:
-	project Figure of Donkeywoman_clothed_icon;
-	setmongender 4;
 	say "     Wandering through the building, you round a corner and come face to face with a Donkeywoman. The tall Donkeywoman looks down at you with a derisive smirk. 'What do we have here?' she asks as she roughly grabs your chin and twists your head side to side, examining you. Too scared to say anything, all you can do is look at her with a dumb expression on your face. Looking her over, you can see that she is dressed in a tight studded leather corset that is barely able to contain her more than ample tits as well as a spiked leather collar and spiked cuffs. She is wearing a pair of modified thigh high boots. Her sleek gray fur and donkey mane Mohawk give her a sinister air. Tapping the whip she's carrying in her other hand against her thigh, she says 'I think someone needs a lesson in discipline. Isn't that right, my little soon-to-be [if Player is male]donkey[else]jenny[end if]?'";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Donkeywoman"	"[PrepCombat_Donkeywoman]"
 
-Section 2 - Creature Insertion
+to say PrepCombat_Donkeywoman:
+	setmongender 4;
+	project Figure of Donkeywoman_clothed_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

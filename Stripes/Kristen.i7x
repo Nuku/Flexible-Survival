@@ -192,7 +192,7 @@ PenileVirgin of Kristen is true.
 SexuallyExperienced of Kristen is true.
 TwistedCapacity of Kristen is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Kristen is false. [steriles can't knock people up]
-MainInfection of Kristen is "Arctic fox".
+MainInfection of Kristen is "Arctic Fox".
 Description of Kristen is "[kristendesc]".
 Conversation of Kristen is { "Thanks." }.
 the scent of Kristen is "[kristenscent]".

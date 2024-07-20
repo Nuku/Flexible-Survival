@@ -9,16 +9,6 @@ Section 1 - Creature Responses
 nagawarning is a truth state that varies. nagawarning is usually false.
 
 to say NagaDesc:
-	setmongender 3; [creature is male]
-	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Male";
 	say "     A creature consisting of human and snake blended together in an intimidating mixture slithers into sight ahead of you. It is a naga - a male one, judging from what you see as he raises his human-like upper body to have a good look at you in turn. He has [one of]brown and black[or]bright-red and yellow[or]gray and tan[at random] scales, fine and soft looking. Two muscular arms are his only limbs, if one discounts the great tail that makes up most of the male naga's long body. Clenched in his right hand is a pipe, a crude, but likely effective, makeshift weapon. Of course, he also has great jaws that likely contain sharp, possibly venomous, fangs. His human torso is well-muscled, sleek, and lacking any blemish. The naga's head and face are entirely that of a huge snake, staring unblinkingly and tasting the air with a flickering forked tongue. The moment of mutual examination ends as the naga hisses. 'SSsssubmit - or don't... it will sssatisfy me either way, prey.' With that, he rushes towards you, sliding over the ground quickly with sinuous twists of his snake-body.";
 
 to say LoseToNaga:
@@ -127,6 +117,22 @@ to say WinOverNaga:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Naga"	"[PrepCombat_Naga]"
+
+to say PrepCombat_Naga:
+	setmongender 3; [creature is male]
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Male";
+	else if "Female Preferred" is listed in feats of Player:
+		now sex entry is "Female";
+	else if "Herm Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
