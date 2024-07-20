@@ -151,7 +151,7 @@ to say Hermacoreheatstart:
 
 
 to say Hermacoreheatend:
-	say "Despite this, you can't seems to shake a lingering sense of profound emptiness emanating form your vacant womb.";
+	say "Despite this, you can't seems to shake a lingering sense of profound emptiness emanating from your vacant womb.";
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
 		if Name entry is "Hermacore":
