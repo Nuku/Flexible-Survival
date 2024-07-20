@@ -4947,4 +4947,34 @@ to say PictureUse:
 
 
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"Dragon Break Coin"	"Are Ava's events not firing correctly? Then use this to activate Medea's walkin, beware using this item outside emergency debugging can have unpredictable consequences!"	0	Dragon Break Coin
+
+the scent of Dragon Break Coin is "The coin smells like mental hazards.".
+
+Dragon Break Coin is a grab object. Dragon Break Coin is not temporary.
+Usedesc of Dragon Break Coin is "[DBCoinUse]";
+
+to say DBCoinUse:
+	say "     Rubbing the coin between your fingertips, reality ripples and shifts as it bends to the ephemeral will of the poorly made debugging tool.";
+	now Breeding Material is active;
+	ItemLoss Dragon Break Coin by 1;
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Debugging Rod"	"Are Ava's events not firing correctly? Then use this to unresolve Alp 69, beware using this item outside emergency debugging can have unpredictable consequences!"	0	Debugging Rod
+
+the scent of Debugging Rod is "The rod smells like retcons and bad writing.".
+
+Debugging Rod is a grab object. Debugging Rod is not temporary.
+Usedesc of Debugging Rod is "[STRodUse]";
+
+to say STRodUse:
+	say "     Rubbing the rod between your fingertips, reality ripples and shifts as it bends to the ephemeral will of the shoddy debugging tool.";
+	now Finding Alp sixty nine is unresolved;
+	ItemLoss Debugging Rod by 1;
+
+
 Ava ends here.
