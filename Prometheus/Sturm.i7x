@@ -110,6 +110,7 @@ Conversation of Sturm is { "Woof grrr" }.
 The scent of Sturm is "     Sturm, smells of the city. Sweat, sexual fluid, and dust mingle with his natural wolfy scent."
 
 to say SturmDesc:
+	project the figure of Sturm_full_body_icon;
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Sturm] <- DEBUG[line break]";
 	if HP of Sturm is 0:
@@ -279,12 +280,14 @@ the fuckscene of White Wolf One is "WIP".
 
 to say SummonSturm:
 	if Sturm is visible: [summoning while standing next to him]
+		project the figure of Sturm_full_body_icon;
 		say "     Walking over to Sturm, you ask whether he would be interested in coming with you out into the city. He smiles widely and nods, darting in for a quick hug, his tail wagging wildly. 'Thank you, [BlancheMomDadTitle]. Really. I'd love to.' You privately chuckle at how such an innocent question can transform the usually stern wolf into a puppy.";
 	else: [regular summoning]
 		say "     Sturm for all his many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see him.";
 		now SummonFailure is true;
 
 to say DismissSturm:
+	project the figure of Sturm_full_body_icon;
 	move Sturm to Grey Abbey Library;
 	if Player is not in Grey Abbey Library: [regular dismiss]
 		say "     With a word, you get Sturm's attention and tell him that he should head back to the library for now. He looks indignant for a moment but bites his tongue and merely nods. 'Fine. I guess I'll see you at home then,' he grumbles as he walks away, before hurrying back. '[BlancheMomDadTitle]. I enjoy this time together. Just so you know,' he says quickly as he gives you a firm hug before turning away and rushing off before you have a chance to reply. You know that he can handle himself, but you still feel guilty for dismissing him here. ";
