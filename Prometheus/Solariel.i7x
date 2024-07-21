@@ -156,7 +156,7 @@ to say ResolveEvent Angelic Visitor:
 			now HP of Solariel is 1;
 		-- "Tell her no. You don't want to get involved with the angel's plans while she is in the city.":
 			LineBreak;
-			say "     'As you wish. I had hoped that you might reply differently, but what will be, will be,' Solariel sighs. 'Don't worry, Hazel. I'll drop by from time to time to talk to you. I can see that this is something that you want, though perhaps you would prefer to talk to [Hope-BornDragonName],' she teases her. With a bow, Solariel turns and steps walks outside again. Launching herself into the air and out of sight. 'I hope she comes back soon,' Hazel mutters before trudging back down into the bunker without a second glance at you.";
+			say "     'As you wish. I had hoped that you might reply differently, but what will be, will be,' Solariel sighs. 'Don't worry, Hazel. I'll drop by from time to time to talk to you. I can see that this is something that you want, though perhaps you would prefer to talk to [Hope-BornDragonName],' she teases her. With a bow, Solariel turns and walks outside again. Launching herself into the air and out of sight. 'I hope she comes back soon,' Hazel mutters before trudging back down into the bunker without a second glance at you.";
 			now Resolution of Angelic Visitor is 2;
 	now Angelic Visitor is resolved;
 

@@ -640,7 +640,7 @@ The effectiveness of lionskin is 40.
 The placement of lionskin is "body".
 The descmod of lionskin is "You have the hide of a big cat wrapped around your shoulders.".
 The slot of lionskin is "body".
-The scent of lionskin is "The Nemean Lion's skin still smells of his musk, a potent, authority-demanding scent."
+The scent of lionskin is "The Nemean Lion's skin still smells of his musk, a potent, authority-demanding scent.".
 
 Section 2.2 - Antler of the Hind of Ceryneia
 
