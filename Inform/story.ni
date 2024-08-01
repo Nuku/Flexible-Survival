@@ -963,6 +963,7 @@ Include Paula by Prometheus.
 Include Penelope by Prometheus.
 Include Percy by Taelyn.
 Include Pericles by Rikaeus.
+Include Permanent Infection Remover by Voidsnaps.
 Include Phantom Dolphin by Blue Bishop.
 Include Phantom Pony by Blue Bishop.
 Include Poseidon by Rikaeus.
@@ -975,6 +976,7 @@ Include Reece by Luneth.
 Include RexxyEvent by Prometheus.
 Include Rhidall by Voidsnaps.
 Include Richard by Wahn.
+Include Riker by Voidsnaps.
 Include RodAndRonda by Wahn.
 Include Roman by Kernog.
 Include Ryan by Fuxi.

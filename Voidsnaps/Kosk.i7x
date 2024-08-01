@@ -170,6 +170,19 @@ to say KoskConversationMenu:
 		now description entry is "Kosk's excitement at receiving your 'bribe' has your curiosity piqued. Has he used them yet";
 		sort the table of fucking options in sortorder order;
 	[]
+	if "Guilty Coward" is listed in Traits of Player:
+		choose a blank row in table of fucking options;
+		now title entry is "Tell Kosk about the naga trafficker";
+		now sortorder entry is 3;
+		now description entry is "Despite your earlier cowardice, you should probably tell someone about the naga before more people disappear";
+	[]
+	if "Burned Down" is listed in Traits of Riker:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask what happened to the cabin after Kosk investigated it";
+		now sortorder entry is 4;
+		now description entry is "What happened after you ran away? Ask Kosk";
+		[]
+		sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -188,6 +201,10 @@ to say KoskConversationMenu:
 					say "[KoskVillageAsk]";
 				else if (nam is "Ask Kosk what he's been cooking"):
 					say "[KoskBarbecueTalk]";
+				else if (nam is "Tell Kosk about the naga trafficker"):
+					say "[KoskPosseGathering]";
+				else if (nam is "Ask what happened to the cabin after Kosk investigated it"):
+					say "[KoskRikerEnd]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -212,6 +229,16 @@ to say KoskBarbecueTalk:
 		say "     The scent is mouthwatering, though the whole fish isn't as pleasant as something more professionally prepared. Still, your stomach growls as you stare, and you wipe your mouth on the corner of your sleeve, drooling slightly at the thought of some homemade food after who-knows-how-long spent eating canned and dried foods. 'Take it! I've got some more steaming in there, and thanks to you, I can make as much as I want.' Pressing the steaming fish package into your hands, Kosk gives you a conspiratorial wink. 'I'll even help you work up an appetite if you want. Call it a down payment on refills.' His language might be ambiguous, but the hand on your left asscheek is anything but subtle. It seems you've made a friend.";
 		ItemGain Roasted Barbecue Fish by 1;
 		TraitGain "Barbecue Received" for Kosk;
+
+to say KoskPosseGathering:
+	say "     Quickly explaining everything that happened since you followed Ignacio to the flooded mall, you tell Kosk where the latest lizardman's been abducted, then clarify that it was someone more sinister perpetrating the earlier ones. Giving detailed instructions to the naga's hideout, you leave things in Kosk's hands, taking your leave as he runs off into the village, a horrified expression on his face. No doubt he's going to find others to 'storm the castle.' Thankfully he doesn't ask you to come with him, but you still feel a twinge of guilt at letting others fight your battles.";
+	now Ignacio is nowhere;
+	now Matteo is nowhere;
+	now Riker is nowhere;
+	TraitGain "Burned Down" for Riker;
+
+to say KoskRikerEnd:
+	say "     Broaching the subject of what happened to the cabin in the woods where Riker kept his victims, you pointedly ignore your own involvement, asking Kosk what happened after you reported to him. He sighs and shrugs his shoulders at your questioning stare. 'We had a look, but by the time we got there, the place was trashed. Nothing and no one left inside. Someone must have left us a little gift because before we could even leave the place, it went up. Burned to the ground in minutes.' Shaking his head, Kosk looks regretful. 'Be careful out there. That sick fuck might still be wandering around. Anyone willing to set fire to a place surrounded by trees can't be sane. Might not be lucky enough to get away next time.'";
 
 Table of Game Objects (continued)
 name	desc	weight	object
