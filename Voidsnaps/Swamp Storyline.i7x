@@ -1,5 +1,8 @@
 Swamp Storyline by Voidsnaps begins here.
 
+a postimport rule:
+	if Faustian Bargain is Resolved:
+		now Libido of Riker is 11;
 
 Section 1 - Storyline Introduction
 
@@ -300,14 +303,15 @@ to say ResolveEvent Culprit Found:
 	TraitGain "Captured" for Ignacio;
 
 An everyturn rule:
-	if libido of Riker is 10:
+	if libido of Riker > 9:
 		stop the action;
-	if libido of Riker > 0 and libido of Riker < 9:
+	else if libido of Riker > 0 and libido of Riker < 9:
 		decrease libido of Riker by 1;
 		say "You're suddenly reminded of Ignacio's plight. Maybe you should return to the cabin and help him before it's too late!";
-	if libido of Riker is 0:
+	else if libido of Riker is 0:
 		say "     You're not sure how you know, but suddenly you're certain that you've lost any hope of rescuing the frog brothers from Riker. If only you'd [bold type]gone back to that cabin soon enough...[roman type][line break]";
 		now libido of Riker is 10;
+	
 	
 
 Section 5 - Riker's Offer
@@ -423,6 +427,8 @@ to say ResolveEvent Faustian Bargain:
 		now Faustian Bargain is Resolved;
 	else:
 		say "     Shaking your head, you decide you need more time to prepare a rescue effort. Of course, if you wait too long [bold type]the frog brothers may be gone forever! [roman type]You should hurry back as soon as possible if you want to save them.";
+	now libido of Riker is 11;
+	now Faustian Bargain is Resolved;
 
 to say RikerAssistantIntroduction:
 	say "     Trying your best to be seductive despite your bound state, you offer Riker sex. If he promises not to harm the two frogs, you'll let him do whatever he likes to you. Of course, it's not like you had a choice if he wanted to force himself on you, but there must be some merit in your consent, right? Riker loosens his grip somewhat, seeming slightly surprised. 'Interesting. How would you stop me from taking what I want, whether you like it or not?' Something long and hard worms its way between your legs as the naga demonstrates his control over the situation. Fuck, those cocks are a lot bigger than you thought they'd be!";
