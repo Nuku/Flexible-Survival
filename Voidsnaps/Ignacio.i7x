@@ -112,7 +112,8 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 1	"Safer Swamps"	Safer Swamps	"[EventConditions_Safer Swamps]"	Algae-Covered Atrium	2500	2	100
 
 to say EventConditions_Safer Swamps:
-	now CurrentWalkinEvent_ConditionsMet is true;
+	if libido of Riker is 11 and "Working With Riker" is not listed in Traits of Player:
+		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
 Object	Name
