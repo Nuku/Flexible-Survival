@@ -303,9 +303,7 @@ to say ResolveEvent Culprit Found:
 	TraitGain "Captured" for Ignacio;
 
 An everyturn rule:
-	if libido of Riker > 9:
-		stop the action;
-	else if libido of Riker > 0 and libido of Riker < 9:
+	if libido of Riker > 0 and libido of Riker < 9:
 		decrease libido of Riker by 1;
 		say "You're suddenly reminded of Ignacio's plight. Maybe you should return to the cabin and help him before it's too late!";
 	else if libido of Riker is 0:
