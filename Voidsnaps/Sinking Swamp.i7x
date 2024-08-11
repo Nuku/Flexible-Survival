@@ -116,6 +116,9 @@ to say FloodedMallDesc:
 	if "Hostile" is listed in traits of Ignacio:
 		say "The place is less sinister than you'd expect from a tribe of kidnappers.";
 
+instead of navigating Flooded Mezzanine when "Guilty Coward" is listed in Traits of Player:
+	say "    You don't think it's a good idea to go anywhere near the flooded mall after you left Ignacio and Matteo to their doom. Coward's guilt aside, you don't know how they'll react if they find out what you did. You don't want any enemies...";
+
 Table of GameRoomIDs (continued)
 Object	Name
 Flooded Mezzanine	"Flooded Mezzanine"
@@ -177,13 +180,16 @@ Description of Rundown Cabin is "[MudCabinRoomDesc]".
 earea of Rundown Cabin is "void".
 
 to say MudCabinRoomDesc:
-	say "     A lone cabin juts out of a small island surrounded by water. It looks both hastily constructed and extremely worn down, as though it's stood there for years, and it's surrounded by so much brush that you have a hard time believing this place was once a city. ";
-	if "Matteo Quest" is listed in Traits of Ignacio:
-		say "This seems to be the closest location to where lizards and amphibians alike have gone missing. Perhaps you should go inside and check things out.";
+	if "Burned Down" is listed in Traits of Riker:
+		say "    There's almost no sign of the cabin. Instead, a pile of ashes and twisted timber sits in its place. It seems that either Kosk or Riker burned down the place after the lizard village's posse stormed it. At the least, you know that no one else will be locked up and trained to be a mindless sex slave inside...";
 	else:
-		say "It seems that no one's home. You get the feeling that something is watching you from nearby, and you should probably leave before whatever it is decides to do something about you.";
+		say "     A lone cabin juts out of a small island surrounded by water. It looks both hastily constructed and extremely worn down, as though it's stood there for years, and it's surrounded by so much brush that you have a hard time believing this place was once a city. ";
+		if "Matteo Quest" is listed in Traits of Ignacio:
+			say "This seems to be the closest location to where lizards and amphibians alike have gone missing. Perhaps you should go inside and check things out.";
+		else:
+			say "It seems that no one's home. You get the feeling that something is watching you from nearby, and you should probably leave before whatever it is decides to do something about you.";
 
-[Table of GameRoomIDs (continued)
+Table of GameRoomIDs (continued)
 Object	Name
 Creepy Swamp Cabin	"Creepy Swamp Cabin"
 
@@ -193,10 +199,15 @@ Description of Creepy Swamp Cabin is "[InsideCabinRoomDesc]".
 earea of Creepy Swamp Cabin is "void".
 
 to say InsideCabinRoomDesc:
-	say "     A lone cabin juts out of a small island surrounded by water. It looks both hastily constructed and extremely worn down, as though it's stood there for years, and it's surrounded by so much brush that you have a hard time believing this place was once a city. ";
-	if "Matteo Quest" is listed in Traits of Ignacio:
-		say "This seems to be the closest location to where lizards and amphibians alike have gone missing. Perhaps you should go inside and check things out.";
-	else:
-		say "It seems that no one's home. You get the feeling that something is watching you from nearby, and you should probably leave before whatever it is decides to do something about you.";]
+	say "     A strangely cozy, violently rural cabin interior greets you as you walk in. A deer head hangs on the wall, flanked by a giant bookshelf and an old fireplace. Strangely, there's very little dust coating the place- as though someone's been living here.";
+
+instead of going up from Rundown Cabin when "Burned Down" is listed in Traits of Riker:
+	say "     There's no more 'inside' to go to. The building's been burned down.";
+
+instead of going up from Rundown Cabin when "Abandoned Cabin" is listed in Traits of Riker:
+	say "     Someone's cleaned everything out of the cabin. You won't be able to find anything in there. Thankfully, it seems you've scared the human traffickers away from the swamp, so you shouldn't see Riker anymore!";
+
+instead of going up from Rundown Cabin when "Matteo Quest" is not listed in Traits of Ignacio and "Working With Riker" is not listed in Traits of Riker:
+	say "     You get chills just looking at the Rundown Cabin's doors. Something tells you you're being watched and that you shouldn't attempt to go inside. You may never come back out.";
 
 Sinking Swamp ends here.

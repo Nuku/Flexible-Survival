@@ -2,6 +2,14 @@ Version 1 of Hazel Summers by Prometheus begins here.
 
 [Human NPC - Daughter of General Summers]
 
+[ HP of Hazel Summers ]
+[ 0 - Unmet ]
+[ 1 - Moved to Library ]
+[ 2 - Visited Museum for first time ]
+
+[ Hunger of Hazel Summers - Form ]
+[ 0 - Human ]
+[ 1 - Centaur ]
 
 Section 1 - NPC Declaration
 
@@ -161,5 +169,135 @@ to say ResolveEvent Valuable Hostage:
 			say "     'Fair enough. Wish me luck then.' Without waiting for a reply, she hurries away, fearfully glancing around. With a shrug, you continue with your day, barely wondering if you'll ever see her again.";
 			now Resolution of Valuable Hostage is 2;
 	now Valuable Hostage is Resolved;
+
+
+Table of GameEventIDs (continued)
+Object	Name
+Hazel's Museum Excursion	"Hazel's Museum Excursion"
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Hazel's Museum Excursion"	Hazel's Museum Excursion	"[EventConditions_Hazel's_Museum_Excursion]"	Grey Abbey Library	2500	8	100
+
+to say EventConditions_Hazel's_Museum_Excursion:
+	if Angelic Visitor is resolved and Premature Return is resolved and Hazel's Museum Excursion is not resolved:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Hazel's Museum Excursion is a situation.
+ResolveFunction of Hazel's Museum Excursion is "[ResolveEvent Hazel's Museum Excursion]".
+Sarea of Hazel's Museum Excursion is "Nowhere".
+
+to say ResolveEvent Hazel's Museum Excursion:
+	say "     You enter the library to the sound of multiple women having a disagreement. Not quite able to place the voices and curious as to who it is, you hastily skulk towards the noise, soon rounding the corner to come face to face with the people involved. On one side there is Hazel, her arms folded and her face marred by petulance, with Solariel looming serenely over her shoulder looking towards the women that the red-headed woman is arguing with; Vanessa, Colleen, and Meredith. The soldiers (and researcher) notice you arrive and sigh with relief. 'Talk some sense into her,' Vanessa pleads, throwing her hands up, finally able to stop bottling up her exasperation. You explain that you don't know what is going on and so that may be difficult, or did she just mean in general, in which case you're probably the wrong person to ask anyway.";
+	say "     'Ms Summers wants to go to the museum despite the danger that this would put her in,' Colleen explains. 'Her father was very clear with keeping her safe and as she still hasn't let Mere investigate her supposed vaccination. [if HP of Colleen > 0]Even if she doesn't get transformed, the museum isn't safe and she could still be hurt or... used by the transformed[else if ColleenAlpha > 0]Letting her go might end up as a teachable moment, but being dicked down by a mammoth might be a bit much[else] I'm sure some of the things living there would be fun to fuck, but it isn't a place for beginners[end if]. Not to mention General Summers would be pissed.' A collective shudder goes through the soldiers at the likely consequences of failing a task personally given to them by such a high-ranking commander. 'I'd keep her safe,' Solariel interjects. 'No offense, but I'm still not sure that you aren't someone transformed by the nanites and left powerful and delusional. I'd be happier with her under my watch,' Vanessa snaps.";
+	WaitLineBreak;
+	say "     'In that case, you can come with me,' Hazel says brightly, smirking at the sergeant's mistake in leaving her an opening. 'Ah. That's not exactly what I meant Hazel. It would be-' Vanessa begins to argue, but the other woman cuts her off. 'You can either come with me or you can stay here, but I'm going even if I have to sneak out,' Hazel declares. 'I like to read, but I've been cooped up here for too long. I know that the park really isn't safe and I'm not in the mood for the beach, so I'm going to the museum. If you're coming with me then Solariel can have a rest-' 'I don't need a rest,' the angel mumbles. 'Or whatever else she would rather do,' the fiery-haired woman continues pointedly, 'and we can go and look at whatver exhibits remain. It's going to be fun. We're going to enjoy ourselves. And perhaps we'll all learn something!' Hazel's smile has turned a little manic by now. She definitely needs to go out for a bit or someone is going to be making a trip to the hospital for a straight jacket instead. Determined to avoid further conflict, or at least redirect it towards yourself, you volunteer to accompany them too.";
+	say "     Hazel looks triumphant her smile slipping back to something more innocent and warm, whereas the soldiers look far more resigned. 'I suppose that will have to do,' Vanessa grumbles. 'Thanks [name of player]. You'll at least be familiar with the dangers there,' she adds in a less surly tone. 'The museum is an area where I could collect some more useful data at least,' Meredith says, her caution giving way to professional excitement. 'Careful Mere. You're drooling,' Gwen teases, chuckling as the researcher glares at her and makes a half-hearted swipe to shush her. 'I guess I'll catch up with some of my siblings then,' Solariel sighs. 'If you really need me Hazel, I won't be too far away. Have fun.' After a quick hug from her charge, the angel vanishes between the bookshelves. 'I suppose that I'll be on guard duty here then. Someone has to keep home safe,' Colleen declares. 'Let me just get my bag and we can go right away,' Hazel says excitedly, rushing away for but a moment before returning. 'All set. Let's go!'";
+	WaitLineBreak;
+	say "     Her protective detail in tow, you accompany Hazel through the city to the museum, the wyverns and roving gangs of huskies seemingly having better things to do than attack your little group. It takes you about an hour to get there and the human woman is tempted to stop at the mall as you pass by, but decides that that can wait for another day and you swear you can hear Vanessa gritting her teeth at the prospect of another excursion that might put the girl in danger, especially when there is no guarantee that nothing bad will happen on this one! Hazel remains blissfully oblivious to this though, looking around with curiosity at the neighborhood as you walk. 'I have no idea how they're going to rebuild after this, but I suppose I'm not a civil engineer so maybe it isn't as bad as all that. Poor people though...' she mumbles, half to herself and half to make conversation.";
+	say "     'The rebuild may take some time, even before it starts,' Meredith replies. 'First there will be investigations by various groups; government, Zephyr, GSX, people like that. Then there will have to be surveying to assess the damage. Only after that will rebuilding happen.' 'What if they decide that the city can't be saved?' Hazel asks, wide-eyed. 'I doubt that it will come to that,' the researcher reassures her. 'Unless the city is irreparably infested by something we don't know about, the effort will be put in to try and return a sense of normalcy. At worst, no president would want to have to explain why a city was abandoned or destroyed under their watch.' 'People can be treated and buildings can be repaired,' Gwen adds cheerfully. Vanessa nods her agreement, but doesn't take her eyes off potential avenues of attack. Fortunately, your journey remains peaceful and you reach the museum without incident.";
+	WaitLineBreak;
+	say "     Entering through the grand doors, you are greeted by Valerie, the sphinx looking at your group with caution. 'Welcome. May I help you?' she asks politely, caught between the army uniforms and the fact that the soldiers are centaurs ";
+	if "Succubus" is listed in Traits of Gwen:
+		say "and a succubus. ";
+	else:
+		say ". ";
+	say "'What would you do if I said we were with the British Museum, here to take your artifacts for safe keeping?' Hazel chuckles, stepping out from behind the larger women. 'I'd consider you tomb robbers and punish you accordingly,' the sphinx snarls menacingly, though it seems more like an act than genuine hostility. 'But those look like US insignias on the fatigues, so I doubt you're with [italic type]them[roman type]. Even if you're with an American museum, you're still not taking my exhibits unless you wish to be mauled. They are mine to protect.' 'Fair enough. Five adults please,' Hazel responds, pulling out a few crumpled notes. 'A paying visitor? Today is a strange day...' Valerie muses. 'But I don't think that I can accept any money. The museum isn't as orderly as it should be and some of the exhibits... decided to wander off. No charge, just don't break anything. Or steal anything. Actually, on second thought, answer me a riddle each as payment instead.'";
+	say "     Before anyone can agree or refuse, she looks at Vanessa and begins. 'Poor people have it. Rich people need it. If you eat it you die. What is it?' the sergeant thinks for a few moments, muttering under her breath before eventually replying, 'Nothing.' 'Good. Now you. Spelled forward, I'm what you do every day; spelled backward, I'm something you hate. What am I?' the sphinx asks Hazel. 'Um... give me a moment. Oh! Live!' the woman exclaims. Valerie nods and focuses on Meredith. 'Until I am measured, I am not known. Yet how you miss me when I have flown. What am I?' 'Time,' she immediately answers. 'My brother loves riddles too,' she explains with a blush when you all stare at her. 'A man of good taste,' the museum worker replies approvingly before turning her eyes on Gwen. 'I have branches, but no fruit, trunk or leaves. What am I?' 'The army?' the young soldier tentatively answers. Valerie tilts her head. 'Not the answer that I was looking for, but technically correct I suppose. I was thinking banks,' she replies before her attention falls on you.";
+	WaitLineBreak;
+	say "     [bold type]'What goes on four feet in the morning, two feet in midday, and three feet in the evening?'[roman type][line break]";
+	let Sphinx_Riddle_Choices be a list of text;
+	add "A human." to Sphinx_Riddle_Choices;
+	add "A shapeshifter." to Sphinx_Riddle_Choices;
+	add "One of the modern art exhibits?" to Sphinx_Riddle_Choices;
+	add "One of those Backpackemon?" to Sphinx_Riddle_Choices;
+	let Sphinx_Riddle_Choice be what the player chooses from Sphinx_Riddle_Choices;
+	if Sphinx_Riddle_Choice is:
+		-- "A human.":
+			LineBreak;
+			say "     A classic riddle, you think to yourself as you answer confidently. 'Very good. You may all enter, but no touching unless the information plaques say that you can,' Valerie informs you, waving you through. ";
+		-- "A shapeshifter.":
+			LineBreak;
+			say "     Valerie looks thoroughly unimpressed by your answer. 'That is technically correct, but thoroughly dull. I've half a mind to make you answer another one, but the others did splendidly so I'll let it pass this time. Enjoy your visit to the museum and no touching unless explicitly given permission to do so,' she grumbles. ";
+		-- "One of the modern art exhibits?":
+			LineBreak;
+			say "     'You wouldn't believe just how annoying it is!' Valerie exclaims upon hearing your answer. 'They aren't meant to be walking around at all and here they are swapping how many legs they have, likely against the artists deeper symbolism! Grrr, go on through so I can rage in private. Keep your hands to yourself though, unless given permission to touch.' ";
+		-- "One of those Backpackemon?":
+			LineBreak;
+			say "     'Probably true. How many are they up to now?' Valerie replies. 'Not quite what I was expecting, but clever nonetheless. Enjoy your visit to the museum and no touching the exhibits unless they are designed to be interactive,' she explains, graciously waving you through. ";
+	say "Your little group continues past the lobby, following Hazel while she studies a map and decides where she wishes to go. 'If we go like this, we can do the sections in chronological order,' she suggests, tracing her finger over the diagram. 'Start with the dinosaurs and finish with the Zephyr-sponsored exhibit on nano-robotics.' 'We won't get long to look at anything like that,' Meredith cautions her, but other than that, no-one opposes her plan. 'We can come back another time and spend more time where we want to,' Hazel cheerfully replies, her excitement enough to bring a smile to Vanessa's face even as she rolls her eyes. 'We'd better get started then or we'll only be in the Iron Age by the time we need to head back,' she teases, her spirits much improved compared to earlier.";
+	say "     So that is what you do, learning about stegasauruses, neanderthals, and the discovery of smelting, Hazel's curiosity and enthusiasm remaining unabated as she almost skips from exhibit to exhibit. 'I don't think that I was ever that full of life,' Vanessa sighs. 'Nah, you were born boring and sensible sarge,' Gwen shoots back, earning a clip around the side of the head. 'None of your lip, private,' the superior officer scolds her with a smirk. Distracted, it takes you all a moment to notice some broken glass up ahead and what looks to be a statuette lying on the floor as you enter an area dedicated to Greek mythology, Meredith managing to swing an arm out to stop the group just in time. 'Careful. You'll probably end up with an infection if you get cut. A nanite infection I mean. Not the usual type,' she corrects herself as you edge around the mess. 'Centaur toy. Theban Village 4th century BC' Gwen reads with a smile.";
+	WaitLineBreak;
+	say "     'Perhaps we should take it as a mascot,' she jokingly suggests, 'considering how most of the squad has turned out.' 'I don't think that the sphinx lady would appreciate that,' Vanessa rebukes her, though her tail flick and body language suggests she likes the idea and might have accepted in another situation. 'Well we can't leave it like this,' Hazel cuts in and before anyone can stop her, she stoops down to pick the figurine up. The moment her fingers make contact, the sweet aroma of wine floods the room and the woman gasps and stumbles backwards, snatching her hand away as though burned. Hazel's legs seem to give way and she collapses to the floor, barely missing the shards of glass. To your horror, and even more so the soldiers['], there is a loud ripping sound and the young woman begins to transform from the waist down."; [Figurine cursed by Nessus]
+	say "     Above her waist, Hazel's dress avoids harm from the transformation, but the hem tears along the seams. The main casualty seems to be her underwear, as the shreds of what were once pretty white panties with a black silk bow on the front fall to the ground as an equine body slowly grows from beneath the lower flaps of her dress. 'What do I do? What do I do!?' she cries, looking around pleadingly for someone to help as her body warps and elongates. But there is nothing that anyone can do, watching powerless as the innocent young woman is transformed against her will into a centaur. At least you assume this to be the case with how her top half seems unaffected and a thin layer of shiny auburn fuzz covers the developing equine half. 'Were you carrying any immunity boosters?' Vanessa shouts to Meredith, pacing back and forth, frantically trying to formulate a plan to save Hazel. 'No. I wasn't expecting to need to. Her custom-job seemed to be better than anything we had!' the researcher replies, seemingly close to tears. 'Me neither,' Gwen chips in, rifling through her bag.";
+	WaitLineBreak;
+	say "     Hazel's transformation soon slows down until it eventually stops, leaving her gasping on her side, fully transformed into an auburn-furred centaur. 'Damn it!' Vanessa can't help shouting into the air, her voice carrying down the empty corridors around you. Nearly immediately afterwards you hear the thud of people approaching from two different directions, you and the soldiers exchanging a glance before assuming defensive positions around the still-recovering woman. Fortunately, the first to appear is Valerie, though your sigh of relief is short-lived as you remember that you got into this problem when Hazel touched one of the artifacts. 'What is the shouting about? Please have some res- Oh gods damn you Nessus!?' the sphinx begins before cursing as she sees the shattered display case and the casualty of the statuette. 'Who's Nessus?' Gwen blurts out.";
+	say "     'Nessus is a centaur who has never forgiven humanity for Herakles killing him,' another voice answers and you turn to find a gleaming white-haired centaur clopping towards you from the other end of the room. Unlike the centaurs from the Dry Plains, this one is wearing a tunic-like garment over his human half with satchel over his shoulder. A single look into his eyes immediately causes a sense of calm and safety to wash over you. 'My name is Chiron and hopefully I should be able to help Miss?' he leaves the question open, waiting to hear her name. 'H-Hazel. Hazel Summers,' the woman haltingly responds. 'Metamorphosis can be exhausting. Please, just lie there for now and I'll see what I can do to help,' the centaur advises her, trotting forward without challenge and unslings his bag, rummaging through it. 'Nessus has been a pain,' Valerie grumbles. 'This isn't the first time he's done this. If he went after troublesome people I wouldn't mind, but this sort of bait only punishes those with good intentions,' the sphinx continues, gesturing to the figurine that Chiron now has held in his hand.";
+	WaitLineBreak;
+	say "     'Sorry for the trouble. You did warn us not to touch the exhibits,' Vanessa apologizes. 'She thought that she was being helpful.' 'Not entirely your fault. As I said, Nessus and his malice...' Valerie replies bitterly. 'Is she going to be alright?' Gwen asks Chiron. 'If you're asking will she be able to walk out of here, then yes. That isn't a problem. Miss Summers has not been cursed beyond the transformation,' the centaur answers, flashing a comforting smile. 'What I'm trying to do now is alter the spell so that the toy will transform her back again. I've cured far more serious maladies, but magic isn't my strong suit, so I require a little help from Hekate to guide me in fixing this.' Unsure what to do while you wait, you join Meredith in brushing the broken glass into a neat pile away from Hazel, earning an appreciative nod from Valerie for your efforts.";
+	say "     After a few more minutes, you see the centaur statuette glow briefly and Chiron stands up, helping Hazel to her feet as he does so. She is initially unstable on her new hooves, but quickly becomes accustomed to her new form, taking a moment to admire it. 'Circumstances aside, it's actually rather majestic,' she comments. 'I like to think so,' the male centaur chuckles, flicking his white tail in amusement. 'I notice a few more centaurs among you. I assume that you didn't all touch cursed objects?' 'No. We were transformed by the nanites,' Meredith replies. A dark look crosses Chiron's face. 'That man turned his eyes to flawed artifice for healing rather than looking within nature saddens me. Alas, I am not permitted to interfere in that,' he laments. He nickers softly before turning back to Hazel and pressing the toy into her hands. 'Take this. Should you want to return to your original form, you need only touch it and wish. Or if you want to return to being a centaur again later, you can do that too. the choice is yours.'";
+	WaitLineBreak;
+	say "     'Thank you, sir,' Hazel replies, startling everyone by leaning up and kissing Chiron on the cheek. 'My pleasure, young maiden,' the male centaur responds serenely. 'I wish you all well, but I should try to find Nessus. We aren't meant to interfere in mortal affairs like this and the harm he causes draws the eye of dangerous adversaries.' Chiron bows before trotting down the hall, soon rounding a corner and vanishing. 'Come with me and I'll escort you back to the entrance. We don't want any more incidents,' Valerie offers, a proposal that you all readily take her up on. When you arrive at the front desk, you find a rather large package sitting there and you see the sphinx's eyes narrow before she stalks towards it. 'It's apparently for you,' she says to Hazel with surprise. The newly-transformed centaur approaches it, and gives it a poke, getting nothing but a rustle from it. 'Well, it's not a bomb,' she jokes.";
+	say "     'We can have a look when we get home. Thank you Valerie, I enjoyed looking around and hopefully I'll be back another time,' she says sincerely. 'I'm glad, though perhaps next time be more careful with what you touch,' the sphinx replies graciously[if HP of Solstice > 2]. Perhaps you should have Solstice talk to Hazel about being cautious around cursed artifacts too..[end if]. The package turns out to be reasonably heavy, so Gwen carries it for the general's daughter. The trip back to the library is fortunately uneventful, the centaur soldiers sharing some of their experiences of when they first transformed with Hazel, carefully avoiding anything sexual. Upon entering the library, you immediately find a table to unwrap her mysterious gift. 'I thought that these might help make up for the trouble Nessus has caused you. Though I'm not sure how much help these will be to you, they should fit themselves to the wearer. Give the sword to one of your protectors if you wish. Chiron,' the fiery-haired woman reads from a note before carefully opening the package.";
+	WaitLineBreak;
+	say "     Laid out before you are an exquisite soft leather saddle, a riding harness, and a ornate kopis. 'Well, I don't think that I can use them,' Hazel laughs. 'Do you want them?' she asks you. You inspect them more closely, quickly sensing the magic eminating from them, and soon come to a conclusion. You tell her that you should be able to make good use of these. 'Far better than anything I could do with them. Try not to lose them though. They seem to pretty to just end up discarded in the city.' Everyone seems worn out after today's excursion, so you stow your new treasures and leave them to recover, giving Hazel a companionable pat on the shoulder as you pass by her staring at her hindquarters. 'I may have some difficulty walking backwards...' you hear her mutter to herself.";
+	ItemGain Centaur-blessed Harness by 1;
+	ItemGain Centaur-blessed Saddle by 1;
+	ItemGain Centaur Kopis by 1;
+	now HP of Hazel Summers is 2;
+	now Hunger of Hazel Summers is 1;
+	now Hazel's Museum Excursion is resolved;
+
+[--Outline--]
+[Hazel grows bored with being in the library and decides she wants to visit the museum for a change. Vanessa and Meredith are reluctant but she doesn't give them much of a choice and they decide that accompanying her is better than nothing. Everything seems to go smoothly, the journey uneventful and the museum residents keeping away, though Valerie is sulky about armed soldiers wandering around. After a while of looking around, Hazel discovers an exhibit that has been broken and bends down to replace the artefact on the pedistal before anyone can stop her. (If player has met Solstice, maybe mention that she should have warned Hazel about the dangers of strange objects.) Due to the magical nature of the centaur figurine, it ignores her nanite resistance and immediately begins to transform. Vanessa and Meredith panic, but are interrupted by the arrival of Chiron who reveals that he can reverse the transformation should Hazel wish. (Player gets given a choice for what Hazel chooses. No tasks necessary and no malicious tricks. Chiron is nice.) Whatever the choice, the player is rewarded with some taur-friendly armour and a weapon. Having had a busy day, the group then returns to the library.]
+
+Section 4 - Items
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Centaur-blessed Harness"	"A harness blessed by Chiron. You can feel protective magics eminating from the tough leather."	5	Centaur-blessed Harness
+
+Centaur-blessed Harness is a grab object.
+Centaur-blessed Harness is equipment.
+It is not temporary.
+Plural of Centaur-blessed Harness is false.
+Taur-compatible of Centaur-blessed Harness is true.
+The size of Centaur-blessed Harness is 4.
+The AC of Centaur-blessed Harness is 50.
+The effectiveness of Centaur-blessed Harness is 60.
+The placement of Centaur-blessed Harness is "body".
+The descmod of Centaur-blessed Harness is "You have an enchanted leather harness around your body.".
+The slot of Centaur-blessed Harness is "body".
+The scent of Centaur-blessed Harness is "The harness smells of the endless plains, freedom, and irresponsibility.".
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Centaur-blessed Saddle"	"A saddle blessed by Chiron. You can feel protective magics eminating from the soft leather."	5	Centaur-blessed Saddle
+
+Centaur-blessed Saddle is a grab object.
+Centaur-blessed Saddle is equipment.
+It is not temporary.
+Plural of Centaur-blessed Saddle is false.
+Taur-compatible of Centaur-blessed Saddle is true.
+The size of Centaur-blessed Saddle is 4.
+The AC of Centaur-blessed Saddle is 50.
+The effectiveness of Centaur-blessed Saddle is 60.
+The placement of Centaur-blessed Saddle is "body".
+The descmod of Centaur-blessed Saddle is "You have an enchanted leather saddle on your back.".
+The slot of Centaur-blessed Saddle is "back".
+The scent of Centaur-blessed Saddle is "The saddle smells of the endless plains, freedom, and irresponsibility.".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Centaur Kopis"	"An ornate but still very functional Greek cavalry sword."	4	Centaur Kopis
+
+Centaur Kopis is an armament. It is not temporary.
+It has a weapon "[one of]your cavalry sword[or]your Centaur Kopis[or]the large blade[or]your ornate weapon[or]your antiquated balde[at random]".
+Weapon Damage of Centaur Kopis is 14.
+Weapon Type of Centaur Kopis is "Melee".
+Objsize of Centaur Kopis is 4.
+Hitbonus of Centaur Kopis is 1. [Blessed]
+Scent of the Centaur Kopis is "The kopis smells of the endless plains, freedom, and irresponsibility.".
 
 Hazel Summers ends here.

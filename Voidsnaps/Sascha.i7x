@@ -465,16 +465,17 @@ to say Sascha_Fuck_Menu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-[	if Player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask Sascha for a blowjob";
 		now sortorder entry is 1;
-		now description entry is "You're feeling horny and Sascha's mouth is looking better the longer you stare at it. See if he's up to suck your dick";]
-	[if player is female:
+		now description entry is "You're feeling horny and Sascha's mouth is looking better the longer you stare at it. See if he's up to suck your dick";
+	[]
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask Sascha to lick your pussy";
 		now sortorder entry is 2;
-		now description entry is "You're feeling horny and Sascha's mouth is looking better the longer you stare at it. See if he's up for eating your box"]
+		now description entry is "You're feeling horny and Sascha's mouth is looking better the longer you stare at it. See if he's up for eating your box";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Tease Sascha";
@@ -500,6 +501,8 @@ to say Sascha_Fuck_Menu:
 					say "[SaschaBlowjobMansion]";
 				else if (nam is "Tease Sascha"):
 					say "[SaschaTeaseMansion]";
+				else if (nam is "Ask Sascha to lick your pussy"):
+					say "[SaschaCunnilingusMansion]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -554,7 +557,22 @@ to say Sascha_Talk_Menu:
 	clear the screen and hyperlink list;
 
 to say SaschaBlowjobMansion:
-	say "     ";
+	say "     Deciding to start with a tease, you wonder aloud whether Sascha's up for some fun, sitting on the couch next to him and leisurely dangling an arm over his shoulder, unabashedly draping your fingers across his nipple. Judging by his leaning into you, a soft rumble in his chest, he doesn't seem to mind the thought. Before you can bring up exactly what you want from him, he surprises you with a sneaky kiss, his rough tongue dancing over yours and filling your mouth with his trademark green apple candy flavor. 'You've worked so hard to meet me in the middle. How could I say no?' He purrs as his lips leave yours, a trail of saliva connecting his tongue to your lower lip. 'I think I know what you're after.' The athletic cat coos as he straddles your knee, deft fingers helping you out of your gear until you're bare before him. 'You've been hard since you first touched me. You must want me to take care of that~.'";
+	say "     Nodding with your breath catching in your throat as a soft hand teases your erection, you watch as the cat meanders his way down your body, lips trailing over your chest and kissing a path down over your navel until you feel hot breath on the tip of your at-attention manhood. You can barely resist the urge to grab the teasing kitty by the ears and shove him down your length, but the promise in those green eyes holds you back. If you're patient, it's going to be so much better. Tail twitching at its tip as he draws the faintest lick across the tip of your shaft, Sascha kisses away the dripping evidence of your arousal, his ass swaying as he peels away his pants. Leaving his loose-fitting muscle shirt on, he follows your shaft downward with gentle lips, trailing kisses until he reaches the base, the slow vibration of his purrs sending a shiver down your spine. Slightly rough but slick enough that it doesn't hurt, his tongue follows that same path back upward in a long, lazy swipe.";
+	WaitLinebreak;
+	say "     Panting your approval, you watch as the cat opens his lips, sliding several inches of your cock into his mouth without complaint. It's hot and wet, and the vibration of his purrs feels better than they have any right to, while that teasing expression draws out an instinctive desire to take charge. No doubt sensing your impatience, Sascha takes your shaft to the root without issue, his rough tongue lashing the underside while his tight throat squeezes your tip. From that slow tease, he accelerates into full cocksucking, slurping his way up and down your shaft with such skill that you wonder if he has any gag reflex at all. You lose what feels like hours trapped beneath him, mesmerized by the way your cock disappears into that talented muzzle, and before long, you're helplessly shoving your hips upward, moaning his name and begging for release.";
+	say "     Hooking his arms under your legs, Sascha doubles his efforts when you plead for your finish, shining your cock at breakneck speed and dripping drool down your balls. It's clear what he wants, and you're ready to give it to him. Without time to announce your finish, you ram yourself to the root, holding the swallowing cat in place while he drains your balls for every last drop. It's been a while since you've cum this hard, and it almost hurts your spasming muscles as your body seizes up, putting its all into breeding the kitty's throat. Still, you get through it, collapsing backward into a puddle of sweat and releasing the handful of white hair you didn't realize you were gripping.";
+	WaitLineBreak;
+	say "     'Maybe we can do that again sometime.' Sascha whorishly nuzzles into the side of your cock, letting its softening length dribble down his chin as he laps at the sensitive underside, determined to prolong your pleasure. From this angle, you can see him openly touching himself, his fingers thrusting in and out of his pussy and glistening with his enjoyment. Somehow, the sight fills you with pride- your dick was so good that you made him cum just from sucking it. Sadly, your dick soon fully retreats. You leave Sascha to devote his efforts to a second round of wanton masturbation with his legs open on the couch as you gather your gear, kissing his cheek and telling him you'll be back later for more.";
+	NPCSexAftermath Sascha receives "OralCock" from Player;
+
+to say SaschaCunnilingusMansion:
+	say "     Deciding to start with a tease, you wonder aloud whether Sascha's up for some fun, sitting on the couch next to him and leisurely dangling an arm over his shoulder, unabashedly draping your fingers across his nipple. Judging by his leaning into you, a soft rumble in his chest, he doesn't seem to mind the thought. Before you can bring up exactly what you want from him, he surprises you with a sneaky kiss, his rough tongue dancing over yours and filling your mouth with his trademark green apple candy flavor. 'You've worked so hard to meet me in the middle. How could I say no?' He purrs as his lips leave yours, a trail of saliva connecting his tongue to your lower lip. 'I think I know what you're after.' The athletic cat coos as he straddles your knee, deft fingers helping you out of your gear until you're bare before him. 'You've been wet since you sat down. I bet you want me to help you out, don't you~?'";
+	say "     Nodding with a soft gasp as the cat's insistent fingers nuzzle between your legs, teasing your sensitive bits, you barely resist his attempts to remove your gear. Before long, you're fully naked in front of him, and you can only watch as he kisses his way down your neck, over your chest. He pauses at your stomach, trailing his tongue over your navel and making you shiver, then kneels, looking up at you with bedroom eyes as his pink tongue flicks out to tease your clit. Expert at teasing, Sascha rubs his cheek against your inner thigh as his breath caresses your moistened lips, his tongue flicking out to taste your arousal. Gentle enough that it's maddening, it traces your lips, working its way upward, until with a long lick, he cradles your pleasure button in sandpapery care, lapping to an insistent rhythm that skirts the edge of pleasure and pain. Hooking one arm under your leg, he encourages you forward until your pussy tilts upward, and your leg slides over his shoulder before he buries his face with an enthusiastic purr.";
+	WaitLineBreak;
+	say "     With nothing to do but grip the upholstery and moan, you ride the madly lapping cat's face, threatening to take his muzzle inside of you with the sheer violence of your hip movement. Vibration, wetness, and even the roughness of his tongue are too much for you, and you can feel your stomach twisting into knots the hungrier his movements get. There's no holding back now, and as you crest your finish, you grab the cat's hard, mashing his lips against your pussy as if begging for more stimulation. Panting with exertion and grinning a Cheshire grin, Sascha stares up at you as you wind down, kissing over your spasming cunt with tender lips and licking up what remains of your juices. It seems he's proud of how worked up he got you, and you're far too exhausted to say anything. You squeeze his face with your thighs for some small amount of revenge, only relenting when that sandpaper tongue menaces your recuperating sensitive bits.";
+	say "     'We can do that again whenever you like.' The smug kitty says as he rejoins you on the couch, having shed his tracksuit. Fingers schlicking away at his pussy, he unabashedly shows his approval for what just happened, leisurely stretching his legs and yawning as you gather your things and reequip yourself. 'It'd be more fun to stay the night here than in that warehouse~.' Shaking your head as you ready yourself to leave, you remark that you doubt you'd get any rest if you did. Though, as you walk away, you're not sure his oversexed behavior is a bad quality. He knows what he wants.";
+	NPCSexAftermath Player receives "OralPussy" from Sascha;
 
 to say SaschaGhostHandsFuck:
 	say "     ";

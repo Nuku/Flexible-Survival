@@ -1639,7 +1639,7 @@ to say Dragon Breeder milk use:
 	if Cock Count of Player is 1:
 		Increase Cock Length of Player by 5;
 	if Ball Size of Player <= 6:
-		Increase Ball size of Player by 1;
+		Increase Ball size of player by 1;
 	if scalevalue of Player < 5:
 		now scalevalue of Player is 5;
 

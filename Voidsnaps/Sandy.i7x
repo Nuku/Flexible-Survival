@@ -3,7 +3,7 @@ Sandy by Voidsnaps begins here.
 [This character is gated behind progressing Thomas's questline.]
 
 a postimport rule:
-	if Libido of Thomas is 1: [After saving Sandy.]
+	if libido of Thomas is 1 or libido of Thomas is 2 or libido of Thomas is 11 or libido of Thomas is 12 or libido of Thomas is 21 or libido of Thomas is 22: [After saving Sandy.]
 		move Sandy to Dry Plains;
 
 Section 1 - Character Declaration
