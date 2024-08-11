@@ -1623,6 +1623,8 @@ name	desc	weight	object
 
 Dragon Breeder milk is a grab object.
 Dragon Breeder milk is milky.
+Dragon Breeder milk is infectious.
+Strain of Dragon Breeder milk is "Dragon Breeder".
 Usedesc of Dragon Breeder milk is "[Dragon Breeder milk use]".
 
 to say Dragon Breeder milk use:
