@@ -1623,6 +1623,8 @@ name	desc	weight	object
 
 Dragon Breeder cum is a grab object.
 Dragon Breeder cum is cum.
+Dragon Breeder cum is infectious.
+Strain of Dragon Breeder cum is "Dragon Breeder".
 Usedesc of Dragon Breeder cum is "[Dragon Breeder cum use]".
 
 to say Dragon Breeder cum use:

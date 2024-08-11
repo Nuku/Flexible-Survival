@@ -1623,6 +1623,8 @@ name	desc	weight	object
 
 Dragon Breeder milk is a grab object.
 Dragon Breeder milk is milky.
+Dragon Breeder milk is infectious.
+Strain of Dragon Breeder milk is "Dragon Breeder".
 Usedesc of Dragon Breeder milk is "[Dragon Breeder milk use]".
 
 to say Dragon Breeder milk use:
@@ -1637,7 +1639,7 @@ to say Dragon Breeder milk use:
 	if Cock Count of Player is 1:
 		Increase Cock Length of Player by 5;
 	if Ball Size of Player <= 6:
-		Increase Ball size of by by 1;
+		Increase Ball size of Player by 1;
 	if scalevalue of Player < 5:
 		now scalevalue of Player is 5;
 

@@ -1023,7 +1023,7 @@ to say ResolveEvent Art Supplies:
 	say "     Opening the door to Ava's you flash the gentle tauress a warm smile, and ask if she remembers that newsstand in the high rise district she mentioned to you a while back. Ava nods. Well, you begin, you were there recently and, you pause to open up your inventory then pull out a bundle of magazines. You got these for her, you tell her, handing the tauress the first batch. 'You did! I can't believe it,' Ava stammers, her eyes go wide with delight as she sizes up the covers on the nature magazines. 'You actually found these, but I uh...' Ava mews mournfully, her ears drooping as she shifts her weight between her paws nervously and sets the magazine down on her davenport. 'I can't accept these.' Wondering why, you ask her how come. 'I don't have anything to give in exchange. Daddy says it's not fair to ask people for help, and not repay them for it.' Shrugging, you inform her you were never expecting to be reimbursed, that you did this out of the goodness of your heart. Besides, you found plenty of supplies there you wouldn't have known about without her tip.";
 	say "     Speaking of which, you tell her rifling past the rest of the news rags. You got something else for her, you explain unfolding a couple of the foreign dollars. 'What are these?' Ava asks, picking out a brightly colored bill that looks like a miniature gum wrapper in her massive paws. Tittering, you explain its money from other countries and that you thought she might like a few. 'But they're so pretty, aren't they worth a lot, are you sure I can just have them?' Ava asks, eyeballing the large denominations emblazoned on them. Eh, not here, most of these are worth a nickel, maybe less, economics are funny like that. You tell her, handing Ava a small stack of brightly-hued bills. 'Really,' Ava contends holding up a Caribbean note. 'They're so colorful though, I mean look at the blues on this one. Or this one, the foil thingy here looks like mommy's claws.' Ava says, tapping the security strip on another one. It does? It just looks like shiny plastic to you, you question.";
 	WaitLineBreak;
-	say "     'Oh ya that's right, mine eyes are different from yours, mommy, and daddy's. He said um I see parts of the-the um-uh,' Ava stammers as bobs her head as she racks her brain for the right words. ";
+	say "     'Oh ya that's right, mine eyes are different from yours, mommy, and daddy's. He said um I see parts of the-the um-uh,' Ava stammers, her ears a twtitch while she bobs her head from side to side as she racks her brain for the right words. ";
 	if "Touched by Madness" is listed in feats of Player:
 		say "'Ultra Violence spectrum and something else.' Ava, first off, you really hope she means the [italic type]ultraviolet[roman type] spectrum, secondly "; [Shall we hit up the Korova Milkbar, then go for a lovely spot of the old in and out my lovely droogs?]
 	else:
@@ -1043,7 +1043,7 @@ Margay Breeding	"Margay Breeding"
 
 Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-1	"Margay Breeding"	Margay Breeding	"[EventConditions_Margay_Breeding]"	Last Chance Auto Body	2500	2	10
+1	"Margay Breeding"	Margay Breeding	"[EventConditions_Margay_Breeding]"	Last Chance Auto Body	2500	2	100
 
 to say EventConditions_Margay_Breeding:
 	if Lust of Ava is 3 and player is impreg_now and BodyName of player is "Margay Taur" and Player is pure and HP of Kathy >= 1 and Cock Count of Player < 1 and Cunt Count of Player >= 1 and ScaleValue of Player is 5 and "Propositioned" is not listed in Traits of Ava:
@@ -1169,7 +1169,7 @@ Mirror mirror on Ava's wall	"Mirror mirror on Ava's wall"
 
 Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-1	"Mirror mirror on Ava's wall"	Mirror mirror on Ava's wall	"[EventConditions_Mirror_mirror_on_Ava's_wall]"	Last Chance Auto Body	2500	2	10
+1	"Mirror mirror on Ava's wall"	Mirror mirror on Ava's wall	"[EventConditions_Mirror_mirror_on_Ava's_wall]"	Last Chance Auto Body	2500	2	100
 
 to say EventConditions_Mirror_mirror_on_Ava's_wall:
 	if Lust of Ava is 3 and BodyName of player is "Margay Taur" and Player is pure and Player is impreg_now and ScaleValue of Player is 5 and player is female and "Propositioned" is not listed in Traits of Ava:
@@ -1244,7 +1244,7 @@ Penny for your thoughts	"Penny for your thoughts"
 
 Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-1	"Penny for your thoughts"	Penny for your thoughts	"[EventConditions_Penny_for_your_thoughts]"	Last Chance Auto Body	2500	2	10
+1	"Penny for your thoughts"	Penny for your thoughts	"[EventConditions_Penny_for_your_thoughts]"	Last Chance Auto Body	2500	2	100
 
 to say EventConditions_Penny_for_your_thoughts:
 	if Lust of Ava is 3 and player is impreg_now and BodyName of player is "Margay Taur" and Player is pure and Player is female and ScaleValue of Player is 5 and "Propositioned" is not listed in Traits of Ava:
@@ -1297,7 +1297,7 @@ Broodmother threshold	"Broodmother threshold"
 
 Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-1	"Broodmother threshold"	Broodmother threshold	"[EventConditions_Broodmother_threshold]"	Last Chance Auto Body	2500	2	10
+1	"Broodmother threshold"	Broodmother threshold	"[EventConditions_Broodmother_threshold]"	Last Chance Auto Body	2500	2	100
 
 to say EventConditions_Broodmother_threshold:
 	if Lust of Ava is 3 and player is impreg_now and BodyName of player is "Margay Taur" and Player is pure and Player is female and ScaleValue of Player is 5 and "Propositioned" is not listed in Traits of Ava:
@@ -2102,7 +2102,7 @@ Unlimited Taurs	"Unlimited Taurs"
 
 Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-1	"Unlimited Taurs"	Unlimited Taurs	"[EventConditions_Unlimited_Taurs]"	Last Chance Auto Body	2500	2	10
+1	"Unlimited Taurs"	Unlimited Taurs	"[EventConditions_Unlimited_Taurs]"	Last Chance Auto Body	2500	2	100
 
 to say EventConditions_Unlimited_Taurs:
 	if HP of Ava is 5 and player is impreg_able and BodyName of player is "Margay Taur" and Player is pure and Player is female and ScaleValue of Player is 5:
