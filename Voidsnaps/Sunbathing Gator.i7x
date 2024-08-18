@@ -387,6 +387,43 @@ to say GatorJerk:
 	WaitLineBreak;
 	say "     A grunt heralds Lazaros's orgasm, painting your face with a wet splurt of seed, and you moan, opening your mouth to take the next on your tongue, letting him mark you with gooey satisfaction as your hands slide up and down his bucking cock, milking every drop. It seems like an eternity before the flow slows to a thin dribble, and you have to wipe your face on your arm to blink your glued-shut eyes open, but you don't regret a thing, contemplating his sagging cock as if hoping it'll return to hardness. 'Fuck, [if Player is male]boy[else if Player is female]girl[else]kiddo[end if]. You know how to handle a cock. Come see me again sometime. We can fool around back at my place.' The gator's voice has a pleased, tired quality to it when he thanks you for his service, and before you finish cleaning yourself up, he's napping in the sun, soaking up the rays and wallowing in the puddle of cum beneath his balls. Licking stray cum from your fingers, you leave the gator to sleep off his orgasm, reminding yourself to return later. You don't think you'll be able to go long without another bout with that scaly cock.";
 
+Section 6 - Getting Closer To The Gator
 
+Table of GameEventIDs (continued)
+Object	Name
+Melancholy Melody	"Melancholy Melody"
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Melancholy Melody"	Melancholy Melody	"[EventConditions_MelancholyMelody]"	Lazaros's Camp	2500	2	100
+
+to say EventConditions_MelancholyMelody:
+	if Melancholy Melody is not resolved and Lazaros is in Lazaros's Camp: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Melancholy Melody is a situation.
+ResolveFunction of Melancholy Melody is "[ResolveEvent Melancholy Melody]".
+Prereq1 of Melancholy Melody is Away From It All.
+The level of Melancholy Melody is 0.
+The sarea of Melancholy Melody is "Nowhere".
+
+to say ResolveEvent Melancholy Melody:
+	say "     As you make your way back to Lazaros's cliffside camp, you hear the lonely strum of a guitar floating over the area, growing stronger as you make your way toward the glow of the firelight. It's Lazaros playing a slow, sad tune that makes your heart skip a beat.";
+	say "     [bold type]Do you want to listen or walk away to prevent embarassing him?[roman type][Line Break]";
+	say "      [link](Y)[as](y)[end link] Yes, you want to listen.";
+	say "      [link](N)[as](n)[end link] No, let him have his privacy";
+	if Player consents:
+		Linebreak;
+		say "     Finding a place where you hope you won't disturb the gator, you settle in to listen for a while, closing your eyes and focusing on the music. Within moments, his voice joins the guitar in a surprisingly smooth transition.";
+		say "'Met a boy once [Line Break]with the prettiest blue eyes. [Line Break]Told me that he loved me [Line Break]but much to my surprise, [Line Break]all the pretty words [Line Break]turned out to be lies. [Line Break]Left me when I needed him, [Line Break]and I nearly died. [Line Break]Saw him years later. [Line Break]Wife, two kids, happy as can be. [Line Break]Swear he looked right through, [Line Break]didn't recognize me. [Line Break]At first it hurt a little, [Line Break]but now I realize. [Line Break]Don't trust a pretty boy. [Line Break]He'll kill you with his lies. [Line Break]And all you'll see, [Line Break]once you've gotten wise, [Line Break]is nothing but empty, [Line Break]cold blue eyes.'";
+		say "     Lazaros's voice fades out at the end, wavering slightly, and as you open your eyes, you notice him sagging forward as he plays a last few half-hearted notes. It must have been quite the emotional release to sing that, and from what you know about his past, it might have been based on a true story. Walking to his side, you pat his shoulder, then sit down next to him in silence, ignoring the wetness on his cheeks and patting his knee. You can't think of anything to say, and judging by his silence, he can't either, but the gentle scrape of scales across your knuckles tells you he's appreciative.";
+		say "     It takes a while for Lazaros to regain his voice, but when he does, it's like nothing ever happened. Describing his lazy day of nudity on the beach, he offers you some canned hot dogs he's cooked over the fire, and you enjoy each other's company until it's time for you to leave. You can't help but feel that you've grown closer to him when he hugs you goodbye and whispers 'Thanks for listening.'";
+		now Resolution of Melancholy Melody is 1; [Listened in. He might sing again later.]
+	else:
+		Linebreak;
+		say "     Shaking your head, you turn your back on the music and make your way back down the cliff. It sounds like this is a private moment and you're not sure that you have the right sort of relationship with Lazaros to intrude on it. You'll come back later.";
+		now Resolution of Melancholy Melody is 2; [Didn't listen in. Further songs blocked.]
+		move player to Rocky Cliff;
+	now Melancholy Melody is Resolved;
 
 Sunbathing Gator ends here.

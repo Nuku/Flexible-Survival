@@ -473,6 +473,7 @@ Include Donkeyman by Sarokcat n Verath.
 Include Donkeywoman by Sarokcat n Verath.
 Include Draco-Mantis Infections by Prometheus.
 Include Dracovixentaur by Stripes.
+Include Dragon Breeder by Sundered Dragon.
 Include Dragontaur by Stripes.
 Include Dragon Pool Toy by Hina Vache.
 Include Drone Wasp by Nuku Valente.
@@ -696,6 +697,7 @@ Include Succubus by Sarokcat.
 Include Sugar Ferret by Stripes.
 Include Sugar Glider by AGentlemanCalledB.
 Include Swamp Goblin by Voidsnaps.
+Include Sweaty Bear by Voidsnaps.
 Include Taurus by Defth.
 Include Teddy Bear by Sarokcat.
 Include Tenrec by StripeGuy.
@@ -849,6 +851,7 @@ Include Frank by Luneth.
 Include Friesian Twin Isaac by Wahn.
 Include Friesian Twin Karel by Wahn.
 Include G-Shep Squad by Rikaeus.
+Include Galaxite by Sundered Dragon.
 Include Genevieve by Prometheus.
 Include Garrett by SgtPepper234.
 Include Gerty by Qazarar.
@@ -961,6 +964,7 @@ Include Paula by Prometheus.
 Include Penelope by Prometheus.
 Include Percy by Taelyn.
 Include Pericles by Rikaeus.
+Include Permanent Infection Remover by Voidsnaps.
 Include Phantom Dolphin by Blue Bishop.
 Include Phantom Pony by Blue Bishop.
 Include Poseidon by Rikaeus.
@@ -973,12 +977,14 @@ Include Reece by Luneth.
 Include RexxyEvent by Prometheus.
 Include Rhidall by Voidsnaps.
 Include Richard by Wahn.
+Include Riker by Voidsnaps.
 Include RodAndRonda by Wahn.
 Include Roman by Kernog.
 Include Ryan by Fuxi.
 Include Sally by Stripes.
 Include Sakura Sato by Rikaeus.
 Include Sam by Stripes.
+Include Sandy by Voidsnaps.
 Include Santa Claws by Wahn.
 Include Sarah by Wahn.
 Include Sascha by Voidsnaps.

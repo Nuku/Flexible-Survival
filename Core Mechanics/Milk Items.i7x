@@ -1619,6 +1619,36 @@ instead of sniffing dracovixentaur milk:
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"Dragon Breeder milk"	"A tall glass vessel packed to the rim with pearly white perfection, a normal unassuming person could easily mistake your scrumptious draconic cream for a banal dairy product at first glance, had you not written the words [']Dragon Breeder milk['] on the side. Though should someone gaze too deeply or too long at its content, their unworthy eyes would be treated to an ever-shifting collage of unnatural colors and enthralling dark shapes fluttering in the alabaster waters."	1	Dragon Breeder milk
+
+Dragon Breeder milk is a grab object.
+Dragon Breeder milk is milky.
+Dragon Breeder milk is infectious.
+Strain of Dragon Breeder milk is "Dragon Breeder".
+Usedesc of Dragon Breeder milk is "[Dragon Breeder milk use]".
+
+to say Dragon Breeder milk use:
+	say "Bringing the glistening your lips, you swallow down your succulent cream with eager abandon. Delighting in the warm, rich, soothing balm coating your palate in a heady sheen of heavy vanilla and some crisp, almost herbal, bite as you swish the thick ambrosial liquid along the roof mouth before swallowing. Ah delicious, you preen self-indulgently as the potent draconic energies infuse you with a raw rush of fertile excess.";
+	PlayerDrink 15;
+	PlayerEat 15;
+	increase Breast Size of Player by 3;
+	if Cunt Count of Player < 1:
+		increase Cunt Count of Player by 1;
+	increase Cunt Depth of Player by 3;
+	increase Cunt Tightness of Player by 3;
+	if Cock Count of Player is 1:
+		Increase Cock Length of Player by 5;
+	if Ball Size of Player <= 6:
+		Increase Ball size of player by 1;
+	if scalevalue of Player < 5:
+		now scalevalue of Player is 5;
+
+instead of sniffing Dragon Breeder milk:
+	say "You open the lid for a moment and take a sniff, your senses are greet by the subtle scent of cloves and Plumeria.";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "dragon pool toy milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Dragon Pool Toy Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	dragon pool toy milk
 
 dragon pool toy milk is a grab object.

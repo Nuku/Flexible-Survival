@@ -318,6 +318,8 @@ Figure of Atticus_jeans_smile_arms_lowered_icon is the file "Atticus_jeans_smile
 Figure of Atticus_jeans_smile_arm_raised_icon is the file "Atticus_jeans_smile_arm raised.jpg".
 Figure of Atticus_jeans_frown_arms_crossed_icon is the file "Atticus_jeans_frown_arms crossed.jpg".
 Figure of Augustus_Drake_icon is the file "Augustus_Drake.png".
+Figure of Augustus_Drake_lion_form_hard_icon is the file "Augustus_Drake_lion_form_hard.png".
+Figure of Augustus_Drake_lion_form_soft_icon is the file "Augustus_Drake_lion_form_soft.png".
 Figure of Aurora_clothed_icon is the file "Aurora.png".
 Figure of Bastet_neutral_dress_seethrough_icon is the file "Bastet_neutral_dress_seethrough.jpg".
 Figure of Bastet_neutral_dress_seethrough_nojewelry_icon is the file "Bastet_neutral_dress_seethrough_nojewelry.jpg".
@@ -717,6 +719,8 @@ Figure of Squire_smile_undies_shirt_seethrough_icon is the file "Squire_smile_un
 Figure of Squire_smile_soft_icon is the file "Squire_smile_soft.jpg".
 Figure of Squire_smile_hard_icon is the file "Squire_smile_hard.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
+Figure of Sturm_full_body_icon is the file "Sturm_full_body.jpg".
+Figure of Sturm_full_body_hard_icon is the file "Sturm_full_body_hard.jpg".
 Figure of Susan_face_icon is the file "Susan_face.jpg".
 Figure of Susan_FHerm_clothed_icon is the file "Susan_FHerm_clothed.jpg".
 Figure of Susan_FHerm_hard_icon is the file "Susan_FHerm_hard.jpg".
@@ -1456,6 +1460,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Atticus_jeans_smile_arm_raised"	Figure of Atticus_jeans_smile_arm_raised_icon	"Lyttathebug"	g-black	"normal"
 "Atticus_jeans_frown_arms_crossed"	Figure of Atticus_jeans_frown_arms_crossed_icon	"Lyttathebug"	g-black	"normal"
 "Augustus_Drake"	Figure of Augustus_Drake_icon	"Gherod"	g-dark-gray	"normal"
+"Augustus_Drake_lion_form_hard"	Figure of Augustus_Drake_lion_form_hard_icon	"Gherod"	g-dark-gray	"normal"
+"Augustus_Drake_lion_form_soft"	Figure of Augustus_Drake_lion_form_soft_icon	"Gherod"	g-dark-gray	"normal"
 "Aurora_clothed"	Figure of Aurora_clothed_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Badger clothed"	Figure of Badger_clothed_icon	"SteppeCrow"	g-White	"normal"
 "Badger soft"	Figure of Badger_soft_icon	"SteppeCrow"	g-White	"normal"
@@ -2857,7 +2863,9 @@ carry out artistcredits:
 	say "     Artemis by FaroreNightclaw @ furaffinity.net[line break]";
 	say "     Anastasia by SandySchreiber @ furaffinity.net[line break]";
 	say "     Atticus by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
-	say "     Augustus Drake by Gherod @  https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
+	say "     Augustus Drake by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
+	say "     Augustus_Drake_lion_form_hard @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
+	say "     Augustus_Drake_lion_form_soft @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
 	say "     Aurora by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Blanche (standing & preg) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Blanche (color) by The_Negative @ furaffinity.net[line break]";

@@ -74,14 +74,14 @@ instead of conversing Ignacio:
 		if Player consents:
 			say "     Nodding, you tell Ignacio that you'd love to help him find his brother. After all, you're here to search for who's kidnapped the lizards. Maybe you'll get lucky, and it'll be the same person. If nothing else, you'll be helping a person in need. 'Really? You mean it?' Grabbing your shoulders, Ignacio looks desperately overjoyed. He stops himself after a moment, curbing his enthusiasm, and steps back. 'I've been canvassing the area where Matty went missing, and I think I might have found the right place. It's [bold type]west of that floating village.[roman type]' Too excited to contain himself, Ignacio runs past you, heading toward the mall's exit. 'I'll meet you there!'";
 			TraitGain "Matteo Quest" for Ignacio;
-			move Ignacio to Creepy Swamp Cabin;
+			now Ignacio is nowhere;
 		else:
 			say "     Shaking your head, you decline Ignacio's question. In truth, you don't see it as your problem. You're not willing to put yourself in danger for a stranger, let alone one that made such a terrible first impression. You're just here to bring back the errant lizard. 'Don't you want to know who's been taking people?!' Slamming his fist on the table in front of you, Ignacio seems desperate as he nearly yells, looking from you to the crested newt sitting at the desk. 'Tsk. Fuck this. I'm going back out to search. Thanks for nothing.' Shoulder checking you on the way past, Ignacio storms out, heading toward the mall's exit. The crested newt behind the desk sighs. 'Sorry about Iggy. He's protective of his little brother. It's just been the two of them for so many years...' Rubbing the space between his eyes, the newt leans back. 'I've had my hands full just keeping everyone fed, so I haven't been able to look into anything. I didn't mean to drag you into things. You can come and go as you please, but don't do anything I wouldn't do. We're trying to stay civilized...' Shooing you away, Keiran shuffles through what looks like a map of the area, taking out a marker.";
-			move Ignacio to Nowhere;
+			now Ignacio is nowhere;
 			TraitGain "Lost Forever" for Ignacio;
 		TraitLoss "Trusted" for Ignacio;
-	[else if Ignacio is in Ignacio's Place: [Menu needed here. Placeholder for now.]
-		say "     ";]
+	else if Ignacio is in Ignacio's Place: [Menu needed here. Placeholder for now.]
+		say "     <Under Construction!>";
 
 instead of fucking Ignacio:
 	if "Hostile" is listed in Traits of Ignacio:
@@ -90,7 +90,45 @@ instead of fucking Ignacio:
 		say "     You attempt to flirt with the poison dart frog, offering to take him elsewhere and continue things where they left off. Clearing his throat and shuffling from side to side, he bashfully shakes his head. 'It's tempting but... I don't really have time. Why don't you ask me when there's less on my mind?'";
 	else if "Matteo Quest" is listed in Traits of Ignacio: [post-capture/coming to mall]
 		say "     You attempt to flirt with the poison dart frog, but then remember that he's still looking for his brother. You'd have to be one heartless person to distract him from that! Clearing your throat awkwardly, you stop yourself mid sentence and apologize, noting his grateful expression. It seems he didn't want to reject you, but you would have given him no choice!";
-	[else if Ignacio is in Ignacio's Place: [After Quest. Placeholder.]
-		say "     ";]
+	else if Ignacio is in Ignacio's Place: [After Quest. Placeholder.]
+		say "     <Under Construction!>";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Ignacio's Place	"Ignacio's Place"
+
+Ignacio's Place is a room.
+Ignacio's Place is west of Algae-Covered Atrium.
+Description of Ignacio's Place is "[Ignacio's PlaceRoomDesc]".
+earea of Ignacio's Place is "void".
+
+to say Ignacio's PlaceRoomDesc:
+	say "     Ignacio's room is very different from his personality. Brightly colored paintings cover the walls, and an easel sits in the corner. Even his cot has paint stains on its sheets. Upon further inspection, it appears that his room used to be an arts and crafts store, though the sign's been torn down and the shelves are gone.";
+
+Section 2 - After Matteo's saved
+
+Table of WalkinEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"Safer Swamps"	Safer Swamps	"[EventConditions_Safer Swamps]"	Algae-Covered Atrium	2500	2	100
+
+to say EventConditions_Safer Swamps:
+	if libido of Riker is 11 and "Working With Riker" is not listed in Traits of Player:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Safer Swamps	"Safer Swamps"
+
+Safer Swamps is a situation.
+ResolveFunction of Safer Swamps is "[ResolveEvent Safer Swamps]".
+The level of Safer Swamps is 0.
+Sarea of Safer Swamps is "Nowhere".
+
+to say ResolveEvent Safer Swamps:
+	say "    Returning to a resounding cheer from all the nearby frogs, you try your best to manage the tide of well-wishers who realize you've defeated the threat to their village. Just as you think you'll die there, shaking hands and accepting thanks, Ignacio pulls you aside and waves people off. 'Hey. I know we didn't get off on the best foot and, uh.' Shuffling his feet, Ignacio places a hand on the back of his head, rubbing it with a sheepish expression. 'Thanks, I mean. You saved my ass. Literally.' At odds with his somewhat spiky personality, Ignacio doesn't seem to be able to meet your eye. 'Fuck it. Come to my place later, and I'll thank you properly.' With that, he rushes off, cheeks flushed and gait unsteady.";
+	say "    You stick around a little longer, accepting a drink or four from various wellwishers, but eventually the crowd things and things return to normal. [bold type]Ignacio pointed out his place before he left. Maybe you should visit him sometime and see what he has to say! [roman type][line break]";
+	move Ignacio to Ignacio's Place;
+
+
 
 Ignacio ends here.
