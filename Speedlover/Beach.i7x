@@ -158,7 +158,7 @@ after looking while player is in Shallow Bay:
 to say ShallowBayDesc:
 	say "     You're swimming (standing, in some places) in the nice and shallow water close to the public beach of the city. It is a nice area for a relaxing swim, without too many waves, as those mostly break further out to the south, where a series of rocks juts out of the depth. The ocean gets deeper that way fairly quickly, and you don't think it'd be healthy to swim that way on the best of days. So maybe just enjoy your refreshing bath in this part of the bay, before going back on land in the [link]east[end link], [link]north[end link], [link]northwest[end link] or [link]west[end link].";
 
-instead of sniffing the Wild Fringe:
+instead of sniffing the Shallow Bay:
 	say "     You sniff around, and since the ocean water is almost sloshing into your nose, there is little wonder that you smell salt.";
 
 [Wild Fringe]
