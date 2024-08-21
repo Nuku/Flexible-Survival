@@ -1375,54 +1375,23 @@ The PrereqCompanion of Trucker Bar is gshep.
 to say ResolveEvent Trucker Bar:
 	if Resolution of Trucker Bar is 0: [first time]
 		say "     Wandering through the outskirts of the downtown area, you reach a section of town that's just at the edge of the warehouse district. It is clearly more of a working class neighborhood over here, as there are 'regular' businesses instead of boutiques dominating the streetfront. Of course, most of the shops are closed with heavy iron shutters, and those that are not have already been looted. Turning a corner into another very similar-looking road, you realize that suddenly, a familiar presence is missing from your side. Looking around, you see that Korvin wandered off a few steps and is looking at his surroundings with a thoughtful expression. 'Wait a moment, [K_Boss]. I think this feels familiar! Can we go that way?'";
-		say "     [bold type]What's your reply?[roman type][line break]";
-		LineBreak;
-		say "     [link](1)[as]1[end link] - Sure, let's see where his instinct takes you.";
-		say "     [link](2)[as]2[end link] - Not right now. You've got places to be.";
-		say "     [link](3)[as]3[end link] - No, and you don't care about that. He should forget it.";
-		now calcnumber is 0;
-		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
-			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
-				say "Invalid choice. Type [link]1[end link] to follow Korvin, [link]2[end link] to postpone investigating or [link]3[end link] to refuse for good.";
-		if calcnumber is 1:
-			LineBreak;
-			say "[InvestigateTruckerBar]";
-		else if calcnumber is 2:
-			LineBreak;
-			say "     Taking some steps after Korvin, you pat him on the shoulder and say that you don't have time for this right this moment. He's got to have some patience, maybe you can come back and investigate further in the future. The muscular anthro glances down the street hesitantly, then nods and says, 'As you say, [K_Boss].'";
-			now Resolution of Trucker Bar is 99; [postponed]
-		else if calcnumber is 3:
-			LineBreak;
-			say "     With a shake of your head, you put two fingers in your mouth and whistle for Korvin, making the German shepherd trot back over to you and take his usual space. Then you tell him that you don't care to investigate this further, so he should just put it out of his mind. The muscular anthro glances down the street hesitantly, then nods and says, 'As you say, [K_Boss].'";
-			now Resolution of Trucker Bar is 100; [refused]
-			now Trucker Bar is resolved;
 	else if Resolution of Trucker Bar is 99: [postponed before]
 		say "     Wandering through the outskirts of the downtown area, you again reach the street that seemed familiar to Korvin when you passed this way before. 'Wait a moment, [K_Boss]. Can we maybe check this way? I think I remember the way somewhere!'";
-		say "     [bold type]What's your reply?[roman type][line break]";
-		LineBreak;
-		say "     [link](1)[as]1[end link] - Sure, let's see where his instinct takes you.";
-		say "     [link](2)[as]2[end link] - Not right now. You've got places to be.";
-		say "     [link](3)[as]3[end link] - No, and you don't care about that. He should forget it.";
-		now calcnumber is 0;
-		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
-			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
-				say "Invalid choice. Type [link]1[end link] to follow Korvin, [link]2[end link] to postpone investigating or [link]3[end link] to refuse for good.";
-		if calcnumber is 1:
+	say "     [bold type]What's your reply?[roman type][line break]";
+	let TruckerBar_Choices be a list of text;
+	add "Sure, let's see where his instinct takes you." to TruckerBar_Choices;
+	add "Not right now. You've got places to be." to TruckerBar_Choices;
+	add "No, and you don't care about that. He should forget it." to TruckerBar_Choices;
+	let TruckerBar_Choice be what the player chooses from TruckerBar_Choices;
+	if TruckerBar_Choice is:
+		-- "Sure, let's see where his instinct takes you.":
 			LineBreak;
 			say "[InvestigateTruckerBar]";
-		else if calcnumber is 2:
+		-- "Not right now. You've got places to be.":
 			LineBreak;
 			say "     Taking some steps after Korvin, you pat him on the shoulder and say that you don't have time for this right this moment. He's got to have some patience, maybe you can come back and investigate further in the future. The muscular anthro glances down the street hesitantly, then nods and says, 'As you say, [K_Boss].'";
 			now Resolution of Trucker Bar is 99; [postponed]
-		else if calcnumber is 3:
+		-- "No, and you don't care about that. He should forget it.":
 			LineBreak;
 			say "     With a shake of your head, you put two fingers in your mouth and whistle for Korvin, making the German shepherd trot back over to you and take his usual space. Then you tell him that you don't care to investigate this further, so he should just put it out of his mind. The muscular anthro glances down the street hesitantly, then nods and says, 'As you say, [K_Boss].'";
 			now Resolution of Trucker Bar is 100; [refused]
