@@ -23,7 +23,7 @@ to say ResolveEvent Gill Fruits Tree:
 		say "You leave the tree alone.";
 
 gill fruit is a grab object.
-gill fruit has a usedesc "[gill fruit use]".
+gill fruit has a Usedesc "[gill fruit use]".
 hasgills is a number that varies.
 
 Table of Game Objects (continued)
@@ -83,7 +83,7 @@ to say sea dragon cum use:
 			infect "Feral Sea Dragoness";
 
 sea dragon cum is a grab object. sea dragon cum is cum.
-sea dragon cum has a usedesc "[sea dragon cum use]".
+sea dragon cum has a Usedesc "[sea dragon cum use]".
 
 Section 4 - Fighting
 
