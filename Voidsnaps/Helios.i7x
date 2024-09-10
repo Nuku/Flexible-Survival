@@ -92,6 +92,8 @@ to say ImpregHelios:
 			say "     DEBUG: Can't impregnate Helios, already pregnant!";
 
 to say HeliosDesc:
+	if debugactive is 1:
+		say "     <Helios has laid [OffspringCount of Helios] clutches.>";
 	say "     Standing at an impressive 8 feet at the shoulder, Helios stares down at you with curious amber eyes, his tail swaying behind him. A mix of red, brown, and orange scales adorn his bulky body, giving the appearance of magma, and two curling horns accent his masculine feral face. When he shifts in place, you catch a glimpse of two swinging, leathery dark red balls between his legs, beneath a fat sheath of the same color. A private peek would show a draconic cock tucked away inside, covered with ridges. Helios appears uncomfortable when you look closer at him, and he unconsciously leans away from you, though you can tell by the peeking tip of his manhood that it's all an act.";
 	if "Slightly Pregnant" is listed in Traits of Helios:
 		say "     His stomach shows the slightest bulge, as though he's had a big breakfast, but you know what that paunch hides. It seems he knows it too, and when he notices you staring, he pointedly looks away, sucking in his gut as if denying the fact that you've knocked him up. He fails after a moment of holding his breath, and settles for tucking his tail around himself, though it does little to hide his eggnancy.";
@@ -384,6 +386,7 @@ to say HeliosFuckMenu:
 			say "     A conveniently placed rock saves the dragon's balls from your weight, raising you to just the right height to nuzzle your dick against that heated silk. To your surprise, he's already slightly warmed up, and a bit of slickness greets your cockhead, letting you slip right in. You taunt him with this knowledge as you hilt, asking him whether he's been playing with himself while he waits for you. 'I have to keep myself clean. I certainly wasn't using my tongue for your benefit.' The dragon's ashamed whisper floats over his shoulder, accompanied by a whorish moan. 'It's none of your business.' A hint of arrogance slips into his voice, alongside the dripping desire you're milking from him as you introduce him to the novel sensation of a deep fuck.";
 			WaitLineBreak;
 			say "     Slapping the dragon's rump and punishing him for his insolence with a heavy rhythm that slaps your hips against his heated rear, you chastise him for refusing to admit the truth. It's easy to see that he rimmed himself because he missed your cock. He wouldn't be this loose if he hadn't spent a long time fucking his ass with his tongue! Overwhelmed by the repeated assault on his sensitive prostate, the dragon can barely form a coherent sentence, his words coming in a discombobulated huff. Straining your neck, you watch as he lolls his tongue, a pleasured expression on his face that hastily changes to a forced wince as he notices your gaze. 'This is nothing but a punishment. A duty I must fulfill for some imagined slight. I wouldn't enjoy such filthy things.'";
+			WaitLineBreak;
 			say "     Withdrawing, you tease the dragon, telling him that if he doesn't enjoy your efforts, you can ask Soot for magical aid. Surely there's some way to prevent him from feeling something so 'vile.' Maybe you should stop here and ask. Of course, that'll mean you'll have to leave him there, with his ass in the air and an untouched dick. ";
 			if OffspringCount of Helios > 3:
 				LineBreak;
@@ -410,7 +413,8 @@ to say HeliosFuckMenu:
 			WaitLineBreak;
 			say "     It doesn't take long for that churning sensation to reappear, coaxing you to open your legs and spread your cheeks. Stimulating ridges work their way down your passage. You throw back your head, moaning as the first one pops free with little effort, spreading your hole wide and bringing with it a thick coating of dragon cum. The next comes with ease, and by the time the last one pops free, you're openly fingering your hole in hopes of another. Sadly, you've finished laying, standing on shaky legs, re-equipping yourself, and leaving the pile of eggs for Soot to collect.";
 			NPCSexAftermath Player receives "AssFuck" from Helios;
-			HeliosOffspringIncrease;
+			if OffspringCount of Helios < 4:
+				increase OffSpringCount of Helios by 1;
 		-- "Milk his cock with your pussy.":
 			LineBreak;
 			say "     You feel like giving Helios's cock a workout this time. Telling him so, you strip off your gear and toss it in a haphazard pile nearby. Making it clear what you want, you find a semi-comfortable rock to lean back on and spread your legs, giving the dragon a view of your spread ass cheeks and dripping cunt. Telling him to get to work on pleasing you, you crook your finger toward him. Swallowing audibly, the dragon looks from your presented pussy to the door, then back as though weighing his options and contemplating resistance. With a sigh, he seems to decide not to protest, slotting his nose between your legs. Grumbling, he lolls his tongue out, letting it whisk over your pussy lips for a moment before he grimaces and pulls back. 'Is there no other way?'";
@@ -421,16 +425,15 @@ to say HeliosFuckMenu:
 			WaitLineBreak;
 			say "     It doesn't take long for that churning sensation to reappear, coaxing you to open your legs and spread pussy with excited fingers. Stimulating ridges work their way down your passage. You throw back your head, moaning as the first one pops free with little effort, spreading you wide and bringing with it a thick coating of dragon cum. The next comes with ease, and by the time the last one pops free, you're openly fingering your sloppy pussy in hopes of another. Sadly, you've finished laying, standing on shaky legs, re-equipping yourself, and leaving the pile of eggs for Soot to collect.";
 			NPCSexAftermath Player receives "PussyFuck" from Helios;
-			HeliosOffspringIncrease;
+			if OffspringCount of Helios < 4:
+				increase OffSpringCount of Helios by 1;
 		-- "Nevermind.":
 			LineBreak;
 			say "     Deciding against fucking the dragon for now, you tell him to wait until you're more in the mood, noting his slightly disappointed expression as he nods his head, still staring hungrily at your crotch. ";
 			if OffspringCount of Helios > 2:
 				say "You hear him mumble something under his breath about being unable to wait, but he behaves, reclining and letting his cock soften with a hopeful expression, as though you'll take pity on him. You should probably try for another clutch soon, before the poor thing goes TOO stir-crazy.";
 	
-To HeliosOffspringIncrease:
-	if OffspringCount of Helios < 4:
-		increase OffSpringCount of Helios by 1;
+
 
 Section 5 - Helios Pregnancy
 
@@ -453,10 +456,11 @@ an everyturn rule:
 				say "     [bold type]Your thoughts wander back to Helios, and you feel a need to go check in on him. You may have missed his egg-laying![roman type][line break]";
 				add "Absent_Birth" to Traits of Helios; [memory of the birth of human dog offspring without the player present. trait just there for completeness, does nothing.]
 				TraitLoss "Heavily Pregnant" for Helios;
-				HeliosOffspringIncrease;
-				now ImpregTimer of Helios is 0; [pregnancy reset]
+				now ImpregTimer of Helios is 0; [Pregnancy Reset]
+				if OffspringCount of Helios < 4:
+					increase OffSpringCount of Helios by 1;
 			else: [player is next to Helios] [TODO: Add mentions of other offspring]
-				say "      Helios groans and lies on his side, his legs forced apart by his massvely swollen stomach. His tongue hangs out of his mouth, and you can see his obsidian pucker flex with effort as a soft glow illuminates it. Pulsing with an unmistakably fiery aura, his first egg tests the limits of his hole, accompanied by a slow trickle of lubricant, then slides out, leaving his ass gaping and his  cock throbbing. Cursing your name under his breath, he bears down, readying the next. ";
+				say "      Helios groans and lies on his side, his legs forced apart by his massvely swollen stomach. His tongue hangs out of his mouth, and you can see his obsidian pucker flex with effort as a soft glow illuminates it. Pulsing with an unmistakably fiery aura, his first egg tests the limits of his hole, accompanied by a slow trickle of lubricant, then slides out, leaving his ass gaping and his cock throbbing. Cursing your name under his breath, he bears down, readying the next. ";
 				if OffspringCount of Helios is 0: [first time]
 					say "Helios grimaces as  each egg reaches its apex, stretching his hole to its fullest, and then slides out of him. He sighs with relief, only to clench his teeth again as the next jostles for position. At least half a dozen eggs come in quick succession, pooling by his haunches, and by the time he finishes, his thick hauches shine with messy lubricant, his hole loosened enough that you can see his soft pink inner walls, still spasming despite the birth's near finish. When the last egg left queues up, he lets out a high pitched whine, and his cock heaves, dousing the ground below in a thick layer of cum.";
 					if Player is male:
@@ -469,9 +473,10 @@ an everyturn rule:
 						else:
 							say "      Shaking your head, you clear the evil thought out, instead offering the exhausted dragon some comfort, patting his haunches and gently cleaning up the mess he made with a cloth from your bag. Of course, you still tease the poor thing, taking your time to wipe away his juices from his sensitive hole, and stroking his spent cock until it gives up its last pearly dribbles into your palm. You leave him to rest once you've had your fill of teasing, satisfied by the now-sleeping dragon's contentment.";
 						TraitLoss "Heavily Pregnant" for Helios;
-						HeliosOffspringIncrease;
-						now ImpregTimer of Helios is 0; [pregnancy reset]
-				else if OffspringCount of Helios > 2:
+						now ImpregTimer of Helios is 0; [Pregnancy Reset]
+						if OffspringCount of Helios < 4:
+							increase OffSpringCount of Helios by 1;
+				else if OffspringCount of Helios > 0 and OffspringCount of Helios < 4:
 					say "A moan slips out of the gravid dragon's mouth as he passes the first egg, accompanied by his cock flexing and firing off a juicy string of pre across his roiling stomach. His eyes shoot open as he realizes you're there, and he bites his lower lip as the next crests its apex, trying his best to hold back another. If you didn't know better, you'd think he's enjoying being forced to give birth to your eggs! With each egg that stretches his poor hole, he loses a little more control, until he rolls over onto his back, front paws clutching his heaving stomach and churning balls on display. The final egg is slightly larger than the rest, and it seems he's unable to hold back just how good it feels, breaking his muffled silence to scream his pleasure. With that cry reverberating, the egg slips free of his ruined hole, triggering what appears to be quite an intense orgasm. By the time he finishes spasming, claws digging into the dirt below, he's covered chin to cock in his own seed, staring off into space with a glazed look.";
 					if Player is male:
 						LineBreak;
@@ -483,9 +488,10 @@ an everyturn rule:
 						else:
 							say "      Shaking your head, you clear the evil thought out, instead offering the exhausted dragon some comfort, patting his haunches and gently cleaning up the mess he made with a cloth from your bag. Of course, you still tease the poor thing, taking your time to wipe away his juices from his sensitive hole, and stroking his spent cock until it gives up its last pearly dribbles into your palm. You leave him to rest once you've had your fill of teasing, satisfied by the now-sleeping dragon's contentment.";
 						TraitLoss "Heavily Pregnant" for Helios;
-						HeliosOffspringIncrease;
-						now ImpregTimer of Helios is 0; [pregnancy reset]
-				else if OffspringCount of Helios > 4:
+						now ImpregTimer of Helios is 0; [Pregnancy Reset]
+						if OffspringCount of Helios < 4:
+							increase OffSpringCount of Helios by 1;
+				else if OffspringCount of Helios > 3: [Future-proofed for 4+]
 					say "Helios can't hold onto his cursing, pained expression for long, and as you watch, a slutty expression comes over his face. Rather than seeming ashamed, he's embraced his role as a broodmother, and even seems to be showing off for you. He rolls over onto his stomach with some effort, tail lifted high and cock on display as the first runed egg pushes free, plopping onto the ground below with a soft thud. Moaning like a wanton whore, he shakes his ass as the next makes its way down his egg chute, his hole bulging outward and lubricant dribbling down over his cock, mixing with the free flowing pre that messes the ground below. The next few eggs pass with little resistance, giving you a view of the dragon's loosened hole, until the final, largest one stretches him out. Helios's body tenses as it stretches him out, and he cums himself silly as it reaches its apex, falling to the floor in a puddle of cum. Exhausted, he collapses forward into his own mess, tail still lazily lifted over his back and ruined hole on display.";
 					if Player is male:
 						LineBreak;
@@ -496,14 +502,17 @@ an everyturn rule:
 							say "[HeliosBirthSex]";
 						else:
 							say "      Shaking your head, you clear the evil thought out, instead offering the exhausted dragon some comfort, patting his haunches and gently cleaning up the mess he made with a cloth from your bag. Of course, you still tease the poor thing, taking your time to wipe away his juices from his sensitive hole, and stroking his spent cock until it gives up its last pearly dribbles into your palm. You leave him to rest once you've had your fill of teasing, satisfied by the now-sleeping dragon's contentment.";
-			TraitLoss "Heavily Pregnant" for Helios;
-			HeliosOffspringIncrease;
-			now ImpregTimer of Helios is 0; [pregnancy reset]
+							TraitLoss "Heavily Pregnant" for Helios;
+							now ImpregTimer of Helios is 0; [Pregnancy Reset]
+						if OffspringCount of Helios < 4:
+								increase OffSpringCount of Helios by 1;
 
 to say HeliosBirthSex: [Fuck his stretched ass!]
+	TraitLoss "Heavily Pregnant" for Helios;
+	now ImpregTimer of Helios is 0; [Pregnancy Reset. He just gave birth!]
 	LineBreak;
 	say "     Deciding to take advantage of Helios, you step up to his ruined ass and pat his haunches, quickly discarding your things and bringing your cock to bear. The steaming heat rolling off that well-lubricated and stretched hole teases your cock tip, and you can't resist its siren's call, shoving in and using Helios's tail as an anchor to get better leverage. It's surprisingly tight despite its well-used appearance, suckling at your cock and welcoming you in deeper with rolling muscles. ";
-	if OffspringCount of Helios <= 1:
+	if OffspringCount of Helios < 2:
 		say "Helios's eyes widen as you stuff yourself inside him, and he attempts to crawl away, but his efforts only drag his clamping hole along your cock, encouraging you to close the distance before he can slip off of you. He groans his displeasure, but you can feel him subtly press back against your dick with each thrust, and by the time you set up a heavy thrust, slapping your hips into his thick haunches, his protests have melted into soft huffing murmurs.";
 		say "     You pat the still-resistant dragon's ass with your free hand, rewarding his acquiescence with a long pause as your dick hilts inside him, letting him feel just how excited he's gotten you. You tell him he's such a good egg layer that you couldn't resist pumping a new clutch into him, and he should feel proud that he's still so sexy even after such intense labor. It's subtle, but you can feel his inner walls clutch at your cock more insistently the more you describe his subservience, and when you follow it up by telling him what a sexy whore he is, a muffled moan leaves the dragon's mouth, as though he does not deny it. The longer you fuck the dragon, the more he relaxes into your rhythm, pushing back into every thrust and letting his tongue loll out of the side of his scaly mouth. He can try to deny it all he wants, but that dragon ass exists for taking dick! Even his cock seems to agree, pulsing back to life and creaming the ground below in anticipation of another load in his juicy hole.";
 		WaitLineBreak;
@@ -512,7 +521,7 @@ to say HeliosBirthSex: [Fuck his stretched ass!]
 		say "Helios groans with pleasure as you stuff yourself past his loosened rim, weakly protesting but shoving backward to take you to the hilt. Even though his mouth says one thing, his body seems more than willing to take its next clutch, and his silky, stretched hole milks your dick for all its worth. Without even an attempt to escape, you're clear to fuck him as you like, and he even peers backward as though he wants to encourage you but thinks better of it. Taking advantage of the wyrm's partial acceptance, you hold onto his tail for dear life, thrusting with all of your strength and reveling the sloppy, wet heat that suckles at your cock. You're not going to last long in the dragon's sauna of an ass, but you attempt to hold out as long as you can, gritting your teeth in an attempt to hold yourself back. Spurred on by that greedy hole, you tell him what an obedient whore he is, praising him for lifting his tail for you and begging for another clutch.";
 		WaitLineBreak;
 		say "     Tightening at your words despite a brief protest, the dragon appears to get off on your sentiment, dragging his hips to and fro to grind his dick on the cum-soaked dirt below. Quaking balls draw up until they provide a convenient seat to wrap your thighs around, and he cums long before you do, letting loose twin puffs of steam from his nostrils. Spurred on by the slutty dragon's orgasm, you pump yourself deep into his guts, hilting yourself and thrusting wildly through your orgasm. Rope after rope christens his greedy inner walls, and he clamps down so hard that you doubt you could pull out if you wanted to, as though his body begs you for another clutch. Of course, you're more than willing to oblige, staying buried within those greedy walls until the last pitiful dribble of cum drains from your softened cock.";
-	else if OffspringCount of Helios >= 3:
+	else if OffspringCount of Helios > 2:
 		say "'Give me more!' Helios groans as you stuff yourself into his backdoor. His hips quake with unrestrained pleasure when he feels you slide to the hilt, and more unfiltered sluttiness pours forth from his lips. 'Breed me. Please. I need more eggs. Don't ever stop fucking me.' All the while, the dragon backs up, trying to cram more of your dick than is humanly possible past his hole until his weakened body has you pinned against a nearby wall. Still strong enough to get his way and worked up enough that he doesn't care how it looks, he shoves backward in a wanton rhythm, fucking his loosened slutty hole on your cock as though you were nothing but a living dildo.";
 		say "     You could struggle free if you wanted to, but confronted with the warm embrace of thick dragon haunches and milked by the heavy backward thrust of those insistent hips, you can only thrust in time, giving Helios what he wants. His tail base provides a convenient handhold to stop you from falling, and the heavy balls that draw up between your legs with the fevered coupling, proof that he's close to his finish, are a convenient seat. You praise Helios for giving into what he wants, grunting with every heavy slam of dragon ass that threatens to knock you through the wall. At this point, it's more like he's fucking you than the other way around, but the drooling dragon tongue and vacant stare leveled at you over the dragon's shoulder makes it clear that it's you who's in charge.";
 		WaitLineBreak;
