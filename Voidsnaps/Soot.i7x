@@ -82,18 +82,20 @@ to say SootConversationMenu:
 		now sortorder entry is 2;
 		now description entry is "Ask Soot what this place is and why he brought you here.";
 	[]
-	if "Helios Captured" is listed in Traits of Soot and resolution of Hard Bargain is 1:
+	if "Helios Captured" is listed in Traits of Soot and resolution of Hard Bargain is 1 and "Hunting Alon" is not listed in Traits of Soot and Alon is not in Glittering Gate:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask Soot what your next target is after Helios";
 		now sortorder entry is 3;
 		now description entry is "Ask Soot where your next dragon quarry is.";
 		sort the table of fucking options in sortorder order;
+	[]
 	if OffSpringCount of Helios is 4 and OffSpringCount of Alon is 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Tell Soot you've been upholding your end of the bargain";
 		now sortorder entry is 4;
 		now description entry is "Tell Soot that it seems like you've birthed quite a few eggs for him.";
 		sort the table of fucking options in sortorder order;
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -225,6 +227,7 @@ to say SootIntroduction:
 
 to say AlonHuntStart:
 	say "     Asking Soot whether he has another target for you to hunt, you eagerly lean over the desk, wondering aloud if they'll be as hard to fight as Helios was. Soot sips at a cup of tea, waving his hand to stop your questions and pulling your palm over to inspect the spot where the rune was before you used it on Helios. Drawing another, more intricate series of symbols, he releases it and waves you toward the exit. 'You know what to do! Find him, touch him, and I'll bring him here once you defeat him!' Despite his dismissive and jovial attitude, you can see the cup shake in his hands. Is he excited about getting to leave this place?";
+	TraitGain "Hunting Alon" for Soot;
 
 Section 2 - After Defeating Helios
 
@@ -233,7 +236,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 1	"Hard Bargain"	Hard Bargain	"[EventConditions_Hard Bargain]"	Pocket Universe	2500	2	100
 
 to say EventConditions_Hard Bargain:
-	if "Helios Captured" is listed in Traits of Soot: [list of conditions here]
+	if "Helios Captured" is listed in Traits of Soot and "Hard Bargain" is not listed in Traits of Helios: [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -279,19 +282,20 @@ to say ResolveEvent Hard Bargain:
 			LineBreak;
 			say "     Rubbing one hand on the back of your head, you weigh the situation. You're not certain whether you want to go through with things, but you don't want to be rude. After all, you've come this far. Can you come back later and give Soot and answer? 'Certainly. Let me know if you've come to a decision. In the meantime, I'll allow you to... inspect your prize.' Winking, Soot produces a book from below the desk and shoos you off toward the door. It seems he wants you to see the creature you captured before you make your decision!";
 			now Resolution of Hard Bargain is 2; [Not sure yet.]
-		now Hard Bargain is resolved;
+	now Hard Bargain is Resolved;
+	TraitGain "Hard Bargain" for Helios;
 
 instead of navigating Pocket Universe while (Resolution of Hard Bargain is 100):
 	say "     You attempt to search for the usual door to Soot's pocket Universe, but give up after a while. It's nowhere to be found, and you doubt you will ever be allowed in again. Maybe [bold type]you should have just gone along with his plan if you wanted to continue interacting with him.[roman type][line break]";
 
-Section 3 - After Defeating Alon
+Section 3 - After Winning Over Alon
 
 Table of NavInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
 1	"Whatever Works"	Whatever Works	"[EventConditions_WhateverWorks]"	Pocket Universe	2500	2	100
 
 to say EventConditions_WhateverWorks:
-	if "Alon Captured" is listed in traits of Soot: [list of conditions here]
+	if "Alon Captured" is listed in traits of Soot and "Whatever Works" is not listed in traits of Alon: [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -305,7 +309,8 @@ Level of Whatever Works is 0. [minimum level to encounter randomly]
 
 to say ResolveEvent Whatever Works:
 	say "     As soon as you return to the pocket Universe, Soot meets you at the door, an eyebrow raised. 'Your... friend... has been asking after you. He seems rather excited to be here. I've never seen a dragon quite this eager for captivity.' Soot waves his hand at your explanation with a knowing grin and shakes his head. 'No, no. I don't need details. It truly doesn't matter HOW you fulfill our bargain. Just let me know if you need any restrictions placed. I'll leave you to it!' Thanking the dragomancer for his discretion, you reiterate that you plan to pump out more eggs for him to use as he sees fit.";
-	now Whatever Works is resolved;
+	now Whatever Works is Resolved;
+	TraitGain "Whatever Works" for Alon;
 
 Section 4 - Interactions After Enough Egg Births
 

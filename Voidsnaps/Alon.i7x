@@ -24,7 +24,10 @@ to say Overflowing Grotto_Scent:
 	say "     Smelling like clean water and a hint of the ocean despite its freshwater nature, the Overflowing Grotto sparkles in the middle of the reservoir. There's a distinct hint of draconic musk that accompanies the moist scent, but it's not at all unpleasant.";
 
 instead of going east from The Edge Of The Swamp when "Hunting Alon" is not listed in Traits of Soot:
-	say "     A large form dives in and out of a pool in the distance. You get the feeling you shouldn't try to go over there, lest you offend it. After all, it looks big enough to eat you in a single gulp!";
+	if Alon is in Glittering Gate:
+		say "     The dragon's old rock pool sits empty now. The strange self-fueling fountain appears to have slowed down to a trickle, no longer at risk of destroying the already partially destroyed dam. There's no reason to revisit it!";
+	else:
+		say "     A large form dives in and out of a pool in the distance. You get the feeling you shouldn't try to go over there, lest you offend it. After all, it looks big enough to eat you in a single gulp!";
 
 Section 2 - Meeting Alon
 
@@ -161,6 +164,10 @@ instead of conversing Alon:
 			-- "Tell him what you're really planning.":
 				LineBreak;
 				say "      Taking a chance, you tell the dragon exactly what you want to do with him. Sexual conquest and all, you tell him in excruciating detail exactly what'll happen if he comes with you. You can almost hear crickets in the background as he tilts his head, and it comes as such a surprise when he bursts out laughing that you nearly jump out of your skin. 'What are we waiting for?! Usually the peasants scream and run when they see me watching them bathe, but all those dangly bits look fun to play with! Let's go, let's go!' Aggressively pressing his nose against your palm after heaving himself the rest of the way out of the pool, Alon shakes his head as the rune works its magic, with an expression like a person with a fly up their nose. When Soot appears, he looks at you with a surprised expression, stepping aside while Alon dives facefirst into the portal, happily splashing around in the pools nearby. You'll have to explain this to the mage later...";
+				move Alon to Glittering Gate;
+				TraitLoss "Hunting Alon" for Soot;
+				TraitGain "Captured Alon" for Soot;
+				TraitGain "MPreg" for Alon;
 			-- "Tell him you really have a better place for him to live.":
 				LineBreak;
 				say "     Deciding to play it safe, you tell the dragon that you want to move him somewhere he won't be destroying the environment. You happen to have somewhere that he can enjoy himself, as long as he doesn't mind a few... concessions. 'You're still lying, but I can smell why~!' With a grin, the dragon looks pointedly toward your crotch as though he can smell what you intend, nostrils flaring. 'Fuck it! I'm more than willing. Usually the peasants scream and run when they see me watching them bathe, but all those dangly bits look fun to play with! Let's go, let's go!' Aggressively pressing his nose against your palm after heaving himself the rest of the way out of the pool, Alon shakes his head as the rune works its magic, with an expression like a person with a fly up their nose. When Soot appears, he looks at you with a surprised expression, stepping aside while Alon dives facefirst into the portal, happily splashing around in the pools nearby. You'll have to explain this to the mage later...";
@@ -233,14 +240,13 @@ to say AlonFuckMenu:
 			WaitLineBreak;
 			say "     You're selfish with your orgasm, sitting down hard and rubbing your clit as you cream the dragon's shaft with squirt after squirt of femcum. His dick wriggles as you scoot back and forth, deprived of the friction it was enjoying, but that only works you to new heights, setting off a chain of miniature orgasms that slacken your jaw and mess the dragon's crotch further with your drooling fluids. You fall forward onto the dragon's stomach as the last orgasm quakes through your body, still impaled on a solid foot of hot dragon cock. Your legs turn into jelly when that shaft takes charge, slithering in and out of you with a rough rhythm that fills the sunny clearing with a sound reminiscent of stirring pasta. Too exhausted to take charge, you let it use your quivering quim, moaning aloud with every thrust and holding your bulging stomach with one hand as the dragon's hips thrust upward, slapping his balls on your ass cheeks on every downswing. His orgasm comes sooner than you'd hoped, but you only suffer a moment of disappointment before the fireworks begin inside you.";
 			say "      Like a sprinkler set on high, the dragon's dick swirls over your insides, hosing them with thick seed. With nowhere to go, it sprays out of your cunt at high pressure, basting your insides and coating your lower half with an increasingly thick layer of musky dragon. You're not sure how long Alon's cock power washes your insides, but it eventually slows to a trickle, falling out of you with a wet plop, and you catch your breath on his heaving belly, admiring the way the sun glints off of his scales. You barely notice when the eggs slip out of your loosened cunt, sending a shiver down your spine as they roll down between your legs and land in the puddle the two of you made. You're so wet that they slide right out, barely stretching you before they plop to the ground, and you zone out at the pleasant sensation, only coming to your senses once the dragon's snoring rumbles through his warm belly. Shaking your head at the dragon's typical response to an orgasm, you take the opportunity to gather your gear, cleaning yourself up as best you can and leaving him to nap in the sun. After all, you're sure you wore him out! Poor thing.";
-			AlonOffspringIncrease;
+			if OffSpringCount of Alon < 4:
+				increase OffSpringCount of Alon by 1;
 			NPCSexAftermath Player receives "AssFuck" from Alon;
 		-- "Nevermind.":
 			say "     Deciding against fucking the dragon for now, you tell Alon to wait until you're more in the mood, noting his slightly disappointed expression as he nods his head, still staring hungrily at your crotch and licking his lips. ";
 
-to AlonOffspringIncrease:
-	if OffSpringCount of Alon < 4:
-		increase OffSpringCount of Alon by 1;
+
 
 to say AlonFirstFuck:
 	let Alon_First_sex_Choices be a list of text;
@@ -271,6 +277,8 @@ to say AlonFirstFuck:
 			say "     Your stomach shifts just as the dragon's finished cleaning up most of his mess, and you groan aloud as you stretch from the inside, your pussy lips pushing apart. A rune-etched egg pulsating with light blue energy shoves the dragon's tongue aside and plops to the ground, soon followed by half a dozen others. You shiver with how good it feels, openly touching yourself despite the pair of draconic eyes fixed on you, and forget for a moment that you're not alone.";
 			say "     'That was... fast?' Alon tilts his head slightly, still licking a stray bit of cum from the corner of his mouth. He prods one of the eggs with a claw as you gather your wits, his expression one of amazement. 'If only my species were half as efficient!' Reequipping yourself on shaking legs as the dirty dragon rolls back into the water, you tell him it's nothing but Soot's magic at work. Pregnancy isn't nearly this quick under normal circumstances! Shaking your head at the weird ideas the mage's magic may have given the laid-back dragon, you prepare to leave.";
 			NPCSexAftermath Player receives "PussyFuck" from Alon;
+			if OffSpringCount of Alon < 4:
+				increase OffSpringCount of Alon by 1;
 
 
 
@@ -309,7 +317,8 @@ an everyturn rule:
 						LineBreak;
 						say "      Shaking your head, you clear the evil thought out, instead offering the exhausted dragon some comfort, patting his haunches and gently cleaning up the mess he made with a cloth from your bag. Of course, you still tease the poor thing, taking your time to wipe away his juices from his sensitive hole, and stroking his spent cock until it gives up its last pearly dribbles into your palm. You leave him to rest once you've had your fill of teasing, satisfied by the now-sleeping dragon's contentment.";
 					TraitLoss "Heavily Pregnant" for Alon;
-					AlonOffspringIncrease;
+					if OffSpringCount of Alon < 4:
+						increase OffSpringCount of Alon by 1;
 					now ImpregTimer of Alon is 0; [pregnancy reset]
 
 to say AlonBirthSex:
@@ -317,5 +326,7 @@ to say AlonBirthSex:
 	say "     Taking the dragon's soft muzzle as an invitation, you hump away with wild abandon, gripping his cheeks as you feed him a steadily growing trickle of arousal. It's not quite the same as his ass, but the soft tongue wringing your dick with expert pressure sure gives it a run for its money, and you feel as though that suction will draw your balls up through your cock if you're not careful. You see no point in holding back, so you let the growing sensation in your lower stomach reach its crescendo, washing over you as you fill his mouth with rope after rope of cum. That tongue milks you for everything you can give, and the dragon suckles as you bury yourself to the root, swallowing the evidence of your orgasm without complaint and begging for more.";
 	WaitLineBreak;
 	say "     Softened and running dry, you tug yourself free with a wet plop, patting the dozing dragon's muzzle as he settles in for a well-deserved nap. He looks so peaceful with a bit of your cum on his lower lip and his stretched ass on display that you can't help but wonder if he's taking advantage of this situation even more than you are. Perhaps this is what he wanted all along, just sucking cock, laying eggs, and lazing about in the water!";
+	if a random chance of 1 in 2 succeeds:
+		now ImpregTimer of Alon is 1;
 
 Alon ends here.
