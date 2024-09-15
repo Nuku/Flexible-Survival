@@ -753,8 +753,9 @@ to say BastetShrineFuck:
 			say "     The two of you spend a while longer just laying there, entwined and tied together, before the spectral cock eventually fades out of existence, leaving a bit of an empty feeling inside you. Looking down, you see that there isn't any cum or the like leaking from Bastet, so your more spiritual mating apparently doesn't need that to knock her up. And it would be far too messy for a dignified and proud feline like her to let herself be reduced to a cum-dripping mess too. ";
 		now ImpregTimer of Bastet is 1; [starts the pregnancy timer]
 	say "Satisfied, but still a bit exhausted from your coupling, you get up from the bed and assist Bastet in standing up too, then offer her the dress she stripped off earlier before collecting your own stuff and putting it in order again. As you emerge from the back room a little while later, many of the cultists throw Bastet and yourself knowing glances, and a few bend their heads to you too, as they want to acknowledge the consort of their goddess. ";
-	NPCSexAftermath Bastet receives "PussyFuck" from Player;
-	if Player is not male:
+	if Player is male:
+		NPCSexAftermath Bastet receives "PussyFuck" from Player;
+	else:
 		NPCSexAftermath Player receives "DildoPussyFuck" from Bastet;
 
 Instead of fucking the Bastet:
@@ -846,6 +847,7 @@ to say BastetSex1: [player licks Bastet]
 	say "     Before much longer, she reaches the point of no return. Her feline hands clamp even tighter onto you, and you feel the sting of one of her claws accidentally scraping your shoulder, as the contractions of her orgasm has her reflexively extends her claws. The tight passage of her vagina gets even tighter, and your fingers get wetter and wetter, eventually squishing out femcum. It splashes on your hand and on her sex, bringing back the taste of her lubrication with each stroke of your broad tongue. 'Y-Yes! Just... like... that!' Bastet yowls out in a satisfied tone, drawing out the words into a long exclamation of pleasure. She keeps her solid grip on you all the way through her climax, riding it out fully and grinding her crotch softly against your face. Soon the words, 'Clean me up,' follow, and she waits while you dutifully lick her pussy until the last traces of sexual secretion are gone. When she finally deems that she is clean enough, she lets go and let can stand back up, [bold type]Bastet gives you a well-pleased nod of approval.[roman type] She smooths her dress again, and goes returns to her relaxed waiting stance.";
 	project Figure of Bastet_smile_naked_jewelry_icon;
 	increase BastetApproval by 1;
+	NPCSexAftermath Player receives "OralPussy" from Bastet;
 
 to say BastetSex2: [Bastet blows the player]
 	if BastetApproval < 4: [grudging BJ]
@@ -870,6 +872,7 @@ to say BastetSex2: [Bastet blows the player]
 		say "     Quite a satisfying experience with the lioness, and you're fairly certain that you've risen in [bold type]Bastet's esteem a little bit more[roman type] through the 'sacrifice' to the sexy goddess.";
 		project Figure of Bastet_smile_naked_jewelry_icon;
 		increase BastetApproval by 1;
+	NPCSexAftermath Bastet receives "OralCock" from Player;
 
 to say BastetSex3:
 	if BastetApproval < 4: [grudging fingering]
@@ -899,6 +902,7 @@ to say BastetSex3:
 		say "     Quite a satisfying experience with the lioness, and you're fairly certain that you've risen in [bold type]Bastet's esteem a little bit more[roman type] as she liked you getting her off.";
 		project Figure of Bastet_smile_naked_jewelry_icon;
 		increase BastetApproval by 1;
+	NPCSexAftermath Bastet receives "Stroking" from Player;
 
 to say BastetSex4: [vaginal sex]
 	if BastetApproval < 4: [grudging missionary]
@@ -934,6 +938,7 @@ to say BastetSex4: [vaginal sex]
 		say "     Quite a satisfying experience with the lioness, and you're fairly certain that you've risen in [bold type]Bastet's esteem a little bit more[roman type] as she liked you getting her off.";
 		project Figure of Bastet_smile_naked_jewelry_icon;
 		increase BastetApproval by 1;
+	NPCSexAftermath Bastet receives "PussyFuck" from Player;
 
 to say BastetSexBattleRepeats:
 	now BastetSexBattleCount is 0;
@@ -1048,6 +1053,7 @@ to say BastetSexBattleRepeats:
 			say "     Nermine gets back to making out with the not quite willing, but still really wound up Bastet, which is a truly awesome sight with the contrast between their fur colors. With the fun show to watch, it does take quite a while till eventually your knot softens far enough to be pulled out of Bastet's freshly bred pussy. 'Nermine will of course honor her master's commands and... leave the goddess alone for now. It is a little bit of a waste, as there are numerous uses for divine... fluids and Nermine has many tasks that Bastet could do...' It is clear that she is fishing for you to change your mind, but you shake your head with a steely gaze. As you start pulling your clothes back on, Nermine turns away from Bastet with a little sigh, wandering over to the other side of the store to rearrange the contents of a shelf.";
 			say "     From where she's still lying on the counter, [bold type]Bastet gives you a tiny nod of approval.[roman type] This approach to getting to have some fun is definitely easier to accept for the indentured goddess than you just ordering her to do so.";
 			increase BastetApproval	by 1;
+			NPCSexAftermath Bastet receives "PussyFuck" from Player;
 		else: [Bastet won]
 			say "Bastet purrs in a commanding voice, 'Lie down.' Horny as you are, you can barely think straight, so you obey, bracing yourself with your arms as you lower yourself to the ground. While you do so, Bastet demonstrates just how flexible and skilled in gymnastics she is - by keeping your canine cock buried in her tight pussy all the way, even as you stretch and move. Eventually, you're more or less lying on your own discarded clothing, with the golden-furred feline straddling your hips and rocking back and forth in the most... stimulating way.";
 			say "     A satisfied little roar comes from the lioness's muzzle as she takes full control of the situation, leaning forward and pinning your arms to the ground as she grinds her crotch against yours. Satisfied, lust-filled mrowls soon follow, each time she makes your cock bottom out and brush against very sensitive parts deep inside her tight pussy. Its such a sexy and breathtaking situation that you quickly feel the urge to cum rise deep inside you and close your eyes to await the impending orgasm - only to have Bastet stop her movements from one moment to the next. The lioness looks down at your nonplussed face with a chuckle on her lips, then gives you a little flex of her internal muscles that makes you pant needily - only to stop right after. Seems like this cat wants to play a little with you before she finishes you off.";
@@ -1060,6 +1066,7 @@ to say BastetSexBattleRepeats:
 			WaitLineBreak;
 			say "     From your position on the ground, you watch Bastet allowing Anktepi to help her don her dress, then she walks over near the door of the store and takes position there, leaning against the wall relaxedly. As she passes you on the way, the lioness gives you a content look from the corner of her eyes and even adds a little nod. This approach to getting to have some fun is definitely easier to accept for the indentured goddess than you just ordering her to do so. [bold type]You have gained a tiny bit of approval in her eyes.[roman type][line break]";
 			increase BastetApproval	by 1;
+			NPCSexAftermath Player receives "Stroking" from Bastet;
 	else: [females]
 		say "     Making out and touching each other quickly escalates to hands sliding lower and lower, then a first brush of your fingers against each other's crotch. Soft stroking against clits and increasingly wet and swollen pussy lips leads to shared moans as your lips are pressed together, with both your tongues wrestling in a slippery dance of shared arousal. Then the next level of escalation is reached as you slip a finger into Bastet's pussy, probing her tight and hot passage while giving a rub to her clit with your thumb. A lusty mrowl escapes the lioness lips and she gets to work on you in turn, showing you some very, very stimulating movements to do with her slender fingers. The mutual groping continues in unabated eagerness until eventually Bastet presses her whole front against you tightly, pushing her shapely breasts to your chest as you join a deep kiss, then ";
 		if BastetSexBattleCount > 2 or (BastetSexBattleCount is 2 and a random chance of 1 in 2 succeeds): [player won]
@@ -1078,6 +1085,7 @@ to say BastetSexBattleRepeats:
 			say "     Nermine gets back to making out with the not quite willing, but still really wound up Bastet, which is a truly awesome sight with the contrast between their fur colors. 'Nermine will of course honor her master's commands and... leave the goddess alone for now. It is a little bit of a waste, as there are numerous uses for divine... fluids and Nermine has many tasks that Bastet could do...' It is clear that she is fishing for you to change your mind, but you shake your head with a steely gaze. As you start pulling your clothes back on, Nermine turns away from Bastet with a little sigh, wandering over to the other side of the store to rearrange the contents of a shelf.";
 			say "     From where she's still lying on the counter, [bold type]Bastet gives you a tiny nod of approval.[roman type] This approach to getting to have some fun is definitely easier to accept for the indentured goddess than you just ordering her to do so.";
 			increase BastetApproval	by 1;
+			NPCSexAftermath Bastet receives "Stroking" from Player;
 		else: [Bastet won]
 			say "finally, Bastet takes control of the situation, pushing you back slowly but surely, until you bump against one of the bookshelves on the wall. Then the lioness catches hold of your wrists, pushing them up over your head and holding them there with one hand, while the other dips down to your crotch again.";
 			say "     You can't help but moan loudly as the cat goddess asserts her dominance, fingers dipping into your moist cave as she holds your wrists in a tight grip. As wound up as she got you since your little contest started, your lust-addled mind just makes you react to the stimulation, panting and rotating your hips to grind against Bastet's hand. You don't actually mind all that much that she's won this round, not with all the fun you had - and still have, as she keeps touching you. Reveling in her already obvious victory, the breathtakingly beautiful feline plays with having you in her power, stroking you, then slowing down, followed by more stroking. It's like a cat and mouse game with her, only here you're the mouse, helplessly held by the feline as she pushes you right up to the edge, then keeps you there for minute after minute.";
@@ -1090,6 +1098,7 @@ to say BastetSexBattleRepeats:
 			WaitLineBreak;
 			say "     From your position leaning against the bookshelf, you watch Bastet allowing Anktepi to help her don her dress, then she walks over near the door of the store and takes position there, leaning against the wall relaxedly. As she passes you on the way, the lioness gives you a content look from the corner of her eyes and even adds a little nod. This approach to getting to have some fun is definitely easier to accept for the indentured goddess than you just ordering her to do so. [bold type]You have gained a tiny bit of approval in her eyes.[roman type][line break]";
 			increase BastetApproval	by 1;
+			NPCSexAftermath Player receives "Stroking" from Bastet;
 	project Figure of Bastet_smile_naked_jewelry_icon;
 
 Bastet ends here.

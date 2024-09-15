@@ -136,13 +136,13 @@ an everyturn rule:
 
 to ShowBlancheImage:
 	if HP of Blanche < 5:
-		project the figure of Blanche_naked_icon;
+		project Figure of Blanche_naked_icon;
 	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
-		project the figure of Blanche_preg1_icon;
+		project Figure of Blanche_preg1_icon;
 	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 13:
-		project the figure of Blanche_preg3_icon;
+		project Figure of Blanche_preg3_icon;
 	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
-		project the figure of Blanche_naked_icon;
+		project Figure of Blanche_naked_icon;
 
 Section 1 - Progression Events
 
@@ -178,7 +178,7 @@ to say ResolveEvent Wolfrape:
 			move player to Office Den;
 			AddNavPoint Office Den;
 			WaitLineBreak;
-			project the figure of Blanche_naked_icon;
+			project Figure of Blanche_naked_icon;
 			say "     Once safely concealed in the wolf's hidden den, she hugs you tightly and gives you a passionate kiss which surprises both of you. As if suddenly realizing what she's done, she takes a step back, blushing at her ears. 'Oh, I'm sorry. It's this... infection thing. I'm sure you know what it does to you. My name is Blanche. I'm really thankful for your help.' She brushes her fur nervously and, realizing that she's nude, grabs one of a few spare blouses she has folded on the bookcase. She slides it on, but doesn't bother to do it up after throwing you a quick glance.";
 			say "     She grabs a can of ravioli from the shelf as well, pressing it into your hands. 'Please take this. I'd give you more, really, but it's about all I can spare right now. You were really brave to try and help me against that monster. I don't like going out there much because there are so many of them. You could... if you need somewhere safe to hide that is... maybe stay here... with me.' She speaks softly, but with obvious longing in her voice. Perhaps she's lonely and simply wants companionship, though from the way she's looking at you, perhaps she wants more.";
 			now HP of Blanche is 1;
