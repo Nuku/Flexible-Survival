@@ -505,7 +505,7 @@ an everyturn rule:
 							TraitLoss "Heavily Pregnant" for Helios;
 							now ImpregTimer of Helios is 0; [Pregnancy Reset]
 						if OffspringCount of Helios < 4:
-								increase OffSpringCount of Helios by 1;
+							increase OffSpringCount of Helios by 1;
 
 to say HeliosBirthSex: [Fuck his stretched ass!]
 	TraitLoss "Heavily Pregnant" for Helios;
