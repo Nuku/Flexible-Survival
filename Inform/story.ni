@@ -333,6 +333,7 @@ Include Kitsune by Shadowwolf94.
 Include Kitsune Expansion by Shadowwolf94.
 Include Komainu by Voidsnaps.
 Include Latex Quad Husky by Stripes.
+Include Latex Husky Statue by Shiru.
 Include Leonard Events by Stripes.
 Include Little Old Woman by Kaleem mcintyre.
 Include Lizard Parlor by Kaleem Mcintyre.
