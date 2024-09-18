@@ -107,10 +107,15 @@ to say Frost DrakeSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Have the big drake service you";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ride the Drake";
+	now sortorder entry is 3;
+	now description entry is "Ride the drake's dick";
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his ass";
-		now sortorder entry is 3;
+		now sortorder entry is 4;
 		now description entry is "Fuck the drake's ass raw";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -134,6 +139,8 @@ to say Frost DrakeSexMenu:
 					say "[OralFrostDrake]";
 				if (nam is "Fuck his ass"):
 					say "[FuckFrostDrake]";
+				if (nam is "Ride the Drake"):
+					say "[FrostDrakeRide]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
