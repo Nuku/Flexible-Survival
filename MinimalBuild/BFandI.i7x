@@ -26,7 +26,7 @@ carry out bfanditesting:
 	say "You begin the test by looking over yourself.";
 	say "Your scalevalue is set to [scalevalue of Player]. Your body size for this is [Body Size Adjective of Player].";
 	say "Your bodydesc value is set to [bodydesc of Player], resulting in such fine prose as: 'The studly wolf climbs atop your [bodydesc] body and fucks you wildly.' Stirring.";
-	say "Your bodytype value is set to [bodytype of Player], usable in scenes like: 'You press your [bodytype of Player] body against the slutty catgirl as you stuff her wet snatch.' Wonderous!";
+	say "Your bodytype value is set to [bodytype of Player], usable in scenes like: 'You press your [bodytype of Player] body against the slutty catgirl as you stuff her wet snatch.' Wondrous!";
 	say "-----";
 	LineBreak;
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -37,7 +37,7 @@ carry out bfanditesting:
 			if there is a scale in row MonsterID of the Table of Random Critters:
 				say "scale entry = [scale entry]     The creature is [bold type][if scale entry is 1]tiny[else if scale entry is 2]small[else if scale entry is 3]normal[else if scale entry is 4]large[else]huge[end if][roman type].";
 			else:
-				say "scale: [bold type]UNSET[roman type]     The [Name entry] is of indeterminant size.";
+				say "scale: [bold type]UNSET[roman type]     The [Name entry] is of indeterminate size.";
 			if there is a body descriptor in row MonsterID of the Table of Random Critters:
 				say "body descriptor: [body descriptor entry]     Example: The [Name entry] has a [body descriptor entry] build.";
 			else:
@@ -114,7 +114,7 @@ If this entry is not set on a creature, the game will default to '3', which is '
 These will be used to describe the player during scenes and should be a single adjective to best fit all scenarios. If the body descriptor entry is not set, the game will default to saving the Name entry in its place as a substitute. ]
 
 [ TYPE: A one-word adjective to generally designate the type of creature this is and this infection bestows. It should be saved as 'bodytype of Player' during body infection. If other (variable infection) NPCs are given this attribute, it can be saved on them as well, allowing for more descriptive scenes. Examples include: human, human-like, feline, canine, vulpine, lupine, robotic, cyborg, human, humanoid, demi-human, dwarven, simian, etc... Again, this should be just one word, adjective entries, but use of [one of]equine[or]horse-like[at random] to create greater diversity is fine. If-conditions are trickier, as they'll work fine for the player, but won't if transferred onto an NPC.
-These will be used to describe the player during scenes and should be a single adjective to best fit all scenarios. If the type entry is not set, the game will detault to saving the Name entry in its place as a substitute. ]
+These will be used to describe the player during scenes and should be a single adjective to best fit all scenarios. If the type entry is not set, the game will default to saving the Name entry in its place as a substitute. ]
 
 [ MAGIC: A truth state to designate whether this creature is a magical-type creature or not. No immediate plans for use, but may be use later. An unset creature is treated as non-magical. ]
 
