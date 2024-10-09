@@ -124,7 +124,7 @@ to say ResolveEvent Strange Birth:
 	else:
 		say "     You've long since learned that investigating strange sounds in the dark is a bad idea! Who knows what could be waiting for you! Shouldering your pack, you shake your head and murmur something to the effect of 'nope' to yourself, then continue down the street.";
 		now Resolution of Strange Birth is 100;
-		now Strange Birth is Resolved;
+	now Strange Birth is Resolved;
 
 
 Section 2 - Naming Argos
