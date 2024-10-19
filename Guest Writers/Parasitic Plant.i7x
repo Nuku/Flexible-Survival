@@ -362,7 +362,7 @@ name	desc	weight	object
 "musky cock flower"	"You see a large flower with a green cock jutting out from the center of it. It smells strongly of cum and male musk."	1	musky cock flower
 
 musky cock flower is a grab object.
-musky cock flower has a usedesc "[facerape use]".
+musky cock flower has a Usedesc "[facerape use]".
 musky cock flower is infectious. Strain of musky cock flower is "Parasitic Plant".
 
 instead of sniffing musky cock flower:
