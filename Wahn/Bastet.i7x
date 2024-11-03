@@ -369,7 +369,7 @@ to say ResolveEvent Bastet_Worshipers_Nightmare_Crisis:
 	say "     'But it shall not be said that the jackaless does not have any compassion, so she will offer a second choice.' While talking, Nermine stalks from behind the counter, swinging around into the center of the store, right in front of the large window. As she moves, Bastet keeps herself interposed between robed buck and the sorceress. Clearing her throat, Nermine continues, 'The lioness could instead choose to simply demonstrate just how much she cares for her dear little flock, in front of this member, and Nermine's master, and anyone who'd watch. Right here, on her knees.' There's a gasp from Keith as the jackaless, strokes a hand down over her black fur and rubs her clit provocatively. 'The little goddess should not delay her decision too long, Nermine would advise. Who knows how long the lost beings['] Ka will last, where they have gone...'";
 	LineBreak;
 	say "     For a moment, there is silence in the room as everyone takes in the two options Nermine laid out - a potentially devastatingly undefined future 'service', or the very public humiliation for Bastet of having to sexually service someone she despises. Bastet hasn't replied yet, but you feel that she's leaning towards pleasuring Nermine, however unpalatable she might find that. However, you might be able to push the needle with your own influence...";
-	say "     [bold type]Do you want to try?[roman type]";
+	say "     [bold type]Do you want to try?[roman type][line break]";
 	let Bastet_Nightmare_Choices be a list of text;
 	add "Take Bastet's hand and tell her that together, you'll get through whatever Nermine demands in the future." to Bastet_Nightmare_Choices;
 	add "Console Bastet and let her do what she must. You and Keith will cover her from onlookers." to Bastet_Nightmare_Choices;
@@ -398,6 +398,7 @@ to say ResolveEvent Bastet_Worshipers_Nightmare_Crisis:
 		-- "Command Nermine to just cough up the information. (She won't like this.)":
 			LineBreak;
 			say "     Clearing your throat, you cut the jackaless's predatory dealings short and flat out order her to reveal what she knows. The smirk on Nermine's muzzle instantly vanishes as she hears your demand, replaced by slightly bared teeth and a low growl rising in her throat. There's a long pause, during which Nermine seems to wrestle with herself - until finally, the woman's subservience to you seems to (barely) win out against her absolute refusal to let go of a juicy deal. She throws a pointedly annoyed glance your way, revealing that while she may be more than okay with submitting to your every desire sexually, business matters are something else entirely. She might assent this time, but you can be sure Nermine will remember this. Taking in a deep breath before letting it out again, she turns towards Bastet and her follower, the usual haughty expression settling back in on the sorceress's face.";
+			WaitLineBreak;
 			say "     [Bastet_Nightmare_Resolution]";
 			TraitGain "Bastet Deal Ruined" for Nermine;
 	now Bastet_Worshipers_Nightmare_Crisis is resolved;
@@ -418,6 +419,7 @@ to say Bastet_Nightmare_Resolution:
 	HungerReset;
 	ThirstReset;
 	SanReset;
+	LineBreak;
 	say "[bold type]Note: You can check out the things going on in Niflheim at [bold type]www.puppetnightmares.com[roman type]! With Nermine already an existing character there, and Bastet joining her towards the end of November 2024.[roman type]";
 
 a postimport rule:

@@ -33,7 +33,7 @@ to say Furling wins:
 		say "     Pulling off your clothes with barely any regard for not ripping them, the furling exposes your crotch. Looking at your [if Player is not female]nonexistent [end if]genitals, he growls, 'Useless!' Then he gives you a shove, landing you prone on the ground. With an annoyed grunt, the large creature stalks off.";
 
 To say Furling loses:
-	if Fightoutcome is 10:
+	if Fightoutcome is 10: [normal combat win]
 		say "     Rather roughed up, the furry beast takes a reeling step towards you... and then falls over backwards. He lies in front of you on his back for a moment, silently moaning, then shakes his head and starts taking account of all his bruises, gingerly touching them. Given your current position and the way it came to lie when he fell, you can see up the furling's loose loincloth - showing you that even though 'he' is otherwise looking male, there's a moist and swollen pussy between his legs. Its up to you to decide what to do next...";
 		wait for any key;
 		say "[FurlingSexMenu]";
