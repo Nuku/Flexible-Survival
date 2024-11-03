@@ -56,6 +56,7 @@ Conversation of Jett is { "<This is nothing but a placeholder!>" }.
 The scent of Jett is "     Jett's scent is intoxicating. It is so masculine that [if Player is submissive]it inevitably arouses you, causing your muscles and orifices to relax and moisten in his presence[else if player is dominant]it fills you with an urge to dominate anyone, even him[else]it makes your groin tingle and your heart race[end if].".
 
 to say JettDesc:
+	project Figure of Jett_soft_icon;
 	say "     You would say that a normal werewolf brute is large, but this one is ridiculously massive. Jett is an alpha werewolf brute and one built of pure muscle, with a thick dark silver fur coat only damaged by battle scars around his chest, arms and some around his thighs. You can also spot one large scar across the left side of his face, which makes him look quite intimidating, at first glance. The Alpha does not wear anything to cover his hanging junk, which looks almost hyper-sized, even for someone of his stature. You also do not think anything would be able to cover that much cock and that pair of ostrich-egg sized balls, as even his furred sheath can barely contain all the meat within. His piercing yellow eyes loom over you like an observant owl whenever you come close, but curiously, they do not give any hostile sense. Much the contrary, more in the way of a caring parent looking over their children. All in all, you feel safe around Jett[if Player is submissive], and very subservient[end if].";
 
 JettDoneTalking is a truth state that varies.[@Tag:NotSaved]
@@ -63,7 +64,7 @@ JettDoneTalking is a truth state that varies.[@Tag:NotSaved]
 Section 1-1 - Jett Talk
 
 instead of conversing Jett:
-	project figure of Jett_soft_icon;
+	project Figure of Jett_soft_icon;
 	if Loyalty of Jett >= 20:
 		say "     You walk towards Jett, his sheer presence unexplainably making you weak on the legs. He acknowledges you and nods, beckoning you to come closer. Very close, actually, almost totally between his legs as he is sitting on his couch. You are then invited to sit on his lap, which you do without much thinking, and he holds you comfortably. 'Hey there, did you wanna chat?' he asks, affectionately patting your back and rubbing your side. It actually feels quite nice...";
 	else if loyalty of Jett > 9: [happens automatically if Player is submissive upon meeting him the first time]

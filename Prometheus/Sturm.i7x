@@ -110,7 +110,7 @@ Conversation of Sturm is { "Woof grrr" }.
 The scent of Sturm is "     Sturm, smells of the city. Sweat, sexual fluid, and dust mingle with his natural wolfy scent."
 
 to say SturmDesc:
-	project Figure of Sturm_full_body_icon;
+	project Figure of Sturm_soft_icon;
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Sturm] <- DEBUG[line break]";
 	if HP of Sturm is 0:
@@ -136,6 +136,7 @@ Associated Fetishes:
 Section 2 - Talking
 
 instead of conversing the Sturm:
+	project Figure of Sturm_soft_icon;
 	if "First Talk" is not listed in Traits of Sturm:
 		say "     'Thank you for letting us live here. I realize that I was surly in the past, but I'm glad that my poor attitude didn't have consequences for the rest of my family,' Sturm says. You cautiously ask whether Blanche had some influence on this change of heart. He clenches his jaw before relaxing again with a sigh. 'She may have had a few words about it, yes, but I am genuinely grateful. I seem to have been wrong about you. Mom may be a little too trusting at times, but she is also a lot better than most at seeing the good in people. I guess she was right in your case.' Pleased with your son's progress you give him a hug, enjoying the warmth that radiates from his fluffy body. 'You've still got some way to go before you hug like Mom, but you might yet get there,' Sturm teases you as you part. Rolling your eyes, you tell him that you'll talk again later, letting him get back to whatever it was that he was doing before you interrupted him.";
 		TraitGain "First Talk" for Sturm;
@@ -206,6 +207,7 @@ to say SturmTalk3: [Companion]
 Section 3 - Sex
 
 instead of fucking Sturm:
+	project Figure of Sturm_hard_icon;
 	say "     'While I appreciate the offer, I don't know you very well yet. Mom may vouch for you, but this seems like the sort of thing that I should build up my levels of trust for.' It would seem that Sturm isn't yet ready for this. (WIP)";
 
 Section 4 - Events

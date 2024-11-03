@@ -719,8 +719,8 @@ Figure of Squire_smile_undies_shirt_seethrough_icon is the file "Squire_smile_un
 Figure of Squire_smile_soft_icon is the file "Squire_smile_soft.jpg".
 Figure of Squire_smile_hard_icon is the file "Squire_smile_hard.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
-Figure of Sturm_full_body_icon is the file "Sturm_full_body.jpg".
-Figure of Sturm_full_body_hard_icon is the file "Sturm_full_body_hard.jpg".
+Figure of Sturm_soft_icon is the file "Sturm_soft.jpg".
+Figure of Sturm_hard_icon is the file "Sturm_hard.jpg".
 Figure of Susan_face_icon is the file "Susan_face.jpg".
 Figure of Susan_FHerm_clothed_icon is the file "Susan_FHerm_clothed.jpg".
 Figure of Susan_FHerm_hard_icon is the file "Susan_FHerm_hard.jpg".
@@ -2065,8 +2065,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Squire_smile_hard_icon"	Figure of Squire_smile_hard_icon	"SteppeCrow"	g-White	"normal"
 "Succubus"	Figure of Succubus_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Sugar Glider"	Figure of SugarGlider_icon	"Xilrayne"	g-black	"normal"
-"Sturm_full_body_icon"	Figure of Sturm_full_body_icon	"Gherod"	g-dark-gray	"normal"
-"Sturm_full_body_hard_icon"	Figure of Sturm_full_body_hard_icon	"Gherod"	g-dark-gray	"normal"
+"Sturm_soft"	Figure of Sturm_soft_icon	"Gherod"	g-dark-gray	"normal"
+"Sturm_hard"	Figure of Sturm_hard_icon	"Gherod"	g-dark-gray	"normal"
 "Susan_face"	Figure of Susan_face_icon	"SineAlas"	g-black	"normal"
 "Susan_FHerm_clothed"	Figure of Susan_FHerm_clothed_icon	"Vashaa"	g-white	"normal"
 "Susan_FHerm_hard"	Figure of Susan_FHerm_hard_icon	"Vashaa"	g-white	"normal"
