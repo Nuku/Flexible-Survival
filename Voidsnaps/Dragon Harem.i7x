@@ -58,7 +58,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Pocket Universe	"Pocket Universe"
 
-Pocket Universe is a room. It is fasttravel. It is sleepsafe.
+Pocket Universe is a room. It is fasttravel. It is sleepsafe. It is private.
 Description of Pocket Universe is "[Pocket Universedesc]".
 
 the scent of Pocket Universe is "Dusty, with a strange 'zing' that you can only describe as electricity in the air. You get the feeling this place is more than it appears.".
