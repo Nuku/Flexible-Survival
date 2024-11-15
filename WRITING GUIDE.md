@@ -55,9 +55,9 @@ The data of the game is contained in a lot of variables and properties, many of 
 
 * [!] `scalevalue of player` | numerical value for player's rough size category (1 to 5)
 * `body size of player` | adjective describing the player's rough size category (tiny to huge)
-* [!] `bodydesc of player` | single adjective(s) used to describe the player's body and build (fat/thin/muscled/effeminate...)
+* [!] `bodydesc of Player` | single adjective(s) used to describe the player's body and build (fat/thin/muscled/effeminate...)
 * [!] `bodytype of player` | single adjective(s) denoting the general type of infection the player has (human/feline/canine...)
-* `daycycle of player` | numerical: day/night preference (if any) of the player's form. 0=standard, 1=day-preferred, 2=night-preferred
+* `DayCycle of player` | numerical: day/night preference (if any) of the player's form. 0=standard, 1=day-preferred, 2=night-preferred
 
 ### Genital Variables:
 This first set are the numerical values, to be followed by the descriptive ones which adjust themselves based on these numbers.
@@ -93,7 +93,7 @@ character number Breast Size of Player in cupsize | the player's breast size as 
 * [!] `Cum Load Size of Player` | adjective describing the size of the player's load. Typical usage is: "your [Cum Load Size of Player] load".
 
 ### Other/Environmental:
-* `monsterhp` | the monster's current hp
+* `monsterHP` | the monster's current hp
 * `location of player` | name of the room the player is in (is hunting/exploring from)
 * `time of day` | descriptive time of day
 * `short time of day` | general time of day
@@ -143,7 +143,7 @@ The current list options are: FelineList, CanineList, EquineList, VulpineList, R
 * `if weapon object of player is journal` | does the player fight barehanded?
 * `if weapon object of player is not journal` | does the player fight with a weapon?
 * `if HP of player > 0` | did the player submit/lose to lust before being KO'd? (when used within player loss scenes for critters)
-* `if monsterhp < ( hp entry / 2 )` | is the critter's hp under 50%? (must choose the current monster row beforehand)
+* `if monsterHP < ( hp entry / 2 )` | is the critter's hp under 50%? (must choose the current monster row beforehand)
 * `if lost is 1` | did the player lose their last fight? (usable only after combat's fully resolved and critter win/loss scene have played) WARNING: Does not account for fleeing.
 * `if fightoutcome >= 10 and fightoutcome <= 19` | did the player win their last fight?
 * `if fightoutcome >= 20 and fightoutcome <= 29` | did the player lose their last fight?
