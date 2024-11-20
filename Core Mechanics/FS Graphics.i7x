@@ -719,8 +719,8 @@ Figure of Squire_smile_undies_shirt_seethrough_icon is the file "Squire_smile_un
 Figure of Squire_smile_soft_icon is the file "Squire_smile_soft.jpg".
 Figure of Squire_smile_hard_icon is the file "Squire_smile_hard.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
-Figure of Sturm_full_body_icon is the file "Sturm_full_body.jpg".
-Figure of Sturm_full_body_hard_icon is the file "Sturm_full_body_hard.jpg".
+Figure of Sturm_soft_icon is the file "Sturm_soft.jpg".
+Figure of Sturm_hard_icon is the file "Sturm_hard.jpg".
 Figure of Susan_face_icon is the file "Susan_face.jpg".
 Figure of Susan_FHerm_clothed_icon is the file "Susan_FHerm_clothed.jpg".
 Figure of Susan_FHerm_hard_icon is the file "Susan_FHerm_hard.jpg".
@@ -786,6 +786,10 @@ Figure of Urik_neutral_face_icon	is the file "Urik_neutral_face.jpg".
 Figure of Urik_neutral_shorts_icon	is the file "Urik_neutral_shorts.jpg".
 Figure of Urik_neutral_hard_icon	is the file "Urik_neutral_hard.jpg".
 Figure of Valerie_icon is the file "Valerie.jpg".
+Figure of Vanessa_naked_icon is the file "Vanessa_naked.jpg".
+Figure of Vanessa_clothed_icon is the file "Vanessa_clothed.jpg".
+Figure of Vanessa_preg_naked_icon is the file "Vanessa_preg_naked.jpg".
+Figure of Vanessa_preg_clothed_icon is the file "Vanessa_preg_clothed.jpg".
 Figure of Violet_face_icon is the file "Violet_face.jpg".
 Figure of Voodoo_Gecko_icon is the file "Voodoo_Gecko.jpg".
 Figure of Chris_warrior_clothed_icon is the file "Chris_warrior_clothed.jpg".
@@ -2065,6 +2069,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Squire_smile_hard_icon"	Figure of Squire_smile_hard_icon	"SteppeCrow"	g-White	"normal"
 "Succubus"	Figure of Succubus_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Sugar Glider"	Figure of SugarGlider_icon	"Xilrayne"	g-black	"normal"
+"Sturm_soft"	Figure of Sturm_soft_icon	"Gherod"	g-dark-gray	"normal"
+"Sturm_hard"	Figure of Sturm_hard_icon	"Gherod"	g-dark-gray	"normal"
 "Susan_face"	Figure of Susan_face_icon	"SineAlas"	g-black	"normal"
 "Susan_FHerm_clothed"	Figure of Susan_FHerm_clothed_icon	"Vashaa"	g-white	"normal"
 "Susan_FHerm_hard"	Figure of Susan_FHerm_hard_icon	"Vashaa"	g-white	"normal"
@@ -2142,6 +2148,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Urik_neutral_shorts"	Figure of Urik_neutral_shorts_icon	"Lyttathebug"	g-black	"normal"
 "Urik_neutral_hard"	Figure of Urik_neutral_hard_icon	"Lyttathebug"	g-black	"normal"
 "Valerie"	Figure of Valerie_icon	"Sususmiles"	g-white	"normal"
+"Vanessa_naked"	Figure of Vanessa_naked_icon	"SteppeCrow"	g-white	"normal"
+"Vanessa_clothed"	Figure of Vanessa_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Vanessa_preg_naked"	Figure of Vanessa_preg_naked_icon	"SteppeCrow"	g-white	"normal"
+"Vanessa_preg_clothed"	Figure of Vanessa_preg_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Violet_face"	Figure of Violet_face_icon	"SineAlas"	g-black	"normal"
 "Vixentaur"	Figure of Vixentaur_icon	"Anymouse1968"	g-white	"normal"
 ["Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-white	"normal"]
@@ -3030,6 +3040,7 @@ carry out artistcredits:
 	say "     Urik (original) by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Urik (HD) by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Valerie by Sususmiles @ furaffinity.net[line break]";
+	say "     Vanessa by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Violet Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Xaedihr by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
 	say "     Yatur by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";

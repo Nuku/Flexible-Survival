@@ -110,7 +110,7 @@ Conversation of Sturm is { "Woof grrr" }.
 The scent of Sturm is "     Sturm, smells of the city. Sweat, sexual fluid, and dust mingle with his natural wolfy scent."
 
 to say SturmDesc:
-	project the figure of Sturm_full_body_icon;
+	project Figure of Sturm_soft_icon;
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Sturm] <- DEBUG[line break]";
 	if HP of Sturm is 0:
@@ -136,6 +136,7 @@ Associated Fetishes:
 Section 2 - Talking
 
 instead of conversing the Sturm:
+	project Figure of Sturm_soft_icon;
 	if "First Talk" is not listed in Traits of Sturm:
 		say "     'Thank you for letting us live here. I realize that I was surly in the past, but I'm glad that my poor attitude didn't have consequences for the rest of my family,' Sturm says. You cautiously ask whether Blanche had some influence on this change of heart. He clenches his jaw before relaxing again with a sigh. 'She may have had a few words about it, yes, but I am genuinely grateful. I seem to have been wrong about you. Mom may be a little too trusting at times, but she is also a lot better than most at seeing the good in people. I guess she was right in your case.' Pleased with your son's progress you give him a hug, enjoying the warmth that radiates from his fluffy body. 'You've still got some way to go before you hug like Mom, but you might yet get there,' Sturm teases you as you part. Rolling your eyes, you tell him that you'll talk again later, letting him get back to whatever it was that he was doing before you interrupted him.";
 		TraitGain "First Talk" for Sturm;
@@ -206,6 +207,7 @@ to say SturmTalk3: [Companion]
 Section 3 - Sex
 
 instead of fucking Sturm:
+	project Figure of Sturm_hard_icon;
 	say "     'While I appreciate the offer, I don't know you very well yet. Mom may vouch for you, but this seems like the sort of thing that I should build up my levels of trust for.' It would seem that Sturm isn't yet ready for this. (WIP)";
 
 Section 4 - Events
@@ -280,14 +282,14 @@ the fuckscene of White Wolf One is "WIP".
 
 to say SummonSturm:
 	if Sturm is visible: [summoning while standing next to him]
-		project the figure of Sturm_full_body_icon;
+		project Figure of Sturm_soft_icon;
 		say "     Walking over to Sturm, you ask whether he would be interested in coming with you out into the city. He smiles widely and nods, darting in for a quick hug, his tail wagging wildly. 'Thank you, [BlancheMomDadTitle]. Really. I'd love to.' You privately chuckle at how such an innocent question can transform the usually stern wolf into a puppy.";
 	else: [regular summoning]
 		say "     Sturm for all his many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see him.";
 		now SummonFailure is true;
 
 to say DismissSturm:
-	project the figure of Sturm_full_body_icon;
+	project Figure of Sturm_soft_icon;
 	move Sturm to Grey Abbey Library;
 	if Player is not in Grey Abbey Library: [regular dismiss]
 		say "     With a word, you get Sturm's attention and tell him that he should head back to the library for now. He looks indignant for a moment but bites his tongue and merely nods. 'Fine. I guess I'll see you at home then,' he grumbles as he walks away, before hurrying back. '[BlancheMomDadTitle]. I enjoy this time together. Just so you know,' he says quickly as he gives you a firm hug before turning away and rushing off before you have a chance to reply. You know that he can handle himself, but you still feel guilty for dismissing him here. ";

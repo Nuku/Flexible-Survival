@@ -293,6 +293,7 @@ Include Control Pills by Hellerhound.
 [Include Disorganization by Kaleem mcintyre.] [Disabled till review]
 Include Diego Events by Vinickus.
 Include Dmitri the Peacock by Aureas Gigas.
+Include Dragon Harem by Voidsnaps.
 Include Dreamcatcher by Qazarar.
 Include Dry Plains Events by Stripes.
 Include Endings by Guest Writers.
@@ -332,6 +333,7 @@ Include Kitsune by Shadowwolf94.
 Include Kitsune Expansion by Shadowwolf94.
 Include Komainu by Voidsnaps.
 Include Latex Quad Husky by Stripes.
+Include Latex Husky Statue by Shiru.
 Include Leonard Events by Stripes.
 Include Little Old Woman by Kaleem mcintyre.
 Include Lizard Parlor by Kaleem Mcintyre.
@@ -748,6 +750,7 @@ Include Addicted Breeder by Voidsnaps.
 Include Aeca by Wahn.
 Include Aerana by Gherod.
 Include Alex by Stripes.
+Include Alon by Voidsnaps.
 Include Alpha by Wahn.
 Include Arcanologist by Taelyn.
 Include Argos by Voidsnaps.
@@ -868,6 +871,7 @@ Include Harold by Sarokcat.
 Include Hazel Summers by Prometheus.
 Include Hayato by Gherod.
 Include Helen by Wahn.
+Include Helios by Voidsnaps.
 Include Hellfire Workers by Gherod.
 Include Help Book by Prometheus.
 Include Henry by Wahn.
@@ -1002,6 +1006,7 @@ Include Skarnoth-Brutus Scenes by Luneth.
 Include Solariel by Prometheus.
 Include Solstice by Stripes.
 Include Sonny by Rikaeus.
+Include Soot by Voidsnaps.
 Include Spike by Wahn.
 Include Stag by Wahn.
 Include Stella by Stripes.
