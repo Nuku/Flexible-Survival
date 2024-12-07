@@ -493,6 +493,7 @@ Figure of Felix_icon is the file "Felix.jpg".
 Figure of Francois_icon is the file "Francois_ig.jpg".
 Figure of Frank_icon is the file "Frank.jpg".
 Figure of Gabriel_icon is the file "Gabriel.jpg".
+Figure of Galaxite_clothed_icon is the file "Galaxite_clothed.png".
 Figure of Garrett_icon is the file "garrett_ig.jpg".
 Figure of Garth_face_icon is the file "Garth_face.jpg".
 Figure of Gillian_icon is the file "Gillian_ig.jpg".
@@ -1687,6 +1688,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 ["Fluffy Owl"	Figure of FluffyOwl_icon	"Waxraven/WXRVN"	g-white	"normal"]
 "Fluffy Owl 2"	Figure of FluffyOwl2_icon	"Moirah"	g-white	"normal"
 "Gabriel"	Figure of Gabriel_icon	"Darian821"	g-black	"normal"
+"Galaxite_clothed"	Figure of Galaxite_clothed_icon	"Gherod"	g-dark-gray	"normal"
 "Gargoyle_stuck"	Figure of Gargoyle_stuck_icon	"EmieChii"	g-white	"normal"
 "Gargoyle_soft"	Figure of Gargoyle_soft_icon	"SteppeCrow"	g-white	"normal"
 "Gargoyle_hard"	Figure of Gargoyle_hard_icon	"SteppeCrow"	g-white	"normal"
@@ -2931,6 +2933,7 @@ carry out artistcredits:
 	say "     Frank by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Felix by ConnyChiwa @ https://www.furaffinity.net/user/connychiwa/[line break]";
 	say "     Gabriel by Darian821 @ y-gallery.net[line break]";
+	say "     Galaxite_clothed by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
 	say "     Garrett by Catmonkshiro @ furaffinity.net[line break]";
 	say "     Garth (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Gillian by Eevachu @ furaffinity.net[line break]";
