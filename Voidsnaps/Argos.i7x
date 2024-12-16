@@ -15,7 +15,7 @@ a postimport rule:
 
 a postimport rule:
 	if "Argos Fix" is not listed in Traits of Argon:
-		move Argos to Nowhere;
+		move Argon to Nowhere;
 		now Personal Pewter is not tamed;
 		now Strange Birth is not Resolved;
 		now Grown Up is not Resolved;
