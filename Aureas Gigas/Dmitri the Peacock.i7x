@@ -179,6 +179,7 @@ to say ResolveEvent Captivating Plumage:
 
 Table of GameRoomIDs (continued)
 Object	Name
+Argos's Antiques	"Argos Antiques"
 Argos's Antiques	"Argos's Antiques"
 
 Argos's Antiques is a room. It is fasttravel. It is private. It is sleepsafe.
