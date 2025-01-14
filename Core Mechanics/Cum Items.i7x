@@ -6998,5 +6998,43 @@ instead of sniffing yuppie mink cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"Limbo Fox Cum"	"A plastic water bottle containing a moderate amount of... Eldrich fox Cum ? You [italic type]could[roman type] drink it to qu£nch y0u4 Th14sssssssss- hunger, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Limbo Fox Cum
+"Glitchy Cum"	"Microwaving it may have purified it of the nanites, but it seems this alteration has broken the Limbo touched code of the milk contained inside the bottle, if the constant blinking between black and white is anything to go by. Drink at your own risk..."	1	Glitchy Cum
+
+Limbo Fox Cum is a grab object.
+Usedesc of Limbo Fox Cum is "[Limbo Fox Cum use]".
+
+to say Limbo Fox Cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. An alien yet pleasant taste hits your tongue. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	PlayerEat 25;
+	SanLoss 5;
+	if Ball size of Player >= 1:
+		increase Ball Size of Player by 1;
+	if Cock Count of Player >= 1:
+		increase Cock Length of Player by 1;
+	infect "Limbo Fox";
+
+instead of sniffing Limbo Fox Cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+
+
+Glitchy Cum is a grab object.
+Usedesc of Glitchy Cum is "[Glitchy Cum use]".
+
+to say Glitchy Cum use:
+	say "Lifting the plastic bottle to your mouth, you take a dr1nk fr0m it, leTting th£ cr£@my cu-um run run 0VeR /0ur t0N6u£ and dddddddown IoUr 7hroAt. An aaaaaa-alien yet plea@Nt-nttttttttt- [bold type][one of]I-IT BURNS [or]1I-IT T HURTS [at random]![roman type] Still in extreme mental and physical pain, you feel your body temperature climb1ng and steam pours from your cuts as they [one of]cinch[or]knit[at random] thEmselves §Hut. N0t ev£n fuLly finishing the bottle, you instinctively empty the rest of it somewhere, then stuff the empty bottle with difficulty back into your collection of 'empties'.";
+	SanLoss 35;
+	addAlcPoints 5;
+	PlayerHealed 300;
+	PlayerDrink 100;
+	PlayerEat 100;
+
+instead of sniffing Glitchy Cum:
+	say "You open the lid for a moment and take a sniff. But you can't seem to peek up on any particular smell.";
+
+
 
 Cum Items ends here.

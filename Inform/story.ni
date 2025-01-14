@@ -15,13 +15,13 @@ use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
 use MAX_NUM_STATIC_STRINGS of 500000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 250000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
-use MAX_OBJECTS of 5000.
-use MAX_ACTIONS of 3000.
-use MAX_VERBS of 3000.
+use MAX_OBJECTS of 50000.
+use MAX_ACTIONS of 30000.
+use MAX_VERBS of 30000.
 use MAX_VERBSPACE of 50000.
-use MAX_ARRAYS of 100000.
-[Use MAX_ZCODE_SIZE of 1000000.]
-Use MAX_DICT_ENTRIES OF 6000.
+use MAX_ARRAYS of 1000000.
+Use MAX_ZCODE_SIZE of 10000000.
+Use MAX_DICT_ENTRIES OF 60000.
 Use maximum text length of at least 4000.
 Use Scoring.
 [ End compiler settings. ]
@@ -221,6 +221,7 @@ Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
 Include Equinoid Camp by Song.
 Include Farm by Wahn.
+Include Ghost Fair by JP.
 Include Gloryhole by SgtPepper234.
 Include Greek Street by Wahn.
 Include Hellfire Club by Gherod.
@@ -503,6 +504,7 @@ Include Feral Wolf Bitch by Prometheus.
 Include Feral Wolf Herm by Prometheus.
 Include Feral Wolf Male by Prometheus.
 Include Ferret Infection by Luneth.
+Include Fever Dream by JP.
 Include Fire Elemental by Stripes.
 Include Fire Sprite by AGentlemanCalledB.
 Include Flaming Lynx by Stripes.
@@ -536,6 +538,7 @@ Include Grizzly Bear by UrsaOmega.
 Include Gryphons Plot by Guest Writers.
 Include Gunbunny by Stripes.
 Include Gyrwolf Gryphon by Prometheus.
+Include Hallucination by JP.
 Include Harpy by Nuku Valente.
 Include Hawkman by Sarokcat.
 Include Hellfire Demon by Gherod.
@@ -586,6 +589,7 @@ Include Latex Mistress by Stripes.
 Include Latex Wolf by Stripes.
 Include Leopardman by Vinickus.
 Include Lernean Hydra by Prometheus.
+Include Limbo Fox by JP.
 Include Liquidshifter by Ssely.
 Include Lizard Girl by Damaged.
 Include Lusty Skunk by Nuku Valente.
@@ -807,6 +811,7 @@ Include College Guards by Rikaeus.
 Include Colleen by Prometheus.
 Include Corbin by Wahn.
 Include Coura by Wahn.
+Include Cyn by JP.
 Include Cynthia by Prometheus.
 Include Daisy by Sarokcat n Verath.
 Include Damien by Gherod.
