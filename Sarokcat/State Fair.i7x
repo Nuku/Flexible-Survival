@@ -1,5 +1,6 @@
 Version 1 of State Fair by Sarokcat begins here.
 [Version 1.1 - Added convo note about Artemis]
+[Version 1.2 - Added Fair's Edge]
 
 "Adds an adventuring area to Flexible Survival with an unhappy lion and a game."
 
@@ -16,6 +17,8 @@ Description of State Fair is "     The entrance to the state fair. Colorful bann
 
 instead of sniffing State Fair:
 	say "The scents of popcorn and cotton candy and other treats fill the air. Beneath those enticing scents lie the strange scents of arousal, as if those musky scents are trying to hide beneath them. Among those scents, you catch the whiff of [one of]several felines[or]a rubbery scent[or]plush toys[or]male arousal[or]female heat[or]manly sweat[or]lupine cum[at random]";
+
+State Fair is south of Fair's Edge.
 
 Borismate is a number that varies.
 boristalk is a number that varies.
