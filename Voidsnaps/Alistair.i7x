@@ -207,7 +207,7 @@ to say PlayerKnightAlistairSquireMenu:
 	now sortorder entry is 1;
 	now description entry is "You want to fight the knight again! Ask if he's willing";
 	[]
-	if thirst of Alistair is 2 and "Training Alistair" is not listed in Traits of Alistair:
+	if thirst of Alistair >= 2 and "Training Alistair" is not listed in Traits of Alistair:
 		choose a blank row in table of fucking options;
 		now title entry is "Skip the fight";
 		now sortorder entry is 2;
@@ -263,7 +263,7 @@ to say PlayerSquireAlistairKnightMenu:
 	now sortorder entry is 1;
 	now description entry is "Alistair offered to be your teacher- Take him up on that offer";
 	[]
-	if hunger of Alistair is 2 and "Alistair's Knight Training" is not listed in Traits of Alistair:
+	if hunger of Alistair >= 2 and "Alistair's Knight Training" is not listed in Traits of Alistair:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer yourself to your knight";
 		now sortorder entry is 2;
