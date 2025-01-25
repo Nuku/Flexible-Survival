@@ -176,7 +176,7 @@ when play ends:
 	[FS Multiplayer AD here]
 	say "----------[line break]";
 	say "I hope you enjoyed playing that as much as we enjoyed coding/writing it! It doesn't have to end here though! Come join other mutants and play in the Multiplayer Flexible Survival universe with us!";
-	say "https://flexiblesurvival.com/[line break]";
+	say "https://flexiblesurvival.com[line break]";
 	say "Once you have a character, click [']direct control['], and we'll be there, waiting to give a hand!";
 	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2222";
 

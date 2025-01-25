@@ -13,7 +13,7 @@ to say patroncredits:
 	LineBreak;
 	say "Basic Supporters: David Allen, Joshua John, Daniel Walldal Wiig, Rachel Cam, paul h bligh, Arlinath, Richard LeBlanc, John Doe, risenRuin, RDT, Chris Johnson, Graymage, Josh Williams, Royce, Naneki, Jonas, Andy, Travis Hollibaugh, Tomáš, Grunforce, stormhawk60, nicholas corrao, Jacob Grindstaff, Alexander K Williams, Connor Laney, mcdade, Isaac Rifley, Daniel, hobbes_maxwell, Aurik Marr, phillip bordelon";
 	LineBreak;
-	say "Are you a supporter yet? Help make the game bigger and better at https://www.patreon.com/FS today!";
+	say "Are you a supporter yet? Help make the game bigger and better at https://patreon.com/FS today!";
 
 
 Patron Credits ends here.

@@ -240,7 +240,7 @@ to say gsopt_start:
 				now graphics window position is g-below;
 		reconstruct graphics window;
 		clear the screen;
-	say "Want more details on the game and updates? ----- [bold type]https://blog.flexiblesurvival.com/[roman type]  ------[line break][line break]";
+	say "Want more details on the game and updates? ----- [bold type]https://blog.flexiblesurvival.com[roman type]  ------[line break][line break]";
 	WaitLineBreak;
 	if scenario is "Bunker":
 		ItemGain black t-shirt by 1 silently;
