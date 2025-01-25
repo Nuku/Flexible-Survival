@@ -15,8 +15,8 @@ NewGraphicsOpened is a truth state that varies. NewGraphicsOpened is usually fal
 [Unix filesystem names can be case sensitive. Try to match the letter case here with the actual filename case]
 
 Figure of title_graphic is the file "title.png".
-Figure of pixel is the file "pixel.jpg".
-Figure of pixel_icon is the file "pixel.jpg".
+Figure of pixel is the file "pixel.png".
+Figure of pixel_icon is the file "pixel.png".
 
 A thing has a figure name called icon.
 The icon of a thing is usually figure of pixel.
@@ -54,10 +54,10 @@ Figure of Collie_naked_icon is the file "Collie_naked.jpg".
 Figure of Cougar_clothed_icon is the file "Cougar_clothed.jpg".
 Figure of Cougar_naked_icon is the file "Cougar_naked.jpg".
 Figure of DarkElf_icon is the file "Dark Elf.jpg".
-Figure of Darkelf_red_clothed_icon is the file "Darkelf_red_clothed.jpg".
-Figure of Darkelf_red_hard_icon is the file "Darkelf_red_hard.jpg".
-Figure of Darkelf_blue_clothed_icon is the file "Darkelf_blue_clothed.jpg".
-Figure of Darkelf_blue_naked_icon is the file "Darkelf_blue_naked.jpg".
+Figure of DarkElf_red_clothed_icon is the file "DarkElf_red_clothed.jpg".
+Figure of DarkElf_red_hard_icon is the file "DarkElf_red_hard.jpg".
+Figure of DarkElf_blue_clothed_icon is the file "DarkElf_blue_clothed.jpg".
+Figure of DarkElf_blue_naked_icon is the file "DarkElf_blue_naked.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.jpg".
 Figure of Donkeywoman_clothed_icon is the file "Donkeywoman_clothed.jpg".
 Figure of Donkeyman_soft_icon is the file "Donkeyman_soft.jpg".
@@ -978,7 +978,7 @@ Figure of emap_mall_atrium_icon is the file "emap_mall_atrium.png".
 Figure of emap_mall_bodyshop_icon is the file "emap_mall_bodyshop.png".
 Figure of emap_mall_bransonpartner_icon is the file "emap_mall_bransonpartner.png".
 Figure of emap_mall_brookstonebooks_icon is the file "emap_mall_brookstonebooks.png".
-Figure of emap_mall_Christmasvillage_icon is the file "emap_mall_Christmasvillage.png".
+Figure of emap_mall_christmasvillage_icon is the file "emap_mall_christmasvillage.png".
 Figure of emap_mall_eastwing_icon is the file "emap_mall_eastwing.png".
 Figure of emap_mall_foodcourt_icon is the file "emap_mall_foodcourt.png".
 Figure of emap_mall_foyer_icon is the file "emap_mall_foyer.png".
@@ -1047,7 +1047,7 @@ Figure of emap_Stocks_icon is the file "emap_Stocks.png".
 
 [emap - The Palomino]
 Figure of emap_Ammys_Flatlet_icon is the file "emap_Ammys_Flatlet.png".
-Figure of emap_Palomino_icon is the file " emap_Palomino.png".
+Figure of emap_Palomino_icon is the file "emap_Palomino.png".
 Figure of emap_Private_Booths_icon is the file "emap_Private_Booths.png".
 Figure of emap_Private_Club_Room_icon is the file "emap_Private_Club_Room.png".
 Figure of emap_Topless_Lounge_icon is the file "emap_Topless_Lounge.png".
@@ -1167,7 +1167,7 @@ Figure of emap_Slave_Cell_2_icon is the file "emap_Slave_Cell_2.png".
 [emap - Beach]
 Figure of emap_Beach_Plaza_icon is the file "emap_Beach_Plaza.png".
 Figure of emap_Boardwalk_icon is the file "emap_Boardwalk.png".
-Figure of emap_church_hall_icon is the file "emap_church_hall.png".
+Figure of emap_Church_Hall_icon is the file "emap_Church_Hall.png".
 Figure of emap_City_Center_icon is the file "emap_City_Center.png".
 Figure of emap_City_Entrance_icon is the file "emap_City_Entrance.png".
 Figure of emap_City_Market_icon is the file "emap_City_Market.png".
@@ -1412,8 +1412,9 @@ to project (x - a figure name):
 
 Table of game art
 title	icon(figure name)	artist	backgroundcolor	formatrule
-"Abcdefghij"	Figure of pixel	""	g-black	"normal" [blocker for first position]
-"Abcdefghij"	Figure of pixel_icon	""	g-black	"normal" [blocker for first position]
+"AATitle"	Figure of title_graphic	"SonnikuDashu"	g-black	"normal" [blocker for first position]
+"AAPixel"	Figure of pixel	""	g-black	"normal" [blocker for first position]
+"AAPixel"	Figure of pixel_icon	""	g-black	"normal" [blocker for first position]
 "Adam"	Figure of Adam_icon	"Kadel"	g-white	"normal"
 "Aerana"	Figure of Aerana_naked_icon	"Gherod"	g-black	"normal"
 "Ace"	Figure of Ace_icon	"Waxraven/WXRVN"	g-white	"normal"
@@ -2156,7 +2157,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Vanessa_preg_clothed"	Figure of Vanessa_preg_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Violet_face"	Figure of Violet_face_icon	"SineAlas"	g-black	"normal"
 "Vixentaur"	Figure of Vixentaur_icon	"Anymouse1968"	g-white	"normal"
-["Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-white	"normal"]
+"Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-white	"normal"
 "Vixen Nurse Herm"	Figure of VixenNurse_herm_clothed_icon	"Moirah"	g-white	"normal"
 "Vixen Nurse Herm naked"	Figure of VixenNurse_herm_naked_icon	"Moirah"	g-white	"normal"
 "Vixen Nurse Herm"	Figure of VixenNurse_fem_clothed_icon	"Moirah"	g-white	"normal"
@@ -2328,7 +2329,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Navigation - Mall - Bodyshop"	Figure of emap_mall_bodyshop_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Branson & Partner"	Figure of emap_mall_bransonpartner_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Brookstone Books"	Figure of emap_mall_brookstonebooks_icon	"executaball"	g-black	"normal"
-"Navigation - Mall - Christmas Village"	Figure of emap_mall_Christmasvillage_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Christmas Village"	Figure of emap_mall_christmasvillage_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - East Wing"	Figure of emap_mall_eastwing_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - FoodCourt"	Figure of emap_mall_foodcourt_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Foyer"	Figure of emap_mall_foyer_icon	"executaball"	g-black	"normal"
@@ -2581,7 +2582,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 [emap - Beach]
 "emap - Beach Plaza"	Figure of emap_Beach_Plaza_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Boardwalk"	Figure of emap_Boardwalk_icon	"Wolfram Rolf"	g-black	"normal"
-"emap - Church Hall"	Figure of emap_church_hall_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Church Hall"	Figure of emap_Church_Hall_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - City Center"	Figure of emap_City_Center_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - City Entrance"	Figure of emap_City_Entrance_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - City Market"	Figure of emap_City_Market_icon	"Wolfram Rolf"	g-black	"normal"
@@ -2731,7 +2732,6 @@ carry out artistcredits:
 	say "     Blue Gel by Rastear @ https://rastea-art.tumblr.com[line break]";
 	say "     Bobcat by Uniformvixen @ https://furaffinity.net/user/uniformvixen[line break]";
 	say "     Bottlenose Toy by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
-	say "     Catgirl by Valen[line break]";
 	say "     Cat Ninja (female) by Bix707 @ https://furaffinity.net/user/bix707[line break]";
 	say "     Centaur Stallion by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
 	say "     Centaur Mare by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
@@ -2740,7 +2740,7 @@ carry out artistcredits:
 	say "     Chocolate Lab by SparklePens @ https://furaffinity.net/user/sparklepens[line break]";
 	say "     Cougar (anthro) by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
 [	say "     Cougar by catnamedfish @ https://furaffinity.net/user/catnamedfish[line break]";]
-[	say "     Dark Elf by Nokturnalkittie @ https://furaffinity.net/user/nokturnalkittie[line break]";]
+	say "     Dark Elf by Nokturnalkittie @ https://furaffinity.net/user/nokturnalkittie[line break]";
 	say "     Dark Elf (Red) by Moirah @ https://furaffinity.net/user/moirah[line break]";
 	say "     Dark Elf (Blue) by Moirah @ https://furaffinity.net/user/moirah[line break]";
 	say "     Demon Brute by Inkydemon @ https://furaffinity.net/user/inkydemon[line break]";
@@ -2911,7 +2911,6 @@ carry out artistcredits:
 	say "     Dark Tyrant (Fallen King) by Gherod @ https://x.com/gherodv[line break]";
 	say "     David by Keitaro87 @ https://kei87art.tumblr.com[line break]";
 	say "     Diego by ValdericBlackstag @ https://furaffinity.net/user/valdericblackstag[line break]";
-	say "     Diego by Anonymous/Damdidoo[line break]";
 	say "     Dmitri by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
 	say "     Dr. Matt (face) by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
 	say "     Dr. Matt by The_Negative @ https://furaffinity.net/user/thenegative[line break]";
@@ -2940,10 +2939,8 @@ carry out artistcredits:
 	say "     Gina by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
 	say "     Gobby by lionsilverwolf @ https://furaffinity.net/user/lionsilverwolf[line break]";
 	say "     Grant by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
-[
 	say "     Grant by Uniformvixen @ https://furaffinity.net/user/uniformvixen[line break]";
 	say "     Grant (color) by Familliar @ https://furaffinity.net/user/familliar[line break]";
-]
 	say "     Hadiya (solo) by lionsilverwolf @ https://furaffinity.net/user/lionsilverwolf[line break]";
 	say "     Hadiya w/Gobby by SandySchreiber @ https://furaffinity.net/user/sandyschreiber[line break]";
 	say "     Helen by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
@@ -3072,6 +3069,7 @@ carry out artistcredits:
 	say "     Skunkbeast Lord Battle by MoT @ https://furaffinity.net/user/mot[line break]";
 	say "     Spidertaur by CrashBurnDraw @ https://furaffinity.net/user/demicrash[line break]";
 	say "     Talov & Kerr by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
+  say "     Title Screen by SonikkuDashu @ https://deviantart.com/s-dash[line break]";
   LineBreak;
 	say "Maps:[line break]";
 	say "     Mall Map by Anonymous[line break]";
@@ -3100,7 +3098,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "DragonFlayer", "Dragonpunk", "Eevachu", "EmieChii", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "Moirah", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sokan", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TylerAz", "Uniformvixen", "Unknown", "ValdericBlackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Wemt", "Wolfram Rolf", "Xenotropos, Yora"};
+	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "DragonFlayer", "Dragonpunk", "Eevachu", "EmieChii", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "Moirah", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "SonikkuDashu", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sokan", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TylerAz", "Uniformvixen", "Unknown", "ValdericBlackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Wemt", "Wolfram Rolf", "Xenotropos, Yora"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;
