@@ -660,8 +660,8 @@ Figure of Squire_smile_undies_shirt_seethrough_icon is the file "Squire_smile_un
 Figure of Squire_smile_soft_icon is the file "Squire_smile_soft.jpg".
 Figure of Squire_smile_hard_icon is the file "Squire_smile_hard.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
-Figure of Sturm_full_body_icon is the file "Sturm_full_body.jpg".
-Figure of Sturm_full_body_hard_icon is the file "Sturm_full_body_hard.jpg".
+Figure of Sturm_full_body_icon is the file "Sturm_full_body.png".
+Figure of Sturm_full_body_hard_icon is the file "Sturm_full_body_hard.png".
 Figure of Susan_face_icon is the file "Susan_face.jpg".
 Figure of Susan_FHerm_clothed_icon is the file "Susan_FHerm_clothed.jpg".
 Figure of Susan_FHerm_hard_icon is the file "Susan_FHerm_hard.jpg".
