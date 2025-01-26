@@ -18,8 +18,8 @@ title	description
 "Wait Less"	"Tired of having to click more to continue much of the text? Type [bold type]Waits Off[roman type] to skip many delays.[line break]Don't like the change and want to go back? Type [bold type]Waits On[roman type] to return to the default."
 "Clear Less"	"Don't like the page clearing of text? Want the combat interface at the bottom of the screen? Type [bold type]Clears Off[roman type] to stop screen clearing.[line break]Don't like the change and want to go back? Type [bold type]Clears On[roman type] to return to the default."
 "Auto Attack"	"If you have the [']Instinctive Combat['] feat you can use different automatic attacks. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [bold type]auto attack normal[roman type] for the default method of combat (choose each action).[line break]Type [bold type]auto attack berserk[roman type] to always attack in combat.[line break]Type [bold type]auto attack pass[roman type] to always pass in combat.[line break]Type [bold type]auto attack coward[roman type] to always flee in combat.[line break]Type [bold type]auto attack submit[roman type] to always submit in combat."
-"Contacting the author"	"If you have any difficulties with [story title], please contact me at: https://blog.flexiblesurvival.com/ ."
-"Further Help"	"For further help and information, check out the wiki at: https://wiki.flexiblesurvival.com/w/Main_Page or join the Discord at: https://discord.gg/b54Mbkb ."
+"Contacting the author"	"If you have any difficulties with [story title], please contact me at: https://blog.flexiblesurvival.com"
+"Further Help"	"For further help and information, check out the wiki at: https://wiki.flexiblesurvival.com/w/Main_Page or join the Discord at: https://discord.gg/b54Mbkb"
 
 To adjustdefaulthelp: [changes table from Basic Help Menu by Emily Short to better fit this game, without changing that extension, as it may be used by other games]
 	now the title in row 2 of Table of Instruction Options is "What to do with >";

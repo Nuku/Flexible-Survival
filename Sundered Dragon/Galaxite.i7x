@@ -843,7 +843,7 @@ to say ZeeBatBrawlWin:
 		-- "No, you do not truck with inferior beings.":
 			say "     On second thought, you have no desire to sully your regal form with the touch of these weak, pitiful, lesser beings. They do not deserve the honor of pleasing a dragon of your stature! You muse, eyeing up their pathetic soft scaleless hides and meek effeminate frames. You decide to let loose your hold on the pinned creature before some of their weakness taints your draconic majesty and deliver your ultimatum. ";
 			if "Vore Predator" is listed in Feats of Player and "Touched by Madness" is not listed in Feats of Player:
-				say "Fly little mouse! And be grateful that you have no taste for man flesh this day! "; [Slyrak said, calmly. https://youtu.be/SN07XVqfBko?si=HUJEb0Fvgnfcds81&t=60 ]
+				say "Fly little mouse! And be grateful that you have no taste for man flesh this day! "; [Slyrak said, calmly. https://youtu.be/SN07XVqfBko?t=60 ]
 			else if "Vore Predator" is listed in Feats of Player and "Touched by Madness" is listed in Feats of Player:
 				say "Flee striplings, and be thankful the editor has no love for vorny content! ";
 			else:
