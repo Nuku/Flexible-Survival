@@ -200,7 +200,7 @@ to say ResolveEvent Wandering Blue Oni:
 		now HP of Rane is 99;
 		now Rane is nowhere;
 		now Resolution of Wandering Blue Oni is 1; [rejected because of hellhound]
-	else if jackalmantf is 4: [Jackalman Transformation]
+	else if JackalManTF is 4: [Jackalman Transformation]
 		say "then his eyes go wide as the image changes. The mirror now shows someone standing behind you - it's the jackal-headed man you met in the museum, with one hand-paw resting on your shoulder. The image turns his head to look out of the mirror at you, then vanishes after giving you a nod with an amused expression on his face.";
 		say "     After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. He looks at you with a somewhat more respectful tone in his eyes, then says 'Anubis is watching out for you? That's a powerful patron you have there. You'll have to tell me sometime how you managed to attract his attention and favor.' Looks like he's now ready to talk... and do other things with you.";
 		move Rane to Shrine;
