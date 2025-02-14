@@ -21,7 +21,7 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The Sweaty Bear slams into you and pins you to the ground for a moment, with your face between his pecs![or]The Sweaty Bear grabs you and tosses you to the side![or]The Sweaty Bear bashes at you with his powerful fists![or]The wild creature slams his body into you, grinding his large, stiff canine cock against you as he crushes you in his arms, tossing you to the ground with a coating of pre across your stomach![at random]";
+	now attack entry is "[one of]The Sweaty Bear slams into you and pins you to the ground for a moment, with your face between his pecs![or]The Sweaty Bear grabs you and tosses you to the side![or]The Sweaty Bear bashes you with his powerful fists![or]The wild creature slams his body into you, grinding his large, stiff canine cock against you as he crushes you in his arms, tossing you to the ground with a coating of pre across your stomach![at random]";
 	now defeated entry is "[beattheSweaty Bear]"; [ Text when monster loses. ]
 	now victory entry is "[losetoSweaty Bear]"; [ Text when monster wins. ]
 	now desc entry is "[Sweaty Beardesc]"; [ Description of the creature when you encounter it. ]

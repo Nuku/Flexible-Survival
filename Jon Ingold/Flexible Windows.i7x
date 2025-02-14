@@ -443,7 +443,7 @@ have no effect on any Glk windows until the next time you open a text
 buffer, so as a practical matter it should do nothing in other Glk
 implementations."
 
-( from https://groups.google.com/forum/#!msg/rec.arts.int-fiction/t2cYg_A5FMw/a7vx3OIWg7gJ )
+( from https://groups.google.com/g/rec.arts.int-fiction/c/t2cYg_A5FMw/m/a7vx3OIWg7gJ )
 
 (The workaround as incorporated here accepts a glulx color value (see Glulx Text Effects) rather than defaulting to white as in the originally posted code.)
 

@@ -335,8 +335,8 @@ For instance if we were adding an image to the screen every time the player move
 
 The author may also create other drawing rules of his own devising and make any of these the current graphics drawing rule, as needed. It will probably be necessary to specify graphics drawing rules in Inform 6 unless the author intends a fairly simple combination of the rules already provided here; for more information about graphics drawing in Glulx, see
 
-	http://adamcadre.ac/gull/
-	http://members.aol.com/doepage/glkdunces.htm
+	https://adamcadre.ac/gull
+  https://web.archive.org/web/20080724144500/http://members.aol.com/doepage/glkdunces.htm
 
 In writing these rules, it's worth bearing in mind that the rule should be able to reconstruct the entire contents of the graphics window every time it is called, rather than relying on things drawn there during previous moves; otherwise, the graphics window will not redraw properly when the game is reloaded or a turn is undone.
 

@@ -16,6 +16,7 @@ Purified of acid milk is "distilled milk".
 Purified of gryphon milk is "distilled milk".
 Purified of margay milk is "distilled milk".
 Purified of panther milk is "distilled milk".
+Purified of Limbo Fox Milk is "Glitchy Milk".
 
 [ Food ]
 Purified of blue gel is "food".
@@ -57,6 +58,7 @@ Purified of sea dragon cum is "distilled cum".
 Purified of smilodon cum is "distilled cum".
 Purified of wolf cum is "distilled cum".
 Purified of orc femcum is "distilled cum".
+Purified of Limbo Fox Cum is "Glitchy Cum".
 
 [ Alcohol ]
 Purified of mead horn is "distilled booze".

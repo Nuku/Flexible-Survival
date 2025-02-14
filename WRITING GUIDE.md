@@ -577,5 +577,5 @@ Example:
 ## Questions?
 Join the Discord group and ask questions or just talk about the game in the `fs-singleplayer` channel!
 
-https://discordapp.com/channels/333559467218173953/362740874683219968
-http://web.flexiblesurvival.com/viewtopic.php?f=4&t=10#p35
+https://discord.gg/gZG2nw6
+https://discord.com/channels/333559467218173953/333559925148090368

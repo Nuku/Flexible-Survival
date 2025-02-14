@@ -3,6 +3,7 @@ Version 1 of Equipment by Core Mechanics begins here.
 [ Version 1 - New File ]
 [ Version 2 - Added a lot of new clothes and reorganized clothing lists. Added new stats to all clothing and gear (traits and gender appearance) by Luneth]
 [ Version 2.1 - Added a few new TF equipment pieces by Luneth]
+[ Version 2.2 - fixed "road sign breastplate" name]
 
 "Adds new equipment for the player."
 
@@ -620,7 +621,7 @@ Part 3 - Breastplates
 Table of Game Objects (continued)
 name	desc	weight	object
 "medieval breastplate"	"A shiny medieval breastplate. It is either a historical artifact or a quite good reproduction - either way, this should allow for some serious protection for someone who wants to survive the nanite apocalypse. Judging by the breastplates appearance, it's [']masculine['] and pretty [']authorative['] looking."	20	medieval breastplate
-"road sign breastplate"	"A breastplate that someone fairly large seems to have crafted from things that were available - namely road signs. The front is formed by a STOP sign that has been hammered into a slight curve, with further signs bolted to its edges to curve around the sides of the body. Heavy leather straps for over the shoulders hold another stop sign forming the back plate. Judging by the breastplates appearance, it's [']masculine['] and pretty [']violent['] looking."	30	roadsign breastplate
+"roadsign breastplate"	"A breastplate that someone fairly large seems to have crafted from things that were available - namely road signs. The front is formed by a STOP sign that has been hammered into a slight curve, with further signs bolted to its edges to curve around the sides of the body. Heavy leather straps for over the shoulders hold another stop sign forming the back plate. Judging by the breastplates appearance, it's [']masculine['] and pretty [']violent['] looking."	30	roadsign breastplate
 
 medieval breastplate is a grab object.
 medieval breastplate is equipment.
@@ -648,7 +649,7 @@ Effectiveness of roadsign breastplate is 50.
 GA of roadsign breastplate is 1.
 Traits of roadsign breastplate is {"violent"}.
 Placement of roadsign breastplate is "body".
-Descmod of roadsign breastplate is "A roadsign breastplate covers your chest and back in an improvised patchwork of metal.".
+Descmod of roadsign breastplate is "A road sign breastplate covers your chest and back in an improvised patchwork of metal.".
 Slot of roadsign breastplate is "back".
 Scent of roadsign breastplate is "The breastplate smells like metal".
 
