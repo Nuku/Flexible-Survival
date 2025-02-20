@@ -206,9 +206,9 @@ Part 2 - Inspired by angels
 
 Part 3 - Inspired by yokai
 
-[oni] [http://yokai.com/oni/]
+[oni] [https://yokai.com/oni]
 
-[kijo] [http://yokai.com/kijo/]
+[kijo] [https://yokai.com/kijo]
 
 Section 2 - New Bosses
 
@@ -218,7 +218,7 @@ Part 2 - Inspired by angels
 
 Part 3 - Inspired by yokai
 
-[shuten doji] [http://yokai.com/shutendouji/]
+[shuten doji] [https://yokai.com/shutendouji]
 
 Section 3 - New interactions with old enemies for player
 

@@ -14,4 +14,4 @@ Anyone is welcome to contribute to FS! If you're interested in writing content f
 ## Join our Discord!
 If you're a fan of FS, or if you're interested in learning more, you can always join our Discord to chat with fellow players and the development team. If you're interested in contributing, you can check out our contributing guide here on GitHub, or get in contact with us on Discord!
 
-https://discordapp.com/channels/333559467218173953/362740874683219968
+https://discord.gg/b54Mbkb

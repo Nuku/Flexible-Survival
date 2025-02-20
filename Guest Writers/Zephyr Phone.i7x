@@ -263,7 +263,7 @@ Table of Zpc Location Reference (continued)
 location(room)	icon(figure name)
 Beach Plaza	Figure of emap_Beach_Plaza_icon
 Boardwalk2	Figure of emap_Boardwalk_icon
-Church Hall	Figure of emap_church_hall_icon
+Church Hall	Figure of emap_Church_Hall_icon
 City Center	Figure of emap_City_Center_icon
 City Entrance	Figure of emap_City_Entrance_icon
 City Market	Figure of emap_City_Market_icon
