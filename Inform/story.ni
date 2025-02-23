@@ -308,6 +308,7 @@ Include Fair Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Female Dorm Events by Prometheus.
 Include Feral Events by Guest Writers.
+Include Firbolgs by OrangeHorned.
 Include Fire House by Kaleem Mcintyre.
 Include Food and Water Finding by Nuku Valente.
 Include Forest Events by Aureas Gigas.
@@ -507,6 +508,7 @@ Include Feral Wolf Herm by Prometheus.
 Include Feral Wolf Male by Prometheus.
 Include Ferret Infection by Luneth.
 Include Fever Dream by JP.
+Include Fire Alicorn by Shiru.
 Include Fire Elemental by Stripes.
 Include Fire Sprite by AGentlemanCalledB.
 Include Flaming Lynx by Stripes.
@@ -863,6 +865,7 @@ Include Galaxite by Sundered Dragon.
 Include Genevieve by Prometheus.
 Include Garrett by SgtPepper234.
 Include Gerty by Qazarar.
+Include Giving Firbolg by OrangeHorned.
 Include Glory by Wahn.
 Include Good Alexandra by Prometheus.
 Include Gordon by Rikaeus.

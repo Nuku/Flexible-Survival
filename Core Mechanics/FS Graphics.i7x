@@ -579,6 +579,10 @@ Figure of Marc_face_icon is the file "Marc_face.jpg".
 Figure of Marc_fucked_icon is the file "Marc_fucked.jpg".
 Figure of Mason_icon is the file "Mason.jpg".
 Figure of Medea_face_icon is the file "Medea_face.jpg".
+Figure of Meredith_naked_icon is the file "Meredith_naked.jpg".
+Figure of Meredith_clothed_icon is the file "Meredith_clothed.jpg".
+Figure of Meredith_preg_naked_icon is the file "Meredith_preg_naked.jpg".
+Figure of Meredith_preg_clothed_icon is the file "Meredith_preg_clothed.jpg".
 Figure of Mike_face_icon is the file "Mike_face.jpg".
 Figure of Mike_icon is the file "Mike.jpg".
 Figure of Mogdraz_clothed_icon is the file "Mogdraz_clothed.jpg".
@@ -1863,6 +1867,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Megakitty"	Figure of Megakitty_icon	"BushyCat"	g-white	"normal"
 "Mental Mouse"	Figure of MentalMice_icon	"Xilrayne"	g-white	"normal"
 "Messy Pig"	Figure of MessyPig_icon	"Anymouse1968"	g-white	"normal"
+"Meredith_naked"	Figure of Meredith_naked_icon	"SteppeCrow"	g-white	"normal"
+"Meredith_clothed"	Figure of Meredith_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Meredith_preg_naked"	Figure of Meredith_preg_naked_icon	"SteppeCrow"	g-white	"normal"
+"Meredith_preg_clothed"	Figure of Meredith_preg_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Micaela"	Figure of Micaela_icon	"Kattzie"	g-white	"normal"
 "Mike_face"	Figure of Mike_face_icon	"SineAlas"	g-black	"normal"
 "Mike"	Figure of Mike_icon	"Darian821"	g-black	"normal"
@@ -3043,6 +3051,7 @@ carry out artistcredits:
 	say "     Urik (original) by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Urik (HD) by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Valerie by Sususmiles @ furaffinity.net[line break]";
+	say "     Meredith by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Vanessa by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Violet Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Xaedihr by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
