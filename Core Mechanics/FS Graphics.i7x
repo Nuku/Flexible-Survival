@@ -14,9 +14,9 @@ NewGraphicsOpened is a truth state that varies. NewGraphicsOpened is usually fal
 [Please Note!]
 [Unix filesystem names can be case sensitive. Try to match the letter case here with the actual filename case]
 
-Figure of title_graphic is the file "title.jpg".
-Figure of pixel is the file "pixel.jpg".
-Figure of pixel_icon is the file "pixel.jpg".
+Figure of title_graphic is the file "title.png".
+Figure of pixel is the file "pixel.png".
+Figure of pixel_icon is the file "pixel.png".
 
 A thing has a figure name called icon.
 The icon of a thing is usually figure of pixel.
@@ -54,10 +54,10 @@ Figure of Collie_naked_icon is the file "Collie_naked.jpg".
 Figure of Cougar_clothed_icon is the file "Cougar_clothed.jpg".
 Figure of Cougar_naked_icon is the file "Cougar_naked.jpg".
 Figure of DarkElf_icon is the file "Dark Elf.jpg".
-Figure of Darkelf_red_clothed_icon is the file "Darkelf_red_clothed.jpg".
-Figure of Darkelf_red_hard_icon is the file "Darkelf_red_hard.jpg".
-Figure of Darkelf_blue_clothed_icon is the file "Darkelf_blue_clothed.jpg".
-Figure of Darkelf_blue_naked_icon is the file "Darkelf_blue_naked.jpg".
+Figure of DarkElf_red_clothed_icon is the file "DarkElf_red_clothed.jpg".
+Figure of DarkElf_red_hard_icon is the file "DarkElf_red_hard.jpg".
+Figure of DarkElf_blue_clothed_icon is the file "DarkElf_blue_clothed.jpg".
+Figure of DarkElf_blue_naked_icon is the file "DarkElf_blue_naked.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.jpg".
 Figure of Donkeywoman_clothed_icon is the file "Donkeywoman_clothed.jpg".
 Figure of Donkeyman_soft_icon is the file "Donkeyman_soft.jpg".
@@ -982,7 +982,7 @@ Figure of emap_mall_atrium_icon is the file "emap_mall_atrium.png".
 Figure of emap_mall_bodyshop_icon is the file "emap_mall_bodyshop.png".
 Figure of emap_mall_bransonpartner_icon is the file "emap_mall_bransonpartner.png".
 Figure of emap_mall_brookstonebooks_icon is the file "emap_mall_brookstonebooks.png".
-Figure of emap_mall_Christmasvillage_icon is the file "emap_mall_Christmasvillage.png".
+Figure of emap_mall_christmasvillage_icon is the file "emap_mall_christmasvillage.png".
 Figure of emap_mall_eastwing_icon is the file "emap_mall_eastwing.png".
 Figure of emap_mall_foodcourt_icon is the file "emap_mall_foodcourt.png".
 Figure of emap_mall_foyer_icon is the file "emap_mall_foyer.png".
@@ -1051,7 +1051,7 @@ Figure of emap_Stocks_icon is the file "emap_Stocks.png".
 
 [emap - The Palomino]
 Figure of emap_Ammys_Flatlet_icon is the file "emap_Ammys_Flatlet.png".
-Figure of emap_Palomino_icon is the file " emap_Palomino.png".
+Figure of emap_Palomino_icon is the file "emap_Palomino.png".
 Figure of emap_Private_Booths_icon is the file "emap_Private_Booths.png".
 Figure of emap_Private_Club_Room_icon is the file "emap_Private_Club_Room.png".
 Figure of emap_Topless_Lounge_icon is the file "emap_Topless_Lounge.png".
@@ -1171,7 +1171,7 @@ Figure of emap_Slave_Cell_2_icon is the file "emap_Slave_Cell_2.png".
 [emap - Beach]
 Figure of emap_Beach_Plaza_icon is the file "emap_Beach_Plaza.png".
 Figure of emap_Boardwalk_icon is the file "emap_Boardwalk.png".
-Figure of emap_church_hall_icon is the file "emap_church_hall.png".
+Figure of emap_Church_Hall_icon is the file "emap_Church_Hall.png".
 Figure of emap_City_Center_icon is the file "emap_City_Center.png".
 Figure of emap_City_Entrance_icon is the file "emap_City_Entrance.png".
 Figure of emap_City_Market_icon is the file "emap_City_Market.png".
@@ -1416,8 +1416,9 @@ to project (x - a figure name):
 
 Table of game art
 title	icon(figure name)	artist	backgroundcolor	formatrule
-"Abcdefghij"	Figure of pixel	""	g-black	"normal" [blocker for first position]
-"Abcdefghij"	Figure of pixel_icon	""	g-black	"normal" [blocker for first position]
+"AATitle"	Figure of title_graphic	"SonnikuDashu"	g-black	"normal" [blocker for first position]
+"AAPixel"	Figure of pixel	""	g-black	"normal" [blocker for first position]
+"AAPixel"	Figure of pixel_icon	""	g-black	"normal" [blocker for first position]
 "Adam"	Figure of Adam_icon	"Kadel"	g-white	"normal"
 "Aerana"	Figure of Aerana_naked_icon	"Gherod"	g-black	"normal"
 "Ace"	Figure of Ace_icon	"Waxraven/WXRVN"	g-white	"normal"
@@ -1447,14 +1448,14 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Amy"	Figure of Amy_icon	"Sususmiles"	g-white	"normal"
 "Amy_face"	Figure of Amy_face_icon	"Sususmiles"	g-white	"normal"
 "Anastasia"	Figure of Anastasia_icon	"SandySchreiber"	g-white	"normal"
-"Andre"	Figure of Andre_icon	"Wemd"	g-black	"normal"
-"Andre_face"	Figure of Andre_face_icon	"Wemd"	g-white	"normal"
+"Andre"	Figure of Andre_icon	"Wemt"	g-black	"normal"
+"Andre_face"	Figure of Andre_face_icon	"Wemt"	g-white	"normal"
 "Andrew"	Figure of Andrew_icon	"Rukis"	g-black	"normal"
 "Angie"	Figure of Angie_icon	"Anymouse1968"	g-white	"normal"
 "Anthony_naked"	Figure of Anthony_naked_icon	"FsMaverick"	g-black	"normal"
 "Anthony_clothed"	Figure of Anthony_clothed_icon	"Laylo"	g-white	"normal"
 "Anthony_face"	Figure of Anthony_face_icon	"Laylo"	g-black	"normal"
-"Anthro Shaft Beast"	Figure of AnthroShaftBeast_icon	"TwilightMaster"	g-white	"normal"
+"Anthro Shaft Beast"	Figure of AnthroShaftBeast_icon	"DragonFlayer"	g-white	"normal"
 "Artemis"	Figure of Artemis_icon	"FaroreNightclaw"	g-white	"normal"
 "Atticus_hard_smile_arms_lowered"	Figure of Atticus_hard_smile_arms_lowered_icon	"Lyttathebug"	g-black	"normal"
 "Atticus_hard_smile_arm_raised"	Figure of Atticus_hard_smile_arm_raised_icon	"Lyttathebug"	g-black	"normal"
@@ -1599,7 +1600,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Davies_scared_naked_preg"	Figure of Davies_scared_naked_preg_icon	"SteppeCrow"	g-white	"normal"
 "Davies_pinup"	Figure of Davies_pinup_icon	"SteppeCrow"	g-white	"normal"
 "Davies_pinup_preg"	Figure of Davies_pinup_preg_icon	"SteppeCrow"	g-white	"normal"
-"Demon Brute"	Figure of DemonBrute_icon	"Lay"	g-black	"normal"
+"Demon Brute"	Figure of DemonBrute_icon	"Inkydemon"	g-black	"normal"
 "Darius_clothed"	Figure of Darius_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Darius_hard"	Figure of Darius_hard_icon	"SteppeCrow"	g-white	"normal"
 "Darius_blissed_clothed"	Figure of Darius_blissed_clothed_icon	"SteppeCrow"	g-white	"normal"
@@ -1641,34 +1642,34 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Elven Hunter Encounter"	Figure of ElvenHunter_Encounter_icon	"Aosuka"	g-white	"normal"
 "Elven Hunter"	Figure of ElvenHunter_icon	"Vashaa"	g-white	"normal"
 "Elven Hunter hard"	Figure of ElvenHunter_hard_icon	"Vashaa"	g-white	"normal"
-"Eric_down"	Figure of Eric_down_icon	"Lytta"	g-black	"normal"
-"Eric_BriefsM_neutral"	Figure of Eric_BriefsM_neutral_icon	"Lytta"	g-white	"normal"
-"Eric_FirstMeeting_hostile"	Figure of Eric_FirstMeeting_hostile_icon	"Lytta"	g-white	"normal"
-"Eric_FirstMeeting_neutral"	Figure of Eric_FirstMeeting_neutral_icon	"Lytta"	g-white	"normal"
-"Eric_FirstMeeting_shocked"	Figure of Eric_FirstMeeting_shocked_icon	"Lytta"	g-white	"normal"
-"Eric_Naked_happy"	Figure of Eric_Naked_happy_icon	"Lytta"	g-white	"normal"
-"Eric_Naked_hostile"	Figure of Eric_Naked_hostile_icon	"Lytta"	g-white	"normal"
-"Eric_Naked_neutral"	Figure of Eric_Naked_neutral_icon	"Lytta"	g-white	"normal"
-"Eric_Naked_shocked"	Figure of Eric_Naked_shocked_icon	"Lytta"	g-white	"normal"
-"Eric_Naked_tongue"	Figure of Eric_Naked_tongue_icon	"Lytta"	g-white	"normal"
-"Eric_NakedHorseHard_happy"	Figure of Eric_NakedHorseHard_happy_icon	"Lytta"	g-white	"normal"
-"Eric_NakedHorseSoft_neutral"	Figure of Eric_NakedHorseSoft_neutral_icon	"Lytta"	g-white	"normal"
-"Eric_NakedOrcHard_happy"	Figure of Eric_NakedOrcHard_happy_icon	"Lytta"	g-white	"normal"
-"Eric_NakedOrcSoft_neutral"	Figure of Eric_NakedOrcSoft_neutral_icon	"Lytta"	g-white	"normal"
-"Eric_NakedSatyrHard_happy"	Figure of Eric_NakedSatyrHard_happy_icon	"Lytta"	g-white	"normal"
-"Eric_NakedSatyrSoft_neutral"	Figure of Eric_NakedSatyrSoft_neutral_icon	"Lytta"	g-white	"normal"
-"Eric_Panties_hostile"	Figure of Eric_Panties_hostile_icon	"Lytta"	g-white	"normal"
-"Eric_Panties_neutral"	Figure of Eric_Panties_neutral_icon	"Lytta"	g-white	"normal"
-"Eric_Soldier_happy"	Figure of Eric_Soldier_happy_icon	"Lytta"	g-white	"normal"
-"Eric_Soldier_neutral"	Figure of Eric_Soldier_neutral_icon	"Lytta"	g-white	"normal"
-"Eric_Speedo_happy"	Figure of Eric_Speedo_happy_icon	"Lytta"	g-white	"normal"
-"Eric_SpeedoM_happy"	Figure of Eric_SpeedoM_happy_icon	"Lytta"	g-white	"normal"
-"Eric_Student_happy"	Figure of Eric_Student_happy_icon	"Lytta"	g-white	"normal"
-"Eric_TShirt_happy"	Figure of Eric_TShirt_happy_icon	"Lytta"	g-white	"normal"
-"Eric_TShirt_hostile"	Figure of Eric_TShirt_hostile_icon	"Lytta"	g-white	"normal"
-"Eric_TShirt_neutral"	Figure of Eric_TShirt_neutral_icon	"Lytta"	g-white	"normal"
-"Eric_TShirt_shocked"	Figure of Eric_TShirt_shocked_icon	"Lytta"	g-white	"normal"
-"Eric_TShirt_tongue"	Figure of Eric_TShirt_tongue_icon	"Lytta"	g-white	"normal"
+"Eric_down"	Figure of Eric_down_icon	"Lyttathebug"	g-black	"normal"
+"Eric_BriefsM_neutral"	Figure of Eric_BriefsM_neutral_icon	"Lyttathebug"	g-white	"normal"
+"Eric_FirstMeeting_hostile"	Figure of Eric_FirstMeeting_hostile_icon	"Lyttathebug"	g-white	"normal"
+"Eric_FirstMeeting_neutral"	Figure of Eric_FirstMeeting_neutral_icon	"Lyttathebug"	g-white	"normal"
+"Eric_FirstMeeting_shocked"	Figure of Eric_FirstMeeting_shocked_icon	"Lyttathebug"	g-white	"normal"
+"Eric_Naked_happy"	Figure of Eric_Naked_happy_icon	"Lyttathebug"	g-white	"normal"
+"Eric_Naked_hostile"	Figure of Eric_Naked_hostile_icon	"Lyttathebug"	g-white	"normal"
+"Eric_Naked_neutral"	Figure of Eric_Naked_neutral_icon	"Lyttathebug"	g-white	"normal"
+"Eric_Naked_shocked"	Figure of Eric_Naked_shocked_icon	"Lyttathebug"	g-white	"normal"
+"Eric_Naked_tongue"	Figure of Eric_Naked_tongue_icon	"Lyttathebug"	g-white	"normal"
+"Eric_NakedHorseHard_happy"	Figure of Eric_NakedHorseHard_happy_icon	"Lyttathebug"	g-white	"normal"
+"Eric_NakedHorseSoft_neutral"	Figure of Eric_NakedHorseSoft_neutral_icon	"Lyttathebug"	g-white	"normal"
+"Eric_NakedOrcHard_happy"	Figure of Eric_NakedOrcHard_happy_icon	"Lyttathebug"	g-white	"normal"
+"Eric_NakedOrcSoft_neutral"	Figure of Eric_NakedOrcSoft_neutral_icon	"Lyttathebug"	g-white	"normal"
+"Eric_NakedSatyrHard_happy"	Figure of Eric_NakedSatyrHard_happy_icon	"Lyttathebug"	g-white	"normal"
+"Eric_NakedSatyrSoft_neutral"	Figure of Eric_NakedSatyrSoft_neutral_icon	"Lyttathebug"	g-white	"normal"
+"Eric_Panties_hostile"	Figure of Eric_Panties_hostile_icon	"Lyttathebug"	g-white	"normal"
+"Eric_Panties_neutral"	Figure of Eric_Panties_neutral_icon	"Lyttathebug"	g-white	"normal"
+"Eric_Soldier_happy"	Figure of Eric_Soldier_happy_icon	"Lyttathebug"	g-white	"normal"
+"Eric_Soldier_neutral"	Figure of Eric_Soldier_neutral_icon	"Lyttathebug"	g-white	"normal"
+"Eric_Speedo_happy"	Figure of Eric_Speedo_happy_icon	"Lyttathebug"	g-white	"normal"
+"Eric_SpeedoM_happy"	Figure of Eric_SpeedoM_happy_icon	"Lyttathebug"	g-white	"normal"
+"Eric_Student_happy"	Figure of Eric_Student_happy_icon	"Lyttathebug"	g-white	"normal"
+"Eric_TShirt_happy"	Figure of Eric_TShirt_happy_icon	"Lyttathebug"	g-white	"normal"
+"Eric_TShirt_hostile"	Figure of Eric_TShirt_hostile_icon	"Lyttathebug"	g-white	"normal"
+"Eric_TShirt_neutral"	Figure of Eric_TShirt_neutral_icon	"Lyttathebug"	g-white	"normal"
+"Eric_TShirt_shocked"	Figure of Eric_TShirt_shocked_icon	"Lyttathebug"	g-white	"normal"
+"Eric_TShirt_tongue"	Figure of Eric_TShirt_tongue_icon	"Lyttathebug"	g-white	"normal"
 "Eric_clothed"	Figure of Eric_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Eric_face"	Figure of Eric_face_icon	"SineAlas"	g-black	"normal"
 "Eric_naked"	Figure of Eric_naked_icon	"Kupo Klein"	g-white	"normal"
@@ -1775,12 +1776,12 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Janice"	Figure of Janice_icon	"Anymouse1968"	g-white	"normal"
 "Jason_clothed"	Figure of Jason_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Jason_naked"	Figure of Jason_naked_icon	"Kupo Klein"	g-white	"normal"
-"Jay_elf_outfit"	Figure of Jay_elf_outfit_icon	"Lytta"	g-black	"normal"
-"Jay_leggins"	Figure of Jay_leggins_icon	"Lytta"	g-black	"normal"
-"Jay_naked"	Figure of Jay_naked_icon	"Lytta"	g-black	"normal"
-"Jay_suit"	Figure of Jay_suit_icon	"Lytta"	g-black	"normal"
-"Jay_suit_quest"	Figure of Jay_suit_quest_icon	"Lytta"	g-black	"normal"
-"Jay_undies"	Figure of Jay_undies_icon	"Lytta"	g-black	"normal"
+"Jay_elf_outfit"	Figure of Jay_elf_outfit_icon	"Lyttathebug"	g-white	"normal"
+"Jay_leggins"	Figure of Jay_leggins_icon	"Lyttathebug"	g-white	"normal"
+"Jay_naked"	Figure of Jay_naked_icon	"Lyttathebug"	g-white	"normal"
+"Jay_suit"	Figure of Jay_suit_icon	"Lyttathebug"	g-white	"normal"
+"Jay_suit_quest"	Figure of Jay_suit_quest_icon	"Lyttathebug"	g-white	"normal"
+"Jay_undies"	Figure of Jay_undies_icon	"Lyttathebug"	g-white	"normal"
 "Jennifer_clothed"	Figure of Jennifer_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Jennifer_naked"	Figure of Jennifer_naked_icon	"SteppeCrow"	g-white	"normal"
 "Jennifer_preg_clothed"	Figure of Jennifer_preg_clothed_icon	"SteppeCrow"	g-white	"normal"
@@ -1815,8 +1816,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Korvin_blackcollar_face"	Figure of Korvin_blackcollar_face_icon	"Lyttathebug"	g-black	"normal"
 "Korvin_pinkcollar"	Figure of Korvin_pinkcollar_icon	"Lyttathebug"	g-black	"normal"
 "Korvin_pinkcollar_face"	Figure of Korvin_pinkcollar_face_icon	"Lyttathebug"	g-black	"normal"
-"Krampus_hard"	Figure of Krampus_hard_icon	"Lytta"	g-black	"normal"
-"Krampus_soft"	Figure of Krampus_soft_icon	"Lytta"	g-black	"normal"
+"Krampus_hard"	Figure of Krampus_hard_icon	"Lyttathebug"	g-black	"normal"
+"Krampus_soft"	Figure of Krampus_soft_icon	"Lyttathebug"	g-black	"normal"
 "Lamia"	Figure of Lamia_icon	"Anymouse1968"	g-white	"normal"
 "Latex Bobcat"	Figure of Bobcat1_icon	"Uniformvixen"	g-white	"normal"
 "Latex Ermine_Defeat"	Figure of LatexErmine_icon	"Anymouse1968"	g-white	"normal"	[only used in defeat]
@@ -1860,7 +1861,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Marc_face"	Figure of Marc_face_icon	"CrashBurnDraw"	g-black	"normal"
 "Marc_fucked"	Figure of Marc_fucked_icon	"Laylo"	g-black	"normal"
 "Mareslut"	Figure of Mareslut_icon	"Vashaa"	g-white	"normal"
-"Mason"	Figure of Mason_icon	"Abelsword"	g-black	"normal"
+"Mason"	Figure of Mason_icon	"Vashaa"	g-black	"normal"
 "MasterMind"	Figure of MasterMind_icon	""	g-white	"normal"
 "Math Teacher"	Figure of MathTeacher_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Medea_face"	Figure of Medea_face_icon	"LocksTO"	g-white	"normal"
@@ -1888,9 +1889,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Monty_face"	Figure of Monty_face_icon	"Obieblu"	g-white	"normal"
 "Monty_clothed"	Figure of Monty_clothed_icon	"Obieblu"	g-white	"normal"
 "Monty_naked"	Figure of Monty_naked_icon	"Obieblu"	g-white	"normal"
-"Moreau_face"	Figure of Moreau_face_icon	"Lytta"	g-black	"normal"
-"Moreau_hard"	Figure of Moreau_hard_icon	"Lytta"	g-black	"normal"
-"Moreau_soft"	Figure of Moreau_soft_icon	"Lytta"	g-black	"normal"
+"Moreau_face"	Figure of Moreau_face_icon	"Lyttathebug"	g-black	"normal"
+"Moreau_hard"	Figure of Moreau_hard_icon	"Lyttathebug"	g-black	"normal"
+"Moreau_soft"	Figure of Moreau_soft_icon	"Lyttathebug"	g-black	"normal"
 "Nerdy Mouse_clothed"	Figure of Nerdy Mouse_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Nerdy Mouse_hard"	Figure of Nerdy Mouse_hard_icon	"SteppeCrow"	g-white	"normal"
 "Mul_clothed"	Figure of Mul_clothed_icon	"Kupo Klein"	g-white	"normal"
@@ -1902,10 +1903,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Nala naked"	Figure of Nala_naked_icon	"SteppeCrow"	g-White	"normal"
 "Nelson_clothed"	Figure of Nelson_clothed_icon	"Ticl"	g-white	"normal"
 "Nelson_naked"	Figure of Nelson_naked_icon	"Ticl"	g-white	"normal"
-"Nermine_clothed"	Figure of Nermine_clothed_icon	"Lytta"	g-black	"normal"
-"Nermine_clothed_face"	Figure of Nermine_clothed_face_icon	"Lytta"	g-black	"normal"
-"Nermine_naked"	Figure of Nermine_naked_icon	"Lytta"	g-black	"normal"
-"Nermine_naked_face"	Figure of Nermine_naked_face_icon	"Lytta"	g-black	"normal"
+"Nermine_clothed"	Figure of Nermine_clothed_icon	"Lyttathebug"	g-black	"normal"
+"Nermine_clothed_face"	Figure of Nermine_clothed_face_icon	"Lyttathebug"	g-black	"normal"
+"Nermine_naked"	Figure of Nermine_naked_icon	"Lyttathebug"	g-black	"normal"
+"Nermine_naked_face"	Figure of Nermine_naked_face_icon	"Lyttathebug"	g-black	"normal"
 "Karen clothed"	Figure of Karen_clothed_icon	"SteppeCrow"	g-White	"normal"
 "Karen naked"	Figure of Karen_naked_icon	"SteppeCrow"	g-White	"normal"
 "Newt"	Figure of Newt_icon	"Anyare"	g-white	"normal"
@@ -2049,7 +2050,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Skarnoth_undies"	Figure of Skarnoth_undies_icon	"Kien-Biu"	g-black	"normal"
 "Skarnoth_naked"	Figure of Skarnoth_naked_icon	"Kien-Biu"	g-black	"normal"
 "Skin Diagram 1"	Figure of SkinDiagram1_icon	"Wahn"	g-white	"normal"
-"Skin Diagram 1"	Figure of SkinDiagram2_icon	"Wahn"	g-white	"normal"
+"Skin Diagram 2"	Figure of SkinDiagram2_icon	"Wahn"	g-white	"normal"
 "Spike_jacket"	Figure of Spike_jacket_icon	"Lyttathebug"	g-black	"normal"
 "Spike_clothed"	Figure of Spike_clothed_icon	"Lyttathebug"	g-black	"normal"
 "Spike_shirtless"	Figure of Spike_shirtless_icon	"Lyttathebug"	g-black	"normal"
@@ -2114,7 +2115,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Tigertaur Hard"	Figure of Tigertaur_hard_icon	"Vashaa"	g-white	"normal"
 "Tigertaur Soft"	Figure of Tigertaur_soft_icon	"Vashaa"	g-white	"normal"
 "Timothy"	Figure of Timothy_icon	"Waxraven/WXRVN"	g-white	"normal"
-"TSW_headshot"	Figure of TSW_headshot_icon	"Zealot"	g-black	"normal"
+"TSW_headshot"	Figure of TSW_headshot_icon	"Zealot"	g-white	"normal"
 "TSW_naked"	Figure of TSW_naked_icon	"Zealot"	g-white	"normal"
 "TSW_sansNecklace"	Figure of TSW_sansNecklace_icon	"Zealot"	g-white	"normal"
 "TyrannosaurusMale_clothed"	Figure of TyrannosaurusMale_clothed_icon	"SteppeCrow"	g-white	"normal"
@@ -2164,7 +2165,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Vanessa_preg_clothed"	Figure of Vanessa_preg_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Violet_face"	Figure of Violet_face_icon	"SineAlas"	g-black	"normal"
 "Vixentaur"	Figure of Vixentaur_icon	"Anymouse1968"	g-white	"normal"
-["Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-white	"normal"]
+"Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-white	"normal"
 "Vixen Nurse Herm"	Figure of VixenNurse_herm_clothed_icon	"Moirah"	g-white	"normal"
 "Vixen Nurse Herm naked"	Figure of VixenNurse_herm_naked_icon	"Moirah"	g-white	"normal"
 "Vixen Nurse Herm"	Figure of VixenNurse_fem_clothed_icon	"Moirah"	g-white	"normal"
@@ -2336,7 +2337,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Navigation - Mall - Bodyshop"	Figure of emap_mall_bodyshop_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Branson & Partner"	Figure of emap_mall_bransonpartner_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Brookstone Books"	Figure of emap_mall_brookstonebooks_icon	"executaball"	g-black	"normal"
-"Navigation - Mall - Christmas Village"	Figure of emap_mall_Christmasvillage_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Christmas Village"	Figure of emap_mall_christmasvillage_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - East Wing"	Figure of emap_mall_eastwing_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - FoodCourt"	Figure of emap_mall_foodcourt_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Foyer"	Figure of emap_mall_foyer_icon	"executaball"	g-black	"normal"
@@ -2589,7 +2590,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 [emap - Beach]
 "emap - Beach Plaza"	Figure of emap_Beach_Plaza_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Boardwalk"	Figure of emap_Boardwalk_icon	"Wolfram Rolf"	g-black	"normal"
-"emap - Church Hall"	Figure of emap_church_hall_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Church Hall"	Figure of emap_Church_Hall_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - City Center"	Figure of emap_City_Center_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - City Entrance"	Figure of emap_City_Entrance_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - City Market"	Figure of emap_City_Market_icon	"Wolfram Rolf"	g-black	"normal"
@@ -2728,364 +2729,363 @@ carry out artistcredits:
 	say "Artwork Credits for Flexible Survival:[line break]";
 	LineBreak;
 	say "Infections:[line break]";
-	say "     Ace by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
-	say "     Alpha Wolf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Amazon by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
-	say "     Anthro Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
-	say "     Anthro Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
-	say "     Bear by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Beaver by HBruton @ furaffinity.net[line break]";
-	say "     Black Equinoid by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Blue Gel by Rastear @ y-gallery.net[line break]";
-	say "     Bobcat by Uniformvixen @ furaffinity.net[line break]";
-	say "     Bottlenose Toy by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Catgirl by Valen @ ?[line break]";
-	say "     Cat Ninja (female) by Bix707 @ furaffinity.net[line break]";
-	say "     Centaur Stallion by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Centaur Mare by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Ace by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
+	say "     Alpha Wolf by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Amazon by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
+	say "     Anthro Shaft Beast concept created by DragonFlayer @ https://furaffinity.net/user/dragonflayer[line break]";
+	say "     Anthro Shaft Beast artwork by Demon-Man @ https://furaffinity.net/user/demon-man[line break]";
+	say "     Bear by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Beaver by HBruton @ https://furaffinity.net/user/hbruton[line break]";
+	say "     Black Equinoid by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Blue Gel by Rastear @ https://rastea-art.tumblr.com[line break]";
+	say "     Bobcat by Uniformvixen @ https://furaffinity.net/user/uniformvixen[line break]";
+	say "     Bottlenose Toy by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Cat Ninja (female) by Bix707 @ https://furaffinity.net/user/bix707[line break]";
+	say "     Centaur Stallion by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Centaur Mare by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
 	say "     Cerberus by Anonymous[line break]";
-	say "     Cheetah Woman by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
-	say "     Chocolate Lab by SparklePens @ furaffinity.net[line break]";
-	say "     Cougar (anthro) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-[	say "     Cougar by catnamedfish @ furaffinity.net[line break]";]
-[	say "     Dark Elf by Nokturnalkittie @ https://www.furaffinity.net/user/nokturnalkittie/[line break]";]
-	say "     Dark Elf (Red) by Moirah @ https://www.furaffinity.net/gallery/moirah/[line break]";
-	say "     Dark Elf (Blue) by Moirah @ https://www.furaffinity.net/gallery/moirah/[line break]";
-	say "     Demon Brute by Lay @ y-gallery.net[line break]";
-	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
-	say "     Donkeywoman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Donkeyman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Dracovixentaur by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Cheetah Woman by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
+	say "     Chocolate Lab by SparklePens @ https://furaffinity.net/user/sparklepens[line break]";
+	say "     Cougar (anthro) by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+[	say "     Cougar by catnamedfish @ https://furaffinity.net/user/catnamedfish[line break]";]
+	say "     Dark Elf by Nokturnalkittie @ https://furaffinity.net/user/nokturnalkittie[line break]";
+	say "     Dark Elf (Red) by Moirah @ https://furaffinity.net/user/moirah[line break]";
+	say "     Dark Elf (Blue) by Moirah @ https://furaffinity.net/user/moirah[line break]";
+	say "     Demon Brute by Inkydemon @ https://furaffinity.net/user/inkydemon[line break]";
+	say "     Doberman Cop by TheRedAngel @ https://furaffinity.net/user/theredangel[line break]";
+	say "     Donkeywoman by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Donkeyman by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Dracovixentaur by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
 	say "     Ebonflame Drake by Anonymous[line break]";
-	say "     Elven Hunter Encounter by Aosuka @ y-gallery.net[line break]";
-	say "     Elven Hunter by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Ewe by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Feline (females) by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Feral Gryphon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Feral Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
-	say "     Feral Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
+	say "     Elven Hunter Encounter by Aosuka @ https://deviantart.com/aosuka[line break]";
+	say "     Elven Hunter by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Ewe by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Feline (females) by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Feral Gryphon by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Feral Shaft Beast concept created by DragonFlayer @ https://furaffinity.net/user/dragonflayer[line break]";
+	say "     Feral Shaft Beast artwork by Demon-Man @ https://furaffinity.net/user/demon-man[line break]";
 	say "     Fiona by Valen[line break]";
-	say "     Fire Sprite Male by Genelightfoot @ y-gallery.net[line break]";
-	say "     Fluffy Owl 2 by Moirah @ https://www.furaffinity.net/gallery/moirah/[line break]";
-	say "     Fluffy Owl by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
-	say "     Friendship Pony by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Gazelle by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Gargoyle Stuck Threesome by EmieChii @ https://www.furaffinity.net/user/emiechii/[line break]";
-	say "     German Shepherd by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Giraffe Herm by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
-	say "     Gorilla by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Gunbunny by HBruton @ furaffinity.net[line break]";
-	say "     Harpy by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Hawkman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Hellfire Demon by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
-	say "     Helot by Obieblu @ tumblr.com[line break]";
-	say "     Hercules by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Hermaphrodite Gryphon by dbd @ furaffinity.net[line break]";
-	say "     Hermaphrodite Gryphon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Hermaphrodite Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Homo Sapiens by Astro @ y-gallery.net[line break]";
-	say "     Horny Doctor (male) by Cooper @ furaffinity.net[line break]";
-	say "     Horsemazon by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Horseman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Hulking Cheerleader by Seija @ ?[line break]";
-	say "     Husky Alpha by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Husky Female by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Imp by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Incubus by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Jennifer by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Jennifer by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
+	say "     Fire Sprite Male by Genelightfoot @ https://furaffinity.net/user/genelightfoot[line break]";
+	say "     Fluffy Owl 2 by Moirah @ https://furaffinity.net/user/moirah[line break]";
+	say "     Fluffy Owl by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
+	say "     Friendship Pony by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Gazelle by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Gargoyle Stuck Threesome by EmieChii @ https://furaffinity.net/user/emiechii[line break]";
+	say "     German Shepherd by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Giraffe Herm by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Goo Girl by Rastear @ https://rastea-art.tumblr.com[line break]";
+	say "     Gorilla by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Gunbunny by HBruton @ https://furaffinity.net/user/hbruton[line break]";
+	say "     Harpy by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Hawkman by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Hellfire Demon by Gherod @ https://x.com/gherodv[line break]";
+	say "     Helot by Obieblu @ https://x.com/ObieBlu3D[line break]";
+	say "     Hercules by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Hermaphrodite Gryphon by dbd @ https://furaffinity.net/user/dbd[line break]";
+	say "     Hermaphrodite Gryphon by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Hermaphrodite Latex Vixen by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Homo Sapiens by Astro[line break]";
+	say "     Horny Doctor (male) by Cooper @ https://furaffinity.net/user/cooper[line break]";
+	say "     Horsemazon by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Horseman by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Hulking Cheerleader by Seija[line break]";
+	say "     Husky Alpha by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Husky Female by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Imp by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
+	say "     Incubus by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
+	say "     Jennifer by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Jennifer by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
 	say "     Kangaroo by Anonymous[line break]";
-	say "     Lamia by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Latex Ermine (color variants) by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Latex Ermine (creature loss) by Halcy0n @ furaffinity.net[line break]";
-	say "     Latex Fox by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Leopardman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Magic Drake by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Mammoth by Boo3 @ furaffinity.net[line break]";
-	say "     Mammoth Pure Succumb by Boo3 @ furaffinity.net[line break]";
-	say "     Mannequin by Rastear @ y-gallery.net[line break]";
-	say "     Math Teacher by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
+	say "     Lamia by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Latex Ermine (color variants) by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Latex Ermine (creature loss) by Halcy0n @ https://furaffinity.net/user/halcy0n[line break]";
+	say "     Latex Fox by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Leopardman by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Magic Drake by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Mammoth by Boo3 @ https://furaffinity.net/user/boo3[line break]";
+	say "     Mammoth Pure Succumb by Boo3 @ https://furaffinity.net/user/boo3[line break]";
+	say "     Mannequin by Rastear @ https://rastea-art.tumblr.com[line break]";
+	say "     Math Teacher by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
 	say "     Mental Mice by Xilrayne @ https://inkbunny.net/Xilrayne[line break]";
-	say "     Messy Pig by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Megakitty by BushyCat @ furaffinity.net[line break]";
-	say "     Minotaur by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Naga by Rastear @ y-gallery.net[line break]";
-	say "     Ninja Cat (female) by Bix707 @ furaffinity.net[line break]";
+	say "     Messy Pig by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Megakitty by BushyCat @ https://furaffinity.net/user/bushycat[line break]";
+	say "     Minotaur by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Naga by Rastear @ https://rastea-art.tumblr.com[line break]";
+	say "     Ninja Cat (female) by Bix707 @ https://furaffinity.net/user/bix707[line break]";
 	say "     Ninja Cat (male) by <redacted>[line break]";
-	say "     Naga by Rastear @ y-gallery.net[line break]";
-	say "     Orca by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Orc Breeder by Genelightfoot @ y-gallery.net[line break]";
-	say "     Orc Warrior by Genelightfoot @ y-gallery.net[line break]";
-	say "     Pink Gel by Rastear @ y-gallery.net[line break]";
-	say "     Pink Poodle by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Naga by Rastear @ https://rastea-art.tumblr.com[line break]";
+	say "     Orca by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Orc Breeder by Genelightfoot @ https://furaffinity.net/user/genelightfoot[line break]";
+	say "     Orc Warrior by Genelightfoot @ https://furaffinity.net/user/genelightfoot[line break]";
+	say "     Pink Gel by Rastear @ https://rastea-art.tumblr.com[line break]";
+	say "     Pink Poodle by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
 	say "     Pewter Consort by Xilrayne @ https://inkbunny.net/Xilrayne[line break]";
-	say "     Pirate Shark by Zealot @  https://www.furaffinity.net/user/Drakosacerdos/[line break]";
-	say "     Plush Lion by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Queen Bee by Caltroplay @ furaffinity.net[line break]";
-	say "     Ram by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Reindeer by MoT @ furaffinity.net[line break]";
-	say "     Reptaur by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Rubber Tigress by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Saber Kitty by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Sabretooth (feral) by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Sabretooth (anthro) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Sand Man by Rastear @ y-gallery.net[line break]";
-	say "     Satyr by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Satyress by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Sea Dragoness by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Sea Dragon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Sgt. Marks by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Shadow Beast by Hioshiru @ https://www.furaffinity.net/user/hioshiru/[line break]";
-	say "     Smooth Collie Shemale by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Siamese Cats by RedCoatCat @ furaffinity.net[line break]";
-	say "     Sierrasaur by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Snow Bat by Rosali @ Furaffinity.net[line break]";
-	say "     Snow Leopard by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Spartan by Obieblu @ tumblr.com[line break]";
-	say "     Spartan & Helot by Obieblu @ tumblr.com[line break]";
-	say "     Stallionboi by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Succubus by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
+	say "     Pirate Shark by Zealot @  https://furaffinity.net/user/Drakosacerdos[line break]";
+	say "     Plush Lion by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Queen Bee by Caltroplay @ https://furaffinity.net/user/caltroplay[line break]";
+	say "     Ram by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Reindeer by MoT @ https://furaffinity.net/user/mot[line break]";
+	say "     Reptaur by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Rubber Tigress by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Saber Kitty by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Sabretooth (feral) by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Sabretooth (anthro) by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Sand Man by Rastear @ https://rastea-art.tumblr.com[line break]";
+	say "     Satyr by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Satyress by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Sea Dragoness by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Sea Dragon by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Sgt. Marks by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Shadow Beast by Hioshiru @ https://furaffinity.net/user/hioshiru[line break]";
+	say "     Smooth Collie Shemale by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Siamese Cats by RedCoatCat @ https://furaffinity.net/user/redcoatcat[line break]";
+	say "     Sierrasaur by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Snow Bat by Rosali @ https://furaffinity.net/user/rosali[line break]";
+	say "     Snow Leopard by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Spartan by Obieblu @ https://x.com/ObieBlu3D[line break]";
+	say "     Spartan & Helot by Obieblu @ https://x.com/ObieBlu3D[line break]";
+	say "     Stallionboi by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Succubus by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
 	say "     Sugar Glider by Xilrayne @ https://inkbunny.net/Xilrayne[line break]";
-	say "     Thought Eater by Rastear @ y-gallery.net[line break]";
-	say "     Tigress Hooker by Sharei @ furaffinity.net[line break]";
-	say "     Triceratops by HBruton @ furaffinity.net[line break]";
-	say "     Vixentaur by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Vixen Nurse by KV1NN4 @ furaffinity.net[line break]";
-	say "     Voodoo Gecko by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
-	say "     Wereraptor by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Werewolf (female) by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
-	say "     Werewolf Brute by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
-	say "     Wildcat by Strype @ furaffinity.net[line break]";
-	say "     Wolftaur by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Wood Elf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Wrestling Wolf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Wyvern Male by Corbee @ https://www.furaffinity.net/user/corneliablanka/[line break]";
-	say "     Wyvern Female by Corbee @ https://www.furaffinity.net/user/corneliablanka/[line break]";
+	say "     Thought Eater by Rastear @ https://rastea-art.tumblr.com[line break]";
+	say "     Tigress Hooker by Sharei @ https://deviantart.com/sharworks-plus[line break]";
+	say "     Triceratops by HBruton @ https://furaffinity.net/user/hbruton[line break]";
+	say "     Vixentaur by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Vixen Nurse by KV1NN4 @ https://furaffinity.net/user/kv1nn4[line break]";
+	say "     Voodoo Gecko by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
+	say "     Wereraptor by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Werewolf (female) by Watsup @ https://furaffinity.net/user/watsup[line break]";
+	say "     Werewolf Brute by Gherod @ https://x.com/gherodv[line break]";
+	say "     Wildcat by Strype @ https://furaffinity.net/user/strype[line break]";
+	say "     Wolftaur by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Wood Elf by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Wrestling Wolf by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Wyvern Male by Corbee @ https://furaffinity.net/user/geaidu[line break]";
+	say "     Wyvern Female by Corbee @ https://furaffinity.net/user/geaidu[line break]";
 	say "     Wyvern Female by Anonymous[line break]";
-	say "     Wyvern Patriarch by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Yamato Dragon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Yamato Dragoness by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Yuppie Mink by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Zebra by Purplepardus @ furaffinity.net[line break]";
+	say "     Wyvern Patriarch by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Yamato Dragon by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Yamato Dragoness by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Yuppie Mink by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Zebra by Purplepardus @ https://furaffinity.net/user/purplepardus[line break]";
 	LineBreak;
 	say "NPCs:[line break]";
-	say "     Alexandra by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
-	say "     Amy by Sususmiles @ furaffinity.net[line break]";
-	say "     Andrew by Rukis @ furaffinity.net[line break]";
-	say "     Angie by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Adam by Kadel @ y-gallery.net[line break]";
-	say "     Aerana by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
-	say "     Alex by canned @ weasyl.com (6cans @ furaffinity.net)[line break]";
-	say "     Andre by Wemd @ furaffinity.net[line break]";
-	say "     Anthony (dressed) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
-	say "     Anthony (design, naked) by FsMaverick @ http://www.furaffinity.net/user/fsmaverick/[line break]";
-	say "     Artemis by FaroreNightclaw @ furaffinity.net[line break]";
-	say "     Anastasia by SandySchreiber @ furaffinity.net[line break]";
-	say "     Atticus by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
-	say "     Augustus Drake by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
-	say "     Augustus_Drake_lion_form_hard @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
-	say "     Augustus_Drake_lion_form_soft @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
-	say "     Aurora by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
-	say "     Blanche (standing & preg) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Blanche (color) by The_Negative @ furaffinity.net[line break]";
-	say "     Blanche (lineart) by Xenotropos @ furaffinity.net[line break]";
-	say "     Blot by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Boghrim by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Bradford by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Brennan by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Brian by dhstein @ furaffinity.net[line break]";
-	say "     Brooke by Otterbits @ https://www.furaffinity.net/user/otterbits/[line break]";
-	say "     Brutus by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
-	say "     Bubble by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Bunny Jock by Darian821 @ y-gallery.net[line break]";
-	say "     Buster by Padunk @ furaffinity.net[line break]";
-	say "     Candy by BeaverTyan @ https://www.furaffinity.net/scraps/beavertyan/[line break]";
-	say "     Carl by Hufnaar @ furaffinity.net[line break]";
-	say "     Carl + Eric by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
-	say "     Chase by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Chris by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Chris (breeder) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Christy by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Christy (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Colleen (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Colleen (body) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Corbin (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Dash by Conchi @ https://artisticconch.tumblr.com/[line break]";
-	say "     Danny (naked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
-	say "     Danny (design + dressed) by Dragonpunk @ furaffinity.net[line break]";
-	say "     Darius by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Darius (dressed + naked) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Dark Tyrant (Fallen King) by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
-	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
-	say "     Diego by valdericblackstag @ furaffinity.net[line break]";
-	say "     Diego by Anonymous/Damdidoo[line break]";
-	say "     Dmitri by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Dr. Matt (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Dr. Matt by The_Negative @ furaffinity.net[line break]";
-	say "     Dr. Moffatt (color) by The_Negative @ furaffinity.net[line break]";
-	say "     Dr. Moffatt (bw) by MadTurtle @ furaffinity.net[line break]";
-	say "     Dr. Mouse by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Doran by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Elijah by Banni @ https://www.furaffinity.net/user/banniart/[line break]";
-	say "     Eric (depressed) Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
-	say "     Eric Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Eric (on sofa) by Bludwing @ http://bludwingart.tumblr.com[line break]";
-	say "     Eric by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
-	say "     Erin Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Fancy by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Fang (headshot) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Fang (body) by Steppecrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Fang (bellyrub) by Visage48 @ https://www.furaffinity.net/user/visage48/[line break]";
-	say "     Francois by Xenotropos @ furaffinity.net[line break]";
-	say "     Frank by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
-	say "     Felix by ConnyChiwa @ https://www.furaffinity.net/user/connychiwa/[line break]";
-	say "     Gabriel by Darian821 @ y-gallery.net[line break]";
-	say "     Galaxite_clothed by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
-	say "     Garrett by Catmonkshiro @ furaffinity.net[line break]";
-	say "     Garth (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Gillian by Eevachu @ furaffinity.net[line break]";
-	say "     Gina by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Gobby by lionsilverwolf @ furaffinity.net[line break]";
-	say "     Grant by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-[
-	say "     Grant by uniformvixen @ furaffinity.net[line break]";
-	say "     Grant (color) by Familliar @ furaffinity.net[line break]";
-]
-	say "     Hadiya (solo) by lionsilverwolf @ furaffinity.net[line break]";
-	say "     Hadiya w/Gobby by SandySchreiber @ furaffinity.net[line break]";
-	say "     Helen by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
-	say "     Henry (Adopt) by CastBound @ https://www.furaffinity.net/user/castbound/[line break]";
-	say "     Hayato by Darian821 @ y-gallery.net[line break]";
-	say "     Harold by Hufnaar @ furaffinity.net[line break]";
-	say "     Hobo by Conchi @ https://artisticconch.tumblr.com/[line break]";
-	say "     Honey by SandySchreiber @ furaffinity.net[line break]";
-	say "     Isaac by Reaper3d @ https://www.furaffinity.net/user/reaper3d/[line break]";
-	say "     James by Anyare @ furaffinity.net[line break]";
-	say "     Janice by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Jason by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Jay by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
-	say "     Jett by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
-	say "     Jill by Sususmiles @ furaffinity.net[line break]";
-	say "     Jimmy by Redragon @ ???[line break]";
-	say "     Katherine by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Karel by Reaper3d @ https://www.furaffinity.net/user/reaper3d/[line break]";
-	say "     Katya by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
-	say "     Klauz by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Knight by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
-	say "     Koghh by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Korvin by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
-	say "     Krampus by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
-	say "     Leonard by SandySchreiber @ furaffinity.net[line break]";
-	say "     Lilith by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Lindsey by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	[say "     Logan by Rik @ https://www.furaffinity.net/user/almee/[line break]";] [WIP]
-	say "     Malakhi by Jahi @ https://www.furaffinity.net/user/jahi/[line break]";
-	say "     Malik by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Master Mind by HBruton @ furaffinity.net[line break]";
-	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
-	say "     Marc (fucked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
-	say "     Mareslut by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Mason by Abelsword @ https://www.furaffinity.net/user/Abelsword[line break]";
-	say "     Medea by LocksTO @ https://www.furaffinity.net/user/locksto/[line break]";
-	say "     Micaela by Kattzie @ furaffinity.net[line break]";
-	say "     Mike (face) SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Mike by Darian821 @ y-gallery.net[line break]";
-	say "     Mogdraz by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
-	say "     Moreau by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
-	say "     Mul by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Nadia by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Nelson by Ticl @ https://www.furaffinity.net/user/ticl/[line break]";
-	say "     Nermine by Lyttathebug @ furaffinity.net[line break]";
-	say "     Newt by Anyare @ furaffinity.net[line break]";
-	say "     Nightmare by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Orbul by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Orthas (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Paula by Kikeri-arts @ deviantart.com[line break]";
-	say "     Penny by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
-	say "     Rachel by o-kemono @ furaffinity.net[line break]";
-	say "     Ranae by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Rane Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Rane by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
-	say "     Rane (butt) by Lyttathebug @ furaffinity.net[line break]";
-	say "     Rod by Ticl @ https://www.furaffinity.net/user/ticl/[line break]";
-	say "     Ronda by Ticl @ https://www.furaffinity.net/user/ticl/[line break]";
-	say "     Ronda (Slut Rat) by uniformvixen @ furaffinity.net[line break]";
-	say "     Ruby by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
-	say "     Ryousei (clothed) by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Ryousei by ValdericBlackstag @ https://www.furaffinity.net/user/valdericblackstag/[line break]";
-	say "     Sascha (crouch) by Sokan/Sweet Firelis @ https://www.furaffinity.net/user/sweetfirelis/[line break]";
-	say "     Sascha (jogging) by CastBound @ https://www.furaffinity.net/user/castbound/[line break]";
-	say "     Sally by Furball @ furaffinity.net[line break]";
-	say "     Sam (as Dracovixentaur) by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Sam (as Vixentaur) by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Santa Claws by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Sandra by Trav @ ???[line break]";
-	say "     Sarah by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
-	say "     Segis by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
-	say "     Septus by Feralise @ furaffinity.net[line break]";
-	say "     Septus (face) by Cirrusthecloud @ https://www.furaffinity.net/user/cirrusthecloud/[line break]";
-	say "     Sgt Marks by Anyare @ furaffinity.net[line break]";
-	say "     Stella by Furball @ furaffinity.net[line break]";
-	say "     Sidney by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Siren by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Skarnoth by Kien-Biu @ http://nsfwbetitngoan.tumblr.com/[line break]";
-	say "     Slutslave by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Snow by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
-	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";
-	say "     Spike Body by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
-	say "     Spike Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Susan (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Sven by Brun69 @ https://www.furaffinity.net/user/brun69/[line break]";
-	say "     Tehuantl M/F Faces by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Tehuantl Male by Yora @ https://www.furaffinity.net/user/yora/[line break]";
-	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
-	say "     Tiger Shark Warrior by Zealot @ https://www.furaffinity.net/user/Drakosacerdos/[line break]";
-	say "     Timothy by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
-	say "     Tiny Tim by Obieblu @ tumblr.com[line break]";
-	say "     Tiny Tim (Face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Toven by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Tristian by Enaya-TheWhiteWolfen @ https://www.furaffinity.net/user/enaya-thewhitewolfen/";
-	say "     Tyke by TylerAz @ https://www.furaffinity.net/user/tyleraz[line break]";
-	say "     Urik Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Urik (original) by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Urik (HD) by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
-	say "     Valerie by Sususmiles @ furaffinity.net[line break]";
-	say "     Meredith by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Vanessa by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
-	say "     Violet Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Xaedihr by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
-	say "     Yatur by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Yolanda by SandySchreiber @ furaffinity.net[line break]";
-	say "     Zigor by AugurMew @ furaffinity.net[line break]";
-	say "     Zoe Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
+	say "     Alexandra by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
+	say "     Amy by Sususmiles @ https://furaffinity.net/user/sususmiles[line break]";
+	say "     Andrew by Rukis @ https://furaffinity.net/user/rukis[line break]";
+	say "     Angie by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Adam by Kadel @ https://furaffinity.net/user/kadel~[line break]";
+	say "     Aerana by Gherod @ https://x.com/gherodv[line break]";
+	say "     Alex by canned @ https://furaffinity.net/user/6cans[line break]";
+	say "     Andre by Wemt @ https://furaffinity.net/user/wemt[line break]";
+	say "     Anthony (dressed) by Laylo @ https://furaffinity.net/user/lay-lo[line break]";
+	say "     Anthony (design, naked) by FsMaverick @ https://furaffinity.net/user/fsmaverick[line break]";
+	say "     Artemis by FaroreNightclaw @ https://furaffinity.net/user/farorenightclaw[line break]";
+	say "     Anastasia by SandySchreiber @ https://furaffinity.net/user/sandyschreiber[line break]";
+	say "     Atticus by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
+	say "     Augustus Drake by Gherod @ https://x.com/gherodv[line break]";
+	say "     Augustus_Drake_lion_form_hard by Gherod @ https://x.com/gherodv[line break]";
+	say "     Augustus_Drake_lion_form_soft by Gherod @ https://x.com/gherodv[line break]";
+	say "     Aurora by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
+	say "     Blanche (standing & preg) by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Blanche (color) by The_Negative @ https://furaffinity.net/user/thenegative[line break]";
+	say "     Blanche (lineart) by Xenotropos @ https://furaffinity.net/user/xenotropos[line break]";
+	say "     Blot by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Boghrim by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
+	say "     Bradford by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Brennan by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Brian by dhstein @ https://furaffinity.net/user/dhstein[line break]";
+	say "     Brooke by Otterbits @ https://furaffinity.net/user/otterbits[line break]";
+	say "     Brutus by Inkydemon @ https://furaffinity.net/user/inkydemon[line break]";
+	say "     Bubble by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Bunny Jock by Darian821 @ https://x.com/Darian821Jai821[line break]";
+	say "     Buster by Padunk @ https://furaffinity.net/user/padunk[line break]";
+	say "     Candy by BeaverTyan @ https://furaffinity.net/user/beavertyan[line break]";
+	say "     Carl by Hufnaar @ https://furaffinity.net/user/hufnaar[line break]";
+	say "     Carl + Eric by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
+	say "     Chase by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Chris by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
+	say "     Chris (breeder) by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Christy by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Christy (face) by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Colleen (face) by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Colleen (body) by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Corbin (face) by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Dash by Conchi @ https://artisticconch.tumblr.com[line break]";
+	say "     Danny (naked) by Laylo @ https://furaffinity.net/user/lay-lo[line break]";
+	say "     Danny (design + dressed) by Dragonpunk @ https://furaffinity.net/user/dragonpunk[line break]";
+	say "     Darius by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Darius (dressed + naked) by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Dark Tyrant (Fallen King) by Gherod @ https://x.com/gherodv[line break]";
+	say "     David by Keitaro87 @ https://kei87art.tumblr.com[line break]";
+	say "     Diego by ValdericBlackstag @ https://furaffinity.net/user/valdericblackstag[line break]";
+	say "     Dmitri by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Dr. Matt (face) by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Dr. Matt by The_Negative @ https://furaffinity.net/user/thenegative[line break]";
+	say "     Dr. Moffatt (color) by The_Negative @ https://furaffinity.net/user/thenegative[line break]";
+	say "     Dr. Moffatt (bw) by MadTurtle @ https://furaffinity.net/user/madturtle[line break]";
+	say "     Dr. Mouse by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Doran by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Elijah by Banni @ https://furaffinity.net/user/banniart[line break]";
+	say "     Eric (depressed) by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
+	say "     Eric Headshot by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Eric (on sofa) by Bludwing @ https://x.com/Bludwingart[line break]";
+	say "     Eric by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
+	say "     Erin Headshot by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Fancy by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Fang (headshot) by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Fang (body) by Steppecrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Fang (bellyrub) by Visage48 @ https://furaffinity.net/user/visage48[line break]";
+	say "     Francois by Xenotropos @ https://furaffinity.net/user/xenotropos[line break]";
+	say "     Frank by Dolphpup @ https://furaffinity.net/user/dolphpup[line break]";
+	say "     Felix by ConnyChiwa @ https://furaffinity.net/user/connychiwa[line break]";
+	say "     Gabriel by Darian821 @ https://x.com/Darian821Jai821[line break]";
+	say "     Galaxite_clothed by Gherod @ https://x.com/gherodv[line break]";
+	say "     Garrett by Catmonkshiro @ https://furaffinity.net/user/catmonkshiro[line break]";
+	say "     Garth (face) by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Gillian by Eevachu @ https://furaffinity.net/user/eevachu[line break]";
+	say "     Gina by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Gobby by lionsilverwolf @ https://furaffinity.net/user/lionsilverwolf[line break]";
+	say "     Grant by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Grant by Uniformvixen @ https://furaffinity.net/user/uniformvixen[line break]";
+	say "     Grant (color) by Familliar @ https://furaffinity.net/user/familliar[line break]";
+	say "     Hadiya (solo) by lionsilverwolf @ https://furaffinity.net/user/lionsilverwolf[line break]";
+	say "     Hadiya w/Gobby by SandySchreiber @ https://furaffinity.net/user/sandyschreiber[line break]";
+	say "     Helen by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
+	say "     Henry (Adopt) by CastBound @ https://furaffinity.net/user/castbound[line break]";
+	say "     Hayato by Darian821 @ https://x.com/Darian821Jai821[line break]";
+	say "     Harold by Hufnaar @ https://furaffinity.net/user/hufnaar[line break]";
+	say "     Hobo by Conchi @ https://artisticconch.tumblr.com[line break]";
+	say "     Honey by SandySchreiber @ https://furaffinity.net/user/sandyschreiber[line break]";
+	say "     Isaac by Reaper3d @ https://furaffinity.net/user/reaper3d[line break]";
+	say "     James by Anyare @ https://furaffinity.net/user/anyare[line break]";
+	say "     Janice by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Jason by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
+	say "     Jay by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
+	say "     Jett by Gherod @ https://x.com/gherodv[line break]";
+	say "     Jill by Sususmiles @ https://furaffinity.net/user/sususmiles[line break]";
+	say "     Jimmy by Redragon[line break]";
+	say "     Katherine by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Karel by Reaper3d @ https://furaffinity.net/user/reaper3d[line break]";
+	say "     Katya by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
+	say "     Klauz by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Knight by Keitaro87 @ https://kei87art.tumblr.com[line break]";
+	say "     Koghh by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
+	say "     Korvin by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
+	say "     Krampus by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
+	say "     Leonard by SandySchreiber @ https://furaffinity.net/user/sandyschreiber[line break]";
+	say "     Lilith by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
+	say "     Lindsey by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	[say "     Logan by Rik @ https://furaffinity.net/user/almee[line break]";] [WIP]
+	say "     Malakhi by Jahi @ https://furaffinity.net/user/jahi[line break]";
+	say "     Malik by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Master Mind by HBruton @ https://furaffinity.net/user/hbruton[line break]";
+	say "     Marc Orwell by CrashBurnDraw @ https://furaffinity.net/user/demicrash[line break]";
+	say "     Marc (fucked) by Laylo @ https://furaffinity.net/user/lay-lo[line break]";
+	say "     Mareslut by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Mason by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Medea by LocksTO @ https://furaffinity.net/user/locksto[line break]";
+	say "     Meredith by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Micaela by Kattzie @ https://furaffinity.net/user/kattzie[line break]";
+	say "     Mike (face) by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Mike by Darian821 @ https://x.com/Darian821Jai821[line break]";
+	say "     Mogdraz by Gherod @ https://x.com/gherodv[line break]";
+	say "     Moreau by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
+	say "     Mul by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
+	say "     Nadia by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Nelson by Ticl @ https://furaffinity.net/user/ticl[line break]";
+	say "     Nermine by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
+	say "     Newt by Anyare @ https://furaffinity.net/user/anyare[line break]";
+	say "     Nightmare by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Orbul by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
+	say "     Orthas (face) by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Paula by Kikeri-arts @ https://deviantart.com/kikeri-arts[line break]";
+	say "     Penny by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
+	say "     Rachel by o-kemono @ https://furaffinity.net/user/o-kemono[line break]";
+	say "     Ranae by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Rane Headshot by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Rane by Inkydemon @ https://furaffinity.net/user/inkydemon[line break]";
+	say "     Rane (butt) by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
+	say "     Rod by Ticl @ https://furaffinity.net/user/ticl[line break]";
+	say "     Ronda by Ticl @ https://furaffinity.net/user/ticl[line break]";
+	say "     Ronda (Slut Rat) by Uniformvixen @ https://furaffinity.net/user/uniformvixen[line break]";
+	say "     Ruby by Watsup @ https://furaffinity.net/user/watsup[line break]";
+	say "     Ryousei (clothed) by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Ryousei by ValdericBlackstag @ https://furaffinity.net/user/valdericblackstag[line break]";
+	say "     Sascha (crouch) by Sokan/Sweet Firelis @ https://furaffinity.net/user/sweetfirelis[line break]";
+	say "     Sascha (jogging) by CastBound @ https://furaffinity.net/user/castbound[line break]";
+	say "     Sally by Furball @ https://furaffinity.net/user/furball[line break]";
+	say "     Sam (as Dracovixentaur) by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Sam (as Vixentaur) by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Santa Claws by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Sandra by Trav[line break]";
+	say "     Sarah by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
+	say "     Segis by Gherod @ https://x.com/gherodv[line break]";
+	say "     Septus by Feralise @ https://furaffinity.net/user/feralise[line break]";
+	say "     Septus (face) by Cirrusthecloud @ https://furaffinity.net/user/cirrusthecloud[line break]";
+	say "     Sgt Marks by Anyare @ https://furaffinity.net/user/anyare[line break]";
+	say "     Stella by Furball @ https://furaffinity.net/user/furball[line break]";
+	say "     Sidney by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Siren by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Skarnoth by Kien-Biu @ https://x.com/kienbiu[line break]";
+	say "     Slutslave by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Snow by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
+	say "     Sonny by The_Negative / Colors by Nokturnalkittie @ https://furaffinity.net/user/thenegative / https://furaffinity.net/user/nokturnalkittie[line break]";
+	say "     Spike Body by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
+	say "     Spike Headshot by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Susan (face) by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Sven by Brun69 @ https://furaffinity.net/user/brun69[line break]";
+	say "     Tehuantl M/F Faces by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
+	say "     Tehuantl Male by Yora @ https://furaffinity.net/user/yora[line break]";
+	say "     Thomas by Inkydemon @ https://furaffinity.net/user/inkydemon[line break]";
+	say "     Tiger Shark Warrior by Zealot @ https://furaffinity.net/user/Drakosacerdos[line break]";
+	say "     Timothy by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
+	say "     Tiny Tim by Obieblu @ https://x.com/ObieBlu3D[line break]";
+	say "     Tiny Tim (Face) by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Toven by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
+	say "     Tristian by Enaya-TheWhiteWolfen @ https://furaffinity.net/user/enaya-thewhitewolfen[line break]";
+	say "     Tyke by TylerAz @ https://furaffinity.net/user/tyleraz[line break]";
+	say "     Urik Headshot by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Urik (original) by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
+	say "     Urik (HD) by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
+	say "     Valerie by Sususmiles @ https://furaffinity.net/user/sususmiles[line break]";
+	say "     Vanessa by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
+	say "     Violet Headshot by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+	say "     Xaedihr by Gherod @ https://x.com/gherodv[line break]";
+	say "     Yatur by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
+	say "     Yolanda by SandySchreiber @ https://furaffinity.net/user/sandyschreiber[line break]";
+	say "     Zigor by AugurMew @ https://furaffinity.net/user/augurmew[line break]";
+	say "     Zoe Headshot by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
+  LineBreak;
 	say "Scenes:[line break]";
-	say "     Bottlenose Trapped by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Brutus & David by Rocketman @ http://rocketmenstudio.tumblr.com/[line break]";
-	say "     Boy to Fox Shampoo by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
-	say "     Christy (tourist ending) by maxblackrabbit @ furaffinity.net[line break]";
-	say "     Corbin & Felinoid by ValdericBlackstag @ https://www.furaffinity.net/user/valdericblackstag/[line break]";
-	say "     Duke & Shawn by Hufnaar @ furaffinity.net[line break]";
-	say "     Fang and Candy by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
-	say "     Floor Show by MoT @ furaffinity.net[line break]";
-	say "     Malakhi & Barnabas by Jahi @ https://www.furaffinity.net/user/jahi/[line break]";
-	say "     Malakhi & Kano by Jahi @ https://www.furaffinity.net/user/jahi/[line break]";
-	say "     Mammoth Cock Vore Sequence by Boo3 @ furaffinity.net[line break]";
-	say "     Mammoth Pure Succumb by Boo3 @ furaffinity.net[line break]";
-	say "     Parasol Nap by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
-	say "     Rane & Eric Scenes by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
-	say "     Sam's Bad End by The_Negative @ furaffinity.net[line break]";
-	say "     Shy Vixen by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
-	say "     Skin Diagrams by Wahn @ https://www.furaffinity.net/user/wahn/[line break]";
-	say "     Skunkbeast Lord Battle by MoT @ furaffinity.net[line break]";
-	say "     Spidertaur by CrashBurnDraw @ y-gallery.net[line break]";
-	say "     Talov & Kerr by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
+	say "     Bottlenose Trapped by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Brutus & David by Rocketman @ (Dead Link) https://rocketmenstudio.tumblr.com[line break]";
+	say "     Boy to Fox Shampoo by Watsup @ https://furaffinity.net/user/watsup[line break]";
+	say "     Christy (tourist ending) by maxblackrabbit @ https://furaffinity.net/user/maxblackrabbit[line break]";
+	say "     Corbin & Felinoid by ValdericBlackstag @ https://furaffinity.net/user/valdericblackstag[line break]";
+	say "     Duke & Shawn by Hufnaar @ https://furaffinity.net/user/hufnaar[line break]";
+	say "     Fang and Candy by Dolphpup @ https://furaffinity.net/user/dolphpup[line break]";
+	say "     Floor Show by MoT @ https://furaffinity.net/user/mot[line break]";
+	say "     Malakhi & Barnabas by Jahi @ https://furaffinity.net/user/jahi[line break]";
+	say "     Malakhi & Kano by Jahi @ https://furaffinity.net/user/jahi[line break]";
+	say "     Mammoth Cock Vore Sequence by Boo3 @ https://furaffinity.net/user/boo3[line break]";
+	say "     Mammoth Pure Succumb by Boo3 @ https://furaffinity.net/user/boo3[line break]";
+	say "     Parasol Nap by Watsup @ https://furaffinity.net/user/watsup[line break]";
+	say "     Rane & Eric Scenes by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
+	say "     Sam's Bad End by The_Negative @ https://furaffinity.net/user/thenegative[line break]";
+	say "     Shy Vixen by Watsup @ https://furaffinity.net/user/watsup[line break]";
+	say "     Skin Diagrams by Wahn @ https://furaffinity.net/user/wahn[line break]";
+	say "     Skunkbeast Lord Battle by MoT @ https://furaffinity.net/user/mot[line break]";
+	say "     Spidertaur by CrashBurnDraw @ https://furaffinity.net/user/demicrash[line break]";
+	say "     Talov & Kerr by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
+  say "     Title Screen by SonikkuDashu @ https://deviantart.com/s-dash[line break]";
+  LineBreak;
 	say "Maps:[line break]";
-	say "     Mall Map by Anonymous @ -[line break]";
-	say "     Beach Map by Goncalo @ https://www.artstation.com/beepe/[line break]";
-	say "     City Map by Goncalo @ https://www.artstation.com/beepe/[line break]";
-	say "     Library Maps by Goncalo @ https://www.artstation.com/beepe/[line break]";
-	say "     Red Light District Maps by Goncalo @ https://www.artstation.com/beepe/[line break]";
+	say "     Mall Map by Anonymous[line break]";
+	say "     Beach Map by Goncalo @ https://artstation.com/beepe[line break]";
+	say "     City Map by Goncalo @ https://artstation.com/beepe[line break]";
+	say "     Library Maps by Goncalo @ https://artstation.com/beepe[line break]";
+	say "     Red Light District Maps by Goncalo @ https://artstation.com/beepe[line break]";
 
 ArtistBanning is an action applying to nothing.
 
@@ -3107,7 +3107,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "EmieChii", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "Moirah", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sokan", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Wemd", "Wolfram Rolf", "Xenotropos, Yora"};
+	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "DragonFlayer", "Dragonpunk", "Eevachu", "EmieChii", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "Moirah", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "SonikkuDashu", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sokan", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TylerAz", "Uniformvixen", "Unknown", "ValdericBlackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Wemt", "Wolfram Rolf", "Xenotropos, Yora"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;
