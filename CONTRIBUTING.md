@@ -48,7 +48,7 @@ https://blog.flexiblesurvival.com/p/links.html
 
 ## 9. Move files for use in Inform7's folders
 
-| Action                      | File/Folder                        | At  |
+| Action                      | File/Folder                        | To  |
 | --------------------------- | ---------------------------------- | --- |
 | Copy the file from the folder `Documents\Github\Flexible-Surival\Inform` | `story.ni` | `Documents\Inform\Projects\Flexible Survival.inform\Source` |
 | Create a new folder called  | `Flexible Survival.materials` | `Documents\Inform\Projects\` |
@@ -58,7 +58,12 @@ https://blog.flexiblesurvival.com/p/links.html
 ## 10. Make your changes!
 Now whenever you make changes in Atom, you should be able to then open Inform and re-compile the game to test it. You can do it in the Inform editor by clicking `Go` or to export it to another interpreter with `Release`. Compiling takes a very long time! Expect to wait 5-20 minutes!
 
-## 11. Record your changes and submit a Pull Request!
+## 11. Compiler Fixes Added 2/3/2025
+Please refer to this section if you're having trouble compiling your game through inform 7. Visit the discord at https://discord.com/invite/gZG2nw6 and go to the pin (the pushpin icon at the top of the page) within the FS-Singleplayer channel that starts with 'This pertains to issues with compiling the game through inform 7:'. Follow the steps outlined there and it should fix your compiler!
+
+Don't forget to hit the release button to get your very own gblorb within the release folder in documents>inform>materials>release! (This is the same file type that the FS blog gives you to run the game!) With this you can test all your changes.
+
+## 12. Record your changes and submit a Pull Request!
 Open GitHub Desktop and review your changes. Write a summary (i.e. title, like `Adding new scenes to Sarah`) and a longer description listing the types of changes you made. Then click `Commit to master` to save it to your local repository. Click `Push origin` to move your changes from your local repository to your online fork.
 
 Click on Branch -> Create pull request. It will open the GitHub site to compare your fork changes to the official Flexible Survival repository. Click on the `Create pull request` button on the GitHub site.
