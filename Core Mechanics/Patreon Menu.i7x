@@ -40,14 +40,16 @@ carry out supersponsor:
 		say "[link](13) Revel in being awesome[as]13[end link][line break]";
 		say "[link](14) Return to humanity[as]14[end link][line break]";
 		say "[link](15) Forbid the Military(ending)[as]15[end link][line break]";
+		say "[link](16) Places Cyn in the attic of the library.[as]16[end link][line break]";
+		say "[link](17) Gives 1000 of Cyn's specific currency and a debug item that gives or removes touched by madness when used.[as]17[end link][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-15)> ";
+			say "Choice? (0-17)> ";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 15:
+			if calcnumber >= 0 and calcnumber <= 17:
 				break;
 			else:
-				say "Invalid choice. Pick from 0 to 15.";
+				say "Invalid choice. Pick from 0 to 17.";
 		if calcnumber is 1:
 			sslvl12;
 		else if calcnumber is 2:
@@ -191,6 +193,12 @@ carry out supersponsor:
 		else if calcnumber is 15:
 			extend game by 240;
 			say "You send the oncoming military forces back, for now.";
+		else if calcnumber is 16:
+			now debugactive is 1;
+			try SummonTheLimbo;
+		else if calcnumber is 17:
+			now debugactive is 1;
+			try Give Echos;
 		else:
 			now Trixieexit is 1;
 		LineBreak;

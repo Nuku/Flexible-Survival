@@ -3,17 +3,17 @@
 ## 1. Register on GitHub
 Flexible Survival is hosted on GitHub, so you'll have to make an account to push changes.
 
-https://github.com/
+https://github.com
 
 ## 2. Fork the Flexible-Survival repository
 You have to fork the repository (which will duplicate the entire codebase to make a personal version). Click the `Fork` button on the top right of this page:
 
-https://github.com/Nuku/Flexible-Survival/
+https://github.com/Nuku/Flexible-Survival
 
 ## 3. Download GitHub Desktop
 This will let you record your changes and send it up to the GitHub repository for review.
 
-https://desktop.github.com/
+https://github.com/apps/desktop
 
 ## 4. Clone your fork of the Flexible-Survival repository
 Click `Clone a repository` and it will show you a list of your forked repositories - click on Flexible-Survival and click `Clone`.
@@ -21,7 +21,7 @@ Click `Clone a repository` and it will show you a list of your forked repositori
 ## 5. Download Visual Studio Code
 Visual Studio Code is a text editor that you can use to edit files. There are a couple of useful packages you can install to make life easier!
 
-https://code.visualstudio.com/
+https://code.visualstudio.com
 
 ### a. install the extension `Inform 7` by Natrium729
 This will give you syntax highlighting, so you can tell which parts are text that the player can read or commands to make the game move along.
@@ -34,7 +34,7 @@ This package lets you connect to other FS writers and work together in the same 
 ## 6. Install Inform 7
 Install Inform 7! Flexible Survival runs on this game engine. Grab beta "Inform7 6M62 Win64 beta 4" from the following link:
 
-https://github.com/DavidKinder/Windows-Inform7/releases/
+https://github.com/DavidKinder/Windows-Inform7/releases
 
 Note: Only use beta 4 or beta 5. Other versions are incompatible with Flexible Survival!
 
@@ -73,4 +73,5 @@ Then just wait for one of the maintainers to accept your pull request! If it get
 ## Questions?
 Join the Discord group and ask questions or just talk about the game in the `fs-singleplayer` channel!
 
-https://discordapp.com/channels/333559467218173953/362740874683219968
+https://discord.gg/gZG2nw6
+https://discord.com/channels/333559467218173953/333559925148090368
