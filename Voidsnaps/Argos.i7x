@@ -27,6 +27,7 @@ Section 1 - Character Declaration
 Table of GameCharacterIDs (continued)
 object	name
 Argon	"Argon"
+Argon	"Argos"
 
 Argon is a man.
 ScaleValue of Argon is 4. [Dire wolf sized]
@@ -204,6 +205,7 @@ to connect Argon's Nest:
 Table of GameRoomIDs (continued)
 Object	Name
 Argon's Nest	"Argon's Nest"
+Argon's Nest	"Argos's Nest"
 
 Argon's Nest is a room. It is fasttravel. It is private. It is sleepsafe.
 Description of Argon's Nest is "[Argon's Nestdesc]".
