@@ -176,7 +176,7 @@ When Play begins:
 	now loot entry is "honeycomb";
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "brown bear milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [ Number 1-5, rough approx of infected PC body size/height. 1=small, 3=avg, 5=huge ]
