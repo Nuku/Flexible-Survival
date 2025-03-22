@@ -114,7 +114,7 @@ When Play begins:
 	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ] [for later...]
+	now MilkItem entry is "latex frog milk"; [ Item to be given to the player if they have this infection and milk themselves. ] [for later...]
 	now TrophyFunction entry is ""; [also for later...]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slippery[or]sleek[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
