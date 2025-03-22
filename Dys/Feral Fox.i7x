@@ -100,7 +100,7 @@ when play begins:
 	now libido entry is 50;
 	now loot entry is "fox cum";
 	now lootchance entry is 50;
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "feral fox milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3;
