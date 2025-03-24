@@ -940,7 +940,7 @@ name	desc	weight	object
 "cheesecake"	"A wedge of rich strawberry cheesecake."	1	cheesecake
 
 boysenberry blossom is a grab object.
-boysenberry blossom has a usedesc "[boysenberry blossom Use]".
+boysenberry blossom has a Usedesc "[boysenberry blossom Use]".
 the scent of boysenberry blossom is "The small pastry has a wonderful fruity smell you can't quite put your finger on.".
 
 to say boysenberry blossom Use:
@@ -960,7 +960,7 @@ to say boysenberry blossom Use:
 	PlayerEat 5;
 
 bleuettonne is a grab object.
-bleuettonne has a usedesc "[bleuettonne Use]".
+bleuettonne has a Usedesc "[bleuettonne Use]".
 the scent of bleuettonne is "The small candy carries the deep, rich scent of chocolate.".
 
 to say bleuettonne Use:
@@ -980,7 +980,7 @@ to say bleuettonne Use:
 	PlayerEat 5;
 
 crème abondante is a grab object.
-crème abondante has a usedesc "[crème abondante Use]".
+crème abondante has a Usedesc "[crème abondante Use]".
 the scent of crème abondante is "The pink pastry smells of fresh strawberry and rich creme.".
 understand "creme abondante" as crème abondante.
 
@@ -1005,7 +1005,7 @@ to say crème abondante Use:
 	PlayerEat 5;
 
 muffin muffin is a grab object.
-muffin muffin has a usedesc "[muffin muffin Use]".
+muffin muffin has a Usedesc "[muffin muffin Use]".
 the scent of muffin muffin is "The pink muffin carries a fruity aroma that seems to change with each breath.".
 
 to say muffin muffin Use:
@@ -1027,7 +1027,7 @@ to say muffin muffin Use:
 	PlayerEat 5;
 
 lollicock is a grab object.
-lollicock has a usedesc "[lollicock Use]".
+lollicock has a Usedesc "[lollicock Use]".
 the scent of lollicock is "The lollicock has a sweet aroma with a hint of male arousal.".
 
 to say lollicock Use:
@@ -1132,7 +1132,7 @@ to say vin-coeuruse:
 		say "That's probably not a good idea right now.";
 
 gingerbread is a grab object.
-gingerbread has a usedesc "[gingerbread Use]".
+gingerbread has a Usedesc "[gingerbread Use]".
 the scent of gingerbread is "The gingerbread cookie smells like cinnamon and ginger.".
 
 to say gingerbread Use:
@@ -1152,7 +1152,7 @@ to gingerbreadinfect:
 	now non-infectious entry is true;
 
 cheesecake is a grab object. It is not temporary.
-cheesecake has a usedesc "[cheesecake Use]".
+cheesecake has a Usedesc "[cheesecake Use]".
 the scent of cheesecake is "The cheesecake has a rich, sweet scent of strawberry.".
 
 to say cheesecake Use:

@@ -54,7 +54,7 @@ to say ResolveEvent Another Doctor:
 		say "     'But now that I've looked you over, it seems you've been too tainted by those rather mundane forest skunks and would not at all be a suitable candidate for my main research. It's most unfortunate - you're rather cute, but I have other options. Come find me when you can,' she says. She pulls a small keycard out of her pocket and hands it to you. 'Much of the hospital's halls have been barricaded or locked, but this card will let you get through those sealing off the Psych Department. Come stop by my office and we'll talk more.' With a final grin before turning and flicking her tail and heading off. Still a little stunned by voluptuous skunk woman, it takes you a few moments to recover, grab your stuff and head out.";
 		now Resolution of Another Doctor is 1; [Blocked by Skunkbeast infection]
 		now XP of Doctor Moffatt is 2;
-	else if jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
+	else if JackalManTF > 0 or JackalBoyTF > 0 or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
 		say "     'But now that I've looked you over, it seems you've gone and become too tainted by some strangely persistent infection. It keeps you from being a suitable candidate at all. It's most unfortunate - you're rather cute, but I have other options. Come find me when you can,' she says. She pulls a small keycard out of her pocket and hands it to you. 'Much of the hospital's halls have been barricaded or locked, but this card will let you get through those sealing off the Psych Department. Come stop by my office and we'll talk more.' With a final grin before turning and flicking her tail and heading off. Still a little stunned by voluptuous skunk woman, it takes you a few moments to recover, grab your stuff and head out.";
 		now Resolution of Another Doctor is 2; [Blocked by Jackal infection]
 		now XP of Doctor Moffatt is 2;
@@ -97,7 +97,7 @@ to say psychfirstarrival:
 			now XP of doctor moffatt is 2;
 			now HP of doctor moffatt is 2;
 			ItemGain water bottle by 1;
-		else if jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
+		else if JackalManTF > 0 or JackalBoyTF > 0 or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
 			say "     'But it seems you've gone and become too tainted by some strangely persistent infection since I last saw you. It keeps you from being a suitable candidate at all.' She sighs and teases one of her nipples. 'You could provide help in another form, though. Hypnosis.' You look at the doctor with intrigued eyes. 'I would like to put you under trance, and watch the effects of implemented suggestions on a nanite infected body. Do you feel up to the task? Just ask me about [bold type]hypnosis[roman type] when you are ready to start,' she says, as she passes you a bottle of water. 'The water's for you. My way of saying thanks for helping me out,' she says with a smile.";
 			now XP of doctor moffatt is 2;
 			now HP of doctor moffatt is 2;
@@ -234,7 +234,7 @@ to say skunkPathDialogue:
 	else if skunkbeaststatus is 1:
 		say "     'It seems now that you've since become too tainted by those rather mundane forest skunks. You are no longer a suitable candidate for my testing.' She sighs and teases one of her nipples. 'It's too bad, too. I think we would have had lots of fun together. Now I'll need to start looking for someone else. You may go now,' she says dismissively, giving her tail a meaningful flick.";
 		now HP of doctor moffatt is 99;
-	else if jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0:
+	else if JackalManTF > 0 or JackalBoyTF > 0 or nightmaretf > 0 or HellHoundlevel > 0:
 		say "     'It seems you've gone and become too tainted by some strangely persistent infection since I last saw you. It keeps you from being a suitable candidate at all.' She sighs and teases one of her nipples. 'It's too bad, too. I think we would have had lots of fun together. Now I'll need to start looking for someone else. You may go now,' she says dismissively, giving her tail a meaningful flick.";
 		now HP of doctor moffatt is 99;
 	else if wrcursestatus >= 7 and wrcursestatus < 100:
@@ -374,7 +374,7 @@ to say sexwithDrMoffattSkunkPath:
 	else if skunkbeaststatus is 1:
 		say "     'It seems now that you've since become too tainted by those rather mundane forest skunks. You are no longer a suitable candidate for my testing.' She sighs and teases one of her nipples. 'It's too bad, too. I think we would have had lots of fun together. Now I'll need to start looking for someone else. You may go now,' she says dismissively, giving her tail a meaningful flick.";
 		now HP of doctor moffatt is 99;
-	else if jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0:
+	else if JackalManTF > 0 or JackalBoyTF > 0 or nightmaretf > 0 or HellHoundlevel > 0:
 		say "     'It seems you've gone and become too tainted by some strangely persistent infection since I last saw you. It keeps you from being a suitable candidate at all.' She sighs and teases one of her nipples. 'It's too bad, too. I think we would have had lots of fun together. Now I'll need to start looking for someone else. You may go now,' she says dismissively, giving her tail a meaningful flick.";
 		now HP of doctor moffatt is 99;
 	else if wrcursestatus >= 7 and wrcursestatus < 100:
@@ -674,7 +674,7 @@ Section 4 - Active Effects
 
 an everyturn rule:
 	if ( HP of Doctor Moffatt >= 3 and HP of Doctor Moffatt <= 7 ) and lust of Doctor Moffatt is not 1:
-		if skunkbeaststatus is 1 or jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
+		if skunkbeaststatus is 1 or JackalManTF > 0 or JackalBoyTF > 0 or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
 			say "     Something about your recent changes has affected you. Thoughts of the curvy skunk doctor have stopped filling your mind.";
 			now HP of Doctor Moffatt is 97;
 		else if lastfuck of Doctor Moffatt - turns < 12:
@@ -698,7 +698,7 @@ an everyturn rule:
 			if morale of Player < 0, now morale of Player is morale of Player / 2;
 		if Libido of Player > 100, now Libido of Player is 100;
 	else if HP of Doctor Moffatt is 8 or HP of Doctor Moffatt is 9:
-		if skunkbeaststatus is 1 or jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
+		if skunkbeaststatus is 1 or JackalManTF > 0 or JackalBoyTF > 0 or nightmaretf > 0 or HellHoundlevel > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
 			say "     Something about your recent changes has affected you. Thoughts of the curvy skunk doctor have stopped filling your mind.";
 			now HP of Doctor Moffatt is 97;
 		else if BodyName of Player is "Hyperskunk" and player is not pure:
