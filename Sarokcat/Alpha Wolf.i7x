@@ -227,7 +227,7 @@ When Play begins:
 	now libido entry is 30; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "alpha wolf fur"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 70; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "alpha wolf man-milk";
+	now MilkItem entry is "alpha wolf milk";
 	now CumItem entry is "alpha wolf cum";
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
