@@ -487,7 +487,7 @@ healing booster is a grab object. It is fast. It is temporary.
 
 the scent of the healing booster is "The healing booster smells of chemicals and medicine.".
 
-usedesc of healing booster is "[healing booster use]".
+Usedesc of healing booster is "[healing booster use]".
 
 to say healing booster use:
 	let healed be 20;

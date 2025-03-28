@@ -380,7 +380,7 @@ name	desc	weight	object
 "man-eating flower seed"	"A small, round seed which rolled away from one of the man-eating flowers from Vohr Island. You can gulp it down in one go, but you are not sure its effects would be the ones you expect."	1	man-eating flower seed
 
 man-eating flower seed is a grab object.
-man-eating flower seed has a usedesc "[man-eating flower seed use]".
+man-eating flower seed has a Usedesc "[man-eating flower seed use]".
 
 instead of sniffing man-eating flower seed:
 	say "As you take a sniff of the seed, you feel a sudden pang of hunger in your stomach. The effect leaves as quickly as it came.";
