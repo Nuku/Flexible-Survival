@@ -254,6 +254,7 @@ Include Stablemasters by Sarokcat.
 Include Stables Hotel by Sarokcat.
 Include State Fair by Sarokcat.
 Include Subterranean Caves by Prometheus.
+Include Swamp Signpost by Voidsnaps.
 Include Tattoo Parlor by Sarokcat.
 Include Tiger Den by Luneth.
 Include Tyr's Club by Kaleem mcintyre.

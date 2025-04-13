@@ -235,7 +235,7 @@ When Play begins:
 	now libido entry is 30; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "tyrannosaurus male tooth"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "tyrannosaurus man-milk";
+	now MilkItem entry is "tyrannosaurus male milk";
 	now CumItem entry is "tyrannosaurus cum";
 	now TrophyFunction entry is "[GenerateTrophyList_Tyrannosaurus_Male]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

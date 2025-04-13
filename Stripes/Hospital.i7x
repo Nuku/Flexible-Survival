@@ -1546,7 +1546,7 @@ instead of using lava lamp:
 
 Section 7 - Museum Quests - Nermine
 
-Instead of conversing the Nermine while nerminepackage is 1 and Nerminetalk > 0:
+Instead of conversing the Nermine while nerminepackage is 1 and NermineTalk > 0:
 	say "     'You are here helping the mousey doctor at the hospital? Nermine will play along with game,' the jackal woman says with a playful tone. 'I have been awaiting to hear back from the mousey customer after his kitties upset the rats. Not thinking they would come back. I have the item he wanted, but am wanting something in return.'";
 	say "     'At the museum, there is a [italic type]drekar[roman type]. Is a Viking longboat. Only one ever found. It is very big; too much to take, would not fit in store. But masthead has gemstones and these have seen much of the world in their time. Valuable to Nermine. Get them for me and I will trade them for the pelt, little helper.'";
 	now nerminepackage is 2;
