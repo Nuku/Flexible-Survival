@@ -4977,4 +4977,19 @@ to say STRodUse:
 	ItemLoss Debugging Rod by 1;
 
 
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Pussy Pass"	"Wanna make Ava forget you came at her with a dick? Use this."	0	Pussy Pass
+
+the scent of Pussy Pass is "The pass smells like poppers and catnip.".
+
+Pussy Pass is a grab object. Pussy Pass is not temporary.
+Usedesc of Pussy Pass is "[PPUse]";
+
+to say PPUse:
+	say "     Debug complete, try not to scare her again, please.";
+	TraitLoss "Propositioned" for Ava;
+	now cock count of Player is 0;
+
 Ava ends here.
