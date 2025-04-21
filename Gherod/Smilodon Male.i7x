@@ -63,7 +63,7 @@ to say Smilodon Male Wins:
 			WaitLineBreak;
 			say "     It takes you some time to recover from that big cat's pounding, and once you do, you stand up and manage to grab your things to get ready to leave.";
 			if Player is female:
-				CreatureSexAftermath "Player" receives "Pussyfuck" from "Smilodon Male";
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Smilodon Male";
 			else:
 				CreatureSexAftermath "Player" receives "AssFuck" from "Smilodon Male";
 		-- 2: [facefuck]
@@ -554,12 +554,12 @@ to say RanferSexGetFucked:
 	say "     It takes you some time to recover from that big cat's pounding, and once you do, you manage to grab your things to get ready to leave. The smilodon simply watches you go.";
 	if smilodon bodyguard is tamed:
 		if Player is female:
-			NPCSexAftermath Player receives "Pussyfuck" from Ranfer;
+			NPCSexAftermath Player receives "PussyFuck" from Ranfer;
 		else:
 			NPCSexAftermath Player receives "AssFuck" from Ranfer;
 	else:
 		if Player is female:
-			CreatureSexAftermath "Player" receives "Pussyfuck" from "Smilodon Male";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Smilodon Male";
 		else:
 			CreatureSexAftermath "Player" receives "AssFuck" from "Smilodon Male";
 
@@ -779,7 +779,7 @@ When Play begins:
 	now libido entry is 30; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "smilodon male fur"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "smilodon man-milk";
+	now MilkItem entry is "smilodon male milk";
 	now CumItem entry is "smilodon cum";
 	now TrophyFunction entry is "[GenerateTrophyList_Smilodon_Male]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

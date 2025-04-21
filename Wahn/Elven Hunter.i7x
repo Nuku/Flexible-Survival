@@ -549,7 +549,7 @@ When Play begins:
 	now libido entry is 10;
 	now loot entry is "lembas bread"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "elven male milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is "elven male cum";
 	now TrophyFunction entry is "[GenerateTrophyList_ElvenHunter]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

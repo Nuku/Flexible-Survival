@@ -2921,14 +2921,14 @@
 |Sarokcat|Nermine|strange ankh|Grab Object|
 |Sarokcat|Nermine|strange doll|Pet|
 |Sarokcat|Nermine|romancebooksfound|value|
-|Sarokcat|Nermine|Nerminetalk|value|
-|Sarokcat|Nermine|Nerminearoused|value|
-|Sarokcat|Nermine|Nerminefeat|value|
-|Sarokcat|Nermine|Nerminequest|value|
+|Sarokcat|Nermine|NermineTalk|value|
+|Sarokcat|Nermine|NermineAroused|value|
+|Sarokcat|Nermine|NermineFeat|value|
+|Sarokcat|Nermine|NermineQuest|value|
 |Sarokcat|Nermine|LastNerminefucked|value|
-|Sarokcat|Nermine|Nerminefucked|value|
-|Sarokcat|Nermine|Jackalboytf|value|
-|Sarokcat|Nermine|Jackalmantf|value|
+|Sarokcat|Nermine|NermineFucked|value|
+|Sarokcat|Nermine|JackalBoyTF|value|
+|Sarokcat|Nermine|JackalManTF|value|
 |Sarokcat|Nermine|Nerminehelpstatus|value|
 |Sarokcat|Nermine|wrcurseNermine|value|
 |Sarokcat|Nermine|wrlastNermine|value|

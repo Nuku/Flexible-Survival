@@ -427,7 +427,7 @@ When Play begins:
 	now libido entry is 45; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "wereraptor milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -574,7 +574,7 @@ an everyturn rule:
 this is the wereraptor curse rule:
 	if skipturnblocker is 0:
 		if wrcursestatus > 0 and wrcursestatus < 100:
-			if ( ( jackalmantf > 0 or jackalboytf > 0 ) and wrcursestatus < 7 ) or nightmaretf > 0 or HellHoundlevel > 0 or ("Ceryneian Blessed - Anthro" is listed in traits of Player or "Ceryneian Blessed - Feral" is listed in traits of Player or "Ceryneian Blessed - Taur" is listed in traits of Player):	[eliminates curse]
+			if ( ( JackalManTF > 0 or JackalBoyTF > 0 ) and wrcursestatus < 7 ) or nightmaretf > 0 or HellHoundlevel > 0 or ("Ceryneian Blessed - Anthro" is listed in traits of Player or "Ceryneian Blessed - Feral" is listed in traits of Player or "Ceryneian Blessed - Taur" is listed in traits of Player):	[eliminates curse]
 				if wrcursestatus >= 3:
 					say "     You can feel your mystical transformation fighting off the wereraptor curse you are under. Your body writhes in pain and you hiss angrily as your eyes flash yellow and turn slitted before returning to normal. The scars at your shoulders heal, the curse purged by the greater power that now has a hold of you - for better or for ill.";
 					now HP of Player is HP of Player / 2;

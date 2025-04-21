@@ -420,7 +420,7 @@ When Play begins:
 	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "hellfire demon horn shard"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "hellfire demon man-milk";
+	now MilkItem entry is "hellfire demon milk";
 	now CumItem entry is "hellfire seed";
 	now TrophyFunction entry is "[GenerateTrophyList_Hellfire_Demon]";
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

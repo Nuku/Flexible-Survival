@@ -84,7 +84,7 @@ carry out resting:
 to Rest:
 	let num1 be MaxHP of Player divided by 4;
 	let num2 be ( ( Stamina of Player * 3 ) / 2 ) + Level of Player;
-	if cot is owned or cot is present or the player is in Bunker or silk hammock is owned or silk hammock is present:
+	if (cot is owned or cot is present) or (silk hammock is owned or silk hammock is present) or (player is booked or player is bunkered):
 		if num1 >= num2, increase HP of Player by num1; [best value chosen]
 		if num2 > num1, increase HP of Player by num2;
 	else if "Roughing It" is listed in feats of Player:

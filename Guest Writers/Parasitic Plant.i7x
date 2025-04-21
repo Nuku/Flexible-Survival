@@ -168,7 +168,7 @@ When Play begins:
 	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "musky cock flower";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "parasitic plant milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -362,7 +362,7 @@ name	desc	weight	object
 "musky cock flower"	"You see a large flower with a green cock jutting out from the center of it. It smells strongly of cum and male musk."	1	musky cock flower
 
 musky cock flower is a grab object.
-musky cock flower has a usedesc "[facerape use]".
+musky cock flower has a Usedesc "[facerape use]".
 musky cock flower is infectious. Strain of musky cock flower is "Parasitic Plant".
 
 instead of sniffing musky cock flower:

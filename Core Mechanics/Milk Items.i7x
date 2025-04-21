@@ -5451,12 +5451,12 @@ Strain of rodeo clown milk is "Rodeo Clown".
 Usedesc of rodeo clown milk is "[rodeo clown milk use]".
 
 to say rodeo clown milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes funny. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
 instead of sniffing rodeo clown milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+	say "You open the lid for a moment and take a sniff. Smells kinda funny.";
 
 
 Table of Game Objects (continued)
