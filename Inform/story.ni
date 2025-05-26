@@ -198,6 +198,7 @@ Book 3 - Loading the Main Game Content
 
 Part 1 - Locations
 
+A room can be restable. A room is usually not restable.
 Include Apocalypse Store by Omen.
 Include Approaching the Capitol Building by Guest Writers.
 Include Astor by Rikaeus.

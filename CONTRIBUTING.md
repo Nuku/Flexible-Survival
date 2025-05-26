@@ -56,7 +56,7 @@ https://blog.flexiblesurvival.com/p/links.html
 | Copy the folders from the folder `Documents\Github\Flexible-Surival\` | Every folder that is not `Figures` or `Inform` | `Documents\Inform\Extensions` |
 
 ## 10. Make your changes!
-Now whenever you make changes in Atom, you should be able to then open Inform and re-compile the game to test it. You can do it in the Inform editor by clicking `Go` or to export it to another interpreter with `Release`. Compiling takes a very long time! Expect to wait 5-20 minutes!
+Now whenever you make changes in VSCODE, you should be able to then open Inform and re-compile the game to test it. You can do it in the Inform editor by clicking `Go` or to export it to another interpreter with `Release`. Compiling takes a very long time! Expect to wait 5-20 minutes!
 
 ## 11. Compiler Fixes Added 2/3/2025
 Please refer to this section if you're having trouble compiling your game through inform 7. Visit the discord at https://discord.com/invite/gZG2nw6 and go to the pin (the pushpin icon at the top of the page) within the FS-Singleplayer channel that starts with 'This pertains to issues with compiling the game through inform 7:'. Follow the steps outlined there and it should fix your compiler!

@@ -808,7 +808,7 @@ to say DrMattQuestTalk:
 [		NanofabRewardScanner; [places piece for nanofab in room. move this line if/when a better place is found]	]
 		now HP of Doctor Matt is 15;
 	else if HP of Doctor Matt is 15:
-		if number of fasttravel rooms > 9: [changed from 50% because this was ballooning out of control.]
+		if number of fasttravel rooms < 9: [changed from 50% because this was ballooning out of control.]
 			say "     You fill Dr. Matt in on what you've been able to learn about the city and the safer paths to travel through it. 'Based on the information you've been able to provide me, you only have about[ ( number of known fasttravel rooms )] points of interest found. The military is requesting information on at least 10 of these locations.'";
 		else:
 			say "     You fill Dr. Matt in on what you've been able to learn about the city and the safer paths to travel through it. 'Based on the information you've been able to provide me, you have roughly [ ( number of known fasttravel rooms )] points of interest found. That should greatly assist the military with their scouting and rescue efforts.'";
