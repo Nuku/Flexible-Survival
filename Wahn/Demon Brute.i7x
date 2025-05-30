@@ -1666,10 +1666,10 @@ instead of navigating Grey Abbey Library while (DBCaptureQuestVar is 5 and demon
 	else if Xaedihr is in Grey Abbey Library: [Bonus scene if the demon expert is present]
 		WaitLineBreak;
 		say "     Though before you leave to return to your affairs, Xaedihr stops you and pulls you to his study corner to have a word with you. 'I do not mean to keep you for long, but it appears you're having an issue with your... demonic servant, isn't it?' You nod, confirming his assumption. 'I noticed how you attempted to address the problem, but unfortunately I have to tell you it'll be like hitting your head on a wall countless times until it breaks. Your head, not the wall.' That much you already knew, so you ask him if he has an actual helpful solution that doesn't involve exorcising him. 'Well, ";
-		if HP of Carl < 11 and HP of Carl > 1: [Normal Carl, in the bunker]
+		if HP of Carl > 10 and HP of Carl < 30: [Normal Carl, in the bunker]
 			say "as I have observed, you have someone who could probably help you with that. I speak of Carl, the anthro husky you found and saved from an almost inevitable doom and becoming a cockslut? Yes, that guy. With his soldier background and the genetics of an intelligent breed, I think he's got the guts to face your demon pet, and could provide good insight on a psychological phenomenon called conditioning, which is what I believe to be the basic explanation for their post-Hell behavior, though I require more research on that to be certain. Don't bother with any others, he's the right dog for the job. I mean... person. No offense intended. Anyway, go talk to him.'";
 			say "     You take note of his recommendation. Now all that's left to do is to ask Carl if he'd be willing to give you a hand...";
-		else if HP of Carl is 30: [sub Carl]
+		else if HP of Carl > 30 and HP of Carl < 40: [sub Carl]
 			say "as I have observed, you have someone who could probably help you with that. I speak of Carl, the anthro husky you found and saved from an almost inevitable doom and becoming a cockslut... oh, wait... nevermind. It appears someone was too impatient regarding that last part. Anyway, despite his eagerness to present his ass, I think that with the right motive... whatever you think it should be... he is able to face your demon pet and provide good insight on a psychological phenomenon called conditioning, which is what I believe to be the basic explanation for their post-Hell behavior, though I require more research on that to be certain. Don't bother with any others, he's the right dog for the job. I mean... person. No offense intended. Anyway, you can go talk to him... but I wouldn't get my hopes up too much if I were you.'";
 			say "     You take note of his recommendation. Now all that's left to do is to ask Carl if he'd be willing to give you a hand...";
 		else if HP of Carl < 2:
@@ -1694,7 +1694,7 @@ to say CarlTalk_DB:
 		say "     Sounds like Carl decided to help you in any way he can. You ask him when you can get started with this sort of therapy. 'First, I'll try to get friendly with him, show him that I'm neither a threat nor a target. Then I hope to be able to get closer to him. I think we can get started anytime you want, just let me know when you're available.' he informs you, as you nod. 'You can come with him already summoned or still in the amulet, as long as you bring him out and assign him to me. Then go take a walk outside for a while. Try not to interfere, too... I think he wouldn't react well for the first times.' Following the anthro canine's recommendation, you nod and thank him for his willingness to aid you. Now all that's left for you is to hope this will work, or you'll be left only with the option to attempt purification...";
 		now resolution of Demonic Redemption is 3;
 	else if resolution of Demonic Redemption is 3: [1st scene]
-		if HP of Carl is 30: [sub Carl]
+		if HP of Carl > 30 and HP of Carl < 40: [sub Carl]
 			if demon brute is not listed in companionList of Player:
 				say "     Holding your demontooth amulet tightly in your fist, you murmur the magic words Nermine told you. Swirling purple mist flows out of the demon fang's sharp tip, then solidifies in the musclebound figure of your captive demon brute.";
 			say "     Bringing your hellish pet to Carl, you let him know that you're ready for the first attempt at working something out. 'Alright, Alpha. You can leave him with me and I'll see what I can do.' he says in response. You turn to the brute and tell him to keep Carl company for some time and to not try anything funny, to which he gives a rather worrying smirk, but answers with an reluctant nod. Waving at your anthro canine friend, you leave them alone and walk outside. He didn't look too confident about this...";
@@ -1718,7 +1718,7 @@ to say CarlTalk_DB:
 			now LastDBSessionCarl is turns;
 			now resolution of Demonic Redemption is 4;
 	else if resolution of Demonic Redemption is 4: [2nd talk with Carl]
-		if HP of Carl is 30:
+		if HP of Carl > 30 and HP of Carl < 40:
 			say "     You figure it's time to talk to Carl about what happened since the first attempt at rehabilitating the demon brute. He shrugs and avoids eye contact for a while, though you patiently wait for him to find his words. 'I'm sorry to disappoint, Alpha... but I can't do this. Demon brutes are just impossible to contain except if you're using magic, and I'm literally risking my ass here.' Well, it is his decision, and you can't force him to do something he doesn't want to, since it wouldn't even work that way. 'I suggest you reconsider cleansing him at a church, or find a priest who can do that for him. What you're trying to do, even if noble, is just impossible this way... He'll always be the hating demon he was created to be. I apologize...'";
 			say "     There's nothing else to be done here, so you thank Carl for having at least tried. Guess you're back at square zero, and without any other ways left to pursue. The only option now is to leave your demon brute as he is, or seek a purification process at the church.";
 			now resolution of Demonic Redemption is 99; [sub Carl gives up, ends the quest]
@@ -1726,7 +1726,7 @@ to say CarlTalk_DB:
 			say "     You figure it's time to talk to Carl about the future attempts at rehabilitating the demon brute. He greets you with a smile and revitalized motivation. 'I thought about it, and maybe I'm doing it wrong. I should start this differently, with something he's familiar with, and mix it with what he doesn't yet know. Maybe he'll be able to understand things better this way. I'm willing to give it another try, if you are.' You nod, but you're probably better asking him what's in his mind right now, and you do so. 'I don't want to spoil it in case it goes wrong, but just to be safe, make sure you issue a command to force him to be peaceful. If he resists too much, chances are it will be a disaster.' His words worry you, but you agree with everything for now. You will let him know when you are ready.";
 			now resolution of Demonic Redemption is 5; [normal Carl wants to try again]
 	else if resolution of Demonic Redemption is 5: [2nd scene]
-		if HP of Carl is 30:
+		if HP of Carl > 30 and HP of Carl < 40:
 			say "Sub Carl is not supposed to reach this far. Please report this as a bug on discord if you encounter this message.";
 			now resolution of Demonic Redemption is 99;
 			stop the action;
@@ -1860,7 +1860,7 @@ When Play begins:
 	now libido entry is 30;
 	now loot entry is "demon seed"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "demon brute milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

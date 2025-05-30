@@ -190,6 +190,7 @@ to say sexwithKathy:
 				now MainInfection of Augustus Drake is "Felinoid";
 				now Angry Wateringcan is active;
 				now Crawl out through that fallout is active;
+				now Loyalty of Augustus Drake is 0;
 			else if calcnumber is 2:[less lewd milking]
 				LineBreak;
 				say "     Determining it best not to further meddle in Kathy's relationship, you focus on collecting the cat girl's lactate. Adopting a rare (relatively) chaste attitude, you lightly fondle Kathy's engorged upper tits, drawing a light trickle of milk from the portly woman. 'Ah, I should get Ava to drain these more often,' Kathy says, maneuvering the pitcher into place, catching a small amount of the alabaster liquid dripping down her bosom. Settling into a comfortable pace, you softly tweak the adipose-rich furry's dark teats, between your pointer and middle fingers, mindful of how tender the poor chubby breeder's neglected mounds must be. Kneading Kathy's feline nipples, your efforts bear fruit as cream leaks down and around the mewling fatties palm-able DD-cups. Noticeable entranced by the sight of her shiny covered milk pelt, Kathy gropes her lower bosom drawing out erratic streams of her motherly fluid. Coating her belly fur in a glaze of cream that drips down her sides in a thin trickle.";
@@ -221,6 +222,7 @@ to say sexwithKathy:
 				now MainInfection of Augustus Drake is "Felinoid";
 				now Angry Wateringcan is active;
 				now Crawl out through that fallout is active;
+				now Loyalty of Augustus Drake is 0;
 			else if calcnumber is 3:[GTFO]
 				LineBreak;
 				say "     Shaking your head, you realize that you maybe pushing the envelope just a little too far here. While you might be fine transforming Drake, fucking his lover feels like a recipe for disaster. So hurriedly disentangle yourself from Kathy, you tell her that you have some vague important task to take care of and beat a hasty retreat from the Last Chance and the dry plains. Only when you arrive at the perceived safety of the Grey Abbey, do you finally relax, although on some level you're not looking forward to your return trip to the plains.";
@@ -234,6 +236,7 @@ to say sexwithKathy:
 				now MainInfection of Augustus Drake is "Felinoid";
 				now Angry Wateringcan is active;
 				now Crawl out through that fallout is active;
+				now Loyalty of Augustus Drake is 0;
 		else:
 			say "     'Found enough of felinoid cum?' Kathy asks. Shaking your head, you tell her that you haven't collected five units felinoid cum, yet. 'That's too bad, have you tried going to the park though? It should be full of my old pride by now.'";
 	else if Thirst of Kathy is 3:

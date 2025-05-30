@@ -296,8 +296,8 @@ Section 4 - Resting
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"cot"	"A folding cot. Simple in design, but oh so useful. You could carry it around and [bold type]rest[roman type] anywhere!"	20	cot
-"sleeping bag"	"A simple sleeping bag. It's not the most comfortable, or restful, but it brings with it the advantage of portability."	5	sleeping bag
+"cot"	"A lightweight aluminium folding cot. Simple in design, but oh so useful. You could carry it around and [bold type]rest[roman type] anywhere!"	2	cot
+"sleeping bag"	"A simple sleeping bag. It's not the most comfortable, or restful, but it brings with it the advantage of portability."	1	sleeping bag
 
 cot is a grab object. It is not temporary.
 cot is restful.

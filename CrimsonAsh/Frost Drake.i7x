@@ -107,10 +107,15 @@ to say Frost DrakeSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Have the big drake service you";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ride the Drake";
+	now sortorder entry is 3;
+	now description entry is "Ride the drake's dick";
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his ass";
-		now sortorder entry is 3;
+		now sortorder entry is 4;
 		now description entry is "Fuck the drake's ass raw";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -134,6 +139,8 @@ to say Frost DrakeSexMenu:
 					say "[OralFrostDrake]";
 				if (nam is "Fuck his ass"):
 					say "[FuckFrostDrake]";
+				if (nam is "Ride the Drake"):
+					say "[FrostDrakeRide]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -259,7 +266,7 @@ When Play begins:
 	now libido entry is 70; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "frost drake milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

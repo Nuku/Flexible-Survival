@@ -8,6 +8,7 @@ Dmitri the Peacock by Aureas Gigas begins here.
 a postimport rule: [this adds the newly named navpoint]
 	if Peacocked > 7 and Peacocked < 98: [values set this way to future proof it after changing teh room name in code. Please use values above 98 for content that SHOULDNT link this area.]
 		AddNavPoint Argos's Antiques;
+	move Dmitri to Argos's Antiques;
 
 Table of GameEventIDs (continued)
 Object	Name

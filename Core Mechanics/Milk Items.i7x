@@ -1619,6 +1619,36 @@ instead of sniffing dracovixentaur milk:
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"Dragon Breeder milk"	"A tall glass vessel packed to the rim with pearly white perfection, a normal unassuming person could easily mistake your scrumptious draconic cream for a banal dairy product at first glance, had you not written the words [']Dragon Breeder milk['] on the side. Though should someone gaze too deeply or too long at its content, their unworthy eyes would be treated to an ever-shifting collage of unnatural colors and enthralling dark shapes fluttering in the alabaster waters."	1	Dragon Breeder milk
+
+Dragon Breeder milk is a grab object.
+Dragon Breeder milk is milky.
+Dragon Breeder milk is infectious.
+Strain of Dragon Breeder milk is "Dragon Breeder".
+Usedesc of Dragon Breeder milk is "[Dragon Breeder milk use]".
+
+to say Dragon Breeder milk use:
+	say "Bringing the glistening your lips, you swallow down your succulent cream with eager abandon. Delighting in the warm, rich, soothing balm coating your palate in a heady sheen of heavy vanilla and some crisp, almost herbal, bite as you swish the thick ambrosial liquid along the roof mouth before swallowing. Ah delicious, you preen self-indulgently as the potent draconic energies infuse you with a raw rush of fertile excess.";
+	PlayerDrink 15;
+	PlayerEat 15;
+	increase Breast Size of Player by 3;
+	if Cunt Count of Player < 1:
+		increase Cunt Count of Player by 1;
+	increase Cunt Depth of Player by 3;
+	increase Cunt Tightness of Player by 3;
+	if Cock Count of Player is 1:
+		Increase Cock Length of Player by 5;
+	if Ball Size of Player <= 6:
+		Increase Ball size of player by 1;
+	if scalevalue of Player < 5:
+		now scalevalue of Player is 5;
+
+instead of sniffing Dragon Breeder milk:
+	say "You open the lid for a moment and take a sniff, your senses are greet by the subtle scent of cloves and Plumeria.";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "dragon pool toy milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Dragon Pool Toy Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	dragon pool toy milk
 
 dragon pool toy milk is a grab object.
@@ -5421,12 +5451,12 @@ Strain of rodeo clown milk is "Rodeo Clown".
 Usedesc of rodeo clown milk is "[rodeo clown milk use]".
 
 to say rodeo clown milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes funny. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
 instead of sniffing rodeo clown milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+	say "You open the lid for a moment and take a sniff. Smells kinda funny.";
 
 
 Table of Game Objects (continued)
@@ -6989,6 +7019,44 @@ to say yuppie mink milk use:
 
 instead of sniffing yuppie mink milk:
 	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Limbo Fox Milk"	"A glass bottle filled to the brim with suspiciously normal-looking milk, considering it's the product of an eldritch fox. Oddly, the bottle and its contents never seem to get warm or even go off when left out in the sun."	1	Limbo Fox Milk
+"Glitchy Milk"	"Microwaving it may have purified it of the nanites, but it seems this alteration has also broken the Limbo touched code of the Milk contained inside the bottle, if the constant blinking between black and white is anything to go by. Drink at your own risk..."	1	Glitchy Milk
+
+Limbo Fox Milk is a grab object.
+Usedesc of Limbo Fox Milk is "[Limbo Fox Milk use]".
+
+to say Limbo Fox Milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and Strawberry-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 25;
+	PlayerEat 5;
+	if Breast Size of Player >= 1:
+		increase Breast Size of Player by 1;
+	if Cunt Count of Player >= 1:
+		increase Cunt Depth of Player by 1;
+		increase Cunt Tightness of Player by 1;
+	infect "Limbo Fox";
+
+instead of sniffing Limbo Fox Milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like Strawberry.";
+
+
+Glitchy Milk is a grab object.
+Usedesc of Glitchy Milk is "[Glitchy Milk use]".
+
+to say Glitchy Milk use:
+	say "Lifting the plastic bottle to your mouth, you take a dr1nk fr0m it, leTting th£ m1/k run run 0VeR /0ur t0N6u£ and dddddddown IoUr 7hroAt. T@st£§ r1ch and-nd s74@wbeeeeee- [bold type][one of]I-IT BURNS [or]1I-IT T HURTS [at random]![roman type] Still in extreme mental and phys1cal pain, you feel your body-y temperature climbing and steam pours from your cuTs as they [one of]cinch[or]knit[at random] themselves §Hut. N0t ev£n fuLly finishing the bottle, you instinctively empty the rest of it somewhere, then stuff the empty bottle with difficulty back into your collection of 'empties'.";
+	SanLoss 35;
+	addAlcPoints 5;
+	PlayerHealed 300;
+	PlayerDrink 100;
+	PlayerEat 100;
+
+instead of sniffing Glitchy Milk:
+	say "You open the lid for a moment and take a sniff. But you can't seem to pick up on any particular smell.";
 
 
 

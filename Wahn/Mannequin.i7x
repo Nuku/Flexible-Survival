@@ -83,7 +83,7 @@ When Play begins:
 	now libido entry is 0; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "nullifying powder"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 35; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "mannequin milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -651,7 +651,7 @@ to say Bucky_Person:
 		TraitGain "Bucky - Seen him" for Candy;
 		WaitBreakReactions;
 	if Carl is booked or Carl is bunkered:
-		if HP of Carl is 30: [beta carl]
+		if HP of Carl > 29 and HP of Carl < 40: [beta carl]
 			say "     Carl comes up to you, glancing aside at Bucky with interest but keeping most of his attention on yourself. 'So, you want us to talk to and hang out with him, Alpha?' the husky soldier asks, and as you confirm, he gives you a dutiful nod, tail wagging behind his back. 'Sure thing, what you say is best!' Then he steps up to Bucky and gives him a friendly bump of his fist against the shoulder, saying, 'I guess we'll be spending some time together in the future, until you get better.' With that said, Carl gives you a nod, then walks off.";
 		else:
 			say "     Carl comes up to you, then glances aside at Bucky. 'I - uhm, do you really think this has a chance of helping? I mean... there doesn't seem to be anyone... in there?' You reply that you want to try, and would appreciate his help. The husky soldier hesitates for a second, looking down at the ground before raising his head again, 'I'm not sure if I'm the best person for this, but... yeah, I'll do it.' Having made his decision, he then steps up to Bucky and pats him on the shoulder a little helplessly, 'Sorry for... kinda just talking over you, before. I guess we'll be spending some time together in the future, until you get better.' With that said, he gives you a nod, then walks off.";
@@ -843,7 +843,7 @@ to say Bucky_Toy:
 			TraitGain "Bucky - Seen him" for Candy;
 			WaitBreakReactions;
 		if Carl is booked or Carl is bunkered:
-			if HP of Carl is 30: [beta carl]
+			if HP of Carl > 29 and HP of Carl < 40: [beta carl]
 				say "     Carl comes up to you, glancing aside at Bucky with interest but keeping most of his attention on yourself. 'Thank you for this fun toy, Alpha!' the husky soldier says happily, tail wagging behind his back. He brushes a hand over the deer's chest, feeling him through the tank top. 'Bit flat on top, but...' You can almost see the thoughts of what he wants to do with the sex doll in the broadness of his smile as he wanders off afterwards. You can hear him say to himself, 'Wonder if it'd work to knock him up...'";
 			else:
 				say "     Carl comes up to you, mostly staring straight ahead, but not quite managing his eyes from flicking aside at Bucky several times. 'A sex doll? I, uhm... I don't think I could, you know. He's cute and all, and having a pussy would give something familiar if I was with a guy, you know. But... I always thought just sexual deviants get something like th- err, oh, sorry - no offense meant!' You wave his worried expression away casually, then shrug and say he shouldn't discount something he hasn't tried so quickly. Carl raises his eyebrows, hesitates, then finally says, 'Uhm... I should get back to the observation post.' With that said, he walks off. You notice that he pauses for a second before moving completely out of sight, throwing a furtive glance at Bucky and slowly wagging the tail behind his back. Maybe the husky isn't quite as down on the sex doll as he says openly.";
@@ -1041,7 +1041,7 @@ to say Hercules_Person:
 		TraitGain "Hercules - Seen him" for Candy;
 		WaitBreakReactions;
 	if Carl is booked or Carl is bunkered:
-		if HP of Carl is 30: [beta carl]
+		if HP of Carl > 29 and HP of Carl < 40: [beta carl]
 			say "     Carl comes up to you, glancing aside at Hercules with interest but keeping most of his attention on yourself. 'So, you want us to talk to and hang out with him, Alpha?' the husky soldier asks, and as you confirm, he gives you a dutiful nod, tail wagging behind his back. 'Sure thing, what you say is best!' Then he steps up to Hercules and gives him a friendly bump of his fist against the shoulder, saying, 'I guess we'll be spending some time together in the future, until you get better.' With that said, Carl gives you a nod, then walks off.";
 		else:
 			say "     Carl comes up to you, then glances aside at Hercules. 'I - uhm, do you really think this has a chance of helping? I mean... there doesn't seem to be anyone... in there? And do you actually know anything about this dude? I mean, what if he turns out to be as lust-obsessed as some of the more bestial things out there?' You reply that you're confident he'll be fine if everyone just treats him well, you want to try helping, and would appreciate his assistance. The husky soldier hesitates for a second, looking down at the ground before raising his head again, 'I'm not sure if I'm the best person for this, but... yeah, I'll do it.' Having made his decision, he then steps up to Hercules and pats him on the shoulder a little helplessly, 'Sorry for... kinda just talking over you, before. I guess we'll be spending some time together in the future, until you get better.' With that said, he gives you a nod, then walks off.";
@@ -1235,7 +1235,7 @@ to say Hercules_Toy:
 			TraitGain "Hercules - Seen him" for Candy;
 			WaitBreakReactions;
 		if Carl is booked or Carl is bunkered:
-			if HP of Carl is 30: [beta carl]
+			if HP of Carl > 29 and HP of Carl < 40: [beta carl]
 				say "     Carl comes up to you, glancing aside at Hercules with interest but keeping most of his attention on yourself. 'Thank you for this fun toy, Alpha!' the husky soldier says happily, tail wagging behind his back. He brushes a hand over the horseman's chest, feeling his muscles and being surprised in the lifelike warmth that the doll has. You can almost see the thoughts of what he wants to do with the sex doll in the broadness of his smile as he wanders off afterwards.";
 			else:
 				say "     Carl comes up to you, mostly staring straight ahead, but not quite managing his eyes from flicking aside at Hercules several times. 'A sex doll? I, uhm... I always thought just sexual deviants get something like th- err, oh, sorry - no offense meant!' You wave his worried expression away casually, then shrug and say he shouldn't discount something he hasn't tried so quickly. Carl raises his eyebrows, hesitates, then finally says, 'Uhm... I should get back to the observation post.' With that said, he walks off. You notice that he pauses for a second before moving completely out of sight, throwing a furtive glance at Hercules and slowly wagging the tail behind his back. Maybe the husky isn't quite as down on the sex doll as he says openly.";

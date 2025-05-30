@@ -118,7 +118,7 @@ When Play begins:
 	now libido entry is 25; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "lizardman milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -170,6 +170,19 @@ to say KoskConversationMenu:
 		now description entry is "Kosk's excitement at receiving your 'bribe' has your curiosity piqued. Has he used them yet";
 		sort the table of fucking options in sortorder order;
 	[]
+	if "Guilty Coward" is listed in Traits of Player:
+		choose a blank row in table of fucking options;
+		now title entry is "Tell Kosk about the naga trafficker";
+		now sortorder entry is 3;
+		now description entry is "Despite your earlier cowardice, you should probably tell someone about the naga before more people disappear";
+	[]
+	if "Burned Down" is listed in Traits of Riker:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask what happened to the cabin after Kosk investigated it";
+		now sortorder entry is 4;
+		now description entry is "What happened after you ran away? Ask Kosk";
+		[]
+		sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -188,6 +201,10 @@ to say KoskConversationMenu:
 					say "[KoskVillageAsk]";
 				else if (nam is "Ask Kosk what he's been cooking"):
 					say "[KoskBarbecueTalk]";
+				else if (nam is "Tell Kosk about the naga trafficker"):
+					say "[KoskPosseGathering]";
+				else if (nam is "Ask what happened to the cabin after Kosk investigated it"):
+					say "[KoskRikerEnd]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -212,6 +229,16 @@ to say KoskBarbecueTalk:
 		say "     The scent is mouthwatering, though the whole fish isn't as pleasant as something more professionally prepared. Still, your stomach growls as you stare, and you wipe your mouth on the corner of your sleeve, drooling slightly at the thought of some homemade food after who-knows-how-long spent eating canned and dried foods. 'Take it! I've got some more steaming in there, and thanks to you, I can make as much as I want.' Pressing the steaming fish package into your hands, Kosk gives you a conspiratorial wink. 'I'll even help you work up an appetite if you want. Call it a down payment on refills.' His language might be ambiguous, but the hand on your left asscheek is anything but subtle. It seems you've made a friend.";
 		ItemGain Roasted Barbecue Fish by 1;
 		TraitGain "Barbecue Received" for Kosk;
+
+to say KoskPosseGathering:
+	say "     Quickly explaining everything that happened since you followed Ignacio to the flooded mall, you tell Kosk where the latest lizardman's been abducted, then clarify that it was someone more sinister perpetrating the earlier ones. Giving detailed instructions to the naga's hideout, you leave things in Kosk's hands, taking your leave as he runs off into the village, a horrified expression on his face. No doubt he's going to find others to 'storm the castle.' Thankfully he doesn't ask you to come with him, but you still feel a twinge of guilt at letting others fight your battles.";
+	now Ignacio is nowhere;
+	now Matteo is nowhere;
+	now Riker is nowhere;
+	TraitGain "Burned Down" for Riker;
+
+to say KoskRikerEnd:
+	say "     Broaching the subject of what happened to the cabin in the woods where Riker kept his victims, you pointedly ignore your own involvement, asking Kosk what happened after you reported to him. He sighs and shrugs his shoulders at your questioning stare. 'We had a look, but by the time we got there, the place was trashed. Nothing and no one left inside. Someone must have left us a little gift because before we could even leave the place, it went up. Burned to the ground in minutes.' Shaking his head, Kosk looks regretful. 'Be careful out there. That sick fuck might still be wandering around. Anyone willing to set fire to a place surrounded by trees can't be sane. Might not be lucky enough to get away next time.'";
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -332,7 +359,7 @@ When Play begins:
 	now libido entry is 25; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "nightmarish mutant milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -440,6 +467,7 @@ to say SuckingKosk:
 	say "     You're unsure what Kosk means until you feel both hands on the back of your head, shoving you to the base of that pulsing cock and sandwiching you between muscular thighs. Lightning-quick thrusts plunder your throat, working a symphony of gagging sounds from your mouth. You're lost in your little world, thrashing your tongue against the underside and staring at him with half-glazed eyes, your body nothing more than a receptacle for cock. 'Fuck!' Kosk groans aloud as his cock bounces against the roof of your mouth, heralding a messy finish. Tugging free of your lips, he mashes his twin cocks into your overworked mouth, spreading it open just as the flood belches from their tips and holding you in place, leaving no option besides gulping noisily in an attempt to prevent yourself from drowning. 'Drink it down!' He moans, his thick tail thrashing behind him and drool dripping from his clenched jaws through sharp white teeth.";
 	say "     'I don't suppose you're looking for something more permanent?' Kosk teases as strong arms tug you to your feet. 'I could use some company. I'll make it worth your while. All you can eat.' Your foggy brain can't tell whether he means cock or actual food, but you don't care, melting in his arms as he tugs you to your feet and messily kisses you, sharing the taste of his gooey virility and cleaning your face with his tongue. All too soon, you depart, favored by one last grope from the sated lizardman. As you walk away, you can still see Kosk's cocks hanging free while he waves at you, leaning on his spear. No doubt a cum that hard took a lot out of him!";
 	NPCSexAftermath Player receives "OralCock" from Kosk;
+	[TraitGain "Thressa Met" for Thressa;]
 
 to say KoskBreeding:
 	say "     Deciding that it's time to take Kosk up on his offer to 'work up an appetite,' you approach him, asking if he's still willing to honor it. Letting your gaze drip down his muscular, dusky-colored body, you lick your lips, wondering what sort of surprise hides within his genital slit and barely resisting the urge to drop to your knees and present your ass to him. Just the slightly sweaty smell coming off of his body from this close has your chest feeling tight and your arousal beginning to grow. 'Of course. Why wouldn't I reward you? I've been eating well lately because of you.' Kosk says with a chuckle, tugging at his loincloth until it falls into a leathery heap at his feet. Admittedly, with his slit hiding his modesty, it's not that different, but the implication that it brings makes the motion that much more sexy. Tilting your face up with one clawed finger, he strokes along your chin, stealing a kiss that nearly makes you collapse into his body, his thick tongue invading your mouth and smothering yours in a flavor that reminds you of smoked meat. 'Hope you don't mind an audience, though. I'm not leaving my post and risking some asshole raising havoc.'";

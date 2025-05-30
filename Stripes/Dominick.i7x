@@ -401,14 +401,14 @@ to say ForcedSubtoDomSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Get your prize from the other bitches after Dom uses them";
 	[]
-	if (HP of Dominick is 31) or (HP of Dominick is 41) or (HP of Dominick is 51) and (nightmaretf < 1) and (wrcursestatus < 7) and (jackalboyTF < 1) and (jackalmanTF < 1):
+	if (HP of Dominick is 31) or (HP of Dominick is 41) or (HP of Dominick is 51) and (nightmaretf < 1) and (wrcursestatus < 7) and (JackalBoyTF < 1) and (JackalManTF < 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Full Doggy Training";
 		now sortorder entry is 3;
 		now description entry is "Dom transforms you into a proper doggy slut in one go. Be warned, this is a permanent infection; you're Dom's bitch now";
 	[]
 	if Player is not mpreg_ok:
-		if (HP of Dominick > 30 and HP of Dominick < 34) or (HP of Dominick > 40 and HP of Dominick < 44) and (nightmaretf < 1) and (wrcursestatus < 7) and (jackalboyTF < 1) and (jackalmanTF < 1):
+		if (HP of Dominick > 30 and HP of Dominick < 34) or (HP of Dominick > 40 and HP of Dominick < 44) and (nightmaretf < 1) and (wrcursestatus < 7) and (JackalBoyTF < 1) and (JackalManTF < 1):
 			choose a blank row in table of fucking options;
 			now title entry is "Beta Doggy Training";
 			now sortorder entry is 4;
@@ -425,7 +425,7 @@ to say ForcedSubtoDomSexMenu:
 		now sortorder entry is 7;
 		now description entry is "Your master breeds you like the bitch you are";
 	[]
-	if Player is mpreg_ok and (nightmaretf < 1) and (wrcursestatus < 7) and (jackalboyTF < 1) and (jackalmanTF < 1):
+	if Player is mpreg_ok and (nightmaretf < 1) and (wrcursestatus < 7) and (JackalBoyTF < 1) and (JackalManTF < 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Omega Doggy Training";
 		now sortorder entry is 5;

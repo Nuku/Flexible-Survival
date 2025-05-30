@@ -480,7 +480,7 @@ When Play begins:
 	now libido entry is 25; [ Target libido the infection will rise towards. ]
 	now loot entry is "stray links"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 44; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "knightly man-milk";
+	now MilkItem entry is "knight milk";
 	now CumItem entry is "knightly seed";
 	now TrophyFunction entry is "[GenerateTrophyList_Knight]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

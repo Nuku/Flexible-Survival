@@ -29,7 +29,7 @@ to say Hypno Spider Wins:
 
 to say Hypno Spider Loses:
 	if fightoutcome is 11: [submitted by libido victory]
-		say "     As the Hypno Spider becomes more and more aroused it seems increasingly confused, unsure whether to attack or submit to your advances. Flustered, the frog escapes quickly down the nearby sewer drain. You consider following, but decide to move on for now.";
+		say "     As the Hypno Spider becomes more and more aroused it seems increasingly confused, unsure whether to attack or submit to your advances. Flustered, the spider escapes quickly down the nearby sewer drain. You consider following, but decide to move on for now.";
 	else:
 		say "     Striking a final decisive blow to the Hypno Spider, the creature curls its legs up on itself and a puddle of sticky slime oozes out from its erect ovipositor. Examining the creature it seems entirely desiccated. You decide to move on for now.";
 	LineBreak;
@@ -103,7 +103,7 @@ When Play begins:
 	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "spider webbing"; [see Spidergirl.i7x] [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ] [for later...]
+	now MilkItem entry is "hypno spider milk"; [ Item to be given to the player if they have this infection and milk themselves. ] [for later...]
 	now TrophyFunction entry is ""; [also for later...]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slippery[or]sleek[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]

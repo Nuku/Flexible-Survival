@@ -86,7 +86,7 @@ name	desc	weight	object
 "Dog Treats"	"A brown paper bag, emblazoned with the logo of Francois['] bakery, full of delicious, meaty smelling dog treats."	1	Dog Treats
 
 Dog Treats is a grab object. It is not temporary.
-Dog Treats has a usedesc "[GourmetDogTreatsUse]".
+Dog Treats has a Usedesc "[GourmetDogTreatsUse]".
 the scent of Dog Treats is "	The Gourmet Treats have a rich, meaty aroma.".
 
 To say GourmetDogTreatsUse:
@@ -96,7 +96,7 @@ doggyboned is a number that varies. [Used to track uses of bone, after meeting R
 bonelust is a number that varies. [tracks time without using bone or fucking Rex, increases sanity loss over time]
 
 Dog Bone is a grab object.
-Dog Bone has a usedesc "[DogBoneUse]".
+Dog Bone has a Usedesc "[DogBoneUse]".
 Dog Bone is infectious. Strain of Dog Bone is "Retriever Female". It is not temporary.
 
 the scent of Dog Bone is "The bone-shaped doggie dildo smells strongly of canine sex, much like the bitch you acquired it from.".
@@ -621,7 +621,7 @@ to say RexPetMedWait1:
 		WaitLineBreak;
 		say "     You fuck you playmate with the toy for some quite a while, pushing her to climax several times before you finally rest, collapsing on top of her in exhaustion, both from your own orgasms and the time spent returning the favor in kind. Karen wiggles out from beneath you, turning around to lay next to you, face to face. She licks your face affectionately a few times before snuggling up close to you and drifting off to sleep. You pant happily as you lay next to her, but before you join her in drift off your attention is pulled away by a low moaning, looking around you see Rex still back in his seat furiously stroking his own canine cock, clearly excited by the show his two pets put on for him.";
 		NPCSexAftermath Player receives "PussyDildoFuck" from Karen;
-		NPCSexAftermath Karen receives "Oralpussy" from Player;
+		NPCSexAftermath Karen receives "OralPussy" from Player;
 		NPCSexAftermath Karen receives "PussyDildoFuck" from Player;
 	else if Player is male:
 		say "     She pushes the bone into your hands before she turns, exposing her raised tail to you while she begins lick and sucking at your rapidly rising maleness. Needing no further prompting, you begin teasing the outer lips of her feminine folds with the pointed tip of the toy, causing her to moan in delight around your hard shaft. The faster you begin working the canine dildo into her dripping slit the more enthusiastically she sucks on your throbbing cock, and before long you've worked each other to the edge of climax. Finally you can't take it anymore, thrusting your hips forward, pushing your shaft deep into Karen's muzzle, fillings her mouth with your warm seed. At the same time you give the bone a final powerful thrust, her howls of pleasure are muffled by your own climax in her mouth, but you know you've struck home when the rush of feminine fluids gushing from her cunt soak your head and torso.";

@@ -341,7 +341,7 @@ When Play begins:
 	now libido entry is 60; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is "healing booster"; [ Dropped item. Key will be used later ]
 	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "vixen milk";
+	now MilkItem entry is "vixen nurse milk";
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -487,7 +487,7 @@ healing booster is a grab object. It is fast. It is temporary.
 
 the scent of the healing booster is "The healing booster smells of chemicals and medicine.".
 
-usedesc of healing booster is "[healing booster use]".
+Usedesc of healing booster is "[healing booster use]".
 
 to say healing booster use:
 	let healed be 20;

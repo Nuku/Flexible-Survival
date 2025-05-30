@@ -593,7 +593,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 2	"Tehuantl_Carl_Encounter1"	Tehuantl_Carl_Encounter1	"[EventConditions_Tehuantl_Carl_Encounter1]"	Grey Abbey 2F	2500	2	100
 
 to say EventConditions_Tehuantl_Carl_Encounter1:
-	if ((LastTehuantlCarlScene - turns > 6) and (Tehuantl is in Grey Abbey 2F and Libido of Tehuantl < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F)) and Player is not CoA: [list of conditions here]
+	if ((LastTehuantlCarlScene - turns > 6) and (Tehuantl is in Grey Abbey 2F and Libido of Tehuantl < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (HP of Carl > 10 and HP of Carl < 50 and HP of Carl is not 30 and Carl is in Grey Abbey 2F)) and Player is not CoA: [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)

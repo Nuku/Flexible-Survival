@@ -41,9 +41,9 @@ When Play begins:
 	now victory entry is "[losetoMargayTaur]";
 	now desc entry is "[MargayTaurdesc]";
 	now face entry is "cute and innocent like a kitten with wide expressive eyes, natural black eyeliner, and adorable pointed catty ears"; [ Face description, format as "Your face is [Face of Player]." ]
-	now body entry is "tauric and pleasingly plump. Your anthro half has a cute muffin top and an adorable outie. While your arms are an efficient mix of feline and human complete with soft paw pads and long retractable claws. Beneath this cuddly exterior though, is a dense layer of hardened muscles. From the waist down, your body resembles a chubby hunting cat with four plush digitigrade feline legs";
+	now body entry is "tauric and pleasingly plump. Your anthro half has a cute muffin top and an adorable outie. While your arms are an efficient mix of feline and human complete with soft paw pads and long retractable claws. Beneath this cuddly exterior though, is a dense layer of hardened muscles[if Affection of Ava is 1]. Growing out of your back is a collection of smooth prehensile tendrils almost as long as you are. Thanks to their size and strength, you often find yourself using them to assist in manual tasks, or support your burgeoning body. Well, when you're not using them for more intimate encounters that is[end if]. From the waist down, your body resembles a chubby hunting cat with four plush digitigrade feline legs";
 	now skin entry is "a soft beautiful golden pelt festooned with black rosettes alongside patches of creamy white fur that covers your pale pliable";
-	now tail entry is "You have wide fecund hips with an incredibly long prehensile feline tail.";
+	now tail entry is "You have wide fecund hips with an incredibly long prehensile feline tail[if Affection of Ava is 1]. Hidden under the fur on the tip of your tail are subtle lips of your exotic ovi slit, sadly your egg laying limb is only effective on fellow margay taurs[end if].";
 	now cock entry is "Barbed and tapered";
 	now face change entry is "";
 	now body change entry is "";
