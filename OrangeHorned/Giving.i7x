@@ -51,8 +51,6 @@ Sterile of GivingFirbolg is true. [steriles can't knock people up]
 MainInfection of GivingFirbolg is "".
 Description of GivingFirbolg is "[Givingdesc]".
 
-the scent of the GivingFirbolg is "     Giving smells like he's almost drenched in what you could describe as some sort of irish soap. Very much herbal and sea-salty in all the right ways. It might be from all the sweat caked on his body."
-
 to say Givingdesc:
 	if debugactive is 1:
 		say "     DEBUG -> HP: [HP of GivingFirbolg] <- DEBUG[line break]";
@@ -135,7 +133,7 @@ to say GivingTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "No requirements";
 	[]
-	if HP of Giving is 2:
+	if HP of GivingFirbolg is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "About Knott";
 		now sortorder entry is 2;
