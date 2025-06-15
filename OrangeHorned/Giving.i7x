@@ -50,7 +50,6 @@ TwistedCapacity of GivingFirbolg is false. [Twisted Characters can take any pene
 Sterile of GivingFirbolg is true. [steriles can't knock people up]
 MainInfection of GivingFirbolg is "".
 Description of GivingFirbolg is "[Givingdesc]".
-Conversation of GivingFirbolg is { "" }.
 
 the scent of the GivingFirbolg is "     Giving smells like he's almost drenched in what you could describe as some sort of irish soap. Very much herbal and sea-salty in all the right ways. It might be from all the sweat caked on his body."
 
