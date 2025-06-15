@@ -1,4 +1,4 @@
-Version 1 of Giving Firbolg by OrangeHorned begins here.
+Version 1 of Giving by OrangeHorned begins here.
 
 [ HP of Giving Firbolg    ]
 [ 0 -  Not Met            ]
@@ -125,23 +125,24 @@ to say GivingFirbolgTalk2:
 			say "     'Well... uh... I was near the docks and... I saw this poor puppy trying to lick some white stuff, the poor thing was already transforming. I sometimes wonder if I did the right thing, holding that thing in my arms as I tried to feed it something. I did it for a few days, wondering if it would fight the nanites, die or worse... All I know is one day, it wasn't in the place I found it...' Giving looks like he's about to cry before rubbing his eyes. 'You can't save everything, all you can do is your best'";
 		-- 5: [Short Story 5]
 			say "     Let's see... the commune wanted me to get some sewing kits, since I'm the one who's mostly out and about, I usually know where to get some things. Heading off to the High Rises, I was about to check out one shop I've seen when I passed by only to see a bunch of foot soldiers scramble out of there. Luckily apparently at least some of the troops know that some blue skinned figure sometimes helps them out because they could have pumped me with lead, apparently the fire exit was a no-go and they were just trapped, only thing I asked them for is just confirmation if there's any sewing supplies left inside-- which luckily was a yes";
-			to say GivingTalkMenu:
-    LineBreak;
-    now sextablerun is 0;
-    blank out the whole of table of fucking options;
-    []
-    choose a blank row in table of fucking options;
-    now title entry is "Talk Option 1";
-    now sortorder entry is 1;
-    now description entry is "No requirements";
-    []
-    if HP of Giving is 2:
-        choose a blank row in table of fucking options;
-        now title entry is "About Knott";
-        now sortorder entry is 2;
-        now description entry is "Why does he still seem pretty apprehensive?";
+
+to say GivingTalkMenu:
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Talk Option 1";
+	now sortorder entry is 1;
+	now description entry is "No requirements";
+	[]
+	if HP of Giving is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "About Knott";
+		now sortorder entry is 2;
+		now description entry is "Why does he still seem pretty apprehensive?";
 		say " 'Oh Knott? Hes a good guy but well, hes kinda still dealing with the infection impulses as well as the fact that he is scared to show himself to the survivor group he was apart of' Giving scratches the back of his head 'Oh tell you what, im in trouble due to transforming him without asking Daddy, so maybe you could grab his old things and bring it to him?' You ask him what could he gather, 'Oh im not sure, you gotta ask him yourself, I didnt want to pry so I know the bare minimum.'";
-    []
+	[]
 
 
 Section 2 - Sex
@@ -185,14 +186,14 @@ to say GivingSexMenu:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You step back from the firbolg, shaking your head slightly as he gives a questioning look.";
+			say "	 You step back from the firbolg, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say GivingSex1: [Firbolg Breeding] [Requires Cock, need something to stop players from fucking them without cock, Firbolg pregancy and infection coming soon]
-	say "     You begin to push yourself into Giving's giant body, rubbing your [CockName of Player] penis into his thigh, telling him that you've noticed how pent up he is all the time. The bovine looks in shock at your sudden depravity. 'Uh, well...' With a fearful snort, he grabs onto his crotch in anticipation. Remembering how hard Knott fucked him, you know that cunt of his must be so hard to please, let alone when he's out all the time far from the cock that helps him satiate the nanites' impulse. 'If I have to admit...' With another long pause, he clicks at his straps letting that perfect fertile mancunt out to the world, 'Watching all these people fucking like animals, really gets your brain wondering how good it really is.' His fat clit-cock throbbed, practically drooling for what it already knew was coming'";
+	say "	 You begin to push yourself into Giving's giant body, rubbing your [CockName of Player] penis into his thigh, telling him that you've noticed how pent up he is all the time. The bovine looks in shock at your sudden depravity. 'Uh, well...' With a fearful snort, he grabs onto his crotch in anticipation. Remembering how hard Knott fucked him, you know that cunt of his must be so hard to please, let alone when he's out all the time far from the cock that helps him satiate the nanites' impulse. 'If I have to admit...' With another long pause, he clicks at his straps letting that perfect fertile mancunt out to the world, 'Watching all these people fucking like animals, really gets your brain wondering how good it really is.' His fat clit-cock throbbed, practically drooling for what it already knew was coming'";
 	say "Both of you retreat to a nearby forest clearing, the blue-skinned hunk leaning onto a tree with his legs spread out, 'Daddy doesn't like it when we fuck out of the commune, so just keep this between you and me' disrobing yourself, you crawl on fours to push your head between his gracious pillows, frotting your [cock size desc of player] on their flower canal. His chest heaves deeply, 'Fuck... it's just so good pushing them out though... watching my belly just swell with my little brothers['] seed, and now I'm letting an outsider knock me up.' Both of you share an intense kiss as you place your hand behind his, slurping his thick tongue down your throat, but it wasn't because you wanted to kiss him, it was to make sure he didn't let the whole forest hear you insert your [CockName of Player] cock deep into his tight walls. Inch by inch, you watch his eyes shoot up into the sky, your lubed cock getting yet more from his flowery clit-cock spraying slimy femcum on you, Giving's pleasure more than obvious, to the point you have to hold him back from smashing his cunt upwards into your groin. With a surprise, you fully hilt yourself and see him looking down needily for more.";
 	WaitLineBreak;
 	say "With mouth-sharing breaths, the passionate fuck starts, the heavy smell of brown sugar emanates, the Firbolg sweating a storm just with a few strokes. His tongue is limp in your mouth as all thoughts beyond pleasing his needy pussy vanish, pulling away from his tongue nets you a look at his stuffed pecs rocking with your heavy thrusts, pushing your aroused cock to grow even harder deep within his hole. To his credit, your partner tries his best to keep his moans and whimpers quiet, but rotating your hips in any direction makes him scream silently. You think that was the point when you couldn't care less for the infection as your [bodydesc of Player] explore his bubbly muscles, watching each shake and jiggle like jelly in ecstasy.";
@@ -202,11 +203,11 @@ to say GivingSex1: [Firbolg Breeding] [Requires Cock, need something to stop pla
 	say "Everytime you feel yourself get close, you latch onto the source of his creamy milk, sucking on the engorged pec to muffle your jittering. Giving sometimes looks down at you, grinning ear to ear before you knock him back into another intense climax that makes his entire body shiver. You lost count at some point, forgetting completely what your mission is. This situation makes you think about how after this, Giving is gonna have to walk around and explain who did this, maybe the other Firbolgs do the same to some ferals they like? A bunch of muscular behemoths who jam themselves onto the cock of anything with a pulse, making him swell with such taboo pretenses finally snaps you out enough to look at your handiwork.";
 	WaitLineBreak;
 	say "His entire belly was distended with cum, your legs and the cold snow between you covered in slime. He tries to mumble a few words, but only manages to mouth them for a while. 'Such a naughty little one~... Big Brother's gonna have to seek you out for a womb filling, all this cum of yours feels sooooooo dang good.";
-	say "     You lay into his warm body, arms wrapped again around him as both of you catch your breath. With a heavy heart, you eventually leave his embrace. Knowing for sure that his womb will catch and make you new sires.";
+	say "	 You lay into his warm body, arms wrapped again around him as both of you catch your breath. With a heavy heart, you eventually leave his embrace. Knowing for sure that his womb will catch and make you new sires.";
 	NPCSexAftermath GivingFirbolg receives "PussyFuck" from Player;
 
 
 Section 3 - Events
 
 
-Giving Firbolg ends here.
+Giving ends here.
