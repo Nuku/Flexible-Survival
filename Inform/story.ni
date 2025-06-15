@@ -268,6 +268,8 @@ Include Zoo by Wahn.
 
 Part 2 - Quests & Events
 
+Include Beag Infection by OrangeHorned
+Include Beag InfectionFirbolg Tapes by OrangeHorned
 Include AG Beach Events by Aureas Gigas.
 Include Ancient Tome by Wahn.
 Include Apartment 319 by Kaleem Mcintyre.
