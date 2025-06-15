@@ -736,10 +736,23 @@ to say ObservationRoomFuck:
 
 Section 4 - Library Sex
 
-instead of navigating Grey Abbey Library while ((MulAnalAcceptance > 8) and (lastfuck of Mul - turns) > 8):
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Mul_Sex_Walkin"	Mul_Sex_Walkin	"[EventConditions_Mul_Sex_Walkin]"	Grey Abbey Library	2500	10	40
+
+to say EventConditions_Mul_Sex_Walkin:
+	if (MulAnalAcceptance > 8) and (lastfuck of Mul - turns) > 8: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Mul_Sex_Walkin	"Mul_Sex_Walkin"
+
+Mul_Sex_Walkin is a situation.
+ResolveFunction of Mul_Sex_Walkin is "[ResolveEvent Mul_Sex_Walkin]".
+Sarea of Mul_Sex_Walkin is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Mul_Sex_Walkin:
 	if debugactive is 1:
 		say "     DEBUG: MUL SEX WALKIN [line break]";
 	if graphics is true:
