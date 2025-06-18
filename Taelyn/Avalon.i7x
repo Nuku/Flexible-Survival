@@ -161,7 +161,7 @@ Runestone	"Runestone"
 
 Runestone is a man.
 Runestone is in Mysterious Glade.
-Description of Runestone is "     A small disk-shaped stone with strange markings sits on the ground, covered by the grass. It would have been easy to miss if you were looking in the wrong place. Maybe you should [bold type]inspect[roman type] the runestone further?".
+Description of Runestone is "     A small disk-shaped stone with strange markings sits on the ground, covered by the grass. It would have been easy to miss if you were looking in the wrong place. Maybe you should [bold type]inspect[roman type] the Runestone further?".
 the linkaction of Runestone is "Possible Actions: [link]inspect[as]Inspect Runestone[end link][line break]".
 
 [Defining actions possible relating to the Runestone]
