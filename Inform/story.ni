@@ -268,7 +268,6 @@ Include Zoo by Wahn.
 
 Part 2 - Quests & Events
 
-Include Giving by OrangeHorned.
 Include AG Beach Events by Aureas Gigas.
 Include Ancient Tome by Wahn.
 Include Apartment 319 by Kaleem Mcintyre.
@@ -311,7 +310,6 @@ Include Fair Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Female Dorm Events by Prometheus.
 Include Feral Events by Guest Writers.
-Include Firbolgs by OrangeHorned.
 Include Fire House by Kaleem Mcintyre.
 Include Food and Water Finding by Nuku Valente.
 Include Forest Events by Aureas Gigas.
@@ -868,7 +866,6 @@ Include Galaxite by Sundered Dragon.
 Include Genevieve by Prometheus.
 Include Garrett by SgtPepper234.
 Include Gerty by Qazarar.
-Include Giving Firbolg by OrangeHorned.
 Include Glory by Wahn.
 Include Good Alexandra by Prometheus.
 Include Gordon by Rikaeus.
@@ -1060,6 +1057,16 @@ Include Zephias by Wahn.
 Include Zigor by Stripes.
 Include Ziix by Voidsnaps.
 Include Zoe by Kernog.
+
+[Inactivated until further developments]
+[
+Include Beag Infection by OrangeHorned.
+Include Fathnach Infection by OrangeHorned.
+Include Giving Firbolg by OrangeHorned.
+Include Knott by OrangeHorned.
+Include Firbolg Quests by OrangeHorned.
+Include Firbolg Tapes by OrangeHorned.
+]
 
 Part 5 - Companions and Allies
 
