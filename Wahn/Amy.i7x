@@ -127,6 +127,55 @@ Conversation of Amy is { "Woof." }.
 
 instead of conversing the Amy:
 	project the figure of Amy_face_icon;
+	say "[AmyTalkMenu]";
+
+to say AmyTalkMenu:
+	LineBreak;
+	say "What do you want to talk with Amy about?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Just chat a bit";
+	now sortorder entry is 1;
+	now description entry is "Talk about what comes to mind";
+	[]
+	if George's Animal Emporium is known and HP of Amy > 1 and "Collared_red" is not listed in Traits of Amy and "Collared_blue" is not listed in Traits of Amy:
+		choose a blank row in table of fucking options;
+		now title entry is "Take her to the pet store to find a collar for her";
+		now sortorder entry is 2;
+		now description entry is "Take Amy to the nearby animal emporium to see what you can find";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Just chat a bit"):
+					say "[AmyTalk1]";
+				else if (nam is "Take her to the pet store to find a collar for her"):
+					say "[AmyTalk_PetStore]";
+				wait for any key;
+				say "[AmyTalkMenu]";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+to say AmyTalk1:
 	if (HP of Amy is 1): [child-like]
 		say "     Amy says [one of]'This place is soo big. I wouldn't have believed it can exist if you hadn't brought me here.'[or]'You're really nice.'[or]'Woof!'[or]'I like you.'[or]'Some of the books here smell funny.'[at random]";
 	else if HP of Amy is 2 or HP of Amy is 10: [matured]
@@ -138,10 +187,33 @@ instead of conversing the Amy:
 	else:
 		say "ERROR-Amy-[HP of Amy]C: She isn't in one of the states she should be in! Please report how you got to this message.";
 
+to say AmyTalk_PetStore:
+	say "     Approaching Amy, you ask her if she'd like to go on a little adventure, outside. She looks at you with a shy smile and asks, 'Sure, but will it be safe? We saw so many dangerous things on the way here, and...' You smile and pat her arm, explaining that it's just across the street really. Nothing dangerous this close to the library. She's happy to hear that and perks up, agreeing without any further hesitation. 'Yay, I hope it'll be fun!' the anthro dog adds in a chipper tone, and she's immediately ready to come with you for the excursion. Setting out together, it's not all that long of a walk till you get to the ransacked shopping street just west of the Grey Abbey Library, where you angle your steps towards the entrance of George's Animal Emporium. As you lead the way through the entrance door and the young husky woman follows, she sniffs the air, looking at the utter chaos within with innocent eyes. The aroma of dried cum doesn't seem to disturb her in any way, and she lets her curiosity run wild as she begins to explore and dig around a bit in the room.";
+	say "     Of course Amy isn't the only one who looks around, and you poke and prod at the general chaos in the store, turning over things that are broken, sticky, spoiled and the like. After a little bit of searching, you do find what you're looking for - a nice, sky blue collar made of supple leather, perfect for a lovely demure husky woman. Hm, or shall you take that one over there - vibrant and red, its leather a little bit broader and more firm, fitting an active bitch that is ready for what the world throws at her. Well, or maybe that's just what your imaginative mind assigns to the colors. In the end, it's kind of a fashion choice. You call over Amy and show her the two collars you found, and she's immediately delighted, looking at them with interest. 'They're pretty. What are they?' she asks, full of innocence, and you explain that they're symbols of belonging to something - a family, a pack, an owner, ... you don't go into detail which one you see them for, instead just asking if she'd like to try one. You're sure it'd look pretty on her. Amy's tail wags in a happy sway, and she nods eagerly.";
+	LineBreak;
+	say "     [bold type]Which collar would you like to put on Amy?[roman type][line break]";
+	let Amy_Collar_Choices be a list of text;
+	add "The sky blue one!" to Amy_Collar_Choices;
+	add "The vibrant red one!" to Amy_Collar_Choices;
+	let Amy_Collar_Choice be what the player chooses from Amy_Collar_Choices;
+	if Amy_Collar_Choice is:
+		-- "The sky blue one!":
+			say "     Petting her and stroking a hand over Amy's head, you advance with the blue collar in your hand, sliding it gently around her neck and then buckling the strip of leather. She gives you a happy, eager look, and tries to glance down to see her new bit of gear, without much success. Taking her to the wash room in the back, you allow Amy to look at herself in the mirror, which ends up causing her tail to beat wildly, as she loves how the collar looks on her. 'It's so pretty, I'll never take it off!' she exclaims happily, then gives you a hug and a content nuzzle of her nose against the side of your neck. Having done what you'd planned to do, you set out back towards the Grey Abbey Library.";
+			TraitGain "Collared_blue" for Amy;
+		-- "The vibrant red one!":
+			say "     Petting her and stroking a hand over Amy's head, you advance with the red collar in your hand, sliding it gently around her neck and then buckling the strip of leather. She gives you a happy, eager look, and tries to glance down to see her new bit of gear, without much success. Taking her to the wash room in the back, you allow Amy to look at herself in the mirror, which ends up causing her tail to beat wildly, as she loves how the collar looks on her. 'It's so pretty, I'll never take it off!' she exclaims happily, then gives you a hug and a content nuzzle of her nose against the side of your neck. Having done what you'd planned to do, you set out back towards the Grey Abbey Library.";
+			TraitGain "Collared_red" for Amy;
+
 to say AmyDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Amy], LUST: [lust of Amy], LIBIDO: [Libido of Amy], THIRST: [thirst of Amy], LEVEL: [level of Amy], XP: [XP of AMY], DEXTERITY: [dexterity of Amy], SVENAMYSEX: [SvenAmySex], BRUTUSAMYSEX: [BrutusAmySex], SNOWAMYSEX: [SnowAmySex]  <- DEBUG[line break]";
-	say "     Amy is a young and beautiful anthro canine, her body covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears along with a large, fluffy husky tail. [if HP of Amy < 12]Her chest bears two firm and grope-able B cup breasts along with two smaller A cup pairs of breasts underneath them[else]Her chest bears two firm and grope-able C cup breasts along with two smaller B cup pairs of breasts underneath them. They all ooze small droplets of milk[end if][if Lust of Amy > 12]. There is a kind of special glow to her, and she seems to be very happy and fulfilled right now[else if Lust of Amy > 0]. Her belly bulges in obvious pregnancy, making her a very content and happy husky[end if].";
+	say "     Amy is a young and beautiful anthro canine, her body covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears along with a large, fluffy husky tail. [if HP of Amy < 12]Her chest bears two firm and grope-able B cup breasts along with two smaller A cup pairs of breasts underneath them[else]Her chest bears two firm and grope-able C cup breasts along with two smaller B cup pairs of breasts underneath them. They all ooze small droplets of milk[end if][if Lust of Amy > 12]. There is a kind of special glow to her, and she seems to be very happy and fulfilled right now[else if Lust of Amy > 0]. Her belly bulges in obvious pregnancy, making her a very content and happy husky[end if]. ";
+	if "Collared_red" is listed in Traits of Amy:
+		say "He's wearing a sturdy, very well made dog collar of supple red leather, tight around her slender neck.";
+	else if "Collared_blue" is listed in Traits of Amy:
+		say "He's wearing a slender, very well made dog collar of sky blue leather, tight around her slender neck.";
+	else:
+		LineBreak;
 	if HP of Amy is 1:
 		say "     Her character is rather child-like, which might have something to do with having been born not all that long ago. She doesn't wear any clothing and usually moves around on all fours like a real dog.";
 	else:
