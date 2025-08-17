@@ -3,6 +3,7 @@ Ava by Sundered Dragon begins here.
 [Version 1.1 pre-preg frame work]
 [Version 1.2 MVP Build]
 [Version 1.3 The mighty quest for infinite taurs]
+[ Version 1.4 the kittening is upon us!]
 "Adds a incorrigible NPC name Ava to the Flexible Survival game."
 
 [Note to Self: Check Ava's menus and makes sure she is set 'Thirst if Ava is 0' for pre-TF content and 'Thirst is >= 1' for post TF content this may be the cause of the menu issue.]
@@ -61,8 +62,8 @@ Ava by Sundered Dragon begins here.
 [ 0 = no kittens *sad dragon noises*                ]
 [ 8-32 = new mother                                 ]
 [ 40-64 = seasoned broodmother                      ]
-[ 72-104 = professional breeder                     ]
-[ 105-999 = Makes Nadia look like a newb            ]
+[ 72-104 = Professional breeder                     ]
+[ 112-132 = Makes Nadia look like a newb            ]
 [ 1000-2000 = Genghis Khan is rolling in his grave  ]
 [ 2008-9999 = Please stop, inform is crying         ]
 
@@ -229,6 +230,9 @@ an everyturn rule:
 		else if Libido of Ava is 29:
 			now Pick Up is unresolved;
 			now Electric Boogaloo is unresolved;
+			now Return Boogaloo is unresolved;
+			now Pervy Little Helpers is unresolved;
+			now Final Event is unresolved;
 
 Section 2 - Everyone falls in love somehow
 
@@ -685,7 +689,7 @@ to say AvaSex5:
 	say "     Giggling, you tell her that the feeling is mutual, but that doesn't mean you still can't have a little bit of fun and gesture with a bob of your tendrils to Ava's futon. 'Oh you naughty mommy, I love the way you think,' Ava trills, taking your hand in hers. She leads you over to the mattress and eases herself onto her side. You watch as her soft downy assets and hyper-engorged tummy rest comfortably on the padded sheets. 'Wow the kittens are getting pretty big aren't they?' she comments. Nodding in agreement, you gently run your paw over her taunt pelt, telling her that it looks like it won't long till she gives birth. 'Ya, I can't wait to really hold them all in my arms, but hm.' Ava sighs somewhat wistfully as she caresses her midriff with her tendrils. You ask Ava what is wrong. 'Oh it's nothing, it's just...' she murmurs, casting her gaze to the cute not-so-little curve of her middle, 'I've gotten so used to having a piece of you so close. I'm not looking forward to when they leave.'";
 	WaitLineBreak;
 	say "     Tutting at her, you paw up to your lovely mate and plant a quick kiss on her cheek, telling her how sweet that sounds and add that you can always give her another batch. 'Thanks [Name of Player], but you know I'm really gonna miss my bump when it's gone. I sometimes wish I could stay like this forever. I mean it feels nice getting to rest my feet like this,' Ava laments as she drapes one of her paws on her heft T-cup tits. 'It's hard to believe how big the girls have gotten, but I want more,' Ava remarks tracing a clawed finger along the borders of her striped pelt as she gives you a come hither stare. Purring approvingly, you tell her that you might be able to arrange that as you slide your own bulky figure beside her. You gently press your fecund figures against one another, excited by the subtle warmth emanating from her cores as your navel's touch. 'Ah it feels like the girls missed you and their sisters too,' Ava coos, as her belly fur seems to quake and roil with activity as her brood reacts to your presence. You gasp in surprise as one or two of their tiny pawbs kicks your fluffy midriff. Looks like it, you respond in a dreamy tone as you tenderly massage the outlines of their cute little toes.";
-	say "     'And what about you girls? Did you miss me,' Ave queries as she runs her palm over your heavy middle as she pulls you closer. Your litter seems to react with equal activity as they sense their other mother's voice and warmth, erupting in a sudden flurry of activity as tiny toes dance across the surface of your tauric womb. It would seem so, you reply, fondling your mutual bundles with your padded digits. Ava's tendrils explore your tauric figure, squeezing your love handles and cream-stuffed breasts. ";
+	say "     'And what about you girls? Did you miss me,' a queries as she runs her palm over your heavy middle as she pulls you closer. Your litter seems to react with equal activity as they sense their other mother's voice and warmth, erupting in a sudden flurry of activity as tiny toes dance across the surface of your tauric womb. It would seem so, you reply, fondling your mutual bundles with your padded digits. Ava's tendrils explore your tauric figure, squeezing your love handles and cream-stuffed breasts. ";
 	if Breast Size of Player >= 1 and Breast Size of Player <= 4:
 		say "'That's good, hopefully they can help their mosquito bite mommy. I mean these do look kind of cute and perky,' Ava sighs, caressing one of feral [Breast Size desc of Player] tits with her tendrils. 'But don't you think you should be a bit bigger? The cubs are going to need lots of milk. How are you gonna feed them like this?'";
 	else if Breast Size of Player >= 5 and Breast Size of Player <= 12:
@@ -1495,7 +1499,6 @@ to say ResolveEvent Breeding_Material:
 				now Registry Location is active;
 				now Industrial canning facility is active;
 				ItemGain Medea's List by 1;
-				now XP of Ava is 1;
 			-- "Tell her you haven't adopted.":
 				say "     'So this is a natural child, interesting,' Medea says, with a neutral chirp as she rolls a stool beside you gesturing for you to present your litter for examination. Replying in the affirmative, and not seeing the harm in indulging her, you waddle to up her and present your gravid midriff for inspection. Smirking, the pregnancy-obsessed scalie languidly brushes her clawed finger against the taut fur of your tauric tum saying. 'I can see you're taking very good care of yourself. Your fur is so wonderful soft and hm,' Medea rumbles, giving your love handles a cheeky pinch and watches as it snaps back into place, 'your skin still has plenty of elasticity to it despite your size. Good on you for staying hydrated! You'd be surprised how many of my former patients were on the cusp of dehydration before the outbreak,' Medea sighs, shaking her muzzle dejectedly as if to banish a bad memory.";
 				say "     'Oh, and I see you're expressing too!' she remarks excitedly though can't help but notice a slight tinge of jealousy in her voice as her taloned fingers brush up against one of your engorged [Breast Size desc of Player] milk tanks. 'Do you mind if I take a quick sample? I've been wanting to study the regenerative properties of mother's milk for some time now.' Sure, you've got plenty to spare, and the girls could do with a quick draining, you tease, giving your [Breast Size desc of Player] tits an affectionate pat. Nodding, Medea fishes out a couple of graduated cylinders from a nearby desk, then sets them beside herself as she cups one of your lower teats remarking. 'Oh may you've got quite the chest here, dear! Good balance of glandular tissue and fat,' Medea trills as her sleek scalie's claws massage your tight titty tissue, sending a delectable little shiver through your [bodydesc of player] body at the sensation of her talon grazing your tight overwound nerves.";
@@ -1541,7 +1544,6 @@ to say ResolveEvent Breeding_Material:
 				now Registry Location is active;
 				now Industrial canning facility is active;
 				ItemGain Medea's List by 1;
-				now XP of Ava is 1;
 	if "UB Pred" is listed in feats of Player and Player is impreg_able:
 		say "     'Opening the door to Medea's abode, you spy the genial lizard woman standing beside her well-stocked countertop with her back turned to you as she mixes a pair of vibrant-colored vials, filled with some unknown fluid. At the sound of the aperture closing behind you, Medea's yellow-brown head frills appear to perk up slightly as if to better angle her ear holes as she sets down the containers. She turns on the balls of her padded reptile in paws, revealing the unsubtle swell of her scaled tum poking out from the hem of blouse. 'Ah well if it isn't my favorite patient, what can I do for you today?' Medea smirks, casually and shamelessly eyeing up your middle as you walk in, as if inspecting her handiwork. Returning her greeting, you tell her nothing for you, thanks, but a lover of yours had a question for her. Nodding, Medea motions for you to continue. Does she remember how she was able to give you the ability to unbirth people a while back, you inquire, absentmindedly petting your tummy fur as you recall the experience.";
 		say "     'I do,' Medea preens through a proud toothy grins, resting a hand on the roof of her eggy laden tum, 'it was one of my finer breakthroughs, I trust you've been enjoying the *ahem* adoptive process.' She snickers, taking out a ringed notepad with a single black plastic  pen tucked in its coils from her lab coat pocket. 'Speaking of which, I'd say you're well overdue for a follow-up exam, shall we?' She asks, giving the butt of her pen a quick click. Shrugging and wanting to stay on the doctor's good side, you tell her that's no problem. 'It's too bad you're not expecting though. I would have liked the contemporary data, *sigh*, we'll just settle for a basic blood test,' Medea grumbles, looking at your empty womb with a look of utter disappointment. 'Assuming you consent with the procedure, of course.' Bobbing your head, you tell her that's fine. 'Splendid, now let me get my supplies.' She says, sauntering over the back of her office.";
@@ -1557,7 +1559,6 @@ to say ResolveEvent Breeding_Material:
 		now Registry Location is active;
 		now Industrial canning facility is active;
 		ItemGain Medea's List by 1;
-		now XP of Ava is 1;
 	else if "UB Pred" is not listed in feats of Player:
 		say "     'Oh hello again friend, what can I do for you?' Medea chirps, as she watches you walk in. Reciprocating her greeting, you bring up Ava's question about the possibility of two biological women having a child together and if she might have the means to facilitate this. 'Sadly, no,' Medea replies, clicking her toe claws against the floor. 'With the pandemic going on, options are rather limited. Right now your best option is finding a donor male or herm, I am sure there are quite a few willing mutants in the city.' Medea quips, with a devious smirk. Shaking your head, you tell her Ava is rather set on having a kid with you specifically. 'Then the easiest solution would be to find some estotrogen pills, they should grant you both male anatomy without compromising feminine attributes. If memory serves, you can find them at the city hospital. I recall they were part of some experiential HRT program, but I don't know who ran it or why though. The A.P.A doesn't exactly recognize intersex dysmorphia as a valid mental disorder, yet.'";
 		say "     Shaking your head, you tell her that won't work either Ava is a borderline misandrist and mildly agoraphobic. 'Then there is not much I can do then. Maybe when things blow over you check around and see what's in Ava's price range.' Medea shrugs. Really there's nothing she can do? You ask. 'Well,' Medea hums, tapping her muzzle thoughtfully, 'maybe but it won't be easy. Let me check some of my notes and I'll see what I can do,' Medea replies, gesturing to a nearby file cabinet. 'But I should warn, some supplies and need better equipment, hotplates and mess kits can only get you so far. The only place I can think of that would have them is Trevor labs, and that place was built like a fort before the darkest days of the current cataclysm started to stretch on ahead of us.'";
@@ -1570,7 +1571,6 @@ to say ResolveEvent Breeding_Material:
 		now Registry Location is active;
 		now Industrial canning facility is active;
 		ItemGain Medea's List by 1;
-		now XP of Ava is 1;
 
 
 Table of GameEventIDs (continued)
@@ -2624,7 +2624,7 @@ to say HappyDragonAuthorNoisesEight:
 	say "     Once your last kitten has had her fill, you direct them to over to your children so they can meet their kin. When you feel they're out of ear shot, you turn to Ava and ask if she's really ready to part ways with them. 'I-I think so, I've spent quite a bit of time with them already after all,' Ava answers in a slightly downcast tone as she places a paw on her now vacant tummy. 'I'm still gonna miss being so close to them all the time. It felt like a part of you was always beside me. I already sort of miss my belly bumps too. You know, if you wanted, maybe you put another one in before you leave. I really enjoyed the extra attention mommy and daddy gave me while I was pregnant.' Placing a hand on her tummy, you tell her you think you can arrange that.";
 	say "     Not to mention, you often find yourself missing your maternal figure too, it just feels wrong to walk the city without a belly full of kittens to keep you company. You then turn to your children and ask who they would feel about having a few more sisters. 'That would be awesome mom. Ava was telling us how there are only a handful of us right now. You should really fix that, we're like an endangered species right now,' one of your daughters replies. 'Ya you heard Grandpa Drake how there's safety in numbers, so you should have more of us. That way we can help you out more if you ever get in trouble,' another of your daughters adds. Well that settles it. If the kids are fine with it, and Ava's willing, you can't see why not. 'Oh, let's get started right away then.' Ava purrs motioning for you to follow her back to her room with an inviting wave of her tail.";
 	WaitLineBreak;
-	say "     [italic type]Congratulations![roman type] Ava's quest and The Last Chance storyline ends here, for now. Though it may be pick up again one day, in the interregnum please enjoy your breedable cat girl waifu, and I'll see you next time ";
+	say "     [italic type]Congratulations![roman type] Ava's quest and The Last Chance storyline ends here, for now. In the interregnum please enjoy your breedable cat girl waifu, and I'll see you next time ";
 	if "Touched by Madness" is listed in feats of Player:
 		Say "on... Dragon Raider Z! The author would also like to thank everyone who left bug reports on Discord, your assistance helped make this a better, more functional piece. A special pair of shoutouts to the Wasteland Warrior Tsakar for there kind words as well as for supporting Flexible Survival, and to Prometheus for his help getting this piece off the ground.";
 	else:
@@ -3073,7 +3073,7 @@ to say DragonAuthorNoisesEight:
 	say "     Once your last daughter has been named, you turn your attention back to Ava and ask if she's really ready to let them leave yet. You can always give her a little more time if she needs it. After all, you can imagine it's not the easiest thing in the world for her and the kittens to split up so soon.'No, I know I am going to miss them, but it's for the best. They can see and learn a lot more out there than they can here. I mean you'll still come to visit me right? Maybe we can have a few more litters. I kind of miss having a piece of you so close,' Ava mews, running her paw over the tender curves of vacant tum. Offering her a reassuring look, you tell Ava that of course you'll come by again. Though you want to hear what your daughters think about you two expanding the family further first. A part of you already knows they're going to say yes, but still you want to make sure your family is on the same page.";
 	say "     'I wouldn't mind having a few more sisters either mom. There aren't that many of us after all,' one of your children replies. 'Ya, I think having a couple extra sisters sounds pretty cool, especially if it makes mommy Ava happy,' another of your young answers. 'It sure would help out in the city too. From what mommy Ava says, there are a lot of mean mutants out there so having extra eyes and ears around can't hurt right?' one of your daughters adds. Well guess that settles that, you quip telling Ava that as long as everyones fine with things you don't mind growing the family some more. Besides, you are already starting to miss the maternal bliss you and Ava had together. 'Tee-hee, good I was hoping you'd say. You know we could get started right now if you like,' Ava purrs gesturing to her room. Shooting her a catty grin, you tell her that could be arranged and head inside. You'll be by in a minute. 'Don't keep me waiting too long then,' Ava mews as saunters off.";
 	WaitLineBreak;
-	say "     [italic type]Congratulations![roman type] Ava's quest and The Last Chance storyline ends here, for now. Though it may be pick up again one day, in the interregnum enjoy your breedable cat girl waifu, and I'll see you next time ";
+	say "     [italic type]Congratulations![roman type] Ava's quest and The Last Chance storyline ends here, for now. In the interregnum enjoy your breedable cat girl waifu, and I'll see you next time ";
 	if "Touched by Madness" is listed in feats of Player:
 		Say "on... Dragon Raider Z! The author would also like to thank everyone who left bug reports on Discord, your assistance helped make this a better, more functional piece. A special pair of shoutouts to the Wasteland Warrior Tsakar for there kind words as well as for supporting Flexible Survival, and to Prometheus for his help getting this piece off the ground.";
 	else:
@@ -3512,7 +3512,7 @@ to say HappyDragonNoisesEight:
 		move Offspring to Bunker;
 	say "     After your last child has had their fill, your newly enlarged family takes a seat around the courtyard as Ava explains how they are going to be traveling with you from now. A few of them are a little sad at the thought of leaving her. Of course once you promise to regularly visit their birthing mother and maybe even expand your family a bit further. They start to brighten up and even become a little excited about seeing the world. Apparently, Ava has been telling them a bit about your adventures out in the city. Your daughters, despite some misgiving about leaving The Last Chance, are quite eager to experience life in the [']real world[']. One or two of them are already even talking about finding a mate or perhaps a few pets just like their more adventurous mother. Guess the apple, you think to yourself as your children fall in line with the rest of your brood.";
 	LineBreak;
-	say "     [italic type]Author's note: This is a placeholder event, more will be added in the future though.[roman type]";
+	say "     [italic type]Author's note: This is a placeholder event, more will be added as you contiune to breed Ava.[roman type]";
 	now Pick Up is resolved;
 	now Libido of Ava is 0;
 	increase level of Ava by 8;
@@ -3970,7 +3970,7 @@ to say NameThatKittenEight:
 	ItemGain Baby Picture by 1;
 	now Libido of Ava is 0;
 	increase level of Ava by 8;
-	now Electric Boogaloo is active;
+
 
 
 Table of GameEventIDs (continued)
@@ -3990,7 +3990,7 @@ ResolveFunction of Cuddle Puddle is "[ResolveEvent Cuddle_Puddle]".
 Sarea of Cuddle Puddle is "Nowhere".
 
 to say ResolveEvent Cuddle_Puddle:
-	say "     Pulled by the call of your maternal instincts back to The Last Chance, your arrival is greeted by the heartwarming sight of the latest brood cuddling together in a sleepy pile of feline felicity at the center of Drake's garden. Smiling at the sight of your kittens['] fluffy forms wrapped together in their tails['] soft embrace, their serenity only broken by the odd flex of adorable paws or their sweet dreamy mews as they peacefully doze in the available light. Eager to check in on them, you quietly paw up to them, as you get nearer though, you notice another set of comparatively tiny foot-paws poking out between the entwined forms of your slumber brood. Tilting your head in curiosity, it takes you a moment to place a name to the tawny gold pelt and supple black toes intermingling with burnished golds, nacre whites, and lustrous jet fur, then it hits you. Kathy? You inquire in soft whisper, as you lean over your kittens and give her paw a poke with your tendrils. 'Huh?' the matronly lioness mewls, as she stirs at your touch.";
+	say "     Pulled by the call of your maternal instincts back to The Last Chance, your arrival is greeted by the heartwarming sight of the latest brood cuddling together in a sleepy pile of feline felicity at the center of Drake's garden. Smiling at the sight of your kittens['] fluffy forms wrapped together in their tails['] soft embrace, their serenity only broken by the odd flex of adorable paws or their sweet dreamy mews as they peacefully doze in the available light. Eager to check in on them, you quietly paw up to them, as you get nearer though, you notice another set of comparatively tiny foot-paws poking out between the entwined forms of your slumbering brood. Tilting your head in curiosity, it takes you a moment to place a name to the tawny gold pelt and supple black toes intermingling with burnished golds, nacre whites, and lustrous jet fur, then it hits you. Kathy? You inquire in soft whisper, as you lean over your kittens and give her paw a poke with your tendrils. 'Huh?' the matronly lioness mewls, as she stirs at your touch.";
 	say "     You watch her foot retract and vanish into the collective floof of your cubs as the sound of talons clattering against the walkway echo through the still garden as her catty head and shoulders suddenly pops out from the pile. '*Yawn* Who's there?' Kathy rumbles, as she looks about The Chance for some sign of her mate. When you gazes met though, her eyes narrow slightly with a mix of confusion, fatigue, and aggravation, but as the last vestige of sleep falls from her visage, her expression brightens. [if Thirst of Kathy is 3]'Oh hey sis[else]Oh hi there [Name of Player][end if]! Sorry, I didn't hear you come in,' she says, with a pleasant trill as your kittens stir all around her, flexing and stretching out their many exotic limbs. 'No way, Mommy [Name of Player] is that you!?' one of your more active cubs chuffs, at the sight of you. 'Hey everyone get up Mommy [Name of Player] is back!' Another of your kittens exclaims excitedly as she jostles her siblings with her tendrils. The others groan and grumble at the disturbance, but as they catch sight of you, their expressions are set alight with pure jubilation as roll over into a sitting position around [if Thirst of Kathy is 3]your partner in crime[else]their apparent babysitter[end if].";
 	WaitLineBreak;
 	say "     You realize that Ava is nowhere to be seen, curious and perhaps just a hair worried, you ask where your mate is. 'Oh her and Drake are off together getting water and fresh herbs for dinner tonight,' your litter's caretaker answers, gesturing towards the quarantine line with a casual flick of her ears and a bob of her head. 'Ya, Drake said he's making us a huge pot of stew oh I can't wait!' one of the kittens simpers, licking her lips with anticipation as she idly paws her stomach. 'Mh, me too dear, Drake's a great cook, but he won't be back for a while though. So they let me watch your kitten's while they're out,' Kathy quips, reclining in the crook of one of your cubs lower bodies as if it were her own personal throne. 'And I must say dear, you have such well-mannered cubs,' she coos, running her paws over their fur affectionately. 'I know they're going to be great play[italic type]mates[roman type] for my little ones one day.' She smirks, flashing you a devious Cheshire grin as she languidly rubs her tail over the plump swell of her own overripe womb.";
@@ -4417,7 +4417,7 @@ to say CuteBabyNamesGoHereNoisesEight:
 		move Offspring to Bunker;
 	WaitLineBreak;
 	say "     After your last, but by no means least, little one has received her name, your attention is suddenly drawn to the sound of the gate opening as you spy [if HP of Augustus Drake > 99]Drake's looming figure pushing the portal open with a rough kick of a vintage paratrooper boot[else if HP of Augustus Drake is 99]Drake's proud leonine visage as he wedges the aperture open with a heavy thwap of his tail[end if] as he hauls what appears to be carcass of a red deer buck by a length of heavy rope. Glancing at the remains of the noose trap coiled about its neck, a part worries the stricken creature may have been a feral, but a quick glance reveals its simple bestial nature and puts your heart at ease. Not that Drake seems to notice the brief look of concern on your face as he walks past you. His eye's set and jawed set in determined grimace as pulls almost half of the unprocessed kill behind him, as he seems utterly oblivious to your presence. Only the elated cry of Kathy and the kittens greeting the noble provider shakes his steely match towards the back of the compound.";
-	say "     At their resounding cheers, the big man halts and lowers his prey to ground saying in a tried yet command tone. 'Hey girls, I must of zoned out a bit there,' as he shakes head as if to clear it, 'We had a little run-in with some hyenas who thought they could take this bad boy off us,' he rumbles, giving the noose a tug. 'Lazy sh-' Drake hesitates as his citrine eyes drift toward your kittens. '*Ahem*,' he coughs, 'so-and-sos, I must still be on edge.' 'Oh that's alright dear,' Kathy beams, at the sight of her proud hunter, while she fans her tail in front of her. 'We're all grateful for you and Ava. Speaking of which, where is my sweet kitten?' the lovely lioness asks, with a note of earnest worry worming its way through her otherwise bright tone as she peers behind him. 'RIGHT HERE!' Ava shouts, from behind the wall separating the Chance from the wider world, as the outlines of her ear drift between the razor wire coiling about its edges. 'Sorry, one of the guardrails fell off the cart, and I had to tie it up before things fell out.'";
+	say "     At their resounding cheers, the big man halts and lowers his prey to ground saying in a tried yet command tone. 'Hey girls, I must of zoned out a bit there,' as he shakes head as if to clear it, 'We had a little run-in with some hyenas who thought they could take this bad boy off us,' he rumbles, giving the noose a tug. 'Lazy sh-' Drake hesitates as his citrine eyes drift toward your kittens. '*Ahem*,' he coughs, 'so-and-sos, I must still be on edge.' 'Oh that's alright dear,' Kathy beams, at the sight of her proud hunter, while she fans her tail in front of her. 'We're all grateful for you and Ava. Speaking of which, where is my sweet kitten?' the lovely lioness asks, with a note of earnest worry worming its way through her otherwise bright tone as she peers behind him. 'RIGHT HERE!' Ava shouts, from behind the wall separating The Chance from the wider world, as the outlines of her ear drift between the razor wire coiling about its edges. 'Sorry, one of the guardrails fell off the cart, and I had to tie it up before things fell out.'";
 	WaitLineBreak;
 	say "     She rounds the bend and you notice simple ad-hoc leather tied about her waist connected to a rudimentary wooden cart. No, solid wooden cart, you correct yourself, catching sight of the pair of primitive wheels rolling behind her as she pulls the sizable contraption through the gate, stuffed to the gills with several bright blue barrels of water interspersed with multiple stacks of milk-crates full of various plants along with a few multi-colored bird eggs, all of which is held in place with a simple cord bow tied in the same manner as Ava's baby blanket. 'Ah, good job Ava. Might need to work on your knots though,' Drake comments, eyeing up the basic tie with a critical eye. 'Sure thing da- er, Drake,' Ava peeps as she unties her lower half from the crude rickshaw. 'Uh where should I put this?' she inquires, batting her tendrils towards the bundles of supplies, while gently rubbing out the creases in her fur. 'Leave it there for now, I have to process the deer before the parasites can get a chance to ruin the meat. When you get the chance though, can you wash the stuff off so we can pickle it?' he replies as he makes his way to the back of the compound with the buck in tow.";
 	say "     'Yes sir, I'm just going to say hi to [Name of Player] and the cubs first,' your dutiful mate replies, though her tone is bright and cheerful, you can still detect a note of weariness worming at the edges of her words. '*Hrump*,' the big man grunts, as him and the buck drift out of sight. Ava shifts her attention back to you and the cubs saying, 'Hey everyone, sorry we're late,' as she trots over to the garden. You notice the poor girl's paws are caked in fresh dirt and her natural eyeliner seems just a tad darker. Her pelt too appears to have lost a bit of radiance, as a heavy coating of the gray-drown dust impregnating the area around the Last Chances clings to her fur like a waterlogged cloak. Briefly, you consider mentioning this, but as you observe the way your mate tries to hide her sullied paws from view, you realize she's quite aware of this.";
@@ -4426,13 +4426,13 @@ to say CuteBabyNamesGoHereNoisesEight:
 	say "     'Oh, I can't believe I missed that! I bet you're all pretty mad I wasn't around for that,' Ava huffs dejectedly, as she buries her head in her hand. 'What? No, of course not mommy Ava! We understand you and Drake can't be around all the time. We're just happy you're back!' another of your kittens says in a comforting tone as your litter crowds around their birth mother. 'Thanks everyone, but now you're just making this next part harder,' she sniffles, as she stares in your direction. 'What do you mean mom?' a third kitten inquires, tilting her head to one side. 'Well, it's time for you girls to go live with your other mother. I was hoping we'd have more time but,' she croaks almost on the edge of crying. 'Hey, don't cry mom. We know, and besides we're looking forward to traveling with mommy [Name of Player] and meeting our sisters!' a fourth kitten exclaims, as she throws her arms around Ava and gives her a loving hug. 'Really? You're not mad at me?' your mate mews, nuzzling her chin along her daughter's head.";
 	WaitLineBreak;
 	say "     'No way! We know how hard it is for you and Drake to keep us fed. We're still going to miss you, but this way we can bring you guys some food for a change,' a fifth kitten rumbles, proudly gesturing to the city with a wave of her paw. 'Oh honey, don't talk like that. It's not that hard-' Ava begins but the chorus of children's voices drowns out her words as they proclaim their desire to pitch in just like their birth mother. For a moment, your mate looks like she's about to contest them but a tender look from Kathy quiets her protest. 'Alright, just stay safe and take care of mommy [Name of Player] for me,' Ava beams, bobbing her head in your direction. 'Sure thing mom,' the fifth kitten simpers as she casts her gaze towards her siblings. 'Now come on everyone, let's go meet the others and give our moms some space,' the fifth cub concludes in a commanding tone as she leads the others off to greet their kin.";
-	say "     Once they're out of sight and earshot, you and Kathy snuggle up to Ava and offer her both your praise at raising such dutiful cubs, and your condolences at seeing them leave so soon. 'Thanks you two,' she rumbles, wrapping her tendrils about you both as she draws you in for a quick hug. 'I wish I could stay with you guys for a while, but I have to wash the produce for da-, I mean Drake. But when I'm done and have a chance to wash up,' she adds dusting off a section her pelt with a pat of her paws, '[Name of Player], maybe you could come see me in the garage for a little mommy time?' she swoons, pressing her paw about your middle. Nodding, you tell your dutiful mate, of course. 'Thanks,' Ave mews, as she disentangles herself from and heads over the cart, then begins unpacking.";
+	say "     Once they're out of sight and earshot, you and Kathy snuggle up to Ava and offer her both your praise at raising such dutiful cubs, and your condolences at seeing them leave so soon. 'Thanks you two,' she rumbles, wrapping her tendrils about you both as she draws you in for a quick hug. 'I wish I could stay with you guys for a while, but I have to wash the produce for da-, I mean Drake. But when I'm done and have a chance to wash up,' she adds dusting off a section her pelt with a pat of her paws, '[Name of Player], maybe you could come see me in the garage for a little mommy time?' she swoons, pressing her paw about your middle. Nodding, you tell your dutiful mate, of course. 'Thanks,' Ava mews, as she disentangles herself from and heads over the cart, then begins unpacking.";
 	now Cuddle Puddle is resolved;
 	now Libido of Ava is 0;
 	increase level of Ava by 8;
 	TraitGain "New Mother" for Ava;
 	now Depravity of Ava is 1;
-	now Electric Boogaloo is active;
+
 
 
 
@@ -4450,17 +4450,16 @@ to say EventConditions_Electric_Boogaloo:
 
 Electric Boogaloo is a situation.
 ResolveFunction of Electric Boogaloo is "[ResolveEvent Electric_Boogaloo]".
-Sarea of Electric Boogaloo  is "Nowhere".
-Electric Boogaloo is inactive.
+Sarea of Electric Boogaloo is "Nowhere".
 
 to say ResolveEvent Electric_Boogaloo:
 	say "     Pergating about the Last Chance, your graze is soon drawn to your bountiful brood laying on the garden walkway in a priceless cuddle puddle of catty perfection with your mate at the center. Overjoyed at the sight of your little ones, you race over to greet them. You notice each appears to be hard at work scribbling away a large sheet of white paper with equally massive black quills. Tucked next to each of your kittens are some simple baby-blue paperback english and math primers that they seem to be copying from as jot they down the problems then attempt to solve. Curious and also just a tiny bit proud to see your family engaging in such scholastic activities despite all the chaos and distractions the modern world offers, you politely ask how their lessons are going. '[italic type]*SSS*[roman type] Hard,' Ava hisses, baring her fang at the page. Her eyes narrow to thin pinpricks as she taps the sharpened end of the quill along the margins. 'Sorry,' your mate sighs as she takes a deep breath to center herself, 'the kittens and I have just stuck on some of these problems for a while now.'";
-	say "     Nodding, you tell her not to worry, there's no shame in asking for help. 'Thanks but,' your studious mate huffs, 'I need to learn how to do this on my own. I can't rely on you or [if HP of Drake is 7]daddy[else]da- I mean Drake[end if] for everything. It's not fair to either of you. Don't worry though, I'll figure this out eventually!' Ava beams, scrawling out a few lines of pre-algebra then tries to puzzle it. Unfortunately, she [one of]doesn't follow the order of operations correctly, instead defaulting to trying to solve the problem left to right[or]misinterprets a multiplication symbol for subtraction[or]forgets to properly apply an exponent[or]doesn't show her work correctly[at random], and lets out a disappointed rumble when she compares her answer to the one on the page. 'Agh! Who decided to change the way math worked?!!!' one of your kittens fumes, slamming her tail against the walk as she makes a similar mistake. Tutting, you paw up beside her and offer to help. 'No thanks, mommy [Name of Player], [if HP of Drake is 7]grandpa[else]Drake[end if] and well-,' she whines, biting her lip in frustration. 'I just don't understand this stupid human stuff, it so-so GAH! None of this makes any sense,' she raves, scratching her claws through her head hair in abject bewilderment before turning to face you with a sad look in her eyes. 'I'm just dumb aren't I mom?' Drawing yourself up to your full height, you inform your daughter in no uncertain terms that she is not and that you will not tolerate her any of your brood calling themselves dumb in your presence ever again!";
+	say "     Nodding, you tell her not to worry, there's no shame in asking for help. 'Thanks but,' your studious mate huffs, 'I need to learn how to do this on my own. I can't rely on you or [if HP of Augustus Drake is 7]daddy[else]da- I mean Drake[end if] for everything. It's not fair to either of you. Don't worry though, I'll figure this out eventually!' Ava beams, scrawling out a few lines of pre-algebra then tries to puzzle it. Unfortunately, she [one of]doesn't follow the order of operations correctly, instead defaulting to trying to solve the problem left to right[or]misinterprets a multiplication symbol for subtraction[or]forgets to properly apply an exponent[or]doesn't show her work correctly[at random], and lets out a disappointed rumble when she compares her answer to the one on the page. 'Agh! Who decided to change the way math worked?!!!' one of your kittens fumes, slamming her tail against the walkway as she makes a similar mistake. Tutting, you paw up beside her and offer to help. 'No thanks, mommy [Name of Player], [if HP of Augustus Drake is 7]grandpa[else]Drake[end if] tried and well-,' she whines, biting her lip in frustration. 'I just don't understand this stupid human stuff, it so-so GAH! None of this makes any sense,' she raves, scratching her claws through her head hair in abject bewilderment before turning to face you with a sad look in her eyes. 'I'm just dumb aren't I mom?' Drawing yourself up to your full height, you inform your daughter in no uncertain terms that she is not and that you will not tolerate her any of your brood calling themselves dumb in your presence ever again!";
 	WaitLineBreak;
-	say "     It takes the balding monkeys almost a decade and a half to get this far, and a lot of the ones in this country struggle to get past this level of math. The fact that she managed to figure this much out in such a short amount of time is amazing, and you will not hear a word otherwise. 'No way, it doesn't take them that long. The book says it's for twelve and up.' she huffs, tilting her head in confusion while her tail swishes behind like a broken metronome. Yes, twelve [italic type]years[roman type] and up, not hours or days, you answer in a loving tone, as you kneel down beside her and offer to walk through a few problems with her. 'No thanks, [if HP of Drake is 7]grandpa [else]Drake[end if] already tried that but he just kept talking about excusing his dear aunt Sally,' she pouts, thumping her head against the walkway in abject frustration. Saddened by the sight, you gently pet her on the back, informing her you're going to show her a special trick of your own that might help. 'Really? Well, if you think it will help, I don't mind giving it a try,' your flustered kitten mumbles, fixing you with a desperate sad look.";
-	say "     That's the spirit dear, now come here, she deserves a quick snack, you coo, gesturing to your [Breast Size Desc of Player] chest with an inviting wave of your tendrils. Mewling happily, your diligent kitten eagerly presses her muzzle to your breast as her cute not-so-little lips tenderly latch onto one of your prominent milk spouts. A part can't help but swoon at the feeling of affectionate connection her touch brings as despite the respectable number of children you've sired with Ava. Some section of your feminine psyche is still adapting to the reality these children are yours despite the fact you weren't the one to carry them to term. Though as you lovingly stroke the back of her head while she quietly nurses in your caring embrace, you can sense that sentiment eroding as this simple seems to affirm your familial bonds in a way the lingering simian side of you can comprehend.";
+	say "     It takes the balding monkeys almost a decade and a half to get this far, and a lot of the ones in this country struggle to get past this level of math. The fact that she managed to figure this much out in such a short amount of time is amazing, and you will not hear a word otherwise. 'No way, it doesn't take them that long. The book says it's for twelve and up.' she huffs, tilting her head in confusion while her tail swishes behind like a broken metronome. Yes, twelve [italic type]years[roman type] and up, not hours or days, you answer in a loving tone, as you kneel down beside her and offer to walk through a few problems with her. 'No thanks, [if HP of Augustus Drake is 7]grandpa [else]Drake[end if] already tried that but he just kept talking about excusing his dear aunt Sally,' she pouts, thumping her head against the walkway in abject frustration. Saddened by the sight, you gently pet her on the back, informing her you're going to show her a special trick of your own that might help. 'Really? Well, if you think it will help, I don't mind giving it a try,' your flustered kitten mumbles, fixing you with a desperate sad look.";
+	say "     That's the spirit dear, now come here, she deserves a quick snack, you coo, gesturing to your [Breast Size Desc of Player] chest with an inviting wave of your tendrils. Mewling happily, your diligent kitten eagerly presses her muzzle to your breast as her cute not-so-little lips tenderly latch onto one of your prominent milk spouts. A part can't help but swoon at the feeling of affectionate connection her touch brings as despite the respectable number of children you've sired with Ava. Some section of your feminine psyche is still adapting to the reality these children are yours despite the fact you weren't the one to carry them to term. Though as you lovingly stroke the back of her head while she quietly nurses in your caring embrace, you can sense that sentiment eroding as this simple seems to affirm your familial bonds in a way the lingering scraps of your human mind stuggles to parse.";
 	WaitLineBreak;
-	say "     All the while, your other cubs look on with a mix of jealousy and hunger as their sister feeds. Sensing the weight of their eyes upon you, you invite them all to join in. You have plenty of milk and wisdom to share after all. As they eagerly crowd around you and join their peer in partaking of your [if Intelligence of Player < 20]serviceable pool of knowledge[else if Intelligence of Player > 20 and Intelligence of Player < 30]vast library of experience[else if Intelligence of Player > 30]boundless sea of sagacious wisdom[end if]. A sensation of tranquil and maternal purpose washes over like a balmy tropical tide, as the air resounds with the sound of catty contentment. You soon find your voice mixing with theirs as you hum some wordless tune to them while platonically pet their cute pelts. Your senses are awash in a sea of motherly love, while your mind is set alight with dreams of the all bright sparkling futures that could await your sweet tauric daughter's one day, along with some great names for them.";
+	say "     All the while, your other cubs look on with a mix of jealousy and hunger as their sister feeds. Sensing the weight of their eyes upon you, you invite them all to join in. You have plenty of milk and wisdom to share after all. As they eagerly crowd around you and join their peer in partaking of your vast library of experience. A sensation of tranquil and maternal purpose washes over like a balmy tropical tide, as the air resounds with the sound of catty contentment. You soon find your voice mixing with theirs as you hum some wordless tune to them while platonically pet their cute pelts. Your senses are awash in a sea of motherly love, while your mind is set alight with dreams of the all bright sparkling futures that could await your sweet tauric daughter's one day, along with some great names for them.";
 	say "[TinyBabyNameOne]";
 
 to say TinyBabyNameOne:
@@ -4869,15 +4868,3447 @@ to say TinyBabyNameEight:
 	now Feral entry is false;
 	if number of filled rows in the Table of PlayerBunkerChildren > 0:
 		move Offspring to Bunker;
-	say "     Once your kittens have drunk their fill and you've finished bestowing them with proper names, your little dears slowly disentangle themselves from and share a certain proud knowing look with one another before pouncing up their worksheets with renewed vigor. Their quills are ablaze with activity as they wiz through line after line of problems as they tear their current section of their primers. They hardly even stop to check their work, not that they need to, every one of their answers is correct. Though you do notice that their handwriting seems to have changed as it's moved towards a close copy of your own. A part is slightly saddened by this individual flare, but you realize this is likely a result of their exposure to your own knowledge, or a desire to show their appreciation for your priceless gift. Either way your kittens seem rather proud of themselves as they loudly slam their primers shut then write their names and the date on the upper left hand corner of work before passing forward to Ava for inspection.";
+	say "     Once your kittens have drunk their fill and you've finished bestowing them with proper names, your little dears slowly disentangle themselves from and share a certain proud knowing look with one another before pouncing up their worksheets with renewed vigor. Their quills are ablaze with activity as they wiz through line after line of problems as they tear their current section of their primers. They hardly even stop to check their work, not that they need to, every one of their answers is correct. Though you do notice that their handwriting seems to have changed as it's moved towards a close copy of your own. A part is slightly saddened by the loose of their individual flare, but you realize this is likely a result of their exposure to your own knowledge, or a desire to show their appreciation for your priceless gift. Either way your kittens seem rather proud of themselves as they loudly slam their primers shut then write their names and the date on the upper left hand corner of work before passing forward to Ava for inspection.";
+	say "     Accepting each one with a smile, your mate quickly checks them against the answer section and exclaims, 'A's all around!' as she proudly scribbles the letter on each page. 'Wow, that was easy, thanks mommy [Name of Player]!' One of your kittens rumbles, as she proudly gazes at the giant [']A+['] on her worksheet. 'Ya, this all makes so much sense now, gosh now I feel silly for throwing a fit earlier,' your once flustered daughter gushes. Patting her on the back, you tell her not to worry about it. You're proud of her and Ava for getting as far as they did in such a short amount of time. 'Thanks moms, you're both the best!' your kitten sniffles, as she bounds between you and Ava, giving you a quick loving hug. Tittering you, tell her that it was nothing, and ask if they'd like to meet the rest of their family while you catch up with Ava. 'You bet! Come every let's go see our big sises,' your now overjoyed daughter hollers as they all gallop off, work in hand to greet their kin.";
+	WaitLineBreak;
+	say "     Once they're out of earshot, you paw over to your mate, asking her if she's ready to say goodbye to them yet. 'I-I think I'm gonna miss them though,' she peeps weakly, pressing her hand to her empty stomach, 'but,' her voice brightens, 'it's for the best. They deserve to see the world, and who knows? The next time I see them, I might be able to teach them something!' Applauding her gumption, you tell her that you're looking forward to it, and you can think of the perfect motivation for her too. 'Oh what would that be?' Ava snickers, her expression alight with a certain catty desire as she cuddles up beside you. Why, you smirk, nuzzling your chin along the tender swell of your sweet mate's bountiful chest, a nice litter of kittens to her company. 'Mh, I think I'd like that, just don't keep me waiting.' she simpers, as she leans in and gives your ears a cute little nibble, before trotting off to the garage.";
+	now Electric Boogaloo is resolved;
+	now Libido of Ava is 0;
+	if Depravity of Ava is 0:
+		increase Level of Ava by 8;
+	if Depravity of Ava is 1:
+		now level of Ava is 72;
+	TraitLoss "New Mother" for Ava;
+	if "seasoned broodmother" is not listed in Traits of Ava:
+		TraitGain "seasoned broodmother" for Ava;
+
+
+
+Table of GameEventIDs (continued)
+Object	Name
+Breeder Event Two	"Breeder Event Two"
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"Breeder Event Two"	Breeder Event Two	"[EventConditions_Breeder_Event_Two]"	Drake's Garden	2500	1	100
+
+to say EventConditions_Breeder_Event_Two:
+	if level of Ava is 64 and Libido of Ava is 29 and BodyName of player is "Margay Taur" and Player is pure and Cock Count of Player is 0 and Cunt Count of Player >= 1 and Loyalty of Augustus Drake is 1:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Breeder Event Two is a situation.
+ResolveFunction of Breeder Event Two is "[ResolveEvent Breeder_Event_Two]".
+Sarea of Breeder Event Two is "Nowhere".
+
+to say ResolveEvent Breeder_Event_Two:
+	say "     Deciding to check up once more on your ever-growing family, you're pleasantly surprised to find the cubs and their mother seated in their usual spot in Drake's garden. This time though, instead of hitting the books, your kittens seem to be engaged in some manner of arts and crafts project. As each one of your not-so-little bundles of joy appears to be weaving a number of flowers and vines together in a tight circular band, a rather difficult task given the size of the mitts and the delicate nature of their chosen medium. Still, from the looks of proud concentration written on their sweet feline faces, along with the light happy banter passing between them as they and their mother work, your daughters seem to be enjoying themselves. Intrigued, you decide to meander on over to them and observe them in respectful silence for a while rather than risk breaking their focus. At the sound of the muted patter of your paws upon the pavement, Ava's ears perk up and swivel towards you like little fuzzy rader dishes as she sets down her work and glances in your direction, exclaiming, 'Oh hey [Name of Player]! You have great timing! We just got back from a field trip with daddy,' as your eyes met.";
+	say "     Really, where did he take her and the cubs, you ask in a pleasant tone. 'To Empty Shirley,' one of your kittens sitting near the edge of the garden answers in a matter-of-fact tone, as she threads a pair of purple flowers together in flawless braid. Unfamiliar with the name, you inquire where this place is. 'Sorry, I think she means Mount Shirley,' Ava titters through a happy grin as she motions to distant the crimson peaks with a bat of her tail. 'But mom, I thought the sign said M T Shirley, doesn't that spell empty, not Mount?' your daughter replies, cocking her head at an inquisitive angle. 'Oh no dear,' your mate chuckles, fanning the air before her with tendrils. 'That's what the humans used to call an abbreviation, it's where they shorten a word or phrase,' she lectures, in a kind, matronly trill. 'Oh, I guess that makes sense,' your cub says, with a light disinterested shrug of their shoulders. 'Still,' your child continues as she looks in your direction, 'it was really nice up there mommy [Name of Player], there were so many pretty flowers and all these weird mutants. I wish you could've seen it.'";
+	WaitLineBreak;
+	say "     At the mere mention of mutants though, you feel the hackles rise on the back of your neck. Your lips start curling into a menacing predatory grimace alongside your simmering choler at the thought of your perfect beautiful kittens being exposed to any potential danger by a foolish little manlet. Your maternal mind is filled with a sudden desire to storm off and give the puny biped a piece of your mind; perhaps even a taste of your claws too for good measure. Yet, the feeling soon passes as your more rational side contends, that of all the people you've come across in the city, Drake probably knows how to handle himself better than most, and the mere sight of your colossal kitten's alone is a potent deterrent in and of itself. Besides, looking at their joyful smiles, you realize that you can't shelter them forever, nor should you. You muse, as another of your kittens speaks up, 'Totally mommy [Name of Player], we even brought some back for you. Grandpa showed us how to braid and preserve them, see?' your daughter simpers, as she flashes you her partially finished wreath of orange Poppies, purple Catmint, and pale white Heather flowers.";
+	say "     While obviously a work in progress, you still have to admit, the thing is coming along rather nicely. The dispersion of colors flow into one another seamlessly in patterns that are both complementary and properly present, without being overwhelming to the eye. Their stems are bound in a tight weave that shows no signs of damage or creases ensuring the plants will be healthy for longer and prevent uneven browning. However, you do notice a minor aberration mixed in as a single node of smooth amber burl has been worked into one end of the braid. Its surface appears to have been lightly scored, and wedged into these tiny furrows, are the ends of cutting which seem to have somehow rooted into the mass. Curious, both at the speed at which the plants put down fresh roots, and the nature of the strange nodules, you politely ask your daughter what they are. 'These, I'm not sure but Grandpa said they called an um all lure?' Your child hesitates, and taps her pointer claw to her chin. 'No wait, allure heart,' she corrected herself, with a snap of her fingers.";
+	WaitLineBreak;
+	say "     A what?! You rumble, feeling your right eyelid twitch in aggravation at the idea that Drake somehow got your innocent kitten to cut out the heart of feral. 'She means Alraune,' Ava chimes in, perhaps mistaking your tone of one of confusion rather than one of righteous aggravation, 'they were these mean plant people daddy told me about, thankfully they don't seem to be around any more, but a long-long time ago before I as born.' she continues, turning her attention to the cubs. 'They started creeping down the Mountain, taking over a bunch of the old farms, and pushing people back towards the stinky city,' she says with a wave of her tendrils as her tone gets more grandiose and exuberant. 'He said they look like green skin humans almost as big as we are, with red Rose petals for hair,' she lectures, running her talon through the fur on her scalp, 'dozens of spiky tentacles on their backs kind of like ours,' Ava says, flexing her tendrils in aggressive wavy pattern before her which elicits a mix of frighten gasps and playful chuckles from the kittens. 'And their lower bodies looked like one giant pink Lotus flower that shuffled around on these huge gnarled roots,' she lectures, motion to her lower half with a casual bat of her voluminous tail.";
+	say "     'According to your Grandpa, they liked to pretend they were being attacked by some kind of plant monster to lure people in, and once they got close they'd,' Ava pauses for effect as the kittens edge closer, utterly enraptured by her story, '*Rar* eat them!' She roars flashing talons and bearing fangs in a mocking predatory pose as she makes a fake overly dramatic lunge at the kittens. Earning her another round of titters and timid ohs from your little ones as they recoil in mock horror. 'Ha-ha, no way, mommy Ava, plants don't eat people,' one of your braver cubs contends, in a nonplussed treble as she rolls her eyes. 'Oh I wish that were true,' your mate mews, her ears briefly furling to the sides of her head, 'but that's not the worst of it. You see, the Alruanes could control other plants, they even used them to infect people and turn them into more Alraunes.' 'How did they do that?' Your brave cub asks, her voice somber and subdued as she warily gazes at the heart tucked into her wreath.";
+	WaitLineBreak;
+	say "     'Well, you see I uh-,' Ava rumbles, twiddling a pair of her thumbs as she stares demurely up at the sky, 'never really asked your Grandpa about that part much, but it had something to do with these hearts,' Ava replies, brandishing her own floral project. 'If you leave them alone too long they grow into um... oh mommy now what did he call them?' She blushes, her voice ripe with embarrassment as she bobs her head side-to-side. 'Corpse Lilies, that put these huge ugly black roots into the ground which burrowed into other plants, filling them to the brim with silver hair thingies.' Filaments? You interject. 'Ya that's the word, so the firmaments, gah!' Ava grumbles, flicking the side of her head with her tail, 'I mean fil-a-ments, let them see everything around these plants, and move some of them around like puppets,' she says, gently coiling her tendrils about the stems of a few poppies. Your mate makes a show of swiveling the flower about like organic searchlights.";
+	say "     'Sometimes though, they'd infest a piece of fruit like an apple or peach and anyone who ate them would turn into a crazed carrier that would try to spread them even further,' your mate lectures, making a sweeping gesture with her paws towards the wider plains as she loses her hold on the plants. 'Wow, how did Grandpa get rid of them then?' yet another of your brood inquiries. 'He didn't do it alone, a number of surviving farmers and some of his old friends teamed up and set fire to a huge swath of the plains. From what daddy told me, the blaze pushed them back towards the mountain and made room for a lot of the grasses to come back. After a while, they started infighting till the military shelled them, whatever that means,' Ava shrugs. 'Since then no one's seen them, though you can still find some hearts growing in the ash like we did, and daddy says there are still a few tainted plants out there, which is why,' your mate prompts, fixing your children with a studious glare.";
+	WaitLineBreak;
+	say "     'We don't eat food we find in the wild unless you or Grandpa says it's safe,' your kittens reply in unison though with varying degrees of enthusiasm. 'Good girls!' your lover mews. Nodding along, you politely inquire what she's doing with these [']Hearts['] then if they're so dangerous. 'Oh right, er, daddy says we need to prune them to prevent the Alraunes from coming back, and if pick while their still young like this,' your mate beams, proudly brandishing the heart woven into her wreath, 'we can graft plants to preserve them since their sap is supposed to be super yummy. Some farms around here have even made a special fertilizer by mixing them with swamp water, ash, and manure. I don't really understand how it works, but daddy says it has something to do with the nanites [']Petra-forming['] the area around the reservoir back into a wetland.' Not bothering to correct her this time, you instead ask how she or Drake know any of this is safe though. 'Um, because Daddy said so silly!' Ava replies with fervor of the newly converted as she proudly thumps her fist against her breast.";
+	say "     Though a part of you wants to contest her borderline tautological assertion, the man has been surviving out here more or less on his own, and likely knows more than most about the local hazards then you, so for the moment at least you decide to defer to Ava's judgment. Perhaps one day when you're alone, you might ask her and Drake more about this in greater detail, as you'd rather not undermine Ava's or Drake's authority in front of your kittens. Instead, you simply nod along, murmuring in vague agreement as you sit yourself beside them and watch your family work. As the minutes stretch on, you observe the final forms of your kitten projects take shape as they weave the number of wrist, ankle and headbands from their collection of flowers. Though the patterns vary from wreath to wreath, the lovely difference seems to reflect the budding personalities of your little ones. A few have even inlay bits of rock or smooth shards of hand polished glass into their designs. While others have added polished lengths of copper wire likely found out on the Dry Plains into there's.";
+	WaitLineBreak;
+	say "     All and all, the sight of your young artists['] works brings a smile to your face as they take turns showing them off to you and explaining the significance of each little knot or alteration. Naturally, you praise each one a priceless work of art they are, and do your best to offer helpful critiques, though you doubt your perfect angels need the advice. The doting looks on their adorable catty faces as they hang on to your every word nevertheless warms your heart. When Ava comes forward to show you hers, you note the simple wreath of white poppies laced with yellow snapdragons and copper wire is far smaller than the others. In truth, you doubt Ava could even wear the thing on the thinnest spot of her tail, yet before you can give voice to these thoughts, your mate chimes in, saying, 'This one's for you [Name of Player]. I um hope it's in your size, I kind of had to ball eye it.' Eyeball it, you correct her with a light chuckle as you place the cute not-so-little wreath on the top of your catty head. Much to your surprise, the thing fits rather neatly between your ears, although it is a touch snug in place, at least you don't have to worry about it blowing away in a strong breeze.";
+	say "     You adopt a few playful poses for your family while asking how you look. 'Stunning,' one of your kittens mews. 'Adorable,' another simpers. 'Super cute,' a third rumbles. 'Positively radiant,' Ava purrs, as a choir of praise echoes around you. Almost blushing with joy, you thank them for their kind words and their sweet gift, before offering a treat of your own. You roll on your side, exposing your many tiers of your lush [Breast Size Desc of Player] breasts and gleefully stroke the luxurious fur swaddling the bountiful hills and valleys of [bodydesc of player] body's curves. Reveling at the feeling of your soft fur gliding along your pads, you invite your little ones to partake of your milk and accrued wisdom. Mewling with unvarnished delight, your kittens eagerly take their places next to you, cupping their ecstatic lips to your perky nips.";
+	WaitLineBreak;
+	say "     Your body and mind are flooded with the comforting sound of their elated purrs alongside a heady rush of maternal hormones. Chuffing contentedly, you lazily pet and caress your kittens sizable snoots with tendrils as they nurse. You hardly even notice Ava cuddling up behind you as she drapes her arms over your shoulders. Your fluffy mate lovely hugs your upper body to hers, swaddling your body in her rows of plump M-cups, remarking, 'Aw, just look at them. I'm so glad I can share this moment with you,' as she nuzzles her chin along the tips of your ear. Nodding, you express a similar sentiment, as the two of you brainstorm some names for your girls together while your little ones feed.";
+	say "[KittensKittensKittensOne]";
+
+to say KittensKittensKittensOne:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[KittensKittensKittenstwo]";
+
+to say KittensKittensKittenstwo:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[KittensKittensKittensthree]";
+
+to say KittensKittensKittensthree:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[KittensKittensKittensfour]";
+
+to say KittensKittensKittensfour:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[KittensKittensKittensfive]";
+
+to say KittensKittensKittensfive:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[KittensKittensKittensSix]";
+
+to say KittensKittensKittensSix:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[KittensKittensKittensSeven]";
+
+to say KittensKittensKittensSeven:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[KittensKittensKittensEight]";
+
+to say KittensKittensKittensEight:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "     With your last child named and weaned, a sensation of profound lightness and fulfillment wells in your breast as your cubs laze on their sides next to you, merrily sunning their lustrous pelts in the available light. 'Daw, they all look so comfy like this,' Ava beams, gesturing to your cuddly brood with a flick of her tail as they quietly chatter amongst themselves about all they've just learned and all wish to see now that they've reunited with you. Rather inclined to agree, you fondly run your tendrils along the vacant curves of Ava plush middle, asking if perhaps the two of you should get started on another litter then. The kittens could always use more playmates, you note. 'Mh,' your mate coos in an almost inaudible trill, tucking her lips to your ears, 'I was hoping you'd say that, but do you think we could sit here for a few more minutes? I don't want to say goodbye to you all just yet.' Of course, you reply, draping your upper body over her bountiful row of plump dugs as you watch your kittens titter and chatter amongst themselves. 'Thanks,' Ava mews, leaning back and basking at the sight of her growing family spread out before her.";
+	say "     Eventually though, your children begin to grow restless as their meandering conversation drifts towards the wider world and their desire to meet the rest of the family. Sneaking a concerned glance at your mate, a part of you wants to ask if you should delay your parting, yet the resolved expression on your brave lover's face stills these treacherous words before they can leave your mouth. Instead, you wrap a tendrils about one of her paws and give her hand a squeeze as you announce to your children that it's time for them to meet the rest of their extended family. Rumbling in agreement, you kids grab their wreaths and crowd around Ava for a quick goodbye hug, then scamper off. While they go, you notice a tiny sniffle escape your lover's lips as a pair of tears well in her eye at the sight of them leaving. Tutting, you wipe the errant droplets from her natural mascara with your dominant paw, whispering, sh, no tears, only smiles.";
+	WaitLineBreak;
+	say "     'Sorry, it's hard to see them go, I keep thinking it will get easier, but it never does. I just wish I was brave enough to go with them, and you,' she whimpers. Stroking her cheek with the flat of your claws, you tell her not to worry, maybe one day she can come visit them at the bunker. 'I think, I think I'd like, but right now I want to be alone, I don't want the girls to see me like this,' your big kitty stammers, drying her matted fur with a dab of her baby blanket, 'unless you want to... you know.' She purrs needily, nodding towards the garage. Maybe, but you might need to stretch your legs first, and check on the kids to make sure they're getting along. 'I understand, just don't keep me waiting,' your mate simper as she pulls herself to her paws and gallops to her room ahead of you.";
+	Now Breeder Event Two is resolved;
+	ItemGain Wreath of Flowers by 1;
+	now Libido of Ava is 0;
+	increase level of Ava by 8;
+	TraitLoss "New Mother" for Ava;
+
+
+Table of GameEventIDs (continued)
+Object	Name
+Return Boogaloo	"Return Boogaloo"
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"Return Boogaloo"	Return Boogaloo	"[EventConditions_Return_Boogaloo]"	Drake's Garden	2500	1	100
+
+to say EventConditions_Return_Boogaloo:
+	if Libido of Ava is 29 and level of Ava > 64 and Perception of Ava < 24 and BodyName of player is "Margay Taur" and Player is pure and Cock Count of Player is 0 and Cunt Count of Player >= 1 and ScaleValue of Player is 5:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Return Boogaloo is a situation.
+ResolveFunction of Return Boogaloo is "[ResolveEvent Return_Boogaloo]".
+Sarea of Return Boogaloo is "Nowhere".
+
+to say ResolveEvent Return_Boogaloo:
+	say "     Pergating about the Last Chance, your gaze is soon drawn to your bountiful brood laying on the garden walkway in a priceless cuddle puddle of catty perfection with your mate at the center. Overjoyed at the sight of your little ones, you race over to greet them. You notice each appears to be hard at work scribbling away at a large sheet of white paper with equally massive black quills. Tucked next to each of your kittens are some simple baby-blue paperback english and math primers that they seem to be copying from as jot they down the problems then attempt to solve. Curious and also just a tiny bit proud to see your family engaging in such scholastic activities despite all the chaos and distractions the modern world offers, you politely ask how their lessons are going. '[italic type]*GRR*[roman type] Hard,' Ava hisses, baring her fang at the page. Her eyes narrow to thin pinpricks as she taps the sharpened end of the quill along the margins. 'Ugh, sorry,' your mate sighs as she takes a deep breath to center herself, 'the kittens and I have been having some problems with these packets for a while now.'";
+	say "     Nodding, you tell her not to worry, there's no shame in asking for help. 'Thanks but,' your studious mate huffs, 'I need to learn how to do this on my own. I can't rely on you or [if HP of Augustus Drake is 7]daddy[else]da- I mean Drake[end if] for everything. It's not fair to either of you. Don't worry though, I'll figure this out eventually!' Ava beams, as she returns to practicing her sentences. Unfortunately, she [one of]doesn't use a proper coordinating conjunction[or]places a noun before an adjective[or]inserts a dependent clause a head of a independent clause[or]neglects to use her commas correctly[at random], and lets out a disappointed rumble when she compares her answer to the one on the page. 'Agh! Why is this so hard?!!!' one of your kittens fumes, slamming her tail against the walkway as she makes a similar mistake. Tutting, you paw up beside her and offer to help. 'No thanks, mommy [Name of Player], [if HP of Augustus Drake is 7]grandpa[else]Drake[end if] and well-,' she whines, biting her lip in frustration. 'None of this monkey stuff any makes,' she raves, scratching her claws through her head hair in abject bewilderment before turning to face you with a sad look in her eyes. 'I mean I can speak just fine, so why is writing so hard?!' Rumbling in a soothing tone, you paw up beside her and explain there is a vast gulf between the written word and speech, in fact even when they speak the same language many humans disagree on the best way to do so.";
+	WaitLineBreak;
+	say "     For the most part, they rarely get past the simplest sentence structures no matter how many years or decades of schooling they receive. 'Really?' she mews. Yes, your reply, why the numbers of arguments you've overhead about comma placements alone could fill several novellas. Still, you're more than willing to sit down with her and practice the basics. 'No thanks,[if HP of Augustus Drake is 7] grandpa[else] Drake[end if] already tried that but he just kept rambling about FANS BOYS and eyes seeing eyes,' she pouts, thumping her head against the walkway in abject frustration. Saddened by the sight, you gently pet her on the back, informing her you're going to show her a special trick of your own that might help. 'Really? Well, if you think it will help, I don't mind giving it a try,' your flustered kitten mumbles, fixing you with a desperate sad look.";
+	say "     That's the spirit dear, now come here, she deserves a quick snack, you coo, gesturing to your [Breast Size Desc of Player] chest with an inviting wave of your tendrils. Mewling happily, your diligent kitten eagerly presses her muzzle to your breast as her cute not-so-little lips tenderly latch onto one of your prominent milk spouts. A part can't help but swoon at the feeling of affectionate connection her touch brings as despite the respectable number of children you've sired with Ava. Some section of your feminine psyche is still adapting to the reality these children are yours despite the fact you weren't the one to carry them to term. Though as you lovingly stroke the back of her head while she quietly nurses in your caring embrace, you can sense that sentiment eroding as this simple seems to affirm your familial bonds in a way the lingering simian side of you can barely comprehend.";
+	WaitLineBreak;
+	say "     All the while, your other cubs look on with a mix of jealousy and hunger as their sister feeds. Sensing the weight of their eyes upon you, you invite them all to join in. You have plenty of milk and wisdom to share after all. As they eagerly crowd around you and join their peer in partaking of your ";
+	if intelligence of Player <= 20:
+		say "serviceable pool of knowledge. ";
+	else if intelligence of Player > 20 and intelligence of Player < 30:
+		say "vast library of experience. ";
+	else if intelligence of Player > 30:
+		say "boundless sea of sagacious wisdom. ";
+	say "A sensation of tranquil and maternal purpose washes over like a balmy tropical tide, as the air resounds with the sound of catty contentment. You soon find your voice mixing with theirs as you hum some wordless tune to them while platonically pet their cute pelts. Your senses are awash in a sea of motherly love, while your mind is set alight with dreams of the all bright sparkling futures that could await your sweet tauric daughter's one day, along with some great names for them.";
+	say "[getathesaurusOne]";
+
+to say getathesaurusOne:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[getathesaurustwo]";
+
+to say getathesaurustwo:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[getathesaurusthree]";
+
+to say getathesaurusthree:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[getathesaurusfour]";
+
+to say getathesaurusfour:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[getathesaurusfive]";
+
+to say getathesaurusfive:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[getathesaurusSix]";
+
+to say getathesaurusSix:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[getathesaurusSeven]";
+
+to say getathesaurusSeven:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[getathesaurusEight]";
+
+to say getathesaurusEight:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "     Once your kittens have drunk their fill and you've finished bestowing them with proper names, your little dears slowly disentangle themselves from and share a certain proud knowing look with one another before pouncing up their worksheets with renewed vigor. Their quills are ablaze with activity as they wiz through line after line of problems as they tear their current section of their primers. They hardly even stop to check their work, not that they need to, every one of their answers is correct. Though you do notice much like before, their handwriting seems to have changed as it's moved towards a close copy of your own. A part is slightly saddened by the loss of their individual flare, but you realize this is likely a result of their exposure to your own knowledge, or a desire to show their appreciation for your priceless gift. Either way your kittens seem rather proud of themselves as they loudly slam their primers shut then write their names and the date on the upper left hand corner of work before passing forward to Ava for inspection.";
 	say "     Accepting each one with a smile, your mate quickly checks them against the answer section and exclaims, 'A's all around!' as she proudly scribbles the letter on each page. 'Wow, that was easy, thanks mommy [Name of Player]!' One of your kittens rumbles, as she proudly gazes at the giant [']A+['] on her worksheet. 'Ya, this all makes so much sense now, gosh now I feel silly for throwing a fit earlier,' your once flustered daughter gushes. Patting her on the back, you tell her not to worry about it. You're proud of her and Ava for getting as far as they did in such a short amount of time. 'Thanks moms, you're both the best!' your kitten sniffles, as she bounds between you and Ava, giving you a quick loving hug. Tittering you, tell her that it was nothing, and ask if they'd like to meet the rest of their family while you catch up with Ava. 'You bet! Come every let's go see our big sises,' your now overjoyed daughter hollers as they all gallop off, work in hand to greet their kin.";
 	WaitLineBreak;
 	say "     Once they're out of earshot, you paw over to your mate, asking her if she's ready to say goodbye to them yet. 'I-I think I'm gonna miss them though,' she peeps weakly, pressing her hand to her empty stomach, 'but,' her voice brightens, 'it's for the best. They deserve to see the world, and who knows? The next time I see them, I might be able to teach them something!' Applauding her gumption, you tell her that you're looking forward to it, and you can think of the perfect motivation for her too. 'Oh what would that be?' Ava snickers, her expression alight with a certain catty desire as she cuddles up beside you. Why, you smirk, nuzzling your chin along the tender swell of your sweet mate's bountiful chest, a nice litter of kittens to her company. 'Mh, I think I'd like that, just don't keep me waiting.' she simpers, as she leans in and gives your ears a cute little nibble, before trotting off to the garage.";
 	LineBreak;
-	say "     [italic type]Author's Note[roman type]: This is the second tier of placeholder events and will be updated one day. Though you can still breed Ava to your heart's content, no new scenes will play. *Sad tired Dragon noises*";
-	now Electric Boogaloo is resolved;
+	say "    [italic type]Author's note: this is a placeholder event, keep breeding your kitty to potentially unlock new scenes[roman type].";
+	now Return Boogaloo is resolved;
 	now Libido of Ava is 0;
+	if level of Ava < 96:
+		increase level of Ava by 8;
+	increase Perception of Ava by 8;
 
+
+Table of GameEventIDs (continued)
+Object	Name
+Just Work	"Just Work"
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"Just Work"	Just Work	"[EventConditions_Just_Work]"	Last Chance Parking Lot	2500	1	100
+
+to say EventConditions_Just_Work:
+	if Libido of Ava is 29 and Loyalty of Augustus Drake is 1 and Perception of Ava is 24 and BodyName of player is "Margay Taur" and Player is pure and Cock Count of Player is 0 and Cunt Count of Player >= 1 and ScaleValue of Player is 5 and "Propositioned" is not listed in Traits of Ava:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Just Work is a situation.
+ResolveFunction of Just Work is "[ResolveEvent Just_Work]".
+Sarea of Just Work is "Nowhere".
+
+to say ResolveEvent Just_Work:
+	say "     Reasoning that now is as good of a time as any to check in on Ava and your growing brood, you return once more to The Last Chance in time to see your youngest and their grandfather gathered together in the far end of the parking lot. Padding up to greet them, you notice your little ones and their mother are seated in a half circle around Drake who seems to be in the middle of some kind of survival lesson. At least that's what you surmise, watching him gesturing to a number of large piles of mismatched timber mixed with reclaimed wood, pieces of flint, lengths of twine, and a sandwich bag full of clear water set beside your kitten's forepaws. 'Alright girls, now that you got your supplies we're going to practice making cooking fires-,' the man begins, only to hesitate as he sees you pawing towards them. 'Assuming your other mother is fine with this,' the patriarchal man inquires with casual wave of his hand toward you as your kittens turn around and fix you with pleading gazes. 'Oh please can we mommy [Name of Player]?! We worked super hard to get all these, and we promise to be careful,' a few of them mew.";
+	say "     Unable to say no to such polite cute kittens, you bob your head in the affirmative and motion for him to continue as you can't see the harm in your cubs learning such a useful skill. Especially in such a safe place like the parking lot where there's a very little risk of the blaze spreading, you ruminate as you take a seat on the pavement.' *Ahem* right,' Drake coughs into his left hand and starts pacing before them as he inspect each pile, 'first things first, we need to go over what types of wood are safe to burn. Buckeye for instance,' he rumbles, picking up a lump of pale brown and smoky gray timber about the size of a grown man's forearm from one of your kitten's piles, 'smells like rotten meat when it burns.' 'Ew really?' your kitten grumbles as she stares glumly at the hunk of dry wood clutched in Drake's hand. 'Yes hun, but it's very lightweight,' Drake adds as he effortlessly balances the length timber on his pinkie, 'and a lot of people like to carve the burl on these.' The big man lectures as he set the piece down adjacent to the walkway, then strides over to the kitten's bundle.";
+	WaitLineBreak;
+	say "     'Of course, there are some woods that are outright toxic like this Eucalyptus here,' he intones, plucking a misshapen square of light red tinted wood from a second kitten's collection. 'A few good whiff of the smoke from this,' he taps his thumb against the side of the thing, 'could land someone in the emergency room, the tree's still have some uses though, and it can be a good way to find underground pockets of water out on the plains. Now do you remember where you found the tree that came from dear?' Drake asks, as shows the bit of offending kindling to each of your kittens. 'Yes sir,' your second kitten replies through a proud smirk. 'Good girl, if you or the others ever get lost or separated from your mom near there, now you know how to find water,' the big man says, setting the nubbin of wood on the ground beside the buckeye, then continues his lecture as stride over to a third kitten pile. 'Right some more stuff you have to watch out for, this,' he says, picking what looks like a square sun-bleached table leg.";
+	say "     'Varnished or treated wood, like Eucalyptus, will ruin your food, and your lungs if you breathe in the fumes,' the patriarchal post-human intones, as he points to a few telltale marks of old preservatives still clinging to the wood. 'Ah sorry grandpa, it looked dry so I thought, well you know,' your third kitten rumbles sheepishly as she tucks her arms and tendrils behind her back in a show of contrition. 'That's alright, I never told you ladies what to avoid, besides, got an old broken stool in back that could use a new leg about this size,' the big man says, making a show of examining the length of lumber. 'Really?' your third kitten, ask rather hopefully. 'Yes dear, you did good,' Drake replies, his voice brimming with warmth and reassurance as he places the odd sundry next to the other rejected pieces as goes through the others pulling out a dozen potentially hazardous pieces of wood, adding each to the stack of rejects. 'Right, now I want you girls to go through your timber piles and pull out anything that matches the stuff I just showed you,' Drake concludes as he takes a seat on the walkway.";
+	WaitLineBreak;
+	say "     'Yes sir,' your kittens reply in unison as they set about sorting their piles in rapid succession. Mere moments later, they've paired down the timber then invite you and Drake to inspect their work. Nodding, you both sift through the remaining lumber, finding everything in order, you step back a respectful distance and let the man continue his lesson. 'Alright girls, now for the fun part, you all remember those fire starting techniques I showed you on the trail?' the big man asks, motioning to a collection of implements at their paws. Your girls grin and nod as they take up their tools. 'Good, each one of you pair with your neighbor and show them what I taught you. It'll be good practice for when you meet up with siblings later, and Ava?' he says, casting his firm gaze in your mate's direction. 'Yes daddy?' she replies, with a confused trill at being singled out. 'You're in-charge, but if you need any help,' he smiles, returning to his seat on the walkway, 'I'm right here.'";
+	say "     'Thanks dad,' your mate simpers as she takes his place at the [']head['] of the class. 'Ok everyone, let's make mommy [Name of Player] and Grandpa proud and show them what we've learned!' she cheers, pumping her fist into the as your kids break into groups of two and take turns setting up their own firepits. Their attempts are a little clumsy looking at first, but in no time at all your kitten's have cobbled together eight roaring, but well-contained blazes. 'GOOD JOB GIRLS! You're all dang quick studies, as a reward I'm gonna show you all one of the best things you can cook on a campfire,' the man pauses, his lips curling back into a regal lionine grin, 's'mores!' 'Wha-what's that grandpa?' your third kitten queries, with an inquisitive flick of her tail. 'Well just sit tight kids, let me grab Kathy and we'll show ya,' Drake chuffs, bobbing his head towards his lover's room as he darts up the stairs and into her room.";
+	WaitLineBreak;
+	say "     Seconds later, he ducks out through the door with the portly lioness perched on his left shoulder as the two of them descend, their arms laden with huge bags of multi-colored marshmallows, different flavors of chocolate, graham crackers, paper plates, tongs, and a collection of oversized silvery metal skewers. As they stride back over to you and your brood, Ava leans in and whispers in your ear, 'Hey [Name of Player], um what are s'mores? Daddy's never mentioned them before.' Chuckling, you whisper they're one of, if not the greatest confections humanity has ever, and likely will ever produce. 'Wow,' she swoons, her eyes glimmering with pure wonder and earnest awe, 'they must be super valuable then, I didn't know daddy had anything like that here.' Shaking your head, you tell her they're not really valuable, at least in the monetary sense. Their real worth is sharing them with the people you love, as you tenderly press your soft cuddly body against her shoulder, delighting at the touch of her satin fur and calming alpine scent titillating your senses.";
+	say "     'That sounds so sweet, I can't wait to try them with you,' your mate purrs, hooking her tendrils about your waist and she pulls you close with a gentle loving tug. Humming happily at her touch, you express a similar sentiment as you lean into her supple embrace. All the while, your cubs sit patiently around the campfires as Drake and Kathy walk between them passing out plates full of random sweets and skewers to your little ones. Though a few of your more impatient kittens try to eat them on the spot, a warning tut from their adopted grandmother keeps them in line while the big man explains the simple [']recipe'['] to your perfect little angels. Nodding along, your quick-witted kittens spend the next few minutes politely trading different colors of marshmallow and flavors of chocolate amongst themselves before breaking into groups nestled next to their fires and set to work on their sugary delights. Observing their work, you hardly even notice Drake and Kathy paw up beside you carrying what's left of the treats.";
+	WaitLineBreak;
+	say "     'Aw, you two have some of the most well-mannered cubs I've ever seen. Why the humans could learn a thing or two from them,' the matronly cat girl quips as Ava leans down and takes a large bag of plain-looking sweets from her adopted mother. Though part of you feels a touch slighted at the banal selection, looking at the blissful expression of your children as they arrange their own prismatic confections, then to the now empty arms of your host's as you realize they've given everything to you and your kids. You decide against voicing such self-centered thoughts as your mate chirps, 'Thanks mom,' while kneeling down to take the plate for her mother's tiny paws. 'But,' she pauses, as eyes flicker between her adoptive parents, 'aren't you guys going to have some too? It feels wrong to have these all to ourselves,' Ava adds as she tries passing the plate back to her adopted mother. 'Oh don't worry about us,' Kathy beams, waving aside the offered platter with a flick of her tail, 'these are for you and your family, isn't that right Draky?' Kathy simpers, as gazes up at her lover.";
+	say "     'She's right Ava,' he rumbles, kneeling down beside his mate. He hooks his left arm around the cuddly lioness and gently rubs her tummy fur. 'Your mother and I are both so proud of you and your kids. You've all been quite the help around the grounds, you deserve a treat.' 'But daddy, [Name of Player] said s'mores are meant to be shared with the people you love, it doesn't feel right to keep them to ourselves, not after all you've done for me.' your mate sniffles, fixing the big man with a pleading glance. 'Oh? She did?' the post-human chuffs, flashing you a respectful glance. 'Well alright Ava, just one though, I have something special waiting for your mom on the roof and don't want you spoiling her appetite,' Drake chuckles, as you hear a slight groan coming from his jeans as the stiff old denim strains against his statuesque form as he returns to a standing position. 'Mh, and whatever might that be dear?' Kathy smirks, her ears twitching with obvious interest, as she eyes a growing crease in the folds of his right pants leg.";
+	WaitLineBreak;
+	say "     'Heh, you'll see babe,' the big man says as he leads the three of you over to one of the less crowded firepits. Your group's arrival is greeted with a series of happy mews as your kittens make way and show off the unique blends of sugary delight they created. Praising each one as the peerless culinary excellence that they are, you and Ava nestle your lower halves together like a pair of cuddly crescents as the big kitty drapes her soft not-so-little paws over your [bodydesc of player] body and lightly pulls you into her loving embrace. Internally swooning at the caress of her silky fur and the plush body, you allow yourself to be drawn into her pillowy arms while Kathy settles herself on her mate's lap. Your kittens pass Ava and Drake a pair of unused skewers along with a few colorful treats of theirs. Though your lover and her adoptive father try to say no, your cubs won't hear a word of it and soon yield to your altruistic little ones['] demands and add a few green, pink, gold marshmallows to the mix then set them next to the fire.";
+	say "     As they cook, you find your gaze drifting between the various groups of your cubs huddled around their own little blazes. You can't help but feel a swell of maternal pride growing in your breast at having brought nearly a hundred or so of these perfect angels into this crazy flexible world. At any other time in your life, you might have found the very idea that you'd [']mother['] so many laughable, yet as you stare at their beautiful pelts shimmering in fire light, and listen to the sweet musical choir of their voices as they chatter amongst themselves. It's getting harder to see yourself as anything other than the matronly mommy taur that you've grown into. Besides, what more could you want in life than a wonderful mate, a caring family, and this bountiful tauric body? You muse, almost totally lost in your thoughts as Ava absentmindedly paws at,[if Player is impreg_now] the soft swell of your latest litter[else] the tender void of your poor vacant tum[end if] with her tendrils.'";
+	WaitLineBreak;
+	say "     The loss of something as silly and inconsequential as your humanity seems like such a small price to pay for all the joy this experience has brought you. Perhaps picking up on this serene line of thought, you feel your lover nuzzle her chin along the top of your head whispering, 'Gosh don't they look so perfect and happy together?' Yes, you coo in agreement, sinking deeper into her comforting many-limbed embrace, delighting at the sensation of your mate's soft body swaddling you, and the sight of your ever-growing brood. 'There's so many of them too, I can't believe I was alone for so long, but now,' she purrs dreamily, gesturing to your little ones both near and abroad with a casual wave of her tendrils. 'I have you, mommy, daddy, and all my beautiful kittens, by my side. All [italic type]our[roman type] kittens, you correct her with a good-natured tut, as you reach up and gently stroke her cheeks. 'Mh...ours, I like it when you say that,' Ava rumbles in a deep catty bass, as she nuzzles her sizable whiskers against your palms.";
+	say "     A sudden cough from Drake gets your attention, as he frantically gestures to the sizzling carbonized mess that was once your marshmallows, saying, 'Uh hey girls your food's burning!' as he plucks the charred confection from the blaze before they smolder away to nothing. 'Shoot! Sorry dad we were just, well,' your mate mews demurely, flashing the big man a well-meaning blep. 'It's okay Ava, I know,' he rumbles in an all too feline octave, coiling his free arm around Kathy protectively as he hands Ava the prodigious skewer. 'You were just... lost in the moment,' he adds, with a tender too-toothy smile as he nuzzles his chin along the tips of Kathy's ears. 'Thanks Dra-, I mean Daddy,' Ava beams, taking the length of metal from him as she proceeds to skin the burnt layer of fluffy over-caramelized sugar off her treats and quickly assembles a pair of s'mores just for you and her. 'Here you go my sweet mate,' she simpers, passing you one of the comparatively tiny treats. Accepting it with an earnest smile, you dig in, and internally remark that while the crackers are a tad stale, the chocolate barely has any coca in it, and the marshmallow tastes just a hair burned, it's still one of the best things that you've eaten in recent memory.";
+	WaitLineBreak;
+	say "     'Mh delicious,' she mews, between delighted smacks of her lips, 'could use some milk though.' She notes, motioning to her lush tiers of verdant M-cup breasts. At the mere mention of milk, your kittens['] ears seem to perk up as they turn to face you and your beloved mate, their expressions alight with hopeful pleading glances. Ah, are you girls thirsty too? You inquire in a jovial sing-song trill. 'Yes mommy [Name of Player], may I please have some milk?' your first kitten asks. 'Ya, could I please have some too? The s'more were super yummy, but they were kind of sticky. I think I have some stuck between my teeth,' your second kitten says, as they point to the back of their maw with a flick of their tail. Of course, you tell them as you invite your kittens to your side, eager both to share your wisdom with them and to experience the feeling of sublime connection the act of feeding them imparts. Nodding to the crowd around you, Drake scoops Kathy up into his arms whispering something to her about giving you and Ava some space.";
+	say "     For a moment, she looks like she wants to protest, but as he pulls her to his hardened chiseled pecs, such thoughts are short-lived though as the plush motherly lioness mewls happily as she is carried off to the roof, likely for her own [']treat['] as Drake put it. You titter internally, as you spread yourself out and implore your kittens to drink their fill. At once your kittens rushes forward in an orderly tide of fluffy perfection, as they lovingly cup their sweet lips to your elated nips, and sup deeply from your boundless bounty as they purr delightedly to one another. While they drink, your mind is set awash with feeling purest parental love, and desire to care for them, along with a sudden rush of inspiration of names for the cubs.";
+	say "[YourAdHereOne]";
+
+to say YourAdHereOne:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[YourAdHeretwo]";
+
+to say YourAdHeretwo:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[YourAdHerethree]";
+
+to say YourAdHerethree:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[YourAdHerefour]";
+
+to say YourAdHerefour:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[YourAdHerefive]";
+
+to say YourAdHerefive:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[YourAdHereSix]";
+
+to say YourAdHereSix:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[YourAdHereSeven]";
+
+to say YourAdHereSeven:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[YourAdHereEight]";
+
+to say YourAdHereEight:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "     [italic type]Sometime later[roman type], once you've finished bestowing your final kitten with her name, and what has come to pass for a proper post-apocalyptic education, the fires have all started to wink out. Only the odd crackle of a few stubborn embers, alongside the light aromatic scents of the more fragrant woods whirling around you, and small piles of black-gray ash littering the asphalt provide any proof of their existence. Even those are slowly being worn away by the low gusts wafting through the gaps in the gate. Brief as it was, you hope the memory of simple dalliance stays with kittens for years to come. A part of you wonders if they'll get another chance like this, as they cuddle around you and your mate in an adorable pile of satiated catty contentment. As they deserve every drop of the happiness in the world along with the opportunity to see and experience all the beauty this crazy flexible life has to offer.";
+	say "     You muse, observing your flawless dears beginning to stir from their post meal nap. Already you can see the effect of the exposure to your innate wisdom making its presence felt, familiar looks of wanderlust play across their cherubic faces as they glance towards the city with fresh looks of profound interest. Their tails twitch with an eager energy as the same desire you often feel to explore tries to rouse them from their comfy place at yours and Ava's side, the well-mannered kittens seem to resist the potent urge for the moment. Yet for all the anticipation written upon their body language as flex their talons, or idly shuffle their legs, they remain snuggled up beside you, waiting for the moment you say it's time to leave, meet the rest of their family, and see all the wonders of this new world. You briefly consider giving the word, but as you lay here cuddled in your mate's loving arms, you just can't find the strength to do so. Instead you simply laze at your mate's side, dreamily toying with the idea of staying here with your new family if not forever, than at least until the military sorts things out.";
+	WaitLineBreak;
+	say "     Though as the minutes stretch on, it seems such wistful musing are not meant to be, at least not yet, as Ava clears her throat to get the kitten attention, saying, 'All right everyone, mommy hates to say this but it's time to get up now.' 'Aw, do we have to?' one of your kittens mews, though from her forced toned you can tell it's more for Ava's sake then her's. 'Yes little one,' your mate chuffs, tussling the fur on your well-meaning kitten's head with her tendrils. 'Mommy and grandpa have to do their chores, unless you girls want to help sweep up the parking lot. [italic type]Our[roman type] gardens could use the ash as fertilizer,' she teases, in a sweet motherly trill as she gestures to dusty blacktop with a light bob on her head. '*Tee-hee* Eh no thanks mom,' your daughter replies in bashful tone as she rubs the back of her head with her paws. 'That's alright, now run along and go say hi to your sisters for me,' Ava beams, as your little ones stretch and shuffle on to their paws.";
+	say "     'Of course mom,' your kitten chuffs, turning to face her peers. 'Now come on everyone, let's go meet our sisters! I'll bet they are going to be super jelly when we tell them about the s'mores!' she cheers as they all gallop off to greet their kin. Once they dip out of sight, you can feel Ava deflate slightly as wraps her arms around you protectively and nuzzles her chin along the top of your catty head, whispering. 'Gosh I'm going to miss them, it so nice to have them around, but they can't stay locked up here,' she sniffles, briefly tucking her ears to the side of her head. 'They deserve to see the world with you... I just wish I could too.' Tutting, you tell her that she can always come with, and there's plenty of space at The Bunker. Who knows, she might even like some of its residents too. 'I want to, but,' Ava peeps as she kisses the tips of your ears, 'I'm scared [Name of Player]. The Last Chance is the only place I feel safe. So, just promise me you'll come back and take care of the girls. I want them to grow up to be just as strong and brave as you and daddy.'";
+	WaitLineBreak;
+	say "     Nodding your head, you tell her that you will, and perhaps before you go, you can give her another litter to keep her company. Afterall, she looks cute with a belly full of cubs, you add, running your paws over the supple curves of your mate's lush lower half. 'Aw, you're such caring mate,' Ava purrs as her mitts join yours as she invitingly pampers her silky and plush rows of bestial breasts. 'You know just how to cheer me up!' she swoons in a bright loving cadence as she longingly eyes her room. 'But first,' Ava huffs in a dutiful tone as pushes herself to her paws and dusts herself off, 'I have to do my chores, wouldn't want to set a bad example for the kittens.' Rumbling in agreement, you reply there's no rush, you should probably go check in on the girls, make sure everyone's getting along and not setting any fires unsupervised, before wishing her well before and parting ways, for the moment at least.";
+	LineBreak;
+	say "     [Italic type]Hint: You will need to be knocked up to view the next event.[roman type]"
+	now Just Work is resolved;
+	Playereat 10;
+	now Libido of Ava is 0;
+	increase level of Ava by 8;
+	increase Perception of Ava by 8;
+	TraitLoss "Seasoned Broodmother" for Ava;
+	if "Professional Breeder" is not listed in Traits of Ava:
+		TraitGain "Professional Breeder" for Ava;
+
+
+Table of GameEventIDs (continued)
+Object	Name
+Beach Day	"Beach Day"
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"Beach Day"	Beach Day	"[EventConditions_Beach_Day]"	Last Chance Parking Lot	2500	2	100
+
+to say EventConditions_Beach_Day:
+	if Perception of Ava is 32 and Libido of Ava >= 1 and BodyName of Player is "Margay Taur" and Player is pure and Player is female and Player is impreg_now and HP of Augustus Drake is 7:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Beach Day is a situation.
+ResolveFunction of Beach Day is "[ResolveEvent Beach_Day]".
+Sarea of Beach Day is "Nowhere".
+
+to say ResolveEvent Beach_Day:
+	say "     Waddling into the Last Chance parking lot, you spy Drake standing alone in the center of the parking lot assembling a crude ad hoc workbench built from reclaimed wood and half-rusted metal out in the middle of the parking lot. Laid out across the bench, is what looks to be a reinforced door of an armored car, a welding kit, several unmarked gas canisters, and a large red fold-out steel tool box. Alongside several lime-green plastic cases placed around its feet, though their labels have been worn away by time, you still make out a few words like angle grinder or rotary saw on a couple of them. Curious about his project, you paw up beside him, and ask what he's working on. 'Ah [Name of Player], just the woman I was hoping to see,' Drake replies, with an acknowledging bob of his head. 'Got a commission from a trade partner of mine coming to visit soon,' he pauses to rap the door with his knuckles. 'Guy wants me to turn this thing into a sort of riot shield for him, so was wondering if you could take Kathy and Ava to the beach for the day?' Drake says, somewhat dryly, though you can't help but note a mild undercurrent of urgency tugging at his otherwise neutral tone as he eyes the girls['] rooms. Tilting your catty head at an inquisitive angle, you rightly ask the patriarchal man why.";
+	say "    'Cause these,' he gestures to his power tools with a casual wave of his left hand as his leonine eyes briefly constrict to fine pinpricks, 'are a little rough on their ears, and given their condition,' Drake says, peering up at the sky while a low sigh peters out under his breath. 'I-,' he hesitates, lightly clicking his tongue, 'I feel bad disturbing them.' Nodding, you tell him that's very considerate of him, but he isn't worried about the mutants that live there. 'Nah,' he chuffs through a relaxed grin, 'been there a few times, just don't go past the Break Water, or piss off the crab. Besides, you can handle yourself better than most, seen you crack a few skulls out there,' he motions towards the plains and wider city beyond The Chance's heavily fortified gates with a commanding nod of his head, 'even in your condition. I know you can keep the girls safe, if it comes to it.' Shrugging, you tell him that's true, a little thing like pregnancy is never gonna slow you down. 'Good, so you feel up for it?' he asks.";
+	LineBreak;
+	say "     [bold type]How do you respond?[roman type]";
+	let Beach_Fun_Choices be a list of text;
+	add "No, you'd rather not, it is quite the long walk after all." to Beach_Fun_Choices;
+	add "Yes, you'd love to take the girls to the beach." to Beach_Fun_Choices;
+	let Beach_Fun_Choice be what the player chooses from Beach_Fun_Choices;
+	if Beach_Fun_Choice is:
+		-- "No, you'd rather not, it is quite the long walk after all.":
+			say "     Sadly, you don't have the time for a six hour plus journey, and tell him as much. 'Ah, oh well, I'll pack up till you leave then. Don't want to interrupt you and Ava,' Drake replies, as he collapse his makeshift workbench and hauls it back into the lobby.";
+			now Beach Day is resolved;
+			now loyalty of Kathy is 1;
+		-- "Yes, you'd love to take the girls to the beach.":
+			say "     Thinking on it, a day at the beach does sound fun, so why not. You opine, telling him that you don't mind taking the girls out. 'Great, before you go,' Drake pauses to fish a handful of plastic notes with a silver paperclip affixed to their corners out of his pant's pocket. Counting them out, he continues, saying, 'Here, I hate using it myself, but have some freecred. Don't know why, but folks are using this over dollars now, so if you or the girls see any good stands at the beach, my treat,' as he tosses them to you. Plucking them out of the air, you tell him you'll keep that in mind and head off to collect Ava, while Drake goes upstairs to get Kathy. Pawing up to her room, you politely knock on your mate's door before letting yourself in. Once inside, your catty eyes are met with the adorable sight of your plush pregnant lover reclining upon her mattress while her paws comfortably laze upon the pillowy mass of her flush dugs. Seemingly oblivious to your presence, Ava's attention is solely focused on a large children's picture book resting atop the supple swell of creamy middle while she reads aloud to your precious kittens.";
+			say "     Although you can't see the title from this angle, you still hear her murmuring, 'I will not eat them in a box. I will not eat them with a glitchy fox,' as you sashay over to her. Ava's ears begin to twitch as she suddenly turns her head to face you. 'Oh hey [Name of player], sorry I didn't hear you come in, guess I was a little too caught up in reading to the girls,' she purrs, giving her tummy fur an affectionate rub with her forepaws. Smirking at the cute little impression of her paws gliding over her pelt, you tell her that's alright, then ask what she's reading. 'Blue Cheese And Spam,' she says, setting the book coverside down beside herself as she rolls over onto her paws. 'Daddy bought it and a few others for me yesterday. Ya know, I think the girls really like it,' she mews resting her hands on her glowing tum. Aw how sweet of him, you simper before mentioning that Drake would like to speak with her in the parking lot. 'Mh, oh ok,' Ava shrugs. 'Come on girl lets go and see grandpa,' she hums, waddling to her feet as she ambles outside with you in tow.";
+			WaitLineBreak;
+			say "     [italic type]A few minutes later[roman type], after the four of you have reconvened at the parking lot and Drake explains what is going on, Kathy and Ava's eyes go wide with excitement as he tells them his plan. As both are apparently very happy to be away from construction noise and getting to see the ocean for the first time. Although your mate is initially a little distressed at the idea of leaving The Chance, once she realizes that it will be without him, but once you remind her that you'll be escorting her, her concerns melt away under a tsunami of renewed enthusiasm. The matter settled and with nothing to pack beyond a set of oversized and regular beach blankets Drake had tucked away, you quickly bundle the massive sheets of white cloth on the small of Ava's back then set Kathy atop her before setting off."; [Note to Prome: this is one of my oldest pieces of writing and I was skipping dialogue here because it would bloat the event and it would lead to the PC talking too much. It doesn't come across as lazy does it?]
+			increase freecred by 200;
+			say "     Along the way, Drake provides your trio overwatch for as long as he is able, though you can't see him, under the canopy of his little pillbox, you nevertheless still catch sight of the odd glint of his scope reflecting in the available light. Though you're not exactly sure if such vigilance is required, you can't say that you blame the big man for it, you muse. Still, the three of you make good time, as yours and Ava's tauric bodies are able to cover ground far quicker than a pathetic biped. The local mutants keep their distance too; even as you pass Trevor labs and other hot spots few, if any, of the city's less social inhabitants come within earshot of you. As you go along, the three of you pass the time by pointing out places you've been or seen. Many of them have seen better days, and you often find yourself telling your travel mates what places were like before the outbreak.";
+			WaitLineBreak;
+			say "     The girls, for their part feign interest for a spell, yet you can't help but notice a certain tension in creeping through their expressions as you extol the virtues of the world that was. After a while, you give up on it all together, realizing that despite the chaos caused by the nanites, the [']mother-daughter['] pair wouldn't exist as they are now without them. The more you attempt to exalt the wonders of a world free of the nanite plague, the more sour their expressions become. They finally perk up though when you pass the great bronze crab keeping watch over the shore, and reach the beach plaza proper. Standing on the edge of the boardwalk, the three of you spare a moment to take in the sight of the pristine blue water stretching out as far as the eye can see, framed by the vast rocky outcropping, clean yellow sand dunes, and the gentle waves lap at the shore. One could easily forget about the outbreak, were it not for the sizable population of friendly mutants milling about the area, or the subtle silhouettes of birds alongside the occasional siren flying out towards the break water. Drinking in the view, the girls loose a series of oohs and aahs at the sight, and a few low scoffs at the smell.";
+			say "     One of the downsides of having sensitive noses, you muse, unbothered by the salty air. 'Wow, I've never seen so much water,' Ava says, her eyes alight with catty wonder as she motions to the vast ocean with a casual wave of her tendrils. 'Or smelled so much salt, and mh fish.' Kathy chuckles over the sound of her tummy rumbling as she dismounts. Eh you get used to it, you confide with a neutral shrug, besides there's more to the beach than the water. 'Like what?' Ava asks, fixing you with an inquisitive stare while her ears twitch at odd angles as she takes in the new sounds wafting about her. Why there's food, making sand castles, nice hiking trails, and, you gesture to the bikini clad post-human woman playing volleyball at the water's edge, the view. 'Naughty kitty,' Ava teases, lightly pinching your elbow fur. 'Mh, I can see the appeal, but I think I like the men more though,' Kathy titters, ogling some of the more endowed male mutants bouncing banana hammocks as they frolic in the surf. 'Oh can imagine what it would be like to slap one of those on Drake,' she mews wistfully as lucid speckles of drool pool around the edges of her boxy muzzle. 'Now uh what was this I heard about food,' Kathy asks, licking her chops.";
+			WaitLineBreak;
+			say "     Right, you begin, gesturing to the pathways leading to the boardwalk, so down there, is a snack shack. From what you can recall, they sell ice cream that would be perfect for a day like this. Of course, you're buying, you titter, waving for them to follow. 'Oh I remember that stuff for the circus, I've always wanted to try some. Say Ava, did they have that at the fair?' Kathy asks as the trio of you meander down the causeway. 'Um,' Ava pauses as she thoughtfully taps her catty chin, 'I think I saw a few melted otter pops laying around, but they looked kind of... cloudy though so I never tried them,' she shrugs. Well then the two of them are in for a treat, you exclaim as you lead them over to the long queue. Bounding down the stairways, the assembled beach goers hurriedly part ways like the tide for your group on your way down to the public beach. You don't blame them though, as the sight of two massive gravid tauresses towering head and shoulders above the crowd (minus the tiny portly feline waddling between you) is an intimidating sight, others though, seem rather taken with your form.";
+			say "     The attention isn't all bad either, as somehow despite all your changes, knowing your still someone's fetish is oddly affirming, you muse as you proudly strut through the churning mass of post-humans. Once you fall in line, a few of the more curious women are naturally drawn to your group and ask the usual questions. How far along are you, who's the daddy, and if they can have a feel. Nothing you haven't heard before, and you don't mind indulging some of their queries as you wait in line. After all, you're quite proud of the way you look, especially since you worked hard to earn this beautiful body. Besides, the look of shock on their faces is beyond priceless once you reveal who the [']father['] is. Not that you blame them, it's not often a woman gets knocked by her girlfriend, even in this crazy day and age. A few of the cuter ones you even allow to touch your lovely bump, as you have to admit it does feel nice to be the center of such attention.";
+			WaitLineBreak;
+			say "     Especially since a couple of the local vixens are very good with their paws as they carefully caress your taut tums while commenting on the wondrous glow of your fur. You don't even mind when one of them sneaks a quick kiss to your outie. Of course, you play it off as a happy accident, lest anyone get any ideas. Ava however, is a stuttering mess, as she does her best to ward off onlookers as they fawn over her exotic form, to little avail. However, a quick catty rumble soon sends them packing, as you bare your fangs in a menacing predatory grimace while the fur on your back ripples in bestial aggravation. Kathy on the other paw, has a more mercenary approach to things, charging people on a by-the-touch basis, she doesn't discriminate between male, herm, or female either. If they have the creds they can cop a feel wherever they want. Otherwise, she remains cool and aloof to the broke ones, who are soon pushed aside by the churning tide of eager metamorphs desperate to indulge themselves on her opulent body.";
+			say "     Once you reach the head of the line, you notice the usual server is out for the moment. Their replacement though, is a green scaled bipedal horned lizard girl wearing nothing but a smile. Well at least you won't have to worry about finding a hair in your food, you think to yourself as you eye her up. You're immediately reminded of lizard girls in the park, but you notice some obvious differences. Her jet black horns are swept back to the sides and her eyes have a subtle glow to them. While the dense scales coating her body are a tad darker green edging towards olive or ebony than the blue-green hues you've seen in the park. In places you can even see hints of thick bony spikes growing along her extremities. Her tits too are a tad larger, as her supple mounds are erring towards lush D-cups, then the petite A's found on the park dwelling reptiles. Perhaps, she's mixed and matched infections you idly think to yourself as you order three bowls of ice cream.";
+			WaitLineBreak;
+			say "     'Sure thing, that will be four hundred fifty freedcred, would anything else with that?' She asks, ringing you up on an old gun-metal-grey manual register. You shake your head no, and go to pay with the money Drake gave you. 'Oh save your money sweetie, I've got this,' Kathy says, pulling out a wad of cred from the ";
+			if "Touched by Madness" is listed in Feats of Player:
+				say "lewd hammer space that is her bosom. ";
+			else:
+				say "inviting swell of her plush chest pillows. ";
+			say "Not one to turn down a free meal, you let her pass the bills to the cashier then step to the side, letting the woman fill your order. A minute later, you're called over and handed three monstrous bowls of ice cream the size of Ava's head, and lead everyone over to the beach. Finding a spot is a little difficult given yours and Ava's size, but you manage to find a nice spot near the rocky outcropping. Throwing down your towels, you curl up beside Ava, with Kathy snuggled between you then proceed to pass out the bowls of frozen delight and dig in.";
+			say "     To the letter, the girls, and you, enjoy every bite, savoring the rare frozen vanilla treats, decked in fresh caramel and chocolate syrup. The feeling of the warm sun on your pelts melds with the pleasant coolness suffusing your cuddly core like a tranquil balm. You and Ava even take turns playfully feeding one another with your tendrils while you playfully paw at the cute little outlines of your kitten's with your free hands, delighting at the silky kiss of your fur running along your pads as you murmur sweet nothings to your latest bundles of joy. You don't leave Kathy out either, as your free tentacles pamper the fecund feline as she lies on her back beside you, scarfing down mouthfuls of frozen delights. No doubt relishing the attention and creamy meal, the lush lioness purrs contentedly to herself as her paws join yours in the loving exaltation of her bountiful form, mewing, 'Mh, your tendrils feel so soft,' as she worshipfully runs her satin paws along the gossamer length of your tentacles.";
+			WaitLineBreak;
+			say "     '*Oof*', she huffs, as a pronounced ripple passes through her voluptuous middle, 'and I think the kittens like them too,' she pants while adorable little bulges flicker about her tawny tum. 'Or maybe they're just hungry, the little ones get so feisty right before meals, now isn't that right girls?' Ava teases, gliding her catty mitts down the ";
+			if Libido of Ava <= 12:
+				say "cute swell of her burgeoning bump with obvious delight at the gentle shimmer of her fur playing before her eyes. ";
+			else if Libido of Ava < 12:
+				say "monumental curves of her gravid tumby with a proud maternal grin as she delights herself upon her pillowy folds. ";
+			say "As her flush middles wriggle in response to their mother's loving touch, their tiny paws simmer across her pelt, evoking a well-pleased mew from Ava's lips as she traces a talon along the outlines of their quickening forms. 'See,' she beams, flashing you both a dreamy grin, while giving her tummy an affectionate pat, 'just look how happy the kittens are. How about yours [Name of Player], what do they think?' she asks, motioning to your verdant figure with a languid brush of her voluminous tail.";
+			say "     Leaning ever-so-slightly into the silky kiss of her pelt drifting along your sensitive tum, you reach down, cupping your brood-laden anthro tummy with your dominant paw, reveling in the tactile dissonance of your fingers sinking into the soft maternal padding decorating your [bodydesc of Player] figure, and the hidden firm tightness of your womb lavishing your inquisitive paws. You ask in a melodious trill, if your precious kittens are enjoying their meal too, as a rush of effervescent sensation roils though you from a flurry of precious kicks rippling through your core as your cub's stir. Gushing at the sight, you soothingly run your hands along their adorable frames and whisper to Ava that it seems they like their little treat. 'Daw, how cute,' Ava purrs, leisurely wrapping her forepaws about your feral middle as she fondly fondles your tender tummy. '*Tee-hee* now eat up kittens, you girls have a lot of growing to do. Of course,' she adds with a confident cocksure hum, as she playfully kneads your voluminous fur. 'So does your mommy.' Snickering, you lovingly eye her breasts and tell her that that can be arranged, while you enthrallingly nuzzle your cheeks along the [bodydesc of Player] swell of your [breast size desc of Player] chest while Ava titters happily in reply.";
+			WaitLineBreak;
+			say "    Once you're all full and your tums are packed with sweet treats, you each wash your meals down with a convenient sip of your own rich cream. Ah, gotta love that fresh from the tap flavor, you coo pawing at your cool tummy fur as you relish the feeling of warm milk and chilly ice cream slothing around inside you. 'Tastes even better when you've a bun in the oven,' Kathy replies, affectionately patting her expansive chest. 'Mh I know, this feels so right, I can't imagine spending my life any other way, or with anyone else,' Ava says, casting a happy look in your direction as she playfully hugs her lower body with her legs. Purring in agreement, you drum your claws along your glowing treasure trail, basking at the sensation of your talons playing across your powerful ripening form. 'Good, cause I intend to keep you this way,' Ava coos, hooking her tendrils about your furry muzzle as she strokes your cheek. Smirking, you tell her that you might hold her to that.";
+			say "     'Oh I hope so, I don't ever want to see you waddle around The Chance with another mutant's kittens. These tummies and titties belong to me now,' Ava jokes, as she paws at your lower belly with her silky peats. Really, and who owns her assets you jokingly ask. 'Why you and mommy, silly, you two can split me right down the middle,' Ava simpers, tracing a line down the middle of her hemline. 'Ha, I call the left side then,' Kathy says, planting a kiss on Ava's swollen milk tanks.  No fair, you wanted that side you gibe, booping Kathy's shoulder with your forepaw. 'Now-now you two can fight over me later, let's just enjoy the day. Besides all this rich food and long walk here is making me,' she yawns, stretching out her leg and extending her claws as she does before plopping on her sides facing Kathy, 'sleepy.' Sure, you tell her, rolling onto your flanks to meet her gaze, you wouldn't mind a brief cat nap either.";
+			WaitLineBreak;
+			say "     The sound of the waves crashing in the background, soft sand cradling your back, and warm sun caressing your pelt acts as a soothing balm to your senses. After all the changes you've been through in the last few weeks, not to mention your impending litter, a few hours cuddling sounds heavenly. 'I don't mind either dear, this place is kind of nice. Plus, I've got the best seat in the house,' Kathy adds, reclining back as she drapes her arms over yours and Ava's pillowy busts. Well, she looks comfy, you murmur nuzzling your body around the fecund cat girl protectively. 'Not as much as I am,' Ava replies dreamily as she embraces both you and Kathy in her lengthy limbs. Nodding in reply, you snuggle your upper body next to hers and drift off to sleep in each other's arms.";
+			say "     [italic type]An indeterminate amount of time later[roman type], you awaken, still wrapped in your mate's embrace with Kathy lounging up between you and Ava, feeling more refreshed than you have in days. Looking around, you notice that the sun is about to set, and the others are still napping. However you don't have the heart to wake them yet. They look too comfy, and besides, some would consider it a crime to disturb sleeping cats. You muse, recalling an old, somewhat famous painting of a Japanese woman cutting her kimono with a sword to avoid waking her cat. Still, it doesn't mean you can't enjoy yourself a bit as gently pet the tired kitties['] silky fur while listening to the sounds of the ocean. Lost in your simple pleasures, you hardly even notice the muted crunching of sand of several people pawing behind you until one calls out in a delightfully girly voice, 'Aw, how cute, look at them all cuddled up like that!' That causes your playmates to stir and grumble as they awaken from their peaceful slumber.";
+			WaitLineBreak;
+			say "     Rage and aggravation flares in your breast as you shoot a look over your shoulder, searching for the source of the noise that dared disturb your precious pillow-friends. Though that same ire melts away as your eye locks on the perpetrators, a trio of women standing in a loose chevron formation behind you. Two of them appear fully mutated, not to mention completely nude. The woman to your left resembles some manner of harpy, although her feathers have been dyed bright pink with blue fringes and silver geometric runes have been drawn on them. Despite your travels and odd dealings with the city's many exotic inhabitants, none of these unusual symbols resemble any language you've seen before. Mostly likely, you muse, they're just scribbles whose meaning is something known only to the harpy. Though as your eyes drift further south, you note that unlike many of her sisters squawking around the city, she appears to have not one, but three puffy cunts, nestled in row along her smooth alabaster nethers. Compared to the more waspish avians you've encountered, her plush E-cup tits and gropable hips are also noticeably larger than what you've seen on her less endowed kin.";
+			say "     The other mutant standing to your right resembles a female version of the elven hunters often found in the Urban Forest. Like her peer, she seems to have altered her infection as well, except instead of extra cunts, she's picked up two extra rows of breasts. Her largest being D-cup and smallest are B-cups, while a billowing orange fox tail tipped with a cream splotch of fur twitches behind her. Flanking them is a rare sight, a completely unaltered dark haired human with newly tanned skin standing about five foot six inches tall with a single pair of AA-cups. Despite the rest of her cliques['] preference for nudity, this woman has decided to wear a blue one piece swimsuit. Given the coverage, it's not outside the realm of possibility that she's hiding a minor mutation underneath. However, given the way her infected friends position themselves between you and her protectively, you doubt that's the case. Neither slim nor fat, you can at best describe her as boringly average in build.";
+			WaitLineBreak;
+			say "     Though your sharp eyes can detect a bit of toned muscle on her thighs alongside some tiny faded stretch marks peeking out from the edge of her suit. 'Oh sorry we didn't mean to disturb you guys,' the harpy says sheepishly as she notices the narrowing of your slitted eyes. 'But me and my friends here,' she gestures to the others with a sweeping wave of her wing-like arm, 'are total bumpaholics.' 'Am not!' the human stammers with a low squeak, crossing her arms defensively. 'Right, so I was just imagining things when you kept using Alex's tummy as a pillow that time they got knocked up by a tiger taur then?' the elf chides, pointing to the harpy. 'Or how about when you refused to drink anything but Lilly's breast milk while she was carrying that clutch of bald eagles?' Alex teases. 'Well, in my defense, we were running out of water, food, and medkits,' the human counters matter of factly.";
+			say "     'Whatever Becky,' the harpy snorts, rolling their eyes. 'Anyways when we saw you girls cuddled up like this, we just had to introduce ourselves. I didn't know your friends were sleeping though, so if this is a bad time...' the harpy says, tracing the sand with a toe claw as her voice trails off. Shrugging, you tell her not to worry, you were already debating on whether to not wake up your mates. Though at the sound of your voice, the girls let out a low yawn as they stretch out and wipe the sleep from their eyes while looking upon the assembled humans standing before them with open curiosity. Once you've given them a moment to collect themselves, you introduce Ava and Kathy to the other women. 'Nice to meet you all.' Kathy says, propping herself up by her elbows. 'Hi,' Ava mews sleepily, still laying on her side. 'Likewise,' Alex chirps, flashing a happy grin. 'Sorry we woke you mommies up, but it's super nice to meet you, and your babies too,' Lilly says with a crooked sylvan smile.";
+			WaitLineBreak;
+			say "     'Tummy,' Becky murmurs, staring at your collective middles hard enough to burn a hole in your fur. 'Huh?' Ava says, tilting her head. 'Oh sorry about our friend, she's a total dummy for tummy. Which I must say, you ladies got it going on. Who's the lucky sire? If you don't mind me asking?' Lilly queries, gesturing to your lush bumps. 'Why thank you dear,' Kathy trills, proudly fluffing up her paunch. 'These guys are my wonderful mate Drake's, he's human by the way.' 'And what about you two?' Alex asks, cheerfully motioning to yours and Ava's plush cores. Sharing an amused little glance, you reply in unison, 'Hers,' while pointing at each other. 'Neat, are you girls herms, or gender fluid like Alex?' the elf inquires, sounding a tad impressed. Nope, you reply, fondly rubbing your lower belly with your forepaws. 'What? REALLY? T-th-then how did you do that!' Becky says excitedly as she bowls past her friends to get closer to you. Oh it was nothing special, a doctor you know whipped up a little nanite cocktail that gave you and Ava ovipositors, you reply nonchalantly as you gesture to your tail with a proud nod of your head.";
+			say "     'It also gave us these cool tentacles too,' Ava adds, proudly brandishing her tendrils. 'OH MY GOD that is SO! FUCKING! HOT! Lilly, Alex I think I found the form I want,' Becky gushes as she kneels down beside you, burying her head in the silky pelt of your lower body. 'Mh so soft and squishy,' she coo roughly kneading your floof as her fingers sink into the toasty folds of your [bodydesc of player] flanks. 'Really, you sure?' Lilly questions, raising an eyebrow. 'Yes, I mean just look at how cute and cuddly this body is!' she squeals, enthusiastically draping her arms about your voluptuous catty flanks. 'Mh, and those adorable tummy titties, big stompy paws, warm soft pillowy pudge, and cute fuzzy-wuzzy outies they're perfect,' the handsy human trills, gliding her eager mitts along the verdant swell of your feral nips. Despite her overly forward advances though, some section of your increasingly catty mind delights at her antics and the attention paid to your Rubenesque curves as she loving pampers your fertile feline form, with worshipful gropes of her well-practiced digits.";
+			WaitLineBreak;
+			say "     'Ok Beck, but maybe you should get your head out of their backside and ask them if you can try out their body,' the harpy grunts with a nagging wag of her tail feathers. What she wants your form, the hell is this lady on about? You grumble as the over-eager human pinches your sides a little too hard, provoking a frightfully flurry of kicks from your precious kittens slumbering within. Roaring, you push her off you with your tendrils, hissing and baring your fangs as you do. Recoiling in fear, the color swifty drains from Lilly and Alex's faces as they take a few hasty steps back at sight of your incisors, not to mention the size of your talons. Becky though, is undeterred and is already scrambling to her feet. 'Sorry about that, I think Beck is a bit on the spectrum,' the harpy says apologetically as she rushes forward and restrains her friend by the wrist. 'HEY! Don't make fun of me,' the odd ape whines struggling in her arms. '*Sigh* we're not making fun of you Beck, we're just trying to keep you from making an ass of yourself,' Lilly says, furling her brow as she steps between you and her friend. 'Ya maybe you should tell what you want first before groping someone you literally just met. I know you're excited, but you're kind of coming across as a total creeper right now,' Alex grumbles, fanning her feathers in aggravation.";
+			say "     'Oh right, sorry,' Becky peeps dejectedly, slumping in Alex's arms, then takes a breath as if to compose herself before shrugging off her friend's grasp. 'Ok so um, my friends and I are, or were,' she huffs, fixing her peers with an annoyed sidelong glance, 'field researchers recently hired by Zephyr to catalog the infected. Not sure if you've heard of them, but they gave us booster shots, nanite collectors, and a bunch of other cool stuff to help us gather samples of all the ferals wandering the city in exchange for college credits. Thing is, we're not all that tough, so we kind of just... submitted to everything and collected the juices afterwards. Of course, these two,' Becky sternly motions to her colleagues, 'decided it would be fun to get knocked up once they learned about the whole accelerated pregnancy thing and started posting videos of themselves knocked up online with their dad's satellite phones they smuggled in, against Zehphyr policy.'";
+			WaitLineBreak;
+			say "     'Ya we were averaging one point three million views an hour per video by the way,' Lilly boasts, striking a proud pose as she puffs out her expansive rows of supple breast flesh. 'Which is why Zephyr booted [italic type]them[roman type] from the program, took [italic type]their[roman type] collectors,' she grumbles, pointing to the other two, 'and struck [italic type]their names[roman type] from the advanced evac roster!' the little human snaps back, petulantly kicking a bit of sand at her friend's feet. 'Course that wasn't enough for these guys though. Oh no, you two just [italic type]HAD[roman type] to branch out to [']real['] TF videos until the military took those down, and slapped you with those huge fines. Honestly, we're lucky people thought those were fakes, or the army would have come down on us real hard.' 'But not you, why's that?' Ava asks, tilting her head at an questioning angle while her ears twitch with a curious energy. 'Well... I never broke the rules, uh,' she stammers, guilty looking away from you while she rubs the back of her head, 'at least in a way that could be proven, or found a form I liked, until now,' the odd monkey smiles with a dreamy grin as she eyes up your expectant from with obvious delight.";
+			say "     Right so what, she wants a sample of your nanties or something, you inquire. 'Yup, I'll give you one thousand freecred for the whole set, I have a collector and money stashed nearby, so what do you say?' Becky asks excitedly.";
+			LineBreak;
+			say "     [bold type]How do you respond?[roman type]";
+			LineBreak;
+			let Cake_on_the_beach_Choices be a list of text;
+			add "Allow her to collect nanites." to Cake_on_the_beach_Choices;
+			add "Offer to try turning her yourself." to Cake_on_the_beach_Choices;
+			add "Turn her down." to Cake_on_the_beach_Choices;
+			add "Ask Ava's opinion first." to Cake_on_the_beach_Choices;
+			let Cake_on_the_beach_Choice be what the player chooses from Cake_on_the_beach_Choices;
+			if Cake_on_the_beach_Choice is:
+				-- "Allow her to collect nanites.":
+					say "[Collection]";
+				-- "Offer to try turning her yourself.":
+					say "[TFstuff]";
+				-- "Turn her down.":
+					say "[Nosell]";
+				-- "Ask Ava's opinion first.":
+					say "     Ruminating on it, you decide to ask Ava what she thinks, as the original Margay Taur, surely she has some opinion on whether or not it's a good idea to transform Becky. 'Wait, she's the first!' Lilly blurts, her jaw dropping in amazement. Nodding, you tell her that appears to be the case, as far as either you, or Ava can tell outside of yourselves, and your lovely widdle kittens, you preen giving your tummies an affectionate pat, there don't appear to be any more of you. 'Incredible, that would explain why we've never seen anything like you at the State Fair before,' Alex says, in a sagacious trill, motioning to the nearby fairgrounds with a quick flick of her feathery wrist. 'Hm,' Ava taps her chin thoughtfully, 'I don't mind as long as it's her choice, it's just,' you mate pauses as her ears dip down ever-so-slightly. 'I hope she is sure about it, Daddy always said life outside the city will be a lot harder for mutants than regular people. Besides,' Ava peeps, idly traces her paw through the sands, 'this world doesn't really seem made for taurs.'";
+					say "     'Daw, don't worry about it kitty, I'd give just about anything for a body like yours,' Becky replies sounding a little touched by her concern. 'Really, I thought most humans didn't like my kind?' your mate mews, leveling Becky with a perplexed stare while motioning to her bestial half with a broad wave of her tendrils. 'Ha,' Becky chuckles through a deep throated snort, 'well why wouldn't I? I mean just look how tall you are, and you've got all that your cute silky fur, not to mention,' she purrs as eyes meander along Ava's ";
+					if Libido of Ava > 12:
+						say "adorable burgeoning bumps. ";
+					else if Libido of Ava < 12:
+						say "ripe and resplendent tumbys. ";
+					say "'Just look at those big squishy bellies, mh I can only imagine how nice it must be feeling them bounce with your every step, or getting to run your sweet widdle pawbies through all that cushy fur. And don't even get me started on your awesome tentacles, they must be so useful in your condition.' the little human gushes. 'Daw, thanks,' Ava simpers, before they both turn their attention back to you as they waits for your reply.";
+					LineBreak;
+					say "     [bold type]Considering all you've heard, how do you respond[roman type]?";
+					LineBreak;
+					let to_taur_or_not_to_taur_Choices be a list of text;
+					add "Refuse to turn her." to to_taur_or_not_to_taur_Choices;
+					add "Allow her to gather a sample." to to_taur_or_not_to_taur_Choices;
+					add "Attempt to turn her yourself." to to_taur_or_not_to_taur_Choices;
+					let to_taur_or_not_to_taur_Choice be what the player chooses from to_taur_or_not_to_taur_Choices;
+					if to_taur_or_not_to_taur_Choice is:
+					-- "Refuse to turn her.":
+						say "[Nosell]";
+					-- "Allow her to gather a sample.":
+						say "[Collection]";
+					-- "Attempt to turn her yourself.":
+						say "[TFstuff]";
+
+to say Nosell:
+	say "     Thinking about it, you'd much rather keep this infection between you, Ava, and your kittens. Heavens knows what manner of trouble Becky could get into with your current form, or what will happen should your exotic infection drift outside of your family's control, so you try to let the woman down easy, telling her that it's for the best if your strain of nanites are contained safely in your lineage especially after all the work you put into it. Becky does not handle this well at all, and immediately balls at your feets yelling all manner of obscenities at you for refusing to share. Her friends though, recognizing the natural size and power difference between them and you, quickly pull her away kicking and screaming, muttering their apology. As she's dragged off Ava and Kathy both fix you with a disapproving stare, before admitting you may have a point, even if it means crushing someone's dreams. The risks of spreading your overly fertile infection to others who might not appreciate its fecund potential far out ways any minor emotional distress on Becky's part.";
+	say "[Leaving the beach]";
+
+to say Collection:
+	say "     Not seeing the harm in allowing the over eager human a chance to try your regal body, especially since it's brought so much joy in your life, you purr you consent to her through a genial smile. 'Just make sure she pays up front first dear, wouldn't want the little monkey to cheat you girls,' Kathy interjects, while idly fanning her talons in Becky's direction. 'Of course, one sec,' Becky stammers, darting off to somewhere near the boardwalk with the others in tow. Sharp as your feline eyesight may be, you soon lose track of them in the churning mass of mutants. It isn't long though till they return with a small dark green day bag slung over Becky's shoulder and a pleased look on her face. As they near you, the soon-to-be former human pulls out a wad of freecred and a collector from her bag, saying. 'Here, it's all there,' as she passes you her hard earned creds. Nodding, you accept bills, give them a quick count to be sure, and finding everything in order, you ask for the collector. Nodding, Becky eagerly passes the compact device, instructing you that you can fill the things with blood, milk, or other bodily fluids. Well, since you've got plenty of milk on hand, you decide to fill it with that.";
+	say "     Cupping the intake port to your [breast size desc of Player] tits, you gently massage the active glands coaxing thick cream from your body while Becky watches with rapt attention. The device soon dings indicating its full and distills the pearlescent fluid into pure margay taur nanites. You then repeat the process four more times until you've collected the five vials the future taur will need to complete her transformation. Here you go, you rumble, passing the vials to the eager human. 'Oh thank you, thank you, thank you,' she swoons, grabbing the vials then tucking them in her bag. 'I can't wait to get back to base and try these. Gosh I can't wait to record my first TF, I'd do it here but,' she pauses to make a show of looking around, 'the lighting is a little off, and I don't want people goofing around in the background, it'd mess up my S.E.O ratings. Anyways see you girls around!' She preens, as she skips off with her friends in tow.";
+	WaitLineBreak;
+	increase freecred by 1000;
+	say "[Leaving the beach]";
+
+to say TFstuff:
+	if scenario is "Researcher":
+		say "    You know, you rumble with catty delight, she doesn't need that silly little collector if she wants to be Margay taur. After all, you've got plenty of creamy TF juice right here, you tease groping your taut furry [Breast Size of Player] breasts with a pair of your glossy tendrils. 'Uh,' the little human stammers as she shamelessly gazes at the furrows cast by your feeler as it coddles the supple hills of your opulent rack as you gleefully swaddle your pillowy mounds in their worshipful embrace. 'I don't think that will work, I'm sort of, well...' she pauses as a low hungry rumble flickers through her core, 'immune to that stuff thanks to the boosters, so I'd need raw nanite slurry if I want to change. It's a kind offer though, you do look super yummy,' Becky simpers, eyeing your chest. Ha, you snicker, you thought that too once. Luckily those boosters they've been handing out only work on the common lesser strains. Rare ones like yours, you tease motioning to your tauric splendor, cut through that nonsense, and if you're wrong, she can always collect some vials later. You proffer, in a domineering tone as you roll on your back exposing your regal fecund form. 'Well... ah what the heck I'll give it a shot. Either way I get to touch taut taur tum,' she says, kneeling beside you.";
+		say "[Becky TF]";
+	else:
+		say "     Thinking about it, you've never had the chance to turn someone yourself. Sure, there may have been one or two times you slipped people a tainted item, or you might have had another assist you, but you've never turned a person on your own the old fashion way. After all, if Ava can do it, so can you. Plus, if she is willing to take the plunge why can't you join in on the fun. You muse as you lay out your plan to her while you lie back and expose your array of furry breasts to the eager woman. 'Hm, I don't know. I'm like 99% sure I'm immune but...' she trails off staring intently at your chest and gentle wobble of your plush middle as you lovingly paw at the verdant swell of your supple tums. 'This does sound fun, and if it doesn't work I can still get the collector later,' she trills, sounding rather pleased as she kneels down beside you.";
+		say "[Becky TF]";
+
+to say Becky TF:
+	say "     Then go on dear, drink up, she'll make a fine tauress in no time, you purr cupping the back of Becky's head in your paw's pillowy embrace as you guide her visage to your breasts. Not that she needs any prompting, you note, watching the future taur eagerly drape her tiny body over yours as she latches on to your uppermost milk tank. A soft purr issues from your catty muzzle as her soft lips wrap around your sizable nip, while her tongue dances across your ducts innervating the sensitive tissue as she suckles. Her comparatively small finger gropes your heavy mounds, coaxing a light spurt of cream from the swollen glands. Your body slowly reacts to her presence as an odd yet pleasing warmth spreads through your chest as the taut tissue is relieved of its bounty. The placid trickles of milk soon grows to a full rich stream of transformative cream. From the surprised look on Becky's face as her cheeks bulge with your offering, you can tell she was caught off guard by the sudden increase in flow. But the brave woman is far from deterred, as she lovingly kneads your supple mounds, as if eager to prove herself worthy of your gift, or more likely, you muse listening to the adorable rumble of her midriff, she's just hungry.";
+	say "     You watch her fondle your rows of lush tit flesh and plump pregnant paunch with abject delight as she indulges herself upon your lush, pillowy body. You can't help but applaud her enthusiasm, as her far-traveled mitts roam your silky curves in an enthralling circuit as she pampers and caresses your maternal splendor. That's a good kitten, you murmur, delighting at the feeling of relief and satisfaction emanating from your breasts as she suckles and the worshipful touch of her palms attending your downy curves. It's easy to forget how much your body can store, you opine running a paw along the growing curve of Becky's midriff hidden beneath her glossy swimsuit. Any respite, even a temporary one is a welcome one, though not because your increasingly maternal mind dislikes such a state, but because you get to enjoy your tits filling up all over again, you think to yourself as you stroke the back of her head encouragingly. 'Mh so rich and creamy, I can't wait to make my own,' she simpers, pressing her tiny chest against your imperial mounds. Your tainted psyche revels at the innervating kiss of her little lycra wrapped mosquito bite nips teasing your sensitive pads and supple hide as they glide over your verdant form.";
+	WaitLineBreak;
+	say "     That's wonderful to hear, you bet she's going to love being a margay taur, it's such a great life. She'll have all the yummy milk she can drink, you serenade, tracing your dominant pointer claws along the tiny impression of her minuscule breasts peeking through her one piece suite. A nice soft body that's perfect for cuddling, you intone as your clawed fingers drift down her spindly sides while a preyish quiver passes through her. Not to mention, these wonderful tentacles will make perfect toys for her and her friends, you tease, groping her almost nonexistent ass with one of your tendrils. Doesn't that all sound wonderful dear? You purr, stroking her hair affectionately, though the lust-addled human doesn't reply, merely nodding her head as she looks up at you with a cute needy expression while she caresses your downy fur with her free hand. Her fingers dance between your lush breasts as she drains the first of your milk spouts, saying, 'Mh yes, but I want more!' as she paws at her swimsuit experimentally, as if searching for some of change. Though she finds nothing beyond a slight swelling as her tummy strains against the blue lycra fabric.";
+	say "     By all means then kitten, you've got plenty more where that came from, besides, she's got a lot of growing to do if she wants to turn into a big snuggly tauress like yourself, you reply in an inviting tone, gesturing to your rows of cute catty nipples. 'Yay,' she cries, burying her head in your pillowy rack, drinking deeply of all the rich cream your exotic body has to offer with loud, greedy swallows. Tittering at her enthusiastic display and the warm effervescent sensation roiling through your [bodydesc of Player] form alongside a wonderful sense of primal bliss, maternal purpose washes over you as her face sinks into the downy folds of your chest. You lovingly run your mitts along the growing swell of her tummy, delighting at the subtle change slowly creeping over her as you encouragingly fondle her petite body as a series of four tiny bumps blossom across her taut covered core. Almost imperceptibly minute, you doubt she notices them, but as you trace your claws around them you can feel them growing by the second. So much for her vaunted immunity, you muse, running your thumb over one, saying, Aw look, kitty's getting her titties.";
+	WaitLineBreak;
+	say "     'Hm,' Becky murmurs, looking down at her virgin breasts peeking through her glossy one piece suit. Her eyes light up like road flares on a moonless night as she catches sight of her training bra tits straining against her tight fitting attire. Her left hand immediately shoots down to her torso to knead the plush breast flesh as it swells in the palms of her hand. 'Oh god, dis feels amazing,' she purrs like an excited drunk kitten as cream streams down the sides of her face in a pearly sheen of unbidden excess. 'Wow, after all the dicks she's ridden, I didn't think this would work,' Alex remarks, poking their friend's flanks with the tip of their wing-like arms. Annoyed by the interruption, you swiftly fix her with a warning glance as your lips peel back revealing your rows of gleaming fangs before turning your attention back to your lovely plaything coddled in your many limbed embrace. Sh, just ignore them kitten, you're coming along wonderfully don't stop now, you purr, running your tendrils about her changing core. 'But, I'm getting so full,' Becky mewls plaintively, massaging her taut tummy tissue as she struggles with another mouthful. Peering down, you can see that she's not lying.";
+	say "     Her body is straining against her swimsuit, almost painfully so as the too taut fabric digs into the tender swell of her nascent nips and plush waist. While her bust and tummy wobble enticingly with every sip, pushing the fabric closer to its limits. Already, you can even see seam lines slowly stretching and tearing as her body expands, revealing her porcelain white skin beneath. Don't worry kitten, you've got her, now just keep your back straight and concentrate on drinking, you and your little robot friends will take care of the rest. You simper caressing her packed paunch with your back-mounted tendrils in long drawn out lazy circles to encourage her digestion. The air resounds with the muted sloshing of your fatty cream wallowing inside of her lycra-wrapped body like an overripe blueberry as you knead her growing midriff. Exalting at sight, a part of you can't wait till she bursts free of it. There-there, now doesn't that feel better? You ask in a comforting tone as your padded finger strokes the knots out of her tum as she melt all the deeper into your loving arms.";
+	WaitLineBreak;
+	say "     'Mhph, your paw pads are so soft,' Becky whimpers, leaning into your touch as your silky mitts rove the growing curves of her once petite ass as you cheekily grope a generous pawful of voluptuous flesh. Aw, you're so glad she likes them, after all she's going to have your own soon enough, you reply, watching as her ears develop little tufts of golden fur along their edges. The meager peach fuzzy is only the beginning though you note, as her ears straighten out into blunted points before settling into a more recognizable feline shape. As her newfound pelt inches down her spine, her face takes on a waxy quality as her jaw flows outward into a cute boxy muzzle, followed swiftly by a sudden eruption of gold and black spots, completing the effect. Her eyes soon grow large and milky for a spell as the irises stretch out forming vertical slits, until the haze recedes and her pupils turn vibrant citrine. See dear, she's almost halfway there, you purr, observing her the way her pelt creeps down core, swaddling her in its silken embrace.";
+	say "     'Oh god, you're right, this is amazing!' Becky exclaims, rapidly blinking her now exorbitant eyes as she gazes down at the fur spreading down her limbs. By the time it reaches her extremities, her fingers and toes are already shifted into cute feline versions of themselves as glimmering onyx pads framed by cuddly fur wink into existence on the tips of her shifting digits. Of course kitten, this is worth a little tummy ache isn't it? You tease jostling your collection of [breast size desc of Player] tits in her face while your catty mind delights at the blissful sensation of feeding another like this, as your whole body feels so light, warm, and full of purpose. Dimly, a waning section of your human psyche wonders, if this is what ferals experience when they pass on their infection? If so, you can see why so many have succumbed, you muse, as your being sings with raw elysium, every neuron in your brain is flooded with rewarding dopamine high no drug could ever hope to match. 'Heavens this feels amazing, and just look at my cute little pawbies!' the pudgy cat girl purrs rubbing her bestial mitts over her groaning swimsuit.";
+	WaitLineBreak;
+	say "     'Mh, these jelly beans are so adorable and shiny, just look at the way they shimmer in the light!' she hums, flexing her supple black pads decorating her petite catty peets. 'An this fur, gods it's so smooth and warm it feels like I'm wrapped in a big snuggly blankie,' she mews, nuzzling her chin along the growing curves of her plush chest. 'But kitty wants more, she wants to be a nice big, soft, cuddly taur just like you,' she murmurs, massaging her swollen chest and drum tight tummy with her shifting paws as she drapes her leg around your waist as she saddles her flush figure along the liminal border of your tauric body. Swooning at the verdant interplay of your pelts gliding across one another, and the succulent sensation of your mountainous middles lightly brushing the doughy cat girl's shifting form, you lovingly run your paws down her inviting flanks. Not that she even seems to notice as her gleaming eyes are locked solely on the voluptuous swell of your heavenly rack. 'And she's so... hungry!' Becky roars, her feline face contorting into an expression of primal hunger as she plunges her muzzle between your middle row of breasts.";
+	say "     The former human clamps hold of your milk tanks, lightly raking her talons across your generous breast flesh as she brings your pair of stiff milk spouts to her muzzle, stuffing one into either side of her face as she gorges. Though she's not content to just feed at this point, the growing Nekomata roughly grinds her hips against you. Perhaps she's feeling her first feline heat, you wonder, sensing her engorged molten cunny brushing against your pelt through her suit. If so, well you and Ava can help with that once she's had her fill. In the meantime, you provide her changing body with all the love it deserves as you wrap your tendrils around her waist for support while your paws roam her torso, groping and teasing her growing collection of lush tits while you murmur loving encouragement to her. A part of you almost finds it hard to believe she was once an A-cup mere moments ago, as her lycra-wrapped breasts bloom into plush E-cup in the palms of your hand.";
+	WaitLineBreak;
+	say "     Already, you can practically hear the milk welling inside them as her gold and black-spotted pelt seeps through the crack in her attire. With each sip, her body grows all the larger and riper by the second as a sensual coating of supple adipose creeps over her body while your paws rove the deepening curves of her changing form, reveling in the heady sensation of her tight suit playing across your pads and profound softness of her newfound folds hugging your fingertips. Her catty tongue worshipfully coils about your lovely nips, sending pleasant shivers through your [bodydesc of Player] at the reverent kiss of malleable spines lapping up each delectable drop of rich cream. Swooning under your breath, you run your inquisitive mitts down her doughy sides, exalting in the lush padding spreading along her once tight, bony ass as the overstretched fabric coddling her flush flanks groans with the sheer fecund weight of newfound curves.";
+	say "     Tittering in catty delight at her progress, you lovingly cup your paws about her ever more fluffy cake, rollicking at the sensation of her billowing tush straining about your palms as the swelling edges of her ass gradually swallow her one piece suit in its quivering clutches. All the while, the remaining fabric enchantingly hugs her verdant love handles and scrumptious breasts, highlighting her bountiful Rubenesque curves with vivid alacrity. Until at last, vast rents form in the seams as the poor swimsuit finally snaps and her body spills forth in a great rush of furry tits and toasty creamy tum. 'Fuck that feels so much better, who needs clothes when you have fur anyway. Besides, Tummy deserves to be free,' Becky murmurs as her voluptuous body shreds its spandex prison. 'Mh I love how soft and squishy she is,' the exuberant cat girls mew, plucking away the last little strands of fabric caught in the lush folds of her groaning milk tanks while groping lewd paw fulls of supple adipose.";
+	WaitLineBreak;
+	say "     'Babies are going to be so safe and comfy in here,' she murmurs, paws drifting along the downy border of her pelt as she shamelessly grinds her plush kitty against the tender curves of your expectant middle while the toasty rivulets of her girly juices stream down your fur. 'And just look at this cute outie, it's so adorably soft,' she hums, drawing her mitts about up along the tight curves of her groaning middle as she traces her velvety pads along the cute little swell of her puffy navel. '*Nya* and sensitive too!' she mewls, splaying her fingers wide as she slips them between the swell of her bountiful rows of catty breasts. 'And these tits, heavens, I can see why Lilly loves hers so much, they're going to make perfect and snuggly widdle arm rests. But they need to be bigger, much bigger and softer...' she rambles with a manic glint in her eye. Mh of course dear, you purr in bestial agreement, taking a great deal of pleasure in groping every deepening fold of her decadantly plush body. Isn't this so much more luxurious than any silly old clothes, you tease, brushing your talon along the gold and white borders of her cuddly core.";
+	say "     Just wait till her milk comes in and her yummy tits get nice and ripe, you coo, wrapping your tendrils about her expanding assets, exalting at the way her lush pelt presses against the smooth hide of your tentacles as you give a lewd squeeze to the supple orbs, into a not-so-little heart. And feel all that nice, soft, snuggly pudge swaddling that cute widdle pot belly, you tease as your forepaws roam her flank, massaging her love handles. You're unable to resist sinking your padded toe beans between them, reveling at the lush sensation of her silky pelt greeting your pads as you caress her fur. You languidly work one of your hands down to her ripening rump. Gods, she's getting so thick and fluffy, it nearly strains credibility that this cute piece of ass once belonged to a walking washboard. You think to yourself as one of your thumbs eventually brushes against a new bit of bone you recognize on some instinctive level as the beginnings for her tauric half.";
+	WaitLineBreak;
+	say "     It isn't long till her being begins to stretch out before your eyes as her new lower half bursts forth in a sudden explosion of transformative change. As the once waifish woman's body assumes a properly tauric bend, her new form expands in your arms, growing longer and wider with each passing second. You almost miss the eruption of back tendrils, as the sensuous limbs wriggle chaotically behind her. Likely acting on their host's latent desires, the newly created limbs spread over Becky's body kneading and caressing her newfound curves as if to encourage her growth. Not that she needs it, your kitten's body soon eclipses your own as she thoughtlessly digs her paw into the sands beneath you as her immaculate flanks spread outward in a rush of feminine excess. Soon, her changed body towers over you, while a sudden swell of vivacious pleasurable pressure glides across your feral half as her ballooning catty dugs war with your own for space between you two.";
+	say "     All the while, her anthro racks swells into a proper stack of M-cups, replete with cream. So much for that immunity kitten, you titter, hugging her lower half with your legs. 'Oh god you're right, it feels like I've stepped out of an issue of Chakona Tails,' Becky replies as looks down at her Ava-sized body. She's unable to contain her enthusiasm for her new form as she hugs her bloated midriff and heavily engorged teats. Hefting one row in her arms, she seems mesmerized by sight as she experimentally gropes the fatty orbs, eliciting a slight spray of alabaster cream. 'Holy crap I can't believe it, I'm actually lactating, and freaking stacked too! I mean just look at them all! I think I've got as many as Lilly does now,' Becky preens, running a clawed finger down her sides. Heh, you think she might have missed a few? You tease, wiggling your feral half beneath and jostling your own dugs against hers.";
+	WaitLineBreak;
+	say "     'Shit you're right, just look at all those cute tummy titties!' Becky mews as paw-like hands roam over her milk-stuffed middle. 'Oh I love this lower body, it's so cuddly and squishy this will make the perfect desk for my laptop. And look how big my outie's getting!' she exclaims, tracing a claw around her perky prominent navel. 'This is the best, I am totally getting all of this pierced! Can you imagine how hot I'd look with a barbell on my belly button and some golden chains on my tits,' she coos, hefting her creamy black-spotted muffin top with her tendrils. Glad you like them kitten, now before she goes celebrating, you'd like to make sure everything is working downstairs. You simper while fixing your mate with a vivacious glance. Oh Ava, could she be a dear and give you a hand with that? Pretty please? You tease showing off your best begging expression while beckoning her over with a wag of your tail. 'You know, under normal circumstances I'd say no, but-' Ava pauses, eyeing up yours and Becky's entwined bodies. 'I'm going to make an exception, just this once,' she says, sashaying behind the pair of you.";
+	say "     'Huh what do you mean?' Becky queries as Ava rears up on her hindlegs and pounces on her back. You can feel a light shockwave pass through the newly-made tauress's floofy fur as Ava lands atop her. Draping her paws over Becky's shoulder, your lovely mate makes a little show of stroking Becky's lower half with her forepaws while her tendrils snake their way under her massive milkers. 'Ah... so heavy, but this feels so right,' Becky coos as your mate wraps her arms about her upper half, playfully nuzzling her voluptuous form with her whiskered cheeks. Now why wouldn't it kitty? This is how taurs mate, just relax and let us take care of you, you purr, coiling your tail around the newly-made tauress's while motioning for your mate to do the same. The somewhat nervous cat girl looks like she's about to say something, as Ava tucks her catty muzzle to her collar and gently kisses her way down Becky's neck while eagerly groping her torso, till the sensitive kitten is too distracted to notice or care as your collective tails dandles about her feline slit.";
+	WaitLineBreak;
+	say "     You can feel her hot, needy muscles gush at the touch of your combined furry ovi tools lavishing the supple borders of her inverse catty button. Meanwhile your paw roams her doughy body, delightfully fondling her plump stomach and heavy breasts as you sink your padded fingers deep into her downy pelt, enjoying the cute little noises she makes as your digits tease her welcoming fur. You bring your boxy snoot to her lowermost tits, briefly inhaling her soothing alpine scent before kissing her milk-stuffed mounds. Your catty mind delights at the blissful heft of her lush feline form, you know that she'll make the perfect eager home for your eggs. After all, she's already starting to look the part of a seasoned broodmother. Maybe when this is all over, you might even consider bottoming for her and Ava. You can only imagine how wonderful it would be to be triple-stuffed with eggs. Who knows, maybe you can convince her friends to take the plunge too and make yourself a harem of gravid breeding taurs, you opine, grinding your entwined limbs along Becky's fertile honeypot.";
+	say "     With each delicate stroke of your coiled appendages, she sways dreamily in your many-limbed embrace while the sloshing of decadent breasts and tender milk-laden tum serenades your ears. Becky mews happily to herself, all the while her puddling petals soak your fuzzy limbs in a balmy sheen of girl nectar matting your fur in a toasty sheen of feminine excess. Running your sensitive limb along its expansive length, you can't help but preen with satisfaction as your tail brushes the subtle consecutive muscular rings of her ovi channel and the not-so-little slit hidden at the tip as the libidinous edges of your egg-laying passage brushes hers. Medea would be so proud if she could see this, you muse, angling your knotted limbs in a creative arch, while you give your wondrous mate the go ahead to take charge with a light bob of your muzzle. Flashing you a pleased, almost drunken smile, Ava laces her tail tightly around yours and Becky's prehensile appendages as she rears back your coiling limbs together then thrusts, impaling the newly-minted tauress's moist muff with a single gleeful thrust. 'Nya!' the nacent tauress mewls, as her tauric passage stretches and conforms to your combined mass. Every ";
+	if "Touched by Madness" is listed in Feats of Player:
+		say "meter ";
+	else:
+		say "foot ";
+	say "of her supple sex seems to convulse hungrily about your limbs, as her ravenous muff coddles the exotic ridge of your augmented tail and the scrumptious lips of your ovi slits with each lurid piston of your tail.";
+	WaitLineBreak;
+	say "     Kathy and the others watch on in awe, not that you blame them though, it's not everyday you see a taur sandwich being made. Though perhaps feeling a little left out, you watch out of the corner of your eyes Kathy motions for the others to join in the fun with her. In no mood to turn them away, you observe the briefest and faintest of chatter passing between them as the plush catty mother makes it very clear, Ava's pussy belongs to her and you, as she waddles behind her loving adoptive daughter. The portly short-stack stands on her little tippy toes and gives her girl's neglected muff a tender lick. You can barely hear Kathy's sloppy catty kisses over her precious step-child's well-pleased purrs fluttering through the air between the wet, meaty patter of your entwined tails. Ava and you twist and contort your prehensile tails into new and erotic shapes about Becky's needy passage, as the vivacious caress of her spasming walls roils along your ovi cunts, titillating your exotic slits in tune with each salubrious thrust. The lurid impression of your writhing limbs simmer across her feral satin middle, enthused by the unearthly sensation of your ponderous appendages['] waltz along your gravid tum and the heady caress of your plush dugs lazing atop one another.";
+	say "     Meanwhile, Alex and Lilly snuggle up behind you exchanging knowing looks as they theatrically crack their wrists. 'Mh quite the view isn't it Alex?' Lilly purrs, running her sylvan fingers along your puffy joybuzzer as she leans into the welcoming folds of your blushing catty muff. The warm wisps of her breath cascade over your fertile petals as she lightly nuzzles her elven tongue along the roiling borders of inverse clit as they affectionately lap at your [bodydesc of Player] folds, evoking an endearing purr from your catty visage as verdant pulses of static bliss ripple through your needy cunt. 'I know, just look at that cute [cunt size desc of Player] pussy,' the harpy girl says, as they then kneel down beside you and tenderly stroke your feline flower with soft subtle caresses of her feathery fingers. Your hypersensitive muff sings at their dexterous digits lavish your welcoming feral sex like it deserves. With each pass they slip one finger after the other between your velvet lips, sensually stretching your well-used muff all the wider till their whole hand is groping your toasty walls.";
+	WaitLineBreak;
+	say "     After all your experience in the city though, not to mention time with Ava, the puny caress of her feathery fingers does little to assuage the smoldering lust coiling within your ravenous cunt. Still, the enthralling kiss of her plumage and the worshipful touch of Alex's skillful digits cascades along your expansive passage in an effervescent tide as she pistons her wing-like arms in tune with the intoxicating pounding of your ovi limbs along the beatific edges of Becky's welcoming cunt. You nuzzle your many limbs along the sides of the bountiful tauress's curves, delighting in the supple blanket of silky fur and decadent adipose gracing your pad. Meanwhile, you lovingly latch your thin ebony lip to one of her taut milk-flushed nips as it jiggles tantalizingly in front of you. Well no reason you can't have a sip, you practically have a receipt for these things, you tell yourself as her cream-stuffed tits explode in your maw in a torrent of milky perfection. 'Greedy girl, now where are you manners?' Ava tuts, glancing over Becky's hefty form at you.";
+	say "     What, babies need food, you reply sheepishly, tucking your forepaws against your sternum in a chaste gesture, though you don't stop. '*Tsk* now-now don't use them as an excuse, you'll set a bad example for the kittens. You have to ask first, like this,' Ava gibes, running her paws along the chin of a panting blissed-out tauress, saying in a doting sing-song trill, 'Becky may my mate and I please have a little drinkie.' Lost in the rapturous hold of your combined limbs and loving treatment of her new body, the happy tauress doesn't immediately reply. Bits of drool seep down her thin ebony lip, the poor girl bobs her head meekly mouthing the word yes. 'Thank you, see was that so hard?' Ava chides, fixing you with a smirk as she cups one of the tauress's plush breasts. 'So heavy and milky you poor dear, not even ten minutes a taur, and it feels like you're about to pop,' she remarks over the lewd squelching rhythm of your dexterous tail pistoning about the newly-turned cat-taur's sordid passage as she brings Becky's nips to her lips. She dotingly kisses her rock hard duct once before engulfing the supple teat with her ebon lips.";
+	WaitLineBreak;
+	say "     'Delicious,' Ava rumbles, smacking her lips between swallows. 'But you know what would make it better dear?' your sultry mate coos into the lust-addled woman's ear. 'What?' Becky mewls, dreamily as your confidant lover lightly nibbles on the tufts of her ears. 'Why a nice happy belly full of kittens sweetie,' she simpers as her paws drift down to the generous swell of her soft alabaster tummy as she sinks her claws ever-so-lightly into the mewing cat girl's dense fur. 'Trust me, you'll love it, and all the perks that come with it,' she purrs, tracing her talons about the cute not-so-little bulge of the blushing tauress's navel. 'Imagine it, you'll get to watch your tummy get all nice and round,' she remarks, as her paws glide down to the tight hem of Becky's bump-to-be as she lightly jostles her adorable middle.";
+	say "     The tender echoes of your sordid limbs roil the spellbound tauress's voluptuous body as your entwined tails corkscrew about her toasty passage in an enthralling spiral. 'You'll get to feel all their little paws kicking and squirming,' your lustful mate teases, eliciting a tender mew from the bawdy cat taur. 'While your yummy tits will get all huge and ripe with the tastiest cream ever,' she swoons kissing the big cat's verdant breasts. 'And you'll have wonderful kittens to look after you. Doesn't that sound lovely?' Ava purrs as her tendrils glide over Becky's core. 'Yes,' Becky replies in a happy submissive tone. 'Good girl, you're going to make a wonderful mommy taur now aren't you kitty?' Ava simpers as she grinds her own tender tum along the small of the gushing tauress's back. 'Yes, *pant* kitty wants kittens, please *pant* give kittens,' she whispers, as she paws at her vacant middle. 'Of course, just relax, we're all going to take good care of you,' your lustful mate simpers as she resumes her feeding.";
+	WaitLineBreak;
+	say "     Her head drifts out of sight as the lovely tauress's colossal wobbling M-cups slump across your muzzle, blocking your vision. Nearly blinded and smothered by her plush chest pillows, you can barely hear the subdued sound of her suckling as your attention is torn between the methodical pleasuring of your pussy, the milking of your tail, and your pursuit of milky treats. Your elated psyche frosts over as you sink deeper into a heavenly squall of lurid depravity. All your little cares melt away, like the last touches of snow before spring at the expert touch of Alex's digits moiling your malleable muff and worshipful kiss of Lilly's fae tongue wash over you, as they grace your sordid [Cunt size desc of Player] folds and elated lips of your joy buzzer as if they have a road map of your tauric passage.";
+	say "     No longer content to merely finger you, the eager gynos share a devious look as Lilly pulls back her left arm and works her finger into a spear, and thrusts, hilting themselves to shoulder into your feral sex with a single fluid motion. Milk gushes from your lips as you mewl appreciatively, almost drunk on the contrast of their smooth flawless skin and satin feathery limbs stuffing your cunt as their dissonant pistons roil your verdant box in a disparate medley of sensations. Your fracturing mind struggles to parse the raw frictionless elysium coiling through your [cunt size desc of Player] sex as they worshipfully attend your neediest nerves with artful strokes of their supple digits. Meanwhile, the doting caress of Lilly's cunning tongue pampers the effervescent folds of your catty button as her oral muscle lovingly swaddles it in her satin embrace that pairs like the finest of wines with the lurid touch of Becky's spasming walls rippling along your exotic tail cunt.";
+	WaitLineBreak;
+	say "     Their coordinated effort serves as a blissful compliment to the rich creamy meal wallowing in your gut. Meanwhile, their free hands rove yours and Becky's lower halves, lavishing affection on your voluptuous form, you soon find yourself purring contentedly as they languidly pet your entwining supple dugs and robust flanks with zealous aplomb. 'Goddamn Becky you're stacked, shit this must feel amazing,' Lilly hums in a reverent trill, letting the subtle vibrations of her voice play across your elated petals like ripples passing through a still moonlit pond. 'Oh I'll bet, just feel all that soft pillowy fur, oh I think I'm getting jealous,' Alex simpers, hugging themselves all the tighter against your voluptuous form as she licentiously kneads your downy pelt while groping greedy handfuls of your motherly adipose in her feathery mitts. Evoking a happy choir from your catty forms as yours and Becky's liminal mind revel in the attention to fertile bodies.";
+	say "     All the while, the exotic muscles of your entwined ovipositors are caressed by the unsubtle kisses of Becky's satin tauric box roiling your exotic cunts. Your ovi tail slit ripples with a euphoric static thrum as the exotic nerves and sordid muscles are pampered in blissful tandem by the big cat's tauric passage and the genial caress of Ava's voluminous limb. Till eventually you feel tiny jubilant contractions simmering along the concentric rings of sinew and cartilage lining your ovipositor as your alien limb, perhaps sensing a viable, not to mention receptive, host convulses with unbound delight as you cum. Loosing a proud roar as your sordid appendage bulges with the first of many eggs laced with your unearthly juices work their way down your tail while a generous gush of sultry honey trickles from you flush tauric cunt. A part of you swears you can feel each effervescent ovum as it passes through you and brushes the edges of your mate's tails like resplendent pleasure beads.";
+	WaitLineBreak;
+	say "     'Oh god yes fill me!' Becky simpers as her ravished sex clenches about your ovi-stuffed limb while her own tail writhes and ripples with the malleable mass of her eggs, followed swiftly by a toasty gush of Ava's unearthly honey. Your coiling limbs swell with the weight of your loads as your shared climax rocks your tauric bodies, though only Ava has the presence of mind to slam your knotted limbs home, ensuring none of your precious eggs miss the mark. As a lewd stream of soft gooey ovum erupts from your ovi slits, each feels like a micro climax as your bodies deposit their fertile load into the whimpering tauress's yearning cervix. With each toe-curling contraction, her body swells in your grasp as she's weighed down by dozens, if not a hundred of supple eggs and feminine fluid. To her credit, the soon-to-be broodmother takes it all in stride mewling, 'So full,' as her soft somewhat lumpy womb groans and creaks in your shared embrace. You can almost see the pink skin underneath her fur as her body cascades over you like a warm weighted comforter.";
+	say "     Tittering at the thought and endearing touch of your lush pelts roiling across one another, you reverently kiss Becky's egg-stuffed body while wondering just how many of your lovely kittens will stick. For their part, the others seems equally enthralled by the over-inflated tauric broodmare's figure, as they crowd around with their mouths agape at the sight of your prodigious loads. Your tails visibly ripple with the weight of your brood as the intoxicating deluge of goopy ovum slows to a light trickle as the last of your eggs settles into their new home. 'Holy fuck Becky, you're HUGE!' Lilly remarks patting her friend's heaving flanks while she withdraws her cum-drenched wrist from your cunt with a toe-curling pop. 'Ya I hope this is worth it girl, I don't know how we're getting you back to base, or through the front door like this,' Alex adds, eyeing up their friend's floor-dragging tits and tum as she gently slips her feather finger free of your satin walls. 'Heh, maybe you could try rolling her home and use all this yummy milk as lube?' Kathy teases, jostling one of Becky's feral dugs while idly licking a few errent drops of Ava's honey from her lips.";
+	WaitLineBreak;
+	say "     'Don't care, Tummy is happy,' Becky hums, giving her well-stuffed middle a loving pat. 'Mh, she could be bigger though, much bigger,' she swoons, groping her swollen bumpy womb and hyper breasts with her tendrils. 'Uh Beck you ok, not going feral on us are you girl?' Lilly asks, sounding a tad nervous. Oh don't worry about her too much, she's just enjoying the afterglow, now aren't you dear? You reply, nuzzling the well-egged tauress's heavy form. 'Hh, wa?' Becky blinks and shakes her head as if waking from a dream, 'oh sorry I was just lost in the moment.' she says, drumming her finger along her engorged sides. 'Felt like a bit more than that, you sure you're fine?' Alex queries, tilting her avian-esque head. 'Now-now don't be so mean to your friend, this is her first time, you should be nicer to her.' Ava chimes in as she simultaneously dismounts and un-knott's you and herself from Becky with a cute little squelch.";
+	say "     'I mean just look how happy she is now, isn't that right dear?' your doting mate purrs as she prances over to the flush tauress's side and affectionately runs her paws across her catty chin. 'Mh yes,' Becky purrs with a deep bassy rumble as she nuzzles her muzzle against Ava's pads. 'I've never felt so good, oh thank you [Name of Player] for sharing this wonderful body with me,' she mews, as gently paws at your [bodydesc of Player] form with forepaws. 'And I promise Tummy and I will take great care of the kittens too. Isn't that right girl?' she adds, as she arches her anthro back to better highlight her condition while running her fingers through her shimmering pelt. 'Ya I guess, but still not too sure how we are going to get her back to base, don't even think we can get her up the walkway like this, and she's only gonna keep growing isn't she?' Lilly grumbles, though she doesn't sound all that beat up over the idea.";
+	WaitLineBreak;
+	say "      'Oh god I hope so! I can't wait to feel all these kittens wriggle inside me, can you guys imagine how hot that will look!?' Becky gushes, hugging her anthro womb with her tendrils. To which you reply that unfortunately, not all the eggs are not going to stick. Most of them, you explain, will probably be absorbed by their peers, or her body shortly. 'Ah, that's so unfair, I want to keep them all!' she pouts, hugging her tummies protectively. 'Oh that's a relief,' the harpy sighs. 'I was thinking we'd have to camp out here for the next few days with her on top of you.' Alex jokes, gesturing to your prone form. Wait, they think you're stuck, ha. You can move her whenever you want, you tell them. You were just enjoying yourself, you add, giving the motherly cat girl's toasty body one final loving hug, before hefting the seeded tauress into air with your tendrils and setting her down beside you in a single fluid motion.";
+	say "     'Ok, I stand corrected, guess we just wait it out then. But uh... do you have an idea how long it will take?' Alex says, in awe of your tauric strength. No idea, you shrug, it could be minutes or hours, it all depends on Becky, you respond before telling them that it's best to keep her comfortable while her body adjusts. 'Oh don't worry we will, besides it gives us a chance to have a little go at her on our own terms,' Alex snickers, casting a sidelong glance at Lilly. 'Ya those tentacles look pretty fun, I won't mind taking them for a spin.' Lilly adds, fixing Becky with a lewd grin. 'Mh and those tits are looking pretty full, we can't let good milk go to waste now, can we?' the odd harpy says, licking her lips. 'Heh, the girls are getting pretty full so I think I can share a bit. But only if you promise to rub Tummy, shes very tender right now and needs lots of love,' Becky replies, stroking her belly fur. Well sounds like they've got things sorted, you reply, guess you'll leave them to it.";
+	now HP of Ava is 7;
+	say "[Leaving the beach]";
+
+to say Leaving the beach:
+	say "     With your business concluded, you, Ava, and Kathy pack up. Since you didn't bring much, it only takes a moment or two to shake off the towels then roll them up. Once you've tucked them away, the three of you decide to take a waddle around the surf in a loop before you go. The water looks beautiful this time of day with the setting sun casting a red and golden glow over the area. While the sky is an interesting shade of dark purple mixed with blue-gray clouds, it would be a shame not to enjoy the moment with your catty companions. Besides, the sand feels wonderful on your paws and the gentle lapping of the waves caressing your toasty skin is a simple pleasure in and of itself. Sadly, the girls don't want to go for more than one lap around the beach as both of them say they miss Drake, and have no desire to keep him waiting. Fine, you grumble, telling them you'll head back though you were looking forward to maybe doing some stargazing or having a beachside bonfire. Then again, you've got a long happy life ahead of you with your lush lovers, so such things can wait, you opine, helping Kathy onto Ava's back as the three of you head back to The Chance the same way that you came.";
+	say "     Unsurprisingly, the return journey takes about as long as the way there and is just as uneventful. When you finally reach the gate to the Motel, Drake is there to greet you outside the gate. At the sight of him, Kathy leaps from Ava's back and jumps into his arms, telling him about the wonderful time she had with you. 'Ah that's good to hear, hun. I missed you girls, felt real lonely out here without you,' the big man says, kissing his mate on the forehead. 'And thanks [Name of Player],' he adds, bobbing his head in deference, 'Glad you and the girls had a nice day, sorry I couldn't go with you, or at least call you a Zimride. But I just needed to get this project done,' he sighs through a tired click of his teeth. 'Don't know how long we're going to be out here, but my contact in the city is one of the few folks with access to ammo anymore, so I can't afford to mess up the trade route by missing a deadline.'";
+	WaitLineBreak;
+	say "     Shrugging, you tell him that you understand, and its not like you didn't enjoy your time out with girls either. 'Hm, I appreciate that [Name of Player], you're a good woman,' he pauses as a faint smile creeps across his patriarchal visage, 'Ava's... Ava's lucky to have you. Anyway sweetie,' he beams, turning his attention to the tiny lioness nuzzled in his arms, 'let's go wash up and you can tell me how the beach was,' Drake says, hosting Kathy on to his shoulders as he heads off to room 020. As they walk up the stairs, Ava tugs on your elbow fur saying, 'I think I might go to clean up as well, my pelt smells kind of salty,' the big kitty says, crinkling her nose slightly as she brushes some dried errant sea spray still clinging her legs with her tail. 'Though if you want to come by when I'm done, I wouldn't mind.' Then sashays off to her room wagging her tail invitingly as closes the door behind her.";
+	now Beach day is resolved;
+	now loyalty of Kathy is 1;
+
+
+Table of GameEventIDs (continued)
+Object	Name
+great river commerce	"great river commerce"
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"great river commerce"	great river commerce	"[EventConditions_great_river_commerce]"	Drake's Garden	2500	2	100
+
+to say EventConditions_great_river_commerce:
+	if Perception of Ava is 32 and Libido of Ava is 29 and BodyName of Player is "Margay Taur" and Player is pure and Player is female and ScaleValue of Player is 5 and Loyalty of Kathy is 1 and "Propositioned" is not listed in Traits of Ava:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+great river commerce is a situation.
+ResolveFunction of great river commerce is "[ResolveEvent great_river_commerce]".
+Sarea of great river commerce is "Nowhere".
+
+
+to say ResolveEvent great_river_commerce:
+	say "     Meandering back to the Last Chance to check in on your precious mate and lovely kittens, though as you stroll through the grounds, you find the area oddly... quiet and empty. Curious, as you were certain your latest litter should be due by now, you quickly pop into the autobody shop to check in on Ava, only to discover her room is empty. Yet as you paw about her abode looking for some sign of her, your catty scenes can detect almost a dozen or so new but strangely familiar scents coiling through the area. Initially perplexed at the unusual aromas, you swiftly realize that your mate must have given birth not all that long ago, however that doesn't explain her absence. You muse, with a light shake of your head as you hurriedly bound over to the lobby in the hopes that Drake might shed some light on what's going on. Ducking inside, you spy the big man hunched over the counter with his disassembled rifle spread out before him alongside a number of oily rags, bristly black pipe cleaners, glass bowls full of screws and foul smelling solvents, alongside a silvery well-worn multi tool.";
+	say "     Seemingly unbothered by your frantic appearance, Drake merely glances in your direction for but a moment, saying, 'Looking for Ava and the girls?' in a dry tone as he fiddles with the trigger of his tank killer. Nodding, you rightly ask where her and your littles ones are. 'Out,' the big man shrugs as takes out a oily rag from somewhere behind the counter and begins polishing the trigger assembly. Raising an inquisitive eyebrow, you ask if he's serious, as Ava's never struck you as the adventurous type. 'Mh,' he nods, 'but the girls have been getting her to go out more,' Drake answers flatly while turning the bit of metal over in his grease-stained hands as he inspects it. And he's not worried about them? 'Well,' he chuffs, as he set down the now gleaming material on the counter before continuing, 'I was, the first few times she went out, but the kids are tougher than you give them credit for [name of Player],' he beams, proudly puffing out his chiseled chest so that the silky white fabric of his t-shirt stretches just a hair tighter along his herculean core. 'Besides, they got flare guns, tasers, and a few spears if anything goes wrong.' Huffing, you nevertheless inquire what they're doing out in the wastes though.";
+	WaitLineBreak;
+	say "     'Gardening,' the big man grins as he reaches for the barrel of rifle and large pipe cleaner wrapped in an oily rag. Gardening, out there in dry plains, all alone, you parrot while audibly tapping your talons along the floor. 'Ya,' he grunts, running the length of his cleaner along the inside of his gun's muzzle. And he's not worried about them? 'Course I am,' he grumbles, mouth curling into a predatory grimace as his growing fangs peek out the side of lips, 'but the girls need this experience, we can't keep them cooped up here forever.' But-, you begin only to have him cut you off. 'Look [name of Player], I'm worried about them too!' he snarls. 'But,' he paues to take a steadying breath, 'they got this and we... we need the extra food.' Curious, you ask what he means, even the quickest growing crops take weeks, if not months before they're ready. 'Ya,' he chuffs with a subtle shrug, 'but the nanites seem to be accelerating their growth, and you remember those Alraune hearts the girls and I harvested a while back?' Nodding, you reply in the affirmative. 'Well, the girls have been mixing the sap from those with swamp water, and mountain ash to get their own little fields growing all across the plains.'";
+	say "     But why not grow them here, you question. 'Not enough water, and the soils gone bad after I well,' Drake pauses to nod toward the burnt stretches of grass beyond the gate. Oh, you rumble recalling Ava's story about the big guy setting fire to plains to beat back the infected plants. '*Hmp*,' he murmurs with a dejected shake of his head as if to banish the memory, 'so way I hear it, they found a few aquifers and seeps out on the plains then set up shop. Took them a while, but they're already bringing a lot of wheat, fruits, and nuts. Couple of them have even started bartering with the neighbors for meat and eggs,' Drake adds with a proud smirk. Impressive, yet this still doesn't explain why no one bothered to tell you this, you huff. 'Well, the girls wanted it to be a surprise, so,' he grumbles like an old tom cat, 'don't let them know I ruined it when they come back. You're welcome to wait here while I finish these calibrations, could use the company while Kathy naps,' Drake says, as his eyes appreciatively roam the bountiful motherly curves of your tauric form.";
+	WaitLineBreak;
+	say "     Though his gaze is nowhere near lecherous or libidinous, a part of you can't help but enjoy the attention as you saunter up to the counter and settle yourself beside him as he works. The two of you commiserate over the state of the city, and your shared experience with the local mutants. Though your conversation is neither deep, nor insightful, it still serves as a nice chance to vent your frustrations with a sympathetic soul. Over time, the topics begin to drift to the esoteric side of things like what kind of gas does a dragon pool toy inflate itself with? If a pod person ate an awesome fruit would it be cannibalism, or autophagy? Naturally, you don't take any of it seriously, it just feels good to have the post-apocalyptic equivalent of a water cooler conversation with him while he cleans, calibrates, and resembles his rifle. Though your banter is suddenly broken up though as the gate to The Last Chance begins to rattle.";
+	say "     Just as the metal scrapes the black top, both you and Drake, thinking you're about to be under attack arm yourselves then dash outside. Drake is the first one out, his rifle trained on the creature at the gate. A large three-headed sudo-draconic entity clad in tough emerald scales, you recognise as one of the hydra beasts prowling the junkyard shuffles through the aperture, however, unlike its more bestial cousins, the one seems to have no issue walking on its hindlegs, or using its bestial forelimbs to manipulate the latches on the Chance's fortified portcullis. Strangely, its extra heads seem to dangle limply at its sides as if sedated. Despite its grand size and all the difficulty its animalist form may bring, the hydra has little problem in manipulating the gate's lock almost like it knows what it's doing. Perhaps it's not feral, you muse, noting the presence of a fraying bright yellow rope tied around its waist and arms connected to a makeshift rucksack made out of blue plastic tarp slung on its back.";
+	WaitLineBreak;
+	say "     Yet as you're about to give voice to these thoughts, Drake motions for you to stand down saying, 'Don't worry, I know this guy,' then holsters his weapon and turns his attention to the hydra. 'Pyotr you crazy Slavic son of a bitch, what the hell are you doing out here so early!? I thought you weren't coming by for another day or two. Shit man, I didn't get the chance to put out the welcome wagon for ya,' he says jogging up the hydra and offering his hand in greeting. 'Da, is no problem, friend Drake. Was making a delivery to da McDermott boys. Well, their still,' the scalie chuckles through a watered-down eastern-European accent as he shakes the big man's hands. 'It's no good Kvass, but their bathtub gin shuts these two up just fine,' the hydra nods to its placid extra heads. 'Is gooooood, only went blind once this time, the world is still upside down though,' one of his heads mumbles as it sways at his side. 'Ah please ignore this one, it has tolerance of sheltered valley girl trying to disappoint overbearing father figure,' Pyotr says patting the inebriated head like one would a woozy child.";
+	say "     'So any who I thought to myself why not kill two birds with one stone, and come visit good friend Drake,' the hydra replies with a jovial sing-song hum. 'Huh, good timing I finished up that shield of yours a little while ago. Do you have those things I asked for?' the big guy asks, casting a conspiratorial glance at room 020. 'Of course friend,' the hydra beams flashing the big man a trio of too-toothy grins. 'I know you are not a man to be crossed, and one who keeps his word too. Both valuable traits in a trade partner, but uh who is your friend there? This one is not known to us,' the hydra asks, tilting its heads in unison to look you over. '[Name of Player]? They're a loner, been doing work with for a while now. Anyway, let me get your stuff,' Drake replies as he ducks back inside then heads to the storeroom tucked in back. While he's gone, you take the opportunity to introduce yourself to the hydra properly.";
+	WaitLineBreak;
+	say "     'Ah is nice to meet you, [Name of Player],' the hydra says, bobs his heads. 'I am Pyotr Sidorovich, humble trader, reliable courier, and professional middleman in these trying times. I would say, I'm at your service, but my services are a tad limited right now due to the outbreak. However, if you ever need a fence for rare, valuable trinkets you may find in your travels, my office is in the junkyard not too far from the survivor's warehouse.' Curious as to what he means by valuable trinkets, you ask him to elaborate. 'Oh you know,' he hums in a self-serving trill, 'military ordnance, or stuff touched by the nanites, the whole city is turning into a regular Roadside Picnic.' The hydra chuckles in a deep draconic tone. 'You'd be surprised what you can find out there. Why I've had a man come to me once with the most fantastic sword that oozed corruption and could cut through steel like it was tissue paper. Others have brought me a fruit that gave whoever ate them gills and the ability to resist the bends. Very useful for deep sea salvage if I must say,' Pyotr declares, gesturing to a frilled set of gills hidden under his chin.";
+	say "     'Another, sold me obsidian coins he claimed could be used to bargain with the devil himself. Almost bought those, but could not find buyer. Well, other than a jackal lady at the mall, but I no trust her as she reminds me of shifty gypsies.' Curious, you're about to ask him why, when you hear the entrance to the lobby open behind you as Drake steps out. Tucked under his arm, you spy the armored car door he was working on earlier. Immediately, you notice the slab of metal and reinforced glass has undergone a significant modification. As all the internals have been stripped away leaving only an inch or so of what you assume is titanium, lined with sheets of green kevlar that have been studded with black metal rivets. A single view slit has been welded in place at about eye level and has been fitted with what you suspect is bullet-resistant glass. Despite the work done to the improvised shield it is too unwieldy for a normal human, even one as big as Drake. Though as he passes the thing over to Pyotr you realize this is by design as hydra is more than big enough for it. 'So Pyotr we good?' Drake asks while the hydra tests the grip as he shelters his mass behind it.";
+	WaitLineBreak;
+	say "      'Very much so my friend and here,' Pyotr pauses to unsling his makeshift rucksack and sets it down in front of Drake. 'All the .50 cal I could find,' the hydra says, tapping the tarp with a long clawed finger. 'Good, and the documents, did Alex get a look at em?' Drake asks, kneeling beside the bundle and undoing the flaps. He pulls out several dinged up ammo crates with the serial numbers filed off. He then cracks open a case, despite the rough state of the clasps the things pops open with a loud clang of catching metal. Peering over his shoulder, you can see the thing is packed to the brim with mags. Rifling through them, he pulls out a magazine at random, slides out several bullets and proceeds to inspect them. While he does the hydra chimes in saying, 'Yes, said everything looks good, just get them to sign, and he'll try his best to get the powers-that-be to accept it. You can find the dossier tucked in the case at the bottom of the bag,' the hydra says, gesturing to the improvised rucksack with its tail. 'No promises it will go through obviously,' Pyotr adds in a salesman-like tone.";
+	say "     '*Hrump* expected as much,' Drake replies, idly rapping his fingers against magazine in an aggrivated tattoo. 'Bullets look good though,' he says, slotting the rounds back into the black mag with a audible *click*. 'So, we done here, or you got something else for me?' the big man asks, cinching the bag shut and glancing back at room 020 again. 'Da, may have found a buyer who wants some of those pills and the black stuff you're hoarding. Just waiting for them to come up with some horns or gas. Cause I know you don't take cred, would be easier on my poor back if you did,' Pyotr says ruefully as they massage their shoulder blades where the ropes were digging into them. 'Right, well how about some oxy for the road then?' Drake says, pulling a folded up clear sandwich bag tied off with rubber band from his pocket and offers it to the hydra. 'Ah that would help, my most August of friends,' the hydra, his eyes lighting up like Christmas tree lights chuckles, as they gently pluck the baggie from the human's hand. The unusual scalie then unfolds the thing, slides out a pair of horse pills, and slips them into his other head's mouths. 'That should keep them happy on the way back, regular chatterboxes these two,' the hydra grumbles, patting their extra heads.";
+	WaitLineBreak;
+	say "     'Mh tastes like religion,' one of the heads babbles as it loudly chews on its pill. 'Anyways, I be going now, call you over the CB on 26.696 with the usual password if anything comes up. If you hear from any other frequency, ignore it. There's some jokester messing with people. Got the military running around town flapping their arms like chickens with their heads cut off. Oh and before I forget, put those [italic type]party favors[roman type] you wanted in a little tin somewhere in there,' the hydra says, making his way out the gate. 'Got it,' Drake replies, grabbing the huge rucksack and hauling it back to the lobby. As he does, you follow him back inside and ask him what that was all about. 'Just some business, [Name of Player], nothing you need to worry about,' he says as he stashes one crate of ammo away behind the lobby counter. Judging from his tone, as he hurriedly vanishes into the storeroom behind the lobby proper, you doubt you'll get any further information on his business dealings just yet.";
+	say "     Shrugging, you decide to head over to the garden and seat yourself upon the wooden platform while you wait for Ava and the kittens['] inevitable return. Thankfully, the cubs and their mother arrive several minutes later pulling simple two-wheeled gigs roped to their impressive flanks. Though built from mix and matched piece of unpainted reclaimed timber and sun bleached rope, the rudimentary cart are nevertheless laden with carrots, potatoes, alongside bundles of unthreshed wheat. Mixed between them are a few plastic jugs filled with what appears to be clean, pure water and a few fire-hardened Red Wood spears. Seemingly oblivious to your presence, your lovely family nearly walks right past you, till you catch sight of Ava's nose beginning to twitch before she glances in your direction, exclaiming, 'Oh hey [Name of Player]!' as she hurriedly unties herself from her cart and bounds over to you in a great flurry of catty floof. Rising to meet her, you swiftly dash to her side, rear onto your hindlegs, and wrap her soft supple body in your paws while nuzzling your cheek against her silky pelt in greeting and relief.";
+	WaitLineBreak;
+	say "     'Ah, I hope we didn't keep you waiting too long, [Name of Player],' Ava mews, draping her forepaws about you in a deep bear hug. Shaking your head as you gently sink into her pillowy embrace, you tell her no, though can't say you weren't worried about her or, you pause to motion to your assembled daughters, your kittens. 'Daw, don't worry about us mom, grandpa's been teaching us how to handle ourselves,' one of your angelic children preens, motioning to the main building with a casual flick of her tail. 'Ya and besides, even the behemoths are a little scared of us,' another chuffs, fanning her talons before you. 'She's right I've seen the horsemen hunting parts turn tail the second they see us,' a third crows through a predatory grin. Shrugging, you tell them that regardless, you can't help but worry about them, they are your family after all. Still, you add as you slowly disentangle yourself from Ava, you're glad that they're all safe and sound. 'Oh thanks, but daddy gave us flare guns in case anything happens. Besides, just look at all the stuff we, er... found,' Ava titters, flashing you a disarming blep while theatrically waving her tail towards their carts.";
+	say "     Doing your best to act surprised, you coyly ask where they [']found['] them, noting that you haven't seen too many active wheat fields out on the plains. 'Oh, well ya know, we...' your mate stammers only to be cut off by one of your kittens, shouting, '*Tee-hee* that's cause we grew them ourselves, here take a look mom!' as she and her sisters unhook themselves from their carts, then select a few choice items and trot over to you in an orderly line before you. Beaming with pride at your progeny's manners, you make a show of inspecting each item of produce and praising it as the peerless creation they are. All to your kid's delight, as they detail the work they did in finding arable land, securing water, or procuring the mix of ash, swamp water, and heart sap to make their preferred fertilizer. Nodding along, you voice your approval at their skills, and the work of their grandfather in passing on such useful knowledge to your little ones, before offering to share your wisdom with them as well.";
+	WaitLineBreak;
+	say "    Mewling ecstatically, they eagerly agree while voicing their desire to share in your vast wealth of experience, just like their older peers have. Of course, and besides, they must be hungry from their travels, you purr as you seat yourself upon the platform and motion to your expansive rows of [breast size desc of Player] breasts with a matronly swish of your expansive tail. Grinning from ear-to-ear at the sight of your generous offering, your titanic children quickly crowd around your bestial body and tenderly tuck their adorable snoots to your catty dugs as they suckle. Meanwhile, Ava paws up behind you and lovingly wraps her arms about your shoulders, cooing, 'Heavens, I don't think I'll get over how cute they look like this,' as she watches them drink. Rumbling in felicitous feline agreement, you platonically run your paws along their silky ears, delighting all the while at the budding sense of maternal purpose coiling through you as the two of you quietly discuss potential names for your latest litter.";
+	say "[wittyNameOne]";
+
+to say wittyNameOne:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[wittyNametwo]";
+
+to say wittyNametwo:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[wittyNamethree]";
+
+to say wittyNamethree:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[wittyNamefour]";
+
+to say wittyNamefour:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[wittyNamefive]";
+
+to say wittyNamefive:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[wittyBabyNameSix]";
+
+to say wittyBabyNameSix:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[wittyBabyNameSeven]";
+
+to say wittyBabyNameSeven:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[wittyBabyNameEight]";
+
+to say wittyBabyNameEight:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "     [italic type]Sometime later[roman type] when your children have had their fill and you've finished bestowing them with proper names, your sated kittens snuggle beside you in warm ball of catty perfection as they murmur their appreciation for sharing all you learned with them. Chuffing, you lean back into Ava's embrace and tell them not to worry about the hardships you've endured since the outbreak. These moments with them and, you pause to nuzzle your muzzle along your mate's forearm, Ava have made all the struggles worth it. 'Oh thanks mom,' one of your children simpers, idly massaging her warm creamy tummy fur with her forepaws. 'Ya, I don't think we could ask for better moms than you and mommy Ava,' a second trills, as she contentedly licks her chops. 'Or such wonderful bodies,' yet another crows, running her fingers through her satin pelt. Of course dear, you can't say you're not enjoying the benefits of your tauric frame either, you purr through a matronly smirk as you casually flex your many limbs, delighting at the raw bestial power roiling through your [bodydesc of Player] form.";
+	say "     '*Tee-hee* I know, I can't wait to go exploring the city with you mom, and maybe finding a few pets of my own,' a fifth kitten titters as she dreamily gazes at the city. 'Ya that'd be awesome, mh, just thinking about meeting some of the cute taurs out there is getting me excited,' another of your little one's rumbles, absentmindedly kneading the ground beneath her. 'Totally sis and think of all the cool stuff we could find too!' one of your daughters swoons with a covetous gleam in her eyes. 'Heck ya, I can't wait to see what we'll find out there, I mean the plains are interesting and all, but there's so much more to see,' another of your kittens mews. Nodding along, you tell them those are all splendid ideas, but first don't they think they should say goodbye to Ava first. 'Oh right,' your little ones mew as their ears droop down to the side of their head, 'sorry mommy Ava, we're gonna miss you but we're just so excited to finally go exploring.'";
+	say "     'That's ok dear,' your mate simpers as she puts on a brave face for them, though you can still hear her voice crackle ever-so-slightly. 'I want you girls to see the world, not be cooped up here with me, and besides you got your big sisters to look out for you. Just promise me you'll come to visit, and,' she pauses as she briefly tucks her lip to your forehead and gives you a light kiss, 'take care of [Name of Player] for me.' 'We will mommy Ava, now come on girls, let's go meet everyone else!' one of your more jubilant daughters exclaims as they roll onto their feet and dash off to meet their extended family. 'Ya,' the others simper as they dart off. Watching them dip out of eyes sight, you tilt your head up to gaze Ava's boxy muzzle and ask if she's alright with just letting them rush off like that.";
+	WaitLineBreak;
+	say "     'It's fine,' Ava sniffles, 'I'm getting used to seeing them go, but I still, I st-still wish I could go with them.' Tutting, you reach up and gently her muzzle telling her if she wants she can come with you to the library anytime she wants. 'Oh, I want to [Name of Player],' she bleats, rubbing her cheeks against your palms. 'But, I'm scared.' Sh, you purr, don't be, The Bunker is pretty safe and your kids['] presence alone deters most ferals. 'I know, but I don't like leaving The Chance, or mommy and daddy.' That's ok, maybe one day she can come visit, until then you'll keep bringing the kids by whenever you can and, you tease, fondly rubbing your tendrils along the supple curves of her lovely figure, give her a few more cubs to keep her company. 'Mh I think I'd like that, it's so nice to have a piece of you nearby,' she hums, hugging her forepaws to her vacant middle. Of course, the two of you could get started right now if she liked, you rumble, motioning to the autobody shop with a wave of your tendrils. 'Naughty kitten, you and mommy are so incorrigible,' Ava tuts with a mischievous trill. So you take it that's a yes, you coo. 'Mh only one way to find out,' she teases as she leisurely disentangles herself from you and sashays toward her abode with a catty pop of her hips.";
+	now great river commerce is resolved;
+	now Libido of Ava is 0;
+	increase level of Ava by 8;
+	increase Perception of Ava by 8;
+	TraitLoss "Professional Breeder" for Ava;
+	TraitGain "City Maker" for Ava;
+
+
+Table of GameEventIDs (continued)
+Object	Name
+Pervy Little Helpers	"Pervy Little Helpers"
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"Pervy Little Helpers"	Pervy Little Helpers	"[EventConditions_Pervy_Little_Helpers]"	Drake's Garden	2500	2	100
+
+to say EventConditions_Pervy_Little_Helpers:
+	if perception of Ava >= 24 and Libido of Ava is 29 and BodyName of Player is "Margay Taur" and Player is pure and Player is female and ScaleValue of Player is 5 and Depravity of Ava >= 1:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Pervy Little Helpers is a situation.
+ResolveFunction of Pervy Little Helpers is "[ResolveEvent Pervy_Little_Helpers]".
+Sarea of Pervy Little Helpers is "Nowhere".
+
+to say ResolveEvent Pervy_Little_Helpers:
+	if Perception of Ava is 24:
+		say "[Eventone]";
+	else if Perception of Ava is 32:
+		say "[Eventtwo]";
+
+to say Eventone:
+	say "     Led by the deep-seeded desire to check on your mate and your coming little ones, you find yourself drawn back down along the Lonesome Road leading to the Last Chance. Arriving to the outskirts, you find the impromptu portcullis largely unlocked. Unlatching the fortified gate, your catty eyes are greeted with the pleasant spectacle of Ava and the cubs cuddled up together in a happy not-so-little circle in the middle of Drake's garden. Though as you quietly shut the gate behind yourself, you can't help but note that your latest litter's pelts are all sporting a magnificent sheen that puts many of the comparatively filthy ferals and post-humans littering post-apocalyptia to shame. Rather pleased by the sight, you call out to them as you rush forward to greet them. At the sound of your voice and the soft patter of your paws echoing throughout the curtain-walled complex, your lovely family's ears perk up in unison as they turn to face you.";
+	say "     'Hey everyone, it's mommy [Name of Player]!' one of your daughters sitting on the westernmost border of the garden exclaims, as she and several of her littermates shuffle about to make space for you. Watching a gap form in the resplendent pile of cuddly kittens, you notice Kathy's tiny figure smugly lounging in Ava's bestial lap. Strangely, despite her seemingly relaxed demeanor as she drapes her cuddly arms over the bountiful hills and valleys of your mate's lush tier of pillowy M-cup breasts, you note how her claws are not only extended, but gleaming a bright cinnabar red as she idly fans them in air. Sensing your gaze settling upon her, the regal lioness levies a delighted smirk in your direction, saying, '[if HP of Augustus Drake is 99]Hey sis[else]Hello dear[end if], we were hoping you'd stop by today, the girls and I were just having a... oh now what did the balding apes call it,' ears twitching in mild aggravation.";
+	WaitLineBreak;
+	say "     'A spa day?' she chuffs, casually shrugging her shoulders. Repeating the phrase in a questioning tone, you ask what she means. 'Oh you know, a chance to freshen up and try on some of this wonderful nail polish and shampoo Draky bought us,' Kathy replies motioning to her own gleaming tawny gold pelt with an exaggerated flourish of her crimson talons. 'I'll admit when my big boy told me how the monkeys slather themselves in herbs, spices, dirt, and rendered animal fat mixed with lye powder and ash, then doused themselves in hot water to get clean, I thought he was out of his mind,' she titters, gazing at the back of her paws as the available light dances across her voluminous pelt. 'Mh, but now that I've seen the results,' she purrs, nuzzling her bewhiskered face along the supply curve of Ava's lush breasts. 'I think I can see the appeal, especially when the girls did such a good job, wouldn't you agree dear?' Kathy swoons, running her hand along the downy soft fur coddling her voluptuous legs.";
+	say "     The Rubenesque feline languidly stretches out before you as she flashes her supple peets while the little ones ooh and ah at the delightful pairing of her tawny gold fur, shimmering scarlet talons, and onyx paw pads. 'Mh-hm, I can't believe how soft and pretty your fur is now, I bet Drake is gonna love it when he gets back,' Ava mews as her tendrils coil about the plush curves of the feline in her lap, creating the cutest little indentations in her luminescent fur as her exotic limbs caress the voluptuous breeder's body. 'I mean just look how your pelt shimmers in the light,' she says, as her coils rove the inviting expanse of [if HP of Augustus Drake is 99]your catty friend's bountiful body[else]her loving adoptive mother's expectant form[end if], gleefully combing her taut tummy fur against its natural part, exposing the subtle blend of browns, white and gold decorating her pelt. The available light gleams along the lustrous hairs as if she were bejeweled in lucid diamonds.";
+	WaitLineBreak;
+	say "     'That's all thanks to you, the cubs, and these wonderful tentacles of yours dear, why I'm almost jealous,' Kathy chuckles, tracing a talon along the sleek length of your mate's tendrils, eliciting a delighted shiver for your tauric playmate. 'It must be nice to have such useful toys,' the portly lioness coos, appreciatively. 'Ah thanks momma Kathy, but you still did a great with me and the kitten's nails,' Ava mews, unsheathing her talons with an excited flourish as she leisurely fans her crimson claws before you. '*Tee-hee* I just love how they sparkle,' she rumbles appreciatively as the ambient light dances off the rich contours of her nails. 'Ya, and just look at ours mommy [Name of Player],' one of your kittens coos as she extends her natural blades with a flick of her wrist, revealing a shimmering set of well-manicured nails lacquered in eye-catching shades of vibrant metallic gold broken with a few tiny patches of onyx randomly scattered along the sleek curve of her claws.";
+	say "     Though as you observe her talons a touch more, you note the miniscule splotches have an oddly familiar shape to them, then as your eyes trace the near imperceptible borders of the ebony scrawl, it hits you. Are those California Poppies? You question while tilting your head at an inquisitive angle. 'Ya momma Kathy drew them herself, aren't they super cute!' your daughter squeals with catty delight. Really? 'Of course, well,' she shrugs, 'it did take me a few tries since your kittens are so ticklish,' Kathy mews, lightly brushing her supple pads along your kitten's cute not-so-little toe beans. Evoking a playful titter from your angelic daughter as she hurriedly withdraws her paw, chuckling, 'Hey stop that!' 'See,' the motherly lioness chuffs, fixing you with a knowing grin. 'But in all seriousness sweetie, working with your girls was an absolute treat, now go on everyone, show her,' she simpers, gesturing to your lovely little ones with a regal wave of her tail. 'Yes momma Kathy,' your cherubic children purr in unison as they flare their talons and offer their paws for inspection.";
+	WaitLineBreak;
+	say "     Leveling them with a proud matronly smile, you pad up to them and make a show of looking over each one, though some have opted for more simple monochrome coats of verdant reds, rich violets, and lurid blacks. A few though have had Kathy draw magnolia blossoms or monarch butterflies upon their nails, while others have simple smiling catty faces or caricatures of rising suns and setting moons emblazoned on them. Regardless of their stylistic choices though, you nevertheless praise each one for the lovely works of art they are. Glowing under your caring words, your kittens mew appreciatively while Kathy reaches behind herself, and pulls out several clear unmarked vials, saying. 'Of course we saved a couple of bottles for you too dear... unfortunately,' the well-seeded lioness murmurs as she idly traces a toe talon along the walkway. '[if Depravity of Ava is 1]We didn't know what color to get you, so Ava and I bought these clear ones for your nails instead. But,' she hums, with a proud feline trill, 'according to the salesman this stuff is supposed to harden your claws and prevent chipping[else if Depravity of Ava is 2]The girl and I used up all the pretty ones, but we still saved you some of the clear stuff[end if]. So what do you say, wanna give them a try?' Kathy asks, while your children look on with eager expectant grins.";
+	say "     Shrugging, and in no mood to disappoint your little ones, or turn down such a kind and generous offer, you gladly accept and motion for your kittens to make room. 'Yay!' they rumble, hurriedly shuffling to the far edges of the platform while you leisurely drape your expansive body down between. Ah, feels good to lay down, you murmur as you stretch out and present your hard-working peets to your adoring children. 'I'll bet, look at your poor pawbies,' Ava simpers, nuzzling her plush, pillowy body next to yours as she caringly takes your dominant forepaw in her hand. 'Oh they're so beat up and tough, you really need to stay off the black top, [Name of Player],' she adds while you playfully roll your eyes. 'But,' she hums, gently flexing your toes while grabbing a bottle of nail polish from Kathy with her tendrils, 'I guess this will have to do for now.' Nodding along you casually extend your talons while your children crowd around and grab a few bottles of their own.";
+	WaitLineBreak;
+	say "     'Daw, you look so cute like this dear,' [if HP of Augustus Drake is 99]your lovely partner in crime[else]Kathy[end if] purrs nestling her flush middle next your catty muzzle, eliciting a hungry rumble from your creamy middles as the coiling scent of her maternal form and the low sloshing of supple milk tanks titillate your senses. 'Oh and just listen to that hungie widdle tummy,' she simpers running her bristly tail along the [bodydesc of Player] swell of your anthro core. 'That long walk must have tired you out, now mustn't it dear?' she coos, dotingly. Maybe, you mew, while your affectionate kittens each take one of your paws in hand as they tenderly massage your well-worn mitts. 'Well we can't have that. Pretty kittens like you deserve to be pampered, now isn't that right?' Kathy rumbles, cupping her adorable paws about the tender mass of her lowermost delectable double D's. Smirking at the sight of her tawny hands sinking ever-so-slightly into her plush mounds, you mewl in agreement as you watch a series of small shimmering droplets of pearly delight bead from her plush ebony duct.";
+	say "     'I thought so, now just relax and let us take care of you for a while,' the lush lioness hums as she levels her plush teat with your eager muzzle. Purring happily in reply, you reverently cup your catty snout to her proffered nip, delighting all the while at the subtle whiffs of Kathy's lovely maternal scent coiling about your nose and pleasant supple texture of her teats gracing your lips as you lightly flick your catty tongue along her tender nips. '*Tee-hee* oh that tickles,' the plush lioness chuckles as your tactile spines decadently caress her ebony milk spout in their bestial embrace while you enthusiastically suckle, at once bathing your elated palette in a rich trickle of thick fatty cream, while Kathy affectionately rubs her tail along the silky alabaster curves of your fluffy middle. 'Ah that's a good girl, drink as much as you want, I've got plenty to spare,' she murmurs, as your doting kittens and their proud mother expertly massages tender peets and ankles.";
+	WaitLineBreak;
+	say "     Thank you momma Kathy... so hungry, you hum dreamily as you practically melt into your family's arms while you drink. 'Of course dear, growing girls like you need all the yummy cream they can get, especially when they've got such wonderful kittens of their own to feed,' [if HP of Augustus Drake is 99]your affectionate lover[else]Ava's caring stepmother[end if] coos, her free hand drifting to the [breast size desc of Player] swell of your maternal mounds as she encouragingly kneads your productive glands. Mh-hm, yes... kittens need milk, lots of milk, you simper between sips, snaking your tendrils over the [bodydesc of Player] curves of your tauric form, gleefully joining in the attentive lioness's worshipful exaltation of your majestic being. 'That's right sweetie, and you're coming along so nicely too, we're all so proud of you.' Ava swoons as her silky forepaws roam your verdant dugs. 'Just look how big and soft you've gotten,' she mews, slipping her tail between the toasty folds of your feral teats as she affectionately dandles the fuzzy tuft of her tail along the silky curves of your oh-so-productive milk tanks.";
+	say "     'But there's always room for improvement too, don't you think?' Kathy teases, cupping a lush pawful of supple breast flesh in her mitts. Yes, babies need more, you need more, you ramble, as a soothing blanket of motherly warmth spreads out from your flush core as Kathy's nanite-laced cream surges through your receptive form. Your regal tits thrum with fecund purpose as you ravenously sup her potent cream as your tender orbs groan and slosh delectably while they strain ever-so-slightly in your tentacular embrace. 'Oh such a good mommy, isn't it divine to have all the warm yummy cream you can drink, and your own little pride to care for you, now doesn't it my widdle kitty?' the doting lioness hums while your kittens knead and pamper your pads in their velvety paws. Yes kitty loves her milk, and her babies you mew. 'Of course she does, and just look at how content they are to fawn over you, now isn't that right everyone?' the coy lioness rumbles, gesturing to your precious angels with a soft bob of her head. 'Yes momma Kathy, we love taking care of you and mommy [name of player],' they mew in unison.";
+	WaitLineBreak;
+	say "     'See how happy our little Ava is with your kittens,' she continues, as her flow slowly begins to ebb. Nodding, your gaze leisurely drifts over to the beaming face of your wondrous mate as she diligently massages your swelling dugs and hardworking peets. 'And all because of you dear, and this big cuddly body of yours,' she simpers, gently pulling her now spent teat from your lips, evoking a plaintive mewl as your fracturing psyche cries out for more. 'Sh, there-there sweetie, I've got plenty more,' she hums, shuffling her plush body to one side as she lightly presses another puffy nip to your lips. Eagerly latching, your voracious maw is rewarded with a fresh gush of decadent cream that seems to hug the elated contours of taste buds with each needy suckle. Thank you, you rumble in a near drunken cadence as your supple Rubenesque body ripens all the more. 'Daw you're very welcome, just promise me one little thing,' Kathy says with an expectant trill. Anything, you mew in reply. 'That you'll keep making me more wonderful granddaughters with this lovely body of yours, and make sure my sweet Ava is happy, and bred,' she whispers vivaciously.";
+	say "     Yes momma, you coo, as your mind is set awash with tainted maternal glee with the rollicking tide of her nanite-laced cream. 'Good girl, we knew we could count on you, isn't that right everyone?' she asks delightedly. 'Ya, I can't wait to have a little sister of my own one day,' another of your daughters preens, as she rubs her forepaws [if player is impreg_now]over the lustrous swell of your burgeoning bump[else]across the vacant curve of your toasty tum[end if]. 'Oh, of course dear, but let's take care of mommy first,' Ava chuffs as she takes out the tiny bottle of nail polish and motions for you to extend your claws. Nodding, you flex your many-bladed digits and watch as your growing family twists off the jet black tops of the unmarked vials, revealing simple applicator brushes affixed beneath. An odd chemical tang coils about your catty nose, though only briefly as the breeze shifts ever-so-slightly and the gentle scents of your loving family alongside the floral aromas of the garden begin wafting around you once more.";
+	WaitLineBreak;
+	say "     Not that the others seem to notice, as they blissfully dab their brushes in a thick sheen of lucid polish, then proceed to smear your claws in a generous coating of enamel as you peacefully suckle, delighting at the heady warmth spreading through your core and reassuring presence of your expansive family as they attend your nails. All the while, you children chatter amongst themselves as they discuss their coming trip to the city proper and desire to one day follow in your pawsteps. Some opine about finding pets or lovers of their own, while others muse about all the strange and unusual places and things they'll find on their travels. Occasionally though, one or two of your progeny voice the odd note of concerns for their safety, yet such unpleasant thoughts are quieted by the reassuring rumbles from their peers as they remind one another of your presence, or idly boast about the natural superiority of their exotic tauric frames over the lesser creatures polluting the city.";
+	say "     Chuffing between sips, you can't help but take a little pride in your daughters['] boldness or gumption as they work over your lovely paws and gleaming nails in quick succession. Soon enough though, your talons are swiftly coated in the shimmering nameless varnish, much to your kittens['] credit, you're surprised to find their brush work is truly commendable. Given their size in comparison to their tools, you have expected them to see streaks or blotches dotting your talons, yet as you observe your precious angels while you fan your claws, you can't detect a single imperfection in work. Of course, you ruminate, such things are to be expected from your peerless kittens, you muse, before rumbling your appreciation. 'Daw your welcome mom,' one of your daughters mews, flashing you a heartwarming smile. 'Ya after all the hard work you and mommy Ava did to bring us into the world this is the least we can do,' another simpers, giving your mitts a platonic pat as her litter mates release their hold on your paws";
+	WaitLineBreak;
+	say "     Blushing at their kind words, and the enthralling echoes of Kathy's delectable cream simmering though your fecund form, you leisurely cup your glossy pads about your flush chest and loving ask if your kittens would like a little treat for all their hard work. After all, you note, you have so much wonderful cream to share with them thanks to their generous grandmother, while you invitingly run your tendrils along the growing curves of your milk-laden mounds. Not to mention all the wisdom you can pass on too, you add with a cheerful trill. 'Oh that does sound nice,' a third kitten purrs, hungrily eyeing your expansive rows of your pillowy breasts. Then go on, drink up, you purr, motioning to your plush rows of supple breasts with a light bob of your head. 'Yay,' your cubs mew in unison as they hurriedly nuzzle up your lush mounds, and proceed to drink. 'Aw how cute,' Kathy hums approvingly, lightly running her fingers along the sharp peaks of your ears. 'I know, they always look so peaceful and content like this, don't you think [Name of Player]?' Ava simpers, while she scoots over to her adoptive mother's side. Nodding as you briefly watch your precious angels drink, you then turn your attention to your catty companions and begin discussing what names to give.";
+	say "[ogNameOne]";
+
+to say ogNameOne:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[ogNametwo]";
+
+to say ogNametwo:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[ogNamethree]";
+
+to say ogNamethree:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[ogNamefour]";
+
+to say ogNamefour:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[ogNamefive]";
+
+to say ogNamefive:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[ogNameSix]";
+
+to say ogNameSix:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[ogNameSeven]";
+
+to say ogNameSeven:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[ogNameEight]";
+
+to say ogNameEight:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "     [italic type]Sometime later[roman type], once your children have drunk their fills and been given proper names, your priceless progeny collapse into a sated pile at your side while they dreamily massage their plush middles with their tendrils. Smirking at the sight, you lovingly ask your dear ones if they're full. 'Yes mommy, thank you mommy,' they purr in a jubilant choir of catty perfection. That's good to hear sweeties cause they've got a long walk ahead of them, you rumble rollicking at the lingering effervescent effects of Kathy's cream rippling through your duly lightened mounds and profound politeness of your young. 'Oh does that mean?!' one of your darlings squeals excitedly. Yes, you're going to take them to the city to meet the rest of their family and visit the Bunker. Assuming, you add tilting your head to face your mate, that's alright with Ava. 'Of course,' your mate simpers, though her normally bright tone soon dims just a hair as her ears droop while she continues, 'I'll still miss you all though.' 'Aw don't worry about us Mommy Ava, we promise to come visit whenever we can!' one of your more exuberant cubs beams.";
+	say "     'Ya and hopefully we'll get to meet our little sisters soon too,' a cheerful kitten titters as she nuzzles her cheeks along the silky curves of your feral half. Purring contentedly at the loving caress of her whiskers playing across your bountiful form, you fix her with a doting matronly look and tell her that can be arranged. Turning to face Ava, you ask your caring mate what she thinks of this. 'Oh that does sound lovely,' she chuffs, reverently pawing at her vacant wombs with her gossamer tendrils, 'but first why don't you girls go introduce yourselves to your big sisters first.' 'Yes mom!' your fuzzy cherubs exclaim as they hurriedly right themselves and dash to greet their peers waiting outside The Chance's walls. Once they dip out of sight though Ava looses a deep saddened sigh as she slumps into her adoptive mother's lap, lamenting, 'Oh I hate seeing them leave.' 'There-there dear, I know,' Kathy purrs, wrapping her arms about her step-daughter's boxy visage. 'Its for the best, just think of all the things they'll get to see and find out there with [Name of Player],' she hums reassuringly as the big kitten plaintively mewls in her embrace.";
+	WaitLineBreak;
+	say "     'You're right mom, it's just so hard to watch them go, but they deserve the chance to see the world with [Name of Player],' Ava's rumbles, while you curl up next to her and whisper a similar encouraging sentiment. After all, you proudly note, your growing pride is quite the help out there. Besides, you preen vivaciously entwing your exotic tail with hers, before you go you can always give her another litter to keep her company. 'Mh that does sound nice, but do you think I could freshen my room up a bit? I er, well the kittens um...' she pauses as her ears twitch with a pronounced nervous energy, 'kind of left their toys laying out and I don't want you to accidentally step on a Lego like da-, I mean Drake did.' Chuckling at the thought, you tell her that's fine, as it will give you some time to make sure the girls are getting along. 'Thanks [Name of Player],' Ava mews as she slowly pulls herself to her feet and trots off to her room while Kathy dusts herself off, then waddles back to her abode with a devious little smirk on lips.";
+	now Pervy Little Helpers is resolved;
+	increase Breast Size of Player by 3;
+	now Libido of Ava is 0;
+	increase level of Ava by 8;
+	increase Perception of Ava by 8;
+	if Depravity of Ava is 1:
+		StatChange "Charisma" by 1;
+		now Depravity of Ava is 2;
+	TraitLoss "Professional Breeder" for Ava;
+	if "Professional Breeder" is not listed in Traits of Ava:
+		TraitGain "City Maker" for Ava;
+
+to say Eventtwo:
+		say "     Drawn once more down the Lonesome stretch of Road leading to the Last Chance by the potent pull of your deep-seeded maternal instincts, pawing up to the entrance though, your catty ears are greeted by a gentle choir of girly cherubic voices echoing through the grounds. As you let yourself in, your eyes are quickly drawn westward to Drake's Garden and the lovely sight of your latest litter, and their adoring mother lounging on the walkway in pairs. Between them, you spy several coloring books, too-small notepads, loose bits of paper, alongside a wide array of crayons, coloring pencils, and the odd bit of water colors. Despite the obvious difficulty your titanic cubs have holding their chosen implements in the massive paws, they nevertheless seem to be enjoying themselves as they idly sketch, or doodle away under their mother's watchful eye. Hearing the low yet cutting knell of the gate scraping on the ground as you shut it behind you though, your children quickly look up from their task while Brobdingnagian eyes go wide at the sight of you as Ava hollers, 'Oh hey [Name of Player], it's good to see you,' as she frantically waves you over.";
+		say "     Mewing a loving greeting in kind, you paw over to them while your cubs hurriedly grab their little works in progress, along with their coloring supplies and make way for you. Walking past them as they purr their own greeting to you, you embrace your loving mate with a deep snuggly bear hug, delighting at her subdued alpine scent coiling about you and the gentle caress of her pelt playing across yours as you sink into her arms while asking her what her and the kittens are up to. 'Not much, they've been practicing drawing,' Ava purrs, nuzzling her boxy chin along your forehead, while she motions to your kittens with a soft bob of her tendrils. Oh is that right, and how are things coming along, you ask as you disentangle yourself from her, and turn to face your brood with a bright catty grin. 'Great, Drake has been buying more art supplies for us, and mommy Ava's has been showing us how to use them,' one of your kitten beams, flashing her birth mother an appreciative smile.";
+		WaitLineBreak;
+		say "     'Ya mommy Ava has a really good eye for colors, I just wish these [one of]pencils[or]brushes[or]crayons[at random] were a little bigger though,' another mews, gesturing to a pile of too-small tools arrayed before her paws with a dejected wave of her tendrils. 'Totally, it's kind of hard to hold them, but it's still fun to take a little break from all those books,' a third interjects. 'I dunno, I kind of liked the primers especially since Drake always looks so happy when we do well on our practice tests, he even gives us stickers when we do real good,' she mews, as she bashfully covers up her own little project with her forepaws. '*Hmp* of course you do, cause he always gives you the scratch-and-sniff stickers,' a fourth kitten huffs. 'Well he'd give some to you if you tried harder,' the third kitten peeps sheepishly, idly tracing her left pointer claw along the ground before herself. 'Ya sis, maybe if you spent a bit more time reading the instruction instead of doodling on them you might pass once,' a fifth teases, as she gently boops her sisters on the shoulder with a catty bat of her tendrils.";
+		say "     '*Gr*, its not my fault that monkey stuff is so boring, besides Drake says he likes my drawings the best and that yours look like stinky behemoth poo!' the second kitten grumbles, brattishly sticking her tongue out at her peer. 'Hey take that back you mean old [one of]horse-faced[or]buck-toothed[or]two-legged[or]monkey-loving[at random] [one of]Shaftbeast[or]boi[or]Foul Scuttler[or]Messy Pig[at random] kisser!' the fourth kitten roars, baring fangs at her sibling while a line of bristly hairs ripple to attention along her spine as the two of them quickly descend into a puerile diatribe of petulant naming calling. 'Now-now everyone,' Ava simpers in a soft motherly tone as steps between them. 'That's no way to speak to your sister, or,' she pauses, eyes narrowing and tone deepens to a stern razor's edge, 'in front of your mothers,' as she drums her talons along the ground in a warning tattoo. 'Oh... sorry mom,' your cubs murmur as their ears flatten to the sides of their heads. 'Good, now apologize to each other, you're sisters and shouldn't be fighting like this at your age,' your mate huffs. Though a brief look of defiance flitters across their faces, your kittens soon relent and mutter their apologies to one another, half-hearted though they may be.";
+		WaitLineBreak;
+		say "     'That's better, now how about you girls show mommy [Name of Player] your drawings instead of arguing?' Ava hums, as she glances over her shoulder at you as if looking for approval and support. Nodding in agreement, you cheerfully ask your kitten if they wouldn't mind showing you their latest creations. 'Uh, ok, I know it's not the best but I hope you like it mommy [Name of Player],' the third kitten mumbles as she fidgets with a coloring book before passing it over to you with a shamefaced look in her eyes. Taking it, and several other pictures, painting, and doodles from your kitten's, you seat yourself at the heart of the walkway while your cubs crowd around as you make a show of looking over each lovely work of art. You find yourself rumbling contentedly, as you note with no small amount of pride that your daughters are displaying a measure of artist skill. Albeit at varying levels of proficiency as some are colorful, yet simple stick figures of the various bestial creatures wandering the plains. While others are ostentatious caricatures of themselves, their mother, or their caretakers, with a few near life renditions of the wild spaces ringing The Chance thrown in, alongside creatively colored in Bizney Duchesses.";
+		say "     Thumbing through them a bit more, you can't help but notice some odd color choices mixed in as various examples of local flora and fauna are bejeweled in all of unusual hues. [if intelligence of Ava is 3]Of course, you remind yourself, recalling Ava's reaction to some of the supplies you liberated from the newsstand some time ago, a number of your cubs most likely take after their birth mother exotic sight, and simply see the world differently. So, it's only natural that their art should reflect it, besides there's a certain charm in their work that could help them stand out should they choose to pursue a career in the arts[else]Then again, despite their unorthodox choice, the exotic mixes are certainly eye-catching in their own right. You muse, observing a few pictures of California Poppies where your kitten colored the normally orange petals as simmering shades of purple and pink instead. Besides, it's nice to see your kittens showing a little creative licence[end if]. You ruminate as you offer your thoughts and mild, well-meaning critiques of their works, though most are surface level, your cubs still hang on every word as if it were gospel while doing their best to explain the meaning of their drawings and stylistic choices. Some of which goes over your head as you eager cubs often find themselves talking over another, yet you wisely nod along, and do your best to project the air of an attentive mother in those moments.";
+		WaitLineBreak;
+		say "     Nearing the end of the pile of half-finished doodles, you find one last piece of that appears to have been signed by Ava herself mixed in, carefully picking it up, you feel lips being drawn into the proud maternal smile at the sight of the little collage of you and your mate [one of]snuggling in each other arms in the middle of sea of golden grass[or]prancing hand-in-hand a through a dry rocky creek[or]basking in Drake's garden[or]sitting beneath the stars on the roof of The Last Chance[at random]. Oh how cute, you purr as you show off Ava's latest creation to your kitten while you admire the interesting assortment of mediums she collected to create these adorable piece. 'Aw, thanks, I made it from some of the girl's throwaways.' your wonderful lover simpers, as she trots up behind you. Really, you ask in a pleasant trill, taking in some of the unique shapes and hues propagating each individual segment of her art. 'Mh-hm, the kittens weren't happy with some of their drawings, but it felt like a waste to throw them out after Da- I mean Drake went through all the trouble of buying these for us,' she purrs, motioning to a little bundle of scape paper amongst the kittens['] art supplies with a light flick of her tail.";
+		say "     'Of course,' she preens, fluffing out her expansive chest, 'I saved a few pieces for myself since they might look good on my wall one day uh,' she stammers, tucking her arms behind her back as a guilty note briefly flickers though her otherwise bright tone. 'Assuming I get around it, cause the girls, my chores, and studies have been keeping me busy. Not that I don't love taking care of the kittens, it's just you know...' Ava mews dejectedly through a tired rumble. Nodding, you tell her you understand, peaceful as The Chance is, there are only so many hours in a day, and of course, the kittens come first. 'Ya, I can't wait to show it off to you one day though,' your mate beams, flashing you with a disarming blep. And you can't wait to see it, but first, you bet the girls could use a little [']snack['], you simper, reaching back with your tendrils and give your feral half a gentle shake, delighting internally at the gentle sound sloshing of your cream laden dugs alongside the hungry looks of little ones as gaze at the lush swell of your rows of [breast size desc of player] milk tanks.";
+		WaitLineBreak;
+		say "     Mewing in catty agreement, your cubs vigorously nod their heads while the air resounds with the adorable rumbles of their stomachs as you casually drape your [bodydesc of player] tauric body across the walk, baring your plush teats to them with an inviting wave of your tendrils. Go on now, mommy has plenty to go around, you hum as they paw up beside you, and lovingly tuck their adorable faces to your perky nips while purring their appreciation as they drink. Your evermore maternal mind is flooded with an effervescent rush of motherly contentment as you platonically run your tendrils through their fur, encouraging them to have their fill and imbibe all the wisdom you have to offer. 'Oh such thirsty dears,' Ava simpers, through a dreamy smile as she nestles herself beside you. 'You know,' she hums, running her forepaw down your pillowy flanks, 'I don't think I'll ever get tired of how cute you and the cubs look like this.' Nodding, you lean into her touch, the two of you quietly begin discussing potential baby names together.";
+		say "[namegeneratorOne]";
+
+to say namegeneratorOne:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[namegeneratortwo]";
+
+to say namegeneratortwo:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[namegeneratorthree]";
+
+to say namegeneratorthree:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[namegeneratorfour]";
+
+to say namegeneratorfour:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[namegeneratorfive]";
+
+to say namegeneratorfive:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[namegeneratorSix]";
+
+to say namegeneratorSix:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[namegeneratorSeven]";
+
+to say namegeneratorSeven:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[namegeneratorEight]";
+
+to say namegeneratorEight:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "    As the last of your lovely kittens have drunk their fill, and received not only their names, but all the accrued knowledge you have to offer, your purring bundles of joy sleepily murmur their profound thanks to you before lazily rolling onto their backs. They sun their blushing pelts in the available light while they playfully knead one another's soft milk-flushed middles, or quietly chat amongst themselves, discussing all they've learned and wish to see in the wider world. Out of respect for your cubs though, you only listen half-hearted, still you can't help but feel a note of pride in your breast as their conversations drift between their desire to find and tame pets of their own, proud boasts of all the treasure they hope to discover in their journey, to fancily muses on the strange and fantastical place they want visit. 'Oh sounds like our little adventurers are getting excited for their trip,' Ava coos, nuzzling her cheeks along your shoulders. Indeed, you reply, casually nibbling on the pointy tips of your mate's fuzzy ear, though you're not exactly in any hurry to leave just yet.";
+	say "     'Thanks,' she whispers, tucking her paws about your [bodydesc of player] anthro waist while you lean into the welcoming pillowy curves of her plush silky embrace, reveling in the wondrous kiss of her pelt gliding over yours, and the enthralling warmth of your mate as your upper body is lovingly swaddled in the soothing folds of her lush mounds. Mh so soft, you purr contentedly to yourself, casually tracing your clawing along the exotic colorful borders of her fur as you melt into the supple cocoon of voluptuous breast flesh. '*Tee-hee* naughty girl, not in front of the girls,' Ava teases, given your side a playful pinch. Ok, you titter, letting your hands fall to your sides as gaze out at your lovely cubs lazing about before you. Though as the minutes pass, you can the telltale sign of your own wanderlust shining through as your cubs begin to fidget as they idly flex their claws, or longingly eye up the city.";
+	WaitLineBreak;
+	say "     To her credit, your experienced mate seem to picks up on this too as she clears her throat, saying '*Ahem* girls I hate to say this, but I think it's time for you all to head out and meet your sisters.' 'Oh you're sure? We don't have to leave just yet,' one of your cubs simpers, in a soothing trill as she rolls onto her feet. 'Well,' Ava hums through a Cheshire grin, 'if you'd like, you can help me clean up the grounds first?' as her catty eyes drift to the piles of loose paper and art supplies littering the garden. 'Uh, on second thought...' your kitten peeps, flashing you both a cheeky blep while she glances towards the gate. 'That's ok dear, now run along and say hi to the others for me,' your doting lover mews, as she hugs her arms tightly about you. 'Yes mommy Ava!' your cherubic kittens scramble to their paws and dart off to meet their peers.";
+	say "     As they dip out of sight, Ava lets out a plaintive sigh as she props her chin on your forehead rumbling, 'Oh mommy, I hate seeing them leave, but at least they're happy, and I have something to remember them by.' Nodding, you tell her that that's true, but perhaps before you leave, you could give her a little something else to remember you by, you tease, playfully running your paws along the vacant curves of her voluptuous middle. '*Mrowl* that sounds nice, but first let me put the kids['] stuff away,' she simpers, nodding her head towards their artistic sundries. Of course, you reply as Ava sluggishly disentangles herself from you, then swiftly gathers up your children's things before sashaying to her back room with a cute, purposeful little stride.";
+	WaitLineBreak;
+	say "     [italic type]Congratulations! You've reached the final end of Ava's pregnancy content, though your kitten's story has ended here. Though no new scenes await past this point, your numbers will still be tracked and may play a role in future endings. New content involving Drake, Kathy, Becky, Jade, and Ava's personal projects might one day be released, for now though her story has reached its conclusion. As always thank you for playing, if you'd like to support the game please check out Patreon and Subscribestar pages, or if you're interested in commissioning projects of your own, chatting with your fellow survivors, then pop over to our Discord and say hi. In the meantime. I'll see you next time on[roman type] ";
+	if "Touched by Madness" is listed in feats of Player:
+		say "[bold type]Dragon Raider G![roman type]";
+	else:
+		say "[bold type]Dragon Raider Galaxite![roman type]";
+	now Pervy Little Helpers is resolved;
+	now Libido of Ava is 0;
+	increase level of Ava by 8;
+
+
+Table of GameEventIDs (continued)
+Object	Name
+Final Event	"Final Event"
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"Final Event"	Final Event	"[EventConditions_Final_Event]"	Last Chance Parking Lot	2500	2	100
+
+to say EventConditions_Final_Event:
+	if perception of Ava is 40 and Libido of Ava is 29 and BodyName of Player is "Margay Taur" and Player is pure and Player is female and ScaleValue of Player is 5 and HP of Augustus Drake is 7 and Loyalty of Kathy >= 1:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Final Event is a situation.
+ResolveFunction of Final Event is "[ResolveEvent Final_Event]".
+Sarea of Final Event is "Nowhere".
+
+To say ResolveEvent Final_Event:
+	say "     Peregrinating along the Lonesome stretch of blacktop leading to The Chance, and your precious family, your heightened senses detect an odd, but not wholly unpleasant scent of burning wood coiling about you. Lightly sniffing the air, your catty snout detects the subtle aroma of applewood laced with the vaguest hints of beef drifting upon the breeze from the north west, as you prowl all the closer to the motel proper. You soon catch sight of a thin plume of grey smoke billowing over the walls, any other time you might have been worried by the sight, yet going by the muted gray hues and consistency of the playful wisps wafting upon the breeze, you suspect your children, and their extended family are more than likely cooking something[if loyalty of Kathy is 0], again[end if]. You muse, as a low voracious rumble ripples through your core as the inviting redolence of hickory and bramble fruits soon greets your far-traveled nose. Duly curious and more than a hair peckish after your trek here, you bound over to the gate as quickly as your tauric half can carry you.";
+	say "     Nearing the fortified portcullis, you're greeted by the lovely sight of several of your latest litter crowding around several person-sized wood dry racks draped with lengthy glistening medallions of marbled ruby meat suspended over well-controlled bonfires in the heart of the Chance. Seemingly oblivious to your presence, four of your priceless daughters, wearing massive brown leather aprons move from rack-to-rack while they attend the tiny-by-comparisons blazes, or pull glass vials laden with what you assume are herbs and salt from their smock's pocket then drip their contents over the thin gleaming slabs of meat. While to the west and adjacent to Drake's Garden, you spy the big man himself and his portly mate sitting along the walkway with a modest fold out chrome camping table spread out between. Equally engrossed in their task, the happy couple seem to be packaging the freshly jerked beef into an ever growing pile of drab parchment folded into neat squares bound by pencil thin bands of manilla jute fiber.";
+	WaitLineBreak;
+	say "     Meanwhile to the east, two of your latest litter toil away at their own gas stoves under the watchful eye of their mother as they stir some large silver stew pots with comically undersized wooden ladles. Though you can't know exactly what they're working on, you can still smell a mouthwatering bouquet of sage, thyme, and rosemary laced with the subtle scents of corn, cauliflower, and zucchini wafting through the air. To the North of them, you notice two more of progeny sitting on the ground near the lobby proper, looking closer though as you quietly open the gate, you notice a set of silvery trays covered in wax nestled upon their catty laps. Though you're too far away to make out exactly what's on them, your nanite-enhanced eyes can still make out a number of newly-skinned green and yellow fruits that you suspect are limes, kiwis, and perhaps lemons that they're in the process of cutting cuboid shapes with their gleaming claws. Arrayed beside is a steadily diminishing pile of some white crystalline powder your daughters use to coat the produce in.";
+	say "     Though as you close and latch the gate behind yourself with a loud click that reverates through the parking lot, your expansive family, at last looks up from their tasks. 'Oh look everyone, it's mommy [Name of Player]!' Ava exclaims, as she bounds over to you. 'What really?' one of your kittens attending the drying racks says, as she and her litter mate both rush over to you. 'No way she's here!' another of your cubs manning the stew pots rumbles as she and her sister quickly turn down the burners on their stoves while they watch their birth mother dart past them, then quickly follow suit. 'Holy Molly, it is mommy [Name of Player], come on sis, let's go see her!' a third kitten mews from beside the lobby as her and her kin set aside the trays as they rush forward alongside their eager siblings. Overjoyed by the sight, you extend your arms and tendrils in greeting as you bound forward to embrace your precious kindred.";
+	WaitLineBreak;
+	say "     Kathy and Drake look on with proud paternal smiles as you and your family sprint over to one another in the central courtyard, and you rear up on your hindlegs and are swiftly swaddled in the silky hold of your cherished mate and doting young who platonically run their paws through your fur. As they lovingly purr contentedly to themselves, you affectionately greet and kiss each one on the forehead before asking how they are. 'Great,' Ava simpers as her and your brood release their cuddly hold upon you. 'The girls and I were just finishing cooking, and,' she says gesturing to her beaming parents with a theatrical wave of her tendrils. 'Mommy and Daddy were bundling up some treats for you too.' Really, you ask, casting your gaze over to the patriarchal human and his mate. '*Mph*,' he nods, tapping the table with his knuckles. 'The girls brought in a good haul of fresh beef from some of the outlying ranches, so we've been helping them smoke what we can for you and the girls to take with you.'";
+	say "     'Though I hope you don't mind we did keep a bit for ourselves and the little ones here,' Kathy hums, idly patting the lush swell of her plush paunch. Shaking your head, you tell her that's fair considering they've generously been housing your cubs for you. 'That's not all mommy, we've been drying some tasty fruits for you too,' a fourth kitten preens, motioning her voluminous tail towards the small, by tauric standards, trays sitting by the lobby. 'Well,' she adds as her ears dip ever-so-slightly, 'those aren't ready yet, but we still have few set aside for you.' 'Ya and we also made a couple of jars of yummy [one of]compost[or]cum poot[or]cream pot[at random] for you too,' a fifth rumbles while Ava quietly chuckles to herself. 'Wa? What did I say?' your bemused kitten queries as a low crimson blush filters through the creamy patches in her. 'I think you mean [']Kompot['] dear,' your mate titters as she reaches out and patts her confused child on the head. 'Right that, eh sorry,' she simpers, flashing you a well-meaning blep.";
+	WaitLineBreak;
+	say "     Waving away her concerns, you tell her that's alright before motioning to the simmering stew pots near Ava's room and ask what's in them. 'It's a soup grandpa showed us how to make, come on and take a look,' a sixth kitten mews as she takes you by the paw and tries to lead you over. Shrugging you quickly fall in step with her as you paw over to the simmering treats, and as you peer inside, you note the low boil stew is deep crimson with chunks of white cauliflower, shredded beets, and bright green zucchini floating through it. Mixed in with the hearty vegetables, you spy a number of metallic-hued kernels of blue, purple, pink, and emerald glass gem indian corn floating beside them while the herbal scents of their culinary treat wafts about you. Intrigued, you rightly ask if it's ready. 'I think so, say, would you like some?' your daughter beams as her tail twitches ecstatically behind her.";
+	say "     Unable to turn down a free hot meal, or say no to your lovely daughter, you nod in the affirmative giving your fuzzy tummy an endearing pat. 'Yay, why don't you go take a seat by Grandma, and I'll go get the dishes!' she mews, delightedly, then proceeded to paw over to Ava's side. Of course dear, you can't wait to try some, you rumble as you sashay over to Kathy and set yourself beside her. Ah feels good to sit down for a bit, you remark, idly flexing your paw's amid a choir of gentle pop from your hard working joints. 'I'll say sweetie, still we're glad you keep making the journey to come see us and the girls.' Kathy says, motioning to your assembled little ones with a wave of her tail. '*Mh*,' Drake adds as he hurriedly packages the last few slabs of jerky then pushes the table aside. 'The girls really look forward to your visits though, got to admit... we're gonna miss having them around,' he sighs, as he leans over and wraps his arm around his cuddly mate. 'I know Draky, it's so lovely having a few extra paws around,' the plush lioness mews, nuzzling her chin along his chiseled arm.";
+	WaitLineBreak;
+	say "     Meanwhile, your daughter emerges from the autobody shop, her arms laden with bright red clay bowls and ivory oriental spoons. She quickly saunters over to the simmering pots then begins filling and passing out several helpings of the sumptuous fare to Ava and your family. Once she's finished, your kitten extinguishes the burners and leads her sisters over to your side. 'Here Mommy [Name of Player] get it while it's hot,' she simpers, passing you two vessels the size of a grown man's head while others crowd around you and hand similar helpings to Drake and Kathy. Accepting them with a genuine smile, the happy couple rumble their appreciation and wait for everyone to be seated before digging in. As you eat, your extended family chat amongst themselves about the current goings on in the plains and the status of the kitten's various gardens dotted throughout the grassland. Occasionally, the topics drift towards yours and Drake's experiences in the city, though the big man remains rather tight-lipped about his travels. He nevertheless offers some insight on the fledgling survivor enclaves situated around the mall and junkyard, alongside some advice on how to deal the local traders.";
+	say "    You elucidate your young on some of the wilder places and peoples you've encountered on your journey, although you do your best to censor many of your more... personal liaisons with the locals. Your kittens and their mother still hang on every word as you describe the unearthly wonders you've uncovered, and strange fantastical creatures you've met on your travels. Even Ava seems intrigued by some of your toned down stories as her eyes go wide with curious delight as you recount your deeds. Eventually though, as your bowls are emptied your catty chatter begins to die down, your conversations turn to your little ones and what they plan to do in the wider world. To the letter, most express a desire to follow in your paw prints and explore as much as they can, though some hint at their own interest in one day starting families of their own. Others meanwhile, discuss taming some of the more pliable ferals for their [']unique['] designs.";
+	WaitLineBreak;
+	say "     Tittering, you coyly tell them that might be an interesting sight, of course before they get started, you may have something that could help them. You mew, casually patting your [bodydesc of Player] rows of [breast size desc of Player] breasts with your paws, delighting internally at the gentle kiss of your fur playing across your silky pads and longing gazes of your kittens. '*Cough* right, uh Kathy how about we go do the dishes out back while the girls do their thing?' Drake stammers, his slitted eyes narrowing to fine pinpricks as he jumps to his feet and begins hurriedly gathering up everyone's bowl and utensils. 'Daw whats the rush dear, can't we just sit back and enjoy the show?' the fecund shortstack quips, as she eyes up your lovely mounds. Though the big man merely glowers in reply till Kathy relents, saying, 'Oh fine, *huff* I guess the girls could use [italic type]some[roman type] privacy,[if Perception of Player >= 20] spoil sport,[end if]' as she waddles to her paws. 'Thanks hun,' Drake whispers as he leads her around the side of the hotel. Once they dip out of sight, you shrug and leisurely roll onto your back as you invite your kitten to partake of your bounty.";
+	say "     Mewling happily to themselves, your kitten eagerly crowd around your voluptuous body as they affectionately tuck their adorable muzzles to your proffered breasts, while their mother looks on with a maternal smile. 'Daw such thirsty dears, you know I'm glad you came by when you did, since I was starting to run a little low,' she purrs as she snuggles up behind you and nuzzles her chin along your shoulder. Rumbling in catty amusement, you can't resist smirking at the sight of their eager suckling and the sudden rush of motherly purpose simmering through you as your body is relieved of its rich fare. Despite your familiarity with this simple yet affirming act, a part of you will never tire of the heavenly joy [']weaning['] your kittens brings you, you muse, absentmindedly running your tendrils down the supple curves of your lovely form, reveling in the blissful softness of your pelt and gentle mews of your cubs filtering through you while you and Ava quietly discuss potential names for your precious angels.";
+	say "[MoreNameOne]";
+
+to say MoreNameOne:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[MoreNametwo]";
+
+to say MoreNametwo:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[MoreNamethree]";
+
+to say MoreNamethree:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[MoreNamefour]";
+
+to say MoreNamefour:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[MoreNamefive]";
+
+to say MoreNamefive:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[MoreNameSix]";
+
+to say MoreNameSix:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[MoreNameSeven]";
+
+to say MoreNameSeven:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "[MoreNameEight]";
+
+to say MoreNameEight:
+	let NewChildName be "";
+	let NewChildGender be "";
+	now NewChildGender is random child gender;
+	let NewChildPersonality be "";
+	now NewChildPersonality is random child personality;
+	say "[bold type]Please name your ([NewChildPersonality], [NewChildGender]) child: [roman type]";
+	get typed command as playerinput;
+	now NewChildName is playerinput;
+	LineBreak;
+	say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+	say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 2:
+		say "Choice? (1-2)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+	if calcnumber is 1: [coming along]
+		say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+		choose a blank row in the Table of PlayerChildren;
+	else if calcnumber is 2: [bunker]
+		say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+		choose a blank row in the Table of PlayerBunkerChildren;
+	now Name entry is playerinput;
+	now BirthTurn entry is turns;
+	now Gender entry is NewChildGender;
+	now Head entry is "Margay Taur";
+	now Torso entry is "Margay Taur";
+	now Back entry is "Margay Taur";
+	now Arms entry is "Margay Taur";
+	now Legs entry is "Margay Taur";
+	now Ass entry is "Margay Taur";
+	now Tail entry is "Margay Taur";
+	now ShowTail entry is true;
+	now ShowLegs entry is true;
+	now Pureblood entry is true;
+	if a random chance of 3 in 100 succeeds:
+		now Albino entry is true;
+	else if a random chance of 2 in 100 succeeds:
+		now Melanism entry is true;
+	now Personality entry is NewChildPersonality;
+	now PlayerRelationship entry is "[one of]loving[or]affectionate[at random]";
+	now Feral entry is false;
+	if number of filled rows in the Table of PlayerBunkerChildren > 0:
+		move Offspring to Bunker;
+	say "     [italic type]Sometime later[roman type], once your last cub is named, fed, and most importantly educated, your little ones leisurely disentangle themselves from you and roll onto their backs as they sun their well-fed bodies in the available light. '*Burp* Mh that was delicious,' one mews, drumming their paws along their warm tender tums. 'I know, mommy [Name of Player]'s milk is so rich, I can't wait till I can make my own,' a second coos, resting her forepaws on your lush rows of catty dugs. 'Ya and the things she's seen, god I can't wait to see it for myself,' another murmurs, as she tilts her head towards the city. '*Tee-hee* you're right sis and just think one day we'll have our own cubs to share this with,' a fourth remarks in a dreamy trill as she hugs your [bodydesc of player] body with her glossy tendrils. 'Then what are we waiting for, let's get out there!' a fifth exclaims as she begins hoisting herself to her feet.";
+	say "     Though you're encouraged by their enthusiasm, you quickly tut at them and ask isn't there something they are forgetting to do first before they go. 'Oh right, sorry mom,' your jubilant kitten simpers as she and her sister hurriedly crowd around Ava and wrap her in their arms while mewing their goodbyes. 'Oh thank you everyone, I'm going to miss you but,' she hums, platonically running her paws through their fur, then turns her head to face you. 'I know you're all in good paws and you have so many wonderful sisters in the world to help take care of you too,' as she releases her hold on them. 'Now run along and go say hi to everyone for me.' 'Are you sure, we can stay a little longer if you like?' a sixth kitten asks. 'That's ok dear, I don't want to keep you girls and besides, I wanna have a quick word with [name of Player] before she leaves,' Ava purrs, reassuringly motioning toward the wider plains with a wave of tendrils 'Alright come on girls!' the caring kitten exclaims as she and her sisters bound off towards the plains and their waiting siblings.";
+	WaitLineBreak;
+	say "     As they dip out of sight, Ava sighs constantly in your ear as she wraps her paws about your feral half mewing, 'Heavens, I'm going to miss them, but it's so good to know they're happy and they've got such a wonderful mommy to take care of them.' Nodding, you tell her you'll take care of them, though doubt they'll need it, as her and Drake have done a great job preparing them for the world. 'Aw thanks, but don't sell yourself short [Name of Player], you set such a great example of them, even Daddy is impressed with how well you handle yourself out there. You know,' she hums, coiling her tail about yours, 'I don't think I could ask for a better mate.' Chuffing, you gently squeeze your exotic limb about hers as you tell her you feel much the same. Of course, you add as Ava lovingly kneads your beautiful curvaceous form, this wonderful body of yours helps too. 'Oh you don't know how happy that makes me to hear that,' the cuddly tauress coos, tucking her boxy snoot to your left shoulder as she nuzzles and kisses your ears.";
+	say "     Leaning into her caress, you cheekily ask if she might like to have a little fun before you leave with the kittens? 'Mh I'd love that, but before we do, Daddy and I have a little treat for you. So just give me a sec to go grab them,' Ava rumbles, pressing her soft vacant middle against your back. Curious, you bid her leave with a light bow and watch as she scrambles to her feet and darts off to her room in a great flurry of catty floof. Seconds later, she barrels out the door with her arms laden with mason jars packed full of fruit preserves, [if Loyalty of Kathy is 1]tiny sandwich baggies packed with dried fruit, and a small red heart-shaped aluminum tin[else] and tiny sandwich baggies packed with dried fruit[end if] as she pads up to you she dexterously plucks the bundles of dried meat from the nearby table before depositing them in your waiting mitts. 'Here, I don't think you'll need them, but the kittens and I wanted to thank you for all you have done.' Accepting them with a smile, you promise to put them to good use, and besides, fresh food is getting hard to come by these days. 'I'm glad, now um, can you give me a minute to go clean up,' she mews shamefacedly, as she idly rubs the back of her head with one of her tendrils. 'The kittens and I were in kind of a hurry to get these packed and we... might have made a mess.' No problem, you reply, you'll need a bit to get packed and check in on the kittens anyway. 'Great, I'll see you inside!' Ava beams as she heads back to her humble abode with an enthralling little sashay.";
+	LineBreak;
+	say "     [italic type]Congratulations! You've reached the final end of Ava's pregnancy content, though your kitten's story has ended here. Though no new scenes await past this point, your numbers will still be tracked and may play a role in future endings. New content involving Drake, Kathy, Becky, Jade, and Ava's personal projects might one day be released, for now though her story has reached its conclusion. As always thank you for playing, if you'd like to support the game please check out Patreon and Subscribestar pages, or if you're interested in commissioning projects of your own, chatting with your fellow survivors, then pop over to our Discord and say hi. In the meantime. I'll see you next time on[roman type] ";
+	if "Touched by Madness" is listed in feats of Player:
+		say "[bold type]Dragon Raider G![roman type]";
+	else:
+		say "[bold type]Dragon Raider Galaxite![roman type]";
+	now Final Event is resolved;
+	now Libido of Ava is 0;
+	increase level of Ava by 8;
+	itemgain Jerky Wrap by 10;
+	itemgain Kompot by 10;
+	itemgain Hearty Trail Mix by 10;
+	if Loyalty of Kathy is 1:
+		itemgain Rattling tin by 1;
+		now Loyalty of Kathy is 2;
+	TraitLoss "City Maker" for Ava;
+	TraitGain "Fecund Goddess" for Ava;
 
 
 
@@ -4949,7 +8380,7 @@ to say PictureUse:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Dragon Break Coin"	"Are Ava's events not firing correctly? Then use this to activate Medea's walkin, beware using this item outside emergency debugging can have unpredictable consequences!"	0	Dragon Break Coin
+"Dragon Break Coin"	"Are Ava's events not firing correctly? Then use this to activate Medea's walkin, beware using this item outside of emergency debugging can have unpredictable consequences!"	0	Dragon Break Coin
 
 the scent of Dragon Break Coin is "The coin smells like mental hazards.".
 
@@ -4977,6 +8408,25 @@ to say STRodUse:
 	ItemLoss Debugging Rod by 1;
 
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"Wreath of Flowers"	"Though deceptively simple in design, this large everblooming band of tightly-woven creamy white California Poppies and yellow Snapdragons, bound by a thin braid of copper wire serves as a lovely reminder of your mate's affection. Thanks to the carefully cut amber Alraune heart nestled on the [']front['] of the wreath, the flowers never seem to wilt or go out of bloom. Even now their spectacular blossoms seem just as vibrant, if not more so then the day Ava presented it to you. Still, the fragile thing requires the greatest of care as their tiny roots have yet to fully burrow into their unusual food source."	0	Wreath of Flowers
+
+Wreath of Flowers is a grab object.
+Wreath of Flowers is equipment.
+It is not temporary.
+Plural of Wreath of Flowers is false.
+Taur-compatible of Wreath of Flowers is true.
+Size of Wreath of Flowers is 5.
+AC of Wreath of Flowers is 0.
+Effectiveness of Wreath of Flowers is 0.
+GA of Wreath of Flowers is 0.
+Placement of Wreath of Flowers is "head".
+Descmod of Wreath of Flowers is "An adorable ring of flowers sits up on your head like a living crown.".
+Slot of Wreath of Flowers is "head".
+Scent of Wreath of Flowers is "The Wreath of Flowers smells like a new mix of fresh fruits and a gentle floral aromas.".
+
+
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -4991,5 +8441,212 @@ to say PPUse:
 	say "     Debug complete, try not to scare her again, please.";
 	TraitLoss "Propositioned" for Ava;
 	now cock count of Player is 0;
+	if cunt count of Player is 0:
+		now cunt count of Player is 1;
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Kompot"	"A large clear glass mason jar secured with a bright brass lid your family has packed to the brim with preserved fruits floating in its sugary juices. Whether served hot or cold, this refreshing and nutritious drink can keep for ages, so long as it remains sealed and can make for a fine filling pick me up regardless of the occasion. Thanks to your kitten's growing agricultural skill, they've been able to provide you with a wide array of fruits to ensure you never grow tired of this classical treat."	1	Kompot
+
+Kompot is a grab object.
+
+Kompot is a grab object.
+the scent of Kompot is "Smells of crisp fruity aromas and faint hints of subtle alpine scents.".
+
+Usedesc of Kompot is "[Kompotuse]";
+
+to say Kompotuse:
+	say "     Cracking the seal on one of kittens lovely treats, you ravenously down the sumptuous jar of [one of]lemon-lime[or]strawberry-apple[or]loquat and black berry[or]orange and mango[or]rambutan and melon[at random] preserve. Yummy, you rumble, as you casually chew on a few of the larger chunks of crisp fruit.";
+	if "Junk Food Junky" is listed in feats of Player:
+		PlayerDrink 30;
+		increase morale of Player by 15;
+		PlayerHealed 5;
+	else:
+		PlayerDrink 12;
+		PlayerHealed 5;
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Jerky wrap"	"Handcrafted and smoked by your lovely kittens, these long finely-cut medallions of well-marbled beef preserved in salt and local herbs wrapped in brown butchers paper and secured by manilla jute fibers make for great trail snacks. Thanks to the care taken in preserving them, these wonderful bundles of sumptuous vittles will last for a good while without any need for refrigeration. Owing to the quality of the beef, you could even add them to stew or enjoy them with cheese and crackers should you find yourself in possession of the right ingredients."	1	Jerky wrap
+
+instead of sniffing Jerky wrap:
+say "Your jerky smells of hickory, apple wood smoke, and salted beef.".
+
+Jerky wrap is a grab object.
+Usedesc of Jerky wrap is "[Jerky wrap use]";
+
+to say Jerky wrap use:
+	say "     Unpacking a fresh ribbon of glittering meat, you begin merrily gnawing on the well-seasoned slab of smoky beef, while your palate is treated to wonderous medley of aromatic herbs, rich marbled meat, and creamy tallow that seems to almost melt in your mouth with each scrumptious bite. Enthused, you ravenously rip off section after section, reveling in the texture and simple pleasure of chewing on such lovely fare. When your done, you make a mental note to thank Ava and the kittens for sharing this with you.";
+	if "Junk Food Junky" is listed in feats of Player:
+		increase morale of Player by 15;
+		PlayerEat 25;
+	else:
+		Playereat 20;
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Hearty Trail Mix"	"Cut, dried, and preserved by your cherubic kittens, this assortment of sugar-encrusted citrus fruits alongside hearty walnuts glazed in a thick sheen of golden honey is sure to make for a filling and somewhat healthy snack. Thanks to your cubs diligence, these lovely treats are sure to keep for a long time without refrigeration, though they're still somewhat sticky and just a hair dehydrating. You nevertheless look forward to munching on some when the mood strikes you."	1	Hearty Trail Mix
+
+the scent of Hearty Trail Mix is "Your trail mix smells of coiling citrus and lovely earthy tangs laced with pleasant floral scents.".
+
+Hearty Trail Mix is a grab object.
+Usedesc of Hearty Trail Mix is "[Hearty_Trail_Mix_use]";
+
+to say Hearty_Trail_Mix_use:
+	say "     Pouring out a paw-ful of the delectable preserves, you pop a few choice bits of fruit into your eager maw, delighting at the wonderful interplay of sour and sweet flavors coiling across your palate as the mouth-watering chunks of dried sugar-coated confections slowly dissolve away. Before turning your attention to the glistening sticky nuts, reverently gnawing away on their sweetened oak hulls while rich rivulets of honey coat your throat in a soothing balm as you ravenously scarf down the last few morsels.";
+	if "Junk Food Junky" is listed in feats of Player:
+		increase morale of Player by 15;
+		PlayerEat 20;
+	else:
+		Playereat 15;
+		increase morale of Player by 5;
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Rattling tin"	"An old beat-up heart shaped Valentine's candy tin, though much of its once bright red paint has peeled off and it is pitted with thumb size dents that riddle its surface. Opening it though, will take some doing as the lid is horribly deformed and dented inward in places, yet how this thing came into Ava's paws, why she chose to give it to you, and what's inside remains a mystery. Lifting it to your ear though, you can hear a trio of objects rattling around inside, perhaps you should open it and find out."	3	Rattling tin
+
+the scent of Rattling tin is "The tin smells of saponifying chocolate and cheap metal.".
+
+Rattling tin is a grab object.
+Usedesc of Rattling tin is "[tinuse]";
+
+to say tinuse:
+	say "     Wrestling with the container's lid for a spell, the thing eventually pops open with a loud metallic creak as you roughly wrench it part way off, though you're able to fully remove the top as several sections of its twisted mass end digging into its main body. You're nevertheless able to bend it back just enough to peer inside and spot several baseball sized objects tightly wrapped in a brown cloth lightly bouncing around. Extracting one, you carefully unwrap it as your eyes go wide and jaw drops ever-so-slightly as you reveal the gleaming green contours of a trio of M67 Grenades bundled in packing peanuts alongside a piece of plain white paper coiled around one of their equators. Extracting the parchment, you gently straighten it out the hold to the available light, you find the words: [']Felevia was here['] written in bold block letter alongside a simple picture of a smiling fox flashing you the thumbs ups sign emblazoned upon it in dark sharpie ink along the margins. Though you're unsure who this person is, you still pocket the grenades and the note, before tossing the empty tin to the wayside.";
+	ItemLoss Rattling tin by 1;
+	ItemGain M67 Grenade by 3;
+	
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"M67 Grenade"	"A fully functional anti-personnel fragmentation grenade widely employed during the Korean War alongside the vaunted Claymore mine as a means to counter the human wave tactics of the era. Although the metals used and exact explosive compounds may have been altered, the original design has remained more or less unchanged for the better half of a century. It's hard to say how old this particular example is, as Drake has scrubbed all the identifying markers from the Grenades chassis. In its place, is a picture of a bronze skeletal serpent coiling around the grenade's surface, its maw open and waiting to strike. Underneath its head are the words [italic type]Let's Go![roman type] written by hand in flawless cursive calligraphy."	1	M67 Grenade
+
+M67 Grenade is a grab object. It is not temporary. It is fast.
+Usedesc of M67 Grenade is "[FragOut]".
+the scent of M67 Grenade is "The grenade reeks of grease, metallic paint, and Democracy!".
+
+to say FragOut:
+	if inafight is 1:
+		choose row MonsterID from the Table of Random Critters;
+		say "     [one of]Fire in the hole![or]Frag Out![or]Grenade Out![or]Danger close![at random] You bellow, pulling the pin as hurl your grenade at your foe, shredding the beast for [bold type]150 damage[roman type] as the monster is enulfed in the blast.";
+		decrease monsterHP by 150;
+		ItemLoss M67 grenade by 1;
+	else:
+		say "     That's probably not a good idea right now, perhaps you should wait till you're in combat.";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Sundered Codex"	"A large brown bound tome with a soft silky blue spine, and a sizable well-cut sapphire inlaid with onyx worked into the shape of a dragon's eye emblazoned on its cover. Inscribed above this precious gem in shimmering golden ink are the words Sundered Codex followed by a series of vertical and horizontal lines of varying thickness, evocative of claws mark. Strangely despite its size, the tome is nearly weightless and seems to resist all attempts to damage or defunct its creamy vellum pages. At times, you can hear a rhythmic tapping emanating from the odd book, pressing your ear to the cover you almost swear it sounds like a mechanical keyboard."	0	Sundered Codex
+
+the scent of Sundered Codex is "The tome smells of old leather and taur fuckery.".
+
+Sundered Codex is a grab object. Sundered Codex is not temporary.
+Usedesc of Sundered Codex is "[SCUse]";
+
+to say SCUse:
+	say "     Flipping the cover of the book open to the table of contents, you find much of the writing illegible and at times horribly misspelled or disjointed, though as you peer just a hair closer the letters begin to swirl about the page while the black ink runs down its edges in chaotic tide. Till only a few words remain.";
+	LineBreak;
+	say "     [bold type]Which section would you like to read first?[roman type]";
+	LineBreak;
+	say "     [italic type]Author's Note: due to the lack of maintenance on the wiki this temporary stop gap item has been created to help people navigate Sundered Dragon's and JP's content, as such spoilers and exotic mechanics abound so use at your own risk[roman type].";
+	let Codex_section_Choices be a list of text;
+	add "Only the Lonely?" to Codex_section_Choices;
+	add "Drake?" to Codex_section_Choices;
+	add "Ava?" to Codex_section_Choices;
+	add "Kathy?" to Codex_section_Choices;
+	add "Dragon Raider Galaxite?" to Codex_section_Choices;
+	add "Dragon Breeder?" to Codex_section_Choices;
+	add "Hermacore?" to Codex_section_Choices;
+	add "HELP! I can't have sex with Ava!" to Codex_section_Choices;
+	add "Toggle Touched by Madness?" to Codex_section_Choices;
+	add "Switch between dom, sub, and vanilla?" to Codex_section_Choices;
+	if "Touched by Madness" is listed in feats of Player:
+		add "Cyn?" to Codex_section_Choices;
+	if "Breeder" is listed in Traits list of Ava:
+		add "Accelerate Ava's pregnancy?" to Codex_section_Choices
+	let Codex_section_Choice be what the player chooses from Codex_section_Choices;
+	if Codex_section_Choice is:
+		-- "Only the Lonely?":
+			say "     Accessible once Players have completed either Dr. Matt's quest to find Susan the deer in the park, or Dr. Mouse's initial quest, Only the Lonely is a mostly feature complete story line started by hunting for Only the Lonely out in the Dry Plains. The current F-list mostly includes Preg, F/F, F/M, ovi, lactation, involved TF's, taurs, with a minor smattering of BBW, vore, H/M, and UB content. Further, the quests offer helpful lore, items, and useful equipment that can aid you in your struggles as well as provide some guidance for new or less experienced Player who may be struggling in the early to mid game.";
+		-- "Drake?":
+			say "     The current owner and guardian of The Last Chance Motel, Augustus Drake, initially offers to buy medkits from the player in exchange for food and water. However, speaking to him without one will reveal bits of his past and the location of other traders. Later on, it's possible to befriend and even obtain a number of unique equipment alongside special events involving his adoptive daughter, Ava. Otherwise, his lover offers the chance to transform him into an angry, if amenable plaything, assuming the player's character has a pussy. Alongside a few special scenes for tauresses of the dominant and vanilla persuasion.";
+		-- "Ava?":
+			say "     Drake and Kathy's adopted daughter and the only Margay taur in existence, despite her size, Ava is skittish with a deep seeded fear of most males and herms. However, she has a certain soft spot for women, and can even accidentally turn the player into a cuddle tauress if they agree to suckle from her. Later on it is possible for pure blooded Margay taurs to unlock F-preg content by having sex with her three times, speaking with Kathy once, and walking into her room while being a pregnant pureblooded female margay taur. Doing so will start a series of walk-in events where the player can play with her and adoptive mother while they have a bun in the oven. Responding positively to Ava interest in breeding can lead her to developing a breeding kink of her which will consummate in her sending the player out to find a doctor who can help her and the Player knock one another up without becoming males or herms in the process.";
+			say "     If the Player accepts, they'll be tasked to find Doctor Medea in the [bold type]pediatric's lobby[roman type], found by hunting for the event of the same name outside the bunker. Assuming they've completed Medea's heat control quest in the high rise, though should the player have gained the UB Pred feat and choose the option [']Tell her you haven't adopted.['] a special scene with Medea will be unlocked. Doing so is not required to advance the plot, nor will having the UB Pred feat at any point be mandatory. Once this is completed the good doc will task the player with going to the warehouse district and Trevor Lab's sealed area. At the warehouse, search for an event called industrial canning facility which offers friendly pregnant Players with more than twenty kids a chance to earn a free rucksack should they choose to negotiate with the [']guards[']. Meanwhile at Trevor labs the Player can either visit Doctor Matt to learn the location of hidden sub lab alp sixty nine, or blindly brave the depth and search for the event registry location.";
+			WaitLineBreak;
+			say "     Regardless of their choice, once the lab has been located, hunt for alp sixty nine. Players with the UB pred feat and Klauz the injured felinoid though will find some special content waiting for them. Afterwards, return to Medea, hear her out, and gather up Ava at the Chance to unlock your new ovi powers. From here, new sex scenes and walk-ins will be unlocked with Ava that changes based on whether Drake's quest has been completed and he is still human. Though should Ava's lewder content not appeal to the Player, she also offers a little mini quest to raid a newsstand in the high rise for her which can reward them a decent sum of junk food and wads of cash. Lastly, though Ava abhors males and herms, she offers an abundant supple of cream to the Player via the milk Ava command which can feminize on use.";
+		-- "Kathy?":
+			say "     A spoiled rotten alleged former lioness, Kathy offers the Player a chance to turn Drake into her ideal mate once they proposition her. All for the low-low price of five units of felionoid cum obtainable by defeating felinoids in the park, or by using the Paw Off command while the player has a felinoid cock. Though only female Players will actually have the chane to bed to her, as she has no use for male, herms, or neuters. Drake will not take this well and this will lock the Player out of some of the best endings involving Ava and him. Still, she has several scenes that accommodate Tauresses and people with tails on the tail weapon list.";
+		-- "Dragon Raider Galaxite?":
+			say "     A follow up of sorts to Only the Lonely, though completing or viewing it is not required, F-list includes F/H, F/F, F/M, preg, taurs, dragons, lactation, involved TF's, TFTG, naga, and light MtF content. Dragon Raider Galaxite is started once the player reaches level fifteen by hunting for the event Holy Moly in the sewers. Assuming the Player saves Galaxite from her tentacular fate, she can be found again via an event in the beach called: Beach reunion where she'll offer the Player a chance to join her on heist of a stricken supply ship, but only after you get her some equiptment first. Before the Player sets out there give the option to potentially fuck her, or aggressively tell her they aren't interested in her. Expressing disinterest will censor her description and prevent the player character from lusting after her, this choice is permanent though. However, if the Player is pregnant, has a pussy, and the dominant feat and chooses to fuck them, they will be turned into unique infection called the Dragon Breeder, which will be covered in the Dragon Breeder section of this guide.";
+			say "     Upon accepting her quest, the Player will be told to hunt for the event Ruined Trawler in the beach area, be warned, the boss fight of the area is quite difficult as the enemies deal unblockable, un-mitigate able damage between rounds, and even high level character will find the fight tough without healing items. Although characters with strength greater than twenty can bypass the fight, this is not recommended as defeating the guards of that place is a great way to win favor with Galaxite's children. Once dealt with, the Player will be rewarded with several gill fruits and unlock the next event, Break Water Heist found in the beach area. Here, the Player can learn a bit more about Galaxite and potentially Drake if they are a pureblooded Margay taur. While pureblooded knights with the touched by madness feat can get their own unique interaction with Galaxite's children.";
+			WaitLineBreak;
+			say "     Once you arrive at the supply the Player will have a second chance to impress Galaxite's brood and perhaps even take one step closer to bed her eldest feral sea dragon son, assuming they have a cunt. As with the prior event, the faux boss fight is rather hard due to the enemy's chip damage, though the encounter can be bypassed with high, Int, Perception, or by sacrificing an eclectic prod found at the zoo. Afterwards, the Player will encounter one final road block in their mighty quest for epic loot that can be resolved with intelligence, charisma, or by letting Galaxite's kids take care of it. Upon completion of this event, the final leg of act one and the current end of her content will open up as Loot Boxes will become active. Discoverable by once more hunting in the beach area, Loot Boxes offers some unique sex scenes for male and intersex Dragontaurs, Margay Taurs, Tiger Taurs, Pather Taurs, and other non equine taurs. In addition, late stage female Margay Taurs and Dragontaurs also have their own special lewds available. Alongside a plethora of gear, items, and a rare chance to become human again, for a price...";
+		-- "Dragon Breeder?":
+			say "     A powerful evolving form gained by fucking Galaxite during the beach reunion event while having a pussy, being pregnant, and having the dominant feat. This form has its own special parallel arc from Dragon Raider Galaxite that is advanced via walk-in events which only fire while the Player is a pureblooded Dragon Breeder with pussy. In addition, Players with Strong Psyche or Weak Psyche will have special options opened to them. Much like the main story for Dragon Raider Galaxite, the first event Final Event which is started by walking into the wild Fringes section of the beach. Much like its sister event Ruined Trawler, the Player can either fight or cow the guardians of this place with high strength, yet unlike the other story line its possible to play with the Fruit bats, and later recruit them in act three. While the follow up event Point Nemo can be started upon entering the end of the beach, here Players can choose to breed and recruit several shark herms to become priestess's of their own personal.";
+			say "     Doing so also unlocks one of two new mutations based on whether or not the Player has both the Vore Pred and UB Pred feats. Either way another tough, but skippable fight awaits assuming the Player is willing to submit to a growing presence in the back of their mind, or bluff their way out of it with high charisma or perception. Afterwards, the Player will be presented with two choices, continue serving their patron or spurn them and devolve back into a puny human. Should they continue to serve that last section of act one, Just Rewards will activate and can be started by visiting the rocky cliffs area in the beach zone. Here knowledge of their patron can be gained, powerful loot obtained, secrets of their cult uncovered, and a chance to seize godly power for themselves unveiled.";
+		-- "Hermacore?":
+			say "     A combination of a profoundly vorny TF and potent weapon, the Hermacore form can be obtained after speaking with human Drake about his eyes. Doing so will activate an event called: Old One Eye out in the Dry Plains. Once found, Players with the Vore Pred and UB predator feat will have the option to stealth vore, UB, or fight a manticore with Drake's Knife lodged in its head. Choosing to devour it will cause Players without the safe appetite feat will be fully transformed into a Hermacore, in addition to gaining an item which will TF them into one over time. The infection comes with its own custom heat cycle and feats to help the Player grow more powerful by consuming their foes. Otherwise it's possible to liberate Drake's Blade without corrupting it into the Tainted Blade by unbirthing the manticore, or simply fighting it. Should the player leave them be though, a follow up event will occur in the Last Chance the next time they visit.";
+		-- "HELP! I can't have sex with Ava!":
+			say "     Have you tried buying her dinner first? But in all seriousness, here's your Pussy Pass, just don't come at her with a dick again, please.";
+			ItemGain Pussy Pass by 1;
+		-- "Toggle Touched by Madness?":
+			say "     Wanna peek behind the veil or retreat to comforts of the banal well... [bold type]YOUR WISH IS GRANTED![roman type] Be warned: this option may be be removed in future updates as new, more engaging means of obtaining this feat that don't involve shoving a snake up your ass becomes available.";
+			if "Touched by Madness" is listed in feats of Player:
+				FeatLoss "Touched by Madness";
+			else:
+				FeatGain "Touched by Madness";
+		-- "Switch between dom, sub, and vanilla?":
+			say "     [bold type]What would you like to do?[roman type] [line break]";
+			let coin_flip_Choices be a list of text;
+			add "Go Vanilla?" to coin_flip_Choices;
+			if "Dominant" is not listed in feats of Player:
+				add "Become a dom?" to coin_flip_Choices;
+			if "Submissive" is not Listed in Feats of Player:
+				add "Get subby?" to coin_flip_Choices;
+			let coin_flip_Choice be what the player chooses from coin_flip_Choices;
+			if coin_flip_Choice is:
+				-- "Go Vanilla?":
+					say "     Your wish is Granted!";
+					if "Submissive" is Listed in Feats of Player:
+						remove "Submissive" from feats of Player;
+					if "Dominant" is listed in feats of Player:
+						remove "Dominant" from feats of Player;
+				-- "Become a dom?":
+					say "     Very well!";
+					if "Submissive" is Listed in Feats of Player:
+						remove "Submissive" from feats of Player;
+					add "Dominant" to feats of Player;
+				-- "Get subby?":
+					say "     It shall be done!";
+					if "Dominant" is listed in feats of Player:
+						remove "Dominant" from feats of Player;
+					add "Submissive" to feats of Player;
+		-- "Cyn?":
+			say "     Though she is not one of Sundered_Dragon's creations, this glitchy fox herm can be recruited in the Ghost Fair section of the State Fair via walk-in once the Player has reached level 20 and gained the Touched by Madness feat. On arrival to this unusual place, the Player will be assaulted by vulpine Hallucination who, if defeated and fucked several times will join the Player as a potent pet and mobile shopkeeper. Though her little shop of horror may be pricey her services are quite powerful, additionally some of her scenes and items have been Co-authored by Sundered_Dragon. However, should the Player beat her without playing with Cyn too many times, she will become permanently hostile towards them in her own eldritch way.";
+
+
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"ANGRY DRAGON"	"debug tool to make shit work faster!"	0	ANGRY DRAGON
+
+the scent of ANGRY DRAGON is "BAD PLAYER! You should not be reading this!".
+
+ANGRY DRAGON is a grab object. ANGRY DRAGON is not temporary.
+Usedesc of ANGRY DRAGON is "[fuckingworkUse]";
+
+to say fuckingworkUse:
+	say "     Just Work!";
+	now Libido of Ava is 28;
+	TraitGain "Breeder" for Ava;
+
+
 
 Ava ends here.

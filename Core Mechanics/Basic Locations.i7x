@@ -155,6 +155,7 @@ Object	Name
 Grey Abbey Library	"Grey Abbey Library"
 
 Grey Abbey Library is a room.
+The invent of Grey Abbey Library is { "Sundered Codex" }.
 Grey Abbey Library is fasttravel.
 Grey Abbey Library is sleepsafe.
 Description of Grey Abbey Library is "[abbey desc]".
