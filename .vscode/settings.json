@@ -15,5 +15,6 @@
     },
     "cSpell.enableFiletypes": [
         "inform7extension"
-    ]
+    ],
+    "search.useIgnoreFiles": false
 }
