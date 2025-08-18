@@ -6247,7 +6247,7 @@ to say YourAdHereEight:
 	WaitLineBreak;
 	say "     Nodding your head, you tell her that you will, and perhaps before you go, you can give her another litter to keep her company. Afterall, she looks cute with a belly full of cubs, you add, running your paws over the supple curves of your mate's lush lower half. 'Aw, you're such caring mate,' Ava purrs as her mitts join yours as she invitingly pampers her silky and plush rows of bestial breasts. 'You know just how to cheer me up!' she swoons in a bright loving cadence as she longingly eyes her room. 'But first,' Ava huffs in a dutiful tone as pushes herself to her paws and dusts herself off, 'I have to do my chores, wouldn't want to set a bad example for the kittens.' Rumbling in agreement, you reply there's no rush, you should probably go check in on the girls, make sure everyone's getting along and not setting any fires unsupervised, before wishing her well before and parting ways, for the moment at least.";
 	LineBreak;
-	say "     [Italic type]Hint: You will need to be knocked up to view the next event.[roman type]"
+	say "     [Italic type]Hint: You will need to be knocked up to view the next event.[roman type]";
 	now Just Work is resolved;
 	Playereat 10;
 	now Libido of Ava is 0;
@@ -8629,24 +8629,6 @@ to say SCUse:
 					add "Submissive" to feats of Player;
 		-- "Cyn?":
 			say "     Though she is not one of Sundered_Dragon's creations, this glitchy fox herm can be recruited in the Ghost Fair section of the State Fair via walk-in once the Player has reached level 20 and gained the Touched by Madness feat. On arrival to this unusual place, the Player will be assaulted by vulpine Hallucination who, if defeated and fucked several times will join the Player as a potent pet and mobile shopkeeper. Though her little shop of horror may be pricey her services are quite powerful, additionally some of her scenes and items have been Co-authored by Sundered_Dragon. However, should the Player beat her without playing with Cyn too many times, she will become permanently hostile towards them in her own eldritch way.";
-
-
-
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"ANGRY DRAGON"	"debug tool to make shit work faster!"	0	ANGRY DRAGON
-
-the scent of ANGRY DRAGON is "BAD PLAYER! You should not be reading this!".
-
-ANGRY DRAGON is a grab object. ANGRY DRAGON is not temporary.
-Usedesc of ANGRY DRAGON is "[fuckingworkUse]";
-
-to say fuckingworkUse:
-	say "     Just Work!";
-	now Libido of Ava is 28;
-	TraitGain "Breeder" for Ava;
-
 
 
 Ava ends here.
