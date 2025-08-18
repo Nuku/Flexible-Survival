@@ -8567,8 +8567,6 @@ to say SCUse:
 	add "Switch between dom, sub, and vanilla?" to Codex_section_Choices;
 	if "Touched by Madness" is listed in feats of Player:
 		add "Cyn?" to Codex_section_Choices;
-	if "Breeder" is listed in Traits list of Ava:
-		add "Accelerate Ava's pregnancy?" to Codex_section_Choices
 	let Codex_section_Choice be what the player chooses from Codex_section_Choices;
 	if Codex_section_Choice is:
 		-- "Only the Lonely?":
