@@ -57,6 +57,8 @@ to ActofKindnessEvent:
 					else if fightoutcome is 30: [fled]
 						say "     You realize the tides are changing and run for the hills. You see the giant looking at you in confusion - but before he can say anything he looks back to what you're running from. What follows is what sounded like the smashing and crushing of the feral infected. But you don't know who will be the victor, you hope they won't hate you entirely for almost leaving them for death.";
 						now Resolution of Act of Kindness is 1; [Helped. Fled.]
+					move Knott to Snowy Forest Trail;
+					move GivingFirbolg to Snowy Forest Trail;
 				-- "Save Yourself.":
 					LineBreak;
 					say "     You make a break for it, you don't know them enough and it can all be some giant plot to slowly transform the remaining uninfected for all you know. You see the giant looks at you but before he can say anything he looks back to what you're running from. What follows is what sounds like the smashing and crushing of the feral infected. But you don't know who will be the victor, you hope they won't hate you entirely for almost leaving them for death.";
