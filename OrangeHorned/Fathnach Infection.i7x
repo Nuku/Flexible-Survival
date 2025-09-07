@@ -1,5 +1,86 @@
 Version 1 of Fathnach Infection by OrangeHorned begins here.
 
+Section 1 - Creature Responses
+
+fathnachdefeatnum is a number that varies.
+nofathnachsex is a number that varies.
+
+to say losetofathnach:
+	now nofathnachsex is 0;
+	let T be 1;
+	if Player is submissive, increase T by 1;
+	if Player is mpreg_ok, increase T by 1;
+	if anallevel is 3, increase T by 1;
+	if anallevel is 1, now T is 0;
+	say "     Having defeated you,The Fathnach man looms over you, a predatory gleam in his eyes. I won, so now its time to do your Big Bro a favor, your gonna love it!";
+	if Player is male: [Male]
+		say "     With your exhausted and beaten body, you couldnt resist him as he pulls your clothes off, revealing your [Cock of Player] to the cold air. 'You had me pent up from the start of our play session, its only fair you help me right?' after all.. you look like your gonna need a good drink to help you get back up'.";
+		if Breast size of Player is 0:
+			say "     'Mmmph, after all you need some man-milk to grow big and strong' He smashes his gigantic moobs into your flat chest, pushing aggressively into your frame. ";
+		else if Breast size of Player > 4:
+			say "     'Looks like you been feeding people like a proper bro, but lemme show you a better way!'";
+		else:
+			say "     The Fathnach mashes his pecs into your chest, 'My nipples have been eager for a milking~'";
+		say "     With a excited Moo, the Giant-kin rubs their cock, using some sort of magic on his girthy rod to transform it into a slick pussy, you faintly see their eyes under their bangs reveal their crazed nature. His rugged hands rub at your shaft, laying his pussy lips in between his folds. 'Nothin' better in the world than some unprotected breeding, you better bet your fucking me till im swollen with little calves!.' With little fanfare, you watch your cock go in their heavily lubricated depths with one go- causing involuntary moans from the both of you.";
+		say "     The Firbolg hypnotically rides you, pulling his nipples tightly to make milk go all over the place. Even if you wanted to latch on- the frantic riding of the cow-man keeps you unable to latch on. His tight pussy warmly strangles your cock smashing your balls with every slam of his girthy frame onto yours.'This is only gonna end when you give big bro a nice warm load, so just cough it up!'";
+		say "     He was going to crush you under all that weight, the pleasure hits you hard, your body entirely stiff as you cum huge wads of cum straight into their fertile folds. The Firbolg lets out a long moo as he straddles you for a little longer. Once he was sure you are out of cum, the man stands up, rubbing his battered pussy eagerly, 'Aaaah, that's the stuff...' you couldn't catch what they mumble to themself as they walk off into the city.";
+		CreatureSexAftermath "Fathnach" receives "PussyFuck" from "Player";
+		say "     Before you could really understand all that's going on, the beast throws you to the ground, he turns around to straddle you with his rear to your face just so you can see his twitching asshole leak like a pussy. 'See that? Your about to give me a good filling!' You get no say as he consumes your face into his stretchy ass,his musk overpowering your braincells quickly into submission. You never wanted anymore than to fuck such a perfect hole.";
+		say "     When he sees your [Cock of Player] at full mast, he finally gives you fresh air, your face covered in his lubed-ass juice keeps your cock leaking, He doesn't bother with any foreplay as his hole sucks it in one go, quickly bouncing away, giving frantic pants of joy from the sensation of a full ass. It doesn't take long from his tight hole squelching greedily to have you churning ropes inside. He doesn't seem to notice as he continues riding you until you pass out from exhaustion, you only come too when he's fully gone, leaving your body a mess from his sweat- which oddly enough fills you with some energy to get back up again even after all of that.";
+		CreatureSexAftermath "Fathnach" receives "AssFuck" from "Player";
+	else if Player is female:
+		say "     <Editor's Note: Sorry, this scene is still WIP.>";
+	else if Player is neuter:
+		say "     Pulling your clothes off to see no genital's gets a sound of dissatisfaction from the giant-kin. 'Oh, but how are you gonna have fun without any funstick or fun-flaps? Ah! I know!' He quickly smashes your face into his giant pecs, nursing you like a mother a child as you gulp down the refreshing drink by force. your entire body tingles with energy as the man chuckled at your body's changes. 'Come find me again when your ready for more real fun, you need to rest after drinking so much anyway~' He walked away smiling with a dopey faced grin, playing with the tit that had your bite marks on it.";
+		infect "Fathnach";
+
+to say beattheFathnach:
+	say "     'Awww I lost' He sighs, ears hanging low as he knelt to the ground, 'Well, how do you wanna play with your Big Brother?' ";
+	say "     [bold type]If you want to do something, he's listening..[roman type][line break]";
+	let Fathnach_Choices be a list of text;
+	if Player is Male or Player is Herm:
+		add "Fuck his pussy" to Fathnach_Choices;
+		add "Fuck his ass." to Fathnach_Choices;
+	add "Make him Shoo" to Fathnach_Choices;
+	let Fathnach_Choice be what the player chooses from Fathnach_Choices;
+	if Fathnach_Choice is:
+		-- "Fuck his pussy":
+			LineBreak;
+			say "[Plow_Fathnach]";
+		-- "Fuck his ass.":
+			LineBreak;
+			say "[AssFuck_Fathnach]";
+		-- "Make him Shoo":
+			LineBreak;
+			say "     You tell him to beat it, the Fathnach whimpering with his ears lowered, walking off into the infected city.";
+
+to say Plow_Fathnach:
+	say "     You tell him to turn his cock once again into a cunt, seeing as he clearly wants to be bred so badly. The infected Giant-kin eagerly shifts nether regions, showing off his tight lower lips for your pleasure. What follows is a quick session of fucking that involving you smashing your head between their moobs, arms wrapped into their love handles as the squelching of their wet cunt drives you deeper into madness.";
+	say "     You completely lose your sense of preservation, licking wildly at their body as his musk overwhelms you. It takes little time before your balls squeeze, filling up your partner with the load they deserve for such a amazing body. 'Hoooh....im gonna have strong calves thanks to you... I need to rest here for a bit', leaving him on the street, your continue your journey.";
+	CreatureSexAftermath "Fathnach" receives "PussyFuck" from "Player";
+	infect "Fathnach";
+
+to say AssFuck_Fathnach:
+	say "     You make them turn their dumptruck globes around, presenting you with a giant donut of a anus. You give it a few licks before jamming your [Cock of Player] inside, the bull-man wildly yelps and throws his body back into yours- the spent energy of the battle having no effect on their constantly hyperactive sex drive. They cum three times into the pavement before your able to finally reach yours. You Giant-kin on the floor as you continue your journey.";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Fathnach";
+
+Section 2 - Creature Insertion
+
+to say Fathnachdesc:
+	say "     You turn to the corner in the High Rise into a behemoth of a infected, the 10 foot tall Firbolg chuckles as he drools. 'Oh, another brother to play with! Big Bros in need of help.... Come here~' His tone of voice had no ounce of malicious intent, but from the swaying of his tail and his muscles flexing, it's clear he sees you as his next target. Squeezing his pecs in anticipation, he begins his assault!";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Fathnach"	"[PrepCombat_Fathnach]"
+
+to say PrepCombat_Fathnach:
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Male";
+	setmongender 3;
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -8,11 +89,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 when play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false; [This should always say False. You don't need to know why, just remember it!]
-	now Species Name entry is "Fathnach";
-	add "Fathnach" to infections of NatureList;
-	add "Fathnach" to infections of MaleList;
-	add "Fathnach" to infections of Bovinelist;
-	add "Fathnach" to infections of MagicalList;
+	now Species Name entry is "Fathnach"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Fathnach" to infections of BipedalList;
 	add "Fathnach" to infections of OtherworldlyList;
 	add "Fathnach" to infections of HermList;
@@ -22,92 +99,89 @@ when play begins:
 	add "Fathnach" to infections of Birthlist;
 	add "Fathnach" to infections of MpregList;
 	now Name entry is "Fathnach"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "A Bovine-looking Giant who is a bit of a himbo, onlt in the worse ways possible due to their daunting size and strength.";
-	now enemy Name entry is "Fathnach";
-	now enemy type entry is 0;
-	now attack entry is "[one of]The Fathnach slams into you and pins you to the ground for a moment, with your face between his pecs![or]The Fathnach grabs you and tosses you side to side![or]The Fathnach bashes at you with his powerful fists![or]The wild creature slams his body into you, grinding his large, stiff canine cock against you as he crushes you in his arms, tossing you to the ground with a coating of pre across your stomach![at random]";
-	now defeated entry is "With a exhausted sigh the giant falls on its ass in a daze. You survived the horny beasts advances!"; [ Text when monster loses. This plays when you win the fight!]
-	now victory entry is "'Oh finally, I get to claim you as mine, come'ere cutie!' Either willing or not, your dragged to a more closed off area nearby before the Fathnach has its way with you";
-	[Will need to make the victory entry up above more detailed as well as the infection, for now will just have a base infection if you have a penis]
-	now desc entry is "A Bovine-looking Giant comes barreling down towards you, eyes completely grazed over with the feral lusts of the city.";
+	now enemy title entry is "";
+	now enemy Name entry is "Fathnach"; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
+	now attack entry is "[one of]The Fathnach slams into you and pins you to the ground for a moment smooshing you into his sweaty crotch![or]The Fathnach pulls you into a bone crushing hug![or]The Fathnach slams his body into you, grinding his crotch fervently into your body before your able to recover, leaving you smelling like him![at random]";
+	now defeated entry is "[beattheFathnach]"; [ Text when monster loses. This plays when you win the fight!]
+	now victory entry is "[losetoFathnach]"; [ Text when monster wins. This plays when you lose or submit.]
+	now desc entry is "[Fathnachdesc]"; [ Description of the creature when you encounter it. This plays before you start a fight.]
 	now face entry is "that of a Fathnach, A very bulky face with slight stubble to compliment a more masculine body type"; [ Face description, format as "Your face is [Face of Player]." ]
-	now body entry is " now one of blueish green skin that makes you look like that of the mountainous forests, your giant pecs and ass bubble from your giant body that could feed a entire family of people. Your arms and legs jiggle until you flex them to become a iron wall of defense";  [Body description, format as "Your body is [Body of Player.]"]
-	now skin entry is "that of a Fathnatch, soft to the touch, you could run your fingers over your body for hours if time wasnt a ongoing issue."; [ Skin. Format as Your skin is [Skin of Player.]" ]
+	now body entry is "now one of blueish green skin that makes you look like that of the mountainous forests, your giant pecs and ass bubble from your giant body that could feed a entire family of people. Your arms and legs jiggle until you flex them to become a iron wall of defense";  [Body description, format as "Your body is [Body of Player.]"]
+	now skin entry is "that of a Fathnatch, soft to the touch, you could run your fingers over your body for hours if time wasn't a ongoing issue."; [ Skin. Format as Your skin is [Skin of Player.]" ]
 	now tail entry is "Your large behind was signed to milk the cocks of those in the city and leave their balls completely empty, your hole itself puckers as you marvel at your mounds, with the cute little bovine tail wagging from your amusement."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
-	now cock entry is "thick"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
-	now face change entry is "at first your nose begins to grow more large, then your facial features and ears become more more cow like in nature as you are helpless to this new bovine themed facial structure!"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
-	now body change entry is "your body balloons out as it transformed your chest into bountiful milk jugs, your muscles jiggle violently as the fat wrap perfectly to let it become hard or soft on a flex, by the time its finished you almost worry that your old clothes may no longer fit if you got even a slightly bit bigger"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
-	now skin change entry is "your skin tingles to something that was smooth as it was tough, you're prone to sweating all of a sudden at the slightest of movements as the hair on your body grows rugged"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
-	now ass change entry is "it becomes rounded and bouncy, with just enough muscle to maintain its shape, topped with a bovines tail that is easy to store away, it wiggles around depending on your mood"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
-	now cock change entry is "your cock becomes thick and meaty"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
-	now str entry is 50; [These stats affect the creature's combat potential when you encounter it as a monster.]
-	now dex entry is 15; [Try not to make the values substantially high.]
-	now sta entry is 25; [If you make them too high, the fight becomes far too hard.]
-	now per entry is 8; [Bonus points if they match the creature's personality!]
-	now int entry is 5;	[Like this setup would be a strong, medium fast himbo with a lot of stamina and bad people skills.]
-	now cha entry is 25;
-	now sex entry is "Both"; [ Infection will move the Player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now HP entry is 80; [ The monster's starting HP. ]
-	now lev entry is 11; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 20; [ Monster's average damage when attacking. ]
-	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... This determines where the creature will appear as an enemy. "Nowhere" means they can't be "hunted" and won't show up during "explore" commands.]
+	now cock entry is "[one of]bulky[or]drooling[or]thick[at random]"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
+	now face change entry is "it stretches and warps, growing and pulling forward into a short ursine mouth. Your  teeth sharpen into points and your lips develop a little bit of give, all the better for baring your teeth. Two fluffy rounded ears sprout from the top of your head, twitching at the slightest noise"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "it becomes hulking and weighty, yet cut and muscular. You broad shoulders and strong muscles peter off in a V-shape toward your waist, where a six pack sits. Your fingers grow claws, and the tips of them sport soft pads. Your feet become wider, with sharp nails and spread paws to support your weight"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "it grows slightly damp, as though you're prone to sweating, and grows a thick layer of fluffy fur that soaks up the scents and moisture from it"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "it becomes rounded and bouncy, with just enough muscle to maintain its shape, topped with a nub of a tail that sits at the apex"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "takes on a distinctly bovine shape. It has a distinct funky smell that pours off of it no matter what you do, like you've been at the gym for hours without a shower"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
+	now str entry is 25; [These stats affect the creature's combat potential when you encounter it as a monster.]
+	now dex entry is 10; [Try not to make the values substantially high.]
+	now sta entry is 22; [If you make them too high, the fight becomes far too hard.]
+	now per entry is 10; [Bonus points if they match the creature's personality!]
+	now int entry is 6;	[Like this setup would be a strong, medium fast himbo with a lot of stamina and bad people skills.]
+	now cha entry is 8;
+	now sex entry is "Male"; [ Infection will move the Player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 77; [ The monster's starting HP. ]
+	now lev entry is 5; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 9; [ Monster's average damage when attacking. ]
+	now area entry is "High Rise"; [ "Outside" "Mall" "Park" "Beach" etc... This determines where the creature will appear as an enemy. "Nowhere" means they can't be "hunted" and won't show up during "explore" commands.]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now Cock Length entry is 10; [ Length infection will make cock grow to if cocks. ]
-	now Ball Size entry is 2; [ Cock width, more commonly used for ball size. ]
-	now Nipple Count entry is 0; [ Number of nipples the infection will give a Player. ]
+	now Cock Length entry is 15; [ Length infection will make cock grow to if cocks. ]
+	now Ball Size entry is 8; [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 2; [ Number of nipples the infection will give a Player. ]
 	now Breast Size entry is 0; [ Size of breasts the infection will try to attain. ]
-	now Male Breast Size entry is 2; [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 20; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 4; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex the infection will try to give a Player. ]
-	now SeductionImmune entry is false; [For now..wink]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex the infection will try to give a Player. ]
+	now SeductionImmune entry is false; [Whether or not the creature is immune to the the "tease" command.]
 	now libido entry is 40; [ Target libido the infection will rise towards. ]
-	now loot entry is "broken fathnach g-string"; [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "fathnach milk"; [Item given when using the "milk yourself" command in game.]
-	now CumItem entry is "fathnach cum"; [Item given when using the "Jerk Off" command in game.]
-	now TrophyFunction entry is "[GenerateTrophyList_Fathnach]"; [Points to a list of items you can get whe the creature is defeated.] [UNSURE WHAT THIS MEANS]
-	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]jiggly[or]beefy[at random]";
-	now type entry is "Giant-kin"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now loot entry is "Fathnach Tuft Hair"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 42; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "Fathnach Cum Pollen"; [Item given when using the "milk yourself" command in game.]
+	now CumItem entry is "Fathnach Milk"; [Item given when using the "Jerk Off" command in game.]
+	now TrophyFunction entry is "[GenerateTrophyList_Fathnach]"; [Points to a list of items you can get whe the creature is defeated.]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]muscled[or]beefy[or]muscular[at random]";
+	now type entry is "Fathnach"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is true; [Whether the creature is magical or not.]
-	now resbypass entry is true; [Determines whether the creature can infect while ignoring the researcher feat. Usually false.]
 	now non-infectious entry is false; [A switch to determine whether the creature infects players who have sex with them.]
 	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default"; [Alternative combat. New writers should not mess with this. Leave it default.]
 	now BannedStatus entry is false; [Leave on false. The game will ban the character based on player choices.]
 
-
 Table of Game Objects (continued)
 name	desc	weight	object
-"broken fathnach g-string"	"A broken g-string from one of the Fathnach."	0	broken fathnach g-string
+"fathnach tuft"	"A tuft of fur that looks like it has been pulled out of the coat of a fathnach. It's nicely soft."	0	fathnach tuft
 
-broken fathnach g-string is a grab object.
-Usedesc of broken fathnach g-string is "[fathnachgstringUse]".
+fathnach tuft is a grab object.
+Usedesc of fathnach tuft is "[FathnachTuftUse]".
 It is temporary.
 
-to say fathnachgstringUse:
-	say "Holding the tiny piece of fabric between your fingers, you stroke over it. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+to say FathnachTuftUse:
+	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Fathnach";
 
-instead of sniffing broken fathnach g-string:
-	say "     Smells like a Fathnach.";
+instead of sniffing Fathnach Tuft:
+	say "     The fur has a very strong, animal-like scent.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"fathnach cum"	"A plastic bottle containing some slimy white fluid. It bears the label 'Fathnach Cum'."	0	fathnach cum
+"Fathnach Cum Pollen"	"A plastic bottle containing cum with bits of yellow pollen orbs inside, labeled 'Fathnach Cum Pollen'."	0	Fathnach Cum Pollen
 
-fathnach cum is a grab object.
-fathnach cum is cum.
-fathnach cum is infectious.
-Strain of fathnach cum is "Fathnach".
-Usedesc of fathnach cum is "[fathnach cum use]".
+Fathnach Cum Pollen is a grab object.
+Fathnach Cum Pollen is infectious.
+Strain of Fathnach Cum Pollen is "Fathnach".
+Usedesc of Fathnach Cum Pollen is "[FathnachCumPollenuse]".
 
-to say fathnach cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+to say FathnachCumPollenuse:
+	say "Lifting the plastic bottle to your mouth may have not been the best idea, but it sure tastes like it. A sweet tasting honeydew with a hint of floral notes spreads into your body, you feel yourself tingling all over with excitement- almost with a thirst for more. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
+
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -117,19 +191,20 @@ fathnach milk is a grab object.
 fathnach milk is milky.
 fathnach milk is infectious.
 Strain of fathnach milk is "Fathnach".
-Usedesc of fathnach milk is "[fathnach milk use]".
+Usedesc of fathnach milk is "[Fathnach Milk Use]".
 
-to say fathnach milk use:
+to say Fathnach Milk Use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
+
 to say GenerateTrophyList_Fathnach: [The list of item drops available to players after defeating the creature! You can make things as rare or as common as you like. Items must have an entry to drop, so don't make things up randomly without creating the item first!]
 	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
 	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
-		add "broken fathnach g-string" to CombatTrophyList;
+		add "Fathnach Tuft" to CombatTrophyList;
 	if a random chance of (40 + LootBonus) in 100 succeeds:
-		add "clean bandages" to CombatTrophyList;
+		add "Fathnach Cum Pollen" to CombatTrophyList;
 	if Debug is at level 10:
 		say "DEBUG: Trophy List: [CombatTrophyList].";
 
