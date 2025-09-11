@@ -166,7 +166,7 @@ to say ElvenHunterVictoryMenu:
 				now sextablerun is 1;
 				if nam is "Fuck him against a tree":
 					say "[Castien_Fucked_Anal]";
-				else if nam is "Fuck him on his back":
+				else if nam is "Tell him to take you (vaginal)":
 					say "[Castien_Fucked_Vaginal]";
 				else if nam is "Let him caress your sexless form":
 					say "[Castien_Stroking]";

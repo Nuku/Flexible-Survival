@@ -311,6 +311,8 @@ Include Fair Events by Sarokcat.
 Include Female Dorm Events by Prometheus.
 Include Feral Events by Guest Writers.
 Include Fire House by Kaleem Mcintyre.
+Include Firbolg Quests by Orangehorned.
+Include Firbolg Tapes by Orangehorned.
 Include Food and Water Finding by Nuku Valente.
 Include Forest Events by Aureas Gigas.
 Include Forest Events by Defth.
@@ -428,6 +430,7 @@ Include Awesome Tree by Damaged.
 Include Badger by StripeGuy.
 Include Bald Eagle by Stripes.
 Include Batcubus by Blaydrex.
+Include Beag Infection by OrangeHorned.
 Include Biolizardman Brute by Gherod.
 Include Brown Bear by Nuku Valente.
 Include Beaver by Stripes.
@@ -494,6 +497,7 @@ Include Elven Hunter by Wahn.
 Include Enhanced Chimera by Stripes.
 Include Erica by Wahn.
 Include Ewe by Luneth.
+Include Fathnach Infection by OrangeHorned.
 Include Feline Gymnast by Guest Writers.
 Include Female Husky by Nuku Valente.
 Include Fennec by Stripes.
@@ -750,6 +754,7 @@ Include Zebra by Luneth.
 
 Part 4 - NPCs
 
+
 Include Absinthe by Bigfish15079.
 Include Ace by Aureas Gigas.
 Include Adam by Wahn.
@@ -867,6 +872,7 @@ Include Genevieve by Prometheus.
 Include Garrett by SgtPepper234.
 Include Gerty by Qazarar.
 Include Glory by Wahn.
+Include Giving by Orangehorned.
 Include Good Alexandra by Prometheus.
 Include Gordon by Rikaeus.
 Include Gregory by Wahn.
@@ -918,6 +924,7 @@ Include Kathy by Sundered Dragon.
 Include Keiran by Voidsnaps.
 Include Kerr & Talov by Wahn.
 Include Kerry by Voidsnaps.
+Include Knott by Orangehorned.
 Include Kosk by Voidsnaps.
 Include Krampus by Wahn.
 Include Kristen by Stripes.
