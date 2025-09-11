@@ -1174,7 +1174,7 @@ Dreamy Twins	"Dreamy Twins"
 Dreamy Twins is a dreamevent.
 ResolveFunction of Dreamy Twins is "[DreamEvent Dreamy Twins]".
 Sarea of Dreamy Twins is "Dreamland".
-Dreamy Twins is inactive;
+Dreamy Twins is inactive.
 
 to say DreamEvent Dreamy Twins:
 	say "     The events that follow are almost incomprehensible, a strange mishmash of previous encounters with the sorceress and the strange logic of a dream. Speaking in some sort of unknown language, the drake makes a demand of you, and when you fail to respond she springs into an attack on you, and a pitched battle begins. For a moment you hold the advantage over the figment drake, but you are instead surprised by a second drake behind you grabbing a hold of your impressive rear with both hands, and giving a squeeze. The shock is enough to distract you, and the first drake rushes forward, and smothers you with her cleavage. Surrounded by the pair, your own dream-addled mind concludes that you've lost fair and square, and gives in.";
@@ -1220,7 +1220,7 @@ Big Ass Library	"Big Ass Library"
 Big Ass Library is a dreamevent.
 ResolveFunction of Big Ass Library is "[DreamEvent Big Ass Library]".
 Sarea of Big Ass Library is "Dreamland".
-Big Ass Library is inactive;
+Big Ass Library is inactive.
 
 to say DreamEvent Big Ass Library:
 	say "     As you tumble gently into sleep, your thoughts drift into lands far beyond reality, softly enveloped in the fog of dream. As lucidity slips away, you find yourself in the almost-familiar halls of the library, though it all seems larger than life in some way, with rows of books stretching on towards forever. Though your mind is clouded, you have a certainty that you're looking for something amidst the shelves, and so without prompting you start to walk. As you travel, you note that something seems just slightly off, though you can't put your finger on it – not with your surroundings, but with yourself. The act of walking itself seems somehow more difficult, and perhaps you're moving in a different way, but there's just no easy way for you to figure it out without a way to examine yourself from afar.";
@@ -1243,7 +1243,7 @@ Wallstuck is a situation.
 ResolveFunction of Wallstuck is "[ResolveEvent Wallstuck]".
 The level of Wallstuck is 5.
 Sarea of Wallstuck is "Outside".
-Wallstuck is inactive;
+Wallstuck is inactive.
 
 to say ResolveEvent Wallstuck:
 	say "     As you are exploring the run down city streets, you take passing note of a hole that's been smashed through the side of a nearby building, at first mere idle curiosity. As your walking leads you closer, however, you catch a glimpse of the room beyond, and while the exact contents are unclear, there seems to be a great many containers stacked inside. Your attention officially grabbed, you examine the building more closely and notice the faded sign above the door you had almost missed, marking this as a small corner market, and meaning that there could be valuable supplies inside the room.";
