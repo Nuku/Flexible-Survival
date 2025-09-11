@@ -726,7 +726,7 @@ instead of conversing the Tanuki Mom:
 	clear the screen and hyperlink list;
 
 To say TanukiSurvivalTalk:
-	if tanukigender is 2: [Tanuki Dad!]
+	if tanukigender is 1: [Tanuki Dad!]
 		if Humanity of Player < 20, now Humanity of Player is 20;
 		say "'It's a tough world out there.' He nods appreciatively. 'The most important part is that you keep your chin up.'";
 		If humanity of Player < 40:
@@ -758,7 +758,7 @@ To say TanukiSurvivalTalk:
 			say "He cranes his head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good father is a good father, no matter how big or small he might be.' He wags a finger as he talks, nodding to himself. 'Now as for advice...'";
 
 to say TanukiRomanceTalk:
-	if tanukigender is 1:
+	if tanukigender is 2:
 		say "'It[']s a strange world out there.' She sighs wistfully, twirling a few whiskers. 'I Don't need to remind you of that. Still...' She crouches facing you. 'Love is still there, but just as fleeting. Cheap love, that's easier than ever, but real love? Just as far away.";
 	else:
 		say "Tanuki Dad looks like someone forgot to tell him what to say. He makes unsure noises and worries his fingers for a few moments. 'And that's how it's done!' he suddenly exclaims as if he had provided any wisdom.";

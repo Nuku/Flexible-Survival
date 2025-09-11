@@ -179,7 +179,7 @@ instead of fucking Thunderbolt:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if Ariana is in Thunderbolt's Stable:
+	if Ariana is in Thunderbolt's Stable and Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "A foursome";
 		now sortorder entry is 1;
@@ -308,7 +308,7 @@ to say ArianaDesc:
 instead of conversing the Ariana:
 	say "     You walk up and say hello to the lovely lioness. 'Hey how have you been sweetie?' After some casual talk you eventually brooch asking her about herself. She looks a little surprised but gives you a toothy smile. 'Well, I used to be a gymnast here, but now I sort of just hang around campus, beating sis at sports, annoying the football team and fucking the stallion,' she says, biting a finger and chuckling.";
 
-instead of fucking Ariana:
+instead of fucking Ariana when Player is female: [if Player is not female, "fuck Ariana" only displays default text now]
 	say "     What exactly do you plan on doing with the young lioness?";
 	LineBreak;
 	now sextablerun is 0;
@@ -398,7 +398,7 @@ to say EresDesc:
 instead of conversing the Eres:
 	say "     You walk up and say hello to the lovely lioness. Eres pokes her head up from a small journal she was writing in and gives you a shy smile. [first time]'Oh, hello there I don't think we've actually formally met. I'm Eres.' [only]She lays a paw out to shake which you do. After some casual talk you ask her about herself. She flashes you a coy smile. 'I uses to study economics here, you know before everything happened. I suppose now I just take it day by day, usually in the library reading about the past.' She gazes back down to her journal smiling fondly.";
 
-instead of fucking Eres:
+instead of fucking Eres when Player is female: [if Player is not female, "fuck Eres" only displays default text now]
 	say "     What exactly do you plan on doing with the young lioness?";
 	LineBreak;
 	now sextablerun is 0;
