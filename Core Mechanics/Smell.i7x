@@ -65,6 +65,14 @@ carry out heresniffing:
 [	repeat with X running through all the visible things in the Location of Player:
 		try sniffing X; ]
 
+instead of sniffing a room (called x):
+	if location of Player is not x:
+		say "You can't smell that place from here.";
+	else if scent of x is empty:
+		say "This place smells as you'd expect.";
+	else:
+		say "[scent of x][line break]";
+
 
 Section 2 - The player
 
