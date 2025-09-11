@@ -14,7 +14,7 @@ understand "microwave [owned grab object]" as purifying.
 
 Check Purifying:
 	if Lab Microwave is not visible and Brennan's Microwave is not visible and Library Microwave is not visible, say "Now where do you want to microwave that?" instead;
-	if Player is in Breakroom and findwires is not 2 and fixedgens is not 2, say "The power isn't on." instead;
+	if Player is in Breakroom and (findwires is not 2 or fixedgens is not 3), say "The power isn't on." instead;
 
 Carry out Purifying:
 	if noun is cum:
