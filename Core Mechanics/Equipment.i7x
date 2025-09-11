@@ -2292,7 +2292,6 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "beige bermuda shorts"	"A pair of wide beige shorts. They look fitting to be worn by a tourist or vacationer. Judging by the shorts appearance, it's [']unisex['] and pretty [']basic['] looking."	1	 beige bermuda shorts
 "flowered bermuda shorts"	"A pair of wide shorts covered in patterns of leaves and bright flowers. They look fitting to be worn by a tourist or vacationer. Judging by the shorts appearance, it's [']feminine['] and pretty [']basic['] looking."	1	 flowered bermuda shorts
-"striped board shorts"	"A pair of striped board shorts. They have three broad stripes that are red, white, and beige. Judging by the appearance of the shorts, they're [']masculine['] and pretty [']sporty['] looking."	1	striped board shorts
 
 beige bermuda shorts is a grab object.
 beige bermuda shorts is equipment.
