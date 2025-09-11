@@ -80,7 +80,7 @@ When Play begins:
 	now Cunt Tightness entry is 20;
 	now SeductionImmune entry is true;
 	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "-";
+	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "Dragon Breeder milk";
 	now CumItem entry is "Dragon Breeder cum"; [ Item to be given to the player if they have this infection and jerk off. ]
