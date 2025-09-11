@@ -566,14 +566,17 @@ to say ResolveEvent Garden Veggies:
 		say "     As you're searching around the area for supplies, you find a small garden in the back yard of a home. It's only got a dozen or so plants, but they're surprisingly still alive despite the heat wave and dry weather. And even better than that, they're fruiting. Only a little of the produce is ripe, but you snag what's ready to be picked. You try to remember to return here again once the rest of the veggies have had time to mature. Between the tomatoes, beans and peas, you should have enough for a meal. It'll certainly be more nutritious than some of your meals lately.";
 		ItemGain food by 1;
 		now lastgardenveg is turns;
+		increase gardenveg by 1;
 	else if gardenveg is 1:
 		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to check on it again. You are very pleased to see that more of the vegetables are ready to be picked. They seem to be growing unusually quickly, but certainly look normal and safe enough to eat. You pick some more of the produce, tomatoes and beans mostly this time. It's enough for another vegetarian meal to keep you fed for another day.";
 		ItemGain food by 1;
 		now lastgardenveg is turns;
+		increase gardenveg by 1;
 	else if gardenveg is 2:
 		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to check on it again. Since your last visit, more vegetables have ripened and are ready to be picked. Very thankful for having found these plants, you gather up another batch of veggies, taking even more this time. You dig up several of the carrots, having become large enough to pick, another couple of tomatoes and more beans and peas. With so much of the produce mature and ready, you get enough for two meals this time.";
 		ItemGain food by 2;
 		now lastgardenveg is turns;
+		increase gardenveg by 1;
 	else if gardenveg is 3:
 		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to make a quick detour to go check on it. Finding more ripe veggies, you prepare to pick more supplies, but are interrupted by a loud bleat as the back door of the home behind you opens and an angry sheep bursts forth. 'So you're the thief who's been stealing from my garden! Oh, you are so fucked now,' the sheep says, launching itself at you.";
 		if MaleList is banned:
