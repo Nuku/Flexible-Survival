@@ -2459,9 +2459,9 @@ to say DoranNeutral_69: [BODY MODDED]
 			DoranVoreProtocol;
 		else:
 			say "     '[one of]Oh[or]Hm[or]Yes[at random], [one of]I hope [DoranPlayerRegard] had plenty of fun[or]I hope [DoranPlayerRegard]'s [gdragon] didn't make too much of a mess[or][DoranPlayerRegard] is always fun to play with[at random]!' [if tempnum is 1]Helping you off[else]Climbing off of you[end if], Doran goes about checking you over and cleaning you up before allowing you to gather your things and go about your business once more, the [gdragon] no doubt needing a bit of time to clean up the rest of the mess.";
-	if Player is male:
+	if tempnum3 is 1:
 		NPCSexAftermath Doran receives "OralCock" from Player;
-	else:
+	else if tempnum3 is 2:
 		NPCSexAftermath Doran receives "OralPussy" from Player;
 	NPCSexAftermath Player receives "OralCock" from Doran;
 
