@@ -155,9 +155,9 @@ to say MelanieTalk3: [ask to meet Mr. B]
 				say "     The croc waits for his offer to sink in, then raises a hand as you start to say something. 'No need to reply right now - just remember the offer. And if you have doubts... well, those people out there who do nothing but fuck in the street... what do they care about their old houses? They don't, that's what. And if anyone is sane enough to step forward after all - good for them. Just a little payment to the official decontamination manager and it'll all be sorted out right quick.' He gives a shrug and brushes the matter aside - though you'd bet that the [']little['] payment will be anything but that. After a few more words exchanged with the large reptile, you get the impression that your audience is over and leave his office. A short while later, you're back in the reception area.";
 				LineBreak;
 				If findwires is 2 and fixedgens > 2: [power on] [power on]
-					say "     To get the power back to work, it might be a good idea to check the power plant. Thinking back to a city tour you took some years back, you remember that the scenic [bold type]plant overview[roman type] isn't too far from the library. The other half of Branson's requirements should hopefully only include a quick stop at the [bold type]City Hall Offices[roman type] in the high rise district.";
-				else:
 					say "     Thinking about what to do next, a quick stop at the [bold type]City Hall Offices[roman type] in the [bold type]High Rise District[roman type] might be a good idea. Surely that shouldn't be that dangerous.";
+				else:
+					say "     To get the power back to work, it might be a good idea to check the power plant. Thinking back to a city tour you took some years back, you remember that the scenic [bold type]plant overview[roman type] isn't too far from the library. The other half of Branson's requirements should hopefully only include a quick stop at the [bold type]City Hall Offices[roman type] in the high rise district.";
 				now City Hall Offices is active;
 				now HP of Melanie is 2; [listened to the plan]
 			else:

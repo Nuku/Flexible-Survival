@@ -586,7 +586,7 @@ Atticus's Bedroom is sleepsafe.
 Description of Atticus's Bedroom is "[AtticusRoomDesc]".
 
 after looking while player is in Atticus's Bedroom:
-	if findwires < 2 and fixedgens < 3:
+	if findwires < 2 or fixedgens < 3:
 		project the Figure of Map_RedLight_Nopower_3_icon;
 	else:
 		project the Figure of Map_RedLight_3_icon;

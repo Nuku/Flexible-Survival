@@ -27,13 +27,13 @@ Exploring the City Dummy Room is south of Red Light Street.
 The marea of Red Light Street is "Red".
 
 after looking while player is in Entrance to the Red Light District:
-	if findwires < 2 and fixedgens < 3:
+	if findwires < 2 or fixedgens < 3:
 		project the Figure of Map_RedLight_Nopower_6_icon;
 	else:
 		project the Figure of Map_RedLight_6_icon;
 
 to say RedLightDesc:
-	if findwires < 2 and fixedgens < 3:
+	if findwires < 2 or fixedgens < 3:
 		project the Figure of Map_RedLight_Nopower_6_icon;
 	else:
 		project the Figure of Map_RedLight_6_icon;
@@ -53,7 +53,7 @@ The earea of Boundary Street East is "Red".
 Description of Boundary Street East is "[RedLightBoundaryEastDesc]".
 
 after looking while player is in Boundary Street East:
-	if findwires < 2 and fixedgens < 3:
+	if findwires < 2 or fixedgens < 3:
 		project the Figure of Map_RedLight_Nopower_5_icon;
 	else:
 		project the Figure of Map_RedLight_5_icon;
@@ -74,7 +74,7 @@ The earea of Dingy Alley is "Red".
 Description of Dingy Alley is "[DingyAlleyDesc]";
 
 after looking while player is in Dingy Alley:
-	if findwires < 2 and fixedgens < 3:
+	if findwires < 2 or fixedgens < 3:
 		project the Figure of Map_RedLight_Nopower_4_icon;
 	else:
 		project the Figure of Map_RedLight_4_icon;
@@ -92,7 +92,7 @@ Description of Burned-Out Chapel is "[chapelplacedesc]".
 earea of Burned-Out Chapel is "Red".
 
 after looking while player is in Burned-Out Chapel:
-	if findwires < 2 and fixedgens < 3:
+	if findwires < 2 or fixedgens < 3:
 		project the Figure of Map_RedLight_Nopower_2_icon;
 	else:
 		project the Figure of Map_RedLight_2_icon;
@@ -118,7 +118,7 @@ Sacristy is a room.
 Sacristy is northeast of Burned-Out Chapel.
 
 after looking while player is in Sacristy:
-	if findwires < 2 and fixedgens < 3:
+	if findwires < 2 or fixedgens < 3:
 		project the Figure of Map_RedLight_Nopower_1_icon;
 	else:
 		project the Figure of Map_RedLight_1_icon;
@@ -137,7 +137,7 @@ Darius's Crib is southeast of Boundary Street East. It is sleepsafe.
 Description of Darius's Crib is "[DariusCribDesc]".
 
 after looking while player is in Darius's Crib:
-	if findwires < 2 and fixedgens < 3:
+	if findwires < 2 or fixedgens < 3:
 		project the Figure of Map_RedLight_Nopower_3_icon;
 	else:
 		project the Figure of Map_RedLight_3_icon;
@@ -178,7 +178,7 @@ The earea of Boundary Street West is "Red".
 Description of Boundary Street West is "[RedLightBoundaryWestDesc]".
 
 after looking while player is in Boundary Street West:
-	if findwires < 2 and fixedgens < 3:
+	if findwires < 2 or fixedgens < 3:
 		project the Figure of Map_RedLight_Nopower_7_icon;
 	else:
 		project the Figure of Map_RedLight_7_icon;
@@ -199,7 +199,7 @@ The earea of Northern Street 1 is "Red".
 Description of Northern Street 1 is "[RedLightNorthStreet1Desc]".
 
 after looking while player is in Northern Street 1:
-	if findwires < 2 and fixedgens < 3:
+	if findwires < 2 or fixedgens < 3:
 		project the Figure of Map_RedLight_Nopower_9_icon;
 	else:
 		project the Figure of Map_RedLight_9_icon;
@@ -220,7 +220,7 @@ The earea of Northern Street 2 is "Red".
 Description of Northern Street 2 is "[RedLightNorthStreet2Desc]".
 
 after looking while player is in Northern Street 2:
-	if findwires < 2 and fixedgens < 3:
+	if findwires < 2 or fixedgens < 3:
 		project the Figure of Map_RedLight_Nopower_10_icon;
 	else:
 		project the Figure of Map_RedLight_10_icon;
@@ -241,7 +241,7 @@ The earea of Crimson Street is "Red".
 Description of Crimson Street is "[RedLightCrimsonStreetDesc]".
 
 after looking while player is in Crimson Street:
-	if findwires < 2 and fixedgens < 3:
+	if findwires < 2 or fixedgens < 3:
 		project the Figure of Map_RedLight_Nopower_11_icon;
 	else:
 		project the Figure of Map_RedLight_11_icon;
