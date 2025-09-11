@@ -346,14 +346,18 @@ an everyturn rule: [TODO: add chances for Tyke and the bitches to appear]
 			if Player is in Darius's Crib:
 				project the Figure of Darius_face_icon;
 				say "     Coming into this place from outside, an anthro Dalmatian grins broadly as he finds you waiting for him. 'Hey there, I'm Darius. Looks like someone really needs his fix. What can I do for ya, dawg?'";
+				now HP of Darius is 1;
+				now PlayerMet of Darius is true;
 			else if Player is in Boundary Street East:
 				project the Figure of Darius_face_icon;
 				say "     An anthro Dalmatian comes strolling down the street from the west in an unhurried tempo, then stops for a second to say, 'Hey there, I'm Darius. You look like you could use some of my goods. Wanna come in and buy something?' He doesn't wait for a reply and simply enters an apartment building in the southeast, leaving you to decide if you want to follow after him.";
+				now HP of Darius is 1;
+				now PlayerMet of Darius is true;
 			else if Player is in Entrance to the Red Light District:
 				project the Figure of Darius_face_icon;
 				say "     An anthro Dalmatian pushes himself off the wall he was leaning against just as you arrive. He gives you a nod in greeting and says, 'Hey there, I'm Darius. You look like you could use some of my special goods. Why don't you come join me in my crib and we can talk business?' Not waiting for a reply, he wanders off to the east in an unhurried tempo. Watching the muscled canine go, you can't help but feel like he is daring any stupid creature with ideas to attack him.";
-			now HP of Darius is 1;
-			now PlayerMet of Darius is true;
+				now HP of Darius is 1;
+				now PlayerMet of Darius is true;
 		else:
 			if Player is in Darius's Crib:
 				project the Figure of Darius_face_icon;
