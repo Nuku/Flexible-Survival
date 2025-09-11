@@ -271,7 +271,7 @@ to say HellDemonCun:
 		say "     As tempting as that sounds, you think it's time to get going. Grabbing your things, you say your goodbyes to the demon. 'See you soon, gorgeous. This was fun... maybe next time we can skip right into the fun, eh?' He throws a chuckle as he gets up, soon retreating back into the shadows as you proceed with your usual affairs.";
 	else:
 		say "     You have more to do than to satisfy a devil's necessities. He did well with yours, but now it's time to leave. 'Aw, you're going to leave me like this?' he asks with disappointment in his tone, his raging cock pulsing incredibly hard before your eyes. 'It's not right to tease a demon like this... You better pray that I never gain the upper hand.' Despite his threats, you don't give in, instead grabbing your things and leaving the area. You're so mean, but you have a feeling he likes that.";
-		CreatureSexAftermath "Hellfire Demon" receives "OralPussy" from "Player";
+	CreatureSexAftermath "Hellfire Demon" receives "OralPussy" from "Player";
 
 to say HellDemonPussy:
 	project Figure of HellfireDemon_hard_icon;

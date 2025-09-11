@@ -583,8 +583,8 @@ to say AvaSex2: [Taur 69]
 	say "     The not-so-subtle sensation wells in your breast. Though you try to push back against it to squeeze out just a little bit more time together. The sensation of Ava's satin walls clamping down on your eager oral muscle and the gentle caress of her paws on your exotic body push you over edge. As you cum, loosing a feral roar and squirting a heavy trickle of girl honey into Ava's waiting maw as your body is wracked by waves of molten pleasure. The heavyset cat-girl's loving trill soon turns into a fierce cry of relief as she finishes, basting the inside of your hungry muzzle in exotic sweet flavor. Panting happily as you feel catty contentedness washing over you like a cool breeze, you roll on to your back wiping the sweat from your brow and licking your chops clean. Ava collapses beside you, a happy dopy look is plastered on her face as she pets your lower body affectionately while cleaning any excess fluids for your pelt. For a time, no words pass between you. You're both more than content to simply cuddle in your shared many-limbed embrace and caress each other's silken pelts as you wallow in the afterglow of your affair. And sometime later, when the strength returns to your limbs the two of you finally get up, feeling refreshed and ready to face whatever the nanite apocalypse wants to throw at you next.";
 	PlayerEat 15;
 	PlayerDrink 15;
-	NPCSexAftermath Player receives "PussyOral" from Ava;
-	NPCSexAftermath Ava receives "PussyOral" from Player;
+	NPCSexAftermath Player receives "OralPussy" from Ava;
+	NPCSexAftermath Ava receives "OralPussy" from Player;
 	turn the Player into a "Margay Taur";
 	choose a row with Name of "Margay Taur" in Table of Random Critters;
 	if scalevalue of Player > 5:
@@ -624,7 +624,7 @@ to say AvaSex3: [Eat Ava out]
 	say "     Her pulse quickens, breath coming in loud, heavy pants as she writhes at your loving touch. Her whole body quakes with unrestrained passion. Ava roars, 'Oh Mommy!' as she cums, her face burning a bright red under her exotic pelt. Her claws dig in deeper to the back of your hands as you push her over the edge. It doesn't bother though, you're too absorbed in the succulent texture of Ava's wide on to even notice the warm crimson streaks snaking down your arms as he claws rake your [SkinName of player] skin. Your pink treat is all that you care about, that and the delectable trickle of girl juices that rest in your tummy like a warm calming dollop of honey. 'Ah, thanks I REALLY needed that,' Ava sighs, losing her hold on your throat as you clean off the last few drops of girl cum off her sopping feral slit. No problem, besides you got something out of it too, you joke, rubbing your sated stomach. 'Tee-hee I'm glad you enjoyed it,' Ava purrs, brushing her hind-paw against your midriff.";
 	WaitLineBreak;
 	say "     Oh that feels so weird, you joke as her silken paw pads and teasing pelt massage your sternum. 'Sorry, I didn't mean to-,' Ava replies, drawing her paws back in a panic. Hey, you didn't tell her to stop. You playfully chastise, shooting Ava an annoyed look. 'Oh, is this better?' Ava purrs, happily kneading your torso with her massive forepaws. Much better, you moan lustfully, loving the interplay of her razor sharp claws and smooth feline pad glossing over the [SkinName of player] hide of your [Breast size desc of Player] breasts. 'Well, mommy gives me lots of practice,' Ava replies, her face awash with genuine affection. Almost melting at her touch, you tell her that it shows, and ask if she'd be willing to give you a full demonstration sometime. 'Sure but not right now. Kitty is getting a little sleepy,' Ava yawns, stretching herself out like a cat about to sun herself. Fine, you tell her, giving her heavy paws a playful tussle, but you expect a full body massage one of these days.";
-	NPCSexAftermath Ava receives "PussyOral" from Player;
+	NPCSexAftermath Ava receives "OralPussy" from Player;
 	if Lust of Ava < 3 and Thirst of Ava is 1:
 		increase Lust of Ava by 1;
 
@@ -751,8 +751,8 @@ to say Avasex6:
 		say "     Sadly though, you begin to feel that ever-present pull of the city and wider world tugging you away from your mate. Much as you may like to stay with her, you can't, at least not yet. There are things you have to see, people you need to save, tasks that must be finished, you tell yourself as you, almost regretfully, begin disentangling yourself from your lover's caring hold. For a moment though, Ava looks like she wants to protest this, but keeps her peace, mewling in a sad yet understanding tone, 'It's alright,' as she rubs her chin along your head, 'just come back soon, and be safe ok? If not for me, then the kittens, I don't want them to lose you...' Nodding, you pull yourself and hug her with every fiber of your being, telling her you will. It may take awhile, but you'll be back.";
 		PlayerEat 15;
 		PlayerDrink 15;
-		NPCSexAftermath Player receives "PussyOral" from Ava;
-		NPCSexAftermath Ava receives "PussyOral" from Player;
+		NPCSexAftermath Player receives "OralPussy" from Ava;
+		NPCSexAftermath Ava receives "OralPussy" from Player;
 		turn the Player into a "Margay Taur";
 		choose a row with Name of "Margay Taur" in Table of Random Critters;
 		if scalevalue of Player > 5:
@@ -790,8 +790,8 @@ to say Avasex6:
 		say "     Eventually, you begin to feel the nagging call of the city, and its lesser inhabitants, nipping at the back of your mind. Though a part of you wants to ignore it and lay here swaddled in your mate's embrace for just a moment longer, you know that you can't, at least not yet. There are things you must do, people that need your help, and a whole weirdly flexible world for you to explore and share with your little ones. Still, such knowledge does little to ease pangs of your parting, you muse, gazing at your beautiful mate cuddled up next you. Perhaps sensing this, Ava flashes you a brave smile as she presses her gravid middle against yours, saying in a reassuring tone, 'It's ok, I know you can't stay too long, but don't worry, the kittens and I will be here when you get back.' Nodding, you hug her one last time, eager to wallow just a moment in your growing family presence before you set off, feeling full, content, and just the right amount of sticky between the knees.";
 		PlayerEat 15;
 		PlayerDrink 15;
-		NPCSexAftermath Player receives "PussyOral" from Ava;
-		NPCSexAftermath Ava receives "PussyOral" from Player;
+		NPCSexAftermath Player receives "OralPussy" from Ava;
+		NPCSexAftermath Ava receives "OralPussy" from Player;
 		turn the Player into a "Margay Taur";
 		choose a row with Name of "Margay Taur" in Table of Random Critters;
 		if scalevalue of Player > 5:
@@ -837,8 +837,8 @@ to say Avasex6:
 		say "     Eventually, you begin to feel the nagging call of the city, and its lesser inhabitants, nipping at the back of your mind. Though a part of you wants to ignore it and lay here swaddled in your mate's embrace for just a moment longer, you know that you can't, at least not yet. There are things you must do, people that need your help, and a whole weirdly flexible world for you to explore and share with your little ones. Still, such knowledge does little to ease pangs of your parting, you muse, gazing at your beautiful mate cuddled up next you. Perhaps sensing this, Ava flashes you a brave smile as she presses her gravid middle against yours, saying in a reassuring tone, 'It's ok, I know you can't stay too long, but don't worry, the kittens and I will be here when you get back.' Nodding, you hug her one last time, eager to wallow just a moment in your growing family presence before you set off, feeling full, content, and just the right amount of sticky between the knees.";
 		PlayerEat 15;
 		PlayerDrink 15;
-		NPCSexAftermath Player receives "PussyOral" from Ava;
-		NPCSexAftermath Ava receives "PussyOral" from Player;
+		NPCSexAftermath Player receives "OralPussy" from Ava;
+		NPCSexAftermath Ava receives "OralPussy" from Player;
 		turn the Player into a "Margay Taur";
 		choose a row with Name of "Margay Taur" in Table of Random Critters;
 		if scalevalue of Player > 5:
@@ -873,8 +873,8 @@ to say Avasex7:
 	say "     Of course, you reply, snuggling up beside her protectively and nuzzling your head along the beautiful rows of her bountiful breasts. Your muzzle sinks ever-so-slightly into her furry chest pillows while your paws lovingly massage her lengthy core as this shared moment stretches on. The concept of time and its passage hold little sway over you, suns could rise, moons could fall, shadows can stretch and recede. Yet, only the tender purrs of your mate, the low sloshing of her milk tanks, and the sensation of her pelt intermingling with yours holds meaning to you as you lie there warm and safe beside you mate. This provincial bliss is short-lived though, as your wanderlust builds, and the nagging call of obligations sinks its uncaring claws into the recess of your mind. Perhaps sensing the conflicting tension, Ava cracks open her eyes, and fixes with a knowing look, whispering, 'It's alright. [if Libido of Ava > 1]Just come back and see m-, I mean us soon[else if Libido of Ava is 0]Just come back soon[end if],' as she cups her palm along the side of your face and lovingly strokes your whiskers. Chuffing, you lean forward and give her a quick goodbye kiss on nose[if Libido of Ava > 1] and lean over her middle and plant a few tender kisses on the slumbering forms within[end if] before setting out.";
 	PlayerEat 15;
 	PlayerDrink 15;
-	NPCSexAftermath Player receives "PussyOral" from Ava;
-	NPCSexAftermath Ava receives "PussyOral" from Player;
+	NPCSexAftermath Player receives "OralPussy" from Ava;
+	NPCSexAftermath Ava receives "OralPussy" from Player;
 	turn the Player into a "Margay Taur";
 	choose a row with Name of "Margay Taur" in Table of Random Critters;
 	if scalevalue of Player > 5:

@@ -625,7 +625,7 @@ to say wyvfem_2: [Oral Giving Cunt]
 	say "     Taking a moment to catch your breath and clean yourself of the substantial mess she's made, you set off and leave the exhausted and spent monster, satisfied with your work... Albeit a bit aroused yourself from all of it.";
 	increase Libido of Player by 3;
 	if PlayerCunnilunguses > 0:
-		CreatureSexAftermath "Wyvern" receives "OralPussy" from "Player"; [SexAftermath NYI: Player gives the wyvern a cuntjob aka cunnilingus]
+		CreatureSexAftermath "Player" receives "OralPussy" from "Wyvern"; [SexAftermath NYI: Player gives the wyvern a cuntjob aka cunnilingus]
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
