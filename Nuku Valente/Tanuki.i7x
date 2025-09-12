@@ -64,7 +64,7 @@ to say ResolveEvent Tanukibell:
 			now tanukigender is 1;
 			now Tanuki Dad is in shinto shrine;
 		else if Playerinput matches "m" or playerinput matches "2":
-			say "'He affects a falsetto even as [']she['] clears her throat. 'There we are.' Bending over and wrapping his arms around his great balls, he lifts them up, obscuring his form for just a moment, but it[']s long enough to reveal a new Tanuki, with large round breasts that entirely ignore such trivial things as gravity, wide hips and narrow waist. With a little sway of her hips, she flutters her lashes at you. 'Momma Tanuki is here to help you, dear.' It doesn't help that she still faintly sounds like a man playing the part, though she appears ready to do her best.";
+			say "He affects a falsetto even as [']she['] clears her throat. 'There we are.' Bending over and wrapping his arms around his great balls, he lifts them up, obscuring his form for just a moment, but it's long enough to reveal a new Tanuki, with large round breasts that entirely ignore such trivial things as gravity, wide hips and narrow waist. With a little sway of her hips, she flutters her lashes at you. 'Momma Tanuki is here to help you, dear.' It doesn't help that she still faintly sounds like a man playing the part, though she appears ready to do her best.";
 			now tanukigender is 2;
 			now Tanuki Mom is in shinto shrine;
 		else:
@@ -101,7 +101,7 @@ understand "sacrifice [grab object]" as sacrificing.
 
 check sacrificing:
 	if noun is not owned, say "You don't have that." instead;
-	if the player is not in Shinto Shrine, say "I see nothing to sacrifice to here" instead;
+	if the player is not in Shinto Shrine, say "I see nothing to sacrifice to here." instead;
 	if noun is not demand of Shinto Shrine, say "That is not what the spirit wants!" instead;
 
 carry out sacrificing:
@@ -185,7 +185,7 @@ check cockgrowing:
 
 carry out cockgrowing:
 	if Player is not male:
-		say "Your tanuki magic grows a cock for you as you form a tiny set a balls for yourself as well.";
+		say "Your tanuki magic grows a cock for you as you form a tiny set of balls for yourself as well.";
 		now Cock Count of Player is 1;
 		now Ball Size of Player is 1;
 	increase Cock Length of Player by a random number between 1 and 5;
@@ -209,7 +209,7 @@ carry out cockshrinking:
 		follow the cock descr rule;
 	else:
 		follow the cock descr rule;
-		say "Your tanuki magic surges down into your male meat as it begin to shrink rapidly! Your [descr] [Cock of Player] cock settles with a last twitch!";
+		say "Your tanuki magic surges down into your male meat as it begins to shrink rapidly! Your [descr] [Cock of Player] cock settles with a last twitch!";
 
 breastgrowing is an action applying to nothing.
 
@@ -240,7 +240,7 @@ carry out breastshrinking:
 		follow the breast descr rule;
 	else:
 		follow the breast descr rule;
-		say "Your tanuki magic surges up into your chest as it begin to shrink rapidly, leaving you with [descr] breasts!";
+		say "Your tanuki magic surges up into your chest as it begins to shrink rapidly, leaving you with [descr] breasts!";
 
 Section 2 - Creature Insertion
 
@@ -726,7 +726,7 @@ instead of conversing the Tanuki Mom:
 	clear the screen and hyperlink list;
 
 To say TanukiSurvivalTalk:
-	if tanukigender is 1: [Tanuki Dad!]
+	if Tanuki Dad is in Shinto Shrine: [Tanuki Dad!]
 		if Humanity of Player < 20, now Humanity of Player is 20;
 		say "'It's a tough world out there.' He nods appreciatively. 'The most important part is that you keep your chin up.'";
 		If humanity of Player < 40:
@@ -736,46 +736,46 @@ To say TanukiSurvivalTalk:
 				increase Humanity of Player by 50;
 				follow turnpass rule;
 			else:
-				say "'Aw, be that way, but the offer's open, champ!' When he thinks you aren't looking at him directly, he speaks more quietly to himself, 'nailed it, I'm a great dad.'";
+				say "'Aw, be that way, but the offer's open, champ!' When he thinks you aren't looking at him directly, he speaks more quietly to himself, 'Nailed it, I'm a great dad.'";
 		if scalevalue of Player < 4:
 			say "He tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original dad, and that's alright. My biologicals are all off that way.' He points to the East. 'I invited them to come along, but they said this place was too far. Maybe I'll find another place that's closer to them? Nevermind me, this is about you!' He pats your shoulders softly. 'Now let's see...'";
 		else:
 			say "He cranes his head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good father is a good father, no matter how big or small he might be.' He wags a finger as he talks, nodding to himself. 'Now as for advice...'";
 	else: [Tanuki Mom!]
 		if Humanity of Player < 20, now Humanity of Player is 20;
-		say "'It's a tough world out there.' He nods appreciatively. 'The most important part is that you keep your chin up.'";
+		say "'It's a tough world out there.' She nods appreciatively. 'The most important part is that you keep your chin up.'";
 		If humanity of Player < 40:
-			say "His wet nose twitches softly. 'Looks like you're letting things get to you. I know how to relax you. Go on, play a few notes.' He gestures broadly to his expansive, if clothed, belly. 'Beat a few bars and you'll be right as rain.'";
+			say "Her wet nose twitches softly. 'Looks like you're letting things get to you. I know how to relax you. Go on, play a few notes.' She gestures broadly to her expansive, if clothed, belly. 'Beat a few bars and you'll be right as rain.'";
 			if the player consents:
-				say "You reach your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [BodySpeciesName of Player in lower case] hands out and pat lightly at his belly. He reaches with his furry paws and pats at your hands in return. 'Go on, harder, and faster. Think of a song!' You play all the harder, thinking up a [one of]lively[or]rhythmic[or]random[at random] song to play with his belly serving as the drum. He manages to somehow hum along with the song in your head despite you not sharing it. Time passes without you noticing. By the time the drum session is over, you feel more grounded and together.";
+				say "You reach your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [BodySpeciesName of Player in lower case] hands out and pat lightly at her belly. She reaches with her furry paws and pats at your hands in return. 'Go on, harder, and faster. Think of a song!' You play all the harder, thinking up a [one of]lively[or]rhythmic[or]random[at random] song to play with her belly serving as the drum. She manages to somehow hum along with the song in your head despite you not sharing it. Time passes without you noticing. By the time the drum session is over, you feel more grounded and together.";
 				increase Humanity of Player by 50;
 				follow turnpass rule;
 			else:
-				say "'Aw, be that way, but the offer's open, champ!' When he thinks you aren't looking at him directly, he speaks more quietly to himself, 'nailed it, I'm a great dad.'";
+				say "'Aw, be that way, but the offer's open, champ!' When she thinks you aren't looking at her directly, she speaks more quietly to herself, 'Nailed it, I'm a great mom.'";
 		if scalevalue of Player < 4:
-			say "He tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original dad, and that's alright. My biologicals are all off that way.' He points to the East. 'I invited them to come along, but they said this place was too far. Maybe I'll find another place that's closer to them? Nevermind me, this is about you!' He pats your shoulders softly. 'Now let's see...'";
+			say "She tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original mom, and that's alright. My biologicals are all off that way.' She points to the East. 'I invited them to come along, but they said this place was too far. Maybe I'll find another place that's closer to them? Nevermind me, this is about you!' She pats your shoulders softly. 'Now let's see...'";
 		else:
-			say "He cranes his head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good father is a good father, no matter how big or small he might be.' He wags a finger as he talks, nodding to himself. 'Now as for advice...'";
+			say "She cranes her head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good mother is a good mother, no matter how big or small she might be.' She wags a finger as she talks, nodding to herself. 'Now as for advice...'";
 
 to say TanukiRomanceTalk:
-	if tanukigender is 2:
-		say "'It[']s a strange world out there.' She sighs wistfully, twirling a few whiskers. 'I Don't need to remind you of that. Still...' She crouches facing you. 'Love is still there, but just as fleeting. Cheap love, that's easier than ever, but real love? Just as far away.";
+	if Tanuki Mom is in Shinto Shrine:
+		say "'It's a strange world out there.' She sighs wistfully, twirling a few whiskers. 'I don't need to remind you of that. Still...' She crouches facing you. 'Love is still there, but just as fleeting. Cheap love, that's easier than ever, but real love? Just as far away.'";
 	else:
 		say "Tanuki Dad looks like someone forgot to tell him what to say. He makes unsure noises and worries his fingers for a few moments. 'And that's how it's done!' he suddenly exclaims as if he had provided any wisdom.";
 
 to say TanukiPerfumeTalk:
-	say "'Oh, this?' She holds out an arm for you to get a sniff of. You are drawn away, visions of [one of]fishing in a calm bay[or]roasting meat on a warm summer afternoon[or]sharing a quality drink with friends[or]a world where it isn[']t a struggle to survive[at random] dance in your mind.";
+	say "'Oh, this?' She holds out an arm for you to get a sniff of. You are drawn away, visions of [one of]fishing in a calm bay[or]roasting meat on a warm summer afternoon[or]sharing a quality drink with friends[or]a world where it isn't a struggle to survive[at random] dance in your mind.";
 	increase Morale of Player by 10;
 	say "Your moment of peace is shattered by her tapping you. 'Don't get lost in that. Besides, I'm not going anywhere.'";
 
 to say TanukiCookingTalk:
 	if "Tanuki Salts" is listed in Feats of Player:
-		say "'You already have my salts. I'm Tanuki, not a cooking spirit.' She shakes her ladle at you lightly, flecks of fluid littering the area. 'I Don't have other cooking tips for you.'";
+		say "'You already have my salts. I'm Tanuki, not a cooking spirit.' She shakes her ladle at you lightly, flecks of fluid littering the area. 'I don't have other cooking tips for you.'";
 	else:
 		say "     'Cooking?' Her face lights up in a great jovial smile. 'Eating is one of my favorite things, and cooking leads to eating, so it makes sense that I happen to enjoy that too.' She waves her ladel at you lightly. 'Now, I prefer when someone else cooks for me, but sometimes you just have to do it yourself, and doing it with someone you like is almost as good. Fortunately, you're here.'";
-		say "     She turns away, her 'coon tail swaying behind her. 'Now, this is where you expect me to say something about [']cooking with love['], but you can forget that.' She produces a small paper packet from her apron and shakes it towards you, producing a rattle that implies it's filled with some small particles, like salt perhaps? 'This has run in the family... Mmm...' She taps her chin with a single finger, her voice dipping a moment. 'When did I steal these...? Oh, nevermind. I've had them for ages!'";
+		say "     She turns away, her [']coon tail swaying behind her. 'Now, this is where you expect me to say something about [']cooking with love['], but you can forget that.' She produces a small paper packet from her apron and shakes it towards you, producing a rattle that implies it's filled with some small particles, like salt perhaps? 'This has run in the family... Mmm...' She taps her chin with a single finger, her voice dipping a moment. 'When did I steal these...? Oh, nevermind. I've had them for ages!'";
 		wait for any key;
-		say "     She flings the packet at you suddenly. 'And now, I entrust them to you. Don't worry, I have a spare.' She jiggles a packet that hadn't been in her hand a moment before. 'But what use is a spice you Don't know how to use? Let's get to cooking.' She whistles cheerfully as she pulls out a massive wok and slams it down on a fire that sprouts into being just in time and she begins tossing in all manner of vegetables and fish, frying it all up as she sprinkles the seasoning in time with the song she sings. 'The song is not optional,' she reminds before continuing the ballad to the food, rocking left and right as she works. 'Get that for me.' She points to a shelf just behind you that surely hadn't been there.";
+		say "     She flings the packet at you suddenly. 'And now, I entrust them to you. Don't worry, I have a spare.' She jiggles a packet that hadn't been in her hand a moment before. 'But what use is a spice you don't know how to use? Let's get to cooking.' She whistles cheerfully as she pulls out a massive wok and slams it down on a fire that sprouts into being just in time and she begins tossing in all manner of vegetables and fish, frying it all up as she sprinkles the seasoning in time with the song she sings. 'The song is not optional,' she reminds before continuing the ballad to the food, rocking left and right as she works. 'Get that for me.' She points to a shelf just behind you that surely hadn't been there.";
 		wait for any key;
 		say "     As soon as you get it in her hand, she upends the bamboo container into the sizzling wok, producing a fresh wave of scents and steam. 'Almost done! We are going to eat like kings today. Oh, oh a queen? Royalty! We'll do that for sure.' She tosses the cube aside, it vanishing before it hits the ground. With a grand swirl of the wok, the food sloshes up over the side, and falls to strike two plates, becoming two perfectly assembled offerings. Tanuki mom grabs one and stuffs it towards you without delay. 'Eat up!'";
 		say "     The food makes your tongue burn, but only a moment before it yields to a powerful wave of savory umami notes that chase your hunger away. You feel entirely refreshed after consuming this divine meal. 'Now you can make some yourself,' she advises, her voice a bit off as she's in the middle of stuffing her face.";
@@ -785,10 +785,10 @@ to say TanukiCookingTalk:
 
 
 to say TanukiLadelTalk:
-	say "'This thing?' She waves it at you, whatever strange goopy stuff was clinging to it sent in arcs through the area. 'It's a bit of a... secret? No, that's the wrong world. How about... I'll tell you when you get older?'";
+	say "'This thing?' She waves it at you, whatever strange goopy stuff was clinging to it sent in arcs through the area. 'It's a bit of a... secret? No, that's the wrong word. How about... I'll tell you when you get older?'";
 	say "Do you insist?";
 	if Player consents:
-		say "Naughty boy, you'll get no dessert if you don't stop that.' Her voice strains as she plays keepaway with the ladel, bits of goop getting everywhere, including on you. Where it lands, it's warm and tingly. She seems to notice a spot as it dissolves into you. 'You did that on purpose, didn't you?' She puts her hands on her hips, foot tapping on the air she's floating on. 'I swear, having a child is such a test.'";
+		say "'Naughty boy, you'll get no dessert if you don't stop that.' Her voice strains as she plays keepaway with the ladel, bits of goop getting everywhere, including on you. Where it lands, it's warm and tingly. She seems to notice a spot as it dissolves into you. 'You did that on purpose, didn't you?' She puts her hands on her hips, foot tapping on the air she's floating on. 'I swear, having a child is such a test.'";
 		decrease humanity of player by 10;
 		increase Libido of Player by 10;
 		say "Your libido has increased and your humanity decreased.";
