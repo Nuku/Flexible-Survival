@@ -271,9 +271,9 @@ carry out navigating:
 				Fight;
 	else:
 		say "You travel to [the noun], avoiding trouble as best you can.";
+	follow the ngraphics_blank rule;
 	if HP of Velos > 2, move Velos to noun;
 	now Player is in noun;
-	follow the ngraphics_blank rule;
 	NavInEvent_Check noun;
 	now inasituation is false; [cleaning up possible open ended flags]
 
