@@ -416,7 +416,7 @@ name	desc	weight	object
 "Broken smartphone"	"[zpcdesc2]"	1	Broken Smartphone
 
 to say zpcdesc2:
-	say "     Your smartphone is toast. It's screen is smashed, and while you hoped the damage was cosmetic after you tripped and smashed it against the sidewalk on your way to your present location, it has since proven to be bricked. Zephyr is known to sell many tech gadgets. Maybe one of their shops and such can repair it? You doubt a new phone is an option at this point but it'd certainly help with navigation.";
+	say "     Your smartphone is toast. Its screen is smashed, and while you hoped the damage was cosmetic after you tripped and smashed it against the sidewalk on your way to your present location, it has since proven to be bricked. Zephyr is known to sell many tech gadgets. Maybe one of their shops and such can repair it? You doubt a new phone is an option at this point, but it'd certainly help with navigation.";
 
 Broken Smartphone is a grab object. Broken Smartphone is not temporary.
 
@@ -443,7 +443,7 @@ Section 4 - Handling (Internal)
 Usedesc of Broken Smartphone is "[sp_use]";
 
 to say sp_use:
-	say "It's Bricked.";
+	say "It's bricked.";
 
 Usedesc of zpc is "[zpc_use]";
 
@@ -479,6 +479,15 @@ to say zpc_use:
 Section 4.1 - Internal functions
 
 to zpc_checklocation: [returns Zc value of 1 or 0]
+	now zpc_Zc is 0;
+	if the location of Player is a location listed in Table of Zpc Location Reference, now zpc_Zc is 1;
+
+to zpc_getfigure: [returns Zf value of respective figure name]
+	now zpc_Zf is figure of pixel;
+	if the location of Player is a location listed in Table of Zpc Location Reference, now zpc_Zf is icon entry;
+
+[
+to zpc_checklocation: [returns Zc value of 1 or 0]
 	if debugactive is 1:
 		say "Setting zpc_Zc to False.";
 	now zpc_Zc is 0; [zeros returning value]
@@ -499,10 +508,21 @@ to zpc_getfigure: [returns Zf value of respective figure name]
 			if debugactive is 1 and debuglevel > 1:
 				say "Found icon entry in table of zpc location reference! Storing Icon entry.";
 			now zpc_Zf is icon entry; [returns value for projection]
+]
 
 Section 5 - Handling (External)
 
 [Master look override rule]
+this is the zpc_lookoverride rule:
+	if emap is 1:
+		if the location of Player is a location listed in Table of Zpc Location Reference:
+			project icon entry; [projecting intro]
+			if zpc_inzone is false, now zpc_inzone is true;
+		else if zpc_inzone is true: [case if Player already in zone]
+			project the figure of emap_special_signalnotfound_icon;
+			now zpc_inzone is false;
+
+[
 this is the zpc_lookoverride rule:
 	if emap is 1:
 		zpc_checklocation; [runs location check function first to fill Zc value]
@@ -532,6 +552,7 @@ this is the zpc_lookoverride rule:
 					say "zpc_Zc is false but zpc inzone is true. projecting signal not found and then setting zpc_inzone to false for shutdown..";
 				project the figure of emap_special_signalnotfound_icon;
 				now zpc_inzone is false;
+]
 
 Section 6 - DEBUG
 
