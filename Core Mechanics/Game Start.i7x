@@ -287,6 +287,7 @@ to say gsopt_start:
 		now black boxer briefs are equipped;
 		ItemGain black combat boots by 1 silently;
 		now black combat boots is equipped;
+		ItemGain Broken Smartphone by 1 silently;
 	if scenario is not "Bunker":
 		if scenario is "Caught Outside":
 			add "Spartan Diet" to feats of Player;
@@ -319,7 +320,6 @@ to say gsopt_start:
 		increase score by 100;
 		now BlindMode is true;
 	if scenario is "Bunker":
-		ItemGain Broken Smartphone by 1 silently;
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. You managed to escape to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
 		say "     You've waited in the dark for others or rescue to come, but to no avail. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type] and your [bold type]watch[roman type]. How bad could it be?";
 	else if scenario is "Caught Outside":
