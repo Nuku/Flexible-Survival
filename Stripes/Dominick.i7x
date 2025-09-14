@@ -1096,8 +1096,10 @@ to say ForcedSubToDomSex4:			[Step by step Beta TF sequence]
 			infect "Breederslut";
 			infect "Breederslut";
 			infect "Breederslut";
-			NPCSexAftermath Player receives "PussyFuck" from Dominick;
-			NPCSexAftermath Player receives "AssFuck" from Dominick;
+			if Player is female:
+				NPCSexAftermath Player receives "PussyFuck" from Dominick;
+			else:
+				NPCSexAftermath Player receives "AssFuck" from Dominick;
 		else:
 			say "     Dom leers down at you, 'You're willing, but you're not ready to be my bitch yet. You're incomplete, hungry for meaning. I can give you that, my sissy slut, if you beg nicely. Can you do that for me?' You hesitate, thinking if that is what you want. Your gaze is drawn to Dom's perpetually erect cock, just inches away. You quickly strip and drop to your knees, nodding eagerly, which strangely causes Dom to frown before you realize your mistake and add a plaintive yes sir after a slightly too long pause. Dom's frown shifts to a grin and says, 'I was worried for a moment but I think you are ready. Let's get started then, pet.' Dom orders you to stand again and turn around. You feel him stand up behind you, the heat of his body engulfing you. The heat becomes tangible as his dick finds its way between your legs.";
 			if Player is female:

@@ -488,7 +488,7 @@ to say KoskBreeding:
 			NPCSexAftermath Player receives "PussyFuck" from Kosk;
 		else if player is male: [gay anal]
 			say "[KoskAnalFuck]";
-			NPCSexAftermath Player receives "PussyFuck" from Kosk;
+			NPCSexAftermath Player receives "AssFuck" from Kosk;
 
 to say KoskPussyFuck:
 	say "     [if Player is not barecrotch]Trailing his fingers over your hips and slowly tugging down the garments covering your sex from his view [else]Trailing his fingers over your bare sex [end if]Kosk nuzzles into you from behind, flicking his fingers over your lower lips and lavishing care on your sex until you drip with excitement. 'You're a bit tight. I hope you don't mind getting stretched out.' He coos as one thick finger pierces your sex, slurping deep enough that you barely suppress a moan. 'I'm not one to rush things, though. I'll ease into it.' You can barely think as a finger fucks your pussy open with slow pumps, their dextrous neighbor swirling over your clit. A second finger slips in once you've gotten wet enough, then a third, gently seeking all the spots that make you whimper and push back, until just before you feel like you'll finish, they withdraw, leaving you empty and wanting. You wiggle your hips like a bitch in heat, indignantly demanding more stimulation. 'I know, I know. Don't worry.' Kosk chuckles at your wanton behavior as he lines up one of his prodigious cocks, spearing you open on his tapered length and sliding in on your drooling wetness. The other shaft splits your cheeks, hotdogging your ass while he explores your needy cunt.";

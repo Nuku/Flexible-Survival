@@ -254,7 +254,7 @@ to say KoboldGangOrgy:
 	if Player is female:
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Kobold";
 		CreatureSexAftermath "Kobold" receives "OralPussy" from "Player";
-	if Player is male:
+	else if Player is male:
 		CreatureSexAftermath "Kobold" receives "OralCock" from "Player";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Kobold";
 

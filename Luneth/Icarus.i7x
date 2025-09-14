@@ -1116,7 +1116,10 @@ to say icarussex6c_dom_ap:		[Repeatable rough scene C - avian pred only]
 	say "     As your songbird master bears down on you with harder thrusts, his pulls on your wings harder. You can feel his talons digging into the meat of your wings, but pain only excites you further at this point. Your joints creak and your bones ache, but its his thrusting shaft that has your attention. And when he drives himself into you one last, hard time, you feel that hot rush of semen into you just as your wingbones snap. You release a sharp cry of pain and pleasure, orgasming uncontrollably[if Player is herm]. Hot juices run down your thighs as you dump your load onto the dirty ground beneath you[else if Player is male]. You dump your load onto the dirty ground beneath you[else]. Hot juices run down your thighs[end if] even as Icarus pumps his gooey seed into you.";
 	WaitLineBreak;
 	say "     As the rush of ecstasy from your orgasm fades and the pain of your broken wings takes the forefront in your senses, you sag down onto the messy floor whimpering[if wslevel is 3]. You end up pissing yourself, adding to the mess you're laying in, but can do nothing to stop the flow[end if]. Icarus sneers as you slip off his spent shaft and releases your twisted wings to flop down onto the floor beside you. 'Such a pathetic thing. Not a fearsome predator of the skies - just a grounded pet bird. Let's see how you like it for a while.' And with that, he leaves you in the dark pit with your pain. Your nanites are diligent and slowly mend your wings, by they're left weak and sore for quite some time and you're drained from the process. Through it all though is the soft warmth of sexual satisfaction from your powerful orgasm, showing that some dark part of you enjoyed the painful ordeal.";
-	NPCSexAftermath Player receives "PussyFuck" from Icarus;
+	if Player is female:
+		NPCSexAftermath Player receives "PussyFuck" from Icarus;
+	else:
+		NPCSexAftermath Player receives "AssFuck" from Icarus;
 	SanLoss 5;
 	if HP of Player > HP of Player / 8:
 		now HP of Player is HP of Player / 8;
