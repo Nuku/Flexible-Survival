@@ -4208,7 +4208,7 @@ to say DoranRP_VirileBeastScene:
 	if DoranRP_var3 is 2:
 		say "your exposed anal ring";
 	else:
-		say "[if Cunt Count of Player > 1]one of [end if]re embatr exposed cunt[sfn]";
+		say "[if Cunt Count of Player > 1]one of [end if]your exposed cunt[sfn]";
 	say ". It takes [ghim] a few tries to properly hit [ghis] mark, but when [ghe] does, it's immediately clear that [ghe]'s not going to ease you into it. [if tempnum is 0]Resigning yourself to your fate though you may have, you can't help but[else]You[end if] immediately cry out in pain as a result of this immediate and harsh penetration, ";
 	if DoranRP_var3 is 2:
 		say "[if scalevalue of Player < 4]each progressive inch[else]its entirety abruptly[end if]";
@@ -4237,10 +4237,10 @@ to say DoranRP_VirileBeastScene:
 		wait for any key;
 		say "[line break]";
 	say "     '...[run paragraph on][one of]Oh[or]Ah[or]Hm[at random], [DoranPlayerRegard], are they [one of]alright[or]OK[at random]? [one of]I hope they enjoyed this little exercise[or]I hope I wasn't too rough on them[or]I made such a mess[at random]...' Still a bit dizzy from the whole ordeal, Doran fusses over cleaning you up, eventually satisfied and setting you off once more. Funny, it feels like no time has passed at all...";
-	if Player is female:
-		NPCSexAftermath Player receives "PussyFuck" from Doran;
-	else:
+	if DoranRP_var3 is 2:
 		NPCSexAftermath Player receives "AssFuck" from Doran;
+	else:
+		NPCSexAftermath Player receives "PussyFuck" from Doran;
 
 to say DoranRP_VirileBeastScenePool:
 	if DoranRP_var4 is 1 and (a random chance of 1 in 6 succeeds or (Player is kinky and a random chance of 1 in 4 succeeds)): [WS Opener]
@@ -4398,10 +4398,10 @@ to say DoranRP_KnightScene:
 			wait for any key;
 			say "[line break]";
 		say "     '...[run paragraph on][one of]Wake up[or]Rise and shine[or]Up, up[at random], [DoranPlayerRegard]! [one of]I hope they found our little adventure satisfactory[or]I hope I didn't wear them out too much[or]I'm certain they enjoyed themselves[at random]!' Taking a moment to look you over after the session had concluded, Doran eventually lets you off once [ghe]'s certain that you appear fine, allowing you to go about your business once more.";
-		if Player is female:
-			NPCSexAftermath Player receives "PussyFuck" from Doran;
-		else:
+		if DoranRP_var3 is 2:
 			NPCSexAftermath Player receives "AssFuck" from Doran;
+		else:
+			NPCSexAftermath Player receives "PussyFuck" from Doran;
 
 [to say DoranRP_DragonsPet:
 	say "     For a brief moment, Doran almost seems giddy, a broad smile appearing on [ghis] face before fading into a dark, predatory smirk. The [gdragon] steps closer to [if scalevalue of Player > 4]leer at you[else]loom over you[end if], [ghis] sudden closeness both intimidating and exciting you. With [ghim] this close, you can smell that subtle [gmasculine] musk wafting gently through the air as [ghe] chuckles darkly. 'My pet, you really have no idea what you've gotten yourself into, now do you?'";

@@ -1653,7 +1653,7 @@ to WyvernSexAftermath (SexChoice - a number): [currently only used for Wyvern Or
 		-- 2: [Wyvern receives a blowjob from the player]
 			CreatureSexAftermath "Player" receives "OralCock" from "Wyvern";
 		-- 3: [Wyvern receives a cuntjob aka cunnilingus from the player]
-			CreatureSexAftermath "Player" receives "OralPussy" from "Wyvern";;
+			CreatureSexAftermath "Player" receives "OralPussy" from "Wyvern";
 		[-- 4: [Wyvern grinding against player's torso] ]
 		-- 5: [Wyvern pussyfucks the player -> leads to fovichance]
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Wyvern";

@@ -27,16 +27,12 @@ to say losetoJaguarWarrior:
 	say "     [if HP of Player > 0]Unable to resist[else]Beaten by[end if] the jaguar warrior, you are helpless as he strips you of your gear. [run paragraph on]";
 	if anallevel is 3 and a random chance of 1 in 3 succeeds:
 		say "[JagWarVic_Anal]";
-		NPCSexAftermath Player receives "AssFuck" from Tehuantl;
 	else if Player is female and a random chance of 2 in 3 succeeds:
 		say "[JagWarVic_Vag]";
-		NPCSexAftermath Player receives "PussyFuck" from Tehuantl;
 	else if anallevel > 1 and a random chance of 1 in 4 succeeds:
 		say "[JagWarVic_Anal]";
-		NPCSexAftermath Player receives "AssFuck" from Tehuantl;
 	else:
 		say "[JagWarVic_Oral]";
-		NPCSexAftermath Player receives "OralCock" from Tehuantl;
 
 to say beattheJaguarWarrior:
 	if HP of Tehuantl is 1:

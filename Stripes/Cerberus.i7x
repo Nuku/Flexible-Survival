@@ -122,7 +122,10 @@ to say cerberusride:
 	say "     You collapse atop the mythic creature, panting and moaning happily as her three muzzles lick and kiss at you with their slobbery tongues. Eventually, her knot goes down and you are back to pop her tail free, releasing a gush of her seed before you can clench down to keep the rest of it in you. She gets up slowly and heads off, quite satisfied after her rather rough encounter with you.";
 	if cerberusarousal > 0:
 		CreatureSexAftermath "Cerberus" receives "PussyFuck" from "Player";
-	CreatureSexAftermath "Player" receives "PussyFuck" from "Cerberus";
+	if Player is female:
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Cerberus";
+	else:
+		CreatureSexAftermath "Player" receives "AssFuck" from "Cerberus";
 
 to say cerberusfemmeoral:
 	say "     Preferring to get set those canine tongues to work, you spread your legs and guide the middle head between your thighs, pressing her wet nose to your wetter pussy. She starts lapping at your dripping folds obediently and is soon diving her tongue into you. You moan happily and run your fingers over her canine head. her other heads, as if getting jealous of the treat the center one is enjoying, start nudging and bumping against it, trying to push it out of the way so they can have a taste[if Cunt Count of Player > 1]. Despite having several pussies, there's still only really room for one to easily get at them at a time, though the others take what swipes they can with their long tongues[end if]. Soon enough, the three heads are taking turns, though it seems they each want to keep your dripping juices all to themselves. The middle one, given its position, gets the most time lapping at your cunt[sfn].";

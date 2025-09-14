@@ -1475,10 +1475,10 @@ to say CheerleaderPractice:
 				say "     While Septus still pulses with more shots of cum, he gets his breath back and kisses you on the lips, then pants 'Wish I could have knotted you - but we'd have a mutiny here if I kept you all to myself for so long...' He rubs his furry cheeks affectionately against yours, then lowers you on a bed and pulls out with a sigh, almost instantly replaced by Decimus, another wolfman you know from your cheerleader training. Saying 'I can't stop thinking about you since you gave me that awesome show,' he gives you a friendly lick, then sets the tip of his shaft at your entrance...";
 				WaitLineBreak;
 				say "     In a very satisfying - but really exhausting - orgy, you're fucked by the whole football team after that, with each of them depositing a nice and full load into you. After dozing off while cuddling in the end, you awake some time later in the midst of a furry huddle of somewhat sticky wolfmen. Carefully standing up and making your way without stepping on anyone, you're then taken aside by the other cheerleaders, who gently bathe you, giving you their own welcome with lots of hugs as they do so.";
-				NPCSexAftermath Player receives "PussyFuck" from Septus;
-				CreatureSexAftermath "Player" receives "PussyFuck" from "FootBall Wolfman";
-				CreatureSexAftermath "Player" receives "PussyFuck" from "FootBall Wolfman";
-				CreatureSexAftermath "Player" receives "PussyFuck" from "FootBall Wolfman";
+				NPCSexAftermath Player receives "AssFuck" from Septus;
+				CreatureSexAftermath "Player" receives "AssFuck" from "FootBall Wolfman";
+				CreatureSexAftermath "Player" receives "AssFuck" from "FootBall Wolfman";
+				CreatureSexAftermath "Player" receives "AssFuck" from "FootBall Wolfman";
 			if "Sterile" is listed in feats of Player:
 				remove "Sterile" from feats of Player;
 				now Sterile of Player is false;

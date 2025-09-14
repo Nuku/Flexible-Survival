@@ -186,9 +186,10 @@ to say huntpride vict:
 to say finallion vict:
 	if Player is female:
 		say "The alpha lion approaches and sets a paw on your shoulder. You consider turning him away with your human mind, but the feline one wins out and you lean against him. He bites at your shoulder and neck, moving around you and lifting you. He is soon plunging his hungry shaft deep into your small curvy body, filling you in a way you have never been filled before as a human. You roar in pleasure as his seed fills your new womb, which swells outwards with the volume of it.";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Feline";
 	else:
 		say "The alpha lion approaches and sets a paw on your shoulder. You consider turning him away with your human mind, but the feline one wins out and you lean against him. He bites at your shoulder and neck, moving around you and lifting you. He is soon plunging his hungry shaft deep into your small curvy body, filling you in a way you have never been filled before as a human. You roar in pleasure as his seed fills your bowels, which swells outwards with the volume of it.";
-	CreatureSexAftermath "Player" receives "PussyFuck" from "Feline";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Feline";
 	infect;
 
 

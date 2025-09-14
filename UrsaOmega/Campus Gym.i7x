@@ -284,7 +284,7 @@ to say wrestlesex:
 				infect "Rhino";
 				if Player is male:
 					NPCSexAftermath Randy receives "OralCock" from Player;
-				else:
+				else if Player is female:
 					NPCSexAftermath Randy receives "OralPussy" from Player;
 				stop the action;
 			else:
@@ -297,11 +297,14 @@ to say wrestlesex:
 					NPCSexAftermath Randy receives "AssFuck" from Player;
 					stop the action;
 				if Player is not male:			[Riding]
-					say "     You straddle Randy's body, reaching one hand down between your legs to position his thick rhino meat at the entrance to your [if Player is female]pussy[else]ass[end if]. Your wrestling has gotten him quite worked up, and his flared tip is dripping a copious supply of precum between your thighs. You start to sink down on his length, sighing as his glans spreads your [if Player is female]labia[else]asshole[end if] open. You slid down until you feel his hefty balls rest against your bare, [bodydesc of Player] ass. Every bit of your [if Player is female]vagina[else]rectum[end if] feels stuffed with the gray malehood of the rhino. You roll your hips, working your body up and down his cock.";
+					say "     You straddle Randy's body, reaching one hand down between your legs to position his thick rhino meat at the entrance to your [if Player is female]pussy[else]ass[end if]. Your wrestling has gotten him quite worked up, and his flared tip is dripping a copious supply of precum between your thighs. You start to sink down on his length, sighing as his glans spreads your [if Player is female]labia[else]asshole[end if] open. You slide down until you feel his hefty balls rest against your bare, [bodydesc of Player] ass. Every bit of your [if Player is female]vagina[else]rectum[end if] feels stuffed with the gray malehood of the rhino. You roll your hips, working your body up and down his cock.";
 					say "     Randy grunts and tries to thrust up into you, but being pinned under your body, you control the pace; you tease him by pulling off his cock slowly before slamming yourself back down, loving the feeling of being filled with thick rhino dick. Each time he bottoms out in you, you bear down on him, gripping him with your internal muscles, eliciting a moan and a jet of warm precum from Randy each time. As his orgasm nears, he brings his muscular hands to your hips, pulling you down into his powerful thrusts. With a cry, he bottoms out inside you before unloading, filling you up with thick rhino cream.";
 					say "     You collapse on top of him, panting and sweating, dully aware of the seed dripping from your well-worked [if Player is female]snatch[else]anus[end if]. [if HP of Randy is 1]'Damn, haven't been fucked like that in a long time!'[else]'Fuck, you're good at that!'[end if], Randy pants. 'Rematch sometime?' he says hopefully as you disentangle your bodies. He finds a towel and you dry off before getting your gear together and leaving.";
 					infect "Rhino";
-					NPCSexAftermath Player receives "PussyFuck" from Randy;
+					if Player is female:
+						NPCSexAftermath Player receives "PussyFuck" from Randy;
+					else:
+						NPCSexAftermath Player receives "AssFuck" from Randy;
 					stop the action;
 		else:					[Lose wrestling - get topped]
 			say "     You return the grapple, but the rhino's strength is overwhelming, and your combined bodies fall to the mat with a soft thud. Randy rolls on top of you, rubbing his hardening cock against your [bodydesc of Player] body as he attempts to pin you. Gathering your strength, you attempt to reverse the pin, ending up pinned under his muscular form. [if Player is male]He takes the opportunity to frot your cocks together a bit while giving you a lewd smile[else]He takes the opportunity to hump his cock against your skin while giving you a lewd smile[end if]. You manage to slip out from under him, retreating back a few steps and adopting a combatative stance. Randy does the same, adopting a confident grin. You and your opponent circle each other before lunging at each other again. You exchange grapples like this for several minutes until, finally, your exhausted form is pinned beneath a sweating, panting Randy. 'Good fight. I'm glad I came out on top... I've been wantin['] to do this since you came in!' he says with a dopy grin. Now that you've established your positions, you can get down to the good stuff.";
