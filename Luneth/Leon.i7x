@@ -95,7 +95,7 @@ Instead of conversing the Leon:
 				say "     As your getting ready to leave, you can't help but notice you smell a bit like a sheep now yourself, just like all the other flock members in the store. For some reason, it doesn't seem to bother you to smell like your fellow sheep; you all belong to the same ram, after all... Blushing uncertainly at that thought, you return to the main store area.";
 				increase Libido of Player by 10;
 				increase Libido of Leon by 1;
-				if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
+				if FemaleList is not banned and Player is not MalePreferred:
 					infect "Ewe";
 					infect "Ewe";
 				else:
@@ -172,7 +172,7 @@ to say sexwithLeon:
 					SanLoss 10;
 					if "Strong Psyche" is listed in feats of Player, increase humanity of Player by 2;
 					if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 2;
-					if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
+					if FemaleList is not banned and Player is not MalePreferred:
 						infect "Ewe";
 					else:
 						infect "Ram";
@@ -240,7 +240,7 @@ to say sexwithLeon:
 					say "     Having already gotten off recently, Leon has a lot of stamina, pounding you for a long, long time. Any attempt by your waning humanity to recover is disrupted by the steady rutting, ram musk, soft wool and sheep scents absorbing all your focus. These moments become weaker and less frequent until they stop altogether, not missed at all by your submissive sheep mind. By the time Leon's reached his second orgasm and pumps a fresh, full load of ram semen into your wanton ass, all that's left is the male ewe he desires you to be. His climax is just as powerful as the last, filling your bowels with his virile seed even as you moan and cum again from being filled by your ram.";
 					WaitLineBreak;
 					say "     When he's done and pulls out this time, you're too weak and worn to manage to ask for more. All you can manage is a baaing moan before passing out in the mound of scented wool, excess semen leaking from your overfilled ass. Confident that you're fully his now, he leaves you there to return to the store. Left surrounded in the cum-stained wool and filled with infected semen, your body changes, completely becoming the flock's male ewe in body as well as mind. It is some time later before one of the sheep comes to collect you, bringing you out to join the others in working the store like the loyal, loving ewe you are through and through.";
-					if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
+					if FemaleList is not banned and Player is not MalePreferred:
 						setmonster "Ewe" silently;
 						turn the Player into an "Ewe" silently;
 					else:
@@ -259,12 +259,12 @@ to say sexwithLeon:
 					if SkinName of Player is "Ram" or SkinName of Player is "Ewe":
 						say "woolly ";
 					say "ass, leaving fresh smears of his musky semen across your cheeks. Between the heavy dose of it you ended up breathing in and scent of rut clinging to you, you are left in a lustful daze of submissive urges long after he's left you alone in the room. Even once you start to regain your senses, it takes considerable effort to force yourself up and out of the room so you can clear your head before you give in completely.";
-					if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
+					if FemaleList is not banned and Player is not MalePreferred:
 						infect "Ewe";
 					else:
 						infect "Ram";
 			increase Lust of Leon by 1;
-		if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
+		if FemaleList is not banned and Player is not MalePreferred:
 			infect "Ewe";
 		else:
 			infect "Ram";

@@ -254,7 +254,7 @@ before using a grab object (called x):
 		if Player is male:
 			say "As you move to slip the pill in your mouth, you feel an uneasy twinge run through your cock[smn]. Are you sure to still want to use it?";
 			if Player consents:
-				if "Male Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
+				if Player is MalePreferred or "Always Cocky" is listed in feats of Player:
 					say "Your feat will not allow this to work.";
 					stop the action;
 				continue the action;

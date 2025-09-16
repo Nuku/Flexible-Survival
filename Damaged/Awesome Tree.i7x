@@ -76,10 +76,10 @@ to say PrepCombat_Pod Person:
 	now Awesome_boredom is 0;
 	choose row MonsterID from the Table of Random Critters;
 	if Awesome_forcesex is 0:
-		if "Male Preferred" is listed in feats of Player:
+		if Player is MalePreferred:
 			now Awesome_sex is 2;
 			now sex entry is "Male";
-		else if "Female Preferred" is listed in feats of Player:
+		else if Player is FemalePreferred:
 			now Awesome_sex is 1;
 			now sex entry is "Female";
 		else:
@@ -270,7 +270,7 @@ name	desc	weight	object
 the scent of the awesome fruit is "[awesomefrscent]".
 
 to say awesomefrscent:
-	if "Female Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player:
+	if Player is FemalePreferred or "Herm Preferred" is listed in feats of Player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	else:
 		say "The strange fruit has a strong, manly scent that seems mouth-wateringly sweet.";
@@ -278,7 +278,7 @@ to say awesomefrscent:
 the scent of the awesomer fruit is "[AwesomerFrScent]".
 
 to say AwesomerFrScent:
-	if "Male Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player:
+	if Player is MalePreferred or "Herm Preferred" is listed in feats of Player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	else:
 		say "The strange fruit has a lovely, feminine scent that seems mouth-wateringly sweet.";
@@ -286,7 +286,7 @@ to say AwesomerFrScent:
 the scent of the awesomest fruit is "[AwesomestFrScent]".
 
 to say AwesomestFrScent:
-	if "Male Preferred" is listed in feats of Player or "Female Preferred" is listed in feats of Player:
+	if Player is MalePreferred or Player is FemalePreferred:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	else:
 		say "The strange fruit has a rich mix of male and female scents that seems mouth-wateringly sweet.";
@@ -307,7 +307,7 @@ awesomest fruit has a Usedesc "[awesomest fruit use]".
 
 To say awesomest fruit use:
 	let omonster be MonsterID;
-	if "Male Preferred" is listed in feats of Player or "Female Preferred" is listed in feats of Player:
+	if Player is MalePreferred or Player is FemalePreferred:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
 		repeat with Z running from 1 to number of rows in Table of Random Critters:
@@ -328,7 +328,7 @@ awesomer fruit has a Usedesc "[awesomer fruit use]".
 
 To say awesomer fruit use:
 	let omonster be MonsterID;
-	if "Male Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player:
+	if Player is MalePreferred or "Herm Preferred" is listed in feats of Player:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
 		repeat with Z running from 1 to number of rows in Table of Random Critters:
@@ -349,7 +349,7 @@ awesome fruit has a Usedesc "[awesome fruit use]".
 
 To say awesome fruit use:
 	let omonster be MonsterID;
-	if "Female Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player:
+	if Player is FemalePreferred or "Herm Preferred" is listed in feats of Player:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
 		repeat with Z running from 1 to number of rows in Table of Random Critters:

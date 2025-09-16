@@ -24,7 +24,7 @@ to say losetopinkgel: [Loss to Pink Gel.]
 	else: [Neuter Player]
 		say "     As the Pink Gel approaches you can see the look of disappointment on her face as she stares at your featureless groin. Undaunted she pushes you onto your back and shoves her pussy into your face. As you begin to lick her juicy nethers your mouth is filled with the taste of strawberry jello. This only serves to increase your pace as the gel girl begins to moan. Looking up you can see that she has started fondling her massive tits while you continue to eat her out. After what seems like hours the pink girl lets out a final moan and arches her back. As she reaches her climax she coats your face in her sweet pink fluids. Once she is finished she gets up and leaves, but not before giving you a final kiss, licking most of her fluids up in the process.";
 		CreatureSexAftermath "Player" receives "OralPussy" from "Pink Gel";
-	if "Female Preferred" is listed in feats of Player and FemaleList is not banned: [Changes target to Pink Gel for infection.]
+	if Player is FemalePreferred and FemaleList is not banned: [Changes target to Pink Gel for infection.]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
 			if Name entry is "Pink Gel":
@@ -97,7 +97,7 @@ to say losetobluegel: [Loss to Blue Gel.]
 		say "     Seeming displeased that you have no gender, the Blue Gel grabs you by the back of the head an impales your throat on his member. Unable to muster the strength to fight back you are forced to allow the gel to brutally facefuck you. After some time he slams himself fully in your mouth and begins pumping his seed down your throat. When he finally finishes and pulls out you are relieved that the ordeal is over. The gel man has other plans though. Forcing you onto your stomach the blue man lines himself up and pushes into your rear entrance. Eventually, with one final thrust, he fills your bowels with his blue seed. Once he has finished he pulls out dropping you to the ground as his goo leaks from your ass and leaves.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Blue Gel";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Blue Gel";
-	if "Male Preferred" is listed in feats of Player and MaleList is not banned: [Changes target to Blue Gel for infection.]
+	if Player is MalePreferred and MaleList is not banned: [Changes target to Blue Gel for infection.]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
 			if Name entry is "Blue Gel":
@@ -167,13 +167,13 @@ to say losetopurplegel: [Loss to Purple Gel.]
 	else: [Neuter Player]
 		say "     Disappointed that you have no sexual organs for her to enjoy the Purple Gel turns and shoves her pussy in your face while [if Breast Size of Player > 0]sliding her member between your [breast size desc of Player] breasts[else]stroking her member[end if]. You begin licking the girl's waiting pussy as she grinds it against your face. Soon you bring her to her peak and she covers your face with a gush of her juices as her purple seed covers your [if Breast Size of Player > 0]tits[else]chest[end if] and stomach. After finishing the gel girl turns around and gives you a kiss and begins licking her juices off your face. Once she is done she moves down and licks her goo off your [if Breast Size of Player > 0]breasts[else]chest[end if] and stomach. Once she has licked you clean she gives you a final kiss, allowing you to taste the mixed flavors of her fluids, before turning and walking away.";
 		CreatureSexAftermath "Player" receives "OralPussy" from "Purple Gel";
-	if "Female Preferred" is listed in feats of Player and FemaleList is not banned: [Changes target to Pink Gel for infection.]
+	if Player is FemalePreferred and FemaleList is not banned: [Changes target to Pink Gel for infection.]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
 			if Name entry is "Pink Gel":
 				now MonsterID is y;
 				break;
-	else if "Male Preferred" is listed in feats of Player and MaleList is not banned: [Changes target to Blue Gel for infection.]
+	else if Player is MalePreferred and MaleList is not banned: [Changes target to Blue Gel for infection.]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
 			if Name entry is "Blue Gel":
@@ -832,7 +832,7 @@ to say gel1:
 	say "     Eating the cup of pink jello makes you a little less hungry and helps quench your thirst a bit, and really, what harm could it be?";
 	PlayerEat 6;
 	PlayerDrink 3;
-	if "Female Preferred" is listed in feats of Player and FemaleList is not banned: [Changes target to Pink Gel for infection.]
+	if Player is FemalePreferred and FemaleList is not banned: [Changes target to Pink Gel for infection.]
 		infect "Pink Gel";
 	else if "Herm Preferred" is listed in feats of Player and HermList is not banned: [Changes target to Purple Gel for infection.]
 		infect "Purple Gel";
@@ -857,7 +857,7 @@ to say gel2:
 	say "     Eating the cup of blue jello makes you a little less hungry and helps quench your thirst a bit, and really, what harm could it be?";
 	PlayerEat 6;
 	PlayerDrink 3;
-	if "Male Preferred" is listed in feats of Player and MaleList is not banned: [Changes target to Blue Gel for infection.]
+	if Player is MalePreferred and MaleList is not banned: [Changes target to Blue Gel for infection.]
 		infect "Blue Gel";
 	else if "Herm Preferred" is listed in feats of Player and HermList is not banned: [Changes target to Herm Gel for infection.]
 		infect "Purple Gel";
@@ -882,9 +882,9 @@ to say gel3:
 	say "     Eating the cup of purple jello makes you a little less hungry and helps quench your thirst a bit, and really, what harm could it be?";
 	PlayerEat 6;
 	PlayerDrink 3;
-	if "Male Preferred" is listed in feats of Player and MaleList is not banned: [Changes target to Blue Gel for infection.]
+	if Player is MalePreferred and MaleList is not banned: [Changes target to Blue Gel for infection.]
 		infect "Blue Gel";
-	else if "Female Preferred" is listed in feats of Player and FemaleList is not banned: [Changes target to Pink Gel for infection.]
+	else if Player is FemalePreferred and FemaleList is not banned: [Changes target to Pink Gel for infection.]
 		infect "Pink Gel";
 	else:
 		infect "Purple Gel";

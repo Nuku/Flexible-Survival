@@ -475,7 +475,7 @@ to say hvbp_ram:
 		else:
 			setmonster "[BodyName of Player]";
 		choose row MonsterID from the Table of Random Critters;
-	else if ( "Female Preferred" is listed in feats of Player or BodyName of Player is "Ewe" ) and FemaleList is not banned:
+	else if ( Player is FemalePreferred or BodyName of Player is "Ewe" ) and FemaleList is not banned:
 		setmonster "Ewe";
 		choose row MonsterID from the Table of Random Critters;
 
@@ -505,7 +505,7 @@ to say hvbp_ewe:
 		else:
 			setmonster "[BodyName of Player]";
 		choose row MonsterID from the Table of Random Critters;
-	else if ( "Male Preferred" is listed in feats of Player or BodyName of Player is "Ram" or Player is male ) and MaleList is not banned:
+	else if ( Player is MalePreferred or BodyName of Player is "Ram" or Player is male ) and MaleList is not banned:
 		setmonster "Ram";
 		choose row MonsterID from the Table of Random Critters;
 

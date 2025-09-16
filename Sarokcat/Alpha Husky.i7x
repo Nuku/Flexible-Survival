@@ -121,7 +121,7 @@ to say Alpha Husky attack:
 		else if Player is male:
 			if HP of Player > 1: [submits]
 				say "     The alpha stands over you as you cower before him in submission, falling to your knees and leaving yourself to whatever fate he decides. 'What, you're giving up? Or what...' he then begins to wonder to himself as he sees you all so eager to do anything for him. 'You're not suited to be a bitch, but then again";
-				if "Male Preferred" is listed in feats of Player:
+				if Player is MalePreferred:
 					say "... I [italic type]don't really mind a good boy. You might just become my favorite little bitch male.'[roman type][line break]";
 				else:
 					say "... I don't think that has to be a problem. There are ways to fix that.'";
@@ -136,7 +136,7 @@ to say Alpha Husky attack:
 					say "     He guides you back to all fours, moving around you and shoving your forebody down to the ground while keeping your ass high in the air. 'You've done a great job... Let's see how well you prepared me,' he mutters as he aligns his eager canine shaft to your back door and pulls you back, driving into you in a quick, possessive motion. Your pucker stretches delightfully around that rod as he fills you to the sheath, rubbing his groin up against your back end as his powerful feet scrabble against the ground for ideal placement before he begins to thrust in slow, firm motions. 'Good bitch, good...' he praises as he moves smoothly through your now-lubricated entrance. His shaft fits in you as if it was meant to be there, easily grinding back and forth. Your skin tingles with the sheer bliss of it and the strange submission you feel towards the dog.";
 					say "     As he carries on thrusting into you, your mind feels more and more keen to call him your alpha, the one who owns you, and it begins to feel... so right. With every slap of his furry sac against your bottom, your yearning for his seed increases, wanting nothing more than to get bred by the handsome husky. 'I think,' he says as he draws back to the pointed tip, then drives the thick knot of his member inside your ass with a hard push, locking himself into you as your anal ring hugs it tightly, 'that you deserve it.' The words stop, replaced with a howl of release when he begins to fill your body with hot gushes of seed, spurt after spurt filling your bowels, leaving a lingering, overtaking joy in your foggy brain.";
 					WaitLineBreak;
-					if "Male Preferred" is listed in feats of Player:
+					if Player is MalePreferred:
 						say "     Your grasp of your old self feels weak for a moment as strange new adoration for this husky tries to displace it. Not yet satisfied with the outcome, he goes even further and brings his paw-like hand over your [Cock of Player] cock. Pleasure is prolonged for a while longer as he jerks you off, steady motions at first that increase in pace progressively. Soon, as the motion continues without cease, your body follows with a powerful climax. You cum so hard, so deliciously, that you moan under the canine as he keeps you pinned down under him, stroking your dick until the very last drop leaves you. Amidst your orgasm, he whispers into your ear 'What a good boy... My good boy... You could just become my special little fucktoy, always there for my pleasure...' He then waits until his knot shrinks enough for him to be able to pull out of your ass, then kisses you once before he departs, 'Just think how much nicer it'll be once you've properly accepted your place as my needy male bitch.'";
 					else:
 						say "     Your grasp of your old self feels weak for a moment as strange new adoration for this husky tries to displace it. 'How do you like, being bred by an alpha? Imagine all the pups you could be bearing for me if you'd just let it happen... Just let the heat fill your body, and soon, you'll become a suitable bitch.' He then waits until his knot shrinks enough for him to be able to pull out of your ass, then kisses you once before he departs, 'Just think how much nicer it will be once you give in and be a proper bitch for me.'";
@@ -154,13 +154,13 @@ to say Alpha Husky attack:
 					say "     But not even your alpha can endure it all for long. His dominant and controlled demeanor soon shakes as he feels that powerful climax knocking on the door, his breathing becoming desperate. He wanted to reward you further, for being such a good bitch for him, but the pleasure is too great for him to hold back. Without warning, he explodes powerfully into you, and the whole thing makes you shoot your own load all over yourself at the same time. It is then that he leans forward once more, to hold you tight in his arms, and thrusts as deep as he can. This causes your cock to be locked between the two of you, throbbing in that tight space as it goes about shooting its last drops.";
 					WaitLineBreak;
 					say "     As he holds you close like that, everything begins to melt away as you are washed in the pleasure of it all, letting yourself be taken into his caring grasp. The husky turns to kiss you once, then lick your face another time, as his stubborn knot takes its time to shrink";
-					if "Male Preferred" is listed in feats of Player:
+					if Player is MalePreferred:
 						say ". 'Mmh... Just think how much nicer it'll be once you've properly accepted your place as my little male bitch. Taking care of your alpha's needs and earning yourself all the appreciation only a good boy like you deserves...'";
 					else:
 						say ". 'Mmh... Just think how much nicer it will be once you give in and be a proper bitch for me. A beautiful husky bitch to take care of her alpha's needs, in return earning a fill of hot and warm seed... We could keep doing it all day... Everyday...";
 					say "     Eventually, he manages to pull away from you, then he gets up before walking away with his tail high up in the air. He does glance over his shoulder with a teasing look, as if to see if you will chase him, before completely disappearing into the distance.";
 					CreatureSexAftermath "Player" receives "AssFuck" from "Husky Alpha";
-				if "Male Preferred" is not listed in feats of Player:
+				if Player is not MalePreferred:
 					infect "Husky Bitch";
 				SanLoss 5;
 				WaitLineBreak;
@@ -179,20 +179,20 @@ to say Alpha Husky attack:
 				else:
 					say "     This was an experience. Your mind still feels rather stunned, but you think you can process things clearly now. Part of you still pictures yourself serving that alpha for life, but would that be desirable...?";
 					if "Strong Psyche" is listed in feats of Player: [total sanity recovery]
-						if "Male Preferred" is listed in feats of Player:
+						if Player is MalePreferred:
 							say "     Truly he would not have minded to keep you around despite your sex, but you do mind being completely subservient. You easily shrug off any of the mind effects the husky has had on you.";
 						else:
 							say "     Much less having him completely change your gender to meet the [']suitable requirements['] to become his bitch. Well, infections work in twisted aways, but at least when it comes to your mind, you still have it all in you.";
 							SanBoost 5;
 					else if "Weak Psyche" is listed in feats of Player: [faster decline]
 						say "     Nah, stop tricking yourself. You definitely want more of that. Where is he now? Oh, he seems to have disappeared already... Damn it! Your mind aches for more... more of those sweet words, that throbbing cock in you, more of that seed filling you up. The heat... it is so exhilarating, so ecstatic";
-						if "Male Preferred" is listed in feats of Player:
+						if Player is MalePreferred:
 							say "... You are left craving to become his special, favorite male bitch, his good little boy, just like he said... But now it is too late, so you are left with no other option but to come to terms with your still barely retained freedom and make most of it while it lasts.";
 						else:
 							say "... You are left craving to let him turn you into his perfect bitch, there to serve him in every time of need, bearing his pups... But now it is too late, so you are left with no other option but to come to terms with your still barely retained freedom and make the most of it while it lasts.";
 						SanLoss 5;
 					else: [no further sanity changes]
-						if "Male Preferred" is listed in feats of Player:
+						if Player is MalePreferred:
 							say "     But how bad would it be to give in [']just a little[']? He said you could be his favorite little male bitch, because nobody takes that spot. It would be only yours and... And that is absurd! You cannot do this. This... may require some distancing. You proceed to ready yourself to carry on with your doings and avoid thinking on the subject, at least as much.";
 						else:
 							say "     But how bad would it be to give in [']just a little[']? Maybe it would not be so bad to let him do all those things to your body, turn you into the perfect bitch and... And that is absurd! You cannot do this. This... may require some distancing. You proceed to ready yourself to carry on with your doings and avoid thinking on the subject, at least as much.";

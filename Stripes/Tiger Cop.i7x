@@ -383,7 +383,7 @@ to say totalTH:
 	if Libido of Player < 70:
 		now Libido of Player is 70;
 	turn the Player into a "Malayan Tiger Herm";
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 [		say "(Male Preferred, locked results)";]
 		if Player is not male:			[Minimum of TH standard or greater]
 			now Cock Count of Player is 1;
@@ -391,7 +391,7 @@ to say totalTH:
 			now Cock Length of Player is 9;
 		if Ball Size of Player < 5:
 			now Ball Size of Player is 5;
-	else if "Female Preferred" is listed in feats of Player:
+	else if Player is FemalePreferred:
 [		say "(Female Preferred, locked results)";]
 		if Player is not female:
 			now Cunt Count of Player is 1;
@@ -482,7 +482,7 @@ to say BTchangeover:
 	[systematically change all body parts and names to Big Tiger / Big Tigress, with gender exclusions for feats.]
 	if Libido of Player < 50:
 		now Libido of Player is 50;
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		[if multi-cock, reduce to 1. Cannot become less female.]
 		if Cock Count of Player > 1:
 			now Cock Count of Player is 1;
@@ -494,7 +494,7 @@ to say BTchangeover:
 			now Cock Length of Player is 12;
 		if Ball Size of Player < 6:
 			now Ball Size of Player is 6;
-	else if "Male Preferred" is listed in feats of Player:
+	else if Player is MalePreferred:
 		[Player can't diminish in maleness. Pussy, if any is eliminated]
 		if Player is not male:
 			now Cock Count of Player is 1;

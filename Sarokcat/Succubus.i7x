@@ -29,7 +29,7 @@ to say Succubus attack:
 			WaitLineBreak;
 			say "     Soon you feel yourself crying out in orgasm, and gasping look around you, only to note that the street is now empty, and the hands that have been rubbing your body so intensely have been your own for a while now. Blushing slightly you try to gather your wits together as you continue onwards, but you still find your thoughts oddly filled with images of all the fun you could have as a lusty little succubus...";
 	if Libido of Player > 80, now Libido of Player is 80;
-	if "Male Preferred" is listed in feats of Player and MaleList is not banned:
+	if Player is MalePreferred and MaleList is not banned:
 		infect "Incubus";
 	else:
 		infect "Succubus";

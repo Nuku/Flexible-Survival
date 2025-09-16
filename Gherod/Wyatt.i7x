@@ -471,7 +471,7 @@ ResolveFunction of WyattRomance is "". Sarea of WyattRomance is "Nowhere".
 
 [In order to continue the romance, Player must be female and have a feminine appearance. On a certain point forward, going to Wyatt while looking male will prompt him to 'help' the Player transform into a Husky Bitch.]
 
-instead of going to Lair Of The Lupines Common Room while (Resolution of WyattRomance is 0 and PlayerFucked of Wyatt is true and daytimer is night and "Male Preferred" is not listed in Feats of player):
+instead of going to Lair Of The Lupines Common Room while (Resolution of WyattRomance is 0 and PlayerFucked of Wyatt is true and daytimer is night and Player is not MalePreferred):
 	say "     Upon walking into the Common Room within the lair of the werewolves, at this time of the day, you occasionally hear some noises, presumably of sexual nature, coming from the bedrooms. It is always a curious event that leaves you wondering what could be happening on the other side of the stone doors, but until now, you never really found the will to investigate the matter. Though, this time, you feel as if there is an attempt to keep silent, as it is almost whispering moans you hear. They, unfortunately for their producer, echo through the hall and are easily audible by someone who happens to be fairly close, like you. Should you choose to inspect the source of the noise, it is best that you proceed with caution as to not alert anyone of your presence, lest you intend on getting caught and present yourself to unforeseeable consequences.";
 	LineBreak;
 	say "     [bold type]Shall you let your curiosity take the reins[roman type]? You should find no difficulty in keeping quiet, for now.";
