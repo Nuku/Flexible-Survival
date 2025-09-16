@@ -333,7 +333,7 @@ to say lwmast1:
 		say "Overcome with lustful urges, you lay on your back and rub your paws over your cock. You release squeaky growls of pleasure as your pre dribbles onto your body. Your altered paws have trouble gripping your shaft effectively, but you make due with stroking it, eventually spraying your thick, latex-like seed across your body. While you lay there, panting on your back, you lick your paws clean";
 	else:
 		say "Overcome with lustful urges, you lay on your back and rub your paws over your pussy. You release squeaky growls of pleasure as you tease the latex folds and your juices run down your thighs. Your altered paws have trouble teasing your slit effectively, but you make due with stroking it[if Cunt Tightness of Player > 3] and pushing a somewhat malleable paw into your cunt[end if]. Driven to climax eventually, you moan loudly and release a spurt of latex-like femme cum. While you lay there, panting on your back, you lick your paws clean";
-		if Cunt Tightness of Player < 5 and "Male Preferred" is not listed in feats of Player:
+		if Cunt Tightness of Player < 5 and Player is not MalePreferred:
 			increase Cunt Tightness of Player by 1;
 			if "Modest Organs" is listed in feats of Player and Cunt Tightness of Player > 5:
 				now Cunt Tightness of Player is 5;
@@ -341,7 +341,7 @@ to say lwmast1:
 to say lwmast2:
 	if Player is female:
 		say "Overcome with lustful urges, you whimper softly with the need for satisfaction. You spot a plastic rod of roughly the right size and naughty urges fill your mind. Getting yourself lined up properly, you lower your dripping pussy down onto the vaguely phallic object with a moan and start riding it hard and fast. Your pussy grips and squeezes it as if it were a real cock and it becomes increasingly satisfying as your lust builds. Finally climaxing messily, you moan and rise to pull off it, but find your pussy melted and absorbed it after you came";
-		if Cunt Depth of Player < 8 and "Male Preferred" is not listed in feats of Player, increase Cunt Depth of Player by 1;
+		if Cunt Depth of Player < 8 and Player is not MalePreferred, increase Cunt Depth of Player by 1;
 	else:
 		say "Overcome with lustful urges, you whimper softly with the need for satisfaction. You spot a foam latex toy and pounce on it, grinding your cock against the strangely enjoyable material. You rub your throbbing erection against it, moaning as you ride it hard and fast. Your precum dribbles out onto it as it feels increasingly satisfying as your lust builds. Finally climaxing messily, you moan and rise onto all fours, finding that much of the toy has melted away, flowing into your body. You gobble down the sticky and cum-soaked remains with relish";
 

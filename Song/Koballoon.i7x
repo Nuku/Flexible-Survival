@@ -334,7 +334,7 @@ to KoballoonSexBadEnd:
 	say "[if Breast Size of Player > 0]heavy, swollen breasts and [end if]ample curves wrapped in a flawless expanse of jade-green rubber. ";
 	if "Herm Preferred" is listed in feats of Player:
 		say "Your [if Cock Count of Player > 1]cocks have become truly monstrous, sleek green pillars that give several hard, slow throbs as they leak[else]cock has become truly monstrous, a sleek green pillar that gives several hard, slow throbs as it leaks[end if] lube-like pre onto the ground below. Your cunt[sfn] constantly drool[sfv] a warm, odorless lubricant, the runny liquid trickling down your inner thighs.";
-	else if "Female Preferred" is listed in feats of Player:
+	else if Player is FemalePreferred:
 		say "Your cunt[sfn] constantly drool[sfv] a cool, odorless lubricant, the runny liquid trickling down your inner thighs.";
 	else if Player is male:
 		say "Your [if Cock Count of Player > 1]cocks have[else]cock has[end if] become truly monstrous, [if Cock Count of Player > 1]sleek green pillars that give several hard, slow throbs as they leak[else]a sleek green pillar that gives several hard, slow throbs as it leaks[end if] lube-like pre onto the ground below.";

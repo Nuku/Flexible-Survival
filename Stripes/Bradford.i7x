@@ -152,7 +152,7 @@ Instead of conversing the Bradford:
 			say "     Taking another sheet from his vest, he checks that one. 'Okay, this one's still active. It's a little further away though.' You look it over quickly. The top of the page has [']BOUNTY['] printed across it with more details under the grayscale image of a smooth, latex-skinned wolf. Among the details are mentions of [']high viscosity['], [']encasement['] and [']corruptive infection[']. Another odd detail is how it stated the bounty is for eight of them, but there's another printed number marking that there's [bold type]four remaining[roman type] to complete the bounty. 'You take this and see if you can track down a few more of these things. I was able to get a bunch of [']em before I got here. Once you've got to last of th['], come back here and I'll cut you in on the reward.'";
 			now bradfordbounty is 4;
 			now HP of Bradford is 3;
-		else if "Female Preferred" is listed in feats of Player:
+		else if Player is FemalePreferred:
 			say "He pulls out a folded printout from his vest pocket and looks it over. 'Hmm... Now ain't that odd. This one's done gone and changed on me. Says the bounty's been closed due to gender lockin['].' He turns the page towards you so you can see the red [']CLOSED['] stamped across the image of a walking phallus creature. 'Guess we're not gettin['] that one no more,' he grumbles.";
 			WaitLineBreak;
 			say "     Taking another sheet from his vest, he checks that one. 'Okay, this one's still active. It's a little further away though - out in the main part of the city.' You look it over quickly. The top of the page has [']BOUNTY['] printed across it with more details under the grayscale image of a smooth, latex-skinned wolf. Among the details are mentions of [']high viscosity['], [']encasement['] and [']corruptive infection[']. Another odd detail is how it states the bounty is for eight of them, but there's another printed number marking that there's [bold type]four remaining[roman type] to complete the bounty. 'You take this and see if you can track down a few more of these things. I was able to get a bunch of [']em before I got here. Once you've got to last of th['], come back here and I'll cut you in on the reward.'";
@@ -169,7 +169,7 @@ Instead of conversing the Bradford:
 		extend game by 4;
 		now bradfordbounty is 4;
 		now HP of Bradford is 3;
-	else if HP of Bradford is 2 and "Female Preferred" is listed in feats of Player:
+	else if HP of Bradford is 2 and Player is FemalePreferred:
 		say "     'How's that contract of ours coming along?' Bradford asks. Passing him the contract, he snorts angrily. 'What happened to it? This one's done gone and changed on us. Says the bounty's been closed due to gender lockin['].' He turns the page towards you so you can see the red [']CLOSED['] stamped across the image. 'Guess we're not gettin['] that one no more,' he grumbles.";
 		say "     Taking another sheet from his vest, he checks that one. 'Okay, this one's still active. It's a little further away though - out in the main part of the city.' You look it over quickly. The image this time is of a smooth, latex-skinned wolf. Among the details mentioned are stuff about [']high viscosity['], [']encasement['] and [']corruptive infection[']. The bounty sheet states that there's [bold type]four remaining[roman type] to complete it.";
 		now HP of Bradford is 3;

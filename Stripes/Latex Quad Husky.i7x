@@ -67,7 +67,7 @@ to say ResolveEvent Shipping Container:
 				now Cunt Tightness entry is 6;
 				now libido entry is 90;
 				now monm is MonsterID;
-			if ( "Female Preferred" is listed in feats of Player and FemaleList is not banned ) or MaleList is banned:
+			if ( Player is FemalePreferred and FemaleList is not banned ) or MaleList is banned:
 				choose row monf from Table of Random Critters;
 				setmonster "Husky Bitch" silently;
 				turn the Player into a "Husky Bitch";

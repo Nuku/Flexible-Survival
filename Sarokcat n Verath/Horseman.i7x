@@ -143,7 +143,7 @@ to say horseman cum use:
 	PlayerDrink 6;
 	SanLoss 15;
 	if "Iron Stomach" is not listed in Feats of Player:
-		if FemaleList is not banned and ( "Male Preferred" is not listed in feats of Player or MaleList is banned ): [similar to Onyx]
+		if FemaleList is not banned and ( Player is not MalePreferred or MaleList is banned ): [similar to Onyx]
 			infect "Mareslut";
 			infect "Mareslut";
 		else:

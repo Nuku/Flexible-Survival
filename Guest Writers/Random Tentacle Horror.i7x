@@ -33,7 +33,7 @@ to say horror victory:
 		now cuntsmall is 0;
 	let mpregpath be 0;
 	if Player is not female and Player is mpreg_ok, now mpregpath is 1;
-	if ( "Male Preferred" is listed in feats of Player and mpregpath is 0) or "Sterile" is listed in feats of Player:
+	if (Player is MalePreferred and mpregpath is 0) or "Sterile" is listed in feats of Player:
 		say "The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
 	else if gestation of child > 0:
 		if tentsubmit is 1:

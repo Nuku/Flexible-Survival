@@ -106,7 +106,7 @@ instead of conversing Leon:
 					increase Libido of Player by 10;
 					increase Hunger of Leon by 1;
 					now PlayerMet of Leon is true;
-					if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
+					if FemaleList is not banned and Player is not MalePreferred:
 						infect "Ewe";
 						infect "Ewe";
 					else:
@@ -365,13 +365,13 @@ to say LeonInfect:
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 2;
 	if Lust of Leon < 5:
 		increase Lust of Leon by 1;
-	if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
+	if FemaleList is not banned and Player is not MalePreferred:
 		infect "Ewe";
 	else:
 		infect "Ram";
 
 to say RamEweSplit:
-	if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
+	if FemaleList is not banned and Player is not MalePreferred:
 		turn the Player into an "Ewe" silently;
 	else:
 		turn the Player into a "Ram" silently;

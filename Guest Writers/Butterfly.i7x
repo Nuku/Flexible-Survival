@@ -450,7 +450,7 @@ To say butterfly attack:
 				decrease Cock Length of Player by 1;
 				decrease Cock Length of Player by Cock Length of Player divided by 3;
 				BallsShrink Player by 1;
-				if "Male Preferred" is listed in feats of Player:
+				if Player is MalePreferred:
 					if Cock Length of Player < 5, now Cock Length of Player is 5;
 					if Ball Size of Player < 3, now Ball Size of Player is 3;
 				follow the cock descr rule;
@@ -468,7 +468,7 @@ To say butterfly attack:
 				decrease Cunt Depth of Player by Cunt Depth of Player divided by 3;
 				decrease Cunt Tightness of Player by 1;
 				decrease Cunt Tightness of Player by Cunt Tightness of Player divided by 4;
-				if "Female Preferred" is listed in feats of Player:
+				if Player is FemalePreferred:
 					if Cunt Depth of Player < 5, now Cunt Depth of Player is 5;
 					if Cunt Tightness of Player < 3, now Cunt Tightness of Player is 3;
 				follow the cunt descr rule;
@@ -787,7 +787,7 @@ before using a grab object (called x):
 		if Player is female:
 			say "As you move to slip the pill in your mouth you feel an uneasy shiver run through your cunt[sfn]. [if gestation of child > 0]Your lower belly quivers causing you to feel ill. [end if]Are you sure to still want to use it?";
 			if Player consents:
-				if "Female Preferred" is listed in feats of Player or "Always A Pussy" is listed in feats of Player:
+				if Player is FemalePreferred or "Always A Pussy" is listed in feats of Player:
 					say "Your feat will not allow this to work.";
 					stop the action;
 				continue the action;

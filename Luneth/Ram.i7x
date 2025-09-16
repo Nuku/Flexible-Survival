@@ -79,7 +79,7 @@ to say ram_attack:
 			CreatureSexAftermath "Ram" receives "AssFuck" from "Player";
 			if MaleList is not banned:
 				infect "Ram";
-	else if "Male Preferred" is listed in feats of Player:
+	else if Player is MalePreferred:
 		say "     The beast pushes you down to the ground roughly, pinning you there as he pumps his own cock eagerly. You are forced to watch as his hoof-hands rub at his balls and cock, an impressive set of genitals on the woolly victor, unable to look away even as he starts to pump harder. You groan in defeat as he shoots his sticky seed all over your body, marking you as his. 'Ah, that was good,' the ram says happily as he rubs his cock some more. 'Almost nothing feels as good as defeating a trespasser in my territory,' the ram says as he gets off you, before turning to depart, leaving you to contend with the mess he left in his wake.";
 		if MaleList is not banned:
 			infect "Ram";
