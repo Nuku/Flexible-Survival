@@ -23,7 +23,7 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Vulpogryph:
 	choose row MonsterID from the Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
 		now libido entry is 45;
 	else if "Herm Preferred" is listed in feats of Player:
@@ -220,7 +220,7 @@ to vulpogryphinfect:			[Solstice's magic infection bypasses researcher immunity]
 		if Name entry is "Vulpogryph":
 			now MonsterID is y;
 			break;
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
 		now libido entry is 45;
 	else if "Herm Preferred" is listed in feats of Player:

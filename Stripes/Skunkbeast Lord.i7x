@@ -363,7 +363,7 @@ to sblinfect:
 		if Name entry is "Skunkbeast Lord":
 			now MonsterID is y;
 			break;
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";

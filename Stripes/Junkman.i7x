@@ -47,7 +47,7 @@ to say PrepCombat_Junkman:
 		now wdam entry is qq;
 		now lev entry is qq;
 		now dex entry is ( qq + 10 + a random number between 0 and 2 );
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";

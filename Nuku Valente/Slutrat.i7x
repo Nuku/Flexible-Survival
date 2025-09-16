@@ -211,7 +211,7 @@ this is the rattymilk rule:
 		now dam is (dam * 150) divided by 100;
 		say ". You end up getting a very large dose of her milk before you are able to push away - Critical Hit";
 	say "! You take [special-style-2][dam][roman type] damage";
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		say ". You can feel a tingling in your groin that starts to flare up, but is then resisted until it subsides.";
 	else if Ball Size of Player > 0 and Ball Size of Player < 4:
 		BallsGrow Player by 1;
@@ -297,7 +297,7 @@ to say slut rat victory:
 
 
 To say slut rat growth:
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		say "You resist the growth!";
 	else if Player is not male:
 		now Cock Count of Player is 1;

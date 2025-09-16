@@ -220,9 +220,9 @@ to say PrepCombat_Snake:
 	choose row MonsterID from the Table of Random Critters;
 	if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
-	else if "Male Preferred" is listed in feats of Player:
+	else if Player is MalePreferred:
 		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
+	else if Player is FemalePreferred:
 		now sex entry is "Female";
 	else if Player is herm:
 		now sex entry is "Both";

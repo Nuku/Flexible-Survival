@@ -477,7 +477,7 @@ An everyturn rule:
 				say "     You drop to a knee as you feel a surge of heat roll through you, your feline physique shifting as the power of the jaguar headdress you're wearing ripples through your feline body, remaking you into a powerful jungle predator.";
 			setmonster "Jaguar Warrior";
 			choose row MonsterID from the Table of Random Critters;
-			if "Female Preferred" is not listed in feats of Player:
+			if Player is not FemalePreferred:
 				now sex entry is "Both";
 			now hoodequipped is 1;
 		infect "Jaguar Warrior";
@@ -487,7 +487,7 @@ An everyturn rule:
 		now hoodequipped is 0;
 		setmonster "Jaguar Warrior";
 		choose row MonsterID from the Table of Random Critters;
-		if "Male Preferred" is not listed in feats of Player:
+		if Player is not MalePreferred:
 			now sex entry is "Female";
 
 Table of Game Objects (continued)

@@ -211,9 +211,9 @@ to Coyotify: [Used for infection purposes.]
 			break;
 	if diego's heirloom collar is equipped:
 		now sex entry is "Female";
-	else if "Male Preferred" is listed in feats of Player:
+	else if Player is MalePreferred:
 		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
+	else if Player is FemalePreferred:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";

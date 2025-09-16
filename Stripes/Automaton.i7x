@@ -81,12 +81,12 @@ to say PrepCombat_Automaton:
 	if autogender is 1:		[male]
 		setmongender 3;
 		now sex entry is "Female";
-		if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
+		if Player is MalePreferred, now sex entry is "Male";
 		now lootchance entry is 33;
 	else:
 		setmongender 4; [female]
 		now sex entry is "Male";
-		if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
+		if Player is FemalePreferred, now sex entry is "Female";
 		now lootchance entry is 0;
 
 Table of Random Critters (continued)

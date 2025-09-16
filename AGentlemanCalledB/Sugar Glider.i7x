@@ -121,7 +121,7 @@ to say PrepCombat_Sugar Glider:
 	project the Figure of SugarGlider_icon;
 	setmongender 4; [creature is female]
 	choose row MonsterID from Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";

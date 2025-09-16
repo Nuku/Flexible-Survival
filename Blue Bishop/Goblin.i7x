@@ -541,7 +541,7 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Goblin:
 	choose row with name of "Goblin" from the Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";

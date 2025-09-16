@@ -232,7 +232,7 @@ to say dragonesssex:
 		now lastChristyfucked is turns;
 	else if Cock Length of Player < 5:
 		say "     Your cock is too small for you to get it deep enough into her huge vagina to stimulate her or to get an enjoyable fuck from it. You sigh a little disappointment and decide to come back later after finding some means to";
-		if "Female Preferred" is not listed in feats of Player:
+		if Player is not FemalePreferred:
 			say " increase your maleness so you can come back and fuck this fine dragoness.";
 		else:
 			say " finish becoming a female to avoid the distraction of a cock you can't use to fuck this fine dragoness.";

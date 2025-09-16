@@ -190,7 +190,7 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Voodoo Gecko:
 	setmongender 6; [creature is shemale]
 	choose row MonsterID from the Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
@@ -392,7 +392,7 @@ to say drinkgeckocum:
 	increase Libido of Player by 5;
 	setmonster "Voodoo Gecko";
 	choose row MonsterID from the Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";

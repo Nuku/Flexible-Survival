@@ -297,7 +297,7 @@ to say PrepCombat_Fire Sprite:
 		setmongender 3; [creature is male]
 		project the figure of FireSpriteMale_icon;
 	now sex entry is "Female";
-	if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
+	if Player is MalePreferred, now sex entry is "Male";
 	if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
 
 Section 2 - Creature Insertion

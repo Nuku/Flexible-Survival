@@ -101,7 +101,7 @@ to say PrepCombat_Siren:
 	setmongender 3; [creature is male]
 	project Figure of Siren_clothed_icon;
 	choose row MonsterID from the Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";

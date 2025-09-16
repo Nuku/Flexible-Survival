@@ -615,7 +615,7 @@ to Anastasiasexchange:
 			now MonsterID is y;
 			break;
 	choose row MonsterID from Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
 		if Cunt Depth of Player < Cunt Depth entry and scenario is not "Researcher", follow the sex change rule;
 	else if "Herm Preferred" is listed in feats of Player:

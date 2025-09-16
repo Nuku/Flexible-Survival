@@ -139,7 +139,7 @@ to say impaladesc:
 			say "and her eyes are filled with confusion as she tries to figure out which gender you are. 'What kind of creature are you?'";
 		say " the impala woman exclaims. She rubs a perky breast with one hoof-like hand while the other reaches down between her legs to play with her engorged sex a bit before charging you!";
 		now sex entry is "Male";
-		if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
+		if Player is FemalePreferred, now sex entry is "Female";
 		if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
 	if impalamode is 1:
 		setmongender 3; [creature is male]
@@ -152,7 +152,7 @@ to say impaladesc:
 			say "and his eyes are filled with confusion as he tries to figure out which gender you are. 'What kind of creature are you?'[run paragraph on]";
 		say " the impala man exclaims. He charges you!";
 		now sex entry is "Female";
-		if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
+		if Player is MalePreferred, now sex entry is "Male";
 		if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
 
 Section 2 - Creature Insertion
