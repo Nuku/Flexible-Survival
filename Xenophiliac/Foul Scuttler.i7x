@@ -144,7 +144,7 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Foul Scuttler: [pre-combat setup, run code and picture displays here]
 	setmongender 3; [creature is male]
 	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
@@ -374,7 +374,7 @@ to say FoulScuttlerUse:
 	say "     You look disgustingly at the goopy liquid in the jar, wondering if you're insane for doing this. Steeling yourself, you bring the jar to your lips, quickly drinking the Foul Scuttler saliva. Contrary to your belief, the fluid does not taste horrendous, but it's not exactly tasty, either. Soon enough, you've drained the jar, putting it back into your pack for later use.";
 	setmonster "Foul Scuttler";
 	choose row MonsterID from the Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";

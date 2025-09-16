@@ -273,11 +273,11 @@ to say PrepCombat_Horny Doctor:
 		setmongender 4; [creature is female]
 		now altcombat entry is "default";
 	now BannedStatus entry is false;
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
-	else if "Male Preferred" is listed in feats of Player:
+	else if Player is MalePreferred:
 		now sex entry is "Male";
 	else if hdmode is 1:
 		now sex entry is "Female";

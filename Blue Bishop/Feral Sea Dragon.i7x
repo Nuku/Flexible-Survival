@@ -18,10 +18,8 @@ to say fsdm attack:
 			if Name entry is "Feral Sea Dragoness":
 				now MonsterID is y;
 				break;
-		if "Male Preferred" is listed in feats of Player:
+		if Player is MalePreferred:
 			now sex entry is "Male";
-		else if "Female Preferred" is listed in feats of Player:
-			now sex entry is "Female";
 		else if "Herm Preferred" is listed in feats of Player:
 			now sex entry is "Both";
 		else:
@@ -713,10 +711,8 @@ to say PrepCombat_Feral Sea Dragon:
 	now firebreathready is false;
 	now tempnum2 is 0;
 	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
 	else:

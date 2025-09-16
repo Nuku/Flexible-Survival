@@ -84,10 +84,8 @@ to say PrepCombat_Chinchilla:
 		now chindem is true;
 	else:
 		now chindem is false;
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
 	else:
@@ -294,10 +292,8 @@ Usedesc of tuft of chin fur is "[tuft of chin fur use]";
 to say tuft of chin fur use:
 	choose row MonsterID from Table of Random Critters;
 	setmonster "Chinchilla";
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
 	else:

@@ -258,7 +258,7 @@ to say PrepCombat_Squire:
 	setmongender 3; [creature is male]
 	now kpstatus is 0;
 	choose row MonsterID from Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";

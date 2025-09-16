@@ -60,7 +60,7 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Trash Coon:
 	setmongender 4; [creature is female]
 	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
