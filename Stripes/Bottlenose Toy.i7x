@@ -438,12 +438,12 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Bottlenose Toy:
 	setmongender 4; [creature is female]
 	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
+	if Player is FemalePreferred:
+		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
 	else:
-		now sex entry is "Female";
+		now sex entry is "Male";
 	if dolphinmode is 0:
 		if (HardMode is false and level of Player < 5) or a random chance of 3 in 4 succeeds:	[girl only at low level]
 			now dolphinmode is 1;
