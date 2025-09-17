@@ -846,9 +846,9 @@ to say ResolveEvent Concert Hall:
 			now Music Store is resolved;
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     Unable to hold out against the bunny horde, you find yourself surrounded by the strange group of lustful, longing bunnies. They fuck you repeatedly, with so many of them there to share you that you always have several lovers at a time, drawing you further and further into the lustful needs of your body as it starts to change, gaining bunny ears and a tail. But as the changes continue, ";
-			if "Male Preferred" is listed in feats of Player:
+			if Player is MalePreferred:
 				say "you gain more cocks, more balls, more arms and legs as well? Even more heads? Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself. At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and male genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly male.";
-			else if "Female Preferred" is listed in feats of Player:
+			else if Player is FemalePreferred:
 				say "you gain more pussies, more breasts, more arms and legs as well? Even more heads? Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself. At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and female genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly female.";
 			else:
 				say "you gain more cocks, more pussies, more breasts, more arms and legs as well? Even more heads? Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself. At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly either male or female.";
@@ -976,7 +976,7 @@ to say ResolveEvent Hunting Prides:
 		[puts Feline as lead monster for infection and impregnation]
 		setmonster "Feline" silently;
 		turn the Player into a "Feline" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
-		if "Male Preferred" is listed in feats of Player:
+		if Player is MalePreferred:
 			now Cock Count of Player is 1;
 			if Cock Length of Player < 9, now Cock Length of Player is 9;
 			if Ball Size of Player < 3, now Ball Size of Player is 3;
@@ -984,7 +984,8 @@ to say ResolveEvent Hunting Prides:
 			now Cunt Depth of Player is 0;
 			now Cunt Tightness of Player is 0;
 			now Nipple Count of Player is 2;
-			now Breast Size of Player is 0;
+			if Breast Size of Player < 3, now Breast Size of Player is 3;
+			if "Breasts" is not listed in feats of Player, now Breast Size of Player is 0;
 		else if "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
 			now Cunt Count of Player is 1;
 			if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;
@@ -1092,7 +1093,7 @@ to say Leonardrivalfight:
 		[puts Feline as lead monster for infection and impregnation]
 		setmonster "Feline" silently;
 		turn the Player into a "Feline" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
-		if "Male Preferred" is listed in feats of Player:
+		if Player is MalePreferred:
 			now Cock Count of Player is 1;
 			if Cock Length of Player < 9, now Cock Length of Player is 9;
 			if Ball Size of Player < 3, now Ball Size of Player is 3;
@@ -1100,7 +1101,8 @@ to say Leonardrivalfight:
 			now Cunt Depth of Player is 0;
 			now Cunt Tightness of Player is 0;
 			now Nipple Count of Player is 2;
-			now Breast Size of Player is 0;
+			if Breast Size of Player < 3, now Breast Size of Player is 3;
+			if "Breasts" is not listed in feats of Player, now Breast Size of Player is 0;
 		else if "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
 			now Cunt Count of Player is 1;
 			if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;

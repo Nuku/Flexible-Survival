@@ -580,7 +580,7 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 8;
 	now cha entry is 4;
-	now sex entry is "Female";
+	now sex entry is "Male";
 	now HP entry is 80;
 	now lev entry is 7;
 	now wdam entry is 21;

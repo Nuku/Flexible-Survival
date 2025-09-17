@@ -443,7 +443,7 @@ Section 4 - Handling (Internal)
 Usedesc of Broken Smartphone is "[sp_use]";
 
 to say sp_use:
-	say "It's bricked.";
+	say "     It's bricked.";
 
 Usedesc of zpc is "[zpc_use]";
 

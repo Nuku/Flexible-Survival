@@ -33,14 +33,22 @@ Definition: A person is fastlearning:
 	if "Fast Learner" is listed in feats of Player, yes;
 	no;
 
-Definition: A person (called x) is MalePreferred:
+Definition: A person (called x) is MalePreferred: [player wants to or must remain male]
 	if "Male Preferred" is listed in feats of x, yes;
+	if "Female Preferred" is listed in feats of x or "Herm Preferred" is listed in feats of x, no;
 	if "Single Sexed" is listed in feats of x and x is puremale, yes;
 	no;
 
-Definition: A person (called x) is FemalePreferred:
+Definition: A person (called x) is FemalePreferred: [player wants to or must remain female]
 	if "Female Preferred" is listed in feats of x, yes;
+	if "Male Preferred" is listed in feats of x or "Herm Preferred" is listed in feats of x, no;
 	if "Single Sexed" is listed in feats of x and x is purefemale, yes;
+	no;
+
+Definition: A person (called x) is HermPreferred: [player wants to or must remain herm]
+	if "Herm Preferred" is listed in feats of x, yes;
+	if "Male Preferred" is listed in feats of x or "Female Preferred" is listed in feats of x, no;
+	if "One Way" is listed in feats of x and x is herm, yes; [One Way prevents loss of genitals, so stuck as herm now]
 	no;
 
 Table of gainable feats
@@ -349,8 +357,8 @@ instead of addfeating the basic feats:
 This is the gainfeat rule:
 	choose row Current Menu Selection in table of gainable feats;
 	let nam be title entry;
-	let L be {"Haggler", "More Time", "Touched by Madness", "Vore Predator"}; [feat descs with terminating punct]
 	if autofeatloading is false:
+		let L be {"Haggler", "More Time", "Touched by Madness", "Vore Predator"}; [feat descs with terminating punct]
 		say "You've chosen [bold type]'[title entry]'[roman type]: [description entry][if title entry is not listed in L]. [end if][line break]";
 		say "Is this what you want?";
 	if autofeatloading is true or player consents:

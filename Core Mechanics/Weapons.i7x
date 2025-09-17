@@ -231,7 +231,7 @@ belaying pin is an armament. It is not temporary.
 It has a weapon "[one of]your belaying pin[or]your stout sailcloth securing system[or]your improvised club[or]your hefty pin[or]your rescued dildo-cum-club[or]your salty beatin['] stick[or]your cock-themed skull-cracker[at random]".
 Weapon Damage of belaying pin is 5.
 Weapon Type of belaying pin is "Melee".
-Objsize of riding crop is 3.
+Objsize of belaying pin is 3.
 Hitbonus of belaying pin is 0. [nothing special]
 Scent of the belaying pin is "The heavy club smells of rum, sodomy, and the lash.".
 

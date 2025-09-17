@@ -300,11 +300,11 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Friendship Pony:
 	setmongender 4; [creature is female]
 	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
-	else if "Female Preferred" is listed in feats of Player:
+	else if Player is FemalePreferred:
 		now sex entry is "Female";
 	else:
 		now sex entry is "nochange";
@@ -595,8 +595,8 @@ to selectbootymark:
 	now pfpbmlist is {};
 	add {1, 2, 3, 4} to pfpbmList;
 	if "Junk Food Junky" is listed in feats of Player, add 5 to pfpbmList;
-	if "Male Preferred" is listed in feats of Player, add 6 to pfpbmList;
-	if "Female Preferred" is listed in feats of Player, add 7 to pfpbmList;
+	if Player is MalePreferred, add 6 to pfpbmList;
+	if Player is FemalePreferred, add 7 to pfpbmList;
 	if "Herm Preferred" is listed in feats of Player, add 8 to pfpbmList;
 	if Player is submissive, add 9 to pfpbmList;
 	if "Cold Fish" is listed in feats of Player, add 10 to pfpbmList;
@@ -757,7 +757,7 @@ Usedesc of pony cider is "[drinkponycider]";
 
 to say drinkponycider:
 	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 		setmonster "Friendship Pony";
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of Player:

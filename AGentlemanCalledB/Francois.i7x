@@ -817,7 +817,7 @@ to say BoysenberryBlossomGet:
 	if Player consents:
 		say "[boysenberry blossom Use]";
 		if "Female Preferred" is listed in feats of Player or "Modest Organs" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and Player is female ):
-			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
+			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do your best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
 			say "     Francois licks his lips as he eyes up your enlarged member, and you can't help but notice his apron tenting slightly at his crotch. 'Mmm, what a lovely side effect. I cannot wait to start selling these.'";
 	else:
@@ -829,7 +829,7 @@ to say MuffinMuffinGet:
 	if Player consents:
 		say "[muffin muffin Use]";
 		if "Male Preferred" is listed in feats of Player or "Modest Organs" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and Player is male ):
-			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
+			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do your best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
 			say "     'Not my first choice, but an interesting result nonetheless,' Francois says as he watches your hand drift down towards your groin. 'I am certain it will be popular.'";
 	else:
@@ -841,7 +841,7 @@ to say bleuettonneGet:
 	if Player consents:
 		say "[bleuettonne Use]";
 		if "Female Preferred" is listed in feats of Player or "Modest Organs" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and Player is female ):
-			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
+			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do your best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
 			say "     'Oh my, what a magnifique result,' Francois says with a grin as he watches your groin change.";
 	else:
@@ -852,8 +852,8 @@ to say CrèmeAbondanteGet:
 	say "     After tasting the pink gel and distilled milk, Francois quickly pours both into an empty bowl and starts mixing before he even reaches the doorway to his kitchen. 'Ah, crème à la fraise, I am certain I can do something with this,' you hear him say to himself as you watch his tail disappear around the corner. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small tray of pink creme topped pastries, placing them in front of you with a smile. Would you like to taste one right now? (Y/N)";
 	if Player consents:
 		say "[crème abondante Use]";
-		if "Male Preferred" is listed in feats of Player or "Passing Grade Chest" is listed in feats of Player or "One Pair" is listed in feats of Player:
-			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
+		if ("Male Preferred" is listed in feats of Player and "Breasts" is not listed in feats of Player) or "Passing Grade Chest" is listed in feats of Player or "One Pair" is listed in feats of Player:
+			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do your best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
 			say "     Francois cocks his head to the side as he watches your chest swell. 'I have a feeling this will be a popular dish among les femmes,' he says while eyeing your growing mammaries. 'I am glad I was not the first to test it though.'";
 	else:
@@ -885,7 +885,7 @@ to say lollicockGet:
 			say "a rumbling builds in your belly. Clearly your body doesn't agree with something about the treat.";
 		PlayerEat 5;
 		if lollicockCheck is 0:
-			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
+			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do your best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
 			say "'Mon dieu! What an unexpected result!' Francois says, licking his lips as he eyes up your new candy member. 'I certainly would like to give that a taste,' he says with a naughty smirk.";
 	else:
@@ -986,7 +986,7 @@ understand "creme abondante" as crème abondante.
 
 to say crème abondante Use:
 	say "     Biting into the crème abondante, your mouth is filled with sweet strawberry cream. Savoring the rich mousse and fresh pastry, you finish the treat and several slow, deliberate bites[run paragraph on]";
-	if "Male Preferred" is listed in feats of Player or "Passing Grade Chest" is listed in feats of Player or "One Pair" is listed in feats of Player:
+	if ("Male Preferred" is listed in feats of Player and "Breasts" is not listed in feats of Player) or "Passing Grade Chest" is listed in feats of Player or "One Pair" is listed in feats of Player:
 		say ". After finishing the last bite of your snack, a rumbling builds in your belly. Clearly your body doesn't agree with something about the treat, but it sure tasted great.";
 	else:
 		say ". As you swallow the last bite, a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your chest[run paragraph on]";
