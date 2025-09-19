@@ -147,7 +147,7 @@ when play ends:
 	clear the screen;
 	say "[bold type]Game Over![roman type][line break]";
 	ratetheplayer;
-	say "[link][bracket]Restart[close bracket][end link] [link][bracket]Restore[close bracket][as]restore[end link] [link][bracket]Undo[close bracket][end link]";
+	say "[bracket][link]Restart[end link][close bracket] [bracket][link]Restore[end link][close bracket] [bracket][link]Undo[end link][close bracket]";
 	say "----------";
 	follow the self examine rule;
 	LineBreak;

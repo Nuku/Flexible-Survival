@@ -4,12 +4,12 @@ Version 2 of Milking by Core Mechanics begins here.
 Table of Game Objects (continued)
 name	desc	weight	object
 "mothers milk"	"Delicious milk made from your own tender breasts."	1	mothers milk
-"distilled milk"	"Some creature's milk boiled down to a concentrated, powdery, form? That can't be dangerous!"	1	distilled milk
+"distilled milk"	"Some creature's milk boiled down to a concentrated, powdery form? That can't be dangerous!"	1	distilled milk
 "panther milk"	"The thick, luscious milk of one of the panther taurs."	1	panther milk
-"chocolate milk"	"The creamy milk with a white chocolate taste."	1	chocolate milk
+"chocolate milk"	"Creamy milk with a white chocolate taste."	1	chocolate milk
 "vixen milk"	"A thin milk with a faintly medicinal taste, like the silvery vixens it is from."	1	vixen milk
 "sweet milk"	"A creamy, sweet milk with a faintly honey-like taste."	1	sweet milk
-"macho milk"	"A creamy, energizing milk with a faintly spicy-like taste."	1	macho milk
+"macho milk"	"A creamy, energizing milk with a faintly spicy taste."	1	macho milk
 
 distilled milk is a grab object. It is not milky.
 

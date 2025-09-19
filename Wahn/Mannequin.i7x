@@ -13,7 +13,7 @@ to say mannequin loses:
 
 to say mannequinDesc:
 	if "Mannequin" is not listed in EncounteredEnemies of Player: [first encounter]
-		say "     Passing by a loading-dock in the warehouse district, you spot two humanoid dogs cutting a hole in the fence and slip through. Curious what the bulldog and German shepherd are doing in there, you inconspicuously follow them between the long rows and stacks of shipping containers. 'Which one did the coyote say the food was in?' the shepherd asks gruffly, to which the bulldog replies 'A red one, with Transglobal on the side.' Looking up and down the lines of containers, the shepherd wails 'But almost all of them are red!' The bulldog shrugs and walks over to the nearest container and opens it up. 'Oh hey, seventy flatsceen TVs - how... useless, without electricity. Let's check the next one.' The two of them open up several more containers, but find nothing of use in this post-apocalyptic city.";
+		say "     Passing by a loading-dock in the warehouse district, you spot two humanoid dogs cutting a hole in the fence and slipping through. Curious what the bulldog and German shepherd are doing in there, you inconspicuously follow them between the long rows and stacks of shipping containers. 'Which one did the coyote say the food was in?' the shepherd asks gruffly, to which the bulldog replies, 'A red one, with Transglobal on the side.' Looking up and down the lines of containers, the shepherd wails, 'But almost all of them are red!' The bulldog shrugs and walks over to the nearest container and opens it up. 'Oh hey, seventy flatsceen TVs - how... useless, without electricity. Let's check the next one.' The two of them open up several more containers, but find nothing of use in this post-apocalyptic city.";
 		say "     'I'm beginning to think Diego sent us on a wild goose chase,' the shepherd growls. 'OK, OK... let's just open up this last one, then go back to the park and have some words with that coyote...' his buddy replies, then pulls open another container and yelps in surprise. 'Now that's freaky - for a moment I thought this container was full of people.' The German shepherd steps in front of the door and looks in too. 'Nah, those are just those dress dummies they use in stores. Normal lifeless puppets, see...' and pokes the first mannequin in the container in the chest - which promptly grabs him by the arm. Within moments, dozens of mannequins pour out of the container and wrestle both dogs to the ground. They jostle against each other with a desperate tenacity, each trying to touch one of their captives. Then you see them change, taking on characteristics of the dogs - one growing out a muzzle, another suddenly sprouting fur, with all of them jostling against each other, in a frantic way.";
 		WaitLineBreak;
 		say "     After the changes stabilize, all of the mannequins lose interest in their captives and start to disperse, each striking out on its own. Left behind on the ground are two more mannequins - those must be the two former dogs, their essence drained away. As they start to get up too, you decide it's time to leave and make your way back to the hole in the fence. One of the mannequins got there before you, though. It might have absorbed the knowledge of its location from the dogs, or just have been lucky. Now it turns to you, eager to make your shape its own.";
@@ -276,7 +276,7 @@ to say nullpowderuse:
 							else:
 								now Cock Count of Player is 0;
 								follow the cock descr rule;
-								say "     You apply the powder to all your rods. After a bit of work, they all shrink down to nothing. With no companion, your balls also disappear[if Player is internalBalls], though it doesn't really make any visual difference[end if]";
+								say "     You apply the powder to all your rods. After a bit of work, they all shrink down to nothing. With no companion, your balls also disappear[if Player is internalBalls], though it doesn't really make any visual difference[end if].";
 						else:
 							decrease Cock Count of Player by 1;
 							follow the cock descr rule;
@@ -284,7 +284,7 @@ to say nullpowderuse:
 					else:
 						now Cock Count of Player is 0;
 						follow the cock descr rule;
-						say "     You apply the powder to your rod. After a bit of work, it shrinks down to nothing. With no companion, your balls also disappear[if Player is internalBalls], though it doesn't really make any visual difference[end if]";
+						say "     You apply the powder to your rod. After a bit of work, it shrinks down to nothing. With no companion, your balls also disappear[if Player is internalBalls], though it doesn't really make any visual difference[end if].";
 				else:
 					if Cock Length of Player > 29:
 						decrease Cock Length of Player by 6;
@@ -321,7 +321,7 @@ to say nullpowderuse:
 					if Player consents:
 						decrease Cunt Count of Player by 1;
 						follow the cunt descr rule;
-						say "     You apply the powder to a single portal. [if Cunt Depth of Player > 10 or Cunt Tightness of Player > 10]In spite of its size[else]After several applications[end if], it gradually diminishes into nothing, leaving your with [if Cunt Count of Player is 1]one cunt[else][Cunt Count of Player] cunts[end if].";
+						say "     You apply the powder to a single portal. [if Cunt Depth of Player > 10 or Cunt Tightness of Player > 10]In spite of its size[else]After several applications[end if], it gradually diminishes into nothing, leaving you with [if Cunt Count of Player is 1]one cunt[else][Cunt Count of Player] cunts[end if].";
 					else:
 						if Cunt Depth of Player > 29:
 							decrease Cunt Depth of Player by 6;
@@ -352,7 +352,7 @@ to say nullpowderuse:
 						else:
 							decrease Cunt Count of Player by 1;
 							follow the cunt descr rule;
-							say "     You apply the powder to a single portal. [if Cunt Depth of Player > 10 or Cunt Tightness of Player > 10]In spite of its size[else]After several applications[end if], it gradually diminishes into nothing, leaving your with [if Cunt Count of Player is 1]one cunt[else][Cunt Count of Player] cunts[end if].";
+							say "     You apply the powder to a single portal. [if Cunt Depth of Player > 10 or Cunt Tightness of Player > 10]In spite of its size[else]After several applications[end if], it gradually diminishes into nothing, leaving you with [if Cunt Count of Player is 1]one cunt[else][Cunt Count of Player] cunts[end if].";
 					else:
 						now Cunt Count of Player is 0;
 						follow the cunt descr rule;
@@ -380,9 +380,9 @@ to say nullpowderuse:
 						follow the breast descr rule;
 						say "     You apply the powder to a single rack. [if Breast Size of Player > 12]In spite of their size[else]After several applications[end if], it gradually diminishes into nothing, leaving you with [if Nipple Count of Player < 3]one set of knockers[else][Nipple Count of Player] sets of knockers[end if].";
 					else:
-						if Breast Size of Player > 29:
+						if Breast Size of Player > 24:
 							decrease Breast Size of Player by 6;
-						else if Breast Size of Player > 18:
+						else if Breast Size of Player > 16:
 							decrease Breast Size of Player by 4;
 						else:
 							decrease Breast Size of Player by 2;
@@ -404,9 +404,9 @@ to say nullpowderuse:
 						follow the breast descr rule;
 						say "     You apply the powder to your rack. After a bit of work, they shrinks down until they're completely flat.";
 				else:
-					if Breast Size of Player > 29:
+					if Breast Size of Player > 24:
 						decrease Breast Size of Player by 6;
-					else if Breast Size of Player > 18:
+					else if Breast Size of Player > 16:
 						decrease Breast Size of Player by 4;
 					else:
 						decrease Breast Size of Player by 2;
