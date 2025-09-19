@@ -102,7 +102,7 @@ to say HelpBookTalkMenu:
 	now sortorder entry is 4;
 	now description entry is "Learn some useful commands";
 	[]
-	if HP of Help Book is 0 and Player is in Grey Abbey Library:
+	if HP of Help Book is 0 and Help Book is visible:
 		choose a blank row in table of fucking options;
 		now title entry is "Remove Book";
 		now sortorder entry is 5;
