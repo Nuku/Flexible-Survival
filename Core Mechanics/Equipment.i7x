@@ -49,10 +49,10 @@ Part 1 - Motorcycle Helmets
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"black motorcycle helmet"	"A black motorcycle helmet with a clear visor. Heavy, but protective. Judging by the helmets appearance, it's [']unisex['] and pretty [']cool[']."	3	black motorcycle helmet
-"flaming motorcycle helmet"	"A black motorcycle helmet with a clear visor and painted flames rising along the sides. Heavy, but protective. Judging by the helmets appearance, it's [']unisex['] and pretty [']rebellious[']."	3	flaming motorcycle helmet
-"succubus motorcycle helmet"	"A black motorcycle helmet with a clear visor and a picture of a sexy succubus with her legs spread over your face. Heavy, but protective. Judging by the helmets appearance, it's [']feminine['] and pretty [']sexy[']."	3	succubus motorcycle helmet
-"incubus motorcycle helmet"	"A black motorcycle helmet with a clear visor and a picture of a sexy incubus jerking off over your face. Heavy, but protective. Judging by the helmets appearance, it's [']masculine['] and pretty [']sexy[']."	3	incubus motorcycle helmet
+"black motorcycle helmet"	"A black motorcycle helmet with a clear visor. Heavy, but protective. Judging by the helmet's appearance, it's [']unisex['] and pretty [']cool[']."	3	black motorcycle helmet
+"flaming motorcycle helmet"	"A black motorcycle helmet with a clear visor and painted flames rising along the sides. Heavy, but protective. Judging by the helmet's appearance, it's [']unisex['] and pretty [']rebellious[']."	3	flaming motorcycle helmet
+"succubus motorcycle helmet"	"A black motorcycle helmet with a clear visor and a picture of a sexy succubus with her legs spread over your face. Heavy, but protective. Judging by the helmet's appearance, it's [']feminine['] and pretty [']sexy[']."	3	succubus motorcycle helmet
+"incubus motorcycle helmet"	"A black motorcycle helmet with a clear visor and a picture of a sexy incubus jerking off over your face. Heavy, but protective. Judging by the helmet's appearance, it's [']masculine['] and pretty [']sexy[']."	3	incubus motorcycle helmet
 
 black motorcycle helmet is a grab object.
 black motorcycle helmet is equipment.
@@ -129,9 +129,9 @@ Part 2 - Bike Helmets
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"simple bike helmet"	"A plastic foam bicycle helmet, complete with a white shell and reflective stripes, as well as a strap to fasten it to the wearer's head. Judging by the helmets appearance, it's [']unisex['] and pretty [']basic[']."	1	bike helmet
-"princess bike helmet"	"A plastic foam bicycle helmet, complete with a pink shell covered with rainbows and unicorns, as well as a strap to fasten it to the wearer's head. Judging by the helmets appearance, it's [']feminine['] and pretty [']cute[']."	1	princess bike helmet
-"dragon bike helmet"	"A plastic foam bicycle helmet, complete with a green shell covered with dragons spewing red flames, as well as a strap to fasten it to the wearer's head. Judging by the helmets appearance, it's [']masculine['] and pretty [']cool[']."	1	dragon bike helmet
+"simple bike helmet"	"A plastic foam bicycle helmet, complete with a white shell and reflective stripes, as well as a strap to fasten it to the wearer's head. Judging by the helmet's appearance, it's [']unisex['] and pretty [']basic[']."	1	bike helmet
+"princess bike helmet"	"A plastic foam bicycle helmet, complete with a pink shell covered with rainbows and unicorns, as well as a strap to fasten it to the wearer's head. Judging by the helmet's appearance, it's [']feminine['] and pretty [']cute[']."	1	princess bike helmet
+"dragon bike helmet"	"A plastic foam bicycle helmet, complete with a green shell covered with dragons spewing red flames, as well as a strap to fasten it to the wearer's head. Judging by the helmet's appearance, it's [']masculine['] and pretty [']cool[']."	1	dragon bike helmet
 
 simple bike helmet is a grab object.
 simple bike helmet is equipment.
@@ -220,9 +220,9 @@ Part 4 - Football Helmets
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"tenvale silverbacks football helmet"	"A black football helmet with the logo of the Tenvale Silverbacks on both sides in silver. Heavy, but protective. Judging by the helmets appearance, it's [']masculine['] and pretty [']sporty[']."	3	tenvale silverbacks football helmet
-"Roman's gifted football helmet"	"Roman's black football helmet with the logo of the Tenvale Silverbacks on both sides in silver. Heavy, but protective. Judging by the helmets appearance, it's [']masculine['] and pretty [']sporty[']. Holding this helmet brings back memories of helping Roman come to terms with his new gender and showing him that his team still supports him."	3	Roman's gifted football helmet
-"Roman's stolen football helmet"	"Roman's black football helmet with the logo of the Tenvale Silverbacks on both sides in silver. Heavy, but protective. Judging by the helmets appearance, it's [']masculine['] and pretty [']sporty[']. Holding this helmet brings back memories of betraying Roman's trust and then watching as he became a mindless cocksleeve for his former teammates."	3	Roman's stolen football helmet
+"tenvale silverbacks football helmet"	"A black football helmet with the logo of the Tenvale Silverbacks on both sides in silver. Heavy, but protective. Judging by the helmet's appearance, it's [']masculine['] and pretty [']sporty[']."	3	tenvale silverbacks football helmet
+"Roman's gifted football helmet"	"Roman's black football helmet with the logo of the Tenvale Silverbacks on both sides in silver. Heavy, but protective. Judging by the helmet's appearance, it's [']masculine['] and pretty [']sporty[']. Holding this helmet brings back memories of helping Roman come to terms with his new gender and showing him that his team still supports him."	3	Roman's gifted football helmet
+"Roman's stolen football helmet"	"Roman's black football helmet with the logo of the Tenvale Silverbacks on both sides in silver. Heavy, but protective. Judging by the helmet's appearance, it's [']masculine['] and pretty [']sporty[']. Holding this helmet brings back memories of betraying Roman's trust and then watching as he became a mindless cocksleeve for his former teammates."	3	Roman's stolen football helmet
 
 tenvale silverbacks football helmet is a grab object.
 tenvale silverbacks football helmet is equipment.
@@ -283,8 +283,8 @@ Part 5 - Urban Explorer Helmets
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"crimson urban explorer helmet"	"A protective helmet with a flashy crimson-red finish. It should certainly ward off some bumps to someone's head. A compact camera is attached to the front, to capture everything the wearer sees, but sadly its batteries seem to be empty and it doesn't turn on. Judging by the helmets appearance, it's [']unisex['] and pretty [']cool[']."	2	crimson urban explorer helmet
-"cobalt urban explorer helmet"	"A protective helmet with subdued cobalt-blue finish. It should certainly ward off some bumps to someone's head. A compact camera is attached to the front, to capture everything the wearer sees, but sadly its batteries seem to be empty and it doesn't turn on. Judging by the helmets appearance, it's [']unisex['] and pretty [']cool[']."	2	cobalt urban explorer helmet
+"crimson urban explorer helmet"	"A protective helmet with a flashy crimson-red finish. It should certainly ward off some bumps to someone's head. A compact camera is attached to the front, to capture everything the wearer sees, but sadly its batteries seem to be empty and it doesn't turn on. Judging by the helmet's appearance, it's [']unisex['] and pretty [']cool[']."	2	crimson urban explorer helmet
+"cobalt urban explorer helmet"	"A protective helmet with subdued cobalt-blue finish. It should certainly ward off some bumps to someone's head. A compact camera is attached to the front, to capture everything the wearer sees, but sadly its batteries seem to be empty and it doesn't turn on. Judging by the helmet's appearance, it's [']unisex['] and pretty [']cool[']."	2	cobalt urban explorer helmet
 
 crimson urban explorer helmet is a grab object.
 crimson urban explorer helmet is equipment.
@@ -320,7 +320,7 @@ Part 6 - Riot Helmets
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"zephyr riot helmet"	"A helmet that zephyr has its security team use when dealing with emergencies. Judging by the appearance of the helmet, it's [']unisex['] and pretty [']authoritive['] looking."	3	zephyr riot helmet
+"zephyr riot helmet"	"A helmet that Zephyr has its security team use when dealing with emergencies. Judging by the appearance of the helmet, it's [']unisex['] and pretty [']authoritive['] looking."	3	zephyr riot helmet
 
 zephyr riot helmet is a grab object.
 zephyr riot helmet is equipment.
@@ -333,7 +333,7 @@ Effectiveness of zephyr riot helmet is 60.
 GA of zephyr riot helmet is 0.
 Traits of zephyr riot helmet is {"authoritive"}.
 Placement of zephyr riot helmet is "head".
-Descmod of zephyr riot helmet is "A jet black helmet with the zephyr logo on it rests atop your head.".
+Descmod of zephyr riot helmet is "A jet black helmet with the Zephyr logo on it rests atop your head.".
 Slot of zephyr riot helmet is "head".
 Scent of zephyr riot helmet is "The riot gear smells of metal and plastic.".
 
@@ -341,7 +341,7 @@ Part 7 - Cowboy Hats
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"cow-print cowboy hat"	"A cowboy hat that is covered in cow hide, the top has two small bull horns sticking out of the side. They are sure to make you look like a real fancy cowpoke. Judging by the appearance of the boots, it's [']masculine['] and pretty [']sporty['] yet [']cool['] looking."	1	cow-print cowboy hat
+"cow-print cowboy hat"	"A cowboy hat that is covered in cow hide, the top has two small bull horns sticking out of the side. They are sure to make you look like a real fancy cowpoke. Judging by the appearance of the hat, it's [']masculine['] and pretty [']sporty['] yet [']cool['] looking."	1	cow-print cowboy hat
 
 cow-print cowboy hat is a grab object.
 cow-print cowboy hat is equipment.
@@ -371,8 +371,8 @@ Part 1 - Goggles
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"aviator goggles"	"A set of aviator goggles with a strap to keep them tightly pressed to someone's face. Perfect for situations like being in strong winds, or being in danger of getting cum-facials by lots of horny monsters. Judging by the goggles appearance, it's [']unisex['] and pretty [']cool['] looking."	0	aviator goggles
-"lab goggles"	"A pair of clear plastic goggles that closely fit to someone's face. They're perfect to keep harmful chemicals (and spurting cum) out of your eyes. Judging by the goggles appearance, it's [']unisex['] and pretty [']smart['] looking."	0	lab goggles
+"aviator goggles"	"A set of aviator goggles with a strap to keep them tightly pressed to someone's face. Perfect for situations like being in strong winds, or being in danger of getting cum-facials by lots of horny monsters. Judging by the goggles['] appearance, it's [']unisex['] and pretty [']cool['] looking."	0	aviator goggles
+"lab goggles"	"A pair of clear plastic goggles that closely fit to someone's face. They're perfect to keep harmful chemicals (and spurting cum) out of your eyes. Judging by the goggles['] appearance, it's [']unisex['] and pretty [']smart['] looking."	0	lab goggles
 
 aviator goggles is a grab object.
 aviator goggles is equipment.
@@ -530,9 +530,9 @@ Part 1 - Leather Jackets
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"black leather jacket"	"A black leather jacket with some shiny silver buttons and zippers. It offers both looks and protection. Judging by the jackets appearance, it's [']unisex['] and pretty [']stylish[']."	4	black leather jacket
-"brown leather jacket"	"A brown leather jacket with some shiny silver buttons and zippers. It offers both looks and protection. Judging by the jackets appearance, it's [']unisex['] and pretty [']stylish[']."	4	brown leather jacket
-"leather biker jacket"	"A beat-up black leather jacket with a large pissed off wolf on the back, the words above the canine simply say [']The Wolf Pack[']. It brings with it both protection and an almost instinctive need to tell the world to kiss your ass. Judging by the jackets appearance, it's [']masculine['] and pretty [']rebellious[']."	4	leather biker jacket
+"black leather jacket"	"A black leather jacket with some shiny silver buttons and zippers. It offers both looks and protection. Judging by the jacket's appearance, it's [']unisex['] and pretty [']stylish[']."	4	black leather jacket
+"brown leather jacket"	"A brown leather jacket with some shiny silver buttons and zippers. It offers both looks and protection. Judging by the jacket's appearance, it's [']unisex['] and pretty [']stylish[']."	4	brown leather jacket
+"leather biker jacket"	"A beat-up black leather jacket with a large pissed off wolf on the back, the words above the canine simply say [']The Wolf Pack[']. It brings with it both protection and an almost instinctive need to tell the world to kiss your ass. Judging by the jacket's appearance, it's [']masculine['] and pretty [']rebellious[']."	4	leather biker jacket
 
 black leather jacket is a grab object.
 black leather jacket is equipment.
@@ -575,7 +575,7 @@ Effectiveness of leather biker jacket is 80.
 GA of leather biker jacket is 1.
 Traits of leather biker jacket is {"rebellious"}.
 Placement of leather biker jacket is "body".
-Descmod of leather biker jacket is "A beat-up black leather jacket with a large pissed off wolf on the back, with the words [']The Wolf Pack['] cover your upper body.".
+Descmod of leather biker jacket is "A beat-up black leather jacket with a large pissed off wolf on the back, with the words [']The Wolf Pack['], covers your upper body.".
 Slot of leather biker jacket is "back".
 Scent of leather biker jacket is "The jacket smells like smoke and leather.".
 
@@ -583,8 +583,8 @@ Part 2 - Greatcoat
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"black greatcoat"	"A full-body black coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight. Judging by the coats appearance, it's [']masculine['] and pretty [']smart['] looking."	4	black greatcoat
-"gray greatcoat"	"A full-body gray coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight. Judging by the coats appearance, it's [']masculine['] and pretty [']smart['] looking."	4	gray greatcoat
+"black greatcoat"	"A full-body black coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight. Judging by the coat's appearance, it's [']masculine['] and pretty [']smart['] looking."	4	black greatcoat
+"gray greatcoat"	"A full-body gray coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight. Judging by the coat's appearance, it's [']masculine['] and pretty [']smart['] looking."	4	gray greatcoat
 
 black greatcoat is a grab object.
 black greatcoat is equipment.
@@ -620,8 +620,8 @@ Part 3 - Breastplates
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"medieval breastplate"	"A shiny medieval breastplate. It is either a historical artifact or a quite good reproduction - either way, this should allow for some serious protection for someone who wants to survive the nanite apocalypse. Judging by the breastplates appearance, it's [']masculine['] and pretty [']authorative['] looking."	20	medieval breastplate
-"roadsign breastplate"	"A breastplate that someone fairly large seems to have crafted from things that were available - namely road signs. The front is formed by a STOP sign that has been hammered into a slight curve, with further signs bolted to its edges to curve around the sides of the body. Heavy leather straps for over the shoulders hold another stop sign forming the back plate. Judging by the breastplates appearance, it's [']masculine['] and pretty [']violent['] looking."	30	roadsign breastplate
+"medieval breastplate"	"A shiny medieval breastplate. It is either a historical artifact or a quite good reproduction - either way, this should allow for some serious protection for someone who wants to survive the nanite apocalypse. Judging by the breastplate's appearance, it's [']masculine['] and pretty [']authorative['] looking."	20	medieval breastplate
+"roadsign breastplate"	"A breastplate that someone fairly large seems to have crafted from things that were available - namely road signs. The front is formed by a STOP sign that has been hammered into a slight curve, with further signs bolted to its edges to curve around the sides of the body. Heavy leather straps for over the shoulders hold another stop sign forming the back plate. Judging by the breastplate's appearance, it's [']masculine['] and pretty [']violent['] looking."	30	roadsign breastplate
 
 medieval breastplate is a grab object.
 medieval breastplate is equipment.
@@ -657,8 +657,8 @@ Part 4 - Pads
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"tenvale football pads"	"Tough polymer football pads, sized to cover the shoulders and upper chest of a human player. There even is an extra plate attached to the front in order to cover the abdominal area of the wearer. You can see the logo of the Tenvale Silverbacks emblazoned on the left pec. Judging by the pads appearance, it's [']masculine['] and pretty [']sporty['] looking."	9	tenvale football pads
-"shoulder pad"	"An oversized, padded shoulder pad that juts out to the side too much. It won't cover much, but it might help. Judging by the pads appearance, it's [']unisex['] and pretty [']basic['] looking."	1	shoulder pad
+"tenvale football pads"	"Tough polymer football pads, sized to cover the shoulders and upper chest of a human player. There even is an extra plate attached to the front in order to cover the abdominal area of the wearer. You can see the logo of the Tenvale Silverbacks emblazoned on the left pec. Judging by the pads['] appearance, it's [']masculine['] and pretty [']sporty['] looking."	9	tenvale football pads
+"shoulder pad"	"An oversized, padded shoulder pad that juts out to the side too much. It won't cover much, but it might help. Judging by the pad's appearance, it's [']unisex['] and pretty [']basic['] looking."	1	shoulder pad
 
 tenvale football pads is a grab object.
 tenvale football pads is equipment.
@@ -694,9 +694,9 @@ Part 5 - Special Jackets
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"life jacket"	"A bright orange life jacket. It'll help normal humans stay afloat and comes with an attached whistle and light. Judging by the jackets appearance, it's [']unisex['] and pretty [']sporty[']."	2	life jacket
-"zephyr riot chest piece"	"A chest piece that zephyr has its security team use when dealing with emergencies. Judging by the chest pieces appearance, it's [']unisex['] and pretty [']authoritive[']."	6	zephyr riot chest piece
-"zephyr armored lab coat"	"A Lab coat specifically modified by zephyr for their researchers out in the field. It has underpadding and a sheet of bendable plastic woven inside the fabric. Judging by the chest pieces appearance, it's [']unisex['] and looks pretty [']smart[']."	4	zephyr armored lab coat
+"life jacket"	"A bright orange life jacket. It'll help normal humans stay afloat and comes with an attached whistle and light. Judging by the jacket's appearance, it's [']unisex['] and pretty [']sporty[']."	2	life jacket
+"zephyr riot chest piece"	"A chest piece that Zephyr has its security team use when dealing with emergencies. Judging by the chest piece's appearance, it's [']unisex['] and pretty [']authoritive[']."	6	zephyr riot chest piece
+"zephyr armored lab coat"	"A lab coat specifically modified by Zephyr for their researchers out in the field. It has underpadding and a sheet of bendable plastic woven inside the fabric. Judging by the coat's appearance, it's [']unisex['] and looks pretty [']smart[']."	4	zephyr armored lab coat
 
 life jacket is a grab object.
 life jacket is equipment.
@@ -724,7 +724,7 @@ Effectiveness of zephyr riot chest piece is 70.
 GA of zephyr riot chest piece is 0.
 Traits of zephyr riot chest piece is {"authoritive"}.
 Placement of zephyr riot chest piece is "body".
-Descmod of zephyr riot chest piece is "A jet black chest piece encases your torso with the zephyr logo on it.".
+Descmod of zephyr riot chest piece is "A jet black chest piece encases your torso with the Zephyr logo on it.".
 Slot of zephyr riot chest piece is "back".
 Scent of zephyr riot chest piece is "The riot gear smells of metal and plastic.".
 
@@ -739,7 +739,7 @@ Effectiveness of zephyr armored lab coat is 35.
 GA of zephyr armored lab coat is 0.
 Traits of zephyr armored lab coat is {"smart"}.
 Placement of zephyr armored lab coat is "body".
-Descmod of zephyr armored lab coat is "A white and black lab coat rests upon your shoulders with the zephyr logo embroidered over your shoulder blades.".
+Descmod of zephyr armored lab coat is "A white and black lab coat rests upon your shoulders with the Zephyr logo embroidered over your shoulder blades.".
 Slot of zephyr armored lab coat is "back".
 Scent of zephyr armored lab coat is "The lab coat smells of chemicals and synthetic fibers.".
 
@@ -749,7 +749,7 @@ Part 1 - Vests
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"bulletproof vest"	"A heavy-duty bulletproof vest, complete with metal plates for extra protection. Judging by the vests appearance, it's [']unisex['] and pretty [']authorative[']."	10	bulletproof vest
+"bulletproof vest"	"A heavy-duty bulletproof vest, complete with metal plates for extra protection. Judging by the vest's appearance, it's [']unisex['] and pretty [']authorative[']."	10	bulletproof vest
 
 bulletproof vest is a grab object.
 bulletproof vest is equipment.
@@ -776,7 +776,7 @@ Part 1 - Arm Guards
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"zephyr riot arm guards"	"A set of arm guards that cover the back of your hands all the way up to your shoulders. Zephyr has its security team use these when dealing with emergencies. Judging by the arm guards appearance, it's [']unisex['] and pretty [']authorative[']."	3	zephyr riot arm guards
+"zephyr riot arm guards"	"A set of arm guards that cover the back of your hands all the way up to your shoulders. Zephyr has its security team use these when dealing with emergencies. Judging by the arm guards['] appearance, it's [']unisex['] and pretty [']authorative[']."	3	zephyr riot arm guards
 
 zephyr riot arm guards is a grab object.
 zephyr riot arm guards is equipment.
@@ -789,7 +789,7 @@ Effectiveness of zephyr riot arm guards is 60.
 GA of zephyr riot arm guards is 0.
 Traits of zephyr riot arm guards is {"authorative"}.
 Placement of zephyr riot arm guards is "body".
-Descmod of zephyr riot arm guards is "A set of jet black arm guards that encase your arms with the zephyr logo on it.".
+Descmod of zephyr riot arm guards is "A set of jet black arm guards that encase your arms with the Zephyr logo on it.".
 Slot of zephyr riot arm guards is "arms".
 Scent of zephyr riot arm guards is "The riot gear smell of metal and plastic.".
 
@@ -808,7 +808,7 @@ Effectiveness of fur-lined armguards is 60.
 GA of fur-lined armguards is 0.
 Traits of fur-lined armguards is {"adventurous"}.
 Placement of fur-lined armguards is "body".
-Descmod of fur-lined armguards is "A set of black leather arm guards protects your forearms.".
+Descmod of fur-lined armguards is "A set of black leather arm guards protect your forearms.".
 Slot of fur-lined armguards is "arms".
 Scent of fur-lined armguards is "Smells like leather and fur.".
 
@@ -817,7 +817,7 @@ Part 2 - Lab Gloves
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"zephyr armored lab gloves"	"A set of lab gloves specifically modified by zephyr for their researchers out in the field. It has a sheet of bendable plastic woven inside the rubber. Judging by the gloves appearance, it's [']unisex['] and looks pretty [']smart[']."	1	zephyr armored lab gloves
+"zephyr armored lab gloves"	"A set of lab gloves specifically modified by Zephyr for their researchers out in the field. It has a sheet of bendable plastic woven inside the rubber. Judging by the gloves['] appearance, it's [']unisex['] and looks pretty [']smart[']."	1	zephyr armored lab gloves
 
 zephyr armored lab gloves is a grab object.
 zephyr armored lab gloves is equipment.
@@ -830,7 +830,7 @@ Effectiveness of zephyr armored lab gloves is 15.
 GA of zephyr armored lab gloves is 0.
 Traits of zephyr armored lab gloves is {"smart"}.
 Placement of zephyr armored lab gloves is "body".
-Descmod of zephyr armored lab gloves is "A pair of white rubber lab gloves are fitted over your hands with the zephyr logo patched over the back of your hand.".
+Descmod of zephyr armored lab gloves is "A pair of white rubber lab gloves are fitted over your hands with the Zephyr logo patched over the back of your hand.".
 Slot of zephyr armored lab gloves is "hands".
 Scent of zephyr armored lab gloves is "The lab gloves smell of chemicals and rubber.".
 
@@ -838,7 +838,7 @@ Part 3 - Tactical Gloves
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"tactical gloves"	"A set of black fingerless gloves, with built-in knuckle guards. Looks to be police issue gear. Judging by the gloves appearance, it's [']unisex['] and looks pretty [']authoritative[']."	1	tactical gloves
+"tactical gloves"	"A set of black fingerless gloves, with built-in knuckle guards. Looks to be police issue gear. Judging by the gloves['] appearance, it's [']unisex['] and looks pretty [']authoritative[']."	1	tactical gloves
 
 tactical gloves is a grab object.
 tactical gloves is equipment.
@@ -940,7 +940,7 @@ Part 3 - Shin Guards
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"zephyr riot shin guards"	"A set of shin guards that cover your legs from your feet up to your thighs. Zephyr has its security team use these when dealing with emergencies. Judging by the shin guards appearance, it's [']unisex['] and pretty [']authorative[']."	4	zephyr riot shin guards
+"zephyr riot shin guards"	"A set of shin guards that cover your legs from your feet up to your thighs. Zephyr has its security team use these when dealing with emergencies. Judging by the shin guards['] appearance, it's [']unisex['] and pretty [']authorative[']."	4	zephyr riot shin guards
 
 zephyr riot shin guards is a grab object.
 zephyr riot shin guards is equipment.
@@ -953,7 +953,7 @@ Effectiveness of zephyr riot shin guards is 60.
 GA of zephyr riot shin guards is 0.
 Traits of zephyr riot shin guards is {"authorative"}.
 Placement of zephyr riot shin guards is "body".
-Descmod of zephyr riot shin guards is "A set of jet black shin guards that encase your legs with the zephyr logo on it.".
+Descmod of zephyr riot shin guards is "A set of jet black shin guards that encase your legs with the Zephyr logo on it.".
 Slot of zephyr riot shin guards is "feet".
 Scent of zephyr riot shin guards is "The riot gear smells of metal and plastic.".
 
@@ -961,7 +961,7 @@ Part 4 - Lab Boots
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"zephyr armored lab boots"	"A pair of lab boots specifically modified by zephyr for their researchers out in the field. It has a sheet of bendable plastic woven inside the rubber. Judging by the boots appearance, it's [']unisex['] and looks pretty [']smart[']."	1	zephyr armored lab boots
+"zephyr armored lab boots"	"A pair of lab boots specifically modified by Zephyr for their researchers out in the field. It has a sheet of bendable plastic woven inside the rubber. Judging by the boots['] appearance, it's [']unisex['] and looks pretty [']smart[']."	1	zephyr armored lab boots
 
 zephyr armored lab boots is a grab object.
 zephyr armored lab boots is equipment.
@@ -974,7 +974,7 @@ Effectiveness of zephyr armored lab boots is 15.
 GA of zephyr armored lab boots is 0.
 Traits of zephyr armored lab boots is {"smart"}.
 Placement of zephyr armored lab boots is "body".
-Descmod of zephyr armored lab boots is "A pair of black rubber lab boots are fitted over your feet with the zephyr logo patched over the toes.".
+Descmod of zephyr armored lab boots is "A pair of black rubber lab boots are fitted over your feet with the Zephyr logo patched over the toes.".
 Slot of zephyr armored lab boots is "feet".
 Scent of zephyr armored lab boots is "The lab boots smells of chemicals and rubber.".
 
@@ -986,9 +986,9 @@ Part 1 - Fedoras
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"white cashmere fedora"	"A white fedora hat with a soft brim and indented crown. Wearing it might make you look like a private detective, a hipster, or just someone with a fondness for the classy yesteryear. Judging by the hats appearance, it's [']unisex['] and pretty [']stylish[']."	0	white cashmere fedora
-"black wool fedora"	"A black fedora hat with soft brim and indented crown. Wearing it might make you look like a private detective, a hipster, or just someone with a fondness for the classy yesteryear. Judging by the hats appearance, it's [']unisex['] and pretty [']stylish[']."	0	black wool fedora
-"gray wool fedora"	"A gray fedora hat with soft brim and indented crown. Wearing it might make you look like a private detective, a hipster, or just someone with a fondness for the classy yesteryear. Judging by the hats appearance, it's [']unisex['] and pretty [']stylish[']."	0	gray wool fedora
+"white cashmere fedora"	"A white fedora hat with a soft brim and indented crown. Wearing it might make you look like a private detective, a hipster, or just someone with a fondness for the classy yesteryear. Judging by the hat's appearance, it's [']unisex['] and pretty [']stylish[']."	0	white cashmere fedora
+"black wool fedora"	"A black fedora hat with soft brim and indented crown. Wearing it might make you look like a private detective, a hipster, or just someone with a fondness for the classy yesteryear. Judging by the hat's appearance, it's [']unisex['] and pretty [']stylish[']."	0	black wool fedora
+"gray wool fedora"	"A gray fedora hat with soft brim and indented crown. Wearing it might make you look like a private detective, a hipster, or just someone with a fondness for the classy yesteryear. Judging by the hat's appearance, it's [']unisex['] and pretty [']stylish[']."	0	gray wool fedora
 
 white cashmere fedora is a grab object.
 white cashmere fedora is equipment.
@@ -1039,16 +1039,16 @@ Part 2 - Knitted Skullcaps
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"white knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hats appearance, it's [']unisex['] and pretty [']basic[']."	0	white knitted skullcap
-"black knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hats appearance, it's [']unisex['] and pretty [']basic[']."	0	black knitted skullcap
-"pink knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hats appearance, it's [']unisex['] and pretty [']basic[']."	0	pink knitted skullcap
-"blue knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hats appearance, it's [']unisex['] and pretty [']basic[']."	0	blue knitted skullcap
-"green knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hats appearance, it's [']unisex['] and pretty [']basic[']."	0	green knitted skullcap
-"red knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hats appearance, it's [']unisex['] and pretty [']basic[']."	0	red knitted skullcap
-"purple knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hats appearance, it's [']unisex['] and pretty [']basic[']."	0	purple knitted skullcap
-"yellow knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hats appearance, it's [']unisex['] and pretty [']basic[']."	0	yellow knitted skullcap
-"orange knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hats appearance, it's [']unisex['] and pretty [']basic[']."	0	orange knitted skullcap
-"skull knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hats appearance, it's [']unisex['] and pretty [']rebellious[']."	0	skull knitted skullcap
+"white knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hat's appearance, it's [']unisex['] and pretty [']basic[']."	0	white knitted skullcap
+"black knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hat's appearance, it's [']unisex['] and pretty [']basic[']."	0	black knitted skullcap
+"pink knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hat's appearance, it's [']unisex['] and pretty [']basic[']."	0	pink knitted skullcap
+"blue knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hat's appearance, it's [']unisex['] and pretty [']basic[']."	0	blue knitted skullcap
+"green knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hat's appearance, it's [']unisex['] and pretty [']basic[']."	0	green knitted skullcap
+"red knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hat's appearance, it's [']unisex['] and pretty [']basic[']."	0	red knitted skullcap
+"purple knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hat's appearance, it's [']unisex['] and pretty [']basic[']."	0	purple knitted skullcap
+"yellow knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hat's appearance, it's [']unisex['] and pretty [']basic[']."	0	yellow knitted skullcap
+"orange knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hat's appearance, it's [']unisex['] and pretty [']basic[']."	0	orange knitted skullcap
+"skull knitted skullcap"	"A woolen cap, made to rightly stretch over someone's skull. Judging by the hat's appearance, it's [']unisex['] and pretty [']rebellious[']."	0	skull knitted skullcap
 
 white knitted skullcap is a grab object.
 white knitted skullcap is equipment.
@@ -1204,8 +1204,8 @@ Part 3 - Baseball Caps
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"tenvale vulpines baseball cap"	"A red and white baseball cap with the logo of the Tenvale Vulpines baseball team on its front. Judging by the caps appearance, it's [']unisex['] and pretty [']sporty[']."	0	tenvale vulpines baseball cap
-"tenvale silverbacks baseball cap"	"A black and silver baseball cap with the logo of the Tenvale Silverbacks football team on its front. Judging by the caps appearance, it's [']unisex['] and pretty [']sporty[']."	0	tenvale silverbacks baseball cap
+"tenvale vulpines baseball cap"	"A red and white baseball cap with the logo of the Tenvale Vulpines baseball team on its front. Judging by the cap's appearance, it's [']unisex['] and pretty [']sporty[']."	0	tenvale vulpines baseball cap
+"tenvale silverbacks baseball cap"	"A black and silver baseball cap with the logo of the Tenvale Silverbacks football team on its front. Judging by the cap's appearance, it's [']unisex['] and pretty [']sporty[']."	0	tenvale silverbacks baseball cap
 
 tenvale vulpines baseball cap is a grab object.
 tenvale vulpines baseball cap is equipment.
@@ -1241,7 +1241,7 @@ Part 4 - Specialty Hats
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"tin-foil hat"	"A bunch of tin foil, bent into shape to cover a human's head. It might protect its wearer from alien mind control rays, or could possibly ensure that the head is still juicy and not burned on the outside when baked... Judging by the hats appearance, it's [']unisex['] and pretty [']grungy[']."	0	tin-foil hat
+"tin-foil hat"	"A bunch of tin foil, bent into shape to cover a human's head. It might protect its wearer from alien mind control rays, or could possibly ensure that the head is still juicy and not burned on the outside when baked... Judging by the hat's appearance, it's [']unisex['] and pretty [']grungy[']."	0	tin-foil hat
 
 tin-foil hat is a grab object.
 tin-foil hat is equipment.
@@ -1264,10 +1264,10 @@ Part 1 - Large Bows
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"large white bow"	"A large white bow with a glossy finish. It's appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bows appearance, it's [']feminine['] and pretty [']cute[']."	0	large white bow
-"large black bow"	"A large black bow with a glossy finish. It's appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bows appearance, it's [']feminine['] and pretty [']rebellious[']."	0	large black bow
-"large pink bow"	"A large pink bow with a glossy finish. It's appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bows appearance, it's [']feminine['] and pretty [']cute[']."	0	large pink bow
-"large polka dot bow"	"A large polka dot bow with a glossy finish. It's appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bows appearance, it's [']feminine['] and pretty [']cute[']."	0	large polka dot bow
+"large white bow"	"A large white bow with a glossy finish. Its appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bow's appearance, it's [']feminine['] and pretty [']cute[']."	0	large white bow
+"large black bow"	"A large black bow with a glossy finish. Its appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bow's appearance, it's [']feminine['] and pretty [']rebellious[']."	0	large black bow
+"large pink bow"	"A large pink bow with a glossy finish. Its appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bow's appearance, it's [']feminine['] and pretty [']cute[']."	0	large pink bow
+"large polka dot bow"	"A large polka dot bow with a glossy finish. Its appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bow's appearance, it's [']feminine['] and pretty [']cute[']."	0	large polka dot bow
 
 large white bow is a grab object.
 large white bow is equipment.
@@ -1335,8 +1335,8 @@ Part 1 - Sunglasses
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"simple sunglasses"	"A set of fairly simple sunglasses with a black plastic frame. Nothing special, but they'll protect your eyes. Judging by the glasses appearance, it's [']unisex['] and pretty [']basic[']."	0	simple sunglasses
-"designer sunglasses"	"A set of Lu-Beam sunglasses with a very fancy shape. Those are sure to make anyone look like a star. Judging by the glasses appearance, it's [']unisex['] and pretty [']stylish[']."	0	designer sunglasses
+"simple sunglasses"	"A set of fairly simple sunglasses with a black plastic frame. Nothing special, but they'll protect your eyes. Judging by the glasses['] appearance, it's [']unisex['] and pretty [']basic[']."	0	simple sunglasses
+"designer sunglasses"	"A set of Lu-Beam sunglasses with a very fancy shape. These are sure to make anyone look like a star. Judging by the glasses['] appearance, it's [']unisex['] and pretty [']stylish[']."	0	designer sunglasses
 
 simple sunglasses is a grab object.
 simple sunglasses is equipment.
@@ -1372,7 +1372,7 @@ Part 2 - Regular Glasses
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"horn-rimmed glasses"	"A pair of dignified horn-rimmed glasses with slightly curved lenses. Judging by the glasses appearance, it's [']unisex['] and pretty [']smart['] looking."	0	horn-rimmed glasses
+"horn-rimmed glasses"	"A pair of dignified horn-rimmed glasses with slightly curved lenses. Judging by the glasses['] appearance, it's [']unisex['] and pretty [']smart['] looking."	0	horn-rimmed glasses
 
 horn-rimmed glasses is a grab object.
 horn-rimmed glasses is equipment.
@@ -1393,8 +1393,8 @@ Part 3 - Specialty Glasses
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"prop glasses"	"A pair of stylish glasses with clear glass lenses in their frames. These are what you'd see on stage or in a movie, creating the right appearance without giving people headaches from wearing glasses even if they are not needed. Judging by the glasses appearance, it's [']unisex['] and pretty [']cool[']."	0	prop glasses
-"rose-tinted glasses"	"A pair of rose-tinted glasses with frilly edges. There even are some glass gemstones with reflective backing glued to them. Judging by the glasses appearance, it's [']feminine['] and pretty [']stylish[']."	0	rose-tinted glasses
+"prop glasses"	"A pair of stylish glasses with clear glass lenses in their frames. These are what you'd see on stage or in a movie, creating the right appearance without giving people headaches from wearing glasses even if they are not needed. Judging by the glasses['] appearance, it's [']unisex['] and pretty [']cool[']."	0	prop glasses
+"rose-tinted glasses"	"A pair of rose-tinted glasses with frilly edges. There even are some glass gemstones with reflective backing glued to them. Judging by the glasses['] appearance, it's [']feminine['] and pretty [']stylish[']."	0	rose-tinted glasses
 
 prop glasses is a grab object.
 prop glasses is equipment.
@@ -1430,7 +1430,7 @@ Section 4 - Masks
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"latex mouse mask"	"A dark-purple mask in the shape of an innocent and cute lil['] mouse, however in contradiction to its sweet appearance it has words like [']Squeak-Slut['] and [']Cheese-Whore[']. The mask is skin-tight with a buckle in back to hold it in place. Judging by the masks appearance, it's [']unisex['] and look like it would be fitting for a sex [']Slave[']."	0	latex mouse mask
+"latex mouse mask"	"A dark-purple mask in the shape of an innocent and cute lil['] mouse, however in contradiction to its sweet appearance it has words like [']Squeak-Slut['] and [']Cheese-Whore[']. The mask is skin-tight with a buckle in back to hold it in place. Judging by the mask's appearance, it's [']unisex['] and look like it would be fitting for a sex [']slave[']."	0	latex mouse mask
 
 latex mouse mask is a grab object.
 latex mouse mask is equipment.
@@ -1459,17 +1459,17 @@ Part 1 - T-shirts
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"white t-shirt"	"A simple white t-shirt, without any pattern or frills to it. Judging by the garments appearance, it's [']unisex['] and pretty [']basic[']."	1	white t-shirt
-"black t-shirt"	"A simple black t-shirt, without any pattern or frills to it. Judging by the garments appearance, it's [']unisex['] and pretty [']basic[']."	1	black t-shirt
-"pink t-shirt"	"A simple pink t-shirt, without any pattern or frills to it. Judging by the garments appearance, it's [']unisex['] and pretty [']basic[']."	1	pink t-shirt
-"blue t-shirt"	"A simple blue t-shirt, without any pattern or frills to it. Judging by the garments appearance, it's [']unisex['] and pretty [']basic[']."	1	blue t-shirt
-"green t-shirt"	"A simple green t-shirt, without any pattern or frills to it. Judging by the garments appearance, it's [']unisex['] and pretty [']basic[']."	1	green t-shirt
-"red t-shirt"	"A simple red t-shirt, without any pattern or frills to it. Judging by the garments appearance, it's [']unisex['] and pretty [']basic[']."	1	red t-shirt
-"purple t-shirt"	"A simple green t-shirt, without any pattern or frills to it. Judging by the garments appearance, it's [']unisex['] and pretty [']basic[']."	1	purple t-shirt
-"yellow t-shirt"	"A simple yellow t-shirt, without any pattern or frills to it. Judging by the garments appearance, it's [']unisex['] and pretty [']basic[']."	1	yellow t-shirt
-"orange t-shirt"	"A simple orange t-shirt, without any pattern or frills to it. Judging by the garments appearance, it's [']unisex['] and pretty [']basic[']."	1	orange t-shirt
-"tie-dye t-shirt"	"A simple tie-dye t-shirt, without any pattern or frills to it. Judging by the garments appearance, it's [']unisex['] and pretty [']basic[']."	1	tie-dye t-shirt
-"camo shirt"	"A t-shirt with camo patterns in various shades of green. Clearly, it belongs to the uniform of a soldier of the US army. Judging by the shirts appearance, it's [']unisex['] and pretty [']cool['] looking."	1	camo shirt
+"white t-shirt"	"A simple white t-shirt, without any pattern or frills to it. Judging by the garment's appearance, it's [']unisex['] and pretty [']basic[']."	1	white t-shirt
+"black t-shirt"	"A simple black t-shirt, without any pattern or frills to it. Judging by the garment's appearance, it's [']unisex['] and pretty [']basic[']."	1	black t-shirt
+"pink t-shirt"	"A simple pink t-shirt, without any pattern or frills to it. Judging by the garment's appearance, it's [']unisex['] and pretty [']basic[']."	1	pink t-shirt
+"blue t-shirt"	"A simple blue t-shirt, without any pattern or frills to it. Judging by the garment's appearance, it's [']unisex['] and pretty [']basic[']."	1	blue t-shirt
+"green t-shirt"	"A simple green t-shirt, without any pattern or frills to it. Judging by the garment's appearance, it's [']unisex['] and pretty [']basic[']."	1	green t-shirt
+"red t-shirt"	"A simple red t-shirt, without any pattern or frills to it. Judging by the garment's appearance, it's [']unisex['] and pretty [']basic[']."	1	red t-shirt
+"purple t-shirt"	"A simple purple t-shirt, without any pattern or frills to it. Judging by the garment's appearance, it's [']unisex['] and pretty [']basic[']."	1	purple t-shirt
+"yellow t-shirt"	"A simple yellow t-shirt, without any pattern or frills to it. Judging by the garment's appearance, it's [']unisex['] and pretty [']basic[']."	1	yellow t-shirt
+"orange t-shirt"	"A simple orange t-shirt, without any pattern or frills to it. Judging by the garment's appearance, it's [']unisex['] and pretty [']basic[']."	1	orange t-shirt
+"tie-dye t-shirt"	"A simple tie-dye t-shirt, without any pattern or frills to it. Judging by the garment's appearance, it's [']unisex['] and pretty [']basic[']."	1	tie-dye t-shirt
+"camo shirt"	"A t-shirt with camo patterns in various shades of green. Clearly, it belongs to the uniform of a soldier of the US army. Judging by the shirt's appearance, it's [']unisex['] and pretty [']cool['] looking."	1	camo shirt
 
 white t-shirt is a grab object.
 white t-shirt is equipment.
@@ -1484,7 +1484,7 @@ Traits of white t-shirt is {"basic"}.
 Placement of white t-shirt is "body".
 Descmod of white t-shirt is "Your upper body is covered by a white t-shirt.".
 Slot of white t-shirt is "chest".
-Scent of white t-shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of white t-shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 black t-shirt is a grab object.
 black t-shirt is equipment.
@@ -1499,7 +1499,7 @@ Traits of black t-shirt is {"basic"}.
 Placement of black t-shirt is "body".
 Descmod of black t-shirt is "Your upper body is covered by a black t-shirt.".
 Slot of black t-shirt is "chest".
-Scent of black t-shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of black t-shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 pink t-shirt is a grab object.
 pink t-shirt is equipment.
@@ -1514,7 +1514,7 @@ Traits of pink t-shirt is {"basic"}.
 Placement of pink t-shirt is "body".
 Descmod of pink t-shirt is "Your upper body is covered by a pink t-shirt.".
 Slot of pink t-shirt is "chest".
-Scent of pink t-shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of pink t-shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 blue t-shirt is a grab object.
 blue t-shirt is equipment.
@@ -1529,7 +1529,7 @@ Traits of blue t-shirt is {"basic"}.
 Placement of blue t-shirt is "body".
 Descmod of blue t-shirt is "Your upper body is covered by a blue t-shirt.".
 Slot of blue t-shirt is "chest".
-Scent of blue t-shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of blue t-shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 green t-shirt is a grab object.
 green t-shirt is equipment.
@@ -1544,7 +1544,7 @@ Traits of green t-shirt is {"basic"}.
 Placement of green t-shirt is "body".
 Descmod of green t-shirt is "Your upper body is covered by a green t-shirt.".
 Slot of green t-shirt is "chest".
-Scent of green t-shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of green t-shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 red t-shirt is a grab object.
 red t-shirt is equipment.
@@ -1559,7 +1559,7 @@ Traits of red t-shirt is {"basic"}.
 Placement of red t-shirt is "body".
 Descmod of red t-shirt is "Your upper body is covered by a red t-shirt.".
 Slot of red t-shirt is "chest".
-Scent of red t-shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of red t-shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 purple t-shirt is a grab object.
 purple t-shirt is equipment.
@@ -1574,7 +1574,7 @@ Traits of purple t-shirt is {"basic"}.
 Placement of purple t-shirt is "body".
 Descmod of purple t-shirt is "Your upper body is covered by a purple t-shirt.".
 Slot of purple t-shirt is "chest".
-Scent of purple t-shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of purple t-shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 yellow t-shirt is a grab object.
 yellow t-shirt is equipment.
@@ -1589,7 +1589,7 @@ Traits of yellow t-shirt is {"basic"}.
 Placement of yellow t-shirt is "body".
 Descmod of yellow t-shirt is "Your upper body is covered by a yellow t-shirt.".
 Slot of yellow t-shirt is "chest".
-Scent of yellow t-shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of yellow t-shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 orange t-shirt is a grab object.
 orange t-shirt is equipment.
@@ -1604,7 +1604,7 @@ Traits of orange t-shirt is {"basic"}.
 Placement of orange t-shirt is "body".
 Descmod of orange t-shirt is "Your upper body is covered by a orange t-shirt.".
 Slot of orange t-shirt is "chest".
-Scent of orange t-shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of orange t-shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 tie-dye t-shirt is a grab object.
 tie-dye t-shirt is equipment.
@@ -1619,7 +1619,7 @@ Traits of tie-dye t-shirt is {"basic"}.
 Placement of tie-dye t-shirt is "body".
 Descmod of tie-dye t-shirt is "Your upper body is covered by a tie-dye t-shirt.".
 Slot of tie-dye t-shirt is "chest".
-Scent of tie-dye t-shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of tie-dye t-shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 camo shirt is a grab object.
 camo shirt is equipment.
@@ -1634,22 +1634,22 @@ Traits of camo shirt is {"cool"}.
 Placement of camo shirt is "chest".
 Descmod of camo shirt is "Your upper body is covered by a camo pattern t-shirt in shades of green.".
 Slot of camo shirt is "chest".
-Scent of camo shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of camo shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 Part 2 - Pullovers
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"white pullover"	"A fairly large white pullover. It is perfect to keep its wearer warm. Judging by the pullovers appearance, it's [']unisex['] and pretty [']basic['] looking."	1	white pullover
-"black pullover"	"A fairly large black pullover. It is perfect to keep its wearer warm. Judging by the pullovers appearance, it's [']unisex['] and pretty [']basic['] looking."	1	black pullover
-"pink pullover"	"A fairly large pink pullover. It is perfect to keep its wearer warm. Judging by the pullovers appearance, it's [']unisex['] and pretty [']basic['] looking."	1	pink pullover
-"blue pullover"	"A fairly large blue pullover. It is perfect to keep its wearer warm. Judging by the pullovers appearance, it's [']unisex['] and pretty [']basic['] looking."	1	blue pullover
-"green pullover"	"A fairly large green pullover. It is perfect to keep its wearer warm. Judging by the pullovers appearance, it's [']unisex['] and pretty [']basic['] looking."	1	green pullover
-"red pullover"	"A fairly large red pullover. It is perfect to keep its wearer warm. Judging by the pullovers appearance, it's [']unisex['] and pretty [']basic['] looking."	1	red pullover
-"purple pullover"	"A fairly large purple pullover. It is perfect to keep its wearer warm. Judging by the pullovers appearance, it's [']unisex['] and pretty [']basic['] looking."	1	purple pullover
-"yellow pullover"	"A fairly large yellow pullover. It is perfect to keep its wearer warm. Judging by the pullovers appearance, it's [']unisex['] and pretty [']basic['] looking."	1	yellow pullover
-"orange pullover"	"A fairly large orange pullover. It is perfect to keep its wearer warm. Judging by the pullovers appearance, it's [']unisex['] and pretty [']basic['] looking."	1	orange pullover
-"maroon pullover"	"A fairly large maroon pullover. It is perfect to keep its wearer warm. Judging by the pullovers appearance, it's [']unisex['] and pretty [']basic['] looking."	1	maroon pullover
+"white pullover"	"A fairly large white pullover. It is perfect to keep its wearer warm. Judging by the pullover's appearance, it's [']unisex['] and pretty [']basic['] looking."	1	white pullover
+"black pullover"	"A fairly large black pullover. It is perfect to keep its wearer warm. Judging by the pullover's appearance, it's [']unisex['] and pretty [']basic['] looking."	1	black pullover
+"pink pullover"	"A fairly large pink pullover. It is perfect to keep its wearer warm. Judging by the pullover's appearance, it's [']unisex['] and pretty [']basic['] looking."	1	pink pullover
+"blue pullover"	"A fairly large blue pullover. It is perfect to keep its wearer warm. Judging by the pullover's appearance, it's [']unisex['] and pretty [']basic['] looking."	1	blue pullover
+"green pullover"	"A fairly large green pullover. It is perfect to keep its wearer warm. Judging by the pullover's appearance, it's [']unisex['] and pretty [']basic['] looking."	1	green pullover
+"red pullover"	"A fairly large red pullover. It is perfect to keep its wearer warm. Judging by the pullover's appearance, it's [']unisex['] and pretty [']basic['] looking."	1	red pullover
+"purple pullover"	"A fairly large purple pullover. It is perfect to keep its wearer warm. Judging by the pullover's appearance, it's [']unisex['] and pretty [']basic['] looking."	1	purple pullover
+"yellow pullover"	"A fairly large yellow pullover. It is perfect to keep its wearer warm. Judging by the pullover's appearance, it's [']unisex['] and pretty [']basic['] looking."	1	yellow pullover
+"orange pullover"	"A fairly large orange pullover. It is perfect to keep its wearer warm. Judging by the pullover's appearance, it's [']unisex['] and pretty [']basic['] looking."	1	orange pullover
+"maroon pullover"	"A fairly large maroon pullover. It is perfect to keep its wearer warm. Judging by the pullover's appearance, it's [']unisex['] and pretty [']basic['] looking."	1	maroon pullover
 
 white pullover is a grab object.
 white pullover is equipment.
@@ -1664,7 +1664,7 @@ Traits of white pullover is {"basic"}.
 Placement of white pullover is "body".
 Descmod of white pullover is "Your upper body is covered by a white pullover.".
 Slot of white pullover is "chest".
-Scent of white pullover is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of white pullover is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 black pullover is a grab object.
 black pullover is equipment.
@@ -1679,7 +1679,7 @@ Traits of black pullover is {"basic"}.
 Placement of black pullover is "body".
 Descmod of black pullover is "Your upper body is covered by a black pullover.".
 Slot of black pullover is "chest".
-Scent of black pullover is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of black pullover is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 pink pullover is a grab object.
 pink pullover is equipment.
@@ -1694,7 +1694,7 @@ Traits of pink pullover is {"basic"}.
 Placement of pink pullover is "body".
 Descmod of pink pullover is "Your upper body is covered by a pink pullover.".
 Slot of pink pullover is "chest".
-Scent of pink pullover is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of pink pullover is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 blue pullover is a grab object.
 blue pullover is equipment.
@@ -1709,7 +1709,7 @@ Traits of blue pullover is {"basic"}.
 Placement of blue pullover is "body".
 Descmod of blue pullover is "Your upper body is covered by a blue pullover.".
 Slot of blue pullover is "chest".
-Scent of blue pullover is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of blue pullover is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 green pullover is a grab object.
 green pullover is equipment.
@@ -1724,7 +1724,7 @@ Traits of green pullover is {"basic"}.
 Placement of green pullover is "body".
 Descmod of green pullover is "Your upper body is covered by a green pullover.".
 Slot of green pullover is "chest".
-Scent of green pullover is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of green pullover is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 red pullover is a grab object.
 red pullover is equipment.
@@ -1739,7 +1739,7 @@ Traits of red pullover is {"basic"}.
 Placement of red pullover is "body".
 Descmod of red pullover is "Your upper body is covered by a red pullover.".
 Slot of red pullover is "chest".
-Scent of red pullover is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of red pullover is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 purple pullover is a grab object.
 purple pullover is equipment.
@@ -1754,7 +1754,7 @@ Traits of purple pullover is {"basic"}.
 Placement of purple pullover is "body".
 Descmod of purple pullover is "Your upper body is covered by a purple pullover.".
 Slot of purple pullover is "chest".
-Scent of purple pullover is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of purple pullover is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 yellow pullover is a grab object.
 yellow pullover is equipment.
@@ -1769,7 +1769,7 @@ Traits of yellow pullover is {"basic"}.
 Placement of yellow pullover is "body".
 Descmod of yellow pullover is "Your upper body is covered by a yellow pullover.".
 Slot of yellow pullover is "chest".
-Scent of yellow pullover is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of yellow pullover is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 orange pullover is a grab object.
 orange pullover is equipment.
@@ -1784,7 +1784,7 @@ Traits of orange pullover is {"basic"}.
 Placement of orange pullover is "body".
 Descmod of orange pullover is "Your upper body is covered by a orange pullover.".
 Slot of orange pullover is "chest".
-Scent of orange pullover is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of orange pullover is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 maroon pullover is a grab object.
 maroon pullover is equipment.
@@ -1799,7 +1799,7 @@ Traits of maroon pullover is {"basic"}.
 Placement of maroon pullover is "body".
 Descmod of maroon pullover is "Your upper body is covered by a maroon pullover.".
 Slot of maroon pullover is "chest".
-Scent of maroon pullover is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of maroon pullover is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 Part 3 - Zephyr Shirts
 [Want to have a cute animal mascot on each of these shirts one for every different form that you can give Larissa]
@@ -1813,15 +1813,15 @@ Part 4 - Sleeveless Shirts
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"white sleeveless shirt"	"A white sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	white sleeveless shirt
-"black sleeveless shirt"	"A black sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	black sleeveless shirt
-"pink sleeveless shirt"	"A pink sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	pink sleeveless shirt
-"blue sleeveless shirt"	"A blue sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	blue sleeveless shirt
-"green sleeveless shirt"	"A green sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	green sleeveless shirt
-"red sleeveless shirt"	"A red sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	red sleeveless shirt
-"purple sleeveless shirt"	"A purple sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	purple sleeveless shirt
-"yellow sleeveless shirt"	"A yellow sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	yellow sleeveless shirt
-"orange sleeveless shirt"	"A orange sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	orange sleeveless shirt
+"white sleeveless shirt"	"A white sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirt's appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	white sleeveless shirt
+"black sleeveless shirt"	"A black sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirt's appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	black sleeveless shirt
+"pink sleeveless shirt"	"A pink sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirt's appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	pink sleeveless shirt
+"blue sleeveless shirt"	"A blue sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirt's appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	blue sleeveless shirt
+"green sleeveless shirt"	"A green sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirt's appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	green sleeveless shirt
+"red sleeveless shirt"	"A red sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirt's appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	red sleeveless shirt
+"purple sleeveless shirt"	"A purple sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirt's appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	purple sleeveless shirt
+"yellow sleeveless shirt"	"A yellow sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirt's appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	yellow sleeveless shirt
+"orange sleeveless shirt"	"A orange sleeveless shirt, made from thin and stretchy fabric. It looks suitable to be working out in it. Judging by the shirt's appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	orange sleeveless shirt
 
 white sleeveless shirt is a grab object.
 white sleeveless shirt is equipment.
@@ -1836,7 +1836,7 @@ Traits of white sleeveless shirt is {"sporty"}. [Note: maybe give the sleeveless
 Placement of white sleeveless shirt is "body".
 Descmod of white sleeveless shirt is "Your upper body is covered by a white sleeveless shirt.".
 Slot of white sleeveless shirt is "chest".
-Scent of white sleeveless shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of white sleeveless shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 black sleeveless shirt is a grab object.
 black sleeveless shirt is equipment.
@@ -1851,7 +1851,7 @@ Traits of black sleeveless shirt is {"sporty"}. [Note: maybe give the sleeveless
 Placement of black sleeveless shirt is "body".
 Descmod of black sleeveless shirt is "Your upper body is covered by a black sleeveless shirt.".
 Slot of black sleeveless shirt is "chest".
-Scent of black sleeveless shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of black sleeveless shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 pink sleeveless shirt is a grab object.
 pink sleeveless shirt is equipment.
@@ -1866,7 +1866,7 @@ Traits of pink sleeveless shirt is {"sporty"}. [Note: maybe give the sleeveless 
 Placement of pink sleeveless shirt is "body".
 Descmod of pink sleeveless shirt is "Your upper body is covered by a pink sleeveless shirt.".
 Slot of pink sleeveless shirt is "chest".
-Scent of pink sleeveless shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of pink sleeveless shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 blue sleeveless shirt is a grab object.
 blue sleeveless shirt is equipment.
@@ -1881,7 +1881,7 @@ Traits of blue sleeveless shirt is {"sporty"}. [Note: maybe give the sleeveless 
 Placement of blue sleeveless shirt is "body".
 Descmod of blue sleeveless shirt is "Your upper body is covered by a blue sleeveless shirt.".
 Slot of blue sleeveless shirt is "chest".
-Scent of blue sleeveless shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of blue sleeveless shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 green sleeveless shirt is a grab object.
 green sleeveless shirt is equipment.
@@ -1896,7 +1896,7 @@ Traits of green sleeveless shirt is {"sporty"}. [Note: maybe give the sleeveless
 Placement of green sleeveless shirt is "body".
 Descmod of green sleeveless shirt is "Your upper body is covered by a green sleeveless shirt.".
 Slot of green sleeveless shirt is "chest".
-Scent of green sleeveless shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of green sleeveless shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 red sleeveless shirt is a grab object.
 red sleeveless shirt is equipment.
@@ -1911,7 +1911,7 @@ Traits of red sleeveless shirt is {"sporty"}. [Note: maybe give the sleeveless s
 Placement of red sleeveless shirt is "body".
 Descmod of red sleeveless shirt is "Your upper body is covered by a red sleeveless shirt.".
 Slot of red sleeveless shirt is "chest".
-Scent of red sleeveless shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of red sleeveless shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 purple sleeveless shirt is a grab object.
 purple sleeveless shirt is equipment.
@@ -1926,7 +1926,7 @@ Traits of purple sleeveless shirt is {"sporty"}. [Note: maybe give the sleeveles
 Placement of purple sleeveless shirt is "body".
 Descmod of purple sleeveless shirt is "Your upper body is covered by a purple sleeveless shirt.".
 Slot of purple sleeveless shirt is "chest".
-Scent of purple sleeveless shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of purple sleeveless shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 yellow sleeveless shirt is a grab object.
 yellow sleeveless shirt is equipment.
@@ -1941,7 +1941,7 @@ Traits of yellow sleeveless shirt is {"sporty"}. [Note: maybe give the sleeveles
 Placement of yellow sleeveless shirt is "body".
 Descmod of yellow sleeveless shirt is "Your upper body is covered by a yellow sleeveless shirt.".
 Slot of yellow sleeveless shirt is "chest".
-Scent of yellow sleeveless shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of yellow sleeveless shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 orange sleeveless shirt is a grab object.
 orange sleeveless shirt is equipment.
@@ -1956,13 +1956,13 @@ Traits of orange sleeveless shirt is {"sporty"}. [Note: maybe give the sleeveles
 Placement of orange sleeveless shirt is "body".
 Descmod of orange sleeveless shirt is "Your upper body is covered by a orange sleeveless shirt.".
 Slot of orange sleeveless shirt is "chest".
-Scent of orange sleeveless shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of orange sleeveless shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 Part 5 - Specialty Shirts
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"mesh shirt"	"A tight shirt made of some kind of black, sheer mesh. You can literally see right through it. Judging by the shirts appearance, it's [']unisex['] and pretty [']sexy['] looking."	1	mesh shirt
+"mesh shirt"	"A tight shirt made of some kind of black, sheer mesh. You can literally see right through it. Judging by the shirt's appearance, it's [']unisex['] and pretty [']sexy['] looking."	1	mesh shirt
 
 mesh shirt is a grab object.
 mesh shirt is equipment.
@@ -1977,13 +1977,13 @@ Traits of mesh shirt is {"sexy"}.
 Placement of mesh shirt is "body".
 Descmod of mesh shirt is "Your upper body is covered by a black mesh shirt. With its sheer fabric, you can literally see right through it.".
 Slot of mesh shirt is "chest".
-Scent of mesh shirt is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of mesh shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 Section 9 - Bras
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"simple black bra"	"A simple black bra made of a firm and glossy material. As far as bras go this one is fairly comfortable to move around in. Judging by the bras appearance, it's [']feminine['] and pretty [']basic['] looking."	1	simple black bra
+"simple black bra"	"A simple black bra made of a firm and glossy material. As far as bras go this one is fairly comfortable to move around in. Judging by the bra's appearance, it's [']feminine['] and pretty [']basic['] looking."	1	simple black bra
 
 simple black bra is a grab object.
 simple black bra is equipment.
@@ -1998,7 +1998,7 @@ Traits of simple black bra is {"basic"}.
 Placement of simple black bra is "body".
 Descmod of simple black bra is "Your breasts are covered by a simple black bra. The soft and glossy material hugging your chest.".
 Slot of simple black bra is "breast".
-Scent of simple black bra is "The fabric has the typical faintly musky scent clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
+Scent of simple black bra is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
 Section 10 - Stomach Trainers
 
@@ -2014,8 +2014,8 @@ Part 1 - Slacks
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"black slacks"	"A pair of black cloth pants, most likely belonging to a business suit. Judging by the slacks appearance, it's [']unisex['] and pretty [']stylish['] looking."	1	black slacks
-"gray slacks"	"A pair of gray cloth pants, most likely belonging to a business suit. Judging by the slacks appearance, it's [']unisex['] and pretty [']stylish['] looking."	1	gray slacks
+"black slacks"	"A pair of black cloth pants, most likely belonging to a business suit. Judging by the slacks['] appearance, it's [']unisex['] and pretty [']stylish['] looking."	1	black slacks
+"gray slacks"	"A pair of gray cloth pants, most likely belonging to a business suit. Judging by the slacks['] appearance, it's [']unisex['] and pretty [']stylish['] looking."	1	gray slacks
 
 black slacks is a grab object.
 black slacks is equipment.
@@ -2051,8 +2051,8 @@ Part 2 - Jeans [sturdy jeans have been replaced with the dark-blue jeans since t
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"black jeans"	"A pair of solid black jeans. They're well-worn and a little washed out in places, but quite comfortable even in the most dire situations. Judging by the pants appearance, it's [']unisex['] and pretty [']basic['] looking."	1	black jeans
-"dark-blue jeans"	"A pair of dark-blue jeans. They're well-worn and a little washed out in places, but quite comfortable even in the most dire situations. Judging by the pants appearance, it's [']unisex['] and pretty [']basic['] looking."	1	dark-blue jeans
+"black jeans"	"A pair of solid black jeans. They're well-worn and a little washed out in places, but quite comfortable even in the most dire situations. Judging by the pants['] appearance, it's [']unisex['] and pretty [']basic['] looking."	1	black jeans
+"dark-blue jeans"	"A pair of dark-blue jeans. They're well-worn and a little washed out in places, but quite comfortable even in the most dire situations. Judging by the pants['] appearance, it's [']unisex['] and pretty [']basic['] looking."	1	dark-blue jeans
 
 black jeans is a grab object.
 black jeans is equipment.
@@ -2088,8 +2088,8 @@ Part 3 - ripped blue jeans
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"ripped black jeans"	"A pair of black jeans with some rips and slashes in them. Before all of this started, their look might have been a fashion statement, but these days one usually ends up with ripped clothing after a fight. Judging by the pants appearance, it's [']unisex['] and pretty [']rebellious['] looking."	1	ripped black jeans
-"ripped blue jeans"	"A pair of blue jeans with some rips and slashes in them. Before all of this started, their look might have been a fashion statement, but these days one usually ends up with ripped clothing after a fight. Judging by the pants appearance, it's [']unisex['] and pretty [']rebellious['] looking."	1	ripped blue jeans
+"ripped black jeans"	"A pair of black jeans with some rips and slashes in them. Before all of this started, their look might have been a fashion statement, but these days one usually ends up with ripped clothing after a fight. Judging by the pants['] appearance, it's [']unisex['] and pretty [']rebellious['] looking."	1	ripped black jeans
+"ripped blue jeans"	"A pair of blue jeans with some rips and slashes in them. Before all of this started, their look might have been a fashion statement, but these days one usually ends up with ripped clothing after a fight. Judging by the pants['] appearance, it's [']unisex['] and pretty [']rebellious['] looking."	1	ripped blue jeans
 
 ripped black jeans is a grab object.
 ripped black jeans is equipment.
@@ -2125,8 +2125,8 @@ Part 4 - Skinny Jeans
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"black skinny jeans"	"A pair of black jeans made from thin and fairly flexible material. They look like they'd be snug just about everywhere on any person that can wiggle their way into such a tight garment. Judging by the pants appearance, it's [']unisex['] and pretty [']cool['] looking."	1	black skinny jeans
-"light-blue skinny jeans"	"A pair of light-blue jeans made from thin and fairly flexible material. They look like they'd be snug just about everywhere on any person that can wiggle their way into such a tight garment. Judging by the pants appearance, it's [']unisex['] and pretty [']cool['] looking."	1	light-blue skinny jeans
+"black skinny jeans"	"A pair of black jeans made from thin and fairly flexible material. They look like they'd be snug just about everywhere on any person that can wiggle their way into such a tight garment. Judging by the pants['] appearance, it's [']unisex['] and pretty [']cool['] looking."	1	black skinny jeans
+"light-blue skinny jeans"	"A pair of light-blue jeans made from thin and fairly flexible material. They look like they'd be snug just about everywhere on any person that can wiggle their way into such a tight garment. Judging by the pants['] appearance, it's [']unisex['] and pretty [']cool['] looking."	1	light-blue skinny jeans
 
 black skinny jeans is a grab object.
 black skinny jeans is equipment.
@@ -2163,9 +2163,9 @@ Part 5 - Hot Pants
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"scarlet hot pants"	"A pair of glittering scarlet hot pants, barely long enough to cover someone's thighs even to about a third. Judging by the tight garments appearance, it's [']feminine['] and pretty [']sexy['], but possibly something a bimbo would be interested in."	1	scarlet hot pants
-"emerald hot pants"	"A pair of glittering emerald hot pants, barely long enough to cover someone's thighs even to about a third. Judging by the tight garments appearance, it's [']feminine['] and pretty [']sexy['], but possibly something a bimbo would be interested in."	1	emerald hot pants
-"amethyst hot pants"	"A pair of glittering amethyst hot pants, barely long enough to cover someone's thighs even to about a third. Judging by the tight garments appearance, it's [']feminine['] and pretty [']sexy['], but possibly something a bimbo would be interested in."	1	amethyst hot pants
+"scarlet hot pants"	"A pair of glittering scarlet hot pants, barely long enough to cover someone's thighs even to about a third. Judging by the tight garment's appearance, it's [']feminine['] and pretty [']sexy['], but possibly something a bimbo would be interested in."	1	scarlet hot pants
+"emerald hot pants"	"A pair of glittering emerald hot pants, barely long enough to cover someone's thighs even to about a third. Judging by the tight garment's appearance, it's [']feminine['] and pretty [']sexy['], but possibly something a bimbo would be interested in."	1	emerald hot pants
+"amethyst hot pants"	"A pair of glittering amethyst hot pants, barely long enough to cover someone's thighs even to about a third. Judging by the tight garment's appearance, it's [']feminine['] and pretty [']sexy['], but possibly something a bimbo would be interested in."	1	amethyst hot pants
 
 scarlet hot pants is a grab object.
 scarlet hot pants is equipment.
@@ -2216,8 +2216,8 @@ Part 6 - Camo Pants
 
 Table of Game Objects (continued) [These need to be altered as army pants since camo pants can be bought and worn by anyone]
 name	desc	weight	object
-"green camo pants"	"A pair of camo pants in various shades of green. Judging by the pants appearance, it's [']masculine['] and pretty [']cool['] looking."	1	green camo pants
-"green army camo pants"	"A pair of army camo pants in various shades of green. Clearly, these belong to the uniform of a soldier of the US army. Judging by the pants appearance, it's [']unisex['] and pretty [']authoritive['] looking."	1	green army camo pants
+"green camo pants"	"A pair of camo pants in various shades of green. Judging by the pants['] appearance, it's [']masculine['] and pretty [']cool['] looking."	1	green camo pants
+"green army camo pants"	"A pair of army camo pants in various shades of green. Clearly, these belong to the uniform of a soldier of the US army. Judging by the pants['] appearance, it's [']unisex['] and pretty [']authoritive['] looking."	1	green army camo pants
 
 green camo pants is a grab object.
 green camo pants is equipment.
@@ -2253,8 +2253,8 @@ Part 7 - Jogging Pants
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"black jogging pants"	"A pair of black jogging pants made from fairly soft and stretchy fabric. Judging by the pants appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	black jogging pants
-"pink jogging pants"	"A pair of pink jogging pants made from fairly soft and stretchy fabric, it also has swirling hearts across the material. Judging by the pants appearance, it's [']feminine['] and pretty [']sporty['] looking."	1	pink jogging pants
+"black jogging pants"	"A pair of black jogging pants made from fairly soft and stretchy fabric. Judging by the pants['] appearance, it's [']unisex['] and pretty [']sporty['] looking."	1	black jogging pants
+"pink jogging pants"	"A pair of pink jogging pants made from fairly soft and stretchy fabric, it also has swirling hearts across the material. Judging by the pants['] appearance, it's [']feminine['] and pretty [']sporty['] looking."	1	pink jogging pants
 
 black jogging pants is a grab object.
 black jogging pants is equipment.
@@ -2290,8 +2290,8 @@ Part 8 - Bermuda Shorts
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"beige bermuda shorts"	"A pair of wide beige shorts. They look fitting to be worn by a tourist or vacationer. Judging by the shorts appearance, it's [']unisex['] and pretty [']basic['] looking."	1	 beige bermuda shorts
-"flowered bermuda shorts"	"A pair of wide shorts covered in patterns of leaves and bright flowers. They look fitting to be worn by a tourist or vacationer. Judging by the shorts appearance, it's [']feminine['] and pretty [']basic['] looking."	1	 flowered bermuda shorts
+"beige bermuda shorts"	"A pair of wide beige shorts. They look fitting to be worn by a tourist or vacationer. Judging by the shorts['] appearance, it's [']unisex['] and pretty [']basic['] looking."	1	 beige bermuda shorts
+"flowered bermuda shorts"	"A pair of wide shorts covered in patterns of leaves and bright flowers. They look fitting to be worn by a tourist or vacationer. Judging by the shorts['] appearance, it's [']feminine['] and pretty [']basic['] looking."	1	 flowered bermuda shorts
 
 beige bermuda shorts is a grab object.
 beige bermuda shorts is equipment.
@@ -2350,8 +2350,8 @@ Part 1 - Miniskirts
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"black miniskirt"	"A simple black miniskirt, barely long enough to cover someone's thighs even halfway. Judging by the skirts appearance, it's [']feminine['] and pretty [']sexy['] and [']slutty['] looking."	1	black miniskirt
-"pink miniskirt"	"A simple pink miniskirt, barely long enough to cover someone's thighs even halfway. Judging by the skirts appearance, it's [']feminine['] and pretty [']basic['] and [']slutty['] looking."	1	pink miniskirt
+"black miniskirt"	"A simple black miniskirt, barely long enough to cover someone's thighs even halfway. Judging by the skirt's appearance, it's [']feminine['] and pretty [']sexy['] and [']slutty['] looking."	1	black miniskirt
+"pink miniskirt"	"A simple pink miniskirt, barely long enough to cover someone's thighs even halfway. Judging by the skirt's appearance, it's [']feminine['] and pretty [']basic['] and [']slutty['] looking."	1	pink miniskirt
 
 black miniskirt is a grab object.
 black miniskirt is equipment.
@@ -2387,7 +2387,7 @@ Part 2 - Pencil Skirts
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"light-blue pencil skirt"	"A light-blue pencil skirt, long enough to cover an average person's whole thighs, down to the knees. Judging by the skirts appearance, it's [']feminine['] and pretty [']stylish['] looking."	1	light-blue pencil skirt
+"light-blue pencil skirt"	"A light-blue pencil skirt, long enough to cover an average person's whole thighs, down to the knees. Judging by the skirt's appearance, it's [']feminine['] and pretty [']stylish['] looking."	1	light-blue pencil skirt
 
 light-blue pencil skirt is a grab object.
 light-blue pencil skirt is equipment.
@@ -2408,7 +2408,7 @@ Part 3 - Gypsy Skirts
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"gypsy floral skirt"	"A light full length skirt, covered with a floral print that depicts cherry blossoms. Judging by the skirts appearance, it's [']feminine['] and pretty [']sexy['] looking."	1	gypsy floral skirt
+"gypsy floral skirt"	"A light full-length skirt, covered with a floral print that depicts cherry blossoms. Judging by the skirt's appearance, it's [']feminine['] and pretty [']sexy['] looking."	1	gypsy floral skirt
 
 gypsy floral skirt is a grab object.
 gypsy floral skirt is equipment.
@@ -2526,7 +2526,7 @@ Traits of orc loincloth is {"violent", "sexy"}.
 Placement of orc loincloth is "body".
 Descmod of orc loincloth is "An orc loincloth barely covers your crotch. It is fairly easy to expose yourself with the wrong (or right?) move.".
 Slot of orc loincloth is "crotch".
-Scent of orc loincloth is "The cloth has Scent of manly musk clinging to it. Just breathing in with it under your nose makes you think of orcs.".
+Scent of orc loincloth is "The cloth has the scent of manly musk clinging to it. Just breathing in with it under your nose makes you think of orcs.".
 
 An everyturn rule:
 	if orc loincloth is equipped:
@@ -2734,5 +2734,17 @@ Slot of blue running shoes is "feet".
 Scent of blue running shoes is "The shoes smell like plastic and not much else. Good thing these are new.".
 
 Book 3
+
+[Try to let the player manipulate the 'black jeans' object when black ripped or skinny jeans are also owned. Only covers the main interaction types for items, which should be sufficient.]
+Does the player mean grabbing black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[get black jeans]
+
+Does the player mean using black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[use black jeans]
+Does the player mean examining black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[look black jeans]
+Does the player mean sniffing black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[smell black jeans]
+Does the player mean littering black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[drop black jeans]
+Does the player mean burninating black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[junk black jeans]
+
+Does the player mean stashing black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[stash black jeans]
+Does the player mean retrieving black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[retrieve black jeans]
 
 Equipment ends here.
