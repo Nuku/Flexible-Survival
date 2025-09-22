@@ -193,7 +193,7 @@ When Play begins:
 	now libido entry is 30; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "poison dart frog milk";
+	now MilkItem entry is "";
 	now CumItem entry is "";
 	now TrophyFunction entry is "";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -539,7 +539,7 @@ to say RikerDruggedScene:
 	say "     Without further ado, you pour the thick liquid into the funnel, holding it steady as the formerly dominant snake tries his best to gain some traction, struggling not to swallow. Eventually, the need for air wins out, and noisy gulps fill the area, his body loosening and his widened eyes drifting half-closed as the drugged seed does its work. Each noisy gulp relaxes him more and more until the only thing stopping him from melting to the floor below is the myriad straps around his body. You finish the entire jar in the same manner, pausing when the weakened naga sputters and risks wasting it through his nostrils until only a milky film remains, coating the glass. You can already see the naga's scales smoothing into greenish skin and his tail shrinking inward when you begin to undo his straps, and by the time you've freed him, he's unrecognizable. The face you covered with the mask is gone by the time it comes off, replaced by a feminine, twinkish expression, tusks, and a wide, flatter nose in place of the twin slits that once were. The dose must have been high enough that the snake's form is irreparably changed!";
 	say "     Staring up at you with glazed eyes, the newly minted orc breeder barely reacts, licking his lips and pushing the few drops that escaped his throat, dripping down his chin, to his mouth, hungrily devouring every last bit of addictive spunk. Drunk off his ass, he looks from side to side as if seeking out more, moving awkwardly on newly acquired knees that shuffle ineffectively on the hardwood.";
 	LineBreak;
-	say "      [bold type]Send him off with a bang?[roman type][line break]";
+	say "     [bold type]Send him off with a bang?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Give him a taste of what he did to the people he trafficked.";
 	say "     ([link]N[as]n[end link]) - Don't stoop to his level. Point the newly transformed slut to his new masters and send him on his way.";
 	if Player consents:

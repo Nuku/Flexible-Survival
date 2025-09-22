@@ -32,7 +32,7 @@ to say Cowboy_Loses:
 					say "     Feeling the familiar tingle rise in your balls, you decide not to be too much of an ass about this and quickly pull out, spraying long ropes of cum all over the equine cowboy's muscular chest. Looking down over himself as you come, Corbin lets out a relieved sigh, then lowers his head to rest against the ground. Having gotten what you wanted off him, you stand up and grab your gear, leaving the freshly fucked cowboy lying there as you move on.";
 					NPCSexAftermath Corbin receives "PussyDildoFuck" from Player;
 			else if Player is female: [females]
-				say "     Telling the cowboy to kneel, you quickly strip off your own clothing, then come to stand closely in front of him. One hand stroking your pussy lips, you hold them spread apart as you pull Corbin's head against your crotch with the other hand. After only a seconds hesitation, he starts licking you out, showing a pretty good skill with his wide equine tongue. Putting both of your hands on his equine head, you let the pleasure of his oral attention wash over you, moaning in satisfaction. Then suddenly, he brings his fingers into the action too, pushing them in between your pussy lips and fondling your insides with a knowing touch.";
+				say "     Telling the cowboy to kneel, you quickly strip off your own clothing, then come to stand closely in front of him. One hand stroking your pussy lips, you hold them spread apart as you pull Corbin's head against your crotch with the other hand. After only a second's hesitation, he starts licking you out, showing a pretty good skill with his wide equine tongue. Putting both of your hands on his equine head, you let the pleasure of his oral attention wash over you, moaning in satisfaction. Then suddenly, he brings his fingers into the action too, pushing them in between your pussy lips and fondling your insides with a knowing touch.";
 				say "     It doesn't take all that long until the equine cuntboy's tonguework and fingering pushes you over the edge, making you gasp as an intense orgasm floods your senses with pleasure. Panting, you sink to the ground as your knees get a bit weak, then lie back in the soft grass. Meanwhile, Corbin uses this opportunity to leave while you're distracted with yourself.";
 				NPCSexAftermath Corbin receives "OralPussy" from Player;
 		else: [don't fuck him]
@@ -109,7 +109,7 @@ When Play begins:
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "cowboy milk"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "cowboy cuntboy milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "gypsy horse transman milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

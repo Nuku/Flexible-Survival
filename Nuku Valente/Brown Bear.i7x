@@ -39,11 +39,12 @@ to say UrsineWins:
 			WaitLineBreak;
 			say "     The insistent stimulation becomes too much for your needy lover, and she clenches her thighs tightly around your head as she cums, roaring her pleasure into the [if daytimer is day]sky[else]night[end if] with a body-wide shudder. You dig your hands into her thighs to hold her still, catching as much of her spurting femcum in your mouth as you can manage, basking in the heat and taste of her orgasm";
 			if Player is herm:
-				say ". Eager to return the favor, the ursine reaches over to take hold of [if Cock Count of Player > 1]one of [end if]your cock[smn] and plunge her digits into your hot, damp folds. She pumps and jills you vigorously until you reach the precipice of orgasm, then lowers her head to suck you off until you cum, hips bucking against her muzzle as your spray your [Cum Load Size of Player] load across her tongue [if Cock Count of Player > 1]and face [end if]while your nectar squirts all over the ground below.";
+				say ". Eager to return the favor, the ursine reaches over to take hold of [if Cock Count of Player > 1]one of [end if]your cock[smn] and plunges her digits into your hot, damp folds. She pumps and jills you vigorously until you reach the precipice of orgasm, then lowers her head to suck you off until you cum, hips bucking against her muzzle as you spray your [Cum Load Size of Player] load across her tongue [if Cock Count of Player > 1]and face [end if]while your nectar squirts all over the ground below.";
 				CreatureSexAftermath "Brown Bear Female" receives "OralCock" from "Player";
 				CreatureSexAftermath "Player" receives "Stroking" from "Brown Bear Female";
 			else if Player is female:
 				say ". Eager to return the favor, the ursine reaches over to plunge her digits into your hot, damp folds. She rubs a thumb against your clit and jills you vigorously until you reach the precipice of orgasm, then lowers her head to eat you out until you cum, hips bucking against her muzzle as you drench her fur in your nectar";
+				CreatureSexAftermath "Brown Bear Female" receives "OralPussy" from "Player";
 				CreatureSexAftermath "Player" receives "Stroking" from "Brown Bear Female";
 			else:
 				say ". Eager to return the favor, the ursine reaches over to take hold of [if Cock Count of Player > 1]one of [end if]your cock[smn]. She pumps your length vigorously until you reach the precipice of orgasm, then lowers her head to suck you off until you cum, hips bucking against her muzzle as you spray your [Cum Load Size of Player] load across her tongue [if Cock Count of Player > 1]and face [end if]in powerful blasts.";
@@ -64,6 +65,7 @@ to say UrsineWins:
 				now Cunt Tightness of Player is 0; [these will be increased momentarily]
 			if Cunt Depth of Player < 8, increase Cunt Depth of Player by 3;
 			if Cunt Tightness of Player < 11, increase Cunt Tightness of Player by 2;
+		if "Microwaved" is not listed in feats of Player and (Player is not MalePreferred or "Breasts" is listed in feats of Player):
 			if Breast Size of Player < 5, increase Breast Size of Player by 2;
 		now UrsineDefeatCount is 2;
 	else if a random chance of 1 in 5 succeeds:
@@ -105,7 +107,7 @@ to say UrsineWins:
 
 
 to say UrsineLoses:
-	say "     [one of]The beaten bear comes back to her senses. 'Oh. That's better.' and then slumps over, apparently peacefully asleep.[or]You find yourself watching the motion of her big furry backside as the defeated bear hurriedly ambles off.[at random]";
+	say "     [one of]The beaten bear comes back to her senses. 'Oh. That's better,' and then slumps over, apparently peacefully asleep.[or]You find yourself watching the motion of her big furry backside as the defeated bear hurriedly ambles off.[at random]";
 
 
 Section 2 - Creature Insertion
@@ -142,7 +144,7 @@ When Play begins:
 	now victory entry is "[UrsineWins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[UrsineDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a bear, with an elongated snout and big bear teeth set in what is definitely not a teddy bear"; [ Face description, format as "Your face is [Face of Player]." ]
-	now body entry is "tall and broad, with heavy shoulders and an undeniable presence that reeks sheer strength"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now body entry is "tall and broad, with heavy shoulders and an undeniable presence that reeks of sheer strength"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]shaggy-furred[or]coarsely furred[or]furry, honey-scented[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a short black tail hidden mostly by the sheer size of you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]pink bulbous[or]ribbed[or]usually sheathed[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
@@ -176,7 +178,7 @@ When Play begins:
 	now loot entry is "honeycomb";
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table ]
-	now MilkItem entry is "brown bear milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "brown bear female milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [ Number 1-5, rough approx of infected PC body size/height. 1=small, 3=avg, 5=huge ]

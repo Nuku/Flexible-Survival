@@ -47,8 +47,6 @@ Definition: A person (called x) is FemalePreferred: [player wants to or must rem
 
 Definition: A person (called x) is HermPreferred: [player wants to or must remain herm]
 	if "Herm Preferred" is listed in feats of x, yes;
-	if "Male Preferred" is listed in feats of x or "Female Preferred" is listed in feats of x, no;
-	if "One Way" is listed in feats of x and x is herm, yes; [One Way prevents loss of genitals, so stuck as herm now]
 	no;
 
 Table of gainable feats

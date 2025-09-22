@@ -2736,15 +2736,15 @@ Scent of blue running shoes is "The shoes smell like plastic and not much else. 
 Book 3
 
 [Try to let the player manipulate the 'black jeans' object when black ripped or skinny jeans are also owned. Only covers the main interaction types for items, which should be sufficient.]
-Does the player mean grabbing black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[get black jeans]
+Does the player mean grabbing black jeans when ripped black jeans are visible or black skinny jeans are visible: it is likely.	[get black jeans]
 
-Does the player mean using black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[use black jeans]
-Does the player mean examining black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[look black jeans]
-Does the player mean sniffing black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[smell black jeans]
-Does the player mean littering black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[drop black jeans]
-Does the player mean burninating black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[junk black jeans]
+Does the player mean using black jeans when ripped black jeans are visible or black skinny jeans are visible: it is likely.	[use black jeans]
+Does the player mean examining black jeans when ripped black jeans are visible or black skinny jeans are visible: it is likely.	[look black jeans]
+Does the player mean sniffing black jeans when ripped black jeans are visible or black skinny jeans are visible: it is likely.	[smell black jeans]
+Does the player mean littering black jeans when ripped black jeans are visible or black skinny jeans are visible: it is likely.	[drop black jeans]
+Does the player mean burninating black jeans when ripped black jeans are visible or black skinny jeans are visible: it is likely.	[junk black jeans]
 
-Does the player mean stashing black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[stash black jeans]
-Does the player mean retrieving black jeans when ripped black jeans are owned or black skinny jeans are owned: it is likely.	[retrieve black jeans]
+Does the player mean stashing black jeans when ripped black jeans are visible or black skinny jeans are visible: it is likely.	[stash black jeans]
+Does the player mean retrieving black jeans when ripped black jeans are visible or black skinny jeans are visible: it is likely.	[retrieve black jeans]
 
 Equipment ends here.

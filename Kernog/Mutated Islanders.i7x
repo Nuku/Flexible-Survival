@@ -11,17 +11,18 @@ to say mutatedIslanderDesc:
 [ Player is forcefully cock-vored. No bonus ]
 to say loseMutatedIslander:
 	if scalevalue of Player >= 5:
-		say "     Obviously too big to be used in any other way, the islander sits on your belly, knocking the air out of you, and humps energetically his massive erection on your [BodyType of Player] body, showering it with his musky pre. Your comfort seems not to be the islander's priority, and he seems to actually revel in mashing his thick glans against your [FaceSpeciesName of Player in lower case] face. His grunts turn more and more guttural, until, with a couple of final thrusts, the mutated islander lets out a long, thunderous moan, and cum begins to gush out of his cock. A literal torrent of thick white spunk, which splashes over your face in an unending stream. With the weight of the islander pinning you down, you are forced to take most of it. You almost drown a couple of time, as the thick, salty semen flows freely into your mouth, and as you are forced to gulp it down in order to not choke.";
-		say "     'Yes, finally!' the mutated islander shouts triumphantly. He hurriedly jerks off until his massive cock reaches a towering erection. He grabs you, and pulls you face-first against his urethra. Coated by the copious amounts of pre which leak from his pee-hole, the successive pushes make you eventually slip your [FaceSpeciesName of Player in lower case] head inside the islander's shaft. He moans loudly, and another gush of pre splashes on you. You cannot help but wonder how, even with the islander's humongous size, it seems to accommodate you, stretching around your head like rubber. The outline of your head becomes a clearly visible bulge under the tanned skin.";
-	else if scalevalue of Player is 4:
-		say "     The mutated human's plans get derailed, as your large [BodyType of Player] body cannot go further down. The man groans in frustration, he rams your face inside his cock again and again. Each time you plunge down the islander's urethra, your nostrils fill with male musk. The islander wraps his arms around your chest, and sits down. Holding you and his cock in a vertical position, he humps your gasping, wriggling body until he lets out a long, rattled moan. 'Fuuuuuck!' he shouts, as he cums hard. A torrent of cum geysers out from his ball. He holds you tightly, and since your head blocks the way, the gallons of cum force their way through your mouth and into your stomach. Your belly bulges out almost comically, as the islander empties himself inside of you, as if you were a living condom.";
+		say "     Obviously too big to be used in any other way, the islander sits on your belly, knocking the air out of you, and humps energetically his massive erection on your [BodyType of Player] body, showering it with his musky pre. Your comfort seems not to be the islander's priority, and he seems to actually revel in mashing his thick glans against your [FaceSpeciesName of Player in lower case] face. His grunts turn more and more guttural, until, with a couple of final thrusts, the mutated islander lets out a long, thunderous moan, and cum begins to gush out of his cock. A literal torrent of thick white spunk, which splashes over your face in an unending stream. With the weight of the islander pinning you down, you are forced to take most of it. You almost drown a couple of times, as the thick, salty semen flows freely into your mouth, and as you are forced to gulp it down in order to not choke.";
 	else:
-		say "     The islander falls on his back, knocked out by the power of his own orgasm. Dizzied by the sheer quantity of pre and cum spilled over and inside you, you do not waste your chance and walk away while your nanites cope with what you endured.";
-		say "     Your shoulders, then your chest follows it, with some effort, and your [BodyType of Player] form slowly disappears inside his cock. As your head reaches the base of his shaft, the mutant lets out a shudder which reverberates all the way down your prison. 'Damn, that feels good.' As soon as [if scalevalue of Player is 3]only your ankles pathetically jiggle out[else]your entire body is squished inside[end if], the islander grabs his massive erection with both hands, and resume his prior jerk off. Each of your panicked struggles only make the man even more aroused and pleasured. Eventually, with a loud moan, he cums hard. A torrent of cum geysers out from his ball and straight into your face. The gallons of cum force their way through your mouth and into your stomach. Your belly bulges out almost comically. Eventually even your body and the nanites cannot keep up, and the pressure pushes you back outside. You crash several meters away, covered from head to toe in thick globs of semen, and your belly filled with the stuff.";
+		say "     'Yes, finally!' the mutated islander shouts triumphantly. He hurriedly jerks off until his massive cock reaches a towering erection. He grabs you, and pulls you face-first against his urethra. Coated by the copious amounts of pre which leak from his pee-hole, the successive pushes make you eventually slip your [FaceSpeciesName of Player in lower case] head inside the islander's shaft. He moans loudly, and another gush of pre splashes on you. You cannot help but wonder how, even with the islander's humongous size, it seems to accommodate you, stretching around your head like rubber. The outline of your head becomes a clearly visible bulge under the tanned skin.";
+		if scalevalue of Player is 4:
+			say "     The mutated human's plans get derailed, as your large [BodyType of Player] body cannot go further down. The man groans in frustration, he rams your face inside his cock again and again. Each time you plunge down the islander's urethra, your nostrils fill with male musk. The islander wraps his arms around your chest, and sits down. Holding you and his cock in a vertical position, he humps your gasping, wriggling body until he lets out a long, rattled moan. 'Fuuuuuck!' he shouts, as he cums hard. A torrent of cum geysers out from his balls. He holds you tightly, and since your head blocks the way, the gallons of cum force their way through your mouth and into your stomach. Your belly bulges out almost comically, as the islander empties himself inside of you, as if you were a living condom.";
+			say "     The islander falls on his back, knocked out by the power of his own orgasm. Dizzied by the sheer quantity of pre and cum spilled over and inside you, you do not waste your chance and walk away while your nanites cope with what you endured.";
+		else:
+			say "     Your shoulders, then your chest follows it, with some effort, and your [BodyType of Player] form slowly disappears inside his cock. As your head reaches the base of his shaft, the mutant lets out a shudder which reverberates all the way down your prison. 'Damn, that feels good.' As soon as [if scalevalue of Player is 3]only your ankles pathetically jiggle out[else]your entire body is squished inside[end if], the islander grabs his massive erection with both hands, and resumes his prior jerk off. Each of your panicked struggles only make the man even more aroused and pleasured. Eventually, with a loud moan, he cums hard. A torrent of cum geysers out from his balls and straight into your face. The gallons of cum force their way through your mouth and into your stomach. Your belly bulges out almost comically. Eventually even your body and the nanites cannot keep up, and the pressure pushes you back outside. You crash several meters away, covered from head to toe in thick globs of semen, and your belly filled with the stuff.";
 
 [ Player can voluntarily be cock-vored. This allows him to recover health as time passes]
 to say beatMutatedIslander:
-	say "     The islander falls heavily on his back";
+	say "     The islander falls heavily on his back.";
 
 Section 2 - Creature Insertion
 
@@ -30,7 +31,7 @@ name(text)	PrepFunction(text)
 "Human Mutant"	"[PrepCombat_Human Mutant]"
 
 to say PrepCombat_Human Mutant:
-	say "";
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -57,7 +58,7 @@ When Play begins:
 	now skin entry is "smooth";
 	now tail entry is "";
 	now cock entry is "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
-	now face change entry is "it seems to tingle, moving slightly, with a start you realize it's human"; [ format as "Your face feels funny as (your text)." ]
+	now face change entry is "it seems to tingle, moving slightly; with a start you realize it's human"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "your muscles writhe about under your skin, slowly settling back into a human shape"; [ format as "Your body feels funny as (your text)." ]
 	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your hips seem to return to a normal human's figure"; [ format as "Your ass feels funny as (your text)." ]
@@ -86,7 +87,7 @@ When Play begins:
 	now libido entry is 70; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "mutated islanders milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "human mutant milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -215,9 +216,9 @@ This is the Human Mutant Infection rule:
 	if Player has a body of "Human Mutant":
 		trigger ending "Human Mutant Infection";
 		if humanity of Player < 10:
-			say "     Having lost your mind, the mutated islander's infection takes over your body in dramatic fashion. [if Cock Length of Player < 20]Your cock grows to inhuman proportions and it[else]your already inhumanly-sized cock[end if] begins to fill empty, desperately empty despite the humongous testicles hanging below. Before the military eventually put you down, you scour the island's forest, ambushing any unfortunate passerby investigating the island's secret, and push them down inside your scrotum.";
+			say "     Having lost your mind, the mutated islander's infection takes over your body in dramatic fashion. [if Cock Length of Player < 20]Your cock grows to inhuman proportions and it[else]your already inhumanly-sized cock[end if] begins to feel empty, desperately empty despite the humongous testicles hanging below. Before the military eventually put you down, you scour the island's forest, ambushing any unfortunate passerby investigating the island's secret, and push them down inside your scrotum.";
 		else:
-			say "     Keeping a semblance of sanity, you return to Vohr Island, and manage to find other mutated islanders, who have retained their wits like you. They guide you to the abandoned military base, in the process of being reconstructed into a small village. You live there in autarchy with your kin, until the noise of the helicopters replace the seagulls.'";
+			say "     Keeping a semblance of sanity, you return to Vohr Island, and manage to find other mutated islanders, who have retained their wits like you. They guide you to the abandoned military base, in the process of being reconstructed into a small village. You live there in autarchy with your kin, until the noise of the helicopters replace the seagulls.";
 
 
 Mutated Islanders ends here.

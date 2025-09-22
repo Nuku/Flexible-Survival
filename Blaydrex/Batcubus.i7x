@@ -253,7 +253,7 @@ Strain of batcubus milk is "Batcubus".
 Usedesc of batcubus milk is "[batcubus milk use]";
 
 to say batcubus milk use:
-	say "Taking the cap of the bottle of milk, you greedily drink down its contents, swallowing the tasty milk.";
+	say "Taking the cap off the bottle of milk, you greedily drink down its contents, swallowing the tasty milk.";
 	PlayerDrink 6;
 	infect "Batcubus";
 
