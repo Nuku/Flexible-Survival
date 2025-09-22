@@ -179,7 +179,7 @@ When Play begins:
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table ]
 	now MilkItem entry is "brown bear female milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now CumItem entry is "brown bear female cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [ Number 1-5, rough approx of infected PC body size/height. 1=small, 3=avg, 5=huge ]
 	now body descriptor entry is "burly"; [ one-word adjective descriptor of monster/infected PC's body for use in scenes ]

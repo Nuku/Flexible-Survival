@@ -961,8 +961,8 @@ When Play begins:
 	now libido entry is 30;
 	now loot entry is "dragon scale";
 	now lootchance entry is 40;
-	now MilkItem entry is "yamato dragon milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "yamato dragon man-milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "yamato dragon cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 5;
 	now body descriptor entry is "[one of]slender[or]serpentine[or]flexible[or]elongated[at random]";

@@ -450,7 +450,7 @@ When Play begins:
 	now loot entry is "earthen seed";
 	now lootchance entry is 30;
 	now MilkItem entry is "sierrasaur milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now CumItem entry is "sierrasaur cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [Infection strain is smaller than the actual monster]
 	now body descriptor entry is "[one of]bulky[or]hulking[or]bestial[at random]";
