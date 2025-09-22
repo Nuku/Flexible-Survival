@@ -668,8 +668,8 @@ to say SylviaSex5: [Tribbing]
 	WaitLineBreak;
 	say "     Smiling at you, Sylvia strokes her hand down your side until it connects with your ass. She gives it a squeeze, causing you to thrust forward in surprise, bringing your pussies together and sending a jolt through your bodies. You continue to rub up against her, a hand exploring her torso. Her own runs up and down your back, feeling your shoulders, ribs, and bottom, a few fingers rubbing your anal ring. You flinch in pleasure as your clitorises collide, a response which she mirrors, accompanied by a gasp. You lean down and kiss her passionately, your teeth lightly gripping her lip for a moment. The collie looks at you lustfully, kneading your rear and pushing you down against her cunt. You pull your face back and suggest a change of position, perhaps one that doesn't press her against the floor. 'I do have a partiality for doggystyle, being a dog's natural stance,' she responds cheerfully.";
 	say "     Sylvia rolls onto all fours, and you kneel behind her. Gripping her hips, you start grinding your groins together, squelching noises filling the room. As you get closer to climax, you occasionally pull back and thrust against her, copying male actions. This seems to activate something in Sylvia's mind as she begins panting and yipping, perhaps fulfilling her perceived role. As your orgasm crests, you cease thrusting and settle for grinding. Contracting and spasming, your vulva spreads against her own, squirting your fem-cum into her puffed lips. Her own climax sprays her juices partially into you, the feeling causing you to quiver in hypersensitivity. Tired, but very satisfied, you both slump, breathing heavily. After relaxing for a short time, you stand, giving her a deep kiss, before dressing and getting ready to return to the city.";
-	NPCSexAftermath Sylvia receives "PussyDildoFuck" from Player;
-	NPCSexAftermath Player receives "PussyDildoFuck" from Sylvia;
+	NPCSexAftermath Sylvia receives "Stroking" from Player;
+	NPCSexAftermath Player receives "Stroking" from Sylvia;
 
 Section 5 - Events
 

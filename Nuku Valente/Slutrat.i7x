@@ -4,10 +4,10 @@ Version 5 of Slutrat by Nuku Valente begins here.
 Section 0 - Slut Rat Monster
 
 to say slutratdesc:
-	say "     Towering over most, a tall intimidating wall of fur and leather. It appears female at first glance. Piercing its large directed ears are one ring a piece, one a golden hue, and another silvery shade. It's covered from top to bottom in ebony black fur, that is, where clothing is not apparent. Her eyes are the same black shade as her hair, the left eye having a scar that runs an inch above downwards in a slicing motion to an inch or two below.";
+	say "     Towering over most, a tall intimidating wall of fur and leather. It appears female at first glance. Piercing its large directed ears are one ring apiece, one a golden hue, and another silvery shade. It's covered from top to bottom in ebony black fur, that is where clothing is not apparent. Her eyes are the same black shade as her hair, the left eye having a scar that runs an inch above downwards in a slicing motion to an inch or two below.";
 	say "     She wears a rather large leather collar with a bell attached, the bell portion resting between the massive pillows of her chest, resting on top of them like some sort of sacred artifact. The bell makes no sound. Her breasts are restrained by her leather suit, the two upside down V's struggling mightily with small buckles between them just to keep them fastened and avoid falling apart. They might be seven or so inches in radius, and the leather doesn't do much to hide the details from the front, indents visible in the leather, revealing more than it ought to.";
 	say "     Her arms are long and slender, with black fur, and bright pink shaded paws. The paws have clearly defined fingers, looking quite capable of grasping things, or clawing, with sharp black shaded tips to them. Her midsection is slim and trim, and also concealed fully by the leather bodice she wears, clinging tightly to her contours.";
-	say "     Gazing at her from the back, it can be seen that the leather doesn't cover much back there beyond decency. Her furred buttocks and thighs are visible, though calves are again covered in the suit. From the front, an odd sight greets the eyes. The contours of the leather shape outwards from her thighs and along her belly, the shape is distinct and hard to miss, as if this bizarre furred female were in the possession of monstrously large male genitalia. She makes no move to be discreet or hide this abnormality, seeming perfectly at ease with its existence, probably having been the one to modify the suit in the first place to cope with such an unwieldy intruder.";
+	say "     Gazing at her from the back, it can be seen that the leather doesn't cover much back there beyond decency. Her furred buttocks and thighs are visible, though calves are again covered in the suit. From the front, an odd sight greets the eyes. The contours of the leather shape outwards from her thighs and along her belly; the shape is distinct and hard to miss, as if this bizarre furred female were in the possession of monstrously large male genitalia. She makes no move to be discreet or hide this abnormality, seeming perfectly at ease with its existence, probably having been the one to modify the suit in the first place to cope with such an unwieldy intruder.";
 	say "     Glancing back down to her feet, they are garbed in simple shoes, looking dated and worn from far too much overuse and abuse.";
 
 Table of CombatPrep (continued)
@@ -82,7 +82,7 @@ When Play begins:
 	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "soda";
 	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "slutrat milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "slut rat milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -258,7 +258,7 @@ to SlutRatStatReset:
 	now lev entry is 6 + debit;
 
 to say slutratattacks:
-	say "[one of]She slices at your face with a sudden swipe of her claws.[or]The slut rat makes a grab for you and rubs her body against yours, pressing her throbbing cock and luscious breasts against you.[or]The slut rat stops her heel onto your foot, then knees you in the gut.[or]Her tail loops around and tickles at you between the legs even as she shoves you back against the ground.[or]She suddenly turns, and a flying furry breast crashes into you painfully, making your head spin.[at random]";
+	say "[one of]She slices at your face with a sudden swipe of her claws.[or]The slut rat makes a grab for you and rubs her body against yours, pressing her throbbing cock and luscious breasts against you.[or]The slut rat stomps her heel onto your foot, then knees you in the gut.[or]Her tail loops around and tickles at you between the legs even as she shoves you back against the ground.[or]She suddenly turns, and a flying furry breast crashes into you painfully, making your head spin.[at random]";
 
 to say defeattheslutrat:
 	say "     She gives a final hiss of defiance, then scurries away out of sight, leaving you with an image of her perfect rump and twitching tail to remind her by.";
@@ -694,7 +694,7 @@ to say poolhallvictoryorgy:
 	if slutratsub < 0, now slutratsub is 0;
 
 to say poolhalldefeat:
-	say "     After being defeated and pounced by the lustful kitty, several of the rats start screaming to retreat and scramble out of the pool hall. You manage to make it out, but several of your rat sisters are not so lucky. As you ran out, you could see them pinned under the felines and becoming more like the pumas by the moment. There's little you can do for them now and you all rush back to the subway entrance and take cover back underground. You and the rats return to the den, arguing all the way. They're disappointed with how your plan turned out, with the girl who harassed you into getting a pool table in the first place bitching you out rather hard. The skeeball fan grabs her muzzle from behind to silence her, pressing the slut rat against the wall, telling her angrily to shut up as she drives her cock into the vocal rat. 'You're. The. One. Who. Ran. FIRST!' she growls, punctuating each word with a hard thrust into the slut rat's cunt. It seems like there roles have been reversed and she'll be the bitch from now on. Another couple of rats grab you, deciding to sate their frustrated lusts on you for your bad leadership as well.";
+	say "     After being defeated and pounced by the lustful kitty, several of the rats start screaming to retreat and scramble out of the pool hall. You manage to make it out, but several of your rat sisters are not so lucky. As you ran out, you could see them pinned under the felines and becoming more like the pumas by the moment. There's little you can do for them now and you all rush back to the subway entrance and take cover back underground. You and the rats return to the den, arguing all the way. They're disappointed with how your plan turned out, with the girl who harassed you into getting a pool table in the first place bitching you out rather hard. The skeeball fan grabs her muzzle from behind to silence her, pressing the slut rat against the wall, telling her angrily to shut up as she drives her cock into the vocal rat. 'You're. The. One. Who. Ran. FIRST!' she growls, punctuating each word with a hard thrust into the slut rat's cunt. It seems like their roles have been reversed and she'll be the bitch from now on. Another couple of rats grab you, deciding to sate their frustrated lusts on you for your bad leadership as well.";
 	say "[slut rat victory]";
 	now SlutRatDenPoolTable is 100;
 	SanLoss 5;
@@ -706,7 +706,7 @@ to say poolhalldefeat:
 
 
 to say poolhallflee:
-	say "     Having had enough, you make a break for it, calling for the other rats to retreat. While most of the manage to make it out, some of them are captured and trapped inside with the horny felines. Quite certain they'll be made into more pumas, you and the others sadly return back to the den, arguing all the way. They're disappointed with your decision to turn tail and run, with the girl who harassed you into looking for a pool table in the first place bitching you out rather hard. She grabs you roughly, deciding to sate her frustrated lusts on you for your bad leadership and planning, with her skeeball loving friend moving in to share in the fun.";
+	say "     Having had enough, you make a break for it, calling for the other rats to retreat. While most of them manage to make it out, some of them are captured and trapped inside with the horny felines. Quite certain they'll be made into more pumas, you and the others sadly return back to the den, arguing all the way. They're disappointed with your decision to turn tail and run, with the girl who harassed you into looking for a pool table in the first place bitching you out rather hard. She grabs you roughly, deciding to sate her frustrated lusts on you for your bad leadership and planning, with her skeeball loving friend moving in to share in the fun.";
 	say "[slut rat victory]";
 	now SlutRatDenPoolTable is 100;
 	SanLoss 5;
@@ -724,11 +724,11 @@ object	name
 Pool Table	"Pool Table"
 
 Pool Table is a person. "There is the pool table you helped retrieve at one end of the spacious rat den, available for play when not in use by the others. Despite being new, it's already picked up a few stains from rather [']enthusiastic['] play. To see if anyone wants a game, simply [bold type]talk pool[roman type]."
-Description of Pool Table is "     This is the pool table that you, Eight-ball, Skeeball and the others were able to retrieve for the rat's den. It's picked up a few stains from some [']enthusiastic['] play, but is still in good shape. It's very popular with the girls and makes for another welcome diversion[if lastpoolgame - turns < 8]. The table is currently in use by some of the others[else]. The table is free if you'd like a game, just [bold type]talk pool[roman type] of see if you can convince someone to have a game with you[end if].".
+Description of Pool Table is "     This is the pool table that you, Eight-ball, Skeeball and the others were able to retrieve for the rat's den. It's picked up a few stains from some [']enthusiastic['] play, but is still in good shape. It's very popular with the girls and makes for another welcome diversion[if lastpoolgame - turns < 8]. The table is currently in use by some of the others[else]. The table is free if you'd like a game, just [bold type]talk pool[roman type] to see if you can convince someone to have a game with you[end if].".
 Conversation of Pool Table is { "Scratch!" }.
 lastpoolgame is a number that varies. lastpoolgame is usually 555.
 
-the scent of the Pool Table is "The pool table smalls of the rats that have been playing it and of the stains they've left on it.".
+the scent of the Pool Table is "The pool table smells of the rats that have been playing it and of the stains they've left on it.".
 
 instead of fucking the Pool Table:
 	say "I know it's got holes, but those aren't the kind of balls you're supposed to put into them.";
@@ -739,7 +739,7 @@ instead of conversing the Pool Table:
 		stop the action;
 	let T be 1;
 	if lastpoolgame is 555:
-		say "     You ask around for someone to play pool again and Eight-ball pipes up. 'I'd love a game against you to celebrate getting this sweet, big ass pool table for us. And I can't wait to win so I can celebrate by taking that sweet, big ass of yours as well,' she says with a grin. It seems you're up against the best player in the den. Shall you play to win (Y) or play to lose (N)?";
+		say "     You ask around for someone to play pool against and Eight-ball pipes up. 'I'd love a game against you to celebrate getting this sweet, big ass pool table for us. And I can't wait to win so I can celebrate by taking that sweet, big ass of yours as well,' she says with a grin. It seems you're up against the best player in the den. Shall you play to win (Y) or play to lose (N)?";
 	else:
 		let T be a random number between 1 and 4;
 		say "     You ask around for someone to play pool against and [if T is 1]Eight-ball offers to play against you. She's clearly one of the best in the rat den at the game[else if T is 2]Skeeball offers to play against you. She's arguably the worst player among the rats, but still loves a good game[else]one of the other rats offers to play against you[end if]. You rack up the balls and get ready to play. Shall you play to win (Y) or play to lose (N)?";
@@ -786,7 +786,7 @@ instead of conversing the Pool Table:
 				increase slutratsub by 1;
 				if slutratsub > 10, now slutratsub is 10;
 		else:
-			say "     Despite making an effort to flub a simple shots, you do have to look like you're trying to win. You play normally, but mess up every now and again. But in the end, [one of]your opponent ends up sinking the eight ball in the wrong pocket[or]you manage a fluke shot[cycling], winning you the game. Although you won, the rats weren't really excited by the lackluster game and so aren't impressed. But you still are the winner though, and that means the prize is yours, grabbing [if T is 1]Eight-ball[else if T is 2]Skeeball, who giggles eagerly[else]the rat[end if] for a little fun.";
+			say "     Despite making an effort to flub simple shots, you do have to look like you're trying to win. You play normally, but mess up every now and again. But in the end, [one of]your opponent ends up sinking the eight ball in the wrong pocket[or]you manage a fluke shot[cycling], winning you the game. Although you won, the rats weren't really excited by the lackluster game and so aren't impressed. But you still are the winner though, and that means the prize is yours, grabbing [if T is 1]Eight-ball[else if T is 2]Skeeball, who giggles eagerly[else]the rat[end if] for a little fun.";
 			now lastpoolgame is turns;
 			say "[slutratdomsex]";
 
