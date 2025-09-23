@@ -1,6 +1,8 @@
-Cum items by Core Mechanics begins here.
+Cum Items by Core Mechanics begins here.
 
 [Version 1. Creates a table of cum items based on all current infections. Standardizes the text for all of them. Created 03/23/2023]
+
+[In general, these are not used as loot but given when player masturbates and follow self-infection rules (strain of object should be strain of infection that links the item).]
 
 
 Section 1 - Common Text Definitions
@@ -117,6 +119,17 @@ automaton cum is a infectious cum grab object.
 Strain of automaton cum is "Automaton".
 Usedesc of automaton cum is "[cumjar use]".
 Scent of automaton cum is "[cumjar smell]".]
+
+
+[defined early to resolve name conflicts]
+Table of Game Objects (continued)
+name	desc	weight	object
+"kobold cum"	"[cumjar Strain of kobold cum]"	1	kobold cum
+
+kobold cum is a infectious cum grab object.
+Strain of kobold cum is "Kobold".
+Usedesc of kobold cum is "[cumjar use]".
+Scent of kobold cum is "[cumjar smell]".
 
 
 Table of Game Objects (continued)
@@ -719,16 +732,14 @@ Usedesc of deer cum is "[cumjar use]".
 Scent of deer cum is "[cumjar smell]".
 
 
-[ DEMON BRUTE
-Table of Game Objects (continued)
+[Table of Game Objects (continued)
 name	desc	weight	object
 "demon brute cum"	"[cumjar Strain of demon brute cum]"	1	demon brute cum
 
 demon brute cum is a infectious cum grab object.
 Strain of demon brute cum is "Demon Brute".
 Usedesc of demon brute cum is "[cumjar use]".
-Scent of demon brute cum is "[cumjar smell]".
-]
+Scent of demon brute cum is "[cumjar smell]".]
 
 
 Table of Game Objects (continued)
@@ -1193,6 +1204,16 @@ Scent of feral wolf male cum is "[cumjar smell]".]
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"ferret cum"	"[cumjar Strain of ferret cum]"	1	ferret cum
+
+ferret cum is a infectious cum grab object.
+Strain of ferret cum is "Ferret".
+Usedesc of ferret cum is "[cumjar use]".
+Scent of ferret cum is "[cumjar smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "fire elemental cum"	"[cumjar Strain of fire elemental cum]"	1	fire elemental cum
 
 fire elemental cum is a infectious cum grab object.
@@ -1431,16 +1452,16 @@ Usedesc of goblin cum is "[cumjar use]".
 Scent of goblin cum is "[cumjar smell]".
 
 
-[ RETRIEVER (FEMALE/MALE) CUM
 Table of Game Objects (continued)
 name	desc	weight	object
 "golden retriever male cum"	"[cumjar Strain of golden retriever male cum]"	1	golden retriever male cum
+
+retriever cum is a grab object. [define early to resolve name conflicts]
 
 golden retriever male cum is a infectious cum grab object.
 Strain of golden retriever male cum is "Golden Retriever Male".
 Usedesc of golden retriever male cum is "[cumjar use]".
 Scent of golden retriever male cum is "[cumjar smell]".
-]
 
 
 Table of Game Objects (continued)
@@ -1763,16 +1784,16 @@ Usedesc of hyena herm cum is "[cumjar use]".
 Scent of hyena herm cum is "[cumjar smell]".]
 
 
-[ HYENA MATRIARCH
 Table of Game Objects (continued)
 name	desc	weight	object
-"hyena matriarch cum"	"[cumjar Strain of hyena matriarch cum]"	1	hyena matriarch cum
+"hyena matriarch cum"	"[cumjar Strain of matriarch cum]"	1	matriarch cum
 
-hyena matriarch cum is a infectious cum grab object.
-Strain of hyena matriarch cum is "Hyena Matriarch".
-Usedesc of hyena matriarch cum is "[cumjar use]".
-Scent of hyena matriarch cum is "[cumjar smell]".
-]
+matriarch cum is a infectious cum grab object.
+understand "hyena matriarch cum" as matriarch cum. [avoiding name conflicts]
+printed name of matriarch cum is "hyena matriarch cum".
+Strain of matriarch cum is "Hyena Matriarch".
+Usedesc of matriarch cum is "[cumjar use]".
+Scent of matriarch cum is "[cumjar smell]".
 
 
 Table of Game Objects (continued)
@@ -1945,16 +1966,16 @@ Usedesc of killer whale cum is "[cumjar use]".
 Scent of killer whale cum is "[cumjar smell]".
 
 
-[ KITSUNE
 Table of Game Objects (continued)
 name	desc	weight	object
-"kitsune cum"	"[cumjar Strain of kitsune cum]"	1	kitsune cum
+"kitsune cum"	"[cumjar Strain of silver vulpine cum]"	1	silver vulpine cum
 
-kitsune cum is a infectious cum grab object.
-Strain of kitsune cum is "Kitsune".
-Usedesc of kitsune cum is "[cumjar use]".
-Scent of kitsune cum is "[cumjar smell]".
-]
+silver vulpine cum is a infectious cum grab object.
+understand "kitsune cum" as silver vulpine cum. [avoiding name conflicts]
+printed name of silver vulpine cum is "kitsune cum".
+Strain of silver vulpine cum is "Kitsune".
+Usedesc of silver vulpine cum is "[cumjar use]".
+Scent of silver vulpine cum is "[cumjar smell]".
 
 
 [Table of Game Objects (continued)
@@ -1975,18 +1996,6 @@ koballoon cum is a infectious cum grab object.
 Strain of koballoon cum is "Koballoon".
 Usedesc of koballoon cum is "[cumjar use]".
 Scent of koballoon cum is "[cumjar smell]".]
-
-
-[ AVALON KOBOLD
-Table of Game Objects (continued)
-name	desc	weight	object
-"kobold cum"	"[cumjar Strain of kobold cum]"	1	kobold cum
-
-kobold cum is a infectious cum grab object.
-Strain of kobold cum is "Kobold".
-Usedesc of kobold cum is "[cumjar use]".
-Scent of kobold cum is "[cumjar smell]".
-]
 
 
 Table of Game Objects (continued)
@@ -2147,6 +2156,17 @@ magic drake cum is a infectious cum grab object.
 Strain of magic drake cum is "Magic Drake".
 Usedesc of magic drake cum is "[cumjar use]".
 Scent of magic drake cum is "[cumjar smell]".
+
+
+[defined early to resolve name conflicts]
+Table of Game Objects (continued)
+name	desc	weight	object
+"tiger cum"	"[cumjar Strain of tiger cum]"	1	tiger cum
+
+tiger cum is a infectious cum grab object.
+Strain of tiger cum is "Tiger".
+Usedesc of tiger cum is "[cumjar use]".
+Scent of tiger cum is "[cumjar smell]".
 
 
 Table of Game Objects (continued)
@@ -3129,26 +3149,28 @@ Usedesc of smooth collie shemale cum is "[cumjar use]".
 Scent of smooth collie shemale cum is "[cumjar smell]".
 
 
-[ SNOW
 Table of Game Objects (continued)
 name	desc	weight	object
-"snow bat cum"	"[cumjar Strain of snow bat cum]"	1	snow bat cum
+"snow bat cum"	"[cumjar Strain of snow-bat cum]"	1	snow-bat cum
 
-snow bat cum is a infectious cum grab object.
-Strain of snow bat cum is "Snow Bat".
-Usedesc of snow bat cum is "[cumjar use]".
-Scent of snow bat cum is "[cumjar smell]".
+snow-bat cum is a infectious cum grab object.
+understand "snow bat cum" as snow-bat cum. [avoiding name conflicts]
+printed name of snow-bat cum is "snow bat cum".
+Strain of snow-bat cum is "Snow Bat".
+Usedesc of snow-bat cum is "[cumjar use]".
+Scent of snow-bat cum is "[cumjar smell]".
 
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"snow leopard cum"	"[cumjar Strain of snow leopard cum]"	1	snow leopard cum
+"snow leopard cum"	"[cumjar Strain of snow-leopard cum]"	1	snow-leopard cum
 
-snow leopard cum is a infectious cum grab object.
-Strain of snow leopard cum is "Snow Leopard".
-Usedesc of snow leopard cum is "[cumjar use]".
-Scent of snow leopard cum is "[cumjar smell]".
-]
+snow-leopard cum is a infectious cum grab object.
+understand "snow leopard cum" as snow-leopard cum. [avoiding name conflicts]
+printed name of snow-leopard cum is "snow leopard cum".
+Strain of snow-leopard cum is "Snow Leopard".
+Usedesc of snow-leopard cum is "[cumjar use]".
+Scent of snow-leopard cum is "[cumjar smell]".
 
 
 Table of Game Objects (continued)
@@ -3241,7 +3263,6 @@ Usedesc of succubus cum is "[cumjar use]".
 Scent of succubus cum is "[cumjar smell]".
 
 
-[ FERRET CUM
 Table of Game Objects (continued)
 name	desc	weight	object
 "sugar ferret cum"	"[cumjar Strain of sugar ferret cum]"	1	sugar ferret cum
@@ -3250,7 +3271,6 @@ sugar ferret cum is a infectious cum grab object.
 Strain of sugar ferret cum is "Sugar Ferret".
 Usedesc of sugar ferret cum is "[cumjar use]".
 Scent of sugar ferret cum is "[cumjar smell]".
-]
 
 
 Table of Game Objects (continued)
@@ -3331,18 +3351,6 @@ thought eater cum is a infectious cum grab object.
 Strain of thought eater cum is "Thought Eater".
 Usedesc of thought eater cum is "[cumjar use]".
 Scent of thought eater cum is "[cumjar smell]".
-
-
-[ ROYAL TIGER
-Table of Game Objects (continued)
-name	desc	weight	object
-"tiger cum"	"[cumjar Strain of tiger cum]"	1	tiger cum
-
-tiger cum is a infectious cum grab object.
-Strain of tiger cum is "Tiger".
-Usedesc of tiger cum is "[cumjar use]".
-Scent of tiger cum is "[cumjar smell]".
-]
 
 
 Table of Game Objects (continued)
@@ -3752,6 +3760,26 @@ to say Hermacore Cum use:
 
 instead of sniffing Hermacore Cum:
 	say "You open the lid for a moment and take a sniff. Unsurprisingly, it smells a lot like you, just a tad nuttier.";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"retriever cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Retriever Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	retriever cum
+
+[retriever cum is a grab object.]
+retriever cum is cum.
+Purified of retriever cum is "distilled cum".
+retriever cum is infectious.
+Strain of retriever cum is "Retriever Male".
+Usedesc of retriever cum is "[retriever cum use]";
+
+to say retriever cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing retriever cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
 
 Table of Game Objects (continued)
