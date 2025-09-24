@@ -785,7 +785,7 @@ When Play begins:
 	now loot entry is "";
 	now lootchance entry is 0;
 	now MilkItem entry is "feral sea dragon milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is "sea dragon cum";
+	now CumItem entry is "feral sea dragon cum";
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]large[or]bulky[or]aquatic[or]muscled[at random]";
