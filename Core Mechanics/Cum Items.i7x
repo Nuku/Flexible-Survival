@@ -734,12 +734,14 @@ Scent of deer cum is "[cumjar smell]".
 
 [Table of Game Objects (continued)
 name	desc	weight	object
-"demon brute cum"	"[cumjar Strain of demon brute cum]"	1	demon brute cum
+"demon brute cum"	"[cumjar Strain of demonic brute cum]"	1	demonic brute cum
 
-demon brute cum is a infectious cum grab object.
-Strain of demon brute cum is "Demon Brute".
-Usedesc of demon brute cum is "[cumjar use]".
-Scent of demon brute cum is "[cumjar smell]".]
+demonic brute cum is a infectious cum grab object.
+understand "demon brute cum" as demonic brute cum. [avoiding name conflicts]
+printed name of demonic brute cum is "demon brute cum".
+Strain of demonic brute cum is "Demon Brute".
+Usedesc of demonic brute cum is "[cumjar use]".
+Scent of demonic brute cum is "[cumjar smell]".]
 
 
 Table of Game Objects (continued)
@@ -1786,14 +1788,14 @@ Scent of hyena herm cum is "[cumjar smell]".]
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"hyena matriarch cum"	"[cumjar Strain of matriarch cum]"	1	matriarch cum
+"hyena matriarch cum"	"[cumjar Strain of hyena-matriarch cum]"	1	hyena-matriarch cum
 
-matriarch cum is a infectious cum grab object.
-understand "hyena matriarch cum" as matriarch cum. [avoiding name conflicts]
-printed name of matriarch cum is "hyena matriarch cum".
-Strain of matriarch cum is "Hyena Matriarch".
-Usedesc of matriarch cum is "[cumjar use]".
-Scent of matriarch cum is "[cumjar smell]".
+hyena-matriarch cum is a infectious cum grab object.
+understand "hyena matriarch cum" as hyena-matriarch cum. [avoiding name conflicts]
+printed name of hyena-matriarch cum is "hyena matriarch cum".
+Strain of hyena-matriarch cum is "Hyena Matriarch".
+Usedesc of hyena-matriarch cum is "[cumjar use]".
+Scent of hyena-matriarch cum is "[cumjar smell]".
 
 
 Table of Game Objects (continued)

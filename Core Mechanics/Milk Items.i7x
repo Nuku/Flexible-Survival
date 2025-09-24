@@ -1788,14 +1788,14 @@ Scent of hyena herm milk is "[breastmilk smell]".]
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"hyena matriarch milk"	"[breastmilk Strain of matriarch milk]"	1	matriarch milk
+"hyena matriarch milk"	"[breastmilk Strain of hyena-matriarch milk]"	1	hyena-matriarch milk
 
-matriarch milk is a infectious milky grab object.
-understand "hyena matriarch milk" as matriarch milk. [avoiding name conflicts]
-printed name of matriarch milk is "hyena matriarch milk".
-Strain of matriarch milk is "Hyena Matriarch".
-Usedesc of matriarch milk is "[breastmilk use]".
-Scent of matriarch milk is "[breastmilk smell]".
+hyena-matriarch milk is a infectious milky grab object.
+understand "hyena matriarch milk" as hyena-matriarch milk. [avoiding name conflicts]
+printed name of hyena-matriarch milk is "hyena matriarch milk".
+Strain of hyena-matriarch milk is "Hyena Matriarch".
+Usedesc of hyena-matriarch milk is "[breastmilk use]".
+Scent of hyena-matriarch milk is "[breastmilk smell]".
 
 
 Table of Game Objects (continued)
