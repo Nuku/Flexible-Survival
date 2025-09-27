@@ -377,24 +377,6 @@ to say alpha wolf cum use:
 instead of sniffing alpha wolf cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"alpha wolf man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Alpha Wolf Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	alpha wolf man-milk
-
-alpha wolf man-milk is a grab object.
-alpha wolf man-milk is milky.
-Purified of alpha wolf man-milk is "distilled milk".
-alpha wolf man-milk is infectious.
-Strain of alpha wolf man-milk is "Alpha Wolf".
-Usedesc of alpha wolf man-milk is "[alpha wolf man-milk use]";
-
-to say alpha wolf man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing alpha wolf man-milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
 
 Section 3 - Endings
 

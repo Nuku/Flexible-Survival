@@ -524,24 +524,6 @@ instead of sniffing werewolf brute fur:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"werewolf brute cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Werewolf Brute Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	werewolf brute cum
-
-werewolf brute cum is a grab object.
-werewolf brute cum is cum.
-werewolf brute cum is infectious.
-Strain of werewolf brute cum is "Werewolf Brute".
-Usedesc of werewolf brute cum is "[werewolf brute cum use]";
-
-to say werewolf brute cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing werewolf brute cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
 "werewolf brute man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Werewolf Brute Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	werewolf brute man-milk
 
 werewolf brute man-milk is a grab object.
@@ -552,7 +534,7 @@ Strain of werewolf brute man-milk is "Werewolf Brute".
 Usedesc of werewolf brute man-milk is "[werewolf brute man-milk use]";
 
 to say werewolf brute man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the reptilian man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the lupine man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
 instead of sniffing werewolf brute man-milk:

@@ -236,7 +236,7 @@ instead of sniffing pink fox fur:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"pink fox cum"	"The white, gooey seed of one of your past lovers. Comes inside a plastic water bottle that could be mistaken for some sort of buttermilk, if someone hadn't written 'Pink Fox' across the label. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	pink fox cum
+"pink fox cum"	"The white, gooey seed of one of your past lovers. Comes inside a plastic water bottle that could be mistaken for some sort of buttermilk, if someone hadn't written 'Pink Fox Cum' across the label. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	pink fox cum
 
 pink fox cum is a grab object.
 pink fox cum is cum.

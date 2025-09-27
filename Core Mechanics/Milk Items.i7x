@@ -8,12 +8,19 @@ Milk Items by Core Mechanics begins here.
 Section 1 - Common Text Definitions
 
 to say breastmilk (T - text):
-	say "A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written '[T] Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though... ";
+	say "A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written '[T] Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though... ";
+
+to say manmilk (T - text):
+	say "A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written '[T] Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though... ";
 
 to say breastmilk use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
+
+to say manmilk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
 
 to say breastmilk smell:
 	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really. ";
@@ -111,16 +118,6 @@ Usedesc of army ant milk is "[breastmilk use]".
 Scent of army ant milk is "[breastmilk smell]".
 
 
-[Table of Game Objects (continued)
-name	desc	weight	object
-"automaton milk"	"[breastmilk Strain of automaton milk]"	1	automaton milk
-
-automaton milk is a infectious milky grab object.
-Strain of automaton milk is "Automaton".
-Usedesc of automaton milk is "[breastmilk use]".
-Scent of automaton milk is "[breastmilk smell]".]
-
-
 [defined early to resolve name conflicts]
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -160,16 +157,6 @@ bald eagle milk is a infectious milky grab object.
 Strain of bald eagle milk is "Bald Eagle".
 Usedesc of bald eagle milk is "[breastmilk use]".
 Scent of bald eagle milk is "[breastmilk smell]".
-
-
-[Table of Game Objects (continued)
-name	desc	weight	object
-"batcubus milk"	"[breastmilk Strain of batcubus milk]"	1	batcubus milk
-
-batcubus milk is a infectious milky grab object.
-Strain of batcubus milk is "Batcubus".
-Usedesc of batcubus milk is "[breastmilk use]".
-Scent of batcubus milk is "[breastmilk smell]".]
 
 
 Table of Game Objects (continued)
@@ -290,16 +277,6 @@ blue goo milk is a infectious milky grab object.
 Strain of blue goo milk is "Blue Goo".
 Usedesc of blue goo milk is "[breastmilk use]".
 Scent of blue goo milk is "[breastmilk smell]".
-
-
-[Table of Game Objects (continued)
-name	desc	weight	object
-"blue gryphon herm milk"	"[breastmilk Strain of blue gryphon herm milk]"	1	blue gryphon herm milk
-
-blue gryphon herm milk is a infectious milky grab object.
-Strain of blue gryphon herm milk is "Blue Gryphon Herm".
-Usedesc of blue gryphon herm milk is "[breastmilk use]".
-Scent of blue gryphon herm milk is "[breastmilk smell]".]
 
 
 Table of Game Objects (continued)
@@ -470,26 +447,6 @@ ceryneian deer-taur milk is a infectious milky grab object.
 Strain of ceryneian deer-taur milk is "Ceryneian Deer-taur".
 Usedesc of ceryneian deer-taur milk is "[breastmilk use]".
 Scent of ceryneian deer-taur milk is "[breastmilk smell]".
-
-
-[Table of Game Objects (continued)
-name	desc	weight	object
-"cheesecake milk"	"[breastmilk Strain of cheesecake milk]"	1	cheesecake milk
-
-cheesecake milk is a infectious milky grab object.
-Strain of cheesecake milk is "Cheesecake".
-Usedesc of cheesecake milk is "[breastmilk use]".
-Scent of cheesecake milk is "[breastmilk smell]".]
-
-
-[Table of Game Objects (continued)
-name	desc	weight	object
-"cheetah woman milk"	"[breastmilk Strain of cheetah woman milk]"	1	cheetah woman milk
-
-cheetah woman milk is a infectious milky grab object.
-Strain of cheetah woman milk is "Cheetah Woman".
-Usedesc of cheetah woman milk is "[breastmilk use]".
-Scent of cheetah woman milk is "[breastmilk smell]".]
 
 
 Table of Game Objects (continued)
@@ -774,16 +731,6 @@ Usedesc of destabilizing mass milk is "[breastmilk use]".
 Scent of destabilizing mass milk is "[breastmilk smell]".]
 
 
-[Table of Game Objects (continued)
-name	desc	weight	object
-"destabilizing mutant milk"	"[breastmilk Strain of destabilizing mutant milk]"	1	destabilizing mutant milk
-
-destabilizing mutant milk is a infectious milky grab object.
-Strain of destabilizing mutant milk is "Destabilizing Mutant".
-Usedesc of destabilizing mutant milk is "[breastmilk use]".
-Scent of destabilizing mutant milk is "[breastmilk smell]".]
-
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "dire wolf milk"	"[breastmilk Strain of dire wolf milk]"	1	dire wolf milk
@@ -812,6 +759,18 @@ doberman male milk is a infectious milky grab object.
 Strain of doberman male milk is "Doberman Male".
 Usedesc of doberman male milk is "[breastmilk use]".
 Scent of doberman male milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"dolphin herm milk"	"[breastmilk Strain of dolphin herm milk]"	1	dolphin herm milk
+
+dolphin milk is a grab object. [define early to resolve name conflicts]
+
+dolphin herm milk is a infectious milky grab object.
+Strain of dolphin herm milk is "Dolphin Herm".
+Usedesc of dolphin herm milk is "[breastmilk use]".
+Scent of dolphin herm milk is "[breastmilk smell]".
 
 
 Table of Game Objects (continued)
@@ -902,16 +861,6 @@ drone wasp milk is a infectious milky grab object.
 Strain of drone wasp milk is "Drone Wasp".
 Usedesc of drone wasp milk is "[breastmilk use]".
 Scent of drone wasp milk is "[breastmilk smell]".
-
-
-[Table of Game Objects (continued)
-name	desc	weight	object
-"dryad milk"	"[breastmilk Strain of dryad milk]"	1	dryad milk
-
-dryad milk is a infectious milky grab object.
-Strain of dryad milk is "Dryad".
-Usedesc of dryad milk is "[breastmilk use]".
-Scent of dryad milk is "[breastmilk smell]".]
 
 
 Table of Game Objects (continued)
@@ -1174,16 +1123,6 @@ Usedesc of feral unicorn milk is "[breastmilk use]".
 Scent of feral unicorn milk is "[breastmilk smell]".
 
 
-[Table of Game Objects (continued)
-name	desc	weight	object
-"feral wolf bitch milk"	"[breastmilk Strain of feral wolf bitch milk]"	1	feral wolf bitch milk
-
-feral wolf bitch milk is a infectious milky grab object.
-Strain of feral wolf bitch milk is "Feral Wolf Bitch".
-Usedesc of feral wolf bitch milk is "[breastmilk use]".
-Scent of feral wolf bitch milk is "[breastmilk smell]".]
-
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "feral wolf herm milk"	"[breastmilk Strain of feral wolf herm milk]"	1	feral wolf herm milk
@@ -1402,16 +1341,6 @@ giant anteater male milk is a infectious milky grab object.
 Strain of giant anteater male milk is "Giant Anteater Male".
 Usedesc of giant anteater male milk is "[breastmilk use]".
 Scent of giant anteater male milk is "[breastmilk smell]".
-
-
-[Table of Game Objects (continued)
-name	desc	weight	object
-"gingerbread milk"	"[breastmilk Strain of gingerbread milk]"	1	gingerbread milk
-
-gingerbread milk is a infectious milky grab object.
-Strain of gingerbread milk is "Gingerbread".
-Usedesc of gingerbread milk is "[breastmilk use]".
-Scent of gingerbread milk is "[breastmilk smell]".]
 
 
 Table of Game Objects (continued)
@@ -1756,16 +1685,6 @@ Usedesc of human survivor milk is "[breastmilk use]".
 Scent of human survivor milk is "[breastmilk smell]".
 
 
-[Table of Game Objects (continued)
-name	desc	weight	object
-"husky bitch milk"	"[breastmilk Strain of husky bitch milk]"	1	husky bitch milk
-
-husky bitch milk is a infectious milky grab object.
-Strain of husky bitch milk is "Husky Bitch".
-Usedesc of husky bitch milk is "[breastmilk use]".
-Scent of husky bitch milk is "[breastmilk smell]".]
-
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "hydra beast milk"	"[breastmilk Strain of hydra beast milk]"	1	hydra beast milk
@@ -1774,16 +1693,6 @@ hydra beast milk is a infectious milky grab object.
 Strain of hydra beast milk is "Hydra Beast".
 Usedesc of hydra beast milk is "[breastmilk use]".
 Scent of hydra beast milk is "[breastmilk smell]".
-
-
-[Table of Game Objects (continued)
-name	desc	weight	object
-"hyena herm milk"	"[breastmilk Strain of hyena herm milk]"	1	hyena herm milk
-
-hyena herm milk is a infectious milky grab object.
-Strain of hyena herm milk is "Hyena Herm".
-Usedesc of hyena herm milk is "[breastmilk use]".
-Scent of hyena herm milk is "[breastmilk smell]".]
 
 
 Table of Game Objects (continued)
@@ -1900,6 +1809,16 @@ Scent of inflatable vulpine milk is "[breastmilk smell]".
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"jackal femboy milk"	"[breastmilk Strain of jackal femboy milk]"	1	jackal femboy milk
+
+jackal femboy milk is a infectious milky grab object.
+Strain of jackal femboy milk is "Jackal Femboy".
+Usedesc of jackal femboy milk is "[breastmilk use]".
+Scent of jackal femboy milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "jackal guard milk"	"[breastmilk Strain of jackal guard milk]"	1	jackal guard milk
 
 jackal guard milk is a infectious milky grab object.
@@ -2008,6 +1927,16 @@ komodo dragon milk is a infectious milky grab object.
 Strain of komodo dragon milk is "Komodo Dragon".
 Usedesc of komodo dragon milk is "[breastmilk use]".
 Scent of komodo dragon milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"lamia milk"	"[breastmilk Strain of lamia milk]"	1	lamia milk
+
+lamia milk is a infectious milky grab object.
+Strain of lamia milk is "Lamia".
+Usedesc of lamia milk is "[breastmilk use]".
+Scent of lamia milk is "[breastmilk smell]".
 
 
 Table of Game Objects (continued)
@@ -2249,6 +2178,16 @@ mareslut milk is a infectious milky grab object.
 Strain of mareslut milk is "Mareslut".
 Usedesc of mareslut milk is "[breastmilk use]".
 Scent of mareslut milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"margay milk"	"[breastmilk Strain of margay milk]"	1	margay milk
+
+margay milk is a infectious milky grab object.
+Strain of margay milk is "Margay".
+Usedesc of margay milk is "[breastmilk use]".
+Scent of margay milk is "[breastmilk smell]".
 
 
 Table of Game Objects (continued)
@@ -2621,14 +2560,24 @@ Usedesc of pegasus milk is "[breastmilk use]".
 Scent of pegasus milk is "[breastmilk smell]".
 
 
-[Table of Game Objects (continued)
+Table of Game Objects (continued)
 name	desc	weight	object
-"pink fox milk"	"[breastmilk Strain of pink fox milk]"	1	pink fox milk
+"pewter consort milk"	"[breastmilk Strain of pewter consort milk]"	1	pewter consort milk
 
-pink fox milk is a infectious milky grab object.
-Strain of pink fox milk is "Pink Fox".
-Usedesc of pink fox milk is "[breastmilk use]".
-Scent of pink fox milk is "[breastmilk smell]".]
+pewter consort milk is a infectious milky grab object.
+Strain of pewter consort milk is "Pewter Consort".
+Usedesc of pewter consort milk is "[breastmilk use]".
+Scent of pewter consort milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"piggy milk"	"[breastmilk Strain of piggy milk]"	1	piggy milk
+
+piggy milk is a infectious milky grab object.
+Strain of piggy milk is "Piggy".
+Usedesc of piggy milk is "[breastmilk use]".
+Scent of piggy milk is "[breastmilk smell]".
 
 
 Table of Game Objects (continued)
@@ -2823,6 +2772,16 @@ Scent of red oni milk is "[breastmilk smell]".
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"red panda milk"	"[breastmilk Strain of red panda milk]"	1	red panda milk
+
+red panda milk is a infectious milky grab object.
+Strain of red panda milk is "Red Panda".
+Usedesc of red panda milk is "[breastmilk use]".
+Scent of red panda milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "reindeer milk"	"[breastmilk Strain of reindeer milk]"	1	reindeer milk
 
 reindeer milk is a infectious milky grab object.
@@ -2841,24 +2800,14 @@ Usedesc of reptaur milk is "[breastmilk use]".
 Scent of reptaur milk is "[breastmilk smell]".
 
 
-[Table of Game Objects (continued)
+Table of Game Objects (continued)
 name	desc	weight	object
-"retriever female milk"	"[breastmilk Strain of retriever female milk]"	1	retriever female milk
+"rhino milk"	"[breastmilk Strain of rhino milk]"	1	rhino milk
 
-retriever female milk is a infectious milky grab object.
-Strain of retriever female milk is "Retriever Female".
-Usedesc of retriever female milk is "[breastmilk use]".
-Scent of retriever female milk is "[breastmilk smell]".]
-
-
-[Table of Game Objects (continued)
-name	desc	weight	object
-"retriever male milk"	"[breastmilk Strain of retriever male milk]"	1	retriever male milk
-
-retriever male milk is a infectious milky grab object.
-Strain of retriever male milk is "Retriever Male".
-Usedesc of retriever male milk is "[breastmilk use]".
-Scent of retriever male milk is "[breastmilk smell]".]
+rhino milk is a infectious milky grab object.
+Strain of rhino milk is "Rhino".
+Usedesc of rhino milk is "[breastmilk use]".
+Scent of rhino milk is "[breastmilk smell]".
 
 
 Table of Game Objects (continued)
@@ -3657,6 +3606,16 @@ Scent of yamato dragon milk is "[breastmilk smell]".
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"yamato dragoness milk"	"[breastmilk Strain of yamato dragoness milk]"	1	yamato dragoness milk
+
+yamato dragoness milk is a infectious milky grab object.
+Strain of yamato dragoness milk is "Yamato Dragoness".
+Usedesc of yamato dragoness milk is "[breastmilk use]".
+Scent of yamato dragoness milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "yinglet milk"	"[breastmilk Strain of yinglet milk]"	1	yinglet milk
 
 yinglet milk is a infectious milky grab object.
@@ -3675,26 +3634,109 @@ Usedesc of yuppie mink milk is "[breastmilk use]".
 Scent of yuppie mink milk is "[breastmilk smell]".
 
 
-Section 3 - Custom Milk Items
+Table of Game Objects (continued)
+name	desc	weight	object
+"zebra stallion milk"	"[breastmilk Strain of zebra stallion milk]"	1	zebra stallion milk
+
+zebra stallion milk is a infectious milky grab object.
+Strain of zebra stallion milk is "Zebra Stallion".
+Usedesc of zebra stallion milk is "[breastmilk use]".
+Scent of zebra stallion milk is "[breastmilk smell]".
+
+
+Section 3 - Standard Man-Milk Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"dolphin herm milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Dolphin Herm Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	dolphin herm milk
+"alpha wolf man-milk"	"[manmilk Strain of alpha wolf man-milk]"	1	alpha wolf man-milk
 
-dolphin herm milk is a grab object.
-dolphin herm milk is milky.
-dolphin herm milk is infectious.
-Strain of dolphin herm milk is "Dolphin Herm".
-Usedesc of dolphin herm milk is "[dolphin herm milk use]".
+alpha wolf man-milk is a infectious milky grab object.
+Strain of alpha wolf man-milk is "Alpha Wolf".
+Usedesc of alpha wolf man-milk is "[manmilk use]".
+Scent of alpha wolf man-milk is "[breastmilk smell]".
 
-to say dolphin herm milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
 
-instead of sniffing dolphin herm milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+Table of Game Objects (continued)
+name	desc	weight	object
+"black wolf man-milk"	"[manmilk Strain of black wolf man-milk]"	1	black wolf man-milk
 
+black wolf man-milk is a infectious milky grab object.
+Strain of black wolf man-milk is "Black Wolf".
+Usedesc of black wolf man-milk is "[manmilk use]".
+Scent of black wolf man-milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"capybara man-milk"	"[manmilk Strain of capybara man-milk]"	1	capybara man-milk
+
+capybara man-milk is a infectious milky grab object.
+Strain of capybara man-milk is "Capybara".
+Usedesc of capybara man-milk is "[manmilk use]".
+Scent of capybara man-milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"dalmatian male man-milk"	"[manmilk Strain of dalmatian male man-milk]"	1	dalmatian male man-milk
+
+dalmatian male man-milk is a infectious milky grab object.
+Strain of dalmatian male man-milk is "Dalmatian Male".
+Usedesc of dalmatian male man-milk is "[manmilk use]".
+Scent of dalmatian male man-milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"feral mutt man-milk"	"[manmilk Strain of feral mutt man-milk]"	1	feral mutt man-milk
+
+feral mutt man-milk is a infectious milky grab object.
+Strain of feral mutt man-milk is "Feral Mutt".
+Usedesc of feral mutt man-milk is "[manmilk use]".
+Scent of feral mutt man-milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"frost drake man-milk"	"[manmilk Strain of frost drake man-milk]"	1	frost drake man-milk
+
+frost drake man-milk is a infectious milky grab object.
+Strain of frost drake man-milk is "Frost Drake".
+Usedesc of frost drake man-milk is "[manmilk use]".
+Scent of frost drake man-milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"husky alpha man-milk"	"[manmilk Strain of husky alpha man-milk]"	1	husky alpha man-milk
+
+husky alpha man-milk is a infectious milky grab object.
+Strain of husky alpha man-milk is "Husky Alpha".
+Usedesc of husky alpha man-milk is "[manmilk use]".
+Scent of husky alpha man-milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"jackal alpha man-milk"	"[manmilk Strain of jackal alpha man-milk]"	1	jackal alpha man-milk
+
+jackal alpha man-milk is a infectious milky grab object.
+Strain of jackal alpha man-milk is "Jackal Alpha".
+Usedesc of jackal alpha man-milk is "[manmilk use]".
+Scent of jackal alpha man-milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Swamp Goblin man-milk"	"[manmilk Strain of Swamp Goblin man-milk]"	1	Swamp Goblin man-milk
+
+Swamp Goblin man-milk is a infectious milky grab object.
+Strain of Swamp Goblin man-milk is "Swamp Goblin".
+Usedesc of Swamp Goblin man-milk is "[manmilk use]".
+Scent of Swamp Goblin man-milk is "[breastmilk smell]".
+
+
+Section 4 - Custom Milk Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -3773,25 +3815,6 @@ to say margay taur milk use:
 	now Cock Count of Player is 0;
 	now Ball Size of Player is 0;
 	now Cock Length of Player is 0;
-
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"retriever milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Retriever Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	retriever milk
-
-[retriever milk is a grab object.]
-retriever milk is milky.
-Purified of retriever milk is "distilled milk".
-retriever milk is infectious.
-Strain of retriever milk is "Retriever Female".
-Usedesc of retriever milk is "[retriever milk use]";
-
-to say retriever milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing retriever milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 
 Table of Game Objects (continued)

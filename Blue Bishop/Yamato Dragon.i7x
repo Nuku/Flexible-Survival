@@ -1079,25 +1079,6 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"yamato dragon cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Yamato Dragon Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	yamato dragon cum
-
-yamato dragon cum is a grab object.
-yamato dragon cum is cum.
-yamato dragon cum is infectious.
-Purified of yamato dragon cum is "distilled cum".
-Strain of yamato dragon cum is "Yamato Dragon".
-Usedesc of yamato dragon cum is "[yamato dragon cum use]";
-
-to say yamato dragon cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing yamato dragon cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
 "yamato dragon man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'yamato dragon Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	yamato dragon man-milk
 
 yamato dragon man-milk is a grab object.

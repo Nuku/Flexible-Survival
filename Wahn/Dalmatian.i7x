@@ -226,24 +226,6 @@ to say dalmatian male cum use:
 instead of sniffing dalmatian male cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"dalmatian male man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Dalmatian Male Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	dalmatian male man-milk
-
-dalmatian male man-milk is a grab object.
-dalmatian male man-milk is milky.
-Purified of dalmatian male man-milk is "distilled milk".
-dalmatian male man-milk is infectious.
-Strain of dalmatian male man-milk is "Dalmatian Male".
-Usedesc of dalmatian male man-milk is "[dalmatian male man-milk use]";
-
-to say dalmatian male man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing dalmatian male man-milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Dalmatian Bitch"	"[PrepCombat_Dalmatian Bitch]"
