@@ -590,22 +590,4 @@ instead of sniffing jackal alpha cum:
 	say "You open the lid for a moment and take a sniff. You almost feel compelled to drink it once its mesmerizing scent gets caught in your nostrils, so you put it back down in that instant.";
 
 
-	Table of Game Objects (continued)
-name	desc	weight	object
-"jackal alpha man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Jackal Alpha Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	jackal alpha man-milk
-
-jackal alpha man-milk is a grab object.
-jackal alpha man-milk is milky.
-Purified of jackal alpha man-milk is "distilled milk".
-jackal alpha man-milk is infectious.
-Strain of jackal alpha man-milk is "Jackal Alpha".
-Usedesc of jackal alpha man-milk is "[jackal alpha man-milk use]";
-
-to say jackal alpha man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing jackal alpha man-milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
 Jackal Alpha ends here.

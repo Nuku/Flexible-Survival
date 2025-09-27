@@ -402,7 +402,6 @@ to say Castien_Exploration_Outside:
 	WaitLineBreak;
 	say "     'Stay within five paces, or you'll step outside the shroud,' the elf tells you in a low whisper, then gives a handsign for you to move ahead with him. Seems he's turned you invisible. It doesn't take too long before your now much more direct exploration brings you into the proximity of ";
 	let randomnumber be a random number from 1 to 4; [adjust the latter number for the number of options]
-	if randomnumber is:
 	if randomnumber is 1: [hawkman]
 		say "a little huddle of people, garbed in partly torn and stained clothes. Several of them show partial transformations of more than one infection. Doesn't look like the nanite apocalypse has been kind on them. There is some haggling going on, apparently over the trade of a stack of dog food cans being offered for a pair of large soda bottles. The companions of the two of them negotiating with each other keep lookout for the other side trying anything, or outside interference. For a moment, one of them seems to look right at you, before his gaze drifts on along the street, Castien's spell easily outdoing his powers of observation. Despite their intent of providing security though, it seems that these people are still thinking too two-dimensional, as an attack from above doesn't seem to have crossed their minds. Suddenly, loud screeching fills the air as a trio of hawkmen swoop down on the haggling survivors, sharp claws outstretched in anticipation.";
 		if "Scouting Intervention Ban" is not listed in Traits of Castien:

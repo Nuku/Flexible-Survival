@@ -51,9 +51,10 @@ This is the ngraphics_refresh rule:
 
 This is the ngraphics_blank rule:
 	if graphics is true and NewGraphics is true:
-		project the figure of pixel_icon;
-		follow the current graphics drawing rule;
-		[now the graphics window proportion is 20;]
+		if currently shown picture is not Figure of pixel_icon:
+			project the figure of pixel_icon;
+			follow the current graphics drawing rule;
+			[now the graphics window proportion is 20;]
 
 This is the ngraphics_phone rule:
 	if graphics is true and NewGraphics is true:
@@ -87,6 +88,7 @@ This is the ngraphics_statusprocess rule:
 		choose row n in table of game art;
 		if icon entry is CurrentGraphic:
 			now ngraphics_currentartist is artist entry;
+			break;
 
 Section 4 - User Commands
 

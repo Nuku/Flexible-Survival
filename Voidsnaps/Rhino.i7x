@@ -273,24 +273,6 @@ instead of sniffing rhino horn fragment:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"rhino milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Rhino Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	rhino milk
-
-rhino milk is a grab object.
-rhino milk is milky.
-rhino milk is infectious.
-Strain of rhino milk is "Rhino".
-Usedesc of rhino milk is "[rhino milk use]".
-
-to say rhino milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing rhino milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
 "rhino cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Rhino Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	rhino cum
 
 rhino cum is a grab object.

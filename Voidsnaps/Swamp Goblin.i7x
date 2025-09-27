@@ -99,39 +99,6 @@ to say GenerateTrophyList_Swamp Goblin:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Swamp Goblin cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Swamp Goblin Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Swamp Goblin cum
-
-Swamp Goblin cum is a grab object.
-Swamp Goblin cum is cum.
-Swamp Goblin cum is infectious.
-Strain of Swamp Goblin cum is "Swamp Goblin".
-Usedesc of Swamp Goblin cum is "[Swamp Goblin cum use]";
-
-to say Swamp Goblin cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing Swamp Goblin cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"Swamp Goblin man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Swamp Goblin Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	Swamp Goblin man-milk
-
-Swamp Goblin man-milk is a grab object.
-Swamp Goblin man-milk is milky.
-Purified of Swamp Goblin man-milk is "distilled milk".
-Swamp Goblin man-milk is infectious.
-Strain of Swamp Goblin man-milk is "Swamp Goblin".
-Usedesc of Swamp Goblin man-milk is "[Swamp Goblin man-milk use]";
-
-to say Swamp Goblin man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-Table of Game Objects (continued)
-name	desc	weight	object
 "Swamp Goblin Hair"	"A tuft of black hair that looks like it has been pulled from the head of a goblin. It's slightly oily."	0	Swamp Goblin Hair
 
 Swamp Goblin Hair is a grab object.

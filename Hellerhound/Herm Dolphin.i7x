@@ -388,9 +388,17 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "dolphin milk"	"Thick and nutritious milk from a dolphinoid."	1	dolphin milk
 
-
-dolphin milk is a grab object. It is milky. Understand "milk" as dolphin milk. dolphin milk is infectious. Strain of dolphin milk is "Dolphin Herm". Purified of dolphin milk is "distilled milk".
+[dolphin milk is a grab object.] [defined in Milk Items to prevent name conflicts]
+dolphin milk is milky. Understand "milk" as dolphin milk.
+dolphin milk is infectious. Strain of dolphin milk is "Dolphin Herm".
+Purified of dolphin milk is "distilled milk".
+Usedesc of dolphin milk is "[dolphin milk use]".
 
 the scent of dolphin milk is "The dolphin milk smells like milk with an odd, fishy scent mixed in.".
+
+to say dolphin milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
 
 Herm Dolphin ends here.

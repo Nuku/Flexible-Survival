@@ -221,7 +221,7 @@ To process (x - a grab object):
 		if inafight is 1:
 			say "[line break][usepepperspray]";
 		else:
-			say "It would not be good idea to use that on yourself. Spicy eyes!";
+			say "It would not be a good idea to use that on yourself. Spicy eyes!";
 	if tempHungerValue > Hunger of Player and "Tanuki Salts" is listed in Feats of Player:
 		say "Dashing a little tanuki salts helped things along. Mmm, divinely tasty.";
 		PlayerEat 5;
@@ -258,7 +258,7 @@ to say journal use:
 		let healed be 10 + ( ( level of Player + perception of Player - 10 ) / 2 );
 		if caffeinehigh of Player > 0:
 			now healed is healed / 2;
-			say " Filled with excess, manic energy, you have difficulty sitting still and focusing on your journal. ";
+			say "Filled with excess, manic energy, you have difficulty sitting still and focusing on your journal. ";
 		if ssmb is true:
 			now healed is ( healed * 3 ) / 2;
 		SanBoost healed;

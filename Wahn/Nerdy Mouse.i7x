@@ -652,22 +652,6 @@ to say NerdyMouseFurUse:
 instead of sniffing nerdy mouse fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"nerdy mouse cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Nerdy Mouse Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	nerdy mouse cum
-
-nerdy mouse cum is a grab object. nerdy mouse cum is cum.
-nerdy mouse cum is infectious. Strain of nerdy mouse cum is "Nerdy Mouse".
-Usedesc of nerdy mouse cum is "[nerdy mouse cum use]";
-
-to say nerdy mouse cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing nerdy mouse cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
-
 Section 3 - NPC
 
 Table of GameCharacterIDs (continued)

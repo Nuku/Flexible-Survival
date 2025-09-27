@@ -156,39 +156,6 @@ Section 2 - Cum and Milk
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"capybara cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Capybara Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	capybara cum
-
-capybara cum is a grab object.
-capybara cum is cum.
-capybara cum is infectious.
-Strain of capybara cum is "Capybara".
-Usedesc of capybara cum is "[capybara cum use]";
-
-to say capybara cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing capybara cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"capybara man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'capybara Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	capybara man-milk
-
-capybara man-milk is a grab object.
-capybara man-milk is milky.
-Purified of capybara man-milk is "distilled milk".
-capybara man-milk is infectious.
-Strain of capybara man-milk is "Capybara".
-Usedesc of capybara man-milk is "[capybara man-milk use]";
-
-to say capybara man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-Table of Game Objects (continued)
-name	desc	weight	object
 "capybara fur"	"A tuft of light brown fur that looks like it has been pulled out of the coat of a capybara. It's nicely soft and waterproof."	0	capybara fur
 
 capybara fur is a grab object.

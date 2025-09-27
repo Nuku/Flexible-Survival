@@ -231,42 +231,6 @@ to say black wolf fur use:
 instead of sniffing black wolf fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"black wolf cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Black Wolf' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	black wolf cum
-
-black wolf cum is a grab object.
-black wolf cum is cum.
-black wolf cum is infectious.
-Strain of black wolf cum is "Black Wolf".
-Usedesc of black wolf cum is "[black wolf cum use]";
-
-to say black wolf cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing black wolf cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"black wolf man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Black Wolf Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	black wolf man-milk
-
-black wolf man-milk is a grab object.
-black wolf man-milk is milky.
-Purified of black wolf man-milk is "distilled milk".
-black wolf man-milk is infectious.
-Strain of black wolf man-milk is "Black Wolf".
-Usedesc of black wolf man-milk is "[black wolf man-milk use]";
-
-to say black wolf man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing black wolf man-milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
 [
 Section 3 - Endings
 

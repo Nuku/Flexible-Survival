@@ -257,25 +257,6 @@ to say batcubus milk use:
 	PlayerDrink 6;
 	infect "Batcubus";
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"Batcubus cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Batcubus Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	batcubus cum
-
-batcubus cum is a grab object.
-batcubus cum is cum.
-Purified of batcubus cum is "distilled cum".
-batcubus cum is infectious.
-Strain of batcubus cum is "Batcubus".
-Usedesc of batcubus cum is "[batcubus cum use]";
-
-to say batcubus cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing batcubus cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
-
 Section 4 - Endings
 
 Table of GameEndings (continued)
