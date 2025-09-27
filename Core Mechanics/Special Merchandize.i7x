@@ -29,7 +29,7 @@ instead of sniffing bliss tablet:
 
 an everyturn rule:
 	if BlissDrugTrip is 1:
-		say "     The increased feeling of heat and randiness caused by the bliss tablet you took peters out and stops, leaving you feeling a somewhat unfulfilled. You can't help but feel the desire to take another tablet and get your groove back on.";
+		say "     The increased feeling of heat and randiness caused by the bliss tablet you took peters out and stops, leaving you feeling somewhat unfulfilled. You can't help but feel the desire to take another tablet and get your groove back on.";
 		LibidoLoss 40;
 	if BlissDrugTrip > 0:
 		decrease BlissDrugTrip by 1;
@@ -51,7 +51,7 @@ to say PowerUpUse:
 	PlayerThirst 20;
 	SanLoss 10;
 	if PowerUpDrugTrip > 0:
-		say "     Since the effects of your previous PowerUp tablet haven't worn off yet, feel a bit woozy, then [italic type]a lot woozy[roman type]. Before you know it, you're lying on the ground, wondering how you got there and register the scrapes you got from passing out all of a sudden. Your mouth tastes like used kitty litter.";
+		say "     Since the effects of your previous PowerUp tablet haven't worn off yet, you feel a bit woozy, then [italic type]a lot woozy[roman type]. Before you know it, you're lying on the ground wondering how you got there, and register the scrapes you got from passing out all of a sudden. Your mouth tastes like used kitty litter.";
 		LineBreak;
 		say "     [bold type]Your strength has temporarily increased by 6![roman type][line break]";
 		PlayerWounded 15;
@@ -125,7 +125,7 @@ to say pixie dust use:
 	repeat with z running through equipped equipment:
 		if size of z > 0: [size restricted equipment]
 			if (scalevalue of Player - size of z > 1):
-				say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if] .[roman type][line break]";
+				say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if].[roman type][line break]";
 				now z is not equipped;
 			else if (scalevalue of Player - size of z is 1):
 				say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";

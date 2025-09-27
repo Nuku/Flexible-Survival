@@ -176,6 +176,13 @@ Storage Room	Figure of emap_Storage_Room_icon
 Table of Zpc Location Reference (continued)
 location(room)	icon(figure name)
 Museum Foyer	Figure of emap_Museum_Foyer_icon
+Museum East Hallway	Figure of emap_East_Hall_icon
+Museum East Hub	Figure of emap_East_Hub_icon
+Museum Greenery	Figure of emap_Greenery_icon
+Museum North Hallway	Figure of emap_North_Hall_icon
+Museum North Hub	Figure of emap_North_Hub_icon
+Museum West Hallway	Figure of emap_West_Hall_icon
+Museum West Hub	Figure of emap_West_Hub_icon
 
 [Grey Abbey Library]
 Table of Zpc Location Reference (continued)
@@ -486,8 +493,7 @@ to zpc_getfigure: [returns Zf value of respective figure name]
 	now zpc_Zf is figure of pixel;
 	if the location of Player is a location listed in Table of Zpc Location Reference, now zpc_Zf is icon entry;
 
-[
-to zpc_checklocation: [returns Zc value of 1 or 0]
+[to zpc_checklocation: [returns Zc value of 1 or 0]
 	if debugactive is 1:
 		say "Setting zpc_Zc to False.";
 	now zpc_Zc is 0; [zeros returning value]
@@ -507,8 +513,7 @@ to zpc_getfigure: [returns Zf value of respective figure name]
 		if location entry is location of Player:
 			if debugactive is 1 and debuglevel > 1:
 				say "Found icon entry in table of zpc location reference! Storing Icon entry.";
-			now zpc_Zf is icon entry; [returns value for projection]
-]
+			now zpc_Zf is icon entry; [returns value for projection]]
 
 Section 5 - Handling (External)
 
@@ -522,8 +527,7 @@ this is the zpc_lookoverride rule:
 			project the figure of emap_special_signalnotfound_icon;
 			now zpc_inzone is false;
 
-[
-this is the zpc_lookoverride rule:
+[this is the zpc_lookoverride rule:
 	if emap is 1:
 		zpc_checklocation; [runs location check function first to fill Zc value]
 		if zpc_Zc is 1:
@@ -551,10 +555,9 @@ this is the zpc_lookoverride rule:
 				if debugactive is 1 and debuglevel > 1:
 					say "zpc_Zc is false but zpc inzone is true. projecting signal not found and then setting zpc_inzone to false for shutdown..";
 				project the figure of emap_special_signalnotfound_icon;
-				now zpc_inzone is false;
-]
+				now zpc_inzone is false;]
 
-Section 6 - DEBUG
+Section 6 - DEBUG - Not for release
 
 [Cheat for enabling variable]
 cheat_emap is an action applying to nothing.
@@ -576,8 +579,6 @@ understand "freecred_cheat" as cheat_freecred_give.
 carry out cheat_freecred_give:
 	say "CHEAT: Added 100 freecred.";
 	increase freecred by 200;
-
-
 
 
 Zephyr Phone ends here.
