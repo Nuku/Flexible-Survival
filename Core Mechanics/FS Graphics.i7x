@@ -2961,7 +2961,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "emap - Royal Palace Entrance"	Figure of emap_Royal_Palace_Entrance_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Royal Throne Room"	Figure of emap_Royal_Throne_Room_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Shallow Bay"	Figure of emap_Shallow_Bay_icon	"Wolfram Rolf"	g-black	"normal"
-"emap - Sunken Ship"	Figure of emap_Sunny_Snacks_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Sunken Ship"	Figure of emap_Sunken_Ship_icon	"Wolfram Rolf"	g-black	"normal"
+"emap - Sunny Snacks"	Figure of emap_Sunny_Snacks_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Wild Fringe"	Figure of emap_Wild_Fringe_icon	"Wolfram Rolf"	g-black	"normal"
 [emap - Bouncy Castle]
 "emap - Ball Pit Room"	Figure of emap_Ball_Pit_Room_icon	"Wolfram Rolf"	g-black	"normal"

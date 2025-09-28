@@ -346,7 +346,7 @@ name	desc	weight	object
 cow-print cowboy hat is a grab object.
 cow-print cowboy hat is equipment.
 It is not temporary.
-Plural of cow-print cowboy hat is true.
+Plural of cow-print cowboy hat is false.
 Taur-compatible of cow-print cowboy hat is false.
 Size of cow-print cowboy hat is 3.
 AC of cow-print cowboy hat is 5.
@@ -945,7 +945,7 @@ name	desc	weight	object
 zephyr riot shin guards is a grab object.
 zephyr riot shin guards is equipment.
 It is not temporary.
-Plural of zephyr riot shin guards is false.
+Plural of zephyr riot shin guards is true.
 Taur-compatible of zephyr riot shin guards is true.
 Size of zephyr riot shin guards is 3.
 AC of zephyr riot shin guards is 30.
@@ -966,7 +966,7 @@ name	desc	weight	object
 zephyr armored lab boots is a grab object.
 zephyr armored lab boots is equipment.
 It is not temporary.
-Plural of zephyr armored lab boots is false.
+Plural of zephyr armored lab boots is true.
 Taur-compatible of zephyr armored lab boots is true.
 Size of zephyr armored lab boots is 3.
 AC of zephyr armored lab boots is 20.
@@ -1435,7 +1435,7 @@ name	desc	weight	object
 latex mouse mask is a grab object.
 latex mouse mask is equipment.
 It is not temporary.
-Plural of latex mouse mask is true.
+Plural of latex mouse mask is false.
 Taur-compatible of latex mouse mask is true.
 Size of latex mouse mask is 0.
 AC of latex mouse mask is 0.

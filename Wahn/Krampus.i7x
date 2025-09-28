@@ -12,6 +12,7 @@ Version 1 of Krampus by Wahn begins here.
 Section 1 - Events
 
 after going to Krampus's Cave while (HP of Krampus is 0): [introduction]
+	try looking;
 	if debugactive is 1:
 		say "DEBUG -> Krampus Introduction; HP of Krampus: [HP of Krampus] <- DEBUG[line break]";
 	say "     Having stepped into the cave, you are still taking in everything around you when the place's occupant rises from where he was lying on the furs. He is a very large anthro goat, more than seven feet tall, with broad shoulders and rippling muscles under his somewhat shaggy, black fur. As he steps forward on cloven hooves, the creature clinks and rattles a little; bolted around his wrists and ankles are heavy, pitch-black iron manacles, several links of broken chains still dangling from their fastenings. 'What brings you to Krampus's Cave?' he demands in a deep voice, his eyes filling with the low glow of an inner fire as he examines you closely, a lewd grin spreading over his muzzle. 'Are there so many naughty ones now that you just wander into my home? No need for the sack anymore, eh?'";
