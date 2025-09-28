@@ -258,7 +258,7 @@ to RoomSave:
 			now RestSafety entry is "Safe";
 		else:
 			now RestSafety entry is "Unsafe";
-		if x is known and the number of entries in Invent of x is not 0: [only save inventories of rooms the player visited]
+		if the number of entries in Invent of x is not 0:
 			repeat with y running from 1 to the number of entries in Invent of x: [rebuilds the table of RoomInventory with current data]
 				choose a blank row in the table of GameRoomInventories;
 				if RoomID of x is "Room": [no specific differing RoomID set -> default to printed name]
