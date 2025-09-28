@@ -24,28 +24,28 @@ Section 2 - Master Referencing Table
 [MALL]
 Table of Zpc Location Reference
 location(room)	icon(figure name)
-Dirty Alley	Figure of emap_mall_alley_icon
-Mall Atrium	Figure of emap_mall_atrium_icon
 Body Shop	Figure of emap_mall_bodyshop_icon
 Branson & Partner Reception	Figure of emap_mall_bransonpartner_icon
 Brookstone Books	Figure of emap_mall_brookstonebooks_icon
 Christmas Village	Figure of emap_mall_christmasvillage_icon
+Dirty Alley	Figure of emap_mall_alley_icon
+Game Store	Figure of emap_mall_gamestore_icon
+Maintenance Garage	Figure of emap_mall_garage_icon
+Mall Atrium	Figure of emap_mall_atrium_icon
 Mall East Wing	Figure of emap_mall_eastwing_icon
 Mall Foodcourt	Figure of emap_mall_foodcourt_icon
 Mall Foyer	Figure of emap_mall_foyer_icon
-Game Store	Figure of emap_mall_gamestore_icon
-Maintenance Garage	Figure of emap_mall_garage_icon
-Wolverine Guard Station	Figure of emap_mall_guardpost_icon
 Mall Lockerroom	Figure of emap_mall_lockers_icon
+Mall Restroom	Figure of emap_mall_restrooms_icon
+Mall West Wing	Figure of emap_mall_westwing_icon
+The Mysterious Shop	Figure of emap_mall_nermines_icon
+The Pretty Kitty	Figure of emap_mall_pkboutique_icon
+Shag Shack Entrance	Figure of emap_mall_shagshack_icon
 Smith Haven Mall Lot East	Figure of emap_mall_loteast_icon
 Smith Haven Mall Lot North	Figure of emap_mall_lotnorth_icon
 Smith Haven Mall Lot South	Figure of emap_mall_lotsouth_icon
 Smith Haven Mall Lot West	Figure of emap_mall_lotwest_icon
-The Mysterious Shop	Figure of emap_mall_nermines_icon
-The Pretty Kitty	Figure of emap_mall_pkboutique_icon
-Mall Restroom	Figure of emap_mall_restrooms_icon
-Shag Shack Entrance	Figure of emap_mall_shagshack_icon
-Mall West Wing	Figure of emap_mall_westwing_icon
+Wolverine Guard Station	Figure of emap_mall_guardpost_icon
 
 [Capitol building]
 Table of Zpc Location Reference (continued)
@@ -113,7 +113,7 @@ Stocks	Figure of emap_Stocks_icon
 Table of Zpc Location Reference (continued)
 location(room)	icon(figure name)
 Ammy's Flatlet	Figure of emap_Ammys_Flatlet_icon
-Palomino	Figure of emap_Palomino_icon
+PALOMINO Dance Club	Figure of emap_Palomino_icon
 Private Booths	Figure of emap_Private_Booths_icon
 Private Club Room	Figure of emap_Private_Club_Room_icon
 Topless Lounge	Figure of emap_Topless_Lounge_icon
@@ -175,9 +175,9 @@ Storage Room	Figure of emap_Storage_Room_icon
 [Museum Foyer]
 Table of Zpc Location Reference (continued)
 location(room)	icon(figure name)
-Museum Foyer	Figure of emap_Museum_Foyer_icon
 Museum East Hallway	Figure of emap_East_Hall_icon
 Museum East Hub	Figure of emap_East_Hub_icon
+Museum Foyer	Figure of emap_Museum_Foyer_icon
 Museum Greenery	Figure of emap_Greenery_icon
 Museum North Hallway	Figure of emap_North_Hall_icon
 Museum North Hub	Figure of emap_North_Hub_icon
@@ -187,7 +187,6 @@ Museum West Hub	Figure of emap_West_Hub_icon
 [Grey Abbey Library]
 Table of Zpc Location Reference (continued)
 location(room)	icon(figure name)
-Grey Abbey Library	Figure of emap_Grey_Abbey_Library_icon
 Attic	Figure of emap_Attic_icon
 Back Library	Figure of emap_Back_Library_icon
 Breakroom	Figure of emap_Breakroom_icon
@@ -200,6 +199,7 @@ Garden View	Figure of emap_Garden_View_icon
 George's Animal Emporium	Figure of emap_Georges_Animal_Emporium_icon
 Grey Abbey 2F	Figure of emap_Grey_Abbey_2F_icon
 Grey Abbey Garden	Figure of emap_Grey_Abbey_Garden_icon
+Grey Abbey Library	Figure of emap_Grey_Abbey_Library_icon
 Half-Renovated Room	Figure of emap_Half_Renovated_Room_icon
 Large Shed	Figure of emap_Large_Shed_icon
 Looted Shops	Figure of emap_Looted_Shops_icon
@@ -243,12 +243,12 @@ Hellfire Lounge	Figure of emap_Hellfire_Lounge_icon
 Hellfire Restroom	Figure of emap_Hellfire_Restroom_icon
 Hellfire Storage	Figure of emap_Hellfire_Storage_icon
 Hellfire Unknown	Figure of emap_Hellfire_Unknown_icon
+Hellfire VIP Floor	Figure of emap_VIP_Floor_icon
 Narrow Alley	Figure of emap_Narrow_Alley_icon
 Northern Street 1	Figure of emap_Northern_Street_1_icon
 Northern Street 2	Figure of emap_Northern_Street_2_icon
 Restrained Desire	Figure of emap_Restrained_Desire_icon
 Sacristy	Figure of emap_Sacristy_icon
-Hellfire VIP Floor	Figure of emap_VIP_Floor_icon
 
 [Orc Lair]
 Table of Zpc Location Reference (continued)
@@ -269,6 +269,7 @@ Slave Cell 2	Figure of emap_Slave_Cell_2_icon
 Table of Zpc Location Reference (continued)
 location(room)	icon(figure name)
 Beach Plaza	Figure of emap_Beach_Plaza_icon
+BeachEnd	Figure of emap_End_of_Beach_icon
 Boardwalk2	Figure of emap_Boardwalk_icon
 Church Hall	Figure of emap_Church_Hall_icon
 City Center	Figure of emap_City_Center_icon
@@ -276,7 +277,6 @@ City Entrance	Figure of emap_City_Entrance_icon
 City Market	Figure of emap_City_Market_icon
 City Residential	Figure of emap_City_Residential_icon
 Dirty Sheds	Figure of emap_Dirty_Sheds_icon
-BeachEnd	Figure of emap_End_of_Beach_icon
 Open Ocean	Figure of emap_Open_Ocean_icon
 Overgrown Area	Figure of emap_Overgrown_Area_icon
 Public Beach	Figure of emap_Public_Beach_icon
@@ -287,16 +287,16 @@ Royal Bed Chambers	Figure of emap_Royal_Bed_Chambers_icon
 Royal Palace Entrance	Figure of emap_Royal_Palace_Entrance_icon
 Royal Throne Room	Figure of emap_Royal_Throne_Room_icon
 Shallow Bay	Figure of emap_Shallow_Bay_icon
+Sunken Ship	Figure of emap_Sunken_Ship_icon
 Sunny Snacks	Figure of emap_Sunny_Snacks_icon
 Wild Fringe	Figure of emap_Wild_Fringe_icon
-[Note: add sunken emap_Sunken_Ship]
 
 [Bouncy Castle]
 Table of Zpc Location Reference (continued)
 location(room)	icon(figure name)
 Ball Pit Room	Figure of emap_Ball_Pit_Room_icon
-Bouncy Castle	Figure of emap_Bouncy_Castle_icon
 Bouncing Play Room	Figure of emap_Bouncy_Play_Room_icon
+Bouncy Castle	Figure of emap_Bouncy_Castle_icon
 Castle Throne Room	Figure of emap_Castle_Throne_Room_icon
 Eastern Parapets	Figure of emap_Eastern_Parapets_icon
 Fencing Room	Figure of emap_Fencing_Room_icon
@@ -317,6 +317,7 @@ location(room)	icon(figure name)
 Astroslide Field Locker-Room	Figure of emap_Astroslide_Field_Locker_Room_icon
 Astroslide Football Field	Figure of emap_Astroslide_Football_Field_icon
 Athletic Street	Figure of emap_Athletic_Street_icon
+The Clouds	Figure of emap_The_Clouds_icon
 College Administration Building	Figure of emap_College_Administration_Building_icon
 College Belltower	Figure of emap_College_Belltower_icon
 College Campus Entrance	Figure of emap_College_Campus_Entrance_icon
@@ -342,7 +343,6 @@ Sylvia's Room	Figure of emap_Sylvias_Room_icon
 Tenvale College Female Dorms	Figure of emap_Tenvale_College_Female_Dorms_icon
 Tenvale College Library	Figure of emap_Tenvale_College_Library_icon
 Tenvale College Male Dorms	Figure of emap_Tenvale_College_Male_Dorms_icon
-The Clouds	Figure of emap_The_Clouds_icon
 Thunderbolt's Stable	Figure of emap_Thunderbolts_Stable_icon
 Wally's Room	Figure of emap_Wallys_Room_icon
 Your Dorm Room	Figure of emap_Your_Dorm_Room_icon
@@ -394,21 +394,21 @@ Zoo Restrooms	Figure of emap_Zoo_Restrooms_icon
 [PAN Frat]
 Table of Zpc Location Reference (continued)
 location(room)	icon(figure name)
-PAN Frat Game Room	Figure of emap_PAN_Frat_Game_Room
-PAN Frat Living Room	Figure of emap_PAN_Frat_Living_Room
-PAN Frat Kitchen	Figure of emap_PAN_Frat_Kitchen
-PAN Frat Indoor Pen	Figure of emap_PAN_Frat_Indoor_Pen
-PAN Frat Garden	Figure of emap_PAN_Frat_Garden
 PAN Frat Basement	Figure of emap_PAN_Frat_Basement
-PAN Frat Sauna	Figure of emap_PAN_Frat_Sauna
-PAN Frat Showers	Figure of emap_PAN_Frat_Showers
 PAN Frat Bathroom	Figure of emap_Pan_Frat_Bathroom
-PAN Frat Stairway	Figure of emap_PAN_Frat_Stairway
-PAN Frat Second Floor	Figure of emap_Pan_Frat_Second_Floor
-PAN Frat Third Floor	Figure of emap_Pan_Frat_Third_Floor
-PAN Frat North Hallway	Figure of emap_Pan_Frat_North_Hallway
-PAN Frat South Hallway	Figure of emap_Pan_Frat_South_Hallway
 PAN Frat East Hallway	Figure of emap_Pan_Frat_East_Hallway
+PAN Frat Game Room	Figure of emap_PAN_Frat_Game_Room
+PAN Frat Garden	Figure of emap_PAN_Frat_Garden
+PAN Frat Indoor Pen	Figure of emap_PAN_Frat_Indoor_Pen
+PAN Frat Kitchen	Figure of emap_PAN_Frat_Kitchen
+PAN Frat Living Room	Figure of emap_PAN_Frat_Living_Room
+PAN Frat North Hallway	Figure of emap_Pan_Frat_North_Hallway
+PAN Frat Sauna	Figure of emap_PAN_Frat_Sauna
+PAN Frat Second Floor	Figure of emap_Pan_Frat_Second_Floor
+PAN Frat Showers	Figure of emap_PAN_Frat_Showers
+PAN Frat South Hallway	Figure of emap_Pan_Frat_South_Hallway
+PAN Frat Stairway	Figure of emap_PAN_Frat_Stairway
+PAN Frat Third Floor	Figure of emap_Pan_Frat_Third_Floor
 PAN Frat West Hallway	Figure of emap_Pan_Frat_West_Hallway
 Richard's Room	Figure of emap_PAN_Frat_Richards_Room
 

@@ -119,7 +119,7 @@ Section 4 - Purchasing from Zephyr
 
 The price sign is a backdrop. It is in Zephyr Lobby. Description of the price sign is "[price list]".
 
-Instead of smelling the price sign:
+Instead of sniffing the price sign:
 	say "The price sign has little in the way of scent of its own.";
 
 to say price list:
