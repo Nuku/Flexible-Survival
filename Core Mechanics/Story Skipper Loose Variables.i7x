@@ -63,10 +63,6 @@ to VariableSave:
 		choose blank row in Table of GameTruths;
 		now TruthVarName entry is "ColaVendingMachine_dead";
 		now TruthVarValue entry is true;
-	if library computer is powered: [storing library PC power state]
-		choose blank row in Table of GameTruths;
-		now TruthVarName entry is "LibraryComputer_powered";
-		now TruthVarValue entry is true;
 	if library computer is on: [storing library PC activation]
 		choose blank row in Table of GameTruths;
 		now TruthVarName entry is "LibraryComputer_on";
@@ -6514,8 +6510,6 @@ to VariableTruthLoad:
 			if TruthVarName entry is:
 				-- "ColaVendingMachine_dead":
 					if Cola Vending Machine is in Mall Foodcourt, now Cola Vending Machine is nowhere;
-				-- "LibraryComputer_powered":
-					if library computer is not powered, now library computer is powered;
 				-- "LibraryComputer_on":
 					if library computer is not on, now library computer is on;
 				-- "A_Candy":

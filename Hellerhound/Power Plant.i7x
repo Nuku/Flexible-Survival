@@ -9,6 +9,7 @@ CityPowerOn is a truth state that varies. CityPowerOn is usually false.
 a postimport rule:
 	if findwires is 2 and fixedgens > 2:
 		now CityPowerOn is true;
+		now library computer is powered;
 
 
 Table of GameEventIDs (continued)

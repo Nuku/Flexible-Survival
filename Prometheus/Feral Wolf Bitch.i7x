@@ -37,7 +37,7 @@ to say Feral Wolf Bitch attack:
 	else:
 		if Player is female:
 			say "     Offering you a dark growl as a parting remark, you tremble at what ill intent she might have in store for you should you meet her again.";
-			if wslevel is 3 or (wslevel is 2 and (a random chance of 1 in 3 succeeds or (Player is kinky and a random chance of 2 in 5 succeeds))):
+			if wslevel is 3 or (wslevel is 2 and (a random chance of 1 in 3 succeeds or (Player is kinky and a random chance of 1 in 3 succeeds))):
 				say "You look as you see her position herself above you. You begin to think that she must want your mouth next when she starts to empty her bladder all over your torso and face. ";
 		else:
 			say "     The feral wolf roars as she slams you down onto your back. She then sits back and lets out a howl of victory into the [if daytimer is night]night [end if]sky before padding over to your head and [if scalevalue of Player > 3]briefly lording over her victory[else]standing above you[end if]. Your position forcing you to look up into the strong[if BodyName of Player is listed in infections of CanineList]er[end if] canine's crotch, your eyes widening as you see her feminine sex quickly begin to line with dew, getting rather slick. A few drops of musky pre begin dripping off her pussy, landing in your mouth and on your face. The strong smell of her musk makes you shiver and groan slightly as she continues to slowly paint your face with her pre, drop by drop.";
@@ -397,7 +397,7 @@ This is the Feral Wolf Bitch Infection rule:
 	if BodySpeciesName of Player is "Feral Wolf":
 		trigger ending "Feral Wolf Bitch Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
-			if Player is  female:
+			if Player is female:
 				say "Giving in to your feral nature, you prowl the city street, looking for worthy males to dominate and satisfy your lustful needs. Your mind is gone and now only the most primal of instincts remain.";
 			else:
 				say "Giving in to your feral nature, you prowl the city street, looking for worthy packmates to join you in your wandering. Your mind is gone and now only the most primal of instincts remain.";
