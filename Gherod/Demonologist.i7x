@@ -1075,7 +1075,7 @@ to DomXaedihr1:
 		now libido of Xaedihr is 99; [nothing else will happen]
 	else if calcnumber is 3:
 		LineBreak;
-		say "     With hesitation, you try telling him that you're really not very sure about this, but he then stops you immediately. 'Don't worry, it isn't anything definitive... We don't have to do it if you don't want to. But in any case, there's this thing I wanted to try with you, however it might be a little more... hardcore than what our usual stuff. If you're up for it, let me know whenever you're ready to give it a go... alright? No rush.'  he lets you know, respecting your pacing and letting you decide how far you're willing to submit to him. All you've got to do now is bring it up when you approach him for sex, if you're willing to give it a try.";
+		say "     With hesitation, you try telling him that you're really not very sure about this, but he then stops you immediately. 'Don't worry, it isn't anything definitive... We don't have to do it if you don't want to. But in any case, there's this thing I wanted to try with you, however it might be a little more... hardcore than what our usual stuff. If you're up for it, let me know whenever you're ready to give it a go... alright? No rush,' he lets you know, respecting your pacing and letting you decide how far you're willing to submit to him. All you've got to do now is bring it up when you approach him for sex, if you're willing to give it a try.";
 		now libido of Xaedihr is 4; [unlocked 1st Dom scene, but player is uncertain]
 
 to DomXaedihr2:
@@ -1637,9 +1637,9 @@ to say XSubmitTentacleEdging:
 		say "     [bold type]The time you've spent with Xaedihr made him open up more to you.[roman type][line break]";
 		increase loyalty of Xaedihr by 1;
 	if Player is female:
-		NPCSexAftermath Player receives "DildoPussyFuck" from Xaedihr;
+		NPCSexAftermath Player receives "PussyDildoFuck" from Xaedihr;
 	else:
-		NPCSexAftermath Player receives "DildoAssFuck" from Xaedihr;
+		NPCSexAftermath Player receives "AssDildoFuck" from Xaedihr;
 
 to say XSubmitBodyWorship:
 	say "     Having a good look at the half-demon's great physique, despite him being quite a bookworm, you let him know that it would be proper if you gave his muscles loads of attention, which they deserve. You start by complimenting them, especially his arms and chest, all well-built with a lot of muscle mass to love. It makes one wonder how such a person can maintain a body like this when all they do is read and cast spells... Xaedihr chuckles, then gently grabs you by the chin and makes you look into his eyes. 'Being half a demon has its perks... Big brain, big muscles...' He seems to have stopped there, but you know exactly what else is big, too. But, right now, you would prefer to feel up his body, and the sorcerer clearly does not stop you.";
