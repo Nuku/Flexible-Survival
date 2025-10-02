@@ -956,7 +956,7 @@ When Play begins:
 	now face entry is "a weathered middle-aged man's, rugged and long-bearded, with short and shaggy dark brown hair hugging the top of your head";
 	now body entry is "that of a short and burly man, musclebound and covered in hair. Your legs are fairly shorter than an average human's, making you stand half one's height";
 	now skin entry is "peach toned and rough"; [ format as "Your body is covered in (your text) skin"]
-	now tail entry is "You have a hairy, compact muscled butt"; [ write a whole Sentence or leave blank. ]
+	now tail entry is "You have a hairy, compact muscled butt."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a weathered male visage, rugged features and a long full beard growing out of your jaw and chin. Your hair becomes very short and dyed in a dark brown color"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a that of a middle-aged man, with a stocky and muscular build. Looking down, you notice your legs being much shorter than the rest of your body, making you standing half the height of an average human"; [ format as "Your body feels funny as (your text)." ]
@@ -1198,7 +1198,7 @@ Section 4-1 - Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"dwarven ale"	"a canteen bottle with some sort of strong alcoholic beverage inside. It's obviously dwarven in origin."	1	dwarven ale
+"dwarven ale"	"A canteen bottle with some sort of strong alcoholic beverage inside. It's obviously dwarven in origin."	1	dwarven ale
 
 dwarven ale is a grab object.
 
@@ -1215,7 +1215,7 @@ instead of sniffing dwarven ale:
 
 to say DwarfMaleTF:
 	now TailName of Player is "Dwarf Male";
-	now Tail of Player is "You have a hairy, compact muscled butt";
+	now Tail of Player is "You have a hairy, compact muscled butt.";
 	now FaceName of Player is "Dwarf Male";
 	now Face of Player is "a weathered middle-aged man's, rugged and long-bearded, with short and shaggy dark brown hair hugging the top of your head";
 	now SkinName of Player is "Dwarf Male";

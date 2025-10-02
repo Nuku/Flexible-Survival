@@ -43,7 +43,7 @@ to say ResolveEvent Apple Tree:
 			now centaurmate is 2;
 			challenge "Mutant Centaur";
 			if lost is 1:
-				say "     'I'm glad you accepted by gifts so willingly,' he says cruelly. 'I must now go off to find others to be my mare. There are plenty of other centaurs to fill with my tainted seed,' he laughs as he gallops off. It seems you've unleashed a new blight upon the plains.";
+				say "     'I'm glad you accepted my gifts so willingly,' he says cruelly. 'I must now go off to find others to be my mare. There are plenty of other centaurs to fill with my tainted seed,' he laughs as he gallops off. It seems you've unleashed a new blight upon the plains.";
 				decrease score by 5;
 			else:
 				say "     'If you're going to be so mule-headed about accepting my gifts, I will go find others to be my mare. There are plenty of other centaurs to fill with my tainted seed,' he laughs as he gallops off. It seems you've unleashed a new blight upon the plains.";
@@ -108,7 +108,7 @@ To say Mutant Centaur Loses:
 			say "     The sight of the tentacles doesn't bother your fuzzy mind in the least as you leap onto the centaur's furry belly and rub yourself forward and back, arousing yourself and trying to raise yourself to orgasm. Your dripping pussy leaves streaks of wetness on the centaur's fur, and after a short while, something wet and large pokes at your back, breaking your concentration. You stop and turn back in surprise to see the huge green cock starkly erect, its precum-dripping tip a few inches from your face. A trail of precum leads along your body to your back. It isn't done growing, and pushes you forwards a few inches before it is fully ready.";
 			say "     You turn and place the cock at your waiting entrance, smearing your hole with precum as you try and force it in.";
 			if Cunt Tightness of Player < 16:[too small, cock won't fit]
-				say "     The cock doesn't go in, no matter how hard you try, so you bend over and start to lick it eagerly. It spams more precum in response, and your mouth becomes hot and gooey in an instant.";
+				say "     The cock doesn't go in, no matter how hard you try, so you bend over and start to lick it eagerly. It spasms more precum in response, and your mouth becomes hot and gooey in an instant.";
 				say "     You open your mouth wide and fit as much of it in as you can, which means only the soft head. You start to lick it and suck at the hole, drinking in the juices, until it climaxes.";
 				say "     The spray of fluid begins slowly, but increases in flow rapidly until you cannot swallow it all, and it shoves your face back, and sprays of hot green cum soak your whole body in a few seconds.";
 				say "     After cleaning up the centaur as well as yourself, you go on your way, with an apple as payment.";
@@ -164,12 +164,12 @@ To say centaur fuck male:
 
 To say Mutant Centaur Wins:
 	if Cock Count of Player is not 0:
-		say "     The centaur flips you over, then looks you over as you go limp. He snarls at the sight of your cock. 'Little bastard,' he growls, twin green tentacles from his underside reaching out and wrapping around the base of your [Cock of Player] member. They tighten, sealing a ring around the base of your cock almost to the point of pain. 'I'll just have to use another hole'";
+		say "     The centaur flips you over, then looks you over as you go limp. He snarls at the sight of your cock. 'Little bastard,' he growls, twin green tentacles from his underside reaching out and wrapping around the base of your [Cock of Player] member. They tighten, sealing a ring around the base of your cock almost to the point of pain. 'I'll just have to use another hole.'";
 		WaitLineBreak;
 		say "[centaur fuck male]";
 	if Player is female:
 		say "[centaur fuck female]";
-	if Player is neuter and "Male Preferred" is not listed in feats of Player:
+	if Player is neuter and Player is not MalePreferred:
 		say "     The centaur looks at you with apprehension. 'Nothing at all?' he groans, and kicks his front hoof, opening a hole in your body, which quickly heals into a vagina. 'See me next time, and don't lose it.'";
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 2;
@@ -188,7 +188,7 @@ to say centaurgrowtorso:
 	increase hunger of Player by 10;
 	say "You feel hungry, the energy being sapped out of you by the new growth.";
 	LineBreak;
-	say "Your feet grow hooves, large and noisy as they clatter on the road. They also change direction and stature as they begin to look truly like those of a horses";
+	say "Your feet grow hooves, large and noisy as they clatter on the road. They also change direction and stature as they begin to look truly like those of a horse's";
 
 
 to say Mutant Centaur Desc:
@@ -224,7 +224,7 @@ When Play begins:
 	now enemy title entry is "Mutant Centaur"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The Centaur punches your face with its hand[or]The Centaur headbutts you[or]The Centaur's green tentacles rise from under him and slap you[or]The Centaur rears up and slams you with his one of its hooves[at random]!";
+	now attack entry is "[one of]The centaur punches your face with its hand[or]The centaur headbutts you[or]The centaur's green tentacles rise from under him and slap you[or]The centaur rears up and slams you with one of its hooves[at random]!";
 	now defeated entry is "[Mutant Centaur Loses]";
 	now victory entry is "[Mutant Centaur Wins]";
 	now desc entry is "[Mutant Centaur Desc]"; [ Description of the creature when you encounter it.]
