@@ -514,7 +514,7 @@ TwistedCapacity of Tanuki Dad is true. [Twisted Characters can take any penetrat
 Sterile of Tanuki Dad is true. [steriles can't knock people up]
 MainInfection of Tanuki Dad is "".
 Description of Tanuki Dad is "[TanukiDadDesc]".
-Conversation of Tanuki Dad is { "'I hope you are ready for grade A parenting. I have so much to teach you! First lesson, don't ring the bell anymore.'" }.
+Conversation of Tanuki Dad is { "I hope you are ready for grade A parenting. I have so much to teach you! First lesson, don't ring the bell anymore." }.
 [The icon of Tanuki Dad is Figure of Jason_clothed_icon.]
 
 to say TanukiDadDesc:
@@ -647,7 +647,7 @@ TwistedCapacity of Tanuki Mom is true. [Twisted Characters can take any penetrat
 Sterile of Tanuki Mom is true. [steriles can't knock people up]
 MainInfection of Tanuki Mom is "".
 Description of Tanuki Mom is "[TanukiMomDesc]".
-Conversation of Tanuki Mom is { "'I hope you are ready for grade A parenting. I have so much to teach you! First lesson, don't ring the bell anymore.'" }.
+Conversation of Tanuki Mom is { "I hope you are ready for grade A parenting. I have so much to teach you! First lesson, don't ring the bell anymore." }.
 
 to say TanukiMomDesc:
 	say "     The tanuki spirit here has taken on the form of a mother. Besides curves that defy any conventional method of biology, she's wearing a frilly apron and an equally obvious smile, her tail swaying as she watches you. The apron covers her entire front, but manages to be strangely tight, allowing her nipples to be seen through the fabric. Her belly and below are covered from the front, and she keeps turning if you try to circle her, preventing any easy view on her pert backside. Wielded in her right hand is a ladel that drips with something.";

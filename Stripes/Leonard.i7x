@@ -984,8 +984,10 @@ to say ResolveEvent Hunting Prides:
 			now Cunt Depth of Player is 0;
 			now Cunt Tightness of Player is 0;
 			now Nipple Count of Player is 2;
-			if Breast Size of Player < 3, now Breast Size of Player is 3;
-			if "Breasts" is not listed in feats of Player, now Breast Size of Player is 0;
+			if "Breasts" is not listed in feats of Player:
+				now Breast Size of Player is 0;
+			else if Breast Size of Player < 3:
+				now Breast Size of Player is 3;
 		else if "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
 			now Cunt Count of Player is 1;
 			if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;
@@ -1101,8 +1103,10 @@ to say Leonardrivalfight:
 			now Cunt Depth of Player is 0;
 			now Cunt Tightness of Player is 0;
 			now Nipple Count of Player is 2;
-			if Breast Size of Player < 3, now Breast Size of Player is 3;
-			if "Breasts" is not listed in feats of Player, now Breast Size of Player is 0;
+			if "Breasts" is not listed in feats of Player:
+				now Breast Size of Player is 0;
+			else if Breast Size of Player < 3:
+				now Breast Size of Player is 3;
 		else if "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
 			now Cunt Count of Player is 1;
 			if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;

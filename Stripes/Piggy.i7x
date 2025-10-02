@@ -228,7 +228,6 @@ to say piggy fur use:
 instead of sniffing piggy fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";
 
-
 [
 Section 4 - Endings
 

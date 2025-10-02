@@ -111,7 +111,7 @@ to say beattheSugarGlider:
 
 to say SugarGliderdesc:
 	say "     Before you is a peculiar looking rodent-like creature, with large dark eyes, swiveling ears and a thick tail almost as long as she is tall. Her brightly colored fur is primarily pink, with a light blue belly and chest, as well as a blue stripe from the tip of her nose down her back and tail. Even from a distance you can smell the sugary sweetness of her cotton-candy-like hide.";
-	say "     Giggling happily as she spots you, she [one of]pulls the lollipop she's sucking on from her mouth and[or]pulls the jawbreaker she's sucking on from her mouth and[or]blows a large bubble with the gum she's chewing on, then[at random] tucks it into the pouch on her belly [if Player is sugarbodied or player is sugarfaced]and looks you over. '[one of]All on your own[or]None of your greedy pals around[or]Scouting for more pop on your own[or]Out to swipe more candy on your own[at random], you [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random]? How about you gimme some of your sweet, sweet candy and we can make out.' With that, she bounds[else]before bounding[end if] towards you. Her large breasts bounce distractingly as she runs, and her open arms draw attention the large wing-like flaps of flesh between her arms and legs, stretching like taffy as she rushes towards you. It appears you're facing a literal sugar glider.";
+	say "     Giggling happily as she spots you, she [one of]pulls the lollipop she's sucking on from her mouth and[or]pulls the jawbreaker she's sucking on from her mouth and[or]blows a large bubble with the gum she's chewing on, then[at random] tucks it into the pouch on her belly [if Player is sugarbodied or player is sugarfaced]and looks you over. '[one of]All on your own[or]None of your greedy pals around[or]Scouting for more pop on your own[or]Out to swipe more candy on your own[at random], you [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random]? How about you gimme some of your sweet, sweet candy and we can make out.' With that, she bounds[else]before bounding[end if] towards you. Her large breasts bounce distractingly as she runs, and her open arms draw attention to the large wing-like flaps of flesh between her arms and legs, stretching like taffy as she rushes towards you. It appears you're facing a literal sugar glider.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -123,7 +123,7 @@ to say PrepCombat_Sugar Glider:
 	choose row MonsterID from Table of Random Critters;
 	if Player is FemalePreferred:
 		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
+	else if Player is HermPreferred:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
@@ -153,12 +153,12 @@ When Play begins:
 	now defeated entry is "[beattheSugarGlider]"; [ Text when monster loses. Change 'Sugar Glider' as above. ]
 	now victory entry is "[losetoSugarGlider]"; [ Text when monster wins. Change 'Sugar Glider' as above. ]
 	now desc entry is "[SugarGliderdesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "cute and rodent-like, with large eyes and swiveling ears[if Player is SugarGliderskinned and Player is male]. There is a pink stripe in your cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise blue coat[else if Player is SugarGliderskinned]. There is a blue stripe in you cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise pink coat[end if]";
+	now face entry is "cute and rodent-like, with large eyes and swiveling ears[if Player is SugarGliderskinned and Player is male]. There is a pink stripe in your cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise blue coat[else if Player is SugarGliderskinned]. There is a blue stripe in your cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise pink coat[end if]";
 	now body entry is "slender and light, yet strangely soft and malleable like taffy[if Player is female], with a large pouch on your belly[end if]. Your arms and legs end in small, dexterous paws with short claws, built for climbing. The most striking feature of your form is the large, thin membrane stretched between your hands and feet"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "a short coat of sugary cotton candy like fur. It is [if Player is male]mostly blue, with a pink belly and chest, as well as a pink stripe down your back[else]mostly pink, with a light blue belly and chest, as well as a blue stripe down your back[end if]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a long, thick, somewhat prehensile tail, nearly as long as you are tall and covered in thick [if Player is male]blue[else]pink[end if] cotton candy fur."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]bright pink[or]narrow[or]slender[at random]"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
-	now face change entry is "your thoughts become clouded with a sudden craving for sugary treats, pressure build in your face as it is reshaped into a short, rodent-like muzzle, with large eyes made for seeing in the dark and swiveling ears atop your head"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now face change entry is "your thoughts become clouded with a sudden craving for sugary treats, pressure building in your face as it is reshaped into a short, rodent-like muzzle, with large eyes made for seeing in the dark and swiveling ears atop your head"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "your whole form goes soft. It shifts to a slender, rodent-like form with [if Player is female]a large marsupial pouch on your belly and [end if]small, dexterous, paw-like hands and feet built for climbing. An unusual pulling sensation builds in your sides, as well as the edges of your arms and legs, and you watch with fascination as your body stretches like fresh taffy, forming large, wing-like membranes between your limbs"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "you try and suppress the urge to giggle, thanks to the tickling sensation of the [if Player is male]blue[else]pink[end if] and [if Player is male]pink[else]blue[end if] cotton candy fur spreading over your body"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "you feel a strange pulling building at the end of your spine, and you watch as your spine stretches to form a long tail covered in [if Player is male]blue[else]pink[end if] cotton candy fur"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
@@ -335,7 +335,7 @@ crushed candies is a grab object. crushed candies is infectious. Strain of crush
 Usedesc of crushed candies is "[crushedcandiesuse]";
 
 to say crushedcandiesuse:
-	say "     Pouring the crumbled candy into your mouth, you crunch away happily at the sweet treat. As you finish your snack you can't help but feel a little giddy, thanks to the burst of sugar induced energy";
+	say "     Pouring the crumbled candy into your mouth, you crunch away happily at the sweet treat. As you finish your snack you can't help but feel a little giddy, thanks to the burst of sugar induced energy.";
 	increase morale of Player by 1;
 	increase Libido of Player by 8;
 
