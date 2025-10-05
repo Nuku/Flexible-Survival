@@ -65,6 +65,13 @@ a postimport rule:
 		now CockName of Player is "Skunk Female";
 	if TailName of Player is "Skunk":
 		now TailName of Player is "Skunk Female";
+	[re-equip weapon wielded during possession import to correct player stats]
+	if weapon object of Player is not journal:
+		repeat with x running through owned armaments:
+			if x is wielded:
+				unwield x silently;
+				wield x silently;
+				break;
 
 [----------------------------------------------------------------------------------]
 [ Testing Commands for partial Saving                                              ]
@@ -340,6 +347,9 @@ to PossessionSave:
 				now PossessionEquipped is true;
 			if object entry is cursed:
 				now PossesssionCursed is true;
+		else if object entry is Armament:
+			if object entry is wielded:
+				now PossessionEquipped is true;
 		if PossessionCarriedNumber > 0 or PossessionStoredNumber > 0: [if the object is indeed in the players possession, it gets written down]
 			choose a blank row in the table of GamePossessions;
 			now Name entry is PossessionName;
@@ -357,6 +367,9 @@ to PossessionRestore:
 	if the File of PossessionSave exists:
 		say "Restoring Possessions...";
 		read File of PossessionSave into the Table of GamePossessions;
+		[resetting player weapon stats]
+		now weapon object of Player is journal;
+		unwield journal silently;
 		[wiping out all items from before the import]
 		repeat with x running from 1 to number of filled rows in table of game objects:
 			choose row x from the table of game objects;
@@ -386,6 +399,9 @@ to PossessionRestore:
 						now PossessionObject is cursed;
 					else:
 						now PossessionObject is not cursed;
+				else if PossessionObject is Armament:
+					if EquippedStatus entry is true:
+						now weapon object of Player is PossessionObject;
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] found and set to: [carried of PossessionObject] carried and [stashed of PossessionObject] stored.";
