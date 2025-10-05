@@ -368,8 +368,8 @@ to PossessionRestore:
 		say "Restoring Possessions...";
 		read File of PossessionSave into the Table of GamePossessions;
 		[resetting player weapon stats]
-		now weapon object of Player is journal;
-		unwield journal silently;
+		now weapon object of Player is pocketknife;
+		unwield pocketknife silently;
 		[wiping out all items from before the import]
 		repeat with x running from 1 to number of filled rows in table of game objects:
 			choose row x from the table of game objects;
