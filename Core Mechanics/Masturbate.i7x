@@ -17,10 +17,10 @@ the scent of the porn collection is "The bundle of pornographic magazines have a
 when play begins:
 	add "porn collection" to invent of Restrained Desire;
 
-before grabbing porn collection when Lisa is visible for the first time:
+check grabbing porn collection when Lisa is visible for the first time:
 	say "     Lisa notices your interest in the bundle of porn magazines she's set aside and tied together with string. 'That's a bunch of stock I don't have any interest in keeping. You can take them if you'd like.' Looking them over, you can see they have quite a bit of diversity in them, many of them quite raunchy, showing men and women in all forms of sexual congress. There's even a few with male-male pairings. There should certainly be something to pique your interest when you need a little diversion.";
 
-before looting when "porn collection" is listed in invent of location of Player and Lisa is visible for the first time: [in case player uses 'get all' when first taking mags]
+check looting when "porn collection" is listed in invent of location of Player and Lisa is visible: [in case player uses 'get all' when first taking mags]
 	try grabbing porn collection;
 	if invent of location of Player is empty: [stop looting if nothing else is left to take]
 		stop the action;
