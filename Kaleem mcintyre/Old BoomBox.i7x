@@ -137,22 +137,22 @@ This is the musiclisten rule:
 		now musicmessage is "     Looking over the old jam machine, you press the [italic type]jazz[roman type] button. Slowly, you find the soft sounds of trumpets and bass guitars and pianos rushing out at you in a soothing, almost laid back kind of rhythm. Without you noticing them doing so, your feet begin tapping in time with the smooth music as you bob your head, imagining yourself sitting back on a sofa and watching the sun set with a glass of wine in your hands.[line break][line break][jazzfriends]";
 		follow the turnpass rule;
 	else if title entry is "Tango":
-		now musicmessage is "     Looking at the knobs on the old jam machine, you find yourself hitting the [italic type]tango[roman type] button and instantly the room is filled with the living sounds of violins, pianos, guitars and flutes all working in time together to fill the bunker with a smooth kind of ballroom-like music. Not really sure how to feel about this, you find yourself swaying with the notes as the instruments slowly work in concert to energize the bunker.[line break]   The feeling that you want to suddenly start dancing around passionately has you nearly shivering when the music takes on a sudden lively flare. You can almost see yourself swirling around while in the arms of a strong male lead as he guides you on the dance floor.[line break][line break][tangofriends]";
+		now musicmessage is "     Looking at the knobs on the old jam machine, you find yourself hitting the [italic type]tango[roman type] button and instantly the room is filled with the living sounds of violins, pianos, guitars and flutes all working in time together to fill the bunker with a smooth kind of ballroom-like music. Not really sure how to feel about this, you find yourself swaying with the notes as the instruments slowly work in concert to energize the bunker.[line break]     The feeling that you want to suddenly start dancing around passionately has you nearly shivering when the music takes on a sudden lively flare. You can almost see yourself swirling around while in the arms of a strong male lead as he guides you on the dance floor.[line break][line break][tangofriends]";
 		follow the turnpass rule;
 	else if title entry is "R&B":
 		now musicmessage is "     Looking at the working jam box, you find yourself going over the knobs before finally coming to [italic type]R&B[roman type] and then pressing the button. Like a storm coming in from the sea, the bunker is soon filled with the mournful sounds of rhythmic blues music spilling out into the small area. Going to sit down on one of the cots in the room, you let your head bob in time with the instruments, and you can almost hear someone singing in time with the melody. The music makes you imagine yourself driving down the road in a pop-top car while letting your hair dance in the wind as you speed down the highway.[line break][line break][R&Bfriends]";
 		follow the turnpass rule;
 	If title entry is "Rock and Roll":
-		now musicmessage is "     The sounds of Rock and Roll soon pulse out from the beat machine as you press the button denoted as R&R. The sounds coming from the jam machine are a mix of electric guitars and drums, and you find that it actually takes you a while to get used to this kind of [italic type]noise[roman type] before you can stand the sounds.[line break]   When you do, however, you find yourself imagining yourself around a large number of screaming fans, all cheering for a leather-clad group of musicians working in sync together to jam their hearts out. A slight snap of your hips follow a hop and before you know it you are dancing your own heart out as your blood begins to quicken within your veins. Maybe this isn't so bad after all.[line break][line break][RockandRollfriends]";
+		now musicmessage is "     The sounds of Rock and Roll soon pulse out from the beat machine as you press the button denoted as R&R. The sounds coming from the jam machine are a mix of electric guitars and drums, and you find that it actually takes you a while to get used to this kind of [italic type]noise[roman type] before you can stand the sounds.[line break]     When you do, however, you find yourself imagining yourself around a large number of screaming fans, all cheering for a leather-clad group of musicians working in sync together to jam their hearts out. A slight snap of your hips follows a hop and before you know it you are dancing your own heart out as your blood begins to quicken within your veins. Maybe this isn't so bad after all.[line break][line break][RockandRollfriends]";
 		follow the turnpass rule;
 	If title entry is "Ocean":
-		now musicmessage is "     Pressing the button marked as [']ocean['], you find yourself somewhat confused as you notice that the swaying rhythm of the sea lapping at the shore starts to play out across the room. Instantly, you feel somewhat sleepy and you go over to one of the cots in the room and then start to close your eyes to sleep.[line break]   The instant you shut your eyes, you can see the sights of calm blue waters rushing across clear white sands, while dolphins flipping around up and down inside of these waters. Whales spray water from their blowholes, and you can't help but smile as you suddenly feel so warm and content within yourself. The feeling that someone is calling you makes you arch an eyebrow as you wonder if you had heard right...[line break][line break][Oceanfriends]";
+		now musicmessage is "     Pressing the button marked as [italic type]ocean[roman type], you find yourself somewhat confused as you notice that the swaying rhythm of the sea lapping at the shore starts to play out across the room. Instantly, you feel somewhat sleepy and you go over to one of the cots in the room and then start to close your eyes to sleep.[line break]     The instant you shut your eyes, you can see the sights of calm blue waters rushing across clear white sands, while dolphins flip around up and down inside of these waters. Whales spray water from their blowholes, and you can't help but smile as you suddenly feel so warm and content within yourself. The feeling that someone is calling you makes you arch an eyebrow as you wonder if you had heard right...[line break][line break][Oceanfriends]";
 		follow the turnpass rule;
 	If title entry is "Insert Tape A":
-		now musicmessage is "     Realizing that you [']borrowed['] both of those tapes from the music shop without meaning to, you shrug and think that you'll take them back later before popping one into the boombox and then pressing PLAY. Quietly, the background music of the song plays and you find yourself nodding your head as you recall the song. A man's voice fills up the bunker and soon you are silently mouthing the words to his song in time with the lyrics being sung.[line break]   Old memories come flooding back into you from years ago, and without meaning to you start to sway back and forth while nodding your head around almost drunkenly. Amazing what old music can do to someone. This would be a good time for you to go out and find some music, preferably with a male singer, for you (the player) likes to listen to as well. It would make this scene much better. (Thanks for playing Flexible Survival by the way!)[line break]";
+		now musicmessage is "     Realizing that you [']borrowed['] both of those tapes from the music shop without meaning to, you shrug and think that you'll take them back later before popping one into the boombox and then pressing PLAY. Quietly, the background music of the song plays and you find yourself nodding your head as you recall the song. A man's voice fills up the bunker and soon you are silently mouthing the words to his song in time with the lyrics being sung.[line break]     Old memories come flooding back into you from years ago, and without meaning to you start to sway back and forth while nodding your head around almost drunkenly. Amazing what old music can do to someone. This would be a good time for you to go out and find some music, preferably with a male singer, that you (the player) likes to listen to as well. It would make this scene much better. (Thanks for playing Flexible Survival by the way!)[line break]";
 		follow the turnpass rule;
 	If title entry is "Insert Tape B":
-		now musicmessage is "     Seeing that you've accidentally pocketed both of the cassettes from the old music shop, you smile sheepishly before reminding yourself to go and return them soon. Figuring that you've already eaten the [']poison['] on this one, you shrug as you go over to pop the cassette into the boombox and then hit the PLAY button.[line break]   Like a flash, the sounds of something slightly ambient comes over the speakers of the jambox, and without thinking you let your body move along with the rhythm of the music echoing out at you.[line break]   A woman's voice soon follows the instrument's rhythm, and you laugh before you can stop yourself as her voice just washes over you like a wave. Shaking your hips and singing in time with her, this would be a good time for you (the player) to go out and find your favorite female artist to listen to. It would make this experience so much better for you. (Thanks for playing Flexible Survival by the way!)[line break]";
+		now musicmessage is "     Seeing that you've accidentally pocketed both of the cassettes from the old music shop, you smile sheepishly before reminding yourself to go and return them soon. Figuring that you've already eaten the [']poison['] on this one, you shrug as you go over to pop the cassette into the boombox and then hit the PLAY button.[line break]     Like a flash, the sounds of something slightly ambient come over the speakers of the jam box, and without thinking you let your body move along with the rhythm of the music echoing out at you.[line break]     A woman's voice soon follows the instrument's rhythm, and you laugh before you can stop yourself as her voice just washes over you like a wave. Shaking your hips and singing in time with her, this would be a good time for you (the player) to go out and find your favorite female artist to listen to. It would make this experience so much better for you. (Thanks for playing Flexible Survival by the way!)[line break]";
 		follow the turnpass rule;
 	If title entry is "Off":
 		now musicmessage is "     Not feeling like listening to any music right now, you decide to turn the boombox off. However, what you come to find is that there is no Off button on the machine. What the heck?";
@@ -172,34 +172,34 @@ To say jazzfriends:
 		if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6 or HP of Fang is 7:
 			say "     Fang seems quite interested in the music as [SubjectPro of Fang] comes over to lay by your leg while listening to it. Grumbling softly into the back of [PosPro of Fang] throat, the wolf nuzzles close to you while curling up into a large ball of fur and muscle. You do happen to notice, however, that the wolf's ears are ever tuned towards the door of the bunker. The lupine, no matter how relaxed, is ever vigilant towards [PosPro of Fang] duty to protect [PosPro of Fang] new home.";
 		else:
-			say "     Fang, not use to hearing music too often, seems a little intrigued by the noise coming from the boombox. Slowly, the feral wolf comes over and then lays down beside your cot to listen to the soft sounds coming from the unfamiliar machine.";
+			say "     Fang, not used to hearing music too often, seems a little intrigued by the noise coming from the boombox. Slowly, the feral wolf comes over and then lays down beside your cot to listen to the soft sounds coming from the unfamiliar machine.";
 	if skunk kit is tamed:
 		say "     Peppy is somewhat amused by the noise as he comes over and then plops down to listen to the smooth jazz.";
 	if helper dog is tamed:
-		say "     Hobo seems to appreciate your taste in music as it comes over to lay across your lap. Maybe one of the people it once helped liked this kind of melody? The slight bob of the canine's head seems to give greater validation to this theory.";
+		say "     Hobo seems to appreciate your taste in music as he comes over to lay across your lap. Maybe one of the people he once helped liked this kind of melody? The slight bob of the canine's head seems to give greater validation to this theory.";
 	if little fox is tamed:
-		say "     Dash seems to like the jazz music as he comes over to yip at the jam box while cocking his head from side to side, likely wondering who's making the pleasant noise. You are tempted to grab the cute thing to nuzzle it, but you decide not to bother the vulpine as he is just having too much fun to disturb right now, especially as he starts to roll around while yipping adorably in front of the boom box.";
+		say "     Dash seems to like the jazz music as he comes over to yip at the jam box while cocking his head from side to side, likely wondering who's making the pleasant noise. You are tempted to grab the cute thing to nuzzle it, but you decide not to bother the vulpine as he is just having too much fun to disturb right now, especially as he starts to roll around while yipping adorably in front of the boombox.";
 	if Elijah is in the Bunker:
 		If HP of Elijah is 3 or HP of Elijah is 4:
 			say "     Elijah seems to enjoy the smooth melody playing on the boombox and soon begins to hum a tune that is unfamiliar to you. In fact, as you listen a little more closely, Elijah's humming almost sounds... otherworldly.";
 	if Alexandra is in the library:
-		say "     Coming in to investigate the noise, Alexandra pokes her head inside and stands at the door, keeping an eye on the library in case of trouble while she listens. She sticks around, listening to the alternatively soothing and bombastic jazz coming from the boombox as she becomes lost in thought.";
+		say "     Coming in to investigate the noise, Alexandra pokes her head inside and stands at the door, keeping an eye on the library in case of trouble while she listens. She sticks around, listening to the alternately soothing and bombastic jazz coming from the boombox as she becomes lost in thought.";
 	SanBoost 4;
 
 to say tangofriends:
 	if Colleen is in the bunker:
-		say "     Colleen seems to like the music flowing throughout the boombox and as she gets up to dance while flipping and twirling herself around with no small amount of skill.";
+		say "     Colleen seems to like the music flowing throughout the boombox and she gets up to dance while flipping and twirling herself around with no small amount of skill.";
 	if helper dog is tamed:
 		say "     Hobo moves over to the platform beside the door to the bunker, sitting there and watching as he seems to listen both to the outside and to the music with an air of appreciation.";
 	if cute crab is tamed:
-		say "     The cute little crab comes over and soon starts to boogie a path up and down and then back and forth in front the boom box as it dances his own crustacean dance. You find yourself tempted to laugh at the sight of this, but you hold back in order to not hurt the little thing's feelings. Besides, it's really too cute to watch.";
+		say "     The cute little crab comes over and soon starts to boogie a path up and down and then back and forth in front the boombox as he dances his own crustacean dance. You find yourself tempted to laugh at the sight of this, but you hold back in order to not hurt the little thing's feelings. Besides, it's really too cute to watch.";
 	if Sven is in the bunker:
 		if HP of Sven < 30:
 			say "     Without asking his permission, you go over to the shy snowmeow and take his paw, pulling him up to join you in dancing. He's timid and shy at first, but moves with considerable grace. With such a graceful partner, you pick up the pace, going for fancier and bolder moves. The kitty follows your lead, allowing you to perform a very energetic and sensual dance with him. Once you're done, you leave him on his bunk, blushing behind his tail and looking quite happy and excited.";
 [		else:
 			say "     ***confident Sven.";]
 	if felinoid companion is tamed:
-		say "     Klauz seems to enjoy the music as he bobs his head while shaking his tail playfully around in the air. Seeing this, you try not to laugh as you find yourself dancing around your felinoid companion. The rhythm your feet make you move to quickly has both you and your feline partner dancing together in time with the melody of the music. This lasts for several minutes, even as the particular song changes, before Klauz soon tires and then goes off to rest.";
+		say "     Klauz seems to enjoy the music as he bobs his head while shaking his tail playfully around in the air. Seeing this, you try not to laugh as you find yourself dancing around your felinoid companion. The rhythm your feet make as you move quickly has both you and your feline partner dancing together in time with the melody of the music. This lasts for several minutes, even as the particular song changes, before Klauz soon tires and then goes off to rest.";
 	if Candy is in the bunker:
 		say "     Candy seems to enjoy the tango music and soon begins to bounce around the bunker like a rubber ball, despite the melody not having the right rhythm for such energetic movements. This, however, does not stop Candy from doing as he wishes, especially when you join in with him, though more for trying to calm him down than anything else.";
 	if Alexandra is booked:
@@ -211,7 +211,7 @@ to say tangofriends:
 to say R&Bfriends:
 	If Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 7:
-			say "     Fang pads over to you and then lays [PosPro of Fang] head down onto your lap. The music seems to have gotten to the other in a strange way as you could almost swear that tears are in [PosPro of Fang] eyes. Maybe this canine has more soul than you think as you lay a hand down to stroke [ObjectPro of Fang] across [PosPro of Fang] rugged mane of fur. Neither of you speak as you just listen to the tunes. You find that words have no place here now.";
+			say "     Fang pads over to you and then lays [PosPro of Fang] head down onto your lap. The music seems to have gotten to the other in a strange way as you could almost swear that tears are in [PosPro of Fang] eyes. Maybe this lupine has more soul than you think as you lay a hand down to stroke [ObjectPro of Fang] across [PosPro of Fang] rugged mane of fur. Neither of you speak as you just listen to the tunes. You find that words have no place here now.";
 		else:
 			say "     Fang moves over towards you before plopping [ReflexPro of Fang] down to listen to the R&B melody wafting from out of the speakers of the boombox. By the slow wag of [PosPro of Fang] tail, you can see that the feral creature likes the music very much.";
 	If Colleen is in the bunker:
@@ -220,21 +220,21 @@ to say R&Bfriends:
 		if SarahSlut is 0:
 			say "     When a firm husky arm snakes its way out around your waist to hold you close, you jump a little, before noticing that it is just Sarah snuggling up against you. Smiling down at the medic, you lay your head on top of hers and let the music simply wash away all of your thoughts. There is no here or now, there is only this moment where you are connected to everything around you by invisible threads. Perhaps especially so to the husky woman next to you.";
 		else:
-			say "     Sarah makes her way over to you and then leans against your shoulder, her body weighing you down with the weight of her unspoken thoughts and feelings. You turn to look at the female once before smiling and then turning your head back to the boom box.";
+			say "     Sarah makes her way over to you and then leans against your shoulder, her body weighing you down with the weight of her unspoken thoughts and feelings. You turn to look at the female once before smiling and then turning your head back to the boombox.";
 			if SarahPups > 0:
 				say "     Sarah's pups all come around to lay by their mother while yawning and yipping tiredly before falling right asleep.";
 	if little fox is tamed:
-		say "     Dash comes over to nuzzle up against your leg and you smile somewhat reassuringly to the vulpine as you stare down at him warmly. The small kit yips at you before jumping up onto the cot you're sitting on to nuzzle your side. The little fox is soon asleep and snoring at you with his fluffy tail wrapped around his masked face. You reach out to stroke the vulpines diminutive body as you continue to listen to the music.";
+		say "     Dash comes over to nuzzle up against your leg and you smile somewhat reassuringly to the vulpine as you stare down at him warmly. The small kit yips at you before jumping up onto the cot you're sitting on to nuzzle your side. The little fox is soon asleep and snoring at you with his fluffy tail wrapped around his masked face. You reach out to stroke the vulpine's diminutive body as you continue to listen to the music.";
 	if house cat is tamed:
-		say "     The small house cat comes up to rub around your legs twice before going on to sit by the boom box. You watch her carefully and then smile as the feline purrs quietly while rocking its head in time with the melody.";
+		say "     The small house cat comes up to rub around your legs twice before going on to sit by the boombox. You watch her carefully and then smile as the feline purrs quietly while rocking her head in time with the melody.";
 	if Gryphoness is tamed:
-		say "     Denise seems somewhat perturbed by this form of music which seems to rival her own voice. However, upon listening to the tunes for a longer period of time and growing accustomed to them, Denise seems to calm down and then quietly whispers in time with the melody. Soon enough, the gryphoness is almost mimicking the melody perfectly as she closes her eyes while singing in time with song coming from out of the boom box. You realize that you actually like the blue female's voice just a little more than the music as Denise seems to possess a strange, if not haunting echo to her warbling voice.";
+		say "     Denise seems somewhat perturbed by this form of music which seems to rival her own voice. However, upon listening to the tunes for a longer period of time and growing accustomed to them, Denise seems to calm down and then quietly whispers in time with the melody. Soon enough, the gryphoness is almost mimicking the melody perfectly as she closes her eyes while singing in time with song coming from out of the boombox. You realize that you actually like the blue female's voice just a little more than the music as Denise seems to possess a strange, if not haunting echo to her warbling voice.";
 	if skunk kit is tamed:
-		say "     The little skunk you saved earlier comes over to you and quickly curls himself up by your leg before falling asleep due to the music. Obviously, the intensity of the music is too much for the mind of the young mephit. You snicker somewhat as you watch Peppy whimper and then kick around in his sleep. Young or not though, you see that something is getting through that skull of the young one.";
+		say "     The little skunk you saved earlier comes over to you and quickly curls himself up by your leg before falling asleep due to the music. Obviously, the intensity of the music is too much for the mind of the young mephit. You snicker somewhat as you watch Peppy whimper and then kick around in his sleep. Young or not though, you see that something is getting through the skull of the young one.";
 	if Candy is in the bunker:
 		say "     Candy seems somewhat put off by this music as he snorts and then goes off somewhere to go bounce up and down in peace.";
 	if bee girl is tamed:
-		say "     Honey finds herself almost weeping as she comes over to nuzzle herself into your body. The pitch of the music must be getting to her because her antenna are vibrating slightly.";
+		say "     Honey finds herself almost weeping as she comes over to nuzzle herself into your body. The pitch of the music must be getting to her because her antennae are vibrating slightly.";
 	if the cute crab is tamed:
 		say "     The small crustacean you found on the beach seems to like the music as he comes over to you and then settles himself under your feet. You'll have to be careful not to step on the other, but a quick pinch of claws will stop you anyway from doing that by accident.";
 	if Elijah is in the Bunker:
@@ -247,7 +247,7 @@ to say R&Bfriends:
 
 to say RockandRollfriends:
 	if Sarah is in the bunker:
-		say "     You find yourself getting down with Sarah as you and she dance together while shaking your tails in time with each other. Listening to the other bark and then whip her head around as though caught in a frenzy, you have to laugh as you notice the once somewhat uptight female letting herself go in a therapeutic release of inhibitions.";
+		say "     You find yourself getting down with Sarah as you and she dance together[if Player is HasTail] while shaking your tails in time with each other[end if]. Listening to the other bark and then whip her head around as though caught in a frenzy, you have to laugh as you notice the once somewhat uptight female letting herself go in a therapeutic release of inhibitions.";
 		say "     Brushing up beside her to feel Sarah's furry body rolling against your own, you suddenly wish that both of you were in a normal bar doing this while getting drunk off of shared vodka and rum while dance lights flash around both your bodies. Maybe when all of this is over you and she could have your own private dance session together. Whether that will be with the husky female dancing on your lap or in your bed, well, the jury is out on that one.";
 		if SarahPups > 0:
 			say "     All around you, the puppies seem to be watching their mother curiously as the older female just moves and sways without her usual flustering or timid mannerisms embellishing her actions. Some of the pups try and mimic the older husky's maneuvers, but in the end they mostly seem to just fall over each other cutely.";
@@ -255,9 +255,9 @@ to say RockandRollfriends:
 		say "     At hearing the music playing on the boombox, Colleen proceeds to rock the house as she howls and swivels her body while dancing with the beat of the drumset and electric guitars being played.";
 	If Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 7:
-			say "     Fang seems to have woken up from [PosPro of Fang] inopportune nap as the wolf rises onto [PosPro of Fang] feet and then pads over into your direction. Seeing that [SubjectPro of Fang] is not quite happy about being so rudely interrupted by the annoying sounds, you have to block the [ObjectPro of Fang] off from the boom box as you can clearly see that [SubjectPro of Fang] wants to destroy the machine. It takes some bit of struggling before the lupine relents and then goes off somewhere else to not have to listen to the noise. You sigh softly at this. After all, a win is a win in your book by any accounts.";
+			say "     Fang seems to have woken up from [PosPro of Fang] inopportune nap as the wolf rises onto [PosPro of Fang] feet and then pads over into your direction. Seeing that [SubjectPro of Fang] is not quite happy about being so rudely interrupted by the annoying sounds, you have to block [ObjectPro of Fang] off from the boombox as you can clearly see that [SubjectPro of Fang] wants to destroy the machine. It takes some bit of struggling before the lupine relents and then goes off somewhere else to not have to listen to the noise. You sigh softly at this. After all, a win is a win in your book by any accounts.";
 		else:
-			say "     Fang doesn't seem to care for this particular type of music as [SubjectPro of Fang] pops [PosPro of Fang] head into the Bunker and then pops [ReflexPro of Fang] back out to return to [PosPro of Fang] post.";
+			say "     Fang doesn't seem to care for this particular type of music as [SubjectPro of Fang] pops [PosPro of Fang] head into the bunker and then pops [ReflexPro of Fang] back out to return to [PosPro of Fang] post.";
 	if Alexandra is booked:
 		say "     Coming in to investigate the noise[if fang is booked] when Fang exists the bunker angrily[end if], Alexandra pokes her head inside. Hearing the energetic, frenetic rock and roll music, she throws herself into dancing. Clearly not much of a dancer, she makes up for it with energy and wild abandon, throwing herself most of all into the songs about wild youth, sex and rebellion. It seems to get her quite worked up and she's got a hungry look in her eyes by the end of it.";
 		now lastfuck of Alexandra is turns + 8;
@@ -270,7 +270,7 @@ to say RockandRollfriends:
 		say "     Feeling the rhythm getting to him, Candy moves around like a spring as the beat of the song coming from the jam box makes him somewhat of a loose cannon. Well, more than he already is as he spins around while skipping and then bobbing and weaving at the same time[if Player is male]. He even grinds himself back against your lap with a girlish giggle during one song[end if].";
 		say "     Nothing about his movements can be considered normal, but at the same time that gives the other an appearance of true freedom as he lets his effeminate body just roll around as it wishes. You chuckle some as the raccoon comes over to you to circle you twice before bumping up into you and then moving off again. Truly a carefree spirit if there ever was one to be found, you think silently before going back to your own dancing.";
 	if house cat is tamed:
-		say "     The little calico house cat you found earlier rolls around the music box before purring and shaking its head somewhat wildly while yowling happily. You chuckle at this as you wonder if her former owner listened to this type of music a lot.";
+		say "     The little calico house cat you found earlier rolls around the music box before purring and shaking her head somewhat wildly while yowling happily. You chuckle at this as you wonder if her former owner listened to this type of music a lot.";
 	SanBoost 4;
 	increase Libido of Player by 15;
 	if Libido of Player > 100, now Libido of Player is 100;
@@ -285,7 +285,7 @@ to say Oceanfriends:
 				say "     Sarah's pups encircle both you and their mother as they sleepily start to drift off together, one after another.";
 	If Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6 or HP of Fang is 7:
-			say "     Fang slowly comes over to where you are and then curls [ReflexPro of Fang] up at your head. Panting softly, the big [if thirst of player is 0]male [else]female [end if]has no problem whimpering at the sounds of the music and then drifting off to sleep as [SubjectPro of Fang] listens to the music with you.";
+			say "     Fang slowly comes over to where you are and then curls [ReflexPro of Fang] up at your head. Panting softly, the big [if Fang is male]male [else]female [end if]has no problem whimpering at the sounds of the music and then drifting off to sleep as [SubjectPro of Fang] listens to the music with you.";
 		else:
 			say "     Fang sleepily pads [ReflexPro of Fang] over to you and then curls up to go to sleep. No muss, no fuss. Just a large bundle of sleepy wolf curling [ReflexPro of Fang] up next to your head.";
 	If Colleen is in the bunker:
@@ -295,14 +295,14 @@ to say Oceanfriends:
 	if bee girl is tamed:
 		say "     Honey moves down by your feet to lay down beside you. Her buzzing wings make an interesting backdrop to the ocean shifting almost quietly around the room.";
 	if the cute crab is tamed:
-		say "     The small crustacean seems to utterly adore this music as he scurries itself back and forth around while [']smiling['] merrily.";
+		say "     The small crustacean seems to utterly adore this music as he scurries himself back and forth around while [']smiling['] merrily.";
 	if felinoid is tamed:
-		say "     Klauz is quick to go over and curl up at the small of your back. Purring distinctively inside of your ears, you chuckle some as its whiskers tickle you softly.";
+		say "     Klauz is quick to go over and curl up at the small of your back. Purring distinctively inside of your ears, you chuckle some as his whiskers tickle you softly.";
 	if Candy is in Bunker:
 		say "     Candy seems to be somewhat offset by this kind of soothing music as the other seems to slink away out of the room. Maybe he doesn't feel like taking a nap?";
 	if Sven is in Bunker:
 		if HP of Sven < 30:
-			say "     The snow leopard seems put off by this music but can't stop from yawning as the ocean sounds have caught him good. He steps closer [if felinoid is tamed]and moves Klauz over to settle himself at your back alongside the other feline[else]and just plops down at your back[end if]. Sven nuzzles up to you and then goes right to sleep. His arms do come around you to hold you somewhat close/possessively though.";
+			say "     The snow leopard seems put off by this music but can't stop from yawning as the ocean sounds have caught him good. He steps closer [if felinoid is tamed]and moves Klauz over to settle himself at your back alongside the other feline[else]and just plops down at your back[end if]. Sven nuzzles up to you and then goes right to sleep. His arms do come around you to hold you somewhat close though.";
 [		else:
 			say "     ***confident Sven.";]
 	if little fox is tamed:
@@ -310,7 +310,7 @@ to say Oceanfriends:
 	if skunk kit is tamed:
 		say "     Peppy goes to rest on top of your stomach and you can only laugh as you reach up to scratch at the other's black and white furred body.";
 	if helper dog is tamed:
-		say "     Hobo makes his way over to you and then settles himself at your feet. Wagging its tail leisurely, you listen to the other yawn as he goes right to sleep, though his ears always remain perked.";
+		say "     Hobo makes his way over to you and then settles himself at your feet. Wagging his tail leisurely, you listen to the other yawn as he goes right to sleep, though his ears always remain perked.";
 	if Gryphoness is tamed:
 		say "     Denise seems somewhat fatigued as she listens to the soft sounds of the ocean. Having heard it before, the gryphoness makes her way over to you and then lays by your legs to coo and then snooze. It's almost cute the way her feathers puff up as she coos and snores at the same time.";
 	if Elijah is in the Bunker:
