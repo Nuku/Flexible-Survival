@@ -423,6 +423,7 @@ Include Anthro Rabbit by Rikaeus.
 Include Arctic Fox by Sarokcat.
 Include Army Ant by Guest Writers.
 Include Avalon Kobold by Taelyn.
+Include Eggy Salamander by Voidsnaps.
 Include Ember Breeder by Stripes.
 Include Automaton by Stripes.
 Include Awesome Tree by Damaged.
