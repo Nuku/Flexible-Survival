@@ -521,7 +521,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "glowing ember"	"A small glowing ember, which seems to stay warm regardless of how you store it."	0	glowing ember
 
-glowing ember is a grab object. glowing ember is infectious. Strain of glowing ember is "Fire Sprite".
+glowing ember is a grab object. [glowing ember is infectious. Strain of glowing ember is "Fire Sprite".]
 
 Usedesc of glowing ember is "[glowingemberuse]";
 
@@ -529,6 +529,7 @@ to say glowingemberuse:
 	say "     Rolling the small, warm ember between your fingers you begin to find it difficult to focus on anything but its warm light. You hear the crackling of flame in the distance as you slip further and further out of focus, your vision filling with nothing but the pleasant light and flickering of flames...";
 	WaitLineBreak;
 	say "     You come to your senses some time later. Glancing around, you find the small ember missing. It is hard to shake the strange desire to light something on fire.";
+	infect "Fire Sprite";
 
 Scent of glowing ember is "The small ember smells faintly smoky.".
 
@@ -543,9 +544,9 @@ This is the Fire Sprite Infection rule:
 		trigger ending "Fire Sprite Infection";
 		if humanity of Player < 10:
 			say "     As your fire sprite infection spreads through your mind like wildfire, you soon desire little more than to share the gift of the flame inside you with the world, delighting in the havoc and destruction wrought by the beautiful cleansing flames.";
-			if Player is male:
+			if Player is male and Player is not sterile and (Player is femaleinterested or Player is not maleinterested):
 				say "     Occasionally your fiery dreamscape is broken by another like you, a female sprite who you share your flame with, filling her body with the warmth of life to further aid in the spread of your mischief.";
-			if ( Player is female and "Sterile" is not listed in feats of Player ) or Player is mpreg_ok:
+			else if Player is female or (Player is maleinterested and Player is not femaleinterested):
 				say "     Eventually you happen upon an excited male sprite who is diligently working to set a large structure aflame. After a short time the structure is ablaze around you, and he is atop you, filling your needy body with his hot seed, his thrusts imbued with a burning passion that easily matches the inferno around you.";
 		else:
 			say "     After being evacuated from the city by military forces, you have a hard time finding a place for yourself in the outside world; your small form and affinity for fire both prove to be challenges to overcome. Eventually, however, you find yourself falling in with a small group of other infected citizens, working as mercs for the various factions that slowly begin to pop up in the days to come, engaging in everything from daring rescues to simple exterminations. While you don't provide the team much in the way of raw power, your small, agile body and resistance to extreme heat prove to be useful on more than one occasion, and a well-placed fire is often just as effective in chasing off a feral as an unnecessary beating.";
