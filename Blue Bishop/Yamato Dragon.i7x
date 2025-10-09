@@ -1130,7 +1130,7 @@ name	desc	weight	object
 "dragon scale"	"A yellow, slightly shimmering dragon scale."	1	dragon scale
 "dragon hair"	"Some strands of golden hair that shimmer slightly in the light."	1	dragon hair
 
-dragon scale is a grab object. dragon scale is infectious. Strain of dragon scale is "Yamato Dragon".
+dragon scale is a grab object. [dragon scale is infectious. Strain of dragon scale is "Yamato Dragon".]
 the scent of dragon scale is "The yellow scale smells strange and otherworldly.".
 Usedesc of dragon scale is "[usedragonscale]";
 
@@ -1152,8 +1152,9 @@ to say usedragonscale:		[only alters sizes, not gender]
 	else:
 		now sex entry is "nochange";
 	say "     Following the strange urge you have, you press the large scale to your chest. As the spot starts to tingle, the scale slowly sinks into you and those tingles spread out across your body.";
+	infect "Yamato Dragon";
 
-dragon hair is a grab object. dragon hair is infectious. Strain of dragon hair is "Yamato Dragoness".
+dragon hair is a grab object. [dragon hair is infectious. Strain of dragon hair is "Yamato Dragoness".]
 the scent of dragon hair is "The golden hair smells of exotic, otherworldly scents.".
 Usedesc of dragon hair is "[usedragonhair]";
 
@@ -1175,6 +1176,7 @@ to say usedragonhair:
 	else:
 		now sex entry is "nochange";
 	say "     Following the strange urge you have, you brush the hairs to your face, enjoying the feel of them against your cheek. As you continue brushing, the hairs grow gradually shorter, sinking into your face and hand before disappearing entirely.";
+	infect "Yamato Dragoness";
 
 Section 4 - Vore Bound State
 

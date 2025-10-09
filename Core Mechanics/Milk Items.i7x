@@ -3819,7 +3819,7 @@ to say margay taur milk use:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"rodeo clown milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Rodeo Clown Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	rodeo clown milk
+"rodeo clown milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Rodeo Clown Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	rodeo clown milk
 
 rodeo clown milk is a grab object.
 rodeo clown milk is milky.
@@ -3838,7 +3838,7 @@ instead of sniffing rodeo clown milk:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"skunk milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Skunk Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	skunk milk
+"skunk milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Skunk Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	skunk milk
 
 skunk milk is a grab object.
 skunk milk is milky.
