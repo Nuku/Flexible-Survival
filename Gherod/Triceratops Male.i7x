@@ -301,12 +301,13 @@ name	desc	weight	object
 
 triceratops male tooth is a grab object.
 It is temporary.
-triceratops male tooth is infectious.
-Strain of triceratops male tooth is "Triceratops Male".
+[triceratops male tooth is infectious.
+Strain of triceratops male tooth is "Triceratops Male".]
 Usedesc of triceratops male tooth is "[TriMToothUse]";
 
 to say TriMToothUse:
 	say "Holding the tooth between your fingers, you gently press your fingertip against its sharp tip. It pierces through your skin like a needle, and strangely, it disintegrates after a while, your skin having absorbed some of its properties.";
+	infect "Triceratops Male";
 
 instead of sniffing triceratops male tooth:
 	say "It smells like the inside of a beast's mouth. Not very pleasant.";
