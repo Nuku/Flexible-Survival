@@ -162,8 +162,7 @@ Include Fighting by Core Mechanics.
 Include Fucking by Core Mechanics.
 Include Game Endings by Core Mechanics.
 Include Gender Pronouns by Core Mechanics.
-Include giving in by Core Mechanics.
-Include Inventory by Core Mechanics.
+Include Giving in by Core Mechanics.
 Include Masturbate by Core Mechanics.
 Include Microwave by Core Mechanics.
 Include Microwaveable Objects by Core Mechanics.
@@ -189,7 +188,6 @@ Include Text Capture by Eric Eve.
 Include Vending Machine by Core Mechanics.
 Include Weapons by Core Mechanics.
 Include Zephyr Phone by Core Mechanics.
-
 Include Milk Items by Core Mechanics.
 Include Cum Items by Core Mechanics.
 
@@ -306,7 +304,6 @@ Include Event Rewrites by Guest Writers.
 Include Exploration Events by Kurainyx.
 Include Extra Added Scenes by Kaleem mcintyre.
 Include Extra College Events by Speedlover.
-Include Fair Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Female Dorm Events by Prometheus.
 Include Feral Events by Guest Writers.
@@ -496,7 +493,6 @@ Include Elf by Nuku Valente.
 Include Elk by Stripes.
 Include Elven Hunter by Wahn.
 Include Enhanced Chimera by Stripes.
-Include Erica by Wahn.
 Include Ewe by Luneth.
 Include Fathnach Infection by OrangeHorned.
 Include Feline Gymnast by Guest Writers.
@@ -759,7 +755,6 @@ Part 4 - NPCs
 Include Absinthe by Bigfish15079.
 Include Ace by Aureas Gigas.
 Include Adam by Wahn.
-Include Addicted Breeder by Voidsnaps.
 Include Aeca by Wahn.
 Include Aerana by Gherod.
 Include Alex by Stripes.
@@ -1066,15 +1061,6 @@ Include Zigor by Stripes.
 Include Ziix by Voidsnaps.
 Include Zoe by Kernog.
 
-[Inactivated until further developments]
-[
-Include Beag Infection by OrangeHorned.
-Include Fathnach Infection by OrangeHorned.
-Include Giving Firbolg by OrangeHorned.
-Include Knott by OrangeHorned.
-Include Firbolg Quests by OrangeHorned.
-Include Firbolg Tapes by OrangeHorned.
-]
 
 Part 5 - Companions and Allies
 
