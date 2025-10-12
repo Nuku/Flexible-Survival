@@ -87,6 +87,8 @@ carry out tapeing:
 			say "[CanineHazingVid]";
 		-- "Demented Video Diary":
 			say "[AddictedBreederFucked]"; [Source: Voidsnaps/AddictedBreeder.i7x]
+		-- "Firbolg Feral Tape 1":
+			say "[FirbolgFeralTape1]"; [Source: Orangehorned/Firbolg Tapes.i7x]
 [ Template to fill for new tapes ]
 [
 		-- "TAPE NAME":

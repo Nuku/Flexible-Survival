@@ -220,7 +220,7 @@ to say samdesc:
 
 Instead of conversing the Sam:
 	if HP of Sam > 50:		[Talk menu for Sam's dracovixentaur form]
-		say "     'Hey there, [if player is not defaultnamed], [name of player][end if],' Sam greets while looking through several vials laid out on a nearby table. The scientist glances up to give you a welcoming smile for a brief moment before returning their attention to their work.'";
+		say "     'Hey there[if player is not defaultnamed], [name of player][end if],' Sam greets while looking through several vials laid out on a nearby table. The scientist glances up to give you a welcoming smile for a brief moment before returning their attention to their work.'";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
