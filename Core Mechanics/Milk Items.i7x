@@ -1,6 +1,6 @@
 Milk Items by Core Mechanics begins here.
 
-[Version 1. Creates a table of cum items based on all current infections. Standardizes the text for all of them. Created 03/23/2023]
+[Version 1. Creates a table of milk items based on all current infections. Standardizes the text for all of them. Created 03/23/2023]
 
 [In general, these are not used as loot but given when player self-milks and follow self-infection rules (strain of object should be strain of infection that links the item).]
 
@@ -1525,6 +1525,27 @@ Usedesc of hentai fan milk is "[breastmilk use]".
 Scent of hentai fan milk is "[breastmilk smell]".
 
 
+[defined early to resolve name conflicts]
+Table of Game Objects (continued)
+name	desc	weight	object
+"human milk"	"[breastmilk Strain of human milk]"	1	human milk
+
+human milk is a infectious milky grab object.
+Strain of human milk is "Human".
+Usedesc of human milk is "[breastmilk use]".
+Scent of human milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"herm human milk"	"[breastmilk Strain of herm human milk]"	1	herm human milk
+
+herm human milk is a infectious milky grab object.
+Strain of herm human milk is "Herm Human".
+Usedesc of herm human milk is "[breastmilk use]".
+Scent of herm human milk is "[breastmilk smell]".
+
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "hermaid milk"	"[breastmilk Strain of hermaid milk]"	1	hermaid milk
@@ -1613,16 +1634,6 @@ hulking cheerleader milk is a infectious milky grab object.
 Strain of hulking cheerleader milk is "Hulking Cheerleader".
 Usedesc of hulking cheerleader milk is "[breastmilk use]".
 Scent of hulking cheerleader milk is "[breastmilk smell]".
-
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"human milk"	"[breastmilk Strain of human milk]"	1	human milk
-
-human milk is a infectious milky grab object.
-Strain of human milk is "Human".
-Usedesc of human milk is "[breastmilk use]".
-Scent of human milk is "[breastmilk smell]".
 
 
 Table of Game Objects (continued)
@@ -3788,7 +3799,8 @@ to say Hermacore Cream use:
 	increase Cunt Depth of Player by 3;
 	increase Cunt Tightness of Player by 3;
 	decrease turns in heat by 8;
-	infect "Hermacore";
+	if "Iron Stomach" is not listed in feats of Player:
+		infect "Hermacore";
 	SanLoss 5;
 
 instead of sniffing Hermacore Cream:
@@ -3861,6 +3873,7 @@ name	desc	weight	object
 "Glitchy Milk"	"Microwaving it may have purified it of the nanites, but it seems this alteration has also broken the Limbo touched code of the Milk contained inside the bottle, if the constant blinking between black and white is anything to go by. Drink at your own risk..."	1	Glitchy Milk
 
 Limbo Fox Milk is a grab object.
+Limbo Fox Milk is milky.
 Usedesc of Limbo Fox Milk is "[Limbo Fox Milk use]".
 
 to say Limbo Fox Milk use:
@@ -3872,13 +3885,15 @@ to say Limbo Fox Milk use:
 	if Cunt Count of Player >= 1:
 		increase Cunt Depth of Player by 1;
 		increase Cunt Tightness of Player by 1;
-	infect "Limbo Fox";
+	if "Iron Stomach" is not listed in feats of Player:
+		infect "Limbo Fox";
 
 instead of sniffing Limbo Fox Milk:
 	say "You open the lid for a moment and take a sniff. Smells kinda like Strawberry.";
 
 
 Glitchy Milk is a grab object.
+Glitchy Milk is milky.
 Usedesc of Glitchy Milk is "[Glitchy Milk use]".
 
 to say Glitchy Milk use:
@@ -3892,5 +3907,54 @@ to say Glitchy Milk use:
 instead of sniffing Glitchy Milk:
 	say "You open the lid for a moment and take a sniff. But you can't seem to pick up on any particular smell.";
 
+
+Section 4 - Priorities
+
+[Just changing object names won't do anything if the printed name stays the same, so we have to work around the ambiguity by hinting that the least specific item name is preferred to be able to interact with it when more specific item names are also owned. A side effect of this will be the game preferring these names to resolve the ambiguity of just "milk", but it's the best we can do for now.]
+
+Does the player mean grabbing dolphin milk when dolphin herm milk is visible: it is likely.	[get dolphin milk]
+Does the player mean using dolphin milk when dolphin herm milk is visible: it is likely.	[use dolphin milk]
+Does the player mean examining dolphin milk when dolphin herm milk is visible: it is likely.	[look dolphin milk]
+Does the player mean sniffing dolphin milk when dolphin herm milk is visible: it is likely.	[smell dolphin milk]
+Does the player mean littering dolphin milk when dolphin herm milk is visible: it is likely.	[drop dolphin milk]
+Does the player mean burninating dolphin milk when dolphin herm milk is visible: it is likely.	[junk dolphin milk]
+Does the player mean stashing dolphin milk when dolphin herm milk is visible: it is likely.	[stash dolphin milk]
+Does the player mean retrieving dolphin milk when dolphin herm milk is visible: it is likely.	[retrieve dolphin milk]
+
+Does the player mean grabbing human milk: it is likely.	[get human milk]
+Does the player mean using human milk: it is likely.	[use human milk]
+Does the player mean examining human milk: it is likely.	[look human milk]
+Does the player mean sniffing human milk: it is likely.	[smell human milk]
+Does the player mean littering human milk: it is likely.	[drop human milk]
+Does the player mean burninating human milk: it is likely.	[junk human milk]
+Does the player mean stashing human milk: it is likely.	[stash human milk]
+Does the player mean retrieving human milk: it is likely.	[retrieve human milk]
+
+Does the player mean grabbing kobold milk when avalon kobold milk is visible: it is likely.	[get kobold milk]
+Does the player mean using kobold milk when avalon kobold milk is visible: it is likely.	[use kobold milk]
+Does the player mean examining kobold milk when avalon kobold milk is visible: it is likely.	[look kobold milk]
+Does the player mean sniffing kobold milk when avalon kobold milk is visible: it is likely.	[smell kobold milk]
+Does the player mean littering kobold milk when avalon kobold milk is visible: it is likely.	[drop kobold milk]
+Does the player mean burninating kobold milk when avalon kobold milk is visible: it is likely.	[junk kobold milk]
+Does the player mean stashing kobold milk when avalon kobold milk is visible: it is likely.	[stash kobold milk]
+Does the player mean retrieving kobold milk when avalon kobold milk is visible: it is likely.	[retrieve kobold milk]
+
+Does the player mean grabbing retriever milk: it is likely.	[get retriever milk]
+Does the player mean using retriever milk: it is likely.	[use retriever milk]
+Does the player mean examining retriever milk: it is likely.	[look retriever milk]
+Does the player mean sniffing retriever milk: it is likely.	[smell retriever milk]
+Does the player mean littering retriever milk: it is likely.	[drop retriever milk]
+Does the player mean burninating retriever milk: it is likely.	[junk retriever milk]
+Does the player mean stashing retriever milk: it is likely.	[stash retriever milk]
+Does the player mean retrieving retriever milk: it is likely.	[retrieve retriever milk]
+
+Does the player mean grabbing tiger milk: it is likely.	[get tiger milk]
+Does the player mean using tiger milk: it is likely.	[use tiger milk]
+Does the player mean examining tiger milk: it is likely.	[look tiger milk]
+Does the player mean sniffing tiger milk: it is likely.	[smell tiger milk]
+Does the player mean littering tiger milk: it is likely.	[drop tiger milk]
+Does the player mean burninating tiger milk: it is likely.	[junk tiger milk]
+Does the player mean stashing tiger milk: it is likely.	[stash tiger milk]
+Does the player mean retrieving tiger milk: it is likely.	[retrieve tiger milk]
 
 Milk Items ends here.

@@ -49,11 +49,11 @@ When Play begins:
 	now skin entry is "smooth";
 	now tail entry is "";
 	now cock entry is "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
-	now face change entry is "";
-	now body change entry is "";
-	now skin change entry is "";
-	now ass change entry is "";
-	now cock change entry is "";
+	now face change entry is "it seems to tingle, moving slightly. With a start you realize it's human"; [ format as "Your face feels funny as (your text)." ]
+	now body change entry is "your muscles writhe about under your skin, slowly settling back into a human shape"; [  format as "Your body feels funny as (your text)." ]
+	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "your hips seem to return to a normal human's figure"; [ format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it seems to feel hot, then after a few gasps you realize it looks completely human"; [ format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;
 	now dex entry is 12;
 	now sta entry is 12;
@@ -228,7 +228,7 @@ When Play begins:
 	now skin entry is "human"; [ format as "Your body is covered in (your text) skin."]
 	now tail entry is ""; [ write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock.]
-	now face change entry is "it seems to tingle, moving slightly, with a start you realize it's human"; [ format as "Your face feels funny as (your text)." ]
+	now face change entry is "it seems to tingle, moving slightly. With a start you realize it's human"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "your muscles writhe about under your skin, slowly settling back into a human shape"; [  format as "Your body feels funny as (your text)." ]
 	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your hips seem to return to a normal human's figure"; [ format as "Your ass feels funny as (your text)." ]
@@ -257,8 +257,8 @@ When Play begins:
 	now libido entry is 25; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "human milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is "human cum"; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "herm human milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "herm human cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]average[or]normal[or]unchanged[at random]";
@@ -380,7 +380,7 @@ This is the Herm Human Infection rule:
 			say "     Succumbing to the inner voice that tells you to return to your master, you make your way back to the dark tunnels under the Trevor Labs. Walking through the shadowy hallways filled with tentacled aberrations without fear, you soon find the thought eater again, joining his growing throng of obedient slaves.";
 			if Player is female and "Sterile" is not listed in feats of Player: [has a vag, not sterile]
 				say "     Serving your master in all his desires, your pussy getting bathed daily with his potent seed, it doesn't take long until your belly starts to swell with his child. Being part of his harem, he just keeps coming back to fuck you, enjoying your body through the days of your pregnancy, then immediately gets to work on knocking you up again after you give birth to his half-human offspring. You're deliriously happy to serve him, over time bearing a whole brood of hybrids in the dark and shadowy underground that is now your home.";
-			else if Player is mpreg_ok and "Sterile" is not listed in feats of Player: [mpreg-able, not sterile]
+			else if "MPreg" is listed in feats of Player and "Sterile" is not listed in feats of Player: [mpreg-able, not sterile]
 				say "     Devoted to please your master, you tell him about your changed physiology. The thought eater is immensely satisfied in having something so extraordinary as a slave, immediately ordering you to bend over and get ready for him to fuck you. With his potent seed being shot into your womb several times a day, it's only a question of time until your belly starts to swell with his child. Being a special jewel in his harem, he just keeps coming back to fuck you, enjoying your body through the days of your pregnancy, then immediately gets to work on knocking you up again after you give birth to his half-human offspring. You're deliriously happy to serve him, over time bearing a whole brood of hybrids in the dark and shadowy underground that is now your home.";
 			else if Player is female: [sterile women]
 				say "     With you being sterile and the thought eater preferring his harem of pregnant slaves, you're only seldom taken into his chamber, though he sometimes has you perform with others, male, female and herm, for his amusement. Mostly, you're just spending your days working, preparing food, sorting through loot and supplies gatherers bring from outside your dark underground home.";

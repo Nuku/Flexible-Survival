@@ -1518,6 +1518,27 @@ Usedesc of hentai fan cum is "[cumjar use]".
 Scent of hentai fan cum is "[cumjar smell]".]
 
 
+[defined early to resolve name conflicts]
+Table of Game Objects (continued)
+name	desc	weight	object
+"human cum"	"[cumjar Strain of human cum]"	1	human cum
+
+human cum is a infectious cum grab object.
+Strain of human cum is "Human".
+Usedesc of human cum is "[cumjar use]".
+Scent of human cum is "[cumjar smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"herm human cum"	"[cumjar Strain of herm human cum]"	1	herm human cum
+
+herm human cum is a infectious cum grab object.
+Strain of herm human cum is "Herm Human".
+Usedesc of herm human cum is "[cumjar use]".
+Scent of herm human cum is "[cumjar smell]".
+
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "hermaid cum"	"[cumjar Strain of hermaid cum]"	1	hermaid cum
@@ -1596,16 +1617,6 @@ hulking cheerleader cum is a infectious cum grab object.
 Strain of hulking cheerleader cum is "Hulking Cheerleader".
 Usedesc of hulking cheerleader cum is "[cumjar use]".
 Scent of hulking cheerleader cum is "[cumjar smell]".
-
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"human cum"	"[cumjar Strain of human cum]"	1	human cum
-
-human cum is a infectious cum grab object.
-Strain of human cum is "Human".
-Usedesc of human cum is "[cumjar use]".
-Scent of human cum is "[cumjar smell]".
 
 
 [Table of Game Objects (continued)
@@ -3287,24 +3298,24 @@ Usedesc of trash coon cum is "[cumjar use]".
 Scent of trash coon cum is "[cumjar smell]".
 
 
-[Table of Game Objects (continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "triceratops cum"	"[cumjar Strain of triceratops cum]"	1	triceratops cum
 
 triceratops cum is a infectious cum grab object.
 Strain of triceratops cum is "Triceratops".
 Usedesc of triceratops cum is "[cumjar use]".
-Scent of triceratops cum is "[cumjar smell]".]
+Scent of triceratops cum is "[cumjar smell]".
 
 
-[Table of Game Objects (continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "triceratops male cum"	"[cumjar Strain of triceratops male cum]"	1	triceratops male cum
 
 triceratops male cum is a infectious cum grab object.
 Strain of triceratops male cum is "Triceratops Male".
 Usedesc of triceratops male cum is "[cumjar use]".
-Scent of triceratops male cum is "[cumjar smell]".]
+Scent of triceratops male cum is "[cumjar smell]".
 
 
 Table of Game Objects (continued)
@@ -3650,7 +3661,8 @@ to say Hermacore Cum use:
 	increase Ball Size of Player by 1;
 	increase Cunt Depth of Player by 2;
 	increase Cunt Tightness of Player by 1;
-	infect "Hermacore";
+	if "Iron Stomach" is not listed in feats of Player:
+		infect "Hermacore";
 
 instead of sniffing Hermacore Cum:
 	say "You open the lid for a moment and take a sniff. Unsurprisingly, it smells a lot like you, just a tad nuttier.";
@@ -3681,6 +3693,7 @@ name	desc	weight	object
 "Glitchy Cum"	"Microwaving it may have purified it of the nanites, but it seems this alteration has broken the Limbo touched code of the milk contained inside the bottle, if the constant blinking between black and white is anything to go by. Drink at your own risk..."	1	Glitchy Cum
 
 Limbo Fox Cum is a grab object.
+Limbo Fox Cum is cum.
 Usedesc of Limbo Fox Cum is "[Limbo Fox Cum use]".
 
 to say Limbo Fox Cum use:
@@ -3692,13 +3705,15 @@ to say Limbo Fox Cum use:
 		increase Ball Size of Player by 1;
 	if Cock Count of Player >= 1:
 		increase Cock Length of Player by 1;
-	infect "Limbo Fox";
+	if "Iron Stomach" is not listed in feats of Player:
+		infect "Limbo Fox";
 
 instead of sniffing Limbo Fox Cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
 
 Glitchy Cum is a grab object.
+Glitchy Cum is cum.
 Usedesc of Glitchy Cum is "[Glitchy Cum use]".
 
 to say Glitchy Cum use:
@@ -3712,5 +3727,45 @@ to say Glitchy Cum use:
 instead of sniffing Glitchy Cum:
 	say "You open the lid for a moment and take a sniff. But you can't seem to pick up on any particular smell.";
 
+
+Section 4 - Priorities
+
+[Just changing object names won't do anything if the printed name stays the same, so we have to work around the ambiguity by hinting that the least specific item name is preferred to be able to interact with it when more specific item names are also owned. A side effect of this will be the game preferring these names to resolve the ambiguity of just "cum", but it's the best we can do for now.]
+
+Does the player mean grabbing human cum: it is likely.	[get human cum]
+Does the player mean using human cum: it is likely.	[use human cum]
+Does the player mean examining human cum: it is likely.	[look human cum]
+Does the player mean sniffing human cum: it is likely.	[smell human cum]
+Does the player mean littering human cum: it is likely.	[drop human cum]
+Does the player mean burninating human cum: it is likely.	[junk human cum]
+Does the player mean stashing human cum: it is likely.	[stash human cum]
+Does the player mean retrieving human cum: it is likely.	[retrieve human cum]
+
+Does the player mean grabbing kobold cum when avalon kobold cum is visible: it is likely.	[get kobold cum]
+Does the player mean using kobold cum when avalon kobold cum is visible: it is likely.	[use kobold cum]
+Does the player mean examining kobold cum when avalon kobold cum is visible: it is likely.	[look kobold cum]
+Does the player mean sniffing kobold cum when avalon kobold cum is visible: it is likely.	[smell kobold cum]
+Does the player mean littering kobold cum when avalon kobold cum is visible: it is likely.	[drop kobold cum]
+Does the player mean burninating kobold cum when avalon kobold cum is visible: it is likely.	[junk kobold cum]
+Does the player mean stashing kobold cum when avalon kobold cum is visible: it is likely.	[stash kobold cum]
+Does the player mean retrieving kobold cum when avalon kobold cum is visible: it is likely.	[retrieve kobold cum]
+
+Does the player mean grabbing retriever cum: it is likely.	[get retriever cum]
+Does the player mean using retriever cum: it is likely.	[use retriever cum]
+Does the player mean examining retriever cum: it is likely.	[look retriever cum]
+Does the player mean sniffing retriever cum: it is likely.	[smell retriever cum]
+Does the player mean littering retriever cum: it is likely.	[drop retriever cum]
+Does the player mean burninating retriever cum: it is likely.	[junk retriever cum]
+Does the player mean stashing retriever cum: it is likely.	[stash retriever cum]
+Does the player mean retrieving retriever cum: it is likely.	[retrieve retriever cum]
+
+Does the player mean grabbing tiger cum: it is likely.	[get tiger cum]
+Does the player mean using tiger cum: it is likely.	[use tiger cum]
+Does the player mean examining tiger cum: it is likely.	[look tiger cum]
+Does the player mean sniffing tiger cum: it is likely.	[smell tiger cum]
+Does the player mean littering tiger cum: it is likely.	[drop tiger cum]
+Does the player mean burninating tiger cum: it is likely.	[junk tiger cum]
+Does the player mean stashing tiger cum: it is likely.	[stash tiger cum]
+Does the player mean retrieving tiger cum: it is likely.	[retrieve tiger cum]
 
 Cum Items ends here.
