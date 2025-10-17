@@ -163,6 +163,10 @@ to say BakeryRetriever:
 
 Section 2 - Location
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if HP of Francois > 0: [Francois has been rescued and cleans the place up, making it sleepsafe]
+		now Bone-Appetit is sleepsafe;
+
 Table of GameRoomIDs (continued)
 Object	Name
 Bone-Appetit	"Bone-Appetit"
@@ -263,6 +267,7 @@ Instead of conversing the Francois:
 	else if HP of Francois is 0:
 		say "     'I must thank you again, mon ami[if Player is purefemale]e[end if],' Francois says as he steps around the counter, 'but perhaps I could ask another favor of you? I have a desire to create, to expand my art, and there must be so many exotic and interesting new flavors out in this city now. Oh how I would love to experiment with them, but sadly, I am no fighter. I fear I cannot go out there to gather these new ingredients myself, but you, mon [if Player is purefemale]héroïne[else]héro[end if], seem more than capable of surviving out there. If you bring back any potential ingredients you find, I would love to bake something for you[if Player is male], and perhaps I could [']reward['] you in other ways as well,' he says, licking his lips as his eyes stray to your groin. 'Just[else]. Just[end if] bring back anything you find and let me know you would like me to [link]bake[as]bake Francois[end link] for you.";
 		now HP of Francois is 1;
+		now Bone-Appetit is sleepsafe;
 		say "[FrancoisListCompile]";
 	else if Libido of Francois >= 3 and Francoistalk1 is false and a random chance of 2 in 5 succeeds:
 		say "     'I was having such difficulty before you came along. I don't know if your coming around is scaring them off now, but I was having no end of trouble before. These hands, they were made for the baking and for the love, not the fighting,' he says, momentarily forgetting he's got paws now. 'Zut alors! How most of them were rude lovers! No passion, no care for their lover, just raw lust.";

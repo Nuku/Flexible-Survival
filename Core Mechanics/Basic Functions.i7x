@@ -1030,7 +1030,7 @@ to unwield ( x - a grab object ) silence state is (Silence - a number):
 		now weapon type of Player is "Melee";
 		now weapon object of Player is journal;
 		if Silence is 0:
-			say "You stop holding your [x].";
+			say "     [bold type]You stop holding your [x].[roman type][line break]";
 
 to wield ( x - a grab object ) silently:
 	wield x silence state is 1;
@@ -1050,23 +1050,23 @@ to wield ( x - a grab object ) silence state is (Silence - a number):
 		if Silence is 0:
 			if (ScaleValue of Player - objsize of x) is:
 			-- 4: [4 size categories difference - huge player (5), size 1 weapon]
-				say "     You try to ready your [x], but there really is no way you could realistically use this in combat!";
+				say "     [bold type]You try to ready your [x], but there really is no way you could realistically use this in combat![roman type][line break]";
 			-- 3: [3 categories difference]
-				say "     You try to ready your [x], but there really is no way you could realistically use this in combat!";
+				say "     [bold type]You try to ready your [x], but there really is no way you could realistically use this in combat![roman type][line break]";
 			-- 2: [2 categories difference]
-				say "     Carefully taking the far too small [x] in one hand, you can't help but ask yourself if this won't hinder more than help in a fight.";
+				say "     [bold type]Carefully taking the far too small [x] in one hand, you can't help but ask yourself if this won't hinder more than help in a fight.[roman type][line break]";
 			-- 1: [1 category difference]
-				say "     You grab the [x] with your comparatively large hand, finding it somewhat uncomfortable to wield.";
+				say "     [bold type]You grab the [x] with your comparatively large hand, finding it somewhat uncomfortable to wield.[roman type][line break]";
 			-- 0: [proper size for the player]
-				say "     You ready your [x].";
+				say "     [bold type]You ready your [x].[roman type][line break]";
 			-- -1: [1 categories difference]
-				say "     You grab your [x] with your comparatively small hand, finding it somewhat uncomfortable to wield.";
+				say "     [bold type]You grab your [x] with your comparatively small hand, finding it somewhat uncomfortable to wield.[roman type][line break]";
 			-- -2: [2 categories difference]
-				say "     Clutching onto your [x] with both hands, you have trouble controlling its momentum. This will be intensely difficult to use.";
+				say "     [bold type]Clutching onto your [x] with both hands, you have trouble controlling its momentum. This will be intensely difficult to use.[roman type][line break]";
 			-- -3: [3 categories difference]
-				say "     Trying to use your [x] as a weapon is fairly ridiculous, given your size.";
+				say "     [bold type]Trying to use your [x] as a weapon is fairly ridiculous, given your size.[roman type][line break]";
 			-- -4: [4 size categories difference - tiny player (1), size 5 weapon]
-				say "     There is simply no way you could use your [x] as a weapon, given your small stature.";
+				say "     [bold type]There is simply no way you could use your [x] as a weapon, given your small stature.[roman type][line break]";
 
 Section 2 - Stripping
 

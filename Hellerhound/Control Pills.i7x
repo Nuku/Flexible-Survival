@@ -54,8 +54,8 @@ to say controlpilluse:
 	increase steriletime by 24;
 	if child is not born and gestation of child > 0:
 		now child is not born; [ Fixed 2022-03-08, leave set as *not born* so player can get pregnant again ]
-		now gestation of Child is 0;
-		say "Your pregnant belly feels odd, and something slushes out of your hole, melting into mush. Looks like the pill aborted you. You feel lighter as your belly shrinks back to its original size.";
+		say "Your pregnant belly feels odd, and something slushes out of your hole, melting into mush. Looks like the pill aborted you[if gestation of child < 20]. You feel lighter as your belly shrinks back to its original size[end if].";
+		now gestation of child is 0;
 	if inheat is True:
 		now inheat is false;
 		say "Your heat ends abruptly.";
@@ -71,6 +71,7 @@ to say controlpilluse:
 	else:
 		now wassterile is 0;
 	add "Sterile" to the feats of Player;
+	now Sterile of Player is true;
 
 an everyturn rule:
 	if steriletime > 0:

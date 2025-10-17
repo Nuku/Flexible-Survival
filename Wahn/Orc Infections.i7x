@@ -394,7 +394,8 @@ to say orc brew use:
 	say "Lifting the beer stein in one hand, you thumb the lid open and take a deep quaff of the liquid within. Hmm, tasty in a strange spicy way, and good against thirst. You can't help yourself and keep drinking until all of it is gone, leaving you wanting for more. The empty mug you throw away, it being too heavy to lug around as an empty container.";
 	PlayerDrink 6;
 	addAlcPoints 3;
-	OrcInfect;
+	if "Iron Stomach" is not listed in feats of Player:
+		infect "Orc Warrior";
 
 to OrcInfect:
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:

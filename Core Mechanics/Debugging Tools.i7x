@@ -88,13 +88,13 @@ carry out ZAnalyzeEvent:
 		if printed name of z matches the text topic understood, case insensitively:
 			say "DEBUG -> Situation found: [printed name of z] by matching with [topic understood].[line break]";
 			if z is not close:
-				say "DEBUG -> Found: [Found]; In another area to current position![line break]";
+				say "DEBUG -> In another area to current position![line break]";
 			if z is resolved:
 				say "DEBUG -> Event already resolved.[line break]";
 			if z is inactive:
 				say "DEBUG -> Event banned / inactive.[line break]";
 			if level of Player < level of z:
-				say "DEBUG -> Found: [Found]; Player's level is too low![line break]";
+				say "DEBUG -> Player's level is too low![line break]";
 			if z is not PrereqComplete:
 				say "DEBUG -> Prerequisites not fulfilled.[line break]";
 				PrereqAnalyze z;
@@ -309,7 +309,7 @@ carry out ShowEncounteredEnemies:
 to EncounteredEnemiesList:
 	sort EncounteredEnemies of Player;
 	say "Thinking back to your misadventures in the city so far, you call into memory all the creatures you have encountered and fought:[line break]";
-	say "[EncounteredEnemies of Player]";
+	say "[EncounteredEnemies of Player][line break]";
 
 [TODO: write Infection overview for single infection]
 
@@ -1043,7 +1043,7 @@ check DebugInfect:
 
 carry out DebugInfect:
 	say "Infecting with [topic understood]:[line break]";
-	infect "[topic understood]";
+	infect topic understood;
 
 Section 2 - Feats
 
@@ -1195,7 +1195,8 @@ check allitemcheat:
 carry out allitemcheat:
 	say "     You gain one of everything!";
 	repeat with x running through grab objects:
-		ItemGain x by 1 silently;
+		if x is not cum and x is not milky:
+			ItemGain x by 1 silently;
 
 ListAllItems is an action applying to nothing.
 understand "zListAllItems" as ListAllItems.
@@ -1206,7 +1207,8 @@ check ListAllItems:
 carry out ListAllItems:
 	repeat with x running from 1 to number of filled rows in table of game objects:
 		choose row x from the table of game objects;
-		say "[Name entry]: [desc entry][line break]";
+		if object entry is not cum and object entry is not milky:
+			say "[Name entry]: [desc entry][line break]";
 
 RoomEmptying is an action applying to nothing.
 understand "zNukeRoomInvents" as RoomEmptying.
