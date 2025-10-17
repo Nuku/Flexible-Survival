@@ -1473,6 +1473,7 @@ to BeastSave:
 		say "DEBUG -> File of BeastVariableSave written.[line break]";
 
 to BeastRestore:
+	say "Restoring Beasts...";
 	blank out the whole of Table of GameBeastVariables; [empty out all old data]
 	blank out the whole of Table of GameBeasts; [empty out all old data]
 	if the File of BeastVariableSave exists:
@@ -1616,7 +1617,7 @@ Carry out ProgressImport:
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
 	if Player consents:
 		LineBreak;
-		say "     <Press any key to start import>";
+		say "     <Press any key to start import> ";
 		wait for any key;
 		say "[ProgressionImport]";
 

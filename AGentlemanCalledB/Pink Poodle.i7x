@@ -111,6 +111,7 @@ To say beatthePinkPoodle:
 to say pinkpoodlesex:
 	say "     Since she's already on all fours, you decide to use the beaten canine like the bitch she is. Dropping your gear as you move behind her, you grip the poodle's ample, shaved hips, causing her tail to wag softly as you caress them. You can't help but grin as you watch the large pink pompom swaying back and forth before you as you align your [cock size desc of Player] [Cock of Player] cock to her needy pussy, stroking your tip across her outer lips gently before pushing in slowly.";
 	say "     As [if Player is knotted]your knot begins rubbing against the pink girl's outer folds[else]you hilt your entire length in the pink girl's needy cunt[end if] she moans in pleasure beneath you, pressing her bottom back against you, nearly knocking you over as you lean forwards onto her back. Locking your arms around her torso and resting your head on the thick pink fur covering her shoulders, you begin humping the canine in earnest, quickly building to an energetic rhythm as you fuck her like an animal.";
+	WaitLineBreak;
 	say "     The pink poodle barks and yips beneath you, pressing her body back against you[if Player is knotted], trying to force your knot into her body with each thrust[else] and squeezing her cunt tightly around your shaft[end if]. As your combined arousal begins to peak, you make one final powerful thrust, driving your [if Player is knotted]knot[else]shaft[end if] into the pretty poodle as you both howl in climax. Her cunt spasms and convulses around your shaft, milking your twitching member for all it can as you fill her with your [Cum Load Size of Player] load[if Player is knotted], none of which escapes thanks to her tight grip around your knot[else] even as her own juices leak out around your shaft[end if].";
 	say "     [if Player is knotted]As you lay atop her, the well-fucked poodle pants happily, happily tugging and pulling at your knot to draw out her own pleasure as you wait for it to go down. [end if]When you finally pull out the pink poodle falls to her side, rubbing her belly contentedly as she rests on the ground, leaving you free to gather your things and continue on your way.";
 	CreatureSexAftermath "Pink Poodle" receives "PussyFuck" from "Player";
@@ -164,7 +165,7 @@ When Play begins:
 	add "Pink Poodle" to infections of CanineList;
 	add "Pink Poodle" to infections of FurryList;
 	add "Pink Poodle" to infections of NatureList;
-	add "Pink Poodle" to infections of MaleList;
+	add "Pink Poodle" to infections of FemaleList;
 	add "Pink Poodle" to infections of TaperedCockList;
 	add "Pink Poodle" to infections of KnottedCockList;
 	add "Pink Poodle" to infections of SheathedCockList;

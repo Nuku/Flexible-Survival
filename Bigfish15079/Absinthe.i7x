@@ -4,10 +4,10 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "small whiskey bottle"	"A fairly small glass bottle holding a strong brew of whiskey; 35% alcohol, 70 proof. Might have been looted from a motel minibar, by the size of it."	1	small whiskey bottle
 "Big whiskey bottle"	"A fine glass bottle half full of a strong brew of whiskey; 35% alcohol, 70 proof. Quite a bit to drink in one go."	1	Big Whiskey bottle
-"TodtGrains Beer"	"A dark tinted bottle of alcohol, Nothing as refreshing as a bottle of beer, 6% alcohol."	1	TodtGrains Beer
-"Small Grain Alcohol Bottle"	"A small clear bottle of alcohol, quite strong too. Might have been left behind after they tasted it, 75% alcohol."	1	Small Grain Alcohol Bottle
+"TodtGrains Beer"	"A dark tinted bottle of alcohol. Nothing as refreshing as a bottle of beer. 6% alcohol."	1	TodtGrains Beer
+"Small Grain Alcohol Bottle"	"A small clear bottle of alcohol, quite strong too. Might have been left behind after they tasted it. 75% alcohol."	1	Small Grain Alcohol Bottle
 "Grain Alcohol Bottle"	"A clear bottle of alcohol, quite strong for the regular person. Might have been looted from a liquor store. 75% alcohol."	1	large Grain Alcohol Bottle
-"Dwarven spirit"	"A large black container filled with alcohol, only for the bravest or most hearty of drinkers.90 % alcohol."	1	Dwarven Spirit
+"Dwarven spirit"	"A large black container filled with alcohol, only for the bravest or most hearty of drinkers. 90% alcohol."	1	Dwarven Spirit
 
 small whiskey bottle is a grab object. Understand "small whiskey bottle" as small whiskey bottle.
 Usedesc of small whiskey bottle is "[small whiskey alcohol use]".
