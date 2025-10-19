@@ -44,7 +44,7 @@ name(text)	PrepFunction(text)
 "Hypno Spider"	"[PrepCombat_Hypno Spider]"
 
 to say PrepCombat_Hypno Spider:
-	say "";
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -54,11 +54,13 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Hypno Spider";
+	add "Hypno Spider" to infections of ArachnidList;
 	add "Hypno Spider" to infections of NatureList;
 	add "Hypno Spider" to infections of MaleList;
 	add "Hypno Spider" to infections of FeralList;
 	add "Hypno Spider" to infections of OviPositorList;
 	add "Hypno Spider" to infections of OctapedalList;
+	add "Hypno Spider" to infections of MindcontrolList;
 	now Name entry is "Hypno Spider";
 	now enemy title entry is "";
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]

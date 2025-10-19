@@ -262,15 +262,15 @@ name	desc	weight	object
 pink fox milk is a grab object.
 pink fox milk is milky.
 Purified of pink fox milk is "distilled milk".
-pink fox milk is infectious.
-Strain of pink fox milk is "Pink Fox".
+[pink fox milk is infectious.
+Strain of pink fox milk is "Pink Fox".]
 Usedesc of pink fox milk is "[pink fox milk use]";
 
 to say pink fox milk use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the pink fox milk run over your tongue and down your throat. Tastes rich and oddly sweet. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 	if "Iron Stomach" is not listed in Feats of Player:
-		say "     It seems to cause a raction with the nanites in your system...";
+		say "     It seems to cause a reaction with the nanites in your system...";
 		infect "Pink Fox";
 
 instead of sniffing pink fox milk:

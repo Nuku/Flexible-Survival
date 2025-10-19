@@ -377,11 +377,12 @@ to say PrepCombat_Sierrasaur:
 	else:
 		project Figure of Sierrasaur_soft_icon;
 		if HermList is banned:
-			add { "Sierrasaur" } to infections of MaleList;
+			[add { "Sierrasaur" } to infections of MaleList;]
 			now sierramale is true;
 			setmongender 3; [creature is male]
 		else:
-			add { "Sierrasaur" } to infections of HermList;
+			[add { "Sierrasaur" } to infections of HermList;]
+			now sierramale is false;
 			setmongender 7; [creature is mherm]
 
 Section 2 - Creature Insertion
@@ -399,11 +400,10 @@ When Play begins:
 	add "Sierrasaur" to infections of FeralList;
 	add "Sierrasaur" to infections of HistoricalList;
 	add "Sierrasaur" to infections of NatureList;
-	add "Sierrasaur" to infections of HermList;
 	add "Sierrasaur" to infections of BluntCockList;
 	add "Sierrasaur" to infections of InternalCockList;
 	add "Sierrasaur" to infections of InternalBallsList;
-	add "Sierrasaur" to infections of BipedalList;
+	add "Sierrasaur" to infections of QuadrupedalList;
 	add "Sierrasaur" to infections of TailList;
 	add "Sierrasaur" to infections of OviImpregnatorList;
 	add "Sierrasaur" to infections of TailweaponList;

@@ -34,7 +34,7 @@ First for constructing the status line (this is the bypass status line map rule)
 
 Table of Fancy Status
 left	central	right
-"Location: [Location of Player][if Location of Player is fasttravel] ([link]Navpoint[as]nav[end link])[end if]"	"Name: [if Player is not defaultnamed][Name of Player][else][link]Pick one?[as]rename[end link][end if] | Pronouns: [link][PronounChoice of Player][as]set pronouns[end link] - [SubjectPro of Player]/[PosAdj of Player] | Condition: [SleepMessage], [AlcState] | [link]Inventory[as]i[end link] | [link]Feats[as]FeatList[end link] | [link]Allies[as]Allies[end link] | [link]SexStats[as]SexStats[end link]"	"HP: [HP of Player]/[MaxHP of Player]"
+"Location: [Location of Player][if Location of Player is fasttravel] ([link]Navpoint[as]nav[end link])[end if]"	"Name: [if Player is not defaultnamed][Name of Player][else][link]Pick one?[as]rename[end link][end if] | Pronouns: [link][PronounChoice of Player][as]set pronouns[end link] - [SubjectPro of Player]/[PosAdj of Player] | Condition: [SleepMessage], [AlcState] | [link]Inventory[as]i[end link] | [link]Feats[as]FeatList[end link] | [link]Allies[as]Allies[end link] | [link]Sex Stats[as]SexStats[end link]"	"HP: [HP of Player]/[MaxHP of Player]"
 "Date: [DateYear]-[DateMonth]-[DateDay], Time: [time of day]"	"STR: [strength of Player] | DEX: [dexterity of Player] | STA: [stamina of Player] | CHA: [Charisma of Player] | INT: [intelligence of Player] | PER: [perception of Player]"	"XP: [XP of Player]/[level up needed]"
 "Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"Hunger: [hunger of Player]/100 | Thirst: [thirst of Player]/100 | Libido: [Libido of Player]/100 | Humanity: [humanity of Player]/100"	"LVL: [level of Player]"
 "Freecred: [freecred]"	"[link]Help[as]HelpBookLookup[end link] | Game Version (Serial): [serial number][if NewGraphicsInteger is 0] [else] | Art by: [ngraphics_currentartist] ([link]art credits[end link])[end if]"	"Score: [score]/[maximum score]"
@@ -46,6 +46,9 @@ left	right
 "Date: [DateYear]-[DateMonth]-[DateDay], Time: [time of day]"	"XP: [XP of Player]/[level up needed]"
 "Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"LVL: [level of Player]"
 "Freecred: [freecred]"	"Score: [score]/[maximum score]"
+
+When play begins:
+	now right alignment depth is 18; [default of 14 is too small to keep maximum score from getting cut off once score exceeds 3 chars]
 
 To say level up needed:
 	say "[if Player is fastlearning][((level of Player plus 1) times 8)][else][(level of Player plus 1) times 10][end if]";
@@ -276,8 +279,8 @@ carry out showstatting:
 To showstats (x - Person):
 	sort Feats of Player;
 	sort Traits of Player;
-	say "Strength: [strength of x], Dexterity: [dexterity of x], Stamina: [stamina of x], Charisma: [Charisma of x], Intelligence: [intelligence of x], Perception: [perception of x].";
-	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [HP of x]/[MaxHP of x] Libido: [Libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100.";
+	say "Strength: [strength of x], Dexterity: [dexterity of x], Stamina: [stamina of x], Charisma: [Charisma of x], Intelligence: [intelligence of x], Perception: [perception of x][line break]";
+	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [HP of x]/[MaxHP of x], Libido: [Libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100[line break]";
 	let z be ( level of x plus one) times 10;
 	if "Fast Learner" is listed in feats of x:
 		now z is ( level of x plus one) times 8;
@@ -286,11 +289,11 @@ To showstats (x - Person):
 		say ", [link]Feats[as]FeatsList[end link]";
 	say ", [link]Orientation[as]adjust player orientation[end link]";
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0: [more than zero children of both types combined]
-		say ", [link]Offspring[as]ListOffspring[end link][line break]";
-	else:
-		LineBreak;
+		say ", [link]Offspring[as]ListOffspring[end link]";
+	LineBreak;
 	if debugactive is 1:
 		say "DEBUG -> Traits: [Traits of Player][line break]";
+	LineBreak;
 
 Chapter 2 - Examination People
 

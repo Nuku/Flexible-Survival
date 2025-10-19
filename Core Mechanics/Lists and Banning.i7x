@@ -147,7 +147,8 @@ to new ban menu:
 	let nbmexit be 0;
 	while nbmexit is 0:
 		say "[bold type]Select which categories you want banned/warded:[roman type][line break]";
-		say "[bold type]Warding a monster will mean you can only find them by hunting for them, banning them removes them from the game entirely. (Banning is sure to choke off MANY threads of the story and quests as well. Use with caution. You have been warned.)[roman type][line break]";
+		say "[bold type]Warding or banning a category will permanently disable any associated events. Warding a category will mean you can only find a matching monster by hunting for them, while banning removes them from the game entirely.[roman type][line break]";
+		say "[bold type](Banning/warding is sure to choke off MANY threads of the story and quests as well. Use with caution. You have been warned.)[roman type][line break]";
 		say "[line break][bold type]FLAGS[roman type][line break]";
 		while countnumber <= number of entries in FlagList:
 			say "[link][countnumber] - [entry countnumber of FlagList][as][countnumber][end link]: [run paragraph on]";
@@ -161,7 +162,7 @@ to new ban menu:
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-[countnumber])>[run paragraph on]";
+			say "Choice? (0-[countnumber - 1])>[run paragraph on]";
 			get a number;
 			if (calcnumber >= 0 and calcnumber <= countnumber):
 				break;
@@ -190,20 +191,20 @@ to banchange (name - text):
 		remove name from BanList of Player;
 		oldflagunban name;
 		if clearnomore is 0, clear the screen;
-		say "[bold type][name] is now normal.[roman type][line break]";
+		[say "[bold type][name] is now normal.[roman type][line break]";]
 	else if name is listed in WardList of Player:
 		remove name from WardList of Player;
 		oldflagunward name;
 		add name to BanList of Player;
 		oldflagban name;
 		if clearnomore is 0, clear the screen;
-		say "[bold type][name] is now banned.[roman type][line break]";
+		[say "[bold type][name] is now banned.[roman type][line break]";]
 	else:
 		add name to WardList of Player;
 		oldflagward name;
 		if clearnomore is 0, clear the screen;
-		say "[bold type][name] is now warded.[roman type][line break]";
-	WaitLineBreak;
+		[say "[bold type][name] is now warded.[roman type][line break]";]
+	[WaitLineBreak;]
 
 to oldflagban (flagname - text):
 	if flagname is:
@@ -241,7 +242,7 @@ to oldflagban (flagname - text):
 to oldflagward (flagname - text):
 	if flagname is:
 		-- "Body Horror":
-			now BodyHorrorList is not warded;
+			now BodyHorrorList is warded;
 		-- "Cockvore":
 			now CockVoreList is warded;
 		-- "Furry":
