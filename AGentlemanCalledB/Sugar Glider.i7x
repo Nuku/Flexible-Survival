@@ -138,9 +138,10 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Sugar Glider"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
+	add "Sugar Glider" to infections of MarsupialList;
 	add "Sugar Glider" to infections of FurryList;
 	add "Sugar Glider" to infections of HumorousList;
-	add "Sugar Glider" to infections of MaleList;
+	add "Sugar Glider" to infections of FemaleList;
 	add "Sugar Glider" to infections of TaperedCockList;
 	add "Sugar Glider" to infections of BipedalList;
 	add "Sugar Glider" to infections of FlightList;

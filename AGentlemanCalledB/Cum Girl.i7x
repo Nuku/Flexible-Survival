@@ -30,8 +30,8 @@ to say losetoCumGirl:
 			if Ball Size of Player < 6 and a random chance of 1 in 2 succeeds:
 				now CGFB is a random number from 0 to 1;
 				BallsGrow Player by CGFB;
-		Follow the cock descr rule;
 		if CGFC > 0:
+			Follow the cock descr rule;
 			say "     Your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random] [one of]engorges[or]swells[or]throbs[at random] as it gains[else][one of]cocks[or]penises[or]shafts[or]malenesses[at random] [one of]engorge[or]swell[or]throb[at random] as they gain[end if] in length, becoming [descr].";
 		if CGFB > 0:
 			say "     Your [one of]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, your skin becoming taut with the expansion, leaving you with [Ball Size Adjective of Player] [Balls].";

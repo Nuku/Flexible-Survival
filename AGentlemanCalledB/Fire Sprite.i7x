@@ -311,7 +311,7 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Fire Sprite"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Fire Sprite" to infections of NonOrganicList;
-	add "Fire Sprite" to infections of NatureList;
+	add "Fire Sprite" to infections of MagicalList;
 	add "Fire Sprite" to infections of BipedalList;
 	add "Fire Sprite" to infections of FlightList;
 	add "Fire Sprite" to infections of FirebreathList;

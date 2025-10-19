@@ -35,16 +35,16 @@ Scent of the bonesaw is "The bonesaw smells faintly of antiseptic and blood.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"pocketknife"	"Mighty big for a pocket knife, nice and solid too. Could be handy."	1	pocketknife
+"pocketknife"	"Mighty big for a pocketknife, nice and solid too. Could be handy."	1	pocketknife
 
 pocketknife is an armament. It is not temporary.
 understand "knife" as pocketknife.
-It has a weapon "[one of]your knife[or]your blade[or]your trusty pocket knife[or]flashing steel[at random]".
+It has a weapon "[one of]your knife[or]your blade[or]your trusty pocketknife[or]flashing steel[at random]".
 Weapon Damage of pocketknife is 5.
 Weapon Type of pocketknife is "Melee".
 Objsize of pocketknife is 3.
 Hitbonus of pocketknife is -1. [shitty weapon]
-Scent of pocketknife is "The pocket knife smells like metal.".
+Scent of pocketknife is "The pocketknife smells like metal.".
 
 Table of Game Objects (continued)
 name	desc	weight	object

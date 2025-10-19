@@ -53,9 +53,8 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Mushroom"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Mushroom Man" to infections of PlantList;
-	add "Mushroom Man" to infections of FurryList;
 	add "Mushroom Man" to infections of HumorousList;
-	add "Mushroom Man" to infections of FemaleList;
+	add "Mushroom Man" to infections of MaleList;
 	add "Mushroom Man" to infections of BipedalList;
 	now Name entry is "Mushroom Man"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "Mushroom Men";

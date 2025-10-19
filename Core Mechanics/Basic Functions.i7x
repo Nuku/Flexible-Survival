@@ -549,35 +549,39 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 		say "DEBUG -> NPCSexAftermath[line break]";
 		say "TakingChar: [Printed Name of TakingChar][line break]";
 		say "GivingChar: [Printed Name of GivingChar][line break]";
-	now LastSexualPartner of TakingChar is printed name of GivingChar;
-	now LastSexualPartner of GivingChar is printed name of TakingChar;
 	if GivingChar is Player:
 		if debugactive is 1:
 			say "DEBUG -> Player is the giving partner for '[SexAct]'[line break]";
+		now LastSexualPartner of TakingChar is name of Player;
+		now LastSexualPartner of Player is printed name of TakingChar;
 		if PlayerFucked of TakingChar is false: [player never had sex with this NPC]
 			now PlayerFucked of TakingChar is true; [player sexed up this NPC]
 		if SexAct is "AssFuck" and Player is not male: [player needs to be male to penetrate]
-			say "Error: NPCSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]' TakingChar: '[TakingChar]'[line break]";
+			say "Error: NPCSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: 'Player', TakingChar: '[TakingChar]'[line break]";
 		else if SexAct is "AssFuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
 				say "     [Bold Type]You have lost your penile virginity fucking [TakingChar]![roman type][line break]";
+				now FirstPenilePartner of Player is printed name of TakingChar;
 			if AnalVirgin of TakingChar is true:
 				now AnalVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s anal virginity![roman type][line break]";
+				now FirstAnalPartner of TakingChar is name of Player;
 				add printed name of TakingChar to AnalVirginitiesTaken of Player;
 			increase AssFuckGiven of Player by 1;
 			if GivingChar is not sterile and TakingChar is mpreg_able: [mpreg fertile]
 				say "[ImpregFunction of TakingChar]";
 		else if SexAct is "PussyFuck" and Player is not male: [player needs to be male to penetrate]
-			say "Error: NPCSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]' TakingChar: '[TakingChar]'[line break]";
+			say "Error: NPCSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: 'Player', TakingChar: '[TakingChar]'[line break]";
 		else if SexAct is "PussyFuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
 				say "     [Bold Type]You have lost your penile virginity fucking [TakingChar]![roman type][line break]";
+				now FirstPenilePartner of Player is printed name of TakingChar;
 			if Virgin of TakingChar is true:
 				now Virgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s virginity![roman type][line break]";
+				now FirstVaginalPartner of TakingChar is name of Player;
 				add printed name of TakingChar to VirginitiesTaken of Player;
 			increase PussyFuckGiven of Player by 1;
 			if GivingChar is not sterile and TakingChar is fpreg_able: [fpreg fertile]
@@ -586,39 +590,46 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 			if Virgin of TakingChar is true:
 				now Virgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s virginity![roman type][line break]";
+				now FirstVaginalPartner of TakingChar is name of Player;
 				add printed name of TakingChar to VirginitiesTaken of Player;
 			increase PussyFuckGiven of Player by 1;
 		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles, or even a cock that is pulled out before orgasm - anything ass penetrative that does not impregnate]
 			if AnalVirgin of TakingChar is true:
 				now AnalVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s anal virginity![roman type][line break]";
+				now FirstAnalPartner of TakingChar is name of Player;
 				add printed name of TakingChar to AnalVirginitiesTaken of Player;
 			increase AssFuckGiven of Player by 1;
 		else if SexAct is "OralCock" and Player is not male: [player needs to be male to get sucked]
-			say "Error: NPCSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]' TakingChar: '[TakingChar]'[line break]";
+			say "Error: NPCSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: 'Player', TakingChar: '[TakingChar]'[line break]";
 		else if SexAct is "OralCock":
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s oral virginity![roman type][line break]";
+				now FirstOralPartner of TakingChar is name of Player;
 				add printed name of TakingChar to OralVirginitiesTaken of Player;
 			increase OralCockGiven of Player by 1;
 		else if SexAct is "OralPussy" and Player is not female: [player needs to be female to get licked]
-			say "Error: NPCSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]' TakingChar: '[TakingChar]'[line break]";
+			say "Error: NPCSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: 'Player', TakingChar: '[TakingChar]'[line break]";
 		else if SexAct is "OralPussy":
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s oral virginity![roman type][line break]";
+				now FirstOralPartner of TakingChar is name of Player;
 				add printed name of TakingChar to OralVirginitiesTaken of Player;
 			increase OralPussyGiven of Player by 1;
 		else if SexAct is "OralDildo": [used for dildos, fingers, tentacles - anything orally penetrative]
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s oral virginity![roman type][line break]";
+				now FirstOralPartner of TakingChar is name of Player;
 				add printed name of TakingChar to OralVirginitiesTaken of Player;
 		LibidoLoss 15;
 	else if TakingChar is player:
 		if debugactive is 1:
 			say "DEBUG -> Player is the receiving partner for '[SexAct]'[line break]";
+		now LastSexualPartner of Player is printed name of GivingChar;
+		now LastSexualPartner of GivingChar is name of Player;
 		if PlayerFucked of GivingChar is false: [player never had sex with this NPC]
 			now PlayerFucked of GivingChar is true; [player sexed up this NPC]
 		if SexAct is "AssFuck":
@@ -628,6 +639,11 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now AnalVirgin of Player is false;
 				say "     [Bold Type]You have lost your anal virginity to [GivingChar]![roman type][line break]";
 				now FirstAnalPartner of Player is printed name of GivingChar;
+			if PenileVirgin of GivingChar is true:
+				now PenileVirgin of GivingChar is false;
+				say "     [Bold Type]You have taken [GivingChar]'s penile virginity![roman type][line break]";
+				now FirstPenilePartner of GivingChar is name of Player;
+				add printed name of GivingChar to PenileVirginitiesTaken of Player;
 			if Player is mpreg_able: [fertile]
 				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None" and Sterile of GivingChar is false:
 					setmonster MainInfection of GivingChar;
@@ -641,7 +657,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 					]
 			increase AssFuckTaken of Player by 1;
 		else if SexAct is "PussyFuck" and Player is not female: [player needs to be female to get penetrated]
-			say "Error: NPCSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]' TakingChar: '[TakingChar]'[line break]";
+			say "Error: NPCSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]', TakingChar: 'Player'[line break]";
 		else if SexAct is "PussyFuck":
 			if debug is at level 1:
 				say "DEBUG -> MainInfection of [GivingChar] is '[MainInfection of GivingChar]'[line break]";
@@ -649,6 +665,11 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now Virgin of Player is false;
 				say "     [Bold Type]You have lost your virginity to [GivingChar]![roman type][line break]";
 				now FirstVaginalPartner of Player is printed name of GivingChar;
+			if PenileVirgin of GivingChar is true:
+				now PenileVirgin of GivingChar is false;
+				say "     [Bold Type]You have taken [GivingChar]'s penile virginity![roman type][line break]";
+				now FirstPenilePartner of GivingChar is name of Player;
+				add printed name of GivingChar to PenileVirginitiesTaken of Player;
 			if Player is fpreg_able: [can get pregnant RIGHT NOW]
 				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None" and Sterile of GivingChar is false:
 					setmonster MainInfection of GivingChar;
@@ -668,7 +689,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now FirstAnalPartner of Player is printed name of GivingChar;
 			increase AssFuckTaken of Player by 1;
 		else if SexAct is "PussyDildoFuck" and Player is not female: [player needs to be female to get penetrated]
-			say "Error: NPCSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]' TakingChar: '[TakingChar]'[line break]";
+			say "Error: NPCSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]', TakingChar: 'Player'[line break]";
 		else if SexAct is "PussyDildoFuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]
 			if Virgin of Player is true:
 				now Virgin of Player is false;
@@ -694,7 +715,11 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 	else:
 		if debugactive is 1:
 			say "DEBUG -> [GivingChar] is having sex with [TakingChar][line break]";
-		if SexAct is "AssFuck":
+		now LastSexualPartner of TakingChar is printed name of GivingChar;
+		now LastSexualPartner of GivingChar is printed name of TakingChar;
+		if SexAct is "AssFuck" and GivingChar is not male:
+			say "Error: NPCSexAftermath run with '[SexAct]' but character is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]', TakingChar: '[TakingChar]'[line break]";
+		else if SexAct is "AssFuck":
 			if PenileVirgin of GivingChar is true:
 				now PenileVirgin of GivingChar is false;
 				say "     [Bold Type][GivingChar] has lost their penile virginity to [TakingChar]![roman type][line break]";
@@ -705,6 +730,8 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now FirstAnalPartner of TakingChar is printed name of GivingChar;
 			if GivingChar is not sterile and TakingChar is mpreg_able: [mpreg fertile]
 				say "[ImpregFunction of TakingChar]";
+		else if SexAct is "PussyFuck" and (GivingChar is not male or TakingChar is not female):
+			say "Error: NPCSexAftermath run with '[SexAct]' with incorrect male/female pairing! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]', TakingChar: '[TakingChar]'[line break]";
 		else if SexAct is "PussyFuck":
 			if PenileVirgin of GivingChar is true:
 				now PenileVirgin of GivingChar is false;
@@ -726,15 +753,15 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now Virgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s virginity![roman type][line break]";
 				now FirstVaginalPartner of TakingChar is printed name of GivingChar;
+		else if SexAct is "OralCock" and GivingChar is not male:
+			say "Error: NPCSexAftermath run with '[SexAct]' but character is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]', TakingChar: '[TakingChar]'[line break]";
 		else if SexAct is "OralCock":
-			if PenileVirgin of GivingChar is true:
-				now PenileVirgin of GivingChar is false;
-				say "     [Bold Type][GivingChar] has lost their penile virginity to [TakingChar]![roman type][line break]";
-				now FirstPenilePartner of GivingChar is printed name of TakingChar;
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s oral virginity![roman type][line break]";
 				now FirstOralPartner of TakingChar is printed name of GivingChar;
+		else if SexAct is "OralPussy" and GivingChar is not female:
+			say "Error: NPCSexAftermath run with '[SexAct]' but character is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]', TakingChar: '[TakingChar]'[line break]";
 		else if SexAct is "OralPussy":
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
@@ -772,11 +799,12 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 		else: [lets tell people to report this too]
 			say "     < ERROR: [TakingCharName] not found in Table of Random Critters. Please report the situation you saw this in on the Flexible Survival Discord Bug Report Channel! >";
 		if SexAct is "AssFuck" and Player is not male: [player needs to be male to penetrate]
-			say "Error: CreatureSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]' TakingChar: '[TakingCharName]'[line break]";
+			say "Error: CreatureSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]', TakingChar: '[TakingCharName]'[line break]";
 		else if SexAct is "AssFuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
 				say "     [Bold Type]You have lost your penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
+				now FirstPenilePartner of Player is GivingCharName;
 			increase AssFuckGiven of Player by 1;
 			if Libido of Impregnated Feral is 0 and TakingCharName is listed in infections of MpregList and Enemy Type entry is 0: [standin NPC ready for another pregnancy, enemy fucked has basic capability of mpreg, only non-unique enemies can get impregnated]
 				if debugactive is 1:
@@ -790,11 +818,12 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 					if debugactive is 1:
 						say "DEBUG -> Non-Sterile Player succeeded in their [2 + Ball Size of Player] in 10 impregnation check. [Libido of Impregnated Feral] turns to birth of a [MainInfection of Impregnated Feral] offspring.[line break]";
 		else if SexAct is "PussyFuck" and Player is not male: [player needs to be male to penetrate]
-			say "Error: CreatureSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]' TakingChar: '[TakingCharName]'[line break]";
+			say "Error: CreatureSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]', TakingChar: '[TakingCharName]'[line break]";
 		else if SexAct is "PussyFuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
 				say "     [Bold Type]You have lost your penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
+				now FirstPenilePartner of Player is GivingCharName;
 			increase PussyFuckGiven of Player by 1;
 			if Libido of Impregnated Feral is 0 and Enemy Type entry is 0: [standin NPC ready for another pregnancy, only non-unique enemies can get impregnated]
 				if debugactive is 1:
@@ -813,12 +842,12 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 			increase PussyFuckGiven of Player by 1;
 		else if SexAct is "OralCock":
 			if Player is not male: [player needs to be male to get sucked]
-				say "Error: CreatureSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]' TakingChar: '[TakingCharName]'[line break]";
+				say "Error: CreatureSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]', TakingChar: '[TakingCharName]'[line break]";
 			else:
 				increase OralCockGiven of Player by 1;
 		else if SexAct is "OralPussy":
 			if Player is not female: [player needs to be female to get licked]
-				say "Error: CreatureSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]' TakingChar: '[TakingCharName]'[line break]";
+				say "Error: CreatureSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]', TakingChar: '[TakingCharName]'[line break]";
 			else:
 				increase OralPussyGiven of Player by 1;
 	else if TakingCharName is "Player" or TakingCharName is "player":
@@ -836,7 +865,7 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 				mimpregchance;
 			increase AssFuckTaken of Player by 1;
 		else if SexAct is "PussyFuck" and Player is not female: [player needs to be female to get penetrated]
-			say "Error: CreatureSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]' TakingChar: '[TakingCharName]'[line break]";
+			say "Error: CreatureSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]', TakingChar: '[TakingCharName]'[line break]";
 		else if SexAct is "PussyFuck":
 			if Virgin of Player is true:
 				now Virgin of Player is false;
@@ -855,7 +884,7 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 				now FirstAnalPartner of Player is GivingCharName;
 			increase AssFuckTaken of Player by 1;
 		else if SexAct is "PussyDildoFuck" and Player is not female: [player needs to be female to get penetrated]
-			say "Error: CreatureSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]' TakingChar: '[TakingCharName]'[line break]";
+			say "Error: CreatureSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]', TakingChar: '[TakingCharName]'[line break]";
 		else if SexAct is "PussyDildoFuck":
 			if Virgin of Player is true:
 				now Virgin of Player is false;
@@ -888,7 +917,7 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 			now LastSexualPartner of TakingChar is GivingCharName;
 			now TakingCharIsNPC is 1;
 		if GivingCharIsNPC is 0 and TakingCharIsNPC is 0:
-			say "Error: The CreatureSexAftermath function should include at least one NPC if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]' Taking Char: '[TakingCharName]'";
+			say "Error: The CreatureSexAftermath function should include at least one NPC if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]', Taking Char: '[TakingCharName]'";
 		if debugactive is 1:
 			say "DEBUG: GivingCharName: [GivingCharName], GivingCharIsNPC: [GivingCharIsNPC][line break]";
 			say "DEBUG: TakingCharName: [TakingCharName], TakingCharIsNPC: [TakingCharIsNPC][line break]";
@@ -897,10 +926,12 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 				if PenileVirgin of GivingChar is true:
 					now PenileVirgin of GivingChar is false;
 					say "     [Bold Type][GivingCharName] has lost their penile virginity fucking the [TakingCharName in lower case]'s ass![roman type][line break]";
+					now FirstPenilePartner of GivingChar is TakingCharName;
 			else if SexAct is "PussyFuck":
 				if PenileVirgin of GivingChar is true:
 					now PenileVirgin of GivingChar is false;
 					say "     [Bold Type][GivingCharName] has lost their penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
+					now FirstPenilePartner of GivingChar is TakingCharName;
 		else if TakingCharIsNPC is 1: [NPC takes]
 			if SexAct is "AssFuck":
 				if AnalVirgin of TakingChar is true:

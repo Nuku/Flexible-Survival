@@ -47,6 +47,8 @@ Definition: A person (called x) is FemalePreferred: [player wants to or must rem
 
 Definition: A person (called x) is HermPreferred: [player wants to or must remain herm]
 	if "Herm Preferred" is listed in feats of x, yes;
+	if "Male Preferred" is listed in feats of x or "Female Preferred" is listed in feats of x, no;
+	if "Always Cocky" is listed in feats of x and "Always A Pussy" is listed in feats of x, yes;
 	no;
 
 Table of gainable feats
@@ -77,7 +79,7 @@ understand "Feats" as FeatList.
 
 carry out FeatList:
 	sort Feats of Player;
-	say "Feats: [Feats of Player]";
+	say "Feats: [if feats of Player is empty]None[else][Feats of Player][end if].";
 
 Featgetting is an action applying to nothing.
 understand "volunteer" as featgetting.
@@ -199,11 +201,11 @@ instead of addfeating the fun feats:
 		if "Flat Chested" is not listed in feats of Player, addfeat "Breasts" with "Despite being all male, you still grow breasts - curious";
 	else if "Male Preferred" is not listed in feats of Player and "Breasts" is not listed in feats of Player:
 		addfeat "Flat Chested" with "Your chest tends to remain flat";
-	if "Modest Organs" is not listed in feats of Player and "Passing Grade Chest" is not listed in feats of Player:
+	if "Modest Organs" is not listed in feats of Player and ("Passing Grade Chest" is not listed in feats of Player or Breast Size of Player < 5):
 		addfeat "One Way" with "You can only grow larger, not smaller, sexually - barring specific effects";
 	if "One Way" is not listed in feats of Player:
 		addfeat "Modest Organs" with "Your genital growth is restricted, preventing wildly overgrown bits, barring specific effects";
-	if "One Way" is not listed in feats of Player and "Flat Chested" is not listed in feats of Player:
+	if ("One Way" is not listed in feats of Player or Breast Size of Player < 5) and "Flat Chested" is not listed in feats of Player:
 		addfeat "Passing Grade Chest" with "Your breasts will never fail a test, and will remain D cupped or smaller, barring specific effects. If they do become too large, they will shrink rapidly back into line";
 	if "All The Things" is not listed in feats of Player and ("One Way" is not listed in feats of Player or (Cock Count of Player < 2 and Cunt Count of Player < 2)):
 		addfeat "Just One" with "You will only grow one cock, and only one cunt, never more. Possibly less";

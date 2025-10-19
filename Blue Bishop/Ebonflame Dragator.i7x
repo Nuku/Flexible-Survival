@@ -84,7 +84,7 @@ impregnatevalid is a truth state that varies. impregnatevalid is usually false.
 ebgatorcarrying is a number that varies. ebgatorcarrying is usually 1.
 
 to say ebgatordesc:
-	say "     A loud, low hissing sound echoes from the open air as a monstrous, feral alligator lurches from the shadow. Twisted by an unholy influence, the six-legged beast is an abyssal shade of purple, hard scales and ridges jutting from its coarse frame, a soft red flame visibly glowing in the cracks and crevices.";
+	say "     A loud, low hissing sound echoes from the open air as a monstrous, feral alligator lurches from the shadows. Twisted by an unholy influence, the six-legged beast is an abyssal shade of purple, hard scales and ridges jutting from its coarse frame, a soft red flame visibly glowing in the cracks and crevices.";
 	say "     Twin pairs of eyes fixated on your [bodytype of Player] form, its drooling maw is agape, revealing its two rows of razor-sharp teeth. Without warning, it charges directly at you!";
 	if impregnatevalid is true:
 		say "     [bold type]...The creature has a slightly awkward gait, as if bloated with something...[roman type][line break]";
@@ -129,7 +129,7 @@ When Play begins:
 	add "Ebonflame Dragator" to infections of FurryList;
 	add "Ebonflame Dragator" to infections of FeralList;
 	add "Ebonflame Dragator" to infections of MythologicalList;
-	add "Ebonflame Dragator" to infections of HermList;
+	add "Ebonflame Dragator" to infections of MaleList;
 	add "Ebonflame Dragator" to infections of BarbedCockList;
 	add "Ebonflame Dragator" to infections of TaperedCockList;
 	add "Ebonflame Dragator" to infections of InternalCockList;
