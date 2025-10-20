@@ -275,7 +275,7 @@ name(text)	PrepFunction(text)
 "Kobold"	"[PrepCombat_Kobold]"
 
 to say PrepCombat_Kobold:
-	setmongender 3; [creature is male]
+	setmongender 13; [creatures are male]
 
 Section 2 - Creature Insertion
 
