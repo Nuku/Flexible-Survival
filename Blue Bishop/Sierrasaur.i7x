@@ -353,6 +353,21 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Sierrasaur:
 	choose row MonsterID from Table of Random Critters;
+	if MaleList is banned and HermList is banned:
+		say "     You happen upon what appears to be a large boulder jutting from the ground. Prodding it, you find yourself shocked to have the thing grumble at you in response. That's all it appears to do, however, and you eventually choose to depart, minding to avoid such a fixture in the future.";
+		now BannedStatus entry is true;
+		now fightoutcome is 19;
+		now combat abort is 1;
+	else:
+		project Figure of Sierrasaur_soft_icon;
+		if HermList is banned:
+			[add { "Sierrasaur" } to infections of MaleList;]
+			now sierramale is true;
+			setmongender 3; [creature is male]
+		else:
+			[add { "Sierrasaur" } to infections of HermList;]
+			now sierramale is false;
+			setmongender 7; [creature is mherm]
 	if Player is MalePreferred:
 		now sex entry is "Male";
 	else if Player is FemalePreferred:
@@ -369,21 +384,6 @@ to say PrepCombat_Sierrasaur:
 		now sierrapure is false;
 	psycheeval;
 	libidoeval;
-	if MaleList is banned and HermList is banned:
-		say "     You happen upon what appears to be a large boulder jutting from the ground. Prodding it, you find yourself shocked to have the thing grumble at you in response. That's all it appears to do, however, and you eventually choose to depart, minding to avoid such a fixture in the future.";
-		now BannedStatus entry is true;
-		now fightoutcome is 19;
-		now combat abort is 1;
-	else:
-		project Figure of Sierrasaur_soft_icon;
-		if HermList is banned:
-			[add { "Sierrasaur" } to infections of MaleList;]
-			now sierramale is true;
-			setmongender 3; [creature is male]
-		else:
-			[add { "Sierrasaur" } to infections of HermList;]
-			now sierramale is false;
-			setmongender 7; [creature is mherm]
 
 Section 2 - Creature Insertion
 

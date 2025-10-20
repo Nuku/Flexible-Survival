@@ -51,10 +51,9 @@ This is the ngraphics_refresh rule:
 
 This is the ngraphics_blank rule:
 	if graphics is true and NewGraphics is true:
-		if currently shown picture is not Figure of pixel_icon:
-			project the figure of pixel_icon;
-			follow the current graphics drawing rule;
-			[now the graphics window proportion is 20;]
+		project the figure of pixel_icon;
+		[follow the current graphics drawing rule;]
+		[now the graphics window proportion is 20;]
 
 This is the ngraphics_phone rule:
 	if graphics is true and NewGraphics is true:
@@ -77,8 +76,8 @@ g-dark-gray	4473924	[== $444444]
 g-medium-gray	8947848	[== $888888]
 g-light-gray	14540253	[== $DDDDDD]
 g-white	16777215		[== $FFFFFF]
-g-yellow-orange	39423		[== $0099FF]
-g-ice-blue	15645627		[== $EEBBBB]
+g-yellow-orange	15645627		[== $EEBBBB]
+g-ice-blue	39423		[== $0099FF]
 
 Section 3.1 - Artist Status
 

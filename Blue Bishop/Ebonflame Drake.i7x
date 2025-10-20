@@ -69,7 +69,7 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Ebonflame Drake:
 	setmongender 5; [creature is herm]
-	choose row MonsterID from the Table of Random Critters;
+	[choose row MonsterID from the Table of Random Critters;]
 	now firebreathcount is 0;
 	now firebreathready is false;
 
