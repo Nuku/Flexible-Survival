@@ -116,7 +116,6 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Ebonflame Dragon"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Ebonflame Whelp" to infections of ReptileList;
-	add "Ebonflame Whelp" to infections of FurryList;
 	add "Ebonflame Whelp" to infections of FeralList;
 	add "Ebonflame Whelp" to infections of MythologicalList;
 	add "Ebonflame Whelp" to infections of MaleList;

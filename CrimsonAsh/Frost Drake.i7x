@@ -223,7 +223,7 @@ When Play begins:
 	add "Frost Drake" to infections of TaperedCockList;
 	add "Frost Drake" to infections of InternalCockList;
 	add "Frost Drake" to infections of InternalBallsList;
-	add "Frost Drake" to infections of BipedalList;
+	add "Frost Drake" to infections of QuadrupedalList;
 	add "Frost Drake" to infections of TailList;
 	add "Frost Drake" to infections of OviImpregnatorList;
 	add "Frost Drake" to infections of TailweaponList;
@@ -432,14 +432,15 @@ to say FrostDrakeTalkMenu:
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     As you are about to wave him off and conclude your little talk, the frost drake clears his throat and says, 'You are indeed a strange creature, very curious. Why is that exactly?'";
-			LineBreak;
 			say "     [bold type]Just how curious were you planning on being?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Just some casual interest in strange creatures.";
 			say "     ([link]N[as]n[end link]) - You'd like to gain some first-hand intimate knowledge of him.";
 			if Player consents:
-				say "     You shrug your shoulders and tell him you were just curious and wanted to ask some questions.' He looks at you a long while before slowly nodding and speaking, 'Ah... very well.' The two of you stare silently at one another for an uncomfortable amount of time before the drake simply stands up, nods again at you, turns, and walks away. You give a half hearted wave and turn back to the matter of surviving in this fallen city.";
+				LineBreak;
+				say "     You shrug your shoulders and tell him you were just curious and wanted to ask some questions. He looks at you a long while before slowly nodding and speaking, 'Ah... very well.' The two of you stare silently at one another for an uncomfortable amount of time before the drake simply stands up, nods again at you, turns, and walks away. You give a half hearted wave and turn back to the matter of surviving in this fallen city.";
 			else:
+				LineBreak;
 				say "     Looking over the drake you can't help but appreciate his size, and his exotic nature. You've beaten back enough of these big guys to know what they're packing. And that makes your mind wander to the possibilities of what this big, scary brute can do. You pause, looking him up and down exaggeratedly, then tell him that he's quite an impressive specimen of his kind and you'd like to gain more intimate knowledge of him personally. The white-scaled drake grins, flashing rows of sharp draconic teeth at you, ember set eyes burning into your body, clearly undressing you visually already. You give him a coy smile in return and stride closer to the drake.";
 				say "[FrostDrakeTalkSex]";
 			wait for any key;

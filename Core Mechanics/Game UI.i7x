@@ -37,7 +37,7 @@ left	central	right
 "Location: [Location of Player][if Location of Player is fasttravel] ([link]Navpoint[as]nav[end link])[end if]"	"Name: [if Player is not defaultnamed][Name of Player][else][link]Pick one?[as]rename[end link][end if] | Pronouns: [link][PronounChoice of Player][as]set pronouns[end link] - [SubjectPro of Player]/[PosAdj of Player] | Condition: [SleepMessage], [AlcState] | [link]Inventory[as]i[end link] | [link]Feats[as]FeatList[end link] | [link]Allies[as]Allies[end link] | [link]Sex Stats[as]SexStats[end link]"	"HP: [HP of Player]/[MaxHP of Player]"
 "Date: [DateYear]-[DateMonth]-[DateDay], Time: [time of day]"	"STR: [strength of Player] | DEX: [dexterity of Player] | STA: [stamina of Player] | CHA: [Charisma of Player] | INT: [intelligence of Player] | PER: [perception of Player]"	"XP: [XP of Player]/[level up needed]"
 "Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"Hunger: [hunger of Player]/100 | Thirst: [thirst of Player]/100 | Libido: [Libido of Player]/100 | Humanity: [humanity of Player]/100"	"LVL: [level of Player]"
-"Freecred: [freecred]"	"[link]Help[as]HelpBookLookup[end link] | Game Version (Serial): [serial number][if NewGraphicsInteger is 0] [else] | Art by: [ngraphics_currentartist] ([link]art credits[end link])[end if]"	"Score: [score]/[maximum score]"
+"Freecred: [freecred]"	"[link]Help[as]HelpBookLookup[end link] | Game Version (Serial): [serial number][if NewGraphicsInteger is not 0] | Art by: [ngraphics_currentartist] ([link]art credits[end link])[end if]"	"Score: [score]/[maximum score]"
 
 [Optional Version for narrower screens]
 Table of Narrow Status
@@ -290,6 +290,7 @@ To showstats (x - Person):
 	say ", [link]Orientation[as]adjust player orientation[end link]";
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0: [more than zero children of both types combined]
 		say ", [link]Offspring[as]ListOffspring[end link]";
+	say ", [link]Sex Stats[as]SexStats[end link]";
 	LineBreak;
 	if debugactive is 1:
 		say "DEBUG -> Traits: [Traits of Player][line break]";

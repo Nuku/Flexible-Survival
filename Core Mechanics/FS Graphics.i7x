@@ -3122,8 +3122,10 @@ understand "disable artist" as ArtistBanning.
 understand "disable artists" as ArtistBanning.
 
 carry out ArtistBanning:
+	if clearnomore is 0, clear the screen;
 	artistbanmenu;
-	follow the ngraphics_blank rule;
+	if ngraphics_currentartist is listed in BlockList of Player:
+		follow the ngraphics_blank rule;
 
 to artistbanmenu: [more compact version]
 	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Banni", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Buzzybub", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "DragonFlayer", "Dragonpunk", "Eevachu", "EmieChii", "Enaya-TheWhiteWolfen", "executaball", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "Jahi", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Laylo", "lionsilverwolf", "LocksTO", "Luneth", "Lyttathebug", "MadTurtle", "Moirah", "MoT", "Nokturnalkittie", "Obieblu", "Otterbits", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rocketman", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "SonikkuDashu", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sokan", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TylerAz", "Uniformvixen", "Unknown", "ValdericBlackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Waxraven/WXRVN", "Wemt", "Wolfram Rolf", "Xenotropos", "Xilrayne", "Yora", "Zealot"};
@@ -3133,12 +3135,12 @@ to artistbanmenu: [more compact version]
 	while abmexit is 0:
 		say "[bold type]Artists:[roman type][line break]";
 		while countnumber <= number of entries in artistlist:
-			say "[link][entry countnumber of artistlist][as][countnumber][end link]: [run paragraph on]";
+			say "[countnumber]-[link][entry countnumber of artistlist][as][countnumber][end link]: [run paragraph on]";
 			BlockCheck entry countnumber of artistList;
 			if remainder after dividing countnumber by 5 is 0:
 				LineBreak;
 			increase countnumber by 1;
-		say "[link]Exit Menu[as]0[end link][line break]";
+		say "0-[link]Exit Menu[as]0[end link][line break]";
 		now countnumber is 1;
 		while 1 is 1:
 			say "Choice? (0-[number of entries in artistlist])>[run paragraph on]";
@@ -3161,10 +3163,18 @@ to BlockCheck (x - text):
 to artistbanswitch (name - text):
 	if name is not listed in BlockList of Player:
 		add name to Blocklist of Player;
-		say "[name] Blocked!";
+		if clearnomore is 0:
+			clear the screen;
+		else:
+			say "[name] Blocked!";
 	else if name is listed in Blocklist of Player:
 		remove name from Blocklist of Player;
-		say "[name] Unblocked!";
+		if clearnomore is 0:
+			clear the screen;
+		else:
+			say "[name] Unblocked!";
+	if clearnomore is not 0:
+		wait for any key;
 
 
 ArtworkTest is an action applying to nothing.

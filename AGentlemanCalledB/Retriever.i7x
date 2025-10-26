@@ -32,12 +32,13 @@ to say beattheRetriever:
 				say "     You decide to have some fun with the lusty canine and she realizes your intent as you approach and begin stripping off your gear. The retriever begins to pant happily and spreads her legs before you.";
 				if Player is male:
 					say "     Already fully erect by the time you reach her you waste no time in jumping on the supine canine. As you tease her outer folds with your [cock size desc of Player] [Cock of Player] cock she begins to whimper needfully, already beginning to buck against you, trying to force you inside her. You begin thrusting into her slowly, soon easily matching her own pace, each push eliciting another whimper or small bark from your retriever lover.";
-					say "     As the pace quickens you rapidly approach climax, and based on her rising pitch and increasingly forceful bucking you can tell she is as well. With one final thrust you drive your entire length into her, pushing you both over the edge. You fill her womb with your seed even as her own female juices are awash around you.";
 					WaitLineBreak;
+					say "     As the pace quickens you rapidly approach climax, and based on her rising pitch and increasingly forceful bucking you can tell she is as well. With one final thrust you drive your entire length into her, pushing you both over the edge. You fill her womb with your seed even as her own female juices are awash around you.";
 					say "     You both lay there for some time, basking in the afterglow before you finally pull out of her. You quickly gather your things and head on your way, leaving the retriever girl to recover alone, rubbing her belly happily with a vapid smile across her muzzle.";
 					CreatureSexAftermath "Retriever Female" receives "PussyFuck" from "Player";
 				else:
 					say "     Within moments you are on all fours in front of her taking several long licks of her already moist cunt, savoring her flavor for a moment before you change to a position that allows her to make use of that long canine tongue as well.";
+					WaitLineBreak;
 					say "     Before long, her expert ministrations have you approaching climax, and eager to return the favor, you find yourself driving deeper and deeper into your lover's sopping cunt.";
 					say "     Without warning she suddenly drives her muzzle into you, teasing your innermost folds with her tongue as your world explodes, soaking her muzzle and face.";
 					WaitLineBreak;
@@ -330,7 +331,7 @@ When Play begins:
 	now per entry is 15;
 	now int entry is 14;
 	now cha entry is 18;
-	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 95; [ The monster's starting HP. ]
 	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 11; [ Monster's average damage when attacking. ]

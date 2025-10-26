@@ -234,7 +234,7 @@ to say TehuantlMaleShift:
 	now HP of Tehuantl is 50; [male jaguar pet]
 	now Cock Count of Tehuantl is 1;
 	now Cock Length of Tehuantl is 12;
-	now Ball Size of Tehuantl is 5;
+	now Ball Size of Tehuantl is 4;
 	now Ball Count of Tehuantl is 2;
 	now Cunt Count of Tehuantl is 0;
 	now Cunt Depth of Tehuantl is 0;
@@ -470,6 +470,28 @@ The descmod of Jaguar Headdress is "A golden yellow furred hood and shawl with b
 The slot of Jaguar Headdress is "head".
 The damagebonus of Jaguar Headdress is 1.
 The dodgebonus of Jaguar Headdress is 1.
+EquipFunction of Jaguar Headdress is "[JaguarHeaddressUse]".
+UnequipFunction of Jaguar Headdress is "[JaguarHeaddressUse]".
+
+to say JaguarHeaddressUse:
+	if Jaguar Headdress is equipped:
+		if hoodequipped is 0:
+			if BodyName of Player is "Jaguar Warrior":
+				say "     You drop to a knee as you feel a surge of heat roll through you, your feline physique shifting as the power of the jaguar headdress you're wearing ripples through your feline body, remaking you into a powerful jungle predator.";
+			setmonster "Jaguar Warrior";
+			choose row MonsterID from the Table of Random Critters;
+			if Player is not FemalePreferred:
+				now sex entry is "Both";
+			now hoodequipped is 1;
+		infect "Jaguar Warrior";
+	else if hoodequipped is 1:
+		if BodyName of Player is "Jaguar Warrior":
+			say "     No longer under the influence of the jaguar headdress, you feel your warrior's physique burning away, leaving your feline form lithe and more delicate as the last of its power drains out of you.";
+		now hoodequipped is 0;
+		setmonster "Jaguar Warrior";
+		choose row MonsterID from the Table of Random Critters;
+		if Player is not MalePreferred:
+			now sex entry is "Female";
 
 An everyturn rule:
 	if Jaguar Headdress is equipped:

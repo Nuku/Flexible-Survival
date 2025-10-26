@@ -56,6 +56,7 @@ to say RanchHouse_Choice1_Point:
 
 to say RanchHouse_Choice1: [Go inside the barn and see who is inside]
 	say "     You cautiously grab the knob of the stable door, feeling the cold metal as you open the door in a swift movement. However, you fail to realize that behind it was an improvised alarm mechanism made of buckets. Upon being knocked down, they alert the creatures inside which immediately flee the area, the commotion preventing you from identifying them. All but one, who is left behind due to it being tied down in one of the stalls. Upon taking a closer look, you see a small centaur mare that was forced to be on a milking machine repurposed as a sex toy. Upon taking a closer look, you see a small centaur mare lying on her belly that, judging from the rope bindings and ball-gag, it is safe to assume that she most likely has been hooked up to the milking machine not by her own decision. Either that, or she's a really kinky mare.";
+	LineBreak;
 	say "     [bold type]What do you do now?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Free her and let her go with the others.";
 	say "     [link](2)[as]2[end link] - Take advantage of the situation.";
@@ -90,6 +91,7 @@ to say RanchHouse_Choice1: [Go inside the barn and see who is inside]
 
 to say RanchHouse_Choice2: [Cautiously approach one of the windows and look inside]
 	say "     You stealthily get close to the broken window, the smell of sex hitting your nose as you approach. When you look inside of the stable, you are taken aback by the view, a small group of centaurs having some fun between them. Some male on male, female on female, and some mares getting impregnated.";
+	LineBreak;
 	say "     [bold type]What do you do now?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - You decide to stay and watch.";
 	say "     [link](2)[as]2[end link] - You decide to not risk it.";

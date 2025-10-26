@@ -10,8 +10,6 @@ cumgirlfed is a number that varies. cumgirlfed is usually -1.
 to say losetoCumGirl:
 	let CGFC be 0;
 	let CGFB be 0;
-	[let cumgrowth be cumgirlfed / 5;
-	if cumgrowth > 10, now cumgrowth is 10;]
 	say "     Unable to resist the cum girl's attacks, you stumble back and fall to the ground. The cum girl strides over to your fallen form, quickly freeing your groin of any obstructions as she kneels before you.";
 	if Player is male:
 		if a random chance of 1 in 2 succeeds:
@@ -24,14 +22,14 @@ to say losetoCumGirl:
 		else:
 			increase CumGirlFed by 2;
 		if "Modest Organs" is not listed in feats of Player and "Female Preferred" is not listed in feats of Player:
-			if Cock Length of Player < ( 5 + cumgirlfed ):
+			if Cock Length of Player < ( 5 + cumgirlfed ): [range 6-40]
 				now CGFC is a random number from 0 to 2;
 				increase Cock Length of Player by CGFC;
 			if Ball Size of Player < 6 and a random chance of 1 in 2 succeeds:
 				now CGFB is a random number from 0 to 1;
 				BallsGrow Player by CGFB;
-		if CGFC > 0:
 			Follow the cock descr rule;
+		if CGFC > 0:
 			say "     Your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random] [one of]engorges[or]swells[or]throbs[at random] as it gains[else][one of]cocks[or]penises[or]shafts[or]malenesses[at random] [one of]engorge[or]swell[or]throb[at random] as they gain[end if] in length, becoming [descr].";
 		if CGFB > 0:
 			say "     Your [one of]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, your skin becoming taut with the expansion, leaving you with [Ball Size Adjective of Player] [Balls].";
@@ -105,6 +103,7 @@ When Play begins:
 	now Species Name entry is "Cum Goo"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Cum Girl" to infections of SlimeList;
 	add "Cum Girl" to infections of FemaleList;
+	add "Cum Girl" to infections of BipedalList;
 	add "Cum Girl" to infections of SlidingList;
 	now Name entry is "Cum Girl"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]

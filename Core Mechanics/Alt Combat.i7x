@@ -259,6 +259,10 @@ To Combat Menu:
 			now automaticcombatcheck is 1;
 			follow the player attack rule;
 			next;
+		else if autoattackmode is 2: [always seduces in combat, no player input needed]
+			now automaticcombatcheck is 1;
+			follow the player seduce rule;
+			next;
 		else if autoattackmode is 3: [always pass in combat, no player input needed]
 			now automaticcombatcheck is 1;
 			follow the combat pass rule;
@@ -469,6 +473,7 @@ This is the player attack rule:
 		let bonusattacks be 0; [max 2 bonus attacks in a round]
 		let specattchance be 4;
 		if peppereyes > 0, increase specattchance by 1;
+		if monsterHP - dam < 1, now specattchance is 0; [creature already defeated]
 		if a random chance of specattchance in 20 succeeds and "Tail Strike" is listed in feats of Player and bonusattacks < 2:
 			if TailName of Player is listed in infections of TailweaponList:
 				increase bonusattack by 1;
@@ -517,6 +522,7 @@ This is the player attack rule:
 			if Nipple Count of Player > 4, increase dammy by a random number between 0 and 1;
 			say "[line break]Grabbing your opponent, you smoosh them into your ample bosom, smothering and crushing them with your tits for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
+		if monsterHP - dam < 1, now petchance is 0; [creature already defeated]
 		if a random chance of petchance in 1000 succeeds and "Spirited Youth" is listed in feats of Player:
 			let y be a random number from 4 to 6;
 			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at the [EnemyNameOrTitle] for [special-style-2][y][roman type] damage!";
@@ -531,7 +537,7 @@ This is the player attack rule:
 		increase monsterLibidoPenalty by 20;
 	else:
 		say "You miss!";
-	if Player is not lonely:
+	if Player is not lonely and monsterHP > 0:
 		LineBreak;
 		Repeat with z running through companionList of Player:
 			if z is not NullPet:
@@ -581,11 +587,11 @@ This is the player attack rule:
 							say "[z]'s seduction attempt fails!";
 					say "Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
 					increase HP of Player by 1;
-	LineBreak;
 	follow the monster injury rule;
-	say "[EnemyCapNameOrTitle] is [descr].";
+	say "[EnemyCapNameOrTitle] is [descr]. ";
 	follow the monster libido rule;
-	say "[EnemyCapNameOrTitle] is [descr].";
+	say "[EnemyCapNameOrTitle] is [descr]. ";
+	LineBreak;
 	if monsterHP < 1:
 		now fightoutcome is 10;
 		win;
@@ -722,11 +728,11 @@ This is the player seduce rule:
 							say "[z]'s seduction attempt fails!";
 					say "Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
 					increase HP of Player by 1;
-	LineBreak;
 	follow the monster injury rule;
-	say "[EnemyCapNameOrTitle] is [descr].";
+	say "[EnemyCapNameOrTitle] is [descr]. ";
 	follow the monster libido rule;
-	say "[EnemyCapNameOrTitle] is [descr].";
+	say "[EnemyCapNameOrTitle] is [descr]. ";
+	LineBreak;
 	if monsterHP < 1:
 		now fightoutcome is 10;
 		win;
@@ -1637,9 +1643,9 @@ This is the player injury rule:
 	else if per <= 40:
 		now descr is "[if Playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]wounded[or]bashed around[or]significantly harmed[at random]";
 	else if per <= 80:
-		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type][line break]";
+		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type]";
 	else:
-		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type][line break]";
+		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type]";
 	rule succeeds;
 
 Section 5 - Critter Combat
@@ -1700,7 +1706,7 @@ this is the aura1 rule:		[weak aura]
 	let bonus be Stamina of Player - 10;
 	let dice be a random number from 1 to 50;
 	say "You roll 1d50([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
-	if dice + bonus > 20:
+	if dice + bonus >= 20:
 		say "You manage to resist the creature's power and press on.";
 		LineBreak;
 	else:
