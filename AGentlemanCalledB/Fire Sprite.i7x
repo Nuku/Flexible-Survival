@@ -527,7 +527,7 @@ Usedesc of glowing ember is "[glowingemberuse]";
 
 to say glowingemberuse:
 	say "     Rolling the small, warm ember between your fingers you begin to find it difficult to focus on anything but its warm light. You hear the crackling of flame in the distance as you slip further and further out of focus, your vision filling with nothing but the pleasant light and flickering of flames...";
-	WaitLineBreak;
+	wait for any key;
 	say "     You come to your senses some time later. Glancing around, you find the small ember missing. It is hard to shake the strange desire to light something on fire.";
 	infect "Fire Sprite";
 

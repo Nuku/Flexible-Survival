@@ -78,7 +78,7 @@ to say ResolveEvent Jetlagged:
 	say "     Ace whispers in your ear, 'Staghorn was also a way to help the non-avians feel at ease. A couple of the feathered newcomers were wanting to name the place the Nest. Besides being a cliche, I put the kibosh on that idea to keep our other inhabitants from feeling unwelcome. There has been a bit of tension between the new and old settler groups that I've had to keep defusing. One of the worst things that could happen to this place is getting fractured.' His eyes darting to outside the tent remind of his duty of leading the town. A taloned hand strokes his face as the female cuckoo soothingly speaks, 'Sir, when you're in here with me, you don't have to worry about that.' The focus of the raptor's eyes eases up and his muscles relax. Heavy is the head that wears the crown, and Izzy's methods seem to help erase the former military officer's burdens.";
 	WaitLineBreak;
 	say "     Deciding that some lighthearted conversation is needed, Ace shares a story of his youth in the Pacific northwest and how one day when he was fishing at a lake with his family, he was reeling in a whopper of a trout when an osprey snatched the fish out of the water breaking the line and leaving a feather in its wake. Taking the feather out of one of his pockets, the fighter pilot surmises, 'Maybe this good luck charm is what shaped my current form. Not that I'm complaining, I think my body works well for me.' You begin to feel restless, which can be sensed by the stud. 'You seem like you're itching to get back on the trail. I'll see you out.' Exiting the tent, the former pilot states, 'I have to travel to work out some deals with some seagulls at the beach trading supplies for food. I might see you out and about.' He then moves close and whispers, 'And if you're ever in the mood for the type of fun that Gray and Izzy have, I offer my services.' He then gives you happy parting words.";
-	WaitLineBreak;
+	wait for any key;
 	move player to Staghorn;
 	AddNavPoint Staghorn;
 	now battleground is "void";
@@ -135,7 +135,7 @@ PenileVirgin of Ace is false.
 SexuallyExperienced of Ace is true.
 TwistedCapacity of Ace is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Ace is true. [steriles can't knock people up]
-MainInfection of Ace is "Human". [since there is no fitting infection for him, he's sterile for now]
+MainInfection of Ace is "". [since there is no fitting infection for him, he's sterile for now]
 Description of Ace is "[acedesc]".
 Conversation of Ace is { "Skypilot!" }.
 the scent of the Ace is "The avian has a strangely masculine scent that reminds you of the sea.".
@@ -236,8 +236,9 @@ to say VanssaAceOralCuckScene:
 	WaitLineBreak;
 	say "     The birdlike male's eyes look around the nearby area and then he whispers into the taur's pointed ears, 'What do you think our dear friend will say if he sees what we are doing, beautiful?' One of his finger talons traces around the dark areolae of his partner. Moaning softly, the paratrooper smiles as she rubs her hands along the bulge that the rugged airman's clothes conceal. Then she utters in a provocative tone, 'I'm not really in a mood to care what they think. Besides, [if Player is female]she[else]he[end if] has let the Doberman woman have her fun with that wolf that's been acting as our guard dog. Now lean against the wall if you want to keep this going.' You are not sure if the woman knows that you are here, but are also pretty sure that wouldn't matter to her as you see her begin to unzip the horny guy's flight suit.";
 	say "     The sound of the zipper being pulled down echoes through the room. Ace's stance relaxes slightly, as if not needing to be the one to take the lead in this encounter. Lowering the mostly white colored equine half of her body to the ground, it's soon quite evident what the boisterous lady wants to do next.";
-	LineBreak;
+	WaitLineBreak;
 	say "     [bold type]Will you simply stand back and let her give the avian pilot a blowjob?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Endure the tantalizing humiliation of watching Vanessa go down on him.";
 	say "     ([link]N[as]n[end link]) - Stop the centaur woman's advances. Ace is a honorable guy, so it wouldn't take much to end this.";
 	if Player consents: [they fuck]
@@ -268,8 +269,9 @@ to say SnowAceCuckScene1:
 	WaitLineBreak;
 	say "     The squirrel woman stands up and moves her curvy body close up against the masculine aquiline man, her hard nipples poking up against the osprey's well defined torso. With a salacious grin Snow states, 'Since it seems like you are good with my work on the knife, let's talk about payment...' Fully understanding what the mechanic is getting at, Ace responds, 'I've got some food or water in my pack, but I think we can come to another type of arrangement though if you'd like.' He then runs one hand along the small of her back. Raising an eyebrow, the busty rodent gal amusedly chutters then leans in close and murmurs in a hushed tone, 'That all depends on how well you do, soldier boy... Now strip.' Not one to turn down an offer like this the studlike male follows the command.";
 	say "     The pilot and the former student start stripping each other's clothes off. When Ace begins taking off the girl's tight pants, the sizable cock bulging inside them pops out. Attempting to provoke the former military man, Snow says, 'Hope you're not afraid of the equipment I'm packing...' With a soft chuckle the osprey runs a finger along the head of the dickgirl's member and responds, 'Oh please, with all the missiles that they strapped to my plane, this thing's not gonna scare me off.' The two begin moving their hands reciprocally to each other's loins, the pilot's hand switching between the herm's throbbing cunt and her hardening cock. Seeing as the two are fully prepped, the raptor sits down in the chair appearing ready to start the fun.";
-	LineBreak;
+	WaitLineBreak;
 	say "     Snow is about to hop on Ace's lap, then start fucking him! [bold type]Will you simply let this happen?[roman type][line break]";
+	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Become a voyeur to their coupling.";
 	say "     ([link]N[as]n[end link]) - Lay down the law on this! You may have allowed Ace to spend some time at your abbey, but this type of behavior is unacceptable.";
 	if Player consents: [they fuck]

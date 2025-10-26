@@ -190,21 +190,28 @@ to banchange (name - text):
 	if name is listed in BanList of Player:
 		remove name from BanList of Player;
 		oldflagunban name;
-		if clearnomore is 0, clear the screen;
-		[say "[bold type][name] is now normal.[roman type][line break]";]
+		if clearnomore is 0:
+			clear the screen;
+		else:
+			say "[bold type][name] is now normal.[roman type][line break]";
 	else if name is listed in WardList of Player:
 		remove name from WardList of Player;
 		oldflagunward name;
 		add name to BanList of Player;
 		oldflagban name;
-		if clearnomore is 0, clear the screen;
-		[say "[bold type][name] is now banned.[roman type][line break]";]
+		if clearnomore is 0:
+			clear the screen;
+		else:
+			say "[bold type][name] is now banned.[roman type][line break]";
 	else:
 		add name to WardList of Player;
 		oldflagward name;
-		if clearnomore is 0, clear the screen;
-		[say "[bold type][name] is now warded.[roman type][line break]";]
-	[WaitLineBreak;]
+		if clearnomore is 0:
+			clear the screen;
+		else:
+			say "[bold type][name] is now warded.[roman type][line break]";
+	if clearnomore is not 0:
+		wait for any key;
 
 to oldflagban (flagname - text):
 	if flagname is:

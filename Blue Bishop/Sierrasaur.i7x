@@ -361,11 +361,9 @@ to say PrepCombat_Sierrasaur:
 	else:
 		project Figure of Sierrasaur_soft_icon;
 		if HermList is banned:
-			[add { "Sierrasaur" } to infections of MaleList;]
 			now sierramale is true;
 			setmongender 3; [creature is male]
 		else:
-			[add { "Sierrasaur" } to infections of HermList;]
 			now sierramale is false;
 			setmongender 7; [creature is mherm]
 	if Player is MalePreferred:

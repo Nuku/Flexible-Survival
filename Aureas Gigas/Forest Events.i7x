@@ -11,7 +11,6 @@ Sarea of One flew into the Cuckoos Nest is "Forest".
 CuckooWatched is a number that varies.
 
 when play begins:
-	add One flew into the Cuckoos Nest to BadSpots of HumorousList;
 	add One flew into the Cuckoos Nest to BadSpots of MaleList;
 	add One flew into the Cuckoos Nest to BadSpots of FemaleList;
 	add One flew into the Cuckoos Nest to BadSpots of FurryList;
