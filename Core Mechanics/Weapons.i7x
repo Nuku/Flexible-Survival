@@ -428,7 +428,7 @@ name	desc	weight	object
 "awesome bat"	"A heavy branch that you are pretty sure you could use to hit... something."	5	awesome bat
 
 awesome bat is an armament. It is not temporary.
-It has a weapon "[one of]awesome bat, a double rainbow appears for a brief second[awesome bat proc][or]bat of awesomeness[or]indestructible length of awesome-wood[at random]".
+It has a weapon "[one of]awesome bat, a double rainbow appearing for a brief second[awesome bat proc][or]bat of awesomeness[or]indestructible length of awesome-wood[at random]".
 Weapon Damage of awesome bat is 6.
 Weapon Type of awesome bat is "Melee".
 Objsize of awesome bat is 4.
@@ -520,7 +520,7 @@ Hitbonus of zephyr bashing riot shield is 0. [nothing special]
 Scent of the zephyr bashing riot shield is "The Zephyr bashing riot shield smells faintly of suppressive authority.".
 
 to say RiotShieldAttackDesc:
-	say "     A black shield that Zephyr's riot security use to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]RSProtectMode[end link] though, and direct your shield to more defensive purposes instead.";
+	say "     A black shield that Zephyr's riot security uses to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]RSProtectMode[end link] though, and direct your shield to more defensive purposes instead. ";
 
 riotshieldProtectMode is an action applying to one topic.
 
@@ -530,8 +530,8 @@ check riotshieldProtectMode:
 	if carried of zephyr bashing riot shield < 1, say "     What shield? You're not holding one right now." instead;
 
 carry out riotshieldProtectMode:
-	if zephyr bashing riot shield is equipped:
-		now zephyr bashing riot shield is not equipped;
+	if zephyr bashing riot shield is wielded:
+		unwield zephyr bashing riot shield silently;
 		say "     You lower your shield and look at it, contemplating how you can defend yourself instead of using it as a blunt weapon.";
 	else:
 		say "     You look at your shield, contemplating how you can defend yourself instead of using it as a blunt weapon.";
