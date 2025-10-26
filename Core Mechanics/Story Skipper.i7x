@@ -72,6 +72,9 @@ a postimport rule:
 				unwield x silently;
 				wield x silently;
 				break;
+	[just in case, make extra sure these don't end up in player lists]
+	remove "Imported" from WardList of Player, if present;
+	remove "Imported" from BanList of Player, if present;
 
 [----------------------------------------------------------------------------------]
 [ Testing Commands for partial Saving                                              ]
@@ -382,7 +385,7 @@ to PossessionRestore:
 			choose row x in the Table of GamePossessions;
 			let PossessionIdName be Name entry;
 			[some small bugfixes due to items that got renamed]
-			[if PossessionIdName is "earthen seed", now PossessionIdName is "sierrasaur cum";]
+			[if PossessionIdName is "earthen seed", now PossessionIdName is "sierrasaur cum";] [never actually renamed]
 			if PossessionIdName is "sturdy jeans", now PossessionIdName is "dark-blue jeans";
 			if PossessionIdName is "tenvale gorillas football helmet", now PossessionIdName is "tenvale silverbacks football helmet";
 			if PossessionIdName is "tenvale gorillas baseball cap", now PossessionIdName is "tenvale silverbacks baseball cap";
@@ -1635,16 +1638,16 @@ to StorageRestore:
 		say "No Storage Save File Found!";
 
 to BanListRestore:
+	say "Restoring Ban Lists...";
 	if clearnomore is 0, clear the screen;
 	if "Imported" is not listed in WardList of Player or "Imported" is not listed in BanList of Player:
-		say "     [bold type]Content banning and warding information wasn't found in the imported data. You can choose to pick new restrictions to remove enemies and events from the game.[roman type][line break]";
-		say "     [bold type](Note that previously banned events have remained banned after import and will be cumulative with any bans you choose now.)[roman type][line break]";
+		LineBreak;
+		say "     Content banning and warding information wasn't found in the imported data. You can choose to pick new restrictions to remove enemies and events from the game. [bold type]Note that previously banned events have remained banned after import and will be cumulative with any bans you choose now.[roman type][line break]";
 		say "     [bold type]Pick content restrictions?[roman type][line break]";
 		if Player consents:
 			if clearnomore is 0, clear the screen;
 			new ban menu;
 	else:
-		say "Restoring Ban Lists...";
 		remove "Imported" from WardList of Player;
 		remove "Imported" from BanList of Player;
 		if number of entries in WardList of Player > 0:

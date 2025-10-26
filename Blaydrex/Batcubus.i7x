@@ -255,7 +255,6 @@ Usedesc of batcubus milk is "[batcubus milk use]";
 to say batcubus milk use:
 	say "Taking the cap off the bottle of milk, you greedily drink down its contents, swallowing the tasty milk.";
 	PlayerDrink 6;
-	infect "Batcubus";
 
 Section 4 - Endings
 

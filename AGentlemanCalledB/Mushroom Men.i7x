@@ -25,7 +25,7 @@ to say beattheMushroomMen:
 to say MushroomMendesc:
 	setmongender 13; [creatures are male]
 	now SporeCloud is 0;
-	say "     While walking [one of]down a path[or]through some overgrown brush[or]through a dimly lit clearing[at random] you hear [one of]'Hey toots!'[or]'Hey hot stuff!'[or]'Hey cutie!'[or]a sharp wolf whistle[at random] [one of]behind you[or]to your right[or]to your left[or]just ahead of you[at random]. Glancing around you try and locate the source of the call, spotting some movement in a large cluster of mushrooms at the base of a nearby tree. Slowly the pack of mushrooms pull themselves from the ground and turn to face you, giving you a clear view of the partially humanoid forms.";
+	say "     While walking [one of]down a path[or]through some overgrown brush[or]through a dimly lit clearing[at random] you hear [one of]'Hey toots!' [or]'Hey hot stuff!' [or]'Hey cutie!' [or]a sharp wolf whistle [at random][one of]behind you[or]to your right[or]to your left[or]just ahead of you[at random]. Glancing around you try and locate the source of the call, spotting some movement in a large cluster of mushrooms at the base of a nearby tree. Slowly the pack of mushrooms pull themselves from the ground and turn to face you, giving you a clear view of the partially humanoid forms.";
 	say "     The mushroom men come in significant variety, with several distinct shapes and colors, the most concerning among those being the group of strangely phallic-looking ones. While most of them are roughly a foot tall, there are a couple of larger fungi among them, peaking at nearly two feet. While lacking any visible gender, they all seem to carry a distinctly male presence. They begin shouting and cheering crudely as they move towards you.";
 
 to say MushroomMenFaceTF:
@@ -258,7 +258,7 @@ this is the sporecloud rule: [Spore aura following spore blast attack]
 			increase dam by a random number between 0 and 1;
 			say "     [one of]Breathing heavily as a result of your continued fighting[or]As you try to catch your breath[or]Taking a deep breath[at random], you inhale the lingering airborne spores, causing a [one of]painful fit of coughing[or]warm tingling in your chest[or]powerful sneeze[at random]. You suffer [special-style-2][dam][roman type] damage.";
 			decrease HP of Player by dam;
-			if BodyName of Player is "Mushroom Men":
+			if BodyName of Player is "Mushroom Man":
 				say "     The fungal spores have [one of]an especially strong[or]an unusual[or]a powerful[at random] effect on your mushroom body, arousing you slightly.";
 				increase Libido of Player by a random number between 1 and 3;
 			decrease SporeCloud by 1;
@@ -275,23 +275,23 @@ this is the sporecloud rule: [Spore aura following spore blast attack]
 Section 4 - Definitions
 
 Definition: a person is mushroomfaced:
-	if FaceName of Player is "Mushroom Men", yes;
+	if FaceName of Player is "Mushroom Man", yes;
 	no;
 
 Definition: a person is mushroomskinned:
-	if SkinName of Player is "Mushroom Men", yes;
+	if SkinName of Player is "Mushroom Man", yes;
 	no;
 
 Definition: a person is mushroombodied:
-	if BodyName of Player is "Mushroom Men", yes;
+	if BodyName of Player is "Mushroom Man", yes;
 	no;
 
 Definition: a person is mushroomcocked:
-	if CockName of Player is "Mushroom Men", yes;
+	if CockName of Player is "Mushroom Man", yes;
 	no;
 
 Definition: a person is mushroomtailed:
-	if TailName of Player is "Mushroom Men", yes;
+	if TailName of Player is "Mushroom Man", yes;
 	no;
 
 Section 5 - Endings
@@ -301,7 +301,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Mushroom Men Infection"	"Infection"	""	Mushroom Men Infection rule	1000	false
 
 This is the Mushroom Men Infection rule:
-	if Player has a body of "Mushroom Men":
+	if Player has a body of "Mushroom Man":
 		trigger ending "Mushroom Men Infection";
 		if humanity of Player < 10:
 			say "     As the fungal infection begins to take root in your mind, you find yourself drawn back to the park. You wander the forested paths aimlessly for some time before coming across a small, clear glade with a single large tree at its center. Attracted to the unusual peace of this place, you settle down at the base of the tree, eventually drifting off to a deep sleep as your body begins to change further.";

@@ -210,7 +210,7 @@ to say gsopt_start:
 	if NewGraphics is true:
 		say "[bold type]Graphic Window Position and Proportion[roman type][line break]";
 		say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.[line break]";
-		say "Please choose the position value now. (0 = right side, 1 = left side, 2 = above, 3 = below)[line break]";
+		say "Please choose the position value now. (0 = [link]right side[as]0[end link], 1 = [link]left side[as]1[end link], 2 = [link]above[as]2[end link], 3 = [link]below[as]3[end link])[line break]";
 		while 1 is 1:
 			say "(0-3)>[run paragraph on]";
 			get a number;
@@ -219,7 +219,7 @@ to say gsopt_start:
 			else:
 				say "Invalid Entry. Please enter a number between 0 and 3.";
 		now NewGraphicsPosition is calcnumber;
-		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
+		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around [link]30[end link].[line break]";
 		while 1 is 1:
 			say "(5-90)>[run paragraph on]";
 			get a number;
@@ -567,9 +567,9 @@ to say silent_start:
 	[Code for letting player select graphics window size]
 	say "[bold type]Graphic Settings[roman type][line break]";
 	say "Before restoring, please specify the graphic settings.[line break]";
-	say "[bold type] No graphics - 1 [roman type][line break]";
-	say "[bold type] Old inline graphics only - 2 [roman type][line break]";
-	say "[bold type] New graphics side-window - 3 [roman type][line break]";
+	say "[bold type] [link]No graphics[as]1[end link] - 1 [roman type][line break]";
+	say "[bold type] [link]Old inline graphics only[as]2[end link] - 2 [roman type][line break]";
+	say "[bold type] [link]New graphics side-window[as]3[end link] - 3 [roman type][line break]";
 	while 1 is 1:
 		say "Please enter the number that matches your choice (1-3)>[run paragraph on]";
 		get a number;
@@ -590,7 +590,7 @@ to say silent_start:
 	if NewGraphics is true: [Defined when play begins below, but MUST be here to alter the view when restoring from the menu]
 		say "[bold type]Graphic Window Position and Proportion[roman type][line break]";
 		say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.[line break]";
-		say "Please choose the position value now. (0 = right side, 1 = left side, 2 = above, 3 = below)[line break]";
+		say "Please choose the position value now. (0 = [link]right side[as]0[end link], 1 = [link]left side[as]1[end link], 2 = [link]above[as]2[end link], 3 = [link]below[as]3[end link])[line break]";
 		while 1 is 1:
 			say "(0-3)>[run paragraph on]";
 			get a number;
@@ -599,7 +599,7 @@ to say silent_start:
 			else:
 				say "Invalid Entry. Please enter a number between 0 and 3.";
 		now NewGraphicsPosition is calcnumber;
-		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
+		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around [link]30[end link].[line break]";
 		while 1 is 1:
 			say "(5-90)>[run paragraph on]";
 			get a number;
