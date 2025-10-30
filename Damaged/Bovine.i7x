@@ -50,7 +50,6 @@ to say LoseToFeralBull:
 	let antimoo be 16 - Mooing;
 	if Mooing > 15:
 		now antimoo is 1;
-	setmonster "Bovine";
 	if CowBully > 0:
 		if Player is female:
 			say "     The big bull grunts fiercely, breathing hard after his maddened fight. He prods you with his sharp horns until you huddle on all fours. He scrabbles at your rear with his hooves and you have a few moments to wrench your clothes out of the way before you feel the animal's huge member thrust into you, [if Cunt Depth of Player < 28]feeling like it will split you in half. Your cries, when you hear them, sound almost as pitiful as the cow you defeated earlier as you try in vain to brace yourself against the crazed beast's rutting[else]filling your cavernous pussy like few can. Your cries of ecstasy unknowingly echo the pitiful cries of the cow girl you defeated. All of your attention, however, is focused on bracing yourself against the magnificent brute's powerful rutting thrusts[end if]. He bellows as you feel his burning seed pour into you, filling you up, and making you look very pregnant. Finally done with you, calm after his release, he wanders off to graze.";
@@ -109,7 +108,6 @@ to say LoseToFeralBull:
 					now mooing is 10;
 
 to say BeatTheBovine:
-	setmonster "Bovine";
 	if Bovine_type is 1:
 		say "     The large cow suddenly drops to her knees mooing, 'All I wanted was for you to be happy. Don't you think you could be happy with me?' She clings to your waist, crying softly in disappointment. You look over the large bovine woman and ponder what you should do. She's clearly interested in fucking you; you could give in to your base desires, but if you did, you might not be any better than the feral monsters roaming the city. There's just something about her that makes you want to be rough with the poor cow girl. (Y=fuck, N=leave)[line break]";
 		if Player consents:

@@ -483,7 +483,6 @@ to say JaguarHeaddressUse:
 			if Player is not FemalePreferred:
 				now sex entry is "Both";
 			now hoodequipped is 1;
-		infect "Jaguar Warrior";
 	else if hoodequipped is 1:
 		if BodyName of Player is "Jaguar Warrior":
 			say "     No longer under the influence of the jaguar headdress, you feel your warrior's physique burning away, leaving your feline form lithe and more delicate as the last of its power drains out of you.";

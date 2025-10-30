@@ -144,14 +144,18 @@ to ItemGain (ItemObj - text) by (N - number) silently:
 	ItemGain ItemObj by N silence state is 1;
 
 to ItemGain (ItemObj - text) by (N - number) silence state is (Silence - a number):
-	if there is a name of ItemObj in the table of Game Objects:
-		choose a row with name of ItemObj in the Table of Game Objects;
-		if Silence is 0:
-			ItemGain object entry by N;
-		else:
-			ItemGain object entry by N silently;
-		now object entry is part of Player; [keeping the flimsy FS inventory system running]
-	else:
+	let found be 0;
+	repeat with x running from 1 to number of filled rows in Table of Game Objects:
+		choose row x from Table of Game Objects;
+		if name entry exactly matches the text ItemObj, case insensitively:
+			if Silence is 0:
+				ItemGain object entry by N;
+			else:
+				ItemGain object entry by N silently;
+			now object entry is part of Player; [keeping the flimsy FS inventory system running]
+			now found is 1;
+			break;
+	if found is 0:
 		say "ERROR! Object [ItemObj] does not exist in the table of Game Objects. Please report this message on the FS Discord!";
 
 to ItemGain (ItemObj - a grab object) by (N - number):

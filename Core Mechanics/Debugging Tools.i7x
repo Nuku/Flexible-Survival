@@ -541,7 +541,8 @@ carry out TagListReadout:
 	say "[bold type]Markers:[roman type][line break]";
 	sort L in printed name order;
 	repeat with x running through L:
-		say "     [printed name of x]: [if Infections of x is empty]Nothing[else][Infections of x][end if].[line break]";
+		say "     [printed name of x]: [if Infections of x is empty]Nothing[else][Infections of x][end if].";
+		LineBreak;
 	truncate L to 0 entries;
 	repeat with x running through flags:
 		sort Infections of x;
@@ -552,7 +553,8 @@ carry out TagListReadout:
 	sort L in printed name order;
 	repeat with x running through L:
 		say "     [printed name of x] (infections): [if Infections of x is empty]Nothing[else][Infections of x][end if].";
-		say "     [printed name of x] (situations): [if BadSpots of x is empty]Nothing[else][BadSpots of x][end if].[line break]";
+		say "     [printed name of x] (situations): [if BadSpots of x is empty]Nothing[else][BadSpots of x][end if].";
+		LineBreak;
 	truncate L to 0 entries;
 	repeat with x running through tags:
 		sort Infections of x;
@@ -563,7 +565,8 @@ carry out TagListReadout:
 	sort L in printed name order;
 	repeat with x running through L:
 		say "     [printed name of x] (infections): [if Infections of x is empty]Nothing[else][Infections of x][end if].";
-		say "     [printed name of x] (situations): [if BadSpots of x is empty]Nothing[else][BadSpots of x][end if].[line break]";
+		say "     [printed name of x] (situations): [if BadSpots of x is empty]Nothing[else][BadSpots of x][end if].";
+		LineBreak;
 
 EndingTableReadout is an action applying to nothing.
 
@@ -898,7 +901,7 @@ check SetPlayerGenitals:
 	if number understood < 0, say "Invalid input ([number understood])." instead;
 
 carry out SetPlayerGenitals:
-	let tempnum be number understood;
+	now tempnum is number understood;
 	LineBreak;
 	say "     [bold type]Change Genitals[roman type][line break]";
 	say "     (1) [link]Change cock[as]1[end link] (length or count) using [bold type][tempnum][roman type].";
