@@ -161,6 +161,16 @@ Scent of bald eagle milk is "[breastmilk smell]".
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"beag milk"	"[breastmilk Strain of beag milk]"	1	beag milk
+
+beag milk is a infectious milky grab object.
+Strain of beag milk is "Beag".
+Usedesc of beag milk is "[breastmilk use]".
+Scent of beag milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "beaver milk"	"[breastmilk Strain of beaver milk]"	1	beaver milk
 
 beaver milk is a infectious milky grab object.
@@ -981,6 +991,16 @@ ewe milk is a infectious milky grab object.
 Strain of ewe milk is "Ewe".
 Usedesc of ewe milk is "[breastmilk use]".
 Scent of ewe milk is "[breastmilk smell]".
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"fathnach milk"	"[breastmilk Strain of fathnach milk]"	1	fathnach milk
+
+fathnach milk is a infectious milky grab object.
+Strain of fathnach milk is "Fathnach".
+Usedesc of fathnach milk is "[breastmilk use]".
+Scent of fathnach milk is "[breastmilk smell]".
 
 
 Table of Game Objects (continued)

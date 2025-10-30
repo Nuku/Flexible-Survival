@@ -38,11 +38,11 @@ to say ResolveEvent Gourmet Treats:
 	WaitLineBreak;
 	if T is 1:
 		say "[BakeryHusky]";
-	if T is 2:
+	else if T is 2:
 		say "[BakeryGShep]";
-	if T is 3:
+	else if T is 3:
 		say "[BakeryChocLab]";
-	if T is 4:
+	else if T is 4:
 		say "[BakeryRetriever]";
 	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     Having dealt with the intruder, the canines return to the other survivor, and as you lay beaten on the floor, you hear the poor fellow begin moaning. The longer you listen, the more his cries begin to shift to submission. The last thing you hear before slipping from consciousness is his cry of ecstasy mingled with his captors['] howls of pleasure.";
@@ -728,13 +728,13 @@ to say FrancoisBakingMenu:
 				else if title entry is "gingerbread": [gingerbread - eggnog + pixie dust + blue gel]
 					if egg nog is owned and pixie dust is owned and blue gel is owned:
 						now sextablerun is 1;
-						say "     Francois takes the egg nog, pixie dust, and blue gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a tray full of small colorful gingerbread cookies. He offers you a couple before placing the rest into one of his displays.";
+						say "     Francois takes the eggnog, pixie dust, and blue gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a tray full of small colorful gingerbread cookies. He offers you a couple before placing the rest into one of his displays.";
 						ItemLoss egg nog by 1;
 						ItemLoss pixie dust by 1;
 						ItemLoss blue gel by 1;
 						ItemGain gingerbread by 2;
 					else:
-						say "You do not have the required ingredients: egg nog, pixie dust, and blue gel.";
+						say "You do not have the required ingredients: eggnog, pixie dust, and blue gel.";
 				else if title entry is "cheesecake": [cheesecake - cheese + pixie dust + pink gel]
 					if cheese is owned and pixie dust is owned and pink gel is owned:
 						now sextablerun is 1;
@@ -921,7 +921,7 @@ to say vin-coeurGet:
 	say "     Feeling strangely heavy, you give Francois your thoughts on the new dish before pushing yourself away from the counter to stand. Francois['] bizarre expression as you stand catches you slightly off guard, and looking around you realize that rather than pushing yourself away from the counter, you've moved the entire counter away from yourself. You apologize and do your best to move the counter back into position before pondering this strange weight behind your muscles. Perhaps this unusual side effect might be useful in dealing with the creatures out in the city?";
 
 to say gingerbreadGet:
-	say "     After taking a quick shot of the eggnog, Francois scoops the pixie dust and blue gel with a sparkle in his eye. Obviously inspired somehow by the egg nog, he eagerly rushes off to his kitchen to get started. The warm scent of ginger and cinnamon fills the bakery as Francois works, making your mouth water in anticipations until he returns with a tray of small cookies. Francois places a couple of them on a dish in front of you with a smile. Would you like to test them now? (Y/N)[line break]";
+	say "     After taking a quick shot of the eggnog, Francois scoops the pixie dust and blue gel with a sparkle in his eye. Obviously inspired somehow by the eggnog, he eagerly rushes off to his kitchen to get started. The warm scent of ginger and cinnamon fills the bakery as Francois works, making your mouth water in anticipations until he returns with a tray of small cookies. Francois places a couple of them on a dish in front of you with a smile. Would you like to test them now? (Y/N)[line break]";
 	if Player consents:
 		say "[gingerbread Use]";
 		say "'Oh là!' Francois exclaims as he watches your changes slow to and end. 'I hope you're not still hungry,' he says with a silly grin as he eyes your altered form.";
@@ -1000,7 +1000,7 @@ understand "creme abondante" as crème abondante.
 
 to say crème abondante Use:
 	say "     Biting into the crème abondante, your mouth is filled with sweet strawberry cream. Savoring the rich mousse and fresh pastry, you finish the treat in several slow, deliberate bites[run paragraph on]";
-	if ("Male Preferred" is listed in feats of Player and "Breasts" is not listed in feats of Player) or ("Passing Grade Chest" is listed in feats of Player and Nipple Count of Player > 7) or ("One Pair" is listed in feats of Player and Breast Size of Player > 25) or "Flat Chested" is listed in feats of Player:
+	if ("Male Preferred" is listed in feats of Player and "Breasts" is not listed in feats of Player) or (("One Pair" is listed in feats of Player or Nipple Count of Player > 7) and ("Passing Grade Chest" is listed in feats of Player or Breast Size of Player > 25)) or "Flat Chested" is listed in feats of Player:
 		say ". After finishing the last bite of your snack, a rumbling builds in your belly. Clearly your body doesn't agree with something about the treat, but it sure tasted great.";
 	else:
 		say ". As you swallow the last bite, a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your chest[run paragraph on]";
@@ -1009,7 +1009,6 @@ to say crème abondante Use:
 			increase Nipple Count of Player by 2;
 		if Breast Size of Player < 26 and "Passing Grade Chest" is not listed in feats of Player:
 			follow the breast descr rule;
-			[let oldbreast be descr;]
 			say " and you [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [descr] breasts[run paragraph on]";
 			increase Breast Size of Player by 2;
 			if Breast Size of Player > 26, now Breast Size of Player is 26;
@@ -1051,7 +1050,7 @@ to say lollicock Use:
 		if Player consents:
 			say "     Stripping your gear and finding a comfortable place to stop and really enjoy this treat, you slowly lick along the length of the candy cock, wetting its surface while you begin teasing your womanly folds with your free hand. Once both you and the treat are sufficiently lubricated, you take one last taste of the sweet and salty candy before plunging it into your drooling cunt. You moan loudly as you drive the rigid length into yourself, your quivering pussy leaking a sticky mixture of sugar and your own feminine juices as you fuck yourself to a powerful climax.";
 			say "     Sliding the sticky candy cock out of yourself with a wet slurp, you bask in your afterglow as you wrap your lips around the sugary treat, savoring the musky flavor of your own cum mingling with its sweet and salty taste.";
-			NPCSexAftermath Player receives "PussyDildoFuck" from Player;
+			CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Human";
 			now lollicockDildo is 1;
 	if lollicockDildo is not 1:
 		let lollicockCheck be 0;

@@ -21,11 +21,11 @@ to say losetoCumGirl:
 			increase CumGirlFed by Ball Size of Player;
 		else:
 			increase CumGirlFed by 2;
-		if "Modest Organs" is not listed in feats of Player and "Female Preferred" is not listed in feats of Player:
+		if "Modest Organs" is not listed in feats of Player and Player is not FemalePreferred:
 			if Cock Length of Player < ( 5 + cumgirlfed ): [range 6-40]
 				now CGFC is a random number from 0 to 2;
 				increase Cock Length of Player by CGFC;
-			if Ball Size of Player < 6 and a random chance of 1 in 2 succeeds:
+			if Ball Size of Player < 7 and a random chance of 1 in 2 succeeds:
 				now CGFB is a random number from 0 to 1;
 				BallsGrow Player by CGFB;
 			Follow the cock descr rule;

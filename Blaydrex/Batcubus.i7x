@@ -270,10 +270,10 @@ This is the Batcubus Infection rule:
 		else:
 			say "     Life as a batcubus proves fun. Every time you find someone you enjoy all you have to do is kiss them and they are putty in your hands. Thanks to this you have a good life, letting you have everything you want, never needing to work a day in your life";
 			if Player is herm:
-				say "     You spend your days fighting the urge to lick your lips. Being one gender or the other would allow you to instinctively lick them safely, but the combined lust of your female and male sex organs would be too much. A single lick could send you into a sexual fury. Last time it happened you tried to turn a whole town into batcubuses. Hopefully one day someone can find out how to get this lipstick off you.";
+				say ". You spend your days fighting the urge to lick your lips. Being one gender or the other would allow you to instinctively lick them safely, but the combined lust of your female and male sex organs would be too much. A single lick could send you into a sexual fury. Last time it happened you tried to turn a whole town into batcubuses. Hopefully one day someone can find out how to get this lipstick off you.";
 			else if Player is male:
-				say "     You find that having a cock isn't as fun as having a slavering cunt like most other batcubuses, but you make do. Your cock is insatiable, no matter how much you cum and fuck. One day you find a tigress hooker, who takes an interest in you. She wastes no time in raping you and dominating you until you submit to her. She claims you as her own and she is actually able to keep up with your sex drive, so it works out. You spend the rest of your days happily mated to her.";
-			[else:
-				say "...";]
+				say ". You find that having a cock isn't as fun as having a slavering cunt like most other batcubuses, but you make do. Your cock is insatiable, no matter how much you cum and fuck. One day you find a tigress hooker, who takes an interest in you. She wastes no time in raping you and dominating you until you submit to her. She claims you as her own and she is actually able to keep up with your sex drive, so it works out. You spend the rest of your days happily mated to her.";
+			else:
+				say "...";
 
 Batcubus ends here.

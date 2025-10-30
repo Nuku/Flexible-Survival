@@ -12,6 +12,7 @@ equinoidstatus is a number that varies. equinoidstatus is usually 0.
 to say equine attack:
 	if equinoiddefeat is 0: [First time losing to a horse]
 		say "     The horse grabs you and hefts you up towards her huge breasts, pressing your face into a thick teat. The nipple seems to expand against you, becoming long as she nudges you and orders you to drink. Not having much choice, you open your mouth and take it in. It's warm and firm, and she soon begins to lactate for you. Her milk is thick and sweet and fills your body with soothing tingles from head to foot. As you drink, she speaks, 'You are but an infant to our people, a troublesome, bawling child.' Your belly filled, she drops you to the ground roughly, then turns and walks off. 'And stay away, outsider.'";
+		PlayerDrink 10;
 		now equinoiddefeat is 1;
 		if equinoidstatus < 4 and equinoidstatus > 0, decrease equinoidstatus by 1;
 	else:
@@ -21,7 +22,7 @@ to say equine attack:
 					say "     She flips you over onto your belly and hefts your ass up into the air before yanking your clothes down to your knees. You look over your shoulder just in time to see her grab your [TailSpeciesName of Player in lower case] ass and pull it back towards a frighteningly erect horse cock. It pushes against your [cunt size desc of Player] petals, then rudely inches in past them. Her grip is like velvet covered iron, not allowing you to escape from the sudden pain of the huge member invading your snatch. She thumps forward, starting to rock despite the resistance, using those hugely muscled hips of hers to stretch you.";
 					say "     As she pistons into you, the pain begins to slowly ebb as pleasure creeps in. You can feel your passage growing damp and hot as she gives your ass a firm swat. 'Dirty outside wench,' she growls in an ear like a curse as she pulls you back against a rough shove, slamming her hips into yours, the shaft feeling like it's pushing into your belly from the inside. You feel the potent tool swell, then explode in terrific waves of heat into your womb, filling you to the brim before overflowing with gallons of seed.";
 					if Player is not MalePreferred and ( "Modest Organs" is not listed in feats of Player and Cunt Depth of Player > 7 ), increase Cunt Depth of Player by 1;
-					if Player is not MalePreferred and ( "Modest Organs" is not listed in feats of Player and Cunt Tightness of Player > 7 ), increase Cunt Tightness of Player by 2;
+					if Player is not MalePreferred and ( "Modest Organs" is not listed in feats of Player and Cunt Tightness of Player > 7 ), increase Cunt Tightness of Player by 1;
 				else:
 					say "     She hefts up your body, one hand sliding along one of your thighs towards the knee, lifting that knee up and exposing your [cunt size desc of Player] sex to her view. She lines herself up, then slides easily into your wet cunt, rocking against you. Despite the hugeness of her equine member, your body sucks it up eagerly, squelching in loud wet sounds with every inward jab as she begins to pant and snort like a stallion winning a race. She grabs at your belly from behind with one hand, the other still holding your knee up as she makes your body jiggle and quake with the force of her rutting. Her vigorous bucking brings immense pleasure to you both as your accommodating form welcomes that flat-headed shaft into its perfect embrace, squeezing along it as she crashes into you. She pushes in to the hilt, her heavy balls radiating heat across your thighs as they contract powerfully. Your belly swells as gallons of thick horse cum flood into your waiting passage. The horse woman neighs her approval, then nips an ear. 'Perhaps there is a place for you,' she admits grudgingly before setting you down. [one of]'I could always use another servant.'[or]'You might make an adequate breeder for the herd.'[or]'You'd make a fine broodmare.'[at random]";
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Black Equinoid";
@@ -46,18 +47,18 @@ to say beattheequinoid:
 	if equinoidstatus is 4:
 		say "[equinoidcampinvite]"; [Invite to visit the black equinoid camp. See the Equinoid Camp file]
 	else if HP of Roman is 8: [Football team recruits quest. Lower priority than Equinoid Camp]
-		say "     [one of]As you look at the hermaphrodite, you remember Roman's request. You mention why you are here, in the hopes that this creature is the one that you are looking for. 'Gorillas? Ah, yes. They try to come around from time to time, as if they could tread on our herd lands freely. I think I wanted to join them, but my memories are all fuzzy. And who would join these weaklings anyway.'[or]You recognize the equinoid as the one Roman wants you to recruit. 'You again,' the horse says as she recognizes you too. 'Trying to convince me to quit my brethren once again?'[stopping]";
+		say "     [one of]As you look at the hermaphrodite, you remember Roman's request. You mention why you are here, in the hopes that this creature is the one that you are looking for. 'Gorillas? Ah, yes. They try to come around from time to time, as if they could tread on our herd lands freely. I think I wanted to join them, but my memories are all fuzzy. And who would join those weaklings anyway.'[or]You recognize the equinoid as the one Roman wants you to recruit. 'You again,' the horse says as she recognizes you too. 'Trying to convince me to quit my brethren once again?'[stopping]";
 		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		increase bonus by XP of Roman;
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
 		increase diceroll by bonus;
-		if diceroll > 16:
+		if diceroll > 15:
 			say "     You entice the equinoid with some sweet words. The gorillas want your strength, you say. They want someone strong to teach them. Besides, this would be the occasion to pass the message that these parts are yours, and prevent further trespassing. 'Mmm. You have a point,' the horse-herm says. 'They really have no stamina at all. They could not keep up with us for even a single hour. Very well. I will ask Nakoma to be sent to your Camp, as an emissary. I will shape up these apes while I'm at it.'";
 			say "     She trots away, leaving you free to report your success to Roman, at the football field.";
 			now HP of Roman is 9;
 		else:
-			say "     'Don't try to use sweet words on me!' the horse-herm says, as you try to flatter her. 'I would rather be caught dead than spend time among these weaklings, even if you beat me.' With these angry words, she stands back up and limps away. You will have to try again, and be more careful with your words next time.";
+			say "     'Don't try to use sweet words on me!' the horse-herm says, as you try to flatter her. 'I would rather be caught dead than spend time among those weaklings, even if you beat me.' With these angry words, she stands back up and limps away. You will have to try again, and be more careful with your words next time.";
 
 Section 2 - Creature Insertion
 

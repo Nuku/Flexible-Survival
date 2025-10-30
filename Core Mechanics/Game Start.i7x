@@ -56,6 +56,7 @@ Scenario is a text that varies. [chosen scenario]
 Started is a number that varies.
 
 RestoreMode is a truth state that varies. RestoreMode is usually false. [for restoring a save directly from the start menu]
+RestoreSide is a number that varies. [default graphics window side for restore using default settings]
 
 Part 1 - Game Start Autofires
 
@@ -92,12 +93,15 @@ To regularstart: [normal start method]
 		say "(12) [link]Graphics[as]12[end link] - [bold type][if NewGraphicsInteger is 1]Inline[else if NewGraphicsInteger is 2]Side-Window[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
 		say "(13) [link]Inventory Columns[as]13[end link] - [bold type][invcolumns][roman type][line break]";
 		say "[line break]";
-		say "(99) [link]Restore a save[as]99[end link][line break]";
+		say "(97) [link]Restore Using Default Settings[as]97[end link] (Right)[line break]";
+		say "(98) [link]Restore Using Default Settings[as]98[end link] (Left)[line break]";
+		say "(99) [link]Restore A Save[as]99[end link][line break]";
+		say "[line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
 			say "(0-13)>[run paragraph on]";
 			get a number;
-			if ( calcnumber >= 0 and calcnumber <= 13 ) or calcnumber is 99:
+			if ( calcnumber >= 0 and calcnumber <= 13 ) or ( calcnumber >= 97 and calcnumber <= 99 ):
 				break;
 			else:
 				say "Invalid Entry";
@@ -148,14 +152,42 @@ To regularstart: [normal start method]
 					now NewGraphicsInteger is 2; [side window]
 			-- 13:
 				say "[set_invcolumns]";
-			-- 99:
+			-- 97:
 				say "Confirm restore?";
 				if Player consents:
 					now RestoreMode is true;
+					now RestoreSide is 1;
 					say "[silent_start]";
 					now Trixieexit is 1;
 					if RestoreMode is true:
 						now RestoreMode is false;
+						now RestoreSide is 0;
+						try restoring the game;
+						if MaxHP of Player is 0:
+							try restarting the game;
+			-- 98:
+				say "Confirm restore?";
+				if Player consents:
+					now RestoreMode is true;
+					now RestoreSide is 2;
+					say "[silent_start]";
+					now Trixieexit is 1;
+					if RestoreMode is true:
+						now RestoreMode is false;
+						now RestoreSide is 0;
+						try restoring the game;
+						if MaxHP of Player is 0:
+							try restarting the game;
+			-- 99:
+				say "Confirm restore?";
+				if Player consents:
+					now RestoreMode is true;
+					now RestoreSide is 0;
+					say "[silent_start]";
+					now Trixieexit is 1;
+					if RestoreMode is true:
+						now RestoreMode is false;
+						now RestoreSide is 0;
 						try restoring the game;
 						if MaxHP of Player is 0:
 							try restarting the game;
@@ -219,7 +251,7 @@ to say gsopt_start:
 			else:
 				say "Invalid Entry. Please enter a number between 0 and 3.";
 		now NewGraphicsPosition is calcnumber;
-		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around [link]30[end link].[line break]";
+		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
 		while 1 is 1:
 			say "(5-90)>[run paragraph on]";
 			get a number;
@@ -564,51 +596,59 @@ to say silent_start:
 		weakrandominfect;
 		weakrandominfect;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-	[Code for letting player select graphics window size]
-	say "[bold type]Graphic Settings[roman type][line break]";
-	say "Before restoring, please specify the graphic settings.[line break]";
-	say "[bold type] [link]No graphics[as]1[end link] - 1 [roman type][line break]";
-	say "[bold type] [link]Old inline graphics only[as]2[end link] - 2 [roman type][line break]";
-	say "[bold type] [link]New graphics side-window[as]3[end link] - 3 [roman type][line break]";
-	while 1 is 1:
-		say "Please enter the number that matches your choice (1-3)>[run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber < 4:
-			break;
-		else:
-			say "Invalid Entry. Please enter a number between 1 and 3";
-	now NewGraphicsInteger is calcnumber - 1; [Direct set]
-	if NewGraphicsInteger is 1: [now evaluate]
-		now graphics is true;
-		now NewGraphics is false;
-	else if NewGraphicsInteger is 2:
+	if RestoreMode is true and RestoreSide > 0: [use default graphics window size and position]
 		now graphics is true;
 		now NewGraphics is true;
-	else if NewGraphicsInteger is 0:
-		now graphics is false;
-		now NewGraphics is false;
+		now NewGraphicsPosition is RestoreSide - 1;
+		now NewGraphicsRatio is 30;
+		now RestoreSide is 0;
+	else:
+		[Code for letting player select graphics window size]
+		say "[bold type]Graphic Settings[roman type][line break]";
+		say "Before restoring, please specify the graphic settings.[line break]";
+		say "[bold type] [link]No graphics[as]1[end link] - 1 [roman type][line break]";
+		say "[bold type] [link]Old inline graphics only[as]2[end link] - 2 [roman type][line break]";
+		say "[bold type] [link]New graphics side-window[as]3[end link] - 3 [roman type][line break]";
+		while 1 is 1:
+			say "Please enter the number that matches your choice (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber < 4:
+				break;
+			else:
+				say "Invalid Entry. Please enter a number between 1 and 3";
+		now NewGraphicsInteger is calcnumber - 1; [Direct set]
+		if NewGraphicsInteger is 1: [now evaluate]
+			now graphics is true;
+			now NewGraphics is false;
+		else if NewGraphicsInteger is 2:
+			now graphics is true;
+			now NewGraphics is true;
+		else if NewGraphicsInteger is 0:
+			now graphics is false;
+			now NewGraphics is false;
+		if NewGraphics is true: [Defined when play begins below, but MUST be here to alter the view when restoring from the menu]
+			say "[bold type]Graphic Window Position and Proportion[roman type][line break]";
+			say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.[line break]";
+			say "Please choose the position value now. (0 = [link]right side[as]0[end link], 1 = [link]left side[as]1[end link], 2 = [link]above[as]2[end link], 3 = [link]below[as]3[end link])[line break]";
+			while 1 is 1:
+				say "(0-3)>[run paragraph on]";
+				get a number;
+				if calcnumber > -1 and calcnumber < 4:
+					break;
+				else:
+					say "Invalid Entry. Please enter a number between 0 and 3.";
+			now NewGraphicsPosition is calcnumber;
+			say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
+			while 1 is 1:
+				say "(5-90)>[run paragraph on]";
+				get a number;
+				if calcnumber > 4 and calcnumber < 91:
+					break;
+				else:
+					say "Invalid Entry. Please enter a number between 5 and 90.";
+			now NewGraphicsRatio is calcnumber;
+			clear the screen;
 	if NewGraphics is true: [Defined when play begins below, but MUST be here to alter the view when restoring from the menu]
-		say "[bold type]Graphic Window Position and Proportion[roman type][line break]";
-		say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.[line break]";
-		say "Please choose the position value now. (0 = [link]right side[as]0[end link], 1 = [link]left side[as]1[end link], 2 = [link]above[as]2[end link], 3 = [link]below[as]3[end link])[line break]";
-		while 1 is 1:
-			say "(0-3)>[run paragraph on]";
-			get a number;
-			if calcnumber > -1 and calcnumber < 4:
-				break;
-			else:
-				say "Invalid Entry. Please enter a number between 0 and 3.";
-		now NewGraphicsPosition is calcnumber;
-		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around [link]30[end link].[line break]";
-		while 1 is 1:
-			say "(5-90)>[run paragraph on]";
-			get a number;
-			if calcnumber > 4 and calcnumber < 91:
-				break;
-			else:
-				say "Invalid Entry. Please enter a number between 5 and 90.";
-		now NewGraphicsRatio is calcnumber;
-		clear the screen;
 		now the graphics window proportion is NewGraphicsRatio;
 		if NewGraphicsPosition is:
 			-- 0:
