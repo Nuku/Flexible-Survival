@@ -56,33 +56,20 @@ This is the turnpass rule:
 		increase HP of Player by (level of Player divided by 3);
 	if "Rapid Healing" is listed in feats of Player:
 		increase HP of Player by 2;
-	let yy be 1;
-	if "Singular" is listed in feats of Player and a random chance of 1 in yy succeeds:
-		let z be 0;
+	if "Singular" is listed in feats of Player:
+		let z be 1;
 		if FaceName of Player is BodyName of Player:
-			now z is z;
-		else:
-			now z is 1;
-		if TailName of Player is BodyName of Player:
-			now z is z;
-		else:
-			now z is 1;
-		if SkinName of Player is BodyName of Player:
-			now z is z;
-		else:
-			now z is 1;
-		if CockName of Player is BodyName of Player:
-			now z is z;
-		else:
-			now z is 1;
+			if TailName of Player is BodyName of Player:
+				if SkinName of Player is BodyName of Player:
+					if CockName of Player is BodyName of Player:
+						now z is 0;
 		if BodyName of Player is "Human" or ( Resolution of Secure Area is 2 and humanity of Player > 49 ): [blocked for humans and active shifters]
 			now z is 0;
 		if z is 1:
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y from the Table of Random Critters;
 				if Name entry exactly matches the text BodyName of Player, case insensitively:
-					if ( there is no resbypass in row MonsterID of Table of Random Critters or resbypass entry is false ) and ( there is no non-infectious in row MonsterID of Table of Random Critters or non-infectious entry is false ):
-						now MonsterID is y;
+					if ( there is no resbypass in row y of Table of Random Critters or resbypass entry is false ) and ( there is no non-infectious in row y of Table of Random Critters or non-infectious entry is false ):
 						say "You can feel the nanites inside you working voraciously to convert your flesh to one whole form.";
 						now researchbypass is 1;
 						infect;
@@ -111,21 +98,21 @@ This is the turnpass rule:
 			if CockName of Player is not "Tanuki" and player is not internalBalls:
 				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
 				now balloversize is 1 + (dexterity of Player / 10 );
-				say "     Your balls, are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
+				say "     Your balls are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
 		else if Ball Size of Player >= 7:
 			if CockName of Player is not "Tanuki" and player is not internalBalls:
 				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
 				now balloversize is 1 + (dexterity of Player / 10 );
 				say "     Your balls, huge even when compared to your huge frame, are so massive and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
 	else:
-		if ( ( scalevalue of Player is 1 or scalevalue of Player is 2 ) and Ball Size of Player < 4 ) or ( ( scalevalue of Player is 3 or scalevalue of Player is 4 ) and Ball Size of Player < 6 ) or ( Ball Size of Player < 7 ):
+		if ( ( scalevalue of Player is 1 or scalevalue of Player is 2 ) and Ball Size of Player < 4 ) or ( ( scalevalue of Player is 3 or scalevalue of Player is 4 ) and Ball Size of Player < 6 ) or ( scalevalue of Player > 4 and Ball Size of Player < 7 ):
 			increase dexterity of Player by balloversize;
 			now balloversize is 0;
 			say "     Your balls, no longer quite so huge compared to your [if scalevalue of Player is not 3][Body Size Adjective of Player] [end if]body, no longer hinder you. Your legs definitely feel better for not having to carry such a heavy weight anymore.";
 		else if CockName of Player is "Tanuki":
 			increase dexterity of Player by balloversize;
 			now balloversize is 0;
-			say "     Your mystical, Tanuki nature allows you to carry your oversize balls with ease, no longer hindered by their massive size.";
+			say "     Your mystical, Tanuki nature allows you to carry your oversized balls with ease, no longer hindered by their massive size.";
 		else if Player is internalBalls:
 			increase dexterity of Player by balloversize;
 			now balloversize is 0;
@@ -185,20 +172,20 @@ This is the turnpass rule:
 				increase Intelligence of Player by 1;
 				increase hunger of Player by 3;
 				increase thirst of Player by 5;
-				say "Your body strives to restore your mental functions. You stomach churns and you sweat profusely from the effort of this process. [bold type]Intelligence increased by 1.[roman type][line break]";
+				say "Your body strives to restore your mental functions. Your stomach churns and you sweat profusely from the effort of this process. [bold type]Intelligence increased by 1.[roman type][line break]";
 				now restoration is 1;
 			if Charisma of Player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Charisma of Player by 1;
 				increase hunger of Player by 3;
 				increase thirst of Player by 5;
 				now restoration is 1;
-				say "Your body strives to restore your natural charm and allure. You stomach churns and you sweat profusely from the effort of this process. [bold type]Charisma increased by 1.[roman type][line break]";
+				say "Your body strives to restore your natural charm and allure. Your stomach churns and you sweat profusely from the effort of this process. [bold type]Charisma increased by 1.[roman type][line break]";
 				now restoration is 1;
 			if Perception of Player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Perception of Player by 1;
 				increase hunger of Player by 3;
 				increase thirst of Player by 5;
-				say "Your body strives to restore your enhance perceptive abilities. You stomach churns and you sweat profusely from the effort of this process. [bold type]Perception increased by 1.[roman type][line break]";
+				say "Your body strives to restore your enhanced perceptive abilities. Your stomach churns and you sweat profusely from the effort of this process. [bold type]Perception increased by 1.[roman type][line break]";
 				now restoration is 1;
 		if hunger of Player > 90:
 			say "You will die if you don't eat soon.";
@@ -433,26 +420,15 @@ an everyturn rule:
 					increase PresentChance by 2;
 				else if number of filled rows in the Table of PlayerBunkerChildren > 1:
 					increase PresentChance by 1;
-				if a random chance of PresentChance in 10 succeeds: [got a present]
+				if a random chance of PresentChance in 15 succeeds: [got a present]
 					add "offspring present" to invent of Bunker;
 			if HP of Blake > 50 and HP of Blake < 90 and a random chance of 1 in 2 succeeds and Energy of Blake < 9: [Blake whoring]
 				increase Energy of Blake by 1; [add on one profit share of whoring him out]
 		now LastTurnDay is true;
-		if WerewolfWatching is true: [she's only out at night]
-			now WerewolfWatching is false;
 	else if daytimer is night: [currently night]
 		if LastTurnDay is true: [last turn was day]
 			say "[bold type]The sun sets and darkness covers the city.[roman type][line break]";
 		now LastTurnDay is false;
-		if Player is in Urban Forest and WerewolfRelationship is 0:
-			if WerewolfWatching is false: [initial message]
-				say "     Here between the untamed trees of the Urban Forest, the shadows seem especially deep and seem to play tricks on your eyes. Every little movement of branches and leaves draws your gaze, and the ominous feeling of being watched fills you with tension. The sensation of something's predatory gaze resting on you can't be all in your head, can it?";
-				now WerewolfWatching is true;
-			else: [repeat message for following turns]
-				if a random chance of 1 in 3 succeeds:
-					say "     You [italic type]still[roman type] can't shake the feeling that something is watching you. A cold shiver runs down your back.";
-		else:
-			now WerewolfWatching is false;
 
 Chapter 5 - Date
 
@@ -655,7 +631,7 @@ to guesstimate time at (x - a number):
 	if x < 0:
 		say "ERROR: Negative time period.";
 	else if x is 0:
-		say "under three hour";
+		say "under three hours";
 	else if x <= 10:
 		say "[x * 3] hours"; [up to 30 hrs]
 	else if x <= 14:
@@ -673,7 +649,7 @@ Chapter 7 - Extra Play-Time
 
 To Extend game by (x - a number):
 	decrease targetturns by x;
-	say "[bold type]((You have earned additional time: [x divided by 8] days, [(remainder after dividing x by 8) times 3] hours))[roman type][line break]";
+	say "[bold type](You have earned additional time: [x divided by 8] days, [(remainder after dividing x by 8) times 3] hours.)[roman type][line break]";
 
 Chapter 8 - Endless Play
 

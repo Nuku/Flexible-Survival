@@ -9,6 +9,7 @@ a postimport rule: [this adds the newly named navpoint]
 	if Peacocked > 7 and Peacocked < 98: [values set this way to future proof it after changing teh room name in code. Please use values above 98 for content that SHOULDNT link this area.]
 		AddNavPoint Argos's Antiques;
 	move Dmitri to Argos's Antiques;
+	now OralVirgin of Dmitri is false;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -225,7 +226,7 @@ PlayerRomanced of Dmitri is false.
 PlayerFriended of Dmitri is false.
 PlayerControlled of Dmitri is false.
 PlayerFucked of Dmitri is false.
-OralVirgin of Dmitri is true.
+OralVirgin of Dmitri is false.
 Virgin of Dmitri is true.
 AnalVirgin of Dmitri is true.
 PenileVirgin of Dmitri is false.
@@ -314,11 +315,8 @@ to say DmitriSexMenu:
 					say "[DmitriSex1]";
 				if (nam is "Suck Dmitri off"):
 					say "[DmitriSex2]";
-[
 				if (nam is "Fuck the captivating bird"):
 					say "[DmitriSex3]";
-]
-[ The above content is commented out until written to prevent frustrating placeholder text. ]
 				if (nam is "Take Dmitri's shaft in your pussy"):
 					say "[DmitriSex4]";
 				if (nam is "Take Dmitri's shaft in your ass"):

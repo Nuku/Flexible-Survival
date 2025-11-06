@@ -5,13 +5,15 @@ Section 1 - Garbage Can Shield (Fallen Survivor Event)
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Garbage Can Shield"	"This aluminum garbage can lid has been transformed into an improvised shield by riveting two loops of leather to the inside, perfect for sticking your forearm through. It is painted gold with a bold, crimson 'V' across the surface. Looks like the paint ran down its front a bit before drying, giving the 'V' a bleeding look."	4	garbage can shield
+"Garbage Can Shield"	"This aluminum garbage can lid has been transformed into an improvised shield by riveting two loops of leather to the inside, perfect for sticking your forearm through. It is painted gold with a bold, crimson [']V['] across the surface. Looks like the paint ran down its front a bit before drying, giving the [']V['] a bleeding look."	4	garbage can shield
 
 garbage can shield is equipment. It is not temporary.
+Taur-compatible of garbage can shield is true.
 The AC of garbage can shield is 28.
 The effectiveness of garbage can shield is 30.
+Traits of garbage can shield is {"adventurous"}.
 The placement of garbage can shield is "body".
-The descmod of garbage can shield is "You hold an aluminum garbage can lid strapped to your forearm as an improvised shield. It is painted gold with a bold, crimson 'V' across the surface. Looks like the paint ran down its front a bit before drying, giving the 'V' a bleeding look.".
+The descmod of garbage can shield is "You hold an aluminum garbage can lid strapped to your forearm as an improvised shield. It is painted gold with a bold, crimson [']V['] across the surface. Looks like the paint ran down its front a bit before drying, giving the [']V['] a bleeding look.".
 The slot of garbage can shield is "shield".
 
 the scent of garbage can shield is "Despite everything that you try to do about it, a slight scent of garbage seems to be an inescapable part of this makeshift shield. But hey... one makes use of what you get.".
@@ -25,7 +27,7 @@ ResolveFunction of Fallen Survivor is "[ResolveEvent Fallen Survivor]".
 Sarea of Fallen Survivor is "Allzones".
 
 to say ResolveEvent Fallen Survivor:
-	say "     You come across a succumbed survivor slumped on the pavement with their back to a crumbling building. The motionless yet still breathing body fails to react to anything you do to try and snap them back to consciousness. Dragging the man under a nearby piece of intact roof, you place him in a way that he at least won't be quite as exposed or get rained upon. Still, his eyes do not even focus on you as you open them, just staring off into empty space. Your inability to help this person or even get any answers of what happened to him causes you to feel intensely uncomfortable, and just being close to the body seems to sap your drive and go on and struggle to survive. Maybe you should just... lay down with him. All of this is pointless, isn't it? You're never going to get out of - *CRASH, YOWL*[line break]";
+	say "     You come across a succumbed survivor slumped on the pavement with their back to a crumbling building. The motionless yet still breathing body fails to react to anything you do to try and snap them back to consciousness. Dragging the man under a nearby piece of intact roof, you place him in a way that he at least won't be quite as exposed or get rained upon. Still, his eyes do not even focus on you as you open them, just staring off into empty space. Your inability to help this person or even get any answers of what happened to him causes you to feel intensely uncomfortable, and just being close to the body seems to sap your drive to go on and struggle to survive. Maybe you should just... lay down with him. All of this is pointless, isn't it? You're never going to get out of - *CRASH, YOWL*[line break]";
 	say "     The sudden metallic noise from behind you makes you jump out of your boots almost, whirling around to see what caused it. You see the tail end of a large house-cat zip around the nearby corner, leaving behind a large disc of metal that must have fallen over as it pushed past it. Upon further examination, you see that it is a garbage can lid - one that has been used to create an improvised shield. There are loops of leather riveted to the inside to slip your forearm through, as well as a painted front. Seems like the survivor had a DIY streak before he succumbed to... whatever got to him. Looking back over to the guy, you realize that you were on the best way to join him in his mind-broken state. Getting into contact seems to have negative side effects. That cat really saved your bacon!";
 	WaitLineBreak;
 	say "     Glancing back over to the mind-broken survivor, you resolve not to get anywhere close to him again. Hmpf, but hey - at least you got a nice shield out of this dreary situation. Then you notice what seems to be a pale, translucent 'grease' stubbornly smeared across the shield, including on the inside. Could this be what put the guy into the state he is in? Possibly... which means even the shield is useless to you. Or could you wipe it off with some of the scattered and ripped articles of clothing ever-present on the abandoned streets? It'd be risky, as you can't know if you'll manage to get it all off, but that still might be worth it, in the current situation.";
@@ -57,12 +59,12 @@ washerenest is a number that varies.
 fellforward is a number that varies.
 
 to say ResolveEvent Sword Nest:
-	say "     You come across the remains of a giant nest [if washerenest is 1]again[end if], probably belonging to gryphons. It is scattered, and sexual fluids of all kinds, not all from gryphons, cover the ground. It looks as if several gangs of different species fought here.. or maybe 'played' as well. The ground is so thoroughly coated with it that you cannot enter without touching it.";
+	say "     You come across the remains of a giant nest [if washerenest is 1]again[end if], probably belonging to gryphons. It is scattered, and sexual fluids of all kinds, not all from gryphons, cover the ground. It looks as if several gangs of different species fought here... or maybe 'played' as well. The ground is so thoroughly coated with it that you cannot enter without touching it.";
 	now washerenest is 1;
 	if Humanity of Player < 60: [falling to the nanites]
 		say "     Your mind feels fuzzy, and you have a strange desire to roll in the muck. Do you submit?";
 		if Player consents:
-			say "     You run and jump into the slimy muck, a sick splot sounding and echoing between the nearby buildings. The slime coats you as you roll with enthusiasm, losing your mind to the infection faster by the minute.";
+			say "     You run and jump into the slimy muck, a sick splat sounding and echoing between the nearby buildings. The slime coats you as you roll with enthusiasm, losing your mind to the infection faster by the minute.";
 			SanLoss 15;
 			weakrandominfect; [most of first set don't affect researcher]
 			weakrandominfect;
@@ -81,18 +83,22 @@ to say ResolveEvent Sword Nest:
 			if Player consents:
 				SanLoss 15;
 				say "     You dip your [FaceSpeciesName of Player in lower case] head into the slime and suck greedily. It sates your hunger and thirst.";
+				PlayerDrink 15;
+				PlayerEat 6;
 				weakrandominfect; [more from second batch affect researcher]
 				weakrandominfect;
 				weakrandominfect;
 				weakrandominfect;
-				weakrandominfect;
-				weakrandominfect;
-				weakrandominfect;
-				weakrandominfect;
 				randominfect;
 				randominfect;
-				randominfect;
-				randominfect;
+				if "Iron Stomach" is not listed in feats of Player:
+					weakrandominfect;
+					weakrandominfect;
+					weakrandominfect;
+					weakrandominfect;
+					randominfect;
+					randominfect;
+				WaitLineBreak;
 				say "     Another desire roars inside your head, causing you to start pulling the sludge up into your hands.";
 				say "     You manage to stop it, but will you let it continue?";
 				if Player consents:
@@ -100,15 +106,16 @@ to say ResolveEvent Sword Nest:
 					say "     You grab the slime in your hands and pour it over your head, and then grab some more, and think about what to do with it next.";
 					if Cunt Count of Player is 1:
 						say "     You take your slime-filled hands and shove them up your waiting cunt, filling it with the sludge.";
-						say "[randomimpreg][randomimpreg][randomimpreg]";
+						say "[randomfimpreg][randomfimpreg][randomfimpreg]";
 						say "     You then shove them up your rear, filling it as well.";
+						say "[randommimpreg][randommimpreg][randommimpreg]";
 					else:
 						say "     You decide to try and drink all of the slime you can, tasting its deliciously dirty flavor.";
 					say "     After a short while, you collapse, corrupt pleasure roaring through your body.";
 					repeat with T running from one to 15:
 						randominfect;
-					wait for any key;
 					now Humanity of Player is 0;
+					wait for any key;
 					end the story saying "Your humanity submits to the sludge nanites, and you go feral.";
 					now battleground is "void";
 					wait for any key;
@@ -117,13 +124,13 @@ to say ResolveEvent Sword Nest:
 				else:
 					say "     You rein in your lusts and desires almost too late.";
 			else:
-				say "     You wisely rein in your desires before they got away with you.";
+				say "     You wisely rein in your desires before they get away with you.";
 		else:
 			say "     You master the desire, and look around paying more attention to detail.";
 	if a random number between one and 20 < Perception of Player:
 		say "     You spot a sword in the middle of the mess, coated so thoroughly with the juices that you suspect it was the target for the raids, and the source of the jubilation of victory. Its metal is cloudy and coated with thick slime, and the pommel is dried cum of some unknown creature, glowing white. It looks like a powerful, but dangerous weapon. Do you want to walk into the mess and take it?";
 		if Player consents:
-			say "     You slosh through the mess, leaving a trail that fill after a couple of seconds. You get to the sword, and place it in your backpack, and trudge back.";
+			say "     You slosh through the mess, leaving a trail that fills after a couple of seconds. You get to the sword, and place it in your backpack, and trudge back.";
 			now fellforward is 1;
 			if a random number between 1 and 25 > Dexterity of Player:
 				say "     On the way, you fall headlong into the slime, and it takes a while to get up. After you emerge, you cough up slime and wipe it off your body.";
@@ -151,7 +158,7 @@ to say ResolveEvent Sword Nest:
 
 An everyturn rule:
 	if the infected sword is wielded:
-		say "[line break]The sword feels slimy in your hand. Maybe you shouldn't be using it. [line break]";
+		say "[line break]The sword feels slimy in your hand. Maybe you shouldn't be using it.[line break]";
 		randominfect;
 		say "The infected sword changes you.[line break]";
 
@@ -178,12 +185,13 @@ Sarea of Destroyed Bushes is "Park".
 numwater is a number that varies.
 
 to say ResolveEvent Destroyed Bushes:
-	say "     You come across a circle of bushes crushed flat against the ground, large pools of cum and juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
+	say "     You come across a circle of bushes crushed flat against the ground, large pools of cum and juices in the revealed space. Horse hoof prints cover the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
 	if Humanity of Player < 50:
 		say "     Do you want to drink from the puddles?";
 		if Player consents:
-			infect "Black Equinoid";
-			infect "Black Equinoid";
+			if "Iron Stomach" is not listed in feats of Player:
+				infect "Black Equinoid";
+				infect "Black Equinoid";
 			PlayerDrink 75;
 		else:
 			say "You leave them alone.";

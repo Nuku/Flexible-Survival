@@ -20,7 +20,7 @@ to say losetobeag:
 		else:
 			say "     He roughly turns you over onto all fours and climbs atop you, sinking his horse-like dong into your pussy. You moan and quickly grow a desperate need to feel his hot cum. Your inner walls quiver and your honeyed juices start to flow as your excitement builds. After a few minutes of steady pounding, he drives hard into you repeatedly, blasting spurt after spurt of thick semen into you. Even as you're cumming, he pushes you off his spent cock and onto the ground before leaving you splayed out on the ground.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Beag";
-	else if Player is not female and a random chance of T in 6 succeeds:
+	else if a random chance of T in 6 succeeds:
 		say "     He roughly turns you over onto all fours and grabs your ass. 'You got no breeding hole, but you'll do nicely, my balls are aching for release,' he says as he climbs atop you, sinking his flared cock into your ass. You groan in discomfort at the sudden penetration, but quickly grow excited as the sweat from his body makes your skin tingle with energy- making every thrust more pleasurable than the last. He grunts into your shoulder, and after a few minutes of steady pounding, he finally loses himself to pleasure- blasting spurt after spurt of thick semen into your ass. Even as you're cumming, he pushes you off his spent cock and onto the ground before sauntering off.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Beag";
 	else:
@@ -121,7 +121,7 @@ when play begins:
 	now HP entry is 77; [ The monster's starting HP. ]
 	now lev entry is 5; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 9; [ Monster's average damage when attacking. ]
-	now area entry is "High Rise"; [ "Outside" "Mall" "Park" "Beach" etc... This determines where the creature will appear as an enemy. "Nowhere" means they can't be "hunted" and won't show up during "explore" commands.]
+	now area entry is "High"; [ "Outside" "Mall" "Park" "Beach" etc... This determines where the creature will appear as an enemy. "Nowhere" means they can't be "hunted" and won't show up during "explore" commands.]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now Cock Length entry is 15; [ Length infection will make cock grow to if cocks. ]
 	now Ball Size entry is 8; [ Cock width, more commonly used for ball size. ]

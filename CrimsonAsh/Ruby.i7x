@@ -28,15 +28,18 @@ Urban Cliff	"Urban Cliff"
 Urban Cliff is a situation.
 ResolveFunction of Urban Cliff is "[ResolveEvent Urban Cliff]".
 Sarea of Urban Cliff is "Capitol".
+Level of Urban Cliff is 9.
 
 when play begins:
+	add Urban Cliff to BadSpots of FurryList;
 	add Urban Cliff to BadSpots of FemaleList;
 
 to say ResolveEvent Urban Cliff:
 	if Resolution of Urban Cliff is 0 or Resolution of Urban Cliff is 99: [first encounter or repeat after postponing]
-		say "     While exploring and walking along the heat scorched, barren ground of the capitol district you turn a corner and find yourself standing at the top end of a steep slope of rock and volcanic ash. Looks like the quakes and eruptions tore up this section of the district particularly bad, creating a cliff that's about 300 feet wide in the middle of the fallen city. A little ways to the side and down the slope, you spot a narrow fissure gaping in the surrounding rock. Curiosity drives you check it out, carefully talking down over the ash and peeking at the opening. The crack in the rock continues into the earth as a sort of tunnel that bends and twists, making it quite hard to tell how deep it will go. Looks dangerous, but it could also be an exciting place to explore...";
+		say "     While exploring and walking along the heat scorched, barren ground of the capitol district you turn a corner and find yourself standing at the top end of a steep slope of rock and volcanic ash. Looks like the quakes and eruptions tore up this section of the district particularly bad, creating a cliff that's about 300 feet wide in the middle of the fallen city. A little ways to the side and down the slope, you spot a narrow fissure gaping in the surrounding rock. Curiosity drives you to check it out, carefully walking down over the ash and peeking at the opening. The crack in the rock continues into the earth as a sort of tunnel that bends and twists, making it quite hard to tell how deep it will go. Looks dangerous, but it could also be an exciting place to explore...";
+		LineBreak;
 		say "     [bold type]Do you want to journey underground?[roman type][line break]";
-		say "     [link](1)[as]1[end link] - Yes, Exploration!";
+		say "     [link](1)[as]1[end link] - Yes, exploration!";
 		say "     [link](2)[as]2[end link] - Not right now.";
 		say "     [link](3)[as]3[end link] - Nope, not ever!";
 		now calcnumber is 0;
@@ -49,13 +52,14 @@ to say ResolveEvent Urban Cliff:
 				say "Invalid choice. Type [link]1[end link] to go in, [link]2[end link] to leave for now or [link]3[end link] to avoid this place.";
 		if calcnumber is 1:
 			LineBreak;
-			say "     Might as well see what lies within the cave for you, and hopefully it'll be nothing bad. Stepping into the opening, you duck under a protruding piece of rock and continue down the natural passage, careful not to lose your balance on the uneven ground. Soon, you reach the bend in the tunnel you saw from outside and it is revealed that it indeed continues on beyond that. Thankfully, there also seems to be some reddish glow illuminating the further passage, as you won't be able to count for light from the outside after this. Moving on, soon arrive at the start of a larger cave. There are some irregular patches of glowing volcanic rock on the walls, floor and ceiling, providing dim lighting that allows you to make out the extent of the roughly sixty foot long and thirty foot wide open space.";
+			say "     Might as well see what lies within the cave for you, and hopefully it'll be nothing bad. Stepping into the opening, you duck under a protruding piece of rock and continue down the natural passage, careful not to lose your balance on the uneven ground. Soon, you reach the bend in the tunnel you saw from outside and it is revealed that it indeed continues on beyond that. Thankfully, there also seems to be some reddish glow illuminating the further passage, as you won't be able to count on light from the outside after this. Moving on, you soon arrive at the start of a larger cave. There are some irregular patches of glowing volcanic rock on the walls, floor and ceiling, providing dim lighting that allows you to make out the extent of the roughly sixty foot long and thirty foot wide open space.";
 			say "     Your eyes get more and more used to the semi-darkness, allowing you to make out some household objects organized deeper into the back of the cave. There's a makeshift bed made of what looks like multiple bear pelts, a couch that seems to be a bit worse for wear after having been shoved and scraped through the passage that led you here, and... that's how far you get before you're suddenly snatched and flung into the middle of the cave by a solidly built red figure coming seemingly out of nowhere. But no, as you spin around and stumble not to fall over, you see that there's a mid-sized alcove just a step or two from where you stood, not easily apparent unless one knows it's there. Your assailant is a tall humanoid, a dragon woman with violet hair running down her head and spine while ending at the point of a long tail. The rest of her is covered in mostly reddish scales while her chest and tummy area sports an orange/red texture.";
 			WaitLineBreak;
 			say "     The female dragon's eyes glow an amber-yellow as she studies you with disdain, which gives you the time to check her out too. She's nearly seven feet tall with clear musculature and definition rippling on her naked body, yet still clearly feminine with shapely curves, D-cup breasts and a draconic slit tucked between her legs. Snapping a muzzle filled with sharp teeth at you, she growls loudly, exuding a plume of dark smoke from her reptilian-like nostrils. 'Looking for a quick score in my home, huh dickhead?! Well you won't find it here!' the angry woman shouts in a rough but feminine voice. Before you can even think of replying, she's already lunging at you, scaled fists raised to punch you into submission!";
 			challenge "Crimson Dragon";
 			if fightoutcome < 20: [player won]
-				say "     The furred dragon stumbles back against one of the walls, scowling as she blinks as if to drive away the starts dancing in front of her eyes. 'Agh! Bastard! You won't... Ugh! Steal from me,' she growls, trying to back away further so she can regain her strength - but with the wall right behind, there is no way to go. Looks like she's at your mercy right now.";
+				say "     The furred dragon stumbles back against one of the walls, scowling as she blinks as if to drive away the stars dancing in front of her eyes. 'Agh! Bastard! You won't... Ugh! Steal from me,' she growls, trying to back away further so she can regain her strength - but with the wall right behind, there is no way to go. Looks like she's at your mercy right now.";
+				LineBreak;
 				say "     [bold type]What do you do now?[roman type][line break]";
 				say "     [link](1)[as]1[end link] - Rape the bitch!";
 				say "     [link](2)[as]2[end link] - Leave. You just wanted to explore anyways.";
@@ -76,17 +80,18 @@ to say ResolveEvent Urban Cliff:
 				else if calcnumber is 2:
 					LineBreak;
 					say "     You turn and walk away, not wanting anything from the dragon creature. A clearly surprised huff can be heard behind you, followed by the woman's voice shouting angrily, 'W-what? You come into my home and beat me up, then just fuck off? Good riddance, bastard! Leave and don't come back, you hear me?!' As you start climbing back up the slope, you wonder if you'll see the furry, scaled woman again, maybe under better circumstances. Surprise visits to her home seem to be out for sure, given her reaction this time, so you make a note not to come here again.";
+					now Resolution of Urban Cliff is 11; [won, left]
 					now Urban Cliff is resolved;
 				else if calcnumber is 3:
 					LineBreak;
-					say "     You back up, holding your hands out in a consoling gesture and quickly declare that you had no intention of fighting, hurting or stealing from her. She grimaces and huffs out a puff of smoke, 'Could'a fooled me jerk. Buttering me up won't make me bend over for you either. I'm not one of those husky sluts whoring around.' Again trying to strike a reasonable tone, you explain that you were only curious about the cave and had no sinister motives beyond that. The dragoness growls in disbelief, still staring at you with hostility, yet as you continue to stand there with open hands, she becomes a little bit less sure about her assumptions. While you wait, your eyes roam over her naked body all of their own accord, taking in the glistening sheen of sweat on her, the taunt abs lined with droplets of perspiration as well as a few cuts and scrapes from your fight. This wakes a little bit of regret at your unneeded fight in you, so you cautiously ask if she needs any help patching up or something.";
-					say "     The dragoness snaps at you, whipping her head up to look directly at you and baring her teeth. 'I don't need your goddamn help asshole,' she says, even while wincing as she pushes herself off from the wall to stand before proud and erect you. 'Hear that?! I do not need you, or anyone else! In this world, one can rely only on themselves!' she says with a snarl, a bit of fiery steam shooting forth from her nostrils as her amber eyes fixate on yours in defiance and anger. Defying her clear hostility you state things are usually easier with friends and those you trust close by. She gives you a mystified look for a moment before returning to her previous anger-filled gaze. 'Pfft, trust what would you know about trust?'";
+					say "     You back up, holding your hands out in a consoling gesture and quickly declare that you had no intention of fighting, hurting or stealing from her. She grimaces and huffs out a puff of smoke, 'Could'a fooled me jerk. Buttering me up won't make me bend over for you either. I'm not one of those husky sluts whoring around.' Again trying to strike a reasonable tone, you explain that you were only curious about the cave and had no sinister motives beyond that. The dragoness growls in disbelief, still staring at you with hostility, yet as you continue to stand there with open hands, she becomes a little bit less sure about her assumptions. While you wait, your eyes roam over her naked body all of their own accord, taking in the glistening sheen of sweat on her, the taut abs lined with droplets of perspiration as well as a few cuts and scrapes from your fight. This wakes a little bit of regret at your unneeded fight in you, so you cautiously ask if she needs any help patching up or something.";
+					say "     The dragoness snaps at you, whipping her head up to look directly at you and baring her teeth. 'I don't need your goddamn help asshole,' she says, even while wincing as she pushes herself off from the wall to stand proud and erect before you. 'Hear that?! I do not need you, or anyone else! In this world, one can rely only on themselves!' she says with a snarl, a bit of fiery steam shooting forth from her nostrils as her amber eyes fixate on yours in defiance and anger. Defying her clear hostility you state things are usually easier with friends and those you trust close by. She gives you a mystified look for a moment before returning to her previous anger-filled gaze. 'Pfft, trust - what would you know about trust?'";
 					WaitLineBreak;
-					say "     Figuring you found a good segue to talk more with her, you begin asking her if you'd like to try being friends, but she cuts you off quickly. 'Enough chat. If you're not here to steal or rape, then leave me alone,' she says abruptly, stepping up to shoo you away. 'And don't come back unless you're bringing a truck of food as an apology for this fucking lump on my head!' she yells mockingly, scowling at you all the way until you pass the bend in the entrance tunnel. Deciding it best to leave for the time being, you keep going until you reach the exit and make your way back up the slope of rocks and ash. Perhaps it'd be best if you returned to the [bold type]Urban Cliff[roman type] with a peace offering. Some food might work, to fit the mocking request she made at the end. Something tells you it's not too late to hopefully make her a friend.";
+					say "     Figuring you found a good segue to talk more with her, you begin asking her if she'd like to try being friends, but she cuts you off quickly. 'Enough chat. If you're not here to steal or rape, then leave me alone,' she says abruptly, stepping up to shoo you away. 'And don't come back unless you're bringing a truck of food as an apology for this fucking lump on my head!' she yells mockingly, scowling at you all the way until you pass the bend in the entrance tunnel. Deciding it best to leave for the time being, you keep going until you reach the exit and make your way back up the slope of rocks and ash. Perhaps it'd be best if you returned to the [bold type]Urban Cliff[roman type] with a peace offering. Some food might work, to fit the mocking request she made at the end. Something tells you it's not too late to hopefully make her a friend.";
 					now Resolution of Urban Cliff is 1; [won, talk]
 					now PlayerMet of Ruby is true;
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
-				say "     You're pushed over and fall onto the cave floor, too exhausted or demoralized to continue the struggle. The dragon woman comes to stand over you, growling and muttering curses under her breath. Your about to explain yourself when a sharp kick hits you in the side. The dragon woman then picks you up by the scruff of your neck and begins to drag you back out of the cave. 'Fucking thieves,' you hear her mumble angrily to herself, and with a small puff of smoke that accompanies a disgusted snort from her, the strong woman tosses you down the slope of ash and rock. You curl up to roll and hopefully minimize the bruises that your undignified descent creates, though the landing at the bottom still leaves you seeing stars for a little while.";
+				say "     You're pushed over and fall onto the cave floor, too exhausted or demoralized to continue the struggle. The dragon woman comes to stand over you, growling and muttering curses under her breath. You're about to explain yourself when a sharp kick hits you in the side. The dragon woman then picks you up by the scruff of your neck and begins to drag you back out of the cave. 'Fucking thieves,' you hear her mumble angrily to herself, and with a small puff of smoke that accompanies a disgusted snort from her, the strong woman tosses you down the slope of ash and rock. You curl up to roll and hopefully minimize the bruises that your undignified descent creates, though the landing at the bottom still leaves you seeing stars for a little while.";
 				say "     Intruder dealt with, the crimson dragoness vanishes back inside what you assume is her home, growling to herself all the way. Well, she didn't rob or rape you, so it could have been worse, you think to yourself as you get up and stumble away in a bit of pain. Making a mental note to avoid this area in the future, you hope you won't run into that furious female anywhere else either...";
 				now Resolution of Urban Cliff is 20; [lost]
 				now Urban Cliff is resolved;
@@ -106,6 +111,7 @@ to say ResolveEvent Urban Cliff:
 	else if Resolution of Urban Cliff is 1:
 		if carried of Food > 0:
 			say "     Arriving back at one of the torn-up sections of the capitol district, you stand at the upper end of a sloping cliff that's about 300 feet wide. A little ways to the side and down the slope lies the cave where you met that red anthro dragoness a while ago. You remember your fight with her, and the grudging talk you had afterwards, ending with her mockingly demanding a whole lot of food as restitution. Knowing that you've got some food you might spare, you wonder if you maybe should visit the woman and give it to her to hopefully make good after your disastrous first meeting.";
+			LineBreak;
 			say "     [bold type]Do you want to visit the dragon in her cave?[roman type][line break]";
 			say "     [link](1)[as]1[end link] - Sure, give her some food.";
 			say "     [link](2)[as]2[end link] - Not right now.";
@@ -132,7 +138,7 @@ to say ResolveEvent Urban Cliff:
 				say "     With a shrug to yourself, you continue on. You can always visit her another time after all.";
 			if calcnumber is 3:
 				LineBreak;
-				say "     You shrug to yourself and put the idea of trying to befriend the dragon out of your mind. Hell, the two of you fight before, how likely is it that she'd just accept you now? Making a mental note to avoid the area in the future, you wander off again.";
+				say "     You shrug to yourself and put the idea of trying to befriend the dragon out of your mind. Hell, the two of you fought before, how likely is it that she'd just accept you now? Making a mental note to avoid the area in the future, you wander off again.";
 				now Resolution of Urban Cliff is 100; [player avoids the place]
 				now Urban Cliff is resolved;
 	else if Resolution of Urban Cliff is 2: [gave her food previously]
@@ -186,7 +192,7 @@ name(text)	PrepFunction(text)
 "Crimson Dragon"	"[PrepCombat_Crimson Dragon]"
 
 to say PrepCombat_Crimson Dragon:
-	say "";
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -450,7 +456,7 @@ instead of fucking Ruby:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You step back from the Ruby, shaking your head slightly as she gives a questioning look.";
+			say "     You step back from Ruby, shaking your head slightly as she gives a questioning look.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
@@ -490,7 +496,6 @@ instead of going down from Ashen Cliff while (Ruby is in Ruby's Cave):
 		now Charisma of Ruby is 2;
 	else if Charisma of Ruby is 2:
 		say "     You return to Ruby's cave, your mind is on what the dragon said last you met her. You wonder silently to yourself in thought as you walk to the entrance of her home and call out for her. You hear nothing for a long while, then her familiar voice rings out. 'Yeah... come in,' she calls meekly. Officially curious you enter her home. Inside you see Ruby has her back turned to you and stays silent as you approach. 'Ruby?' you ask, rounding to the other side of her to face her. Her arms are crossed and her expression is one of conflict. She looks directly at you, her jaw locked for a long moment before she speaks. 'Ah hell, never had to do this before, I...' She shifts her posture, moving her thighs together as she does. A pleasant musk reaches your senses. Ruby huffs. 'To hell with it, I never was subtle.' She moves forward to press her thick scaly lips to yours.";
-		LineBreak;
 		say "     [bold type]How do you react?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Return her affections.";
@@ -524,7 +529,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Ruby's Cave	"Ruby's Cave"
 
-Ruby's Cave is a room.
+Ruby's Cave is a room. It is sleepsafe.
 Ruby's Cave is down from Ashen Cliff.
 Description of Ruby's Cave is "Ruby's humble abode consists of a short tunnel that leads into a natural cave, about sixty by thirty feet in its farthest extent. It is dimly lit by glowing volcanic rock formations and holds some scavenged furniture brought in by the dragoness.".
 

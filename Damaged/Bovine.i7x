@@ -161,7 +161,7 @@ to say BeatTheBovine:
 			increase CowBully by 1;
 	else if Bovine_type is 2:
 		say "     The large bull collapses to the ground, causing a slight shake as his mass settles as he thumps heavily onto his side.";
-		if VictoryOverDaBull < 3:
+		if VictoryOverDaBull is not 3:
 			if BodyName of Player is "Bovine":
 				say "     You look over the fallen body of the large bull, your body drawing you to him, urges within your bovine form calling to you. It would be such a shame to waste such a virile specimen.";
 				say "     [bold type]Do you follow these urges?[roman type][line break]";
@@ -179,7 +179,6 @@ to say BeatTheBovine:
 						infect "Bovine";
 						fimpregchance;
 						fimpregchance;
-						increase VictoryOverDaBull by 1;
 					else if Player is mpreg_ok:
 						say "     You groan as you feel a heat in your butt grow, quickly becoming a fiery need. You shiver and drop to your knees, quickly stripping down and crawling up to the bull creature. Your eyes lock onto the bull's massive [if Mooing > 0]shaft, already erect and leaking pre. You reach forward and take the bull's length in one hand and his giant balls in another, gently stroking his shaft and massaging his balls[else]balls and sheath. You lick your lips and reach forward, taking his balls in one hand and his shaft in another. You begin stroking his shaft and massaging his balls, making the large bull groan as his bovine shaft quickly slides out and swells up[end if]. Soon the large bull's cock is pulsing and leaking a steady flow of pre. You shiver and moan at his scent, your prick dripping with your need. You climb up on top of the large bull and lower your ass onto his thick shaft, grinding up and down its length.";
 						say "     This makes the bull creature beneath you squirm and groan, bucking his hips as much as his weakened body will let him. You whimper and moo a little, unable to hold back any longer. You grab his shaft and line it up with your hole before pushing back hard and sliding it deeply into your [bodytype of Player] body. You gasp and groan at the size of it, the way it spreads you wide open and fills you up. It takes some effort to get it in, but the bull beneath you moans out loud, bucking up into you and forcing his shaft in deeper. You gasp and let out a loud moo, quickly recovering from the initial thrust and beginning to ride this bull's huge length. The size of his shaft plus how horny and needy his scent is making you means you won't last long, and soon enough you're cumming hard. This in turn sets off the bull's own massive orgasm. His shaft pulses with each blast of thick fertile cum he pumps into you, emptying his massive balls into your rear.";
@@ -189,19 +188,18 @@ to say BeatTheBovine:
 						infect "Bovine";
 						mimpregchance;
 						mimpregchance;
-						increase VictoryOverDaBull by 1;
 					else:
 						say "     You shiver and groan, realizing that you can't fulfill the desire to be mated by this huge bull, but you could easily get a belly full of the creature's thick cum. Licking your lips and dropping to your knees, you strip naked and crawl up to the big male bovine. Your eyes lock onto the bull's massive [if Mooing > 0]shaft, already erect and leaking pre. You reach forward and take the bull's length in one hand and his giant balls in another, gently stroking his shaft and massaging his balls[else]balls and sheath. You lick your lips and reach forward, taking his balls in one hand and his shaft in another. You begin stroking his shaft and massaging his balls, making the large bull groan as his bovine shaft quickly slides out and swells up[end if]. Soon the large bull's cock is pulsing and leaking a steady flow of pre. You position yourself between his legs and lean forward, taking the tip of his massive length into your mouth. You groan and start sucking on it, bobbing your head and stroking his length while your other hand tends to his balls.";
 						say "     The bull moans in response and bucks against your mouth, a large spurt of pre being blasted down your throat. You gulp it down and keep working on getting this big beast off. You work as much of the bull's massive dick head into your mouth as you can, but it's just too big for you to take all of it. You run your mouth all over his cock head, swallowing as much pre as the big male will give you. Soon though, you feel his body tense up and his balls clench. You ram his head as deep as it'll go into your mouth and brace yourself for his orgasm. It hits you like a wave, a torrent of cum blasting out of his shaft and down your gullet. You try as best you can to gulp it all down, but it is soon spilling out of your mouth. You keep stroking his shaft and balls, trying to coax every last bit of his cum out. You groan and shiver, your belly starting to swell up with all the cum that he's pumping into you. Your eyes shut as you savor the taste of such a virile stud's cum.";
+						WaitLineBreak;
 						say "     Eventually his orgasm tapers of, his balls empty and your [bodytype of Player] belly stuffed full. You lie back, panting hard and grinning like a fool. You stretch out a bit before getting back up, your belly tingling with warmth. You look back at the bull passed out on his side, tongue lolling out of his mouth, and realize that his cum was probably rather infectious, and taking such a large amount might not have been such a good idea. Shrugging and picking up your stuff you realize that what's done is done and you're just going to have to live with it. You turn around and head back along the path.";
 						CreatureSexAftermath "Player" receives "OralCock" from "Bovine";
 						infect "Bovine";
 						infect "Bovine";
-						increase VictoryOverDaBull by 1;
 				else:
 					LineBreak;
 					say "     Shaking your head clear of those thoughts you turn away from the bull and head back along the path.";
-					increase VictoryOverDaBull by 1;
+				if VictoryOverDaBull < 3, increase VictoryOverDaBull by 1;
 		else if VictoryOverDaBull is 3:			[Considering what you could do with the beaten bull.]
 			say "     You look at the massive beast sprawled before you, defeated once more. A thought occurs to you as the 'bull' breathes heavily in a heap; what kind of bull can't defend his herd? Maybe this bull doesn't deserve the title anymore. [if Mooing > 10]Perhaps, [italic type]you[roman type] deserve to be the bull. [end if]You turn away from the pathetic creature and walk away, your mind turning over how you could put the so-called bull in his proper place... milk maybe.";
 			increase VictoryOverDaBull by 1;
@@ -577,7 +575,7 @@ cow milk is a grab object. It is milky. cow milk is infectious. Strain of cow mi
 
 the scent of cow milk is "The cow milk smells delicious and mouth watering.".
 
-Usedesc of cow milk is "[cow milk use]";
+Usedesc of cow milk is "[cow milk use]".
 
 to say cow milk use:
 	say "You pop the cork off the bottle, tilt your head back and chug the milk down. The taste is sweet and creamy and makes you think of farm life. You sigh happily and release a soft [']moo['] as you finish it off.";
