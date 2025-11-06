@@ -20,7 +20,7 @@ When Play begins: [This is Cyn's default creature encounter]
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "She [one of]swings her unnaturally long, sharp claws wildly at you, leaving thin red lines as they cut your [SkinName of Player] body[or]dashes towards you, using her elongated arms to propel herself and kneeing you in the stomach with great force[or]vanishes from vew with a little giggle, and before you have time to react, she reappears behind you and kicks you in the back[at random].";
+	now attack entry is "She [one of]swings her unnaturally long, sharp claws wildly at you, leaving thin red lines as they cut your [SkinName of Player] body[or]dashes towards you, using her elongated arms to propel herself and kneeing you in the stomach with great force[or]vanishes from view with a little giggle, and before you have time to react, she reappears behind you and kicks you in the back[at random].";
 	now defeated entry is "";
 	now victory entry is "";
 	now desc entry is "";

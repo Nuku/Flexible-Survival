@@ -245,10 +245,12 @@ to say losetofpony:
 	say ". The [if rfponytype is 1]cute equine[else if rfponytype is 2]pegasus[else]unicorn[end if] giggles happily as she bounds up to you putting her forelegs around you and cuddling so tightly it feels like your eyes are going to pop out of your head. After this crushing hug, she fall back on the ground when she releases you.";
 	if Player is male:
 		say "     Spotting your cock, quite hard after that hug left nowhere else for your blood to go, she giggles all the more and licks her lips. 'Oh, we are going to be such great friends. I can tell,' the [rfponycolor1] pony says[if rfponytype is 2 and Cock Length of Player > 10] as her wings stiffen outwards at the sight of it[end if], hopping atop you. She grinds her wet mare's pussy down atop your throbbing rod, stiffening it right back up before it has a chance to get soft. After a little playful grinding between friends, she shifts her hips and pushes herself down onto your shaft, moaning as she takes your [Cock of Player] penis into her juicy folds[if Cock Length of Player > 20]. Despite your considerable size, she's able to stretch to take you, her plasticky booty stretching wider as your cock plows into her[end if]. Her flanks, marked as they are with [rfponybm], rise and fall over your pulsing member.";
+		WaitLineBreak;
 		say "     She rides you eagerly, her hooves rubbing over your [bodytype of Player] body[if rfponytype is 2], her wings aflutter with excitement[else if rfponytype is 3] while glowing magic from her horn lets her grope your balls[end if]. You can feel her hot juices running down your shaft and across your balls as she rides your rod faster and faster. As the happy [if rfponytype is 1]pony[else if rfponytype is 2]pegasus[else]unicorn[end if] squeezes and grinds down hard onto your cock, she smiles and swishes her flowing [rfponycolor2] hair. With your excitement and lust growing, your confused mind is happy to have met such a pretty, lovely and oh so friendly pony. Giggling merrily along with her, you cum hard, pumping your hot load into the pleased pony as a fresh rush of hot juices from her soaks your crotch. Once you're drained, she nuzzles your cheek and pulls off[if Cock Length of Player > 20] with a groan[end if].";
 		CreatureSexAftermath "Friendship Pony" receives "PussyFuck" from "Player";
 	else:
 		say "     Grinning down at you, she giggles all the more as she looks over your prone form. 'Oh, we are going to be such great friends. I can tell,' the [rfponycolor1] pony says, hopping atop you. She raises her [rfponycolor2] tail and grinds her wet mare's pussy down into your face, the scent and sweetness of her juices overpowering your senses. You lick your lips, getting your first sample of her juices before diving your tongue into her juicy, mare's pussy. She moans and nickers happily[if rfponytype is 2] as her wings flutter[end if], giggling about what a good friend you are and to lick her faster.";
+		WaitLineBreak;
 		say "     Grabbing onto her ass right on those designs of [rfponybm] on each flank, you squeeze tightly and pull her delicious pussy to your face. You lap away eagerly, finding the [if rfponytype is 1]pony[else if rfponytype is 2]pegasus[else]unicorn[end if]'s taste delightful. It is sugary, saccharine, almost tooth-rottingly sweet, but it seems wonderful to you and you lick for more and more[if rfponytype is 3 and Player is female]. She uses glowing magic from her horn to tease your pussy before forming a phallic force to thrust and pound into you while you eat her out[else if rfponytype is 3]. She uses glowing magic from her horn to tease your tight pucker before forming a phallic force to thrust and pound into you while you eat her out[end if]. With your excitement and lust growing, your confused mind is happy to have met such a pretty, lovely and oh so friendly pony. Giggling merrily along with her as she climaxes, your face is covered in her sweet, sticky juices and you lap up as much of it as you can get. After a few more climaxes like that, she's finally satisfied and stands back up.";
 		CreatureSexAftermath "Player" receives "OralPussy" from "Friendship Pony";
 	say "     'I hope to see you again, my new friend. It's been magic.' That said, she [if rfponytype is 2]flies[else]trots[end if] off, probably in search of another new friend. It's some time before your head clears enough for you to get up and head on your way.";
@@ -760,14 +762,15 @@ pony cider is a grab object. pony cider is infectious. Strain of pony cider is "
 Usedesc of pony cider is "[drinkponycider]";
 
 to say drinkponycider:
-	setmonster "Friendship Pony";
-	choose row MonsterID from Table of Random Critters;
-	if Player is MalePreferred:
-		now sex entry is "Male";
-	else if Player is HermPreferred:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Female";
+	if "Iron Stomach" is not listed in feats of Player:
+		setmonster "Friendship Pony";
+		choose row MonsterID from Table of Random Critters;
+		if Player is MalePreferred:
+			now sex entry is "Male";
+		else if Player is HermPreferred:
+			now sex entry is "Both";
+		else:
+			now sex entry is "Female";
 	say "     Deciding to drink down the cider, you pop the top off and start downing it. It has a strong, sharp taste to it, heavy with apple and equine flavor. As well, there is a faint plastic taste despite being stored in a glass bottle.";
 	increase Libido of Player by 5;
 	PlayerDrink 8;

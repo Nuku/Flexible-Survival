@@ -1058,7 +1058,7 @@ to say THendingE:		[succumb after helped w/keys]
 to say THendingF:		[succumb after fleeing]
 	say "     Surrendering to your new desires, you are drawn back to familiar streets and come to a motel. You aren't sure why it's familiar, but it feels like you should be here. The scent of other felines, tigresses at that, only reinforces this feeling. Spotted by the herm tigress on watch, she takes your paw and leads you upstairs to where the matron - your matron - is. She has another tigress with her, who she's just finished filling.";
 	say "     There is something familiar about her as well. 'That's [ObjectPro of Player], Matron Jackie,' she exclaims ecstatically. 'The one I told you about. Oh, [SubjectPro of Player][']s here. I'm so happy.' She takes you in her arms, purring happily as she nuzzles you. Her hard cock presses against your body. She tells you how happy she is to see you and how nice it is you've come to join her. She loves it here so much, and so will you.";
-	if (Player is female or "MPreg" is listed in feats of Player) and "Sterile" is not listed in feats of Player:	[BREEDABLE]
+	if Player is fpreg_ok or Player is mpreg_ok:	[BREEDABLE]
 		say "     Watching you both snuggle, the matron grows hard again and mounts you, welcoming you among her girls. You and the lovely Miss Marks remain a couple of playmates, eager to please one another and your matron. Once a pair who tried to seize her girls, you have both been reduced to her special slaves, to be fucked whenever she wants. In time, you both grow heavy with your matron's cubs, breeding more sexy tigresses.";
 	else:											[NON-BREEDABLE]
 		say "     Watching you both snuggle, the matron grows hard again and mounts you, welcoming you among her girls. You and the lovely Miss Marks remain a couple of playmates, eager to please one another and your matron. Once a pair who tried to seize her girls, you have both been reduced to her special slaves, to be fucked whenever she wants.";
@@ -1073,7 +1073,7 @@ to say THBadEnd1:		[succumb after failing at motel hunt]
 	else:											[MALE PART]
 		say "     As the only male sextoy in the brothel, as well as the only white tiger, you have a special set of regulars who enjoy pounding that sweet ass of yours. The feel of their hot cream in you always feels wonderful and there are always a few who come in looking to be filled by the sexy tiger. Which is good for you as your master doesn't allow you to fuck the other whores, though they will happily suck you off or fuck you. And you know your master has a special place for you any time he pounds you and fills your stripey ass.";
 [Non-sterile female/herm addition]
-	if (Player is female or "MPreg" is listed in feats of Player) and "Sterile" is not listed in feats of Player:	[BREEDABLE]
+	if Player is fpreg_ok or Player is mpreg_ok:	[BREEDABLE]
 		say "     When your heat comes, he takes you out of trade for a few days, exclusively breeding you over and over again until he's sure his seed has taken and you'll bear his cubs. As you rub your growing belly, you smile contentedly, so happy you decided to help him back in the infected city.";
 	if hellHoundLevel > 0:
 		LineBreak;

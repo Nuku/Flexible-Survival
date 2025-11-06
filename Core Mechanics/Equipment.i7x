@@ -235,7 +235,7 @@ Effectiveness of tenvale silverbacks football helmet is 80.
 GA of tenvale silverbacks football helmet is 1.
 Traits of tenvale silverbacks football helmet is {"sporty"}.
 Placement of tenvale silverbacks football helmet is "head".
-Descmod of tenvale silverbacks football helmet is "Your head is encased in the thick shell of a black and silver tenvale silverbacks football helmet.".
+Descmod of tenvale silverbacks football helmet is "Your head is encased in the thick shell of a black and silver Tenvale Silverbacks football helmet.".
 Slot of tenvale silverbacks football helmet is "head".
 Scent of tenvale silverbacks football helmet is "The helmet smells of plastic and fabric.".
 
@@ -347,7 +347,7 @@ cow-print cowboy hat is a grab object.
 cow-print cowboy hat is equipment.
 It is not temporary.
 Plural of cow-print cowboy hat is false.
-Taur-compatible of cow-print cowboy hat is false.
+Taur-compatible of cow-print cowboy hat is true.
 Size of cow-print cowboy hat is 3.
 AC of cow-print cowboy hat is 5.
 Effectiveness of cow-print cowboy hat is 10.
@@ -946,7 +946,7 @@ zephyr riot shin guards is a grab object.
 zephyr riot shin guards is equipment.
 It is not temporary.
 Plural of zephyr riot shin guards is true.
-Taur-compatible of zephyr riot shin guards is true.
+Taur-compatible of zephyr riot shin guards is false.
 Size of zephyr riot shin guards is 3.
 AC of zephyr riot shin guards is 30.
 Effectiveness of zephyr riot shin guards is 60.
@@ -967,7 +967,7 @@ zephyr armored lab boots is a grab object.
 zephyr armored lab boots is equipment.
 It is not temporary.
 Plural of zephyr armored lab boots is true.
-Taur-compatible of zephyr armored lab boots is true.
+Taur-compatible of zephyr armored lab boots is false.
 Size of zephyr armored lab boots is 3.
 AC of zephyr armored lab boots is 20.
 Effectiveness of zephyr armored lab boots is 15.
@@ -2362,7 +2362,7 @@ Size of black miniskirt is 3.
 AC of black miniskirt is 0.
 Effectiveness of black miniskirt is 0.
 GA of black miniskirt is -1.
-Traits of black miniskirt is {"slutty","sexy"}.
+Traits of black miniskirt is {"slutty", "sexy"}.
 Placement of black miniskirt is "waist".
 Descmod of black miniskirt is "A simple black miniskirt covers your hips and legs. It is really quite easy to accidentally (or on purpose) expose yourself while wearing it.".
 Slot of black miniskirt is "waist".
@@ -2377,7 +2377,7 @@ Size of pink miniskirt is 3.
 AC of pink miniskirt is 0.
 Effectiveness of pink miniskirt is 0.
 GA of pink miniskirt is -1.
-Traits of pink miniskirt is {"slutty","sexy"}.
+Traits of pink miniskirt is {"slutty", "sexy"}.
 Placement of pink miniskirt is "body".
 Descmod of pink miniskirt is "A simple pink miniskirt covers your hips and legs. It is really quite easy to accidentally (or on purpose) expose yourself while wearing it.".
 Slot of pink miniskirt is "legs".
@@ -2530,7 +2530,7 @@ Scent of orc loincloth is "The cloth has the scent of manly musk clinging to it.
 
 An everyturn rule:
 	if orc loincloth is equipped:
-		if Player is male and Cock Length of Player < 14 and a random chance of 1 in 3 succeeds:
+		if Player is male and (("Modest Organs" is not listed in feats of Player and Cock Length of Player < 14) or Cock Length of Player < 8) and a random chance of 1 in 3 succeeds:
 			say "     You feel yourself getting slightly hard under the short loincloth, showing a semi-erect bulge to the world. Seems like it's bigger than before too.";
 			increase Cock Length of Player by 1;
 		if Player is male and Ball Size of Player < 4 and a random chance of 1 in 5 succeeds:

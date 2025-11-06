@@ -37,12 +37,14 @@ When Play begins:
 	now Species Name entry is "Taurus"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Taurus" to infections of BovineList;
 	add "Taurus" to infections of FurryList;
+	add "Taurus" to infections of FeralList;
 	add "Taurus" to infections of NatureList;
 	add "Taurus" to infections of MaleList;
 	add "Taurus" to infections of BluntCockList;
 	add "Taurus" to infections of SheathedCockList;
 	add "Taurus" to infections of QuadrupedalList;
 	add "Taurus" to infections of TailList;
+	add "Taurus" to infections of FeralmindList;
 	now Name entry is "Taurus";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]

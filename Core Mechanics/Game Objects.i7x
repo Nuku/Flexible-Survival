@@ -162,8 +162,6 @@ To process (x - a grab object):
 	let tempHungerValue be Hunger of Player;
 	if x is temporary and x is owned:
 		say "You eagerly use the [x]!";
-		[let found be 0;
-		let num be 0;]
 		ItemLoss x by 1 silently;
 	else:
 		say "You use the [x].";

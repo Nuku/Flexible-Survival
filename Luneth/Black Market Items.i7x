@@ -421,9 +421,11 @@ name	desc	weight	object
 "zephyr protective riot shield"	"[RiotShieldProtectDesc]"	4	zephyr protective riot shield
 
 zephyr protective riot shield is equipment. It is not temporary.
+Taur-compatible of zephyr protective riot shield is true.
 The AC of zephyr protective riot shield is 46.
 The effectiveness of zephyr protective riot shield is 42.
 Objsize of zephyr protective riot shield is 4.
+Traits of zephyr protective riot shield is {"adventurous"}.
 The placement of zephyr protective riot shield is "shield".
 The descmod of zephyr protective riot shield is "You hold the riot shield in your hands, its size is large enough to cover most of your torso. It is painted black with the Zephyr trademark branded across the front, just underneath the vision slot.".
 The slot of zephyr protective riot shield is "shield".

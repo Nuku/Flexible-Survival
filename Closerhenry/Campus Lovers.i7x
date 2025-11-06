@@ -112,8 +112,9 @@ to say ResolveEvent Campus Lovers:
 			now Campus Lovers is resolved;
 			now Resolution of Campus Lovers is 5; [watched them #3]
 			now CampusCoupleRelationship is 1;
-			move Joseph to Jadako's Room;
-			move Jadako to Jadako's Room;
+			if daytimer is night:
+				move Joseph to Jadako's Room;
+				move Jadako to Jadako's Room;
 			connect Jadako's Room;
 		else:
 			LineBreak;
@@ -121,8 +122,9 @@ to say ResolveEvent Campus Lovers:
 			now Campus Lovers is resolved;
 			now Resolution of Campus Lovers is 6; [didn't watch them #3]
 			now CampusCoupleRelationship is 1;
-			move Joseph to Jadako's Room;
-			move Jadako to Jadako's Room;
+			if daytimer is night:
+				move Joseph to Jadako's Room;
+				move Jadako to Jadako's Room;
 			connect Jadako's Room;
 	now CampusLoversProgressTurn is turns; [saves the last turn in which their story progressed]
 

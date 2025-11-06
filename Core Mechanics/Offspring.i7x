@@ -43,9 +43,15 @@ to say OffspringDesc:
 		say "Your child lives in the safety of the bunker:[line break]";
 	[new style children]
 	if number of filled rows in Table of PlayerBunkerChildren > 0: [player has new style children]
-		if number of filled rows in Table of PlayerBunkerChildren is 1:
-			choose row 1 in Table of PlayerBunkerChildren;
+		repeat with x running from 1 to number of filled rows in Table of PlayerBunkerChildren:
+			choose row x in the Table of PlayerBunkerChildren;
 			let Childage be ((Birthturn entry - turns ) divided by 8);
+			if Gender entry is "male":
+				SetMalePronouns for Offspring;
+			else if Gender entry is "female":
+				SetFemalePronouns for Offspring;
+			else:
+				SetNeutralPronouns for Offspring;
 			if Pureblood entry is false:
 				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
 				if Name entry is "":
@@ -54,9 +60,9 @@ to say OffspringDesc:
 					say "child '[Name entry]'";
 				say " has a [Head entry] head, [Torso entry] front and [Back entry] back. ";
 				if ShowLegs entry is true:
-					say "They have [Arms entry] arms, [Legs entry] legs[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
+					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry] arms, [Legs entry] legs[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
 				else:
-					say "They have [Arms entry] arms[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
+					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry] arms[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
 			else:
 				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
 				if Name entry is "":
@@ -65,48 +71,21 @@ to say OffspringDesc:
 					say "child '[Name entry]'";
 				say " is a pureblood [Head entry]. ";
 			if Albino entry is true:
-				say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type][line break]";
+				say "[bold type][PosAdjCap of Offspring] pigmentation is muted and almost white, except for the eyes that appear red.[roman type][line break]";
 			else if Melanism entry is true:
-				say "[bold type]Their pigmentation is almost pure black. [roman type][line break]";
-			say "You have a [PlayerRelationship entry] relationship with them, and your child's personality is rather [Personality entry].";
-		else:
-			repeat with x running from 1 to number of filled rows in Table of PlayerBunkerChildren:
-				choose row x in the Table of PlayerBunkerChildren;
-				let Childage be ((Birthturn entry - turns ) divided by 8);
-				if Pureblood entry is false:
-					say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
-					if Name entry is "":
-						say "child";
-					else:
-						say "child '[Name entry]'";
-					say " has a [Head entry] head, [Torso entry] front and [Back entry] back. ";
-					if ShowLegs entry is true:
-						say "They have [Arms entry] arms, [Legs entry] legs[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
-					else:
-						say "They have [Arms entry] arms[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
-				else:
-					say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
-					if Name entry is "":
-						say "child";
-					else:
-						say "child '[Name entry]'";
-					say " is a pureblood [Head entry]. ";
-				if Albino entry is true:
-					say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type][line break]";
-				else if Melanism entry is true:
-					say "[bold type]Their pigmentation is almost pure black. [roman type][line break]";
-				say "You have a [PlayerRelationship entry] relationship with them, and your child's personality is rather [Personality entry].";
+				say "[bold type][PosAdjCap of Offspring] pigmentation is almost pure black.[roman type][line break]";
+			say "You have [a PlayerRelationship entry] relationship with [ObjectPro of Offspring], and your child's personality is rather [Personality entry].";
 	if (number of filled rows in Table of PlayerBunkerChildren) > 1:
 		say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	else if (number of filled rows in Table of PlayerBunkerChildren) is 1: [exactly one child]
-		say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
+		say "[SubjectProCap of Offspring] look[if Offspring is not NProN]s[end if] as alert and human as you are, taking after you eagerly. Despite [PosAdj of Offspring] age, [SubjectPro of Offspring] [if Offspring is NProN]are[else]is[end if] already grown to a young adult, both physically and in apparent emotional and mental development.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "offspring present"	"A little box, complete with a scavenged bow! A little sign on it says it's just for you and from one of your offspring that are living in the bunker."	1	offspring present
 
 offspring present is a grab object.
-Usedesc of offspring present is "[offspring present use]";
+Usedesc of offspring present is "[offspring present use]".
 
 instead of sniffing offspring present:
 	say "The box smells very mysterious.";

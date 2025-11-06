@@ -69,7 +69,6 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Ebonflame Drake:
 	setmongender 5; [creature is herm]
-	[choose row MonsterID from the Table of Random Critters;]
 	now firebreathcount is 0;
 	now firebreathready is false;
 
@@ -290,7 +289,7 @@ name	desc	weight	object
 
 ebonflame scale is a grab object.
 ebonflame scale is infectious. Strain of ebonflame scale is "Ebonflame Drake".
-Usedesc of ebonflame scale is "You swallow the dark scale. It's extremely bitter and hot to the taste, like eating something charred black by an open fire.".
+Usedesc of ebonflame scale is "You swallow the dark scale. It's extremely bitter and hot to the taste, like eating something charred black by an open fire.[line break]".
 
 instead of sniffing ebonflame scale:
 	say "It smells of something burnt to a crisp.";

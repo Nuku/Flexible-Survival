@@ -63,7 +63,7 @@ To check (X - text):
 
 Instead of sniffing something (called x):
 	if the scent of x is empty:
-		say "It smells pretty normal for a/an [x].";
+		say "It smells pretty normal for [a printed name of x].";
 	else:
 		say "[scent of x][line break]";
 

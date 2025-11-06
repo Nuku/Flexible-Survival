@@ -26,8 +26,7 @@ to say Give Awesome:
 to say awesome attack:
 	if Awesome_boredom is 4:
 		say "     The tree seems to vibrate. Whether your fervent attacks or the breeze caused it, a branch falls and thumps you on the arm. You notice some fruit on the branch, and without hesitation you put one in your pocket. As you look at the remaining two, you feel a sudden hunger and eat them uncontrollably.";
-		if "Iron Stomach" is not listed in feats of Player:
-			infect;
+		if "Iron Stomach" is not listed in feats of Player, infect;
 		say "     The world seems to go dark as you finish the second. Waking up, you can't see any trace of the tree, but you feel pretty awesome nonetheless. You pat your bag where you put the fruit, and smile at the thought that you still have some awesomeness in store.";
 		now hunger of Player is 0;
 		now thirst of Player is 0;
@@ -331,8 +330,7 @@ To say awesomest fruit use:
 		now loot entry is "awesomest fruit";
 		now Awesome_sex is 0;
 		now Awesome_forcesex is 1;
-		if "Iron Stomach" is not listed in feats of Player:
-			infect;
+		if "Iron Stomach" is not listed in feats of Player, infect;
 	now MonsterID is omonster;
 
 awesomer fruit is a grab object.
@@ -355,8 +353,7 @@ To say awesomer fruit use:
 		now loot entry is "awesomer fruit";
 		now Awesome_sex is 1;
 		now Awesome_forcesex is 1;
-		if "Iron Stomach" is not listed in feats of Player:
-			infect;
+		if "Iron Stomach" is not listed in feats of Player, infect;
 	now MonsterID is omonster;
 
 awesome fruit is a grab object.
@@ -379,8 +376,7 @@ To say awesome fruit use:
 		now loot entry is "awesome fruit";
 		now Awesome_sex is 2;
 		now Awesome_forcesex is 1;
-		if "Iron Stomach" is not listed in feats of Player:
-			infect;
+		if "Iron Stomach" is not listed in feats of Player, infect;
 	now MonsterID is omonster;
 
 Awesome Tree ends here.

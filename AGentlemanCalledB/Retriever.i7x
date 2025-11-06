@@ -254,7 +254,7 @@ retriever cum is cum.
 Purified of retriever cum is "distilled cum".
 retriever cum is infectious.
 Strain of retriever cum is "Retriever Male".
-Usedesc of retriever cum is "[retriever cum use]";
+Usedesc of retriever cum is "[retriever cum use]".
 
 to say retriever cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
@@ -273,7 +273,7 @@ retriever milk is milky.
 Purified of retriever milk is "distilled milk".
 retriever milk is infectious.
 Strain of retriever milk is "Retriever Female".
-Usedesc of retriever milk is "[retriever milk use]";
+Usedesc of retriever milk is "[retriever milk use]".
 
 to say retriever milk use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
@@ -474,7 +474,7 @@ retriever man-milk is milky.
 Purified of retriever man-milk is "distilled milk".
 retriever man-milk is infectious.
 Strain of retriever man-milk is "Retriever Male".
-Usedesc of retriever man-milk is "[retriever man-milk use]";
+Usedesc of retriever man-milk is "[retriever man-milk use]".
 
 to say retriever man-milk use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
@@ -497,7 +497,7 @@ This is the Retriever Female Infection rule:
 			else if HP of Rex is 10:
 				say "     Your life as Rex's happy sexpet is a simple but strangely fulfilling one. Rex proves to be a kind owner, always ensuring you and Karen are both well cared for, with a safe home, plenty of food and water, the lustful needs instilled in you by the infection and Rex's training never go unattended.";
 				say "     Eventually when the military moves through the city they are greeted at the door by Rex, who manages to convince them none of you are dangerous. After a short stay at their camp you are allowed to leave and you move to a small, quiet home outside the city where you continue your peaceful existence for many years.";
-				if (Player is female or "MPreg" is listed in feats of Player) and Player is not sterile:
+				if Player is fpreg_ok or Player is mpreg_ok:
 					say "     You frequently find your belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away to live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just as loving and caring as your own.";
 				else:
 					say "     Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off to new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
@@ -506,7 +506,7 @@ This is the Retriever Female Infection rule:
 			else if HP of Rex > 5:
 				say "     As your mental resistance begins to slip away you find yourself becoming more and more the retriever bitch your body is urging you to be. Soon you end up back at Rex's home and noting your failing struggle to maintain control he takes advantage of your weakened state of mind, offering you the collar and a place in his home once again.";
 				say "     This turns out to be the final push your mind needed, and as you reach to accept the collar the last of your resistance fades away, finally surrendering yourself to a simple life as one of Rex's happy pets.";
-				if (Player is female or "MPreg" is listed in feats of Player) and Player is not sterile:
+				if Player is fpreg_ok or Player is mpreg_ok:
 					say "     You frequently find your belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away to live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just as loving and caring as your own.";
 				else:
 					say "     Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off to new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";

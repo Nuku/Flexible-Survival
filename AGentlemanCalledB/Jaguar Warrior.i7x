@@ -518,7 +518,7 @@ name	desc	weight	object
 
 jaguar warrior fur is a grab object.
 It is temporary.
-Usedesc of jaguar warrior fur is "[JaguarWarriorFurUse]";
+Usedesc of jaguar warrior fur is "[JaguarWarriorFurUse]".
 
 to say JaguarWarriorFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
