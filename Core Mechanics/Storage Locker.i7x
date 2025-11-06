@@ -11,6 +11,7 @@ instead of examining the storage locker, say stlockerdesc.
 
 to say stlockerdesc:
 	say "     There are several storage lockers built into the bunker. They may have once held supplies or necessary equipment, but that all seems to be long gone. Still, they'll make for handy storage that you and any other occupants can use. There's plenty of space, so you should be able to [bold type]stash[roman type] as much as you like so you can [bold type]retrieve[roman type] it later.";
+	LineBreak;
 	say "[bold type]Options:[roman type][line break]";
 	say "[link](1) Display player inventory[as]1[end link][line break]";
 	say "[link](2) Display storage inventory[as]2[end link][line break]";
@@ -49,48 +50,75 @@ instead of opening storage locker:
 Section 2 - Displaying Contents
 
 to displayplinv:
-	say "[bold type]Player inventory contents:[roman type][line break]";
-	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
 	if the number of owned grab objects is 0:
 		say "There is nothing currently in your inventory.";
 	else:
-		[say "[bold type][bracket]S[close bracket][roman type]tash 1 or Stash [bold type][bracket]A[close bracket][roman type]ll";]
-		let y be 0;
+		say "Type [bold type]stash <name>[roman type] to [bold type][bracket]S[close bracket][roman type]tash an item or [bold type]stashall <name>[roman type] to Stash [bold type][bracket]A[close bracket][roman type]ll of an item.";
+		LineBreak;
+		say "[bold type]Player inventory contents:[roman type][line break]";
+		let L be a list of grab objects;
 		repeat with x running through all owned grab objects:
+			add x to L, if absent;
+		sort L in printed name order;
+		if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
+		let linkparts be {{"S", "stash"}, {"A", "stashall"}};
+		let y be 0;
+		repeat with x running through L:
 			increase y by 1;
-			say "[x] = [carried of x] [link][bracket]S[close bracket][as]stash [x][end link]  [link][bracket]A[close bracket][as]stashall [x][end link][roman type]";
+			if hypernull is not 1:
+				say "[storagelink printed name of x with linkparts]";
+			say "[x] x[carried of x]";
 			if the remainder after dividing y by invcolumns is 0:
 				LineBreak;
-			else:
+			else if y < number of entries in L:
 				say " || ";
-			if y is 12 * invcolumns:
-				now y is 0;
-				LineBreak;
-				wait for any key;
 		LineBreak;
 
-
 to displaystorage:
-	say "[bold type]Storage locker contents:[roman type][line break]";
-	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
 	if the number of stored grab objects is 0:
 		say "There is nothing currently in the storage locker.";
 	else:
-		[say "[bold type][bracket]R[close bracket][roman type]etrieve 1 or Retrieve [bold type][bracket]A[close bracket][roman type]ll";]
-		let y be 0;
+		say "Type [bold type]retrieve <name>[roman type] to [bold type][bracket]R[close bracket][roman type]etrieve an item or [bold type]retrieveall <name>[roman type] to Retrieve [bold type][bracket]A[close bracket][roman type]ll of an item.";
+		LineBreak;
+		say "[bold type]Storage locker contents:[roman type][line break]";
+		let L be a list of grab objects;
 		repeat with x running through all stored grab objects:
+			add x to L, if absent;
+		sort L in printed name order;
+		if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
+		let linkparts be {{"R", "retrieve"}, {"A", "retrieveall"}};
+		let y be 0;
+		repeat with x running through L:
 			increase y by 1;
-			say "[x] = [stashed of x] [link][bracket]R[close bracket][as]retrieve [x][end link]  [link][bracket]A[close bracket][as]retrieveall [x][end link][roman type]";
+			if hypernull is not 1:
+				say "[storagelink printed name of x with linkparts]";
+			say "[x] x[stashed of x]";
 			if the remainder after dividing y by invcolumns is 0:
 				LineBreak;
-			else:
+			else if y < number of entries in L:
 				say "  ||  ";
-			if y is 12 * invcolumns:
-				now y is 0;
-				LineBreak;
-				wait for any key;
 		LineBreak;
 
+storageindex is a number that varies.
+
+to say storagelink (T - text) with (L - list of list of text):
+	repeat with linktext running through L:
+		let link be the substituted form of "[entry 2 of linktext] [T]";
+		if storageindex < 1 or storageindex > number of entries in hyperlink list:
+			add link to hyperlink list;
+			now storageindex is number of entries in hyperlink list;
+		else:
+			if storageindex < number of entries in hyperlink list and entry storageindex + 1 of hyperlink list is link: [likely the list will get built in the same order, so long runs of these should be sequential]
+				increase storageindex by 1;
+			else if link is listed in hyperlink list: [otherwise, find it in the list if it exists]
+				repeat with x running from 1 to number of entries in hyperlink list:
+					if entry x of hyperlink list is link:
+						now storageindex is x;
+						break;
+			else: [or just add it if it doesn't]
+				add link to hyperlink list;
+				now storageindex is number of entries in hyperlink list;
+		say "[set link storageindex][bracket][entry 1 of linktext][close bracket][terminate link] "; [associate our text in the UI with the command in the hyperlink list]
 
 Section 3 - Commands
 
