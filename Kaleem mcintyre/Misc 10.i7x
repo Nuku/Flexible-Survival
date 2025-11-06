@@ -83,10 +83,10 @@ When play begins:
 	Add Magical Girl to BadSpots of HumorousList;
 
 to say ResolveEvent Magical Girl:
-	say "     When out of the blue something falls onto your head, you find yourself wincing and then groaning in pain as you bow from the force of the blow to your skull. Not sure what's this on about, but hoping you're not about to be bothered by any weirdo mutants, you blink as you look down to find a...small wand-like object winking up on the ground in front of you. The fact that said object has a small piece of paper tied to it only serves to make increase your confusion as you kneel down to pick up the wand thing.";
+	say "     When out of the blue something falls onto your head, you find yourself wincing and then groaning in pain as you bow from the force of the blow to your skull. Not sure what's this about, but hoping you're not about to be bothered by any weirdo mutants, you blink as you look down to find a... small wand-like object winking up on the ground in front of you. The fact that said object has a small piece of paper tied to it only serves to increase your confusion as you kneel down to pick up the wand thing.";
 	WaitLineBreak;
-	say "     Looking up at the sky in question, as if hoping someone will explain where this thing had just come from, you find yourself gazing up at the [if daytimer is day]azure sky[else]starry skies above[end if] unsurely before shrugging helplessly. Checking out the wand and then looking at the piece of paper tied to it you blink in confusion as the scrawl written down reads 'Sailor Star Power!'. The faintest memory of a TV show you had once seen before about magical girls pops through your head like a flash and silently you wonder if this is some kind of joke. Then again, given everything that happened in this town already you wonder if...";
-	say "     [bold type]Maybe you could perhaps shout the phrase out aloud just to see what happens?[roman type][line break]";
+	say "     Looking up at the sky in question, as if hoping someone will explain where this thing had just come from, you find yourself gazing up at the [if daytimer is day]azure sky[else]starry skies above[end if] unsurely before shrugging helplessly. Checking out the wand and then looking at the piece of paper tied to it you blink in confusion as the scrawl written down reads 'Sailor Star Power!' The faintest memory of a TV show you had once seen before about magical girls pops through your head like a flash and silently you wonder if this is some kind of joke. Then again, given everything that happened in this town already you wonder if...";
+	say "     [bold type]Maybe you could perhaps shout the phrase out loud just to see what happens?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -96,6 +96,7 @@ to say ResolveEvent Magical Girl:
 		say "     Where once before you had been dressed somewhat normally, you now find that you have on a navy blue sailor skirt with a pink ribbon tied onto the back draped onto your waist, a tight fitting white sleeveless shirt hugging your upper body, a pair of arm length white gloves strapped onto your arms, a pair of blue boots covering your feet, and a golden tiara placed neatly onto your head. You'd scream, but you're somewhat afraid of what may come out of the shadows to have a look at what the noise is all about so instead you shakily look for your backpack, which had mysteriously slipped from your shoulders during your transformation, grab said pack when you do find it and then hurry back to the bunker so you can make sense of all of this.";
 		say "     As you run off, you never notice a black cat sitting on the ground watching you as you scamper away in fear. And maybe that's a good thing, because at seeing the casual smirk lining the feline's facial features, your fading resolve might have completely crumbled and you might have had that nervous breakdown after all.";
 		ItemGain Sailor Outfit by 1;
+		wait for any key;
 		now Resolution of Magical Girl is 1; [shouted the phrase]
 		now battleground is "void";
 		move player to the Bunker;
@@ -118,11 +119,12 @@ Sailor Outfit is equipment.
 Sailor Outfit is not temporary.
 The AC of Sailor Outfit is 10.
 The effectiveness of Sailor Outfit is 40.
+Traits of Sailor Outfit is {"sexy"}.
 The placement of Sailor Outfit is "chest".
 The descmod of Sailor Outfit is "A simple yet magical sailor outfit rests over your body.".
 The slot of Sailor Outfit is "body".
 
-Instead of smelling Sailor Outfit:
+instead of sniffing Sailor Outfit:
 	say "The Sailor Outfit smells like something from out of this world mixed with determination to find your one true love.";
 
 Section 4 - June Mermaid
@@ -172,7 +174,7 @@ When play begins:
 	Add Free Catch to BadSpots of FurryList;
 
 to say ResolveEvent Free Catch:
-	say "     'Fresh fish!' The words make you pause even as you think how odd they sound given the limited amount of supplies there are here in the city. Turning you search for the area in which the voice had come from you look to find a black furred otter holding up a fish in one of her webbed hands. Thinking that maybe having a little extra variety in today's meal might be good for your stomach you head over to the otter to ask how much. 'There's no charge dear. I'm giving away what I have to those who don't have much. So here,' the otter hands you two fish, 'take these and take care of yourself.' Nodding to the kind mustelid, you smile as you think about how nice some people can be, despite the craziness going on in the city.";
+	say "     'Fresh fish!' The words make you pause even as you think how odd they sound given the limited amount of supplies there are here in the city. Turning to search for the area in which the voice had come from you look to find a black furred otter holding up a fish in one of her webbed hands. Thinking that maybe having a little extra variety in today's meal might be good for your stomach you head over to the otter to ask how much. 'There's no charge dear. I'm giving away what I have to those who don't have much. So here,' the otter hands you two fish, 'take these and take care of yourself.' Nodding to the kind mustelid, you smile as you think about how nice some people can be, despite the craziness going on in the city.";
 	ItemGain Tasty Fish by 2;
 	now Free Catch is resolved;
 
@@ -189,8 +191,8 @@ ResolveFunction of Rumors is "[ResolveEvent Rumors]".
 Sarea of Rumors is "Warehouse".
 
 to say ResolveEvent Rumors:
-	say "     While standing on one of the docks of the pier you find yourself listening to the words of a small group of people that just happen to be passing by. 'Hey, you know how these Zephyr corp people keep coming around and advertising their company all over the city, especially down here at the docks?' a middle aged orca quietly asks his companions, a brown otter and a three headed bipedal hydra. 'Yeah, so what?' the otter asks, unimpressed. 'Well, rumor has it that they were in business long before the epidemic hit this side of the states,' the orca mutters somewhat quietly. 'Where'd you hear such a thing from?' the hydra's three heads ask all at the same time. 'From my cousin down south. She told me that they had these weird people come around and set up an office in the area where she is staying right before a serious of strange events started to take place down there.'";
-	say "     'Strange like what?' the otter asks. 'Well, things like a rash of animal attacks, people going missing, and people reporting seeing strangers moving other's stuff out of their houses in the dead of night,' the orca mutters. 'So you think that what..?' the hydra inquires suspiciously. 'It could be just a coincidence, but I heard that...' The others move away before you can hear anymore.";
+	say "     While standing on one of the docks of the pier you find yourself listening to the words of a small group of people that just happen to be passing by. 'Hey, you know how these Zephyr corp people keep coming around and advertising their company all over the city, especially down here at the docks?' a middle aged orca quietly asks his companions, a brown otter and a three headed bipedal hydra. 'Yeah, so what?' the otter asks, unimpressed. 'Well, rumor has it that they were in business long before the epidemic hit this side of the States,' the orca mutters somewhat quietly. 'Where'd you hear such a thing from?' the hydra's three heads ask all at the same time. 'From my cousin down south. She told me that they had these weird people come around and set up an office in the area where she is staying right before a series of strange events started to take place down there.'";
+	say "     'Strange like what?' the otter asks. 'Well, things like a rash of animal attacks, people going missing, and people reporting seeing strangers moving others['] stuff out of their houses in the dead of night,' the orca mutters. 'So you think that what...?' the hydra inquires suspiciously. 'It could be just a coincidence, but I heard that...' The others move away before you can hear any more.";
 	now Rumors is resolved;
 
 
@@ -224,7 +226,7 @@ When play begins:
 	Add Lackadaisical to BadSpots of FurryList;
 
 to say ResolveEvent Lackadaisical:
-	say "     Watching as several furry mutants cast lines off into the sea from the edge of pier, you find yourself in awe of how [italic type]comfortable[roman type] everyone seems to be despite their various mutations. Listening as some of the otters chitter and chatter to the taller orcas and sharks currently standing beside them, you laugh to yourself about how lackadaisical others can be even during the midst of a crisis.";
+	say "     Watching as several furry mutants cast lines off into the sea from the edge of the pier, you find yourself in awe of how [italic type]comfortable[roman type] everyone seems to be despite their various mutations. Listening as some of the otters chitter and chatter to the taller orcas and sharks currently standing beside them, you laugh to yourself about how lackadaisical others can be even during the midst of a crisis.";
 	now Lackadaisical is resolved;
 
 
