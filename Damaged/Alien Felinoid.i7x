@@ -84,6 +84,7 @@ to say felinoid wins:
 						WaitLineBreak;
 						say "     He was purring, you feel it through your shoulder muscles, he was purring because you are such a good mate for him. That thought flows through you, a feeling of ascent accompanying it. This time you can feel yourself building, no longer enslaved to the explosive release you had earlier. You feel him grip back down on your scruff and rumble a growl low into your body, shaking your very bones. His member begins to flare, pushing the spines out further, almost painfully so into your soft, delicate insides, and with one final heave of his muscles he send his shaft, his spines and his seed burning into you. He releases your neck again, crying his dominance out loud and you feel your own voice rise through the breaking surf of pleasure to join his in one drawn out, simultaneous release. So much, he had put so much of himself into you. You lay there, now fully on your belly, his member still buried deep, both of you too tired to want to move. After what seems like an eternity, he pulls loose and affectionately licks you a few times before pacing off.";
 						CreatureSexAftermath "Player" receives "PussyFuck" from "Felinoid";
+						increase catnum by 1;
 				else:
 					if Nipple Count of Player is 0 and "Flat Chested" is not listed in feats of Player:
 						say "     The big cat rubs himself against you, purring deeply; without thinking your hand reaches to scritch his ears. 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin and chest. Quickly, two large breasts swell into existence, pressing against the remnants of your clothing, making you gasp at the feeling of the cloth against the sensitive flesh.";
@@ -92,7 +93,6 @@ to say felinoid wins:
 						increase catnum by 1;
 					else:
 						say "     The big cat rubs himself against you, purring deeply; without thinking your hand reaches to scritch his ears. 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin making you whine and whimper softly into his fur, breathing in more of the big animal's suddenly fiery smelling musk.";
-						increase catnum by 1;
 			else:		[***]
 				if Nipple Count of Player is 0 and "Flat Chested" is not listed in feats of Player:
 					say "     The big cat rubs himself against you, purring deeply; without thinking your hand reaches to scritch his ears. 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin and chest. Quickly, two large breasts swell into existence, pressing against the remnants of your clothing, making you gasp at the feeling of the cloth against the sensitive flesh";
@@ -107,7 +107,6 @@ to say felinoid wins:
 					say ".";
 				else:
 					say "     The big cat rubs himself against you, purring deeply; without thinking your hand reaches to scritch his ears. 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin making you whine and whimper softly into his fur, breathing in more of the big animal's suddenly fiery smelling musk.";
-					increase catnum by 1;
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)

@@ -16,23 +16,19 @@ Feline_encountered is a number that varies.
 
 
 to say feline desc:
-	choose row MonsterID from the Table of Random Critters;
 	if Feline_type is 3:			[forced hunting pride fight]
-		setmongender 14; [creatures are female]
 		say "     You are facing off against a small pride of roving feline girls. The little lionesses look much like the other small feline girls you've encountered in the park before, but have temporarily abandoned the pretense of looking cute and innocent. Formed into a hunting party, they're out to rough up other felines and capture them, even if they already belong to another pride. As Leonard has requested, you'll have to defeat and break up these groups to help protect your pride sisters[if HP of Leonard is 10]. Thankfully this group's already a little worn down from trying to chase down the feline girl they were fighting, who you're happy to see is able to get away safely thanks to your timely intervention[end if].";
 	else if Feline_type is 4:	[forced male lion fight w/usurper]
-		setmongender 3; [creature is male]
 		say "     You are facing a large, strongly muscled and powerful lion/human hybrid. He has a black mane and golden fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate. Looking at him, you can feel something inside you, some buried urge, starting to push to let such a big, strong male just have his way with you.";
-	else if Feline_meow < 5 or Cunt Count of Player is 0:
+	else if Feline_meow < 5 or Cunt Count of Player is 0 or MaleList is banned:
 		if HP of Leonard >= 15 and HP of Leonard < 100:
-			say "     You encounter another of the cute Feline girls running around. You do not recognize her one from the pride nor do you catch Leonard's scent on her. She's probably another scattered stray or a new kitty girl. She is about four feet in height, covered in fur with round lion ears and a bright smile. At first, one would almost mistake her for a younger infected person, but you know better. She is quite developed for her short size, sporting B cups and wide hips. And she seems to be eyeing you rather provocatively. She mrowls softly and licks her muzzle, coming towards you with a look of lustful hunger[if Player is felinebodied and Breast Size of Player > 0] as she eyes your breasts with obvious hunger[end if].";
+			say "     You encounter another of the cute feline girls running around. You do not recognize her as one from the pride nor do you catch Leonard's scent on her. She's probably another scattered stray or a new kitty girl. She is about four feet in height, covered in fur with round lion ears and a bright smile. At first, one would almost mistake her for a younger infected person, but you know better. She is quite developed for her short size, sporting B cups and wide hips. And she seems to be eyeing you rather provocatively. She mrowls softly and licks her muzzle, coming towards you with a look of lustful hunger[if Player is felinebodied and Breast Size of Player > 0] as she eyes your breasts with obvious hunger[end if].";
 		else if feline_encountered is 1:		[first time desc]
 			say "     A small cute girl, about four feet in height, covered in fur with round lion ears and a bright smile. At first, you almost mistake her for a younger infected person, but soon realize that's incorrect. She is quite developed for her short size, sporting B cups and wide hips. And she seems to be eyeing you rather provocatively. She mrowls softly and licks her muzzle, coming towards you with a look of lustful hunger.";
 		else:
 			say "     You've encountered another of those feline girls. Looking like a cute lioness girl about four feet in height, she is covered in fur with round lion ears and a bright smile. She is quite developed for her size, sporting B cups and wide hips and seems to be eyeing you rather provocatively.";
 	else:
 		if HP of Leonard >= 15 and HP of Leonard < 100:
-			setmongender 3; [creature is male]
 			say "     Before you is one of the male lions of the park. He has a dark brown mane and slightly lighter fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate. He roars as he sees you, moving in as his cock slips further from its sheath. Perhaps you're recognized as the matronly female of Leonard's pride or perhaps he simply sees a sexy lioness, but either way, it seems he wants to claim you as his own.";
 
 to say feline att:
@@ -96,7 +92,7 @@ to say cat def:
 		follow the feline nursing rule;
 	else if ( HP of Leonard >= 16 and HP of Leonard < 100 ) and Feline_attached is 0 and BodyName of Player is "Feline":
 		if Feline_meow is 0, increase Feline_meow by 1;
-		say "     Deciding that since you've got this pretty kitty right here, you might like to introduce her to Leonard as well. You pick her up gently and cradle her to your chest, purring soothingly to her. She mewls softly and nuzzles you, wrapping her lips around your nipple and suckling eagerly. You moan in pleasure as you [if Breast Size of Player is 0]eventually [end if]start to lactate, providing warm milk for the needy kitty. You grow increasingly protective of her and nuzzle her ears, whispering what a good and pretty kitty she is and how she'll love her new pride because her new pride will love her.";
+		say "     Deciding that since you've got this pretty kitty right here, you might like to introduce her to Leonard as well, you pick her up gently and cradle her to your chest, purring soothingly to her. She mewls softly and nuzzles you, wrapping her lips around your nipple and suckling eagerly. You moan in pleasure as you [if Breast Size of Player is 0]eventually [end if]start to lactate, providing warm milk for the needy kitty. You grow increasingly protective of her and nuzzle her ears, whispering what a good and pretty kitty she is and how she'll love her new pride because her new pride will love her.";
 		now z is 1;
 		infect;
 		if Breast Size of Player is 0, follow the breast change rule;
@@ -107,7 +103,7 @@ to say cat def:
 
 to say lion def:
 	let z be 0;
-	say "     The big cat tries to rake you with his monstrous claws one more time, but you jump back nimbly even as you see it slump down";
+	say "     The big cat tries to rake you with his monstrous claws one more time, but you jump back nimbly even as you see him slump down";
 	if HP of Leonard >= 15 and HP of Leonard < 100 and BodyName of Player is "Feline":
 		say ". Knocked down and beaten, the leonine man is lying on the ground, his cock still mostly hard after being denied release. Eyeing it, you wonder if perhaps you might risk having a little fun with him to teach him better respect for Leonard's pride. You certainly wouldn't mind sampling that feline meat[if Player is male and Feline_meow < 8] or even that tawny ass[end if] of his now that he's subdued. Do you want to have some fun with him?";
 		now z is 1;
@@ -118,7 +114,7 @@ to say lion def:
 		if Player consents:
 			now tempnum is 0;
 			if Player is male and Feline_meow < 8:
-				say "     Looking over the defeated lion, you wonder if you'd prefer to stuff his furry ass (Y) or have a ride on that feline cock. (N)";
+				say "     Looking over the defeated lion, you wonder if you'd prefer to stuff his furry ass (Y) or have a ride on that feline cock (N).";
 				if Player consents:
 					now tempnum is 1;
 					decrease Feline_meow by 1;
@@ -127,11 +123,11 @@ to say lion def:
 					CreatureSexAftermath "Feline" receives "AssFuck" from "Player";
 			if tempnum is 0:
 				decrease Feline_meow by 3;
-				say "     Deciding you can't let such a lovely, hard cock go to waste, you shove the big kitty onto his back. He tries to struggle, thinking you intend to keep fighting, but you grab his wrists and pin him down. Once you start grinding your ass down onto waning erection, his attitude changes and his angry growls turn to a rumble of pleasure. His cock quickly stiffens back to full hardness, ready for you.";
+				say "     Deciding you can't let such a lovely, hard cock go to waste, you shove the big kitty onto his back. He tries to struggle, thinking you intend to keep fighting, but you grab his wrists and pin him down. Once you start grinding your ass down onto his waning erection, his attitude changes and his angry growls turn to a rumble of pleasure. His cock quickly stiffens back to full hardness, ready for you.";
 				if HP of Leonard >= 15 and HP of Leonard < 100 and BodyName of Player is "Feline":
-					say "     He tries to roll you over so he can mount you, but you keep him pinned down, growling that Leonard's pride will take what it wants and that he'll need to accept his place beneath your pride. Without further delay, you lower yourself down onto his hard rod, releasing a mrowl of pleasure. His shaft feels so good inside you, filling a need that had been growing inside you. You run your paws through his thick chest-fur and ride his cock hard and fast, giving yourself over those feline urges[if Player is male]. Your [Cock of Player] cock is quite hard from your arousal, but you have no desire to tend to it, focusing purely on your pussy's need for lion cum at the moment[end if]. His paws rub over your [bodytype of Player] body and play with your tits.";
+					say "     He tries to roll you over so he can mount you, but you keep him pinned down, growling that Leonard's pride will take what it wants and that he'll need to accept his place beneath your pride. Without further delay, you lower yourself down onto his hard rod, releasing a mrowl of pleasure. His shaft feels so good inside you, filling a need that had been growing inside you. You run your paws through his thick chest-fur and ride his cock hard and fast, giving yourself over to those feline urges[if Player is male]. Your [Cock of Player] cock is quite hard from your arousal, but you have no desire to tend to it, focusing purely on your pussy's need for lion cum at the moment[end if]. His paws rub over your [bodytype of Player] body and play with your tits.";
 				else:
-					say "     With the throbbing need for lion cock overwhelming you, you don't delay any longer and lower yourself down onto his hard rod, releasing a mrowl of pleasure. His shaft feels so good inside you, filling a need that had been growing inside you. You run your paws through his thick chest-fur and ride his cock hard and fast, giving yourself over those feline urges[if Player is male]. Your [Cock of Player] cock is quite hard from your arousal, but you have no desire to tend to it, focusing purely on your pussy's need for lion cum[end if]. His paws rub over your [bodytype of Player] body and play with your tits.";
+					say "     With the throbbing need for lion cock overwhelming you, you don't delay any longer and lower yourself down onto his hard rod, releasing a mrowl of pleasure. His shaft feels so good inside you, filling a need that had been growing inside you. You run your paws through his thick chest-fur and ride his cock hard and fast, giving yourself over to those feline urges[if Player is male]. Your [Cock of Player] cock is quite hard from your arousal, but you have no desire to tend to it, focusing purely on your pussy's need for lion cum[end if]. His paws rub over your [bodytype of Player] body and play with your tits.";
 				say "     Eventually, your efforts are rewarded as that leonine penis pulses inside you, blasting his ample load deep inside you, stuffing you so wonderfully full of feline cum that your belly swells with its large output. Feeling deliciously full and satisfied, at least for now, you roll off of the big kitty. The lion man snuggles you, caressing your stuffed tummy before [if HP of Leonard >= 15 and HP of Leonard < 100 and player is felinebodied]respectfully [end if]helping you up onto your feet, wobbly though they may be, before padding off.";
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Feline";
 				infect "Feline";
@@ -142,10 +138,9 @@ to say huntpride def:
 	say "     You struggle against the hunting pride, knocking several of them out and sending the rest fleeing in all directions.";
 
 to say finallion def:
-	say "     You are victorious is your hard-fought battle against this would-be usurper. You growl triumphantly as you give him a final kick, sending him tumbling down the hill.";
+	say "     You are victorious in your hard-fought battle against this would-be usurper. You growl triumphantly as you give him a final kick, sending him tumbling down the hill.";
 
 to say cat vict:
-	choose row MonsterID from the Table of Random Critters;
 	increase Feline_meow by 1;
 	if Feline_attached is 1:
 		say "     The small, curvy feline approaches you and mewls imploringly. As you kneel down, the previous feline comes over, mewling as well, but is kicked away as the new one climbs up onto you, taking her place on your chest. She leans in and begins to eagerly suckle at your chest, leaving the ousted feline to go off in search of a new surrogate";
@@ -185,10 +180,10 @@ to say huntpride vict:
 
 to say finallion vict:
 	if Player is female:
-		say "The alpha lion approaches and sets a paw on your shoulder. You consider turning him away with your human mind, but the feline one wins out and you lean against him. He bites at your shoulder and neck, moving around you and lifting you. He is soon plunging his hungry shaft deep into your small curvy body, filling you in a way you have never been filled before as a human. You roar in pleasure as his seed fills your new womb, which swells outwards with the volume of it.";
+		say "     The alpha lion approaches and sets a paw on your shoulder. You consider turning him away with your human mind, but the feline one wins out and you lean against him. He bites at your shoulder and neck, moving around you and lifting you. He is soon plunging his hungry shaft deep into your small curvy body, filling you in a way you have never been filled before as a human. You roar in pleasure as his seed fills your new womb, which swells outwards with the volume of it.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Feline";
 	else:
-		say "The alpha lion approaches and sets a paw on your shoulder. You consider turning him away with your human mind, but the feline one wins out and you lean against him. He bites at your shoulder and neck, moving around you and lifting you. He is soon plunging his hungry shaft deep into your small curvy body, filling you in a way you have never been filled before as a human. You roar in pleasure as his seed fills your bowels, which swells outwards with the volume of it.";
+		say "     The alpha lion approaches and sets a paw on your shoulder. You consider turning him away with your human mind, but the feline one wins out and you lean against him. He bites at your shoulder and neck, moving around you and lifting you. He is soon plunging his hungry shaft deep into your small curvy body, filling you in a way you have never been filled before as a human. You roar in pleasure as his seed fills your bowels, which swell outwards with the volume of it.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Feline";
 	infect;
 
@@ -253,7 +248,7 @@ to say PrepCombat_Feline:
 		now per entry is 14;
 		now int entry is 10;
 		now cha entry is 15;
-	else if Feline_meow < 5 or Cunt Count of Player is 0:
+	else if Feline_meow < 5 or Cunt Count of Player is 0 or MaleList is banned:
 		setmongender 4; [creature is female]
 		increase feline_encountered by 1;
 		if a random chance of 1 in 2 succeeds:
@@ -274,6 +269,7 @@ to say PrepCombat_Feline:
 		now int entry is 14;
 		now cha entry is 20;
 	else:
+		setmongender 3; [creature is male]
 		if HardMode is true and level of Player > 14, let debit be level of Player - 14;
 		now Feline_type is 2;
 		now HP entry is 75 + ( debit * 5 );
@@ -302,7 +298,6 @@ When Play begins:
 	add "Feline" to infections of FurryList;
 	add "Feline" to infections of NatureList;
 	add "Feline" to infections of FemaleList;
-	add "Feline" to infections of MaleList;
 	add "Feline" to infections of BarbedCockList;
 	add "Feline" to infections of SheathedCockList;
 	add "Feline" to infections of BipedalList;
@@ -320,10 +315,10 @@ When Play begins:
 	now skin entry is "[if looknow is 1]tawny brown fur, covering pliable[else]tawny brown fur covered[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "You have a long, tufted lion's tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "leonine"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]your head shifts and becomes that of a lovely lioness, proud and matronly in appearance[else]your head shrinks and, as you gasp, you notice your voice has lightened, gaining you the face of a small female feline. For some reason, the scents of the groins of all around you become enticing and you can feel arousal building[end if]"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
-	now body change entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]it shifts back into that of a womanly lioness. You can't help but moan and purr in pleasure at this change, feeling drawn to your handsome mate once more[else]urge to giggle becomes powerful as you shrink and gain the softness of a small lioness[end if]"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now face change entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]your head shifts and becomes that of a lovely lioness, proud and matronly in appearance[else]your head shrinks and, as you gasp, you notice your voice has lightened, gaining you the face of a small female feline. For some reason, the scents of the groins all around you become enticing and you can feel arousal building[end if]"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]it shifts back into that of a womanly lioness. You can't help but moan and purr in pleasure at this change, feeling drawn to your handsome mate once more[else]the urge to giggle becomes powerful as you shrink and gain the softness of a small lioness[end if]"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "tawny fur explodes over your chest, spreading rapidly across your front and back, slightly lighter on the front"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
-	now ass change entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]your hips gain a pair of wide birthing hips and a sexy bottom to go with it. A leonine tail forms to go with it, twitching excitedly as you find yourself longing to feel your handsome mate's paws on your ass again[else]it shrinks even as it becomes rounder, pleasantly grabbable and covered in tan fur. You now have a female lion's butt[end if]"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
+	now ass change entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]you gain a pair of wide birthing hips and a sexy bottom to go with it. A leonine tail forms to go with it, twitching excitedly as you find yourself longing to feel your handsome mate's paws on your ass again[else]it shrinks even as it becomes rounder, pleasantly grabbable and covered in tan fur. You now have a female lion's butt[end if]"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "[if HP of Leonard >= 15 and HP of Leonard < 100]your cock takes on a more feline form[else]your cock takes on a more feline form even as you feel cute and girly rather than as a male[end if]"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 6;
 	now dex entry is 21;
@@ -491,7 +486,7 @@ this is the leoninelust rule:		[continuous lustful weakening of Player]
 				decrease Libido of Player by a random number between 0 and 1;
 			if HP of Leonard >= 14:
 				decrease Libido of Player by a random number between 0 and 1;
-			say "     [one of]Something inside you makes you long to give in to the sexy lion, draining your resolve[or]Just looking at the sexy lion makes your pussy quiver with need[or]You can't help but imagine yourself underneath this handsome feline, taking his throbbing cock[or]Affected by buried, feline urges, you find it hard to focus on the battle in the face of the strong, male cat[or]Some part of you pushes you to just give in so your aching cunt can get stuffed full of lion meat[at random][if HP of Leonard >= 7], though your loyalty to [one of]Leonard[or]your leonine master[or]your handsome lion[purely at random] does help you resist[end if]. You take [special-style-2][dam][roman type] damage";
+			say "[one of]Something inside you makes you long to give in to the sexy lion, draining your resolve[or]Just looking at the sexy lion makes your pussy quiver with need[or]You can't help but imagine yourself underneath this handsome feline, taking his throbbing cock[or]Affected by buried, feline urges, you find it hard to focus on the battle in the face of the strong, male cat[or]Some part of you pushes to just give in so your aching cunt can get stuffed full of lion meat[at random][if HP of Leonard >= 7], though your loyalty to [one of]Leonard[or]your leonine master[or]your handsome lion[purely at random] does help you resist[end if]. You take [special-style-2][dam][roman type] damage";
 			if HP of Player <= 0 or Libido of Player >= 110:
 				say "! You mewl and stagger, about to give in to those urges as the feline comes in for a final strike.";
 				now fightoutcome is 20;

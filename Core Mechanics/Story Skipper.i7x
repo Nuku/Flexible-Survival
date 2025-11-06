@@ -1054,37 +1054,37 @@ to PlayerSave:
 			now ListName entry is "OpenQuest";
 			now EntryText entry is entry y of OpenQuests of Player;
 	if the number of entries in CompletedQuests of Player is not 0:
-		repeat with y running from 1 to the number of entries in CompletedQuests of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in CompletedQuests of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "CompletedQuest";
 			now EntryText entry is entry y of CompletedQuests of Player;
 	if the number of entries in EncounteredEnemies of Player is not 0:
-		repeat with y running from 1 to the number of entries in EncounteredEnemies of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in EncounteredEnemies of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "EncounteredEnemy";
 			now EntryText entry is entry y of EncounteredEnemies of Player;
 	if the number of entries in VirginitiesTaken of Player is not 0:
-		repeat with y running from 1 to the number of entries in VirginitiesTaken of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in VirginitiesTaken of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "VirginitiesTaken";
 			now EntryText entry is entry y of VirginitiesTaken of Player;
 	if the number of entries in AnalVirginitiesTaken of Player is not 0:
-		repeat with y running from 1 to the number of entries in AnalVirginitiesTaken of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in AnalVirginitiesTaken of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "AnalVirginitiesTaken";
 			now EntryText entry is entry y of AnalVirginitiesTaken of Player;
 	if the number of entries in OralVirginitiesTaken of Player is not 0:
-		repeat with y running from 1 to the number of entries in OralVirginitiesTaken of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in OralVirginitiesTaken of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "OralVirginitiesTaken";
 			now EntryText entry is entry y of OralVirginitiesTaken of Player;
 	if the number of entries in PenileVirginitiesTaken of Player is not 0:
-		repeat with y running from 1 to the number of entries in PenileVirginitiesTaken of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in PenileVirginitiesTaken of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "PenileVirginitiesTaken";
 			now EntryText entry is entry y of PenileVirginitiesTaken of Player;
 	if the number of entries in BlockList of Player is not 0:
-		repeat with y running from 1 to the number of entries in BlockList of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in BlockList of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "BlockList";
 			now EntryText entry is entry y of BlockList of Player;
@@ -1569,6 +1569,8 @@ to BeastRestore:
 				[bugfix code after re-naming Midway to Fair]
 				if Area entry is "Midway":
 					now Area entry is "Fair";
+				if Area entry is "High Rise": [furbolg content bugfix]
+					now Area entry is "High";
 				if non-infectious entry is not BeastNonInfect, now non-infectious entry is BeastNonInfect;
 				if sex entry is not BeastSex, now sex entry is BeastSex;
 				if enemy type entry is not BeastType, now enemy type entry is BeastType;
@@ -1640,29 +1642,28 @@ to StorageRestore:
 to BanListRestore:
 	say "Restoring Ban Lists...";
 	if clearnomore is 0, clear the screen;
-	if "Imported" is not listed in WardList of Player or "Imported" is not listed in BanList of Player:
+	if "Imported" is not listed in WardList of Player or "Imported" is not listed in BanList of Player: [exported from older version]
 		LineBreak;
 		say "     Content banning and warding information wasn't found in the imported data. You can choose to pick new restrictions to remove enemies and events from the game. [bold type]Note that previously banned events have remained banned after import and will be cumulative with any bans you choose now.[roman type][line break]";
 		say "     [bold type]Pick content restrictions?[roman type][line break]";
 		if Player consents:
 			if clearnomore is 0, clear the screen;
 			new ban menu;
-	else:
+	else: [exported from current or later version]
 		remove "Imported" from WardList of Player;
 		remove "Imported" from BanList of Player;
 		if number of entries in WardList of Player > 0:
 			repeat with x running from 1 to number of entries in WardList of Player:
-				oldflagward entry x of WardList of Player;
+				oldflagward entry x of WardList of Player; [ward flags/tags that player chose before export]
 		if number of entries in BanList of Player > 0:
 			repeat with x running from 1 to number of entries in BanList of Player:
-				oldflagban entry x of BanList of Player;
+				oldflagban entry x of BanList of Player; [ban flags/tags that player chose before export]
 	if number of warded flags > 0 or number of banned flags > 0 or number of warded tags > 0 or number of banned tags > 0:
-		startcreatureban;
+		startcreatureban; [re-run the ban action to disable blocked creatures/situations]
 
 
 to RunPostImportRules:
 	say "Running Post Import Rules...";
-	sort Table of Game Objects in object order;
 	sort Table of Random Critters in lev order;
 	if clearnomore is 0, clear the screen;
 	follow the postimport rules;
@@ -1685,7 +1686,7 @@ To say ProgressionExport:
 		if wrcursestatus is 5:
 			wrcurserecede; [puts player back to normal form and restores proper stats for saving]
 		LineBreak;
-		say "     Writing save files.";
+		say "Writing save files.";
 		SaveEverything;
 		if wrcursestatus is 5:
 			wrcursesave; [puts player back to complete wereraptor form]

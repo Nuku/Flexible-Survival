@@ -112,7 +112,7 @@ cheesecake milk is milky.
 Purified of cheesecake milk is "distilled milk".
 cheesecake milk is infectious.
 Strain of cheesecake milk is "Cheesecake".
-Usedesc of cheesecake milk is "[cheesecake milk use]";
+Usedesc of cheesecake milk is "[cheesecake milk use]".
 
 to say cheesecake milk use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and cream cheese-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
@@ -130,7 +130,7 @@ cheesecake cum is cum.
 Purified of cheesecake cum is "distilled cum".
 cheesecake cum is infectious.
 Strain of cheesecake cum is "Cheesecake".
-Usedesc of cheesecake cum is "[cheesecake cum use]";
+Usedesc of cheesecake cum is "[cheesecake cum use]".
 
 to say cheesecake cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, cheesy aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
@@ -320,7 +320,7 @@ gingerbread milk is milky.
 Purified of gingerbread milk is "distilled milk".
 gingerbread milk is infectious.
 Strain of gingerbread milk is "Gingerbread".
-Usedesc of gingerbread milk is "[gingerbread milk use]";
+Usedesc of gingerbread milk is "[gingerbread milk use]".
 
 to say gingerbread milk use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the gingerbread milk run over your tongue and down your throat. Tastes rich and sweet, with a gingery aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
@@ -338,7 +338,7 @@ gingerbread cum is cum.
 gingerbread cum is infectious.
 Purified of gingerbread cum is "distilled cum".
 Strain of gingerbread cum is "Gingerbread".
-Usedesc of gingerbread cum is "[gingerbread cum use]";
+Usedesc of gingerbread cum is "[gingerbread cum use]".
 
 to say gingerbread cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, gingery aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";

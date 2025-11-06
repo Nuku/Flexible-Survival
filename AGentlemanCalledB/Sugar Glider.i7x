@@ -333,7 +333,7 @@ name	desc	weight	object
 
 crushed candies is a grab object. crushed candies is infectious. Strain of crushed candies is "Sugar Glider".
 
-Usedesc of crushed candies is "[crushedcandiesuse]";
+Usedesc of crushed candies is "[crushedcandiesuse]".
 
 to say crushedcandiesuse:
 	say "     Pouring the crumbled candy into your mouth, you crunch away happily at the sweet treat. As you finish your snack you can't help but feel a little giddy, thanks to the burst of sugar induced energy.";

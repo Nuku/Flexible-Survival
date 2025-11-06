@@ -308,12 +308,6 @@ to ebwhelphijackroutine:
 		now preghijack is false;
 		now ebwhelphijack is 2;
 		now mpreghijack is true;
-	if hijackgestation < 3: [LATE]
-		say "Your [bodytype of Player] belly protrudes in a firm dome of pregnancy, full of the violently churning, unborn being, becoming increasingly desperate to escape. You don't feel hindered despite being bloated but the constant, burning sensation of your corrupted offspring torments you to no end.";
-	else if hijackgestation < 5: [MIDDLE]
-		say "Your [bodydesc of Player] body is somewhat rounded by the effects of your terribly twisted pregnancy. It's progressing at what would seem to be a terrifyingly fast speed, even for these circumstances...";
-	else: [EARLY]
-		say "[one of]You feel an ominous shifting of something inside[or]An unsettling warmth churns through[at random] your lower belly...";
 	if hijackgestation < 0:
 		if preghijack is true:
 			now tempnum is 1;
@@ -335,5 +329,11 @@ to ebwhelphijackroutine:
 		challenge "Ebonflame Whelp";
 		now birthedwhelp is false;
 		now tempnum is 0;
+	else if hijackgestation < 3: [LATE]
+		say "Your [bodytype of Player] belly protrudes in a firm dome of pregnancy, full of the violently churning, unborn being, becoming increasingly desperate to escape. You don't feel hindered despite being bloated but the constant, burning sensation of your corrupted offspring torments you to no end.";
+	else if hijackgestation < 5: [MIDDLE]
+		say "Your [bodydesc of Player] body is somewhat rounded by the effects of your terribly twisted pregnancy. It's progressing at what would seem to be a terrifyingly fast speed, even for these circumstances...";
+	else: [EARLY]
+		say "[one of]You feel an ominous shifting of something inside[or]An unsettling warmth churns through[at random] your lower belly...";
 
 Ebonflame Whelp ends here.

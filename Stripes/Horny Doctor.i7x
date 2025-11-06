@@ -174,7 +174,7 @@ to say beatthehdmale:
 	if Player consents:
 		say "     Taking the opportunity to push the [hdformname] doctor backward, you quickly grab his stethoscope and create a makeshift pair of handcuffs, tying them above his head. You grab his labcoat while you're at it, rifling through the pockets and telling the now nude man that he'll have to make up for his actions as you take stock of your temporary stash of new toys. You weren't here for a check-up, but you're more than willing to 'Play Doctor' if that's what he wants to do. Struggling against his bonds and not quite able to get his feet under him, the still groggy canine growls under his breath, but the way his dick bounces gives away how he feels. The fact that he could call for one of his staff to assist him- and doesn't- only confirms what you already knew- the perverted doctor wants to see what you'll do! You'll have to make sure you don't disappoint him.";
 		LineBreak;
-		say "     [bold type]How do you want to play with the doctor?[roman type]";
+		say "     [bold type]How do you want to play with the doctor?[roman type][line break]";
 		let Doctor_Male_Choices be a list of text;
 		add "Use the pair of latex gloves to give him a 'prostate exam.'" to Doctor_Male_Choices;
 		add "Put the medical grade condom to use and 'collect a specimen.'" to Doctor_Male_Choices;
@@ -184,7 +184,7 @@ to say beatthehdmale:
 				say "     Pulling out a white pair of latex gloves, you muse that you hope that the [hdformname] isn't allergic to the material. Amused by your little display of 'bedside manner,' you slip it on your hand with a satisfying snap, grabbing the canine's leg and clicking your tongue until he understands you want him on all fours. The dog's eyes widen as he capitulates, and you hear him mumble something about lube, but he assumes the position with little encouragement, his tail firmly between his legs. Is he having second thoughts now that he's on the opposite end of his 'treatments?' Unfortunately for him, you have no intention of stopping. Grabbing that fluffy tail with your ungloved hand, you yank it upward, revealing a pretty pink hole and dragging a whine from your patient. You shush him as your digits slowly circle that hole, forcing it to pucker and flex. Gathering a mouthful of spit, you let it drool down to glaze it, then press your index finger against the center, testing his tightness.";
 				say "     Unsurprisingly, for a resident of such a warped, sexually active hospital, the doctor's hole appears to be quite experienced, swallowing your gloved finger past the first knuckle, then to the root without issue, puckering around the base in halfhearted protest. A decidedly unprofessional moan leaves his mouth, and his back arches as you test his depths, morphing into a sound of pure need as a second finger joins the first, noisily digging into the doctor's hole with increasing fervor. The show's too hot to handle, and you can feel yourself starting to lose the character you attempted to put on when you stole the doctor's coat. Maybe you could push things further?";
 				LineBreak;
-				say "     [bold type]How do you want to play with the doctor?[roman type]";
+				say "     [bold type]How do you want to play with the doctor?[roman type][line break]";
 				let Doctor_Male_2_Choices be a list of text;
 				if Player is male:
 					add "Fuck him now that you've loosened him up." to Doctor_Male_2_Choices;
@@ -528,7 +528,7 @@ This is the Horny Doctor Infection rule:
 					say "     During one of these trips to accompany a team, wanting to hand-pick the next set of test subjects for a crucial experiment, the team gets stormed by a pack of huskies. While the females keep the team occupied, their alpha male leader - tired of having his girls snatched up by the hospital raids - assaults you from behind and captures you. You get added to his little pack of fucktoy bitches as a Samoyed plaything to add some spice to his breeding bitches.";
 			else if hospquest is 13 and HP of doctor mouse is 1:
 				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr. Mouse. While you only vaguely remember him, he somehow recognizes you readily and is cruelly pleased with your fate. Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants. Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement";
-				if Player is not sterile and (Player is female or "MPreg" is listed in feats of Player):
+				if Player is fpreg_ok or Player is mpreg_ok:
 					say ". You birth many bizarre, hybrid creatures from these matings";
 				say ". You do all this for him gladly, though never understanding why he is so mean to you, his loyal follower.";
 			else if hospquest is 13 and HP of doctor mouse is 2:

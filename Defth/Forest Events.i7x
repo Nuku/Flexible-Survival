@@ -9,6 +9,7 @@ Small Cave	"Small Cave"
 Small Cave is a situation.
 ResolveFunction of Small Cave is "[ResolveEvent Small Cave]".
 Sarea of Small Cave is "Forest".
+Level of Small Cave is 5.
 When play begins:
 	add Small Cave to BadSpots of FeralList;
 	add Small Cave to BadSpots of FurryList;

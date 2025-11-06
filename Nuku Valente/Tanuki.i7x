@@ -3,6 +3,12 @@ Version 1 of Tanuki by Nuku Valente begins here.
 
 "Adds Tanuki to Flexible Survival"
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if Tanuki Dad is in Shinto Shrine:
+		now Tanukigender is 1;
+	else if Tanuki Mom is in Shinto Shrine:
+		now Tanukigender is 2;
+
 Section 1 - The Situation
 
 Table of GameRoomIDs (continued)
@@ -434,10 +440,10 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Tanuki Satisfaction rule:
 	if SatisfiedTanuki is 0:
 		trigger ending "Tanuki Satisfaction";
-		say "Your tanuki blood serves you well. They say Tanuki are shapeshifters as well, but you never quite get past size shifting. A handy enough trick on its own? The ability to at least transition from tanuki form to human is quite useful at least!";
+		say "     Your tanuki blood serves you well. They say tanuki are shapeshifters as well, but you never quite get past size shifting. A handy enough trick on its own? The ability to at least transition from tanuki form to human is quite useful at least!";
 		if humanity of Player < 10:
 			increase humanity of Player by 20;
-			say "Your supernatural heritage burns off the worst of your insanity, granting you clarity!";
+			say "     Your supernatural heritage burns off the worst of your insanity, granting you clarity!";
 
 Section 3 - Tanuki Coin
 
@@ -728,7 +734,7 @@ instead of conversing the Tanuki Mom:
 	clear the screen and hyperlink list;
 
 To say TanukiSurvivalTalk:
-	if Tanuki Dad is in Shinto Shrine: [Tanuki Dad!]
+	if Tanukigender is 1: [Tanuki Dad!]
 		if Humanity of Player < 20, now Humanity of Player is 20;
 		say "'It's a tough world out there.' He nods appreciatively. 'The most important part is that you keep your chin up.'";
 		If humanity of Player < 40:
@@ -760,7 +766,7 @@ To say TanukiSurvivalTalk:
 			say "She cranes her head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good mother is a good mother, no matter how big or small she might be.' She wags a finger as she talks, nodding to herself. 'Now as for advice...'";
 
 to say TanukiRomanceTalk:
-	if Tanuki Mom is in Shinto Shrine:
+	if Tanukigender is 2:
 		say "'It's a strange world out there.' She sighs wistfully, twirling a few whiskers. 'I don't need to remind you of that. Still...' She crouches facing you. 'Love is still there, but just as fleeting. Cheap love, that's easier than ever, but real love? Just as far away.'";
 	else:
 		say "Tanuki Dad looks like someone forgot to tell him what to say. He makes unsure noises and worries his fingers for a few moments. 'And that's how it's done!' he suddenly exclaims as if he had provided any wisdom.";

@@ -59,7 +59,7 @@ to say OrcVictorious:
 	addAlcPoints 2;
 	WaitLineBreak;
 	infect "Orc Breeder";
-	if BodyName of Player is "Orc Breeder" and Player is pure and "MPreg" is not listed in feats of Player and Player is not sterile:
+	if BodyName of Player is "Orc Breeder" and Player is pure and Player is mpreg_ok:
 		LineBreak;
 		say "     You feel something change deep inside you, as all the cum the orc filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex.";
 		FeatGain "MPreg";

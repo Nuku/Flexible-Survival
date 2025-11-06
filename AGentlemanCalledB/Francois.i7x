@@ -12,6 +12,16 @@ Version 2 of Francois by AGentlemanCalledB begins here.
 
 [This is an example message ]
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	say "[FrancoisListCompile]"; [rebuild recipe list in case bans changed]
+	if HP of Francois > 0: [Francois has been rescued and cleans the place up, making it sleepsafe]
+		now Bone-Appetit is sleepsafe;
+	if SexuallyExperienced of Francois is false:
+		now OralVirgin of Francois is false;
+		now AnalVirgin of Francois is false;
+		now PenileVirgin of Francois is false;
+		now SexuallyExperienced of Francois is true;
+
 Section 1 - Event
 
 Table of GameEventIDs (continued)
@@ -82,7 +92,7 @@ to say BakeryHusky:
 			if "Bad Luck" is listed in feats of Player, decrease bonus by 2;
 			if bonus > 12, now bonus is 12;
 			let dice be a random number from 1 to 20;
-			say "     You roll 1d20([dice])+[bonus]: [dice + bonus]. ";
+			say "     You roll 1d20([dice])[if bonus >= 0]+[end if][bonus]: [dice + bonus]. ";
 			WaitLineBreak;
 			if bonus + dice > 15:
 				say "You narrowly manage to avoid the surprise attack, rolling out of the way as the husky tumbles into a nearby table and chairs. The large canine slowly raises to his feet, shaking his head clear before turning to face you.";
@@ -158,11 +168,6 @@ to say BakeryRetriever:
 		challenge "Retriever Female";
 
 Section 2 - Location
-
-a postimport rule: [bugfixing rules for players that import savegames]
-	if HP of Francois > 0: [Francois has been rescued and cleans the place up, making it sleepsafe]
-		now Bone-Appetit is sleepsafe;
-	say "[FrancoisListCompile]";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -275,9 +280,9 @@ Instead of conversing the Francois:
 	else if a random chance of 3 in 5 succeeds and Francois_Undiscovered is not empty:
 		say "[FrancoisHint]";
 	else if a random chance of 1 in 3 succeeds:
-		say "     [if daytimer is day]Bonjour[else]Bonsoir[end if], [one of]mon ami[if Player is purefemale]e[end if][or]my friend[at random]. [one of]Comment ça va?[or]Comment allez-vous?[or]How are you?[at random]";
+		say "     '[if daytimer is day]Bonjour[else]Bonsoir[end if], [one of]mon ami[if Player is purefemale]e[end if][or]my friend[at random]. [one of]Comment ça va?[or]Comment allez-vous?[or]How are you?[at random]'";
 	else:
-		say "     [one of]Perhaps I should try to get back into business. I can't help but think my work would be even more popular now[or]I have a much greater appreciation for my work now[or]Perhaps I should go out there and try to find myself a sexy stud[or]Thanks again for the help, mon ami[if Player is purefemale]e[end if][at random].";
+		say "     '[one of]Perhaps I should try to get back into business. I can't help but think my work would be even more popular now[or]I have a much greater appreciation for my work now[or]Perhaps I should go out there and try to find myself a sexy stud[or]Thanks again for the help, mon ami[if Player is purefemale]e[end if][at random].'";
 	if Libido of Francois is 0:
 		now Libido of Francois is 1;
 

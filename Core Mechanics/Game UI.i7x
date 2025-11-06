@@ -530,7 +530,7 @@ This is the self examine rule:
 		say "You are barefoot right now. ";
 	LineBreak;
 	if weapon object of Player is not journal:
-		say "You are carrying a/an [weapon object of Player] just in case of trouble";
+		say "You are carrying [a printed name of weapon object of Player] just in case of trouble";
 		if weapon object of Player is unwieldy:
 			say ". Due to its comparatively [if scalevalue of Player > objsize of weapon object of Player]small[else]big[end if] size, it is [if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) > 3]very unwieldy[else if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) is 3]rather unwieldy[else]somewhat unwieldy[end if] for you to use at the moment";
 		say ". ";
@@ -553,7 +553,7 @@ understand "ListOffspring" as ListFollowingChildren.
 
 carry out ListFollowingChildren:
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 0: [no children following]
-		say "You do not have any offspring trailing after you.[line break]";
+		say "You do not have any offspring trailing after you.";
 		stop the action;
 	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
 		say "Trailing behind come your children:[line break]";
@@ -575,9 +575,15 @@ carry out ListFollowingChildren:
 			say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	[new style children]
 	if number of filled rows in Table of PlayerChildren > 0: [player has new style children]
-		if number of filled rows in Table of PlayerChildren is 1:
-			choose row 1 in Table of PlayerChildren;
+		repeat with x running from 1 to number of filled rows in Table of PlayerChildren:
+			choose row x in the Table of PlayerChildren;
 			let Childage be ((Birthturn entry - turns ) divided by 8);
+			if Gender entry is "male":
+				SetMalePronouns for Offspring;
+			else if Gender entry is "female":
+				SetFemalePronouns for Offspring;
+			else:
+				SetNeutralPronouns for Offspring;
 			if Pureblood entry is false:
 				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
 				if Name entry is "":
@@ -586,9 +592,9 @@ carry out ListFollowingChildren:
 					say "child '[Name entry]'";
 				say " has a [Head entry] head, [Torso entry] front and [Back entry] back. ";
 				if ShowLegs entry is true:
-					say "They have [Arms entry] arms, [Legs entry] legs[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
+					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry] arms, [Legs entry] legs[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
 				else:
-					say "They have [Arms entry] arms[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
+					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry] arms[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
 			else:
 				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
 				if Name entry is "":
@@ -597,41 +603,14 @@ carry out ListFollowingChildren:
 					say "child '[Name entry]'";
 				say " is a pureblood [Head entry]. ";
 			if Albino entry is true:
-				say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type][line break]";
+				say "[bold type][PosAdjCap of Offspring] pigmentation is muted and almost white, except for the eyes that appear red.[roman type][line break]";
 			else if Melanism entry is true:
-				say "[bold type]Their pigmentation is almost pure black. [roman type][line break]";
-			say "You have a [PlayerRelationship entry] relationship with them, and your child's personality is rather [Personality entry].";
-		else:
-			repeat with x running from 1 to number of filled rows in Table of PlayerChildren:
-				choose row x in the Table of PlayerChildren;
-				let Childage be ((Birthturn entry - turns ) divided by 8);
-				if Pureblood entry is false:
-					say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
-					if Name entry is "":
-						say "child";
-					else:
-						say "child '[Name entry]'";
-					say " has a [Head entry] head, [Torso entry] front and [Back entry] back. ";
-					if ShowLegs entry is true:
-						say "They have [Arms entry] arms, [Legs entry] legs[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
-					else:
-						say "They have [Arms entry] arms[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
-				else:
-					say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
-					if Name entry is "":
-						say "child";
-					else:
-						say "child '[Name entry]'";
-					say " is a pureblood [Head entry]. ";
-				if Albino entry is true:
-					say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type][line break]";
-				else if Melanism entry is true:
-					say "[bold type]Their pigmentation is almost pure black. [roman type][line break]";
-				say "You have a [PlayerRelationship entry] relationship with them, and your child's personality is rather [Personality entry].";
+				say "[bold type][PosAdjCap of Offspring] pigmentation is almost pure black.[roman type][line break]";
+			say "You have [a PlayerRelationship entry] relationship with [ObjectPro of Offspring], and your child's personality is rather [Personality entry].";
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
 		say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
-		say "They look as alert and human as you are, taking after you eagerly. Despite their age, they have already grown to young adult stature, both physically and in apparent emotional and mental development.";
+		say "[SubjectProCap of Offspring] look[if Offspring is not NProN]s[end if] as alert and human as you are, taking after you eagerly. Despite [PosAdj of Offspring] age, [SubjectPro of Offspring] [if Offspring is NProN]have[else]has[end if] already grown to young adult stature, both physically and in apparent emotional and mental development.";
 
 Chapter 3 - Linkaction
 

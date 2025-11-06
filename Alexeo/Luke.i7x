@@ -81,6 +81,7 @@ Section 3 - Interacting
 
 to say ResolveEvent Returned_Spots:
 	say " [Luke_intro]";
+	LineBreak;
 	if player is male: [Stops after the brief intro if not male, otherwise lets you choose what to do next]
 		say "     [bold type]What do you do now?[roman type][line break]";
 		let Returned_Spots_Choices be a list of text; [more current, easier to use multi choice point below]
@@ -104,8 +105,8 @@ to say luke_intro:
 	project Figure of Leopardman_soft_icon;
 	say "     Returning to the location where you witnessed that sexy leopard-man hop over the zoo wall, you lean against the said wall and contemplate your next choice. It's at that exact moment that you experience something falling in front of you, and you look up to see that it's that same spotted feline you were thinking about before. It seems that he had just hopped back over that wall past you, back into the zoo, and he's completely naked, just as before. Tensing up from the sudden encounter, you see him jump, a bit startled, as well. Now, getting a better look at him, he has his paws up and claws out, and a snarl is on his muzzle as he looks ready to fight! Knowing of all the crazy creatures out there in the city, you also ready a combat pose. A few moments pass, neither of you striking the first blow before the cat-man lowers his paws, and his snarl turns to a smirk.";
 	say "     'Well now, you still appear to have your wits about you after all. It looks like we just surprised each other, is all.'";
+	WaitLineBreak;
 	if player is male:
-		WaitLineBreak;
 		if Resolution of Returned_Spots is 1: [previously postponed]
 			say "     The feline lowers his guard and presses his face in close, inhaling your scent deeply. 'Oh! It's you again! Did you decide to take me up on my offer? I'll have to warn you though, I only know one way to give it, and that's rough! What do you think? Want to be my sexy little kitty for a bit?'";
 		else: [first time meeting him as a male]

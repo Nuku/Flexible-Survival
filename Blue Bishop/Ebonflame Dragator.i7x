@@ -144,7 +144,7 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The gator[or]The oversized lizard[or]The scaled beast[or]The ebonflame dragator[or]It[at random] [one of]lunges forward and snaps its jaws around one of your limbs, the horribly sharp teeth digging into you until you finally pry its jaw wide enough to free yourself[or]shreds you painfully with its claws[or]attempts to pin you against the ground, biting and clawing at you until you push yourself free[or]painfully bashes you with its large, powerful tail[at random].";
-	now defeated entry is "     With one final attack, the terrifying monster lets out a low groan and slumps onto the ground, completely spent and unable to move - save for the occasional stirring. You decide it's probably best to move on before the gator recovers.";
+	now defeated entry is "     With one final attack, the terrifying monster lets out a low groan and slumps onto the ground, completely spent and unable to move - save for the occasional stirring. You decide it's probably best to move on before the gator recovers.[line break]";
 	now victory entry is "[ebgatorvic]";
 	now desc entry is "[ebgatordesc]";
 	now face entry is "NA";
@@ -307,20 +307,17 @@ to ebgatorhijackroutine:
 		now preghijack is false;
 		now mpreghijack is true;
 		now ebgatorhijack is 2;
-	if hijackgestation < 3: [LATE]
-		say "Your [bodytype of Player] belly protrudes in a firm dome of pregnancy, full of the terrible, glowing egg, becoming increasingly difficult to lug around. You don't feel that hindered despite being so bloated but the constant, burning sensation of the churning orb torments you to no end.";
-	else if hijackgestation < 5: [MIDDLE]
-		say "Your [bodydesc of Player] body is somewhat rounded with the effects of the egg growing inside you. It's progressing at what would seem to be a terrifyingly fast speed, growing with every passing hour, in heat just as much as it does in size.";
-	else: [EARLY]
-		say "[one of]You feel an ominous shifting of something inside[or]An unsettling warmth churns through[at random] you as you continue to carry the dark egg.";
 	if hijackgestation < 0:
 		if preghijack is true:
 			now tempnum is 1;
 		else:
 			now tempnum is 2;
 		say "     Unable to hold itself within you any longer, you double over from the intense sensation of the dark egg finally being pushed through your [if tempnum is 1]birth canal[else]bowels[end if].";
+		LineBreak;
 		say "     So large is the orb that it takes considerable pains to push it past your [if tempnum is 1]cunt's strained lips[else]ass's strained ring[end if]. It takes numerous attempts to try and get rid of the thing, as it often slides back in at a moment's relent, before it finally, audibly pops from your gaping hole, the slick, dark purple egg twitching and churning on the ground.";
+		LineBreak;
 		say "     Looking at it, it's hard to imagine that thing was inside you, given how large it is[if scalevalue of Player > 3]. Even as large as you are, it seems the egg grew even larger to exploit the free space[end if]. The coarse orb is completely covered by rings of grooved ridges, still slick from its prior home. It occasionally twitches and you hear bestial sounds from inside.";
+		LineBreak;
 		say "     Once you recover, you haul the egg off somewhere out of the way. After that ordeal, the last thing you need is another one of those monsters attacking you and starting this whole cycle all over again...";
 		if ebgatorhijack is 1:
 			now preghijack is false;
@@ -329,5 +326,11 @@ to ebgatorhijackroutine:
 		now ebgatorhijack is 0;
 		if HP of Player > 8, decrease HP of Player by 5;
 		now tempnum is 0;
+	else if hijackgestation < 3: [LATE]
+		say "Your [bodytype of Player] belly protrudes in a firm dome of pregnancy, full of the terrible, glowing egg, becoming increasingly difficult to lug around. You don't feel that hindered despite being so bloated but the constant, burning sensation of the churning orb torments you to no end.";
+	else if hijackgestation < 5: [MIDDLE]
+		say "Your [bodydesc of Player] body is somewhat rounded with the effects of the egg growing inside you. It's progressing at what would seem to be a terrifyingly fast speed, growing with every passing hour, in heat just as much as it does in size.";
+	else: [EARLY]
+		say "[one of]You feel an ominous shifting of something inside[or]An unsettling warmth churns through[at random] you as you continue to carry the dark egg.";
 
 Ebonflame Dragator ends here.

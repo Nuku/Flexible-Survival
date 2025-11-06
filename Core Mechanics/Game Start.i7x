@@ -93,8 +93,9 @@ To regularstart: [normal start method]
 		say "(12) [link]Graphics[as]12[end link] - [bold type][if NewGraphicsInteger is 1]Inline[else if NewGraphicsInteger is 2]Side-Window[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
 		say "(13) [link]Inventory Columns[as]13[end link] - [bold type][invcolumns][roman type][line break]";
 		say "[line break]";
-		say "(97) [link]Restore Using Default Settings[as]97[end link] (Right)[line break]";
-		say "(98) [link]Restore Using Default Settings[as]98[end link] (Left)[line break]";
+		say "[bold type]Saved Games:[roman type][line break]";
+		say "(97) [link]Restore Using Default Graphics[as]97[end link] (Right)[line break]";
+		say "(98) [link]Restore Using Default Graphics[as]98[end link] (Left)[line break]";
 		say "(99) [link]Restore A Save[as]99[end link][line break]";
 		say "[line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
@@ -738,7 +739,6 @@ to say silent_start:
 	if BlindMode is true: [Blind mode alteration]
 		increase score by 100;
 	AddNavPoint Zephyr Lobby silently;
-	wait for any key;
 
 Chapter 2 - Player Name
 
@@ -1483,8 +1483,6 @@ To startcreatureban: [bans creatures, as requested]
 				now n is inactive;
 			if n is inactive:
 				break;
-	[say "Sorting creatures...";
-	sort Table of Random Critters in lev order;]
 
 Part 3 - New Infection System Functions
 

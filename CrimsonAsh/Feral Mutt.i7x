@@ -226,7 +226,11 @@ to Pet MuttRecruitment:
 		LineBreak;
 		say "[bold type]Please enter a name for your [FeralMuttFurColor] [FeralMuttCurrentBreed]: [roman type]";
 		get typed command as playerinput;
+		while "[playerinput]" is "":
+			say "[bold type]Please enter a name for your [FeralMuttFurColor] [FeralMuttCurrentBreed] (must be one or more letters): [roman type]";
+			get typed command as playerinput;
 		now PetMuttName is playerinput;
+		wait for any key;
 		if FeralMuttCurrentBreed is "Malamute":
 			now PetMuttBreed is "Malamute";
 			if FeralMuttFurColorNumber is 1:
@@ -305,6 +309,7 @@ When Play begins:
 	add "Feral Mutt" to infections of SheathedCockList;
 	add "Feral Mutt" to infections of QuadrupedalList;
 	add "Feral Mutt" to infections of TailList;
+	add "Feral Mutt" to infections of PackmindList;
 	now Name entry is "Feral Mutt";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
@@ -490,6 +495,7 @@ When Play begins:
 	add "Mutt Pack" to infections of SheathedCockList;
 	add "Mutt Pack" to infections of QuadrupedalList;
 	add "Mutt Pack" to infections of TailList;
+	add "Mutt Pack" to infections of PackmindList;
 	now Name entry is "Mutt Pack";
 	now enemy title entry is "Mutt Pack";
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]

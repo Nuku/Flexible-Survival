@@ -2,6 +2,8 @@ Version 1 of Frost Drake by CrimsonAsh begins here.
 
 "Adds a Frost Drake creature to Flexible Survival's Wandering Monsters table"
 
+FrostDrakeBeaten is a number that varies.
+
 Section 1 - Creature Responses
 
 to say FrostDrakeDesc:
@@ -59,7 +61,7 @@ to say FrostDrakeFaceFuck:
 	CreatureSexAftermath "Player" receives "OralCock" from "Frost Drake";
 
 to say BeatTheFrostDrake:
-	if "Frost Drake" is not listed in EncounteredEnemies of Player: [first encounter]
+	if FrostDrakeBeaten is 0: [first encounter]
 		say "     Knocking back the big drake he stumbles forward toward you before collapsing and sliding forward a few feet before coming to a stop right in front of you. He tries to get to his feet but is too dazed to accomplish that. You notice his member is still hard, it throbs in need slightly, leaving you with a choice on what to do next.";
 		say "     [bold type]Should you show this apex predator who's in charge?[roman type][line break]";
 		LineBreak;
@@ -71,6 +73,7 @@ to say BeatTheFrostDrake:
 		else:
 			LineBreak;
 			say "     You think for a moment but decide against your licentious impulse and turn to leave.";
+		now FrostDrakeBeaten is 1;
 	else: [repeat encounters]
 		say "     You've knocked the fight out of another of these draconic monsters and he collapses in front of you. The large white-scaled creature shifts and makes a low groan trying to stand but eventually just lays there in defeat and exhaustion. Unable to move he resigns to waiting for what you do next. His dark eyes glare at you with curiosity, a little malice... as well as a glint of intelligence. Maybe you can talk to him?";
 		LineBreak;
@@ -111,7 +114,7 @@ to say Frost DrakeSexMenu:
 	now description entry is "Have the big drake service you";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Ride the Drake";
+	now title entry is "Ride the drake";
 	now sortorder entry is 3;
 	now description entry is "Ride the drake's dick";
 	[]
@@ -142,7 +145,7 @@ to say Frost DrakeSexMenu:
 					say "[OralFrostDrake]";
 				if (nam is "Fuck his ass"):
 					say "[FuckFrostDrake]";
-				if (nam is "Ride the Drake"):
+				if (nam is "Ride the drake"):
 					say "[FrostDrakeRide]";
 				wait for any key;
 		else if calcnumber is 0:

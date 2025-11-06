@@ -12,7 +12,7 @@ to say losetofathnach:
 	if Player is mpreg_ok, increase T by 1;
 	if anallevel is 3, increase T by 1;
 	if anallevel is 1, now T is 0;
-	say "     Having defeated you, the Fathnach man looms over you, a predatory gleam in his eyes. 'I won, so now its time to do your Big Bro a favor, your gonna love it!'";
+	say "     Having defeated you, the Fathnach man looms over you, a predatory gleam in his eyes. 'I won, so now it's time to do your Big Bro a favor, you're gonna love it!'";
 	if Player is male: [Male]
 		say "     With your exhausted and beaten body, you can't resist him as he pulls your clothes off, revealing your [Cock of Player] cock to the cold air. 'You had me pent up from the start of our play session, it's only fair you help me right? After all, you look like you're gonna need a good drink to help you get back up.'";
 		if Breast size of Player is 0:
@@ -33,7 +33,7 @@ to say losetofathnach:
 			CreatureSexAftermath "Fathnach" receives "PussyFuck" from "Player";
 	else if Player is female:
 		say "     <Editor's Note: Sorry, this scene is still WIP.>";
-	else if Player is neuter:
+	else:
 		say "     Pulling your clothes off to see no genitals gets a sound of dissatisfaction from the giant-kin. 'Oh, but how are you gonna have fun without any funstick or fun-flaps? Ah! I know!' He quickly smashes your face into his giant pecs, nursing you like a mother a child as you gulp down the refreshing drink by force. your entire body tingles with energy as the man chuckles at your body's changes. 'Come find me again when you're ready for more real fun, you need to rest after drinking so much anyway~' He walks away smiling with a dopey faced grin, playing with the tit that has your bite marks on it.";
 		PlayerDrink 10;
 		if "Iron Stomach" is not listed in feats of Player, infect "Fathnach";
@@ -130,7 +130,7 @@ when play begins:
 	now HP entry is 77; [ The monster's starting HP. ]
 	now lev entry is 5; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 9; [ Monster's average damage when attacking. ]
-	now area entry is "High Rise"; [ "Outside" "Mall" "Park" "Beach" etc... This determines where the creature will appear as an enemy. "Nowhere" means they can't be "hunted" and won't show up during "explore" commands.]
+	now area entry is "High"; [ "Outside" "Mall" "Park" "Beach" etc... This determines where the creature will appear as an enemy. "Nowhere" means they can't be "hunted" and won't show up during "explore" commands.]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now Cock Length entry is 15; [ Length infection will make cock grow to if cocks. ]
 	now Ball Size entry is 8; [ Cock width, more commonly used for ball size. ]

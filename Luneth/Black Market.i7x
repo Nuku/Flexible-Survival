@@ -89,7 +89,7 @@ to say BarrettTalkMenu:
 	clear the screen and hyperlink list;
 
 to say BarrettTalk1:
-	say "     Look, if you want something just check the damn case.";
+	say "     'Look, if you want something just check the damn case.'";
 
 Section 3 - Events
 
@@ -103,6 +103,5 @@ check going to Zephyr Storeroom while HP of Barrett is 0:
 		now HP of Barrett is 1;
 	else:
 		say "     Wanting to find out what is on the other side of the door, you watch Larissa, waiting for the receptionist to turn away and give you a chance to get inside. After a few minutes, a window of opportunity arises. Larissa appears to be completely consumed with some documents on the desk, and you decide to make use of this opening. Trying to be as sneaky as possible, you edge closer to the door and reach out, taking the handle in your grip. 'What exactly do you think you're doing?' Turning your head quickly, you see Larissa looking at you with a single eyebrow raised. 'Can't you read what the door says? Employees only, and since you aren't to my knowledge working for Zephyr, that means you can't go in there.' Retracting your hand, you attempt to act as if you hadn't looked at the sign on the door. While the receptionist seems a bit annoyed, Larissa quickly goes back to work and paying you no mind. If you want to get in this door, you're going to have to find a way to become more [bold type]stealthy[roman type]." instead;
-		[move player to Zephyr Lobby;]
 
 Black Market ends here.

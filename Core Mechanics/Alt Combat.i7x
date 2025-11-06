@@ -411,7 +411,7 @@ This is the player attack rule:
 				say "DEBUG: 2 point hit penalty because of over/undersized weapon.[line break]";
 			decrease combat bonus by 2;
 	let the roll be a random number from 1 to 50;
-	say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	say "You roll 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: ";
 	if the roll plus the combat bonus > 20:
 		let wmstrike be 0;
 		let z be 0;
@@ -665,7 +665,7 @@ This is the player seduce rule:
 		if Debug is at level 10:
 			say "DEBUG: Combat Bonus after Penalty: [combat bonus][line break]";
 	let the roll be a random number from 1 to 50;
-	say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	say "You roll 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: ";
 	if the roll plus the combat bonus > 20 and SeductionImmune entry is false:
 		let LibidoIncrease be ( (Charisma of Player divided by three) * ( a random number from 70 to 130 ) ) divided by 100;
 		if a random chance of Morale of Player in 200 succeeds:
@@ -872,7 +872,7 @@ This is the flee rule:
 			if the combat bonus < -22:
 				now combat bonus is -22;
 		let the roll be a random number from 1 to 50;
-		say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+		say "You roll 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: ";
 		if the roll plus the combat bonus > 20:
 			say "You manage to evade [EnemyNameOrTitle] and slip back into the city.";
 			now fightoutcome is 30;
@@ -1036,7 +1036,7 @@ to standardstrike:
 				now combat bonus is -25;
 		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15; [***if autopass, min. 30% chance to hit]
 		let the roll be a random number from 1 to 50;
-		say "[EnemyCapNameOrTitle] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
+		say "[EnemyCapNameOrTitle] rolls 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: [run paragraph on]";
 		if the roll plus the combat bonus > 20:
 			now monsterhit is true;
 		else:
@@ -1081,7 +1081,7 @@ to standardhit:
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "[Attack entry]  You take [special-style-2][dam][roman type] damage!";
+	say "[Attack entry]You take [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[normalabsorbancy]";
 	if absorb > dam:
@@ -1597,9 +1597,11 @@ to TrophyLootFunction: [generates either a trophy prompt or loot for the player]
 			let z be 0;
 			if randomdropchance is 100: [always drops = no need to run all the maths]
 				ItemGain loot entry by 1;
+				LineBreak;
 			else if randomdropchance > 0:
 				if a random chance of (randomdropchance + LootBonus) in 100 succeeds:
 					ItemGain loot entry by 1;
+					LineBreak;
 
 to SpecialTrophyCheck (TrophyName - text):
 	if TrophyName is:
@@ -1820,7 +1822,7 @@ this is the intstrike rule:
 				now combat bonus is -25;
 		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15; [***if autopass, min. 30% chance to hit]
 		let the roll be a random number from 1 to 50;
-		say "[EnemyCapNameOrTitle] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
+		say "[EnemyCapNameOrTitle] rolls 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: [run paragraph on]";
 		if the roll plus the combat bonus > 20:
 			now monsterhit is true;
 		else:

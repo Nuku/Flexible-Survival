@@ -130,7 +130,6 @@ When Play begins:
 	now Species Name entry is "Vixen"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is "Vixen Kunoichi";
 	add "Vixen Kunoichi" to infections of VulpineList;
-	add "Vixen Kunoichi" to infections of FurryList;
 	add "Vixen Kunoichi" to infections of NatureList;
 	add "Vixen Kunoichi" to infections of HermList;
 	add "Vixen Kunoichi" to infections of TaperedCockList;
@@ -138,6 +137,7 @@ When Play begins:
 	add "Vixen Kunoichi" to infections of SheathedCockList;
 	add "Vixen Kunoichi" to infections of BipedalList;
 	add "Vixen Kunoichi" to infections of TailList;
+	add "Vixen Kunoichi" to infections of FurryList;
 	now enemy title entry is "Vixen Kunoichi"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is "Rena"; [ Specific name of unique enemy. ]
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
