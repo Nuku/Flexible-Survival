@@ -1213,7 +1213,9 @@ check vialcheat:
 	if debugactive is 0, say "You aren't currently debugging!" instead;
 
 carry out vialcheat:
-	VialGain topic understood by 10;
+	let vial be topic understood;
+	let vialname be vial in title case;
+	VialGain vialname by 10;
 
 allitemcheat is an action applying to nothing.
 understand "zAllItems" as allitemcheat.

@@ -1081,7 +1081,7 @@ to standardhit:
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "[Attack entry]You take [special-style-2][dam][roman type] damage!";
+	say "[Attack entry] You take [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[normalabsorbancy]";
 	if absorb > dam:

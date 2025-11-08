@@ -289,12 +289,13 @@ to say cow attack:
 		say "[one of]The cow reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your arm, causing it to sting at the pressure.[or]The cow reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your stomach, causing you to become short of breath and bend over wheezing as the focused stream hits.[or]Moving in close, she slams her big milk jugs into your face, trying to make you drink, but ends up knocking you back.[at random]";
 
 to say feral bull attack:
-	choose row MonsterID from the Table of Random Critters;
 	if CowBully > 0:
 		say "[one of]The bull lowers his horns, bellowing wildly and charges at you, raking your side painfully.[or]Screaming and bucking around you the huge animal lashes out with his back hooves, knocking you aside like a tin can.[or]Shaking his huge head as he bolts around wildly, he catches you with a horn, dragging you for a while before swinging his head up and throwing you into the air. As you hit the ground you feel real pain blossom into your legs.[at random]";
 	else:
+		choose row MonsterID from the Table of Random Critters;
 		if monsterHP < ( HP entry / 4 ):			[ < 20 for regular play ]
-			say "The bull flicks his tail at you. You have finally annoyed him so much he has moved.[line break][combat abort]";
+			say "The bull flicks his tail at you. You have finally annoyed him so much he has moved.[combat abort]";
+			continue the action;
 		say "[one of]The big bull snorts softly, trying to eat grass and completely ignoring you.[or]The bull looks up from his grazing for a moment, making a mooing sound at you, before returning to his meal.[at random]";
 		if monsterHP < ( ( HP entry * 7 ) / 10 ):		[ < 56 for regular play ]
 			increase monsterHP by 9 + ( HP entry / 5 ); [ +25 HP for regular play ]

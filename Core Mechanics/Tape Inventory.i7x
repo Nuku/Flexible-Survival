@@ -23,26 +23,24 @@ carry out TapeInventorying:
 			say "[tapelink x with linkparts]";
 		say "[x][line break]";
 
-tapeindex is a number that varies.
-
 to say tapelink (T - text) with (L - list of list of text):
 	repeat with linktext running through L:
 		let link be the substituted form of "[entry 2 of linktext] [T]";
-		if tapeindex < 1 or tapeindex > number of entries in hyperlink list:
+		if hyperindex < 1 or hyperindex > number of entries in hyperlink list:
 			add link to hyperlink list;
-			now tapeindex is number of entries in hyperlink list;
+			now hyperindex is number of entries in hyperlink list;
 		else:
-			if tapeindex < number of entries in hyperlink list and entry tapeindex + 1 of hyperlink list is link: [likely the list will get built in the same order, so long runs of these should be sequential]
-				increase tapeindex by 1;
+			if hyperindex < number of entries in hyperlink list and entry hyperindex + 1 of hyperlink list is link: [likely the list will get built in the same order, so long runs of these should be sequential]
+				increase hyperindex by 1;
 			else if link is listed in hyperlink list: [otherwise, find it in the list if it exists]
 				repeat with x running from 1 to number of entries in hyperlink list:
 					if entry x of hyperlink list is link:
-						now tapeindex is x;
+						now hyperindex is x;
 						break;
 			else: [or just add it if it doesn't]
 				add link to hyperlink list;
-				now tapeindex is number of entries in hyperlink list;
-		say "[set link tapeindex][bracket][entry 1 of linktext][close bracket][terminate link] "; [associate our text in the UI with the command in the hyperlink list]
+				now hyperindex is number of entries in hyperlink list;
+		say "[set link hyperindex][bracket][entry 1 of linktext][close bracket][terminate link] "; [associate our text in the UI with the command in the hyperlink list]
 
 understand "tape [text]" as tapeing.
 
