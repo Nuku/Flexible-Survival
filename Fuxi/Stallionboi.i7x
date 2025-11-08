@@ -8,7 +8,7 @@ Section 1 - Creature Responses
 
 to say Stallionboi wins:
 	project the Figure of Stallionboi_hard_icon;
-	if vorelevel > 2 and glowing mushroom is owned:
+	if vorelevel > 2 and glowing mushroom is owned and CockVoreList is not banned:
 		if a random number between 1 and 3 is:
 			-- 1:
 				say "[StalloinBoiCockVore]";
@@ -54,7 +54,6 @@ to say StallionGroupSex:
 		say "     Completely losing track of how many times you are taken by the sexy male slutbois, or in how many ways, your pussy and ass are stuffed throughout the night by who knows how many different partners. Eventually you find yourself orgasming for the final time, and are carried away into unconsciousness on a wave of sexual bliss, your body still being used by the many sexy equines the entire time. When you wake up you find yourself still in the same room, though someone took time to move you off to a more comfortable position on the side of the room. Looking around, you see the room is filled with the bodies of a number of those exhausted little slut stallions, most of them passed out still in a pile or holding each other close, the strange orgy obviously having continued long after you passed out.";
 		say "     The scent of sex and equines fills the air, causing you to moan slightly as your well used body tries to respond in the way they were training it to, your pussy clenching eagerly as your lust to experience more of that wonderful pleasure begins to grow between your legs. Fortunately you still manage to retain just enough willpower to take the opportunity to slip out the door while they are all unconscious, staggering drunkenly back towards the entrance to this crazy and sensual place even while still covered with their seed and smelling of sex.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Stallionboi";
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Stallionboi";
 	else:
 		say "     The slutty stallionboi gives a rather girlish squeal of glee as you finally give up your futile attempt at resisting the strange horseboi's assault. 'We are going to make such a pretty little stallionslut out of you!' He gushes happily, as he grabs your arms and practically drags you through the halls with a lusty smirk on his face, his sexy black horselike tail swishing eagerly in front of you as he drags you along. Catching your breath slightly, you try to open your mouth to protest your rough handling only to stumble as he stops in front of a door and throws it open wide. You get a confused glimpse of several equine heads turning in your direction as he shoves you inside, his call of 'Boys, we got a new playtoy!' fills your ears for a second, before the sound of loud partially equine squealing drowns out anything else.";
 		say "     You gasp and try to struggle as a large number of the vaguely feminine stallionbois descend eagerly on your already aroused body, their hands groping and stroking you all over even as the aroused musk of a roomful of horny equines washes over you. Unable to resist their advances, you find yourself moaning wantonly as they begin to tease and play with your body, rubbing their thick erect equine cocks up against you as you find yourself hauled down onto the bed. It isn't long before they have those wonderful equine members buried in your all too eager body either, causing you to moan helplessly around the equine rod filling your mouth as your increasingly sex crazed body is filled by the strangely sexy beasts. Before long you find yourself losing track of anything but the hands stroking and playing with your overstimulated body, and the thick horsemeat rubbing up against you, or plunging into your all too eager holes.";
@@ -62,12 +61,11 @@ to say StallionGroupSex:
 		say "     You completely lose track of how many times you are taken by the sexy male slutbois, or in how many ways, your mouth and ass stuffed throughout the night by who knows how many different partners, even while your own [Cock of Player] rod is lavished with attention again and again, as they wring orgasm after orgasm out of you. Eventually you find yourself orgasming for the final time, and are carried away into unconsciousness on a wave of sexual bliss, your body still being used by the many sexy equines the entire time. When you wake up you find yourself still in the same room, though someone took time to move you off to a more comfortable position on the side of the room. Looking around, you see the room is filled with the bodies of a number of those exhausted little slut stallions, most of them passed out still in a pile or holding each other close, the strange orgy obviously having continued long after you passed out.";
 		say "     The scent of sex and equines fills the air, causing you to moan slightly as your well used body tries to respond in the way they were training it to, your cock twitching as it tries to revive itself for another round, even as your lust to experience more of that wonderful pleasure begins to grow between your legs. Fortunately you still manage to retain just enough willpower to take the opportunity to slip out the door while they are all unconscious, staggering drunkenly back towards the entrance to this crazy and sensual place even while still covered with their seed and smelling of sex.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Stallionboi";
-		CreatureSexAftermath "Player" receives "AssFuck" from "Stallionboi";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Stallionboi";
 	CreatureSexAftermath "Player" receives "OralCock" from "Stallionboi";
 
 To say Stallionboi loses:
-	project the Figure of Stallionboi_clothed_icon;
+	project the Figure of Stallionboi_hard_icon;
 	if Player is Male:
 		say "     Falling to his knees with a loud oomph, the stallionboi glances up at you with a strange mixture of fear, lust, and admiration whirling in his eyes. Though the girly boy is afraid of getting any more of a beating from you, his infected mind can't help but feel a depraved attraction towards his betters. He'll snap out of his trance soon enough. If you want to take advantage of him, you better do it quickly.";
 		say "     [bold type]Do you want to put him in his place?[roman type][line break]";
@@ -118,7 +116,7 @@ To say Stallionboi loses:
 				say "     You both slump to the floor, a sweaty tangle of limbs lost in the afterglow of climax exchanging light almost loving kisses and murmured words of affection. It's hard to bring yourself to move on, but you know you'll have to eventually. Rising shakily to your feet, you leave the stallionboi to rest as you continue your exploration.";
 				CreatureSexAftermath "Stallionboi" receives "AssFuck" from "Player";
 	else if Player is Female:
-		say "     Driven back by your powerful assault, the stallionboi groans with pain as he staggers backwards and shoots you a rather dirty and sexy look, before bursting into tears as he says '[one of]Well you didn't have to be so mean!'[or]Maybe you will be more fun next time sexy,'[or]Why don't you want to fuck me?'[or]Damn sweetie, that's a little rough for me, maybe you should try one of the donkeys,'[at random] before staggering off down the corridor, shooting you a last teasing glance over his shoulder as he does so.";
+		say "     Driven back by your powerful assault, the stallionboi groans with pain as he staggers backwards and shoots you a rather dirty and sexy look, before bursting into tears as he says '[one of]Well you didn't have to be so mean!' [or]Maybe you will be more fun next time sexy,' [or]Why don't you want to fuck me?' [or]Damn sweetie, that's a little rough for me, maybe you should try one of the donkeys,' [at random]before staggering off down the corridor, shooting you a last teasing glance over his shoulder as he does so.";
 
 Section 2 - Creature Insertion
 

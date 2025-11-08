@@ -68,11 +68,11 @@ To say cheetah defeat:
 		now sortorder entry is 2;
 		now description entry is "Get that barbed shaft in your pussy";
 		[]
-	[if Player is female and specialcheetah is true and cheetahmate is 0:
+	if Player is female and specialcheetah is true and cheetahmate is 0 and (BodyName of Player is "Feral Cheetah" or FaceName of Player is "Feral Cheetah"):
 		choose a blank row in table of fucking options;
 		now title entry is "Make him your mate";
 		now sortorder entry is 7;
-		now description entry is "Claim the kitty";]
+		now description entry is "Claim the kitty";
 		[
 		choose a blank row in table of fucking options;
 		now title entry is "Get eaten out";
@@ -115,9 +115,9 @@ To say cheetah defeat:
 				-- "Get eaten out":
 					say "[beatthecheetah05]";
 				-- "Suck cheetah cock":
-					say "[beatthecheetah06]";
+					say "[beatthecheetah06]";]
 				-- "Make him your mate":
-					say "[beatthecheetah07]";]
+					say "[beatthecheetah07]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -441,12 +441,12 @@ This is the Feral Cheetah Infection rule:
 		trigger ending "Feral Cheetah Infection"; [Here it states, that the ending has been played.]
 		if cheetahmate is 0:
 			if Humanity of Player < 10:
-				if Player is female:
+				if Player is female or (Player is maleinterested and Player is not femaleinterested):
 					say "     You join the growing band of converts and soon take your place as the pack leader's proud mate. Your group manages to keep away the human forces with sheer speed and cunning, maintaining control of the zoo and some of the surrounding area even as the rest of the city is pacified.";
 				else:
 					say "     You form the cheetahs of the zoo into a large, spotted band of conquerors and hold the humans off with sheer speed and cunning. One day, as you oversee and participate in the defense, you smell someone sweet, and entice her to choose you as her mate. While the military manages to pacify the rest of the city, the zoo and its surrounding area remains firmly under your pack's control, abandoned as too difficult to reclaim.";
 			else:
-				if Player is female:
+				if Player is female or "MPreg" is listed in feats of Player:
 					say "     You choose a mate from the transformed and after escaping those hunting for you in the city bear him many children over the following years. Time goes by quickly with the sweet smell of freedom, love, and your mate to accompany you, until eventually humankind returns its grasp on the world and you prepare to teach them a lesson...";
 				else:
 					say "     You wait in the zoo, and, in the few days that the humans take to recapture and purify the city, a cheetah chooses you as her mate. The two of you flee the city together, stopping only when you are both on a remote plain, grass stretching as far as the eye can see. She bears you many children in your wild home, and the sweet smell of freedom, love, and your mate carry you outwards.";

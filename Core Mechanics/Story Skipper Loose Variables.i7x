@@ -4686,6 +4686,8 @@ to VariableNumberLoad:
 					if freecred is not NumberVarValue entry, now freecred is NumberVarValue entry;
 				-- "FriesianRelationship":
 					if FriesianRelationship is not NumberVarValue entry, now FriesianRelationship is NumberVarValue entry;
+				-- "FrostDrakeBeaten":
+					if FrostDrakeBeaten is not NumberVarValue entry, now FrostDrakeBeaten is NumberVarValue entry;
 				-- "fsdbias":
 					if fsdbias is not NumberVarValue entry, now fsdbias is NumberVarValue entry;
 				-- "fsddom":
@@ -6146,6 +6148,8 @@ to VariableNumberLoad:
 					if TaniClassMemory is not NumberVarValue entry, now TaniClassMemory is NumberVarValue entry;
 				-- "TaniRecommendation":
 					if TaniRecommendation is not NumberVarValue entry, now TaniRecommendation is NumberVarValue entry;
+				-- "Tanukigender":
+					if Tanukigender is not NumberVarValue entry, now Tanukigender is NumberVarValue entry;
 				-- "Targetturns":
 					if Targetturns is not NumberVarValue entry, now Targetturns is NumberVarValue entry;
 				-- "tatsave":

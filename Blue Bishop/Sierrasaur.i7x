@@ -353,6 +353,19 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Sierrasaur:
 	choose row MonsterID from Table of Random Critters;
+	if MaleList is banned and HermList is banned:
+		say "     You happen upon what appears to be a large boulder jutting from the ground. Prodding it, you find yourself shocked to have the thing grumble at you in response. That's all it appears to do, however, and you eventually choose to depart, minding to avoid such a fixture in the future.";
+		now BannedStatus entry is true;
+		now fightoutcome is 19;
+		now combat abort is 1;
+	else:
+		project Figure of Sierrasaur_soft_icon;
+		if HermList is banned:
+			now sierramale is true;
+			setmongender 3; [creature is male]
+		else:
+			now sierramale is false;
+			setmongender 7; [creature is mherm]
 	if Player is MalePreferred:
 		now sex entry is "Male";
 	else if Player is FemalePreferred:
@@ -369,20 +382,6 @@ to say PrepCombat_Sierrasaur:
 		now sierrapure is false;
 	psycheeval;
 	libidoeval;
-	if MaleList is banned and HermList is banned:
-		say "     You happen upon what appears to be a large boulder jutting from the ground. Prodding it, you find yourself shocked to have the thing grumble at you in response. That's all it appears to do, however, and you eventually choose to depart, minding to avoid such a fixture in the future.";
-		now BannedStatus entry is true;
-		now fightoutcome is 19;
-		now combat abort is 1;
-	else:
-		project Figure of Sierrasaur_soft_icon;
-		if HermList is banned:
-			add { "Sierrasaur" } to infections of MaleList;
-			now sierramale is true;
-			setmongender 3; [creature is male]
-		else:
-			add { "Sierrasaur" } to infections of HermList;
-			setmongender 7; [creature is mherm]
 
 Section 2 - Creature Insertion
 
@@ -399,11 +398,10 @@ When Play begins:
 	add "Sierrasaur" to infections of FeralList;
 	add "Sierrasaur" to infections of HistoricalList;
 	add "Sierrasaur" to infections of NatureList;
-	add "Sierrasaur" to infections of HermList;
 	add "Sierrasaur" to infections of BluntCockList;
 	add "Sierrasaur" to infections of InternalCockList;
 	add "Sierrasaur" to infections of InternalBallsList;
-	add "Sierrasaur" to infections of BipedalList;
+	add "Sierrasaur" to infections of QuadrupedalList;
 	add "Sierrasaur" to infections of TailList;
 	add "Sierrasaur" to infections of OviImpregnatorList;
 	add "Sierrasaur" to infections of TailweaponList;
@@ -574,21 +572,22 @@ name	desc	weight	object
 
 earthen seed is a grab object. earthen seed is infectious. Strain of earthen seed is "Sierrasaur". earthen seed is cum.
 the scent of earthen seed is "The warm swill has a heady, masculine scent.".
-Usedesc of earthen seed is "[usesierraseed]";
+Usedesc of earthen seed is "[usesierraseed]".
 
 to say usesierraseed:		[only alters sizes, not gender]
-	setmonster "Sierrasaur";
-	choose row MonsterID from Table of Random Critters;
-	if Player is MalePreferred:
-		now sex entry is "Male";
-	else if Player is FemalePreferred:
-		now sex entry is "Female";
-	else if Player is HermPreferred:
-		now sex entry is "Both";
-	else if sierramale is true:
-		now sex entry is "Male";
-	else:
-		now sex entry is "Both";
+	if "Iron Stomach" is not listed in feats of Player:
+		setmonster "Sierrasaur";
+		choose row MonsterID from Table of Random Critters;
+		if Player is MalePreferred:
+			now sex entry is "Male";
+		else if Player is FemalePreferred:
+			now sex entry is "Female";
+		else if Player is HermPreferred:
+			now sex entry is "Both";
+		else if sierramale is true:
+			now sex entry is "Male";
+		else:
+			now sex entry is "Both";
 	say "     Downing the vial of thick seed, you feel mildly rejuvenated, though your body churns with the strain's lingering influence.";
 	PlayerEat 2;
 	PlayerDrink 4;
@@ -604,7 +603,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 this is the Sierrasaur's Sex Toy rule:
 	if ending "Sierrasaur's Sex Toy" is triggered:
 		say "     Succumbing from inside the reptile, you eventually grow obsessively fond of these twisted confines. Though you never grow to full size, you nonetheless remain ever tended to by your parental kin, leaving your new home only to be fed";
-		if (Player is female or "MPreg" is listed in feats of Player) and Player is not sterile:
+		if Player is fpreg_ok or Player is mpreg_ok:
 			say " and give birth to the beast's offspring";
 		else if Player is male and Player is not sterile and sierramale is false:
 			say " and sire the beast's offspring";
@@ -627,7 +626,7 @@ This is the Sierrasaur Infection rule:
 				say "to sire your children";
 				if Player is female or "MPreg" is listed in feats of Player:
 					say " and you to sire its";
-			else if (Player is female or "MPreg" is listed in feats of Player) and Player is not sterile:
+			else if Player is fpreg_ok or Player is mpreg_ok:
 				say "for you to sire its children";
 			else:
 				say "to satisfy you on a whim and help you find more to be brought into the fold";

@@ -13,7 +13,7 @@ to say PinkPoodledesc:
 	if poodleapproved is 1:
 		say " As she returns your inspection, a sultry smile creeps across her muzzle. [one of]'Your place or mine?' she says with a refined French accent before striding forward confidently. 'How about right here?'[or]'Ah, mon cher,' she says with a refined French accent before striding forward confidently. 'Looking for some company?'[or]'Ah, my lonely one,' she says with a refined French accent before striding forward confidently. 'You look like you could use some company.'[at random]";
 	else:
-		say " As she returns your inspection she scoffs, turning up her nose at you. [one of]'Such riff-raff you find around here these days!'[or]'Another uncouth beast,'[or]'Such a boorish creature!'[at random] she says with a refined French accent before striding forward confidently. 'I suppose I shall have to deal with you before you put my clients off.'";
+		say " As she returns your inspection she scoffs, turning up her nose at you. [one of]'Such riff-raff you find around here these days!' [or]'Another uncouth beast,' [or]'Such a boorish creature!' [at random]she says with a refined French accent before striding forward confidently. 'I suppose I shall have to deal with you before you put my clients off.'";
 
 to say losetoPinkPoodle:
 	now nopoodlesex is 0;
@@ -37,6 +37,7 @@ to say losetoPinkPoodle:
 
 to say pinkpoodledefeatsex:
 	say "     The poodle girl hums softly as her delicate paws roam your body, teasing and groping you as she quickly strips off your gear. After stripping you down, the attractive canine kneels down between your legs, taking your [cock size desc of Player] [Cock of Player] member in one paw as her other gently cups your [Ball Size Adjective of Player] [Balls]. With an expert touch, she teases your shaft to attention before she leans forward and wraps her muzzle around your shaft, gently sucking as her tongue plays along your length. Combined with her paw still massaging your testes, the effect is quite arousing, but the obviously well-practiced canine call girl is careful to not let you reach climax too soon.";
+	WaitLineBreak;
 	say "     Releasing your shaft with one final kiss, she raises herself up off her knees, positioning her wet canine spade over your [Cock of Player] cock before lowering herself down onto you. The feeling of her slick doggy cunt enveloping your flesh is delightful, and even as she bounces up and down your shaft, she reaches beneath herself to resume fondling your aching balls. The pleasure seems to go on forever as the canine call girl pushes you towards climax again and again, but each time letting off just before you peak to draw out the experience as long as possible. Eventually you can take no more, and as if sensing your orgasm the poodle girl makes one final thrust, [if Player is knotted]forcing your swollen knot into her body[else]hilting your entire length in herself[end if]. She howls in pleasure when you climax powerfully, blasting your [Cum Load Size of Player] load into her as your own howling joins hers.";
 	say "     The pink poodle collapses atop you, panting happily as [if Player is knotted]she waits for your knot to go down[else]her feminine juices leak out around your still-pulsing shaft[end if]. She cuddles up against your exhausted form for some time, whispering sweet French nothings in your ear as you both recover from the intense lovemaking. When she is finally able to, the poodle pulls herself off you with a wet slurp before giving you a quick kiss on the cheek and telling you to come back and see her again sometime. She sashays off down the street, stopping only to turn and blow you a kiss before she disappears from sight.";
 	CreatureSexAftermath "Pink Poodle" receives "PussyFuck" from "Player";
@@ -111,6 +112,7 @@ To say beatthePinkPoodle:
 to say pinkpoodlesex:
 	say "     Since she's already on all fours, you decide to use the beaten canine like the bitch she is. Dropping your gear as you move behind her, you grip the poodle's ample, shaved hips, causing her tail to wag softly as you caress them. You can't help but grin as you watch the large pink pompom swaying back and forth before you as you align your [cock size desc of Player] [Cock of Player] cock to her needy pussy, stroking your tip across her outer lips gently before pushing in slowly.";
 	say "     As [if Player is knotted]your knot begins rubbing against the pink girl's outer folds[else]you hilt your entire length in the pink girl's needy cunt[end if] she moans in pleasure beneath you, pressing her bottom back against you, nearly knocking you over as you lean forwards onto her back. Locking your arms around her torso and resting your head on the thick pink fur covering her shoulders, you begin humping the canine in earnest, quickly building to an energetic rhythm as you fuck her like an animal.";
+	WaitLineBreak;
 	say "     The pink poodle barks and yips beneath you, pressing her body back against you[if Player is knotted], trying to force your knot into her body with each thrust[else] and squeezing her cunt tightly around your shaft[end if]. As your combined arousal begins to peak, you make one final powerful thrust, driving your [if Player is knotted]knot[else]shaft[end if] into the pretty poodle as you both howl in climax. Her cunt spasms and convulses around your shaft, milking your twitching member for all it can as you fill her with your [Cum Load Size of Player] load[if Player is knotted], none of which escapes thanks to her tight grip around your knot[else] even as her own juices leak out around your shaft[end if].";
 	say "     [if Player is knotted]As you lay atop her, the well-fucked poodle pants happily, happily tugging and pulling at your knot to draw out her own pleasure as you wait for it to go down. [end if]When you finally pull out the pink poodle falls to her side, rubbing her belly contentedly as she rests on the ground, leaving you free to gather your things and continue on your way.";
 	CreatureSexAftermath "Pink Poodle" receives "PussyFuck" from "Player";
@@ -164,7 +166,7 @@ When Play begins:
 	add "Pink Poodle" to infections of CanineList;
 	add "Pink Poodle" to infections of FurryList;
 	add "Pink Poodle" to infections of NatureList;
-	add "Pink Poodle" to infections of MaleList;
+	add "Pink Poodle" to infections of FemaleList;
 	add "Pink Poodle" to infections of TaperedCockList;
 	add "Pink Poodle" to infections of KnottedCockList;
 	add "Pink Poodle" to infections of SheathedCockList;
@@ -412,7 +414,7 @@ to say PoodleHeatSuccumb:
 	sort hmonlist in random order;
 	now MonsterID is entry 1 of hmonList;
 	choose row MonsterID from the Table of Random Critters;
-	say "     Your lust-fueled search eventually leads you an attractive [Name entry], who you immediately submit to, offering yourself freely in the hopes of satisfying your body's lustful, heat-fueled needs.";
+	say "     Your lust-fueled search eventually leads you to an attractive [Name entry], who you immediately submit to, offering yourself freely in the hopes of satisfying your body's lustful, heat-fueled needs.";
 	wait for any key;
 	follow the cock descr rule;
 	follow the cunt descr rule;

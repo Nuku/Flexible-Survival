@@ -259,6 +259,10 @@ To Combat Menu:
 			now automaticcombatcheck is 1;
 			follow the player attack rule;
 			next;
+		else if autoattackmode is 2: [always seduces in combat, no player input needed]
+			now automaticcombatcheck is 1;
+			follow the player seduce rule;
+			next;
 		else if autoattackmode is 3: [always pass in combat, no player input needed]
 			now automaticcombatcheck is 1;
 			follow the combat pass rule;
@@ -407,7 +411,7 @@ This is the player attack rule:
 				say "DEBUG: 2 point hit penalty because of over/undersized weapon.[line break]";
 			decrease combat bonus by 2;
 	let the roll be a random number from 1 to 50;
-	say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	say "You roll 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: ";
 	if the roll plus the combat bonus > 20:
 		let wmstrike be 0;
 		let z be 0;
@@ -469,6 +473,7 @@ This is the player attack rule:
 		let bonusattacks be 0; [max 2 bonus attacks in a round]
 		let specattchance be 4;
 		if peppereyes > 0, increase specattchance by 1;
+		if monsterHP - dam < 1, now specattchance is 0; [creature already defeated]
 		if a random chance of specattchance in 20 succeeds and "Tail Strike" is listed in feats of Player and bonusattacks < 2:
 			if TailName of Player is listed in infections of TailweaponList:
 				increase bonusattack by 1;
@@ -517,6 +522,7 @@ This is the player attack rule:
 			if Nipple Count of Player > 4, increase dammy by a random number between 0 and 1;
 			say "[line break]Grabbing your opponent, you smoosh them into your ample bosom, smothering and crushing them with your tits for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
+		if monsterHP - dam < 1, now petchance is 0; [creature already defeated]
 		if a random chance of petchance in 1000 succeeds and "Spirited Youth" is listed in feats of Player:
 			let y be a random number from 4 to 6;
 			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at the [EnemyNameOrTitle] for [special-style-2][y][roman type] damage!";
@@ -531,7 +537,7 @@ This is the player attack rule:
 		increase monsterLibidoPenalty by 20;
 	else:
 		say "You miss!";
-	if Player is not lonely:
+	if Player is not lonely and monsterHP > 0:
 		LineBreak;
 		Repeat with z running through companionList of Player:
 			if z is not NullPet:
@@ -581,11 +587,11 @@ This is the player attack rule:
 							say "[z]'s seduction attempt fails!";
 					say "Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
 					increase HP of Player by 1;
-	LineBreak;
 	follow the monster injury rule;
-	say "[EnemyCapNameOrTitle] is [descr].";
+	say "[EnemyCapNameOrTitle] is [descr]. ";
 	follow the monster libido rule;
-	say "[EnemyCapNameOrTitle] is [descr].";
+	say "[EnemyCapNameOrTitle] is [descr]. ";
+	LineBreak;
 	if monsterHP < 1:
 		now fightoutcome is 10;
 		win;
@@ -659,7 +665,7 @@ This is the player seduce rule:
 		if Debug is at level 10:
 			say "DEBUG: Combat Bonus after Penalty: [combat bonus][line break]";
 	let the roll be a random number from 1 to 50;
-	say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	say "You roll 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: ";
 	if the roll plus the combat bonus > 20 and SeductionImmune entry is false:
 		let LibidoIncrease be ( (Charisma of Player divided by three) * ( a random number from 70 to 130 ) ) divided by 100;
 		if a random chance of Morale of Player in 200 succeeds:
@@ -722,11 +728,11 @@ This is the player seduce rule:
 							say "[z]'s seduction attempt fails!";
 					say "Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
 					increase HP of Player by 1;
-	LineBreak;
 	follow the monster injury rule;
-	say "[EnemyCapNameOrTitle] is [descr].";
+	say "[EnemyCapNameOrTitle] is [descr]. ";
 	follow the monster libido rule;
-	say "[EnemyCapNameOrTitle] is [descr].";
+	say "[EnemyCapNameOrTitle] is [descr]. ";
+	LineBreak;
 	if monsterHP < 1:
 		now fightoutcome is 10;
 		win;
@@ -866,7 +872,7 @@ This is the flee rule:
 			if the combat bonus < -22:
 				now combat bonus is -22;
 		let the roll be a random number from 1 to 50;
-		say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+		say "You roll 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: ";
 		if the roll plus the combat bonus > 20:
 			say "You manage to evade [EnemyNameOrTitle] and slip back into the city.";
 			now fightoutcome is 30;
@@ -1030,7 +1036,7 @@ to standardstrike:
 				now combat bonus is -25;
 		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15; [***if autopass, min. 30% chance to hit]
 		let the roll be a random number from 1 to 50;
-		say "[EnemyCapNameOrTitle] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
+		say "[EnemyCapNameOrTitle] rolls 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: [run paragraph on]";
 		if the roll plus the combat bonus > 20:
 			now monsterhit is true;
 		else:
@@ -1075,7 +1081,7 @@ to standardhit:
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "[Attack entry]  You take [special-style-2][dam][roman type] damage!";
+	say "[Attack entry]You take [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[normalabsorbancy]";
 	if absorb > dam:
@@ -1591,9 +1597,11 @@ to TrophyLootFunction: [generates either a trophy prompt or loot for the player]
 			let z be 0;
 			if randomdropchance is 100: [always drops = no need to run all the maths]
 				ItemGain loot entry by 1;
+				LineBreak;
 			else if randomdropchance > 0:
 				if a random chance of (randomdropchance + LootBonus) in 100 succeeds:
 					ItemGain loot entry by 1;
+					LineBreak;
 
 to SpecialTrophyCheck (TrophyName - text):
 	if TrophyName is:
@@ -1637,9 +1645,9 @@ This is the player injury rule:
 	else if per <= 40:
 		now descr is "[if Playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]wounded[or]bashed around[or]significantly harmed[at random]";
 	else if per <= 80:
-		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type][line break]";
+		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type]";
 	else:
-		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type][line break]";
+		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type]";
 	rule succeeds;
 
 Section 5 - Critter Combat
@@ -1700,7 +1708,7 @@ this is the aura1 rule:		[weak aura]
 	let bonus be Stamina of Player - 10;
 	let dice be a random number from 1 to 50;
 	say "You roll 1d50([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
-	if dice + bonus > 20:
+	if dice + bonus >= 20:
 		say "You manage to resist the creature's power and press on.";
 		LineBreak;
 	else:
@@ -1814,7 +1822,7 @@ this is the intstrike rule:
 				now combat bonus is -25;
 		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15; [***if autopass, min. 30% chance to hit]
 		let the roll be a random number from 1 to 50;
-		say "[EnemyCapNameOrTitle] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
+		say "[EnemyCapNameOrTitle] rolls 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: [run paragraph on]";
 		if the roll plus the combat bonus > 20:
 			now monsterhit is true;
 		else:

@@ -16,6 +16,8 @@ Array long_buffer buffer LONG_BUFFER_LEN;
 
 [ GetLongInput done;
 	done = false;
+	glk_cancel_hyperlink_event(gg_mainwin);
+	glk_cancel_hyperlink_event(gg_statuswin);
 	glk_request_line_event(gg_mainwin,long_buffer+WORDSIZE,LONG_BUFFER_LEN-WORDSIZE,0);
 	while (~~done) {
 		glk_select(gg_event);
@@ -25,6 +27,8 @@ Array long_buffer buffer LONG_BUFFER_LEN;
 			3: ! evtype_LineInput
 			if (gg_event-->1 == gg_mainwin) {
 				long_buffer-->0 = gg_event-->2;
+				glk_request_hyperlink_event(gg_mainwin);
+				glk_request_hyperlink_event(gg_statuswin);
 				done = true;
 			}
 		}
@@ -60,12 +64,13 @@ check WriteANote:
 carry out WriteANote:
 	say "[bold type]You open your journal and write...[roman type][line break][line break]";
 	get a long line of input;
-	let DayCount be (240 - turns ) divided by 8; [starting turn (240) minus current turn divided by 8 (the amount of turns in a day)]
-	choose a blank row in the table of JournalNotes;
-	now Date entry is Daycount;
-	if debugactive is 1:
-		say "date: [Date entry] daycount: [Daycount]";
-	now Note entry is the current long line of input;
+	if "[current long line of input]" is not "":
+		let DayCount be (240 - turns ) divided by 8; [starting turn (240) minus current turn divided by 8 (the amount of turns in a day)]
+		choose a blank row in the table of JournalNotes;
+		now Date entry is Daycount;
+		if debugactive is 1:
+			say "date: [Date entry] daycount: [Daycount]";
+		now Note entry is the current long line of input;
 
 BroweseNotes is an action applying to nothing.
 

@@ -13,7 +13,7 @@ Part 1 - Table of Game Objects (+Initial Object)
 [Game Objects - used to replace the default Inform7 item handling so that no objects are used for items]
 Table of Game Objects
 name(text)	desc(text)	weight(number)	object(object)	sortname (indexed text)
-"journal"	"A small, leather-clad book. Spending some time [link]writing[as]use journal[end link] in it can help clear your thoughts and recenter your troubled mind. Or if you have something especially important that you want to remember, you could just [link]write down a note[as]write a note[end link] at the back end of it. [if number of filled rows in Table of JournalNotes > 0]In fact, you remember noting down some things in it that must have been important somehow. You can [link]browse through your notes[as]browse notes[end link] if you want to. Alternatively, [link]ripping them all out[as]rip notes[end link] is also possible. [end if][line break]"	2	journal
+"journal"	"A small, leather-clad book. Spending some time [link]writing[as]use journal[end link] in it can help clear your thoughts and recenter your troubled mind. Or if you have something especially important that you want to remember, you could just [link]write down a note[as]write a note[end link] at the back end of it[if number of filled rows in Table of JournalNotes > 0]. In fact, you remember noting down some things in it that must have been important somehow. You can [link]browse through your notes[as]browse notes[end link] if you want to. Alternatively, [link]ripping them all out[as]rip notes[end link] is also possible[end if]. "	2	journal
 
 Part 2 - Table of Random Critters (+Initial Infection)
 
@@ -119,7 +119,7 @@ skin(text)	SkinName(text)	cock(text)	CockName(text)	face(text)	FaceName(text)	ta
 with 1 blank row
 
 Table of NewPlayerData
-bodySpeciesName(text)	faceSpeciesName(text)	skinSpeciesName(text)	HeadName(text)	HeadSpeciesName(text)	Head Description(text)	Head Adjective(text)	Head Skin Adjective(text)	Head Color(text)	Head Adornments(text)	Hair Length(number)	Body Hair Length(number)	Hair Shape(text)	Hair Color(text)	Hair Style(text)	Beard Style(text)	Eye Color(text)	Eye Adjective(text)	Tongue Adjective(text)	Tongue Color(text)	TorsoName(text)	TorsoSpeciesName(text)	Torso Description(text)	Torso Adjective(text)	Torso Skin Adjective(text)	Torso Color(text)	Torso Pattern(text)	Breast Adjective(text)	Torso Adornments(text)	Nipple Color(text)	Nipple Shape(text)	BackName(text)	BackSpeciesName(text)	Back Adornments(text)	Back Skin Adjective(text)	Back Color(text)	ArmsName(text)	ArmsSpeciesName(text)	Arms Description(text)	Arms Skin Adjective(text)	Arms Color(text)	Locomotion(text)	LegsName(text)	LegsSpeciesName(text)	Legs Description(text)	Legs Skin Adjective(text)	Legs Color(text)	AssName(text)	AssSpeciesName(text)	Ass Description(text)	Ass Skin Adjective(text)	Ass Color(text)	Ass Width(number)	TailName(text)	TailSpeciesName(text)	Tail Description(text)	Tail Skin Adjective(text)	Tail Color(text)	Asshole Color(text)	CockName(text)	CockSpeciesName(text)	Cock Description(text)	Cock Adjective(text)	Cock Color(text)	Ball Description(text)	CuntName(text)	CuntSpeciesName(text)	Cunt Description(text)	Cunt Adjective(text)	Cunt Color(text)	MaleInterest(truth state)	TransMaleInterest(truth state)	FemaleInterest(truth state)	TransFemaleInterest(truth state)	HermInterest(truth state)
+bodySpeciesName(text)	faceSpeciesName(text)	skinSpeciesName(text)	HeadName(text)	HeadSpeciesName(text)	Head Description(text)	Head Adjective(text)	Head Skin Adjective(text)	Head Color(text)	Head Adornments(text)	Hair Length(number)	Body Hair Length(number)	Hair Shape(text)	Hair Color(text)	Hair Style(text)	Beard Style(text)	Eye Color(text)	Eye Adjective(text)	Tongue Adjective(text)	Tongue Color(text)	TorsoName(text)	TorsoSpeciesName(text)	Torso Description(text)	Torso Adjective(text)	Torso Skin Adjective(text)	Torso Color(text)	Torso Pattern(text)	Breast Adjective(text)	Torso Adornments(text)	Nipple Color(text)	Nipple Shape(text)	BackName(text)	BackSpeciesName(text)	Back Adornments(text)	Back Skin Adjective(text)	Back Color(text)	ArmsName(text)	ArmsSpeciesName(text)	Arms Description(text)	Arms Skin Adjective(text)	Arms Color(text)	Locomotion(text)	LegsName(text)	LegsSpeciesName(text)	Legs Description(text)	Legs Skin Adjective(text)	Legs Color(text)	AssName(text)	AssSpeciesName(text)	Ass Description(text)	Ass Skin Adjective(text)	Ass Color(text)	Ass Width(number)	TailName(text)	TailSpeciesName(text)	Tail Description(text)	Tail Skin Adjective(text)	Tail Color(text)	Asshole Color(text)	CockName(text)	CockSpeciesName(text)	Cock Description(text)	Cock Adjective(text)	Cock Color(text)	Ball Description(text)	CuntName(text)	CuntSpeciesName(text)	Cunt Description(text)	Cunt Adjective(text)	Cunt Color(text)	MaleInterest(truth state)	TransMaleInterest(truth state)	FemaleInterest(truth state)	TransFemaleInterest(truth state)	HermInterest(number)
 with 1 blank row
 
 Table of SexStats
@@ -586,6 +586,7 @@ Name(text)	Type(text)
 "frbatbeaten"	"number"
 "freecred"	"number"
 "FriesianRelationship"	"number"
+"FrostDrakeBeaten"	"number"
 "fsdbias"	"number"
 "fsddom"	"number"
 "fsdfeedmemory"	"number"
@@ -1318,6 +1319,7 @@ Name(text)	Type(text)
 "SylviaVirginCheck"	"number"
 "TaniClassMemory"	"number"
 "TaniRecommendation"	"number"
+"Tanukigender"	"number"
 "Targetturns"	"number"
 "tatsave"	"number"
 "tatstatus"	"number"

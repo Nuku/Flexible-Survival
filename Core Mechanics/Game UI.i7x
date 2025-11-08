@@ -34,10 +34,10 @@ First for constructing the status line (this is the bypass status line map rule)
 
 Table of Fancy Status
 left	central	right
-"Location: [Location of Player][if Location of Player is fasttravel] ([link]Navpoint[as]nav[end link])[end if]"	"Name: [if Player is not defaultnamed][Name of Player][else][link]Pick one?[as]rename[end link][end if] | Pronouns: [link][PronounChoice of Player][as]set pronouns[end link] - [SubjectPro of Player]/[PosAdj of Player] | Condition: [SleepMessage], [AlcState] | [link]Inventory[as]i[end link] | [link]Feats[as]FeatList[end link] | [link]Allies[as]Allies[end link] | [link]SexStats[as]SexStats[end link]"	"HP: [HP of Player]/[MaxHP of Player]"
+"Location: [Location of Player][if Location of Player is fasttravel] ([link]Navpoint[as]nav[end link])[end if]"	"Name: [if Player is not defaultnamed][Name of Player][else][link]Pick one?[as]rename[end link][end if] | Pronouns: [link][PronounChoice of Player][as]set pronouns[end link] - [SubjectPro of Player]/[PosAdj of Player] | Condition: [SleepMessage], [AlcState] | [link]Inventory[as]i[end link] | [link]Feats[as]FeatList[end link] | [link]Allies[as]Allies[end link] | [link]Sex Stats[as]SexStats[end link]"	"HP: [HP of Player]/[MaxHP of Player]"
 "Date: [DateYear]-[DateMonth]-[DateDay], Time: [time of day]"	"STR: [strength of Player] | DEX: [dexterity of Player] | STA: [stamina of Player] | CHA: [Charisma of Player] | INT: [intelligence of Player] | PER: [perception of Player]"	"XP: [XP of Player]/[level up needed]"
 "Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"Hunger: [hunger of Player]/100 | Thirst: [thirst of Player]/100 | Libido: [Libido of Player]/100 | Humanity: [humanity of Player]/100"	"LVL: [level of Player]"
-"Freecred: [freecred]"	"[link]Help[as]HelpBookLookup[end link] | Game Version (Serial): [serial number][if NewGraphicsInteger is 0] [else] | Art by: [ngraphics_currentartist] ([link]art credits[end link])[end if]"	"Score: [score]/[maximum score]"
+"Freecred: [freecred]"	"[link]Help[as]HelpBookLookup[end link] | Game Version (Serial): [serial number][if NewGraphicsInteger is not 0] | Art by: [ngraphics_currentartist] ([link]art credits[end link])[end if]"	"Score: [score]/[maximum score]"
 
 [Optional Version for narrower screens]
 Table of Narrow Status
@@ -46,6 +46,9 @@ left	right
 "Date: [DateYear]-[DateMonth]-[DateDay], Time: [time of day]"	"XP: [XP of Player]/[level up needed]"
 "Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"LVL: [level of Player]"
 "Freecred: [freecred]"	"Score: [score]/[maximum score]"
+
+When play begins:
+	now right alignment depth is 18; [default of 14 is too small to keep maximum score from getting cut off once score exceeds 3 chars]
 
 To say level up needed:
 	say "[if Player is fastlearning][((level of Player plus 1) times 8)][else][(level of Player plus 1) times 10][end if]";
@@ -276,8 +279,8 @@ carry out showstatting:
 To showstats (x - Person):
 	sort Feats of Player;
 	sort Traits of Player;
-	say "Strength: [strength of x], Dexterity: [dexterity of x], Stamina: [stamina of x], Charisma: [Charisma of x], Intelligence: [intelligence of x], Perception: [perception of x].";
-	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [HP of x]/[MaxHP of x] Libido: [Libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100.";
+	say "Strength: [strength of x], Dexterity: [dexterity of x], Stamina: [stamina of x], Charisma: [Charisma of x], Intelligence: [intelligence of x], Perception: [perception of x][line break]";
+	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [HP of x]/[MaxHP of x], Libido: [Libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100[line break]";
 	let z be ( level of x plus one) times 10;
 	if "Fast Learner" is listed in feats of x:
 		now z is ( level of x plus one) times 8;
@@ -286,11 +289,12 @@ To showstats (x - Person):
 		say ", [link]Feats[as]FeatsList[end link]";
 	say ", [link]Orientation[as]adjust player orientation[end link]";
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0: [more than zero children of both types combined]
-		say ", [link]Offspring[as]ListOffspring[end link][line break]";
-	else:
-		LineBreak;
+		say ", [link]Offspring[as]ListOffspring[end link]";
+	say ", [link]Sex Stats[as]SexStats[end link]";
+	LineBreak;
 	if debugactive is 1:
 		say "DEBUG -> Traits: [Traits of Player][line break]";
+	LineBreak;
 
 Chapter 2 - Examination People
 
@@ -526,7 +530,7 @@ This is the self examine rule:
 		say "You are barefoot right now. ";
 	LineBreak;
 	if weapon object of Player is not journal:
-		say "You are carrying a/an [weapon object of Player] just in case of trouble";
+		say "You are carrying [a printed name of weapon object of Player] just in case of trouble";
 		if weapon object of Player is unwieldy:
 			say ". Due to its comparatively [if scalevalue of Player > objsize of weapon object of Player]small[else]big[end if] size, it is [if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) > 3]very unwieldy[else if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) is 3]rather unwieldy[else]somewhat unwieldy[end if] for you to use at the moment";
 		say ". ";
@@ -549,7 +553,7 @@ understand "ListOffspring" as ListFollowingChildren.
 
 carry out ListFollowingChildren:
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 0: [no children following]
-		say "You do not have any offspring trailing after you.[line break]";
+		say "You do not have any offspring trailing after you.";
 		stop the action;
 	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
 		say "Trailing behind come your children:[line break]";
@@ -571,9 +575,15 @@ carry out ListFollowingChildren:
 			say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	[new style children]
 	if number of filled rows in Table of PlayerChildren > 0: [player has new style children]
-		if number of filled rows in Table of PlayerChildren is 1:
-			choose row 1 in Table of PlayerChildren;
+		repeat with x running from 1 to number of filled rows in Table of PlayerChildren:
+			choose row x in the Table of PlayerChildren;
 			let Childage be ((Birthturn entry - turns ) divided by 8);
+			if Gender entry is "male":
+				SetMalePronouns for Offspring;
+			else if Gender entry is "female":
+				SetFemalePronouns for Offspring;
+			else:
+				SetNeutralPronouns for Offspring;
 			if Pureblood entry is false:
 				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
 				if Name entry is "":
@@ -582,9 +592,9 @@ carry out ListFollowingChildren:
 					say "child '[Name entry]'";
 				say " has a [Head entry] head, [Torso entry] front and [Back entry] back. ";
 				if ShowLegs entry is true:
-					say "They have [Arms entry] arms, [Legs entry] legs[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
+					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry] arms, [Legs entry] legs[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
 				else:
-					say "They have [Arms entry] arms[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
+					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry] arms[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
 			else:
 				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
 				if Name entry is "":
@@ -593,41 +603,14 @@ carry out ListFollowingChildren:
 					say "child '[Name entry]'";
 				say " is a pureblood [Head entry]. ";
 			if Albino entry is true:
-				say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type][line break]";
+				say "[bold type][PosAdjCap of Offspring] pigmentation is muted and almost white, except for the eyes that appear red.[roman type][line break]";
 			else if Melanism entry is true:
-				say "[bold type]Their pigmentation is almost pure black. [roman type][line break]";
-			say "You have a [PlayerRelationship entry] relationship with them, and your child's personality is rather [Personality entry].";
-		else:
-			repeat with x running from 1 to number of filled rows in Table of PlayerChildren:
-				choose row x in the Table of PlayerChildren;
-				let Childage be ((Birthturn entry - turns ) divided by 8);
-				if Pureblood entry is false:
-					say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
-					if Name entry is "":
-						say "child";
-					else:
-						say "child '[Name entry]'";
-					say " has a [Head entry] head, [Torso entry] front and [Back entry] back. ";
-					if ShowLegs entry is true:
-						say "They have [Arms entry] arms, [Legs entry] legs[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
-					else:
-						say "They have [Arms entry] arms[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
-				else:
-					say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
-					if Name entry is "":
-						say "child";
-					else:
-						say "child '[Name entry]'";
-					say " is a pureblood [Head entry]. ";
-				if Albino entry is true:
-					say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type][line break]";
-				else if Melanism entry is true:
-					say "[bold type]Their pigmentation is almost pure black. [roman type][line break]";
-				say "You have a [PlayerRelationship entry] relationship with them, and your child's personality is rather [Personality entry].";
+				say "[bold type][PosAdjCap of Offspring] pigmentation is almost pure black.[roman type][line break]";
+			say "You have [a PlayerRelationship entry] relationship with [ObjectPro of Offspring], and your child's personality is rather [Personality entry].";
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
 		say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
-		say "They look as alert and human as you are, taking after you eagerly. Despite their age, they have already grown to young adult stature, both physically and in apparent emotional and mental development.";
+		say "[SubjectProCap of Offspring] look[if Offspring is not NProN]s[end if] as alert and human as you are, taking after you eagerly. Despite [PosAdj of Offspring] age, [SubjectPro of Offspring] [if Offspring is NProN]have[else]has[end if] already grown to young adult stature, both physically and in apparent emotional and mental development.";
 
 Chapter 3 - Linkaction
 

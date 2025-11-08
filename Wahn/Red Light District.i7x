@@ -168,51 +168,6 @@ name	price	object	allowed
 "dalmatian cum"	1	dalmatian cum	true rule
 "dalmatian fur"	2	dalmatian fur	true rule
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"dalmatian cum"	"A tiny plastic shampoo bottle as you might find in a motel, filled with something milky white, thick and creamy. If you didn't know where it's from, you'd almost think it to be liquid soap rather than Darius's cum. You could drink it to quench your thirst, but who knows what else it might do to you..."	1	dalmatian cum
-
-instead of sniffing dalmatian cum:
-	say "You open the lid for a moment and take a sniff. Smells rather tasty actually, kinda nutty. You can't help but be tempted to take a swallow of it.";
-
-[dalmatian cum is a grab object.] [defined in Cum Items to prevent name conflicts]
-dalmatian cum is cum.
-dalmatian cum is infectious. Strain of dalmatian cum is "Dalmatian Bitch".
-Usedesc of dalmatian cum is "[dalmatian cum use]";
-
-to say dalmatian cum use:
-	say "     Lifting the tiny plastic bottle to your mouth, you let Darius's creamy cum run over your tongue and down your throat. Mmmmh, this stuff actually tastes fairly nice and your body calls for more. You can't help yourself and keep pouring cum into your mouth, right until you're hungrily sucking at the mouth of the bottle with it turned upside down.";
-	if Darius is visible:
-		say "     Glancing over at you slurping down his cum, Darius lets out a hearty laugh. ";
-		if Player is female:
-			say "'Yeah babe, just swallow it all! If you like that one, I've got a whole lot more here for you...' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";
-		else:
-			say "'Let's hope the stuff makes something nice out of you. Wouldn't mind giving you more, if you want it that badly - as soon as you grow a juicy pussy!' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";
-	PlayerDrink 6;
-	SanLoss 5;
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"dalmatian fur"	"A small tuft of white and black fur, held together by a rubber band. You bought it from Darius."	1	dalmatian fur
-
-instead of sniffing dalmatian fur:
-	say "     You sniff at the tuft of fur. It has a definitive smell of dog to it.";
-
-dalmatian fur is a grab object.
-dalmatian fur is temporary.
-Usedesc of dalmatian fur is "[dalmatian fur use]";
-
-to say dalmatian fur use:
-	say "     Lifting the small tuft of fur with your fingers holding on to the rubber band around it, you brush the hairs over the inside of your other arm. It feels soft and tickles a little, then a lot, as the strands seem to slowly crumble away, leaving minute traces of silvery dust that vanishes into your skin.";
-	if Darius is visible:
-		say "     Glancing over at you playing around with the fur you bought, Darius lets out a hearty laugh. ";
-		if Player is female:
-			say "'Damn babe, are you trying to become a dude? How about you rather come here and let me show you a good time? Then you'll have a nice spotted coat too and be much more fun all around.' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";
-		else:
-			say "'Let's hope the stuff mans you up a bit. I could use some reliable help later on, when I expand this operation.' The anthro canine steps up to give you a fist bump.";
-	SanLoss 2;
-	infect "Dalmatian Male";
-
 Table of GameRoomIDs (continued)
 Object	Name
 Boundary Street West	"Boundary Street West"

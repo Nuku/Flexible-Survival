@@ -54,7 +54,7 @@ name(text)	PrepFunction(text)
 "Latex Frog"	"[PrepCombat_Latex Frog]"
 
 to say PrepCombat_Latex Frog:
-	say "";
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -64,6 +64,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Latex Frog";
+	add "Latex Frog" to infections of AmphibianList;
 	add "Latex Frog" to infections of FurryList;
 	add "Latex Frog" to infections of NatureList;
 	add "Latex Frog" to infections of FemaleList;
@@ -116,7 +117,7 @@ When Play begins:
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "latex frog milk"; [ Item to be given to the player if they have this infection and milk themselves. ] [for later...]
 	now CumItem entry is "latex frog cum"; [ Item to be given to the player if they have this infection and jerk off. ]
-	now TrophyFunction entry is ""; [also for later...]
+	now TrophyFunction entry is "-"; [also for later...]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slippery[or]sleek[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "amphibian";

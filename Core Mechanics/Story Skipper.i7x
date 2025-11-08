@@ -72,6 +72,9 @@ a postimport rule:
 				unwield x silently;
 				wield x silently;
 				break;
+	[just in case, make extra sure these don't end up in player lists]
+	remove "Imported" from WardList of Player, if present;
+	remove "Imported" from BanList of Player, if present;
 
 [----------------------------------------------------------------------------------]
 [ Testing Commands for partial Saving                                              ]
@@ -310,7 +313,7 @@ to RoomRestore:
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
 	if the File of RoomInventorySave exists:
 		repeat with x running through rooms:
-			truncate Invent of x to 0 entries; [cleaning out the old data]
+			if Invent of x is not empty, truncate Invent of x to 0 entries; [cleaning out the old data]
 		say "Restoring RoomInventories...";
 		read File of RoomInventorySave into the Table of GameRoomInventories;
 		repeat with x running from 1 to the number of filled rows in the Table of GameRoomInventories:
@@ -382,7 +385,7 @@ to PossessionRestore:
 			choose row x in the Table of GamePossessions;
 			let PossessionIdName be Name entry;
 			[some small bugfixes due to items that got renamed]
-			[if PossessionIdName is "earthen seed", now PossessionIdName is "sierrasaur cum";]
+			[if PossessionIdName is "earthen seed", now PossessionIdName is "sierrasaur cum";] [never actually renamed]
 			if PossessionIdName is "sturdy jeans", now PossessionIdName is "dark-blue jeans";
 			if PossessionIdName is "tenvale gorillas football helmet", now PossessionIdName is "tenvale silverbacks football helmet";
 			if PossessionIdName is "tenvale gorillas baseball cap", now PossessionIdName is "tenvale silverbacks baseball cap";
@@ -411,6 +414,7 @@ to PossessionRestore:
 	else:
 		say "No Possession Save File Found!";
 	if the File of VialData exists:
+		blank out the whole of Table of OwnedVials; [cleaning out everything]
 		read File of VialData into the Table of OwnedVials;
 	blank out the whole of Table of GamePossessions; [empty out all old data]
 
@@ -987,9 +991,10 @@ to TraitRestore:
 	if the File of TraitSave exists:
 		say "Restoring Traits...";
 		read File of TraitSave into the Table of GameTraits;
-		truncate Feats of Player to 0 entries;
+		[truncate Feats of Player to 0 entries;]
+		if companionList of Player is not empty, truncate companionList of Player to 0 entries;
 		repeat with y running through persons:[cleaning out the old data]
-			truncate Traits of y to 0 entries;
+			if Traits of y is not empty, truncate Traits of y to 0 entries;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTraits:
 			choose row x in the Table of GameTraits;
 			let TraitOwner be OwnerName entry;
@@ -1049,35 +1054,57 @@ to PlayerSave:
 			now ListName entry is "OpenQuest";
 			now EntryText entry is entry y of OpenQuests of Player;
 	if the number of entries in CompletedQuests of Player is not 0:
-		repeat with y running from 1 to the number of entries in CompletedQuests of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in CompletedQuests of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "CompletedQuest";
 			now EntryText entry is entry y of CompletedQuests of Player;
 	if the number of entries in EncounteredEnemies of Player is not 0:
-		repeat with y running from 1 to the number of entries in EncounteredEnemies of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in EncounteredEnemies of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "EncounteredEnemy";
 			now EntryText entry is entry y of EncounteredEnemies of Player;
 	if the number of entries in VirginitiesTaken of Player is not 0:
-		repeat with y running from 1 to the number of entries in VirginitiesTaken of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in VirginitiesTaken of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "VirginitiesTaken";
 			now EntryText entry is entry y of VirginitiesTaken of Player;
 	if the number of entries in AnalVirginitiesTaken of Player is not 0:
-		repeat with y running from 1 to the number of entries in AnalVirginitiesTaken of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in AnalVirginitiesTaken of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "AnalVirginitiesTaken";
 			now EntryText entry is entry y of AnalVirginitiesTaken of Player;
 	if the number of entries in OralVirginitiesTaken of Player is not 0:
-		repeat with y running from 1 to the number of entries in OralVirginitiesTaken of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in OralVirginitiesTaken of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "OralVirginitiesTaken";
 			now EntryText entry is entry y of OralVirginitiesTaken of Player;
+	if the number of entries in PenileVirginitiesTaken of Player is not 0:
+		repeat with y running from 1 to the number of entries in PenileVirginitiesTaken of Player:
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "PenileVirginitiesTaken";
+			now EntryText entry is entry y of PenileVirginitiesTaken of Player;
 	if the number of entries in BlockList of Player is not 0:
-		repeat with y running from 1 to the number of entries in BlockList of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in BlockList of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "BlockList";
 			now EntryText entry is entry y of BlockList of Player;
+	if the number of entries in WardList of Player is not 0:
+		repeat with y running from 1 to the number of entries in WardList of Player:
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "WardList";
+			now EntryText entry is entry y of WardList of Player;
+	if the number of entries in BanList of Player is not 0:
+		repeat with y running from 1 to the number of entries in BanList of Player:
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "BanList";
+			now EntryText entry is entry y of BanList of Player;
+	[add item to ward and ban lists so importer knows the information comes from export]
+	choose a blank row in the table of PlayerLists;
+	now ListName entry is "WardList";
+	now EntryText entry is "Imported";
+	choose a blank row in the table of PlayerLists;
+	now ListName entry is "BanList";
+	now EntryText entry is "Imported";
 	write File of PlayerSave from the Table of PlayerData; [freshly made table gets saved to file]
 	if debug is at level 10:
 		say "DEBUG -> File of PlayerSave written.[line break]";
@@ -1167,7 +1194,13 @@ to PlayerSave:
 	[
 	now MaleHermInterest entry is MaleHermInterest of Player;
 	now FemaleHermInterest entry is FemaleHermInterest of Player;
-	]
+	] [but for now, just rig it using the existing unused table entry that we changed to hold a number]
+	let PlayerHermInterest be 0;
+	if MaleHermInterest of Player is false:
+		increase PlayerHermInterest by 1;
+	if FemaleHermInterest of Player is false:
+		increase PlayerHermInterest by 2;
+	now HermInterest entry is PlayerHermInterest; [0 = both; 1 = not male; 2 = not female; 3 = neither]
 	write File of NewPlayerSave from the Table of NewPlayerData; [freshly made table gets saved to file]
 	blank out the whole of Table of NewPlayerData; [empty after saving]
 	if debug is at level 10:
@@ -1237,7 +1270,27 @@ to PlayerRestore:
 		say "No Player Save File Found!";
 	blank out the whole of Table of PlayerData; [empty out all old data]
 	if the File of PlayerListsSave exists:
-		truncate Vials of Player to 0 entries; [cleaning out the old data]
+		[cleaning out the old data]
+		[truncate Vials of Player to 0 entries;]
+		if Feats of Player is not empty, truncate Feats of Player to 0 entries;
+		if Tapes of Player is not empty, truncate Tapes of Player to 0 entries;
+		if OpenQuests of Player is not empty, truncate OpenQuests of Player to 0 entries;
+		if CompletedQuests of Player is not empty, truncate CompletedQuests of Player to 0 entries;
+		if EncounteredEnemies of Player is not empty, truncate EncounteredEnemies of Player to 0 entries;
+		if VirginitiesTaken of Player is not empty, truncate VirginitiesTaken of Player to 0 entries;
+		if AnalVirginitiesTaken of Player is not empty, truncate AnalVirginitiesTaken of Player to 0 entries;
+		if OralVirginitiesTaken of Player is not empty, truncate OralVirginitiesTaken of Player to 0 entries;
+		if PenileVirginitiesTaken of Player is not empty, truncate PenileVirginitiesTaken of Player to 0 entries;
+		if BlockList of Player is not empty, truncate BlockList of Player to 0 entries;
+		if WardList of Player is not empty, truncate WardList of Player to 0 entries;
+		if BanList of Player is not empty, truncate BanList of Player to 0 entries;
+		[clear out warded and banned flags/tags]
+		repeat with x running through flags:
+			if x is warded, now x is not warded;
+			if x is banned, now x is not banned;
+		repeat with x running through tags:
+			if x is warded, now x is not warded;
+			if x is banned, now x is not banned;
 		say "Restoring Player Lists...";
 		read File of PlayerListsSave into the Table of PlayerLists;
 		repeat with y running from 1 to the number of filled rows in the Table of PlayerLists:
@@ -1269,9 +1322,18 @@ to PlayerRestore:
 				-- "OralVirginitiesTaken":
 					if EntryText entry is not listed in OralVirginitiesTaken of Player:
 						add EntryText entry to OralVirginitiesTaken of Player;
+				-- "PenileVirginitiesTaken":
+					if EntryText entry is not listed in PenileVirginitiesTaken of Player:
+						add EntryText entry to PenileVirginitiesTaken of Player;
 				-- "BlockList":
 					if EntryText entry is not listed in BlockList of Player:
 						add EntryText entry to BlockList of Player;
+				-- "WardList":
+					if EntryText entry is not listed in WardList of Player:
+						add EntryText entry to WardList of Player;
+				-- "BanList":
+					if EntryText entry is not listed in BanList of Player:
+						add EntryText entry to BanList of Player;
 	blank out the whole of Table of PlayerLists; [empty out all old data]
 	if the File of NewPlayerSave exists:
 		say "Restoring Additional Player Data...";
@@ -1355,7 +1417,14 @@ to PlayerRestore:
 		[
 		now MaleHermInterest of Player is MaleHermInterest entry;
 		now FemaleHermInterest of Player is FemaleHermInterest entry;
-		]
+		] [but for now, just use the existing unused table entry that we rigged earlier]
+		now MaleHermInterest of Player is true;
+		now FemaleHermInterest of Player is true;
+		if there is a HermInterest entry:
+			if HermInterest entry is odd: [1 = not male; 3 = not male or female]
+				now MaleHermInterest of Player is false;
+			if HermInterest entry > 1: [2 = not female; 3 = not male or female]
+				now FemaleHermInterest of Player is false;
 		if debug is at level 10:
 			say "DEBUG -> New Player Data restored.";
 	else if NewTypeInfectionActive is true:
@@ -1473,6 +1542,7 @@ to BeastSave:
 		say "DEBUG -> File of BeastVariableSave written.[line break]";
 
 to BeastRestore:
+	say "Restoring Beasts...";
 	blank out the whole of Table of GameBeastVariables; [empty out all old data]
 	blank out the whole of Table of GameBeasts; [empty out all old data]
 	if the File of BeastVariableSave exists:
@@ -1499,9 +1569,12 @@ to BeastRestore:
 				[bugfix code after re-naming Midway to Fair]
 				if Area entry is "Midway":
 					now Area entry is "Fair";
+				if Area entry is "High Rise": [furbolg content bugfix]
+					now Area entry is "High";
 				if non-infectious entry is not BeastNonInfect, now non-infectious entry is BeastNonInfect;
 				if sex entry is not BeastSex, now sex entry is BeastSex;
 				if enemy type entry is not BeastType, now enemy type entry is BeastType;
+				if BannedStatus entry is true, now BannedStatus entry is false; [content bans will be refreshed after import, so don't carry any over]
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: BeastName: [BeastName] Area entry set to [BeastArea]!";
@@ -1566,9 +1639,33 @@ to StorageRestore:
 	else:
 		say "No Storage Save File Found!";
 
+to BanListRestore:
+	say "Restoring Ban Lists...";
+	if clearnomore is 0, clear the screen;
+	if "Imported" is not listed in WardList of Player or "Imported" is not listed in BanList of Player: [exported from older version]
+		LineBreak;
+		say "     Content banning and warding information wasn't found in the imported data. You can choose to pick new restrictions to remove enemies and events from the game. [bold type]Note that previously banned events have remained banned after import and will be cumulative with any bans you choose now.[roman type][line break]";
+		say "     [bold type]Pick content restrictions?[roman type][line break]";
+		if Player consents:
+			if clearnomore is 0, clear the screen;
+			new ban menu;
+	else: [exported from current or later version]
+		remove "Imported" from WardList of Player;
+		remove "Imported" from BanList of Player;
+		if number of entries in WardList of Player > 0:
+			repeat with x running from 1 to number of entries in WardList of Player:
+				oldflagward entry x of WardList of Player; [ward flags/tags that player chose before export]
+		if number of entries in BanList of Player > 0:
+			repeat with x running from 1 to number of entries in BanList of Player:
+				oldflagban entry x of BanList of Player; [ban flags/tags that player chose before export]
+	if number of warded flags > 0 or number of banned flags > 0 or number of warded tags > 0 or number of banned tags > 0:
+		startcreatureban; [re-run the ban action to disable blocked creatures/situations]
+
 
 to RunPostImportRules:
 	say "Running Post Import Rules...";
+	sort Table of Random Critters in lev order;
+	if clearnomore is 0, clear the screen;
 	follow the postimport rules;
 
 Section 2 - Trixie
@@ -1589,7 +1686,7 @@ To say ProgressionExport:
 		if wrcursestatus is 5:
 			wrcurserecede; [puts player back to normal form and restores proper stats for saving]
 		LineBreak;
-		say "     Writing save files.";
+		say "Writing save files.";
 		SaveEverything;
 		if wrcursestatus is 5:
 			wrcursesave; [puts player back to complete wereraptor form]
@@ -1616,7 +1713,7 @@ Carry out ProgressImport:
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
 	if Player consents:
 		LineBreak;
-		say "     <Press any key to start import>";
+		say "     <Press any key to start import> ";
 		wait for any key;
 		say "[ProgressionImport]";
 
@@ -1632,6 +1729,7 @@ to say ProgressionImport:
 	NoteRestore;
 	StorageRestore;
 	VariableLoad;
+	BanListRestore;
 	RunPostImportRules;
 	try looking; [start the player off in their new playthrough]
 
@@ -1641,7 +1739,7 @@ Trixie	"Trixie"
 
 Trixie is a person. Trixie is in Grey Abbey Library.
 
-The scent of Trixie is "Trixie smells of broken universes and rewritten fate. How anything can smell like that or how you can even know that smell disturbs you to your very core.".
+The scent of Trixie is "     Trixie smells of broken universes and rewritten fate. How anything can smell like that or how you can even know that smell disturbs you to your very core.".
 
 Description of Trixie is "[Trixiedesc]".
 

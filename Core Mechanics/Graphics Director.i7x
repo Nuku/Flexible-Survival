@@ -51,10 +51,9 @@ This is the ngraphics_refresh rule:
 
 This is the ngraphics_blank rule:
 	if graphics is true and NewGraphics is true:
-		if currently shown picture is not Figure of pixel_icon:
-			project the figure of pixel_icon;
-			follow the current graphics drawing rule;
-			[now the graphics window proportion is 20;]
+		project the figure of pixel_icon;
+		[follow the current graphics drawing rule;]
+		[now the graphics window proportion is 20;]
 
 This is the ngraphics_phone rule:
 	if graphics is true and NewGraphics is true:
@@ -77,8 +76,8 @@ g-dark-gray	4473924	[== $444444]
 g-medium-gray	8947848	[== $888888]
 g-light-gray	14540253	[== $DDDDDD]
 g-white	16777215		[== $FFFFFF]
-g-yellow-orange	39423		[== $0099FF]
-g-ice-blue	15645627		[== $EEBBBB]
+g-yellow-orange	15645627		[== $EEBBBB]
+g-ice-blue	39423		[== $0099FF]
 
 Section 3.1 - Artist Status
 
@@ -103,7 +102,7 @@ carry out graphicmoding:
 		clear the screen;
 		say "[bold type]Graphics Settings:[roman type][line break]";
 		say "(1) [link]Graphics[as]1[end link] - [bold type][if NewGraphicsInteger is 2]Side-Window Graphics[else if NewGraphicsInteger is 1]Inline Mode[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
-		say "(2) [link]Graphics Window Settings[as]2[end link] - [bold type]Position: [if NewGraphicsPosition is 0]Right[else if NewGraphicsPosition is 1]Left[else if NewGraphicsPosition is 2]Above[else if NewGraphicsPosition is 3]Below[end if]; Proportion: [NewGraphicsRatio][roman type][line break]";
+		say "(2) [link]Graphics Window Settings[as]2[end link] - [bold type]Position: [if NewGraphicsPosition is 0]Right[else if NewGraphicsPosition is 1]Left[else if NewGraphicsPosition is 2]Above[else if NewGraphicsPosition is 3]Below[end if], Proportion: [NewGraphicsRatio][roman type][line break]";
 		say "(0) [link]EXIT[as]0[end link][line break]";
 		while 1 is 1:
 			say "(0-2)>[run paragraph on]";
@@ -111,7 +110,7 @@ carry out graphicmoding:
 			if calcnumber is 0 or calcnumber is 1 or calcnumber is 2:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Please enter a number between 0 and 2.";
 		if calcnumber is:
 			-- 0:
 				say "Exit graphics menu?";
@@ -119,6 +118,7 @@ carry out graphicmoding:
 					now Trixieexit is 1;
 				if NewGraphicsInteger is 2:
 					reconstruct graphics window;
+					follow the ngraphics_blank rule;
 				else:
 					close graphics window;
 			-- 1:
@@ -135,7 +135,7 @@ carry out graphicmoding:
 					now NewGraphics is true;
 					now NewGraphicsInteger is 2; [side window]
 			-- 2:
-				say "Please choose the position value. (0 = right side, 1 = left side, 2 = above, 3 = below)[line break]";
+				say "Please choose the position value (0 = [link]right side[as]0[end link], 1 = [link]left side[as]1[end link], 2 = [link]above[as]2[end link], 3 = [link]below[as]3[end link]).";
 				while 1 is 1:
 					say "(0-3)>[run paragraph on]";
 					get a number;
@@ -144,7 +144,7 @@ carry out graphicmoding:
 					else:
 						say "Invalid Entry. Please enter a number between 0 and 3.";
 				now NewGraphicsPosition is calcnumber;
-				say "Please choose the proportion value. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
+				say "Please choose the proportion value. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.";
 				while 1 is 1:
 					say "(5-90)>[run paragraph on]";
 					get a number;
@@ -165,7 +165,7 @@ carry out graphicmoding:
 						now graphics window position is g-below;
 
 
-Section 5 - Debug Commands
+Section 5 - Debug Commands - Not for release
 
 [DEBUG Commands]
 [Cheat for enabling inline debug stuff]

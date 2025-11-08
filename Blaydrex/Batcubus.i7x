@@ -28,7 +28,7 @@ to say Batcubus_loses:
 	if Player consents:
 		if Player is male:
 			say "     The scent of her arousal fills your nose and you feel your cock rapidly stiffening. Your lust brings you to turn around and look at her, unable to do anything other than start jerking off while watching her masturbate. She notices your actions and smiles warmly before spreading her legs and presenting her needy cunt to you.";
-			if Cock Length of Player > 17 or Ball Size of Player > 3:
+			if Cock Length of Player > 9 and Ball Size of Player > 2 and ( Cock Length of Player > 17 or Ball Size of Player > 3 ):
 				say "     Something about her cunt makes you want to shove your large cock in her, so that is exactly what you decide you must do. You line up your cock with her cunt and ram it into her nice and hard. Her passage gives little resistance, but is extremely tight on your cock. Before you can do anything she begins kissing you, repeatedly. Each kiss spreads warmth at the site and increases your lust more. You soon lose control and begin fucking her mercilessly, her tight passage bringing you to orgasm quickly. But your cock doesn't soften and your lust only grows. You begin fucking her harder and faster. You cum in her a total of five times before you begin to calm down. She gives you yet another kiss on your lips, placing your hand on her wonderful globes. You get the message and begin to suckle the milk from her nipple greedily. You drink your fill and realize she is fast asleep, obviously from exhaustion due to all the pleasure. As you begin to leave you whimper softly, missing the feeling of her kisses and her pussy as your cock lets out some cum at the thought and you feel strangely odd, but quickly dismissing the thought and continuing.";
 				CreatureSexAftermath "Batcubus" receives "PussyFuck" from "Player";
 			else:
@@ -51,7 +51,7 @@ to say Batcubus_loses:
 
 
 to say Batcubus_Desc:
-	say "An anthropomorphic bat, but she seems different than a normal bat. Her lips are coated in a purple lipstick, which obviously contains a powerful aphrodisiac judging by the smell. Her breasts are rather large, JJ cups it looks like. Her torso appears to be covered by some red corset, but that is obviously just fur when you spot a drop of milk come out from her nipple. Her arms are in elegant white gloves that go almost all the way to her shoulders. Her legs are covered in purple high heel boots that cover them completely. Her fur is snow white. Her face and head is that of a bat's with its upturned nose and triangular ears. She simply smiles at you, licking her lips as she saunters over to you, obviously wanting to kiss you.";
+	say "     An anthropomorphic bat, but she seems different than a normal bat. Her lips are coated in a purple lipstick, which obviously contains a powerful aphrodisiac judging by the smell. Her breasts are rather large, JJ cups it looks like. Her torso appears to be covered by some red corset, but that is obviously just fur when you spot a drop of milk come out from her nipple. Her arms are in elegant white gloves that go almost all the way to her shoulders. Her legs are covered in purple high heel boots that cover them completely. Her fur is snow white. Her face and head is that of a bat's with its upturned nose and triangular ears. She simply smiles at you, licking her lips as she saunters over to you, obviously wanting to kiss you.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -250,12 +250,11 @@ batcubus milk is milky.
 Purified of batcubus milk is "distilled milk".
 batcubus milk is infectious.
 Strain of batcubus milk is "Batcubus".
-Usedesc of batcubus milk is "[batcubus milk use]";
+Usedesc of batcubus milk is "[batcubus milk use]".
 
 to say batcubus milk use:
 	say "Taking the cap off the bottle of milk, you greedily drink down its contents, swallowing the tasty milk.";
 	PlayerDrink 6;
-	infect "Batcubus";
 
 Section 4 - Endings
 
@@ -267,13 +266,13 @@ This is the Batcubus Infection rule:
 	if Player has a body of "Batcubus" and matriarchdefeated is 0 and matriarchowned is 0:
 		trigger ending "Batcubus Infection";
 		if humanity of Player < 10:
-			say "You search the city looking for males to impregnate you and anybody to kiss, your cunt always dripping, ready to be fucked at any time. Sometimes thoughts of your past return, but a single lick of your lips quickly sends your lust soaring and you can't help but forget again and go look for relief you so desperately need.";
+			say "     You search the city looking for males to impregnate you and anybody to kiss, your cunt always dripping, ready to be fucked at any time. Sometimes thoughts of your past return, but a single lick of your lips quickly sends your lust soaring and you can't help but forget again and go look for relief you so desperately need.";
 		else:
-			say "Life as a batcubus proves fun. Every time you find someone you enjoy all you have to do is kiss them and they are putty in your hands. Thanks to this you have a good life, letting you have everything you want, never needing to work a day in your life";
+			say "     Life as a batcubus proves fun. Every time you find someone you enjoy all you have to do is kiss them and they are putty in your hands. Thanks to this you have a good life, letting you have everything you want, never needing to work a day in your life";
 			if Player is herm:
-				say "You spend your days fighting the urge to lick your lips. Being one gender or the other would allow you to instinctively lick them safely, but the combined lust of your female and male sex organs would be too much. A single lick could send you into a sexual fury. Last time it happened you tried to turn a whole town into batcubuses. Hopefully one day someone can find out how to get this lipstick off you.";
+				say ". You spend your days fighting the urge to lick your lips. Being one gender or the other would allow you to instinctively lick them safely, but the combined lust of your female and male sex organs would be too much. A single lick could send you into a sexual fury. Last time it happened you tried to turn a whole town into batcubuses. Hopefully one day someone can find out how to get this lipstick off you.";
 			else if Player is male:
-				say "You find that having a cock isn't as fun as having a slavering cunt like most other batcubuses, but you make do. Your cock is insatiable, no matter how much you cum and fuck. One day you find a tigress hooker, who takes an interest in you. She wastes no time in raping you and dominating you until you submit to her. She claims you as her own and she is actually able to keep up with your sex drive, so it works out. You spend the rest of your days happily mated to her.";
+				say ". You find that having a cock isn't as fun as having a slavering cunt like most other batcubuses, but you make do. Your cock is insatiable, no matter how much you cum and fuck. One day you find a tigress hooker, who takes an interest in you. She wastes no time in raping you and dominating you until you submit to her. She claims you as her own and she is actually able to keep up with your sex drive, so it works out. You spend the rest of your days happily mated to her.";
 			else:
 				say "...";
 

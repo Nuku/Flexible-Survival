@@ -30,6 +30,10 @@ Purifier One is a situation.
 ResolveFunction of Purifier One is "[ResolveEvent Purifier One]".
 Sarea of Purifier One is "Campus".
 
+when play begins:
+	add Purifier One to BadSpots of MaleList;
+	add Purifier One to BadSpots of DemonList;
+
 Table of GameEventIDs (continued)
 Object	Name
 Purifier Two	"Purifier Two"
@@ -38,6 +42,11 @@ Purifier Two is a situation.
 ResolveFunction of Purifier Two is "[ResolveEvent Purifier Two]".
 Sarea of Purifier Two is "Red".
 
+when play begins:
+	add Purifier Two to BadSpots of MaleList;
+	add Purifier Two to BadSpots of FemaleList;
+	add Purifier Two to BadSpots of DemonList;
+
 Table of GameEventIDs (continued)
 Object	Name
 Purifier Three	"Purifier Three"
@@ -45,6 +54,10 @@ Purifier Three	"Purifier Three"
 Purifier Three is a situation.
 ResolveFunction of Purifier Three is "[ResolveEvent Purifier Three]".
 Sarea of Purifier Three is "Mall".
+
+when play begins:
+	add Purifier Three to BadSpots of MaleList;
+	add Purifier Three to BadSpots of DemonList;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -164,7 +177,7 @@ Section 1-0-2 - Toron During Corrupted Path
 
 to say ToronTalkMogdrazAraqiel:
 	if Resolution of Ambush The Purifier is 8:
-		say "     Out of hope that he will shed some light into this matter, you discretely ask Toron what he knows about the big demon boss and the perverted angel's relationship with one another. He hesitates before speaking, but as you have heard their conversation before, he probably decides that there is no purpose in hiding anything else from you. 'I am sorry for deceiving you, but trust must go for both ways. We couldn't just let you know about everything and risk our own safety for being too careless. I hope you understand,' he says to you with an apologetic bow and tone.";
+		say "     Out of hope that he will shed some light into this matter, you discreetly ask Toron what he knows about the big demon boss and the perverted angel's relationship with one another. He hesitates before speaking, but as you have heard their conversation before, he probably decides that there is no purpose in hiding anything else from you. 'I am sorry for deceiving you, but trust must go for both ways. We couldn't just let you know about everything and risk our own safety for being too careless. I hope you understand,' he says to you with an apologetic bow and tone.";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Reassure him. They must certainly have had their reasons.";
 		say "     ([link]N[as]n[end link]) - Tell him that, honestly, you don't understand. You'd rather have known the truth from the beginning.";
@@ -223,6 +236,7 @@ to say ResolveEvent Purifier One:
 				WaitLineBreak;
 				say "     After a good while, you can hear the big guy grunting with all his might as he finishes off inside the incubus, shooting all of his holy seed inside the abused devil's ass, then he quickly pulls his cock off and shoots a couple more spurts over his back, the angel's heavy meat slapping and bouncing off the incubus['] glutes as his orgasm subsides. 'Now you won't be bothering anyone else for a good time, right? You're gonna be a good boy, now... or I'll have to come back and teach you some manners, devil boy,' he says, as he prepares to take flight... until he looks in your direction, then stops, while giving his huge dong a slight stroke. It's rather hard to tell if he spotted you, but since he's very keen on keeping at looking, he probably did, and that probably excited him.";
 				say "     Perhaps it's a good time to leave and [bold type]check with Toron[roman type] for your next destination, or you'll be the next one getting punished.";
+				CreatureSexAftermath "Incubus" receives "AssFuck" from "Araqiel";
 				now Resolution of Purifier One is 1;
 			else:
 				say "     But you're out of luck, unable to find him anywhere. It's possible that he already came and left, or you simply couldn't spot him in time. Maybe you should [bold type]check with Toron[roman type] and see where else he might be. Or just keep looking if this is the only place you haven't seen him in action, yet.";
@@ -268,6 +282,7 @@ to say ResolveEvent Purifier Two:
 				WaitLineBreak;
 				say "     Going from a breastfuck to a facefuck, the seraphim keeps thrusting in hard, deep and mercilessly, his own moaning getting louder and angrier as he lets out a final grunt before he unloads his entire holy seed down her mouth, making her nearly choke while swallowing all of that cum he generously deposits inside of her. 'Hope you've had enough of it for a lifetime, fiend. I should just make you swallow my load until you can't move anymore, if that's what you vile creatures crave for,' he says with contempt, getting up and leaving a few leftover drops to fall right on her eyes, which she closes almost too late, while shaking his dick. She says nothing, only looking at him while panting, with cum all over her face and mouth. 'Tell your mistress I'll be coming for her. She's a threat that must be dealt with,' he warns, before taking flight over to somewhere else.";
 				say "     As there's nothing left to see here, you move along. You should probably [bold type]check with Toron[roman type] on your way out, as this is possibly very important news.";
+				CreatureSexAftermath "Succubus" receives "OralCock" from "Araqiel";
 				now Resolution of Purifier Two is 1;
 			else:
 				say "     But you're out of luck, unable to find him anywhere. It's possible that he already came and left, or you simply couldn't spot him in time. Maybe you should [bold type]check with Toron[roman type] and see where else he might be. Or just keep looking if this is the only place you haven't seen him in action, yet.";

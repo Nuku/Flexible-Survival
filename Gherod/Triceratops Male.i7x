@@ -180,7 +180,7 @@ When Play begins:
 	now loot entry is "triceratops male tooth"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "triceratops man-milk";
-	now CumItem entry is "triceratops cum";
+	now CumItem entry is "triceratops male cum";
 	now TrophyFunction entry is "[GenerateTrophyList_Triceratops_Male]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]scaled[or]strong[or]beefy[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -311,24 +311,6 @@ to say TriMToothUse:
 
 instead of sniffing triceratops male tooth:
 	say "It smells like the inside of a beast's mouth. Not very pleasant.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"triceratops cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Triceratops Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	triceratops cum
-
-triceratops cum is a grab object.
-triceratops cum is cum.
-triceratops cum is infectious.
-Strain of triceratops cum is "Triceratops Male".
-Usedesc of triceratops cum is "[triceratops cum use]";
-
-to say triceratops cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing triceratops cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
 Table of Game Objects (continued)
 name	desc	weight	object

@@ -47,6 +47,8 @@ Definition: A person (called x) is FemalePreferred: [player wants to or must rem
 
 Definition: A person (called x) is HermPreferred: [player wants to or must remain herm]
 	if "Herm Preferred" is listed in feats of x, yes;
+	if "Male Preferred" is listed in feats of x or "Female Preferred" is listed in feats of x, no;
+	if "Always Cocky" is listed in feats of x and "Always A Pussy" is listed in feats of x, yes;
 	no;
 
 Table of gainable feats
@@ -77,7 +79,7 @@ understand "Feats" as FeatList.
 
 carry out FeatList:
 	sort Feats of Player;
-	say "Feats: [Feats of Player]";
+	say "Feats: [if feats of Player is empty]None[else][Feats of Player][end if].";
 
 Featgetting is an action applying to nothing.
 understand "volunteer" as featgetting.
@@ -195,21 +197,21 @@ instead of addfeating the fun feats:
 		if isHellhound is false:
 			addfeat "Always Cocky" with "Outside of special circumstances, you will always keep a cock";
 			addfeat "Always A Pussy" with "Outside of special circumstances, you will always keep a pussy";
-	if Player is MalePreferred:
+	if "Male Preferred" is listed in feats of Player:
 		if "Flat Chested" is not listed in feats of Player, addfeat "Breasts" with "Despite being all male, you still grow breasts - curious";
-	else if "Male Preferred" is not listed in feats of Player and "Breasts" is not listed in feats of Player:
-		addfeat "Flat Chested" with "Your chest tends to remain flat";
-	if "Modest Organs" is not listed in feats of Player and "Passing Grade Chest" is not listed in feats of Player:
+	else:
+		if "Breasts" is not listed in feats of Player, addfeat "Flat Chested" with "Your chest tends to remain flat";
+	if "Modest Organs" is not listed in feats of Player and ("Passing Grade Chest" is not listed in feats of Player or Breast Size of Player < 5):
 		addfeat "One Way" with "You can only grow larger, not smaller, sexually - barring specific effects";
 	if "One Way" is not listed in feats of Player:
 		addfeat "Modest Organs" with "Your genital growth is restricted, preventing wildly overgrown bits, barring specific effects";
-	if "One Way" is not listed in feats of Player and "Flat Chested" is not listed in feats of Player:
+	if ("One Way" is not listed in feats of Player or Breast Size of Player < 5) and "Flat Chested" is not listed in feats of Player:
 		addfeat "Passing Grade Chest" with "Your breasts will never fail a test, and will remain D cupped or smaller, barring specific effects. If they do become too large, they will shrink rapidly back into line";
 	if "All The Things" is not listed in feats of Player and ("One Way" is not listed in feats of Player or (Cock Count of Player < 2 and Cunt Count of Player < 2)):
 		addfeat "Just One" with "You will only grow one cock, and only one cunt, never more. Possibly less";
 	if "Just One" is not listed in feats of Player:
 		addfeat "All The Things" with "Your groin seems to believe [']the more the merrier[']. Outside of a gender change, you will keep any [']extras['] you pick up";
-	if "Bouncy Bouncy" is not listed in feats of Player and ("One Way" is not listed in feats of Player or Nipple Count of Player is 2):
+	if "Bouncy Bouncy" is not listed in feats of Player and ("One Way" is not listed in feats of Player or Nipple Count of Player < 3):
 		addfeat "One Pair" with "You will not grow more than two breasts";
 	if "One Pair" is not listed in feats of Player:
 		addfeat "Bouncy Bouncy" with "It seems that your body likes breasts a lot. You won't be losing any that you might gain";
@@ -301,7 +303,7 @@ instead of addfeating the basic feats:
 		addfeat "Fast Learner" with "You assimilate new information rapidly. -20% XP needed to level";
 		addfeat "Expert Medic" with "You are especially good at using medkits, +25% hitpoints restored per use, and adds an additional use to medkits";
 	if intelligence of Player > 12 and ( BodyName of Player is not "Human" or FaceName of Player is not "Human" ):
-		addfeat "Know Thyself" with "By thinking like an enemy that has infected you, you know better how to deal with them and gain a +0 to +2 bonus to hit matching enemies each round. Thinking with your other head gradually gets your infected loins more excited as well. You gain more XP from these fights as well";
+		addfeat "Know Thyself" with "By thinking like an enemy that has infected you, you know better how to deal with them and gain a +0 to +4 bonus to hit matching enemies each round. Thinking with your other head gradually gets your infected loins more excited though. You gain more XP from these fights as well";
 	if intelligence of Player > 15 and level of Player > 5:
 		addfeat "Weaponsmaster" with "Your experience and knowledge allow you to assess a weapon's worth and wield it better";
 	addfeat "Wary Watcher" with "Always on guard, creatures won't gain first strike on you";
@@ -380,11 +382,11 @@ This is the gainfeat rule:
 		else if nam is "City Map":
 			say "[BestowCityMapFeat]";
 		else if nam is "Instinctive Combat":
-			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the 'Auto Attack' command. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
+			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the [']Auto Attack['] commands. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
 		else if nam is "Vore Predator":
-			say "     Having gained the [']Vore Predator['] feat, you can now access the [bold type]vore menu[roman type] command. It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]). It is used for adjusting vore-related game settings.";
+			say "     Having gained the [']Vore Predator['] feat, you can now access the [bold type][link]vore menu[end link][roman type] command. It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]). It is used for adjusting vore-related game settings.";
 		else if nam is "Mugger":
-			say "     You will now get a flat rate increase to item drops from monsters based on your perception. This ability can be can turned on or off by using the [bold type]mugger[roman type] command and is currently [bold type][if muggerison is true]ON[else]OFF[end if][roman type].";
+			say "     You will now get a flat rate increase to item drops from monsters based on your perception. This ability can be can turned on or off by using the [bold type][link]mugger[as]muggering[end link][roman type] command and is currently [bold type][if muggerison is true]ON[else]OFF[end if][roman type].";
 		else if nam is "Vampiric":
 			say "     You will now recover a small amount of health, thirst and hunger after every victory as you get in a blood-sucking bite after your final blow or at some other point during the victory scene.";
 			now vampiric is true;
@@ -430,14 +432,14 @@ carry out muggering:
 		now muggerison is true;
 	else:
 		now muggerison is false;
-	say "The 'Mugger' feat is now [bold type][if muggerison is true]ON[else]OFF[end if][roman type]. You will gain drop items [if muggerison is true]more frequently[else]as normal[end if].";
+	say "The [']Mugger['] feat is now [bold type][if muggerison is true]ON[else]OFF[end if][roman type]. You will gain drop items [if muggerison is true]more frequently[else]as normal[end if].";
 
 Chapter 2 - Autoattack
 
 autoattackmode is a number that varies.
 [0 is normal]
 [1 is attack]
-[2 could be item? but probably not...]
+[2 is seduce]
 [3 is pass]
 [4 is flee]
 [5 is submit]
@@ -448,6 +450,9 @@ understand "auto attack normal" as autoattacknormal.
 
 autoattackberserk is an action applying to nothing.
 understand "auto attack berserk" as autoattackberserk.
+
+autoattackseduce is an action applying to nothing.
+understand "auto attack seduce" as autoattackseduce.
 
 autoattackpass is an action applying to nothing.
 understand "auto attack pass" as autoattackpass.
@@ -469,6 +474,13 @@ carry out autoattackberserk:
 	if "Instinctive Combat" is listed in feats of Player:
 		now autoattackmode is 1; [autoattack, no choice, always attack]
 		say "You let your aggressive instincts take the forefront, knowing you will attack at any chance.";
+	else:
+		say "You feel you are missing the instincts to do this.";
+
+carry out autoattackseduce:
+	if "Instinctive Combat" is listed in feats of Player:
+		now autoattackmode is 2; [autoseduce, no choice, always seduce]
+		say "This is the flavor text for enabling auto-seduce.";
 	else:
 		say "You feel you are missing the instincts to do this.";
 

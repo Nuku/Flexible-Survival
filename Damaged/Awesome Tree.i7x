@@ -25,47 +25,56 @@ to say Give Awesome:
 
 to say awesome attack:
 	if Awesome_boredom is 4:
-		say "The tree seems to vibrate. Whether your fervent attacks or the breeze caused it, a branch falls and thumps you on the arm. You notice some fruit on the branch, and without hesitation you put one in your pocket. As you look at the remaining two, you feel a sudden hunger and eat them uncontrollably. [infect]The world seems to go dark as you finish the second. Waking up, you can't see any trace of the tree, but you feel pretty awesome nonetheless. You pat your bag where you put the fruit, and smile at the thought that you still have some awesomeness in store.";
+		say "     The tree seems to vibrate. Whether your fervent attacks or the breeze caused it, a branch falls and thumps you on the arm. You notice some fruit on the branch, and without hesitation you put one in your pocket. As you look at the remaining two, you feel a sudden hunger and eat them uncontrollably.";
+		if "Iron Stomach" is not listed in feats of Player, infect;
+		say "     The world seems to go dark as you finish the second. Waking up, you can't see any trace of the tree, but you feel pretty awesome nonetheless. You pat your bag where you put the fruit, and smile at the thought that you still have some awesomeness in store.";
 		now hunger of Player is 0;
 		now thirst of Player is 0;
 		if a random number between 1 and 100 > 90:
 			if awesome bat is not owned:
 				ItemGain awesome bat by 1;
-		say "[Give Awesome][combat abort]";
+				now Awesome_noreward is 0;
+		if Awesome_sex is 2 and a random chance of 2 in 3 succeeds:
+			ItemGain awesome fruit by 1;
+		else if Awesome_sex is 1 and a random chance of 2 in 3 succeeds:
+			ItemGain awesomer fruit by 1;
+		else:
+			ItemGain awesomest fruit by 1;
 		now fightoutcome is 20;
+		now combat abort is 1;
 	else:
-		say "[one of]While you try and attack the tree, you trip over a root that you hadn't seen[or]You stop for a moment, and as you ponder just how awesome the tree really is, suddenly your leg cramps[at random].";
+		say "     [one of]While you try and attack the tree, you trip over a root that you hadn't seen[or]You stop for a moment, and as you ponder just how awesome the tree really is, suddenly your leg cramps[at random].";
 		now monsterHP is 60;
 		increase Awesome_boredom by 1;
 
 to say awesome defeat:
 	if Awesome_noreward > 3:
-		say "You know you hesitated, you could not bring yourself to strike down another of the trees.";
+		say "     You know you hesitated, you could not bring yourself to strike down another of the trees.";
 		if awesome bat is owned:
 			if awesome bat is weapon object of Player:
-				try using awesome bat;
+				unwield awesome bat;
 			ItemLoss awesome bat by 1;
-			say "Walking away, you get a sudden urge and dig a hole in some soft ground, pushing your bat in deeply. You can sense, with your most awesome senses, the wood taking root and beginning to grow.";
-		say "With good feelings coursing through you at your good deed, a warmth seems to spread from the core of awesome that the tree's fruit seems to have implanted into your being.";
+			say "     Walking away, you get a sudden urge and dig a hole in some soft ground, pushing your bat in deeply. You can sense, with your most awesome senses, the wood taking root and beginning to grow.";
+		say "     With good feelings coursing through you at your good deed, a warmth seems to spread from the core of awesome that the tree's fruit seems to have implanted into your being.";
 		infect;
 		now fightoutcome is 19;
 	else:
-		say "Somehow you manage to strike the tree in such a way that it collapses, breaking along the fault line in its trunk you had made. You notice the branches are riddled with fruit and you make an effort to gather as many ripe ones as you can.";
+		say "     Somehow you manage to strike the tree in such a way that it collapses, breaking along the fault line in its trunk you had made. You notice the branches are riddled with fruit and you make an effort to gather as many ripe ones as you can.";
 		if Awesome_noreward > 2:
-			say "You drop to your knees, wailing, unable to live with yourself for how much awesome you have taken from the world. Rising to your feet, you pledge never to destroy another awesome tree so long as you live.";
+			say "     You drop to your knees, wailing, unable to live with yourself for how much awesome you have taken from the world. Rising to your feet, you pledge never to destroy another awesome tree so long as you live.";
 		else:
-			say "With a start, you realize what you have done: you have ended a whole other kind of awesome in the world. Guiltily you walk away from the tree but promise you will find a way to atone for your sin.";
-		let x be a random number between 4 and 10;
+			say "     With a start, you realize what you have done: you have ended a whole other kind of awesome in the world. Guiltily you walk away from the tree but promise you will find a way to atone for your sin.";
+		let x be a random number between 2 and 5;
 		repeat with Awesome_counter running from 1 to x:
 			say "[Give Awesome]";
 
 
 to say awesome vict:
-	say "You proudly look up at the tree, standing still, and curse under your breath. All of a sudden, a crack sounds in the canopy above you and a single fruit drops down and smashes against the back of your head, knocking you out. The juice seeps down over your skin and almost seems to be absorbed by your body.[infect]";
-	say "As you wake up, you look around and wonder how the tree got away. Guess that's just another awesome mystery for this messed up new world.";
+	say "     You proudly look up at the tree, standing still, and curse under your breath. All of a sudden, a crack sounds in the canopy above you and a single fruit drops down and smashes against the back of your head, knocking you out. The juice seeps down over your skin and almost seems to be absorbed by your body.[infect]";
+	say "     As you wake up, you look around and wonder how the tree got away. Guess that's just another awesome mystery for this messed up new world.";
 
 to say awesome desc:
-	say "You turn a corner and see it. Looking up you realize due to the shape of the branches you are unable to actually see just how tall this monstrous and truly Awesome Tree is. Its branches are long and you see, among the foliage some fruit that look unbelievably tasty, if you could just shake the tree enough to get one to fall...";
+	say "     You turn a corner and see it. Looking up you realize due to the shape of the branches you are unable to actually see just how tall this monstrous and truly awesome tree is. Its branches are long and you see, among the foliage some fruits that look unbelievably tasty, if you could just shake the tree enough to get one to fall...";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -98,7 +107,6 @@ When Play begins:
 	add "Pod Person" to infections of HumorousList;
 	add "Pod Person" to infections of NatureList;
 	add "Pod Person" to infections of PlantList;
-	add "Pod Person" to infections of HermList;
 	add "Pod Person" to infections of BipedalList;
 	now Name entry is "Pod Person";
 	now enemy title entry is "Awesome Tree"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
@@ -113,7 +121,7 @@ When Play begins:
 	now skin entry is "[if looknow is 1]human[else]normal human, lovely, healthy-looking[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is ""; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ Cock Description, format as you have a 'size' (your text) cock.]
-	now face change entry is "it seems to tingle, moving slightly, with a start you realize it's human"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now face change entry is "it seems to tingle, moving slightly. With a start you realize it's human"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "your muscles writhe about under your skin, slowly settling back into a human shape"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
 	now ass change entry is "[if awesome_sex is 2]your hips seem to return to human male normal[else]your rear changes, sliding into the perfect wide-hipped female figure[end if]"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
@@ -270,7 +278,7 @@ name	desc	weight	object
 the scent of the awesome fruit is "[awesomefrscent]".
 
 to say awesomefrscent:
-	if Player is FemalePreferred or "Herm Preferred" is listed in feats of Player:
+	if Player is FemalePreferred or Player is HermPreferred:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	else:
 		say "The strange fruit has a strong, manly scent that seems mouth-wateringly sweet.";
@@ -278,7 +286,7 @@ to say awesomefrscent:
 the scent of the awesomer fruit is "[AwesomerFrScent]".
 
 to say AwesomerFrScent:
-	if Player is MalePreferred or "Herm Preferred" is listed in feats of Player:
+	if Player is MalePreferred or Player is HermPreferred:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	else:
 		say "The strange fruit has a lovely, feminine scent that seems mouth-wateringly sweet.";
@@ -295,8 +303,8 @@ to say AwesomestFrScent:
 to say awesome bat proc:
 	choose row MonsterID from the Table of Random Critters;
 	if HP entry is 60:
-		if Name entry matches the text "Awesome":
-			say "[line break]Your bat resounds against the tree, causing the world itself to shake. The unstoppable force and the immovable object meet, however your strength behind the bat is the deciding factor.";
+		if Name entry matches the text "Pod Person":
+			say "...[line break]Your bat resounds against the tree, causing the world itself to shake. The unstoppable force and the immovable object meet, however your strength behind the bat is the deciding factor";
 			now monsterHP is 0;
 			increase Awesome_noreward by 1;
 
@@ -319,8 +327,10 @@ To say awesomest fruit use:
 		now Nipple Count entry is 2;
 		now Breast Size entry is 3;
 		say "You bite into the awesomest fruit!";
+		now loot entry is "awesomest fruit";
+		now Awesome_sex is 0;
 		now Awesome_forcesex is 1;
-		infect;
+		if "Iron Stomach" is not listed in feats of Player, infect;
 	now MonsterID is omonster;
 
 awesomer fruit is a grab object.
@@ -328,7 +338,7 @@ awesomer fruit has a Usedesc "[awesomer fruit use]".
 
 To say awesomer fruit use:
 	let omonster be MonsterID;
-	if Player is MalePreferred or "Herm Preferred" is listed in feats of Player:
+	if Player is MalePreferred or Player is HermPreferred:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
 		repeat with Z running from 1 to number of rows in Table of Random Critters:
@@ -340,8 +350,10 @@ To say awesomer fruit use:
 		now Nipple Count entry is 2;
 		now Breast Size entry is 3;
 		say "You bite into the awesomer fruit!";
+		now loot entry is "awesomer fruit";
+		now Awesome_sex is 1;
 		now Awesome_forcesex is 1;
-		infect;
+		if "Iron Stomach" is not listed in feats of Player, infect;
 	now MonsterID is omonster;
 
 awesome fruit is a grab object.
@@ -349,7 +361,7 @@ awesome fruit has a Usedesc "[awesome fruit use]".
 
 To say awesome fruit use:
 	let omonster be MonsterID;
-	if Player is FemalePreferred or "Herm Preferred" is listed in feats of Player:
+	if Player is FemalePreferred or Player is HermPreferred:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
 		repeat with Z running from 1 to number of rows in Table of Random Critters:
@@ -358,11 +370,13 @@ To say awesome fruit use:
 				now MonsterID is z;
 				break;
 		now sex entry is "Male";
-		now Nipple Count entry is 0;
+		now Nipple Count entry is 2;
 		now Breast Size entry is 0;
 		say "You bite into the awesome fruit!";
+		now loot entry is "awesome fruit";
+		now Awesome_sex is 2;
 		now Awesome_forcesex is 1;
-		infect;
+		if "Iron Stomach" is not listed in feats of Player, infect;
 	now MonsterID is omonster;
 
 Awesome Tree ends here.

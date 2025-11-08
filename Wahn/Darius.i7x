@@ -1444,7 +1444,7 @@ to say BlissedDariusHarvest1: [fur harvest]
 	say "     Stroking over his muscled chest with the brush as well as your hands is oddly nice, in a mixture of feeling his soft fur as well as worshiping a masculine man's firm physique, and you fall into a comfortable rhythm doing it: Stroking with the brush, again, and again, then with your hand to scoop what came out of his undercoat together and finally transferring the little pinch of fur that yielded into the plastic bag. It is funny to see Darius's reaction to being brushed too, as he makes little pleased noises with every stroke of the dog brush massaging his skin, even while passed out. You can't really tell how long you spent doing it, grooming this powerful canine with quiet attention, but at the end of your efforts, you do have a small but likely sufficient amount of his fur gathered in the bag. And on top of that, you somehow feel pretty good and calm now.";
 	WaitLineBreak;
 	say "     A chuckle bubbles up in your throat as you realize that Darius would make the strangest therapy dog ever - an anthro, drug-dealing thug, knocked out with a mixture of his own drugs and alcohol. But despite all of this, just sitting here with him being calm and accepting to being touched (not that he has any choice) really relaxed you. You can barely imagine what he'd say if he learned about this little session between the two of you. Shaking your head, you seal your bag of fur with the ziplock strip at the top, putting it in your backpack, then turn back to Darius and tug his jeans back into position. Raising the zipper at least as far as it was before, you then stand up, leaving the Dalmatian passed out on his couch and none the wiser. In all likelihood, he'll not remember a thing about what just happened here.";
-	ItemGain "dalmatian male fur" by 1;
+	ItemGain "dalmatian fur" by 1;
 	SanBoost 15;
 
 to say BlissedDariusHarvest2: [cum harvest]
@@ -1463,7 +1463,7 @@ to say BlissedDariusHarvest2: [cum harvest]
 	else:
 		say "you see that you at least managed to fill it halfway with thug dog-milk, which will do nicely for your purposes. Putting the cap on it, you carefully stash away your loot of purloined cum.";
 	say "     Leaning forward to give his softening canine dickhead a little lick, getting another faint taste of what you milked from him, you smack your lips, then gently lay his dick onto his abs. Tugging the jeans back into position, you raise his zipper at least as far as it was before, then stand up, leaving the Dalmatian passed out on his couch and none the wiser. In all likelihood, he'll not remember a thing about what just happened here - though you'd imagine he might have some sore balls when he wakes up.";
-	ItemGain "dalmatian male cum" by 1;
+	ItemGain "dalmatian cum" by 1;
 	NPCSexAftermath Darius receives "Stroking" from Player;
 
 Darius ends here.

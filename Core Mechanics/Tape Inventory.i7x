@@ -9,18 +9,40 @@ understand "tinv" as TapeInventorying.
 understand "tape inventory" as TapeInventorying.
 understand "tape inv" as TapeInventorying.
 
+check TapeInventorying:
+	if number of entries in tapes of Player is 0, say "Your collection of video tapes is empty." instead;
+
 carry out TapeInventorying:
+	say "Your video tape collection consists of:[line break]";
+	say "Type [bold type]tape <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a tape or [bold type]tapedrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a tape.";
+	LineBreak;
 	sort tapes of Player;
-	if the number of entries in tapes of Player is 0:
-		say "Your collection of video tapes is empty.";
-	if the number of entries in tapes of Player > 0:
-		say "Type [bold type]tape <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a tape, [bold type]tapedrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a tape.";
-		say "Your video tape collection consists of:[line break]";
-		let norepeat be a list of text;
-		repeat with x running through tapes of Player:
-			say "[link][bracket][bold type]U[roman type][close bracket][as]tape [x][end link] ";
-			say "[link][bracket][bold type]D[roman type][close bracket][as]tapedrop [x][end link] ";
-			say "[X][line break]";
+	let linkparts be {{"U", "tape"}, {"D", "tapedrop"}};
+	repeat with x running through tapes of Player:
+		if hypernull is not 1:
+			say "[tapelink x with linkparts]";
+		say "[x][line break]";
+
+tapeindex is a number that varies.
+
+to say tapelink (T - text) with (L - list of list of text):
+	repeat with linktext running through L:
+		let link be the substituted form of "[entry 2 of linktext] [T]";
+		if tapeindex < 1 or tapeindex > number of entries in hyperlink list:
+			add link to hyperlink list;
+			now tapeindex is number of entries in hyperlink list;
+		else:
+			if tapeindex < number of entries in hyperlink list and entry tapeindex + 1 of hyperlink list is link: [likely the list will get built in the same order, so long runs of these should be sequential]
+				increase tapeindex by 1;
+			else if link is listed in hyperlink list: [otherwise, find it in the list if it exists]
+				repeat with x running from 1 to number of entries in hyperlink list:
+					if entry x of hyperlink list is link:
+						now tapeindex is x;
+						break;
+			else: [or just add it if it doesn't]
+				add link to hyperlink list;
+				now tapeindex is number of entries in hyperlink list;
+		say "[set link tapeindex][bracket][entry 1 of linktext][close bracket][terminate link] "; [associate our text in the UI with the command in the hyperlink list]
 
 understand "tape [text]" as tapeing.
 
@@ -87,6 +109,8 @@ carry out tapeing:
 			say "[CanineHazingVid]";
 		-- "Demented Video Diary":
 			say "[AddictedBreederFucked]"; [Source: Voidsnaps/AddictedBreeder.i7x]
+		-- "Firbolg Feral Tape 1":
+			say "[FirbolgFeralTape1]"; [Source: Orangehorned/Firbolg Tapes.i7x]
 [ Template to fill for new tapes ]
 [
 		-- "TAPE NAME":

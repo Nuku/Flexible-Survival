@@ -27,7 +27,7 @@ check resting:
 		say "You pull out your cot and lay it out before resting for a while.";
 	else if cot is present:
 		say "You rest on the cot.";
-	else if the player is in the bunker:
+	else if Player is in Bunker or Player is in Police Lockerroom:
 		say "You rest on one of the cots available.";
 	else if the player is in Slave Cell 1 or player is in Slave Cell 2:
 		say "You rest on the bed in the back of the cell.";
@@ -79,7 +79,7 @@ carry out resting:
 	follow the turnpass rule;
 	follow the turnpass rule;
 	follow the player injury rule;
-	say "You are [descr]([HP of Player]/[MaxHP of Player]).";
+	say "You are [descr] ([HP of Player]/[MaxHP of Player]).";
 
 to Rest:
 	let num1 be MaxHP of Player divided by 4;

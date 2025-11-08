@@ -119,6 +119,7 @@ instead of conversing Larissa:
 		say "     'Someone interested in our consumer safety program? Certainly! Sign here please.' She hands you a clipboard with some boring looking paperwork and you just start signing where it's highlighted. You get the feeling by her enthusiasm that not many people are interested. You inquire about that fact and she confirms your suspicion.";
 		say "     'Yes, apparently most people would rather fuck than fight. Not that they can be blamed in their state, but it does mean the area around here is difficult to keep safe. Which is exactly why we are offering such a valuable product. It serves as a way to give easy access to your freecred rewards as well. We find we lose our customers less whe-' she catches herself, realizing that perhaps she's offering information a bit beyond what she was intended to offer. 'Well, suffice to say it's mutually beneficial.' You hand her your papers, and she hands you a new Zephyr Personal Communicator. Breathing a sigh of relief, you can now toss your old smartphone, or keep it as a sentimental paperweight.";
 		ItemGain zpc by 1;
+		WaitLineBreak;
 		TraitGain "received ZPC" for Player;
 	if scenario is "Researcher" or nanitemeter > 0, let vialsnagging be true;
 	if HP of Doctor Matt is 16:

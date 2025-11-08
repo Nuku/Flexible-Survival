@@ -53,7 +53,7 @@ Sterile of Zeke is false. [steriles can't knock people up]
 MainInfection of Zeke is "Red Fox".
 Description of Zeke is "[ZekeDesc]".
 Conversation of Zeke is { "<This is nothing but a placeholder!>" }.
-The scent of Zeke is "     Zeke smells like a little bit musky and furry, kinda like a humanoid fox is always bound to be.".
+The scent of Zeke is "     Zeke smells a little bit musky and furry, kinda like a humanoid fox is always bound to be.".
 
 to say ZekeDesc:
 	if debugactive is 1:
@@ -67,7 +67,7 @@ instead of conversing the Zeke:
 		say "     Zeke looks visibly delighted that you took him up on his offer. 'Hey, glad you came.' He then gestures broadly around the room. 'As you can see, I have a very nice setup here, and a lot of games to choose from. Since I don't have enough of an idea of what you like to know where we can really cut loose, I figure we should start with something pretty broadly fun, yeah? Make sure we both have a good time and all.' He steps towards one of the several shelves around the room, and spends several moments scanning across the titles it holds, before selecting one. 'Zephyr Kart 8, almost guaranteed to be fun for anyone regardless of skill. There are few better places to start. Shall we?'";
 		say "     In no time at all, the two of you are seated among the collection of comfortable chairs and beanbags set up in an arc before his TV. With a practiced hand, he quickly sets up the game system, and before you know it, the title screen is displaying, and you're ready to play. Once the game begins, you can see that Zeke has spent a lot of time playing, as his skills are rather impressive. On the other hand, you're somewhat out of practice, with the situation being as it is, but you don't do too badly yourself, coming out just well enough to not feel bad about your own performance.";
 		WaitLineBreak;
-		say "     Once the two of you have completed several games, and spent the better part of an hour playing, and occasionally trash talking, you finally call it good for the moment. As Zeke put away the game, he comments on your performance. 'Hey, for someone without a fortified game basement, you weren't half bad. Once you get a little more practice playing against me, with a few more games, you'll be almost as good as me. Almost.' You shake your head, and tell him that you'll get good enough to beat him eventually. He chuckles in response. 'If that's your goal, you're definitely going to need to come over and play more games. I'm always up for more, so feel free to stop on by whenever.'";
+		say "     Once the two of you have completed several games, and spent the better part of an hour playing, and occasionally trash talking, you finally call it good for the moment. As Zeke puts away the game, he comments on your performance. 'Hey, for someone without a fortified game basement, you weren't half bad. Once you get a little more practice playing against me, with a few more games, you'll be almost as good as me. Almost.' You shake your head, and tell him that you'll get good enough to beat him eventually. He chuckles in response. 'If that's your goal, you're definitely going to need to come over and play more games. I'm always up for more, so feel free to stop on by whenever.'";
 		now ZekeRelationship is 2;
 	else:
 		say "     As you walk up to Zeke, he brightens up a bit. 'Hey, nice to see you. Ready for some games?'";
@@ -119,7 +119,7 @@ to say ZekeTalkMenu:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You step back from the Zeke, shaking your head slightly as he gives a questioning look.";
+			say "     You step back from Zeke, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
@@ -129,18 +129,18 @@ to say ZekeTalk1: [talk about him]
 	say "     'Well, I don't know how much there is to say. I used to spend all my time cooped in my basement, playing video games. Then the apocalypse happened, and that's still what I do, mostly. I do make sure to get out to the mall sometimes, pick up new games and such. I could probably pick up a bunch at once, but it's more fun to do it one by one. Other than that though, I don't get out much, just stay here where it's relatively safe, and very comfortable. But it can get kind of lonely at times, with nobody to really hang out with. All my other friends lived quite a ways away, and there's no good way to get in contact with them anymore. But hey, that's when you make more.'";
 
 to say ZekeTalk2: [playing games]
-	say "     Zeke takes very little time to setup a game for the two of you to play. This time his pick is a fighting game, though not one you're overly familiar with. He gives you a brief while to practice before taking you right into a longer tournament mode, where he immediately gets very focused every time the gameplay starts.";
+	say "     Zeke takes very little time to set up a game for the two of you to play. This time his pick is a fighting game, though not one you're overly familiar with. He gives you a brief while to practice before taking you right into a longer tournament mode, where he immediately gets very focused every time the gameplay starts.";
 	let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Intelligence Check):[line break]";
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Intelligence Check):[line break]";
 	increase diceroll by bonus;
 	if diceroll > 19:
-		say "     Once you start playing, it feels somewhat familiar, and you find yourself able to apply some skills you'd almost forgotten you had to it, and end up soundly trouncing Zeke at his own game. He is completely speechless at you victory, simply sitting with a shocked look for several moments, before he laughs heartily. 'Impressive stuff! Even I could hardly beat you at that. Play that impressive deserves a reward.' Zeke stands, and walks over to a cupboard, rifling through it for a few moments. Soon after, he tosses you a bag of chips. 'You earned it. Now come back some time, you hear? I need a rematch against that.'";
+		say "     Once you start playing, it feels somewhat familiar, and you find yourself able to apply some skills you'd almost forgotten you had to it, and end up soundly trouncing Zeke at his own game. He is completely speechless at your victory, simply sitting with a shocked look for several moments, before he laughs heartily. 'Impressive stuff! Even I could hardly beat you at that. Play that impressive deserves a reward.' Zeke stands, and walks over to a cupboard, rifling through it for a few moments. Soon after, he tosses you a bag of chips. 'You earned it. Now come back some time, you hear? I need a rematch against that.'";
 		ItemGain chips by 1;
 	else if diceroll > 15:
 		say "     Your skills win out, and your general practice at this, along with quickly picking up the moves, means you manage to scrape out a win. As the sight of his defeat on the screen, Zeke is almost speechless. 'Wow, you're not half bad. A little more practice, and you can be as pro as I am. And I'd definitely like to help you practice.'";
 	else:
-		say "     The brief time practicing wasn't quite enough, it seems, and Zeke defeats you in the game, though you weren't completely hopeless. The fox looks satisfied at his own victory, but is also quick to console you. 'Hey, I've had a lot more practice at this, don't worry about it. Just keep playing with me, and someday you'll be as radical as me.'";
+		say "     The brief time practicing wasn't quite enough, it seems, and Zeke defeats you in the game[if diceroll > 9], though you weren't completely hopeless[end if]. The fox looks satisfied at his own victory, but is also quick to console you. 'Hey, I've had a lot more practice at this, don't worry about it. Just keep playing with me, and someday you'll be as radical as me.'";
 
 to say ZekeTalk3: [generator]
 	say "     'I can see why you'd be curious about it. From what I've seen, very few places have any sort of power. This generator can't do too much, but it is enough to keep my games running as long as I'm careful with it, and that's good enough for me. At the moment I have plenty of fuel, hopefully enough to last until somebody fixes the power. I've heard some people mentioning that they've seen soldiers in the city, so I don't expect it'll be too long until something gets done.'";
@@ -169,7 +169,7 @@ instead of fucking the Zeke:
 			if Player consents:
 				let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
-				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Intelligence Check):[line break]";
+				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Intelligence Check):[line break]";
 				increase diceroll by bonus;
 				if diceroll > 15:
 					say "     Both of you play your hardest, and though the matches are close, in the end you pull out more wins, your superior skills and strategy bringing you the victory. As the winner, it becomes your right to choose how to play with your newly earned prize.";
@@ -182,7 +182,7 @@ instead of fucking the Zeke:
 				say "[ZekeSexMenu3]";
 		else:
 			LineBreak;
-			say "     'So you feel like keeping it casual, and just helping each other out? I can get behind that. I'll let you pick what to do.?'";
+			say "     'So you feel like keeping it casual, and just helping each other out? I can get behind that. I'll let you pick what to do.'";
 			WaitLineBreak;
 			say "[ZekeSexMenu1]";
 
@@ -195,7 +195,7 @@ to say ZekeSexMenu1: [Cooperative]
 		choose a blank row in table of fucking options;
 		now title entry is "Frotting";
 		now sortorder entry is 1;
-		now description entry is "Make the penises touch";
+		now description entry is "Make your penises touch";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Zeke off"; [anyone can blow him]
@@ -341,14 +341,14 @@ to say ZekeSex1: [frotting]
 
 to say ZekeSex2: [blowing - casual]
 	say "     When you make your request, the fox quickly strips off his clothing, and then responds. 'If you want to treat me, I don't mind. But anything more serious than this, you'll have to try your luck with some competition. The reward is more fun with a risk.' He follows up his comment by winking at you, before he settles down into one of the beanbags, legs spread, and the slowly hardening cock beginning to stand free. You step over to Zeke, and then fall to your knees in front of him, bringing your eyes level with his vulpine dick. For a moment, you sit there, your eyes following the slight twitches of the shaft before you. Eventually the temptation becomes too much for you to wait any longer, and you lean forward, capturing it in your mouth.";
-	say "     In no time at all, you're bobbing up and down the vulpine member, the tip reaching almost to the top of your throat, and your lips stopping just at the edge of his knot. You glance upwards, and can see Zeke panting in pleasure from your ministrations. A few seconds after, he meets your eyes, and grins at you. 'You're, ah, pretty good at this. You must have played a lot of games when you were younger, gotten a lot of practice at cartridge blowing.' He smiles at his own joke, but you simple keep at work, ignoring his terrible sense of humor. Soon enough, your efforts bear fruit, and you can feel his member pulse in your mouth, and start releasing your reward. You take your head down his shaft and hold it in place with your mouth just meeting his knot, and let his seed fill you. Far too soon, it comes to an end, and you swallow, before licking his cock clean, and leaning back. Your eyes meet his again, and he smiles at you as you stand back up.";
+	say "     In no time at all, you're bobbing up and down the vulpine member, the tip reaching almost to the top of your throat, and your lips stopping just at the edge of his knot. You glance upwards, and can see Zeke panting in pleasure from your ministrations. A few seconds after, he meets your eyes, and grins at you. 'You're, ah, pretty good at this. You must have played a lot of games when you were younger, gotten a lot of practice at cartridge blowing.' He smiles at his own joke, but you simply keep at work, ignoring his terrible sense of humor. Soon enough, your efforts bear fruit, and you can feel his member pulse in your mouth, and start releasing your reward. You take your head down his shaft and hold it in place with your mouth just meeting his knot, and let his seed fill you. Far too soon, it comes to an end, and you swallow, before licking his cock clean, and leaning back. Your eyes meet his again, and he smiles at you as you stand back up.";
 	NPCSexAftermath Player receives "OralCock" from Zeke;
 
 to say ZekeSex3: [sixty-nine]
 	say "     After deciding how you two will take care of each other, it takes almost no time until you're each completely nude, and ready to have a good time. Once that is done, you see Zeke standing near the largest couch in the room. 'I think this will do nicely, don't you?' You nod in response, and approach him. Deciding to move first, you lay yourself down on the couch. You start stroking your member lightly, building it up towards full hardness, and give the fox your best inviting look. He quickly gets the message, and after some slightly awkward maneuvering, ends up properly in place above you. You can feel his breath against the tip of your cock, just as you can see his appealing shaft right in front of your own face.";
-	say "     In the end, was the one who acted first, evidenced by the feeling of a warm suction starting to cover your shaft. Not to be outdone, you follow suit, and move your head up enough to get his fox cock in your mouth. In no time at all, the two of you achieve a rhythm, his head bobbing down on your dick just as your head bobs upwards to meet his. Soon enough, you can feel that your task is nearing completion, clearly evidenced by the way his shaft is starting to twitch and pulse in your mouth. At the same time, your own orgasm draws nearer from the constant pleasure provided by Zeke. You begin to speed up your own efforts to bring him to climax, and in no time at all the fox begins to follow suit.";
+	say "     In the end, he was the one who acted first, evidenced by the feeling of a warm suction starting to cover your shaft. Not to be outdone, you follow suit, and move your head up enough to get his fox cock in your mouth. In no time at all, the two of you achieve a rhythm, his head bobbing down on your dick just as your head bobs upwards to meet his. Soon enough, you can feel that your task is nearing completion, clearly evidenced by the way his shaft is starting to twitch and pulse in your mouth. At the same time, your own orgasm draws nearer from the constant pleasure provided by Zeke. You begin to speed up your own efforts to bring him to climax, and in no time at all the fox begins to follow suit.";
 	WaitLineBreak;
-	say "     Eventually the stalemate is broken, and Zeke is the first to peak. His cock is throbbing in your mouth, shooting spurts of seed down your throat, with the hard knot battering against your lips as he thrust his hips downward in his orgasm. After several moments of his cum shooting into you, the same release happens to you, with your own cock firing off jets of semen into the fox's mouth. Your lower body involuntarily jerks upwards slightly as this matching pair of orgasms flows between the two of you, the electric senses of pleasure seeming to connect you in a continuous circuit. After a time, however, the sensation fades, and you are left with the fox laying comfortably atop your body, and the two of you remain lying in comfort for several more minutes. Eventually, however, you each clean up from your lustful adventure.";
+	say "     Eventually the stalemate is broken, and Zeke is the first to peak. His cock is throbbing in your mouth, shooting spurts of seed down your throat, with the hard knot battering against your lips as he thrusts his hips downward in his orgasm. After several moments of his cum shooting into you, the same release happens to you, with your own cock firing off jets of semen into the fox's mouth. Your lower body involuntarily jerks upwards slightly as this matching pair of orgasms flows between the two of you, the electric senses of pleasure seeming to connect you in a continuous circuit. After a time, however, the sensation fades, and you are left with the fox laying comfortably atop your body, and the two of you remain lying in comfort for several more minutes. Eventually, however, you each clean up from your lustful adventure.";
 	NPCSexAftermath Player receives "OralCock" from Zeke;
 	NPCSexAftermath Zeke receives "OralCock" from Player;
 
@@ -382,8 +382,9 @@ to say ZekeSex8: [being fucked]
 
 Section 4 - Events
 
-instead of going south from Mall East Wing while ZekeRelationship is 0:
-	move player to Game Store;
+after going to Game Store while ZekeRelationship is 0 and FurryList is not banned:
+	[move player to Game Store;]
+	try looking;
 	say "     As you enter the game shop, you notice that there is someone else browsing the shelves, currently leaning over and unintentionally showing off a fluffy tail poking out through a hole in a pair of jeans. After a few moments of watching it swish around, he stands up, a case in hand, and turns away from the shelf. Now that he is fully visible, you can see that he is clearly a fox, albeit on two legs, and in addition to a pair of jeans is wearing a slightly worn shirt displaying the text <MESSAGE REDACTED>. When he realizes that you're there, he starts briefly, and then speaks. 'Oh, hey. You here for some games too? Wait, that's a silly question. Why else would you be in the game shop, after all?'";
 	say "     The fox takes a momentary pause, and extends his hand. 'I'm Zeke, by the way. And you are?' You shake his hand, and introduce yourself. 'Well, nice to meet you. You might have guessed, but I tend to play a lot of video games. Even with this whole disaster going on, I still have a pretty nice setup. If you ever want to hang out and play some games, you should visit. I haven't had a lot of opportunity for anything multiplayer lately, and it's nice to have a little variety. Plus, I don't know why, but you seem to me like the sort of person who enjoys video games. Actually, hang on a moment.' Zeke takes off a backpack, which you hadn't noticed he was wearing, and puts the game he was carrying into it. Then he digs out a scrap of paper and scribbles something on it, before handing it to you. It seems to contain directions. 'Now you should be able to find my place, when you want. See you around, I hope.' With that the fox picks up his backpack, and leaves the store.";
 	AddNavPoint Gaming Den;
@@ -395,7 +396,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Gaming Den	"Gaming Den"
 
-Gaming Den is a room. It is a fasttravel. It is private.
+Gaming Den is a room. It is a fasttravel. It is private. Gaming Den is sleepsafe.
 Description of Gaming Den is "     The basement is surprisingly spacious, with a large entertainment center set up on one wall. Other walls feature shelves, packed with games, movies, books, and miscellaneous paraphernalia. The center space around the room is taken up by several couches, chairs, and beanbags, set up facing the television.".
 The scent of Gaming Den is "<text>".
 

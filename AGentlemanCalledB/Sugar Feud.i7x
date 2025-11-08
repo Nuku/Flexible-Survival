@@ -18,8 +18,6 @@ when play begins:
 	add Sugar Shack to BadSpots of HumorousList;
 
 to say ResolveEvent Sugar Shack:
-	setmonster "Sugar Glider";
-	choose row MonsterID in Table of Random Critters;
 	say "     Turning a corner you see a rather curious sight ahead down the midway, one of those brightly colored sugar glider girls scampering around a large stall at the end of the row. As you're considering turning back to avoid a confrontation with the excited marsupial, she spots you watching and calls out to you, waving you over eagerly. Finding yourself curious what she's up to you approach slowly, wary of some sort of trap the giggling girl may have set up, but you reach the stall without incident and find it to be, unsurprisingly, a candy stall.";
 	say "     When you step up to the counter there's no sign of the glider who was here moments ago. Peering over the counter, you see the shelves of the stall have been picked clean, but there is a large cotton candy machine in the back that appears mostly undisturbed. 'Isn't it great!?' You whip around to find the source of the voice behind you, finding yourself face to face with the grinning sugar glider. 'And it still works!' she cheers, grabbing your arm and pulling you around to the door at the back of the stall, then inside.";
 	WaitLineBreak;
@@ -34,11 +32,13 @@ to say ResolveEvent Sugar Shack:
 			if SkinName of Player is not "Sugar Glider":
 				say ", but you discover it now matches the sugar glider's own paw exactly [if Player is male]except that the thick coat of cotton candy fur that reaches up to your elbow is bright blue[else]with a thick coat of bright pink cotton candy fur reaching up to your elbow[end if][run paragraph on]";
 			say ". Entranced by watching the [if Player is not sugargliderskinned]thick fur[else]changes[end if] slowly creep up your arm, you hardly notice the sugar glider shifting to the other side of you, taking hold of your other arm and pulling it into the humming machine, this time all the way up to your shoulder.";
+		WaitLineBreak;
 		say "     With your face so close to the sweet-smelling candy, your sugar clouded mind struggles to find a reason to resist her advances, and when you feel the sugar glider's free hand at the back of your head you can only giggle in anticipation. [if Player is not sugargliderfaced]'You're going to be such a cute sugar glider,'[else]'This oughtta help you loosen up,'[end if] she whispers into your ear, placing another kiss on your cheek before plunging your head into the whirling candy filled drum. Fully focused on the cotton candy whirling around you, all you can do is open your mouth and try to catch all you can, giggling uncontrollably as the sugary fluff builds up on your face, ";
 		if FaceName of Player is not "Sugar Glider":
 			say "pressing against your flesh and forming a thick [if Player is male]blue[else]pink[end if] cotton candy hide on your shifting head. As the changes roll through you, ";
 		say "the fluff seems to press right into your mind, further clouding your thoughts and pushing any lingering resistance out.";
 		say "     You groan with disappointment as you are pulled from your cotton candy filled dream but soon find yourself face to face with your giggling lover once again. [if Player is not sugargliderskinned]'You look lovely,' she says with a[else]She stares deep into your large eyes with a loving[end if] smile, before pressing her muzzle to your own in a deep kiss. Her long, agile tongue darts around your mouth with practiced mastery, easily outmaneuvering your own and filling your mouth with her deliciously sweet flavor. Meanwhile her dexterous paws are roaming across your body, quickly stripping you of your clothing and gear as she presses you up against the stall wall.";
+		WaitLineBreak;
 		if Player is neuter:
 			say "     As the sugar glider's paws roam across your body, she gently brushes across your bare groin, massaging your tender flesh softly as waves of pleasure ripple through your pelvis.";
 			follow the sex change rule;
@@ -59,18 +59,16 @@ to say ResolveEvent Sugar Shack:
 		if "Junk Food Junky" is listed in feats of Player, SanLoss 10;
 		if humanity of Player < 10:
 			say "     As you bask in the afterglow of your orgasm, your attention is drawn back to the cotton candy machine, still humming away happily as it continues spinning that delicious candy fluff. Still craving yet more sugary treats, you go back to the machine for more cotton candy. As you're reaching in, swirling your arm around, the sugar glider comes over and starts lifting you into the machine. Rather than fight her, you giggle happily and let her boost you in. Tumbling around in the swirling vortex of sweet colors, you feel more and more cotton candy clinging to you, sinking into your body. When the machine's finally shut off and your dizzy self is helped out of the cotton candy machine, your mind has been spun and fluffed until it is filled with nothing but thoughts of sweets and sex, or sweet, sweet sex. Giggling happily, you collapse into the arms of the sugar glider, still quite dizzy, and give her a sugary kiss, eager for more fun.";
-			wait for any key;
 			now humanity of Player is 0;
 			now battleground is "void";
-			WaitLineBreak;
+			wait for any key;
 			end the story saying "Having succumbed to the sweet, sweet desire, there is nothing left in your head but sugary fluff.";
 		else:
 			say "     Spent, you collapse atop your lover as the last of your changes ripple down your legs, encouraged by the sticky nectars coating your thighs. The sugar glider hugs you tightly in a loving embrace that spans most of your body thanks to the soft membrane between her arms and legs. She nuzzles gently against your [if Player is male]face and licks your cheek softly[else]tail[end if] with a sigh of contentment as your transformation comes to an end. As you bask in the afterglow of your sweet, sugary sex your attention is drawn back to the cotton candy machine, still humming away happily as it continues spinning that delicious candy fluff. Even as the sugar induced fog starts to recede in the wake of your climax, your mouth waters at the thought of that sweet, sweet treat. Will you give in to the urge to go back for more?";
 			if Player consents:
 				say "     Listening to your sweet tooth, you go back to the machine for more cotton candy. As you're reaching in, swirling your arm around, the sugar glider comes over and starts lifting you into the machine. Rather than fight her, you giggle happily and let her boost you in. Tumbling around in the swirling vortex of sweet colors, you feel more and more cotton candy clinging to you, sinking into your body. When the machine's finally shut off and your dizzy self is helped out of the cotton candy machine, your mind has been spun and fluffed until it is filled with nothing but thoughts of sweets and sex, or sweet, sweet sex. Giggling happily, you collapse into the arms of the sugar glider, still quite dizzy, and give her a sugary kiss, eager for more fun.";
-				wait for any key;
 				now humanity of Player is 0;
-				WaitLineBreak;
+				wait for any key;
 				end the story saying "Having given in to the sweet, sweet desire, there is nothing left in your head but sugary fluff.";
 			else:
 				say "     Deciding you need to get out of this sickly sweet dream while you still have a mind to, you do your best to shake your head clear of the sugary haze and quickly gather your gear to leave before the sugar glider can recover from her afterglow and tempt you with more sweet fun.";

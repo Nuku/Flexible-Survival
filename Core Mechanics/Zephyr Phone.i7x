@@ -423,7 +423,7 @@ name	desc	weight	object
 "Broken smartphone"	"[zpcdesc2]"	1	Broken Smartphone
 
 to say zpcdesc2:
-	say "     Your smartphone is toast. Its screen is smashed, and while you hoped the damage was cosmetic after you tripped and smashed it against the sidewalk on your way to your present location, it has since proven to be bricked. Zephyr is known to sell many tech gadgets. Maybe one of their shops and such can repair it? You doubt a new phone is an option at this point, but it'd certainly help with navigation.";
+	say "     Your smartphone is toast. Its screen is smashed, and while you hoped the damage was cosmetic after you tripped and smashed it against the sidewalk on your way to your present location, it has since proven to be bricked. Zephyr is known to sell many tech gadgets. Maybe one of their shops and such can repair it? You doubt a new phone is an option at this point, but it'd certainly help with navigation. ";
 
 Broken Smartphone is a grab object. Broken Smartphone is not temporary.
 
@@ -432,7 +432,7 @@ name	desc	weight	object
 "ZPC"	"[zpcdesc]"	1	zpc
 
 to say zpcdesc:
-	say "     The Zephyr Personal Communicator is essentially a slightly oversized smartphone. It is a surprisingly sleek piece of technology that almost feels out of place considering the environment around you, no doubt a display of Zephyr's dominance and power. Flipping the device over, you notice that its white rubber back is lined with solar panels. It seems that you don't have to worry about charging the device. The onyx black front display is smooth and glossy save for the Zephyr company logo on the top. You see a small orange button on the side of the device. Perhaps you could try to [bold type]use the zpc[roman type]?";
+	say "     The Zephyr Personal Communicator is essentially a slightly oversized smartphone. It is a surprisingly sleek piece of technology that almost feels out of place considering the environment around you, no doubt a display of Zephyr's dominance and power. Flipping the device over, you notice that its white rubber back is lined with solar panels. It seems that you don't have to worry about charging the device. The onyx black front display is smooth and glossy save for the Zephyr company logo on the top. You see a small orange button on the side of the device. Perhaps you could try to [bold type]use the ZPC[roman type]? ";
 
 
 zpc is a grab object. zpc is not temporary.
@@ -461,14 +461,14 @@ to say zpc_use:
 			project the figure of emap_special_signalnotfound_icon;
 			say "     You turn on the device. It appears that your current location is not yet part of the Zephyr Satellite coverage region... Perhaps you could try the device in one of Zephyr's published compatible locations, such as the Smith Haven Mall?";
 			now emap is 1;
-			WaitLineBreak;
+			wait for any key;
 			if debugactive is 1 and debuglevel > 1:
 				say "Following the ngraphics_blank rule";
 			follow the ngraphics_blank rule; [clear pic after WLB user response]
 		else if zpc_Zc is 1:
 			say "     The device will now track and display your current location, until you exit the satellite coverage region. If you wish to terminate tracking while still in the coverage region, simply switch the device off.";
 			now emap is 1;
-			WaitLineBreak;
+			wait for any key;
 			if debugactive is 1 and debuglevel > 1:
 				say "Following the zpc_lookoverride rule.";
 			follow the zpc_lookoverride rule; [fill with respective pic]
@@ -476,7 +476,7 @@ to say zpc_use:
 		project the figure of emap_special_shutdown_icon; [off]
 		say "     After holding the power button for a few seconds, the display fades out as an accompanying chime completes its shutdown.";
 		now emap is 0;
-		WaitLineBreak;
+		wait for any key;
 		if debugactive is 1 and debuglevel > 1:
 			say "Following the ngraphics_blank rule";
 		follow the ngraphics_blank rule; [clear pic after WLB user response]

@@ -197,6 +197,8 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "dalmatian male fur"	"Some black and white fur that looks like it has been pulled out of the coat of a Dalmatian. It's not so much a tuft of it, but rather a small pile of fairly short hairs."	0	dalmatian male fur
 
+dalmatian fur is a grab object. [define early to resolve name conflicts]
+
 dalmatian male fur is a grab object.
 It is temporary.
 Usedesc of dalmatian male fur is "[DalmatianMaleFurUse]";
@@ -970,7 +972,6 @@ to SetMonsterRandomDalOffspring:
 
 Section 3 - Items
 
-[
 Table of Game Objects (continued)
 name	desc	weight	object
 "dalmatian cum"	"A tiny plastic shampoo bottle as you might find in a motel, filled with something milky white, thick and creamy. If you didn't know where it's from, you'd almost think it to be liquid soap rather than Darius's cum. You could drink it to quench your thirst, but who knows what else it might do to you..."	1	dalmatian cum
@@ -978,7 +979,8 @@ name	desc	weight	object
 instead of sniffing dalmatian cum:
 	say "You open the lid for a moment and take a sniff. Smells rather tasty actually, kinda nutty. You can't help but be tempted to take a swallow of it.";
 
-dalmatian cum is a grab object. dalmatian cum is cum.
+[dalmatian cum is a grab object.] [defined in Cum Items to prevent name conflicts]
+dalmatian cum is cum.
 dalmatian cum is infectious. Strain of dalmatian cum is "Dalmatian Bitch".
 Usedesc of dalmatian cum is "[dalmatian cum use]";
 
@@ -1000,7 +1002,7 @@ name	desc	weight	object
 instead of sniffing dalmatian fur:
 	say "     You sniff at the tuft of fur. It has a definitive smell of dog to it.";
 
-dalmatian fur is a grab object.
+[dalmatian fur is a grab object.] [defined earlier to prevent name conflicts]
 dalmatian fur is temporary.
 Usedesc of dalmatian fur is "[dalmatian fur use]";
 
@@ -1014,7 +1016,27 @@ to say dalmatian fur use:
 			say "'Let's hope the stuff mans you up a bit. I could use some reliable help later on, when I expand this operation.' The anthro canine steps up to give you a fist bump.";
 	SanLoss 2;
 	infect "Dalmatian Male";
-]
+
+[The player won't be able to interact with dalmatian cum or fur if they also own a variant with a more specific name, so we need to tell the game to prioritize these when resolving ambiguity.]
+Does the player mean grabbing dalmatian cum: it is likely.	[get dalmatian cum]
+Does the player mean using dalmatian cum when Darius is visible: it is very likely.
+Does the player mean using dalmatian cum: it is likely.	[use dalmatian cum]
+Does the player mean examining dalmatian cum: it is likely.	[look dalmatian cum]
+Does the player mean sniffing dalmatian cum: it is likely.	[smell dalmatian cum]
+Does the player mean littering dalmatian cum: it is likely.	[drop dalmatian cum]
+Does the player mean burninating dalmatian cum: it is likely.	[junk dalmatian cum]
+Does the player mean stashing dalmatian cum: it is likely.	[stash dalmatian cum]
+Does the player mean retrieving dalmatian cum: it is likely.	[retrieve dalmatian cum]
+
+Does the player mean grabbing dalmatian fur when dalmatian male fur is visible: it is likely.	[get dalmatian fur]
+Does the player mean using dalmatian fur when Darius is visible: it is very likely.
+Does the player mean using dalmatian fur when dalmatian male fur is visible: it is likely.	[use dalmatian fur]
+Does the player mean examining dalmatian fur when dalmatian male fur is visible: it is likely.	[look dalmatian fur]
+Does the player mean sniffing dalmatian fur when dalmatian male fur is visible: it is likely.	[smell dalmatian fur]
+Does the player mean littering dalmatian fur when dalmatian male fur is visible: it is likely.	[drop dalmatian fur]
+Does the player mean burninating dalmatian fur when dalmatian male fur is visible: it is likely.	[junk dalmatian fur]
+Does the player mean stashing dalmatian fur when dalmatian male fur is visible: it is likely.	[stash dalmatian fur]
+Does the player mean retrieving dalmatian fur when dalmatian male fur is visible: it is likely.	[retrieve dalmatian fur]
 
 Section 4 - Endings
 
