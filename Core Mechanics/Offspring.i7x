@@ -74,7 +74,7 @@ to say OffspringDesc:
 				say "[bold type][PosAdjCap of Offspring] pigmentation is muted and almost white, except for the eyes that appear red.[roman type][line break]";
 			else if Melanism entry is true:
 				say "[bold type][PosAdjCap of Offspring] pigmentation is almost pure black.[roman type][line break]";
-			say "You have [a PlayerRelationship entry] relationship with [ObjectPro of Offspring], and your child's personality is rather [Personality entry].";
+			say "You have [a PlayerRelationship entry] relationship with [ObjectPro of Offspring], and [PosAdj of Offspring] personality is rather [Personality entry].";
 	if (number of filled rows in Table of PlayerBunkerChildren) > 1:
 		say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	else if (number of filled rows in Table of PlayerBunkerChildren) is 1: [exactly one child]

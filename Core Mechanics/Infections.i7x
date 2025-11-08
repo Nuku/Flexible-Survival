@@ -519,6 +519,7 @@ To Infect:
 
 To Infect (x - text):
 	if scenario is "Researcher" and researchbypass is 0:
+		setmonster x;
 		vialchance x;
 		continue the action;
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:

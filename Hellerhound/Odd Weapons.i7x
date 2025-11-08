@@ -64,7 +64,7 @@ to say ResolveEvent Sword Nest:
 	if Humanity of Player < 60: [falling to the nanites]
 		say "     Your mind feels fuzzy, and you have a strange desire to roll in the muck. Do you submit?";
 		if Player consents:
-			say "     You run and jump into the slimy muck, a sick splat sounding and echoing between the nearby buildings. The slime coats you as you roll with enthusiasm, losing your mind to the infection faster by the minute.";
+			say "     You run and jump into the slimy muck, a sick splosh sounding and echoing between the nearby buildings. The slime coats you as you roll with enthusiasm, losing your mind to the infection faster by the minute.";
 			SanLoss 15;
 			weakrandominfect; [most of first set don't affect researcher]
 			weakrandominfect;
@@ -114,8 +114,8 @@ to say ResolveEvent Sword Nest:
 					say "     After a short while, you collapse, corrupt pleasure roaring through your body.";
 					repeat with T running from one to 15:
 						randominfect;
-					now Humanity of Player is 0;
 					wait for any key;
+					now Humanity of Player is 0;
 					end the story saying "Your humanity submits to the sludge nanites, and you go feral.";
 					now battleground is "void";
 					wait for any key;
