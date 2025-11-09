@@ -147,7 +147,7 @@ when play ends:
 	clear the screen;
 	say "[bold type]Game Over![roman type][line break]";
 	ratetheplayer;
-	say "[link][bracket]Restart[close bracket][end link] [link][bracket]Restore[close bracket][as]restore[end link] [link][bracket]Undo[close bracket][end link]";
+	say "[bracket][link]Restart[end link][close bracket] [bracket][link]Restore[end link][close bracket] [bracket][link]Undo[end link][close bracket]";
 	say "----------";
 	follow the self examine rule;
 	LineBreak;
@@ -176,7 +176,7 @@ when play ends:
 	[FS Multiplayer AD here]
 	say "----------[line break]";
 	say "I hope you enjoyed playing that as much as we enjoyed coding/writing it! It doesn't have to end here though! Come join other mutants and play in the Multiplayer Flexible Survival universe with us!";
-	say "https://flexiblesurvival.com/[line break]";
+	say "https://flexiblesurvival.com[line break]";
 	say "Once you have a character, click [']direct control['], and we'll be there, waiting to give a hand!";
 	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2222";
 
@@ -187,6 +187,7 @@ to ratetheplayer:
 		increase score by tempnum;
 	if "Ultimatum" is listed in feats of Player and score > 0:
 		now tempnum2 is (score / 10);
+		increase score by tempnum2;
 	say "In Scenario: [bold type][scenario][roman type], you have achieved a score of [bold type][score][roman type].";
 	if GenderLock is 1 and score > 0, say "For choosing no gender lock, you received a bonus of [tempnum] points.";
 	if "Ultimatum" is listed in feats of Player and score > 0, say "Your Ultimatum perk grants you a bonus of [tempnum2] points.";
@@ -251,31 +252,33 @@ This is the Epilogue Intro rule: [The player didn't die or bad ended]
 	if humanity of Player < 10 and HP of Player > 0:
 		if BodyName of Player is "Anthro Dragoness" and HP of Doctor Matt <= 100:
 			trigger ending "Epilogue Intro";
-			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
+			say "     Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that have you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
 	else:
 		trigger ending "Epilogue Intro";
-		say "You emerge from your harrowing experience with your mind intact, with your [BodySpeciesName of Player in lower case] form and [FaceSpeciesName of Player in lower case] face.";
+		say "     You emerge from your harrowing experience with your mind intact, with your [BodySpeciesName of Player in lower case] form and [FaceSpeciesName of Player in lower case] face";
 		if BodyName is "Human":
-			say "Despite the traumas set on you, you do your best to fit back in with humanity after the rescue arrives.";
-		if Cock Length of Player > 10 or Ball Size of Player > 3 and Player is male:
-			say "Your extreme masculine attributes prove to be more than a little awkward. As society puts itself back together, you do find a niche. Others, changed as you, require the services of such studs, and you never lack for something to do on the weekends.";
-			if Cock Count of Player > 1:
-				say "Your multiple endowments become quite popular amongst some infected, whom come from some great distance to be serviced by you. Though it is illegal to charge for such services, many leave you a 'gift' regardless, even a marriage proposal or two.";
+			say ". Despite the traumas set on you, you do your best to fit back in with humanity after the rescue arrives";
+		say ".";
+		if Player is male:
+			if Cock Length of Player > 10 or Ball Size of Player > 3:
+				say "     Your extreme masculine attributes prove to be more than a little awkward. As society puts itself back together, you do find a niche. Others, changed as you, require the services of such studs, and you never lack for something to do on the weekends[if Cock Count of Player > 1]. Your multiple endowments become quite popular amongst some infected, who come from some great distances to be serviced by you. Though it is illegal to charge for such services, many leave you a 'gift' regardless, even a marriage proposal or two[end if].";
+			else if Cock Count of Player > 1:
+				say "     Your multiple endowments become quite popular amongst some infected, who come from some great distances to be serviced by you. Though it is illegal to charge for such services, many leave you a 'gift' regardless, even a marriage proposal or two.";
 		if SkinName of Player matches the text "Human", case insensitively:
 			increase score by 0;
 		else:
-			say "Your unnatural [Skin of Player] flesh makes you stand out in a crowd. You find it difficult to keep friends outside of other infected, even after you're declared safe for contact.";
-		if "Fertile" is listed in feats of Player and ( number of filled rows in the Table of PlayerChildren + FeralBirths) > 5:
+			say "     Your unnatural [Skin of Player] flesh makes you stand out in a crowd. You find it difficult to keep friends outside of other infected, even after you're declared safe for contact.";
+		if "Fertile" is listed in feats of Player and Player is not sterile and ( number of filled rows in the Table of PlayerChildren + FeralBirths) > 5:
 			if Player is female:
-				say "You've been pregnant so many times and given birth to so many children that the nanites make a very strange change to your reproductive organs. Your body automatically stored a large amount of cum from the last creature that screwed you. Each time you give birth, a small amount of the cum is used to re-impregnate you automatically. You spend the rest of your life in a constant state of pregnancy. At first, you're alarmed by this, but your ever-growing brood of children cares for your every whim so you quickly begin to enjoy your new life.";
-			else if Player is mpreg_ok and mpregcount >= 6:
+				say "     You've been pregnant so many times and given birth to so many children that the nanites make a very strange change to your reproductive organs. Your body automatically stored a large amount of cum from the last creature that screwed you. Each time you give birth, a small amount of the cum is used to re-impregnate you automatically. You spend the rest of your life in a constant state of pregnancy. At first, you're alarmed by this, but your ever-growing brood of children cares for your every whim so you quickly begin to enjoy your new life.";
+			else if "MPreg" is listed in feats of Player and mpregcount >= 6:
 				if "Breeding True" is not listed in feats of Player and "They Have Your Eyes" is not listed in feats of Player:
-					say "You've been pregnant so many times and given birth to so many children with your unusually altered body that the nanites make further changes to your reproductive organs. Your body begins automatically storing some cum from anyone or anything that's screwed you. Soon after you give birth, a small amount of the stored cum is automatically leaked out from a few of these storage chambers to be used to re-impregnate you if someone hasn't yet mated you. This medley of semen is somehow mixed together to give you children from several sires. You spend the rest of your life in a constant state of male pregnancy. At first, you're alarmed by this, but soon you're seeking out diverse lovers to add their semen to your stores, loving the beautiful array of hybrid children you birth. Your ever-growing brood cares for your every whim, allowing you to enjoy your new life as a male breeder. Most of your children turn out as males as well, many capable of male pregnancy like you, though lacking your body's ability to be eternally pregnant.";
+					say "     You've been pregnant so many times and given birth to so many children with your unusually altered body that the nanites make further changes to your reproductive organs. Your body begins automatically storing some cum from anyone or anything that's screwed you. Soon after you give birth, a small amount of the stored cum is automatically leaked out from a few of these storage chambers to be used to re-impregnate you if someone hasn't yet mated you. This medley of semen is somehow mixed together to give you children from several sires. You spend the rest of your life in a constant state of male pregnancy. At first, you're alarmed by this, but soon you're seeking out diverse lovers to add their semen to your stores, loving the beautiful array of hybrid children you birth. Your ever-growing brood cares for your every whim, allowing you to enjoy your new life as a male breeder. Most of your children turn out as males as well, many capable of male pregnancy like you, though lacking your body's ability to be eternally pregnant.";
 				else:
-					say "You've been pregnant so many times and given birth to so many children with your unusually altered body that the nanites make further changes to your reproductive organs. Your body begins automatically storing a large cum from the last creatures that screwed you. Each time you give birth, a small amount of the cum is used to re-impregnate you automatically. You spend the rest of your life in a constant state of male pregnancy. At first, you're alarmed by this, but your ever-growing brood of children cares for your every whim so you quickly begin to enjoy your new life. Most of your children turn out as males as well, many capable of male pregnancy like you, though lacking your body's ability to be eternally pregnant.";
-			if "Wild Womb" is listed in feats of Player:
-				say "However, thanks to your unusual tendency to birth feral children, many of your young soon strike out on their own, often sneaking away in the night, as their instinct to breed and spread their infection takes control.";
+					say "     You've been pregnant so many times and given birth to so many children with your unusually altered body that the nanites make further changes to your reproductive organs. Your body begins automatically storing a large amount of cum from the last creature that screwed you. Each time you give birth, a small amount of the cum is used to re-impregnate you automatically. You spend the rest of your life in a constant state of male pregnancy. At first, you're alarmed by this, but your ever-growing brood of children cares for your every whim so you quickly begin to enjoy your new life. Most of your children turn out as males as well, many capable of male pregnancy like you, though lacking your body's ability to be eternally pregnant.";
+			if "Wild Womb" is listed in feats of Player and ( Player is female or ( "MPreg" is listed in feats of Player and mpregcount >= 6 ) ):
+				say "     However, thanks to your unusual tendency to birth feral children, many of your young soon strike out on their own, often sneaking away in the night, as their instinct to breed and spread their infection takes control.";
 		if BodyName of Player is "Anthro Dragoness":
-			say "Your dragon like body proves as much a curiosity as repulsion in those around you. You find gainful employment as a mascot for a theme park, where you are paid to wander the park and entertain the clients within. The job proves largely enjoyable, especially since the more annoying people are intimidated by your bulk and claws.";
+			say "     Your dragon like body proves as much a curiosity as repulsion in those around you. You find gainful employment as a mascot for a theme park, where you are paid to wander the park and entertain the clients within. The job proves largely enjoyable, especially since the more annoying people are intimidated by your bulk and claws.";
 
 Game Endings ends here.

@@ -322,7 +322,7 @@ to stellainfect:
 		let temptext be " ";
 		now temptext is sex entry;
 		let tempnum be Nipple Count entry;
-		if "Male Preferred" is listed in feats of Player:
+		if Player is MalePreferred:
 			now sex entry is "Male";
 		else if "Herm Preferred" is listed in feats of Player:
 			now sex entry is "Both";

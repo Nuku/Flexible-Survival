@@ -62,7 +62,7 @@ to say losetoincubus:
 		say "     Finally, after what feels like hours of sinful fucking, he drives his shaft fully into you and unleashes his hot seed, pouring his tainted load into your bowels[if Cock Count of Player is 1]. Your balls tighten and your cock throbs as he pumps it, spraying your semen onto his waiting hand before bringing it forward for you both to lustfully lap up[else if Player is male]. He pumps at your cocks, playfully stroking each to orgasm in turn while his other hand waits to catch the load. Each sticky handful of cum is brought forward for you both to lustfully lap up[end if]. His large balls slap against your thighs as he drains his infernal seed into you. Spent, he gives you a tongue-filled kiss and a final grope before heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Incubus";
 	if Libido of Player > 80, now Libido of Player is 80;
-	if "Female Preferred" is listed in feats of Player and FemaleList is not banned:
+	if Player is FemalePreferred and FemaleList is not banned:
 		infect "Succubus";
 	else:
 		infect "Incubus";
@@ -107,7 +107,7 @@ to IncubusNormalDefeat:
 				say "     You move atop him eagerly, bringing your throbbing cock to his dark pucker. He moans lustfully and pushes back, spearing himself onto your [cock size desc of Player] shaft with the ease of one who's been taken by the erections of numerous demonic creatures before. The feel of his gripping, squeezing walls around your cock is exquisite, filling you with such sinful pleasure at buggering that hot hole. His anus is like a hot vice around your shaft and almost seems to suck on it with its lustful need for your seed. You let your hand roam over his muscled body, then move it down to stroke over that perfect cock of his.";
 				say "     When you finally cum, painting his inner walls with your semen, he cums as well with a loud cry of sexual pleasure. He holds a cupped hand into the spurting blasts, gathering a palmful of his tainted load. He laps up some of it and, when he offers you some as well, you are too lost in your lustful pleasure to even consider refusing. You lap up the rest and even suck his fingers clean. After withdrawing, you both rise and he gives you a passionate French kiss while running his hands over your body. 'I look forward to you joining our ranks more fully so we may continue to share in the pleasures of the flesh,' he whispers while nibbling your ear before heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time. You watch him go while his tainted seed sends warm tingles through your body.";
 				if Libido of Player > 80, now Libido of Player is 80;
-				if "Female Preferred" is listed in feats of Player and FemaleList is not banned:
+				if Player is FemalePreferred and FemaleList is not banned:
 					infect "Succubus";
 				else:
 					infect "Incubus";
@@ -133,7 +133,7 @@ to IncubusNormalDefeat:
 			else:
 				say "     As the great blowjob continues, you enjoy the moans of the incubus sucking you off. As he performs a particularly pleasurable bit of tonguework that has you panting and moaning, he grabs your balls with a warm, sticky hand and rubs them firmly. This soon has you over the edge and shooting your hot seed into the demonic boytoy's mouth to feed his dark lusts. He licks and sucks your cock clean, then nibbles on your balls lightly.";
 				say "     'Mmm... that was most enjoyable. Do you see how much better it could be now if you just give in and accept the pleasures of the flesh?' he says with a grin as he rises with ease. He makes a show of licking his lips before turning and heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time. It is not until he's gone that you notice the warm, wet feeling on your ballsack and look down to see the puddle of incubus cum with a hand streak through it.";
-			if "Female Preferred" is listed in feats of Player and FemaleList is not banned:
+			if Player is FemalePreferred and FemaleList is not banned:
 				infect "Succubus";
 			else:
 				infect "Incubus";
@@ -223,8 +223,8 @@ When Play begins:
 	now libido entry is 80; [ Target libido the infection will rise towards. ]
 	now loot entry is "libido pill"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 30; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "incubus milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "incubus cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or][if Player is male]handsome[else]sultry[end if][at random]";

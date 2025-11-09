@@ -678,41 +678,5 @@ to say zebra fur use:
 	say "Playing a bit with the coarse strands of hair, you stroke them over your arm. A moment later, they suddenly disintegrate into a fine powder which just seems to melt into your skin...";
 	infect "Zebra Stallion";
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"zebra stallion milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Zebra Stallion Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	zebra stallion milk
-
-zebra stallion milk is a grab object.
-zebra stallion milk is milky.
-zebra stallion milk is infectious.
-Strain of zebra stallion milk is "Zebra Stallion".
-Usedesc of zebra stallion milk is "[zebra stallion milk use]".
-
-to say zebra stallion milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing zebra stallion milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"zebra stallion cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Zebra Stallion Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	zebra stallion cum
-
-zebra stallion cum is a grab object.
-zebra stallion cum is cum.
-zebra stallion cum is infectious.
-Strain of zebra stallion cum is "Zebra Stallion".
-Usedesc of zebra stallion cum is "[zebra stallion cum use]".
-
-to say zebra stallion cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing zebra stallion cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
-
 
 Zebra ends here.

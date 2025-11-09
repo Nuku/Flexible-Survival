@@ -137,15 +137,16 @@ to say SnipsTalkMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Watch Snips";
-	now sortorder entry is 1;
-	now description entry is "Sit back and just watch how Snips goes about his day";
+	if Player is booked or Player is bunkered:
+		choose a blank row in table of fucking options;
+		now title entry is "Watch Snips";
+		now sortorder entry is 1;
+		now description entry is "Sit back and just watch how Snips goes about his day";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Play with Snips";
-	now sortorder entry is 1;
-	now description entry is "Spend some time bonding with Snips";
+		choose a blank row in table of fucking options;
+		now title entry is "Play with Snips";
+		now sortorder entry is 1;
+		now description entry is "Spend some time bonding with Snips";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -176,11 +177,11 @@ to say SnipsTalkMenu:
 
 to say SnipsTalk1:
 	if number of bunkered people + number of booked people < 3:
-		say "     You decide to take a short rest and just watch what your little crab does with his free time. His cubicle is actually pretty sparse. For the most part he just skuttles around. Once in awhile Snips will pick something up in his claws, but after losing interest in it, he is quick to discard it and move on to the next thing that he can get his pincers on. Finally exhausted, your small crab ends up going to the back of the cubicle, more than likely feeling safer with something covering him overhead. Settling down, you're not exactly sure if he is sleeping or not, but he stops moving completely, so the show must be over. Getting back to your feet, you ready yourself to head back out to the task at hand.";
-	else if number of bunkered people + number of booked people > 3:
+		say "     You decide to take a short rest and just watch what your little crab does with his free time. His cubicle is actually pretty sparse. For the most part he just scuttles around. Once in awhile Snips will pick something up in his claws, but after losing interest in it, he is quick to discard it and move on to the next thing that he can get his pincers on. Finally exhausted, your small crab ends up going to the back of the cubicle, more than likely feeling safer with something covering him overhead. Settling down, you're not exactly sure if he is sleeping or not, but he stops moving completely, so the show must be over. Getting back to your feet, you ready yourself to head back out to the task at hand.";
+	else if number of bunkered people + number of booked people > 2:
 		say "     You decide to take a short rest and just watch what your little crab does with his free time. Someone must have recently fetched some dirt and sand from somewhere, seeing as the ground of Snips's cubicle is completely covered, making it his own little personal beach. You assume that the same person must have also grabbed the medium-sized skillet filled with water. The crab seems to love the upgrade, that is if the bubble blowing is anything to go by. Snips at the moment is busying himself with placing anything that he can find around a small burrow he has made in the soft dirt.";
 		if ElijahChar-H is "2":
-			say "     It takes you a moment to notice, but your little crustacean has tucked the toy crab Elijah presented him inside. Adorably, he also makes sure to bring anything shiny he can get his claws on to the entrance of his home. More than likely Elijah was right and the crab just wanted companionship. Settling down, at first Snips gets into a defensive position in front of his home, however once he realizes just which giant has come to visit him he quickly scuttles to your side. After receiving some soothing strokes across his shell Snips is ready for bed apparently, slowly making his way back to his little tunnel. The cute little crab then cuddles up close to his new toy friend and just sit there. You're not exactly sure if he is sleeping or not, but he stops moving completely, so the show must be over. Getting back to your feet, you ready yourself to head back out to the task at hand.";
+			say "     It takes you a moment to notice, but your little crustacean has tucked the toy crab Elijah presented him inside. Adorably, he also makes sure to bring anything shiny he can get his claws on to the entrance of his home. More than likely Elijah was right and the crab just wanted companionship. Settling down, at first Snips gets into a defensive position in front of his home, however once he realizes just which giant has come to visit him he quickly scuttles to your side. After receiving some soothing strokes across his shell Snips is ready for bed apparently, slowly making his way back to his little tunnel. The cute little crab then cuddles up close to his new toy friend and just sits there. You're not exactly sure if he is sleeping or not, but he stops moving completely, so the show must be over. Getting back to your feet, you ready yourself to head back out to the task at hand.";
 		else:
 			say "     While your little crab does seem happier in his new environment, you can't help but wonder if he ever gets lonely. Settling down, at first Snips doesn't even seem to notice that you have arrived, however once he realizes just which giant has come to visit him he quickly scuttles to your side. After receiving some soothing strokes across his shell Snips is ready for bed apparently, slowly making his way back to his little tunnel. Settling down, you're not exactly sure if he is sleeping or not, but he stops moving completely, so the show must be over. Getting back to your feet, you ready yourself to head back out to the task at hand.";
 
@@ -189,14 +190,14 @@ to say SnipsTalk2:
 		say "     You settle yourself down on the floor next to Snips's cubicle and gently thump the soft dirt until your little crab comes running to see what is going on. He quickly makes a grab for one of your fingers, holding it firmly in one of his pincers. You can tell that the crustacean is being playful, seeing as his grip isn't causing the pain that you know it's capable of delivering. Eventually, he loosens his grip, instead deciding that it would be more fun to play in the dust. You slowly draw shapes in said dust lightly with your finger, glancing over at the cute little crab, and you see him mimicking your actions with his pincer. While the shapes he draws aren't exactly what you would call shapes, Snips seems to be quite proud of them. Leaning down, you begin to draw a new shape, one you think that is appropriate for him.";
 		say "     This time, you draw the constellation of Cancer, the great crab. Your little friend seems ecstatic, dancing around and blowing bubbles, although you're not sure if that's because he recognizes a fellow crustacean or simply because you are spending time with him. Either way it brings a smile to your lips. Once he begins to slow down, you gently pick him up and place him at the back of his cubicle where he sleeps. You say goodnight before getting back to your feet, and ready yourself to head back out to the task at hand.";
 		SanBoost 10;
-	else if number of bunkered people + number of booked people > 4:
+	else if number of bunkered people + number of booked people > 3:
 		say "     You settle yourself down on the floor next to Snips's cubicle and gently thump the soft dirt until your little crab comes running to see what is going on. He quickly makes a grab for one of your fingers, holding it firmly in one of his pincers. You can tell that the crustacean is being playful, seeing as his grip isn't causing the pain that you know it's capable of delivering.";
 		if ElijahChar-H is "2":
 			say "     Eventually, he loosens his grip, instead scuttling back to his home and grabbing his toy crab friend, reminding you of a toddler grabbing its favorite stuffed animal. As the two of them continue to play around in the dirt, you notice the remains of a past meal in the dirt, mostly some sort of plant life. Snatching up a piece, you place it closer to Snips, wondering if he is hungry or not. He doesn't seem particularly interested in it, that is until you look away. He creeps closer to the food that you placed on the dirt and brings his little friend with him. It ends up becoming a game, with you looking away and glancing back quickly to see if you can catch him, and every time you act like you haven't noticed. When Snips is right on top of the food you look away for a few seconds and are able to hear his munching. Quickly turning your attention back to him, you see that the little bit of food is now missing.";
-			say "     Raising an eyebrow at your cute little crab, he quickly points one claw at the toy Elijah gave him. You can't help but burst out laughing, once again being reminded of a child You can almost hear his internal voice say, 'It was them, not me!' Coming down from your laughing fit, Snips blows a few bubbles at you before grabbing his toy and scuttling home. You watch as he cuddles up close to the friend he just accused of eating the food, making you smile once again. You say goodnight before getting back to your feet, and ready yourself to head back out to the task at hand.";
+			say "     Raising an eyebrow at your cute little crab, he quickly points one claw at the toy Elijah gave him. You can't help but burst out laughing, once again being reminded of a child. You can almost hear his internal voice say, 'It was them, not me!' Coming down from your laughing fit, Snips blows a few bubbles at you before grabbing his toy and scuttling home. You watch as he cuddles up close to the friend he just accused of eating the food, making you smile once again. You say goodnight before getting back to your feet, and ready yourself to head back out to the task at hand.";
 			SanBoost 10;
 		else:
-			say "     Eventually he loosens his grip, instead deciding that it would be more fun to play in the sand. Picking up a small pebble in the dirt, you hold it out to Snips, who eagerly grabs it from your fingers. He begins to do a strange sort of scuttling dance with the pebble held high like a trophy. You can't help but laugh a bit at the cute little guy's antics, your laughing though gives the crustacean pause. Looking up at you with those huge eyes, it almost feels like he is looking deep inside of your soul. Well it would if not even a second later, he scuttles quickly back to his home and gently places the pebble that you gave him right next to the opening. Deciding that he has had enough of playtime, Snips turns to face you before raising up a single claw almost to say goodbye. He makes his way back into his little tunnel, obviously tuckered out. You say goodnight before getting back to your feet, and ready yourself to head back out to the task at hand.";
+			say "     Eventually he loosens his grip, instead deciding that it would be more fun to play in the sand. Picking up a small pebble in the dirt, you hold it out to Snips, who eagerly grabs it from your fingers. He begins to do a strange sort of scuttling dance with the pebble held high like a trophy. You can't help but laugh a bit at the cute little guy's antics; your laughing though gives the crustacean pause. Looking up at you with those huge eyes, it almost feels like he is looking deep inside of your soul. Well it would if not even a second later, he scuttles quickly back to his home and gently places the pebble that you gave him right next to the opening. Deciding that he has had enough of playtime, Snips turns to face you before raising up a single claw almost to say goodbye. He makes his way back into his little tunnel, obviously tuckered out. You say goodnight before getting back to your feet, and ready yourself to head back out to the task at hand.";
 			SanBoost 10;
 
 Section 1.3 - Cute Crab Event
@@ -220,7 +221,7 @@ to say ResolveEvent Lost Crab:
 			now cute crab is tamed;
 			add "Tamed" to Traits of cute crab;
 			move Snips to Computer Lab;
-			say "     (Snips the cute crab is now a possible ally! You can make him your active ally by typing [bold type][link]ally Snips[end link][roman type] or [bold type][link]ally crab[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+			say "     (Snips the cute crab is now a possible ally! You can make him your active ally by typing [bold type][link]ally Snips[end link][roman type] or [bold type][link]ally crab[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type].) [line break]";
 			now Resolution of Lost Crab is 1; [fed the crab]
 		else:
 			say "     The crab scuttles away sadly.";
@@ -247,7 +248,7 @@ The level of house cat is 1.
 Dexterity of house cat is 20.
 The summondesc of house cat is "[SummonDinah]".
 The dismissdesc of house cat is "[DismissDinah]".
-The assault of house cat is "[one of]Your opponent moves back from your attack, only to trip over a strategically placed house cat![or]With a loud yowl, Dinah launches herself at your opponents face, biting and scratching like mad![or]The house cat eyes your opponent carefully, before turning her back on them and licking her paws in utter disdain. The shocking display of utter indifference seems to damage your opponents confidence[or]All of a sudden the combat stops for a moment as you and your opponent are startled at a loud yowl. Looking down, you barely have a second to realize that your opponent had managed to step on your cat's tail, before Dinah rips into your opponent in fury.[or]Taking advantage of your foe's distraction, Dinah picks an opportune moment to attack.[or]Spotting something of interest on the other side of the melee, Dinah quickly darts through the combat, somehow managing to claw your opponent as she does so.[at random]".
+The assault of house cat is "[one of]Your opponent moves back from your attack, only to trip over a strategically placed house cat![or]With a loud yowl, Dinah launches herself at your opponent's face, biting and scratching like mad![or]The house cat eyes your opponent carefully, before turning her back on them and licking her paws in utter disdain. The shocking display of utter indifference seems to damage your opponent's confidence.[or]All of a sudden the combat stops for a moment as you and your opponent are startled at a loud yowl. Looking down, you barely have a second to realize that your opponent had managed to step on your cat's tail, before Dinah rips into your opponent in fury.[or]Taking advantage of your foe's distraction, Dinah picks an opportune moment to attack.[or]Spotting something of interest on the other side of the melee, Dinah quickly darts through the combat, somehow managing to claw your opponent as she does so.[at random]".
 the fuckscene of house cat is "With all of the sex-crazed people out there, you're looking to fuck an ordinary house cat? You are one crazy pervert.".
 
 to say SummonDinah:
@@ -339,10 +340,11 @@ to say DinahTalkMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Watch Dinah";
-	now sortorder entry is 1;
-	now description entry is "Sit back and just watch how Dinah goes about her day";
+	if Player is booked or Player is bunkered:
+		choose a blank row in table of fucking options;
+		now title entry is "Watch Dinah";
+		now sortorder entry is 1;
+		now description entry is "Sit back and just watch how Dinah goes about her day";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -426,7 +428,7 @@ to say ResolveEvent Lost House Cat:
 					now house cat is tamed;
 					add "Tamed" to Traits of house cat;
 					move Dinah to Computer Lab;
-					say "     (Dinah the house cat is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Dinah[end link][roman type] or [bold type][link]ally house cat[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+					say "     (Dinah the house cat is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Dinah[end link][roman type] or [bold type][link]ally house cat[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type].) [line break]";
 					now Resolution of Lost house cat is 1; [fed and adopted the cat]
 					now Lost house cat is resolved;
 				else:
@@ -568,10 +570,11 @@ to say ChirpyTalkMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Watch Chirpy";
-	now sortorder entry is 1;
-	now description entry is "Sit back and just watch how Chirpy goes about her day";
+	if Player is booked or Player is bunkered:
+		choose a blank row in table of fucking options;
+		now title entry is "Watch Chirpy";
+		now sortorder entry is 1;
+		now description entry is "Sit back and just watch how Chirpy goes about her day";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -592,7 +595,7 @@ to say ChirpyTalkMenu:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You back away from the chirpy, shaking your head slightly as she gives a questioning look.";
+			say "     You back away from the exotic bird, shaking your head slightly as she gives a questioning look.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
@@ -629,7 +632,7 @@ to say ResolveEvent Scared Bird:
 				now Exotic Bird is tamed;
 				add "Tamed" to Traits of Exotic Bird;
 				move Chirpy to Computer Lab;
-				say "     (Chirpy the exotic bird is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Chirpy[end link][roman type] or [bold type][link]ally exotic bird[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+				say "     (Chirpy the exotic bird is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Chirpy[end link][roman type] or [bold type][link]ally exotic bird[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type].) [line break]";
 				now Resolution of Scared Bird is 1; [adopted the bird]
 				now Scared bird is resolved;
 			else:
@@ -691,7 +694,7 @@ to say DismissHobo:
 an everyturn rule:
 	if Player is in Traveling:
 		if Hobo is in Traveling and a random chance of 1 in 3 succeeds:
-			say "     [one of]As you get going, Hobo immediately makes a beeline to your side, keeping a lookout with his sharp eyes, and sharper nose and ears. [or]Waggig tail held high, Hobo trots a few steps in front of you as you set out, keeping a lookout for possible danger. [at random][line break]";
+			say "     [one of]As you get going, Hobo immediately makes a beeline to your side, keeping a lookout with his sharp eyes, and sharper nose and ears. [or]Wagging tail held high, Hobo trots a few steps in front of you as you set out, keeping a lookout for possible danger. [at random][line break]";
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -768,10 +771,11 @@ to say HoboTalkMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Watch Hobo";
-	now sortorder entry is 1;
-	now description entry is "Sit back and just watch how Hobo goes about his day";
+	if Player is booked or Player is bunkered:
+		choose a blank row in table of fucking options;
+		now title entry is "Watch Hobo";
+		now sortorder entry is 1;
+		now description entry is "Sit back and just watch how Hobo goes about his day";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -792,7 +796,7 @@ to say HoboTalkMenu:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You back away from the hobo, shaking your head slightly as he gives a questioning look.";
+			say "     You back away from the helper dog, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
@@ -816,7 +820,7 @@ dogfoodcount is a number that varies.
 to say ResolveEvent Mournful Dog:
 	if hdog is 0:			[first time finding]
 		say "     While searching through a hallway of patient rooms, you open one to a terrible smell of decay. You retch several times[if humanity of Player < 50], barely hearing the soft growling coming from within,[end if] before recovering and taking stock of the room. There is a body on the hospital bed, clearly long dead and unremoved. On the floor beside it is a [if humanity of Player < 50]growling[else]sad[end if] dog. The dog is a black and white shepherd wearing a bright vest on its bony flanks, denoting it as a helper dog.";
-		say "     It seems that the poor beast's master passed away, and in the ensuing chaos at the Hospital, was left here since. It is unclear if they died before the outbreak took hold or if they were too weak and the infection finished them off before it could change and heal them. The dog, probably hostile to the infected hospital staff, has continued to protect its master and kept them from the removing the body.";
+		say "     It seems that the poor beast's master passed away, and in the ensuing chaos at the Hospital, was left here since. It is unclear if they died before the outbreak took hold or if they were too weak and the infection finished them off before it could change and heal them. The dog, probably hostile to the infected hospital staff, has continued to protect its master and kept them from removing the body.";
 		increase score by 1;
 		now hdog is 1;
 		if food is not owned:
@@ -838,7 +842,7 @@ to say ResolveEvent Mournful Dog:
 					now helper dog is tamed;
 					add "Tamed" to Traits of helper dog;
 					move Hobo to Computer Lab;
-					say "     (Hobo the helper dog is now a possible ally! You can make him your active ally by typing [bold type][link]ally Hobo[end link][roman type] or [bold type][link]ally helper dog[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+					say "     (Hobo the helper dog is now a possible ally! You can make him your active ally by typing [bold type][link]ally Hobo[end link][roman type] or [bold type][link]ally helper dog[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type].) [line break]";
 					increase score by 10;
 					now Resolution of Mournful Dog is 1; [adopted the dog]
 					now Mournful Dog is resolved;
@@ -868,8 +872,7 @@ to say ResolveEvent Mournful Dog:
 					say "You are able to coax the dog into letting you come close and pet it. It wags its tail as you pat its head. Reaching over, you pull the sheets over his former master's body, then you both leave together.";
 					now helper dog is tamed;
 					add "Tamed" to Traits of helper dog;
-					say "(Hobo dog is now tamed! You can make it your active ally by typing [bold type]ally Hobo[roman type]. You can see all of the pets that you have tamed with the [bold type]ally[roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type]ally dismiss[roman type], or just [bold type]dismiss[roman type])";
-					now lastfuck of helper dog is turns;
+					say "     (Hobo the helper dog is now a possible ally! You can make him your active ally by typing [bold type][link]ally Hobo[end link][roman type] or [bold type][link]ally helper dog[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type].) [line break]";
 					increase score by 10;
 					now Resolution of Mournful Dog is 1; [adopted the dog]
 					now Mournful Dog is resolved;
@@ -904,7 +907,7 @@ an everyturn rule:
 				now hobo-water-reminder is turns;
 				now lastfuck of helper dog is turns;
 			else if hunger of Player > 50 and carried of food is 0 and carried of chips is 0 and hobo-food-gift is false:
-				say "     Your stomach grumbles with hunger as you check your pack again for anything worth eating, or at least worth risking eating. Just as you set your pack back down, you here a second soft thump behind you. Turning, you see that Hobo has dropped a plastic bag with some [bold type]food[roman type] in it on the ground. The black and white shepherd sits there giving you an odd look. You pick up the bag and pat his head, surprised at how clever he is.";
+				say "     Your stomach grumbles with hunger as you check your pack again for anything worth eating, or at least worth risking eating. Just as you set your pack back down, you hear a second soft thump behind you. Turning, you see that Hobo has dropped a plastic bag with some [bold type]food[roman type] in it on the ground. The black and white shepherd sits there giving you an odd look. You pick up the bag and pat his head, surprised at how clever he is.";
 				ItemGain food by 1;
 				now hobo-food-gift is true;
 				now hobo-food-reminder is turns;
@@ -931,7 +934,7 @@ an everyturn rule:
 				now hobo-libidosupp is true;
 				now lastfuck of helper dog is turns;
 			else if HP of Player < stamina of Player and ( medkit is owned or healing booster is owned ) and hobo-medical - turns >= 8:
-				say "     Feeling worn out and aching from your injuries, you pause to take a short break. During this, [one of]Hobo pulls your [if medkit is owned]medkit[else]healing booster[end if] from your backpack with his muzzle and offers it to you[or]Hobo barks to get your attention, having dropped your [if medkit is owned]medkit[else]healing booster[end if] at your feet[or]you close your eyes for a moment, only to be started when something is dropped in your lap. There you find your [if medkit is owned]medkit[else]healing booster[end if] and the helper dog at your side[at random]. You pat the caring canine's head.";
+				say "     Feeling worn out and aching from your injuries, you pause to take a short break. During this, [one of]Hobo pulls your [if medkit is owned]medkit[else]healing booster[end if] from your backpack with his muzzle and offers it to you[or]Hobo barks to get your attention, having dropped your [if medkit is owned]medkit[else]healing booster[end if] at your feet[or]you close your eyes for a moment, only to be startled when something is dropped in your lap. There you find your [if medkit is owned]medkit[else]healing booster[end if] and the helper dog at your side[at random]. You pat the caring canine's head.";
 				now hobo-medical is turns;
 				now lastfuck of helper dog is turns;
 			else if medkit is not owned and healing booster is not owned and hobo-medical - turns >= 16 and hobo-medical-gift < 2:

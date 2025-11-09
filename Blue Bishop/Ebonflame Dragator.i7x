@@ -10,23 +10,25 @@ ebgatord is a number that varies. [Ebonflame Gator dick memory. 1 = been describ
 
 to say ebgatorvic:
 	if HP of Player > 0:
-		say "     You try surrendering to the beast but he appears to be either too dense or too bloodthirsty to notice your submission, swiping at you still and forcing you to keep some distance. You decide you'll have to go [']all in['] here, laying down face-first and leaving yourself wholly at the mercy of the gator.";
+		say "     You try surrendering to the beast but it appears to be either too dense or too bloodthirsty to notice your submission, swiping at you still and forcing you to keep some distance. You decide you'll have to go [']all in['] here, laying down face-first and leaving yourself wholly at the mercy of the gator.";
 		say "     Immediately, it lunges once more at you and bites at your[if scalevalue of Player > 3] larger,[end if] vulnerable form, barely responding to your apparent compliance. It seems to get off on your cries in pain, as it does eventually begin to mount you...";
 	else:
 		say "     Completely battered and beaten, you crumple onto the ground, left to the mercy of the beast as it lunges forward and continues to assault you.";
 		say "     Vicious gator hardly able to recognize that you're completely out of the fight, it continues to bite at your[if scalevalue of Player > 3] larger,[end if] vulnerable form. It seems to get off on your feeble cries in pain, as it does eventually begin to mount you...";
 	if anallevel > 1 and (Cunt Count of Player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds) or (Cunt Count of Player is 0 and impregnatevalid is true)):
-		say "     You soon feel the slightly flat head of the reptile's[if ebgatord is 0][else] peculiar,[end if] oversized dick press against your ass";
+		say "     You soon feel the slightly flat head of the reptile's[if ebgatord > 0] peculiar,[end if] oversized dick press against your ass";
 		if ebgatord is 0:
-			say ", you're given a glimpse of the thing even as it's being forced past your[if scalevalue of Player < 4 and player is not twistcapped] tight[end if] ring. The organ looks as though it was supposed to be two dicks instead of one, but it quit about half the way through, giving the tool and overly wide and flat girth, making you groan [if HP of Player > 0]loudly[else]weakly[end if] as it's gradually plunged deeper into you.";
+			say ", and you're given a glimpse of the thing even as it's being forced past your[if scalevalue of Player < 4 and player is not twistcapped] tight[end if] ring. The organ looks as though it was supposed to be two dicks instead of one, but it quit about half the way through, giving the tool an overly wide and flat girth, making you groan [if HP of Player > 0]loudly[else]weakly[end if] as it's gradually plunged deeper into you.";
 			now ebgatord is 1;
 		else:
 			say ", groaning [if HP of Player > 0]loudly[else]weakly[end if] as the overly wide organ is squeezed through your[if scalevalue of Player < 4 and player is not twistcapped] tight[end if] ring.";
-		say "     The monster hisses loudly in rough satisfaction with each successive inch of the throbbing, molten-precum oozing cock is sunk through your[if scalevalue of Player < 4 and player is not twistcapped] meager-fitting[end if] bowels until he can't force it in any deeper. The heat of his coarsely scaled, heaving body like a fire against your [bodytype of Player] form, it's hard to say if you're aroused by the ordeal, given how numb you are from this intense sensation[if HP of Player < 1] and your prior defeat[end if], sweat almost feeling like it's boiling off as you as his motion becomes rougher with each powerful thrust.";
+		WaitLineBreak;
+		say "     The monster hisses loudly in rough satisfaction with each successive inch of the throbbing, molten-precum oozing cock sunk through your[if scalevalue of Player < 4 and player is not twistcapped] meager-fitting[end if] bowels until it can't force it in any deeper. The heat of its coarsely scaled, heaving body like a fire against your [bodytype of Player] form, it's hard to say if you're aroused by the ordeal, given how numb you are from this intense sensation[if HP of Player < 1] and your prior defeat[end if], sweat almost feeling like it's boiling off you as its motion becomes rougher with each powerful thrust.";
 		say "     After what feels like hours of being pounded into the ground, the dragon-gator finally roars out, sinking its sharp talons into you as it plunges its wide organ deep inside you one last time";
 		if impregnatevalid is true:
 			say ". [if ebgatord < 2]You briefly think the lizard's dick is knotted for how it forces a large bulge at its back past your ring, but it quickly reveals its true purpose as the bulb ascends[else]You're quickly reminded of the intense sensation of being [']tied['] with the lizard's dick, large bulge at its base forced past your ring, ascending[end if] along its shaft, until a large, coarse egg is squeezed from its head and into your bowels.";
-			say "     Still high from the throes of bliss - and perhaps ensuring the orb is planted deep within you - he still continues to fuck you senselessly, forcing a weak, [if scalevalue of Player > 3]slightly[else]substantially[end if] strained orgasm, [if Player is male]your unattended cock[smn] staining the ground with your [Cum Load Size of Player] load[else if Player is female]your unattended cunt[sfn] staining the ground with your juices[else]causing you to writhe in insatiable need[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if scalevalue of Player > 4 or player is twistcapped] slightly[end if] gaping hole.";
+			WaitLineBreak;
+			say "     Still high from the throes of bliss - and perhaps ensuring the orb is planted deep within you - it still continues to fuck you senselessly, forcing a weak, [if scalevalue of Player > 3]slightly[else]substantially[end if] strained orgasm, [if Player is male]your unattended cock[smn] staining the ground with your [Cum Load Size of Player] load[else if Player is female]your unattended cunt[sfn] staining the ground with your juices[else]causing you to writhe in insatiable need[end if]. Finally satisfied, the beast wrenches its still-hard rod from your[if scalevalue of Player > 3 or player is twistcapped] slightly[end if] gaping hole.";
 			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal. [italic type]You're somewhat worried about the long-term results of carrying this egg...[roman type][line break]";
 			if ebgatord < 2, now ebgatord is 2;
 			now mpreghijack is true;
@@ -34,21 +36,24 @@ to say ebgatorvic:
 			now hijackgestation is 8;
 		else:
 			say ". Like a fire hose, the lizard's dick pumps its substantial, molten cum deep into your bowels, making you wince and cry out in the intense, searing sensation.";
-			say "     Still high from the throes of bliss - and its motion further lubricated by its glowing seed - it still continues to fuck you senselessly, forcing a weak, strained orgasm, [if Player is male]your unattended cock[smn] staining the ground with your [Cum Load Size of Player] load[else if Player is female]your unattended cunt[sfn] staining the ground with your juices[else]causing you to writhe in insatiable need[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if scalevalue of Player > 4 or player is twistcapped] slightly[end if] gaping hole.";
+			WaitLineBreak;
+			say "     Still high from the throes of bliss - and its motion further lubricated by its glowing seed - it still continues to fuck you senselessly, forcing a weak, strained orgasm, [if Player is male]your unattended cock[smn] staining the ground with your [Cum Load Size of Player] load[else if Player is female]your unattended cunt[sfn] staining the ground with your juices[else]causing you to writhe in insatiable need[end if]. Finally satisfied, the beast wrenches its still-hard rod from your[if scalevalue of Player > 3 or player is twistcapped] slightly[end if] gaping hole.";
 			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal.";
-		CreatureSexAftermath "Player" receives "AssFuck" from "Ebonflame Dragator";
+		CreatureSexAftermath "Player" receives "[if ebneuterswitch is true]AssFuck[else]AssDildoFuck[end if]" from "Ebonflame Dragator";
 	else if Player is female:
-		say "     You soon feel the slightly flat head of the reptile's[if ebgatord is 0][else] peculiar,[end if] oversized dick press against[if Cunt Count of Player > 1] one of[end if] your cunt[sfn]";
+		say "     You soon feel the slightly flat head of the reptile's[if ebgatord > 0] peculiar,[end if] oversized dick press against[if Cunt Count of Player > 1] one of[end if] your cunt[sfn]";
 		if ebgatord is 0:
-			say ", you're given a glimpse of the thing even as it's being forced past your[if Cunt Depth of Player < 12] tight[end if] lips. The organ looks as though it was supposed to be two dicks instead of one, but it quit about half the way through, giving the tool and overly wide and flat girth, making you groan [if HP of Player > 0]loudly[else]weakly[end if] as it's gradually plunged deeper into you.";
+			say ", and you're given a glimpse of the thing even as it's being forced past your[if Cunt Depth of Player < 12] tight[end if] lips. The organ looks as though it was supposed to be two dicks instead of one, but it quit about half the way through, giving the tool an overly wide and flat girth, making you groan [if HP of Player > 0]loudly[else]weakly[end if] as it's gradually plunged deeper into you.";
 			now ebgatord is 1;
 		else:
 			say ", groaning [if HP of Player > 0]loudly[else]weakly[end if] as the overly wide organ is squeezed through your[if Cunt Depth of Player < 12] tight[end if] lips.";
-		say "     The monster hisses loudly in rough satisfaction with each successive inch of the throbbing, molten-precum oozing cock is sunk through your[if Cunt Depth of Player < 12] meager-fitting[end if] passage until he can't force it in any deeper. The heat of his coarsely scaled, heaving body like a fire against your [bodytype of Player] form, it's hard to say if you're aroused by the ordeal, given how numb you are from this intense sensation[if HP of Player < 1] and your prior defeat[end if], sweat almost feeling like it's boiling off as you as his motion becomes rougher with each powerful thrust.";
+		WaitLineBreak;
+		say "     The monster hisses loudly in rough satisfaction with each successive inch of the throbbing, molten-precum oozing cock sunk through your[if Cunt Depth of Player < 12] meager-fitting[end if] passage until it can't force it in any deeper. The heat of its coarsely scaled, heaving body like a fire against your [bodytype of Player] form, it's hard to say if you're aroused by the ordeal, given how numb you are from this intense sensation[if HP of Player < 1] and your prior defeat[end if], sweat almost feeling like it's boiling off you as his motion becomes rougher with each powerful thrust.";
 		say "     After what feels like hours of being pounded into the ground, the dragon-gator finally roars out, sinking its sharp talons into you as it plunges its wide organ deep inside you one last time";
 		if impregnatevalid is true:
 			say ". [if ebgatord < 2]You briefly think the lizard's dick is knotted for how it forces a large bulge at its back past your lips, but it quickly reveals its true purpose as the bulb ascends[else]You're quickly reminded of the intense sensation of being [']tied['] with the lizard's dick, large bulge at its base forced past your lips, ascending[end if] along its shaft, until a large, coarse egg is squeezed from its head and into your womb.";
-			say "     Still high from the throes of bliss - and perhaps ensuring the orb is planted deep within you - he still continues to fuck you senselessly, forcing a weak, [if Cunt Depth of Player < 12]slightly[else]substantially[end if] strained orgasm, your [if Player is male]unattended cock[smn] staining the ground with your [Cum Load Size of Player] load[else]pussy weakly throbbing against its oversized invader[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if Cunt Depth of Player > 11] slightly[end if] gaping hole.";
+			WaitLineBreak;
+			say "     Still high from the throes of bliss - and perhaps ensuring the orb is planted deep within you - it still continues to fuck you senselessly, forcing a weak, [if Cunt Depth of Player < 12]slightly[else]substantially[end if] strained orgasm, your [if Player is male]unattended cock[smn] staining the ground with your [Cum Load Size of Player] load[else]pussy weakly throbbing against its oversized invader[end if]. Finally satisfied, the beast wrenches its still-hard rod from your[if Cunt Depth of Player > 11] slightly[end if] gaping hole.";
 			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal. [italic type]You're somewhat worried about the long-term results of carrying this egg...[roman type][line break]";
 			if ebgatord < 2, now ebgatord is 2;
 			now preghijack is true;
@@ -56,19 +61,22 @@ to say ebgatorvic:
 			now hijackgestation is 8;
 		else:
 			say ". Like a fire hose, the lizard's dick pumps its substantial, molten cum deep into your bowels, making you wince and cry out in the intense, searing sensation.";
+			WaitLineBreak;
 			say "     Still high from the throes of bliss - and its motion further lubricated by its glowing seed - it still continues to fuck you senselessly, forcing a weak, strained orgasm, your [if Player is male]unattended cock[smn] staining the ground with your [Cum Load Size of Player] load[else]pussy weakly throbbing against its oversized invader[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if Cunt Depth of Player > 11] slightly[end if] gaping hole.";
 			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal.";
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Dragator";
+		CreatureSexAftermath "Player" receives "[if ebneuterswitch is true]PussyFuck[else]PussyDildoFuck[end if]" from "Ebonflame Dragator";
 	else:
-		say "     You soon feel the slightly flat head of the reptile's[if ebgatord is 0][else] peculiar,[end if] oversized dick press against your face";
+		say "     You soon feel the slightly flat head of the reptile's[if ebgatord > 0] peculiar,[end if] oversized dick press against your face";
 		if ebgatord is 0:
-			say ", you're forced to stare down the barrel of the monstrous thing, just as he begins to shove it past your lips. The organ looks as though it was supposed to be two dicks instead of one, but it quit half way through, giving the tool and overly wide and flat girth, forcing a muffled groan from you as the tool is plunged ever-deeper down your gullet.";
+			say ", and you're forced to stare down the barrel of the monstrous thing, just as he begins to shove it past your lips. The organ looks as though it was supposed to be two dicks instead of one, but it quit half way through, giving the tool an overly wide and flat girth, forcing a muffled groan from you as the tool is plunged ever-deeper down your gullet.";
 			now ebgatord is 1;
 		else:
 			say ", a [if HP of Player > 0]loud[else]weak[end if], muffled groan escapes your lips as the blunt head of the overly wide organ is shoved past your lips, plunged ever-deeper down your gullet.";
-		say "     The monster hisses loudly in rough satisfaction with each successive inch of the throbbing, molten-precum oozing cock is forced down your throat. The heat of its coarsely scaled, heaving body like a fire against your [bodytype of Player] form, it's hard to say if you're aroused by the ordeal, given how numb you are from this intense sensation[if HP of Player < 1] and your prior defeat[end if], sweat almost feeling like it's boiling off as you as his motion becomes rougher with each powerful thrust.";
-		say "     After what feels like hours of being pounded into the ground, the dragon-gator finally roars out, sinking its sharp talons into you as it plunges its wide organ [if scalevalue of Player < 4]as deep as he can[else]all the way[end if] inside you one last time. Like a fire hose, the lizard's dick pumps its substantial, molten cum deep into your stomach, making you wince and gag out in the intense, searing sensation.";
-		say "     Still high from the throes of bliss - and its motion further lubricated by its glowing seed - it still continues to fuck you senselessly until it's eventually apparent to him that he's completely spent. Finally satisfied, the beast wrenches his still-hard rod from your maw, quickly gasping and coughing against the marginally cooler open air.";
+		WaitLineBreak;
+		say "     The monster hisses loudly in rough satisfaction with each successive inch of the throbbing, molten-precum oozing cock forced down your throat. The heat of its coarsely scaled, heaving body like a fire against your [bodytype of Player] form, it's hard to say if you're aroused by the ordeal, given how numb you are from this intense sensation[if HP of Player < 1] and your prior defeat[end if], sweat almost feeling like it's boiling off of you as his motion becomes rougher with each powerful thrust.";
+		say "     After what feels like hours of being pounded into the ground, the dragon-gator finally roars out, sinking its sharp talons into you as it plunges its wide organ [if scalevalue of Player < 4]as deep as it can[else]all the way[end if] inside you one last time. Like a fire hose, the lizard's dick pumps its substantial, molten cum deep into your stomach, making you wince and gag out in the intense, searing sensation.";
+		WaitLineBreak;
+		say "     Still high from the throes of bliss - and its motion further lubricated by its glowing seed - it still continues to fuck you senselessly until it's eventually apparent to it that it's completely spent. Finally satisfied, the beast wrenches its still-hard rod from your maw, quickly gasping and coughing against the marginally cooler open air.";
 		say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Dragator";
 
@@ -76,7 +84,7 @@ impregnatevalid is a truth state that varies. impregnatevalid is usually false.
 ebgatorcarrying is a number that varies. ebgatorcarrying is usually 1.
 
 to say ebgatordesc:
-	say "     A loud, low hissing sound echoes from the open air as a monstrous, feral alligator lurches from the shadow. Twisted by an unholy influence, the six-legged beast is an abyssal shade of purple, hard scales and ridges jutting from its coarse frame, a soft red flame visibly glowing in the cracks and crevices.";
+	say "     A loud, low hissing sound echoes from the open air as a monstrous, feral alligator lurches from the shadows. Twisted by an unholy influence, the six-legged beast is an abyssal shade of purple, hard scales and ridges jutting from its coarse frame, a soft red flame visibly glowing in the cracks and crevices.";
 	say "     Twin pairs of eyes fixated on your [bodytype of Player] form, its drooling maw is agape, revealing its two rows of razor-sharp teeth. Without warning, it charges directly at you!";
 	if impregnatevalid is true:
 		say "     [bold type]...The creature has a slightly awkward gait, as if bloated with something...[roman type][line break]";
@@ -90,7 +98,7 @@ to say PrepCombat_Ebonflame Dragator:
 	now firebreathcount is 0;
 	now firebreathready is false;
 	now impregnatevalid is false;
-	if Player is female and ebneuterswitch is false:
+	if Player is female and ebneuterswitch is false and ovipreglevel > 1:
 		if Player is fem_vacant:
 			if a random chance of ebgatorcarrying in 4 succeeds:
 				now impregnatevalid is true;
@@ -98,7 +106,7 @@ to say PrepCombat_Ebonflame Dragator:
 				now tempnum2 is 1;
 			else:
 				increase ebgatorcarrying by 1;
-	else if ebneuterswitch is false:
+	else if ebneuterswitch is false and ovipreglevel > 1:
 		if Player is male_vacant and anallevel > 1 and ((anallevel is 2 and (Player is kinky or Player is mpreg_ok)) or anallevel is 3):
 			if a random chance of ebgatorcarrying in 4 succeeds:
 				now impregnatevalid is true;
@@ -121,13 +129,12 @@ When Play begins:
 	add "Ebonflame Dragator" to infections of FurryList;
 	add "Ebonflame Dragator" to infections of FeralList;
 	add "Ebonflame Dragator" to infections of MythologicalList;
-	add "Ebonflame Dragator" to infections of HermList;
+	add "Ebonflame Dragator" to infections of MaleList;
 	add "Ebonflame Dragator" to infections of BarbedCockList;
 	add "Ebonflame Dragator" to infections of TaperedCockList;
 	add "Ebonflame Dragator" to infections of InternalCockList;
 	add "Ebonflame Dragator" to infections of InternalBallsList;
-	add "Ebonflame Dragator" to infections of BipedalList;
-	add "Ebonflame Dragator" to infections of FlightList;
+	add "Ebonflame Dragator" to infections of HexapedalList;
 	add "Ebonflame Dragator" to infections of TailList;
 	add "Ebonflame Dragator" to infections of OviImpregnatorList;
 	add "Ebonflame Dragator" to infections of FirebreathList;
@@ -136,8 +143,8 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The gator[or]The oversized lizard[or]The scaled beast[or]The ebonflame dragator[or]It[or]He[at random] [one of]lunges forward and snaps it jaws around one of your limbs, the horribly sharp teeth digging into you until you finally pry its jaw wide enough to free yourself[or]shreds you painfully with its claws[or]attempts to pin you against the ground, biting and clawing at you until you push yourself free[or]painfully bashes you with its large, powerful tail[at random].";
-	now defeated entry is "     With one final attack, the terrifying monster lets out a low groan and slumps onto the ground, completely spent and unable to move - save for the occasional stirring. You decide it's probably best to move on before the gator recovers.";
+	now attack entry is "[one of]The gator[or]The oversized lizard[or]The scaled beast[or]The ebonflame dragator[or]It[at random] [one of]lunges forward and snaps its jaws around one of your limbs, the horribly sharp teeth digging into you until you finally pry its jaw wide enough to free yourself[or]shreds you painfully with its claws[or]attempts to pin you against the ground, biting and clawing at you until you push yourself free[or]painfully bashes you with its large, powerful tail[at random].";
+	now defeated entry is "     With one final attack, the terrifying monster lets out a low groan and slumps onto the ground, completely spent and unable to move - save for the occasional stirring. You decide it's probably best to move on before the gator recovers.[line break]";
 	now victory entry is "[ebgatorvic]";
 	now desc entry is "[ebgatordesc]";
 	now face entry is "NA";
@@ -174,7 +181,7 @@ When Play begins:
 	now libido entry is 30;
 	now lootchance entry is 40;
 	now loot entry is "ebonflame scale";
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "ebonflame dragator milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4;
@@ -300,20 +307,17 @@ to ebgatorhijackroutine:
 		now preghijack is false;
 		now mpreghijack is true;
 		now ebgatorhijack is 2;
-	if hijackgestation < 3: [LATE]
-		say "Your [bodytype of Player] belly protrudes in a firm dome of pregnancy, full of the terrible, glowing egg, becoming increasingly difficult to lug around. You don't feel that hindered despite being so bloated but the constant, burning sensation of the churning orb torments you to no end.";
-	else if hijackgestation < 5: [MIDDLE]
-		say "Your [bodydesc of Player] body is somewhat rounded with the effects of the egg growing inside you. It's progressing at what would seem to be a terrifyingly fast speed, growing with every passing hour, in heat just as much as it does in size.";
-	else: [EARLY]
-		say "[one of]You feel an ominous shifting of something inside[or]An unsettling warmth churns through[at random] you as you continue to carry the dark egg.";
 	if hijackgestation < 0:
 		if preghijack is true:
 			now tempnum is 1;
 		else:
 			now tempnum is 2;
 		say "     Unable to hold itself within you any longer, you double over from the intense sensation of the dark egg finally being pushed through your [if tempnum is 1]birth canal[else]bowels[end if].";
-		say "     So large is the orb that it takes considerable pains to push it past your [if tempnum is 1]cunt's strained lip[else]ass's strained ring[end if]. It takes numerous attempts to try and get rid of the thing, as it often slides back in at a moment's relent, before it finally, audibly pops from your gaping hole, the slick, dark purple egg twitching and churning on the ground.";
-		say "     Looking at it, it's hard to imagine that thing was inside you, given how large it is[if scalevalue of Player > 3]. Even as large as you are, it seems the egg grew even larger to exploit the free space[end if]. The coarse orb is completely covered rings of grooved ridges, still slick from its prior home. It occasionally twitches and you hear bestial sounds from inside.";
+		LineBreak;
+		say "     So large is the orb that it takes considerable pains to push it past your [if tempnum is 1]cunt's strained lips[else]ass's strained ring[end if]. It takes numerous attempts to try and get rid of the thing, as it often slides back in at a moment's relent, before it finally, audibly pops from your gaping hole, the slick, dark purple egg twitching and churning on the ground.";
+		LineBreak;
+		say "     Looking at it, it's hard to imagine that thing was inside you, given how large it is[if scalevalue of Player > 3]. Even as large as you are, it seems the egg grew even larger to exploit the free space[end if]. The coarse orb is completely covered by rings of grooved ridges, still slick from its prior home. It occasionally twitches and you hear bestial sounds from inside.";
+		LineBreak;
 		say "     Once you recover, you haul the egg off somewhere out of the way. After that ordeal, the last thing you need is another one of those monsters attacking you and starting this whole cycle all over again...";
 		if ebgatorhijack is 1:
 			now preghijack is false;
@@ -322,5 +326,11 @@ to ebgatorhijackroutine:
 		now ebgatorhijack is 0;
 		if HP of Player > 8, decrease HP of Player by 5;
 		now tempnum is 0;
+	else if hijackgestation < 3: [LATE]
+		say "Your [bodytype of Player] belly protrudes in a firm dome of pregnancy, full of the terrible, glowing egg, becoming increasingly difficult to lug around. You don't feel that hindered despite being so bloated but the constant, burning sensation of the churning orb torments you to no end.";
+	else if hijackgestation < 5: [MIDDLE]
+		say "Your [bodydesc of Player] body is somewhat rounded with the effects of the egg growing inside you. It's progressing at what would seem to be a terrifyingly fast speed, growing with every passing hour, in heat just as much as it does in size.";
+	else: [EARLY]
+		say "[one of]You feel an ominous shifting of something inside[or]An unsettling warmth churns through[at random] you as you continue to carry the dark egg.";
 
 Ebonflame Dragator ends here.

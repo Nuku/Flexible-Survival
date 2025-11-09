@@ -89,8 +89,8 @@ When Play begins:
 	now libido entry is 50; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "cheesecake milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "cheesecake cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if cheesecakemode is 1 and a random chance of 1 in 2 succeeds]slim[else if cheesecakemode is 1]delicate[else if a random chance of 1 in 2 succeeds]plump[else]luscious[end if]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -112,7 +112,7 @@ cheesecake milk is milky.
 Purified of cheesecake milk is "distilled milk".
 cheesecake milk is infectious.
 Strain of cheesecake milk is "Cheesecake".
-Usedesc of cheesecake milk is "[cheesecake milk use]";
+Usedesc of cheesecake milk is "[cheesecake milk use]".
 
 to say cheesecake milk use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and cream cheese-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
@@ -130,7 +130,7 @@ cheesecake cum is cum.
 Purified of cheesecake cum is "distilled cum".
 cheesecake cum is infectious.
 Strain of cheesecake cum is "Cheesecake".
-Usedesc of cheesecake cum is "[cheesecake cum use]";
+Usedesc of cheesecake cum is "[cheesecake cum use]".
 
 to say cheesecake cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, cheesy aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
@@ -297,8 +297,8 @@ When Play begins:
 	now libido entry is 50; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "gingerbread milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "gingerbread cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]flat[or]confectionery[or]gingerbread[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -320,10 +320,10 @@ gingerbread milk is milky.
 Purified of gingerbread milk is "distilled milk".
 gingerbread milk is infectious.
 Strain of gingerbread milk is "Gingerbread".
-Usedesc of gingerbread milk is "[gingerbread milk use]";
+Usedesc of gingerbread milk is "[gingerbread milk use]".
 
 to say gingerbread milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the gingerbread milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the gingerbread milk run over your tongue and down your throat. Tastes rich and sweet, with a gingery aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
 instead of sniffing gingerbread milk:
@@ -331,14 +331,14 @@ instead of sniffing gingerbread milk:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"gingerbread cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'gingerbread Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	gingerbread cum
+"gingerbread cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Gingerbread Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	gingerbread cum
 
 gingerbread cum is a grab object.
 gingerbread cum is cum.
 gingerbread cum is infectious.
 Purified of gingerbread cum is "distilled cum".
 Strain of gingerbread cum is "Gingerbread".
-Usedesc of gingerbread cum is "[gingerbread cum use]";
+Usedesc of gingerbread cum is "[gingerbread cum use]".
 
 to say gingerbread cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, gingery aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";

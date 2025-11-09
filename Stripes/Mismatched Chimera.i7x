@@ -77,7 +77,7 @@ to say randombodypart:
 	if T is 4:
 		now bodyselector is "horse";
 	if T is 5:
-		now bodyselector is "Doberman Bitch";
+		now bodyselector is "Doberman";
 	if T is 6:
 		now bodyselector is "gazelle";
 	if T is 7:
@@ -89,7 +89,7 @@ to say randombodypart:
 	if T is 10:
 		now bodyselector is "bull";
 	if T is 11:
-		now bodyselector is "Zebra Stallion";
+		now bodyselector is "zebra";
 	if T is 12:
 		now bodyselector is "seal";
 	if T is 13:
@@ -99,7 +99,7 @@ to say randombodypart:
 	if T is 15:
 		now bodyselector is "wolf";
 	if T is 16:
-		now bodyselector is "Anthro Rabbit";
+		now bodyselector is "rabbit";
 	if T is 17:
 		now bodyselector is "mouse";
 	if T is 18:
@@ -116,19 +116,22 @@ to say losetomischim:
 	now lev entry is 6; [ reset level for random encounter availability ]
 	if Player is female and a random chance of 1 in 2 succeeds:
 		say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, it gets itself lined up with your pussy and mounts you with a throaty purr. The creature's [headdata] muzzle nips along your neck as it thrusts its [cockdata] cock into you again and again with increasing vigor. The chimera's heavy ballsack feels strange as it slaps against you again and again, quite full and heavy.";
-		say "     You soon realize that it has at least four balls in there of various size, probably from a variety of creatures like the rest of its body. This leads you to the realization that the creature could contain almost any seed or strain of infection to alter you. You struggle for a moment, but the creature keeps you pinned with its clawed hand and [larmdata] paw. The pleasure of its mating starts to get to you and you find yourself growing less concerned about that and even more and more turned on by it as the strange creature's myriad scents excite you. The idea of it changing you in random ways or siring almost anything inside you arouses you greatly. As you push back into its final thrusts, you both moan in pleasure as you feel its hot seed, thick and plentiful from its many balls being shot deep into your womb.";
-		say "[randomimpreg]";
+		say "     You soon realize that it has at least four balls in there of various size, probably from a variety of creatures like the rest of its body. This leads you to the realization that the creature could contain almost any seed or strain of infection to alter you. You struggle for a moment, but the creature keeps you pinned with its clawed hand and [larmdata] paw. The pleasure of its mating starts to get to you and you find yourself growing less concerned about that and even more and more turned on by it as the strange creature's myriad scents excite you. The idea of it changing you in random ways or siring almost anything inside you arouses you greatly. As you push back into its final thrusts, you both moan in pleasure as you feel its hot seed, thick and plentiful from its many balls, being shot deep into your womb.";
+		say "[randomfimpreg]";
+		CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Mismatched Chimera";
 	else if anallevel > 1 and ( Cunt Count of Player is 0 or anallevel is 3 ) and a random chance of anallevel in 5 succeeds:
 		say "     The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, it gets itself lined up with your anal ring and mounts you with a throaty purr. The creature's [headdata] muzzle nips along your neck as it thrusts its [cockdata] cock into you again and again with increasing vigor. The chimera's heavy ballsack feels strange as it slaps against you again and again, quite full and heavy.";
 		say "     You soon realize that it has at least four balls in there of various size, probably from a variety of creatures like the rest of its body. This leads you to the realization that the creature could contain almost any seed or strain of infection to alter you. You struggle for a moment, but the creature keeps you pinned with its clawed hand and [larmdata] paw. The pleasure of its mating starts to get to you and you find yourself growing less concerned about that and even more and more turned on by it as the strange creature's myriad scents excite you. The idea of it changing you in random ways ";
 		if Player is mpreg_ok:
 			say "or siring almost anything inside you ";
-		say "arouses you greatly. As you push back into its final thrusts, you both moan in pleasure as you feel its hot seed, thick and plentiful from its many balls being shot deep into your bowels.";
-		if Player is mpreg_ok, say "[randomimpreg]";
+		say "arouses you greatly. As you push back into its final thrusts, you both moan in pleasure as you feel its hot seed, thick and plentiful from its many balls, being shot deep into your bowels.";
+		if Player is mpreg_ok, say "[randommimpreg]";
+		CreatureSexAftermath "Player" receives "AssDildoFuck" from "Mismatched Chimera";
 	else:
-		say "     The hybrid creature, quite aroused by its workout and victory, pushes you to your knees before it. It presses its [Name entry] cock to your face and into your mouth. It moans softly and strokes your head, coaxing you to lick and suck it. Its arousing scent, such a strong and virile mix, excites you and you comply willingly enough. It starts to thrust into you, holding your head steady with its clawed hand and [larmdata] paw while pumping its 8 inch cock into your eager mouth. Its precum leaks onto your tongue, thick with an array of arousing flavors.";
-		say "     You slide a hand up to fondle its large, sewn-together ballsack and find it very full and heavy. As you fondle it, you come to realize that the heavy sac contains at least four different balls of various sizes, probably from a variety of creatures like the rest of its body. You soon realize as well that this means it could carry almost any strain of the infection and change you in unpredictable ways. You struggle for a moment, but the creature keeps you pinned with its strong grip and soon its mix of precum has done its job, filling you with lust and hunger for the chimera's mix of seed. The idea starts to fill you with excitement even. You start to picture yourself changing in random ways while these creatures have their way with you again and again.";
-		say "     You moan in delight at the creature growls in climax, pumping a hot, thick medley of cum into your mouth and down your throat. You swallow down as much as you can of its impressive load, then sag to the ground as it releases you. Sated for now, the mismatched hybrid wanders off, leaving you to the infection's changes.";
+		say "     The hybrid creature, quite aroused by its workout and victory, pushes you to your knees before it. It presses its [cockdata] cock to your face and into your mouth. It moans softly and strokes your head, coaxing you to lick and suck it. Its arousing scent, such a strong and virile mix, excites you and you comply willingly enough. It starts to thrust into you, holding your head steady with its clawed hand and [larmdata] paw while pumping its 8 inch cock into your eager mouth. Its precum leaks onto your tongue, thick with an array of arousing flavors.";
+		say "     You slide a hand up to fondle its large, sewn-together ballsack and find it very full and heavy. As you fondle it, you come to realize that the heavy sack contains at least four different balls of various sizes, probably from a variety of creatures like the rest of its body. You soon realize as well that this means it could carry almost any strain of the infection and change you in unpredictable ways. You struggle for a moment, but the creature keeps you pinned with its strong grip and soon its mix of precum has done its job, filling you with lust and hunger for the chimera's mix of seed. The idea starts to fill you with excitement even. You start to picture yourself changing in random ways while these creatures have their way with you again and again.";
+		say "     You moan in delight as the creature growls in climax, pumping a hot, thick medley of cum into your mouth and down your throat. You swallow down as much as you can of its impressive load, then sag to the ground as it releases you. Sated for now, the mismatched hybrid wanders off, leaving you to the infection's changes.";
+		CreatureSexAftermath "Player" receives "OralCock" from "Mismatched Chimera";
 	weakrandominfect;
 	increase MonsterID by 1;
 	choose row MonsterID from Table of Random Critters;
@@ -173,7 +176,7 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The mismatched hybrid strikes you with its [larmdata] fist![or]The strange chimera wraps its mismatched arms around you and squeezes you with a powerful bearhug![or]The disturbing creature manages to bite your arm with its [headdata] head![or]The vicious creature slashes at you with its clawed right hand, leaving bloody gashes![or]The beast charges at you, swinging a volley of wild punches and slashes![or]The angry creature grabs your arm bites your shoulder with its [headdata] mouth![or]The fractured beast growls and kicks you with its [llegdata]![at random]";
+	now attack entry is "[one of]The mismatched hybrid strikes you with its [larmdata] fist![or]The strange chimera wraps its mismatched arms around you and squeezes you with a powerful bearhug![or]The disturbing creature manages to bite your arm with its [headdata] head![or]The vicious creature slashes at you with its clawed right hand, leaving bloody gashes![or]The beast charges at you, swinging a volley of wild punches and slashes![or]The angry creature grabs your arm and bites your shoulder with its [headdata] mouth![or]The fractured beast growls and kicks you with its [llegdata]![at random]";
 	now defeated entry is "[beatthemischim]";
 	now victory entry is "[losetomischim]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mischimdesc]"; [ Description of the creature when you encounter it.]
@@ -211,8 +214,8 @@ When Play begins:
 	now libido entry is 60; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "mismatched chimera milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "mismatched chimera cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]mismatched[or]patchwork[at random]";

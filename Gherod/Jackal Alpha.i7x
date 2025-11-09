@@ -14,7 +14,7 @@ JackalAlphaSubmitCount is usually 0.
 Section 1 - Encounter
 
 to say Alpha Jackal Desc:
-	say "     Approaching you comes a fairly large anthropomorphic jackal, tall and powerful, with bulging muscles being the predominant feature about this alpha male. The thing that makes his gender clear is the one oversized endowment dandling from one thick thigh to another, complete with an absolutely gigantic sack with swollen orbs that seem to be full to the brim with his seed, which already begins to ooze out of his soft sheath. His golden eyes turn their gaze to you, as his sleek jackal ears swivel around on top of his head to catch any noise in his surroundings. He has an especially wide jaw, an evidence of his hypermasculinity, which you only notice more when he starts speaking. 'I do not intend to harm you... But I would recommend submission. I shall make sure you are well prepared...'";
+	say "     Approaching you comes a fairly large anthropomorphic jackal, tall and powerful, with bulging muscles being the predominant feature about this alpha male. The thing that makes his gender clear is the one oversized endowment dangling from one thick thigh to another, complete with an absolutely gigantic sack with swollen orbs that seem to be full to the brim with his seed, which already begins to ooze out of his soft sheath. His golden eyes turn their gaze to you, as his sleek jackal ears swivel around on top of his head to catch any noise in his surroundings. He has an especially wide jaw, an evidence of his hypermasculinity, which you only notice more when he starts speaking. 'I do not intend to harm you... But I would recommend submission. I shall make sure you are well prepared...'";
 	say "     His tone is soft, albeit very deep, and has a mystic vibe to it. Complemented with the glowing light of hieroglyphs that cover his body, dimming strongly with every word, he manages to catch your full attention for a while, almost removing your will to fight in the moment. With that said, he comes closer...";
 
 Section 1.1 - Defeat Scenes
@@ -218,7 +218,7 @@ to say AlphaJWinsAnalFuck:
 	WaitLineBreak;
 	say "     Once he is done filling you, the jackal pulls his manhood out while appreciating the mess he has done with you. 'Do keep coming back... I will fulfill your desires every time...' he says, dropping some of that mystical tone in exchange for a more lustful one, especially as he eyes you from head to toe, completely coated in his spunk, with the obscene changes your body underwent while under his influence. You feel too weak to even move, and your hole is still twitching and blinking, which still manages to make the alpha canine's dick throb. 'How tempting it would be to take you again... but alas, I must retreat for now. Enjoy my gift, I expect to provide you more in the future... One day, you shall be fully ready, my [boygirl]...'";
 	say "     With that said, he leaves you be, covered in his juices and leaving you to your thoughts. It takes you a long while to recover to your fullest, having to readjust to the world without him. It looks harder than you would like to admit... But at least, some of the most incapacitating features went away, with only another few persisting. It seems your body reacts more aggressively in his presence.";
-	CreatureSexAftermath "Player" receives "AnalFuck" from "Jackal Alpha";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Jackal Alpha";
 
 to AlphaJWinsEndScene:
 	say "     As you are left in a puddle of warm liquid that still tingles at your body for a long while, the jackal simply walks away, leaving you to your body changes and thoughts. It takes you a long while to recover to your fullest, having to readjust to the world without him. It looks harder than you would like to admit... But at least, some of the most incapacitating features went away, with only another few persisting. It seems your body reacts more aggressively in his presence.";
@@ -438,7 +438,7 @@ When Play begins:
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "jackal alpha fur"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "jackal alpha man-milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is "jackal alpha cum";
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -589,23 +589,5 @@ to say jackal alpha cum use:
 instead of sniffing jackal alpha cum:
 	say "You open the lid for a moment and take a sniff. You almost feel compelled to drink it once its mesmerizing scent gets caught in your nostrils, so you put it back down in that instant.";
 
-
-	Table of Game Objects (continued)
-name	desc	weight	object
-"jackal alpha man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Jackal Alpha Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	jackal alpha man-milk
-
-jackal alpha man-milk is a grab object.
-jackal alpha man-milk is milky.
-Purified of jackal alpha man-milk is "distilled milk".
-jackal alpha man-milk is infectious.
-Strain of jackal alpha man-milk is "Jackal Alpha".
-Usedesc of jackal alpha man-milk is "[jackal alpha man-milk use]";
-
-to say jackal alpha man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing jackal alpha man-milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Jackal Alpha ends here.

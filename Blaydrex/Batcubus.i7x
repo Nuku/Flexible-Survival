@@ -11,16 +11,16 @@ to say Batcubus_wins:
 		say "     The batcubus saunters over to your defeated form. 'Well, well. Smells like somebody is a little excited,' she says as she starts to look over your body, especially your groin. She wastes no time in removing your clothes and giggles with delight when she sees your aroused cunt. She lowers her head and begins to kiss your pussy, practically making out with it. Her technique is remarkable, bringing you close to the edge countless times, but always stopping just before you can climax. She spends what seems like an eternity denying you release before she decides you are ready. You feel a little pressure against your pussy and a small insertion. You look down to see she has put her nipple in you. She squeezes her breast, making milk pour into your desire-filled fuckhole. She fills you with her milk before kissing your tummy where your uterus is. A warm feeling fills your womb as your pussy clamps down to stop the milk from leaking. You writhe on the ground as your body desires release heavily while being denied the pleasure once again. As quickly as the feeling began, it stops. You see some of her milk pour out, but for some odd reason it seems more consistent with sperm. She stands up and licks her purple lips, giggling to herself. 'That was fun. I hope we can meet again sometime,' she says before kissing you passionately on the lips and walking off, with you still needing release.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Batcubus";
 	else if Player is male and a random chance of 2 in 3 succeeds:
-		say "     She takes a deep breath in through her bat-like nose and shudders as she moans. Her eyes quickly snap to the bulge in you pants. She smiles and rips your pants off and gazes at your prick, eyes burning with lust. 'Oooooh. Hopefully this can get me the relief I need,' she says as she lowers her dripping cunt to grind against your stiff member. She sighs in bliss as she lowers until you are fully hilted in her. She begins to ride you like a slut who has been denied sex for a long time. Her cunt grips you tightly, like that of a virgin. Soon, it becomes too much for you to bear and you begin to shoot your load into her waiting womb, causing her to orgasm on your cock. She rewards you with bringing her large breasts to your face, forcing you to suckle her nipple until milk floods into your mouth. You stay there until you've had your fill. She gets up and kisses you sweetly on the lips before walking off to find another victim.";
+		say "     She takes a deep breath in through her bat-like nose and shudders as she moans. Her eyes quickly snap to the bulge in your pants. She smiles and rips your pants off and gazes at your prick, eyes burning with lust. 'Oooooh. Hopefully this can get me the relief I need,' she says as she lowers her dripping cunt to grind against your stiff member. She sighs in bliss as she lowers until you are fully hilted in her. She begins to ride you like a slut who has been denied sex for a long time. Her cunt grips you tightly, like that of a virgin. Soon, it becomes too much for you to bear and you begin to shoot your load into her waiting womb, causing her to orgasm on your cock. She rewards you with bringing her large breasts to your face, forcing you to suckle her nipple until milk floods into your mouth. You stay there until you've had your fill. She gets up and kisses you sweetly on the lips before walking off to find another victim.";
 		CreatureSexAftermath "Batcubus" receives "PussyFuck" from "Player";
 	else if Player is male:
-		say "     She takes a deep breath in through her bat-like nose and shudders as she moans. Her eyes quickly snap to the bulge in you pants. 'Mmm... I'm so thirsty...' she says sensually while running her long tongue disturbingly across her fang. She rips your pants off and gazes at your prick, eyes burning with a hungry lust. The sight of her fanged maw approaching your cock sends a shiver of fearful anticipation through you...";
+		say "     She takes a deep breath in through her bat-like nose and shudders as she moans. Her eyes quickly snap to the bulge in your pants. 'Mmm... I'm so thirsty...' she says sensually while running her long tongue disturbingly across her fang. She rips your pants off and gazes at your prick, eyes burning with a hungry lust. The sight of her fanged maw approaching your cock sends a shiver of fearful anticipation through you...";
 		say "     Thankfully though, she only slides her purple-lipsticked lips down over your cock and starts sucking it in the conventional manner. Your [Cock of Player] manhood pulses and throbs as she sucks your pre down while [if Player is female and a random chance of 3 in 5 succeeds]fingering your cunny mercilessly[else if CockName of Player is listed in infections of InternalCockList]groping your ass[else]kneading your balls with a lustful desire for their contents[end if]. You pant and moan under her oral assault as she expertly works her lips, tongue and [if Cock Length of Player < 6]palate[else]throat[end if] over your drooling shaft.";
 		say "     She tantalizes and teases you for a long time, to the point that you're almost begging her to let you cum. She grins maliciously at your torment, delighting in it almost as much as she's delighting in sucking your [cock size desc of Player] cock. Eventually though, she does let you cum. When you do, she slurps down every last drop of your [Cum Load Size of Player] load, even milking the final dregs from you by winding her tongue around your shaft and orally jerking you off to get every last drop you'll give. You're left exhausted and drained from the experience, barely noticing as the slutty bat creature strides off.";
 		CreatureSexAftermath "Batcubus" receives "OralCock" from "Player";
 	else:
 		say "     She takes a deep breath in through her bat-like nose and seems a little disappointed. She slides up closer to you, sniffing again and again as her face drifts down to your crotch. Finding you lacking any loins, she gives a pouting [']harrumph['] before grinning playfully. She gives your bare crotch several slow licks with her long tongue, sending shivers through you.";
-		say "     'Oh, you poor thing. Perhaps I can help with that,' she says, rising back up. Grabbing your head, she mashes your face between her giant tits and squeezing them around your head. Left woozy and vaguely aroused from the experience, your lips wrap around one of her nipples when it's offered to you. You suckle hungrily from her breast, getting fed a meal of the bat woman's warm milk. By the time the bat creature has finished feeding you and heads off, you're left feeling warm and sleepy even as tingles of infection spread through you.";
+		say "     'Oh, you poor thing. Perhaps I can help with that,' she says, rising back up. Grabbing your head, she mashes your face between her giant tits and squeezes them around your head. Left woozy and vaguely aroused from the experience, your lips wrap around one of her nipples when it's offered to you. You suckle hungrily from her breast, getting fed a meal of the bat woman's warm milk. By the time the bat creature has finished feeding you and heads off, you're left feeling warm and sleepy even as tingles of infection spread through you.";
 		CreatureSexAftermath "Player" receives "Other" from "Batcubus";
 
 to say Batcubus_loses:
@@ -28,8 +28,8 @@ to say Batcubus_loses:
 	if Player consents:
 		if Player is male:
 			say "     The scent of her arousal fills your nose and you feel your cock rapidly stiffening. Your lust brings you to turn around and look at her, unable to do anything other than start jerking off while watching her masturbate. She notices your actions and smiles warmly before spreading her legs and presenting her needy cunt to you.";
-			if Cock Length of Player > 17 or Ball Size of Player > 3:
-				say "     Something about her cunt makes you want to shove your large cock in her, so that is exactly what you decide you must do. You line up your cock with her cunt and ram it into her nice and hard. Her passage gives little resistance, but is extremely tight on your cock. Before you can do anything she begins kissing you, repeatedly. Each kiss spreads warmth at the site and increases your lust more. You soon lose control and begin fucking her mercilessly, her tight passage bringing you to orgasm quickly. But your cock doesn't soften and your lust only grows. You begin fucking her harder and faster. You cum in her a total of five times before you begin to calm down. She gives you yet another kiss on your lips, placing your hand on her wonderful globes. You get the message and begin to suckle the milk from her nipple greedily. You drink your fill and realize she is fast sleep, obviously from exhaustion due to all the pleasure. As you begin to leave you whimper softly, missing the feeling of her kisses and her pussy as your cock lets out some cum at the thought and you feel strangely odd, but quickly dismissing the thought and continuing.";
+			if Cock Length of Player > 9 and Ball Size of Player > 2 and ( Cock Length of Player > 17 or Ball Size of Player > 3 ):
+				say "     Something about her cunt makes you want to shove your large cock in her, so that is exactly what you decide you must do. You line up your cock with her cunt and ram it into her nice and hard. Her passage gives little resistance, but is extremely tight on your cock. Before you can do anything she begins kissing you, repeatedly. Each kiss spreads warmth at the site and increases your lust more. You soon lose control and begin fucking her mercilessly, her tight passage bringing you to orgasm quickly. But your cock doesn't soften and your lust only grows. You begin fucking her harder and faster. You cum in her a total of five times before you begin to calm down. She gives you yet another kiss on your lips, placing your hand on her wonderful globes. You get the message and begin to suckle the milk from her nipple greedily. You drink your fill and realize she is fast asleep, obviously from exhaustion due to all the pleasure. As you begin to leave you whimper softly, missing the feeling of her kisses and her pussy as your cock lets out some cum at the thought and you feel strangely odd, but quickly dismissing the thought and continuing.";
 				CreatureSexAftermath "Batcubus" receives "PussyFuck" from "Player";
 			else:
 				say "     The invitation may look like fun, but something about those beautiful lips draws you to desire that much more than her cunt. She smiles softly and gets on her knees, crawling to you. She nuzzles against your cock affectionately before placing a gentle kiss on your balls. Something churns in your balls and they feel fuller and the need to release becomes more prominent. This just makes her giggle before kissing the head of your cock, making your eyes go wide as heat spreads across your cock as if an invisible pussy or mouth were wrapping around it. You whimper in need as she places kiss after kiss on your rod, driving your lust to heights you never thought possible. Your cock begins to throb insanely, pre coming out by the bucket. She giggles and looks up at you, giving an orgasmic face. This is too much for you, bringing you to cum. Your cock is basically a cum hose now, shooting the biggest load of your life all onto her face and her breasts. When you are done, it looks like she just had a cum bath, which she technically did. She just smiles. She lifts your balls and cock gently and kisses [if Player is female]your puss[yfn][else]where your pussy would be if you had one[end if]. You walk away from the beautiful bat-girl thinking of how weird her thanks was...";
@@ -51,7 +51,7 @@ to say Batcubus_loses:
 
 
 to say Batcubus_Desc:
-	say "An anthropomorphic bat, but she seems different than a normal bat. Her lips are coated in a purple lipstick, which obviously contains a powerful aphrodisiac judging by the smell. Her breasts are rather large, JJ cups it looks like. Her torso appears to be covered by some red corset, but that is obviously just fur when you spot a drop of milk come out from her nipple. Her arms are in elegant white gloves that go almost all the way to her shoulders. Her legs are covered in purple high heel boots that cover them completely. Her fur is snow white. Her face and head is that of a bat's with its upturned nose and triangular ears. She simply smiles at you, licking her lips as she saunters over to you, obviously wanting to kiss you.";
+	say "     An anthropomorphic bat, but she seems different than a normal bat. Her lips are coated in a purple lipstick, which obviously contains a powerful aphrodisiac judging by the smell. Her breasts are rather large, JJ cups it looks like. Her torso appears to be covered by some red corset, but that is obviously just fur when you spot a drop of milk come out from her nipple. Her arms are in elegant white gloves that go almost all the way to her shoulders. Her legs are covered in purple high heel boots that cover them completely. Her fur is snow white. Her face and head is that of a bat's with its upturned nose and triangular ears. She simply smiles at you, licking her lips as she saunters over to you, obviously wanting to kiss you.";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -243,38 +243,18 @@ name	desc	weight	object
 "batcubus milk"	"A small plastic bottle, filled with fresh batcubus milk."	1	batcubus milk
 
 instead of sniffing batcubus milk:
-say "You open the lid of the bottle and smell the milk. Seems fresh and drinkable, even though it isn't refrigerated. Must be a side effect of the nanites in it.";
+	say "You open the lid of the bottle and smell the milk. Seems fresh and drinkable, even though it isn't refrigerated. Must be a side effect of the nanites in it.";
 
 batcubus milk is a grab object.
 batcubus milk is milky.
 Purified of batcubus milk is "distilled milk".
 batcubus milk is infectious.
 Strain of batcubus milk is "Batcubus".
-Usedesc of batcubus milk is "[batcubus milk use]";
+Usedesc of batcubus milk is "[batcubus milk use]".
 
 to say batcubus milk use:
-	say "Taking the cap of the bottle of milk, you greedily drink down its contents, swallowing the tasty milk.";
+	say "Taking the cap off the bottle of milk, you greedily drink down its contents, swallowing the tasty milk.";
 	PlayerDrink 6;
-	infect "Batcubus";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"Batcubus cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Batcubus Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	batcubus cum
-
-batcubus cum is a grab object.
-batcubus cum is cum.
-Purified of batcubus cum is "distilled cum".
-batcubus cum is infectious.
-Strain of batcubus cum is "Batcubus".
-Usedesc of batcubus cum is "[batcubus cum use]";
-
-to say batcubus cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing batcubus cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
 Section 4 - Endings
 
@@ -286,13 +266,13 @@ This is the Batcubus Infection rule:
 	if Player has a body of "Batcubus" and matriarchdefeated is 0 and matriarchowned is 0:
 		trigger ending "Batcubus Infection";
 		if humanity of Player < 10:
-			say "You search the city looking for males to impregnate you and anybody to kiss, your cunt always dripping, ready to be fucked at any time. Sometimes thoughts of your past return, but a single lick of your lips quickly sends your lust soaring and you can't help but forget again and go look for relief you so desperately need.";
+			say "     You search the city looking for males to impregnate you and anybody to kiss, your cunt always dripping, ready to be fucked at any time. Sometimes thoughts of your past return, but a single lick of your lips quickly sends your lust soaring and you can't help but forget again and go look for relief you so desperately need.";
 		else:
-			say "Life as a batcubus proves fun. Every time you find someone you enjoy all you have to do is kiss them and they are putty in your hands. Thanks to this you have a good life, letting you have everything you want, never needing to work a day in your life";
+			say "     Life as a batcubus proves fun. Every time you find someone you enjoy all you have to do is kiss them and they are putty in your hands. Thanks to this you have a good life, letting you have everything you want, never needing to work a day in your life";
 			if Player is herm:
-				say "You spend your days fighting the urge to lick your lips. Being one gender or the other would allow you to instinctively lick them safely, but the combined lust of your female and male sex organs would be too much. A single lick could send you into a sexual fury. Last time it happened you tried to turn a whole town into batcubuses. Hopefully one day someone can find out how to get this lipstick off you.";
+				say ". You spend your days fighting the urge to lick your lips. Being one gender or the other would allow you to instinctively lick them safely, but the combined lust of your female and male sex organs would be too much. A single lick could send you into a sexual fury. Last time it happened you tried to turn a whole town into batcubuses. Hopefully one day someone can find out how to get this lipstick off you.";
 			else if Player is male:
-				say "You find that having a cock isn't as fun as having a slavering cunt like most other batcubuses, but you make do. Your cock is insatiable, no matter how much you cum and fuck. One day you find a tigress hooker, who takes an interest in you. She wastes no time in raping you and dominating you until you submit to her. She claims you as her own and she is actually able to keep up with your sex drive, so it works out. You spend the rest of your days happily mated to her.";
+				say ". You find that having a cock isn't as fun as having a slavering cunt like most other batcubuses, but you make do. Your cock is insatiable, no matter how much you cum and fuck. One day you find a tigress hooker, who takes an interest in you. She wastes no time in raping you and dominating you until you submit to her. She claims you as her own and she is actually able to keep up with your sex drive, so it works out. You spend the rest of your days happily mated to her.";
 			else:
 				say "...";
 

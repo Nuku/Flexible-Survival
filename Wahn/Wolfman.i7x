@@ -168,8 +168,8 @@ When Play begins:
 	now libido entry is 40;
 	now loot entry is "sports drink"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 100; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "football wolfman milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "football wolfman cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]tall[or]powerful[at random]";
@@ -1241,8 +1241,8 @@ When Play begins:
 	now libido entry is 80;
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "wolfman cheerleader milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "wolfman cheerleader cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]flexible[at random]";
@@ -1475,10 +1475,10 @@ to say CheerleaderPractice:
 				say "     While Septus still pulses with more shots of cum, he gets his breath back and kisses you on the lips, then pants 'Wish I could have knotted you - but we'd have a mutiny here if I kept you all to myself for so long...' He rubs his furry cheeks affectionately against yours, then lowers you on a bed and pulls out with a sigh, almost instantly replaced by Decimus, another wolfman you know from your cheerleader training. Saying 'I can't stop thinking about you since you gave me that awesome show,' he gives you a friendly lick, then sets the tip of his shaft at your entrance...";
 				WaitLineBreak;
 				say "     In a very satisfying - but really exhausting - orgy, you're fucked by the whole football team after that, with each of them depositing a nice and full load into you. After dozing off while cuddling in the end, you awake some time later in the midst of a furry huddle of somewhat sticky wolfmen. Carefully standing up and making your way without stepping on anyone, you're then taken aside by the other cheerleaders, who gently bathe you, giving you their own welcome with lots of hugs as they do so.";
-				NPCSexAftermath Player receives "PussyFuck" from Septus;
-				CreatureSexAftermath "Player" receives "PussyFuck" from "FootBall Wolfman";
-				CreatureSexAftermath "Player" receives "PussyFuck" from "FootBall Wolfman";
-				CreatureSexAftermath "Player" receives "PussyFuck" from "FootBall Wolfman";
+				NPCSexAftermath Player receives "AssFuck" from Septus;
+				CreatureSexAftermath "Player" receives "AssFuck" from "FootBall Wolfman";
+				CreatureSexAftermath "Player" receives "AssFuck" from "FootBall Wolfman";
+				CreatureSexAftermath "Player" receives "AssFuck" from "FootBall Wolfman";
 			if "Sterile" is listed in feats of Player:
 				remove "Sterile" from feats of Player;
 				now Sterile of Player is false;

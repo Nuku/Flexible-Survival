@@ -244,12 +244,12 @@ Section 2 - Creature Insertion
 to say siamesecatdesc:
 	choose row with name of "Siamese Cat" from Table of Random Critters;
 	say "     As you are moving along, a pair of felines drop down in front of you. They are a duo of slinky Siamese cats, a boy and a girl, identical save for gender. They have cream colored fur with darker fur around their faces and at the ends of their limbs. They are both quite naked, except for the red, belled collars they have around their necks. As you look them over, you notice that they are joined together at the end of their tails.";
-	if "Male Preferred" is listed in feats of Player:			[MALE-PREF PLAYER]
+	if Player is MalePreferred:			[MALE-PREF PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The female speaks to her twin, 'I think I'll play with this one, if I may.' And with that, she takes the lead and attacks.";
 		decrease dex entry by 2; [as if male before swap]
 		increase wdam entry by 1;
 		say "[swaptofemale]";
-	else if "Female Preferred" is listed in feats of Player:	[FEMALE-PREF PLAYER]
+	else if Player is FemalePreferred:	[FEMALE-PREF PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The male speaks to his twin, 'I think I'll play with this one, if I may.' And with that, he takes the lead and attacks.";
 		increase dex entry by 2; [as if female before swap]
 		decrease wdam entry by 1;
@@ -349,8 +349,8 @@ When Play begins:
 	now libido entry is 40; [ Will raise the player's libido towards this amount]
 	now loot entry is ""; [ Dropped item, if any ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "siamese cat milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "siamese cat cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]agile[or]acrobat's[or]slender[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]

@@ -35,11 +35,11 @@ Scent of the bonesaw is "The bonesaw smells faintly of antiseptic and blood.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"pocketknife"	"Mighty big for a pocket knife, nice and solid too. Could be handy."	1	pocketknife
+"pocketknife"	"Mighty big for a pocketknife, nice and solid too. Could be handy."	1	pocketknife
 
 pocketknife is an armament. It is not temporary.
 understand "knife" as pocketknife.
-It has a weapon "[one of]your knife[or]your blade[or]your trusty pocket knife[or]flashing steel[at random]".
+It has a weapon "[one of]your knife[or]your blade[or]your trusty pocketknife[or]flashing steel[at random]".
 Weapon Damage of pocketknife is 5.
 Weapon Type of pocketknife is "Melee".
 Objsize of pocketknife is 3.
@@ -138,7 +138,7 @@ Section 3 - Large Blades
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"abyssal edge"	"The enhanced version of what used to be a completely useless hilt. The abyssal edge is now a respectable sword with a dark blade, so sharp it can cut through almost anything."	7	abyssal edge
+"abyssal edge"	"The enhanced version of what used to be a completely useless hilt. The Abyssal Edge is now a respectable sword with a dark blade, so sharp it can cut through almost anything."	7	abyssal edge
 
 abyssal edge is an armament. It is not temporary.
 It has a weapon "[one of]your dark sword[or]your void blade[or]your respectable black sword[or]your Abyssal Edge[at random]".
@@ -231,7 +231,7 @@ belaying pin is an armament. It is not temporary.
 It has a weapon "[one of]your belaying pin[or]your stout sailcloth securing system[or]your improvised club[or]your hefty pin[or]your rescued dildo-cum-club[or]your salty beatin['] stick[or]your cock-themed skull-cracker[at random]".
 Weapon Damage of belaying pin is 5.
 Weapon Type of belaying pin is "Melee".
-Objsize of riding crop is 3.
+Objsize of belaying pin is 3.
 Hitbonus of belaying pin is 0. [nothing special]
 Scent of the belaying pin is "The heavy club smells of rum, sodomy, and the lash.".
 
@@ -249,7 +249,7 @@ Scent of the claw hammer is "The sturdy hammer smells of metal and sweat.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"iron knuckles"	"A classic set of iron knuckles used for dealing giving the wearer some extra punch!"	1	iron knuckles
+"iron knuckles"	"A classic set of iron knuckles used for giving the wearer some extra punch!"	1	iron knuckles
 
 iron knuckles is an armament. It is not temporary.
 It has a weapon "[one of]your iron knuckles[or]your metal punch[or]your iron punch[at random]".
@@ -257,7 +257,7 @@ Weapon Damage of iron knuckles is 5.
 Weapon Type of iron knuckles is "Melee".
 Objsize of iron knuckles is 3.
 Hitbonus of iron knuckles is 0. [nothing special]
-Scent of the iron knuckles is "The iron knuckles smells like metal.".
+Scent of the iron knuckles is "The iron knuckles smell like metal.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -333,7 +333,7 @@ Weapon Damage of dildo club is 5.
 Weapon Type of dildo club is "Melee".
 Objsize of dildo club is 3.
 Hitbonus of dildo club is 0. [nothing special]
-Scent of the dildo club is "The sex toy club smells of latex and your humiliated foes."
+Scent of the dildo club is "The sex-toy club smells of latex and your humiliated foes."
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -409,7 +409,7 @@ Scent of nightstick is "     The nightstick smells faintly of violent authority.
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Wukong's staff"	"An simple yet expertly crafted fighting staff, carved then polished with care to provide maximum efficiency. A golden leaf is riveted to the middle of the staff, ornately decorated with detailed figures of various animals, provides your hands with a good grip."	8	wukongStaff
+"Wukong's staff"	"A simple yet expertly crafted fighting staff, carved then polished with care to provide maximum efficiency. A golden leaf is riveted to the middle of the staff, ornately decorated with detailed figures of various animals, providing your hands with a good grip."	8	wukongStaff
 
 wukongStaff is an armament. It is not temporary.
 understand "Wukong's staff" as wukongStaff.
@@ -419,7 +419,7 @@ Weapon Damage of wukongStaff is 18.
 Weapon Type of wukongStaff is "Melee".
 Objsize of wukongStaff is 3.
 Hitbonus of wukongStaff is 1. [magic]
-Scent of wukongStaff is "The staff smells fainly of cedar.".
+Scent of wukongStaff is "The staff smells faintly of cedar.".
 
 Section 3 - Large
 
@@ -428,7 +428,7 @@ name	desc	weight	object
 "awesome bat"	"A heavy branch that you are pretty sure you could use to hit... something."	5	awesome bat
 
 awesome bat is an armament. It is not temporary.
-It has a weapon "[one of]awesome bat, a double rainbow appears for a brief second,[awesome bat proc][or]bat of awesomeness[or]indestructible length of awesome-wood[at random]".
+It has a weapon "[one of]awesome bat, a double rainbow appearing for a brief second[awesome bat proc][or]bat of awesomeness[or]indestructible length of awesome-wood[at random]".
 Weapon Damage of awesome bat is 6.
 Weapon Type of awesome bat is "Melee".
 Objsize of awesome bat is 4.
@@ -517,10 +517,10 @@ Weapon Damage of zephyr bashing riot shield is 8.
 Weapon Type of zephyr bashing riot shield is "Melee".
 Objsize of zephyr bashing riot shield is 4.
 Hitbonus of zephyr bashing riot shield is 0. [nothing special]
-Scent of the zephyr bashing riot shield is "The zephyr protective riot shield smells faintly of suppressive authority.".
+Scent of the zephyr bashing riot shield is "The Zephyr bashing riot shield smells faintly of suppressive authority.".
 
 to say RiotShieldAttackDesc:
-	say "     A black shield that zephyr's riot security use to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]RSProtectMode[end link] though, and direct your shield to more defensive purposes instead.";
+	say "     A black shield that Zephyr's riot security uses to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]RSProtectMode[end link] though, and direct your shield to more defensive purposes instead. ";
 
 riotshieldProtectMode is an action applying to one topic.
 
@@ -530,8 +530,8 @@ check riotshieldProtectMode:
 	if carried of zephyr bashing riot shield < 1, say "     What shield? You're not holding one right now." instead;
 
 carry out riotshieldProtectMode:
-	if zephyr bashing riot shield is equipped:
-		now zephyr bashing riot shield is not equipped;
+	if zephyr bashing riot shield is wielded:
+		unwield zephyr bashing riot shield silently;
 		say "     You lower your shield and look at it, contemplating how you can defend yourself instead of using it as a blunt weapon.";
 	else:
 		say "     You look at your shield, contemplating how you can defend yourself instead of using it as a blunt weapon.";
@@ -568,7 +568,7 @@ Scent of the Makeshift-Spear is "The wood smells a little musty. It brings back 
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"sharp black tusk"	"One of the tusks of the Void Serpent. It is so sharp that can be used as a quite good weapon, but it's very big and easily throws you off balance."	10	sharp black tusk
+"sharp black tusk"	"One of the tusks of the Void Serpent. It is so sharp it can be used as a quite good weapon, but it's very big and easily throws you off balance."	10	sharp black tusk
 
 sharp black tusk is an armament. It is not temporary.
 It has a weapon "[one of]your very sharp tusk[or]your void monster's tusk[or]your sharp black tusk[at random]".
@@ -576,7 +576,7 @@ Weapon Damage of sharp black tusk is 10.
 Weapon Type of sharp black tusk is "Melee".
 Objsize of sharp black tusk is 4.
 Hitbonus of sharp black tusk is -1. [not a weapon]
-Scent of the sharp black tusk is "The void serpent's tusk actually manages to have a scent, despite coming from the void, and you do not like it. It's undescribably bad, something between rotten and death, even with the apparent good condition of the tusk.".
+Scent of the sharp black tusk is "The Void Serpent's tusk actually manages to have a scent, despite coming from the void, and you do not like it. It's undescribably bad, something between rotten and death, even with the apparent good condition of the tusk.".
 
 Table of Game Objects (continued)
 name	desc	weight	object

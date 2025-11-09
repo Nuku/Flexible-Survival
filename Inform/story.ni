@@ -162,8 +162,7 @@ Include Fighting by Core Mechanics.
 Include Fucking by Core Mechanics.
 Include Game Endings by Core Mechanics.
 Include Gender Pronouns by Core Mechanics.
-Include giving in by Core Mechanics.
-Include Inventory by Core Mechanics.
+Include Giving in by Core Mechanics.
 Include Masturbate by Core Mechanics.
 Include Microwave by Core Mechanics.
 Include Microwaveable Objects by Core Mechanics.
@@ -189,7 +188,6 @@ Include Text Capture by Eric Eve.
 Include Vending Machine by Core Mechanics.
 Include Weapons by Core Mechanics.
 Include Zephyr Phone by Core Mechanics.
-
 Include Milk Items by Core Mechanics.
 Include Cum Items by Core Mechanics.
 
@@ -198,6 +196,7 @@ Book 3 - Loading the Main Game Content
 
 Part 1 - Locations
 
+A room can be restable. A room is usually not restable.
 Include Apocalypse Store by Omen.
 Include Approaching the Capitol Building by Guest Writers.
 Include Astor by Rikaeus.
@@ -221,6 +220,7 @@ Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
 Include Equinoid Camp by Song.
 Include Farm by Wahn.
+Include Ghost Fair by JP.
 Include Gloryhole by SgtPepper234.
 Include Greek Street by Wahn.
 Include Hellfire Club by Gherod.
@@ -253,6 +253,7 @@ Include Stablemasters by Sarokcat.
 Include Stables Hotel by Sarokcat.
 Include State Fair by Sarokcat.
 Include Subterranean Caves by Prometheus.
+Include Swamp Signpost by Voidsnaps.
 Include Tattoo Parlor by Sarokcat.
 Include Tiger Den by Luneth.
 Include Tyr's Club by Kaleem mcintyre.
@@ -293,6 +294,7 @@ Include Control Pills by Hellerhound.
 [Include Disorganization by Kaleem mcintyre.] [Disabled till review]
 Include Diego Events by Vinickus.
 Include Dmitri the Peacock by Aureas Gigas.
+Include Dragon Harem by Voidsnaps.
 Include Dreamcatcher by Qazarar.
 Include Dry Plains Events by Stripes.
 Include Endings by Guest Writers.
@@ -303,10 +305,11 @@ Include Exploration Events by Kurainyx.
 Include Extra Added Scenes by Kaleem mcintyre.
 Include Extra College Events by Speedlover.
 Include Fair Events by Sarokcat.
-Include Fair Events by Sarokcat.
 Include Female Dorm Events by Prometheus.
 Include Feral Events by Guest Writers.
 Include Fire House by Kaleem Mcintyre.
+Include Firbolg Quests by Orangehorned.
+Include Firbolg Tapes by Orangehorned.
 Include Food and Water Finding by Nuku Valente.
 Include Forest Events by Aureas Gigas.
 Include Forest Events by Defth.
@@ -332,6 +335,7 @@ Include Kitsune by Shadowwolf94.
 Include Kitsune Expansion by Shadowwolf94.
 Include Komainu by Voidsnaps.
 Include Latex Quad Husky by Stripes.
+Include Latex Husky Statue by Shiru.
 Include Leonard Events by Stripes.
 Include Little Old Woman by Kaleem mcintyre.
 Include Lizard Parlor by Kaleem Mcintyre.
@@ -417,12 +421,14 @@ Include Anthro Rabbit by Rikaeus.
 Include Arctic Fox by Sarokcat.
 Include Army Ant by Guest Writers.
 Include Avalon Kobold by Taelyn.
+Include Eggy Salamander by Voidsnaps.
 Include Ember Breeder by Stripes.
 Include Automaton by Stripes.
 Include Awesome Tree by Damaged.
 Include Badger by StripeGuy.
 Include Bald Eagle by Stripes.
 Include Batcubus by Blaydrex.
+Include Beag Infection by OrangeHorned.
 Include Biolizardman Brute by Gherod.
 Include Brown Bear by Nuku Valente.
 Include Beaver by Stripes.
@@ -487,8 +493,8 @@ Include Elf by Nuku Valente.
 Include Elk by Stripes.
 Include Elven Hunter by Wahn.
 Include Enhanced Chimera by Stripes.
-Include Erica by Wahn.
 Include Ewe by Luneth.
+Include Fathnach Infection by OrangeHorned.
 Include Feline Gymnast by Guest Writers.
 Include Female Husky by Nuku Valente.
 Include Fennec by Stripes.
@@ -503,6 +509,8 @@ Include Feral Wolf Bitch by Prometheus.
 Include Feral Wolf Herm by Prometheus.
 Include Feral Wolf Male by Prometheus.
 Include Ferret Infection by Luneth.
+Include Fever Dream by JP.
+Include Fire Alicorn by Shiru.
 Include Fire Elemental by Stripes.
 Include Fire Sprite by AGentlemanCalledB.
 Include Flaming Lynx by Stripes.
@@ -536,6 +544,7 @@ Include Grizzly Bear by UrsaOmega.
 Include Gryphons Plot by Guest Writers.
 Include Gunbunny by Stripes.
 Include Gyrwolf Gryphon by Prometheus.
+Include Hallucination by JP.
 Include Harpy by Nuku Valente.
 Include Hawkman by Sarokcat.
 Include Hellfire Demon by Gherod.
@@ -587,6 +596,7 @@ Include Latex Mistress by Stripes.
 Include Latex Wolf by Stripes.
 Include Leopardman by Vinickus.
 Include Lernean Hydra by Prometheus.
+Include Limbo Fox by JP.
 Include Liquidshifter by Ssely.
 Include Lizard Girl by Damaged.
 Include Lusty Skunk by Nuku Valente.
@@ -743,13 +753,14 @@ Include Zebra by Luneth.
 
 Part 4 - NPCs
 
+
 Include Absinthe by Bigfish15079.
 Include Ace by Aureas Gigas.
 Include Adam by Wahn.
-Include Addicted Breeder by Voidsnaps.
 Include Aeca by Wahn.
 Include Aerana by Gherod.
 Include Alex by Stripes.
+Include Alon by Voidsnaps.
 Include Alpha by Wahn.
 Include Arcanologist by Taelyn.
 Include Argos by Voidsnaps.
@@ -811,6 +822,7 @@ Include College Guards by Rikaeus.
 Include Colleen by Prometheus.
 Include Corbin by Wahn.
 Include Coura by Wahn.
+Include Cyn by JP.
 Include Cynthia by Prometheus.
 Include Daisy by Sarokcat n Verath.
 Include Damien by Gherod.
@@ -859,6 +871,7 @@ Include Genevieve by Prometheus.
 Include Garrett by SgtPepper234.
 Include Gerty by Qazarar.
 Include Glory by Wahn.
+Include Giving by Orangehorned.
 Include Good Alexandra by Prometheus.
 Include Gordon by Rikaeus.
 Include Gregory by Wahn.
@@ -871,6 +884,7 @@ Include Harold by Sarokcat.
 Include Hazel Summers by Prometheus.
 Include Hayato by Gherod.
 Include Helen by Wahn.
+Include Helios by Voidsnaps.
 Include Hellfire Workers by Gherod.
 Include Help Book by Prometheus.
 Include Henry by Wahn.
@@ -909,6 +923,7 @@ Include Kathy by Sundered Dragon.
 Include Keiran by Voidsnaps.
 Include Kerr & Talov by Wahn.
 Include Kerry by Voidsnaps.
+Include Knott by Orangehorned.
 Include Kosk by Voidsnaps.
 Include Krampus by Wahn.
 Include Kristen by Stripes.
@@ -925,6 +940,7 @@ Include Lindsey by Prometheus.
 Include Lingau by Wahn.
 Include Logan by Wahn.
 Include Lucy by Stripes.
+Include Luke by Alexeo.
 Include Lumi by Prometheus.
 Include Lux & Umbra by Prometheus.
 Include Mack by Stripes.
@@ -1005,6 +1021,7 @@ Include Skarnoth-Brutus Scenes by Luneth.
 Include Solariel by Prometheus.
 Include Solstice by Stripes.
 Include Sonny by Rikaeus.
+Include Soot by Voidsnaps.
 Include Spike by Wahn.
 Include Stag by Wahn.
 Include Stella by Stripes.
@@ -1046,6 +1063,7 @@ Include Zephias by Wahn.
 Include Zigor by Stripes.
 Include Ziix by Voidsnaps.
 Include Zoe by Kernog.
+
 
 Part 5 - Companions and Allies
 

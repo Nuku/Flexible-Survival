@@ -18,10 +18,8 @@ to say fsdm attack:
 			if Name entry is "Feral Sea Dragoness":
 				now MonsterID is y;
 				break;
-		if "Male Preferred" is listed in feats of Player:
+		if Player is MalePreferred:
 			now sex entry is "Male";
-		else if "Female Preferred" is listed in feats of Player:
-			now sex entry is "Female";
 		else if "Herm Preferred" is listed in feats of Player:
 			now sex entry is "Both";
 		else:
@@ -185,12 +183,12 @@ to say fsdm attack:
 				CreatureSexAftermath "Player" receives "AssFuck" from "Feral Sea Dragon";
 			else if anallevel is 3 and (a random chance of 1 in 4 succeeds or (Player is kinky and a random chance of 2 in 5 succeeds)): [rimjob]
 				say "     Carefully, the beast shifts more of its weight over you. [if HP of Player < 1]Much in spite of what protests you can offer against him, he's simply too heavy for you to make any effort of pushing him off[else]Satisfied with his grip on you, he seems more intent on abusing you rather than fucking you properly, an intent of which he obligingly informs you when you feel his tongue begin to force its way past your anal ring[end if].";
-				say "     [if scalevalue of Player < 4 and the player is not twistcapped]The slimy organ really puts the strain on you as it's too large to easily fit in that hole, but the beast is diligent if nothing else and in due time you feel it slowly worm its way in. You're so diminutive relative to his own scale that your behind is easily eclipsed by his toothy maw, making you frightful that the beast may have half a mind to swallow you whole, though for now it only has the effect of coating your lower half in his saliva[else]It's initial efforts are probing, curious as to how pliable your hole might be, before the slimy organ begins to worm its way into the depths of your bowels with little obstruction. With a huff and a rumble the unengulfed portion of his long frequently buckles and bends prior to its brief re-immersion, the organ making a mess of your [bodytype of Player] thighs and groin as he fucks you with his tongue[end if].";
+				say "     [if scalevalue of Player < 4 and the player is not twistcapped]The slimy organ really puts the strain on you as it's too large to easily fit in that hole, but the beast is diligent if nothing else and in due time you feel it slowly worm its way in. You're so diminutive relative to his own scale that your behind is easily eclipsed by his toothy maw, making you frightful that the beast may have half a mind to swallow you whole, though for now it only has the effect of coating your lower half in his saliva[else]It's initial efforts are probing, curious as to how pliable your hole might be, before the slimy organ begins to worm its way into the depths of your bowels with little obstruction. With a huff and a rumble the unengulfed portion of his long tongue frequently buckles and bends prior to its brief re-immersion, the organ making a mess of your [bodytype of Player] thighs and groin as he fucks you with his tongue[end if].";
 				say "     Its fervent motion doubtlessly lubricated by copious amounts of the beast's saliva, you feel his wanton affections grab a hold of you, pulling you further and further into a compliant and aroused state until you are overwhelmed by the ecstasy of the beast's touch.";
 				if Player is male:
-					say "     Your audible moans amusing to the dragon, it's not long before your [cock size desc of Player], [bodytype of Player] dick[if Cock Count of Player > 1]s explode with their[else] explodes with its[end if] inevitable release[if Ball Size of Player > 4]. You fire off gout after excessive gout of seed against yourself and the beast, so much so that it appears to mildly perturbed, clearly not that interested in your fluids at all, let alone in this much excess[else]. You convulse with every successive throb of your release, spilling your seed against both yourself and the dragon, not that he seems to particularly care[end if]. He continues to milk you dry of your fluids before both his tongue and his body relinquishes its hold on you.";
+					say "     Your audible moans amusing to the dragon, it's not long before your [cock size desc of Player], [bodytype of Player] dick[if Cock Count of Player > 1]s explode with their[else] explodes with its[end if] inevitable release[if Ball Size of Player > 4]. You fire off gout after excessive gout of seed against yourself and the beast, so much so that it appears to be mildly perturbed, clearly not that interested in your fluids at all, let alone in this much excess[else]. You convulse with every successive throb of your release, spilling your seed against both yourself and the dragon, not that he seems to particularly care[end if]. He continues to milk you dry of your fluids before both his tongue and his body relinquish their hold on you.";
 				else:
-					say "     [if Player is female]Your audible moans amusing to the dragon, it's not long before your writhe with each concussive wave of pleasure as you orgasm, your sexual fluids spraying against the beast's irreverent organ. He inevitably pulls his tongue free, taking this opportunity to lick you clean of your climax, savoring your taste before he finally crawls off of you[else]Your audible moans amusing to the dragon, you can only writhe in ecstatic agony as he continues to assault you with no end in sight. You can't satisfy these overwhelming desires and you feel like the beast's irreverent affection will knock you unconscious before he finally relents. Satisfied with his torment, both his tongue and his body relinquish his hold from you[end if].";
+					say "     [if Player is female]Your audible moans amusing to the dragon, it's not long before you writhe with each concussive wave of pleasure as you orgasm, your sexual fluids spraying against the beast's irreverent organ. He inevitably pulls his tongue free, taking this opportunity to lick you clean of your climax, savoring your taste before he finally crawls off of you[else]Your audible moans amusing to the dragon, you can only writhe in ecstatic agony as he continues to assault you with no end in sight. You can't satisfy these overwhelming desires and you feel like the beast's irreverent affection will knock you unconscious before he finally relents. Satisfied with his torment, both his tongue and his body relinquish his hold from you[end if].";
 				say "     He turns to depart. Still with some energy but still driven into a lustful frenzy by the creature's influence, you try to crawl after him only for him to dive back into the water's depths. You collapse from exhaustion, and it takes you awhile to get back up and clean the mess of bodily fluids the dragon left in his wake.";
 				CreatureSexAftermath "Player" receives "Other" from "Feral Sea Dragon";
 			else: [oral]
@@ -713,10 +711,8 @@ to say PrepCombat_Feral Sea Dragon:
 	now firebreathready is false;
 	now tempnum2 is 0;
 	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
-		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
 	else:
@@ -788,8 +784,8 @@ When Play begins:
 	now libido entry is 50;
 	now loot entry is "";
 	now lootchance entry is 0;
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is "sea dragon cum";
+	now MilkItem entry is "feral sea dragon milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "feral sea dragon cum";
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]large[or]bulky[or]aquatic[or]muscled[at random]";

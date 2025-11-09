@@ -515,7 +515,7 @@ to say RazorbackBoar wins:
 		say "     With a satisfied grunt, the boar puts a hand on your head to guide you as you go down on him, stroking your head as he does so. 'Yeah, and play with my balls too,' comes the next command pretty soon, prompting you to raise your hands and brush them along his furry thighs to cup his balls. Slurping on Garth's massive shaft and fondling his sperm-factories, you surprise yourself a bit with the eagerness to service this powerful being. Though as an idle thought tells you - there is a definite animal magnetism to him that just can't be denied. And so you give Garth a blowjob that soon leads over to him all-out face-fucking you as arousal starts to mount, ultimately culminating in him giving a lusty roar and ramming his shaft down your throat and letting loose a deluge of cum to fill your stomach. It just seems like there is no end to the pulsing of his rod, with throb after throb of virile seed shooting through it.";
 		WaitLineBreak;
 		say "     The virile boar cums - a lot - and is still pumping more sperm into you by the time other males would already be ready to doze off after sex. It is so much that you do feel sated as if you just had a heavy meal, and your air supply is getting a bit low too. Finally, there is little choice but to either pull off his shaft or pass out, so you plant both hands on his hips and give a push away from him, breaking the boar's hold on you. As you fall back on your ass, coughing and gasping, Garth's erection keeps spurting several more long spurts of seed onto the ground before his orgasm slowly starts to wind down. 'Phew, I really needed that,' the anthro pig finally groans, then looks down at you and adds, 'Oh, sorry for getting a bit carried away. But hey - small price for you trespassing, eh?' With that said, the boar-man gives you a satisfied nod and walks off into the forest.";
-		NPCSexAftermath Player receives "AssFuck" from Garth;
+		NPCSexAftermath Player receives "OralCock" from Garth;
 
 To say RazorbackBoar loses:
 	project the Figure of Garth_face_icon;
@@ -810,8 +810,8 @@ When Play begins:
 	now libido entry is 60;
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "razorback boar male milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "razorback boar male cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]stocky[or]bulky[or]powerful[at random]";

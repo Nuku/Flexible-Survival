@@ -909,7 +909,7 @@ When Play begins:
 	now libido entry is 25; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "human survivor milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -1591,7 +1591,10 @@ to say BrennanCultQuest2:
 			say "     While the fish-man starts to thrust in and out of you, the other cultists all around start to occupy themselves with similar pursuits. Oftentimes opening or even removing their robes reveals bodies that are at least partially transformed to match the creature you're getting fucked by. They cultists pair up in twos or threes, touching and stroking one another, with some vanishing upstairs, others just starting to go at each other right in the altar room. Brennan is approached too, but the man gives an excuse of 'I want to watch the Deep One' and rubs his crotch through the robe, which the others accept without complaint. Moans and the squelching sounds of sex begin to fill the beach house all around you.";
 			WaitLineBreak;
 			say "     Gasping and moaning due to the hard thrusts of the aquatic hunk as he has his way with your body, you do your best to get him off fast, including squeezing your inner muscles tight around his shaft as he fucks you. He enjoys this quite a bit, if you're interpreting the chattering noise from the depth of his chest the right way, as well as his repeated comments of 'Gtha Sh'lagh!' Feeling him moving inside you is actually pretty nice, his nonhuman cock seeming to hit all the right spots, again and again. After being ravaged by fish-monster for a good, long while, the aquatic hunt grunts a pleasured 'Ie ko'met glugh!' His clawed hands wrap tightly around your raised legs, leaving shallow cuts on them as he thrusts roughly into your yearning body, then drives his bestial cock as deep as it can reach, his genital slit grinding up against your crotch. He comes, hard, releasing surge after surge of creamy cum into your sordid, clenching depths, its virile heat spreading through your body and claiming your [if Player is female]cunt[else]rear[end if] as his.";
-			CreatureSexAftermath "Player" receives "PussyFuck" from "Deep One";
+			if Player is female:
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Deep One";
+			else:
+				CreatureSexAftermath "Player" receives "AssFuck" from "Deep One";
 			if Player is impreg_able:
 				impregnate with "Deep One"; [cult sex always makes pregnant, no chance thing about it!]
 			[TODO: Song: Consider splitting this path for players with low sanity. Say, 20-30 as a threshold for a unique bad end. See line 1068 as well]

@@ -8,25 +8,6 @@ Section 1 - Cum Vial
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"dryad cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Dryad Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	dryad cum
-
-dryad cum is a grab object.
-dryad cum is cum.
-dryad cum is infectious.
-Purified of dryad cum is "distilled cum".
-Strain of dryad cum is "Dryad".
-Usedesc of dryad cum is "[dryad cum use]";
-
-to say dryad cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing dryad cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, like a mix of semen and tree sap.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
 "dryad milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Dryad Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	dryad milk
 
 dryad milk is a grab object.
@@ -63,7 +44,8 @@ To say dryad defeat:
 				say "     ([link]Y[as]y[end link]) - Turn the tables back in your favor, and dominate the dryad";
 				say "     ([link]N[as]n[end link]) - Don't resist the dryad, letting her dominate you";
 				if Player consents:
-					say "     Straining your muscles against the vines with the use of a tight flex, you are able to break free from their hold. The dryad, sits in shock and fear beneath you, offering little resistance on her part as you place your hands upon her slender hips. Turning her around, so her ass faces towards you, you line your cock up with the syrupy folds of her now leaking snatch. It is obvious, that despite that fact that the dryad is not used to defeat, she seems to be enjoying it. With a pleased smirk, you fully reinstate your dominance over the woman, thrusting your cock balls deep inside of her. Half expecting another vine like assault, your muscles tense in preparation. But another assault doesn't come. Instead, the dryad moans whorishly in pleasure beneath you. 'Oh yes!' she shouts at the top of her lungs. 'Who knew mortals could... umph!' You smirk as a soul-crushing orgasm leaves the dryad unable to finish her previous sentence. Her pussy clenching your shaft tightly, her eyes roll to the back of her head, becoming lidded with a powerful, submissive lust. Responding to that lust, you fuck the dryad with an eager, and undeniable but animalistic vigor. Between the tightness of the dryad's cunt, and the sheer sexiness that comes from that fact that you have dominated such a powerful woman, it isn't long before you find yourself burying your load deep inside of her. Feeling you shoot powerful spurts of cum into her pussy the dryad orgasms once more before falling exhausted to the ground before you. Tired yourself, you make sure all your items are in order, before taking out an empty bottle from your pack, and filling it to the brink with some of the dryad's cum. After all, who knows when something like that may ever come in handy...";
+					say "     Straining your muscles against the vines with the use of a tight flex, you are able to break free from their hold. The dryad, sits in shock and fear beneath you, offering little resistance on her part as you place your hands upon her slender hips. Turning her around, so her ass faces towards you, you line your cock up with the syrupy folds of her now leaking snatch. It is obvious, that despite that fact that the dryad is not used to defeat, she seems to be enjoying it. With a pleased smirk, you fully reinstate your dominance over the woman, thrusting your cock balls deep inside of her. Half expecting another vine like assault, your muscles tense in preparation. But another assault doesn't come. Instead, the dryad moans whorishly in pleasure beneath you. 'Oh yes!' she shouts at the top of her lungs. 'Who knew mortals could... umph!'";
+					say "     You smirk as a soul-crushing orgasm leaves the dryad unable to finish her previous sentence. Her pussy clenching your shaft tightly, her eyes roll to the back of her head, becoming lidded with a powerful, submissive lust. Responding to that lust, you fuck the dryad with an eager, and undeniable but animalistic vigor. Between the tightness of the dryad's cunt, and the sheer sexiness that comes from that fact that you have dominated such a powerful woman, it isn't long before you find yourself burying your load deep inside of her. Feeling you shoot powerful spurts of cum into her pussy the dryad orgasms once more before falling exhausted to the ground before you. Tired yourself, you make sure all your items are in order, before taking out an empty bottle from your pack, and filling it to the brink with some of the dryad's cum. After all, who knows when something like that may ever come in handy...";
 					CreatureSexAftermath "Dryad" receives "PussyFuck" from "Player";
 					ItemGain dryad cum by 1;
 					infect "Dryad";
@@ -170,7 +152,7 @@ When Play begins:
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "dryad cum";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "dryad milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is "dryad cum";
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

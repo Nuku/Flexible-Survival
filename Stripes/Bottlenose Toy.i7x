@@ -212,7 +212,7 @@ to say beatthedolphinflatable:
 			say "     Having beaten the inflatable toy, you decide you want to have a little fun with her. Taking her own towel, you wind it around her wrists and push her onto the sandy beach. She squirms as if trying to get away, all while raising her tail and bubble bottom and trying to stifle her playful giggles. As she's so willing to play along, you climb atop her and line up your stiff cock with her leaking pussy. She moans softly as you sink it into her. She trills in squeaky delight as you mount her. Her PVC pussy is quite nice and warm, and resizes itself to be a perfect fit for your [cock size desc of Player] [Cock of Player] cock. You hold the playfully squirming pooltoy down as you pound away at her, her inflated body shifting and deforming a little under your weight while it supports you softly. There's just something about her cute, innocent nature that really turns you on and you fuck her hard and fast, knowing you can't hurt her stretchy body. After a nice, satisfying ride atop her smooth body, you push into her one last time and unleash your hot load, spilling a pool of your hot cum inside her[if daytimer is day]. Under the bright sun, you can see the darker streaks and pool your semen makes against her inner skin[end if]. Finished, you get up and the bottlenose girl easily unwinds her towel and runs back off into the water. She gives you a farewell wave to you before getting back to splashing around, wearing her towel now as a cute, red bonnet.";
 		else if Libido of Player > 30 and Player is male and a random chance of 3 in 4 succeeds:
 			say "     The inflatable dolphin girl giggles playfully as you pin her down on the sandy beach, smiling happily up at you. Looking over her strange body, you can't help but find her cute and adorable. Feeling yourself get hard, you decide to listen to your cock and move to line it up with her wet slit. She moans softly and helps you guide it into her, eager to keep playing with you. She trills in squeaky delight as you mount her. Her PVC pussy is quite nice and warm, resizing itself to best fit your [cock size desc of Player] [Cock of Player] cock. As you thrust into her slick, lubricated hole, you let your hands wander across her body, running along the seams of her unusual skin, then to her breasts. They are like firm balloons, yielding to your touch as your squeezes make her giggle happily. But when you start playing with her nozzle nipples, she starts panting and moaning, drawing in fresh air to replace what you release as you tease them. Leaning forward, you blow into one, making her breast swell temporarily and that sets the bottlenose girl off, cumming hard around your cock and soaking your crotch in her slick juices. You cum as well, blasting your hot load into her, painting her inner skin with your semen. After you're finished, you let her back up[if daytimer is day], the sunlight showing the sticky streaks of your cum clinging to the inside of her skin,[end if] and watch her bound her way back into the water to play in the waves with her towel now around her waist like a skirt.";
-		else if Cunt Count of Player > 45 and a random chance of 2 in 3 succeeds:
+		else if Cunt Count of Player > 0 and a random chance of 2 in 3 succeeds:
 			say "     Having beaten the inflatable toy, you decide to have a little fun with her. Taking a hold of her yielding head, you pull her face to your pussy. Giggling happily, she nuzzles at your groin and starts licking. Her tongue is slick and plasticky like the rest of her, sliding smoothly along your sensitive folds and slipping into your cunt. You stroke her smooth head encouragingly and she licks all the more eagerly, pressing her dolphin nose all the more firmly against your pussy as she tries to please you. You moan in sudden surprise as the inflatable snout pushes into you, filling you like a dildo as she seeks to lick deeper inside you. She giggles happily at your reaction and runs her fin-like hands over your hips, licking and bobbing his head until you cum. Satisfied by the strange bit of fun with the toy, you let her get back up and she bounds her way happily back to the water, folding her towel and wrapping it around herself like a long, red scarf.";
 		else:
 			say "     Having beaten the inflatable toy, you give her a swat on the ass and send her giggling back to the water to play in the waves.";
@@ -438,12 +438,12 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Bottlenose Toy:
 	setmongender 4; [creature is female]
 	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
+	if Player is FemalePreferred:
+		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
 	else:
-		now sex entry is "Female";
+		now sex entry is "Male";
 	if dolphinmode is 0:
 		if (HardMode is false and level of Player < 5) or a random chance of 3 in 4 succeeds:	[girl only at low level]
 			now dolphinmode is 1;
@@ -536,8 +536,8 @@ When Play begins:
 	now libido entry is 60; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "bottlenose toy milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "bottlenose toy cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]inflatable[or]plasticky[or]light[or]buoyant[at random]";

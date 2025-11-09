@@ -70,6 +70,7 @@ to say YingletsFuck1:
 	WaitLineBreak;
 	say "     Soon enough, you feel the males bucking against you faster and faster. You hold your hips in place, letting the boys thrust into you as fast as they please, while you focus on the one in your mouth. He cries out in delight and you taste cum on your tongue. You lock your lips around the base of his shaft and start swallowing each squirt of his seed. The other two drive you to your own peak, and you slam your pussy down on the creature below you (careful not to crush his fragile pelvis). All at once, you cum in unison. After taking a moment to bask in that afterglow, you clean yourself and leave the yinglets in a pleasure-coma on the floor.";
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Yinglet";
+	CreatureSexAftermath "Player" receives "OralCock" from "Yinglet";
 
 to say YingletsFuck2:
 	say "     You feel these little upstarts need a little lesson, and with your own lust demanding attention, you're the perfect person to teach it. You give the 'alpha' a shove onto his back and squat down over him. 'Please, forgive, forgiiive!' He stops fearing for his life when you grab his head and shove his muzzle up against the tip of your cock. He understands his place now... He timidly opens his maw and starts lashing his tongue against your tip, which gives you opportunity to shove some of your shaft inside. He squeaks, but accepts his fate. With their leader submitting so fully to you, the other yinglets are at your beck and call. You call out to them and insist they get to work. They scurry up next to you, eager to avoid your wrath. They stand there looking like idiots, not exactly sure what to do. You roll your eyes and grab them each by the head.";
@@ -151,8 +152,8 @@ When Play begins:
 	now libido entry is 40;
 	now loot entry is "barnacle encrusted gem";
 	now lootchance entry is 30;
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "yinglet milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "yinglet cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 2;
 	now body descriptor entry is "[One of]slender[or]flexible[or]noodle[or]noodle-like[at random]";

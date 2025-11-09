@@ -597,7 +597,10 @@ to say alexandra_gshep: [Tell Alexandra about Buster and the G-Shep Squad]
 			WaitLineBreak;
 			say "     You go at it harder and faster, vaguely thinking there was some reason you were trying to get them off quickly, though you can't quite recall why at the moment. Certainly you're eager for the G-Shep's to cum, wanting their hot seed inside you - that must be it. When the one you're stroking gets off, you grope around on the other side of you and find another dick to play pump, this one aimed at you.";
 			say "     When that knot pushes its way into you and inflates to full size, that throbbing dick is tied tightly in your gripping [if Player is female]cunny[else]rectum[end if]. The thrusting gets all the more frantic, now short and super-fast humps that tug and push the dog dick locked inside you. Feeling it pulse inside you, there comes a rush of hot, gooey warmth as spurt after spurt of doggy cum shoots into your [if Player is female]vagina[else]bowels[end if], setting off your own release. The guy you're sucking cums not long after, feeding you thick shots of his musky load. This sexy show must finally be enough for the one in your hand to get off as well, as you're rewarded with more canine semen painting your side.";
-			CreatureSexAftermath "Player" receives "PussyFuck" from "German Shepherd Male";
+			if Player is female:
+				CreatureSexAftermath "Player" receives "PussyFuck" from "German Shepherd Male";
+			else:
+				CreatureSexAftermath "Player" receives "AssFuck" from "German Shepherd Male";
 			infect "German Shepherd Male";
 			infect "German Shepherd Male";
 			WaitLineBreak;

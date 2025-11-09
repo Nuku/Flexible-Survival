@@ -134,13 +134,13 @@ to say cfgdesc:
 		setmongender 4; [creature is female]
 		say "     Before you is one of the most unusual forms the infection has taken, a wholly mechanical fox-creature. Looking over this clockwork fox girl, her body is made from metal segments and brass wire fur, which covers the internal mechanics of tiny metal gears. She whirrs and clicks as she moves in a jerking, hesitant manner, occasionally twitching as something catches in her gears for a few seconds. Her head is drawn forward into a muzzle, and the pointed, brass ears at the top give it a very foxy look. The anthro's body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but it's also covered in plated sections and protrusions of gears. Her chestplate has two small breasts formed onto it, her arms and legs are thin and vulpine, leading down to small, clawed paws, and she has a long plumed tail that seems to be made from extremely soft wire. The tail moves with the faint clicks of cogs and gears. A private peek reveals that she has a thick-lipped cunt nestled between her legs, made of shimmering, coppery flesh. It drips a clear lubricant, that glistens like oil, as the female mechanism moves forward to attack you.";
 		now sex entry is "Male";
-		if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
+		if Player is FemalePreferred, now sex entry is "Female";
 		if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
 	else if cfgmode is 2:	[male]
 		setmongender 3; [creature is male]
 		say "     Before you is one of the most unusual forms the infection has taken, creating a wholly mechanical fox-creature. Looking over this clockwork fox guy, his body is made from metal segments and brass wire fur, covering internal mechanics of tiny metal gears. He whirrs and clicks as he moves in a slightly odd manner, occasionally twitching as something internal catches before releasing a moment later. His head is drawn forward into a muzzle, and the pointed, brass ears at the top give it a very foxy look. The anthro's body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but it's also covered in plated sections and protrusions of gears. His segmented chestplate gleams brightly, as if polished brass. His arms and legs are thin and vulpine, leading down to small, clawed paws, and he has a long plumed tail that seems to be made from extremely soft wire. The tail moves with the faint clicks of cogs and gears. A private peek reveals that he has a long, knotted cock made of coppery flesh, and it appears to be driven by a clockwork mechanism. It leaks a clear lubricant, that glistens like oil, as the male mechanism moves forward to attack you.";
 		now sex entry is "Female";
-		if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
+		if Player is MalePreferred, now sex entry is "Male";
 		if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
 
 Table of CombatPrep (continued)
@@ -231,8 +231,8 @@ When Play begins:
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "clockwork fox milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "clockwork fox cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]clockwork[or]mechanical[or]compact[at random]";

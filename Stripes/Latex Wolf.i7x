@@ -15,23 +15,23 @@ To say latex wolf loses:
 		say "     [LatexWolfSexMenu]";
 	else:
 		LineBreak;
-		say "     You walk away after checking him over for loot.";
+		say "     You walk away after checking it over for loot.";
 	if HP of Bradford is 3:
 		if bradfordbounty > 0:
 			LineBreak;
 			decrease bradfordbounty by 1;
 			say "     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
 		else:
-			say "     This encounter reminds you of your deal with bounty hunter, Bradford. You should go see him about getting your share of the reward.";
+			say "     This encounter reminds you of your deal with the bounty hunter, Bradford. You should go see him about getting your share of the reward.";
 
 To say latex wolf wins:
 	if ( a random chance of 1 in 4 succeeds or ( Player is kinky and a random chance of 1 in 4 succeeds ) ) and inasituation is false:
-		say "     As you go down in front of the wolf creature, [if HP of Player > 0]unwilling[else]unable[end if] to continue to oppose it, you are pounced upon by the latex creature. As it climbs atop you, it seems to lose structural integrity, melting and flowing down over you. You try to struggle as the black fluid flows over you, gradually engulfing you, but it clings to you tightly and makes it hard to move[if Cock Count of Player > 1]. As the dark goo flows over your cocks, it squeezes at them, making you aroused despite yourself[else if Cock Count of Player is 1]. As the dark goo flows over your cock, it squeezes at it, making you aroused despite yourself[end if][if Cunt Count of Player > 1]. The goo forms phallic bulges that are pressed into your cunts, stuffing them full of flowing black latex that throbs inside you, making your vaginas quiver with arousal[else if Cunt Count of Player is 1]. The goo forms phallic bulges that are pressed into your cunt, stuffing it full of flowing black latex that throbs inside you, making your vagina quiver with arousal[end if][if anallevel > 1]. More of the thick, flowing latex presses its way into your anus, stuffing your rear with a swelling cock and knot tying it inside you[end if].";
+		say "     As you go down in front of the wolf creature, [if HP of Player > 0]unwilling[else]unable[end if] to continue to oppose it, you are pounced upon by the latex creature. As it climbs atop you, it seems to lose structural integrity, melting and flowing down over you. You try to struggle as the black fluid flows over you, gradually engulfing you, but it clings to you tightly and makes it hard to move[if Cock Count of Player > 1]. As the dark goo flows over your cocks, it squeezes at them, making you aroused despite yourself[else if Cock Count of Player is 1]. As the dark goo flows over your cock, it squeezes at it, making you aroused despite yourself[end if][if Cunt Count of Player > 1]. The goo forms phallic bulges that are pressed into your cunts, stuffing them full of flowing black latex that throbs inside you, making your vaginas quiver with arousal[else if Cunt Count of Player is 1]. The goo forms a phallic bulge that is pressed into your cunt, stuffing it full of flowing black latex that throbs inside you, making your vagina quiver with arousal[end if][if anallevel > 1]. More of the thick, flowing latex presses its way into your anus, stuffing your rear with a swelling cock and knot tying it inside you[end if].";
 		say "     As your body is subject to this abuse, the black goo continues to spread over you, covering your [bodydesc of Player] body and over your [FaceSpeciesName of Player in lower case] head. Your head is engulfed and your mouth and nose covered in flowing latex, cutting off your air supply momentarily. As you begin to grow woozy from lack of oxygen, an air passage is opened and you are allowed to breathe. Having seized control of your [bodytype of Player] body, the latex wolf works its flowing, rubbery goo over [if Player is female or anallevel > 1]and inside [end if]your flesh, using your body for its own pleasure. It eventually cums, spraying gooey black semen [if Player is female or anallevel > 1]inside you[else]over you[end if][if Player is male] while pumping out your own seed onto the ground. Your balls drained, it sends a tendril of black goo flowing along your urethra and flowing into your balls, claiming them with its own dark cum until they're full and swollen with it[end if].";
 		say "     Weak and thoroughly used by the wolf creature, you are left lying on the ground as it flows off of you, much of its tainted latex having bonded with you. You can feel it sinking into your [bodytype of Player] body, seeking to make you like itself.";
 		if Player is female:
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Latex Wolf";
-		if Player is male and Anallevel > 1:
+		if anallevel > 1:
 			CreatureSexAftermath "Player" receives "AssFuck" from "Latex Wolf";
 		if Player is male and Ball Size of Player < 6:
 			BallsGrow Player by 1;
@@ -67,7 +67,7 @@ To say latex wolf wins:
 Part 2 - Sex Menu
 
 to say LatexWolfSexMenu:
-	say "     What shall you do with the Latex Wolf?";[Which Fuck]
+	say "     What shall you do with the latex wolf?";[Which Fuck]
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -76,7 +76,7 @@ to say LatexWolfSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Butt Fuck";
 		now sortorder entry is 1;
-		now description entry is "Fuck the Latex Wolf in the ass";
+		now description entry is "Fuck the latex wolf in the ass";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -110,12 +110,12 @@ to say ButtFuckLatexWolf:
 	WaitLineBreak;
 	say "     You stroke the creature's cock in time with your thrusts, fucking him hard enough to rock him forward, causing him to squeak with the movement. The pleasure for you both starts to build, and among the squeaking and heavy breathing, you can hear the wolf whimper, followed by a pleasured howl as he cums. You pull your hand away from his cock as black liquid-latex cum gushes onto the ground. You pause for a moment as the wolf's ears fold and appear to begin melting. He looks back towards you, a happy grin on the canine's face as his whole body starts to soften and melt.";
 	say "     You're so close to finishing. Do you pull out and cum safely on him, or do you stay inside and risk getting some of the melting latex on you?";
-	say "     [link]Yes[as]y[end link] - Cum Inside";
-	say "     [link]No[as]n[end link] - Pull Out";
+	say "     [link]Yes[as]y[end link] - Cum inside.";
+	say "     [link]No[as]n[end link] - Pull out.";
 	if Player consents:
 		LineBreak;
 		say "     You are determined to finish fucking the wolf, holding onto his hips and gripping tightly as you slam into him with reckless abandon. Your pleasure builds as you use the melting wolf's ass like a sex toy, the pressure building until you can't hold it in any longer. With a final thrust, you hilt in him, releasing your seed deep into his rear as it starts to melt and collapse around you. Pulling out, you manage to free yourself from his now-gooey depths, but some of the liquid latex still clings to your spent shaft. It moves like a creature of its own, slowly spreading [If Ball Size of Player > 0]to encapsulate your balls[else]across your crotch[end if]. You try pulling it off of you, but your efforts prove in vain, the ebon latex clinging to your fingers and spreading over more of your body.";
-		say "     Helpless to it's attack, it continues to slide across your body, the latex cool to the touch as it slithers across your flesh like a living bodysuit. By the time it covers you completely, it starts to absorb into your skin, merging with you. Whatever damage has been done, has been done, so you reclaim your gear before returning to your goals, wondering if you have made a terrible mistake.";
+		say "     Helpless to its attack, it continues to slide across your body, the latex cool to the touch as it slithers across your flesh like a living bodysuit. By the time it covers you completely, it starts to absorb into your skin, merging with you. Whatever damage has been done, has been done, so you reclaim your gear before returning to your goals, wondering if you have made a terrible mistake.";
 		infect "Latex Wolf";
 	else:
 		LineBreak;
@@ -191,8 +191,8 @@ When Play begins:
 	now libido entry is 5; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "dirty water";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "latex wolf milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "latex wolf cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]rubbery[or]latex[or]animalistic[or]flexible[at random]";
@@ -316,7 +316,7 @@ an every turn rule:
 	if BodyName of Player is "Latex Wolf" and lwcounter - turns > 3:
 		let tt be ( 100 - humanity of Player ) + Libido of Player + a random number between 1 and 50;
 		if tt < a random number between 1 and 250:
-			say "[one of]You feel a strange churning in your latex body and you can feel the metamorphosis spread further[or]You find yourself munching on some rather tasty plastic you found lying around[or][lwmast1][or][lwmast2][or]You eye your supplies, thirsty not for the water, but hungry for the plastic bottle[or]Your contort your flexible latex body and start licking your groin, enjoying the rubbery taste of your leaking fluids and lapping it all up as you climax, spraying into your mouth[in random order]";
+			say "[one of]You feel a strange churning in your latex body and you can feel the metamorphosis spread further[or]You find yourself munching on some rather tasty plastic you found lying around[or][lwmast1][or][lwmast2][or]You eye your supplies, thirsty not for the water, but hungry for the plastic bottle[or]You contort your flexible latex body and start licking your groin, enjoying the rubbery taste of your leaking fluids and lapping it all up as you climax, spraying into your mouth[in random order]";
 			say ". You feel yourself slip a little further into the bizarre infection.";
 			decrease humanity of Player by a random number from 3 to 8;
 			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 2;
@@ -333,7 +333,7 @@ to say lwmast1:
 		say "Overcome with lustful urges, you lay on your back and rub your paws over your cock. You release squeaky growls of pleasure as your pre dribbles onto your body. Your altered paws have trouble gripping your shaft effectively, but you make due with stroking it, eventually spraying your thick, latex-like seed across your body. While you lay there, panting on your back, you lick your paws clean";
 	else:
 		say "Overcome with lustful urges, you lay on your back and rub your paws over your pussy. You release squeaky growls of pleasure as you tease the latex folds and your juices run down your thighs. Your altered paws have trouble teasing your slit effectively, but you make due with stroking it[if Cunt Tightness of Player > 3] and pushing a somewhat malleable paw into your cunt[end if]. Driven to climax eventually, you moan loudly and release a spurt of latex-like femme cum. While you lay there, panting on your back, you lick your paws clean";
-		if Cunt Tightness of Player < 5 and "Male Preferred" is not listed in feats of Player:
+		if Cunt Tightness of Player < 5 and Player is not MalePreferred:
 			increase Cunt Tightness of Player by 1;
 			if "Modest Organs" is listed in feats of Player and Cunt Tightness of Player > 5:
 				now Cunt Tightness of Player is 5;
@@ -341,7 +341,7 @@ to say lwmast1:
 to say lwmast2:
 	if Player is female:
 		say "Overcome with lustful urges, you whimper softly with the need for satisfaction. You spot a plastic rod of roughly the right size and naughty urges fill your mind. Getting yourself lined up properly, you lower your dripping pussy down onto the vaguely phallic object with a moan and start riding it hard and fast. Your pussy grips and squeezes it as if it were a real cock and it becomes increasingly satisfying as your lust builds. Finally climaxing messily, you moan and rise to pull off it, but find your pussy melted and absorbed it after you came";
-		if Cunt Depth of Player < 8 and "Male Preferred" is not listed in feats of Player, increase Cunt Depth of Player by 1;
+		if Cunt Depth of Player < 8 and Player is not MalePreferred, increase Cunt Depth of Player by 1;
 	else:
 		say "Overcome with lustful urges, you whimper softly with the need for satisfaction. You spot a foam latex toy and pounce on it, grinding your cock against the strangely enjoyable material. You rub your throbbing erection against it, moaning as you ride it hard and fast. Your precum dribbles out onto it as it feels increasingly satisfying as your lust builds. Finally climaxing messily, you moan and rise onto all fours, finding that much of the toy has melted away, flowing into your body. You gobble down the sticky and cum-soaked remains with relish";
 
@@ -369,7 +369,7 @@ This is the Latex Wolf Succumbed rule:
 			make no decision;
 		else:
 			Latex Wolf Succumbed Intro;
-			say "     You gurgle wetly as you feel yourself starting the melt. You struggle to escape, but another truck turns its hose on you and you melt away into another messy stain of latex goo in the wake of the deadly trucks.";
+			say "     You gurgle wetly as you feel yourself starting to melt. You struggle to escape, but another truck turns its hose on you and you melt away into another messy stain of latex goo in the wake of the deadly trucks.";
 			the Player is dead;
 	else:
 		Latex Wolf Succumbed Intro;
@@ -404,8 +404,8 @@ This is the Latex Wolf Infection rule:
 		say "     Your intelligence and keen senses for synthetics allows you to catch the occasional quality issue before the molten plastic is even poured. A supervisor notices you doing this and recommends you move to working at that stage all the time. Your affinity for the material prompts you to start proposing small, cost-effective improvements that are met with increasing support. As costs go down and quality rises, you are promoted to devote part of your time to further innovation. At your own suggestion, you are given a desk with a paw-accessible computer next to the vats so you can taste test each one without breaking from your research.";
 		if humanity of Player < 25:
 			say "     As if driven, you throw yourself into your work more and more. You study the science of polymers, reading books and journals. Research made by studying the latex creatures like yourself which have arisen from the infection has been very fruitful and leads you to more success. Over the years, your company has patented many of your formulas and earned loads of money from them, but you don't stop. You publish papers on your own and attend scientific symposiums, but you happily continue working for the toy manufacturer.";
-			say "     One day, you get your team working on a special batch, filling one of the large vats. The complicated mixture is prepared, mixed and melted. As you step up to give it your usual taste test, you fall into it. With a wet moan, you melt into the latex compound while people start yelling and run up to help you. One brave assistant, unconcerned for [if Player is male]herself[else]himself[end if], leans over the mess to grab your hand.";
-			say "     But instead of just grabbing your hand, you end up flowing over [if Player is male]hers[else]his[end if] and across [if Player is male]her body. She[else]his body. He[end if] screams in surprise as you envelop [if Player is male]her[else]him[end if] and start to rise out of the vat as a huge blob of latex. The rest of the people gathered there flee as you start to reform into a huge latex wolf, just as you had hoped would happen. You release your transforming assistant and coat them in your [if Player is male]cum[else]pussy juices[end if] and more of the new formula, making them into a large latex wolf like yourself to be your mate.";
+			say "     One day, you get your team working on a special batch, filling one of the large vats. The complicated mixture is prepared, mixed and melted. As you step up to give it your usual taste test, you fall into it. With a wet moan, you melt into the latex compound while people start yelling and run up to help you. One brave assistant, unconcerned for [if Player is femaleinterested or Player is not maleinterested]herself[else]himself[end if], leans over the mess to grab your hand.";
+			say "     But instead of just grabbing your hand, you end up flowing over [if Player is femaleinterested or Player is not maleinterested]hers[else]his[end if] and across [if Player is femaleinterested or Player is not maleinterested]her body. She[else]his body. He[end if] screams in surprise as you envelop [if Player is femaleinterested or Player is not maleinterested]her[else]him[end if] and start to rise out of the vat as a huge blob of latex. The rest of the people gathered there flee as you start to reform into a huge latex wolf, just as you had hoped would happen. You release your transforming assistant and coat them in your [if Player is male]cum[else]pussy juices[end if] and more of the new formula, making them into a large latex wolf like yourself to be your mate.";
 			say "     Together, you both feast upon the contents of the factory, becoming huge, unstoppable, lustful, latex giants. You have fun attacking the nearby factories, using the little humans as food or playtoys in every perverted way you desire. You transform some into small latex wolves to help keep your human toys penned into your city, but most are absorbed or consumed after your fun is done. All your special friends and lovers get extra-special treatment before being made into large wolves to move on to other cities of their own.";
 			setmonster "Latex Wolf" silently;
 			turn the Player into a "Latex Wolf" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]

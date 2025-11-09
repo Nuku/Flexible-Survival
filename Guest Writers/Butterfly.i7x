@@ -76,8 +76,8 @@ When Play begins:
 	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "testosterone pill";
 	now lootchance entry is 5; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "butterfly milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "butterfly cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]delicate[or]streamlined[or]winged[at random]";
@@ -450,7 +450,7 @@ To say butterfly attack:
 				decrease Cock Length of Player by 1;
 				decrease Cock Length of Player by Cock Length of Player divided by 3;
 				BallsShrink Player by 1;
-				if "Male Preferred" is listed in feats of Player:
+				if Player is MalePreferred:
 					if Cock Length of Player < 5, now Cock Length of Player is 5;
 					if Ball Size of Player < 3, now Ball Size of Player is 3;
 				follow the cock descr rule;
@@ -468,7 +468,7 @@ To say butterfly attack:
 				decrease Cunt Depth of Player by Cunt Depth of Player divided by 3;
 				decrease Cunt Tightness of Player by 1;
 				decrease Cunt Tightness of Player by Cunt Tightness of Player divided by 4;
-				if "Female Preferred" is listed in feats of Player:
+				if Player is FemalePreferred:
 					if Cunt Depth of Player < 5, now Cunt Depth of Player is 5;
 					if Cunt Tightness of Player < 3, now Cunt Tightness of Player is 3;
 				follow the cunt descr rule;
@@ -787,7 +787,7 @@ before using a grab object (called x):
 		if Player is female:
 			say "As you move to slip the pill in your mouth you feel an uneasy shiver run through your cunt[sfn]. [if gestation of child > 0]Your lower belly quivers causing you to feel ill. [end if]Are you sure to still want to use it?";
 			if Player consents:
-				if "Female Preferred" is listed in feats of Player or "Always A Pussy" is listed in feats of Player:
+				if Player is FemalePreferred or "Always A Pussy" is listed in feats of Player:
 					say "Your feat will not allow this to work.";
 					stop the action;
 				continue the action;

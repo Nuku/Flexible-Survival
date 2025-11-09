@@ -708,6 +708,7 @@ to DwarfFucksOral:
 	WaitLineBreak;
 	say "     At some point, he pulls out of your mouth, your face flushed and released altogether as gravity wins over your strength to avoid hitting the ground with the back of your head. Standing and looking down at you is the dwarf with his still half-hard length, shaking any leftovers of his cum still oozing down his cock towards your face as he lets out a mischievous chuckle. 'Damn... I would keep you... but you know... I have no place of my own and I don't wanna share you with anyone else who ends up passing by, so... I'll let you go. You can always come back for me by yourself, ain't that right?' Laughing, he gets ready to leave by shoving his wide cock out of view back into his underwear, pulling his pants back up and tightening the belt, all this while eyeing you from above. 'See you later, bitch [boygirl]!' he shouts, carrying his stone hammer by his shoulder and walking away.";
 	say "     You're left lying on the ground with a belly filled with dwarf cum for some time before you can stand up.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Dwarf Male";
 
 to DwarfFucksPussy:
 	say "     'Now I'm gonna make you bend over for me. I need a tight place to shove my cock inside, and I bet you've got just the thing.' he says while forcing you to crawl on all fours, [if Player is not naked]and the burly dwarf doesn't take any ceremony in lowering your clothes to expose your rear [end if]then taking a time to stroke himself while watching your naked butt. He makes you wait[if Player is submissive], your eagerness to please making you wiggle your backside at him invitingly, [end if] until his manhood stands up hard and proud, already out of his pants and ready to drill your hole deep. 'You're certainly going to feel this when I'm stretching your pussy.' he taunts you, and a look over your shoulder shows you why he's so confident. A good sized cock of about nine inches long, thick as a beer can, is going to enter your cunt and pound it without mercy.";
@@ -719,6 +720,7 @@ to DwarfFucksPussy:
 	say "     It is when he leans himself more over you that you know he's about to hit his climax. 'O-oh... Fuck... You're gonna make me breed your cunt, you dirty bitch!' Maintaining the pace as much as he can, the burly man's cock throbs inside you, and it's not long until a warm liquid begins filling your insides. 'Take it all, my [boygirl]! Oohh yeah!' He keeps grunting and moaning as his entire load is deposited inside your womb, which he keeps fucking until the end of his orgasm. You can't help but reach the point of no return yourself, his dick filling up so well that your body begs for a release, an intense wave of pleasure suddenly bursting through you, making you squirm in lust until it subsides.";
 	say "     At some point, he pulls out of your pussy, your face flushed as you're released to collapse on the ground, exhausted. Standing and looking down at you is the dwarf with his still half-hard length, shaking any leftovers of his cum still oozing down his cock, which lands on your back, as he lets out a mischievous chuckle. 'Damn... I would keep you... but you know... I have no place of my own and I don't wanna share you with anyone else who ends up passing by, so... I'll let you go. You can always come back for me by yourself, ain't that right?' Laughing, he gets ready to leave by shoving his wide cock out of view back into his underwear, pulling his pants back up and tightening the belt, all this while eyeing you from above. 'See you later, bitch [boygirl]!' he shouts, carrying his stone hammer by his shoulder and walking away.";
 	say "     You're left lying on the ground with your insides filled with dwarf cum for some time before you can stand up.";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Dwarf Male";
 
 to DwarfFucksAnal:
 	say "     'Now I'm gonna make you bend over for me. I need a tight hole to shove my cock inside, and it's gonna be your asshole.' he says while forcing you to crawl on all fours, [if Player is not naked]and the burly dwarf doesn't take any ceremony in lowering your clothes to expose your rear [end if]then taking a time to stroke himself while watching your naked butt. He makes you wait[if Player is submissive], your eagerness to please making you wiggle your backside at him invitingly, [end if] until his manhood stands up hard and proud, already out of his pants and ready to drill your hole deep. 'You're certainly going to feel this when I'm stretching your bitch hole.' he taunts you, and a look over your shoulder shows you why he's so confident. A good sized cock of about nine inches long, thick as a beer can, is going to enter your ass and pound it without mercy.";
@@ -729,6 +731,7 @@ to DwarfFucksAnal:
 	WaitLineBreak;
 	say "     At some point, he pulls out of your asshole, your face flushed as you're released to collapse on the ground, exhausted. Standing and looking down at you is the dwarf with his still half-hard length, shaking any leftovers of his cum still oozing down his cock, which lands on your back, as he lets out a mischievous chuckle. 'Damn... I would keep you... but you know... I have no place of my own and I don't wanna share you with anyone else who ends up passing by, so... I'll let you go. You can always come back for me by yourself, ain't that right?' Laughing, he gets ready to leave by shoving his wide cock out of view back into his underwear, pulling his pants back up and tightening the belt, all this while eyeing you from above. 'See you later, bitch [boygirl]!' he shouts, carrying his stone hammer by his shoulder and walking away.";
 	say "     You're left lying on the ground with your insides filled with dwarf cum for some time before you can stand up.";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Dwarf Male";
 
 to DwarfFacesit:
 	say "     'I'm having a little itch between my asscheeks, so how about you... scratch it for me? With your tongue... For a good while?' he says as a mischievous grin spreads through his face. Forcing you to lie down on the ground, he proceeds to undo his belt and drop his pants, giving his thick manhood a few strokes as he looks down on you, licking his lips. 'Mmm, damn, that's a good sight. You're gonna be a good ass cushion for me, aren't you, [boygirl]? Oh yes you are...' he teases you, positioning himself above your face, feet on each side of your head, his ass aiming for your nose, and before you know it, he's already dropping down, giving your face a hug with his hairy buttcheeks. 'Oooh fuck yeah! Lick that hole for me! I wanna feel that tongue inside my ass, you hear me little bitch?'";
@@ -739,6 +742,7 @@ to DwarfFacesit:
 	WaitLineBreak;
 	say "     It's not long from when he says that to the actual orgasm. Within a few moments, he's grunting and moaning in beastly manners, shooting his load all over your chest, and as this happens, you feel his asshole clenching around your tongue with each shot. 'Fuuuuck yeah! Damn! I was fucking needing this! You're such a good seat for my fuzzy ass, my [boygirl]! Will definitely consider doing this more often to you.' he taunts you, still sitting on your face as he squeezes his cock out of any leftovers of cum, all landing on your body. 'Damn... I would keep you... but you know... I have no place of my own and I don't wanna share you with anyone else who ends up passing by, so... I'll let you go. You can always come back for me by yourself, ain't that right?' Laughing, he gets ready to leave by standing up, shoving his wide cock out of view back into his underwear, pulling his pants back up and tightening the belt, all this while eyeing you from above. 'See you later, bitch [boygirl]!' he shouts, carrying his stone hammer by his shoulder and walking away.";
 	say "     You're left with your face flushed, catching your breath after this ordeal, and take some time to recover before you can stand up.";
+	CreatureSexAftermath "Dwarf Male" receives "Stroking" from "Player";
 
 to say Dwarf loses:
 	say "     With one last attack, you manage to bring down the hostile dwarf, who falls down bruised and unable to move. 'Ungh! Y-you're tougher than you look... Alright fine. I... won't bother you anymore. No need to get feisty, alright?' Though you hear what seems to be a plea for mercy, albeit barely so, you do have the short stocky man right there, without a chance to offer any resistance. You could do anything you wanted to him and he'd have no chance to do anything against it. [bold type]How shall you proceed with the defeated dwarf?[roman type][line break]";
@@ -836,6 +840,7 @@ to say DwarfBJ:
 		LineBreak;
 		say "     He's probably going to cum so much that you need to get a taste. With this in mind, you get a good grip of the dwarf's cock and stroke it even faster, an evident gesture that you intend to make him cum. 'Fuck... Yes! FINALLY!' You've got the short man moaning about as his meat pulses in anticipation, then just a few seconds later, as you slide the meat back inside your mouth, you're rewarded with the strong and sweet cum he shoots down your throat. You do your best to swallow every drop of his load until the last, a steady gush of jizz giving you a mouthful of the stuff. 'Fuuuuck... That felt... fucking amazing...' he tells you, looking at you dazed with pleasure, and as you carefully pull his dong out from between your lips, a drop of thick seed is still oozing from the tip.";
 		say "     After drenching the burly dwarf in his own load, you squeeze his dick for the last few drops of cum. The mere touch now makes him squirm in slight agony, as his cock got much more sensitive after that rough treatment. 'Uuh... Well... now that we're done with this, does that mean we're good? Can I go now?' he asks you, reminding you that he's still just one defeated foe at your mercy. But as you're finished with whatever you had in mind, there's no reason to keep him. You grab your things and leave the dwarf behind, returning to your previous affairs.";
+		CreatureSexAftermath "Player" receives "OralCock" from "Dwarf Male";
 
 to say DwarfFacefuck:
 	say "     Looking over the defeated dwarf, you find in yourself the whim to take his mouth for your pleasure. With your clearly now superior strength, thanks to the fact you bruised him good, it should be easy to make such a short, weakened man to suck your cock. He sees you approaching him decidedly and yet he begs 'Come on... I swear I'll let you be! I won't b-' before he's suddenly interrupted by you pulling his head to meet your crotch. He doesn't seem to fight it as much as his attitude would suggest, even sliding a hand over your thigh in appreciation. You find this a sign of his submission as [if player is naked]your hardening length reacts to his touch[else]you begin getting hard in your pants, obliging you to take off your gear and free up your growing erection[end if], knowing it's time to get serious.";
@@ -846,6 +851,7 @@ to say DwarfFacefuck:
 	WaitLineBreak;
 	say "     Drilling his bearded face, as horny as you are, you don't think too much about it as your cock pulses with desire, but the dwarf's naughtiness doesn't end here. He slips a thick finger between your buns, giving your hole a really pleasant rubbing while you're taking his mouth, which immediately sets you off. Soon enough, your virile seed is shot right down his throat. You force him to swallow every single drop of your load as you keep thrusting back and forth, physically unable to offer any resistance to your primal need to fill him full of your cum. As your orgasm subsides, you pull out, feeling yet again his rough hand squeezing your cock out of the last drops of juice, which he gladly drinks away.";
 	say "     'Love myself a good drink! I should try to fill a bottle with your cum next time I see you. I clearly have the motivation now!' he says, still licking his lips in great satisfaction. Sounds like he really didn't learn a whole lot with his defeat! 'I appreciate your generosity, but now that we're done, maybe it's time for you to let me go, yeah?' he asks you, reminding you that he's still just one defeated foe at your mercy. But as you're finished with whatever you had in mind, there's no reason to keep him. You grab your things and leave the dwarf behind, returning to your previous affairs.";
+	CreatureSexAftermath "Dwarf Male" receives "OralCock" from "Player";
 
 to say DwarfAssFuck:
 	say "     Looking over the defeated dwarf, you find in yourself the whim to take his ass for your pleasure. With your clearly now superior strength, thanks to the fact you bruised him good, it should be easy to make such a short, weakened man to bend over for you. He sees you approaching him decidedly and yet he begs 'Come on... I swear I'll let you be!' You leave him no answer as you're looking down towards him. Crouching, now at the same eye level, you let him know your intentions before forcing him to flip over, his compact ass held tight within his brown leather pants. You can see how firm and solid it is just by looking at the shape, which only reminded you of how great this is going to feel.";
@@ -858,6 +864,7 @@ to say DwarfAssFuck:
 	say "     As you keep the dwarf moaning with his deep raspy voice, you just want to go as hard as you can, and soon you find yourself on the verge of orgasm. Though you're not the only one, as the scavenger is also stroking his nine inch-long prick with vigor. 'I'm fucking close... Don't stop...!' he begs you, and you don't intend to, your dick reaching its peak of hardiness and starting to throb in anticipation. It doesn't take long for your seed to begin traveling through the insides of your reproductive system, and you don't even have time to pull out of his amazing ass... but it doesn't seem like that's what the dwarf wanted. Whenever you're not moving, he compensates your stiffness by thrusting back, as if he was milking your cock by himself.";
 	WaitLineBreak;
 	say "     Your cum fills the muscular shortie until the very end of your climax, throwing you out of breath by the time it subsides. Not long after you, the dwarf also blows his load over the ground while he feels you pulsing inside him, leaving a trail ot jizz ahead of you both. 'Fuuck... yes! That was a great fuck!' he shouts, completely dazed in his own orgasm. You two take some time to breathe, as you pull out of his ass and squeeze your dick off any cum drops left. You both gear up after you clean yourselves, the dwarf only having to pull his pants back on while still lying down on the ground, facing you this time. 'I hate to say goodbye to such a catch, but I believe we're sorted here, huh? I have places to be... Will you let me go now?' he asks you, reminding you that he's still just one defeated foe at your mercy. But as you're finished with whatever you had in mind, there's no reason to keep him. You grab your things and leave the dwarf behind, returning to your previous affairs.";
+	CreatureSexAftermath "Dwarf Male" receives "AssFuck" from "Player";
 
 to say DwarfRide:
 	say "     Looking over the defeated dwarf, you find in yourself the whim to take his cock, despite his requests to leave him alone. He sees you approaching him with and yet he begs 'Come on... I swear I'll let you be! I won't b-' before he's suddenly interrupted by you caressing his crotch, causing him to release a light moan as he watches you. 'Oh... That feels nice... Uh, if that's all you want from me, I... guess...' he hesitantly replies to your touch, but you can feel him getting harder underneath his pants. With enough care, you undo his thick belt before pulling down his pants, releasing the previously constrained meat out in fresh air, still growing in your hands. The thick nine inch-long of a prick throbs with need as you eye it all over, teasing the dwarf with slow strokings.";
@@ -870,6 +877,7 @@ to say DwarfRide:
 	say "     'Damn, I'm gonna cum...!' Despite his warnings, you don't remove yourself from his dick, and are keen on accepting his load inside you. Soon, you feel it pulsing, quickly followed by a warm liquid gushing into you, coating your fleshy tunnel for a good while as the dwarf keeps shooting. His almost beastly grunts only calm down when his orgasm subsides, but your own happens while [if Player is male]his rock-hard meat is still ramming hard against your prostate. Your cock bursts in a joyful blast of cum that lands on all over the short burly man, some even getting stuck in his beard![else]his rock-hard meat is still filling you in. Your body just trembles all over as a strong wave of pleasure overtakes you![end if] The dwarf smiles at you once things slow down, and you look at him as his dick slowly slides out of your pucker, a long stream of cum oozing out of your used asshole.";
 	WaitLineBreak;
 	say "     'Fuck damn wow! That was amazing! Makes up for having lost against you, though next time things won't be so easy for you!' he chuckles as he taunts you. With a little legwork, you manage to stand up and gather your things. 'So... I guess I can go now, right? As much as it pities me... but I have places to be!' he asks you, reminding you that he's still just one defeated foe at your mercy. But as you're finished with whatever you had in mind, there's no reason to keep him. You grab your things and leave the dwarf behind, returning to your previous affairs.";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Dwarf Male";
 
 to say Dwarf Desc:
 	if Resolution of Collapsed Tunnel is 3: [dwarf has the greathammer]
@@ -948,7 +956,7 @@ When Play begins:
 	now face entry is "a weathered middle-aged man's, rugged and long-bearded, with short and shaggy dark brown hair hugging the top of your head";
 	now body entry is "that of a short and burly man, musclebound and covered in hair. Your legs are fairly shorter than an average human's, making you stand half one's height";
 	now skin entry is "peach toned and rough"; [ format as "Your body is covered in (your text) skin"]
-	now tail entry is "You have a hairy, compact muscled butt"; [ write a whole Sentence or leave blank. ]
+	now tail entry is "You have a hairy, compact muscled butt."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a weathered male visage, rugged features and a long full beard growing out of your jaw and chin. Your hair becomes very short and dyed in a dark brown color"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a that of a middle-aged man, with a stocky and muscular build. Looking down, you notice your legs being much shorter than the rest of your body, making you standing half the height of an average human"; [ format as "Your body feels funny as (your text)." ]
@@ -979,8 +987,8 @@ When Play begins:
 	now libido entry is 50; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "dwarven ale"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "dwarf male milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "dwarf male cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "stocky"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -1171,7 +1179,7 @@ When Play begins:
 	now libido entry is 10; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "dwarf male milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -1190,7 +1198,7 @@ Section 4-1 - Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"dwarven ale"	"a canteen bottle with some sort of strong alcoholic beverage inside. It's obviously dwarven in origin."	1	dwarven ale
+"dwarven ale"	"A canteen bottle with some sort of strong alcoholic beverage inside. It's obviously dwarven in origin."	1	dwarven ale
 
 dwarven ale is a grab object.
 
@@ -1207,7 +1215,7 @@ instead of sniffing dwarven ale:
 
 to say DwarfMaleTF:
 	now TailName of Player is "Dwarf Male";
-	now Tail of Player is "You have a hairy, compact muscled butt";
+	now Tail of Player is "You have a hairy, compact muscled butt.";
 	now FaceName of Player is "Dwarf Male";
 	now Face of Player is "a weathered middle-aged man's, rugged and long-bearded, with short and shaggy dark brown hair hugging the top of your head";
 	now SkinName of Player is "Dwarf Male";

@@ -23,10 +23,10 @@ to say losetoamazonian:
 			else:
 				CreatureSexAftermath "Player" receives "AssFuck" from "Amazonian";
 	else if HP of Player > 0:
-		say "     Unwilling to continue to resist this powerful woman, you drop to your knees before her, intent on letting her have her way with you. She seems displeased that you've given up so easily and pushes you roughly to the ground with her heel. 'Why should I [if Player is female]breed with one such a you if you will not fight to the last[else]want one such as you as a mate if you will not fight to the last[end if]?' she growls. 'You are useless to me but as a means of amusement.'";
+		say "     Unwilling to continue to resist this powerful woman, you drop to your knees before her, intent on letting her have her way with you. She seems displeased that you've given up so easily and pushes you roughly to the ground with her heel. 'Why should I [if Player is female]breed with one such as you if you will not fight to the last[else]want one such as you as a mate if you will not fight to the last[end if]?' she growls. 'You are useless to me but as a means of amusement.'";
 		say "     With that said, she grabs your head and pushes your face to her loincloth, forcing you to take in the heady scent of her arousal. Despite the short fight, it seems it's gotten her blood flowing and she needs some relief. Pushing back the furry cloth, she frees her sixteen inch cock and presses it to your face, forcing you to take it in your mouth. The scent of her pussy is there as well, but you are not allowed near it, instead forced to suck her off.";
-		say "     She thrusts into your mouth rather brutally, cramming that massive cock of hers down your throat. It seems like hours go by before she is moaning above you. Her hand grips the top of your head in a painfully tight hold as she pull out all but the last inch. 'Swallow it all, my little pretty, or you'll never be big and strong. Big girls need to drink lots to get big muscles.'";
-		say "     The flow of semen is almost enough to pour back out your nostrils before you even have a chance to swallow the first shot. Subsequent pulses of sperm also threaten to flow in too fast to swallow or spit out. Some overflow sprays out of your mouth, covering the ground, and this is immediately followed by a swift blow to the back of your head that leaves you seeing stars followed by blackness as you feel the bulbous head of Amazonian's cock pop out of your mouth and the last few spurts of seed spray onto your chest as you collapse.";
+		say "     She thrusts into your mouth rather brutally, cramming that massive cock of hers down your throat. It seems like hours go by before she is moaning above you. Her hand grips the top of your head in a painfully tight hold as she pulls out all but the last inch. 'Swallow it all, my little pretty, or you'll never be big and strong. Big [if Player is female]girls[else]boys[end if] need to drink lots to get big muscles.'";
+		say "     The flow of semen is almost enough to pour back out your nostrils before you even have a chance to swallow the first shot. Subsequent pulses of sperm also threaten to flow in too fast to swallow or spit out. Some overflow sprays out of your mouth, covering the ground, and this is immediately followed by a swift blow to the back of your head that leaves you seeing stars followed by blackness as you feel the bulbous head of the Amazonian's cock pop out of your mouth and the last few spurts of seed spray onto your chest as you collapse.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Amazonian";
 	else:
 		say "     Beaten to the ground by the powerful Amazonian's last blow, you are pinned down by her. 'You fought well, little [if Player is female]girl[else]man[end if], but you are mine now,' she says with a lustful grin. Pushing aside her loincloth, she frees her large, sixteen inch member and presses it to your [if Player is female]hot pussy[else]tight asshole[end if]. 'It's time for me to claim my prize[if Player is not female] and show you the only thing men are good for[end if],' she says, thrusting her thick rod into you.";
@@ -132,8 +132,8 @@ When Play begins:
 	now libido entry is 45; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "estosterogen pill";
 	now lootchance entry is 12; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "amazonian milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "amazonian cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "[GenerateTrophyList_Amazonian]"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[or]toned[or]feminine[at random]";
@@ -286,7 +286,7 @@ to say estosterogen pill use:
 		say "You feel a rush of warmth to your loins as your dual-gendered genitals grow suddenly. ";
 		say "Your [Cock of Player] penis[esmn] swell[smv] beyond the point of simply growing erect, gaining in length to become [if Cock Count of Player is 1]a [end if][cock size desc of Player] cock[smn]. Your balls plump up a little as well with a surge of added virility. ";
 		follow the cunt descr rule;
-		say "Even as this is occurring, you watch your puss[if Cunt Count of Player > 1]ies['][else]y's[end if] lips puff up as your cunt enlarges and deepens, becoming [descr]. ";
+		say "Even as this is occurring, you watch your puss[if Cunt Count of Player > 1]ies['][else]y's[end if] lips puff up as your cunt[sfn] enlarge[sfv] and deepen[sfv], becoming [descr]. ";
 	else if Player is female:				[FEMALE]
 		now Cock Count of Player is 1;
 		now Ball Size of Player is 6;
@@ -295,7 +295,7 @@ to say estosterogen pill use:
 		increase Cunt Tightness of Player by 1;
 		follow the cunt descr rule;
 		say "You feel an aching warmth rush to your loins. ";
-		say "You watch as your puss[if Cunt Count of Player > 1]ies['][else]y's[end if] lips puff up as your cunt enlarges and deepens, becoming [descr] with rapid growth. ";
+		say "You watch as your puss[if Cunt Count of Player > 1]ies['][else]y's[end if] lips puff up as your cunt[sfn] enlarge[sfv] and deepen[sfv], becoming [descr] with rapid growth. ";
 		say "As this is occurring, a twinge centered at your clit increases rapidly. With a sudden surge of growth, your love button enlarges into a phallic growth, soon becoming separate from the cunt from which it spawned to become a [cock size desc of Player] [Cock of Player] cock with its own set of balls[if CockName of Player is listed in infections of InternalCockList] forming inside you[end if]. ";
 	else if Player is male:				[MALE]
 		increase Cock Length of Player by 2;

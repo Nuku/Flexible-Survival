@@ -50,14 +50,14 @@ Scent of Riker is "[RikerScent]".
 Libido of Riker is usually 5000.
 
 to say RikerDesc:
-	say "      You're not quite sure what to make of the naga standing in front of you. On one hand, the cowboy hat tilted rakishly on his head is slightly comical, but there's nothing funny about the stare he fixes you with. Frankly, he looks like he's going to eat you. Slitted yellow pupils regard you with no small amount of contempt, and a flicking tongue gives you the impression he thinks of you as prey. Sizable dark spots start at the naga's humanoid (but still quite reptillian) chest, melting seamlessly into an anaconda-esque pattern along his tapering tail, drawing your eye when they coil, as though practicing for something sinister. Altogether, Riker appears to be someone you should not fuck with, ";
+	say "     You're not quite sure what to make of the naga standing in front of you. On one hand, the cowboy hat tilted rakishly on his head is slightly comical, but there's nothing funny about the stare he fixes you with. Frankly, he looks like he's going to eat you. Slitted yellow pupils regard you with no small amount of contempt, and a flicking tongue gives you the impression he thinks of you as prey. Sizable dark spots start at the naga's humanoid (but still quite reptillian) chest, melting seamlessly into an anaconda-esque pattern along his tapering tail, drawing your eye when they coil, as though practicing for something sinister. Altogether, Riker appears to be someone you should not fuck with, ";
 	if "Working With Riker" is listed in Traits of Player:
 		say "even though you have a working 'business' relationship. You haven't seen much evidence that the man has any sense of loyalty to anyone but his faceless 'clients.'";
 	else:
 		say "though there's not much he can do about it anymore, now that you've kicked his ass and freed his captives. Silently, you thank yourself for chaining the naga up.";
 
 to say RikerScent:
-	say "      Riker smells like petrichor and masculinity, with a hint of sandalwood. Clearly he doesn't pay much attention to vanity in this respect, and you suspect his smell is related to slithering around in the damp, committing heinous deeds.";
+	say "     Riker smells like petrichor and masculinity, with a hint of sandalwood. Clearly he doesn't pay much attention to vanity in this respect, and you suspect his smell is related to slithering around in the damp, committing heinous deeds.";
 
 Instead of fucking Riker:
 	if "Working With Riker" is listed in Traits of Player: [Somewhat equals. Still you're the bottom.]

@@ -32,6 +32,7 @@ to VialGain (VialName - text) by (N - number) silence state is (Silence - a numb
 			now Name entry is VialName;
 			now PlayerOwned entry is N;
 		if Silence is 0:
+			LineBreak;
 			say "You manage to extract a vial of [special-style-1][VialName][roman type] nanites for study and use.";
 		sort Table of OwnedVials in name order;
 	else: [infection does not exist]
@@ -63,7 +64,6 @@ to VialLoss all (VialName - text) silently:
 		else:
 			if debug is at level 5:
 				say "DEBUG -> Trying to remove [VialName] from player who doesn't have any.[line break]";
-		sort Table of OwnedVials in name order;
 	else:
 		if debug is at level 5:
 			say "DEBUG -> Trying to remove [VialName] from player who doesn't have any.[line break]";
@@ -128,27 +128,55 @@ understand "vinv" as VialInventorying.
 understand "vial inventory" as VialInventorying.
 understand "vial inv" as VialInventorying.
 
-carry out VialInventorying:
+check VialInventorying:
 	if scenario is not "Researcher" and nanitemeter is 0:
-		say "You don't possess anything of that nature.";
-		continue the action;
+		say "You don't possess anything of that nature." instead;
 	if number of filled rows in Table of OwnedVials is 0:
-		say "Your collection of infection vials is empty.";
-	else:
-		sort Table of OwnedVials in name order;
-		say "Type [bold type]vial <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a vial, [bold type]vialdrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a vial, [bold type]vialalldrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy [bracket]A[close bracket]ll of a vial, [bold type]vialeverythingdrop[roman type] to [link][bracket][bold type]C[roman type][close bracket][as]vialeverythingdrop[end link][roman type]lean out every last vial you have";
-		if ( scenario is "Researcher" or nanitemeter > 0) and Larissa is visible:
-			say " or [bold type]vialsell[roman type] to [bold type][bracket]S[close bracket][roman type]ell a vial";
-		say ".";
-		say "Your infection vial collection consists of:[line break]";
-		repeat with x running from 1 to the number of filled rows in the Table of OwnedVials:
-			choose row x from the Table of OwnedVials;
-			say "[link][bracket][bold type]U[roman type][close bracket][as]vial [Name entry][end link] ";
-			say "[link][bracket][bold type]D[roman type][close bracket][as]vialdrop [Name entry][end link] ";
-			say "[link][bracket][bold type]DA[roman type][close bracket][as]vialalldrop [Name entry][end link] ";
-			if ( scenario is "Researcher" or nanitemeter > 0) and Larissa is visible:
-				say "[link][bracket][bold type]S[roman type][close bracket][as]vialsell [Name entry][end link] ";
-			say "[Name entry] x [PlayerOwned entry] | ";
+		say "Your collection of infection vials is empty." instead;
+
+carry out VialInventorying:
+	say "Your infection vial collection consists of:[line break]";
+	say "Type [bold type]vial <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a vial, [bold type]vialdrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a vial, [bold type]vialalldrop <name>[roman type] to [bold type][bracket]X[close bracket][roman type]Destroy all of a vial";
+	if Larissa is visible, say ", [bold type]vialsell[roman type] to [bold type][bracket]S[close bracket][roman type]ell a vial";
+	say " or [bold type]vialeverythingdrop[roman type] to [link][bold type][bracket]C[close bracket][roman type][as]vialeverythingdrop[end link]lean out every last vial you have.";
+	LineBreak;
+	sort Table of OwnedVials in name order;
+	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
+	let linkparts be {{"U", "vial"}, {"D", "vialdrop"}, {"X", "vialalldrop"}};
+	[if Larissa is visible, add {"S", "vialsell"} to linkparts;]
+	repeat with x running from 1 to number of filled rows in Table of OwnedVials:
+		choose row x from Table of OwnedVials;
+		if hypernull is not 1:
+			say "[viallink Name entry with linkparts]";
+			if Larissa is visible:
+				say "[link][bracket]S[close bracket][as]vialsell [Name entry][end link] ";
+		say "[Name entry] x[PlayerOwned entry]";
+		if remainder after dividing x by invcolumns is 0:
+			LineBreak;
+		else if x < number of filled rows in Table of OwnedVials:
+			say " || ";
+	LineBreak;
+
+hyperindex is a number that varies.
+
+to say viallink (T - text) with (L - list of list of text): [inline linking is really slow, so assemble these batches manually]
+	repeat with linktext running through L:
+		let link be the substituted form of "[entry 2 of linktext] [T]";
+		if hyperindex < 1 or hyperindex > number of entries in hyperlink list:
+			add link to hyperlink list;
+			now hyperindex is number of entries in hyperlink list;
+		else:
+			if hyperindex < number of entries in hyperlink list and entry hyperindex + 1 of hyperlink list is link: [likely the list will get built in the same order, so long runs of these should be sequential]
+				increase hyperindex by 1;
+			else if link is listed in hyperlink list: [otherwise, find it in the list if it exists]
+				repeat with x running from 1 to number of entries in hyperlink list:
+					if entry x of hyperlink list is link:
+						now hyperindex is x;
+						break;
+			else: [or just add it if it doesn't]
+				add link to hyperlink list;
+				now hyperindex is number of entries in hyperlink list;
+		say "[set link hyperindex][bracket][entry 1 of linktext][close bracket][terminate link] "; [associate our text in the UI with the command in the hyperlink list]
 
 Part 3 - Vial Commands
 

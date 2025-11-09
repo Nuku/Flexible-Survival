@@ -140,12 +140,20 @@ to say CarlDesc:
 	if HP of Carl is 10: [True Carl Path - stage 1: resting]
 		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, minus the boots since his digitigrade paws wouldn't fit in them. Right now, he's in an almost coma-like sleep after his exhausting escape from Allen's clutches and the travel to the library. [bold type]You should just give him time to rest, maybe go do something else and come back later. [roman type][line break]";
 	else if HP of Carl > 10 and HP of Carl < 30:
-		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, minus the boots since his digitigrade paws wouldn't fit in them. By now, he's found an equilibrium with his new shape, using his tail and ears to express himself while still maintaining most of his humanity. As he sees you looking at him, he gives you a broad smile, followed by a salacious wink.";
+		say "     Carl Banning is a well-built young male soldier, now transformed into an anthropomorphic husky. He wears a dark undershirt and the camo pattern pants of a normal military uniform, minus the boots since his digitigrade paws wouldn't fit in them. By now, he's found an equilibrium with his new shape, using his tail and ears to express himself while still maintaining most of his humanity. As he sees you looking at him, he gives you a broad smile, followed by a salacious wink. ";
+		if "Collared" is listed in Traits of Carl:
+			say "He's wearing a very well made dog collar of supple brown leather with an elaborate grey stitched pattern on it.";
+		else:
+			LineBreak;
 		say "     Having carried up a mattress from the bunker and set it up as his bed near one of the front-side windows of the library, he spends much of his time on lookout over the approaches to the building, ready to give warning should any dangerous creatures approach.";
 	else if HP of Carl is 30: [Dog Carl Path - stage 1: resting]
 		say "     Carl is a well-built male husky, after having formerly been a human soldier. After bringing him here to the bunker when he was fleeing from his squad leader Allen, you pushed him to make a break from his former self, taking away his dog tags in the process. The only remnants of who he was before are the dark undershirt and the camo pattern pants of a normal military uniform, minus the boots since his digitigrade paws wouldn't fit in them. Right now, he's in an almost coma-like sleep after his exhausting escape from Allen's clutches, the travel to the library and your own psychological manipulation. [bold type]You should just give him time to rest, maybe go do something else and come back later. [roman type][line break]";
 	else if HP of Carl > 30 and HP of Carl < 50:
-		say "     Carl is a well-built male husky, after having formerly been a human soldier. After bringing him here to the bunker when he was fleeing from his squad leader Allen, you pushed him to make a break from his former self, taking away his dog tags in the process. The only remnants of who he was before are the dark undershirt and the camo pattern pants of a normal military uniform, minus the boots since his digitigrade paws wouldn't fit in them. By now, he's become a lot more dog-like in his mannerisms, often acting and reacting in canine ways more than human ones. As he sees you looking at him, he lowers his head a bit and only looks at you from the corner of his eye, showing his submissiveness to you.";
+		say "     Carl is a well-built male husky, after having formerly been a human soldier. After bringing him here to the bunker when he was fleeing from his squad leader Allen, you pushed him to make a break from his former self, taking away his dog tags in the process. The only remnants of who he was before are the dark undershirt and the camo pattern pants of a normal military uniform, minus the boots since his digitigrade paws wouldn't fit in them. By now, he's become a lot more dog-like in his mannerisms, often acting and reacting in canine ways more than human ones. As he sees you looking at him, he lowers his head a bit and only looks at you from the corner of his eye, showing his submissiveness to you. ";
+		if "Collared" is listed in Traits of Carl:
+			say "He's wearing a very well made dog collar of supple brown leather with an elaborate grey sitched pattern on it.";
+		else:
+			LineBreak;
 		say "     Having carried up a mattress from the bunker and set it up as his bed near one of the front-side windows of the library, he spends much of his time on lookout over the approaches to the building, ready to give warning should any dangerous creatures approach.";
 
 The scent of Carl is "     Carl smells like a husky - and clearly a male one at that.".
@@ -333,7 +341,13 @@ to say CarlTalkMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask him for help regarding your Demon Brute";
 		now sortorder entry is 11;
-		now description entry is "Ask Carl if he can do something for the Demon Brute.";
+		now description entry is "Ask Carl if he can do something for the Demon Brute";
+	[]
+	if George's Animal Emporium is known and "Collared" is not listed in Traits of Carl and "Not Collared" is not listed in Traits of Carl:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask him to join you in looting the pet store";
+		now sortorder entry is 12;
+		now description entry is "Take Carl to the nearby animal emporium to see what you can find";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -374,6 +388,8 @@ to say CarlTalkMenu:
 					say "[CarlTalk8]";
 				else if (nam is "Ask him for help regarding your Demon Brute"):
 					say "[CarlTalk_DB]";
+				else if (nam is "Ask him to join you in looting the pet store"):
+					say "[CarlTalk_PetStore]";
 				wait for any key;
 				say "[CarlTalkMenu]";
 		else if calcnumber is 0:
@@ -527,6 +543,48 @@ to say CarlTalk8: [military]
 	WaitLineBreak;
 	say "     'Of course, that meant that plans had to be made to re-take the city, or at least figure out ways to get sane survivors out. And that's where my squad came in. We were scouts and troubleshooters, sent out with a supply of the nanite immunity boosters.' He snorts derisively as he adds, 'Not that you apparently need nanites in you to go nuts if you're horny enough. You know how things worked out after that.' Rubbing the side of his furry arm, Carl puts on a determined expression once again, then says loudly, 'The army will come through in the end, I'm telling you. We just have to hold out till that happens.'";
 
+to say CarlTalk_PetStore:
+	say "     Approaching Carl, you casually bring up the nearby pet store and ask him if he might like to accompany you to it. You're sure there's some stuff of value left in there, but you're having a hell of a time finding stuff inside. Between knocked over shelves, scattered goods in piles, and... sticky puddles on the ground, it's a bit of a chore to dig around in there. ";
+	if HP of Carl > 10 and HP of Carl < 30: [True Carl]
+		say "The anthro dog chuckles under his breath as he replies, 'You know just how to motivate a man, don't ya? But yeah, I'll help you. It's the least I can do to help you for the timely rescue. And if we find something good, that'll help us survive for a little while longer.' Setting out together, it's not all that long of a walk till you get to the ransacked shopping street just west of the Grey Abbey Library, where you angle your steps towards the entrance of George's Animal Emporium. As you lead the way through the entrance door and the canine soldier follows, Carl ruffles his muzzle a little, looking at the utter chaos within, and with his nose taking in the aroma hanging in the air. He comments, 'Charming place you've found,' but chuckles, and steps past you anyways, starting to dig around a little and doing his best to ignore the scent of crusty dried cum.";
+	else if HP of Carl > 30 and HP of Carl < 40: [Dog Carl]
+		say "The anthro dog bends his neck in submission, and replies, 'Yes alpha. It's the least I can do to help you for the timely rescue. And if we find something good, that'll help us survive for a little while longer.' Setting out together, it's not all that long of a walk till you get to the ransacked shopping street just west of the Grey Abbey Library, where you angle your steps towards the entrance of George's Animal Emporium. As you lead the way through the entrance door and the canine soldier follows, Carl ruffles his muzzle a little, looking at the utter chaos within, and with his nose taking in the aroma hanging in the air. He comments, 'Bit of a chore, but I won't let you down,' then steps past you, starting to dig around a little and doing his best to ignore the scent of crusty dried cum.";
+	say "     Of course Carl isn't the only one who looks around, and you poke and prod at the general chaos in the store, prodding aside things that are broken, sticky, spoiled and the like. After a little bit of searching, you do find something that does look interesting though - it's a dog collar, of some premium brand it seems. Good supple brown leather, with an elaborate zigzag pattern stitched onto it in grey thread. It's got a buckle and various holes punched through the end that is fed through it, so can be adjusted for all sorts of sizes of wearer. You're still holding the collar when Carl steps up to you, holding a big plastic bag in both hands and chewing on something. 'Look what I found,' he tells you, after finishing a mouthful, then holds out the bag to you after fishing out a few more cookies. You exchange the collar in your hand for the heavy cookie bag from Carl, looking down at it to see that it's 'Arcadia Farm's Harvest Crunies' - a human and pet safe snack.";
+	ItemGain food by 2;
+	WaitLineBreak;
+	if HP of Carl > 10 and HP of Carl < 30: [True Carl]
+		say "     Noisily crunching the cookies between his sharp teeth, Carl grins at you. 'There were another few bags back there too, mixed in with the chaos. I'll have to dig them out, they're fairly buried. Seems like an 'as needed' thing to do, when food in the library becomes scarce. You keep that bag, and I'll just come here when I need to top up what I need to keep myself fed, alright?' He looks down at the collar he accepted from you when handing over the cookie bag. 'And what did you find? Good quality leather it seems, and that stitching looks pretty neat. This must have been one of those 'dog boutique' places, ready to cater to people who treat their animals like fur-babies and spoil them to death, haha!'";
+		say "     [bold type]What do you reply to that?[roman type][line break]";
+		let Carl_Collar_Choices be a list of text;
+		add "Make a suggestion that he should try it on. Might look good on him." to Carl_Collar_Choices;
+		add "Just chuckle along with him and leave the collar behind as you leave with your food." to Carl_Collar_Choices;
+		let Carl_Collar_Choice be what the player chooses from Carl_Collar_Choices;
+		if Carl_Collar_Choice is:
+			-- "Make a suggestion that he should try it on. Might look good on him.":
+				say "     Carl is initially sceptic about the idea of putting a collar on himself, but you manage to convince him with a few arguments that it's a premium clothing item, and he's... kinda a dog anyways. Plus, it'll make him stand out from just any run of the mill canine roaming the street - the ones that have nothing but sex on their mind. Finally, the German shepherd chuckles and shakes his head, then lays the collar around his neck and closes the buckle. He ducks into the restroom in the back of the store to check himself out in a mirror. 'Okay, gotta admit, it does look pretty neat on me, if I say so myself. Vibes well with my fur color. I think I'll keep it. Thanks for the advice.' He gives your shoulder a friendly punch, then strolls out of the pet store with you, wandering back to the Grey Abbey Library.";
+				TraitGain "Collared" for Carl;
+			-- "Just chuckle along with him and leave the collar behind as you leave with your food.":
+				say "     You chuckle and wish you still lived in the time before the nanites, when people still had time to buy such premium goods for just their pets, instead of having to scramble for survival in the ruins of civilization. Carl nods to you whole-heartedly, putting down the collar and then strolling out of the pet store with you, wandering back to the Grey Abbey Library.";
+				TraitGain "Not Collared" for Carl;
+	else: [Dog Carl]
+		say "     Noisily crunching the cookies between his sharp teeth, Carl nods to you respectfully. 'There were another few bags back there too, mixed in with the chaos. I'll have to dig them out, they're fairly buried. Seems like an 'as needed' thing to do, when food in the library becomes scarce. You keep that bag, and I'll just come here when I need to top up what I need to keep myself fed, alright?' He looks down at the collar he accepted from you when handing over the cookie bag. 'And what did you find? Good quality leather it seems, and that stitching looks pretty neat.'";
+		say "     [bold type]What do you reply to that?[roman type][line break]";
+		let Carl_Collar_Choices be a list of text;
+		add "Put the bag down and take the collar again, then put it on Carl's neck." to Carl_Collar_Choices;
+		add "Tell him to put it on. You want to see Carl wear it." to Carl_Collar_Choices;
+		add "Shrug and leave the collar behind as you get back to the library with your food." to Carl_Collar_Choices;
+		let Carl_Collar_Choice be what the player chooses from Carl_Collar_Choices;
+		if Carl_Collar_Choice is:
+			-- "Put the bag down and take the collar again, then put it on Carl's neck.":
+				say "     You place the cookie bag on the floor before you, then hold a hand out for Carl to give you the collar. As you tell him that you want him to wear it from now on, the German shepherd submits readily, presenting his neck for you to place the leather band around. As you tug it tight, then check if it sits snugly, the anthro seems to relax, as if made more confident by the sign of your connection tight around his neck. You tell him to carry the food for you, and the two of you wander back to the Grey Abbey Library.";
+				TraitGain "Collared" for Carl;
+			-- "Tell him to put it on. You want to see Carl wear it.":
+				say "     Still holding the big cookie bag, you tell Carl to try it on. The German nodsand lays the collar around his neck, closing the buckle. As you check if it sits snugly, the anthro seems to relax, as if made more confident by the sign of your connection tight around his neck. You like how it looks on him, and decide to say that he should just keep wearing it from now on. Then the two of you wander back to the Grey Abbey Library.";
+				TraitGain "Collared" for Carl;
+			-- "Shrug and leave the collar behind as you get back to the library with your food.":
+				say "     You shrug and tell him to put it down, then have him carry the food and lead him back to the Grey Abbey Library.";
+				TraitGain "Not Collared" for Carl;
+
 Section 3 - Sex
 
 Instead of fucking the Carl:
@@ -546,7 +604,7 @@ Instead of fucking the Carl:
 			say "     Licking your lips, you decide that it's time to take your relationship with Carl into a much more physical direction. The sexy soldier hunk has been on your mind ever since you had your talk, and while feasting your eyes on his firmly muscled, furry body from afar is nice enough on its own, you want to get the full experience now! Thank god that he's taking his forced transformation fairly well, and has no hangups over being sexual despite the abuse that Allen put him through. You being the 'hero' that was there for him in his time of need no doubt goes a long way. Letting your gaze wander over the hunky soldier's form, with plenty of muscles visible under the thick black and white fur, you have plenty of ideas of what you wanna do with him. Strolling over to the man, you then reach out to place a hand on his shoulder. Gently stroking, you run your fingers through the warm fur on the side of his neck and meet Carl's gaze with lust in your eyes.";
 			say "     'Got some plans, [if Player is not defaultnamed][name of Player][else]my friend[end if]?' he asks with a smirk, reaching out to you in turn, touching your body appreciatively[if Player is not bodily human] and checking out your nonhuman shape[end if], not shying away from caressing your most private spots. Your husky friend sure is a horny and adventurous type, much more than his previous human self, if you can believe what Carl told you. Not that you mind that one bit, as you happily slide a hand underneath his sleeveless shirt to feel the soft fur of his stomach, and quickly notice a growing bulge inside his pants. 'Wanna see it?' the man asks in a teasing tone, smiling broadly as you give him an eager nod. Opening up the button of his pants, Carl lets them drop, revealing his already half-hard canine shaft. Taking hold of it and stroking his hand up and down its length, he remarks 'Looks a bit different than a human one, doesn't it?' and lets his fingers wander a bit, teasing the slightly pointy tip and the small bulge at its base that will swell up to a knot.";
 			WaitLineBreak;
-			say "      Carl's eyes seek out yours as he says, 'Why don't you get a little taste?' With the soft push of Carl's hand on your shoulder guiding you, you kneel down in front of him and play your tongue over the underside of his shaft, then take the tip between your lips and start blowing him. As you go down on the canine shaft, your nose gets pressed into the dense fur of his crotch, making you inhale his very masculine, musky scent that stokes the fires of your lust ever brighter.";
+			say "     Carl's eyes seek out yours as he says, 'Why don't you get a little taste?' With the soft push of Carl's hand on your shoulder guiding you, you kneel down in front of him and play your tongue over the underside of his shaft, then take the tip between your lips and start blowing him. As you go down on the canine shaft, your nose gets pressed into the dense fur of his crotch, making you inhale his very masculine, musky scent that stokes the fires of your lust ever brighter.";
 			let Carl_InitialTrueSex_Choices be a list of text;
 			if Player is male:
 				add "Fuck his ass." to Carl_InitialTrueSex_Choices;

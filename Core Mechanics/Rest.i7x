@@ -18,7 +18,7 @@ understand "Rest" as resting.
 check resting:
 	now roughing is false;
 	if caffeinehigh of Player > 0:
-		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest. Your body just won't settle down and any time to try to relax, you find yourself only thinking of going out and looking for more soda to drink.";
+		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest. Your body just won't settle down and any time you try to relax, you find yourself only thinking of going out and looking for more soda to drink.";
 		stop the action;
 	if location of Player is PALOMINO Dance Club or location of Player is Private Booths:
 		say "Why are you even trying to sleep here? Everyone's partying like it's the end of the world.";
@@ -27,7 +27,7 @@ check resting:
 		say "You pull out your cot and lay it out before resting for a while.";
 	else if cot is present:
 		say "You rest on the cot.";
-	else if the player is in the bunker:
+	else if Player is in Bunker or Player is in Police Lockerroom:
 		say "You rest on one of the cots available.";
 	else if the player is in Slave Cell 1 or player is in Slave Cell 2:
 		say "You rest on the bed in the back of the cell.";
@@ -79,12 +79,12 @@ carry out resting:
 	follow the turnpass rule;
 	follow the turnpass rule;
 	follow the player injury rule;
-	say "You are [descr]([HP of Player]/[MaxHP of Player]).";
+	say "You are [descr] ([HP of Player]/[MaxHP of Player]).";
 
 to Rest:
 	let num1 be MaxHP of Player divided by 4;
 	let num2 be ( ( Stamina of Player * 3 ) / 2 ) + Level of Player;
-	if cot is owned or cot is present or the player is in Bunker or silk hammock is owned or silk hammock is present:
+	if (cot is owned or cot is present) or (silk hammock is owned or silk hammock is present) or (player is booked or player is bunkered):
 		if num1 >= num2, increase HP of Player by num1; [best value chosen]
 		if num2 > num1, increase HP of Player by num2;
 	else if "Roughing It" is listed in feats of Player:

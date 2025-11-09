@@ -33,6 +33,24 @@ Definition: A person is fastlearning:
 	if "Fast Learner" is listed in feats of Player, yes;
 	no;
 
+Definition: A person (called x) is MalePreferred: [player wants to or must remain male]
+	if "Male Preferred" is listed in feats of x, yes;
+	if "Female Preferred" is listed in feats of x or "Herm Preferred" is listed in feats of x, no;
+	if "Single Sexed" is listed in feats of x and x is puremale, yes;
+	no;
+
+Definition: A person (called x) is FemalePreferred: [player wants to or must remain female]
+	if "Female Preferred" is listed in feats of x, yes;
+	if "Male Preferred" is listed in feats of x or "Herm Preferred" is listed in feats of x, no;
+	if "Single Sexed" is listed in feats of x and x is purefemale, yes;
+	no;
+
+Definition: A person (called x) is HermPreferred: [player wants to or must remain herm]
+	if "Herm Preferred" is listed in feats of x, yes;
+	if "Male Preferred" is listed in feats of x or "Female Preferred" is listed in feats of x, no;
+	if "Always Cocky" is listed in feats of x and "Always A Pussy" is listed in feats of x, yes;
+	no;
+
 Table of gainable feats
 title	subtable	description	toggle
 "Nothing"	--	"Nothing here."	gainfeat rule
@@ -61,14 +79,14 @@ understand "Feats" as FeatList.
 
 carry out FeatList:
 	sort Feats of Player;
-	say "Feats: [Feats of Player]";
+	say "Feats: [if feats of Player is empty]None[else][Feats of Player][end if].";
 
 Featgetting is an action applying to nothing.
 understand "volunteer" as featgetting.
 
 Check featgetting:
 	if HP of Doctor Matt is 0, say "Volunteer for what now? You are a strange person. Considering what game this is, that says a lot!" instead;
-	if featgained of Player > ( ( level of Player divided by 3 ) + foodwaterbonus + nerminefeat + boosterfeats ): [not ready for more feats]
+	if featgained of Player > ( ( level of Player divided by 3 ) + foodwaterbonus + NermineFeat + boosterfeats ): [not ready for more feats]
 		if Doctor Matt is visible:
 			say "     As you step up to him and volunteer for testing, Dr. Matt picks up a little scanner and circles it over your torso, then shakes his head. 'I'm sorry, you're not yet ready for further procedures. You see, the nanite structures that are receptive to adjustment and reprogramming aren't all that prevalent and get deconstructed by the rest after I send a signal that seems to be lacking the right codes. It'll take some time before I can experiment on you again.'" instead;
 		else:
@@ -98,7 +116,7 @@ To Featget:
 		while 1 is 1:
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
-				say "[link][y] - [title entry][as][y][end link]: [line break]";
+				say "[link][y] - [title entry][as][y][end link][line break]";
 			say "[link]0 - ABORT[as]0[end link][line break]";
 			say "Type the number corresponding to the feat you want> [run paragraph on]";
 			get a number;
@@ -134,10 +152,11 @@ To FunFeatget:
 		[change the current menu to table of Gainable Feats;
 		carry out the displaying activity;]
 		now featqualified is 1;
+		let L be {"Haggler", "More Time", "Touched by Madness", "Vore Predator"}; [feat descs with terminating punct]
 		while 1 is 1:
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
-				say "[link][y] - [title entry][as][y][end link]: [description entry][line break]";
+				say "[link][y] - [title entry][as][y][end link]: [description entry][if title entry is not listed in L]. [end if][line break]";
 			say "[link]0 - ABORT[as]0[end link][line break]";
 			say "Type the number corresponding to the feat you want> [run paragraph on]";
 			get a number;
@@ -174,7 +193,7 @@ instead of addfeating the fun feats:
 			addfeat "Female Preferred" with "Outside of special circumstances, you'll remain a girl";
 		if isHellhound is false:
 			addfeat "Herm Preferred" with "Outside of special circumstances, you'll remain a herm";
-		addfeat "Single Sexed" with "You can be male, or female, but not both";
+		addfeat "Single Sexed" with "You will be male, or female, but not both";
 		if isHellhound is false:
 			addfeat "Always Cocky" with "Outside of special circumstances, you will always keep a cock";
 			addfeat "Always A Pussy" with "Outside of special circumstances, you will always keep a pussy";
@@ -182,17 +201,17 @@ instead of addfeating the fun feats:
 		if "Flat Chested" is not listed in feats of Player, addfeat "Breasts" with "Despite being all male, you still grow breasts - curious";
 	else:
 		if "Breasts" is not listed in feats of Player, addfeat "Flat Chested" with "Your chest tends to remain flat";
-	if "Modest Organs" is not listed in feats of Player or "Passing Grade Chest" is not listed in feats of Player:
+	if "Modest Organs" is not listed in feats of Player and ("Passing Grade Chest" is not listed in feats of Player or Breast Size of Player < 5):
 		addfeat "One Way" with "You can only grow larger, not smaller, sexually - barring specific effects";
-	if "One Way" is not listed in feats of Player or "Passing Grade Chest" is not listed in feats of Player:
-		addfeat "Modest Organs" with "Your growth is restricted, preventing wildly overgrown bits, barring specific effects";
-	if ("Modest Organs" is not listed in feats of Player or "One Way" is not listed in feats of Player ) and "Flat Chested" is not listed in feats of Player:
+	if "One Way" is not listed in feats of Player:
+		addfeat "Modest Organs" with "Your genital growth is restricted, preventing wildly overgrown bits, barring specific effects";
+	if ("One Way" is not listed in feats of Player or Breast Size of Player < 5) and "Flat Chested" is not listed in feats of Player:
 		addfeat "Passing Grade Chest" with "Your breasts will never fail a test, and will remain D cupped or smaller, barring specific effects. If they do become too large, they will shrink rapidly back into line";
-	if "All The Things" is not listed in feats of Player:
+	if "All The Things" is not listed in feats of Player and ("One Way" is not listed in feats of Player or (Cock Count of Player < 2 and Cunt Count of Player < 2)):
 		addfeat "Just One" with "You will only grow one cock, and only one cunt, never more. Possibly less";
-	if "Just One" is not listed in feats of Player or "One Way" is listed in feats of Player:
+	if "Just One" is not listed in feats of Player:
 		addfeat "All The Things" with "Your groin seems to believe [']the more the merrier[']. Outside of a gender change, you will keep any [']extras['] you pick up";
-	if "Bouncy Bouncy" is not listed in feats of Player:
+	if "Bouncy Bouncy" is not listed in feats of Player and ("One Way" is not listed in feats of Player or Nipple Count of Player < 3):
 		addfeat "One Pair" with "You will not grow more than two breasts";
 	if "One Pair" is not listed in feats of Player:
 		addfeat "Bouncy Bouncy" with "It seems that your body likes breasts a lot. You won't be losing any that you might gain";
@@ -202,10 +221,10 @@ instead of addfeating the fun feats:
 	if "Cold Fish" is not listed in feats of Player:
 		addfeat "Horny Bastard" with "You just can't get enough. Every few hours your libido raises all on its own";
 	if "Horny Bastard" is not listed in feats of Player:
-		addfeat "Cold Fish" with "Your libido will decrease over time.";
+		addfeat "Cold Fish" with "Your libido will decrease over time";
 	addfeat "Control Freak" with "When you win a battle, you may choose if you wish to engage in the post battle activities or not";
 	if "Sterile" is not listed in feats of Player:
-		addfeat "MPreg" with "You can now be impregnated and give birth as a male/neuter (egg laying). It can occasionally open/alter sex scenes";
+		addfeat "MPreg" with "You can now be impregnated and give birth even as a male/neuter (egg laying). It can occasionally open/alter sex scenes";
 	if "Breeding True" is not listed in feats of Player and "Sterile" is not listed in feats of Player:
 		addfeat "They Have Your Eyes" with "Any child you have will appear exactly as you at time of birth";
 	if "They Have Your Eyes" is not listed in feats of Player and "Sterile" is not listed in feats of Player:
@@ -223,7 +242,7 @@ instead of addfeating the fun feats:
 	if "Submissive" is not listed in feats of Player:
 		addfeat "Dominant" with "Defeating monsters gets you excited, gaining a small libido, morale or XP boost from it. It may occasionally open new, dominant scene variations";
 	if Strange Serpent is resolved or scenario is "Forgotten":
-		addfeat "Touched by Madness" with "On your travels you appear to have contracted some manner of strange aura which may cause some monsters to behave weirdly around you. (Caution, you may experience more extreme content by choosing this feat.)[line break]";
+		addfeat "Touched by Madness" with "On your travels you appear to have contracted some manner of strange aura which may cause some monsters to behave weirdly around you. (Caution, you may experience more extreme content by choosing this feat.)";
 	addfeat "Instinctive Combat" with "With all the changes, you've gained new instincts on how to fight. You may choose [bold type]auto attack normal/berserk/pass/coward/submit[roman type]"; [put next to submissive because that seemed logical. move elsewhere if so desired.]
 	if featunlock is 1:	[available after hospital quest]
 		addfeat "Perky" with "You are of positive spirits, regaining morale gradually and +20% max morale";
@@ -231,7 +250,7 @@ instead of addfeating the fun feats:
 	if "Weak Psyche" is not listed in feats of Player, addfeat "Strong Psyche" with "Having a higher mental resistance to corruption by the nanites, you have a stronger grip on your human identity";
 	addfeat "Junk Food Junky" with "Junk food is better for you than regular food and water";
 	addfeat "Ultimatum" with "You have enough! Choosing Ultimatum grants you a 10% point bonus at game end, but you [bold type]no longer receive Fun Feats[roman type]";
-	addfeat "Center of Attention" with "NPCs in the library/bunker will refrain from seeking out sexual connections with each other, only looking to you instead. (disables bunker/library NPC sexual relations independent of the player character)";
+	addfeat "Center of Attention" with "NPCs in the library/bunker will refrain from seeking out sexual connections with each other, only looking to you instead (disables bunker/library NPC sexual relations independent of the player character)";
 
 instead of addfeating the basic feats:
 	if "Open World" is not listed in feats of Player, addfeat "City Map" with "You have better recall of the city layout and remember where most major landmarks are";
@@ -239,10 +258,10 @@ instead of addfeating the basic feats:
 	addfeat "Roughing It" with "You can take a quick nap w/o a cot anywhere... just sleep with one eye open";
 	if featunlock is 1:	[available after hospital quest]
 		addfeat "Gas Cloud" with "Create a dissipating cloud to help you flee";
-	if "Sterile" is not listed in feats of Player, addfeat "Fertile" with "You are especially good at producing children. Increase to chance of multiple";
+	if "Sterile" is not listed in feats of Player, addfeat "Fertile" with "You are especially good at producing children, increasing the chance of pregnancy and multiple children in one birth and decreasing the gestation period";
 	if "Fertile" is not listed in feats of Player, addfeat "Sterile" with "You are incapable of fathering and/or mothering a child";
 	if "Fertile" is listed in feats of Player:
-		addfeat "Maternal" with "You love children. Faster gestation and improves morale from childbirth";
+		addfeat "Maternal" with "You love children. Even faster gestation and improves morale from childbirth";
 	if number of filled rows in the Table of PlayerChildren > 0:
 		addfeat "Spirited Youth" with "Your child will lend their aid in combat, occasionally dealing damage to the enemy";
 	if "Spirited Youth" is listed in feats of Player and number of filled rows in the Table of PlayerChildren > 2:
@@ -281,10 +300,10 @@ instead of addfeating the basic feats:
 	if scenario is "Researcher" and ( intelligence of Player > 14 or level of Player >= 9 ):
 		addfeat "Expert Researcher" with "Your expert skills allow you a second opportunity to get an infection vial";
 	if intelligence of Player > 14:
-		addfeat "Fast Learner" with "You assimilate new information rapidly. -20% XP needed to level.";
+		addfeat "Fast Learner" with "You assimilate new information rapidly. -20% XP needed to level";
 		addfeat "Expert Medic" with "You are especially good at using medkits, +25% hitpoints restored per use, and adds an additional use to medkits";
 	if intelligence of Player > 12 and ( BodyName of Player is not "Human" or FaceName of Player is not "Human" ):
-		addfeat "Know Thyself" with "By thinking like an enemy that has infected you, you know better how to deal with them and gain a +0 to +2 bonus to hit matching enemies each round. Thinking with your other head gradually gets your infected loins more excited as well. You gain more XP from these fights as well";
+		addfeat "Know Thyself" with "By thinking like an enemy that has infected you, you know better how to deal with them and gain a +0 to +4 bonus to hit matching enemies each round. Thinking with your other head gradually gets your infected loins more excited though. You gain more XP from these fights as well";
 	if intelligence of Player > 15 and level of Player > 5:
 		addfeat "Weaponsmaster" with "Your experience and knowledge allow you to assess a weapon's worth and wield it better";
 	addfeat "Wary Watcher" with "Always on guard, creatures won't gain first strike on you";
@@ -292,7 +311,7 @@ instead of addfeating the basic feats:
 		addfeat "Magpie Eyes" with "You love shining things. Especially shining things on the defeated bodies of your enemies. Increased odds of drops";
 		if "Magpie Eyes" is listed in feats of Player:
 			addfeat "Mugger" with "You want it all! A flat drop rate increase based on perception you can (de)activate";
-		addfeat "Expert Hunter" with "Your chances of hunting a specific critter with the hunt command increases";
+		addfeat "Expert Hunter" with "Your chances of hunting a specific critter with the hunt command increase";
 		if "Expert Hunter" is listed in feats of Player:
 			addfeat "Master Baiter" with "You are virtually assured victory when hunting a specific creature";
 	if dexterity of Player > 14:
@@ -339,7 +358,8 @@ This is the gainfeat rule:
 	choose row Current Menu Selection in table of gainable feats;
 	let nam be title entry;
 	if autofeatloading is false:
-		say "You've chosen [bold type]'[title entry]'[roman type]: [description entry][line break]";
+		let L be {"Haggler", "More Time", "Touched by Madness", "Vore Predator"}; [feat descs with terminating punct]
+		say "You've chosen [bold type]'[title entry]'[roman type]: [description entry][if title entry is not listed in L]. [end if][line break]";
 		say "Is this what you want?";
 	if autofeatloading is true or player consents:
 		add nam to feats of Player;
@@ -362,11 +382,11 @@ This is the gainfeat rule:
 		else if nam is "City Map":
 			say "[BestowCityMapFeat]";
 		else if nam is "Instinctive Combat":
-			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the 'Auto Attack' command. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
+			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the [']Auto Attack['] commands. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
 		else if nam is "Vore Predator":
-			say "     Having gained the [']Vore Predator['] feat, you can now access the [bold type]vore menu[roman type] command. It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]). It is used for adjusting vore-related game settings.";
+			say "     Having gained the [']Vore Predator['] feat, you can now access the [bold type][link]vore menu[end link][roman type] command. It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]). It is used for adjusting vore-related game settings.";
 		else if nam is "Mugger":
-			say "     You will now get a flat rate increase to item drops from monsters based on your perception. This ability can be can turned on or off by using the [bold type]mugger[roman type] command and is currently [bold type][if muggerison is true]ON[else]OFF[end if][roman type].";
+			say "     You will now get a flat rate increase to item drops from monsters based on your perception. This ability can be can turned on or off by using the [bold type][link]mugger[as]muggering[end link][roman type] command and is currently [bold type][if muggerison is true]ON[else]OFF[end if][roman type].";
 		else if nam is "Vampiric":
 			say "     You will now recover a small amount of health, thirst and hunger after every victory as you get in a blood-sucking bite after your final blow or at some other point during the victory scene.";
 			now vampiric is true;
@@ -412,14 +432,14 @@ carry out muggering:
 		now muggerison is true;
 	else:
 		now muggerison is false;
-	say "The 'Mugger' feat is now [bold type][if muggerison is true]ON[else]OFF[end if][roman type]. You will gain drop items [if muggerison is true]more frequently[else]as normal[end if].";
+	say "The [']Mugger['] feat is now [bold type][if muggerison is true]ON[else]OFF[end if][roman type]. You will gain drop items [if muggerison is true]more frequently[else]as normal[end if].";
 
 Chapter 2 - Autoattack
 
 autoattackmode is a number that varies.
 [0 is normal]
 [1 is attack]
-[2 could be item? but probably not...]
+[2 is seduce]
 [3 is pass]
 [4 is flee]
 [5 is submit]
@@ -430,6 +450,9 @@ understand "auto attack normal" as autoattacknormal.
 
 autoattackberserk is an action applying to nothing.
 understand "auto attack berserk" as autoattackberserk.
+
+autoattackseduce is an action applying to nothing.
+understand "auto attack seduce" as autoattackseduce.
 
 autoattackpass is an action applying to nothing.
 understand "auto attack pass" as autoattackpass.
@@ -451,6 +474,13 @@ carry out autoattackberserk:
 	if "Instinctive Combat" is listed in feats of Player:
 		now autoattackmode is 1; [autoattack, no choice, always attack]
 		say "You let your aggressive instincts take the forefront, knowing you will attack at any chance.";
+	else:
+		say "You feel you are missing the instincts to do this.";
+
+carry out autoattackseduce:
+	if "Instinctive Combat" is listed in feats of Player:
+		now autoattackmode is 2; [autoseduce, no choice, always seduce]
+		say "This is the flavor text for enabling auto-seduce.";
 	else:
 		say "You feel you are missing the instincts to do this.";
 

@@ -58,7 +58,8 @@ carry out Inventorying:
 			let traderavailable be 1;
 		[go through all the stuff]
 		LineBreak;
-		say "[bold type]Equipment:[roman type][line break]";
+		say "[line break]";
+		say "[bold type]Equipment:[roman type]";
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			let ownedCount be carried of object entry;
@@ -109,9 +110,10 @@ carry out Inventorying:
 				let weightnum be weight entry times ownedCount;
 				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum] lbs)";
 				increase weight by weightnum;
+		LineBreak;
 		now owneditemindex is 0;
 		say "[line break]";
-		say "[bold type]Armaments:[roman type][line break]";
+		say "[bold type]Armaments:[roman type]";
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			let ownedCount be carried of object entry;
@@ -162,9 +164,10 @@ carry out Inventorying:
 				let weightnum be weight entry times ownedCount;
 				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum] lbs)";
 				increase weight by weightnum;
+		LineBreak;
 		now owneditemindex is 0;
 		say "[line break]";
-		say "[bold type]Consumables:[roman type][line break]";
+		say "[bold type]Consumables:[roman type]";
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			let ownedCount be carried of object entry;
@@ -215,9 +218,10 @@ carry out Inventorying:
 				let weightnum be weight entry times ownedCount;
 				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum] lbs)";
 				increase weight by weightnum;
+		LineBreak;
 		now owneditemindex is 0;
 		say "[line break]";
-		say "[bold type]Other:[roman type][line break]";
+		say "[bold type]Other:[roman type]";
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			let ownedCount be carried of object entry;
@@ -268,6 +272,7 @@ carry out Inventorying:
 				let weightnum be weight entry times ownedCount;
 				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum] lbs)";
 				increase weight by weightnum;
+		LineBreak;
 		say "[line break]";
 		say "[variable letter spacing]Total Weight: [weight]/[capacity of Player] lbs. [if the player is overburdened]*OVERBURDENED*[line break][end if][line break]";
 	if scenario is "Researcher" or nanitemeter > 0:
@@ -559,7 +564,7 @@ Carry out criminallittering:
 	if droptotal is 0:
 		say "You don't have anything you're ready to drop.";
 	else:
-		say "You drop everything but your journal and any equipped items you have. You get rid of [droptotal] item(s) in all[if droptotal > 4]. Ahhh! Your back feels much better now[end if].";
+		say "You drop everything but your journal and any equipped items you have. You get rid of [droptotal] item[if droptotal is not 1]s[end if] in all[if droptotal > 4]. Ahhh! Your back feels much better now[end if].";
 
 Section 4 - Trading
 

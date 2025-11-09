@@ -236,8 +236,8 @@ When Play begins:
 	now libido entry is 75; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "skunkbeast lord milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "skunkbeast lord cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if skrp is 1][one of]tauric[or]bestial[at random][else][one of]bestial[or]animalistic[or]feral[at random][end if]";
@@ -363,7 +363,7 @@ to sblinfect:
 		if Name entry is "Skunkbeast Lord":
 			now MonsterID is y;
 			break;
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";

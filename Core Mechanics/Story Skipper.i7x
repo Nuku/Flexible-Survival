@@ -65,6 +65,16 @@ a postimport rule:
 		now CockName of Player is "Skunk Female";
 	if TailName of Player is "Skunk":
 		now TailName of Player is "Skunk Female";
+	[re-equip weapon wielded during possession import to correct player stats]
+	if weapon object of Player is not journal:
+		repeat with x running through owned armaments:
+			if x is wielded:
+				unwield x silently;
+				wield x silently;
+				break;
+	[just in case, make extra sure these don't end up in player lists]
+	remove "Imported" from WardList of Player, if present;
+	remove "Imported" from BanList of Player, if present;
 
 [----------------------------------------------------------------------------------]
 [ Testing Commands for partial Saving                                              ]
@@ -205,15 +215,15 @@ to EventRestore:
 			if there is a name of EventIdName in the Table of GameEventIDs:
 				let EventObject be the object corresponding to a name of EventIdName in the Table of GameEventIDs;
 				if ResolveState entry is "Resolved":
-					now EventObject is resolved;
+					if EventObject is unresolved, now EventObject is resolved;
 				else:
-					now EventObject is unresolved;
+					if EventObject is resolved, now EventObject is unresolved;
 				if ActiveState entry is "Active":
-					now EventObject is active;
+					if EventObject is inactive, now EventObject is active;
 				else:
-					now EventObject is inactive;
-				now Resolution of EventObject is Resolution entry;
-				now sarea of EventObject is SituationArea entry;
+					if EventObject is active, now EventObject is inactive;
+				if Resolution of EventObject is not Resolution entry, now Resolution of EventObject is Resolution entry;
+				if sarea of EventObject is not SituationArea entry, now sarea of EventObject is SituationArea entry;
 				[bugfix code after re-naming Midway to Fair]
 				if sarea of EventObject is "Midway":
 					now sarea of EventObject is "Fair";
@@ -283,17 +293,17 @@ to RoomRestore:
 			if there is a name of RoomIdName in the Table of GameRoomIDs:
 				let RoomObject be the object corresponding to a name of RoomIdName in the Table of GameRoomIDs;
 				if Reachability entry is "Private":
-					now RoomObject is private;
+					if RoomObject is not private, now RoomObject is private;
 				else:
-					now RoomObject is not private;
+					if RoomObject is private, now RoomObject is not private;
 				if ExplorationStatus entry is "Known":
-					now RoomObject is known;
+					if RoomObject is unknown, now RoomObject is known;
 				else:
-					now RoomObject is not known;
+					if RoomObject is known, now RoomObject is unknown;
 				if RestSafety entry is "Safe":
-					now RoomObject is sleepsafe;
+					if RoomObject is not sleepsafe, now RoomObject is sleepsafe;
 				else:
-					now RoomObject is not sleepsafe;
+					if RoomObject is sleepsafe, now RoomObject is not sleepsafe;
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] found and set to: [Reachability entry]; [ExplorationStatus entry]; [RestSafety entry]";
@@ -303,7 +313,7 @@ to RoomRestore:
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
 	if the File of RoomInventorySave exists:
 		repeat with x running through rooms:
-			truncate Invent of x to 0 entries; [cleaning out the old data]
+			if Invent of x is not empty, truncate Invent of x to 0 entries; [cleaning out the old data]
 		say "Restoring RoomInventories...";
 		read File of RoomInventorySave into the Table of GameRoomInventories;
 		repeat with x running from 1 to the number of filled rows in the Table of GameRoomInventories:
@@ -340,6 +350,9 @@ to PossessionSave:
 				now PossessionEquipped is true;
 			if object entry is cursed:
 				now PossesssionCursed is true;
+		else if object entry is Armament:
+			if object entry is wielded:
+				now PossessionEquipped is true;
 		if PossessionCarriedNumber > 0 or PossessionStoredNumber > 0: [if the object is indeed in the players possession, it gets written down]
 			choose a blank row in the table of GamePossessions;
 			now Name entry is PossessionName;
@@ -357,19 +370,22 @@ to PossessionRestore:
 	if the File of PossessionSave exists:
 		say "Restoring Possessions...";
 		read File of PossessionSave into the Table of GamePossessions;
+		[resetting player weapon stats]
+		now weapon object of Player is pocketknife;
+		unwield pocketknife silently;
 		[wiping out all items from before the import]
 		repeat with x running from 1 to number of filled rows in table of game objects:
 			choose row x from the table of game objects;
 			if object entry is Equipment:
-				now object entry is not equipped;
-			now carried of object entry is 0;
-			now stashed of object entry is 0;
+				if object entry is equipped, now object entry is not equipped;
+			if carried of object entry > 0, now carried of object entry is 0;
+			if stashed of object entry > 0, now stashed of object entry is 0;
 		[applying the imported items]
 		repeat with x running from 1 to the number of filled rows in the Table of GamePossessions:
 			choose row x in the Table of GamePossessions;
 			let PossessionIdName be Name entry;
 			[some small bugfixes due to items that got renamed]
-			if PossessionIdName is "earthen seed", now PossessionIdName is "sierrasaur cum";
+			[if PossessionIdName is "earthen seed", now PossessionIdName is "sierrasaur cum";] [never actually renamed]
 			if PossessionIdName is "sturdy jeans", now PossessionIdName is "dark-blue jeans";
 			if PossessionIdName is "tenvale gorillas football helmet", now PossessionIdName is "tenvale silverbacks football helmet";
 			if PossessionIdName is "tenvale gorillas baseball cap", now PossessionIdName is "tenvale silverbacks baseball cap";
@@ -386,6 +402,9 @@ to PossessionRestore:
 						now PossessionObject is cursed;
 					else:
 						now PossessionObject is not cursed;
+				else if PossessionObject is Armament:
+					if EquippedStatus entry is true:
+						now weapon object of Player is PossessionObject;
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] found and set to: [carried of PossessionObject] carried and [stashed of PossessionObject] stored.";
@@ -395,6 +414,7 @@ to PossessionRestore:
 	else:
 		say "No Possession Save File Found!";
 	if the File of VialData exists:
+		blank out the whole of Table of OwnedVials; [cleaning out everything]
 		read File of VialData into the Table of OwnedVials;
 	blank out the whole of Table of GamePossessions; [empty out all old data]
 
@@ -534,88 +554,88 @@ to CharacterRestore:
 				let MainInfection_Restore be MainInfection entry;
 				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
-					move CharacterObject to TargetRoom, without printing a room description;
+					if CharacterObject is not in TargetRoom, move CharacterObject to TargetRoom, without printing a room description;
 				else:
 					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
 					move CharacterObject to NPC Nexus;
 				[Numbers]
-				now Energy of CharacterObject is Energy entry;
-				now HP of CharacterObject is HP entry;
-				now MaxHP of CharacterObject is MaxHP entry;
-				now XP of CharacterObject is XP entry;
-				now Level of CharacterObject is Level entry;
-				now Armor of CharacterObject is Armor entry;
-				now Weapon Damage of CharacterObject is Weapon Damage entry;
-				now Strength of CharacterObject is Strength entry;
-				now Dexterity of CharacterObject is Dexterity entry;
-				now Stamina of CharacterObject is Stamina entry;
-				now Charisma of CharacterObject is Charisma entry;
-				now Intelligence of CharacterObject is Intelligence entry;
-				now Perception of CharacterObject is Perception entry;
-				now Hunger of CharacterObject is Hunger entry;
-				now Thirst of CharacterObject is Thirst entry;
-				now Morale of CharacterObject is Morale entry;
-				now Lust of CharacterObject is Lust entry;
-				now Libido of CharacterObject is Libido entry;
-				now Loyalty of CharacterObject is Loyalty entry;
-				now Humanity of CharacterObject is Humanity entry;
-				now Affection of CharacterObject is Affection entry;
-				now Depravity of CharacterObject is Depravity entry;
-				now SubVsDom of CharacterObject is SubVsDom entry;
-				now Body Weight of CharacterObject is Body Weight entry;
-				now Body Definition of CharacterObject is Body Definition entry;
-				now Androginity of CharacterObject is Androginity entry;
-				now Mouth Length of CharacterObject is Mouth Length entry;
-				now Mouth Circumference of CharacterObject is Mouth Circumference entry;
-				now Tongue Length of CharacterObject is Tongue Length entry;
-				now Breast Size of CharacterObject is Breast Size entry;
-				now Nipple Count of CharacterObject is Nipple Count entry;
-				now Asshole Depth of CharacterObject is Asshole Depth entry;
-				now Asshole Tightness of CharacterObject is Asshole Tightness entry;
-				now Cock Count of CharacterObject is Cock Count entry;
-				now Cock Girth of CharacterObject is Cock Girth entry;
-				now Cock Length of CharacterObject is Cock Length entry;
-				now Ball Count of CharacterObject is Ball Count entry;
-				now Ball Size of CharacterObject is Ball Size entry;
-				now Cunt Count of CharacterObject is Cunt Count entry;
-				now Cunt Depth of CharacterObject is Cunt Depth entry;
-				now Cunt Tightness of CharacterObject is Cunt Tightness entry;
-				now Clit Size of CharacterObject is Clit Size entry;
-				now Armor of CharacterObject is Armor entry;
-				now Capacity of CharacterObject is Capacity entry;
-				now SleepRhythm of CharacterObject is SleepRhythm entry;
-				now scalevalue of CharacterObject is The scalevalue entry;
-				now PlayerLastSize of CharacterObject is PlayerLastSize entry;
-				now ImpregTimer of CharacterObject is ImpregTimer entry;
-				now OffspringCount of CharacterObject is OffspringCount entry;
+				if Energy of CharacterObject is not Energy entry, now Energy of CharacterObject is Energy entry;
+				if HP of CharacterObject is not HP entry, now HP of CharacterObject is HP entry;
+				if MaxHP of CharacterObject is not MaxHP entry, now MaxHP of CharacterObject is MaxHP entry;
+				if XP of CharacterObject is not XP entry, now XP of CharacterObject is XP entry;
+				if Level of CharacterObject is not Level entry, now Level of CharacterObject is Level entry;
+				if Armor of CharacterObject is not Armor entry, now Armor of CharacterObject is Armor entry;
+				if Weapon Damage of CharacterObject is not Weapon Damage entry, now Weapon Damage of CharacterObject is Weapon Damage entry;
+				if Strength of CharacterObject is not Strength entry, now Strength of CharacterObject is Strength entry;
+				if Dexterity of CharacterObject is not Dexterity entry, now Dexterity of CharacterObject is Dexterity entry;
+				if Stamina of CharacterObject is not Stamina entry, now Stamina of CharacterObject is Stamina entry;
+				if Charisma of CharacterObject is not Charisma entry, now Charisma of CharacterObject is Charisma entry;
+				if Intelligence of CharacterObject is not Intelligence entry, now Intelligence of CharacterObject is Intelligence entry;
+				if Perception of CharacterObject is not Perception entry, now Perception of CharacterObject is Perception entry;
+				if Hunger of CharacterObject is not Hunger entry, now Hunger of CharacterObject is Hunger entry;
+				if Thirst of CharacterObject is not Thirst entry, now Thirst of CharacterObject is Thirst entry;
+				if Morale of CharacterObject is not Morale entry, now Morale of CharacterObject is Morale entry;
+				if Lust of CharacterObject is not Lust entry, now Lust of CharacterObject is Lust entry;
+				if Libido of CharacterObject is not Libido entry, now Libido of CharacterObject is Libido entry;
+				if Loyalty of CharacterObject is not Loyalty entry, now Loyalty of CharacterObject is Loyalty entry;
+				if Humanity of CharacterObject is not Humanity entry, now Humanity of CharacterObject is Humanity entry;
+				if Affection of CharacterObject is not Affection entry, now Affection of CharacterObject is Affection entry;
+				if Depravity of CharacterObject is not Depravity entry, now Depravity of CharacterObject is Depravity entry;
+				if SubVsDom of CharacterObject is not SubVsDom entry, now SubVsDom of CharacterObject is SubVsDom entry;
+				if Body Weight of CharacterObject is not Body Weight entry, now Body Weight of CharacterObject is Body Weight entry;
+				if Body Definition of CharacterObject is not Body Definition entry, now Body Definition of CharacterObject is Body Definition entry;
+				if Androginity of CharacterObject is not Androginity entry, now Androginity of CharacterObject is Androginity entry;
+				if Mouth Length of CharacterObject is not Mouth Length entry, now Mouth Length of CharacterObject is Mouth Length entry;
+				if Mouth Circumference of CharacterObject is not Mouth Circumference entry, now Mouth Circumference of CharacterObject is Mouth Circumference entry;
+				if Tongue Length of CharacterObject is not Tongue Length entry, now Tongue Length of CharacterObject is Tongue Length entry;
+				if Breast Size of CharacterObject is not Breast Size entry, now Breast Size of CharacterObject is Breast Size entry;
+				if Nipple Count of CharacterObject is not Nipple Count entry, now Nipple Count of CharacterObject is Nipple Count entry;
+				if Asshole Depth of CharacterObject is not Asshole Depth entry, now Asshole Depth of CharacterObject is Asshole Depth entry;
+				if Asshole Tightness of CharacterObject is not Asshole Tightness entry, now Asshole Tightness of CharacterObject is Asshole Tightness entry;
+				if Cock Count of CharacterObject is not Cock Count entry, now Cock Count of CharacterObject is Cock Count entry;
+				if Cock Girth of CharacterObject is not Cock Girth entry, now Cock Girth of CharacterObject is Cock Girth entry;
+				if Cock Length of CharacterObject is not Cock Length entry, now Cock Length of CharacterObject is Cock Length entry;
+				if Ball Count of CharacterObject is not Ball Count entry, now Ball Count of CharacterObject is Ball Count entry;
+				if Ball Size of CharacterObject is not Ball Size entry, now Ball Size of CharacterObject is Ball Size entry;
+				if Cunt Count of CharacterObject is not Cunt Count entry, now Cunt Count of CharacterObject is Cunt Count entry;
+				if Cunt Depth of CharacterObject is not Cunt Depth entry, now Cunt Depth of CharacterObject is Cunt Depth entry;
+				if Cunt Tightness of CharacterObject is not Cunt Tightness entry, now Cunt Tightness of CharacterObject is Cunt Tightness entry;
+				if Clit Size of CharacterObject is not Clit Size entry, now Clit Size of CharacterObject is Clit Size entry;
+				if Armor of CharacterObject is not Armor entry, now Armor of CharacterObject is Armor entry;
+				if Capacity of CharacterObject is not Capacity entry, now Capacity of CharacterObject is Capacity entry;
+				if SleepRhythm of CharacterObject is not SleepRhythm entry, now SleepRhythm of CharacterObject is SleepRhythm entry;
+				if scalevalue of CharacterObject is not scalevalue entry, now scalevalue of CharacterObject is scalevalue entry;
+				if PlayerLastSize of CharacterObject is not PlayerLastSize entry, now PlayerLastSize of CharacterObject is PlayerLastSize entry;
+				if ImpregTimer of CharacterObject is not ImpregTimer entry, now ImpregTimer of CharacterObject is ImpregTimer entry;
+				if OffspringCount of CharacterObject is not OffspringCount entry, now OffspringCount of CharacterObject is OffspringCount entry;
 				[Texts]
 				if there is a name of MainInfection_Restore in the Table of Random Critters:
-					now MainInfection of CharacterObject is MainInfection entry;
-				now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
-				now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
-				now FirstOralPartner of CharacterObject is FirstOralPartner entry;
-				now FirstPenilePartner of CharacterObject is FirstPenilePartner entry;
-				now Cock Size Desc of CharacterObject is Cock Size Desc entry;
-				now Cunt Size Desc of CharacterObject is Cunt Size Desc entry;
-				now Breast Size Desc of CharacterObject is Breast Size Desc entry;
-				now Short Breast Size Desc of CharacterObject is Short Breast Size Desc entry;
-				now Originalgender of CharacterObject is Originalgender entry;
-				now PlayerOriginalGender of CharacterObject is PlayerOriginalGender entry;
-				now PlayerLastGender of CharacterObject is PlayerLastGender entry;
-				now PlayerLastBodytype of CharacterObject is PlayerLastBodytype entry;
+					if MainInfection of CharacterObject is not MainInfection entry, now MainInfection of CharacterObject is MainInfection entry;
+				if FirstAnalPartner of CharacterObject is not FirstAnalPartner entry, now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
+				if FirstVaginalPartner of CharacterObject is not FirstVaginalPartner entry, now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
+				if FirstOralPartner of CharacterObject is not FirstOralPartner entry, now FirstOralPartner of CharacterObject is FirstOralPartner entry;
+				if FirstPenilePartner of CharacterObject is not FirstPenilePartner entry, now FirstPenilePartner of CharacterObject is FirstPenilePartner entry;
+				if Cock Size Desc of CharacterObject is not Cock Size Desc entry, now Cock Size Desc of CharacterObject is Cock Size Desc entry;
+				if Cunt Size Desc of CharacterObject is not Cunt Size Desc entry, now Cunt Size Desc of CharacterObject is Cunt Size Desc entry;
+				if Breast Size Desc of CharacterObject is not Breast Size Desc entry, now Breast Size Desc of CharacterObject is Breast Size Desc entry;
+				if Short Breast Size Desc of CharacterObject is not Short Breast Size Desc entry, now Short Breast Size Desc of CharacterObject is Short Breast Size Desc entry;
+				if Originalgender of CharacterObject is not Originalgender entry, now Originalgender of CharacterObject is Originalgender entry;
+				if PlayerOriginalGender of CharacterObject is not PlayerOriginalGender entry, now PlayerOriginalGender of CharacterObject is PlayerOriginalGender entry;
+				if PlayerLastGender of CharacterObject is not PlayerLastGender entry, now PlayerLastGender of CharacterObject is PlayerLastGender entry;
+				if PlayerLastBodytype of CharacterObject is not PlayerLastBodytype entry, now PlayerLastBodytype of CharacterObject is PlayerLastBodytype entry;
 				[Truth States]
-				now PlayerMet of CharacterObject is PlayerMet entry;
-				now PlayerRomanced of CharacterObject is PlayerRomanced entry;
-				now PlayerFriended of CharacterObject is PlayerFriended entry;
-				now PlayerControlled of CharacterObject is PlayerControlled entry;
-				now PlayerFucked of CharacterObject is PlayerFucked entry;
-				now OralVirgin of CharacterObject is OralVirgin entry;
-				now Virgin of CharacterObject is Virgin entry;
-				now AnalVirgin of CharacterObject is AnalVirgin entry;
-				now PenileVirgin of CharacterObject is PenileVirgin entry;
-				now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
-				now TwistedCapacity of CharacterObject is TwistedCapacity entry;
-				now Sterile of CharacterObject is Sterile entry;
+				if PlayerMet of CharacterObject is not PlayerMet entry, now PlayerMet of CharacterObject is PlayerMet entry;
+				if PlayerRomanced of CharacterObject is not PlayerRomanced entry, now PlayerRomanced of CharacterObject is PlayerRomanced entry;
+				if PlayerFriended of CharacterObject is not PlayerFriended entry, now PlayerFriended of CharacterObject is PlayerFriended entry;
+				if PlayerControlled of CharacterObject is not PlayerControlled entry, now PlayerControlled of CharacterObject is PlayerControlled entry;
+				if PlayerFucked of CharacterObject is not PlayerFucked entry, now PlayerFucked of CharacterObject is PlayerFucked entry;
+				if OralVirgin of CharacterObject is not OralVirgin entry, now OralVirgin of CharacterObject is OralVirgin entry;
+				if Virgin of CharacterObject is not Virgin entry, now Virgin of CharacterObject is Virgin entry;
+				if AnalVirgin of CharacterObject is not AnalVirgin entry, now AnalVirgin of CharacterObject is AnalVirgin entry;
+				if PenileVirgin of CharacterObject is not PenileVirgin entry, now PenileVirgin of CharacterObject is PenileVirgin entry;
+				if SexuallyExperienced of CharacterObject is not SexuallyExperienced entry, now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
+				if TwistedCapacity of CharacterObject is not TwistedCapacity entry, now TwistedCapacity of CharacterObject is TwistedCapacity entry;
+				if Sterile of CharacterObject is not Sterile entry, now Sterile of CharacterObject is Sterile entry;
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
@@ -632,85 +652,85 @@ to CharacterRestore:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
 				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
-					move CharacterObject to TargetRoom, without printing a room description;
+					if CharacterObject is not in TargetRoom, move CharacterObject to TargetRoom, without printing a room description;
 				else:
 					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
 					move CharacterObject to NPC Nexus;
 				[Numbers]
-				now Energy of CharacterObject is Energy entry;
-				now HP of CharacterObject is HP entry;
-				now MaxHP of CharacterObject is MaxHP entry;
-				now XP of CharacterObject is XP entry;
-				now Level of CharacterObject is Level entry;
-				now Armor of CharacterObject is Armor entry;
-				now Weapon Damage of CharacterObject is Weapon Damage entry;
-				now Strength of CharacterObject is Strength entry;
-				now Dexterity of CharacterObject is Dexterity entry;
-				now Stamina of CharacterObject is Stamina entry;
-				now Charisma of CharacterObject is Charisma entry;
-				now Intelligence of CharacterObject is Intelligence entry;
-				now Perception of CharacterObject is Perception entry;
-				now Hunger of CharacterObject is Hunger entry;
-				now Thirst of CharacterObject is Thirst entry;
-				now Morale of CharacterObject is Morale entry;
-				now Lust of CharacterObject is Lust entry;
-				now Libido of CharacterObject is Libido entry;
-				now Loyalty of CharacterObject is Loyalty entry;
-				now Humanity of CharacterObject is Humanity entry;
-				now Affection of CharacterObject is Affection entry;
-				now Depravity of CharacterObject is Depravity entry;
-				now SubVsDom of CharacterObject is SubVsDom entry;
-				now Body Weight of CharacterObject is Body Weight entry;
-				now Body Definition of CharacterObject is Body Definition entry;
-				now Androginity of CharacterObject is Androginity entry;
-				now Mouth Length of CharacterObject is Mouth Length entry;
-				now Mouth Circumference of CharacterObject is Mouth Circumference entry;
-				now Tongue Length of CharacterObject is Tongue Length entry;
-				now Breast Size of CharacterObject is Breast Size entry;
-				now Nipple Count of CharacterObject is Nipple Count entry;
-				now Asshole Depth of CharacterObject is Asshole Depth entry;
-				now Asshole Tightness of CharacterObject is Asshole Tightness entry;
-				now Cock Count of CharacterObject is Cock Count entry;
-				now Cock Girth of CharacterObject is Cock Girth entry;
-				now Cock Length of CharacterObject is Cock Length entry;
-				now Ball Count of CharacterObject is Ball Count entry;
-				now Ball Size of CharacterObject is Ball Size entry;
-				now Cunt Count of CharacterObject is Cunt Count entry;
-				now Cunt Depth of CharacterObject is Cunt Depth entry;
-				now Cunt Tightness of CharacterObject is Cunt Tightness entry;
-				now Clit Size of CharacterObject is Clit Size entry;
-				now Armor of CharacterObject is Armor entry;
-				now Capacity of CharacterObject is Capacity entry;
-				now SleepRhythm of CharacterObject is SleepRhythm entry;
-				now scalevalue of CharacterObject is The scalevalue entry;
-				now PlayerLastSize of CharacterObject is PlayerLastSize entry;
+				if Energy of CharacterObject is not Energy entry, now Energy of CharacterObject is Energy entry;
+				if HP of CharacterObject is not HP entry, now HP of CharacterObject is HP entry;
+				if MaxHP of CharacterObject is not MaxHP entry, now MaxHP of CharacterObject is MaxHP entry;
+				if XP of CharacterObject is not XP entry, now XP of CharacterObject is XP entry;
+				if Level of CharacterObject is not Level entry, now Level of CharacterObject is Level entry;
+				if Armor of CharacterObject is not Armor entry, now Armor of CharacterObject is Armor entry;
+				if Weapon Damage of CharacterObject is not Weapon Damage entry, now Weapon Damage of CharacterObject is Weapon Damage entry;
+				if Strength of CharacterObject is not Strength entry, now Strength of CharacterObject is Strength entry;
+				if Dexterity of CharacterObject is not Dexterity entry, now Dexterity of CharacterObject is Dexterity entry;
+				if Stamina of CharacterObject is not Stamina entry, now Stamina of CharacterObject is Stamina entry;
+				if Charisma of CharacterObject is not Charisma entry, now Charisma of CharacterObject is Charisma entry;
+				if Intelligence of CharacterObject is not Intelligence entry, now Intelligence of CharacterObject is Intelligence entry;
+				if Perception of CharacterObject is not Perception entry, now Perception of CharacterObject is Perception entry;
+				if Hunger of CharacterObject is not Hunger entry, now Hunger of CharacterObject is Hunger entry;
+				if Thirst of CharacterObject is not Thirst entry, now Thirst of CharacterObject is Thirst entry;
+				if Morale of CharacterObject is not Morale entry, now Morale of CharacterObject is Morale entry;
+				if Lust of CharacterObject is not Lust entry, now Lust of CharacterObject is Lust entry;
+				if Libido of CharacterObject is not Libido entry, now Libido of CharacterObject is Libido entry;
+				if Loyalty of CharacterObject is not Loyalty entry, now Loyalty of CharacterObject is Loyalty entry;
+				if Humanity of CharacterObject is not Humanity entry, now Humanity of CharacterObject is Humanity entry;
+				if Affection of CharacterObject is not Affection entry, now Affection of CharacterObject is Affection entry;
+				if Depravity of CharacterObject is not Depravity entry, now Depravity of CharacterObject is Depravity entry;
+				if SubVsDom of CharacterObject is not SubVsDom entry, now SubVsDom of CharacterObject is SubVsDom entry;
+				if Body Weight of CharacterObject is not Body Weight entry, now Body Weight of CharacterObject is Body Weight entry;
+				if Body Definition of CharacterObject is not Body Definition entry, now Body Definition of CharacterObject is Body Definition entry;
+				if Androginity of CharacterObject is not Androginity entry, now Androginity of CharacterObject is Androginity entry;
+				if Mouth Length of CharacterObject is not Mouth Length entry, now Mouth Length of CharacterObject is Mouth Length entry;
+				if Mouth Circumference of CharacterObject is not Mouth Circumference entry, now Mouth Circumference of CharacterObject is Mouth Circumference entry;
+				if Tongue Length of CharacterObject is not Tongue Length entry, now Tongue Length of CharacterObject is Tongue Length entry;
+				if Breast Size of CharacterObject is not Breast Size entry, now Breast Size of CharacterObject is Breast Size entry;
+				if Nipple Count of CharacterObject is not Nipple Count entry, now Nipple Count of CharacterObject is Nipple Count entry;
+				if Asshole Depth of CharacterObject is not Asshole Depth entry, now Asshole Depth of CharacterObject is Asshole Depth entry;
+				if Asshole Tightness of CharacterObject is not Asshole Tightness entry, now Asshole Tightness of CharacterObject is Asshole Tightness entry;
+				if Cock Count of CharacterObject is not Cock Count entry, now Cock Count of CharacterObject is Cock Count entry;
+				if Cock Girth of CharacterObject is not Cock Girth entry, now Cock Girth of CharacterObject is Cock Girth entry;
+				if Cock Length of CharacterObject is not Cock Length entry, now Cock Length of CharacterObject is Cock Length entry;
+				if Ball Count of CharacterObject is not Ball Count entry, now Ball Count of CharacterObject is Ball Count entry;
+				if Ball Size of CharacterObject is not Ball Size entry, now Ball Size of CharacterObject is Ball Size entry;
+				if Cunt Count of CharacterObject is not Cunt Count entry, now Cunt Count of CharacterObject is Cunt Count entry;
+				if Cunt Depth of CharacterObject is not Cunt Depth entry, now Cunt Depth of CharacterObject is Cunt Depth entry;
+				if Cunt Tightness of CharacterObject is not Cunt Tightness entry, now Cunt Tightness of CharacterObject is Cunt Tightness entry;
+				if Clit Size of CharacterObject is not Clit Size entry, now Clit Size of CharacterObject is Clit Size entry;
+				if Armor of CharacterObject is not Armor entry, now Armor of CharacterObject is Armor entry;
+				if Capacity of CharacterObject is not Capacity entry, now Capacity of CharacterObject is Capacity entry;
+				if SleepRhythm of CharacterObject is not SleepRhythm entry, now SleepRhythm of CharacterObject is SleepRhythm entry;
+				if scalevalue of CharacterObject is not scalevalue entry, now scalevalue of CharacterObject is scalevalue entry;
+				if PlayerLastSize of CharacterObject is not PlayerLastSize entry, now PlayerLastSize of CharacterObject is PlayerLastSize entry;
 				[Texts]
-				now MainInfection of CharacterObject is MainInfection entry;
-				now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
-				now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
-				now FirstOralPartner of CharacterObject is FirstOralPartner entry;
-				now FirstPenilePartner of CharacterObject is FirstPenilePartner entry;
-				now Cock Size Desc of CharacterObject is Cock Size Desc entry;
-				now Cunt Size Desc of CharacterObject is Cunt Size Desc entry;
-				now Breast Size Desc of CharacterObject is Breast Size Desc entry;
-				now Short Breast Size Desc of CharacterObject is Short Breast Size Desc entry;
-				now Originalgender of CharacterObject is Originalgender entry;
-				now PlayerOriginalGender of CharacterObject is PlayerOriginalGender entry;
-				now PlayerLastGender of CharacterObject is PlayerLastGender entry;
-				now PlayerLastBodytype of CharacterObject is PlayerLastBodytype entry;
+				if MainInfection of CharacterObject is not MainInfection entry, now MainInfection of CharacterObject is MainInfection entry;
+				if FirstAnalPartner of CharacterObject is not FirstAnalPartner entry, now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
+				if FirstVaginalPartner of CharacterObject is not FirstVaginalPartner entry, now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
+				if FirstOralPartner of CharacterObject is not FirstOralPartner entry, now FirstOralPartner of CharacterObject is FirstOralPartner entry;
+				if FirstPenilePartner of CharacterObject is not FirstPenilePartner entry, now FirstPenilePartner of CharacterObject is FirstPenilePartner entry;
+				if Cock Size Desc of CharacterObject is not Cock Size Desc entry, now Cock Size Desc of CharacterObject is Cock Size Desc entry;
+				if Cunt Size Desc of CharacterObject is not Cunt Size Desc entry, now Cunt Size Desc of CharacterObject is Cunt Size Desc entry;
+				if Breast Size Desc of CharacterObject is not Breast Size Desc entry, now Breast Size Desc of CharacterObject is Breast Size Desc entry;
+				if Short Breast Size Desc of CharacterObject is not Short Breast Size Desc entry, now Short Breast Size Desc of CharacterObject is Short Breast Size Desc entry;
+				if Originalgender of CharacterObject is not Originalgender entry, now Originalgender of CharacterObject is Originalgender entry;
+				if PlayerOriginalGender of CharacterObject is not PlayerOriginalGender entry, now PlayerOriginalGender of CharacterObject is PlayerOriginalGender entry;
+				if PlayerLastGender of CharacterObject is not PlayerLastGender entry, now PlayerLastGender of CharacterObject is PlayerLastGender entry;
+				if PlayerLastBodytype of CharacterObject is not PlayerLastBodytype entry, now PlayerLastBodytype of CharacterObject is PlayerLastBodytype entry;
 				[Truth States]
-				now PlayerMet of CharacterObject is PlayerMet entry;
-				now PlayerRomanced of CharacterObject is PlayerRomanced entry;
-				now PlayerFriended of CharacterObject is PlayerFriended entry;
-				now PlayerControlled of CharacterObject is PlayerControlled entry;
-				now PlayerFucked of CharacterObject is PlayerFucked entry;
-				now OralVirgin of CharacterObject is OralVirgin entry;
-				now Virgin of CharacterObject is Virgin entry;
-				now AnalVirgin of CharacterObject is AnalVirgin entry;
-				now PenileVirgin of CharacterObject is PenileVirgin entry;
-				now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
-				now TwistedCapacity of CharacterObject is TwistedCapacity entry;
-				now Sterile of CharacterObject is Sterile entry;
+				if PlayerMet of CharacterObject is not PlayerMet entry, now PlayerMet of CharacterObject is PlayerMet entry;
+				if PlayerRomanced of CharacterObject is not PlayerRomanced entry, now PlayerRomanced of CharacterObject is PlayerRomanced entry;
+				if PlayerFriended of CharacterObject is not PlayerFriended entry, now PlayerFriended of CharacterObject is PlayerFriended entry;
+				if PlayerControlled of CharacterObject is not PlayerControlled entry, now PlayerControlled of CharacterObject is PlayerControlled entry;
+				if PlayerFucked of CharacterObject is not PlayerFucked entry, now PlayerFucked of CharacterObject is PlayerFucked entry;
+				if OralVirgin of CharacterObject is not OralVirgin entry, now OralVirgin of CharacterObject is OralVirgin entry;
+				if Virgin of CharacterObject is not Virgin entry, now Virgin of CharacterObject is Virgin entry;
+				if AnalVirgin of CharacterObject is not AnalVirgin entry, now AnalVirgin of CharacterObject is AnalVirgin entry;
+				if PenileVirgin of CharacterObject is not PenileVirgin entry, now PenileVirgin of CharacterObject is PenileVirgin entry;
+				if SexuallyExperienced of CharacterObject is not SexuallyExperienced entry, now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
+				if TwistedCapacity of CharacterObject is not TwistedCapacity entry, now TwistedCapacity of CharacterObject is TwistedCapacity entry;
+				if Sterile of CharacterObject is not Sterile entry, now Sterile of CharacterObject is Sterile entry;
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
@@ -727,82 +747,82 @@ to CharacterRestore:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
 				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
-					move CharacterObject to TargetRoom, without printing a room description;
+					if CharacterObject is not in TargetRoom, move CharacterObject to TargetRoom, without printing a room description;
 				else:
 					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
 					move CharacterObject to NPC Nexus;
 				[Numbers]
-				now Energy of CharacterObject is Energy entry;
-				now HP of CharacterObject is HP entry;
-				now MaxHP of CharacterObject is MaxHP entry;
-				now XP of CharacterObject is XP entry;
-				now Level of CharacterObject is Level entry;
-				now Armor of CharacterObject is Armor entry;
-				now Weapon Damage of CharacterObject is Weapon Damage entry;
-				now Strength of CharacterObject is Strength entry;
-				now Dexterity of CharacterObject is Dexterity entry;
-				now Stamina of CharacterObject is Stamina entry;
-				now Charisma of CharacterObject is Charisma entry;
-				now Intelligence of CharacterObject is Intelligence entry;
-				now Perception of CharacterObject is Perception entry;
-				now Hunger of CharacterObject is Hunger entry;
-				now Thirst of CharacterObject is Thirst entry;
-				now Morale of CharacterObject is Morale entry;
-				now Lust of CharacterObject is Lust entry;
-				now Libido of CharacterObject is Libido entry;
-				now Loyalty of CharacterObject is Loyalty entry;
-				now Humanity of CharacterObject is Humanity entry;
-				now Body Weight of CharacterObject is Body Weight entry;
-				now Body Definition of CharacterObject is Body Definition entry;
-				now Androginity of CharacterObject is Androginity entry;
-				now Mouth Length of CharacterObject is Mouth Length entry;
-				now Mouth Circumference of CharacterObject is Mouth Circumference entry;
-				now Tongue Length of CharacterObject is Tongue Length entry;
-				now Breast Size of CharacterObject is Breast Size entry;
-				now Nipple Count of CharacterObject is Nipple Count entry;
-				now Asshole Depth of CharacterObject is Asshole Depth entry;
-				now Asshole Tightness of CharacterObject is Asshole Tightness entry;
-				now Cock Count of CharacterObject is Cock Count entry;
-				now Cock Girth of CharacterObject is Cock Girth entry;
-				now Cock Length of CharacterObject is Cock Length entry;
-				now Ball Count of CharacterObject is Ball Count entry;
-				now Ball Size of CharacterObject is Ball Size entry;
-				now Cunt Count of CharacterObject is Cunt Count entry;
-				now Cunt Depth of CharacterObject is Cunt Depth entry;
-				now Cunt Tightness of CharacterObject is Cunt Tightness entry;
-				now Clit Size of CharacterObject is Clit Size entry;
-				now Armor of CharacterObject is Armor entry;
-				now Capacity of CharacterObject is Capacity entry;
-				now SleepRhythm of CharacterObject is SleepRhythm entry;
-				now scalevalue of CharacterObject is The scalevalue entry;
-				now PlayerLastSize of CharacterObject is PlayerLastSize entry;
+				if Energy of CharacterObject is not Energy entry, now Energy of CharacterObject is Energy entry;
+				if HP of CharacterObject is not HP entry, now HP of CharacterObject is HP entry;
+				if MaxHP of CharacterObject is not MaxHP entry, now MaxHP of CharacterObject is MaxHP entry;
+				if XP of CharacterObject is not XP entry, now XP of CharacterObject is XP entry;
+				if Level of CharacterObject is not Level entry, now Level of CharacterObject is Level entry;
+				if Armor of CharacterObject is not Armor entry, now Armor of CharacterObject is Armor entry;
+				if Weapon Damage of CharacterObject is not Weapon Damage entry, now Weapon Damage of CharacterObject is Weapon Damage entry;
+				if Strength of CharacterObject is not Strength entry, now Strength of CharacterObject is Strength entry;
+				if Dexterity of CharacterObject is not Dexterity entry, now Dexterity of CharacterObject is Dexterity entry;
+				if Stamina of CharacterObject is not Stamina entry, now Stamina of CharacterObject is Stamina entry;
+				if Charisma of CharacterObject is not Charisma entry, now Charisma of CharacterObject is Charisma entry;
+				if Intelligence of CharacterObject is not Intelligence entry, now Intelligence of CharacterObject is Intelligence entry;
+				if Perception of CharacterObject is not Perception entry, now Perception of CharacterObject is Perception entry;
+				if Hunger of CharacterObject is not Hunger entry, now Hunger of CharacterObject is Hunger entry;
+				if Thirst of CharacterObject is not Thirst entry, now Thirst of CharacterObject is Thirst entry;
+				if Morale of CharacterObject is not Morale entry, now Morale of CharacterObject is Morale entry;
+				if Lust of CharacterObject is not Lust entry, now Lust of CharacterObject is Lust entry;
+				if Libido of CharacterObject is not Libido entry, now Libido of CharacterObject is Libido entry;
+				if Loyalty of CharacterObject is not Loyalty entry, now Loyalty of CharacterObject is Loyalty entry;
+				if Humanity of CharacterObject is not Humanity entry, now Humanity of CharacterObject is Humanity entry;
+				if Body Weight of CharacterObject is not Body Weight entry, now Body Weight of CharacterObject is Body Weight entry;
+				if Body Definition of CharacterObject is not Body Definition entry, now Body Definition of CharacterObject is Body Definition entry;
+				if Androginity of CharacterObject is not Androginity entry, now Androginity of CharacterObject is Androginity entry;
+				if Mouth Length of CharacterObject is not Mouth Length entry, now Mouth Length of CharacterObject is Mouth Length entry;
+				if Mouth Circumference of CharacterObject is not Mouth Circumference entry, now Mouth Circumference of CharacterObject is Mouth Circumference entry;
+				if Tongue Length of CharacterObject is not Tongue Length entry, now Tongue Length of CharacterObject is Tongue Length entry;
+				if Breast Size of CharacterObject is not Breast Size entry, now Breast Size of CharacterObject is Breast Size entry;
+				if Nipple Count of CharacterObject is not Nipple Count entry, now Nipple Count of CharacterObject is Nipple Count entry;
+				if Asshole Depth of CharacterObject is not Asshole Depth entry, now Asshole Depth of CharacterObject is Asshole Depth entry;
+				if Asshole Tightness of CharacterObject is not Asshole Tightness entry, now Asshole Tightness of CharacterObject is Asshole Tightness entry;
+				if Cock Count of CharacterObject is not Cock Count entry, now Cock Count of CharacterObject is Cock Count entry;
+				if Cock Girth of CharacterObject is not Cock Girth entry, now Cock Girth of CharacterObject is Cock Girth entry;
+				if Cock Length of CharacterObject is not Cock Length entry, now Cock Length of CharacterObject is Cock Length entry;
+				if Ball Count of CharacterObject is not Ball Count entry, now Ball Count of CharacterObject is Ball Count entry;
+				if Ball Size of CharacterObject is not Ball Size entry, now Ball Size of CharacterObject is Ball Size entry;
+				if Cunt Count of CharacterObject is not Cunt Count entry, now Cunt Count of CharacterObject is Cunt Count entry;
+				if Cunt Depth of CharacterObject is not Cunt Depth entry, now Cunt Depth of CharacterObject is Cunt Depth entry;
+				if Cunt Tightness of CharacterObject is not Cunt Tightness entry, now Cunt Tightness of CharacterObject is Cunt Tightness entry;
+				if Clit Size of CharacterObject is not Clit Size entry, now Clit Size of CharacterObject is Clit Size entry;
+				if Armor of CharacterObject is not Armor entry, now Armor of CharacterObject is Armor entry;
+				if Capacity of CharacterObject is not Capacity entry, now Capacity of CharacterObject is Capacity entry;
+				if SleepRhythm of CharacterObject is not SleepRhythm entry, now SleepRhythm of CharacterObject is SleepRhythm entry;
+				if scalevalue of CharacterObject is not scalevalue entry, now scalevalue of CharacterObject is scalevalue entry;
+				if PlayerLastSize of CharacterObject is not PlayerLastSize entry, now PlayerLastSize of CharacterObject is PlayerLastSize entry;
 				[Texts]
 				[now MainInfection of CharacterObject is MainInfection entry;]
-				now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
-				now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
-				now FirstOralPartner of CharacterObject is FirstOralPartner entry;
-				now FirstPenilePartner of CharacterObject is FirstPenilePartner entry;
-				now Cock Size Desc of CharacterObject is Cock Size Desc entry;
-				now Cunt Size Desc of CharacterObject is Cunt Size Desc entry;
-				now Breast Size Desc of CharacterObject is Breast Size Desc entry;
-				now Short Breast Size Desc of CharacterObject is Short Breast Size Desc entry;
-				now Originalgender of CharacterObject is Originalgender entry;
-				now PlayerOriginalGender of CharacterObject is PlayerOriginalGender entry;
-				now PlayerLastGender of CharacterObject is PlayerLastGender entry;
-				now PlayerLastBodytype of CharacterObject is PlayerLastBodytype entry;
+				if FirstAnalPartner of CharacterObject is not FirstAnalPartner entry, now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
+				if FirstVaginalPartner of CharacterObject is not FirstVaginalPartner entry, now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
+				if FirstOralPartner of CharacterObject is not FirstOralPartner entry, now FirstOralPartner of CharacterObject is FirstOralPartner entry;
+				if FirstPenilePartner of CharacterObject is not FirstPenilePartner entry, now FirstPenilePartner of CharacterObject is FirstPenilePartner entry;
+				if Cock Size Desc of CharacterObject is not Cock Size Desc entry, now Cock Size Desc of CharacterObject is Cock Size Desc entry;
+				if Cunt Size Desc of CharacterObject is not Cunt Size Desc entry, now Cunt Size Desc of CharacterObject is Cunt Size Desc entry;
+				if Breast Size Desc of CharacterObject is not Breast Size Desc entry, now Breast Size Desc of CharacterObject is Breast Size Desc entry;
+				if Short Breast Size Desc of CharacterObject is not Short Breast Size Desc entry, now Short Breast Size Desc of CharacterObject is Short Breast Size Desc entry;
+				if Originalgender of CharacterObject is not Originalgender entry, now Originalgender of CharacterObject is Originalgender entry;
+				if PlayerOriginalGender of CharacterObject is not PlayerOriginalGender entry, now PlayerOriginalGender of CharacterObject is PlayerOriginalGender entry;
+				if PlayerLastGender of CharacterObject is not PlayerLastGender entry, now PlayerLastGender of CharacterObject is PlayerLastGender entry;
+				if PlayerLastBodytype of CharacterObject is not PlayerLastBodytype entry, now PlayerLastBodytype of CharacterObject is PlayerLastBodytype entry;
 				[Truth States]
-				now PlayerMet of CharacterObject is PlayerMet entry;
-				now PlayerRomanced of CharacterObject is PlayerRomanced entry;
-				now PlayerFriended of CharacterObject is PlayerFriended entry;
-				now PlayerControlled of CharacterObject is PlayerControlled entry;
-				now PlayerFucked of CharacterObject is PlayerFucked entry;
-				now OralVirgin of CharacterObject is OralVirgin entry;
-				now Virgin of CharacterObject is Virgin entry;
-				now AnalVirgin of CharacterObject is AnalVirgin entry;
-				now PenileVirgin of CharacterObject is PenileVirgin entry;
-				now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
-				now TwistedCapacity of CharacterObject is TwistedCapacity entry;
-				now Sterile of CharacterObject is Sterile entry;
+				if PlayerMet of CharacterObject is not PlayerMet entry, now PlayerMet of CharacterObject is PlayerMet entry;
+				if PlayerRomanced of CharacterObject is not PlayerRomanced entry, now PlayerRomanced of CharacterObject is PlayerRomanced entry;
+				if PlayerFriended of CharacterObject is not PlayerFriended entry, now PlayerFriended of CharacterObject is PlayerFriended entry;
+				if PlayerControlled of CharacterObject is not PlayerControlled entry, now PlayerControlled of CharacterObject is PlayerControlled entry;
+				if PlayerFucked of CharacterObject is not PlayerFucked entry, now PlayerFucked of CharacterObject is PlayerFucked entry;
+				if OralVirgin of CharacterObject is not OralVirgin entry, now OralVirgin of CharacterObject is OralVirgin entry;
+				if Virgin of CharacterObject is not Virgin entry, now Virgin of CharacterObject is Virgin entry;
+				if AnalVirgin of CharacterObject is not AnalVirgin entry, now AnalVirgin of CharacterObject is AnalVirgin entry;
+				if PenileVirgin of CharacterObject is not PenileVirgin entry, now PenileVirgin of CharacterObject is PenileVirgin entry;
+				if SexuallyExperienced of CharacterObject is not SexuallyExperienced entry, now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
+				if TwistedCapacity of CharacterObject is not TwistedCapacity entry, now TwistedCapacity of CharacterObject is TwistedCapacity entry;
+				if Sterile of CharacterObject is not Sterile entry, now Sterile of CharacterObject is Sterile entry;
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
@@ -819,81 +839,81 @@ to CharacterRestore:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
 				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
-					move CharacterObject to TargetRoom, without printing a room description;
+					if CharacterObject is not in TargetRoom, move CharacterObject to TargetRoom, without printing a room description;
 				else:
 					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
 					move CharacterObject to NPC Nexus;
 				[Numbers]
-				now Energy of CharacterObject is Energy entry;
-				now HP of CharacterObject is HP entry;
-				now MaxHP of CharacterObject is MaxHP entry;
-				now XP of CharacterObject is XP entry;
-				now Level of CharacterObject is Level entry;
-				now Armor of CharacterObject is Armor entry;
-				now Strength of CharacterObject is Strength entry;
-				now Dexterity of CharacterObject is Dexterity entry;
-				now Stamina of CharacterObject is Stamina entry;
-				now Charisma of CharacterObject is Charisma entry;
-				now Intelligence of CharacterObject is Intelligence entry;
-				now Perception of CharacterObject is Perception entry;
-				now Hunger of CharacterObject is Hunger entry;
-				now Thirst of CharacterObject is Thirst entry;
-				now Morale of CharacterObject is Morale entry;
-				now Lust of CharacterObject is Lust entry;
-				now Libido of CharacterObject is Libido entry;
-				now Loyalty of CharacterObject is Loyalty entry;
-				now Humanity of CharacterObject is Humanity entry;
-				now Body Weight of CharacterObject is Body Weight entry;
-				now Body Definition of CharacterObject is Body Definition entry;
-				now Androginity of CharacterObject is Androginity entry;
-				now Mouth Length of CharacterObject is Mouth Length entry;
-				now Mouth Circumference of CharacterObject is Mouth Circumference entry;
-				now Tongue Length of CharacterObject is Tongue Length entry;
-				now Breast Size of CharacterObject is Breast Size entry;
-				now Nipple Count of CharacterObject is Nipple Count entry;
-				now Asshole Depth of CharacterObject is Asshole Depth entry;
-				now Asshole Tightness of CharacterObject is Asshole Tightness entry;
-				now Cock Count of CharacterObject is Cock Count entry;
-				now Cock Girth of CharacterObject is Cock Girth entry;
-				now Cock Length of CharacterObject is Cock Length entry;
-				now Ball Count of CharacterObject is Ball Count entry;
-				now Ball Size of CharacterObject is Ball Size entry;
-				now Cunt Count of CharacterObject is Cunt Count entry;
-				now Cunt Depth of CharacterObject is Cunt Depth entry;
-				now Cunt Tightness of CharacterObject is Cunt Tightness entry;
-				now Clit Size of CharacterObject is Clit Size entry;
-				now Armor of CharacterObject is Armor entry;
-				now Capacity of CharacterObject is Capacity entry;
-				now SleepRhythm of CharacterObject is SleepRhythm entry;
-				now scalevalue of CharacterObject is The scalevalue entry;
-				now PlayerLastSize of CharacterObject is PlayerLastSize entry;
+				if Energy of CharacterObject is not Energy entry, now Energy of CharacterObject is Energy entry;
+				if HP of CharacterObject is not HP entry, now HP of CharacterObject is HP entry;
+				if MaxHP of CharacterObject is not MaxHP entry, now MaxHP of CharacterObject is MaxHP entry;
+				if XP of CharacterObject is not XP entry, now XP of CharacterObject is XP entry;
+				if Level of CharacterObject is not Level entry, now Level of CharacterObject is Level entry;
+				if Armor of CharacterObject is not Armor entry, now Armor of CharacterObject is Armor entry;
+				if Strength of CharacterObject is not Strength entry, now Strength of CharacterObject is Strength entry;
+				if Dexterity of CharacterObject is not Dexterity entry, now Dexterity of CharacterObject is Dexterity entry;
+				if Stamina of CharacterObject is not Stamina entry, now Stamina of CharacterObject is Stamina entry;
+				if Charisma of CharacterObject is not Charisma entry, now Charisma of CharacterObject is Charisma entry;
+				if Intelligence of CharacterObject is not Intelligence entry, now Intelligence of CharacterObject is Intelligence entry;
+				if Perception of CharacterObject is not Perception entry, now Perception of CharacterObject is Perception entry;
+				if Hunger of CharacterObject is not Hunger entry, now Hunger of CharacterObject is Hunger entry;
+				if Thirst of CharacterObject is not Thirst entry, now Thirst of CharacterObject is Thirst entry;
+				if Morale of CharacterObject is not Morale entry, now Morale of CharacterObject is Morale entry;
+				if Lust of CharacterObject is not Lust entry, now Lust of CharacterObject is Lust entry;
+				if Libido of CharacterObject is not Libido entry, now Libido of CharacterObject is Libido entry;
+				if Loyalty of CharacterObject is not Loyalty entry, now Loyalty of CharacterObject is Loyalty entry;
+				if Humanity of CharacterObject is not Humanity entry, now Humanity of CharacterObject is Humanity entry;
+				if Body Weight of CharacterObject is not Body Weight entry, now Body Weight of CharacterObject is Body Weight entry;
+				if Body Definition of CharacterObject is not Body Definition entry, now Body Definition of CharacterObject is Body Definition entry;
+				if Androginity of CharacterObject is not Androginity entry, now Androginity of CharacterObject is Androginity entry;
+				if Mouth Length of CharacterObject is not Mouth Length entry, now Mouth Length of CharacterObject is Mouth Length entry;
+				if Mouth Circumference of CharacterObject is not Mouth Circumference entry, now Mouth Circumference of CharacterObject is Mouth Circumference entry;
+				if Tongue Length of CharacterObject is not Tongue Length entry, now Tongue Length of CharacterObject is Tongue Length entry;
+				if Breast Size of CharacterObject is not Breast Size entry, now Breast Size of CharacterObject is Breast Size entry;
+				if Nipple Count of CharacterObject is not Nipple Count entry, now Nipple Count of CharacterObject is Nipple Count entry;
+				if Asshole Depth of CharacterObject is not Asshole Depth entry, now Asshole Depth of CharacterObject is Asshole Depth entry;
+				if Asshole Tightness of CharacterObject is not Asshole Tightness entry, now Asshole Tightness of CharacterObject is Asshole Tightness entry;
+				if Cock Count of CharacterObject is not Cock Count entry, now Cock Count of CharacterObject is Cock Count entry;
+				if Cock Girth of CharacterObject is not Cock Girth entry, now Cock Girth of CharacterObject is Cock Girth entry;
+				if Cock Length of CharacterObject is not Cock Length entry, now Cock Length of CharacterObject is Cock Length entry;
+				if Ball Count of CharacterObject is not Ball Count entry, now Ball Count of CharacterObject is Ball Count entry;
+				if Ball Size of CharacterObject is not Ball Size entry, now Ball Size of CharacterObject is Ball Size entry;
+				if Cunt Count of CharacterObject is not Cunt Count entry, now Cunt Count of CharacterObject is Cunt Count entry;
+				if Cunt Depth of CharacterObject is not Cunt Depth entry, now Cunt Depth of CharacterObject is Cunt Depth entry;
+				if Cunt Tightness of CharacterObject is not Cunt Tightness entry, now Cunt Tightness of CharacterObject is Cunt Tightness entry;
+				if Clit Size of CharacterObject is not Clit Size entry, now Clit Size of CharacterObject is Clit Size entry;
+				if Armor of CharacterObject is not Armor entry, now Armor of CharacterObject is Armor entry;
+				if Capacity of CharacterObject is not Capacity entry, now Capacity of CharacterObject is Capacity entry;
+				if SleepRhythm of CharacterObject is not SleepRhythm entry, now SleepRhythm of CharacterObject is SleepRhythm entry;
+				if scalevalue of CharacterObject is not scalevalue entry, now scalevalue of CharacterObject is scalevalue entry;
+				if PlayerLastSize of CharacterObject is not PlayerLastSize entry, now PlayerLastSize of CharacterObject is PlayerLastSize entry;
 				[Texts]
 				[now MainInfection of CharacterObject is MainInfection entry;]
-				now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
-				now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
-				now FirstOralPartner of CharacterObject is FirstOralPartner entry;
-				now FirstPenilePartner of CharacterObject is FirstPenilePartner entry;
-				now Cock Size Desc of CharacterObject is Cock Size Desc entry;
-				now Cunt Size Desc of CharacterObject is Cunt Size Desc entry;
-				now Breast Size Desc of CharacterObject is Breast Size Desc entry;
-				now Short Breast Size Desc of CharacterObject is Short Breast Size Desc entry;
-				now Originalgender of CharacterObject is Originalgender entry;
-				now PlayerOriginalgender of CharacterObject is PlayerOriginalGender entry;
-				now PlayerLastGender of CharacterObject is PlayerLastGender entry;
-				now PlayerLastBodytype of CharacterObject is PlayerLastBodytype entry;
+				if FirstAnalPartner of CharacterObject is not FirstAnalPartner entry, now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
+				if FirstVaginalPartner of CharacterObject is not FirstVaginalPartner entry, now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
+				if FirstOralPartner of CharacterObject is not FirstOralPartner entry, now FirstOralPartner of CharacterObject is FirstOralPartner entry;
+				if FirstPenilePartner of CharacterObject is not FirstPenilePartner entry, now FirstPenilePartner of CharacterObject is FirstPenilePartner entry;
+				if Cock Size Desc of CharacterObject is not Cock Size Desc entry, now Cock Size Desc of CharacterObject is Cock Size Desc entry;
+				if Cunt Size Desc of CharacterObject is not Cunt Size Desc entry, now Cunt Size Desc of CharacterObject is Cunt Size Desc entry;
+				if Breast Size Desc of CharacterObject is not Breast Size Desc entry, now Breast Size Desc of CharacterObject is Breast Size Desc entry;
+				if Short Breast Size Desc of CharacterObject is not Short Breast Size Desc entry, now Short Breast Size Desc of CharacterObject is Short Breast Size Desc entry;
+				if Originalgender of CharacterObject is not Originalgender entry, now Originalgender of CharacterObject is Originalgender entry;
+				if PlayerOriginalGender of CharacterObject is not PlayerOriginalGender entry, now PlayerOriginalGender of CharacterObject is PlayerOriginalGender entry;
+				if PlayerLastGender of CharacterObject is not PlayerLastGender entry, now PlayerLastGender of CharacterObject is PlayerLastGender entry;
+				if PlayerLastBodytype of CharacterObject is not PlayerLastBodytype entry, now PlayerLastBodytype of CharacterObject is PlayerLastBodytype entry;
 				[Truth States]
-				now PlayerMet of CharacterObject is PlayerMet entry;
-				now PlayerRomanced of CharacterObject is PlayerRomanced entry;
-				now PlayerFriended of CharacterObject is PlayerFriended entry;
-				now PlayerControlled of CharacterObject is PlayerControlled entry;
-				now PlayerFucked of CharacterObject is PlayerFucked entry;
-				now OralVirgin of CharacterObject is OralVirgin entry;
-				now Virgin of CharacterObject is Virgin entry;
-				now AnalVirgin of CharacterObject is AnalVirgin entry;
-				now PenileVirgin of CharacterObject is PenileVirgin entry;
-				now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
-				now TwistedCapacity of CharacterObject is TwistedCapacity entry;
-				now Sterile of CharacterObject is Sterile entry;
+				if PlayerMet of CharacterObject is not PlayerMet entry, now PlayerMet of CharacterObject is PlayerMet entry;
+				if PlayerRomanced of CharacterObject is not PlayerRomanced entry, now PlayerRomanced of CharacterObject is PlayerRomanced entry;
+				if PlayerFriended of CharacterObject is not PlayerFriended entry, now PlayerFriended of CharacterObject is PlayerFriended entry;
+				if PlayerControlled of CharacterObject is not PlayerControlled entry, now PlayerControlled of CharacterObject is PlayerControlled entry;
+				if PlayerFucked of CharacterObject is not PlayerFucked entry, now PlayerFucked of CharacterObject is PlayerFucked entry;
+				if OralVirgin of CharacterObject is not OralVirgin entry, now OralVirgin of CharacterObject is OralVirgin entry;
+				if Virgin of CharacterObject is not Virgin entry, now Virgin of CharacterObject is Virgin entry;
+				if AnalVirgin of CharacterObject is not AnalVirgin entry, now AnalVirgin of CharacterObject is AnalVirgin entry;
+				if PenileVirgin of CharacterObject is not PenileVirgin entry, now PenileVirgin of CharacterObject is PenileVirgin entry;
+				if SexuallyExperienced of CharacterObject is not SexuallyExperienced entry, now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
+				if TwistedCapacity of CharacterObject is not TwistedCapacity entry, now TwistedCapacity of CharacterObject is TwistedCapacity entry;
+				if Sterile of CharacterObject is not Sterile entry, now Sterile of CharacterObject is Sterile entry;
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
@@ -910,48 +930,48 @@ to CharacterRestore:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
 				if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
-					move CharacterObject to TargetRoom, without printing a room description;
+					if CharacterObject is not in TargetRoom, move CharacterObject to TargetRoom, without printing a room description;
 				else:
 					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
 					move CharacterObject to NPC Nexus;
-				now Energy of CharacterObject is Energy entry;
-				now HP of CharacterObject is HP entry;
-				now MaxHP of CharacterObject is MaxHP entry;
-				now XP of CharacterObject is XP entry;
-				now Level of CharacterObject is Level entry;
-				now Armor of CharacterObject is Armor entry;
-				now Weapon Damage of CharacterObject is Weapon Damage entry;
-				now Capacity of CharacterObject is Capacity entry;
-				now ScaleValue of CharacterObject is ScaleValue entry;
-				now Strength of CharacterObject is Strength entry;
-				now Dexterity of CharacterObject is Dexterity entry;
-				now Stamina of CharacterObject is Stamina entry;
-				now Charisma of CharacterObject is Charisma entry;
-				now Intelligence of CharacterObject is Intelligence entry;
-				now Perception of CharacterObject is Perception entry;
-				now Hunger of CharacterObject is Hunger entry;
-				now Thirst of CharacterObject is Thirst entry;
-				now SleepRhythm of CharacterObject is SleepRhythm entry;
-				now Morale of CharacterObject is Morale entry;
-				now Lust of CharacterObject is Lust entry;
-				now Libido of CharacterObject is Libido entry;
-				now Loyalty of CharacterObject is Loyalty entry;
-				now Humanity of CharacterObject is Humanity entry;
-				now Cock Count of CharacterObject is Cocks entry;
-				now Cock Length of CharacterObject is Cock Length entry;
-				now Ball Size of CharacterObject is Cock Width entry;
-				now Ball Count of CharacterObject is Testes entry;
-				now Cunt Count of CharacterObject is Cunts entry;
-				now Cunt Depth of CharacterObject is Cunt Depth entry;
-				now Cunt Tightness of CharacterObject is Cunt Width entry;
-				now Nipple Count of CharacterObject is Breasts entry;
-				now Breast Size of CharacterObject is Breast Size entry;
-				now PlayerMet of CharacterObject is PlayerMet entry;
-				now PlayerRomanced of CharacterObject is PlayerRomanced entry;
-				now PlayerFucked of CharacterObject is PlayerFucked entry;
-				now OralVirgin of CharacterObject is OralVirgin entry;
-				now Virgin of CharacterObject is Virgin entry;
-				now AnalVirgin of CharacterObject is AnalVirgin entry;
+				if Energy of CharacterObject is not Energy entry, now Energy of CharacterObject is Energy entry;
+				if HP of CharacterObject is not HP entry, now HP of CharacterObject is HP entry;
+				if MaxHP of CharacterObject is not MaxHP entry, now MaxHP of CharacterObject is MaxHP entry;
+				if XP of CharacterObject is not XP entry, now XP of CharacterObject is XP entry;
+				if Level of CharacterObject is not Level entry, now Level of CharacterObject is Level entry;
+				if Armor of CharacterObject is not Armor entry, now Armor of CharacterObject is Armor entry;
+				if Weapon Damage of CharacterObject is not Weapon Damage entry, now Weapon Damage of CharacterObject is Weapon Damage entry;
+				if Capacity of CharacterObject is not Capacity entry, now Capacity of CharacterObject is Capacity entry;
+				if ScaleValue of CharacterObject is not ScaleValue entry, now ScaleValue of CharacterObject is ScaleValue entry;
+				if Strength of CharacterObject is not Strength entry, now Strength of CharacterObject is Strength entry;
+				if Dexterity of CharacterObject is not Dexterity entry, now Dexterity of CharacterObject is Dexterity entry;
+				if Stamina of CharacterObject is not Stamina entry, now Stamina of CharacterObject is Stamina entry;
+				if Charisma of CharacterObject is not Charisma entry, now Charisma of CharacterObject is Charisma entry;
+				if Intelligence of CharacterObject is not Intelligence entry, now Intelligence of CharacterObject is Intelligence entry;
+				if Perception of CharacterObject is not Perception entry, now Perception of CharacterObject is Perception entry;
+				if Hunger of CharacterObject is not Hunger entry, now Hunger of CharacterObject is Hunger entry;
+				if Thirst of CharacterObject is not Thirst entry, now Thirst of CharacterObject is Thirst entry;
+				if SleepRhythm of CharacterObject is not SleepRhythm entry, now SleepRhythm of CharacterObject is SleepRhythm entry;
+				if Morale of CharacterObject is not Morale entry, now Morale of CharacterObject is Morale entry;
+				if Lust of CharacterObject is not Lust entry, now Lust of CharacterObject is Lust entry;
+				if Libido of CharacterObject is not Libido entry, now Libido of CharacterObject is Libido entry;
+				if Loyalty of CharacterObject is not Loyalty entry, now Loyalty of CharacterObject is Loyalty entry;
+				if Humanity of CharacterObject is not Humanity entry, now Humanity of CharacterObject is Humanity entry;
+				if Cock Count of CharacterObject is not Cocks entry, now Cock Count of CharacterObject is Cocks entry;
+				if Cock Length of CharacterObject is not Cock Length entry, now Cock Length of CharacterObject is Cock Length entry;
+				if Ball Size of CharacterObject is not Cock Width entry, now Ball Size of CharacterObject is Cock Width entry;
+				if Ball Count of CharacterObject is not Testes entry, now Ball Count of CharacterObject is Testes entry;
+				if Cunt Count of CharacterObject is not Cunts entry, now Cunt Count of CharacterObject is Cunts entry;
+				if Cunt Depth of CharacterObject is not Cunt Depth entry, now Cunt Depth of CharacterObject is Cunt Depth entry;
+				if Cunt Tightness of CharacterObject is not Cunt Width entry, now Cunt Tightness of CharacterObject is Cunt Width entry;
+				if Nipple Count of CharacterObject is not Breasts entry, now Nipple Count of CharacterObject is Breasts entry;
+				if Breast Size of CharacterObject is not Breast Size entry, now Breast Size of CharacterObject is Breast Size entry;
+				if PlayerMet of CharacterObject is not PlayerMet entry, now PlayerMet of CharacterObject is PlayerMet entry;
+				if PlayerRomanced of CharacterObject is not PlayerRomanced entry, now PlayerRomanced of CharacterObject is PlayerRomanced entry;
+				if PlayerFucked of CharacterObject is not PlayerFucked entry, now PlayerFucked of CharacterObject is PlayerFucked entry;
+				if OralVirgin of CharacterObject is not OralVirgin entry, now OralVirgin of CharacterObject is OralVirgin entry;
+				if Virgin of CharacterObject is not Virgin entry, now Virgin of CharacterObject is Virgin entry;
+				if AnalVirgin of CharacterObject is not AnalVirgin entry, now AnalVirgin of CharacterObject is AnalVirgin entry;
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
@@ -971,9 +991,10 @@ to TraitRestore:
 	if the File of TraitSave exists:
 		say "Restoring Traits...";
 		read File of TraitSave into the Table of GameTraits;
-		truncate Feats of Player to 0 entries;
+		[truncate Feats of Player to 0 entries;]
+		if companionList of Player is not empty, truncate companionList of Player to 0 entries;
 		repeat with y running through persons:[cleaning out the old data]
-			truncate Traits of y to 0 entries;
+			if Traits of y is not empty, truncate Traits of y to 0 entries;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTraits:
 			choose row x in the Table of GameTraits;
 			let TraitOwner be OwnerName entry;
@@ -984,9 +1005,9 @@ to TraitRestore:
 						now TraitText entry is "Tamed";
 					add TraitText entry to Traits of CharacterObject;
 					if TraitText entry is "Tamed": [pets]
-						now CharacterObject is tamed;
+						if CharacterObject is not tamed, now CharacterObject is tamed;
 					if TraitText entry is "currentCompanion":
-						add CharacterObject to companionList of Player;
+						if CharacterObject is not listed in companionList of Player, add CharacterObject to companionList of Player;
 					[
 					if debug is at level 10:
 						say "DEBUG -> [x]: Added Trait: '[TraitText entry]' to [TraitOwner].";
@@ -1033,35 +1054,57 @@ to PlayerSave:
 			now ListName entry is "OpenQuest";
 			now EntryText entry is entry y of OpenQuests of Player;
 	if the number of entries in CompletedQuests of Player is not 0:
-		repeat with y running from 1 to the number of entries in CompletedQuests of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in CompletedQuests of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "CompletedQuest";
 			now EntryText entry is entry y of CompletedQuests of Player;
 	if the number of entries in EncounteredEnemies of Player is not 0:
-		repeat with y running from 1 to the number of entries in EncounteredEnemies of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in EncounteredEnemies of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "EncounteredEnemy";
 			now EntryText entry is entry y of EncounteredEnemies of Player;
 	if the number of entries in VirginitiesTaken of Player is not 0:
-		repeat with y running from 1 to the number of entries in VirginitiesTaken of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in VirginitiesTaken of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "VirginitiesTaken";
 			now EntryText entry is entry y of VirginitiesTaken of Player;
 	if the number of entries in AnalVirginitiesTaken of Player is not 0:
-		repeat with y running from 1 to the number of entries in AnalVirginitiesTaken of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in AnalVirginitiesTaken of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "AnalVirginitiesTaken";
 			now EntryText entry is entry y of AnalVirginitiesTaken of Player;
 	if the number of entries in OralVirginitiesTaken of Player is not 0:
-		repeat with y running from 1 to the number of entries in OralVirginitiesTaken of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in OralVirginitiesTaken of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "OralVirginitiesTaken";
 			now EntryText entry is entry y of OralVirginitiesTaken of Player;
+	if the number of entries in PenileVirginitiesTaken of Player is not 0:
+		repeat with y running from 1 to the number of entries in PenileVirginitiesTaken of Player:
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "PenileVirginitiesTaken";
+			now EntryText entry is entry y of PenileVirginitiesTaken of Player;
 	if the number of entries in BlockList of Player is not 0:
-		repeat with y running from 1 to the number of entries in BlockList of Player: [rebuilds the table of GameTraits with current data]
+		repeat with y running from 1 to the number of entries in BlockList of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "BlockList";
 			now EntryText entry is entry y of BlockList of Player;
+	if the number of entries in WardList of Player is not 0:
+		repeat with y running from 1 to the number of entries in WardList of Player:
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "WardList";
+			now EntryText entry is entry y of WardList of Player;
+	if the number of entries in BanList of Player is not 0:
+		repeat with y running from 1 to the number of entries in BanList of Player:
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "BanList";
+			now EntryText entry is entry y of BanList of Player;
+	[add item to ward and ban lists so importer knows the information comes from export]
+	choose a blank row in the table of PlayerLists;
+	now ListName entry is "WardList";
+	now EntryText entry is "Imported";
+	choose a blank row in the table of PlayerLists;
+	now ListName entry is "BanList";
+	now EntryText entry is "Imported";
 	write File of PlayerSave from the Table of PlayerData; [freshly made table gets saved to file]
 	if debug is at level 10:
 		say "DEBUG -> File of PlayerSave written.[line break]";
@@ -1151,7 +1194,13 @@ to PlayerSave:
 	[
 	now MaleHermInterest entry is MaleHermInterest of Player;
 	now FemaleHermInterest entry is FemaleHermInterest of Player;
-	]
+	] [but for now, just rig it using the existing unused table entry that we changed to hold a number]
+	let PlayerHermInterest be 0;
+	if MaleHermInterest of Player is false:
+		increase PlayerHermInterest by 1;
+	if FemaleHermInterest of Player is false:
+		increase PlayerHermInterest by 2;
+	now HermInterest entry is PlayerHermInterest; [0 = both; 1 = not male; 2 = not female; 3 = neither]
 	write File of NewPlayerSave from the Table of NewPlayerData; [freshly made table gets saved to file]
 	blank out the whole of Table of NewPlayerData; [empty after saving]
 	if debug is at level 10:
@@ -1221,7 +1270,27 @@ to PlayerRestore:
 		say "No Player Save File Found!";
 	blank out the whole of Table of PlayerData; [empty out all old data]
 	if the File of PlayerListsSave exists:
-		truncate Vials of Player to 0 entries; [cleaning out the old data]
+		[cleaning out the old data]
+		[truncate Vials of Player to 0 entries;]
+		if Feats of Player is not empty, truncate Feats of Player to 0 entries;
+		if Tapes of Player is not empty, truncate Tapes of Player to 0 entries;
+		if OpenQuests of Player is not empty, truncate OpenQuests of Player to 0 entries;
+		if CompletedQuests of Player is not empty, truncate CompletedQuests of Player to 0 entries;
+		if EncounteredEnemies of Player is not empty, truncate EncounteredEnemies of Player to 0 entries;
+		if VirginitiesTaken of Player is not empty, truncate VirginitiesTaken of Player to 0 entries;
+		if AnalVirginitiesTaken of Player is not empty, truncate AnalVirginitiesTaken of Player to 0 entries;
+		if OralVirginitiesTaken of Player is not empty, truncate OralVirginitiesTaken of Player to 0 entries;
+		if PenileVirginitiesTaken of Player is not empty, truncate PenileVirginitiesTaken of Player to 0 entries;
+		if BlockList of Player is not empty, truncate BlockList of Player to 0 entries;
+		if WardList of Player is not empty, truncate WardList of Player to 0 entries;
+		if BanList of Player is not empty, truncate BanList of Player to 0 entries;
+		[clear out warded and banned flags/tags]
+		repeat with x running through flags:
+			if x is warded, now x is not warded;
+			if x is banned, now x is not banned;
+		repeat with x running through tags:
+			if x is warded, now x is not warded;
+			if x is banned, now x is not banned;
 		say "Restoring Player Lists...";
 		read File of PlayerListsSave into the Table of PlayerLists;
 		repeat with y running from 1 to the number of filled rows in the Table of PlayerLists:
@@ -1253,9 +1322,18 @@ to PlayerRestore:
 				-- "OralVirginitiesTaken":
 					if EntryText entry is not listed in OralVirginitiesTaken of Player:
 						add EntryText entry to OralVirginitiesTaken of Player;
+				-- "PenileVirginitiesTaken":
+					if EntryText entry is not listed in PenileVirginitiesTaken of Player:
+						add EntryText entry to PenileVirginitiesTaken of Player;
 				-- "BlockList":
 					if EntryText entry is not listed in BlockList of Player:
 						add EntryText entry to BlockList of Player;
+				-- "WardList":
+					if EntryText entry is not listed in WardList of Player:
+						add EntryText entry to WardList of Player;
+				-- "BanList":
+					if EntryText entry is not listed in BanList of Player:
+						add EntryText entry to BanList of Player;
 	blank out the whole of Table of PlayerLists; [empty out all old data]
 	if the File of NewPlayerSave exists:
 		say "Restoring Additional Player Data...";
@@ -1339,7 +1417,14 @@ to PlayerRestore:
 		[
 		now MaleHermInterest of Player is MaleHermInterest entry;
 		now FemaleHermInterest of Player is FemaleHermInterest entry;
-		]
+		] [but for now, just use the existing unused table entry that we rigged earlier]
+		now MaleHermInterest of Player is true;
+		now FemaleHermInterest of Player is true;
+		if there is a HermInterest entry:
+			if HermInterest entry is odd: [1 = not male; 3 = not male or female]
+				now MaleHermInterest of Player is false;
+			if HermInterest entry > 1: [2 = not female; 3 = not male or female]
+				now FemaleHermInterest of Player is false;
 		if debug is at level 10:
 			say "DEBUG -> New Player Data restored.";
 	else if NewTypeInfectionActive is true:
@@ -1457,6 +1542,7 @@ to BeastSave:
 		say "DEBUG -> File of BeastVariableSave written.[line break]";
 
 to BeastRestore:
+	say "Restoring Beasts...";
 	blank out the whole of Table of GameBeastVariables; [empty out all old data]
 	blank out the whole of Table of GameBeasts; [empty out all old data]
 	if the File of BeastVariableSave exists:
@@ -1473,19 +1559,22 @@ to BeastRestore:
 			if Beastname is "Ogre", now Beastname is "Ogre Male";
 			if Beastname is "Elven Hunter", now Beastname is "Elven Male";
 			if Beastname is "rubber tigress", now Beastname is "Rubber Tigress";
-			if Beastname is "Rubber Tigress", now Beastname is "Rubber Tigress";
+			[if Beastname is "Rubber Tigress", now Beastname is "Rubber Tigress";]
 			if Beastname is "Football Gorilla", now Beastname is "Football Gorilla Male";
 			if Beastname is "Feral Wolf", now Beastname is "Feral Wolf Male";
 			if Beastname is "Skunk", now Beastname is "Skunk Female";
 			if there is a Name of BeastName in the Table of Random Critters:
 				choose row with Name of BeastName in Table of Random Critters;
-				now Area entry is BeastArea;
+				if Area entry is not BeastArea, now Area entry is BeastArea;
 				[bugfix code after re-naming Midway to Fair]
 				if Area entry is "Midway":
 					now Area entry is "Fair";
-				now non-infectious entry is BeastNonInfect;
-				now sex entry is BeastSex;
-				now enemy type entry is BeastType;
+				if Area entry is "High Rise": [furbolg content bugfix]
+					now Area entry is "High";
+				if non-infectious entry is not BeastNonInfect, now non-infectious entry is BeastNonInfect;
+				if sex entry is not BeastSex, now sex entry is BeastSex;
+				if enemy type entry is not BeastType, now enemy type entry is BeastType;
+				if BannedStatus entry is true, now BannedStatus entry is false; [content bans will be refreshed after import, so don't carry any over]
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: BeastName: [BeastName] Area entry set to [BeastArea]!";
@@ -1503,12 +1592,12 @@ to BeastRestore:
 			let BeastSex be sex entry;
 			if there is a Name of BeastName in the Table of Random Critters:
 				choose row with Name of BeastName in Table of Random Critters;
-				now Area entry is BeastArea;
+				if Area entry is not BeastArea, now Area entry is BeastArea;
 				[bugfix code after re-naming Midway to Fair]
 				if Area entry is "Midway":
 					now Area entry is "Fair";
-				now non-infectious entry is BeastNonInfect;
-				now sex entry is BeastSex;
+				if non-infectious entry is not BeastNonInfect, now non-infectious entry is BeastNonInfect;
+				if sex entry is not BeastSex, now sex entry is BeastSex;
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: BeastName: [BeastName] Area entry set to [BeastArea]!";
@@ -1550,9 +1639,33 @@ to StorageRestore:
 	else:
 		say "No Storage Save File Found!";
 
+to BanListRestore:
+	say "Restoring Ban Lists...";
+	if clearnomore is 0, clear the screen;
+	if "Imported" is not listed in WardList of Player or "Imported" is not listed in BanList of Player: [exported from older version]
+		LineBreak;
+		say "     Content banning and warding information wasn't found in the imported data. You can choose to pick new restrictions to remove enemies and events from the game. [bold type]Note that previously banned events have remained banned after import and will be cumulative with any bans you choose now.[roman type][line break]";
+		say "     [bold type]Pick content restrictions?[roman type][line break]";
+		if Player consents:
+			if clearnomore is 0, clear the screen;
+			new ban menu;
+	else: [exported from current or later version]
+		remove "Imported" from WardList of Player;
+		remove "Imported" from BanList of Player;
+		if number of entries in WardList of Player > 0:
+			repeat with x running from 1 to number of entries in WardList of Player:
+				oldflagward entry x of WardList of Player; [ward flags/tags that player chose before export]
+		if number of entries in BanList of Player > 0:
+			repeat with x running from 1 to number of entries in BanList of Player:
+				oldflagban entry x of BanList of Player; [ban flags/tags that player chose before export]
+	if number of warded flags > 0 or number of banned flags > 0 or number of warded tags > 0 or number of banned tags > 0:
+		startcreatureban; [re-run the ban action to disable blocked creatures/situations]
+
 
 to RunPostImportRules:
 	say "Running Post Import Rules...";
+	sort Table of Random Critters in lev order;
+	if clearnomore is 0, clear the screen;
 	follow the postimport rules;
 
 Section 2 - Trixie
@@ -1573,7 +1686,7 @@ To say ProgressionExport:
 		if wrcursestatus is 5:
 			wrcurserecede; [puts player back to normal form and restores proper stats for saving]
 		LineBreak;
-		say "     Writing save files.";
+		say "Writing save files.";
 		SaveEverything;
 		if wrcursestatus is 5:
 			wrcursesave; [puts player back to complete wereraptor form]
@@ -1600,7 +1713,7 @@ Carry out ProgressImport:
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
 	if Player consents:
 		LineBreak;
-		say "     <Press any key to start import>";
+		say "     <Press any key to start import> ";
 		wait for any key;
 		say "[ProgressionImport]";
 
@@ -1616,6 +1729,7 @@ to say ProgressionImport:
 	NoteRestore;
 	StorageRestore;
 	VariableLoad;
+	BanListRestore;
 	RunPostImportRules;
 	try looking; [start the player off in their new playthrough]
 
@@ -1625,15 +1739,15 @@ Trixie	"Trixie"
 
 Trixie is a person. Trixie is in Grey Abbey Library.
 
-The scent of Trixie is "Trixie smells of broken universes and rewritten fate. How anything can smell like that or how you can even know that smell disturbs you to your very core.".
+The scent of Trixie is "     Trixie smells of broken universes and rewritten fate. How anything can smell like that or how you can even know that smell disturbs you to your very core.".
 
 Description of Trixie is "[Trixiedesc]".
 
 to say Trixiedesc:
-	say "     Look, it's Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Support us at: https://www.patreon.com/FS'[line break]";
+	say "     Look, it's Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Support us at: https://patreon.com/FS'[line break]";
 	say "     Trixie's got a button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it, and a second one that says 'Check out the [link]artwork credits[end link]'. Hmmm.";
-	say "     She's also found a ballcap on that says 'Using [link]Export Progress[end link] will save your progress for transfer to a new game version. [link]Import Progress[end link] should restore everything in the new version.' That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
+	say "     She's also got a ballcap on that says 'Using [link]Export Progress[end link] will save your progress for transfer to a new game version. [link]Import Progress[end link] should restore everything in the new version.' That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
 
-Conversation of Trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [link]Import Progress[end link]. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
+Conversation of Trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [link]Import Progress[end link]. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm [']Out of Character['], so you really don't see me. Confused yet? Good!" }.
 
 Story Skipper ends here.

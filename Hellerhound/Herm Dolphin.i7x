@@ -95,7 +95,7 @@ to say dolphin fuck:
 		else:[cunt is finally big enough]
 			say "She shrieks with joy, 'Your pussy is finally big enough for me. I bet that took a lot of doing.' She then proceeds to push deeper, slowly wriggling and twisting her prehensile member into your wet cunt. She bottoms out before she can get to your cervix, and looks relieved. 'I am so big, none of the others in my pod can totally cover me without assistance, but you...' she says, awed and relieved. She begins to wriggle her cock, pulling in and out and forming rings inside of you, causing immense pleasure. As you start humping back, she screams in climax, the sound carrying you to yours. After what seems like hours of her filling you, she begins to pull out, cum flowing around her now-shrinking cock out of your cunt and into the water.";
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Dolphin Herm";
-	else if "Male Preferred" is not listed in feats of Player:[do female next]
+	else if Player is not MalePreferred:[do female next]
 		say "She looks at your male genitals, surprised. 'Why not a girl?' she mutters, and kisses the base of your cock. Maybe next time you will be ready for me. Make sure to be nice and large!";
 		if "Microwaved" is listed in feats of Player:
 			say "WARNING: Sex shifting nanites detected! Allow?";
@@ -197,8 +197,8 @@ When Play begins:
 	now libido entry is 70; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "dolphin milk";
 	now lootchance entry is 75; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "dolphin milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "dolphin herm cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]aquatic[or]strong[at random]";
@@ -388,9 +388,17 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "dolphin milk"	"Thick and nutritious milk from a dolphinoid."	1	dolphin milk
 
-
-dolphin milk is a grab object. It is milky. Understand "milk" as dolphin milk. dolphin milk is infectious. Strain of dolphin milk is "Dolphin Herm". Purified of dolphin milk is "distilled milk".
+[dolphin milk is a grab object.] [defined in Milk Items to prevent name conflicts]
+dolphin milk is milky. Understand "milk" as dolphin milk.
+dolphin milk is infectious. Strain of dolphin milk is "Dolphin Herm".
+Purified of dolphin milk is "distilled milk".
+Usedesc of dolphin milk is "[dolphin milk use]".
 
 the scent of dolphin milk is "The dolphin milk smells like milk with an odd, fishy scent mixed in.".
+
+to say dolphin milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
 
 Herm Dolphin ends here.

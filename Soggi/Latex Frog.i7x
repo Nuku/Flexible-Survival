@@ -23,22 +23,22 @@ to say Latex Frog Wins:
 		say "     You stop trying to fight the latex frog and submit to the strange feral creature.";
 	else:
 		say "     Too weak to keep resisting, you surrender and accept your fate.";
-	say "     The latex frog wraps itself tightly around your body, using its sticky toe pads to finally lock itself in place around you. The slippery dark green latex expands to surround you, and you give one last weak struggle as the material oozes up your neck and then surrounds your head, engulfing you in darkness. You seem able to breath through the material, but can barely move.";
+	say "     The latex frog wraps itself tightly around your body, using its sticky toe pads to finally lock itself in place around you. The slippery dark green latex expands to surround you, and you give one last weak struggle as the material oozes up your neck and then surrounds your head, engulfing you in darkness. You seem able to breathe through the material, but can barely move.";
 	WaitLineBreak;
-	if anallevel is 3:
-		say "     The frog releases you now that you're wrapped in its slippery green latex, watching you wriggle for a few moments before forcing you onto your stomach. You feel the frog's wide mouth nuzzling between your legs for a few moments, when suddenly the long tongue shoots forward through a seam in the latex, plunging into your ass! You let out a helpless muffled cry as you feel the latex start to spread inside, while the tongue plunges in and out of you, seemingly wriggling deeper with each thrust. The latex wrapped around you seems to squeeze and caress all over you[if Cock Count of Player > 0], squeezing and massaging the length of your cock[smn],[end if][if Player is male and Ball Size of Player > 0], gripping your balls and giving them slow rhythmic tugs[end if][if Cunt Count of Player > 0], vibrating rapidly against your clit[sfn][end if], fondling your ass cheeks and caressing up and down your thighs.";
+	if anallevel is 3 and a random chance of 2 in 3 succeeds:
+		say "     The frog releases you now that you're wrapped in its slippery green latex, watching you wriggle for a few moments before forcing you onto your stomach. You feel the frog's wide mouth nuzzling between your legs for a few moments, when suddenly the long tongue shoots forward through a seam in the latex, plunging into your ass! You let out a helpless muffled cry as you feel the latex start to spread inside, while the tongue plunges in and out of you, seemingly wriggling deeper with each thrust. The latex wrapped around you seems to squeeze and caress all over you[if Cock Count of Player > 0], squeezing and massaging the length of your cock[smn][end if][if Player is male and Ball Size of Player > 0], gripping your balls and giving them slow rhythmic tugs[end if][if Cunt Count of Player > 0], vibrating rapidly against your clit[sfn][end if], fondling your ass cheeks and caressing up and down your thighs.";
 		say "     The tongue plunging in and out of your ass becomes overwhelming as it somehow finds a deeper spot with each penetration, until you feel yourself on the edge of orgasm. You make one last feeble struggle against the tightly wrapped latex suit before the material all squeezes in at once, locking you tight in place as you cum.[if Cock Count of Player > 0] The tight latex seems to milk you as your cum pumps out, trapped inside with you smearing all over your thighs and belly.[end if][if Cunt Count of Player > 0] The hot juices from your cunt[sfn] dribble out into the suit with you, leaving a mess spread all over your hips and ass.[end if]";
 		CreatureSexAftermath "Player" receives "AssDildoFuck" from "Latex Frog";
 	else:
-		say "     The frog releases you now that you're wrapped in its slippery green latex, watching you wriggle for a few moments before forcing you onto your stomach. You feel the frog's wide mouth up against your face as it grinds its hips down against yours, when suddenly the long tongue shoots forward through a seam in the latex, plunging into your mouth! You let out a helpless muffled cry as the tongue wraps sensually around your tongue and starts to wriggle deeper into your throat. The latex wrapped around you seems to squeeze and caress all over you[if Cock Count of Player > 0], squeezing and massaging the length of your cock[smn],[end if][if Player is male and Ball Size of Player > 0], gripping your balls and giving them slow rhythmic tugs[end if][if Cunt Count of Player > 0], vibrating rapidly against your clit[sfn][end if][if Nipple Count of Player > 1 and Player is female], groping your chest and squeezing your nipples repeatedly[end if], fondling your ass cheeks and caressing up and down your thighs.";
+		say "     The frog releases you now that you're wrapped in its slippery green latex, watching you wriggle for a few moments before forcing you onto your stomach. You feel the frog's wide mouth up against your face as it grinds its hips down against yours, when suddenly the long tongue shoots forward through a seam in the latex, plunging into your mouth! You let out a helpless muffled cry as the tongue wraps sensually around your tongue and starts to wriggle deeper into your throat. The latex wrapped around you seems to squeeze and caress all over you[if Cock Count of Player > 0], squeezing and massaging the length of your cock[smn][end if][if Player is male and Ball Size of Player > 0], gripping your balls and giving them slow rhythmic tugs[end if][if Cunt Count of Player > 0], vibrating rapidly against your clit[sfn][end if][if Nipple Count of Player > 1 and Player is female], groping your chest and squeezing your nipples repeatedly[end if], fondling your ass cheeks and caressing up and down your thighs.";
 		say "     The latex's molesting becomes overwhelming as you wriggle helplessly in place, and the deep French kiss of the latex frog sinks down deep into your throat, plunging in and out slowly. You make one last feeble struggle against the tightly wrapped latex suit before the material all squeezes in at once, locking you tight in place as you cum.[if Cock Count of Player > 0] The tight latex seems to milk you as your cum pumps out, trapped inside with you smearing all over your thighs and belly.[end if][if Cunt Count of Player > 0] The hot juices from your cunt[sfn] dribble out into the suit with you, leaving a mess spread all over your hips and ass.[end if]";
 		CreatureSexAftermath "Player" receives "OralCock" from "Latex Frog";
 	WaitLineBreak;
-	say "     Seemingly satisfied, the frog leaves you wrapped snugly in your latex cocoon with your own sex juices inside with you. The latex continues to pulsate and massage you, occasionally teasing you toward a second orgasm before relaxing again. After an hour, the latex has absorbed your [if Cock Count of Player > 0]seed[else if Cunt Count of Player > 0]wet girlcum[else if Player is female and Nipple Count of Player > 0]milk[else]sweat[end if] and releases you. In your exhausted state you watch the strange latex form hop off down into the nearby sewer drain, just starting to take the form of another latex frog...";
+	say "     Seemingly satisfied, the frog leaves you wrapped snugly in your latex cocoon with your own sex juices inside with you. The latex continues to pulsate and massage you, occasionally teasing you toward a second orgasm before relaxing again. After an hour, the latex has absorbed your [if Cock Count of Player > 0]seed[else if Cunt Count of Player > 0]wet girlcum[else if Player is female and Nipple Count of Player > 1]milk[else]sweat[end if] and releases you. In your exhausted state you watch the strange latex form hop off down into the nearby sewer drain, just starting to take the form of another latex frog...";
 
 to say Latex Frog Loses:
 	if fightoutcome is 11: [submitted by libido victory]
-		say "     As the latex frog becomes more and more aroused it seems increasingly confused, unsure whether to attack or submit to your advances. Flustered, the frog escapes quickly down the nearby sewer drain. You consider following, but decide to move on for now.'";
+		say "     As the latex frog becomes more and more aroused it seems increasingly confused, unsure whether to attack or submit to your advances. Flustered, the frog escapes quickly down the nearby sewer drain. You consider following, but decide to move on for now.";
 	else:
 		say "     Striking a final decisive blow to the latex frog, the feral creature quickly deforms and escapes down the nearby sewer drain. You consider following, but decide to move on for now.";
 	LineBreak;
@@ -46,7 +46,7 @@ to say Latex Frog Loses:
 Section 2 - Creature Insertion
 
 to say Latex Frog Desc:
-	say "     As you walk down the street, you see a sudden movement out of a sewer drain right next to you. A shiny dark green form leaps out from the drain, and turns to face you with interest, before letting out a loud *ribbit*. The latex frog with a wide mouth, eyes poking out above its head, and powerful hind legs looks ready to pounce on you. Its skin appears incredibly shiny and slippery, a thin layer of moisture coating it.'";
+	say "     As you walk down the street, you see a sudden movement out of a sewer drain right next to you. A shiny dark green form leaps out from the drain, and turns to face you with interest, before letting out a loud *ribbit*. The latex frog with a wide mouth, eyes poking out above its head, and powerful hind legs looks ready to pounce on you. Its skin appears incredibly shiny and slippery, a thin layer of moisture coating it.";
 	say "     Suddenly the frog's thick tongue shoots out toward you with blinding speed! By luck it misses you by an inch, before zipping back into the frog's mouth.";
 
 Table of CombatPrep (continued)
@@ -54,7 +54,7 @@ name(text)	PrepFunction(text)
 "Latex Frog"	"[PrepCombat_Latex Frog]"
 
 to say PrepCombat_Latex Frog:
-	say "";
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -64,6 +64,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Latex Frog";
+	add "Latex Frog" to infections of AmphibianList;
 	add "Latex Frog" to infections of FurryList;
 	add "Latex Frog" to infections of NatureList;
 	add "Latex Frog" to infections of FemaleList;
@@ -114,8 +115,9 @@ When Play begins:
 	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ] [for later...]
-	now TrophyFunction entry is ""; [also for later...]
+	now MilkItem entry is "latex frog milk"; [ Item to be given to the player if they have this infection and milk themselves. ] [for later...]
+	now CumItem entry is "latex frog cum"; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [also for later...]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slippery[or]sleek[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "amphibian";

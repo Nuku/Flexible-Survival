@@ -16,7 +16,7 @@ to say losetosugarferret:
 		ItemLoss soda by 1;
 		decrease lastcaffeine of Sweet Tooth by 2;
 		if BodyName of Player is "Sugar Ferret" and caffeinehigh of Player is 0:
-			say "     The wild ferrets rummage through your pack, pulling out all the soda they can find, cheering happily as they do, passing it around as they lustfully tease you. You quickly grow more excited and long to play with them. When one presses some cola to your lips, you drink it down without thinking, your wild, over-caffeinated excitement returning as your Sugar Ferret body reacts. You can feel the caffeine rushing through your system and you grab the nearest ferret, pulling them into a sweet kiss.";
+			say "     The wild ferrets rummage through your pack, pulling out all the soda they can find, cheering happily as they do, passing it around as they lustfully tease you. You quickly grow more excited and long to play with them. When one presses some cola to your lips, you drink it down without thinking, your wild, over-caffeinated excitement returning as your sugar ferret body reacts. You can feel the caffeine rushing through your system and you grab the nearest ferret, pulling them into a sweet kiss.";
 			PlayerDrink 6;
 			sfcaffeine;
 			decrease caffeinehigh of Player by 2;
@@ -40,7 +40,7 @@ to say losetosugarferret:
 				increase Libido of Player by 3;
 	else:
 		if BodyName of Player is "Sugar Ferret" and caffeinehigh of Player is 0:
-			say "     The wild ferrets rummage through your pack, but find it empty of soda. Not to let that get them down, they pull out some soda from their personal stashes to pass around while celebrating their victory. They cheer happily, passing the drinks around as they lustfully tease you. You quickly grow more excited and long to play with them. When one presses some cola to your lips, you drink it down without thinking, your wild, over-caffeinated excitement returning as your Sugar Ferret body reacts. You can feel the caffeine rushing through your system and you grab the nearest ferret, pulling them into a sweet kiss.";
+			say "     The wild ferrets rummage through your pack, but find it empty of soda. Not to let that get them down, they pull out some soda from their personal stashes to pass around while celebrating their victory. They cheer happily, passing the drinks around as they lustfully tease you. You quickly grow more excited and long to play with them. When one presses some cola to your lips, you drink it down without thinking, your wild, over-caffeinated excitement returning as your sugar ferret body reacts. You can feel the caffeine rushing through your system and you grab the nearest ferret, pulling them into a sweet kiss.";
 			PlayerDrink 6;
 			sfcaffeine;
 			decrease caffeinehigh of Player by 2;
@@ -51,8 +51,18 @@ to say losetosugarferret:
 			SanLoss 5;
 			increase Libido of Player by 5;
 		else:
-			say "     The wild ferrets rummage through your pack, but find it empty of soda. Not to let that get them down, they pull out some soda from their personal stashes to pass around while celebrating their victory. They cheer happily, passing the drinks around as they lustfully tease you. You quickly grow more excited and long to play with them. All around you, they drink down your supplies of soda while working to get you aroused.";
-	say "     What comes afterwards is largely a haze filled with bright colors, soft breasts, wet pussies, hard cocks and tight asses, all punctuated by sweet kisses. You lose yourself in the sex with the lustful, bouncy ferrets before the group decides to finally move on when they notice they've wiped out the drinks.[impregchance]";
+			say "     The wild ferrets rummage through your pack, but find it empty of soda. Not to let that get them down, they pull out some soda from their personal stashes to pass around while celebrating their victory. They cheer happily, passing the drinks around as they lustfully tease you. You quickly grow more excited and long to play with them. All around you, they drink down their supplies of soda while working to get you aroused.";
+	say "     What comes afterwards is largely a haze filled with bright colors, soft breasts, wet pussies, hard cocks and tight asses, all punctuated by sweet kisses. You lose yourself in the sex with the lustful, bouncy ferrets before the group decides to finally move on when they notice they've wiped out the drinks.";
+	if Player is female:
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Sugar Ferret";
+		CreatureSexAftermath "Sugar Ferret" receives "OralPussy" from "Player";
+	if Player is male:
+		CreatureSexAftermath "Sugar Ferret" receives "PussyFuck" from "Player";
+		CreatureSexAftermath "Sugar Ferret" receives "OralCock" from "Player";
+	if anallevel > 1:
+		CreatureSexAftermath "Player" receives "AssFuck" from "Sugar Ferret";
+	CreatureSexAftermath "Player" receives "OralPussy" from "Sugar Ferret";
+	CreatureSexAftermath "Player" receives "OralCock" from "Sugar Ferret";
 	now Libido of Player is Libido of Player / 2;
 
 to say beatthesugarferret:
@@ -80,9 +90,9 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Sugar Ferret:
 	setmongender 19; [creatures are mixed/variable]
 	choose row MonsterID from Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
-	else if "Herm Preferred" is listed in feats of Player:
+	else if Player is HermPreferred:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
@@ -108,7 +118,7 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The crazed ferrets try to tackle you down en masse![or]One of the ferrets manages to bite your ankle with his sharp teeth! 'That's for being a meanie and not playing with us,' she says.[or]The colorful ferrets pelt debris at you while making demands for soda![or]The ferrets claw at you, leaving several deep gashes![or]One of the manic mustelids weaves in and around your legs at high speed, scratching and pinching you mercilessly![or]The multicolor mob tries to rush you as a hyperactive wave of fur, teeth and claws![or]One of the ferrets grabs your arm, pulling you towards it. 'Play with me!' 'No, me first!' another calls out, grabbing your other arm and pulling you in the other direction![or][if scalevalue of Player > 3]Being carried piggy-backed by another to reach your height, a[else]A[end if] ferret comes at you, swinging his arms in wild punches as he laughs maniacally.[at random]"; [ Successful attack message ]
+	now attack entry is "[one of]The crazed ferrets try to tackle you down en masse![or]One of the ferrets manages to bite your ankle with her sharp teeth! 'That's for being a meanie and not playing with us,' she says.[or]The colorful ferrets pelt debris at you while making demands for soda![or]The ferrets claw at you, leaving several deep gashes![or]One of the manic mustelids weaves in and around your legs at high speed, scratching and pinching you mercilessly![or]The multicolor mob tries to rush you as a hyperactive wave of fur, teeth and claws![or]One of the ferrets grabs your arm, pulling you towards it. 'Play with me!' 'No, me first!' another calls out, grabbing your other arm and pulling you in the other direction![or][if scalevalue of Player > 3]Being carried piggy-backed by another to reach your height, a[else]A[end if] ferret comes at you, swinging his arms in wild punches as he laughs maniacally.[at random]"; [ Successful attack message ]
 	now defeated entry is "[beatthesugarferret]"; [ Text when monster loses. ]
 	now victory entry is "[losetosugarferret]"; [ Text when monster wins. ]
 	now desc entry is "[sugarferretdesc]"; [ Description of the creature when you encounter it. ]
@@ -146,8 +156,8 @@ When Play begins:
 	now libido entry is 60; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "sugar ferret milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "sugar ferret cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]flexible[at random]";
@@ -285,7 +295,7 @@ this is the sugferret rule:		[continuous temptation]
 			say "You manage to fight down the impulse to give in and play with them... for now.";
 		LineBreak;
 	else if a random chance of 1 in 2 succeeds:
-		say "     [one of]The bouncy ferrets poing around you. It'd be cute if it weren't for their demonic eyes and saw-toothed grins.[or]Hepped up on caffeine and sugar, the manic ferrets seem to have boundless energy.[or]'Yay! Playtime!' one of them calls out.[or]'Weeee! PopPopPopPopPop!' they babble frantically, lost in their caffeine-high.[or]'Soda! Give us soda!' a [one of]hob[or]jill[at random] yells.[or]'Woooo! Sugarrrrr!' one of the ferrets cries out.[or]'Let's play!' one of the ferrets says.[or]'Spoon!' a blue ferret yells, charging.[or]'Fork over the cola!' one of them yells.[or]'GimmeGimmeGimme!' one says, making grabby paws for your backpack.[or]'This is fun!' one of the brightly colored ferrets laughs as poings in place.[at random]";
+		say "     [one of]The bouncy ferrets poing around you. It'd be cute if it weren't for their demonic eyes and saw-toothed grins.[or]Hepped up on caffeine and sugar, the manic ferrets seem to have boundless energy.[or]'Yay! Playtime!' one of them calls out.[or]'Weeee! PopPopPopPopPop!' they babble frantically, lost in their caffeine-high.[or]'Soda! Give us soda!' a [one of]hob[or]jill[at random] yells.[or]'Woooo! Sugarrrrr!' one of the ferrets cries out.[or]'Let's play!' one of the ferrets says.[or]'Spoon!' a blue ferret yells, charging.[or]'Fork over the cola!' one of them yells.[or]'GimmeGimmeGimme!' one says, making grabby paws for your backpack.[or]'This is fun!' one of the brightly colored ferrets laughs as [one of]he[or]she[at random] poings in place.[at random]";
 
 
 Section 3 - Endings
@@ -304,6 +314,6 @@ This is the Sugar Ferret Infection rule:
 			if alexbrunch >= 4:
 				say "     Once you're released, you manage to meet up with Alex, the ferrety lawyer, and move into his new place, becoming his lover and mate. You have a fun life with him, able to enjoy wild romps on cola whenever you like, playing with Lorenda and Lee in their guises as paid housekeepers while really being just well-paid lovers and permanent houseguests. Alex continues his career as a very successful lawyer and thankfully doesn't pick up your caffeine hyperness, though he does develop quite the sweet tooth.";
 			else:
-				say "     Once you're released, you do your best to settle down into a new life. Luckily, you meet a cute [if Player is male]jill[else]hob[end if] among your release group and soon become their lover. In time, you move in together and have wild, over-caffeinated romps nearly every week-end. While your lover doesn't gain your reaction to cola and pop, they do develop quite the sweet tooth.";
+				say "     Once you're released, you do your best to settle down into a new life. Luckily, you meet a cute [if Player is male and (Player is femaleinterested or Player is not maleinterested)]jill[else]hob[end if] among your release group and soon become their lover. In time, you move in together and have wild, over-caffeinated romps nearly every week-end. While your lover doesn't gain your reaction to cola and pop, they do develop quite the sweet tooth.";
 
 Sugar Ferret ends here.

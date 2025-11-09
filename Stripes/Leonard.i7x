@@ -412,6 +412,7 @@ to say Leonardsex_pridekitty:		[Brought Leonard a kitty from his pride]
 		say "     The other feline moves in front of you, bringing her dripping pussy to your face. With the scent of aroused feline all around you, you dive in right away, licking and kissing at those wet folds, enjoying the mewls and purrs she emits. Watching this lovely show, Leonard starts pounding you hard and fast. 'That's a good, sexy [if Player is female]girl[else]kitty[end if],' he rumbles between thrusts. 'Such a good, submissive slut you are. Lick your pride-mate's pussy. You want to earn a nice, hot load of lion cum, don't you?' You nod enthusiastically, your body lusting to feel the sexy lion breed you.";
 		say "     As he continues to tell you what an eager, needy, submissive kitties you both are, he pounds his pulsing shaft into you. You grip the sheets and beg him for him to fill you between licks, crying out for him to take you. Soon your wish is granted as the lion drives hard into you and his balls pulse as his hot seed flows deep inside you, flooding your [if Player is female]womb[else]ass[end if] with his virile sperm. The horny kitty before you grinds her pussy against your face as she cums hard as well. All of this sends you over the edge as well, climaxing as you lapping up her juices and feel your pride leader's hot load filling you.";
 		say "     After he withdraws from you and mounts the other kitty, you roll onto your back, lost in the blissful pleasure of having his hot semen filling your tummy. Watching the show, you soon feel the urge to get a turn of your own. You push yourself up and bring your dripping [if Player is female]pussy[else]asshole[end if] to the lioness's muzzle, moaning in delight as her raspy tongue starts lapping up the leonine cum leaking from your stuffed [if Player is female]cunt[else]hole[end if]. The lustful romp continues like this for some time, with the three of you swapping positions and you both getting several loads from the big male. Eventually, your threesome runs down and you all end up snuggled together on the bed, purring happily as you drift off for a quick catnap.";
+		CreatureSexAftermath "Player" receives "OralPussy" from "Feline";
 		if Player is female:
 			NPCSexAftermath Player receives "PussyFuck" from Leonard;
 		else:
@@ -845,9 +846,9 @@ to say ResolveEvent Concert Hall:
 			now Music Store is resolved;
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     Unable to hold out against the bunny horde, you find yourself surrounded by the strange group of lustful, longing bunnies. They fuck you repeatedly, with so many of them there to share you that you always have several lovers at a time, drawing you further and further into the lustful needs of your body as it starts to change, gaining bunny ears and a tail. But as the changes continue, ";
-			if "Male Preferred" is listed in feats of Player:
+			if Player is MalePreferred:
 				say "you gain more cocks, more balls, more arms and legs as well? Even more heads? Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself. At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and male genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly male.";
-			else if "Female Preferred" is listed in feats of Player:
+			else if Player is FemalePreferred:
 				say "you gain more pussies, more breasts, more arms and legs as well? Even more heads? Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself. At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and female genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly female.";
 			else:
 				say "you gain more cocks, more pussies, more breasts, more arms and legs as well? Even more heads? Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself. At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly either male or female.";
@@ -975,7 +976,7 @@ to say ResolveEvent Hunting Prides:
 		[puts Feline as lead monster for infection and impregnation]
 		setmonster "Feline" silently;
 		turn the Player into a "Feline" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
-		if "Male Preferred" is listed in feats of Player:
+		if Player is MalePreferred:
 			now Cock Count of Player is 1;
 			if Cock Length of Player < 9, now Cock Length of Player is 9;
 			if Ball Size of Player < 3, now Ball Size of Player is 3;
@@ -983,7 +984,10 @@ to say ResolveEvent Hunting Prides:
 			now Cunt Depth of Player is 0;
 			now Cunt Tightness of Player is 0;
 			now Nipple Count of Player is 2;
-			now Breast Size of Player is 0;
+			if "Breasts" is not listed in feats of Player:
+				now Breast Size of Player is 0;
+			else if Breast Size of Player < 3:
+				now Breast Size of Player is 3;
 		else if "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
 			now Cunt Count of Player is 1;
 			if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;
@@ -1091,7 +1095,7 @@ to say Leonardrivalfight:
 		[puts Feline as lead monster for infection and impregnation]
 		setmonster "Feline" silently;
 		turn the Player into a "Feline" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
-		if "Male Preferred" is listed in feats of Player:
+		if Player is MalePreferred:
 			now Cock Count of Player is 1;
 			if Cock Length of Player < 9, now Cock Length of Player is 9;
 			if Ball Size of Player < 3, now Ball Size of Player is 3;
@@ -1099,7 +1103,10 @@ to say Leonardrivalfight:
 			now Cunt Depth of Player is 0;
 			now Cunt Tightness of Player is 0;
 			now Nipple Count of Player is 2;
-			now Breast Size of Player is 0;
+			if "Breasts" is not listed in feats of Player:
+				now Breast Size of Player is 0;
+			else if Breast Size of Player < 3:
+				now Breast Size of Player is 3;
 		else if "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
 			now Cunt Count of Player is 1;
 			if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;

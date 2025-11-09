@@ -22,10 +22,10 @@ to say lose to Cambion Male:
 	say "     He then begins to step towards you, cock in hand and a huge grin in his face, and pushes you onto the ground with his foot, making you fall on your back. With another step forward, the strange man is in the right distance to now place his boot atop your face, forcing you to turn it to the side as he presses his hard sole against your cheek. 'Take it off for me,' he commands, pointing towards the strings of his footwear. With your head pinned down like that and vulnerable as you were left, your chances of escaping are hopeless, so you must comply to whatever he says. Using your hands, you begin to undo the knots on his boot as he simply stands there, observing you act as he mindlessly strokes his cock with slow rubs.";
 	say "     The pleased look in the male's face says you are doing an adequate job, as the boot loosens up enough for it to be removed. He lifts his foot just enough for you to be able to do this, throwing the boot to the side in the end, and immediately, you get a faceful of his foot back on top of your features as he rubs it all over them, his grin only widening at how hopeless you look before him. 'Lick them good. This is your place now,' he says, pushing his big toe into your mouth as he continues pleasuring himself, clearly enjoying all this. Having no other choice but to satisfy this pushy individual, you comply with the best of your abilities, putting your tongue to work all over that toe, wiggling around its entire form.";
 	WaitLineBreak;
-	say "     Undeniably, this really seems to excite him, as his jerking motions hasten every several seconds, though his eyes remain fixated on you as he praises your performance, 'Such a good pet. You make me consider... claiming you.' With this said, the man presses his foot even harder against your face, forcing his remaining toes into your mouth as he orders you to continue licking. By now, you are simply sucking on his foot without the faintest trace of control over the situation, made to worship him in the way he deems appropriate. Eventually, you find his toes wiggling way deeper in your mouth, your jaw extended to take in as much of his foot as he is able to fit inside. He then moves it back and forth, rubbing his toes and sole against your tongue while he continues to stroke his own cock.";
+	say "     Undeniably, this really seems to excite him, as his jerking motions hasten every several seconds, though his eyes remain fixated on you as he praises your performance. 'Such a good pet. You make me consider... claiming you.' With this said, the man presses his foot even harder against your face, forcing his remaining toes into your mouth as he orders you to continue licking. By now, you are simply sucking on his foot without the faintest trace of control over the situation, made to worship him in the way he deems appropriate. Eventually, you find his toes wiggling way deeper in your mouth, your jaw extended to take in as much of his foot as he is able to fit inside. He then moves it back and forth, rubbing his toes and sole against your tongue while he continues to stroke his own cock.";
 	say "     It almost feels like he is fucking your face with his foot, which only seems to excite him more and more. With each stroke he grunts and moans, delighted to have you under him, penis throbbing with the anticipation of a sweet release that is bound to happen soon. It does not take long until he truly begins to pick up the pace, jerking steadily faster, to a point you can feel the momentum of his every movement. As his foot remains shoved down your mouth in the deepest way possible, you see him nearing his edging point. 'I want you looking in my eyes while you suck on my toes... All the way until I blow my load all over your face, pet.' His crimson gaze is locked onto yours, and helpless as you are, you dare not provoke him.";
 	WaitLineBreak;
-	say "     Eventually, your patience and persistence wins you a faceful of cum as the demonic man moves past his point of no return, moaning and grunting as his load lands above his foot and your face. Some of it runs down to the corners of our mouth, and you cannot help but enjoy its intoxicatingly sweet taste... For a moment, you begin to really enjoy this, and its effect only becomes stronger the more you take inside. 'Mmmh... YeAh... FUcK YES...! Lick it clean, get it all in until the last drop. You're not leaving until there isn't a single hint of my load on that foot, slutty [boygirl].' His joy is evident on his smiling face as he watches you obey him so easily, feeling almost compelled by primitive instinct to eat up his load, bringing your tongue all over that sole and toes to bring as much cum as you can down your throat.";
+	say "     Eventually, your patience and persistence wins you a faceful of cum as the demonic man moves past his point of no return, moaning and grunting as his load lands above his foot and your face. Some of it runs down to the corners of your mouth, and you cannot help but enjoy its intoxicatingly sweet taste... For a moment, you begin to really enjoy this, and its effect only becomes stronger the more you take inside. 'Mmmh... YeAh... FUcK YES...! Lick it clean, get it all in until the last drop. You're not leaving until there isn't a single hint of my load on that foot, slutty [boygirl].' His joy is evident on his smiling face as he watches you obey him so easily, feeling almost compelled by primitive instinct to eat up his load, bringing your tongue all over that sole and toes to bring as much cum as you can down your throat.";
 	say "     'Good [boygirl]...' At that point, he finally removes his foot from your face and walks away to grab his boot as you remain lying down on the ground. 'Be ready to submit the next time too.' The eerie man seems to simply leave you there as he disappears into the distance. Only in that moment you are allowed to regather your senses from that addictive, sweet demonic cum and slowly bring your body to stand up. Once your mind is fully yours again, you feel ready to be on your way.";
 	CreatureSexAftermath "Player" receives "Other" from "Cambion Male";
 
@@ -33,12 +33,12 @@ to say beat the Cambion Male:
 	if fightoutcome is 11: [submitted by libido victory]
 		say "     In the middle of combat, during a short pause between actions, your foe simply decides to drop his whip, freeing both his hands, and begins to walk towards you in a less hostile manner. You remain on your guard, knowing that the demonic man is now unarmed, and he stops just a few steps away from you. Then, you see his clothes beginning to turn into a monochromatic shade of dark blue before they vanish without a trace, leaving him completely naked with a hard-on between his legs, throbbing and twitching constantly. 'Ngh... You've broken my concentration with that... sexy body of yours...! Fine, let's have some fun in your own terms, for now. Your victory is just. But I must warn you... I like it rough.'";
 	else:
-		say "     You continue to hit this strange demonic man as much as you can, up to you a point that you realize he is not fighting back. He has his arms stretched sideways and the front of his torso exposed so you can continue hitting him, offering no resistance. 'Yes! Hurt me more! It hurts [italic type]sO gOOD[roman type]! More!' Knowing that he has dropped his will to fight, you step back and keep your eyes on him, expecting some sort of trick. All that happens is the clothes of the handsome half-devil suddenly turning into a monochromatic shade of dark blue before vanishing without a trace, leaving him completely naked with a hard-on between his legs, throbbing and twitching constantly. 'You're so rough! I [italic type]LOVE[roman type] it! Come, hit me some more, make it hurt [italic type]sO GOOD[roman type]...'";
-		WaitLineBreak;
-		say "     <<Author's note: Victory Sex Scenes will be added in the future!>>";
-		WaitLineBreak;
-		say "     You have decided that this is a little bit too much for you right now and, instead, begin to leave the area. When you glance over your shoulder to see if he is still there, you see that he is not, having disappeared out of sight.";
-		[CambionMaleSexTable;]
+		say "     You continue to hit this strange demonic man as much as you can, up to a point that you realize he is not fighting back. He has his arms stretched sideways and the front of his torso exposed so you can continue hitting him, offering no resistance. 'Yes! Hurt me more! It hurts [italic type]sO gOOD[roman type]! More!' Knowing that he has dropped his will to fight, you step back and keep your eyes on him, expecting some sort of trick. All that happens is the clothes of the handsome half-devil suddenly turning into a monochromatic shade of dark blue before vanishing without a trace, leaving him completely naked with a hard-on between his legs, throbbing and twitching constantly. 'You're so rough! I [italic type]LOVE[roman type] it! Come, hit me some more, make it hurt [italic type]sO GOOD[roman type]...'";
+	WaitLineBreak;
+	say "     <<Author's note: Victory Sex Scenes will be added in the future!>>";
+	WaitLineBreak;
+	say "     You have decided that this is a little bit too much for you right now and, instead, begin to leave the area. When you glance over your shoulder to see if he is still there, you see that he is not, having disappeared out of sight.";
+	[CambionMaleSexTable;]
 
 [to CambionMaleSexTable:
 	LineBreak;
@@ -84,7 +84,7 @@ to say Cambion Male fight:
 		if Libido of Player > 80:
 			say "     [one of]Your lust is so great that you are led to fantasize about being owned by him[or]Your knees begin to feel weak as you picture him using you for his own pleasure[or]You find yourself wishing to be taken and dominated by him[or]It starts feeling so good you want to beg him for more, moaning each time he strikes you[or]Your thoughts shift to depravity as you begin to imagine what it would be like if you were his pet[at random]...";
 		else:
-			say "     [one of]Your mind twists in a way that begins to see him the superior one[or]It starts feeling kind of good, which inevitably arouses you[or]The touch of his whip makes you strangely yearn for more[or]It triggers something in you that makes you consider submitting to him[or]It makes you think that letting him hit and dominate you would not be such a bad idea[at random]...";
+			say "     [one of]Your mind twists in a way that begins to see him as the superior one[or]It starts feeling kind of good, which inevitably arouses you[or]The touch of his whip makes you strangely yearn for more[or]It triggers something in you that makes you consider submitting to him[or]It makes you think that letting him hit and dominate you would not be such a bad idea[at random]...";
 		increase Libido of Player by a random number from 4 to 6;
 		if BodyName of Player is "Succubus" or BodyName of Player is "Incubus" or BodyName of Player is "Cambion Male":
 			increase Libido of Player by a random number between 3 and 4;
@@ -103,7 +103,7 @@ name(text)	PrepFunction(text)
 "Cambion Male"	"[PrepCombat_Cambion Male]"
 
 to say PrepCombat_Cambion Male:
-	say "";
+	setmongender 3; [creature is male]
 
 Section 2 - Creature Insertion
 
@@ -160,9 +160,9 @@ When Play begins:
 	now SeductionImmune entry is false;
 	now libido entry is 60; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 30; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "cambion male milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "cambion male cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or][if Player is male]handsome[else]sultry[end if][at random]";

@@ -46,9 +46,13 @@ Ebonflame Nest is a situation.
 ResolveFunction of Ebonflame Nest is "[ResolveEvent Ebonflame Nest]".
 Sarea of Ebonflame Nest is "Capitol".
 
+when play begins:
+	add Ebonflame Nest to BadSpots of MaleList;
+	add Ebonflame Nest to BadSpots of FeralList;
+
 to say ResolveEvent Ebonflame Nest:
 	setmonster "Ebonflame Whelp";
-	say "     Upon your travels across this blasted parts of the city, you ";
+	say "     Upon your travels across this blasted part of the city, you ";
 	let bonus be ( perception of Player - 10 ) / 2;
 	let target be 12;
 	if "Bad Luck" is listed in feats of Player, increase target by 1;
@@ -57,7 +61,6 @@ to say ResolveEvent Ebonflame Nest:
 	if bonus + dice > target:
 		say "suddenly stop, detecting some rather strangely sunken and cracked pavement. You pick up a nearby rock and throw it at the patch of asphalt, which slowly creaks until it collapses in on itself. And to think, you nearly walked over that!";
 		say "     Looking down, you can see the shadows of a handful of ebonflame whelps, now suddenly roused from their prior rest. Further observation indicates that it's some manner of nest. You also see a bit of food and water down there. You could hop down and challenge the whelps for those supplies, or you could just leave this matter entirely.";
-		LineBreak;
 		say "     [bold type]Descend upon the whelps?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes. You could use the supplies, and you're willing to put up a fight for them.";
@@ -76,9 +79,8 @@ to say ResolveEvent Ebonflame Nest:
 		if HardMode is true, increase target by 2;
 		let dice be a random number from 1 to 20;
 		if bonus + dice > target:
-			say ". Using your quick reflexes, you immediately roll away from the crumbling pavement, which collapses in on itself in your wake. Dusting yourself off, you move to see what your poor luck might of had in store for you.";
+			say ". Using your quick reflexes, you immediately roll away from the crumbling pavement, which collapses in on itself in your wake. Dusting yourself off, you move to see what your poor luck might have had in store for you.";
 			say "     Looking down, you can see the shadows of a handful of ebonflame whelps, now suddenly roused from their prior rest. Further observation indicates that it's some manner of nest. You also see a bit of food and water. You could hop down and challenge the whelps for those supplies, or you could just leave this matter entirely.";
-			LineBreak;
 			say "     [bold type]Descend upon the whelps?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes. You could use the supplies, and you're willing to put up a fight for them.";
@@ -104,12 +106,13 @@ to say ResolveEvent Ebonflame Nest:
 			else:
 				now HP of Player is 1;
 				say ". The impact is strong enough to render you unconscious, the chittering sound of ebonflame whelps the only thing you can recall before you black out.";
-				say "     Your consciousness is roused once again by strained squeals and yipping of your apparent assailants. The writhing, heated flesh of a few whelps on you, more strewn about, rather exhausted themselves. As you shift, it immediately becomes clear that you're partially doused with the creatures['] glowing seed[if scalevalue of Player > 3], an impressive feat for someone as large as you. These whelps have either been very busy, or you've been out for quite some time[else]. The whelps must have been busy with you while you were lying unconscious[end if].";
+				say "     Your consciousness is roused once again by strained squeals and yipping of your apparent assailants, the writhing, heated flesh of a few whelps on you, more strewn about, rather exhausted themselves. As you shift, it immediately becomes clear that you're partially doused with the creatures['] glowing seed[if scalevalue of Player > 3], an impressive feat for someone as large as you. These whelps have either been very busy, or you've been out for quite some time[else]. The whelps must have been busy with you while you were lying unconscious[end if].";
+				WaitLineBreak;
 				say "     Though you still feel a couple heaving against your [if scalevalue of Player > 3]large [end if]behind, it's clear they're all too spent to fight you. Embarrassed as you are, you easily shove them off, weakly pulling yourself back up the hole. As you crawl back from whence you came, it's clear by the twisted aftertaste in your mouth that the small creatures made the most of what they could against your helpless form.";
 				CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Whelp";
 				if Player is female:
 					CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Whelp";
-				else:
+				if Player is not female or anallevel > 1:
 					CreatureSexAftermath "Player" receives "AssFuck" from "Ebonflame Whelp";
 				infect "Ebonflame Whelp";
 				infect "Ebonflame Whelp";
@@ -130,13 +133,14 @@ to say ebonflamegauntlet:
 			if whelpnumbers is maxwhelps:
 				say "     [if HP of Player > 0]Immediately submitting to the many whelps, they chitter happily, quick to forget your disruption now that they have a new toy[else]Falling to merely the first whelp, it squawks loudly to brag of its physical prowess before the whole lot of them descend upon you[end if]. Engulfed in numerous masses of twisted, ebonflame scales, the chirping, chittering noises they emit are almost unbearable[if Player is submissive]. You are too overwhelmed by your submissive inclinations to resist their wanton, fiery desire[else if HP of Player > 0]. Their wanton, fiery desire is too overwhelming for you to resist[else]. Your impotent attempts at pushing them away are too inadequate to dissuade their wanton, fiery desire[end if].";
 			else:
-				say "     Unable to handle this many whelps, [if HP of Player > 0]you concede to submitting to the beasts[else]you eventually fall to one of them, who squawks loudly to brag of its prowess over its kin[end if], those felled prior slowly rising up to recover from your attack before the whole lot of them descend upon you. Engulfed in numerous masses of twisted, ebonflame scales, the chirping, chittering noises they emit are almost unbearable[if Player is submissive]. You are too overwhelmed by your submissive inclinations to resist their wanton, fiery desire[else if HP of Player > 0]. Their wanton, fiery desires is too overwhelming for you to resist[else]. Your impotent attempts at pushing them away too inadequate to dissuade their wanton, fiery desire[end if].";
-			say "     You're briefly forced to cry out, though they will not abide your involvement in their lust-laden song, your mouth immediately plugged by the [if scalevalue of Player > 3]erections of two of the whelps[else]cock of one of these whelps[end if]. [if HP of Player < 1]Weakened[else]Twisted[end if] moans muffled by [if scalevalue of Player > 3]their inadequate tools[else]its inadequate tool[end if], [if Cunt Count of Player > 2]they seek to plug your other holes, two more thrusting into two of your cunts, while the remainder assail your frame with their own irreverent, heaving assault[else if Cunt Count of Player is 2]they seek to plug your other holes, two more thrusting into both of your cunts, while the remainder assail your frame with their own irreverent, heaving assault[else if Cunt Count of Player is 1]they seek to plug your other hole, two of them managing to fit themselves into your cunt, an affair the cramped pair seem to fight over between thrusts, while the remainder assail your frame with their own irreverent, heaving assault[else if anallevel > 1 and scalevalue of Player > 3]they seek to plug your other hole, two of them managing to fit themselves past your anal ring, exploiting your large size to both thrust into your inviting portal, while the remainder assail your frame with their own irreverent, heaving assault[else if anallevel > 1]they seek to plug your other hole, two of them managing to fit themselves past your anal ring, an affair the cramped pair seem to fight over between thrusts, while the remainder assail your frame with their own irreverent, heaving assault[else]the remainder assailing your frame with their own irreverent, heaving thrusts[end if]. A handful of heated, sweat-laden minutes pass before feel one cry out in blissful release, its kin soon following suit.";
+				say "     Unable to handle this many whelps, [if HP of Player > 0]you concede to submitting to the beasts[else]you eventually fall to one of them, who squawks loudly to brag of its prowess over its kin[end if], those felled prior slowly rising up to recover from your attack before the whole lot of them descend upon you. Engulfed in numerous masses of twisted, ebonflame scales, the chirping, chittering noises they emit are almost unbearable[if Player is submissive]. You are too overwhelmed by your submissive inclinations to resist their wanton, fiery desire[else if HP of Player > 0]. Their wanton, fiery desire is too overwhelming for you to resist[else], your impotent attempts at pushing them away too inadequate to dissuade their wanton, fiery desire[end if].";
+			say "     You're briefly forced to cry out, though they will not abide your involvement in their lust-laden song, your mouth immediately plugged by the [if scalevalue of Player > 3]erections of two of the whelps[else]cock of one of these whelps[end if]. [if HP of Player < 1]Weakened[else]Twisted[end if] moans muffled by [if scalevalue of Player > 3]their inadequate tools[else]its inadequate tool[end if], [if Cunt Count of Player > 2]they seek to plug your other holes, two more thrusting into two of your cunts, while the remainder assail your frame with their own irreverent, heaving assault[else if Cunt Count of Player is 2]they seek to plug your other holes, two more thrusting into both of your cunts, while the remainder assail your frame with their own irreverent, heaving assault[else if Cunt Count of Player is 1]they seek to plug your other hole, two of them managing to fit themselves into your cunt, an affair the cramped pair seem to fight over between thrusts, while the remainder assail your frame with their own irreverent, heaving assault[else if anallevel > 1 and scalevalue of Player > 3]they seek to plug your other hole, two of them managing to fit themselves past your anal ring, exploiting your large size to both thrust into your inviting portal, while the remainder assail your frame with their own irreverent, heaving assault[else if anallevel > 1]they seek to plug your other hole, two of them managing to fit themselves past your anal ring, an affair the cramped pair seem to fight over between thrusts, while the remainder assail your frame with their own irreverent, heaving assault[else]the remainder assailing your frame with their own irreverent, heaving thrusts[end if]. A handful of heated, sweat-laden minutes pass before you feel one cry out in blissful release, its kin soon following suit.";
+			WaitLineBreak;
 			say "     You are quick to assume that they are finished with their fun, but it's clear that, since you came down on -their- home, they have nowhere else to be, and they thusly continue to use you, new ones falling in place when one becomes too exhausted. What feels like an eternity passes before they're all finally spent and [if HP of Player > 0 or Player is submissive]have nothing left to offer you[else]you've recovered enough to push them off[end if]. Exhausted, covered in sexual fluids, and quite embarrassed with yourself, you pull yourself out of the hole and back from whence you came before their parents might return.";
 			CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Whelp";
 			if Player is female:
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Whelp";
-			else:
+			else if anallevel > 1:
 				CreatureSexAftermath "Player" receives "AssFuck" from "Ebonflame Whelp";
 			infect "Ebonflame Whelp";
 			infect "Ebonflame Whelp";
@@ -167,6 +171,7 @@ Sarea of Strange Meeting is "Capitol".
 to say ResolveEvent Strange Meeting:
 	say "     Traveling through the ruined area, you happen upon what appears to be a set of ebonflame dragonkin in the distance. Thankfully not being spotted, you duck behind some rubble, watching what they do.";
 	say "     They appear to just be standing there, one drake flanked by a pair of dragators, their intent soon made somewhat clear when a new party - a set of dark elves - calmly advance upon them. You imagine this would be rather odd for the two to meet in this manner, and it's clear that they share this sentiment as they look none too fond of this arrangement.";
+	WaitLineBreak;
 	say "     Too far to hear what they actually say, they seem to be arguing over something, tossing accusations left and right and not really coming to any agreement. It would appear that tension is running high enough that they might turn on each other before they're interrupted when a sound from the open area, opposite to you, draws their attention.";
 	say "     You're not exactly sure what has them so ill at ease, both parties conceding into retreating. Chances are, you don't want to stay and find out, and thusly you move to depart yourself.";
 	now Strange Meeting is resolved;

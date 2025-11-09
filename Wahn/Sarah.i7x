@@ -70,7 +70,7 @@ when play begins:
 	add Husky Pack to BadSpots of FurryList;
 
 to say ResolveEvent Husky Pack:
-	say "     Rounding a corner in one of the inner-city blocks, you run right into the leader of a small husky pack, his fur cushioning the impact. As you jump back from the imposing anthro canine, he snarls in your face, drawing back his lips from a muzzle full of white and sharp teeth. 'Fuck off,' the alpha husky growls in annoyance and is immediately supported by the group of husky bitches following behind him. 'You better run, [if Player is female]skank[else]asshole[end if]!' one of them barks and gives you a quite rude gesture, then a second laughs in a shrill tone and adds, 'That's right. Our man will fuck you up otherwise.' Between the group of naked anthro females, you catch a glimpse of a thin human woman with a red leather collar on a leash. She is shoeless, dressed in partly torn jeans and a ragged t-shirt, both clear indications that she's gone through some stuff. From her expression, the young woman is quite uncomfortable with the tight leather band against her throat. And not only that - the leash is stretched taut between her and the male, with him apparently dragging her along by force. Both of the items still bear price tags, so your guess would be that this little gang just came out of the nearby pet store after outfitting the newest unwilling recruit to his harem of bitches.";
+	say "     Rounding a corner in one of the inner-city blocks, you run right into the leader of a small husky pack, his fur cushioning the impact. As you jump back from the imposing anthro canine, he snarls in your face, drawing back his lips from a muzzle full of white and sharp teeth. 'Fuck off,' the alpha husky growls in annoyance and is immediately supported by the group of husky bitches following behind him. 'You better run, [if Player is female]skank[else]asshole[end if]!' one of them barks and gives you a quite rude gesture, then a second laughs in a shrill tone and adds, 'That's right. Our man will fuck you up otherwise.' Between the group of naked anthro females, you catch a glimpse of a thin human woman with a rope leash tied around her neck. She is shoeless, dressed in partly torn jeans and a ragged t-shirt, both clear indications that she's gone through some stuff. From her expression, the young woman is quite uncomfortable with the coarse rope against her throat. And not only that - the leash is stretched taut between her and the male, with him apparently dragging her along by force. This little gang appears to be busy dragging their newest unwilling recruit to his harem of bitches.";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Apologize and leave as quickly as you can.";
 	say "     ([link]N[as]n[end link]) - Demand an explanation what he's doing with the human woman.";
@@ -133,7 +133,7 @@ to say SarahLeftSubmissive:
 
 to say SarahRescue:
 	now Resolution of Husky Pack is 1; [fought to rescue Sarah]
-	say "     Determined to stop what's going on, you jump forward slamming your shoulder into the alpha husky. He stumbles and falls with a grunt at having the air driven out of his lungs through the sudden lunge, pulling his captive down with him. You make use of the chance at having him out of the way and quickly pick the woman off the ground (grabbing her arm and not the leash). Time seems to slow down as she smiles in gratitude and you glimpse the stamped plaque reading 'Sarah' on her collar, then both of you turn to start running away from the pack of huskies. You make the first step towards escape, but then suddenly something swats sideways against your lower ankle - it is the alpha husky, intent on sweeping your legs out from under you from his position on the ground.";
+	say "     Determined to stop what's going on, you jump forward slamming your shoulder into the alpha husky. He stumbles and falls with a grunt at having the air driven out of his lungs through the sudden lunge, pulling his captive down with him. You make use of the chance at having him out of the way and quickly pick the woman off the ground (grabbing her arm and not the leash). Time seems to slow down as she smiles in gratitude, then both of you turn to start running away from the pack of huskies. You make the first step towards escape, but then suddenly something swats sideways against your lower ankle - it is the alpha husky, intent on sweeping your legs out from under you from his position on the ground.";
 	say "     Sent stumbling by his blow, you smack your head into the stone wall of the building and are momentarily dazed, giving the muscular canine enough time to stand up. Since you are pretty out of it as he steps up afterwards, the husky pays you little notice, instead dragging his claws along Sarah's side. Blood wells up from the harsh scratches he leaves on her pale skin, showing that he didn't hold back at all and really wanted to hurt her. The casual violence and cruelty serves to focus your mind again - you'll have to fight to get out of this!";
 	increase Morale of Player by 10;
 	say "     You are about to jump forward to challenge the husky, but a member of his pack acts first and pounces on you.";
@@ -158,6 +158,7 @@ to say SarahRescue:
 		say "     Helpless to do anything about the spreading infection, you can do little but watch as her hands and feet become more paw-like than human as the fur reaches them and her pussy conforms to a new shape too, just right for a strong canine to sink his bone into. Distracted by the sight of her shifting crotch, only the crunch of re-forming bone draws your attention back to her head - which rapidly forms a slender muzzle and pointy dog's ears, completing her external transformation. You carry Sarah downstairs to put her into a bed to rest, then walk back up into the library and watch the empty streets outside for a moment. Thinking back to what you went through earlier, you don't feel sorry for the huskies you left lying in the street. Getting caught by some of the more dangerous beasts out there would be a fit punishment for what they tried to do.";
 		now inasituation is false;
 		now Sarah is in the bunker;
+		now Player is in Grey Abbey Library;
 		now Resolution of Husky Pack is 6; [player rescued Sarah]
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     Even as your strength gives out and you succumb to the fatigue from combat, furry bodies pile onto you, pinning you down. The heat from their bodies envelops you, and the air is rich with the scents of exertion and heat.";
@@ -242,7 +243,6 @@ to say HuskyGangbang:
 		else:
 			LineBreak;
 			say "     A sour frown touches the husky's lips when he sees how reticent you are to clean him off. With a soft sigh, the canine says, 'Well, I had my fun. Let's collect our prize and move on.' His pack comes together, picking up Sarah as they prepare to head off.";
-
 
 to say HuskyThreesome:
 	now Resolution of Husky Pack is 3; [husky threesome]
@@ -407,11 +407,19 @@ instead of sniffing Sarah:
 
 to say SarahSlutState:
 	if SarahCured > 3:
-		say "Sarah is wearing a red shirt and a pair of jeans. Her delicate paw-feet are bare, no longer fitting into - or needing - shoes thanks to her tough paw-pads. She looks at you and smiles as she notices your attention, safe in the knowledge that she can beat the husky instincts thanks to your help. Getting to this state of newfound confidence clearly wasn't easy for her - as you know from watching her transform, she has the slit of a feral husky bitch, which brings with it almost constant 'heat' and the urge to be filled.";
+		say "Sarah is wearing a red shirt and a pair of jeans. Her delicate paw-feet are bare, no longer fitting into - or needing - shoes thanks to her tough paw-pads. She looks at you and smiles as she notices your attention, safe in the knowledge that she can beat the husky instincts thanks to your help. Getting to this state of newfound confidence clearly wasn't easy for her - as you know from watching her transform, she has the slit of a feral husky bitch, which brings with it almost constant 'heat' and the urge to be filled. ";
+		if "Collared" is listed in Traits of Sarah:
+			say "Her stylish yellow leather collar stands out, with a nameplate reading 'Sarah' attached to its front.";
+		else:
+			LineBreak;
 	else if SarahCured is 3 or SarahCured is 2:
-		say "She seems to have calmed her husky instincts for now and is wearing a red shirt and a pair of jeans. Her delicate paw-feet are bare, no longer fitting into - or needing - shoes thanks to her tough paw-pads. Still, it clearly isn't easy for her - as you know from watching her transform, she has the slit of a feral husky bitch, which brings with it almost constant 'heat' and the urge to be filled. Her red collar stands out, with its leash ring on the back and a nameplate reading 'Sarah' attached to its front.";
+		say "She seems to have calmed her husky instincts for now and is wearing a red shirt and a pair of jeans. Her delicate paw-feet are bare, no longer fitting into - or needing - shoes thanks to her tough paw-pads. Still, it clearly isn't easy for her - as you know from watching her transform, she has the slit of a feral husky bitch, which brings with it almost constant 'heat' and the urge to be filled. ";
+		if "Collared" is listed in Traits of Sarah:
+			say "Her stylish yellow leather collar stands out, with a nameplate reading 'Sarah' attached to its front.";
+		else:
+			LineBreak;
 	else if SarahCured is 1 or SarahSlut is 0:
-		say "She is having trouble with the husky instincts, but looks dominant for now, even wearing a red shirt and a pair of jeans. Still, it clearly isn't easy for her - as you know from watching her transform, she has the slit of a feral husky bitch, just waiting to be filled. Her red collar stands out, with its leash ring on the back and a nameplate reading 'Sarah' attached to its front.";
+		say "She is having trouble with the husky instincts, but looks dominant for now, even wearing a red shirt and a pair of jeans. Still, it clearly isn't easy for her - as you know from watching her transform, she has the slit of a feral husky bitch, just waiting to be filled.";
 	else if SarahSlut is 1 or SarahSlut is 2:
 		say "She has submitted to most of her bestial needs, wearing nothing and giving you a free show of her sex - shaped like the slit of a feral husky bitch. It is dripping a little bit of femcum on the floor from time to time, but she keeps her hands at her sides as some human side of her is still struggling for control.";
 	else if SarahSlut is 3:
@@ -472,6 +480,12 @@ to say SarahTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Ask Sarah if she can do something for the Demon Brute.";
 	[]
+	if "Collar ready" is listed in Traits of Sarah:
+		choose a blank row in table of fucking options;
+		now title entry is "Offer the collar you got her for Sarah to wear";
+		now sortorder entry is 6;
+		now description entry is "Try to talk the young woman into wearing it";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -489,14 +503,16 @@ to say SarahTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Just chat a bit"):
 					say "[SarahTalk1]";
-				if (nam is "Medical Supplies"):
+				else if (nam is "Medical Supplies"):
 					say "[SarahTalk2]";
-				if (nam is "Managing her urges"):
+				else if (nam is "Managing her urges"):
 					say "[SarahTalk3]";
-				if (nam is "Theories on the outbreak"):
+				else if (nam is "Theories on the outbreak"):
 					say "[SarahTalk4]";
-				if (nam is "Ask her for help regarding your Demon Brute"):
+				else if (nam is "Ask her for help regarding your Demon Brute"):
 					say "[SarahTalk_DB]";
+				else if (nam is "Offer the collar you got her for Sarah to wear"):
+					say "[SarahCollar_Talk]";
 				wait for any key;
 				say "[SarahTalkMenu]";
 		else if calcnumber is 0:
@@ -580,7 +596,7 @@ to say SarahTalk3:
 			say "     ([link]N[as]n[end link]) - Stay silent about it.";
 			if Player consents: [give it to her]
 				LineBreak;
-				say "     Sarah's eyes go wide and she can't help but give a happy little bark as you explain that you do have a stash of libido suppressant to give her. Trembling in excitement as she stands before you on her slender paws, the husky hybrid's tail wags up a storm as you pull five syringes out of your pack, handing the handful of them to her. 'I - I don't even know what to say,' she replies, tears of joy in her eyes. Leaning in to plant a peck on your cheek, she then hurries away to her bed to pack away the medicine you so laboriously gathered for her. Moments later, she is back by your side, a huge happy grin on her face. 'I want to give you something,' she tells you, then raises her hands to her neck and undoes the red collar there. 'Don't even know why I kept this thing on so long, but... here, take it as a reminder of what you saved me from and everything you did for me.' Handing you the narrow band of red leather with trembling fingers, she smiles and walks back to her bed, murmuring about trying out a new dosage next.";
+				say "     Sarah's eyes go wide and she can't help but give a happy little bark as you explain that you do have a stash of libido suppressant to give her. Trembling in excitement as she stands before you on her slender paws, the husky hybrid's tail wags up a storm as you pull five syringes out of your pack, handing the handful of them to her. 'I - I don't even know what to say,' she replies, tears of joy in her eyes. Leaning in to plant a peck on your cheek, she then hurries away to her bed to pack away the medicine you so laboriously gathered for her. Moments later, she is back by your side, a huge happy grin on her face. 'Thank you so much, I can't believe you went through so much trouble for me.' She licks your cheek affectionately, then smiles and walks back to her bed, murmuring about trying out a new dosage next.";
 				now SarahCured is 4; [the player gave her enough for a full treatment]
 				say "     For your efforts in saving Sarah from her progressing husky infection, you have earned the [']Dog Whisperer['] feat. Having proved your dedication in doing the right thing, your [bold type]charisma[roman type] has gone up by two, allowing you to empathize with others even more.";
 				FeatGain "Dog Whisperer";
@@ -598,7 +614,7 @@ to say SarahTalk3:
 			say "     ([link]N[as]n[end link]) - Stay silent about it.";
 			if Player consents: [give it to her]
 				LineBreak;
-				say "     Sarah's eyes go wide and she can't help but give a happy little bark as you explain that you do have a stash of libido suppressant to give her. Trembling in excitement as she stands before you on her slender paws, the husky hybrid's tail wags up a storm as you pull five syringes out of your pack, handing the handful of them to her. 'I - I don't even know what to say,' she replies, tears of joy in her eyes. Leaning in to plant a peck on your cheek, she then hurries away to her bed to pack away the medicine you so laboriously gathered for her. Moments later, she is back by your side, a huge happy grin on her face. 'I want to give you something,' she tells you, then raises her hands to her neck and undoes the red collar there. 'Don't even know why I kept this thing on so long, but... here, take it as a reminder of what you saved me from and everything you did for me.' Handing you the narrow band of red leather with trembling fingers, she smiles and walks back to her bed, murmuring about trying out a new dosage next.";
+				say "     Sarah's eyes go wide and she can't help but give a happy little bark as you explain that you do have a stash of libido suppressant to give her. Trembling in excitement as she stands before you on her slender paws, the husky hybrid's tail wags up a storm as you pull five syringes out of your pack, handing the handful of them to her. 'I - I don't even know what to say,' she replies, tears of joy in her eyes. Leaning in to plant a peck on your cheek, she then hurries away to her bed to pack away the medicine you so laboriously gathered for her. Moments later, she is back by your side, a huge happy grin on her face. 'Thank you so much, I can't believe you went through so much trouble for me.' She licks your cheek affectionately, then smiles and walks back to her bed, murmuring about trying out a new dosage next.";
 				now SarahCured is 4; [the player gave her enough for a full treatment]
 				say "     For your efforts in saving Sarah from her progressing husky infection, you have earned the [']Dog Whisperer['] feat. Having proved your dedication in doing the right thing, your [bold type]charisma[roman type] has gone up by two, allowing you to empathize with others even more.";
 				FeatGain "Dog Whisperer";
@@ -612,6 +628,25 @@ to say SarahTalk3:
 
 to say SarahTalk4:
 	say "     As you bring up the infection as a topic and the fact that you think it is nanites that are responsible, Sarah gives a nod in agreement. 'Yeah, that certainly fits the bill. I mean, I read in some current papers in medical science papers that people were working on medical use for such things. Nothing this drastic of course, but who knows what gets developed in secret labs and never reported to the world. Whoever might have cooked them up is one mystery, and the next one is why and how they got spread. I mean, they're certainly doing a bang-up job of healing wounds for some people, but others melted into puddles of goo. And the sudden species shifting makes no sense at all.' Running her fingers through her hair, Sarah glances down at her own muzzle and makes a grimace in frustration. 'All of this can't have been the intended purpose, can it? There are easier ways of bringing civilization to its knees, besides this total chaos. No, I think it must have been a mistake. Some sort of accidental spread of untested tech.'";
+
+to say SarahCollar_Talk:
+	say "     As you approach Sarah, she smiles at you warmly - but as you pull out the collar you've gotten for her, an expression of apprehension crosses her face. 'What are you planning to do with that? I'm not a pet - and not your pet, you know.' She looks down on the leather strap, seeing the tag with her name embossed on it. 'Hah, went all out, didn't you? How much did that cost extra?' She's taking things with some humor at least it seems, but she still seems rather down on the very idea of being collared.";
+	say "     ([link]Y[as]y[end link]) - Let your charm play and convince Sarah that the collar is something she wants to wear.";
+	say "     ([link]N[as]n[end link]) - Accept her reluctance and keep your distance.";
+	if Player consents:
+		let bonus be (( charisma of Player minus 10 ) divided by 2);
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]:[line break]";
+		if dice + bonus >= 15: [win the charisma check]
+			say "     Doing your best to underline each word with sincerity and trust, you try to explain that it's not that you're trying to say that she's a pet dog or anything. A collar is just... a fashion accessoire that matches her new body. The collar would look nice against her fur, you went through all the trouble of getting her name stamped on it too, and... yeah, it'll even be something that might help her get out of the city eventually. It'd make her stand out among the roaming husky sex addicts that are out on the streets in nothing but their fur. She'd be a well-put-together young woman, calm, with a bit of gear on her that marks her as more than just the street trash. You can't exactly tell which argument landed in the end, but finally Sarah lets out a sigh and holds out her hand, allowing you to lay the collar across her palm. She moves to the bathroom, holding it up against her throat to look at herself in the mirror, then tightens the leather band around her neck. 'I gotta admit, it doesn't look half bad,' she says to you, accompanied by a smile and a small wag of her tail. 'Thanks for thinking of me.'";
+			TraitGain "Collared" for Sarah;
+			Remove "Collar ready" from Traits of Sarah;
+		else: [fail the charisma check]
+			LineBreak;
+			say "     Doing your best to be convincing, you try to talk Sarah into wearint the collar you got for her, but even arguments that you tried to do something nice and even customized it specially for her don't quite land right. 'Yeah, no - not wearing that,' she replies with a shrug.";
+	else: [give up]
+		LineBreak;
+		say "     Doing your best to keep the disappointment out of your voice, you tell Sarah that it is okay and you don't want to pressure her into anything she isn't ready for. 'Thank you for understanding,' she replies. You're left to put the collar back with your things, deciding that you'll hang onto it in case you manage to convince her in the future.";
 
 instead of fucking Sarah:
 	say "[SarahFucking]";

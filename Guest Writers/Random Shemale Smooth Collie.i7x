@@ -248,7 +248,7 @@ When Play begins:
 	now tail entry is "Your tail is covered in short, soft, golden fur from your ass right up to the last inch or so, where it abruptly turns white."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[if looknow is 1]bright red canine/human hybrid in shape, complete with a knot and sheath,[else]canine hybrid[end if]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "as your skull begins to alter in shape as if made of clay. A sense of pressure here and a bit of stretching there, followed by a burning sensation in your mouth as your teeth are reshaped. You end up with the long, slender muzzle leading into a flat head of a collie"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 		now body change entry is "the change begins, bones crack and snap painlessly as they reshape. You can feel your waist drawing in somewhat and your shoulders broadening slightly, your body fat begins to melt away as your muscles bulk up and become more defined, making you look like a bodybuilder... though with a more feminine figure than you'd like. Your spine curves in a way that leaves your chest thrust out and displayed more prominently. Your legs gain digitigrade form and thick pads form on your feet as they are altered into paws. Your palms burn a bit as thinner pads form there when your hands begin reshaping, leaving you with slender fingers tipped with nails that look slightly more claw-like than a human's"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	else:
 		now body change entry is "the change begins, bones crack and snap painlessly as they reshape. You can feel your waist drawing in and your shoulder broadening slightly, leaving you with a voluptuous figure that many women would kill to have. Your spine curves in a way that leaves your chest thrust out and displayed more prominently. Your legs gain digitigrade form and thick pads form on your feet as they are altered into paws. Your palms burn a bit as thinner pads form there when your hands begin reshaping, leaving you with slender fingers tipped with nails that look slightly more claw-like than a human's";
@@ -279,8 +279,8 @@ When Play begins:
 	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "smooth collie shemale fur";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "smooth collie shemale milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "smooth collie shemale cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if Player is male][one of]muscled[or]strong[or]powerful[at random][else][one of]voluptuous[or]curvaceous[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -411,7 +411,7 @@ instead of sniffing smooth collie shemale fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";
 
 to say rsscbodyentry:
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 		say "reminiscent of a female bodybuilder, with defined muscles and only slightly wider hips with a thin waist and digitigrade legs ending in paws";
 	else:
 		say "that of a voluptuous woman with digitigrade legs ending in paws";

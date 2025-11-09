@@ -84,17 +84,18 @@ check ZAnalyzeEvent:
 
 carry out ZAnalyzeEvent:
 	say "DEBUG -> Analyzing reasons why event '[topic understood]' might not be available.";
-	repeat with z running through unresolved situations:
+	now battleground is earea of location of Player;
+	repeat with z running through situations:
 		if printed name of z matches the text topic understood, case insensitively:
 			say "DEBUG -> Situation found: [printed name of z] by matching with [topic understood].[line break]";
 			if z is not close:
-				say "DEBUG -> Found: [Found]; In another area to current position![line break]";
+				say "DEBUG -> In another area to current position![line break]";
 			if z is resolved:
 				say "DEBUG -> Event already resolved.[line break]";
 			if z is inactive:
 				say "DEBUG -> Event banned / inactive.[line break]";
 			if level of Player < level of z:
-				say "DEBUG -> Found: [Found]; Player's level is too low![line break]";
+				say "DEBUG -> Player's level is too low![line break]";
 			if z is not PrereqComplete:
 				say "DEBUG -> Prerequisites not fulfilled.[line break]";
 				PrereqAnalyze z;
@@ -167,7 +168,7 @@ to decide if debug is at level ( n - number ): [or higher]
 	decide yes;
 
 an everyturn rule:
-	if Debuglevel > 8:
+	if debugactive is 1 and debuglevel > 8:
 		say "DEBUG: inasituation state: [inasituation]";
 
 
@@ -309,7 +310,7 @@ carry out ShowEncounteredEnemies:
 to EncounteredEnemiesList:
 	sort EncounteredEnemies of Player;
 	say "Thinking back to your misadventures in the city so far, you call into memory all the creatures you have encountered and fought:[line break]";
-	say "[EncounteredEnemies of Player]";
+	say "[EncounteredEnemies of Player][line break]";
 
 [TODO: write Infection overview for single infection]
 
@@ -526,166 +527,46 @@ to PrereqAnalyze (X - situation):
 		else:
 			say "[Resolution of Prereq3 of X] is listed in [Prereq3Resolution of X][line break]";
 
-TagListReadout is an action applying to one topic.
-
+TagListReadout is an action applying to nothing.
 understand "zTagListReadout" as TagListReadout.
 
 check TagListReadout:
-	if debugactive is 0:
-		say "You aren't currently debugging.";
-		stop the action;
+	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out TagListReadout:
-	say "All current lists:";
+	let L be a list of things;
+	repeat with x running through markers:
+		sort Infections of x;
+		add x to L;
+	say "[bold type]Markers:[roman type][line break]";
+	sort L in printed name order;
+	repeat with x running through L:
+		say "     [printed name of x]: [if Infections of x is empty]Nothing[else][Infections of x][end if].";
+		LineBreak;
+	truncate L to 0 entries;
+	repeat with x running through flags:
+		sort Infections of x;
+		sort BadSpots of x;
+		add x to L;
 	LineBreak;
-	sort Infections of AmphibianList;
-	sort Infections of AquaticList;
-	sort Infections of ArachnidList;
-	sort Infections of AvianList;
-	sort Infections of AvianpredList;
-	sort Infections of BovineList;
-	sort Infections of CanineList;
-	sort Infections of CervineList;
-	sort Infections of CetaceanList;
-	sort Infections of EquineList;
-	sort Infections of FelineList;
-	sort Infections of FoodList;
-	sort Infections of HumanList;
-	sort Infections of HybridList;
-	sort Infections of InsectList;
-	sort Infections of LatexList;
-	sort Infections of LeporineList;
-	sort Infections of MachineList;
-	sort Infections of MarsupialList;
-	sort Infections of MustelidList;
-	sort Infections of NonOrganicList;
-	sort Infections of OrcList;
-	sort Infections of PiscineList;
-	sort Infections of PlantList;
-	sort Infections of PorcineList;
-	sort Infections of PrimateList;
-	sort Infections of ReptileList;
-	sort Infections of RodentList;
-	sort Infections of SlimeList;
-	sort Infections of ToyList;
-	sort Infections of UrsineList;
-	sort Infections of VulpineList;
-	sort Infections of HistoricalList;
-	sort Infections of MagicalList;
-	sort Infections of MythologicalList;
-	sort Infections of NatureList;
-	sort Infections of OtherworldlyList;
-	sort Infections of ScienceList;
-	sort Infections of BarbedCockList;
-	sort Infections of BluntCockList;
-	sort Infections of InternalCockList;
-	sort Infections of KnottedCockList;
-	sort Infections of OviPositorList;
-	sort Infections of PrehensileCockList;
-	sort Infections of SheathedCockList;
-	sort Infections of TaperedCockList;
-	sort Infections of TentacleCockList;
-	sort Infections of TailList;
-	sort Infections of BipedalList;
-	sort Infections of QuadrupedalList;
-	sort Infections of HexapedalList;
-	sort Infections of OctapedalList;
-	sort Infections of TaurList;
-	sort Infections of SerpentineList;
-	sort Infections of SlidingList;
-	sort Infections of FlightList;
-	sort Infections of SwimList;
-	sort Infections of AlwaysLacList;
-	sort Infections of HeatList;
-	sort Infections of AlwaysHeatList;
-	sort Infections of RutList;
-	sort Infections of AlwaysRutList;
-	sort Infections of GillList;
-	sort Infections of NotBreathingList;
-	sort Infections of BirthList;
-	sort Infections of EgglayList;
-	sort Infections of MpregList;
-	sort Infections of OviImpregnatorList;
-	sort Infections of SterileList;
-	sort Infections of FeralmindList;
-	sort Infections of HivemindList;
-	sort Infections of PackmindList;
-	sort Infections of FirebreathList;
-	sort Infections of TailweaponList;
-	say "AmphibianList: [Infections of AmphibianList][line break][line break]";
-	say "AquaticList: [Infections of AquaticList][line break][line break]";
-	say "ArachnidList: [Infections of ArachnidList][line break][line break]";
-	say "AvianList: [Infections of AvianList][line break][line break]";
-	say "AvianpredList: [Infections of AvianpredList][line break][line break]";
-	say "BovineList: [Infections of BovineList][line break][line break]";
-	say "CanineList: [Infections of CanineList][line break][line break]";
-	say "CervineList: [Infections of CervineList][line break][line break]";
-	say "CetaceanList: [Infections of CetaceanList][line break][line break]";
-	say "EquineList: [Infections of EquineList][line break][line break]";
-	say "FelineList: [Infections of FelineList][line break][line break]";
-	say "FoodList: [Infections of FoodList][line break][line break]";
-	say "HumanList: [Infections of HumanList][line break][line break]";
-	say "HybridList: [Infections of HybridList][line break][line break]";
-	say "InsectList: [Infections of InsectList][line break][line break]";
-	say "LatexList: [Infections of LatexList][line break][line break]";
-	say "LeporineList: [Infections of LeporineList][line break][line break]";
-	say "MachineList: [Infections of MachineList][line break][line break]";
-	say "MarsupialList: [Infections of MarsupialList][line break][line break]";
-	say "MustelidList: [Infections of MustelidList][line break][line break]";
-	say "NonOrganicList: [Infections of NonOrganicList][line break][line break]";
-	say "OrcList: [Infections of OrcList][line break][line break]";
-	say "PiscineList: [Infections of PiscineList][line break][line break]";
-	say "PlantList: [Infections of PlantList][line break][line break]";
-	say "PorcineList: [Infections of PorcineList][line break][line break]";
-	say "PrimateList: [Infections of PrimateList][line break][line break]";
-	say "ReptileList: [Infections of ReptileList][line break][line break]";
-	say "RodentList: [Infections of RodentList][line break][line break]";
-	say "SlimeList: [Infections of SlimeList][line break][line break]";
-	say "ToyList: [Infections of ToyList][line break][line break]";
-	say "UrsineList: [Infections of UrsineList][line break][line break]";
-	say "VulpineList: [Infections of VulpineList][line break][line break]";
-	say "HistoricalList: [Infections of HistoricalList][line break][line break]";
-	say "MagicalList: [Infections of MagicalList][line break][line break]";
-	say "MythologicalList: [Infections of MythologicalList][line break][line break]";
-	say "NatureList: [Infections of NatureList][line break][line break]";
-	say "OtherworldlyList: [Infections of OtherworldlyList][line break][line break]";
-	say "ScienceList: [Infections of ScienceList][line break][line break]";
-	say "BarbedCockList: [Infections of BarbedCockList][line break][line break]";
-	say "BluntCockList: [Infections of BluntCockList][line break][line break]";
-	say "InternalCockList: [Infections of InternalCockList][line break][line break]";
-	say "KnottedCockList: [Infections of KnottedCockList][line break][line break]";
-	say "OviPositorList: [Infections of OviPositorList][line break][line break]";
-	say "PrehensileCockList: [Infections of PrehensileCockList][line break][line break]";
-	say "SheathedCockList: [Infections of SheathedCockList][line break][line break]";
-	say "TaperedCockList: [Infections of TaperedCockList][line break][line break]";
-	say "TentacleCockList: [Infections of TentacleCockList][line break][line break]";
-	say "TailList: [Infections of TailList][line break][line break]";
-	say "BipedalList: [Infections of BipedalList][line break][line break]";
-	say "QuadrupedalList: [Infections of QuadrupedalList][line break][line break]";
-	say "HexapedalList: [Infections of HexapedalList][line break][line break]";
-	say "OctapedalList: [Infections of OctapedalList][line break][line break]";
-	say "TaurList: [Infections of TaurList][line break][line break]";
-	say "SerpentineList: [Infections of SerpentineList][line break][line break]";
-	say "SlidingList: [Infections of SlidingList][line break][line break]";
-	say "FlightList: [Infections of FlightList][line break][line break]";
-	say "SwimList: [Infections of SwimList][line break][line break]";
-	say "AlwaysLacList: [Infections of AlwaysLacList][line break][line break]";
-	say "HeatList: [Infections of HeatList][line break][line break]";
-	say "AlwaysHeatList: [Infections of AlwaysHeatList][line break][line break]";
-	say "RutList: [Infections of RutList][line break][line break]";
-	say "AlwaysRutList: [Infections of AlwaysRutList][line break][line break]";
-	say "GillList: [Infections of GillList][line break][line break]";
-	say "NotBreathingList: [Infections of NotBreathingList][line break][line break]";
-	say "BirthList: [Infections of BirthList][line break][line break]";
-	say "EgglayList: [Infections of EgglayList][line break][line break]";
-	say "MpregList: [Infections of MpregList][line break][line break]";
-	say "OviImpregnatorList: [Infections of OviImpregnatorList][line break][line break]";
-	say "SterileList: [Infections of SterileList][line break][line break]";
-	say "FeralmindList: [Infections of FeralmindList][line break][line break]";
-	say "HivemindList: [Infections of HivemindList][line break][line break]";
-	say "PackmindList: [Infections of PackmindList][line break][line break]";
-	say "FirebreathList: [Infections of FirebreathList][line break][line break]";
-	say "TailweaponList: [Infections of TailweaponList][line break][line break]";
+	say "[bold type]Flags:[roman type][line break]";
+	sort L in printed name order;
+	repeat with x running through L:
+		say "     [printed name of x] (infections): [if Infections of x is empty]Nothing[else][Infections of x][end if].";
+		say "     [printed name of x] (situations): [if BadSpots of x is empty]Nothing[else][BadSpots of x][end if].";
+		LineBreak;
+	truncate L to 0 entries;
+	repeat with x running through tags:
+		sort Infections of x;
+		sort BadSpots of x;
+		add x to L;
+	LineBreak;
+	say "[bold type]Tags:[roman type][line break]";
+	sort L in printed name order;
+	repeat with x running through L:
+		say "     [printed name of x] (infections): [if Infections of x is empty]Nothing[else][Infections of x][end if].";
+		say "     [printed name of x] (situations): [if BadSpots of x is empty]Nothing[else][BadSpots of x][end if].";
+		LineBreak;
 
 EndingTableReadout is an action applying to nothing.
 
@@ -1011,6 +892,154 @@ carry out PlayerSizeChange:
 		say "     Set player size to huge.";
 		now scalevalue of Player is 5;
 
+[Sets the size of one of cock, cunt, balls, or breasts. Useful for testing some scenes.]
+SetPlayerGenitals is an action applying to one number.
+understand "zSetGenitals [number]" as SetPlayerGenitals;
+
+check SetPlayerGenitals:
+	if debugactive is 0, say "You aren't currently debugging." instead;
+	if number understood < 0, say "Invalid input ([number understood])." instead;
+
+carry out SetPlayerGenitals:
+	now tempnum is number understood;
+	LineBreak;
+	say "     [bold type]Change Genitals[roman type][line break]";
+	say "     (1) [link]Change cock[as]1[end link] (length or count) using [bold type][tempnum][roman type].";
+	say "     (2) [link]Change cunt[as]2[end link] (depth, diameter, or count) using [bold type][tempnum][roman type].";
+	say "     (3) [link]Change balls[as]3[end link] (size only) using [bold type][tempnum][roman type].";
+	say "     (4) [link]Change breasts[as]4[end link] (size or count) using [bold type][tempnum][roman type].";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+			break;
+		else:
+			say "Invalid choice.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     [bold type]Changing Cock[roman type][line break]";
+		say "     (1) [link]Change length[as]1[end link] from [Cock Length of Player] to [tempnum].";
+		say "     (2) [link]Change count[as]2[end link] from [Cock Count of Player] to [tempnum].";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 2:
+			say "Choice? (1-2)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2:
+				break;
+			else:
+				say "Invalid choice.";
+		if calcnumber is 1:
+			if tempnum is 0:
+				if Cock Count of Player > 0:
+					say "Cock[smn] removed!";
+					now Cock Count of Player is 0;
+					now Ball Size of Player is 0;
+			else if Cock Count of Player is 0:
+				say "Cock added!";
+				now Cock Count of Player is 1;
+				now Ball Size of Player is 2;
+			say "Cock length set to [tempnum].";
+			now Cock Length of Player is tempnum;
+		else if calcnumber is 2:
+			if tempnum is 0:
+				say "Cock[smn] removed!";
+				now Cock Length of Player is 0;
+				now Ball Size of Player is 0;
+			else if Cock Count of Player is 0:
+				say "Cock[if tempnum > 1]s[end if] added!";
+				now Cock Length of Player is 5;
+				now Ball Size of Player is 2;
+			say "Cock count set to [tempnum].";
+			now Cock Count of Player is tempnum;
+	else if calcnumber is 2:
+		LineBreak;
+		say "     [bold type]Changing Cunt[roman type][line break]";
+		say "     (1) [link]Change depth[as]1[end link] from [Cunt Depth of Player] to [tempnum].";
+		say "     (2) [link]Change diameter[as]2[end link] from [Cunt Tightness of Player] to [tempnum].";
+		say "     (3) [link]Change count[as]3[end link] from [Cunt Count of Player] to [tempnum].";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice.";
+		if calcnumber is 1:
+			if tempnum is 0:
+				if Cunt Count of Player > 0:
+					say "Cunt[sfn] removed!";
+					now Cunt Count of Player is 0;
+					now Cunt Tightness of Player is 0;
+			else if Cunt Count of Player is 0:
+				say "Cunt added!";
+				now Cunt Count of Player is 1;
+				now Cunt Tightness of Player is 4;
+			say "Cunt depth set to [tempnum].";
+			now Cunt Depth of Player is tempnum;
+		else if calcnumber is 2:
+			if tempnum is 0:
+				if Cunt Count of Player > 0:
+					say "Cunt[sfn] removed!";
+					now Cunt Count of Player is 0;
+					now Cunt Depth of Player is 0;
+			else if Cunt Count of Player is 0:
+				say "Cunt added!";
+				now Cunt Count of Player is 1;
+				now Cunt Depth of Player is 5;
+			say "Cunt diameter set to [tempnum].";
+			now Cunt Tightness of Player is tempnum;
+		else if calcnumber is 3:
+			if tempnum is 0:
+				say "Cunt[sfn] removed!";
+				now Cunt Depth of Player is 0;
+				now Cunt Tightness of Player is 0;
+			else if Cunt Count of Player is 0:
+				say "Cunt[if tempnum > 1]s[end if] added!";
+				now Cunt Depth of Player is 5;
+				now Cunt Tightness of Player is 4;
+			say "Cunt count set to [tempnum].";
+			now Cunt Count of Player is tempnum;
+	else if calcnumber is 3:
+		if tempnum > 7:
+			say "Maximum ball size is 7.";
+			stop the action;
+		if tempnum is 0:
+			say "Cock[smn] removed!";
+			now Cock Count of Player is 0;
+			now Cock Length of Player is 0;
+		else if Cock Count of Player is 0:
+			say "Cock added!";
+			now Cock Count of Player is 1;
+			now Cock Length of Player is 5;
+		say "Ball size set to [tempnum].";
+		now Ball Size of Player is tempnum;
+	else if calcnumber is 4:
+		LineBreak;
+		say "     [bold type]Changing Breasts[roman type][line break]";
+		say "     (1) [link]Change size[as]1[end link] from [Breast Size of Player] to [tempnum].";
+		say "     (2) [link]Change count[as]2[end link] from [Nipple Count of Player] to [tempnum].";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 2:
+			say "Choice? (1-2)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2:
+				break;
+			else:
+				say "Invalid choice.";
+		if calcnumber is 1:
+			if tempnum > 26:
+				say "Maximum breast size is 26.";
+				stop the action;
+			say "Breast size set to [tempnum].";
+			now Breast Size of Player is tempnum;
+		else if calcnumber is 2:
+			if tempnum > 8:
+				say "Maximum nipple count is 8.";
+				stop the action;
+			say "Nipple count set to [tempnum].";
+			now Nipple Count of Player is tempnum;
 
 [Impregnates the player with specified creature.]
 impregwith is an action applying to one topic.
@@ -1043,7 +1072,7 @@ check DebugInfect:
 
 carry out DebugInfect:
 	say "Infecting with [topic understood]:[line break]";
-	infect "[topic understood]";
+	infect topic understood;
 
 Section 2 - Feats
 
@@ -1184,7 +1213,9 @@ check vialcheat:
 	if debugactive is 0, say "You aren't currently debugging!" instead;
 
 carry out vialcheat:
-	VialGain topic understood by 10;
+	let vial be topic understood;
+	let vialname be vial in title case;
+	VialGain vialname by 10;
 
 allitemcheat is an action applying to nothing.
 understand "zAllItems" as allitemcheat.
@@ -1195,7 +1226,8 @@ check allitemcheat:
 carry out allitemcheat:
 	say "     You gain one of everything!";
 	repeat with x running through grab objects:
-		ItemGain x by 1 silently;
+		if x is not cum and x is not milky:
+			ItemGain x by 1 silently;
 
 ListAllItems is an action applying to nothing.
 understand "zListAllItems" as ListAllItems.
@@ -1206,7 +1238,8 @@ check ListAllItems:
 carry out ListAllItems:
 	repeat with x running from 1 to number of filled rows in table of game objects:
 		choose row x from the table of game objects;
-		say "[Name entry]: [desc entry][line break]";
+		if object entry is not cum and object entry is not milky:
+			say "[Name entry]: [desc entry][line break]";
 
 RoomEmptying is an action applying to nothing.
 understand "zNukeRoomInvents" as RoomEmptying.

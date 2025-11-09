@@ -54,11 +54,23 @@ to VariableSave:
 	blank out the whole of Table of GameIndexedTexts; [empty out all old data]
 	blank out the whole of Table of GameTextLists; [empty out all old data]
 	blank out the whole of Table of GameNumberLists; [empty out all old data]
+	[use the tables to store object states for things not controlled by variables]
+	if dispensed of Cola Vending Machine > 0: [storing mall vending machine uses]
+		choose blank row in Table of GameNumbers;
+		now NumberVarName entry is "ColaVendingMachine_dispensed";
+		now NumberVarValue entry is dispensed of Cola Vending Machine;
+	if Cola Vending Machine is not in Mall Foodcourt: [storing mall vending machine state]
+		choose blank row in Table of GameTruths;
+		now TruthVarName entry is "ColaVendingMachine_dead";
+		now TruthVarValue entry is true;
+	if library computer is on: [storing library PC activation]
+		choose blank row in Table of GameTruths;
+		now TruthVarName entry is "LibraryComputer_on";
+		now TruthVarValue entry is true;
+	[continue with storing supported variables]
 	repeat with x running from 1 to the number of filled rows in the Table of GameVariableIDs:
 		choose row x in the Table of GameVariableIDs;
 		now CurrentVariableName is Name entry;
-		if debug is at level 10:
-			say "Stashing variable [CurrentVariableName].";
 		[if debug is at level 10:
 			say "Stashing variable [CurrentVariableName].";]
 		if Type Entry is "text":
@@ -3670,239 +3682,239 @@ to VariableTextLoad:
 			]
 			if TextVarName entry is:
 				-- "PronounChoice":
-					now PronounChoice of Player is TextVarValue entry;
+					if PronounChoice of Player is not TextVarValue entry, now PronounChoice of Player is TextVarValue entry;
 				-- "PetMuttBreed":
-					now PetMuttBreed is TextVarValue entry;
+					if PetMuttBreed is not TextVarValue entry, now PetMuttBreed is TextVarValue entry;
 				-- "PetMuttName":
-					now PetMuttName is TextVarValue entry;
+					if PetMuttName is not TextVarValue entry, now PetMuttName is TextVarValue entry;
 				-- "PetMuttColor":
-					now PetMuttColor is TextVarValue entry;
+					if PetMuttColor is not TextVarValue entry, now PetMuttColor is TextVarValue entry;
 				-- "PetMuttDetailedlook":
-					now PetMuttDetailedlook is TextVarValue entry;
+					if PetMuttDetailedlook is not TextVarValue entry, now PetMuttDetailedlook is TextVarValue entry;
 				-- "battleground":
-					now battleground is TextVarValue entry;
+					if battleground is not TextVarValue entry, now battleground is TextVarValue entry;
 				-- "bcfinalchairform":
-					now bcfinalchairform is TextVarValue entry;
+					if bcfinalchairform is not TextVarValue entry, now bcfinalchairform is TextVarValue entry;
 				-- "bcfinalpillarform":
-					now bcfinalpillarform is TextVarValue entry;
+					if bcfinalpillarform is not TextVarValue entry, now bcfinalpillarform is TextVarValue entry;
 				-- "BlancheNonBinaryMomDad":
-					now BlancheNonBinaryMomDad is TextVarValue entry;
+					if BlancheNonBinaryMomDad is not TextVarValue entry, now BlancheNonBinaryMomDad is TextVarValue entry;
 				-- "BlancheNonBinaryMommyDaddy":
-					now BlancheNonBinaryMommyDaddy is TextVarValue entry;
+					if BlancheNonBinaryMommyDaddy is not TextVarValue entry, now BlancheNonBinaryMommyDaddy is TextVarValue entry;
 				-- "BlueDesignator":
-					now BlueDesignator is TextVarValue entry;
+					if BlueDesignator is not TextVarValue entry, now BlueDesignator is TextVarValue entry;
 				-- "bodyselector":
-					now bodyselector is TextVarValue entry;
+					if bodyselector is not TextVarValue entry, now bodyselector is TextVarValue entry;
 				-- "BodyShopGuaranteedBody":
-					now BodyShopGuaranteedBody is TextVarValue entry;
+					if BodyShopGuaranteedBody is not TextVarValue entry, now BodyShopGuaranteedBody is TextVarValue entry;
 				-- "BodyShopGuaranteedCrotch":
-					now BodyShopGuaranteedCrotch is TextVarValue entry;
+					if BodyShopGuaranteedCrotch is not TextVarValue entry, now BodyShopGuaranteedCrotch is TextVarValue entry;
 				-- "BodyShopGuaranteedFace":
-					now BodyShopGuaranteedFace is TextVarValue entry;
+					if BodyShopGuaranteedFace is not TextVarValue entry, now BodyShopGuaranteedFace is TextVarValue entry;
 				-- "BodyShopGuaranteedSkin":
-					now BodyShopGuaranteedSkin is TextVarValue entry;
+					if BodyShopGuaranteedSkin is not TextVarValue entry, now BodyShopGuaranteedSkin is TextVarValue entry;
 				-- "BodyShopGuaranteedTail":
-					now BodyShopGuaranteedTail is TextVarValue entry;
+					if BodyShopGuaranteedTail is not TextVarValue entry, now BodyShopGuaranteedTail is TextVarValue entry;
 				-- "ButterflyAttire":
-					now ButterflyAttire is TextVarValue entry;
+					if ButterflyAttire is not TextVarValue entry, now ButterflyAttire is TextVarValue entry;
 				-- "ButterflyBreastDesc":
-					now ButterflyBreastDesc is TextVarValue entry;
+					if ButterflyBreastDesc is not TextVarValue entry, now ButterflyBreastDesc is TextVarValue entry;
 				-- "ButterflyTummy":
-					now ButterflyTummy is TextVarValue entry;
+					if ButterflyTummy is not TextVarValue entry, now ButterflyTummy is TextVarValue entry;
 				-- "CorbinImpregnatingCock":
-					now CorbinImpregnatingCock is TextVarValue entry;
+					if CorbinImpregnatingCock is not TextVarValue entry, now CorbinImpregnatingCock is TextVarValue entry;
 				-- "descr":
-					now descr is TextVarValue entry;
+					if descr is not TextVarValue entry, now descr is TextVarValue entry;
 				-- "DoranPlayerRegard":
-					now DoranPlayerRegard is TextVarValue entry;
+					if DoranPlayerRegard is not TextVarValue entry, now DoranPlayerRegard is TextVarValue entry;
 				-- "ElijahChar-A":
-					now ElijahChar-A is TextVarValue entry;
+					if ElijahChar-A is not TextVarValue entry, now ElijahChar-A is TextVarValue entry;
 				-- "ElijahChar-B":
-					now ElijahChar-B is TextVarValue entry;
+					if ElijahChar-B is not TextVarValue entry, now ElijahChar-B is TextVarValue entry;
 				-- "ElijahChar-C":
-					now ElijahChar-C is TextVarValue entry;
+					if ElijahChar-C is not TextVarValue entry, now ElijahChar-C is TextVarValue entry;
 				-- "ElijahChar-D":
-					now ElijahChar-D is TextVarValue entry;
+					if ElijahChar-D is not TextVarValue entry, now ElijahChar-D is TextVarValue entry;
 				-- "ElijahChar-E":
-					now ElijahChar-E is TextVarValue entry;
+					if ElijahChar-E is not TextVarValue entry, now ElijahChar-E is TextVarValue entry;
 				-- "ElijahChar-F":
-					now ElijahChar-F is TextVarValue entry;
+					if ElijahChar-F is not TextVarValue entry, now ElijahChar-F is TextVarValue entry;
 				-- "ElijahChar-G":
-					now ElijahChar-G is TextVarValue entry;
+					if ElijahChar-G is not TextVarValue entry, now ElijahChar-G is TextVarValue entry;
 				-- "ElijahChar-H":
-					now ElijahChar-H is TextVarValue entry;
+					if ElijahChar-H is not TextVarValue entry, now ElijahChar-H is TextVarValue entry;
 				-- "ElijahChar-I":
-					now ElijahChar-I is TextVarValue entry;
+					if ElijahChar-I is not TextVarValue entry, now ElijahChar-I is TextVarValue entry;
 				-- "ElijahChar-J":
-					now ElijahChar-J is TextVarValue entry;
+					if ElijahChar-J is not TextVarValue entry, now ElijahChar-J is TextVarValue entry;
 				-- "ElijahChar-K":
-					now ElijahChar-K is TextVarValue entry;
+					if ElijahChar-K is not TextVarValue entry, now ElijahChar-K is TextVarValue entry;
 				-- "ElijahChar-L":
-					now ElijahChar-L is TextVarValue entry;
+					if ElijahChar-L is not TextVarValue entry, now ElijahChar-L is TextVarValue entry;
 				-- "ElijahChar-M":
-					now ElijahChar-M is TextVarValue entry;
+					if ElijahChar-M is not TextVarValue entry, now ElijahChar-M is TextVarValue entry;
 				-- "EricCurrentBabyDaddy":
-					now EricCurrentBabyDaddy is TextVarValue entry;
+					if EricCurrentBabyDaddy is not TextVarValue entry, now EricCurrentBabyDaddy is TextVarValue entry;
 				-- "FeralMuttCurrentBreed":
-					now FeralMuttCurrentBreed is TextVarValue entry;
+					if FeralMuttCurrentBreed is not TextVarValue entry, now FeralMuttCurrentBreed is TextVarValue entry;
 				-- "FeralMuttDetailedLook":
-					now FeralMuttDetailedLook is TextVarValue entry;
+					if FeralMuttDetailedLook is not TextVarValue entry, now FeralMuttDetailedLook is TextVarValue entry;
 				-- "FeralMuttFurColor":
-					now FeralMuttFurColor is TextVarValue entry;
+					if FeralMuttFurColor is not TextVarValue entry, now FeralMuttFurColor is TextVarValue entry;
 				-- "freefeatfun":
-					now freefeatfun is TextVarValue entry;
+					if freefeatfun is not TextVarValue entry, now freefeatfun is TextVarValue entry;
 				-- "freefeatgeneral":
-					now freefeatgeneral is TextVarValue entry;
+					if freefeatgeneral is not TextVarValue entry, now freefeatgeneral is TextVarValue entry;
 				-- "furdata":
-					now furdata is TextVarValue entry;
+					if furdata is not TextVarValue entry, now furdata is TextVarValue entry;
 				-- "gche":
-					now gche is TextVarValue entry;
+					if gche is not TextVarValue entry, now gche is TextVarValue entry;
 				-- "gchim":
-					now gchim is TextVarValue entry;
+					if gchim is not TextVarValue entry, now gchim is TextVarValue entry;
 				-- "gchis":
-					now gchis is TextVarValue entry;
+					if gchis is not TextVarValue entry, now gchis is TextVarValue entry;
 				-- "gchishers":
-					now gchishers is TextVarValue entry;
+					if gchishers is not TextVarValue entry, now gchishers is TextVarValue entry;
 				-- "gdragon":
-					now gdragon is TextVarValue entry;
+					if gdragon is not TextVarValue entry, now gdragon is TextVarValue entry;
 				-- "ghe":
-					now ghe is TextVarValue entry;
+					if ghe is not TextVarValue entry, now ghe is TextVarValue entry;
 				-- "ghim":
-					now ghim is TextVarValue entry;
+					if ghim is not TextVarValue entry, now ghim is TextVarValue entry;
 				-- "ghis":
-					now ghis is TextVarValue entry;
+					if ghis is not TextVarValue entry, now ghis is TextVarValue entry;
 				-- "ghishers":
-					now ghishers is TextVarValue entry;
+					if ghishers is not TextVarValue entry, now ghishers is TextVarValue entry;
 				-- "gmasculine":
-					now gmasculine is TextVarValue entry;
+					if gmasculine is not TextVarValue entry, now gmasculine is TextVarValue entry;
 				-- "hdformname":
-					now hdformname is TextVarValue entry;
+					if hdformname is not TextVarValue entry, now hdformname is TextVarValue entry;
 				-- "headadjdata":
-					now headadjdata is TextVarValue entry;
+					if headadjdata is not TextVarValue entry, now headadjdata is TextVarValue entry;
 				-- "HighestPlayerStat":
-					now HighestPlayerStat is TextVarValue entry;
+					if HighestPlayerStat is not TextVarValue entry, now HighestPlayerStat is TextVarValue entry;
 				-- "Hope-BornDragonName":
-					now Hope-BornDragonName is TextVarValue entry;
+					if Hope-BornDragonName is not TextVarValue entry, now Hope-BornDragonName is TextVarValue entry;
 				-- "horndata":
-					now horndata is TextVarValue entry;
+					if horndata is not TextVarValue entry, now horndata is TextVarValue entry;
 				-- "JenniferFirstKidSpecialStat":
-					now JenniferFirstKidSpecialStat is TextVarValue entry;
+					if JenniferFirstKidSpecialStat is not TextVarValue entry, now JenniferFirstKidSpecialStat is TextVarValue entry;
 				-- "keychar":
-					now keychar is TextVarValue entry;
+					if keychar is not TextVarValue entry, now keychar is TextVarValue entry;
 				-- "LarissaBody":
-					now LarissaBody is TextVarValue entry;
+					if LarissaBody is not TextVarValue entry, now LarissaBody is TextVarValue entry;
 				-- "LarissaBodyDesc":
-					now LarissaBodyDesc is TextVarValue entry;
+					if LarissaBodyDesc is not TextVarValue entry, now LarissaBodyDesc is TextVarValue entry;
 				-- "LarissaBodyType":
-					now LarissaBodyType is TextVarValue entry;
+					if LarissaBodyType is not TextVarValue entry, now LarissaBodyType is TextVarValue entry;
 				-- "LarissaCock":
-					now LarissaCock is TextVarValue entry;
+					if LarissaCock is not TextVarValue entry, now LarissaCock is TextVarValue entry;
 				-- "LarissaFace":
-					now LarissaFace is TextVarValue entry;
+					if LarissaFace is not TextVarValue entry, now LarissaFace is TextVarValue entry;
 				-- "LarissaFootForm":
-					now LarissaFootForm is TextVarValue entry;
+					if LarissaFootForm is not TextVarValue entry, now LarissaFootForm is TextVarValue entry;
 				-- "LarissaForm":
-					now LarissaForm is TextVarValue entry;
+					if LarissaForm is not TextVarValue entry, now LarissaForm is TextVarValue entry;
 				-- "LarissaGeneralLook":
-					now LarissaGeneralLook is TextVarValue entry;
+					if LarissaGeneralLook is not TextVarValue entry, now LarissaGeneralLook is TextVarValue entry;
 				-- "LarissaHandForm":
-					now LarissaHandForm is TextVarValue entry;
+					if LarissaHandForm is not TextVarValue entry, now LarissaHandForm is TextVarValue entry;
 				-- "LarissaInfName":
-					now LarissaInfName is TextVarValue entry;
+					if LarissaInfName is not TextVarValue entry, now LarissaInfName is TextVarValue entry;
 				-- "LarissaMouth":
-					now LarissaMouth is TextVarValue entry;
+					if LarissaMouth is not TextVarValue entry, now LarissaMouth is TextVarValue entry;
 				-- "LarissaSkin":
-					now LarissaSkin is TextVarValue entry;
+					if LarissaSkin is not TextVarValue entry, now LarissaSkin is TextVarValue entry;
 				-- "LarissaTail":
-					now LarissaTail is TextVarValue entry;
+					if LarissaTail is not TextVarValue entry, now LarissaTail is TextVarValue entry;
 				-- "LarissaTFText":
-					now LarissaTFText is TextVarValue entry;
+					if LarissaTFText is not TextVarValue entry, now LarissaTFText is TextVarValue entry;
 				-- "Lusting":
-					now Lusting is TextVarValue entry;
+					if Lusting is not TextVarValue entry, now Lusting is TextVarValue entry;
 				-- "musicmessage":
-					now musicmessage is TextVarValue entry;
+					if musicmessage is not TextVarValue entry, now musicmessage is TextVarValue entry;
 				-- "NadiaChar-A":
-					now NadiaChar-A is TextVarValue entry;
+					if NadiaChar-A is not TextVarValue entry, now NadiaChar-A is TextVarValue entry;
 				-- "NadiaChar-B":
-					now NadiaChar-B is TextVarValue entry;
+					if NadiaChar-B is not TextVarValue entry, now NadiaChar-B is TextVarValue entry;
 				-- "NadiaChar-C":
-					now NadiaChar-C is TextVarValue entry;
+					if NadiaChar-C is not TextVarValue entry, now NadiaChar-C is TextVarValue entry;
 				-- "NadiaChar-D":
-					now NadiaChar-D is TextVarValue entry;
+					if NadiaChar-D is not TextVarValue entry, now NadiaChar-D is TextVarValue entry;
 				-- "NadiaChar-E":
-					now NadiaChar-E is TextVarValue entry;
+					if NadiaChar-E is not TextVarValue entry, now NadiaChar-E is TextVarValue entry;
 				-- "NadiaChar-F":
-					now NadiaChar-F is TextVarValue entry;
+					if NadiaChar-F is not TextVarValue entry, now NadiaChar-F is TextVarValue entry;
 				-- "NadiaChar-G":
-					now NadiaChar-G is TextVarValue entry;
+					if NadiaChar-G is not TextVarValue entry, now NadiaChar-G is TextVarValue entry;
 				-- "NadiaChar-H":
-					now NadiaChar-H is TextVarValue entry;
+					if NadiaChar-H is not TextVarValue entry, now NadiaChar-H is TextVarValue entry;
 				-- "NadiaChar-I":
-					now NadiaChar-I is TextVarValue entry;
+					if NadiaChar-I is not TextVarValue entry, now NadiaChar-I is TextVarValue entry;
 				-- "NadiaChar-J":
-					now NadiaChar-J is TextVarValue entry;
+					if NadiaChar-J is not TextVarValue entry, now NadiaChar-J is TextVarValue entry;
 				-- "NadiaChar-K":
-					now NadiaChar-K is TextVarValue entry;
+					if NadiaChar-K is not TextVarValue entry, now NadiaChar-K is TextVarValue entry;
 				-- "NadiaChar-L":
-					now NadiaChar-L is TextVarValue entry;
+					if NadiaChar-L is not TextVarValue entry, now NadiaChar-L is TextVarValue entry;
 				-- "NadiaChar-M":
-					now NadiaChar-M is TextVarValue entry;
+					if NadiaChar-M is not TextVarValue entry, now NadiaChar-M is TextVarValue entry;
 				-- "pfpbootymark":
-					now pfpbootymark is TextVarValue entry;
+					if pfpbootymark is not TextVarValue entry, now pfpbootymark is TextVarValue entry;
 				-- "pfpcock":
-					now pfpcock is TextVarValue entry;
+					if pfpcock is not TextVarValue entry, now pfpcock is TextVarValue entry;
 				-- "pfphair":
-					now pfphair is TextVarValue entry;
+					if pfphair is not TextVarValue entry, now pfphair is TextVarValue entry;
 				-- "pfpskin":
-					now pfpskin is TextVarValue entry;
+					if pfpskin is not TextVarValue entry, now pfpskin is TextVarValue entry;
 				-- "ppcolor":
-					now ppcolor is TextVarValue entry;
+					if ppcolor is not TextVarValue entry, now ppcolor is TextVarValue entry;
 				-- "PlayerClass":
-					now PlayerClass is TextVarValue entry;
+					if PlayerClass is not TextVarValue entry, now PlayerClass is TextVarValue entry;
 				-- "PlayerName":
-					now Name of Player is TextVarValue entry;
+					if Name of Player is not TextVarValue entry, now Name of Player is TextVarValue entry;
 				-- "sangr":
-					now sangr is TextVarValue entry;
+					if sangr is not TextVarValue entry, now sangr is TextVarValue entry;
 				-- "Scenario":
-					now Scenario is TextVarValue entry;
+					if Scenario is not TextVarValue entry, now Scenario is TextVarValue entry;
 				-- "sh-descr":
-					now sh-descr is TextVarValue entry;
+					if sh-descr is not TextVarValue entry, now sh-descr is TextVarValue entry;
 				-- "siamesegender":
-					now siamesegender is TextVarValue entry;
+					if siamesegender is not TextVarValue entry, now siamesegender is TextVarValue entry;
 				-- "slutname":
-					now slutname is TextVarValue entry;
+					if slutname is not TextVarValue entry, now slutname is TextVarValue entry;
 				-- "StellaNPCInt":
-					now StellaNPCInt is TextVarValue entry;
+					if StellaNPCInt is not TextVarValue entry, now StellaNPCInt is TextVarValue entry;
 				-- "ubpreg":
-					now ubpreg is TextVarValue entry;
+					if ubpreg is not TextVarValue entry, now ubpreg is TextVarValue entry;
 				-- "VikingKidShape":
-					now VikingKidShape is TextVarValue entry;
+					if VikingKidShape is not TextVarValue entry, now VikingKidShape is TextVarValue entry;
 				-- "wolvloc":
-					now wolvloc is TextVarValue entry;
+					if wolvloc is not TextVarValue entry, now wolvloc is TextVarValue entry;
 				-- "wrbody":
-					now wrbody is TextVarValue entry;
+					if wrbody is not TextVarValue entry, now wrbody is TextVarValue entry;
 				-- "wrbodydesc":
-					now wrbodydesc is TextVarValue entry;
+					if wrbodydesc is not TextVarValue entry, now wrbodydesc is TextVarValue entry;
 				-- "wrBodyName":
-					now wrBodyName is TextVarValue entry;
+					if wrBodyName is not TextVarValue entry, now wrBodyName is TextVarValue entry;
 				-- "wrbodytype":
-					now wrbodytype is TextVarValue entry;
+					if wrbodytype is not TextVarValue entry, now wrbodytype is TextVarValue entry;
 				-- "wrcock":
-					now wrcock is TextVarValue entry;
+					if wrcock is not TextVarValue entry, now wrcock is TextVarValue entry;
 				-- "wrCockName":
-					now wrCockName is TextVarValue entry;
+					if wrCockName is not TextVarValue entry, now wrCockName is TextVarValue entry;
 				-- "wrface":
-					now wrface is TextVarValue entry;
+					if wrface is not TextVarValue entry, now wrface is TextVarValue entry;
 				-- "wrFaceName":
-					now wrFaceName is TextVarValue entry;
+					if wrFaceName is not TextVarValue entry, now wrFaceName is TextVarValue entry;
 				-- "wrskin":
-					now wrskin is TextVarValue entry;
+					if wrskin is not TextVarValue entry, now wrskin is TextVarValue entry;
 				-- "wrSkinName":
-					now wrSkinName is TextVarValue entry;
+					if wrSkinName is not TextVarValue entry, now wrSkinName is TextVarValue entry;
 				-- "wrtail":
-					now wrtail is TextVarValue entry;
+					if wrtail is not TextVarValue entry, now wrtail is TextVarValue entry;
 				-- "wrTailName":
-					now wrTailName is TextVarValue entry;
+					if wrTailName is not TextVarValue entry, now wrTailName is TextVarValue entry;
 			[
 			if debug is at level 10:
 				say "DEBUG -> VarName '[TextVarName entry]' restored to '[TextVarValue entry]'.";
@@ -3916,7 +3928,7 @@ to VariableNumberLoad:
 		read File of NumberSave into the Table of GameNumbers;
 		repeat with x running from 1 to the number of filled rows in the Table of GameNumbers:
 			[
-			if there is no numberVarValue in row x of the Table of GameNumbers:
+			if there is no NumberVarValue in row x of the Table of GameNumbers:
 				debug at level 4 say "Skipping empty Number [NumberVarName in row x of the Table of GameNumbers].[line break]";
 				next;
 			]
@@ -3926,2556 +3938,2562 @@ to VariableNumberLoad:
 				say "Restoring Number [NumberVarName entry].";
 			]
 			if NumberVarName entry is:
+				-- "ColaVendingMachine_dispensed":
+					if dispensed of Cola Vending Machine is not NumberVarValue entry, now dispensed of Cola Vending Machine is NumberVarValue entry;
 				-- "featgained":
-					now featgained of Player is numberVarValue entry;
+					if featgained of Player is not NumberVarValue entry, now featgained of Player is NumberVarValue entry;
 				-- "absorb":
-					now absorb is numberVarValue entry;
+					if absorb is not NumberVarValue entry, now absorb is NumberVarValue entry;
 				-- "addedlibido":
-					now addedlibido is numberVarValue entry;
+					if addedlibido is not NumberVarValue entry, now addedlibido is NumberVarValue entry;
 				-- "afsmread":
-					now afsmread is numberVarValue entry;
+					if afsmread is not NumberVarValue entry, now afsmread is NumberVarValue entry;
 				-- "aidKenaz":
-					now aidKenaz is numberVarValue entry;
+					if aidKenaz is not NumberVarValue entry, now aidKenaz is NumberVarValue entry;
 				-- "AlanaRelationship":
-					now AlanaRelationship is numberVarValue entry;
+					if AlanaRelationship is not NumberVarValue entry, now AlanaRelationship is NumberVarValue entry;
 				-- "AlexandraAmySex":
-					now AlexandraAmySex is numberVarValue entry;
+					if AlexandraAmySex is not NumberVarValue entry, now AlexandraAmySex is NumberVarValue entry;
 				-- "AlexandraBackstory":
-					now AlexandraBackstory is numberVarValue entry;
+					if AlexandraBackstory is not NumberVarValue entry, now AlexandraBackstory is NumberVarValue entry;
 				-- "AlexandraBrutusInteraction":
-					now AlexandraBrutusInteraction is numberVarValue entry;
+					if AlexandraBrutusInteraction is not NumberVarValue entry, now AlexandraBrutusInteraction is NumberVarValue entry;
 				-- "AlexandraBrutusPups":
-					now AlexandraBrutusPups is numberVarValue entry;
+					if AlexandraBrutusPups is not NumberVarValue entry, now AlexandraBrutusPups is NumberVarValue entry;
 				-- "AlexandraKarelPups":
-					now AlexandraKarelPups is numberVarValue entry;
+					if AlexandraKarelPups is not NumberVarValue entry, now AlexandraKarelPups is NumberVarValue entry;
 				-- "AlexandraIsaacPups":
-					now AlexandraIsaacPups is numberVarValue entry;
+					if AlexandraIsaacPups is not NumberVarValue entry, now AlexandraIsaacPups is NumberVarValue entry;
 				-- "AlexandraFarmhandPups":
-					now AlexandraFarmhandPups is numberVarValue entry;
+					if AlexandraFarmhandPups is not NumberVarValue entry, now AlexandraFarmhandPups is NumberVarValue entry;
 				-- "AlexandraNelsonPups":
-					now AlexandraNelsonPups is numberVarValue entry;
+					if AlexandraNelsonPups is not NumberVarValue entry, now AlexandraNelsonPups is NumberVarValue entry;
 				-- "AlexandraCarlInteraction":
-					now AlexandraCarlInteraction is numberVarValue entry;
+					if AlexandraCarlInteraction is not NumberVarValue entry, now AlexandraCarlInteraction is NumberVarValue entry;
 				-- "AlexandraCarlPups":
-					now AlexandraCarlPups is numberVarValue entry;
+					if AlexandraCarlPups is not NumberVarValue entry, now AlexandraCarlPups is NumberVarValue entry;
 				-- "AlexandraCreampieCount":
-					now AlexandraCreampieCount is numberVarValue entry;
+					if AlexandraCreampieCount is not NumberVarValue entry, now AlexandraCreampieCount is NumberVarValue entry;
 				-- "AlexandraEricInteraction":
-					now AlexandraEricInteraction is numberVarValue entry;
+					if AlexandraEricInteraction is not NumberVarValue entry, now AlexandraEricInteraction is NumberVarValue entry;
 				-- "AlexandraFangPups":
-					now AlexandraFangPups is numberVarValue entry;
+					if AlexandraFangPups is not NumberVarValue entry, now AlexandraFangPups is NumberVarValue entry;
 				-- "AlexandraGrowingPups":
-					now AlexandraGrowingPups is numberVarValue entry;
+					if AlexandraGrowingPups is not NumberVarValue entry, now AlexandraGrowingPups is NumberVarValue entry;
 				-- "AlexandraKorvinInteraction":
-					now AlexandraKorvinInteraction is numberVarValue entry;
+					if AlexandraKorvinInteraction is not NumberVarValue entry, now AlexandraKorvinInteraction is NumberVarValue entry;
 				-- "AlexandraKorvinPups":
-					now AlexandraKorvinPups is numberVarValue entry;
+					if AlexandraKorvinPups is not NumberVarValue entry, now AlexandraKorvinPups is NumberVarValue entry;
 				-- "AlexandraPlayerPups":
-					now AlexandraPlayerPups is numberVarValue entry;
+					if AlexandraPlayerPups is not NumberVarValue entry, now AlexandraPlayerPups is NumberVarValue entry;
 				-- "AlexandraPregCount":
-					now AlexandraPregCount is numberVarValue entry;
+					if AlexandraPregCount is not NumberVarValue entry, now AlexandraPregCount is NumberVarValue entry;
 				-- "AlexandraPupDaddy":
-					now AlexandraPupDaddy is numberVarValue entry;
+					if AlexandraPupDaddy is not NumberVarValue entry, now AlexandraPupDaddy is NumberVarValue entry;
 				-- "AlexandraSarahInteraction":
-					now AlexandraSarahInteraction is numberVarValue entry;
+					if AlexandraSarahInteraction is not NumberVarValue entry, now AlexandraSarahInteraction is NumberVarValue entry;
 				-- "alexbrunch":
-					now alexbrunch is numberVarValue entry;
+					if alexbrunch is not NumberVarValue entry, now alexbrunch is NumberVarValue entry;
 				-- "alexdiego":
-					now alexdiego is numberVarValue entry;
+					if alexdiego is not NumberVarValue entry, now alexdiego is NumberVarValue entry;
 				-- "alexleeinfo":
-					now alexleeinfo is numberVarValue entry;
+					if alexleeinfo is not NumberVarValue entry, now alexleeinfo is NumberVarValue entry;
 				-- "AlexProgress":
-					now AlexProgress is numberVarValue entry;
+					if AlexProgress is not NumberVarValue entry, now AlexProgress is NumberVarValue entry;
 				-- "AlexTalk":
-					now AlexTalk is numberVarValue entry;
+					if AlexTalk is not NumberVarValue entry, now AlexTalk is NumberVarValue entry;
 				-- "Alpha Wolfdefeat":
-					now Alpha Wolfdefeat is numberVarValue entry;
+					if Alpha Wolfdefeat is not NumberVarValue entry, now Alpha Wolfdefeat is NumberVarValue entry;
 				-- "Alphahuskypet":
-					now Alphahuskypet is numberVarValue entry;
+					if Alphahuskypet is not NumberVarValue entry, now Alphahuskypet is NumberVarValue entry;
 				-- "alphawolfbeaten":
-					now alphawolfbeaten is numberVarValue entry;
+					if alphawolfbeaten is not NumberVarValue entry, now alphawolfbeaten is NumberVarValue entry;
 				-- "altattackmade":
-					now altattackmade is numberVarValue entry;
+					if altattackmade is not NumberVarValue entry, now altattackmade is NumberVarValue entry;
 				-- "AmirRelationship":
-					now AmirRelationship is numberVarValue entry;
+					if AmirRelationship is not NumberVarValue entry, now AmirRelationship is NumberVarValue entry;
 				-- "AmmyAffection":
-					now AmmyAffection is numberVarValue entry;
+					if AmmyAffection is not NumberVarValue entry, now AmmyAffection is NumberVarValue entry;
 				-- "AmmyLastEvent":
-					now AmmyLastEvent is numberVarValue entry;
+					if AmmyLastEvent is not NumberVarValue entry, now AmmyLastEvent is NumberVarValue entry;
 				-- "AmuranAwoken":
-					now AmuranAwoken is numberVarValue entry;
+					if AmuranAwoken is not NumberVarValue entry, now AmuranAwoken is NumberVarValue entry;
 				-- "AmyMaturityCounter":
-					now AmyMaturityCounter is numberVarValue entry;
+					if AmyMaturityCounter is not NumberVarValue entry, now AmyMaturityCounter is NumberVarValue entry;
 				-- "AmyNewPuppies":
-					now AmyNewPuppies is numberVarValue entry;
+					if AmyNewPuppies is not NumberVarValue entry, now AmyNewPuppies is NumberVarValue entry;
 				-- "AmyShyness":
-					now AmyShyness is numberVarValue entry;
+					if AmyShyness is not NumberVarValue entry, now AmyShyness is NumberVarValue entry;
 				-- "anallevel":
-					now anallevel is numberVarValue entry;
+					if anallevel is not NumberVarValue entry, now anallevel is NumberVarValue entry;
 				-- "AnatomyCourse":
-					now AnatomyCourse is numberVarValue entry;
+					if AnatomyCourse is not NumberVarValue entry, now AnatomyCourse is NumberVarValue entry;
 				-- "AngieAroused":
-					now AngieAroused is numberVarValue entry;
+					if AngieAroused is not NumberVarValue entry, now AngieAroused is NumberVarValue entry;
 				-- "AngieHappy":
-					now AngieHappy is numberVarValue entry;
+					if AngieHappy is not NumberVarValue entry, now AngieHappy is NumberVarValue entry;
 				-- "AngieTalk":
-					now AngieTalk is numberVarValue entry;
+					if AngieTalk is not NumberVarValue entry, now AngieTalk is NumberVarValue entry;
 				-- "AngryHorguth":
-					now AngryHorguth is numberVarValue entry;
+					if AngryHorguth is not NumberVarValue entry, now AngryHorguth is NumberVarValue entry;
 				-- "anubisrequest":
-					now anubisrequest is numberVarValue entry;
+					if anubisrequest is not NumberVarValue entry, now anubisrequest is NumberVarValue entry;
 				-- "AptAid":
-					now AptAid is numberVarValue entry;
+					if AptAid is not NumberVarValue entry, now AptAid is NumberVarValue entry;
 				-- "ArcherFucked":
-					now ArcherFucked is numberVarValue entry;
+					if ArcherFucked is not NumberVarValue entry, now ArcherFucked is NumberVarValue entry;
 				-- "ArenaBattleCounter":
-					now ArenaBattleCounter is numberVarValue entry;
+					if ArenaBattleCounter is not NumberVarValue entry, now ArenaBattleCounter is NumberVarValue entry;
 				-- "AresDannyEncounters":
-					now AresDannyEncounters is numberVarValue entry;
+					if AresDannyEncounters is not NumberVarValue entry, now AresDannyEncounters is NumberVarValue entry;
 				-- "artattempt":
-					now artattempt is numberVarValue entry;
+					if artattempt is not NumberVarValue entry, now artattempt is NumberVarValue entry;
 				-- "auto2entry":
-					now auto2entry is numberVarValue entry;
+					if auto2entry is not NumberVarValue entry, now auto2entry is NumberVarValue entry;
 				-- "autoattackmode":
-					now autoattackmode is numberVarValue entry;
+					if autoattackmode is not NumberVarValue entry, now autoattackmode is NumberVarValue entry;
 				-- "autogender":
-					now autogender is numberVarValue entry;
+					if autogender is not NumberVarValue entry, now autogender is NumberVarValue entry;
 				-- "automaticcombatcheck":
-					now automaticcombatcheck is numberVarValue entry;
+					if automaticcombatcheck is not NumberVarValue entry, now automaticcombatcheck is NumberVarValue entry;
 				-- "automatonending":
-					now automatonending is numberVarValue entry;
+					if automatonending is not NumberVarValue entry, now automatonending is NumberVarValue entry;
 				-- "avoidance":
-					now avoidance is numberVarValue entry;
+					if avoidance is not NumberVarValue entry, now avoidance is NumberVarValue entry;
 				-- "Awesome_boredom":
-					now Awesome_boredom is numberVarValue entry;
+					if Awesome_boredom is not NumberVarValue entry, now Awesome_boredom is NumberVarValue entry;
 				-- "Awesome_counter":
-					now Awesome_counter is numberVarValue entry;
+					if Awesome_counter is not NumberVarValue entry, now Awesome_counter is NumberVarValue entry;
 				-- "Awesome_forcesex":
-					now Awesome_forcesex is numberVarValue entry;
+					if Awesome_forcesex is not NumberVarValue entry, now Awesome_forcesex is NumberVarValue entry;
 				-- "Awesome_noreward":
-					now Awesome_noreward is numberVarValue entry;
+					if Awesome_noreward is not NumberVarValue entry, now Awesome_noreward is NumberVarValue entry;
 				-- "Awesome_sex":
-					now Awesome_sex is numberVarValue entry;
+					if Awesome_sex is not NumberVarValue entry, now Awesome_sex is NumberVarValue entry;
 				-- "AxelLastBJ":
-					now AxelLastBJ is numberVarValue entry;
+					if AxelLastBJ is not NumberVarValue entry, now AxelLastBJ is NumberVarValue entry;
 				-- "AxelRelationship":
-					now AxelRelationship is numberVarValue entry;
+					if AxelRelationship is not NumberVarValue entry, now AxelRelationship is NumberVarValue entry;
 				-- "AzraelRelationship":
-					now AzraelRelationship is numberVarValue entry;
+					if AzraelRelationship is not NumberVarValue entry, now AzraelRelationship is NumberVarValue entry;
 				-- "balloversize":
-					now balloversize is numberVarValue entry;
+					if balloversize is not NumberVarValue entry, now balloversize is NumberVarValue entry;
 				-- "bananapeeled":
-					now bananapeeled is numberVarValue entry;
+					if bananapeeled is not NumberVarValue entry, now bananapeeled is NumberVarValue entry;
 				-- "bargainbinusagetotal":
-					now bargainbinusagetotal is numberVarValue entry;
+					if bargainbinusagetotal is not NumberVarValue entry, now bargainbinusagetotal is NumberVarValue entry;
 				-- "BarnabasRelationship":
-					now BarnabasRelationship is numberVarValue entry;
+					if BarnabasRelationship is not NumberVarValue entry, now BarnabasRelationship is NumberVarValue entry;
 				-- "BarryFurSuspicion":
-					now BarryFurSuspicion is numberVarValue entry;
+					if BarryFurSuspicion is not NumberVarValue entry, now BarryFurSuspicion is NumberVarValue entry;
 				-- "BarryMotive":
-					now BarryMotive is numberVarValue entry;
+					if BarryMotive is not NumberVarValue entry, now BarryMotive is NumberVarValue entry;
 				-- "BastetApproval":
-					now BastetApproval is numberVarValue entry;
+					if BastetApproval is not NumberVarValue entry, now BastetApproval is NumberVarValue entry;
 				-- "BastetSexBattleCount":
-					now BastetSexBattleCount is numberVarValue entry;
+					if BastetSexBattleCount is not NumberVarValue entry, now BastetSexBattleCount is NumberVarValue entry;
 				-- "battleitem":
-					now battleitem is numberVarValue entry;
+					if battleitem is not NumberVarValue entry, now battleitem is NumberVarValue entry;
 				-- "bclatearrival":
-					now bclatearrival is numberVarValue entry;
+					if bclatearrival is not NumberVarValue entry, now bclatearrival is NumberVarValue entry;
 				-- "bcuntethered":
-					now bcuntethered is numberVarValue entry;
+					if bcuntethered is not NumberVarValue entry, now bcuntethered is NumberVarValue entry;
 				-- "beatgrnymph":
-					now beatgrnymph is numberVarValue entry;
+					if beatgrnymph is not NumberVarValue entry, now beatgrnymph is NumberVarValue entry;
 				-- "beatsatyr":
-					now beatsatyr is numberVarValue entry;
+					if beatsatyr is not NumberVarValue entry, now beatsatyr is NumberVarValue entry;
 				-- "beatSatyress":
-					now beatSatyress is numberVarValue entry;
+					if beatSatyress is not NumberVarValue entry, now beatSatyress is NumberVarValue entry;
 				-- "BeforeCombat":
-					now BeforeCombat is numberVarValue entry;
+					if BeforeCombat is not NumberVarValue entry, now BeforeCombat is NumberVarValue entry;
 				-- "BehaviorandCustoms":
-					now BehaviorandCustoms is numberVarValue entry;
+					if BehaviorandCustoms is not NumberVarValue entry, now BehaviorandCustoms is NumberVarValue entry;
 				-- "Bevkitty":
-					now Bevkitty is numberVarValue entry;
+					if Bevkitty is not NumberVarValue entry, now Bevkitty is NumberVarValue entry;
 				-- "Bevtalk":
-					now Bevtalk is numberVarValue entry;
+					if Bevtalk is not NumberVarValue entry, now Bevtalk is NumberVarValue entry;
 				-- "bikedest":
-					now bikedest is numberVarValue entry;
+					if bikedest is not NumberVarValue entry, now bikedest is NumberVarValue entry;
 				-- "BjornRelationship":
-					now BjornRelationship is numberVarValue entry;
+					if BjornRelationship is not NumberVarValue entry, now BjornRelationship is NumberVarValue entry;
 				-- "BlissDrugTrip":
-					now BlissDrugTrip is numberVarValue entry;
+					if BlissDrugTrip is not NumberVarValue entry, now BlissDrugTrip is NumberVarValue entry;
 				-- "blotintense":
-					now blotintense is numberVarValue entry;
+					if blotintense is not NumberVarValue entry, now blotintense is NumberVarValue entry;
 				-- "bluechaffrape":
-					now bluechaffrape is numberVarValue entry;
+					if bluechaffrape is not NumberVarValue entry, now bluechaffrape is NumberVarValue entry;
 				-- "boatfound":
-					now boatfound is numberVarValue entry;
+					if boatfound is not NumberVarValue entry, now boatfound is NumberVarValue entry;
 				-- "BodyRelationship":
-					now BodyRelationship is numberVarValue entry;
+					if BodyRelationship is not NumberVarValue entry, now BodyRelationship is NumberVarValue entry;
 				-- "BoghrimHuntingTrip":
-					now BoghrimHuntingTrip is numberVarValue entry;
+					if BoghrimHuntingTrip is not NumberVarValue entry, now BoghrimHuntingTrip is NumberVarValue entry;
 				-- "BoghrimMet":
-					now BoghrimMet is numberVarValue entry;
+					if BoghrimMet is not NumberVarValue entry, now BoghrimMet is NumberVarValue entry;
 				-- "bonelust":
-					now bonelust is numberVarValue entry;
+					if bonelust is not NumberVarValue entry, now bonelust is NumberVarValue entry;
 				-- "bonusattack":
-					now bonusattack is numberVarValue entry;
+					if bonusattack is not NumberVarValue entry, now bonusattack is NumberVarValue entry;
 				-- "bookfound":
-					now bookfound is numberVarValue entry;
+					if bookfound is not NumberVarValue entry, now bookfound is NumberVarValue entry;
 				-- "boosterfeats":
-					now boosterfeats is numberVarValue entry;
+					if boosterfeats is not NumberVarValue entry, now boosterfeats is NumberVarValue entry;
 				-- "bopdefeated":
-					now bopdefeated is numberVarValue entry;
+					if bopdefeated is not NumberVarValue entry, now bopdefeated is NumberVarValue entry;
 				-- "bopsongcount":
-					now bopsongcount is numberVarValue entry;
+					if bopsongcount is not NumberVarValue entry, now bopsongcount is NumberVarValue entry;
 				-- "borisfucked":
-					now borisfucked is numberVarValue entry;
+					if borisfucked is not NumberVarValue entry, now borisfucked is NumberVarValue entry;
 				-- "Borismate":
-					now Borismate is numberVarValue entry;
+					if Borismate is not NumberVarValue entry, now Borismate is NumberVarValue entry;
 				-- "Borisquest":
-					now Borisquest is numberVarValue entry;
+					if Borisquest is not NumberVarValue entry, now Borisquest is NumberVarValue entry;
 				-- "boristalk":
-					now boristalk is numberVarValue entry;
+					if boristalk is not NumberVarValue entry, now boristalk is NumberVarValue entry;
 				-- "boundcounter":
-					now boundcounter is numberVarValue entry;
+					if boundcounter is not NumberVarValue entry, now boundcounter is NumberVarValue entry;
 				-- "boundmod":
-					now boundmod is numberVarValue entry;
+					if boundmod is not NumberVarValue entry, now boundmod is NumberVarValue entry;
 				-- "boundmod2":
-					now boundmod2 is numberVarValue entry;
+					if boundmod2 is not NumberVarValue entry, now boundmod2 is NumberVarValue entry;
 				-- "boundsegment":
-					now boundsegment is numberVarValue entry;
+					if boundsegment is not NumberVarValue entry, now boundsegment is NumberVarValue entry;
 				-- "Bovine_type":
-					now Bovine_type is numberVarValue entry;
+					if Bovine_type is not NumberVarValue entry, now Bovine_type is NumberVarValue entry;
 				-- "bradfordbounty":
-					now bradfordbounty is numberVarValue entry;
+					if bradfordbounty is not NumberVarValue entry, now bradfordbounty is NumberVarValue entry;
 				-- "bradfordBountyNum":
-					now bradfordBountyNum is numberVarValue entry;
+					if bradfordBountyNum is not NumberVarValue entry, now bradfordBountyNum is NumberVarValue entry;
 				-- "bradfordstory":
-					now bradfordstory is numberVarValue entry;
+					if bradfordstory is not NumberVarValue entry, now bradfordstory is NumberVarValue entry;
 				-- "BrennanRelationship":
-					now BrennanRelationship is numberVarValue entry;
+					if BrennanRelationship is not NumberVarValue entry, now BrennanRelationship is NumberVarValue entry;
 				-- "BrianOral":
-					now BrianOral is numberVarValue entry;
+					if BrianOral is not NumberVarValue entry, now BrianOral is NumberVarValue entry;
 				-- "BrianRelationship":
-					now BrianRelationship is numberVarValue entry;
+					if BrianRelationship is not NumberVarValue entry, now BrianRelationship is NumberVarValue entry;
 				-- "BrianVisit":
-					now BrianVisit is numberVarValue entry;
+					if BrianVisit is not NumberVarValue entry, now BrianVisit is NumberVarValue entry;
 				-- "BridgetPowellEventVar":
-					now BridgetPowellEventVar is numberVarValue entry;
+					if BridgetPowellEventVar is not NumberVarValue entry, now BridgetPowellEventVar is NumberVarValue entry;
 				-- "brookeanal":
-					now brookeanal is numberVarValue entry;
+					if brookeanal is not NumberVarValue entry, now brookeanal is NumberVarValue entry;
 				-- "BrutusAmySex":
-					now BrutusAmySex is numberVarValue entry;
+					if BrutusAmySex is not NumberVarValue entry, now BrutusAmySex is NumberVarValue entry;
 				-- "BrutusEscalationTimer":
-					now BrutusEscalationTimer is numberVarValue entry;
+					if BrutusEscalationTimer is not NumberVarValue entry, now BrutusEscalationTimer is NumberVarValue entry;
 				-- "BryceFucked":
-					now BryceFucked is numberVarValue entry;
+					if BryceFucked is not NumberVarValue entry, now BryceFucked is NumberVarValue entry;
 				-- "BryonyBearFuckWatched":
-					now BryonyBearFuckWatched is numberVarValue entry;
+					if BryonyBearFuckWatched is not NumberVarValue entry, now BryonyBearFuckWatched is NumberVarValue entry;
 				-- "bsextimer":
-					now bsextimer is numberVarValue entry;
+					if bsextimer is not NumberVarValue entry, now bsextimer is NumberVarValue entry;
 				-- "BullMaster":
-					now BullMaster is numberVarValue entry;
+					if BullMaster is not NumberVarValue entry, now BullMaster is NumberVarValue entry;
 				-- "BullTerrierSiblingsVar":
-					now BullTerrierSiblingsVar is numberVarValue entry;
+					if BullTerrierSiblingsVar is not NumberVarValue entry, now BullTerrierSiblingsVar is NumberVarValue entry;
 				-- "bunnyjocknosex":
-					now bunnyjocknosex is numberVarValue entry;
+					if bunnyjocknosex is not NumberVarValue entry, now bunnyjocknosex is NumberVarValue entry;
 				-- "ButterflyBabyGestation":
-					now ButterflyBabyGestation is numberVarValue entry;
+					if ButterflyBabyGestation is not NumberVarValue entry, now ButterflyBabyGestation is NumberVarValue entry;
 				-- "ButterflyEncounters":
-					now ButterflyEncounters is numberVarValue entry;
+					if ButterflyEncounters is not NumberVarValue entry, now ButterflyEncounters is NumberVarValue entry;
 				-- "ButterflyRaped":
-					now ButterflyRaped is numberVarValue entry;
+					if ButterflyRaped is not NumberVarValue entry, now ButterflyRaped is NumberVarValue entry;
 				-- "ByronRelationship":
-					now ByronRelationship is numberVarValue entry;
+					if ByronRelationship is not NumberVarValue entry, now ByronRelationship is NumberVarValue entry;
 				-- "CampBravoWomenAllowed":
-					now CampBravoWomenAllowed is numberVarValue entry;
+					if CampBravoWomenAllowed is not NumberVarValue entry, now CampBravoWomenAllowed is NumberVarValue entry;
 				-- "CampusCoupleRelationship":
-					now CampusCoupleRelationship is numberVarValue entry;
+					if CampusCoupleRelationship is not NumberVarValue entry, now CampusCoupleRelationship is NumberVarValue entry;
 				-- "CampusLoversProgressTurn":
-					now CampusLoversProgressTurn is numberVarValue entry;
+					if CampusLoversProgressTurn is not NumberVarValue entry, now CampusLoversProgressTurn is NumberVarValue entry;
 				-- "CampusLoversTrackingVariable":
-					now CampusLoversTrackingVariable is numberVarValue entry;
+					if CampusLoversTrackingVariable is not NumberVarValue entry, now CampusLoversTrackingVariable is NumberVarValue entry;
 				-- "candytalk":
-					now candytalk is numberVarValue entry;
+					if candytalk is not NumberVarValue entry, now candytalk is NumberVarValue entry;
 				-- "CandyUrikInteraction":
-					now CandyUrikInteraction is numberVarValue entry;
+					if CandyUrikInteraction is not NumberVarValue entry, now CandyUrikInteraction is NumberVarValue entry;
 				-- "CaneFurSuspicion":
-					now CaneFurSuspicion is numberVarValue entry;
+					if CaneFurSuspicion is not NumberVarValue entry, now CaneFurSuspicion is NumberVarValue entry;
 				-- "CaneMotive":
-					now CaneMotive is numberVarValue entry;
+					if CaneMotive is not NumberVarValue entry, now CaneMotive is NumberVarValue entry;
 				-- "cannonprep":
-					now cannonprep is numberVarValue entry;
+					if cannonprep is not NumberVarValue entry, now cannonprep is NumberVarValue entry;
 				-- "CaptiveBreederEncounter":
-					now CaptiveBreederEncounter is numberVarValue entry;
+					if CaptiveBreederEncounter is not NumberVarValue entry, now CaptiveBreederEncounter is NumberVarValue entry;
 				-- "CarlAmySex":
-					now CarlAmySex is numberVarValue entry;
+					if CarlAmySex is not NumberVarValue entry, now CarlAmySex is NumberVarValue entry;
 				-- "CarlEricaInteraction":
-					now CarlEricaInteraction is numberVarValue entry;
+					if CarlEricaInteraction is not NumberVarValue entry, now CarlEricaInteraction is NumberVarValue entry;
 				-- "CarlEricInteraction":
-					now CarlEricInteraction is numberVarValue entry;
+					if CarlEricInteraction is not NumberVarValue entry, now CarlEricInteraction is NumberVarValue entry;
 				-- "CarlLibraryEntry":
-					now CarlLibraryEntry is numberVarValue entry;
+					if CarlLibraryEntry is not NumberVarValue entry, now CarlLibraryEntry is NumberVarValue entry;
 				-- "CarlSarahInteraction":
-					now CarlSarahInteraction is numberVarValue entry;
+					if CarlSarahInteraction is not NumberVarValue entry, now CarlSarahInteraction is NumberVarValue entry;
 				-- "CarlSarahSex":
-					now CarlSarahSex is numberVarValue entry;
+					if CarlSarahSex is not NumberVarValue entry, now CarlSarahSex is NumberVarValue entry;
 				-- "CassandraFucked":
-					now CassandraFucked is numberVarValue entry;
+					if CassandraFucked is not NumberVarValue entry, now CassandraFucked is NumberVarValue entry;
 				-- "catdogstate":
-					now catdogstate is numberVarValue entry;
+					if catdogstate is not NumberVarValue entry, now catdogstate is NumberVarValue entry;
 				-- "catnum":
-					now catnum is numberVarValue entry;
+					if catnum is not NumberVarValue entry, now catnum is NumberVarValue entry;
 				-- "CatsVSDogsCounter":
-					now CatsVSDogsCounter is numberVarValue entry;
+					if CatsVSDogsCounter is not NumberVarValue entry, now CatsVSDogsCounter is NumberVarValue entry;
 				-- "cboyEricSarahInteraction":
-					now cboyEricSarahInteraction is numberVarValue entry;
+					if cboyEricSarahInteraction is not NumberVarValue entry, now cboyEricSarahInteraction is NumberVarValue entry;
 				-- "cclosscount":
-					now cclosscount is numberVarValue entry;
+					if cclosscount is not NumberVarValue entry, now cclosscount is NumberVarValue entry;
 				-- "ccmiss":
-					now ccmiss is numberVarValue entry;
+					if ccmiss is not NumberVarValue entry, now ccmiss is NumberVarValue entry;
 				-- "CellDoorStatus":
-					now CellDoorStatus is numberVarValue entry;
+					if CellDoorStatus is not NumberVarValue entry, now CellDoorStatus is NumberVarValue entry;
 				-- "CellFourVisits":
-					now CellFourVisits is numberVarValue entry;
+					if CellFourVisits is not NumberVarValue entry, now CellFourVisits is NumberVarValue entry;
 				-- "centaurmate":
-					now centaurmate is numberVarValue entry;
+					if centaurmate is not NumberVarValue entry, now centaurmate is NumberVarValue entry;
 				-- "CenterVisits":
-					now CenterVisits is numberVarValue entry;
+					if CenterVisits is not NumberVarValue entry, now CenterVisits is NumberVarValue entry;
 				-- "centrallib":
-					now centrallib is numberVarValue entry;
+					if centrallib is not NumberVarValue entry, now centrallib is NumberVarValue entry;
 				-- "cerberusarousal":
-					now cerberusarousal is numberVarValue entry;
+					if cerberusarousal is not NumberVarValue entry, now cerberusarousal is NumberVarValue entry;
 				-- "cerbmaulcount":
-					now cerbmaulcount is numberVarValue entry;
+					if cerbmaulcount is not NumberVarValue entry, now cerbmaulcount is NumberVarValue entry;
 				-- "cfgmode":
-					now cfgmode is numberVarValue entry;
+					if cfgmode is not NumberVarValue entry, now cfgmode is NumberVarValue entry;
 				-- "charcounter":
-					now charcounter is numberVarValue entry;
+					if charcounter is not NumberVarValue entry, now charcounter is NumberVarValue entry;
 				-- "chargeup":
-					now chargeup is numberVarValue entry;
+					if chargeup is not NumberVarValue entry, now chargeup is NumberVarValue entry;
 				-- "ChaseMarking":
-					now ChaseMarking is numberVarValue entry;
+					if ChaseMarking is not NumberVarValue entry, now ChaseMarking is NumberVarValue entry;
 				-- "ChaseOffspring":
-					now ChaseOffspring is numberVarValue entry;
+					if ChaseOffspring is not NumberVarValue entry, now ChaseOffspring is NumberVarValue entry;
 				-- "ChasePetplay":
-					now ChasePetplay is numberVarValue entry;
+					if ChasePetplay is not NumberVarValue entry, now ChasePetplay is NumberVarValue entry;
 				-- "ChasePetplayTraining":
-					now ChasePetplayTraining is numberVarValue entry;
+					if ChasePetplayTraining is not NumberVarValue entry, now ChasePetplayTraining is NumberVarValue entry;
 				-- "ChaseSexCounter":
-					now ChaseSexCounter is numberVarValue entry;
+					if ChaseSexCounter is not NumberVarValue entry, now ChaseSexCounter is NumberVarValue entry;
 				-- "CheerleaderFirstEncounter":
-					now CheerleaderFirstEncounter is numberVarValue entry;
+					if CheerleaderFirstEncounter is not NumberVarValue entry, now CheerleaderFirstEncounter is NumberVarValue entry;
 				-- "Cheesecakemode":
-					now Cheesecakemode is numberVarValue entry;
+					if Cheesecakemode is not NumberVarValue entry, now Cheesecakemode is NumberVarValue entry;
 				-- "cheetahmate":
-					now cheetahmate is numberVarValue entry;
+					if cheetahmate is not NumberVarValue entry, now cheetahmate is NumberVarValue entry;
 				-- "ChrisPlayerOffspring":
-					now ChrisPlayerOffspring is numberVarValue entry;
+					if ChrisPlayerOffspring is not NumberVarValue entry, now ChrisPlayerOffspring is NumberVarValue entry;
 				-- "Christyquest":
-					now Christyquest is numberVarValue entry;
+					if Christyquest is not NumberVarValue entry, now Christyquest is NumberVarValue entry;
 				-- "churchenter":
-					now churchenter is numberVarValue entry;
+					if churchenter is not NumberVarValue entry, now churchenter is NumberVarValue entry;
 				-- "clearnomore":
-					now clearnomore is numberVarValue entry;
+					if clearnomore is not NumberVarValue entry, now clearnomore is NumberVarValue entry;
 				-- "CliveFuck":
-					now CliveFuck is numberVarValue entry;
+					if CliveFuck is not NumberVarValue entry, now CliveFuck is NumberVarValue entry;
 				-- "CloudKnowledge":
-					now CloudKnowledge is numberVarValue entry;
+					if CloudKnowledge is not NumberVarValue entry, now CloudKnowledge is NumberVarValue entry;
 				-- "CocoRelationship":
-					now CocoRelationship is numberVarValue entry;
+					if CocoRelationship is not NumberVarValue entry, now CocoRelationship is NumberVarValue entry;
 				-- "ColleenAlpha":
-					now ColleenAlpha is numberVarValue entry;
+					if ColleenAlpha is not NumberVarValue entry, now ColleenAlpha is NumberVarValue entry;
 				-- "ColleenCollared":
-					now ColleenCollared is numberVarValue entry;
+					if ColleenCollared is not NumberVarValue entry, now ColleenCollared is NumberVarValue entry;
 				-- "ColleenFound":
-					now ColleenFound is numberVarValue entry;
+					if ColleenFound is not NumberVarValue entry, now ColleenFound is NumberVarValue entry;
 				-- "ColleenSarahInteraction":
-					now ColleenSarahInteraction is numberVarValue entry;
+					if ColleenSarahInteraction is not NumberVarValue entry, now ColleenSarahInteraction is NumberVarValue entry;
 				-- "ColleenSlut":
-					now ColleenSlut is numberVarValue entry;
+					if ColleenSlut is not NumberVarValue entry, now ColleenSlut is NumberVarValue entry;
 				-- "ColleenSpray":
-					now ColleenSpray is numberVarValue entry;
+					if ColleenSpray is not NumberVarValue entry, now ColleenSpray is NumberVarValue entry;
 				-- "ColleenTalk":
-					now ColleenTalk is numberVarValue entry;
+					if ColleenTalk is not NumberVarValue entry, now ColleenTalk is NumberVarValue entry;
 				-- "CollegeLibraryBrutusEncounter":
-					now CollegeLibraryBrutusEncounter is numberVarValue entry;
+					if CollegeLibraryBrutusEncounter is not NumberVarValue entry, now CollegeLibraryBrutusEncounter is NumberVarValue entry;
 				-- "CollegeLibraryRyouseiEncounter":
-					now CollegeLibraryRyouseiEncounter is numberVarValue entry;
+					if CollegeLibraryRyouseiEncounter is not NumberVarValue entry, now CollegeLibraryRyouseiEncounter is NumberVarValue entry;
 				-- "colliedefeat":
-					now colliedefeat is numberVarValue entry;
+					if colliedefeat is not NumberVarValue entry, now colliedefeat is NumberVarValue entry;
 				-- "combat abort":
-					now combat abort is numberVarValue entry;
+					if combat abort is not NumberVarValue entry, now combat abort is NumberVarValue entry;
 				-- "ConclaveKnowledge":
-					now ConclaveKnowledge is numberVarValue entry;
+					if ConclaveKnowledge is not NumberVarValue entry, now ConclaveKnowledge is NumberVarValue entry;
 				-- "ConfSvenEricInteraction":
-					now ConfSvenEricInteraction is numberVarValue entry;
+					if ConfSvenEricInteraction is not NumberVarValue entry, now ConfSvenEricInteraction is NumberVarValue entry;
 				-- "consortinsight":
-					now consortinsight is numberVarValue entry;
+					if consortinsight is not NumberVarValue entry, now consortinsight is NumberVarValue entry;
 				-- "ContainmentBarrierEncounters":
-					now ContainmentBarrierEncounters is numberVarValue entry;
+					if ContainmentBarrierEncounters is not NumberVarValue entry, now ContainmentBarrierEncounters is NumberVarValue entry;
 				-- "coonsex":
-					now coonsex is numberVarValue entry;
+					if coonsex is not NumberVarValue entry, now coonsex is NumberVarValue entry;
 				-- "coonstatus":
-					now coonstatus is numberVarValue entry;
+					if coonstatus is not NumberVarValue entry, now coonstatus is NumberVarValue entry;
 				-- "CorbinKidCounter":
-					now CorbinKidCounter is numberVarValue entry;
+					if CorbinKidCounter is not NumberVarValue entry, now CorbinKidCounter is NumberVarValue entry;
 				-- "CorbinPregCounter":
-					now CorbinPregCounter is numberVarValue entry;
+					if CorbinPregCounter is not NumberVarValue entry, now CorbinPregCounter is NumberVarValue entry;
 				-- "CorbinPregnancy":
-					now CorbinPregnancy is numberVarValue entry;
+					if CorbinPregnancy is not NumberVarValue entry, now CorbinPregnancy is NumberVarValue entry;
 				-- "corrvicchange1":
-					now corrvicchange1 is numberVarValue entry;
+					if corrvicchange1 is not NumberVarValue entry, now corrvicchange1 is NumberVarValue entry;
 				-- "corrvicchange2":
-					now corrvicchange2 is numberVarValue entry;
+					if corrvicchange2 is not NumberVarValue entry, now corrvicchange2 is NumberVarValue entry;
 				-- "CouraFriendDevelopments":
-					now CouraFriendDevelopments is numberVarValue entry;
+					if CouraFriendDevelopments is not NumberVarValue entry, now CouraFriendDevelopments is NumberVarValue entry;
 				-- "CouraVirginity":
-					now CouraVirginity is numberVarValue entry;
+					if CouraVirginity is not NumberVarValue entry, now CouraVirginity is NumberVarValue entry;
 				-- "CowBully":
-					now CowBully is numberVarValue entry;
+					if CowBully is not NumberVarValue entry, now CowBully is NumberVarValue entry;
 				-- "CoyoteTricks":
-					now CoyoteTricks is numberVarValue entry;
+					if CoyoteTricks is not NumberVarValue entry, now CoyoteTricks is NumberVarValue entry;
 				-- "CuckooWatched":
-					now CuckooWatched is numberVarValue entry;
+					if CuckooWatched is not NumberVarValue entry, now CuckooWatched is NumberVarValue entry;
 				-- "cumgirlfed":
-					now cumgirlfed is numberVarValue entry;
+					if cumgirlfed is not NumberVarValue entry, now cumgirlfed is NumberVarValue entry;
 				-- "cuntsmall":
-					now cuntsmall is numberVarValue entry;
+					if cuntsmall is not NumberVarValue entry, now cuntsmall is NumberVarValue entry;
 				-- "daisyimpreg":
-					now daisyimpreg is numberVarValue entry;
+					if daisyimpreg is not NumberVarValue entry, now daisyimpreg is NumberVarValue entry;
 				-- "Daisytalk":
-					now Daisytalk is numberVarValue entry;
+					if Daisytalk is not NumberVarValue entry, now Daisytalk is NumberVarValue entry;
 				-- "Dam":
-					now Dam is numberVarValue entry;
+					if Dam is not NumberVarValue entry, now Dam is NumberVarValue entry;
 				-- "damagein":
-					now damagein is numberVarValue entry;
+					if damagein is not NumberVarValue entry, now damagein is NumberVarValue entry;
 				-- "damageout":
-					now damageout is numberVarValue entry;
+					if damageout is not NumberVarValue entry, now damageout is NumberVarValue entry;
 				-- "DariusLostItems":
-					now DariusLostItems is numberVarValue entry;
+					if DariusLostItems is not NumberVarValue entry, now DariusLostItems is NumberVarValue entry;
 				-- "DavidBrutusMarcVar":
-					now DavidBrutusMarcVar is numberVarValue entry;
+					if DavidBrutusMarcVar is not NumberVarValue entry, now DavidBrutusMarcVar is NumberVarValue entry;
 				-- "DavidBunkerEntry":
-					now DavidBunkerEntry is numberVarValue entry;
+					if DavidBunkerEntry is not NumberVarValue entry, now DavidBunkerEntry is NumberVarValue entry;
 				-- "DavidSarahInteraction":
-					now DavidSarahInteraction is numberVarValue entry;
+					if DavidSarahInteraction is not NumberVarValue entry, now DavidSarahInteraction is NumberVarValue entry;
 				-- "DBCaptureQuestVar":
-					now DBCaptureQuestVar is numberVarValue entry;
+					if DBCaptureQuestVar is not NumberVarValue entry, now DBCaptureQuestVar is NumberVarValue entry;
 				-- "Delaymilcount":
-					now Delaymilcount is numberVarValue entry;
+					if Delaymilcount is not NumberVarValue entry, now Delaymilcount is NumberVarValue entry;
 				-- "demandIndex":
-					now demandIndex is numberVarValue entry;
+					if demandIndex is not NumberVarValue entry, now demandIndex is NumberVarValue entry;
 				-- "DemonBruteStatus":
-					now DemonBruteStatus is numberVarValue entry;
+					if DemonBruteStatus is not NumberVarValue entry, now DemonBruteStatus is NumberVarValue entry;
 				-- "DemonFoxInteractions":
-					now DemonFoxInteractions is numberVarValue entry;
+					if DemonFoxInteractions is not NumberVarValue entry, now DemonFoxInteractions is NumberVarValue entry;
 				-- "DemonFoxStatus":
-					now DemonFoxStatus is numberVarValue entry;
+					if DemonFoxStatus is not NumberVarValue entry, now DemonFoxStatus is NumberVarValue entry;
 				-- "dentedbikecount":
-					now dentedbikecount is numberVarValue entry;
+					if dentedbikecount is not NumberVarValue entry, now dentedbikecount is NumberVarValue entry;
 				-- "didsubmit":
-					now didsubmit is numberVarValue entry;
+					if didsubmit is not NumberVarValue entry, now didsubmit is NumberVarValue entry;
 				-- "Diegobitched":
-					now Diegobitched is numberVarValue entry;
+					if Diegobitched is not NumberVarValue entry, now Diegobitched is NumberVarValue entry;
 				-- "DiegoButtSlut":
-					now DiegoButtSlut is numberVarValue entry;
+					if DiegoButtSlut is not NumberVarValue entry, now DiegoButtSlut is NumberVarValue entry;
 				-- "Diegochanged":
-					now Diegochanged is numberVarValue entry;
+					if Diegochanged is not NumberVarValue entry, now Diegochanged is NumberVarValue entry;
 				-- "Diegofucked":
-					now Diegofucked is numberVarValue entry;
+					if Diegofucked is not NumberVarValue entry, now Diegofucked is NumberVarValue entry;
 				-- "dinonest":
-					now dinonest is numberVarValue entry;
+					if dinonest is not NumberVarValue entry, now dinonest is NumberVarValue entry;
 				-- "dnfightresult":
-					now dnfightresult is numberVarValue entry;
+					if dnfightresult is not NumberVarValue entry, now dnfightresult is NumberVarValue entry;
 				-- "dobielibido":
-					now dobielibido is numberVarValue entry;
+					if dobielibido is not NumberVarValue entry, now dobielibido is NumberVarValue entry;
 				-- "dobieresist":
-					now dobieresist is numberVarValue entry;
+					if dobieresist is not NumberVarValue entry, now dobieresist is NumberVarValue entry;
 				-- "DoctorMouseProgress":
-					now DoctorMouseProgress is numberVarValue entry;
+					if DoctorMouseProgress is not NumberVarValue entry, now DoctorMouseProgress is NumberVarValue entry;
 				-- "dogfoodcount":
-					now dogfoodcount is numberVarValue entry;
+					if dogfoodcount is not NumberVarValue entry, now dogfoodcount is NumberVarValue entry;
 				-- "doggyboned":
-					now doggyboned is numberVarValue entry;
+					if doggyboned is not NumberVarValue entry, now doggyboned is NumberVarValue entry;
 				-- "doggyness":
-					now doggyness is numberVarValue entry;
+					if doggyness is not NumberVarValue entry, now doggyness is NumberVarValue entry;
 				-- "dollfound":
-					now dollfound is numberVarValue entry;
+					if dollfound is not NumberVarValue entry, now dollfound is NumberVarValue entry;
 				-- "dolphinbundle":
-					now dolphinbundle is numberVarValue entry;
+					if dolphinbundle is not NumberVarValue entry, now dolphinbundle is NumberVarValue entry;
 				-- "dolphinconsent":
-					now dolphinconsent is numberVarValue entry;
+					if dolphinconsent is not NumberVarValue entry, now dolphinconsent is NumberVarValue entry;
 				-- "dolphindefeat":
-					now dolphindefeat is numberVarValue entry;
+					if dolphindefeat is not NumberVarValue entry, now dolphindefeat is NumberVarValue entry;
 				-- "dolphinmode":
-					now dolphinmode is numberVarValue entry;
+					if dolphinmode is not NumberVarValue entry, now dolphinmode is NumberVarValue entry;
 				-- "dolphintricked":
-					now dolphintricked is numberVarValue entry;
+					if dolphintricked is not NumberVarValue entry, now dolphintricked is NumberVarValue entry;
 				-- "dolphinwantmate":
-					now dolphinwantmate is numberVarValue entry;
+					if dolphinwantmate is not NumberVarValue entry, now dolphinwantmate is NumberVarValue entry;
 				-- "donkeywomanbeaten":
-					now donkeywomanbeaten is numberVarValue entry;
+					if donkeywomanbeaten is not NumberVarValue entry, now donkeywomanbeaten is NumberVarValue entry;
 				-- "donkeywomanfucked":
-					now donkeywomanfucked is numberVarValue entry;
+					if donkeywomanfucked is not NumberVarValue entry, now donkeywomanfucked is NumberVarValue entry;
 				-- "DoranAutofireIntensity":
-					now DoranAutofireIntensity is numberVarValue entry;
+					if DoranAutofireIntensity is not NumberVarValue entry, now DoranAutofireIntensity is NumberVarValue entry;
 				-- "DoranBallModStatus":
-					now DoranBallModStatus is numberVarValue entry;
+					if DoranBallModStatus is not NumberVarValue entry, now DoranBallModStatus is NumberVarValue entry;
 				-- "DoranDiscussion_var1":
-					now DoranDiscussion_var1 is numberVarValue entry;
+					if DoranDiscussion_var1 is not NumberVarValue entry, now DoranDiscussion_var1 is NumberVarValue entry;
 				-- "DoranDiscussionExit":
-					now DoranDiscussionExit is numberVarValue entry;
+					if DoranDiscussionExit is not NumberVarValue entry, now DoranDiscussionExit is NumberVarValue entry;
 				-- "DoranDiscussionExit2":
-					now DoranDiscussionExit2 is numberVarValue entry;
+					if DoranDiscussionExit2 is not NumberVarValue entry, now DoranDiscussionExit2 is NumberVarValue entry;
 				-- "DoranDiscussionProgress":
-					now DoranDiscussionProgress is numberVarValue entry;
+					if DoranDiscussionProgress is not NumberVarValue entry, now DoranDiscussionProgress is NumberVarValue entry;
 				-- "DoranDominanceTopic":
-					now DoranDominanceTopic is numberVarValue entry;
+					if DoranDominanceTopic is not NumberVarValue entry, now DoranDominanceTopic is NumberVarValue entry;
 				-- "DoranFoodTimer":
-					now DoranFoodTimer is numberVarValue entry;
+					if DoranFoodTimer is not NumberVarValue entry, now DoranFoodTimer is NumberVarValue entry;
 				-- "DoranFoodType":
-					now DoranFoodType is numberVarValue entry;
+					if DoranFoodType is not NumberVarValue entry, now DoranFoodType is NumberVarValue entry;
 				-- "DoranGenderTopic":
-					now DoranGenderTopic is numberVarValue entry;
+					if DoranGenderTopic is not NumberVarValue entry, now DoranGenderTopic is NumberVarValue entry;
 				-- "DoranLastBallMod":
-					now DoranLastBallMod is numberVarValue entry;
+					if DoranLastBallMod is not NumberVarValue entry, now DoranLastBallMod is NumberVarValue entry;
 				-- "DoranLastDiscussion":
-					now DoranLastDiscussion is numberVarValue entry;
+					if DoranLastDiscussion is not NumberVarValue entry, now DoranLastDiscussion is NumberVarValue entry;
 				-- "DoranLastInternalMod":
-					now DoranLastInternalMod is numberVarValue entry;
+					if DoranLastInternalMod is not NumberVarValue entry, now DoranLastInternalMod is NumberVarValue entry;
 				-- "DoranLastTitMod":
-					now DoranLastTitMod is numberVarValue entry;
+					if DoranLastTitMod is not NumberVarValue entry, now DoranLastTitMod is NumberVarValue entry;
 				-- "DoranModificationDiscussed":
-					now DoranModificationDiscussed is numberVarValue entry;
+					if DoranModificationDiscussed is not NumberVarValue entry, now DoranModificationDiscussed is NumberVarValue entry;
 				-- "DoranNeutralRole":
-					now DoranNeutralRole is numberVarValue entry;
+					if DoranNeutralRole is not NumberVarValue entry, now DoranNeutralRole is NumberVarValue entry;
 				-- "DoranRimmingStatus":
-					now DoranRimmingStatus is numberVarValue entry;
+					if DoranRimmingStatus is not NumberVarValue entry, now DoranRimmingStatus is NumberVarValue entry;
 				-- "DoranRole":
-					now DoranRole is numberVarValue entry;
+					if DoranRole is not NumberVarValue entry, now DoranRole is NumberVarValue entry;
 				-- "DoranRoleIntensity":
-					now DoranRoleIntensity is numberVarValue entry;
+					if DoranRoleIntensity is not NumberVarValue entry, now DoranRoleIntensity is NumberVarValue entry;
 				-- "DoranRoleplayInSession":
-					now DoranRoleplayInSession is numberVarValue entry;
+					if DoranRoleplayInSession is not NumberVarValue entry, now DoranRoleplayInSession is NumberVarValue entry;
 				-- "DoranRP_var1":
-					now DoranRP_var1 is numberVarValue entry;
+					if DoranRP_var1 is not NumberVarValue entry, now DoranRP_var1 is NumberVarValue entry;
 				-- "DoranRP_var2":
-					now DoranRP_var2 is numberVarValue entry;
+					if DoranRP_var2 is not NumberVarValue entry, now DoranRP_var2 is NumberVarValue entry;
 				-- "DoranRP_var3":
-					now DoranRP_var3 is numberVarValue entry;
+					if DoranRP_var3 is not NumberVarValue entry, now DoranRP_var3 is NumberVarValue entry;
 				-- "DoranRP_var4":
-					now DoranRP_var4 is numberVarValue entry;
+					if DoranRP_var4 is not NumberVarValue entry, now DoranRP_var4 is NumberVarValue entry;
 				-- "DoranRPRevealRegard":
-					now DoranRPRevealRegard is numberVarValue entry;
+					if DoranRPRevealRegard is not NumberVarValue entry, now DoranRPRevealRegard is NumberVarValue entry;
 				-- "DoranSelfBlueballing":
-					now DoranSelfBlueballing is numberVarValue entry;
+					if DoranSelfBlueballing is not NumberVarValue entry, now DoranSelfBlueballing is NumberVarValue entry;
 				-- "DoranTitModStatus":
-					now DoranTitModStatus is numberVarValue entry;
+					if DoranTitModStatus is not NumberVarValue entry, now DoranTitModStatus is NumberVarValue entry;
 				-- "DoranVoreDischarge":
-					now DoranVoreDischarge is numberVarValue entry;
+					if DoranVoreDischarge is not NumberVarValue entry, now DoranVoreDischarge is NumberVarValue entry;
 				-- "DoranVoreDuration":
-					now DoranVoreDuration is numberVarValue entry;
+					if DoranVoreDuration is not NumberVarValue entry, now DoranVoreDuration is NumberVarValue entry;
 				-- "DoranVoreStatus":
-					now DoranVoreStatus is numberVarValue entry;
+					if DoranVoreStatus is not NumberVarValue entry, now DoranVoreStatus is NumberVarValue entry;
 				-- "dragonessfuck":
-					now dragonessfuck is numberVarValue entry;
+					if dragonessfuck is not NumberVarValue entry, now dragonessfuck is NumberVarValue entry;
 				-- "dragontaurcatch":
-					now dragontaurcatch is numberVarValue entry;
+					if dragontaurcatch is not NumberVarValue entry, now dragontaurcatch is NumberVarValue entry;
 				-- "dragontype":
-					now dragontype is numberVarValue entry;
+					if dragontype is not NumberVarValue entry, now dragontype is NumberVarValue entry;
 				-- "Drinkserved":
-					now Drinkserved is numberVarValue entry;
+					if Drinkserved is not NumberVarValue entry, now Drinkserved is NumberVarValue entry;
 				-- "dronevict":
-					now dronevict is numberVarValue entry;
+					if dronevict is not NumberVarValue entry, now dronevict is NumberVarValue entry;
 				-- "DVtaurcatch":
-					now DVtaurcatch is numberVarValue entry;
+					if DVtaurcatch is not NumberVarValue entry, now DVtaurcatch is NumberVarValue entry;
 				-- "DylanFucked":
-					now DylanFucked is numberVarValue entry;
+					if DylanFucked is not NumberVarValue entry, now DylanFucked is NumberVarValue entry;
 				-- "DylanSucked":
-					now DylanSucked is numberVarValue entry;
+					if DylanSucked is not NumberVarValue entry, now DylanSucked is NumberVarValue entry;
 				-- "eagledefeatnum":
-					now eagledefeatnum is numberVarValue entry;
+					if eagledefeatnum is not NumberVarValue entry, now eagledefeatnum is NumberVarValue entry;
 				-- "ebgatorcarrying":
-					now ebgatorcarrying is numberVarValue entry;
+					if ebgatorcarrying is not NumberVarValue entry, now ebgatorcarrying is NumberVarValue entry;
 				-- "ebgatord":
-					now ebgatord is numberVarValue entry;
+					if ebgatord is not NumberVarValue entry, now ebgatord is NumberVarValue entry;
 				-- "ebgatorhijack":
-					now ebgatorhijack is numberVarValue entry;
+					if ebgatorhijack is not NumberVarValue entry, now ebgatorhijack is NumberVarValue entry;
 				-- "ebheat_egg":
-					now ebheat_egg is numberVarValue entry;
+					if ebheat_egg is not NumberVarValue entry, now ebheat_egg is NumberVarValue entry;
 				-- "ebwhelphijack":
-					now ebwhelphijack is numberVarValue entry;
+					if ebwhelphijack is not NumberVarValue entry, now ebwhelphijack is NumberVarValue entry;
 				-- "ec_fullcount":
-					now ec_fullcount is numberVarValue entry;
+					if ec_fullcount is not NumberVarValue entry, now ec_fullcount is NumberVarValue entry;
 				-- "eggplanted":
-					now eggplanted is numberVarValue entry;
+					if eggplanted is not NumberVarValue entry, now eggplanted is NumberVarValue entry;
 				-- "EgyptianRiddle":
-					now EgyptianRiddle is numberVarValue entry;
+					if EgyptianRiddle is not NumberVarValue entry, now EgyptianRiddle is NumberVarValue entry;
 				-- "ElainePregnant":
-					now ElainePregnant is numberVarValue entry;
+					if ElainePregnant is not NumberVarValue entry, now ElainePregnant is NumberVarValue entry;
 				-- "Electricprodstatus":
-					now Electricprodstatus is numberVarValue entry;
+					if Electricprodstatus is not NumberVarValue entry, now Electricprodstatus is NumberVarValue entry;
 				-- "ElfEncounters":
-					now ElfEncounters is numberVarValue entry;
+					if ElfEncounters is not NumberVarValue entry, now ElfEncounters is NumberVarValue entry;
 				-- "ElfRimming":
-					now ElfRimming is numberVarValue entry;
+					if ElfRimming is not NumberVarValue entry, now ElfRimming is NumberVarValue entry;
 				-- "emap":
-					now emap is numberVarValue entry;
+					if emap is not NumberVarValue entry, now emap is NumberVarValue entry;
 				-- "embervicsex":
-					now embervicsex is numberVarValue entry;
+					if embervicsex is not NumberVarValue entry, now embervicsex is NumberVarValue entry;
 				-- "EnrollmentTokens":
-					now EnrollmentTokens is numberVarValue entry;
+					if EnrollmentTokens is not NumberVarValue entry, now EnrollmentTokens is NumberVarValue entry;
 				-- "eprecharge":
-					now eprecharge is numberVarValue entry;
+					if eprecharge is not NumberVarValue entry, now eprecharge is NumberVarValue entry;
 				-- "eptarget":
-					now eptarget is numberVarValue entry;
+					if eptarget is not NumberVarValue entry, now eptarget is NumberVarValue entry;
 				-- "equinoiddefeat":
-					now equinoiddefeat is numberVarValue entry;
+					if equinoiddefeat is not NumberVarValue entry, now equinoiddefeat is NumberVarValue entry;
 				-- "equinoidstatus":
-					now equinoidstatus is numberVarValue entry;
+					if equinoidstatus is not NumberVarValue entry, now equinoidstatus is NumberVarValue entry;
 				-- "EricAnalCounter":
-					now EricAnalCounter is numberVarValue entry;
+					if EricAnalCounter is not NumberVarValue entry, now EricAnalCounter is NumberVarValue entry;
 				-- "EricFleeingCountdown":
-					now EricFleeingCountdown is numberVarValue entry;
+					if EricFleeingCountdown is not NumberVarValue entry, now EricFleeingCountdown is NumberVarValue entry;
 				-- "EricOffspringCount":
-					now EricOffspringCount is numberVarValue entry;
+					if EricOffspringCount is not NumberVarValue entry, now EricOffspringCount is NumberVarValue entry;
 				-- "EricOrcPillMpreg":
-					now EricOrcPillMpreg is numberVarValue entry;
+					if EricOrcPillMpreg is not NumberVarValue entry, now EricOrcPillMpreg is NumberVarValue entry;
 				-- "EricPregCount":
-					now EricPregCount is numberVarValue entry;
+					if EricPregCount is not NumberVarValue entry, now EricPregCount is NumberVarValue entry;
 				-- "EricPregTimer":
-					now EricPregTimer is numberVarValue entry;
+					if EricPregTimer is not NumberVarValue entry, now EricPregTimer is NumberVarValue entry;
 				-- "EricSarahInteraction":
-					now EricSarahInteraction is numberVarValue entry;
+					if EricSarahInteraction is not NumberVarValue entry, now EricSarahInteraction is NumberVarValue entry;
 				-- "EricVirginityTaken":
-					now EricVirginityTaken is numberVarValue entry;
+					if EricVirginityTaken is not NumberVarValue entry, now EricVirginityTaken is NumberVarValue entry;
 				-- "erminecolor":
-					now erminecolor is numberVarValue entry;
+					if erminecolor is not NumberVarValue entry, now erminecolor is NumberVarValue entry;
 				-- "EweFucked":
-					now Stamina of Mary is numberVarValue entry;
+					if Stamina of Mary is not NumberVarValue entry, now Stamina of Mary is NumberVarValue entry;
 				-- "Fancyaroused":
-					now Fancyaroused is numberVarValue entry;
+					if Fancyaroused is not NumberVarValue entry, now Fancyaroused is NumberVarValue entry;
 				-- "fancyffcount":
-					now fancyffcount is numberVarValue entry;
+					if fancyffcount is not NumberVarValue entry, now fancyffcount is NumberVarValue entry;
 				-- "Fancyfucked":
-					now Fancyfucked is numberVarValue entry;
+					if Fancyfucked is not NumberVarValue entry, now Fancyfucked is NumberVarValue entry;
 				-- "fancymfcount":
-					now fancymfcount is numberVarValue entry;
+					if fancymfcount is not NumberVarValue entry, now fancymfcount is NumberVarValue entry;
 				-- "Fancyquest":
-					now Fancyquest is numberVarValue entry;
+					if Fancyquest is not NumberVarValue entry, now Fancyquest is NumberVarValue entry;
 				-- "Fancytalk":
-					now Fancytalk is numberVarValue entry;
+					if Fancytalk is not NumberVarValue entry, now Fancytalk is NumberVarValue entry;
 				-- "fangcount":
-					now fangcount is numberVarValue entry;
+					if fangcount is not NumberVarValue entry, now fangcount is NumberVarValue entry;
 				-- "FangDashRel":
-					now FangDashRel is numberVarValue entry;
+					if FangDashRel is not NumberVarValue entry, now FangDashRel is NumberVarValue entry;
 				-- "FangSarahInteraction":
-					now FangSarahInteraction is numberVarValue entry;
+					if FangSarahInteraction is not NumberVarValue entry, now FangSarahInteraction is NumberVarValue entry;
 				-- "FangWS":
-					now FangWS is numberVarValue entry;
+					if FangWS is not NumberVarValue entry, now FangWS is NumberVarValue entry;
 				-- "fashionfight":
-					now fashionfight is numberVarValue entry;
+					if fashionfight is not NumberVarValue entry, now fashionfight is NumberVarValue entry;
 				-- "Featqualified":
-					now Featqualified is numberVarValue entry;
+					if Featqualified is not NumberVarValue entry, now Featqualified is NumberVarValue entry;
 				-- "featunlock":
-					now featunlock is numberVarValue entry;
+					if featunlock is not NumberVarValue entry, now featunlock is NumberVarValue entry;
 				-- "Feline_attached":
-					now Feline_attached is numberVarValue entry;
+					if Feline_attached is not NumberVarValue entry, now Feline_attached is NumberVarValue entry;
 				-- "Feline_encountered":
-					now Feline_encountered is numberVarValue entry;
+					if Feline_encountered is not NumberVarValue entry, now Feline_encountered is NumberVarValue entry;
 				-- "Feline_meow":
-					now Feline_meow is numberVarValue entry;
+					if Feline_meow is not NumberVarValue entry, now Feline_meow is NumberVarValue entry;
 				-- "feline_status":
-					now feline_status is numberVarValue entry;
+					if feline_status is not NumberVarValue entry, now feline_status is NumberVarValue entry;
 				-- "Feline_type":
-					now Feline_type is numberVarValue entry;
+					if Feline_type is not NumberVarValue entry, now Feline_type is NumberVarValue entry;
 				-- "FelinoidRescued":
-					now FelinoidRescued is numberVarValue entry;
+					if FelinoidRescued is not NumberVarValue entry, now FelinoidRescued is NumberVarValue entry;
 				-- "FelixSaved":
-					now FelixSaved is numberVarValue entry;
+					if FelixSaved is not NumberVarValue entry, now FelixSaved is NumberVarValue entry;
 				-- "fellforward":
-					now fellforward is numberVarValue entry;
+					if fellforward is not NumberVarValue entry, now fellforward is NumberVarValue entry;
 				-- "femalecatHP":
-					now femalecatHP is numberVarValue entry;
+					if femalecatHP is not NumberVarValue entry, now femalecatHP is NumberVarValue entry;
 				-- "femonyxq":
-					now femonyxq is numberVarValue entry;
+					if femonyxq is not NumberVarValue entry, now femonyxq is NumberVarValue entry;
 				-- "FeralBirths":
-					now FeralBirths is numberVarValue entry;
+					if FeralBirths is not NumberVarValue entry, now FeralBirths is NumberVarValue entry;
 				-- "FeralMuttDominance":
-					now FeralMuttDominance is numberVarValue entry;
+					if FeralMuttDominance is not NumberVarValue entry, now FeralMuttDominance is NumberVarValue entry;
 				-- "FeralMuttFurColorNumber":
-					now FeralMuttFurColorNumber is numberVarValue entry;
+					if FeralMuttFurColorNumber is not NumberVarValue entry, now FeralMuttFurColorNumber is NumberVarValue entry;
 				-- "ferretvisit":
-					now ferretvisit is numberVarValue entry;
+					if ferretvisit is not NumberVarValue entry, now ferretvisit is NumberVarValue entry;
 				-- "fertiletime":
-					now fertiletime is numberVarValue entry;
+					if fertiletime is not NumberVarValue entry, now fertiletime is NumberVarValue entry;
 				-- "ffrivalry":
-					now ffrivalry is numberVarValue entry;
+					if ffrivalry is not NumberVarValue entry, now ffrivalry is NumberVarValue entry;
 				-- "fgryphon_TFcount":
-					now fgryphon_TFcount is numberVarValue entry;
+					if fgryphon_TFcount is not NumberVarValue entry, now fgryphon_TFcount is NumberVarValue entry;
 				-- "fightoutcome":
-					now fightoutcome is numberVarValue entry;
+					if fightoutcome is not NumberVarValue entry, now fightoutcome is NumberVarValue entry;
 				-- "Fin":
-					now Fin is numberVarValue entry;
+					if Fin is not NumberVarValue entry, now Fin is NumberVarValue entry;
 				-- "findablestairs":
-					now findablestairs is numberVarValue entry;
+					if findablestairs is not NumberVarValue entry, now findablestairs is NumberVarValue entry;
 				-- "Findfirefighter":
-					now Findfirefighter is numberVarValue entry;
+					if Findfirefighter is not NumberVarValue entry, now Findfirefighter is NumberVarValue entry;
 				-- "findwires":
-					now findwires is numberVarValue entry;
+					if findwires is not NumberVarValue entry, now findwires is NumberVarValue entry;
 				-- "FinnTrackingProgress":
-					now FinnTrackingProgress is numberVarValue entry;
+					if FinnTrackingProgress is not NumberVarValue entry, now FinnTrackingProgress is NumberVarValue entry;
 				-- "firebreathcount":
-					now firebreathcount is numberVarValue entry;
+					if firebreathcount is not NumberVarValue entry, now firebreathcount is NumberVarValue entry;
 				-- "FireSpritemode":
-					now FireSpritemode is numberVarValue entry;
+					if FireSpritemode is not NumberVarValue entry, now FireSpritemode is NumberVarValue entry;
 				-- "FirstAtlantisVisit":
-					now FirstAtlantisVisit is numberVarValue entry;
+					if FirstAtlantisVisit is not NumberVarValue entry, now FirstAtlantisVisit is NumberVarValue entry;
 				-- "FirstDescOuter":
-					now FirstDescOuter is numberVarValue entry;
+					if FirstDescOuter is not NumberVarValue entry, now FirstDescOuter is NumberVarValue entry;
 				-- "FirstMannequinTalk":
-					now FirstMannequinTalk is numberVarValue entry;
+					if FirstMannequinTalk is not NumberVarValue entry, now FirstMannequinTalk is NumberVarValue entry;
 				-- "fixedgens":
-					now fixedgens is numberVarValue entry;
+					if fixedgens is not NumberVarValue entry, now fixedgens is NumberVarValue entry;
 				-- "flotintense":
-					now flotintense is numberVarValue entry;
+					if flotintense is not NumberVarValue entry, now flotintense is NumberVarValue entry;
 				-- "fonyxanalcount":
-					now fonyxanalcount is numberVarValue entry;
+					if fonyxanalcount is not NumberVarValue entry, now fonyxanalcount is NumberVarValue entry;
 				-- "fonyxvagcount":
-					now fonyxvagcount is numberVarValue entry;
+					if fonyxvagcount is not NumberVarValue entry, now fonyxvagcount is NumberVarValue entry;
 				-- "foodcount":
-					now foodcount is numberVarValue entry;
+					if foodcount is not NumberVarValue entry, now foodcount is NumberVarValue entry;
 				-- "foodneed":
-					now foodneed is numberVarValue entry;
+					if foodneed is not NumberVarValue entry, now foodneed is NumberVarValue entry;
 				-- "foodvendor":
-					now foodvendor is numberVarValue entry;
+					if foodvendor is not NumberVarValue entry, now foodvendor is NumberVarValue entry;
 				-- "foodwaterbonus":
-					now foodwaterbonus is numberVarValue entry;
+					if foodwaterbonus is not NumberVarValue entry, now foodwaterbonus is NumberVarValue entry;
 				-- "ForcedBreederslutBoyTF":
-					now ForcedBreederslutBoyTF is numberVarValue entry;
+					if ForcedBreederslutBoyTF is not NumberVarValue entry, now ForcedBreederslutBoyTF is NumberVarValue entry;
 				-- "ForcedBreederslutTF":
-					now ForcedBreederslutTF is numberVarValue entry;
+					if ForcedBreederslutTF is not NumberVarValue entry, now ForcedBreederslutTF is NumberVarValue entry;
 				-- "foundparts":
-					now foundparts is numberVarValue entry;
+					if foundparts is not NumberVarValue entry, now foundparts is NumberVarValue entry;
 				-- "FoxMasterEncounters":
-					now FoxMasterEncounters is numberVarValue entry;
+					if FoxMasterEncounters is not NumberVarValue entry, now FoxMasterEncounters is NumberVarValue entry;
 				-- "frankmalesex":
-					now frankmalesex is numberVarValue entry;
+					if frankmalesex is not NumberVarValue entry, now frankmalesex is NumberVarValue entry;
 				-- "franksex":
-					now franksex is numberVarValue entry;
+					if franksex is not NumberVarValue entry, now franksex is NumberVarValue entry;
 				-- "FratPartyRecruiterProgression":
-					now FratPartyRecruiterProgression is numberVarValue entry;
+					if FratPartyRecruiterProgression is not NumberVarValue entry, now FratPartyRecruiterProgression is NumberVarValue entry;
 				-- "frbatbeaten":
-					now frbatbeaten is numberVarValue entry;
+					if frbatbeaten is not NumberVarValue entry, now frbatbeaten is NumberVarValue entry;
 				-- "freecred":
-					now freecred is numberVarValue entry;
+					if freecred is not NumberVarValue entry, now freecred is NumberVarValue entry;
 				-- "FriesianRelationship":
-					now FriesianRelationship is numberVarValue entry;
+					if FriesianRelationship is not NumberVarValue entry, now FriesianRelationship is NumberVarValue entry;
+				-- "FrostDrakeBeaten":
+					if FrostDrakeBeaten is not NumberVarValue entry, now FrostDrakeBeaten is NumberVarValue entry;
 				-- "fsdbias":
-					now fsdbias is numberVarValue entry;
+					if fsdbias is not NumberVarValue entry, now fsdbias is NumberVarValue entry;
 				-- "fsddom":
-					now fsddom is numberVarValue entry;
+					if fsddom is not NumberVarValue entry, now fsddom is NumberVarValue entry;
 				-- "fsdfeedmemory":
-					now fsdfeedmemory is numberVarValue entry;
+					if fsdfeedmemory is not NumberVarValue entry, now fsdfeedmemory is NumberVarValue entry;
 				-- "FSDOPEN":
-					now FSDOPEN is numberVarValue entry;
+					if FSDOPEN is not NumberVarValue entry, now FSDOPEN is NumberVarValue entry;
 				-- "fsdsub":
-					now fsdsub is numberVarValue entry;
+					if fsdsub is not NumberVarValue entry, now fsdsub is NumberVarValue entry;
 				-- "fsnovel":
-					now fsnovel is numberVarValue entry;
+					if fsnovel is not NumberVarValue entry, now fsnovel is NumberVarValue entry;
 				-- "FuckedByRazorbackBoar":
-					now FuckedByRazorbackBoar is numberVarValue entry;
+					if FuckedByRazorbackBoar is not NumberVarValue entry, now FuckedByRazorbackBoar is NumberVarValue entry;
 				-- "FuckedBySpartan":
-					now FuckedBySpartan is numberVarValue entry;
+					if FuckedBySpartan is not NumberVarValue entry, now FuckedBySpartan is NumberVarValue entry;
 				-- "FYDM":
-					now FYDM is numberVarValue entry;
+					if FYDM is not NumberVarValue entry, now FYDM is NumberVarValue entry;
 				-- "FYDTBMM":
-					now FYDTBMM is numberVarValue entry;
+					if FYDTBMM is not NumberVarValue entry, now FYDTBMM is NumberVarValue entry;
 				-- "gameplay":
-					now gameplay is numberVarValue entry;
+					if gameplay is not NumberVarValue entry, now gameplay is NumberVarValue entry;
 				-- "gardenveg":
-					now gardenveg is numberVarValue entry;
+					if gardenveg is not NumberVarValue entry, now gardenveg is NumberVarValue entry;
 				-- "GarthRelationship":
-					now GarthRelationship is numberVarValue entry;
+					if GarthRelationship is not NumberVarValue entry, now GarthRelationship is NumberVarValue entry;
 				-- "gascloud":
-					now gascloud is numberVarValue entry;
+					if gascloud is not NumberVarValue entry, now gascloud is NumberVarValue entry;
 				-- "gatorconsent":
-					now gatorconsent is numberVarValue entry;
+					if gatorconsent is not NumberVarValue entry, now gatorconsent is NumberVarValue entry;
 				-- "gatordefeat":
-					now gatordefeat is numberVarValue entry;
+					if gatordefeat is not NumberVarValue entry, now gatordefeat is NumberVarValue entry;
 				-- "gazellesbeaten":
-					now gazellesbeaten is numberVarValue entry;
+					if gazellesbeaten is not NumberVarValue entry, now gazellesbeaten is NumberVarValue entry;
 				-- "gb_gatling_chance":
-					now gb_gatling_chance is numberVarValue entry;
+					if gb_gatling_chance is not NumberVarValue entry, now gb_gatling_chance is NumberVarValue entry;
 				-- "gb_gatling_counter":
-					now gb_gatling_counter is numberVarValue entry;
+					if gb_gatling_counter is not NumberVarValue entry, now gb_gatling_counter is NumberVarValue entry;
 				-- "gb_gun":
-					now gb_gun is numberVarValue entry;
+					if gb_gun is not NumberVarValue entry, now gb_gun is NumberVarValue entry;
 				-- "gb_hair":
-					now gb_hair is numberVarValue entry;
+					if gb_hair is not NumberVarValue entry, now gb_hair is NumberVarValue entry;
 				-- "generationConflictFlag":
-					now generationConflictFlag is numberVarValue entry;
+					if generationConflictFlag is not NumberVarValue entry, now generationConflictFlag is NumberVarValue entry;
 				-- "generatorfixing":
-					now generatorfixing is numberVarValue entry;
+					if generatorfixing is not NumberVarValue entry, now generatorfixing is NumberVarValue entry;
 				-- "GertyQuest":
-					now GertyQuest is numberVarValue entry;
+					if GertyQuest is not NumberVarValue entry, now GertyQuest is NumberVarValue entry;
 				-- "GertyRelationship":
-					now GertyRelationship is numberVarValue entry;
+					if GertyRelationship is not NumberVarValue entry, now GertyRelationship is NumberVarValue entry;
 				-- "gettinglee":
-					now gettinglee is numberVarValue entry;
+					if gettinglee is not NumberVarValue entry, now gettinglee is NumberVarValue entry;
 				-- "giantheight":
-					now giantheight is numberVarValue entry;
+					if giantheight is not NumberVarValue entry, now giantheight is NumberVarValue entry;
 				-- "GibsonRelationship":
-					now GibsonRelationship is numberVarValue entry;
+					if GibsonRelationship is not NumberVarValue entry, now GibsonRelationship is NumberVarValue entry;
 				-- "ginafucked":
-					now ginafucked is numberVarValue entry;
+					if ginafucked is not NumberVarValue entry, now ginafucked is NumberVarValue entry;
 				-- "Ginaslut":
-					now Ginaslut is numberVarValue entry;
+					if Ginaslut is not NumberVarValue entry, now Ginaslut is NumberVarValue entry;
 				-- "Ginatalk":
-					now Ginatalk is numberVarValue entry;
+					if Ginatalk is not NumberVarValue entry, now Ginatalk is NumberVarValue entry;
 				-- "givingupton":
-					now givingupton is numberVarValue entry;
+					if givingupton is not NumberVarValue entry, now givingupton is NumberVarValue entry;
 				-- "GloryFate":
-					now GloryFate is numberVarValue entry;
+					if GloryFate is not NumberVarValue entry, now GloryFate is NumberVarValue entry;
 				-- "gobgender":
-					now gobgender is numberVarValue entry;
+					if gobgender is not NumberVarValue entry, now gobgender is NumberVarValue entry;
 				-- "GooColossusProgress":
-					now GooColossusProgress is numberVarValue entry;
+					if GooColossusProgress is not NumberVarValue entry, now GooColossusProgress is NumberVarValue entry;
 				-- "GordonApprehended":
-					now GordonApprehended is numberVarValue entry;
+					if GordonApprehended is not NumberVarValue entry, now GordonApprehended is NumberVarValue entry;
 				-- "GordonFurSuspicion":
-					now GordonFurSuspicion is numberVarValue entry;
+					if GordonFurSuspicion is not NumberVarValue entry, now GordonFurSuspicion is NumberVarValue entry;
 				-- "GordonMotive":
-					now GordonMotive is numberVarValue entry;
+					if GordonMotive is not NumberVarValue entry, now GordonMotive is NumberVarValue entry;
 				-- "GorillasMember":
-					now GorillasMember is numberVarValue entry;
+					if GorillasMember is not NumberVarValue entry, now GorillasMember is NumberVarValue entry;
 				-- "GorillasMemberQuestCounter":
-					now GorillasMemberQuestCounter is numberVarValue entry;
+					if GorillasMemberQuestCounter is not NumberVarValue entry, now GorillasMemberQuestCounter is NumberVarValue entry;
 				-- "GorillasRep":
-					now GorillasRep is numberVarValue entry;
+					if GorillasRep is not NumberVarValue entry, now GorillasRep is NumberVarValue entry;
 				-- "grantbitch":
-					now grantbitch is numberVarValue entry;
+					if grantbitch is not NumberVarValue entry, now grantbitch is NumberVarValue entry;
 				-- "grantfucked":
-					now grantfucked is numberVarValue entry;
+					if grantfucked is not NumberVarValue entry, now grantfucked is NumberVarValue entry;
 				-- "grantsex":
-					now grantsex is numberVarValue entry;
+					if grantsex is not NumberVarValue entry, now grantsex is NumberVarValue entry;
 				-- "granttalk":
-					now granttalk is numberVarValue entry;
+					if granttalk is not NumberVarValue entry, now granttalk is NumberVarValue entry;
 				-- "GreenTumbTurn":
-					now GreenTumbTurn is numberVarValue entry;
+					if GreenTumbTurn is not NumberVarValue entry, now GreenTumbTurn is NumberVarValue entry;
 				-- "gryphoncomforted":
-					now gryphoncomforted is numberVarValue entry;
+					if gryphoncomforted is not NumberVarValue entry, now gryphoncomforted is NumberVarValue entry;
 				-- "GryphonessKnowpreg":
-					now GryphonessKnowpreg is numberVarValue entry;
+					if GryphonessKnowpreg is not NumberVarValue entry, now GryphonessKnowpreg is NumberVarValue entry;
 				-- "gsd_encounters":
-					now gsd_encounters is numberVarValue entry;
+					if gsd_encounters is not NumberVarValue entry, now gsd_encounters is NumberVarValue entry;
 				-- "gsd_pet":
-					now gsd_pet is numberVarValue entry;
+					if gsd_pet is not NumberVarValue entry, now gsd_pet is NumberVarValue entry;
 				-- "gsd_var":
-					now gsd_var is numberVarValue entry;
+					if gsd_var is not NumberVarValue entry, now gsd_var is NumberVarValue entry;
 				-- "GenderLock":
-					now GenderLock is numberVarValue entry;
+					if GenderLock is not NumberVarValue entry, now GenderLock is NumberVarValue entry;
 				-- "gsgl":
-					now GenderLock is numberVarValue entry;
+					if GenderLock is not NumberVarValue entry, now GenderLock is NumberVarValue entry;
 				-- "gshep_bed_scene":
-					now gshep_bed_scene is numberVarValue entry;
+					if gshep_bed_scene is not NumberVarValue entry, now gshep_bed_scene is NumberVarValue entry;
 				-- "gshep_fights":
-					now gshep_fights is numberVarValue entry;
+					if gshep_fights is not NumberVarValue entry, now gshep_fights is NumberVarValue entry;
 				-- "gshep_inactive":
-					now gshep_inactive is numberVarValue entry;
+					if gshep_inactive is not NumberVarValue entry, now gshep_inactive is NumberVarValue entry;
 				-- "gshep_postfight":
-					now gshep_postfight is numberVarValue entry;
+					if gshep_postfight is not NumberVarValue entry, now gshep_postfight is NumberVarValue entry;
 				-- "gshep_sexscene":
-					now gshep_sexscene is numberVarValue entry;
+					if gshep_sexscene is not NumberVarValue entry, now gshep_sexscene is NumberVarValue entry;
 				-- "GShepLastScene":
-					now GShepLastScene is numberVarValue entry;
+					if GShepLastScene is not NumberVarValue entry, now GShepLastScene is NumberVarValue entry;
 				-- "gshepsquad":
-					now gshepsquad is numberVarValue entry;
+					if gshepsquad is not NumberVarValue entry, now gshepsquad is NumberVarValue entry;
 				-- "GusTalkProgress":
-					now GusTalkProgress is numberVarValue entry;
+					if GusTalkProgress is not NumberVarValue entry, now GusTalkProgress is NumberVarValue entry;
 				-- "hadiyafucked":
-					now hadiyafucked is numberVarValue entry;
+					if hadiyafucked is not NumberVarValue entry, now hadiyafucked is NumberVarValue entry;
 				-- "hagfeat":
-					now hagfeat is numberVarValue entry;
+					if hagfeat is not NumberVarValue entry, now hagfeat is NumberVarValue entry;
 				-- "halodestroyed":
-					now halodestroyed is numberVarValue entry;
+					if halodestroyed is not NumberVarValue entry, now halodestroyed is NumberVarValue entry;
 				-- "Haroldaroused":
-					now Haroldaroused is numberVarValue entry;
+					if Haroldaroused is not NumberVarValue entry, now Haroldaroused is NumberVarValue entry;
 				-- "Haroldfucked":
-					now Haroldfucked is numberVarValue entry;
+					if Haroldfucked is not NumberVarValue entry, now Haroldfucked is NumberVarValue entry;
 				-- "Haroldtalk":
-					now Haroldtalk is numberVarValue entry;
+					if Haroldtalk is not NumberVarValue entry, now Haroldtalk is NumberVarValue entry;
 				-- "Harpyconsent":
-					now Harpyconsent is numberVarValue entry;
+					if Harpyconsent is not NumberVarValue entry, now Harpyconsent is NumberVarValue entry;
 				-- "Harpydefeat":
-					now Harpydefeat is numberVarValue entry;
+					if Harpydefeat is not NumberVarValue entry, now Harpydefeat is NumberVarValue entry;
 				-- "hasgills":
-					now hasgills is numberVarValue entry;
+					if hasgills is not NumberVarValue entry, now hasgills is NumberVarValue entry;
 				-- "HasParts":
-					now HasParts is numberVarValue entry;
+					if HasParts is not NumberVarValue entry, now HasParts is NumberVarValue entry;
 				-- "hawkmanbeaten":
-					now hawkmanbeaten is numberVarValue entry;
+					if hawkmanbeaten is not NumberVarValue entry, now hawkmanbeaten is NumberVarValue entry;
 				-- "HayatoHunger":
-					now HayatoHunger is numberVarValue entry;
+					if HayatoHunger is not NumberVarValue entry, now HayatoHunger is NumberVarValue entry;
 				-- "HBMR":
-					now HBMR is numberVarValue entry;
+					if HBMR is not NumberVarValue entry, now HBMR is NumberVarValue entry;
 				-- "hdform":
-					now hdform is numberVarValue entry;
+					if hdform is not NumberVarValue entry, now hdform is NumberVarValue entry;
 				-- "hdmode":
-					now hdmode is numberVarValue entry;
+					if hdmode is not NumberVarValue entry, now hdmode is NumberVarValue entry;
 				-- "hdog":
-					now hdog is numberVarValue entry;
+					if hdog is not NumberVarValue entry, now hdog is NumberVarValue entry;
 				-- "heatdrive":
-					now heatdrive is numberVarValue entry;
+					if heatdrive is not NumberVarValue entry, now heatdrive is NumberVarValue entry;
 				-- "HeatedPoodle":
-					now HeatedPoodle is numberVarValue entry;
+					if HeatedPoodle is not NumberVarValue entry, now HeatedPoodle is NumberVarValue entry;
 				-- "heatform":
-					now heatform is numberVarValue entry;
+					if heatform is not NumberVarValue entry, now heatform is NumberVarValue entry;
 				-- "heatlevel":
-					now heatlevel is numberVarValue entry;
+					if heatlevel is not NumberVarValue entry, now heatlevel is NumberVarValue entry;
 				-- "HelenPregnant":
-					now HelenPregnant is numberVarValue entry;
+					if HelenPregnant is not NumberVarValue entry, now HelenPregnant is NumberVarValue entry;
 				-- "hellgatherquest":
-					now hellgatherquest is numberVarValue entry;
+					if hellgatherquest is not NumberVarValue entry, now hellgatherquest is NumberVarValue entry;
 				-- "hellHoundLevel":
-					now hellHoundLevel is numberVarValue entry;
+					if hellHoundLevel is not NumberVarValue entry, now hellHoundLevel is NumberVarValue entry;
 				-- "HelpKenazOut":
-					now HelpKenazOut is numberVarValue entry;
+					if HelpKenazOut is not NumberVarValue entry, now HelpKenazOut is NumberVarValue entry;
 				-- "HermaidSub":
-					now HermaidSub is numberVarValue entry;
+					if HermaidSub is not NumberVarValue entry, now HermaidSub is NumberVarValue entry;
 				-- "hermlvconsent":
-					now hermlvconsent is numberVarValue entry;
+					if hermlvconsent is not NumberVarValue entry, now hermlvconsent is NumberVarValue entry;
 				-- "hermlvmeet":
-					now hermlvmeet is numberVarValue entry;
+					if hermlvmeet is not NumberVarValue entry, now hermlvmeet is NumberVarValue entry;
 				-- "hfgbread":
-					now hfgbread is numberVarValue entry;
+					if hfgbread is not NumberVarValue entry, now hfgbread is NumberVarValue entry;
 				-- "HG_Flashback_Turns":
-					now HG_Flashback_Turns is numberVarValue entry;
+					if HG_Flashback_Turns is not NumberVarValue entry, now HG_Flashback_Turns is NumberVarValue entry;
 				-- "hgryphon_TGcount":
-					now hgryphon_TGcount is numberVarValue entry;
+					if hgryphon_TGcount is not NumberVarValue entry, now hgryphon_TGcount is NumberVarValue entry;
 				-- "hgryphonwin":
-					now hgryphonwin is numberVarValue entry;
+					if hgryphonwin is not NumberVarValue entry, now hgryphonwin is NumberVarValue entry;
 				-- "hgsqc":
-					now hgsqc is numberVarValue entry;
+					if hgsqc is not NumberVarValue entry, now hgsqc is NumberVarValue entry;
 				-- "hijackgestation":
-					now hijackgestation is numberVarValue entry;
+					if hijackgestation is not NumberVarValue entry, now hijackgestation is NumberVarValue entry;
 				-- "hobo-food-reminder":
-					now hobo-food-reminder is numberVarValue entry;
+					if hobo-food-reminder is not NumberVarValue entry, now hobo-food-reminder is NumberVarValue entry;
 				-- "hobo-grmilkhelp":
-					now hobo-grmilkhelp is numberVarValue entry;
+					if hobo-grmilkhelp is not NumberVarValue entry, now hobo-grmilkhelp is NumberVarValue entry;
 				-- "hobo-journal":
-					now hobo-journal is numberVarValue entry;
+					if hobo-journal is not NumberVarValue entry, now hobo-journal is NumberVarValue entry;
 				-- "hobo-medical":
-					now hobo-medical is numberVarValue entry;
+					if hobo-medical is not NumberVarValue entry, now hobo-medical is NumberVarValue entry;
 				-- "hobo-medical-gift":
-					now hobo-medical-gift is numberVarValue entry;
+					if hobo-medical-gift is not NumberVarValue entry, now hobo-medical-gift is NumberVarValue entry;
 				-- "hobo-water-reminder":
-					now hobo-water-reminder is numberVarValue entry;
+					if hobo-water-reminder is not NumberVarValue entry, now hobo-water-reminder is NumberVarValue entry;
 				-- "Homarusearch":
-					now Homarusearch is numberVarValue entry;
+					if Homarusearch is not NumberVarValue entry, now Homarusearch is NumberVarValue entry;
 				-- "Homarusearching":
-					now Homarusearching is numberVarValue entry;
+					if Homarusearching is not NumberVarValue entry, now Homarusearching is NumberVarValue entry;
 				-- "Homarutalk":
-					now Homarutalk is numberVarValue entry;
+					if Homarutalk is not NumberVarValue entry, now Homarutalk is NumberVarValue entry;
 				-- "hospbattlelost":
-					now hospbattlelost is numberVarValue entry;
+					if hospbattlelost is not NumberVarValue entry, now hospbattlelost is NumberVarValue entry;
 				-- "hospcountdown":
-					now hospcountdown is numberVarValue entry;
+					if hospcountdown is not NumberVarValue entry, now hospcountdown is NumberVarValue entry;
 				-- "hospfight":
-					now hospfight is numberVarValue entry;
+					if hospfight is not NumberVarValue entry, now hospfight is NumberVarValue entry;
 				-- "hospnav":
-					now hospnav is numberVarValue entry;
+					if hospnav is not NumberVarValue entry, now hospnav is NumberVarValue entry;
 				-- "hospquest":
-					now hospquest is numberVarValue entry;
+					if hospquest is not NumberVarValue entry, now hospquest is NumberVarValue entry;
 				-- "hospstairs":
-					now hospstairs is numberVarValue entry;
+					if hospstairs is not NumberVarValue entry, now hospstairs is NumberVarValue entry;
 				-- "hpF of Sylvia":
-					now hpF of Sylvia is numberVarValue entry;
+					if hpF of Sylvia is not NumberVarValue entry, now hpF of Sylvia is NumberVarValue entry;
 				-- "hpM of Sylvia":
-					now hpM of Sylvia is numberVarValue entry;
+					if hpM of Sylvia is not NumberVarValue entry, now hpM of Sylvia is NumberVarValue entry;
 				-- "hsrp":
-					now hsrp is numberVarValue entry;
+					if hsrp is not NumberVarValue entry, now hsrp is NumberVarValue entry;
 				-- "huntfeat":
-					now huntfeat is numberVarValue entry;
+					if huntfeat is not NumberVarValue entry, now huntfeat is NumberVarValue entry;
 				-- "hvorecount":
-					now hvorecount is numberVarValue entry;
+					if hvorecount is not NumberVarValue entry, now hvorecount is NumberVarValue entry;
 				-- "hvorelevel":
-					now hvorelevel is numberVarValue entry;
+					if hvorelevel is not NumberVarValue entry, now hvorelevel is NumberVarValue entry;
 				-- "hydraheadcount":
-					now hydraheadcount is numberVarValue entry;
+					if hydraheadcount is not NumberVarValue entry, now hydraheadcount is NumberVarValue entry;
 				-- "hydramaulcount":
-					now hydramaulcount is numberVarValue entry;
+					if hydramaulcount is not NumberVarValue entry, now hydramaulcount is NumberVarValue entry;
 				-- "hyenaintel":
-					now hyenaintel is numberVarValue entry;
+					if hyenaintel is not NumberVarValue entry, now hyenaintel is NumberVarValue entry;
 				-- "hyenastabledeal":
-					now hyenastabledeal is numberVarValue entry;
+					if hyenastabledeal is not NumberVarValue entry, now hyenastabledeal is NumberVarValue entry;
 				-- "HyenaTrailing":
-					now HyenaTrailing is numberVarValue entry;
+					if HyenaTrailing is not NumberVarValue entry, now HyenaTrailing is NumberVarValue entry;
 				-- "HYG":
-					now HYG is numberVarValue entry;
+					if HYG is not NumberVarValue entry, now HYG is NumberVarValue entry;
 				-- "hypernull":
-					now hypernull is numberVarValue entry;
+					if hypernull is not NumberVarValue entry, now hypernull is NumberVarValue entry;
 				-- "HyperSerumTracker":
-					now HyperSerumTracker is numberVarValue entry;
+					if HyperSerumTracker is not NumberVarValue entry, now HyperSerumTracker is NumberVarValue entry;
 				-- "icarus_cbt":
-					now icarus_cbt is numberVarValue entry;
+					if icarus_cbt is not NumberVarValue entry, now icarus_cbt is NumberVarValue entry;
 				-- "icarus_cumstuff":
-					now icarus_cumstuff is numberVarValue entry;
+					if icarus_cumstuff is not NumberVarValue entry, now icarus_cumstuff is NumberVarValue entry;
 				-- "icarus_lastpred":
-					now icarus_lastpred is numberVarValue entry;
+					if icarus_lastpred is not NumberVarValue entry, now icarus_lastpred is NumberVarValue entry;
 				-- "IcarusAmySex":
-					now IcarusAmySex is numberVarValue entry;
+					if IcarusAmySex is not NumberVarValue entry, now IcarusAmySex is NumberVarValue entry;
 				-- "icarussex6_variant":
-					now icarussex6_variant is numberVarValue entry;
+					if icarussex6_variant is not NumberVarValue entry, now icarussex6_variant is NumberVarValue entry;
 				-- "impalamode":
-					now impalamode is numberVarValue entry;
+					if impalamode is not NumberVarValue entry, now impalamode is NumberVarValue entry;
 				-- "ImpPlayerMarkingTurn":
-					now ImpPlayerMarkingTurn is numberVarValue entry;
+					if ImpPlayerMarkingTurn is not NumberVarValue entry, now ImpPlayerMarkingTurn is NumberVarValue entry;
 				-- "inafight":
-					now inafight is numberVarValue entry;
+					if inafight is not NumberVarValue entry, now inafight is NumberVarValue entry;
 				-- "incubusnosex":
-					now incubusnosex is numberVarValue entry;
+					if incubusnosex is not NumberVarValue entry, now incubusnosex is NumberVarValue entry;
 				-- "InflatableOtterSuitBindStage":
-					now InflatableOtterSuitBindStage is numberVarValue entry;
+					if InflatableOtterSuitBindStage is not NumberVarValue entry, now InflatableOtterSuitBindStage is NumberVarValue entry;
 				-- "InflatableOtterSuitMode":
-					now InflatableOtterSuitMode is numberVarValue entry;
+					if InflatableOtterSuitMode is not NumberVarValue entry, now InflatableOtterSuitMode is NumberVarValue entry;
 				-- "infvulpstate":
-					now infvulpstate is numberVarValue entry;
+					if infvulpstate is not NumberVarValue entry, now infvulpstate is NumberVarValue entry;
 				-- "invcolumns":
-					now invcolumns is numberVarValue entry;
+					if invcolumns is not NumberVarValue entry, now invcolumns is NumberVarValue entry;
 				-- "invlinklistfilled":
-					now invlinklistfilled is numberVarValue entry;
+					if invlinklistfilled is not NumberVarValue entry, now invlinklistfilled is NumberVarValue entry;
 				-- "isTwinHere":
-					now isTwinHere is numberVarValue entry;
+					if isTwinHere is not NumberVarValue entry, now isTwinHere is NumberVarValue entry;
 				-- "JackalBoyTF":
-					now JackalBoyTF is numberVarValue entry;
+					if JackalBoyTF is not NumberVarValue entry, now JackalBoyTF is NumberVarValue entry;
 				-- "JackalManTF":
-					now JackalManTF is numberVarValue entry;
+					if JackalManTF is not NumberVarValue entry, now JackalManTF is NumberVarValue entry;
 				-- "JaksEncounters":
-					now JaksEncounters is numberVarValue entry;
+					if JaksEncounters is not NumberVarValue entry, now JaksEncounters is NumberVarValue entry;
 				-- "jamesfed":
-					now jamesfed is numberVarValue entry;
+					if jamesfed is not NumberVarValue entry, now jamesfed is NumberVarValue entry;
 				-- "jamessex":
-					now jamessex is numberVarValue entry;
+					if jamessex is not NumberVarValue entry, now jamessex is NumberVarValue entry;
 				-- "Janicearoused":
-					now Janicearoused is numberVarValue entry;
+					if Janicearoused is not NumberVarValue entry, now Janicearoused is NumberVarValue entry;
 				-- "Janicequest":
-					now Janicequest is numberVarValue entry;
+					if Janicequest is not NumberVarValue entry, now Janicequest is NumberVarValue entry;
 				-- "Janicetalk":
-					now Janicetalk is numberVarValue entry;
+					if Janicetalk is not NumberVarValue entry, now Janicetalk is NumberVarValue entry;
 				-- "JayMarkRelationship":
-					now JayMarkRelationship is numberVarValue entry;
+					if JayMarkRelationship is not NumberVarValue entry, now JayMarkRelationship is NumberVarValue entry;
 				-- "jbfound":
-					now jbfound is numberVarValue entry;
+					if jbfound is not NumberVarValue entry, now jbfound is NumberVarValue entry;
 				-- "jdigup":
-					now jdigup is numberVarValue entry;
+					if jdigup is not NumberVarValue entry, now jdigup is NumberVarValue entry;
 				-- "JennaRelationship":
-					now JennaRelationship is numberVarValue entry;
+					if JennaRelationship is not NumberVarValue entry, now JennaRelationship is NumberVarValue entry;
 				-- "Jenniferfucked":
-					now Jenniferfucked is numberVarValue entry;
+					if Jenniferfucked is not NumberVarValue entry, now Jenniferfucked is NumberVarValue entry;
 				-- "Jenniferpregnant":
-					now Jenniferpregnant is numberVarValue entry;
+					if Jenniferpregnant is not NumberVarValue entry, now Jenniferpregnant is NumberVarValue entry;
 				-- "Jenniferwolves":
-					now Jenniferwolves is numberVarValue entry;
+					if Jenniferwolves is not NumberVarValue entry, now Jenniferwolves is NumberVarValue entry;
 				-- "JewelHeistCaught":
-					now JewelHeistCaught is numberVarValue entry;
+					if JewelHeistCaught is not NumberVarValue entry, now JewelHeistCaught is NumberVarValue entry;
 				-- "joannaharoldtalk":
-					now joannaharoldtalk is numberVarValue entry;
+					if joannaharoldtalk is not NumberVarValue entry, now joannaharoldtalk is NumberVarValue entry;
 				-- "joannaoffernum":
-					now joannaoffernum is numberVarValue entry;
+					if joannaoffernum is not NumberVarValue entry, now joannaoffernum is NumberVarValue entry;
 				-- "joannatalk":
-					now joannatalk is numberVarValue entry;
+					if joannatalk is not NumberVarValue entry, now joannatalk is NumberVarValue entry;
 				-- "junknum":
-					now junknum is numberVarValue entry;
+					if junknum is not NumberVarValue entry, now junknum is NumberVarValue entry;
 				-- "JustinRelationship":
-					now JustinRelationship is numberVarValue entry;
+					if JustinRelationship is not NumberVarValue entry, now JustinRelationship is NumberVarValue entry;
 				-- "kangaroodefeat":
-					now kangaroodefeat is numberVarValue entry;
+					if kangaroodefeat is not NumberVarValue entry, now kangaroodefeat is NumberVarValue entry;
 				-- "KatyaDildoTaken":
-					now KatyaDildoTaken is numberVarValue entry;
+					if KatyaDildoTaken is not NumberVarValue entry, now KatyaDildoTaken is NumberVarValue entry;
 				-- "KatyaRelationship":
-					now KatyaRelationship is numberVarValue entry;
+					if KatyaRelationship is not NumberVarValue entry, now KatyaRelationship is NumberVarValue entry;
 				-- "KatyaResistance":
-					now KatyaResistance is numberVarValue entry;
+					if KatyaResistance is not NumberVarValue entry, now KatyaResistance is NumberVarValue entry;
 				-- "keepbody":
-					now keepbody is numberVarValue entry;
+					if keepbody is not NumberVarValue entry, now keepbody is NumberVarValue entry;
 				-- "keepcock":
-					now keepcock is numberVarValue entry;
+					if keepcock is not NumberVarValue entry, now keepcock is NumberVarValue entry;
 				-- "keepface":
-					now keepface is numberVarValue entry;
+					if keepface is not NumberVarValue entry, now keepface is NumberVarValue entry;
 				-- "keepskin":
-					now keepskin is numberVarValue entry;
+					if keepskin is not NumberVarValue entry, now keepskin is NumberVarValue entry;
 				-- "keeptail":
-					now keeptail is numberVarValue entry;
+					if keeptail is not NumberVarValue entry, now keeptail is NumberVarValue entry;
 				-- "Kenazaroused":
-					now Kenazaroused is numberVarValue entry;
+					if Kenazaroused is not NumberVarValue entry, now Kenazaroused is NumberVarValue entry;
 				-- "Kenazdes":
-					now Kenazdes is numberVarValue entry;
+					if Kenazdes is not NumberVarValue entry, now Kenazdes is NumberVarValue entry;
 				-- "Kenaztalk":
-					now Kenaztalk is numberVarValue entry;
+					if Kenaztalk is not NumberVarValue entry, now Kenaztalk is NumberVarValue entry;
 				-- "keycollection":
-					now keycollection is numberVarValue entry;
+					if keycollection is not NumberVarValue entry, now keycollection is NumberVarValue entry;
 				-- "KinksandFetishes":
-					now KinksandFetishes is numberVarValue entry;
+					if KinksandFetishes is not NumberVarValue entry, now KinksandFetishes is NumberVarValue entry;
 				-- "Kitsunearoused":
-					now Kitsunearoused is numberVarValue entry;
+					if Kitsunearoused is not NumberVarValue entry, now Kitsunearoused is NumberVarValue entry;
 				-- "Kitsunetalk":
-					now Kitsunetalk is numberVarValue entry;
+					if Kitsunetalk is not NumberVarValue entry, now Kitsunetalk is NumberVarValue entry;
 				-- "kittyness":
-					now kittyness is numberVarValue entry;
+					if kittyness is not NumberVarValue entry, now kittyness is NumberVarValue entry;
 				-- "knightcrestnum":
-					now knightcrestnum is numberVarValue entry;
+					if knightcrestnum is not NumberVarValue entry, now knightcrestnum is NumberVarValue entry;
 				-- "KoballoonLossCounter":
-					now KoballoonLossCounter is numberVarValue entry;
+					if KoballoonLossCounter is not NumberVarValue entry, now KoballoonLossCounter is NumberVarValue entry;
 				-- "KoballoonMet":
-					now KoballoonMet is numberVarValue entry;
+					if KoballoonMet is not NumberVarValue entry, now KoballoonMet is NumberVarValue entry;
 				-- "koboldgangmet":
-					now koboldgangmet is numberVarValue entry;
+					if koboldgangmet is not NumberVarValue entry, now koboldgangmet is NumberVarValue entry;
 				-- "koboldgangsubs":
-					now koboldgangsubs is numberVarValue entry;
+					if koboldgangsubs is not NumberVarValue entry, now koboldgangsubs is NumberVarValue entry;
 				-- "KoboldScaleColor":
-					now KoboldScaleColor is numberVarValue entry;
+					if KoboldScaleColor is not NumberVarValue entry, now KoboldScaleColor is NumberVarValue entry;
 				-- "Koghhstatus":
-					now Koghhstatus is numberVarValue entry;
+					if Koghhstatus is not NumberVarValue entry, now Koghhstatus is NumberVarValue entry;
 				-- "KorvinSubmitCounter":
-					now KorvinSubmitCounter is numberVarValue entry;
+					if KorvinSubmitCounter is not NumberVarValue entry, now KorvinSubmitCounter is NumberVarValue entry;
 				-- "kpstatus":
-					now kpstatus is numberVarValue entry;
+					if kpstatus is not NumberVarValue entry, now kpstatus is NumberVarValue entry;
 				-- "KTO":
-					now KTO is numberVarValue entry;
+					if KTO is not NumberVarValue entry, now KTO is NumberVarValue entry;
 				-- "KitsuneEventStage":
-					now KitsuneEventStage is numberVarValue entry;
+					if KitsuneEventStage is not NumberVarValue entry, now KitsuneEventStage is NumberVarValue entry;
 				-- "ktspeciesbonus":
-					now ktspeciesbonus is numberVarValue entry;
+					if ktspeciesbonus is not NumberVarValue entry, now ktspeciesbonus is NumberVarValue entry;
 				-- "KurtEvent":
-					now KurtEvent is numberVarValue entry;
+					if KurtEvent is not NumberVarValue entry, now KurtEvent is NumberVarValue entry;
 				-- "KurtRelationship":
-					now KurtRelationship is numberVarValue entry;
+					if KurtRelationship is not NumberVarValue entry, now KurtRelationship is NumberVarValue entry;
 				-- "KyleRelationship":
-					now KyleRelationship is numberVarValue entry;
+					if KyleRelationship is not NumberVarValue entry, now KyleRelationship is NumberVarValue entry;
 				-- "KyrverthMaleBoning":
-					now KyrverthMaleBoning is numberVarValue entry;
+					if KyrverthMaleBoning is not NumberVarValue entry, now KyrverthMaleBoning is NumberVarValue entry;
 				-- "KyrverthQuestGiven":
-					now KyrverthQuestGiven is numberVarValue entry;
+					if KyrverthQuestGiven is not NumberVarValue entry, now KyrverthQuestGiven is NumberVarValue entry;
 				-- "KyrverthStage":
-					now KyrverthStage is numberVarValue entry;
+					if KyrverthStage is not NumberVarValue entry, now KyrverthStage is NumberVarValue entry;
 				-- "KyrverthTimer":
-					now KyrverthTimer is numberVarValue entry;
+					if KyrverthTimer is not NumberVarValue entry, now KyrverthTimer is NumberVarValue entry;
 				-- "Kyrverthitemget":
-					now KyrverthItemGet is NumberVarValue entry;
+					if KyrverthItemGet is not NumberVarValue entry, now KyrverthItemGet is NumberVarValue entry;
 				-- "KyrverthItemReturned":
-					now KyrverthItemReturned is NumberVarValue entry;
+					if KyrverthItemReturned is not NumberVarValue entry, now KyrverthItemReturned is NumberVarValue entry;
 				-- "KyrverthNutGrowth":
-					now KyrverthNutGrowth is NumberVarValue entry;
+					if KyrverthNutGrowth is not NumberVarValue entry, now KyrverthNutGrowth is NumberVarValue entry;
 				-- "KyrverthSpikeGrowth":
-					now KyrverthSpikeGrowth is NumberVarValue entry;
+					if KyrverthSpikeGrowth is not NumberVarValue entry, now KyrverthSpikeGrowth is NumberVarValue entry;
 				-- "KyrverthWingType":
-					now KyrverthWingType is NumberVarValue entry;
+					if KyrverthWingType is not NumberVarValue entry, now KyrverthWingType is NumberVarValue entry;
 				-- "KyrverthCockType":
-					now KyrverthCockType is NumberVarValue entry;
+					if KyrverthCockType is not NumberVarValue entry, now KyrverthCockType is NumberVarValue entry;
 				-- "KyrverthLockoutTimer":
-					now KyrverthLockoutTimer is NumberVarValue entry;
+					if KyrverthLockoutTimer is not NumberVarValue entry, now KyrverthLockoutTimer is NumberVarValue entry;
 				-- "KyrverthEndingTimer":
-					now KyrverthEndingTimer is NumberVarValue entry;
+					if KyrverthEndingTimer is not NumberVarValue entry, now KyrverthEndingTimer is NumberVarValue entry;
 				-- "KyrverthBodyChanged":
-					now KyrverthBodyChanged is NumberVarValue entry;
+					if KyrverthBodyChanged is not NumberVarValue entry, now KyrverthBodyChanged is NumberVarValue entry;
 				-- "KyrverthPanicWitnessed":
-					now KyrverthPanicWitnessed is NumberVarValue entry;
+					if KyrverthPanicWitnessed is not NumberVarValue entry, now KyrverthPanicWitnessed is NumberVarValue entry;
 				-- "labhost":
-					now labhost is numberVarValue entry;
+					if labhost is not NumberVarValue entry, now labhost is NumberVarValue entry;
 				-- "labtimerA":
-					now labtimerA is numberVarValue entry;
+					if labtimerA is not NumberVarValue entry, now labtimerA is NumberVarValue entry;
 				-- "labtimerB":
-					now labtimerB is numberVarValue entry;
+					if labtimerB is not NumberVarValue entry, now labtimerB is NumberVarValue entry;
 				-- "lairconsent":
-					now lairconsent is numberVarValue entry;
+					if lairconsent is not NumberVarValue entry, now lairconsent is NumberVarValue entry;
 				-- "LampVariable":
-					now LampVariable is numberVarValue entry;
+					if LampVariable is not NumberVarValue entry, now LampVariable is NumberVarValue entry;
 				-- "LarissaBodycat":
-					now LarissaBodycat is numberVarValue entry;
+					if LarissaBodycat is not NumberVarValue entry, now LarissaBodycat is NumberVarValue entry;
 				-- "LarissaLastTF":
-					now LarissaLastTF is numberVarValue entry;
+					if LarissaLastTF is not NumberVarValue entry, now LarissaLastTF is NumberVarValue entry;
 				-- "LarissaOldgender":
-					now LarissaOldgender is numberVarValue entry;
+					if LarissaOldgender is not NumberVarValue entry, now LarissaOldgender is NumberVarValue entry;
 				-- "LarissTFcost":
-					now LarissTFcost is numberVarValue entry;
+					if LarissTFcost is not NumberVarValue entry, now LarissTFcost is NumberVarValue entry;
 				-- "larvacounter":
-					now larvacounter is numberVarValue entry;
+					if larvacounter is not NumberVarValue entry, now larvacounter is NumberVarValue entry;
 				-- "larvaegg":
-					now larvaegg is numberVarValue entry;
+					if larvaegg is not NumberVarValue entry, now larvaegg is NumberVarValue entry;
 				-- "larvaexpel":
-					now larvaexpel is numberVarValue entry;
+					if larvaexpel is not NumberVarValue entry, now larvaexpel is NumberVarValue entry;
 				-- "larvalaid":
-					now larvalaid is numberVarValue entry;
+					if larvalaid is not NumberVarValue entry, now larvalaid is NumberVarValue entry;
 				-- "last_infvulp_airhead":
-					now last_infvulp_airhead is numberVarValue entry;
+					if last_infvulp_airhead is not NumberVarValue entry, now last_infvulp_airhead is NumberVarValue entry;
 				-- "lastABEncounter":
-					now lastABEncounter is numberVarValue entry;
+					if lastABEncounter is not NumberVarValue entry, now lastABEncounter is NumberVarValue entry;
 				-- "lastAlexandraPast":
-					now lastAlexandraPast is numberVarValue entry;
+					if lastAlexandraPast is not NumberVarValue entry, now lastAlexandraPast is NumberVarValue entry;
 				-- "lastAlexandraSarahInteraction":
-					now lastAlexandraSarahInteraction is numberVarValue entry;
+					if lastAlexandraSarahInteraction is not NumberVarValue entry, now lastAlexandraSarahInteraction is NumberVarValue entry;
 				-- "lastAmySpotted":
-					now lastAmySpotted is numberVarValue entry;
+					if lastAmySpotted is not NumberVarValue entry, now lastAmySpotted is NumberVarValue entry;
 				-- "lastAndreTalk":
-					now lastAndreTalk is numberVarValue entry;
+					if lastAndreTalk is not NumberVarValue entry, now lastAndreTalk is NumberVarValue entry;
 				-- "LastAngieLearned":
-					now LastAngieLearned is numberVarValue entry;
+					if LastAngieLearned is not NumberVarValue entry, now LastAngieLearned is NumberVarValue entry;
 				-- "lastArtemisglomp":
-					now lastArtemisglomp is numberVarValue entry;
+					if lastArtemisglomp is not NumberVarValue entry, now lastArtemisglomp is NumberVarValue entry;
 				-- "lastArtemisplay":
-					now lastArtemisplay is numberVarValue entry;
+					if lastArtemisplay is not NumberVarValue entry, now lastArtemisplay is NumberVarValue entry;
 				-- "LastAtlantisCenterWalkin":
-					now LastAtlantisCenterWalkin is numberVarValue entry;
+					if LastAtlantisCenterWalkin is not NumberVarValue entry, now LastAtlantisCenterWalkin is NumberVarValue entry;
 				-- "lastbcchair":
-					now lastbcchair is numberVarValue entry;
+					if lastbcchair is not NumberVarValue entry, now lastbcchair is NumberVarValue entry;
 				-- "lastbcduobeaten":
-					now lastbcduobeaten is numberVarValue entry;
+					if lastbcduobeaten is not NumberVarValue entry, now lastbcduobeaten is NumberVarValue entry;
 				-- "lastBodyShopEvent":
-					now lastBodyShopEvent is numberVarValue entry;
+					if lastBodyShopEvent is not NumberVarValue entry, now lastBodyShopEvent is NumberVarValue entry;
 				-- "lastbookshelves":
-					now lastbookshelves is numberVarValue entry;
+					if lastbookshelves is not NumberVarValue entry, now lastbookshelves is NumberVarValue entry;
 				-- "lastBrennanWolfScene":
-					now lastBrennanWolfScene is numberVarValue entry;
+					if lastBrennanWolfScene is not NumberVarValue entry, now lastBrennanWolfScene is NumberVarValue entry;
 				-- "LastCampusWalkin":
-					now LastCampusWalkin is numberVarValue entry;
+					if LastCampusWalkin is not NumberVarValue entry, now LastCampusWalkin is NumberVarValue entry;
 				-- "lastCandyfucked":
-					now lastCandyfucked is numberVarValue entry;
+					if lastCandyfucked is not NumberVarValue entry, now lastCandyfucked is NumberVarValue entry;
 				-- "lastCandyUrikInteraction":
-					now lastCandyUrikInteraction is numberVarValue entry;
+					if lastCandyUrikInteraction is not NumberVarValue entry, now lastCandyUrikInteraction is NumberVarValue entry;
 				-- "LastCandyWalkin":
-					now LastCandyWalkin is numberVarValue entry;
+					if LastCandyWalkin is not NumberVarValue entry, now LastCandyWalkin is NumberVarValue entry;
 				-- "lastCarlEricInteraction":
-					now lastCarlEricInteraction is numberVarValue entry;
+					if lastCarlEricInteraction is not NumberVarValue entry, now lastCarlEricInteraction is NumberVarValue entry;
 				-- "lastCarlKorvinInteraction":
-					now lastCarlKorvinInteraction is numberVarValue entry;
+					if lastCarlKorvinInteraction is not NumberVarValue entry, now lastCarlKorvinInteraction is NumberVarValue entry;
 				-- "lastCarlSarahInteraction":
-					now lastCarlSarahInteraction is numberVarValue entry;
+					if lastCarlSarahInteraction is not NumberVarValue entry, now lastCarlSarahInteraction is NumberVarValue entry;
 				-- "lastcheetahturns":
-					now lastcheetahturns is numberVarValue entry;
+					if lastcheetahturns is not NumberVarValue entry, now lastcheetahturns is NumberVarValue entry;
 				-- "lastChristyfucked":
-					now lastChristyfucked is numberVarValue entry;
+					if lastChristyfucked is not NumberVarValue entry, now lastChristyfucked is NumberVarValue entry;
 				-- "lastchurchattempt":
-					now lastchurchattempt is numberVarValue entry;
+					if lastchurchattempt is not NumberVarValue entry, now lastchurchattempt is NumberVarValue entry;
 				-- "lastColleenSarahInteraction":
-					now lastColleenSarahInteraction is numberVarValue entry;
+					if lastColleenSarahInteraction is not NumberVarValue entry, now lastColleenSarahInteraction is NumberVarValue entry;
 				-- "lastconfession":
-					now lastconfession is numberVarValue entry;
+					if lastconfession is not NumberVarValue entry, now lastconfession is NumberVarValue entry;
 				-- "lastConfSvenEricInteraction":
-					now lastConfSvenEricInteraction is numberVarValue entry;
+					if lastConfSvenEricInteraction is not NumberVarValue entry, now lastConfSvenEricInteraction is NumberVarValue entry;
 				-- "lastDavidSarahInteraction":
-					now lastDavidSarahInteraction is numberVarValue entry;
+					if lastDavidSarahInteraction is not NumberVarValue entry, now lastDavidSarahInteraction is NumberVarValue entry;
 				-- "Lastdelaymilitary":
-					now Lastdelaymilitary is numberVarValue entry;
+					if Lastdelaymilitary is not NumberVarValue entry, now Lastdelaymilitary is NumberVarValue entry;
 				-- "lastdenevent":
-					now lastdenevent is numberVarValue entry;
+					if lastdenevent is not NumberVarValue entry, now lastdenevent is NumberVarValue entry;
 				-- "lastdobiemess":
-					now lastdobiemess is numberVarValue entry;
+					if lastdobiemess is not NumberVarValue entry, now lastdobiemess is NumberVarValue entry;
 				-- "LastDrinkserved":
-					now LastDrinkserved is numberVarValue entry;
+					if LastDrinkserved is not NumberVarValue entry, now LastDrinkserved is NumberVarValue entry;
 				-- "lastDrMousefucked":
-					now lastDrMousefucked is numberVarValue entry;
+					if lastDrMousefucked is not NumberVarValue entry, now lastDrMousefucked is NumberVarValue entry;
 				-- "lastEricSarahInteraction":
-					now lastEricSarahInteraction is numberVarValue entry;
+					if lastEricSarahInteraction is not NumberVarValue entry, now lastEricSarahInteraction is NumberVarValue entry;
 				-- "lastFangSarahInteraction":
-					now lastFangSarahInteraction is numberVarValue entry;
+					if lastFangSarahInteraction is not NumberVarValue entry, now lastFangSarahInteraction is NumberVarValue entry;
 				-- "lastFelixTalk":
-					now lastFelixTalk is numberVarValue entry;
+					if lastFelixTalk is not NumberVarValue entry, now lastFelixTalk is NumberVarValue entry;
 				-- "lastfgryphon_TF":
-					now lastfgryphon_TF is numberVarValue entry;
+					if lastfgryphon_TF is not NumberVarValue entry, now lastfgryphon_TF is NumberVarValue entry;
 				-- "lastfightround":
-					now lastfightround is numberVarValue entry;
+					if lastfightround is not NumberVarValue entry, now lastfightround is NumberVarValue entry;
 				-- "lastflowersmell":
-					now lastflowersmell is numberVarValue entry;
+					if lastflowersmell is not NumberVarValue entry, now lastflowersmell is NumberVarValue entry;
 				-- "Lastfoodrun":
-					now Lastfoodrun is numberVarValue entry;
+					if Lastfoodrun is not NumberVarValue entry, now Lastfoodrun is NumberVarValue entry;
 				-- "lastfsdfeeding":
-					now lastfsdfeeding is numberVarValue entry;
+					if lastfsdfeeding is not NumberVarValue entry, now lastfsdfeeding is NumberVarValue entry;
 				-- "Lastgameplay":
-					now Lastgameplay is numberVarValue entry;
+					if Lastgameplay is not NumberVarValue entry, now Lastgameplay is NumberVarValue entry;
 				-- "lastgardenveg":
-					now lastgardenveg is numberVarValue entry;
+					if lastgardenveg is not NumberVarValue entry, now lastgardenveg is NumberVarValue entry;
 				-- "lastGuardBeg":
-					now lastGuardBeg is numberVarValue entry;
+					if lastGuardBeg is not NumberVarValue entry, now lastGuardBeg is NumberVarValue entry;
 				-- "LastHelenTalk":
-					now LastHelenTalk is numberVarValue entry;
+					if LastHelenTalk is not NumberVarValue entry, now LastHelenTalk is NumberVarValue entry;
 				-- "LastHelpKenazOut":
-					now LastHelpKenazOut is numberVarValue entry;
+					if LastHelpKenazOut is not NumberVarValue entry, now LastHelpKenazOut is NumberVarValue entry;
 				-- "lasthgryphon_TG":
-					now lasthgryphon_TG is numberVarValue entry;
+					if lasthgryphon_TG is not NumberVarValue entry, now lasthgryphon_TG is NumberVarValue entry;
 				-- "LastImpMeeting":
-					now LastImpMeeting is numberVarValue entry;
+					if LastImpMeeting is not NumberVarValue entry, now LastImpMeeting is NumberVarValue entry;
 				-- "lastinvfoundindex":
-					now lastinvfoundindex is numberVarValue entry;
+					if lastinvfoundindex is not NumberVarValue entry, now lastinvfoundindex is NumberVarValue entry;
 				-- "LastJaksEncounter":
-					now LastJaksEncounter is numberVarValue entry;
+					if LastJaksEncounter is not NumberVarValue entry, now LastJaksEncounter is NumberVarValue entry;
 				-- "LastJenniferSoda":
-					now LastJenniferSoda is numberVarValue entry;
+					if LastJenniferSoda is not NumberVarValue entry, now LastJenniferSoda is NumberVarValue entry;
 				-- "lastjoannajuice":
-					now lastjoannajuice is numberVarValue entry;
+					if lastjoannajuice is not NumberVarValue entry, now lastjoannajuice is NumberVarValue entry;
 				-- "Lastjournaluse":
-					now Lastjournaluse is numberVarValue entry;
+					if Lastjournaluse is not NumberVarValue entry, now Lastjournaluse is NumberVarValue entry;
 				-- "LastKenazdes":
-					now LastKenazdes is numberVarValue entry;
+					if LastKenazdes is not NumberVarValue entry, now LastKenazdes is NumberVarValue entry;
 				-- "lastleomidcoitus":
-					now lastleomidcoitus is numberVarValue entry;
+					if lastleomidcoitus is not NumberVarValue entry, now lastleomidcoitus is NumberVarValue entry;
 				-- "lastlibrarybrowse":
-					now lastlibrarybrowse is numberVarValue entry;
+					if lastlibrarybrowse is not NumberVarValue entry, now lastlibrarybrowse is NumberVarValue entry;
 				-- "lastLilithTalk":
-					now lastLilithTalk is numberVarValue entry;
+					if lastLilithTalk is not NumberVarValue entry, now lastLilithTalk is NumberVarValue entry;
 				-- "LastLockerroomTrioMeet":
-					now LastLockerroomTrioMeet is numberVarValue entry;
+					if LastLockerroomTrioMeet is not NumberVarValue entry, now LastLockerroomTrioMeet is NumberVarValue entry;
 				-- "lastMallInteriorScene":
-					now lastMallInteriorScene is numberVarValue entry;
+					if lastMallInteriorScene is not NumberVarValue entry, now lastMallInteriorScene is NumberVarValue entry;
 				-- "Lastmarefed":
-					now Lastmarefed is numberVarValue entry;
+					if Lastmarefed is not NumberVarValue entry, now Lastmarefed is NumberVarValue entry;
 				-- "LastMarketWalkin":
-					now LastMarketWalkin is numberVarValue entry;
+					if LastMarketWalkin is not NumberVarValue entry, now LastMarketWalkin is NumberVarValue entry;
 				-- "Lastmidnightmimiced":
-					now Lastmidnightmimiced is numberVarValue entry;
+					if Lastmidnightmimiced is not NumberVarValue entry, now Lastmidnightmimiced is NumberVarValue entry;
 				-- "lastmilking":
-					now lastmilking is numberVarValue entry;
+					if lastmilking is not NumberVarValue entry, now lastmilking is NumberVarValue entry;
 				-- "lastMKoutcome":
-					now lastMKoutcome is numberVarValue entry;
+					if lastMKoutcome is not NumberVarValue entry, now lastMKoutcome is NumberVarValue entry;
 				-- "LastMoreauPartSale":
-					now LastMoreauPartSale is numberVarValue entry;
+					if LastMoreauPartSale is not NumberVarValue entry, now LastMoreauPartSale is NumberVarValue entry;
 				-- "lastNadiaSpotted":
-					now lastNadiaSpotted is numberVarValue entry;
+					if lastNadiaSpotted is not NumberVarValue entry, now lastNadiaSpotted is NumberVarValue entry;
 				-- "lastoctofight":
-					now lastoctofight is numberVarValue entry;
+					if lastoctofight is not NumberVarValue entry, now lastoctofight is NumberVarValue entry;
 				-- "lastorcabeat":
-					now lastorcabeat is numberVarValue entry;
+					if lastorcabeat is not NumberVarValue entry, now lastorcabeat is NumberVarValue entry;
 				-- "lastPaulahealing":
-					now lastPaulahealing is numberVarValue entry;
+					if lastPaulahealing is not NumberVarValue entry, now lastPaulahealing is NumberVarValue entry;
 				-- "Lastpigfed":
-					now Lastpigfed is numberVarValue entry;
+					if Lastpigfed is not NumberVarValue entry, now Lastpigfed is NumberVarValue entry;
 				-- "lastPolicePatrol":
-					now lastPolicePatrol is numberVarValue entry;
+					if lastPolicePatrol is not NumberVarValue entry, now lastPolicePatrol is NumberVarValue entry;
 				-- "lastpolicerepair":
-					now lastpolicerepair is numberVarValue entry;
+					if lastpolicerepair is not NumberVarValue entry, now lastpolicerepair is NumberVarValue entry;
 				-- "lastpoolgame":
-					now lastpoolgame is numberVarValue entry;
+					if lastpoolgame is not NumberVarValue entry, now lastpoolgame is NumberVarValue entry;
 				-- "lastpubvisit":
-					now lastpubvisit is numberVarValue entry;
+					if lastpubvisit is not NumberVarValue entry, now lastpubvisit is NumberVarValue entry;
 				-- "lastrandomharold":
-					now lastrandomharold is numberVarValue entry;
+					if lastrandomharold is not NumberVarValue entry, now lastrandomharold is NumberVarValue entry;
 				-- "lastRaneEricInteraction":
-					now lastRaneEricInteraction is numberVarValue entry;
+					if lastRaneEricInteraction is not NumberVarValue entry, now lastRaneEricInteraction is NumberVarValue entry;
 				-- "lastratdartthrow":
-					now lastratdartthrow is numberVarValue entry;
+					if lastratdartthrow is not NumberVarValue entry, now lastratdartthrow is NumberVarValue entry;
 				-- "lastratvisit":
-					now lastratvisit is numberVarValue entry;
+					if lastratvisit is not NumberVarValue entry, now lastratvisit is NumberVarValue entry;
 				-- "LastResidentialWalkin":
-					now LastResidentialWalkin is numberVarValue entry;
+					if LastResidentialWalkin is not NumberVarValue entry, now LastResidentialWalkin is NumberVarValue entry;
 				-- "LastRiddle":
-					now LastRiddle is numberVarValue entry;
+					if LastRiddle is not NumberVarValue entry, now LastRiddle is NumberVarValue entry;
 				-- "Lastriddlesphinx":
-					now Lastriddlesphinx is numberVarValue entry;
+					if Lastriddlesphinx is not NumberVarValue entry, now Lastriddlesphinx is NumberVarValue entry;
 				-- "lastRyouseiDavidInteraction":
-					now lastRyouseiDavidInteraction is numberVarValue entry;
+					if lastRyouseiDavidInteraction is not NumberVarValue entry, now lastRyouseiDavidInteraction is NumberVarValue entry;
 				-- "lastRyouseiEricInteraction":
-					now lastRyouseiEricInteraction is numberVarValue entry;
+					if lastRyouseiEricInteraction is not NumberVarValue entry, now lastRyouseiEricInteraction is NumberVarValue entry;
 				-- "lastSallyfucked":
-					now lastSallyfucked is numberVarValue entry;
+					if lastSallyfucked is not NumberVarValue entry, now lastSallyfucked is NumberVarValue entry;
 				-- "lastsealfight":
-					now lastsealfight is numberVarValue entry;
+					if lastsealfight is not NumberVarValue entry, now lastsealfight is NumberVarValue entry;
 				-- "lastSeptusfucked":
-					now lastSeptusfucked is numberVarValue entry;
+					if lastSeptusfucked is not NumberVarValue entry, now lastSeptusfucked is NumberVarValue entry;
 				-- "lastShowerUse":
-					now lastShowerUse is numberVarValue entry;
+					if lastShowerUse is not NumberVarValue entry, now lastShowerUse is NumberVarValue entry;
 				-- "Lastskunkfuck":
-					now Lastskunkfuck is numberVarValue entry;
+					if Lastskunkfuck is not NumberVarValue entry, now Lastskunkfuck is NumberVarValue entry;
 				-- "LastSlutslavefucked":
-					now LastSlutslavefucked is numberVarValue entry;
+					if LastSlutslavefucked is not NumberVarValue entry, now LastSlutslavefucked is NumberVarValue entry;
 				-- "lastSlutslavelearned":
-					now lastSlutslavelearned is numberVarValue entry;
+					if lastSlutslavelearned is not NumberVarValue entry, now lastSlutslavelearned is NumberVarValue entry;
 				-- "lastSnowStarGiven":
-					now lastSnowStarGiven is numberVarValue entry;
+					if lastSnowStarGiven is not NumberVarValue entry, now lastSnowStarGiven is NumberVarValue entry;
 				-- "laststellamove":
-					now laststellamove is numberVarValue entry;
+					if laststellamove is not NumberVarValue entry, now laststellamove is NumberVarValue entry;
 				-- "lastSvendrink":
-					now lastSvendrink is numberVarValue entry;
+					if lastSvendrink is not NumberVarValue entry, now lastSvendrink is NumberVarValue entry;
 				-- "LastTehuantlCarlScene":
-					now LastTehuantlCarlScene is numberVarValue entry;
+					if LastTehuantlCarlScene is not NumberVarValue entry, now LastTehuantlCarlScene is NumberVarValue entry;
 				-- "LastTehuantlKorvinScene":
-					now LastTehuantlKorvinScene is numberVarValue entry;
+					if LastTehuantlKorvinScene is not NumberVarValue entry, now LastTehuantlKorvinScene is NumberVarValue entry;
 				-- "lasttentaclebattleoutcome":
-					now lasttentaclebattleoutcome is numberVarValue entry;
+					if lasttentaclebattleoutcome is not NumberVarValue entry, now lasttentaclebattleoutcome is NumberVarValue entry;
 				-- "lastThomasTalk":
-					now lastThomasTalk is numberVarValue entry;
+					if lastThomasTalk is not NumberVarValue entry, now lastThomasTalk is NumberVarValue entry;
 				-- "LastTimothymilked":
-					now LastTimothymilked is numberVarValue entry;
+					if LastTimothymilked is not NumberVarValue entry, now LastTimothymilked is NumberVarValue entry;
 				-- "lastTomeInteraction":
-					now lastTomeInteraction is numberVarValue entry;
+					if lastTomeInteraction is not NumberVarValue entry, now lastTomeInteraction is NumberVarValue entry;
 				-- "Lasttreasurehunt":
-					now Lasttreasurehunt is numberVarValue entry;
+					if Lasttreasurehunt is not NumberVarValue entry, now Lasttreasurehunt is NumberVarValue entry;
 				-- "LastTSEvent":
-					now LastTSEvent is numberVarValue entry;
+					if LastTSEvent is not NumberVarValue entry, now LastTSEvent is NumberVarValue entry;
 				-- "lastturn":
-					now lastturn is numberVarValue entry;
+					if lastturn is not NumberVarValue entry, now lastturn is NumberVarValue entry;
 				-- "lastUrikEricInteraction":
-					now lastUrikEricInteraction is numberVarValue entry;
+					if lastUrikEricInteraction is not NumberVarValue entry, now lastUrikEricInteraction is NumberVarValue entry;
 				-- "Lastvixenposing":
-					now Lastvixenposing is numberVarValue entry;
+					if Lastvixenposing is not NumberVarValue entry, now Lastvixenposing is NumberVarValue entry;
 				-- "Lastwaterrun":
-					now Lastwaterrun is numberVarValue entry;
+					if Lastwaterrun is not NumberVarValue entry, now Lastwaterrun is NumberVarValue entry;
 				-- "LastWerewolfFuck":
-					now LastWerewolfFuck is numberVarValue entry;
+					if LastWerewolfFuck is not NumberVarValue entry, now LastWerewolfFuck is NumberVarValue entry;
 				-- "lastworkout":
-					now lastworkout is numberVarValue entry;
+					if lastworkout is not NumberVarValue entry, now lastworkout is NumberVarValue entry;
 				-- "LastXerxesTalk":
-					now LastXerxesTalk is numberVarValue entry;
+					if LastXerxesTalk is not NumberVarValue entry, now LastXerxesTalk is NumberVarValue entry;
 				-- "laundryProgress":
-					now laundryProgress is numberVarValue entry;
+					if laundryProgress is not NumberVarValue entry, now laundryProgress is NumberVarValue entry;
 				-- "lavalamplick":
-					now lavalamplick is numberVarValue entry;
+					if lavalamplick is not NumberVarValue entry, now lavalamplick is NumberVarValue entry;
 				-- "LectureCheck":
-					now LectureCheck is numberVarValue entry;
+					if LectureCheck is not NumberVarValue entry, now LectureCheck is NumberVarValue entry;
 				-- "Leonardtimer":
-					now Leonardtimer is numberVarValue entry;
+					if Leonardtimer is not NumberVarValue entry, now Leonardtimer is NumberVarValue entry;
 				-- "leosupplies":
-					now leosupplies is numberVarValue entry;
+					if leosupplies is not NumberVarValue entry, now leosupplies is NumberVarValue entry;
 				-- "lessontime":
-					now lessontime is numberVarValue entry;
+					if lessontime is not NumberVarValue entry, now lessontime is NumberVarValue entry;
 				-- "lgnumber":
-					now lgnumber is numberVarValue entry;
+					if lgnumber is not NumberVarValue entry, now lgnumber is NumberVarValue entry;
 				-- "libidomemory":
-					now libidomemory is numberVarValue entry;
+					if libidomemory is not NumberVarValue entry, now libidomemory is NumberVarValue entry;
 				-- "libstealth":
-					now libstealth is numberVarValue entry;
+					if libstealth is not NumberVarValue entry, now libstealth is NumberVarValue entry;
 				-- "libsuppcount":
-					now libsuppcount is numberVarValue entry;
+					if libsuppcount is not NumberVarValue entry, now libsuppcount is NumberVarValue entry;
 				-- "libvis":
-					now libvis is numberVarValue entry;
+					if libvis is not NumberVarValue entry, now libvis is NumberVarValue entry;
 				-- "lilianabathsex":
-					now lilianabathsex is numberVarValue entry;
+					if lilianabathsex is not NumberVarValue entry, now lilianabathsex is NumberVarValue entry;
 				-- "LilithKidCounter":
-					now LilithKidCounter is numberVarValue entry;
+					if LilithKidCounter is not NumberVarValue entry, now LilithKidCounter is NumberVarValue entry;
 				-- "LilithPregCounter":
-					now LilithPregCounter is numberVarValue entry;
+					if LilithPregCounter is not NumberVarValue entry, now LilithPregCounter is NumberVarValue entry;
 				-- "LilithPregnancy":
-					now LilithPregnancy is numberVarValue entry;
+					if LilithPregnancy is not NumberVarValue entry, now LilithPregnancy is NumberVarValue entry;
 				-- "lisaartemiscount1":
-					now lisaartemiscount1 is numberVarValue entry;
+					if lisaartemiscount1 is not NumberVarValue entry, now lisaartemiscount1 is NumberVarValue entry;
 				-- "lisaartemiscount2":
-					now lisaartemiscount2 is numberVarValue entry;
+					if lisaartemiscount2 is not NumberVarValue entry, now lisaartemiscount2 is NumberVarValue entry;
 				-- "Lisacheat":
-					now Lisacheat is numberVarValue entry;
+					if Lisacheat is not NumberVarValue entry, now Lisacheat is NumberVarValue entry;
 				-- "littlelostskunk":
-					now littlelostskunk is numberVarValue entry;
+					if littlelostskunk is not NumberVarValue entry, now littlelostskunk is NumberVarValue entry;
 				-- "lizgirlangry":
-					now lizgirlangry is numberVarValue entry;
+					if lizgirlangry is not NumberVarValue entry, now lizgirlangry is NumberVarValue entry;
 				-- "lizgirlimpreg":
-					now lizgirlimpreg is numberVarValue entry;
+					if lizgirlimpreg is not NumberVarValue entry, now lizgirlimpreg is NumberVarValue entry;
 				-- "lizgirlinheat":
-					now lizgirlinheat is numberVarValue entry;
+					if lizgirlinheat is not NumberVarValue entry, now lizgirlinheat is NumberVarValue entry;
 				-- "lizgirlmarked":
-					now lizgirlmarked is numberVarValue entry;
+					if lizgirlmarked is not NumberVarValue entry, now lizgirlmarked is NumberVarValue entry;
 				-- "LockerroomTrioRelationship":
-					now LockerroomTrioRelationship is numberVarValue entry;
+					if LockerroomTrioRelationship is not NumberVarValue entry, now LockerroomTrioRelationship is NumberVarValue entry;
 				-- "LoganCommand":
-					now LoganCommand is numberVarValue entry;
+					if LoganCommand is not NumberVarValue entry, now LoganCommand is NumberVarValue entry;
 				-- "LOK":
-					now LOK is numberVarValue entry;
+					if LOK is not NumberVarValue entry, now LOK is NumberVarValue entry;
 				-- "longboatfind":
-					now longboatfind is numberVarValue entry;
+					if longboatfind is not NumberVarValue entry, now longboatfind is NumberVarValue entry;
 				-- "Lost":
-					now Lost is numberVarValue entry;
+					if Lost is not NumberVarValue entry, now Lost is NumberVarValue entry;
 				-- "losttoalphahusky":
-					now losttoalphahusky is numberVarValue entry;
+					if losttoalphahusky is not NumberVarValue entry, now losttoalphahusky is NumberVarValue entry;
 				-- "lostToHorseman":
-					now lostToHorseman is numberVarValue entry;
+					if lostToHorseman is not NumberVarValue entry, now lostToHorseman is NumberVarValue entry;
 				-- "LostToZebra":
-					now LostToZebra is numberVarValue entry;
+					if LostToZebra is not NumberVarValue entry, now LostToZebra is NumberVarValue entry;
 				-- "loversbench":
-					now loversbench is numberVarValue entry;
+					if loversbench is not NumberVarValue entry, now loversbench is NumberVarValue entry;
 				-- "lustadjust":
-					now lustadjust is numberVarValue entry;
+					if lustadjust is not NumberVarValue entry, now lustadjust is NumberVarValue entry;
 				-- "lustatt":
-					now lustatt is numberVarValue entry;
+					if lustatt is not NumberVarValue entry, now lustatt is NumberVarValue entry;
 				-- "lwcounter":
-					now lwcounter is numberVarValue entry;
+					if lwcounter is not NumberVarValue entry, now lwcounter is NumberVarValue entry;
 				-- "MalakhiRelationship":
-					now MalakhiRelationship is numberVarValue entry;
+					if MalakhiRelationship is not NumberVarValue entry, now MalakhiRelationship is NumberVarValue entry;
 				-- "malecatHP":
-					now malecatHP is numberVarValue entry;
+					if malecatHP is not NumberVarValue entry, now malecatHP is NumberVarValue entry;
 				-- "mammoth_cv_count":
-					now mammoth_cv_count is numberVarValue entry;
+					if mammoth_cv_count is not NumberVarValue entry, now mammoth_cv_count is NumberVarValue entry;
 				-- "marefed":
-					now marefed is numberVarValue entry;
+					if marefed is not NumberVarValue entry, now marefed is NumberVarValue entry;
 				-- "margaydancecount":
-					now margaydancecount is numberVarValue entry;
+					if margaydancecount is not NumberVarValue entry, now margaydancecount is NumberVarValue entry;
 				-- "margaymet":
-					now margaymet is numberVarValue entry;
+					if margaymet is not NumberVarValue entry, now margaymet is NumberVarValue entry;
 				-- "margayubed":
-					now margayubed is numberVarValue entry;
+					if margayubed is not NumberVarValue entry, now margayubed is NumberVarValue entry;
 				-- "MarkedSeraphisCum":
-					now MarkedSeraphisCum is numberVarValue entry;
+					if MarkedSeraphisCum is not NumberVarValue entry, now MarkedSeraphisCum is NumberVarValue entry;
 				-- "MarketVisits":
-					now MarketVisits is numberVarValue entry;
+					if MarketVisits is not NumberVarValue entry, now MarketVisits is NumberVarValue entry;
 				-- "mateable":
-					now mateable is numberVarValue entry;
+					if mateable is not NumberVarValue entry, now mateable is NumberVarValue entry;
 				-- "matriarchdefeated":
-					now matriarchdefeated is numberVarValue entry;
+					if matriarchdefeated is not NumberVarValue entry, now matriarchdefeated is NumberVarValue entry;
 				-- "matriarchowned":
-					now matriarchowned is numberVarValue entry;
+					if matriarchowned is not NumberVarValue entry, now matriarchowned is NumberVarValue entry;
 				-- "mattcollection":
-					now mattcollection is numberVarValue entry;
+					if mattcollection is not NumberVarValue entry, now mattcollection is NumberVarValue entry;
 				-- "mattintel":
-					now mattintel is numberVarValue entry;
+					if mattintel is not NumberVarValue entry, now mattintel is NumberVarValue entry;
 				-- "mdasslevel":
-					now mdasslevel is numberVarValue entry;
+					if mdasslevel is not NumberVarValue entry, now mdasslevel is NumberVarValue entry;
 				-- "mdmaxlossscene":
-					now mdmaxlossscene is numberVarValue entry;
+					if mdmaxlossscene is not NumberVarValue entry, now mdmaxlossscene is NumberVarValue entry;
 				-- "mdrakeanal":
-					now mdrakeanal is numberVarValue entry;
+					if mdrakeanal is not NumberVarValue entry, now mdrakeanal is NumberVarValue entry;
 				-- "mdrakebeaten":
-					now mdrakebeaten is numberVarValue entry;
+					if mdrakebeaten is not NumberVarValue entry, now mdrakebeaten is NumberVarValue entry;
 				-- "mdrakeloss":
-					now mdrakeloss is numberVarValue entry;
+					if mdrakeloss is not NumberVarValue entry, now mdrakeloss is NumberVarValue entry;
 				-- "mdrakeoversized":
-					now mdrakeoversized is numberVarValue entry;
+					if mdrakeoversized is not NumberVarValue entry, now mdrakeoversized is NumberVarValue entry;
 				-- "medeaget":
-					now medeaget is numberVarValue entry;
+					if medeaget is not NumberVarValue entry, now medeaget is NumberVarValue entry;
 				-- "MenuRiddleNumber":
-					now MenuRiddleNumber is numberVarValue entry;
+					if MenuRiddleNumber is not NumberVarValue entry, now MenuRiddleNumber is NumberVarValue entry;
 				-- "metalskin":
-					now metalskin is numberVarValue entry;
+					if metalskin is not NumberVarValue entry, now metalskin is NumberVarValue entry;
 				-- "micaela_bf":
-					now micaela_bf is numberVarValue entry;
+					if micaela_bf is not NumberVarValue entry, now micaela_bf is NumberVarValue entry;
 				-- "MichaelGholeMeetings":
-					now MichaelGholeMeetings is numberVarValue entry;
+					if MichaelGholeMeetings is not NumberVarValue entry, now MichaelGholeMeetings is NumberVarValue entry;
 				-- "Midnightmimiced":
-					now Midnightmimiced is numberVarValue entry;
+					if Midnightmimiced is not NumberVarValue entry, now Midnightmimiced is NumberVarValue entry;
 				-- "midnightsighted":
-					now midnightsighted is numberVarValue entry;
+					if midnightsighted is not NumberVarValue entry, now midnightsighted is NumberVarValue entry;
 				-- "MiltonRelationship":
-					now MiltonRelationship is numberVarValue entry;
+					if MiltonRelationship is not NumberVarValue entry, now MiltonRelationship is NumberVarValue entry;
 				-- "missskip":
-					now missskip is numberVarValue entry;
+					if missskip is not NumberVarValue entry, now missskip is NumberVarValue entry;
 				-- "MiyukiRelationship":
-					now MiyukiRelationship is numberVarValue entry;
+					if MiyukiRelationship is not NumberVarValue entry, now MiyukiRelationship is NumberVarValue entry;
 				-- "MKloss":
-					now MKloss is numberVarValue entry;
+					if MKloss is not NumberVarValue entry, now MKloss is NumberVarValue entry;
 				-- "MKmet":
-					now MKmet is numberVarValue entry;
+					if MKmet is not NumberVarValue entry, now MKmet is NumberVarValue entry;
 				-- "MKwin":
-					now MKwin is numberVarValue entry;
+					if MKwin is not NumberVarValue entry, now MKwin is NumberVarValue entry;
 				-- "mlamiabeaten":
-					now mlamiabeaten is numberVarValue entry;
+					if mlamiabeaten is not NumberVarValue entry, now mlamiabeaten is NumberVarValue entry;
 				-- "mlamialoss":
-					now mlamialoss is numberVarValue entry;
+					if mlamialoss is not NumberVarValue entry, now mlamialoss is NumberVarValue entry;
 				-- "MMC":
-					now MMC is numberVarValue entry;
+					if MMC is not NumberVarValue entry, now MMC is NumberVarValue entry;
 				-- "MMP":
-					now MMP is numberVarValue entry;
+					if MMP is not NumberVarValue entry, now MMP is NumberVarValue entry;
 				-- "mondodgebonus":
-					now mondodgebonus is numberVarValue entry;
+					if mondodgebonus is not NumberVarValue entry, now mondodgebonus is NumberVarValue entry;
 				-- "monmindbonus":
-					now monmindbonus is numberVarValue entry;
+					if monmindbonus is not NumberVarValue entry, now monmindbonus is NumberVarValue entry;
 				-- "monstercom":
-					now monstercom is numberVarValue entry;
+					if monstercom is not NumberVarValue entry, now monstercom is NumberVarValue entry;
 				-- "monsterHP":
-					now monsterHP is numberVarValue entry;
+					if monsterHP is not NumberVarValue entry, now monsterHP is NumberVarValue entry;
 				-- "monstermemory":
-					now monstermemory is numberVarValue entry;
+					if monstermemory is not NumberVarValue entry, now monstermemory is NumberVarValue entry;
 				-- "monsterpoison":
-					now monsterpoison is numberVarValue entry;
+					if monsterpoison is not NumberVarValue entry, now monsterpoison is NumberVarValue entry;
 				-- "monsterpowerup":
-					now monsterpowerup is numberVarValue entry;
+					if monsterpowerup is not NumberVarValue entry, now monsterpowerup is NumberVarValue entry;
 				-- "Mooed":
-					now Mooed is numberVarValue entry;
+					if Mooed is not NumberVarValue entry, now Mooed is NumberVarValue entry;
 				-- "Mooing":
-					now Mooing is numberVarValue entry;
+					if Mooing is not NumberVarValue entry, now Mooing is NumberVarValue entry;
 				-- "Mothdefeat":
-					now Mothdefeat is numberVarValue entry;
+					if Mothdefeat is not NumberVarValue entry, now Mothdefeat is NumberVarValue entry;
 				-- "mothgirlnosex":
-					now mothgirlnosex is numberVarValue entry;
+					if mothgirlnosex is not NumberVarValue entry, now mothgirlnosex is NumberVarValue entry;
 				-- "mousecounter":
-					now mousecounter is numberVarValue entry;
+					if mousecounter is not NumberVarValue entry, now mousecounter is NumberVarValue entry;
 				-- "mousecurse":
-					now mousecurse is numberVarValue entry;
+					if mousecurse is not NumberVarValue entry, now mousecurse is NumberVarValue entry;
 				-- "mousefucked":
-					now mousefucked is numberVarValue entry;
+					if mousefucked is not NumberVarValue entry, now mousefucked is NumberVarValue entry;
 				-- "mouseintel":
-					now mouseintel is numberVarValue entry;
+					if mouseintel is not NumberVarValue entry, now mouseintel is NumberVarValue entry;
 				-- "mousespot":
-					now mousespot is numberVarValue entry;
+					if mousespot is not NumberVarValue entry, now mousespot is NumberVarValue entry;
 				-- "mousevic":
-					now mousevic is numberVarValue entry;
+					if mousevic is not NumberVarValue entry, now mousevic is NumberVarValue entry;
 				-- "MovingOrwell":
-					now MovingOrwell is numberVarValue entry;
+					if MovingOrwell is not NumberVarValue entry, now MovingOrwell is NumberVarValue entry;
 				-- "mpregcount":
-					now mpregcount is numberVarValue entry;
+					if mpregcount is not NumberVarValue entry, now mpregcount is NumberVarValue entry;
 				-- "mqcountdown":
-					now mqcountdown is numberVarValue entry;
+					if mqcountdown is not NumberVarValue entry, now mqcountdown is NumberVarValue entry;
 				-- "mqpickup":
-					now mqpickup is numberVarValue entry;
+					if mqpickup is not NumberVarValue entry, now mqpickup is NumberVarValue entry;
 				-- "mqstatus":
-					now mqstatus is numberVarValue entry;
+					if mqstatus is not NumberVarValue entry, now mqstatus is NumberVarValue entry;
 				-- "mre01":
-					now mre01 is numberVarValue entry;
+					if mre01 is not NumberVarValue entry, now mre01 is NumberVarValue entry;
 				-- "mre02":
-					now mre02 is numberVarValue entry;
+					if mre02 is not NumberVarValue entry, now mre02 is NumberVarValue entry;
 				-- "MSStorageVisited":
-					now MSStorageVisited is numberVarValue entry;
+					if MSStorageVisited is not NumberVarValue entry, now MSStorageVisited is NumberVarValue entry;
 				-- "MTP":
-					now MTP is numberVarValue entry;
+					if MTP is not NumberVarValue entry, now MTP is NumberVarValue entry;
 				-- "mtrp":
-					now mtrp is numberVarValue entry;
+					if mtrp is not NumberVarValue entry, now mtrp is NumberVarValue entry;
 				-- "MulAnalAcceptance":
-					now MulAnalAcceptance is numberVarValue entry;
+					if MulAnalAcceptance is not NumberVarValue entry, now MulAnalAcceptance is NumberVarValue entry;
 				-- "multicunt":
-					now multicunt is numberVarValue entry;
+					if multicunt is not NumberVarValue entry, now multicunt is NumberVarValue entry;
 				-- "MurderMystery":
-					now MurderMystery is numberVarValue entry;
+					if MurderMystery is not NumberVarValue entry, now MurderMystery is NumberVarValue entry;
 				-- "MushroomCaveVisited":
-					now MushroomCaveVisited is numberVarValue entry;
+					if MushroomCaveVisited is not NumberVarValue entry, now MushroomCaveVisited is NumberVarValue entry;
 				-- "MYDAM":
-					now MYDAM is numberVarValue entry;
+					if MYDAM is not NumberVarValue entry, now MYDAM is NumberVarValue entry;
 				-- "MYDGM":
-					now MYDGM is numberVarValue entry;
+					if MYDGM is not NumberVarValue entry, now MYDGM is NumberVarValue entry;
 				-- "MYDTBMM":
-					now MYDTBMM is numberVarValue entry;
+					if MYDTBMM is not NumberVarValue entry, now MYDTBMM is NumberVarValue entry;
 				-- "myseread":
-					now myseread is numberVarValue entry;
+					if myseread is not NumberVarValue entry, now myseread is NumberVarValue entry;
 				-- "NadiaChickCounter":
-					now NadiaChickCounter is numberVarValue entry;
+					if NadiaChickCounter is not NumberVarValue entry, now NadiaChickCounter is NumberVarValue entry;
 				-- "NadiaDescription":
-					now NadiaDescription is numberVarValue entry;
+					if NadiaDescription is not NumberVarValue entry, now NadiaDescription is NumberVarValue entry;
 				-- "NadiaFertilityCounter":
-					now NadiaFertilityCounter is numberVarValue entry;
+					if NadiaFertilityCounter is not NumberVarValue entry, now NadiaFertilityCounter is NumberVarValue entry;
 				-- "NadiaintCounter":
-					now NadiaintCounter is numberVarValue entry;
+					if NadiaintCounter is not NumberVarValue entry, now NadiaintCounter is NumberVarValue entry;
 				-- "NadiaPregCounter1":
-					now NadiaPregCounter1 is numberVarValue entry;
+					if NadiaPregCounter1 is not NumberVarValue entry, now NadiaPregCounter1 is NumberVarValue entry;
 				-- "NadiaPregCounter2":
-					now NadiaPregCounter2 is numberVarValue entry;
+					if NadiaPregCounter2 is not NumberVarValue entry, now NadiaPregCounter2 is NumberVarValue entry;
 				-- "NadiaPregCounter3":
-					now NadiaPregCounter3 is numberVarValue entry;
+					if NadiaPregCounter3 is not NumberVarValue entry, now NadiaPregCounter3 is NumberVarValue entry;
 				-- "NadiaPregVisibility":
-					now NadiaPregVisibility is numberVarValue entry;
+					if NadiaPregVisibility is not NumberVarValue entry, now NadiaPregVisibility is NumberVarValue entry;
 				-- "nanitemeter":
-					now nanitemeter is numberVarValue entry;
+					if nanitemeter is not NumberVarValue entry, now nanitemeter is NumberVarValue entry;
 				-- "NatalieFucked":
-					now NatalieFucked is numberVarValue entry;
+					if NatalieFucked is not NumberVarValue entry, now NatalieFucked is NumberVarValue entry;
 				-- "ndmhigh":
-					now ndmhigh is numberVarValue entry;
+					if ndmhigh is not NumberVarValue entry, now ndmhigh is NumberVarValue entry;
 				-- "NerdMeetings":
-					now NerdMeetings is numberVarValue entry;
+					if NerdMeetings is not NumberVarValue entry, now NerdMeetings is NumberVarValue entry;
 				-- "NermineAroused":
-					now NermineAroused is numberVarValue entry;
+					if NermineAroused is not NumberVarValue entry, now NermineAroused is NumberVarValue entry;
 				-- "NermineBukkakeTurn":
-					now NermineBukkakeTurn is numberVarValue entry;
+					if NermineBukkakeTurn is not NumberVarValue entry, now NermineBukkakeTurn is NumberVarValue entry;
 				-- "NermineFeat":
-					now NermineFeat is numberVarValue entry;
+					if NermineFeat is not NumberVarValue entry, now NermineFeat is NumberVarValue entry;
 				-- "NermineFennecTurn":
-					now NermineFennecTurn is numberVarValue entry;
+					if NermineFennecTurn is not NumberVarValue entry, now NermineFennecTurn is NumberVarValue entry;
 				-- "NermineFucked":
-					now NermineFucked is numberVarValue entry;
+					if NermineFucked is not NumberVarValue entry, now NermineFucked is NumberVarValue entry;
 				-- "Nerminehelpstatus":
-					now Nerminehelpstatus is numberVarValue entry;
+					if Nerminehelpstatus is not NumberVarValue entry, now Nerminehelpstatus is NumberVarValue entry;
 				-- "nerminepackage":
-					now nerminepackage is numberVarValue entry;
+					if nerminepackage is not NumberVarValue entry, now nerminepackage is NumberVarValue entry;
 				-- "nerminepackagematt":
-					now nerminepackagematt is numberVarValue entry;
+					if nerminepackagematt is not NumberVarValue entry, now nerminepackagematt is NumberVarValue entry;
 				-- "NermineQuest":
-					now NermineQuest is numberVarValue entry;
+					if NermineQuest is not NumberVarValue entry, now NermineQuest is NumberVarValue entry;
 				-- "NermineTalk":
-					now NermineTalk is numberVarValue entry;
+					if NermineTalk is not NumberVarValue entry, now NermineTalk is NumberVarValue entry;
 				-- "NESProgress":
-					now NESProgress is numberVarValue entry;
+					if NESProgress is not NumberVarValue entry, now NESProgress is NumberVarValue entry;
 				-- "nesteddino":
-					now nesteddino is numberVarValue entry;
+					if nesteddino is not NumberVarValue entry, now nesteddino is NumberVarValue entry;
 				-- "NGRP":
-					now NGRP is numberVarValue entry;
+					if NGRP is not NumberVarValue entry, now NGRP is NumberVarValue entry;
 				-- "nightcheck":
-					now nightcheck is numberVarValue entry;
+					if nightcheck is not NumberVarValue entry, now nightcheck is NumberVarValue entry;
 				-- "Nightmaremastery":
-					now Nightmaremastery is numberVarValue entry;
+					if Nightmaremastery is not NumberVarValue entry, now Nightmaremastery is NumberVarValue entry;
 				-- "Nightmareslavery":
-					now Nightmareslavery is numberVarValue entry;
+					if Nightmareslavery is not NumberVarValue entry, now Nightmareslavery is NumberVarValue entry;
 				-- "nightmaretf":
-					now nightmaretf is numberVarValue entry;
+					if nightmaretf is not NumberVarValue entry, now nightmaretf is NumberVarValue entry;
 				-- "no_AlexandraNPC":
-					now no_AlexandraNPC is numberVarValue entry;
+					if no_AlexandraNPC is not NumberVarValue entry, now no_AlexandraNPC is NumberVarValue entry;
 				-- "no_AlexandraTask":
-					now no_AlexandraTask is numberVarValue entry;
+					if no_AlexandraTask is not NumberVarValue entry, now no_AlexandraTask is NumberVarValue entry;
 				-- "noamazoniansex":
-					now noamazoniansex is numberVarValue entry;
+					if noamazoniansex is not NumberVarValue entry, now noamazoniansex is NumberVarValue entry;
 				-- "noanimebabesex":
-					now noanimebabesex is numberVarValue entry;
+					if noanimebabesex is not NumberVarValue entry, now noanimebabesex is NumberVarValue entry;
 				-- "nobeaversex":
-					now nobeaversex is numberVarValue entry;
+					if nobeaversex is not NumberVarValue entry, now nobeaversex is NumberVarValue entry;
 				-- "nobirdofparadisesex":
-					now nobirdofparadisesex is numberVarValue entry;
+					if nobirdofparadisesex is not NumberVarValue entry, now nobirdofparadisesex is NumberVarValue entry;
 				-- "nobluechaffinchsex":
-					now nobluechaffinchsex is numberVarValue entry;
+					if nobluechaffinchsex is not NumberVarValue entry, now nobluechaffinchsex is NumberVarValue entry;
 				-- "nocandycoonsex":
-					now nocandycoonsex is numberVarValue entry;
+					if nocandycoonsex is not NumberVarValue entry, now nocandycoonsex is NumberVarValue entry;
 				-- "nochinchillasex":
-					now nochinchillasex is numberVarValue entry;
+					if nochinchillasex is not NumberVarValue entry, now nochinchillasex is NumberVarValue entry;
 				-- "nodonkeywomansex":
-					now nodonkeywomansex is numberVarValue entry;
+					if nodonkeywomansex is not NumberVarValue entry, now nodonkeywomansex is NumberVarValue entry;
 				-- "noeaglesex":
-					now noeaglesex is numberVarValue entry;
+					if noeaglesex is not NumberVarValue entry, now noeaglesex is NumberVarValue entry;
 				-- "noelksex":
-					now noelksex is numberVarValue entry;
+					if noelksex is not NumberVarValue entry, now noelksex is NumberVarValue entry;
 				-- "nofponysex":
-					now nofponysex is numberVarValue entry;
+					if nofponysex is not NumberVarValue entry, now nofponysex is NumberVarValue entry;
 				-- "nogiraffesex":
-					now nogiraffesex is numberVarValue entry;
+					if nogiraffesex is not NumberVarValue entry, now nogiraffesex is NumberVarValue entry;
 				-- "nogunbunnysex":
-					now nogunbunnysex is numberVarValue entry;
+					if nogunbunnysex is not NumberVarValue entry, now nogunbunnysex is NumberVarValue entry;
 				-- "nohawkmansex":
-					now nohawkmansex is numberVarValue entry;
+					if nohawkmansex is not NumberVarValue entry, now nohawkmansex is NumberVarValue entry;
 				-- "nohgryphonsex":
-					now nohgryphonsex is numberVarValue entry;
+					if nohgryphonsex is not NumberVarValue entry, now nohgryphonsex is NumberVarValue entry;
 				-- "NoIntroduction":
-					now NoIntroduction is numberVarValue entry;
+					if NoIntroduction is not NumberVarValue entry, now NoIntroduction is NumberVarValue entry;
 				-- "nolatexerminesex":
-					now nolatexerminesex is numberVarValue entry;
+					if nolatexerminesex is not NumberVarValue entry, now nolatexerminesex is NumberVarValue entry;
 				-- "noocelotbtsex":
-					now noocelotbtsex is numberVarValue entry;
+					if noocelotbtsex is not NumberVarValue entry, now noocelotbtsex is NumberVarValue entry;
 				-- "noocelotldsex":
-					now noocelotldsex is numberVarValue entry;
+					if noocelotldsex is not NumberVarValue entry, now noocelotldsex is NumberVarValue entry;
 				-- "nopiratesharksex":
-					now nopiratesharksex is numberVarValue entry;
+					if nopiratesharksex is not NumberVarValue entry, now nopiratesharksex is NumberVarValue entry;
 				-- "noplionsex":
-					now noplionsex is numberVarValue entry;
+					if noplionsex is not NumberVarValue entry, now noplionsex is NumberVarValue entry;
 				-- "nopoodlesex":
-					now nopoodlesex is numberVarValue entry;
+					if nopoodlesex is not NumberVarValue entry, now nopoodlesex is NumberVarValue entry;
 				-- "nosnowmeowsex":
-					now nosnowmeowsex is numberVarValue entry;
+					if nosnowmeowsex is not NumberVarValue entry, now nosnowmeowsex is NumberVarValue entry;
 				-- "nosugarglidersex":
-					now nosugarglidersex is numberVarValue entry;
+					if nosugarglidersex is not NumberVarValue entry, now nosugarglidersex is NumberVarValue entry;
 				-- "noteddybearsex":
-					now noteddybearsex is numberVarValue entry;
+					if noteddybearsex is not NumberVarValue entry, now noteddybearsex is NumberVarValue entry;
 				-- "notrashcoonsex":
-					now notrashcoonsex is numberVarValue entry;
+					if notrashcoonsex is not NumberVarValue entry, now notrashcoonsex is NumberVarValue entry;
 				-- "novicsex":
-					now novicsex is numberVarValue entry;
+					if novicsex is not NumberVarValue entry, now novicsex is NumberVarValue entry;
 				-- "NPCintCounter":
-					now NPCintCounter is numberVarValue entry;
+					if NPCintCounter is not NumberVarValue entry, now NPCintCounter is NumberVarValue entry;
 				-- "nsgained":
-					now nsgained is numberVarValue entry;
+					if nsgained is not NumberVarValue entry, now nsgained is NumberVarValue entry;
 				-- "numOfBountiesLeft":
-					now numOfBountiesLeft is numberVarValue entry;
+					if numOfBountiesLeft is not NumberVarValue entry, now numOfBountiesLeft is NumberVarValue entry;
 				-- "numwater":
-					now numwater is numberVarValue entry;
+					if numwater is not NumberVarValue entry, now numwater is NumberVarValue entry;
 				-- "ocelotchoice":
-					now ocelotchoice is numberVarValue entry;
+					if ocelotchoice is not NumberVarValue entry, now ocelotchoice is NumberVarValue entry;
 				-- "ocelotsize":
-					now ocelotsize is numberVarValue entry;
+					if ocelotsize is not NumberVarValue entry, now ocelotsize is NumberVarValue entry;
 				-- "OfficeGirlsDominance":
-					now OfficeGirlsDominance is numberVarValue entry;
+					if OfficeGirlsDominance is not NumberVarValue entry, now OfficeGirlsDominance is NumberVarValue entry;
 				-- "OfficeGirlsFriendship":
-					now OfficeGirlsFriendship is numberVarValue entry;
+					if OfficeGirlsFriendship is not NumberVarValue entry, now OfficeGirlsFriendship is NumberVarValue entry;
 				-- "OliverRelationship":
-					now OliverRelationship is numberVarValue entry;
+					if OliverRelationship is not NumberVarValue entry, now OliverRelationship is NumberVarValue entry;
 				-- "Onyxboislut":
-					now Onyxboislut is numberVarValue entry;
+					if Onyxboislut is not NumberVarValue entry, now Onyxboislut is NumberVarValue entry;
 				-- "onyxdma":
-					now onyxdma is numberVarValue entry;
+					if onyxdma is not NumberVarValue entry, now onyxdma is NumberVarValue entry;
 				-- "onyxdmc":
-					now onyxdmc is numberVarValue entry;
+					if onyxdmc is not NumberVarValue entry, now onyxdmc is NumberVarValue entry;
 				-- "onyxdmra":
-					now onyxdmra is numberVarValue entry;
+					if onyxdmra is not NumberVarValue entry, now onyxdmra is NumberVarValue entry;
 				-- "onyxfinale":
-					now onyxfinale is numberVarValue entry;
+					if onyxfinale is not NumberVarValue entry, now onyxfinale is NumberVarValue entry;
 				-- "onyxlapdance":
-					now onyxlapdance is numberVarValue entry;
+					if onyxlapdance is not NumberVarValue entry, now onyxlapdance is NumberVarValue entry;
 				-- "Onyxmareslut":
-					now Onyxmareslut is numberVarValue entry;
+					if Onyxmareslut is not NumberVarValue entry, now Onyxmareslut is NumberVarValue entry;
 				-- "orcadom":
-					now orcadom is numberVarValue entry;
+					if orcadom is not NumberVarValue entry, now orcadom is NumberVarValue entry;
 				-- "orcafdom":
-					now orcafdom is numberVarValue entry;
+					if orcafdom is not NumberVarValue entry, now orcafdom is NumberVarValue entry;
 				-- "orcaintense":
-					now orcaintense is numberVarValue entry;
+					if orcaintense is not NumberVarValue entry, now orcaintense is NumberVarValue entry;
 				-- "OrcFemSpecialFightNumber":
-					now OrcFemSpecialFightNumber is numberVarValue entry;
+					if OrcFemSpecialFightNumber is not NumberVarValue entry, now OrcFemSpecialFightNumber is NumberVarValue entry;
 				-- "OrcSlaverCaptureTime":
-					now OrcSlaverCaptureTime is numberVarValue entry;
+					if OrcSlaverCaptureTime is not NumberVarValue entry, now OrcSlaverCaptureTime is NumberVarValue entry;
 				-- "OrcSlaverStatus":
-					now OrcSlaverStatus is numberVarValue entry;
+					if OrcSlaverStatus is not NumberVarValue entry, now OrcSlaverStatus is NumberVarValue entry;
 				-- "Otterconsent":
-					now Otterconsent is numberVarValue entry;
+					if Otterconsent is not NumberVarValue entry, now Otterconsent is NumberVarValue entry;
 				-- "Otterdefeat":
-					now Otterdefeat is numberVarValue entry;
+					if Otterdefeat is not NumberVarValue entry, now Otterdefeat is NumberVarValue entry;
 				-- "OttoForm":
-					now OttoForm is numberVarValue entry;
+					if OttoForm is not NumberVarValue entry, now OttoForm is NumberVarValue entry;
 				-- "ovipreglevel":
-					now ovipreglevel is numberVarValue entry;
+					if ovipreglevel is not NumberVarValue entry, now ovipreglevel is NumberVarValue entry;
 				-- "partner1Choice":
-					now partner1Choice is numberVarValue entry;
+					if partner1Choice is not NumberVarValue entry, now partner1Choice is NumberVarValue entry;
 				-- "partner2Choice":
-					now partner2Choice is numberVarValue entry;
+					if partner2Choice is not NumberVarValue entry, now partner2Choice is NumberVarValue entry;
 				-- "patrooms":
-					now patrooms is numberVarValue entry;
+					if patrooms is not NumberVarValue entry, now patrooms is NumberVarValue entry;
 				-- "peacockcontrol":
-					now peacockcontrol is numberVarValue entry;
+					if peacockcontrol is not NumberVarValue entry, now peacockcontrol is NumberVarValue entry;
 				-- "Peacocked":
-					now Peacocked is numberVarValue entry;
+					if Peacocked is not NumberVarValue entry, now Peacocked is NumberVarValue entry;
 				-- "pepped":
-					now pepped is numberVarValue entry;
+					if pepped is not NumberVarValue entry, now pepped is NumberVarValue entry;
 				-- "peppereyes":
-					now peppereyes is numberVarValue entry;
+					if peppereyes is not NumberVarValue entry, now peppereyes is NumberVarValue entry;
 				-- "PericlesRelationship":
-					now PericlesRelationship is numberVarValue entry;
+					if PericlesRelationship is not NumberVarValue entry, now PericlesRelationship is NumberVarValue entry;
 				-- "petchance":
-					now petchance is numberVarValue entry;
+					if petchance is not NumberVarValue entry, now petchance is NumberVarValue entry;
 				-- "pethitbonus":
-					now pethitbonus is numberVarValue entry;
+					if pethitbonus is not NumberVarValue entry, now pethitbonus is NumberVarValue entry;
 				-- "pewterassocc":
-					now pewterassocc is numberVarValue entry;
+					if pewterassocc is not NumberVarValue entry, now pewterassocc is NumberVarValue entry;
 				-- "pewterassvar1":
-					now pewterassvar1 is numberVarValue entry;
+					if pewterassvar1 is not NumberVarValue entry, now pewterassvar1 is NumberVarValue entry;
 				-- "pewterassvar2":
-					now pewterassvar2 is numberVarValue entry;
+					if pewterassvar2 is not NumberVarValue entry, now pewterassvar2 is NumberVarValue entry;
 				-- "pewterbodycap":
-					now pewterbodycap is numberVarValue entry;
+					if pewterbodycap is not NumberVarValue entry, now pewterbodycap is NumberVarValue entry;
 				-- "pewterbodyocc":
-					now pewterbodyocc is numberVarValue entry;
+					if pewterbodyocc is not NumberVarValue entry, now pewterbodyocc is NumberVarValue entry;
 				-- "pewtercockocc":
-					now pewtercockocc is numberVarValue entry;
+					if pewtercockocc is not NumberVarValue entry, now pewtercockocc is NumberVarValue entry;
 				-- "pewtercockvar1":
-					now pewtercockvar1 is numberVarValue entry;
+					if pewtercockvar1 is not NumberVarValue entry, now pewtercockvar1 is NumberVarValue entry;
 				-- "pewtercockvar2":
-					now pewtercockvar2 is numberVarValue entry;
+					if pewtercockvar2 is not NumberVarValue entry, now pewtercockvar2 is NumberVarValue entry;
 				-- "pewtercuntocc":
-					now pewtercuntocc is numberVarValue entry;
+					if pewtercuntocc is not NumberVarValue entry, now pewtercuntocc is NumberVarValue entry;
 				-- "pewtercuntvar1":
-					now pewtercuntvar1 is numberVarValue entry;
+					if pewtercuntvar1 is not NumberVarValue entry, now pewtercuntvar1 is NumberVarValue entry;
 				-- "pewtercuntvar2":
-					now pewtercuntvar2 is numberVarValue entry;
+					if pewtercuntvar2 is not NumberVarValue entry, now pewtercuntvar2 is NumberVarValue entry;
 				-- "pewtergenitalcap":
-					now pewtergenitalcap is numberVarValue entry;
+					if pewtergenitalcap is not NumberVarValue entry, now pewtergenitalcap is NumberVarValue entry;
 				-- "pewterheadcap":
-					now pewterheadcap is numberVarValue entry;
+					if pewterheadcap is not NumberVarValue entry, now pewterheadcap is NumberVarValue entry;
 				-- "pewterheadocc":
-					now pewterheadocc is numberVarValue entry;
+					if pewterheadocc is not NumberVarValue entry, now pewterheadocc is NumberVarValue entry;
 				-- "pewterheadvar1":
-					now pewterheadvar1 is numberVarValue entry;
+					if pewterheadvar1 is not NumberVarValue entry, now pewterheadvar1 is NumberVarValue entry;
 				-- "pewterheadvar2":
-					now pewterheadvar2 is numberVarValue entry;
+					if pewterheadvar2 is not NumberVarValue entry, now pewterheadvar2 is NumberVarValue entry;
 				-- "pewterheadvar3":
-					now pewterheadvar3 is numberVarValue entry;
+					if pewterheadvar3 is not NumberVarValue entry, now pewterheadvar3 is NumberVarValue entry;
 				-- "pfptype":
-					now pfptype is numberVarValue entry;
+					if pfptype is not NumberVarValue entry, now pfptype is NumberVarValue entry;
 				-- "PhilipMudWrestleCount":
-					now PhilipMudWrestleCount is numberVarValue entry;
+					if PhilipMudWrestleCount is not NumberVarValue entry, now PhilipMudWrestleCount is NumberVarValue entry;
 				-- "PhilipWrestleEnd":
-					now PhilipWrestleEnd is numberVarValue entry;
+					if PhilipWrestleEnd is not NumberVarValue entry, now PhilipWrestleEnd is NumberVarValue entry;
 				-- "piercesave":
-					now piercesave is numberVarValue entry;
+					if piercesave is not NumberVarValue entry, now piercesave is NumberVarValue entry;
 				-- "piercestatus":
-					now piercestatus is numberVarValue entry;
+					if piercestatus is not NumberVarValue entry, now piercestatus is NumberVarValue entry;
 				-- "piercingquest":
-					now piercingquest is numberVarValue entry;
+					if piercingquest is not NumberVarValue entry, now piercingquest is NumberVarValue entry;
 				-- "Pigfed":
-					now Pigfed is numberVarValue entry;
+					if Pigfed is not NumberVarValue entry, now Pigfed is NumberVarValue entry;
 				-- "Pigfucked":
-					now Pigfucked is numberVarValue entry;
+					if Pigfucked is not NumberVarValue entry, now Pigfucked is NumberVarValue entry;
 				-- "piginitiation":
-					now piginitiation is numberVarValue entry;
+					if piginitiation is not NumberVarValue entry, now piginitiation is NumberVarValue entry;
 				-- "pitbullgender":
-					now pitbullgender is numberVarValue entry;
+					if pitbullgender is not NumberVarValue entry, now pitbullgender is NumberVarValue entry;
 				-- "plantdefeat":
-					now plantdefeat is numberVarValue entry;
+					if plantdefeat is not NumberVarValue entry, now plantdefeat is NumberVarValue entry;
 				-- "plantwin":
-					now plantwin is numberVarValue entry;
+					if plantwin is not NumberVarValue entry, now plantwin is NumberVarValue entry;
 				-- "playercrestnum":
-					now playercrestnum is numberVarValue entry;
+					if playercrestnum is not NumberVarValue entry, now playercrestnum is NumberVarValue entry;
 				-- "PlayerInformed":
-					now PlayerInformed is numberVarValue entry;
+					if PlayerInformed is not NumberVarValue entry, now PlayerInformed is NumberVarValue entry;
 				-- "playermetalskin":
-					now playermetalskin is numberVarValue entry;
+					if playermetalskin is not NumberVarValue entry, now playermetalskin is NumberVarValue entry;
 				-- "playerpoison":
-					now playerpoison is numberVarValue entry;
+					if playerpoison is not NumberVarValue entry, now playerpoison is NumberVarValue entry;
 				-- "playon":
-					now playon is numberVarValue entry;
+					if playon is not NumberVarValue entry, now playon is NumberVarValue entry;
 				-- "pldamagebonus":
-					now pldamagebonus is numberVarValue entry;
+					if pldamagebonus is not NumberVarValue entry, now pldamagebonus is NumberVarValue entry;
 				-- "pldodgebonus":
-					now pldodgebonus is numberVarValue entry;
+					if pldodgebonus is not NumberVarValue entry, now pldodgebonus is NumberVarValue entry;
 				-- "plfleebonus":
-					now plfleebonus is numberVarValue entry;
+					if plfleebonus is not NumberVarValue entry, now plfleebonus is NumberVarValue entry;
 				-- "plhitbonus":
-					now plhitbonus is numberVarValue entry;
+					if plhitbonus is not NumberVarValue entry, now plhitbonus is NumberVarValue entry;
 				-- "plionvic":
-					now plionvic is numberVarValue entry;
+					if plionvic is not NumberVarValue entry, now plionvic is NumberVarValue entry;
 				-- "plionvored":
-					now plionvored is numberVarValue entry;
+					if plionvored is not NumberVarValue entry, now plionvored is NumberVarValue entry;
 				-- "plmindbonus":
-					now plmindbonus is numberVarValue entry;
+					if plmindbonus is not NumberVarValue entry, now plmindbonus is NumberVarValue entry;
 				-- "plnatarmor":
-					now plnatarmor is numberVarValue entry;
+					if plnatarmor is not NumberVarValue entry, now plnatarmor is NumberVarValue entry;
 				-- "PLRLooted":
-					now PLRLooted is numberVarValue entry;
+					if PLRLooted is not NumberVarValue entry, now PLRLooted is NumberVarValue entry;
 				-- "plushleoloss":
-					now plushleoloss is numberVarValue entry;
+					if plushleoloss is not NumberVarValue entry, now plushleoloss is NumberVarValue entry;
 				-- "plweaknatarmor":
-					now plweaknatarmor is numberVarValue entry;
+					if plweaknatarmor is not NumberVarValue entry, now plweaknatarmor is NumberVarValue entry;
 				-- "policerepair":
-					now policerepair is numberVarValue entry;
+					if policerepair is not NumberVarValue entry, now policerepair is NumberVarValue entry;
 				-- "PoliceStationTwelveInfpop":
-					now PoliceStationTwelveInfpop is numberVarValue entry;
+					if PoliceStationTwelveInfpop is not NumberVarValue entry, now PoliceStationTwelveInfpop is NumberVarValue entry;
 				-- "PoliceStationTwelvePopulation":
-					now PoliceStationTwelvePopulation is numberVarValue entry;
+					if PoliceStationTwelvePopulation is not NumberVarValue entry, now PoliceStationTwelvePopulation is NumberVarValue entry;
 				-- "poodleapproved":
-					now poodleapproved is numberVarValue entry;
+					if poodleapproved is not NumberVarValue entry, now poodleapproved is NumberVarValue entry;
 				-- "PoseidonRelationship":
-					now PoseidonRelationship is numberVarValue entry;
+					if PoseidonRelationship is not NumberVarValue entry, now PoseidonRelationship is NumberVarValue entry;
 				-- "PowerUpDrugTrip":
-					now PowerUpDrugTrip is numberVarValue entry;
+					if PowerUpDrugTrip is not NumberVarValue entry, now PowerUpDrugTrip is NumberVarValue entry;
 				-- "pquest":
-					now pquest is numberVarValue entry;
+					if pquest is not NumberVarValue entry, now pquest is NumberVarValue entry;
 				-- "pr_completion":
-					now pr_completion is numberVarValue entry;
+					if pr_completion is not NumberVarValue entry, now pr_completion is NumberVarValue entry;
 				-- "pregtype":
-					now pregtype is numberVarValue entry;
+					if pregtype is not NumberVarValue entry, now pregtype is NumberVarValue entry;
 				-- "provingstallionhood":
-					now provingstallionhood is numberVarValue entry;
+					if provingstallionhood is not NumberVarValue entry, now provingstallionhood is NumberVarValue entry;
 				-- "psycheadjust":
-					now psycheadjust is numberVarValue entry;
+					if psycheadjust is not NumberVarValue entry, now psycheadjust is NumberVarValue entry;
 				-- "pubvisit":
-					now pubvisit is numberVarValue entry;
+					if pubvisit is not NumberVarValue entry, now pubvisit is NumberVarValue entry;
 				-- "purfeat":
-					now purfeat is numberVarValue entry;
+					if purfeat is not NumberVarValue entry, now purfeat is NumberVarValue entry;
 				-- "quitter":
-					now quitter is numberVarValue entry;
+					if quitter is not NumberVarValue entry, now quitter is NumberVarValue entry;
 				-- "rabbitfucked":
-					now rabbitfucked is numberVarValue entry;
+					if rabbitfucked is not NumberVarValue entry, now rabbitfucked is NumberVarValue entry;
 				-- "rabbitmulticock":
-					now rabbitmulticock is numberVarValue entry;
+					if rabbitmulticock is not NumberVarValue entry, now rabbitmulticock is NumberVarValue entry;
 				-- "rabbitsibling":
-					now rabbitsibling is numberVarValue entry;
+					if rabbitsibling is not NumberVarValue entry, now rabbitsibling is NumberVarValue entry;
 				-- "rachelfuck":
-					now rachelfuck is numberVarValue entry;
+					if rachelfuck is not NumberVarValue entry, now rachelfuck is NumberVarValue entry;
 				-- "RamFucked":
-					now Stamina of Leon is numberVarValue entry;
+					if Stamina of Leon is not NumberVarValue entry, now Stamina of Leon is NumberVarValue entry;
 				-- "ramlosstick":
-					now ramlosstick is numberVarValue entry;
+					if ramlosstick is not NumberVarValue entry, now ramlosstick is NumberVarValue entry;
 				-- "ramtraining":
-					now ramtraining is numberVarValue entry;
+					if ramtraining is not NumberVarValue entry, now ramtraining is NumberVarValue entry;
 				-- "ramvar":
-					now ramvar is numberVarValue entry;
+					if ramvar is not NumberVarValue entry, now ramvar is NumberVarValue entry;
 				-- "RandallBradRelationship":
-					now RandallBradRelationship is numberVarValue entry;
+					if RandallBradRelationship is not NumberVarValue entry, now RandallBradRelationship is NumberVarValue entry;
 				-- "RandomItemPick":
-					now RandomItemPick is numberVarValue entry;
+					if RandomItemPick is not NumberVarValue entry, now RandomItemPick is NumberVarValue entry;
 				-- "RaneDeedsTracker":
-					now RaneDeedsTracker is numberVarValue entry;
+					if RaneDeedsTracker is not NumberVarValue entry, now RaneDeedsTracker is NumberVarValue entry;
 				-- "RareQuesting":
-					now RareQuesting is numberVarValue entry;
+					if RareQuesting is not NumberVarValue entry, now RareQuesting is NumberVarValue entry;
 				-- "ratdartcount":
-					now ratdartcount is numberVarValue entry;
+					if ratdartcount is not NumberVarValue entry, now ratdartcount is NumberVarValue entry;
 				-- "RazorbackBoarEvents":
-					now RazorbackBoarEvents is numberVarValue entry;
+					if RazorbackBoarEvents is not NumberVarValue entry, now RazorbackBoarEvents is NumberVarValue entry;
 				-- "ReceptionistTalk":
-					now ReceptionistTalk is numberVarValue entry;
+					if ReceptionistTalk is not NumberVarValue entry, now ReceptionistTalk is NumberVarValue entry;
 				-- "recoverchance":
-					now recoverchance is numberVarValue entry;
+					if recoverchance is not NumberVarValue entry, now recoverchance is NumberVarValue entry;
 				-- "Recoveredhardware":
-					now Recoveredhardware is numberVarValue entry;
+					if Recoveredhardware is not NumberVarValue entry, now Recoveredhardware is NumberVarValue entry;
 				-- "RegChaseHelp":
-					now RegChaseHelp is numberVarValue entry;
+					if RegChaseHelp is not NumberVarValue entry, now RegChaseHelp is NumberVarValue entry;
 				-- "Researchbypass":
-					now Researchbypass is numberVarValue entry;
+					if Researchbypass is not NumberVarValue entry, now Researchbypass is NumberVarValue entry;
 				-- "ResidentialVisits":
-					now ResidentialVisits is numberVarValue entry;
+					if ResidentialVisits is not NumberVarValue entry, now ResidentialVisits is NumberVarValue entry;
 				-- "restaurantpig":
-					now restaurantpig is numberVarValue entry;
+					if restaurantpig is not NumberVarValue entry, now restaurantpig is NumberVarValue entry;
 				-- "restoration":
-					now restoration is numberVarValue entry;
+					if restoration is not NumberVarValue entry, now restoration is NumberVarValue entry;
 				-- "riddlesphinx":
-					now riddlesphinx is numberVarValue entry;
+					if riddlesphinx is not NumberVarValue entry, now riddlesphinx is NumberVarValue entry;
 				-- "Riddlewin":
-					now Riddlewin is numberVarValue entry;
+					if Riddlewin is not NumberVarValue entry, now Riddlewin is NumberVarValue entry;
 				-- "RomanceBooksFound":
-					now RomanceBooksFound is numberVarValue entry;
+					if RomanceBooksFound is not NumberVarValue entry, now RomanceBooksFound is NumberVarValue entry;
 				-- "rsc":
-					now rsc is numberVarValue entry;
+					if rsc is not NumberVarValue entry, now rsc is NumberVarValue entry;
 				-- "RTWinCounter":
-					now RTWinCounter is numberVarValue entry;
+					if RTWinCounter is not NumberVarValue entry, now RTWinCounter is NumberVarValue entry;
 				-- "RyanFucked":
-					now RyanFucked is numberVarValue entry;
+					if RyanFucked is not NumberVarValue entry, now RyanFucked is NumberVarValue entry;
 				-- "RyouseiDavidInteraction":
-					now RyouseiDavidInteraction is numberVarValue entry;
+					if RyouseiDavidInteraction is not NumberVarValue entry, now RyouseiDavidInteraction is NumberVarValue entry;
 				-- "RyouseiEricInteraction":
-					now RyouseiEricInteraction is numberVarValue entry;
+					if RyouseiEricInteraction is not NumberVarValue entry, now RyouseiEricInteraction is NumberVarValue entry;
 				-- "RyouseiHayato":
-					now RyouseiHayato is numberVarValue entry;
+					if RyouseiHayato is not NumberVarValue entry, now RyouseiHayato is NumberVarValue entry;
 				-- "RyouseiRane":
-					now RyouseiRane is numberVarValue entry;
+					if RyouseiRane is not NumberVarValue entry, now RyouseiRane is NumberVarValue entry;
 				-- "RyouseiXerxes":
-					now RyouseiXerxes is numberVarValue entry;
+					if RyouseiXerxes is not NumberVarValue entry, now RyouseiXerxes is NumberVarValue entry;
 				-- "sabtoothed":
-					now sabtoothed is numberVarValue entry;
+					if sabtoothed is not NumberVarValue entry, now sabtoothed is NumberVarValue entry;
 				-- "sabtoothedmatt":
-					now sabtoothedmatt is numberVarValue entry;
+					if sabtoothedmatt is not NumberVarValue entry, now sabtoothedmatt is NumberVarValue entry;
 				-- "SandySaved":
-					now SandySaved is numberVarValue entry;
+					if SandySaved is not NumberVarValue entry, now SandySaved is NumberVarValue entry;
 				-- "SarahCured":
-					now SarahCured is numberVarValue entry;
+					if SarahCured is not NumberVarValue entry, now SarahCured is NumberVarValue entry;
 				-- "SarahPregnant":
-					now SarahPregnant is numberVarValue entry;
+					if SarahPregnant is not NumberVarValue entry, now SarahPregnant is NumberVarValue entry;
 				-- "SarahPups":
-					now SarahPups is numberVarValue entry;
+					if SarahPups is not NumberVarValue entry, now SarahPups is NumberVarValue entry;
 				-- "SarahShower":
-					now SarahShower is numberVarValue entry;
+					if SarahShower is not NumberVarValue entry, now SarahShower is NumberVarValue entry;
 				-- "SarahSlut":
-					now SarahSlut is numberVarValue entry;
+					if SarahSlut is not NumberVarValue entry, now SarahSlut is NumberVarValue entry;
 				-- "SarahTalk":
-					now SarahTalk is numberVarValue entry;
+					if SarahTalk is not NumberVarValue entry, now SarahTalk is NumberVarValue entry;
 				-- "SatisfiedTanuki":
-					now SatisfiedTanuki is numberVarValue entry;
+					if SatisfiedTanuki is not NumberVarValue entry, now SatisfiedTanuki is NumberVarValue entry;
 				-- "SatyressStage":
-					now SatyressStage is numberVarValue entry;
+					if SatyressStage is not NumberVarValue entry, now SatyressStage is NumberVarValue entry;
 				-- "SatyrFratPartyStage":
-					now SatyrFratPartyStage is numberVarValue entry;
+					if SatyrFratPartyStage is not NumberVarValue entry, now SatyrFratPartyStage is NumberVarValue entry;
 				-- "SatyrFratRichardRelationship":
-					now SatyrFratRichardRelationship is numberVarValue entry;
+					if SatyrFratRichardRelationship is not NumberVarValue entry, now SatyrFratRichardRelationship is NumberVarValue entry;
 				-- "scaledr":
-					now scaledr is numberVarValue entry;
+					if scaledr is not NumberVarValue entry, now scaledr is NumberVarValue entry;
 				-- "scopnum":
-					now scopnum is numberVarValue entry;
+					if scopnum is not NumberVarValue entry, now scopnum is NumberVarValue entry;
 				-- "Score":
-					now Score is numberVarValue entry;
+					if Score is not NumberVarValue entry, now Score is NumberVarValue entry;
 				-- "ScottyRelationship":
-					now ScottyRelationship is numberVarValue entry;
+					if ScottyRelationship is not NumberVarValue entry, now ScottyRelationship is NumberVarValue entry;
 				-- "scufflecount":
-					now scufflecount is numberVarValue entry;
+					if scufflecount is not NumberVarValue entry, now scufflecount is NumberVarValue entry;
 				-- "sdbook":
-					now sdbook is numberVarValue entry;
+					if sdbook is not NumberVarValue entry, now sdbook is NumberVarValue entry;
 				-- "searchesUtSit":
-					now searchesUtSit is numberVarValue entry;
+					if searchesUtSit is not NumberVarValue entry, now searchesUtSit is NumberVarValue entry;
 				-- "SeraphisContent":
-					now SeraphisContent is numberVarValue entry;
+					if SeraphisContent is not NumberVarValue entry, now SeraphisContent is NumberVarValue entry;
 				-- "SeraphisNeedy":
-					now SeraphisNeedy is numberVarValue entry;
+					if SeraphisNeedy is not NumberVarValue entry, now SeraphisNeedy is NumberVarValue entry;
 				-- "SeraphisRelationship":
-					now SeraphisRelationship is numberVarValue entry;
+					if SeraphisRelationship is not NumberVarValue entry, now SeraphisRelationship is NumberVarValue entry;
 				-- "SerenityHunger":
-					now SerenityHunger is numberVarValue entry;
+					if SerenityHunger is not NumberVarValue entry, now SerenityHunger is NumberVarValue entry;
 				-- "SethFucked":
-					now SethFucked is numberVarValue entry;
+					if SethFucked is not NumberVarValue entry, now SethFucked is NumberVarValue entry;
 				-- "SethTempleNumber":
-					now SethTempleNumber is numberVarValue entry;
+					if SethTempleNumber is not NumberVarValue entry, now SethTempleNumber is NumberVarValue entry;
 				-- "sextablerun":
-					now sextablerun is numberVarValue entry;
+					if sextablerun is not NumberVarValue entry, now sextablerun is NumberVarValue entry;
 				-- "sgtimer":
-					now sgtimer is numberVarValue entry;
+					if sgtimer is not NumberVarValue entry, now sgtimer is NumberVarValue entry;
 				-- "sgtmarkstalk":
-					now sgtmarkstalk is numberVarValue entry;
+					if sgtmarkstalk is not NumberVarValue entry, now sgtmarkstalk is NumberVarValue entry;
 				-- "shadowy":
-					now shadowy is numberVarValue entry;
+					if shadowy is not NumberVarValue entry, now shadowy is NumberVarValue entry;
 				-- "SharkFountainCounter":
-					now SharkFountainCounter is numberVarValue entry;
+					if SharkFountainCounter is not NumberVarValue entry, now SharkFountainCounter is NumberVarValue entry;
 				-- "shiftable":
-					now Resolution of Secure Area is numberVarValue entry;
+					if Resolution of Secure Area is not NumberVarValue entry, now Resolution of Secure Area is NumberVarValue entry;
 				-- "sierramem":
-					now sierramem is numberVarValue entry;
+					if sierramem is not NumberVarValue entry, now sierramem is NumberVarValue entry;
 				-- "SilverToken":
-					now SilverToken is numberVarValue entry;
+					if SilverToken is not NumberVarValue entry, now SilverToken is NumberVarValue entry;
 				-- "sirenfight":
-					now sirenfight is numberVarValue entry;
+					if sirenfight is not NumberVarValue entry, now sirenfight is NumberVarValue entry;
 				-- "SizeEnvyTracker":
-					now SizeEnvyTracker is numberVarValue entry;
+					if SizeEnvyTracker is not NumberVarValue entry, now SizeEnvyTracker is NumberVarValue entry;
 				-- "SkarnothLibraryEntry":
-					now SkarnothLibraryEntry is numberVarValue entry;
+					if SkarnothLibraryEntry is not NumberVarValue entry, now SkarnothLibraryEntry is NumberVarValue entry;
 				-- "SkarnothMasterSlave":
-					now SkarnothMasterSlave is numberVarValue entry;
+					if SkarnothMasterSlave is not NumberVarValue entry, now SkarnothMasterSlave is NumberVarValue entry;
 				-- "SkarnothThongStatus":
-					now SkarnothThongStatus is numberVarValue entry;
+					if SkarnothThongStatus is not NumberVarValue entry, now SkarnothThongStatus is NumberVarValue entry;
 				-- "SkarnothDrugStatus":
-					now SkarnothDrugStatus is numberVarValue entry;
+					if SkarnothDrugStatus is not NumberVarValue entry, now SkarnothDrugStatus is NumberVarValue entry;
 				-- "skipturnblocker":
-					now skipturnblocker is numberVarValue entry;
+					if skipturnblocker is not NumberVarValue entry, now skipturnblocker is NumberVarValue entry;
 				-- "skrp":
-					now skrp is numberVarValue entry;
+					if skrp is not NumberVarValue entry, now skrp is NumberVarValue entry;
 				-- "Skunk_type":
-					now Skunk_type is numberVarValue entry;
+					if Skunk_type is not NumberVarValue entry, now Skunk_type is NumberVarValue entry;
 				-- "skunkbeaststatus":
-					now skunkbeaststatus is numberVarValue entry;
+					if skunkbeaststatus is not NumberVarValue entry, now skunkbeaststatus is NumberVarValue entry;
 				-- "skunkfucked":
-					now skunkfucked is numberVarValue entry;
+					if skunkfucked is not NumberVarValue entry, now skunkfucked is NumberVarValue entry;
 				-- "skunkmulticock":
-					now skunkmulticock is numberVarValue entry;
+					if skunkmulticock is not NumberVarValue entry, now skunkmulticock is NumberVarValue entry;
 				-- "skunkready":
-					now skunkready is numberVarValue entry;
+					if skunkready is not NumberVarValue entry, now skunkready is NumberVarValue entry;
 				-- "skunksister":
-					now skunksister is numberVarValue entry;
+					if skunksister is not NumberVarValue entry, now skunksister is NumberVarValue entry;
 				-- "skunkspot":
-					now skunkspot is numberVarValue entry;
+					if skunkspot is not NumberVarValue entry, now skunkspot is NumberVarValue entry;
 				-- "SlaveRaidEncounters":
-					now SlaveRaidEncounters is numberVarValue entry;
+					if SlaveRaidEncounters is not NumberVarValue entry, now SlaveRaidEncounters is NumberVarValue entry;
 				-- "Sleeptimercount":
-					now Sleeptimercount is numberVarValue entry;
+					if Sleeptimercount is not NumberVarValue entry, now Sleeptimercount is NumberVarValue entry;
 				-- "slutfucked":
-					now slutfucked is numberVarValue entry;
+					if slutfucked is not NumberVarValue entry, now slutfucked is NumberVarValue entry;
 				-- "Slutratcor":
-					now Slutratcor is numberVarValue entry;
+					if Slutratcor is not NumberVarValue entry, now Slutratcor is NumberVarValue entry;
 				-- "SlutRatDenPoolTable":
-					now SlutRatDenPoolTable is numberVarValue entry;
+					if SlutRatDenPoolTable is not NumberVarValue entry, now SlutRatDenPoolTable is NumberVarValue entry;
 				-- "SlutRatDenVisitTimes":
-					now SlutRatDenVisitTimes is numberVarValue entry;
+					if SlutRatDenVisitTimes is not NumberVarValue entry, now SlutRatDenVisitTimes is NumberVarValue entry;
 				-- "SlutratSub":
-					now SlutratSub is numberVarValue entry;
+					if SlutratSub is not NumberVarValue entry, now SlutratSub is NumberVarValue entry;
 				-- "Slutslavefucked":
-					now Slutslavefucked is numberVarValue entry;
+					if Slutslavefucked is not NumberVarValue entry, now Slutslavefucked is NumberVarValue entry;
 				-- "Slutslavelearned":
-					now Slutslavelearned is numberVarValue entry;
+					if Slutslavelearned is not NumberVarValue entry, now Slutslavelearned is NumberVarValue entry;
 				-- "Slutslavetalk":
-					now Slutslavetalk is numberVarValue entry;
+					if Slutslavetalk is not NumberVarValue entry, now Slutslavetalk is NumberVarValue entry;
 				-- "smf":
-					now smf is numberVarValue entry;
+					if smf is not NumberVarValue entry, now smf is NumberVarValue entry;
 				-- "snakecap":
-					now snakecap is numberVarValue entry;
+					if snakecap is not NumberVarValue entry, now snakecap is NumberVarValue entry;
 				-- "snakedomm":
-					now snakedomm is numberVarValue entry;
+					if snakedomm is not NumberVarValue entry, now snakedomm is NumberVarValue entry;
 				-- "snakehijack":
-					now snakehijack is numberVarValue entry;
+					if snakehijack is not NumberVarValue entry, now snakehijack is NumberVarValue entry;
 				-- "snakehijacktimer":
-					now snakehijacktimer is numberVarValue entry;
+					if snakehijacktimer is not NumberVarValue entry, now snakehijacktimer is NumberVarValue entry;
 				-- "snakeocc":
-					now snakeocc is numberVarValue entry;
+					if snakeocc is not NumberVarValue entry, now snakeocc is NumberVarValue entry;
 				-- "snakesubm":
-					now snakesubm is numberVarValue entry;
+					if snakesubm is not NumberVarValue entry, now snakesubm is NumberVarValue entry;
 				-- "SnowAmySex":
-					now SnowAmySex is numberVarValue entry;
+					if SnowAmySex is not NumberVarValue entry, now SnowAmySex is NumberVarValue entry;
 				-- "SnowmeowSoldierStatus":
-					now SnowmeowSoldierStatus is numberVarValue entry;
+					if SnowmeowSoldierStatus is not NumberVarValue entry, now SnowmeowSoldierStatus is NumberVarValue entry;
 				-- "Soldierhorsetf":
-					now Soldierhorsetf is numberVarValue entry;
+					if Soldierhorsetf is not NumberVarValue entry, now Soldierhorsetf is NumberVarValue entry;
 				-- "solsticefsex":
-					now solsticefsex is numberVarValue entry;
+					if solsticefsex is not NumberVarValue entry, now solsticefsex is NumberVarValue entry;
 				-- "solsticemsex":
-					now solsticemsex is numberVarValue entry;
+					if solsticemsex is not NumberVarValue entry, now solsticemsex is NumberVarValue entry;
 				-- "SonnyFood":
-					now SonnyFood is numberVarValue entry;
+					if SonnyFood is not NumberVarValue entry, now SonnyFood is NumberVarValue entry;
 				-- "SonnyQuest":
-					now SonnyQuest is numberVarValue entry;
+					if SonnyQuest is not NumberVarValue entry, now SonnyQuest is NumberVarValue entry;
 				-- "SonnyRelationship":
-					now SonnyRelationship is numberVarValue entry;
+					if SonnyRelationship is not NumberVarValue entry, now SonnyRelationship is NumberVarValue entry;
 				-- "SpidertaurRelationship":
-					now SpidertaurRelationship is numberVarValue entry;
+					if SpidertaurRelationship is not NumberVarValue entry, now SpidertaurRelationship is NumberVarValue entry;
 				-- "Spriteconsent":
-					now Spriteconsent is numberVarValue entry;
+					if Spriteconsent is not NumberVarValue entry, now Spriteconsent is NumberVarValue entry;
 				-- "Spritedefeat":
-					now Spritedefeat is numberVarValue entry;
+					if Spritedefeat is not NumberVarValue entry, now Spritedefeat is NumberVarValue entry;
 				-- "SquadEncounters":
-					now SquadEncounters is numberVarValue entry;
+					if SquadEncounters is not NumberVarValue entry, now SquadEncounters is NumberVarValue entry;
 				-- "squidcolor":
-					now squidcolor is numberVarValue entry;
+					if squidcolor is not NumberVarValue entry, now squidcolor is NumberVarValue entry;
 				-- "squirefeature":
-					now squirefeature is numberVarValue entry;
+					if squirefeature is not NumberVarValue entry, now squirefeature is NumberVarValue entry;
 				-- "squirrelfucked":
-					now squirrelfucked is numberVarValue entry;
+					if squirrelfucked is not NumberVarValue entry, now squirrelfucked is NumberVarValue entry;
 				-- "squirrelspot":
-					now squirrelspot is numberVarValue entry;
+					if squirrelspot is not NumberVarValue entry, now squirrelspot is NumberVarValue entry;
 				-- "ssstash":
-					now ssstash is numberVarValue entry;
+					if ssstash is not NumberVarValue entry, now ssstash is NumberVarValue entry;
 				-- "Stablesearchstatus":
-					now Stablesearchstatus is numberVarValue entry;
+					if Stablesearchstatus is not NumberVarValue entry, now Stablesearchstatus is NumberVarValue entry;
 				-- "staircaselocation":
-					now staircaselocation is numberVarValue entry;
+					if staircaselocation is not NumberVarValue entry, now staircaselocation is NumberVarValue entry;
 				-- "Started":
-					now Started is numberVarValue entry;
+					if Started is not NumberVarValue entry, now Started is NumberVarValue entry;
 				-- "statuequest":
-					now statuequest is numberVarValue entry;
+					if statuequest is not NumberVarValue entry, now statuequest is NumberVarValue entry;
 				-- "steriletime":
-					now steriletime is numberVarValue entry;
+					if steriletime is not NumberVarValue entry, now steriletime is NumberVarValue entry;
 				-- "Stevenfood":
-					now Stevenfood is numberVarValue entry;
+					if Stevenfood is not NumberVarValue entry, now Stevenfood is NumberVarValue entry;
 				-- "StevenFuckcount":
-					now StevenFuckcount is numberVarValue entry;
+					if StevenFuckcount is not NumberVarValue entry, now StevenFuckcount is NumberVarValue entry;
 				-- "Stevenmm":
-					now Stevenmm is numberVarValue entry;
+					if Stevenmm is not NumberVarValue entry, now Stevenmm is NumberVarValue entry;
 				-- "Stevenremoved":
-					now Stevenremoved is numberVarValue entry;
+					if Stevenremoved is not NumberVarValue entry, now Stevenremoved is NumberVarValue entry;
 				-- "StevenSwayed":
-					now StevenSwayed is numberVarValue entry;
+					if StevenSwayed is not NumberVarValue entry, now StevenSwayed is NumberVarValue entry;
 				-- "Steventrust":
-					now Steventrust is numberVarValue entry;
+					if Steventrust is not NumberVarValue entry, now Steventrust is NumberVarValue entry;
 				-- "Stevenwater":
-					now Stevenwater is numberVarValue entry;
+					if Stevenwater is not NumberVarValue entry, now Stevenwater is NumberVarValue entry;
 				-- "StewartLocationCounter":
-					now StewartLocationCounter is numberVarValue entry;
+					if StewartLocationCounter is not NumberVarValue entry, now StewartLocationCounter is NumberVarValue entry;
 				-- "StewartRelationship":
-					now StewartRelationship is numberVarValue entry;
+					if StewartRelationship is not NumberVarValue entry, now StewartRelationship is NumberVarValue entry;
 				-- "stiffedpayment":
-					now stiffedpayment is numberVarValue entry;
+					if stiffedpayment is not NumberVarValue entry, now stiffedpayment is NumberVarValue entry;
 				-- "strangebottledrink":
-					now strangebottledrink is numberVarValue entry;
+					if strangebottledrink is not NumberVarValue entry, now strangebottledrink is NumberVarValue entry;
 				-- "struggleatt":
-					now struggleatt is numberVarValue entry;
+					if struggleatt is not NumberVarValue entry, now struggleatt is NumberVarValue entry;
 				-- "supermarketcount":
-					now supermarketcount is numberVarValue entry;
+					if supermarketcount is not NumberVarValue entry, now supermarketcount is NumberVarValue entry;
 				-- "survfeat":
-					now survfeat is numberVarValue entry;
+					if survfeat is not NumberVarValue entry, now survfeat is NumberVarValue entry;
 				-- "Susanfirsttime":
-					now Susanfirsttime is numberVarValue entry;
+					if Susanfirsttime is not NumberVarValue entry, now Susanfirsttime is NumberVarValue entry;
 				-- "SvenAmySex":
-					now SvenAmySex is numberVarValue entry;
+					if SvenAmySex is not NumberVarValue entry, now SvenAmySex is NumberVarValue entry;
 				-- "SvenCandyMsg":
-					now SvenCandyMsg is numberVarValue entry;
+					if SvenCandyMsg is not NumberVarValue entry, now SvenCandyMsg is NumberVarValue entry;
 				-- "SylviaConv":
-					now SylviaConv is numberVarValue entry;
+					if SylviaConv is not NumberVarValue entry, now SylviaConv is NumberVarValue entry;
 				-- "SylviaTrapVar":
-					now SylviaTrapVar is numberVarValue entry;
+					if SylviaTrapVar is not NumberVarValue entry, now SylviaTrapVar is NumberVarValue entry;
 				-- "SylviaVirginCheck":
-					now SylviaVirginCheck is numberVarValue entry;
+					if SylviaVirginCheck is not NumberVarValue entry, now SylviaVirginCheck is NumberVarValue entry;
 				-- "TaniClassMemory":
-					now TaniClassMemory is numberVarValue entry;
+					if TaniClassMemory is not NumberVarValue entry, now TaniClassMemory is NumberVarValue entry;
 				-- "TaniRecommendation":
-					now TaniRecommendation is numberVarValue entry;
+					if TaniRecommendation is not NumberVarValue entry, now TaniRecommendation is NumberVarValue entry;
+				-- "Tanukigender":
+					if Tanukigender is not NumberVarValue entry, now Tanukigender is NumberVarValue entry;
 				-- "Targetturns":
-					now Targetturns is numberVarValue entry;
+					if Targetturns is not NumberVarValue entry, now Targetturns is NumberVarValue entry;
 				-- "tatsave":
-					now tatsave is numberVarValue entry;
+					if tatsave is not NumberVarValue entry, now tatsave is NumberVarValue entry;
 				-- "tatstatus":
-					now tatstatus is numberVarValue entry;
+					if tatstatus is not NumberVarValue entry, now tatstatus is NumberVarValue entry;
 				-- "tattoohunter":
-					now tattoohunter is numberVarValue entry;
+					if tattoohunter is not NumberVarValue entry, now tattoohunter is NumberVarValue entry;
 				-- "TawnyaFurSuspicion":
-					now TawnyaFurSuspicion is numberVarValue entry;
+					if TawnyaFurSuspicion is not NumberVarValue entry, now TawnyaFurSuspicion is NumberVarValue entry;
 				-- "TawnyaMotive":
-					now TawnyaMotive is numberVarValue entry;
+					if TawnyaMotive is not NumberVarValue entry, now TawnyaMotive is NumberVarValue entry;
 				-- "tcopfight":
-					now tcopfight is numberVarValue entry;
+					if tcopfight is not NumberVarValue entry, now tcopfight is NumberVarValue entry;
 				-- "teddyvored":
-					now teddyvored is numberVarValue entry;
+					if teddyvored is not NumberVarValue entry, now teddyvored is NumberVarValue entry;
 				-- "TehuantlKorvinRelationship":
-					now TehuantlKorvinRelationship is numberVarValue entry;
+					if TehuantlKorvinRelationship is not NumberVarValue entry, now TehuantlKorvinRelationship is NumberVarValue entry;
 				-- "TehuantlSnowStatus":
-					now TehuantlSnowStatus is numberVarValue entry;
+					if TehuantlSnowStatus is not NumberVarValue entry, now TehuantlSnowStatus is NumberVarValue entry;
 				-- "TehuantlStatus":
-					now TehuantlStatus is numberVarValue entry;
+					if TehuantlStatus is not NumberVarValue entry, now TehuantlStatus is NumberVarValue entry;
 				-- "TempClearBypass":
-					now TempClearBypass is numberVarValue entry;
+					if TempClearBypass is not NumberVarValue entry, now TempClearBypass is NumberVarValue entry;
 				-- "templust":
-					now templust is numberVarValue entry;
+					if templust is not NumberVarValue entry, now templust is NumberVarValue entry;
 				-- "tempnum":
-					now tempnum is numberVarValue entry;
+					if tempnum is not NumberVarValue entry, now tempnum is NumberVarValue entry;
 				-- "tempnum2":
-					now tempnum2 is numberVarValue entry;
+					if tempnum2 is not NumberVarValue entry, now tempnum2 is NumberVarValue entry;
 				-- "tempthirst":
-					now tempthirst is numberVarValue entry;
+					if tempthirst is not NumberVarValue entry, now tempthirst is NumberVarValue entry;
 				-- "TentacleInteractions":
-					now TentacleInteractions is numberVarValue entry;
+					if TentacleInteractions is not NumberVarValue entry, now TentacleInteractions is NumberVarValue entry;
 				-- "tentaclerape":
-					now tentaclerape is numberVarValue entry;
+					if tentaclerape is not NumberVarValue entry, now tentaclerape is NumberVarValue entry;
 				-- "TentacleStatus":
-					now TentacleStatus is numberVarValue entry;
+					if TentacleStatus is not NumberVarValue entry, now TentacleStatus is NumberVarValue entry;
 				-- "tentsubmit":
-					now tentsubmit is numberVarValue entry;
+					if tentsubmit is not NumberVarValue entry, now tentsubmit is NumberVarValue entry;
 				-- "thabread":
-					now thabread is numberVarValue entry;
+					if thabread is not NumberVarValue entry, now thabread is NumberVarValue entry;
 				-- "ThomasPregnancy":
-					now ThomasPregnancy is numberVarValue entry;
+					if ThomasPregnancy is not NumberVarValue entry, now ThomasPregnancy is NumberVarValue entry;
 				-- "ThomasQuestVar":
-					now ThomasQuestVar is numberVarValue entry;
+					if ThomasQuestVar is not NumberVarValue entry, now ThomasQuestVar is NumberVarValue entry;
 				-- "ThomasSaved":
-					now ThomasSaved is numberVarValue entry;
+					if ThomasSaved is not NumberVarValue entry, now ThomasSaved is NumberVarValue entry;
 				-- "ThunderTrackingVariable":
-					now ThunderTrackingVariable is numberVarValue entry;
+					if ThunderTrackingVariable is not NumberVarValue entry, now ThunderTrackingVariable is NumberVarValue entry;
 				-- "tightfitcount":
-					now tightfitcount is numberVarValue entry;
+					if tightfitcount is not NumberVarValue entry, now tightfitcount is NumberVarValue entry;
 				-- "tigressclient":
-					now tigressclient is numberVarValue entry;
+					if tigressclient is not NumberVarValue entry, now tigressclient is NumberVarValue entry;
 				-- "tigressfucked":
-					now tigressfucked is numberVarValue entry;
+					if tigressfucked is not NumberVarValue entry, now tigressfucked is NumberVarValue entry;
 				-- "tigresswinner":
-					now tigresswinner is numberVarValue entry;
+					if tigresswinner is not NumberVarValue entry, now tigresswinner is NumberVarValue entry;
 				-- "TimekeepingVar":
-					now TimekeepingVar is numberVarValue entry;
+					if TimekeepingVar is not NumberVarValue entry, now TimekeepingVar is NumberVarValue entry;
 				-- "timetillrampage":
-					now timetillrampage is numberVarValue entry;
+					if timetillrampage is not NumberVarValue entry, now timetillrampage is NumberVarValue entry;
 				-- "Timothyfucked":
-					now Timothyfucked is numberVarValue entry;
+					if Timothyfucked is not NumberVarValue entry, now Timothyfucked is NumberVarValue entry;
 				-- "tmapfound":
-					now tmapfound is numberVarValue entry;
+					if tmapfound is not NumberVarValue entry, now tmapfound is NumberVarValue entry;
 				-- "tmonster":
-					now tmonster is numberVarValue entry;
+					if tmonster is not NumberVarValue entry, now tmonster is NumberVarValue entry;
 				-- "TomeFound":
-					now TomeFound is numberVarValue entry;
+					if TomeFound is not NumberVarValue entry, now TomeFound is NumberVarValue entry;
 				-- "TomeInfluence":
-					now TomeInfluence is numberVarValue entry;
+					if TomeInfluence is not NumberVarValue entry, now TomeInfluence is NumberVarValue entry;
 				-- "TomeInfluenceTimer":
-					now TomeInfluenceTimer is numberVarValue entry;
+					if TomeInfluenceTimer is not NumberVarValue entry, now TomeInfluenceTimer is NumberVarValue entry;
 				-- "TomeInteractions":
-					now TomeInteractions is numberVarValue entry;
+					if TomeInteractions is not NumberVarValue entry, now TomeInteractions is NumberVarValue entry;
 				-- "TomeTimer":
-					now TomeTimer is numberVarValue entry;
+					if TomeTimer is not NumberVarValue entry, now TomeTimer is NumberVarValue entry;
 				-- "Treasurefound":
-					now Treasurefound is numberVarValue entry;
+					if Treasurefound is not NumberVarValue entry, now Treasurefound is NumberVarValue entry;
 				-- "treasurehunt":
-					now treasurehunt is numberVarValue entry;
+					if treasurehunt is not NumberVarValue entry, now treasurehunt is NumberVarValue entry;
 				-- "triclamped":
-					now triclamped is numberVarValue entry;
+					if triclamped is not NumberVarValue entry, now triclamped is NumberVarValue entry;
 				-- "triclampedmatt":
-					now triclampedmatt is numberVarValue entry;
+					if triclampedmatt is not NumberVarValue entry, now triclampedmatt is NumberVarValue entry;
 				-- "TritonRelationship":
-					now TritonRelationship is numberVarValue entry;
+					if TritonRelationship is not NumberVarValue entry, now TritonRelationship is NumberVarValue entry;
 				-- "TryoutScore":
-					now TryoutScore is numberVarValue entry;
+					if TryoutScore is not NumberVarValue entry, now TryoutScore is NumberVarValue entry;
 				-- "TSEventCounter":
-					now TSEventCounter is numberVarValue entry;
+					if TSEventCounter is not NumberVarValue entry, now TSEventCounter is NumberVarValue entry;
 				-- "tsw_fsd":
-					now tsw_fsd is numberVarValue entry;
+					if tsw_fsd is not NumberVarValue entry, now tsw_fsd is NumberVarValue entry;
 				-- "tsw_relationship":
-					now tsw_relationship is numberVarValue entry;
+					if tsw_relationship is not NumberVarValue entry, now tsw_relationship is NumberVarValue entry;
 				-- "tti_scene":
-					now tti_scene is numberVarValue entry;
+					if tti_scene is not NumberVarValue entry, now tti_scene is NumberVarValue entry;
 				-- "ttIcarus":
-					now ttIcarus is numberVarValue entry;
+					if ttIcarus is not NumberVarValue entry, now ttIcarus is NumberVarValue entry;
 				-- "ttransform":
-					now ttransform is numberVarValue entry;
+					if ttransform is not NumberVarValue entry, now ttransform is NumberVarValue entry;
 				-- "Turns":
-					now Turns is numberVarValue entry;
+					if Turns is not NumberVarValue entry, now Turns is NumberVarValue entry;
 				-- "turns in heat":
-					now turns in heat is numberVarValue entry;
+					if turns in heat is not NumberVarValue entry, now turns in heat is NumberVarValue entry;
 				-- "TwelveLaborsStage":
-					now TwelveLaborsStage is numberVarValue entry;
+					if TwelveLaborsStage is not NumberVarValue entry, now TwelveLaborsStage is NumberVarValue entry;
 				-- "twpimpbeaten":
-					now twpimpbeaten is numberVarValue entry;
+					if twpimpbeaten is not NumberVarValue entry, now twpimpbeaten is NumberVarValue entry;
 				-- "twpimploss":
-					now twpimploss is numberVarValue entry;
+					if twpimploss is not NumberVarValue entry, now twpimploss is NumberVarValue entry;
 				-- "Tyraffection":
-					now Tyraffection is numberVarValue entry;
+					if Tyraffection is not NumberVarValue entry, now Tyraffection is NumberVarValue entry;
 				-- "TyrDefeated":
-					now TyrDefeated is numberVarValue entry;
+					if TyrDefeated is not NumberVarValue entry, now TyrDefeated is NumberVarValue entry;
 				-- "Tyrtalk":
-					now Tyrtalk is numberVarValue entry;
+					if Tyrtalk is not NumberVarValue entry, now Tyrtalk is NumberVarValue entry;
 				-- "ubchoice":
-					now ubchoice is numberVarValue entry;
+					if ubchoice is not NumberVarValue entry, now ubchoice is NumberVarValue entry;
 				-- "ubcount":
-					now ubcount is numberVarValue entry;
+					if ubcount is not NumberVarValue entry, now ubcount is NumberVarValue entry;
 				-- "UBlevel":
-					now UBlevel is numberVarValue entry;
+					if UBlevel is not NumberVarValue entry, now UBlevel is NumberVarValue entry;
 				-- "UrikEricInteraction":
-					now UrikEricInteraction is numberVarValue entry;
+					if UrikEricInteraction is not NumberVarValue entry, now UrikEricInteraction is NumberVarValue entry;
 				-- "UrsineDefeatCount":
-					now UrsineDefeatCount is numberVarValue entry;
+					if UrsineDefeatCount is not NumberVarValue entry, now UrsineDefeatCount is NumberVarValue entry;
 				-- "UtahGender":
-					now UtahGender is numberVarValue entry;
+					if UtahGender is not NumberVarValue entry, now UtahGender is NumberVarValue entry;
 				-- "valhosp":
-					now valhosp is numberVarValue entry;
+					if valhosp is not NumberVarValue entry, now valhosp is NumberVarValue entry;
 				-- "ValPregCounter":
-					now ValPregCounter is numberVarValue entry;
+					if ValPregCounter is not NumberVarValue entry, now ValPregCounter is NumberVarValue entry;
 				-- "ValPregnancy":
-					now ValPregnancy is numberVarValue entry;
+					if ValPregnancy is not NumberVarValue entry, now ValPregnancy is NumberVarValue entry;
 				-- "Valtalk":
-					now Valtalk is numberVarValue entry;
+					if Valtalk is not NumberVarValue entry, now Valtalk is NumberVarValue entry;
 				-- "VentDomSize":
-					now VentDomSize is numberVarValue entry;
+					if VentDomSize is not NumberVarValue entry, now VentDomSize is NumberVarValue entry;
 				-- "VentFluidAmount":
-					now VentFluidAmount is numberVarValue entry;
+					if VentFluidAmount is not NumberVarValue entry, now VentFluidAmount is NumberVarValue entry;
 				-- "VentFoxContentLevel":
-					now VentFoxContentLevel is numberVarValue entry;
+					if VentFoxContentLevel is not NumberVarValue entry, now VentFoxContentLevel is NumberVarValue entry;
 				-- "VentFoxLastFed":
-					now VentFoxLastFed is numberVarValue entry;
+					if VentFoxLastFed is not NumberVarValue entry, now VentFoxLastFed is NumberVarValue entry;
 				-- "VentFoxRelationship":
-					now VentFoxRelationship is numberVarValue entry;
+					if VentFoxRelationship is not NumberVarValue entry, now VentFoxRelationship is NumberVarValue entry;
 				-- "VentOviAmount":
-					now VentOviAmount is numberVarValue entry;
+					if VentOviAmount is not NumberVarValue entry, now VentOviAmount is NumberVarValue entry;
 				-- "VentSubSize":
-					now VentSubSize is numberVarValue entry;
+					if VentSubSize is not NumberVarValue entry, now VentSubSize is NumberVarValue entry;
 				-- "VentWSAmount":
-					now VentWSAmount is numberVarValue entry;
+					if VentWSAmount is not NumberVarValue entry, now VentWSAmount is NumberVarValue entry;
 				-- "vetcheater":
-					now vetcheater is numberVarValue entry;
+					if vetcheater is not NumberVarValue entry, now vetcheater is NumberVarValue entry;
 				-- "vgeckoanal":
-					now vgeckoanal is numberVarValue entry;
+					if vgeckoanal is not NumberVarValue entry, now vgeckoanal is NumberVarValue entry;
 				-- "vgeckobeaten":
-					now vgeckobeaten is numberVarValue entry;
+					if vgeckobeaten is not NumberVarValue entry, now vgeckobeaten is NumberVarValue entry;
 				-- "vgeckoloss":
-					now vgeckoloss is numberVarValue entry;
+					if vgeckoloss is not NumberVarValue entry, now vgeckoloss is NumberVarValue entry;
 				-- "VictoryOverDaBull":
-					now VictoryOverDaBull is numberVarValue entry;
+					if VictoryOverDaBull is not NumberVarValue entry, now VictoryOverDaBull is NumberVarValue entry;
 				-- "VikingKidCounter":
-					now VikingKidCounter is numberVarValue entry;
+					if VikingKidCounter is not NumberVarValue entry, now VikingKidCounter is NumberVarValue entry;
 				-- "VikingKidGender":
-					now VikingKidGender is numberVarValue entry;
+					if VikingKidGender is not NumberVarValue entry, now VikingKidGender is NumberVarValue entry;
 				-- "VikingPregCounter":
-					now VikingPregCounter is numberVarValue entry;
+					if VikingPregCounter is not NumberVarValue entry, now VikingPregCounter is NumberVarValue entry;
 				-- "VikingPregnancy":
-					now VikingPregnancy is numberVarValue entry;
+					if VikingPregnancy is not NumberVarValue entry, now VikingPregnancy is NumberVarValue entry;
 				-- "VikingRelationship":
-					now VikingRelationship is numberVarValue entry;
+					if VikingRelationship is not NumberVarValue entry, now VikingRelationship is NumberVarValue entry;
 				-- "VikingSpartanWar":
-					now VikingSpartanWar is numberVarValue entry;
+					if VikingSpartanWar is not NumberVarValue entry, now VikingSpartanWar is NumberVarValue entry;
 				-- "VikingUltimatum":
-					now VikingUltimatum is numberVarValue entry;
+					if VikingUltimatum is not NumberVarValue entry, now VikingUltimatum is NumberVarValue entry;
 				-- "VikingWar":
-					now VikingWar is numberVarValue entry;
+					if VikingWar is not NumberVarValue entry, now VikingWar is NumberVarValue entry;
 				-- "violinfound":
-					now violinfound is numberVarValue entry;
+					if violinfound is not NumberVarValue entry, now violinfound is NumberVarValue entry;
 				-- "vixcountdown":
-					now vixcountdown is numberVarValue entry;
+					if vixcountdown is not NumberVarValue entry, now vixcountdown is NumberVarValue entry;
 				-- "vixentaurcatch":
-					now vixentaurcatch is numberVarValue entry;
+					if vixentaurcatch is not NumberVarValue entry, now vixentaurcatch is NumberVarValue entry;
 				-- "vixgender":
-					now vixgender is numberVarValue entry;
+					if vixgender is not NumberVarValue entry, now vixgender is NumberVarValue entry;
 				-- "vorechoice":
-					now vorechoice is numberVarValue entry;
+					if vorechoice is not NumberVarValue entry, now vorechoice is NumberVarValue entry;
 				-- "vorecount":
-					now vorecount is numberVarValue entry;
+					if vorecount is not NumberVarValue entry, now vorecount is NumberVarValue entry;
 				-- "vorelevel":
-					now vorelevel is numberVarValue entry;
+					if vorelevel is not NumberVarValue entry, now vorelevel is NumberVarValue entry;
 				-- "vpostmusenum":
-					now vpostmusenum is numberVarValue entry;
+					if vpostmusenum is not NumberVarValue entry, now vpostmusenum is NumberVarValue entry;
 				-- "waiterhater":
-					now waiterhater is numberVarValue entry;
+					if waiterhater is not NumberVarValue entry, now waiterhater is NumberVarValue entry;
 				-- "WallyQuestDenial":
-					now WallyQuestDenial is numberVarValue entry;
+					if WallyQuestDenial is not NumberVarValue entry, now WallyQuestDenial is NumberVarValue entry;
 				-- "WallyOrcFled":
-					now WallyOrcFled is numberVarValue entry;
+					if WallyOrcFled is not NumberVarValue entry, now WallyOrcFled is NumberVarValue entry;
 				-- "InsightGained":
-					now InsightGained is numberVarValue entry;
+					if InsightGained is not NumberVarValue entry, now InsightGained is NumberVarValue entry;
 				-- "WallyTrust":
-					now WallyTrust is numberVarValue entry;
+					if WallyTrust is not NumberVarValue entry, now WallyTrust is NumberVarValue entry;
 				-- "WallStanding":
-					now WallStanding is numberVarValue entry;
+					if WallStanding is not NumberVarValue entry, now WallStanding is NumberVarValue entry;
 				-- "WarLossCounter":
-					now WarLossCounter is numberVarValue entry;
+					if WarLossCounter is not NumberVarValue entry, now WarLossCounter is NumberVarValue entry;
 				-- "WarriorChrisDominance":
-					now WarriorChrisDominance is numberVarValue entry;
+					if WarriorChrisDominance is not NumberVarValue entry, now WarriorChrisDominance is NumberVarValue entry;
 				-- "WarriorChrisPlayerFucked":
-					now WarriorChrisPlayerFucked is numberVarValue entry;
+					if WarriorChrisPlayerFucked is not NumberVarValue entry, now WarriorChrisPlayerFucked is NumberVarValue entry;
 				-- "wasfertile":
-					now wasfertile is numberVarValue entry;
+					if wasfertile is not NumberVarValue entry, now wasfertile is NumberVarValue entry;
 				-- "wasfertilef":
-					now wasfertilef is numberVarValue entry;
+					if wasfertilef is not NumberVarValue entry, now wasfertilef is NumberVarValue entry;
 				-- "washerenest":
-					now washerenest is numberVarValue entry;
+					if washerenest is not NumberVarValue entry, now washerenest is NumberVarValue entry;
 				-- "wassterile":
-					now wassterile is numberVarValue entry;
+					if wassterile is not NumberVarValue entry, now wassterile is NumberVarValue entry;
 				-- "wassterilef":
-					now wassterilef is numberVarValue entry;
+					if wassterilef is not NumberVarValue entry, now wassterilef is NumberVarValue entry;
 				-- "watercount":
-					now watercount is numberVarValue entry;
+					if watercount is not NumberVarValue entry, now watercount is NumberVarValue entry;
 				-- "waterneed":
-					now waterneed is numberVarValue entry;
+					if waterneed is not NumberVarValue entry, now waterneed is NumberVarValue entry;
 				-- "weaselcount":
-					now weaselcount is numberVarValue entry;
+					if weaselcount is not NumberVarValue entry, now weaselcount is NumberVarValue entry;
 				-- "WellRestedTimer":
-					now WellRestedTimer is numberVarValue entry;
+					if WellRestedTimer is not NumberVarValue entry, now WellRestedTimer is NumberVarValue entry;
 				-- "werewolfcostumenosex":
-					now werewolfcostumenosex is numberVarValue entry;
+					if werewolfcostumenosex is not NumberVarValue entry, now werewolfcostumenosex is NumberVarValue entry;
 				-- "WerewolfRelationship":
-					now WerewolfRelationship is numberVarValue entry;
+					if WerewolfRelationship is not NumberVarValue entry, now WerewolfRelationship is NumberVarValue entry;
 				-- "whelpspotnum":
-					now whelpspotnum is numberVarValue entry;
+					if whelpspotnum is not NumberVarValue entry, now whelpspotnum is NumberVarValue entry;
 				-- "WhiptailLossCount":
-					now WhiptailLossCount is numberVarValue entry;
+					if WhiptailLossCount is not NumberVarValue entry, now WhiptailLossCount is NumberVarValue entry;
 				-- "WhoringExperience":
-					now WhoringExperience is numberVarValue entry;
+					if WhoringExperience is not NumberVarValue entry, now WhoringExperience is NumberVarValue entry;
 				-- "WineFound":
-					now WineFound is numberVarValue entry;
+					if WineFound is not NumberVarValue entry, now WineFound is NumberVarValue entry;
 				-- "wolfhermdefeat":
-					now wolfhermdefeat is numberVarValue entry;
+					if wolfhermdefeat is not NumberVarValue entry, now wolfhermdefeat is NumberVarValue entry;
 				-- "wolfhermvictory":
-					now wolfhermvictory is numberVarValue entry;
+					if wolfhermvictory is not NumberVarValue entry, now wolfhermvictory is NumberVarValue entry;
 				-- "WolfHorseMallCouple":
-					now WolfHorseMallCouple is numberVarValue entry;
+					if WolfHorseMallCouple is not NumberVarValue entry, now WolfHorseMallCouple is NumberVarValue entry;
 				-- "workoutprice":
-					now workoutprice is numberVarValue entry;
+					if workoutprice is not NumberVarValue entry, now workoutprice is NumberVarValue entry;
 				-- "wrcurseholdback":
-					now wrcurseholdback is numberVarValue entry;
+					if wrcurseholdback is not NumberVarValue entry, now wrcurseholdback is NumberVarValue entry;
 				-- "wrcurseMoffatt":
-					now wrcurseMoffatt is numberVarValue entry;
+					if wrcurseMoffatt is not NumberVarValue entry, now wrcurseMoffatt is NumberVarValue entry;
 				-- "wrcurseNermine":
-					now wrcurseNermine is numberVarValue entry;
+					if wrcurseNermine is not NumberVarValue entry, now wrcurseNermine is NumberVarValue entry;
 				-- "wrcursestart":
-					now wrcursestart is numberVarValue entry;
+					if wrcursestart is not NumberVarValue entry, now wrcursestart is NumberVarValue entry;
 				-- "wrcursestatus":
-					now wrcursestatus is numberVarValue entry;
+					if wrcursestatus is not NumberVarValue entry, now wrcursestatus is NumberVarValue entry;
 				-- "wrdaycycle":
-					now wrdaycycle is numberVarValue entry;
+					if wrdaycycle is not NumberVarValue entry, now wrdaycycle is NumberVarValue entry;
 				-- "wrestlechance":
-					now wrestlechance is numberVarValue entry;
+					if wrestlechance is not NumberVarValue entry, now wrestlechance is NumberVarValue entry;
 				-- "wrestlingwolfdefeat":
-					now wrestlingwolfdefeat is numberVarValue entry;
+					if wrestlingwolfdefeat is not NumberVarValue entry, now wrestlingwolfdefeat is NumberVarValue entry;
 				-- "wrlastNermine":
-					now wrlastNermine is numberVarValue entry;
+					if wrlastNermine is not NumberVarValue entry, now wrlastNermine is NumberVarValue entry;
 				-- "wrmode":
-					now wrmode is numberVarValue entry;
+					if wrmode is not NumberVarValue entry, now wrmode is NumberVarValue entry;
 				-- "wrscalevalue":
-					now wrscalevalue is numberVarValue entry;
+					if wrscalevalue is not NumberVarValue entry, now wrscalevalue is NumberVarValue entry;
 				-- "wrwolfanal":
-					now wrwolfanal is numberVarValue entry;
+					if wrwolfanal is not NumberVarValue entry, now wrwolfanal is NumberVarValue entry;
 				-- "wrwolfbeaten":
-					now wrwolfbeaten is numberVarValue entry;
+					if wrwolfbeaten is not NumberVarValue entry, now wrwolfbeaten is NumberVarValue entry;
 				-- "WSlevel":
-					now WSlevel is numberVarValue entry;
+					if WSlevel is not NumberVarValue entry, now WSlevel is NumberVarValue entry;
 				-- "wwheal":
-					now wwheal is numberVarValue entry;
+					if wwheal is not NumberVarValue entry, now wwheal is NumberVarValue entry;
 				-- "wyvernbias":
-					now wyvernbias is numberVarValue entry;
+					if wyvernbias is not NumberVarValue entry, now wyvernbias is NumberVarValue entry;
 				-- "WYVGEN":
-					now WYVGEN is numberVarValue entry;
+					if WYVGEN is not NumberVarValue entry, now WYVGEN is NumberVarValue entry;
 				-- "wyvkin1att":
-					now wyvkin1att is numberVarValue entry;
+					if wyvkin1att is not NumberVarValue entry, now wyvkin1att is NumberVarValue entry;
 				-- "wyvkin1gen":
-					now wyvkin1gen is numberVarValue entry;
+					if wyvkin1gen is not NumberVarValue entry, now wyvkin1gen is NumberVarValue entry;
 				-- "wyvkin1lib":
-					now wyvkin1lib is numberVarValue entry;
+					if wyvkin1lib is not NumberVarValue entry, now wyvkin1lib is NumberVarValue entry;
 				-- "wyvkin2att":
-					now wyvkin2att is numberVarValue entry;
+					if wyvkin2att is not NumberVarValue entry, now wyvkin2att is NumberVarValue entry;
 				-- "wyvkin2gen":
-					now wyvkin2gen is numberVarValue entry;
+					if wyvkin2gen is not NumberVarValue entry, now wyvkin2gen is NumberVarValue entry;
 				-- "wyvkin2lib":
-					now wyvkin2lib is numberVarValue entry;
+					if wyvkin2lib is not NumberVarValue entry, now wyvkin2lib is NumberVarValue entry;
 				-- "wyvkin3att":
-					now wyvkin3att is numberVarValue entry;
+					if wyvkin3att is not NumberVarValue entry, now wyvkin3att is NumberVarValue entry;
 				-- "wyvkin3gen":
-					now wyvkin3gen is numberVarValue entry;
+					if wyvkin3gen is not NumberVarValue entry, now wyvkin3gen is NumberVarValue entry;
 				-- "wyvkin3lib":
-					now wyvkin3lib is numberVarValue entry;
+					if wyvkin3lib is not NumberVarValue entry, now wyvkin3lib is NumberVarValue entry;
 				-- "wyvkin4att":
-					now wyvkin4att is numberVarValue entry;
+					if wyvkin4att is not NumberVarValue entry, now wyvkin4att is NumberVarValue entry;
 				-- "wyvkin4gen":
-					now wyvkin4gen is numberVarValue entry;
+					if wyvkin4gen is not NumberVarValue entry, now wyvkin4gen is NumberVarValue entry;
 				-- "wyvkin4lib":
-					now wyvkin4lib is numberVarValue entry;
+					if wyvkin4lib is not NumberVarValue entry, now wyvkin4lib is NumberVarValue entry;
 				-- "wyvkinassign":
-					now wyvkinassign is numberVarValue entry;
+					if wyvkinassign is not NumberVarValue entry, now wyvkinassign is NumberVarValue entry;
 				-- "wyvkinatt":
-					now wyvkinatt is numberVarValue entry;
+					if wyvkinatt is not NumberVarValue entry, now wyvkinatt is NumberVarValue entry;
 				-- "wyvkinocc":
-					now wyvkinocc is numberVarValue entry;
+					if wyvkinocc is not NumberVarValue entry, now wyvkinocc is NumberVarValue entry;
 				-- "WYVLEV":
-					now WYVLEV is numberVarValue entry;
+					if WYVLEV is not NumberVarValue entry, now WYVLEV is NumberVarValue entry;
 				-- "wyvorgyroll":
-					now wyvorgyroll is numberVarValue entry;
+					if wyvorgyroll is not NumberVarValue entry, now wyvorgyroll is NumberVarValue entry;
 				-- "WYVSF":
-					now WYVSF is numberVarValue entry;
+					if WYVSF is not NumberVarValue entry, now WYVSF is NumberVarValue entry;
 				-- "yamatdom":
-					now yamatdom is numberVarValue entry;
+					if yamatdom is not NumberVarValue entry, now yamatdom is NumberVarValue entry;
 				-- "ydcolor":
-					now ydcolor is numberVarValue entry;
+					if ydcolor is not NumberVarValue entry, now ydcolor is NumberVarValue entry;
 				-- "YDSF":
-					now YDSF is numberVarValue entry;
+					if YDSF is not NumberVarValue entry, now YDSF is NumberVarValue entry;
 				-- "ymgmode":
-					now ymgmode is numberVarValue entry;
+					if ymgmode is not NumberVarValue entry, now ymgmode is NumberVarValue entry;
 				-- "ZebraLossCount":
-					now ZebraLossCount is numberVarValue entry;
+					if ZebraLossCount is not NumberVarValue entry, now ZebraLossCount is NumberVarValue entry;
 				-- "ZekeRelationship":
-					now ZekeRelationship is numberVarValue entry;
+					if ZekeRelationship is not NumberVarValue entry, now ZekeRelationship is NumberVarValue entry;
 				-- "zephyrpests":
-					now zephyrpests is numberVarValue entry;
+					if zephyrpests is not NumberVarValue entry, now zephyrpests is NumberVarValue entry;
 				-- "zephyrtask":
-					now zephyrtask is numberVarValue entry;
+					if zephyrtask is not NumberVarValue entry, now zephyrtask is NumberVarValue entry;
 				-- "ZieraFucked":
-					now ZieraFucked is numberVarValue entry;
+					if ZieraFucked is not NumberVarValue entry, now ZieraFucked is NumberVarValue entry;
 				-- "zigseat":
-					now zigseat is numberVarValue entry;
+					if zigseat is not NumberVarValue entry, now zigseat is NumberVarValue entry;
 				-- "zpc_Zc":
-					now zpc_Zc is numberVarValue entry;
+					if zpc_Zc is not NumberVarValue entry, now zpc_Zc is NumberVarValue entry;
 			[
 			if debug is at level 10:
 				say "DEBUG -> VarName '[NumberVarName entry]' restored to '[NumberVarValue entry]'.";
@@ -6494,636 +6512,640 @@ to VariableTruthLoad:
 				say "Restoring Truth [TruthVarName entry].";
 			]
 			if TruthVarName entry is:
+				-- "ColaVendingMachine_dead":
+					if Cola Vending Machine is in Mall Foodcourt, now Cola Vending Machine is nowhere;
+				-- "LibraryComputer_on":
+					if library computer is not on, now library computer is on;
 				-- "A_Candy":
-					now A_Candy is TruthVarValue entry;
+					if A_Candy is not TruthVarValue entry, now A_Candy is TruthVarValue entry;
 				-- "A_Colleen":
-					now A_Colleen is TruthVarValue entry;
+					if A_Colleen is not TruthVarValue entry, now A_Colleen is TruthVarValue entry;
 				-- "A_David":
-					now A_David is TruthVarValue entry;
+					if A_David is not TruthVarValue entry, now A_David is TruthVarValue entry;
 				-- "A_Elijah":
-					now A_Elijah is TruthVarValue entry;
+					if A_Elijah is not TruthVarValue entry, now A_Elijah is TruthVarValue entry;
 				-- "A_Fang":
-					now A_Fang is TruthVarValue entry;
+					if A_Fang is not TruthVarValue entry, now A_Fang is TruthVarValue entry;
 				-- "A_Helen":
-					now A_Helen is TruthVarValue entry;
+					if A_Helen is not TruthVarValue entry, now A_Helen is TruthVarValue entry;
 				-- "A_Icarus":
-					now A_Icarus is TruthVarValue entry;
+					if A_Icarus is not TruthVarValue entry, now A_Icarus is TruthVarValue entry;
 				-- "A_Mack":
-					now A_Mack is TruthVarValue entry;
+					if A_Mack is not TruthVarValue entry, now A_Mack is TruthVarValue entry;
 				-- "A_Onyx":
-					now A_Onyx is TruthVarValue entry;
+					if A_Onyx is not TruthVarValue entry, now A_Onyx is TruthVarValue entry;
 				-- "A_Philip":
-					now A_Philip is TruthVarValue entry;
+					if A_Philip is not TruthVarValue entry, now A_Philip is TruthVarValue entry;
 				-- "A_Sally":
-					now A_Sally is TruthVarValue entry;
+					if A_Sally is not TruthVarValue entry, now A_Sally is TruthVarValue entry;
 				-- "A_Sam":
-					now A_Sam is TruthVarValue entry;
+					if A_Sam is not TruthVarValue entry, now A_Sam is TruthVarValue entry;
 				-- "A_Sandra":
-					now A_Sandra is TruthVarValue entry;
+					if A_Sandra is not TruthVarValue entry, now A_Sandra is TruthVarValue entry;
 				-- "A_Sarah":
-					now A_Sarah is TruthVarValue entry;
+					if A_Sarah is not TruthVarValue entry, now A_Sarah is TruthVarValue entry;
 				-- "A_Sarah2":
-					now A_Sarah2 is TruthVarValue entry;
+					if A_Sarah2 is not TruthVarValue entry, now A_Sarah2 is TruthVarValue entry;
 				-- "A_Snow":
-					now A_Snow is TruthVarValue entry;
+					if A_Snow is not TruthVarValue entry, now A_Snow is TruthVarValue entry;
 				-- "A_Solstice":
-					now A_Solstice is TruthVarValue entry;
+					if A_Solstice is not TruthVarValue entry, now A_Solstice is TruthVarValue entry;
 				-- "A_Sven":
-					now A_Sven is TruthVarValue entry;
+					if A_Sven is not TruthVarValue entry, now A_Sven is TruthVarValue entry;
 				-- "A_Xerxes":
-					now A_Xerxes is TruthVarValue entry;
+					if A_Xerxes is not TruthVarValue entry, now A_Xerxes is TruthVarValue entry;
 				-- "Alexandracoffee":
-					now Alexandracoffee is TruthVarValue entry;
+					if Alexandracoffee is not TruthVarValue entry, now Alexandracoffee is TruthVarValue entry;
 				-- "alexandragshep1":
-					now alexandragshep1 is TruthVarValue entry;
+					if alexandragshep1 is not TruthVarValue entry, now alexandragshep1 is TruthVarValue entry;
 				-- "Alexandrastory":
-					now Alexandrastory is TruthVarValue entry;
+					if Alexandrastory is not TruthVarValue entry, now Alexandrastory is TruthVarValue entry;
 				-- "Alexandrastory2":
-					now Alexandrastory2 is TruthVarValue entry;
+					if Alexandrastory2 is not TruthVarValue entry, now Alexandrastory2 is TruthVarValue entry;
 				-- "Alexandrastory3":
-					now Alexandrastory3 is TruthVarValue entry;
+					if Alexandrastory3 is not TruthVarValue entry, now Alexandrastory3 is TruthVarValue entry;
 				-- "alphaHuskyBountyState":
-					now alphaHuskyBountyState is TruthVarValue entry;
+					if alphaHuskyBountyState is not TruthVarValue entry, now alphaHuskyBountyState is TruthVarValue entry;
 				-- "alphawolfreplaced":
-					now alphawolfreplaced is TruthVarValue entry;
+					if alphawolfreplaced is not TruthVarValue entry, now alphawolfreplaced is TruthVarValue entry;
 				-- "altsealedentrance":
-					now altsealedentrance is TruthVarValue entry;
+					if altsealedentrance is not TruthVarValue entry, now altsealedentrance is TruthVarValue entry;
 				-- "animal heat":
-					now animal heat is TruthVarValue entry;
+					if animal heat is not TruthVarValue entry, now animal heat is TruthVarValue entry;
 				-- "animeclubfight":
-					now animeclubfight is TruthVarValue entry;
+					if animeclubfight is not TruthVarValue entry, now animeclubfight is TruthVarValue entry;
 				-- "artemisstatefairrt":
-					now artemisstatefairrt is TruthVarValue entry;
+					if artemisstatefairrt is not TruthVarValue entry, now artemisstatefairrt is TruthVarValue entry;
 				-- "AT_Diego":
-					now AT_Diego is TruthVarValue entry;
+					if AT_Diego is not TruthVarValue entry, now AT_Diego is TruthVarValue entry;
 				-- "AT_Jimmy":
-					now AT_Jimmy is TruthVarValue entry;
+					if AT_Jimmy is not TruthVarValue entry, now AT_Jimmy is TruthVarValue entry;
 				-- "AT_Lisa":
-					now AT_Lisa is TruthVarValue entry;
+					if AT_Lisa is not TruthVarValue entry, now AT_Lisa is TruthVarValue entry;
 				-- "AT_Marks":
-					now AT_Marks is TruthVarValue entry;
+					if AT_Marks is not TruthVarValue entry, now AT_Marks is TruthVarValue entry;
 				-- "AT_Matt":
-					now AT_Matt is TruthVarValue entry;
+					if AT_Matt is not TruthVarValue entry, now AT_Matt is TruthVarValue entry;
 				-- "AT_Mouse":
-					now AT_Mouse is TruthVarValue entry;
+					if AT_Mouse is not TruthVarValue entry, now AT_Mouse is TruthVarValue entry;
 				-- "AT_Patrol":
-					now AT_Patrol is TruthVarValue entry;
+					if AT_Patrol is not TruthVarValue entry, now AT_Patrol is TruthVarValue entry;
 				-- "at_patrol_01":
-					now at_patrol_01 is TruthVarValue entry;
+					if at_patrol_01 is not TruthVarValue entry, now at_patrol_01 is TruthVarValue entry;
 				-- "AT_Paula":
-					now AT_Paula is TruthVarValue entry;
+					if AT_Paula is not TruthVarValue entry, now AT_Paula is TruthVarValue entry;
 				-- "AT_Philip":
-					now AT_Philip is TruthVarValue entry;
+					if AT_Philip is not TruthVarValue entry, now AT_Philip is TruthVarValue entry;
 				-- "AT_Qytat":
-					now AT_Qytat is TruthVarValue entry;
+					if AT_Qytat is not TruthVarValue entry, now AT_Qytat is TruthVarValue entry;
 				-- "AT_Repair":
-					now AT_Repair is TruthVarValue entry;
+					if AT_Repair is not TruthVarValue entry, now AT_Repair is TruthVarValue entry;
 				-- "AT_RLD":
-					now AT_RLD is TruthVarValue entry;
+					if AT_RLD is not TruthVarValue entry, now AT_RLD is TruthVarValue entry;
 				-- "AT_Sandra":
-					now AT_Sandra is TruthVarValue entry;
+					if AT_Sandra is not TruthVarValue entry, now AT_Sandra is TruthVarValue entry;
 				-- "AT_Sarah":
-					now AT_Sarah is TruthVarValue entry;
+					if AT_Sarah is not TruthVarValue entry, now AT_Sarah is TruthVarValue entry;
 				-- "AT_Snow":
-					now AT_Snow is TruthVarValue entry;
+					if AT_Snow is not TruthVarValue entry, now AT_Snow is TruthVarValue entry;
 				-- "AT_Stella":
-					now AT_Stella is TruthVarValue entry;
+					if AT_Stella is not TruthVarValue entry, now AT_Stella is TruthVarValue entry;
 				-- "AT_Sven":
-					now AT_Sven is TruthVarValue entry;
+					if AT_Sven is not TruthVarValue entry, now AT_Sven is TruthVarValue entry;
 				-- "autofeatloading":
-					now autofeatloading is TruthVarValue entry;
+					if autofeatloading is not TruthVarValue entry, now autofeatloading is TruthVarValue entry;
 				-- "BastetSexOrTalk":
-					now BastetSexOrTalk is TruthVarValue entry;
+					if BastetSexOrTalk is not TruthVarValue entry, now BastetSexOrTalk is TruthVarValue entry;
 				-- "bcplayroomlast":
-					now bcplayroomlast is TruthVarValue entry;
+					if bcplayroomlast is not TruthVarValue entry, now bcplayroomlast is TruthVarValue entry;
 				-- "bcseenhugeorca":
-					now bcseenhugeorca is TruthVarValue entry;
+					if bcseenhugeorca is not TruthVarValue entry, now bcseenhugeorca is TruthVarValue entry;
 				-- "bcseenkingchair":
-					now bcseenkingchair is TruthVarValue entry;
+					if bcseenkingchair is not TruthVarValue entry, now bcseenkingchair is TruthVarValue entry;
 				-- "bcseenkingknight":
-					now bcseenkingknight is TruthVarValue entry;
+					if bcseenkingknight is not TruthVarValue entry, now bcseenkingknight is TruthVarValue entry;
 				-- "bcseenplayroom":
-					now bcseenplayroom is TruthVarValue entry;
+					if bcseenplayroom is not TruthVarValue entry, now bcseenplayroom is TruthVarValue entry;
 				-- "bcseenpunchingpillars":
-					now bcseenpunchingpillars is TruthVarValue entry;
+					if bcseenpunchingpillars is not TruthVarValue entry, now bcseenpunchingpillars is TruthVarValue entry;
 				-- "bcseenthroneroom":
-					now bcseenthroneroom is TruthVarValue entry;
+					if bcseenthroneroom is not TruthVarValue entry, now bcseenthroneroom is TruthVarValue entry;
 				-- "bcswordplay":
-					now bcswordplay is TruthVarValue entry;
+					if bcswordplay is not TruthVarValue entry, now bcswordplay is TruthVarValue entry;
 				-- "beachrape":
-					now beachrape is TruthVarValue entry;
+					if beachrape is not TruthVarValue entry, now beachrape is TruthVarValue entry;
 				-- "beauceronmet":
-					now beauceronmet is TruthVarValue entry;
+					if beauceronmet is not TruthVarValue entry, now beauceronmet is TruthVarValue entry;
 				-- "birthedwhelp":
-					now birthedwhelp is TruthVarValue entry;
+					if birthedwhelp is not TruthVarValue entry, now birthedwhelp is TruthVarValue entry;
 				-- "blanchetalk1":
-					now blanchetalk1 is TruthVarValue entry;
+					if blanchetalk1 is not TruthVarValue entry, now blanchetalk1 is TruthVarValue entry;
 				-- "blanchetalk2":
-					now blanchetalk2 is TruthVarValue entry;
+					if blanchetalk2 is not TruthVarValue entry, now blanchetalk2 is TruthVarValue entry;
 				-- "blanchetalk3":
-					now blanchetalk3 is TruthVarValue entry;
+					if blanchetalk3 is not TruthVarValue entry, now blanchetalk3 is TruthVarValue entry;
 				-- "BlindMode":
-					now BlindMode is TruthVarValue entry;
+					if BlindMode is not TruthVarValue entry, now BlindMode is TruthVarValue entry;
 				-- "blindmode":
-					now BlindMode is TruthVarValue entry;
+					if BlindMode is not TruthVarValue entry, now BlindMode is TruthVarValue entry;
 				-- "bopseen":
-					now bopseen is TruthVarValue entry;
+					if bopseen is not TruthVarValue entry, now bopseen is TruthVarValue entry;
 				-- "BorisArtemistalk":
-					now BorisArtemistalk is TruthVarValue entry;
+					if BorisArtemistalk is not TruthVarValue entry, now BorisArtemistalk is TruthVarValue entry;
 				-- "boundrecover":
-					now boundrecover is TruthVarValue entry;
+					if boundrecover is not TruthVarValue entry, now boundrecover is TruthVarValue entry;
 				-- "boundstate":
-					now boundstate is TruthVarValue entry;
+					if boundstate is not TruthVarValue entry, now boundstate is TruthVarValue entry;
 				-- "bradfordstory1":
-					now bradfordstory1 is TruthVarValue entry;
+					if bradfordstory1 is not TruthVarValue entry, now bradfordstory1 is TruthVarValue entry;
 				-- "bradfordstory2":
-					now bradfordstory2 is TruthVarValue entry;
+					if bradfordstory2 is not TruthVarValue entry, now bradfordstory2 is TruthVarValue entry;
 				-- "bradfordstory3":
-					now bradfordstory3 is TruthVarValue entry;
+					if bradfordstory3 is not TruthVarValue entry, now bradfordstory3 is TruthVarValue entry;
 				-- "bradfordstory4":
-					now bradfordstory4 is TruthVarValue entry;
+					if bradfordstory4 is not TruthVarValue entry, now bradfordstory4 is TruthVarValue entry;
 				-- "brookeandrewtalk":
-					now brookeandrewtalk is TruthVarValue entry;
+					if brookeandrewtalk is not TruthVarValue entry, now brookeandrewtalk is TruthVarValue entry;
 				-- "busterstory1":
-					now busterstory1 is TruthVarValue entry;
+					if busterstory1 is not TruthVarValue entry, now busterstory1 is TruthVarValue entry;
 				-- "busterstory2":
-					now busterstory2 is TruthVarValue entry;
+					if busterstory2 is not TruthVarValue entry, now busterstory2 is TruthVarValue entry;
 				-- "ButterflyForeplay":
-					now ButterflyForeplay is TruthVarValue entry;
+					if ButterflyForeplay is not TruthVarValue entry, now ButterflyForeplay is TruthVarValue entry;
 				-- "ButterflyHasNegligee":
-					now ButterflyHasNegligee is TruthVarValue entry;
+					if ButterflyHasNegligee is not TruthVarValue entry, now ButterflyHasNegligee is TruthVarValue entry;
 				-- "ButterflyLikesYou":
-					now ButterflyLikesYou is TruthVarValue entry;
+					if ButterflyLikesYou is not TruthVarValue entry, now ButterflyLikesYou is TruthVarValue entry;
 				-- "ButterflyLove":
-					now ButterflyLove is TruthVarValue entry;
+					if ButterflyLove is not TruthVarValue entry, now ButterflyLove is TruthVarValue entry;
 				-- "ButterflyNegligeeTorn":
-					now ButterflyNegligeeTorn is TruthVarValue entry;
+					if ButterflyNegligeeTorn is not TruthVarValue entry, now ButterflyNegligeeTorn is TruthVarValue entry;
 				-- "ButterflyPantiesFound":
-					now ButterflyPantiesFound is TruthVarValue entry;
+					if ButterflyPantiesFound is not TruthVarValue entry, now ButterflyPantiesFound is TruthVarValue entry;
 				-- "ButterflyPregnant":
-					now ButterflyPregnant is TruthVarValue entry;
+					if ButterflyPregnant is not TruthVarValue entry, now ButterflyPregnant is TruthVarValue entry;
 				-- "ButterflyProcreated":
-					now ButterflyProcreated is TruthVarValue entry;
+					if ButterflyProcreated is not TruthVarValue entry, now ButterflyProcreated is TruthVarValue entry;
 				-- "ButterflyRevenge":
-					now ButterflyRevenge is TruthVarValue entry;
+					if ButterflyRevenge is not TruthVarValue entry, now ButterflyRevenge is TruthVarValue entry;
 				-- "callovi":
-					now callovi is TruthVarValue entry;
+					if callovi is not TruthVarValue entry, now callovi is TruthVarValue entry;
 				-- "cclosttarget":
-					now cclosttarget is TruthVarValue entry;
+					if cclosttarget is not TruthVarValue entry, now cclosttarget is TruthVarValue entry;
 				-- "cheetah_mpreg":
-					now cheetah_mpreg is TruthVarValue entry;
+					if cheetah_mpreg is not TruthVarValue entry, now cheetah_mpreg is TruthVarValue entry;
 				-- "chindem":
-					now chindem is TruthVarValue entry;
+					if chindem is not TruthVarValue entry, now chindem is TruthVarValue entry;
 				-- "christysausage":
-					now christysausage is TruthVarValue entry;
+					if christysausage is not TruthVarValue entry, now christysausage is TruthVarValue entry;
 				-- "ClassPaymentAccepted":
-					now ClassPaymentAccepted is TruthVarValue entry;
+					if ClassPaymentAccepted is not TruthVarValue entry, now ClassPaymentAccepted is TruthVarValue entry;
 				-- "cuptrick":
-					now cuptrick is TruthVarValue entry;
+					if cuptrick is not TruthVarValue entry, now cuptrick is TruthVarValue entry;
 				-- "demonBruteBountyState":
-					now demonBruteBountyState is TruthVarValue entry;
+					if demonBruteBountyState is not TruthVarValue entry, now demonBruteBountyState is TruthVarValue entry;
 				-- "DemonFox_Apologized":
-					now DemonFox_Apologized is TruthVarValue entry;
+					if DemonFox_Apologized is not TruthVarValue entry, now DemonFox_Apologized is TruthVarValue entry;
 				-- "DemonFox_Encountered":
-					now DemonFox_Encountered is TruthVarValue entry;
+					if DemonFox_Encountered is not TruthVarValue entry, now DemonFox_Encountered is TruthVarValue entry;
 				-- "DemonFox_PlayerDefeated":
-					now DemonFox_PlayerDefeated is TruthVarValue entry;
+					if DemonFox_PlayerDefeated is not TruthVarValue entry, now DemonFox_PlayerDefeated is TruthVarValue entry;
 				-- "DemonFox_PlayerFled":
-					now DemonFox_PlayerFled is TruthVarValue entry;
+					if DemonFox_PlayerFled is not TruthVarValue entry, now DemonFox_PlayerFled is TruthVarValue entry;
 				-- "DemonFox_PlayerSubmitted":
-					now DemonFox_PlayerSubmitted is TruthVarValue entry;
+					if DemonFox_PlayerSubmitted is not TruthVarValue entry, now DemonFox_PlayerSubmitted is TruthVarValue entry;
 				-- "DemonFox_PlayerWon":
-					now DemonFox_PlayerWon is TruthVarValue entry;
+					if DemonFox_PlayerWon is not TruthVarValue entry, now DemonFox_PlayerWon is TruthVarValue entry;
 				-- "DemonFox_PlayerWon_Fucked":
-					now DemonFox_PlayerWon_Fucked is TruthVarValue entry;
+					if DemonFox_PlayerWon_Fucked is not TruthVarValue entry, now DemonFox_PlayerWon_Fucked is TruthVarValue entry;
 				-- "DemonFoxRead":
-					now DemonFoxRead is TruthVarValue entry;
+					if DemonFoxRead is not TruthVarValue entry, now DemonFoxRead is TruthVarValue entry;
 				-- "dobieanal":
-					now dobieanal is TruthVarValue entry;
+					if dobieanal is not TruthVarValue entry, now dobieanal is TruthVarValue entry;
 				-- "DoranAnnoyed":
-					now DoranAnnoyed is TruthVarValue entry;
+					if DoranAnnoyed is not TruthVarValue entry, now DoranAnnoyed is TruthVarValue entry;
 				-- "DoranAutofired":
-					now DoranAutofired is TruthVarValue entry;
+					if DoranAutofired is not TruthVarValue entry, now DoranAutofired is TruthVarValue entry;
 				-- "DoranAutofireDiscussed":
-					now DoranAutofireDiscussed is TruthVarValue entry;
+					if DoranAutofireDiscussed is not TruthVarValue entry, now DoranAutofireDiscussed is TruthVarValue entry;
 				-- "DoranCumFilled":
-					now DoranCumFilled is TruthVarValue entry;
+					if DoranCumFilled is not TruthVarValue entry, now DoranCumFilled is TruthVarValue entry;
 				-- "DoranFirstTalk":
-					now DoranFirstTalk is TruthVarValue entry;
+					if DoranFirstTalk is not TruthVarValue entry, now DoranFirstTalk is TruthVarValue entry;
 				-- "DoranInternal":
-					now DoranInternal is TruthVarValue entry;
+					if DoranInternal is not TruthVarValue entry, now DoranInternal is TruthVarValue entry;
 				-- "DoranPlayerBlueballing":
-					now DoranPlayerBlueballing is TruthVarValue entry;
+					if DoranPlayerBlueballing is not TruthVarValue entry, now DoranPlayerBlueballing is TruthVarValue entry;
 				-- "DoranPlayerCumFilled":
-					now DoranPlayerCumFilled is TruthVarValue entry;
+					if DoranPlayerCumFilled is not TruthVarValue entry, now DoranPlayerCumFilled is TruthVarValue entry;
 				-- "DoranPlayerGenderRegard":
-					now DoranPlayerGenderRegard is TruthVarValue entry;
+					if DoranPlayerGenderRegard is not TruthVarValue entry, now DoranPlayerGenderRegard is TruthVarValue entry;
 				-- "DoranRefusedSex":
-					now DoranRefusedSex is TruthVarValue entry;
+					if DoranRefusedSex is not TruthVarValue entry, now DoranRefusedSex is TruthVarValue entry;
 				-- "DoranSelfGender":
-					now DoranSelfGender is TruthVarValue entry;
+					if DoranSelfGender is not TruthVarValue entry, now DoranSelfGender is TruthVarValue entry;
 				-- "drutah_msg1":
-					now drutah_msg1 is TruthVarValue entry;
+					if drutah_msg1 is not TruthVarValue entry, now drutah_msg1 is TruthVarValue entry;
 				-- "duckyactive":
-					now duckyactive is TruthVarValue entry;
+					if duckyactive is not TruthVarValue entry, now duckyactive is TruthVarValue entry;
 				-- "ebheat_msg":
-					now ebheat_msg is TruthVarValue entry;
+					if ebheat_msg is not TruthVarValue entry, now ebheat_msg is TruthVarValue entry;
 				-- "ebneuterswitch":
-					now ebneuterswitch is TruthVarValue entry;
+					if ebneuterswitch is not TruthVarValue entry, now ebneuterswitch is TruthVarValue entry;
 				-- "enduring":
-					now enduring is TruthVarValue entry;
+					if enduring is not TruthVarValue entry, now enduring is TruthVarValue entry;
 				-- "eprodused":
-					now eprodused is TruthVarValue entry;
+					if eprodused is not TruthVarValue entry, now eprodused is TruthVarValue entry;
 				-- "facecheck":
-					now facecheck is TruthVarValue entry;
+					if facecheck is not TruthVarValue entry, now facecheck is TruthVarValue entry;
 				-- "fangsidney":
-					now fangsidney is TruthVarValue entry;
+					if fangsidney is not TruthVarValue entry, now fangsidney is TruthVarValue entry;
 				-- "FangToy":
-					now FangToy is TruthVarValue entry;
+					if FangToy is not TruthVarValue entry, now FangToy is TruthVarValue entry;
 				-- "fangvelos1":
-					now fangvelos1 is TruthVarValue entry;
+					if fangvelos1 is not TruthVarValue entry, now fangvelos1 is TruthVarValue entry;
 				-- "featherready":
-					now featherready is TruthVarValue entry;
+					if featherready is not TruthVarValue entry, now featherready is TruthVarValue entry;
 				-- "feline_pride_defeat":
-					now feline_pride_defeat is TruthVarValue entry;
+					if feline_pride_defeat is not TruthVarValue entry, now feline_pride_defeat is TruthVarValue entry;
 				-- "FFSDUBM":
-					now FFSDUBM is TruthVarValue entry;
+					if FFSDUBM is not TruthVarValue entry, now FFSDUBM is TruthVarValue entry;
 				-- "firebreathready":
-					now firebreathready is TruthVarValue entry;
+					if firebreathready is not TruthVarValue entry, now firebreathready is TruthVarValue entry;
 				-- "firstgarg":
-					now firstgarg is TruthVarValue entry;
+					if firstgarg is not TruthVarValue entry, now firstgarg is TruthVarValue entry;
 				-- "floatertaken":
-					now floatertaken is TruthVarValue entry;
+					if floatertaken is not TruthVarValue entry, now floatertaken is TruthVarValue entry;
 				-- "flotmarked":
-					now flotmarked is TruthVarValue entry;
+					if flotmarked is not TruthVarValue entry, now flotmarked is TruthVarValue entry;
 				-- "Francoismixcleaned":
-					now Francoismixcleaned is TruthVarValue entry;
+					if Francoismixcleaned is not TruthVarValue entry, now Francoismixcleaned is TruthVarValue entry;
 				-- "Francoistalk1":
-					now Francoistalk1 is TruthVarValue entry;
+					if Francoistalk1 is not TruthVarValue entry, now Francoistalk1 is TruthVarValue entry;
 				-- "fsnakevalid":
-					now fsnakevalid is TruthVarValue entry;
+					if fsnakevalid is not TruthVarValue entry, now fsnakevalid is TruthVarValue entry;
 				-- "garrettinfo1":
-					now garrettinfo1 is TruthVarValue entry;
+					if garrettinfo1 is not TruthVarValue entry, now garrettinfo1 is TruthVarValue entry;
 				-- "gobdem":
-					now gobdem is TruthVarValue entry;
+					if gobdem is not TruthVarValue entry, now gobdem is TruthVarValue entry;
 				-- "grhouse":
-					now grhouse is TruthVarValue entry;
+					if grhouse is not TruthVarValue entry, now grhouse is TruthVarValue entry;
 				-- "gsd_attack":
-					now gsd_attack is TruthVarValue entry;
+					if gsd_attack is not TruthVarValue entry, now gsd_attack is TruthVarValue entry;
 				-- "gsd_fled":
-					now gsd_fled is TruthVarValue entry;
+					if gsd_fled is not TruthVarValue entry, now gsd_fled is TruthVarValue entry;
 				-- "gsd_male":
-					now gsd_male is TruthVarValue entry;
+					if gsd_male is not TruthVarValue entry, now gsd_male is TruthVarValue entry;
 				-- "gsd_slut":
-					now gsd_slut is TruthVarValue entry;
+					if gsd_slut is not TruthVarValue entry, now gsd_slut is TruthVarValue entry;
 				-- "gsd_special":
-					now gsd_special is TruthVarValue entry;
+					if gsd_special is not TruthVarValue entry, now gsd_special is TruthVarValue entry;
 				-- "HadGusBackgroundTalk":
-					now HadGusBackgroundTalk is TruthVarValue entry;
+					if HadGusBackgroundTalk is not TruthVarValue entry, now HadGusBackgroundTalk is TruthVarValue entry;
 				-- "hadiyahyg":
-					now hadiyahyg is TruthVarValue entry;
+					if hadiyahyg is not TruthVarValue entry, now hadiyahyg is TruthVarValue entry;
 				-- "HardMode":
-					now HardMode is TruthVarValue entry;
+					if HardMode is not TruthVarValue entry, now HardMode is TruthVarValue entry;
 				-- "Hardmode":
-					now HardMode is TruthVarValue entry;
+					if HardMode is not TruthVarValue entry, now HardMode is TruthVarValue entry;
 				-- "heat enabled":
-					now heat enabled is TruthVarValue entry;
+					if heat enabled is not TruthVarValue entry, now heat enabled is TruthVarValue entry;
 				-- "heatturnskipper":
-					now heatturnskipper is TruthVarValue entry;
+					if heatturnskipper is not TruthVarValue entry, now heatturnskipper is TruthVarValue entry;
 				-- "hobo-food-gift":
-					now hobo-food-gift is TruthVarValue entry;
+					if hobo-food-gift is not TruthVarValue entry, now hobo-food-gift is TruthVarValue entry;
 				-- "hobo-grmilk":
-					now hobo-grmilk is TruthVarValue entry;
+					if hobo-grmilk is not TruthVarValue entry, now hobo-grmilk is TruthVarValue entry;
 				-- "hobo-libidosupp":
-					now hobo-libidosupp is TruthVarValue entry;
+					if hobo-libidosupp is not TruthVarValue entry, now hobo-libidosupp is TruthVarValue entry;
 				-- "hobo-water-gift":
-					now hobo-water-gift is TruthVarValue entry;
+					if hobo-water-gift is not TruthVarValue entry, now hobo-water-gift is TruthVarValue entry;
 				-- "honeygiven":
-					now honeygiven is TruthVarValue entry;
+					if honeygiven is not TruthVarValue entry, now honeygiven is TruthVarValue entry;
 				-- "houndfromhell":
-					now houndfromhell is TruthVarValue entry;
+					if houndfromhell is not TruthVarValue entry, now houndfromhell is TruthVarValue entry;
 				-- "hvoreoffer":
-					now hvoreoffer is TruthVarValue entry;
+					if hvoreoffer is not TruthVarValue entry, now hvoreoffer is TruthVarValue entry;
 				-- "hydraheadregrowth":
-					now hydraheadregrowth is TruthVarValue entry;
+					if hydraheadregrowth is not TruthVarValue entry, now hydraheadregrowth is TruthVarValue entry;
 				-- "HyenaMatVore":
-					now HyenaMatVore is TruthVarValue entry;
+					if HyenaMatVore is not TruthVarValue entry, now HyenaMatVore is TruthVarValue entry;
 				-- "icarusrim":
-					now icarusrim is TruthVarValue entry;
+					if icarusrim is not TruthVarValue entry, now icarusrim is TruthVarValue entry;
 				-- "icarusscene1":
-					now icarusscene1 is TruthVarValue entry;
+					if icarusscene1 is not TruthVarValue entry, now icarusscene1 is TruthVarValue entry;
 				-- "icarusscene2":
-					now icarusscene2 is TruthVarValue entry;
+					if icarusscene2 is not TruthVarValue entry, now icarusscene2 is TruthVarValue entry;
 				-- "impregnatevalid":
-					now impregnatevalid is TruthVarValue entry;
+					if impregnatevalid is not TruthVarValue entry, now impregnatevalid is TruthVarValue entry;
 				-- "inasituation":
-					now inasituation is TruthVarValue entry;
+					if inasituation is not TruthVarValue entry, now inasituation is TruthVarValue entry;
 				-- "inheat":
-					now inheat is TruthVarValue entry;
+					if inheat is not TruthVarValue entry, now inheat is TruthVarValue entry;
 				-- "insectlarva":
-					now insectlarva is TruthVarValue entry;
+					if insectlarva is not TruthVarValue entry, now insectlarva is TruthVarValue entry;
 				-- "internalCockbypass":
-					now internalCockbypass is TruthVarValue entry;
+					if internalCockbypass is not TruthVarValue entry, now internalCockbypass is TruthVarValue entry;
 				-- "internalBallsbypass":
-					now internalBallsbypass is TruthVarValue entry;
+					if internalBallsbypass is not TruthVarValue entry, now internalBallsbypass is TruthVarValue entry;
 				-- "isHellhound":
-					now isHellhound is TruthVarValue entry;
+					if isHellhound is not TruthVarValue entry, now isHellhound is TruthVarValue entry;
 				-- "ishunting":
-					now ishunting is TruthVarValue entry;
+					if ishunting is not TruthVarValue entry, now ishunting is TruthVarValue entry;
 				-- "joannadogsaved":
-					now joannadogsaved is TruthVarValue entry;
+					if joannadogsaved is not TruthVarValue entry, now joannadogsaved is TruthVarValue entry;
 				-- "karahbtalk":
-					now karahbtalk is TruthVarValue entry;
+					if karahbtalk is not TruthVarValue entry, now karahbtalk is TruthVarValue entry;
 				-- "kristenmsg1":
-					now kristenmsg1 is TruthVarValue entry;
+					if kristenmsg1 is not TruthVarValue entry, now kristenmsg1 is TruthVarValue entry;
 				-- "kristenmsg2":
-					now kristenmsg2 is TruthVarValue entry;
+					if kristenmsg2 is not TruthVarValue entry, now kristenmsg2 is TruthVarValue entry;
 				-- "kristenmsg3":
-					now kristenmsg3 is TruthVarValue entry;
+					if kristenmsg3 is not TruthVarValue entry, now kristenmsg3 is TruthVarValue entry;
 				-- "kristenmsg4":
-					now kristenmsg4 is TruthVarValue entry;
+					if kristenmsg4 is not TruthVarValue entry, now kristenmsg4 is TruthVarValue entry;
 				-- "kristenmsg5":
-					now kristenmsg5 is TruthVarValue entry;
+					if kristenmsg5 is not TruthVarValue entry, now kristenmsg5 is TruthVarValue entry;
 				-- "kristentf3fuck":
-					now kristentf3fuck is TruthVarValue entry;
+					if kristentf3fuck is not TruthVarValue entry, now kristentf3fuck is TruthVarValue entry;
 				-- "ktcockmatch":
-					now ktcockmatch is TruthVarValue entry;
+					if ktcockmatch is not TruthVarValue entry, now ktcockmatch is TruthVarValue entry;
 				-- "KyrverthItemStealable":
-					now KyrverthItemStealable is TruthVarValue entry;
+					if KyrverthItemStealable is not TruthVarValue entry, now KyrverthItemStealable is TruthVarValue entry;
 				-- "KyrverthItemTaken":
-					now KyrverthItemTaken is TruthVarValue entry;
+					if KyrverthItemTaken is not TruthVarValue entry, now KyrverthItemTaken is TruthVarValue entry;
 				-- "KyrverthQuestHairGiven":
-					now KyrverthQuestHairGiven is TruthVarValue entry;
+					if KyrverthQuestHairGiven is not TruthVarValue entry, now KyrverthQuestHairGiven is TruthVarValue entry;
 				-- "KyrverthUsedArtifact":
-					now KyrverthUsedArtifact is TruthVarValue entry;
+					if KyrverthUsedArtifact is not TruthVarValue entry, now KyrverthUsedArtifact is TruthVarValue entry;
 				-- "LarissaTailed":
-					now LarissaTailed is TruthVarValue entry;
+					if LarissaTailed is not TruthVarValue entry, now LarissaTailed is TruthVarValue entry;
 				-- "LarissaWinged":
-					now LarissaWinged is TruthVarValue entry;
+					if LarissaWinged is not TruthVarValue entry, now LarissaWinged is TruthVarValue entry;
 				-- "LastTurnDay":
-					now LastTurnDay is TruthVarValue entry;
+					if LastTurnDay is not TruthVarValue entry, now LastTurnDay is TruthVarValue entry;
 				-- "latexErmineBountyState":
-					now latexErmineBountyState is TruthVarValue entry;
+					if latexErmineBountyState is not TruthVarValue entry, now latexErmineBountyState is TruthVarValue entry;
 				-- "latexhuskymode":
-					now latexhuskymode is TruthVarValue entry;
+					if latexhuskymode is not TruthVarValue entry, now latexhuskymode is TruthVarValue entry;
 				-- "leodinner":
-					now leodinner is TruthVarValue entry;
+					if leodinner is not TruthVarValue entry, now leodinner is TruthVarValue entry;
 				-- "Leonardcabinet":
-					now Leonardcabinet is TruthVarValue entry;
+					if Leonardcabinet is not TruthVarValue entry, now Leonardcabinet is TruthVarValue entry;
 				-- "Leonardcaraway":
-					now Leonardcaraway is TruthVarValue entry;
+					if Leonardcaraway is not TruthVarValue entry, now Leonardcaraway is TruthVarValue entry;
 				-- "Leonardwrdesk":
-					now Leonardwrdesk is TruthVarValue entry;
+					if Leonardwrdesk is not TruthVarValue entry, now Leonardwrdesk is TruthVarValue entry;
 				-- "leopocketwatch":
-					now leopocketwatch is TruthVarValue entry;
+					if leopocketwatch is not TruthVarValue entry, now leopocketwatch is TruthVarValue entry;
 				-- "leoshadowmet":
-					now leoshadowmet is TruthVarValue entry;
+					if leoshadowmet is not TruthVarValue entry, now leoshadowmet is TruthVarValue entry;
 				-- "LindseyMPregDetected":
-					now LindseyMPregDetected is TruthVarValue entry;
+					if LindseyMPregDetected is not TruthVarValue entry, now LindseyMPregDetected is TruthVarValue entry;
 				-- "lindseyws":
-					now lindseyws is TruthVarValue entry;
+					if lindseyws is not TruthVarValue entry, now lindseyws is TruthVarValue entry;
 				-- "maleHound":
-					now maleHound is TruthVarValue entry;
+					if maleHound is not TruthVarValue entry, now maleHound is TruthVarValue entry;
 				-- "mchristyanal":
-					now mchristyanal is TruthVarValue entry;
+					if mchristyanal is not TruthVarValue entry, now mchristyanal is TruthVarValue entry;
 				-- "mchristybottom":
-					now mchristybottom is TruthVarValue entry;
+					if mchristybottom is not TruthVarValue entry, now mchristybottom is TruthVarValue entry;
 				-- "mchristytop":
-					now mchristytop is TruthVarValue entry;
+					if mchristytop is not TruthVarValue entry, now mchristytop is TruthVarValue entry;
 				-- "mdstaffface":
-					now mdstaffface is TruthVarValue entry;
+					if mdstaffface is not TruthVarValue entry, now mdstaffface is TruthVarValue entry;
 				-- "medeapanda":
-					now medeapanda is TruthVarValue entry;
+					if medeapanda is not TruthVarValue entry, now medeapanda is TruthVarValue entry;
 				-- "medeapill":
-					now medeapill is TruthVarValue entry;
+					if medeapill is not TruthVarValue entry, now medeapill is TruthVarValue entry;
 				-- "medeaub":
-					now medeaub is TruthVarValue entry;
+					if medeaub is not TruthVarValue entry, now medeaub is TruthVarValue entry;
 				-- "Meredith_anal":
-					now Meredith_anal is TruthVarValue entry;
+					if Meredith_anal is not TruthVarValue entry, now Meredith_anal is TruthVarValue entry;
 				-- "Meredith_Colleen_fun1":
-					now Meredith_Colleen_fun1 is TruthVarValue entry;
+					if Meredith_Colleen_fun1 is not TruthVarValue entry, now Meredith_Colleen_fun1 is TruthVarValue entry;
 				-- "Meredith_Vanessa_fun1":
-					now Meredith_Vanessa_fun1 is TruthVarValue entry;
+					if Meredith_Vanessa_fun1 is not TruthVarValue entry, now Meredith_Vanessa_fun1 is TruthVarValue entry;
 				-- "Meredith_Vanessa_fun2":
-					now Meredith_Vanessa_fun2 is TruthVarValue entry;
+					if Meredith_Vanessa_fun2 is not TruthVarValue entry, now Meredith_Vanessa_fun2 is TruthVarValue entry;
 				-- "messypigaltorgasm":
-					now messypigaltorgasm is TruthVarValue entry;
+					if messypigaltorgasm is not TruthVarValue entry, now messypigaltorgasm is TruthVarValue entry;
 				-- "MFSDUBM":
-					now MFSDUBM is TruthVarValue entry;
+					if MFSDUBM is not TruthVarValue entry, now MFSDUBM is TruthVarValue entry;
 				-- "MKunleashed":
-					now MKunleashed is TruthVarValue entry;
+					if MKunleashed is not TruthVarValue entry, now MKunleashed is TruthVarValue entry;
 				-- "mlamiaboobmash":
-					now mlamiaboobmash is TruthVarValue entry;
+					if mlamiaboobmash is not TruthVarValue entry, now mlamiaboobmash is TruthVarValue entry;
 				-- "mlamiamet":
-					now mlamiamet is TruthVarValue entry;
+					if mlamiamet is not TruthVarValue entry, now mlamiamet is TruthVarValue entry;
 				-- "monsterhit":
-					now monsterhit is TruthVarValue entry;
+					if monsterhit is not TruthVarValue entry, now monsterhit is TruthVarValue entry;
 				-- "MoreauDiscount":
-					now MoreauDiscount is TruthVarValue entry;
+					if MoreauDiscount is not TruthVarValue entry, now MoreauDiscount is TruthVarValue entry;
 				-- "MoreauPaymentAccepted":
-					now MoreauPaymentAccepted is TruthVarValue entry;
+					if MoreauPaymentAccepted is not TruthVarValue entry, now MoreauPaymentAccepted is TruthVarValue entry;
 				-- "mpreghijack":
-					now mpreghijack is TruthVarValue entry;
+					if mpreghijack is not TruthVarValue entry, now mpreghijack is TruthVarValue entry;
 				-- "mre04":
-					now mre04 is TruthVarValue entry;
+					if mre04 is not TruthVarValue entry, now mre04 is TruthVarValue entry;
 				-- "msnakevalid":
-					now msnakevalid is TruthVarValue entry;
+					if msnakevalid is not TruthVarValue entry, now msnakevalid is TruthVarValue entry;
 				-- "muggerison":
-					now muggerison is TruthVarValue entry;
+					if muggerison is not TruthVarValue entry, now muggerison is TruthVarValue entry;
 				-- "nagawarning":
-					now nagawarning is TruthVarValue entry;
+					if nagawarning is not TruthVarValue entry, now nagawarning is TruthVarValue entry;
 				-- "NavCheckReturn":
-					now NavCheckReturn is TruthVarValue entry;
+					if NavCheckReturn is not TruthVarValue entry, now NavCheckReturn is TruthVarValue entry;
 				-- "ndmLisa":
-					now ndmLisa is TruthVarValue entry;
+					if ndmLisa is not TruthVarValue entry, now ndmLisa is TruthVarValue entry;
 				-- "nmformswitch":
-					now nmformswitch is TruthVarValue entry;
+					if nmformswitch is not TruthVarValue entry, now nmformswitch is TruthVarValue entry;
 				-- "NoHealMode":
-					now NoHealMode is TruthVarValue entry;
+					if NoHealMode is not TruthVarValue entry, now NoHealMode is TruthVarValue entry;
 				-- "nohealmode":
-					now NoHealMode is TruthVarValue entry;
+					if NoHealMode is not TruthVarValue entry, now NoHealMode is TruthVarValue entry;
 				-- "nosquirrelanal":
-					now nosquirrelanal is TruthVarValue entry;
+					if nosquirrelanal is not TruthVarValue entry, now nosquirrelanal is TruthVarValue entry;
 				-- "obliging":
-					now obliging is TruthVarValue entry;
+					if obliging is not TruthVarValue entry, now obliging is TruthVarValue entry;
 				-- "onyxhappytalk":
-					now onyxhappytalk is TruthVarValue entry;
+					if onyxhappytalk is not TruthVarValue entry, now onyxhappytalk is TruthVarValue entry;
 				-- "onyxsmra":
-					now onyxsmra is TruthVarValue entry;
+					if onyxsmra is not TruthVarValue entry, now onyxsmra is TruthVarValue entry;
 				-- "onyxsmro":
-					now onyxsmro is TruthVarValue entry;
+					if onyxsmro is not TruthVarValue entry, now onyxsmro is TruthVarValue entry;
 				-- "onyxsmrv":
-					now onyxsmrv is TruthVarValue entry;
+					if onyxsmrv is not TruthVarValue entry, now onyxsmrv is TruthVarValue entry;
 				-- "ovipregalways":
-					now ovipregalways is TruthVarValue entry;
+					if ovipregalways is not TruthVarValue entry, now ovipregalways is TruthVarValue entry;
 				-- "ovipregmedeatalk":
-					now ovipregmedeatalk is TruthVarValue entry;
+					if ovipregmedeatalk is not TruthVarValue entry, now ovipregmedeatalk is TruthVarValue entry;
 				-- "ovipregnant":
-					now ovipregnant is TruthVarValue entry;
+					if ovipregnant is not TruthVarValue entry, now ovipregnant is TruthVarValue entry;
 				-- "pewtertorsosuppress":
-					now pewtertorsosuppress is TruthVarValue entry;
+					if pewtertorsosuppress is not TruthVarValue entry, now pewtertorsosuppress is TruthVarValue entry;
 				-- "PlayerPigBodied":
-					now PlayerPigBodied is TruthVarValue entry;
+					if PlayerPigBodied is not TruthVarValue entry, now PlayerPigBodied is TruthVarValue entry;
 				-- "ppatt":
-					now ppatt is TruthVarValue entry;
+					if ppatt is not TruthVarValue entry, now ppatt is TruthVarValue entry;
 				-- "pr_task01":
-					now pr_task01 is TruthVarValue entry;
+					if pr_task01 is not TruthVarValue entry, now pr_task01 is TruthVarValue entry;
 				-- "pr_task02":
-					now pr_task02 is TruthVarValue entry;
+					if pr_task02 is not TruthVarValue entry, now pr_task02 is TruthVarValue entry;
 				-- "pr_task03":
-					now pr_task03 is TruthVarValue entry;
+					if pr_task03 is not TruthVarValue entry, now pr_task03 is TruthVarValue entry;
 				-- "pr_task04":
-					now pr_task04 is TruthVarValue entry;
+					if pr_task04 is not TruthVarValue entry, now pr_task04 is TruthVarValue entry;
 				-- "preghijack":
-					now preghijack is TruthVarValue entry;
+					if preghijack is not TruthVarValue entry, now preghijack is TruthVarValue entry;
 				-- "rabbitified":
-					now rabbitified is TruthVarValue entry;
+					if rabbitified is not TruthVarValue entry, now rabbitified is TruthVarValue entry;
 				-- "rambjvirg":
-					now rambjvirg is TruthVarValue entry;
+					if rambjvirg is not TruthVarValue entry, now rambjvirg is TruthVarValue entry;
 				-- "ramslut":
-					now ramslut is TruthVarValue entry;
+					if ramslut is not TruthVarValue entry, now ramslut is TruthVarValue entry;
 				-- "RestoreMode":
-					now RestoreMode is TruthVarValue entry;
+					if RestoreMode is not TruthVarValue entry, now RestoreMode is TruthVarValue entry;
 				-- "rkrcheck":
-					now rkrcheck is TruthVarValue entry;
+					if rkrcheck is not TruthVarValue entry, now rkrcheck is TruthVarValue entry;
 				-- "rlingfound":
-					now rlingfound is TruthVarValue entry;
+					if rlingfound is not TruthVarValue entry, now rlingfound is TruthVarValue entry;
 				-- "roughing":
-					now roughing is TruthVarValue entry;
+					if roughing is not TruthVarValue entry, now roughing is TruthVarValue entry;
 				-- "rowing":
-					now rowing is TruthVarValue entry;
+					if rowing is not TruthVarValue entry, now rowing is TruthVarValue entry;
 				-- "sa_otteress":
-					now sa_otteress is TruthVarValue entry;
+					if sa_otteress is not TruthVarValue entry, now sa_otteress is TruthVarValue entry;
 				-- "sa_redvixen":
-					now sa_redvixen is TruthVarValue entry;
+					if sa_redvixen is not TruthVarValue entry, now sa_redvixen is TruthVarValue entry;
 				-- "sa_wusky":
-					now sa_wusky is TruthVarValue entry;
+					if sa_wusky is not TruthVarValue entry, now sa_wusky is TruthVarValue entry;
 				-- "saberKittyBountyState":
-					now saberKittyBountyState is TruthVarValue entry;
+					if saberKittyBountyState is not TruthVarValue entry, now saberKittyBountyState is TruthVarValue entry;
 				-- "samformtalk":
-					now samformtalk is TruthVarValue entry;
+					if samformtalk is not TruthVarValue entry, now samformtalk is TruthVarValue entry;
 				-- "sangenreg":
-					now sangenreg is TruthVarValue entry;
+					if sangenreg is not TruthVarValue entry, now sangenreg is TruthVarValue entry;
 				-- "SarahTehuantl":
-					now SarahTehuantl is TruthVarValue entry;
+					if SarahTehuantl is not TruthVarValue entry, now SarahTehuantl is TruthVarValue entry;
 				-- "sblzephyr":
-					now sblzephyr is TruthVarValue entry;
+					if sblzephyr is not TruthVarValue entry, now sblzephyr is TruthVarValue entry;
 				-- "SerenityVore":
-					now SerenityVore is TruthVarValue entry;
+					if SerenityVore is not TruthVarValue entry, now SerenityVore is TruthVarValue entry;
 				-- "sidneyanal":
-					now sidneyanal is TruthVarValue entry;
+					if sidneyanal is not TruthVarValue entry, now sidneyanal is TruthVarValue entry;
 				-- "sidneyformtalk":
-					now sidneyformtalk is TruthVarValue entry;
+					if sidneyformtalk is not TruthVarValue entry, now sidneyformtalk is TruthVarValue entry;
 				-- "sidneytalk1":
-					now sidneytalk1 is TruthVarValue entry;
+					if sidneytalk1 is not TruthVarValue entry, now sidneytalk1 is TruthVarValue entry;
 				-- "sidneytalk2":
-					now sidneytalk2 is TruthVarValue entry;
+					if sidneytalk2 is not TruthVarValue entry, now sidneytalk2 is TruthVarValue entry;
 				-- "sidneytalk3":
-					now sidneytalk3 is TruthVarValue entry;
+					if sidneytalk3 is not TruthVarValue entry, now sidneytalk3 is TruthVarValue entry;
 				-- "sidneytalk4":
-					now sidneytalk4 is TruthVarValue entry;
+					if sidneytalk4 is not TruthVarValue entry, now sidneytalk4 is TruthVarValue entry;
 				-- "sierramale":
-					now sierramale is TruthVarValue entry;
+					if sierramale is not TruthVarValue entry, now sierramale is TruthVarValue entry;
 				-- "sierrapure":
-					now sierrapure is TruthVarValue entry;
+					if sierrapure is not TruthVarValue entry, now sierrapure is TruthVarValue entry;
 				-- "skipcockchange":
-					now skipcockchange is TruthVarValue entry;
+					if skipcockchange is not TruthVarValue entry, now skipcockchange is TruthVarValue entry;
 				-- "skipretaliate":
-					now skipretaliate is TruthVarValue entry;
+					if skipretaliate is not TruthVarValue entry, now skipretaliate is TruthVarValue entry;
 				-- "spidergirlBountyState":
-					now spidergirlBountyState is TruthVarValue entry;
+					if spidergirlBountyState is not TruthVarValue entry, now spidergirlBountyState is TruthVarValue entry;
 				-- "ssbpg":
-					now ssbpg is TruthVarValue entry;
+					if ssbpg is not TruthVarValue entry, now ssbpg is TruthVarValue entry;
 				-- "ssgbii":
-					now ssgbii is TruthVarValue entry;
+					if ssgbii is not TruthVarValue entry, now ssgbii is TruthVarValue entry;
 				-- "ssgpd":
-					now ssgpd is TruthVarValue entry;
+					if ssgpd is not TruthVarValue entry, now ssgpd is TruthVarValue entry;
 				-- "sshh":
-					now sshh is TruthVarValue entry;
+					if sshh is not TruthVarValue entry, now sshh is TruthVarValue entry;
 				-- "ssmb":
-					now ssmb is TruthVarValue entry;
+					if ssmb is not TruthVarValue entry, now ssmb is TruthVarValue entry;
 				-- "ssos":
-					now ssos is TruthVarValue entry;
+					if ssos is not TruthVarValue entry, now ssos is TruthVarValue entry;
 				-- "ssxpa":
-					now ssxpa is TruthVarValue entry;
+					if ssxpa is not TruthVarValue entry, now ssxpa is TruthVarValue entry;
 				-- "stellapsurv":
-					now stellapsurv is TruthVarValue entry;
+					if stellapsurv is not TruthVarValue entry, now stellapsurv is TruthVarValue entry;
 				-- "sugarglidernote":
-					now sugarglidernote is TruthVarValue entry;
+					if sugarglidernote is not TruthVarValue entry, now sugarglidernote is TruthVarValue entry;
 				-- "sugferretjoke":
-					now sugferretjoke is TruthVarValue entry;
+					if sugferretjoke is not TruthVarValue entry, now sugferretjoke is TruthVarValue entry;
 				-- "Susanoversize":
-					now Susanoversize is TruthVarValue entry;
+					if Susanoversize is not TruthVarValue entry, now Susanoversize is TruthVarValue entry;
 				-- "SvenStory1":
-					now SvenStory1 is TruthVarValue entry;
+					if SvenStory1 is not TruthVarValue entry, now SvenStory1 is TruthVarValue entry;
 				-- "Terminatorsleep":
-					now Terminatorsleep is TruthVarValue entry;
+					if Terminatorsleep is not TruthVarValue entry, now Terminatorsleep is TruthVarValue entry;
 				-- "TerminatorSleepActivated":
-					now TerminatorSleepActivated is TruthVarValue entry;
+					if TerminatorSleepActivated is not TruthVarValue entry, now TerminatorSleepActivated is TruthVarValue entry;
 				-- "thmpregdetect":
-					now thmpregdetect is TruthVarValue entry;
+					if thmpregdetect is not TruthVarValue entry, now thmpregdetect is TruthVarValue entry;
 				-- "TomeEventPending":
-					now TomeEventPending is TruthVarValue entry;
+					if TomeEventPending is not TruthVarValue entry, now TomeEventPending is TruthVarValue entry;
 				-- "toystoreoverride":
-					now toystoreoverride is TruthVarValue entry;
+					if toystoreoverride is not TruthVarValue entry, now toystoreoverride is TruthVarValue entry;
 				-- "toystoreseen":
-					now toystoreseen is TruthVarValue entry;
+					if toystoreseen is not TruthVarValue entry, now toystoreseen is TruthVarValue entry;
 				-- "ts_warrior":
-					now ts_warrior is TruthVarValue entry;
+					if ts_warrior is not TruthVarValue entry, now ts_warrior is TruthVarValue entry;
 				-- "tsw_victory":
-					now tsw_victory is TruthVarValue entry;
+					if tsw_victory is not TruthVarValue entry, now tsw_victory is TruthVarValue entry;
 				-- "twistedPimpBountyState":
-					now twistedPimpBountyState is TruthVarValue entry;
+					if twistedPimpBountyState is not TruthVarValue entry, now twistedPimpBountyState is TruthVarValue entry;
 				-- "twistfsdfeedmemory":
-					now twistfsdfeedmemory is TruthVarValue entry;
+					if twistfsdfeedmemory is not TruthVarValue entry, now twistfsdfeedmemory is TruthVarValue entry;
 				-- "TyrTraining":
-					now TyrTraining is TruthVarValue entry;
+					if TyrTraining is not TruthVarValue entry, now TyrTraining is TruthVarValue entry;
 				-- "ubspecial1":
-					now ubspecial1 is TruthVarValue entry;
+					if ubspecial1 is not TruthVarValue entry, now ubspecial1 is TruthVarValue entry;
 				-- "utahmet":
-					now utahmet is TruthVarValue entry;
+					if utahmet is not TruthVarValue entry, now utahmet is TruthVarValue entry;
 				-- "vampiric":
-					now vampiric is TruthVarValue entry;
+					if vampiric is not TruthVarValue entry, now vampiric is TruthVarValue entry;
 				-- "velosapology":
-					now velosapology is TruthVarValue entry;
+					if velosapology is not TruthVarValue entry, now velosapology is TruthVarValue entry;
 				-- "velosfleepenalty":
-					now velosfleepenalty is TruthVarValue entry;
+					if velosfleepenalty is not TruthVarValue entry, now velosfleepenalty is TruthVarValue entry;
 				-- "velosheadstalk":
-					now velosheadstalk is TruthVarValue entry;
+					if velosheadstalk is not TruthVarValue entry, now velosheadstalk is TruthVarValue entry;
 				-- "velosparasitetalk":
-					now velosparasitetalk is TruthVarValue entry;
+					if velosparasitetalk is not TruthVarValue entry, now velosparasitetalk is TruthVarValue entry;
 				-- "velossaved":
-					now velossaved is TruthVarValue entry;
+					if velossaved is not TruthVarValue entry, now velossaved is TruthVarValue entry;
 				-- "velossavedtalk":
-					now velossavedtalk is TruthVarValue entry;
+					if velossavedtalk is not TruthVarValue entry, now velossavedtalk is TruthVarValue entry;
 				-- "velossavedyes":
-					now velossavedyes is TruthVarValue entry;
+					if velossavedyes is not TruthVarValue entry, now velossavedyes is TruthVarValue entry;
 				-- "vgeckoboost":
-					now vgeckoboost is TruthVarValue entry;
+					if vgeckoboost is not TruthVarValue entry, now vgeckoboost is TruthVarValue entry;
 				-- "vorespecial1":
-					now vorespecial1 is TruthVarValue entry;
+					if vorespecial1 is not TruthVarValue entry, now vorespecial1 is TruthVarValue entry;
 				-- "weakwilled":
-					now weakwilled is TruthVarValue entry;
+					if weakwilled is not TruthVarValue entry, now weakwilled is TruthVarValue entry;
 				-- "WerewolfWatching":
-					now WerewolfWatching is TruthVarValue entry;
+					if WerewolfWatching is not TruthVarValue entry, now WerewolfWatching is TruthVarValue entry;
 				-- "wrcurseactivity":
-					now wrcurseactivity is TruthVarValue entry;
+					if wrcurseactivity is not TruthVarValue entry, now wrcurseactivity is TruthVarValue entry;
 				-- "wrdinoskel":
-					now wrdinoskel is TruthVarValue entry;
+					if wrdinoskel is not TruthVarValue entry, now wrdinoskel is TruthVarValue entry;
 				-- "wrwolfseen":
-					now wrwolfseen is TruthVarValue entry;
+					if wrwolfseen is not TruthVarValue entry, now wrwolfseen is TruthVarValue entry;
 				-- "yolandakeyfob":
-					now yolandakeyfob is TruthVarValue entry;
+					if yolandakeyfob is not TruthVarValue entry, now yolandakeyfob is TruthVarValue entry;
 				-- "yolandaqytat":
-					now yolandaqytat is TruthVarValue entry;
+					if yolandaqytat is not TruthVarValue entry, now yolandaqytat is TruthVarValue entry;
 				-- "yolandatreasure":
-					now yolandatreasure is TruthVarValue entry;
+					if yolandatreasure is not TruthVarValue entry, now yolandatreasure is TruthVarValue entry;
 				-- "zigorcycle":
-					now zigorcycle is TruthVarValue entry;
+					if zigorcycle is not TruthVarValue entry, now zigorcycle is TruthVarValue entry;
 				-- "zigorhadiyaquest":
-					now zigorhadiyaquest is TruthVarValue entry;
+					if zigorhadiyaquest is not TruthVarValue entry, now zigorhadiyaquest is TruthVarValue entry;
 				-- "zpc_inzone":
-					now zpc_inzone is TruthVarValue entry;
+					if zpc_inzone is not TruthVarValue entry, now zpc_inzone is TruthVarValue entry;
 			[
 			if debug is at level 10:
 				say "DEBUG -> VarName '[TruthVarName entry]' restored to '[TruthVarValue entry]'.";

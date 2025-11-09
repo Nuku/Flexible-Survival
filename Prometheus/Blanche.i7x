@@ -136,13 +136,13 @@ an everyturn rule:
 
 to ShowBlancheImage:
 	if HP of Blanche < 5:
-		project the figure of Blanche_naked_icon;
+		project Figure of Blanche_naked_icon;
 	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
-		project the figure of Blanche_preg1_icon;
+		project Figure of Blanche_preg1_icon;
 	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 13:
-		project the figure of Blanche_preg3_icon;
+		project Figure of Blanche_preg3_icon;
 	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
-		project the figure of Blanche_naked_icon;
+		project Figure of Blanche_naked_icon;
 
 Section 1 - Progression Events
 
@@ -178,7 +178,7 @@ to say ResolveEvent Wolfrape:
 			move player to Office Den;
 			AddNavPoint Office Den;
 			WaitLineBreak;
-			project the figure of Blanche_naked_icon;
+			project Figure of Blanche_naked_icon;
 			say "     Once safely concealed in the wolf's hidden den, she hugs you tightly and gives you a passionate kiss which surprises both of you. As if suddenly realizing what she's done, she takes a step back, blushing at her ears. 'Oh, I'm sorry. It's this... infection thing. I'm sure you know what it does to you. My name is Blanche. I'm really thankful for your help.' She brushes her fur nervously and, realizing that she's nude, grabs one of a few spare blouses she has folded on the bookcase. She slides it on, but doesn't bother to do it up after throwing you a quick glance.";
 			say "     She grabs a can of ravioli from the shelf as well, pressing it into your hands. 'Please take this. I'd give you more, really, but it's about all I can spare right now. You were really brave to try and help me against that monster. I don't like going out there much because there are so many of them. You could... if you need somewhere safe to hide that is... maybe stay here... with me.' She speaks softly, but with obvious longing in her voice. Perhaps she's lonely and simply wants companionship, though from the way she's looking at you, perhaps she wants more.";
 			now HP of Blanche is 1;
@@ -1908,8 +1908,8 @@ to say sexwithBlanche06: [Mutual Fingering]
 	say "     The wolf femme [if Blanche is gravid]beckons you[else]leads you quickly[end if] over to her [if HP of Blanche < 7]sleeping mat[else if HP of Blanche < 11]mattress[else]small bed[end if], slipping your pack and clothes off before stretching out on it. She spreads her legs and runs her paws down her body, playing with her tits before stroking her wet pussy in a rather wanton display[if HP of Blanche is 2]. 'Oh, I've been feeling so horny ever since I changed. I just need some relief.' She blushes a bit at her words, but fingers herself while eyeing you lustfully[else]. 'I've been feeling so horny again lately. I just need some relief again.' She smiles and licks her lips, driving a pair of fingers into her cunt in lustful anticipation[end if]. 'Mmm... come claim your prize bitch, my sexy hero.'";
 	say "     Needing no more invitation, you hop onto the [if HP of Blanche < 7]mat[else if HP of Blanche < 11]mattress[else]bed[end if] and move atop the wanton wolf, running your hands over her body and breasts as she wrap her arms around your waist and hugs you close. You kiss one another as your bodies rub together, hands and paws drifting between thighs to caress the wet folds found there[if Blanche is gravid]. You caress her pregnant belly before reaching around it to get at the precious prize you desire[end if]. You slide a couple of fingers into [if HP of Blanche > 7]the MILFy wolf's[else]her[end if] juicy cunt as she does the same for you. You lick, kiss and finger one another with increasingly loud moans of lustful pleasure[if Player is male]. She plays with your cock[smn] briefly as well, but her focus is on satisfying your dripping snatch[end if]. The air in the room grows thick with the scent of your combined arousal. When you reach your peak and cum, Blanche is not far behind and you are both left panting and soaked at the crotch with your release.";
 	say "     After your orgasms, you lie back on the [if HP of Blanche is 4]mat[else if HP of Blanche is 8]mattress[else]bed[end if] side by side, panting softly in the afterglow of your release. Taking your hand in hers, she smiles. 'Mmm... thank you for that. I really needed to let off some relief[if HP of Blanche < 11]. My body just wants a proper fucking so bad[end if].' She rubs her other paw over her sticky folds.";
-	NPCSexAftermath Blanche receives "DildoPussyFuck" from Player;
-	NPCSexAftermath Player receives "DildoPussyFuck" from Blanche;
+	NPCSexAftermath Blanche receives "PussyDildoFuck" from Player;
+	NPCSexAftermath Player receives "PussyDildoFuck" from Blanche;
 
 to say sexwithBlanche07:	[cowgirl position]
 	say "     In the mood for a change of pace, you suggest the [if Blanche is pregnant]pregnant [end if]wolf ride you cowgirl style, which she's quite down with. You stretch out on her [if HP of Blanche is 11]bed[else]bed's silken sheets[end if] and take her by the paw as she moves atop you[if Blanche is gravid]. You assist her with your other hand on her rounded belly, giving it a gentle caress as you help support it into position[end if]. Reaching from behind, she guides your cock up and into her juicy cunt as she lowers herself down with a happy sigh. Her paws then move to your chest, rubbing over it.";
@@ -2285,7 +2285,7 @@ to say DismissBlanche:
 	move Blanche to Grey Abbey Library;
 	ShowBlancheImage;
 	if Player is not in Grey Abbey Library: [regular dismiss]
-		say "     With a word, you get Blanche's attention and tell her that she should head back to the library for now. The wolfess pouts at you a little, but nods her acceptance nonetheless. 'Be careful, darling. Don't get into too much trouble while I'm not here to protect you,' she teases as she hugs you goodbye before dashing away. You know that she can handle herself, but you still feel guilty for not escorting her home.  ";
+		say "     With a word, you get Blanche's attention and tell her that she should head back to the library for now. The wolfess pouts at you a little, but nods her acceptance nonetheless. 'Be careful, darling. Don't get into too much trouble while I'm not here to protect you,' she teases as she hugs you goodbye before dashing away. You know that she can handle herself, but you still feel guilty for not escorting her home. ";
 		if White Wolf One is listed in companionlist of Player: [Sturm]
 			say "Sturm gives you a disapproving look, but as Blanche doesn't take issue with it, and having learnt to trust his mother to know her limitations, he keeps his mouth shut. ";
 		else:

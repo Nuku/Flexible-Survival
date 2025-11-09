@@ -56,6 +56,7 @@ Conversation of Jett is { "<This is nothing but a placeholder!>" }.
 The scent of Jett is "     Jett's scent is intoxicating. It is so masculine that [if Player is submissive]it inevitably arouses you, causing your muscles and orifices to relax and moisten in his presence[else if player is dominant]it fills you with an urge to dominate anyone, even him[else]it makes your groin tingle and your heart race[end if].".
 
 to say JettDesc:
+	project Figure of Jett_soft_icon;
 	say "     You would say that a normal werewolf brute is large, but this one is ridiculously massive. Jett is an alpha werewolf brute and one built of pure muscle, with a thick dark silver fur coat only damaged by battle scars around his chest, arms and some around his thighs. You can also spot one large scar across the left side of his face, which makes him look quite intimidating, at first glance. The Alpha does not wear anything to cover his hanging junk, which looks almost hyper-sized, even for someone of his stature. You also do not think anything would be able to cover that much cock and that pair of ostrich-egg sized balls, as even his furred sheath can barely contain all the meat within. His piercing yellow eyes loom over you like an observant owl whenever you come close, but curiously, they do not give any hostile sense. Much the contrary, more in the way of a caring parent looking over their children. All in all, you feel safe around Jett[if Player is submissive], and very subservient[end if].";
 
 JettDoneTalking is a truth state that varies.[@Tag:NotSaved]
@@ -63,7 +64,7 @@ JettDoneTalking is a truth state that varies.[@Tag:NotSaved]
 Section 1-1 - Jett Talk
 
 instead of conversing Jett:
-	project figure of Jett_soft_icon;
+	project Figure of Jett_soft_icon;
 	if Loyalty of Jett >= 20:
 		say "     You walk towards Jett, his sheer presence unexplainably making you weak on the legs. He acknowledges you and nods, beckoning you to come closer. Very close, actually, almost totally between his legs as he is sitting on his couch. You are then invited to sit on his lap, which you do without much thinking, and he holds you comfortably. 'Hey there, did you wanna chat?' he asks, affectionately patting your back and rubbing your side. It actually feels quite nice...";
 	else if loyalty of Jett > 9: [happens automatically if Player is submissive upon meeting him the first time]
@@ -374,7 +375,7 @@ to say JettAlphaSexRimming:
 		WaitLineBreak;
 		say "     It eventually all ends once Jett grunts loudly, having been jerking himself off all this time. A brief moment of clariy is brought to you due to this sudden moan, and you realize he is shooting his load all over himself, his hole blinking and pulsating against your face with every single burst of cum that leaves his throbbing shaft. Once his orgasm subsides, however, he pulls you away from his ass, needing a bit more force than he probably expected he would need. 'Hey hey, enough now... You've pleased me greatly, pup. But maybe you gotta give it a break from being down there, yeah?' You are dizzy, lightheaded and very confused at how strong of an effect this had on you, but once you take a few whiffs of fresh air, your senses begin to return to you.";
 		say "     That was certainly an experience. You thank him for letting you service him, and with a smile, he puts you down and lets you go. 'But you can always come back to lick my ass some more later...' he adds with a grin on his muzzle.";
-		NPCSexAftermath Jett receives "DildoAssFuck" from Player;
+		NPCSexAftermath Jett receives "Other" from Player;
 	else:
 		say "     It is best that you propose something else, the scent is a bit too strong for you. The werewolf nods as he readjusts himself in his couch, 'Hah! Being careful now? I'm sure you'd be fine, but I get that it ain't for everyone. Maybe we could do something else, then? He waits for you to reply.";
 		WaitLineBreak;

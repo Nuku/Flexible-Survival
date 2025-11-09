@@ -10,7 +10,7 @@ A thing can be restful. A thing is usually not restful.
 
 Grab Object is a kind of thing.
 A grab object has a number called objsize. Objsize of grab object is usually 3.	[Used only for armaments and journal.]
-A grab object has a text called usedesc. [function call for using the item]
+A grab object has a text called Usedesc. [function call for using the item]
 A grab object can be temporary. A grab object is usually temporary. [destroyed upon use]
 A grab object can be fast. A grab object is usually not fast. [usable in combat]
 A grab object can be infectious. [infects upon use]
@@ -88,10 +88,14 @@ before examining the grab object (called x):
 
 instead of examining a grab object (called x):
 	say "[the desc corresponding to a object of x in the table of game objects][line break]";
+	let found be 0;
 	repeat through the table of game art:
 		if printed name of x exactly matches the text title entry, case insensitively:
 			project icon entry;
+			now found is 1;
 			break;
+	if found is 0 and x is cum:
+		project Figure of Item_Bottle_Cum;
 	if "Weaponsmaster" is listed in feats of Player and x is an armament:
 		say "     Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
 	if x is an armament:
@@ -147,22 +151,24 @@ instead of wearing something:
 ]
 
 To process (x - a grab object):
+	let found be 0;
 	repeat through the table of game art:
 		if printed name of x exactly matches the text title entry, case insensitively:
 			project icon entry;
+			now found is 1;
 			break;
+	if found is 0 and x is cum:
+		project Figure of Item_Bottle_Cum;
 	let tempHungerValue be Hunger of Player;
 	if x is temporary and x is owned:
 		say "You eagerly use the [x]!";
-		let found be 0;
-		let num be 0;
 		ItemLoss x by 1 silently;
 	else:
 		say "You use the [x].";
-	if usedesc of x is empty:
+	if Usedesc of x is empty:
 		now x is x;
 	else:
-		say "[usedesc of x]";
+		say "[Usedesc of x]";
 	if x is infectious and "Iron Stomach" is not listed in feats of Player:
 		let found be 0;
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -221,7 +227,7 @@ To process (x - a grab object):
 		if inafight is 1:
 			say "[line break][usepepperspray]";
 		else:
-			say "It would not be good idea to use that on yourself. Spicy eyes!";
+			say "It would not be a good idea to use that on yourself. Spicy eyes!";
 	if tempHungerValue > Hunger of Player and "Tanuki Salts" is listed in Feats of Player:
 		say "Dashing a little tanuki salts helped things along. Mmm, divinely tasty.";
 		PlayerEat 5;
@@ -258,7 +264,7 @@ to say journal use:
 		let healed be 10 + ( ( level of Player + perception of Player - 10 ) / 2 );
 		if caffeinehigh of Player > 0:
 			now healed is healed / 2;
-			say " Filled with excess, manic energy, you have difficulty sitting still and focusing on your journal. ";
+			say "Filled with excess, manic energy, you have difficulty sitting still and focusing on your journal. ";
 		if ssmb is true:
 			now healed is ( healed * 3 ) / 2;
 		SanBoost healed;

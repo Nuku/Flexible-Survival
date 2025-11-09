@@ -259,6 +259,10 @@ To Combat Menu:
 			now automaticcombatcheck is 1;
 			follow the player attack rule;
 			next;
+		else if autoattackmode is 2: [always seduces in combat, no player input needed]
+			now automaticcombatcheck is 1;
+			follow the player seduce rule;
+			next;
 		else if autoattackmode is 3: [always pass in combat, no player input needed]
 			now automaticcombatcheck is 1;
 			follow the combat pass rule;
@@ -407,7 +411,7 @@ This is the player attack rule:
 				say "DEBUG: 2 point hit penalty because of over/undersized weapon.[line break]";
 			decrease combat bonus by 2;
 	let the roll be a random number from 1 to 50;
-	say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	say "You roll 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: ";
 	if the roll plus the combat bonus > 20:
 		let wmstrike be 0;
 		let z be 0;
@@ -461,7 +465,7 @@ This is the player attack rule:
 			if z is not 0:	[Natural Armaments used]
 				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodytype of Player] body[or]Drawing strength from your [BodySpeciesName of Player in lower case] body, you attack[or]You attack using your [BodySpeciesName of Player in lower case] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [BodySpeciesName of Player in lower case] form's natural defenses[at random], hitting the [EnemyNameOrTitle] for [special-style-2][dam][roman type] damage!";
 			else if "Black Belt" is listed in feats of Player or "Martial Artist" is listed in feats of Player:
-				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa! You know kung-fu! [at random]hitting the [EnemyNameOrTitle] for [special-style-2][dam][roman type] damage!";
+				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa! You know kung-fu! You let loose, [at random]hitting the [EnemyNameOrTitle] for [special-style-2][dam][roman type] damage!";
 			else:
 				say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of Player], hitting the [EnemyNameOrTitle] for [special-style-2][dam][roman type] damage!";
 		else:
@@ -469,6 +473,7 @@ This is the player attack rule:
 		let bonusattacks be 0; [max 2 bonus attacks in a round]
 		let specattchance be 4;
 		if peppereyes > 0, increase specattchance by 1;
+		if monsterHP - dam < 1, now specattchance is 0; [creature already defeated]
 		if a random chance of specattchance in 20 succeeds and "Tail Strike" is listed in feats of Player and bonusattacks < 2:
 			if TailName of Player is listed in infections of TailweaponList:
 				increase bonusattack by 1;
@@ -517,6 +522,7 @@ This is the player attack rule:
 			if Nipple Count of Player > 4, increase dammy by a random number between 0 and 1;
 			say "[line break]Grabbing your opponent, you smoosh them into your ample bosom, smothering and crushing them with your tits for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
+		if monsterHP - dam < 1, now petchance is 0; [creature already defeated]
 		if a random chance of petchance in 1000 succeeds and "Spirited Youth" is listed in feats of Player:
 			let y be a random number from 4 to 6;
 			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at the [EnemyNameOrTitle] for [special-style-2][y][roman type] damage!";
@@ -526,12 +532,12 @@ This is the player attack rule:
 			repeat with s running from 1 to number of filled rows in the Table of PlayerChildren:
 				increase y by a random number from 2 to 4;
 			increase dam by y;
-			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at the [EnemyNameOrTitle] for [special-style-2][y][roman type] damage!";
+			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide to start a massive orgy[or]practice their martial arts[at random] at the [EnemyNameOrTitle] for [special-style-2][y][roman type] damage!";
 		decrease monsterHP by dam;
 		increase monsterLibidoPenalty by 20;
 	else:
 		say "You miss!";
-	if Player is not lonely:
+	if Player is not lonely and monsterHP > 0:
 		LineBreak;
 		Repeat with z running through companionList of Player:
 			if z is not NullPet:
@@ -581,11 +587,11 @@ This is the player attack rule:
 							say "[z]'s seduction attempt fails!";
 					say "Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
 					increase HP of Player by 1;
-	LineBreak;
 	follow the monster injury rule;
-	say "[EnemyCapNameOrTitle] is [descr].";
+	say "[EnemyCapNameOrTitle] is [descr]. ";
 	follow the monster libido rule;
-	say "[EnemyCapNameOrTitle] is [descr].";
+	say "[EnemyCapNameOrTitle] is [descr]. ";
+	LineBreak;
 	if monsterHP < 1:
 		now fightoutcome is 10;
 		win;
@@ -659,7 +665,7 @@ This is the player seduce rule:
 		if Debug is at level 10:
 			say "DEBUG: Combat Bonus after Penalty: [combat bonus][line break]";
 	let the roll be a random number from 1 to 50;
-	say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	say "You roll 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: ";
 	if the roll plus the combat bonus > 20 and SeductionImmune entry is false:
 		let LibidoIncrease be ( (Charisma of Player divided by three) * ( a random number from 70 to 130 ) ) divided by 100;
 		if a random chance of Morale of Player in 200 succeeds:
@@ -722,11 +728,11 @@ This is the player seduce rule:
 							say "[z]'s seduction attempt fails!";
 					say "Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
 					increase HP of Player by 1;
-	LineBreak;
 	follow the monster injury rule;
-	say "[EnemyCapNameOrTitle] is [descr].";
+	say "[EnemyCapNameOrTitle] is [descr]. ";
 	follow the monster libido rule;
-	say "[EnemyCapNameOrTitle] is [descr].";
+	say "[EnemyCapNameOrTitle] is [descr]. ";
+	LineBreak;
 	if monsterHP < 1:
 		now fightoutcome is 10;
 		win;
@@ -835,7 +841,7 @@ This is the flee rule:
 				follow the continuous entry;
 			if combat abort is 0, follow the combat entry;
 		else:
-			say "     You run as fast as you can, leaving your adversary in the dust. Each stride sends pangs of pleasure to your loins. The faster your job, the more powerful the sensations. You eventually manage to put enough distance between you and your enemy. This is a good thing, as a long trail of [if Player is herm]sexual fluids[else if Player is male]pre[else]vaginal fluid[end if] pools down on the ground, all the way to the battlefield.";
+			say "     You run as fast as you can, leaving your adversary in the dust. Each stride sends pangs of pleasure to your loins. The faster your jog, the more powerful the sensations. You eventually manage to put enough distance between you and your enemy. This is a good thing, as a long trail of [if Player is herm]sexual fluids[else if Player is male]pre[else]vaginal fluid[end if] pools down on the ground, all the way to the battlefield.";
 			now fightoutcome is 30;
 			now combat abort is 1;
 	else:
@@ -866,7 +872,7 @@ This is the flee rule:
 			if the combat bonus < -22:
 				now combat bonus is -22;
 		let the roll be a random number from 1 to 50;
-		say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+		say "You roll 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: ";
 		if the roll plus the combat bonus > 20:
 			say "You manage to evade [EnemyNameOrTitle] and slip back into the city.";
 			now fightoutcome is 30;
@@ -1030,7 +1036,7 @@ to standardstrike:
 				now combat bonus is -25;
 		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15; [***if autopass, min. 30% chance to hit]
 		let the roll be a random number from 1 to 50;
-		say "[EnemyCapNameOrTitle] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
+		say "[EnemyCapNameOrTitle] rolls 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: [run paragraph on]";
 		if the roll plus the combat bonus > 20:
 			now monsterhit is true;
 		else:
@@ -1057,9 +1063,10 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 		now avoidance is 1;
 	else if ducky swimring is equipped and duckyactive is true and a random chance of 1 in 8 succeeds:
 		say "Your [one of]inflatable ducky[or]ducky swim ring[or]white ducky[or]cute ducky[at random] ends up taking the hit for you, causing it to pop and deflate for the rest of the fight, but saving you from being hit this [one of]time[or]once[at random].";
+		now duckyactive is false;
 		now avoidance is 1;
 	if avoidance is 0 and level of Velos > 2 and ( ( HP of Player * 100 ) / MaxHP of Player ) < 10 and velossaved is false:
-		say "[one of]Velos, perhaps sensing that things aren't going well out there, makes a surprise exit, startling your foe for a moment before the serpent has to retreat.[or]When the serpent hidden within you emerges suddenly, the [EnemyNameOrTitle] is startled and stumbles back, losing their opportunity to strike.[or]With an exaggerated moaning, Velos rises from your depths, throwing off your opponent.[or]In an attempt to safeguard his friend and his home, Velos emerges. 'Boo.' Stunned by this new foe, the [EnemyNameOrTitle] is thrown off balance for a moment. By the time they recover and swing at Velos, he's already ducked back inside you.[or]Velos emerges from you, yelling angrily at you to stop all that knocking about while he's trying to sleep. Your foe, meanwhile, staggers back several steps from the brief appearance of the snake.[or]Velos, emerging like some serpentine horror from your body, makes moaning, otherworldly noises at your foe. This drives your opponent is back for a few moments['] reprieve.[cycling]";
+		say "[one of]Velos, perhaps sensing that things aren't going well out there, makes a surprise exit, startling your foe for a moment before the serpent has to retreat.[or]When the serpent hidden within you emerges suddenly, the [EnemyNameOrTitle] is startled and stumbles back, losing their opportunity to strike.[or]With an exaggerated moaning, Velos rises from your depths, throwing off your opponent.[or]In an attempt to safeguard his friend and his home, Velos emerges. 'Boo.' Stunned by this new foe, the [EnemyNameOrTitle] is thrown off balance for a moment. By the time they recover and swing at Velos, he's already ducked back inside you.[or]Velos emerges from you, yelling angrily at you to stop all that knocking about while he's trying to sleep. Your foe, meanwhile, staggers back several steps from the brief appearance of the snake.[or]Velos, emerging like some serpentine horror from your body, makes moaning, otherworldly noises at your foe. This drives your opponent back for a few moments['] reprieve.[cycling]";
 		increase HP of Player by 5;
 		now velossavedyes is true;
 		now velossaved is true;
@@ -1074,7 +1081,7 @@ to standardhit:
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "[Attack entry]  You take [special-style-2][dam][roman type] damage!";
+	say "[Attack entry] You take [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[normalabsorbancy]";
 	if absorb > dam:
@@ -1374,12 +1381,12 @@ to win:
 				ubbyplayer; [See Alt Vore file]
 				now fightoutcome is 14; [player ub'ed foe]
 		else if vorechoice is 1 and ubchoice is 0: [hunger overrides ub]
-			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself. In the end, it is the emptiness in your stomach that wins out and you don't hold it back. You advancing on them with the intent to sate your stomach's call with the [EnemyNameOrTitle].";
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself. In the end, it is the emptiness in your stomach that wins out and you don't hold it back. You advance on them with the intent to sate your stomach's call with the [EnemyNameOrTitle].";
 			now ok is 0;
 			vorebyplayer; [See Alt Vore file]
 			now fightoutcome is 13; [player vored foe]
 		else if vorechoice is 0 and ubchoice is 1: [ub overrides hunger]
-			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself. In the end, it is the hollowness in your uterus that wins out and you don't hold it back. You advancing on them with the intent to use the [EnemyNameOrTitle] to fill the emptiness you feel in your womb.";
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself. In the end, it is the hollowness in your uterus that wins out and you don't hold it back. You advance on them with the intent to use the [EnemyNameOrTitle] to fill the emptiness you feel in your womb.";
 			now ok is 0;
 			ubbyplayer; [See Alt Vore file]
 			now fightoutcome is 14; [player ub'ed foe]
@@ -1590,9 +1597,11 @@ to TrophyLootFunction: [generates either a trophy prompt or loot for the player]
 			let z be 0;
 			if randomdropchance is 100: [always drops = no need to run all the maths]
 				ItemGain loot entry by 1;
+				LineBreak;
 			else if randomdropchance > 0:
 				if a random chance of (randomdropchance + LootBonus) in 100 succeeds:
 					ItemGain loot entry by 1;
+					LineBreak;
 
 to SpecialTrophyCheck (TrophyName - text):
 	if TrophyName is:
@@ -1636,9 +1645,9 @@ This is the player injury rule:
 	else if per <= 40:
 		now descr is "[if Playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]wounded[or]bashed around[or]significantly harmed[at random]";
 	else if per <= 80:
-		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type][line break]";
+		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type]";
 	else:
-		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type][line break]";
+		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type]";
 	rule succeeds;
 
 Section 5 - Critter Combat
@@ -1699,7 +1708,7 @@ this is the aura1 rule:		[weak aura]
 	let bonus be Stamina of Player - 10;
 	let dice be a random number from 1 to 50;
 	say "You roll 1d50([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
-	if dice + bonus > 20:
+	if dice + bonus >= 20:
 		say "You manage to resist the creature's power and press on.";
 		LineBreak;
 	else:
@@ -1716,7 +1725,7 @@ Part 2 - Alternate Attack Example - Bearhug
 this is the bearhug rule:
 	choose row MonsterID from Table of Random Critters;
 	if Name entry is "Snake" or Name entry is "Naga" or Name entry is "Inflatable Snake":		[crushing coils]
-		say "The [one of][EnemyNameOrTitle][or]large serpent[purely at random] manages to wrap its powerful tail around you, holding you in its vice-like constriction! You will need to break free before squeezes the fight right out of you.";
+		say "The [one of][EnemyNameOrTitle][or]large serpent[purely at random] manages to wrap its powerful tail around you, holding you in its vice-like constriction! You will need to break free before it squeezes the fight right out of you.";
 	else:									[crushing arms]
 		say "The [EnemyNameOrTitle] manages to grab you in its powerful arms and holds you in a vice-like bear hug! You will need to break free before it squeezes the fight right out of you.";
 	let freedom be 0;
@@ -1813,7 +1822,7 @@ this is the intstrike rule:
 				now combat bonus is -25;
 		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15; [***if autopass, min. 30% chance to hit]
 		let the roll be a random number from 1 to 50;
-		say "[EnemyCapNameOrTitle] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
+		say "[EnemyCapNameOrTitle] rolls 1d50([roll])[if combat bonus >= 0]+[end if][combat bonus] = [roll plus combat bonus]: [run paragraph on]";
 		if the roll plus the combat bonus > 20:
 			now monsterhit is true;
 		else:
@@ -1896,14 +1905,14 @@ this is the firebreath rule:
 			let fbhit be 0; [Missed]
 		if Name entry is "Ebonflame Dragator":
 			if fbhit is 2:
-				say "[special-style-2]The [one of]dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red wave of fire is spat out at you. You try to evade, but the fiery blast washes over you. You suffer [dam] damage![roman type][line break]";
+				say "[special-style-2]The [one of]dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly lighting up the inside of its mouth. A bright red wave of fire is spat out at you. You try to evade, but the fiery blast washes over you. You suffer [dam] damage![roman type][line break]";
 			else if fbhit is 1:
-				say "The [one of]dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red wave of [special-style-2]fire[roman type] is spat out at you. You move to evade, but are still caught in part of the blast. You suffer [special-style-2][dam][roman type] damage!";
+				say "The [one of]dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly lighting up the inside of its mouth. A bright red wave of [special-style-2]fire[roman type] is spat out at you. You move to evade, but are still caught in part of the blast. You suffer [special-style-2][dam][roman type] damage!";
 			else:
-				say "The [one of]dragator[or]creature[or]croc-beast[purely at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth. A bright red fireball is spat out in your direction, but you manage to evade it!";
+				say "The [one of]dragator[or]creature[or]croc-beast[purely at random] lets out a primordial roar, energies and chemicals in its belly lighting up the inside of its mouth. A bright red fireball is spat out in your direction, but you manage to evade it!";
 		else if Name entry is "Ebonflame Drake":
 			if fbhit is 2:
-				say "[one of]She[or]The drake[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath it took moments ago. Unable to get out of the way, you throw up your arms to protect yourself as her gaping maw looses a fireball at you. You are burned for [dam] damage![roman type][line break]";
+				say "[one of]She[or]The drake[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. Unable to get out of the way, you throw up your arms to protect yourself as her gaping maw looses a fireball at you. You are burned for [dam] damage![roman type][line break]";
 			else if fbhit is 1:
 				say "[one of]She[or]The drake[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. You attempt to move out of the way, but are still partially caught in the [special-style-2]fireball[roman type] loosed from her maw. You are burned for [special-style-2][dam][roman type] damage!";
 			else:
@@ -1919,7 +1928,7 @@ this is the firebreath rule:
 			if fbhit is 2:
 				say "The [one of]sea dragon[or]blue dragon[or][EnemyNameOrTitle][purely at random] unleashes a blast of scalding water like a firehose that slams into you. You are knocked over and scalded badly by the constant stream of steaming sea water. You take [special-style-2][dam][roman type] damage!";
 			else if fbhit is 1:
-				say "The [one of]sea dragon[or]blue dragon[or][EnemyNameOrTitle][purely at random] unleashes a blast of scalding water like a firehose that slams into you. You dodge and weave away from the constant stream of steaming sea water, but are struck and scalded by it a several times. You take [special-style-2][dam][roman type] damage!";
+				say "The [one of]sea dragon[or]blue dragon[or][EnemyNameOrTitle][purely at random] unleashes a blast of scalding water like a firehose that slams into you. You dodge and weave away from the constant stream of steaming sea water, but are struck and scalded by it several times. You take [special-style-2][dam][roman type] damage!";
 			else:
 				say "The [one of]sea dragon[or]blue dragon[or][EnemyNameOrTitle][purely at random] unleashes a blast of scalding water like a firehose towards you. You manage to dodge and weave away, rather narrowly at times, from the constant stream of steaming sea water!";
 		else if Name entry is "Yamato Dragon" or Name entry is "Yamato Dragoness":
@@ -1931,18 +1940,18 @@ this is the firebreath rule:
 				say "The [one of]oriental dragon[or][EnemyNameOrTitle][or]serpentine dragon[purely at random] exhales a wave of blue fire over you. You thankfully manage to evade the strange blast which strangely doesn't seem to have damaged the landscape around you.";
 		else if Name entry is "Salamander":
 			if fbhit is 2:
-				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you, striking you soundly. The heat threatens is like that of a blast furnace and threatens to overwhelm you. You suffer [special-style-2][dam][roman type] damage!";
+				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you, striking you soundly. The heat is like that of a blast furnace and threatens to overwhelm you. You suffer [special-style-2][dam][roman type] damage!";
 			else if fbhit is 1:
 				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you. Thankfully, you're only caught by edge of the blast, but even that feels as hot as an oven. You suffer [special-style-2][dam][roman type] damage!";
 			else:
 				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you. You thankfully manage to get out of the way, only feeling a brief rise in temperature and suffering no ill effects.";
 		else if Name entry is "Magic Drake":
 			if fbhit is 2:
-				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashed a stream of sparkling green flames. This magical blast strikes you soundly, both burning hot and strangely arousing, sapping your strength to fight on. You suffer [special-style-2][dam][roman type] damage!";
+				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashes a stream of sparkling green flames. This magical blast strikes you soundly, both burning hot and strangely arousing, sapping your strength to fight on. You suffer [special-style-2][dam][roman type] damage!";
 			else if fbhit is 1:
-				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashed a stream of sparkling green flames. You're briefly caught by the edge of this magical blast as you unsuccessfully try to avoid it. The strange fire is both burning hot and also strangely arousing. It saps some of your strength to fight on. You suffer [special-style-2][dam][roman type] damage!";
+				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashes a stream of sparkling green flames. You're briefly caught by the edge of this magical blast as you unsuccessfully try to avoid it. The strange fire is both burning hot and also strangely arousing. It saps some of your strength to fight on. You suffer [special-style-2][dam][roman type] damage!";
 			else:
-				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashed a stream of sparkling flames. Her head swivels after you, chasing you with the blast, but you manage to evade the magical flames until the fiery attack is over.";
+				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashes a stream of sparkling flames. Her head swivels after you, chasing you with the blast, but you manage to evade the magical flames until the fiery attack is over.";
 		else:
 			if fbhit is 2:
 				say "[special-style-2][one of]Your opponent[or]The [EnemyNameOrTitle][or]Your enemy[purely at random] unleashes a blast of fire at you. The flames wash over you, burning you badly. You take [dam] damage![roman type][line break]";
@@ -2005,7 +2014,7 @@ this is the latexhug rule:
 			WaitLineBreak;
 			let num1 be a random number between 0 and ( Dexterity of Player + level of Player );
 			let num2 be a random number between 1 and ( dex entry + lev entry );
-			say "You struggle to slip free as the latex [one of]continues to expand over your body[or]envelopes your body[at random]: ";
+			say "You struggle to slip free as the latex [one of]continues to expand over your body[or]envelops your body[at random]: ";
 			if num1 > num2:
 				say "You manage to find a hole in the latex and squeeze out before it closes completely around you.";
 				now freedom is 1;

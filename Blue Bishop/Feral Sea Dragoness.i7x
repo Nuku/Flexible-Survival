@@ -21,9 +21,7 @@ to say fsdf attack:
 			if Name entry is "Feral Sea Dragon":
 				now MonsterID is y;
 				break;
-		if "Male Preferred" is listed in feats of Player:
-			now sex entry is "Male";
-		else if "Female Preferred" is listed in feats of Player:
+		if Player is FemalePreferred:
 			now sex entry is "Female";
 		else if "Herm Preferred" is listed in feats of Player:
 			now sex entry is "Both";
@@ -528,9 +526,7 @@ to say PrepCombat_Feral Sea Dragoness:
 	now firebreathcount is 0;
 	now firebreathready is false;
 	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
-		now sex entry is "Male";
-	else if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
@@ -584,7 +580,7 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 8;
 	now cha entry is 4;
-	now sex entry is "Female";
+	now sex entry is "Male";
 	now HP entry is 80;
 	now lev entry is 7;
 	now wdam entry is 21;
@@ -602,8 +598,8 @@ When Play begins:
 	now libido entry is 50;
 	now loot entry is "";
 	now lootchance entry is 0;
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is "sea dragon cum";
+	now MilkItem entry is "feral sea dragoness milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "feral sea dragoness cum";
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]large[or]bulky[or]aquatic[or]muscled[at random]";

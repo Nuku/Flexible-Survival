@@ -2241,7 +2241,7 @@ It can often be useful to control debugging commands from source text, rather th
 	GLKLIST
 		show glk list [the GLKLIST command]
 
-The Extended Debugging extension provides further phrases, as well as other useful features. (Note: Extended Debugging is not part of Glimmr, but works well with it.) See the template layer (Appendix B of Writing with Inform: http://inform7.com/sources/src/i6template/Woven/index.html ) for more on these debugging commands.
+The Extended Debugging extension provides further phrases, as well as other useful features. (Note: Extended Debugging is not part of Glimmr, but works well with it.) See https://ganelson.github.io/inform-website for more on these debugging commands.
 
 
 Chapter: Troubleshooting
@@ -2274,12 +2274,12 @@ Test your game in all the interpreters you can get your hands on, and recommend 
 
 Chapter: Producing images for use with Glimmr
 
-Full instructions for producing images are well beyond the scope of this documentation, but a few notes and links will be useful. For almost all purposes, you will want to produce your images in PNG (Portable Networks Graphics) format. PNG graphics (file extension .png) can contain an "alpha channel" that defines transparent areas of the image, allowing for shapes that are not rectangular. They can be produced with Photoshop, of course, but also with many other programs, including the free, cross-platform GIMP software (https://www.gimp.org/). Here are some sites that might be of use to you if you are unfamiliar with PNG graphics (Inform tends to mangle URL spacing in documentation, so you may need to edit these by hand or open the extension itself and copy the links from there into your browser):
+Full instructions for producing images are well beyond the scope of this documentation, but a few notes and links will be useful. For almost all purposes, you will want to produce your images in PNG (Portable Networks Graphics) format. PNG graphics (file extension .png) can contain an "alpha channel" that defines transparent areas of the image, allowing for shapes that are not rectangular. They can be produced with Photoshop, of course, but also with many other programs, including the free, cross-platform GIMP software (https://gimp.org). Here are some sites that might be of use to you if you are unfamiliar with PNG graphics (Inform tends to mangle URL spacing in documentation, so you may need to edit these by hand or open the extension itself and copy the links from there into your browser):
 
-	https://en.wikipedia.org/wiki/Portable_Network_Graphics
-	http://www.libpng.org/pub/png/pngintro.html
-	https://www.axialis.com/tutorials/tutorial-misc001.html (Photoshop tutorial)
-	http://www.libpng.org/pub/png/book/chapter04.html#png.ch04.div.5 (GIMP tutorial)
+	https://en.wikipedia.org/wiki/PNG
+	http://libpng.org/pub/png/pngintro.html
+	https://axialis.com/tutorials/create-transparent-image-with-photoshop.html (Photoshop tutorial)
+	http://libpng.org/pub/png/book/chapter04.html#png.ch04.div.5 (GIMP tutorial)
 
 Avoid making your images too large. Images should be sized no larger than you want them to appear onscreen.
 
@@ -2448,7 +2448,7 @@ If you have comments about the extension, please feel free to contact me directl
 
 Please report bugs on the Google Code project page, at https://code.google.com/archive/p/glimmr-i7x/issues.
 
-For questions about Glimmr, please consider posting to either the rec.arts.int-fiction newsgroup or at the intfiction forum (https://www.intfiction.org/forum/). This allows questions to be public, where the answers can also benefit others. If you prefer not to use either of these forums, please contact me directly via email (ek.temple@gmail.com).
+For questions about Glimmr, please consider posting to either the rec.arts.int-fiction newsgroup or at the intfiction forum (https://intfiction.org). This allows questions to be public, where the answers can also benefit others. If you prefer not to use either of these forums, please contact me directly via email (ek.temple@gmail.com).
 
 
 Chapter: Change Log

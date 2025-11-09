@@ -83,7 +83,7 @@ when play begins:
 	now face entry is "draconic in appearance, with a wide maw, sharp teeth, and glowing red eyes with what appear to be flames shimmering within them";
 	now body entry is "hulking and muscular, though vaguely barrel shaped";
 	now skin entry is "onyx black scales that shimmer iridescently, covering your";
-	now tail entry is "You have a long and thick tapered reptilian tail ending in a point, covered in shimmering onyx scales";
+	now tail entry is "You have a long and thick tapered reptilian tail ending in a point, covered in shimmering onyx scales.";
 	now cock entry is "humanoid, but jet black";
 	now face change entry is "it grows wider and longer into a draconic muzzle with razor sharp teeth, glowing eyes and circular nostrils";
 	now body change entry is "your muscles grow thicker and stronger, resulting in a bodybuilder-like body";
@@ -113,9 +113,9 @@ when play begins:
 	now SeductionImmune entry is false;
 	now libido entry is 50;
 	now loot entry is "";
-	now lootchance entry is 50;
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now lootchance entry is 0;
+	now MilkItem entry is "demonic dragon milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "demonic dragon cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4;
 	now body descriptor entry is "[one of]smooth[or]scaly[or]hulking[at random]";

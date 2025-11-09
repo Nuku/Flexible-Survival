@@ -296,7 +296,7 @@ to unicornify:
 		if Name entry is "Unicorn":
 			now MonsterID is y;
 			break;
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";

@@ -390,16 +390,17 @@ to say sexwithsnow07:	[Cunnilingus]
 
 to say snowsquirrelgivein:
 	say "     Taking Snow's paw in yours, you rush out with her, leaving the Abbey behind before either of you can think better of it. Whether by some scent on the air of by blind luck, you soon run into the pair of lustful squirrels. Finding you with Snow, they are all the more pleased and chitter happily as they welcome you both into their arms. Soon you are all rolling around in the grass, fucking like wild animals. Snow is made to stuff her cock down your throat while your [if Player is female and Cunt Depth of Player > 8]dripping pussy[else]tight rump[end if] is stuffed by one of the wild squirrels while Snow is getting the same treatment from the other. You moan around Snow's throbbing meat, tasting her leaking pre growing more addictive and arousing as you watch the light of intelligence fading from her eyes even as you can feel your own mind fading away. Your last coherent thought is how happy you are that you'll be sharing this new life with the beautiful Snow.";
-	if "Male Preferred" is not listed in feats of Player:
+	if Player is not MalePreferred or "Breasts" is listed in feats of Player:
 		if Nipple Count of Player < 2, now Nipple Count of Player is 2;
 		if Breast Size of Player < 4, now Breast Size of Player is 4;
+	if Player is not MalePreferred:
 		if Player is not female, now Cunt Count of Player is 1;
 		if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;
 		if Cunt Tightness of Player < 6, now Cunt Tightness of Player is 6;
 		if "Modest Organs" is listed in feats of Player:
 			now Cunt Depth of Player is 8;
 			now Cunt Tightness of Player is 5;
-	if "Female Preferred" is not listed in feats of Player:
+	if Player is not FemalePreferred:
 		if Player is not male, now Cock Count of Player is 1;
 		if Cock Length of Player < 9, now Cock Length of Player is 9;
 		if Ball Size of Player < 6, now Ball Size of Player is 6;
@@ -493,16 +494,17 @@ to say ResolveEvent Wild Squirrels:
 	increase HP of Snow by 1;
 	if Humanity of Player < 10:
 		now BodyName of Player is "Hyper Squirrel";
-		if "Male Preferred" is not listed in feats of Player:
+		if Player is not MalePreferred or "Breasts" is listed in feats of Player:
 			if Nipple Count of Player < 2, now Nipple Count of Player is 2;
 			if Breast Size of Player < 4, now Breast Size of Player is 4;
+		if Player is not MalePreferred:
 			if Player is not female, now Cunt Count of Player is 1;
 			if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;
 			if Cunt Tightness of Player < 6, now Cunt Tightness of Player is 6;
 			if "Modest Organs" is listed in feats of Player:
 				now Cunt Depth of Player is 8;
 				now Cunt Tightness of Player is 5;
-		if "Female Preferred" is not listed in feats of Player:
+		if Player is not FemalePreferred:
 			if Player is not male, now Cock Count of Player is 1;
 			if Cock Length of Player < 9, now Cock Length of Player is 9;
 			if Ball Size of Player < 6, now Ball Size of Player is 6;
@@ -596,8 +598,8 @@ When Play begins:
 	now libido entry is 80; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "hyper squirrel milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "hyper squirrel cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]athletic[or]curvy[or]agile[at random]";

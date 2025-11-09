@@ -46,7 +46,7 @@ Sweet Tooth	"Sweet Tooth"	"Sweet Tooth"	"Fairgrounds"
 Entrance to the High Rise District	"Entrance to the High Rise District"	"Entrance to the High Rise District"	"High Rise District"
 Agency	"Agency"	"Agency"	"High Rise District"
 Alex's Condo	"Alex's Condo"	"Alex's Condo"	"High Rise District"
-Argos's Antiques	"Argos Antiques"	"Argos Antiques"	"High Rise District"
+Argos's Antiques	"Argos's Antiques"	"Argos's Antiques"	"High Rise District"
 Bone-Appetit	"Bone-Appetit"	"Bone-Appetit"	"High Rise District"
 Butterfly Grove	"Butterfly Grove"	"Butterfly Grove"	"High Rise District"
 Cherry's Apartment	"Cherry's Apartment"	"Cherry's Apartment"	"High Rise District"
@@ -94,6 +94,7 @@ Pirate Island	"Pirate Island"	"Pirate Island"	"Seaside"
 Viking Ship	"Viking Ship"	"Viking Ship"	"Seaside"
 Sinking Swamps	"Sinking Swamps"	"Sinking Swamps"	"Swamp"
 Flooded Mezzanine	"Flooded Mezzanine"	"Flooded Mezzanine"	"Swamp"
+Pocket Universe	"Pocket Universe"	"Pocket Universe"	"Swamp"
 Stables Hotel	"Stables Hotel"	"Stables Hotel"	"The Stables"
 Master's Office	"Master's Office"	"Master's Office"	"The Stables"
 College Campus	"College Campus"	"College Campus"	"Tenvale College"
@@ -270,9 +271,9 @@ carry out navigating:
 				Fight;
 	else:
 		say "You travel to [the noun], avoiding trouble as best you can.";
+	follow the ngraphics_blank rule;
 	if HP of Velos > 2, move Velos to noun;
 	now Player is in noun;
-	follow the ngraphics_blank rule;
 	NavInEvent_Check noun;
 	now inasituation is false; [cleaning up possible open ended flags]
 

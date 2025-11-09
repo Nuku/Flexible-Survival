@@ -72,8 +72,8 @@ When Play begins:
 	now libido entry is 10;
 	now loot entry is "";
 	now lootchance entry is 0;
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "scarab beetle milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "scarab beetle cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3;
 	now body descriptor entry is "[one of]chitinous[or]plated[or]ovoid[or]rounded[at random]";

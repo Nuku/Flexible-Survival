@@ -170,7 +170,7 @@ to say HellDemon loses:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You take a step back and shake off your head, denying his offer. 'No? Heh... Your loss. Though I'm sure you'll change your mind.' he says, before retreating back into the shadows.";
+			say "     You take a step back and shake off your head, denying his offer. 'No? Heh... Your loss. Though I'm sure you'll change your mind,' he says, before retreating back into the shadows.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
@@ -230,7 +230,7 @@ to say HellDemonFuck:
 	say "     Then, just like that, you feel all his insides tighten around your manhood, twitching and clenching uncontrollably as he releases an audible demonic roar. With his cock still in your hand, you feel it throb and pulse, gushing out tremendous amounts of jizz all over the ground beneath you both! And soon follows yours, your load leaving through your cock like a geyser, if it didn't end inside the demon. You keep filling him up for the next moments, although as your climax begins and subsides, the hot devil is still shooting thick goblets of his demonic seed down, panting heavily... But eventually, it also comes to a stop, and he takes his time to recollect his senses, just as you do.";
 	say "     'Uhm... That was... Just keep it between us, okay? I don't want them thinking I like this so much... W-which I don't, no, not as much as fucking... at least... Er... Well, goodbye.' he says, hesitating between every word, as he retreats back to the shadows. You're free to walk out of here as well.";
 	LJockstrapPickup;
-	CreatureSexAftermath "Hellfire Demon" receives "AnalFuck" from "Player";
+	CreatureSexAftermath "Hellfire Demon" receives "AssFuck" from "Player";
 
 to say HellDemonAnal:
 	project Figure of HellfireDemon_hard_icon;
@@ -249,7 +249,7 @@ to say HellDemonAnal:
 	else:
 		say "'Feels great, doesn't it? See what you've been missing... If you'd just give in, I could probably bring you with me. We'd have a lot of fun either way.' His words manage to get some curiosity going in your mind";
 	say ". Figuring it's time to get going, the demon stands up and leaves you lying on the ground, still full of his seed. 'Hope we meet again. Maybe next time you won't be able to resist me at all.' With this said, the demon retreats back to the shadows. You're left to wait out until you process enough of his cum, in your mind still running thoughts of debauchery for a good while... There's something [italic type]odd[roman type] about this kind of demons...'";
-	CreatureSexAftermath "Player" receives "AnalFuck" from "Hellfire Demon";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Hellfire Demon";
 
 to say HellDemonCun:
 	project Figure of HellfireDemon_hard_icon;
@@ -271,7 +271,7 @@ to say HellDemonCun:
 		say "     As tempting as that sounds, you think it's time to get going. Grabbing your things, you say your goodbyes to the demon. 'See you soon, gorgeous. This was fun... maybe next time we can skip right into the fun, eh?' He throws a chuckle as he gets up, soon retreating back into the shadows as you proceed with your usual affairs.";
 	else:
 		say "     You have more to do than to satisfy a devil's necessities. He did well with yours, but now it's time to leave. 'Aw, you're going to leave me like this?' he asks with disappointment in his tone, his raging cock pulsing incredibly hard before your eyes. 'It's not right to tease a demon like this... You better pray that I never gain the upper hand.' Despite his threats, you don't give in, instead grabbing your things and leaving the area. You're so mean, but you have a feeling he likes that.";
-		CreatureSexAftermath "Hellfire Demon" receives "OralPussy" from "Player";
+	CreatureSexAftermath "Hellfire Demon" receives "OralPussy" from "Player";
 
 to say HellDemonPussy:
 	project Figure of HellfireDemon_hard_icon;
@@ -320,7 +320,7 @@ to say HellDemonXMale:
 		WaitLineBreak;
 		say "     With a couple more thrusts, you feel your orgasm settling in, and you can't help but let out a moan as your seed leaves your body, spurt after spurt coming inside the red devil's mouth as you keep thrusting until the end. The tendrils tighten their grip around the demon, holding him in place as Xaedihr too cums in his ass, and all you can imagine is his insides getting covered completely by the virile mage as he pounds that rear hard and deep. Inevitably, you feel the demon's grunts as all this happens, he too hitting the edge and making a puddle of his own load around his knees, plentiful of hellish cum just laying there on the ground. 'Fuuuck... this felt so good...' says Xaedihr, as he is slowly pulling out his cock from the demon's abused hole, a stream of his load following right after and leaking down to the muscle glutes. You do the same, pulling out of his mouth and finally letting the hunky devil take a breath.";
 		CreatureSexAftermath "Hellfire Demon" receives "OralCock" from "Player";
-		CreatureSexAftermath "Hellfire Demon" receives "AnalFuck" from "Xaedihr";
+		CreatureSexAftermath "Hellfire Demon" receives "AssFuck" from "Xaedihr";
 	else:
 		LineBreak;
 		say "     Shaking your head, you let him know you want to keep the ass to yourself. 'Huh, alright. All the better for me.' he replies, with a wink and a grin as he proceeds to continue to facefuck the hunky devil as eagerly as before. After all, his hole clenching around your length is feeling so good, you don't really want to pull out now. Instead, you want to continue fucking this delicious ass while Xaedihr keeps making the demon choke and grunt with his twelve inches fully buried inside his throat. He's leaning his head back with just the happiest pleasure face as he's feeling the crimson devil's throat muscles around his thick shaft, then returning to pound his face as if it was the ass you're fucking by the other side.";
@@ -329,14 +329,14 @@ to say HellDemonXMale:
 		say "     With a couple more thrusts, you feel your orgasm settling in, and you can't help but let out a moan as your seed leaves your body, spurt after spurt coming inside the red devil's ass as you keep thrusting until the end. The tendrils tighten their grip around the demon, holding him in place as Xaedihr too cums down his throat, and you can hear the sexy devil gulping down every single drop of it. 'Fuck yes... Swallow all of it, demon slut... That's right...' says Xaedihr, amidst some grunting, as the demon too hits the edge, making a puddle of his own load around his knees, plentiful of hellish cum just laying there on the ground. 'Fuuuck... this felt so good...' he continues, slowly pulling out his cock from between the hellspawn's lips, finally letting the hunky devil take a breath. You do the same, pulling out of his ass as a stream of your load follows right out of his abused hole, leaking down to the muscle glutes.";
 	say "     'Now this was hot. Hope you took some lessons, hellfire boy.' teases your sorcerer friend, leaving a rather humiliated demon silent as he lies down on the ground, right on his own messy puddle of cum as Xaedihr's tendrils return to their own void. He only lets out a defeated grunt, but you can tell he secretly enjoyed being used like that, both his mouth and ass used and abused for a good while. 'I think we should do this again, totally. Hope you're down for that anytime, bud.' he tells you, and you think he's actually eager to do it again. Perhaps he is, given how much he gets off from dominating demons... A charming fellow, this man.";
 	CreatureSexAftermath "Hellfire Demon" receives "OralCock" from "Xaedihr";
-	CreatureSexAftermath "Hellfire Demon" receives "AnalFuck" from "Player";
+	CreatureSexAftermath "Hellfire Demon" receives "AssFuck" from "Player";
 	if a random chance of 3 in 4 succeeds and loyalty of Xaedihr < 30:
 		say "     [bold type]The time you've spent with Xaedihr made him open up more to you.[roman type][line break]";
 		increase loyalty of Xaedihr by 1;
 
 to LJockstrapPickup:
 	if carried of leather jockstrap < 1:
-		say "     Though while that happens, you happen to come across the jockstrap left behind by the demon when he removed it before you. Luckily enough, as it is quite dark around here and it's barely visible if you had not paid attention. It smells greatly of his sweet musk... There is no way to guarantee safety in using it, but it [italic type]should[roman type] be fine, since it is in good conditions.";
+		say "     Though while that happens, you happen to come across the jockstrap left behind by the demon when he removed it before you. Luckily enough, as it is quite dark around here and it's barely visible if you had not paid attention. It smells greatly of his sweet musk... There is no way to guarantee safety in using it, but it [italic type]should[roman type] be fine, since it is in good condition.";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Pick it up.";
 		say "     ([link]N[as]n[end link]) - Just leave it.";
@@ -386,10 +386,10 @@ When Play begins:
 	now defeated entry is "[HellDemon loses]";
 	now victory entry is "[HellDemon wins]";
 	now desc entry is "[HellDemon Desc]";
-	now face entry is "of a fiery demon with bright yellow eyes and dark sclera, featuring an wide and chiseled jawline, covered in a short black beard, and very short dark hair on the topside of your head, with pointy ears on both sides. Two large and thick taurus-like horns emerge from your forehead, getting thinner towards the tip";
+	now face entry is "of a fiery demon with bright yellow eyes and dark sclera, featuring a wide and chiseled jawline, covered in a short black beard, and very short dark hair on the topside of your head, with pointy ears on both sides. Two large and thick taurus-like horns emerge from your forehead, getting thinner towards the tip";
 	now body entry is "that of an athletic bodybuilder, musclebound and solid, offering both strength and neat posture. There's also some body hair on you";
 	now skin entry is "deep red"; [ format as "You have (your text) skin"]
-	now tail entry is "You have powerful, rock-hard glutes, with a long demonic tail that swings back and forth behind you, ending in a classic spaded tip"; [ write a whole Sentence or leave blank. ]
+	now tail entry is "You have powerful, rock-hard glutes, with a long demonic tail that swings back and forth behind you, ending in a classic spaded tip."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]demonic[or]demon[or]infernal[or]bump-ridden[at random]"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "you begin to feel your skull reshaping under your skin, becoming wider and more masculine. A strange feeling in your mouth heralds your canine teeth sharpening and becoming longer to give you a rather intimidating smile. Finally a pair of large horns grow out of the top of your forehead, tauric in shape. Even your eyes have changed, to bright yellow irises enveloped by a darkened sclera"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "your arms and legs begin to grow longer and more muscular. Your chest widens as well, and you feel both stronger and agile. There's a strange and intense heat inside you"; [ format as "Your body feels funny as (your text)." ]
@@ -557,7 +557,7 @@ instead of sniffing hellfire demon horn shard:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"hellfire seed"	"The white, gooey seed of one of your past demonic lovers. It smells very sweet, a little like burnt cream, and feels really hot. Comes inside a plastic water bottle that could be mistaken for some sort of buttermilk, if someone hadn't written 'Hellfire Demon' across the label. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	hellfire seed
+"hellfire seed"	"The white, gooey seed of one of your past demonic lovers. It smells very sweet, a little like burnt cream, and feels really hot. Comes inside a plastic water bottle that could be mistaken for some sort of buttermilk, if someone hadn't written 'Hellfire Demon Seed' across the label. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	hellfire seed
 
 hellfire seed is a grab object.
 hellfire seed is cum.

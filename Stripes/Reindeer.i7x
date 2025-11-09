@@ -6,7 +6,7 @@ Version 2 of Reindeer by Stripes begins here.
 Section 1 - Creature Responses
 
 to say reindeerdesc:
-	say "     You can feel a disturbing chill in the air and even start to shiver as the temperature drops abruptly. As you try to bundle yourself up against the unexpected cold, you hear some jingling bells from above. Looking around you, you can see snow start to fall just as a reindeer begins to fly down. The reindeer has a few Christmas decorations hanging from its antlers and golden bells attached to red straps on his body. As he swoops lower, he laughs merrily, leaving another stream of light snow in his wake.";
+	say "     You can feel a disturbing chill in the air and even start to shiver as the temperature drops abruptly. As you try to bundle yourself up against the unexpected cold, you hear some jingling bells from above. Looking around you, you can see snow start to fall just as a reindeer begins to fly down. The reindeer has a few Christmas decorations hanging from his antlers and golden bells attached to red straps on his body. As he swoops lower, he laughs merrily, leaving another stream of light snow in his wake.";
 	say "     The holiday reindeer has no wings or other means to fly, he simply is, trotting lightly in the air as he does. You find yourself wondering how such an infection could come about during the middle of summer. [one of]Perhaps his office had a Christmas-in-July party[or]Maybe he worked at the mall and the holiday decorations fell on him[or]Maybe one of the reindeer from the zoo ran into someone who particularly loved the holiday[or]Perhaps he was finally getting around to taking down his Christmas lights when the infection struck[or]Perhaps a forty year old fruitcake was involved[or]Maybe there was an old carton of eggnog at the back of the fridge[in random order]. As he swoops in again, he strokes his stiff cock, firing a few shots of cum at you, intent on sharing some of his holiday cheer.";
 
 to say reindeerattack:
@@ -27,18 +27,18 @@ to say reindeerattack:
 	let T be a random number between 1 and 6;
 	if T is 1:
 		say "gropes you with a merry laugh as his candy-cane scented breath wafts past your nose!";
-	if T is 2:
+	else if T is 2:
 		say "dangles some mistletoe above your head and kisses you lustfully. His tongue dives into your surprised mouth and the taste of candy canes washes across your tastebuds!";
-	if T is 3:
+	else if T is 3:
 		say "grinds his hard cock against your hip, leaking precum as he struggles to hold you down!";
-	if T is 4:
+	else if T is 4:
 		say "tries to push you to the ground with a loud tinkling of bells!";
-	if T is 5:
+	else if T is 5:
 		say "banks sharply, getting behind you. He grinds firmly against your rear while his hoofed paws grope your chest. You can feel his precum leaking out as he tries to cum on you, but you shake him off. The scent of his eggnog flavored precum hangs in the air, arousing you further!";
 		increase Libido of Player by a random number from 2 to 5;
 		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by a random number between 0 and 1;
 		if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 1;
-	if T is 6:
+	else if T is 6:
 		say "spins around you quickly, swirling up a snowy wind. The temperature plummets further, making your teeth chatter as the cold seeps deep inside you. When he finally spins off dizzily, you brush off the layer of snow, but the cold has taken its toll on you!";
 
 to say Reindeer_wins:
@@ -46,7 +46,7 @@ to say Reindeer_wins:
 	if Player is female:
 		say "     He gives a merry laugh that causes his jingle bells to ring and lines up his cock behind you. With another spurt of pre, he starts to slide his slender cock into you. You moan in pleasure as the joyous male starts to rut you with the loud jingle-jangle of bells. His slender cock is easy to take but fills [if Cunt Count of Player > 1]one of your pussies[else]your pussy[end if] nice and deep. ";
 		if Cunt Depth of Player < 12:
-			say "Your puss[yfn] leak[sfv] juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle. But you only feel the heat of your strong buck atop you as he ruts with you. When he gives a few last shoves into you, you groan loudly and climax as his reindeer cock pushes past your cervix[if Player is male]. Your cocks[smn] throb[smv] beneath you and spill[smv] your semen across the ground[end if]. His thick seed sprays into you moments later, filling your womb with his holiday cheer. This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground but filled with warmth and happiness.";
+			say "Your puss[yfn] leak[sfv] juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle. But you only feel the heat of your strong buck atop you as he ruts with you. When he gives a few last shoves into you, you groan loudly and climax as his reindeer cock pushes past your cervix[if Player is male]. Your cock[smn] throb[smv] beneath you and spill[smv] your semen across the ground[end if]. His thick seed sprays into you moments later, filling your womb with his holiday cheer. This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground but filled with warmth and happiness.";
 		else:
 			say "Your puss[yfn] leak[sfv] juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle. But you only feel the heat of your strong buck atop you as he ruts with you. When he gives a few last shoves into you, you groan loudly as he sheathes his cock entirely in your depths and climaxes[if Player is male]. Your cock[smn] throb[smv] beneath you and spill[smv] your semen across the ground[end if]. His thick seed blasts into you moments later, spraying against your cervix and flowing up into your womb to fill you with his holiday cheer. This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground but filled with warmth and happiness.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Reindeer";
@@ -85,7 +85,7 @@ When Play begins:
 	add "Reindeer" to infections of CervineList;
 	add "Reindeer" to infections of FurryList;
 	add "Reindeer" to infections of HumorousList;
-	add "Reindeer" to infections of FemaleList;
+	add "Reindeer" to infections of MaleList;
 	add "Reindeer" to infections of BluntCockList;
 	add "Reindeer" to infections of SheathedCockList;
 	add "Reindeer" to infections of BipedalList;
@@ -133,8 +133,8 @@ When Play begins:
 	now libido entry is 30; [ Target libido the infection will rise towards. ]
 	now loot entry is "egg nog"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 33; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "reindeer milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "reindeer cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or]festive[at random]";
@@ -264,7 +264,7 @@ the scent of egg nog is "The eggnog smells fresh and strongly of good brandy, ma
 Usedesc of egg nog is "[nogging]";
 
 to say nogging:
-	say "[line break]     You drink down the tasty eggnog, feeling the warmth of the brandy-rich flowing into you. You are filled with a burst of the holiday spirit and a lustful longing for someone to share this feeling with. You feel a little better all around because of it even as the warmth changes from that of the alcohol to the warmth of your activated infection.";
+	say "     You drink down the tasty eggnog, feeling the warmth of the brandy-rich liquid flowing into you. You are filled with a burst of the holiday spirit and a lustful longing for someone to share this feeling with. You feel a little better all around because of it even as the warmth changes from that of the alcohol to the warmth of your activated infection.";
 	PlayerEat 3;
 	PlayerDrink 6;
 	increase HP of Player by ( Stamina of Player / 2 );
@@ -334,7 +334,7 @@ to say reindeerheat:
 			ItemLoss egg nog by 1;
 			increase Libido of Player by a random number from 3 to 8;
 			if Libido of Player > 100, now Libido of Player is 100;
-			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping puss[yfn]. Feeling the strength of your heat pulsing through you, you are so thirsty. You look around for something to satisfy your thirst for holiday cheer. Remembering the eggnog, you pull it out from your pack and take a drink.[nogging]";
+			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping puss[yfn]. Feeling the strength of your heat pulsing through you, you are so thirsty. You look around for something to satisfy your thirst for holiday cheer. Remembering the eggnog, you pull it out from your pack and take a drink.[line break][nogging]";
 		else if "egg nog" is listed in invent of the Location of Player:
 			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping puss[yfn]. Feeling the strength of your heat pulsing through you, you are so thirsty. You look around for something to satisfy your thirst for holiday cheer. Spotting the eggnog, you grab it and take a drink.";
 			let num be 0;
@@ -364,6 +364,7 @@ to say reindeerbreastheat:
 	else:
 		say "You moan lustfully and fondle your chest, teasing your nipples. Your heat is quite unbearable, with your sweet juices running down your legs and filling the air with the scent of your arousal. As you continue to play with yourself, your nipples start to leak milk, rich and scented like brandy eggnog. Delighted at this, you continue to milk yourself until this surge of lust passes.";
 		[copied entirely from the 'milk me' section]
+		now lastBreastMilking is turns;
 		ItemGain egg nog by ( ( Nipple Count of Player ) / 2 );
 		increase Libido of Player by a random number from 3 to 8;
 		increase Libido of Player by a random number from 3 to 8;

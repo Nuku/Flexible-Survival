@@ -153,6 +153,10 @@ to say Vanessadesc:
 	else if HP of Vanessa is 3:
 		say "     A sergeant in the paratrooping squad you saw come down in the city, this female soldier had run afoul of a centaur before meeting you. With your help, she's become even more equine than when you first met her. Her head is more centaur-like, her face recognizably hers, but altered to become more centaur-like with a flatter, broader nose and pointed ears. Her black hair, once cropped short, had grown out into a shoulder-length mane. Her equine tail is the same deep flack as her hair and is also impressively long and flowing. She's still wearing her military jacket, but cannot close it over her bloated, maturing pregnancy, leaving it and her dark-nippled breasts hanging out. At her waist, she's wearing only a pair of black panties. This leaves her shapely, half-transformed legs exposed. The upper half of them are sexy and feminine with strong definition from her training, but shortly after her knees, they turn into equine legs ending in black-fetlocked hooves. The most unusual change aside from the oversized pregnancy are the beginnings of her second pair of equine limbs, a tiny promise of the centaur she wishes to be.";
 	else if HP of Vanessa >= 4:
+		if HP of Vanessa is 4 or HP of Vanessa is 6:
+			project Figure of Vanessa_preg_clothed_icon;
+		else:
+			project Figure of Vanessa_clothed_icon;
 		say "     Once a sergeant in the paratrooping squad you saw come down in the city, this female soldier had run afoul of a centaur before meeting you. With your help, she's fully become a centaur mare herself. While her face is still recognizably hers, it has become altered to be more centaur-like with a flatter, broader nose and pointed ears. Her black hair, once cropped short, has grown out into a long, flowing horsehair that she's tied back into a ponytail. Her equine tail is the same deep flack as her hair and is also impressively long and flowing. She's still wearing her military jacket, but generally leaves it open, partially exposing her breasts and her dark nipples.";
 		say "     Below the waist, she's become a proper centaur with an ivory-white coat[if HP of Vanessa is 4 or HP of Vanessa is 6] and a rounded belly for her approaching foal[else if HP of Vanessa is 5]. Her belly's returned to a normal size now that she's had her foal[else if HP of Vanessa is 7]. Her belly's returned to a normal size now that she's had her most recent foal[end if]. At the fetlocks of her equine legs, her white color turns sharply to black like her tail, giving a lovely contrast. As you're intimately aware, she's got one other spot where her coat turns back - her loins. Having melded with her black panties there, they've placed a patch of coal-black hair and labial lips in the shape of a pair of panties worn across her equine rump. There's even a thin band of black wrapping around her thighs to complete the pattern so well that when her tail's down to hide her pussy, one could almost believe she's wearing a skimpy underwear or a bikini bottom.";
 
@@ -160,6 +164,10 @@ to say Vanessadesc:
 Section 2 - Conversation
 
 Instead of conversing the Vanessa:
+	if HP of Vanessa is 4 or HP of Vanessa is 6:
+		project Figure of Vanessa_preg_clothed_icon;
+	else if HP of Vanessa is 5 or HP of Vanessa is 7:
+		project Figure of Vanessa_clothed_icon;
 	if HP of Vanessa is 1:
 		say "     'Now that I've had a chance to settle in[if Colleen is bunkered] and caught up with Colleen[end if], there's something we need to talk about. It's been getting pretty clear to me that stud hit the mark and has left me with a little present,' she says, rubbing her rounded tummy. Given how it's not gone down by this point, you'd have to agree. 'Now, I should probably be upset about this, but that's how things are. But it does mean there's a foal on his way and that can't be easy for a human to handle. I've been thinking you should look into finding a means to transform me further into a sexy centaur. Just to help with the birth, you understand?' she adds quickly, though you also notice her hand rub across her groin. Clearly, she's excited by the thought of transforming further as well.";
 		now HP of Vanessa is 2;
@@ -293,6 +301,10 @@ to say sexwithVanessa:
 		else:
 			say "     You tell her that you've already given her all you've been able to find. 'Be sure to keep your eyes out for some more of it.'";
 	else:
+		if HP of Vanessa is 4 or HP of Vanessa is 6:
+			project Figure of Vanessa_preg_naked_icon;
+		else if HP of Vanessa is 5 or HP of Vanessa is 7:
+			project Figure of Vanessa_naked_icon;
 		say "     Approaching Vanessa, you run a hand across her side and make her an offer for sex. She smiles happily at this, her tail flicking up automatically. 'You helped me get this [one of]beautiful[or]sexy[or]hot[at random] body; it's only fair you get a chance to enjoy it, too. What did you have in mind?'";
 		say "[Vanessasexmenu]";
 
@@ -398,7 +410,7 @@ to say Vanessasex5:
 	say "     As you enjoy the centaur's milk, you caress her sides and flanks, enjoying the soft moans of pleasure she gives. When you swap to her other breast when the flow of the first tapers off, you get milk from it right away, her fingers having teased that breast to the point of leaking. '[one of]That's a good [if Player is female]girl[else]boy[end if][or]Mmm... I have plenty for you, my dear[or]Oh, this is turning me on soooo much[or]This has to be one of the best parts of being a breeding mare[at random],' she says, unable to hold back a nicker of excitement at the end.";
 	say "     And speaking of nickering in delight, when you finish her breast and are still thirsty for more, you move under the sexy mare's lower body and find her equine udder. She nickers and whinnies in even greater pleasure when you stroke the softly furred flesh and put your lips around one of its nipples, suckling for the warm milk inside. When you're rewarded with a taste of it, you find the flavor a little different from that of her human breasts, but equally enjoyable. And having her pussy within easy reach of there, you slide a playful hand around to finger her to a loud, nickering orgasm while you nurse from her udder like one of her centaur children. When you've had your fill and she's been left quite satisfied as well, you move out from under her, making a show of licking her pussy juices from your fingers.";
 	PlayerDrink 9;
-	if "Female Preferred" is listed in feats of Player and FemaleList is not banned:		[change target to Mare for infection]
+	if Player is FemalePreferred and FemaleList is not banned:		[change target to Mare for infection]
 		infect "Centaur Mare";
 	else:
 		infect "Centaur Stallion";

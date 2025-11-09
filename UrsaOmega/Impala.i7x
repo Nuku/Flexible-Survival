@@ -139,7 +139,7 @@ to say impaladesc:
 			say "and her eyes are filled with confusion as she tries to figure out which gender you are. 'What kind of creature are you?'";
 		say " the impala woman exclaims. She rubs a perky breast with one hoof-like hand while the other reaches down between her legs to play with her engorged sex a bit before charging you!";
 		now sex entry is "Male";
-		if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
+		if Player is FemalePreferred, now sex entry is "Female";
 		if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
 	if impalamode is 1:
 		setmongender 3; [creature is male]
@@ -152,7 +152,7 @@ to say impaladesc:
 			say "and his eyes are filled with confusion as he tries to figure out which gender you are. 'What kind of creature are you?'[run paragraph on]";
 		say " the impala man exclaims. He charges you!";
 		now sex entry is "Female";
-		if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
+		if Player is MalePreferred, now sex entry is "Male";
 		if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
 
 Section 2 - Creature Insertion
@@ -222,8 +222,8 @@ When Play begins:
 	now libido entry is 30; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "impala milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "impala cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]lithe[or]graceful[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]

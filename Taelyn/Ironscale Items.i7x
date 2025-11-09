@@ -7,7 +7,7 @@ Part 1 - Scalemail
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"scalemail"	"A helmet that zephyr has its security team use when dealing with emergencies."	3	scalemail
+"scalemail"	"A helmet that Zephyr has its security team use when dealing with emergencies."	3	scalemail
 
 scalemail is a grab object.
 scalemail is equipment.
@@ -18,7 +18,7 @@ The size of scalemail is 3.
 The AC of scalemail is 50.
 The effectiveness of scalemail is 60.
 The placement of scalemail is "body".
-The descmod of scalemail is "A jet black helmet with the zephyr logo on it rests atop your head.".
+The descmod of scalemail is "A jet black helmet with the Zephyr logo on it rests atop your head.".
 The slot of scalemail is "body".
 the scent of scalemail is "The riot gear smells of metal and plastic.".
 
@@ -50,7 +50,7 @@ name	desc	weight	object
 Leather Vambraces is a grab object.
 Leather Vambraces is equipment.
 It is not temporary.
-Plural of Leather Vambraces is false.
+Plural of Leather Vambraces is true.
 Taur-compatible of Leather Vambraces is true.
 The size of Leather Vambraces is 3.
 The AC of Leather Vambraces is 60.
@@ -74,7 +74,7 @@ Part 1 - Cloth Scrap
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"cloth scrap"	"A scrap of cloth that you picked up. Its ragged, but at least clean from cum and other stains... You might be able to find a use for it at some point."	0	cloth scrap
+"cloth scrap"	"A scrap of cloth that you picked up. It's ragged, but at least clean from cum and other stains... You might be able to find a use for it at some point."	0	cloth scrap
 
 cloth scrap is a grab object. It is not temporary.
 

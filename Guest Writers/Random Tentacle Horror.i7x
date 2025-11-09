@@ -33,7 +33,7 @@ to say horror victory:
 		now cuntsmall is 0;
 	let mpregpath be 0;
 	if Player is not female and Player is mpreg_ok, now mpregpath is 1;
-	if ( "Male Preferred" is listed in feats of Player and mpregpath is 0) or "Sterile" is listed in feats of Player:
+	if (Player is MalePreferred and mpregpath is 0) or "Sterile" is listed in feats of Player:
 		say "The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
 	else if gestation of child > 0:
 		if tentsubmit is 1:
@@ -364,8 +364,8 @@ When Play begins:
 	now libido entry is 75; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "dirty water";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "tentacle horror milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "tentacle horror cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]hyper-sexualized[or]phallic[or]twisted[or]deformed[or]cock-riddled[at random]";

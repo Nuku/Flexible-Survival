@@ -1681,7 +1681,7 @@ Check Conversing:
 carry out conversing:
 	sort conversation of the noun in random order;
 	repeat with comment running through conversation of the noun:
-		say "[Noun] says, '[Comment]'";
+		say "     [Noun] says, '[Comment]'[line break]";
 		break;
 
 

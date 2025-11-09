@@ -11,7 +11,7 @@ Section 1 - Zephyr Black Market Medicine Case [Modification Items]
 
 The medicine case is a backdrop. It is in Zephyr Storeroom. Description of the medicine case is "[medicine case list]".
 
-Instead of smelling the medicine case:
+Instead of sniffing the medicine case:
 	say "The medicine case has little in the way of a scent of its own.";
 
 to say medicine case list:
@@ -54,7 +54,7 @@ Section 2 - Zephyr Black Market Outfitters Rack [Equipment]
 
 The outfitters rack is a backdrop. It is in Zephyr Storeroom. Description of the outfitters rack is "[outfitters rack list]".
 
-Instead of smelling the outfitters rack:
+Instead of sniffing the outfitters rack:
 	say "The outfitters rack has little in the way of a scent of its own.";
 
 to say outfitters rack list:
@@ -99,7 +99,7 @@ Section 1 - TPK male clothing section [Clothing That Increases Masculinity]
 TPK male clothing section is a backdrop. It is in Pretty Kitty. Description of TPK male clothing section is "[TPK male clothing section desc]".
 
 to say TPK male clothing section desc:
-	say "     The male clothing section holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed as in terms of freecreds. You can [link]browse[as]browse TPK male clothing[end link] in the male clothing section if you want.";
+	say "     The male clothing section holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed in terms of freecreds. You can [link]browse[as]browse TPK male clothing[end link] in the male clothing section if you want.";
 
 the scent of TPK male clothing section is "The male clothing section smells the same as the rest of the store.".
 
@@ -380,7 +380,7 @@ to say TPK_Male_GreatcoatMenu: [Male clothing category sub-submenu (level 3 unde
 	clear the screen and hyperlink list;
 
 to say BlackGreatcoatTalk: [item selection (level 4)]
-	say "     A full-body black coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight. Judging by the coats appearance, it's [']masculine['] and pretty [']smart['] looking. It has a price sign that reads '30 freecred'.";
+	say "     A full-body black coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight. Judging by the coat's appearance, it's [']masculine['] and pretty [']smart['] looking. It has a price sign that reads '30 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -401,7 +401,7 @@ to say BlackGreatcoatTalk: [item selection (level 4)]
 		say "[TPK_Male_GreatcoatMenu]"; [return to level 3 sub-submenu]
 
 to say GrayGreatcoatTalk: [item selection (level 4)]
-	say "     A full-body gray coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight. Judging by the coats appearance, it's [']masculine['] and pretty [']smart['] looking. It has a price sign that reads '30 freecred'.";
+	say "     A full-body gray coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight. Judging by the coat's appearance, it's [']masculine['] and pretty [']smart['] looking. It has a price sign that reads '30 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -507,7 +507,7 @@ to say TPK_Male_CamoPantsMenu: [Male clothing category sub-submenu (level 3 unde
 	clear the screen and hyperlink list;
 
 to say GreenCamoPantsTalk: [item selection (level 4)]
-	say "     A pair of camo pants in various shades of green. Judging by the pants appearance, it's [']masculine['] and pretty [']cool['] looking. It has a price sign that reads '20 freecred'.";
+	say "     A pair of camo pants in various shades of green. Judging by the pants['] appearance, it's [']masculine['] and pretty [']cool['] looking. It has a price sign that reads '20 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -884,7 +884,7 @@ Section 2 - TPK female clothing section [Clothing That Increases Femininity]
 The TPK female clothing section is a backdrop. It is in Pretty Kitty. Description of the TPK female clothing section is "[TPK female clothing section desc]".
 
 to say TPK female clothing section desc:
-	say "     The female clothing section holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed as in terms of freecreds. You can [link]browse[as]browse TPK female clothing[end link] in the female clothing section if you want.";
+	say "     The female clothing section holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed in terms of freecreds. You can [link]browse[as]browse TPK female clothing[end link] in the female clothing section if you want.";
 
 the scent of TPK female clothing section is "The female clothing section smells the same as the rest of the store.".
 
@@ -897,8 +897,6 @@ check BrowseTPKFemaleClothing:
 
 carry out BrowseTPKFemaleClothing:
 	say "[TPC female clothing selector]";
-
-the scent of TPK female clothing section is "The female clothing section smells the same as the rest of the store.".
 
 Part 1 - Base
 
@@ -1061,7 +1059,7 @@ to say browse_TPK_Female_BikeHelmetsMenu: [Female clothing category sub-submenu 
 	clear the screen and hyperlink list;
 
 to say PrincessBikeHelmetTalk: [item selection (level 4)]
-	say "     A plastic foam bicycle helmet, complete with a pink shell covered with rainbows and unicorns, as well as a strap to fasten it to the wearer's head. Judging by the helmets appearance, it's [']feminine['] and pretty [']cute[']. It has a price sign that reads '10 freecred'.";
+	say "     A plastic foam bicycle helmet, complete with a pink shell covered with rainbows and unicorns, as well as a strap to fasten it to the wearer's head. Judging by the helmet's appearance, it's [']feminine['] and pretty [']cute[']. It has a price sign that reads '10 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -1145,7 +1143,7 @@ to say browse_TPK_Female_LargeBowsMenu: [Female clothing category sub-submenu (l
 	clear the screen and hyperlink list;
 
 to say LargeWhiteBowTalk: [item selection (level 4)]
-	say "     A large white bow with a glossy finish. It's appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bows appearance, it's [']feminine['] and pretty [']cute[']. It has a price sign that reads '10 freecred'.";
+	say "     A large white bow with a glossy finish. Its appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bow's appearance, it's [']feminine['] and pretty [']cute[']. It has a price sign that reads '10 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -1166,7 +1164,7 @@ to say LargeWhiteBowTalk: [item selection (level 4)]
 		say "[browse_TPK_Female_LargeBowsMenu]"; [return to level 3 sub-submenu]
 
 to say LargeBlackBowTalk: [item selection (level 4)]
-	say "     A large black bow with a glossy finish. It's appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bows appearance, it's [']feminine['] and pretty [']cute[']. It has a price sign that reads '10 freecred'.";
+	say "     A large black bow with a glossy finish. Its appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bow's appearance, it's [']feminine['] and pretty [']cute[']. It has a price sign that reads '10 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -1187,7 +1185,7 @@ to say LargeBlackBowTalk: [item selection (level 4)]
 		say "[browse_TPK_Female_LargeBowsMenu]"; [return to level 3 sub-submenu]
 
 to say LargePinkBowTalk: [item selection (level 4)]
-	say "     A large pink bow with a glossy finish. It's appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bows appearance, it's [']feminine['] and pretty [']cute[']. It has a price sign that reads '10 freecred'.";
+	say "     A large pink bow with a glossy finish. Its appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bow's appearance, it's [']feminine['] and pretty [']cute[']. It has a price sign that reads '10 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -1208,7 +1206,7 @@ to say LargePinkBowTalk: [item selection (level 4)]
 		say "[browse_TPK_Female_LargeBowsMenu]"; [return to level 3 sub-submenu]
 
 to say LargePolkaDotBowTalk: [item selection (level 4)]
-	say "     A large polka dot bow with a glossy finish. It's appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bows appearance, it's [']feminine['] and pretty [']cute[']. It has a price sign that reads '10 freecred'.";
+	say "     A large polka dot bow with a glossy finish. Its appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bow's appearance, it's [']feminine['] and pretty [']cute[']. It has a price sign that reads '10 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -1271,7 +1269,7 @@ to say browse_TPK_Female_GlassesMenu: [Female clothing category sub-submenu (lev
 	clear the screen and hyperlink list;
 
 to say Rose-tintedGlassesTalk: [item selection (level 4)]
-	say "     A pair of rose-tinted glasses with frilly edges. There even are some glass gemstones with reflective backing glued to them. Judging by the glasses appearance, it's [']feminine['] and pretty [']stylish[']. It has a price sign that reads '10 freecred'.";
+	say "     A pair of rose-tinted glasses with frilly edges. There even are some glass gemstones with reflective backing glued to them. Judging by the glasses['] appearance, it's [']feminine['] and pretty [']stylish[']. It has a price sign that reads '10 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -1391,7 +1389,7 @@ to say browse_TPK_Female_JoggingPantsMenu: [Female clothing category sub-submenu
 	clear the screen and hyperlink list;
 
 to say PinkJoggingPantsTalk: [item selection (level 4)]
-	say "     A pair of pink jogging pants made from fairly soft and stretchy fabric, it also has swirling hearts across the material. Judging by the pants appearance, it's [']feminine['] and pretty [']sporty['] looking. It has a price sign that reads '20 freecred'.";
+	say "     A pair of pink jogging pants made from fairly soft and stretchy fabric, it also has swirling hearts across the material. Judging by the pants['] appearance, it's [']feminine['] and pretty [']sporty['] looking. It has a price sign that reads '20 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -1454,7 +1452,7 @@ to say browse_TPK_Female_ShortsMenu: [Female clothing category sub-submenu (leve
 	clear the screen and hyperlink list;
 
 to say FloweredBermudaShortsTalk: [item selection (level 4)]
-	say "     A pair of wide shorts covered in patterns of leaves and bright flowers. They look fitting to be worn by a tourist or vacationer. Judging by the shorts appearance, it's [']feminine['] and pretty [']basic['] looking. It has a price sign that reads '20 freecred'.";
+	say "     A pair of wide shorts covered in patterns of leaves and bright flowers. They look fitting to be worn by a tourist or vacationer. Judging by the shorts['] appearance, it's [']feminine['] and pretty [']basic['] looking. It has a price sign that reads '20 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -1573,7 +1571,7 @@ to say browse_TPK_Female_PencilSkirtsMenu: [Female clothing category sub-submenu
 	clear the screen and hyperlink list;
 
 to say Light-bluePencilSkirtTalk: [item selection (level 5)]
-	say "     A light-blue pencil skirt, long enough to cover an average person's whole thighs, down to the knees. Judging by the skirts appearance, it's [']feminine['] and pretty [']stylish['] looking. It has a price sign that reads '20 freecred'.";
+	say "     A light-blue pencil skirt, long enough to cover an average person's whole thighs, down to the knees. Judging by the skirt's appearance, it's [']feminine['] and pretty [']stylish['] looking. It has a price sign that reads '20 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -1643,7 +1641,7 @@ to say browse_TPK_Female_MiniSkirtsMenu: [Female clothing category sub-submenu (
 	clear the screen and hyperlink list;
 
 to say BlackMiniSkirtTalk: [item selection (level 5)]
-	say "     A simple black miniskirt, barely long enough to cover someone's thighs even halfway. Judging by the skirts appearance, it's [']feminine['] and pretty [']sexy['] and [']slutty['] looking. It has a price sign that reads '20 freecred'.";
+	say "     A simple black miniskirt, barely long enough to cover someone's thighs even halfway. Judging by the skirt's appearance, it's [']feminine['] and pretty [']sexy['] and [']slutty['] looking. It has a price sign that reads '20 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -1664,7 +1662,7 @@ to say BlackMiniSkirtTalk: [item selection (level 5)]
 		say "[browse_TPK_Female_SkirtsMenu]"; [return to level 3 sub-submenu]
 
 to say PinkMiniSkirtTalk: [item selection (level 5)]
-	say "     A simple pink miniskirt, barely long enough to cover someone's thighs even halfway. Judging by the skirts appearance, it's [']feminine['] and pretty [']basic['] and [']slutty['] looking. It has a price sign that reads '20 freecred'.";
+	say "     A simple pink miniskirt, barely long enough to cover someone's thighs even halfway. Judging by the skirt's appearance, it's [']feminine['] and pretty [']basic['] and [']slutty['] looking. It has a price sign that reads '20 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -1727,7 +1725,7 @@ to say browse_TPK_Female_GypsySkirtsMenu: [Female clothing category sub-submenu 
 	clear the screen and hyperlink list;
 
 to say GypsyFloralSkirtTalk: [item selection (level 5)]
-	say "     A light full length skirt, covered with a floral print that depicts cherry blossoms. Judging by the skirts appearance, it's [']feminine['] and pretty [']sexy['] looking. It has a price sign that reads '20 freecred'.";
+	say "     A light full length skirt, covered with a floral print that depicts cherry blossoms. Judging by the skirt's appearance, it's [']feminine['] and pretty [']sexy['] looking. It has a price sign that reads '20 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -1840,7 +1838,7 @@ to say TPK_Female_BrasMenu: [Female clothing category sub-submenu (level 3 under
 	clear the screen and hyperlink list;
 
 to say SimpleBlackBraTalk: [item selection (level 4)]
-	say "     A simple black bra made of a firm and glossy material. As far as bras go this one is fairly comfortable to move around in. Judging by the bras appearance, it's [']feminine['] and pretty [']basic['] looking. It has a price sign that reads '10 freecred'.";
+	say "     A simple black bra made of a firm and glossy material. As far as bras go this one is fairly comfortable to move around in. Judging by the bra's appearance, it's [']feminine['] and pretty [']basic['] looking. It has a price sign that reads '10 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -2106,9 +2104,7 @@ Section 1 - RD costume clothing section
 The RD costume clothing section is a backdrop. It is in Restrained Desire. Description of the RD costume clothing section is "[RD costume clothing section desc]".
 
 to say RD costume clothing section desc:
-	say "     The costume clothing section holds many pieces of clothing and individual outfits, many of these are part of roleplay outfits. Price tags on each of the articles of clothing have been darkened with black nail polish, with the new price listed as in terms of freecreds. You can [link]browse[as]browse RD costume clothing[end link] in the costume clothing section if you want.";
-
-the scent of TPK male clothing section is "The male clothing section smells the same as the rest of the store.".
+	say "     The costume clothing section holds many pieces of clothing and individual outfits, many of these are part of roleplay outfits. Price tags on each of the articles of clothing have been darkened with black nail polish, with the new price listed in terms of freecreds. You can [link]browse[as]browse RD costume clothing[end link] in the costume clothing section if you want.";
 
 BrowseRDCostumeClothing is an action applying to nothing.
 understand "browse RD costume clothing" as BrowseRDCostumeClothing.
@@ -2297,7 +2293,7 @@ to say RD_Biker_HelmetsMenu: [Costume clothing category sub-submenu (level 3 und
 	clear the screen and hyperlink list;
 
 to say BlackMotorcycleHelmetTalk: [item selection (level 4)]
-	say "     A black motorcycle helmet with a clear visor. Heavy, but protective. Judging by the helmets appearance, it's [']unisex['] and pretty [']cool[']. It has a price sign that reads '20 freecred'.";
+	say "     A black motorcycle helmet with a clear visor. Heavy, but protective. Judging by the helmet's appearance, it's [']unisex['] and pretty [']cool[']. It has a price sign that reads '20 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -2318,7 +2314,7 @@ to say BlackMotorcycleHelmetTalk: [item selection (level 4)]
 		say "[RD_Biker_HelmetsMenu]"; [return to level 3 sub-submenu]
 
 to say FlamingMotorcycleHelmetTalk: [item selection (level 4)]
-	say "     A black motorcycle helmet with a clear visor and painted flames rising along the sides. Heavy, but protective. Judging by the helmets appearance, it's [']unisex['] and pretty [']rebellious[']. It has a price sign that reads '20 freecred'.";
+	say "     A black motorcycle helmet with a clear visor and painted flames rising along the sides. Heavy, but protective. Judging by the helmet's appearance, it's [']unisex['] and pretty [']rebellious[']. It has a price sign that reads '20 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -2339,7 +2335,7 @@ to say FlamingMotorcycleHelmetTalk: [item selection (level 4)]
 		say "[RD_Biker_HelmetsMenu]"; [return to level 3 sub-submenu]
 
 to say SuccubusMotorcycleHelmetTalk: [item selection (level 4)]
-	say "     A black motorcycle helmet with a clear visor and a picture of a sexy succubus with her legs spread over your face. Heavy, but protective. Judging by the helmets appearance, it's [']feminine['] and pretty [']sexy[']. It has a price sign that reads '30 freecred'.";
+	say "     A black motorcycle helmet with a clear visor and a picture of a sexy succubus with her legs spread over your face. Heavy, but protective. Judging by the helmet's appearance, it's [']feminine['] and pretty [']sexy[']. It has a price sign that reads '30 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
@@ -2360,7 +2356,7 @@ to say SuccubusMotorcycleHelmetTalk: [item selection (level 4)]
 		say "[RD_Biker_HelmetsMenu]"; [return to level 3 sub-submenu]
 
 to say IncubusMotorcycleHelmetTalk: [item selection (level 4)]
-	say "     A black motorcycle helmet with a clear visor and a picture of a sexy incubus jerking off over your face. Heavy, but protective. Judging by the helmets appearance, it's [']masculine['] and pretty [']sexy[']. It has a price sign that reads '30 freecred'.";
+	say "     A black motorcycle helmet with a clear visor and a picture of a sexy incubus jerking off over your face. Heavy, but protective. Judging by the helmet's appearance, it's [']masculine['] and pretty [']sexy[']. It has a price sign that reads '30 freecred'.";
 	LineBreak;
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";

@@ -332,6 +332,7 @@ to say VentFoxMenu:[Menu for interacting with Vent.]
 to say VentFoxSexMenu:[Pretty self explanatory.]
 	if Player is male:
 		say "     What kind of sex do you want to have?";
+		setmonster "Latex Fox";
 		choose row MonsterID from Table of Random Critters;
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;

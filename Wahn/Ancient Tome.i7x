@@ -61,7 +61,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and HP of Eric
 	if debugactive is 1:
 		say "     DEBUG: Eric finds a book - TomeFound: [TomeFound], lastTomeInteraction: [lastTomeInteraction], current turn: [turns][line break]";
 	say "     As you enter the library, you find Eric sitting cross-legged on one of the sofas close to the entrance. A dusty box sits on the low sofa table he has dragged close and is apparently in the progress of unpacking. Small stacks of old, sometimes damaged-looking books are spread out next to him as he takes stock. Looking up from the box, Eric smiles at you and calls out, 'Hey there - look what I found back in one of the storerooms! I got bored just sitting around and since it is so dangerous to go outside, I looked around a bit in here...' Leaning forward, the college athlete pulls another item out of his mystery box - an old crucifix made from blackened wood this time.";
-	say "     'Oh, another one. Guess now we know where all the crosses from the old abbey went, hm?' he says, putting the piece of wood on a pile of similar items next to him.' Curiosity makes you step up closer and check the crosses out - are they supposed to look... singed? Then Eric suddenly pulls a thick book out of the box, bound in black leather. 'Hey, this looks interesting. And old... I wonder what it is about.' The book - well, more like a tome actually - is clearly quite old and looks heavy enough to break someone's foot if dropped. It bears a triangle symbol with a slit-pupiled eye on the front, branded into the leather.";
+	say "     'Oh, another one. Guess now we know where all the crosses from the old abbey went, hm?' he says, putting the piece of wood on a pile of similar items next to him. Curiosity makes you step up closer and check the crosses out - are they supposed to look... singed? Then Eric suddenly pulls a thick book out of the box, bound in black leather. 'Hey, this looks interesting. And old... I wonder what it is about.' The book - well, more like a tome actually - is clearly quite old and looks heavy enough to break someone's foot if dropped. It bears a triangle symbol with a slit-pupiled eye on the front, branded into the leather.";
 	say "     [bold type]This find somehow seems... ominous to you. Maybe you should let Eric give it to you...[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yup. Better safe than sorry.";
@@ -84,7 +84,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and HP of Eric
 after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 99 and TomeFound is 1 and lastTomeInteraction - turns > 10 and a random chance of 1 in 2 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Eric reads the book - TomeFound: [TomeFound], lastTomeInteraction: [lastTomeInteraction], current turn: [turns][line break]";
-	say "     Walking down the multiple flights of stairs to the bunker under the library, you step through the doorway into the underground chamber. As let your gaze sweep over the room, you spot Eric, lying stretched out on his bed and reading - but not just any book but that old tome he found not long ago. Elbows braced on the mattress, his head is bent over the book and he seems to be studying with an intent gaze. Curious, you wander over to the college student and glance over his shoulder. The page he is looking at is filled with strange curving squiggles, following no script you can really recognize. Clearing your throat, you manage to draw Eric's attention away from the book after a few seconds and he looks up at you with a curious expression.";
+	say "     Walking down the multiple flights of stairs to the bunker under the library, you step through the doorway into the underground chamber. As you let your gaze sweep over the room, you spot Eric, lying stretched out on his bed and reading - but not just any book but that old tome he found not long ago. Elbows braced on the mattress, his head is bent over the book and he seems to be studying with an intent gaze. Curious, you wander over to the college student and glance over his shoulder. The page he is looking at is filled with strange curving squiggles, following no script you can really recognize. Clearing your throat, you manage to draw Eric's attention away from the book after a few seconds and he looks up at you with a curious expression.";
 	say "     Asking if he can understand what the book says, your red-headed friend replies, 'Not really, no - but sometimes I kinda feel like I do. Certainly looks very interesting. You should see some of the pictures in here!' With that, he turns a few pages back, revealing more of the unknown script. 'Strange, I could have sworn there was an image there. Oh well, I'll put in a bookmark if I find it again and you can have a look next time,' Eric says in a distracted tone of voice, then turns the page back to where he was before.";
 	say "     [bold type]Something doesn't seem quite right here. Do you take the book from Eric?[roman type][line break]";
 	LineBreak;
@@ -108,7 +108,7 @@ after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric
 after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and TomeFound is 2 and lastTomeInteraction - turns > 10 and a random chance of 1 in 2 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Eric gets tentacled - TomeFound: [TomeFound], lastTomeInteraction: [lastTomeInteraction], current turn: [turns][line break]";
-	say "     Walking down the multiple flights of stairs to the bunker under the library, you step through the doorway into the underground chamber. As let your gaze sweep over the room, you spot Eric, lying in his bed under a thin blanket. He is sleeping, yet from the looks of it, it seems a bit fitful as he moves around, his head lolling back and forth slowly as he pants visibly.";
+	say "     Walking down the multiple flights of stairs to the bunker under the library, you step through the doorway into the underground chamber. As you let your gaze sweep over the room, you spot Eric, lying in his bed under a thin blanket. He is sleeping, yet from the looks of it, it seems a bit fitful as he moves around, his head lolling back and forth slowly as he pants visibly.";
 	say "     [bold type]Maybe you should check on him...[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Walk over and wake him if he is having a nightmare or something.";
@@ -186,7 +186,7 @@ name	desc	weight	object
 "ancient tome"	"A large book, bound in black leather. There is no title on its cover, only a triangle-symbol with a slit-pupiled eye branded into the leather."	1	ancient tome
 
 Ancient Tome is a grab object. Ancient Tome is not temporary.
-Ancient Tome has a usedesc "[TomeUse]".
+Ancient Tome has a Usedesc "[TomeUse]".
 
 to say TomeUse:
 	LineBreak;
@@ -200,7 +200,7 @@ instead of trading the ancient tome when the current action involves the Eric:
 	else if TomeFound is 4 or TomeFound is 20: [player took the book after watching Eric be tentacle-fucked or almost tentacle fucked]
 		say "     Just handing the book back to Eric after what you observed might not be such a good idea. You really should talk to him about it first.";
 	else if TomeFound is 21 or TomeFound is 23: [Eric was told about the creature the book summoned]
-		say "     Eric goes deathly pale as you hold up the book. His left hand rises to reach out and touch it seemingly on its own accord, only to be snatched back by the trembling teenager. 'I - I...' he stutters in a terrified tone, then whirls around and runs to the other side of the small-ish bunker room. From there he calls out, 'Please keep it away from me! I'm afraid what it - or I - might to...'";
+		say "     Eric goes deathly pale as you hold up the book. His left hand rises to reach out and touch it seemingly on its own accord, only to be snatched back by the trembling teenager. 'I - I...' he stutters in a terrified tone, then whirls around and runs to the other side of the small-ish bunker room. From there he calls out, 'Please keep it away from me! I'm afraid what it - or I - might do...'";
 		now TomeFound is 101; [Eric refuses any further contact with the book]
 	else if TomeFound is 22: [player told Eric he doesn't have the book]
 		say "     Pulling your backpack off, you dig around in it and find the thick tome. As you pull it out, Eric's eyes seem to have an inner glow for a heartbeat or two and he steps up close to you, holding out his hands with a hungry expression. Snatching the book from your grasp, he pulls it tightly to his chest and thanks you, then walks off with a thoughtful expression on his face.";

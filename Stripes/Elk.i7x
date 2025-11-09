@@ -159,7 +159,7 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Elk:
 	setmongender 3; [creature is male]
 	choose row MonsterID from Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
@@ -224,8 +224,8 @@ When Play begins:
 	now libido entry is 30; [ Target libido the infection will rise towards. ]
 	now loot entry is "elk antler"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 25; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "elk milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "elk cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]muscled[or]powerful[or]buff[at random]";
@@ -363,7 +363,7 @@ to say elkantleruse:
 	say "     Looking over the antler, you feel a strange compulsion that you don't resist[if Player is elkfaced and Player is male]. Placing the piece of horn against one of your own antlers, there is a strange, crunchy sound as they fuse together. This is soon followed by the tingle of the nanites spreading through you[else]. Placing the piece of horn against the side of your head, there is a strange, crunching sound as they fuse together. You can feel the bony chunk sinking into you even as the tingles of nanites begin[end if].";
 	setmonster "Elk";
 	choose row MonsterID from the Table of Random Critters;
-	if "Male Preferred" is listed in feats of Player:
+	if Player is MalePreferred:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";

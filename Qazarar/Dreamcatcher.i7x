@@ -6,7 +6,7 @@ Section 1 - Item Description
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"dreamcatcher"	"A quaint dreamcatcher"	1	dreamcatcher
+"dreamcatcher"	"A quaint dreamcatcher."	1	dreamcatcher
 
 dreamcatcher is a grab object. It is not temporary.
 
@@ -46,9 +46,9 @@ Sarea of Chasing Dreams is "Park".
 
 to say ResolveEvent Chasing Dreams:
 	project the figure of Diego_face_icon;
-	say "     While in the relative wilds of the park, you catch a sight of a particular coyote out of the corner of your eye. Curious, you go to follow and see what [SubjectPro of Diego] is planning this time. You keep a safe distance, hoping that this isn't merely an elaborate plan for yet another trick played on you from the coyote. Intentionally or not, [SubjectPro of Diego] seems to be leading you on a merry chase for a time, until finally when you round a tree, [SubjectPro of Diego] seems to have vanished. The only remaining sign that the coyote you were following might have been here is a simple dreamcatcher laying on the ground, maybe dropped by mistake, maybe left for you to find. Carefully, you pick it up, watching for any apparent tricks, but nothing seems obviously suspicious to you, and you simply pocket the dreamcatcher. Perhaps a trick will reveal itself in the future, but at the moment it seems safe enough.";
+	say "     While in the relative wilds of the park, you catch sight of a particular coyote out of the corner of your eye. Curious, you go to follow and see what [SubjectPro of Diego] is planning this time. You keep a safe distance, hoping that this isn't merely an elaborate plan for yet another trick played on you from the coyote. Intentionally or not, [SubjectPro of Diego] seems to be leading you on a merry chase for a time, until finally when you round a tree, [SubjectPro of Diego] seems to have vanished. The only remaining sign that the coyote you were following might have been here is a simple dreamcatcher laying on the ground, maybe dropped by mistake, maybe left for you to find. Carefully, you pick it up, watching for any apparent tricks, but nothing seems obviously suspicious to you, and you simply pocket the dreamcatcher. Perhaps a trick will reveal itself in the future, but at the moment it seems safe enough.";
 	ItemGain dreamcatcher by 1;
-	now Chasing Dreams is inactive;
+	now Chasing Dreams is resolved;
 	now Good Dreams is active;
 
 Table of GameEventIDs (continued)
@@ -64,7 +64,7 @@ to say DreamEvent Good Dreams:
 
 to say perchance to dream: [checks if you can sleep]
 	if caffeinehigh of Player > 0:
-		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest. Your body just won't settle down and any time to try to relax, you find yourself only thinking of going out and looking for more soda to drink.";
+		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest. Your body just won't settle down and any time you try to relax, you find yourself only thinking of going out and looking for more soda to drink.";
 		stop the action;
 	if location of Player is PALOMINO Dance Club or location of Player is Private Booths:
 		say "Why are you even trying to sleep here? Everyone's partying like it's the end of the world.";
@@ -73,7 +73,7 @@ to say perchance to dream: [checks if you can sleep]
 		say "You pull out your cot and lay it out before resting for a while.";
 	else if cot is present:
 		say "You rest on the cot.";
-	else if the player is in the bunker:
+	else if Player is in Bunker or Player is in Police Lockerroom:
 		say "You rest on one of the cots available.";
 	else if the player is in Slave Cell 1 or player is in Slave Cell 2:
 		say "You rest on the bed in the back of the cell.";
@@ -97,7 +97,7 @@ to say dream a little dream: [calls an available dream event]
 			follow the turnpass rule;
 			follow the turnpass rule;
 			follow the player injury rule;
-			say "You are [descr]([HP of Player]/[MaxHP of Player]).";
+			say "You are [descr] ([HP of Player]/[MaxHP of Player]).";
 	else:
 		say "     You toss and turn, but it seems the dreamcatcher is unable to help you rest.";
 
