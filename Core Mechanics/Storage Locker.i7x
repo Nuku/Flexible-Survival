@@ -53,9 +53,9 @@ to displayplinv:
 	if the number of owned grab objects is 0:
 		say "There is nothing currently in your inventory.";
 	else:
+		say "Your backpack contains:[line break]";
 		say "Type [bold type]stash <name>[roman type] to [bold type][bracket]S[close bracket][roman type]tash an item or [bold type]stashall <name>[roman type] to Stash [bold type][bracket]A[close bracket][roman type]ll of an item.";
 		LineBreak;
-		say "[bold type]Player inventory contents:[roman type][line break]";
 		let L be a list of grab objects;
 		repeat with x running through all owned grab objects:
 			add x to L, if absent;
@@ -78,9 +78,9 @@ to displaystorage:
 	if the number of stored grab objects is 0:
 		say "There is nothing currently in the storage locker.";
 	else:
+		say "The storage locker contains:[line break]";
 		say "Type [bold type]retrieve <name>[roman type] to [bold type][bracket]R[close bracket][roman type]etrieve an item or [bold type]retrieveall <name>[roman type] to Retrieve [bold type][bracket]A[close bracket][roman type]ll of an item.";
 		LineBreak;
-		say "[bold type]Storage locker contents:[roman type][line break]";
 		let L be a list of grab objects;
 		repeat with x running through all stored grab objects:
 			add x to L, if absent;
@@ -99,26 +99,24 @@ to displaystorage:
 				say "  ||  ";
 		LineBreak;
 
-storageindex is a number that varies.
-
 to say storagelink (T - text) with (L - list of list of text):
 	repeat with linktext running through L:
 		let link be the substituted form of "[entry 2 of linktext] [T]";
-		if storageindex < 1 or storageindex > number of entries in hyperlink list:
+		if hyperindex < 1 or hyperindex > number of entries in hyperlink list:
 			add link to hyperlink list;
-			now storageindex is number of entries in hyperlink list;
+			now hyperindex is number of entries in hyperlink list;
 		else:
-			if storageindex < number of entries in hyperlink list and entry storageindex + 1 of hyperlink list is link: [likely the list will get built in the same order, so long runs of these should be sequential]
-				increase storageindex by 1;
+			if hyperindex < number of entries in hyperlink list and entry hyperindex + 1 of hyperlink list is link: [likely the list will get built in the same order, so long runs of these should be sequential]
+				increase hyperindex by 1;
 			else if link is listed in hyperlink list: [otherwise, find it in the list if it exists]
 				repeat with x running from 1 to number of entries in hyperlink list:
 					if entry x of hyperlink list is link:
-						now storageindex is x;
+						now hyperindex is x;
 						break;
 			else: [or just add it if it doesn't]
 				add link to hyperlink list;
-				now storageindex is number of entries in hyperlink list;
-		say "[set link storageindex][bracket][entry 1 of linktext][close bracket][terminate link] "; [associate our text in the UI with the command in the hyperlink list]
+				now hyperindex is number of entries in hyperlink list;
+		say "[set link hyperindex][bracket][entry 1 of linktext][close bracket][terminate link] "; [associate our text in the UI with the command in the hyperlink list]
 
 Section 3 - Commands
 

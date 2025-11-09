@@ -59,16 +59,16 @@ to say ResolveEvent Sugar Shack:
 		if "Junk Food Junky" is listed in feats of Player, SanLoss 10;
 		if humanity of Player < 10:
 			say "     As you bask in the afterglow of your orgasm, your attention is drawn back to the cotton candy machine, still humming away happily as it continues spinning that delicious candy fluff. Still craving yet more sugary treats, you go back to the machine for more cotton candy. As you're reaching in, swirling your arm around, the sugar glider comes over and starts lifting you into the machine. Rather than fight her, you giggle happily and let her boost you in. Tumbling around in the swirling vortex of sweet colors, you feel more and more cotton candy clinging to you, sinking into your body. When the machine's finally shut off and your dizzy self is helped out of the cotton candy machine, your mind has been spun and fluffed until it is filled with nothing but thoughts of sweets and sex, or sweet, sweet sex. Giggling happily, you collapse into the arms of the sugar glider, still quite dizzy, and give her a sugary kiss, eager for more fun.";
+			wait for any key;
 			now humanity of Player is 0;
 			now battleground is "void";
-			wait for any key;
 			end the story saying "Having succumbed to the sweet, sweet desire, there is nothing left in your head but sugary fluff.";
 		else:
 			say "     Spent, you collapse atop your lover as the last of your changes ripple down your legs, encouraged by the sticky nectars coating your thighs. The sugar glider hugs you tightly in a loving embrace that spans most of your body thanks to the soft membrane between her arms and legs. She nuzzles gently against your [if Player is male]face and licks your cheek softly[else]tail[end if] with a sigh of contentment as your transformation comes to an end. As you bask in the afterglow of your sweet, sugary sex your attention is drawn back to the cotton candy machine, still humming away happily as it continues spinning that delicious candy fluff. Even as the sugar induced fog starts to recede in the wake of your climax, your mouth waters at the thought of that sweet, sweet treat. Will you give in to the urge to go back for more?";
 			if Player consents:
 				say "     Listening to your sweet tooth, you go back to the machine for more cotton candy. As you're reaching in, swirling your arm around, the sugar glider comes over and starts lifting you into the machine. Rather than fight her, you giggle happily and let her boost you in. Tumbling around in the swirling vortex of sweet colors, you feel more and more cotton candy clinging to you, sinking into your body. When the machine's finally shut off and your dizzy self is helped out of the cotton candy machine, your mind has been spun and fluffed until it is filled with nothing but thoughts of sweets and sex, or sweet, sweet sex. Giggling happily, you collapse into the arms of the sugar glider, still quite dizzy, and give her a sugary kiss, eager for more fun.";
-				now humanity of Player is 0;
 				wait for any key;
+				now humanity of Player is 0;
 				end the story saying "Having given in to the sweet, sweet desire, there is nothing left in your head but sugary fluff.";
 			else:
 				say "     Deciding you need to get out of this sickly sweet dream while you still have a mind to, you do your best to shake your head clear of the sugary haze and quickly gather your gear to leave before the sugar glider can recover from her afterglow and tempt you with more sweet fun.";

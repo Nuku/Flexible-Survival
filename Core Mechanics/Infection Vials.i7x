@@ -143,11 +143,13 @@ carry out VialInventorying:
 	sort Table of OwnedVials in name order;
 	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
 	let linkparts be {{"U", "vial"}, {"D", "vialdrop"}, {"X", "vialalldrop"}};
-	if Larissa is visible, add {"S", "vialsell"} to linkparts;
+	[if Larissa is visible, add {"S", "vialsell"} to linkparts;]
 	repeat with x running from 1 to number of filled rows in Table of OwnedVials:
 		choose row x from Table of OwnedVials;
 		if hypernull is not 1:
 			say "[viallink Name entry with linkparts]";
+			if Larissa is visible:
+				say "[link][bracket]S[close bracket][as]vialsell [Name entry][end link] ";
 		say "[Name entry] x[PlayerOwned entry]";
 		if remainder after dividing x by invcolumns is 0:
 			LineBreak;
@@ -155,26 +157,26 @@ carry out VialInventorying:
 			say " || ";
 	LineBreak;
 
-vialindex is a number that varies.
+hyperindex is a number that varies.
 
 to say viallink (T - text) with (L - list of list of text): [inline linking is really slow, so assemble these batches manually]
 	repeat with linktext running through L:
 		let link be the substituted form of "[entry 2 of linktext] [T]";
-		if vialindex < 1 or vialindex > number of entries in hyperlink list:
+		if hyperindex < 1 or hyperindex > number of entries in hyperlink list:
 			add link to hyperlink list;
-			now vialindex is number of entries in hyperlink list;
+			now hyperindex is number of entries in hyperlink list;
 		else:
-			if vialindex < number of entries in hyperlink list and entry vialindex + 1 of hyperlink list is link: [likely the list will get built in the same order, so long runs of these should be sequential]
-				increase vialindex by 1;
+			if hyperindex < number of entries in hyperlink list and entry hyperindex + 1 of hyperlink list is link: [likely the list will get built in the same order, so long runs of these should be sequential]
+				increase hyperindex by 1;
 			else if link is listed in hyperlink list: [otherwise, find it in the list if it exists]
 				repeat with x running from 1 to number of entries in hyperlink list:
 					if entry x of hyperlink list is link:
-						now vialindex is x;
+						now hyperindex is x;
 						break;
 			else: [or just add it if it doesn't]
 				add link to hyperlink list;
-				now vialindex is number of entries in hyperlink list;
-		say "[set link vialindex][bracket][entry 1 of linktext][close bracket][terminate link] "; [associate our text in the UI with the command in the hyperlink list]
+				now hyperindex is number of entries in hyperlink list;
+		say "[set link hyperindex][bracket][entry 1 of linktext][close bracket][terminate link] "; [associate our text in the UI with the command in the hyperlink list]
 
 Part 3 - Vial Commands
 
