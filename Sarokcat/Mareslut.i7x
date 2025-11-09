@@ -100,10 +100,10 @@ When Play begins:
 	now Cunt Tightness entry is 6;
 	now SeductionImmune entry is false;
 	now libido entry is 65; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
-	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "mareslut milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is "mareslut cum";
+	now loot entry is "Slippery Carrot"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
+	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "horseman cum";
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sultry[or]sensual[or]curvaceous[at random]";
@@ -238,5 +238,22 @@ This is the Mareslut Infection rule:
 		else:
 			say "     When the rescue comes, you are more than eager to follow the handsome young soldiers to safety, though you find yourself idly wondering what several of them would look like as nice sexy mares instead. Still you are more than able to restrain yourself and play nice for the military scientist who take a quick look at you, the silly men obviously more interested in your sexy body and arousing scent than in their work, it is easy enough for you to change a few of their test results while they are distracted. This results in the military pronouncing you safe, and releasing you so they could focus their attention on more important matters like their stalled attempts to reclaim the city from the changed and infectious creatures now living there. Wandering through several cities you try your hands at several different jobs, growing increasingly frustrated and aroused as you do, before you end up transforming a cute girl you managed to talk into coming home with you one night into a lovely little mare as well. You find her looks even more arousing now, though she panics a bit at first, and you have to keep her with you in your apartment for several days of lusty sex before her first heat cycle kicks in.";
 			say "     Watching as the formerly reluctant girl surrenders to her new equine instincts and moans with heat is surprisingly arousing. And as she moans and begs to be used like a little slutty mare and have her new large equine sex filled by an equally large cock, you begin to realize just how much potential this situation has. It isn't long before your first new mare is joined by several others, as you begin to build yourself a stable of lusty little mare sluts all your own, your new mares eager to serve you whenever you want, and spread their slutty little mares legs for anyone you want them to. Soon you have a thriving little business set up, and you troll the college bars most every night looking for just the right new 'recruits' to introduce to a life of equine sex and pleasure. Though the part you love most of all is watching as their lovely little tight pussies shift and change into large dark and wet mare pussies, their minds slowly warping and twisting under the pressure of their building equine heat, until they become perfect little maresluts for your herd...";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Slippery Carrot"	"A fresh glistening orange carrot you, *ahem*, 'liberated' from a defeated Mareslut, best not think too deeply about where she kept it though."	1	Slippery Carrot
+
+instead of sniffing Slippery Carrot:
+	say "Smells a bit just a hair fishy, with a soft undercurrent of earthy mare musk.";
+
+Slippery Carrot is a grab object.
+Usedesc of Slippery Carrot is "[SlipperyCarrotuse]";
+
+to say SlipperyCarrotuse:
+	say "Biting into the still crisp raw carrot with a satisfying audible [italic type]crunch[roman type], the subtle tangs of fibrous earthy sapor laced with the barest hits of salt erupts across your eager palate. You happily gnaw the yummy root vegetable to a fine nub, before tossing the leafy fronds aside with a content whinny.";
+	infect "Onna Uma";
+
+
 
 Mareslut ends here.
