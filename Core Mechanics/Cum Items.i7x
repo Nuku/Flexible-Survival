@@ -856,7 +856,7 @@ to say Champion's cum use:
 		decrease gestation of child by a random number from 3 to 5;
 		if gestation of child < 1, now gestation of Child is 1;
 
-instead of sniffing Champion's cum cum:
+instead of sniffing Champion's cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
 
