@@ -7,23 +7,23 @@ Use memory economy.
 Use slow route-finding.
 [ The following adjust Informs compiler settings so that it allocates enough space. If these values are incorrect, inform will fail to compile.]
 [ To determine if one of these is your issue, use the Errors tab in the inform 7 window. ]
-Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
-Use MAX_PROP_TABLE_SIZE of 8000000.
+use MAX_INDIV_PROP_TABLE_SIZE of 500000.
+use MAX_PROP_TABLE_SIZE of 8000000.
 use MAX_STATIC_DATA of 12500000.
-Use MAX_OBJ_PROP_COUNT of 1700.
+use MAX_OBJ_PROP_COUNT of 1700.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
 use MAX_NUM_STATIC_STRINGS of 500000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 250000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
-use MAX_OBJECTS of 5000.
-use MAX_ACTIONS of 3000.
-use MAX_VERBS of 3000.
+use MAX_OBJECTS of 50000.
+use MAX_ACTIONS of 30000.
+use MAX_VERBS of 30000.
 use MAX_VERBSPACE of 50000.
-use MAX_ARRAYS of 100000.
-[Use MAX_ZCODE_SIZE of 1000000.]
-Use MAX_DICT_ENTRIES OF 6000.
-Use maximum text length of at least 4000.
-Use Scoring.
+use MAX_ARRAYS of 1000000.
+use MAX_ZCODE_SIZE of 10000000.
+use MAX_DICT_ENTRIES OF 60000.
+use maximum text length of at least 4000.
+use Scoring.
 [ End compiler settings. ]
 
 [To decide which number is the absolute value of (N - a number):
@@ -564,6 +564,7 @@ Include Impala by UrsaOmega.
 Include Incubus by Stripes.
 Include Inflatable Snake by Kernog.
 Include Inflatable Vulpine by Stripes.
+Include Ipotane by Sundered Dragon.
 Include Jackal Alpha by Gherod.
 Include Jackal Femboy by Gherod.
 Include Jackal Guard by Xenophiliac.
@@ -622,6 +623,7 @@ Include Nerdy Mouse by Wahn.
 Include Nightmare by Sarokcat.
 Include Ocelot by Stripes.
 Include Ogres by Lyall.
+Include Onna Uma by Sundered Dragon.
 Include Opossum Sailor by StripeGuy.
 Include Orc Infections by Wahn.
 Include otter by Nuku Valente.
@@ -777,6 +779,7 @@ Include Azari by Dys.
 Include Baron by Voidsnaps.
 Include Bastet by Wahn.
 Include Bernard by Prometheus.
+Include Best Pony by Sundered Dragon.
 Include Bianca by Prometheus.
 Include Bjorn by Rikaeus.
 Include Blake by Wahn.

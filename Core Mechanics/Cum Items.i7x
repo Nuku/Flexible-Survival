@@ -840,6 +840,28 @@ instead of sniffing ceryneian deer-taur cum:
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"Champion's cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Champion's cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Champion's cum
+
+Champion's cum is a grab object.
+Champion's cum is cum.
+Champion's cum is infectious.
+Strain of Champion's cum is "Ipotane".
+Usedesc of Champion's cum is "[Champion's cum use]".
+
+to say Champion's cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+	if HP of Best Bony >= 1:
+		decrease gestation of child by a random number from 3 to 5;
+		if gestation of child < 1, now gestation of Child is 1;
+
+instead of sniffing Champion's cum cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "cheesecake cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Cheesecake Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	cheesecake cum
 
 cheesecake cum is a grab object.
@@ -4657,6 +4679,25 @@ to say ogre male cum use:
 	SanLoss 5;
 
 instead of sniffing ogre male cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Onna Uma Cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Onna Uma Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Onna Uma Cum
+
+Onna Uma Cum is a grab object.
+Onna Uma Cum is cum.
+Onna Uma Cum is infectious.
+Strain of Onna Uma Cum is "Onna Uma".
+Usedesc of Onna Uma Cum is "[Onna Uma cum use]".
+
+to say Onna Uma cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing Onna Uma cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
 

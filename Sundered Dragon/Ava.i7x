@@ -105,6 +105,10 @@ A postimport rule:
 	if Finding Alp sixty nine is resolved and Industrial canning facility is unresolved:
 		now Finding Alp sixty nine is unresolved;
 
+A postimport rule:
+	if carried of Sundered Codex < 1:
+		itemGain Sundered Codex by 1;
+
 LastAvamilked is a number that varies. LastAvamilked is usually 250.
 
 
@@ -2198,7 +2202,7 @@ to say ResolveEvent Good_Kitty_Meets_Her_Kids:
 	WaitLineBreak;
 	say "     'Ah, thanks grandpa Drake,' one of your daughters remarks as she swipes at Drake's legs with her left hand as if she were about to claw his torso. Despite her nanite-enhanced speed, Drake backpedals around the blow. A word or two of advice bubbles then dies in your chest, as you realize that her attack was a feint as she swings her forepaw at him. Once again, she's too slow though as he ducks under her limb and slashes at her leg, leaving a fresh blue smear on her pelt. 'That's your leg gone sweetie,' Drake grunts rolling away from her as your daughter tucks her paw into her side. 'You ladies need practice working together! Don't come at me one at a time anymore. You're more than your sisters, you're a pack, er,' he hesitates, his catty amber eyes rolling towards the clouds then back to your kitten, 'pride, you should be more in tune with each other. So let's go, AGAIN!' Drake bellows sounding like a football coach, bashing his tonfa against each other releasing a cloud of blue powder while he takes a formless guarded stance.";
 	say "     'YES SIR!' Your girls roar in unison as they circle about him like a proper pride. With no small amount of joy, you watch your daughters launch feints and probing at their prey, forcing Drake to split his attention between them. His movements are quick and fluid as parries and dodges your little ones strikes with practiced ease. Yet, you can see the limits in his defenses conferred by his lesser bipedal body. He only has two arms, two legs, two eyes, and a reach of a few feet. Your daughters meanwhile are not so inhibited, as they press their tauric advantage, attacking in groups of three. They claw, kick, and bat at him with their natural armaments from every direction. Drake struggles to keep up. His body twists and weaves around the savage attacks like he was made of water and wind, not flesh and bone. Tough as he may be, his body and the nanites can only be pushed so far.";
-	WaitLineBreak; 
+	WaitLineBreak;
 	say "      Sweat glistens from his brow and pours down the toned hills of his sternum like a river of shimmering diamonds, his pecs heave with each ragged breath as he ducks one of your daughters paws and tries unsuccessfully to aim a riposte at their under belly. Your girls however have hardly broken a sweat as they dance between each other, careful not to impede their litter-mates['] avenues of attack and egress. Large as they are, you imagine it would be easy for them to trip over one another. Still, they keep a rough cohesion without speaking despite their inexperience. You can almost taste the air of inevitability as their train of blows rain down on the little human's guard forcing him to his knees. '*Huff* *huff* don't get cocky girls, I'm not out of this yet!' Drake pants as he lunges between your daughter and slash at their undercarriage while he passes under them. 'Your down hun,' Drake rumbles rolling out from underneath as your daughter feigns a collapse. 'Come on girls, I believe in you! You're not gonna let some old man show you up in front of your moms!' Drake jeers climbing to his feet, with his back to your daughter's prone form.";
 	say "     'Heck no!' one of them cries, charging in like a bull seeing red as she tries to swat him with an over-handed swipe. 'Ha, good effort sweetie, but you shouldn't break rank,' Drake sneers, leaping back and slashing at her paw. He lands on your defeated daughter's side, motioning for the rest of them to come at him. Your daughter stares at the blue streak on her paw for a moment before charging again, but this time she's not alone. Two others join, trying to pincer Drake between them. No way is he getting out of this, you muse, watching five sets of red paws come down at him from different angles. At the last moment though, Drake jumps and bounds between their outstretched arms as he slashes at their faces. 'Fudge,' you hear one of them grumble as they playfully collapse on another in a pile. 'No fair grandpa, you're so small, how can we hit you!?' one of the girls moans exasperatedly from underneath her litter-mates.";
 	WaitLineBreak;
@@ -8565,6 +8569,7 @@ to say SCUse:
 	add "HELP! I can't have sex with Ava!" to Codex_section_Choices;
 	add "Toggle Touched by Madness?" to Codex_section_Choices;
 	add "Switch between dom, sub, and vanilla?" to Codex_section_Choices;
+	add "Ipotane?" to Codex_section_Choices;
 	if "Touched by Madness" is listed in feats of Player:
 		add "Cyn?" to Codex_section_Choices;
 	let Codex_section_Choice be what the player chooses from Codex_section_Choices;
@@ -8625,6 +8630,80 @@ to say SCUse:
 					if "Dominant" is listed in feats of Player:
 						remove "Dominant" from feats of Player;
 					add "Submissive" to feats of Player;
+		-- "Ipotane?":
+			say "     Obtainable at the Palomine, this liminal equine infect evolves as the player has more children as a pure blood Ipotane with a cunt. Note it is heavily advised to have Lilliana (the black equinoid pet) as your active pet during your mifly milk mare adventures. Currently, this content is incomplete due to time constants, yet you can advance your horsy infection here. Beware though, you will need to reset this at later date if you wish to view the content in its entirety.";
+			LineBreak;
+			say "     [italic type]What would you like to do[roman type]?";
+			let my_little_breeder_Choices be a list of text;
+			add "Reset infection?" to my_little_breeder_Choices;
+			add "Advance to stage two?" to my_little_breeder_Choices;
+			add "Go to stage three?" to my_little_breeder_Choices;
+			add "View stage four?" to my_little_breeder_Choices;
+			add "Opps missclicked?" to my_little_breeder_Choices;
+			let my_little_breeder_Choice be what the player chooses from my_little_breeder_Choices;
+			if my_little_breeder_Choice is:
+				-- "Reset infection?":
+					say "     Reset enabled, you are now free to slut around the cabin.";
+					now HP of Best Pony is 0; 
+					now Perception of Best Pony is 0;
+				-- "Advance to stage two?":
+					say "     Layline project command: it was you how broke my Meissen Plate!";
+					now HP of Best Pony is 1; 
+					now Perception of Best Pony is 0;
+				-- "Go to stage three?":
+					say "    Acknowledge, what type of cutie mark would you like on your belly?";
+					let Stupid_stuff_Choices be a list of text;
+					add "A Heart?" to Stupid_stuff_Choices;
+					add "Some Lucky four-leaf clover?" to Stupid_stuff_Choices;
+					add "Perhaps Classical horseshoe?" to Stupid_stuff_Choices;
+					add "Or a Primal paw print?" to Stupid_stuff_Choices;
+					let Stupid_stuff_Choice be what the player chooses from Stupid_stuff_Choices;
+					if Stupid_stuff_Choice is:
+						-- "A Heart?":
+							say "     Very well.";
+							now HP of Best Pony is 2;
+							now Perception of Best Pony is 1;
+						-- "Some Lucky four-leaf clover?":
+							say "     Done.";
+							now HP of Best Pony is 2;
+							now Perception of Best Pony is 2;
+						-- "Perhaps Classical horseshoe?":
+							say "      Deux Ex Pony stuff!";
+							now HP of Best Pony is 2;
+							now Perception of Best Pony is 3;
+						-- "Or a Primal paw print?":
+							say "     Fang will love this, or not, Sunder isn't his mother.";
+							now HP of Best Pony is 2; 
+							now Perception of Best Pony is 4;
+			-- "View stage four?":
+				say "     Warning unstable nanites detected, user beware, you're gonna turn into a mare!";
+				LineBreak;
+				say "     [italic type]Please choose your tummy tramp stamp[roman type].";
+				let IDK_Choices be a list of text;
+				add "Heart?" to IDK_Choices;
+				add "Four-leaf clover?" to IDK_Choices;
+				add "Classical horseshoe?" to IDK_Choices;
+				add "Paw print?" to IDK_Choices;
+				let IDK_Choice be what the player chooses from IDK_Choices;
+				if IDK_Choice is:
+					-- "Heart?":
+						say "     Debug complete.";
+						now HP of Best Pony is 3; 
+						now Perception of Best Pony is 1;
+					-- "Four-leaf clover?":
+						say "     Nanites deployed.";
+						now HP of Best Pony is 3;
+						now Perception of Best Pony is 2;
+					-- "Classical horseshoe?":
+						say "     Pony Powers active, form of: error witty line not found.";
+						now HP of Best Pony is 3; 
+						now Perception of Best Pony is 3;
+					-- "Paw print?":
+						say "     Something, something ancient memes, something something, pony side!";
+						now HP of Best Pony is 3; 
+						now Perception of Best Pony is 4;
+			-- "Opps missclicked?":
+				say "     Understandable, have a nice day.";
 		-- "Cyn?":
 			say "     Though she is not one of Sundered_Dragon's creations, this glitchy fox herm can be recruited in the Ghost Fair section of the State Fair via walk-in once the Player has reached level 20 and gained the Touched by Madness feat. On arrival to this unusual place, the Player will be assaulted by vulpine Hallucination who, if defeated and fucked several times will join the Player as a potent pet and mobile shopkeeper. Though her little shop of horror may be pricey her services are quite powerful, additionally some of her scenes and items have been Co-authored by Sundered_Dragon. However, should the Player beat her without playing with Cyn too many times, she will become permanently hostile towards them in her own eldritch way.";
 
