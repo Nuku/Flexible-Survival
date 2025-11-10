@@ -494,9 +494,9 @@ to say Champion's cum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
-	if HP of Best Bony >= 1:
+[	if HP of Best Bony >= 1:
 		decrease gestation of child by a random number from 3 to 5;
-		if gestation of child < 1, now gestation of Child is 1;
+		if gestation of child < 1, now gestation of Child is 1;  ] [Does not compile]
 
 instead of sniffing Champion's cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
