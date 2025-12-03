@@ -27,14 +27,14 @@ to say ResolveEvent Bobcat Encounter:
 		say "     [link](3)[as]3[end link] - Nothing really, you just wanted to get a closer look. That's it.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link] to chat, [link]2[end link] to attack or [link]3[end link] to leave.";
+		LineBreak;
 		if calcnumber is 1:
-			LineBreak;
 			say "     Greeting the feline creature with a wave and smile, you tell him your name and how you were passing by until you got curious about him. 'Curious, huh?' he asks a little cautiously. He slowly lifts himself from his little hovel and brushes himself off, putting soft paws on his hips while eyeing you up. 'Well, for curiosity's sake, I'm Milo,' he says, nodding. You nod in turn and examine him in more detail, now that he's right before you. He's completely naked for one, no shirt, no shoes, and certainly no underwear, leaving his flaccid, eight inch cat-cock dangling between his legs for all to see.";
 			say "     The creature himself looks to be about three and a half feet tall, covered in orange and black fur with furry digitigrade legs ending in cat paws and tipped with sharp, if not short claws. His hands are similar, although his fingers are longer and also end in the same claws. His cute face is fitted with the sharp incisors of a feline, which a long, rough tongue flicks across as you stare. Large amber eyes with cat-like slits bore into your own while his short little tail gently bobs to and fro behind him.";
 			WaitLineBreak;
@@ -53,7 +53,6 @@ to say ResolveEvent Bobcat Encounter:
 				say "     You shake your head. You can survive without the food, and for god's sake, you're not [']that['] easy. He sighs and drops the food back into his hole home. 'Fair enough, but come back if you change your mind. Don't get many good looking folks like yourself around my home. Just follow the little M's I carved into some of the trees. They should lead you back here.' He snickers, gives you a wave and hops back in the little hole at the bottom of the tree, disappearing from sight.";
 				now Resolution of Bobcat Encounter is 98; [talked, rejected sex]
 		else if calcnumber is 2:
-			LineBreak;
 			say "     With a manic grin on your face at the opportunity he gave you by coming out of hiding, you leap forward to grab the kitty cat. Sadly, he seems to have been waiting for just that, and before you get anywhere close enough, the lithe anthro slips back into the tree. You reach into the hole close to the ground, crouching as your hand quests around, but all you feel is rough wood. After a short moment, it becomes obvious that you won't be getting him this way, so you pull back and stand up straight again. Or you try at least, as you feel a pair of paws kick you from behind, throwing you off balance and sending you to one knee. Whirling around, you see the bobcat man standing there in some sort of martial arts stance, claws extended and apparently ready to fight! 'You big jerk!' he yells angrily before charging you on all fours!";
 			challenge "Bobcat";
 			if fightoutcome < 20: [player won]
@@ -64,7 +63,6 @@ to say ResolveEvent Bobcat Encounter:
 				say "[FledFromMilo]";
 			now Bobcat Encounter is resolved;
 		else:
-			LineBreak;
 			say "     You stare at the cat for a minute, scratching the back of your neck awkwardly as you think of what to say. You were curious maybe? The feline creature huffs in impatience while you think, putting his paws on his lithe, furry hips. 'Well that's a fine how-do-ya-do, didn't your mother ever teach you it's impolite to stare?' He gives an indignant huff, before he drops back down the hole, disappearing from sight. You stare down the dark, deep hole a moment before backing up, looking around at your surroundings and then turning around. 'Come back when you've learned to greet properly!' you hear echoed out from the inside of the tree. With a shrug, you walk away and try to remember some of the landmarks near the tree, to make sure that you don't run into him again for another embarrassing encounter.";
 			now Resolution of Bobcat Encounter is 99; [disinterest]
 			now Bobcat Encounter is resolved;
@@ -86,6 +84,7 @@ to say ResolveEvent Bobcat Encounter:
 				LineBreak;
 				say "[SexWithMilo1]"; [fuck]
 			else:
+				LineBreak;
 				say "[SexWithMilo2]"; [bj]
 		else:
 			LineBreak;
@@ -242,7 +241,7 @@ When Play begins:
 	now defeated entry is "[BeatMilo]";
 	now victory entry is "[LoseToMilo]";
 	now desc entry is "[MiloDesc]";
-	now face entry is "a small feline face, with a short cat muzzle that has two incisors poking out of your bottom lip. You have two large feline eyes painted a light-golden color that seem to glow in the dark. Your cat ears flick atop your head a moment as they detect some noise off in the distance";
+	now face entry is "small and feline, with a short cat muzzle that has two incisors poking out of your bottom lip. You have two large feline eyes painted a light-golden color that seem to glow in the dark. Your cat ears flick atop your head a moment as they detect some noise off in the distance";
 	now body entry is "short and lithe but with powerful lean muscles and covered with orange fur. Your digitigrade legs end in clawed feet and your hands in clawed cat-paws";
 	now skin entry is "a soft amber-orange fur over your"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a short nearly one foot long furry tail that protrudes from your well-rounded backside.";

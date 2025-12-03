@@ -44,14 +44,14 @@ to say ResolveEvent Urban Cliff:
 		say "     [link](3)[as]3[end link] - Nope, not ever!";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link] to go in, [link]2[end link] to leave for now or [link]3[end link] to avoid this place.";
+		LineBreak;
 		if calcnumber is 1:
-			LineBreak;
 			say "     Might as well see what lies within the cave for you, and hopefully it'll be nothing bad. Stepping into the opening, you duck under a protruding piece of rock and continue down the natural passage, careful not to lose your balance on the uneven ground. Soon, you reach the bend in the tunnel you saw from outside and it is revealed that it indeed continues on beyond that. Thankfully, there also seems to be some reddish glow illuminating the further passage, as you won't be able to count on light from the outside after this. Moving on, you soon arrive at the start of a larger cave. There are some irregular patches of glowing volcanic rock on the walls, floor and ceiling, providing dim lighting that allows you to make out the extent of the roughly sixty foot long and thirty foot wide open space.";
 			say "     Your eyes get more and more used to the semi-darkness, allowing you to make out some household objects organized deeper into the back of the cave. There's a makeshift bed made of what looks like multiple bear pelts, a couch that seems to be a bit worse for wear after having been shoved and scraped through the passage that led you here, and... that's how far you get before you're suddenly snatched and flung into the middle of the cave by a solidly built red figure coming seemingly out of nowhere. But no, as you spin around and stumble not to fall over, you see that there's a mid-sized alcove just a step or two from where you stood, not easily apparent unless one knows it's there. Your assailant is a tall humanoid, a dragon woman with violet hair running down her head and spine while ending at the point of a long tail. The rest of her is covered in mostly reddish scales while her chest and tummy area sports an orange/red texture.";
 			WaitLineBreak;
@@ -66,24 +66,22 @@ to say ResolveEvent Urban Cliff:
 				say "     [link](3)[as]3[end link] - Talk to her and clear up the misunderstanding.";
 				now calcnumber is 0;
 				while calcnumber < 1 or calcnumber > 3:
-					say "Choice? (1-3)>[run paragraph on]";
+					say "Choice? (1-3)> [run paragraph on]";
 					get a number;
 					if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 						break;
 					else:
 						say "Invalid choice. Type [link]1[end link] to rape her, [link]2[end link] to leave or [link]3[end link] to talk to her.";
+				LineBreak;
 				if calcnumber is 1:
-					LineBreak;
 					say "[RubyCombatFuck]";
 					now Resolution of Urban Cliff is 10; [won, rape]
 					now Urban Cliff is resolved;
 				else if calcnumber is 2:
-					LineBreak;
 					say "     You turn and walk away, not wanting anything from the dragon creature. A clearly surprised huff can be heard behind you, followed by the woman's voice shouting angrily, 'W-what? You come into my home and beat me up, then just fuck off? Good riddance, bastard! Leave and don't come back, you hear me?!' As you start climbing back up the slope, you wonder if you'll see the furry, scaled woman again, maybe under better circumstances. Surprise visits to her home seem to be out for sure, given her reaction this time, so you make a note not to come here again.";
 					now Resolution of Urban Cliff is 11; [won, left]
 					now Urban Cliff is resolved;
 				else if calcnumber is 3:
-					LineBreak;
 					say "     You back up, holding your hands out in a consoling gesture and quickly declare that you had no intention of fighting, hurting or stealing from her. She grimaces and huffs out a puff of smoke, 'Could'a fooled me jerk. Buttering me up won't make me bend over for you either. I'm not one of those husky sluts whoring around.' Again trying to strike a reasonable tone, you explain that you were only curious about the cave and had no sinister motives beyond that. The dragoness growls in disbelief, still staring at you with hostility, yet as you continue to stand there with open hands, she becomes a little bit less sure about her assumptions. While you wait, your eyes roam over her naked body all of their own accord, taking in the glistening sheen of sweat on her, the taut abs lined with droplets of perspiration as well as a few cuts and scrapes from your fight. This wakes a little bit of regret at your unneeded fight in you, so you cautiously ask if she needs any help patching up or something.";
 					say "     The dragoness snaps at you, whipping her head up to look directly at you and baring her teeth. 'I don't need your goddamn help asshole,' she says, even while wincing as she pushes herself off from the wall to stand proud and erect before you. 'Hear that?! I do not need you, or anyone else! In this world, one can rely only on themselves!' she says with a snarl, a bit of fiery steam shooting forth from her nostrils as her amber eyes fixate on yours in defiance and anger. Defying her clear hostility you state things are usually easier with friends and those you trust close by. She gives you a mystified look for a moment before returning to her previous anger-filled gaze. 'Pfft, trust - what would you know about trust?'";
 					WaitLineBreak;
@@ -100,11 +98,9 @@ to say ResolveEvent Urban Cliff:
 				now Resolution of Urban Cliff is 21; [fled]
 				now Urban Cliff is resolved;
 		else if calcnumber is 2:
-			LineBreak;
 			say "     What's that old saying? 'Discretion is the better part of valor.' Maybe that's wise here considering you'd be wandering into an unknown volcanic cave, in the background of a city overrun by nanobots, mutants and other mythical creatures, almost all of which are looking to rob or screw you silly. You shake your head and turn around to keep moving. Still, might be interesting to return here sometime when you feel ready for a bit of exploration.";
 			now Resolution of Urban Cliff is 99; [player didn't want to go in right now]
 		else if calcnumber is 3:
-			LineBreak;
 			say "     What's that old saying? 'Discretion is the better part of valor.' Maybe that's wise here considering you'd be wandering into an unknown volcanic cave, in the background of a city overrun by nanobots, mutants and other mythical creatures, almost all of which are looking to rob or screw you silly. You shake your head and turn around to keep moving, making a mental note to avoid this place in the future too.";
 			now Resolution of Urban Cliff is 100; [player avoids the place]
 			now Urban Cliff is resolved;
@@ -118,14 +114,14 @@ to say ResolveEvent Urban Cliff:
 			say "     [link](3)[as]3[end link] - Nope, not ever!";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
 				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 					break;
 				else:
 					say "Invalid choice. Type [link]1[end link] to go in, [link]2[end link] to leave for now or [link]3[end link] to avoid this place.";
+			LineBreak;
 			if calcnumber is 1:
-				LineBreak;
 				say "     You start down the slope, fishing some nutrition from your pack while you do. When you reach the entrance you call out, greeting a loud 'hello?' for anyone inside to hear. A moment later a scaly, red and fairly irritated looking dragon head pokes around the corner to look at you. Irritation is replaced with recognition, then confusion at your outstretched arms bearing food. 'Y-you! What-.' You cut her off. 'It's not a truck, but it's a good start, right?' you say, bearing as charming a smile as you can muster. She looks bewildered for a moment before surprisingly enough cracking a small smile. 'Pfft, you freakin['] jerk I was kidding. Why the hell are you back here huh? Can't be to just annoy me, and poisoned food wouldn't really make sense. So what the hell?'";
 				say "     You introduce yourself and carefully explain to her that you were hoping to make a friend, maybe cheer her up from whatever anger is holding her down. She shakes her head when you say that. 'Hardly, my anger makes me stronger, stronger than anyone I've faced before!' she says a bit indignantly, but her voice has lost a bit of its hostile luster. You give her a defiant look and smile, causing a bit of steam to trail out of her thin nostrils. 'Doesn't count.' You open your mouth to protest but she speaks louder this time. 'Doesn't. Count.' You nod your head after a moment finally. Then, you hold your offering up higher and walk a bit closer. She puts a hand on her naked hip and reaches out to take it. Her body heat is radiating its warmth even to where you stand, and her naked breasts perking out leave nothing to the imagination.";
 				WaitLineBreak;
@@ -133,11 +129,9 @@ to say ResolveEvent Urban Cliff:
 				LineBreak;
 				ItemLoss food by 1;
 				now Resolution of Urban Cliff is 2; [food delivered]
-			if calcnumber is 2:
-				LineBreak;
+			else if calcnumber is 2:
 				say "     With a shrug to yourself, you continue on. You can always visit her another time after all.";
-			if calcnumber is 3:
-				LineBreak;
+			else if calcnumber is 3:
 				say "     You shrug to yourself and put the idea of trying to befriend the dragon out of your mind. Hell, the two of you fought before, how likely is it that she'd just accept you now? Making a mental note to avoid the area in the future, you wander off again.";
 				now Resolution of Urban Cliff is 100; [player avoids the place]
 				now Urban Cliff is resolved;
@@ -449,12 +443,14 @@ instead of fucking Ruby:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Fuck her"):
 					say "[RubySex1]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from Ruby, shaking your head slightly as she gives a questioning look.";
 			wait for any key;
@@ -480,8 +476,8 @@ to say RubySex1:
 	else:
 		say "     You embrace the dragoness, returning her sweet kiss. Pressing your lips against Ruby's while running your tongue along her scaly lips, begging to deepen your kiss. Her tongue reaches out to meet yours as her strong arms press you tightly against her, scaly hands reaching down to caress your ass and lower back. She moves forward, pushing you up against the back wall of her cave while her hands play at your body and her breathing intensifies. Her burning hot mouth seems to suck at your very breath, and pressed up so closely to this fiery dragoness your beginning to feel the heat! She pulls back, looking at you with devilishly lusty eyes. She then throws you behind her and onto her many piles of fur scraps. 'Oh god... I haven't felt like this in... so long. Everything off, I need you now, right now!' she says before pouncing on top of you, planting both her claws on either side of your head.";
 		say "     Rudy straddles herself above you, panting a little as she does, clearly well beyond aroused at this point as she grinds against your prone form. She trails kisses and licks down and up your body, drooling warm saliva over your vulnerable body until her long, reptilian tongue slurps upward and collides with the crest of your neck, running up your jaw and against your lips. Ruby then moves to straddle your face. She plants her hot dragon-cunt directly onto your waiting mouth. And while your vision is blocked by a plush scaly ass you can hear Ruby moan out as she makes contact with your lips. She gyrates her hips against your face and your hands come up to grab and caress Ruby's warm thighs. 'Fuuuck, you're so hot, you know that? Can't believe how damn wet you've gotten me.' She punctuates this by turning around on your face and once again plants her ass on your face.";
-		say "     You shove your nose right between her tight muscular ass cheeks and your tongue right back into her tasty sex. Your hands reach up and spread her soft cheeks wide as you dive in, enthusiastically eating out the dragon woman you've come to know so well. 'Can't just let you have all the fun,' you hear under the dragon's ass. And a moment later you feel a long, hot tongue being dragged across your midriff running down to your sexless crotch and sliding it across the sensitive skin like lapping at ice cream. You arch your back from the stimuli and redouble your cunt-munching efforts, sliding one finger against her front to caress Ruby's clit, which has been rubbing itself against your chin until now. You feel groans being blown into your sex and clawed hand trailing light red love-marks across your skin. The two of you are caught in a cycle of sixty nine love making, you taken by her juicy dragon cunny and she by your wonderfully sensitive, sexless flesh.";
 		WaitLineBreak;
+		say "     You shove your nose right between her tight muscular ass cheeks and your tongue right back into her tasty sex. Your hands reach up and spread her soft cheeks wide as you dive in, enthusiastically eating out the dragon woman you've come to know so well. 'Can't just let you have all the fun,' you hear under the dragon's ass. And a moment later you feel a long, hot tongue being dragged across your midriff running down to your sexless crotch and sliding it across the sensitive skin like lapping at ice cream. You arch your back from the stimuli and redouble your cunt-munching efforts, sliding one finger against her front to caress Ruby's clit, which has been rubbing itself against your chin until now. You feel groans being blown into your sex and clawed hand trailing light red love-marks across your skin. The two of you are caught in a cycle of sixty nine love making, you taken by her juicy dragon cunny and she by your wonderfully sensitive, sexless flesh.";
 		say "     Each of your climaxes explode all at once. A wave of musky dragon love splashed across your face has you hear a loud moan being pushed into you spasming cunny. For your part Ruby latches onto your crotch, planting her entire mouth over it and using her long tongue to send the bundles of nerves downy here into major overdrive, drawing a long drawn out gasp from your lips. You each ride the other's high, drawing out the other's climax for a long while before you're both laying there, she on top of you, dragon cunt simply resting on your face until Ruby lifts herself off you and plants her body next to yours. 'Damn, that was hot. Haven't felt that good in... well, as long as I can remember,' she says, smiling cutely and giving you a smooch on the cheek. 'Hope we can do this again lover.' You wholeheartedly agree as you stand slowly on shaky legs and get dressed. Exchanging a few small kisses with the dragoness as you do.";
 
 Section 4 - Location

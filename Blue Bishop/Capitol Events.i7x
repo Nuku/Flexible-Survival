@@ -66,9 +66,11 @@ to say ResolveEvent Ebonflame Nest:
 		say "     ([link]Y[as]y[end link]) - Yes. You could use the supplies, and you're willing to put up a fight for them.";
 		say "     ([link]N[as]n[end link]) - No. This seems like a terrible idea.";
 		if Player consents:
+			LineBreak;
 			say "     Hopping down the hole, you ready yourself against the whelps, who are more than happy to contest your audacious disruption.";
 			say "[ebonflamegauntlet]";
 		else:
+			LineBreak;
 			say "     You decide that it's not worth the trouble, stepping back and departing before you're potentially forced to contend with these creatures or whatever might have birthed them.";
 			now Resolution of Ebonflame Nest is 4; [didn't fight]
 	else:
@@ -86,9 +88,11 @@ to say ResolveEvent Ebonflame Nest:
 			say "     ([link]Y[as]y[end link]) - Yes. You could use the supplies, and you're willing to put up a fight for them.";
 			say "     ([link]N[as]n[end link]) - No. This seems like a terrible idea.";
 			if Player consents:
+				LineBreak;
 				say "     Hopping down the hole, you ready yourself against the whelps, who are more than happy to contest your audacious disruption.";
 				say "[ebonflamegauntlet]";
 			else:
+				LineBreak;
 				say "     You decide that it's not worth the trouble, stepping back and departing before you're potentially forced to contend with these creatures or whatever might have birthed them.";
 				now Resolution of Ebonflame Nest is 4; [didn't fight]
 		else:

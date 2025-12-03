@@ -26,6 +26,7 @@ to say Batcubus_wins:
 to say Batcubus_loses:
 	say "     The batcubus falls down to the ground, fingering herself, trying to get some form of relief. The sight of her like this is enticing, tempting you to do something naughty with her to celebrate your victory. Shall you give in to these urges?";
 	if Player consents:
+		LineBreak;
 		if Player is male:
 			say "     The scent of her arousal fills your nose and you feel your cock rapidly stiffening. Your lust brings you to turn around and look at her, unable to do anything other than start jerking off while watching her masturbate. She notices your actions and smiles warmly before spreading her legs and presenting her needy cunt to you.";
 			if Cock Length of Player > 9 and Ball Size of Player > 2 and ( Cock Length of Player > 17 or Ball Size of Player > 3 ):
@@ -47,6 +48,7 @@ to say Batcubus_loses:
 			say "     You eat her out through several messy orgasms, sometimes lapping up her juices while other times fingering her frantically through her climax. Despite your neutered state, you feel a rush of sexual delight at each of these. And while a little muted and unfocused, it still feels good. Eventually, you feel sated and manage to pull yourself away from her. The bat creature gets up with a happy grin, stretches and strides off.";
 			CreatureSexAftermath "Player" receives "OralPussy" from "Batcubus";
 	else:
+		LineBreak;
 		say "     Managing to resist this final temptation, you grab the bat creature by one arm, pull her up and shove her on her way. She pouts, clearly upset that you've not fallen for her trap and strides off indignantly in search of some new, more cooperative victim.";
 
 
@@ -253,7 +255,7 @@ Strain of batcubus milk is "Batcubus".
 Usedesc of batcubus milk is "[batcubus milk use]".
 
 to say batcubus milk use:
-	say "Taking the cap off the bottle of milk, you greedily drink down its contents, swallowing the tasty milk.";
+	say "     Taking the cap off the bottle of milk, you greedily drink down its contents, swallowing the tasty milk.";
 	PlayerDrink 6;
 
 Section 4 - Endings

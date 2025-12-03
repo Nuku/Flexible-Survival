@@ -38,13 +38,10 @@ to say ResolveEvent Pet_Mutt_Looting:
 	say "     As you walk onto the street, you can see [PetMuttName] as he quickly dashes out from under his small makeshift home. His tail is wagging wildly and he seems more eager than normal as he sprints in your direction. Before you can ask or even wonder if something's amiss he stops, skidding a foot or so and stopping before you. A [if randomnumber is 1]bottle of soda[else if randomnumber is 2]can of food[else]medkit[end if] drops from his maw and at your feet with a clatter. He pants and looks at you simply. Now it's your turn to cock your head to the side at your hound. You lean down and pick it up, examining the item for a moment before smiling and placing it in your pack after wiping some drool and grime from its surface. 'Such a good boy,' you praise, leaning down and giving both his ears a ruffle, patting and scruffing over his fur. Which quickly turns into a chest and belly rub when he lays down. His leg kicks as you scratch his tummy and his tongue lolls out happily. What an adorable pooch!";
 	if randomnumber is:
 		-- 1:
-			LineBreak;
 			ItemGain soda by 1;
 		-- 2:
-			LineBreak;
 			ItemGain food by 1;
 		-- 3:
-			LineBreak;
 			ItemGain medkit by 1;
 
 [***********************************************************]
@@ -179,21 +176,23 @@ to say Pet MuttTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Pet him"):
 					say "[Pet MuttPetting]";
-				if (nam is "Say hello"):
+				else if (nam is "Say hello"):
 					say "[Pet MuttTalk1]";
-				if (nam is "Play with him"):
+				else if (nam is "Play with him"):
 					say "[Pet MuttTalk2]";
-				if (nam is "Ask if anyone has fallen in a well"):
+				else if (nam is "Ask if anyone has fallen in a well"):
 					say "[Pet MuttTalk3]";
-				if (nam is "Kiss him"):
+				else if (nam is "Kiss him"):
 					say "[Pet MuttKiss]";
 				wait for any key;
 				say "[Pet MuttTalkMenu]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the [PetMuttColor] [PetMuttBreed], shaking your head slightly as he gives a questioning look.";
 			wait for any key;
@@ -282,6 +281,7 @@ to say Pet MuttSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Be bred like a bitch"):
@@ -294,6 +294,7 @@ to say Pet MuttSexMenu:
 					say "[SuckPet Mutt]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the [PetMuttColor] [PetMuttBreed], shaking your head slightly as he gives a questioning look.";
 			wait for any key;

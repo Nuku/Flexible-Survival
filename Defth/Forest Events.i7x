@@ -11,6 +11,7 @@ ResolveFunction of Small Cave is "[ResolveEvent Small Cave]".
 Sarea of Small Cave is "Forest".
 Level of Small Cave is 5.
 When play begins:
+	add Small Cave to BadSpots of HermList;
 	add Small Cave to BadSpots of FeralList;
 	add Small Cave to BadSpots of FurryList;
 	add Small Cave to BadSpots of CockVoreList;
@@ -27,7 +28,6 @@ to say ResolveEvent Small Cave:
 			say "     Eating the shrooms, you shrink in no time, your clothes quickly outgrowing you. Now finally at a stature that can fit in the hole with ease, you can explore what lies inside. The cave is small in nature, but still big enough to hold a nest comfortably. While exploring the place, you hear a loud growl from behind you. Turning around, you find the denizen of this place, a cougar, this one looking more feral than the others. She even has a sheath, and from what you can see, her cock is more spear-like than a normal human. The herm feline looks at you with curious eyes, like she has never seen someone so small before. The curious animal jumps at you, hunting you down like a cat would do to a mouse, jumping from one position to another as she tries to corner you. ";
 			ItemLoss glowing mushroom by 1;
 			if vorelevel is 1: [no vore interest by the player]
-				LineBreak;
 				say "     Understandably frightened at possibly getting captured and eaten - or worse - you give everything you have and flee from the cave in a desperate burst of speed, escaping from the cat in the last second. Phew, this definitively isn't a place where one should come when so small and vulnerable. You could come back once the shrooms have worn off though, and give that cat a piece of your mind.";
 			else:
 				say "You are eventually captured in her paws, and you become her toy for a while, the feline herm using you to kill her boredom. She hits you sometimes, encouraging you to keep moving to her amusement.";
@@ -93,7 +93,7 @@ to say ResolveEvent Small Cave:
 					now Resolution of Small Cave is 3; [fought cave cougar, lost]
 				else if fightoutcome >= 30:[fled]
 					say "     Running away with all that you have, you trip over a few times, but you get out of the cave before the feline leaps on you. You run without noticing that your legs took you back to the familiar sight of the Grey Abbey Library. You can finally rest.";
-					wait for any key;
+					AttemptToWait;
 					move player to Grey Abbey Library;
 					now Resolution of Small Cave is 4; [fought cave cougar, fled]
 				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
@@ -118,7 +118,7 @@ to say ResolveEvent Small Cave:
 				now Resolution of Small Cave is 3; [fought cave cougar, lost]
 			else if fightoutcome >= 30:[fled]
 				say "     Running away with all that you have, you trip over a few times, but you get out of the cave before the feline leaps on you. You run without noticing that your legs took you back to the familiar sight of the Grey Abbey Library. You can finally rest.";
-				wait for any key;
+				AttemptToWait;
 				move player to Grey Abbey Library;
 				now Resolution of Small Cave is 4; [fought cave cougar, fled]
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]

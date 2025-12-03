@@ -86,7 +86,7 @@ to say felinoid wins:
 						CreatureSexAftermath "Player" receives "PussyFuck" from "Felinoid";
 						increase catnum by 1;
 				else:
-					if Nipple Count of Player is 0 and "Flat Chested" is not listed in feats of Player:
+					if (Nipple Count of Player is 0 or Breast Size of Player is 0) and "Flat Chested" is not listed in feats of Player:
 						say "     The big cat rubs himself against you, purring deeply; without thinking your hand reaches to scritch his ears. 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin and chest. Quickly, two large breasts swell into existence, pressing against the remnants of your clothing, making you gasp at the feeling of the cloth against the sensitive flesh.";
 						now Nipple Count of Player is 2;
 						now Breast Size of Player is 6;
@@ -94,7 +94,7 @@ to say felinoid wins:
 					else:
 						say "     The big cat rubs himself against you, purring deeply; without thinking your hand reaches to scritch his ears. 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin making you whine and whimper softly into his fur, breathing in more of the big animal's suddenly fiery smelling musk.";
 			else:		[***]
-				if Nipple Count of Player is 0 and "Flat Chested" is not listed in feats of Player:
+				if (Nipple Count of Player is 0 or Breast Size of Player is 0) and "Flat Chested" is not listed in feats of Player:
 					say "     The big cat rubs himself against you, purring deeply; without thinking your hand reaches to scritch his ears. 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin and chest. Quickly, two large breasts swell into existence, pressing against the remnants of your clothing, making you gasp at the feeling of the cloth against the sensitive flesh";
 					now Nipple Count of Player is 2;
 					now Breast Size of Player is 6;
@@ -303,14 +303,14 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 to say felinoidheat:
 	if Player is female:
 		if heatform is 0:
-			say "     You whine as you find yourself fingering your pussy in abandon before managing to snap out of your needy haze for a brief moment. Looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you and you begin lapping at your fingers, tasting your musk, needing more.";
+			say "You whine as you find yourself fingering your pussy in abandon before managing to snap out of your needy haze for a brief moment. Looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you and you begin lapping at your fingers, tasting your musk, needing more.";
 		else:
-			say "     You whine as you find yourself fingering your sopping pussy in abandon, before managing to snap out of your needy haze for a brief moment. Looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you, so like a wild cat in heat, you can't help but push those fingers back in for a few more minutes before you're able to move on.";
+			say "You whine as you find yourself fingering your sopping pussy in abandon, before managing to snap out of your needy haze for a brief moment. Looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you, so like a wild cat in heat, you can't help but push those fingers back in for a few more minutes before you're able to move on.";
 	infect "Felinoid";
 	increase Libido of Player by 15;
 
 to say felinoidheat end:
-	say "     The pressing need to find a mate fades slowly, leaving you whimpering in relief.";
+	say "The pressing need to find a mate fades slowly, leaving you whimpering in relief.";
 	decrease Libido of Player by 40;
 	if Libido of Player < 0, now Libido of Player is 0;
 

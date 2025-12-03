@@ -35,10 +35,12 @@ to say ResolveEvent Hang Ten:
 	say "     ([link]Y[as]y[end link]) - You want to see more of her body.";
 	say "     ([link]N[as]n[end link]) - Not interested.";
 	if Player consents:
+		LineBreak;
 		say "     With a small wink, you note that you wouldn't mind seeing more of the athlete's form. A wry smile emerges on her face as she chimes in, 'Well now, I wouldn't want to disappoint a new fan.' She begins to unzip her wetsuit, showing off her toned abs and her bountiful D-cup breasts. The nereid begins to tease you by cupping them together to accentuate her cleavage, an occasional finger circles around one of her hard nipples. With this awe-inspiring sight, one of your hands reaches out but is turned away by the water nymph, who says temptingly, 'This isn't gonna be that type of thing [if Player is female]kitten[else]tiger[end if]. I'm not the kind of girl who hooks up with someone they just met. So sit back and enjoy the show.'";
 		say "     The nereid turns around as she begins to peel the wetsuit off of her body, giving you a fantastic view of her curvy butt and pussy. Once naked, she begins to lean herself against her pink surfboard. Squatting with her legs open, the surfer girl spreads her cunts lips with a lustful gaze in her emerald green eyes. Softly moaning as she inserts one finger into her tempting hole, she asks, 'Is this turning you on, [if Player is female]kitten[else]tiger[end if]?' After you nod, the blonde-haired woman adds another finger while her thumb rubs her clit. As she picks up the tempo, moaning loudly at this point, some of the surfers she was talking to whoop and cheer. This only emboldens the water nymph to go faster, she soon climaxes squirting femcum over the sand. The vivacious athlete takes a couple of seconds to catch her breath, but soon puts on her wetsuit and heads back into the water. She gives you a friendly wave and you head off.";
 		now Resolution of Hang Ten is 1; [met and watched her rub herself to climax]
 	else:
+		LineBreak;
 		say "     You tell the nereid you were only interested in how she was able to shred the waves. Taking this in stride, the blonde surfer grins and proclaims, 'Always good to have a fan, if you find a board I could teach you some tricks.' She then paddles out to ride some more waves, having another friendly face on the beach.";
 		now Resolution of Hang Ten is 2; [met and kept things to a clothed, friendly level]
 	now Hang Ten is resolved;
@@ -66,9 +68,11 @@ to say ResolveEvent Parasol Nap:
 	say "     ([link]Y[as]y[end link]) - Tackle the rat.";
 	say "     ([link]N[as]n[end link]) - Walk away.";
 	if Player consents:
+		LineBreak;
 		say "     You rush to knock the perv to the ground. Having his breath knocked out of him by the hard hit, the rodent is unable to get away before the orca male lifeguard approaches. He gives you an appreciative nod while he drags the rat away, saying happily, 'Thanks for the assist. Been trying to catch this guy for a while now. Frigging asshole is going to be banned from the beach.' Wiping the cum off of her thigh with her beach towel, the doggy girl says in a grateful tone, 'Thank you. It's not a fun experience waking up to some guy wanking onto you, I'd rather have that kinda thing happen when I'm awake.' She then gives you an affectionate peck on the cheek. You give a wave goodbye and head off to explore the city again.";
 		now Resolution of Parasol Nap is 1; [drove off the peeper]
 	else:
+		LineBreak;
 		say "     Not wanting to get involved in this business, you let the rodent run past you and hide in a mass of crowded infected. Meanwhile some male orca lifeguard comes running to the canine victim, asking what happened and what the culprit looked like. It seems this is the type of risk that can occur when falling asleep in an open area after P-day.";
 		now Resolution of Parasol Nap is 2; [ignored the peeper]
 	now Parasol Nap is resolved;

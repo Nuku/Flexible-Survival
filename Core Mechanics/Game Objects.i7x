@@ -170,14 +170,12 @@ To process (x - a grab object):
 	else:
 		say "[Usedesc of x]";
 	if x is infectious and "Iron Stomach" is not listed in feats of Player:
-		let found be 0;
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
-			if Name entry is strain of x:
+			if strain of x exactly matches the text Name entry, case insensitively:
 				now MonsterID is y;
-				now found is 1;
+				infect;
 				break;
-		if found is 1, infect;
 	else if x is an armament:
 		if weapon object of Player is x: [unequip]
 			unwield x;
@@ -229,8 +227,8 @@ To process (x - a grab object):
 		else:
 			say "It would not be a good idea to use that on yourself. Spicy eyes!";
 	if tempHungerValue > Hunger of Player and "Tanuki Salts" is listed in Feats of Player:
-		say "Dashing a little tanuki salts helped things along. Mmm, divinely tasty.";
 		PlayerEat 5;
+		say "Dashing a little tanuki salts helped things along. Mmm, divinely tasty.";
 		increase Morale of Player by 5;
 
 
@@ -259,12 +257,12 @@ Usedesc of journal is "[journal use]".
 
 to say journal use:
 	follow the brain descr rule;
-	say "You settle down and start scribbling in your journal about your [descr]. ";
+	say "You settle down and start scribbling in your journal about your [descr] ";
 	if Humanity of Player < 100:
 		let healed be 10 + ( ( level of Player + perception of Player - 10 ) / 2 );
 		if caffeinehigh of Player > 0:
 			now healed is healed / 2;
-			say "Filled with excess, manic energy, you have difficulty sitting still and focusing on your journal. ";
+			say "[line break]Filled with excess, manic energy, you have difficulty sitting still and focusing on your journal. ";
 		if ssmb is true:
 			now healed is ( healed * 3 ) / 2;
 		SanBoost healed;

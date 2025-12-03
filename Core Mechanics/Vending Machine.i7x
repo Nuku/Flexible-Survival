@@ -1,7 +1,7 @@
 Version 1 of Vending Machine by Core Mechanics begins here.
 [ Version 1 - Extracted during dissection of the Story.ni - Wahn]
 
-There is a Cola Vending Machine in Mall Foodcourt. "A broken down vending machine lurks nearby with several, large, soda brands brightly painted onto it." It is fixed in place. It has a description "A vending machine. It appears to dispense soda, but it's broken.".
+There is a Cola Vending Machine in Mall Foodcourt. "A broken down vending machine lurks nearby with several large soda brands brightly painted onto it." It is fixed in place. It has a description "A vending machine. It appears to dispense soda, but it's broken.".
 Cola Vending Machine has a number called dispensed.
 understand "vending machine" as Cola Vending machine.
 
@@ -12,10 +12,10 @@ Carry out vending:
 	say "It's broken! Damn. All that soda. How to get it out?";
 
 Instead of attacking the Cola Vending machine:
-	say "You give the soda machine a solid whack, ";
+	say "You give the soda machine a solid whack.";
 	let the bonus be (( Strength of Player minus 10 ) divided by 2);
 	let the dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: ";
+	say "You roll 1d20([dice])+[bonus] = [dice plus bonus]: ";
 	increase dice by bonus;
 	if dice > 15:
 		say "A soda can pops out!";

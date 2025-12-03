@@ -27,6 +27,7 @@ to say ResolveEvent One flew into the Cuckoos Nest:
 	say "     ([link]Y[as]y[end link]) - Warn the guy.";
 	say "     ([link]N[as]n[end link]) - Don't say anything.";
 	if Player consents:
+		LineBreak;
 		say "     You stop the cuckoo and stumble with your words describing this awkward situation. The bird's eyes light up and he says, 'Oh! Thank you for telling me!' He then starts to sprint down the path, moving quickly towards his home. Curious to see what will happen next, you follow him. As he approaches the tent, the anthro bird stops and peeps at it from behind a bush. You hide there as well so you don't attract any attention.";
 		say "     Through the opening of the tent you can see the cuckoo girl riding the bull's long tapered cock in a reverse cowgirl position, her body exposed for anyone outside the tent to see. Aroused by this the male cuckoo begins to softly stroke his dick. It doesn't take too much longer before the bull bellows a loud moo and comes inside the girl. He takes a second to catch his breath before quickly leaving.";
 		WaitLineBreak;
@@ -34,6 +35,7 @@ to say ResolveEvent One flew into the Cuckoos Nest:
 		now CuckooWatched is 1; [warned the guy and saw the resolution with them happy together]
 		now Resolution of One flew into the Cuckoos Nest is 1;
 	else:
+		LineBreak;
 		say "     Deciding it's not worth it to get involved in this type of drama, you keep your mouth shut and keep walking.";
 		now CuckooWatched is 100; [ignored the cuckoos]
 		now Resolution of One flew into the Cuckoos Nest is 2;
@@ -74,6 +76,7 @@ to say ResolveEvent Two crash into the Cuckoos Nest:
 	say "     ([link]Y[as]y[end link]) - Head inside.";
 	say "     ([link]N[as]n[end link]) - Don't go inside.";
 	if Player consents:
+		LineBreak;
 		say "     Quietly you head into the tent, making sure to leave the entry way open so people can see what goes on inside. Gray is still lost in the fantasy pumping his below average-sized cock. Watching the bird up close you can see a certain charm to his appearance. He has a sleek and slender frame with a build that is in pretty decent shape. The cuckoo has a slightly masculine smell like sandalwood. Fortune favors the bold, so you lick your lips and lean down to his crotch. Softly you start to lick the tapered tip of his avian cock.";
 		say "     Still lost in fantasy, the slim male groans and groggily states, 'Now you want to get spit-roasted... babe that's so fucking hot!' It seems like your involvement has made Gray's role in his fantasy more active. Feeling more daring you decide to start sucking on his dick at an unhurried pace, gradually going further down the shaft with each bob of your head. After a few long moments of this drawn-out oral you reach the much thicker base, by now the entranced avian has stopped stroking using his claw-like hands and is now caressing his body.";
 		WaitLineBreak;
@@ -91,9 +94,16 @@ to say ResolveEvent Two crash into the Cuckoos Nest:
 		WaitLineBreak;
 		say "     After stepping out of the entrance of the tent, you start to walk back the way you came. The campfire tenders are eyeing you with great interest. [if BodyName of Player is listed in infections of CanineList]The squirrel says boldly, 'Ha! I knew it was gonna be some doggy this time.' The fox rolls his eyes and says, 'We didn't say if it would be for the man or woman, but what the hell I'll throw you a bone.'[else if BodyName of Player is listed in infections of EquineList]The fox says matter-of-factly, 'Told you it'd be a horse.' Grumbling, the squirrel hands two marshmallows over and says, 'Yeah yeah... whatever.'[else]Both infected shrug and state that it is a draw and wonder which symbol the couple is going to carve as your tally mark.[end if]";
 		[CreatureSexAftermath "Player" receives "OralCock" from "Gray" - TODO: placeholder infection for Gray, a cuckoo]
+		if OralVirgin of Player is true:
+			now OralVirgin of Player is false;
+			say "     [bold type]You have lost your oral virginity to Gray![roman type][line break]";
+			now FirstOralPartner of Player is "Gray";
+			now SexuallyExperienced of Player is true;
+		increase OralCockTaken of Player by 1;
 		now CuckooWatched is 2;
 		now Resolution of Two Crash into the Cuckoos Nest is 1;
 	else:
+		LineBreak;
 		say "     Deciding against the idea you start to turn around and walk back down the path. You come across Izzy walking with a studly male deer. It seems neither of the campfire cooks are going to win today's bet.";
 		now CuckooWatched is 99;
 		now Resolution of Two Crash into the Cuckoos Nest is 2;
@@ -131,6 +141,7 @@ to say ResolveEvent Avian Tent:
 	say "     ([link]Y[as]y[end link]) - Watch.";
 	say "     ([link]N[as]n[end link]) - Don't watch.";
 	if Player consents:
+		LineBreak;
 		say "     You're very interested in seeing how this will play out, so you hide behind a bush that has been quite a popular hiding spot based on the variety of foot or paw-prints surrounding it. Meanwhile, the burly osprey's hands start to cup the sultry femme's perky C cup breasts, and he proclaims in a confident air, 'Girls like you always turn to putty in a real man's grasp.' Then he wraps one hand around her neck while the other rubs the clit, saying in her ear-hole, 'Admit it, a needy slut like you want to be dominated.' Shuddering, the female nods and breathlessly utters, 'Yes. I want it... no, I need it!' The dominant raptor grips Izzy's neck tighter and growls, 'You forgot to say sir.' Gasping from the pain and pleasure, the woman says between short breaths, 'Sorry sir! Please forgive me sir!' Smirking, the dom yields his grip and orders the sultry cuckoo to worship his cock.";
 		say "     The now-submissive cuckooess hops off his lap and turns around giving you a very good view of her pussy, slick with her juices. Next she starts to lick the tapered tip of the pilot's impressive rod. In between licks the subby birdy teasingly says, 'How are you able to fit inside a cockpit when you're packing something like this sir? Having a giant joystick to deal with is probably why you crashed.' Grabbing the back of her head the sea hawk responds, 'You talk too much,' and pushes her head forward so that the mouthy femme can take his dick all the way to the enlarged base. 'I know a better use for that mouth of yours,' the forceful osprey says next. With the tapered tip of the pilot's phallus reaching the back of her throat, the woman can only manage to utter a very garbled, 'Yes sir.'";
 		WaitLineBreak;
@@ -145,6 +156,7 @@ to say ResolveEvent Avian Tent:
 		now CuckooWatched is 3; [watched the couple with the osprey partner. Gray won bet]
 		now Resolution of Avian Tent is 1;
 	else:
+		LineBreak;
 		say "     Deciding you don't want to watch this couple's unusual proclivities you walk away from the settlement, hearing the sound of the female's moans grow ever distant.";
 		now CuckooWatched is 4; [did not watch the couple. Izzy won ]
 		now Resolution of Avian Tent is 2;
@@ -172,11 +184,13 @@ to say ResolveEvent Sandwich Shop:
 	say "     ([link]Y[as]y[end link]) - Scavenge inside the store.";
 	say "     ([link]N[as]n[end link]) - Leave the store.";
 	if Player consents:
+		LineBreak;
 		say "     You walk into the back area of the store. The stainless steel sink basin used for washing dishes has been bent and pushed aside by a four foot tall sapling that is piercing the floorboards. Interestingly, only the words '12 inches that'll make your mouth water' and 'try our savory... balls' remain readable on the menu board right beside the little tree, with everything else scratched beyond recognition - what an odd coincidence. Or maybe not - you make out some scraps of paint on the gently swaying branches. Wait, there's not even any wind in here! It is definitively moving on its own.";
 		say "     Who knows who or what that plant might once have been and if it retains some memories of its former self... so you decide to keep your distance as you explore further. All of the refrigerators in the back have already been ransacked, their doors standing wide open. Still, you then look inside them one by one just to be sure, and your persistence is rewarded - there is a small brown paper bag behind a couple of shredded boxes in one of them! You look inside and find a brownie that has been wrapped in plastic with a small note saying, 'Here's a treat for your break, love M'. A small shiver runs down your spine as you imagine what might have happened to the owner of that brownie, or their partner. But hey, waste not want not, so you nevertheless take the food and slide it into your backpack.";
 		ItemGain food by 1;
 		now Resolution of Sandwich Shop is 1;
 	else:
+		LineBreak;
 		say "     Seems a little too risky, with likely no reward, so you exit the store and walk in the opposite direction of where the wolves went.";
 		now Resolution of Sandwich Shop is 2;
 	now Sandwich Shop is resolved;
@@ -217,6 +231,7 @@ to say ResolveEvent Thief's Punishment:
 	say "     ([link]Y[as]y[end link]) - Watch the thief get punished.";
 	say "     ([link]N[as]n[end link]) - Walk away.";
 	if Player consents:
+		LineBreak;
 		say "     You say you will watch, if only to make sure he doesn't get hurt too badly. After a cheerful nod to you, Bridget whispers in her captive's ear, 'Don't worry. I won't bite... hard.' The mouse's legs start shaking and a whimper escapes his throat, to which the tigress says, 'Just kidding... Sheesh can't even take a joke. All right sticky fingers - go kneel down by the bench!' Being let go, the diminutive captive glances towards the edge of the forest as if contemplating another (most likely futile) escape attempt, then gulps visibly and walks over to the bench. There he submissively kneels, his gaze lowered to ground level.";
 		say "     The massive feline walks after him and begins to peel off her shorts - smiling gleefully as she shows off her booty and her aroused pussy. The captured rodent's eyes dart back and forth between the ground and his captor's genitals. In a coy tone Bridget comments, 'You truly are a thief, even now you're stealing glances at me.' The shocked mouse stutters and repeatedly says sorry - drawing a chuckle from her. The tigress pats his cheek gently and smirks, then says cockily, 'You don't need to feel sorry, I've worked hard to get my ass to look like this. If anything I'd be more offended if you weren't peeking. Speaking of... how about you start making up for your mistake by worshiping my glutes?'";
 		WaitLineBreak;
@@ -229,6 +244,7 @@ to say ResolveEvent Thief's Punishment:
 		now BridgetPowellEventVar is 1; [player knows Powell's fate]
 		now Resolution of Thief's Punishment is 1;
 	else:
+		LineBreak;
 		say "     With a shrug, you shake your head and walk away.";
 		now BridgetPowellEventVar is 99; [player ignored Bridget and Powell]
 		now Resolution of Thief's Punishment is 2;
@@ -274,6 +290,7 @@ to say ResolveEvent Thief's Reformation:
 	say "     ([link]Y[as]y[end link]) - Fight.";
 	say "     ([link]N[as]n[end link]) - Walk away.";
 	if Player consents:
+		LineBreak;
 		say "     As you say that you will stand and fight with them, Bridget gives a smile and nod in recognition, then turns her attention to the intruders. Seconds later, the building tension is broken as she lunges at a nearby gila monster with a growl. The fight that explodes in the clearing after that is a rapid affair that you pretty much only remember glimpses from, being in the midst of the chaos and all that. At one point, a gecko charges towards Powell's back - only to have the mouse use his own momentum against him, throwing the surprised reptile over his shoulder to slam into the ground. At the same time, an iguana closes in to take Powell from the flank - but you're there in time to give the opportunist a solid strike that sends him flying.";
 		say "     After some more hitting, punching, tries to bite and even a tail-sweep from one of the reptiles, Bridget decides the battle for your team by grabbing two lizards by their necks and knocking their heads together. As the two scaled fighters drop to the ground unconscious, the monitor lizard gang-leader hisses and runs off with little regard to his underlings. His bruised gang-members quickly snatch up their fallen comrades and hurry after their cowardly boss.";
 		WaitLineBreak;
@@ -285,6 +302,7 @@ to say ResolveEvent Thief's Reformation:
 		now BridgetPowellEventVar is 2; [helped them in the fight]
 		now Resolution of Thief's Reformation is 1;
 	else:
+		LineBreak;
 		say "     You decide to play it safe and let the two jocks fight their own battle. Wishing them the best of luck, you quickly dash into the forest on the opposite side of the clearing to the lizard gang-members. Behind you, there are sounds of a tough scuffle.";
 		now BridgetPowellEventVar is 98; [left them to fight alone]
 		now Resolution of Thief's Reformation is 2;

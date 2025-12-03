@@ -83,12 +83,13 @@ to say BeatTheFrostDrake:
 		say "     [link](3)[as]3[end link] - Leave.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link] to chat him up, [link]2[end link] to fuck or [link]3[end link] to leave.";
+		LineBreak;
 		if calcnumber is 1:
 			say "     You ask the creature if he's alright, and calm enough to talk now. He groans and attempts to sit up to face you directly. He rumbles with a low growl but nods his head in understanding. Nodding your head for him to speak, you raise an eyebrow and wait for a reply. '...What do you want creature?' he huffs out.";
 			say "[FrostDrakeTalkMenu]";
@@ -137,18 +138,20 @@ to say Frost DrakeSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Suck him off"):
 					say "[SuckFrostDrake]";
-				if (nam is "Demand oral"):
+				else if (nam is "Demand oral"):
 					say "[OralFrostDrake]";
-				if (nam is "Fuck his ass"):
+				else if (nam is "Fuck his ass"):
 					say "[FuckFrostDrake]";
-				if (nam is "Ride the drake"):
+				else if (nam is "Ride the drake"):
 					say "[FrostDrakeRide]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You back away and shake your head.";
 			wait for any key;
@@ -422,17 +425,19 @@ to say FrostDrakeTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "His species"):
 					say "[FrostDrakeTalk1]";
-				if (nam is "His origin"):
+				else if (nam is "His origin"):
 					say "[FrostDrakeTalk2]";
-				if (nam is "His plans"):
+				else if (nam is "His plans"):
 					say "[FrostDrakeTalk3]";
-				wait for any key;
+				AttemptToWait;
 				say "[FrostDrakeTalkMenu]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     As you are about to wave him off and conclude your little talk, the frost drake clears his throat and says, 'You are indeed a strange creature, very curious. Why is that exactly?'";
 			say "     [bold type]Just how curious were you planning on being?[roman type][line break]";
@@ -446,7 +451,7 @@ to say FrostDrakeTalkMenu:
 				LineBreak;
 				say "     Looking over the drake you can't help but appreciate his size, and his exotic nature. You've beaten back enough of these big guys to know what they're packing. And that makes your mind wander to the possibilities of what this big, scary brute can do. You pause, looking him up and down exaggeratedly, then tell him that he's quite an impressive specimen of his kind and you'd like to gain more intimate knowledge of him personally. The white-scaled drake grins, flashing rows of sharp draconic teeth at you, ember set eyes burning into your body, clearly undressing you visually already. You give him a coy smile in return and stride closer to the drake.";
 				say "[FrostDrakeTalkSex]";
-			wait for any key;
+			AttemptToWait;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -466,34 +471,36 @@ to say FrostDrakeTalk3:
 to say FrostDrakeTalkSex:
 	if Player is female: [female+herm]
 		say "     Striding up to the large draconic-like creature you run a hand delicately across his scales, they're surprisingly warm for a drake whose natural habitat is cold. And it only gets hotter as you run it down his side, all while the drake looks on at you pensively. You suppose now that you're on talking terms you can move on to more... pleasant terms. And your eyes locked on his transmit just that. Then they flicker down to his lower belly, searching for his familiar member. Sure enough, it's there, nearly at its full size, clearly excited by your suggestive language and movements.";
+		WaitLineBreak;
 		say "     The drake flicks a long draconic tongue out, briefly lapping at your neck before reeling back and licking his lips. 'If we're to do this-' he growls lustfully. 'We'll be making sure it's a proper mating.' Again he grins, and this time you're certain it's a smile that flashes your way. You're about to ask what he means when suddenly his strength returns to him and the big drake leaps at you. He hits you with his full weight, pushing you down to the ground below yet not landing on you. A long dark tongue rolls out of his maw and licks you efficiently across the face. His sharp claws hold you at your shoulders while the dominant drake's long tongue travels down your neck and across your upper body.";
-		WaitLineBreak;
 		say "     You're momentarily startled, but also further aroused by his sudden sexual aggression. Your hands reach up to grip his brawny, tough scales atop his clawed fore-legs for support while his tongue works its magic on your body, giving the horny beast a proper taste of you. Urging him to continue with little moans of approval when his tongue runs over a sensitive place you strip yourself so you're made totally bare to your new found draconic lover. The drake clearly approves, as does his tongue as it once again laps across your face, his lustful growls and hisses clearly euphoric at the taste of you. The dark tongue grazes and flicks across your lips, and in response you open your own saliva glazed lips and lick back, getting quite into the intimate mating and kissing yourself.";
+		WaitLineBreak;
 		say "     Your mouth opens wide, accepting the thick, slimy organ with lusty eagerness. The warm length lashes around in your mouth, exploring while your own tongue struggles to keep up. Suddenly it's withdrawn back, leaving behind a trail of saliva as it slurps back into his mouth. The drake growls near your ear, 'I am going to breed you, place a great egg in your womb.' You pat him on the side of the scaly head, correcting him by stating 'We're going to breed' before wrapping your lower half around his torso, and urging him to continue with a moan.";
-		WaitLineBreak;
 		say "     That rock hard, burning hot protrusion pokes at your tummy, eliciting a small giggle from you as you use your lower half to pull the drake closer to you. The drake has a similar idea, he lurches forward until the tip of his reptilian-like member presses into your womanhood. It penetrates you ever so slightly, just enough to send a shockwave of pleasure up your spine. His growls intensify, just as he thrusts forward fully, embedding his entire nearly foot long, scaly member into your weeping sex.";
+		WaitLineBreak;
 		say "     You pull your head back and moan as he slides deep into you, stretching you in a most wondrous way. His scaly penis tickles at your sensitive pussy as you wrap your limbs around your draconic lover. The frost drake humps at your prone form, his growls and hisses fill your ear just like his scale-bumped member sawing in and out of your sex. The heat of his underside washes over you like a blanket of sex, his claws dig into the ground below while he hilts himself inside you, now over eager to screw your willing body into pregnancy. You tighten your hold on him, gripping onto his warm body as an anchor to ground yourself on as he fucks you into oblivion.";
-		WaitLineBreak;
 		say "     It doesn't take much longer for you to come to a screaming climax. The drake moves methodically in and out of you until his growls turn into a roar as you clamp down around his hilted member, keeping it buried inside you as he unloads a torrent of draconic jism inside your hungry cunt. [if Player is herm]Your other male member pulses and shoots jets of spooge all over your own chest as you're brought to various amounts of ecstasy. [end if]White hot cum paints your womb in sticky spunk, sending warm ecstasy through your body as the thrusts slowly calm to a gentle hump. Globs of thick seed ooze from your quim and drip onto the ground below. He pauses all together, embedded deeply inside you as his weight rests atop you enough to press tight against your form but not enough to crush you. The brief cuddle respite is soon ended as the drake starts to move again.";
-		say "     Your cum slicked tunnel makes low slurping sounds as you mewl in pleasure and he starts to pull out, only to slam back into your sloppy cunt. You pitch your head back and moan loudly into the open sky, your limbs desperately clawing at iron hard scales. His rhythm is sporadic and lust fueled, his hips slam into yours in the most painfully appealing way, sending jolts up your body with every thrust and sending spurts of cum splattering over yours and his form. You're sent into a haze of orgasms, one after the other. The exploding bliss has you nearly drooling all over yourself, while droplets of warm saliva drip onto your face from the lust-filled beast.";
 		WaitLineBreak;
+		say "     Your cum slicked tunnel makes low slurping sounds as you mewl in pleasure and he starts to pull out, only to slam back into your sloppy cunt. You pitch your head back and moan loudly into the open sky, your limbs desperately clawing at iron hard scales. His rhythm is sporadic and lust fueled, his hips slam into yours in the most painfully appealing way, sending jolts up your body with every thrust and sending spurts of cum splattering over yours and his form. You're sent into a haze of orgasms, one after the other. The exploding bliss has you nearly drooling all over yourself, while droplets of warm saliva drip onto your face from the lust-filled beast.";
 		say "     And again he's hilting himself inside you, shooting another potent load of jism into your womb, turning your sex tunnel into a frothy mess of draconic cum. Your vision goes black and blurry as every sense you have at that moment is overtaken by this powerful drake mating your cunt better than he has the right to. Between blacking out from overwhelming sensitivity and moaning like the ready mate you are, your last thought before the drake starts up again, hammering deeper than most have ever into you, are of how full you are, how utterly filled and fucked you must look right now.";
+		WaitLineBreak;
 		say "     You awaken sometime later, covered head to toe in cum and sweat. The handsome frost drake has fucked you properly like he said. Looking down you see he made good on that word, your tummy is slightly bloated from the sheer amount of cum pumped into your womb. Your thighs are caked in cum and are shaking slightly from your orgasmic high. Your sexy dragon mate is nowhere in sight though, he must have fucked you like the hardy breeder he is then took off. Perhaps you'll see the drake again one day, and perhaps this little union really will bare something, despite the drake's word on his kind's fertility. Regardless you get to shaky feet and clean yourself off as best you can before continuing your journey.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Frost Drake";
 	else:	 [male/neuter]
 		say "     Striding up to the large draconic-like creature you run a hand delicately across his scales, they're surprisingly warm for a drake whose natural habitat is cold. And it only gets hotter as you run it down his side all while the drake looks on at you pensively. You suppose now that you're on talking terms you can move on to more... pleasant terms. And your eyes locked on his transmit just that. Then they flicker down to his lower belly, searching for his familiar member. Sure enough, it's there, nearly at its full size, clearly excited by your suggestive language and movements.";
+		WaitLineBreak;
 		say "     The drake flicks a long draconic tongue out, briefly lapping at your neck before reeling back and licking his lips. 'If we're to do this-' he growls lustfully. 'We'll be making sure it's a proper mating, ass or not.' Again he grins, and this time you're certain it's a smile that flashes your way. You're about to ask what he means when suddenly his strength returns to him and the big drake leaps at you. He hits you with his full weight, pushing you down to the ground below yet not landing on you. A long dark tongue rolls out of his maw and licks you efficiently across the face. His sharp claws hold you at your shoulders while the dominant drake's long tongue travels down your neck and across your upper body.";
-		WaitLineBreak;
 		say "     You're startled, if not further aroused by his sudden sexual aggression. Your hands reach up to grip his brawny, tough scales atop his clawed fore-legs for support while his tongue works its magic on your body, giving the horny beast a proper taste of you. Urging him to continue with little moans of approval when his tongue runs over a sensitive place you strip yourself so you're made totally bare to your new found draconic lover. The drake clearly approves, as does his tongue as it once again laps across your face, his lustful growls and hisses clearly euphoric at the taste of you. The dark tongue grazes and flicks across your lips, and in response you open your own saliva glazed lips and lick back, getting quite into the intimate mating and kissing yourself.";
+		WaitLineBreak;
 		say "     Your mouth opens wide, accepting the thick, slimy organ with lusty eagerness. The warm length lashes around in your mouth, exploring while your own tongue struggles to keep up. Suddenly it's withdrawn back, leaving behind a trail of saliva as it slurps back into his mouth. The drake growls near your ear, 'I am going to fuck you, place a great egg in your ass if I can.' You pat him on the side of the scaly head, correcting him by stating 'We're going to fuck' before wrapping your lower half around his torso, and urging him to continue with a moan.";
-		WaitLineBreak;
 		say "     That rock hard, burning hot protrusion pokes at your tummy[if Player is male]. It bumps the tip of your own member, sending a spark of pleasure up your own groin[end if], eliciting a small giggle from you as you use your lower half to pull the drake closer to you. The drake has a similar idea, he lurches forward until the tip of his reptilian-like member presses into your ass. It penetrates you ever so slightly, just enough to send a shockwave of pleasure up your spine. His growls intensify, just as he thrusts forward fully, embedding his entire nearly foot long, scaly member into your clenching hole.";
+		WaitLineBreak;
 		say "     You pull your head back and moan as he slides deep into you, stretching you in a most wondrous way. His scaly penis tickles at your sensitive asshole as you wrap your limbs around your draconic lover. The frost drake humps at your prone form, his growls and hisses fill your ear just like his scale-bumped member sawing in and out of your butt. The heat of his underside washes over you like a blanket of sex, his claws dig into the ground below while he hilts himself inside you, now over eager to screw your willing body into a fucked-happy mess. You tighten your hold on him, gripping onto his warm body as an anchor to ground yourself on as he fucks you into oblivion.";
-		WaitLineBreak;
 		say "     It doesn't take much longer for you to come to a screaming climax. The drake moves methodically in and out of you until his growls turn into a roar as you clamp down around his hilted member. Keeping it buried inside you as he unloads a torrent of draconic jism inside your hungry gripping colon. [if Player is male]Your own cock throbs and pulses, shooting forth and draining its contents between you and the drake, painting both of you. [end if]White hot cum paints your innards in sticky spunk, sending warm ecstasy through your body as the thrusts slowly calm to a gentle hump. Globs of thick seed ooze from your stretched hole and drip onto the ground below. He pauses all together, embedded deeply inside you as his weight rests atop you enough to press tight against your form but not enough to crush you. The brief cuddle respite is soon ended as the drake starts to move again.";
-		say "     Your cum slicked tunnel makes low slurping sounds as you mewl in pleasure and he starts to pull out, only to slam back into your sloppy ass. You pitch your head back and moan loudly into the open sky, your limbs desperately clawing at iron hard scales. His rhythm is sporadic and lust fueled, his hips slam into yours in the most painfully appealing way, sending jolts up your body with every thrust and sending spurts of cum splattering over yours and his form. You're sent into a haze of orgasms, one after the other. The exploding bliss has you nearly drooling all over yourself, while droplets of warm saliva drip onto your face from the lust-filled beast.";
 		WaitLineBreak;
+		say "     Your cum slicked tunnel makes low slurping sounds as you mewl in pleasure and he starts to pull out, only to slam back into your sloppy ass. You pitch your head back and moan loudly into the open sky, your limbs desperately clawing at iron hard scales. His rhythm is sporadic and lust fueled, his hips slam into yours in the most painfully appealing way, sending jolts up your body with every thrust and sending spurts of cum splattering over yours and his form. You're sent into a haze of orgasms, one after the other. The exploding bliss has you nearly drooling all over yourself, while droplets of warm saliva drip onto your face from the lust-filled beast.";
 		say "     And again he's hilting himself inside you. Shooting another potent load of jism into your ass, turning your anus into a frothy mess of draconic cum. Your vision goes black and blurry as every sense you have at that moment is overtaken by this powerful drake mating your sensitive ass better than he has the right to. Between blacking out from overwhelming sensitivity and moaning like the ready mate you are, your last thought before the drake starts up again, hammering deeper than most have ever into you, are of how full you are, how utterly filled and fucked you must look right now.";
+		WaitLineBreak;
 		say "     You awaken sometime later, covered head to toe in cum and sweat. The handsome frost drake has fucked you properly like he said. Looking down you see he made good on that word, your tummy is slightly bloated from the sheer amount of cum pumped into your ass. Your thighs are caked in cum and are shaking slightly from your orgasmic high. Your sexy dragon mate is nowhere in sight though, he must have fucked you like the hardy breeder he is then took off. Perhaps you'll see the drake again one day. Regardless you get to shaky feet and clean yourself off as best you can before continuing your journey.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Frost Drake";
 

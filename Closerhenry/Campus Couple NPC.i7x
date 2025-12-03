@@ -140,11 +140,10 @@ Instead of conversing the Jadako:
 		say "     ERROR: Jadako shouldn't be where a player can see him yet and said player should not be able to be in the Jadako's Room! Please report to Closerhenry on the FS Discord and quote this tracking number for easier bugfixing: [CampusCoupleRelationship]";
 	else:
 		say "     You approach the colorful feline, who places his hand on his hip and stands waiting.";
-		wait for any key;
+		AttemptToWait;
 		say "[JadakoTalkMenu]";
 
 to say JadakoTalkMenu:
-	LineBreak;
 	say "What do you want to talk with Jadako about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -164,6 +163,7 @@ to say JadakoTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Ask him what sport he plays";
 	[]
+	Sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -176,16 +176,18 @@ to say JadakoTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Himself"):
 					say "[JadakoTalk1]";
-				if (nam is "Coach Weber"):
+				else if (nam is "Coach Weber"):
 					say "[JadakoTalk2]";
-				if (nam is "Sports"):
+				else if (nam is "Sports"):
 					say "[JadakoTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from Jadako, who looks at you a little funny. 'OK, nevermind, I guess?' he questions.";
 			wait for any key;
@@ -207,11 +209,10 @@ Instead of conversing the Joseph:
 		say "     ERROR: Joseph shouldn't be where a player can see him yet and said player should not be able to be in the Jadako's Room! Please report to Closerhenry on the FS Discord and quote this tracking number for easier bugfixing: [CampusCoupleRelationship]";
 	else:
 		say "     You approach the muscular canine, who looks at you warmly. 'Is there something you want to talk about?'";
-		wait for any key;
+		AttemptToWait;
 		say "[JosephTalkMenu]";
 
 to say JosephTalkMenu:
-	LineBreak;
 	say "What do you want to talk with Joseph about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -231,6 +232,7 @@ to say JosephTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Ask him what sport he teaches";
 	[]
+	Sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -243,16 +245,18 @@ to say JosephTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Himself"):
 					say "[JosephTalk1]";
-				if (nam is "Jadako"):
+				else if (nam is "Jadako"):
 					say "[JosephTalk2]";
-				if (nam is "Sports"):
+				else if (nam is "Sports"):
 					say "[JosephTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from Joseph. He gives you a humorous look, before saying, 'If there's anything you need to talk about, I'm all ears.'";
 			wait for any key;
@@ -276,7 +280,7 @@ Instead of fucking the Jadako:
 		say "     'Hey, sorry to be a bummer, but I'm not really up to it right now... maybe later? Sorry, I'm still a bit worn out from last time,' Jadako sighs.";
 	else:
 		say "     You ask Jadako how he and Joseph feel about going for a round, who both agree they're up for it.";
-		wait for any key;
+		AttemptToWait;
 		say "[CampusCoupleSexMenu]";
 
 Instead of fucking the Joseph:
@@ -284,11 +288,10 @@ Instead of fucking the Joseph:
 		say "     'Sorry to disappoint, but Jadako is still recovering. You can wait until he's ready, right?' he asks, turning you down.";
 	else:
 		say "     You ask Joseph how he and Jadako feel about going for a round, who both agree they're up for it.";
-		wait for any key;
+		AttemptToWait;
 		say "[CampusCoupleSexMenu]";
 
 to say CampusCoupleSexMenu:
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -321,16 +324,18 @@ to say CampusCoupleSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Be Spitroasted"):
 					say "[CampusCoupleSex1]";
-				if (nam is "Spitroast Jadako"):
+				else if (nam is "Spitroast Jadako"):
 					say "[CampusCoupleSex2]";
-				if (nam is "Cockworship"):
+				else if (nam is "Cockworship"):
 					say "[CampusCoupleSex3]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You change your mind, deciding now isn't a good time. The two understand, since they can always fuck each other later.";
 			wait for any key;

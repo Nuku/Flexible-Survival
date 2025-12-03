@@ -103,7 +103,7 @@ When Play begins:
 	now defeated entry is "[ebdrakedef]";
 	now victory entry is "[ebdrakevic]";
 	now desc entry is "[ebdrakedesc]";
-	now face entry is "distinctly draconic head, a pair of horns sprouting from its sides, curving back such that the tips nearly connect behind you. A set of faintly glowing, fiery eyes match your fierce set of teeth arraying your";
+	now face entry is "of a distinctly draconic head, a pair of horns sprouting from its sides, curving back such that the tips nearly connect behind you. A set of faintly glowing, fiery eyes match your fierce set of teeth arraying your face";
 	now body entry is "tall and powerful. Your hands wield a fearsome set of claws, though they can be sheathed to not obstruct your articulation, and a similar set adorn your now-digitigrade feet. A set of under-developed wings also adorn your back";
 	now skin entry is "an array of [one of]deep[or]abyssally[at random] dark, purple scales for";
 	now tail entry is "You have a long and powerful tail. Quite prehensile, it narrows to a sharp tip that sings as it moves through the air.";
@@ -289,7 +289,7 @@ name	desc	weight	object
 
 ebonflame scale is a grab object.
 ebonflame scale is infectious. Strain of ebonflame scale is "Ebonflame Drake".
-Usedesc of ebonflame scale is "You swallow the dark scale. It's extremely bitter and hot to the taste, like eating something charred black by an open fire.[line break]".
+Usedesc of ebonflame scale is "     You swallow the dark scale. It's extremely bitter and hot to the taste, like eating something charred black by an open fire.[line break]".
 
 instead of sniffing ebonflame scale:
 	say "It smells of something burnt to a crisp.";

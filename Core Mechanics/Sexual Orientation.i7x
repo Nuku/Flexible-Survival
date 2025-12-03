@@ -23,7 +23,7 @@ to PlayerSexualOrientationMenu:
 	let OrientationMenuExit be 0;
 	while OrientationMenuExit is 0:
 		clear the screen;
-		say "[bold type]Interested in: (select Yes for all that apply)[roman type][line break]";
+		say "[bold type]Interested in (select Yes for all that apply):[roman type][line break]";
 		say "(1) [link]Males (cock)[as]1[end link] - [if MaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
 		say "(2) [link]Trans Males (flat chest, pussy)[as]2[end link] - [if TransMaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
 		say "(3) [link]Females (pussy)[as]3[end link] - [if FemaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
@@ -33,12 +33,12 @@ to PlayerSexualOrientationMenu:
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 2 is 2:
-			say "Choice? (0-6)>[run paragraph on]";
+			say "Choice? (0-6)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 6:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 6.";
 		if calcnumber is 1:
 			if MaleInterest of Player is true:
 				now MaleInterest of Player is false;

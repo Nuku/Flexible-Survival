@@ -393,7 +393,7 @@ Weapon Damage of metal baseball bat is 8.
 Weapon Type of metal baseball bat is "Melee".
 Objsize of metal baseball bat is 3.
 Hitbonus of metal baseball bat is 0. [nothing special]
-Scent of metal baseball bat is  "The bat smells of metal and traces of smoke.".
+Scent of metal baseball bat is "The bat smells of metal and traces of smoke.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -520,7 +520,7 @@ Hitbonus of zephyr bashing riot shield is 0. [nothing special]
 Scent of the zephyr bashing riot shield is "The Zephyr bashing riot shield smells faintly of suppressive authority.".
 
 to say RiotShieldAttackDesc:
-	say "     A black shield that Zephyr's riot security uses to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]RSProtectMode[end link] though, and direct your shield to more defensive purposes instead. ";
+	say "A black shield that Zephyr's riot security uses to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]RSProtectMode[end link] though, and direct your shield to more defensive purposes instead. ";
 
 riotshieldProtectMode is an action applying to one topic.
 
@@ -532,9 +532,9 @@ check riotshieldProtectMode:
 carry out riotshieldProtectMode:
 	if zephyr bashing riot shield is wielded:
 		unwield zephyr bashing riot shield silently;
-		say "     You lower your shield and look at it, contemplating how you can defend yourself instead of using it as a blunt weapon.";
+		say "You lower your shield and look at it, contemplating how you can defend yourself instead of using it as a blunt weapon.";
 	else:
-		say "     You look at your shield, contemplating how you can defend yourself instead of using it as a blunt weapon.";
+		say "You look at your shield, contemplating how you can defend yourself instead of using it as a blunt weapon.";
 	ItemLoss zephyr bashing riot shield by 1;
 	ItemGain zephyr protective riot shield by 1;
 
