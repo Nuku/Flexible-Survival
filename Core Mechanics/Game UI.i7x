@@ -34,15 +34,15 @@ First for constructing the status line (this is the bypass status line map rule)
 
 Table of Fancy Status
 left	central	right
-"Location: [Location of Player][if Location of Player is fasttravel] ([link]Navpoint[as]nav[end link])[end if]"	"Name: [if Player is not defaultnamed][Name of Player][else][link]Pick one?[as]rename[end link][end if] | Pronouns: [link][PronounChoice of Player][as]set pronouns[end link] - [SubjectPro of Player]/[PosAdj of Player] | Condition: [SleepMessage], [AlcState] | [link]Inventory[as]i[end link] | [link]Feats[as]FeatList[end link] | [link]Allies[as]Allies[end link] | [link]Sex Stats[as]SexStats[end link]"	"HP: [HP of Player]/[MaxHP of Player]"
+"Location: [Location of Player][if Location of Player is fasttravel] ([statuslink 1]Navpoint[terminate link])[end if]"	"Name: [if Player is not defaultnamed][Name of Player][else][statuslink 2]Pick one?[terminate link][end if] | Pronouns: [statuslink 3][PronounChoice of Player][terminate link] - [SubjectPro of Player]/[PosAdj of Player] | Condition: [SleepMessage], [AlcState][if hypernull is not 1] | [statuslink 4]Inventory[terminate link] | [statuslink 5]Feats[terminate link] | [statuslink 6]Allies[terminate link] | [statuslink 7]Sex Stats[terminate link][end if]"	"HP: [HP of Player]/[MaxHP of Player]"
 "Date: [DateYear]-[DateMonth]-[DateDay], Time: [time of day]"	"STR: [strength of Player] | DEX: [dexterity of Player] | STA: [stamina of Player] | CHA: [Charisma of Player] | INT: [intelligence of Player] | PER: [perception of Player]"	"XP: [XP of Player]/[level up needed]"
 "Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"Hunger: [hunger of Player]/100 | Thirst: [thirst of Player]/100 | Libido: [Libido of Player]/100 | Humanity: [humanity of Player]/100"	"LVL: [level of Player]"
-"Freecred: [freecred]"	"[link]Help[as]HelpBookLookup[end link] | Game Version (Serial): [serial number][if NewGraphicsInteger is not 0] | Art by: [ngraphics_currentartist] ([link]art credits[end link])[end if]"	"Score: [score]/[maximum score]"
+"Freecred: [freecred]"	"[statuslink 8]Help[terminate link] | Game Version (Serial): [serial number][if NewGraphicsInteger is not 0] | Art by: [ngraphics_currentartist] ([statuslink 9]art credits[terminate link])[end if]"	"Score: [score]/[maximum score]"
 
 [Optional Version for narrower screens]
 Table of Narrow Status
 left	right
-"Location: [Location of Player][if Location of Player is fasttravel] ([link]Navpoint[as]nav[end link])[end if]"	"HP: [HP of Player]/[MaxHP of Player]"
+"Location: [Location of Player][if Location of Player is fasttravel] ([statuslink 1]Navpoint[terminate link])[end if]"	"HP: [HP of Player]/[MaxHP of Player]"
 "Date: [DateYear]-[DateMonth]-[DateDay], Time: [time of day]"	"XP: [XP of Player]/[level up needed]"
 "Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"LVL: [level of Player]"
 "Freecred: [freecred]"	"Score: [score]/[maximum score]"
@@ -52,6 +52,19 @@ When play begins:
 
 To say level up needed:
 	say "[if Player is fastlearning][((level of Player plus 1) times 8)][else][(level of Player plus 1) times 10][end if]";
+
+statusindex is a list of numbers that varies. [stores the hyperlink list index for every link in the status bar]
+statuslinks is always {"nav", "rename", "set pronouns", "i", "FeatList", "Allies", "SexStats", "HelpBookLookup", "art credits"}.
+
+to say statuslink (N - number):
+	if number of entries in statusindex is not number of entries in statuslinks:
+		change statusindex to have (number of entries in statuslinks) entries;
+	if entry N of statusindex < 1 or entry N of statusindex > number of entries in hyperlink list:
+		now entry N of statusindex is number of entries in hyperlink list;
+	if hyperlink list is empty or entry (entry N of statusindex) of hyperlink list is not entry N of statuslinks: [probably the hyperlink list was recently cleared, so we need to add or find the link again, storing the new index]
+		linkfind entry N of statuslinks;
+		now entry N of statusindex is hyperindex;
+	say "[set link entry N of statusindex]";
 
 Part 2 - Command Prompt
 
@@ -66,101 +79,102 @@ When play begins:
 	now the command prompt is "[promptsay]";
 
 to say promptsay:
-	let x be the location of the player;
 	if companionList of Player is not empty:
 		repeat with y running through companionList of Player:
 			if NPCObject of y is not Nullpet:
 				now NPCObject of y is in location of Player;
-	let z be the number of entries in invent of x;
-	if z > 0:
-		say "Visible Objects: ";
-		repeat with q running through invent of x:
-			if there is a name of q in the Table of Game Objects:
-				choose a row with name of q in the Table of Game Objects;
-				now object entry is part of Player;
-			say "[link][q][as]get [q][end link] ";
-		say " [link]get everything[as]get all[end link]";
-		say "[line break]";
-	else:
-		repeat with k running through grab objects:
-			now k is nowhere;
 	[invisibly attaching the carried objects to keep the rickety FS inventory system going]
-	repeat with j running through owned grab objects:
-		now j is a part of Player;
-	if Player is in Bunker:
-		repeat with j running through stored grab objects:
-			now j is a part of Player;
+	repeat through Table of Game Objects:
+		if object entry is owned or (Player is in Bunker and object entry is stored):
+			if object entry is nowhere, now object entry is part of Player;
+		else if object entry is part of Player:
+			now object entry is nowhere;
+	if number of entries in invent of location of Player > 0:
+		say "Visible Objects: ";
+		repeat with q running through invent of location of Player:
+			if q is a name listed in Table of Game Objects:
+				now object entry is part of Player;
+			linkfind "get [q]";
+			say "[set link hyperindex][q][terminate link] ";
+		if hypernull is not 1:
+			linkfind "get all";
+			say "[bracket][set link hyperindex]get everything[terminate link][close bracket]";
+		say "[line break]";
 	say "Status: ";
 	if hunger of Player > 30:
-		say "[link][bracket]HUNGRY[close bracket][as]eat food[end link] ";
+		say "[promptlink 1][bracket]HUNGRY[close bracket][terminate link] ";
 	if thirst of Player > 30:
-		say "[link][bracket]THIRSTY[close bracket][as]drink water[end link] ";
+		say "[promptlink 2][bracket]THIRSTY[close bracket][terminate link] ";
 	if humanity of Player < 50:
-		say "[link][bracket]UNHINGED[close bracket][as]use journal[end link] ";
-	say "[link][bracket]Inv[close bracket][as]inventory[end link] ";
+		say "[promptlink 3][bracket]UNHINGED[close bracket][terminate link] ";
+	say "[promptlink 4][bracket]Inv[close bracket][terminate link] ";
 	if scenario is "Researcher" or nanitemeter > 0:
-		say "[link][bracket]Vial[close bracket][as]Vial Inventory[end link] ";
-	say "[link][bracket]Rest[close bracket][as]rest[end link] ";
-	if ObserveAvailable of x is true:
-		say "[link][bracket]Observe[close bracket][as]observe[end link] ";
-	say "[link][bracket]Save[close bracket][as]save[end link] ";
-	say "[link][bracket]Restore[close bracket][as]restore[end link] ";
-	say "[link][bracket]Export Progress[close bracket][as]export progress[end link] ";
-	say "[link][bracket]Import Progress[close bracket][as]import progress[end link] ";
+		say "[promptlink 5][bracket]Vial[close bracket][terminate link] ";
+	say "[promptlink 6][bracket]Rest[close bracket][terminate link] ";
+	if ObserveAvailable of location of Player is true:
+		say "[promptlink 7][bracket]Observe[close bracket][terminate link] ";
+	say "[promptlink 8][bracket]Save[close bracket][terminate link] ";
+	say "[promptlink 9][bracket]Restore[close bracket][terminate link] ";
+	say "[promptlink 10][bracket]Export Progress[close bracket][terminate link] ";
+	say "[promptlink 11][bracket]Import Progress[close bracket][terminate link] ";
 	if "Unerring Hunter" is listed in feats of Player and (there is a visible dangerous door or earea of location of Player is not "void"):
-		say "[link][bracket]Enemies[close bracket][as]huntinglist[end link] ";
-		say "[link][bracket]Situations[close bracket][as]situationslist[end link] ";
+		say "[promptlink 12][bracket]Enemies[close bracket][terminate link] ";
+		say "[promptlink 13][bracket]Situations[close bracket][terminate link] ";
 	if NewTypeInfectionActive is true:
-		say "[link][bracket]Enemy Stats[close bracket][as]ShowEncounteredEnemies[end link] ";
+		linkfind "ShowEncounteredEnemies";
+		say "[set link hyperindex][bracket]Enemy Stats[close bracket][terminate link]";
 	say "[line break]";
 	say "Exits:";
 	let vdirections be a list of text; [helps sort valid directions, which can't be sorted itself because it is an inbuilt inform constant.]
-	repeat with nam running through valid directions:
-		if nam is:
-			-- North:
-				add "North" to vdirections;
-			-- Northeast:
-				add "Northeast" to vdirections;
-			-- Northwest:
-				add "Northwest" to vdirections;
-			-- South:
-				add "South" to vdirections;
-			-- Southeast:
-				add "Southeast" to vdirections;
-			-- Southwest:
-				add "Southwest" to vdirections;
-			-- West:
-				add "West" to vdirections;
-			-- East:
-				add "East" to vdirections;
-			-- Up:
-				add "Up" to vdirections;
-			-- Down:
-				add "Down" to vdirections;
-			-- Inside:
-				add "Inside" to vdirections;
-			-- Outside:
-				add "Outside" to vdirections;
-			-- otherwise:
-				add "Error: unknown direction detected, report this bug on discord: [printed name of nam]" to vdirections;
-	sort vdirections in reverse order;
-	repeat with vdir running through vdirections:
-		say " [link][vdir][end link]";
+	repeat with vdir running through valid directions:
+		add printed name of vdir to vdirections;
+	say "[compasslink vdirections]";
 	if location of Player is fasttravel and earea of location of Player is "void":
-		say " [bracket][link]nav[end link][close bracket]";
+		say " [bracket][promptlink 14]nav[terminate link][close bracket]";
 	else if location of Player is fasttravel:
-		say " [bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket]";
+		say " [bracket][promptlink 14]nav[terminate link],";
+		say " [promptlink 15]scavenge[terminate link],";
+		say " [promptlink 16]explore[terminate link][close bracket]";
 	else if earea of location of Player is not "void":
-		say " [bracket][link]scavenge[end link], [link]explore[end link][close bracket]";
+		say " [bracket][promptlink 16]explore[terminate link][close bracket]";
 	say ", Visible Things: ";
 	repeat with y running through the things in the Location of Player:
 		if y is a door, next;
 		if y is the player:
-			say "[link][y][as]look me[end link] ";
+			say "[promptlink 17][y][terminate link] ";
 			next;
-		say "[link][y][as]look [y][end link] ";
-	say "[link]area[as]look[end link]";
-	say "[line break]>";
+		linkfind "look [y]";
+		say "[set link hyperindex][y][terminate link] ";
+	say "[promptlink 18]area[terminate link]";
+	say "[line break]> [run paragraph on]";
+
+promptindex is a list of numbers that varies. [stores the hyperlink list index for most of the static links in the prompt menu, but not the more conditional or variable ones]
+promptlinks is always {"eat food", "drink water", "use journal", "inventory", "Vial Inventory", "rest", "observe", "save", "restore", "export progress", "import progress", "huntinglist", "situationslist", "nav", "scavenge", "explore", "look me", "look"}.
+
+to say promptlink (N - number):
+	if number of entries in promptindex is not number of entries in promptlinks:
+		change promptindex to have (number of entries in promptlinks) entries;
+	if entry N of promptindex < 1 or entry N of promptindex > number of entries in hyperlink list:
+		now entry N of promptindex is number of entries in hyperlink list;
+	if hyperlink list is empty or entry (entry N of promptindex) of hyperlink list is not entry N of promptlinks: [probably the hyperlink list was recently cleared, so we need to add or find the link again, storing the new index]
+		linkfind entry N of promptlinks;
+		now entry N of promptindex is hyperindex;
+	say "[set link entry N of promptindex]";
+
+compassindex is a list of numbers that varies. [stores the hyperlink list index for all of the default navigation direction links]
+compasslinks is always {"west", "northwest", "north", "northeast", "east", "southeast", "south", "southwest", "up", "down", "inside", "outside"}.
+
+to say compasslink (L - list of text):
+	if number of entries in compassindex is not number of entries in compasslinks:
+		change compassindex to have (number of entries in compasslinks) entries;
+	repeat with x running from 1 to number of entries in compasslinks:
+		if entry x of compasslinks is listed in L:
+			if entry x of compassindex < 1 or entry x of compassindex > number of entries in hyperlink list:
+				now entry x of compassindex is number of entries in hyperlink list;
+			if hyperlink list is empty or entry (entry x of compassindex) of hyperlink list is not entry x of compasslinks:
+				linkfind entry x of compasslinks;
+				now entry x of compassindex is hyperindex;
+			say " [set link entry x of compassindex][entry x of compasslinks in title case][terminate link]";
 
 Chapter 3 - Automatic Actions
 
@@ -183,8 +197,6 @@ Chapter 4 - Display Functions
 To AttemptToWait: [use where you want a wait (which might be turned off by player settings)]
 	if waiterhater is 0:
 		wait for any key; [waits if waiting is active]
-	if waiterhater plus hypernull is 0:
-		say "[line break]"; [adds a break after the 'more']
 
 To AttemptToClearHyper: [use where you want a clear (which might be turned off by player settings)]
 	if clearnomore is 0:
@@ -443,105 +455,81 @@ This is the self examine rule:
 		say "You [cunttext]";
 [ ^^ Genital Descriptions Done ]
 	[ Equipment Descriptions Below ]
-	LineBreak;
-	LineBreak;
+	say "[paragraph break]";
 	repeat with x running through equipped owned equipment:
 		if slot of x is "head":
-			if descmod of x is "":
-				break;
-			else:
-				say "[descmod of x] ";
+			if descmod of x is not "", say "[descmod of x] ";
+			break;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "eyes":
-			if descmod of x is "":
-				break;
-			else:
-				say "[descmod of x] ";
+			if descmod of x is not "", say "[descmod of x] ";
+			break;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "face":
-			if descmod of x is "":
-				break;
-			else:
-				say "[descmod of x] ";
+			if descmod of x is not "", say "[descmod of x] ";
+			break;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "neck":
-			if descmod of x is "":
-				break;
-			else:
-				say "[descmod of x] ";
+			if descmod of x is not "", say "[descmod of x] ";
+			break;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "body":
-			if descmod of x is "":
-				break;
-			else:
-				say "[descmod of x] ";
+			if descmod of x is not "", say "[descmod of x] ";
+			break;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "chest":
-			if descmod of x is "":
-				break;
-			else:
-				say "[descmod of x] ";
+			if descmod of x is not "", say "[descmod of x] ";
+			break;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "arms":
-			if descmod of x is "":
-				break;
-			else:
-				say "[descmod of x] ";
+			if descmod of x is not "", say "[descmod of x] ";
+			break;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "hands":
-			if descmod of x is "":
-				break;
-			else:
-				say "[descmod of x] ";
+			if descmod of x is not "", say "[descmod of x] ";
+			break;
 	let CrotchVisible be true;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "legs":
 			now CrotchVisible is false;
-			if descmod of x is "":
-				break;
-			else:
-				say "[descmod of x] ";
+			if descmod of x is not "", say "[descmod of x] ";
+			break;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "waist":
 			now CrotchVisible is false;
-			if descmod of x is "":
-				break;
-			else:
-				say "[descmod of x] ";
+			if descmod of x is not "", say "[descmod of x] ";
+			break;
 	if CrotchVisible is true: [no pants, so undies might be visible]
 		repeat with x running through equipped owned equipment:
 			if slot of x is "crotch":
 				now CrotchVisible is false;
-				if descmod of x is "":
-					break;
-				else:
-					say "[descmod of x] ";
+				if descmod of x is not "", say "[descmod of x] ";
+				break;
 	if CrotchVisible is true: [no pants or undies, so the actual crotch is visible]
 		say "Your [BodyName of Player in lower case] waist and legs are bare-ass naked, exposing your privates for everyone to see. ";
 	let Barefoot be true;
 	repeat with x running through equipped owned equipment:
 		if slot of x is "feet":
-			if descmod of x is "":
-				break;
-			else:
-				say "[descmod of x] ";
-				now Barefoot is false;
+			now Barefoot is false;
+			if descmod of x is not "", say "[descmod of x] ";
+			break;
 	if Barefoot is true:
 		say "You are barefoot right now. ";
-	LineBreak;
 	if weapon object of Player is not journal:
-		say "You are carrying [a printed name of weapon object of Player] just in case of trouble";
+		say "[line break]You are carrying [a printed name of weapon object of Player] just in case of trouble. ";
 		if weapon object of Player is unwieldy:
-			say ". Due to its comparatively [if scalevalue of Player > objsize of weapon object of Player]small[else]big[end if] size, it is [if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) > 3]very unwieldy[else if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) is 3]rather unwieldy[else]somewhat unwieldy[end if] for you to use at the moment";
-		say ". ";
+			say "Due to its comparatively [if scalevalue of Player > objsize of weapon object of Player]small[else]big[end if] size, it is [if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) > 3]very unwieldy[else if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) is 3]rather unwieldy[else]somewhat unwieldy[end if] for you to use at the moment. ";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "end":
-			say " [descmod of x]";
+			say "[descmod of x] ";
 	[ ^^ Eqipment Descriptions Done ]
 	if the player is not lonely:
+		if weapon object of Player is journal:
+			LineBreak;
 		repeat with companion running through companionList of Player:
-			say "Accompanying you is [link][companion][as]look [companion][end link], which is level [level of companion].";
+			say "Accompanying you is [link][companion][as]look [companion][end link], which is level [level of companion]. ";
+	LineBreak;
 	now looknow is 0;
 	rule succeeds;
 
@@ -575,8 +563,7 @@ carry out ListFollowingChildren:
 			say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	[new style children]
 	if number of filled rows in Table of PlayerChildren > 0: [player has new style children]
-		repeat with x running from 1 to number of filled rows in Table of PlayerChildren:
-			choose row x in the Table of PlayerChildren;
+		repeat through Table of PlayerChildren:
 			let Childage be ((Birthturn entry - turns ) divided by 8);
 			if Gender entry is "male":
 				SetMalePronouns for Offspring;
@@ -590,18 +577,18 @@ carry out ListFollowingChildren:
 					say "child";
 				else:
 					say "child '[Name entry]'";
-				say " has a [Head entry] head, [Torso entry] front and [Back entry] back. ";
+				say " has [a Head entry in lower case] head, [Torso entry in lower case] front and [Back entry in lower case] back. ";
 				if ShowLegs entry is true:
-					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry] arms, [Legs entry] legs[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
+					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry in lower case] arms, [Legs entry in lower case] legs[if ShowTail entry is false] and [a Ass entry in lower case] behind[else], [a Ass entry in lower case] behind and [a Tail entry in lower case] tail[end if]. ";
 				else:
-					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry] arms[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
+					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry in lower case] arms[if ShowTail entry is false] and [a Ass entry in lower case] behind[else], [a Ass entry in lower case] behind and [a Tail entry in lower case] tail[end if]. ";
 			else:
 				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
 				if Name entry is "":
 					say "child";
 				else:
 					say "child '[Name entry]'";
-				say " is a pureblood [Head entry]. ";
+				say " is a pureblood [Head entry in lower case]. ";
 			if Albino entry is true:
 				say "[bold type][PosAdjCap of Offspring] pigmentation is muted and almost white, except for the eyes that appear red.[roman type][line break]";
 			else if Melanism entry is true:
@@ -653,6 +640,6 @@ to numberfy (x - a snippet):
 	if the player's command matches "[number]":
 		now calcnumber is the number understood;
 	else:
-		now calcnumber is 0;
+		now calcnumber is -1;
 
 Game UI ends here.

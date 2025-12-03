@@ -54,12 +54,11 @@ Array long_buffer buffer LONG_BUFFER_LEN;
 
 -)
 
-understand "write a note" as WriteANote.
-understand "write note" as WriteANote.
+understand "write a/-- note" as WriteANote.
 
 check WriteANote:
 	if journal is not owned:
-		say "     Sadly, you do not have a journal to note things down in.";
+		say "     Sadly, you do not have a journal to note things down in." instead;
 
 carry out WriteANote:
 	say "[bold type]You open your journal and write...[roman type][line break][line break]";
@@ -74,13 +73,11 @@ carry out WriteANote:
 
 BroweseNotes is an action applying to nothing.
 
-understand "browse through your notes" as BroweseNotes.
-understand "browse my notes" as BroweseNotes.
-understand "browse notes" as BroweseNotes.
+understand "browse through/-- your/my/-- notes" as BroweseNotes.
 
 check BroweseNotes:
 	if journal is not owned:
-		say "     Sadly, you do not have a journal.";
+		say "     Sadly, you do not have a journal." instead;
 
 carry out BroweseNotes:
 	let tdays be "days";
@@ -89,11 +86,14 @@ carry out BroweseNotes:
 	if the number of filled rows in the Table of JournalNotes is 0:
 		say "     You open your journal and page through it, but it seems like you currently do not have any special notes.";
 	else:
-		say "     You open your journal and page through it, eventually finding your special notes:[line break][line break]";
+		say "You open your journal and page through it, eventually finding your special notes:[line break]";
+		say "Type [bold type]crossoutnote <number>[roman type] to [bold type][bracket]X[close bracket][roman type]Cross out a note.";
+		LineBreak;
 		sort the Table of JournalNotes in Date order;
 		repeat with X running from 1 to number of filled rows in the Table of JournalNotes:
 			choose row X from the Table of JournalNotes;
-			say "[bracket][link]X[as]crossoutnote [X][end link][close bracket] [Date entry converted to tmonths]/[Date entry converted to tdays]/[Date entry converted to tyears]: [Note entry][line break]";
+			linkfind "crossoutnote [X]"; [sets hyperindex to the existing or added entry matching text]
+			say "[if hypernull is not 1][set link hyperindex][bracket]X[close bracket][terminate link] [end if]([X]) [Date entry converted to tmonths]/[Date entry converted to tdays]/[Date entry converted to tyears]: [Note entry][line break]";
 
 CrossOutNote is an action applying to one number.
 
@@ -101,7 +101,7 @@ understand "crossoutnote [a number]" as CrossOutNote.
 
 check CrossOutNote:
 	if journal is not owned:
-		say "     Sadly, you do not have a journal.";
+		say "     Sadly, you do not have a journal." instead;
 
 carry out CrossOutNote:
 	choose row number understood in the Table of JournalNotes;
@@ -111,16 +111,12 @@ carry out CrossOutNote:
 
 TearNotes is an action applying to nothing.
 
-understand "rip out notes" as TearNotes.
-understand "rip my notes" as TearNotes.
-understand "rip notes" as TearNotes.
-understand "tear out notes" as TearNotes.
-understand "tear my notes" as TearNotes.
-understand "tear notes" as TearNotes.
+understand "rip out/my/-- notes" as TearNotes.
+understand "tear out/my/-- notes" as TearNotes.
 
 check TearNotes:
 	if journal is not owned:
-		say "     Sadly, you do not have a journal.";
+		say "     Sadly, you do not have a journal." instead;
 
 carry out TearNotes:
 	if the number of filled rows in the Table of JournalNotes is 0:

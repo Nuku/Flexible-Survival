@@ -1332,28 +1332,21 @@ before examining a thing (called t):
 [Inline Project ONLY function]
 to inline_project (x - a figure name):
 	if graphics is true:
-		repeat with y running from 1 to number of filled rows in table of game art:
-			choose row y in table of game art;
-			if icon entry is x and artist entry is not listed in BlockList of Player:
+		if x is a icon listed in Table of Game Art:
+			if artist entry is not listed in BlockList of Player:
 				display x;
 				now ngraphics_currentartist is artist entry; [graphics processing]
 				update the status line;
-				break;
 
 [New Hybrid Project (Reverts to inline if NewGraphics disabled)]
 to project (x - a figure name):
 	if graphics is true and NewGraphics is true:
-		[repeat with z running from 1 to number of filled rows in table of game art:
-			choose row z in Table of Zpc Location Reference;
-			if debugactive is 1 and x is icon entry in Table of Zpc Location Reference:
-				say "Found zpc Figure! attempting projection...";]
 		if x is currently shown picture:
 			follow the current graphics drawing rule; [ensure output matches normal execution]
 			stop the action;
-		repeat with y running from 1 to number of filled rows in table of game art:
-			choose row y in table of game art;
-			if icon entry is x and artist entry is not listed in BlockList of Player:
-				if formatrule entry is "normal":
+		if x is a icon listed in Table of Game Art:
+			if artist entry is not listed in BlockList of Player:
+				if formatrule entry in lower case is "normal":
 					if NewGraphicsDebugMode is true:
 						say "Graphics Debug - Normal Mode";
 					[blank window to backgroundcolor entry;]
@@ -1368,25 +1361,21 @@ to project (x - a figure name):
 					follow the current graphics drawing rule;
 					now ngraphics_currentartist is artist entry; [graphics processing]
 					update the status line;
-					break;
-				else if formatrule entry is "inline_only":
+				else if formatrule entry in lower case is "inline_only":
 					if NewGraphicsDebugMode is true:
 						say "Graphics Debug - Inline Mode";
 					display x;
 					now ngraphics_currentartist is artist entry; [graphics processing]
 					update the status line;
-					break;
 				else:
 					if NewGraphicsDebugMode is true:
 						say "Graphics Debug - Status Error";
 	else if graphics is true and NewGraphics is false: [legacy fallback (new disabled)]
-		repeat with y running from 1 to number of filled rows in table of game art:
-			choose row y in table of game art;
-			if icon entry is x and artist entry is not listed in BlockList of Player:
+		if x is a icon listed in Table of Game Art:
+			if artist entry is not listed in BlockList of Player:
 				display x;
 				now ngraphics_currentartist is artist entry; [graphics processing]
 				update the status line;
-				break;
 
 		[else if icon entry is x and formatrule entry is window_only:
 			if graphics is true and NewGraphics is true:
@@ -3107,19 +3096,14 @@ carry out artistcredits:
 
 ArtistBanning is an action applying to nothing.
 
-understand "artist block" as ArtistBanning.
-understand "artist ban" as ArtistBanning.
-understand "artist disable" as ArtistBanning.
+understand "artist block/ban/disable" as ArtistBanning.
 understand "artistblocking" as ArtistBanning.
 understand "artistsblocking" as ArtistBanning.
 understand "artistbanning" as ArtistBanning.
 understand "artistsbanning" as ArtistBanning.
-understand "ban artist" as ArtistBanning.
-understand "ban artists" as ArtistBanning.
-understand "block artist" as ArtistBanning.
-understand "block artists" as ArtistBanning.
-understand "disable artist" as ArtistBanning.
-understand "disable artists" as ArtistBanning.
+understand "ban artist/artists" as ArtistBanning.
+understand "block artist/artists" as ArtistBanning.
+understand "disable artist/artists" as ArtistBanning.
 
 carry out ArtistBanning:
 	if clearnomore is 0, clear the screen;
@@ -3135,7 +3119,8 @@ to artistbanmenu: [more compact version]
 	while abmexit is 0:
 		say "[bold type]Artists:[roman type][line break]";
 		while countnumber <= number of entries in artistlist:
-			say "[countnumber]-[link][entry countnumber of artistlist][as][countnumber][end link]: [run paragraph on]";
+			linkfind "[countnumber]";
+			say "[countnumber]-[set link hyperindex][entry countnumber of artistlist][terminate link]: ";
 			BlockCheck entry countnumber of artistList;
 			if remainder after dividing countnumber by 5 is 0:
 				LineBreak;
@@ -3143,12 +3128,13 @@ to artistbanmenu: [more compact version]
 		say "0-[link]Exit Menu[as]0[end link][line break]";
 		now countnumber is 1;
 		while 1 is 1:
-			say "Choice? (0-[number of entries in artistlist])>[run paragraph on]";
+			say "Choice? (0-[number of entries in artistlist])> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= number of entries in artistlist:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to [number of entries in artistlist].";
+		LineBreak;
 		if calcnumber is 0:
 			now abmexit is 1;
 		else if calcnumber >= 1 and calcnumber <= number of entries in artistlist:
@@ -3156,7 +3142,7 @@ to artistbanmenu: [more compact version]
 
 to BlockCheck (x - text):
 	if x is not listed in BlockList of Player:
-		say "[bold type][special-style-1]On  [roman type]";
+		say "[bold type][special-style-1]On   [roman type]";
 	else:
 		say "[bold type][special-style-2]Off  [roman type]";
 
