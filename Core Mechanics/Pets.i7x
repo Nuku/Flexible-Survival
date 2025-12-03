@@ -44,7 +44,7 @@ to CalcMaxCompanions:
 	if "Double Team" is listed in feats of Player:
 		increase MaxCompanions by 1;
 
-an every turn rule:
+an everyturn rule:
 	CalcMaxCompanions;
 	if number of entries in companionList of Player > MaxCompanions:
 		repeat with CurrentPet running through companionList of Player:
@@ -129,13 +129,12 @@ understand "pet dismiss" as DismissFirstCompanion.
 
 DismissFirstCompanion is an action applying to nothing.
 
+check DismissFirstCompanion:
+	if number of entries in CompanionList of Player is 0, say "     You don't have any allies following you right now!" instead;
+
 carry out DismissFirstCompanion:
-	If Number of Entries in companionList of Player is 0:
-		say "     You don't have any ally following you right now!";
-	else:
-		let DismissName be "";
-		now DismissName is printed name of entry 1 of companionList of Player;
-		DismissFunction DismissName;
+	let DismissName be printed name of entry 1 of companionList of Player;
+	DismissFunction DismissName;
 
 to DismissFunction (InputName - a text):
 	let DismissPet be Nullpet;
@@ -174,26 +173,31 @@ understand "pets" as CountPlayerPets.
 understand "pet" as CountPlayerPets.
 
 Carry out CountPlayerPets:
-	say "Allies: ";
+	say "Allies:";
 	let PetList be a list of texts;
 	repeat with Pet running through tamed pets:
 		add Printed Name of Pet to PetList;
-	sort PetList;
-	if hypernull is 0:
-		repeat with Pet running through PetList:
-			say "[link][Pet][as]ally [Pet][end link] ";
-		LineBreak;
+	if PetList is empty:
+		say " None";
 	else:
-		say "[PetList]";
+		sort PetList;
+		if hypernull is 0:
+			repeat with Pet running through PetList:
+				linkfind "ally [Pet]";
+				say " [set link hyperindex][Pet][terminate link]";
+		else:
+			say " [PetList]";
+	LineBreak;
 	if companionList of Player is empty:
-		say "Active Ally: NONE[line break]";
+		say "Active Ally: None";
 	else:
-		repeat with z running through companionList of Player:
-			say "Active Ally: [z][line break]";
-	say "Ally COMMANDS:[line break]";
-	say "[bold type]ally <name>[roman type] - Make the named ally your active one.";
-	say "[bold type]ally dismiss[roman type] - Send away your ally (for now).";
-	say "[link][bold type]ally overview[roman type][end link] - Display a table with the stats of all currently available allies.";
+		say "Active [if number of entries in CompanionList of Player is 1]Ally[else]Allies[end if]:";
+		repeat with z running through CompanionList of Player:
+			say " [link][z][as]look [z][end link]";
+	say "[line break]Ally Commands:[line break]";
+	say "     [bold type]ally <name>[roman type] - Make the named ally your active one.";
+	say "     [link][bold type]ally dismiss[roman type][end link] - Send away your ally (for now).";
+	say "     [link][bold type]ally overview[roman type][end link] - Display a table with the stats of all currently available allies.";
 
 Chapter 5 - Companion Overview Table
 
@@ -219,7 +223,7 @@ carry out PetOverview:
 		now Dex Entry is Dexterity of Pet;
 		increase PetNumber by 1;
 	if PetNumber is 0:
-		say "You have no allies!";
+		say "     You have no allies!";
 	else:
 		sort the Table of PetOverviewList in Name order;
 		let PetOverviewName be "";

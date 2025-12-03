@@ -27,6 +27,7 @@ to say awesome attack:
 	if Awesome_boredom is 4:
 		say "     The tree seems to vibrate. Whether your fervent attacks or the breeze caused it, a branch falls and thumps you on the arm. You notice some fruit on the branch, and without hesitation you put one in your pocket. As you look at the remaining two, you feel a sudden hunger and eat them uncontrollably.";
 		if "Iron Stomach" is not listed in feats of Player, infect;
+		AttemptToWait;
 		say "     The world seems to go dark as you finish the second. Waking up, you can't see any trace of the tree, but you feel pretty awesome nonetheless. You pat your bag where you put the fruit, and smile at the thought that you still have some awesomeness in store.";
 		now hunger of Player is 0;
 		now thirst of Player is 0;
@@ -40,10 +41,11 @@ to say awesome attack:
 			ItemGain awesomer fruit by 1;
 		else:
 			ItemGain awesomest fruit by 1;
+		now dam is 0;
 		now fightoutcome is 20;
 		now combat abort is 1;
 	else:
-		say "     [one of]While you try and attack the tree, you trip over a root that you hadn't seen[or]You stop for a moment, and as you ponder just how awesome the tree really is, suddenly your leg cramps[at random].";
+		say "[one of]While you try and attack the tree, you trip over a root that you hadn't seen[or]You stop for a moment, and as you ponder just how awesome the tree really is, suddenly your leg cramps[at random].";
 		now monsterHP is 60;
 		increase Awesome_boredom by 1;
 
@@ -55,6 +57,7 @@ to say awesome defeat:
 				unwield awesome bat;
 			ItemLoss awesome bat by 1;
 			say "     Walking away, you get a sudden urge and dig a hole in some soft ground, pushing your bat in deeply. You can sense, with your most awesome senses, the wood taking root and beginning to grow.";
+			WaitLineBreak;
 		say "     With good feelings coursing through you at your good deed, a warmth seems to spread from the core of awesome that the tree's fruit seems to have implanted into your being.";
 		infect;
 		now fightoutcome is 19;
@@ -305,6 +308,7 @@ to say awesome bat proc:
 	if HP entry is 60:
 		if Name entry matches the text "Pod Person":
 			say "...[line break]Your bat resounds against the tree, causing the world itself to shake. The unstoppable force and the immovable object meet, however your strength behind the bat is the deciding factor";
+			now dam is 60;
 			now monsterHP is 0;
 			increase Awesome_noreward by 1;
 

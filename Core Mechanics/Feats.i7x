@@ -47,7 +47,7 @@ Definition: A person (called x) is FemalePreferred: [player wants to or must rem
 
 Definition: A person (called x) is HermPreferred: [player wants to or must remain herm]
 	if "Herm Preferred" is listed in feats of x, yes;
-	if "Male Preferred" is listed in feats of x or "Female Preferred" is listed in feats of x, no;
+	if "Male Preferred" is listed in feats of x or "Female Preferred" is listed in feats of x or "Single Sexed" is listed in feats of x, no;
 	if "Always Cocky" is listed in feats of x and "Always A Pussy" is listed in feats of x, yes;
 	no;
 
@@ -117,7 +117,7 @@ To Featget:
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
 				say "[link][y] - [title entry][as][y][end link][line break]";
-			say "[link]0 - ABORT[as]0[end link][line break]";
+			say "[link]0 - Abort[as]0[end link][line break]";
 			say "Type the number corresponding to the feat you want> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
@@ -125,6 +125,7 @@ To Featget:
 				follow the gainfeat rule;
 				if featqualified is 0, break;
 			else if Playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+				LineBreak;
 				say "Selection aborted.";
 				continue the action;
 			else:
@@ -157,7 +158,7 @@ To FunFeatget:
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
 				say "[link][y] - [title entry][as][y][end link]: [description entry][if title entry is not listed in L]. [end if][line break]";
-			say "[link]0 - ABORT[as]0[end link][line break]";
+			say "[link]0 - Abort[as]0[end link][line break]";
 			say "Type the number corresponding to the feat you want> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
@@ -165,8 +166,9 @@ To FunFeatget:
 				follow the gainfeat rule;
 				if featqualified is 0: [player had a right to a feat and got it]
 					decrease featgained of Player by 1; [fun feats are not counted]
-				if featqualified is 0, break;
+					break;
 			else if Playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+				LineBreak;
 				say "Selection aborted.";
 				continue the action;
 			else:
@@ -243,7 +245,7 @@ instead of addfeating the fun feats:
 		addfeat "Dominant" with "Defeating monsters gets you excited, gaining a small libido, morale or XP boost from it. It may occasionally open new, dominant scene variations";
 	if Strange Serpent is resolved or scenario is "Forgotten":
 		addfeat "Touched by Madness" with "On your travels you appear to have contracted some manner of strange aura which may cause some monsters to behave weirdly around you. (Caution, you may experience more extreme content by choosing this feat.)";
-	addfeat "Instinctive Combat" with "With all the changes, you've gained new instincts on how to fight. You may choose [bold type]auto attack normal/berserk/pass/coward/submit[roman type]"; [put next to submissive because that seemed logical. move elsewhere if so desired.]
+	addfeat "Instinctive Combat" with "With all the changes, you've gained new instincts on how to fight. You may choose [bold type]auto attack normal/berserk/seduce/pass/coward/submit[roman type]"; [put next to submissive because that seemed logical. move elsewhere if so desired.]
 	if featunlock is 1:	[available after hospital quest]
 		addfeat "Perky" with "You are of positive spirits, regaining morale gradually and +20% max morale";
 	if "Strong Psyche" is not listed in feats of Player, addfeat "Weak Psyche" with "Having a higher mental susceptibility to corruption by the nanites, you have a weaker grip on your human identity";
@@ -372,6 +374,8 @@ This is the gainfeat rule:
 			remove "Automatic Survival" from feats of Player;
 			say "[bold type]This ability is now controlled by Trixie. Your feat slot has been returned to you.[roman type][line break]";
 			wait for any key;
+		else if nam is "Sterile":
+			now Sterile of Player is true;
 		else if nam is "Strong Back":
 			increase capacity of Player by 50;
 		else if nam is "More Time":
@@ -382,11 +386,11 @@ This is the gainfeat rule:
 		else if nam is "City Map":
 			say "[BestowCityMapFeat]";
 		else if nam is "Instinctive Combat":
-			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the [']Auto Attack['] commands. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
+			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the [']Auto Attack['] commands. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [link][bold type]auto attack normal[roman type][end link] for the default method of combat (choose each action).[line break]Type [link][bold type]auto attack berserk[roman type][end link] to always attack in combat.[line break]Type [link][bold type]auto attack seduce[roman type][end link] to always seduce in combat.[line break]Type [link][bold type]auto attack pass[roman type][end link] to always pass in combat.[line break]Type [link][bold type]auto attack coward[roman type][end link] to always flee in combat.[line break]Type [link][bold type]auto attack submit[roman type][end link] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
 		else if nam is "Vore Predator":
-			say "     Having gained the [']Vore Predator['] feat, you can now access the [bold type][link]vore menu[end link][roman type] command. It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]). It is used for adjusting vore-related game settings.";
+			say "     Having gained the [']Vore Predator['] feat, you can now access the [link][bold type]vore menu[roman type][end link] command. It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]). It is used for adjusting vore-related game settings.";
 		else if nam is "Mugger":
-			say "     You will now get a flat rate increase to item drops from monsters based on your perception. This ability can be can turned on or off by using the [bold type][link]mugger[as]muggering[end link][roman type] command and is currently [bold type][if muggerison is true]ON[else]OFF[end if][roman type].";
+			say "     You will now get a flat rate increase to item drops from monsters based on your perception. This ability can be can turned on or off by using the [link][bold type]mugger[as]muggering[roman type][end link] command and is currently [bold type][if muggerison is true]ON[else]OFF[end if][roman type].";
 		else if nam is "Vampiric":
 			say "     You will now recover a small amount of health, thirst and hunger after every victory as you get in a blood-sucking bite after your final blow or at some other point during the victory scene.";
 			now vampiric is true;

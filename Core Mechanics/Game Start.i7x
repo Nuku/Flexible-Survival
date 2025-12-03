@@ -90,7 +90,7 @@ To regularstart: [normal start method]
 		say "(9) [link]Hyperlinks[as]9[end link] - [bold type][if hypernull is 0]On[else if hypernull is 1]Off[end if][roman type][line break]";
 		say "(10) [link]Waiting for Input[as]10[end link] - [bold type][if waiterhater is 0]On[else if waiterhater is 1]Off[end if][roman type][line break]";
 		say "(11) [link]Screen Clearing[as]11[end link] - [bold type][if clearnomore is 0]On[else if clearnomore is 1]Off[end if][roman type][line break]";
-		say "(12) [link]Graphics[as]12[end link] - [bold type][if NewGraphicsInteger is 1]Inline[else if NewGraphicsInteger is 2]Side-Window[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
+		say "(12) [link]Graphics[as]12[end link] - [bold type][if NewGraphicsInteger is 1]Inline[else if NewGraphicsInteger is 2]Side-Window[else if NewGraphicsInteger is 0]Disabled[end if][roman type][line break]";
 		say "(13) [link]Inventory Columns[as]13[end link] - [bold type][invcolumns][roman type][line break]";
 		say "[line break]";
 		say "[bold type]Saved Games:[roman type][line break]";
@@ -100,12 +100,13 @@ To regularstart: [normal start method]
 		say "[line break]";
 		say "(0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
-			say "(0-13)>[run paragraph on]";
+			say "(0-13)> [run paragraph on]";
 			get a number;
 			if ( calcnumber >= 0 and calcnumber <= 13 ) or ( calcnumber >= 97 and calcnumber <= 99 ):
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 13 or 97 to 99.";
+		LineBreak;
 		if calcnumber is:
 			-- 1:
 				playernaming;
@@ -152,13 +153,16 @@ To regularstart: [normal start method]
 					now NewGraphics is true;
 					now NewGraphicsInteger is 2; [side window]
 			-- 13:
-				say "[set_invcolumns]";
+				if invcolumns > 0 and invcolumns < 4:
+					increase invcolumns by 1;
+				else:
+					now invcolumns is 1;
 			-- 97:
 				say "Confirm restore?";
 				if Player consents:
 					now RestoreMode is true;
 					now RestoreSide is 1;
-					say "[silent_start]";
+					say "[line break][silent_start]";
 					now Trixieexit is 1;
 					if RestoreMode is true:
 						now RestoreMode is false;
@@ -171,7 +175,7 @@ To regularstart: [normal start method]
 				if Player consents:
 					now RestoreMode is true;
 					now RestoreSide is 2;
-					say "[silent_start]";
+					say "[line break][silent_start]";
 					now Trixieexit is 1;
 					if RestoreMode is true:
 						now RestoreMode is false;
@@ -184,7 +188,7 @@ To regularstart: [normal start method]
 				if Player consents:
 					now RestoreMode is true;
 					now RestoreSide is 0;
-					say "[silent_start]";
+					say "[line break][silent_start]";
 					now Trixieexit is 1;
 					if RestoreMode is true:
 						now RestoreMode is false;
@@ -242,24 +246,26 @@ to say gsopt_start:
 	[Code for letting player select graphics window size]
 	if NewGraphics is true:
 		say "[bold type]Graphic Window Position and Proportion[roman type][line break]";
-		say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.[line break]";
-		say "Please choose the position value now. (0 = [link]right side[as]0[end link], 1 = [link]left side[as]1[end link], 2 = [link]above[as]2[end link], 3 = [link]below[as]3[end link])[line break]";
+		say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.";
+		say "Please choose the position value now ([link]0 - right side[as]0[end link], [link]1 - left side[as]1[end link], [link]2 - above[as]2[end link], [link]3 - below[as]3[end link]).";
 		while 1 is 1:
-			say "(0-3)>[run paragraph on]";
+			say "(0-3)> [run paragraph on]";
 			get a number;
 			if calcnumber > -1 and calcnumber < 4:
 				break;
 			else:
 				say "Invalid Entry. Please enter a number between 0 and 3.";
+		LineBreak;
 		now NewGraphicsPosition is calcnumber;
-		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
+		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.";
 		while 1 is 1:
-			say "(5-90)>[run paragraph on]";
+			say "(5-90)> [run paragraph on]";
 			get a number;
 			if calcnumber > 4 and calcnumber < 91:
 				break;
 			else:
 				say "Invalid Entry. Please enter a number between 5 and 90.";
+		LineBreak;
 		now NewGraphicsRatio is calcnumber;
 		now the graphics window proportion is NewGraphicsRatio;
 		if NewGraphicsPosition is:
@@ -324,11 +330,11 @@ to say gsopt_start:
 	if scenario is not "Bunker":
 		if scenario is "Caught Outside":
 			add "Spartan Diet" to feats of Player;
-		if scenario is "Rescuer Stranded":
+		else if scenario is "Rescuer Stranded":
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
 			increase score by 300;
-		if scenario is "Forgotten":
+		else if scenario is "Forgotten":
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
@@ -348,10 +354,8 @@ to say gsopt_start:
 		increase score by 300;
 	if NoHealMode is true: [No-heal mode alteration]
 		increase score by 150;
-		now NoHealMode is true;
 	if BlindMode is true: [Blind mode alteration]
 		increase score by 100;
-		now BlindMode is true;
 	if scenario is "Bunker":
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. You managed to escape to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
 		say "     You've waited in the dark for others or rescue to come, but to no avail. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type] and your [bold type]watch[roman type]. How bad could it be?";
@@ -390,12 +394,13 @@ to say gsopt_start:
 		say "     [link](3)[as]3[end link] - Your victory was convincing. The wolf must accept its place as your Omega.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link], [link]2[end link], or [link]3[end link].";
+		LineBreak;
 		if calcnumber is 1: [Alpha Fang]
 			now HP of Fang is 4;
 		else if calcnumber is 2: [Vanilla Fang]
@@ -407,6 +412,7 @@ to say gsopt_start:
 		say "     ([link]Y[as]y[end link]) - Male.";
 		say "     ([link]N[as]n[end link]) - Female.";
 		if Player consents: [Male Fang]
+			LineBreak;
 			now Fang is Male;
 			if HP of Fang is 4: [Alpha]
 				increase ScaleValue of Fang by 1;
@@ -420,6 +426,7 @@ to say gsopt_start:
 				decrease Tongue Length of Fang by 2;
 			SetMalePronouns for Fang;
 		else: [Female Fang]
+			LineBreak;
 			now Fang is Female;
 			if HP of Fang is 4: [Alpha]
 				increase ScaleValue of Fang by 1;
@@ -472,6 +479,7 @@ to say gsopt_start:
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents: [Sex]
+			LineBreak;
 			if HP of Fang is 4: [Alpha Fang]
 				if Fang is Male: [Male Fang]
 					if Player is male: [Anal]
@@ -531,6 +539,7 @@ to say gsopt_start:
 						say "     Having defeated your opponent and proven yourself the victor, you are left with the question on what to do next as you survey them. Coming to a conclusion you roll her onto her back, pausing a moment to take in the beauty of the wolfess in a way that you weren't able to in the midst of the brawl, in a moment of instinctual driven curiosity you lower your head and begin sniffing slightly at her exposed belly fur in an attempt to pick up on something that your mind hasn't yet put into cognitive thought on what you are looking for. Regardless of the private musing going through your mind on why you are sniffing someone you met for the first time ever, you move your head lower and get to winding and prepping your partner up by lubricating her exposed pussy with your saliva drenched tongue, probing here and there while enjoying her reactionary shudders, making sure to coat it with a layer thick enough for the both of you.";
 						say "     After being sure of the outside, you begin to dig deeper, with slow yet full strokes of the tongue, making sure not only to get everywhere but also to probe her depths in an attempt to find her sweet spot and get some sexy moans out of her. Feeling that you managed to work her up enough, you pull your face from between her pussy lips and position yourself until being face-to-face and cunt-to-cunt with the sexy wolfess, looking into her eyes for a prolonged moment before inflicting a sudden tickle attack, causing her to burst into a fit of laughter. Using that moment of her muzzle being open, you lock muzzles with her, making her gasp in surprise, despite her initial surprise she returns the kiss. Now that your partner is getting into the swing of things you decide to get to the main event as you begin to hump her fast and furiously, making sure that most of the grinding goes to her cunt, both of your muzzles resound with moans as she starts to hump in return. Both of you being wound up means that both the sloppy sounds of sex and the heavy breathing wont last for much longer before things come to a peak as you can feel your muscles tensing and your partner shuddering as you and her begin to squirt your girlcum onto each other, robbing you both of energy, leaving you both limp and embracing each other.";
 		else:
+			LineBreak;
 			if HP of Fang is 4:
 				say "     You find yourself on your back, completely battered, bruised and ultimately defeated. Realizing that you are probably not going to walk out of this intact or at all, you look around for some means of escape and try to lift yourself up, only to have your opponent's paw come crashing down next to your muzzle, as [PosPro of Fang] maw momentarily clamps around your neck softly enough to act as a warning, letting you know that there is no escape. Fearfully looking up at the wolf situated above you, meeting [PosPro of Fang] gaze as you find yourself momentarily mesmerized by [PosPro of Fang] luminous yellow eyes as [SubjectPro of Fang] examines your own, as if looking for something that isn't readily apparent by examining other parts of you. With a low growl, you could almost swear [SubjectPro of Fang] mumbles something like 'this will do' as [SubjectPro of Fang] decides that [SubjectPro of Fang] is finished staring you down. You think that perhaps [SubjectPro of Fang] will let you up after finding that you no longer have the will to fight, you are apparently wrong as [PosPro of Fang] paw moves from beside your head to hold down your chest as [SubjectPro of Fang] says with a deep growl, 'Be mine or be gone.' [PosProCap of Fang] message clear in that if you want to live in the library and its bunker, it will be under [ObjectPro of Fang]. Not wanting to be left to the mercy of the mutants rampaging outside, you nod your head in agreement.";
 			else if HP of Fang is 1:
@@ -606,17 +615,18 @@ to say silent_start:
 	else:
 		[Code for letting player select graphics window size]
 		say "[bold type]Graphic Settings[roman type][line break]";
-		say "Before restoring, please specify the graphic settings.[line break]";
-		say "[bold type] [link]No graphics[as]1[end link] - 1 [roman type][line break]";
-		say "[bold type] [link]Old inline graphics only[as]2[end link] - 2 [roman type][line break]";
-		say "[bold type] [link]New graphics side-window[as]3[end link] - 3 [roman type][line break]";
+		say "Before restoring, please specify the graphic settings.";
+		say "[link]1 - No graphics[as]1[end link][line break]";
+		say "[link]2 - Old inline graphics only[as]2[end link][line break]";
+		say "[link]3 - New graphics side-window[as]3[end link][line break]";
 		while 1 is 1:
-			say "Please enter the number that matches your choice (1-3)>[run paragraph on]";
+			say "Please enter the number that matches your choice (1-3)> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber < 4:
 				break;
 			else:
-				say "Invalid Entry. Please enter a number between 1 and 3";
+				say "Invalid Entry. Please enter a number between 1 and 3.";
+		LineBreak;
 		now NewGraphicsInteger is calcnumber - 1; [Direct set]
 		if NewGraphicsInteger is 1: [now evaluate]
 			now graphics is true;
@@ -629,26 +639,26 @@ to say silent_start:
 			now NewGraphics is false;
 		if NewGraphics is true: [Defined when play begins below, but MUST be here to alter the view when restoring from the menu]
 			say "[bold type]Graphic Window Position and Proportion[roman type][line break]";
-			say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.[line break]";
-			say "Please choose the position value now. (0 = [link]right side[as]0[end link], 1 = [link]left side[as]1[end link], 2 = [link]above[as]2[end link], 3 = [link]below[as]3[end link])[line break]";
+			say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.";
+			say "Please choose the position value now ([link]0 - right side[as]0[end link], [link]1 - left side[as]1[end link], [link]2 - above[as]2[end link], [link]3 - below[as]3[end link]).";
 			while 1 is 1:
-				say "(0-3)>[run paragraph on]";
+				say "(0-3)> [run paragraph on]";
 				get a number;
 				if calcnumber > -1 and calcnumber < 4:
 					break;
 				else:
 					say "Invalid Entry. Please enter a number between 0 and 3.";
+			LineBreak;
 			now NewGraphicsPosition is calcnumber;
-			say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
+			say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.";
 			while 1 is 1:
-				say "(5-90)>[run paragraph on]";
+				say "(5-90)> [run paragraph on]";
 				get a number;
 				if calcnumber > 4 and calcnumber < 91:
 					break;
 				else:
 					say "Invalid Entry. Please enter a number between 5 and 90.";
 			now NewGraphicsRatio is calcnumber;
-			clear the screen;
 	if NewGraphics is true: [Defined when play begins below, but MUST be here to alter the view when restoring from the menu]
 		now the graphics window proportion is NewGraphicsRatio;
 		if NewGraphicsPosition is:
@@ -712,11 +722,11 @@ to say silent_start:
 	if scenario is not "Bunker":
 		if scenario is "Caught Outside":
 			add "Spartan Diet" to feats of Player;
-		if scenario is "Rescuer Stranded":
+		else if scenario is "Rescuer Stranded":
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
 			increase score by 300;
-		if scenario is "Forgotten":
+		else if scenario is "Forgotten":
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
@@ -757,7 +767,7 @@ to newplayercustomizationmenu:
 		let charactermenuexit be 0;
 		while charactermenuexit is 0:
 			clear the screen;
-			say "[line break][bold type]Character Customization:[roman type][line break]";
+			say "[bold type]Character Customization:[roman type][line break]";
 			say "(1) [link]Player Starting Gender[as]1[end link] - [bold type][if StartingGender is 1]Male[else if StartingGender is 2]Female[else if StartingGender is 3]Trans-Woman[else if StartingGender is 4]Trans-Man[else if StartingGender is 5]Male Herm[else if StartingGender is 6]Female Herm[end if][roman type][line break]";
 			say "(2) [link]Player Sexual Experience[as]2[end link]: [bold type][playervirginsay][roman type][line break]";
 			say "(3) [link]Body Configuration Lock[as]3[end link] - [bold type][if GenderLock is 1]None[else if GenderLock is 2]Random[else if GenderLock is 3]Unchanging[else if GenderLock is 4]Always Cocky[else if GenderLock is 5]Always A Pussy[else if GenderLock is 6]Single Sexed[else if GenderLock is 7]Flat Chested[else if GenderLock is 8]Simplified Masculine[else]ERROR[end if][roman type][line break]";
@@ -765,12 +775,12 @@ to newplayercustomizationmenu:
 			say "[line break]";
 			say "(0) [link]Return to main menu[as]0[end link][line break]";
 			while 1 is 1:
-				say "Choice? (0-4)>[run paragraph on]";
+				say "Choice? (0-4)> [run paragraph on]";
 				get a number;
 				if calcnumber >= 0 and calcnumber <= 4:
 					break;
 				else:
-					say "Invalid Entry";
+					say "Invalid Entry. Pick from 0 to 4.";
 			LineBreak;
 			if calcnumber is 1:
 				PlayerStartingGenderSetting;
@@ -779,6 +789,7 @@ to newplayercustomizationmenu:
 			else if calcnumber is 3:
 				genderlockmenu;
 			else if calcnumber is 4:
+				say "[run paragraph on]";
 				try pronounsetting;
 			else:
 				now charactermenuexit is 1;
@@ -799,7 +810,7 @@ to newplayercustomizationmenu:
 			say "[line break]";
 			say "(0) [link]Return to main menu[as]0[end link][line break]";
 			while 1 is 1:
-				say "Choice? (0-9)>[run paragraph on]";
+				say "Choice? (0-9)> [run paragraph on]";
 				get a number;
 				if calcnumber >= 0 and calcnumber <= 9:
 					break;
@@ -829,7 +840,7 @@ to PlayerStartingGenderSetting:
 	now calcnumber is -1;
 	let gsexit be 0;
 	while gsexit is 0:
-		say "[bold type]Select a starting gender: (exact sizes for all parts are randomized in human ranges)[roman type][line break]";
+		say "[bold type]Select a starting gender (exact sizes for all parts are randomized in human ranges):[roman type][line break]";
 		say "(1) [link]Male[as]1[end link] - You have a penis and flat chest.";
 		say "(2) [link]Female[as]2[end link] - You have a vagina and breasts.";
 		say "(3) [link]Trans-Woman[as]3[end link] - You have a penis and breasts.";
@@ -839,17 +850,16 @@ to PlayerStartingGenderSetting:
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-6)>[run paragraph on]";
+			say "Choice? (0-6)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 6:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 6.";
+		LineBreak;
 		if calcnumber is not 0:
 			now StartingGender is calcnumber;
-			now gsexit is 1;
-		else:
-			now gsexit is 1;
+		now gsexit is 1;
 
 to startgenderget:
 	say "Assigning Gender...";
@@ -914,12 +924,13 @@ to playersexsetting: [OralVirgin of Player, Virgin of Player, AnalVirgin of Play
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-4)>[run paragraph on]";
+			say "Choice? (0-4)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 4:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 4.";
+		LineBreak;
 		if calcnumber is 1:
 			if OralVirgin of Player is true:
 				now OralVirgin of Player is false;
@@ -944,7 +955,7 @@ to playersexsetting: [OralVirgin of Player, Virgin of Player, AnalVirgin of Play
 			now menuexit is 1;
 		if (OralVirgin of Player is true and Virgin of Player is true and PenileVirgin of Player is true and AnalVirgin of Player is true):
 			now SexuallyExperienced of player is false;
-		else if (OralVirgin of Player is false or Virgin of Player is false or PenileVirgin of Player is false or AnalVirgin of Player is false):
+		else:
 			now SexuallyExperienced of player is true;
 		now calcnumber is -1;
 
@@ -965,27 +976,26 @@ to genderlockmenu:
 		say "[bold type]Select a body configuration lock:[roman type][line break]";
 		say "(1) [link]None[as]1[end link] - There is no restriction to your gender-transformation. You receive a 5% point bonus from this selection at game end.";
 		say "(2) [link]Random[as]2[end link] - Enjoy a loss of control? A random lock (4-8) is chosen for you at game start!";
-		say "[line break]";
 		say "(3) [link]Unchanging[as]3[end link] - Preserve selected starting gender.";
+		say "[line break]";
 		say "(4) [link]Always Cocky[as]4[end link] - Your body will never give up its cock (if it has one, or gains one).";
 		say "(5) [link]Always A Pussy[as]5[end link] - Your body will never give up its pussy (if it has one, or gains one).";
 		say "(6) [link]Single Sexed[as]6[end link] - Regardless of mutation, you will never be a herm but remain male or female, with the right chest to match.";
 		say "(7) [link]Flat Chested[as]7[end link] - Regardless of mutation, you never gain breasts.";
-		say "(8) [link]Simplified Masculine[as]8[end link] - Flat Chested + Single-Sexed.";
+		say "(8) [link]Simplified Masculine[as]8[end link] - Your body will never give up one of either its cock or pussy, and you never gain breasts.";
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-8)>[run paragraph on]";
+			say "Choice? (0-8)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 8:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 8.";
+		LineBreak;
 		if calcnumber is not 0:
 			now GenderLock is calcnumber;
-			now gsexit is 1;
-		else:
-			now gsexit is 1;
+		now gsexit is 1;
 
 to startgenderlockget:
 	say "Locking Gender...";
@@ -1039,7 +1049,10 @@ to startgenderlockget:
 		now Breast Size of Player is 0;
 	else if GenderLock is 8:
 		say "Locked to flat-chested male or trans-male.";
-		add "Single Sexed" to feats of Player;
+		if StartingGender is odd: [male, trans-woman, male herm]
+			add "Always Cocky" to feats of Player;
+		else: [female, trans-man, female herm]
+			add "Always A Pussy" to feats of Player;
 		add "Flat Chested" to feats of Player;
 		now Breast Size of Player is 0;
 
@@ -1053,28 +1066,28 @@ to say gsopt_1:
 	while gsexit is 0:
 		clear the screen;
 		say "[bold type]Select your main stat (+5 bonus):[roman type][line break]";
-		say "(1) [link]Strength[as]1[end link] = [if MainStat is 1][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Represents your raw physical might and your ability to deal damage.";
-		say "(2) [link]Dexterity[as]2[end link] = [if MainStat is 2][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Affects your likelihood to hit and dodge.";
-		say "(3) [link]Stamina[as]3[end link] = [if MainStat is 3][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Increases your total health pool and your overall endurance.";
-		say "(4) [link]Charisma[as]4[end link] = [if MainStat is 4][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Deals with social interactions with NPCs and your pets, and affects your morale.";
-		say "(5) [link]Intelligence[as]5[end link] = [if MainStat is 5][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping.";
-		say "(6) [link]Perception[as]6[end link] = [if MainStat is 6][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Influences your success while scavenging and hunting, success with ranged weapons and affects your morale.";
-		say "(7) [link]Random[as]7[end link] - Randomize your stat points upon creation.";
+		say "(1) [link]Strength[as]1[end link]: [if MainStat is 1][bold type]17[roman type][else if MainStat is 7]??[no line break][else]12[end if] - Represents your raw physical might and your ability to deal damage.";
+		say "(2) [link]Dexterity[as]2[end link]: [if MainStat is 2][bold type]17[roman type][else if MainStat is 7]??[no line break][else]12[end if] - Affects your likelihood to hit and dodge.";
+		say "(3) [link]Stamina[as]3[end link]: [if MainStat is 3][bold type]17[roman type][else if MainStat is 7]??[no line break][else]12[end if] - Increases your total health pool and your overall endurance.";
+		say "(4) [link]Charisma[as]4[end link]: [if MainStat is 4][bold type]17[roman type][else if MainStat is 7]??[no line break][else]12[end if] - Deals with social interactions with NPCs and your pets, and affects your morale.";
+		say "(5) [link]Intelligence[as]5[end link]: [if MainStat is 5][bold type]17[roman type][else if MainStat is 7]??[no line break][else]12[end if] - Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping.";
+		say "(6) [link]Perception[as]6[end link]: [if MainStat is 6][bold type]17[roman type][else if MainStat is 7]??[no line break][else]12[end if] - Influences your success while scavenging and hunting, success with ranged weapons and affects your morale.";
 		say "[line break]";
+		say "(7) [link]Random[as]7[end link] - Randomize your stat points upon creation.";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-7)>[run paragraph on]";
+			say "Choice? (0-7)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 7:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 7.";
+		LineBreak;
 		if calcnumber is not 0:
 			now MainStat is calcnumber;
+			say "[run paragraph on]";
 			gs_stats;
-			now gsexit is 1;
-		else:
-			now gsexit is 1;
+		now gsexit is 1;
 
 To gs_stats: [apply stat bonus]
 	follow the starting stats rule; [resets all to 12]
@@ -1107,28 +1120,28 @@ to randomstatstart:	[same total points, but spread randomly between 10 to 18]
 	let T be a random number between 1 and 6;
 	if T is 1:
 		increase strength of Player by 3;
-	if T is 2:
+	else if T is 2:
 		increase dexterity of Player by 3;
-	if T is 3:
+	else if T is 3:
 		increase stamina of Player by 3;
-	if T is 4:
+	else if T is 4:
 		increase charisma of Player by 3;
-	if T is 5:
+	else if T is 5:
 		increase intelligence of Player by 3;
-	if T is 6:
+	else if T is 6:
 		increase perception of Player by 3;
 	now T is a random number between 1 and 6;
 	if T is 1:
 		increase strength of Player by 2;
-	if T is 2:
+	else if T is 2:
 		increase dexterity of Player by 2;
-	if T is 3:
+	else if T is 3:
 		increase stamina of Player by 2;
-	if T is 4:
+	else if T is 4:
 		increase charisma of Player by 2;
-	if T is 5:
+	else if T is 5:
 		increase intelligence of Player by 2;
-	if T is 6:
+	else if T is 6:
 		increase perception of Player by 2;
 	now tempnum is 12; [remaining 12 points applied randomly one at a time]
 	while tempnum is not 0:
@@ -1139,27 +1152,27 @@ to randomstatstart:	[same total points, but spread randomly between 10 to 18]
 			if strength of Player > 18:
 				now strength of Player is 18;
 				increase tempnum by 1;
-		if T is 2:
+		else if T is 2:
 			increase dexterity of Player by 1;
 			if dexterity of Player > 18:
 				now dexterity of Player is 18;
 				increase tempnum by 1;
-		if T is 3:
+		else if T is 3:
 			increase stamina of Player by 1;
 			if stamina of Player > 18:
 				now stamina of Player is 18;
 				increase tempnum by 1;
-		if T is 4:
+		else if T is 4:
 			increase charisma of Player by 1;
 			if charisma of Player > 18:
 				now charisma of Player is 18;
 				increase tempnum by 1;
-		if T is 5:
+		else if T is 5:
 			increase intelligence of Player by 1;
 			if intelligence of Player > 18:
 				now intelligence of Player is 18;
 				increase tempnum by 1;
-		if T is 6:
+		else if T is 6:
 			increase perception of Player by 1;
 			if perception of Player > 18:
 				now perception of Player is 18;
@@ -1223,6 +1236,7 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 	clear the screen;
 	say "Select a basic feat. This represents a skill or innate ability you have.";
 	blank out the whole of table of gainable feats;
+	say "[run paragraph on]";
 	repeat with x running through functional featsets:
 		try addfeating x;
 	if there is no title in row 1 of table of gainable feats:
@@ -1234,26 +1248,31 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
 				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Abort[as]0[end link][line break]";
 			say "Type the number corresponding to the feat you want> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
 				choose row current menu selection from the table of gainable feats;
-				say "[title entry]: [description entry]?";
+				say "[bold type][title entry][roman type]: [description entry]?";
 				if Player consents:
 					now freefeatgeneral is the title in row calcnumber of table of gainable feats; [important change from regular featget]
 					now featqualified is 0;
-				break; [if featqualified is 0, ]
+				if featqualified is 0, break;
+				if clearnomore is 0:
+					clear the screen;
+					say "Select a basic feat. This represents a skill or innate ability you have.";
 			else if Playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
 				say "Selection aborted.";
 				continue the action;
 			else:
-				say "Invalid Feat.";
+				say "Invalid Feat. Pick from 0 to [number of filled rows in table of gainable feats].";
 
 To startFunFeatget: [alternate funfeatget used for start]
 	clear the screen;
 	say "Select a fun feat. This represents some strange quirk or effect induced by the nanites.";
 	blank out the whole of table of gainable feats;
+	say "[run paragraph on]";
 	repeat with x running through not functional featsets:
 		try addfeating x;
 	if there is no title in row 1 of table of gainable feats:
@@ -1265,21 +1284,25 @@ To startFunFeatget: [alternate funfeatget used for start]
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
 				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Abort[as]0[end link][line break]";
 			say "Type the number corresponding to the feat you want> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
 				choose row current menu selection from the table of gainable feats;
-				say "[title entry]: [description entry]?";
+				say "[bold type][title entry][roman type]: [description entry]?";
 				if Player consents:
 					now freefeatfun is the title in row calcnumber of table of gainable feats; [important change from regular featget]
 					now featqualified is 0;
-				break; [if featqualified is 0, ]
+				if featqualified is 0, break;
+				if clearnomore is 0:
+					clear the screen;
+					say "Select a fun feat. This represents some strange quirk or effect induced by the nanites.";
 			else if Playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
 				say "Selection aborted.";
 				continue the action;
 			else:
-				say "Invalid Feat.";
+				say "Invalid Feat. Pick from 0 to [number of filled rows in table of gainable feats].";
 
 
 Chapter 6 - Scenario Choices
@@ -1290,47 +1313,41 @@ to say gsopt_3:
 	while gsexit is 0:
 		clear the screen;
 		say "[bold type]Game Scenario:[roman type][line break]";
-		say "(1) [link]Bunker[as]1[end link]: You managed to find your way to a bunker, where you hid away for some time. No special perks, default start. [bold type][if ScenarioChosen is 1]- Set[end if][roman type][line break]";
-		say "(2) [link]Caught Outside[as]2[end link]: You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you. (Gain Spartan Diet, slowing gain of hunger and thirst) [bold type][if ScenarioChosen is 2]- Set[end if][roman type][line break]";
-		say "(3) [link]Rescuer Stranded[as]3[end link]: You arrived late, looking for survivors, when you got cut off from your teammates. Now you just want to survive! (Start with no supplies) [bold type][if ScenarioChosen is 3]- Set[end if][roman type][line break]";
-		say "(4) [link]Forgotten[as]4[end link]: You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive! [bold type][if ScenarioChosen is 4]- Set[end if][roman type][line break]";
-		say "(5) [link]Researcher[as]5[end link]: You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection (you won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat. [bold type][if ScenarioChosen is 5]- Set[end if][roman type][line break]";
+		say "(1) [link]Bunker[as]1[end link]: You managed to find your way to a bunker, where you hid away for some time. No special perks, default start. [if ScenarioChosen is 1][bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		say "(2) [link]Caught Outside[as]2[end link]: You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you. (Gain Spartan Diet, slowing gain of hunger and thirst.) [if ScenarioChosen is 2][bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		say "(3) [link]Rescuer Stranded[as]3[end link]: You arrived late, looking for survivors, when you got cut off from your teammates. Now you just want to survive! (Start with no supplies.) [if ScenarioChosen is 3][bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		say "(4) [link]Forgotten[as]4[end link]: You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive! [if ScenarioChosen is 4][bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		say "(5) [link]Researcher[as]5[end link]: You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection (you won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat. [if ScenarioChosen is 5][bold type][bracket]Set[close bracket][roman type][end if][line break]";
 		say "[line break]";
-		say "(6) [link]Running with Wolves[as]6[end link]: You were a resident of the city before you fled to the bunker after your neighbors were claimed by wolves. However, you were infected and one of the wolves pursued you... (Start with Fang) [bold type][if ScenarioChosen is 6]- Set[end if][roman type][line break]";
+		say "(6) [link]Running with Wolves[as]6[end link]: You were a resident of the city before you fled to the bunker after your neighbors were claimed by wolves. However, you were infected and one of the wolves pursued you... (Start with Fang.) [if ScenarioChosen is 6][bold type][bracket]Set[close bracket][roman type][end if][line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-6)>[run paragraph on]";
+			say "Choice? (0-6)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 6:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 6.";
+		LineBreak;
 		if calcnumber is 1:
 			now scenario is "Bunker";
 			now ScenarioChosen is 1;
-			now gsexit is 1;
 		else if calcnumber is 2:
 			now scenario is "Caught Outside";
 			now ScenarioChosen is 2;
-			now gsexit is 1;
 		else if calcnumber is 3:
 			now scenario is "Rescuer Stranded";
 			now ScenarioChosen is 3;
-			now gsexit is 1;
 		else if calcnumber is 4:
 			now scenario is "Forgotten";
 			now ScenarioChosen is 4;
-			now gsexit is 1;
 		else if calcnumber is 5:
 			now scenario is "Researcher";
 			now ScenarioChosen is 5;
-			now gsexit is 1;
 		else if calcnumber is 6:
 			now scenario is "Running with Wolves";
 			now ScenarioChosen is 6;
-			now gsexit is 1;
-		else:
-			now gsexit is 1;
+		now gsexit is 1;
 
 Chapter 7 - Difficulty Mode
 
@@ -1345,12 +1362,13 @@ to say gsopt_4:
 		say "(3) [link]Blind Mode[as]3[end link]: [bold type][if BlindMode is true]On[else]Off[end if][roman type][line break]     Blind Mode prevents hunting and scavenging for supplies. You have a significantly increased chance of encountering something of interest while exploring though.";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-3)>[run paragraph on]";
+			say "Choice? (0-3)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 3:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 3.";
+		LineBreak;
 		if calcnumber is 1:
 			if HardMode is false:
 				now HardMode is true;
@@ -1387,26 +1405,31 @@ to contentrestrictionmenu:
 		say "(3) [link]WS Content[as]3[end link] - [bold type][if WSLevel is 1]None[else if WSLevel is 2]Normal[else if WSLevel is 3]Full[end if][roman type][line break]";
 		say "(4) [link]Vore/UB Content[as]4[end link] - Vore: [bold type][if vorelevel is 1]None[else if vorelevel is 2]Normal[else if vorelevel is 3]Full[end if][roman type] - Unbirth: [bold type][if UBLevel is 1]None[else if UBLevel is 2]Normal[else if UBLevel is 3]Full[end if][roman type][line break]";
 		say "(5) [link]Ovi Pregnancy[as]5[end link] - [bold type][if OvipregLevel is 1]Never[else]Normal[end if][roman type][line break]";
-		say "(6) Player character is [if Player is CoA]the [else]NOT the [end if][link]Center of Attention[as]6[end link] of relationships in the library/bunker (disables NPC sexual relations independent of the player character).[roman type][line break]";
 		say "[line break]";
+		say "(6) Player character [if Player is CoA][special-style-1]IS[roman type][else]is [special-style-2]NOT[roman type][end if] the [link]Center of Attention[as]6[end link] of relationships in the library/bunker (disables NPC sexual relations independent of the player character).[roman type][line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-6)>[run paragraph on]";
+			say "Choice? (0-6)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 6:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 6.";
+		LineBreak;
 		if calcnumber is 1:
 			if clearnomore is 0, clear the screen;
 			new ban menu; [see Core Mechanics/Lists and Banning.i7x]
 		else if calcnumber is 2:
+			say "[run paragraph on]";
 			try analadjusting; [see Core Mechanics/Settings Menus.i7x]
 		else if calcnumber is 3:
+			say "[run paragraph on]";
 			try WSadjusting; [see Core Mechanics/Settings Menus.i7x]
 		else if calcnumber is 4:
+			say "[run paragraph on]";
 			try voremenuing; [see Core Mechanics/Settings Menus.i7x]
 		else if calcnumber is 5:
+			say "[run paragraph on]";
 			try oviadjusting; [see Core Mechanics/Settings Menus.i7x]
 		else if calcnumber is 6:
 			if "Center of Attention" is listed in Feats of player:
@@ -1417,44 +1440,46 @@ to contentrestrictionmenu:
 			now contentrestrictionmenuexit is 1;
 
 to say menuwardlist:
-	if CockVoreList is warded or FurryList is warded or MaleList is warded or FemaleList is warded or HumorousList is warded or DemonList is warded or HermList is warded or CuckList is warded or IncestList is warded or TransList is warded or MindcontrolList is warded or NonconList is warded or VoreList is warded:
+	if number of warded flags > 0 or number of warded tags > 0:
 		let L be a list of text;
 		say "[bold type]Warded: [bracket]";
 		if CockVoreList is warded, add "Cockvore" to L;
+		if CuckList is warded, add "Cuck" to L;
+		if FemaleList is warded, add "Female" to L;
 		if FeralList is warded, add "Feral" to L;
 		if FurryList is warded, add "Furry" to L;
-		if MaleList is warded, add "Male" to L;
-		if FemaleList is warded, add "Female" to L;
-		if HermList is warded, add "Herm" to L;
-		if HumorousList is warded, add "Humorous" to L;
 		if DemonList is warded, add "Hellspawn" to L;
-		if TransList is warded, add "Transgender" to L;
-		if CuckList is warded, add "Cuck" to L;
+		if HermList is warded, add "Herm" to L;
+		if BodyHorrorList is warded, add "Horror" to L;
+		if HumorousList is warded, add "Humorous" to L;
+		if MindcontrolList is warded, add "Hypnosis" to L;
 		if IncestList is warded, add "Incest" to L;
+		if MaleList is warded, add "Male" to L;
 		if NonconList is warded, add "Noncon" to L;
-		if MindcontrolList is warded, add "Mindcontrol" to L;
+		if TransList is warded, add "Transgender" to L;
 		if VoreList is warded, add "Vore" to L;
 		say "[L][close bracket][roman type]";
 	else:
 		say "[bold type]None Warded[roman type]";
 
 to say menubanlist:
-	if CockVoreList is banned or FurryList is banned or MaleList is banned or FemaleList is banned or HumorousList is banned or DemonList is banned or HermList is banned or CuckList is banned or IncestList is banned or TransList is banned or MindcontrolList is banned or NonconList is banned or VoreList is banned:
+	if number of banned flags > 0 or number of banned tags > 0:
 		let L be a list of text;
 		say "[bold type]Banned: [bracket]";
 		if CockVoreList is banned, add "Cockvore" to L;
+		if CuckList is banned, add "Cuck" to L;
+		if FemaleList is banned, add "Female" to L;
 		if FeralList is banned, add "Feral" to L;
 		if FurryList is banned, add "Furry" to L;
-		if MaleList is banned, add "Male" to L;
-		if FemaleList is banned, add "Female" to L;
-		if HermList is banned, add "Herm" to L;
-		if HumorousList is banned, add "Humorous" to L;
 		if DemonList is banned, add "Hellspawn" to L;
-		if TransList is banned, add "Transgender" to L;
-		if CuckList is banned, add "Cuck" to L;
+		if HermList is banned, add "Herm" to L;
+		if BodyHorrorList is banned, add "Horror" to L;
+		if HumorousList is banned, add "Humorous" to L;
+		if MindcontrolList is banned, add "Hypnosis" to L;
 		if IncestList is banned, add "Incest" to L;
+		if MaleList is banned, add "Male" to L;
 		if NonconList is banned, add "Noncon" to L;
-		if MindcontrolList is banned, add "Mindcontrol" to L;
+		if TransList is banned, add "Transgender" to L;
 		if VoreList is banned, add "Vore" to L;
 		say "[L][close bracket][roman type]";
 	else:
@@ -1507,7 +1532,7 @@ to gendersetting:
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-10)>[run paragraph on]";
+			say "Choice? (0-10)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 10:
 				break;
@@ -1692,7 +1717,7 @@ to bodytypesetting:
 		say "[line break][line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-3)>[run paragraph on]";
+			say "Choice? (0-3)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 3:
 				break;
@@ -1761,7 +1786,7 @@ to skincolorsetting:
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-6)>[run paragraph on]";
+			say "Choice? (0-6)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 6:
 				break;
@@ -1849,7 +1874,7 @@ to hairsetting:
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-5)>[run paragraph on]";
+			say "Choice? (0-5)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 5:
 				break;
@@ -1889,7 +1914,7 @@ to HairShapeSetting:
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-3)>[run paragraph on]";
+			say "Choice? (0-3)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 3:
 				break;
@@ -2017,7 +2042,7 @@ to HairStyleSetting: [Afro, Bangs, Bob Cut, Bowl Cut, Braid, Bun, Buzzcut, Combo
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-26)>[run paragraph on]";
+			say "Choice? (0-26)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 26:
 				break;
@@ -2120,7 +2145,7 @@ to HairColorSetting: [brown, blond, black, auburn, red, gray, white]
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-7)>[run paragraph on]";
+			say "Choice? (0-7)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 7:
 				break;
@@ -2219,7 +2244,7 @@ to BeardStyleSetting:
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-17)>[run paragraph on]";
+			say "Choice? (0-17)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 17:
 				break;
@@ -2291,7 +2316,7 @@ to BodyHairLengthSetting:
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (1-5)>[run paragraph on]";
+			say "Choice? (1-5)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 1 and calcnumber <= 5:
 				break;
@@ -2326,7 +2351,7 @@ to eyecolorsetting: [ Green, Blue, Gray, Brown, Hazel, Amber, Red]
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-7)>[run paragraph on]";
+			say "Choice? (0-7)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 7:
 				break;

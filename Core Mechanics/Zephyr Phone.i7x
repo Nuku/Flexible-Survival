@@ -436,39 +436,38 @@ to say zpcdesc:
 
 
 zpc is a grab object. zpc is not temporary.
-understand "Zephyr Personal Communicator" as zpc.
 understand "zephyr personal communicator" as zpc.
 
 zpcturnon is an action applying to nothing.
-Understand "turn on the zpc" as zpcturnon.
+Understand "turn on the/-- zpc" as zpcturnon.
 
 Carry out zpcturnon:
 	try using the zpc;
 
 Section 4 - Handling (Internal)
 
-Usedesc of Broken Smartphone is "[sp_use]";
+Usedesc of Broken Smartphone is "[sp_use]".
 
 to say sp_use:
 	say "     It's bricked.";
 
-Usedesc of zpc is "[zpc_use]";
+Usedesc of zpc is "[zpc_use]".
 
 to say zpc_use:
 	if emap is 0:
 		zpc_checklocation; [runs location check function first to fill Zc value]
 		if zpc_Zc is 0:
 			project the figure of emap_special_signalnotfound_icon;
-			say "     You turn on the device. It appears that your current location is not yet part of the Zephyr Satellite coverage region... Perhaps you could try the device in one of Zephyr's published compatible locations, such as the Smith Haven Mall?";
+			say "     You turn on the device. It appears that your current location is not yet part of the Zephyr satellite coverage region... Perhaps you could try the device in one of Zephyr's published compatible locations, such as the Smith Haven Mall?";
 			now emap is 1;
-			wait for any key;
+			AttemptToWait;
 			if debugactive is 1 and debuglevel > 1:
 				say "Following the ngraphics_blank rule";
 			follow the ngraphics_blank rule; [clear pic after WLB user response]
 		else if zpc_Zc is 1:
 			say "     The device will now track and display your current location, until you exit the satellite coverage region. If you wish to terminate tracking while still in the coverage region, simply switch the device off.";
 			now emap is 1;
-			wait for any key;
+			AttemptToWait;
 			if debugactive is 1 and debuglevel > 1:
 				say "Following the zpc_lookoverride rule.";
 			follow the zpc_lookoverride rule; [fill with respective pic]
@@ -476,7 +475,7 @@ to say zpc_use:
 		project the figure of emap_special_shutdown_icon; [off]
 		say "     After holding the power button for a few seconds, the display fades out as an accompanying chime completes its shutdown.";
 		now emap is 0;
-		wait for any key;
+		AttemptToWait;
 		if debugactive is 1 and debuglevel > 1:
 			say "Following the ngraphics_blank rule";
 		follow the ngraphics_blank rule; [clear pic after WLB user response]
@@ -486,76 +485,28 @@ to say zpc_use:
 Section 4.1 - Internal functions
 
 to zpc_checklocation: [returns Zc value of 1 or 0]
-	now zpc_Zc is 0;
-	if the location of Player is a location listed in Table of Zpc Location Reference, now zpc_Zc is 1;
+	if location of Player is a location listed in Table of Zpc Location Reference:
+		now zpc_Zc is 1;
+	else:
+		now zpc_Zc is 0;
 
 to zpc_getfigure: [returns Zf value of respective figure name]
-	now zpc_Zf is figure of pixel;
-	if the location of Player is a location listed in Table of Zpc Location Reference, now zpc_Zf is icon entry;
-
-[to zpc_checklocation: [returns Zc value of 1 or 0]
-	if debugactive is 1:
-		say "Setting zpc_Zc to False.";
-	now zpc_Zc is 0; [zeros returning value]
-	repeat with n running from 1 to number of filled rows in Table of Zpc Location Reference:
-		choose row n in table of Zpc Location Reference;
-		if location entry is location of Player:
-			if debugactive is 1 and debuglevel > 1:
-				say "Found location in zpc location reference! Setting zpc_Zc to True.";
-			now zpc_Zc is 1; [returns value (true/false)]
-		else:
-			if debugactive is 1 and debuglevel > 1:
-				say "Did not find location in zpc location reference! zpc_Zc remains false.";
-to zpc_getfigure: [returns Zf value of respective figure name]
-	now zpc_Zf is figure of pixel; [zeros returning value]
-	repeat with n running from 1 to number of filled rows in Table of Zpc Location Reference:
-		choose row n in table of Zpc Location Reference;
-		if location entry is location of Player:
-			if debugactive is 1 and debuglevel > 1:
-				say "Found icon entry in table of zpc location reference! Storing Icon entry.";
-			now zpc_Zf is icon entry; [returns value for projection]]
+	if location of Player is a location listed in Table of Zpc Location Reference:
+		now zpc_Zf is icon entry;
+	else:
+		now zpc_Zf is Figure of pixel;
 
 Section 5 - Handling (External)
 
 [Master look override rule]
 this is the zpc_lookoverride rule:
 	if emap is 1:
-		if the location of Player is a location listed in Table of Zpc Location Reference:
+		if location of Player is a location listed in Table of Zpc Location Reference:
 			project icon entry; [projecting intro]
 			if zpc_inzone is false, now zpc_inzone is true;
 		else if zpc_inzone is true: [case if Player already in zone]
-			project the figure of emap_special_signalnotfound_icon;
+			project the Figure of emap_special_signalnotfound_icon;
 			now zpc_inzone is false;
-
-[this is the zpc_lookoverride rule:
-	if emap is 1:
-		zpc_checklocation; [runs location check function first to fill Zc value]
-		if zpc_Zc is 1:
-			if zpc_inzone is false: [case if Player not in zone yet]
-				if debugactive is 1 and debuglevel > 1:
-					say "zpc_inzone is False, getting figure.";
-				zpc_getfigure; [runs function to get Zf value (figure name)]
-				if debugactive is 1 and debuglevel > 1:
-					say "Attempting to Project zpc_Zf.";
-				project zpc_Zf; [projecting intro]
-				if debugactive is 1 and debuglevel > 1:
-					say "setting Zpc_inzone to true. ";
-				now zpc_inzone is true;
-			else: [case if Player in zone]
-				if debugactive is 1 and debuglevel > 1:
-					say "zpc_inzone is True, getting figure.";
-				zpc_getfigure; [runs function to get Zf value (figure name)]
-				if debugactive is 1 and debuglevel > 1:
-					say "Attempting to Project zpc_Zf.";
-				project zpc_Zf;
-		else if zpc_Zc is 0: [case for player moving to location not contained in table of zpc location reference]
-			if debugactive is 1 and debuglevel > 1:
-				say "zpc_Zc is False. i'm not sure what happens here..";
-			if zpc_inzone is true: [case if Player already in zone]
-				if debugactive is 1 and debuglevel > 1:
-					say "zpc_Zc is false but zpc inzone is true. projecting signal not found and then setting zpc_inzone to false for shutdown..";
-				project the figure of emap_special_signalnotfound_icon;
-				now zpc_inzone is false;]
 
 Section 6 - DEBUG - Not for release
 

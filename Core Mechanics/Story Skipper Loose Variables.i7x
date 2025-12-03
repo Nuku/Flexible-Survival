@@ -68,8 +68,7 @@ to VariableSave:
 		now TruthVarName entry is "LibraryComputer_on";
 		now TruthVarValue entry is true;
 	[continue with storing supported variables]
-	repeat with x running from 1 to the number of filled rows in the Table of GameVariableIDs:
-		choose row x in the Table of GameVariableIDs;
+	repeat through Table of GameVariableIDs:
 		now CurrentVariableName is Name entry;
 		[if debug is at level 10:
 			say "Stashing variable [CurrentVariableName].";]
@@ -649,6 +648,10 @@ to NumberVariableSave:
 			now NumberVarValue entry is CarlSarahSex;
 		-- "CassandraFucked":
 			now NumberVarValue entry is CassandraFucked;
+		-- "catadiff":
+			now NumberVarValue entry is catadiff;
+		-- "catafire":
+			now NumberVarValue entry is catafire;
 		-- "catdogstate":
 			now NumberVarValue entry is catdogstate;
 		-- "catnum":
@@ -781,6 +784,12 @@ to NumberVariableSave:
 			now NumberVarValue entry is damageout;
 		-- "DariusLostItems":
 			now NumberVarValue entry is DariusLostItems;
+		-- "DateDay":
+			now NumberVarValue entry is DateDay;
+		-- "DateMonth":
+			now NumberVarValue entry is DateMonth;
+		-- "DateYear":
+			now NumberVarValue entry is DateYear;
 		-- "DavidBrutusMarcVar":
 			now NumberVarValue entry is DavidBrutusMarcVar;
 		-- "DavidBunkerEntry":
@@ -1099,6 +1108,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is freecred;
 		-- "FriesianRelationship":
 			now NumberVarValue entry is FriesianRelationship;
+		-- "FrostDrakeBeaten":
+			now NumberVarValue entry is  FrostDrakeBeaten;
 		-- "fsdbias":
 			now NumberVarValue entry is fsdbias;
 		-- "fsddom":
@@ -1181,6 +1192,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is GorillasMemberQuestCounter;
 		-- "GorillasRep":
 			now NumberVarValue entry is GorillasRep;
+		-- "gotcatares":
+			now NumberVarValue entry is gotcatares;
 		-- "grantbitch":
 			now NumberVarValue entry is grantbitch;
 		-- "grantfucked":
@@ -2553,6 +2566,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is TaniClassMemory;
 		-- "TaniRecommendation":
 			now NumberVarValue entry is TaniRecommendation;
+		-- "Tanukigender":
+			now NumberVarValue entry is Tanukigender;
 		-- "Targetturns":
 			now NumberVarValue entry is Targetturns;
 		-- "tatsave":
@@ -3673,8 +3688,7 @@ to VariableTextLoad:
 		say "Restoring Texts...";
 		read File of TextSave into the Table of GameTexts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTexts:
-			if there is no TextVarValue in row x of the Table of GameTexts:
-				next;
+			if there is no TextVarValue in row x of the Table of GameTexts, next;
 			choose row x in the Table of GameTexts;
 			[
 			if debug is at level 10:
@@ -3927,11 +3941,7 @@ to VariableNumberLoad:
 		say "Restoring Numbers...";
 		read File of NumberSave into the Table of GameNumbers;
 		repeat with x running from 1 to the number of filled rows in the Table of GameNumbers:
-			[
-			if there is no NumberVarValue in row x of the Table of GameNumbers:
-				debug at level 4 say "Skipping empty Number [NumberVarName in row x of the Table of GameNumbers].[line break]";
-				next;
-			]
+			if there is no NumberVarValue in row x of the Table of GameNumbers, next;
 			choose row x in the Table of GameNumbers;
 			[
 			if debug is at level 10:
@@ -4236,6 +4246,10 @@ to VariableNumberLoad:
 					if CarlSarahSex is not NumberVarValue entry, now CarlSarahSex is NumberVarValue entry;
 				-- "CassandraFucked":
 					if CassandraFucked is not NumberVarValue entry, now CassandraFucked is NumberVarValue entry;
+				-- "catadiff":
+					if catadiff is not NumberVarValue entry, now catadiff is NumberVarValue entry;
+				-- "catafire":
+					if catafire is not NumberVarValue entry, now catafire is NumberVarValue entry;
 				-- "catdogstate":
 					if catdogstate is not NumberVarValue entry, now catdogstate is NumberVarValue entry;
 				-- "catnum":
@@ -4368,6 +4382,12 @@ to VariableNumberLoad:
 					if damageout is not NumberVarValue entry, now damageout is NumberVarValue entry;
 				-- "DariusLostItems":
 					if DariusLostItems is not NumberVarValue entry, now DariusLostItems is NumberVarValue entry;
+				-- "DateDay":
+					if DateDay is not NumberVarValue entry, now DateDay is NumberVarValue entry;
+				-- "DateMonth":
+					if DateMonth is not NumberVarValue entry, now DateMonth is NumberVarValue entry;
+				-- "DateYear":
+					if DateYear is not NumberVarValue entry, now DateYear is NumberVarValue entry;
 				-- "DavidBrutusMarcVar":
 					if DavidBrutusMarcVar is not NumberVarValue entry, now DavidBrutusMarcVar is NumberVarValue entry;
 				-- "DavidBunkerEntry":
@@ -4770,6 +4790,8 @@ to VariableNumberLoad:
 					if GorillasMemberQuestCounter is not NumberVarValue entry, now GorillasMemberQuestCounter is NumberVarValue entry;
 				-- "GorillasRep":
 					if GorillasRep is not NumberVarValue entry, now GorillasRep is NumberVarValue entry;
+				-- "gotcatares":
+					if gotcatares is not NumberVarValue entry, now gotcatares is NumberVarValue entry;
 				-- "grantbitch":
 					if grantbitch is not NumberVarValue entry, now grantbitch is NumberVarValue entry;
 				-- "grantfucked":
@@ -6506,6 +6528,7 @@ to VariableTruthLoad:
 		say "Restoring Truths...";
 		read File of TruthSave into the Table of GameTruths;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTruths:
+			if there is no TruthVarValue in row x of the Table of GameTruths, next;
 			choose row x in the Table of GameTruths;
 			[
 			if debug is at level 10:
@@ -7158,6 +7181,7 @@ to VariableIndexedTextLoad:
 		say "Restoring Indexed Texts...";
 		read File of IndexedTextSave into the Table of GameIndexedTexts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameIndexedTexts:
+			if there is no IndexedTextVarValue in row x of the Table of GameIndexedTexts, next;
 			choose row x in the Table of GameIndexedTexts;
 			[
 			if debug is at level 10:
@@ -7165,11 +7189,11 @@ to VariableIndexedTextLoad:
 			]
 			if IndexedTextVarName entry is:
 				-- "bcupsize":
-					now bcupsize is IndexedTextVarValue entry;
+					if bcupsize is not IndexedTextVarValue entry, now bcupsize is IndexedTextVarValue entry;
 				-- "bmagic":
-					now bmagic is IndexedTextVarValue entry;
+					if bmagic is not IndexedTextVarValue entry, now bmagic is IndexedTextVarValue entry;
 				-- "cupsize":
-					now cupsize is IndexedTextVarValue entry;
+					if cupsize is not IndexedTextVarValue entry, now cupsize is IndexedTextVarValue entry;
 			[
 			if debug is at level 10:
 				say "DEBUG -> VarName '[IndexedTextVarName entry]' restored to '[IndexedTextVarValue entry]'.";
@@ -7191,9 +7215,9 @@ to VariableTextListLoad:
 		truncate StoredSluts_Male to 0 entries; [cleaning out the old data]
 		truncate StoredSluts_Other to 0 entries; [cleaning out the old data]
 		repeat with x running from 1 to the number of filled rows in the Table of GameTextLists:
+			if there is no TextListVarValue in row x of the Table of GameTextLists, next;
 			choose row x in the Table of GameTextLists;
-			let TextListName be TextListVarName entry;
-			if TextListName is:
+			if TextListVarName entry is:
 				-- "Childrenbodies":
 					add TextListVarValue entry to Childrenbodies;
 				-- "Childrenfaces":
@@ -7214,7 +7238,7 @@ to VariableTextListLoad:
 					add TextListVarValue entry to StoredSluts_Other;
 			[
 			if debug is at level 10:
-				say "DEBUG -> [x]: Added '[TextListVarValue entry]' to TextList [TextListName].";
+				say "DEBUG -> [x]: Added '[TextListVarValue entry]' to TextList [TextListVarName entry].";
 			]
 	else:
 		say "No TextList Save File Found!";
@@ -7234,9 +7258,9 @@ to VariableNumberListLoad:
 		truncate pfpclist to 0 entries; [cleaning out the old data]
 		truncate velospostmusings to 0 entries; [cleaning out the old data]
 		repeat with x running from 1 to the number of filled rows in the Table of GameNumberLists:
+			if there is no NumberListVarValue in row x of the Table of GameNumberLists, next;
 			choose row x in the Table of GameNumberLists;
-			let NumberListName be NumberListVarName entry;
-			if NumberListName is:
+			if NumberListVarName entry is:
 				-- "AlexandraNPC":
 					add NumberListVarValue entry to AlexandraNPC;
 				-- "bookcollection":
@@ -7259,7 +7283,7 @@ to VariableNumberListLoad:
 					add NumberListVarValue entry to velospostmusings;
 			[
 			if debug is at level 10:
-				say "DEBUG -> [x]: Added '[NumberListVarValue entry]' to NumberList [NumberListName].";
+				say "DEBUG -> [x]: Added '[NumberListVarValue entry]' to NumberList [NumberListVarName entry].";
 			]
 	else:
 		say "No NumberList Save File Found!";
