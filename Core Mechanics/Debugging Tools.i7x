@@ -548,8 +548,7 @@ carry out TagListReadout:
 		sort Infections of x;
 		sort BadSpots of x;
 		add x to L;
-	LineBreak;
-	say "[bold type]Flags:[roman type][line break]";
+	say "[line break][bold type]Flags:[roman type][line break]";
 	sort L in printed name order;
 	repeat with x running through L:
 		say "     [printed name of x] (infections): [if Infections of x is empty]Nothing[else][Infections of x][end if].";
@@ -560,8 +559,7 @@ carry out TagListReadout:
 		sort Infections of x;
 		sort BadSpots of x;
 		add x to L;
-	LineBreak;
-	say "[bold type]Tags:[roman type][line break]";
+	say "[line break][bold type]Tags:[roman type][line break]";
 	sort L in printed name order;
 	repeat with x running through L:
 		say "     [printed name of x] (infections): [if Infections of x is empty]Nothing[else][Infections of x][end if].";
@@ -717,6 +715,13 @@ Carry out tablelisting:
 			say "[n][line break]";
 		say "End of list of Situations.";
 		stop the action;
+	else if t in lower case is "vore":
+		say "Vore Exclusions:[line break]";
+		sort infections of VoreExclusion;
+		sort infections of HardVoreExclusion;
+		say "Vore: [infections of VoreExclusion][line break][line break]Hard Vore: [infections of HardVoreExclusion][line break]";
+		say "End of list of Vore Exclusions.";
+		stop the action;
 	else:
 		say "nothing to list, try again.";
 
@@ -865,12 +870,12 @@ carry out PlayerSizeChange:
 	say "     [link](5)[as]5[end link] Huge.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 5:
-		say "Choice? (1-5)>[run paragraph on]";
+		say "Choice? (1-5)> [run paragraph on]";
 		get a number;
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
 			break;
 		else:
-			say "Invalid choice.";
+			say "Invalid choice. Pick from 1 to 5.";
 	if calcnumber is 1:
 		LineBreak;
 		say "     Set player size to tiny.";
@@ -910,25 +915,26 @@ carry out SetPlayerGenitals:
 	say "     (4) [link]Change breasts[as]4[end link] (size or count) using [bold type][tempnum][roman type].";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 			break;
 		else:
-			say "Invalid choice.";
+			say "Invalid choice. Pick from 1 to 4.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     [bold type]Changing Cock[roman type][line break]";
 		say "     (1) [link]Change length[as]1[end link] from [Cock Length of Player] to [tempnum].";
 		say "     (2) [link]Change count[as]2[end link] from [Cock Count of Player] to [tempnum].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 2:
-			say "Choice? (1-2)>[run paragraph on]";
+			say "Choice? (1-2)> [run paragraph on]";
 			get a number;
 			if calcnumber is 1 or calcnumber is 2:
 				break;
 			else:
-				say "Invalid choice.";
+				say "Invalid choice. Pick from 1 to 2.";
+		LineBreak;
 		if calcnumber is 1:
 			if tempnum is 0:
 				if Cock Count of Player > 0:
@@ -953,19 +959,19 @@ carry out SetPlayerGenitals:
 			say "Cock count set to [tempnum].";
 			now Cock Count of Player is tempnum;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     [bold type]Changing Cunt[roman type][line break]";
 		say "     (1) [link]Change depth[as]1[end link] from [Cunt Depth of Player] to [tempnum].";
 		say "     (2) [link]Change diameter[as]2[end link] from [Cunt Tightness of Player] to [tempnum].";
 		say "     (3) [link]Change count[as]3[end link] from [Cunt Count of Player] to [tempnum].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 				break;
 			else:
-				say "Invalid choice.";
+				say "Invalid choice. Pick from 1 to 3.";
+		LineBreak;
 		if calcnumber is 1:
 			if tempnum is 0:
 				if Cunt Count of Player > 0:
@@ -1016,18 +1022,18 @@ carry out SetPlayerGenitals:
 		say "Ball size set to [tempnum].";
 		now Ball Size of Player is tempnum;
 	else if calcnumber is 4:
-		LineBreak;
 		say "     [bold type]Changing Breasts[roman type][line break]";
 		say "     (1) [link]Change size[as]1[end link] from [Breast Size of Player] to [tempnum].";
 		say "     (2) [link]Change count[as]2[end link] from [Nipple Count of Player] to [tempnum].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 2:
-			say "Choice? (1-2)>[run paragraph on]";
+			say "Choice? (1-2)> [run paragraph on]";
 			get a number;
 			if calcnumber is 1 or calcnumber is 2:
 				break;
 			else:
-				say "Invalid choice.";
+				say "Invalid choice. Pick from 1 to 2.";
+		LineBreak;
 		if calcnumber is 1:
 			if tempnum > 26:
 				say "Maximum breast size is 26.";
@@ -1224,10 +1230,32 @@ check allitemcheat:
 	if debugactive is 0, say "You aren't currently debugging!" instead;
 
 carry out allitemcheat:
-	say "     You gain one of everything!";
+	say "     You gain one of everything that isn't cum or milk!";
 	repeat with x running through grab objects:
 		if x is not cum and x is not milky:
 			ItemGain x by 1 silently;
+
+allmilkcheat is an action applying to nothing.
+understand "zAllMilk" as allmilkcheat.
+
+check allmilkcheat:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out allmilkcheat:
+	say "     You gain one of all milk items!";
+	repeat with x running through milky grab objects:
+		ItemGain x by 1 silently;
+
+allcumcheat is an action applying to nothing.
+understand "zAllCum" as allcumcheat.
+
+check allcumcheat:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out allcumcheat:
+	say "     You gain one of all cum items!";
+	repeat with x running through cum grab objects:
+		ItemGain x by 1 silently;
 
 ListAllItems is an action applying to nothing.
 understand "zListAllItems" as ListAllItems.

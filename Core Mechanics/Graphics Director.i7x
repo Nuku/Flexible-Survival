@@ -82,12 +82,9 @@ g-ice-blue	39423		[== $0099FF]
 Section 3.1 - Artist Status
 
 This is the ngraphics_statusprocess rule:
-	let CurrentGraphic be the currently shown picture;
-	repeat with n running from 1 to number of filled rows in table of game art:
-		choose row n in table of game art;
-		if icon entry is CurrentGraphic:
-			now ngraphics_currentartist is artist entry;
-			break;
+	[let CurrentGraphic be the currently shown picture;]
+	if currently shown picture is a icon listed in Table of Game Art:
+		now ngraphics_currentartist is artist entry;
 
 Section 4 - User Commands
 
@@ -101,16 +98,17 @@ carry out graphicmoding:
 	while Trixieexit is 0:
 		clear the screen;
 		say "[bold type]Graphics Settings:[roman type][line break]";
-		say "(1) [link]Graphics[as]1[end link] - [bold type][if NewGraphicsInteger is 2]Side-Window Graphics[else if NewGraphicsInteger is 1]Inline Mode[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
+		say "(1) [link]Graphics[as]1[end link] - [bold type][if NewGraphicsInteger is 2]Side-Window Graphics[else if NewGraphicsInteger is 1]Inline Mode[else if NewGraphicsInteger is 0]Disabled[end if][roman type][line break]";
 		say "(2) [link]Graphics Window Settings[as]2[end link] - [bold type]Position: [if NewGraphicsPosition is 0]Right[else if NewGraphicsPosition is 1]Left[else if NewGraphicsPosition is 2]Above[else if NewGraphicsPosition is 3]Below[end if], Proportion: [NewGraphicsRatio][roman type][line break]";
-		say "(0) [link]EXIT[as]0[end link][line break]";
+		say "(0) [link]Exit[as]0[end link][line break]";
 		while 1 is 1:
-			say "(0-2)>[run paragraph on]";
+			say "(0-2)> [run paragraph on]";
 			get a number;
 			if calcnumber is 0 or calcnumber is 1 or calcnumber is 2:
 				break;
 			else:
 				say "Invalid Entry. Please enter a number between 0 and 2.";
+		LineBreak;
 		if calcnumber is:
 			-- 0:
 				say "Exit graphics menu?";
@@ -120,6 +118,7 @@ carry out graphicmoding:
 					reconstruct graphics window;
 					follow the ngraphics_blank rule;
 				else:
+					LineBreak;
 					close graphics window;
 			-- 1:
 				if NewGraphicsInteger is 2: [side window]
@@ -135,23 +134,25 @@ carry out graphicmoding:
 					now NewGraphics is true;
 					now NewGraphicsInteger is 2; [side window]
 			-- 2:
-				say "Please choose the position value (0 = [link]right side[as]0[end link], 1 = [link]left side[as]1[end link], 2 = [link]above[as]2[end link], 3 = [link]below[as]3[end link]).";
+				say "Please choose the position value ([link]0 - right side[as]0[end link], [link]1 - left side[as]1[end link], [link]2 - above[as]2[end link], [link]3 - below[as]3[end link]).";
 				while 1 is 1:
-					say "(0-3)>[run paragraph on]";
+					say "(0-3)> [run paragraph on]";
 					get a number;
 					if calcnumber > -1 and calcnumber < 4:
 						break;
 					else:
 						say "Invalid Entry. Please enter a number between 0 and 3.";
+				LineBreak;
 				now NewGraphicsPosition is calcnumber;
 				say "Please choose the proportion value. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.";
 				while 1 is 1:
-					say "(5-90)>[run paragraph on]";
+					say "(5-90)> [run paragraph on]";
 					get a number;
 					if calcnumber > 4 and calcnumber < 91:
 						break;
 					else:
 						say "Invalid Entry. Please enter a number between 5 and 90.";
+				LineBreak;
 				now NewGraphicsRatio is calcnumber;
 				now the graphics window proportion is NewGraphicsRatio;
 				if NewGraphicsPosition is:

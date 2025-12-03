@@ -8,8 +8,6 @@ Section 1 - Creature Responses
 cumgirlfed is a number that varies. cumgirlfed is usually -1.
 
 to say losetoCumGirl:
-	let CGFC be 0;
-	let CGFB be 0;
 	say "     Unable to resist the cum girl's attacks, you stumble back and fall to the ground. The cum girl strides over to your fallen form, quickly freeing your groin of any obstructions as she kneels before you.";
 	if Player is male:
 		if a random chance of 1 in 2 succeeds:
@@ -21,6 +19,8 @@ to say losetoCumGirl:
 			increase CumGirlFed by Ball Size of Player;
 		else:
 			increase CumGirlFed by 2;
+		let CGFC be 0;
+		let CGFB be 0;
 		if "Modest Organs" is not listed in feats of Player and Player is not FemalePreferred:
 			if Cock Length of Player < ( 5 + cumgirlfed ): [range 6-40]
 				now CGFC is a random number from 0 to 2;
@@ -28,11 +28,12 @@ to say losetoCumGirl:
 			if Ball Size of Player < 7 and a random chance of 1 in 2 succeeds:
 				now CGFB is a random number from 0 to 1;
 				BallsGrow Player by CGFB;
+		if CGFC > 0 or CGFB > 0:
 			Follow the cock descr rule;
-		if CGFC > 0:
-			say "     Your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random] [one of]engorges[or]swells[or]throbs[at random] as it gains[else][one of]cocks[or]penises[or]shafts[or]malenesses[at random] [one of]engorge[or]swell[or]throb[at random] as they gain[end if] in length, becoming [descr].";
-		if CGFB > 0:
-			say "     Your [one of]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, your skin becoming taut with the expansion, leaving you with [Ball Size Adjective of Player] [Balls].";
+			if CGFC > 0:
+				say "     Your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random] [one of]engorges[or]swells[or]throbs[at random] as it gains[else][one of]cocks[or]penises[or]shafts[or]malenesses[at random] [one of]engorge[or]swell[or]throb[at random] as they gain[end if] in length, becoming [descr].";
+			if CGFB > 0:
+				say "     Your [one of]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, your skin becoming taut with the expansion, leaving you with [Ball Size Adjective of Player] [Balls].";
 	else if Player is female:
 		say "     A faint smile crosses the cum girl's usually expressionless face as she strokes a pair of fingers across your outer folds, sending shivers of delight through you. Without hesitation she slips a pair of fingers inside you, then a third, and soon her entire slick hand is pumping into your body. With each thrust her limb loses more and more definition, soon little more than a warm, gooey mass that continues to surge into your cunt, working its way deeper inside you until you feel her pooling in your womb.";
 		say "     Eventually the stimulation from the warm, pulsating mass filling your body becomes too much and you are struck by a powerful orgasm. None of your feminine honey is allowed to escape, instead drawn into the mass of living cum filling your inner passages. The cum girl licks her lips contently as she pulls out of your body with a wet slurp. She stands up slowly before leaving your drained form without a second glance, wandering off in search of her next meal, the long, tendril-like appendage dragging behind her as it slowly shifts back to its original feminine form. As she leaves, you can't help but notice that her [one of]ass[or]bust[or]tummy[or]form[at random] seems slightly larger thanks to your contribution.";
@@ -88,6 +89,10 @@ to say PrepCombat_Cum Girl:
 		increase HP entry by ( 2 * cumgrowth * lev entry ) / 3;
 		increase dex entry by cumgrowth;
 		increase wdam entry by ( ( cumgrowth + 1 ) / 2 );
+	if cumgrowth > 5:
+		now scale entry is 4;
+	else:
+		now scale entry is 3;
 	now monsterHP is HP entry;
 
 Section 2 - Creature Insertion

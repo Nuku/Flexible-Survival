@@ -19,14 +19,14 @@ FireSpritemode is a number that varies. FireSpritemode is usually 0.
 
 to say losetoFireSprite:
 	if FireSpritemode is 0: [female sprite]
-		if Player is male and Cock Length of Player < 25 and a random chance of 1 in 2 succeeds:
+		if Player is male and Cock Length of Player < 12 and a random chance of 1 in 2 succeeds:
 			say "[FemaleFireSpriteVicVag]";
 		else:
 			say "[FemaleFireSpriteVicOral]";
 	else: [male sprite]
 		if ( Player is female and anallevel is 2 and a random chance of 1 in 4 succeeds ) or ( Player is female and anallevel is 3 and a random chance of 1 in 2 succeeds ) or ( Player is not female and anallevel > 1 and a random chance of 1 in 2 succeeds ):
 			say "[MaleFireSpriteVicAnal]";
-		else if Player is female and a random chance of 1 in 2 succeeds:
+		else if Player is female and Cunt Depth of Player < 12 and a random chance of 1 in 2 succeeds:
 			say "[MaleFireSpriteVicVag]";
 		else:
 			say "[MaleFireSpriteVicOral]";
@@ -62,6 +62,7 @@ to say beattheFireSprite:
 			else:
 				say "[beatFireSpriteguy]";
 		else:
+			LineBreak;
 			say "     Deciding against having some fun with the sprite, you release [if FireSpritemode is 0]her[else]him[end if] and send [if FireSpritemode is 0]her[else]him[end if] scampering off into the city with a light kick in the ass.";
 
 to say beatFireSpriteguy:
@@ -74,13 +75,13 @@ to say beatFireSpriteguy:
 		now sortorder entry is 1;
 		now description entry is "Have the sprite stroke you off";
 	[]
-	if Player is male and Cock Length of Player < 25:
+	if Player is male and Cock Length of Player < 12:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 2;
 		now description entry is "Fuck the sprite's ass";
 	[]
-	if Player is female:
+	if Player is female and Cunt Depth of Player < 12:
 		choose a blank row in table of fucking options;
 		now title entry is "Get fucked";
 		now sortorder entry is 3;
@@ -117,6 +118,7 @@ to say beatFireSpriteguy:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if title entry is "Masturbation":
@@ -133,11 +135,12 @@ to say beatFireSpriteguy:
 					say "[FireSpriteBlowJob]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     Deciding against having some fun with the sprite, you release [if FireSpritemode is 0]her[else]him[end if] and send [if FireSpritemode is 0]her[else]him[end if] scampering off into the city with a light kick in the ass.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say beatFireSpritegirl:
@@ -150,7 +153,7 @@ to say beatFireSpritegirl:
 		now sortorder entry is 1;
 		now description entry is "Have the sprite stroke you off";
 	[]
-	if Player is male and Cock Length of Player < 25:
+	if Player is male and Cock Length of Player < 12:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her";
 		now sortorder entry is 2;
@@ -187,6 +190,7 @@ to say beatFireSpritegirl:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if title entry is "Masturbation":
@@ -201,11 +205,12 @@ to say beatFireSpritegirl:
 					say "[FireSpriteBlowJob]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     Deciding against having some fun with the sprite, you release [if FireSpritemode is 0]her[else]him[end if] and send [if FireSpritemode is 0]her[else]him[end if] scampering off into the city with a light kick in the ass.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say FuckFireSprite:
@@ -295,8 +300,12 @@ to say PrepCombat_Fire Sprite:
 		project the figure of FireSpriteMale_icon;
 	if Player is MalePreferred:
 		now sex entry is "Male";
+	else if Player is FemalePreferred:
+		now sex entry is "Female";
 	else if Player is HermPreferred:
 		now sex entry is "Both";
+	else if FireSpritemode is 0:
+		now sex entry is "Male";
 	else:
 		now sex entry is "Female";
 
@@ -485,17 +494,17 @@ this is the FireBallBarrage rule:		[Multiple low damage hits]
 	let N be 0;
 	let M be 1;
 	let P be 0;
-	say "     The sprite winds up, preparing to launch a barrage of fireballs!";
+	say "The sprite winds up, preparing to launch a barrage of fireballs!";
 	while N is 0:
 		choose row MonsterID from the Table of Random Critters;
 		let dam be ( wdam entry * a random number between ( 45 - ( peppereyes * 4 ) ) and 85 ) / 100;
 		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
-			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+			say "The enemy finds a particular vulnerability in your defense - [bold type]Critical Hit![roman type][line break]";
 		if P is 0:
-			say "     The first fireball strikes you [one of]in the shoulder[or]squarely in the chest[or]in the leg[at random], causing a searing pain as you try and shake the embers off! You take [special-style-2][dam][roman type] damage!";
+			say "The first fireball strikes you [one of]in the shoulder[or]squarely in the chest[or]in the leg[at random], causing a searing pain as you try and shake the embers off! You take [special-style-2][dam][roman type] damage!";
 		else if P is 1:
-			say "     The sprite winds up and launches another fireball! You take [special-style-2][dam][roman type] damage!";
+			say "The sprite winds up and launches another fireball! You take [special-style-2][dam][roman type] damage!";
 		now damagein is dam;
 		say "[normalabsorbancy]";
 		if absorb > dam:
@@ -513,7 +522,7 @@ this is the FireBallBarrage rule:		[Multiple low damage hits]
 		now P is 1;
 		follow the player injury rule;
 		say "You are [descr].";
-		WaitLineBreak;
+		if N is 0, AttemptToWait;
 
 Section 4 - Glowing Ember
 
@@ -527,7 +536,7 @@ Usedesc of glowing ember is "[glowingemberuse]".
 
 to say glowingemberuse:
 	say "     Rolling the small, warm ember between your fingers you begin to find it difficult to focus on anything but its warm light. You hear the crackling of flame in the distance as you slip further and further out of focus, your vision filling with nothing but the pleasant light and flickering of flames...";
-	wait for any key;
+	AttemptToWait;
 	say "     You come to your senses some time later. Glancing around, you find the small ember missing. It is hard to shake the strange desire to light something on fire.";
 	infect "Fire Sprite";
 

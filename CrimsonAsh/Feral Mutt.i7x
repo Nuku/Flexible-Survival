@@ -140,13 +140,14 @@ to say FeralDogSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Suck him off"):
 					say "[SuckFeralMutt]";
-				if (nam is "Ride his cock"):
+				else if (nam is "Ride his cock"):
 					say "[RideFeralMutt]";
-				if (nam is "Fuck his ass"):
+				else if (nam is "Fuck his ass"):
 					say "[FuckFeralMutt]";
 				decrease FeralMuttDominance by 1;
 				if FeralMuttDominance > -3:
@@ -157,6 +158,7 @@ to say FeralDogSexMenu:
 					now Mutt Pack Attack is inactive; [inactive when they're not dominant enough]
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the [FeralMuttFurColor] [FeralMuttCurrentBreed], shaking your head slightly as he gives a questioning look.";
 			wait for any key;
@@ -213,24 +215,23 @@ to Pet MuttRecruitment:
 	say "     [link](3)[as]3[end link] - Shoo him off. You don't want a feral dog!";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 			break;
 		else:
 			say "Invalid choice. Type [link]1[end link] to adopt the dog, [link]2[end link] to hold out for another one or [link]3[end link] to shoo him off.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     Reaching out you pat the dog's furry head, he nuzzles his ears into your palm and pants at your affections. You give him a smile and ask if he liked what you did with him earlier, quickly eyeing the mutt's groin and the sheath between his legs. Leaping up, the cute dog barks happily, jumping in a small circle and wagging his tail excitedly. Turning around you start to walk, a slight swagger in your step as you lead the animal towards the Grey Abbey Library. Predictably, your new pet starts to follow, panting lightly, his eyes focused solely on you as the both of you arrive sometime later at your shelter. As you enter the building he stops outside, looking to you standing in the doorway. There is a moment of hesitation, with him cocking his head to the side, which reminds you that the dog has led an independent existence on the streets for some time now.";
 		say "     You wait patiently, waving for him to come in, but while he wags his tail, the dog still remains standing where he is. And a moment later he starts to pad closer, but not towards you but an old metal bench at a bus stop just a few steps away. Settling under it and wagging his tail happily, the dog barks at you in a meaningful tone. Seems like he found a place to stay. Outside dog, you think to yourself with a smile as the mutt lays his head down under the shade of his little shelter, looking to you and awaiting an order from his new master. Well then... only one thing left do to:[line break]";
 		LineBreak;
-		say "[bold type]Please enter a name for your [FeralMuttFurColor] [FeralMuttCurrentBreed]: [roman type]";
+		say "[bold type]Please enter a name for your [FeralMuttFurColor] [FeralMuttCurrentBreed][roman type]> [run paragraph on]";
 		get typed command as playerinput;
 		while "[playerinput]" is "":
-			say "[bold type]Please enter a name for your [FeralMuttFurColor] [FeralMuttCurrentBreed] (must be one or more letters): [roman type]";
+			say "[bold type]Please enter a name for your [FeralMuttFurColor] [FeralMuttCurrentBreed] (must be one or more letters)[roman type]> [run paragraph on]";
 			get typed command as playerinput;
 		now PetMuttName is playerinput;
-		wait for any key;
 		if FeralMuttCurrentBreed is "Malamute":
 			now PetMuttBreed is "Malamute";
 			if FeralMuttFurColorNumber is 1:
@@ -273,13 +274,12 @@ to Pet MuttRecruitment:
 			else:
 				now PetMuttColor is "white and brown";
 			now PetMuttDetailedlook is "a large [PetMuttColor] [PetMuttBreed]";
+		AttemptToWait;
 		move Pet Mutt to Main & 7th Street;
 		move Player to Main & 7th Street;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     Reaching out you pat the dog's furry head, he nuzzles his ears into your palm and pants at your affections. You give him a smile and then tell him in simple words that it's nice of him to want to be with you, but that it may be best if he looks for another master. The mutt looks at you, tilting his head a little to the side, then the meaning of your words seems to sink in and he gives a whine. He raises one paw and half-heartedly brushes it against your leg, then stops himself and lets his head droop down. You give the canine some extra pats and strokes to cheer him up a little, then part ways with him, leaving the dog behind.";
 	else: [shoo away]
-		LineBreak;
 		say "     You sneer, putting a hand on your hip and with your other you wave it aggressively, barking at the dog to get out of your sight. Even stepping closer with a stomp, growling cruelly at the mutt. That does it, he whines and quickly shuffles back when you stomp forward before fleeing, disappearing behind some nearby cover and padding off in retreat. You doubt you'll see that mongrel again or get any other similar offers of submission.";
 		now Loyalty of Pet Mutt is 99; [player doesn't want him]
 

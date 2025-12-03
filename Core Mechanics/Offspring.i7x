@@ -43,8 +43,7 @@ to say OffspringDesc:
 		say "Your child lives in the safety of the bunker:[line break]";
 	[new style children]
 	if number of filled rows in Table of PlayerBunkerChildren > 0: [player has new style children]
-		repeat with x running from 1 to number of filled rows in Table of PlayerBunkerChildren:
-			choose row x in the Table of PlayerBunkerChildren;
+		repeat through Table of PlayerBunkerChildren:
 			let Childage be ((Birthturn entry - turns ) divided by 8);
 			if Gender entry is "male":
 				SetMalePronouns for Offspring;
@@ -58,18 +57,18 @@ to say OffspringDesc:
 					say "child";
 				else:
 					say "child '[Name entry]'";
-				say " has a [Head entry] head, [Torso entry] front and [Back entry] back. ";
+				say " has [a Head entry in lower case] head, [Torso entry in lower case] front and [Back entry in lower case] back. ";
 				if ShowLegs entry is true:
-					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry] arms, [Legs entry] legs[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
+					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry in lower case] arms, [Legs entry in lower case] legs[if ShowTail entry is false] and [a Ass entry in lower case] behind[else], [a Ass entry in lower case] behind and [a Tail entry in lower case] tail[end if]. ";
 				else:
-					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry] arms[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if]. ";
+					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry in lower case] arms[if ShowTail entry is false] and [a Ass entry in lower case] behind[else], [a Ass entry in lower case] behind and [a Tail entry in lower case] tail[end if]. ";
 			else:
 				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
 				if Name entry is "":
 					say "child";
 				else:
 					say "child '[Name entry]'";
-				say " is a pureblood [Head entry]. ";
+				say " is a pureblood [Head entry in lower case]. ";
 			if Albino entry is true:
 				say "[bold type][PosAdjCap of Offspring] pigmentation is muted and almost white, except for the eyes that appear red.[roman type][line break]";
 			else if Melanism entry is true:
@@ -91,7 +90,7 @@ instead of sniffing offspring present:
 	say "The box smells very mysterious.";
 
 to say offspring present use:
-	say "Curious about what your child got you, you carefully open the present and find ";
+	say "     Curious about what your child got you, you carefully open the present and find ";
 	let RandomChance be a random number from 1 to 15;
 	if RandomChance < 4: [1-3]
 		say "a soda bottle inside!";

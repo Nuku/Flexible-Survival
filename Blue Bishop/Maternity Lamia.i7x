@@ -66,37 +66,44 @@ to say beatthelamia:
 	say "     Part of you is tempted to not let her off so easily[one of][or] this time[stopping]. Shall you allow yourself to catch her so you can indulge in some fun?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her";
 		now sortorder entry is 1;
 		now description entry is "screw the voluptuous viper";
+	[]
 [		if Cock Length of Player > xxx:
 			choose a blank row in table of fucking options;
 			now title entry is "Titty fuck";
 			now sortorder entry is 2;
 			now description entry is "nestle your cock between those milky melons"; ]
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Receive cunnilingus";
 		now sortorder entry is 3;
 		now description entry is "make the lamia eat you out";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Breastfeeding";
 	now sortorder entry is 4;
 	now description entry is "suckle from those milky tits of hers";
+	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
 	say "[link][0] - Let her go[as]0[end link][line break]";
 	while sextablerun is 0:
-		say "Pick the corresponding number (0-[the number of filled rows in table of fucking options]> [run paragraph on]";
+		say "Pick the corresponding number (0-[the number of filled rows in table of fucking options])> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: Shall you [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if nam is "Fuck her":
@@ -109,6 +116,7 @@ to say beatthelamia:
 					say "[mlamiavsex04]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     Not wanting to get involved any further, you let the lamia depart and return to your own business.";
 			wait for any key;
@@ -194,7 +202,7 @@ When Play begins:
 	now skin entry is "[one of]soft[or]supple[or]half-scaled[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]human[or]normal[at random]"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
-	now face change entry is "begins to tingle all over. Briefly dizzy and confused, you check your face to find that it is now of an attractive human's, though sporting dark, reptilian eyes. Your tongue flicks out almost involuntarily, now the long, forked tongue of a snake's"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now face change entry is "it begins to tingle all over. Briefly dizzy and confused, you check your face to find that it is now of an attractive human's, though sporting dark, reptilian eyes. Your tongue flicks out almost involuntarily, now the long, forked tongue of a snake's"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "your legs meld into one, elongating into the body of a snake, with your torso being that of a human's. It takes a while to adjust to moving with these powerful coils, but you eventually get the hang of it"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "your torso tingles, being a pale, supple flesh. Everything below the waist, however, grows an array of milky white, glimmering scales"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "you feel something settle in your lower torso, but nothing physically changes that you can see"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
@@ -448,7 +456,7 @@ this is the lamiaboob rule:	[***]
 		choose row monstercom from the table of critter combat;
 		now alt1chance entry is 0;
 		now mlamiaboobmash is true;
-		WaitLineBreak;
+		if matlamiacaught is 2, AttemptToWait;
 
 [ matlamiacaught - temp variable ]
 [ 0 = broke free                 ]

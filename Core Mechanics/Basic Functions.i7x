@@ -36,6 +36,27 @@ To say a/an (T - text):
 		say "a ";
 	say T.
 
+hyperindex is a number that varies. [the index of a link in the hyperlink list that was found or added]
+
+to linkfind (T - text): [sets hyperindex to the index of an entry in the hyperlink list matching T after finding or adding it]
+	let link be the substituted form of "[T]";
+	if hyperindex < 1 or hyperindex > number of entries in hyperlink list:
+		now hyperindex is number of entries in hyperlink list;
+	if hyperindex < number of entries in hyperlink list and entry hyperindex + 1 of hyperlink list is link: [links often get built in the same order, so long runs of these should be sequential]
+		increase hyperindex by 1;
+	else if link is listed in hyperlink list: [otherwise, find it in the list if it exists]
+		repeat with x running from 1 to number of entries in hyperlink list:
+			if hyperindex > number of entries in hyperlink list / 2: [if our last position was over halfway through the list, go backwards]
+				if entry (number of entries in hyperlink list - x) + 1 of hyperlink list is link: [in reverse, x = 1 is the last entry of the list]
+					now hyperindex is (number of entries in hyperlink list - x) + 1;
+					break;
+			else if entry x of hyperlink list is link: [else search forward regularly]
+				now hyperindex is x;
+				break;
+	else: [or just add it if it doesn't]
+		add link to hyperlink list;
+		now hyperindex is number of entries in hyperlink list;
+
 checkresult is a number that varies.
 
 To check (X - text):
@@ -75,11 +96,8 @@ To wait for any key:
 		LineBreak;
 
 to say WaitLineBreak: [little bit of often used code]
-	if waiterhater is 0: [skips waiting if it's not wanted]
-		wait for any key;
-		if hypernull is 0, LineBreak; [adds a break after the 'more']
-	else:
-		LineBreak; [people who don't want to wait at least get a break]
+	LineBreak;
+	WaitLineBreak;
 
 to WaitLineBreak: [little bit of often used code]
 	if waiterhater is 0: [skips waiting if it's not wanted]
@@ -145,14 +163,12 @@ to ItemGain (ItemObj - text) by (N - number) silently:
 
 to ItemGain (ItemObj - text) by (N - number) silence state is (Silence - a number):
 	let found be 0;
-	repeat with x running from 1 to number of filled rows in Table of Game Objects:
-		choose row x from Table of Game Objects;
+	repeat through Table of Game Objects:
 		if name entry exactly matches the text ItemObj, case insensitively:
 			if Silence is 0:
 				ItemGain object entry by N;
 			else:
 				ItemGain object entry by N silently;
-			now object entry is part of Player; [keeping the flimsy FS inventory system running]
 			now found is 1;
 			break;
 	if found is 0:
@@ -195,16 +211,13 @@ to ItemLoss (ItemObj - a grab object) by (N - number) silence state is (Silence 
 	if Silence is 0:
 		LineBreak;
 		if N is 1:
-			if carried of ItemObj is 1:
-				say "     [bold type]You lose your [printed name of ItemObj in lower case]![roman type][line break]";
-			else:
-				say "     [bold type]You lose 1 [printed name of ItemObj in lower case]![roman type][line break]";
+			say "     [bold type]You lose [if carried of ItemObj is 1]your[else]1[end if] [printed name of ItemObj in lower case]![roman type][line break]";
 		else:
-			if carried of ItemObj is N:
-				say "     [bold type]You lose all your [printed name of ItemObj in lower case]![roman type][line break]";
-			else:
-				say "     [bold type]You lose [N] [printed name of ItemObj in lower case]![roman type][line break]";
+			say "     [bold type]You lose [if carried of ItemObj <= N]all your[else][N][end if] [printed name of ItemObj in lower case]![roman type][line break]";
 	decrease carried of ItemObj by N;
+	if carried of ItemObj < 1:
+		now carried of ItemObj is 0;
+		now ItemObj is nowhere;
 
 to PlayerMaxHeal:
 	LineBreak;
@@ -299,6 +312,10 @@ to FeatLoss (Featname - text):
 		remove Featname from feats of Player;
 		if Featname is "Sterile":
 			now Sterile of Player is false;
+		else if Featname is "Strong Back":
+			decrease capacity of Player by 50;
+		else if Featname is "Vampiric":
+			now vampiric is false;
 	else if debugactive is 1:
 		say "ERROR: Trying to remove '[Featname]', which the player does not have.";
 
@@ -320,11 +337,11 @@ to FeatGain (Featname - text):
 			increase MaxHP of Player by 8;
 			increase HP of Player by 8;
 		else if Featname is "Instinctive Combat":
-			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the 'Auto Attack' command. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
+			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the [']Auto Attack['] commands. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [link][bold type]auto attack normal[roman type][end link] for the default method of combat (choose each action).[line break]Type [link][bold type]auto attack berserk[roman type][end link] to always attack in combat.[line break]Type [link][bold type]auto attack seduce[roman type][end link] to always seduce in combat.[line break]Type [link][bold type]auto attack pass[roman type][end link] to always pass in combat.[line break]Type [link][bold type]auto attack coward[roman type][end link] to always flee in combat.[line break]Type [link][bold type]auto attack submit[roman type][end link] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
 		else if Featname is "Vore Predator":
-			say "     Having gained the [']Vore Predator['] feat, you can now access the [bold type]vore menu[roman type] command. It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]). It is used for adjusting vore-related game settings.";
+			say "     Having gained the [']Vore Predator['] feat, you can now access the [link][bold type]vore menu[roman type][end link] command. It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]). It is used for adjusting vore-related game settings.";
 		else if Featname is "Mugger":
-			say "     You will now get a flat rate increase to item drops from monsters based on your perception. This ability can be can turned on or off by using the [bold type]mugger[roman type] command and is currently [bold type][if muggerison is true]ON[else]OFF[end if][roman type].";
+			say "     You will now get a flat rate increase to item drops from monsters based on your perception. This ability can be can turned on or off by using the [link][bold type]mugger[as]muggering[roman type][end link] command and is currently [bold type][if muggerison is true]ON[else]OFF[end if][roman type].";
 		else if Featname is "Vampiric":
 			say "     You will now recover a small amount of health, thirst and hunger after every victory as you get in a blood-sucking bite after your final blow or at some other point during the victory scene.";
 			now vampiric is true;
@@ -335,14 +352,14 @@ to BallsGrow (TargetChar - a person) by (IncreaseNum - a number):
 	increase Ball Size of TargetChar by IncreaseNum;
 	if Ball Size of TargetChar < 0:
 		now Ball Size of TargetChar is 0;
-	if Ball Size of TargetChar > 7:
+	else if Ball Size of TargetChar > 7:
 		now Ball Size of TargetChar is 7;
 
 to BallsShrink (TargetChar - a person) by (DecreaseNum - a number):
 	decrease Ball Size of TargetChar by DecreaseNum;
 	if Ball Size of TargetChar < 0:
 		now Ball Size of TargetChar is 0;
-	if Ball Size of TargetChar > 7:
+	else if Ball Size of TargetChar > 7:
 		now Ball Size of TargetChar is 7;
 
 to TraitGain (TraitName - a text) for (TraitChar - a person):
@@ -417,13 +434,12 @@ carry out PlayerRenaming:
 
 to playernaming:
 	say "Note: You can always change your name at a later point with the 'rename' command.";
-	say "     [bold type]Please enter your new name: [roman type][line break]";
+	LineBreak;
+	say "     [bold type]Please enter your new name[roman type]> [run paragraph on]";
 	get typed command as playerinput;
 	if "[playerinput]" is not "", now name of Player is playerinput;
 
-understand "observe" as ObserveRoom.
-understand "observe room" as ObserveRoom.
-understand "observe surroundings" as ObserveRoom.
+understand "observe room/surroundings/--" as ObserveRoom.
 
 ObserveRoom is an action applying to nothing.
 
@@ -460,32 +476,32 @@ carry out SexStatsOverview:
 		say "Your asshole has seen some use.";
 	LineBreak;
 	say "Since the beginning of the nanite apocalypse, you have had the following sexual encounters:[Line Break]";
-	say "[OralPussyGiven of Player] times having your pussy orally pleasured, making you a [SexP OralPussyGiven of Player] at receiving pussy oral.";
-	say "[OralPussyTaken of Player] times orally pleasuring someone's pussy, making you a [SexP OralPussyTaken of Player] at giving pussy oral.";
-	say "[OralCockGiven of Player] times having your cock orally pleasured, making you a [SexP OralCockGiven of Player] at receiving cock oral.";
-	say "[OralCockTaken of Player] times orally pleasuring someone's cock, making you a [SexP OralCockTaken of Player] at giving cock oral.";
-	say "[AssFuckGiven of Player] times fucking someone in the ass, making you a [SexP AssFuckGiven of Player] at fucking asses.";
-	say "[AssFuckTaken of Player] times taking someone's cock up your ass, making you a [SexP AssFuckTaken of Player] at being ass-fucked.";
-	say "[PussyFuckGiven of Player] times fucking someone's pussy, making you a [SexP PussyFuckGiven of Player] at fucking pussies.";
-	say "[PussyFuckTaken of Player] times being fucked in the pussy by someone, making you a [SexP PussyFuckTaken of Player] at being fucked.";
+	say "[OralPussyGiven of Player] times having your pussy orally pleasured, making you [SexP OralPussyGiven of Player] at receiving pussy oral.";
+	say "[OralPussyTaken of Player] times orally pleasuring someone's pussy, making you [SexP OralPussyTaken of Player] at giving pussy oral.";
+	say "[OralCockGiven of Player] times having your cock orally pleasured, making you [SexP OralCockGiven of Player] at receiving cock oral.";
+	say "[OralCockTaken of Player] times orally pleasuring someone's cock, making you [SexP OralCockTaken of Player] at giving cock oral.";
+	say "[AssFuckGiven of Player] times fucking someone in the ass, making you [SexP AssFuckGiven of Player] at fucking asses.";
+	say "[AssFuckTaken of Player] times taking someone's cock up your ass, making you [SexP AssFuckTaken of Player] at being ass-fucked.";
+	say "[PussyFuckGiven of Player] times fucking someone's pussy, making you [SexP PussyFuckGiven of Player] at fucking pussies.";
+	say "[PussyFuckTaken of Player] times being fucked in the pussy by someone, making you [SexP PussyFuckTaken of Player] at being fucked.";
 
 to say SexP (N - number):
 	if N is 0:
-		say "[special-style-1]virgin[roman type]";
+		say "a [special-style-1]virgin[roman type]";
 	else if N < 10:
-		say "[special-style-1]novice[roman type]";
+		say "a [special-style-1]novice[roman type]";
 	else if N < 30:
-		say "[special-style-1]apprentice[roman type]";
+		say "an [special-style-1]apprentice[roman type]";
 	else if N < 70:
-		say "[special-style-1]initiate[roman type]";
+		say "an [special-style-1]initiate[roman type]";
 	else if N < 150:
-		say "[special-style-1]journeyman[roman type]";
+		say "a [special-style-1]journeyman[roman type]";
 	else if N < 300:
-		say "[special-style-1]expert[roman type]";
+		say "an [special-style-1]expert[roman type]";
 	else if N < 575:
-		say "[special-style-1]master[roman type]";
+		say "a [special-style-1]master[roman type]";
 	else:
-		say "[special-style-1]legendary [one of]pornstar[or]sex machine[at random][roman type]";
+		say "a [special-style-1]legendary [one of]pornstar[or]sex machine[at random][roman type]";
 
 understand "testNPCSexAftermath" as NPCSexAftermathAction.
 
@@ -560,9 +576,9 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 		now LastSexualPartner of Player is printed name of TakingChar;
 		if PlayerFucked of TakingChar is false: [player never had sex with this NPC]
 			now PlayerFucked of TakingChar is true; [player sexed up this NPC]
-		if SexAct is "AssFuck" and Player is not male: [player needs to be male to penetrate]
+		if SexAct in lower case is "assfuck" and Player is not male: [player needs to be male to penetrate]
 			say "Error: NPCSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: 'Player', TakingChar: '[TakingChar]'[line break]";
-		else if SexAct is "AssFuck":
+		else if SexAct in lower case is "assfuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
 				say "     [Bold Type]You have lost your penile virginity fucking [TakingChar]![roman type][line break]";
@@ -577,9 +593,9 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 			increase AssFuckGiven of Player by 1;
 			if GivingChar is not sterile and TakingChar is mpreg_able: [mpreg fertile]
 				say "[ImpregFunction of TakingChar]";
-		else if SexAct is "PussyFuck" and Player is not male: [player needs to be male to penetrate]
+		else if SexAct in lower case is "pussyfuck" and Player is not male: [player needs to be male to penetrate]
 			say "Error: NPCSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: 'Player', TakingChar: '[TakingChar]'[line break]";
-		else if SexAct is "PussyFuck":
+		else if SexAct in lower case is "pussyfuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
 				say "     [Bold Type]You have lost your penile virginity fucking [TakingChar]![roman type][line break]";
@@ -594,7 +610,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 			increase PussyFuckGiven of Player by 1;
 			if GivingChar is not sterile and TakingChar is fpreg_able: [fpreg fertile]
 				say "[ImpregFunction of TakingChar]";
-		else if SexAct is "PussyDildoFuck": [used for dildos, fingers, tentacles, or even a cock that is pulled out before orgasm - anything pussy penetrative that does not impregnate]
+		else if SexAct in lower case is "pussydildofuck": [used for dildos, fingers, tentacles, or even a cock that is pulled out before orgasm - anything pussy penetrative that does not impregnate]
 			if Virgin of TakingChar is true:
 				now Virgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s virginity![roman type][line break]";
@@ -602,7 +618,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now SexuallyExperienced of TakingChar is true;
 				add printed name of TakingChar to VirginitiesTaken of Player;
 			increase PussyFuckGiven of Player by 1;
-		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles, or even a cock that is pulled out before orgasm - anything ass penetrative that does not impregnate]
+		else if SexAct in lower case is "assdildofuck": [used for dildos, fingers, tentacles, or even a cock that is pulled out before orgasm - anything ass penetrative that does not impregnate]
 			if AnalVirgin of TakingChar is true:
 				now AnalVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s anal virginity![roman type][line break]";
@@ -610,9 +626,9 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now SexuallyExperienced of TakingChar is true;
 				add printed name of TakingChar to AnalVirginitiesTaken of Player;
 			increase AssFuckGiven of Player by 1;
-		else if SexAct is "OralCock" and Player is not male: [player needs to be male to get sucked]
+		else if SexAct in lower case is "oralcock" and Player is not male: [player needs to be male to get sucked]
 			say "Error: NPCSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: 'Player', TakingChar: '[TakingChar]'[line break]";
-		else if SexAct is "OralCock":
+		else if SexAct in lower case is "oralcock":
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s oral virginity![roman type][line break]";
@@ -620,9 +636,9 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now SexuallyExperienced of TakingChar is true;
 				add printed name of TakingChar to OralVirginitiesTaken of Player;
 			increase OralCockGiven of Player by 1;
-		else if SexAct is "OralPussy" and Player is not female: [player needs to be female to get licked]
+		else if SexAct in lower case is "oralpussy" and Player is not female: [player needs to be female to get licked]
 			say "Error: NPCSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: 'Player', TakingChar: '[TakingChar]'[line break]";
-		else if SexAct is "OralPussy":
+		else if SexAct in lower case is "oralpussy":
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s oral virginity![roman type][line break]";
@@ -630,7 +646,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now SexuallyExperienced of TakingChar is true;
 				add printed name of TakingChar to OralVirginitiesTaken of Player;
 			increase OralPussyGiven of Player by 1;
-		else if SexAct is "OralDildo": [used for dildos, fingers, tentacles - anything orally penetrative]
+		else if SexAct in lower case is "oraldildo": [used for dildos, fingers, tentacles - anything orally penetrative]
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s oral virginity![roman type][line break]";
@@ -645,7 +661,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 		now LastSexualPartner of GivingChar is name of Player;
 		if PlayerFucked of GivingChar is false: [player never had sex with this NPC]
 			now PlayerFucked of GivingChar is true; [player sexed up this NPC]
-		if SexAct is "AssFuck":
+		if SexAct in lower case is "assfuck":
 			if debug is at level 1:
 				say "DEBUG -> MainInfection of [GivingChar] is '[MainInfection of GivingChar]'[line break]";
 			if AnalVirgin of Player is true:
@@ -671,9 +687,9 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 						<set the GivingChar as father somehow>
 					]
 			increase AssFuckTaken of Player by 1;
-		else if SexAct is "PussyFuck" and Player is not female: [player needs to be female to get penetrated]
+		else if SexAct in lower case is "pussyfuck" and Player is not female: [player needs to be female to get penetrated]
 			say "Error: NPCSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]', TakingChar: 'Player'[line break]";
-		else if SexAct is "PussyFuck":
+		else if SexAct in lower case is "pussyfuck":
 			if debug is at level 1:
 				say "DEBUG -> MainInfection of [GivingChar] is '[MainInfection of GivingChar]'[line break]";
 			if Virgin of Player is true:
@@ -699,33 +715,33 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 						<set the GivingChar as father somehow>
 					]
 			increase PussyFuckTaken of Player by 1;
-		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
+		else if SexAct in lower case is "assdildofuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
 			if AnalVirgin of Player is true:
 				now AnalVirgin of Player is false;
 				say "     [Bold Type]You have lost your anal virginity to [GivingChar]![roman type][line break]";
 				now FirstAnalPartner of Player is printed name of GivingChar;
 				now SexuallyExperienced of Player is true;
 			increase AssFuckTaken of Player by 1;
-		else if SexAct is "PussyDildoFuck" and Player is not female: [player needs to be female to get penetrated]
+		else if SexAct in lower case is "pussydildofuck" and Player is not female: [player needs to be female to get penetrated]
 			say "Error: NPCSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]', TakingChar: 'Player'[line break]";
-		else if SexAct is "PussyDildoFuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]
+		else if SexAct in lower case is "pussydildofuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]
 			if Virgin of Player is true:
 				now Virgin of Player is false;
 				say "     [Bold Type]You have lost your virginity to [GivingChar]![roman type][line break]";
 				now FirstVaginalPartner of Player is printed name of GivingChar;
 				now SexuallyExperienced of Player is true;
 			increase PussyFuckTaken of Player by 1;
-		else if SexAct is "OralCock" or SexAct is "OralPussy":
+		else if SexAct in lower case is "oralcock" or SexAct in lower case is "oralpussy":
 			if OralVirgin of Player is true:
 				now OralVirgin of Player is false;
 				say "     [Bold Type]You have lost your oral virginity to [GivingChar]![roman type][line break]";
 				now FirstOralPartner of Player is printed name of GivingChar;
 				now SexuallyExperienced of Player is true;
-			if SexAct is "OralCock":
+			if SexAct in lower case is "oralcock":
 				increase OralCockTaken of Player by 1;
 			else:
 				increase OralPussyTaken of Player by 1;
-		else if SexAct is "OralDildo": [used for dildos, fingers, tentacles - anything orally penetrative]
+		else if SexAct in lower case is "oraldildo": [used for dildos, fingers, tentacles - anything orally penetrative]
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type]You have lost your oral virginity to [GivingChar]![roman type][line break]";
@@ -738,9 +754,9 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 			say "DEBUG -> [GivingChar] is having sex with [TakingChar][line break]";
 		now LastSexualPartner of TakingChar is printed name of GivingChar;
 		now LastSexualPartner of GivingChar is printed name of TakingChar;
-		if SexAct is "AssFuck" and GivingChar is not male:
+		if SexAct in lower case is "assfuck" and GivingChar is not male:
 			say "Error: NPCSexAftermath run with '[SexAct]' but character is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]', TakingChar: '[TakingChar]'[line break]";
-		else if SexAct is "AssFuck":
+		else if SexAct in lower case is "assfuck":
 			if PenileVirgin of GivingChar is true:
 				now PenileVirgin of GivingChar is false;
 				say "     [Bold Type][GivingChar] has lost their penile virginity to [TakingChar]![roman type][line break]";
@@ -753,9 +769,9 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now SexuallyExperienced of TakingChar is true;
 			if GivingChar is not sterile and TakingChar is mpreg_able: [mpreg fertile]
 				say "[ImpregFunction of TakingChar]";
-		else if SexAct is "PussyFuck" and (GivingChar is not male or TakingChar is not female):
+		else if SexAct in lower case is "pussyfuck" and (GivingChar is not male or TakingChar is not female):
 			say "Error: NPCSexAftermath run with '[SexAct]' with incorrect male/female pairing! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]', TakingChar: '[TakingChar]'[line break]";
-		else if SexAct is "PussyFuck":
+		else if SexAct in lower case is "pussyfuck":
 			if PenileVirgin of GivingChar is true:
 				now PenileVirgin of GivingChar is false;
 				say "     [Bold Type][GivingChar] has lost their penile virginity to [TakingChar]![roman type][line break]";
@@ -768,35 +784,35 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now SexuallyExperienced of TakingChar is true;
 			if GivingChar is not sterile and TakingChar is fpreg_able: [fpreg fertile]
 				say "[ImpregFunction of TakingChar]";
-		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
+		else if SexAct in lower case is "assdildofuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
 			if AnalVirgin of TakingChar is true:
 				now AnalVirgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s anal virginity![roman type][line break]";
 				now FirstAnalPartner of TakingChar is printed name of GivingChar;
 				now SexuallyExperienced of TakingChar is true;
-		else if SexAct is "PussyDildoFuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]
+		else if SexAct in lower case is "pussydildofuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]
 			if Virgin of TakingChar is true:
 				now Virgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s virginity![roman type][line break]";
 				now FirstVaginalPartner of TakingChar is printed name of GivingChar;
 				now SexuallyExperienced of TakingChar is true;
-		else if SexAct is "OralCock" and GivingChar is not male:
+		else if SexAct in lower case is "oralcock" and GivingChar is not male:
 			say "Error: NPCSexAftermath run with '[SexAct]' but character is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]', TakingChar: '[TakingChar]'[line break]";
-		else if SexAct is "OralCock":
+		else if SexAct in lower case is "oralcock":
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s oral virginity![roman type][line break]";
 				now FirstOralPartner of TakingChar is printed name of GivingChar;
 				now SexuallyExperienced of TakingChar is true;
-		else if SexAct is "OralPussy" and GivingChar is not female:
+		else if SexAct in lower case is "oralpussy" and GivingChar is not female:
 			say "Error: NPCSexAftermath run with '[SexAct]' but character is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]', TakingChar: '[TakingChar]'[line break]";
-		else if SexAct is "OralPussy":
+		else if SexAct in lower case is "oralpussy":
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s oral virginity![roman type][line break]";
 				now FirstOralPartner of TakingChar is printed name of GivingChar;
 				now SexuallyExperienced of TakingChar is true;
-		else if SexAct is "OralDildo": [used for dildos, fingers, tentacles - anything orally penetrative]
+		else if SexAct in lower case is "oraldildo": [used for dildos, fingers, tentacles - anything orally penetrative]
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s oral virginity![roman type][line break]";
@@ -821,16 +837,16 @@ carry out CreatureSexAftermathAction:
 	[Options for SexAct are: AssFuck, PussyFuck, AssDildoFuck, PussyDildoFuck, OralCock, OralPussy]
 
 to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) from (GivingCharName - a text):
-	if GivingCharName is "Player" or GivingCharName is "player":
+	if GivingCharName in lower case is "player":
 		if debugactive is 1:
 			say "DEBUG -> Player is the giving partner for '[SexAct]'[line break]";
 		if there is a name of TakingCharName in the Table of Random Critters: [security in case someone made a typo - avoids Runtime Errors]
 			choose a row with name of TakingCharName in the Table of Random Critters;
 		else: [lets tell people to report this too]
 			say "     < ERROR: [TakingCharName] not found in Table of Random Critters. Please report the situation you saw this in on the Flexible Survival Discord Bug Report Channel! >";
-		if SexAct is "AssFuck" and Player is not male: [player needs to be male to penetrate]
+		if SexAct in lower case is "assfuck" and Player is not male: [player needs to be male to penetrate]
 			say "Error: CreatureSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]', TakingChar: '[TakingCharName]'[line break]";
-		else if SexAct is "AssFuck":
+		else if SexAct in lower case is "assfuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
 				say "     [Bold Type]You have lost your penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
@@ -848,9 +864,9 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 					now MainInfection of Impregnated Feral is TakingCharName; [saving the infection name]
 					if debugactive is 1:
 						say "DEBUG -> Non-Sterile Player succeeded in their [2 + Ball Size of Player] in 10 impregnation check. [Libido of Impregnated Feral] turns to birth of a [MainInfection of Impregnated Feral] offspring.[line break]";
-		else if SexAct is "PussyFuck" and Player is not male: [player needs to be male to penetrate]
+		else if SexAct in lower case is "pussyfuck" and Player is not male: [player needs to be male to penetrate]
 			say "Error: CreatureSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]', TakingChar: '[TakingCharName]'[line break]";
-		else if SexAct is "PussyFuck":
+		else if SexAct in lower case is "pussyfuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
 				say "     [Bold Type]You have lost your penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
@@ -868,24 +884,24 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 					now MainInfection of Impregnated Feral is TakingCharName; [saving the infection name]
 					if debugactive is 1:
 						say "DEBUG -> Non-Sterile Player succeeded in their [2 + Ball Size of Player] in 10 impregnation check. [Libido of Impregnated Feral] Turns to birth of a [MainInfection of Impregnated Feral] offspring.[line break]";
-		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
+		else if SexAct in lower case is "assdildofuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
 			increase AssFuckGiven of Player by 1;
-		else if SexAct is "PussyDildoFuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]
+		else if SexAct in lower case is "pussydildofuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]
 			increase PussyFuckGiven of Player by 1;
-		else if SexAct is "OralCock":
+		else if SexAct in lower case is "oralcock":
 			if Player is not male: [player needs to be male to get sucked]
 				say "Error: CreatureSexAftermath run with '[SexAct]' but player is not male! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]', TakingChar: '[TakingCharName]'[line break]";
 			else:
 				increase OralCockGiven of Player by 1;
-		else if SexAct is "OralPussy":
+		else if SexAct in lower case is "oralpussy":
 			if Player is not female: [player needs to be female to get licked]
 				say "Error: CreatureSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]', TakingChar: '[TakingCharName]'[line break]";
 			else:
 				increase OralPussyGiven of Player by 1;
-	else if TakingCharName is "Player" or TakingCharName is "player":
+	else if TakingCharName in lower case is "player":
 		if debugactive is 1:
 			say "DEBUG -> Player is the receiving partner for '[SexAct]'[line break]";
-		if SexAct is "AssFuck":
+		if SexAct in lower case is "assfuck":
 			if AnalVirgin of Player is true:
 				now AnalVirgin of Player is false;
 				say "     [Bold Type]You have lost your anal virginity to the [GivingCharName in lower case]![roman type][line break]";
@@ -897,9 +913,9 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 			else:
 				mimpregchance;
 			increase AssFuckTaken of Player by 1;
-		else if SexAct is "PussyFuck" and Player is not female: [player needs to be female to get penetrated]
+		else if SexAct in lower case is "pussyfuck" and Player is not female: [player needs to be female to get penetrated]
 			say "Error: CreatureSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]', TakingChar: '[TakingCharName]'[line break]";
-		else if SexAct is "PussyFuck":
+		else if SexAct in lower case is "pussyfuck":
 			if Virgin of Player is true:
 				now Virgin of Player is false;
 				say "     [Bold Type]You have lost your virginity to the [GivingCharName in lower case]![roman type][line break]";
@@ -911,29 +927,29 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 			else:
 				fimpregchance;
 			increase PussyFuckTaken of Player by 1;
-		else if SexAct is "AssDildoFuck":
+		else if SexAct in lower case is "assdildofuck":
 			if AnalVirgin of Player is true:
 				now AnalVirgin of Player is false;
 				say "     [Bold Type]You have lost your anal virginity to [GivingCharName]![roman type][line break]";
 				now FirstAnalPartner of Player is GivingCharName;
 				now SexuallyExperienced of Player is true;
 			increase AssFuckTaken of Player by 1;
-		else if SexAct is "PussyDildoFuck" and Player is not female: [player needs to be female to get penetrated]
+		else if SexAct in lower case is "pussydildofuck" and Player is not female: [player needs to be female to get penetrated]
 			say "Error: CreatureSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingCharName]', TakingChar: '[TakingCharName]'[line break]";
-		else if SexAct is "PussyDildoFuck":
+		else if SexAct in lower case is "pussydildofuck":
 			if Virgin of Player is true:
 				now Virgin of Player is false;
 				say "     [Bold Type]You have lost your virginity to [GivingCharName]![roman type][line break]";
 				now FirstVaginalPartner of Player is GivingCharName;
 				now SexuallyExperienced of Player is true;
 			increase PussyFuckTaken of Player by 1;
-		else if SexAct is "OralCock" or SexAct is "OralPussy":
+		else if SexAct in lower case is "oralcock" or SexAct in lower case is "oralpussy":
 			if OralVirgin of Player is true:
 				now OralVirgin of Player is false;
 				say "     [Bold Type]You have lost your oral virginity to the [GivingCharName in lower case]![roman type][line break]";
 				now FirstOralPartner of Player is GivingCharName;
 				now SexuallyExperienced of Player is true;
-			if SexAct is "OralCock":
+			if SexAct in lower case is "oralcock":
 				increase OralCockTaken of Player by 1;
 			else:
 				increase OralPussyTaken of Player by 1;
@@ -958,21 +974,23 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 			say "DEBUG: TakingCharName: [TakingCharName], TakingCharIsNPC: [TakingCharIsNPC][line break]";
 		if GivingCharIsNPC is 0 and TakingCharIsNPC is 0:
 			say "Error: The CreatureSexAftermath function should include at least one NPC if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]', Taking Char: '[TakingCharName]'";
-		else if GivingCharIsNPC is 1 and TakingCharIsNPC is 0: [NPC gives]
-			if SexAct is "AssFuck":
+		else if GivingCharIsNPC is 1 and TakingCharIsNPC is 1:
+			say "Error: The CreatureSexAftermath function should include at least one infection if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]' Taking Char: '[TakingCharName]'";
+		else if GivingCharIsNPC is 1: [NPC gives]
+			if SexAct in lower case is "assfuck":
 				if PenileVirgin of GivingChar is true:
 					now PenileVirgin of GivingChar is false;
 					say "     [Bold Type][GivingCharName] has lost their penile virginity fucking the [TakingCharName in lower case]'s ass![roman type][line break]";
 					now FirstPenilePartner of GivingChar is TakingCharName;
 					now SexuallyExperienced of GivingChar is true;
-			else if SexAct is "PussyFuck":
+			else if SexAct in lower case is "pussyfuck":
 				if PenileVirgin of GivingChar is true:
 					now PenileVirgin of GivingChar is false;
 					say "     [Bold Type][GivingCharName] has lost their penile virginity fucking the [TakingCharName in lower case]![roman type][line break]";
 					now FirstPenilePartner of GivingChar is TakingCharName;
 					now SexuallyExperienced of GivingChar is true;
-		else if GivingCharIsNPC is 0 and TakingCharIsNPC is 1: [NPC takes]
-			if SexAct is "AssFuck":
+		else: [NPC takes]
+			if SexAct in lower case is "assfuck":
 				if AnalVirgin of TakingChar is true:
 					now AnalVirgin of TakingChar is false;
 					say "     [Bold Type][TakingCharName] has lost their anal virginity to [GivingCharName in lower case]![roman type][line break]";
@@ -980,7 +998,7 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 					now SexuallyExperienced of TakingChar is true;
 				if TakingChar is mpreg_able: [mpreg fertile]
 					say "[ImpregFunction of TakingChar]";
-			else if SexAct is "PussyFuck":
+			else if SexAct in lower case is "pussyfuck":
 				if Virgin of TakingChar is true:
 					now Virgin of TakingChar is false;
 					say "     [Bold Type][TakingCharName] has lost their virginity to [GivingCharName in lower case]![roman type][line break]";
@@ -988,26 +1006,24 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 					now SexuallyExperienced of TakingChar is true;
 				if TakingChar is fpreg_able: [fpreg fertile]
 					say "[ImpregFunction of TakingChar]";
-			else if SexAct is "AssDildoFuck":
+			else if SexAct in lower case is "assdildofuck":
 				if AnalVirgin of TakingChar is true:
 					now AnalVirgin of TakingChar is false;
 					say "     [Bold Type][TakingCharName] has lost their anal virginity to [GivingCharName]![roman type][line break]";
 					now FirstAnalPartner of TakingChar is GivingCharName;
 					now SexuallyExperienced of TakingChar is true;
-			else if SexAct is "PussyDildoFuck":
+			else if SexAct in lower case is "pussydildofuck":
 				if Virgin of TakingChar is true:
 					now Virgin of TakingChar is false;
 					say "     [Bold Type][TakingCharName] has lost their virginity to [GivingCharName]![roman type][line break]";
 					now FirstVaginalPartner of TakingChar is GivingCharName;
 					now SexuallyExperienced of TakingChar is true;
-			else if SexAct is "OralCock" or SexAct is "OralPussy":
+			else if SexAct in lower case is "oralcock" or SexAct in lower case is "oralpussy":
 				if OralVirgin of TakingChar is true:
 					now OralVirgin of TakingChar is false;
 					say "     [Bold Type][TakingCharName] has lost their oral virginity to [GivingCharName in lower case]![roman type][line break]";
 					now FirstOralPartner of TakingChar is GivingCharName;
 					now SexuallyExperienced of TakingChar is true;
-		else:
-			say "Error: The CreatureSexAftermath function should include at least one infection if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]' Taking Char: '[TakingCharName]'";
 
 to StatChange (Statname - a text) by (Modifier - a number):
 	StatChange Statname by Modifier silence state is 0;
@@ -1165,9 +1181,10 @@ to say StripCrotch:
 	repeat with z running through equipped equipment:
 		if slot of z is "waist":
 			now WaistItem is z;
-	repeat with z running through equipped equipment:
-		if slot of z is "crotch":
+		else if slot of z is "crotch":
 			now CrotchItem is z;
+		if WaistItem is not journal and CrotchItem is not journal:
+			break;
 	if WaistItem is journal and CrotchItem is journal: [already naked]
 		say "strokes over your bare crotch";
 	else if WaistItem is journal and CrotchItem is not journal:
@@ -1198,9 +1215,10 @@ to say SelfStripCrotch:
 	repeat with z running through equipped equipment:
 		if slot of z is "waist":
 			now WaistItem is z;
-	repeat with z running through equipped equipment:
-		if slot of z is "crotch":
+		else if slot of z is "crotch":
 			now CrotchItem is z;
+		if WaistItem is not journal and CrotchItem is not journal:
+			break;
 	if WaistItem is journal and CrotchItem is journal: [already naked]
 		say "stroke over your bare crotch";
 	else if WaistItem is journal and CrotchItem is not journal:
@@ -1231,9 +1249,10 @@ to say SelfDressCrotch:
 	repeat with z running through equipped equipment:
 		if slot of z is "waist":
 			now WaistItem is z;
-	repeat with z running through equipped equipment:
-		if slot of z is "crotch":
+		else if slot of z is "crotch":
 			now CrotchItem is z;
+		if WaistItem is not journal and CrotchItem is not journal:
+			break;
 	if WaistItem is journal and CrotchItem is journal: [already naked]
 		say "casually stroke over your bare crotch";
 	else if WaistItem is journal and CrotchItem is not journal:
@@ -1256,9 +1275,10 @@ to say crotchDesc:
 	repeat with z running through equipped equipment:
 		if slot of z is "waist":
 			now WaistItem is z;
-	repeat with z running through equipped equipment:
-		if slot of z is "crotch":
+		else if slot of z is "crotch":
 			now CrotchItem is z;
+		if WaistItem is not journal and CrotchItem is not journal:
+			break;
 	if WaistItem is journal and CrotchItem is journal: [already naked]
 		say "bare crotch";
 	else if WaistItem is journal and CrotchItem is not journal:
@@ -1287,9 +1307,10 @@ to say StripChest:
 	repeat with z running through equipped equipment:
 		if slot of z is "chest":
 			now ChestItem is z;
-	repeat with z running through equipped equipment:
-		if slot of z is "Body":
+		else if slot of z is "body":
 			now BodyItem is z;
+		if ChestItem is not journal and BodyItem is not journal:
+			break;
 	if ChestItem is journal and BodyItem is journal: [already naked]
 		say "strokes over your bare chest";
 	else if ChestItem is journal and BodyItem is not journal:
@@ -1319,9 +1340,10 @@ to say SelfStripChest:
 	repeat with z running through equipped equipment:
 		if slot of z is "chest":
 			now ChestItem is z;
-	repeat with z running through equipped equipment:
-		if slot of z is "Body":
+		else if slot of z is "body":
 			now BodyItem is z;
+		if ChestItem is not journal and BodyItem is not journal:
+			break;
 	if ChestItem is journal and BodyItem is journal: [already naked]
 		say "casually stroke over your bare chest";
 	else if ChestItem is journal and BodyItem is not journal:
@@ -1352,9 +1374,10 @@ to say SelfDressChest:
 	repeat with z running through equipped equipment:
 		if slot of z is "chest":
 			now ChestItem is z;
-	repeat with z running through equipped equipment:
-		if slot of z is "Body":
+		else if slot of z is "body":
 			now BodyItem is z;
+		if ChestItem is not journal and BodyItem is not journal:
+			break;
 	if ChestItem is journal and BodyItem is journal: [already naked]
 		say "casually stroke over your bare chest";
 	else if ChestItem is journal and BodyItem is not journal:
@@ -1377,9 +1400,10 @@ to say chestDesc:
 	repeat with z running through equipped equipment:
 		if slot of z is "chest":
 			now ChestItem is z;
-	repeat with z running through equipped equipment:
-		if slot of z is "Body":
+		else if slot of z is "body":
 			now BodyItem is z;
+		if ChestItem is not journal and BodyItem is not journal:
+			break;
 	if ChestItem is journal and BodyItem is journal: [already naked]
 		say "bare chest";
 	else if ChestItem is not journal and BodyItem is journal:
@@ -1398,6 +1422,7 @@ to say feetDesc:
 	repeat with z running through equipped equipment:
 		if slot of z is "feet":
 			now FeetItem is z;
+			break;
 	if FeetItem is journal: [already naked]
 		say "bare feet";
 	else:
@@ -1512,14 +1537,14 @@ to decide which text is what the player chooses from (choices - a list of text):
 		increase choice order by 1;
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > number of entries in choices:
-		say "Choice? (1-[number of entries in choices])>[run paragraph on]";
+		say "Choice? (1-[number of entries in choices])> [run paragraph on]";
 		get a number;
 		if calcnumber < 1 or calcnumber > number of entries in choices:
 			say "Invalid choice. Type ";
 			now choice order is 1;
 			repeat with option running through choices:
 				if choice order is number of entries in choices:
-					say " or [link][choice order][end link] to select '[option]'[line break]";
+					say "[if choice order > 1] or [end if][link][choice order][end link] to select '[option]'.";
 				else:
 					say "[link][choice order][end link] to select '[option]', ";
 				increase choice order by 1;

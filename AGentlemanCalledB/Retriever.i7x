@@ -29,6 +29,7 @@ to say beattheRetriever:
 		if Libido of Player > 60 and Player is not neuter:
 			say "     As you land the final blow on the retriever girl she stumbles and falls backwards, giving you a clear view of her dripping cunt. You realize this is your opportunity to have some fun with the puppy if you wanted to (Y/N).";
 			if Player consents:
+				LineBreak;
 				say "     You decide to have some fun with the lusty canine and she realizes your intent as you approach and begin stripping off your gear. The retriever begins to pant happily and spreads her legs before you.";
 				if Player is male:
 					say "     Already fully erect by the time you reach her you waste no time in jumping on the supine canine. As you tease her outer folds with your [cock size desc of Player] [Cock of Player] cock she begins to whimper needfully, already beginning to buck against you, trying to force you inside her. You begin thrusting into her slowly, soon easily matching her own pace, each push eliciting another whimper or small bark from your retriever lover.";
@@ -47,6 +48,7 @@ to say beattheRetriever:
 					CreatureSexAftermath "Retriever Female" receives "OralPussy" from "Player";
 					CreatureSexAftermath "Player" receives "OralPussy" from "Retriever Female";
 			else:
+				LineBreak;
 				say "     You decide it's best to leave the defeated retriever be. As you turn to leave you see her climbing to her feet again, you brace yourself for another attack, but it never comes. She seems content to follow behind you and whine needfully, apparently trying to change your mind about playing with her. Eventually you manage to shake the lusty canine and continue on your way.";
 		else:
 			say "     After you land the final blow on the poor golden furred canine you feel a wave of remorse overcome you as she turns and scampers away, tail between her legs, crying out that she had only wanted to play with you. You consider chasing after her to apologize for a moment but decide it's probably best to leave her be and continue on your way.";
@@ -57,9 +59,9 @@ to say Retrieverdesc:
 
 to say RetrieverAttack:
 	if HP of Karen is 4:
-		say "[one of]Swinging wildly[or]Lashing out[or]Striking forward[at random] [one of]with his short claws[or]with a balled fist[or]in anger[at random], Rex [one of]lands a powerful blow[or]connects painfully, nearly knocking you to the floor[or]lands a sharp strike which sends you reeling[at random].";
+		say "[one of]Swinging wildly[or]Lashing out[or]Striking forward[at random] [one of]with his short claws[or]with a balled fist[or]in anger[at random], Rex [one of]lands a powerful blow[or]connects painfully, nearly knocking you to the floor[or]lands a sharp strike which sends you reeling[at random].[no line break]";
 	else:
-		say "[one of]The female retriever rushes you, clipping your side as you try and dive out of her way.[or]The female retriever rushes you, bowling you over as she catches you off guard, assaulting you with licks and small nibbles before you are able to push her off.[or]You find yourself awe struck by the sexy female canine's body momentarily, long enough for her to close in and plant a wet doggy kiss on your cheek.[or]The retriever bitch moves in quickly, raking across your shoulder and arm with her short claws before you can react.[at random]";
+		say "[one of]The female retriever rushes you, clipping your side as you try and dive out of her way[or]The female retriever rushes you, bowling you over as she catches you off guard, assaulting you with licks and small nibbles before you are able to push her off[or]You find yourself awe struck by the sexy female canine's body momentarily, long enough for her to close in and plant a wet doggy kiss on your cheek[or]The retriever bitch moves in quickly, raking across your shoulder and arm with her short claws before you can react[at random].[no line break]";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -102,7 +104,7 @@ When Play begins:
 	now cock entry is "[one of]canine[or]knotted[or]sheathed[or]pointed doggy[at random]";
 	now face change entry is "you feel an immense pressure build in your head, only to have it release moments later as your face pushes out into a canine muzzle. You are distracted from your changing head when your ears begin to ring painfully, you realize why when you feel them shifting to the top of your head while the rest of your face changes to match the female retriever almost exactly";
 	now body change entry is "you stumble and fall to all fours, your legs twisting to a digitigrade configuration with canine paws. The changes continue up your body like a wave, leaving you with a stunning hourglass figure and paw-like hands, much like that retriever bitch";
-	now skin change entry is "as a thick coat of golden fur covers your entire body";
+	now skin change entry is "a thick coat of golden fur covers your entire body";
 	now ass change entry is "feminine curves overtake it leaving it an attractive cross between a woman and a canine. Meanwhile you feel nearby muscles working without your input, looking backwards you find they are wagging your growing retriever tail happily, regardless of your opinion";
 	now cock change entry is "your entire manhood is consumed by a growing golden furred sheath, once covered you feel an unusual pressure while it changes into that of a male retriever";
 	now str entry is 15; [ The player's stats will move towards these values through infection. ]
@@ -257,7 +259,7 @@ Strain of retriever cum is "Retriever Male".
 Usedesc of retriever cum is "[retriever cum use]".
 
 to say retriever cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
@@ -276,7 +278,7 @@ Strain of retriever milk is "Retriever Female".
 Usedesc of retriever milk is "[retriever milk use]".
 
 to say retriever milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
 instead of sniffing retriever milk:
@@ -314,7 +316,7 @@ When Play begins:
 	now attack entry is "[RetrieverAttack]";
 	now defeated entry is "[beattheRetriever]";
 	now victory entry is "[losetoRetriever]";
-	now desc entry is "     Standing before you is Rex, a large male golden retriever. His long, thickly furred tail whips about in irritation behind him as he assumes an aggressive fighting stance. Clearly he isn't pleased with your little escape plan.";
+	now desc entry is "     Standing before you is Rex, a large male golden retriever. His long, thickly furred tail whips about in irritation behind him as he assumes an aggressive fighting stance. Clearly he isn't pleased with your little escape plan.[line break]";
 	now face entry is "that of an attractive female retriever, with large folded ears atop your head and a delicate canine muzzle[if HP of Rex > 9]. Fastened around your neck, you have a thin blue leather studded collar, declaring your status as Rex's pet to the world. There's even a small, silver, bone-shaped tag with your name engraved on it[end if]";
 	now body entry is "that of a clearly female canine, with a beautiful hourglass figure leading into shapely digitigrade legs and large paws. Your hands have also become somewhat paw-like, while they have maintained some dexterity, it is clear they have become very canine, with short but slender digits topped with small claws";
 	now skin entry is "a thick, shiny coat of golden fur over your";
@@ -322,7 +324,7 @@ When Play begins:
 	now cock entry is "[one of]canine[or]knotted[or]sheathed[or]pointed doggy[at random]";
 	now face change entry is "you feel an immense pressure build in your head, only to have it release moments later as your face pushes out into a canine muzzle. You are distracted from your changing head when your ears begin to ring painfully, you realize why when you feel them shifting to the top of your head while the rest of your face changes to match the female retriever almost exactly";
 	now body change entry is "you stumble and fall to all fours, your legs twisting to a digitigrade configuration with canine paws. The changes continue up your body like a wave, leaving you with a stunning hourglass figure and paw-like hands, much like that retriever bitch";
-	now skin change entry is "as a thick coat of golden fur covers your entire body";
+	now skin change entry is "a thick coat of golden fur covers your entire body";
 	now ass change entry is "feminine curves overtake it leaving it an attractive cross between a woman and a canine. Meanwhile you feel nearby muscles working without your input, looking backwards you find they are wagging your growing retriever tail happily, regardless of your opinion";
 	now cock change entry is "your entire manhood is consumed by a growing golden furred sheath, once covered you feel an unusual pressure while it changes into that of a male retriever";
 	now str entry is 19; [ The player's stats will move towards these values through infection. ]
@@ -477,7 +479,7 @@ Strain of retriever man-milk is "Retriever Male".
 Usedesc of retriever man-milk is "[retriever man-milk use]".
 
 to say retriever man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
 instead of sniffing retriever man-milk:

@@ -81,8 +81,8 @@ Section 3 - Interacting
 
 to say ResolveEvent Returned_Spots:
 	say " [Luke_intro]";
-	LineBreak;
 	if player is male: [Stops after the brief intro if not male, otherwise lets you choose what to do next]
+		LineBreak;
 		say "     [bold type]What do you do now?[roman type][line break]";
 		let Returned_Spots_Choices be a list of text; [more current, easier to use multi choice point below]
 		add "Smile and nod your head. You'd love to get railed by this sexy cat!" to Returned_Spots_Choices;
@@ -97,8 +97,10 @@ to say ResolveEvent Returned_Spots:
 			-- "Smile and nod your head. You'd love to get railed by this sexy cat!":
 				say "[luke_opt1]"; [sex]
 			-- "Shake your head. You're not up for that right now.":
+				LineBreak;
 				say "[luke_opt2]"; [postpone]
 			-- "Shake your head and push him away. You have no interest in this guy, now or ever!":
+				LineBreak;
 				say "[luke_opt3]"; [refuse]
 
 to say luke_intro:

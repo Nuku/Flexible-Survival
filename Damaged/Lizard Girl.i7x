@@ -36,6 +36,7 @@ to say lizgirl check angry:
 	if lizgirlangry is 1 and inafight is 1:
 		if HP of Player < 11:
 			LineBreak;
+			now dam is 0;
 			now fightoutcome is 19;
 			say "The lizard girl draws away from the fight.";
 			LineBreak;
@@ -90,8 +91,7 @@ to say lizgirl defeat:
 		say "     Remembering that the lizard girl has part of the cure for Ronda, you run your hands over her body and slip a finger into her wet pussy. You start to rub and finger her cunt, making her moan and squirm in pleasure. She grips your shoulders firmly and bucks her hips as you pump a pair of fingers into her again and again. As her excitement builds and her vaginal walls quiver around your digits, she moans and bucks her hips almost as if thrusting before finally climaxing loudly. She sags against you, panting for breath after her orgasm. Still holding her up with one arm, you place a small vial under her pussy to gather the leaking juices, a little surprised to find them a thick and creamy white instead of clear juices. Sealing up the unusual sample, you resist the urge to lick your fingers clean and instead wipe them off after taking a moment to enjoy her thick, musky scent.";
 		ItemGain lizard juice by 1;
 		now HP of ronda is 5;
-	if Libido of Player > 33:
-		WaitLineBreak;
+	else if Libido of Player > 33:
 		if Player is male:
 			say "[lizdefmale]";
 		else if Player is female:
@@ -101,13 +101,14 @@ to say lizgirl defeat:
 
 to say lizdefmale:
 	say "     You look down upon the defeated lizard girl's body, your arousal growing as you decide to sate your lust on this creature. You stride over to her[if Player is not naked] and undress[end if], your cock growing erect with thoughts of what you're about to do to her. You kneel down beside her and push her onto her stomach, causing her to groan. You position yourself behind her, taking hold of her hips with one hand while the other lifts up her reptilian tail to reveal her wet folds. You grin and lick your lips, pulling her up to meet you as you press the tip of your [Cock of Player] length against her sex and slide it in. You moan out in pleasure, her reptilian cunt instinctively gripping and pulling on your shaft, urging you to fuck her. Not wasting any time, you begin to buck into her tight depths, both arms wrapped around her tail for support. The lizard girl beneath you gasps and groans at this treatment, her tail wrapping around you as much as it can, trying to pull you closer to her.";
+	WaitLineBreak;
 	say "     You grit your teeth and buck into her harder, trying your best to hold off the impending orgasm you feel coming. You can barely hold on any longer when the girl beneath you cries out as she climaxes, her cunt spasming along your length and sending you over the edge. Your cries of joy mix with hers as you empty your balls into her depths, her cunt milking your [cock size desc of Player] shaft for your cum. You pant and groan as you come down from your climax, slipping your length out of her cunt and letting your cum leak out from her hole. You stand up and give the lizard girl's ass a soft slap, making her shiver and groan, before you grab your gear and head out.";
 	CreatureSexAftermath "Lizard Girl" receives "PussyFuck" from "Player";
 
 to say lizdeffemale:
 	say "     You look down upon the defeated lizard girl's body, your arousal growing as you decide to sate your lusts on this creature. You stride over to her[if Player is not naked] and undress[end if], your pussy getting nice and wet thinking about what you're going to do to her. You kneel down beside her and roll her onto her back, taking hold of her legs and spreading them open to show her sexy cunt. You grin, licking your lips and move yourself between her legs and slide your folds up against her own. She moans, involuntarily pressing back against you as you begin to grind your sex against her[if Breast Size of Player > 0]. Holding one leg of hers up with a hand, you take hold of one of your breasts with the other and gently begin groping it and playing with the nipple[end if]. You look down at the female beneath you and notice that she's begun fondling her own breasts too, tweaking her nipples, and rubbing them together.";
-	say "     You smile and laugh, getting even more turned on by her wanton display of need. You gasp, eyes going wide as you feel a long scaly shape sliding between your cunt and hers. You glance down and moan as you see her tail pressing and grinding against both of your sexes, the end pressing up against yours and slipping in. You arch your back and groan in pleasure as she stimulates your insides with her tail, pressing up against the walls of your pussy and flicking the tip of her tail up and down your depths. Your body shakes and shivers at this, quickly bringing you to orgasm as your cunt clamps down on her tail, your fem juices squirting out around the sides. You collapse in a heap, panting hard and groaning in the aftermath. Not one to be ungrateful though, you roll yourself onto your stomach and move to press your mouth against her folds, gently kissing and licking at them.";
 	WaitLineBreak;
+	say "     You smile and laugh, getting even more turned on by her wanton display of need. You gasp, eyes going wide as you feel a long scaly shape sliding between your cunt and hers. You glance down and moan as you see her tail pressing and grinding against both of your sexes, the end pressing up against yours and slipping in. You arch your back and groan in pleasure as she stimulates your insides with her tail, pressing up against the walls of your pussy and flicking the tip of her tail up and down your depths. Your body shakes and shivers at this, quickly bringing you to orgasm as your cunt clamps down on her tail, your fem juices squirting out around the sides. You collapse in a heap, panting hard and groaning in the aftermath. Not one to be ungrateful though, you roll yourself onto your stomach and move to press your mouth against her folds, gently kissing and licking at them.";
 	say "     Taking hold of the end of her tail, still slick with your juices, you press it against her sex and slide it in, using it like a living dildo. She gasps and squirms in response as you pump the end of her tail in and out of her while you lick and nibble at her clitoris. Soon enough she is crying out in orgasm, spraying your face with her juices. You eagerly lap them up and slip her tail out of her cunt. Once she lets out one last shiver of orgasmic pleasure, she collapses in an exhausted heap. Grinning all the while, you get up and grab your equipment and quietly sneak away, the taste of the lizard girl still on your lips.";
 	CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Lizard Girl";
 	CreatureSexAftermath "Player" receives "OralPussy" from "Lizard Girl";
@@ -330,10 +331,10 @@ When Play begins:
 to say liz impreg:
 	if lizgirlimpreg is 1:
 		if Player is not male:
-			say "     With a gasp you feel something you thought long lost to you, a male orgasm, but it feels odd, as it should since you have no member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the lizard girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.";
+			say "With a gasp you feel something you thought long lost to you, a male orgasm, but it feels odd, as it should since you have no member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the lizard girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.";
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Lizard Girl";
 		else:
-			say "     With a gasp you feel a male orgasm, but it feels odd, you cannot see any of your seed leaking out of your member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the lizard girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.";
+			say "With a gasp you feel a male orgasm, but it feels odd, you cannot see any of your seed leaking out of your member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the lizard girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.";
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Lizard Girl";
 
 to say toggle heat flag:

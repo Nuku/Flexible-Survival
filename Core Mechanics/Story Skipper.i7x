@@ -318,6 +318,7 @@ to RoomRestore:
 		read File of RoomInventorySave into the Table of GameRoomInventories;
 		repeat with x running from 1 to the number of filled rows in the Table of GameRoomInventories:
 			choose row x in the Table of GameRoomInventories;
+			if ItemName entry is "Sundered Codex", next; [automatically given on import now, so don't restore it]
 			let RoomIdName be RoomName entry;
 			if there is a name of RoomIdName in the Table of GameRoomIDs: [room exists]
 				let RoomObject be the object corresponding to a name of RoomIdName in the Table of GameRoomIDs;
@@ -1685,7 +1686,7 @@ To say ProgressionExport:
 		LineBreak;
 		if wrcursestatus is 5:
 			wrcurserecede; [puts player back to normal form and restores proper stats for saving]
-		LineBreak;
+			LineBreak;
 		say "Writing save files.";
 		SaveEverything;
 		if wrcursestatus is 5:
@@ -1713,7 +1714,7 @@ Carry out ProgressImport:
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
 	if Player consents:
 		LineBreak;
-		say "     <Press any key to start import> ";
+		say "     <Press any key to start import> [run paragraph on]";
 		wait for any key;
 		say "[ProgressionImport]";
 

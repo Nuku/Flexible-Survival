@@ -6,8 +6,7 @@ TapeInventorying is an action applying to nothing.
 
 understand "tint" as TapeInventorying.
 understand "tinv" as TapeInventorying.
-understand "tape inventory" as TapeInventorying.
-understand "tape inv" as TapeInventorying.
+understand "tape inventory/inv" as TapeInventorying.
 
 check TapeInventorying:
 	if number of entries in tapes of Player is 0, say "Your collection of video tapes is empty." instead;
@@ -20,27 +19,10 @@ carry out TapeInventorying:
 	let linkparts be {{"U", "tape"}, {"D", "tapedrop"}};
 	repeat with x running through tapes of Player:
 		if hypernull is not 1:
-			say "[tapelink x with linkparts]";
+			repeat with linktext running through linkparts:
+				linkfind "[entry 2 of linktext] [x]"; [sets hyperindex to the existing or added entry matching link text]
+				say "[set link hyperindex][bracket][entry 1 of linktext][close bracket][terminate link] ";
 		say "[x][line break]";
-
-to say tapelink (T - text) with (L - list of list of text):
-	repeat with linktext running through L:
-		let link be the substituted form of "[entry 2 of linktext] [T]";
-		if hyperindex < 1 or hyperindex > number of entries in hyperlink list:
-			add link to hyperlink list;
-			now hyperindex is number of entries in hyperlink list;
-		else:
-			if hyperindex < number of entries in hyperlink list and entry hyperindex + 1 of hyperlink list is link: [likely the list will get built in the same order, so long runs of these should be sequential]
-				increase hyperindex by 1;
-			else if link is listed in hyperlink list: [otherwise, find it in the list if it exists]
-				repeat with x running from 1 to number of entries in hyperlink list:
-					if entry x of hyperlink list is link:
-						now hyperindex is x;
-						break;
-			else: [or just add it if it doesn't]
-				add link to hyperlink list;
-				now hyperindex is number of entries in hyperlink list;
-		say "[set link hyperindex][bracket][entry 1 of linktext][close bracket][terminate link] "; [associate our text in the UI with the command in the hyperlink list]
 
 understand "tape [text]" as tapeing.
 

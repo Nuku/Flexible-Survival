@@ -25,6 +25,7 @@ Sarea of Werewolf Surprise is "Nowhere".
 when play begins:
 	add Werewolf Surprise to BadSpots of FemaleList;
 	add Werewolf Surprise to BadSpots of FurryList;
+	add Werewolf Surprise to BadSpots of FeralList;
 
 an everyturn rule:
 	if daytimer is day: [currently day]
@@ -32,7 +33,7 @@ an everyturn rule:
 			now WerewolfWatching is false;
 	else if daytimer is night: [currently night]
 		if Player is in Urban Forest and WerewolfRelationship is 0 and level of Player > 5:
-			if FemaleList is not banned and FurryList is not banned:
+			if FemaleList is not banned and FurryList is not banned and FeralList is not banned:
 				if WerewolfWatching is false: [initial message]
 					say "     Here between the untamed trees of the Urban Forest, the shadows seem especially deep and seem to play tricks on your eyes. Every little movement of branches and leaves draws your gaze, and the ominous feeling of being watched fills you with tension. The sensation of something's predatory gaze resting on you can't be all in your head, can it?";
 					now WerewolfWatching is true;

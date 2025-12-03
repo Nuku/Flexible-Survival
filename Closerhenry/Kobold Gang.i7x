@@ -222,14 +222,16 @@ to say KoboldGangSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Fuck the Leader"):
 					say "[FuckKoboldGangLeader]";
-				if (nam is "Start an Orgy"):
+				else if (nam is "Start an Orgy"):
 					say "[KoboldGangOrgy]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You back away and shake your head.";
 			wait for any key;

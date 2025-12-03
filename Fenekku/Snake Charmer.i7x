@@ -63,11 +63,13 @@ to say ResolveEvent Snake Charmer:
 		say "     ([link]Y[as]y[end link]) - Accept his advances, and everything that entails.";
 		say "     ([link]N[as]n[end link]) - Reject his advances; you're not interested.";
 		if Player consents:
+			LineBreak;
 			say "     The naga's face develops into a smile, genuine yet somewhat predatory. It would seem the naga is pleased that you've accepted his advances. The naga approaches you once again, looking deep into your eyes, 'Then come, my mate, and show me your acceptance.'";
 			LineBreak;
 			NagaSex;
 			now Resolution of Snake Charmer is 4;
 		else:
+			LineBreak;
 			say "     The naga's expression dips slightly at your denial. 'Truly?' His voice sounds hurt, but you nod, assuring him that you're unable - or unwilling - to return his affections. He is quiet for a moment, before nodding. 'Very well, I shall respect your decision.' The coils once relaxed around you start to withdraw as the naga pulls away from you, moving to a respectful distance. 'I will remember you as the first to resist my gaze, but nothing more. I will not seek you again.' With another nod, the naga turns and slithers away from you, slowly picking up speed and vanishing into the depths of the zoo.";
 			say "     You only stay standing there for a moment more before remembering the situation you're in. The naga's gaze vanishes completely from your mind, enough that you can no longer even remember what his eyes looked like. But, your decision made, you go your own way.";
 			now Resolution of Snake Charmer is 101;
@@ -96,10 +98,12 @@ to say ResolveEvent Naga Mate:
 	say "     ([link]Y[as]y[end link]) - It's time to mate.";
 	say "     ([link]N[as]n[end link]) - Not right now.";
 	if Player consents:
+		LineBreak;
 		say "     'Well, my mate. After our first session together, I'm curious as to what you have in mind this time.' Letting you decide once again, he eagerly waits.";
 		LineBreak;
 		NagaSex;
 	else:
+		LineBreak;
 		say "     'I understand.' The naga nods, starting to pull his coils out and away from you. 'The world is cruel at the moment. Dangerous. Stay safe, my mate.' With that said, he gently slithers past you, rubbing your shoulder as he passes before disappearing whence he came into the zoo.";
 
 to NagaSex:
