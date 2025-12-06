@@ -60,7 +60,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Plant Lobby	"Plant Lobby"
 
-Plant Lobby is a room. "     Claw marks cover the floor here, and small puddles of what seem to be seed litter the floor. The receptionist desk is upturned, and smashed into small splinters. The whole area is also blackened, like a fire ran through here. An intact, but blackened, flight of stairs in the back leads up to the control room.".
+Plant Lobby is a room. "     Claw marks cover the floor here, and small puddles of what seem to be seed litter the floor. The receptionist desk is upturned, and smashed into small splinters. The whole area is also blackened, like a fire ran through here. An intact, but blackened, flight of stairs in the back leads up to the control room.[line break]".
 The earea of Plant Lobby is "Outside".
 Plant Lobby is west of Broken Fence.
 
@@ -77,7 +77,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Plant Overview	"Plant Overview"
 
-Plant Overview is a room. It is fasttravel. "     The city's main power plant rises before you, a great accomplishment of geothermal engineering. Though it seems that someone - or rather something - went on a rampage here. The outside walls of the huge structure are burnt and blackened in arcs and spots, as if someone spent a while going at it with a flamethrower. On the long side of the building, a massive rend in the wall allows entry to the inside - for those who have no problem walking through the bubbling pit of lava in front of it at least. You on the other hand will have to use the side entrance of the administration annex to the north if you want to explore the power plant.".
+Plant Overview is a room. It is fasttravel. "     The city's main power plant rises before you, a great accomplishment of geothermal engineering. Though it seems that someone - or rather something - went on a rampage here. The outside walls of the huge structure are burnt and blackened in arcs and spots, as if someone spent a while going at it with a flamethrower. On the long side of the building, a massive rend in the wall allows entry to the inside - for those who have no problem walking through the bubbling pit of lava in front of it at least. You on the other hand will have to use the side entrance of the administration annex to the north if you want to explore the power plant.[line break]".
 Plant Overview is south of Plant Lobby.
 the earea of Plant Overview is "Outside".
 
@@ -85,7 +85,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Control Room	"Control Room"
 
-Control Room is a room. "     The Control Room overlooks the plant's generators. Surprisingly, this room is intact, and you wonder why no monsters ever got in. The walls are covered with control panels and there is a whole bank of control stations in front of the windows. A door in the west wall leads out on a catwalk going from generator to generator. There is power here, and the panels glow softly. Looking out into the main hall of the power plant, you see that the generators are in miserable condition, most are smashed, and several are half-melted and covered in what looks like lava. However, one appears to be in working condition, near the middle.".
+Control Room is a room. "     The Control Room overlooks the plant's generators. Surprisingly, this room is intact, and you wonder why no monsters ever got in. The walls are covered with control panels and there is a whole bank of control stations in front of the windows. A door in the west wall leads out on a catwalk going from generator to generator. There is power here, and the panels glow softly. Looking out into the main hall of the power plant, you see that the generators are in miserable condition, most are smashed, and several are half-melted and covered in what looks like lava. However, one appears to be in working condition, near the middle.[line break]".
 Control Room is above Plant Lobby.
 
 control panels is a thing. A control panels is in Control Room.
@@ -112,7 +112,7 @@ Object	Name
 Administration Offices	"Administration Offices"
 
 Administration Offices is a room. Administration Offices is north of Plant Lobby.
-Description of Administration Offices is "     There isn't much left of the corridor and adjoining offices that formed the administration of the power plant. Looks like some sort of pyromaniac scattered papers and trashed furniture all throughout and set them ablaze. Thankfully the automatic sprinklers seem to have worked and stopped the whole building from burning down.".
+Description of Administration Offices is "     There isn't much left of the corridor and adjoining offices that formed the administration of the power plant. Looks like some sort of pyromaniac scattered papers and trashed furniture all throughout and set them ablaze. Thankfully the automatic sprinklers seem to have worked and stopped the whole building from burning down.[line break]".
 Instead of sniffing Administration Offices:
 	say "     The scent of wet ash hangs in the air.";
 
@@ -145,7 +145,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Cat Walk	"Cat Walk"
 
-Cat Walk is a room. "     The catwalk rises high above the floor next to the rows of large generators, allowing access to them for maintenance. It's pretty warm in here - no wonder, with all the patches of lava still glowing red hot beside and on top of the busted generators. The floor is a metal grate, and thin metal pipes form the handrails. A nearby metal sign reads: 'Danger, electrocution hazard'. You can reach the intact generator from here.[catwalkstuff]".
+Cat Walk is a room. "     The catwalk rises high above the floor next to the rows of large generators, allowing access to them for maintenance. It's pretty warm in here - no wonder, with all the patches of lava still glowing red hot beside and on top of the busted generators. The floor is a metal grate, and thin metal pipes form the handrails. A nearby metal sign reads: 'Danger, electrocution hazard'. You can reach the intact generator from here.[line break][catwalkstuff]".
 Cat Walk is west of Catwalk Door.
 
 to say catwalkstuff:
@@ -203,7 +203,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Power Lines	"Power Lines"
 
-Power Lines is a room. "     A large power line tower stands here[if findwires is not 2], but the top is broken off and on the ground. The surrounding fence is melted and charred, like something spat magma at it, and the bottom of the tower is scorched, but it still looks serviceable. Looking down the line of other still standing towers, you see the city's powerplant not too far away in one direction, and a part of the city you know pretty well in the other. The library is over there, and the mall as well. Maybe you could restore power to them if you [link][bold type]fixed[roman type][as]fix tower[end link] this tower[else if fixedgens > 2]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. A red light is glows at its uppermost tip, signaling that there is power and it's flowing towards the closest part of the city - which should include the library as well as the mall[else]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. The now unbroken lines should allow electricity to reach the nearby part of the city again, though you see that the red light at the uppermost tip of the tower is still off, showing that there is no power. Maybe you should check out the power plant again[end if].".
+Power Lines is a room. "     A large power line tower stands here[if findwires is not 2], but the top is broken off and on the ground. The surrounding fence is melted and charred, like something spat magma at it, and the bottom of the tower is scorched, but it still looks serviceable. Looking down the line of other still standing towers, you see the city's powerplant not too far away in one direction, and a part of the city you know pretty well in the other. The library is over there, and the mall as well. Maybe you could restore power to them if you [link][bold type]fixed[roman type][as]fix tower[end link] this tower[else if fixedgens > 2]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. A red light is glows at its uppermost tip, signaling that there is power and it's flowing towards the closest part of the city - which should include the library as well as the mall[else]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. The now unbroken lines should allow electricity to reach the nearby part of the city again, though you see that the red light at the uppermost tip of the tower is still off, showing that there is no power. Maybe you should check out the power plant again[end if].[line break]".
 Power Lines is fasttravel.
 the earea of Power Lines is "Outside".
 
@@ -244,9 +244,22 @@ the library computer can be powered or unpowered. the library computer is unpowe
 
 computerpowering is an action applying to nothing.
 
-understand "switch on the/-- library/-- computer" as computerpowering.
-understand "turn on the/-- library/-- computer" as computerpowering.
-understand "power up/on the/-- library/-- computer" as computerpowering.
+understand "switch on the computer" as computerpowering.
+understand "switch on computer" as computerpowering.
+understand "switch on library computer" as computerpowering.
+understand "switch on the library computer" as computerpowering.
+understand "turn on the computer" as computerpowering.
+understand "turn on computer" as computerpowering.
+understand "turn on library computer" as computerpowering.
+understand "turn on the library computer" as computerpowering.
+understand "power up the computer" as computerpowering.
+understand "power up computer" as computerpowering.
+understand "power up library computer" as computerpowering.
+understand "power up the library computer" as computerpowering.
+understand "power on the computer" as computerpowering.
+understand "power on computer" as computerpowering.
+understand "power on library computer" as computerpowering.
+understand "power on the library computer" as computerpowering.
 
 check computerpowering:
 	if library computer is not visible, say "Turn on what?" instead;
