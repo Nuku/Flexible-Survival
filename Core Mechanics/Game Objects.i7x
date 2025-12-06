@@ -195,7 +195,7 @@ To process (x - a grab object):
 					if slot of z is slot of x:
 						say "     [bold type]Your [z] is in the way![roman type][line break]";
 						continue the action;
-			if (slot of x is "feet" or slot of x is "waist") and (BodyName of Player is listed in infections of TaurList or BodyName of Player is listed in infections of NoLegList):
+			if (slot of x is "feet" or slot of x is "legs" or slot of x is "waist") and (BodyName of Player is listed in infections of TaurList or BodyName of Player is listed in infections of NoLegList):
 				say "     [bold type]Sadly, the [x] [if plural of x is true]are[else]is[end if] incompatible with your body type![roman type][line break]";
 				continue the action;
 			if size of x > 0: [objects with size restrictions]

@@ -169,13 +169,13 @@ Part 2 - Spontaneous Orgasm
 
 to say spontaneousorgasm:
 	if Player is herm:
-		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously and knocks you to your knees. Your cock[smn] spray[smv] your hot seed across your clothes and the ground while your hot, feminine juices soak your thighs. You leave a [if Ball Size of Player + ( 2 * Cunt Tightness of Player ) < 15]messy splotch[else if Ball Size of Player + ( 2 * Cunt Tightness of Player ) < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
+		say "Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously and knocks you to your knees. Your cock[smn] spray[smv] your hot seed across your clothes and the ground while your hot, feminine juices soak your thighs. You leave a [if Ball Size of Player + ( 2 * Cunt Tightness of Player ) < 15]messy splotch[else if Ball Size of Player + ( 2 * Cunt Tightness of Player ) < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
 	else if Player is male:
-		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously and knocks you to your knees. Your cock[smn] spray[smv] your hot seed across your clothes and the ground. Your blasted cum leaves a [if Ball Size of Player < 3]messy splotch[else if Ball Size of Player < 5]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
+		say "Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously and knocks you to your knees. Your cock[smn] spray[smv] your hot seed across your clothes and the ground. Your blasted cum leaves a [if Ball Size of Player < 3]messy splotch[else if Ball Size of Player < 5]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
 	else if Player is female:
-		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously and knocks you to your knees. Your cunt[sfn] overflow[sfv] with hot, feminine juices that soak your thighs. You leave a [if ( 2 * Cunt Tightness of Player ) < 12]messy splotch[else if ( 2 * Cunt Tightness of Player ) < 20]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
+		say "Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously and knocks you to your knees. Your cunt[sfn] overflow[sfv] with hot, feminine juices that soak your thighs. You leave a [if ( 2 * Cunt Tightness of Player ) < 12]messy splotch[else if ( 2 * Cunt Tightness of Player ) < 20]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
 	else:		[neuter]
-		say "     Your body, consumed with a lust it is unable to satisfy, drops to its knees and trembles with a painful, aching need. Lacking any other means, you rub over your [bodytype of Player] body until it finally passes, leaving you weak, tired and largely unsatisfied.";
+		say "Your body, consumed with a lust it is unable to satisfy, drops to its knees and trembles with a painful, aching need. Lacking any other means, you rub over your [bodytype of Player] body until it finally passes, leaving you weak, tired and largely unsatisfied.";
 		now HP of Player is ( 3 * HP of Player ) / 4;
 
 Fucking ends here.

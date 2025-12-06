@@ -73,11 +73,9 @@ Section 2 - Talking with Help Book
 
 Instead of conversing the Help Book:
 	say "     You open the book and decide what you wish to know about.";
-	WaitLineBreak;
 	say "[HelpBookTalkMenu]";
 
 to say HelpBookTalkMenu:
-	say "[line break]";
 	say "     [bold type]What do you wish to look up in the Help Book?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -121,20 +119,22 @@ to say HelpBookTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Basic Needs"):
 					say "[HelpBookTalk1]";
-				if (nam is "Stats"):
+				else if (nam is "Stats"):
 					say "[HelpBookTalk2]";
-				if (nam is "Combat"):
+				else if (nam is "Combat"):
 					say "[HelpBookTalk3]";
-				if (nam is "Commands"):
+				else if (nam is "Commands"):
 					say "[HelpBookTalk4]";
-				if (nam is "Remove Book"):
+				else if (nam is "Remove Book"):
 					say "[HelpBookTalk5]";
 				WaitLineBreak;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You close the book again, ready to get on with your adventure.";
 			WaitLineBreak;
@@ -143,7 +143,7 @@ to say HelpBookTalkMenu:
 	clear the screen and hyperlink list;
 
 to say HelpBookTalk1: [Needs]
-	say "     For you to survive you will need to find food and water to stave off rising hunger and thirst. This can be found by [bold type]scavenging[roman type] around the city. Hunger can be sated using [bold type]food[roman type] or [bold type]chips[roman type]. Thirst can be sated by [bold type]water bottles[roman type], [bold type]soda[roman type], or [bold type]dirty water[roman type]. While dirty water will reduce your thirst, it may also transform you. Food and water may occasionally also be found while [bold type]exploring[roman type], which is the main way of discovering areas of the city. Once you are more familiar with the city, you may be able to [bold type]navigate[roman type] back to places you are familiar with. Over time, your character will get tired which will eventually lower your stats until you sleep. To counteract this, you need to [bold type]rest[roman type], usually on the cot that you can find here. While the library is safe, if you sleep out in the city you may be attacked by creatures, so be cautious and try to find a safe area first unless you are willing to risk your rest being interrupted. You may also notice your [bold type]libido[roman type] rising as you explore the city. Should you not sate your lusts with either a partner or a smutty magazine, you may find yourself submitting to a wandering beast. Lastly, the pressure and trauma of life in the city may cause you to lose touch with your humanity, also known as [bold type]sanity[roman type]. This deterioration can be easily reversed by writing in your [bold type]journal[roman type], something that you should be carrying with you at all times.";
+	say "     For you to survive you will need to find food and water to stave off rising hunger and thirst. This can be found by [bold type]scavenging[roman type] around the city. Hunger can be sated using [bold type]food[roman type] or [bold type]chips[roman type]. Thirst can be sated by [bold type]water bottles[roman type], [bold type]soda[roman type], or [bold type]dirty water[roman type]. While dirty water will reduce your thirst, it may also transform you. Food and water may occasionally also be found while [bold type]exploring[roman type], which is the main way of discovering areas of the city. Once you are more familiar with the city, you may be able to [bold type]navigate[roman type] back to places you are familiar with. Over time, your character will get tired which will eventually lower your stats until you sleep. To counteract this, you need to [bold type]rest[roman type], usually on the cot that you can find [if Player is booked or Player is bunkered]here[else]in the bunker[end if]. While the library is safe, if you sleep out in the city you may be attacked by creatures, so be cautious and try to find a safe area first unless you are willing to risk your rest being interrupted. You may also notice your [bold type]libido[roman type] rising as you explore the city. Should you not sate your lusts with either a partner or a smutty magazine, you may find yourself submitting to a wandering beast. Lastly, the pressure and trauma of life in the city may cause you to lose touch with your [bold type]humanity[roman type], also known as sanity. This deterioration can be easily reversed by writing in your [bold type]journal[roman type], something that you should be carrying with you at all times.";
 
 to say HelpBookTalk2: [Stats]
 	say "     Your main stats are [bold type]Strength, Dexterity, Stamina, Charisma, Intelligence, and Perception[roman type]. Simply put, [bold type]Strength[roman type] increases melee damage dealt as well as carry capacity, [bold type]Dexterity[roman type] increases your chance to hit and chance to dodge, [bold type]Stamina[roman type] increases your health, [bold type]Charisma[roman type] is used for social interactions with others, [bold type]Intelligence[roman type] increases health recovered by medkits, chance of vial collection, and success chance of fleeing from combat, and [bold type]Perception[roman type] increases your success while scavenging, hunting, and damage with ranged weapons. Success or failure in the city may often rely on these stats. As you defeat enemies you will gain [bold type]experience[roman type] that is used to level up. Every two levels will give you a chance to boost a stat, and every five levels will give a you a chance to choose a feat.";
@@ -155,7 +155,7 @@ to say HelpBookTalk4: [Commands]
 	say "     Some useful commands that you can type in, even if you are using hyperlinks, are [bold type]hunt[roman type], [bold type]help[roman type], [bold type]use[roman type], and [bold type]undo[roman type]. [bold type]Hunt[roman type] allows you to look for a specific creature or event, though its success chance is affected by perception and some feats. [bold type]Help[roman type] brings up a menu for in case you need an explanation for various aspects of the game including some of the topics covered here. [bold type]Use[roman type] is often used for items and activating some objects. [bold type]Undo[roman type] allows you to undo an action and can be repeated to go back several turns, though this may be limited by the interpreter that you are using. Another source of help is the wiki, though it is outdated in some areas due to it being maintained by the public, rather than the Flexible Survival Staff.";
 
 to say HelpBookTalk5: [Remove Book]
-	say "     As you decide that you don't need the book any more, it crumbles to dust in your hands before blowing away on a nonexistent wind. You get the impression that it is gone on to help the next person that needs it and won't be back again.";
+	say "     As you decide that you don't need the book anymore, it crumbles to dust in your hands before blowing away on a nonexistent wind. You get the impression that it has gone on to help the next person that needs it and won't be back again.";
 	now Help Book is nowhere;
 	now HP of Help Book is 1;
 

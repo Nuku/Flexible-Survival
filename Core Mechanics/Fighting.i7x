@@ -9,7 +9,6 @@ To fight:
 	if debugactive is 1:
 		say "     DEBUG: Random Monster Choosing Started[line break]";
 	now MonsterID is a random number from 1 to number of filled rows in the Table of Random Critters;
-	let Q be a list of numbers;
 	if "Unerring Hunter" is not listed in feats of Player: [only adds random monsters if the player isn't an unerring hunter]
 		if ( BodyName of Player is "Mental Mouse" or mousecurse is 1 ) and mouse girl is not listed in companionList of Player:	[hunted by the mouse collective]
 			if there is a name of "Mental Mouse" in the Table of Random Critters:
@@ -18,7 +17,8 @@ To fight:
 					repeat with x running from 1 to ( ( 100 - humanity of Player ) / 25 ):
 						add "Mental Mouse" to PossibleEncounters;
 		if insectlarva is true and larvaegg is 1 and gestation of Child is 0: [hunted by wasp hive anywhere outdoors]
-			if battleground is not "Mall" and battleground is not "Stable" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
+			let nofly be {"Mall", "Stable", "Hospital", "Museum", "Sealed", "Warehouse", "Smith Haven", "Atlantis"};
+			if battleground is not listed in nofly:
 				if there is a name of "Black Wasp" in the Table of Random Critters:
 					add "Black Wasp" to PossibleEncounters;
 					if Libido of Player > 30:
@@ -27,19 +27,16 @@ To fight:
 					if larvacounter > 3:
 						repeat with x running from 1 to ( larvacounter / 3 ):
 							add "Black Wasp" to PossibleEncounters;
-	repeat with X running from 1 to number of filled rows in Table of Random Critters:
-		choose row X from the Table of Random Critters;
-		if BannedStatus entry is true: [banned creatures can't be fought]
+	repeat through Table of Random Critters:
+		if BannedStatus entry is true and inasituation is false: [banned creatures can't be fought]
 			if debugactive is 1:
 				say "DEBUG -> Can't fight with creature [Name entry] because it has Banned: [BannedStatus entry][line break]";
 			next;
-		if there is a lev entry:
-			if lev entry > level of Player + 1 and HardMode is false:
-				next;
-		else:
+		if there is no lev entry, next;
+		if lev entry > level of Player + 1 and HardMode is false:
 			next;
 		if there is no area entry, next;
-		if area entry matches the text battleground:
+		if area entry exactly matches the text battleground, case insensitively:
 			if (DayCycle entry is 2 and daytimer is day) or (DayCycle entry is 1 and daytimer is night), next; [skips if day/night doesn't match]
 			let skipit be 0;
 			repeat with s running through warded flags:
@@ -54,8 +51,6 @@ To fight:
 				if SkinName of Player is Name entry, add Name entry to PossibleEncounters;
 				if TailName of Player is Name entry, add Name entry to PossibleEncounters;
 				if CockName of Player is Name entry, add Name entry to PossibleEncounters;
-	if the number of entries in PossibleEncounters is 0 and debugactive is 1:
-		say "     DEBUG: No Possible Monsters Found![line break]";
 	if the number of entries in PossibleEncounters is not 0:
 		sort PossibleEncounters in random order;
 		let RandomChosenMonster be entry 1 in PossibleEncounters;
@@ -65,8 +60,11 @@ To fight:
 		if "Experienced Scout" is listed in feats of Player and a random chance of 2 in 10 succeeds and combat abort is not 1 and inasituation is false:
 			say "You notice an avenue of escape! Do you want to abort the combat?";
 			if Player consents:
+				LineBreak;
 				now combat abort is 1;
-				say "You slip away before [Name entry] can begin their assault.";
+				say "You slip away before [if enemy type entry is not 2]the [end if][EnemyNameOrTitle] can begin their assault.";
+			else:
+				LineBreak;
 		if combat abort is 1:
 			now combat abort is 0;
 			rule succeeds;
@@ -122,7 +120,7 @@ To fight:
 To challenge:
 	choose row MonsterID from the Table of Random Critters;
 	prepforfight;
-	if BannedStatus entry is true:
+	if BannedStatus entry is true and inasituation is false:
 		now combat abort is 1;
 		if debugactive is 1:
 			say "DEBUG -> Combat Aborted because: [Name entry] has Banned: [BannedStatus entry][line break]";
@@ -155,7 +153,7 @@ To Challenge (x - text):
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y from the Table of Random Critters;
 		if Name entry is x or enemy title entry is x or enemy Name entry is x:
-			if BannedStatus entry is true: [banned creatures can't be challenged]
+			if BannedStatus entry is true and inasituation is false: [banned creatures can't be challenged]
 				if debugactive is 1:
 					say "DEBUG -> Can't challenge creature [Name entry] because it has Banned: [BannedStatus entry][line break]";
 				break;

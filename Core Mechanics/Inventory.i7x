@@ -503,7 +503,7 @@ carry out littering something (called x):
 				say "You're using that right now. Stop using it before you drop it.";
 			continue the action;
 	repeat through table of game objects:
-		if printed name of x in lower case matches the text Name entry in lower case:
+		if printed name of x in lower case exactly matches the text Name entry in lower case:
 			add Name entry to the invent of the Location of Player;
 			break;
 	ItemLoss x by 1;

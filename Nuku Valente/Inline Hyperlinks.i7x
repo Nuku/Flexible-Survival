@@ -96,12 +96,16 @@ To say end link -- ending say_link -- running on:
 [	say "(index [hyperlink index])"; ]
 [	say "(text [hyperlinked text])"; ]
 [	say "(command [hyperlinked command])"; ]
-	if hypernull is 1:
+[	if hypernull is 1:
 		say "[hyperlinked text]";
-	else:
-		say "[set link (hyperlink index)][hyperlinked text][terminate link]";
+	else:]
+	say "[set link (hyperlink index)][hyperlinked text][terminate link]";
 
 To say set link (N - a number):
+	if hypernull is not 1:
+		say "[set hyperlink N]";
+
+To say set hyperlink (N - a number):
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)) glk_set_hyperlink({N}); -)
 
 To say terminate link:

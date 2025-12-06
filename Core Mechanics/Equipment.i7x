@@ -101,7 +101,7 @@ Scent of succubus motorcycle helmet is "The helmet smells of plastic and fabric.
 
 An everyturn rule:
 	if succubus motorcycle helmet is equipped and a random chance of 1 in 2 succeeds:
-		say "     [bold type]Your scalp tingles a little where it touches the succubus motorcycle helmet.[roman type][line break]";
+		say "[bold type]Your scalp tingles a little where it touches the succubus motorcycle helmet.[roman type][line break]";
 		infect "Succubus";
 
 incubus motorcycle helmet is a grab object.
@@ -121,7 +121,7 @@ Scent of incubus motorcycle helmet is "The helmet smells of plastic and fabric."
 
 An everyturn rule:
 	if incubus motorcycle helmet is equipped and a random chance of 1 in 2 succeeds:
-		say "     [bold type]Your scalp tingles a little where it touches the incubus motorcycle helmet.[roman type][line break]";
+		say "[bold type]Your scalp tingles a little where it touches the incubus motorcycle helmet.[roman type][line break]";
 		infect "Incubus";
 
 
@@ -256,7 +256,7 @@ Scent of Roman's gifted football helmet is "The helmet smells of plastic and fab
 
 An everyturn rule:
 	if Roman's gifted football helmet is equipped and a random chance of 1 in 2 succeeds:
-		say "     [bold type]Your scalp tingles a little where it touches Roman's gifted football helmet.[roman type][line break]";
+		say "[bold type]Your scalp tingles a little where it touches Roman's gifted football helmet.[roman type][line break]";
 		infect "Football Gorilla Cuntboi";
 
 Roman's stolen football helmet is a grab object.
@@ -276,7 +276,7 @@ Scent of Roman's stolen football helmet is "The helmet smells of plastic and fab
 
 An everyturn rule:
 	if Roman's stolen football helmet is equipped and a random chance of 1 in 2 succeeds:
-		say "     [bold type]Your scalp tingles a little where it touches Roman's stolen football helmet.[roman type][line break]";
+		say "[bold type]Your scalp tingles a little where it touches Roman's stolen football helmet.[roman type][line break]";
 		infect "Football Gorilla Male";
 
 Part 5 - Urban Explorer Helmets
@@ -360,7 +360,7 @@ Scent of cow-print cowboy hat is "The cowboy hat smell like leather and felt.".
 
 An everyturn rule:
 	if cow-print cowboy hat is equipped and a random chance of 1 in 2 succeeds:
-		say "     [bold type]Your scalp tingles a little bit where it touches the cowboy hat.[roman type][line break]";
+		say "[bold type]Your scalp tingles a little bit where it touches the cowboy hat.[roman type][line break]";
 		infect "Cow-boi Male";
 
 Section 2 - Hair Accessories
@@ -671,7 +671,7 @@ Effectiveness of tenvale football pads is 50.
 GA of tenvale football pads is 1.
 Traits of tenvale football pads is {"sporty"}.
 Placement of tenvale football pads is "body".
-Descmod of tenvale football pads is "black and silver football pads cover chest, abs and shoulders providing protective padding.".
+Descmod of tenvale football pads is "Black and silver football pads cover chest, abs and shoulders providing protective padding.".
 Slot of tenvale football pads is "back".
 Scent of tenvale football pads is "The pads smell of plastic, fabric and sweat.".
 
@@ -763,7 +763,7 @@ GA of bulletproof vest is 0.
 Traits of bulletproof vest is {"authorative"}.
 Placement of bulletproof vest is "body".
 Descmod of bulletproof vest is "A reinforced bulletproof vest covers your upper body.".
-Slot of bulletproof vest is "chest".
+Slot of bulletproof vest is "back".
 Scent of bulletproof vest is "The vest smells slightly of sweat, which isn't too wondrous as these things usually are put on in times of great stress.".
 
 Section 9 - Bras
@@ -1631,7 +1631,7 @@ AC of camo shirt is 0.
 Effectiveness of camo shirt is 0.
 GA of camo shirt is 0.
 Traits of camo shirt is {"cool"}.
-Placement of camo shirt is "chest".
+Placement of camo shirt is "body".
 Descmod of camo shirt is "Your upper body is covered by a camo pattern t-shirt in shades of green.".
 Slot of camo shirt is "chest".
 Scent of camo shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
@@ -2229,9 +2229,9 @@ AC of green camo pants is 0.
 Effectiveness of green camo pants is 0.
 GA of green camo pants is 1.
 Traits of green camo pants is {"cool"}.
-Placement of green camo pants is "waist".
+Placement of green camo pants is "body".
 Descmod of green camo pants is "A pair of green camo pants covers your hips and legs. The sturdy fabric gives you a well-protected feeling.".
-Slot of green camo pants is "waist".
+Slot of green camo pants is "legs".
 Scent of green camo pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
 green army camo pants is a grab object.
@@ -2363,9 +2363,9 @@ AC of black miniskirt is 0.
 Effectiveness of black miniskirt is 0.
 GA of black miniskirt is -1.
 Traits of black miniskirt is {"slutty", "sexy"}.
-Placement of black miniskirt is "waist".
+Placement of black miniskirt is "body".
 Descmod of black miniskirt is "A simple black miniskirt covers your hips and legs. It is really quite easy to accidentally (or on purpose) expose yourself while wearing it.".
-Slot of black miniskirt is "waist".
+Slot of black miniskirt is "legs".
 Scent of black miniskirt is "The skirt has the typical faintly musky scent of clothing that has been worn a few days. But surely it is clean enough to wear another week or two at least...".
 
 pink miniskirt is a grab object.
@@ -2500,7 +2500,7 @@ AC of pink panties is 0.
 Effectiveness of pink panties is 0.
 GA of pink panties is -1.
 Traits of pink panties is {"basic"}.
-Placement of pink panties is "crotch".
+Placement of pink panties is "body".
 Descmod of pink panties is "A frilly pair of pink panties cover your crotch.".
 Slot of pink panties is "crotch".
 Scent of pink panties is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
@@ -2531,14 +2531,17 @@ Scent of orc loincloth is "The cloth has the scent of manly musk clinging to it.
 An everyturn rule:
 	if orc loincloth is equipped:
 		if Player is male and (("Modest Organs" is not listed in feats of Player and Cock Length of Player < 14) or Cock Length of Player < 8) and a random chance of 1 in 3 succeeds:
-			say "     You feel yourself getting slightly hard under the short loincloth, showing a semi-erect bulge to the world. Seems like it's bigger than before too.";
+			say "You feel yourself getting slightly hard under the short loincloth, showing a semi-erect bulge to the world. Seems like it's bigger than before too.";
 			increase Cock Length of Player by 1;
-		if Player is male and Ball Size of Player < 4 and a random chance of 1 in 5 succeeds:
-			say "     Your balls throb and seem to grow a little.";
+			follow the cock descr rule;
+		else if Player is male and Ball Size of Player < 4 and a random chance of 1 in 5 succeeds:
+			say "Your balls throb and seem to grow a little.";
 			BallsGrow Player by 1;
-			increase Cock Length of Player by 1;
+			if "Modest Organs" is not listed in feats of Player or Cock Length of Player < 8:
+				increase Cock Length of Player by 1;
+			follow the cock descr rule;
 		if a random chance of 1 in 2 succeeds:
-			say "     [bold type]Your skin tingles a little bit where it touches the orc loincloth.[roman type][line break]";
+			say "[bold type]Your skin tingles a little bit where it touches the orc loincloth.[roman type][line break]";
 			infect "Orc Warrior";
 
 ragged brown loincloth is a grab object.

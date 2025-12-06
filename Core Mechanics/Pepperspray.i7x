@@ -16,7 +16,7 @@ the scent of the pepperspray is "Smelling the pepperspray canister makes your ey
 to say pepperspraydrain:
 	now peppereyes is 3;
 	if a random chance of 3 in 10 succeeds:		[average 3-4 uses]
-		say "Uh oh! That used up the last of that can and you drop it to the ground, empty.[line break]";
+		say "Uh oh! That used up the last of that can and you drop it to the ground, empty.";
 		ItemLoss pepperspray by 1;
 
 
@@ -33,7 +33,7 @@ this is the peppersprayflee rule:
 	[Perform an attempt to flee from the weakened enemy]
 	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
 	choose row MonsterID from the Table of Random Critters;
-	say "Using the pepperspray to briefly disable the [Name entry], you make your escape attempt.";
+	say "Using the pepperspray to briefly disable [if enemy type entry is not 2]the [end if][EnemyNameOrTitle], you make your escape attempt.";
 	increase plfleebonus by 3;
 	decrease mondodgebonus by 5;
 	decrease monhitbonus by 5;
@@ -51,7 +51,7 @@ this is the peppersprayattack rule:
 	[Perform enhanced double-attack with creature penalized by 5!]
 	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
 	choose row MonsterID from the Table of Random Critters;
-	say "You spray the creature with your pepperspray, then quickly press your advantage as it disables them briefly. You attack twice while they have difficulty defending themselves.[line break]";
+	say "You spray the creature with your pepperspray, then quickly press your advantage as it disables them briefly. You attack twice while they have difficulty defending themselves.";
 	say "[pepperspraydrain]";
 	decrease mondodgebonus by 5;
 	decrease monhitbonus by 5;
@@ -65,7 +65,7 @@ this is the peppersprayattack rule:
 	if gascloud > 0:
 		decrease gascloud by 1;
 	if monsterHP > 0:
-		say "[line break]Having partially recovered, your enemy attempts to retaliate.[line break]";
+		say "[line break]Having partially recovered, your enemy attempts to retaliate.";
 		choose row monstercom from table of Critter Combat;
 		if Playerpoison > 0, follow the playerpoisoned rule;
 		if there is a continuous in row monstercom of the table of Critter Combat:

@@ -169,12 +169,12 @@ carry out vialing:
 		say "DEBUG: [NamedVialCap] in title case[line break]";
 	let found be 0;
 	repeat through Table of OwnedVials:
-		if Name entry matches the text NamedVialCap, case insensitively:
+		if Name entry exactly matches the text NamedVialCap, case insensitively:
 			now found is 1;
 			say "What harm could a terribly infectious bio-nanite be? Down the hatch!";
 			VialLoss name entry by 1;
 			repeat through Table of Random Critters:
-				if name entry matches the text NamedVialCap, case insensitively:
+				if name entry exactly matches the text NamedVialCap, case insensitively:
 					now researchbypass is 1;
 					if non-infectious entry is true:
 						now non-infectious entry is false;

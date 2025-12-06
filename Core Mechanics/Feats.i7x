@@ -383,6 +383,8 @@ This is the gainfeat rule:
 		else if nam is "Hardy":
 			increase MaxHP of Player by 8;
 			increase HP of Player by 8;
+		else if nam is "Expert Medic":
+			increase CurrentMedkitSupplies by 1;
 		else if nam is "City Map":
 			say "[BestowCityMapFeat]";
 		else if nam is "Instinctive Combat":

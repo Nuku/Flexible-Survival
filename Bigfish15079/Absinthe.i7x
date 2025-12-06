@@ -14,7 +14,7 @@ Usedesc of small whiskey bottle is "[small whiskey alcohol use]".
 instead of sniffing small whiskey bottle:
 	say "The strong smell of alcohol flows into your nose.";
 to say small whiskey alcohol use:
-	say "You feel the burn of the whiskey down your throat as you drink.";
+	say "     You feel the burn of the whiskey down your throat as you drink.";
 	PlayerDrink 5;
 	addAlcPoints 2;
 
@@ -23,7 +23,7 @@ Usedesc of Big Whiskey bottle is "[Big Whiskey bottle use]".
 instead of sniffing Big Whiskey bottle:
 	say "The strong smell of alcohol flows into your nose.";
 to say Big Whiskey bottle use:
-	say "Your drink the full bottle, its strong alcohol burning on the way down.";
+	say "     Your drink the full bottle, its strong alcohol burning on the way down.";
 	PlayerDrink 10;
 	addAlcPoints 4;
 
@@ -32,7 +32,7 @@ Usedesc of TodtGrains Beer is "[TodtGrainsBeer use]".
 instead of sniffing TodtGrains Beer:
 	say "A light scent of alcohol flows into your nose.";
 to say TodtGrainsBeer use:
-	say "You drink the nice refreshing beer, its dark grain taste lingering on your tongue.";
+	say "     You drink the nice refreshing beer, its dark grain taste lingering on your tongue.";
 	PlayerDrink 6;
 	addAlcPoints 1;
 
@@ -41,7 +41,7 @@ Usedesc of Small Grain Alcohol Bottle is "[Small Grain use]".
 instead of sniffing Small Grain Alcohol Bottle:
 	say "The strong smell of pure alcohol flows into your nose.";
 to say Small Grain use:
-	say "You feel the burn of the alcohol leaving your throat numb.";
+	say "     You feel the burn of the alcohol leaving your throat numb.";
 	PlayerDrink 5;
 	addAlcPoints 3;
 
@@ -50,7 +50,7 @@ Usedesc of large Grain Alcohol Bottle is "[large Grain Alcohol Bottle use]".
 instead of sniffing large Grain Alcohol Bottle:
 	say "A strong smell of pure alcohol flows into your nose.";
 to say large Grain Alcohol Bottle use:
-	say "You feel the burn of the alcohol leaving your throat numb.";
+	say "     You feel the burn of the alcohol leaving your throat numb.";
 	PlayerDrink 10;
 	addAlcPoints 5;
 
@@ -59,7 +59,7 @@ Usedesc of Dwarven Spirit is "[Dwarven Spirit use]".
 instead of sniffing Dwarven Spirit:
 	say "A strong floral smell from the spirit flows into your nose.";
 to say Dwarven Spirit use:
-	say "A dark hearty taste lingers in your mouth.";
+	say "     A dark hearty taste lingers in your mouth.";
 	PlayerDrink 10;
 	addAlcPoints 6;
 

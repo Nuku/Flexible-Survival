@@ -34,7 +34,7 @@ to say losetofathnach:
 	else if Player is female:
 		say "     <Editor's Note: Sorry, this scene is still WIP.>";
 	else:
-		say "     Pulling your clothes off to see no genitals gets a sound of dissatisfaction from the giant-kin. 'Oh, but how are you gonna have fun without any funstick or fun-flaps? Ah! I know!' He quickly smashes your face into his giant pecs, nursing you like a mother a child as you gulp down the refreshing drink by force. your entire body tingles with energy as the man chuckles at your body's changes. 'Come find me again when you're ready for more real fun, you need to rest after drinking so much anyway~' He walks away smiling with a dopey faced grin, playing with the tit that has your bite marks on it.";
+		say "     Pulling your clothes off to see no genitals gets a sound of dissatisfaction from the giant-kin. 'Oh, but how are you gonna have fun without any funstick or fun-flaps? Ah! I know!' He quickly smashes your face into his giant pecs, nursing you like a mother a child as you gulp down the refreshing drink by force. Your entire body tingles with energy as the man chuckles at your body's changes. 'Come find me again when you're ready for more real fun, you need to rest after drinking so much anyway~' He walks away smiling with a dopey faced grin, playing with the tit that has your bite marks on it.";
 		PlayerDrink 10;
 		if "Iron Stomach" is not listed in feats of Player, infect "Fathnach";
 
@@ -119,7 +119,7 @@ when play begins:
 	now body change entry is "it becomes hulking and weighty, yet cut and muscular. Your broad shoulders and strong muscles peter off in a V-shape toward your waist, where a six pack sits. Your fingers grow claws, and the tips of them sport soft pads. Your feet become wider, with sharp nails and spread paws to support your weight"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "it grows slightly damp, as though you're prone to sweating, and grows a thick layer of fluffy fur that soaks up the scents and moisture from it"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "it becomes rounded and bouncy, with just enough muscle to maintain its shape, topped with a nub of a tail that sits at the apex"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
-	now cock change entry is "takes on a distinctly bovine shape. It has a distinct funky smell that pours off of it no matter what you do, like you've been at the gym for hours without a shower"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
+	now cock change entry is "it takes on a distinctly bovine shape. It has a distinct funky smell that pours off of it no matter what you do, like you've been at the gym for hours without a shower"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 25; [These stats affect the creature's combat potential when you encounter it as a monster.]
 	now dex entry is 10; [Try not to make the values substantially high.]
 	now sta entry is 22; [If you make them too high, the fight becomes far too hard.]

@@ -56,9 +56,9 @@ It is not temporary.
 The AC of Apocalypse Skirt is 0.
 The effectiveness of Apocalypse Skirt is 0.
 Traits of Apocalypse Skirt is {"slutty", "grungy"}.
-The placement of Apocalypse Skirt is "waist".
+The placement of Apocalypse Skirt is "body".
 The descmod of Apocalypse Skirt is "A torn and burnt mini skirt barely covers your lower [BodyName of Player in lower case] body.".
-The slot of Apocalypse Skirt is "waist".
+The slot of Apocalypse Skirt is "legs".
 the scent of Apocalypse Skirt is "There is a faint smell of smoke lingering on the item of clothing.".
 
 Apocalypse Shorts is a grab object.
@@ -68,9 +68,9 @@ Plural of Apocalypse Shorts is true.
 The AC of Apocalypse Shorts is 0.
 The effectiveness of Apocalypse Shorts is 0.
 Traits of Apocalypse Shorts is {"sporty", "grungy"}.
-The placement of Apocalypse Shorts is "waist".
+The placement of Apocalypse Shorts is "body".
 The descmod of Apocalypse Shorts is "A torn and burnt pair of running shorts covers your legs.".
-The slot of Apocalypse Shorts is "waist".
+The slot of Apocalypse Shorts is "legs".
 the scent of Apocalypse Shorts is "There is a faint smell of smoke lingering on the item of clothing.".
 
 Apocalypse Hoodie is a grab object.
@@ -80,9 +80,9 @@ Taur-compatible of Apocalypse Hoodie is true.
 The AC of Apocalypse Hoodie is 0.
 The effectiveness of Apocalypse Hoodie is 0.
 Traits of Apocalypse Hoodie is {"grungy"}.
-The placement of Apocalypse Hoodie is "chest".
+The placement of Apocalypse Hoodie is "body".
 The descmod of Apocalypse Hoodie is "A torn and burnt hoodie covers your [bodydesc of Player] body.".
-The slot of Apocalypse Hoodie is "chest".
+The slot of Apocalypse Hoodie is "back".
 the scent of Apocalypse Hoodie is "There is a faint smell of smoke lingering on the item of clothing.".
 
 Apocalypse Scarf is a grab object.
@@ -92,7 +92,7 @@ Taur-compatible of Apocalypse Scarf is true.
 The AC of Apocalypse Scarf is 0.
 The effectiveness of Apocalypse Scarf is 0.
 Traits of Apocalypse Scarf is {"grungy"}.
-The placement of Apocalypse Scarf is "face".
+The placement of Apocalypse Scarf is "head".
 The descmod of Apocalypse Scarf is "A torn and burnt scarf covers your [FaceSpeciesName of Player in lower case] face.".
 The slot of Apocalypse Scarf is "face".
 the scent of Apocalypse Scarf is "There is a faint smell of smoke lingering on the item of clothing.".

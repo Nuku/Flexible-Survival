@@ -20,7 +20,7 @@ Taur-compatible of rubber sneakers is false.
 The size of rubber sneakers is 0.
 The AC of rubber sneakers is 0.
 The effectiveness of rubber sneakers is 0.
-The placement of rubber sneakers is "feet".
+The placement of rubber sneakers is "body".
 The descmod of rubber sneakers is "You wear rubbery, dark blue sport shoes. Each step you take sends a small tingle throughout your body.".
 The slot of rubber sneakers is "feet".
 
@@ -81,13 +81,17 @@ Instead of using the rubber sneakers:
 			continue the action;
 		else:
 			say "     [one of]As you ponder putting the shoes on, you have a bad feeling about this[or]You remember how useful, yet dangerous these shoes can be[stopping]. [bold type]Should you really put them on?[roman type][line break]";
+			LineBreak;
 			say "     ([link]Y[as]y[end link]) - What's the worst that could happen?";
 			say "     ([link]N[as]n[end link]) - Better listen to your instinct.";
 			if Player consents:
+				LineBreak;
 				say "     You put the rubber sneakers on. [one of]The shoes are surprisingly comfortable. Your feet feel warm, comfortable and, most of all, so light. Your mind fills with confidence. As you take a few steps, you feel small tingles going up your legs. Is it because you need to get used to them? At least it does not feel uncomfortable or painful. Actually, it feels quite pleasurable.[or]The pleasurable tingles come back as soon as you take a few steps in your rubbery footwear.[stopping]";
 				say "     [bold type]With these rubber sneakers on, you feel like you can outrun anything.[roman type][line break]";
 				now the rubber sneakers are equipped;
 				stop the action;
+			else:
+				LineBreak;
 
 Section 3 - Everyturn rule
 
@@ -179,13 +183,13 @@ When Play begins:
 	now face entry is "feline, and in the distinctive shape of a puma";
 	now body entry is "slim and flexible, akin to a feline";
 	now skin entry is "shiny black";
-	now tail entry is "thin, long and rubbery.";
+	now tail entry is "You have a thin, long and rubbery tail.";
 	now cock entry is "feline";
 	now face change entry is "rubber suddenly creeps up to your head and closes around it. The substance melds with your skin, then your skull, which shapes into a puma head. You palp it, and realize that it is entirely made of rubber, even your teeth. The need for running begins to addle your mind";
 	now body change entry is "your body shifts and changes. You feel your body become a little smaller, and more flexible. Muscles grow all over the place, especially on your thighs, giving you legs made for running. Overall, you take a more feline stance";
 	now skin change entry is "you get goosebumps, while the rubber quickly spreads over your entire body, save your face. The goosebumps are then replaced by the comfortable warmth of dark blue rubber clinging to your body, and having you lose your [SkinSpeciesName of Player in lower case] skin";
 	now ass change entry is "a long blue tail sprouts out. A flexible rubbery tube, which feels like a natural part of your body, as the elecritc tingles running back to your brain tell you, as soon as you grab it";
-	now cock change entry is "a sudden pang of pain in your genital area makes you double over. The pain recedes as fast as it came and, when you remove your hands from your crotch, you feel changed. your [Cock of Player] cock[smn] changed into a single human-sized, feline-shape rubber penis, which quickly retracts, barbs and all, into a shiny smooth latex sheath";
+	now cock change entry is "a sudden pang of pain in your genital area makes you double over. The pain recedes as fast as it came and, when you remove your hands from your crotch, you feel changed. Your [Cock of Player] cock[smn] changed into a single human-sized, feline-shape rubber penis, which quickly retracts, barbs and all, into a shiny smooth latex sheath";
 	now str entry is 16; [ These are now the creature's stats... ]
 	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 16; [ These values may be used as part of alternate combat.]
