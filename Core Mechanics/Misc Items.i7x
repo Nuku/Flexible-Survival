@@ -44,7 +44,7 @@ Usedesc of chips is "[chips use]";
 
 to say chips use:
 	if labhost > 0 and BodyName of Player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
-		say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[else]lab[end if] clearly excited about something. There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole. You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body. Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
+		say "     As you begin unwrapping your snack a powerful rumbling begins in your stomach; you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[else]lab[end if] clearly excited about something. There is a sudden pressure at your chest as you feel the churning begin to focus at a single point; before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole. You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body. Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
 	else if "Junk Food Junky" is listed in feats of Player:
 		if hunger of Player > 14:
 			increase score by 5;
@@ -161,7 +161,7 @@ to say soda use:
 		if morale of Player < 0:
 			increase morale of Player by 30;
 			if morale of Player > 0, now morale of Player is 0;
-			say "You feel better having drunken something.";
+			say "You feel better having drunk something.";
 	sfsodadrink;
 
 understand "water" as dirty water.
@@ -296,7 +296,7 @@ Section 4 - Resting
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"cot"	"A lightweight aluminium folding cot. Simple in design, but oh so useful. You could carry it around and [bold type]rest[roman type] anywhere!"	2	cot
+"cot"	"A lightweight aluminium folding cot. Simple in design, but oh so useful. You could carry it around and [bold type]rest[roman type] anywhere!"	3	cot
 "sleeping bag"	"A simple sleeping bag. It's not the most comfortable, or restful, but it brings with it the advantage of portability."	1	sleeping bag
 
 cot is a grab object. It is not temporary.
@@ -327,7 +327,7 @@ Usedesc of tennis ball is "[tennis ball use]";
 to say tennis ball use:
 	say "Unsure what exactly to do with the tennis ball, you throw it from hand to hand a few times and bounce it off the ground.";
 
-instead of sniffing  tennis ball:
+instead of sniffing tennis ball:
 	say "Smells like rubber.";
 
 
@@ -358,19 +358,18 @@ Usedesc of bag of wallets is "[bag of wallets use]";
 to say bag of wallets use:
 	say "Digging your hand into the bag of wallets, you feel around a little and ";
 	let randomnumber be a random number from 1 to 8;
-	if randomnumber is:
-		-- 1:
-			say "pull a man's [one of]brown[or]black[or]tan[at random] leather wallet out. Flicking it open, you see a [one of]bearded[or]goateed[or]smooth-shaven[at random] [one of]black[or]white[or]Asian[or]Latino[at random] man stare out at you from his driver's license with a [one of]neutral[or]slightly bored[at random] expression. Casually rifling through the wallet, you find [one of]a moderate amount[or]it empty[or]a fair bit[at random] of money, a credit card and a [one of]library card[or]picture of what must be his family[or]fitness studio member card[or]coffee club card - just one more and you get a free one[or]condom[or]business card[at random]. For a little while, you try to imagine what happened to this person, then shrug and stuff the wallet back in the bag.";
-		-- 2:
-			say "feel something wet and squishy against your skin. Ugh, seems like that one hadn't dried out fully before it was added to the collection! Pulling your hand out, you do your best to wipe it clean quickly.";
-			weakrandominfect;
-		-- 3:
-			say "pull a woman's [one of]blue[or]colorful[or]flowery[or]white[at random] [one of]leather[or]canvas[at random] wallet out. Flicking it open, you see a [one of]young[or]middle-aged[or]mature[at random] [one of]black[or]white[or]Asian[or]Latino[at random] woman stare out at you from her driver's license with a [one of]neutral[or]slightly bored[at random] expression. Casually rifling through the wallet, you find [one of]a moderate amount[or]it empty[or]a fair bit[at random] of money, a credit card and a [one of]library card[or]picture of what must be her family[or]fitness studio member card[or]coffee club card - just one more and you get a free one[or]business card[at random]. For a little while, you try to imagine what happened to this person, then shrug and stuff the wallet back in the bag.";
-		-- 4:
-			say "feel something that is more plastic-y and solid than expected. Taking hold and pulling it out, you are pleasantly surprised at having found a chocolate bar in an unopened package - it's even got extra nuts!";
-			ItemGain food by 1;
-		-- 5:
-			say "pull a plastic wallet covered with a prominently placed [one of]robot[or]superhero[or]pattern[or]alien[at random] printed on it. Flicking it open, you see a [one of]student ID card[or]learners permit drivers license with a young-looking face on it[or]cute picture of a dog[or]cute picture of a cat[at random], as well as [one of]a moderate amount[or]a total absence[or]a little bit[at random] of money, and a [one of]library card[or]fitness studio member card[or]coffee club card - just one more and you get a free one[or]condom[at random]. For a little while, you try to imagine what happened to this person, then shrug and stuff the wallet back in the bag.";
+	if randomnumber < 3:
+		say "pull a man's [one of]brown[or]black[or]tan[at random] leather wallet out. Flicking it open, you see a [one of]bearded[or]goateed[or]smooth-shaven[at random] [one of]black[or]white[or]Asian[or]Latino[at random] man stare out at you from his driver's license with a [one of]neutral[or]slightly bored[at random] expression. Casually rifling through the wallet, you find [one of]a moderate amount[or]it empty[or]a fair bit[at random] of money, with a credit card and a [one of]library card[or]picture of what must be his family[or]fitness studio member card[or]coffee club card - just one more and you get a free one[or]condom[or]business card[at random]. For a little while, you try to imagine what happened to this person, then shrug and stuff the wallet back in the bag.";
+	else if randomnumber is 3:
+		say "feel something wet and squishy against your skin. Ugh, seems like that one hadn't dried out fully before it was added to the collection! Pulling your hand out, you do your best to wipe it clean quickly.";
+		weakrandominfect;
+	else if randomnumber < 6:
+		say "pull a woman's [one of]blue[or]colorful[or]flowery[or]white[at random] [one of]leather[or]canvas[at random] wallet out. Flicking it open, you see a [one of]young[or]middle-aged[or]mature[at random] [one of]black[or]white[or]Asian[or]Latino[at random] woman stare out at you from her driver's license with a [one of]neutral[or]slightly bored[at random] expression. Casually rifling through the wallet, you find [one of]a moderate amount[or]it empty[or]a fair bit[at random] of money, with a credit card and a [one of]library card[or]picture of what must be her family[or]fitness studio member card[or]coffee club card - just one more and you get a free one[or]business card[at random]. For a little while, you try to imagine what happened to this person, then shrug and stuff the wallet back in the bag.";
+	else if randomnumber is 6:
+		say "feel something that is more plastic-y and solid than expected. Taking hold and pulling it out, you are pleasantly surprised at having found a chocolate bar in an unopened package - it's even got extra nuts!";
+		ItemGain chips by 1;
+	else:
+		say "pull a plastic wallet covered with a prominently placed [one of]robot[or]superhero[or]pattern[or]alien[at random] printed on it. Flicking it open, you see a [one of]student ID card[or]learner's permit driver's license with a young-looking face on it[or]cute picture of a dog[or]cute picture of a cat[at random], as well as [one of]a moderate amount[or]a total absence[or]a little bit[at random] of money, and a [one of]library card[or]fitness studio member card[or]coffee club card - just one more and you get a free one[or]condom[at random]. For a little while, you try to imagine what happened to this person, then shrug and stuff the wallet back in the bag.";
 
 instead of sniffing bag of wallets:
 	say "Opening up the bag, you hold your nose over the opening and sniff a wild mixture of scents, given the mixed contents. Underlying it all, a faint scent of cum is always present.";

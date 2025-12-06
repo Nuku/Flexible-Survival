@@ -11,30 +11,30 @@ dolphinwantmate is a number that varies.
 dolphintricked is a number that varies.
 
 to say Dolphin wins:
-	say "'Weak little thing, how could you attempt to beat me?' she whispers, rolling your weakened body over and spreading your legs. You struggle but fail to free yourself from her grasp. ";
+	say "     'Weak little thing, how could you attempt to beat me?' she whispers, rolling your weakened body over and spreading your legs. You struggle but fail to free yourself from her grasp.";
 	if dolphinwantmate is 0 or dolphinwantmate is -1:
-		say "[bold type]Though with a few little changes, you could be my mate?[roman type][line break]";
+		say "     [bold type]Though with a few little changes, you could be my mate?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Agree to be the dolphin's mate.";
 		say "     ([link]N[as]n[end link]) - Reject the dolphin, even if it might make her angry.";
 		if Player consents:
 			now dolphinwantmate is 1;
 		else:
-			say "She seems put off by your denial and screams, 'You will be brought down'";
+			say "     She seems put off by your denial and screams, 'You will be brought down!'";
 			decrease dolphinwantmate by 1;
-	else if dolphinwantmate is -2:
-		say "She grabs you harshly, fingers biting into your skin, drawing blood. She then flips you over so hard that your head spins. She then reaches into her top slit, dragging her cock out with her hand, and strokes it hard against your back. She then bends back and slams forward, ripping open your ass. You pass out from the pain.";
-		say "When you are conscious again, it seems that the nanites have repaired the damage to your body, but there is still piss floating out of your ass, along with clumps of blood. You can't be her mate any longer. It looks like she is still too pissed to even think in that direction.";
+	if dolphinwantmate is -2:
+		say "     She grabs you harshly, fingers biting into your skin, drawing blood. She then flips you over so hard that your head spins. She then reaches into her top slit, dragging her cock out with her hand, and strokes it hard against your back. She then bends back and slams forward, ripping open your ass. You pass out from the pain.";
+		say "     When you are conscious again, it seems that the nanites have repaired the damage to your body, but there is still piss floating out of your ass, along with clumps of blood. You can't be her mate any longer. It looks like she is still too pissed to even think in that direction.";
 		CreatureSexAftermath "Player" receives "AssDildoFuck" from "Dolphin Herm";
 		decrease HP of Player by 40;
-	say "She strokes your entire body, beginning at your head, and moves slowly down your body. The changes begin in the wake of her flipper-like hands.";
+	say "     She strokes your entire body, beginning at your head, and moves slowly down your body. The changes begin in the wake of her flipper-like hands.";
 	infect "Dolphin Herm";
 	LineBreak;
 	now dolphinconsent is 0;
 	say "[dolphin fuck]";
 
 To say Dolphin loses:
-	say "You hit the blue dolphinoid human over the head with a final blow, and she floats in the water, unmoving. From here, however, you can see that she has at least three slits, and it looks like she wants you to take her. ";
+	say "     You hit the blue dolphinoid human over the head with a final blow, and she floats in the water, unmoving. From here, however, you can see that she has at least three slits, and it looks like she wants you to take her. ";
 	if Libido of Player < 40 and "Dominant" is not listed in feats of Player:
 		say "You do not have the desire to mate with her though, so you leave her there.";
 	else if dolphintricked < 2:
@@ -44,24 +44,24 @@ To say Dolphin loses:
 		say "     ([link]N[as]n[end link]) - Leave the dolphin be.";
 		if Player consents:
 			now dolphinconsent is 1;
-			say "You uncover yourself and swim closer.";
+			say "     You uncover yourself and swim closer.";
 			WaitLineBreak;
-			say "Closer";
+			say "     Closer.";
 			WaitLineBreak;
-			say "[bold type] AND closer[roman type]";
+			say "     [bold type]AND closer.[roman type]";
 			WaitLineBreak;
-			say "She then whips her body up and sprays you with a different bunch of clicks, totally stunning your body. 'Now it is my turn to play with you...' she mutters.";
+			say "     She then whips her body up and sprays you with a different bunch of clicks, totally stunning your body. 'Now it is my turn to play with you...' she mutters.";
 			say "[dolphin fuck]";
 		else:
-			say "You decide against exploiting this opportunity, leaving the creature as she is.";
+			say "     You decide against exploiting this opportunity, leaving the creature as she is.";
 		increase dolphintricked by 1;
 	else:
 		increase dolphintricked by 1;
-		say "You are tempted by the sight of the prone dolphin, but you are wise to their tricks, so you manage to hold yourself back. Leaving it before it can make its final, sonic strike, you head off in search of another means to quell your raging hormones.";
+		say "You are tempted by the sight of the prone dolphin, but you are wise to their tricks, so you manage to hold yourself back. Leaving her before she can make her final, sonic strike, you head off in search of another means to quell your raging hormones.";
 
 to say dolphin fuck:
 	if Player is female: [prefer male action]
-		say "The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. ";
+		say "     The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. ";
 		if scalevalue of Player > 3:
 			say "She eagerly slams her cock into your cunt. In spite of her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first. She continues to ram your eager hole. You can feel her prehensile member worming around in the depths of your cunt, but even this impressive rod can only barely fill your expansive hole. Up to her hilt, she can only just barely tickle your cervix. She seems a little surprised by this, suggesting that she might not be used to handling a beast of your magnitude. 'I should be - unf - enjoying this. It's - urgh - rare for someone - Ah! - to handle me so well...' she trails off. You get the impression that while she is certainly enjoying the ride, she's likely used to the 'challenge' of far less accommodating females.";
 			say "Regardless, her assault on your hole reaches a fever pitch, and it's not long before she lets out a chittering scream in climax, unloading her cum into your womb. You feel her passionate fluids flood the depths of your cunt, though her equally expansive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release. She's quick to yank her rod from your snatch and tends to you and her potential offspring only briefly before departing.";
@@ -100,12 +100,14 @@ to say dolphin fuck:
 		if "Microwaved" is listed in feats of Player:
 			say "WARNING: Sex shifting nanites detected! Allow?";
 			if Player consents:
+				LineBreak;
 				say "OK.";
 				say "Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
 				increase Cunt Count of Player by 1;
 				increase Cunt Depth of Player by 6;
 				increase Cunt Tightness of Player by 4;
 			else:
+				LineBreak;
 				say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
 		else:
 			say "Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
@@ -162,7 +164,7 @@ When Play begins:
 	now attack entry is "The dolphin takes her fist and punches you with her immense strength."; [Text used when the monster makes an Attack]
 	now defeated entry is "[Dolphin loses]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Dolphin wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "     As you [if the Location of Player is not Public Beach]swim along[else]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying 'Another for my pod! Yes!'"; [ Description of the creature when you encounter it.]
+	now desc entry is "     As you [if the Location of Player is not Public Beach]swim along[else]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying, 'Another for my pod! Yes!'"; [ Description of the creature when you encounter it.]
 	now face entry is "dominated by a long dolphin snout";
 	now body entry is "silvery with a blue back. A dorsal fin sits on top, and strong muscles contract underneath the surface"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]wet, glistening[or]smooth, silver[or]thick, blubbered[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -322,7 +324,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the dolattack rule:		[possible sonic attack and sets upcoming strike]
 	choose row MonsterID from Table of Random Critters;
 	if a random chance of 1 in 6 succeeds:
-		say "The dolphin lets off a really loud pulse of high-pitched clicks which weakens you ([ ( 6 + lev entry ) / 2 ] dmg) and stuns you just long enough for her to attack again.";
+		say "The dolphin lets off a really loud pulse of high-pitched clicks which weakens you ([special-style-2][ ( 6 + lev entry ) / 2 ][roman type] dmg) and stuns you just long enough for her to attack again.";
 		decrease HP of Player by ( ( 6 + lev entry ) / 2 );
 	now tempnum is a random number between 1 and 5; [picks one of the attacks]
 	if tempnum is 1:
@@ -362,18 +364,18 @@ This is the Dolphin Herm Infection rule:
 	if Player has a body of "Dolphin Herm":
 		trigger ending "Dolphin Herm Infection";
 		if humanity of Player < 10:
-			say "Your mind snaps with the pressure of the idea of joining the pod. You go feral and join the pod of dolphinoids that lives near your city, occasionally venturing to the southern waters to mate with other pods.";
+			say "     Your mind snaps with the pressure of the idea of joining the pod. You go feral and join the pod of dolphinoids that lives near your city, occasionally venturing to the southern waters to mate with other pods.";
 		else:
-			say "You find yourself visiting the beach more often over the days, swimming in the waves with your changed form.";
+			say "     You find yourself visiting the beach more often over the days, swimming in the waves with your changed form.";
 			if dolphinwantmate is -1:
-				say "One day, the pod of dolphins surfaces around you, and being uncleaned by the nanite masters in the human network, they proceed to change you into one of them and maim you intensely.";
+				say "     One day, the pod of dolphins surfaces around you, and being uncleaned by the nanite masters in the human network, they proceed to change you into one of them and maim you intensely.";
 				dolphinify;
 				dolphinify;
 				dolphinify;
 				dolphinify;
-				say "You spend a long time in the hospital, but eventually you emerge, scarred, but alive.";
+				say "     You spend a long time in the hospital, but eventually you emerge, scarred, but alive.";
 			else:
-				say "You spend some time at the end of each swim looking for the one that changed you, eager to bring her back as your mate. One day, you find her and entice her to remain with you. She becomes your lifelong mate, and you bear each other many dolphinoid children.";
+				say "     You spend some time at the end of each swim looking for the one that changed you, eager to bring her back as your mate. One day, you find her and entice her to remain with you. She becomes your lifelong mate[if Player is not sterile], and you bear each other many dolphinoid children[end if].";
 
 
 to dolphinify:

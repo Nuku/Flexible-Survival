@@ -28,11 +28,13 @@ to say ResolveEvent Pure Pool:
 		say "     Exploring the park, you hear an echoing scream. It sounds like a wyvern, but what are those doing in the park?";
 		say "     Do you check out the situation?";
 		if Player consents:
+			LineBreak;
 			say "     You follow the sound to the clear pool you found before. However, two wyverns are fighting. It is pretty obvious from the dialogue that they want to infect the pool, but cannot agree on who will do it first.";
 			if Player is male and Libido of Player > 49:
 				if CockName of Player is "Wyvern":
 					say "     You could help resolve the situation by corrupting the pond yourself. Do you wish to do so?";
 					if Player consents:
+						LineBreak;
 						say "     You begin stroking your [cock size desc of Player] [one of]cock[smn][or]penis[esmn][or]shaft[smn][or]maleness[esmn][at random], moaning as pleasure builds in your loins. By the time the wyverns turn around and notice you, you are about to blow your load";
 						if a random chance of 1 in 2 succeeds:
 							say ". They begin stroking as well, rushing to come before you.";
@@ -42,10 +44,14 @@ to say ResolveEvent Pure Pool:
 						now PurePoolPolluted is true;
 						now PurePoolPollutedByPlayer is true;
 						now Resolution of Pure Pool is 2; [player polluted it]
+					else:
+						LineBreak;
 				else:
 					say "[stop wyvern]";
 			else:
 				say "[stop wyvern]";
+		else:
+			LineBreak;
 	else if PurePoolPolluted is true:
 		say "     You come across the same pool that you ";
 		if PurePoolPollutedByPlayer is true:
@@ -54,12 +60,14 @@ to say ResolveEvent Pure Pool:
 			say "watched the wyvern infect earlier";
 		say ". Do you wish to drink from it?";
 		if Player consents:
+			LineBreak;
 			say "     You dip your head into the cloudy pool and drink deeply.";
 			infect "Wyvern";
 			infect "Wyvern";
 			infect "Wyvern";
 			ThirstReset;
 		else:
+			LineBreak;
 			say "     You keep clear of the infected water.";
 
 

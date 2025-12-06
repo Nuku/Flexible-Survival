@@ -24,8 +24,8 @@ When Play begins: [This is Cyn's default creature encounter]
 	now defeated entry is "";
 	now victory entry is "";
 	now desc entry is "";
-	now face entry is "You have a vulpine head with a long muzzle and teeth. You have [one of]hollow[or]abyssal[or]jet[or]umbral[at random]-black eyes and black fur covers your face"; [ Face description, format as "Your face is [Face of Player]." ]
-	now body entry is "Seductively curved, with a tight, bubble butt. Your hands have hard, long, sharp, black claws at their fingertips and your feet are digitigrade paws"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now face entry is "on a vulpine head with a long muzzle and teeth. You have [one of]hollow[or]abyssal[or]jet[or]umbral[at random]-black eyes and black fur covers your face"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "seductively curved, with a tight, bubble butt. Your hands have hard, long, sharp, black claws at their fingertips and your feet are digitigrade paws"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "smooth, black-colored fur over your body, with a white colored underbelly"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "From the base of your spine, you have two long, black-colored fox's luxurious tails."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "grey, knotted vulpine";
@@ -44,7 +44,7 @@ When Play begins: [This is Cyn's default creature encounter]
 	now HP entry is 125;
 	now lev entry is 25; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 20; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now Cock Length entry is 6; [ Length in inches infection will make cock grow to if cocks. ]
 	now Ball Size entry is 7; [ Cock width, more commonly used for ball size. ]

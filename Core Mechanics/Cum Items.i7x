@@ -11,7 +11,7 @@ to say cumjar (T - text):
 	say "A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written '[T] Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though... ";
 
 to say cumjar use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
@@ -3642,7 +3642,7 @@ Strain of Dragon Breeder cum is "Dragon Breeder".
 Usedesc of Dragon Breeder cum is "[Dragon Breeder cum use]".
 
 to say Dragon Breeder cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the tangy oceanic cum run over your tongue and down your throat. A sapid flavor of salty taffy proliferates your taste buds, your body thrums with reproductive purpose as your virile essence feeds into your [bodydesc of player] form. A pleased reptilian growl leaks from your lips, as your assets swell with draconic vigor to better aid the propagation of your future flight.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the tangy oceanic cum run over your tongue and down your throat. A sapid flavor of salty taffy proliferates your taste buds, your body thrums with reproductive purpose as your virile essence feeds into your [bodydesc of player] form. A pleased reptilian growl leaks from your lips, as your assets swell with draconic vigor to better aid the propagation of your future flight.";
 	if child is not born and gestation of child > 6:
 		decrease the gestation of child by 4;
 	PlayerDrink 5;
@@ -3671,7 +3671,7 @@ Strain of felinoid cum is "Felinoid".
 Usedesc of felinoid cum is "[felinoid cum use]".
 
 to say felinoid cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	PlayerEat 5;
 
@@ -3690,7 +3690,7 @@ Strain of Hermacore Cum is "Hermacore".
 Usedesc of Hermacore Cum is "[Hermacore Cum use]".
 
 to say Hermacore Cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties' as the lingering nanites infecting your aberrant seed make their presence felt.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties' as the lingering nanites infecting your aberrant seed make their presence felt.";
 	if child is not born and gestation of child > 0:
 		decrease the gestation of child by 4;
 	PlayerDrink 5;
@@ -3720,7 +3720,7 @@ Strain of skunk cum is "Skunk Male".
 Usedesc of skunk cum is "[skunk cum use]".
 
 to say skunk cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
@@ -3738,7 +3738,7 @@ Limbo Fox Cum is cum.
 Usedesc of Limbo Fox Cum is "[Limbo Fox Cum use]".
 
 to say Limbo Fox Cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. An alien yet pleasant taste hits your tongue. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. An alien yet pleasant taste hits your tongue. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	PlayerEat 25;
 	SanLoss 5;
@@ -3758,7 +3758,7 @@ Glitchy Cum is cum.
 Usedesc of Glitchy Cum is "[Glitchy Cum use]".
 
 to say Glitchy Cum use:
-	say "Lifting the plastic bottle to your mouth, you take a dr1nk fr0m it, leTting th£ cr£@my cu-um run run 0VeR /0ur t0N6u£ and dddddddown IoUr 7hroAt. An aaaaaa-alien yet plea@Nt-nttttttttt- [bold type][one of]I-IT BURNS [or]1I-IT T HURTS [at random]![roman type] Still in extreme mental and physical pain, you feel your body temperature climb1ng and steam pours from your cuts as they [one of]cinch[or]knit[at random] thEmselves §Hut. N0t ev£n fuLly finishing the bottle, you instinctively empty the rest of it somewhere, then stuff the empty bottle with difficulty back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a dr1nk fr0m it, leTting th£ cr£@my cu-um run run 0VeR /0ur t0N6u£ and dddddddown IoUr 7hroAt. An aaaaaa-alien yet plea@Nt-nttttttttt- [bold type][one of]I-IT BURNS [or]1I-IT T HURTS [at random]![roman type] Still in extreme mental and physical pain, you feel your body temperature climb1ng and steam pours from your cuts as they [one of]cinch[or]knit[at random] thEmselves §Hut. N0t ev£n fuLly finishing the bottle, you instinctively empty the rest of it somewhere, then stuff the empty bottle with difficulty back into your collection of 'empties'.";
 	SanLoss 35;
 	addAlcPoints 5;
 	PlayerHealed 300;

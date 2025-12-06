@@ -8,7 +8,7 @@ Section 1 - Porn Collection
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"porn collection"	"     A sizable stack of pornographic magazines of various levels of tastelessness for a myriad of lurid preferences."	2	porn collection
+"porn collection"	"A sizable stack of pornographic magazines of various levels of tastelessness for a myriad of lurid preferences."	2	porn collection
 
 porn collection is a grab object. It is not temporary.
 
@@ -38,21 +38,26 @@ instead of using porn collection:
 	else:
 		say "     Pulling out your porn collection, you look over the assorted magazines in search of something of interest. Shall you have a quick session to relieve a little pressure (Y) or do you want to draw it out and really let off some steam (N)?";
 		if Player consents:
+			LineBreak;
 			say "[simplemast]";
 		else:
+			LineBreak;
 			say "     You settle yourself down to really enjoy some personal time and relieve your excess arousal. You pull out a selection of the hard core magazines and begin playing with yourself[if Breast Size of Player > 8]. You start by rubbing over your [BodyType of Player] body and playing with your nipples and teasing your huge breasts, running your fingers over their sensitive flesh[else if Breast Size of Player > 5]. You start by rubbing over your [BodyType of Player] body and playing with your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else if Breast Size of Player > 2]. You start by rubbing over your [BodyType of Player] body and playing with your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else]. You start by rubbing over your [BodyType of Player] body and teasing your nipples[end if][if Nipple Count of Player > 2]. You lavish attention upon each pair in turn, helping to get yourself wound up for a bigger release[end if].";
 			if Player is herm:
 				say "     Being a herm, you place a hand at your cock[smn] and the other at your cunt[sfn] and start playing with them. You stroke your [cock size desc of Player] [Cock of Player] shaft slowly at first while fingering the wet folds of your puss[yfn]. Precum dribbles onto you while your feminine juices soak your other hand. You move your hand away from time to time to rub your [Ball Size Adjective of Player] [Balls], feeling the pressure build up in them.";
+				WaitLineBreak;
 				if mouse girl is listed in companionList of Player:
 					say "     As you continue to play with yourself, your mind wanders to thinking of sexy mice and all the fun things you could do with them. Glancing over, you spot Rachel sitting nearby, playing with herself as she watches you. She grins at you knowingly as fresh images of you surrounded by horny mice fill your mind. Moaning, you become even more aroused and play with yourself even more vigorously. You even start to share in the mouse girl's sensations as well.";
 				say "     You keep teasing yourself, holding back your orgasm a little longer, wanting to really enjoy it... until finally you moan loudly and cum hard, releasing a [if Ball Size of Player < 4]sizable blast[else if Ball Size of Player < 6]stream[else]veritable torrent[end if] of thick semen, creating a messy pool of your seed as you spray it onto yourself and the ground nearby. Your cunt quivers and squeezes down around your fingers, [if Libido of Player < 75]soaking your hand[else if Libido of Player < 90]sending your juices down your legs until a small puddle is formed[else]blasting a gush of feminine juices that soaks your thighs and runs down your legs to form a large, musky puddle[end if]. You keep stroking and pumping until you're left panting and moaning, almost passing out from the much-needed release.";
 			else if Player is male:
 				say "     You take hold of your [if Cock Count of Player > 1]cocks and start playing with them[else]cock and start playing with it[end if]. You stroke your [cock size desc of Player] [Cock of Player] shaft[smn] slowly at first, pleasing yourself as only you can, knowing just what feels right. Precum dribbles down your meat to get spread over it as you stroke yourself. You move a hand away from time to time to rub your [Ball Size Adjective of Player] [Balls], feeling the pressure build up in them.";
+				WaitLineBreak;
 				if mouse girl is listed in companionList of Player:
 					say "     As you continue to play with yourself, your mind wanders to thoughts of sexy mice and all the fun things you could do with them. Glancing over, you spot Rachel sitting nearby, playing with herself as she watches you. She grins at you knowingly as fresh images of you surrounded by horny mice fill your mind. Moaning, you become even more aroused and play with yourself even more vigorously. You even start to share in the mouse girl's sensations as well.";
 				say "     You keep teasing yourself, holding back your orgasm a little longer, wanting to really enjoy it... until finally you moan loudly and cum hard, blasting a [if Ball Size of Player < 4]sizable blast[else if Ball Size of Player < 6]stream[else]veritable torrent[end if] of thick semen, creating a messy pool of your musky seed as you spray it onto yourself and the ground nearby. You keep stroking and pumping until you're left panting and moaning, almost passing out from the much-needed release.";
 			else if Player is female:
 				say "     You move your hands down to start fingering the wet folds of your [if Cunt Count of Player is 1]pussy[else]pussies[end if]. You work [if Cunt Tightness of Player is 1]a finger[else if Cunt Tightness of Player < 4]a pair of fingers[else if Cunt Tightness of Player < 6]a trio of fingers[else]a trio of fingers and eventually your whole hand[end if] into your gripping, squeezing vagina. You rub and tease along your inner walls and make sure to pay proper attention to your sensitive clit.";
+				WaitLineBreak;
 				if mouse girl is listed in companionList of Player:
 					say "     As you continue to play with yourself, your mind wanders to thinking of sexy mice and all the fun things you could do with them. Glancing over, you spot Rachel sitting nearby, playing with herself as she watches you. She grins at you knowingly as fresh images of you surrounded by horny mice fill your mind. Moaning, you become even more aroused and play with yourself even more vigorously. You even start to share in the mouse girl's sensations as well.";
 				say "     You keep teasing yourself, holding back your orgasm a little longer, wanting to really enjoy it... until finally you moan loudly and cum hard, [if Libido of Player < 75]soaking your hand[else if Libido of Player < 90]sending your juices down your legs until a small puddle is formed[else]blasting a gush of feminine juices that soaks your thighs and runs down your legs to form a large, musky puddle[end if] as your cunt quivers and squeezes down around your fingers. You keep rubbing and fingering yourself until you're left panting and moaning, almost passing out from the much-needed release.";
@@ -75,8 +80,12 @@ instead of using porn collection:
 					if a random number between 1 and 200 < muskwave:
 						say "     As you're resting and recovering from your massive orgasm, a nearby creature is drawn in by the musky aroma of your sexual fluids before the scent can dissipate.";
 						let l be a random visible dangerous door;
-						if l is not nothing, now battleground is the marea of l;
-						if l is nothing, now battleground is "Outside";
+						if l is not nothing:
+							now battleground is the marea of l;
+						else if earea of location of Player is not "void":
+							now battleground is earea of location of Player;
+						else:
+							now battleground is "Outside";
 						fight;
 					decrease muskwave by 75;
 			follow the turnpass rule;

@@ -81,24 +81,18 @@ to setending ( Ending - text ) silence state is ( Silence - a number ): [sets th
 
 to trigger the/-- ending ( Ending - a text ):
 	setending Ending;
-	let found be 0;
 	choose row EndingID in the Table of GameEndings;
 	if Priority entry >= 0: [Make sure, that the ending was found and EndingID is set correctly]
 		if Name entry exactly matches the text Ending, case insensitively:
-			now found is 1;
-	if found is 1:
-		now Triggered entry is true;
+			now Triggered entry is true;
 
 to decide if the/-- ending ( Ending - a text ) is triggered:
 	setending Ending silently;
-	let found be 0;
 	choose row EndingID in the Table of GameEndings;
 	if Priority entry >= 0:
 		if Name entry exactly matches the text Ending, case insensitively:
-			now found is 1;
-	if found is 1:
-		if Triggered entry is true:
-			decide yes;
+			if Triggered entry is true:
+				decide yes;
 	decide no;
 
 to decide if one of the/-- endings in ( Endings - a list of texts ) is triggered:
@@ -117,13 +111,14 @@ to decide if all of the/-- endings in ( Endings - a list of texts ) are triggere
 
 vetcheat is an action applying to nothing.
 understand "i am a pro" as vetcheat.
-understand "I Am A Pro" as vetcheat.
 
 vetcheater is a number that varies.
-carry out vetcheat:
+
+check vetcheat:
 	if vetcheater is not 0:
-		say "You can only use this once.";
-		stop the action;
+		say "You can only use this once." instead;
+
+carry out vetcheat:
 	increase vetcheater by 1;
 	increase XP of Player by 200;
 	if level of Player < 5:
@@ -228,7 +223,7 @@ to ratetheplayer:
 				say ". Your confused, instinctual thoughts are sometimes broken by strange thoughts or images from a book you once read";
 			else:
 				say ". With all the excitement you went through at the library, the book you found remains firmly in your mind";
-			say ". In the Abbey, type [bold type][']dewey [bookcode entry]['][roman type] to find it again in your next game";
+			say ". In the Abbey, type ['][bold type]dewey [bookcode entry][roman type]['] to find it again in your next game";
 		say ".";
 	LineBreak;
 

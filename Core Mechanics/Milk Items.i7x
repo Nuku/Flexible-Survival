@@ -14,12 +14,12 @@ to say manmilk (T - text):
 	say "A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written '[T] Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though... ";
 
 to say breastmilk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
 to say manmilk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
 to say breastmilk smell:
@@ -3818,7 +3818,7 @@ Strain of Dragon Breeder milk is "Dragon Breeder".
 Usedesc of Dragon Breeder milk is "[Dragon Breeder milk use]".
 
 to say Dragon Breeder milk use:
-	say "Bringing the glistening your lips, you swallow down your succulent cream with eager abandon. Delighting in the warm, rich, soothing balm coating your palate in a heady sheen of heavy vanilla and some crisp, almost herbal, bite as you swish the thick ambrosial liquid along the roof mouth before swallowing. Ah delicious, you preen self-indulgently as the potent draconic energies infuse you with a raw rush of fertile excess.";
+	say "     Bringing the glistening your lips, you swallow down your succulent cream with eager abandon. Delighting in the warm, rich, soothing balm coating your palate in a heady sheen of heavy vanilla and some crisp, almost herbal, bite as you swish the thick ambrosial liquid along the roof mouth before swallowing. Ah delicious, you preen self-indulgently as the potent draconic energies infuse you with a raw rush of fertile excess.";
 	PlayerDrink 15;
 	PlayerEat 15;
 	increase Breast Size of Player by 3;
@@ -3848,7 +3848,7 @@ Strain of Hermacore Cream is "Hermacore".
 Usedesc of Hermacore Cream is "[Hermacore Cream use]".
 
 to say Hermacore Cream use:
-	say "Tilting the creamy vessel to lips, you take a deep greedy pull of your exotic milk. Your inner sommelier detects hints of subtle oaks, interspliced with effervescent spear mints, and a light undercurrent of fresh vanilla playing across your palate. Swallowing, your tastebuds note aftertaste leaves an uncanny but not wholly unwelcome sour bite evocative of some high proof liquor.";
+	say "     Tilting the creamy vessel to lips, you take a deep greedy pull of your exotic milk. Your inner sommelier detects hints of subtle oaks, interspliced with effervescent spear mints, and a light undercurrent of fresh vanilla playing across your palate. Swallowing, your tastebuds note aftertaste leaves an uncanny but not wholly unwelcome sour bite evocative of some high proof liquor.";
 	PlayerDrink 7;
 	PlayerEat 7;
 	increase Breast Size of Player by 3;
@@ -3874,7 +3874,7 @@ margay taur milk is milky.
 Usedesc of margay taur milk is "[margay taur milk use]".
 
 to say margay taur milk use:
-	say "Noticing a mild dryness on the roof of your mouth, you pop open a bottle of tauric cream and hungrily slurp up its rich contents. Though you feel somewhat sated, you can't help but take note of a strange tingling sensation coming from your chest and groin as your body shifts towards a radically more feminine bend.";
+	say "     Noticing a mild dryness on the roof of your mouth, you pop open a bottle of tauric cream and hungrily slurp up its rich contents. Though you feel somewhat sated, you can't help but take note of a strange tingling sensation coming from your chest and groin as your body shifts towards a radically more feminine bend.";
 	PlayerDrink 15;
 	PlayerEat 15;
 	increase Breast Size of Player by 3;
@@ -3898,7 +3898,7 @@ Strain of rodeo clown milk is "Rodeo Clown".
 Usedesc of rodeo clown milk is "[rodeo clown milk use]".
 
 to say rodeo clown milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes funny. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes funny. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
@@ -3917,7 +3917,7 @@ Strain of skunk milk is "Skunk Female".
 Usedesc of skunk milk is "[skunk milk use]".
 
 to say skunk milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
@@ -3935,7 +3935,7 @@ Limbo Fox Milk is milky.
 Usedesc of Limbo Fox Milk is "[Limbo Fox Milk use]".
 
 to say Limbo Fox Milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and Strawberry-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and Strawberry-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 25;
 	PlayerEat 5;
 	if Breast Size of Player >= 1:

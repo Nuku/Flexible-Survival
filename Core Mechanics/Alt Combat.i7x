@@ -397,7 +397,7 @@ This is the player attack rule:
 			if "Natural Armaments" is listed in feats of Player and BodyName of Player is not "Human":
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
-					if Name entry matches the text BodyName of Player, case insensitively:
+					if Name entry exactly matches the text BodyName of Player, case insensitively:
 						now z is y;
 						break;
 				if z is 0:		[creature not listed]
@@ -453,7 +453,7 @@ This is the player attack rule:
 				let z be 0;
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
-					if Name entry matches the text TailName of Player, case insensitively:
+					if Name entry exactly matches the text TailName of Player, case insensitively:
 						now z is y;
 						break;
 				choose row z in Table of Random Critters;

@@ -58,14 +58,14 @@ to say ResolveEvent Ogre Encounter:
 				say "     [link](3)[as]3[end link] - Just leave.";
 				now calcnumber is 0;
 				while calcnumber < 1 or calcnumber > 3:
-					say "Choice? (1-3)>[run paragraph on]";
+					say "Choice? (1-3)> [run paragraph on]";
 					get a number;
 					if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 						break;
 					else:
 						say "Invalid choice. Type [link]1[end link] to fuck an ogre, [link]2[end link] to ride an ogre's cock or [link]3[end link] to leave.";
+				LineBreak;
 				if calcnumber is 1:
-					LineBreak;
 					say "     Your eyes fixate on the ogre leader's rear and give you an idea as to how he might be able to serve you. Stepping closer, you demand that he get on all fours. Hesitantly, the large being obeys, shifting his body and rolling over, presenting himself to you. Removing your gear, you walk up to the waiting male, licking your lips in anticipation. You get down on one knee behind him and possessively place your hand onto his rear end, rubbing it up and down over his still covered buttocks. He grumbles something about being humiliated and his two friends turn away and walk off, at least wanting to spare him witnesses to being put in such a position. Meanwhile, you reach up and pull down his spandex briefs, revealing a gray-skinned and hairless ass. A smile spreads over your face as you give his exposed cheeks a few good smacks, enjoying your dominance over this big brute. A couple of slaps on each side make a nice even number.";
 					say "     The ogre leader grunts in response to your rough treatment, not at all enjoying to be on the receiving end for once. Bringing a finger to your mouth you suck on it for a few seconds before pulling it out and moving towards his pucker. You brush over his wrinkled opening once or twice, then push the wet digit against his hole, not letting up the pressure until it sinks into his body. The large creature doesn't make a sound, instead gritting his teeth and stoically bearing your invasion. You swirl the finger around, noticing that his ass is so tight that it might actually be a virgin. Then you add a second finger, closely followed by a third, all in an effort to help loosen him up before you proceed to fucking the ogre. 'You gonna be done soon? I think you've ridiculed me enough, so why don't you call it quits, eh?' the ogre asks with a grunt. A quick smack on the ass gives him an answer - just not the one he was looking for.";
 					WaitLineBreak;
@@ -77,7 +77,6 @@ to say ResolveEvent Ogre Encounter:
 					now Resolution of Ogre Encounter is 50; [won, fucked the ogre]
 					now Ogre Encounter is resolved; [the angry ogre path ends here for now]
 				else if calcnumber is 2:
-					LineBreak;
 					say "     You give them a final look over and tell the fur-coated ogre to strip. He gives you a puzzled look, followed by a grunt, before he removes his coat and briefs. The others look back and forth between the two of you while you quickly begin to strip yourself, laying down gear and clothes in a tidy pile. The little show actually causes the outline of the two watching ogres['] cocks in their pants to grow. You turn your attention back to the leader, who is standing there unimpressed, glancing at your crotch. 'If you think that little thing's going to please me, you're sadly mistaken,' he scoffs, pointing at your cock. Chuckling, you explain to him that it isn't his ass that you're after. 'Then what the hell could you possibly want from me? My coat?' he shouts. After a quick step closer, you reach out and take hold of his still soft cock. He tenses up at first but relaxes when you start some gentle rubbing.";
 					say "     'Even after defeating us, you want me to breed you?' he asks incredulously, then laughs out loud and calls to his friends, 'Seems like this one is a needy slut after all!' You ignore the ogre leader's words and continue rubbing his hardening cock, your other hand also moving to his plump balls. When his cock starts to drip precum, you place your palm over his tip, rubbing and spreading the slick liquid over his member. Once he is sufficiently lubed up, you tell him to lay down on his back, which he does without hesitation, and line your hole with the thick, gray-skinned piece of man meat. You try to sink down onto the creature's cock but are met with resistance from your own pucker as it struggles to take the girthy shaft. It takes a few tries before you are able to pop the tip of his thick cock into you, letting out a satisfied moan at the nice and full feeling he gives you.";
 					WaitLineBreak;
@@ -89,7 +88,6 @@ to say ResolveEvent Ogre Encounter:
 					CreatureSexAftermath "Player" receives "AssFuck" from "Ogre Male";
 					now Resolution of Ogre Encounter is 1; [won, submitted for sex]
 				else:
-					LineBreak;
 					say "     Deciding that you would like nothing to do with any of the creatures, you just simply turn and walk away, leaving them to lay there and sulk in their defeat. You can hear them talking amongst themselves as you are walking away, but something tells you that this won't be the last time you see these three.";
 					now Resolution of Ogre Encounter is 2; [won, refused sex]
 					now Ogre Encounter is resolved; [no further content for this path exists for now]
@@ -99,14 +97,14 @@ to say ResolveEvent Ogre Encounter:
 				say "     [link](2)[as]2[end link] - Just leave.";
 				now calcnumber is 0;
 				while calcnumber < 1 or calcnumber > 2:
-					say "Choice? (1-2)>[run paragraph on]";
+					say "Choice? (1-2)> [run paragraph on]";
 					get a number;
 					if calcnumber is 1 or calcnumber is 2:
 						break;
 					else:
 						say "Invalid choice. Type [link]1[end link] to ride an ogre's cock or [link]2[end link] to leave.";
+				LineBreak;
 				if calcnumber is 1:
-					LineBreak;
 					say "     The ogres lie there defeated. It doesn't take long for you to decide what you want. You walk up to the biggest one and stand over top of him, looking down. You examine his big, muscular frame, slowly making your way down to the very large bulge he's displaying through his underwear. You find yourself quickly removing your gear and tossing it aside. Once your pesky clothes are removed, you move onto freeing his still soft cock from the tight black underwear. He gives you a lust-filled gaze while you do so, knowing that your intentions are to do something with his cock. Once his cock is free, it very quickly starts to grow longer and thicker. Eventually, what was already a thick member is now even thicker and much longer. You wrap your hand around the piping hot member and stroke it a few times sizing him up; deciding that you can in fact take him you position yourself over his member and line it up with your awaiting pussy.";
 					say "     Not wanting to waste time, you pop the tip in, and after a few seconds, you begin to slowly lower yourself down his long and very thick pole. After a long minute or so you feel your butt touch against his balls, signaling that you've reached the end of his cock. You once again give yourself a minute to grow accustomed to his member and gyrate your hips just a little. You have to admit the ogre does fill you up just right. He's not so big that it's painful, and it's at the perfect width to give you a nice stretch. It's a full feeling you'll be enjoying until you've exhausted yourself. The other two ogres are still near him motionless. You assume they are just unconscious and get back to the feeling this ogre's cock is giving you. The ogre does look up at you almost begging for you to start, but since you're the one in charge, you decide to wait just a little while longer.";
 					WaitLineBreak;
@@ -116,7 +114,6 @@ to say ResolveEvent Ogre Encounter:
 					say "     Once you're back on your feet, you move to gather your gear. 'So,' the ogre says while you gather your gear. 'I'm Gurke and the two unconscious fellows over there are Kogs and Mogs.' You nod almost dismissively now that you've gathered your equipment and begun to put it on. He gives you a questioning look and moves towards the other two. Once you've put the last of your gear on you leave Gurke and the other two ogres behind and make your way back into the city.";
 					now Resolution of Ogre Encounter is 5; [won, submitted for sex, skip second encounter for female]
 				else:
-					LineBreak;
 					say "     Deciding that you would like nothing to do with any of the creatures, you just simply turn and walk away, leaving them to lay there and sulk in their defeat. You can hear them talking amongst themselves as you are walking away, but something tells you that this won't be the last time you see these three.";
 					now Resolution of Ogre Encounter is 2; [won, refused sex]
 					now Ogre Encounter is resolved; [no further content for this path exists for now]
@@ -158,6 +155,7 @@ to say ResolveEvent Ogre Encounter:
 			say "     ([link]Y[as]y[end link]) - Become their plaything.";
 			say "     ([link]N[as]n[end link]) - Disagree with him.";
 			if Player consents:
+				LineBreak;
 				say "     You tell them that, yes, you would like to be their new plaything, against your better judgment. They look at you almost shocked with your response and give each other confused looks back and forth. 'Well... Um... That's great,' Gurke says, finally breaking the silence. 'So you want to be our pet?' You tell Gurke that you do wish to be their pet and will do whatever they ask of you. 'Okay,' Gurke replies, still surprised. 'Well, then take that shit off and bend over for me.' Without hesitation, you remove your gear and present yourself to the three, who are removing their clothes as well. Gurke is the first to walk up to you and leads you into a tent with three makeshift beds. He guides you down onto all fours on the bed and sucks on his finger. Getting his finger wet enough, he gently pushes it into your awaiting hole. Your hole, still loosened up from your last coupling, easily yields, letting his finger slide in with ease. He thrusts his finger a few times, just to be safe, before pulling it out and positioning his now hard cock up to your hole. He gently pushes his head against your rear, and with a little effort, manages to pop the tip of his cock in.";
 				say "     This time, you moan during the initial penetration. It no longer hurts, and it just feels great to be stretched out by your new master once again. He doesn't waste time before he starts pushing the rest of his member inside of you. You quickly feel his balls press up against your own, signaling to you that he's balls deep. He slowly starts to slide his cock halfway out before gently pushing it back in. You moan in response to his thrust, urging him to fuck you harder. Acknowledging your demands, he reluctantly starts to thrust faster. He grunts and groans on top of you as he continues to fuck you harder and harder. His thick cock fills you with the feeling of fullness that you long for. He rubs across your prostate, sending shivers up your spine with each pass. You moan louder as he continues to fuck you. Not long after his breaths start to become shallow, he thrusts hard into your ass, unleashing a torrent of his cum that completely paints your insides white. Once his orgasm subsides, he pulls his cock free from your loose hole with a wet slurp, and some of his seed falls onto the bed.";
 				WaitLineBreak;
@@ -166,6 +164,7 @@ to say ResolveEvent Ogre Encounter:
 				CreatureSexAftermath "Player" receives "AssFuck" from "Ogre Male";
 				now Resolution of Ogre Encounter is 6; [player became willing ogre plaything]
 			else:
+				LineBreak;
 				say "     You tell him that unfortunately, you do not want to be their personal plaything. All three give a dissatisfied sigh in response. 'If you ever wish to have fun with us again, you know where to find us. We would all enjoy another round of playtime with you, but I won't press the matter. Just know that you are welcome back anytime.' Gurke looks sad while he talks, but you don't want to bring it up. Instead, you thank him for his offer. Part of you is a little disappointed that you said no to him, but you remind yourself that you will probably see him again and be asked again.";
 				now Resolution of Ogre Encounter is 5; [refused ogres]
 		else:
@@ -504,7 +503,7 @@ When Play begins:
 	add "Ogre Male" to infections of MaleList;
 	add "Ogre Male" to infections of BipedalList;
 	now Name entry is "Ogre Male";
-	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy title entry is "Male Ogre"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The ogre hits you![or]With a swing of his bat, the ogre smacks you in the stomach, knocking the wind out of you![or]He charges you shoulder-first, slamming his shoulder into your chin.[at random]";

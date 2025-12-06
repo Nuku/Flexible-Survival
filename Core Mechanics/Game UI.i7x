@@ -456,63 +456,34 @@ This is the self examine rule:
 [ ^^ Genital Descriptions Done ]
 	[ Equipment Descriptions Below ]
 	say "[paragraph break]";
-	repeat with x running through equipped owned equipment:
-		if slot of x is "head":
-			if descmod of x is not "", say "[descmod of x] ";
-			break;
-	repeat with x running through equipped owned equipment:
-		if slot of x is "eyes":
-			if descmod of x is not "", say "[descmod of x] ";
-			break;
-	repeat with x running through equipped owned equipment:
-		if slot of x is "face":
-			if descmod of x is not "", say "[descmod of x] ";
-			break;
-	repeat with x running through equipped owned equipment:
-		if slot of x is "neck":
-			if descmod of x is not "", say "[descmod of x] ";
-			break;
-	repeat with x running through equipped owned equipment:
-		if slot of x is "body":
-			if descmod of x is not "", say "[descmod of x] ";
-			break;
-	repeat with x running through equipped owned equipment:
-		if slot of x is "chest":
-			if descmod of x is not "", say "[descmod of x] ";
-			break;
-	repeat with x running through equipped owned equipment:
-		if slot of x is "arms":
-			if descmod of x is not "", say "[descmod of x] ";
-			break;
-	repeat with x running through equipped owned equipment:
-		if slot of x is "hands":
-			if descmod of x is not "", say "[descmod of x] ";
-			break;
+	let slots be {"head", "eyes", "face", "neck", "body", "back", "chest", "breast", "arms", "hands", "legs", "waist", "crotch", "feet"};
+	let ChestVisible be true;
 	let CrotchVisible be true;
-	repeat with x running through equipped owned equipment:
-		if slot of x is "legs":
-			now CrotchVisible is false;
-			if descmod of x is not "", say "[descmod of x] ";
-			break;
-	repeat with x running through equipped owned equipment:
-		if slot of x is "waist":
-			now CrotchVisible is false;
-			if descmod of x is not "", say "[descmod of x] ";
-			break;
-	if CrotchVisible is true: [no pants, so undies might be visible]
-		repeat with x running through equipped owned equipment:
-			if slot of x is "crotch":
-				now CrotchVisible is false;
-				if descmod of x is not "", say "[descmod of x] ";
-				break;
-	if CrotchVisible is true: [no pants or undies, so the actual crotch is visible]
-		say "Your [BodyName of Player in lower case] waist and legs are bare-ass naked, exposing your privates for everyone to see. ";
 	let Barefoot be true;
-	repeat with x running through equipped owned equipment:
-		if slot of x is "feet":
-			now Barefoot is false;
-			if descmod of x is not "", say "[descmod of x] ";
-			break;
+	repeat with equipslot running through slots:
+		if equipslot is "arms" and ChestVisible is true: [no outfit, shirt, or bra, so the actual chest is visible]
+			say "Naked from the waist up, your [BodyName of Player in lower case] [if Breast Size of Player > 0]breasts are[else]chest is[end if] on full display. ";
+		else if equipslot is "feet" and CrotchVisible is true: [no pants or undies, so the actual crotch is visible]
+			say "Your [BodyName of Player in lower case] waist and legs are [if ChestVisible is true]also [end if]bare-ass naked, exposing your privates for everyone to see. ";
+		repeat with x running through equipped owned equipment:
+			if slot of x is equipslot and (placement of x is "body" or placement of x is "head" or placement of x is "neck"):
+				if equipslot is "body" or equipslot is "back" or equipslot is "chest":
+					now ChestVisible is false;
+				else if equipslot is "breast":
+					if ChestVisible is false:
+						break;
+					now ChestVisible is false;
+				else if equipslot is "legs" or equipslot is "waist":
+					now CrotchVisible is false;
+				else if equipslot is "crotch":
+					if CrotchVisible is false:
+						break;
+					now CrotchVisible is false; [no pants, so undies might be visible]
+				else if equipslot is "feet":
+					now Barefoot is false;
+				if descmod of x is not "":
+					say "[descmod of x] ";
+				break;
 	if Barefoot is true:
 		say "You are barefoot right now. ";
 	if weapon object of Player is not journal:
@@ -520,15 +491,22 @@ This is the self examine rule:
 		if weapon object of Player is unwieldy:
 			say "Due to its comparatively [if scalevalue of Player > objsize of weapon object of Player]small[else]big[end if] size, it is [if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) > 3]very unwieldy[else if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) is 3]rather unwieldy[else]somewhat unwieldy[end if] for you to use at the moment. ";
 	repeat with x running through equipped owned equipment:
+		if slot of x is "shield" and placement of x is "shield":
+			if descmod of x is not "":
+				if weapon object of Player is journal:
+					LineBreak;
+				say "[descmod of x] ";
+			break;
+	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "end":
 			say "[descmod of x] ";
 	[ ^^ Eqipment Descriptions Done ]
+	LineBreak;
 	if the player is not lonely:
-		if weapon object of Player is journal:
-			LineBreak;
-		repeat with companion running through companionList of Player:
-			say "Accompanying you is [link][companion][as]look [companion][end link], which is level [level of companion]. ";
+		say "[line break]Accompanying you [if number of entries in CompanionList of Player is 1]is[else]are[end if] ";
+		repeat with x running from 1 to number of entries in CompanionList of Player:
+			say "[if x > 1 and x is number of entries in CompanionList of Player]and [end if][link][entry x of CompanionList of Player][as]look [entry x of CompanionList of Player][end link], who is level [level of (entry x of CompanionList of Player)][if x < number of entries in CompanionList of Player], [else]. [end if]";
 	LineBreak;
 	now looknow is 0;
 	rule succeeds;

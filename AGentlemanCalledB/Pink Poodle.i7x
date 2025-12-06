@@ -9,11 +9,11 @@ nopoodlesex is a number that varies.
 poodleapproved is a number that varies.
 
 to say PinkPoodledesc:
-	say "     As you wander through the High Rise District, a figure steps out of a [one of]designer clothing store[or]high end shop[or]salon[at random] into view just ahead of you. She is an elegant-looking poodle girl with bright pink fur. The pink fluff does little to conceal the presence of her ample breasts, and her shaven lower half exposes her shapely torso and wet canine cunt. Her fashionable appearance is completed by large fluffy pompoms covering her forearms and calves as well as the tip of her tail.[run paragraph on]";
+	say "     As you wander through the High Rise District, a figure steps out of a [one of]designer clothing store[or]high end shop[or]salon[at random] into view just ahead of you. She is an elegant-looking poodle girl with bright pink fur. The pink fluff does little to conceal the presence of her ample breasts, and her shaven lower half exposes her shapely torso and wet canine cunt. Her fashionable appearance is completed by large fluffy pompoms covering her forearms and calves as well as the tip of her tail. ";
 	if poodleapproved is 1:
-		say " As she returns your inspection, a sultry smile creeps across her muzzle. [one of]'Your place or mine?' she says with a refined French accent before striding forward confidently. 'How about right here?'[or]'Ah, mon cher,' she says with a refined French accent before striding forward confidently. 'Looking for some company?'[or]'Ah, my lonely one,' she says with a refined French accent before striding forward confidently. 'You look like you could use some company.'[at random]";
+		say "As she returns your inspection, a sultry smile creeps across her muzzle. [one of]'Your place or mine?' she says with a refined French accent before striding forward confidently. 'How about right here?'[or]'Ah, mon cher,' she says with a refined French accent before striding forward confidently. 'Looking for some company?'[or]'Ah, my lonely one,' she says with a refined French accent before striding forward confidently. 'You look like you could use some company.'[at random]";
 	else:
-		say " As she returns your inspection she scoffs, turning up her nose at you. [one of]'Such riff-raff you find around here these days!' [or]'Another uncouth beast,' [or]'Such a boorish creature!' [at random]she says with a refined French accent before striding forward confidently. 'I suppose I shall have to deal with you before you put my clients off.'";
+		say "As she returns your inspection she scoffs, turning up her nose at you. [one of]'Such riff-raff you find around here these days!' [or]'Another uncouth beast,' [or]'Such a boorish creature!' [at random]she says with a refined French accent before striding forward confidently. 'I suppose I shall have to deal with you before you put my clients off.'";
 
 to say losetoPinkPoodle:
 	now nopoodlesex is 0;
@@ -56,11 +56,15 @@ To say beatthePinkPoodle:
 	if nopoodlesex > 2 and ( the remainder after dividing nopoodlesex by 5 is not 0 ):
 		say "     Defeated, the [if poodleapproved is 1]alluring[else]haughty[end if] poodle falls to her hands and knees with a whimper. As she whines up at you with pleading puppy dog eyes, you realize you could have some fun with the beaten dog, but decide to leave her be as you have with her kind in the past.";
 		increase nopoodlesex by 1;
-	else if HP of Dominick >= 60 and HP of Dominick < 100 and Player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
+	else if HP of Dominick >= 10 and HP of Dominick < 20 and Player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
 		say "     Defeated, the [if poodleapproved is 1]alluring[else]haughty[end if] poodle falls to her hands and knees with a whimper. As she whines up at you with pleading puppy dog eyes, you realize you could have some fun with the beaten dog.";
 		if Player is male:
 			say "     Looking over the pink poodle, you feel an urge to [link]send her to Dominick (1)[as]1[end link] to breed, though you're also tempted to [link]fuck her (2)[as]2[end link] yourself or [link]have her suck you off (3)[as]3[end link] instead. You could also control your urges and [link]leave her be (0)[as]0[end link]?";
 			now calcnumber is -1;
+			while calcnumber < 0 or calcnumber > 3:
+				say "Choice? (0-3)> [run paragraph on]";
+				get a number;
+			LineBreak;
 			if calcnumber is 1:
 				say "[pinkpoodle_dom]";
 			else if calcnumber is 2:
@@ -74,8 +78,9 @@ To say beatthePinkPoodle:
 			say "     Looking over the pink poodle, you feel an urge to [link]send her to Dominick (1)[as]1[end link] to breed, though you're also tempted to have her [link]eat you out (2)[as]2[end link] instead. You could also control your urges and [link]leave her be (0)[as]0[end link]?";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 2:
-				say "Choice? (0-2)>[run paragraph on]";
+				say "Choice? (0-2)> [run paragraph on]";
 				get a number;
+			LineBreak;
 			if calcnumber is 1:
 				say "[pinkpoodle_dom]";
 			else if calcnumber is 2:
@@ -89,8 +94,9 @@ To say beatthePinkPoodle:
 			say "     Would you like to [link]fuck the pink poodle (1)[as]1[end link], [link]have her suck you off (2)[as]2[end link] or [link]leave her be (0)[as]0[end link]?";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 2:
-				say "Choice? (0-2)>[run paragraph on]";
+				say "Choice? (0-2)> [run paragraph on]";
 				get a number;
+			LineBreak;
 			if calcnumber is 1:
 				say "[pinkpoodlesex]";
 			else if calcnumber is 2:
@@ -101,8 +107,10 @@ To say beatthePinkPoodle:
 		else:
 			say "     Would you like to have her [link]eat you out (y)[as]y[end link] or [link]leave her be (n)[as]n[end link]?";
 			if Player consents:
+				LineBreak;
 				say "[pinkpoodleoral]";
 			else:
+				LineBreak;
 				say "     Deciding against taking advantage of the whining poodle, you leave her where she is.";
 				increase nopoodlesex by 1;
 	else:
@@ -130,7 +138,7 @@ to say pinkpoodle_dom:
 	say "     From that point, your words shift to focusing on Dominick as the ideal stud - handsome, virile and deliciously well-hung. You pepper this with comments on how he'd be the perfect lover for one as beautiful and well-bred as she. With a nibble on her fuzzy ear, you add how he'd give her perfect puppies while a caressing [if Player is breederslutbodied]paw[else]hand[end if] rubs her slender waist, while the other continues to fingerfuck her as she grinds her hips hard into it. He is a top-ranked breeder, after all.";
 	say "     By this point, she's panting on the edge of a powerful release, she practically begs you to tell her where to find this perfect stud. As you drive her to a yipping orgasm, you give her directions to Dom's kennel home and tell her to go to him. You reiterate one last time how a beauty such as she deserves the perfect breeding stud and that Dominick is that handsome hunk for her. By the time her extended climax has finally waned, she's lost in an afterglow daze filled with only thoughts of seeking out this ideal lover. Releasing her, you feel quite pleased with yourself in knowing you've provided your master with another lovely breeder pet.";
 	CreatureSexAftermath "Pink Poodle" receives "PussyDildoFuck" from "Player";
-	now Libido of Dominick is 3;
+	[now Libido of Dominick is 3;] [unfinished - see dom_captured3some_00 in Stripes/Dominick.i7x]
 	increase XP of Dominick by 1
 
 
@@ -189,7 +197,7 @@ When Play begins:
 	now body change entry is "changes begin to roll through you. You watch with fascination as your hand shifts to a dainty, paw-like form, with bright pink paw pads and matching claws. As the changes move up your limbs and into your body, you develop an elegant and well-proportioned canine figure"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "your chest grows tight. A thick coat of curly pink fur forms over your shoulders and chest, forming a large puff-ball over your upper torso. Meanwhile similar tufts of fur form on your arms and legs, leaving you with large, fashionable pompons covering your forearms and calves"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "you feel a pulling sensation at your spine. Doing your best to see what's going on behind you, you watch as a short, hairless canine tail forms, wagging expressively as a large pink pompon forms at its tip"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
-	now cock change entry is "as it shifts to a knotted canine form with a bright pink hue[ppheatreset]"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
+	now cock change entry is "it shifts to a knotted canine form with a bright pink hue[ppheatreset]"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 12; [ These are now the creature's stats... ]
 	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 13; [ These values may be used as part of alternate combat.]
@@ -342,19 +350,20 @@ When Play begins:
 	now infect Name entry is "Pink Poodle";
 	now heat cycle entry is 15;
 	now heat duration entry is 10;
-	now trigger text entry is "     A subtle warmth fills your body as a dampness builds between your legs. Nested between your thighs your canine spade begins to puff up and swell while shifting to a light pink, making your body's heat-fueled need for a canine companion clear.";
+	now trigger text entry is "A subtle warmth fills your body as a dampness builds between your legs. Nested between your thighs your canine spade begins to puff up and swell while shifting to a light pink, making your body's heat-fueled need for a canine companion clear.";
 	now description text entry is "";
 	now heat start entry is "[pinkpoodleheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt tightness]
 	now heat end entry is "[pinkpoodleheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt tightness]
 	now inheat entry is "[pinkpoodleheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
-	now mpregtrigger entry is "     A subtle warmth fills your body as you get an empty feeling in the rear. Your anus quivers and puffs out pinkly as the scent of heated pheromones drifts from it. You feel a growing want for canine companionship to fill that void inside you.";
+	now mpregtrigger entry is "A subtle warmth fills your body as you get an empty feeling in the rear. Your anus quivers and puffs out pinkly as the scent of heated pheromones drifts from it. You feel a growing want for canine companionship to fill that void inside you.";
 
 to say ppheatreset:
 	now HeatedPoodle is 0;
 
 to say pinkpoodleheatstart:
+	LineBreak;
 	if heatform is 0:	[female heat has added effects]
 		now HeatedPoodle is 0;
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -370,7 +379,7 @@ to say pinkpoodleheatstart:
 to say pinkpoodleheatend:
 	if HeatedPoodle is 0 and player is impreg_able:
 		say "[PoodleHeatSuccumb]";
-	say "     As your heat passes, your needy canine [if Player is female]cunt[else]anus[end if] becomes a little less prominent and swollen.";
+	say "As your heat passes, your needy canine [if Player is female]cunt[else]anus[end if] becomes a little less prominent and swollen.";
 	if heatform is 0:	[restoration after female heat]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
@@ -414,11 +423,13 @@ to say PoodleHeatSuccumb:
 	sort hmonlist in random order;
 	now MonsterID is entry 1 of hmonList;
 	choose row MonsterID from the Table of Random Critters;
-	say "     Your lust-fueled search eventually leads you to an attractive [Name entry], who you immediately submit to, offering yourself freely in the hopes of satisfying your body's lustful, heat-fueled needs.";
-	wait for any key;
+	say "     Your lust-fueled search eventually leads you to an attractive [Name entry in lower case], who you immediately submit to, offering yourself freely in the hopes of satisfying your body's lustful, heat-fueled needs.";
+	say "[run paragraph on]";
 	follow the cock descr rule;
 	follow the cunt descr rule;
 	follow the breast descr rule;
+	LineBreak;
+	AttemptToWait;
 	say "[victory entry]";
 	infect "Pink Poodle";
 	decrease the score by 5;

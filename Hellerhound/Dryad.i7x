@@ -15,7 +15,7 @@ dryad milk is milky.
 Purified of dryad milk is "distilled milk".
 dryad milk is infectious.
 Strain of dryad milk is "Dryad".
-Usedesc of dryad milk is "[dryad milk use]";
+Usedesc of dryad milk is "[dryad milk use]".
 
 to say dryad milk use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes sweet and honey-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
@@ -38,29 +38,30 @@ To say dryad defeat:
 			let bonus be (( Strength of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
-			if diceroll + bonus >= 10:
-				say "     Due to your high level of strength, you are certain you could regain control again over the situation. Only if you truly wanted too, of course.";
+			if diceroll + bonus >= 16:
+				say "     Due to your high level of strength, you are certain you could regain control again over the situation. Only if you truly wanted to, of course.";
 				LineBreak;
-				say "     ([link]Y[as]y[end link]) - Turn the tables back in your favor, and dominate the dryad";
-				say "     ([link]N[as]n[end link]) - Don't resist the dryad, letting her dominate you";
+				say "     ([link]Y[as]y[end link]) - Turn the tables back in your favor, and dominate the dryad.";
+				say "     ([link]N[as]n[end link]) - Don't resist the dryad, letting her dominate you.";
 				if Player consents:
-					say "     Straining your muscles against the vines with the use of a tight flex, you are able to break free from their hold. The dryad, sits in shock and fear beneath you, offering little resistance on her part as you place your hands upon her slender hips. Turning her around, so her ass faces towards you, you line your cock up with the syrupy folds of her now leaking snatch. It is obvious, that despite that fact that the dryad is not used to defeat, she seems to be enjoying it. With a pleased smirk, you fully reinstate your dominance over the woman, thrusting your cock balls deep inside of her. Half expecting another vine like assault, your muscles tense in preparation. But another assault doesn't come. Instead, the dryad moans whorishly in pleasure beneath you. 'Oh yes!' she shouts at the top of her lungs. 'Who knew mortals could... umph!'";
-					say "     You smirk as a soul-crushing orgasm leaves the dryad unable to finish her previous sentence. Her pussy clenching your shaft tightly, her eyes roll to the back of her head, becoming lidded with a powerful, submissive lust. Responding to that lust, you fuck the dryad with an eager, and undeniable but animalistic vigor. Between the tightness of the dryad's cunt, and the sheer sexiness that comes from that fact that you have dominated such a powerful woman, it isn't long before you find yourself burying your load deep inside of her. Feeling you shoot powerful spurts of cum into her pussy the dryad orgasms once more before falling exhausted to the ground before you. Tired yourself, you make sure all your items are in order, before taking out an empty bottle from your pack, and filling it to the brink with some of the dryad's cum. After all, who knows when something like that may ever come in handy...";
+					LineBreak;
+					say "     Straining your muscles against the vines with the use of a tight flex, you are able to break free from their hold. The dryad sits in shock and fear beneath you, offering little resistance on her part as you place your hands upon her slender hips. Turning her around, so her ass faces towards you, you line your cock up with the syrupy folds of her now leaking snatch. It is obvious that despite the fact that the dryad is not used to defeat, she seems to be enjoying it. With a pleased smirk, you fully reinstate your dominance over the woman, thrusting your cock balls deep inside of her. Half expecting another vine like assault, your muscles tense in preparation. But another assault doesn't come. Instead, the dryad moans whorishly in pleasure beneath you. 'Oh yes!' she shouts at the top of her lungs. 'Who knew mortals could... umph!'";
+					say "     You smirk as a soul-crushing orgasm leaves the dryad unable to finish her previous sentence. Her pussy clenching your shaft tightly, her eyes roll to the back of her head, becoming lidded with a powerful, submissive lust. Responding to that lust, you fuck the dryad with an eager, and undeniable but animalistic vigor. Between the tightness of the dryad's cunt, and the sheer sexiness that comes from the fact that you have dominated such a powerful woman, it isn't long before you find yourself burying your load deep inside of her. Feeling you shoot powerful spurts of cum into her pussy the dryad orgasms once more before falling exhausted to the ground before you. Tired yourself, you make sure all your items are in order, before taking out an empty bottle from your pack, and filling it to the brink with some of the dryad's cum. After all, who knows when something like that may ever come in handy...";
 					CreatureSexAftermath "Dryad" receives "PussyFuck" from "Player";
 					ItemGain dryad cum by 1;
-					infect "Dryad";
 				else:
+					LineBreak;
 					say "     Deciding to give the dryad the dominance over you she so obviously wants to exercise, you relax your previously tense muscles, falling limp within her grasp. Feeling confident you can regain control of the situation, if anything bad were to occur, you eagerly look forward to taking whatever she has in store for you. The dryad, just as eager as you, sees to it that every inch of your [Cock of Player] cock is played with, and it doesn't take long before you are spraying your load inside of her. When you finish, she places the nipple of one of her large breasts at your mouth, and with a dulled mind, you begin to suckle as she says, 'That's good, have a drink.'";
 					say "     The warm milk soothes some of the pain from the rough session, and you are almost disappointed when the dryad pushes you away. As you collapse onto the ground, the dryad walks away, the tree disguise forming once more. As you clean yourself off, you manage to collect some of the dryad's cum, placing it in an empty water bottle.";
 					CreatureSexAftermath "Dryad" receives "PussyFuck" from "Player";
 					ItemGain dryad cum by 1;
-					infect "Dryad";
+					if "Iron Stomach" is not listed in feats of Player, infect "Dryad";
 			else:
-				say "     The dryad's vines rendering you unmovable in their grasp, you are forced to sit and helplessly take whatever she has in store for you. The dryad, eagerly making use of her recently caught 'Prize', sees to it, that every inch of your [Cock of Player] cock is played with, and it doesn't take long before you are spraying your load inside of her. When you finish, she places the nipple of one of her large breasts at your mouth, and with a dulled mind, you begin to suckle as she says, 'That's good, have a drink.'";
+				say "     The dryad's vines rendering you unmovable in their grasp, you are forced to sit and helplessly take whatever she has in store for you. The dryad, eagerly making use of her recently caught 'prize' sees to it that every inch of your [Cock of Player] cock is played with, and it doesn't take long before you are spraying your load inside of her. When you finish, she places the nipple of one of her large breasts at your mouth, and with a dulled mind, you begin to suckle as she says, 'That's good, have a drink.'";
 				say "     The warm milk soothes some of the pain from the rough session, and you are almost disappointed when the dryad pushes you away. As you collapse onto the ground, the dryad walks away, the tree disguise forming once more. As you clean yourself off, you manage to collect some of the dryad's cum, placing it in an empty water bottle.";
 				CreatureSexAftermath "Dryad" receives "PussyFuck" from "Player";
 				ItemGain dryad cum by 1;
-				infect "Dryad";
+				if "Iron Stomach" is not listed in feats of Player, infect "Dryad";
 		else:
 			say "     Shaking your head to clear your mind, you grab the wood nymph by the shoulders and shove her roughly to the side. She gives an angry hiss like cracking bark and slips away into the trees.";
 	else if Libido of Player < 25:
@@ -71,7 +72,7 @@ To say dryad defeat:
 
 To say dryad attack:
 	if Player is female:
-		say "     As you go limp from the beating, greenish vines wrap around your [bodydesc of Player] body, spreading your legs and lifting you off of the ground. The dryad steps forward and rubs her clit, grinning evilly. You watch in horror, it turns a wooden-brown with a bark-like texture and grows longer and thicker, becoming a small, six inch cock.";
+		say "     As you go limp from the beating, greenish vines wrap around your [bodydesc of Player] body, spreading your legs and lifting you off of the ground. The dryad steps forward and rubs her clit, grinning evilly. You watch in horror as it turns a wooden-brown with a bark-like texture and grows longer and thicker, becoming a small, six inch cock.";
 		say "     The vines bend, and your entire body tilts backward, placing your [cunt size desc of Player] cunt right in front of her cock. 'Sweet carryings.' She smirks as she pushes inside, causing you to scream in pain from the rough bark. The dryad pumps in and out of you, and you soon realize that her cock is absorbing the lubrication. Despite that, you eventually get used to the rough treatment, and pleasure starts to mix in with the pain. You are eventually brought to a climax, but as you descend from your orgasm, you quickly notice that the dryad has not slowed down at all. She keeps using your weary body, and soon, the overwhelming sensations make you lose consciousness.";
 		WaitLineBreak;
 		say "     You wake to find thick, steaming cum mixed with blood running from your cunt, and a feeling of weakness all over. It must be the blood loss, you realize, as the size of the puddle under you becomes apparent. As you clean yourself off, you manage to collect some of the dryad's cum, placing it in an empty water bottle.";
@@ -80,15 +81,16 @@ To say dryad attack:
 		infect "Dryad";
 	else if Player is male:
 		say "     You collapse under the pain of your beating, and the dryad approaches. Suddenly, many green tendrils grow out of a hole above her clit that you had missed, twining around your cock and body, immobilizing you. You watch as she strokes her clit, which slowly turns into a 6 inch long wooden cock. Her hands move toward her cock, and you watch with growing lust and horror as it spasms, and white, thick, reeking spunk sprays all over your [bodydesc of Player] body and face. She breathes out in a long sigh, and the tendrils bring you closer as she waits for the changes.";
-		repeat with n running from one to three:
-			infect "Dryad";
-		say "     After you finish, she shoves one of her breasts into your face. 'Still not had a drink, eh?' she quips as one of the green tendrils twining around her body squeezes the tit, milk spraying into your face and down your throat.";
 		infect "Dryad";
+		infect "Dryad";
+		infect "Dryad";
+		say "     After you finish, she shoves one of her breasts into your face. 'Still not had a drink, eh?' she quips as one of the green tendrils twining around her body squeezes the tit, milk spraying into your face and down your throat.";
+		if "Iron Stomach" is not listed in feats of Player, infect "Dryad";
+		WaitLineBreak;
 		say "     The dryad unceremoniously drops your cum-and-milk-covered form to the ground and leaves. As you clean yourself off, you collect the cum on you and place it into an empty water bottle. Maybe there is a use for it?";
 		ItemGain dryad cum by 1;
 	else:
 		say "     She looks at you with horror. 'Nothing? Nothing for me to play with?' she exclaims. Well, you will just have to fix that and come back later. She turns toward the trees with a huff, leaving you to pick yourself up.";
-		infect "Dryad";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -127,7 +129,7 @@ When Play begins:
 	now body change entry is "it becomes cuter. Green, tentacle-like vines grow from a new hole forming above your clit as they wrap around your body"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "blemishes disappear, and vines fully wrap around your figure, forming a green cloak that opens at will"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
 	now ass change entry is "it becomes human-like"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
-	now cock change entry is "it shrinks and slides down into your clit. You appear female, but by concentrating, your clit can turn into full-sized, wooden-looking cock, with reeking cum leaking from it"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it shrinks and slides down into your clit. You appear female, but by concentrating, your clit can turn into a full-sized, wooden-looking cock, with reeking cum leaking from it"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
 	now dex entry is 22;
 	now sta entry is 20;

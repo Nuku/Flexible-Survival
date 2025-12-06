@@ -132,7 +132,7 @@ The player is wearing a backpack. Description of the backpack is "A backpack, fu
 The player is wearing a watch.
 
 instead of examining a watch:
-	say "Time Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours, it is currently [time of day].";
+	say "Time Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours. It is currently [time of day].";
 
 Player has a list of text called Feats. [list of feats, visible to Player]
 Player has a list of text called EncounteredEnemies. [running list of all creatures encountered]
@@ -311,47 +311,22 @@ Definition: A person (called x) is asleep:
 Chapter 1 - Equipment Based
 
 Definition: A person (called x) is barefoot:
-	let FeetItem be a grab object;
-	now FeetItem is journal;
 	repeat with z running through equipped equipment:
 		if slot of z is "feet":
-			now FeetItem is z;
-	if FeetItem is journal: [already naked]
-		yes;
-	else:
-		no;
+			no;
+	yes;
 
 Definition: A person (called x) is barecrotch:
-	let WaistItem be a grab object;
-	now WaistItem is journal;
-	let CrotchItem be a grab object;
-	now CrotchItem is journal;
 	repeat with z running through equipped equipment:
-		if slot of z is "waist":
-			now WaistItem is z;
-	repeat with z running through equipped equipment:
-		if slot of z is "crotch":
-			now CrotchItem is z;
-	if WaistItem is journal and CrotchItem is journal: [already naked]
-		yes;
-	else:
-		no;
+		if slot of z is "waist" or slot of z is "legs" or slot of z is "crotch":
+			no;
+	yes;
 
 Definition: A person (called x) is barechest:
-	let ChestItem be a grab object;
-	now ChestItem is journal;
-	let BodyItem be a grab object;
-	now BodyItem is journal;
 	repeat with z running through equipped equipment:
-		if slot of z is "chest":
-			now ChestItem is z;
-	repeat with z running through equipped equipment:
-		if slot of z is "Body":
-			now BodyItem is z;
-	if ChestItem is journal and BodyItem is journal: [already naked]
-		yes;
-	else:
-		no;
+		if slot of z is "body" or slot of z is "back" or slot of z is "chest" or slot of z is "breast":
+			if placement of z is "body", no;
+	yes;
 
 Definition: A person (called x) is naked:
 	if x is barecrotch and x is barechest and x is barefoot:
@@ -1567,7 +1542,7 @@ This is the brain descr rule:
 	if Libido of Player < 21, now lusting is " thoughts.";
 	if Libido of Player > 80:
 		let RandomCreature be a random number from 1 to number of entries in EncounteredEnemies of Player;
-		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] a [entry RandomCreature of EncounteredEnemies of Player in lower case] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
+		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] [a entry RandomCreature of EncounteredEnemies of Player in lower case] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
 	else if Libido of Player > 40:
 		now lusting is " thoughts. You are [one of]distracted by doodling a big breasted monster[or]distracted by doodling a big cocked monster[or]distracted by taking a moment to rub at yourself[at random].";
 	else if Libido of Player > 20:
@@ -1581,14 +1556,14 @@ This is the breast descr rule:
 		now descr is "[one of]palmable[or]small[or]dainty[or]slender[or]perky[at random] [character number Breast Size of Player in cupsize] cup";
 		now sh-descr is "[one of]palmable[or]small[or]dainty[or]slender[or]perky[at random]";
 	else if Breast Size of Player is 3:
-		now descr is "[character number Breast Size of Player in cupsize] cup";
+		now descr is "[one of]reasonably-sized[or]average[or]moderate[at random] [character number Breast Size of Player in cupsize] cup";
 		now sh-descr is "[one of]reasonably-sized[or]average[or]moderate[at random]";
 	else if Breast Size of Player is 4:
-		now descr is "[character number Breast Size of Player in cupsize] cup";
+		now descr is "[one of]eye-catching[or]substantive[or]shapely[at random] [character number Breast Size of Player in cupsize] cup";
 		now sh-descr is "[one of]eye-catching[or]substantive[or]shapely[at random]";
 	else if Breast Size of Player < 5:
-		now descr is "[character number Breast Size of Player in cupsize] cup";
-		now sh-descr is "[one of]average-sized[or]normal-sized[or]healthy-sized[or][character number Breast Size of Player in cupsize] cup[at random]";
+		now descr is "[one of]average-sized[or]normal-sized[or]healthy-sized[at random] [character number Breast Size of Player in cupsize] cup";
+		now sh-descr is "[one of]average-sized[or]normal-sized[or]healthy-sized[at random]";
 	else if Breast Size of Player < 7:
 		now descr is "[one of]large[or]jiggling[or]well-shaped[or]plump[at random] [character number Breast Size of Player in cupsize] cup";
 		now sh-descr is "[one of]large[or]jiggling[or]well-shaped[or]plump[at random]";
@@ -1642,7 +1617,7 @@ to say Cum Load Size of ( x - a person ):
 			say "[one of]one-liter[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
 		else if Ball Size of x is 6:
 			say "[one of]two-liter[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
-		else if Ball Size of x > 7:
+		else if Ball Size of x > 6:
 			say "[one of]overflowing[or]bucket-filling[or]excessive[or]gushing[or]massive[at random]";
 
 This is the cunt descr rule:
@@ -1666,11 +1641,8 @@ This is the cunt descr rule:
 Part 4 - Actions
 
 [This is generally not used and bypassed by an "instead of conversing" - talk menus are more useful]
-understand "talk [person]" as conversing.
-understand "talk to [person]" as conversing.
-understand "chat [person]" as conversing.
-understand "chat with [person]" as conversing.
-understand "talk with [person]" as conversing.
+understand "talk to/with/-- [person]" as conversing.
+understand "chat with/-- [person]" as conversing.
 
 Conversing is an action applying to one thing.
 

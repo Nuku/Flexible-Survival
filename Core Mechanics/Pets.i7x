@@ -194,10 +194,10 @@ Carry out CountPlayerPets:
 		say "Active [if number of entries in CompanionList of Player is 1]Ally[else]Allies[end if]:";
 		repeat with z running through CompanionList of Player:
 			say " [link][z][as]look [z][end link]";
-	say "[line break]Ally Commands:[line break]";
-	say "     [bold type]ally <name>[roman type] - Make the named ally your active one.";
-	say "     [link][bold type]ally dismiss[roman type][end link] - Send away your ally (for now).";
-	say "     [link][bold type]ally overview[roman type][end link] - Display a table with the stats of all currently available allies.";
+	say "[line break][line break]Ally Commands:[line break]";
+	say "[bold type]ally <name>[roman type] - Make the named ally your active one.";
+	say "[link][bold type]ally dismiss[roman type][end link] - Send away your ally (for now).";
+	say "[link][bold type]ally overview[roman type][end link] - Display a table with the stats of all currently available allies.";
 
 Chapter 5 - Companion Overview Table
 

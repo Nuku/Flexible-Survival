@@ -160,9 +160,10 @@ To regularstart: [normal start method]
 			-- 97:
 				say "Confirm restore?";
 				if Player consents:
+					LineBreak;
 					now RestoreMode is true;
 					now RestoreSide is 1;
-					say "[line break][silent_start]";
+					say "[silent_start]";
 					now Trixieexit is 1;
 					if RestoreMode is true:
 						now RestoreMode is false;
@@ -173,9 +174,10 @@ To regularstart: [normal start method]
 			-- 98:
 				say "Confirm restore?";
 				if Player consents:
+					LineBreak;
 					now RestoreMode is true;
 					now RestoreSide is 2;
-					say "[line break][silent_start]";
+					say "[silent_start]";
 					now Trixieexit is 1;
 					if RestoreMode is true:
 						now RestoreMode is false;
@@ -186,9 +188,10 @@ To regularstart: [normal start method]
 			-- 99:
 				say "Confirm restore?";
 				if Player consents:
+					LineBreak;
 					now RestoreMode is true;
 					now RestoreSide is 0;
-					say "[line break][silent_start]";
+					say "[silent_start]";
 					now Trixieexit is 1;
 					if RestoreMode is true:
 						now RestoreMode is false;
@@ -199,6 +202,7 @@ To regularstart: [normal start method]
 			-- 0:
 				say "Confirm game start?";
 				if Player consents:
+					LineBreak;
 					if Name of Player is not "DebugTesting": [nullifies Human new infection parts until the new system goes live]
 						now HeadName of Player is "";
 						now TorsoName of Player is "";
@@ -1049,6 +1053,8 @@ to startgenderlockget:
 		now Breast Size of Player is 0;
 	else if GenderLock is 8:
 		say "Locked to flat-chested male or trans-male.";
+		if StartingGender < 5:
+			add "Single Sexed" to feats of Player;
 		if StartingGender is odd: [male, trans-woman, male herm]
 			add "Always Cocky" to feats of Player;
 		else: [female, trans-man, female herm]

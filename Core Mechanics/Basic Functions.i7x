@@ -314,6 +314,9 @@ to FeatLoss (Featname - text):
 			now Sterile of Player is false;
 		else if Featname is "Strong Back":
 			decrease capacity of Player by 50;
+		else if Featname is "Expert Medic":
+			if CurrentMedkitSupplies > 1:
+				decrease CurrentMedkitSupplies by 1;
 		else if Featname is "Vampiric":
 			now vampiric is false;
 	else if debugactive is 1:
@@ -336,6 +339,8 @@ to FeatGain (Featname - text):
 		else if Featname is "Hardy":
 			increase MaxHP of Player by 8;
 			increase HP of Player by 8;
+		else if Featname is "Expert Medic":
+			increase CurrentMedkitSupplies by 1;
 		else if Featname is "Instinctive Combat":
 			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the [']Auto Attack['] commands. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [link][bold type]auto attack normal[roman type][end link] for the default method of combat (choose each action).[line break]Type [link][bold type]auto attack berserk[roman type][end link] to always attack in combat.[line break]Type [link][bold type]auto attack seduce[roman type][end link] to always seduce in combat.[line break]Type [link][bold type]auto attack pass[roman type][end link] to always pass in combat.[line break]Type [link][bold type]auto attack coward[roman type][end link] to always flee in combat.[line break]Type [link][bold type]auto attack submit[roman type][end link] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
 		else if Featname is "Vore Predator":
@@ -1174,25 +1179,37 @@ say "     Korvin [StripCrotch], then grins eagerly.";
 ]
 
 to say StripCrotch:
-	let WaistItem be a grab object;
-	now WaistItem is journal;
-	let CrotchItem be a grab object;
-	now CrotchItem is journal;
+	let WaistItem be journal;
+	let LegsItem be journal;
+	let CrotchItem be journal;
+	let found be 0;
 	repeat with z running through equipped equipment:
-		if slot of z is "waist":
+		if slot of z is "waist" and WaistItem is journal: [legacy slot]
 			now WaistItem is z;
-		else if slot of z is "crotch":
+			increase found by 1;
+		else if slot of z is "legs" and LegsItem is journal: [all legwear, including skirts]
+			now LegsItem is z;
+			increase found by 1;
+		else if slot of z is "crotch" and CrotchItem is journal: [underwear]
 			now CrotchItem is z;
-		if WaistItem is not journal and CrotchItem is not journal:
-			break;
-	if WaistItem is journal and CrotchItem is journal: [already naked]
+			increase found by 1;
+		if found is 3, break;
+	if found is 0: [already naked]
 		say "strokes over your bare crotch";
-	else if WaistItem is journal and CrotchItem is not journal:
-		say "pulls down your [CrotchItem] and bares your crotch";
-	else if WaistItem is not journal and CrotchItem is journal:
-		say "pulls down your [WaistItem] and bares your crotch";
-	else if WaistItem is not journal and CrotchItem is not journal:
-		say "pulls down your [WaistItem] and [CrotchItem], baring your crotch";
+	else:
+		say "pulls down your ";
+		if WaistItem is not journal and LegsItem is not journal:
+			say "[WaistItem][if CrotchItem is not journal], [LegsItem] and [else]and [LegsItem], baring[end if]";
+		else if WaistItem is not journal:
+			say "[WaistItem] and [if CrotchItem is journal]bares[end if]";
+		else if LegsItem is not journal:
+			say "[LegsItem] and [if CrotchItem is journal]bares[end if]";
+		if CrotchItem is not journal:
+			if found > 1:
+				say "[CrotchItem], baring";
+			else:
+				say "[CrotchItem] and bares";
+		say " your crotch";
 
 
 [
@@ -1208,25 +1225,37 @@ say "     You [SelfStripCrotch], then wrap your hand around your [Cock of Player
 ]
 
 to say SelfStripCrotch:
-	let WaistItem be a grab object;
-	now WaistItem is journal;
-	let CrotchItem be a grab object;
-	now CrotchItem is journal;
+	let WaistItem be journal;
+	let LegsItem be journal;
+	let CrotchItem be journal;
+	let found be 0;
 	repeat with z running through equipped equipment:
-		if slot of z is "waist":
+		if slot of z is "waist" and WaistItem is journal: [legacy slot]
 			now WaistItem is z;
-		else if slot of z is "crotch":
+			increase found by 1;
+		else if slot of z is "legs" and LegsItem is journal: [all legwear, including skirts]
+			now LegsItem is z;
+			increase found by 1;
+		else if slot of z is "crotch" and CrotchItem is journal: [underwear]
 			now CrotchItem is z;
-		if WaistItem is not journal and CrotchItem is not journal:
-			break;
-	if WaistItem is journal and CrotchItem is journal: [already naked]
+			increase found by 1;
+		if found is 3, break;
+	if found is 0: [already naked]
 		say "stroke over your bare crotch";
-	else if WaistItem is journal and CrotchItem is not journal:
-		say "pull down your [CrotchItem] and bare your crotch";
-	else if WaistItem is not journal and CrotchItem is journal:
-		say "pull down your [WaistItem] and bare your crotch";
-	else if WaistItem is not journal and CrotchItem is not journal:
-		say "pull down your [Waistitem] and [CrotchItem], baring your crotch";
+	else:
+		say "pull down your ";
+		if WaistItem is not journal and LegsItem is not journal:
+			say "[WaistItem][if CrotchItem is not journal], [LegsItem] and [else]and [LegsItem], baring[end if]";
+		else if WaistItem is not journal:
+			say "[WaistItem] and [if CrotchItem is journal]bare[end if]";
+		else if LegsItem is not journal:
+			say "[LegsItem] and [if CrotchItem is journal]bare[end if]";
+		if CrotchItem is not journal:
+			if found > 1:
+				say "[CrotchItem], baring";
+			else:
+				say "[CrotchItem] and bare";
+		say " your crotch";
 
 [
 understand "zTSelfDressCrotch" as SDCRAction.
@@ -1242,25 +1271,37 @@ say "     You [SelfDressCrotch], then get ready to move out again.";
 ]
 
 to say SelfDressCrotch:
-	let WaistItem be a grab object;
-	now WaistItem is journal;
-	let CrotchItem be a grab object;
-	now CrotchItem is journal;
+	let WaistItem be journal;
+	let LegsItem be journal;
+	let CrotchItem be journal;
+	let found be 0;
 	repeat with z running through equipped equipment:
-		if slot of z is "waist":
+		if slot of z is "waist" and WaistItem is journal: [legacy slot]
 			now WaistItem is z;
-		else if slot of z is "crotch":
+			increase found by 1;
+		else if slot of z is "legs" and LegsItem is journal: [all legwear, including skirts]
+			now LegsItem is z;
+			increase found by 1;
+		else if slot of z is "crotch" and CrotchItem is journal: [underwear]
 			now CrotchItem is z;
-		if WaistItem is not journal and CrotchItem is not journal:
-			break;
-	if WaistItem is journal and CrotchItem is journal: [already naked]
+			increase found by 1;
+		if found is 3, break;
+	if found is 0: [already naked]
 		say "casually stroke over your bare crotch";
-	else if WaistItem is journal and CrotchItem is not journal:
-		say "collect and put your [CrotchItem] back on";
-	else if WaistItem is not journal and CrotchItem is journal:
-		say "collect and put your [WaistItem] back on";
-	else if WaistItem is not journal and CrotchItem is not journal:
-		say "collect your [CrotchItem] and [WaistItem] to put them back on";
+	else:
+		say "collect ";
+		if WaistItem is not journal and LegsItem is not journal:
+			say "your [WaistItem][if CrotchItem is not journal], [LegsItem] and [else]and [LegsItem] to put them[end if]";
+		else if WaistItem is not journal:
+			say "[if CrotchItem is journal]and put [end if]your [WaistItem][if CrotchItem is not journal] and [end if]";
+		else if LegsItem is not journal:
+			say "[if CrotchItem is journal]and put [end if]your [LegsItem][if CrotchItem is not journal] and [end if]";
+		if CrotchItem is not journal:
+			if found > 1:
+				say "[CrotchItem] to put them";
+			else:
+				say "and put your [CrotchItem]";
+		say " back on";
 
 [
 Adds the uppermost layer of bottom clothes, that the player wears, in the text
@@ -1268,23 +1309,29 @@ Example use:
 say "     You feel the cold wind blow on your [crotchDesc]";
 ]
 to say crotchDesc:
-	let WaistItem be a grab object;
-	now WaistItem is journal;
-	let CrotchItem be a grab object;
-	now CrotchItem is journal;
+	let WaistItem be journal;
+	let LegsItem be journal;
+	let CrotchItem be journal;
+	let found be 0;
 	repeat with z running through equipped equipment:
-		if slot of z is "waist":
+		if slot of z is "waist" and WaistItem is journal: [legacy slot]
 			now WaistItem is z;
-		else if slot of z is "crotch":
+			increase found by 1;
+		else if slot of z is "legs" and LegsItem is journal: [all legwear, including skirts]
+			now LegsItem is z;
+			increase found by 1;
+		else if slot of z is "crotch" and CrotchItem is journal: [underwear]
 			now CrotchItem is z;
-		if WaistItem is not journal and CrotchItem is not journal:
-			break;
-	if WaistItem is journal and CrotchItem is journal: [already naked]
+			increase found by 1;
+		if found is 3, break;
+	if found is 0: [already naked]
 		say "bare crotch";
-	else if WaistItem is journal and CrotchItem is not journal:
-		say "[CrotchItem]";
-	else if WaistItem is not journal:
+	else if WaistItem is not journal: [waist item goes on top]
 		say "[WaistItem]";
+	else if LegsItem is not journal: [legs item covers crotch item]
+		say "[LegsItem]";
+	else: [crotch item covers naked]
+		say "[CrotchItem]";
 
 [
 
@@ -1300,25 +1347,50 @@ say "     Korvin [StripChest], then grins eagerly.";
 ]
 
 to say StripChest:
-	let ChestItem be a grab object;
-	now ChestItem is journal;
-	let BodyItem be a grab object;
-	now BodyItem is journal;
+	let BodyItem be journal;
+	let BackItem be journal;
+	let ChestItem be journal;
+	let BreastItem be journal;
+	let found be 0;
 	repeat with z running through equipped equipment:
-		if slot of z is "chest":
-			now ChestItem is z;
-		else if slot of z is "body":
-			now BodyItem is z;
-		if ChestItem is not journal and BodyItem is not journal:
-			break;
-	if ChestItem is journal and BodyItem is journal: [already naked]
+		if placement of z is "body":
+			if slot of z is "body" and BodyItem is journal: [special outfits or costumes]
+				now BodyItem is z;
+				increase found by 1;
+			else if slot of z is "back" and BackItem is journal: [jackets and other shirt coverings]
+				now BackItem is z;
+				increase found by 1;
+			else if slot of z is "chest" and ChestItem is journal: [shirts]
+				now ChestItem is z;
+				increase found by 1;
+			else if slot of z is "breast" and BreastItem is journal: [bras and negligees]
+				now BreastItem is z;
+				increase found by 1;
+		if found is 4, break;
+	if found is 0: [already naked]
 		say "strokes over your bare chest";
-	else if ChestItem is journal and BodyItem is not journal:
-		say "pulls off your [BodyItem] and bares your chest";
-	else if ChestItem is not journal and BodyItem is journal:
-		say "pulls off your [ChestItem] and bares your chest";
-	else if ChestItem is not journal and BodyItem is not journal:
-		say "pulls off your [ChestItem] and [BodyItem], baring your chest";
+	else:
+		say "pulls off your ";
+		if BodyItem is not journal and BackItem is not journal and ChestItem is not journal:
+			say "[BodyItem], [BackItem][if BreastItem is not journal], [ChestItem] and [else] and [ChestItem], baring[end if]";
+		else if BodyItem is not journal and BackItem is not journal:
+			say "[BodyItem][if BreastItem is not journal], [BackItem] and [else] and [BackItem], baring[end if]";
+		else if BodyItem is not journal and ChestItem is not journal:
+			say "[BodyItem][if BreastItem is not journal], [ChestItem] and [else] and [ChestItem], baring[end if]";
+		else if BackItem is not journal and ChestItem is not journal:
+			say "[BackItem][if BreastItem is not journal], [ChestItem] and [else] and [ChestItem], baring[end if]";
+		else if BodyItem is not journal:
+			say "[BodyItem] and [if BreastItem is journal]bares[end if]";
+		else if BackItem is not journal:
+			say "[BackItem] and [if BreastItem is journal]bares[end if]";
+		else if ChestItem is not journal:
+			say "[ChestItem] and [if BreastItem is journal]bares[end if]";
+		if BreastItem is not journal:
+			if found > 1:
+				say "[BreastItem], baring";
+			else:
+				say "[BreastItem] and bares";
+		say " your chest";
 
 [
 understand "zTSelfStripChest" as SSCAction.
@@ -1333,25 +1405,50 @@ say "     You [SelfStripChest], then grin eagerly.";
 ]
 
 to say SelfStripChest:
-	let ChestItem be a grab object;
-	now ChestItem is journal;
-	let BodyItem be a grab object;
-	now BodyItem is journal;
+	let BodyItem be journal;
+	let BackItem be journal;
+	let ChestItem be journal;
+	let BreastItem be journal;
+	let found be 0;
 	repeat with z running through equipped equipment:
-		if slot of z is "chest":
-			now ChestItem is z;
-		else if slot of z is "body":
-			now BodyItem is z;
-		if ChestItem is not journal and BodyItem is not journal:
-			break;
-	if ChestItem is journal and BodyItem is journal: [already naked]
+		if placement of z is "body":
+			if slot of z is "body" and BodyItem is journal: [special outfits or costumes]
+				now BodyItem is z;
+				increase found by 1;
+			else if slot of z is "back" and BackItem is journal: [jackets and other shirt coverings]
+				now BackItem is z;
+				increase found by 1;
+			else if slot of z is "chest" and ChestItem is journal: [shirts]
+				now ChestItem is z;
+				increase found by 1;
+			else if slot of z is "breast" and BreastItem is journal: [bras and negligees]
+				now BreastItem is z;
+				increase found by 1;
+		if found is 4, break;
+	if found is 0: [already naked]
 		say "casually stroke over your bare chest";
-	else if ChestItem is journal and BodyItem is not journal:
-		say "pull off your [BodyItem] and bare your chest";
-	else if ChestItem is not journal and BodyItem is journal:
-		say "pull off your [ChestItem] and bare your chest";
-	else if ChestItem is not journal and BodyItem is not journal:
-		say "pull off your [ChestItem] and [BodyItem], baring your chest";
+	else:
+		say "pull off your ";
+		if BodyItem is not journal and BackItem is not journal and ChestItem is not journal:
+			say "[BodyItem], [BackItem][if BreastItem is not journal], [ChestItem] and [else] and [ChestItem], baring[end if]";
+		else if BodyItem is not journal and BackItem is not journal:
+			say "[BodyItem][if BreastItem is not journal], [BackItem] and [else] and [BackItem], baring[end if]";
+		else if BodyItem is not journal and ChestItem is not journal:
+			say "[BodyItem][if BreastItem is not journal], [ChestItem] and [else] and [ChestItem], baring[end if]";
+		else if BackItem is not journal and ChestItem is not journal:
+			say "[BackItem][if BreastItem is not journal], [ChestItem] and [else] and [ChestItem], baring[end if]";
+		else if BodyItem is not journal:
+			say "[BodyItem] and [if BreastItem is journal]bare[end if]";
+		else if BackItem is not journal:
+			say "[BackItem] and [if BreastItem is journal]bare[end if]";
+		else if ChestItem is not journal:
+			say "[ChestItem] and [if BreastItem is journal]bare[end if]";
+		if BreastItem is not journal:
+			if found > 1:
+				say "[BreastItem], baring";
+			else:
+				say "[BreastItem] and bare";
+		say " your chest";
 
 [
 understand "zTSelfDressChest" as SDCAction.
@@ -1367,25 +1464,50 @@ say "     You [SelfDressChest], then get ready to move out again.";
 ]
 
 to say SelfDressChest:
-	let ChestItem be a grab object;
-	now ChestItem is journal;
-	let BodyItem be a grab object;
-	now BodyItem is journal;
+	let BodyItem be journal;
+	let BackItem be journal;
+	let ChestItem be journal;
+	let BreastItem be journal;
+	let found be 0;
 	repeat with z running through equipped equipment:
-		if slot of z is "chest":
-			now ChestItem is z;
-		else if slot of z is "body":
-			now BodyItem is z;
-		if ChestItem is not journal and BodyItem is not journal:
-			break;
-	if ChestItem is journal and BodyItem is journal: [already naked]
+		if placement of z is "body":
+			if slot of z is "body" and BodyItem is journal: [special outfits or costumes]
+				now BodyItem is z;
+				increase found by 1;
+			else if slot of z is "back" and BackItem is journal: [jackets and other shirt coverings]
+				now BackItem is z;
+				increase found by 1;
+			else if slot of z is "chest" and ChestItem is journal: [shirts]
+				now ChestItem is z;
+				increase found by 1;
+			else if slot of z is "breast" and BreastItem is journal: [bras and negligees]
+				now BreastItem is z;
+				increase found by 1;
+		if found is 4, break;
+	if found is 0: [already naked]
 		say "casually stroke over your bare chest";
-	else if ChestItem is journal and BodyItem is not journal:
-		say "collect and put your [BodyItem] back on";
-	else if ChestItem is not journal and BodyItem is journal:
-		say "collect and put your [ChestItem] back on";
-	else if ChestItem is not journal and BodyItem is not journal:
-		say "collect your [ChestItem] and [BodyItem] to put them back on";
+	else:
+		say "collect ";
+		if BodyItem is not journal and BackItem is not journal and ChestItem is not journal:
+			say "your [BodyItem], [BackItem][if BreastItem is not journal], [ChestItem] and [else] and [ChestItem] to put them[end if]";
+		else if BodyItem is not journal and BackItem is not journal:
+			say "your [BodyItem][if BreastItem is not journal], [BackItem] and [else] and [BackItem] to put them[end if]";
+		else if BodyItem is not journal and ChestItem is not journal:
+			say "your [BodyItem][if BreastItem is not journal], [ChestItem] and [else] and [ChestItem] to put them[end if]";
+		else if BackItem is not journal and ChestItem is not journal:
+			say "your [BackItem][if BreastItem is not journal], [ChestItem] and [else] and [ChestItem] to put them[end if]";
+		else if BodyItem is not journal:
+			say "[if BreastItem is journal]and put [end if]your [BodyItem][if BreastItem is not journal] and[end if]";
+		else if BackItem is not journal:
+			say "[if BreastItem is journal]and put [end if]your [BackItem][if BreastItem is not journal] and[end if]";
+		else if ChestItem is not journal:
+			say "[if BreastItem is journal]and put [end if]your [ChestItem][if BreastItem is not journal] and[end if]";
+		if BreastItem is not journal:
+			if found > 1:
+				say "[BreastItem] to put them";
+			else:
+				say "and put your [BreastItem]";
+		say " back on";
 
 [
 Adds the uppermost layer of top clothes, that the player wears, in the text
@@ -1393,23 +1515,36 @@ Example use:
 say "     The water splashes on your [chestDesc]";
 ]
 to say chestDesc:
-	let ChestItem be a grab object;
-	now ChestItem is journal;
-	let BodyItem be a grab object;
-	now BodyItem is journal;
+	let BodyItem be journal;
+	let BackItem be journal;
+	let ChestItem be journal;
+	let BreastItem be journal;
+	let found be 0;
 	repeat with z running through equipped equipment:
-		if slot of z is "chest":
-			now ChestItem is z;
-		else if slot of z is "body":
-			now BodyItem is z;
-		if ChestItem is not journal and BodyItem is not journal:
-			break;
-	if ChestItem is journal and BodyItem is journal: [already naked]
+		if placement of z is "body":
+			if slot of z is "body" and BodyItem is journal: [special outfits or costumes]
+				now BodyItem is z;
+				increase found by 1;
+			else if slot of z is "back" and BackItem is journal: [jackets and other shirt coverings]
+				now BackItem is z;
+				increase found by 1;
+			else if slot of z is "chest" and ChestItem is journal: [shirts]
+				now ChestItem is z;
+				increase found by 1;
+			else if slot of z is "breast" and BreastItem is journal: [bras and negligees]
+				now BreastItem is z;
+				increase found by 1;
+		if found is 4, break;
+	if found is 0: [already naked]
 		say "bare chest";
-	else if ChestItem is not journal and BodyItem is journal:
-		say "[ChestItem]";
-	else:
+	else if BodyItem is not journal: [body item goes on top]
 		say "[BodyItem]";
+	else if BackItem is not journal: [back item covers chest item]
+		say "[BackItem]";
+	else if ChestItem is not journal: [chest item covers breast item]
+		say "[ChestItem]";
+	else: [breast item covers naked]
+		say "[BreastItem]";
 
 [
 Adds footwear name in the text
@@ -1417,8 +1552,7 @@ Example use:
 say "     You walk on the dirty floor with your [feetDesc]";
 ]
 to say feetDesc:
-	let FeetItem be a grab object;
-	now FeetItem is journal;
+	let FeetItem be journal;
 	repeat with z running through equipped equipment:
 		if slot of z is "feet":
 			now FeetItem is z;

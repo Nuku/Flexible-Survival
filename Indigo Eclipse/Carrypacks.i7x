@@ -35,9 +35,8 @@ Sarea of Happy Trails is "Allzones".
 
 to say ResolveEvent Happy Trails:
 	say "     By chance you happen to stumble across a small camping store named Happy Trails. Unfortunately, the windows have been smashed out, glass littering the pavement and interior floor. The simple aluminum door is swinging dangerously on only one hinge with a rustic wooden 'Closed' sign on the ground beneath it.";
-	say "     A cautious glance into the darkened store shows signs of rampant looting with every scrap of camping rations gone. Bits and pieces of torn clothes, tent fabric and other various outdoor gear has been smashed and flung about. Just as you are about to leave, you happen to notice the end of a forest green backpack sticking out from under a toppled display rack. With no sign of anyone inside or nearby, you should be able to grab it without any trouble.";
+	say "     A cautious glance into the darkened store shows signs of rampant looting with every scrap of camping rations gone. Bits and pieces of torn clothes, tent fabric and other various outdoor gear have been smashed and flung about. Just as you are about to leave, you happen to notice the end of a forest green backpack sticking out from under a toppled display rack. With no sign of anyone inside or nearby, you should be able to grab it without any trouble.";
 	WaitLineBreak;
-	say "     ";
 	say "     [bold type]Do you want to take the backpack with you?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, it looks like it would allow you to carry more supplies.";
