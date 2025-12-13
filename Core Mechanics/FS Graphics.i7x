@@ -109,6 +109,7 @@ Figure of HellfireDemon_hardnoharness_icon is the file "HellfireDemon_hardnoharn
 Figure of Helot_face_icon is the file "Helot_face.jpg".
 Figure of Henry_soft_icon is the file "Henry_soft.jpg".
 Figure of Henry_hard_icon is the file "Henry_hard.jpg".
+Figure of Hermacore_icon is the file "Hermacore.png".
 Figure of Herm_Hyena_clothed_icon is the file "Hyena_clothed.jpg".
 Figure of Herm_Hyena_naked_icon is the file "Hyena_naked.jpg".
 Figure of HomoSapiens_icon is the file "Homo Sapiens.jpg".
@@ -1756,6 +1757,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Blue Gryphon soft"	Figure of BlueGryphon_soft_icon	"Vashaa"	g-white	"normal"
 "Feral Gryphon hard"	Figure of FeralGryphon_hard_icon	"Vashaa"	g-white	"normal"
 "Feral Gryphon soft"	Figure of FeralGryphon_soft_icon	"Vashaa"	g-white	"normal"
+"Hermacore"	Figure of Hermacore_icon	"Gherod"	g-dark-gray	"normal"
 "Hermaphrodite Gryphon Face"	Figure of BlueGryphon_face_icon	"dbd"	g-dark-gray	"normal"
 "Latex Vixen Herm"	Figure of LatexVixen_icon	"Anymouse1968"	g-white	"normal"
 "Hyena Herm"	Figure of Herm_Hyena_clothed_icon	"Vashaa"	g-White	"normal"

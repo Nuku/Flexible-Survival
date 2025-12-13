@@ -478,11 +478,12 @@ Usedesc of Champion's Milk is "[Champion's Milk use]".
 
 to say Champion's Milk use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
+	PlayerDrink 15;
 	if HP of Best Pony >= 1:
 		decrease gestation of child by a random number from 3 to 5;
 		if gestation of child < 1, now gestation of Child is 1;
+	if HP of Best Pony >= 2:
+		now scalevalue of Player is 4;
 
 instead of sniffing Champion's milk:
 	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";

@@ -6398,7 +6398,7 @@ to say Collection:
 
 to say TFstuff:
 	if scenario is "Researcher":
-		say "    You know, you rumble with catty delight, she doesn't need that silly little collector if she wants to be Margay taur. After all, you've got plenty of creamy TF juice right here, you tease groping your taut furry [Breast Size of Player] breasts with a pair of your glossy tendrils. 'Uh,' the little human stammers as she shamelessly gazes at the furrows cast by your feeler as it coddles the supple hills of your opulent rack as you gleefully swaddle your pillowy mounds in their worshipful embrace. 'I don't think that will work, I'm sort of, well...' she pauses as a low hungry rumble flickers through her core, 'immune to that stuff thanks to the boosters, so I'd need raw nanite slurry if I want to change. It's a kind offer though, you do look super yummy,' Becky simpers, eyeing your chest. Ha, you snicker, you thought that too once. Luckily those boosters they've been handing out only work on the common lesser strains. Rare ones like yours, you tease motioning to your tauric splendor, cut through that nonsense, and if you're wrong, she can always collect some vials later. You proffer, in a domineering tone as you roll on your back exposing your regal fecund form. 'Well... ah what the heck I'll give it a shot. Either way I get to touch taut taur tum,' she says, kneeling beside you.";
+		say "    You know, you rumble with catty delight, she doesn't need that silly little collector if she wants to be Margay taur. After all, you've got plenty of creamy TF juice right here, you tease groping your taut furry [Breast Size desc of Player] breasts with a pair of your glossy tendrils. 'Uh,' the little human stammers as she shamelessly gazes at the furrows cast by your feeler as it coddles the supple hills of your opulent rack as you gleefully swaddle your pillowy mounds in their worshipful embrace. 'I don't think that will work, I'm sort of, well...' she pauses as a low hungry rumble flickers through her core, 'immune to that stuff thanks to the boosters, so I'd need raw nanite slurry if I want to change. It's a kind offer though, you do look super yummy,' Becky simpers, eyeing your chest. Ha, you snicker, you thought that too once. Luckily those boosters they've been handing out only work on the common lesser strains. Rare ones like yours, you tease motioning to your tauric splendor, cut through that nonsense, and if you're wrong, she can always collect some vials later. You proffer, in a domineering tone as you roll on your back exposing your regal fecund form. 'Well... ah what the heck I'll give it a shot. Either way I get to touch taut taur tum,' she says, kneeling beside you.";
 		say "[Becky TF]";
 	else:
 		say "     Thinking about it, you've never had the chance to turn someone yourself. Sure, there may have been one or two times you slipped people a tainted item, or you might have had another assist you, but you've never turned a person on your own the old fashion way. After all, if Ava can do it, so can you. Plus, if she is willing to take the plunge why can't you join in on the fun. You muse as you lay out your plan to her while you lie back and expose your array of furry breasts to the eager woman. 'Hm, I don't know. I'm like 99% sure I'm immune but...' she trails off staring intently at your chest and gentle wobble of your plush middle as you lovingly paw at the verdant swell of your supple tums. 'This does sound fun, and if it doesn't work I can still get the collector later,' she trills, sounding rather pleased as she kneels down beside you.";
@@ -8595,6 +8595,7 @@ to say SCUse:
 			say "     Doing so also unlocks one of two new mutations based on whether or not the Player has both the Vore Pred and UB Pred feats. Either way another tough, but skippable fight awaits assuming the Player is willing to submit to a growing presence in the back of their mind, or bluff their way out of it with high charisma or perception. Afterwards, the Player will be presented with two choices, continue serving their patron or spurn them and devolve back into a puny human. Should they continue to serve that last section of act one, Just Rewards will activate and can be started by visiting the rocky cliffs area in the beach zone. Here knowledge of their patron can be gained, powerful loot obtained, secrets of their cult uncovered, and a chance to seize godly power for themselves unveiled.";
 		-- "Hermacore?":
 			say "     A combination of a profoundly vorny TF and potent weapon, the Hermacore form can be obtained after speaking with human Drake about his eyes. Doing so will activate an event called: Old One Eye out in the Dry Plains. Once found, Players with the Vore Pred and UB predator feat will have the option to stealth vore, UB, or fight a manticore with Drake's Knife lodged in its head. Choosing to devour it will cause Players without the safe appetite feat will be fully transformed into a Hermacore, in addition to gaining an item which will TF them into one over time. The infection comes with its own custom heat cycle and feats to help the Player grow more powerful by consuming their foes. Otherwise it's possible to liberate Drake's Blade without corrupting it into the Tainted Blade by unbirthing the manticore, or simply fighting it. Should the player leave them be though, a follow up event will occur in the Last Chance the next time they visit.";
+			project Figure of Hermacore_icon;
 		-- "HELP! I can't have sex with Ava!":
 			say "     Have you tried buying her dinner first? But in all seriousness, here's your Pussy Pass, just don't come at her with a dick again, please.";
 			ItemGain Pussy Pass by 1;
@@ -8639,6 +8640,7 @@ to say SCUse:
 			add "Advance to stage two?" to my_little_breeder_Choices;
 			add "Go to stage three?" to my_little_breeder_Choices;
 			add "View stage four?" to my_little_breeder_Choices;
+			add "Debug preg quest?" to my_little_breeder_Choices;
 			add "Opps missclicked?" to my_little_breeder_Choices;
 			let my_little_breeder_Choice be what the player chooses from my_little_breeder_Choices;
 			if my_little_breeder_Choice is:
@@ -8675,35 +8677,40 @@ to say SCUse:
 							say "     Fang will love this, or not, Sunder isn't his mother.";
 							now HP of Best Pony is 2; 
 							now Perception of Best Pony is 4;
-			-- "View stage four?":
-				say "     Warning unstable nanites detected, user beware, you're gonna turn into a mare!";
-				LineBreak;
-				say "     [italic type]Please choose your tummy tramp stamp[roman type].";
-				let IDK_Choices be a list of text;
-				add "Heart?" to IDK_Choices;
-				add "Four-leaf clover?" to IDK_Choices;
-				add "Classical horseshoe?" to IDK_Choices;
-				add "Paw print?" to IDK_Choices;
-				let IDK_Choice be what the player chooses from IDK_Choices;
-				if IDK_Choice is:
-					-- "Heart?":
-						say "     Debug complete.";
-						now HP of Best Pony is 3; 
-						now Perception of Best Pony is 1;
-					-- "Four-leaf clover?":
-						say "     Nanites deployed.";
-						now HP of Best Pony is 3;
-						now Perception of Best Pony is 2;
-					-- "Classical horseshoe?":
-						say "     Pony Powers active, form of: error witty line not found.";
-						now HP of Best Pony is 3; 
-						now Perception of Best Pony is 3;
-					-- "Paw print?":
-						say "     Something, something ancient memes, something something, pony side!";
-						now HP of Best Pony is 3; 
-						now Perception of Best Pony is 4;
-			-- "Opps missclicked?":
-				say "     Understandable, have a nice day.";
+				-- "View stage four?":
+					say "     Warning unstable nanites detected, user beware, you're gonna turn into a mare!";
+					LineBreak;
+					say "     [italic type]Please choose your tummy tramp stamp[roman type].";
+					let IDK_Choices be a list of text;
+					add "Heart?" to IDK_Choices;
+					add "Four-leaf clover?" to IDK_Choices;
+					add "Classical horseshoe?" to IDK_Choices;
+					add "Paw print?" to IDK_Choices;
+					let IDK_Choice be what the player chooses from IDK_Choices;
+					if IDK_Choice is:
+						-- "Heart?":
+							say "     Debug complete.";
+							now HP of Best Pony is 3; 
+							now Perception of Best Pony is 1;
+						-- "Four-leaf clover?":
+							say "     Nanites deployed.";
+							now HP of Best Pony is 3;
+							now Perception of Best Pony is 2;
+						-- "Classical horseshoe?":
+							say "     Pony Powers active, form of: error witty line not found.";
+							now HP of Best Pony is 3;
+							now Perception of Best Pony is 3;
+						-- "Paw print?":
+							say "     Something, something ancient memes, something something, pony side!";
+							now HP of Best Pony is 3; 
+							now Perception of Best Pony is 4;
+				-- "Debug preg quest?":
+					say "     Reseting pony timer.";
+					now XP of Best Pony is 0;
+					now Stamina of Best pony is 0;
+					now Perception of Best Pony is 0;
+				-- "Opps missclicked?":
+					say "     Understandable, have a nice day.";
 		-- "Cyn?":
 			say "     Though she is not one of Sundered_Dragon's creations, this glitchy fox herm can be recruited in the Ghost Fair section of the State Fair via walk-in once the Player has reached level 20 and gained the Touched by Madness feat. On arrival to this unusual place, the Player will be assaulted by vulpine Hallucination who, if defeated and fucked several times will join the Player as a potent pet and mobile shopkeeper. Though her little shop of horror may be pricey her services are quite powerful, additionally some of her scenes and items have been Co-authored by Sundered_Dragon. However, should the Player beat her without playing with Cyn too many times, she will become permanently hostile towards them in her own eldritch way.";
 
