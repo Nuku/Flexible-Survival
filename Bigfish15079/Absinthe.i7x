@@ -6,13 +6,12 @@ name	desc	weight	object
 "Big whiskey bottle"	"A fine glass bottle half full of a strong brew of whiskey; 35% alcohol, 70 proof. Quite a bit to drink in one go."	1	Big Whiskey bottle
 "TodtGrains Beer"	"A dark tinted bottle of alcohol. Nothing as refreshing as a bottle of beer. 6% alcohol."	1	TodtGrains Beer
 "Small Grain Alcohol Bottle"	"A small clear bottle of alcohol, quite strong too. Might have been left behind after they tasted it. 75% alcohol."	1	Small Grain Alcohol Bottle
-"Grain Alcohol Bottle"	"A clear bottle of alcohol, quite strong for the regular person. Might have been looted from a liquor store. 75% alcohol."	1	large Grain Alcohol Bottle
+"Large Grain Alcohol Bottle"	"A clear bottle of alcohol, quite strong for the regular person. Might have been looted from a liquor store. 75% alcohol."	1	large Grain Alcohol Bottle
 "Dwarven spirit"	"A large black container filled with alcohol, only for the bravest or most hearty of drinkers. 90% alcohol."	1	Dwarven Spirit
 
 small whiskey bottle is a grab object. Understand "small whiskey bottle" as small whiskey bottle.
 Usedesc of small whiskey bottle is "[small whiskey alcohol use]".
-instead of sniffing small whiskey bottle:
-	say "The strong smell of alcohol flows into your nose.";
+Scent of small whiskey bottle is "The strong smell of alcohol flows into your nose.".
 to say small whiskey alcohol use:
 	say "     You feel the burn of the whiskey down your throat as you drink.";
 	PlayerDrink 5;
@@ -20,8 +19,7 @@ to say small whiskey alcohol use:
 
 Big Whiskey bottle is a grab object. Understand "Big whiskey bottle" as Big Whiskey bottle.
 Usedesc of Big Whiskey bottle is "[Big Whiskey bottle use]".
-instead of sniffing Big Whiskey bottle:
-	say "The strong smell of alcohol flows into your nose.";
+Scent of Big Whiskey bottle is "The strong smell of alcohol flows into your nose.".
 to say Big Whiskey bottle use:
 	say "     Your drink the full bottle, its strong alcohol burning on the way down.";
 	PlayerDrink 10;
@@ -29,8 +27,7 @@ to say Big Whiskey bottle use:
 
 TodtGrains Beer is a grab object. Understand "TodtGrains Beer" as TodtGrains Beer.
 Usedesc of TodtGrains Beer is "[TodtGrainsBeer use]".
-instead of sniffing TodtGrains Beer:
-	say "A light scent of alcohol flows into your nose.";
+Scent of TodtGrains Beer is "A light scent of alcohol flows into your nose.".
 to say TodtGrainsBeer use:
 	say "     You drink the nice refreshing beer, its dark grain taste lingering on your tongue.";
 	PlayerDrink 6;
@@ -38,17 +35,15 @@ to say TodtGrainsBeer use:
 
 Small Grain Alcohol Bottle is a grab object. Understand "Small Grain Alcohol Bottle" as Small Grain Alcohol Bottle.
 Usedesc of Small Grain Alcohol Bottle is "[Small Grain use]".
-instead of sniffing Small Grain Alcohol Bottle:
-	say "The strong smell of pure alcohol flows into your nose.";
+Scent of Small Grain Alcohol Bottle is "The strong smell of pure alcohol flows into your nose.".
 to say Small Grain use:
 	say "     You feel the burn of the alcohol leaving your throat numb.";
 	PlayerDrink 5;
 	addAlcPoints 3;
 
-large Grain Alcohol Bottle is a grab object. Understand "large Grain Alcohol Bottle" as large Grain Alcohol Bottle.
+large Grain Alcohol Bottle is a grab object. Understand "Large Grain Alcohol Bottle" as large Grain Alcohol Bottle.
 Usedesc of large Grain Alcohol Bottle is "[large Grain Alcohol Bottle use]".
-instead of sniffing large Grain Alcohol Bottle:
-	say "A strong smell of pure alcohol flows into your nose.";
+Scent of large Grain Alcohol Bottle is "A strong smell of pure alcohol flows into your nose.".
 to say large Grain Alcohol Bottle use:
 	say "     You feel the burn of the alcohol leaving your throat numb.";
 	PlayerDrink 10;
@@ -56,8 +51,7 @@ to say large Grain Alcohol Bottle use:
 
 Dwarven Spirit is a grab object. Understand "Dwarven Spirit" as Dwarven Spirit.
 Usedesc of Dwarven Spirit is "[Dwarven Spirit use]".
-instead of sniffing Dwarven Spirit:
-	say "A strong floral smell from the spirit flows into your nose.";
+Scent of Dwarven Spirit is "A strong floral smell from the spirit flows into your nose.".
 to say Dwarven Spirit use:
 	say "     A dark hearty taste lingers in your mouth.";
 	PlayerDrink 10;

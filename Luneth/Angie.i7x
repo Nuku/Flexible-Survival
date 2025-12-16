@@ -61,6 +61,7 @@ to say ResolveEvent AngieTrapped:
 			WaitLineBreak;
 			say "     Noticing where your gaze has strayed, the former zoo employee coughs, drawing your attention back to her muzzle. 'Thanks for driving those two off. I was sure I was about to get mounted and bred, and this time I don't think I would have managed to get away again. To be honest... I'm not sure I would have wanted to if it was as good as...' Her voice trails off, before she catches herself daydreaming and continues.";
 			say "     'Err - sorry for zoning out on you like that. My name's Angie. We really should get to a safer spot. Staying in the open isn't a good idea - who knows what other creatures might have been attracted by the fighting here? Hm, I know that the zookeeper's office and the storage sheds at the back of the zoo are... occupied. How about the exhibits near the entrance? Ah, or the gift shop! That was clear when you came in? Great, let's go!'";
+			AttemptToWait;
 			increase AngieHappy by 1;
 			move Angie to the Zoo Giftshop;
 			move player to the Zoo Giftshop;
@@ -83,19 +84,18 @@ catnip is a grab object. It is not temporary.
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"catnip "	"A small packet of catnip. It's pretty light, containing only dried, fragrant leaves."	0	catnip
+"catnip"	"A small packet of catnip. It's pretty light, containing only dried, fragrant leaves."	0	catnip
 
-Usedesc of catnip is "[catnip use]";
+Usedesc of catnip is "[catnip use]".
 
-instead of sniffing catnip:
-	say "[catnip use]";
+Scent of catnip is "[catnip use]".
 
 to say catnip use:
-	say "You open the packet of catnip and take a deep whiff. ";
+	say "     You open the packet of catnip and take a deep whiff. ";
 	if FaceName of Player is listed in infections of FelineList:
 		say "As you're feline yourself, the intoxicating scent of the plant hits you like a sledgehammer. You're so taken with the heavenly stuff that you can't help yourself but rub your nose in the dried leaves, licking some of them up and chewing them. As buzzed and horny as you are from the effects, you barely notice - or care - that you're scattering most of the dried catnip on the ground as you do so.";
 		increase Libido of Player by 100;
-		ItemLoss catnip by 1;
+		[ItemLoss catnip by 1;]
 	else:
 		say "It smells nice, somewhat like mint, but you don't see how a cat could go crazy over this. Maybe you have to be a feline yourself to understand...";
 
@@ -152,10 +152,12 @@ instead of using feline porn:
 	else if Libido of Player < 50:
 		say "[SimpleFelineMast]";
 	else:
-		say "     Pulling out your feline porn, you look over the assorted stories and photos in search of something of interest. Shall you have a quick session to relieve a little pressure (Y) or do you want to draw it out and really let off some steam (N)?";
+		say "     Pulling out your feline porn, you look over the assorted stories and photos in search of something of interest. Shall you have a quick session to [link]relieve a little pressure (Y)[as]y[end link] or do you want to draw it out and [link]really let off some steam (N)[as]n[end link]?";
 		if Player consents:
+			LineBreak;
 			say "[SimpleFelineMast]";
 		else:
+			LineBreak;
 			say "     You settle yourself down to really enjoy some personal time and relieve your excess arousal. You pull out a selection of the merchandise showing graceful feline shapes, in addition to a few of Keith's pictures, and begin playing with yourself. You start by rubbing over your [BodyType of Player] body[if Breast Size of Player > 8], caressing your nipples and teasing your huge breasts, running your fingers over their sensitive flesh[else if Breast Size of Player > 5], caressing your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else if Breast Size of Player > 2], caressing your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else] and teasing your nipples[end if][if Nipple Count of Player > 2]. You lavish attention upon each pair in turn, helping to get yourself wound up for a bigger release[end if].";
 			if Player is herm:
 				say "     Being a herm, you place a hand at your cock[smn] and the other at your cunt[sfn] and start playing with them. You stroke your [cock size desc of Player] [Cock of Player] shaft slowly at first while fingering the wet folds of your puss[yfn]. Precum dribbles onto you while your feminine juices soak your other hand. You move your hand away from time to time to rub your [Ball Size Adjective of Player] [Balls], feeling the pressure build up in them.";
@@ -273,7 +275,7 @@ to say AngieAppearance:
 	else:
 		say "     Standing over by the counter, eyeing the destruction in the store sadly, is a six-foot tall black panther. She sports a nice rack of large breasts, barely hidden by her stretched and torn shirt. Layered on top of that, she wears her zoo worker's vest, though it too is several sizes too small for her new frame. She has replaced her torn shorts with a short khaki skirt that features a cheerful, waving little lion on it. The skirt does little to hide the bulge where her new cock presses against the fabric, and her long black tail lashes idly behind her, lifting the rear of it up for easier access. Despite her somewhat disheveled appearance, she seems to balance easily on her paws, her movements swift and smooth like that of the hunting cat she now resembles.";
 
-the scent of Angie is "Angie's scent is that of a hermaphrodite panther[if AngieAroused > 1], heavy with the smell of sex and[else] with a hidden scent of suppressed[end if] arousal.".
+the scent of Angie is "     Angie's scent is that of a hermaphrodite panther[if AngieAroused > 1], heavy with the smell of sex and[else] with a hidden scent of suppressed[end if] arousal.".
 
 instead of conversing the Angie:
 	if carried of catnip > 0 and AngieHappy < 3:
@@ -357,17 +359,17 @@ to say AngieTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Ask about her past"):
 					say "[AngieTalk1]";
-				if (nam is "Talk about the zoo"):
+				else if (nam is "Talk about the zoo"):
 					say "[AngieTalk2]";
-				if (nam is "Ask about her"):
+				else if (nam is "Ask about her"):
 					say "[AngieTalk3]";
-				if (nam is "Just chat with her"):
+				else if (nam is "Just chat with her"):
 					say "[AngieTalk4]";
-				if (nam is "Tell her about your adventures"):
+				else if (nam is "Tell her about your adventures"):
 					say "[AngieTalk5]";
-				if (nam is "Learn from Angie"):
+				else if (nam is "Learn from Angie"):
 					say "[AngieTalk6]";
-				if (nam is "Agree to be her mate"):
+				else if (nam is "Agree to be her mate"):
 					say "[AngieTalk7]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -375,7 +377,7 @@ to say AngieTalkMenu:
 			say "     You step back from the pantheress, shaking your head slightly as she gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say AngieTalk1: [talking about her past]
@@ -384,12 +386,9 @@ to say AngieTalk1: [talking about her past]
 		-- 1:
 			say "     Angie explains, 'I work here, or at least I used to, as one of the big cat handlers. Of course that all changed a little bit ago, when I went to take care of the panthers, and I found out that Midnight, one of the male cat was waiting there to take care of me instead. He was on me so fast, forcing me down and then fucking me, god it was so good,' Angie says, her eyes going unfocused for a minute as she pants at the memory. 'I didn't know what was going on, but I couldn't bring myself to stop him, it was probably the best I've ever felt in my life, being his feline fuck toy,' she says with a moan.";
 			say "     'But he wasn't the only one of the cats that got loose, and before he could finish making me into his pet fully, he got interrupted by one of the other cats. While the two of them squabbled over me, I managed to crawl away and lock myself in one of the side rooms while my changes finished. Once I managed to recover I started sneaking around the zoo-grounds, to see if I can figure out what's going on, or if I can find some supplies. Unfortunately,' Angie says with a sigh, 'That's when those other two managed to find and corner me, and then you showed up. I'm grateful to you for your help there.'";
-		-- 2:
-			say "     Angie explains, 'I've always loved animals, so I did an internship here while still in school, then later went on to study zoology at Tenvale College and got a real job here. Caring for all these animals is a very fulfilling job, a bit dirty sometimes when you have to clean up the enclosures, but nothing I can't live with.' Her face takes on a thoughtful expression as she continues, 'I really hope my animals are okay - may they be in the zoo or out in the city. Even though a few tried to jump and mount me - and Midnight did much more than try - I do still care about all of them.'";
-		-- 3:
-			say "     Angie explains, 'There were some reports about strange occurrences on the radio the morning of the day everything went to hell, but I didn't listen too closely and just switched over to some nice music. Who was I to know what would happen next...'";
-		-- 4:
-			say "     Angie muses, 'I think us zookeepers must have been the first to be transformed, with almost everyone in the animal enclosures when this chaos started. Or maybe it was someone in the petting zoo area - I can only imagine the scenes when the animals suddenly started petting back...'";
+		-- 2: say "     Angie explains, 'I've always loved animals, so I did an internship here while still in school, then later went on to study zoology at Tenvale College and got a real job here. Caring for all these animals is a very fulfilling job, a bit dirty sometimes when you have to clean up the enclosures, but nothing I can't live with.' Her face takes on a thoughtful expression as she continues, 'I really hope my animals are okay - may they be in the zoo or out in the city. Even though a few tried to jump and mount me - and Midnight did much more than try - I do still care about all of them.'";
+		-- 3: say "     Angie explains, 'There were some reports about strange occurrences on the radio the morning of the day everything went to hell, but I didn't listen too closely and just switched over to some nice music. Who was I to know what would happen next...'";
+		-- 4: say "     Angie muses, 'I think us zookeepers must have been the first to be transformed, with almost everyone in the animal enclosures when this chaos started. Or maybe it was someone in the petting zoo area - I can only imagine the scenes when the animals suddenly started petting back...'";
 
 to say AngieTalk2: 		[talking about the zoo]
 	if AngieTalk is 0: [giving the player a reward medkit in here]
@@ -573,17 +572,17 @@ to say AngieSexMenu:
 				now sextablerun is 1;
 				if (nam is "Fuck her"):
 					say "[AngieSex1]";
-				if (nam is "Get fucked by her"):
+				else if (nam is "Get fucked by her"):
 					say "[AngieSex2]";
-				if (nam is "Herm sex with Angie"):
+				else if (nam is "Herm sex with Angie"):
 					say "[AngieSex3]";
-				if (nam is "Let Angie mount your cock"):
+				else if (nam is "Let Angie mount your cock"):
 					say "[AngieSex4]";
-				if (nam is "Get fucked by Angie"):
+				else if (nam is "Get fucked by Angie"):
 					say "[AngieSex5]";
-				if (nam is "Give Angie a blowjob"):
+				else if (nam is "Give Angie a blowjob"):
 					say "[AngieSex6]";
-				if (nam is "Let her go down on you"):
+				else if (nam is "Let her go down on you"):
 					say "[AngieSex7]";
 				wait for any key;
 				now lastfuck of Angie is turns;
@@ -592,7 +591,7 @@ to say AngieSexMenu:
 			say "     You step back from the pantheress, shaking your head slightly as she gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say AngieSex1: [fucking her]
@@ -762,7 +761,7 @@ to say AngieSex3: [herm sex with Angie]
 			say "     ...manage to get her over that last reluctance. 'Just a little bit of fun couldn't hurt...' Angie almost moans as she leans towards you, lust rising in her eyes. She continues, 'I just can't keep denying myself what I need.' Then she leans closer, shrugging her vest off onto the floor as she rubs herself up against you. 'Mmm! It feels like you need it too,' Angie says as she rubs your cock, before one of her hands drifts down farther to your excited pussy before stroking it a few times as well. 'And just like me it looks like you have two different sets of equipment to play with now don't you,' Angie says as she lets out a sultry purr, obviously anticipating the upcoming fun.";
 			say "     'Of course the real question then is, how do we want to do this? I know I would just love it if you mounted me with that wonderfully stiff cock, just like HE did when he changed me, though I could try putting my own cock to good use on you as well,' Angie says, her mouth open and panting as she stares at you. 'So what do you want to do first? Do you want to mount me like an animal in heat?' she asks you, the thought obviously getting her even more aroused as she waits for your answer.";
 			LineBreak;
-			say "     Fuck Angie (Y), or get fucked by her (N)?";
+			say "     [link]Fuck Angie (Y)[as]y[end link], or [link]get fucked by her (N)[as]n[end link]?";
 			if Player consents:
 				LineBreak;
 				say "     'Oh god, I need that in me so bad!' Angie says with a moan, before backing off and turning away from you. You are slightly surprised for a moment, but her intent instantly becomes clear as she leans over and braces herself over the shop's counter, her large breasts pressed up against its glass top. Her panther tail lifts straight up above her raised ass, giving you a tantalizing view of her winking lips. When you don't move forward immediately, she shoots a pleading back at you over her shoulder. 'Please, I need you. God! I need you to mount me with that wonderful [Cock of Player] cock so badly, and take me like an animal just like HE did, please!'";
@@ -798,7 +797,7 @@ to say AngieSex3: [herm sex with Angie]
 		WaitLineBreak;
 		say "     'Of course the real question then is, how do we want to do this? I know I would just love it if you mounted me with that wonderfully stiff cock, just like HE did when he changed me, mating me like the wonderful slutty little beast I am.' She murrs slightly at the obviously arousing thought, before continuing, 'Though I could try putting my lovely new cock to good use on you as well, it would make me sooo happy to help you feel the pleasure of being mated properly, down on all fours like a proper panther,' Angie says, her muzzle hanging open as she pants with lust as she stares at you. 'So what do you want to do first? Do you want to mount me like an animal in heat?' she asks you, the thought obviously getting her even more aroused as she waits for your answer.";
 		LineBreak;
-		say "     Fuck Angie (Y), or get fucked by her (N)?";
+		say "     [link]Fuck Angie (Y)[as]y[end link], or [link]get fucked by her (N)[as]n[end link]?";
 		if Player consents:
 			LineBreak;
 			say "     'Oh god yes, I can't wait!' Angie says with a moan, her paw trailing over your [Cock of Player] cock one last time, then she backs off and turns away from you. You are slightly surprised for a moment, but her intent instantly becomes clear as she leans over and braces herself over the shop's counter, her large breasts pressed up against its glass top. Her panther tail lifts straight up above her raised ass, giving you a tantalizing view of her winking lips. When you don't move forward immediately, she shoots a pleading back at you over her shoulder. 'Please, I need you. God! I need you to mount me with that wonderful [Cock of Player] cock so badly, and take me like an animal just like HE did, please!'";
@@ -853,7 +852,7 @@ to say AngieSex3: [herm sex with Angie]
 			say "     'Well then, let's put on a nice and exciting show for him. It looks like you are certainly ready to perform,' Angie says teasingly as she rubs your cock, before one of her paws drifts down farther to your excited pussy before stroking it a few times as well. 'And just like me you have two different lovely sets of equipment to play with now don't you,' Angie teases as she lets out a sultry purr, her paw-like hands stroking your body eagerly, obviously anticipating the upcoming fun.";
 			say "     'Of course the real question then is, how do we want to do this? I know I would just love it if you mounted me with that wonderfully stiff cock, filling me up with that wonderfully stiff cock, just like he does, rutting me like the slutty little beast I am.' She murrs slightly at the obviously arousing thought, before continuing, 'Though I could try putting my lovely new cock to good use on you as well, it would make me sooo happy to help you feel the pleasure of being mated properly, down on all fours like a proper panther,' Angie says, her muzzle hanging open as she pants with lust as she stares at you. 'So what do you want to do first? Do you want to mount me like an animal in heat?' she asks you, the thought obviously getting her even more aroused as she waits for your answer.";
 			LineBreak;
-			say "     Fuck Angie (Y), or get fucked by her (N)?";
+			say "     [link]Fuck Angie (Y)[as]y[end link], or [link]get fucked by her (N)[as]n[end link]?";
 			if Player consents:
 				LineBreak;
 				say "     'Oh god yes, I can't wait!' Angie says with a moan, her paw trailing over your [Cock of Player] cock one last time, then she backs off and turns away from you. You are slightly surprised for a moment, but her intent instantly becomes clear as she leans over and braces herself over the shop's counter, her large breasts pressed up against its glass top. Her panther tail lifts straight up above her raised ass, giving you a tantalizing view of her winking lips. When you don't move forward immediately, she shoots a pleading back at you over her shoulder. 'Please, I need you. God! I need you to mount me with that wonderful [Cock of Player] cock so badly, and take me like an animal just like HE did, please!'";
@@ -905,8 +904,10 @@ to say AngieSex5: [Angie fucks the player]
 	if Player is herm:
 		say "     As you step up to Angie ant tell her you want to get fucked, the pantheress draws you into an eager kiss, then pants, 'Of course, my love. Do you want to take my cock in your pussy, or rather that tight and sexy ass of yours? (Y = pussy, N = ass)'";
 		if Player consents:
+			LineBreak;
 			say "[Angie5PussyFuck]";
 		else:
+			LineBreak;
 			say "[Angie5AssFuck]";
 	else if Player is female:
 		say "[Angie5PussyFuck]";
@@ -1066,11 +1067,6 @@ to say AngieSex7:
 
 [Angie + Panther Taur fun]
 to say AngiePTFun:
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Panther Herm":
-			now MonsterID is y;
-			break;
 	say "     Angie rears up in place as you approach before the poofed fur on her tail settles down, 'Oh! I thought you were one of the mutants for a moment there.' She pauses, then laughs a little. 'I guess you are. You look...' she approaches you and begins to circle around you, eyeing your every contour. A soft purr announces Midnight's approach as he joins the inspection, sniffing at you curiously a moment.";
 	if Player is male:
 		say "     Angie turns around and flags her tail, 'I have to have it,' she says in a needy tone, almost begging. 'I want to be under a panther with hands.' Midnight gives a sudden loud huff, as if insulted somehow, and hops up onto your back with his forepaws, grabbing at your hips even as you stumble forward onto Angie. 'Bad kitty!' calls Angie, but he doesn't seem to be minding her anymore, jabbing at you with a pointed feline shaft.";

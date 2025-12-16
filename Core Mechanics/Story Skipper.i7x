@@ -34,7 +34,7 @@ The File of StorageSave (owned by another project) is called "FSStorageSave".
 The File of VialData (owned by another project) is called "FSVialDataSave".
 
 PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
-PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "Rubber Tigress companion", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger companion", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder", "Best Wolf", "submissive demonic prince", "White Wolf Zero", "White Wolf One", "White Wolf Two", "White Wolf Three", "White Wolf Four", "White Wolf Five", "White Wolf Six", "White Wolf Seven", "White Wolf Eight", "White Wolf Nine", "White Wolf Ten"};
+PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "Rubber Tigress companion", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger companion", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder", "Best Wolf", "submissive demonic prince", "White Wolf Zero", "White Wolf One", "White Wolf Two", "White Wolf Three", "White Wolf Four", "White Wolf Five", "White Wolf Six", "White Wolf Seven", "White Wolf Eight", "White Wolf Nine", "White Wolf Ten"}.
 
 an everyturn rule:
 	if Player is in NPC Nexus:
@@ -65,6 +65,10 @@ a postimport rule:
 		now CockName of Player is "Skunk Female";
 	if TailName of Player is "Skunk":
 		now TailName of Player is "Skunk Female";
+	[unlock Sinking Swamps for players with City Map feat]
+	if "City Map" is listed in feats of Player:
+		AddNavPoint Sinking Swamps silently;
+		now Strange New Land is resolved;
 	[re-equip weapon wielded during possession import to correct player stats]
 	if weapon object of Player is not journal:
 		repeat with x running through owned armaments:
@@ -206,12 +210,10 @@ to EventRestore:
 			choose row x in the Table of GameEvents;
 			let EventIdName be Name entry;
 			[bugfixes for renamed events]
-			if EventIdName is "unused tool":
-				now EventIdName is "Unused Tool";
-			if EventIdName is "Destroyed Records":
-				now EventIdName is "Burned Secrets";
-			if EventIdName is "Meeting Orthas":
-				now EventIdName is "Orthas_Meeting";
+			if EventIdName is:
+				-- "unused tool": now EventIdName is "Unused Tool";
+				-- "Destroyed Records": now EventIdName is "Burned Secrets";
+				-- "Meeting Orthas": now EventIdName is "Orthas_Meeting";
 			if there is a name of EventIdName in the Table of GameEventIDs:
 				let EventObject be the object corresponding to a name of EventIdName in the Table of GameEventIDs;
 				if ResolveState entry is "Resolved":
@@ -224,15 +226,13 @@ to EventRestore:
 					if EventObject is active, now EventObject is inactive;
 				if Resolution of EventObject is not Resolution entry, now Resolution of EventObject is Resolution entry;
 				if sarea of EventObject is not SituationArea entry, now sarea of EventObject is SituationArea entry;
-				[bugfix code after re-naming Midway to Fair]
-				if sarea of EventObject is "Midway":
-					now sarea of EventObject is "Fair";
-				[bugfix code for people wrongly assigning "Dry Plains" instead of "Plains"]
-				if sarea of EventObject is "Dry Plains":
-					now sarea of EventObject is "Plains";
-				[bugfix code for people wrongly assigning "Urban Forest" instead of "Forest"]
-				if sarea of EventObject is "Urban Forest":
-					now sarea of EventObject is "Forest";
+				if sarea of EventObject is:
+					-- "Midway": [bugfix code after re-naming Midway to Fair]
+						now sarea of EventObject is "Fair";
+					-- "Dry Plains": [bugfix code for people wrongly assigning "Dry Plains" instead of "Plains"]
+						now sarea of EventObject is "Plains";
+					-- "Urban Forest": [bugfix code for people wrongly assigning "Urban Forest" instead of "Forest"]
+						now sarea of EventObject is "Forest";
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [ResolveState entry], [ActiveState entry], Resolution: [Resolution entry]";
@@ -318,12 +318,20 @@ to RoomRestore:
 		read File of RoomInventorySave into the Table of GameRoomInventories;
 		repeat with x running from 1 to the number of filled rows in the Table of GameRoomInventories:
 			choose row x in the Table of GameRoomInventories;
-			if ItemName entry is "Sundered Codex", next; [automatically given on import now, so don't restore it]
+			let ItemIdName be ItemName entry;
+			[some small bugfixes due to items that got renamed]
+			if ItemIdName is:
+				-- "Sundered Codex": [automatically given on import now, so don't restore it]
+					next;
+				-- "sturdy jeans": now ItemIdName is "dark-blue jeans";
+				-- "tenvale gorillas football helmet": now ItemIdName is "tenvale silverbacks football helmet";
+				-- "tenvale gorillas baseball cap": now ItemIdName is "tenvale silverbacks baseball cap";
+				-- "catnip ": now ItemIdName is "catnip";
 			let RoomIdName be RoomName entry;
 			if there is a name of RoomIdName in the Table of GameRoomIDs: [room exists]
 				let RoomObject be the object corresponding to a name of RoomIdName in the Table of GameRoomIDs;
-				if there is a name of ItemName entry in the Table of Game Objects: [item exists]
-					add ItemName entry to Invent of RoomObject;
+				if there is a name of ItemIdName in the Table of Game Objects: [item exists]
+					add ItemIdName to Invent of RoomObject;
 			else:
 				if RoomIdName is not "Lost in the Woods" and RoomIdName is not "Museum interior" and RoomIdName is not "of PAN Frat Second Floor":
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs! Please this message on the FS Discord!";
@@ -335,8 +343,7 @@ to RoomRestore:
 to PossessionSave:
 	say "Saving Possessions...";
 	blank out the whole of Table of GamePossessions; [empty out all old data]
-	repeat with x running from 1 to the number of rows in the Table of Game Objects: [rebuilds the table of GamePossessions with current data]
-		choose row x in the Table of Game Objects;
+	repeat through Table of Game Objects: [rebuilds the table of GamePossessions with current data]
 		let PossessionName be Name entry;
 		let PossessionCarriedNumber be 0;
 		let PossessionStoredNumber be 0;
@@ -375,8 +382,7 @@ to PossessionRestore:
 		now weapon object of Player is pocketknife;
 		unwield pocketknife silently;
 		[wiping out all items from before the import]
-		repeat with x running from 1 to number of filled rows in table of game objects:
-			choose row x from the table of game objects;
+		repeat through Table of Game Objects:
 			if object entry is Equipment:
 				if object entry is equipped, now object entry is not equipped;
 			if carried of object entry > 0, now carried of object entry is 0;
@@ -386,10 +392,12 @@ to PossessionRestore:
 			choose row x in the Table of GamePossessions;
 			let PossessionIdName be Name entry;
 			[some small bugfixes due to items that got renamed]
-			[if PossessionIdName is "earthen seed", now PossessionIdName is "sierrasaur cum";] [never actually renamed]
-			if PossessionIdName is "sturdy jeans", now PossessionIdName is "dark-blue jeans";
-			if PossessionIdName is "tenvale gorillas football helmet", now PossessionIdName is "tenvale silverbacks football helmet";
-			if PossessionIdName is "tenvale gorillas baseball cap", now PossessionIdName is "tenvale silverbacks baseball cap";
+			if PossessionIdName is:
+				[-- "earthen seed": now PossessionIdName is "sierrasaur cum";] [never actually renamed]
+				-- "sturdy jeans": now PossessionIdName is "dark-blue jeans";
+				-- "tenvale gorillas football helmet": now PossessionIdName is "tenvale silverbacks football helmet";
+				-- "tenvale gorillas baseball cap": now PossessionIdName is "tenvale silverbacks baseball cap";
+				-- "catnip ": now PossessionIdName is "catnip";
 			if there is a name of PossessionIdName in the Table of Game Objects:
 				let PossessionObject be the object corresponding to a name of PossessionIdName in the Table of Game Objects;
 				now carried of PossessionObject is CarriedNumber entry;
@@ -992,7 +1000,6 @@ to TraitRestore:
 	if the File of TraitSave exists:
 		say "Restoring Traits...";
 		read File of TraitSave into the Table of GameTraits;
-		[truncate Feats of Player to 0 entries;]
 		if companionList of Player is not empty, truncate companionList of Player to 0 entries;
 		repeat with y running through persons:[cleaning out the old data]
 			if Traits of y is not empty, truncate Traits of y to 0 entries;
@@ -1002,13 +1009,12 @@ to TraitRestore:
 			if there is a name of TraitOwner in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of TraitOwner in the Table of GameCharacterIDs;
 				if TraitText entry is not listed in Traits of CharacterObject:
-					if TraitText entry is "tamed": [bugfix for the lower case typo]
-						now TraitText entry is "Tamed";
-					add TraitText entry to Traits of CharacterObject;
-					if TraitText entry is "Tamed": [pets]
+					if TraitText entry in lower case exactly matches the text "tamed": [pets]
+						now TraitText entry is "Tamed"; [bugfix for the lower case typo]
 						if CharacterObject is not tamed, now CharacterObject is tamed;
-					if TraitText entry is "currentCompanion":
+					else if TraitText entry is "currentCompanion":
 						if CharacterObject is not listed in companionList of Player, add CharacterObject to companionList of Player;
+					add TraitText entry to Traits of CharacterObject;
 					[
 					if debug is at level 10:
 						say "DEBUG -> [x]: Added Trait: '[TraitText entry]' to [TraitOwner].";
@@ -1294,11 +1300,9 @@ to PlayerRestore:
 			if x is banned, now x is not banned;
 		say "Restoring Player Lists...";
 		read File of PlayerListsSave into the Table of PlayerLists;
-		repeat with y running from 1 to the number of filled rows in the Table of PlayerLists:
-			choose row y in the Table of PlayerLists;
+		repeat through Table of PlayerLists:
 			if ListName entry is:
-				-- "Vial":
-					VialGain EntryText entry by 1 silently;
+				-- "Vial": VialGain EntryText entry by 1 silently;
 				-- "Tape":
 					if EntryText entry is not listed in Tapes of Player:
 						add EntryText entry to Tapes of Player;
@@ -1524,8 +1528,7 @@ to BeastSave:
 	blank out the whole of Table of GameBeastVariables; [empty out all old data]
 	if number of rows in Table of Random Critters > number of rows in the Table of GameBeastVariables: [making sure we got enough room for all situations]
 		say "Error! Not enough rows to save all Beasts in the Table of GameBeastVariables. Please report this on the FS Discord.";
-	repeat with x running from 1 to the number of filled rows in the Table of Random Critters: [rebuilds the table of GameBeastVariables with current data]
-		choose row x in the Table of Random Critters;
+	repeat through Table of Random Critters: [rebuilds the table of GameBeastVariables with current data]
 		let BeastName be Name entry;
 		let BeastArea be Area entry;
 		let BeastNonInfect be non-infectious entry;
@@ -1556,22 +1559,22 @@ to BeastRestore:
 			let BeastSex be sex entry;
 			let BeastType be enemy type entry;
 			[some small bugfixes due to renamed creatures]
-			if Beastname is "dullahan", now Beastname is "Dullahan";
-			if Beastname is "Ogre", now Beastname is "Ogre Male";
-			if Beastname is "Elven Hunter", now Beastname is "Elven Male";
-			if Beastname is "rubber tigress", now Beastname is "Rubber Tigress";
-			[if Beastname is "Rubber Tigress", now Beastname is "Rubber Tigress";]
-			if Beastname is "Football Gorilla", now Beastname is "Football Gorilla Male";
-			if Beastname is "Feral Wolf", now Beastname is "Feral Wolf Male";
-			if Beastname is "Skunk", now Beastname is "Skunk Female";
+			if Beastname is:
+				-- "dullahan": now Beastname is "Dullahan";
+				-- "Ogre": now Beastname is "Ogre Male";
+				-- "Elven Hunter": now Beastname is "Elven Male";
+				-- "rubber tigress": now Beastname is "Rubber Tigress";
+				-- "Football Gorilla": now Beastname is "Football Gorilla Male";
+				-- "Feral Wolf": now Beastname is "Feral Wolf Male";
+				-- "Skunk": now Beastname is "Skunk Female";
 			if there is a Name of BeastName in the Table of Random Critters:
 				choose row with Name of BeastName in Table of Random Critters;
 				if Area entry is not BeastArea, now Area entry is BeastArea;
-				[bugfix code after re-naming Midway to Fair]
-				if Area entry is "Midway":
-					now Area entry is "Fair";
-				if Area entry is "High Rise": [furbolg content bugfix]
-					now Area entry is "High";
+				if Area entry is:
+					-- "Midway": [bugfix code after re-naming Midway to Fair]
+						now Area entry is "Fair";
+					-- "High Rise": [furbolg content bugfix]
+						now Area entry is "High";
 				if non-infectious entry is not BeastNonInfect, now non-infectious entry is BeastNonInfect;
 				if sex entry is not BeastSex, now sex entry is BeastSex;
 				if enemy type entry is not BeastType, now enemy type entry is BeastType;
@@ -1678,8 +1681,8 @@ Carry out ProgressExport:
 	say "[ProgressionExport]";
 
 To say ProgressionExport:
-	say "     [bold type]Do you really want to start the export process?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Do you really want to start the export process?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure, I'll wait a minute (or five) to write files containing my progress!";
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
 	if Player consents:
@@ -1708,8 +1711,8 @@ understand "Import Progress" as ProgressImport.
 ProgressImport is an action applying to nothing.
 
 Carry out ProgressImport:
-	say "     [bold type]Do you really want to start the import process?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Do you really want to start the import process?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure, I'll wait a minute (or ten) to reclaim my progress!";
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
 	if Player consents:
