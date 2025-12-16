@@ -9,66 +9,63 @@ skunkready is a number that varies.
 Skunk_type is a number that varies. [if it is 0 it means to pick a new creature type. if it is a 1 it is a skunk girl, if it's a 2 it's a skunkbeast...]
 
 to say skunk_male_desc:
-	say "This skunkbeast would easily pass for a normal animal, if it weren't for two things. One, the creature is the size of a small horse, and two, it's sporting the biggest erection you've ever seen as it waddles around on all fours. Which is a bit less than comforting, with the way it looks into your eyes.";
+	say "     This skunkbeast would easily pass for a normal animal, if it weren't for two things. One, the creature is the size of a small horse, and two, it's sporting the biggest erection you've ever seen as it waddles around on all fours. Which is a bit less than comforting, with the way it looks into your eyes.";
 
 to say skunk_female_desc:
-	choose row MonsterID from the Table of Random Critters;
-	let debit be 0;
-	if HardMode is true and level of Player > 5, let debit be level of Player - 5;
-	setmongender 4; [creature is female]
-	say "A very female anthropomorphic skunk with hints of animal, its curves and breasts leave you wanting, without any reservations, to fuck it senseless.";
-	now Skunk_type is 1;
-	now HP entry is 28 + ( debit * 4 ); [- How many HP has the monster got? -]
-	now monsterHP is 28 + ( debit * 4 );
-	now wdam entry is 6 + ( debit / 3 ); [-Amount of Damage monster Does when attacking.-]
+	say "     A very female anthropomorphic skunk with hints of animal, her curves and breasts leave you wanting, without any reservations, to fuck her senseless.";
 
 to say skunk_male_attack:
-	choose row MonsterID from Table of Random Critters;
-	say "     The [one of]giant skunk[or]black and white beast[or]bestial skunk[or]skunkbeast[at random] [one of]lunges forward, batting you aside[or]rushes in and bites at your arm[or]claws at you viciously[at random].";
+	say "The [one of]giant skunk[or]black and white beast[or]bestial skunk[or]skunkbeast[at random] [one of]lunges forward, batting you aside[or]rushes in and bites at your arm[or]claws at you viciously[at random].[no line break]";
 
 to say skunk_female_attack:
-	choose row MonsterID from Table of Random Critters;
 	if skunkbeaststatus is 1 and BodyName of Player is "Skunkbeast Lord":
-		say "The skunk girl runs up to you, throwing herself upon you as she seeks her skunkbeast lord's affections.";
+		choose row MonsterID from Table of Random Critters;
+		say "The skunk girl runs up to you, throwing herself upon you as she seeks her skunkbeast lord's affections.[no line break]";
 		now wdam entry is 0;
+		now dam is 0;
 		now Libido of Player is 110;
-	else if Skunk_type is 1:
-		say "     The [one of]sexy skunk[or]buxom female[or]black and white babe[or]horny skunk[or]skunk girl[at random] [one of]charges at you, bringing her feet forward in a flying kick[or]leaps in and bites at your arm[or]claws at you with her slender paws[or]presses her sexy body to yours with a lustful moan[at random].";
+	else:
+		say "The [one of]sexy skunk[or]buxom female[or]black and white babe[or]horny skunk[or]skunk girl[at random] [one of]charges at you, bringing her feet forward in a flying kick[or]leaps in and bites at your arm[or]claws at you with her slender paws[or]presses her sexy body to yours with a lustful moan[at random].[no line break]";
 
 to say skunk_male_vict:
 	if skunkready > 2:
-		if Cunt Depth of Player > 5:
+		if Player is female and Cunt Depth of Player > 5:
 			say "     The large skunk snuffles at the air for something, deciding you're what he's looking for it seems. A huge, heavy paw knocks you down onto your hands and knees, and before you can get back up, the heavy weight pins you down. The large skunkbeast climbs over your [bodydesc of Player] body and makes a few attempts to line up his throbbing cock with your hot hole. The thick shaft parts your new black-furred slit, and pounds you wildly!";
-			say "     The wild beast uses you for his own pleasure. As your body betrays you, a low groan rising in your throat and you submit to his animalistic mating. You find yourself pushing back and panting, lusting to be taken by this wild creature. You wriggle your rear and ride his cock, but the thick, messy cum that floods your body comes just before you can release, leaving you almost desperate and begging for more. Your womb is plump and warm with his ample load.";
+			say "     The wild beast uses you for his own pleasure. As your body betrays you, a low groan rises in your throat and you submit to his animalistic mating. You find yourself pushing back and panting, lusting to be taken by this wild creature. You wriggle your rear and ride his cock, but the thick, messy cum that floods your body comes just before you can release, leaving you almost desperate and begging for more. Your womb is plump and warm with his ample load.";
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Skunk Male";
 			increase skunkready by 1;
 		else if Player is female:
 			say "     The large skunk snuffles at the air for something and nuzzles at your crotch. As if deciding you're not quite ready yet, he lets his black, gooey tongue slide over your pussy, then push into it, making you moan in pleasure. The powerful beast dives his tongue into you repeatedly, lapping up your juices and sliding his thick, gooey drool into your pussy until you cum hard. You grip his head and stroke his ears, loving the attention this beast is giving you despite yourself and find yourself longing to be ready for him someday soon.";
 			CreatureSexAftermath "Skunk Male" receives "OralPussy" from "Player";
-			follow the sex change rule;
+			if FemaleList is not banned and Player is not MalePreferred:
+				now monstermemory is MonsterID;
+				setmonster "Skunk Female";
+				follow the sex change rule;
+				now MonsterID is monstermemory;
 		else:
 			say "     The massive skunk sprays thick, oily musk everywhere! Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
+			infect "Skunk Female";
 		increase skunkready by 1;
 	else:
 		say "     The massive skunk sprays thick, oily musk everywhere! Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
-		infect;
+		infect "Skunk Female";
 		increase skunkready by 1;
 
 to say skunk_male_defeat:
 	if skunkready > 3: [been sprayed or mated a lot]
 		let tempnum be a random number between 1 and 10;
-		if Cunt Depth of Player > 5 and skunkready > tempnum: [ready to take him, chance for final fuck]
-			say "     With one last feat of strength, the beast grabs you, lifting itself onto your rear, thrusting madly. You whimper as you find yourself unable to resist as his final rutting brings you to your limit. As your world turns fuzzy, gripped in a rushing orgasm you feel the beast's heated seed spray your inner most parts one last time."; [rawr final mating]
+		if Player is female and Cunt Depth of Player > 5 and skunkready > tempnum: [ready to take him, chance for final fuck]
+			say "     With one last feat of strength, the beast grabs you, lifting himself onto your rear, thrusting madly. You whimper as you find yourself unable to resist as his final rutting brings you to your limit. As your world turns fuzzy, gripped in a rushing orgasm you feel the beast's heated seed spray your inner most parts one last time."; [rawr final mating]
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Skunk Male";
 			increase skunkready by 1;
-			infect;
+			infect "Skunk Female";
 		else:
 			say "     The beast reaches out a paw one last time, but before it reaches you the light fades from its eyes.";
 	else:
 		say "     The beast reaches out a paw one last time, but before it reaches you the light fades from its eyes.";
 
 to say skunk bodyshift:
-	if Cunt Count of Player > 1:
+	if Cunt Count of Player > 0:
 		say "your body becomes even more feminine, waist slimming, hips widening leaving you with curves that would make anyone, male or female, drool in lust";
 	else:
 		say "your body becomes more feminine, curves building that make it impossible to define you as anything but female despite what equipment you might have";
@@ -77,42 +74,51 @@ to say skunk_female_vict:
 	if skunkbeaststatus is 1:	[skunkbeast lord]
 		say "[sblvictorysex]";
 	else if Player is male and skunkready > 2:
-		say "     Victorious, the female skunk grabs your [cock size desc of Player] cock and starts pumping at it vigorously. With your [Cock of Player] meat hard in her paw, she sinks her muzzle down overtop of it. She licks and sucks at your shaft, drooling black goo onto it as you blast your hot load into her muzzle. She licks her lips and swallows your semen down. She grins as the stick, black goo doesn't remain on your skin for long as it smooths out in places and starts to sink into you, leaving behind a soft, almost rubbery-textured fur even as you feel a tingle in your groin.";
+		say "     Victorious, the female skunk grabs your [cock size desc of Player] cock and starts pumping at it vigorously. With your [Cock of Player] meat hard in her paw, she sinks her muzzle down overtop of it. She licks and sucks at your shaft, drooling black goo onto it as you blast your hot load into her muzzle. She licks her lips and swallows your semen down. She grins as the sticky, black goo doesn't remain on your skin for long as it smooths out in places and starts to sink into you, leaving behind a soft, almost rubbery-textured fur even as you feel a tingle in your groin.";
 		CreatureSexAftermath "Skunk Female" receives "OralCock" from "Player";
-		follow the sex change rule;
+		if MaleList is not banned and Player is not FemalePreferred:
+			now monstermemory is MonsterID;
+			setmonster "Skunk Male";
+			follow the sex change rule;
+			now MonsterID is monstermemory;
 	else:
-		say "The female skunk turns, spraying thick, oily musk everywhere! Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
+		say "     The female skunk turns, spraying thick, oily musk everywhere! Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
+		infect "Skunk Male";
 	increase skunkready by 1;
 
 to say skunk_female_defeat:
 	if skunkbeaststatus is 1:	[skunkbeast lord]
 		say "[sblvictorysex]";
 	else if a random number from 1 to 100 > 2:
-		say "     The skunk girl looks up at you, smiling even as her body seems to turn to liquid, 'I may be gone, but you can still carry His kittens...' she mutters cryptically as she collapses, dissolving completely.";
+		say "     The skunk girl looks up at you, smiling even as her body seems to turn to liquid. 'I may be gone, but you can still carry His kittens...' she mutters cryptically as she collapses, dissolving completely.";
 	else:
-		say "     The skunk girl turns to run from you and you relax thinking the fight over, suddenly you realize your error as one last gob of oily musk hits you. Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
+		say "     The skunk girl turns to run from you and you relax thinking the fight over; suddenly you realize your error as one last gob of oily musk hits you. Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
 		infect "Skunk Male";
 
 to say sblvictorysex:
 	now fightoutcome is 11;
-	say "     Feeling the instinctual urges of your skunkbeast side, you cannot resist and growl lustfully, welcoming the advances of the buxom skunk. Her beautiful body presses against yours and she runs her paws across your bestial form. Her nimble paws roam around, lavishing attention upon every sensitive spot they can find as she seeks to please her skunkbeast [if Player is purefemale]lady[else]lord[end if][if skrp is 1]. Your lower head is given several kisses as well, the two skunk girls diving their tongues into each other's muzzle[end if][if Player is neuter]. The skunk girl snuggles with you, grooming your body, running her paws all over it and grinding her dripping crotch against your bare groin[end if].";
+	say "     Feeling the instinctual urges of your skunkbeast side, you cannot resist and growl lustfully, welcoming the advances of the buxom skunk. Her beautiful body presses against yours and she runs her paws across your bestial form. Her nimble paws roam around, lavishing attention upon every sensitive spot they can find as she seeks to please her skunkbeast [if Player is purefemale]lady[else]lord[end if][if skrp is 1]. Your lower head is given several kisses as well, the two skunk girls diving their tongues into each other's muzzles[end if][if Player is neuter]. The skunk girl snuggles with you, grooming your body, running her paws all over it and grinding her dripping crotch against your bare groin[end if].";
 	if Player is not neuter:		[not neuter]
 		let randomskunksex be a list of numbers;
-		if Player is male, add 1 to randomskunksex;
-		if Player is male, add 1 to randomskunksex; [double-likelihood]
-		if Player is male, add 2 to randomskunksex;
-		if Player is female, add 3 to randomskunksex;
-		if Player is purefemale, add 4 to randomskunksex;
-		if Player is purefemale, add 4 to randomskunksex; [double-likelihood]
+		if Player is male:
+			add 1 to randomskunksex;
+			add 1 to randomskunksex; [double-likelihood]
+			add 2 to randomskunksex;
+		if Player is female:
+			add 3 to randomskunksex;
+		if Player is purefemale:
+			add 4 to randomskunksex;
+			add 4 to randomskunksex; [double-likelihood]
 		sort randomskunksex in random order;
-		if entry 1 of randomskunksex is 1, say "[sblsex1]";
-		if entry 1 of randomskunksex is 2, say "[sblsex2]";
-		if entry 1 of randomskunksex is 3, say "[sblsex3]";
-		if entry 1 of randomskunksex is 4, say "[sblsex4]";
+		if entry 1 of randomskunksex is:
+			-- 1: say "[sblsex1]";
+			-- 2: say "[sblsex2]";
+			-- 3: say "[sblsex3]";
+			-- 4: say "[sblsex4]";
 	sblinfect;
 
 to say sblsex1:		[fuck skunkgirl]
-	say "     The skunk girl positions herself on all fours, moaning in need as she raises her fluffy tail as wiggles her round bottom[if skrp is 1]. Your skunkhead body companion grins and licks her lips at the sight of that dripping muff. '[one of]Awwww yeah[or]That's what I'm talkin['] about[or]Let's go[at random]!' she says excitedly[end if]. You are atop the skunk right away, bringing you throbbing prick to her juicy cunt and pressing it deep inside her. She moans loudly and claws at the ground [if Cock Length of Player > 16]as your massive [Cock of Player] cock pushes into her, stuffing so much her tight belly is stretched out by it[else]as your cock is stuffed into her[end if]. You growl lustfully, pounding into her hard and fast before finally driving deep inside and pumping her full of your hot load.";
+	say "     The skunk girl positions herself on all fours, moaning in need as she raises her fluffy tail and wiggles her round bottom[if skrp is 1]. Your skunkhead body companion grins and licks her lips at the sight of that dripping muff. '[one of]Awwww yeah[or]That's what I'm talkin['] about[or]Let's go[at random]!' she says excitedly[end if]. You are atop the skunk right away, bringing your throbbing prick to her juicy cunt and pressing it deep inside her. She moans loudly and claws at the ground [if Cock Length of Player > 16]as your massive [Cock of Player] cock pushes into her, stuffing so much her tight belly is stretched out by it[else]as your cock is stuffed into her[end if]. You growl lustfully, pounding into her hard and fast before finally driving deep inside and pumping her full of your hot load.";
 	CreatureSexAftermath "Skunk Female" receives "PussyFuck" from "Player";
 
 to say sblsex2:		[fellatio]
@@ -120,19 +126,13 @@ to say sblsex2:		[fellatio]
 	CreatureSexAftermath "Skunk Female" receives "OralCock" from "Player";
 
 to say sblsex3:		[skunkbeast tops player]
-	[puts Skunkbeast Lord as lead monster for possible impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Skunkbeast Lord":
-			now MonsterID is y;
-			break;
 	say "     As the skunk is running her paws over your body in tribute to her [if Player is purefemale]mistress[else]master[end if], you notice the scent of another in the air. A skunkbeast snuffles towards you, having been drawn by your scent[if skrp is 1]. The skunk face at your groin smiles at the sight of him. '[one of]Oh, look at how hung he is[or]Just what we need[or]Oh baby[at random]!' she moans excitedly, your shared cunt getting wet at the sight of him[end if]. You rumble happily and shift around and present your rump to him, offering your dripping cunt to the sexy beast. He growls and climbs atop your [bodydesc of Player] form, sinking his large cock into your skunkbeast body and stuffing you oh so wonderfully. As he pounds away at you, the skunk girl [if Player is male]licks and sucks at your cock until you cum down her throat[else]latches onto one of your nipples, nursing for your milk[end if]. When the skunkbeast atop you finally cums, you both growl loudly, loving the sensation of his ample load being blasted into your needy womb as he seeks to breed you.";
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Skunkbeast Lord";
 	if Player is male:
 		CreatureSexAftermath "Skunk Female" receives "OralCock" from "Player";
 
 to say sblsex4:		[cunnilingus]
-	say "     The skunk runs her paws back towards your hind legs and runs her fingers across your pussy, making it quiver and drip musky fluids. There are a few tentative licks before her muzzle is buried in your muff and her tongue is lavishing attention upon your hot cunt. You [if skrp is 1]and your extra head [end if]moan in pleasure, telling the sexy girl what a fine job she's doing for her mistress. Her tongue darts all over and even into your pussy as far as it can reach. There's the occasional nibble from those sharp teeth that send shivers along your spine while her fingers tease and pinch your clit. She eats you out through several climaxes until you're fully satisfied.";
+	say "     The skunk runs her paws back towards your hind legs and runs her fingers across your pussy, making it quiver and drip musky fluids. There are a few tentative licks before her muzzle is buried in your muff and her tongue is lavishing attention upon your hot cunt. You [if skrp is 1]and your extra head [end if]moan in pleasure, telling the sexy girl what a fine job she's doing for her mistress. Her tongue darts all over and even into your pussy as far as it can reach. There's the occasional nibble from those sharp teeth that sends shivers along your spine while her fingers tease and pinch your clit. She eats you out through several climaxes until you're fully satisfied.";
 	CreatureSexAftermath "Skunk Female" receives "OralPussy" from "Player";
 
 Table of CombatPrep (continued)
@@ -161,14 +161,13 @@ When Play begins:
 	now Species Name entry is "Skunk"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Skunk Male" to infections of FurryList;
 	add "Skunk Male" to infections of NatureList;
-	add "Skunk Male" to infections of FemaleList;
 	add "Skunk Male" to infections of MaleList;
 	add "Skunk Male" to infections of SheathedCockList;
 	add "Skunk Male" to infections of BipedalList;
 	add "Skunk Male" to infections of TailList;
 	add "Skunk Male" to infections of TailweaponList;
 	now Name entry is "Skunk Male";
-	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy title entry is "Male Skunk"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[skunk_male_attack]";
@@ -224,6 +223,20 @@ When Play begins:
 	now BannedStatus entry is false;
 
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Skunk Female"	"[PrepCombat_Skunk Female]"
+
+to say PrepCombat_Skunk Female:
+	choose row MonsterID from the Table of Random Critters;
+	let debit be 0;
+	if HardMode is true and level of Player > 5, let debit be level of Player - 5;
+	setmongender 4; [creature is female]
+	now Skunk_type is 1;
+	now HP entry is 28 + ( debit * 4 ); [- How many HP has the monster got? -]
+	now monsterHP is 28 + ( debit * 4 );
+	now wdam entry is 6 + ( debit / 3 ); [-Amount of Damage monster Does when attacking.-]
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -235,13 +248,12 @@ When Play begins:
 	add "Skunk Female" to infections of FurryList;
 	add "Skunk Female" to infections of NatureList;
 	add "Skunk Female" to infections of FemaleList;
-	add "Skunk Female" to infections of MaleList;
 	add "Skunk Female" to infections of SheathedCockList;
 	add "Skunk Female" to infections of BipedalList;
 	add "Skunk Female" to infections of TailList;
 	add "Skunk Female" to infections of TailweaponList;
 	now Name entry is "Skunk Female";
-	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy title entry is "Female Skunk"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[skunk_female_attack]";
@@ -416,7 +428,7 @@ to skspray:						[ignores defenses, requires no hit, hum/lib check instead to re
 	if checknum > 180, now checknum is 180;
 	let rangenum be 200 + ( monhitbonus + monmindbonus );
 	if a random chance of checknum in rangenum succeeds:
-		say "The skunk turns around and flashes its tail moments before releasing its spray at you. You move out of the way of the thick, oily musk and cover your mouth and nose, blocking out the strangely tempting scent.";
+		say "The skunk turns around and flashes [if Skunk_type is 1]her[else]its[end if] tail moments before releasing [if Skunk_type is 1]her[else]its[end if] spray at you. You move out of the way of the thick, oily musk and cover your mouth and nose, blocking out the strangely tempting scent.";
 	else:
 		now tempnum is 0;
 		if BodyName of Player is "Skunk Female" or BodyName of Player is "Skunk Male" or BodyName of Player is "Skunk Taur", increase tempnum by 1;
@@ -433,7 +445,7 @@ to skspray:						[ignores defenses, requires no hit, hum/lib check instead to re
 		if face mask is equipped:
 			let dam be ( dam * 3 ) / 4;
 			let libdam be libdam / 2;
-		say "The skunk turns around and flashes its tail moments before releasing its spray at you. You move away from the thick, oily musk, but end up breathing in the rich scent[if face mask is equipped]. Your mask helps block some of it, dampening the effects, though you still find[else], finding[end if] it very arousing. You find yourself tempted by the creature's alluring body and consider just stopping fighting. Your will to keep fighting drops ( [special-style-2][dam][roman type] ) and your lustful, instinctual urges become more powerful.";
+		say "The skunk turns around and flashes [if Skunk_type is 1]her[else]its[end if] tail moments before releasing [if Skunk_type is 1]her[else]its[end if] spray at you. You move away from the thick, oily musk, but end up breathing in the rich scent[if face mask is equipped]. Your mask helps block some of it, dampening the effects, though you still find[else], finding[end if] it very arousing. You find yourself tempted by the creature's alluring body and consider just stopping fighting. Your will to keep fighting drops ([special-style-2][dam][roman type]) and your lustful, instinctual urges become more powerful.";
 		decrease HP of Player by dam;
 		increase Libido of Player by a random number between 3 and libdam;
 		decrease humanity of Player by a random number between 2 and ( ( libdam + 1 ) / 2 );
@@ -446,7 +458,7 @@ to skspray:						[ignores defenses, requires no hit, hum/lib check instead to re
 		if humanity of Player < 10, now fightoutcome is 21;
 		lose;
 	else:
-		wait for any key;
+		AttemptToWait;
 	rule succeeds;
 
 Section 3 - Skunk heat and Skunk goo
@@ -460,7 +472,7 @@ When Play begins:
 	now infect Name entry is "Skunk Female "; [ This should be exactly the same as your monster name in the main table]
 	now heat cycle entry is 5; [ This is the number of days a heat "cycle" lasts, usually 7 ]
 	now heat duration entry is 2; [ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
-	now trigger text entry is "Your need seems to swell suddenly, an ache between your legs causing you to fall down to all fours at its intensity. As you stand there, propped, rear in the air, drooling, only one thought consumes your mind, find a skunk and let fuck it you until you can't move."; [ This is the text that is written to the screen when the player comes into heat]
+	now trigger text entry is "Your need seems to swell suddenly, an ache between your legs causing you to fall down to all fours at its intensity. As you stand there, propped, rear in the air, drooling, only one thought consumes your mind - find a skunk and let it fuck you until you can't move."; [ This is the text that is written to the screen when the player comes into heat]
 	now heat start entry is "[skunk heat start]"; [this is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider. Delete entire line if you wish nothing to happen.]
 	now heat end entry is "[skunk heat end]"; [this is the same as heat start only it's for ending the cycle. GSSD her sex is reduced back to its previous size. Delete entire line if you wish nothing to happen. ]
 	now inheat entry is "[skunk in heat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
@@ -492,8 +504,18 @@ skunk goo is a grab object.
 
 skunk goo is infectious. Strain of skunk goo is "Skunk Female".
 
-The scent of skunk goo is "The gooey black gunk smells strongly of skunk.".
+Usedesc of skunk goo is "[skunk goo use]".
 
+to say skunk goo use:
+	if "Iron Stomach" is not listed in feats of Player:
+		if skunkbeaststatus is 1:	[skunkbeast lord]
+			now Strain of skunk goo is "Skunkbeast Lord";
+		else if Player is MalePreferred:
+			now Strain of skunk goo is "Skunk Male";
+		else:
+			now Strain of skunk goo is "Skunk Female";
+
+The scent of skunk goo is "The gooey black gunk smells strongly of skunk.".
 
 Section 4 - Endings
 

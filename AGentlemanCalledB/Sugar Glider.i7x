@@ -12,18 +12,20 @@ to say losetoSugarGlider:
 	now nosugarglidersex is 0;
 	if BodyName of Player is "Sugar Ferret" or FaceName of Player is "Sugar Ferret":
 		if HP of Player > 0:
-			say "     Giving up on resisting the sweet marsupial, you allow her to push you to the ground in her eagerness, stripping you of your clothing and gear in the process. 'Yay! Let's have some fun, you stinky [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random],' she says with a giggle. ";
+			say "     Giving up on resisting the sweet marsupial, you allow her to push you to the ground in her eagerness, stripping you of your clothing and gear in the process. 'Yay! Let's have some fun, you stinky [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random],' she says with a giggle.";
 		else:		[steal before]
 			say "     Beaten by the giggling marsupial, you are unable to continue resisting her. She pushes you to the ground, stripping you of your clothing and gear in the process. 'You [one of]soda jerks[or]fizz heads[or]carbonated tube rats[or]candy hoarders[or]pop guzzlers[at random] don't normally put up nearly so much of a fight. You must really be holding out on me.' She leans in closer, giving you an exaggerated, inquiring look before grinning and licking her long tongue across your cheek. 'Is that it? Got lots of candy you're trying to hide? I think you're holding out on me, honey,' she says with a playful giggle while her paws and bushy tail run tickling across your body.";
 			say "     Despite yourself, you can't help but squirm and laugh at the frantic tickling. In the throes of laughter, you can't resist as she paws through your stuff with one paw while the other and her tail keep you giggling";
 			if carried of chips > 0:
-				say ". Finding your stash of snacks, she swipes some with an exaggerated 'Ah-ha!' and stashes it away. Having claimed her prize, she turns her attention to you now, eager to celebrate her find. ";
+				say ". Finding your stash of snacks, she swipes some with an exaggerated 'Ah-ha!' and stashes it away. Having claimed her prize, she turns her attention to you now, eager to celebrate her find.";
 				ItemLoss chips by 1;
 			else if carried of soda > 0:
-				say ". Finding your stash of snacks empty, she instead turns her attention to your pop and swipes one. 'Well, since you've not got any candy for me, I guess I'll take this instead.' She gives your cheek another lick. 'Oh, don't worry, hon. I'll stop by later and trade it back for some sweet, sweet candy.' That said, she turns her attention to you now, eager to celebrate her find. ";
+				say ". Finding your stash of snacks empty, she instead turns her attention to your pop and swipes one. 'Well, since you've not got any candy for me, I guess I'll take this instead.' She gives your cheek another lick. 'Oh, don't worry, hon. I'll stop by later and trade it back for some sweet, sweet candy.' That said, she turns her attention to you now, eager to celebrate her find.";
 				ItemLoss soda by 1;
 			else:
-				say ". Finding your stash of snacks empty, she mock-pouts and grinds her twin cunts against your leg. 'Nothing for me at all? How about some sweet sex then, you [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random]?' she says with a giggle as she turns her attention back to your body. ";
+				say ". Finding your stash of snacks empty, she mock-pouts and grinds her twin cunts against your leg. 'Nothing for me at all? How about some sweet sex then, you [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random]?' she says with a giggle as she turns her attention back to your body.";
+			WaitLineBreak;
+		say "     ";
 	else:
 		if HP of Player > 0:
 			say "     Giving up on resisting the sweet marsupial, you allow her to push you to the ground in her eagerness, stripping you of your clothing and gear in the process. ";
@@ -56,6 +58,7 @@ to say losetoSugarGlider:
 		say "     Staring down at you, your face still half buried in her groin, the glider gives you one last gleeful titter before springing to her feet and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random], but not before pulling a [one of]lollipop[or]jaw breaker[or]piece of saltwater taffy[at random] from her pouch and slipping it into your mouth with a smile.";
 		CreatureSexAftermath "Player" receives "OralPussy" from "Sugar Glider";
 	if ( BodyName of Player is "Sugar Ferret" or FaceName of Player is "Sugar Ferret" ) and HP of Player > 0:	[steal after]
+		WaitLineBreak;
 		if carried of chips > 0:
 			say "     It is then that you notice that your pack has been rifled through by the sneaky sugar glider while you were having sweet, syrupy sex together. Looking towards her departing figure, you see her turn back and wave tauntingly with the snacks she's stolen tucked into her pouch. She giggles and gives her tail a teasing flick as she rushes away, making her escape.";
 			ItemLoss chips by 1;
@@ -74,7 +77,7 @@ to say beattheSugarGlider:
 	if nosugarglidersex > 2:
 		say ", but you have little interest in the ditzy marsupial. As with the others of her kind before her, you shake your head and turn to leave. She gives you a cute scowl and blows a long raspberry at you before getting up and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
 	else if Player is not neuter and ( Libido of Player > 40 or BodyName of Player is "Sugar Ferret" or FaceName of Player is "Sugar Ferret" or BodyName of Player is "Sugar Glider" or FaceName of Player is "Sugar Glider" ):
-		say " and the sexy display is quite tempting. Will you take part in some fun with the beaten sugar glider? (Y/N)[line break]";
+		say " and the sexy display is quite tempting. Will you take part in some fun with the beaten sugar glider (Y/N)?";
 		if Player consents:
 			LineBreak;
 			now nosugarglidersex is 0;

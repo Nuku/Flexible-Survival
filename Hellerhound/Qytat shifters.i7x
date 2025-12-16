@@ -4,7 +4,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Shifting Room	"Shifting Room"
 
-Shifting Room is a room. "[shiftingroom][line break]     A room in a tent. The walls are covered with glowing glyphs, each representing an infection you have seen outside. There are a few rows of them, with images of a human body on the top right. It looks like this is where shifting was invented. The text on the walls suggests you can concentrate on becoming a different creature of your choice.[line break](You can now [bold type]shift[roman type] into another infection.)".
+Shifting Room is a room. "[shiftingroom][line break]     A room in a tent. The walls are covered with glowing glyphs, each representing an infection you have seen outside. There are a few rows of them, with images of a human body on the top right. It looks like this is where shifting was invented. The text on the walls suggests you can concentrate on becoming a different creature of your choice.[line break](You can now [bold type]shift[roman type] into another infection.)[line break]".
 It is private.
 It is fasttravel.
 It is sleepsafe.
@@ -23,6 +23,6 @@ to say shiftingroom:
 	connect Shifting Room;
 	now Resolution of Secure Area is 2;
 
-the scent of shifting room is "The scent in here is very strange and otherworldly, but also heavy with the many musky scents you've encountered in the city.".
+the scent of shifting room is "     The scent in here is very strange and otherworldly, but also heavy with the many musky scents you've encountered in the city.".
 
 Qytat shifters ends here.

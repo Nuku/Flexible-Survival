@@ -139,7 +139,7 @@ to AddNavPoint (RoomObj - room) silence state is (Silence - a number):
 		else: [player doesn't know the room]
 			now RoomObj is known;
 			if Silence is 0:
-				say "[line break][bold type]['][printed name of RoomObj]['][roman type] has been added to your list of available navpoints. You will now be able to [bold type]nav[roman type]igate there from any of the fasttravel locations in the city by using the command [bold type]nav [printed name of RoomObj][roman type].";
+				say "[line break][bold type]['][printed name of RoomObj]['][roman type] has been added to your list of available navpoints. You will now be able to [bold type]navigate[roman type] there from any of the fast travel locations in the city by using the command [bold type]nav [printed name of RoomObj][roman type].";
 
 destinationcheck is an action applying to nothing.
 
@@ -245,13 +245,13 @@ understand "travel to/-- [any known fasttravel room]" as navigating.
 understand "go to [any known fasttravel room]" as navigating.
 understand "return to [any known fasttravel room]" as navigating.
 
-carry out navigating:
+check navigating:
 	if location of Player is not fasttravel:
-		say "You can't navigate from here.";
-		stop the action;
+		say "You can't navigate from here." instead;
 	if noun is location of Player:
-		say "You're already there.";
-		stop the action;
+		say "You're already here." instead;
+
+carry out navigating:
 	now Player is in Traveling;
 	if companionList of Player is not empty:
 		repeat with y running through companionList of Player:

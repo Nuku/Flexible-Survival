@@ -342,13 +342,15 @@ to FeatGain (Featname - text):
 		else if Featname is "Expert Medic":
 			increase CurrentMedkitSupplies by 1;
 		else if Featname is "Instinctive Combat":
-			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the [']Auto Attack['] commands. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [link][bold type]auto attack normal[roman type][end link] for the default method of combat (choose each action).[line break]Type [link][bold type]auto attack berserk[roman type][end link] to always attack in combat.[line break]Type [link][bold type]auto attack seduce[roman type][end link] to always seduce in combat.[line break]Type [link][bold type]auto attack pass[roman type][end link] to always pass in combat.[line break]Type [link][bold type]auto attack coward[roman type][end link] to always flee in combat.[line break]Type [link][bold type]auto attack submit[roman type][end link] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
+			say "[line break]Having gained the [']Instinctive Combat['] feat, you now have access to the [']Auto Attack['] commands. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.";
+			say "Type [link][bold type]auto attack normal[roman type][end link] for the default method of combat (choose each action). Type [link][bold type]auto attack berserk[roman type][end link] to always attack in combat. Type [link][bold type]auto attack seduce[roman type][end link] to always seduce in combat. Type [link][bold type]auto attack pass[roman type][end link] to always pass in combat. Type [link][bold type]auto attack coward[roman type][end link] to always flee in combat. Type [link][bold type]auto attack submit[roman type][end link] to always submit in combat.";
+			say "You may review these commands at any time by using the [link][bold type]help[roman type][end link] command.";
 		else if Featname is "Vore Predator":
-			say "     Having gained the [']Vore Predator['] feat, you can now access the [link][bold type]vore menu[roman type][end link] command. It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]). It is used for adjusting vore-related game settings.";
+			say "[line break]Having gained the [']Vore Predator['] feat, you can now access the [link][bold type]vore menu[roman type][end link] command. It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]). It is used for adjusting vore-related game settings.";
 		else if Featname is "Mugger":
-			say "     You will now get a flat rate increase to item drops from monsters based on your perception. This ability can be can turned on or off by using the [link][bold type]mugger[as]muggering[roman type][end link] command and is currently [bold type][if muggerison is true]ON[else]OFF[end if][roman type].";
+			say "[line break]You will now get a flat rate increase to item drops from monsters based on your perception. This ability can be can turned on or off by using the [link][bold type]mugger[roman type][as]muggering[end link] command and is currently [bold type][if muggerison is true]On[else]Off[end if][roman type].";
 		else if Featname is "Vampiric":
-			say "     You will now recover a small amount of health, thirst and hunger after every victory as you get in a blood-sucking bite after your final blow or at some other point during the victory scene.";
+			say "[line break]You will now recover a small amount of health, thirst and hunger after every victory as you get in a blood-sucking bite after your final blow or at some other point during the victory scene.";
 			now vampiric is true;
 	else if debugactive is 1:
 		say "ERROR: Trying to add '[Featname]', which the player already has.";
@@ -667,7 +669,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 		if PlayerFucked of GivingChar is false: [player never had sex with this NPC]
 			now PlayerFucked of GivingChar is true; [player sexed up this NPC]
 		if SexAct in lower case is "assfuck":
-			if debug is at level 1:
+			if debugactive is 1:
 				say "DEBUG -> MainInfection of [GivingChar] is '[MainInfection of GivingChar]'[line break]";
 			if AnalVirgin of Player is true:
 				now AnalVirgin of Player is false;
@@ -695,7 +697,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 		else if SexAct in lower case is "pussyfuck" and Player is not female: [player needs to be female to get penetrated]
 			say "Error: NPCSexAftermath run with '[SexAct]' but player is not female! Please report this on the FS Discord and quote this full message. GivingChar: '[GivingChar]', TakingChar: 'Player'[line break]";
 		else if SexAct in lower case is "pussyfuck":
-			if debug is at level 1:
+			if debugactive is 1:
 				say "DEBUG -> MainInfection of [GivingChar] is '[MainInfection of GivingChar]'[line break]";
 			if Virgin of Player is true:
 				now Virgin of Player is false;

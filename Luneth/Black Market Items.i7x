@@ -427,25 +427,27 @@ The effectiveness of zephyr protective riot shield is 42.
 Objsize of zephyr protective riot shield is 4.
 Traits of zephyr protective riot shield is {"adventurous"}.
 The placement of zephyr protective riot shield is "shield".
-The descmod of zephyr protective riot shield is "You hold the riot shield in your hands, its size is large enough to cover most of your torso. It is painted black with the Zephyr trademark branded across the front, just underneath the vision slot.".
+The descmod of zephyr protective riot shield is "You hold the riot shield in your hands; its size is large enough to cover most of your torso. It is painted black with the Zephyr trademark branded across the front, just underneath the vision slot.".
 The slot of zephyr protective riot shield is "shield".
 EquipFunction of zephyr protective riot shield is "[RiotShieldProtectUse]".
 UnequipFunction of zephyr protective riot shield is "[RiotShieldProtectUse]".
 
 to say RiotShieldProtectDesc:
-	say "     A black shield that Zephyr's riot security uses to suppress threats. This one is yours, and you've chosen to use it for defending yourself with. You might [link]change your mind[as]RSAttackMode[end link] though, and direct your shield to more offensive purposes instead. ";
+	say "A black shield that Zephyr's riot security uses to suppress threats. This one is yours, and you've chosen to use it for defending yourself with. You might [link]change your mind[as]RSAttackMode[end link] though, and direct your shield to more offensive purposes instead. ";
 
 the scent of the zephyr protective riot shield is "The Zephyr protective riot shield smells faintly of suppressive authority.".
 
 to say RiotShieldProtectUse:
+	LineBreak;
 	if zephyr protective riot shield is equipped:
-		say "You raise up the riot shield to protect most of your torso.";
+		say "You raise up the riot shield to protect most of your torso";
 		if "RiotShieldDexPenalty" is not listed in Traits of Player:
-			say "     While providing very nice protection, it is a bit unwieldly though, making it harder to move freely.";
+			say ". While providing very nice protection, it is a bit unwieldly though, making it harder to move freely";
 			decrease Dexterity of Player by 2;
 			add "RiotShieldDexPenalty" to Traits of Player;
+		say ".";
 	else: [unequipped]
-		say "     You lower the riot shield.";
+		say "You lower the riot shield.";
 		if "RiotShieldDexPenalty" is listed in Traits of Player:
 			increase Dexterity of Player by 2;
 			remove "RiotShieldDexPenalty" from Traits of Player;
@@ -465,12 +467,12 @@ check riotshieldAttackMode:
 carry out riotshieldAttackMode:
 	if zephyr protective riot shield is equipped:
 		now zephyr protective riot shield is not equipped;
-		say "     You lower your shield and look at it, contemplating how you can use it to bash people out of the way, making it a blunt weapon.";
-		if "RiotShieldDexPenalty" is listed in Traits of Player:
-			increase Dexterity of Player by 2;
-			remove "RiotShieldDexPenalty" from Traits of Player;
+		say "You lower your shield and look at it, contemplating how you can use it to bash people out of the way, making it a blunt weapon.";
 	else:
-		say "     You look at your shield, contemplating how you can use it to bash people out of the way, making it a blunt weapon.";
+		say "You look at your shield, contemplating how you can use it to bash people out of the way, making it a blunt weapon.";
+	if "RiotShieldDexPenalty" is listed in Traits of Player:
+		increase Dexterity of Player by 2;
+		remove "RiotShieldDexPenalty" from Traits of Player;
 	ItemLoss zephyr protective riot shield by 1;
 	ItemGain zephyr bashing riot shield by 1;
 

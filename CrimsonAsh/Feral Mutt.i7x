@@ -88,14 +88,14 @@ to say LoseToFeralDog:
 		now Mutt Pack Attack is active; [active when they reach level 3 dominance]
 	else:
 		now Mutt Pack Attack is inactive; [inactive when they're not dominant enough]
-	if FeralMuttDominance > -3:
-		now Mutt Pack Submission is inactive; [inactive when they're not subby enough]
+		if FeralMuttDominance > -3:
+			now Mutt Pack Submission is inactive; [inactive when they're not subby enough]
 
 
 to say BeatTheFeralMutt:
 	say "     After your assault, the dog collapses and whines sadly. As he struggles to stand, he wavers and falls over. You then notice his still hard cock poking out of his sheath, the tip drooling a bit of pre.";
-	say "     [bold type]Should you have a little fun with the feral, [FeralMuttFurColor] [FeralMuttCurrentBreed]?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Should you have a little fun with the feral, [FeralMuttFurColor] [FeralMuttCurrentBreed]?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes, screw that pooch.";
 	say "     ([link]N[as]n[end link]) - No, no thank you.";
 	if Player consents: [Decides to fuck feral dog]
@@ -107,7 +107,6 @@ to say BeatTheFeralMutt:
 
 to say FeralDogSexMenu:
 	say "     What exactly do you plan on doing with the dog?";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -154,8 +153,8 @@ to say FeralDogSexMenu:
 					now Mutt Pack Submission is inactive; [inactive when they are less than 3x submissive]
 				else:
 					now Mutt Pack Submission is active; [active when they're sufficiently subby]
-				if FeralMuttDominance < 3:
-					now Mutt Pack Attack is inactive; [inactive when they're not dominant enough]
+					if FeralMuttDominance < 3:
+						now Mutt Pack Attack is inactive; [inactive when they're not dominant enough]
 				wait for any key;
 		else if calcnumber is 0:
 			LineBreak;
@@ -163,7 +162,7 @@ to say FeralDogSexMenu:
 			say "     You step back from the [FeralMuttFurColor] [FeralMuttCurrentBreed], shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say RideFeralMutt:
@@ -225,8 +224,7 @@ to Pet MuttRecruitment:
 	if calcnumber is 1:
 		say "     Reaching out you pat the dog's furry head, he nuzzles his ears into your palm and pants at your affections. You give him a smile and ask if he liked what you did with him earlier, quickly eyeing the mutt's groin and the sheath between his legs. Leaping up, the cute dog barks happily, jumping in a small circle and wagging his tail excitedly. Turning around you start to walk, a slight swagger in your step as you lead the animal towards the Grey Abbey Library. Predictably, your new pet starts to follow, panting lightly, his eyes focused solely on you as the both of you arrive sometime later at your shelter. As you enter the building he stops outside, looking to you standing in the doorway. There is a moment of hesitation, with him cocking his head to the side, which reminds you that the dog has led an independent existence on the streets for some time now.";
 		say "     You wait patiently, waving for him to come in, but while he wags his tail, the dog still remains standing where he is. And a moment later he starts to pad closer, but not towards you but an old metal bench at a bus stop just a few steps away. Settling under it and wagging his tail happily, the dog barks at you in a meaningful tone. Seems like he found a place to stay. Outside dog, you think to yourself with a smile as the mutt lays his head down under the shade of his little shelter, looking to you and awaiting an order from his new master. Well then... only one thing left do to:[line break]";
-		LineBreak;
-		say "[bold type]Please enter a name for your [FeralMuttFurColor] [FeralMuttCurrentBreed][roman type]> [run paragraph on]";
+		say "[line break][bold type]Please enter a name for your [FeralMuttFurColor] [FeralMuttCurrentBreed][roman type]> [run paragraph on]";
 		get typed command as playerinput;
 		while "[playerinput]" is "":
 			say "[bold type]Please enter a name for your [FeralMuttFurColor] [FeralMuttCurrentBreed] (must be one or more letters)[roman type]> [run paragraph on]";
@@ -674,8 +672,8 @@ when play begins:
 
 to say ResolveEvent Mutt Pack Submission:
 	say "     As you walk the junk yard grounds you hear an unmistakable canine bark behind you. Spinning around to face the noise you spot the feral mutt you had dominated before. And behind that dog is another canine, a large, slightly mangy pit bull. And to the side of him a golden furred shepherd pads a few feet forward. Looking around you see a total of five feral mutts, all males, and all extremely aroused if their hard red rockets are anything to go off of. They look to you expectantly and you think to ready yourself for a fight until the lead mutt lets out a whine of need and lowers his head before you. Accepting your dominance in their territory and apparently, asking to mate with you.";
-	say "     [bold type]Do you want to have sex with the pack?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Do you want to have sex with the pack?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Accept their submission.";
 	say "     ([link]N[as]n[end link]) - Decline for now.";
 	if Player consents:
@@ -752,8 +750,8 @@ when play begins:
 
 to say ResolveEvent Mutt Pack Attack:
 	say "     As you walk the junk yard grounds you hear an unmistakable canine bark behind you. Spinning around to face the noise you spot the feral mutt that had bred you earlier. And behind that dog is another canine, a large, slightly mangy pit bull. And to the side of him a golden furred shepherd pads a few feet forward. Looking around you see a total of five feral mutts, all males, and all extremely aroused if their hard red rockets are anything to go off of. The one that had fucked you before strides closer, growling and standing tall, his veiny cock swaying as he moves. It doesn't take a genius to know what he wants, you, and now.";
-	say "     [bold type]Are you gonna submit like a good bitch or fight back?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Are you gonna submit like a good bitch or fight back?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Submit.";
 	say "     ([link]N[as]n[end link]) - Fight them!";
 	if Player consents:

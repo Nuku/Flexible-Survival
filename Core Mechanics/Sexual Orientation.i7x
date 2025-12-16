@@ -39,6 +39,7 @@ to PlayerSexualOrientationMenu:
 				break;
 			else:
 				say "Invalid Entry. Pick from 0 to 6.";
+		LineBreak;
 		if calcnumber is 1:
 			if MaleInterest of Player is true:
 				now MaleInterest of Player is false;

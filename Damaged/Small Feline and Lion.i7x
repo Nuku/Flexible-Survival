@@ -114,7 +114,7 @@ to say lion def:
 			LineBreak;
 			now tempnum is 0;
 			if Player is male and Feline_meow < 8:
-				say "     Looking over the defeated lion, you wonder if you'd prefer to stuff his furry ass (Y) or have a ride on that feline cock (N).";
+				say "     Looking over the defeated lion, you wonder if you'd prefer to [link]stuff his furry ass (Y)[as]y[end link] or have a [link]ride on that feline cock (N)[as]n[end link].";
 				if Player consents:
 					LineBreak;
 					now tempnum is 1;

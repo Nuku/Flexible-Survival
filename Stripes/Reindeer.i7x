@@ -11,7 +11,7 @@ to say reindeerdesc:
 
 to say reindeerattack:
 	if a random chance of 2 in 5 succeeds:
-		say "     While coming in for another flying attack, the reindeer spurts more cum at you from his throbbing shaft, clearly excited by the fight. It splashes onto your [one of]face[or]shoulder[or]arm[or]groin[or]chest[purely at random]. Its scent, like brandy eggnog, is enticing and lustful images of [one of]a kinky sleigh ride[or]you under the reindeer[or]sucking him for more[or]fondling his Christmas balls[or]sitting in the reindeer's lap[purely at random] pop into your head. You shake your head, trying to clear it to focus, but the reindeer swoops in during your lapse in attention. He ";
+		say "While coming in for another flying attack, the reindeer spurts more cum at you from his throbbing shaft, clearly excited by the fight. It splashes onto your [one of]face[or]shoulder[or]arm[or]groin[or]chest[purely at random]. Its scent, like brandy eggnog, is enticing and lustful images of [one of]a kinky sleigh ride[or]you under the reindeer[or]sucking him for more[or]fondling his Christmas balls[or]sitting in the reindeer's lap[purely at random] pop into your head. You shake your head, trying to clear it to focus, but the reindeer swoops in during your lapse in attention. He ";
 		increase Libido of Player by a random number from 3 to 8;
 		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 1;
 		if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 1;
@@ -19,27 +19,28 @@ to say reindeerattack:
 		increase lootchance entry by a random number between 3 and 10;
 		if lootchance entry > 80, now lootchance entry is 80;
 		if Libido of Player >= 110:
-			say "grabs you and rubs his cock against your hip. You find yourself too aroused to resist the sexy reindeer further and give in to his lustful holiday spirit!";
+			say "grabs you and rubs his cock against your hip. You find yourself too aroused to resist the sexy reindeer further and give in to his lustful holiday spirit![no line break]";
 			now HP of Player is 0;
+			now dam is 0;
 			continue the action;
 	else:
-		say "     The reindeer swoops in to attack and ";
+		say "The reindeer swoops in to attack and ";
 	let T be a random number between 1 and 6;
 	if T is 1:
-		say "gropes you with a merry laugh as his candy-cane scented breath wafts past your nose!";
+		say "gropes you with a merry laugh as his candy-cane scented breath wafts past your nose![no line break]";
 	else if T is 2:
-		say "dangles some mistletoe above your head and kisses you lustfully. His tongue dives into your surprised mouth and the taste of candy canes washes across your tastebuds!";
+		say "dangles some mistletoe above your head and kisses you lustfully. His tongue dives into your surprised mouth and the taste of candy canes washes across your tastebuds![no line break]";
 	else if T is 3:
-		say "grinds his hard cock against your hip, leaking precum as he struggles to hold you down!";
+		say "grinds his hard cock against your hip, leaking precum as he struggles to hold you down![no line break]";
 	else if T is 4:
-		say "tries to push you to the ground with a loud tinkling of bells!";
+		say "tries to push you to the ground with a loud tinkling of bells![no line break]";
 	else if T is 5:
-		say "banks sharply, getting behind you. He grinds firmly against your rear while his hoofed paws grope your chest. You can feel his precum leaking out as he tries to cum on you, but you shake him off. The scent of his eggnog flavored precum hangs in the air, arousing you further!";
+		say "banks sharply, getting behind you. He grinds firmly against your rear while his hoofed paws grope your chest. You can feel his precum leaking out as he tries to cum on you, but you shake him off. The scent of his eggnog flavored precum hangs in the air, arousing you further![no line break]";
 		increase Libido of Player by a random number from 2 to 5;
 		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by a random number between 0 and 1;
 		if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 1;
 	else if T is 6:
-		say "spins around you quickly, swirling up a snowy wind. The temperature plummets further, making your teeth chatter as the cold seeps deep inside you. When he finally spins off dizzily, you brush off the layer of snow, but the cold has taken its toll on you!";
+		say "spins around you quickly, swirling up a snowy wind. The temperature plummets further, making your teeth chatter as the cold seeps deep inside you. When he finally spins off dizzily, you brush off the layer of snow, but the cold has taken its toll on you![no line break]";
 
 to say Reindeer_wins:
 	say "     Unable to resist the arousing holiday cheer of the reindeer male, you give in and kiss him lustfully. Once in his arms, the cold chill around you is still there, but he feels like a warm fireplace, stoking the fires of your libido. He gives a happy bleat and returns the kiss, filling your mouth with the taste of candy canes. His hoof-like hands move across your chest and down to your hips before pushing you to your knees. He strokes your head and pushes his cock to your mouth, telling you to [one of]suck his yule log[or]fondle his sugar plums[or]lick his candy cane[or]drink his tasty eggnog[purely at random]. You groan a little, but take it in happily in your aroused state, licking and sucking it eagerly. It is slender, but long, with ample balls, each the size of large tree ornaments. His pre tastes of delicious eggnog, spiked rather heavily with brandy, making you give in more and more to his merriness. When he spurts a few shots of cum down your throat, you give in entirely and present yourself to him even as you feel your strength returning.";
@@ -261,10 +262,10 @@ egg nog is a grab object. egg nog is infectious. understand "chicken milk" as eg
 
 the scent of egg nog is "The eggnog smells fresh and strongly of good brandy, making you want to drink it and remember Christmases past.".
 
-Usedesc of egg nog is "[nogging]";
+Usedesc of egg nog is "[nogging]".
 
 to say nogging:
-	say "     You drink down the tasty eggnog, feeling the warmth of the brandy-rich liquid flowing into you. You are filled with a burst of the holiday spirit and a lustful longing for someone to share this feeling with. You feel a little better all around because of it even as the warmth changes from that of the alcohol to the warmth of your activated infection.";
+	say "You drink down the tasty eggnog, feeling the warmth of the brandy-rich liquid flowing into you. You are filled with a burst of the holiday spirit and a lustful longing for someone to share this feeling with. You feel a little better all around because of it even as the warmth changes from that of the alcohol to the warmth of your activated infection.";
 	PlayerEat 3;
 	PlayerDrink 6;
 	increase HP of Player by ( Stamina of Player / 2 );
@@ -295,7 +296,7 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 --	--	--	--	--	--	--	--	--	--	--
 
 When Play begins:
-Choose a blank row from Table of infection heat;
+	Choose a blank row from Table of infection heat;
 	now infect Name entry is "Reindeer"; [ This should be exactly the same as your monster name in the main table]
 	now heat cycle entry is 15; [ Total cycle - from start to starting again. Default is 7. ]
 	now heat duration entry is 12; [ This is how many days of the cycle you are actually in heat. Default is 1, set it to the same as cycle for permanently in heat.]

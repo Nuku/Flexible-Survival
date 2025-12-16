@@ -63,6 +63,7 @@ to say losetolamia:
 
 to say beatthelamia:
 	say "     With that final blow, you're able to drive the strange lamia back. She hisses angrily. '[one of]Oh, you're acting like a spoiled child[or]OWwww! That's no fun! You shouldn't be so mean. I just want a hug[or]Well, all you had to say was [']No['][or]If you're going to be like that, you shouldn't have come on to me in the first place[or]Fine! I'm sure I can find someone else who's hungry for all this,' she says, running her hands over her ill-covered breasts. 'Too bad for you[or]Hrumph! I need to get back to the maternity ward anyhow[at random],' the alabaster snake-woman grumbles as she turns about and slithers away in a huff.";
+	LineBreak;
 	say "     Part of you is tempted to not let her off so easily[one of][or] this time[stopping]. Shall you allow yourself to catch her so you can indulge in some fun?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

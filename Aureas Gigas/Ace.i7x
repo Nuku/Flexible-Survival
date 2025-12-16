@@ -12,7 +12,7 @@ Refueling is a situation.
 ResolveFunction of Refueling is "[ResolveEvent Refueling]".
 Prereq1 of Refueling is Avian Tent.
 The Prereq1Resolution of Refueling is { 1, 2 }.
-Sarea of Refueling is "Forest";
+Sarea of Refueling is "Forest".
 
 when play begins:
 	add Refueling to BadSpots of MaleList;
@@ -31,8 +31,8 @@ to say ResolveEvent Refueling:
 	say "     Opening her eyes, the lustful damsel gets a mischievous look and taunts, 'That all you can do? And here I thought fighter pilots were experts at hitting things fast and hard.' Inflamed by the biting comments, the ex-pilot forcefully grabs the back of his companion's head and utters, 'Oh I can do fast and hard...' He then slams his rod back into her womanhood and delivers a fierce swat to her booty. The cuckooess flinches from the pain, but that does not prevent the dommy raptor from continuing to spank her ass. The sound of the strong strikes echoes through the store. You see a hint of redness on the skin underneath the feathers. Once he feels his female partner's impudence has been fully punished, he orders her to give him a good view of her holes. Wincing in pain, the femme spreads her cheeks, giving her bull the sight of her dripping pussy and asshole.";
 	WaitLineBreak;
 	say "     Emboldened by seeing his bratty sub turned into a lusty pliant mess, the athletic pilot begins fucking full force. The cuckoldress underneath him moans loudly and exclaims, 'Don't stop master! Keep going!' This encouragement is accompanied by the hotwife rocking her hips. The birdlike hunk's muscles start to tense up as the pair climax. Letting out a loud cry the masculine avian unleashes his load into the adulteress's depths. The two take a short moment to catch their breath before looking around and noticing your presence. Recognizing you, the cuckoo female greets you warmly, 'Nice seeing you again! Did you like the view?' You walk over and explain how you were scouting the location for supplies and heard some noises and wanted to investigate. The pair look at two shopping carts filled with supplies, Ace says, 'Sorry we kinda took all the supplies here. Though if you were willing, I'd pay you to escort us back to camp with a bit of the food.' It seems like an easy job to get a bit of food, if you are interested.";
-	say "     [bold type]Do you want help the pair haul the food back to their camp?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Do you want help the pair haul the food back to their camp?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Help.";
 	say "     ([link]N[as]n[end link]) - Don't help.";
 	if Player consents:
@@ -93,7 +93,7 @@ Staghorn	"Staghorn"
 
 Staghorn is a room. It is fasttravel. It is private. It is sleepsafe.
 Description of Staghorn is "[staghorndesc]".
-the scent of Staghorn is "The settlement smells of a hearty stew that is cooking somewhere nearby. There is also the smell of some freshly chopped lumber from freshly built fences.".
+the scent of Staghorn is "     The settlement smells of a hearty stew that is cooking somewhere nearby. There is also the smell of some freshly chopped lumber from freshly built fences.".
 
 to say staghorndesc:
 	say "     The campsite turned small settlement has a bustling atmosphere. Some of the interior tents and canopies have been decorated with various knickknacks that make each of them feel a bit more homey. Many of the inhabitants are busy working on tasks to sustain the community, while others rest in mattresses, sleeping bags or other furniture that has been scavenged from the wrecked homes. Most of the settlers are avian, with the rest being a mixture of anthro mammals. In the middle of the campsite stands a hunter's blind that seems to have been taken from an outdoor sporting goods store that serves as a watch tower for potential threats. Standing in the middle of the camp is the town leader Ace.";
@@ -140,7 +140,7 @@ Sterile of Ace is true. [steriles can't knock people up]
 MainInfection of Ace is "". [since there is no fitting infection for him, he's sterile for now]
 Description of Ace is "[acedesc]".
 Conversation of Ace is { "Skypilot!" }.
-the scent of the Ace is "The avian has a strangely masculine scent that reminds you of the sea.".
+the scent of the Ace is "     The avian has a strangely masculine scent that reminds you of the sea.".
 
 to say acedesc:
 	project Figure of Ace_icon;
@@ -158,7 +158,7 @@ Instead of fucking the Ace:
 		say "     Chuckling mildly, the osprey states, 'Sorry I can't have more fun right now, I need to keep an eye on the camp.'";
 	else: [ready for sex]
 		say "     As you walk up to Ace, he has a cocky look in his eyes as he asks, 'You need me for anything special?'";
-		WaitLineBreak;
+		LineBreak;
 		say "[AceSexMenu]";
 
 to say AceSexMenu:
@@ -203,7 +203,7 @@ to say AceSexMenu:
 			say "     You step back from the anthro bird, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say AceSex1: [oral on Ace]
@@ -239,9 +239,8 @@ to say VanssaAceOralCuckScene:
 	WaitLineBreak;
 	say "     The birdlike male's eyes look around the nearby area and then he whispers into the taur's pointed ears, 'What do you think our dear friend will say if he sees what we are doing, beautiful?' One of his finger talons traces around the dark areolae of his partner. Moaning softly, the paratrooper smiles as she rubs her hands along the bulge that the rugged airman's clothes conceal. Then she utters in a provocative tone, 'I'm not really in a mood to care what they think. Besides, [if Player is female]she[else]he[end if] has let the Doberman woman have her fun with that wolf that's been acting as our guard dog. Now lean against the wall if you want to keep this going.' You are not sure if the woman knows that you are here, but are also pretty sure that wouldn't matter to her as you see her begin to unzip the horny guy's flight suit.";
 	say "     The sound of the zipper being pulled down echoes through the room. Ace's stance relaxes slightly, as if not needing to be the one to take the lead in this encounter. Lowering the mostly white colored equine half of her body to the ground, it's soon quite evident what the boisterous lady wants to do next.";
-	WaitLineBreak;
-	say "     [bold type]Will you simply stand back and let her give the avian pilot a blowjob?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Will you simply stand back and let her give the avian pilot a blowjob?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Endure the tantalizing humiliation of watching Vanessa go down on him.";
 	say "     ([link]N[as]n[end link]) - Stop the centaur woman's advances. Ace is a honorable guy, so it wouldn't take much to end this.";
 	if Player consents: [they fuck]
@@ -272,9 +271,8 @@ to say SnowAceCuckScene1:
 	WaitLineBreak;
 	say "     The squirrel woman stands up and moves her curvy body close up against the masculine aquiline man, her hard nipples poking up against the osprey's well defined torso. With a salacious grin Snow states, 'Since it seems like you are good with my work on the knife, let's talk about payment...' Fully understanding what the mechanic is getting at, Ace responds, 'I've got some food or water in my pack, but I think we can come to another type of arrangement though if you'd like.' He then runs one hand along the small of her back. Raising an eyebrow, the busty rodent gal amusedly chutters then leans in close and murmurs in a hushed tone, 'That all depends on how well you do, soldier boy... Now strip.' Not one to turn down an offer like this the studlike male follows the command.";
 	say "     The pilot and the former student start stripping each other's clothes off. When Ace begins taking off the girl's tight pants, the sizable cock bulging inside them pops out. Attempting to provoke the former military man, Snow says, 'Hope you're not afraid of the equipment I'm packing...' With a soft chuckle the osprey runs a finger along the head of the dickgirl's member and responds, 'Oh please, with all the missiles that they strapped to my plane, this thing's not gonna scare me off.' The two begin moving their hands reciprocally to each other's loins, the pilot's hand switching between the herm's throbbing cunt and her hardening cock. Seeing as the two are fully prepped, the raptor sits down in the chair appearing ready to start the fun.";
-	WaitLineBreak;
-	say "     Snow is about to hop on Ace's lap, then start fucking him! [bold type]Will you simply let this happen?[roman type][line break]";
 	LineBreak;
+	say "     Snow is about to hop on Ace's lap, then start fucking him! [bold type]Will you simply let this happen?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Become a voyeur to their coupling.";
 	say "     ([link]N[as]n[end link]) - Lay down the law on this! You may have allowed Ace to spend some time at your abbey, but this type of behavior is unacceptable.";
 	if Player consents: [they fuck]

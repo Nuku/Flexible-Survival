@@ -61,8 +61,8 @@ to say ResolveEvent Ebonflame Nest:
 	if bonus + dice > target:
 		say "suddenly stop, detecting some rather strangely sunken and cracked pavement. You pick up a nearby rock and throw it at the patch of asphalt, which slowly creaks until it collapses in on itself. And to think, you nearly walked over that!";
 		say "     Looking down, you can see the shadows of a handful of ebonflame whelps, now suddenly roused from their prior rest. Further observation indicates that it's some manner of nest. You also see a bit of food and water down there. You could hop down and challenge the whelps for those supplies, or you could just leave this matter entirely.";
-		say "     [bold type]Descend upon the whelps?[roman type][line break]";
 		LineBreak;
+		say "     [bold type]Descend upon the whelps?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes. You could use the supplies, and you're willing to put up a fight for them.";
 		say "     ([link]N[as]n[end link]) - No. This seems like a terrible idea.";
 		if Player consents:
@@ -83,8 +83,8 @@ to say ResolveEvent Ebonflame Nest:
 		if bonus + dice > target:
 			say ". Using your quick reflexes, you immediately roll away from the crumbling pavement, which collapses in on itself in your wake. Dusting yourself off, you move to see what your poor luck might have had in store for you.";
 			say "     Looking down, you can see the shadows of a handful of ebonflame whelps, now suddenly roused from their prior rest. Further observation indicates that it's some manner of nest. You also see a bit of food and water. You could hop down and challenge the whelps for those supplies, or you could just leave this matter entirely.";
-			say "     [bold type]Descend upon the whelps?[roman type][line break]";
 			LineBreak;
+			say "     [bold type]Descend upon the whelps?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes. You could use the supplies, and you're willing to put up a fight for them.";
 			say "     ([link]N[as]n[end link]) - No. This seems like a terrible idea.";
 			if Player consents:

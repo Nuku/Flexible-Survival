@@ -24,15 +24,14 @@ to say blissUse:
 		SanLoss 10;
 	increase BlissDrugTrip by 8;
 
-instead of sniffing bliss tablet:
-	say "     The tablet smells of sugar.";
+Scent of bliss tablet is "The tablet smells of sugar.".
 
 an everyturn rule:
-	if BlissDrugTrip is 1:
-		say "     The increased feeling of heat and randiness caused by the bliss tablet you took peters out and stops, leaving you feeling somewhat unfulfilled. You can't help but feel the desire to take another tablet and get your groove back on.";
-		LibidoLoss 40;
 	if BlissDrugTrip > 0:
 		decrease BlissDrugTrip by 1;
+		if BlissDrugTrip is 0:
+			say "The increased feeling of heat and randiness caused by the [bold type]bliss tablet[roman type] you took peters out and stops, leaving you feeling somewhat unfulfilled. You can't help but feel the desire to take another tablet and get your groove back on.";
+			LibidoLoss 40;
 
 Section 2 - PowerUp
 
@@ -52,8 +51,6 @@ to say PowerUpUse:
 	SanLoss 10;
 	if PowerUpDrugTrip > 0:
 		say "     Since the effects of your previous PowerUp tablet haven't worn off yet, you feel a bit woozy, then [italic type]a lot woozy[roman type]. Before you know it, you're lying on the ground wondering how you got there, and register the scrapes you got from passing out all of a sudden. Your mouth tastes like used kitty litter.";
-		LineBreak;
-		say "     [bold type]Your strength has temporarily increased by 6![roman type][line break]";
 		PlayerWounded 15;
 		LibidoLoss 10;
 		PlayerThirst 30;
@@ -63,17 +60,16 @@ to say PowerUpUse:
 		StatChange "Strength" by 6;
 		FeatGain "Roided Up";
 
-instead of sniffing powerup tablet:
-	say "     The tablet smells of sugar.";
+Scent of powerup tablet is "The tablet smells of sugar.".
 
 an everyturn rule:
-	if PowerUpDrugTrip is 1:
-		say "     The feeling of unbridled power in you peters out and you suddenly feel weak as a kitten in comparison. You can't help but feel the desire to take another PowerUp tablet and get back to proper fighting form.";
-		now PowerUpDrugTrip is 0;
-		StatChange "Strength" by -6;
-		FeatLoss "Roided Up";
 	if PowerUpDrugTrip > 0:
 		decrease PowerUpDrugTrip by 1;
+		if PowerUpDrugTrip is 0:
+			say "The feeling of unbridled power in you peters out and you suddenly feel weak as a kitten in comparison. You can't help but feel the desire to take another [bold type]PowerUp tablet[roman type] and get back to proper fighting form.";
+			now PowerUpDrugTrip is 0;
+			StatChange "Strength" by -6;
+			FeatLoss "Roided Up";
 
 
 Section 3 - Pixie Dust
@@ -96,30 +92,26 @@ to say pixie dust use:
 	say "     [link](5)[as]5[end link] - Become as big as a delivery van.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 5:
-		say "Choice? (1-5)>[run paragraph on]";
+		say "Choice? (1-5)> [run paragraph on]";
 		get a number;
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
 			break;
 		else:
 			say "Invalid choice. Type [link]1[end link] to become very small, [link]2[end link] to become small, [link]3[end link] to become human-sized, [link]4[end link] to become much larger than human or [link]5[end link] to become as big as a delivery van.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on just about the level of a large house cat.";
 		now scalevalue of Player is 1;
 	else if calcnumber is 2:
-		LineBreak;
 		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on just about the level of a half-sized human.";
 		now scalevalue of Player is 2;
 	else if calcnumber is 3:
-		LineBreak;
 		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on just about the level of a regular human.";
 		now scalevalue of Player is 3;
 	else if calcnumber is 4:
-		LineBreak;
 		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you above the level of even the tallest basketball player.";
 		now scalevalue of Player is 4;
 	else:
-		LineBreak;
 		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on the level of a small delivery van.";
 		now scalevalue of Player is 5;
 	repeat with z running through equipped equipment:
@@ -128,11 +120,11 @@ to say pixie dust use:
 				say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if].[roman type][line break]";
 				now z is not equipped;
 			else if (scalevalue of Player - size of z is 1):
-				say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";
+				say "     [bold type]Your [z] stretch[if plural of z is false]es[end if] a bit as [if plural of z is true]they are[else]it is[end if] forced to conform to a larger body.[roman type][line break]";
 			else if (scalevalue of Player - size of z < -1):
 				say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
 				now z is not equipped;
 			else if (scalevalue of Player - size of z is -1):
-				say "     [bold type]Your [z] hangs fairly loose on your now smaller frame.[roman type][line break]";
+				say "     [bold type]Your [z] hang[if plural of z is false]s[end if] fairly loose on your now smaller frame.[roman type][line break]";
 
 Special Merchandize ends here.

@@ -39,7 +39,7 @@ to say fsdm attack:
 		else:
 			say ". His motion so fast, he sends you spinning in the air before immediately catching you by your feet, exposing you to the[if daytimer is night] night[end if] light once more; your access to the fresh, salt air is made brief as the monster uses gravity to aid him as he audibly gulps you down.";
 			say "     Allowed one final glimpse of the outside world before it's eclipsed by his toothy maw, his powerful muscles plunge you down his slick depths. Hot tube constricting against you tightly, the creature's elongated gullet bulges visibly with your occupancy. Given the length of the trip, you're not yet wholly consumed by the sea dragon. You might be able to pull yourself out of here before it's too late!";
-			now tempnum is 0;
+			now tempnum2 is 0;
 		wait for any key;
 		now boundsegment is 1;
 		fsdmvore;
@@ -280,12 +280,11 @@ to fsdmvicmenu:
 				break;
 			else:
 				say "Invalid Choice. Please pick an option from 0 to [the number of filled rows in the table of fucking options].";
-		LineBreak;
 		if calcnumber is 1:
 			if Player is not male:
-				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
+				say "Invalid interaction: You don't meet the criteria.";
 			else:
-				say "[FSDM_1]"; [Anal Pitching]
+				say "[line break][FSDM_1]"; [Anal Pitching]
 				fsdmsubshift;
 				now tempnum is 1;
 				fsdbiasshift;
@@ -293,9 +292,9 @@ to fsdmvicmenu:
 				now Trixieexit is 1;
 		else if calcnumber is 2:
 			if Player is not male:
-				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
+				say "Invalid interaction: You don't meet the criteria.";
 			else:
-				say "[FSDM_2]"; [Oral Receiving Cock]
+				say "[line break][FSDM_2]"; [Oral Receiving Cock]
 				fsdmsubshift;
 				now tempnum is 1;
 				fsdbiasshift;
@@ -303,9 +302,9 @@ to fsdmvicmenu:
 				now Trixieexit is 1;
 		else if calcnumber is 3:
 			if Player is not female:
-				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
+				say "Invalid interaction: You don't meet the criteria.";
 			else:
-				say "[FSDM_3]"; [Oral Receiving Cunt]
+				say "[line break][FSDM_3]"; [Oral Receiving Cunt]
 				fsdmsubshift;
 				now tempnum is 1;
 				fsdbiasshift;
@@ -313,9 +312,9 @@ to fsdmvicmenu:
 				now Trixieexit is 1;
 		else if calcnumber is 4:
 			if Player is not female or Cunt Depth of Player < 12:
-				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
+				say "Invalid interaction: You don't meet the criteria.";
 			else:
-				say "[FSDM_4]"; [Cunt Catching]
+				say "[line break][FSDM_4]"; [Cunt Catching]
 				if a random chance of 2 in 3 succeeds or "Dominant" is listed in feats of Player:
 					fsdmsubshift;
 				now tempnum is 1;
@@ -324,9 +323,9 @@ to fsdmvicmenu:
 				now Trixieexit is 1;
 		else if calcnumber is 5:
 			if scalevalue of Player < 3 or (scalevalue of Player is 3 and player is not twistcapped):
-				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
+				say "Invalid interaction: You don't meet the criteria.";
 			else:
-				say "[FSDM_5]"; [Anal Catching]
+				say "[line break][FSDM_5]"; [Anal Catching]
 				if a random chance of 1 in 2 succeeds or "Dominant" is listed in feats of Player:
 					fsdmsubshift;
 				now tempnum is 1;
@@ -334,7 +333,7 @@ to fsdmvicmenu:
 				now tempnum is 0;
 				now Trixieexit is 1;
 		else if calcnumber is 6:
-			say "[FSDM_6]"; [Oral Giving Cock]
+			say "[line break][FSDM_6]"; [Oral Giving Cock]
 			if a random chance of 1 in 2 succeeds or "Dominant" is listed in feats of Player:
 				fsdmsubshift;
 			now tempnum is 1;
@@ -342,8 +341,10 @@ to fsdmvicmenu:
 			now tempnum is 0;
 			now Trixieexit is 1;
 		else:
+			LineBreak;
 			say "     You have some second thoughts and choose against having your way with the dragon, leaving him to go about your business once more."; [turn down]
 			now Trixieexit is 1;
+		if Trixieexit is 0, LineBreak;
 
 fsdsub is a number that varies.
 [fsdmposture is a number that varies.[@Tag:NotSaved]]
@@ -790,7 +791,6 @@ to say PrepCombat_Feral Sea Dragon:
 	now FSDOPEN is 0;
 	now firebreathcount is 0;
 	now firebreathready is false;
-	now tempnum2 is 0;
 	choose row MonsterID from Table of Random Critters;
 	if Player is MalePreferred:
 		now sex entry is "Male";
@@ -1010,7 +1010,7 @@ to fsdmvore:
 			now boundmod2 is 1;
 			increase boundcounter by 1;
 		if boundsegment is 1:
-			say "     Lost in the utter blackness of the sea dragon's gullet, you feel yourself constantly being pushed downward to your inevitable destination, slick tunnel tightly wrapped around you. Your captor [one of]rumbles lowly, causing your prison to tremble as he mocks you[or]seems to be trying to physically force you the rest of the way down with one of his fins[or]audibly endeavors to swallow you down, each attempt constricting you more firmly[purely at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
+			say "     Lost in the utter blackness of the sea dragon's gullet, you feel yourself constantly being pushed downward to your inevitable destination, slick tunnel tightly wrapped around you. Your captor [one of]rumbles lowly, causing your prison to tremble as he mocks you[or]seems to be trying to physically force you the rest of the way down with one of his fins[or]audibly endeavors to swallow you down, each attempt constricting you more firmly[purely at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until he lets you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] him, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 		else if boundsegment is 2:
 			say "     Swimming in the ocean, you're briefly free of the sea dragon's hold. It doesn't appear you'll be free for long, though, as he's making his way to you right now. You imagine your only active option is to [bold type]S[roman type]truggle your way to the beach, else you can succumb and [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] the beast's intent on having you once more. You probably figure this isn't the best time to try and [if boundrecover is true][bold type]R[roman type]ecover[else][bold type]E[roman type]ndure[end if], as it'll have the same effect of getting you caught again.";
 		else:
@@ -1019,13 +1019,15 @@ to fsdmvore:
 				increase thirst of Player by 2;
 			else if enduring is false or (enduring is true and a random chance of 2 in 3 succeeds):
 				increase thirst of Player by 1;
-			say "     Submerged in a churning mass of flesh, you're utterly lost in the sea dragon's stomach, the whole affair a disorienting mess as you feel yourself getting slowly drained. [one of]The prison smells of fish and seawater, making it hard to focus[or]The beast rumbles lowly, clearly enjoying how his meal writhes around[or]Your captor happily swims about, deliberately exacerbating your situation[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
+			say "     Submerged in a churning mass of flesh, you're utterly lost in the sea dragon's stomach, the whole affair a disorienting mess as you feel yourself getting slowly drained. [one of]The prison smells of fish and seawater, making it hard to focus[or]The beast rumbles lowly, clearly enjoying how his meal writhes around[or]Your captor happily swims about, deliberately exacerbating your situation[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until he lets you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] him, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 		now enduring is false;
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
 		say "Sanity: [humanity of Player]/100  Lust: [lustatt]/100  Hunger: [hunger of Player]  Thirst: [thirst of Player]  Struggle: [fsdstrugglebar][line break]";
 		if humanity of Player < 1:
+			setmonster "Feral Sea Dragoness" silently;
+			turn the Player into a "Feral Sea Dragoness" silently;
 			now Trixieexit is 1;
 			trigger ending "Feral Sea Dragon Vore";
 			the Player was ended by "Vore by Feral Sea Dragon";
@@ -1240,7 +1242,10 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 
 This is the Feral Sea Dragon Vore rule:
 	if ending "Feral Sea Dragon Vore" is triggered:
-		say "     Your strength completely sapped, you black out. The sea dragon's meager bulge receding as you're unmade, the beast roars out in utter satisfaction once he's finished, your ultimate fate to be nothing more than a meal for a monster. Sated for now, the creature would no doubt seek other victims to sate his substantial hunger...";
+		if Player has a body of "Feral Sea Dragoness":
+			say "     Your strength completely sapped, you black out. The sea dragon's meager bulge receding as you're unmade, the beast roars out in utter satisfaction once he's finished, your ultimate fate to be nothing more than a meal for a monster. Sated for now, the creature would no doubt seek other victims to sate his substantial hunger...";
+		else:
+			say "     Your strength completely sapped, you black out. The sea dragoness's meager bulge receding as you're unmade, the beast roars out in utter satisfaction once she's finished, your ultimate fate to be nothing more than a meal for a monster. Sated for now, the creature would no doubt seek other victims to sate her substantial hunger...";
 		the Player is vored;
 
 This is the Feral Sea Dragon Infection rule:

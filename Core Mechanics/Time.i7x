@@ -93,30 +93,30 @@ This is the turnpass rule:
 			if CockName of Player is not "Tanuki" and player is not internalBalls:
 				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
 				now balloversize is 1 + (dexterity of Player / 10 );
-				say "     Your balls, so huge when compared to your [Body Size Adjective of Player] frame, are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
+				say "Your balls, so huge when compared to your [Body Size Adjective of Player] frame, are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
 		else if ( scalevalue of Player is 3 or scalevalue of Player is 4 ) and Ball Size of Player >= 6:
 			if CockName of Player is not "Tanuki" and player is not internalBalls:
 				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
 				now balloversize is 1 + (dexterity of Player / 10 );
-				say "     Your balls are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
+				say "Your balls are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
 		else if Ball Size of Player >= 7:
 			if CockName of Player is not "Tanuki" and player is not internalBalls:
 				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
 				now balloversize is 1 + (dexterity of Player / 10 );
-				say "     Your balls, huge even when compared to your huge frame, are so massive and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
+				say "Your balls, huge even when compared to your huge frame, are so massive and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
 	else:
 		if ( ( scalevalue of Player is 1 or scalevalue of Player is 2 ) and Ball Size of Player < 4 ) or ( ( scalevalue of Player is 3 or scalevalue of Player is 4 ) and Ball Size of Player < 6 ) or ( scalevalue of Player > 4 and Ball Size of Player < 7 ):
 			increase dexterity of Player by balloversize;
 			now balloversize is 0;
-			say "     Your balls, no longer quite so huge compared to your [if scalevalue of Player is not 3][Body Size Adjective of Player] [end if]body, no longer hinder you. Your legs definitely feel better for not having to carry such a heavy weight anymore.";
+			say "Your balls, no longer quite so huge compared to your [if scalevalue of Player is not 3][Body Size Adjective of Player] [end if]body, no longer hinder you. Your legs definitely feel better for not having to carry such a heavy weight anymore.";
 		else if CockName of Player is "Tanuki":
 			increase dexterity of Player by balloversize;
 			now balloversize is 0;
-			say "     Your mystical, Tanuki nature allows you to carry your oversized balls with ease, no longer hindered by their massive size.";
+			say "Your mystical, Tanuki nature allows you to carry your oversized balls with ease, no longer hindered by their massive size.";
 		else if Player is internalBalls:
 			increase dexterity of Player by balloversize;
 			now balloversize is 0;
-			say "     Your massive balls, having become internalized, no longer hinder your movement quite so much. You can still feel them there, heavily resting inside you, but they're no longer in the way at least.";
+			say "Your massive balls, having become internalized, no longer hinder your movement quite so much. You can still feel them there, heavily resting inside you, but they're no longer in the way at least.";
 	follow the check heat rule;
 	if Libido of Player >= 99 and humanity of Player > 0 and skipturnblocker is 0:
 		say "[spontaneousorgasm]";
@@ -187,6 +187,7 @@ This is the turnpass rule:
 				increase thirst of Player by 5;
 				say "Your body strives to restore your enhanced perceptive abilities. Your stomach churns and you sweat profusely from the effort of this process. [bold type]Perception increased by 1.[roman type][line break]";
 				now restoration is 1;
+		LineBreak;
 		if hunger of Player > 90:
 			say "You will die if you don't eat soon.";
 		else if hunger of Player > 50:
@@ -197,9 +198,9 @@ This is the turnpass rule:
 			say "You feel a little hungry.";
 		if hunger of Player > 30:
 			decrease Morale of Player by ( hunger of Player minus 30 ) divided by 5;
-		if hunger of Player > 99:
-			now HP of Player is -9999;
-			end the story saying "You have died of hunger.";
+			if hunger of Player > 99:
+				now HP of Player is -9999;
+				end the story saying "You have died of hunger.";
 		if thirst of Player > 90:
 			say "You will die if you don't drink something soon.";
 		else if thirst of Player > 50:
@@ -210,9 +211,9 @@ This is the turnpass rule:
 			say "You feel a little thirsty.";
 		if thirst of Player > 30:
 			decrease Morale of Player by ( thirst of Player minus 30 ) divided by 5;
-		if thirst of Player > 99:
-			now HP of Player is -9999;
-			end the story saying "You have died of thirst.";
+			if thirst of Player > 99:
+				now HP of Player is -9999;
+				end the story saying "You have died of thirst.";
 		if hunger of Player > 50 or thirst of Player > 50:
 			say "Maybe you should [bold type]scavenge[roman type] for food! Go to a quick travel location and find something quick.";
 		let maxmorale be ( Charisma of Player plus Perception of Player );
@@ -275,73 +276,41 @@ Chapter 2 - Time of Day
 
 To say time of day:
 	if TimekeepingVar is:
-		-- 7:
-			say "early morning";
-		-- 6:
-			say "morning";
-		-- 5:
-			say "afternoon";
-		-- 4:
-			say "evening";
-		-- 3:
-			say "early night";
-		-- 2:
-			say "night";
-		-- 1:
-			say "post midnight";
-		-- 0:
-			say "pre dawn";
-		-- -1:
-			say "early morning";
-		-- -2:
-			say "morning";
-		-- -3:
-			say "afternoon";
-		-- -4:
-			say "evening";
-		-- -5:
-			say "early night";
-		-- -6:
-			say "night";
-		-- -7:
-			say "post midnight";
-		-- -8:
-			say "pre dawn";
+		-- 7: say "early morning";
+		-- 6: say "morning";
+		-- 5: say "afternoon";
+		-- 4: say "evening";
+		-- 3: say "early night";
+		-- 2: say "night";
+		-- 1: say "post midnight";
+		-- 0: say "pre dawn";
+		-- -1: say "early morning";
+		-- -2: say "morning";
+		-- -3: say "afternoon";
+		-- -4: say "evening";
+		-- -5: say "early night";
+		-- -6: say "night";
+		-- -7: say "post midnight";
+		-- -8: say "pre dawn";
 
 To say short time of day:
 	if TimekeepingVar is:
-		-- 7:
-			say "morning";
-		-- 6:
-			say "morning";
-		-- 5:
-			say "day";
-		-- 4:
-			say "afternoon";
-		-- 3:
-			say "evening";
-		-- 2:
-			say "evening";
-		-- 1:
-			say "evening";
-		-- 0:
-			say "evening";
-		-- -1:
-			say "evening";
-		-- -2:
-			say "evening";
-		-- -3:
-			say "day";
-		-- -4:
-			say "afternoon";
-		-- -5:
-			say "evening";
-		-- -6:
-			say "evening";
-		-- -7:
-			say "evening";
-		-- -8:
-			say "evening";
+		-- 7: say "morning";
+		-- 6: say "morning";
+		-- 5: say "day";
+		-- 4: say "afternoon";
+		-- 3: say "evening";
+		-- 2: say "evening";
+		-- 1: say "evening";
+		-- 0: say "evening";
+		-- -1: say "evening";
+		-- -2: say "evening";
+		-- -3: say "day";
+		-- -4: say "afternoon";
+		-- -5: say "evening";
+		-- -6: say "evening";
+		-- -7: say "evening";
+		-- -8: say "evening";
 
 Chapter 3 - Day/Night
 

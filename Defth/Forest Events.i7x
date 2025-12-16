@@ -26,11 +26,12 @@ to say ResolveEvent Small Cave:
 		if Player consents:
 			LineBreak;
 			say "     Eating the shrooms, you shrink in no time, your clothes quickly outgrowing you. Now finally at a stature that can fit in the hole with ease, you can explore what lies inside. The cave is small in nature, but still big enough to hold a nest comfortably. While exploring the place, you hear a loud growl from behind you. Turning around, you find the denizen of this place, a cougar, this one looking more feral than the others. She even has a sheath, and from what you can see, her cock is more spear-like than a normal human. The herm feline looks at you with curious eyes, like she has never seen someone so small before. The curious animal jumps at you, hunting you down like a cat would do to a mouse, jumping from one position to another as she tries to corner you. ";
-			ItemLoss glowing mushroom by 1;
 			if vorelevel is 1: [no vore interest by the player]
-				say "     Understandably frightened at possibly getting captured and eaten - or worse - you give everything you have and flee from the cave in a desperate burst of speed, escaping from the cat in the last second. Phew, this definitively isn't a place where one should come when so small and vulnerable. You could come back once the shrooms have worn off though, and give that cat a piece of your mind.";
+				say "[line break]     Understandably frightened at possibly getting captured and eaten - or worse - you give everything you have and flee from the cave in a desperate burst of speed, escaping from the cat in the last second. Phew, this definitively isn't a place where one should come when so small and vulnerable. You could come back once the shrooms have worn off though, and give that cat a piece of your mind.";
+				ItemLoss glowing mushroom by 1;
 			else:
 				say "You are eventually captured in her paws, and you become her toy for a while, the feline herm using you to kill her boredom. She hits you sometimes, encouraging you to keep moving to her amusement.";
+				ItemLoss glowing mushroom by 1;
 				say "     She is a cat, so maybe if you stopped moving, she would get bored of you and continue with what she was doing? However, she could also devour you. Your other choice is running away with all of your might, but if she did catch you again, who knows what she would do to you?";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Stop moving and hope the playful cat will get bored.";
@@ -39,8 +40,8 @@ to say ResolveEvent Small Cave:
 					LineBreak;
 					say "     Against your own instincts, you stop moving, hoping that the beast will get bored of you as a toy and move on with her life, and for a while, it looks like it will work. The confused cat paws at you with curiosity as to why you would stop moving so suddenly, and she smells you, looking for any sign of life. You hold your breath with your eyes closed tight as to not show any emotion. Your body is immobile but not stiff, letting you roll around with some of the stronger hits your body takes. After some time of this, the cat finally looks like she got bored of you. You breathe a sigh of relief, although it was for naught. With your eyes closed, you couldn't have reacted to the hunger the beast showed, and you are tossed inside her mouth.";
 					say "     With a single pull, you travel to the inside of her mouth, her bigger teeth missing your body while her smaller teeth hold you in place as her meal. Her tongue touches your body, the sandpaper-like feeling stimulating your hot body. Those weird sensations of being held by her teeth and the sensation of her tongue, along with the slickness of her saliva, create a weird arousal inside of your brain. Your [if Player is female]pussy moistens[else if Player is male]member hardens[else]ass tightens[end if] with unwanted desire, distracting you long enough to not feel her tongue forcing you down her throat. Your mind is in shambles, and the idea of fighting back to stay on the surface doesn't even cross your mind as her fleshy canal pushes you towards her stomach. Your body stays in a bound state, your arms hugging your sides, and you are slightly red from your arousal, breathing heavily as if wanting some kind of release. But this place wasn't made for it - it was made to trap you. Finally, you can concentrate a bit more, and now, you need to make a choice.";
-					say "     Do you try to escape this place or just let it happen to the end?";
 					LineBreak;
+					say "     [bold type]Do you try to escape this place or just let it happen to the end?[roman type][line break]";
 					say "     ([link]Y[as]y[end link]) - Try to escape by climbing back.";
 					say "     ([link]N[as]n[end link]) - Let yourself be devoured by the feline.";
 					if Player consents:
@@ -89,7 +90,7 @@ to say ResolveEvent Small Cave:
 				say "     Going inside of the place, it looks like a nest for a feline. Some small bones litter the place, showing that whoever lives in there is a carnivore, so you better be on your toes. There is a stench in the air. The resident of this place probably did that to mark the place. A low growling and the sound of dry leaves cracking make you turn in a flash, and you find the one that lives in here. A big feline with yellow-brown fur is looking at you. The cat looks more feral than human, but she still has some characteristics that show she was a human before, specifically, her short, pixie-blonde hair. Outside of that, all that you can see is a beast ready to attack you. The fight is on.";
 				challenge "Cougar";
 				if fightoutcome >= 20 and fightoutcome <= 29:[lost]
-					say ""; [regular cougar scene]
+					say "[losetocougar]"; [regular cougar scene]
 					now Resolution of Small Cave is 3; [fought cave cougar, lost]
 				else if fightoutcome >= 30:[fled]
 					say "     Running away with all that you have, you trip over a few times, but you get out of the cave before the feline leaps on you. You run without noticing that your legs took you back to the familiar sight of the Grey Abbey Library. You can finally rest.";
@@ -97,7 +98,7 @@ to say ResolveEvent Small Cave:
 					move player to Grey Abbey Library;
 					now Resolution of Small Cave is 4; [fought cave cougar, fled]
 				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-					say ""; [regular cougar scene]
+					say "[beatthecougar]"; [regular cougar scene]
 					now Resolution of Small Cave is 5; [fought cave cougar, won]
 				now Small cave is resolved;
 			else:
@@ -114,7 +115,7 @@ to say ResolveEvent Small Cave:
 			say "     Going inside of the place, it looks like a nest for a feline. Some small bones litter the place, showing that whoever lives in there is a carnivore, so you better be on your toes. There is a stench in the air. The resident of this place probably did that to mark the place. A low growling and the sound of dry leaves cracking make you turn in a flash, and you find the one that lives in here. A big feline with yellow-brown fur is looking at you. The cat looks more feral than human, but she still has some characteristics that show she was a human before, specifically her short, pixie-blonde hair. Outside of that, all that you can see is a beast ready to attack you. The fight is on.";
 			challenge "Cougar";
 			if fightoutcome >= 20 and fightoutcome <= 29:[lost]
-				say ""; [regular cougar scene]
+				say "[losetocougar]"; [regular cougar scene]
 				now Resolution of Small Cave is 3; [fought cave cougar, lost]
 			else if fightoutcome >= 30:[fled]
 				say "     Running away with all that you have, you trip over a few times, but you get out of the cave before the feline leaps on you. You run without noticing that your legs took you back to the familiar sight of the Grey Abbey Library. You can finally rest.";
@@ -122,7 +123,7 @@ to say ResolveEvent Small Cave:
 				move player to Grey Abbey Library;
 				now Resolution of Small Cave is 4; [fought cave cougar, fled]
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-				say ""; [regular cougar scene]
+				say "[beatthecougar]"; [regular cougar scene]
 				now Resolution of Small Cave is 5; [fought cave cougar, won]
 			now Small cave is resolved;
 		else:

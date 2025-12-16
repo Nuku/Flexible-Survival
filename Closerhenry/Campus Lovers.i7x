@@ -77,8 +77,8 @@ to say ResolveEvent Campus Lovers:
 			now Campus Lovers is resolved;
 	else if CampusLoversTrackingVariable is 1: [second time]
 		say "     You're out exploring the campus when you spot a group of people, most likely students, conversing next to the fountain. They seem sane enough, considering they're all fully clothed. The students are too far away for you to hear the specifics of their conversation, but the way they keep looking over their shoulders seems to imply they're gossiping.";
-		say "     [bold type]Do you want to eavesdrop on their gossip?[roman type][line break]";
 		LineBreak;
+		say "     [bold type]Do you want to eavesdrop on their gossip?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - A little listen couldn't hurt...";
 		say "     ([link]N[as]n[end link]) - No way, who knows what they'd do if they caught you!";
 		if Player consents:
@@ -95,8 +95,8 @@ to say ResolveEvent Campus Lovers:
 		now CampusLoversTrackingVariable is 2; [second event done]
 	else if CampusLoversTrackingVariable is 2: [third time]
 		say "     Setting out on the campus in search of anything interesting, your ventures bring you close to the dorms of the college. Some of the rooms are probably abandoned, so it might not be too bad of an idea to peek through the windows for any supplies. Unfortunately, it seems most of the rooms have nothing of value. Just as you are about to give up, you hear the faint sound of someone moaning from one of the windows ahead of you. You sneak along the side of the building to where you heard the noise, and have a little peek. Inside, you see a familiar looking feline and canine going at it. The cat is on his back, legs sticking out on both sides, while the dog is between them, thrusting inside of Jadako. 'O-oh yeah! Take me harder, Coach!' the lithe anthro moans, as you pull your head away from the window.";
-		say "     [bold type]It looks pretty steamy in there. While you don't think you'll get anything out of it, do you want to stay and watch the action?[roman type][line break]";
 		LineBreak;
+		say "     [bold type]It looks pretty steamy in there. While you don't think you'll get anything out of it, do you want to stay and watch the action?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Watch the two lovers get each other off.";
 		say "     ([link]N[as]n[end link]) - Scram. It's a private moment!";
 		if Player consents:

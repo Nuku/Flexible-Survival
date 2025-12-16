@@ -8,13 +8,12 @@ Version 1 of Thunderbolt by CrimsonAsh begins here.
 [  50: player refused horse sex                         ]
 
 ThunderTrackingVariable is a number that varies.
-ThunderboltRoomConnection is a number that varies.[@Tag:NotSaved]
+[ThunderboltRoomConnection is a number that varies.[@Tag:NotSaved]]
 
-an everyturn rule:
-	if Campus Thunder is resolved and Resolution of Campus Thunder is 2 and ThunderboltRoomConnection is 0: [event resolved the right way, room not connected yet]
+a postimport rule: [bugfixing rules for players that import savegames]
+	if Campus Thunder is resolved and Resolution of Campus Thunder is 2: [event resolved the right way, room not connected yet]
 		change the east exit of Thunderbolt's Stable to Greek Street;
 		change the west exit of Greek Street to Thunderbolt's Stable;
-		now ThunderboltRoomConnection is 1; [make sure that it connects the room only once]
 
 Section 1 - Events
 
@@ -65,8 +64,8 @@ to ThunderboltEncounter1:
 
 to ThunderboltEncounter2:
 	say "     Once again wandering the college property, you hear from behind some buildings the loud and unmistakable 'neigh!' of a horse. Peeking from behind a corner you gasp slightly as you spot the horse mascot Thunderbolt. He's hitched to a post in a make-shift stable surrounded by hay and a nearby trough full of water. But what really draws your eye is his raging equine erection, fully hardened and pulsing slightly. Turning to look your way he whinnies and starts to trot closer, only to be stopped by his leash tied to the post. The large stallion rears up and whinnies again in frustration. It's abundantly clear this impressive beast is in rut. He looks to you with pleading eyes, shakes his well-groomed mane and then turns to his side showing off a truly impressive musculature and nearly two feet of erect horse cock. Almost seems like... he's trying to seduce you by flaunting his equine body.";
-	say "     [bold type]What do you want to do now?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]What do you want to do now?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Mate with Thunderbolt?!";
 	say "     ([link]N[as]n[end link]) - Just... no. Walk away right now!";
 	if Player consents:
@@ -182,7 +181,6 @@ instead of conversing the Thunderbolt:
 
 instead of fucking Thunderbolt:
 	say "     What exactly do you plan on doing with the horse?";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -232,7 +230,7 @@ instead of fucking Thunderbolt:
 			say "     You step back from the feral horse, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say ThunderboltSex1:
@@ -321,7 +319,6 @@ instead of conversing the Ariana:
 
 instead of fucking Ariana:
 	say "     What exactly do you plan on doing with the young lioness?";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -329,7 +326,7 @@ instead of fucking Ariana:
 		choose a blank row in table of fucking options;
 		now title entry is "A foursome";
 		now sortorder entry is 1;
-		now description entry is "Involve Ariana and Eres in your fun with Thunderbolt";
+		now description entry is "Involve Eres and Thunderbolt in your fun with Ariana";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -356,7 +353,7 @@ instead of fucking Ariana:
 			say "     You step back from the young lioness, shaking your head slightly as she gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 Section 5 - Eres NPC
@@ -413,7 +410,6 @@ instead of conversing the Eres:
 
 instead of fucking Eres:
 	say "     What exactly do you plan on doing with the young lioness?";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -421,7 +417,7 @@ instead of fucking Eres:
 		choose a blank row in table of fucking options;
 		now title entry is "A foursome";
 		now sortorder entry is 1;
-		now description entry is "Involve Ariana and Eres in your fun with Thunderbolt";
+		now description entry is "Involve Ariana and Thunderbolt in your fun with Eres";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -448,7 +444,7 @@ instead of fucking Eres:
 			say "     You step back from the young lioness, shaking your head slightly as she gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 Thunderbolt ends here.

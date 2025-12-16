@@ -38,6 +38,7 @@ to say ebdrakevic:
 		say "     The rod must be as hard as steel, since she has no problem shifting her weight all over the place, as if trying to stretch your[if Cunt Depth of Player < 10] already strained[end if] pussy wider. You'd think she's hardly interested in fucking you if not for occasionally being wracked by the searing pain of her molten precum. You're dizzied by how intense the sensation is, until you eventually get somewhat numb to it.";
 		say "     Gradually, the monster's sadistic revels melt away to leave her rising, primal needs, thrusting her terrible organ through your depths with a wild, increasingly blind fervor. Howling terribly, the shrill dragon's sharp talons rake along your back, slicked by sweat and soon her tongue's similarly searing saliva, as though the monster has regressed into a rabid, even more monstrous state.";
 		say "     '[one of]Breed - breed - fuck, FUCK[or]Cum - CUM, fuck[or]I-...I must - FUCK[at random]!' Barely coherent by this point, you're afraid she's going to pound you completely into the ground before finally letting out a shrill, deafening howl, still fucking you wildly as the monster's cock gushes what feels like gallons of her burning seed. You're lost in an exhausted haze of tainted agony, but she doesn't relent, and instead seems to get -angry- at you as her lust dies down, wildly fucking you even as she's spent.";
+		WaitLineBreak;
 		say "     The dragoness eventually seems to give up. Heavy gouts of smoke puffing with each heavy pant from the creature, she otherwise seems barely exhausted by her rampage, sounding more amused by your wholly abused form. Wrenching herself free at last, she cackles, shoving you along with a foot and taunting you until you finally find the strength to crawl away on your own accord. You're half afraid she'll continue assaulting you, but it seems she finally gets bored and goes off to harass something else.";
 		say "     Thankfully, as you finally find a place to catch your breath, the ordeal doesn't leave you with any lasting damage, but you imagine you're going to have some trouble walking for a couple hours...";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Drake";
@@ -291,7 +292,6 @@ ebonflame scale is a grab object.
 ebonflame scale is infectious. Strain of ebonflame scale is "Ebonflame Drake".
 Usedesc of ebonflame scale is "     You swallow the dark scale. It's extremely bitter and hot to the taste, like eating something charred black by an open fire.[line break]".
 
-instead of sniffing ebonflame scale:
-	say "It smells of something burnt to a crisp.";
+Scent of ebonflame scale is "It smells of something burnt to a crisp.".
 
 Ebonflame Drake ends here.

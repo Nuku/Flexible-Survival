@@ -285,19 +285,19 @@ to pregprotocol:
 								now z is 1;
 								now FangNewPuppies is 1;
 					if z is 2:
-						say "[line break][Bold Type]It's twins![Roman Type][line break][line break]";
+						say "[line break][Bold Type]It's twins![Roman Type][line break]";
 						if pregtype is 2, increase mpregcount by 1; [more mpreg practice]
 					else if z is 3:
-						say "[line break][Bold Type]It's triplets![Roman Type][line break][line break]";
+						say "[line break][Bold Type]It's triplets![Roman Type][line break]";
 						if pregtype is 2, increase mpregcount by 2; [more mpreg practice]
 					else if z is 4:
-						say "[line break][Bold Type]It's quadruplets![Roman Type][line break][line break]";
+						say "[line break][Bold Type]It's quadruplets![Roman Type][line break]";
 						if pregtype is 2, increase mpregcount by 3; [more mpreg practice]
 					repeat with y running from 1 to z:
 						now child is born;
 						Birth;
 					increase score by 15; [15 base +5/child]
-					extend game by 4;
+					extend game by 3 + a random number between 1 and z; [12-21 hours based on litter size]
 					now pregtype is 0;
 					[removing the once off special birthing feats]
 					if "Human Carrier" is listed in feats of Player:
@@ -511,20 +511,20 @@ To Birth:
 		else:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. Having regressed partially during their time in your womb, they grow back to maturity while suckling";
 		if IsFeral is true:
-			say ". They pop free and stand, a feral look of wanton desire on their [HeadSpeciesName of Child] face as they stretch [if ShowLegs is true][ArmsSpeciesName of Child] arms and [LegsSpeciesName of Child] legs. [else]their [ArmsSpeciesName of Child] arms. [end if]";
+			say ". They pop free and stand, a feral look of wanton desire on their [HeadSpeciesName of Child in lower case] face as they stretch [if ShowLegs is true][ArmsSpeciesName of Child in lower case] arms and [LegsSpeciesName of Child in lower case] legs. [else]their [ArmsSpeciesName of Child in lower case] arms. [end if]";
 			if IsPureblood is true:
-				say "Taking it all in, you see your child is a pureblood [HeadSpeciesName of Child]";
+				say "Taking it all in, you see your child is a pureblood [HeadSpeciesName of Child in lower case]";
 			else:
-				say "You see that your child has a [TorsoSpeciesName of Child] front, [BackSpeciesName of Child] back[if ShowTail is false] and a [AssSpeciesName of Child] behind[else], a [AssSpeciesName of Child] behind and a [TailSpeciesName of Child] tail[end if]";
+				say "You see that your child has a [TorsoSpeciesName of Child in lower case] front, [BackSpeciesName of Child in lower case] back[if ShowTail is false] and a [AssSpeciesName of Child in lower case] behind[else], a [AssSpeciesName of Child in lower case] behind and a [TailSpeciesName of Child in lower case] tail[end if]";
 		else:
-			say ". They pop free and stand, smiling. With a slow turn, they show off their [HeadSpeciesName of Child] head, their [TorsoSpeciesName of Child] front and [BackSpeciesName of Child] back. ";
+			say ". They pop free and stand, smiling. With a slow turn, they show off their [HeadSpeciesName of Child in lower case] head, their [TorsoSpeciesName of Child in lower case] front and [BackSpeciesName of Child in lower case] back. ";
 			if IsPureblood is true:
-				say "Taking it all in, you see your child is a pureblood [HeadSpeciesName of Child]";
+				say "Taking it all in, you see your child is a pureblood [HeadSpeciesName of Child in lower case]";
 			else:
 				if Showlegs is true:
-					say "Your child has [if ShowTail is true][ArmsSpeciesName of Child] arms, [LegsSpeciesName of Child] legs and a [TailSpeciesName of Child] tail[else][ArmsSpeciesName of Child] arms and [LegsSpeciesName of Child] legs[end if]";
+					say "Your child has [if ShowTail is true][ArmsSpeciesName of Child in lower case] arms, [LegsSpeciesName of Child in lower case] legs and a [TailSpeciesName of Child in lower case] tail[else][ArmsSpeciesName of Child in lower case] arms and [LegsSpeciesName of Child in lower case] legs[end if]";
 				else:
-					say "Your child has [ArmsSpeciesName of Child] arms[if ShowTail is true] and a [TailSpeciesName of Child] tail[end if]";
+					say "Your child has [ArmsSpeciesName of Child in lower case] arms[if ShowTail is true] and a [TailSpeciesName of Child in lower case] tail[end if]";
 		if snakehijack > 0 and "They Have Your Eyes" is listed in feats of Player:
 			say ". It's clear that your influence has forcibly altered the once-snake to take on your appearance, a twisted fate for such a creature, who now assumes itself to be your legitimate offspring.";
 		else if snakehijack > 0:
@@ -565,9 +565,9 @@ To Birth:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. As it feeds, it grows rapidly against you as strange sensations sweep over your body. ";
 		say "Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. ";
 		if IsPureblood is true:
-			say "With a slow turn, they show off their pureblood [HeadSpeciesName of Child] form.";
+			say "With a slow turn, they show off their pureblood [HeadSpeciesName of Child in lower case] form.";
 		else:
-			say "With a slow turn, they show off their [HeadSpeciesName of Child] head, their [TorsoSpeciesName of Child] front and [BackSpeciesName of Child] back. Your child has [ArmsSpeciesName of Child] arms, [LegsSpeciesName of Child] legs[if ShowTail is false] and a [AssSpeciesName of Child] behind[else], a [AssSpeciesName of Child] behind and a [TailSpeciesName of Child] tail[end if].";
+			say "With a slow turn, they show off their [HeadSpeciesName of Child in lower case] head, their [TorsoSpeciesName of Child in lower case] front and [BackSpeciesName of Child in lower case] back. Your child has [ArmsSpeciesName of Child in lower case] arms, [LegsSpeciesName of Child in lower case] legs[if ShowTail is false] and a [AssSpeciesName of Child in lower case] behind[else], a [AssSpeciesName of Child in lower case] behind and a [TailSpeciesName of Child in lower case] tail[end if].";
 		LineBreak;
 		if Player is in Sitting Area and Chris is in Sitting Area:
 			say "     The young buck of an orc warrior looks at you with a broad grin as he continues to show off a bit more, stroking his large hands over the muscle-packed form of his body, then finally gravitating to his crotch. Experimentally wrapping his fingers around the thick shaft, he gives it a few strokes and grunts in pleasure as it fills out to an impressive length of green-skinned man-meat. Winking at you as he lets go and the huge cock swings down between his legs, he then turns to Chris, who'd been watching the birth of his son from a few steps away up until now. 'That's my boy!' Chris bellows out for the world to hear as he steps up to embrace the young orc warrior. 'Time for some male bonding with dad. See ya later!' your green-skinned offspring says over his shoulder, then the two of them walk off, boasting and chatting like frat brothers with each other.";
@@ -586,7 +586,7 @@ To Birth:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms, feeling a strong affection for your bizarrely born child. It starts to suckle at your [breast size desc of Player] breast, growing rapidly from a featureless lump of pale flesh into something more wasp-like as strange sensations sweep over your [bodytype of Player] body. ";
 		else:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. As it feeds, it grows rapidly from a featureless lump of pale flesh into something more wasp-like against you as strange sensations sweep over your body. ";
-		say "Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their pureblood [HeadSpeciesName of Child] form.";
+		say "Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their pureblood [HeadSpeciesName of Child in lower case] form.";
 		LineBreak;
 		if Player is inWaspHive:
 			say "     Stretching his wings, your offspring checks on you, entwining his antennae with yours before wandering off to take his place within the hive, [if thirst of Zant > 1]joining his brothers hard at work on repairing and expanding the walls[else] wandering off to find a way to make himself useful within your hive[end if].";
@@ -634,9 +634,9 @@ To Birth:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. ";
 		say "A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. ";
 		if IsPureblood is true:
-			say "They pop free and stand, a feral look of wanton desire on their [HeadSpeciesName of Child] face as they stretch their limbs. Taking your offspring in, you see that it is a pureblood [HeadSpeciesName of Child]. ";
+			say "They pop free and stand, a feral look of wanton desire on their [HeadSpeciesName of Child in lower case] face as they stretch their limbs. Taking your offspring in, you see that it is a pureblood [HeadSpeciesName of Child in lower case]. ";
 		else:
-			say "They pop free and stand, a feral look of wanton desire on their [HeadSpeciesName of Child] head as they stretch [if ShowLegs is true][ArmsSpeciesName of Child] arms and [LegsSpeciesName of Child] legs. [else]their [ArmsSpeciesName of Child] arms. [end if]You see that your child has a [TorsoSpeciesName of Child] front and [BackSpeciesName of Child] back, with a [AssSpeciesName of Child] behind[if ShowTail is true] and a [TailSpeciesName of Child] tail[end if]. ";
+			say "They pop free and stand, a feral look of wanton desire on their [HeadSpeciesName of Child in lower case] head as they stretch [if ShowLegs is true][ArmsSpeciesName of Child in lower case] arms and [LegsSpeciesName of Child in lower case] legs. [else]their [ArmsSpeciesName of Child in lower case] arms. [end if]You see that your child has a [TorsoSpeciesName of Child in lower case] front and [BackSpeciesName of Child in lower case] back, with a [AssSpeciesName of Child in lower case] behind[if ShowTail is true] and a [TailSpeciesName of Child in lower case] tail[end if]. ";
 		if IsAlbino is true:
 			say "Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type][line break]";
 		else if HasMelanism is true:
@@ -655,13 +655,13 @@ To Birth:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. As it feeds, it grows rapidly against you as strange sensations sweep over your body. ";
 		say "Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. ";
 		if IsPureblood is true:
-			say "With a slow turn, they show off their pureblood [HeadSpeciesName of Child] form. ";
+			say "With a slow turn, they show off their pureblood [HeadSpeciesName of Child in lower case] form. ";
 		else:
-			say "With a slow turn, they show off their [HeadSpeciesName of Child] head, their [TorsoSpeciesName of Child] front and [BackSpeciesName of Child] back. ";
+			say "With a slow turn, they show off their [HeadSpeciesName of Child in lower case] head, their [TorsoSpeciesName of Child in lower case] front and [BackSpeciesName of Child in lower case] back. ";
 			if Showlegs is true:
-				say "Your child has [if ShowTail is true][ArmsSpeciesName of Child] arms, [LegsSpeciesName of Child] legs and a [TailSpeciesName of Child] tail[else][ArmsSpeciesName of Child] arms and [LegsSpeciesName of Child] legs[end if]. ";
+				say "Your child has [if ShowTail is true][ArmsSpeciesName of Child in lower case] arms, [LegsSpeciesName of Child in lower case] legs and a [TailSpeciesName of Child in lower case] tail[else][ArmsSpeciesName of Child in lower case] arms and [LegsSpeciesName of Child in lower case] legs[end if]. ";
 			else:
-				say "Your child has [ArmsSpeciesName of Child] arms[if ShowTail is true] and a [TailSpeciesName of Child] tail[end if]. ";
+				say "Your child has [ArmsSpeciesName of Child in lower case] arms[if ShowTail is true] and a [TailSpeciesName of Child in lower case] tail[end if]. ";
 		if IsAlbino is true:
 			say "Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type][line break]";
 		else if HasMelanism is true:
@@ -877,9 +877,9 @@ to say impregchance:		[General Pregnancy Routine]
 
 to impregchance:		[General Pregnancy Routine]
 	if Player is fpreg_able:
-		say "[fimpregchance]";
+		fimpregchance;
 	else if Player is mpreg_able:
-		say "[mimpregchance]";
+		mimpregchance;
 
 To impregchance with (x - text):
 	setmonster x;
@@ -899,10 +899,10 @@ to fimpregchance:		[Female-particular Pregnancy Roll]
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if Player can UB, increase target by 1;
 		choose row MonsterID from the Table of Random Critters;
-		if DebugLevel > 4:
+		if debug is at level 5:
 			say "     DEBUG: FPreg Roll of 2 in [target].";
 		if a random chance of 2 in target succeeds:
-			if DebugLevel > 4:
+			if debug is at level 5:
 				say "     DEBUG: FPreg Successful.";
 			if callovi is true or ovipreglevel is 3:
 				now ovipregnant is true;
@@ -930,10 +930,10 @@ to mimpregchance:		[MPreg-particular Pregnancy Roll]
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if Player can UB, increase target by 1;
 		choose row MonsterID from the Table of Random Critters;
-		if DebugLevel > 4:
+		if debug is at level 5:
 			say "     DEBUG: MPreg Roll of 2 in [target].";
 		if a random chance of 2 in target succeeds:
-			if DebugLevel > 4:
+			if debug is at level 5:
 				say "     DEBUG: MPreg Successful.";
 			if callovi is true or ovipreglevel is 3:
 				now ovipregnant is true;
@@ -959,10 +959,10 @@ to selfimpregchance:
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if Player can UB, increase target by 1;
-		if DebugLevel > 4:
+		if debug is at level 5:
 			say "     DEBUG: SelfPreg Roll of 2 in [target].";
 		if a random chance of 2 in target succeeds:
-			if DebugLevel > 4:
+			if debug is at level 5:
 				say "     DEBUG: SelfPreg Successful.";
 			if callovi is true or ovipreglevel is 3:
 				now ovipregnant is true;
@@ -977,7 +977,7 @@ to selfimpregchance:
 	now callovi is false;
 
 to selfimpregnate:
-	if DebugLevel > 4:
+	if debug is at level 5:
 		say "     DEBUG: Self-Impregnation.";
 	if Player is not mpreg_able and player is not fpreg_able:
 		stop the action;
@@ -1014,7 +1014,7 @@ to movichance:		[to be used when only MPreg would work]
 		now callovi is true;
 	else:
 		now callovi is false;
-	say "[mimpregchance]";
+	mimpregchance;
 
 to say fovichance:		[to be used when only female pregnancy would work]
 	fovichance;
@@ -1024,7 +1024,7 @@ to fovichance:		[to be used when only female pregnancy would work]
 		now callovi is true;
 	else:
 		now callovi is false;
-	say "[fimpregchance]";
+	fimpregchance;
 
 to say selfovichance:
 	selfovichance;
@@ -1034,7 +1034,7 @@ to selfovichance:
 		now callovi is true;
 	else:
 		now callovi is false;
-	say "[selfimpregchance]";
+	selfimpregchance;
 
 Chapter 3-3 - Random Impreg Routines
 
@@ -1042,7 +1042,7 @@ to say randomimpreg:		[Use when either would work]
 	randomimpreg;
 
 to randomimpreg:		[Use when either would work]
-	if DebugLevel > 4:
+	if debug is at level 5:
 		say "     DEBUG: Random F/M Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
@@ -1053,13 +1053,13 @@ to randomimpreg:		[Use when either would work]
 		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
-	say "[impregchance]";
+	impregchance;
 
 to say randommimpreg:		[Use when only MPreg would work]
 	randommimpreg;
 
 to randommimpreg:		[Use when only MPreg would work]
-	if DebugLevel > 4:
+	if debug is at level 5:
 		say "     DEBUG: Random M Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
@@ -1070,13 +1070,13 @@ to randommimpreg:		[Use when only MPreg would work]
 		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
-	say "[mimpregchance]";
+	mimpregchance;
 
 to say randomfimpreg:		[Use when only female pregnancy would work]
 	randomfimpreg;
 
 to randomfimpreg:		[Use when only female pregnancy would work]
-	if DebugLevel > 4:
+	if debug is at level 5:
 		say "     DEBUG: Random F Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
@@ -1087,13 +1087,13 @@ to randomfimpreg:		[Use when only female pregnancy would work]
 		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
-	say "[fimpregchance]";
+	fimpregchance;
 
 to say randomovi:		[random ovi-impregnation - use when either would work]
 	randomovi;
 
 to randomovi:		[random ovi-impregnation - use when either would work]
-	if DebugLevel > 4:
+	if debug is at level 5:
 		say "     DEBUG: Random Ovi Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
@@ -1104,13 +1104,13 @@ to randomovi:		[random ovi-impregnation - use when either would work]
 		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
-	say "[ovichance]";
+	ovichance;
 
 to say randommovi:		[random ovi-impregnation - use when only MPreg would work]
 	randommovi;
 
 to randommovi:		[random ovi-impregnation - use when only MPreg would work]
-	if DebugLevel > 4:
+	if debug is at level 5:
 		say "     DEBUG: Random Ovi M Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
@@ -1121,13 +1121,13 @@ to randommovi:		[random ovi-impregnation - use when only MPreg would work]
 		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
-	say "[movichance]";
+	movichance;
 
 to say randomfovi:		[random ovi-impregnation - use when only female pregnancy would work]
 	randomfovi;
 
 to randomfovi:		[random ovi-impregnation - use when only female pregnancy would work]
-	if DebugLevel > 4:
+	if debug is at level 5:
 		say "     DEBUG: Random Ovi F Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
@@ -1138,6 +1138,6 @@ to randomfovi:		[random ovi-impregnation - use when only female pregnancy would 
 		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
-	say "[fovichance]";
+	fovichance;
 
 Pregnancy ends here.

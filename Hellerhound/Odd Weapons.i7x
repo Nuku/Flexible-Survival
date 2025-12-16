@@ -31,8 +31,8 @@ to say ResolveEvent Fallen Survivor:
 	say "     The sudden metallic noise from behind you makes you jump out of your boots almost, whirling around to see what caused it. You see the tail end of a large house-cat zip around the nearby corner, leaving behind a large disc of metal that must have fallen over as it pushed past it. Upon further examination, you see that it is a garbage can lid - one that has been used to create an improvised shield. There are loops of leather riveted to the inside to slip your forearm through, as well as a painted front. Seems like the survivor had a DIY streak before he succumbed to... whatever got to him. Looking back over to the guy, you realize that you were on the best way to join him in his mind-broken state. Getting into contact seems to have negative side effects. That cat really saved your bacon!";
 	WaitLineBreak;
 	say "     Glancing back over to the mind-broken survivor, you resolve not to get anywhere close to him again. Hmpf, but hey - at least you got a nice shield out of this dreary situation. Then you notice what seems to be a pale, translucent 'grease' stubbornly smeared across the shield, including on the inside. Could this be what put the guy into the state he is in? Possibly... which means even the shield is useless to you. Or could you wipe it off with some of the scattered and ripped articles of clothing ever-present on the abandoned streets? It'd be risky, as you can't know if you'll manage to get it all off, but that still might be worth it, in the current situation.";
-	say "     [bold type]Do you want to take the shield with you?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Do you want to take the shield with you?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure, it might be useful.";
 	say "     ([link]N[as]n[end link]) - Nah, leave it. Surely it also carries his deadly contagion!";
 	if Player consents:
@@ -210,6 +210,7 @@ to say ResolveEvent Destroyed Bushes:
 		if Perception of Player > a random number between one and 20:
 			say "     In one of the puddles of cum you find a whip with metal bits strung throughout it. It looks as if the rider carried it, and lost it in the fray. It is currently covered with cum, but if you have enough water, you could change that. Do you wish to?";
 			if Player consents:
+				LineBreak;
 				if carried of water bottle >= 3:
 					say "     You have to use a few bottles to wash off the whip, but you manage to get it clean and safe to use.";
 					say "     You pick up the now clean whip, and place it in your backpack. It looks like a good weapon.";
@@ -220,6 +221,7 @@ to say ResolveEvent Destroyed Bushes:
 				else:
 					say "     You don't have enough water. Maybe you could come back when you find more?";
 			if Resolution of Destroyed Bushes is 0:
+				LineBreak;
 				say "     Do you wish to pick it up anyway?";
 				if Player consents:
 					LineBreak;

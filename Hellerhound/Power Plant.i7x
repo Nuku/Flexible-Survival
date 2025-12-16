@@ -46,13 +46,13 @@ to say ResolveEvent Generator Parts:
 		now fixedgens is 1;
 
 [Scents of rooms]
-the scent of Plant Lobby is "The power plant lobby smells of smoke, ash and cum.".
+the scent of Plant Lobby is "     The power plant lobby smells of smoke, ash and cum.".
 
-the scent of Control Room is "The control room smells of burnt electronics and ozone along with the harsh, sulfurous scents from the magma.".
+the scent of Control Room is "     The control room smells of burnt electronics and ozone along with the harsh, sulfurous scents from the magma.".
 
-the scent of Plant Overview is "There is a faint scent of smoke coming from the power plant.".
+the scent of Plant Overview is "     There is a faint scent of smoke coming from the power plant.".
 
-the scent of Cat Walk is "The sulfurous scent of the lava rises up to mix with the scent of ozone and machinery up here.".
+the scent of Cat Walk is "     The sulfurous scent of the lava rises up to mix with the scent of ozone and machinery up here.".
 
 Broken Fence is a door. "Through the shattered remnants of the main entrance, you see a flattened fence and gate to the east, allowing easy access to and from the inner city.".
 
@@ -102,7 +102,7 @@ to say ControlPanelDesc:
 catwalk door is a door.
 catwalk door is lockable and locked.
 catwalk door is west of Control Room.
-Description of catwalk door is "A door in the west wall allows access to the catwalks in the main power plant hall. It's made from metal and looks pretty solid and thick, most likely to stop the uncomfortably loud noise of a whole power plant's worth of huge generators from damaging the hearing of the operators in here. Several hooks on the wall beside the door hold ear protectors - though you won't need one of those, with most generators destroyed now.".
+Description of catwalk door is "     A door in the west wall allows access to the catwalks in the main power plant hall. It's made from metal and looks pretty solid and thick, most likely to stop the uncomfortably loud noise of a whole power plant's worth of huge generators from damaging the hearing of the operators in here. Several hooks on the wall beside the door hold ear protectors - though you won't need one of those, with most generators destroyed now.[line break]".
 
 when play begins:
 	add { "yellow construction helmet" } to invent of control room;
@@ -113,8 +113,7 @@ Administration Offices	"Administration Offices"
 
 Administration Offices is a room. Administration Offices is north of Plant Lobby.
 Description of Administration Offices is "     There isn't much left of the corridor and adjoining offices that formed the administration of the power plant. Looks like some sort of pyromaniac scattered papers and trashed furniture all throughout and set them ablaze. Thankfully the automatic sprinklers seem to have worked and stopped the whole building from burning down.[line break]".
-Instead of sniffing Administration Offices:
-	say "     The scent of wet ash hangs in the air.";
+Scent of Administration Offices is "     The scent of wet ash hangs in the air.".
 
 cat key is a grab object.
 
@@ -151,18 +150,18 @@ Cat Walk is west of Catwalk Door.
 to say catwalkstuff:
 	LineBreak;
 	if fixedgens is 1:
-		say "     The parts you found match this generator perfectly. You fix the generator, and the malfunction light on the generator turns green to show the generator could work. You wait with bated breath for it to work.";
+		say "The parts you found match this generator perfectly. You fix the generator, and the malfunction light on the generator turns green to show the generator could work. You wait with bated breath for it to work.";
 		AttemptToWait;
 		now fixedgens is 2;
 		if findwires is 2:
-			say "     The generator begins to hum, and the green lights indicating that power is flowing begin to flash. Hooray!";
+			say "The generator begins to hum, and the green lights indicating that power is flowing begin to flash. Hooray!";
 			increase score by 200;
 		else:
-			say "     The generator is not running, so maybe there is nothing for it to power? Maybe you should check the control panels.";
+			say "The generator is not running, so maybe there is nothing for it to power? Maybe you should check the control panels.";
 	else if fixedgens > 1:
-		say "     The hum of the fixed generator sounds like music to your ears.";
+		say "The hum of the fixed generator sounds like music to your ears.";
 	else:
-		say "     The intact generator is missing some key parts. The claw marks on the generator make it look like something stole them, so maybe they are out in the city?";
+		say "The intact generator is missing some key parts. The claw marks on the generator make it look like something stole them, so maybe they are out in the city?";
 
 findwires is a number that varies.
 fixedgens is a number that varies.
@@ -233,7 +232,7 @@ carry out towerfixing:
 Section X - Library Computer
 
 library computer is a thing.
-library computer is in Grey Abbey Library. "[if library computer is off]A computer rests nearby, powerless. You can try to [link][bold type]turn on the computer[roman type][as]turn on computer[end link][else]One of the nearby computers is on, but unused. Its screen shows a somewhat garbled screen saver[end if].";
+library computer is in Grey Abbey Library. "[if library computer is off]A computer rests nearby, powerless. You can try to [link][bold type]turn on the computer[roman type][as]turn on computer[end link][else]One of the nearby computers is on, but unused. Its screen shows a somewhat garbled screen saver[end if].".
 
 an everyturn rule:
 	if library computer is unpowered and findwires is 2 and fixedgens > 2:
@@ -244,22 +243,9 @@ the library computer can be powered or unpowered. the library computer is unpowe
 
 computerpowering is an action applying to nothing.
 
-understand "switch on the computer" as computerpowering.
 understand "switch on computer" as computerpowering.
-understand "switch on library computer" as computerpowering.
-understand "switch on the library computer" as computerpowering.
-understand "turn on the computer" as computerpowering.
 understand "turn on computer" as computerpowering.
-understand "turn on library computer" as computerpowering.
-understand "turn on the library computer" as computerpowering.
-understand "power up the computer" as computerpowering.
-understand "power up computer" as computerpowering.
-understand "power up library computer" as computerpowering.
-understand "power up the library computer" as computerpowering.
-understand "power on the computer" as computerpowering.
-understand "power on computer" as computerpowering.
-understand "power on library computer" as computerpowering.
-understand "power on the library computer" as computerpowering.
+understand "power up/on the/-- library/-- computer" as computerpowering.
 
 check computerpowering:
 	if library computer is not visible, say "Turn on what?" instead;

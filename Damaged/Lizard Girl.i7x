@@ -39,15 +39,14 @@ to say lizgirl check angry:
 			now dam is 0;
 			now fightoutcome is 19;
 			say "The lizard girl draws away from the fight.";
-			LineBreak;
-			say "     'Useless useless useless, your blood is weak and tainted!' she screams. With a final sigh she regains her composure and paces away.[combat abort]";
+			say "[line break]     'Useless useless useless, your blood is weak and tainted!' she screams. With a final sigh she regains her composure and paces away.[combat abort]";
 
 to say lizgirl attack:
 	if lizgirlangry is 1:
 		if combat abort is 0:
 			say "     'Useless useless useless, your blood is weak and tainted!' she screams. With a final sigh she regains her composure and paces away.";
 	else if lizgirlmarked is 0:
-		say "[lizgirl mark]";
+		now lizgirlmarked is 1;
 		if Player is male:
 			say "     'Such a shame to have to come to this, I normally prefer my mates a little more willing. None the less,' she pins you down on your back, leaving you unable to move in your weakened state. Slowly she lowers down onto your [Cock of Player] member, working herself up and down your rigid length. Just before your inevitable release she presses down tightly, taking your [Cock Length of Player] inch shaft deep inside herself. Just as the flow of seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, worming down inside you, coming to rest at your balls. 'Now it's my turn,' she purrs, snapping your attention away from her assault on your reproductive system. All of a sudden, a pressure builds all down your member's length as her own seed pours into your body, leaving your balls swollen and tingling.";
 			say "     Using one razor sharp claw she scratches her name, [one of]Ryslan[or]Stryth[or]Rasth[at random], onto your thigh, rubbing her own juices over the wound. It stings a little, but you sigh contently, knowing she has future plans in store. 'Now be a good dear, and don't fight it anymore,' she chuckles over her shoulder before sashaying away.[lizgirl impreg][lizgirl female]";

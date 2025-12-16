@@ -34,15 +34,14 @@ ResolveFunction of Pet_Mutt_Looting is "[ResolveEvent Pet_Mutt_Looting]".
 Sarea of Pet_Mutt_Looting is "Nowhere".
 
 to say ResolveEvent Pet_Mutt_Looting:
-	let randomnumber be a random number from 1 to 3;
+	let randomnumber be a random number from 1 to 5;
 	say "     As you walk onto the street, you can see [PetMuttName] as he quickly dashes out from under his small makeshift home. His tail is wagging wildly and he seems more eager than normal as he sprints in your direction. Before you can ask or even wonder if something's amiss he stops, skidding a foot or so and stopping before you. A [if randomnumber is 1]bottle of soda[else if randomnumber is 2]can of food[else]medkit[end if] drops from his maw and at your feet with a clatter. He pants and looks at you simply. Now it's your turn to cock your head to the side at your hound. You lean down and pick it up, examining the item for a moment before smiling and placing it in your pack after wiping some drool and grime from its surface. 'Such a good boy,' you praise, leaning down and giving both his ears a ruffle, patting and scruffing over his fur. Which quickly turns into a chest and belly rub when he lays down. His leg kicks as you scratch his tummy and his tongue lolls out happily. What an adorable pooch!";
-	if randomnumber is:
-		-- 1:
-			ItemGain soda by 1;
-		-- 2:
-			ItemGain food by 1;
-		-- 3:
-			ItemGain medkit by 1;
+	if randomnumber < 3: [1-2]
+		ItemGain soda by 1;
+	else if randomnumber < 5: [3-4]
+		ItemGain food by 1;
+	else: [5]
+		ItemGain medkit by 1;
 
 [***********************************************************]
 [***********************************************************]
@@ -130,11 +129,12 @@ Section 3 - Conversation
 [***********************************************************]
 
 instead of conversing the Pet Mutt:
+	say "     As you stride up to [PetMuttName], he perks up quickly and looks to you, his tail wagging and his head cocked to the side. Patiently waiting for what you say or do next.";
+	LineBreak;
 	say "[Pet MuttTalkMenu]";
 
 to say Pet MuttTalkMenu:
-	say "     As you stride up to [PetMuttName], he perks up quickly and looks to you, his tail wagging and his head cocked to the side. Patiently waiting for what you say or do next.";
-	LineBreak;
+	let TalkDone be false;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -189,15 +189,17 @@ to say Pet MuttTalkMenu:
 					say "[Pet MuttTalk3]";
 				else if (nam is "Kiss him"):
 					say "[Pet MuttKiss]";
-				wait for any key;
-				say "[Pet MuttTalkMenu]";
+					now TalkDone is true;
+				if TalkDone is false:
+					wait for any key;
+					say "[Pet MuttTalkMenu]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the [PetMuttColor] [PetMuttBreed], shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say Pet MuttPetting: [pet him]
@@ -224,6 +226,7 @@ to say Pet MuttKiss:
 	else:
 		LineBreak;
 		say "     You stand up, wiping your face clean with your hand and brushing yourself off. Your cute mutt whines but backs down when you start to glare at him. He's the pet, and you're the [master] after all.";
+		wait for any key;
 
 [***********************************************************]
 [***********************************************************]
@@ -237,12 +240,12 @@ instead of fucking the Pet Mutt:
 	if (lastfuck of Pet Mutt - turns < 2): [he got fucked in the last 6 hours = 2 turns]
 		say "     The dog doesn't look too interested in sex right now. Maybe he's just tired and needs a rest.";
 	else: [ready for sex]
+		say "     Biting your lip you can't help but feel especially... excited at the moment. Which seems a bit redundant given the sexpocalypse you find yourself living in. All the same though, you stride up close to your submissive mutt, placing a hand on your hip.";
+		LineBreak;
 		say "[Pet MuttSexMenu]";
 
 to say Pet MuttSexMenu:
-	say "     Biting your lip you can't help but feel especially... excited at the moment. Which seems a bit redundant given the sexpocalypse you find yourself living in. All the same though, you stride up close to your submissive mutt, placing a hand on your hip.";
 	say "     [bold type][PetMuttName] cocks his head curiously as you decide to...[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -263,10 +266,11 @@ to say Pet MuttSexMenu:
 		now sortorder entry is 3;
 		now description entry is "Pound [PetMuttName]'s ass";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Blow him";
-	now sortorder entry is 4;
-	now description entry is "Suck [PetMuttName]'s cock";
+	if Player is not neuter:
+		choose a blank row in table of fucking options;
+		now title entry is "Blow him";
+		now sortorder entry is 4;
+		now description entry is "Suck [PetMuttName]'s cock";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -299,7 +303,7 @@ to say Pet MuttSexMenu:
 			say "     You step back from the [PetMuttColor] [PetMuttBreed], shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say Pet MuttSex1: [breeding fuck on the player]

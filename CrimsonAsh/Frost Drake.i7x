@@ -63,8 +63,8 @@ to say FrostDrakeFaceFuck:
 to say BeatTheFrostDrake:
 	if FrostDrakeBeaten is 0: [first encounter]
 		say "     Knocking back the big drake he stumbles forward toward you before collapsing and sliding forward a few feet before coming to a stop right in front of you. He tries to get to his feet but is too dazed to accomplish that. You notice his member is still hard, it throbs in need slightly, leaving you with a choice on what to do next.";
-		say "     [bold type]Should you show this apex predator who's in charge?[roman type][line break]";
 		LineBreak;
+		say "     [bold type]Should you show this apex predator who's in charge?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes, show him who's boss.";
 		say "     ([link]N[as]n[end link]) - No, not gonna happen.";
 		if Player consents: [Decides to fuck Frost Drake]
@@ -92,6 +92,7 @@ to say BeatTheFrostDrake:
 		LineBreak;
 		if calcnumber is 1:
 			say "     You ask the creature if he's alright, and calm enough to talk now. He groans and attempts to sit up to face you directly. He rumbles with a low growl but nods his head in understanding. Nodding your head for him to speak, you raise an eyebrow and wait for a reply. '...What do you want creature?' he huffs out.";
+			LineBreak;
 			say "[FrostDrakeTalkMenu]";
 		else if calcnumber is 2:
 			say "[Frost DrakeSexMenu]";
@@ -100,7 +101,6 @@ to say BeatTheFrostDrake:
 
 to say Frost DrakeSexMenu:
 	say "     What shall you do with the big draconic being?";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -156,7 +156,7 @@ to say Frost DrakeSexMenu:
 			say "     You back away and shake your head.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SuckFrostDrake:
@@ -393,7 +393,6 @@ When Play begins:
 
 to say FrostDrakeTalkMenu:
 	say "     What do you want to talk about?";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -434,14 +433,14 @@ to say FrostDrakeTalkMenu:
 					say "[FrostDrakeTalk2]";
 				else if (nam is "His plans"):
 					say "[FrostDrakeTalk3]";
-				AttemptToWait;
+				wait for any key;
 				say "[FrostDrakeTalkMenu]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     As you are about to wave him off and conclude your little talk, the frost drake clears his throat and says, 'You are indeed a strange creature, very curious. Why is that exactly?'";
-			say "     [bold type]Just how curious were you planning on being?[roman type][line break]";
 			LineBreak;
+			say "     [bold type]Just how curious were you planning on being?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Just some casual interest in strange creatures.";
 			say "     ([link]N[as]n[end link]) - You'd like to gain some first-hand intimate knowledge of him.";
 			if Player consents:
@@ -451,9 +450,9 @@ to say FrostDrakeTalkMenu:
 				LineBreak;
 				say "     Looking over the drake you can't help but appreciate his size, and his exotic nature. You've beaten back enough of these big guys to know what they're packing. And that makes your mind wander to the possibilities of what this big, scary brute can do. You pause, looking him up and down exaggeratedly, then tell him that he's quite an impressive specimen of his kind and you'd like to gain more intimate knowledge of him personally. The white-scaled drake grins, flashing rows of sharp draconic teeth at you, ember set eyes burning into your body, clearly undressing you visually already. You give him a coy smile in return and stride closer to the drake.";
 				say "[FrostDrakeTalkSex]";
-			AttemptToWait;
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say FrostDrakeTalk1:
@@ -483,9 +482,9 @@ to say FrostDrakeTalkSex:
 		WaitLineBreak;
 		say "     Your cum slicked tunnel makes low slurping sounds as you mewl in pleasure and he starts to pull out, only to slam back into your sloppy cunt. You pitch your head back and moan loudly into the open sky, your limbs desperately clawing at iron hard scales. His rhythm is sporadic and lust fueled, his hips slam into yours in the most painfully appealing way, sending jolts up your body with every thrust and sending spurts of cum splattering over yours and his form. You're sent into a haze of orgasms, one after the other. The exploding bliss has you nearly drooling all over yourself, while droplets of warm saliva drip onto your face from the lust-filled beast.";
 		say "     And again he's hilting himself inside you, shooting another potent load of jism into your womb, turning your sex tunnel into a frothy mess of draconic cum. Your vision goes black and blurry as every sense you have at that moment is overtaken by this powerful drake mating your cunt better than he has the right to. Between blacking out from overwhelming sensitivity and moaning like the ready mate you are, your last thought before the drake starts up again, hammering deeper than most have ever into you, are of how full you are, how utterly filled and fucked you must look right now.";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Frost Drake";
 		WaitLineBreak;
 		say "     You awaken sometime later, covered head to toe in cum and sweat. The handsome frost drake has fucked you properly like he said. Looking down you see he made good on that word, your tummy is slightly bloated from the sheer amount of cum pumped into your womb. Your thighs are caked in cum and are shaking slightly from your orgasmic high. Your sexy dragon mate is nowhere in sight though, he must have fucked you like the hardy breeder he is then took off. Perhaps you'll see the drake again one day, and perhaps this little union really will bare something, despite the drake's word on his kind's fertility. Regardless you get to shaky feet and clean yourself off as best you can before continuing your journey.";
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Frost Drake";
 	else:	 [male/neuter]
 		say "     Striding up to the large draconic-like creature you run a hand delicately across his scales, they're surprisingly warm for a drake whose natural habitat is cold. And it only gets hotter as you run it down his side all while the drake looks on at you pensively. You suppose now that you're on talking terms you can move on to more... pleasant terms. And your eyes locked on his transmit just that. Then they flicker down to his lower belly, searching for his familiar member. Sure enough, it's there, nearly at its full size, clearly excited by your suggestive language and movements.";
 		WaitLineBreak;
@@ -500,8 +499,8 @@ to say FrostDrakeTalkSex:
 		WaitLineBreak;
 		say "     Your cum slicked tunnel makes low slurping sounds as you mewl in pleasure and he starts to pull out, only to slam back into your sloppy ass. You pitch your head back and moan loudly into the open sky, your limbs desperately clawing at iron hard scales. His rhythm is sporadic and lust fueled, his hips slam into yours in the most painfully appealing way, sending jolts up your body with every thrust and sending spurts of cum splattering over yours and his form. You're sent into a haze of orgasms, one after the other. The exploding bliss has you nearly drooling all over yourself, while droplets of warm saliva drip onto your face from the lust-filled beast.";
 		say "     And again he's hilting himself inside you. Shooting another potent load of jism into your ass, turning your anus into a frothy mess of draconic cum. Your vision goes black and blurry as every sense you have at that moment is overtaken by this powerful drake mating your sensitive ass better than he has the right to. Between blacking out from overwhelming sensitivity and moaning like the ready mate you are, your last thought before the drake starts up again, hammering deeper than most have ever into you, are of how full you are, how utterly filled and fucked you must look right now.";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Frost Drake";
 		WaitLineBreak;
 		say "     You awaken sometime later, covered head to toe in cum and sweat. The handsome frost drake has fucked you properly like he said. Looking down you see he made good on that word, your tummy is slightly bloated from the sheer amount of cum pumped into your ass. Your thighs are caked in cum and are shaking slightly from your orgasmic high. Your sexy dragon mate is nowhere in sight though, he must have fucked you like the hardy breeder he is then took off. Perhaps you'll see the drake again one day. Regardless you get to shaky feet and clean yourself off as best you can before continuing your journey.";
-		CreatureSexAftermath "Player" receives "AssFuck" from "Frost Drake";
 
 Frost Drake ends here.

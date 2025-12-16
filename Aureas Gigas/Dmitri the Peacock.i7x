@@ -7,7 +7,7 @@ Dmitri the Peacock by Aureas Gigas begins here.
 
 a postimport rule: [this adds the newly named navpoint]
 	if Peacocked > 7 and Peacocked < 98: [values set this way to future proof it after changing teh room name in code. Please use values above 98 for content that SHOULDNT link this area.]
-		AddNavPoint Argos's Antiques;
+		AddNavPoint Argos's Antiques silently;
 	move Dmitri to Argos's Antiques;
 	now OralVirgin of Dmitri is false;
 
@@ -36,9 +36,8 @@ to say ResolveEvent Captivating Plumage:
 		project Figure of Dmitri_clothed_icon;
 		say "     As he glances towards you, it becomes apparent that the purloiner is an anthropomorphic male peacock. Covered in shimmering blue and green feathers, he stands in a striking pose. As he looks you over, his eyes focus intently, like he has found something very valuable. If beaks could smile, then he would wear a broad and satisfied one right now. Then the peacock burglar starts to fan his tail. The feathers are quite eye catching indeed. With a very calm and soothing voice he says, 'Hello there. It's been a while since I've seen another sane person, let alone one so [if Player is female]beautiful[else]attractive[end if].'";
 		say "     Managing to wrench your gaze away from the bird, you focus on the dazed wolverine instead. Without a doubt, something the peacock did put the guard out of commission, so you prepare to be wary towards the avian. As if to address this, the resplendent peafowl states, 'I was simply walking down the street and got too close to this store when the guard started to attack me.' Skeptically, you raise an eyebrow - something about the location of the guard and the empty display cases pokes holes in his testimony. But after a couple of waves of his tail feathers, somehow... you just want to let him continue... 'I don't mean you any harm. Let me prove it to you. I can give a dynamite massage,' the sleek male says in a calming and inviting tone. With all the chaos going in the city, it might be good for him to help you relax a little bit... Wait! Some small, analytical part of your mind feels very wary of his intentions. Are you really going to allow him to work his magic on you?";
-		WaitLineBreak;
-		say "     [bold type]Something about the way the avian moves seems incredibly inviting... yet also potentially dangerous. Will you allow the stunning peacock to help you relax, or will you warn the fowl to back off and not try anything funny?[roman type][line break]";
 		LineBreak;
+		say "     [bold type]Something about the way the avian moves seems incredibly inviting... yet also potentially dangerous. Will you allow the stunning peacock to help you relax, or will you warn the fowl to back off and not try anything funny?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Let the bird give you a soothing massage.";
 		say "     ([link]N[as]n[end link]) - Tell the bird off and walk away.";
 		if Player consents:
@@ -132,6 +131,12 @@ to say ResolveEvent Captivating Plumage:
 		say "     You get down on your hands and knees and crawl slowly to the brown-furred gang leader. She lifts one of her legs up and brings a rabbit-like paw close to your face. As if by second nature, your hand reaches up to stroke and massage her velvety fur. With a rumbly moan, she turns to speak to the peacock and says, 'Damn, you got this little thing well trained,' sounding impressed with your skill. The avian playfully replies, 'They are quite the quick learner.' She wraps both of her feet behind your head and pulls you closer to her fully engorged cock, retorting, 'Let's see just how quick.' Like metal attracted to a magnet, your hands feel drawn towards Clover's large rod. One hand wraps around her shaft and begins to stroke it while the other fondles the hefty orbs that obscure her womanhood. Patting your head, the lapine encourages you to pick up the pace. Receptive to her orders, you pleasure her at a quick but steady pace, and soon, you feel the herm's balls tense up before her veiny dick spurts thick ropes of cum across your face.";
 		say "     You sit down on the ground while globs of her cum drip down your face. As soon as Dmitri hands you a small towel, you feel volition return to your body. As you are busy cleaning off, the avian and the lapine start conversing. 'I assume that you're content with this method of payment?' the cocky male teases with a glint in his eye. The sated herm replies, 'It'll do, but the gang's gonna need more than just this to pay for our services.' Chuckling softly, the avian says, 'That shouldn't be a problem,' while rubbing your right shoulder. Looking up at him, you feel like a marionette puppet, which strangely only seems to excite you further. Your companion leans in close to whisper in your ear, 'These negotiations are going to take a while. Go ahead and leave.' Sensing that he's right, you change back into your clothes, head out the front door, and return to the streets of the high-rise district. After a quick stop at the antique store to pick up your gear, you're ready for whatever happens next.";
 		[CreatureSexAftermath "Player" receives "OralCock" from Clover;] [TODO: make placeholder infection for Clover sex/preg?]
+		if OralVirgin of Player is true:
+			now OralVirgin of Player is false;
+			say "     [bold type]You have lost your oral virginity to Clover![roman type][line break]";
+			now FirstOralPartner of Player is "Clover";
+			now SexuallyExperienced of Player is true;
+		increase OralCockTaken of Player by 1;
 		now Peacocked is 5;
 		now Resolution of Captivating Plumage is 5;
 	else if Peacocked is 5:
@@ -191,7 +196,7 @@ Argos's Antiques	"Argos's Antiques"
 
 Argos's Antiques is a room. It is fasttravel. It is private. It is sleepsafe.
 Description of Argos's Antiques is "[argosantdesc]".
-the scent of Argos's Antiques is "The antique store smells of aged wood and soft fragrances.".
+the scent of Argos's Antiques is "     The antique store smells of aged wood and soft fragrances.".
 
 to say argosantdesc:
 	say "     The peacock's antique store is in surprisingly well-kept condition. With the exception of the barricaded windows and front door, everything else seems to be neatly organized. A suit of medieval steel armor, colored black and wielding a halberd, guards the entrance. Display cases show a veritable cornucopia of antique and valuable items. On a weapon rack hanging on the wall are various arms from the nineteenth century like repeaters, pistols, nunchucks, and sabers. Dmitri stands close by, eyeing your form with a fond look in his eye.";
@@ -238,12 +243,9 @@ Sterile of Dmitri is false. [steriles can't knock people up]
 MainInfection of Dmitri is "Peacock".
 Description of Dmitri is "[dmitridesc]".
 Conversation of Dmitri is { "Fanout!" }.
-the scent of Dmitri is "The avian has a rather enticing scent of jasmine and sage that makes him seem all the more entrancing.".
+the scent of Dmitri is "     The avian has a rather enticing scent of jasmine and sage that makes him seem all the more entrancing.".
 
 to say dmitridesc:
-	say "[dmitridebug]";
-
-to say dmitridebug:
 	if debugactive is 1:
 		say "DEBUG (Dmitri) -> peacocked: <- DEBUG[line break]";
 	project Figure of Dmitri_clothed_icon;
@@ -255,11 +257,11 @@ Instead of conversing the Dmitri:
 
 Instead of fucking the Dmitri:
 	if (lastfuck of Dmitri - turns < 6):
+		project Figure of Dmitri_clothed_icon;
 		say "     Chuckling softly, the peacock states, 'I know you're enthusiastic to have some more fun with me, but I'd rather you wait a little while so that we can savor the experience.'";
 	else: [ready for sex]
-		project Figure of Dmitri_naked_icon;
 		say "     As you walk up to Dmitri, he smiles and asks, 'I wonder what you are thinking about...'";
-		WaitLineBreak;
+		project Figure of Dmitri_naked_icon;
 		say "[DmitriSexMenu]";
 
 to say DmitriSexMenu:
@@ -330,7 +332,7 @@ to say DmitriSexMenu:
 			say "     You step back from the anthro bird, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say DmitriSex1: [oral on the player]

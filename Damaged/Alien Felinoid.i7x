@@ -13,11 +13,12 @@ to say Felinoid_Desc:
 
 to say felinoid wins:
 	if HP of Player > 0:
-		let mchance be 4;
-		if Player is submissive, increase mchance by 2;
-		if anallevel is 3, increase mchance by 2;
-		if Player is mpreg_ok, increase mchance by 2;
-		if anallevel is 1, now mchance is 0;
+		let mchance be 0;
+		if anallevel > 1:
+			now mchance is 4;
+			if Player is submissive, increase mchance by 2;
+			if anallevel is 3, increase mchance by 2;
+			if Player is mpreg_ok, increase mchance by 2;
 		if ( Player is female and Cunt Depth of Player > 7 ) or ( a random chance of mchance in 12 succeeds and Cunt Count of Player is 0 ):
 			say "     The great cat, as if accepting your submission, pads up to you and nuzzles against you firmly, his short fur tickling your cheek. Suddenly the feline butts you over onto all fours, purring in anticipation. With his strong and masculine scent filling your senses, you don't resist, wanting to keep the big cat pleased. You gasp as he paces behind you and, reaching a foreleg over your shoulder, leans his weight into you. The feline forces your [bodydesc of Player] chest to lower down into the dirt and licks slowly along your neck, sending shivers down your spine.";
 			say "     He rumbles softly into your ear and you end up raising your rear as he moves to mount you fully, sinking his feline shaft into your [if Player is female]wet pussy[else]tight ass[end if], spreading you open with his feline member. Keeping a paw at your back as a reminder of who's in charge, he starts thrusting, sliding those spines covering his cock along your inner walls. They send waves of pleasure through you as he pounds into you, thrusting harder and faster.";
@@ -27,13 +28,10 @@ to say felinoid wins:
 			else:
 				say "     Grinding your ass back against him, you moan softly, needing the big cat to drive his full length into you again and again. With your chest pressed to the ground, you do your best to work your inner walls around his throbbing member, struggling to maintain control with those delightful barbs rubbing inside you. You pant and mrowl beneath him like a cat in heat, eager to have this large feline take you and claim you fully. The mere thought is exciting, your mind and body longing to be mated to this powerful male so that you may be used like this again and again. You would be his sex toy, his breeding hole, his to fuck as much as he wants wherever he wanted.";
 			say "     Those thoughts [if Player is not neuter]push you over the edge, causing you to cry out again as you climax[else]fill your mind as the big kitty continues to plow into you, dominantly fucking you[end if][if Player is female], squeezing your cunt down around his pulsing rod[else if Player is male], spraying your unneeded seed across the ground as your anus clamps down around his pulsing cock[end if]. The beast continues to pound into you[if Player is not neuter] while you cum[end if] before finally sinking his shaft fully inside you and unleashing his hot load with a triumphant growl. As his hot seed floods your [if Player is female]womb[else]bowels[end if], you feel wonderful to have been claimed by such a powerful beast.";
+			CreatureSexAftermath "Player" receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from "Felinoid";
 			WaitLineBreak;
 			say "     Spent, the feline pulls his cock from your [if Player is female]creamy pussy[else]abused anus[end if] and releases you. He nuzzles at your neck and purrs softly, nudging you to get up and leave now that he's done with you. At least for the time being. Still feeling the effects of his musk and your recent pounding, you are reluctant to leave, but you obediently gather your things and head on your way, hoping you might let him, or another of these great cats, take you again soon.";
 			increase catnum by 1;
-			if Player is female:
-				CreatureSexAftermath "Player" receives "PussyFuck" from "Felinoid";
-			else:
-				CreatureSexAftermath "Player" receives "AssFuck" from "Felinoid";
 		else if Player is female and a random chance of 3 in 4 succeeds:
 			say "     The great cat, as if accepting your submission, pads up to you and nuzzles against you firmly, his short fur tickling your cheek. Suddenly he butts you over onto all fours, purring in anticipation. With his strong, masculine scent filling your senses, you don't resist, wanting to keep the big cat pleased. You gasp as he paces behind you and nuzzles your rear. His raspy tongue finds its way to your pussy and licks slowly over it, lapping at your juices. The feel of his roughly textured appendage across your sensitive folds and throbbing clit makes you weak in the knees. The stimulation leading to the weakening of your will as you spread your legs further apart, giving the feline more room to thoroughly pleasure you. He continues to lap at you for some time, delving his tongue deeper inside you, plunging into your depths and causing you to mewl lustfully as you cry out in blissful release. Licking his whiskers clean, he nuzzles you to your feet and pushes you off in the direction you came from, as if to say that he's done with you. At least for now.";
 			increase catnum by 1;
@@ -41,10 +39,10 @@ to say felinoid wins:
 		else:
 			say "     The great cat, as if accepting your submission, pads up to you and nuzzles you firmly with his furry head. Suddenly he butts you over onto all fours, purring in anticipation. With his strong, masculine scent filling your senses, you don't resist, wanting to keep the big cat pleased. You gasp as he paces behind you and nuzzles your rear. As if having concluded on a silent decision he lets out a low growl and moves to cuff you firmly with one paw, bowling you over onto your back. Before you can get up to defend yourself, the big feline has pounced atop you and is pressing his groin into your face, burying you in his fuzzy crotch.";
 			say "     With his heady scent filling your senses, you quickly lose any resistance you had as he grinds his swelling sheath and large ballsack against your face, smearing his musky smell on you. When his cock starts to emerge, you welcome it into your mouth, licking and sucking at it lightly. The feline growls firmly, as if reminding you who's in charge and starts to thrust into your mouth. You work your tongue over the pulsing shaft, teasing its barbs and pointed tip with your tongue. You keep this up for several minutes as his heavy balls slap against your chin until finally the large feline releases his hot load into your mouth. The taste is so powerful and virile that you can't help but swallow it down.";
+			CreatureSexAftermath "Player" receives "OralCock" from "Felinoid";
 			WaitLineBreak;
 			say "     Done with you, the cat gets up and gives your rear a swat. With a bit of a growl, he urges you on your way. You grab your stuff and leave, still licking your lips for the last lingering traces of the male's seed.";
 			increase catnum by 1;
-			CreatureSexAftermath "Player" receives "OralCock" from "Felinoid";
 	else if Player is MalePreferred:
 		if Player is female:
 			say "     At first he simply nuzzles against you, but pretty soon he begins pushing you around, trying to get you to move. You feel odd, his friendliness making something within you warm up and without thinking, you feel yourself move onto your hands and knees, breasts pushing down into the ground. He rips at your clothing, tearing it to shreds. His weight pins you down and you moan out loud, your body ready for what the feline is about to give you. Hips meet yours, but his aim is off and his cock messily smears pre across your inner thigh. On his third try he finds his mark and you cry out, feeling yourself filled and stretched around him. He doesn't take it slow, he breeds you as though you were his very own mate. Your needy moans can only agree with him. You are his mate.";
@@ -140,7 +138,7 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]He rakes at you wildly, leaving you in intense pain.[or]He leaps at you, digging his teeth into your arm.[or]He leaps at you, digging his teeth into your leg.[at random]";
-	now defeated entry is "With a last roar the big cat claws out wildly, trying to hit you one last time before collapsing to the ground.";
+	now defeated entry is "With a last roar the big cat claws out wildly, trying to hit you one last time before collapsing to the ground.[line break]";
 	now victory entry is "[felinoid wins]";
 	now desc entry is "[Felinoid_Desc]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a short muzzled, female lion"; [ Face description, format as "Your face is [Face of Player]." ]

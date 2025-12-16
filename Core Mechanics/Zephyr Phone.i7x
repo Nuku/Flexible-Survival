@@ -461,14 +461,14 @@ to say zpc_use:
 			say "     You turn on the device. It appears that your current location is not yet part of the Zephyr satellite coverage region... Perhaps you could try the device in one of Zephyr's published compatible locations, such as the Smith Haven Mall?";
 			now emap is 1;
 			AttemptToWait;
-			if debugactive is 1 and debuglevel > 1:
+			if debug is at level 2:
 				say "Following the ngraphics_blank rule";
 			follow the ngraphics_blank rule; [clear pic after WLB user response]
 		else if zpc_Zc is 1:
 			say "     The device will now track and display your current location, until you exit the satellite coverage region. If you wish to terminate tracking while still in the coverage region, simply switch the device off.";
 			now emap is 1;
 			AttemptToWait;
-			if debugactive is 1 and debuglevel > 1:
+			if debug is at level 2:
 				say "Following the zpc_lookoverride rule.";
 			follow the zpc_lookoverride rule; [fill with respective pic]
 	else if emap is 1:
@@ -476,7 +476,7 @@ to say zpc_use:
 		say "     After holding the power button for a few seconds, the display fades out as an accompanying chime completes its shutdown.";
 		now emap is 0;
 		AttemptToWait;
-		if debugactive is 1 and debuglevel > 1:
+		if debug is at level 2:
 			say "Following the ngraphics_blank rule";
 		follow the ngraphics_blank rule; [clear pic after WLB user response]
 

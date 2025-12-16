@@ -226,6 +226,7 @@ Part 3 - Combat
 Chapter 0 - Combat Menu
 
 To Combat Menu:
+	say "[run paragraph on]";
 	follow the cock descr rule;
 	follow the cunt descr rule;
 	follow the breast descr rule;
@@ -233,11 +234,11 @@ To Combat Menu:
 	now automaticcombatcheck is 0; [sets to zero as combat starts, just in case]
 	follow the monster combat mode rule;
 	if HP of Player < 1 and combat abort is 0:
-		say "     You are too injured to resist the creature.";
+		say "[line break]You are too injured to resist the creature.";
 		now fightoutcome is 20;
 		lose;
 	else if Libido of Player >= 110 and combat abort is 0:
-		say "     You are too aroused to consider resisting the creature.";
+		say "[line break]You are too aroused to consider resisting the creature.";
 		now fightoutcome is 21;
 		lose;
 	while HP of Player > 0 and monsterHP > 0 and (monsterLibido - monsterLibidoPenalty) < 100 :
@@ -355,7 +356,7 @@ This is the player attack rule:
 		say "DEBUG: Defense Bonus (Enemy) [defense bonus][line break]";
 		say "DEBUG: Combat Bonus (Player) [Combat bonus][line break]";
 		say "DEBUG: Seduction Bonus (Player) [seduce bonus][line break]";
-		say "DEBUG: Seduction defense bonus (Enemy) [seduction defense bonus][line break]";	
+		say "DEBUG: Seduction defense bonus (Enemy) [seduction defense bonus][line break]";
 	if ktcockmatch is true:		[That's what you get for thinking with your crotch.]
 		increase Libido of Player by a random number from 0 to 2;
 	if HardMode is true:
@@ -563,8 +564,7 @@ This is the player attack rule:
 	follow the monster injury rule;
 	say "[EnemyCapNameOrTitle] is [descr]. ";
 	follow the monster libido rule;
-	say "[EnemyCapNameOrTitle] is [descr]. ";
-	LineBreak;
+	say "[EnemyCapNameOrTitle] is [descr].";
 	if monsterHP < 1:
 		now fightoutcome is 10;
 		win;
@@ -703,8 +703,7 @@ This is the player seduce rule:
 	follow the monster injury rule;
 	say "[EnemyCapNameOrTitle] is [descr]. ";
 	follow the monster libido rule;
-	say "[EnemyCapNameOrTitle] is [descr]. ";
-	LineBreak;
+	say "[EnemyCapNameOrTitle] is [descr].";
 	if monsterHP < 1:
 		now fightoutcome is 10;
 		win;
@@ -735,6 +734,7 @@ This is the combat item rule:
 	else:
 		while 1 is 1:
 			if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+			LineBreak;
 			repeat with y running from 1 to number of filled rows in table of itemselection:
 				choose row y from the table of itemselection;
 				say "[link][y] - [objName entry][as][y][end link] ([holding entry])[line break]";
@@ -742,10 +742,11 @@ This is the combat item rule:
 			say "Type the number corresponding to the item to be used> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of itemselection:
+				LineBreak;
 				now current menu selection is calcnumber;
 				follow the combat item process rule;
 				break;
-			else if Playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+			else if calcnumber is 0:
 				LineBreak;
 				say "Selection aborted.";
 				continue the action;
@@ -1465,13 +1466,11 @@ To lose:
 	choose row MonsterID from the Table of Random Critters;
 	if Name entry is not listed in EncounteredEnemies of Player:
 		add Name entry to EncounteredEnemies of Player;
-	say "[run paragraph on]";
 	follow the cock descr rule;
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	now lastfightround is turns;
 	now lost is 1;
-	LineBreak;
 	if inasituation is false:
 		say "[victory entry]";
 	if the story has not ended:
@@ -1557,7 +1556,7 @@ to TrophyLootFunction: [generates either a trophy prompt or loot for the player]
 					say "     You decide not to take anything.";
 					wait for any key;
 				else:
-					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 			clear the screen and hyperlink list;
 	else: [Defaulting back to the old Loot System]
 		if Debug is at level 10:

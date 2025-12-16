@@ -18,11 +18,10 @@ Strain of dryad milk is "Dryad".
 Usedesc of dryad milk is "[dryad milk use]".
 
 to say dryad milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes sweet and honey-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes sweet and honey-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
-instead of sniffing dryad milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, but with a hint of maple syrup.";
+Scent of dryad milk is "You open the lid for a moment and take a sniff. Smells kinda like any other milk, but with a hint of maple syrup.".
 
 Section 2 - Creature Insertion
 

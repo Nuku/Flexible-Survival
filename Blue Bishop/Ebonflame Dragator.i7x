@@ -87,6 +87,7 @@ to say ebgatordesc:
 	say "     A loud, low hissing sound echoes from the open air as a monstrous, feral alligator lurches from the shadows. Twisted by an unholy influence, the six-legged beast is an abyssal shade of purple, hard scales and ridges jutting from its coarse frame, a soft red flame visibly glowing in the cracks and crevices.";
 	say "     Twin pairs of eyes fixated on your [bodytype of Player] form, its drooling maw is agape, revealing its two rows of razor-sharp teeth. Without warning, it charges directly at you!";
 	if impregnatevalid is true:
+		LineBreak;
 		say "     [bold type]...The creature has a slightly awkward gait, as if bloated with something...[roman type][line break]";
 
 Table of CombatPrep (continued)
@@ -103,7 +104,6 @@ to say PrepCombat_Ebonflame Dragator:
 			if a random chance of ebgatorcarrying in 4 succeeds:
 				now impregnatevalid is true;
 				now ebgatorcarrying is 1;
-				now tempnum2 is 1;
 			else:
 				increase ebgatorcarrying by 1;
 	else if ebneuterswitch is false and ovipreglevel > 1:
@@ -111,7 +111,6 @@ to say PrepCombat_Ebonflame Dragator:
 			if a random chance of ebgatorcarrying in 4 succeeds:
 				now impregnatevalid is true;
 				now ebgatorcarrying is 1;
-				now tempnum2 is 2;
 			else:
 				increase ebgatorcarrying by 1;
 

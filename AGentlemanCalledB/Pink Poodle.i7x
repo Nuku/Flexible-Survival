@@ -105,7 +105,7 @@ To say beatthePinkPoodle:
 				say "     Deciding against taking advantage of the whining poodle, you leave her where she is.";
 				increase nopoodlesex by 1;
 		else:
-			say "     Would you like to have her [link]eat you out (y)[as]y[end link] or [link]leave her be (n)[as]n[end link]?";
+			say "     Would you like to have her [link]eat you out (Y)[as]y[end link] or [link]leave her be (N)[as]n[end link]?";
 			if Player consents:
 				LineBreak;
 				say "[pinkpoodleoral]";
@@ -386,8 +386,12 @@ to say pinkpoodleheatend:
 			if Name entry is "Pink Poodle":
 				now MonsterID is y;
 				break;
-		if Cunt Tightness of Player > Cunt Tightness entry, decrease Cunt Tightness of Player by 1;
-		if Cunt Depth of Player > Cunt Depth entry, decrease Cunt Depth of Player by 1;
+		decrease Cunt Tightness of Player by 1;
+		decrease Cunt Depth of Player by 1;
+		if Cunt Tightness of Player >= Cunt Tightness entry, decrease Cunt Tightness of Player by 1;
+		if Cunt Depth of Player >= Cunt Depth entry, decrease Cunt Depth of Player by 1;
+		if Cunt Tightness of Player < 1, now Cunt Tightness of Player is 1;
+		if Cunt Depth of Player < 1, now Cunt Depth of Player is 1;
 	decrease slutfucked by 2;
 	if slutfucked < 0, now slutfucked is 0;
 	if slutfucked > 4, now slutfucked is 4;
@@ -408,7 +412,10 @@ to say PoodleHeatSuccumb:
 	let hmonlist be a list of numbers;
 	let heatzone be "Outside";
 	let zz be a random visible dangerous door;
-	if zz is not nothing, now heatzone is the marea of zz;
+	if zz is not nothing:
+		now heatzone is the marea of zz;
+	else if earea of location of Player is not "void":
+		now heatzone is earea of location of Player;
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ]
 		choose row X from the Table of Random Critters;
 		if there is no area entry, next;
@@ -428,10 +435,9 @@ to say PoodleHeatSuccumb:
 	follow the cock descr rule;
 	follow the cunt descr rule;
 	follow the breast descr rule;
-	LineBreak;
 	AttemptToWait;
 	say "[victory entry]";
-	infect "Pink Poodle";
+	infect;
 	decrease the score by 5;
 	decrease Morale of Player by 3;
 	if Player is kinky, increase Morale of Player by 6;

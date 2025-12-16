@@ -118,8 +118,7 @@ to say cheesecake milk use:
 	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and cream cheese-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
-instead of sniffing cheesecake milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+Scent of cheesecake milk is "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -137,8 +136,7 @@ to say cheesecake cum use:
 	PlayerDrink 5;
 	SanLoss 5;
 
-instead of sniffing cheesecake cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.";
+Scent of cheesecake cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.".
 
 [
 Table of New Infection Parts (continued)
@@ -326,8 +324,7 @@ to say gingerbread milk use:
 	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the gingerbread milk run over your tongue and down your throat. Tastes rich and sweet, with a gingery aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
-instead of sniffing gingerbread milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+Scent of gingerbread milk is "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -345,8 +342,7 @@ to say gingerbread cum use:
 	PlayerDrink 5;
 	SanLoss 5;
 
-instead of sniffing gingerbread cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.";
+Scent of gingerbread cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.".
 
 [
 Table of New Infection Parts (continued)

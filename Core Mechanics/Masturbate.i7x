@@ -36,7 +36,7 @@ instead of using porn collection:
 	else if Libido of Player < 50:
 		say "[simplemast]";
 	else:
-		say "     Pulling out your porn collection, you look over the assorted magazines in search of something of interest. Shall you have a quick session to relieve a little pressure (Y) or do you want to draw it out and really let off some steam (N)?";
+		say "     Pulling out your porn collection, you look over the assorted magazines in search of something of interest. Shall you have a quick session to [link]relieve a little pressure (Y)[as]y[end link] or do you want to draw it out and really [link]let off some steam (N)[as]n[end link]?";
 		if Player consents:
 			LineBreak;
 			say "[simplemast]";

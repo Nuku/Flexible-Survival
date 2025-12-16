@@ -16,8 +16,10 @@ understand "inv" as Inventorying.
 understand "inventory" as Inventorying.
 
 carry out Inventorying:
-	say "Peeking into your backpack, you see: [if the number of owned grab objects is 0]Nothing.[else][line break][end if]";
-	if the number of owned grab objects > 0:
+	if number of owned grab objects is 0:
+		say "You're not carrying anything right now.";
+	else:
+		say "Peeking into your backpack, you see:[line break]";
 		[preparations, put all calculations here that would slow down the loop]
 		[! for every "trade if" you have to add a corresponding "needstradechek if" here !]
 		let needstradecheck be 0;
@@ -335,7 +337,7 @@ carry out settinginvcolumns:
 to say set_invcolumns:
 	now calcnumber is -1;
 	let gsexit be 0;
-	say "     How many columns would you like the inventory to display (1 - 4 or 0 to abort)?";
+	say "     How many columns would you like the inventory to display (1 - 4, or 0 to abort)?";
 	say "     [if invcolumns is not 1][link][bracket]1[close bracket][as]1[end link][else][bold type][bracket]1[close bracket][roman type][end if]  [if invcolumns is not 2][link][bracket]2[close bracket][as]2[end link][else][bold type][bracket]2[close bracket][roman type][end if]  [if invcolumns is not 3][link][bracket]3[close bracket][as]3[end link][else][bold type][bracket]3[close bracket][roman type][end if]  [if invcolumns is not 4][link][bracket]4[close bracket][as]4[end link][else][bold type][bracket]4[close bracket][roman type][end if]  [link][bracket]0[close bracket] - Abort[as]0[end link][line break]";
 	while gsexit is 0:
 		say "Choice? (0-4)> [run paragraph on]";
@@ -358,8 +360,7 @@ definition: A person is overburdened:
 	if the number of owned grab objects > 0:
 		repeat through Table of Game Objects:
 			if object entry is owned:
-				let num be carried of object entry;
-				increase weight by weight entry times num;
+				increase weight by weight entry times carried of object entry;
 	if weight > capacity of Player, yes;
 	no;
 
@@ -390,7 +391,7 @@ carry out grabbing something (called x):
 	let num be 0;
 	repeat with Q running through invent of the Location of Player:
 		increase num by 1;
-		if q matches the regular expression printed name of x, case insensitively:
+		if q exactly matches the text printed name of x, case insensitively:
 			now found is 1;
 			ItemGain q by 1;
 			remove entry num from invent of the Location of Player;
@@ -431,15 +432,12 @@ understand "junk [owned grab object]" as burninating.
 check burninating something (called x):
 	if x is journal, say "You really don't think that's a good idea." instead;
 	if x is not owned, say "You don't seem to be holding any." instead;
+	if x is an armament and carried of x is 1:
+		if x is wielded, say "You're wielding that, take it off first." instead;
+	else if x is an equipment and carried of x is 1:
+		if x is equipped, say "You're using that right now. Stop using it before you trash it." instead;
 
 carry out burninating something (called x):
-	if x is an armament or x is an equipment:
-		if (x is wielded or x is equipped) and carried of x < 2:
-			if x is an armament:
-				say "You're wielding that, take it off first.";
-			else:
-				say "You're using that right now. Stop using it before you drop it.";
-			continue the action;
 	ItemLoss x by 1;
 
 Understand the command "trashall" as something new.
@@ -453,34 +451,34 @@ understand "junkall [owned grab object]" as allburninating.
 check allburninating something (called x):
 	if x is journal, say "You really don't think that's a good idea." instead;
 	if x is not owned, say "You don't seem to be holding any." instead;
+	if x is an armament and carried of x is 1:
+		if x is wielded, say "You're wielding that, so you'd best stop using it first." instead;
+	else if x is an equipment and carried of x is 1:
+		if x is equipped, say "You're using that right now. You need to take it off to trash it." instead;
 
 carry out allburninating something (called x):
 	say "Do you wish to permanently trash all of the '[x]' you have?";
 	if Player consents:
+		LineBreak;
 		if x is an armament:
 			if x is wielded:
-				if carried of x is 1:
-					say "You're wielding that, so you'd best stop using it first.";
-				else:
-					say "You trash all of them but the [x] you're using. Bye-bye.";
-					ItemLoss x by (carried of x - 1) silently;
+				say "You trash all of them but the [x] you're using. Bye-bye.";
+				ItemLoss x by (carried of x - 1) silently;
 			else:
-				say "You trash them all. Bye-bye.";
+				say "You trash all of your [x]. Bye-bye.";
 				ItemLoss all x silently;
 		else if x is an equipment:
 			if x is equipped:
-				if carried of x is 1:
-					say "You're using that right now. You need to take it off to trash it.";
-				else:
-					say "You trash all of them but the [x] you're wearing. Bye-bye.";
-					ItemLoss x by (carried of x - 1) silently;
+				say "You trash all of them but the [x] you're wearing. Bye-bye.";
+				ItemLoss x by (carried of x - 1) silently;
 			else:
-				say "You trash them all. Bye-bye.";
+				say "You trash all of your [x]. Bye-bye.";
 				ItemLoss all x silently;
 		else:
-			say "You trash them all. Bye-bye.";
+			say "You trash all of your [x]. Bye-bye.";
 			ItemLoss all x silently;
 	else:
+		LineBreak;
 		say "You change your mind.";
 
 Section 3 - Dropping
@@ -493,37 +491,27 @@ understand "drop [owned grab object]" as littering.
 
 check littering something (called x):
 	if x is not owned, say "You don't seem to be holding that." instead;
+	if x is an armament and carried of x is 1:
+		if x is wielded, say "You're wielding that, take it off first." instead;
+	else if x is an equipment and carried of x is 1:
+		if x is equipped, say "You're using that right now. Stop using it before you drop it." instead;
 
 carry out littering something (called x):
-	if x is an armament or x is an equipment:
-		if (x is wielded or x is equipped) and carried of x < 2:
-			if x is an armament:
-				say "You're wielding that, take it off first.";
-			else:
-				say "You're using that right now. Stop using it before you drop it.";
-			continue the action;
 	repeat through table of game objects:
-		if printed name of x in lower case exactly matches the text Name entry in lower case:
+		if printed name of x exactly matches the text Name entry, case insensitively:
 			add Name entry to the invent of the Location of Player;
 			break;
 	ItemLoss x by 1;
 
-After reading a command:
-	if the player's command matches "drop all":
-		replace the player's command with "dropitall";
-	else if the player's command matches "drop everything":
-		replace the player's command with "dropitall";
-	else if the player's command includes "drop all ":
-		replace the matched text with "dropall ";
-
 masslittering is an action applying to one thing.
 
 Understand "dropall [owned grab object]" as masslittering.
+Understand "drop all [owned grab object]" as masslittering.
 
-To decide which action name is the action to be: (- action_to_be -).
+[To decide which action name is the action to be: (- action_to_be -).
 
 Rule for printing a parser error while the latest parser error is the can't see any such thing error and the action to be is the masslittering action:
-	say "You don't see that in your backpack.";
+	say "You don't see that in your backpack.";]
 
 check masslittering something (called x):
 	if x is wielded or x is equipped:
@@ -542,6 +530,7 @@ Carry out masslittering something (called x):
 criminallittering is an action applying to nothing.
 
 Understand "dropitall" as criminallittering.
+Understand "drop all/everything" as criminallittering.
 
 Carry out criminallittering:
 	let droptotal be 0;

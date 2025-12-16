@@ -18,8 +18,12 @@ to say infect:
 to say Give Awesome:
 	if a random number between 1 and 100 > 40:
 		ItemGain awesome fruit by 1;
-	if a random number between 1 and 100 > 40:
+		if a random number between 1 and 100 > 60:
+			ItemGain awesomer fruit by 1;
+	else if a random number between 1 and 100 > 40:
 		ItemGain awesomer fruit by 1;
+		if a random number between 1 and 100 > 60:
+			ItemGain awesome fruit by 1;
 	if a random number between 1 and 100 > 85:
 		ItemGain awesomest fruit by 1;
 
@@ -54,10 +58,10 @@ to say awesome defeat:
 		say "     You know you hesitated, you could not bring yourself to strike down another of the trees.";
 		if awesome bat is owned:
 			if awesome bat is weapon object of Player:
-				unwield awesome bat;
-			ItemLoss awesome bat by 1;
+				unwield awesome bat silently;
 			say "     Walking away, you get a sudden urge and dig a hole in some soft ground, pushing your bat in deeply. You can sense, with your most awesome senses, the wood taking root and beginning to grow.";
-			WaitLineBreak;
+			ItemLoss awesome bat by 1;
+			AttemptToWait;
 		say "     With good feelings coursing through you at your good deed, a warmth seems to spread from the core of awesome that the tree's fruit seems to have implanted into your being.";
 		infect;
 		now fightoutcome is 19;
@@ -67,8 +71,7 @@ to say awesome defeat:
 			say "     You drop to your knees, wailing, unable to live with yourself for how much awesome you have taken from the world. Rising to your feet, you pledge never to destroy another awesome tree so long as you live.";
 		else:
 			say "     With a start, you realize what you have done: you have ended a whole other kind of awesome in the world. Guiltily you walk away from the tree but promise you will find a way to atone for your sin.";
-		let x be a random number between 2 and 5;
-		repeat with Awesome_counter running from 1 to x:
+		repeat with Awesome_counter running from 1 to a random number between 2 and 5:
 			say "[Give Awesome]";
 
 
@@ -305,12 +308,11 @@ to say AwesomestFrScent:
 
 to say awesome bat proc:
 	choose row MonsterID from the Table of Random Critters;
-	if HP entry is 60:
-		if Name entry matches the text "Pod Person":
-			say "...[line break]Your bat resounds against the tree, causing the world itself to shake. The unstoppable force and the immovable object meet, however your strength behind the bat is the deciding factor";
-			now dam is 60;
-			now monsterHP is 0;
-			increase Awesome_noreward by 1;
+	if Name entry exactly matches the text "Pod Person":
+		say "...[line break]Your bat resounds against the tree, causing the world itself to shake. The unstoppable force and the immovable object meet, however your strength behind the bat is the deciding factor";
+		now dam is 60;
+		now monsterHP is 0;
+		increase Awesome_noreward by 1;
 
 [awesome bat moved to Core Mechanics/Weapons.i7x]
 
@@ -320,7 +322,7 @@ awesomest fruit has a Usedesc "[awesomest fruit use]".
 To say awesomest fruit use:
 	let omonster be MonsterID;
 	if Player is MalePreferred or Player is FemalePreferred:
-		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
+		say "     You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
 		repeat with Z running from 1 to number of rows in Table of Random Critters:
 			choose row Z from the Table of Random Critters;
@@ -330,7 +332,7 @@ To say awesomest fruit use:
 		now sex entry is "Both";
 		now Nipple Count entry is 2;
 		now Breast Size entry is 3;
-		say "You bite into the awesomest fruit!";
+		say "     You bite into the awesomest fruit!";
 		now loot entry is "awesomest fruit";
 		now Awesome_sex is 0;
 		now Awesome_forcesex is 1;
@@ -343,7 +345,7 @@ awesomer fruit has a Usedesc "[awesomer fruit use]".
 To say awesomer fruit use:
 	let omonster be MonsterID;
 	if Player is MalePreferred or Player is HermPreferred:
-		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
+		say "     You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
 		repeat with Z running from 1 to number of rows in Table of Random Critters:
 			choose row Z from the Table of Random Critters;
@@ -353,7 +355,7 @@ To say awesomer fruit use:
 		now sex entry is "Female";
 		now Nipple Count entry is 2;
 		now Breast Size entry is 3;
-		say "You bite into the awesomer fruit!";
+		say "     You bite into the awesomer fruit!";
 		now loot entry is "awesomer fruit";
 		now Awesome_sex is 1;
 		now Awesome_forcesex is 1;
@@ -366,7 +368,7 @@ awesome fruit has a Usedesc "[awesome fruit use]".
 To say awesome fruit use:
 	let omonster be MonsterID;
 	if Player is FemalePreferred or Player is HermPreferred:
-		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
+		say "     You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
 		repeat with Z running from 1 to number of rows in Table of Random Critters:
 			choose row Z from the Table of Random Critters;
@@ -376,7 +378,7 @@ To say awesome fruit use:
 		now sex entry is "Male";
 		now Nipple Count entry is 2;
 		now Breast Size entry is 0;
-		say "You bite into the awesome fruit!";
+		say "     You bite into the awesome fruit!";
 		now loot entry is "awesome fruit";
 		now Awesome_sex is 2;
 		now Awesome_forcesex is 1;

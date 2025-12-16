@@ -156,14 +156,10 @@ carry out graphicmoding:
 				now NewGraphicsRatio is calcnumber;
 				now the graphics window proportion is NewGraphicsRatio;
 				if NewGraphicsPosition is:
-					-- 0:
-						now graphics window position is g-right;
-					-- 1:
-						now graphics window position is g-left;
-					-- 2:
-						now graphics window position is g-above;
-					-- 3:
-						now graphics window position is g-below;
+					-- 0: now graphics window position is g-right;
+					-- 1: now graphics window position is g-left;
+					-- 2: now graphics window position is g-above;
+					-- 3: now graphics window position is g-below;
 
 
 Section 5 - Debug Commands - Not for release

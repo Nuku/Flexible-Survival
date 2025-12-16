@@ -1755,6 +1755,7 @@ Name(text)	Type(text)
 "hobo-libidosupp"	"truth state"
 "hobo-water-gift"	"truth state"
 "honeygiven"	"truth state"
+"hoodequipped"	"truth state"
 "houndfromhell"	"truth state"
 "hvoreoffer"	"truth state"
 "hydraheadregrowth"	"truth state"

@@ -25,10 +25,10 @@ to addAlcPoints (num - a number):
 
 an everyturn rule:
 	if Energy of Player > 0:
-		if Energy of Player is 1:
-			now PreviousAlcState is "None"; [reset message for Drinking State]
 		now Energy of Player is Energy of Player - 1; [sobering up slowly]
 		UpdateAlcStatus;
+		if Energy of Player is 0:
+			now PreviousAlcState is "None"; [reset message for Drinking State]
 
 to UpdateAlcStatus:
 	removeDrinkStatus; [removed to apply the new status]
@@ -70,7 +70,7 @@ to alcoholDeath:
 	wait for any key;
 	now battleground is "void";
 	trigger ending "Player has died";
-	end the story saying "[bold type]You have fallen to alcohol poisoning.[roman type]";
+	end the story saying "You have fallen to alcohol poisoning.";
 
 to AddDeliriousState:
 	if "Delirious" is not listed in Traits of Player:

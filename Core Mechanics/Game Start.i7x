@@ -108,22 +108,14 @@ To regularstart: [normal start method]
 				say "Invalid Entry. Pick from 0 to 13 or 97 to 99.";
 		LineBreak;
 		if calcnumber is:
-			-- 1:
-				playernaming;
-			-- 2:
-				newplayercustomizationmenu;
-			-- 3:
-				say "[gsopt_1]"; [Main Stat]
-			-- 4:
-				startFeatget;
-			-- 5:
-				startFunFeatget;
-			-- 6:
-				say "[gsopt_3]"; [Game Scenario]
-			-- 7:
-				say "[gsopt_4]"; [Difficulty Modes]
-			-- 8:
-				contentrestrictionmenu;
+			-- 1: playernaming;
+			-- 2: newplayercustomizationmenu;
+			-- 3: say "[gsopt_1]"; [Main Stat]
+			-- 4: startFeatget;
+			-- 5: startFunFeatget;
+			-- 6: say "[gsopt_3]"; [Game Scenario]
+			-- 7: say "[gsopt_4]"; [Difficulty Modes]
+			-- 8: contentrestrictionmenu;
 			-- 9:
 				if hypernull is 0:
 					now hypernull is 1;
@@ -273,14 +265,10 @@ to say gsopt_start:
 		now NewGraphicsRatio is calcnumber;
 		now the graphics window proportion is NewGraphicsRatio;
 		if NewGraphicsPosition is:
-			-- 0:
-				now graphics window position is g-right;
-			-- 1:
-				now graphics window position is g-left;
-			-- 2:
-				now graphics window position is g-above;
-			-- 3:
-				now graphics window position is g-below;
+			-- 0: now graphics window position is g-right;
+			-- 1: now graphics window position is g-left;
+			-- 2: now graphics window position is g-above;
+			-- 3: now graphics window position is g-below;
 		reconstruct graphics window;
 		clear the screen;
 	say "Want more details on the game and updates? ----- [bold type]https://blog.flexiblesurvival.com[roman type]  -----[line break][line break]";
@@ -343,15 +331,13 @@ to say gsopt_start:
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
-			now Description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now Description of Doctor Matt is "     A small recorder labeled 'Doctor Matt' remains abandoned.[line break]";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Deer":
-					now area entry is "Park";
-					break;
+			if there is a Name of "Deer" in Table of Random Critters:
+				choose a row with Name of "Deer" in Table of Random Critters;
+				now area entry is "Park";
 			increase score by 600;
 			extend game by 240;
 	if HardMode is true: [Hard mode alteration]
@@ -391,8 +377,8 @@ to say gsopt_start:
 		WaitLineBreak;
 		say "     Looking up from the puddle you realize that you managed to find your way to what you think will be safety, an old bunker located under a library. Once upon a time it was an abbey but was renovated into a library. You remember seeing that stupid bunker sign for years, you never thought it would actually come in handy, but now that the shit hit the fan, you find that you are actually happy, overjoyed even to see that sign and the safety it promotes. You make your way up to the library entrance, almost the happiest you've ever been as you open one of the dual doors and enter. As you enter the library, you find that it looks very much intact, no signs of damage or habitation by crazed infected. Moving inwards and taking a few steps, you notice a shadowy figure lurking amidst the bookshelves. You can feel what could only be described as terror charging down your spine as you realize that it is a feral wolf much like the ones you just got done fleeing from. Instinct taking over, your legs moving to the ready, your back and tail up, your face twisted as you growl. Your opponent responds in kind, growling and barking in much the same manner, their stance showing they have no intention of backing down or retreating.";
 		say "     Both you and the stranger start circling each other, sizing each other up and looking for potential openings. The tension is so thick between the two of you, it could be cut with a knife. Any mistake could lead to being completely defeated, with that in mind, you meet them head on. A fury of claws and teeth, scratching and biting, tackles and barrel rolls, neither side giving an inch, as both of you battle for the bunker. Eventually though, one must win, and the other will have lost.";
-		say "     [bold type]By the time the dust clears, who has won?[roman type][line break]";
 		LineBreak;
+		say "     [bold type]By the time the dust clears, who has won?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - You lost completely. The wolf is now your Alpha.";
 		say "     [link](2)[as]2[end link] - You won. Barely. The wolf answers to you. At least for now...";
 		say "     [link](3)[as]3[end link] - Your victory was convincing. The wolf must accept its place as your Omega.";
@@ -412,7 +398,6 @@ to say gsopt_start:
 		else if calcnumber is 3: [Omega Fang]
 			now HP of Fang is 2;
 		say "     [bold type]It is only after the battle is over that you have time to see what sex they are. After a quick look you see that they are...[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Male.";
 		say "     ([link]N[as]n[end link]) - Female.";
 		if Player consents: [Male Fang]
@@ -479,7 +464,6 @@ to say gsopt_start:
 				now PenileVirgin of Fang is true;
 			SetFemalePronouns for Fang;
 		say "     [bold type]Is the victory consummated with sex?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents: [Sex]
@@ -666,14 +650,10 @@ to say silent_start:
 	if NewGraphics is true: [Defined when play begins below, but MUST be here to alter the view when restoring from the menu]
 		now the graphics window proportion is NewGraphicsRatio;
 		if NewGraphicsPosition is:
-			-- 0:
-				now graphics window position is g-right;
-			-- 1:
-				now graphics window position is g-left;
-			-- 2:
-				now graphics window position is g-above;
-			-- 3:
-				now graphics window position is g-below;
+			-- 0: now graphics window position is g-right;
+			-- 1: now graphics window position is g-left;
+			-- 2: now graphics window position is g-above;
+			-- 3: now graphics window position is g-below;
 		reconstruct graphics window;
 		[now the graphics window pixel count is 1;]
 		follow the ngraphics_blank rule;
@@ -735,15 +715,13 @@ to say silent_start:
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
-			now Description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now Description of Doctor Matt is "     A small recorder labeled 'Doctor Matt' remains abandoned.[line break]";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Deer":
-					now area entry is "Park";
-					break;
+			if there is a Name of "Deer" in Table of Random Critters:
+				choose a row with Name of "Deer" in Table of Random Critters;
+				now area entry is "Park";
 			increase score by 600;
 			extend game by 240;
 	if HardMode is true: [Hard mode alteration]
@@ -1053,12 +1031,12 @@ to startgenderlockget:
 		now Breast Size of Player is 0;
 	else if GenderLock is 8:
 		say "Locked to flat-chested male or trans-male.";
-		if StartingGender < 5:
-			add "Single Sexed" to feats of Player;
 		if StartingGender is odd: [male, trans-woman, male herm]
 			add "Always Cocky" to feats of Player;
 		else: [female, trans-man, female herm]
 			add "Always A Pussy" to feats of Player;
+		if StartingGender < 5:
+			add "Single Sexed" to feats of Player;
 		add "Flat Chested" to feats of Player;
 		now Breast Size of Player is 0;
 
@@ -1268,7 +1246,7 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 				if clearnomore is 0:
 					clear the screen;
 					say "Select a basic feat. This represents a skill or innate ability you have.";
-			else if Playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+			else if calcnumber is 0:
 				say "Selection aborted.";
 				continue the action;
 			else:
@@ -1304,7 +1282,7 @@ To startFunFeatget: [alternate funfeatget used for start]
 				if clearnomore is 0:
 					clear the screen;
 					say "Select a fun feat. This represents some strange quirk or effect induced by the nanites.";
-			else if Playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+			else if calcnumber is 0:
 				say "Selection aborted.";
 				continue the action;
 			else:

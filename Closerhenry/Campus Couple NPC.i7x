@@ -81,7 +81,7 @@ Sterile of Jadako is true. [steriles can't knock people up]
 MainInfection of Jadako is "".
 Description of Jadako is "[jadakodesc]".
 Conversation of Jadako is { "<This is nothing but a placeholder!>" }.
-Scent of Jadako is "The lithe feline smells of exotic cologne, covering a heavy scent of sex and sweat.".
+Scent of Jadako is "     The lithe feline smells of exotic cologne, covering a heavy scent of sex and sweat.".
 
 To say jadakodesc:
 	say "     Jadako is an anthro feline. His fur has a variety of different colors, mostly oranges, blacks, and whites. His large cat ears stand straight up, with a single piercing in his left ear. His frame is thin and wiry, but not without muscle. He wears no clothes, displaying his sheathed cock and long tail. You can't currently see it, but you know it is a bright red shaft, humanoid looking but covered in smooth barbs. His golfball sized testicles hang below the sheath, covered in his orange fur. Jadako notices you checking him out, as he flexes and performs a couple of poses to show off his body more. He lets out a smooth purr, clearly enjoying the attention.";
@@ -128,7 +128,7 @@ Sterile of Joseph is true. [steriles can't knock people up]
 MainInfection of Joseph is "".
 Description of Joseph is "[josephdesc]".
 Conversation of Joseph is { "<This is nothing but a placeholder!>" }.
-Scent of Joseph is "The bulky canine smells of sweat and potent male musk.".
+Scent of Joseph is "     The bulky canine smells of sweat and potent male musk.".
 
 To say josephdesc:
 	say "     Joseph is an anthro canine. He has shaggy brown fur covering his body, uniform in color. Stemming from the sides of his head are floppy canine ears. The man is muscular and bulky, without a single hint of fat. His thighs are thick with muscle, showing how much he works out. The coach wears his official jacket, colored a bright green with gold colored cuffs, zipper collar, and a gold [']W['] on the back, most likely standing for Weber. He also wears a pair of short, black athletic shorts which go down a little more than halfway down his thighs. A small hole is cut in the back for Joseph's fluffy tail. You can see a large bulge in his shorts however, which seems to occasionally twitch. Looking up, you see Joseph staring at Jadako's bare ass, tail raised up. Joseph sees that you notice, and looks away with embarrassment.";
@@ -140,11 +140,11 @@ Instead of conversing the Jadako:
 		say "     ERROR: Jadako shouldn't be where a player can see him yet and said player should not be able to be in the Jadako's Room! Please report to Closerhenry on the FS Discord and quote this tracking number for easier bugfixing: [CampusCoupleRelationship]";
 	else:
 		say "     You approach the colorful feline, who places his hand on his hip and stands waiting.";
-		AttemptToWait;
+		LineBreak;
 		say "[JadakoTalkMenu]";
 
 to say JadakoTalkMenu:
-	say "What do you want to talk with Jadako about?";
+	say "     What do you want to talk with Jadako about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -186,13 +186,14 @@ to say JadakoTalkMenu:
 				else if (nam is "Sports"):
 					say "[JadakoTalk3]";
 				wait for any key;
+				say "[JadakoTalkMenu]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from Jadako, who looks at you a little funny. 'OK, nevermind, I guess?' he questions.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JadakoTalk1:
@@ -209,11 +210,11 @@ Instead of conversing the Joseph:
 		say "     ERROR: Joseph shouldn't be where a player can see him yet and said player should not be able to be in the Jadako's Room! Please report to Closerhenry on the FS Discord and quote this tracking number for easier bugfixing: [CampusCoupleRelationship]";
 	else:
 		say "     You approach the muscular canine, who looks at you warmly. 'Is there something you want to talk about?'";
-		AttemptToWait;
+		LineBreak;
 		say "[JosephTalkMenu]";
 
 to say JosephTalkMenu:
-	say "What do you want to talk with Joseph about?";
+	say "     What do you want to talk with Joseph about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -255,13 +256,14 @@ to say JosephTalkMenu:
 				else if (nam is "Sports"):
 					say "[JosephTalk3]";
 				wait for any key;
+				say "[JosephTalkMenu]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from Joseph. He gives you a humorous look, before saying, 'If there's anything you need to talk about, I'm all ears.'";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JosephTalk1:
@@ -280,7 +282,7 @@ Instead of fucking the Jadako:
 		say "     'Hey, sorry to be a bummer, but I'm not really up to it right now... maybe later? Sorry, I'm still a bit worn out from last time,' Jadako sighs.";
 	else:
 		say "     You ask Jadako how he and Joseph feel about going for a round, who both agree they're up for it.";
-		AttemptToWait;
+		LineBreak;
 		say "[CampusCoupleSexMenu]";
 
 Instead of fucking the Joseph:
@@ -288,7 +290,7 @@ Instead of fucking the Joseph:
 		say "     'Sorry to disappoint, but Jadako is still recovering. You can wait until he's ready, right?' he asks, turning you down.";
 	else:
 		say "     You ask Joseph how he and Jadako feel about going for a round, who both agree they're up for it.";
-		AttemptToWait;
+		LineBreak;
 		say "[CampusCoupleSexMenu]";
 
 to say CampusCoupleSexMenu:
@@ -340,7 +342,7 @@ to say CampusCoupleSexMenu:
 			say "     You change your mind, deciding now isn't a good time. The two understand, since they can always fuck each other later.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say CampusCoupleSex1:
@@ -352,15 +354,15 @@ to say CampusCoupleSex1:
 	WaitLineBreak;
 	say "     Meanwhile, Jadako's teeth are gritted as he throat fucks you. His soft movements have accelerated into passionate thrusts. The coach lets out a loud moan as he finally rams all the way into you, his knot popping into your hole as he orgasms. You can feel warmth spread through you as his cock throbs. Simultaneously, Jadako cums as well, his cock twitching as he sends a stream of his warm feline spunk down your throat. Swallowing it all, the dual orgasms send you off as well[if Player is male], your cock shooting off ropes of cum below you, spraying right onto the cushions. Your prostate explodes with pleasure as it is sprayed directly with Joseph's cum, your ass hungrily milking his canine tool for more of that intoxicating seed[else if Player is female]. Your pussy throbs with ecstasy as you orgasm, the muscles in your vagina contracting around your fingers[end if].";
 	say "     Jadako slides his cock out of your mouth, sighing with contentment. Joseph's cock remains rock hard, knotted inside of you. It gives the occasional twitch, which only enhances the experience. He bends over you, resting his large bulky body on your back, the warmth from his fur feeling wonderful. 'You did such a great job,' he whispers to you as he wraps his arms around your chest. The meaty arms make you feel so... protected, as the canine rests on you. 'Let's move to somewhere more comfortable,' the hound suggests, as he straightens back up. Not waiting for you, he lifts you up effortlessly, carrying you while still attached via his knot. He brings you to Jadako's bed, and lays the two of you down on it. His cock in your backside, he spoons you with his arms wrapped around you, serving as a warm blanket. Jadako lays behind his coach, creating a spoon train as you all cuddle together on the bed, covered in sexual fluids, until you fall asleep.";
-	WaitLineBreak;
-	say "     You eventually wake up, still being spooned by the muscular coach, but you notice his cock is no longer inside of you. He must have taken it out at some point while you were asleep. Joseph notices you stirring, and he gently rubs your face. 'Waking up?' he asks softly. You yawn, stretching your arms. 'Well, I'm glad you had a great time. We certainly had a great time...' the canine rumbles. He sits up and leaves the bed, grabbing his athletic shorts and jacket. Coach Weber dresses himself, and sits down beside Jadako on the sofa, who was reading a book. You exit the bed, dress, and grab your stuff, prepared to head off.";
 	NPCSexAftermath Player receives "OralCock" from Jadako;
 	NPCSexAftermath Player receives "AssFuck" from Joseph;
+	WaitLineBreak;
+	say "     You eventually wake up, still being spooned by the muscular coach, but you notice his cock is no longer inside of you. He must have taken it out at some point while you were asleep. Joseph notices you stirring, and he gently rubs your face. 'Waking up?' he asks softly. You yawn, stretching your arms. 'Well, I'm glad you had a great time. We certainly had a great time...' the canine rumbles. He sits up and leaves the bed, grabbing his athletic shorts and jacket. Coach Weber dresses himself, and sits down beside Jadako on the sofa, who was reading a book. You exit the bed, dress, and grab your stuff, prepared to head off.";
 
 to say CampusCoupleSex2:
 	say "     You ask Joseph if he would be okay with sharing his boy toy, Jadako. He murmurs his approval, asking which side you want to take.";
-	say "     [bold type]Which side of Jadako do you take?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Which side of Jadako do you take?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Give Jadako a good old face-fuck.";
 	say "     ([link]N[as]n[end link]) - Take Jadako's back hole for yourself.";
 	if Player consents:
@@ -370,10 +372,10 @@ to say CampusCoupleSex2:
 		WaitLineBreak;
 		say "     You two both fuck the lusty feline, enjoying every thrust into the wanting student. With every thrust, you feel the texture of Jadako's mouth all around your shaft. Jadako continues to moan around your cock. It isn't too long before both of you begin getting more frantic with your thrusts, growing closer to orgasm. Jadako releases your thigh, and begins stroking himself as he looks up at you with half closed eyes. His look arouses you further, and you begin thrusting even faster. Joseph violently thrusts into the feline over and over, firmly grasping his lover's rump. He lets out a grunt with every thrust. 'Jay, I -unf- see you've been doing your flexibility training... Good -ungh- job!' he growls.";
 		say "     A pressure grows in your cock, signaling to you that you're about to cum. You thrust forward one last time, as you begin unloading your seed into Jadako's throat. He greedily drinks every drop, not a single bit leaving his mouth. Behind him, Joseph howls as he pushes his knot into the feline, coating the feline student's inside with layers of his virile cum. Jadako is set off by this, as he begins to orgasm as well. His cock shoots off, sending ropes of his seed onto the coffee table, and his ass clenches around his coach's cock and knot. You pull out of the cat's mouth, allowing Jadako to breathe easier. 'That... was the best orgasm of my life,' he breathes. Joseph lifts up the feline, still knotted to his cock, and cuddles him in his arms. 'You did a great job, Jay... I'm really proud of you.' The two kiss passionately, and move to the bed where they cuddle while waiting for the knot to soften.";
-		WaitLineBreak;
-		say "     You join the two on the bed, laying behind Joseph. You wrap your arms around the stud, appreciating the warmth he grants and his male musk. His solid frame proves easy to hold and makes you feel safe. Your hands explore the coach's body, delicately feeling his defined muscles and soft but ragged brown fur. You all three lay there, for what seems like hours, until finally Joseph pulls out of Jadako with a pop. You and Joseph redress, and you gather your belongings.";
 		NPCSexAftermath Jadako receives "OralCock" from Player;
 		NPCSexAftermath Jadako receives "AssFuck" from Joseph;
+		WaitLineBreak;
+		say "     You join the two on the bed, laying behind Joseph. You wrap your arms around the stud, appreciating the warmth he grants and his male musk. His solid frame proves easy to hold and makes you feel safe. Your hands explore the coach's body, delicately feeling his defined muscles and soft but ragged brown fur. You all three lay there, for what seems like hours, until finally Joseph pulls out of Jadako with a pop. You and Joseph redress, and you gather your belongings.";
 	else:
 		LineBreak;
 		say "     You say that you'll take Jadako's ass. 'Fantastic, I've been waiting for something like this. Two hot guys going at me? A dream come true,' the feline says with enthusiasm. He opens a nearby drawer and tosses a bottle of lube to you. You quickly undress with Joseph while Jadako positions himself on a short coffee table, the perfect height to take both you and Joseph at the same time. You pour some of the lube on your hand and slather it on your cock, getting it nice and slippery. You then kneel down before Jadako's hole and bring your mouth to it. The warm breath coming from your mouth causes the feline to shiver, and his hole to clench. You bring your tongue to the hole, and softly lap at it. Jadako gasps when your tongue touches his pucker as you slowly trail your tongue around his hole. It tastes of musk, and it isn't long before you push further inside. His hole is loose and waiting, and you don't have a hard time at all navigating your tongue through his passage. It appears that Jadako uses those toys of his pretty often, judging by just how loose he is.";
@@ -381,10 +383,10 @@ to say CampusCoupleSex2:
 		WaitLineBreak;
 		say "     The cat's ass feels heavenly on your rod, massaging it expertly every second you are inside of him. The student clearly has had a lot of practice, maybe even before the apocalypse began. You run your hands up and down his thighs, appreciating the musculature on the lithe athlete. His fur feels wonderful to stroke, and its beautiful black, orange, and white colors are pleasing to the eyes. The room quickly smells of your sex, and the sounds of Jadako moaning and the wet sounds of sex echo throughout. With the window open, you're sure anyone passing by would hear your romp, but the thought only arouses you further. Joseph has his hands on Jadako's head, throatfucking the student with his eyes closed and teeth clenched. It would seem he's getting close to orgasm, and you are as well. You quicken your thrusts into the well lubricated cat's passage, the wet feeling surrounding your cock bringing you further and further to climax.";
 		say "     Pressure builds in your cock and your balls churn. You thrust forward one last time, and begin shooting off ropes of your seed into Jadako's rear, painting his insides white with your cum. Joseph is set off as well, letting out a growl as he pulls his head back and his cock out of Jadako's muzzle, shooting loads of his virile spunk onto the top of Jadako's head. The feline groans with pleasure as the sensations are too much for him, and his feline cock begins to cum as well, shooting off onto the coffee table below him. Joseph keeps cumming and cumming onto the feline's head, his dick twitching and knot swollen heavily as it spurts out more and more cum. The feline raises a hand and grabs a handful to rub into his chest, covering him with the coach's scent. Finally, all of you settle down, your orgasms over.";
-		WaitLineBreak;
-		say "     Jadako removes himself from the table, and Joseph hugs him amorously. You lay down on the bed, spent, and Jadako lays behind you, wrapping his thin furred arms around you. He sticks one leg under your legs, and one over, clutching to you tightly. The feline straddles your back, rubbing his wet cheek against your neck. He lets out a purr as his hands make their way to your nipples as he begins to gently play with them. Joseph flops down in front of you, perfectly positioned for you to wrap around him as well, resting your dick against his fluffy rear. You rest your face on his muscular back, rubbing up against his soft fur. Your hands rub against his well-toned chest, his pecks easily feelable. You rest there, sandwiched by the two lovely furs, until you fall asleep. You dream of being fucked by the two endlessly, until you eventually awaken in the bed alone. Both Jadako and Joseph rest on the sofa, cuddling while reading a book.";
 		NPCSexAftermath Jadako receives "OralCock" from Joseph;
 		NPCSexAftermath Jadako receives "AssFuck" from Player;
+		WaitLineBreak;
+		say "     Jadako removes himself from the table, and Joseph hugs him amorously. You lay down on the bed, spent, and Jadako lays behind you, wrapping his thin furred arms around you. He sticks one leg under your legs, and one over, clutching to you tightly. The feline straddles your back, rubbing his wet cheek against your neck. He lets out a purr as his hands make their way to your nipples as he begins to gently play with them. Joseph flops down in front of you, perfectly positioned for you to wrap around him as well, resting your dick against his fluffy rear. You rest your face on his muscular back, rubbing up against his soft fur. Your hands rub against his well-toned chest, his pecks easily feelable. You rest there, sandwiched by the two lovely furs, until you fall asleep. You dream of being fucked by the two endlessly, until you eventually awaken in the bed alone. Both Jadako and Joseph rest on the sofa, cuddling while reading a book.";
 
 to say CampusCoupleSex3:
 	say "     You request that the couple let you service them, giving their cocks the attention they deserve. The two agree, and both you and Joseph strip yourselves. The lovers stand close together as you kneel before them, their cocks quickly hardening. Jadako's is a slightly deep pink and is covered in feline barbs, but has a modest size. Joseph's, however, is a different beast. His thick canine dick is a bright red, and looks nearly a foot long. At the base of his shaft is his knot, already slightly swollen. You bring your hands up to their ballsacks, fondling them both lightly. Jadako's are the size of golfballs, and easily fit in your hands. Jadako lets out a purr as you massage his small orbs. The canine's testicles are much larger, however. They are as big as oranges, and throb with need. You have a hard time holding them in one hand as you try to lightly rub them. Bits of pre are already emerging from the duo's cocks, and the smell of male musk arouses you greatly.";
@@ -392,13 +394,13 @@ to say CampusCoupleSex3:
 	WaitLineBreak;
 	say "     Done warming up, you take your mouth off of Jadako's cock. You ready yourself as you grab both shafts, bringing them together. You rub them together, licking and tickling them to stimulate them further. One in each hand, you jerk them off simultaneously, breathing deeply on them. The two continue to make out as you jack them off, clearly enjoying the attention. The two throb with greater intensity, both spewing pre. You continue to pump, knowing they're approaching their limit, as they both break their kiss to let out a moan as they both orgasm. Their cocks begin shooting off ropes of ivory cum, coating your face. You let the seed spatter all over your face and chest, enjoying the delightful cum bath. The warmth of their combined seed, as well as its smell, is too much for you, and you [if Player is male]bring your hands to your own cock, using their cum as lube to rapidly pump yourself, desperate to get off[else if Player is female]begin rapidly fingering your pussy, the feeling of these two virile males coating you in their seed driving you crazy[else]tweak your nipples to get what enjoyment you can[end if].";
 	say "     The two finish their orgasms, looking down at you covered in their cum. Jadako kneels down, and begins to lick your face, relishing the taste of his and Joseph's cum mixture. He gently pushes you to lay down, as he rests over you to lick you clean. Meanwhile, Joseph also gets down behind Jadako, and brings his mouth to your [if Player is male][Cock of Player] cock, letting out a warm breath onto it. He begins to slowly lick it as you relax and let the two help you get off now. The coach places his muzzle around your mouth, and begins slurping your cock gently. The feeling of the coach's blowjob and Jadako softly cleaning you, along with the smell of their seed marking you, is just too much, as you let out a grunt and cum into the coach's mouth[else if Player is female]wet vagina, and gently begins lapping at its folds. The feeling of his tongue inside sends shivers down your spine. The combination of the two's musk, the cum bath you just received, and Jadako's gentle lapping sends you over the edge as your pussy quakes with pleasure[else]anus, and begins to softly lap at your hole. The combination of the two's musk, the cum bath you just received, and Jadako's gentle lapping sends you over the edge as your anus begins to clench, your body quaking with pleasure[end if].";
-	WaitLineBreak;
-	say "     Finished getting you off, Joseph lifts Jadako off of you, and lays the two of them on the bed. You join the two, spooning Coach Weber, still covered in the two's cum. You three all relax in the afterglow, cuddling up with each other. Joseph's soft fur and muscular figure make him great to spoon, his solid frame easy to hold onto. The warmth makes you drowsy, as you eventually fall asleep. After waking, you find the now-dressed coach and Jadako on the sofa, cuddling amorously. You get up, dress, and gather your belongings.";
 	if Player is male:
 		NPCSexAftermath Joseph receives "OralCock" from Player;
 	else if Player is female:
 		NPCSexAftermath Joseph receives "OralPussy" from Player;
 	NPCSexAftermath Player receives "OralCock" from Joseph;
 	NPCSexAftermath Player receives "OralCock" from Jadako;
+	WaitLineBreak;
+	say "     Finished getting you off, Joseph lifts Jadako off of you, and lays the two of them on the bed. You join the two, spooning Coach Weber, still covered in the two's cum. You three all relax in the afterglow, cuddling up with each other. Joseph's soft fur and muscular figure make him great to spoon, his solid frame easy to hold onto. The warmth makes you drowsy, as you eventually fall asleep. After waking, you find the now-dressed coach and Jadako on the sofa, cuddling amorously. You get up, dress, and gather your belongings.";
 
 Campus Couple NPC ends here.

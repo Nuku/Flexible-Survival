@@ -23,34 +23,35 @@ check resting:
 	if location of Player is PALOMINO Dance Club or location of Player is Private Booths:
 		say "Why are you even trying to sleep here? Everyone's partying like it's the end of the world.";
 		stop the action;
-	if cot is owned:
-		say "You pull out your cot and lay it out before resting for a while.";
+	if silk hammock is owned or silk hammock is present:
+		say "You set up your silken hammock at the next appropriate spot and lie in it, resting for a while";
+	else if cot is owned:
+		say "You pull out your cot and lay it out before resting for a while";
 	else if cot is present:
-		say "You rest on the cot.";
+		say "You rest on the cot";
 	else if Player is in Bunker or Player is in Police Lockerroom:
-		say "You rest on one of the cots available.";
+		say "You rest on one of the cots available";
 	else if the player is in Slave Cell 1 or player is in Slave Cell 2:
-		say "You rest on the bed in the back of the cell.";
-	else if silk hammock is owned or silk hammock is present:
-		say "You set up your silken hammock at the next appropriate spot and lie in it, resting for a while.";
+		say "You rest on the bed in the back of the cell";
 	else if sleeping bag is owned or sleeping bag is present:
-		say "You roll out the sleeping bag in an appropriate spot and lie in it, resting for a while.";
+		say "You roll out the sleeping bag in an appropriate spot and lie in it, resting for a while";
 	else if "Roughing It" is listed in feats of Player:
-		say "You hunker down somewhere secluded for a quick nap.";
+		say "You hunker down somewhere secluded for a quick nap";
 		now roughing is true;
 	else:
 		say "You have nothing to rest on.";
 		stop the action;
 	if rubber tigress companion is not listed in companionList of Player:
-		if ( there is a dangerous door in the location of the player or the location of Player is fasttravel or the earea of location of Player is not "void") and location of Player is not sleepsafe:
-			now battleground is "Outside"; [standard setting]
-			if the earea of location of Player is not "void":
+		say "...";
+		if (there is a dangerous door in the location of the player or the location of Player is fasttravel or the earea of location of Player is not "void") and location of Player is not sleepsafe:
+			let l be a random visible dangerous door;
+			if l is not nothing:
+				now battleground is the marea of l;
+			else if the earea of location of Player is not "void":
 				now battleground is the earea of location of Player;
 			else:
-				let l be a random visible dangerous door;
-				if l is not nothing, now battleground is the marea of l;
-			say "...";
-			WaitLineBreak;
+				now battleground is "Outside"; [standard setting]
+			AttemptToWait;
 			let intodds be 3;
 			if "Bad Luck" is listed in feats of Player, increase intodds by 1;
 			if a random chance of intodds in 20 succeeds:
@@ -61,6 +62,8 @@ check resting:
 				say "...and you thankfully complete your nap in peace.";
 		else if roughing is true:
 			say "You are thankfully able to complete your nap in peace.";
+	else:
+		say ".";
 
 carry out resting:
 	if "Player_Breeding_Dom" is listed in Traits of Urik and lastfuck of Urik - turns > 2 and a random chance of 2 in 3 succeeds and ((Urik is collected and Player is collected) or (orc supersized breeder is listed in companionList of Player)):
@@ -85,13 +88,18 @@ to Rest:
 	let num1 be MaxHP of Player divided by 4;
 	let num2 be ( ( Stamina of Player * 3 ) / 2 ) + Level of Player;
 	if (cot is owned or cot is present) or (silk hammock is owned or silk hammock is present) or (player is booked or player is bunkered):
-		if num1 >= num2, increase HP of Player by num1; [best value chosen]
-		if num2 > num1, increase HP of Player by num2;
+		if num2 > num1: [best value chosen]
+			increase HP of Player by num2;
+		else:
+			increase HP of Player by num1;
 	else if "Roughing It" is listed in feats of Player:
 		increase HP of Player by ( num1 + num2 ) / 2; [average value chosen]
 	else: [accessible only when events induce resting]
-		if num1 <= num2, increase HP of Player by num1; [lowest value chosen]
-		if num2 < num1, increase HP of Player by num2;
+		if num2 < num1: [lowest value chosen]
+			increase HP of Player by num2;
+		else:
+			increase HP of Player by num1;
+	if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 	if Terminatorsleep is false:
 		if Sleeptimercount >= 10: [Player is on the brink of collapse, sleeping for just one turn isn't going to fix them]
 			if silk hammock is owned or silk hammock is present:
@@ -100,12 +108,12 @@ to Rest:
 				decrease Sleeptimercount by 5;
 		else if Sleeptimercount <= 9: [Player is tired, and will wake up refreshed with the well rested feat.]
 			if silk hammock is owned or silk hammock is present:
-				now Sleeptimercount is -2;
+				now Sleeptimercount is -3;
 			else: [Turnpass rule fires immediately after this and adds 1 to each, so it becomes -1 and 0.]
-				now Sleeptimercount is -1;
+				now Sleeptimercount is -2;
 			if "Well Rested" is not listed in feats of Player:
 				FeatGain "Well Rested";
-				say "     Well Rested - All stats increased by 2!";
+				say "     You wake refreshed after a good rest. All stats increased by 2!";
 				StatChange "Strength" by 2 silently;
 				StatChange "Dexterity" by 2 silently;
 				StatChange "Stamina" by 2 silently;
@@ -131,7 +139,7 @@ an everyturn rule:
 		if "Well Rested" is listed in feats of Player: [They have slept recently, reduce/remove feat.]
 			if WellRestedTimer <= 0:
 				FeatLoss "Well Rested";
-				say "     It has been a while since you last rested and any benefit you gained from it is now gone. You have lost the 'Well Rested' Feat, and all stats have decreased by 2 as a result.";
+				say "     It has been a while since you last rested and any benefit you gained from it is now gone. You have lost the 'Well Rested' feat, and all stats have decreased by 2 as a result.";
 				StatChange "Strength" by -2 silently;
 				StatChange "Dexterity" by -2 silently;
 				StatChange "Stamina" by -2 silently;
@@ -144,32 +152,32 @@ an everyturn rule:
 			if Sleeptimercount >= 12: [Player MUST sleep]
 				let randomnumber be a random number from 1 to 2;
 				if randomnumber is 1:
-					say "     Your sluggish body barely responds to your commands, and you can barely think straight with your weary mind. You don't even know how or when you had ended up on the floor. Darkness creeps up on your vision until you finally pass out from exhaustion.";
+					say "Your sluggish body barely responds to your commands, and you can barely think straight with your weary mind. You don't even know how or when you had ended up on the floor. Darkness creeps up on your vision until you finally pass out from exhaustion.";
 				if randomnumber is 2:
-					say "     You have been awake for too long and haven't had enough sleep, you thought you could tough it out but it all catches up to you. Collapsing to the ground, you fall asleep where you stand.";
+					say "You have been awake for too long and haven't had enough sleep, you thought you could tough it out but it all catches up to you. Collapsing to the ground, you fall asleep where you stand.";
 				now Sleeptimercount is 3;
 				follow the turnpass rule;
 				follow the turnpass rule; [Doing this twice adds 2 to sleeptimer count, making sleeptimer up to 5.]
-				say "     When you wake up you still feel tired, looking at the sky it looks like 6 hours have passed.";
+				say "When you wake up you still feel tired, looking at the sky it looks like 6 hours have passed.";
 			else if Sleeptimercount <= 11 and Sleeptimercount >= 6: [Player is getting tired, 6 turns = 18 hours]
 				let randomnumber be a random number from 1 to 2;
 				if Sleeptimercount is 11:
-					say "     Your reflexes are starting to slow and you are struggling to stay awake, maybe you should get some rest before you collapse.";
+					say "Your reflexes are starting to slow and you are struggling to stay awake, maybe you should get some rest before you collapse.";
 				else if Sleeptimercount is 10:
 					if randomnumber is 1:
-						say "     You stifle a yawn and stretch a bit, being awake for so long is really taking a toll on you.";
+						say "You stifle a yawn and stretch a bit, being awake for so long is really taking a toll on you.";
 					else:
-						say "     You are exhausted and nearing your limits. You really should get some rest before you collapse.";
+						say "You are exhausted and nearing your limits. You really should get some rest before you collapse.";
 				else if Sleeptimercount is 9:
 					if randomnumber is 1:
-						say "     You are starting to feel weary after a day's worth of exploring. Perhaps you should take a nap.";
+						say "You are starting to feel weary after a day's worth of exploring. Perhaps you should take a nap.";
 					else:
-						say "     While taking a break for a second your eyes slowly close. A noise nearby quickly startles you and you look around, before you realize you almost fell asleep.";
+						say "While taking a break for a second your eyes slowly close. A noise nearby quickly startles you and you look around, before you realize you almost fell asleep.";
 				else if Sleeptimercount is 6:
 					if randomnumber is 1:
-						say "     You slow for a second and yawn, maybe you should rest for a while?";
+						say "You slow for a second and yawn, maybe you should rest for a while?";
 					else:
-						say "     A yawn escapes you, reminding you of your weariness after a day's worth of exploring. Perhaps you should take a nap.";
+						say "A yawn escapes you, reminding you of your weariness after a day's worth of exploring. Perhaps you should take a nap.";
 			increase Sleeptimercount by 1;
 
 Rest ends here.

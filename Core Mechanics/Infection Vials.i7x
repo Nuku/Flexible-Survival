@@ -125,9 +125,9 @@ understand "vial inventory/inv" as VialInventorying.
 
 check VialInventorying:
 	if scenario is not "Researcher" and nanitemeter is 0:
-		say "     You don't possess anything of that nature." instead;
+		say "You don't possess anything of that nature." instead;
 	if number of filled rows in Table of OwnedVials is 0:
-		say "     Your collection of infection vials is empty." instead;
+		say "Your collection of infection vials is empty." instead;
 
 carry out VialInventorying:
 	say "Your infection vial collection consists of:[line break]";
@@ -186,7 +186,7 @@ carry out vialing:
 					break;
 			break;
 	if found is 0:
-		say "     You don't seem to have any such vial.";
+		say "You don't seem to have any such vial.";
 
 to deletevial (x - text):	[removes 1 vial of a given type from the player's inventory]
 	VialLoss x by 1;
@@ -220,11 +220,11 @@ understand "vialeverythingdrop" as VialEverythingDropping.
 VialEverythingDropping is an action applying to nothing.
 
 Check VialEverythingDropping:
-	if the number of filled rows in the Table of OwnedVials is 0, say "     You don't even have any vials!" instead;
+	if the number of filled rows in the Table of OwnedVials is 0, say "You don't even have any vials!" instead;
 
 Carry out VialEverythingDropping:
-	say "     [bold type]Do you really want to destroy all vials you have?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Do you really want to destroy all vials you have?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes, out with this junk!";
 	say "     ([link]N[as]n[end link]) - Err, on second thought...";
 	if Player consents:

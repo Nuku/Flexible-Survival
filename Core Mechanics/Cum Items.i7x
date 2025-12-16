@@ -483,7 +483,7 @@ Strain of Champion's cum is "Ipotane".
 Usedesc of Champion's cum is "[Champion's cum use]".
 
 to say Champion's cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	if HP of Best Pony >= 1:
 		decrease gestation of child by a random number from 3 to 5;
@@ -2438,7 +2438,7 @@ Strain of Onna Uma Cum is "Onna Uma".
 Usedesc of Onna Uma Cum is "[Onna Uma cum use]".
 
 to say Onna Uma cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
@@ -3676,8 +3676,7 @@ to say felinoid cum use:
 	PlayerDrink 5;
 	PlayerEat 5;
 
-instead of sniffing felinoid cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty with a hint of mint.";
+Scent of felinoid cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty with a hint of mint.".
 
 
 Table of Game Objects (continued)
@@ -3725,8 +3724,7 @@ to say skunk cum use:
 	PlayerDrink 5;
 	SanLoss 5;
 
-instead of sniffing skunk cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+Scent of skunk cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.".
 
 
 Table of Game Objects (continued)
@@ -3750,8 +3748,7 @@ to say Limbo Fox Cum use:
 	if "Iron Stomach" is not listed in feats of Player:
 		infect "Limbo Fox";
 
-instead of sniffing Limbo Fox Cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+Scent of Limbo Fox Cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.".
 
 
 Glitchy Cum is a grab object.
@@ -3766,8 +3763,7 @@ to say Glitchy Cum use:
 	PlayerDrink 100;
 	PlayerEat 100;
 
-instead of sniffing Glitchy Cum:
-	say "You open the lid for a moment and take a sniff. But you can't seem to pick up on any particular smell.";
+Scent of Glitchy Cum is "You open the lid for a moment and take a sniff. But you can't seem to pick up on any particular smell.".
 
 
 Section 4 - Priorities

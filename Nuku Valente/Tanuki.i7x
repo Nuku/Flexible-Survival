@@ -15,11 +15,10 @@ Table of GameRoomIDs (continued)
 Object	Name
 Shinto Shrine	"Shinto Shrine"
 
-Shinto Shrine is a room. "How odd for an American city. A shinto shrine lays nestled in a small bamboo forest in this part of the park, tucked just off a narrow gravel trail and looking reasonably well kept. It is made of stone and features a number of carved pillars holding up a typically Japanese roof, gently curved and crowned by forked roof finials. In the midst of the structure, a large bronze mirror disc rests on an elaborate half-circular stand. There is a small box for donations, and a miniature iron mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.".
+Shinto Shrine is a room. "     How odd for an American city. A shinto shrine lays nestled in a small bamboo forest in this part of the park, tucked just off a narrow gravel trail and looking reasonably well kept. It is made of stone and features a number of carved pillars holding up a typically Japanese roof, gently curved and crowned by forked roof finials. In the midst of the structure, a large bronze mirror disc rests on an elaborate half-circular stand. There is a small box for donations, and a miniature iron mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.[line break]".
 Shinto Shrine is northwest of Park Trail.
 
-instead of sniffing Shinto Shrine:
-	say "The shrine smells faintly of cherry blossoms and spring. The scent puts you at ease.";
+Scent of Shinto Shrine is "     The shrine smells faintly of cherry blossoms and spring. The scent puts you at ease.".
 
 The invent of Shinto Shrine is { "tanuki coin" }.
 
@@ -39,8 +38,8 @@ understand "rung" and "ring" and "ring ornate/-- bell" and "ring ornate/-- bell 
 
 There is a donation box and ornate bell in Shinto Shrine.
 
-Description of ornate bell is "A small ornate bell. Next to it, a small ornate hammer hangs on a string.".
-Description of donation box is "A small, empty, box, awaiting donations to the spirits, or whomever maintains this place.".
+Description of ornate bell is "     A small ornate bell. Next to it, a small ornate hammer hangs on a string.[line break]".
+Description of donation box is "     A small, empty, box, awaiting donations to the spirits, or whomever maintains this place.[line break]".
 
 Instead of taking the ornate bell:
 	say "The bell is securely attached to the shrine. The small hammer hanging next to it isn't - but you don't see much use of it on its own, as the thing is clearly too small to be a weapon.";
@@ -62,44 +61,45 @@ check ringing:
 
 to say ResolveEvent Tanukibell:
 	if Tanukigender is -1:
-		say "'You want to keep talking to me?'";
-		say "The voice seems to be coming just beside your ear, familiar from before. 'Well, you are my child now, so I suppose you are due some time with your parent. Would you prefer your parent be a mother or a father?'";
-		say "1) Father, 2) Mother> [run paragraph on]";
+		say "     'You want to keep talking to me?' The voice seems to be coming just beside your ear, familiar from before. 'Well, you are my child now, so I suppose you are due some time with your parent. Would you prefer your parent be a [link]mother[as]m[end link] or a [link]father[as]f[end link]?'";
+		say "     1) Father, 2) Mother> [run paragraph on]";
 		get typed command as playerinput;
-		if Playerinput matches "f" or playerinput matches "1":
+		LineBreak;
+		if Playerinput matches "f" or Playerinput matches "F" or playerinput matches "1":
 			now tanukigender is 1;
 			now Tanuki Dad is in shinto shrine;
-		else if Playerinput matches "m" or playerinput matches "2":
-			say "He affects a falsetto even as [']she['] clears her throat. 'There we are.' Bending over and wrapping his arms around his great balls, he lifts them up, obscuring his form for just a moment, but it's long enough to reveal a new Tanuki, with large round breasts that entirely ignore such trivial things as gravity, wide hips and narrow waist. With a little sway of her hips, she flutters her lashes at you. 'Momma Tanuki is here to help you, dear.' It doesn't help that she still faintly sounds like a man playing the part, though she appears ready to do her best.";
+		else if Playerinput matches "m" or Playerinput matches "M" or playerinput matches "2":
+			say "     He affects a falsetto even as [']she['] clears her throat. 'There we are.' Bending over and wrapping his arms around his great balls, he lifts them up, obscuring his form for just a moment, but it's long enough to reveal a new Tanuki, with large round breasts that entirely ignore such trivial things as gravity, wide hips and narrow waist. With a little sway of her hips, she flutters her lashes at you. 'Momma Tanuki is here to help you, dear.' It doesn't help that she still faintly sounds like a man playing the part, though she appears ready to do her best.";
 			now tanukigender is 2;
 			now Tanuki Mom is in shinto shrine;
 		else:
-			say "'I don't quite understand. Go on, think about it. I'll still be here.'";
+			say "     'I don't quite understand. Go on, think about it. I'll still be here.'";
 			continue the action;
-		say "The pitch of the voice shifts subtly to match your choice. 'Well, there we are,' speaks the [if tanukigender is 2]female[else]male[end if] voice. 'Now then, go ahead and ring that little bell if you need more parental advice. I'll go get the book. This is going to be so much fun!' Though you see no form, you can hear the sound of padded feet dashing away.";
+		say "     The pitch of the voice shifts subtly to match your choice. 'Well, there we are,' speaks the [if tanukigender is 2]female[else]male[end if] voice. 'Now then, go ahead and ring that little bell if you need more parental advice. I'll go get the book. This is going to be so much fun!' Though you see no form, you can hear the sound of padded feet dashing away.";
+		WaitLineBreak;
+		say "     There is a rushing noise and a loud pop, a [if tanukigender is 2]female[else]male[end if] figure appears with a bright smile. The tanuki bows towards you. 'There we are! Now, I hope you are ready for grade A parenting. I have so much to teach you! First lesson, don't ring the bell anymore.'";
+	else:
+		say "     'Didn't I tell you not to ring that?' They wave a finger at you admonishingly. 'What am I going to do with you? Go to your room!' With a flurry of leaves, your vision is lost a moment before you find yourself somewhere else.";
 		wait for any key;
-		say "There is a rushing noise and a loud pop, a [if tanukigender is 2]female[else]male[end if] figure appears with a bright smile. The tanuki bows towards you. 'There we are! Now, I hope you are ready for grade A parenting. I have so much to teach you! First lesson, don't ring the bell anymore.'";
-		stop the action;
-	if TanukiGender > 0:
-		say "'Didn't I tell you not to ring that?' They wave a finger at you admonishingly. 'What am I going to do with you? Go to your room!' With a flurry of leaves, your vision is lost a moment before you find yourself somewhere else.";
 		now the player is in bunker;
 
 
 
 
 Carry out ringing:
-	say "You strike the bell, and it rings out like a gong, echoing through the shrine quite loudly!";
-	say "A spirit takes form before you, looking like some kind of strange raccoon like being. It studies you a moment before it speaks:";
+	say "     You strike the bell, and it rings out like a gong, echoing through the shrine quite loudly!";
+	say "     A spirit takes form before you, looking like some kind of strange raccoon like being. It studies you a moment before it speaks:";
 	if the demand of the Shinto Shrine is journal or demand of Shinto Shrine is gill fruit:
 		now demandIndex is a random number from 1 to the number of entries in tanukiList;
 		now the demand of Shinto Shrine is entry demandIndex of tanukiList;
 	else:
-		say "You've already been asked for something. Do you want something new?";
+		say "     You've already been asked for something. Do you want something new?";
 		if Player consents:
 			now demandIndex is a random number from 1 to the number of entries in tanukiList;
 			now the demand of Shinto Shrine is entry demandIndex of tanukiList;
-	say "'Bring me a [demand of shinto shrine]! [bold type]sacrifice[roman type] it before me and I will be appeased!'";
-	say "With this said, the spirit grabs between its legs and pulls out its scrotum in a great furry blanket, curling up into it before vanishing in a puff.";
+		LineBreak;
+	say "     'Bring me a [demand of shinto shrine]; [bold type]sacrifice[roman type] it before me and I will be appeased!'";
+	say "     With this said, the spirit grabs between its legs and pulls out its scrotum in a great furry blanket, curling up into it before vanishing in a puff.";
 
 sacrificing is an action applying to one thing.
 
@@ -111,13 +111,13 @@ check sacrificing:
 	if noun is not demand of Shinto Shrine, say "That is not what the spirit wants!" instead;
 
 carry out sacrificing:
-	say "You bring out the [noun] and place it on the donation box. It vanishes in a bright poof of smoke that fades into brown leaves, whirling away and leaving nothing behind.";
+	say "     You bring out the [noun] and place it on the donation box. It vanishes in a bright poof of smoke that fades into brown leaves, whirling away and leaving nothing behind.";
 	ItemLoss noun by 1;
 	decrease SatisfiedTanuki by 1;
 	increase score by 10;
 	if SatisfiedTanuki is 0:
 		extend game by 40;
-		say "The spirit appears just in front of your nose, grinning. Its teeth sink into the tender flesh of your nose in a sharp bit of pain that is fortunately brief. 'Persistent mortal, I gift you for your sacrifices. You are now as a child to me. Simply concentrate on a [bold type]leaf[roman type] and you can take your new, true form.' With that said, the spirit folds up on itself and is soon gone.";
+		say "     The spirit appears just in front of your nose, grinning. Its teeth sink into the tender flesh of your nose in a sharp bit of pain that is fortunately brief. 'Persistent mortal, I gift you for your sacrifices. You are now as a child to me. Simply concentrate on a [bold type]leaf[roman type] and you can take your new, true form.' With that said, the spirit folds up on itself and is soon gone.";
 	else:
 		now the demand of the Shinto Shrine is journal;
 		try ringing;
@@ -131,7 +131,7 @@ check leafing:
 
 
 carry out leafing:
-	say "Concentrating intently on leaves, you feel a large one appear over you and settle on your head. Suddenly erotic pulses rock your form as you begin to assume your natural form!";
+	say "     Concentrating intently on leaves, you feel a large one appear over you and settle on your head. Suddenly erotic pulses rock your form as you begin to assume your natural form!";
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
 		if Name entry is "Tanuki":
@@ -147,7 +147,7 @@ carry out leafing:
 	infect;
 	infect;
 	now non-infectious entry is true; [...then close to prevent random infection]
-	say "With the changes complete, you feel you could [bold type]expand balls[roman type] and [bold type]contract balls[roman type] and also grow or contract your cock or breasts!";
+	say "     With the changes complete, you feel you could [bold type]grow balls[roman type] and [bold type]shrink balls[roman type] and also grow or shrink your cock or breasts!";
 
 ballgrowing is an action applying to nothing.
 
@@ -265,10 +265,8 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Tanuki"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
-	add "Tanuki" to infections of CanineList;
 	add "Tanuki" to infections of FurryList;
 	add "Tanuki" to infections of MythologicalList;
-	add "Tanuki" to infections of MaleList;
 	add "Tanuki" to infections of TaperedCockList;
 	add "Tanuki" to infections of KnottedCockList;
 	add "Tanuki" to infections of SheathedCockList;
@@ -452,14 +450,14 @@ name	desc	weight	object
 "tanuki coin"	"[tancoindesc]"	1	tanuki coin
 
 to say tancoindesc:
-	say "     A strange, solid gold coin. It's fairly heavy and quite worn. On one side there appears to be a leaf, while on the other an eastern dragon, which circles around the outer edge of its face, with its tail curving at the bottom to go straight up and occupy the center. It's warm to the touch, but doesn't feel particularly infectious.";
+	say "A strange, solid gold coin. It's fairly heavy and quite worn. On one side there appears to be a leaf, while on the other an eastern dragon, which circles around the outer edge of its face, with its tail curving at the bottom to go straight up and occupy the center. It's warm to the touch, but doesn't feel particularly infectious.";
 
-the scent of tanuki coin is "It has a benign, metallic smell about it.";
+the scent of tanuki coin is "It has a benign, metallic smell about it.".
 
 tanuki coin is a grab object. It is fast. It is not temporary. Usedesc of tanuki coin is "[usetancoin]".
 
 to say usetancoin:
-	say "[line break]     You flip the coin";
+	say "     You flip the coin";
 	if internalCockbypass is false:
 		say "... It lands leaf-side up";
 		if Player is not male or (Player is male and CockName of Player is not listed in infections of InternalCockList):
@@ -528,12 +526,10 @@ to say TanukiDadDesc:
 	say "     The tanuki spirit here has taken on the form of a father. You can tell, with the sharp blazer he's wearing with that big bold tie. He has his hands on either side of it, grinning at you proudly, his child. His belly is considerable, bulging in his clothing. Competing for the bulging contest, his great balls resist even the thought of trying to fit into any pants, so they are allowed to hang free, furry and virile. Compared to them, his furry sheath is actually comparatively small, not that he seems to care much.";
 	add "Tanuki Balls" to TanukiTopics;
 
-instead of sniffing Tanuki Dad:
-	say "     He smells clean, if you don't mind the scent of fur and a bit of saki that clings to him. Noticing your attention, he grins. You would think this would be hard to notice, since grinning is his default expression, but there is a difference.";
+Scent of Tanuki Dad is "     He smells clean, if you don't mind the scent of fur and a bit of saki that clings to him. Noticing your attention, he grins. You would think this would be hard to notice, since grinning is his default expression, but there is a difference.".
 
 instead of conversing the Tanuki Dad:
 	project Figure of Tanuki_Dad_soft_icon;
-	LineBreak;
 	say "What do you want to talk with Tanuki about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -597,7 +593,7 @@ instead of conversing the Tanuki Dad:
 			say "     The tanuki gives you a rather big grin, patting his round belly.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 
@@ -734,7 +730,7 @@ instead of conversing the Tanuki Mom:
 			say "     The tanuki gives you a rather big grin, patting her round belly.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 To say TanukiSurvivalTalk:

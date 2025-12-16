@@ -12,7 +12,7 @@ name	desc	weight	object
 food is a grab object. The trade of food is "soda".
 the scent of food is "The food smells [one of]good[or]appetizing[or]tasty[or]edible[at random].".
 
-Usedesc of food is "[food use]";
+Usedesc of food is "[food use]".
 
 to say food use:
 	if "Junk Food Junky" is listed in feats of Player:
@@ -40,7 +40,7 @@ to say food use:
 chips is a grab object.
 the scent of chips is "The chips smell [one of]good[or]appetizing[or]tasty[or]edible[at random].".
 
-Usedesc of chips is "[chips use]";
+Usedesc of chips is "[chips use]".
 
 to say chips use:
 	if labhost > 0 and BodyName of Player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
@@ -76,7 +76,7 @@ name	desc	weight	object
 dirty water is a grab object. The trade of dirty water is "chips".
 the scent of dirty water is "The water smells a little off, but is still potable.".
 
-Usedesc of dirty water is "[dirty water use]";
+Usedesc of dirty water is "[dirty water use]".
 
 to say dirty water use:
 	if "Junk Food Junky" is listed in feats of Player:
@@ -107,7 +107,7 @@ to say dirty water use:
 water bottle is a grab object. The trade of water bottle is "chips".
 the scent of water bottle is "The water bottle smells like plastic.".
 
-Usedesc of water bottle is "[water bottle use]";
+Usedesc of water bottle is "[water bottle use]".
 
 to say water bottle use:
 	if "Junk Food Junky" is listed in feats of Player:
@@ -136,7 +136,7 @@ to say water bottle use:
 soda is a grab object.
 the scent of soda is "Smells of sugary goodness and all the artificial flavors you crave!".
 
-Usedesc of soda is "[soda use]";
+Usedesc of soda is "[soda use]".
 
 to say soda use:
 	if "Junk Food Junky" is listed in feats of Player:
@@ -178,7 +178,7 @@ name	desc	weight	object
 medkit is a grab object. It is fast. It is not temporary.
 CurrentMedkitSupplies is a number that varies.[@Tag:NotSaved] [uses left in the currently open medkit]CurrentMedkitSupplies is usually 5.
 
-Usedesc of medkit is "[medkit use]";
+Usedesc of medkit is "[medkit use]".
 
 to say medkit use:
 	if HP of Player < MaxHP of Player:
@@ -217,8 +217,7 @@ to say medkit use:
 	else:
 		say "Since you're not hurt at all, you decide to keep your medical supplies intact for later.";
 
-instead of sniffing medkit:
-	say "Smells like plastic.";
+Scent of medkit is "Smells like plastic.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -226,7 +225,7 @@ name	desc	weight	object
 
 clean bandages is a grab object.
 
-Usedesc of clean bandages is "[clean bandages use]";
+Usedesc of clean bandages is "[clean bandages use]".
 
 to say clean bandages use:
 	if HP of Player < MaxHP of Player:
@@ -246,8 +245,7 @@ to say clean bandages use:
 		say "You're not hurt, so you decide to keep your bandages for when you actually need them.";
 		ItemGain clean bandages by 1 silently; [quietly giving back the auto-destroyed item]
 
-instead of sniffing clean bandages:
-	say "Smells like clean fabric.";
+Scent of clean bandages is "Smells like clean fabric.".
 
 
 Table of Game Objects (continued)
@@ -257,7 +255,7 @@ name	desc	weight	object
 adhesive bandage is a grab object.
 adhesive bandage is fast.
 
-Usedesc of adhesive bandage is "[adhesive bandage use]";
+Usedesc of adhesive bandage is "[adhesive bandage use]".
 
 to say adhesive bandage use:
 	if HP of Player < MaxHP of Player:
@@ -267,8 +265,7 @@ to say adhesive bandage use:
 		say "You're not hurt, so you decide to keep your bandage for when you actually need it.";
 		ItemGain adhesive bandage by 1 silently; [quietly giving back the auto-destroyed item]
 
-instead of sniffing adhesive bandage:
-	say "Smells like glue and clean fabric.";
+Scent of adhesive bandage is "Smells like glue and clean fabric.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -277,7 +274,7 @@ name	desc	weight	object
 indigo potion is a grab object.
 indigo potion is fast.
 
-Usedesc of indigo potion is "[indigo potion use]";
+Usedesc of indigo potion is "[indigo potion use]".
 
 to say indigo potion use:
 	if HP of Player < MaxHP of Player:
@@ -287,8 +284,7 @@ to say indigo potion use:
 		say "You're not hurt, so you decide to keep your potion for when you actually need it.";
 		ItemGain indigo potion by 1 silently; [quietly giving back the auto-destroyed item]
 
-instead of sniffing indigo potion:
-	say "Just sniffing this stuff makes your nose itch. It's got a sharp, chemical smell.";
+Scent of indigo potion is "Just sniffing this stuff makes your nose itch. It's got a sharp, chemical smell.".
 
 
 
@@ -302,13 +298,13 @@ name	desc	weight	object
 cot is a grab object. It is not temporary.
 cot is restful.
 understand "Bed" as cot.
-Usedesc of cot is "[cot use]";
+Usedesc of cot is "[cot use]".
 
 to say cot use:
 	try resting;
 
 sleeping bag is a grab object. It is not temporary.
-Usedesc of sleeping bag is "[sleeping bag use]";
+Usedesc of sleeping bag is "[sleeping bag use]".
 
 to say sleeping bag use:
 	try resting;
@@ -322,13 +318,12 @@ name	desc	weight	object
 tennis ball is a grab object.
 It is not temporary.
 
-Usedesc of tennis ball is "[tennis ball use]";
+Usedesc of tennis ball is "[tennis ball use]".
 
 to say tennis ball use:
 	say "Unsure what exactly to do with the tennis ball, you throw it from hand to hand a few times and bounce it off the ground.";
 
-instead of sniffing tennis ball:
-	say "Smells like rubber.";
+Scent of tennis ball is "Smells like rubber.".
 
 
 Table of Game Objects (continued)
@@ -338,13 +333,12 @@ name	desc	weight	object
 wad of cash is a grab object.
 It is not temporary.
 
-Usedesc of wad of cash is "[wad of cash use]";
+Usedesc of wad of cash is "[wad of cash use]".
 
 to say wad of cash use:
 	say "Pulling off the rubber band, you run your finger over the end of the paper money. It is a properly impressive concentration of wealth, small enough to fit into someone's pocket. If only you could buy anything with it here and now...";
 
-instead of sniffing wad of cash:
-	say "Smells green. Definitely green.";
+Scent of wad of cash is "Smells green. Definitely green.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -353,7 +347,7 @@ name	desc	weight	object
 bag of wallets is a grab object.
 It is not temporary.
 
-Usedesc of bag of wallets is "[bag of wallets use]";
+Usedesc of bag of wallets is "[bag of wallets use]".
 
 to say bag of wallets use:
 	say "Digging your hand into the bag of wallets, you feel around a little and ";
@@ -371,8 +365,7 @@ to say bag of wallets use:
 	else:
 		say "pull a plastic wallet covered with a prominently placed [one of]robot[or]superhero[or]pattern[or]alien[at random] printed on it. Flicking it open, you see a [one of]student ID card[or]learner's permit driver's license with a young-looking face on it[or]cute picture of a dog[or]cute picture of a cat[at random], as well as [one of]a moderate amount[or]a total absence[or]a little bit[at random] of money, and a [one of]library card[or]fitness studio member card[or]coffee club card - just one more and you get a free one[or]condom[at random]. For a little while, you try to imagine what happened to this person, then shrug and stuff the wallet back in the bag.";
 
-instead of sniffing bag of wallets:
-	say "Opening up the bag, you hold your nose over the opening and sniff a wild mixture of scents, given the mixed contents. Underlying it all, a faint scent of cum is always present.";
+Scent of bag of wallets is "Opening up the bag, you hold your nose over the opening and sniff a wild mixture of scents, given the mixed contents. Underlying it all, a faint scent of cum is always present.".
 
 
 [

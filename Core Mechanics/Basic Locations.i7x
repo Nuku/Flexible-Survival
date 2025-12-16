@@ -47,7 +47,7 @@ Object	Name
 Traveling	"Traveling"
 
 Traveling is a room.
-Description of Traveling is "You set out towards your destination...".
+Description of Traveling is "You set out towards your destination...[no line break]".
 The earea of Traveling is "Outside".
 
 Section 3 - Main Hub and other standard rooms
@@ -61,7 +61,7 @@ Bunker is sleepsafe.
 The invent of Bunker is { "face mask", "medkit", "medkit", "water bottle", "water bottle", "water bottle", "food", "food", "pocketknife", "cot" }.
 Library door is a door. "Solid oak doors lend a stately appearance to the library.".
 The Library Door is east of Main & 7th Street.
-Description of the Library Door is "Solid oak doors lend a stately appearance to the library.".
+Description of the Library Door is "     Solid oak doors lend a stately appearance to the library.[line break]".
 Grey Abbey Library is east of Library Door.
 Bunker is below Grey Abbey Library.
 The player is in Bunker.
@@ -218,19 +218,20 @@ to say GreyAbbeyLibrary_ObserveMenu:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			let nam be title entry;
 			now sextablerun is 1;
 			if (nam is "Urik"):
-				LineBreak;
 				say "[GreyAbbeyLibraryObservation_Urik]"; [see file Wahn/Urik.i7x]
 			else if (nam is "General"):
 				say "[GreyAbbeyLibraryObservation_General]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say GreyAbbeyLibraryObservation_General:
@@ -266,9 +267,10 @@ to say GreyAbbeyLibraryObservation_General:
 			else if (nam is "Zoomba #1"):
 				say "     Waiting for a few minutes, you see a small vacuum robot, shaped like an oversized hockey puck, emerge from behind the front desk. The little device is colored black and silver, with the red letter [']1['] emblazoned on the front half. Glancing where it is coming from, you see a charging port there. Someone must have hooked it up to the emergency power supply that is also responsible for the lights in the bunker. Having nothing much better to do, you follow Zoomba #1 around, watching it patrol with a quiet hum and effectively wipe out any dust-bunnies that dare appear in these hallowed halls.";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	wait for any key;
 	clear the screen and hyperlink list;
 
@@ -286,8 +288,7 @@ to say 7thMainDesc:
 	say "     You're at the corner of 7th Street and Main, the latter of which extends further towards the north and south, while 7th Street starts right in front of the entrance of the Grey Abbey Library and runs into the distance [link]westwards[as]west[end link]. Glancing at the historic structure of the library, you remember hearing somewhere that the old city center was actually fairly close by in the past. But then modern developments shifted the focus on the downtown area, where enough free room was available to put up high rises and new construction. As a historical section of the city, the area encompasses both residential buildings, a few shops and public buildings, having been built long before the introduction of zoning laws.";
 	say "     The outbreak of the nanite apocalypse has had a noticeable impact on the area. You can see trash and abandoned remains of clothing scattered here or there, and a burned-out car wreck is standing in the middle of the T crossing. Thankfully, the library seems not to be holding too much interest for wandering beasts, but that may change quickly as you move farther away from it and explore.";
 
-instead of sniffing Main & 7th Street:
-	say "     An unpleasant odor hangs in the air, emanating from the burned wreck standing in the middle of the road.";
+Scent of Main & 7th Street is "     An unpleasant odor hangs in the air, emanating from the burned wreck standing in the middle of the road.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -302,8 +303,7 @@ to say LootedShopsDesc:
 	if "Henry Recruited" is listed in Traits of Urik:
 		say "     Someone appears to have cleared away a patch of trash and rubble recently, making the entrance of a store to the [link]north[end link] accessible. While the sign above the door declares it to be some sort of flower shop, the plywood board used to cover a broken window next to a newly hung door bears the words 'Henry's Brewery', above a spray-painted depiction of a muscular black man with a large hammer. The stylized image of a snarling orc face in the lower left corner lets you guess that Urik put this here.";
 
-instead of sniffing Looted Shops:
-	say "     The cans and sacks of trash that have been rotting out on the curb for more than two weeks fill your nose with many scents, none of them particularly pleasant.";
+Scent of Looted Shops is "     The cans and sacks of trash that have been rotting out on the curb for more than two weeks fill your nose with many scents, none of them particularly pleasant.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -361,8 +361,7 @@ Description of George's Animal Emporium is "[PetShopDesc]".
 to say PetShopDesc: [TODO: Eventually move Roxana and her girlfriend in here]
 	say "     You're in a mid-sized pet store that has been recently looted. Judging from the tracks in the dust and grime blown in through the open front door, numerous people and creatures came and went before you. Almost all of the shelves have been rifled through and some even knocked over, creating quite a mess in here. Empty bags of all sorts of pet food are scattered everywhere, sometimes lying in sticky pools of what is clearly cum. With the food gone and the sheer scale of the mess in here, there could be some interesting and useful items to find if one were to spend some time to [link]sort[as]sort chaotic mess[end link] through the chaotic mess. Since digging up anything of worth will be rather work intensive, this would probably not be worth the time unless you had a use for it.";
 
-instead of sniffing George's Animal Emporium:
-	say "     Myriad different smells are all around you in here, wafting up from food wrappers and toys, as well as the remnants of hasty matings between previous looters and scavengers who have visited this place. Somewhere in this mess, a bag of catnip must have been torn open, its dried contents scattered all over the ground.";
+Scent of George's Animal Emporium is "     Myriad different smells are all around you in here, wafting up from food wrappers and toys, as well as the remnants of hasty matings between previous looters and scavengers who have visited this place. Somewhere in this mess, a bag of catnip must have been torn open, its dried contents scattered all over the ground.".
 
 [The fur brush object and the chaotic mess are defined in Pet Shop]
 
@@ -402,7 +401,7 @@ Half-Renovated Room	"Half-Renovated Room"
 Half-Renovated Room is a room.
 Half-Renovated Room is north of Grey Abbey Library.
 Half-Renovated Room is sleepsafe.
-Description of Half-Renovated Room is "[LibrarySideRoomDesc]";
+Description of Half-Renovated Room is "[LibrarySideRoomDesc]".
 
 after looking while player is in Half-Renovated Room:
 	project the Figure of Map_Library_North3_icon;
@@ -606,7 +605,7 @@ understand "lab" or "labs" as Outside Trevor Labs.
 Outside Trevor Labs is fasttravel.
 earea of Outside Trevor Labs is "Outside".
 
-Away from Labs is a door. "To the [link]east[end link] of here lays the rest of the city." It is dangerous. The marea of Away from Labs is "Outside". Away from labs is east of Outside Trevor Labs and west of Wandering the City.
+Away from Labs is a door. "To the [link]east[end link] of here lays the rest of the city.". It is dangerous. The marea of Away from Labs is "Outside". Away from labs is east of Outside Trevor Labs and west of Wandering the City.
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -753,7 +752,7 @@ Object	Name
 Overgrown Rooftop	"Overgrown Rooftop"
 
 Overgrown Rooftop is a room. Overgrown Rooftop is above Green Apartment Building.
-Description of Overgrown Rooftop is "[GreenRoofDesc]";
+Description of Overgrown Rooftop is "[GreenRoofDesc]".
 
 to say GreenRoofDesc:
 	say "     The roof of this apartment building is at least partially covered in soil, allowing a rooftop garden to grow on it. You see a large section of green grass (getting a bit long, now that no one is taking care of it anymore), some bushes and even a large planter with a cherry tree next to a vegetable garden. Must have been quite a nice spot to hang out on for the inhabitants. Looking over to the rooftop access to the interior of the building, you find that it has been thoroughly barricaded - from the inside, it seems. Thus the only way to get down again is the fire escape attached to one outside face of the freestanding building.";
@@ -765,7 +764,7 @@ Object	Name
 Green Lobby	"Green Lobby"
 
 Green Lobby is a room. Green Lobby is inside from Green Apartment Building.
-Description of Green Lobby is "[GreenLobbyDesc]";
+Description of Green Lobby is "[GreenLobbyDesc]".
 
 to say GreenLobbyDesc:
 	say "     Just inside the building is a small lobby, with numerous post-boxes on one wall and a (surprisingly) still powered elevator. It opens up freely as you push the dimly glowing button, revealing a generous cabin, complete with a control panel that only has one button, for the lobby. Everything else is keyholes, four to each floor. Someone sure liked their privacy. Checking the interior stairway access door right next to it, you find it jammed; a glance through its little window reveals that about twenty feet of the stairway are completely barricaded by mixed pieces of furniture. Four doorways lead off into what must be the ground floor apartments - 1A, 1B, 1C and 1D. [if HP of Otto < 4]The first two and the last all have been nailed shut and the words 'Carnivorous Furniture' spray-painted on them[else]1A and 1D have been nailed shut and the words 'Closed for Repair' carefully stencilled onto signs hanging from their doorknobs[end if], while the door of apartment 1C is just leaned to[if HP of Otto > 3]. The door marked as 1B looks newly cleaned and you remember that this is where Doctor Fuchs has moved into[end if].";
@@ -824,7 +823,7 @@ Red Apartment Rooftop	"Red Apartment Rooftop"
 
 Red Apartment Rooftop is a room.
 Red Apartment Rooftop is above Red Apartment 4th Floor.
-Description of Red Apartment Rooftop is "[RedRoofDesc]";
+Description of Red Apartment Rooftop is "[RedRoofDesc]".
 
 to say RedRoofDesc:
 	say "     The roof of this apartment building is covered in loose gravel, with some lichen and moss growing on it. The center section is made up of large skylights, allowing the sun to reach the community garden inside.";
@@ -883,7 +882,7 @@ dark basement	"dark basement"
 
 dark basement is a room.
 dark basement is below basement portal.
-The marea of basement portal is "Sealed". The basement portal is open. Description of Basement Portal is "A foot-thick steel door that looks like it was designed more to keep something in, than anything else... ". understand "basement" and "portal" as the basement portal.
+The marea of basement portal is "Sealed". The basement portal is open. Description of Basement Portal is "     A foot-thick steel door that looks like it was designed more to keep something in, than anything else...[line break]". understand "basement" and "portal" as the basement portal.
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -891,6 +890,6 @@ darkbasement2	"darkbasement2"
 
 darkbasement2 is a room. [placeholder room for the doors]
 darkbasement2 is below basement security door.
-The marea of basement security door is "Sealed". The basement security door is open. Description of Basement security door is "A foot-thick steel door that looks like it was designed more to keep something in, than anything else... ". understand "basement", "portal" and "door" as the basement security door.
+The marea of basement security door is "Sealed". The basement security door is open. Description of Basement security door is "     A foot-thick steel door that looks like it was designed more to keep something in, than anything else...[line break]". understand "basement", "portal" and "door" as the basement security door.
 
 Basic Locations ends here.

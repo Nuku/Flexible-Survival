@@ -143,7 +143,7 @@ carry out Trixiecheating:
 					say "You have gained the 'Weak-Willed' flaw, but are rewarded 250 points.";
 					say "You now will find yourself increasingly tempted to spontaneously submit during fights as your libido increases.";
 			-- 8:
-				say "Set your humanity (1-100 or 0 to abort)> [run paragraph on]";
+				say "Set your humanity (1-100, or 0 to abort)> [run paragraph on]";
 				get a number;
 				LineBreak;
 				if calcnumber > 0 and calcnumber <= 100:
@@ -153,10 +153,10 @@ carry out Trixiecheating:
 				else:
 					say "[if calcnumber is not 0]Invalid choice - [end if]Returning to menu.";
 			-- 9:
-				say "Set your libido (1-100 or 0 to abort)> [run paragraph on]";
+				say "Set your libido (1-110, or 0 to abort)> [run paragraph on]";
 				get a number;
 				LineBreak;
-				if calcnumber > 0 and calcnumber <= 100:
+				if calcnumber > 0 and calcnumber <= 110:
 					now Libido of Player is calcnumber;
 					say "Libido adjusted. Score penalized by 50.";
 					decrease score by 50;

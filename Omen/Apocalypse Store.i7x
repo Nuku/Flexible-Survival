@@ -13,8 +13,8 @@ Sarea of Clothing Store is "Outside".
 
 to say ResolveEvent Clothing Store:
 	say "     As you explore the city, you come across an outlet mall. Most of the buildings have been destroyed, the area is littered with debris. Trash cans are blown over, spilling their contents into the streets. All the cars here are damaged beyond repair, though one of them has somehow maintained its car alarm which continues to go off. Most of the cars are simply smoldering chunks of metal, fire having stripped them of anything useful. You keep your distance from these cars, doing your best to avoid the strong smell of burning tires. Some of the buildings are still standing, for now at least; you could try to enter one if you wish.";
-	say "     [bold type]Do you try and enter one of the stores?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Do you try and enter one of the stores?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure - there might be something useful.";
 	say "     ([link]N[as]n[end link]) - No, its too dangerous.";
 	if Player consents:
@@ -28,7 +28,6 @@ to say ResolveEvent Clothing Store:
 		ItemGain Apocalypse Scarf by 1;
 		WaitLineBreak;
 		say "     [bold type]Do you try to look around some more, or take what you have and head back?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - There's a equipment section on the right side of the store, it's possible something survived the fire.";
 		say "     ([link]N[as]n[end link]) - No, you're satisfied with what you found.";
 		if Player consents:
@@ -69,7 +68,7 @@ The AC of Apocalypse Shorts is 0.
 The effectiveness of Apocalypse Shorts is 0.
 Traits of Apocalypse Shorts is {"sporty", "grungy"}.
 The placement of Apocalypse Shorts is "body".
-The descmod of Apocalypse Shorts is "A torn and burnt pair of running shorts covers your legs.".
+The descmod of Apocalypse Shorts is "A torn and burnt pair of running shorts cover your legs.".
 The slot of Apocalypse Shorts is "legs".
 the scent of Apocalypse Shorts is "There is a faint smell of smoke lingering on the item of clothing.".
 

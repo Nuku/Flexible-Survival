@@ -57,6 +57,7 @@ to say beattheFireSprite:
 	else:
 		say "     With a final blow, you knock the sprite to the ground, pinning [if FireSpritemode is 0]her[else]him[end if] there with your foot. You could have some fun with the sprite if you wanted to (Y/N).";
 		if Player consents:
+			LineBreak;
 			if FireSpritemode is 0:
 				say "[beatFireSpritegirl]";
 			else:
@@ -140,7 +141,7 @@ to say beatFireSpriteguy:
 			say "     Deciding against having some fun with the sprite, you release [if FireSpritemode is 0]her[else]him[end if] and send [if FireSpritemode is 0]her[else]him[end if] scampering off into the city with a light kick in the ass.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say beatFireSpritegirl:
@@ -210,7 +211,7 @@ to say beatFireSpritegirl:
 			say "     Deciding against having some fun with the sprite, you release [if FireSpritemode is 0]her[else]him[end if] and send [if FireSpritemode is 0]her[else]him[end if] scampering off into the city with a light kick in the ass.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say FuckFireSprite:

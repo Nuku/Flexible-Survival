@@ -82,7 +82,7 @@ to say ResolveEvent Tight Fit:
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		if scalevalue of Player is 2, increase bonus by 5;
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
+		say "You roll 1d20([dice])+[bonus] = [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
 		if difficulty > dice:
 			say "     You try your best to squeeze into the tunnel, but you aren't able make it more than a couple of feet before it becomes impossible to move forward. Rather than risk getting completely stuck and vulnerable to any lusty mutant who comes by, you work your way back out and head off.";
@@ -170,7 +170,7 @@ to say ResolveEvent Protected Supplies:
 			HardModeboost;
 		say "     In your searching through the city, you come across some [y] and move to get it.";
 		say "     It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of the street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from some rather messy cum stains[purely at random].";
-		wait for any key;
+		AttemptToWait;
 		let scavfight be 0;
 		say "     But as you move to get it, a [Name entry] moves to cut you off, probably wanting to take it for themselves. ";
 		if a random chance of 1 in 2 succeeds:
@@ -178,8 +178,8 @@ to say ResolveEvent Protected Supplies:
 			let scavfight be 1;
 		else:
 			say "The creature remains watchful, but keeps you from moving towards your desired supplies.";
-			say "     [bold type]Shall you attack to get them or leave?[roman type][line break]";
 			LineBreak;
+			say "     [bold type]Shall you attack to get them or leave?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Attack.";
 			say "     ([link]N[as]n[end link]) - Leave.";
 			if Player consents:
@@ -215,8 +215,8 @@ Sarea of Dropped Handbag is "Allzones".
 
 to say ResolveEvent Dropped Handbag:
 	say "     Passing through the city, you find a dropped handbag with torn scraps of clothes around it. Given the messy stains on the torn dress, it seems whoever owned the bag met a rather sticky fate.";
-	say "     [bold type]Do you want to search it? It doesn't seem like they'll be needing it anymore.[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Do you want to search it? It doesn't seem like they'll be needing it anymore.[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
@@ -269,7 +269,7 @@ to say ResolveEvent Dented Bike:
 	let bonus be ( perception of Player + level of Player minus 10 ) divided by 2;
 	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	let dice be a random number from 1 to 20;
-	say "     You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
+	say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs [difficulty]: ";
 	if bonus + dice >= difficulty:
 		let t be a random number between 1 and 3;
 		if t is 1:
@@ -280,7 +280,7 @@ to say ResolveEvent Dented Bike:
 			ItemGain dirty water by 1;
 		else:
 			say "A small bulge in one piece of the shredded clothing attracts your attention. It's the pocket of a jacket, revealing a tasty chocolate bar. ";
-			ItemGain food by 1;
+			ItemGain chips by 1;
 	say "Looking around, you find a few more tufts of fur and some messy splatters of cum leading away, but that's it.";
 	increase dentedbikecount by 1;
 	if dentedbikecount is 3, now Dented Bike is resolved;
@@ -306,7 +306,7 @@ to say ResolveEvent Looted Supermarket:
 		let bonus be ( perception of Player + level of Player minus 10 ) divided by 2;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
-		say "     You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
+		say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice >= difficulty:
 			say "As you turn to head out of the store, you spot something interesting from the corner of your eye. There's a tin can that seems to have fallen down and rolled under a shelf - you pick it up and see it's [one of]dog[or]cat[at random] food. Not your first choice for a meal, but hey - it's in a sealed container so it'll be infection free!";
 			ItemGain food by 1;
@@ -318,7 +318,7 @@ to say ResolveEvent Looted Supermarket:
 		let bonus be ( intelligence of Player + level of Player minus 10 ) divided by 2;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
-		say "     You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
+		say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice >= difficulty:
 			say "You get an idea and check the checkout section. The cashiers are people with needs too, so... you find an unopened soda bottle under the register.";
 			ItemGain soda by 1;
@@ -330,7 +330,7 @@ to say ResolveEvent Looted Supermarket:
 		let bonus be ( intelligence of Player + level of Player minus 10 ) divided by 2;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
-		say "     You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
+		say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice >= difficulty:
 			say "You get an idea and check the checkout section. The cashiers are people with needs too, so... you find an energy bar under the register.";
 			ItemGain food by 1;
@@ -346,7 +346,7 @@ to say ResolveEvent Looted Supermarket:
 			increase bonus by 3;
 			let x be 1;
 		let dice be a random number from 1 to 20;
-		say "     You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
+		say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice > difficulty:
 			say "You break open the door to a small room in the back[if x is 1] with the help of your crowbar[end if]. Aww - it's just the employees['] lockers and some cleaning supplies. At least one of them had a bag of chips in his locker.";
 			ItemGain chips by 1;
@@ -377,7 +377,7 @@ to say ResolveEvent Abandoned Cars:
 		increase bonus by 3;
 		let x be 1;
 	let dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
+	say "You roll 1d20([dice])+[bonus] = [dice plus bonus] vs [difficulty]: ";
 	if bonus + dice >= difficulty:
 		say "No problem - you grab the lid and wrench it open with [if x is 1]your crowbar[else]your superior strength[end if]. Inside you find several shopping bags, filled with a smelly mess of mostly rotting food. At least you manage to salvage a can of [one of]tomato soup[or]baked beans[or]spaghetti[or]pineapple[at random] and a soda bottle from it.";
 		ItemGain food by 1;
@@ -487,7 +487,7 @@ to say ResolveEvent Plains Scavenging:
 		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
-		say "     You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
+		say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
 		if difficulty > dice:
 			say "It would seem that negotiations have failed and the mutants now want you gone. By the looks on their faces, it would be wise for you to get lost... and fast!";
@@ -524,7 +524,7 @@ to say ResolveEvent Plains Scavenging:
 			if HardMode is true and bonus > 10, now bonus is 10;
 			if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 			let dice be a random number from 1 to 20;
-			say "     You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
+			say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs [difficulty]: ";
 			increase dice by bonus;
 			if difficulty > dice:
 				say "You try your best to traverse the collapsing [one of]store[or]building[or]home[or]structure[at random], but end up setting off the collapse even further. Rubble falls and dust flies up as a portion of a wall falls onto you. Thankfully you're able to get yourself out from under it easily enough, but looking at the devastation, you find that the falling debris has crushed your intended prize as well.";
@@ -676,7 +676,7 @@ to say ResolveEvent Patient Rooms:
 		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
-		say "     You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";
+		say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs 14: ";
 		increase dice by bonus;
 		if dice >= 14:
 			say "Pushing at the door, you are able to push open the door a little, letting you shove aside part of the makeshift barricade. With that out of the way, you gain entrance to the room and take the bottle of water. You also take a quick look around for the occupant. You find their clothes scattered in the small bathroom and covered in blue goo. The toilet and a good portion of the floor is similarly covered in this sticky goo. You grab a sample of that as well.";
@@ -716,7 +716,7 @@ to say ResolveEvent Shattered House:
 		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
-		say "     You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
+		say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs 14:[line break]";
 		increase dice by bonus;
 		if dice >= 14:
 			say "     Taking a quick look inside, you manage to spot some food wrappers and empty water bottles in one corner where some debris has fallen down. Seeing more underneath, you manage to lift up the rubble with some effort and retrieve a single water bottle that's not been crushed before an ominous creaking sound sends you back before more of the house collapses.";
@@ -729,7 +729,7 @@ to say ResolveEvent Shattered House:
 		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
-		say "     You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 16:[line break]";
+		say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs 16:[line break]";
 		increase dice by bonus;
 		if dice >= 16:
 			say "     Taking a quick look inside, you luckily feel the kitchen floor starting to give way out from under you and manage to back away before the middle of the kitchen floor caves in and that section of the damaged house collapses into the basement. You move on after that unsuccessful venture and remind yourself to be more careful inside damaged buildings from now on.";
@@ -744,7 +744,7 @@ to say ResolveEvent Shattered House:
 		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
-		say "     You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
+		say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs 14:[line break]";
 		increase dice by bonus;
 		if dice >= 14:
 			say "     As you're searching through the rubble, you luckily notice some creaking and some plaster dust falling out of the corner of your eye. You get out quickly, avoiding the sudden collapse of the house. Scared but safe, you leave the place behind before the noise can attract anything dangerous.";

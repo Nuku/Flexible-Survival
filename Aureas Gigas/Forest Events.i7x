@@ -22,8 +22,8 @@ to say ResolveEvent One flew into the Cuckoos Nest:
 	say "     While walking towards the bench, you pass by a small tent with a male and female cuckoo inside... and can't help but throw a look inside at them. Based on the affectionate ways the two are talking and holding each other, you think that they are probably a couple. With a smile on your lips, you move on and sit down on the nearby bench. Sitting down relieves your aching muscles and re-energizes your body. A short while later, the male cuckoo steps out of the tent and calls back to his mate that he is going to hunt for supplies, then leaves into the woods.";
 	WaitLineBreak;
 	say "     He is barely out of sight before a burly white-coated bull strolls over to the tent and glances inside, then asks, 'Is he gone?' Stepping out to meet him, the female anthro bird nods and starts kissing the tall bovine. They vanish inside the tent together, and from the muted grunts and moans coming out of it, you can guess what's going on in there now. Chuckling at the antics of these people, you get up from the bench eventually and move back out into the woods to continue your exploration. A couple of minutes down a narrow footpath between the trees, you cross paths with the male cuckoo from before - on his way back towards the settlement.";
-	say "     [bold type]Remembering what is happening in his tent, part of you wants to give the man a little warning before he walks in on his partner having an affair.[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Remembering what is happening in his tent, part of you wants to give the man a little warning before he walks in on his partner having an affair.[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Warn the guy.";
 	say "     ([link]N[as]n[end link]) - Don't say anything.";
 	if Player consents:
@@ -71,8 +71,8 @@ to say ResolveEvent Two crash into the Cuckoos Nest:
 	WaitLineBreak;
 	say "     Gray starts cleaning the inside of the tent, sweeping out any dirt or trash. He fluffs up a couple of pillows that lay inside. Content with the condition of the interior, the male sits inside the tent and takes a couple of deep breaths. He closes his eyes and starts to murmur something. After listening a little harder you discover he is imagining Izzy getting fucked by someone with a massive cock. Still with his eyes closed, the imaginative male starts to play with his cock. His quickly erect penis is a little on the small size at five inches and avian in shape, which means large at the base and tapering off towards the tip. Rubbing the top of the pointed tip the bird says a little louder, 'Take that bull's dick... get a cream-pie as white as his coat...'";
 	say "     It seems like the scene playing in his memory is based on the event that occurred the last time you were here. A wild idea crosses your mind as you watch the small cocked cuckoo. Wouldn't it be fun to step into the tent yourself and start fooling around with the boy, making Izzy the voyeur for once.";
-	say "     [bold type]Do you want to head into the tent and switch things up for the couple?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Do you want to head into the tent and switch things up for the couple?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Head inside.";
 	say "     ([link]N[as]n[end link]) - Don't go inside.";
 	if Player consents:
@@ -117,7 +117,7 @@ Avian Tent is a situation.
 ResolveFunction of Avian Tent is "[ResolveEvent Avian Tent]".
 Prereq1 of Avian Tent is Two Crash into the Cuckoos Nest.
 The Prereq1Resolution of Avian Tent is { 1, 2 }.
-Sarea of Avian Tent is "Forest";
+Sarea of Avian Tent is "Forest".
 
 when play begins:
 	add Avian Tent to BadSpots of MaleList;
@@ -136,8 +136,8 @@ to say ResolveEvent Avian Tent:
 	say "     The promiscuous cuckoo asks, 'So what do you think of our humble little community Ace? Any interest in moving in?' The hunky osprey smiles and responds, 'It looks pretty good... but I might need a little more convincing.' The sultry avian femme leans in close to him and whispers 'Let me show you just how convincing I can be.' Then she begins to eagerly make out with the handsome raptor. By this point the bulge in the male's jumpsuit is at full mast. Breaking off from the oral fun a moment later, Izzy grabs the man's hand and pulls open the entrance of the tent. Inside, you can see Gray kneeling on the floor in one corner. He has been blindfolded and his arms are tied behind his back.";
 	WaitLineBreak;
 	say "     Stripping off the pilot's jumpsuit, the adulterous lady guides the anthro osprey to lie on a bedroll, and then starts to kiss down his toned abs and the tip of his 10 inch long avian cock. She then sits on the raptor's lap and starts to tease Gray by softly stroking her foot-talons across his face. The blindfolded male quietly moans. Grinning Izzy asks, 'You don't mind if we have some company? I made a bet with my partner here that if he doesn't climax before I cum I'll find a sexy woman to have a threesome.' With a mild chuckle the bird of prey says, 'This ain't my first time at this type of rodeo, you would be surprised just how many couples have a thing for a man in uniform. I'm gonna fuck you so hard it's going to be impossible for him to win the bet.'";
-	say "     [bold type]Do you want to watch while the osprey hooks up with the cuckooess?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Do you want to watch while the osprey hooks up with the cuckooess?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Watch.";
 	say "     ([link]N[as]n[end link]) - Don't watch.";
 	if Player consents:
@@ -179,8 +179,8 @@ to say ResolveEvent Sandwich Shop:
 	say "     You're keeping your head down, but outside the store you can hear the barks and yelps of two wolves. While keeping as absolutely still and quiet as you can be, you hear one wolf sniffing near the doorway. Uh-oh, has he got your scent!? You ready yourself to jump up and fight, but then... fate intervenes. The precariously leaning light-post outside suddenly falls, crashing to the ground and sending the two lupines running with a whimper. Once their barks are far enough away that they can be barely heard, you exit your hiding spot.";
 	WaitLineBreak;
 	say "     You look around the area and sense no current danger. Even though the restaurant is ruined, some small instinctual part of you feels like there has to be some food around here that hasn't been ruined or purloined. The metal support beams inside the store creak and groan enough to give you some pause to worry about being trapped if the building collapses.";
-	say "     [bold type]What do you want to do now?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]What do you want to do now?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Scavenge inside the store.";
 	say "     ([link]N[as]n[end link]) - Leave the store.";
 	if Player consents:
@@ -225,9 +225,8 @@ to say ResolveEvent Thief's Punishment:
 	WaitLineBreak;
 	say	"     After giving the would-be bandit a chance to catch his breath, the tigress grabs him by the scruff of his hood and growls through gritted fangs, 'You better give me one good reason why a wimp like you thought stealing from someone like me was a good idea!' Nervously the failed water-snatcher replies, 'I'm sorry! Please forgive me! A group of mutants discovered my hiding spot and robbed me of all my supplies. I... I haven't had anything to drink in two days. When I saw that crate of water bottles I just couldn't help myself. Please don't eat me!'";
 	say "     The cat-like weightlifter laughs and says teasingly, 'I could eat a shrimp like you for a post workout snack. But you look a little too lean to taste any good. You'll have to be punished another way. What's your name, anyways? Shrimp seems accurate for how you look but I doubt your momma named you that.' Squirming in her grasp, the mouse stutters, 'My name i... is... ppp... Powell.' The tigress bodybuilder listens to him with a toothy grin, but does little to acknowledge him, instead looking over towards you. 'Feel free to watch if you want, I'm going to make mousy here work for his atonement.'";
-	WaitLineBreak;
-	say "     [bold type]It's only fair that thieves get punished, and it doesn't look she plans on doing any real harm to him...[roman type][line break]";
 	LineBreak;
+	say "     [bold type]It's only fair that thieves get punished, and it doesn't look she plans on doing any real harm to him...[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Watch the thief get punished.";
 	say "     ([link]N[as]n[end link]) - Walk away.";
 	if Player consents:
@@ -240,6 +239,7 @@ to say ResolveEvent Thief's Punishment:
 		WaitLineBreak;
 		say "     Pleased by her little mouse's efforts, the muscular feline lets out a few aroused growls and locks Powell into place between her muscled thighs. Knowing the only way to escape his captor's clutch is to finish what he has started, the slender mouse quickens the pace to bring the buff trainer to climax. After not too much longer, a loud roar echoes through the forest as Bridget orgasms - her thighs firmly pressing the rodent's head stuck in between. After riding out the wave of pleasure, Bridget eventually lowers her legs to the ground, with the repentant thief flopping down to lie lengthwise on the bench - panting to catch his breath and let the sides of his head recover from the squishing.";
 		say "     It takes a couple of minutes for both of them to recover. Embarrassed, Powell stands up and says in a hurried fashion, 'I'll be going now. I won't try something like that ever again, I swear. Bye!' But just as he is about to leave the tigress grabs his tail. 'Where do you think you're going, pint size? I didn't say you could just walk off scot free! If you think one little bit of tongue-wagging is enough, think again!' Bridget tells him in a domineering tone. Futilely tugging at his tail, the rodent starts to stammer out some words, but is immediately interrupted by the personal trainer shushing him.";
+		WaitLineBreak;
 		say "     With a broad grin on her face, Bridget tells her caught thief, 'As your ongoing punishment, you're going to have to massage me, train with me, and see to my every need. In return I'll make sure you're well fed, protected from that gang of assholes, and a lot more in shape. Sound good?' Perplexed, the small mouse gapes at her for a second, then starts to smile and nods eagerly. Bridget slaps him on the back and says jovially, 'Great! I'll make a gym rat out of ya before you know it.' You can't help but smile about how this situation turned out as you leave, walking along one of the dirt tracks into the forest. Behind you, the two of them start doing some warm-up stretches.";
 		now BridgetPowellEventVar is 1; [player knows Powell's fate]
 		now Resolution of Thief's Punishment is 1;
@@ -284,9 +284,8 @@ to say ResolveEvent Thief's Reformation:
 	say "     The trainer tigress replies matter-of-factly, 'Oh, it's a mixture of some of the various types of protein powders, clean water of course and several squirts of breast milk.' You look at her incredulously, and Bridget points at the rodent who is just licking a bit of a brown milk mustache off his upper lip. 'What can I say - sweet little mousy here got it into his head to suck my nipples during a 'training' session we were doing, and before I knew it, he was drinking from me. Surprised the hell out of me to suddenly start leaking, but hey - it feels pretty nice and really works for him. A fair bit of his gains are from the tiger milk!'";
 	WaitLineBreak;
 	say "     Your awkward conversation is interrupted by the sounds of a rowdy gang of six infected beings strutting out of the forest and into the clearing. They're all lizard-based infected, showing scaly skin and tails on their bodies. A large monitor lizard seems to be the one in charge, stepping forward and calling out, 'Hey look - it's a bitch and a pussy, but I don't know which one is which!' His goons burst into laughter. Continuing his statement he says, 'If you don't want to get hurt hand over all your water and supplies. You know how this goes, don't you mousy boy?' Powell glares at the intruders and replies, 'Go away, I don't want to hurt you.' Stepping up beside her companion, Bridget flexes her muscles and growls, 'But I do.' Looking over her shoulder, she says to you in a more civil tone, 'You don't have to stick around if you don't like to. This is our fight, we can handle ourselves.'";
-	WaitLineBreak;
-	say "     [bold type]No matter what she says, the two of them are outnumbered pretty fiercely. Do you maybe want to stick around and help them fight off the gang of lizards?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]No matter what she says, the two of them are outnumbered pretty fiercely. Do you maybe want to stick around and help them fight off the gang of lizards?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Fight.";
 	say "     ([link]N[as]n[end link]) - Walk away.";
 	if Player consents:

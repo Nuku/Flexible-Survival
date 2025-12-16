@@ -12,6 +12,7 @@ to say saber_wins:
 	if Player is male:
 		say "     The saber kitty swipes at you one more time, ripping your clothes and knocking you down onto your butt. When you stay down she smiles that toothy smile, drawing extra attention to those pearly white fangs of hers. 'Finally, a male to play with,' she says as she saunters over to you, her pussy dripping audibly onto the floor with her desperate, heat-filled need. She frowns when she notices you aren't hard. She pushes your chest, making you lay down, and then straddles your face, keeping her pussy just barely out of reach of your face as she begins to lick your cock. She fondles your cock as she continues licking you. Her breasts rub on your stomach.";
 		say "     It isn't long before you begin to smell her heat. The scent starts to fog your mind and you begin to breathe deeply, taking in more and more of her scent. It isn't long before her scent and teasing brings you to a painfully hard erection. The second you are hard, she purrs loudly in delight and wastes no time in turning around and impaling herself on your rod. She begins to ride you with reckless abandon, a rather large puddle of her juices rapidly forming under you.";
+		WaitLineBreak;
 		say "     It doesn't take long before she orgasms on your cock, sending you over the edge. When you finally stop filling her tight cunt she gets up. She smiles her toothy smile again. 'Open wide, love,' she says, placing her pussy over your face, letting some of your combined juices drip all over your face. She then reaches down and lifts your balls before licking under them. 'Ooooh. I can't wait for you to join me in this bliss,' she says before sauntering off, leaving a trail of her juices dripping onto the ground.";
 		CreatureSexAftermath "Saber Kitty" receives "PussyFuck" from "Player";
 	else if Player is female:
@@ -239,8 +240,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "smilodon cum"	"A small amount of Smilodon cum you've gathered. You just collect everything, don't you?"	1	smilodon cum
 
-instead of sniffing smilodon cum:
-	say "The cum has a strong, somewhat nutty scent.";
+Scent of smilodon cum is "The cum has a strong, somewhat nutty scent.".
 
 smilodon cum is a grab object. smilodon cum is cum.
 smilodon cum is infectious. Strain of smilodon cum is "Saber Kitty".

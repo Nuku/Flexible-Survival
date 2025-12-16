@@ -455,20 +455,13 @@ name	desc	weight	object
 
 ceryneian deer-taur milk is a infectious milky grab object.
 Strain of ceryneian deer-taur milk is "Ceryneian Deer-taur".
-Usedesc of ceryneian deer-taur milk is "[ceryneian deer-taur milk use]".
-
-to say ceryneian deer-taur milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing ceryneian deer-taur milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+Usedesc of ceryneian deer-taur milk is "[breastmilk use]".
+Scent of ceryneian deer-taur milk is "[breastmilk smell]".
 
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Champion's Milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Champion's Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Champion's milk
+"Champion's Milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Champion's Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	Champion's milk
 
 Champion's Milk is a grab object.
 Champion's Milk is milky.
@@ -477,74 +470,13 @@ Strain of Champion's Milk is "Ipotane".
 Usedesc of Champion's Milk is "[Champion's Milk use]".
 
 to say Champion's Milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 	if HP of Best Pony >= 1:
 		decrease gestation of child by a random number from 3 to 5;
 		if gestation of child < 1, now gestation of Child is 1;
 	if HP of Best Pony >= 2:
 		now scalevalue of Player is 4;
-
-instead of sniffing Champion's milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
-
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"cheesecake milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Cheesecake Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	cheesecake milk
-
-cheesecake milk is a grab object.
-cheesecake milk is milky.
-cheesecake milk is infectious.
-Strain of cheesecake milk is "Cheesecake".
-Usedesc of cheesecake milk is "[cheesecake milk use]".
-
-to say cheesecake milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing cheesecake milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"cheetah woman milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Cheetah Woman Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	cheetah woman milk
-
-cheetah woman milk is a grab object.
-cheetah woman milk is milky.
-cheetah woman milk is infectious.
-Strain of cheetah woman milk is "Cheetah Woman".
-Usedesc of cheetah woman milk is "[cheetah woman milk use]".
-
-to say cheetah woman milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing cheetah woman milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"Champion's Milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Champion's Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Champion's milk
-
-Champion's Milk is a grab object.
-Champion's Milk is milky.
-Champion's milk is infectious.
-Strain of Champion's Milk is "Ipotane".
-Usedesc of Champion's Milk is "[Champion's Milk use]".
-
-to say Champion's Milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-	if HP of Best Pony >= 1:
-		decrease gestation of child by a random number from 3 to 5;
-		if gestation of child < 1, now gestation of Child is 1;
 
 instead of sniffing Champion's milk:
 	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
@@ -2543,7 +2475,7 @@ Strain of Onna Uma Milk is "Onna Uma".
 Usedesc of Onna Uma Milk is "[Onna Uma milk use]".
 
 to say Onna Uma Milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
@@ -3971,8 +3903,7 @@ to say rodeo clown milk use:
 	PlayerDrink 5;
 	SanLoss 5;
 
-instead of sniffing rodeo clown milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda funny.";
+Scent of rodeo clown milk is "You open the lid for a moment and take a sniff. Smells kinda funny.".
 
 
 Table of Game Objects (continued)
@@ -3990,8 +3921,7 @@ to say skunk milk use:
 	PlayerDrink 5;
 	SanLoss 5;
 
-instead of sniffing skunk milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+Scent of skunk milk is "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.".
 
 
 Table of Game Objects (continued)
@@ -4015,8 +3945,7 @@ to say Limbo Fox Milk use:
 	if "Iron Stomach" is not listed in feats of Player:
 		infect "Limbo Fox";
 
-instead of sniffing Limbo Fox Milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like Strawberry.";
+Scent of Limbo Fox Milk is "You open the lid for a moment and take a sniff. Smells kinda like Strawberry.".
 
 
 Glitchy Milk is a grab object.
@@ -4024,15 +3953,14 @@ Glitchy Milk is milky.
 Usedesc of Glitchy Milk is "[Glitchy Milk use]".
 
 to say Glitchy Milk use:
-	say "Lifting the plastic bottle to your mouth, you take a dr1nk fr0m it, leTting th£ m1/k run run 0VeR /0ur t0N6u£ and dddddddown IoUr 7hroAt. T@st£§ r1ch and-nd s74@wbeeeeee- [bold type][one of]I-IT BURNS [or]1I-IT T HURTS [at random]![roman type] Still in extreme mental and phys1cal pain, you feel your body-y temperature climbing and steam pours from your cuTs as they [one of]cinch[or]knit[at random] themselves §Hut. N0t ev£n fuLly finishing the bottle, you instinctively empty the rest of it somewhere, then stuff the empty bottle with difficulty back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a dr1nk fr0m it, leTting th£ m1/k run run 0VeR /0ur t0N6u£ and dddddddown IoUr 7hroAt. T@st£§ r1ch and-nd s74@wbeeeeee- [bold type][one of]I-IT BURNS [or]1I-IT T HURTS [at random]![roman type] Still in extreme mental and phys1cal pain, you feel your body-y temperature climbing and steam pours from your cuTs as they [one of]cinch[or]knit[at random] themselves §Hut. N0t ev£n fuLly finishing the bottle, you instinctively empty the rest of it somewhere, then stuff the empty bottle with difficulty back into your collection of 'empties'.";
 	SanLoss 35;
 	addAlcPoints 5;
 	PlayerHealed 300;
 	PlayerDrink 100;
 	PlayerEat 100;
 
-instead of sniffing Glitchy Milk:
-	say "You open the lid for a moment and take a sniff. But you can't seem to pick up on any particular smell.";
+Scent of Glitchy Milk is "You open the lid for a moment and take a sniff. But you can't seem to pick up on any particular smell.".
 
 
 Section 4 - Priorities

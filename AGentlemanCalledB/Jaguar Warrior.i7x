@@ -20,7 +20,7 @@ Version 3 of Jaguar Warrior by AGentlemanCalledB begins here.
 
 Section 1 - Creature Responses
 
-hoodequipped is a number that varies.[@Tag:NotSaved]
+hoodequipped is a truth state that varies. hoodequipped is usually false.
 
 to say losetoJaguarWarrior:
 	project the Figure of Tehuantl_Male_hard_icon;
@@ -47,7 +47,7 @@ to say beattheJaguarWarrior:
 		now HP of Tehuantl is 4;
 		ItemGain Jaguar Headdress by 1;
 	else if HP of Tehuantl is 4:
-		if hoodequipped is 1:
+		if hoodequipped is true:
 			say "[JaguarWarriorCaptured]";
 		else:
 			say "     Beaten, the jaguar warrior is sent reeling with your final blow, stumbling backwards and falling to the ground. With one last nervous glance, he rolls over to his hands and feet, scrambling upright before retreating back into the twisting museum corridors. As you watch him once again slip away, you are reminded of the strange headdress you managed to take from him before...";
@@ -60,7 +60,7 @@ to say JaguarWarriorDesc:
 		now HP of Tehuantl is 1;
 	else:
 		say "     [if showlocale is true]As you wander the halls of the museum you [one of]hear a low rumbling growl behind you. Turning quickly to face this potential threat you[or]turn a corner and[or]spot a figure moving towards you down the long corridor. Once the creature is close enough to make out the details you[at random][else]You[end if] ";
-	say "find yourself facing a powerful-looking feline warrior with the distinctive markings of a jaguar. He carries an ornate feathered shield and a dangerous-looking sword crafted from a stick with several sharp-looking black stones embedded in it[if HP of Tehuantl < 4]. Atop the jaguar's head is an elaborate headdress modeled after the large feline now wearing it[end if][if hoodequipped is 1]. Spotting the jaguar headdress you're wearing, the warrior shifts slightly, his stance becoming slightly more defensive as if intimidated by your garb[end if].";
+	say "find yourself facing a powerful-looking feline warrior with the distinctive markings of a jaguar. He carries an ornate feathered shield and a dangerous-looking sword crafted from a stick with several sharp-looking black stones embedded in it[if HP of Tehuantl < 4]. Atop the jaguar's head is an elaborate headdress modeled after the large feline now wearing it[end if][if hoodequipped is true]. Spotting the jaguar headdress you're wearing, the warrior shifts slightly, his stance becoming slightly more defensive as if intimidated by your garb[end if].";
 	say "     As the jaguar readies his weapon and moves forward you see the barbed tip of his feline cock poking free of its sheath, making his intent clear as he charges forward.";
 
 to say JagWarVic_Vag:
@@ -92,8 +92,9 @@ to say JagWarVic_Oral:
 to say JaguarWarriorCaptured: [TODO: Add tracking to the way the player took him]
 	project the Figure of Tehuantl_Male_hard_icon;
 	say "     The jaguar's weapon and shield clatter to the floor as your last blow sends him reeling. He stumbles backwards, barely managing to catch himself on a nearby display case. Trembling slightly, the large feline looks you in the eyes for a moment before his head drops in submission. You feel a surge of energy rush through you as the jaguar warrior finally acknowledges you as his better and you step forward to claim your hard-earned prize. You knock the jaguar's arm away from the display case he's supporting himself with and watch with satisfaction as he falls to one knee. With a low rumble emanating from somewhere inside you, you step around the beaten feline and press your foot against the middle of his back, pushing him to his hands and knees. Seeing himself be put in this position, Tehuantl himself actually pulls his spotted tail aside, exposing his tight ass to you in a submissive gesture.";
-	now sextablerun is 0;
+	LineBreak;
 	say "     [bold type]Feeling like you could do... something to cement your mastery over this muscled feline, you let your thoughts wander through all the possibilities.[roman type][line break]";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
@@ -165,7 +166,7 @@ to say JaguarWarriorCaptured: [TODO: Add tracking to the way the player took him
 			say "     You change your mind, just pushing him over to sprawl confusedly on the ground as you walk off without a word. The sudden rejection makes the feline hiss after you as he slowly gets to his feet afterwards.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say TehuantlTameNonSexM:
@@ -445,13 +446,13 @@ When Play begins:
 	[ Row used to designate any special combat features, "default" for standard combat. ]
 
 to say JagBodyDesc:
-	if hoodequipped is 0:
+	if hoodequipped is false:
 		say "sleek and [if Player is female]feminine, with the alluring curves of a beautiful[else]agile, with the lithe build of a[end if] jungle cat, and claws to match";
 	else:
 		say "sleek and agile, with the build of a powerful jungle predator. Your feline form is that of a seasoned warrior, fit and toned [if Player is female]while still carrying the alluring feminine curves of an exotic[else]with the striking physique of a dangerous[end if] jungle cat";
 
 to say JagBodyTF:
-	if hoodequipped is 0:
+	if hoodequipped is false:
 		say "it shifts to a feline shape, gaining the sleek, alluring form of a beautiful jungle cat";
 	else:
 		say "it shifts to a feline shape, surging with power as you gain the physique of a seasoned warrior, a sleek and agile jungle predator";
@@ -479,18 +480,18 @@ UnequipFunction of Jaguar Headdress is "[JaguarHeaddressUse]".
 
 to say JaguarHeaddressUse:
 	if Jaguar Headdress is equipped:
-		if hoodequipped is 0:
+		if hoodequipped is false:
 			if BodyName of Player is "Jaguar Warrior":
 				say "[line break]You drop to a knee as you feel a surge of heat roll through you, your feline physique shifting as the power of the jaguar headdress you're wearing ripples through your feline body, remaking you into a powerful jungle predator.";
 			setmonster "Jaguar Warrior";
 			choose row MonsterID from the Table of Random Critters;
 			if Player is not FemalePreferred:
 				now sex entry is "Both";
-			now hoodequipped is 1;
-	else if hoodequipped is 1:
+			now hoodequipped is true;
+	else if hoodequipped is true:
 		if BodyName of Player is "Jaguar Warrior":
 			say "[line break]No longer under the influence of the jaguar headdress, you feel your warrior's physique burning away, leaving your feline form lithe and more delicate as the last of its power drains out of you.";
-		now hoodequipped is 0;
+		now hoodequipped is false;
 		setmonster "Jaguar Warrior";
 		choose row MonsterID from the Table of Random Critters;
 		if Player is not MalePreferred:
@@ -498,19 +499,19 @@ to say JaguarHeaddressUse:
 
 An everyturn rule:
 	if Jaguar Headdress is equipped:
-		if hoodequipped is 0:
+		if hoodequipped is false:
 			if BodyName of Player is "Jaguar Warrior":
 				say "You drop to a knee as you feel a surge of heat roll through you, your feline physique shifting as the power of the jaguar headdress you're wearing ripples through your feline body, remaking you into a powerful jungle predator.";
 			setmonster "Jaguar Warrior";
 			choose row MonsterID from the Table of Random Critters;
 			if Player is not FemalePreferred:
 				now sex entry is "Both";
-			now hoodequipped is 1;
+			now hoodequipped is true;
 		infect "Jaguar Warrior";
-	else if hoodequipped is 1:
+	else if hoodequipped is true:
 		if BodyName of Player is "Jaguar Warrior":
 			say "No longer under the influence of the jaguar headdress, you feel your warrior's physique burning away, leaving your feline form lithe and more delicate as the last of its power drains out of you.";
-		now hoodequipped is 0;
+		now hoodequipped is false;
 		setmonster "Jaguar Warrior";
 		choose row MonsterID from the Table of Random Critters;
 		if Player is not MalePreferred:
@@ -528,8 +529,7 @@ to say JaguarWarriorFurUse:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Jaguar Warrior";
 
-instead of sniffing jaguar warrior fur:
-	say "The fur has a pleasing, not too strong, animal-like scent.";
+Scent of jaguar warrior fur is "The fur has a pleasing, not too strong, animal-like scent.".
 
 Section 4 - NPC
 

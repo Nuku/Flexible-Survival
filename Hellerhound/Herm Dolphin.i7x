@@ -13,8 +13,8 @@ dolphintricked is a number that varies.
 to say Dolphin wins:
 	say "     'Weak little thing, how could you attempt to beat me?' she whispers, rolling your weakened body over and spreading your legs. You struggle but fail to free yourself from her grasp.";
 	if dolphinwantmate is 0 or dolphinwantmate is -1:
-		say "     [bold type]Though with a few little changes, you could be my mate?[roman type][line break]";
 		LineBreak;
+		say "     [bold type]Though with a few little changes, you could be my mate?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Agree to be the dolphin's mate.";
 		say "     ([link]N[as]n[end link]) - Reject the dolphin, even if it might make her angry.";
 		if Player consents:
@@ -38,8 +38,8 @@ To say Dolphin loses:
 	if Libido of Player < 40 and "Dominant" is not listed in feats of Player:
 		say "You do not have the desire to mate with her though, so you leave her there.";
 	else if dolphintricked < 2:
-		say "[bold type]Do you want to have your way with the creature?[roman type][line break]";
 		LineBreak;
+		say "     [bold type]Do you want to have your way with the creature?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Have some fun with the dolphin.";
 		say "     ([link]N[as]n[end link]) - Leave the dolphin be.";
 		if Player consents:
@@ -48,7 +48,7 @@ To say Dolphin loses:
 			WaitLineBreak;
 			say "     Closer.";
 			WaitLineBreak;
-			say "     [bold type]AND closer.[roman type]";
+			say "     [bold type]AND closer.[roman type][line break]";
 			WaitLineBreak;
 			say "     She then whips her body up and sprays you with a different bunch of clicks, totally stunning your body. 'Now it is my turn to play with you...' she mutters.";
 			say "[dolphin fuck]";
@@ -399,7 +399,7 @@ Usedesc of dolphin milk is "[dolphin milk use]".
 the scent of dolphin milk is "The dolphin milk smells like milk with an odd, fishy scent mixed in.".
 
 to say dolphin milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 

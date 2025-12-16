@@ -16,14 +16,13 @@ When play begins:
 
 to say ResolveEvent Pack Bang:
 	say "     Going around what appears to be a darker path in the south part of the forest, you find a place that looks abandoned. Leaves crack under your feet, and branches that have overgrown onto the path get in your way. The only sign that something was here is the path in itself that's big enough for walks or bicycles. It looks really peaceful, but the noises in the background mean that you are not alone in here. Howls permeate the place, echoing in the dark part where your eyes can't discern, but you know that you are now likely the prey of a pack of wolves.";
-	say "     You feel your heart beating faster. Quick, you need to make a choice: Do you run away, or stay and confront your enemies?";
 	LineBreak;
+	say "     [bold type]You feel your heart beating faster. Quick, you need to make a choice: Do you run away, or stay and confront your enemies?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Run away.";
 	say "     ([link]N[as]n[end link]) - Stay and fight.";
 	if Player consents:
 		LineBreak;
 		say "     You turn tail and run as fast as you can, but the wolves notice and hunt you down. Your muscles burn and scream as branches hit your face, making small cuts on it, but you don't dare to slow down. Your hunters are left behind except for one, probably the leader of the pack. He stays close to you, his bestial stamina gaining on you, and a root in your way gives him the chance he needs to catch you, tackling you as you stumble over it. Sprawled on the ground, the wolf overtakes you easily and positions himself in the direction you had been running into, intent on driving you back towards his pack. You will need to deal with him quick, or the rest of them will catch up.";
-		wait for any key;
 		challenge "Feral Wolf Male";
 		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 			say "     You are thrown to the ground by the pack-leader, defeated. Your only chance of escaping is now gone. You can hear the others closing in on you two. Looks like they will have a nice prey.";
@@ -66,8 +65,7 @@ to say FeralWolfGangBang:
 	WaitLineBreak;
 	say "     The other wolves look angry and are fighting the one [if Player is female]knotted in your pussy[else]newly buried in your ass[end if]. You are pulled and pushed to your limits, and in a vain struggle to scream, your mouth is penetrated by another of the pack who hasn't had a turn yet. You feel hot cum filling your intestines as the one on your ass finally cums, but he doesn't get a chance to knot you as [if Player is female]both wolves on your back are pushed from you. Your holes gape[else]the wolf on your back is pushed from you. Your hole gapes[end if] without a cock[if Player is female], especially a knotted cock[end if], and the cold wind of the forest sends chills down your spine. The pack fighting for a turn is now just background noise, but your rest doesn't last long as other wolves finally fuck you.";
 	say "     You are always used by at least two of the horny wolves. In fact, sometimes, you feel more than two cocks penetrating your now-loose asshole[if Player is female] and another one inside of your drenched pussy[end if]. Your mouth hurts from all of the use, and all that you can taste right now is wolf cum. Your stomach is aching with how full it is, since it was filled from both ends. But the wolves are now long gone, leaving you in a pool of cum. This finally gives you enough time to rest, until you are finally good enough to go back to your adventures.[impregchance]";
-	if Player is female:
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Wolf Male";
+	CreatureSexAftermath "Player" receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from "Feral Wolf Male";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Feral Wolf Male";
 	CreatureSexAftermath "Player" receives "OralCock" from "Feral Wolf Male";
 	now Resolution of Pack Bang is 1; [gangbang]

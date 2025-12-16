@@ -9,7 +9,7 @@ A person has a text called fuckscene. fuckscene is usually "".
 
 Fucking is an action applying to one thing.
 
-Understand "fuck [person]" as fucking;
+Understand "fuck [person]" as fucking.
 
 before fucking:
 	follow the cock descr rule;

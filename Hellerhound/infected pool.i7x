@@ -76,7 +76,6 @@ to say stop wyvern:
 	if Player consents:
 		challenge "Wyvern";
 		say "     After you finish with the first wyvern, the second attacks!";
-		wait for any key;
 		challenge "Wyvern";
 		say "     After your ferocity in defending the pool, the wyverns decide they have had enough and leave, crashing a path through the park that leads in the direction of the city. Now that you've saved the pool from the danger of infection, you decide that it owes you a good drink and dip your head into the clear water.";
 		ThirstReset;
@@ -86,7 +85,6 @@ to say stop wyvern:
 		if Player consents:
 			challenge "Wyvern";
 			say "     After you finish with the first wyvern, the second attacks!";
-			wait for any key;
 			challenge "Wyvern";
 			say "     After freeing the pool from the danger of infection, you decide that it owes you a good drink.";
 			ThirstReset;
