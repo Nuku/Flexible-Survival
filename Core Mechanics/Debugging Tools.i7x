@@ -168,7 +168,7 @@ to decide if debug is at level ( n - number ): [or higher]
 	decide yes;
 
 an everyturn rule:
-	if debugactive is 1 and debuglevel > 8:
+	if debug is at level 9:
 		say "DEBUG: inasituation state: [inasituation]";
 
 
@@ -725,6 +725,28 @@ Carry out tablelisting:
 	else:
 		say "nothing to list, try again.";
 
+DebugInfectText is an action applying to one topic.
+understand "zInfectText [text]" as DebugInfectText.
+
+check DebugInfectText:
+	if debugactive is 0, say "You aren't currently debugging." instead;
+
+carry out DebugInfectText:
+	repeat through Table of Random Critters:
+		if Name entry exactly matches the text topic understood, case insensitively:
+			say "Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
+			say "Your [one of][bodytype of Player] [or][bodydesc of Player] [or][bodydesc of Player] [or][bodytype of Player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
+			say "Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
+			say "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
+			say "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
+			say "[line break]Looking at your new form:[line break]";
+			say "Your face is [Face of Player].";
+			say "Your body is [Body of Player].";
+			say "Looking at yourself, your body is covered in [Skin of Player] skin.";
+			say "[tail of Player] [line break]";
+			say "A private peek shows that you have a [Cock Size Desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random].";
+			break;
+
 Chapter 3 - Forced Commands
 
 Section 1 - Player Focused Commands
@@ -899,7 +921,7 @@ carry out PlayerSizeChange:
 
 [Sets the size of one of cock, cunt, balls, or breasts. Useful for testing some scenes.]
 SetPlayerGenitals is an action applying to one number.
-understand "zSetGenitals [number]" as SetPlayerGenitals;
+understand "zSetGenitals [number]" as SetPlayerGenitals.
 
 check SetPlayerGenitals:
 	if debugactive is 0, say "You aren't currently debugging." instead;
@@ -1230,7 +1252,7 @@ check allitemcheat:
 	if debugactive is 0, say "You aren't currently debugging!" instead;
 
 carry out allitemcheat:
-	say "     You gain one of everything that isn't cum or milk!";
+	say "You gain one of everything that isn't cum or milk!";
 	repeat with x running through grab objects:
 		if x is not cum and x is not milky:
 			ItemGain x by 1 silently;
@@ -1242,7 +1264,7 @@ check allmilkcheat:
 	if debugactive is 0, say "You aren't currently debugging!" instead;
 
 carry out allmilkcheat:
-	say "     You gain one of all milk items!";
+	say "You gain one of all milk items!";
 	repeat with x running through milky grab objects:
 		ItemGain x by 1 silently;
 
@@ -1253,7 +1275,7 @@ check allcumcheat:
 	if debugactive is 0, say "You aren't currently debugging!" instead;
 
 carry out allcumcheat:
-	say "     You gain one of all cum items!";
+	say "You gain one of all cum items!";
 	repeat with x running through cum grab objects:
 		ItemGain x by 1 silently;
 
@@ -1280,7 +1302,7 @@ carry out RoomEmptying:
 		truncate Invent of x to 0 entries; [cleaning out the old data]
 
 
-Chapter 4 - Experimental Stuff
+Chapter 4 - Experimental Stuff (Not for release)
 
 Testaction1 is an action applying to nothing.
 understand "Testaction1" as Testaction1.
