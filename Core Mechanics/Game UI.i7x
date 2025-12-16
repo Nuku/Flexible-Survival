@@ -327,16 +327,11 @@ This is the self examine rule:
 	else:
 		say "You ";
 	if ScaleValue of Player is:
-		-- 1:
-			say "are quite small, about the size of a housecat.";
-		-- 2:
-			say "are fairly small, about half as tall as a regular human.";
-		-- 3:
-			say "are about as big as a regular human.";
-		-- 4:
-			say "are superhumanly tall.";
-		-- 5:
-			say "are enormous in size, a lot larger than any regular human ever could be.";
+		-- 1: say "are quite small, about the size of a housecat.";
+		-- 2: say "are fairly small, about half as tall as a regular human.";
+		-- 3: say "are about as big as a regular human.";
+		-- 4: say "are superhumanly tall.";
+		-- 5: say "are enormous in size, a lot larger than any regular human ever could be.";
 	[ Infection Descriptions Below   ]
 	if Player is FullyNewTypeInfected and NewTypeInfectionActive is true: [new infection on player and activated]
 		say "Pulling out a small mirror, you check yourself over from head to toe, attempting to make sense of your current form. Your head and face resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance. [if Player is HasBeard]You have a [Hair Color of Player] [Beard Style of Player]. [end if][if Player is HasHeadHair]On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style. [end if]Inspecting your [Mouth Length Adjective of Player] mouth with both the mirror and your digits, you attempt to look past your [Tongue Length of Player] inch long, [Tongue Color of Player], [Tongue Adjective of Player] tongue and into your [Mouth Length Adjective of Player] throat. [if Player is HasHeadAdornments]Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress. [end if][line break]";
@@ -486,21 +481,25 @@ This is the self examine rule:
 				break;
 	if Barefoot is true:
 		say "You are barefoot right now. ";
+	let newline be false;
 	if weapon object of Player is not journal:
+		now newline is true;
 		say "[line break]You are carrying [a printed name of weapon object of Player] just in case of trouble. ";
 		if weapon object of Player is unwieldy:
 			say "Due to its comparatively [if scalevalue of Player > objsize of weapon object of Player]small[else]big[end if] size, it is [if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) > 3]very unwieldy[else if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) is 3]rather unwieldy[else]somewhat unwieldy[end if] for you to use at the moment. ";
-	repeat with x running through equipped owned equipment:
-		if slot of x is "shield" and placement of x is "shield":
-			if descmod of x is not "":
-				if weapon object of Player is journal:
-					LineBreak;
-				say "[descmod of x] ";
-			break;
-	repeat with x running through equipped owned equipment:
-		if descmod of x is "", next;
-		if placement of x is "end":
-			say "[descmod of x] ";
+	let places be {"shield", "back", "end"};
+	repeat with place running through places:
+		repeat with x running through equipped owned equipment:
+			if placement of x is place and slot of x is place:
+				if descmod of x is not "":
+					if newline is false:
+						LineBreak;
+						now newline is true;
+					say "[descmod of x] ";
+				break;
+			else if placement of x is place and place is "end":
+				if descmod of x is not "":
+					say "[descmod of x] ";
 	[ ^^ Eqipment Descriptions Done ]
 	LineBreak;
 	if the player is not lonely:
@@ -517,14 +516,15 @@ understand "List Following Children" as ListFollowingChildren.
 understand "List Offspring" as ListFollowingChildren.
 understand "ListOffspring" as ListFollowingChildren.
 
-carry out ListFollowingChildren:
+check ListFollowingChildren:
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 0: [no children following]
-		say "You do not have any offspring trailing after you.";
-		stop the action;
-	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
-		say "Trailing behind come your children:[line break]";
+		say "You do not have any offspring trailing after you." instead;
+
+carry out ListFollowingChildren:
+	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
+		say "Trailing behind come your children:[line break][line break]";
 	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
-		say "Trailing behind comes your child:[line break]";
+		say "Trailing behind comes your child:[line break][line break]";
 	if the number of entries in childrenfaces > 0: [player has old style children]
 		if the number of entries in childrenfaces is 1:
 			if ( entry 1 of childrenskins is not entry 1 of childrenbodies ) or ( entry 1 of childrenskins is not entry 1 of childrenfaces ):
@@ -573,7 +573,7 @@ carry out ListFollowingChildren:
 				say "[bold type][PosAdjCap of Offspring] pigmentation is almost pure black.[roman type][line break]";
 			say "You have [a PlayerRelationship entry] relationship with [ObjectPro of Offspring], and [PosAdj of Offspring] personality is rather [Personality entry].";
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
-		say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
+		say "[line break]They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
 		say "[SubjectProCap of Offspring] look[if Offspring is not NProN]s[end if] as alert and human as you are, taking after you eagerly. Despite [PosAdj of Offspring] age, [SubjectPro of Offspring] [if Offspring is NProN]have[else]has[end if] already grown to young adult stature, both physically and in apparent emotional and mental development.";
 
@@ -594,7 +594,7 @@ to linkaction (x - Person):
 	say "[linkaction of x]";
 
 linkcheck is a person that varies.[@Tag:NotSaved]
-The linkaction of a person is usually "Possible Actions: [if number of entries of conversation of linkcheck > 0][link]talk[as]talk [linkcheck][end link], [end if][link]smell[as]smell [linkcheck][end link][PetdismissCheck linkcheck], [link]fuck[as]fuck [linkcheck][end link][line break]";
+The linkaction of a person is usually "Possible Actions: [if number of entries of conversation of linkcheck > 0][link]talk[as]talk [linkcheck][end link], [end if][link]smell[as]smell [linkcheck][end link][PetdismissCheck linkcheck], [link]fuck[as]fuck [linkcheck][end link][line break]".
 
 to say PetdismissCheck (linkcheck - a person):
 	if number of entries in companionList of Player is greater than 0:
