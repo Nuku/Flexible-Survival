@@ -31,7 +31,7 @@ an everyturn rule:
 	if daytimer is day: [currently day]
 		if WerewolfWatching is true: [she's only out at night]
 			now WerewolfWatching is false;
-	else if daytimer is night: [currently night]
+	else: [currently night]
 		if Player is in Urban Forest and WerewolfRelationship is 0 and level of Player > 5:
 			if FemaleList is not banned and FurryList is not banned and FeralList is not banned:
 				if WerewolfWatching is false: [initial message]

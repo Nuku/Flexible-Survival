@@ -34,7 +34,7 @@ to say saber_loses:
 			say "     It doesn't take long before you blow your load into her, causing her to purr. 'Thanks, love. How about you clean me out a bit?' she entices. Who could say no to such a sexy kitty? You pull out and put your face next to her pussy. Before you have a chance to react she grabs your head and forces you into her cunt. 'Open wide, love. I want you to get every bit of it so you can become a sexy saber kitty like me!' she says, before pushing out all the cum in her cunt into your mouth as well as a bunch of her own juices. You have no choice but to swallow it all. 'Good, slut. Keep it up and you will have such a wonderful time,' she mewls before sauntering off, leaving a trail of her dripping juices on the ground.";
 			CreatureSexAftermath "Saber Kitty" receives "PussyFuck" from "Player";
 			CreatureSexAftermath "Player" receives "OralPussy" from "Saber Kitty";
-			infect;
+			infect "Saber Kitty";
 		else:
 			LineBreak;
 			say "     You realize she might have some ulterior motive and push her away. She frowns and sighs. 'Alright, maybe next time, love,' she says before sauntering off, leaving a trail of her dripping juices on the ground.";
@@ -248,6 +248,8 @@ Usedesc of smilodon cum is "[smilodon cum use]".
 
 to say smilodon cum use:
 	say "     Taking out the small bottle you keep your Smilodon cum in, you put it to your lips and chug down the creamy liquid. Tasty, and somehow you feel the need for more of it...";
+	PlayerDrink 5;
+	SanLoss 5;
 
 Section 3 - Endings
 

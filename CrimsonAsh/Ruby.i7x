@@ -9,16 +9,12 @@ Version 1 of Ruby by CrimsonAsh begins here.
 "Adds the NPC Ruby to Flexible Survival's Capitol District"
 
 
-RubyRoomConnection is a number that varies.[@Tag:NotSaved]
-
-an everyturn rule:
+a postimport rule: [bugfixing rules for players that import savegames]
 	if Urban Cliff is resolved:
-		if Resolution of Urban Cliff is 3 and RubyRoomConnection is 0:
+		if Resolution of Urban Cliff is 3:
 			change the northeast exit of Path of Ashes to Ashen Cliff;
 			change the southwest exit of Ashen Cliff to Path of Ashes;
-			now RubyRoomConnection is 1; [room connected]
-		if Ruby is not in Ruby's Cave: [bugfix]
-			now Ruby is in Ruby's Cave;
+		now Ruby is in Ruby's Cave;
 
 Section 1 - Events
 
@@ -147,7 +143,6 @@ to say ResolveEvent Urban Cliff:
 		now Charisma of Ruby is 1; [visited and talked once]
 		change the northeast exit of Path of Ashes to Ashen Cliff;
 		change the southwest exit of Ashen Cliff to Path of Ashes;
-		now RubyRoomConnection is 1; [room connected]
 		now Urban Cliff is resolved;
 
 to say RubyCombatFuck:
@@ -503,13 +498,15 @@ instead of going down from Ashen Cliff while (Ruby is in Ruby's Cave):
 			LineBreak;
 			say "[RubySex1]";
 			now PlayerRomanced of Ruby is true;
+			now PlayerFriended of Ruby is false;
 		else:
 			LineBreak;
 			say "     You put your hands out and hold her shoulders, your lips only brush briefly. She stops instantly, looking a little heartbroken. You brush your hand across her shoulder and reassure her that she's an amazing person but you don't want her in that way. She backs up and looks down, clearly hurt. 'Ouch. Well at least you made it gentle.' She gives a sad smile. 'Ah, don't worry about it, it's stupid anyway. Umm, I need to go out and scavenge for some stuff, clear out if you will. I'll ah, talk to you later,' she finishes and walks out without another word before you can even respond. You follow shortly after, leaving the dragon's home...";
 			now PlayerFriended of Ruby is true;
-		now Charisma of Ruby is 3;
+			now PlayerRomanced of Ruby is false;
+		[now Charisma of Ruby is 3;]
 	else if PlayerRomanced of Ruby is true: [romance]
-		say "     You enter into Ruby's cave and after a few seconds your eyes adjust to the dim lighting inside. The dragoness currently is [one of]on the far side of the room fumbling with a hot stew[or]just preparing a large furry hide[at random], but puts aside what she's doing as she notices your presence. With a broad smile on her toothy maw, she says, 'Hey good lookin.'";
+		say "     You enter into Ruby's cave and after a few seconds your eyes adjust to the dim lighting inside. The dragoness currently is [one of]on the far side of the room fumbling with a hot stew[or]just preparing a large furry hide[at random], but puts aside what she's doing as she notices your presence. With a broad smile on her toothy maw, she says, 'Hey good lookin['].'";
 		LineBreak;
 		move Player to Ruby's Cave;
 	else if PlayerFriended of Ruby is true: [friendzone]

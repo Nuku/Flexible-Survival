@@ -16,10 +16,7 @@ PetMuttColor is a text that varies.
 PetMuttDetailedlook is a text that varies.
 
 to RandomizeFeralMutt:
-	if a random chance of 1 in 2 succeeds:
-		now FeralMuttFurColorNumber is 1;
-	else:
-		now FeralMuttFurColorNumber is 2;
+	now FeralMuttFurColorNumber is a random number between 1 and 2;
 	let randomnumber be a random number from 1 to 6; [adjust the latter number for the number of options]
 	if randomnumber is:
 	-- 1:
@@ -88,8 +85,8 @@ to say LoseToFeralDog:
 		now Mutt Pack Attack is active; [active when they reach level 3 dominance]
 	else:
 		now Mutt Pack Attack is inactive; [inactive when they're not dominant enough]
-		if FeralMuttDominance > -3:
-			now Mutt Pack Submission is inactive; [inactive when they're not subby enough]
+	if FeralMuttDominance > -3:
+		now Mutt Pack Submission is inactive; [inactive when they're not subby enough]
 
 
 to say BeatTheFeralMutt:
@@ -153,8 +150,8 @@ to say FeralDogSexMenu:
 					now Mutt Pack Submission is inactive; [inactive when they are less than 3x submissive]
 				else:
 					now Mutt Pack Submission is active; [active when they're sufficiently subby]
-					if FeralMuttDominance < 3:
-						now Mutt Pack Attack is inactive; [inactive when they're not dominant enough]
+				if FeralMuttDominance < 3:
+					now Mutt Pack Attack is inactive; [inactive when they're not dominant enough]
 				wait for any key;
 		else if calcnumber is 0:
 			LineBreak;
@@ -223,8 +220,8 @@ to Pet MuttRecruitment:
 	LineBreak;
 	if calcnumber is 1:
 		say "     Reaching out you pat the dog's furry head, he nuzzles his ears into your palm and pants at your affections. You give him a smile and ask if he liked what you did with him earlier, quickly eyeing the mutt's groin and the sheath between his legs. Leaping up, the cute dog barks happily, jumping in a small circle and wagging his tail excitedly. Turning around you start to walk, a slight swagger in your step as you lead the animal towards the Grey Abbey Library. Predictably, your new pet starts to follow, panting lightly, his eyes focused solely on you as the both of you arrive sometime later at your shelter. As you enter the building he stops outside, looking to you standing in the doorway. There is a moment of hesitation, with him cocking his head to the side, which reminds you that the dog has led an independent existence on the streets for some time now.";
-		say "     You wait patiently, waving for him to come in, but while he wags his tail, the dog still remains standing where he is. And a moment later he starts to pad closer, but not towards you but an old metal bench at a bus stop just a few steps away. Settling under it and wagging his tail happily, the dog barks at you in a meaningful tone. Seems like he found a place to stay. Outside dog, you think to yourself with a smile as the mutt lays his head down under the shade of his little shelter, looking to you and awaiting an order from his new master. Well then... only one thing left do to:[line break]";
-		say "[line break][bold type]Please enter a name for your [FeralMuttFurColor] [FeralMuttCurrentBreed][roman type]> [run paragraph on]";
+		say "     You wait patiently, waving for him to come in, but while he wags his tail, the dog still remains standing where he is. And a moment later he starts to pad closer, but not towards you but an old metal bench at a bus stop just a few steps away. Settling under it and wagging his tail happily, the dog barks at you in a meaningful tone. Seems like he found a place to stay. Outside dog, you think to yourself with a smile as the mutt lays his head down under the shade of his little shelter, looking to you and awaiting an order from his new master. Well then... only one thing left do to:[paragraph break]";
+		say "[bold type]Please enter a name for your [FeralMuttFurColor] [FeralMuttCurrentBreed][roman type]> [run paragraph on]";
 		get typed command as playerinput;
 		while "[playerinput]" is "":
 			say "[bold type]Please enter a name for your [FeralMuttFurColor] [FeralMuttCurrentBreed] (must be one or more letters)[roman type]> [run paragraph on]";
@@ -698,11 +695,11 @@ to say PackSubmissionScenes:
 		WaitLineBreak;
 		say "     You lay on the ground, enjoying your aftershocks for some time when suddenly the dog locked in your cunt yanks at his cock embedded deep in your well-fucked cunt. You moan loudly as his nearly foot long length is slowly pulled from your sex. The mutt leans down and gives your pussy a last lick before bounding off behind a junk pile. Looking around you still see the other four mutts surrounding you, looking just as horny as the mutt who had just fucked you. You sigh and you can feel your pussy start to quiver with excitement again. You then turn over and put yourself in the doggy style position, raising your ass to the group of mutts still waiting their turn. 'Come and get it boys,' you moan out in anticipation.";
 		say "     They leap to you, at first there's a small scuffle as to who gets to go next but eventually one wins out. The new mutt, the golden furred shepherd mounts your rear and thrusts into your sloppy cunt. The previous dog's cum runs down your thighs and squishes out of your sex which makes wet sucking noises as the golden shepherd fucks you with a renewed vigor. For the next few hours you're fucked by all four dogs. Each of them mounting you, thrusting into you, knotting you, and then filling you up with what feels like gallons of canine spunk. When they're finally done your fucked cunt is stretched wide and gushing a mixture of dog jism and your own juices from it, while your member is just a spent mess covered in your own cum.";
-		WaitLineBreak;
-		say "     As the final dog pulls his thick cock from you, he stays behind a while to lap at your sloppy cunt before he too bounds off into the junkyard, barking after his pack. You lay there for a while, ass raised and slowly rubbing your creamed sex as your breathing slows again. Eventually you manage to stand, still very shaky and a little sore from the amazing fucking you've just gotten. You'll have to visit these mutts again sometime... maybe soon if this is what man's best friend is doing nowadays. You walk off contemplating this, globs of canine spunk still seeping out of your pussy and dripping to the ground or down your legs as you walk.";
 		CreatureSexAftermath "Feral Mutt" receives "OralCock" from "Player";
 		CreatureSexAftermath "Feral Mutt" receives "OralPussy" from "Player";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mutt";
+		WaitLineBreak;
+		say "     As the final dog pulls his thick cock from you, he stays behind a while to lap at your sloppy cunt before he too bounds off into the junkyard, barking after his pack. You lay there for a while, ass raised and slowly rubbing your creamed sex as your breathing slows again. Eventually you manage to stand, still very shaky and a little sore from the amazing fucking you've just gotten. You'll have to visit these mutts again sometime... maybe soon if this is what man's best friend is doing nowadays. You walk off contemplating this, globs of canine spunk still seeping out of your pussy and dripping to the ground or down your legs as you walk.";
 	else if Player is female: [female]
 		say "     The idea of mating with a group of submissive feral hounds sends a naughty shiver down your spine. You give a grin and begin to strip, you can already feel yourself flushed with arousal, your crotch already beginning to dampen. After stripping you wade into the group of them and kneel down to scratch the heads of two of the mutts. The others crowd around you, eagerly sniffing you and wagging their tails wildly. You lean in to give a third dog a kiss on the head, still petting the other two you kiss down this new canine's face ending on his muzzle. Meanwhile the other two dogs have ducked their heads low and have begun licking at your exposed body. They run thick, coarse tongues over your belly before swiping over your nipples and giving you a jolt of pleasure that runs down your back.";
 		say "     You moan over the attentions of the submissive pack, but right now, you need more. You're overwhelmed with an intense heat and a need to be ravaged by a pack of dogs. The mutts give a brief whine until you lay back and go spread eagle before them. The pack gives a few joyful barks and then sets about enjoying their shared alpha. Perhaps not what you were expecting, the mutts don't immediately start humping away at you. They all stand over you, gathered around, before lowering their heads and each individual dog starts to lap at your body with a wet, heavenly dog-tongue. Two mutts are licking your lower half while two others lap at your chest. The final mutt, the large one who had originally approached you leans his canine muzzle down to your own and begins to lick your face, covering most of it in a thin layer of slobber within the first few laps.";
@@ -715,10 +712,10 @@ to say PackSubmissionScenes:
 		WaitLineBreak;
 		say "     You lay on the ground, enjoying your aftershocks for some time when suddenly the dog locked in your cunt yanks at his cock embedded deep in your well-fucked cunt. You moan loudly as his nearly foot long length is slowly pulled from your sex. The mutt leans down and gives your pussy a last lick before bounding off behind a junk pile. Looking around you still see the other four mutts surrounding you, looking just as horny as the mutt who had just fucked you. You sigh and you can feel your pussy start to quiver with excitement again. You then turn over and put yourself in the doggy style position, raising your ass to the group of mutts still waiting their turn. 'Come and get it boys,' you moan out in anticipation.";
 		say "     They leap to you, at first there's a small scuffle as to who gets to go next but eventually one wins out. The new mutt, the golden furred shepherd mounts your rear and thrusts into your sloppy cunt. The previous dog's cum runs down your thighs and squishes out of your sex which makes wet sucking noises as the golden shepherd fucks you with a renewed vigor. For the next few hours you're fucked by all four dogs. Each of them mounting you, thrusting into you, knotting you, and then filling you up with what feels like gallons of canine spunk. When they're finally done your fucked cunt is stretched wide and gushing a mixture of dog jism and your own juices from it.";
-		WaitLineBreak;
-		say "     As the final dog pulls his thick cock from you, he stays behind a while to lap at your sloppy cunt before he too bounds off into the junkyard, barking after his pack. You lay there for a while, ass raised and slowly rubbing your creamed sex as your breathing slows again. Eventually you manage to stand, still very shaky and a little sore from the amazing fucking you've just gotten. You'll have to visit these mutts again sometime... maybe soon if this is what man's best friend is doing nowadays. You walk off contemplating this, globs of canine spunk still seeping out of your pussy and dripping to the ground or down your legs as you walk.";
 		CreatureSexAftermath "Feral Mutt" receives "OralPussy" from "Player";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mutt";
+		WaitLineBreak;
+		say "     As the final dog pulls his thick cock from you, he stays behind a while to lap at your sloppy cunt before he too bounds off into the junkyard, barking after his pack. You lay there for a while, ass raised and slowly rubbing your creamed sex as your breathing slows again. Eventually you manage to stand, still very shaky and a little sore from the amazing fucking you've just gotten. You'll have to visit these mutts again sometime... maybe soon if this is what man's best friend is doing nowadays. You walk off contemplating this, globs of canine spunk still seeping out of your pussy and dripping to the ground or down your legs as you walk.";
 	else if Player is male: [male]
 		say "     The idea of mating with a group of submissive feral hounds sends a naughty shiver down your spine. You give a grin and begin to strip, you can already feel yourself begin to stiffen with arousal. After stripping you wade into the group of them and kneel down to scratch the heads of two of the mutts. The others crowd around you, eagerly sniffing you and wagging their tails wildly. You lean in to give a third dog a kiss on the head, still petting the other two you kiss down this new canine's face ending on his muzzle. Meanwhile the other two dogs have ducked their heads low and have begun licking at your exposed body. They run thick, coarse tongues over your belly before swiping over your chest and giving you a jolt of pleasure that runs down your back.";
 		say "     You moan over the attentions of the submissive pack, but right now, you need more. You're overwhelmed with an intense heat and a need to ravage this pack of dogs. The mutts give a brief whine until you lay back and pump your cock a few times to get the point across. The pack gives a few joyful barks and then sets about enjoying their shared alpha. Perhaps not what you were expecting, the mutts don't immediately start humping away at you. They all stand over you, gathered around, before lowering their heads and each individual dog starts to lap at your body with a wet, heavenly dog-tongue. Two mutts are licking your lower half while two others lap at your chest. The final mutt, the large one who had originally approached you leans his canine muzzle down to your own and begins to lick your face, covering most of it in a thin layer of slobber within the first few laps.";

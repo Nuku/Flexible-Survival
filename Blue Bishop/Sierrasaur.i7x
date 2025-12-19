@@ -51,6 +51,7 @@ to checkboundrecover:
 	if "Sanity Saver" is listed in the feats of Player, now humanity of Player is 100;
 
 to sierrabind:
+	setmonster "Sierrasaur";
 	now lustatt is Libido of Player;
 	now calcnumber is -1;
 	let Trixieexit be 0;
@@ -584,8 +585,7 @@ Usedesc of earthen seed is "[usesierraseed]".
 
 to say usesierraseed:		[only alters sizes, not gender]
 	if "Iron Stomach" is not listed in feats of Player:
-		setmonster "Sierrasaur";
-		choose row MonsterID from Table of Random Critters;
+		choose a row with Name of "Sierrasaur" in Table of Random Critters;
 		if Player is MalePreferred:
 			now sex entry is "Male";
 		else if Player is FemalePreferred:

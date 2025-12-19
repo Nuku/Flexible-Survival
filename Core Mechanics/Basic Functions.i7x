@@ -60,26 +60,22 @@ to linkfind (T - text): [sets hyperindex to the index of an entry in the hyperli
 checkresult is a number that varies.
 
 To check (X - text):
-	now X is X in lower case; [just to avoid problems if a writer capitalizes the stat]
 	let stat be 0;
-	if X is "strength":
-		now stat is strength of player;
-	if X is "dexterity":
-		now stat is dexterity of player;
-	if X is "stamina":
-		now stat is stamina of player;
-	if X is "charisma":
-		now stat is charisma of player;
-	if X is "perception":
-		now stat is perception of player;
-	if X is "intelligence":
-		now stat is intelligence of player;
-	now stat is stat - 10;
-	now stat is stat / 2 ;
-	let die be a random number from 1 to 20 ;
+	if X in lower case is:
+		-- "strength": now stat is strength of player;
+		-- "dexterity": now stat is dexterity of player;
+		-- "stamina": now stat is stamina of player;
+		-- "charisma": now stat is charisma of player;
+		-- "perception": now stat is perception of player;
+		-- "intelligence": now stat is intelligence of player;
+		-- otherwise:
+			say "ERROR: Invalid stat '[X]' used in check. Please report on the FS Discord how you saw this.";
+			continue the action;
+	now stat is (stat - 10) / 2;
+	let die be a random number from 1 to 20;
 	say "You perform a check of [x] and roll [die], resulting in";
 	increase die by stat;
-	say "     [die]!";
+	say " [die]!";
 	now checkresult is die;
 
 Instead of sniffing something (called x):
@@ -113,35 +109,40 @@ to DoubleLineBreak:
 	say "[line break][line break]";
 
 to HungerReset:
-	LineBreak;
-	say "     [bold type]Your hunger is gone![roman type][line break]";
-	now hunger of Player is 0;
-
-to PlayerEat (N - number):
-	LineBreak;
-	say "     [bold type]Your hunger is reduced by [N]![roman type][line break]";
-	decrease hunger of Player by N;
-	if hunger of Player < 0:
+	if hunger of Player > 0:
+		LineBreak;
+		say "     [bold type]Your hunger is gone![roman type][line break]";
 		now hunger of Player is 0;
 
+to PlayerEat (N - number):
+	if hunger of Player > 0:
+		LineBreak;
+		say "     [bold type]Your hunger is reduced by [N]![roman type][line break]";
+		decrease hunger of Player by N;
+		if hunger of Player < 0:
+			now hunger of Player is 0;
+
 to PlayerHunger (N - number):
-	LineBreak;
-	say "     [bold type]Your hunger has increased by [N]![roman type][line break]";
-	increase hunger of Player by N;
-	if hunger of Player > 100:
-		now hunger of Player is 100;
+	if hunger of Player < 100:
+		LineBreak;
+		say "     [bold type]Your hunger has increased by [N]![roman type][line break]";
+		increase hunger of Player by N;
+		if hunger of Player > 100:
+			now hunger of Player is 100;
 
 to ThirstReset:
-	LineBreak;
-	say "     [bold type]Your thirst is gone![roman type][line break]";
-	now thirst of Player is 0;
+	if thirst of Player > 0:
+		LineBreak;
+		say "     [bold type]Your thirst is gone![roman type][line break]";
+		now thirst of Player is 0;
 
 to PlayerDrink (N - number):
-	LineBreak;
-	say "     [bold type]Your thirst is reduced by [N]![roman type][line break]";
-	decrease thirst of Player by N;
-	if thirst of Player < 0:
-		now thirst of Player is 0;
+	if thirst of Player > 0:
+		LineBreak;
+		say "     [bold type]Your thirst is reduced by [N]![roman type][line break]";
+		decrease thirst of Player by N;
+		if thirst of Player < 0:
+			now thirst of Player is 0;
 
 to PlayerDrink (N - number) silently:
 	decrease thirst of Player by N;
@@ -149,11 +150,12 @@ to PlayerDrink (N - number) silently:
 		now thirst of Player is 0;
 
 to PlayerThirst (N - number):
-	LineBreak;
-	say "     [bold type]Your thirst has increased by [N]![roman type][line break]";
-	increase thirst of Player by N;
-	if thirst of Player > 100:
-		now thirst of Player is 100;
+	if thirst of Player < 100:
+		LineBreak;
+		say "     [bold type]Your thirst has increased by [N]![roman type][line break]";
+		increase thirst of Player by N;
+		if thirst of Player > 100:
+			now thirst of Player is 100;
 
 to ItemGain (ItemObj - text) by (N - number):
 	ItemGain ItemObj by N silence state is 0;
@@ -220,12 +222,13 @@ to ItemLoss (ItemObj - a grab object) by (N - number) silence state is (Silence 
 		now ItemObj is nowhere;
 
 to PlayerMaxHeal:
-	LineBreak;
-	say "     [bold type]Your hitpoints are completely restored![roman type][line break]";
-	now HP of Player is MaxHP of Player;
+	if HP of Player < MaxHP of Player:
+		LineBreak;
+		say "     [bold type]Your hitpoints are completely restored![roman type][line break]";
+		now HP of Player is MaxHP of Player;
 
 to PlayerHealed (N - number):
-	if N is not 0:
+	if N is not 0 and HP of Player < MaxHP of Player:
 		LineBreak;
 		say "     [bold type]Your hitpoints increase by [N]![roman type][line break]";
 		increase HP of Player by N;
@@ -247,7 +250,7 @@ to SanLoss (N - number):
 		decrease humanity of Player by N;
 
 to SanBoost (N - number):
-	if N is not 0:
+	if N is not 0 and humanity of Player < 100:
 		LineBreak;
 		say "     [bold type]Your sanity has increased by [N]![roman type][line break]";
 		increase humanity of Player by N;
@@ -255,12 +258,13 @@ to SanBoost (N - number):
 			now humanity of Player is 100;
 
 to SanReset:
-	LineBreak;
-	say "     [bold type]Your sanity is completely restored![roman type][line break]";
-	now humanity of Player is 100;
+	if humanity of Player < 100:
+		LineBreak;
+		say "     [bold type]Your sanity is completely restored![roman type][line break]";
+		now humanity of Player is 100;
 
 to LibidoLoss (N - number):
-	if N is not 0:
+	if N is not 0 and Libido of Player > 0:
 		LineBreak;
 		say "     [bold type]Your libido has decreased by [N]![roman type][line break]";
 		decrease Libido of Player by N;
@@ -268,7 +272,7 @@ to LibidoLoss (N - number):
 			now Libido of Player is 0;
 
 to LibidoBoost (N - number):
-	if N is not 0:
+	if N is not 0 and Libido of Player < 100:
 		LineBreak;
 		say "     [bold type]Your libido has increased by [N]![roman type][line break]";
 		increase Libido of Player by N;
@@ -276,9 +280,10 @@ to LibidoBoost (N - number):
 			now Libido of Player is 100;
 
 to LibidoReset:
-	LineBreak;
-	say "     [bold type]Your libido is completely gone![roman type][line break]";
-	now Libido of Player is 0;
+	if Libido of Player > 0:
+		LineBreak;
+		say "     [bold type]Your libido is completely gone![roman type][line break]";
+		now Libido of Player is 0;
 
 to ScoreLoss (N - number):
 	LineBreak;
@@ -296,9 +301,12 @@ to XPGain (N - number):
 	increase XP of Player by N;
 
 to CreditLoss (N - number):
-	LineBreak;
-	say "     [bold type][N] freecred [if N is 1]has[else]have[end if] been deducted from your Zephyr account![roman type][line break]";
-	decrease freecred by N;
+	if freecred > 0:
+		LineBreak;
+		say "     [bold type][N] freecred [if N is 1]has[else]have[end if] been deducted from your Zephyr account![roman type][line break]";
+		decrease freecred by N;
+		if freecred < 0:
+			now freecred is 0;
 
 to CreditGain (N - number):
 	LineBreak;
@@ -410,11 +418,12 @@ to MoraleLoss (N - number):
 	decrease morale of Player by N;
 
 to MoraleBoost (N - number):
-	LineBreak;
-	say "     [bold type]Your morale has increased by [N]![roman type][line break]";
-	increase morale of Player by N;
-	if morale of Player > 100:
-		now morale of Player is 100;
+	if morale of Player < 100:
+		LineBreak;
+		say "     [bold type]Your morale has increased by [N]![roman type][line break]";
+		increase morale of Player by N;
+		if morale of Player > 100:
+			now morale of Player is 100;
 
 to BehaviorCount (TraitCountName - text):
 	if TraitCountName is:
@@ -440,7 +449,7 @@ carry out PlayerRenaming:
 	playernaming; []
 
 to playernaming:
-	say "Note: You can always change your name at a later point with the 'rename' command.";
+	say "Note: You can always change your name at a later point with the [bold type]rename[roman type] command.";
 	LineBreak;
 	say "     [bold type]Please enter your new name[roman type]> [run paragraph on]";
 	get typed command as playerinput;
@@ -451,7 +460,7 @@ understand "observe room/surroundings/--" as ObserveRoom.
 ObserveRoom is an action applying to nothing.
 
 check ObserveRoom:
-	if ObserveAvailable of Location of Player is false, say "     Somehow, you feel that there's nothing interesting to observe in this location (yet)." instead;
+	if ObserveAvailable of Location of Player is false, say "Somehow, you feel that there's nothing interesting to observe in this location (yet)." instead;
 
 carry out ObserveRoom:
 	say "[ObserveString of Location of Player]";
@@ -461,8 +470,7 @@ understand "SexStats" as SexStatsOverview.
 SexStatsOverview is an action applying to nothing.
 
 carry out SexStatsOverview:
-	say "Sex Stats:[Line Break]";
-	LineBreak;
+	say "Sex Stats:[paragraph break]";
 	if OralVirgin of Player is true:
 		say "You have a [special-style-1]virgin[roman type] mouth.";
 	else:
@@ -1041,11 +1049,12 @@ to StatChange (Statname - a text) by (Modifier - a number) silently:
 to StatChange (Statname - a text) by (Modifier - a number) silence state is (Silence - a number):
 	if Modifier is 0:
 		say "ERROR: You just got a 0 point stat change. Please report on the FS Discord how you saw this.";
+		continue the action;
 	now Statname is Statname in lower case;
 	let AbsMod be absolute value of Modifier to the nearest whole number;
 	if Silence is 0:
 		say "[bold type]Your [statname] has [if Modifier > 0]in[else]de[end if]creased by [AbsMod]![roman type][line break]";
-	if Statname is:
+	if Statname in lower case is:
 		-- "strength":
 			increase strength of Player by Modifier;
 			increase capacity of Player by Modifier * 5;
@@ -1142,9 +1151,10 @@ to wield ( x - a grab object ) silence state is (Silence - a number):
 			now weapon object of Player is x;
 			now weapon of Player is weapon of x;
 			now weapon damage of Player is weapon damage of x;
-			now weapon type of Player is weapon type of x;
 			if x is ranged:
 				now weapon type of Player is "Ranged";
+			else:
+				now weapon type of Player is weapon type of x;
 		if Silence is 0:
 			if (ScaleValue of Player - objsize of x) is:
 			-- 4: [4 size categories difference - huge player (5), size 1 weapon]

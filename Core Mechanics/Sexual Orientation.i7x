@@ -30,8 +30,7 @@ to PlayerSexualOrientationMenu:
 		say "(4) [link]Trans Females (breasts, cock)[as]4[end link] - [if TransFemaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
 		say "(5) [link]Male Herms (flat chest, cock, pussy)[as]5[end link] - [if MaleHermInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
 		say "(6) [link]Female Herms (breasts, cock, pussy)[as]6[end link] - [if FemaleHermInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
-		say "[line break]";
-		say "(0) [link]Return to previous menu[as]0[end link][line break]";
+		say "[line break](0) [link]Return to previous menu[as]0[end link][line break]";
 		while 2 is 2:
 			say "Choice? (0-6)> [run paragraph on]";
 			get a number;

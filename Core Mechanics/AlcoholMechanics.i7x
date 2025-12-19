@@ -37,8 +37,7 @@ to UpdateAlcStatus:
 	else if Energy of Player >= 11 and Energy of Player <= 14: [Delirious - seeing things and getting close to death]
 		AddDeliriousState;
 		if a random chance of 1 in 4 succeeds:
-			LineBreak;
-			say "You feel your stomach contract violently, making you heave on the spot. Chunks of your last meal spew to the floor, and leave a taste of acid in your mouth and burning in your throat, leaving you dehydrated and hungry.";
+			say "[line break]You feel your stomach contract violently, making you heave on the spot. Chunks of your last meal spew to the floor, and leave a taste of acid in your mouth and burning in your throat, leaving you dehydrated and hungry.";
 			PlayerThirst 20;
 			PlayerHunger 30;
 			PlayerWounded 5; [losing HP, but not dying]
@@ -46,8 +45,7 @@ to UpdateAlcStatus:
 	else if Energy of Player >= 8 and Energy of Player <= 10: [Wasted - barely functional]
 		AddWastedState;
 		if a random number between 1 and 100 > (stamina of Player * 4):[Stamina increases chances to not vomit]
-			LineBreak;
-			say "You feel your stomach contract violently, making you heave on the spot. Chunks of your last meal spew to the floor, and leave a taste of acid in your mouth and burning in your throat.";
+			say "[line break]You feel your stomach contract violently, making you heave on the spot. Chunks of your last meal spew to the floor, and leave a taste of acid in your mouth and burning in your throat.";
 			PlayerThirst 10;
 			PlayerHunger 15;
 			PlayerWounded 2; [losing HP, but not dying]

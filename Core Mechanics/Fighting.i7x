@@ -54,8 +54,8 @@ To fight:
 	if the number of entries in PossibleEncounters is not 0:
 		sort PossibleEncounters in random order;
 		let RandomChosenMonster be entry 1 in PossibleEncounters;
-		choose a row with name of RandomChosenMonster in the Table of Random Critters;
 		setmonster RandomChosenMonster;
+		choose row MonsterID from Table of Random Critters;
 		prepforfight;
 		if "Experienced Scout" is listed in feats of Player and a random chance of 2 in 10 succeeds and combat abort is not 1 and inasituation is false:
 			say "You notice an avenue of escape! Do you want to abort the combat?";

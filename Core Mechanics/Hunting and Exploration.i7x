@@ -376,8 +376,8 @@ carry out HuntAction:
 		if debugactive is 1:
 			say "DEBUG -> Random sorted PossibleEncounters: [PossibleEncounters][line break]";
 		let RandomChosenMonster be entry 1 in PossibleEncounters;
-		choose a row with name of RandomChosenMonster in the Table of Random Critters;
 		setmonster RandomChosenMonster;
+		choose row MonsterID from Table of Random Critters;
 		if debugactive is 1:
 			say "DEBUG -> Randomly chosen creature is: [Name entry][line break]";
 		now monsterHP is HP entry;

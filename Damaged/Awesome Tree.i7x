@@ -29,12 +29,7 @@ to say Give Awesome:
 
 to say awesome attack:
 	if Awesome_boredom is 4:
-		say "     The tree seems to vibrate. Whether your fervent attacks or the breeze caused it, a branch falls and thumps you on the arm. You notice some fruit on the branch, and without hesitation you put one in your pocket. As you look at the remaining two, you feel a sudden hunger and eat them uncontrollably.";
-		if "Iron Stomach" is not listed in feats of Player, infect;
-		AttemptToWait;
-		say "     The world seems to go dark as you finish the second. Waking up, you can't see any trace of the tree, but you feel pretty awesome nonetheless. You pat your bag where you put the fruit, and smile at the thought that you still have some awesomeness in store.";
-		now hunger of Player is 0;
-		now thirst of Player is 0;
+		say "The tree seems to vibrate. Whether your fervent attacks or the breeze caused it, a branch falls and thumps you on the arm. You notice some fruit on the branch, and without hesitation you put one in your pocket. As you look at the remaining two, you feel a sudden hunger and eat them uncontrollably.";
 		if a random number between 1 and 100 > 90:
 			if awesome bat is not owned:
 				ItemGain awesome bat by 1;
@@ -45,11 +40,16 @@ to say awesome attack:
 			ItemGain awesomer fruit by 1;
 		else:
 			ItemGain awesomest fruit by 1;
+		if "Iron Stomach" is not listed in feats of Player, infect "Pod Person";
+		AttemptToWait;
+		say "The world seems to go dark as you finish the second. Waking up, you can't see any trace of the tree, but you feel pretty awesome nonetheless. You pat your bag where you put the fruit, and smile at the thought that you still have some awesomeness in store.[no line break]";
+		now hunger of Player is 0;
+		now thirst of Player is 0;
 		now dam is 0;
 		now fightoutcome is 20;
 		now combat abort is 1;
 	else:
-		say "[one of]While you try and attack the tree, you trip over a root that you hadn't seen[or]You stop for a moment, and as you ponder just how awesome the tree really is, suddenly your leg cramps[at random].";
+		say "[one of]While you try and attack the tree, you trip over a root that you hadn't seen[or]You stop for a moment, and as you ponder just how awesome the tree really is, suddenly your leg cramps[at random].[no line break]";
 		now monsterHP is 60;
 		increase Awesome_boredom by 1;
 
@@ -63,7 +63,7 @@ to say awesome defeat:
 			ItemLoss awesome bat by 1;
 			AttemptToWait;
 		say "     With good feelings coursing through you at your good deed, a warmth seems to spread from the core of awesome that the tree's fruit seems to have implanted into your being.";
-		infect;
+		infect "Pod Person";
 		now fightoutcome is 19;
 	else:
 		say "     Somehow you manage to strike the tree in such a way that it collapses, breaking along the fault line in its trunk you had made. You notice the branches are riddled with fruit and you make an effort to gather as many ripe ones as you can.";
@@ -76,7 +76,9 @@ to say awesome defeat:
 
 
 to say awesome vict:
-	say "     You proudly look up at the tree, standing still, and curse under your breath. All of a sudden, a crack sounds in the canopy above you and a single fruit drops down and smashes against the back of your head, knocking you out. The juice seeps down over your skin and almost seems to be absorbed by your body.[infect]";
+	say "     You proudly look up at the tree, standing still, and curse under your breath. All of a sudden, a crack sounds in the canopy above you and a single fruit drops down and smashes against the back of your head, knocking you out. The juice seeps down over your skin and almost seems to be absorbed by your body.";
+	infect "Pod Person";
+	AttemptToWait;
 	say "     As you wake up, you look around and wonder how the tree got away. Guess that's just another awesome mystery for this messed up new world.";
 
 to say awesome desc:
@@ -324,11 +326,8 @@ To say awesomest fruit use:
 	if Player is MalePreferred or Player is FemalePreferred:
 		say "     You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
-		repeat with Z running from 1 to number of rows in Table of Random Critters:
-			choose row Z from the Table of Random Critters;
-			if Name entry matches the text "Pod Person":
-				now MonsterID is z;
-				break;
+		setmonster "Pod Person";
+		choose row MonsterID from Table of Random Critters;
 		now sex entry is "Both";
 		now Nipple Count entry is 2;
 		now Breast Size entry is 3;
@@ -347,11 +346,8 @@ To say awesomer fruit use:
 	if Player is MalePreferred or Player is HermPreferred:
 		say "     You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
-		repeat with Z running from 1 to number of rows in Table of Random Critters:
-			choose row Z from the Table of Random Critters;
-			if Name entry matches the text "Pod Person":
-				now MonsterID is z;
-				break;
+		setmonster "Pod Person";
+		choose row MonsterID from Table of Random Critters;
 		now sex entry is "Female";
 		now Nipple Count entry is 2;
 		now Breast Size entry is 3;
@@ -370,11 +366,8 @@ To say awesome fruit use:
 	if Player is FemalePreferred or Player is HermPreferred:
 		say "     You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
-		repeat with Z running from 1 to number of rows in Table of Random Critters:
-			choose row Z from the Table of Random Critters;
-			if Name entry matches the text "Pod Person":
-				now MonsterID is z;
-				break;
+		setmonster "Pod Person";
+		choose row MonsterID from Table of Random Critters;
 		now sex entry is "Male";
 		now Nipple Count entry is 2;
 		now Breast Size entry is 0;

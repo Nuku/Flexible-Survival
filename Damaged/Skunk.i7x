@@ -106,9 +106,9 @@ to say sblvictorysex:
 			add 2 to randomskunksex;
 		if Player is female:
 			add 3 to randomskunksex;
-		if Player is purefemale:
-			add 4 to randomskunksex;
-			add 4 to randomskunksex; [double-likelihood]
+			if Player is purefemale:
+				add 4 to randomskunksex;
+				add 4 to randomskunksex; [double-likelihood]
 		sort randomskunksex in random order;
 		if entry 1 of randomskunksex is:
 			-- 1: say "[sblsex1]";

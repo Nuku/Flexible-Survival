@@ -559,7 +559,7 @@ This is the player attack rule:
 							say "[z]'s seduction attempt fails! Doesn't look like it'll get anywhere with this tactic.";
 						else:
 							say "[z]'s seduction attempt fails!";
-					say "Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
+					say "[line break]Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
 					increase HP of Player by 1;
 	follow the monster injury rule;
 	say "[EnemyCapNameOrTitle] is [descr]. ";
@@ -698,7 +698,7 @@ This is the player seduce rule:
 							say "[z]'s seduction attempt fails! Doesn't look like it'll get anywhere with this tactic.";
 						else:
 							say "[z]'s seduction attempt fails!";
-					say "Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
+					say "[line break]Getting a little bit of a breather, and a nice show at the same time, gives you a chance to collect yourself. You gain 1 HP!";
 					increase HP of Player by 1;
 	follow the monster injury rule;
 	say "[EnemyCapNameOrTitle] is [descr]. ";
@@ -1526,7 +1526,7 @@ to TrophyLootFunction: [generates either a trophy prompt or loot for the player]
 		truncate CombatTrophyList to 0 entries; [cleaning out the list]
 		say "[TrophyFunction entry]"; [makes the local function in the enemy fill the list]
 		if CombatTrophyList is non-empty: [at least one possible trophy generated]
-			say "     [bold type]This fight is just about over, giving you the time to snatch one item as a trophy from your opponent:[roman type][line break]";
+			say "[bold type]This fight is just about over, giving you the time to snatch one item as a trophy from your opponent:[roman type][line break]";
 			now sextablerun is 0;
 			blank out the whole of table of fucking options;
 			[]
@@ -1872,61 +1872,45 @@ this is the firebreath rule:
 		else:
 			let fbhit be 0; [Missed]
 		if Name entry is "Ebonflame Dragator":
-			if fbhit is 2:
-				say "[special-style-2]The [one of]dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly lighting up the inside of its mouth. A bright red wave of fire is spat out at you. You try to evade, but the fiery blast washes over you. You suffer [dam] damage![roman type][line break]";
-			else if fbhit is 1:
-				say "The [one of]dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly lighting up the inside of its mouth. A bright red wave of [special-style-2]fire[roman type] is spat out at you. You move to evade, but are still caught in part of the blast. You suffer [special-style-2][dam][roman type] damage!";
-			else:
-				say "The [one of]dragator[or]creature[or]croc-beast[purely at random] lets out a primordial roar, energies and chemicals in its belly lighting up the inside of its mouth. A bright red fireball is spat out in your direction, but you manage to evade it!";
+			if fbhit is:
+				-- 2: say "[special-style-2]The [one of]dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly lighting up the inside of its mouth. A bright red wave of fire is spat out at you. You try to evade, but the fiery blast washes over you. You suffer [dam] damage![roman type][line break]";
+				-- 1: say "The [one of]dragator[or]creature[or]croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly lighting up the inside of its mouth. A bright red wave of [special-style-2]fire[roman type] is spat out at you. You move to evade, but are still caught in part of the blast. You suffer [special-style-2][dam][roman type] damage!";
+				-- otherwise: say "The [one of]dragator[or]creature[or]croc-beast[purely at random] lets out a primordial roar, energies and chemicals in its belly lighting up the inside of its mouth. A bright red fireball is spat out in your direction, but you manage to evade it!";
 		else if Name entry is "Ebonflame Drake":
-			if fbhit is 2:
-				say "[one of]She[or]The drake[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. Unable to get out of the way, you throw up your arms to protect yourself as her gaping maw looses a fireball at you. You are burned for [dam] damage![roman type][line break]";
-			else if fbhit is 1:
-				say "[one of]She[or]The drake[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. You attempt to move out of the way, but are still partially caught in the [special-style-2]fireball[roman type] loosed from her maw. You are burned for [special-style-2][dam][roman type] damage!";
-			else:
-				say "[one of]She[or]The drake[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. Scrambling, you manage to dive out of the way of the fireball she hurls at you from her maw!";
+			if fbhit is:
+				-- 2: say "[one of]She[or]The drake[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. Unable to get out of the way, you throw up your arms to protect yourself as her gaping maw looses a fireball at you. You are burned for [dam] damage![roman type][line break]";
+				-- 1: say "[one of]She[or]The drake[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. You attempt to move out of the way, but are still partially caught in the [special-style-2]fireball[roman type] loosed from her maw. You are burned for [special-style-2][dam][roman type] damage!";
+				-- otherwise: say "[one of]She[or]The drake[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago. Scrambling, you manage to dive out of the way of the fireball she hurls at you from her maw!";
 		else if Name entry is "Ebonflame Whelp":
-			if fbhit is 2:
-				say "[special-style-2]The [one of]whelp[or]creature[or]ebonflame whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you. It strikes you squarely in the [one of]face[or]chest[purely at random]. You take [dam] damage![roman type][line break]";
-			else if fbhit is 1:
-				say "The [one of]whelp[or]creature[or]ebonflame whelp[purely at random] hiccups, then burps, then finally coughs up a small [special-style-2]fireball[roman type] which is lobbed at you. You try to evade, but it catches you on your [one of]leg[or]arm[or]shoulder[purely at random]. You take [special-style-2][dam][roman type] damage!";
-			else:
-				say "The [one of]whelp[or]creature[or]ebonflame whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you. You manage to avoid the poorly aimed attack!";
+			if fbhit is:
+				-- 2: say "[special-style-2]The [one of]whelp[or]creature[or]ebonflame whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you. It strikes you squarely in the [one of]face[or]chest[purely at random]. You take [dam] damage![roman type][line break]";
+				-- 1: say "The [one of]whelp[or]creature[or]ebonflame whelp[purely at random] hiccups, then burps, then finally coughs up a small [special-style-2]fireball[roman type] which is lobbed at you. You try to evade, but it catches you on your [one of]leg[or]arm[or]shoulder[purely at random]. You take [special-style-2][dam][roman type] damage!";
+				-- otherwise: say "The [one of]whelp[or]creature[or]ebonflame whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you. You manage to avoid the poorly aimed attack!";
 		else if Name entry is "Feral Sea Dragon" or Name entry is "Feral Sea Dragoness":
-			if fbhit is 2:
-				say "The [one of]sea dragon[or]blue dragon[or][EnemyNameOrTitle][purely at random] unleashes a blast of scalding water like a firehose that slams into you. You are knocked over and scalded badly by the constant stream of steaming sea water. You take [special-style-2][dam][roman type] damage!";
-			else if fbhit is 1:
-				say "The [one of]sea dragon[or]blue dragon[or][EnemyNameOrTitle][purely at random] unleashes a blast of scalding water like a firehose that slams into you. You dodge and weave away from the constant stream of steaming sea water, but are struck and scalded by it several times. You take [special-style-2][dam][roman type] damage!";
-			else:
-				say "The [one of]sea dragon[or]blue dragon[or][EnemyNameOrTitle][purely at random] unleashes a blast of scalding water like a firehose towards you. You manage to dodge and weave away, rather narrowly at times, from the constant stream of steaming sea water!";
+			if fbhit is:
+				-- 2: say "The [one of]sea dragon[or]blue dragon[or][EnemyNameOrTitle][purely at random] unleashes a blast of scalding water like a firehose that slams into you. You are knocked over and scalded badly by the constant stream of steaming sea water. You take [special-style-2][dam][roman type] damage!";
+				-- 1: say "The [one of]sea dragon[or]blue dragon[or][EnemyNameOrTitle][purely at random] unleashes a blast of scalding water like a firehose that slams into you. You dodge and weave away from the constant stream of steaming sea water, but are struck and scalded by it several times. You take [special-style-2][dam][roman type] damage!";
+				-- otherwise: say "The [one of]sea dragon[or]blue dragon[or][EnemyNameOrTitle][purely at random] unleashes a blast of scalding water like a firehose towards you. You manage to dodge and weave away, rather narrowly at times, from the constant stream of steaming sea water!";
 		else if Name entry is "Yamato Dragon" or Name entry is "Yamato Dragoness":
-			if fbhit is 2:
-				say "The [one of]oriental dragon[or][EnemyNameOrTitle][or]serpentine dragon[purely at random] exhales a wave of blue fire over you. Strangely, it doesn't burn but every pain receptor on your body screams in agony. You suffer [special-style-2][dam][roman type] damage!";
-			else if fbhit is 1:
-				say "The [one of]oriental dragon[or][EnemyNameOrTitle][or]serpentine dragon[purely at random] exhales a wave of blue fire towards you. Thankfully, you're only caught by part of the blast which strangely doesn't burn you, but everywhere the blue flames lick at screams in agony. You suffer [special-style-2][dam][roman type] damage!";
-			else:
-				say "The [one of]oriental dragon[or][EnemyNameOrTitle][or]serpentine dragon[purely at random] exhales a wave of blue fire over you. You thankfully manage to evade the strange blast which strangely doesn't seem to have damaged the landscape around you.";
+			if fbhit is:
+				-- 2: say "The [one of]oriental dragon[or][EnemyNameOrTitle][or]serpentine dragon[purely at random] exhales a wave of blue fire over you. Strangely, it doesn't burn but every pain receptor on your body screams in agony. You suffer [special-style-2][dam][roman type] damage!";
+				-- 1: say "The [one of]oriental dragon[or][EnemyNameOrTitle][or]serpentine dragon[purely at random] exhales a wave of blue fire towards you. Thankfully, you're only caught by part of the blast which strangely doesn't burn you, but everywhere the blue flames lick at screams in agony. You suffer [special-style-2][dam][roman type] damage!";
+				-- otherwise: say "The [one of]oriental dragon[or][EnemyNameOrTitle][or]serpentine dragon[purely at random] exhales a wave of blue fire over you. You thankfully manage to evade the strange blast which strangely doesn't seem to have damaged the landscape around you.";
 		else if Name entry is "Salamander":
-			if fbhit is 2:
-				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you, striking you soundly. The heat is like that of a blast furnace and threatens to overwhelm you. You suffer [special-style-2][dam][roman type] damage!";
-			else if fbhit is 1:
-				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you. Thankfully, you're only caught by edge of the blast, but even that feels as hot as an oven. You suffer [special-style-2][dam][roman type] damage!";
-			else:
-				say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you. You thankfully manage to get out of the way, only feeling a brief rise in temperature and suffering no ill effects.";
+			if fbhit is:
+				-- 2: say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you, striking you soundly. The heat is like that of a blast furnace and threatens to overwhelm you. You suffer [special-style-2][dam][roman type] damage!";
+				-- 1: say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you. Thankfully, you're only caught by edge of the blast, but even that feels as hot as an oven. You suffer [special-style-2][dam][roman type] damage!";
+				-- otherwise: say "The [one of]salamander[or]fiery amphibian[or]lizard-like creature[purely at random] focuses its heated aura and unleashes a blast of it at you. You thankfully manage to get out of the way, only feeling a brief rise in temperature and suffering no ill effects.";
 		else if Name entry is "Magic Drake":
-			if fbhit is 2:
-				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashes a stream of sparkling green flames. This magical blast strikes you soundly, both burning hot and strangely arousing, sapping your strength to fight on. You suffer [special-style-2][dam][roman type] damage!";
-			else if fbhit is 1:
-				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashes a stream of sparkling green flames. You're briefly caught by the edge of this magical blast as you unsuccessfully try to avoid it. The strange fire is both burning hot and also strangely arousing. It saps some of your strength to fight on. You suffer [special-style-2][dam][roman type] damage!";
-			else:
-				say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashes a stream of sparkling flames. Her head swivels after you, chasing you with the blast, but you manage to evade the magical flames until the fiery attack is over.";
+			if fbhit is:
+				-- 2: say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashes a stream of sparkling green flames. This magical blast strikes you soundly, both burning hot and strangely arousing, sapping your strength to fight on. You suffer [special-style-2][dam][roman type] damage!";
+				-- 1: say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashes a stream of sparkling green flames. You're briefly caught by the edge of this magical blast as you unsuccessfully try to avoid it. The strange fire is both burning hot and also strangely arousing. It saps some of your strength to fight on. You suffer [special-style-2][dam][roman type] damage!";
+				-- otherwise: say "The [one of]scaly sorceress[or]magical drake[or]dragon woman[or]buxom shemale[at random] opens her maw and unleashes a stream of sparkling flames. Her head swivels after you, chasing you with the blast, but you manage to evade the magical flames until the fiery attack is over.";
 		else:
-			if fbhit is 2:
-				say "[special-style-2][one of]Your opponent[or][if enemy type entry is not 2]The [end if][EnemyNameOrTitle][or]Your enemy[purely at random] unleashes a blast of fire at you. The flames wash over you, burning you badly. You take [dam] damage![roman type][line break]";
-			else if fbhit is 1:
-				say "[one of]Your opponent[or][if enemy type entry is not 2]The [end if][EnemyNameOrTitle][or]Your enemy[purely at random] unleashes a blast of [special-style-2]fire[roman type] at you. You try to evade, but are still partially caught in the flames, burning you. You take [special-style-2][dam][roman type] damage!";
-			else:
-				say "[one of]Your opponent[or][if enemy type entry is not 2]The [end if][EnemyNameOrTitle][or]Your enemy[purely at random] unleashes a blast of fire at you. The flames come close, but you manage to get out of the way barely in time!";
+			if fbhit is:
+				-- 2: say "[special-style-2][one of]Your opponent[or][if enemy type entry is not 2]The [end if][EnemyNameOrTitle][or]Your enemy[purely at random] unleashes a blast of fire at you. The flames wash over you, burning you badly. You take [dam] damage![roman type][line break]";
+				-- 1: say "[one of]Your opponent[or][if enemy type entry is not 2]The [end if][EnemyNameOrTitle][or]Your enemy[purely at random] unleashes a blast of [special-style-2]fire[roman type] at you. You try to evade, but are still partially caught in the flames, burning you. You take [special-style-2][dam][roman type] damage!";
+				-- otherwise: say "[one of]Your opponent[or][if enemy type entry is not 2]The [end if][EnemyNameOrTitle][or]Your enemy[purely at random] unleashes a blast of fire at you. The flames come close, but you manage to get out of the way barely in time!";
 		if fbhit > 0:
 			now damagein is dam;
 			say "[areaabsorbancy]"; [area of effect attack]

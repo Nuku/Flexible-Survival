@@ -447,13 +447,13 @@ understand "flag adjust" as Flagadjusting.
 
 check Flagadjusting:
 	if number of not banned flags is 0 or (number of not banned flags is 1 and HumanoidList is not banned):
-		say "     All flags have been banned. Now that the game has started, you cannot change whether something is banned outright." instead;
+		say "All flags have been banned. Now that the game has started, you cannot change whether something is banned outright." instead;
 
 carry out Flagadjusting:
 	let flagexit be 0;
 	while flagexit is 0:
 		if clearnomore is 0, clear the screen;
-		say "     This menu will allow you to adjust whether certain categories of content will be warded or not now that the game has started. Warded content will not appear unless it is specifically hunted for or is called upon by events or quests. If a creature has multiple gender forms, which gender will appear may be adjusted based on the warded flags. Now that the game has started, you cannot change whether something is banned outright.";
+		say "This menu will allow you to adjust whether certain categories of content will be warded or not now that the game has started. Warded content will not appear unless it is specifically hunted for or is called upon by events or quests. If a creature has multiple gender forms, which gender will appear may be adjusted based on the warded flags. Now that the game has started, you cannot change whether something is banned outright.";
 		let x be 0;
 		repeat with Q running through flags:
 			if Q is HumanoidList, next; [skip over unused HumanoidList for now]
@@ -467,6 +467,7 @@ carry out Flagadjusting:
 		while calcnumber < 0 or calcnumber > x:
 			say "Choice? (0-[x])> [run paragraph on]";
 			get a number;
+		LineBreak;
 		if calcnumber is 0:
 			now flagexit is 1;
 		else:
@@ -478,7 +479,7 @@ carry out Flagadjusting:
 					if Q is warded:
 						now Q is not warded;
 					else if Q is banned:
-						say "Error occurred, choice [printed name of Q] is banned.";
+						say "Error occurred, choice ['][printed name of Q]['] is banned.";
 						wait for any key;
 					else:
 						now Q is warded;
@@ -507,7 +508,7 @@ understand "waits off" as WaitHateCommand.
 understand "i hate to wait" as WaitHateCommand. [old command, keep for time being, eventually remove?]
 
 carry out WaitHateCommand:
-	if waiterhater is 0, say "The text rarely waits for you to press a key...[line break]... before continuing.";
+	if waiterhater is 0, say "The text rarely waits for you to press a key...[paragraph break]...before continuing.";
 	now waiterhater is 1; [yes, you do hate to wait]
 
 WaitLoveCommand is an action applying to nothing.

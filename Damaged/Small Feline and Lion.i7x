@@ -71,16 +71,18 @@ to say huntpride att:
 	say "[one of]The small felines launch an attack, clawing and biting at you[or]The diminutive lionesses attack you in a mix of clawing, grabbing and groping[or]The girly lionesses grope you with their feline hands[or]One of the kitty girls grabs onto you and rubs her body sensually against yours[or]The hunting pride tries to tackle you to the ground so they can lick and pet you into submission[at random]![no line break]";
 
 to say cat def:
+	setmonster "Feline";
 	let z be 0;
-	if Libido of Player >= 40:
+	if Libido of Player >= 40 and Player is not neuter:
 		if Player is male:
 			say "     Deciding to make use of the pesky catgirl, you push the small, curvy feline to the ground and pounce her. She mewls softly, but doesn't pull away as you line up your [Cock of Player] cock and drive it into her[if Cock Length of Player > 20]. Your massive cock makes a huge bulge in the little feline and she moans and mewls uncontrollably, rubbing her paws over her swollen tummy[else if Cock Length of Player > 12]. Your big cock makes an appreciable bump in the little feline's belly and she rubs it, moaning and mewling happily[else]. Your cock stuffs the little feline, cramming her full of throbbing meat, making her moan and mewl happily[end if]. Her pussy quivers around your shaft and her B-cup breasts sway as you pound into her curvy body. When finally you cum, you pump your thick seed into her, leaving her [if Ball Size of Player > 4]hugely bloated as your ample cum stuffs her small body, flowing out her overstuffed pussy[else if Ball Size of Player > 3] tummy a little plump and her pussy leaking your seed[else]her pussy stuffed full of your semen and slowly leaking cum[end if]. She purrs softly, passed out after getting fucked good and hard.";
 			CreatureSexAftermath "Feline" receives "PussyFuck" from "Player";
 			now z is 1;
-		else if Player is female:
+		else:
 			say "     Deciding to make use of this pesky catgirl, you grab the small, curvy feline and press her face between your legs, grinding your pussy into her softly furred muzzle. She mewls softly and starts timidly licking at your slit, running her raspy little tongue over it. You moan softly and scritch her ears, telling her she's a good kitty. As you encourage her, her enthusiasm for her task increases, as does your pleasure. Her rough tongue is quick in stimulating you and soon enough you're soaking the little kitty's face in your juices as you cum hard. Once you're finished with her, you push her to the ground, leaving her to lick and groom herself clean.";
 			CreatureSexAftermath "Feline" receives "OralPussy" from "Player";
 			now z is 1;
+		LineBreak;
 	if HP of Leonard >= 7 and HP of Leonard < 10 and Feline_attached is 0 and BodyName of Player is "Feline":
 		if Feline_meow is 0, increase Feline_meow by 1;
 		say "     Recalling that Leonard has asked you to track down more of these felines, you pick up the cat girl and cradle her to your chest. She mewls softly and nuzzles you, wrapping her lips around your nipple and starting to suckle eagerly. You moan in pleasure as you [if Breast Size of Player is 0]surprisingly [end if]start to lactate, providing warm milk for the needy kitty. You feel very aroused by the experience and can hardly wait to bring her to Leonard.";
@@ -98,7 +100,7 @@ to say cat def:
 		now Feline_attached is 1;
 		follow the feline nursing rule;
 	if z is 0:
-		say "You deliver a final strike to the small feline, knocking her out!";
+		say "     You deliver a final strike to the small feline, knocking her out!";
 
 to say lion def:
 	let z be 0;
@@ -134,6 +136,8 @@ to say lion def:
 				say "     Eventually, your efforts are rewarded as that leonine penis pulses inside you, blasting his ample load deep inside you, stuffing you so wonderfully full of feline cum that your belly swells with its large output. Feeling deliciously full and satisfied, at least for now, you roll off of the big kitty. The lion man snuggles you, caressing your stuffed tummy before [if HP of Leonard >= 15 and HP of Leonard < 100 and player is felinebodied]respectfully [end if]helping you up onto your feet, wobbly though they may be, before padding off.";
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Feline";
 				infect "Feline";
+		else:
+			LineBreak;
 	else:
 		say ", passing out shortly afterwards.";
 
@@ -144,6 +148,7 @@ to say finallion def:
 	say "     You are victorious in your hard-fought battle against this would-be usurper. You growl triumphantly as you give him a final kick, sending him tumbling down the hill.";
 
 to say cat vict:
+	setmonster "Feline";
 	increase Feline_meow by 1;
 	if Feline_attached is 1:
 		say "     The small, curvy feline approaches you and mewls imploringly. As you kneel down, the previous feline comes over, mewling as well, but is kicked away as the new one climbs up onto you, taking her place on your chest. She leans in and begins to eagerly suckle at your chest, leaving the ousted feline to go off in search of a new surrogate";
@@ -172,7 +177,7 @@ to say lion vict:
 	else:
 		say "     The alpha lion approaches and sets a paw on your shoulder. You consider turning him away with your human mind, but the feline one wins out and you lean against him. He bites at your shoulder and neck, moving around you and lifting you. He is soon plunging his hungry shaft deep into your small curvy body, filling you in a way you have never been filled before as a human. You roar in pleasure as his seed fills your new womb, which swells outwards with the volume of it.";
 		say "     As you recover from the pleasure of it, the lion man snuggles, caressing your chest with his broad paws and rocking against you a few moments longer before he rises and releases you to your feet, wobbly though they may be.";
-		infect;
+		infect "Feline";
 		decrease Feline_meow by 3;
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Feline";
 
@@ -188,7 +193,7 @@ to say finallion vict:
 	else:
 		say "     The alpha lion approaches and sets a paw on your shoulder. You consider turning him away with your human mind, but the feline one wins out and you lean against him. He bites at your shoulder and neck, moving around you and lifting you. He is soon plunging his hungry shaft deep into your small curvy body, filling you in a way you have never been filled before as a human. You roar in pleasure as his seed fills your bowels, which swell outwards with the volume of it.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Feline";
-	infect;
+	infect "Feline";
 
 
 to say feline cleanup: [post-battle reset of stats to catgirl values]
@@ -506,11 +511,11 @@ Section 4 - Nursing Feline (v2.0)
 this is the feline nursing rule:
 	if feline_attached > 0:
 		if feline_status is 2:
-			say "Leonard nuzzles the newest member of his pride and has her remain waiting on his bed, promising he'll be back to spend more time with her soon.";
+			say "     Leonard nuzzles the newest member of his pride and has her remain waiting on his bed, promising he'll be back to spend more time with her soon.";
 			now Feline_attached is 0;
 			now feline_status is 0; [reset to new kitty]
 		else if feline_status is 3:
-			say "Leonard nuzzles the feline who came in with you, telling her what a fine job she did. He pats her ass, sending her on her way.";
+			say "     Leonard nuzzles the feline who came in with you, telling her what a fine job she did. He pats her ass, sending her on her way.";
 			now Feline_attached is 0;
 			now feline_status is 0; [reset to new kitty]
 		else if BodyName of Player is "Feline":

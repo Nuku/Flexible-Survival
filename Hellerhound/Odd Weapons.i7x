@@ -244,7 +244,7 @@ to say ResolveEvent Destroyed Bushes:
 An everyturn rule:
 	if the dirty whip is wielded:
 		now researchbypass is 1;
-		say "     The cum on the dirty whip slips down onto your hand.";
+		say "The cum on the dirty whip slips down onto your hand.";
 		infect "Black Equinoid";
 		now researchbypass is 0;
 

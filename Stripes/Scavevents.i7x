@@ -172,7 +172,7 @@ to say ResolveEvent Protected Supplies:
 		say "     It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of the street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from some rather messy cum stains[purely at random].";
 		AttemptToWait;
 		let scavfight be 0;
-		say "     But as you move to get it, a [Name entry] moves to cut you off, probably wanting to take it for themselves. ";
+		say "     But as you move to get it, a [Name entry in lower case] moves to cut you off, probably wanting to take it for themselves. ";
 		if a random chance of 1 in 2 succeeds:
 			say "The creature charges to attack before you have a chance to consider falling back.";
 			let scavfight be 1;
@@ -194,7 +194,7 @@ to say ResolveEvent Protected Supplies:
 				say "     Beaten by the creature, you are unable to stop it from taking the [y] as its prize.";
 				decrease morale of Player by 1;
 			else:
-				say "     Deciding the [y] is not worth fighting over further, you make your escape back into the city, leaving it for the [Name entry].";
+				say "     Deciding the [y] is not worth fighting over further, you make your escape back into the city, leaving it for the [Name entry in lower case].";
 				decrease morale of Player by 1;
 		else:
 			say "     You back away slowly from the creature, leaving the prize to them. It's not much good to you if you're not alive to use it.";

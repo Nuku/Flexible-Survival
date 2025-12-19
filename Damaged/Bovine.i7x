@@ -32,7 +32,7 @@ to say LoseToCow:
 		say "     The cow grabs you and pulls you closer, sitting down in the process. Her strong bovine arms lift you up, pressing your lips to one engorged teat. 'Drink, little calf. Sate yourself,' she says softly, motherly[one of]. The smell of the milk calls to your thirst and[or]. One little drop of milk leaks from the engorged teat and it drips down onto your lips, without thinking your tongue snakes out and pulls it into your mouth. Gasping,[or]. Giving her teat a squeeze, a spray of milk wets your lips and[at random] you push your head forward, latching onto the nipple with your lips and begin sucking happily at her breast. 'See, it's not so bad,' the cow says softly again, rocking you back and forth in her arms as you drink.";
 		now thirst of Player is 0;
 		now hunger of Player is 0;
-		infect;
+		infect "Bovine";
 		now Mooing is 6;
 	else:
 		say "     [one of]The cow sits down and you run into her waiting arms, mouth reaching to find a spare nipple[or]You see the cow smile down at you. 'You wanted to play a little first. Come on now, it's time for your meal,' she moos softly to you and you race over, leaping into her waiting arms to grip a teat and begin sucking[or]The bovine woman rubs her breasts and gives her teat-like nipples a squeeze, coaxing some of her delicious milk to flow. Licking your lips, you rush over to her and start suckling[at random]. The flood of pure contentment as the milk begins to flow into your throat causes you to grow sleepy, soon causing you to fall asleep completely, still drinking from her.";
@@ -40,13 +40,14 @@ to say LoseToCow:
 		say "     You wake up, stomach bulging slightly, the taste of her milk still in your mouth. You let out a breath that sounds more like a [']Moo['] and wander off.";
 		now thirst of Player is 0;
 		now hunger of Player is 0;
-		infect;
+		infect "Bovine";
 		if Mooing < 6:
 			now Mooing is 6;
 		else if Mooing < 15:
 			increase Mooing by 3;
 
 to say LoseToFeralBull:
+	setmonster "Bovine";
 	let antimoo be 16 - Mooing;
 	if Mooing > 15:
 		now antimoo is 1;
@@ -54,7 +55,7 @@ to say LoseToFeralBull:
 		if Player is female:
 			say "     The big bull grunts fiercely, breathing hard after his maddened fight. He prods you with his sharp horns until you huddle on all fours. He scrabbles at your rear with his hooves and you have a few moments to wrench your clothes out of the way before you feel the animal's huge member thrust into you, [if Cunt Depth of Player < 28]feeling like it will split you in half. Your cries, when you hear them, sound almost as pitiful as the cow you defeated earlier as you try in vain to brace yourself against the crazed beast's rutting[else]filling your cavernous pussy like few can. Your cries of ecstasy unknowingly echo the pitiful cries of the cow girl you defeated. All of your attention, however, is focused on bracing yourself against the magnificent brute's powerful rutting thrusts[end if]. He bellows as you feel his burning seed pour into you, filling you up, and making you look very pregnant. Finally done with you, calm after his release, he wanders off to graze.";
 			CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Bovine";
-			infect "Bovine";
+			infect;
 			now CowBully is 0;
 			if Mooing > 0:
 				fimpregchance;
@@ -62,7 +63,7 @@ to say LoseToFeralBull:
 		else if Player is mpreg_ok:
 			say "     The huge beast bellows one last time and flies at you, turning away at the last second to your surprise. As he turns around to face you, you see his nostrils flaring; it seems he's scented something about you that's piqued his interest. He knocks you over shoving his face against your rear, and you hear the bull take a big whiff. He snorts and scrabbles at your rear with his hooves. You have a few moments to wrench your clothes down before you feel the beast's huge member thrust into you, [if scalevalue of Player < 4 and player is not twistcapped]feeling like it will split you in half. Your cries, when you hear them, sound almost as pitiful as the cow you defeated earlier as you try in vain to brace yourself against the crazed beast's rutting[else]filling your cavernous depths like few can. Your cries of ecstasy unknowingly echo the pitiful cries of the cow girl you defeated. All of your attention, however, is focused on bracing yourself against the magnificent brute's powerful rutting thrusts[end if]. He bellows as you feel his burning seed pour into you, filling you up, and making you look very pregnant. Finally done with you, calm after his release, he wanders off to graze.";
 			CreatureSexAftermath "Player" receives "AssDildoFuck" from "Bovine";
-			infect "Bovine";
+			infect;
 			now CowBully is 0;
 			if Mooing > 0:
 				mimpregchance;
@@ -70,16 +71,15 @@ to say LoseToFeralBull:
 		else:
 			say "     The huge beast bellows one last time and flies at you, his head crashing hard into your side. As you cry out, a small part of your brain not overwhelmed with pain remembers a fallen cow, threatening to tattle to her bull. A threat, it seems, you should have taken more seriously. Lying on the ground in a pained daze, you don't resist when the beast shoves his dick in your face. Between the awkward angle and the bull's gigantic member, you can't fit more than the tip in your mouth, let alone the rest of his massive length. Whether the bull grasps this is unclear as he continues to rut against your face, frustrated snorts accompanied by hoof stomps dangerously close to your head. Despite the situation, the bovine male eventually cums, mercifully pulling back as he does, so you're only drenched with his seed rather than drowned by it. The bull, having shown you your place, wanders off to graze. It takes you more than a few minutes to recover, wipe yourself off and leave as quietly as you can.";
 			CreatureSexAftermath "Player" receives "OralCock" from "Bovine";
-			infect "Bovine";
-			infect "Bovine";
+			infect;
+			infect;
 			decrease CowBully by 1;
 			now Mooed is 1;
 	else if vorelevel > 1 and a random chance of vorelevel in 5 succeeds and (a random chance of antimoo in 20 succeeds) and scalevalue of Player < 5 and CockVoreList is not banned:
 		say "     The bull snorts after knocking you down and stomps overtop of you. His cock, semi-engorged after the fight, slaps against your face, leaving a streak of bovine pre across your face. [if HP of Player > 0]Feeling aroused[else]Still dazed from the fight[end if], you turn your head towards it to get a proper taste, but are instead surprised as the bull pushes his large cock forward. The thick cock slams into you and stretches surprisingly wide, engulfing your whole head. Your initial shock allows the beast a chance to press his advantage and his cock gulps around you, pulling in your shoulders as well. Surrounded by the hot, squeezing flesh of his bestial manhood, you are assaulted by the strong, musky scent of his virility. Any struggles you make are futile and seem to only further excite the big bovine as you are pulled inches at a time along that meaty tunnel. More and more of your [bodytype of Player] body is drawn into that bulging bovine penis.";
-		say "     You are eventually deposited into his ballsack and left to bathe in his virile semen while his cum factories churn away. You lose track of time, falling into a lustful haze in the heated chamber, only to be roused much later by some rubbing from the outside. As this continues, you can hear the faint mooing of the excited bull growing louder before you are finally blasted free along with a sticky load of bull semen. Landing in the grassy field, you are set upon by the cow who masturbated the bull to climax. She licks you clean, her sloppy tongue getting as much bovine seed as she can get before you make your getaway.";
-		mooplus;
-		infect "Bovine";
-		infect "Bovine";
+		say "     You are eventually deposited into his ballsack and left to bathe in his virile semen while his cum factories churn away. You lose track of time, falling into a lustful haze in the heated chamber, only to be roused much later by some rubbing from the outside. As this continues, you can hear the faint mooing of the excited bull growing louder before you are finally blasted free along with a sticky load of bull semen. Landing in the grassy field, you are set upon by the cow who masturbated the bull to climax. She licks you clean, her sloppy tongue getting as much bovine seed as she can get before you make your getaway.[mooplus]";
+		infect;
+		infect;
 	else:
 		if Mooing < 1:
 			say "     The bull seems to lose interest in you and wanders off to find some grass to eat.";
@@ -89,7 +89,7 @@ to say LoseToFeralBull:
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Bovine";
 				fimpregchance;
 				fimpregchance;
-				infect "Bovine";
+				infect;
 				now mooing is mooing / 2; [increasing milk thirst]
 				now Mooed is 1;
 			else if Player is mpreg_ok:
@@ -97,7 +97,7 @@ to say LoseToFeralBull:
 				CreatureSexAftermath "Player" receives "AssFuck" from "Bovine";
 				mimpregchance;
 				mimpregchance;
-				infect "Bovine";
+				infect;
 				now mooing is mooing / 2; [increasing milk thirst]
 				now Mooed is 1;
 			else:
@@ -108,8 +108,9 @@ to say LoseToFeralBull:
 					now mooing is 10;
 
 to say BeatTheBovine:
+	setmonster "Bovine";
 	if Bovine_type is 1:
-		say "     The large cow suddenly drops to her knees mooing, 'All I wanted was for you to be happy. Don't you think you could be happy with me?' She clings to your waist, crying softly in disappointment. You look over the large bovine woman and ponder what you should do. She's clearly interested in fucking you; you could give in to your base desires, but if you did, you might not be any better than the feral monsters roaming the city. There's just something about her that makes you want to be rough with the poor cow girl. (Y=fuck, N=leave)[line break]";
+		say "     The large cow suddenly drops to her knees mooing, 'All I wanted was for you to be happy. Don't you think you could be happy with me?' She clings to your waist, crying softly in disappointment. You look over the large bovine woman and ponder what you should do. She's clearly interested in fucking you; you could give in to your base desires, but if you did, you might not be any better than the feral monsters roaming the city. There's just something about her that makes you want to be rough with the poor cow girl. (Y=Fuck, N=Leave)[line break]";
 		if Player consents:
 			LineBreak;
 			say "     You take the defeated cow's hands and remove them from your waist, telling her to present herself. She lets out a lustful moo and drops to all fours, turning quickly around. As she does so, her breasts start to leak more of her milk, the sight making you rather thirsty. A thought comes to mind and you realize that you could not only satisfy your sexual urges, but you could also quench your thirst. (Y=Drink+Sex, N=Just Sex)[line break]";
@@ -117,29 +118,26 @@ to say BeatTheBovine:
 				LineBreak;
 				if Player is male:
 					say "     You grin and tell the cow you've got a slight change of plans. Ordering her onto her back, you lean forward, taking one of her nipples into your mouth, flicking your tongue across it, the rich taste of milk driving you to begin sucking on it. The cow girl moans and her chest heaves as she begs you to fuck her. Still sucking, you shift position on top of her so that your now hard cock is resting against her folds. You pull your hips back, lining the tip of your [Cock of Player] cock up with her wet lips and then slamming into her, groaning in pleasure. As you pound away at the cow girl's cunt, she [if Cock Length of Player < 28]slowly gets more and more into it, her legs wrapping around you, drawing you deeper into her. Soon enough you feel your climax building, your balls swelling with cum. With one final thrust, you bury your [cock size desc of Player] length as deep as you can[else]screams her pleasure, her large hands firmly on your ass, making sure you fuck her fully with each stroke. Soon enough you feel your climax building, your balls swelling with cum. With one final thrust, you bury your [cock size desc of Player] length in her, knowing you are filling her utterly[end if], [if Ball Size of Player < 6]giving her your fertile seed[else]flooding her womb with your fertile seed, excess cum leaking out around your dick[end if]. You nearly black out when she reaches her peak, her snatch squeezing your rod tightly and the two of you squirm in ecstasy.";
-					say "     After you pump the last of your cum into her, you lie atop the cow girl, nursing from her breast, a warm feeling radiating out from your stomach. The two of you doze briefly in your post-orgasmic stupor, but after a while you get up to head out. As you do, the bovine woman calls out after you, 'That was fun, but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.";
+					say "     After you pump the last of your cum into her, you lie atop the cow girl, nursing from her breast, a warm feeling radiating out from your stomach. The two of you doze briefly in your post-orgasmic stupor, but after a while you get up to head out. As you do, the bovine woman calls out after you, 'That was fun, but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.[mooplus]";
 					CreatureSexAftermath "Bovine" receives "PussyFuck" from "Player";
-					mooplus;
 					PlayerEat 5;
 					PlayerDrink 10;
-					infect "Bovine";
+					infect;
 					increase CowBully by 1;
 				else if Player is female:
 					say "     You grin and tell the cow you've got a slight change of plans. Ordering her onto her back, you lean forward, taking one of her nipples into your mouth, flicking your tongue across it, the rich taste of milk driving you to begin sucking on it. The cow girl moans and her chest heaves as she begs you to fuck her. Still sucking, you slide your hand down between her legs and begin to stroke her wet pussy. The cow girl shivers and groans as you play with her cunt, first stroking it and then slowly sliding a finger or four into her. Soon enough, the cow girl returns the favor, her large fingers finding your own tender folds, expertly locating your g-spot and working you up to climax rather quickly. You continue on like this for a while, suckling on the cow girl's tits while the two of you fingerblast each other, until she is finally pushed over the edge and into orgasm, cunt clamping down on your fingers, her body shaking in pleasure.";
-					say "     Your own orgasm isn't far behind and you collapse onto the cow as she relentlessly fingers you through your climax. The two of you doze briefly in your post-orgasmic stupor, but you rouse yourself, rubbing your belly, a warm tingle coming from your stomach full of milk. As you stand up to leave, the bovine woman calls out after you, 'That was fun, but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.";
+					say "     Your own orgasm isn't far behind and you collapse onto the cow as she relentlessly fingers you through your climax. The two of you doze briefly in your post-orgasmic stupor, but you rouse yourself, rubbing your belly, a warm tingle coming from your stomach full of milk. As you stand up to leave, the bovine woman calls out after you, 'That was fun, but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.[mooplus]";
 					CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Bovine";
-					mooplus;
 					PlayerEat 5;
 					PlayerDrink 10;
-					infect "Bovine";
+					infect;
 					increase CowBully by 1;
 				else:
 					say "     You look down at yourself and realize that you don't really have any proper equipment to play with the cow girl, but that doesn't mean you can't still sate your thirst. You climb up on top of her and take hold of her breasts, clamping your mouth down over one and beginning to suckle from it. You grin slightly as the cow girl moos lustfully, taking pleasure in your suckling. You gulp down her milk, teasing her squirting teat with your tongue and teeth, squeezing and pulling on the ones not currently in your mouth. When the first one starts to run dry you just switch to another, happily drinking your fill.";
-					say "     Once your belly is completely full of the cow girl's delicious milk, you get up and stretch, a warm fuzzy feeling spreading throughout you. You shrug it off, gather your gear and head back out along the path. As you do, the bovine woman calls out after you, 'That was fun, but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.";
-					mooplus;
+					say "     Once your belly is completely full of the cow girl's delicious milk, you get up and stretch, a warm fuzzy feeling spreading throughout you. You shrug it off, gather your gear and head back out along the path. As you do, the bovine woman calls out after you, 'That was fun, but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.[mooplus]";
 					PlayerEat 5;
 					PlayerDrink 10;
-					infect "Bovine";
+					infect;
 					increase CowBully by 1;
 			else:
 				LineBreak;
@@ -180,7 +178,7 @@ to say BeatTheBovine:
 						WaitLineBreak;
 						say "     You collapse on top of the large bull and just let him fill you up, your belly swelling up so much from all his cum that it looks like you're pregnant. You pant and lie there for a while, too tired to get up. Eventually though, you push yourself up off his shaft and roll off his massive form, cum pouring out of your cunt. You get up and grab your things, looking back one last time at the bull that fucked you so full, still resting on his side and tongue lolling out of his mouth as he lays on the grass, and smile before you head back along the path.";
 						CreatureSexAftermath "Player" receives "PussyFuck" from "Bovine";
-						infect "Bovine";
+						infect;
 						fimpregchance;
 						fimpregchance;
 					else if Player is mpreg_ok:
@@ -189,7 +187,7 @@ to say BeatTheBovine:
 						WaitLineBreak;
 						say "     You collapse on top of the large bull and just let him fill you up, your belly swelling up so much from all his cum that it looks like you're pregnant. You pant and lie there for a while, too tired to get up. Eventually though, you push yourself up off his shaft and roll off his massive form, cum pouring out of your ass. You get up and grab your things, looking back one last time at the bull that fucked you so full, still resting on his side and tongue lolling out of his mouth as he lays on the grass, and smile before you head back along the path.";
 						CreatureSexAftermath "Player" receives "AssFuck" from "Bovine";
-						infect "Bovine";
+						infect;
 						mimpregchance;
 						mimpregchance;
 					else:
@@ -198,8 +196,8 @@ to say BeatTheBovine:
 						WaitLineBreak;
 						say "     Eventually his orgasm tapers of, his balls empty and your [bodytype of Player] belly stuffed full. You lie back, panting hard and grinning like a fool. You stretch out a bit before getting back up, your belly tingling with warmth. You look back at the bull passed out on his side, tongue lolling out of his mouth, and realize that his cum was probably rather infectious, and taking such a large amount might not have been such a good idea. Shrugging and picking up your stuff you realize that what's done is done and you're just going to have to live with it. You turn around and head back along the path.";
 						CreatureSexAftermath "Player" receives "OralCock" from "Bovine";
-						infect "Bovine";
-						infect "Bovine";
+						infect;
+						infect;
 				else:
 					LineBreak;
 					say "     Shaking your head clear of those thoughts you turn away from the bull and head back along the path.";
@@ -283,27 +281,23 @@ to say bovine attack:
 
 to say cow attack:
 	if a random number from 1 to 20 is 1:
-		say "The cow sprays wildly with milk, drenching you, making you cry out as it seems to soak your clothing. All of a sudden a precise follow up spray hits you in the mouth, the pressure forcing you to swallow or drown in it. With a gulp you get a tingling feeling from your belly and are suddenly washed in contentment.";
-		if Mooing < 5:
-			mooplus;
-		else:
-			CowMilkAddict;
-		infect;
+		say "The cow sprays wildly with milk, drenching you, making you cry out as it seems to soak your clothing. All of a sudden a precise follow up spray hits you in the mouth, the pressure forcing you to swallow or drown in it.[infect][line break]";
+		say "With a gulp you get a tingling feeling from your belly and are suddenly washed in contentment.[no line break][if Mooing < 5][mooplus][else][CowMilkAddict][end if]";
 	else:
-		say "[one of]The cow reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your arm, causing it to sting at the pressure.[or]The cow reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your stomach, causing you to become short of breath and bend over wheezing as the focused stream hits.[or]Moving in close, she slams her big milk jugs into your face, trying to make you drink, but ends up knocking you back.[at random]";
+		say "[one of]The cow reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your arm, causing it to sting at the pressure[or]The cow reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your stomach, causing you to become short of breath and bend over wheezing as the focused stream hits[or]Moving in close, she slams her big milk jugs into your face, trying to make you drink, but ends up knocking you back[at random].[no line break]";
 
 to say feral bull attack:
 	if CowBully > 0:
-		say "[one of]The bull lowers his horns, bellowing wildly and charges at you, raking your side painfully.[or]Screaming and bucking around you the huge animal lashes out with his back hooves, knocking you aside like a tin can.[or]Shaking his huge head as he bolts around wildly, he catches you with a horn, dragging you for a while before swinging his head up and throwing you into the air. As you hit the ground you feel real pain blossom into your legs.[at random]";
+		say "[one of]The bull lowers his horns, bellowing wildly and charges at you, raking your side painfully[or]Screaming and bucking around you the huge animal lashes out with his back hooves, knocking you aside like a tin can[or]Shaking his huge head as he bolts around wildly, he catches you with a horn, dragging you for a while before swinging his head up and throwing you into the air. As you hit the ground you feel real pain blossom into your legs[at random].[no line break]";
 	else:
 		choose row MonsterID from the Table of Random Critters;
 		if monsterHP < ( HP entry / 4 ):			[ < 20 for regular play ]
 			say "The bull flicks his tail at you. You have finally annoyed him so much he has moved.[combat abort]";
 			continue the action;
-		say "[one of]The big bull snorts softly, trying to eat grass and completely ignoring you.[or]The bull looks up from his grazing for a moment, making a mooing sound at you, before returning to his meal.[at random]";
+		say "[one of]The big bull snorts softly, trying to eat grass and completely ignoring you[or]The bull looks up from his grazing for a moment, making a mooing sound at you, before returning to his meal[at random].";
 		if monsterHP < ( ( HP entry * 7 ) / 10 ):		[ < 56 for regular play ]
 			increase monsterHP by 9 + ( HP entry / 5 ); [ +25 HP for regular play ]
-		say "You notice that the big animal is almost completely ignoring your attacks as they fail to pierce his tough hide.";
+		say "You notice that the big animal is almost completely ignoring your attacks as they fail to pierce his tough hide.[no line break]";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -548,15 +542,17 @@ to say bovineheat:
 	if Mooing > 0 and a random chance of 2 in 5 succeeds:
 		decrease Mooing by 1;
 
-To mooplus:			[The more you moo, the less you need milk.]
+To say mooplus:			[The more you moo, the less you need milk.]
 	if Mooing < 5:
 		now Mooing is 5;
 	else if Mooing < 15:
 		increase Mooing by 3;
 
-To CowMilkAddict:			[Getting a direct hit feeds you. This seems like a lot of extra steps for a one off thing.]
-	PlayerEat 5;
-	PlayerDrink 10;
+To say CowMilkAddict:			[Getting a direct hit feeds you. This seems like a lot of extra steps for a one off thing.]
+	decrease hunger of Player by 5;
+	decrease thirst of Player by 10;
+	if hunger of Player < 0, now hunger of Player is 0;
+	if thirst of Player < 0, now thirst of Player is 0;
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
@@ -583,20 +579,13 @@ the scent of cow milk is "The cow milk smells delicious and mouth watering.".
 Usedesc of cow milk is "[cow milk use]".
 
 to say cow milk use:
-	say "     You pop the cork off the bottle, tilt your head back and chug the milk down. The taste is sweet and creamy and makes you think of farm life. You sigh happily and release a soft [']moo['] as you finish it off.";
+	say "     You pop the cork off the bottle, tilt your head back and chug the milk down. The taste is sweet and creamy and makes you think of farm life. You sigh happily and release a soft [']moo['] as you finish it off.[mooplus]";
 	PlayerDrink 10;
 	PlayerEat 5;
-	if Mooing < 5:
-		now Mooing is 5;
-	else if Mooing < 15:
-		increase Mooing by 3;
 
 an everyturn rule:
-	if mooing > 0:
-		if the remainder after dividing turns by 3 is 0:
-			if BodyName of Player is not "Bovine" and FaceName of Player is not "Bovine" and CockName of Player is not "Bovine":
-				decrease mooing by 1;
-			else if a random chance of 1 in 2 succeeds:
-				decrease mooing by 1;
+	if mooing > 0 and the remainder after dividing turns by 3 is 0:
+		if (BodyName of Player is not "Bovine" and FaceName of Player is not "Bovine" and CockName of Player is not "Bovine") or a random chance of 1 in 2 succeeds:
+			decrease mooing by 1;
 
 Bovine ends here.

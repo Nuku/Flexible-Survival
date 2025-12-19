@@ -12,22 +12,22 @@ to say losetoRetriever:
 		if Player is male:
 			say ". You find yourself becoming increasingly aroused as she strips your clothes and gear from your [bodydesc of Player] body, intent on reaching the prize underneath. As soon as she has access, the sexy canine starts licking at your [cock size desc of Player] [Cock of Player] cock with her large canine tongue, quickly bringing it to full erection.";
 			say "     Once she's satisfied that you're as ready as she is, the retriever moves to bring her needy slit into position over your erect meat and slowly lowers herself onto you with a whimpering yip. As she raises and lowers herself against you, you find yourself slipping into a lust-filled haze, lost in the pleasure this sexy canine is forcing on you. Before long you feel yourself approaching your peak as the retriever quickens her pace, but just before you climax she reaches it first, howling in pleasure as she convulses above you, pushing you over the edge until you fill her needy body with your seed.";
+			CreatureSexAftermath "Retriever Female" receives "PussyFuck" from "Player";
 			WaitLineBreak;
 			say "     Afterwards, she collapses atop you, almost as exhausted as you are. The two of you lay there for some time, lost in the afterglow of your lovemaking, before she raises herself off you. She rubs her belly contently as she pads away, leaving you to recover on your own.";
-			CreatureSexAftermath "Retriever Female" receives "PussyFuck" from "Player";
 		else:
 			say ". As she strips you of your clothing and gear, you see her face overcome with disappointment as she discovers you lack the prize she's looking for. Her expression brightens again a moment later and she dives face-first into your crotch, clearly intent on making sure you're satisfied even if she quite doesn't get what she wanted.";
 			say "     As she drags her wet canine tongue across your feminine slit you can't help but shiver in delight. As her licking and nibbling continues you quickly find yourself approaching climax and as a final push to bring you over the edge the lustful canine drives her muzzle into you, licking at your depths as you scream in pleasure, soaking her muzzle and face in your juices.";
+			CreatureSexAftermath "Retriever Female" receives "OralPussy" from "Player";
 			WaitLineBreak;
 			say "     Before getting up to leave your canine playmate gives you one last long doggy kiss, giving you a taste of your own juices then leaves you to recover alone; you watch her tail wag happily behind her as she walks away still licking your juices from her muzzle.";
-			CreatureSexAftermath "Retriever Female" receives "OralPussy" from "Player";
 
 to say beattheRetriever:
 	if HP of Karen is 4:
 		say "     Still reeling from your last blow, Rex stumbles back and falls to one knee. He glances over at Karen, huddled in the corner of the room before looking up at you with his pleading eyes awaiting your final decisive strike which knocks the beaten canine to the floor.";
 	else:
 		if Libido of Player > 60 and Player is not neuter:
-			say "     As you land the final blow on the retriever girl she stumbles and falls backwards, giving you a clear view of her dripping cunt. You realize this is your opportunity to have some fun with the puppy if you wanted to (Y/N).";
+			say "     As you land the final blow on the retriever girl she stumbles and falls backwards, giving you a clear view of her dripping cunt. You realize this is your opportunity to have some fun with the puppy if you wanted to. (Y/N)[line break]";
 			if Player consents:
 				LineBreak;
 				say "     You decide to have some fun with the lusty canine and she realizes your intent as you approach and begin stripping off your gear. The retriever begins to pant happily and spreads her legs before you.";

@@ -63,7 +63,7 @@ to say YingletsSexMenu:
 			say "     You've had enough of their antics for one day. You assure them you won't harm them any further, and tell them they're in for another beatdown if they tangle with you again. You continue on your way, leaving the needy yinglets in one part relief and two parts disappointment.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say YingletsFuck1:
@@ -268,14 +268,13 @@ name	desc	weight	object
 
 barnacle encrusted gem is a grab object. it is temporary.
 [barnacle encrusted gem is infectious. Strain of barnacle encrusted gem is "Yinglet".]
-Usedesc of barnacle encrusted gem is "[EncrustedGemUsing]";
+Usedesc of barnacle encrusted gem is "[EncrustedGemUsing]".
 
 to say EncrustedGemUsing:
-	say "You hold out the gem and examine it closely. It's so shiny, catching the light in just the right way. The liquid inside seems to swirl about, adding to how pretty it is. Suddenly, it shatters. At first you're confused, wondering how it broke open so easy, but it's short lived when the fluid splashes your face. You try to wipe it off, but it seems to be soaking into your skin!";
+	say "     You hold out the gem and examine it closely. It's so shiny, catching the light in just the right way. The liquid inside seems to swirl about, adding to how pretty it is. Suddenly, it shatters. At first you're confused, wondering how it broke open so easy, but it's short lived when the fluid splashes your face. You try to wipe it off, but it seems to be soaking into your skin!";
 	infect "Yinglet";
 
-instead of sniffing barnacle encrusted gem:
-	say "The small object smells vaguely like the sea, or more specifically, saltwater. It's musty, but not all that unpleasant.";
+Scent of barnacle encrusted gem is "The small object smells vaguely like the sea, or more specifically, saltwater. It's musty, but not all that unpleasant.".
 
 Section 4 - Endings
 

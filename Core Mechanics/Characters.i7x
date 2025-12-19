@@ -1617,7 +1617,7 @@ to say Cum Load Size of ( x - a person ):
 			say "[one of]one-liter[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
 		else if Ball Size of x is 6:
 			say "[one of]two-liter[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
-		else if Ball Size of x > 6:
+		else:
 			say "[one of]overflowing[or]bucket-filling[or]excessive[or]gushing[or]massive[at random]";
 
 This is the cunt descr rule:
@@ -1652,9 +1652,7 @@ Check Conversing:
 
 carry out conversing:
 	sort conversation of the noun in random order;
-	repeat with comment running through conversation of the noun:
-		say "     [Noun] says, '[Comment]'[line break]";
-		break;
+	say "     [Noun] says, '[entry 1 of conversation of noun]'[line break]";
 
 
 Characters ends here.

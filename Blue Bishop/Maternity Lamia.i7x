@@ -57,7 +57,7 @@ to say losetolamia:
 		SanLoss 10;
 		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 1 and 3;
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 1 and 3;
-		if "Iron Stomach" is not listed in feats of Player, infect;
+		if "Iron Stomach" is not listed in feats of Player, infect "Lamia";
 	increase mlamialoss by 1;
 
 
@@ -159,7 +159,7 @@ to say mlamiavsex04:
 	SanLoss 5;
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
-	if "Iron Stomach" is not listed in feats of Player, infect;
+	if "Iron Stomach" is not listed in feats of Player, infect "Lamia";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -383,7 +383,7 @@ this is the lamiaboob rule:	[***]
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg this round]
 		say "Her coils ensnare your limbs, trapping them within her body's grip. You can feel the warm, wet touch of her leaking slits as well as she slides across your thighs even as she wraps herself around you tighter. You take [special-style-2][dam][roman type] damage from the constriction. Even as you continue to resist, she mashes your face into her extra-ample bosom.";
 		if HP of Player <= 0 or Libido of Player >= 110:
-			say "That's enough to take the last of the fight out of you. She continues to have her way with you and you can only put up a token amount of resistance.";
+			say "[line break]That's enough to take the last of the fight out of you. She continues to have her way with you and you can only put up a token amount of resistance.";
 			now matlamiacaught is 2; [unable to continue fighting]
 	if matlamiacaught is 1:
 		WaitLineBreak;
@@ -404,7 +404,7 @@ this is the lamiaboob rule:	[***]
 		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by a random number between 0 and 1;
 		say "With your face buried in her fleshy fun-pillows, you have trouble breathing, the only air you can get heavily laced with the milky scent of her multi-bosom, dulling your wits even as you grow aroused. And it gets even harder for your poor brain to remain oxygenated when her tail tightens further around your chest. This forced exhalation results in you motorboating those jugs of hers, to her giggling delight. '[one of]Oh! I always love that[or]Tee hee! That tickles[or]Oooo! That's more like it[at random][if matlamiacaught is not 2]!' The experience weakens you, causing [special-style-2][dam][roman type] damage even as you grow more aroused.[else]!'[end if]";
 		if HP of Player <= 0 or Libido of Player >= 110 and matlamiacaught is 1:
-			say "With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
+			say "[line break]With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
 			now matlamiacaught is 2; [unable to continue fighting]
 	if matlamiacaught is 1:
 		WaitLineBreak;
@@ -425,7 +425,7 @@ this is the lamiaboob rule:	[***]
 		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by a random number between 0 and 1;
 		say "Her grip eases a little as she laughs and your immediate response is to gasp for air, but all you get is another lungful of her arousing scent followed by a mouthful of nipple. You end up sucking down on her hard nip before you realize what you're doing. Your resistance fades further and you become all the more aroused[if Player is herm]. Your cock[smn] stiffen[smv] and grind[smv] against the firm, muscular tail pressed around it, causing an excess of your feminine juices to leak from your cunt[sfn][else if Player is male]. Your cock[smn] stiffen[smv] and grind[smv] against the firm, muscular tail pressed around it[else if Player is female]. You grind your hips and try to wiggle your legs as fresh feminine juices leak from your cunt[sfn][end if][if matlamiacaught is not 2]. It becomes harder to hold out as you take another [special-style-2][dam][roman type] damage and become further aroused[end if].";
 		if HP of Player <= 0 or Libido of Player >= 110 and matlamiacaught is 1:
-			say "With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
+			say "[line break]With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
 			now matlamiacaught is 2; [unable to continue fighting]
 	if matlamiacaught is 1:
 		WaitLineBreak;
@@ -448,11 +448,10 @@ this is the lamiaboob rule:	[***]
 		if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
 		say "Not realizing the danger, you suckle from the lamia's milky nipple. You drink down her creamy milk while she cuddles you in her tender embrace. The nurse coos softly and caresses your head, encouraging you to keep going[if Player is not neuter]. The heat in your loins grows and you grind eagerly against the wet touch of her leaking pussies[else]. You grind eagerly against the wet touch of her leaking pussies[end if] as you suckle. Your thoughts are further muddled and your arousal climbs higher as the infected milk seeks to corrupt you[if matlamiacaught is not 2]. You suffer [special-style-2][dam][roman type] damage as your resistance wanes further and your arousal climbs[end if].";
-		LineBreak;
 		if "Iron Stomach" is not listed in feats of Player, say "[infect][line break]";
 		say "After this taste of her bounty, she releases you with a happy sigh. '[one of]There. Feeling better now[or]Are you ready to snuggle up for a proper meal now[or]Are you ready for some real fun[or]Has that gotten you ready for feeding time[at random][if scalevalue of Player < 4], little one[end if]?' she coos, slithering around you with a sensual sway.";
 		if HP of Player <= 0 or Libido of Player >= 110:
-			say "The whole of this has left you weakened and aroused, your willpower too expended to continue resisting at this point.";
+			say "[line break]The whole of this has left you weakened and aroused, your willpower too expended to continue resisting at this point.";
 			now matlamiacaught is 2;
 		choose row monstercom from the table of critter combat;
 		now alt1chance entry is 0;

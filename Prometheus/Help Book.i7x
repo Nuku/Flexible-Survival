@@ -4,10 +4,9 @@ Version 1 of Help Book by Prometheus begins here.
 [ 0 - Present                 ]
 [ 1 - Removed                 ]
 
-an everyturn rule:
+a postimport rule: [bugfixing rules for players that import savegames]
 	if HP of Help Book is 0:
-		if Help Book is not in Grey Abbey Library:
-			move Help Book to Grey Abbey Library;
+		move Help Book to Grey Abbey Library;
 
 Section 1 - NPC
 
@@ -139,11 +138,11 @@ to say HelpBookTalkMenu:
 			say "     You close the book again, ready to get on with your adventure.";
 			WaitLineBreak;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say HelpBookTalk1: [Needs]
-	say "     For you to survive you will need to find food and water to stave off rising hunger and thirst. This can be found by [bold type]scavenging[roman type] around the city. Hunger can be sated using [bold type]food[roman type] or [bold type]chips[roman type]. Thirst can be sated by [bold type]water bottles[roman type], [bold type]soda[roman type], or [bold type]dirty water[roman type]. While dirty water will reduce your thirst, it may also transform you. Food and water may occasionally also be found while [bold type]exploring[roman type], which is the main way of discovering areas of the city. Once you are more familiar with the city, you may be able to [bold type]navigate[roman type] back to places you are familiar with. Over time, your character will get tired which will eventually lower your stats until you sleep. To counteract this, you need to [bold type]rest[roman type], usually on the cot that you can find [if Player is booked or Player is bunkered]here[else]in the bunker[end if]. While the library is safe, if you sleep out in the city you may be attacked by creatures, so be cautious and try to find a safe area first unless you are willing to risk your rest being interrupted. You may also notice your [bold type]libido[roman type] rising as you explore the city. Should you not sate your lusts with either a partner or a smutty magazine, you may find yourself submitting to a wandering beast. Lastly, the pressure and trauma of life in the city may cause you to lose touch with your [bold type]humanity[roman type], also known as sanity. This deterioration can be easily reversed by writing in your [bold type]journal[roman type], something that you should be carrying with you at all times.";
+	say "     For you to survive you will need to find food and water to stave off rising hunger and thirst. This can be found by [bold type]scavenging[roman type] around the city. Hunger can be sated using [bold type]food[roman type] or [bold type]chips[roman type]. Thirst can be sated by [bold type]water bottles[roman type], [bold type]soda[roman type], or [bold type]dirty water[roman type]. While dirty water will reduce your thirst, it may also transform you. Food and water may occasionally also be found while [bold type]exploring[roman type], which is the main way of discovering areas of the city. Once you are more familiar with the city, you may be able to [bold type]navigate[roman type] back to places you are familiar with. Over time, your character will get tired which will eventually lower your stats until you sleep. To counteract this, you need to [bold type]rest[roman type], usually on the cot that you can find [if Player is collected]here[else]in the bunker[end if]. While the library is safe, if you sleep out in the city you may be attacked by creatures, so be cautious and try to find a safe area first unless you are willing to risk your rest being interrupted. You may also notice your [bold type]libido[roman type] rising as you explore the city. Should you not sate your lusts with either a partner or a smutty magazine, you may find yourself submitting to a wandering beast. Lastly, the pressure and trauma of life in the city may cause you to lose touch with your [bold type]humanity[roman type], also known as sanity. This deterioration can be easily reversed by writing in your [bold type]journal[roman type], something that you should be carrying with you at all times.";
 
 to say HelpBookTalk2: [Stats]
 	say "     Your main stats are [bold type]Strength, Dexterity, Stamina, Charisma, Intelligence, and Perception[roman type]. Simply put, [bold type]Strength[roman type] increases melee damage dealt as well as carry capacity, [bold type]Dexterity[roman type] increases your chance to hit and chance to dodge, [bold type]Stamina[roman type] increases your health, [bold type]Charisma[roman type] is used for social interactions with others, [bold type]Intelligence[roman type] increases health recovered by medkits, chance of vial collection, and success chance of fleeing from combat, and [bold type]Perception[roman type] increases your success while scavenging, hunting, and damage with ranged weapons. Success or failure in the city may often rely on these stats. As you defeat enemies you will gain [bold type]experience[roman type] that is used to level up. Every two levels will give you a chance to boost a stat, and every five levels will give a you a chance to choose a feat.";

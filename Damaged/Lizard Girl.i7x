@@ -11,6 +11,7 @@ lizgirlinheat is a number that varies.
 lizgirlangry is a number that varies.
 
 to say lizgirl herm:
+	setmonster "Lizard Girl";
 	choose row MonsterID from the Table of Random Critters;
 	now sex entry is "Both";
 	now Cock Count entry is 1;
@@ -19,6 +20,7 @@ to say lizgirl herm:
 	infect;
 
 to say lizgirl female:
+	setmonster "Lizard Girl";
 	choose row MonsterID from the Table of Random Critters;
 	now sex entry is "Female";
 	now Cock Count entry is 0;
@@ -35,11 +37,9 @@ to say lizgirl impreg:
 to say lizgirl check angry:
 	if lizgirlangry is 1 and inafight is 1:
 		if HP of Player < 11:
-			LineBreak;
 			now dam is 0;
 			now fightoutcome is 19;
-			say "The lizard girl draws away from the fight.";
-			say "[line break]     'Useless useless useless, your blood is weak and tainted!' she screams. With a final sigh she regains her composure and paces away.[combat abort]";
+			say "[line break]The lizard girl draws away from the fight. 'Useless useless useless, your blood is weak and tainted!' she screams. With a final sigh she regains her composure and paces away.[combat abort][no line break]";
 
 to say lizgirl attack:
 	if lizgirlangry is 1:

@@ -3713,18 +3713,10 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "skunk cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Skunk Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	skunk cum
 
-skunk cum is a grab object.
-skunk cum is cum.
-skunk cum is infectious.
+skunk cum is a infectious cum grab object.
 Strain of skunk cum is "Skunk Male".
-Usedesc of skunk cum is "[skunk cum use]".
-
-to say skunk cum use:
-	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-Scent of skunk cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.".
+Usedesc of skunk cum is "[cumjar use]".
+Scent of skunk cum is "[cumjar smell]".
 
 
 Table of Game Objects (continued)
@@ -3748,7 +3740,7 @@ to say Limbo Fox Cum use:
 	if "Iron Stomach" is not listed in feats of Player:
 		infect "Limbo Fox";
 
-Scent of Limbo Fox Cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.".
+Scent of Limbo Fox Cum is "[cumjar smell]".
 
 
 Glitchy Cum is a grab object.

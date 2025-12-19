@@ -69,8 +69,9 @@ to say JagWarVic_Vag:
 	WaitLineBreak;
 	say "     Pain lances through you as he begins withdrawing his length from your body, the sharp feline barbs scraping and tearing your soft inner walls, but your cries are muffled by the muzzle locked to your lips and the rough feline tongue wrestling with your own. Even before you've recovered from his agonizing withdrawal, the jaguar begins thrusting into you again, the pain fading back into pleasure as his thick member once again delves into your depths. Your mind quickly begins to be overwhelmed by the alternating pleasure and pain; with each thrust of the jaguar's barbed cock the two sensations seem to bleed more and more into each other until the constant stimulation pushes you, and your companion, to your limits.";
 	say "     With a triumphant roar the jaguar warrior makes one final thrust into you, forcing his entire length into your exhausted body before unleashing his thick feline seed into your womb. The sensation of this final thrust and the warm sticky seed spilling into your body pushes you over the edge as well, and you cry out in a yowl of ecstasy as your spasming cunt clamps down around the twitching barbed member buried within you, your feminine juices spilling out around him as you soak both your crotches with womanly nectars.";
-	say "     Sated, the jaguar finally pulls his still-twitching cock from your body in one quick motion, the sharp barbs sending one last ripple of pain through you as he does so. As you lay on the floor, still lost in the afterglow of your powerful climax, the powerful male stalks off into the museum, leaving you to recover on your own.";
 	NPCSexAftermath Player receives "PussyFuck" from Tehuantl;
+	WaitLineBreak;
+	say "     Sated, the jaguar finally pulls his still-twitching cock from your body in one quick motion, the sharp barbs sending one last ripple of pain through you as he does so. As you lay on the floor, still lost in the afterglow of your powerful climax, the powerful male stalks off into the museum, leaving you to recover on your own.";
 
 to say JagWarVic_Anal:
 	say "You wince as the jaguar warrior grips your shoulder tightly, pressing his sharp claws into your flesh as he forces you to your knees before he begins pacing around you slowly. Soon you feel his large, heavy foot-paw pressing against the middle of your back, forcing you forwards to your hands and knees as you feel splatters of his warm pre dripping onto your back.";
@@ -197,10 +198,10 @@ to say TehuantlTameSex2: [player rubs balls, then rides his dick -> male T]
 	WaitLineBreak;
 	say "     You moan and gasp in pleasure as you rise and fall along the stimulating barbed shaft while the jaguar groans and mewls beneath you. Oh yeah - winning this fight really was worth it! You ride the muscled feline with great pleasure, playing your hands over his strong arms and ribbed abs. Quite a hunk - and he's all yours! A roar in pleasure rises in your throat and you rapidly push yourself to a breathtaking climax, your pussy clamping down tight around the feline member as your orgasm strikes, pushing the jaguar to climax as well. His entire form shudders beneath you as his warm load pulses into your body. Even as your climax begins to subside and you begin rocking your body against the shivering jaguar once again, his pulsing member continues to fire spurt after spurt of feline cum into you.";
 	say "     The jaguar's orgasm lasts a long while, with more and more of his potent seed gushing into your depths. The constant throb inside your body and twitching of his nubby barbs against your inner walls keeps the high from your own climax going - reducing you to the strength of a kitten from all the pleasure. Yet despite this, your sexual partner still does nothing to gain the upper hand. Clearly, he has learned his lesson - and is feeling far too good right now to care that he's gonna be your pet. In fact, the exhausted feline starts rumbling in a pleasant purr and looks up at you with adoration. Very nice - and you immediately get another idea what he can do for you next. Raising your hips a little, you slide off the barbed shaft in your pussy and move up to his head on your knees, leaving a trail of dripping cum all over his belly fur. Coming to kneel over his face, there is no hesitation at all for your boy-toy to start licking, eating his load out of your pussy.";
-	WaitLineBreak;
-	say "     After a very pleasurable time having your female bits licked and teased, you can't help but smile as you tell the jaguar that he's been a very good boy, then you hold out a hand for him to take and pull him up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with him.";
 	NPCSexAftermath Player receives "PussyFuck" from Tehuantl;
 	NPCSexAftermath Tehuantl receives "OralPussy" from Player;
+	WaitLineBreak;
+	say "     After a very pleasurable time having your female bits licked and teased, you can't help but smile as you tell the jaguar that he's been a very good boy, then you hold out a hand for him to take and pull him up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with him.";
 	say "[TehuantlMaleShift]";
 	say "[TameTehuantl]";
 
@@ -225,11 +226,11 @@ to say TehuantlTameSex4: [player rubs nipples, then rides his dick -> female T]
 	WaitLineBreak;
 	say "     You moan and gasp in pleasure as you rise and fall along the stimulating barbed shaft while the jaguar groans and mewls beneath you. You roar in pleasure as you rapidly push yourself to your first climax, your pussy clamping down tight around the feline member as your orgasm strikes, pushing the jaguar to climax as well. His entire form shudders beneath you as his warm load pulses into your body and you feel a strange shifting of his shaft within you. Even as your climax begins to subside and you begin rocking your body against the shivering jaguar once again, his pulsing member continues to fire spurt after spurt of his feline cum into you. Intent on riding him to a second climax, you continue driving his length into your body, but with each thrust you feel less and less of that intense stimulation. Fearing your plaything may be going soft on you, you slow to a stop and growl down at him, but you notice something very different about the once-large feline beneath you. His broad, powerful torso has slimmed to a shapely female form, as your eyes follow his body down to where your crotch meets his, you are shocked by the wide birthing hips the feline now possesses. Releasing his shoulders, you trace a finger down his slim, delicate chest to the swollen, puffy nipples, cupping them gently as they swell into large, sumptuous breasts before your eyes.";
 	say "     The jaguar mewls up at you plaintively as the changes shift to his face, the once-strong masculine features becoming gentle and feminine while long locks of dark hair flow from his head. Realizing there is only one sign of the jaguar warrior's previous male self left, you slowly lift yourself from his cock, now noticeably smaller as you once again hold it in your hand. As the final spurts of his male cum drip from its tip, you watch his once-virile balls pull tightly against his body before slipping inside him with an unsettling slurp, leaving behind a dripping feline cunt. The jaguar moans in pleasure as you slip a finger into the wet new opening, almost effortlessly pushing her to her first female climax as what remains of her cock shrinks away to a tiny nub at the top of her pussy.";
+	NPCSexAftermath Player receives "PussyFuck" from Tehuantl;
+	NPCSexAftermath Tehuantl receives "PussyDildoFuck" from Player;
 	wait for any key;
 	project the Figure of Tehuantl_Female_naked_icon;
 	say "     The exhausted kitty rumbles as she stares up at you with adoration, clearly very little of the once dominant feline remains in this docile new creature and without a second thought you reach down for her. Your new pet nuzzles against your chest as you lift her into your arms, cradling her gently against you as you make your way back to the bunker.";
-	NPCSexAftermath Player receives "PussyFuck" from Tehuantl;
-	NPCSexAftermath Tehuantl receives "PussyDildoFuck" from Player;
 	SetFemalePronouns for Tehuantl;
 	say "[TameTehuantl]";
 	now HP of Tehuantl is 10; [female jaguar pet]
@@ -253,8 +254,7 @@ to say TameTehuantl:
 	increase score by 20;
 	move Tehuantl to Grey Abbey 2F;
 	move player to Grey Abbey 2F;
-	setmonster "Jaguar Warrior";
-	choose row MonsterID from the Table of Random Critters;
+	choose a row with Name of "Jaguar Warrior" in Table of Random Critters;
 	now area entry is "Nowhere";
 	now Energy of Tehuantl is turns;
 
@@ -482,40 +482,36 @@ to say JaguarHeaddressUse:
 	if Jaguar Headdress is equipped:
 		if hoodequipped is false:
 			if BodyName of Player is "Jaguar Warrior":
-				say "[line break]You drop to a knee as you feel a surge of heat roll through you, your feline physique shifting as the power of the jaguar headdress you're wearing ripples through your feline body, remaking you into a powerful jungle predator.";
-			setmonster "Jaguar Warrior";
-			choose row MonsterID from the Table of Random Critters;
+				say "[line break]     You drop to a knee as you feel a surge of heat roll through you, your feline physique shifting as the power of the jaguar headdress you're wearing ripples through your feline body, remaking you into a powerful jungle predator.";
 			if Player is not FemalePreferred:
+				choose a row with Name of "Jaguar Warrior" in Table of Random Critters;
 				now sex entry is "Both";
 			now hoodequipped is true;
 	else if hoodequipped is true:
 		if BodyName of Player is "Jaguar Warrior":
-			say "[line break]No longer under the influence of the jaguar headdress, you feel your warrior's physique burning away, leaving your feline form lithe and more delicate as the last of its power drains out of you.";
-		now hoodequipped is false;
-		setmonster "Jaguar Warrior";
-		choose row MonsterID from the Table of Random Critters;
+			say "[line break]     No longer under the influence of the jaguar headdress, you feel your warrior's physique burning away, leaving your feline form lithe and more delicate as the last of its power drains out of you.";
 		if Player is not MalePreferred:
+			choose a row with Name of "Jaguar Warrior" in Table of Random Critters;
 			now sex entry is "Female";
+		now hoodequipped is false;
 
 An everyturn rule:
 	if Jaguar Headdress is equipped:
 		if hoodequipped is false:
 			if BodyName of Player is "Jaguar Warrior":
-				say "You drop to a knee as you feel a surge of heat roll through you, your feline physique shifting as the power of the jaguar headdress you're wearing ripples through your feline body, remaking you into a powerful jungle predator.";
-			setmonster "Jaguar Warrior";
-			choose row MonsterID from the Table of Random Critters;
+				say "     You drop to a knee as you feel a surge of heat roll through you, your feline physique shifting as the power of the jaguar headdress you're wearing ripples through your feline body, remaking you into a powerful jungle predator.";
 			if Player is not FemalePreferred:
+				choose a row with Name of "Jaguar Warrior" in Table of Random Critters;
 				now sex entry is "Both";
 			now hoodequipped is true;
 		infect "Jaguar Warrior";
 	else if hoodequipped is true:
 		if BodyName of Player is "Jaguar Warrior":
-			say "No longer under the influence of the jaguar headdress, you feel your warrior's physique burning away, leaving your feline form lithe and more delicate as the last of its power drains out of you.";
-		now hoodequipped is false;
-		setmonster "Jaguar Warrior";
-		choose row MonsterID from the Table of Random Critters;
+			say "     No longer under the influence of the jaguar headdress, you feel your warrior's physique burning away, leaving your feline form lithe and more delicate as the last of its power drains out of you.";
 		if Player is not MalePreferred:
+			choose a row with Name of "Jaguar Warrior" in Table of Random Critters;
 			now sex entry is "Female";
+		now hoodequipped is false;
 
 Table of Game Objects (continued)
 name	desc	weight	object

@@ -80,25 +80,21 @@ To regularstart: [normal start method]
 		say "(3) [link]Main Stat[as]3[end link] - [bold type][if MainStat is 1]Strength[else if MainStat is 2]Dexterity[else if MainStat is 3]Stamina[else if MainStat is 4]Charisma[else if MainStat is 5]Intelligence[else if MainStat is 6]Perception[else]Random[end if][roman type][line break]";
 		say "(4) [link]Main Feat[as]4[end link] - [bold type][freefeatgeneral][roman type][line break]";
 		say "(5) [link]Fun Feat[as]5[end link] - [bold type][freefeatfun][roman type][line break]";
-		say "[line break]";
-		say "[bold type]Gameplay Options:[roman type][line break]";
+		say "[line break][bold type]Gameplay Options:[roman type][line break]";
 		say "(6) [link]Game Scenario[as]6[end link] - [bold type][scenario][roman type][line break]";
 		say "(7) [link]Difficulty Modes[as]7[end link] - [if HardMode is false and NoHealMode is false and BlindMode is false][bold type]Normal[roman type][else if HardMode is true][bold type]Hard[roman type][end if][if HardMode is true and ( NoHealMode is true or BlindMode is true )] | [end if][if NoHealMode is true][bold type]No-Heal[roman type][end if][if NoHealMode is true and BlindMode is true] | [end if][if BlindMode is true][bold type]Blind[roman type][end if][line break]";
 		say "(8) [link]Content Restrictions[as]8[end link][line break]";
-		say "[line break]";
-		say "[bold type]Display Options:[roman type][line break]";
+		say "[line break][bold type]Display Options:[roman type][line break]";
 		say "(9) [link]Hyperlinks[as]9[end link] - [bold type][if hypernull is 0]On[else if hypernull is 1]Off[end if][roman type][line break]";
 		say "(10) [link]Waiting for Input[as]10[end link] - [bold type][if waiterhater is 0]On[else if waiterhater is 1]Off[end if][roman type][line break]";
 		say "(11) [link]Screen Clearing[as]11[end link] - [bold type][if clearnomore is 0]On[else if clearnomore is 1]Off[end if][roman type][line break]";
 		say "(12) [link]Graphics[as]12[end link] - [bold type][if NewGraphicsInteger is 1]Inline[else if NewGraphicsInteger is 2]Side-Window[else if NewGraphicsInteger is 0]Disabled[end if][roman type][line break]";
 		say "(13) [link]Inventory Columns[as]13[end link] - [bold type][invcolumns][roman type][line break]";
-		say "[line break]";
-		say "[bold type]Saved Games:[roman type][line break]";
+		say "[line break][bold type]Saved Games:[roman type][line break]";
 		say "(97) [link]Restore Using Default Graphics[as]97[end link] (Right)[line break]";
 		say "(98) [link]Restore Using Default Graphics[as]98[end link] (Left)[line break]";
 		say "(99) [link]Restore A Save[as]99[end link][line break]";
-		say "[line break]";
-		say "(0) [link]Start Game[as]0[end link][line break]";
+		say "[line break](0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
 			say "(0-13)> [run paragraph on]";
 			get a number;
@@ -754,8 +750,7 @@ to newplayercustomizationmenu:
 			say "(2) [link]Player Sexual Experience[as]2[end link]: [bold type][playervirginsay][roman type][line break]";
 			say "(3) [link]Body Configuration Lock[as]3[end link] - [bold type][if GenderLock is 1]None[else if GenderLock is 2]Random[else if GenderLock is 3]Unchanging[else if GenderLock is 4]Always Cocky[else if GenderLock is 5]Always A Pussy[else if GenderLock is 6]Single Sexed[else if GenderLock is 7]Flat Chested[else if GenderLock is 8]Simplified Masculine[else]ERROR[end if][roman type][line break]";
 			say "(4) [link]Player Pronouns[as]4[end link] - [bold type][PronounChoice of Player][roman type][line break]";
-			say "[line break]";
-			say "(0) [link]Return to main menu[as]0[end link][line break]";
+			say "[line break](0) [link]Return to main menu[as]0[end link][line break]";
 			while 1 is 1:
 				say "Choice? (0-4)> [run paragraph on]";
 				get a number;
@@ -903,8 +898,7 @@ to playersexsetting: [OralVirgin of Player, Virgin of Player, AnalVirgin of Play
 		say "(2) [link]Vaginal Virgin[as]2[end link]: [bold type][if Virgin of Player is true]Yes[else]No[end if][roman type][line break]";
 		say "(3) [link]Penile Virgin[as]3[end link]: [bold type][if PenileVirgin of Player is true]Yes[else]No[end if][roman type][line break]";
 		say "(4) [link]Anal Virgin[as]4[end link]: [bold type][if AnalVirgin of Player is true]Yes[else]No[end if][roman type][line break]";
-		say "[line break]";
-		say "(0) [link]Return to previous menu[as]0[end link][line break]";
+		say "[line break](0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-4)> [run paragraph on]";
 			get a number;

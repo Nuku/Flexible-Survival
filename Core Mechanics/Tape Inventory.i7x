@@ -13,8 +13,7 @@ check TapeInventorying:
 
 carry out TapeInventorying:
 	say "Your video tape collection consists of:[line break]";
-	say "Type [bold type]tape <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a tape or [bold type]tapedrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a tape.";
-	LineBreak;
+	say "Type [bold type]tape <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a tape or [bold type]tapedrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a tape.[paragraph break]";
 	sort tapes of Player;
 	let linkparts be {{"U", "tape"}, {"D", "tapedrop"}};
 	repeat with x running through tapes of Player:
@@ -28,28 +27,29 @@ understand "tape [text]" as tapeing.
 
 Tapeing is an action applying to one topic.
 
+check tapeing:
+	if carried of video camera < 1:
+		say "You do not have a camera with you that you could watch the tape on";
+		if Lost Camera is resolved: [camera was found already]
+			say ". Thinking back to the lost camera you found, you wonder where you put it last..[no line break]";
+		say "." instead;
+
 carry out tapeing:
 	sort tapes of Player;
 	let t be the topic understood;
 	let target be text;
 	let found be 0;
 	let z be 0;
-	let q be a topic;
 	repeat with x running through tapes of Player:
 		increase z by 1;
-		if t in lower case is x in lower case:
+		if t exactly matches the text x, case insensitively:
 			now target is x;
 			now found is 1;
 			break;
 	if found is 0:
-		say "     You don't seem to have any such tape.";
+		say "You don't seem to have any such tape.";
 		continue the action;
-	if carried of video camera < 1:
-		say "     You do not have a camera with you that you could watch the tape on.";
-		if Lost Camera is resolved: [camera was found already]
-			say "     Thinking back to the lost camera you found, you wonder where you put it last...";
-		stop the action;
-	say "     You dig out the tape from your backpack and get your camera ready, opening up its tape slot.";
+	say "You dig out the tape from your backpack and get your camera ready, opening up its tape slot.[paragraph break]";
 	if entry z of tapes of Player is:
 		-- "Wayne's Tape 1": say "[FamilyFunTape1]"; [Source: Wahn/Recordings.i7x]
 		-- "Wayne's Tape 2": say "[FamilyFunTape2]"; [Source: Wahn/Recordings.i7x]
@@ -81,15 +81,14 @@ to deletetape (x - text):	[removes 1 tape of a given type from the player's inve
 	let z be 0;
 	repeat with y running through tapes of Player:
 		increase z by 1;
-		if x in lower case is y in lower case:
+		if x exactly matches the text y, case insensitively:
 			now found is 1;
 			break;
 	if found is 0:
 		say "Error - [x] - Expected tape not found.";
 		stop the action;
-	else:
-		say "     You dig out the tape [entry z of tapes of Player] from your backpack and throw it away.";
-		remove entry z from tapes of Player;
+	say "You dig out the tape [entry z of tapes of Player] from your backpack and throw it away.";
+	remove entry z from tapes of Player;
 
 understand "tapedrop [text]" as tapedropping.
 
@@ -97,20 +96,17 @@ Tapedropping is an action applying to one topic.
 
 Carry out tapedropping:
 	let t be the topic understood;
-	let target be text;
 	let found be 0;
 	let z be 0;
-	let q be a topic;
 	repeat with x running through tapes of Player:
 		increase z by 1;
-		if t in lower case is x in lower case:
-			now target is x;
+		if t exactly matches the text x, case insensitively:
 			now found is 1;
 			break;
 	if found is 0:
-		say "     You don't seem to have any such tape.";
+		say "You don't seem to have any such tape.";
 		continue the action;
-	say "     You dig out the tape [entry z of tapes of Player] from your backpack and throw it away.";
+	say "You dig out the tape [entry z of tapes of Player] from your backpack and throw it away.";
 	remove entry z from tapes of Player;
 
 Tape Inventory ends here.

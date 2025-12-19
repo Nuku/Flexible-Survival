@@ -228,7 +228,6 @@ instead of Navigating Ogre's Camp while (Resolution of Ogre Encounter is 8): [pl
 
 to say OgreTalkMenu:
 	say "     [bold type]What is your reply?[roman type][line break]";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -309,7 +308,7 @@ to say OgreTalkMenu:
 			say "     Giving an apologetic shrug, you tell the ogres that you actually are on your way somewhere and just wanted to check in for a moment.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say GurkeStory:
@@ -324,8 +323,8 @@ to say GurkeStory:
 	WaitLineBreak;
 	say "     You move a hand onto one of his broad shoulders. It is warm to the touch, and it feels like he's sweating a little, but he continues on with his story. 'It wasn't all bad after the riot though I still had fun on the job, and the inmates were much less rowdy for a while. I'd say it was about a month after the riot that the apocalypse happened and we were all changed. I never went back to work after that and I'm sure many people followed suit. I haven't gone anywhere near there since. I bet it's still standing and running even in this hell hole. Some people no matter what still show up to work until they can't anymore, and I'm sure they'd be in a lot of trouble if any inmates got out even though that should be the least of their worries.'";
 	say "     You sit there in silence for a few seconds trying to process everything that he told you. You didn't know what to expect when you asked about him, but this certainly isn't it. You tell him that you enjoyed the story and thought it was cool. Mogs and Kogs still haven't said anything. They just sit there in awe of their leader. They must not have heard this story before. Gurke clears his throat and says 'You know I still have the handcuffs from when I was a jailer, why don't I use them on you?'";
-	say "     [bold type]Do you take him up on the offer?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Do you take him up on the offer?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Ogre bondage play? Yay!";
 	say "     ([link]N[as]n[end link]) - No thanks, not right now!";
 	if Player consents:

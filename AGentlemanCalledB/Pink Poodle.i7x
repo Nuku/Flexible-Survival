@@ -128,6 +128,7 @@ to say pinkpoodlesex:
 to say pinkpoodleoral:
 	say "     Since she's already on her knees, you decide to have the beaten canine help you blow off some steam. Dropping you gear as you approach her, you grip her thickly furred shoulder gently and push her to a kneeling position. With your [if Player is male][cock size desc of Player] [Cock of Player] cock[smn][else if Player is female]juicy puss[yfn][end if] on display before her, she looks up at you tentatively and licks her lips. When you finally give her permission, she dives in eagerly, [if Player is male]wrapping her muzzle around your shaft[else]pressing her muzzle into your needy cunt[end if].";
 	say "     [if Player is male]Her long canine tongue teases along your length, sending shivers of delight through you while she sucks and slurps pleasantly[else]Her long canine tongue send shivers of delight through you as it presses into your tender folds, eagerly lapping across and into your netherlips as her paw slips up to rub and tease your clit[end if]. The combined effect is quite arousing, but the obviously well-practiced canine call girl is careful to not let you reach climax too soon, teasing you through a roller coaster of pleasure as she alternates between bouts of intense stimulation and gentle massaging.";
+	WaitLineBreak;
 	say "     Eventually it all becomes too much and you climax powerfully, [if Player is male]blasting your [Cum Load Size of Player] load into her muzzle[else]soaking her muzzle in your feminine juices[end if] as orgasm wracks your body. Steadying yourself with a hand on the panting canine's shoulder, you gently stroke her softly furred head with your free hand while you bask in the afterglow of the poodle's expert handiwork. When you've finally recovered enough to gather your things and continue on your way, the pink poodle rises to her feet, giving you a quick [if poodleapproved is 1]kiss on the cheek[else]scowl[end if] before heading in the opposite direction.";
 	CreatureSexAftermath "Pink Poodle" receives "[if Player is male]OralCock[else]OralPussy[end if]" from "Player";
 
@@ -363,16 +364,11 @@ to say ppheatreset:
 	now HeatedPoodle is 0;
 
 to say pinkpoodleheatstart:
-	LineBreak;
 	if heatform is 0:	[female heat has added effects]
 		now HeatedPoodle is 0;
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Pink Poodle":
-				now MonsterID is y;
-				break;
 		increase Cunt Tightness of Player by 1;
 		increase Cunt Depth of Player by 1;
+		choose a row with Name of "Pink Poodle" in Table of Random Critters;
 		if Cunt Tightness of Player < Cunt Tightness entry, increase Cunt Tightness of Player by 1;
 		if Cunt Depth of Player < Cunt Depth entry, increase Cunt Depth of Player by 1;
 
@@ -381,20 +377,18 @@ to say pinkpoodleheatend:
 		say "[PoodleHeatSuccumb]";
 	say "As your heat passes, your needy canine [if Player is female]cunt[else]anus[end if] becomes a little less prominent and swollen.";
 	if heatform is 0:	[restoration after female heat]
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Pink Poodle":
-				now MonsterID is y;
-				break;
 		decrease Cunt Tightness of Player by 1;
 		decrease Cunt Depth of Player by 1;
+		choose a row with Name of "Pink Poodle" in Table of Random Critters;
 		if Cunt Tightness of Player >= Cunt Tightness entry, decrease Cunt Tightness of Player by 1;
 		if Cunt Depth of Player >= Cunt Depth entry, decrease Cunt Depth of Player by 1;
 		if Cunt Tightness of Player < 1, now Cunt Tightness of Player is 1;
 		if Cunt Depth of Player < 1, now Cunt Depth of Player is 1;
 	decrease slutfucked by 2;
-	if slutfucked < 0, now slutfucked is 0;
-	if slutfucked > 4, now slutfucked is 4;
+	if slutfucked < 0:
+		now slutfucked is 0;
+	else if slutfucked > 4:
+		now slutfucked is 4;
 	now HeatedPoodle is 0;
 
 to say pinkpoodleheat:

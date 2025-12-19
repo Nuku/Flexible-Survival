@@ -134,15 +134,12 @@ understand "write in [owned grab object]" as using.
 
 Check using a grab object (called x):
 	if HardMode is true and x is journal and (LastJournaluse minus 8) < turns:
-		say "You can't use your [x] for another [(remainder after dividing (turns minus (LastJournaluse minus 8)) by 8 ) times 3] hours.";
-		stop the action;
-	continue the action;
+		say "You can't use your [x] for another [(remainder after dividing (turns minus (LastJournaluse minus 8)) by 8 ) times 3] hours." instead;
+	if x is not owned:
+		say "You don't see any [x] in your backpack." instead;
 
 Carry out using a grab object (called x):
-	if x is owned:
-		process x;
-	else:
-		say "You don't see any [x] in your backpack.";
+	process x;
 
 [
 instead of wearing something:
@@ -226,7 +223,7 @@ To process (x - a grab object):
 			say "[line break][usepepperspray]";
 		else:
 			say "It would not be a good idea to use that on yourself. Spicy eyes!";
-	if tempHungerValue > Hunger of Player and "Tanuki Salts" is listed in Feats of Player:
+	if tempHungerValue > Hunger of Player and "Tanuki Salts" is listed in Feats of Player and x is not milky and x is not cum:
 		PlayerEat 5;
 		say "Dashing a little tanuki salts helped things along. Mmm, divinely tasty.";
 		increase Morale of Player by 5;
@@ -239,7 +236,7 @@ Definition: A grab object (called x) is wielded:
 	no;
 
 Definition: A grab object (called x) is unwieldy:		[applies to armaments only]
-	if grab object is journal, no;
+	if x is not an armament, no;
 	if (absolute value of ( scalevalue of Player - objsize of x )) > 0, yes;
 	no;
 

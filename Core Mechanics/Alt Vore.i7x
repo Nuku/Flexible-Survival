@@ -344,13 +344,13 @@ to say vbp_messypig:		[written by Wolfwing, edited by Stripes]
 		WaitLineBreak;
 		say "     As she is now up to her hips in your throat, your licking over her pussy and plump belly keeps her distracted a little bit. She does try to struggle to see, but this just adds to your pleasure. You have to fight to widen your mouth further to get her fat belly past your lips and end up orgasming upon your success. You spurt your seed into her snout and fill it up as she coughs slightly. She hits her own climax from your licking and from her arousal at your shooting cock in her snout.";
 		say "     While she's still distracted by both yours and her climax, you pull at her even more in earnest as you sit up a bit more. This has your penis pop out from her snout and she starts to realize what's actually going on. But by this point, she's in up to her topmost row of breasts within your mouth as you lick over them and her belly, savoring her flavor.";
+		CreatureSexAftermath "Messy Pig" receives "OralCock" from "Player";
+		CreatureSexAftermath "Player" receives "OralPussy" from "Messy Pig";
 		WaitLineBreak;
 		say "     Starting to panic, she tries to bat at you. 'Stop, what are you doing... I just wanted to suck on you...' she squeals, to which you reply, 'And I just want to suck on you... all the way down.' Your tongue probes over her as you stand up a bit and let gravity begin to pull her wide body down your throat more and more as her feet start to enter your stomach.";
 		say "     Feeling herself slide in more, she tries unsuccessfully to grip at the edges of your mouth. With your mouth slick with drool, her blunt little fingers are unable get a safe grip on anything. She slowly slides more into your mouth as her head and then hands disappear in until there is nothing more than one last hand grasping at the air before descending into you.";
 		WaitLineBreak;
 		say "     With a final few gulps, you drag her further down into your body and into your stomach, where you can see her struggling and even hear a couple of muffled pleas before finally succumbing to your stomach. Your belly churns away and soon begins to dwindle away, abating your hunger a little for the moment.";
-		CreatureSexAftermath "Messy Pig" receives "OralCock" from "Player";
-		CreatureSexAftermath "Player" receives "OralPussy" from "Messy Pig";
 	else:
 		say "     Having beaten down the messy pig, you begin to feel that rather familiar hunger for some food - and this time it's bacon. You lick your mouth hungrily and pounce on her as the pig attempts to escape, pinning her to the ground with your [bodydesc of Player] form. You rub your cunny against hers and bring down your fingers to play with it before rolling off of her and onto your back.";
 		say "     The sow rather quickly gets the idea and moves over towards you, laying down between your legs with her snout pressed against your belly sniffing at it. She snuffles quickly down towards your cunny before finally taking a big whiff that causes the skin to goosebump from the sensation.";
@@ -471,34 +471,37 @@ to say hvorebyplayer03:
 
 to say hvorebyplayer04:
 	choose row MonsterID from the Table of Random Critters;
-	say "     You feel your dark hunger rising, but along with it comes a rush of arousal. Shall you play with your food first or get right to your meal? ([link]Y=fuck them[as]y[end link], [link]N=consume[as]n[end link])[line break]";
+	say "     You feel your dark hunger rising, but along with it comes a rush of arousal. Shall you play with your food first or get right to your meal? ([link]Y=Fuck them[as]y[end link], [link]N=Consume[as]n[end link])[line break]";
 	if Player consents:
 		LineBreak;
 		say "     Pushing the creature over, you get [ghim] into position and drive your hard cock into [ghis] [if currentmonster is cunted]juicy cunt[else]tight asshole[end if] with a satisfied grunt. You grope and fondle your prey, keeping [ghim] distracted as your jaw unhinges and your teeth elongate into sharp spikes. You can't help but salivate over your unaware meal as you thrust into that [if currentmonster is cunted]wet cunny[else]clenching butt[end if] of [ghishers]. Drool drips from your dangling tongue down onto the back of the [EnemyNameOrTitle][']s neck and shoulders.";
 		say "     After achieving a quick orgasm and dumping your [Cum Load Size of Player] load into [ghis] [if currentmonster is cunted]womb[else]bowels[end if], you are done playing and it is time to feed. The [EnemyNameOrTitle], dazed from the fucking, is easy prey at this point. You extend your jaws around [ghis] head and bite it clean off. There is only the briefest moment of realization on your meal's part before you chomp down and it is too late. You give [ghis] head a few bites to spill its contents across your tongue before moving on to meatier fare.";
-		say "     You take a few licks at the severed and bleeding stump of [ghis] neck before proceeding to stuff the rest of [ghim] into your mouth. You're ravenous at this point, only taking the occasional bite as you shove [ghis] [type entry] body and then legs down your throat. By the time you're done, all that's left is a bloody stain splattered with some cum from your earlier fun. Your carnivorous nanites work rapidly to break down your meaty meal, absorbing your fallen foe to sustain you.";
 		CreatureSexAftermath "[Name entry]" receives "[if currentmonster is cunted]PussyFuck[else]AssFuck[end if]" from "Player";
+		WaitLineBreak;
+		say "     You take a few licks at the severed and bleeding stump of [ghis] neck before proceeding to stuff the rest of [ghim] into your mouth. You're ravenous at this point, only taking the occasional bite as you shove [ghis] [type entry] body and then legs down your throat. By the time you're done, all that's left is a bloody stain splattered with some cum from your earlier fun. Your carnivorous nanites work rapidly to break down your meaty meal, absorbing your fallen foe to sustain you.";
 	else:
 		LineBreak;
 		say "     Not wanting to delay your feast, you grab your foe's head and pull it toward yours. What might at first be misconstrued as a kiss is quickly revealed to be far more horrifying as your jaw opens unnaturally wide and your teeth extend into a serration of spikes. The [EnemyNameOrTitle] tries to cry out, but it gets muffled and then cut off as you shove [ghis] whole head into your toothy maw and bite down. You let the decapitated body fall to the ground while you chomp on the [type entry] head, chewing it into crunchy chunks of brains and bone.";
 		say "     While tasty, the meatier fare of the [EnemyNameOrTitle][']s body looks much more appetizing, so you move onto it instead. You start by taking a few licks at the severed and bleeding stump of [ghis] neck before biting several chunks out of the shoulders. Doing so frees the arms, which you finish off with several crunchy bites. You move on to the torso, biting several large chunks out of it and chewing them up as you eat your way down.";
+		WaitLineBreak;
 		say "     Reaching the abdomen, the guts threaten to spill out, so you up-end their intestines and viscera into your mouth and start feeding [ghis] lower body and legs into your maw. With your hunger partially sated, you're able to savor the taste of the creature's crotch before polishing off [ghis] hips and then sending [ghis] legs down into your belly. You're left full and sated, your belly stuffed with [EnemyNameOrTitle] meat that your carnivorous nanites rapidly digest to absorb into your body to sustain you.";
 
 to say hvorebyplayer05:
 	choose row MonsterID from the Table of Random Critters;
-	say "     You feel your dark hunger rising, but along with it comes a rush of arousal. Shall you give your food a final chance to fuck before eating or do you want to get right to your meal? ([link]Y=ride them[as]y[end link], [link]N=consume[as]n[end link])[line break]";
+	say "     You feel your dark hunger rising, but along with it comes a rush of arousal. Shall you give your food a final chance to fuck before eating or do you want to get right to your meal? ([link]Y=Ride them[as]y[end link], [link]N=Consume[as]n[end link])[line break]";
 	if Player consents:
 		LineBreak;
 		say "     Pinning the creature on [ghis] back, you move atop [ghim] and start grinding down onto [ghis] manhood. The [type entry] cock throbs against your [if Player is female]juicy folds[else]butt[end if] while you grin menacingly down at [ghim]. After sinking yourself down onto the [EnemyNameOrTitle][']s pole, [ghe] starts fucking you with considerable zeal. Perhaps, seeing your sharpened teeth and drooling tongue, [ghe] fears what will happen if you are satisfied or maybe even knows this is [ghis] last chance to fuck anything. Hard and fast works for you, not wanting to delay your feast too long.";
 		say "     Keeping a grip on the [EnemyNameOrTitle], you lean forward while continuing to ride. You slide your elongated tongue across [ghis] chest, neck and face, getting a taste of your meal. The tinge of fear only improves the flavor, exciting you further. Your [if Player is female]vaginal muscles[else]anal walls[end if] squeeze and pull at the creature's cock, seeking to pull [ghis] final orgasm from it[if Player is herm]. Your efforts are soon rewarded, the [EnemyNameOrTitle] crying out as hot seed blasts from [ghis] shaft and flows into your hungry womb. You pant and moan through an orgasm of your own, firing a basting of your own seed onto the frightened, orgasming [EnemyNameOrTitle][else if Player is female]. Your efforts are soon rewarded, the [EnemyNameOrTitle] crying out as hot semen blasts from [ghis] shaft and flows into your hungry womb. You pant and moan through an orgasm of your own while more drool drips onto the frightened, orgasming [EnemyNameOrTitle][else if Player is male]. Your efforts are soon rewarded, the [EnemyNameOrTitle] groaning in orgasm as [ghis] shaft pulses and throbs inside you as [ghis] hot seed shoots into your clutching bowels. Feeling this coupled with the grinding against your prostate sends you over the edge and you cum as well, splattering the frightened, orgasming [EnemyNameOrTitle] with a gooey basting of your own semen[else]. Your efforts are soon rewarded, the [EnemyNameOrTitle] groaning in orgasm as [ghis] shaft pulses and throbs inside you as [ghis] hot seed shoots into your clutching bowels. Feeling this coupled with the grinding against your sensitive inner walls sends waves of unfocused pleasure through you while you drool messily onto the frightened, orgasming [EnemyNameOrTitle][end if].";
+		CreatureSexAftermath "Player" receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from "[Name entry]";
 		WaitLineBreak;
 		say "     With the [EnemyNameOrTitle] still in a daze after [ghis] powerful orgasm, you decide to go a little easy on [ghim] as a reward for the fine job fucking you. Pulling [ghis] head to yours, you open your toothy maw wide and stuff it in your mouth. There's only the briefest moment of realization on your meal's part before you chomp down and bite it clean off. You give the severed head a few bites to spill its contents across your tongue before moving on to meatier fare.";
 		say "     You take a few licks at the severed and bleeding stump of [ghis] neck before proceeding to stuff the rest of [ghim] into your mouth. You're ravenous at this point, only taking the occasional bite as you shove [ghis] [type entry] body and then legs down your throat. By the time you're done, all that's left is a bloody stain splattered with some cum from your earlier fun. Your carnivorous nanites work rapidly to break down your meaty meal, absorbing your fallen foe to sustain you.";
-		CreatureSexAftermath "Player" receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from "[Name entry]";
 	else:
 		LineBreak;
 		say "     Not wanting to delay your feast, you grab your foe's head and pull it toward yours. What might at first be misconstrued as a kiss is quickly revealed to be far more horrifying as your jaw opens unnaturally wide and your teeth extend into a serration of spikes. The [EnemyNameOrTitle] tries to cry out, but it gets muffled and then cut off as you shove [ghis] whole head into your toothy maw and bite down. You let the decapitated body fall to the ground while you chomp on the [type entry] head, chewing it into crunchy chunks of brains and bone.";
 		say "     While tasty, the meatier fare of the [EnemyNameOrTitle][']s body looks much more appetizing, so you move onto it instead. You start by taking a few licks at the severed and bleeding stump of [ghis] neck before biting several chunks out of the shoulders. Doing so frees the arms, which you finish off with several crunchy bites. You move on to the torso, biting several large chunks out of it and chewing them up as you eat your way down.";
+		WaitLineBreak;
 		say "     Reaching the abdomen, the guts threaten to spill out, so you up-end their intestines and viscera into your mouth and start feeding [ghis] lower body and legs into your maw. With your hunger partially sated, you're able to savor the taste of the creature's crotch before polishing off [ghis] hips and then sending [ghis] legs down into your belly. You're left full and sated, your belly stuffed with [EnemyNameOrTitle] meat that your carnivorous nanites rapidly digest to absorb into your body to sustain you.";
 
 
@@ -517,16 +520,15 @@ to say hvbp_ram:
 	WaitLineBreak;
 	say "     You let him struggle until he's panting heavily and thoroughly worn out. Keeping a firm grip on his ankles, you pull his hooves to your open maw. 'I think I'll start with some leg of lamb,' you tease before stuffing his lower legs into your mouth. Gripping him by the hips, you let your throat pull him in steadily deeper with every gulp. With your lips around his thighs you pause and give his balls some teasing licks, making him moan and squirm feebly. He's been wide-eyed and panting heavily with fear as you've been gulping him down, but this gets him hard.";
 	say "     Reaching forward, you clamp his muzzle shut before you bite down. Your sharp teeth chomp right through both his legs, filling your mouth with the taste of blood and fresh mutton. The ram screams into your hand, the noise muffled. He swings at you wildly, but you shrug off his feeble blows. He's too weak and getting weaker rapidly as his lifeblood flows out.";
+	WaitLineBreak;
 	say "     After chomping down a few times on the severed legs, you swallow them down so you can turn your attention to your remaining meal. You give his bloody hips a few licks before biting down again, this time into his loins. He screams again and passes out, putting an end to his annoying struggles. You take your time with the next several mouthfuls, consuming his lower torso chunk after delicious chunk. By this point, your bloodlust feels sated, so you stuff the rest of him, arms, head and upper body down your throat, providing a satisfyingly heavy weight in your belly. Your ravenous nanites kick in, digesting the remains of the ram to sustain you. In the end, there is nothing left but some tufts of blood-soaked wool and a crimson stain to commemorate your grisly deed.";
 	if wolfcheck is true:
 		if FaceName of Player matches the text "wolf", case insensitively:
 			setmonster "[FaceName of Player]";
 		else:
 			setmonster "[BodyName of Player]";
-		choose row MonsterID from the Table of Random Critters;
 	else if ( Player is FemalePreferred or BodyName of Player is "Ewe" or Player is purefemale ) and FemaleList is not banned:
 		setmonster "Ewe";
-		choose row MonsterID from the Table of Random Critters;
 
 
 to say hvbp_ewe:
@@ -547,16 +549,15 @@ to say hvbp_ewe:
 	else:
 		say "     Having gotten aroused, you stuff a pair of fingers into her mutton muff and start finger-fucking her. This draws a baaing moan of delight from the ewe. Your hunger won't be denied long, but a little fun before your meal seems acceptable. Still fondling her breasts with your other hand, you lean in and start licking at them and sucking on her nipples. Her cunny quivers as you finger that hot, wet tunnel of hers.";
 	say "     After a couple of minutes of this fun, your hunger won't be denied any longer. You give her breasts another long lick. 'Mmm... what a delicious rack of lamb, you have. I could just eat you up,' you say coldly. Your grin flashes your elongated, pointy teeth and you clamp a hand over her muzzle before she can cry out. Her eyes go wide with fear [if wolfcheck is true]as she realizes just how far the big bad wolf is willing to take this[else]and she shakes her head from side to side[end if]. Her cunt clamps down around your [if Player is male]shaft deliciously tightly[else]fingers[end if] as she's struck with terror. You open your mouth wide and chomp down onto her breast, biting through it and into her chest. She squeals into your hand and feebly tries to push free, but cannot dislodge you. You chew up the tasty mouthful and tear out another morsel as your meal.";
+	WaitLineBreak;
 	say "     She grows weaker with every bite until she passes out and you continue eating her. By the time you've eaten out most of her chest cavity, the worst of your bloodlust is sated, so you stuff the remaining chunks of her - arms, legs and then the head - down your throat. They provide a satisfyingly full and heavy weight in your belly. Your ravenous nanites kick in, digesting the remains of the ram to sustain you. In the end, there is nothing left but some tufts of blood-soaked wool and a crimson stain to commemorate your grisly deed.";
 	if wolfcheck is true:
 		if FaceName of Player matches the text "wolf", case insensitively:
 			setmonster "[FaceName of Player]";
 		else:
 			setmonster "[BodyName of Player]";
-		choose row MonsterID from the Table of Random Critters;
 	else if ( Player is MalePreferred or BodyName of Player is "Ram" or Player is puremale ) and MaleList is not banned:
 		setmonster "Ram";
-		choose row MonsterID from the Table of Random Critters;
 
 
 to say hvbp_succubus:
@@ -661,7 +662,7 @@ to say ubbyplayer00:	[master list to decide scenes]
 		say "[ubbyplayer04]";
 	else if ubcount is even:
 		say "[ubbyplayer01]";
-	else if ubcount is odd:
+	else:
 		say "[ubbyplayer02]";
 
 
