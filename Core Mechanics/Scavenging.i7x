@@ -18,6 +18,8 @@ carry out ScavengingAction:
 	let x be a random visible dangerous door;
 	if x is not nothing:
 		now battleground is marea of x;
+	else if earea of location of Player is not "void":
+		now battleground is earea of location of Player;
 	else:
 		now battleground is "Outside";
 	say "You set out in the desperate search of food and water.";
@@ -25,7 +27,7 @@ carry out ScavengingAction:
 	if "Survivalist" is listed in feats of Player, increase bonus by 4;
 	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	let the dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 10: ";
+	say "You roll 1d20([dice])+[bonus] = [dice plus bonus] vs 10: ";
 	if dice plus bonus > 9:
 		now inasituation is true;
 		if a random chance of 3 in 4 succeeds:
@@ -36,7 +38,7 @@ carry out ScavengingAction:
 			If L is not nothing:
 				say "[one of]During your search for supplies, you end up at[or]Searching systematically for resources, you locate[or]Following signs of recent activity, you end up at[or]Doing a slow circuit while scavenging, you manage to find[or]Wandering around aimlessly in search of supplies, you locate[at random] [L].";
 				say "[ResolveFunction of L]";
-			else if L is nothing:
+			else:
 				say "[ResolveFunction of Potential Resources]";
 		now inasituation is false;
 		say "[line break]";
@@ -44,9 +46,6 @@ carry out ScavengingAction:
 		say "Your search turns up empty.";
 	now inasituation is false;
 	if battleground is "", now battleground is "Outside";
-	let z be 7;
-	if "Stealthy" is listed in feats of Player, decrease z by 2;
-	if "Bad Luck" is listed in feats of Player, increase z by 1;
 	randomfightchance;
 	follow turnpass rule;
 

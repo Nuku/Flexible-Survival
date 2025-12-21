@@ -13,7 +13,7 @@ to say losetoMushroomMen:
 	say "     Eventually the mushroom men begin to congregate at your [if Player is female]groin, several of them pulling your legs apart as a small group from the back of the crowd pushes forward[else]ass. One of the larger mushrooms gives it a firm smack, complimenting your [one of]firm[or]cute[or]sexy[or]hot[at random] bottom before waving a group from the back of the crowd over[end if]. Leading this group is a rather large-looking mushroom with a disturbingly phallic look to his cap and body. The two following him look relatively normal, but they are significantly larger than the rest of the group. [one of]'I'm gonna show you a good time, babe,'[or]'I hope you're ready for this, toots,'[or]'I bet you can't wait for this, hun,'[at random] says the cock-shaped shroom as he lines the tip of his cap up with your [if Player is female]dripping cunt[else]clenched pucker[end if] before his two large companions lift him into the air by his legs, slowly pushing his cap into your body.";
 	WaitLineBreak;
 	say "     You can't help but moan as the two large mushrooms begin working their phallic brother like a bizarre living dildo, driving him into your body over and over again while he teases your inner walls with his ungentle hands. As the fucking continues the rest of the group begins to drift to the rest of your body teasing any erogenous spots they can find as you fall deeper and deeper in your lust-filled haze. [if Player is female]When one of the mushrooms finally begins pinching and tweaking your clit, it all becomes too much and you scream in ecstasy as you cum hard, soaking the two large mushrooms at your crotch in your feminine juices as your spasming tunnel clamps tightly around the fungal intruder, attempting to milk his soft body as if it were a real cock. You feel him squirming inside you, either trying to escape your tight grip or further pleasure you, drawing your orgasm out as each movement sends shivers of pleasure through you[else if Player is male]As the fungal fucking builds to a rapid pace, you find your hands drawn to your unattended cock, stroking your erect length in time with the movement of the phallic mushroom. You groan loudly as you finally climax, blowing your load onto the ground beneath you as the mushrooms make a few final thrusts[end if].";
-	say "     When the mushroom man is finally pulled from your body[if Player is female] with a wet slurp and rush of fluids[end if], he takes a moment to shake himself off before giving each of his larger companions a high five. [one of]'Catch ya later, hun,'[or]'Can't wait to do this again, babe,'[or]'Let's do this again some time, honey,'[at random] your unusual lover shouts over his shoulder as he waves the rest of the group over, leading them back into the forest and leaving you in a well-fucked heap on the ground.[if Player is mushroombodied] As you lay there, recovering, you feel a warm tingling welling up inside you as the mushroom man's fungal spores settle within, exciting your mushroom body.[end if]";
+	say "     When the mushroom man is finally pulled from your body[if Player is female] with a wet slurp and rush of fluids[end if], he takes a moment to shake himself off before giving each of his larger companions a high five. [one of]'Catch ya later, hun,'[or]'Can't wait to do this again, babe,'[or]'Let's do this again some time, honey,'[at random] your unusual lover shouts over his shoulder as he waves the rest of the group over, leading them back into the forest and leaving you in a well-fucked heap on the ground[if Player is mushroombodied]. As you lay there, recovering, you feel a warm tingling welling up inside you as the mushroom man's fungal spores settle within, exciting your mushroom body[end if].";
 	if Player is mushroombodied:
 		CreatureSexAftermath "Player" receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from "Mushroom Man";
 	else:
@@ -23,8 +23,6 @@ to say beattheMushroomMen:
 	say "     With their numbers dwindling, the few mushroom men who remain standing begin to lose their brazen confidence. Seeing them falter, you move forwards aggressively, chasing the last of them off into the surrounding forest.";
 
 to say MushroomMendesc:
-	setmongender 13; [creatures are male]
-	now SporeCloud is 0;
 	say "     While walking [one of]down a path[or]through some overgrown brush[or]through a dimly lit clearing[at random] you hear [one of]'Hey toots!' [or]'Hey hot stuff!' [or]'Hey cutie!' [or]a sharp wolf whistle [at random][one of]behind you[or]to your right[or]to your left[or]just ahead of you[at random]. Glancing around you try and locate the source of the call, spotting some movement in a large cluster of mushrooms at the base of a nearby tree. Slowly the pack of mushrooms pull themselves from the ground and turn to face you, giving you a clear view of the partially humanoid forms.";
 	say "     The mushroom men come in significant variety, with several distinct shapes and colors, the most concerning among those being the group of strangely phallic-looking ones. While most of them are roughly a foot tall, there are a couple of larger fungi among them, peaking at nearly two feet. While lacking any visible gender, they all seem to carry a distinctly male presence. They begin shouting and cheering crudely as they move towards you.";
 
@@ -229,8 +227,8 @@ this is the swarmattack rule:		[damage bonus based on remaining health]
 	let dam be dam + basicdam;
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
-		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "     The [Name entry] [one of]attack[or]swarm[or]rush[at random] you as a group, [one of]grabbing at your limbs, trying to drag you down[or]attacking you from all sides[or]groping and teasing your body as they swarm over you[at random]. With [if (( monsterHP * 100 ) / HP entry ) > 75]the group still at full strength, the attack easily overwhelms your defenses[else if (( monsterHP * 100 ) / HP entry ) > 50]the majority of the group still fighting, the assault is quite effective[else if (( monsterHP * 100 ) / HP entry ) > 25]most of their group injured or defeated, the attack is only somewhat effective[else]the majority of the group defeated, the attack is severely weakened[end if]. You suffer [special-style-2][dam][roman type] damage.";
+		say "The enemy finds a particular vulnerability in your defense - [bold type]Critical Hit![roman type][line break]";
+	say "The [EnemyNameOrTitle] [one of]attack[or]swarm[or]rush[at random] you as a group, [one of]grabbing at your limbs, trying to drag you down[or]attacking you from all sides[or]groping and teasing your body as they swarm over you[at random]. With [if (( monsterHP * 100 ) / HP entry ) > 75]the group still at full strength, the attack easily overwhelms your defenses[else if (( monsterHP * 100 ) / HP entry ) > 50]the majority of the group still fighting, the assault is quite effective[else if (( monsterHP * 100 ) / HP entry ) > 25]most of their group injured or defeated, the attack is only somewhat effective[else]the majority of the group defeated, the attack is severely weakened[end if]. You suffer [special-style-2][dam][roman type] damage.";
 	now damagein is dam;
 	say "[noshieldabsorbancy]"; [unable to use shield effectively - attacked from multiple angles]
 	if absorb > dam:
@@ -245,28 +243,28 @@ this is the swarmattack rule:		[damage bonus based on remaining health]
 this is the sporecloud rule: [Spore aura following spore blast attack]
 	choose row MonsterID from Table of Random Critters;
 	if SporeCloud is 0 and a random chance of 1 in 5 succeeds:
-		say "     As the [Name entry] continue fighting their excited movements begin releasing fungal spores into the air!";
-		increase SporeCloud by a random number between 1 and 3;
+		say "As the [EnemyNameOrTitle] continue fighting, their excited movements begin releasing fungal spores into the air!";
+		increase SporeCloud by a random number between 2 and 4;
+		LineBreak;
 	if SporeCloud > 0:
 		if face mask is equipped:
-			say "     The air is still filled with fungal spores, but your face mask [one of]prevents you from breathing them in[or]protects you from their influence[or]keeps you from inhaling them[at random].";
+			say "The air is still filled with fungal spores, but your face mask [one of]prevents you from breathing them in[or]protects you from their influence[or]keeps you from inhaling them[at random].";
 			decrease SporeCloud by 1;
 			if SporeCloud is 0:
-				say "     [one of]With a merciful gust of wind[or]As the battle continues[or]As your fighting begins to move away[at random], the lingering spore cloud finally dissipates.";
+				say "[one of]With a merciful gust of wind[or]As the battle continues[or]As your fighting begins to move away[at random], the lingering spore cloud finally dissipates.";
 		else:
 			let dam be wdam entry / 4;
 			increase dam by a random number between 0 and 1;
-			say "     [one of]Breathing heavily as a result of your continued fighting[or]As you try to catch your breath[or]Taking a deep breath[at random], you inhale the lingering airborne spores, causing a [one of]painful fit of coughing[or]warm tingling in your chest[or]powerful sneeze[at random]. You suffer [special-style-2][dam][roman type] damage.";
+			say "[one of]Breathing heavily as a result of your continued fighting[or]As you try to catch your breath[or]Taking a deep breath[at random], you inhale the lingering airborne spores, causing a [one of]painful fit of coughing[or]warm tingling in your chest[or]powerful sneeze[at random]. You suffer [special-style-2][dam][roman type] damage.";
 			decrease HP of Player by dam;
 			if BodyName of Player is "Mushroom Man":
-				say "     The fungal spores have [one of]an especially strong[or]an unusual[or]a powerful[at random] effect on your mushroom body, arousing you slightly.";
+				say "The fungal spores have [one of]an especially strong[or]an unusual[or]a powerful[at random] effect on your mushroom body, arousing you slightly.";
 				increase Libido of Player by a random number between 1 and 3;
 			decrease SporeCloud by 1;
 			if SporeCloud is 0:
-				say "     [one of]With a merciful gust of wind[or]As the battle continues[or]As your fighting begins to move away[at random] the lingering spore cloud finally dissipates.";
+				say "[one of]With a merciful gust of wind[or]As the battle continues[or]As your fighting begins to move away[at random] the lingering spore cloud finally dissipates.";
 			follow the player injury rule;
 			say "You are [descr].";
-			LineBreak;
 			if HP of Player < 1 or Libido of Player > 109:
 				if HP of Player <= 0, now fightoutcome is 20;
 				if Libido of Player >= 110, now fightoutcome is 21;

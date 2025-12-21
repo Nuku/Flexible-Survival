@@ -31,7 +31,7 @@ when play begins:
 	add Harmless Joke to BadSpots of DemonList;
 
 to say ResolveEvent Harmless Joke:
-	say "     Walking up to the entrance the library, you reach to open the door leading in. But as you pull it open, you are suddenly drenched in cold water from a bucket set up over the door, soaking you through to the skin. You let out a loud yelp in surprise and start shivering while the bucket makes a hell of a racket as it clatters onto the floor. The whole situation is accompanied by a high-pitched giggling coming from somewhere inside the library. Glancing in that direction, you spot a small figure dart out of a partially opened window and out into the city. Rushing over, you look out after what must have been the trickster who set this trap for you, yet find them nowhere in sight. Grunting and cursing, you reluctantly accept your defeat and head down to the bunker to dry yourself off, now far more weary of doorways.";
+	say "     Walking up to the entrance the library, you reach to open the door leading in. But as you pull it open, you are suddenly drenched in cold water from a bucket set up over the door, soaking you through to the skin. You let out a loud yelp in surprise and start shivering while the bucket makes a hell of a racket as it clatters onto the floor. The whole situation is accompanied by a high-pitched giggling coming from somewhere inside the library. Glancing in that direction, you spot a small figure dart out of a partially opened window and out into the city. Rushing over, you look out after what must have been the trickster who set this trap for you, yet find them nowhere in sight. Grunting and cursing, you reluctantly accept your defeat and head down to the bunker to dry yourself off, now far more wary of doorways.";
 	now HP of Nala is 1; [flag set to remember the progress]
 	now Harmless Joke is resolved; [event won't happen again]
 
@@ -49,7 +49,7 @@ when play begins:
 
 after resting while (Fool Me Once is active and Fool Me Once is not resolved and player is in Bunker and HP of Nala is 1):
 	say "     Deciding to rest for the next few hours you lay down, closing your eyes slowly drifting to sleep. You dream of your life before the nanobots and the apocalypse, what little you can remember at least. Of previous friends, your old job and your old worries. Suddenly jolted out of your dream by a barrage of ringing and beeping, you nearly launch yourself from your bedding as you swivel around the blaringly loud room for the source of the noises. Set around the room are nearly a dozen alarm clocks, all at full volume and shrieking bells at you. You stand up and stumble around the room confused but intent on ending the obnoxious noise, shutting off a few and simply slamming others onto the floor. Soon enough the room is quiet, but the ringing is quickly replaced by a familiar feminine laughter; looking to the doorway you finally get a good look at your prankster.";
-	WaitLineBreak;
+	wait for any key;
 	project Figure of Nala_clothed_icon;
 	say "     The girl before you is clearly demonic in nature, she has light red, almost pink skin and only stands a little over two and a half feet tall. The diminutive imp girl flutters around on her small bat-like wings and clawed feet, her hands ending in sharp purple painted nails. The little demon has adorable facial features with a cute button nose, big glossy eyes with green pupils and crimson hair tied neatly in a pony-tail. Her scorpion-like tail whips around behind her as she moves, the stinger set at the end dripping an unknown yet sweet-smelling liquid. She sports a set of black lingerie seemingly made to fit her small size and delicate curves, her lacy bra filled out perfectly by her perky B-cup breasts. She gives you a toothy smile as you examine her, revealing pearly white, pointed teeth.";
 	say "     She lets out another laugh before speaking, 'Hehe you looked like a chicken with its head cut off, running around like mad!' She speaks in a slightly high-pitched yet oddly melodic voice before cracking down and laughing madly at her own prank before she turns and flees at a remarkable speed. Her small wings dart her down the hall and out of the bunker before you can fully register what just happened. You still try to rush after the little runt but she's long gone, her laughter still ringing in the air. Grunting in frustration you head back down to the bunker planning on using what time you have left of your rest productively to end this nuisance. You form a plan to feign sleep next time and catch the imp surprised.";
@@ -69,16 +69,15 @@ when play begins:
 	add Fool Me Twice to BadSpots of DemonList;
 
 after resting while (Fool Me Twice is active and Fool Me Twice is not resolved and player is in Bunker and HP of Nala is 2):
-	project Figure of Nala_clothed_icon;
 	say "     Deciding to set your trap as you ready to feign rest, you position a blanket across your body to use as a net and close your eyes. You lay waiting for what feels like an hour; just as you're about to give up you hear what sounds like the flapping of wings lightly echoing down the hall. Readying yourself and cracking an eye open you spot the same imp prankster carrying a bucket of suspicious intent. As she makes her way over to your bedside you leap into action, gripping the edge of the blanket and throwing it over her before leaping atop it. You hear a squeal of surprise as the bucket she was holding drops to the floor and the grub-worms inside spill out onto the ground. You pin the struggling bundle of imp and blanket to the floor as she squeals and whines in protest. 'Let me go you big bully!' she yells as you have her fully trapped, her stinger-tipped tail pinned under one of your limbs as it struggles and twists to free itself.";
-	LineBreak;
+	project Figure of Nala_clothed_icon;
 	say "     [bold type]What do you do now?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Have a serious word with the imp about the tricks.";
 	say "     [link](2)[as]2[end link] - Fuck her!";
 	say "     [link](3)[as]3[end link] - Kick her out! Enough with these stupid tricks.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 			break;
@@ -89,7 +88,6 @@ after resting while (Fool Me Twice is active and Fool Me Twice is not resolved a
 		say "[TalkNala]";
 		now Resolution of Fool Me Twice is 1; [talked]
 	else if calcnumber is 2:
-		LineBreak;
 		say "[RapeNala]";
 		now Resolution of Fool Me Twice is 2; [fucked her]
 	else:
@@ -124,10 +122,9 @@ to say KickNala:
 Section 2 - NPC
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	if SexuallyExperienced of Nala is false:
-		now OralVirgin of Nala is false;
-		now Virgin of Nala is false;
-		now SexuallyExperienced of Nala is true;
+	now OralVirgin of Nala is false;
+	now Virgin of Nala is false;
+	now SexuallyExperienced of Nala is true;
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -172,7 +169,7 @@ Sterile of Nala is true. [steriles can't knock people up]
 MainInfection of Nala is "".
 Description of Nala is "[NalaDesc]".
 Conversation of Nala is { "<This is nothing but a placeholder!>" }.
-The scent of Nala is "     Nala smells like roses with a small hint of brimstone oddly enough. She gives you a lewd smile as you inhale her fragrance.";
+The scent of Nala is "     Nala smells like roses with a small hint of brimstone oddly enough. She gives you a lewd smile as you inhale her fragrance.".
 
 to say NalaDesc:
 	if debugactive is 1:
@@ -187,14 +184,14 @@ instead of conversing the Nala:
 		now Libido of Nala is 1;
 	else if Libido of Nala is 1:
 		say "     You walk over to Nala who... was just here a second ago. You see her small cat bed but not the little imp. Turning around to look elsewhere you walk right into a small pair of soft lips. Wrapping her hands around your head she presses herself right into you, thrusting her little tongue against your lips.";
-		say "     [bold type]How do you react?[roman type][line break]";
 		LineBreak;
+		say "     [bold type]How do you react?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Kiss her back.";
 		say "     [link](2)[as]2[end link] - Fuck her!";
 		say "     [link](3)[as]3[end link] - Reject her advances.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 				break;
@@ -204,7 +201,6 @@ instead of conversing the Nala:
 			LineBreak;
 			say "[NalaKiss]";
 		else if calcnumber is 2:
-			LineBreak;
 			say "[NalaFuck]";
 		else:
 			LineBreak;
@@ -220,9 +216,9 @@ to say NalaKiss:
 	if Player is male:
 		say "     You relent and press your lips back against hers, moving your hand up to place on the back of her head. You open your mouth and allow her tongue entrance as you meet hers halfway with your own. You two tumble with tongues and frisk with hands for a little while longer before she pulls back, slightly out of breath. 'Mmm, that was a good warm up big guy. But it's time to get... serious.' She lowers herself to your groin and pulls down any clothes you have in the way. She takes your shaft in her palms and smiles brightly, 'Not bad hun, let's see what your friend can do.' She finishes by running an unnaturally long tongue along the base of your cock; reaching the tip she tickles your glans before closing her lips around your tip. She begins suckling on your cock before taking in a few more inches, slowly easing back and forth from the tip of your dong and then taking in as much as she can swallow before retracting.";
 		say "     Building up a cycle, she's soon bobbing back and forth sucking your cock expertly, using her tongue to flap and caress along your shaft. You grab the back of her head to help her along as she braces herself against your abdomen. She makes lewd sucking noises and her long stinger tipped tail wraps around your back. Quickly approaching your peak, that very same tail pierces your skin just enough to draw a drop of blood. Before you can react the little blowjob imp speeds up rapidly and whatever she stung you with takes effect as your entire body is overcome with sensitivity. The pleasure you're receiving serenely triples and your mind goes hazel as your own orgasm explodes outward. Leaving only the tip in her mouth, the slutty imp drinks every drop of your cum, sucking it down with unnatural ease for such a small being. You stumble back and slide down a nearby wall, unable to stand due to the sensations. Growing increasingly woozy you watch as she swallows the remainder of your jism.";
+		NPCSexAftermath Nala receives "OralCock" from Player;
 		WaitLineBreak;
 		say "     You thank her for the service but ask about her tail and what it did to you. 'Oh! Don't worry, it's nothing permanent. Just a little defense mechanism we imp girls have.' She gives you a telling smile before speaking again. 'It's also great for mind exploding orgasms, huh?' She finishes by making a pretend explosion with her hands accompanied by sounds. She flies over to where her bed is and takes out a small pipe and begins smoking from it before addressing you again. 'This was fun. Well, of course it was - I knew it would be,' she corrects herself. 'Let's do it again sometime, and next time you're on bottom.' She points downward before leaning back and taking a few drags from her pipe. You shudder and turn to walk away.";
-		NPCSexAftermath Nala receives "OralCock" from Player;
 	else if Player is female:
 		say "     You relent and press your lips back against hers, moving your hand up to place on the back of her head. You open your mouth and allow her tongue entrance as you meet hers halfway with your own. You two tumble with tongues and frisk with hands for a little while longer before she pulls back, slightly out of breath. 'Mmm, that was a good warm up big girl. But it's time to get... serious,' she says while she flies around you and stops to examine your backside. She presses clawed hands against your ass, spreading your cheeks and yanking down any obstructions in her way. You gasp as she slaps your cheeks a few times, raining light smacks on your tender bottom before unceremoniously shoving her face in between your cheeks.";
 		say "     Gasping again as the imp's long tongue shoots from her mouth to flick over your anus before plunging into your damp womanhood, you push back against the imp's invading face as the reddish-skinned demon motorboats your hindquarters in an exaggerated fashion. Squeezing your cheeks and enthusiastically eating you out the imp swiftly has you approaching orgasm. When you reach your peak Nala buries every inch of her face she can manage into your ass cheeks and you feel a light sting on your lower back. Nala says something that vibrates through your body but it's unintelligible. You turn to see her tail withdrawing from your back as a sudden burst of pleasure overloads you. You collapse onto the floor, ass still raised in the air with imp face and tongue still working it as an unnaturally powerful orgasm hits you.";
@@ -251,15 +247,14 @@ to say NalaFuck:
 
 instead of fucking the Nala:
 	if (lastfuck of Nala - turns < 6): [he got fucked in the last 18 hours = 6 turns]
+		project Figure of Nala_clothed_icon;
 		say "     'Sorry buddy, I know I'm demonic and all, but I got an agenda to keep. I'm a busy bee, but maybe come find me later,' she finishes with a wink.";
 	else: [ready for sex]
 		say "     As you walk up to Nala with your proposition she clasps her hands together, 'Ooh, I thought you'd never ask sweetie.'";
-		wait for any key;
+		project Figure of Nala_naked_icon;
 		say "[NalaSexMenu]";
 
 to say NalaSexMenu:
-	project Figure of Nala_naked_icon;
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -294,21 +289,23 @@ to say NalaSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Get a blowjob"):
 					say "[NalaSex1]";
-				if (nam is "Eat Nala out"):
+				else if (nam is "Eat Nala out"):
 					say "[NalaSex2]";
-				if (nam is "Fuck Nala"):
+				else if (nam is "Fuck Nala"):
 					say "[NalaSex3]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the imp, shaking your head slightly as she gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say NalaSex1: [oral on the player]

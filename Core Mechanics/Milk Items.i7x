@@ -14,12 +14,12 @@ to say manmilk (T - text):
 	say "A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written '[T] Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though... ";
 
 to say breastmilk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
 to say manmilk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
 to say breastmilk smell:
@@ -461,7 +461,7 @@ Scent of ceryneian deer-taur milk is "[breastmilk smell]".
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Champion's Milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Champion's Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Champion's milk
+"Champion's Milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Champion's Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	Champion's milk
 
 Champion's Milk is a grab object.
 Champion's Milk is milky.
@@ -470,12 +470,13 @@ Strain of Champion's Milk is "Ipotane".
 Usedesc of Champion's Milk is "[Champion's Milk use]".
 
 to say Champion's Milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
 	if HP of Best Pony >= 1:
 		decrease gestation of child by a random number from 3 to 5;
 		if gestation of child < 1, now gestation of Child is 1;
+	if HP of Best Pony >= 2:
+		now scalevalue of Player is 4;
 
 instead of sniffing Champion's milk:
 	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
@@ -2474,7 +2475,7 @@ Strain of Onna Uma Milk is "Onna Uma".
 Usedesc of Onna Uma Milk is "[Onna Uma milk use]".
 
 to say Onna Uma Milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
@@ -3818,7 +3819,7 @@ Strain of Dragon Breeder milk is "Dragon Breeder".
 Usedesc of Dragon Breeder milk is "[Dragon Breeder milk use]".
 
 to say Dragon Breeder milk use:
-	say "Bringing the glistening your lips, you swallow down your succulent cream with eager abandon. Delighting in the warm, rich, soothing balm coating your palate in a heady sheen of heavy vanilla and some crisp, almost herbal, bite as you swish the thick ambrosial liquid along the roof mouth before swallowing. Ah delicious, you preen self-indulgently as the potent draconic energies infuse you with a raw rush of fertile excess.";
+	say "     Bringing the glistening your lips, you swallow down your succulent cream with eager abandon. Delighting in the warm, rich, soothing balm coating your palate in a heady sheen of heavy vanilla and some crisp, almost herbal, bite as you swish the thick ambrosial liquid along the roof mouth before swallowing. Ah delicious, you preen self-indulgently as the potent draconic energies infuse you with a raw rush of fertile excess.";
 	PlayerDrink 15;
 	PlayerEat 15;
 	increase Breast Size of Player by 3;
@@ -3848,7 +3849,7 @@ Strain of Hermacore Cream is "Hermacore".
 Usedesc of Hermacore Cream is "[Hermacore Cream use]".
 
 to say Hermacore Cream use:
-	say "Tilting the creamy vessel to lips, you take a deep greedy pull of your exotic milk. Your inner sommelier detects hints of subtle oaks, interspliced with effervescent spear mints, and a light undercurrent of fresh vanilla playing across your palate. Swallowing, your tastebuds note aftertaste leaves an uncanny but not wholly unwelcome sour bite evocative of some high proof liquor.";
+	say "     Tilting the creamy vessel to lips, you take a deep greedy pull of your exotic milk. Your inner sommelier detects hints of subtle oaks, interspliced with effervescent spear mints, and a light undercurrent of fresh vanilla playing across your palate. Swallowing, your tastebuds note aftertaste leaves an uncanny but not wholly unwelcome sour bite evocative of some high proof liquor.";
 	PlayerDrink 7;
 	PlayerEat 7;
 	increase Breast Size of Player by 3;
@@ -3874,7 +3875,7 @@ margay taur milk is milky.
 Usedesc of margay taur milk is "[margay taur milk use]".
 
 to say margay taur milk use:
-	say "Noticing a mild dryness on the roof of your mouth, you pop open a bottle of tauric cream and hungrily slurp up its rich contents. Though you feel somewhat sated, you can't help but take note of a strange tingling sensation coming from your chest and groin as your body shifts towards a radically more feminine bend.";
+	say "     Noticing a mild dryness on the roof of your mouth, you pop open a bottle of tauric cream and hungrily slurp up its rich contents. Though you feel somewhat sated, you can't help but take note of a strange tingling sensation coming from your chest and groin as your body shifts towards a radically more feminine bend.";
 	PlayerDrink 15;
 	PlayerEat 15;
 	increase Breast Size of Player by 3;
@@ -3898,12 +3899,11 @@ Strain of rodeo clown milk is "Rodeo Clown".
 Usedesc of rodeo clown milk is "[rodeo clown milk use]".
 
 to say rodeo clown milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes funny. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes funny. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
-instead of sniffing rodeo clown milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda funny.";
+Scent of rodeo clown milk is "You open the lid for a moment and take a sniff. Smells kinda funny.".
 
 
 Table of Game Objects (continued)
@@ -3917,12 +3917,11 @@ Strain of skunk milk is "Skunk Female".
 Usedesc of skunk milk is "[skunk milk use]".
 
 to say skunk milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
-instead of sniffing skunk milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+Scent of skunk milk is "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.".
 
 
 Table of Game Objects (continued)
@@ -3935,7 +3934,7 @@ Limbo Fox Milk is milky.
 Usedesc of Limbo Fox Milk is "[Limbo Fox Milk use]".
 
 to say Limbo Fox Milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and Strawberry-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and Strawberry-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 25;
 	PlayerEat 5;
 	if Breast Size of Player >= 1:
@@ -3946,8 +3945,7 @@ to say Limbo Fox Milk use:
 	if "Iron Stomach" is not listed in feats of Player:
 		infect "Limbo Fox";
 
-instead of sniffing Limbo Fox Milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like Strawberry.";
+Scent of Limbo Fox Milk is "You open the lid for a moment and take a sniff. Smells kinda like Strawberry.".
 
 
 Glitchy Milk is a grab object.
@@ -3955,15 +3953,14 @@ Glitchy Milk is milky.
 Usedesc of Glitchy Milk is "[Glitchy Milk use]".
 
 to say Glitchy Milk use:
-	say "Lifting the plastic bottle to your mouth, you take a dr1nk fr0m it, leTting th£ m1/k run run 0VeR /0ur t0N6u£ and dddddddown IoUr 7hroAt. T@st£§ r1ch and-nd s74@wbeeeeee- [bold type][one of]I-IT BURNS [or]1I-IT T HURTS [at random]![roman type] Still in extreme mental and phys1cal pain, you feel your body-y temperature climbing and steam pours from your cuTs as they [one of]cinch[or]knit[at random] themselves §Hut. N0t ev£n fuLly finishing the bottle, you instinctively empty the rest of it somewhere, then stuff the empty bottle with difficulty back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a dr1nk fr0m it, leTting th£ m1/k run run 0VeR /0ur t0N6u£ and dddddddown IoUr 7hroAt. T@st£§ r1ch and-nd s74@wbeeeeee- [bold type][one of]I-IT BURNS [or]1I-IT T HURTS [at random]![roman type] Still in extreme mental and phys1cal pain, you feel your body-y temperature climbing and steam pours from your cuTs as they [one of]cinch[or]knit[at random] themselves §Hut. N0t ev£n fuLly finishing the bottle, you instinctively empty the rest of it somewhere, then stuff the empty bottle with difficulty back into your collection of 'empties'.";
 	SanLoss 35;
 	addAlcPoints 5;
 	PlayerHealed 300;
 	PlayerDrink 100;
 	PlayerEat 100;
 
-instead of sniffing Glitchy Milk:
-	say "You open the lid for a moment and take a sniff. But you can't seem to pick up on any particular smell.";
+Scent of Glitchy Milk is "You open the lid for a moment and take a sniff. But you can't seem to pick up on any particular smell.".
 
 
 Section 4 - Priorities

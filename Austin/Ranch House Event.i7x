@@ -33,24 +33,21 @@ to say RanchHouse_Choice1_Point:
 	say "     [link](4)[as]4[end link] - Pass up on exploring this place for now, but remember it to return in the future.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 			break;
 		else:
 			say "Invalid choice. Type [link]1[end link] Go inside the barn and see who is inside, [link]2[end link] Cautiously approach one of the windows and look inside, [link]3[end link] Walk away and avoid this place, or [link]4[end link] Avoid this place for now, but remember it to return in the future.";
+	LineBreak;
 	if calcnumber is 1: [Go straight in]
-		LineBreak;
 		say "[RanchHouse_Choice1]"; [Go straight in]
 	else if calcnumber is 2: [Cautiously approach a window]
-		LineBreak;
 		say "[RanchHouse_Choice2]";
 	else if calcnumber is 3:
-		LineBreak;
 		say "     You leave and make a mental note to avoid the area in the future.";
 		now Ranch House is resolved; [will not reoccur]
 	else if calcnumber is 4:
-		LineBreak;
 		say "     Having other things to do right now, you leave, but keep the place in mind. Maybe you can return to the [bold type]Ranch House[roman type] in the future.";
 		now Resolution of Ranch House is 1; [player was here before, did not go in but wanted to return]
 
@@ -63,18 +60,17 @@ to say RanchHouse_Choice1: [Go inside the barn and see who is inside]
 	say "     [link](3)[as]3[end link] - Leave the place, not worrying about her bound state.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 			break;
 		else:
 			say "Invalid choice. Type [link]1[end link] to free her and let her go with the others, [link]2[end link] to take advantage of the situation, or [link]3[end link] to leave the place not worrying about how she is left.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     You decide to approach the mare in order to help her but only manage to frighten her as you get closer. Stopping for a second to let her know that you only want to help, she relaxes just a bit but is still cautious as you approach to shut down and remove the milking machine and her bindings. Once her bindings are loose she quickly gallops from the room, but not before looking back at you through the open door. She gives you a long stare before making her way to the direction where the rest of the creatures went.";
 		now Resolution of Ranch House is 10; [player freed the centaur mare]
 	else if calcnumber is 2:
-		LineBreak;
 		if Player is male: [male]
 			say "     You get closer to the mare, admiring her beauty, and seeing that you could have some fun with her. Putting your hands on her flank causes her to flinch with surprise and fear, however, as you move your hand slowly across her body towards her pussy the initial fear turns into pleasure. Her pussy starts to twitch with desire so you take off your pants and, using the left over cum inside as lube, you slowly start penetrating her. To your surprise even though she has been with a lot of stallions before you, she is still really tight, making the two of you moan in pleasure. After a while of you fucking her, she starts to match your movements, wanting more, so you decide to give it to her and fill her with your cum. As you climax, because of the milking machine and your actions, she also squirts. Having had your fun with her, you decide that the best course of action would be leave as soon as you can with the centaur mare still tied up.";
 			CreatureSexAftermath "Centaur Mare" receives "PussyFuck" from "Player";
@@ -84,7 +80,6 @@ to say RanchHouse_Choice1: [Go inside the barn and see who is inside]
 			say "     You get closer to the mare, admiring her beauty, and seeing that you could have some fun with her. Putting your hands on her flank causes her to flinch with surprise and fear, however, as you move your hand slowly across her body towards her pussy the initial fear turns into pleasure. Her pussy starts to twitch with desire so, using the left over cum inside as lube, you slowly start penetrating her with your fingers. To your surprise, even though she has been with a lot of stallions before you, she is still really tight, making her moan in pleasure. After a while of you fingering her, she starts to match your movements, wanting more, so you decide to give it to her and speed up the motions. She rapidly becomes closer and closer to orgasm until she is unable to resist any more and squirts. Having had your fun with her, you decide that the best course of action would be leave as soon as you can with the centaur mare still tied up.";
 		now Resolution of Ranch House is 11; [player took advantage of the centaur mare]
 	else if calcnumber is 3:
-		LineBreak;
 		say "     Not interested in the creature, you leave.";
 		now Resolution of Ranch House is 12; [player left the mare behind]
 	now Ranch House is resolved; [will not reoccur]
@@ -97,19 +92,18 @@ to say RanchHouse_Choice2: [Cautiously approach one of the windows and look insi
 	say "     [link](2)[as]2[end link] - You decide to not risk it.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 2:
-		say "Choice? (1-2)>[run paragraph on]";
+		say "Choice? (1-2)> [run paragraph on]";
 		get a number;
 		if calcnumber is 1 or calcnumber is 2:
 			break;
 		else:
 			say "Invalid choice. Type [link]1[end link] to stay and watch, or [link]2[end link] to not risk it and leave.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "     In the center of the room you see a mare lying on her back with her legs spread while a centaur is over her, the two of them going roughly almost as if they are in heat by the look of it. Next to them you see a small centaur alone giving himself a blowjob; thanks to the position you notice a sparkle in his butt, most probably a butt plug. In a corner you see a three-way of males, the first one lying on his belly while the second is on top of him on his knees, and lastly the third one is fully standing letting the whole speed go by the movements of the middle one. Beside some hay bales, two mares are in each other's embrace, lips locked and fingers caressing their partner's breasts. Meanwhile, at the end of the stalls you see one door open and a line of centaurs seemingly excited for their turn to get inside.";
 		say "     After you watch them and are about to leave, a twink centaur stallion stops you and asks, 'You know, if you had fun watching, maybe next time you could join and I can show you a good time myself.' He seductively walks around teasing you, moving his hips and giving you a generous view of his ass while also slapping his horse cock against his under-belly letting you know what he means. With a wink, he then turns back to his compatriots in the building, to chill out and maybe clean up a bit after themselves. As you leave the ranch behind, you can't help but think about the invitation you were given. Maybe that could lead to some fun in the future...";
 		now Resolution of Ranch House is 13; [player watched a centaur orgy]
 	else if calcnumber is 2:
-		LineBreak;
 		say "     Not wanting to get involved, you leave this place.";
 	now Ranch House is resolved; [player was invited to return]
 

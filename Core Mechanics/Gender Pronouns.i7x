@@ -463,7 +463,7 @@ Definition: currentmonster is cunted: [Female, herm, m-herm, cuntboy]
 	no;
 
 monnumtesting is an action applying to nothing.
-understand "monnum" as monnumtesting;
+understand "monnum" as monnumtesting.
 
 carry out monnumtesting:
 	say "Monster gender is [mongender of currentmonster] - [if currentmonster is neuterX]neuterX[else if currentmonster is neuterM]neuterM[else if currentmonster is neuterF]neuterF[else if currentmonster is male]male[else if currentmonster is female]female[else if currentmonster is herm]herm[else if currentmonster is shemale]shemale[else if currentmonster is mherm]mherm[else if currentmonster is cuntboy]cuntboy[else if currentmonster is variable]variable[end if].";
@@ -662,36 +662,31 @@ understand "set pronouns" as pronounsetting.
 understand "pronoun menu" as pronounsetting.
 
 carry out pronounsetting:
-	say "     This menu allows you to set how the game will refer to you, the player, when referring to you in the third person. This is usually not used as the game mostly refers to the player in 2nd person, but this option will determine how it's handled in conversations between NPCs, for example. This menu can be called again in game with [bold type]pronoun menu[roman type].[line break]";
-	say "     Current Pronoun Choice: [bold type][PronounChoice of Player][roman type] - [SubjectPro of Player]/[PosAdj of Player][line break]";
-	say "[link](1) Auto[as]1[end link] - Game will decide pronouns based on current body configuration.";
-	say "[link](2) Male[as]2[end link] - Game will always use He/His/Him/Himself pronouns for the player.";
-	say "[link](3) Female[as]3[end link] - Game will always use She/Her/Her/Herself pronouns for the player.";
-	say "[link](4) Herm[as]4[end link] - Game will always use Shi/Hir/Hir/Hirself pronouns for the player.";
-	say "[link](5) Neutral[as]5[end link] - Game will always use They/Their/Them/Themselves pronouns for the player.";
-	say "[link](0) Exit[as]0[end link][line break]";
+	say "     This menu allows you to set how the game will refer to you, the player, when referring to you in the third person. This is usually not used as the game mostly refers to the player in 2nd person, but this option will determine how it's handled in conversations between NPCs, for example. This menu can be called again in game with [bold type]pronoun menu[roman type].";
+	say "[line break]Current Pronoun Choice: [bold type][PronounChoice of Player][roman type] - [SubjectPro of Player]/[PosAdj of Player][line break]";
+	say "(1) [link]Auto[as]1[end link] - Game will decide pronouns based on current body configuration.";
+	say "(2) [link]Male[as]2[end link] - Game will always use He/His/Him/Himself pronouns for the player.";
+	say "(3) [link]Female[as]3[end link] - Game will always use She/Her/Her/Herself pronouns for the player.";
+	say "(4) [link]Herm[as]4[end link] - Game will always use Shi/Hir/Hir/Hirself pronouns for the player.";
+	say "(5) [link]Neutral[as]5[end link] - Game will always use They/Their/Them/Themselves pronouns for the player.";
+	say "(0) [link]Exit[as]0[end link][line break]";
 	now calcnumber is -1;
 	while calcnumber < 0 or calcnumber > 5:
 		say "Choice? (0-5)> [run paragraph on]";
 		get a number;
 		if calcnumber is:
-			-- 1:
-				now PronounChoice of Player is "Auto";
-			-- 2:
-				now PronounChoice of Player is "Male";
-			-- 3:
-				now PronounChoice of Player is "Female";
-			-- 4:
-				now PronounChoice of Player is "Herm";
-			-- 5:
-				now PronounChoice of Player is "Neutral";
-			-- otherwise:
-				say "Invalid choice. Pick from 0 to 5.";
+			-- 0: break;
+			-- 1: now PronounChoice of Player is "Auto";
+			-- 2: now PronounChoice of Player is "Male";
+			-- 3: now PronounChoice of Player is "Female";
+			-- 4: now PronounChoice of Player is "Herm";
+			-- 5: now PronounChoice of Player is "Neutral";
+			-- otherwise: say "Invalid choice. Pick from 0 to 5.";
+	follow the SetPlayerPronouns rule;
 	if PronounChoice of Player is not "Auto":
 		say "You are now set to [PronounChoice of Player] pronouns.";
 	else:
 		say "You are now set to automatic pronoun handling.";
-	follow the SetPlayerPronouns rule;
 
 pronountesting is an action applying to nothing.
 

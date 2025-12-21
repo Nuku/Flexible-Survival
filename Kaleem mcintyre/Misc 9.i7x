@@ -88,7 +88,7 @@ to say ResolveEvent The Magic Cap:
 			say "     Cursing your luck, you watch as the falcon headed artifact sails through the air and then crashes onto the ground, breaking into a hundred different pieces. Sighing at the loss, even though you don't understand why, you find yourself gaping in awe as you look to see a bright red... baseball cap... lying amidst the rubble of the statue. Finding your balance you cautiously step over to the cap and then reach down to pick up the headwear. If things weren't already weird enough as they are you find that the cap bears the first letter of your name.";
 			say "     Not sure you understand what's going on, you shrug and then flip the headwear onto your head. Seeing that the baseball cap is a perfect fit you step over the ruined statue and then head off on your way. You never notice how the letter on the hat sparks for a second, as you can feel nothing out of place on top of your head, before going silent.";
 			ItemGain red cap by 1;
-			wait for any key;
+			AttemptToWait;
 			now Resolution of Magic Cap is 2; [ran off with it]
 			increase score by 10;
 			Move player to the Bunker;
@@ -102,7 +102,7 @@ to say ResolveEvent The Magic Cap:
 					say "     Cursing you can only watch as the falcon headed artifact sails through the air and then crashes onto the ground, breaking into a hundred different pieces. Sighing at the loss, even though you don't understand why, you find yourself gaping in awe as you look to see a bright red... baseball cap... lying amidst the rubble of the statue. Finding your balance you slowly walk over to the wreckage of the statue and then reach down to pick up the headwear before turning it over. On the front of the cap there's a single letter stitched into the material, the beginning of your name no less.";
 					say "     Not sure what's going on here, you shrug and then flip the cap onto your head. Seeing that the headwear is a perfect fit you step over the ruined statue and then head off onto your way. You never notice how the letter on the hat sparks for a second, as you can feel nothing out of place on top of your head, before going silent.";
 					ItemGain red cap by 1;
-					wait for any key;
+					AttemptToWait;
 					now Resolution of Magic Cap is 3; [fought + won]
 					increase score by 10;
 					Move player to the Bunker;
@@ -175,8 +175,8 @@ to say ResolveEvent Fashion Statement:
 				if Player consents:
 					LineBreak;
 					say "     If at first you don't succeed, you mumble underneath your breath while continuing to look around.";
+					AttemptToWait;
 					follow the turnpass rule;
-					wait for any key;
 					say "     A noise makes your head turn, and just in time too as a mutant stumbles onto your location!";
 					next;
 				else:
@@ -203,7 +203,7 @@ muscle shirt is not temporary.
 Traits of muscle shirt is {"sporty", "sexy"}.
 The placement of muscle shirt is "body".
 The descmod of muscle shirt is "A sexy black muscle shirt and a waist hugging pair of pants have been slipped over your body.".
-The slot of muscle shirt is "body".
+The slot of muscle shirt is "chest".
 
 instead of sniffing muscle shirt:
 	say "The muscle shirt and pants smell like musk and pheromones from long hours of working out.";
@@ -221,7 +221,7 @@ Taur-compatible of red cap is true.
 The AC of red cap is 10.
 The effectiveness of red cap is 40.
 Traits of red cap is {"sporty"}.
-The placement of red cap is "face".
+The placement of red cap is "head".
 The descmod of red cap is "A somewhat extraordinary red baseball cap rests atop your head.".
 The slot of red cap is "head".
 

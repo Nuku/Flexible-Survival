@@ -87,6 +87,7 @@ to say ebgatordesc:
 	say "     A loud, low hissing sound echoes from the open air as a monstrous, feral alligator lurches from the shadows. Twisted by an unholy influence, the six-legged beast is an abyssal shade of purple, hard scales and ridges jutting from its coarse frame, a soft red flame visibly glowing in the cracks and crevices.";
 	say "     Twin pairs of eyes fixated on your [bodytype of Player] form, its drooling maw is agape, revealing its two rows of razor-sharp teeth. Without warning, it charges directly at you!";
 	if impregnatevalid is true:
+		LineBreak;
 		say "     [bold type]...The creature has a slightly awkward gait, as if bloated with something...[roman type][line break]";
 
 Table of CombatPrep (continued)
@@ -103,7 +104,6 @@ to say PrepCombat_Ebonflame Dragator:
 			if a random chance of ebgatorcarrying in 4 succeeds:
 				now impregnatevalid is true;
 				now ebgatorcarrying is 1;
-				now tempnum2 is 1;
 			else:
 				increase ebgatorcarrying by 1;
 	else if ebneuterswitch is false and ovipreglevel > 1:
@@ -111,7 +111,6 @@ to say PrepCombat_Ebonflame Dragator:
 			if a random chance of ebgatorcarrying in 4 succeeds:
 				now impregnatevalid is true;
 				now ebgatorcarrying is 1;
-				now tempnum2 is 2;
 			else:
 				increase ebgatorcarrying by 1;
 
@@ -313,11 +312,8 @@ to ebgatorhijackroutine:
 		else:
 			now tempnum is 2;
 		say "     Unable to hold itself within you any longer, you double over from the intense sensation of the dark egg finally being pushed through your [if tempnum is 1]birth canal[else]bowels[end if].";
-		LineBreak;
 		say "     So large is the orb that it takes considerable pains to push it past your [if tempnum is 1]cunt's strained lips[else]ass's strained ring[end if]. It takes numerous attempts to try and get rid of the thing, as it often slides back in at a moment's relent, before it finally, audibly pops from your gaping hole, the slick, dark purple egg twitching and churning on the ground.";
-		LineBreak;
 		say "     Looking at it, it's hard to imagine that thing was inside you, given how large it is[if scalevalue of Player > 3]. Even as large as you are, it seems the egg grew even larger to exploit the free space[end if]. The coarse orb is completely covered by rings of grooved ridges, still slick from its prior home. It occasionally twitches and you hear bestial sounds from inside.";
-		LineBreak;
 		say "     Once you recover, you haul the egg off somewhere out of the way. After that ordeal, the last thing you need is another one of those monsters attacking you and starting this whole cycle all over again...";
 		if ebgatorhijack is 1:
 			now preghijack is false;

@@ -17,9 +17,9 @@ Taur-compatible of scalemail is true.
 The size of scalemail is 3.
 The AC of scalemail is 50.
 The effectiveness of scalemail is 60.
-The placement of scalemail is "body".
+The placement of scalemail is "head".
 The descmod of scalemail is "A jet black helmet with the Zephyr logo on it rests atop your head.".
-The slot of scalemail is "body".
+The slot of scalemail is "head".
 the scent of scalemail is "The riot gear smells of metal and plastic.".
 
 Part 2 - Gambeson
@@ -37,8 +37,8 @@ The size of Gambeson is 3.
 The AC of Gambeson is 30.
 The effectiveness of Gambeson is 80.
 The placement of Gambeson is "body".
-The descmod of Gambeson is "Medieval cloth armor made by stitching together layers upon layers of cloth.".
-The slot of Gambeson is "body".
+The descmod of Gambeson is "Medieval cloth armor made by stitching together layers upon layers of cloth covers your chest and back.".
+The slot of Gambeson is "back".
 the scent of Gambeson is "It smells like slightly dirtied laundry with a hint of sweat.".
 
 Part 3 - Leather Vambraces
@@ -55,8 +55,8 @@ Taur-compatible of Leather Vambraces is true.
 The size of Leather Vambraces is 3.
 The AC of Leather Vambraces is 60.
 The effectiveness of Leather Vambraces is 30.
-The placement of Leather Vambraces is "arms".
-The descmod of Leather Vambraces is "A set of leather arm guards with an engraved design.".
+The placement of Leather Vambraces is "body".
+The descmod of Leather Vambraces is "A set of leather arm guards with an engraved design protect your forearms.".
 The slot of Leather Vambraces is "arms".
 the scent of Leather Vambraces is "They have that new leather smell.".
 

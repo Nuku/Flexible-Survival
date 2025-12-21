@@ -19,7 +19,7 @@ Section 2 - Monster Attacks
 [Note: See Section 6 for her Alt-Attack]
 
 to say gunbunnyattack:
-	say "[one of]The bunny girl[or]The gunbunny[or]She[or]The gun-toting rabbit[or]The rabbit-eared girl[at random] [one of]fires a volley of wild shots[or]fires at you with her [if gb_gun > 3]gun[else]guns[end if][or]giggles wildly as she chases after you with a stream of [if gb_gun < 6]bullets[else]laser blasts[end if][or]performs an acrobatic leap that has her flip upside down while ten feet in the air, firing shots all around you before landing with a superfluous jiggle of her breasts[or]dashes from side to side while shooting nearly constantly[at random][one of]. Try as you might to avoid them, one of the shots does end up hitting[or]. You do your best to dive for cover, but end up getting hit[or]. The crazed rabbit girl[if gb_gun is 6]'s blaster shot leaves a searing scorchmark where it hits[else] seems to shoot more bullets than her gun could possibly hold and you can only manage to dodge for so long before getting hit[end if][or]. She chases you from cover to cover before finally managing to hit you[at random].";
+	say "[one of]The bunny girl[or]The gunbunny[or]She[or]The gun-toting rabbit[or]The rabbit-eared girl[at random] [one of]fires a volley of wild shots[or]fires at you with her [if gb_gun > 3]gun[else]guns[end if][or]giggles wildly as she chases after you with a stream of [if gb_gun < 6]bullets[else]laser blasts[end if][or]performs an acrobatic leap that has her flip upside down while ten feet in the air, firing shots all around you before landing with a superfluous jiggle of her breasts[or]dashes from side to side while shooting nearly constantly[at random][one of]. Try as you might to avoid them, one of the shots does end up hitting[or]. You do your best to dive for cover, but end up getting hit[or]. The crazed rabbit girl[if gb_gun is 6]'s blaster shot leaves a searing scorchmark where it hits[else] seems to shoot more bullets than her gun could possibly hold and you can only manage to dodge for so long before getting hit[end if][or]. She chases you from cover to cover before finally managing to hit you[at random].[no line break]";
 
 Section 3 - Monster Victory
 
@@ -332,7 +332,7 @@ to gb_gatling_attack:
 		let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 100 );
 		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
-			say "A shot strikes a particular vulnerable spot - Critical Hit![line break]";
+			say "A shot strikes a particular vulnerable spot - [bold type]Critical Hit![roman type][line break]";
 		increase damagetotal by dam;
 		say "Hit: You try to avoid the deadly strafing, but are too slow and get hit by some [if gb_gun is 6]pellets of hot plasma[else]bullets[end if] during one sweeping pass.";
 		now gatling_hit is true;
@@ -344,7 +344,7 @@ to gb_gatling_attack:
 		let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 100 );
 		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
-			say "A shot strikes a particular vulnerable spot - Critical Hit![line break]";
+			say "A shot strikes a particular vulnerable spot - [bold type]Critical Hit![roman type][line break]";
 		increase damagetotal by dam;
 		say "Hit: You try to scramble to some temporary cover, but the gunbunny's anticipated your plan and ends up hopping past it just as you dive behind it. You get shot by a volley of [if gb_gun is 6]plasma fire[else]bullets[end if] even as the shots that miss tear your would-be cover apart.";
 		now gatling_hit is true;
@@ -356,7 +356,7 @@ to gb_gatling_attack:
 		let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 100 );
 		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
-			say "A shot strikes a particular vulnerable spot - Critical Hit![line break]";
+			say "A shot strikes a particular vulnerable spot - [bold type]Critical Hit![roman type][line break]";
 		increase damagetotal by dam;
 		say "Hit: Getting up, you scramble away even as the wild bunny continues to give chase. You are unable to stay ahead of the [if gb_gun is 6]searing blasts of energy pursuing you[else]flurry of bullets tearing holes into everything around you[end if], eventually getting hit[if gatling_hit is true] again[end if].";
 		now gatling_hit is true;

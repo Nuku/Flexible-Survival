@@ -81,8 +81,8 @@ Section 3 - Interacting
 
 to say ResolveEvent Returned_Spots:
 	say " [Luke_intro]";
-	LineBreak;
 	if player is male: [Stops after the brief intro if not male, otherwise lets you choose what to do next]
+		LineBreak;
 		say "     [bold type]What do you do now?[roman type][line break]";
 		let Returned_Spots_Choices be a list of text; [more current, easier to use multi choice point below]
 		add "Smile and nod your head. You'd love to get railed by this sexy cat!" to Returned_Spots_Choices;
@@ -97,8 +97,10 @@ to say ResolveEvent Returned_Spots:
 			-- "Smile and nod your head. You'd love to get railed by this sexy cat!":
 				say "[luke_opt1]"; [sex]
 			-- "Shake your head. You're not up for that right now.":
+				LineBreak;
 				say "[luke_opt2]"; [postpone]
 			-- "Shake your head and push him away. You have no interest in this guy, now or ever!":
+				LineBreak;
 				say "[luke_opt3]"; [refuse]
 
 to say luke_intro:
@@ -117,7 +119,7 @@ to say luke_intro:
 
 to say luke_opt1: [gay sex]
 	project Figure of Leopardman_hard_icon;
-	say "     Returning the smirk and nodding your head ambitiously, you're only slightly surprised when that sultry feline suddenly grabs you by the shoulders and spins you around, shoving the side of your face against the wall. [if player is not barecrotch]Grabbing the hem of your pants, he quickly yanks them down, exposing your bare ass to the open air. [end if]He then steps forward and pulls your rear to his fuzzy sheath, shoving and grinding against it firmly[if Player is HasTail], while grabbing your tail and yanking it up aggressively[end if]. It only takes him a few moments for his feline prick to slide out of his sheath, the thing quickly hardening until it reaches its full, nine-inch length, and covered in prickly barbs all over.";
+	say "     Returning the smirk and nodding your head ambitiously, you're only slightly surprised when that sultry feline suddenly grabs you by the shoulders and spins you around, shoving the side of your face against the wall. [if player is not barecrotch]Grabbing the hem of your pants, he quickly yanks them down, exposing your bare ass to the open air. [end if]He then steps forward and pulls your rear to his fuzzy sheath, shoving and grinding against it firmly[if tail of Player is not empty], while grabbing your tail and yanking it up aggressively[end if]. It only takes him a few moments for his feline prick to slide out of his sheath, the thing quickly hardening until it reaches its full, nine-inch length, and covered in prickly barbs all over.";
 	say "     Moving his muzzle close to your ear, he growls dominantly and whispers in a low tone. 'Time to get that slutty ass abused, my little faggot cocksleeve.' With that, he quickly wraps his arms around your upper torso and pulls his hips back, letting you feel the spikes on his cock drag across your ass cheek before he hastily presses his tip against your hole. Then, all at once, he crams his entire, prickly dick deep into your rump. As he shoves that meaty length harshly into your back end, you can feel your hole stretching open to accept him, and you groan loudly into the crisp breeze that teases your face. The studly cat doesn't let you rest for a second though, and he begins brutally ravaging your insides with his stiff pink rod. Each time he pulls out, you grit your teeth as his sharp barbs scrape the insides of your hot tunnel, causing pain to ripple through your body. Yet, every time he crams his cock back inside, you relax momentarily and let out a whimper out of pure bliss. As he continues to fuck you, his hot breath pants across your right ear, while he degrades you with his dirty talk. 'Fuck yes! Such a good little bitch! I'm gonna make you my good little cock warmer, eager to take my loads over and over and over again until you beg me to make you my sex slave. You're gonna come crawling back to me for more, any time you need this slutty hole filled!'";
 	WaitLineBreak;
 	say "     Fucking you hard and fast, he rocks your body back and forth with your face still shoved against the cool bricks of the wall, while you keep your ass pressed back into his groin, your back arching in glee while you let the assertive leopard man dominate you in both body and mind. Continuing to growl, he keeps on pounding you at the same rapid-fire pace, his preseed now leaking liberally into your hot hole, the warm liquid cooling the scratching his spiked cock makes inside you, if only slightly. As he uses your ass for his pleasure, you eventually feel his pace become a bit erratic, and some small part of you can feel his large, full balls tense up more as they slap against your taint. 'Fuck yeah! I'm getting close, whore! Gonna fill this hot bitch-hole with my jizz! Gonna claim your slutty ass as my property, for me to breed any time I need to bust a nut! Get ready sexy good little cumdump! Here comes your reward!'";

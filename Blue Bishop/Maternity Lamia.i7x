@@ -57,46 +57,54 @@ to say losetolamia:
 		SanLoss 10;
 		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 1 and 3;
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 1 and 3;
-		if "Iron Stomach" is not listed in feats of Player, infect;
+		if "Iron Stomach" is not listed in feats of Player, infect "Lamia";
 	increase mlamialoss by 1;
 
 
 to say beatthelamia:
 	say "     With that final blow, you're able to drive the strange lamia back. She hisses angrily. '[one of]Oh, you're acting like a spoiled child[or]OWwww! That's no fun! You shouldn't be so mean. I just want a hug[or]Well, all you had to say was [']No['][or]If you're going to be like that, you shouldn't have come on to me in the first place[or]Fine! I'm sure I can find someone else who's hungry for all this,' she says, running her hands over her ill-covered breasts. 'Too bad for you[or]Hrumph! I need to get back to the maternity ward anyhow[at random],' the alabaster snake-woman grumbles as she turns about and slithers away in a huff.";
+	LineBreak;
 	say "     Part of you is tempted to not let her off so easily[one of][or] this time[stopping]. Shall you allow yourself to catch her so you can indulge in some fun?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her";
 		now sortorder entry is 1;
 		now description entry is "screw the voluptuous viper";
+	[]
 [		if Cock Length of Player > xxx:
 			choose a blank row in table of fucking options;
 			now title entry is "Titty fuck";
 			now sortorder entry is 2;
 			now description entry is "nestle your cock between those milky melons"; ]
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Receive cunnilingus";
 		now sortorder entry is 3;
 		now description entry is "make the lamia eat you out";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Breastfeeding";
 	now sortorder entry is 4;
 	now description entry is "suckle from those milky tits of hers";
+	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
 	say "[link][0] - Let her go[as]0[end link][line break]";
 	while sextablerun is 0:
-		say "Pick the corresponding number (0-[the number of filled rows in table of fucking options]> [run paragraph on]";
+		say "Pick the corresponding number (0-[the number of filled rows in table of fucking options])> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: Shall you [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if nam is "Fuck her":
@@ -109,6 +117,7 @@ to say beatthelamia:
 					say "[mlamiavsex04]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     Not wanting to get involved any further, you let the lamia depart and return to your own business.";
 			wait for any key;
@@ -150,7 +159,7 @@ to say mlamiavsex04:
 	SanLoss 5;
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
-	if "Iron Stomach" is not listed in feats of Player, infect;
+	if "Iron Stomach" is not listed in feats of Player, infect "Lamia";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -194,7 +203,7 @@ When Play begins:
 	now skin entry is "[one of]soft[or]supple[or]half-scaled[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]human[or]normal[at random]"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
-	now face change entry is "begins to tingle all over. Briefly dizzy and confused, you check your face to find that it is now of an attractive human's, though sporting dark, reptilian eyes. Your tongue flicks out almost involuntarily, now the long, forked tongue of a snake's"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now face change entry is "it begins to tingle all over. Briefly dizzy and confused, you check your face to find that it is now of an attractive human's, though sporting dark, reptilian eyes. Your tongue flicks out almost involuntarily, now the long, forked tongue of a snake's"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "your legs meld into one, elongating into the body of a snake, with your torso being that of a human's. It takes a while to adjust to moving with these powerful coils, but you eventually get the hang of it"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "your torso tingles, being a pale, supple flesh. Everything below the waist, however, grows an array of milky white, glimmering scales"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "you feel something settle in your lower torso, but nothing physically changes that you can see"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
@@ -374,7 +383,7 @@ this is the lamiaboob rule:	[***]
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg this round]
 		say "Her coils ensnare your limbs, trapping them within her body's grip. You can feel the warm, wet touch of her leaking slits as well as she slides across your thighs even as she wraps herself around you tighter. You take [special-style-2][dam][roman type] damage from the constriction. Even as you continue to resist, she mashes your face into her extra-ample bosom.";
 		if HP of Player <= 0 or Libido of Player >= 110:
-			say "That's enough to take the last of the fight out of you. She continues to have her way with you and you can only put up a token amount of resistance.";
+			say "[line break]That's enough to take the last of the fight out of you. She continues to have her way with you and you can only put up a token amount of resistance.";
 			now matlamiacaught is 2; [unable to continue fighting]
 	if matlamiacaught is 1:
 		WaitLineBreak;
@@ -395,7 +404,7 @@ this is the lamiaboob rule:	[***]
 		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by a random number between 0 and 1;
 		say "With your face buried in her fleshy fun-pillows, you have trouble breathing, the only air you can get heavily laced with the milky scent of her multi-bosom, dulling your wits even as you grow aroused. And it gets even harder for your poor brain to remain oxygenated when her tail tightens further around your chest. This forced exhalation results in you motorboating those jugs of hers, to her giggling delight. '[one of]Oh! I always love that[or]Tee hee! That tickles[or]Oooo! That's more like it[at random][if matlamiacaught is not 2]!' The experience weakens you, causing [special-style-2][dam][roman type] damage even as you grow more aroused.[else]!'[end if]";
 		if HP of Player <= 0 or Libido of Player >= 110 and matlamiacaught is 1:
-			say "With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
+			say "[line break]With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
 			now matlamiacaught is 2; [unable to continue fighting]
 	if matlamiacaught is 1:
 		WaitLineBreak;
@@ -416,7 +425,7 @@ this is the lamiaboob rule:	[***]
 		if "Horny Bastard" is listed in feats of Player, increase Libido of Player by a random number between 0 and 1;
 		say "Her grip eases a little as she laughs and your immediate response is to gasp for air, but all you get is another lungful of her arousing scent followed by a mouthful of nipple. You end up sucking down on her hard nip before you realize what you're doing. Your resistance fades further and you become all the more aroused[if Player is herm]. Your cock[smn] stiffen[smv] and grind[smv] against the firm, muscular tail pressed around it, causing an excess of your feminine juices to leak from your cunt[sfn][else if Player is male]. Your cock[smn] stiffen[smv] and grind[smv] against the firm, muscular tail pressed around it[else if Player is female]. You grind your hips and try to wiggle your legs as fresh feminine juices leak from your cunt[sfn][end if][if matlamiacaught is not 2]. It becomes harder to hold out as you take another [special-style-2][dam][roman type] damage and become further aroused[end if].";
 		if HP of Player <= 0 or Libido of Player >= 110 and matlamiacaught is 1:
-			say "With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
+			say "[line break]With your will to fight pretty much gone, she continues to have her way with you as you put up only some token resistance.";
 			now matlamiacaught is 2; [unable to continue fighting]
 	if matlamiacaught is 1:
 		WaitLineBreak;
@@ -439,16 +448,15 @@ this is the lamiaboob rule:	[***]
 		if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
 		say "Not realizing the danger, you suckle from the lamia's milky nipple. You drink down her creamy milk while she cuddles you in her tender embrace. The nurse coos softly and caresses your head, encouraging you to keep going[if Player is not neuter]. The heat in your loins grows and you grind eagerly against the wet touch of her leaking pussies[else]. You grind eagerly against the wet touch of her leaking pussies[end if] as you suckle. Your thoughts are further muddled and your arousal climbs higher as the infected milk seeks to corrupt you[if matlamiacaught is not 2]. You suffer [special-style-2][dam][roman type] damage as your resistance wanes further and your arousal climbs[end if].";
-		LineBreak;
 		if "Iron Stomach" is not listed in feats of Player, say "[infect][line break]";
 		say "After this taste of her bounty, she releases you with a happy sigh. '[one of]There. Feeling better now[or]Are you ready to snuggle up for a proper meal now[or]Are you ready for some real fun[or]Has that gotten you ready for feeding time[at random][if scalevalue of Player < 4], little one[end if]?' she coos, slithering around you with a sensual sway.";
 		if HP of Player <= 0 or Libido of Player >= 110:
-			say "The whole of this has left you weakened and aroused, your willpower too expended to continue resisting at this point.";
+			say "[line break]The whole of this has left you weakened and aroused, your willpower too expended to continue resisting at this point.";
 			now matlamiacaught is 2;
 		choose row monstercom from the table of critter combat;
 		now alt1chance entry is 0;
 		now mlamiaboobmash is true;
-		WaitLineBreak;
+		if matlamiacaught is 2, AttemptToWait;
 
 [ matlamiacaught - temp variable ]
 [ 0 = broke free                 ]

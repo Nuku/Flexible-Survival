@@ -13,14 +13,13 @@ Version 2 of Francois by AGentlemanCalledB begins here.
 [This is an example message ]
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	say "[FrancoisListCompile]"; [rebuild recipe list in case bans changed]
+	FrancoisListCompile; [rebuild recipe list in case bans changed]
 	if HP of Francois > 0: [Francois has been rescued and cleans the place up, making it sleepsafe]
 		now Bone-Appetit is sleepsafe;
-	if SexuallyExperienced of Francois is false:
-		now OralVirgin of Francois is false;
-		now AnalVirgin of Francois is false;
-		now PenileVirgin of Francois is false;
-		now SexuallyExperienced of Francois is true;
+	now OralVirgin of Francois is false;
+	now AnalVirgin of Francois is false;
+	now PenileVirgin of Francois is false;
+	now SexuallyExperienced of Francois is true;
 
 Section 1 - Event
 
@@ -44,34 +43,34 @@ to say ResolveEvent Gourmet Treats:
 		say "     While traveling through the high rise district, you come across a rather unusual-looking building. While the boarded-up windows prevent you from seeing inside, the large sign above the door proclaims the place to be some sort of pet bakery. The weathered sign reads Bone-Appetit and features a rather plump cartoon canine in a chef's uniform. With the exception of the boarded-up windows, the exterior of the building appears relatively undamaged; thinking there may still be some useful supplies within, you decide to step inside.";
 	WaitLineBreak;
 	let T be a random number between 1 and 4;
+	if T is 3 and HumorousList is banned: [Chocolate Lab banned]
+		decrease T by a random number between 1 and 2;
 	say "     A bell above the door jingles loudly as you step inside, [if HP of Karen is 1]and the creatures in the back quickly turn their attention to the unexpected intruder[else]and you curse yourself as you spot a group of creatures near the back of the store turning to investigate the source of the noise[end if]. Surveying the scene, you quickly realize you've walked in on a [if T is 1]small pack of huskies[else if T is 2]group of German shepherds[else if T is 3]small pack of Chocolate Labs[else if T is 4]pair of Retrievers[end if] who have captured another creature and are having some fun with their prize in the secluded bakery. As the canines move towards you, there is a weak cry for help from their prisoner, a survivor? Realizing there is more at stake here than you originally expected, you drop your pack and prepare yourself for the approaching [if T is 1]huskies[else if T is 2]German shepherds[else if T is 3]Labs[else if T is 4]Retrievers[end if].";
-	WaitLineBreak;
-	if T is 1:
-		say "[BakeryHusky]";
-	else if T is 2:
-		say "[BakeryGShep]";
-	else if T is 3:
-		say "[BakeryChocLab]";
-	else if T is 4:
-		say "[BakeryRetriever]";
+	if T is:
+		-- 1: say "[BakeryHusky]";
+		-- 2: say "[BakeryGShep]";
+		-- 3: say "[BakeryChocLab]";
+		-- 4: say "[BakeryRetriever]";
 	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     Having dealt with the intruder, the canines return to the other survivor, and as you lay beaten on the floor, you hear the poor fellow begin moaning. The longer you listen, the more his cries begin to shift to submission. The last thing you hear before slipping from consciousness is his cry of ecstasy mingled with his captors['] howls of pleasure.";
 		say "     You eventually awaken some time later, and you are surprised to find yourself on a makeshift bed made from several smaller pieces of furniture and blankets. As you rise to a sitting position, you glance around nervously, looking for the [if T is 1]huskies[else if T is 2]German shepherds[else if T is 3]Chocolate Labs[else if T is 4]Retrievers[end if] who bested you, expecting them to try and keep you captive as they did the other survivor. Surprisingly, although perhaps for the best, there is no sign of them.";
 		WaitLineBreak;
 		say "     'Do not worry, mon ami[if Player is purefemale]e[end if]. They left after having their fun; you're safe here now,' says a voice with a thick French accent. You turn towards the voice, seeing a figure step out of a nearby doorway. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "     'I appreciate your attempts to save me from those canine ruffians, and I'm sorry it ended the way it did,' he continues. 'I am Francois, master chef, at your service.'";
+		AttemptToWait;
 		now Gourmet Treats is resolved;
-		AddNavPoint Bone-Appetit;
 		now Resolution of Gourmet Treats is 2; [fought, lost]
 		move player to Bone-Appetit;
+		AddNavPoint Bone-Appetit;
 	else if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having finally dealt with the [if T is 1]huskies[else if T is 2]German shepherds[else if T is 3]Chocolate Labs[else if T is 4]Retrievers[end if], you chase the last stragglers out the door and block it up behind them, propping up a table and a few chairs against it to keep any others out. Satisfied with the security of the building, you approach the canines['] captive, looking him over before kneeling down to help him to a sitting position. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "     'Thank you, mon ami[if Player is purefemale]e[end if],' the man says with a strong French accent. 'I shudder to imagine where I'd be had you not come along. I am Francois, master chef, at your service.'";
+		AttemptToWait;
 		now Gourmet Treats is resolved;
-		AddNavPoint Bone-Appetit;
 		now Resolution of Gourmet Treats is 1; [fought, won]
 		move player to Bone-Appetit;
-	else:
+		AddNavPoint Bone-Appetit;
+	else if fightoutcome >= 30:
 		say "     Unwilling or unable to continue fighting, you grab your bag and run for the bakery door, flipping a nearby table behind you to block your pursuers['] path on the way out. You continue running for some time, getting plenty of distance between you and the bakery before stopping to catch your breath. Taking a moment to reflect on the situation, you feel a wave of guilt for leaving the captive behind to his fate with the canines.";
 		now Resolution of Gourmet Treats is 2; [fought, fled]
 		now Gourmet Treats is resolved;
@@ -87,28 +86,24 @@ to say BakeryHusky:
 		challenge "Husky Bitch";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     With the second bitch dealt with, you scan the room for the remaining canine, realizing too late that he has circled around you while you were dealing with his female companion. The large male leaps towards you as you turn.";
+			WaitLineBreak;
 			let bonus be (( perception of Player + dexterity of Player minus 20 ) divided by 2 );
 			if "Wary Watcher" is listed in feats of Player, increase bonus by 3;
 			if "Bad Luck" is listed in feats of Player, decrease bonus by 2;
 			if bonus > 12, now bonus is 12;
 			let dice be a random number from 1 to 20;
-			say "     You roll 1d20([dice])[if bonus >= 0]+[end if][bonus]: [dice + bonus]. ";
-			WaitLineBreak;
+			say "You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [special-style-1][dice + bonus][roman type] vs [special-style-2]16[roman type] (Perception Check):[line break]";
 			if bonus + dice > 15:
-				say "You narrowly manage to avoid the surprise attack, rolling out of the way as the husky tumbles into a nearby table and chairs. The large canine slowly raises to his feet, shaking his head clear before turning to face you.";
+				say "     You narrowly manage to avoid the surprise attack, rolling out of the way as the husky tumbles into a nearby table and chairs. The large canine slowly rises to his feet, shaking his head clear before turning to face you.";
 			else:
-				say "The husky's attack takes you by surprise, bowling you over as he sends you both tumbling into a nearby table and chairs. The large male pins you to the ground for a moment, barking in your face as he grinds his stiff cock against your body. Fortunately you manage to grasp a nearby piece of the crushed table. After smashing it against the back of his head, you push the stunned canine off you, scrambling to your feet as he shakes his head clear before turning to face you. (15 dmg taken)[line break]";
+				say "     The husky's attack takes you by surprise, bowling you over as he sends you both tumbling into a nearby table and chairs. The large male pins you to the ground for a moment, barking in your face as he grinds his stiff cock against your body. Fortunately you manage to grasp a nearby piece of the crushed table. After smashing it against the back of his head, you push the stunned canine off you, scrambling to your feet as he shakes his head clear before turning to face you ([special-style-2]15[roman type] dmg taken).";
 				decrease HP of Player by 15;
 			challenge "Husky Alpha";
 
 to say BakeryGShep:
 	challenge "German Shepherd Male";
 	if fightoutcome >= 10 and fightoutcome <= 19:
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "German Shepherd Male":
-				now MonsterID is y;
-				break;
+		choose row MonsterID from Table of Random Critters;
 		say "     With the first German shepherd dealt with, you survey the room in search of your next opponent, realizing too late that one of the hounds is missing. Suddenly you are grabbed from behind, your arms twisted behind your back by the sneaky canine. You struggle as best you can against the shepherd, trying to break free from his grasp";
 		let escape be 0;
 		let playernum be a random number between 1 and strength of Player;
@@ -142,8 +137,8 @@ to say BakeryGShep:
 			say "     Soon you can feel each of their knots as they pound your mouth and [if Player is female]pussy[else]ass[end if], their thrusts getting harder and faster as they get close, the third thrusting into your hand as you pump up and down his shaft. Finally, they cum, shooting their loads into your body from both ends. You feel their thick knots pressing against your mouth and [if Player is female]cunt[else]ass[end if], but they hold them just outside as they fill you up. After a few pumps of cum, they both pull out and start painting your face and body with their cum along with the shepherd you've been stroking off.";
 			CreatureSexAftermath "Player" receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from "German Shepherd Male";
 			CreatureSexAftermath "Player" receives "OralCock" from "German Shepherd Male";
-			infect "German Shepherd Male";
-			infect "German Shepherd Male";
+			infect;
+			infect;
 			WaitLineBreak;
 			now fightoutcome is 21;
 	if fightoutcome >= 10 and fightoutcome <= 19:
@@ -176,8 +171,7 @@ Bone-Appetit	"Bone-Appetit"
 Bone-Appetit is a room. It is fasttravel. It is private.
 Description of Bone-Appetit is "[BoneAppetitdesc]".
 
-instead of sniffing Bone-Appetit:
-	say "     Despite the lack of any product on display, the small bakery still has a strangely warm, meaty aroma[if FaceName of Player is listed in infections of CanineList] that quickly has you salivating hungrily[end if], which you can only assume is the result of the many hand made pet treats that used to line the shelves.";
+Scent of Bone-Appetit is "     Despite the lack of any product on display, the small bakery still has a strangely warm, meaty aroma[if FaceName of Player is listed in infections of CanineList] that quickly has you salivating hungrily[end if], which you can only assume is the result of the many hand made pet treats that used to line the shelves.".
 
 to say BoneAppetitdesc:
 	if HP of Francois is 0:
@@ -236,7 +230,7 @@ understand "Francis" as Francois.
 understand "Francois" as Francois.
 Francoistalk1 is a truth state that varies. Francoistalk1 is normally false.
 
-the linkaction of Francois is "Possible Actions: [link]talk[as]talk Francois[end link], [link]smell[as]smell Francois[end link], [link]fuck[as]fuck Francois[end link], [link]Bake[as]Bake Francois[end link][line break]".
+the linkaction of Francois is "Possible Actions: [link]talk[as]talk Francois[end link], [link]smell[as]smell Francois[end link], [link]fuck[as]fuck Francois[end link], [link]bake[as]bake Francois[end link][line break]".
 
 the scent of Francois is "     Francois has a light male musk, difficult to catch over the smells pervading the bakery.".
 
@@ -272,7 +266,7 @@ Instead of conversing the Francois:
 		say "     'I must thank you again, mon ami[if Player is purefemale]e[end if],' Francois says as he steps around the counter, 'but perhaps I could ask another favor of you? I have a desire to create, to expand my art, and there must be so many exotic and interesting new flavors out in this city now. Oh how I would love to experiment with them, but sadly, I am no fighter. I fear I cannot go out there to gather these new ingredients myself, but you, mon [if Player is purefemale]héroïne[else]héro[end if], seem more than capable of surviving out there. If you bring back any potential ingredients you find, I would love to bake something for you[if Player is male], and perhaps I could [']reward['] you in other ways as well,' he says, licking his lips as his eyes stray to your groin. 'Just[else]. Just[end if] bring back anything you find and let me know you would like me to [link]bake[as]bake Francois[end link] for you.";
 		now HP of Francois is 1;
 		now Bone-Appetit is sleepsafe;
-		say "[FrancoisListCompile]";
+		FrancoisListCompile;
 	else if Libido of Francois >= 3 and Francoistalk1 is false and a random chance of 2 in 5 succeeds:
 		say "     'I was having such difficulty before you came along. I don't know if your coming around is scaring them off now, but I was having no end of trouble before. These hands, they were made for the baking and for the love, not the fighting,' he says, momentarily forgetting he's got paws now. 'Zut alors! How most of them were rude lovers! No passion, no care for their lover, just raw lust.";
 		say "     'Even from the girls. I tried to refuse them, but would they listen? Non! They would get what they wanted in the end, but it was always so hollow. I am sad for them[if Player is male]. But I have found a good lover in you, mon délice,' he adds, running his paws over you as he gives you a passionate kiss full of doggy tongue in your mouth[else if Player is female]. But now I have found you, mon amie,' he says with a smile before giving you a kiss on the cheek[else]. But now I have found you, mon ami,' he says with a smile before giving you a kiss on the cheek[end if].";
@@ -280,7 +274,7 @@ Instead of conversing the Francois:
 	else if a random chance of 3 in 5 succeeds and Francois_Undiscovered is not empty:
 		say "[FrancoisHint]";
 	else if a random chance of 1 in 3 succeeds:
-		say "     '[if daytimer is day]Bonjour[else]Bonsoir[end if], [one of]mon ami[if Player is purefemale]e[end if][or]my friend[at random]. [one of]Comment ça va?[or]Comment allez-vous?[or]How are you?[at random]'";
+		say "     '[if daytimer is day]Bonjour[else]Bonsoir[end if], [one of]mon ami[if Player is purefemale]e[end if][or]my friend[at random]. [one of]Comment ça va[or]Comment allez-vous[or]How are you[at random]?'";
 	else:
 		say "     '[one of]Perhaps I should try to get back into business. I can't help but think my work would be even more popular now[or]I have a much greater appreciation for my work now[or]Perhaps I should go out there and try to find myself a sexy stud[or]Thanks again for the help, mon ami[if Player is purefemale]e[end if][at random].'";
 	if Libido of Francois is 0:
@@ -292,7 +286,7 @@ instead of fucking the Francois:
 	else if Player is neuter:
 		say "     Lacking any gender of your own, you can't quite get up the enthusiasm to play with the friendly French mutt.";
 	else if Player is not male:
-		say "     'Ah désolé, mon amie. I have never had much interest in what you English call the fairer sex. Ah, but if only you were a man...' he sighs wistfully.";
+		say "     'Ah désolé, mon amie. I have never had much interest in what the English call the fairer sex. Ah, but if only you were a man...' he sighs wistfully.";
 	else if lastfuck of Francois - turns < 6:
 		say "     He licks his muzzle and eyes your crotch, but shakes his head. 'As much as I would relish the opportunity to show you my thanks again, there is so much else that needs to be done. Perhaps a little later though?' he adds with a smile and the brush of a paw down your side.";
 	else if Libido of Francois is 1:
@@ -300,11 +294,14 @@ instead of fucking the Francois:
 		now lastfuck of Francois is turns;
 	else:
 		say "     Looking over at the oddly attractive hybrid, you smile and suggest taking a break to have a little fun together. He smiles at your offer and moves up against you, running his paws over your [bodydesc of Player] body. He nuzzles at your chest as he helps you out of your clothes and gear[if Breast Size of Player is 0]. He licks across your manly pecs, teasing your nipples with his tongue[end if]. As you run a hand through his fur and feathers, you wonder exactly what you'd like to do with him.";
+		LineBreak;
 		if Libido of Francois is 2:
 			say "     Shall you request to [link]mount him (Y)[as]y[end link] or shall you ask him to [link]suck you off (N)[as]n[end link] again?";
 			if Player consents:
+				LineBreak;
 				say "[Francoissex2]";
 			else:
+				LineBreak;
 				say "[Francoissex1]";
 			now lastfuck of Francois is turns;
 		else:
@@ -313,29 +310,34 @@ instead of fucking the Francois:
 
 to say Francoissexmenu:
 	now sextablerun is 0;
-	now calcnumber is -1;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Mount him";
 	now sortorder entry is 1;
 	now description entry is "Ask Francois to bend over for you";
+	[]
 	if Libido of Francois > 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Get mounted";
 		now sortorder entry is 2;
 		now description entry is "Give Francois a turn riding you";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Get a blowjob";
 	now sortorder entry is 3;
 	now description entry is "Ask Francois to suck you off";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Give a blowjob";
 	now sortorder entry is 4;
 	now description entry is "Offer to suck Francois off";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -344,6 +346,7 @@ to say Francoissexmenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if nam is "Mount him":
@@ -355,8 +358,12 @@ to say Francoissexmenu:
 				else if nam is "Give a blowjob":
 					say "[Francoissex3]";
 				now lastfuck of Francois is turns;
-			else:
-				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		else if calcnumber is 0:
+			LineBreak;
+			say "     You step back from the hybrid, shaking your head slightly as he gives a questioning look.";
+			now sextablerun is 1;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 		wait for any key;
 		clear the screen and hyperlink list;
 
@@ -451,22 +458,12 @@ to say Francoissex4:		[player receives anal]
 Section 4 - Baking
 
 Francoisbaking is an action applying to nothing.
-Understand "bake with Francois" as Francoisbaking.
-Understand "bake Francois" as Francoisbaking.
-Understand "cook Francois" as Francoisbaking.
-Understand "cook with Francois" as Francoisbaking.
-Understand "bake with francois" as Francoisbaking.
-Understand "bake francois" as Francoisbaking.
-Understand "cook francois" as Francoisbaking.
-Understand "cook with francois" as Francoisbaking.
-Understand "bake with francis" as Francoisbaking.
-Understand "bake francis" as Francoisbaking.
-Understand "cook francis" as Francoisbaking.
-Understand "cook with francis" as Francoisbaking.
+understand "bake with/-- francois/francis" as Francoisbaking.
+understand "cook with/-- francois/francis" as Francoisbaking.
 Francois_Undiscovered is a list of numbers that varies.
 Francois_Discovered is a list of numbers that varies.
 
-to say FrancoisListCompile:
+to FrancoisListCompile:
 	if Francois_Undiscovered is not empty, truncate Francois_Undiscovered to 0 entries;
 	if FemaleList is not banned:
 		if 1 is not listed in Francois_Discovered, add 1 to Francois_Undiscovered; [crème abondante - distilled milk + pink gel]
@@ -490,55 +487,53 @@ to say FrancoisListCompile:
 		if 10 is not listed in Francois_Discovered, add 10 to Francois_Undiscovered; [cheesecake - cheese + pixie dust + pink gel]
 
 check Francoisbaking:
-	If Francois is not visible, say "You should see Francois for that." instead;
+	if Francois is not visible, say "You should see Francois for that." instead;
+	if HP of Francois is 0, say "Perhaps you should talk to the friendly mutt first?" instead;
+	if Francois_Discovered is empty and Francois_Undiscovered is empty, say "You don't know any baking recipes." instead;
 
 carry out Francoisbaking:
 	let Francoisbaked be 0;
-	If Francois is not visible:
-		say "You should see Francois for that.";
-	else if HP of Francois is 0:
-		say "     Perhaps you should talk to the friendly mutt first?";
-	else if Francois_Undiscovered is not empty:
-		say "     Emptying out the contents of your bag on the counter, Francois looks each over individually, smelling or even tasting many of them as he considers their culinary potential.";
+	if Francois_Undiscovered is not empty:
+		say "     Emptying out the contents of your bag on the counter, Francois looks each over individually, smelling or even tasting many of them as he considers their culinary potential.[paragraph break]";
 		if blue gel is owned and Awesome Fruit is owned and 3 is listed in Francois_Undiscovered:
 			say "[BoysenberryBlossomGet]";
 			remove 3 from Francois_Undiscovered;
-			add 3 to Francois_Discovered;
+			add 3 to Francois_Discovered, if absent;
 			ItemLoss blue gel by 1;
 			ItemLoss Awesome Fruit by 1;
 			now Francoisbaked is 1;
 		else if pink gel is owned and Awesomer Fruit is owned and 4 is listed in Francois_Undiscovered:
 			say "[MuffinMuffinGet]";
 			remove 4 from Francois_Undiscovered;
-			add 4 to Francois_Discovered;
+			add 4 to Francois_Discovered, if absent;
 			ItemLoss pink gel by 1;
 			ItemLoss Awesomer Fruit by 1;
 			now Francoisbaked is 1;
 		else if blue gel is owned and chocolate milk is owned and 2 is listed in Francois_Undiscovered:
 			say "[bleuettonneGet]";
 			remove 2 from Francois_Undiscovered;
-			add 2 to Francois_Discovered;
+			add 2 to Francois_Discovered, if absent;
 			ItemLoss blue gel by 1;
 			ItemLoss chocolate milk by 1;
 			now Francoisbaked is 1;
 		else if pink gel is owned and distilled milk is owned and 1 is listed in Francois_Undiscovered:
 			say "[CrèmeAbondanteGet]";
 			remove 1 from Francois_Undiscovered;
-			add 1 to Francois_Discovered;
+			add 1 to Francois_Discovered, if absent;
 			ItemLoss pink gel by 1;
 			ItemLoss distilled milk by 1;
 			now Francoisbaked is 1;
 		else if musky cock flower is owned and honeycomb is owned and 5 is listed in Francois_Undiscovered:
 			say "[lollicockGet]";
 			remove 5 from Francois_Undiscovered;
-			add 5 to Francois_Discovered;
+			add 5 to Francois_Discovered, if absent;
 			ItemLoss honeycomb by 1;
 			ItemLoss musky cock flower by 1;
 			now Francoisbaked is 1;
 		else if ebonflame scale is owned and glowing ember is owned and chocolate milk is owned and 6 is listed in Francois_Undiscovered:
 			say "[dragonmoelleuxGet]";
 			remove 6 from Francois_Undiscovered;
-			add 6 to Francois_Discovered;
+			add 6 to Francois_Discovered, if absent;
 			ItemLoss ebonflame scale by 1;
 			ItemLoss glowing ember by 1;
 			ItemLoss chocolate milk by 1;
@@ -547,7 +542,7 @@ carry out Francoisbaking:
 		else if soda is owned and pony cider is owned and crushed candies is owned and 7 is listed in Francois_Undiscovered:
 			say "[fizz-aux-pommesGet]";
 			remove 7 from Francois_Undiscovered;
-			add 7 to Francois_Discovered;
+			add 7 to Francois_Discovered, if absent;
 			ItemLoss soda by 1;
 			ItemLoss pony cider by 1;
 			ItemLoss crushed candies by 1;
@@ -556,7 +551,7 @@ carry out Francoisbaking:
 		else if Satyr wine is owned and wyvern goop is owned and crushed candies is owned and 8 is listed in Francois_Undiscovered:
 			say "[vin-coeurGet]";
 			remove 8 from Francois_Undiscovered;
-			add 8 to Francois_Discovered;
+			add 8 to Francois_Discovered, if absent;
 			ItemLoss Satyr wine by 1;
 			ItemLoss wyvern goop by 1;
 			ItemLoss crushed candies by 1;
@@ -565,7 +560,7 @@ carry out Francoisbaking:
 		else if egg nog is owned and pixie dust is owned and blue gel is owned and 9 is listed in Francois_Undiscovered: [gingerbread - eggnog + pixie dust + Blue gel]
 			say "[gingerbreadGet]";
 			remove 9 from Francois_Undiscovered;
-			add 9 to Francois_Discovered;
+			add 9 to Francois_Discovered, if absent;
 			ItemLoss egg nog by 1;
 			ItemLoss pixie dust by 1;
 			ItemLoss blue gel by 1;
@@ -574,18 +569,24 @@ carry out Francoisbaking:
 		else if cheese is owned and pixie dust is owned and pink gel is owned and 10 is listed in Francois_Undiscovered: [cheesecake - cheese + pixie dust + pink gel]
 			say "[cheesecakeGet]";
 			remove 10 from Francois_Undiscovered;
-			add 10 to Francois_Discovered;
+			add 10 to Francois_Discovered, if absent;
 			ItemLoss cheese by 1;
 			ItemLoss pixie dust by 1;
 			ItemLoss pink gel by 1;
 			ItemGain cheesecake by 1;
 			now Francoisbaked is 1;
 		if Francoisbaked is not 1:
-			say "     After looking over everything you've brought him, Francois decides none of your potential combinations of ingredients would make a good dish.";
+			say "     After looking over everything you've brought him, Francois decides none of your potential combinations of ingredients would make a good dish[if Francois_Discovered is empty].[else]. [end if]";
+		else:
+			sort Francois_Discovered;
 	if Francoisbaked is not 1 and Francois_Discovered is not empty:
-		say "     Would you like to have Francois bake a dish you've already discovered? (Y/N)[line break]";
+		say "[if Francois_Undiscovered is empty]     [end if]Would you like to have Francois bake a dish you've already discovered? (Y/N)[line break]";
 		if Player consents:
+			LineBreak;
 			say "[FrancoisBakingMenu]";
+		else:
+			LineBreak;
+			say "     You decide not to have Francois bake anything.";
 
 to say FrancoisBakingMenu:
 	now sextablerun is 0;
@@ -607,9 +608,9 @@ to say FrancoisBakingMenu:
 		now description entry is "have Francois bake a boysenberry blossom";
 	if 4 is listed in Francois_Discovered:
 		choose a blank row in table of fucking options;
-		now title entry is "Muffin muffin";
+		now title entry is "muffin muffin";
 		now sortorder entry is 4;
-		now description entry is "have Francois bake a Muffin muffin";
+		now description entry is "have Francois bake a muffin muffin";
 	if 5 is listed in Francois_Discovered:
 		choose a blank row in table of fucking options;
 		now title entry is "lollicock";
@@ -622,9 +623,9 @@ to say FrancoisBakingMenu:
 		now description entry is "have Francois bake a dragon moelleux";
 	if 7 is listed in Francois_Discovered:
 		choose a blank row in table of fucking options;
-		now title entry is "fizz-aux-Pommes";
+		now title entry is "fizz-aux-pommes";
 		now sortorder entry is 7;
-		now description entry is "have Francois bake a fizz-aux-Pommes";
+		now description entry is "have Francois bake a fizz-aux-pommes";
 	if 8 is listed in Francois_Discovered:
 		choose a blank row in table of fucking options;
 		now title entry is "vin-coeur";
@@ -640,21 +641,18 @@ to say FrancoisBakingMenu:
 		now title entry is "cheesecake";
 		now sortorder entry is 10;
 		now description entry is "have Francois bake a cheesecake";
-	choose a blank row in table of fucking options;
-	now title entry is "Abort";
-	now sortorder entry is 11;
-	now description entry is "Abort";
-	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link][y] - [title entry in title case][as][y][end link][line break]";
+	say "[link]0 - Abort[as]0[end link][line break]";
 	while sextablerun is 0:
-		say "Pick the corresponding number (1-[number of filled rows in table of fucking options])> [run paragraph on]";
+		say "Pick the corresponding number (0-[number of filled rows in table of fucking options])> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			choose row calcnumber in table of fucking options;
 			say "Confirmation: Would you like to [description entry]?";
 			if Player consents:
+				LineBreak;
 				if title entry is "crème abondante":
 					if pink gel is owned and distilled milk is owned:
 						now sextablerun is 1;
@@ -663,7 +661,7 @@ to say FrancoisBakingMenu:
 						ItemLoss distilled milk by 1;
 						ItemGain crème abondante by 1;
 					else:
-						say "You do not have the required ingredients: pink gel and distilled milk.";
+						say "     You do not have the required ingredients: pink gel and distilled milk.";
 				else if title entry is "bleuettonne":
 					if blue gel is owned and chocolate milk is owned:
 						now sextablerun is 1;
@@ -672,7 +670,7 @@ to say FrancoisBakingMenu:
 						ItemLoss chocolate milk by 1;
 						ItemGain bleuettonne by 1;
 					else:
-						say "You do not have the required ingredients: blue gel and chocolate milk.";
+						say "     You do not have the required ingredients: blue gel and chocolate milk.";
 				else if title entry is "boysenberry blossom":
 					if blue gel is owned and Awesome Fruit is owned:
 						now sextablerun is 1;
@@ -681,8 +679,8 @@ to say FrancoisBakingMenu:
 						ItemLoss Awesome Fruit by 1;
 						ItemGain boysenberry blossom by 1;
 					else:
-						say "You do not have the required ingredients: blue gel and Awesome Fruit.";
-				else if title entry is "Muffin muffin":
+						say "     You do not have the required ingredients: blue gel and Awesome Fruit.";
+				else if title entry is "muffin muffin":
 					if pink gel is owned and Awesomer Fruit is owned:
 						now sextablerun is 1;
 						say "     Francois takes the pink gel and Awesomer Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small tray of muffins, offering one to you as he places the rest into one of his displays.";
@@ -690,7 +688,7 @@ to say FrancoisBakingMenu:
 						ItemLoss Awesomer Fruit by 1;
 						ItemGain Muffin muffin by 1;
 					else:
-						say "You do not have the required ingredients: pink gel and Awesomer Fruit.";
+						say "     You do not have the required ingredients: pink gel and Awesomer Fruit.";
 				else if title entry is "lollicock":
 					if honeycomb is owned and musky cock flower is owned:
 						now sextablerun is 1;
@@ -699,7 +697,7 @@ to say FrancoisBakingMenu:
 						ItemLoss musky cock flower by 1;
 						ItemGain lollicock by 1;
 					else:
-						say "You do not have the required ingredients: honeycomb and musky cock flower.";
+						say "     You do not have the required ingredients: honeycomb and musky cock flower.";
 				else if title entry is "dragon moelleux":
 					if ebonflame scale is owned and glowing ember is owned and chocolate milk is owned:
 						now sextablerun is 1;
@@ -709,7 +707,7 @@ to say FrancoisBakingMenu:
 						ItemLoss chocolate milk by 1;
 						ItemGain dragon moelleux by 1;
 					else:
-						say "You do not have the required ingredients: ebonflame scale, glowing ember, and chocolate milk.";
+						say "     You do not have the required ingredients: ebonflame scale, glowing ember, and chocolate milk.";
 				else if title entry is "fizz-aux-pommes":
 					if pony cider is owned and soda is owned and crushed candies is owned:
 						now sextablerun is 1;
@@ -719,7 +717,7 @@ to say FrancoisBakingMenu:
 						ItemLoss crushed candies by 1;
 						ItemGain fizz-aux-pommes by 1;
 					else:
-						say "You do not have the required ingredients: pony cider, soda, and crushed candies.";
+						say "     You do not have the required ingredients: pony cider, soda, and crushed candies.";
 				else if title entry is "vin-coeur":
 					if wyvern goop is owned and Satyr wine is owned and crushed candies is owned:
 						now sextablerun is 1;
@@ -729,7 +727,7 @@ to say FrancoisBakingMenu:
 						ItemLoss Satyr wine by 1;
 						ItemGain vin-coeur by 1;
 					else:
-						say "You do not have the required ingredients: crushed candies, Satyr wine, and wyvern goop.";
+						say "     You do not have the required ingredients: crushed candies, Satyr wine, and wyvern goop.";
 				else if title entry is "gingerbread": [gingerbread - eggnog + pixie dust + blue gel]
 					if egg nog is owned and pixie dust is owned and blue gel is owned:
 						now sextablerun is 1;
@@ -739,7 +737,7 @@ to say FrancoisBakingMenu:
 						ItemLoss blue gel by 1;
 						ItemGain gingerbread by 2;
 					else:
-						say "You do not have the required ingredients: eggnog, pixie dust, and blue gel.";
+						say "     You do not have the required ingredients: eggnog, pixie dust, and blue gel.";
 				else if title entry is "cheesecake": [cheesecake - cheese + pixie dust + pink gel]
 					if cheese is owned and pixie dust is owned and pink gel is owned:
 						now sextablerun is 1;
@@ -749,145 +747,134 @@ to say FrancoisBakingMenu:
 						ItemLoss pink gel by 1;
 						ItemGain cheesecake by 2;
 					else:
-						say "You do not have the required ingredients: cheese, pixie dust, and pink gel.";
-				else if title entry is "Abort":
-					say "You decide not to have Francois bake anything.";
-					now sextablerun is 1;
+						say "     You do not have the required ingredients: cheese, pixie dust, and pink gel.";
+				if sextablerun is 0, LineBreak;
+		else if calcnumber is 0:
+			LineBreak;
+			say "     You decide not to have Francois bake anything.";
+			now sextablerun is 1;
 		else:
-			say "Invalid Option.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 
 to say FrancoisHint:
 	sort Francois_Undiscovered in random order;
 	let T be a random number between 1 and 3;
 	if entry 1 of Francois_Undiscovered is 1:	[crème abondante - distilled milk + pink gel]
-		if T is 1:
-			say "     'Crème à la fraise, strawberry cream, is always a popular ingredient. Perhaps we could find a way to make our own out in the city?'";
-		if T is 2:
-			say "     'It's a shame I was out of milk when all this started. Strangely, most of my other stock seems to have stayed fresh.'";
-		if T is 3:
-			say "     'Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'";
-	if entry 1 of Francois_Undiscovered is 2:	[bleuettonne - chocolate milk + blue gel]
-		if T is 1:
-			say "     'Le chocolat et les fruits frais are always a good combination.'";
-		if T is 2:
-			say "     'I have seen the most unusual chiens running around outside; they appear to be made entirely of chocolat.'";
-		if T is 3:
-			say "     'Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'";
-	if entry 1 of Francois_Undiscovered is 3:	[boysenberry blossom - Awesome Fruit + blue gel]
-		if T is 1:
-			say "     'A simple fruit pastry is a staple of a good menu.'";
-		if T is 2:
-			say "     'There was a bizarre tree outside the store earlier. It had such lovely fruit hanging from its branches. I was going to go out and pick some, but I turned around for a moment and it was suddenly gone.'";
-		if T is 3:
-			say "     'Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'";
-	if entry 1 of Francois_Undiscovered is 4:	[Muffin muffin - Awesomer Fruit + pink gel]
-		if T is 1:
-			say "     'Gelée de fruit is always an interesting way to enrich a simple treat.'";
-		if T is 2:
-			say "     'There was a bizarre tree outside the store earlier. It had such lovely fruit hanging from its branches. I was going to go out and pick some, but I turned around for a moment and it was suddenly gone.'";
-		if T is 3:
-			say "     'Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'";
-	if entry 1 of Francois_Undiscovered is 5:	[lollicock - musky cock flower + honeycomb]
-		if T is 1:
-			say "     'Surely there must be many interesting new flavors to discover out in the city park now.'";
-		if T is 2:
-			say "     'I used to collect fresh herbs from the forest surrounding the city park before all this began. I wonder what strange plants must be out there now?'";
-		if T is 3:
-			say "     'Fresh honey was always one of my favorite ingredients. I wonder how this strange maladie has affected the honeybees...'";
-	if entry 1 of Francois_Undiscovered is 6: [6 - dragon moelleux - dragon heart + glowing ember + chocolate milk]
-		if T is 1:
-			say "     'I have seen a lot of smoke over the skyline from the capitol district. I wonder what is happening over there?'";
-		if T is 2:
-			say "     'I have seen a lot of smoke over the skyline from the capitol district. I wonder what is happening over there?'";
-		if T is 3:
-			say "     'I have seen the most unusual chiens running around outside; they appear to be made entirely of chocolat.'";
-	if entry 1 of Francois_Undiscovered is 7: [7 - fizz-aux-Pommes - pony cider + soda + crushed candies]
-		if T is 1:
-			say "     'I used to keep a small amount of soda around for my customers, and it made an interesting addition to some dishes as well.'";
-		if T is 2:
-			say "     'A splash of fresh cider is a wonderful addition to most any dish.'";
-		if T is 3:
-			say "     'I used to get such wonderful fresh candy from the fair; they add a certain je ne sais quoi to several of my recipes.'";
-	if entry 1 of Francois_Undiscovered is 8: [8 - vin-coeur - crushed candies+ Satyr wine + wyvern goop]
-		if T is 1:
-			say "     'A small amount of wine is wonderful for rich cakes.'";
-		if T is 2:
-			say "     'I have seen incredible beasts flying above the rooftops. One of them left an egg just outside, but I didn't dare approach it.'";
-		if T is 3:
-			say "     'I used to get such wonderful fresh candy from the fair; they add a certain je ne sais quoi to several of my recipes.'";
-	if entry 1 of Francois_Undiscovered is 9: [gingerbread - eggnog + pixie dust + blue gel]
-		if T is 1:
-			say "     'I could have swore I saw a reindeer fly past earlier. He is a little out of season, non?'";
-		if T is 2:
-			say "     'Something to add a little extra sweetness would be tres bon.'";
-		if T is 3:
-			say "     'Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'";
-	if entry 1 of Francois_Undiscovered is 10: [cheesecake - cheese + pixie dust + pink gel]
-		if T is 1:
-			say "     'Le fromage seems hard to come by these days. Quel dommage.'";
-		if T is 2:
-			say "     'Something to add a little extra sweetness would be tres bon.'";
-		if T is 3:
-			say "     'Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'";
+		if T is:
+			-- 1: say "     'Crème à la fraise, strawberry cream, is always a popular ingredient. Perhaps we could find a way to make our own out in the city?'";
+			-- 2: say "     'It's a shame I was out of milk when all this started. Strangely, most of my other stock seems to have stayed fresh.'";
+			-- 3: say "     'Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'";
+	else if entry 1 of Francois_Undiscovered is 2:	[bleuettonne - chocolate milk + blue gel]
+		if T is:
+			-- 1: say "     'Le chocolat et les fruits frais are always a good combination.'";
+			-- 2: say "     'I have seen the most unusual chiens running around outside; they appear to be made entirely of chocolat.'";
+			-- 3: say "     'Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'";
+	else if entry 1 of Francois_Undiscovered is 3:	[boysenberry blossom - Awesome Fruit + blue gel]
+		if T is:
+			-- 1: say "     'A simple fruit pastry is a staple of a good menu.'";
+			-- 2: say "     'There was a bizarre tree outside the store earlier. It had such lovely fruit hanging from its branches. I was going to go out and pick some, but I turned around for a moment and it was suddenly gone.'";
+			-- 3: say "     'Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'";
+	else if entry 1 of Francois_Undiscovered is 4:	[Muffin muffin - Awesomer Fruit + pink gel]
+		if T is:
+			-- 1: say "     'Gelée de fruit is always an interesting way to enrich a simple treat.'";
+			-- 2: say "     'There was a bizarre tree outside the store earlier. It had such lovely fruit hanging from its branches. I was going to go out and pick some, but I turned around for a moment and it was suddenly gone.'";
+			-- 3: say "     'Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'";
+	else if entry 1 of Francois_Undiscovered is 5:	[lollicock - musky cock flower + honeycomb]
+		if T is:
+			-- 1: say "     'Surely there must be many interesting new flavors to discover out in the city park now.'";
+			-- 2: say "     'I used to collect fresh herbs from the forest surrounding the city park before all this began. I wonder what strange plants must be out there now?'";
+			-- 3: say "     'Fresh honey was always one of my favorite ingredients. I wonder how this strange maladie has affected the honeybees...'";
+	else if entry 1 of Francois_Undiscovered is 6: [6 - dragon moelleux - dragon heart + glowing ember + chocolate milk]
+		if T is:
+			-- 1: say "     'I have seen a lot of smoke over the skyline from the capitol district. I wonder what is happening over there?'";
+			-- 2: say "     'I have seen a lot of smoke over the skyline from the capitol district. I wonder what is happening over there?'";
+			-- 3: say "     'I have seen the most unusual chiens running around outside; they appear to be made entirely of chocolat.'";
+	else if entry 1 of Francois_Undiscovered is 7: [7 - fizz-aux-Pommes - pony cider + soda + crushed candies]
+		if T is:
+			-- 1: say "     'I used to keep a small amount of soda around for my customers, and it made an interesting addition to some dishes as well.'";
+			-- 2: say "     'A splash of fresh cider is a wonderful addition to most any dish.'";
+			-- 3: say "     'I used to get such wonderful fresh candy from the fair; they add a certain je ne sais quoi to several of my recipes.'";
+	else if entry 1 of Francois_Undiscovered is 8: [8 - vin-coeur - crushed candies+ Satyr wine + wyvern goop]
+		if T is:
+			-- 1: say "     'A small amount of wine is wonderful for rich cakes.'";
+			-- 2: say "     'I have seen incredible beasts flying above the rooftops. One of them left an egg just outside, but I didn't dare approach it.'";
+			-- 3: say "     'I used to get such wonderful fresh candy from the fair; they add a certain je ne sais quoi to several of my recipes.'";
+	else if entry 1 of Francois_Undiscovered is 9: [gingerbread - eggnog + pixie dust + blue gel]
+		if T is:
+			-- 1: say "     'I could have swore I saw a reindeer fly past earlier. He is a little out of season, non?'";
+			-- 2: say "     'Something to add a little extra sweetness would be tres bon.'";
+			-- 3: say "     'Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'";
+	else if entry 1 of Francois_Undiscovered is 10: [cheesecake - cheese + pixie dust + pink gel]
+		if T is:
+			-- 1: say "     'Le fromage seems hard to come by these days. Quel dommage.'";
+			-- 2: say "     'Something to add a little extra sweetness would be tres bon.'";
+			-- 3: say "     'Fresh fruit is rather hard to come by these days. I wonder if there is another source of such flavors out in the city now?'";
 
 
 to say BoysenberryBlossomGet:
 	say "     'Ah! Oui! These will do wonderfully!' Francois says as he takes the blue gel and Awesome Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small dish of fruity-smelling pastries. 'I will call them boysenberry blossoms,' Francois says with obvious excitement. 'Please, be the first to taste one, mon ami[if Player is purefemale]e[end if]!' Would you like to taste it right now? (Y/N)[line break]";
 	if Player consents:
-		say "[boysenberry blossom Use]";
+		LineBreak;
+		say "[boysenberry blossom Use][line break]";
 		if Player is FemalePreferred or (Player is male and "Modest Organs" is listed in feats of Player):
 			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do your best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
 			say "     Francois licks his lips as he eyes up your enlarged member, and you can't help but notice his apron tenting slightly at his crotch. 'Mmm, what a lovely side effect. I cannot wait to start selling these.'";
 	else:
+		LineBreak;
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
 		ItemGain boysenberry blossom by 1;
 
 to say MuffinMuffinGet:
 	say "     'What a lovely combination of flavors,' Francois says as he tastes the pink gel and Awesomer Fruit. 'I must test their potential further!' After collecting a few other things from behind the counter, Francois quickly heads to his kitchen to get started. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small tray of muffins and offers you one. Would you like to taste it right now? (Y/N)[line break]";
 	if Player consents:
-		say "[muffin muffin Use]";
+		LineBreak;
+		say "[muffin muffin Use][line break]";
 		if Player is MalePreferred or (Player is female and "Modest Organs" is listed in feats of Player):
 			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do your best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
 			say "     'Not my first choice, but an interesting result nonetheless,' Francois says as he watches your hand drift down towards your groin. 'I am certain it will be popular.'";
 	else:
+		LineBreak;
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
 		ItemGain muffin muffin by 1;
 
 to say bleuettonneGet:
 	say "     After tasting the blue gel, Francois takes it and the chocolate milk without another word, collecting a few other things from behind the counter before hurrying back to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small tray of chocolates. 'A simple but effective technique. You must try one,' Francois says with a smile, placing the tray on the counter in front of you. Would you like to taste one right now? (Y/N)[line break]";
 	if Player consents:
-		say "[bleuettonne Use]";
+		LineBreak;
+		say "[bleuettonne Use][line break]";
 		if Player is FemalePreferred or (Player is male and "Modest Organs" is listed in feats of Player):
 			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do your best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
 			say "     'Oh my, what a magnifique result,' Francois says with a grin as he watches your groin change.";
 	else:
+		LineBreak;
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
 		ItemGain bleuettonne by 1;
 
 to say CrèmeAbondanteGet:
 	say "     After tasting the pink gel and distilled milk, Francois quickly pours both into an empty bowl and starts mixing before he even reaches the doorway to his kitchen. 'Ah, crème à la fraise, I am certain I can do something with this,' you hear him say to himself as you watch his tail disappear around the corner. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small tray of pink creme topped pastries, placing them in front of you with a smile. Would you like to taste one right now? (Y/N)[line break]";
 	if Player consents:
-		say "[crème abondante Use]";
+		LineBreak;
+		say "[crème abondante Use][line break]";
 		if ("Male Preferred" is listed in feats of Player and "Breasts" is not listed in feats of Player) or ("Passing Grade Chest" is listed in feats of Player and Nipple Count of Player > 7) or ("One Pair" is listed in feats of Player and Breast Size of Player > 25) or "Flat Chested" is listed in feats of Player:
 			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do your best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
 			say "     Francois cocks his head to the side as he watches your chest swell. 'I have a feeling this will be a popular dish among les femmes,' he says while eyeing your growing mammaries. 'I am glad I was not the first to test it though.'";
 	else:
+		LineBreak;
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
 		ItemGain crème abondante by 1;
 
 to say lollicockGet:
-	say "     'What an unusual herb,' Francois says as he picks up the musky cock flower, taking a deep sniff of its musty scent. 'Hmm... perhaps...' Francois trails off as he spots the honeycomb, before inspiration strikes. Francois quickly gathers a few other things from behind the counter before stepping into his kitchen. Eventually Francois returns with a small tray of cock-shaped lollipops and a silly grin on his face. 'What do you think, mon ami[if Player is purefemale]e[end if]? Would you like to try one?' he asks, waving the phallic candy in your face. (Y/N)[line break]";
+	say "     'What an unusual herb,' Francois says as he picks up the musky cock flower, taking a deep sniff of its musty scent. 'Hmm... perhaps...' Francois trails off as he spots the honeycomb, before inspiration strikes. Francois quickly gathers a few other things from behind the counter before stepping into his kitchen. Eventually Francois returns with a small tray of cock-shaped lollipops and a silly grin on his face. 'What do you think, mon ami[if Player is purefemale]e[end if]? Would you like to try one?' he asks, waving the phallic candy in your face (Y/N).";
 	if Player consents:
+		LineBreak;
 		let lollicockCheck be 0;
-		say "     Wrapping your lips around the phallic treat, you begin bobbing up and down its length, savoring its sweet and salty taste as your tongue works over it. As the last of it melts away[run paragraph on]";
-		if a random chance of 1 in 4 succeeds:
+		say "     Wrapping your lips around the phallic treat, you begin bobbing up and down its length, savoring its sweet and salty taste as your tongue works over it. As the last of it melts away";
+		if CockName of Player is not "candy cock" and Player is not FemalePreferred and a random chance of 1 in 4 succeeds:
 			now lollicockCheck is 1;
-		if CockName of Player is "candy cock" or Player is FemalePreferred:
-			now lollicockCheck is 0;
 		if lollicockCheck is 1:
 			if Player is not male:
 				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a lovely red hard candy cock, much like the one you just finished enjoying, erupts from you, spurting a few excited streams of fluid as it settles into place.";
@@ -901,18 +888,21 @@ to say lollicockGet:
 				now CockName of Player is "candy cock";
 				now Cock of Player is "[one of]candy[or]confectionary[or]red candy[or]canine candy[as decreasingly likely outcomes]";
 		else:
-			say "a rumbling builds in your belly. Clearly your body doesn't agree with something about the treat.";
+			say " a rumbling builds in your belly. Clearly your body doesn't agree with something about the treat.";
 		PlayerEat 5;
+		LineBreak;
 		if lollicockCheck is 0:
 			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do your best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
-			say "'Mon dieu! What an unexpected result!' Francois says, licking his lips as he eyes up your new candy member. 'I certainly would like to give that a taste,' he says with a naughty smirk.";
+			say "     'Mon dieu! What an unexpected result!' Francois says, licking his lips as he eyes up your new candy member. 'I certainly would like to give that a taste,' he says with a naughty smirk.";
 	else:
+		LineBreak;
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
 		ItemGain lollicock by 1;
 
 to say dragonmoelleuxGet:
 	say "     'I have a good feeling about this, mon ami[if Player is purefemale]e[end if],' Francois says, taking the dark scale, glowing ember and chocolate milk and heading to his kitchen. A rich chocolaty scent fills the bakery as he works, making your mouth water in anticipation as you wait.";
+	WaitLineBreak;
 	say "     Francois returns a short time later, carrying a small dish of bite-sized chocolate cakes, insisting you try one while they're still fresh. When you bite into the cake, its warm liquid chocolate center fills your mouth. You savor the taste for a short time before swallowing the satisfying treat. Francois looks at you expectantly, eagerly waiting to hear what you think of his newest dish, and just as you are about to speak a rumbling builds in your belly. An intense heat wells up inside you, and in a few short moments you are unable to hold it in any longer. Francois drives under the counter just before you release a large gout of flame into the air, incinerating everything on the counter in front of you.";
 	say "     'Mon dieu!' Francois exclaims, peeking up over the counter. 'That was unexpected. Are you alright, mon ami[if Player is purefemale]e[end if]?' After catching your breath, you assure the French mutt that you're fine, save for a little heart burn. With a smile Francois pushes the one cake that survived the blast towards you before setting about cleaning up your mess. Perhaps this unintended side effect might be useful in dealing with the mutants out in the city?";
 
@@ -922,24 +912,37 @@ to say fizz-aux-pommesGet:
 
 to say vin-coeurGet:
 	say "     Francois scoops up your wyvern goop, satyr wine and crushed candies with a smile. 'I know just what to do with these, mon ami[if Player is purefemale]e[end if].' After collecting a few other things from under the front counter, Francois returns to his kitchen. A rich peppermint scent fills the bakery as Francois begins his work, making your mouth water in anticipation as you wait.";
+	WaitLineBreak;
 	say "     Eventually Francois returns with a large cake and several dishes. After portioning out a couple pieces for you, Francois insists you try one right away, placing one in front of you before wrapping up another and slipping it into your bag. Biting into the rich wine cake, you are hit with the powerful peppermint taste. After several more bites the cake is finished, and you are left feeling quite full.";
 	say "     Feeling strangely heavy, you give Francois your thoughts on the new dish before pushing yourself away from the counter to stand. Francois['] bizarre expression as you stand catches you slightly off guard, and looking around you realize that rather than pushing yourself away from the counter, you've moved the entire counter away from yourself. You apologize and do your best to move the counter back into position before pondering this strange weight behind your muscles. Perhaps this unusual side effect might be useful in dealing with the creatures out in the city?";
 
 to say gingerbreadGet:
 	say "     After taking a quick shot of the eggnog, Francois scoops the pixie dust and blue gel with a sparkle in his eye. Obviously inspired somehow by the eggnog, he eagerly rushes off to his kitchen to get started. The warm scent of ginger and cinnamon fills the bakery as Francois works, making your mouth water in anticipations until he returns with a tray of small cookies. Francois places a couple of them on a dish in front of you with a smile. Would you like to test them now? (Y/N)[line break]";
 	if Player consents:
-		say "[gingerbread Use]";
-		say "'Oh là!' Francois exclaims as he watches your changes slow to and end. 'I hope you're not still hungry,' he says with a silly grin as he eyes your altered form.";
+		LineBreak;
+		say "[gingerbread Use][line break]";
+		say "     'Oh là!' Francois exclaims as he watches your changes slow to an end. 'I hope you're not still hungry,' he says with a silly grin as he eyes your altered form.";
 	else:
+		LineBreak;
 		say "     Accepting the cookies from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
 		ItemGain gingerbread by 2;
 
 to say cheesecakeGet:
-	say "     Francois['] expression lights up as he spots the cheese and he plucks it eagerly out of the pile before rummaging through and selecting the pixie dust and pink gel to go with it. 'This will do wonderfully, C'est magnifique!' Francois exclaims as he places the ingredients in a large mixing bowl to carry back into his kitchen. The rich sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a delicate looking strawberry cheesecake, he cuts the cake into slices with a smile, placing a couple small wedges on a plate for you with a grin. Would you like to taste it now? (Y/N)[line break]";
+	say "     Francois['] expression lights up as he spots the cheese and he plucks it eagerly out of the pile before rummaging through and selecting the pixie dust and pink gel to go with it. 'This will do wonderfully. C'est magnifique!' Francois exclaims as he places the ingredients in a large mixing bowl to carry back into his kitchen. The rich sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a delicate looking strawberry cheesecake, he cuts the cake into slices with a smile, placing a couple small wedges on a plate for you with a grin. Would you like to taste it now? (Y/N)[line break]";
 	if Player consents:
-		say "[cheesecake Use]";
-		say "'Oh là!' Francois says as he watches your changes slow to and end. 'I guess what they say is true. You really are what you eat,' he says with a silly grin.";
+		LineBreak;
+		say "     Eyeing the slices of cheesecake, you briefly return Francois['] smile before gorging yourself with the rich strawberry cake.";
+		cheesecakeinfect;
+		cheesecakeinfect;
+		if cheesecakemode is 1 and player is cheesecakebodied:
+			LineBreak;
+			say "     After your large serving of the delicious cake, your belly rumbles as your cheesecake body shifts and swells, becoming plump and Rubenesque.";
+		now cheesecakemode is 0;
+		PlayerEat 6;
+		LineBreak;
+		say "     'Oh là!' Francois says as he watches your changes slow to an end. 'I guess what they say is true. You really are what you eat,' he says with a silly grin.";
 	else:
+		LineBreak;
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
 		ItemGain cheesecake by 2;
 
@@ -984,7 +987,7 @@ the scent of bleuettonne is "The small candy carries the deep, rich scent of cho
 
 to say bleuettonne Use:
 	say "     You bite into the bleuettonne and find your mouth filled with a burst of blueberry jelly, more than you would have expected from the small chocolate ball. Doing your best to not let any of the sweet treat spill[run paragraph on]";
-	if Player is FemalePreferred or (Player is male and "Modest Organs" is listed in feats of Player):
+	if Player is FemalePreferred or (Player is male and ("Modest Organs" is listed in feats of Player or Ball Size of Player > 6)):
 		say " you swallow your mouthful and finish the rest in a second satisfying bite. As the fruity filling and chocolate hit your belly it rumbles. Clearly your body doesn't agree with something about the treat, but it sure tasted great.";
 	else if Player is not male:
 		now Cock Count of Player is 1;
@@ -1004,7 +1007,7 @@ the scent of crème abondante is "The pink pastry smells of fresh strawberry and
 understand "creme abondante" as crème abondante.
 
 to say crème abondante Use:
-	say "     Biting into the crème abondante, your mouth is filled with sweet strawberry cream. Savoring the rich mousse and fresh pastry, you finish the treat in several slow, deliberate bites[run paragraph on]";
+	say "     Biting into the crème abondante, your mouth is filled with sweet strawberry cream. Savoring the rich mousse and fresh pastry, you finish the treat in several slow, deliberate bites";
 	if ("Male Preferred" is listed in feats of Player and "Breasts" is not listed in feats of Player) or (("One Pair" is listed in feats of Player or Nipple Count of Player > 7) and ("Passing Grade Chest" is listed in feats of Player or Breast Size of Player > 25)) or "Flat Chested" is listed in feats of Player:
 		say ". After finishing the last bite of your snack, a rumbling builds in your belly. Clearly your body doesn't agree with something about the treat, but it sure tasted great.";
 	else:
@@ -1053,17 +1056,18 @@ to say lollicock Use:
 	if Player is female:
 		say "     Eyeing up the cute cock-shaped treat, you are just about to wrap your lips around it before another, naughtier idea pops into your head. Would you like to 'play' with your food before enjoying the snack? (Y/N)[line break]";
 		if Player consents:
+			LineBreak;
 			say "     Stripping your gear and finding a comfortable place to stop and really enjoy this treat, you slowly lick along the length of the candy cock, wetting its surface while you begin teasing your womanly folds with your free hand. Once both you and the treat are sufficiently lubricated, you take one last taste of the sweet and salty candy before plunging it into your drooling cunt. You moan loudly as you drive the rigid length into yourself, your quivering pussy leaking a sticky mixture of sugar and your own feminine juices as you fuck yourself to a powerful climax.";
 			say "     Sliding the sticky candy cock out of yourself with a wet slurp, you bask in your afterglow as you wrap your lips around the sugary treat, savoring the musky flavor of your own cum mingling with its sweet and salty taste.";
 			CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Human";
 			now lollicockDildo is 1;
+		else:
+			LineBreak;
 	if lollicockDildo is not 1:
 		let lollicockCheck be 0;
-		say "     Wrapping your lips around the phallic treat, you begin bobbing up and down its length, savoring its sweet and salty taste as your tongue works over it. As the last of it melts away[run paragraph on]";
-		if a random chance of 1 in 4 succeeds:
+		say "     Wrapping your lips around the phallic treat, you begin bobbing up and down its length, savoring its sweet and salty taste as your tongue works over it. As the last of it melts away";
+		if CockName of Player is not "candy cock" and Player is not FemalePreferred and a random chance of 1 in 4 succeeds:
 			now lollicockCheck is 1;
-		if CockName of Player is "candy cock" or Player is FemalePreferred:
-			now lollicockCheck is 0;
 		if lollicockCheck is 1:
 			if Player is not male:
 				say " a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a lovely red hard candy cock, much like the one you just finished enjoying, erupts from you, spurting a few excited streams of fluid as it settles into place.";
@@ -1082,7 +1086,7 @@ to say lollicock Use:
 
 dragon moelleux is a grab object. It is not temporary. It is fast.
 Usedesc of dragon moelleux is "[dragonmoelleuxuse]".
-the scent of dragon moelleux is "     The small chocolate cake smells rich and sweet, as well as a little spicy.".
+the scent of dragon moelleux is "The small chocolate cake smells rich and sweet, as well as a little spicy.".
 
 to say dragonmoelleuxuse:
 	if inafight is 1:
@@ -1103,23 +1107,23 @@ to say dragonmoelleuxuse:
 			decrease dam by ( dam / 5 );
 		now dam is dam / 10; [division by 10 to normalize]
 		increase dam by ( stamina of Player - 10 ) / 2; [stamina boosted damage]
-		say "Quickly swallowing the warm chocolate cake, you feel a growing heat welling up in your belly. Soon you can hold it in no longer and unleash a powerful gout of flame at the [Name entry], burning them for [dam] damage![hydraharming]";
+		say "Quickly swallowing the warm chocolate cake, you feel a growing heat welling up in your belly. Soon you can hold it in no longer and unleash a powerful gout of flame at [if enemy type entry is not 2]the [end if][EnemyNameOrTitle], burning them for [special-style-2][dam][roman type] damage![hydraharming]";
 		decrease monsterHP by dam;
 		now playerdam is ( playerdam / 3) / 10;
 		if Playerfireresist is 1:
 			now playerdam is ( playerdam / 2 );
-		if Playerfireresist is 2:
+		else if Playerfireresist is 2:
 			now playerdam is 0;
 		if Playerdam > 0:
-			say "     However, the flame does not leave you unscathed. You suffer [playerdam] damage!";
+			say "However, the flame does not leave you unscathed. You suffer [special-style-2][playerdam][roman type] damage!";
 			decrease HP of Player by playerdam;
 		ItemLoss dragon moelleux by 1;
 	else:
-		say "     That's probably not a good idea right now.";
+		say "That's probably not a good idea right now.";
 
 fizz-aux-pommes is a grab object. It is not temporary. It is fast.
 Usedesc of fizz-aux-pommes is "[fizz-aux-pommesuse]".
-the scent of fizz-aux-pommes is "     The bubbling drink smells of overwhelmingly sweet apple.".
+the scent of fizz-aux-pommes is "The bubbling drink smells of overwhelmingly sweet apple.".
 
 to say fizz-aux-pommesuse:
 	if inafight is 1:
@@ -1131,11 +1135,11 @@ to say fizz-aux-pommesuse:
 		ItemLoss fizz-aux-pommes by 1;
 		[follow the player attack rule;]
 	else:
-		say "     That's probably not a good idea right now.";
+		say "That's probably not a good idea right now.";
 
 vin-coeur is a grab object. It is not temporary. It is fast.
 Usedesc of vin-coeur is "[vin-coeuruse]".
-the scent of vin-coeur is "     rich and heavy (temporary desc!)".
+[the scent of vin-coeur is "     rich and heavy (temporary desc!)".]
 
 to say vin-coeuruse:
 	if inafight is 1:
@@ -1147,7 +1151,7 @@ to say vin-coeuruse:
 		ItemLoss vin-coeur by 1;
 		[follow the player attack rule;]
 	else:
-		say "     That's probably not a good idea right now.";
+		say "That's probably not a good idea right now.";
 
 gingerbread is a grab object.
 gingerbread has a Usedesc "[gingerbread Use]".
@@ -1155,18 +1159,16 @@ the scent of gingerbread is "The gingerbread cookie smells like cinnamon and gin
 
 to say gingerbread Use:
 	say "     You bite into the cookie with a satisfying crunch, devouring the small gingerbread man in a few quick bites.";
+	LineBreak;
 	gingerbreadinfect;
 	PlayerEat 3;
 
 to gingerbreadinfect:
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Gingerbread":
-			now MonsterID is y;
-			break;
+	setmonster "Gingerbread";
+	choose row MonsterID from Table of Random Critters;
 	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
-	infect "Gingerbread";
+	infect;
 	now non-infectious entry is true;
 
 cheesecake is a grab object. It is not temporary.
@@ -1177,6 +1179,7 @@ to say cheesecake Use:
 	if carried of cheesecake > 1:
 		say "     As you dig the cheesecake out of your bag, you notice the second slice stashed away next to the first and your tummy rumbles hungrily. Will you indulge and eat both slices now?";
 		if Player consents:
+			LineBreak;
 			say "     Pulling both slices of cheesecake from your bag, you quickly unwrap both before gorging yourself with the rich strawberry cake.";
 			cheesecakeinfect;
 			cheesecakeinfect;
@@ -1186,6 +1189,7 @@ to say cheesecake Use:
 			now cheesecakemode is 0;
 			PlayerEat 3;
 		else:
+			LineBreak;
 			say "     Keeping your gluttony in check, you pull only one slice of the tempting cheesecake from your bag, carefully unwrapping it and savoring the rich strawberry flavor in a few small bites.";
 			cheesecakeinfect;
 			ItemLoss cheesecake by 1;
@@ -1202,15 +1206,30 @@ to say cheesecake Use:
 	PlayerEat 3;
 
 to cheesecakeinfect:
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Cheesecake":
-			now MonsterID is y;
-			break;
+	setmonster "Cheesecake";
+	choose row MonsterID from Table of Random Critters;
 	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
-	infect "Cheesecake";
+	infect;
 	now non-infectious entry is true;
+
+Does the player mean grabbing gingerbread: it is likely.	[get gingerbread]
+Does the player mean using gingerbread: it is likely.	[use gingerbread]
+Does the player mean examining gingerbread: it is likely.	[look gingerbread]
+Does the player mean sniffing gingerbread: it is likely.	[smell gingerbread]
+Does the player mean littering gingerbread: it is likely.	[drop gingerbread]
+Does the player mean burninating gingerbread: it is likely.	[junk gingerbread]
+Does the player mean stashing gingerbread: it is likely.	[stash gingerbread]
+Does the player mean retrieving gingerbread: it is likely.	[retrieve gingerbread]
+
+Does the player mean grabbing cheesecake: it is likely.	[get cheesecake]
+Does the player mean using cheesecake: it is likely.	[use cheesecake]
+Does the player mean examining cheesecake: it is likely.	[look cheesecake]
+Does the player mean sniffing cheesecake: it is likely.	[smell cheesecake]
+Does the player mean littering cheesecake: it is likely.	[drop cheesecake]
+Does the player mean burninating cheesecake: it is likely.	[junk cheesecake]
+Does the player mean stashing cheesecake: it is likely.	[stash cheesecake]
+Does the player mean retrieving cheesecake: it is likely.	[retrieve cheesecake]
 
 [Recipes	]
 [crème abondante	1]

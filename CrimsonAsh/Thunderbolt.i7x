@@ -8,13 +8,12 @@ Version 1 of Thunderbolt by CrimsonAsh begins here.
 [  50: player refused horse sex                         ]
 
 ThunderTrackingVariable is a number that varies.
-ThunderboltRoomConnection is a number that varies.[@Tag:NotSaved]
+[ThunderboltRoomConnection is a number that varies.[@Tag:NotSaved]]
 
-an everyturn rule:
-	if Campus Thunder is resolved and Resolution of Campus Thunder is 2 and ThunderboltRoomConnection is 0: [event resolved the right way, room not connected yet]
+a postimport rule: [bugfixing rules for players that import savegames]
+	if Campus Thunder is resolved and Resolution of Campus Thunder is 2: [event resolved the right way, room not connected yet]
 		change the east exit of Thunderbolt's Stable to Greek Street;
 		change the west exit of Greek Street to Thunderbolt's Stable;
-		now ThunderboltRoomConnection is 1; [make sure that it connects the room only once]
 
 Section 1 - Events
 
@@ -65,8 +64,8 @@ to ThunderboltEncounter1:
 
 to ThunderboltEncounter2:
 	say "     Once again wandering the college property, you hear from behind some buildings the loud and unmistakable 'neigh!' of a horse. Peeking from behind a corner you gasp slightly as you spot the horse mascot Thunderbolt. He's hitched to a post in a make-shift stable surrounded by hay and a nearby trough full of water. But what really draws your eye is his raging equine erection, fully hardened and pulsing slightly. Turning to look your way he whinnies and starts to trot closer, only to be stopped by his leash tied to the post. The large stallion rears up and whinnies again in frustration. It's abundantly clear this impressive beast is in rut. He looks to you with pleading eyes, shakes his well-groomed mane and then turns to his side showing off a truly impressive musculature and nearly two feet of erect horse cock. Almost seems like... he's trying to seduce you by flaunting his equine body.";
-	say "     [bold type]What do you want to do now?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]What do you want to do now?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Mate with Thunderbolt?!";
 	say "     ([link]N[as]n[end link]) - Just... no. Walk away right now!";
 	if Player consents:
@@ -79,14 +78,13 @@ to ThunderboltEncounter2:
 			say "     Pressing forward the massive length strains to enter but with your natural wetness and beforehand preparation a single strong thrust is all it takes to penetrate your eager lips. Moaning loudly as nearly half of Thunderbolt's equine cock is forced into your slick cunt you press back against his shaft and dig your hands into the dirt below. Neighing in pleased passion the soccer mascot pushes more of his thick, veiny member into your clenching confines.";
 			WaitLineBreak;
 			say "     Feeding nearly every inch into your womanhood Thunderbolt bottoms up inside your quivering wetness before drawing back and thrusting into you again. The sheer force and pleasure of the first few thrusts nearly knocks you out, but you manage to get used to taking the feral member, greatly enjoying it pounding you into the soft ground below. Bottoming in and out of you, you can feel a trickle of drool run down your chin while more pre spurts into your womb. Grunting and neighing Thunderbolt gradually speeds up until he's thrusting with wild abandon, really hammering into you. Feeling his cock stiffen and twitch you can feel his full testicles slapping against your ass as with one final thrust into your womb he bottoms every inch inside you and cums. With a slight bulge pressing out of your tummy you feel him unload into you, triggering your own almost mind-shattering orgasm. Thick streams of horse seed spill into your bulging insides as you clench like a vice around his spurting equine member. Your whole world goes black as the intensity of your climax knocks you unconscious.";
-			NPCSexAftermath Player receives "PussyFuck" from Thunderbolt;
 		else: [those without a pussy get an anal horse-fuck]
 			say "     You keep him in your mouth as long as you can, but eventually the need to breathe wins out over whatever else you may desire, so you pull back from his tasty and now saliva-covered cock to examine your work. You can barely contain your lust as you quickly disrobe, still under the beast's underbelly. After removing the confines of your clothes you lick your lips, still tasting his pre on them and move your hand up to pat his soft fur indicating you're ready to be mounted. Moving onto all fours, you present your ass to the stallion. Taking the hint the smart beast neighs loudly in approval and begins to grind his giant horse cock against your lower back. Dragging his saliva- and pre-slickened member across your ass cheeks the team mascot rears back until the tip of his lengthy cock is pressing against your pucker. Moaning at the sudden pressure you once again bite your bottom lip in anticipation.";
 			say "     Pressing forward the massive length strains to enter but with your beforehand preparation a single strong thrust is all it takes to penetrate your eager hole. Moaning loudly as nearly half of Thunderbolt's equine cock is forced into your tight anus, you press back against his shaft and dig your hands into the dirt below. Neighing in pleased passion the soccer mascot pushes more of his thick, veiny member into your rear...";
 			WaitLineBreak;
 			say "     Feeding nearly every inch into your ass, Thunderbolt bottoms up inside you before drawing back and thrusting into you again. The sheer force and pleasure of the first few thrusts nearly knocks you out, but you manage to get used to taking the feral member, greatly enjoying it pounding you into the soft ground below. Bottoming in and out of you, you can feel a trickle of drool run down your chin while more pre spurts into your colon. Grunting and neighing Thunderbolt gradually speeds up until he's thrusting with wild abandon, really hammering into you. Feeling his cock stiffen and twitch you can feel his full testicles slapping against your ass as with one final thrust into your ass he bottoms every inch inside you and cums. With a slight bulge pressing out of your tummy you feel him unload into you, triggering your own almost mind-shattering orgasm. Thick streams of horse seed spill into your bulging insides as you clench like a vice around his spurting equine member. Your whole world goes black as the intensity of your climax knocks you unconscious.";
-			NPCSexAftermath Player receives "AssFuck" from Thunderbolt;
 		say "     When you awaken you feel sore but relieved, and... surrounded by warmth? Opening your eyes you see sitting above you with your head in her lap the lioness Ariana, still in her uniform and smiling down at you. 'Hey sweetie, you alright? I know Bolt can be... rough, but as I'm sure you've experienced, he's worth it,' she says, gazing over to her favorite feral horse, who is contently sleeping in the same area you remember him in. You notice a rather impressive puddle of mixed juices below him and you can still feel some of his seed sloshing in your full tummy. Although looking down you notice your legs and lower body have been washed off and re-clothed. 'I... hope you don't mind sweetie but I cleaned you off and dressed you, Bolt was on top of you when I came by to get him.' You're dazed but manage a smile and thank the pretty lioness. She returns the smile and gently helps you to wobbly feet, it's certainly going to be sore for a while but you feel so amazing that you can't complain. Giving you an arm Ariana speaks again, 'Feels good right? You know, you should join me and sis sometime, we come by every now and again to... relieve Bolt here, could be a grand time with the four of us.' She gives you a soft swat on the backside and bids you goodbye, watching you slightly limp away.";
+		NPCSexAftermath Player receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from Thunderbolt;
 		now ThunderTrackingVariable is 2; [horse sex for the player completed]
 		now Resolution of Campus Thunder is 2; [horse sex]
 		change the east exit of Thunderbolt's Stable to Greek Street;
@@ -182,11 +180,10 @@ instead of conversing the Thunderbolt:
 
 instead of fucking Thunderbolt:
 	say "     What exactly do you plan on doing with the horse?";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if Ariana is in Thunderbolt's Stable and Player is female:
+	if Ariana is in Thunderbolt's Stable and Eres is in Thunderbolt's Stable and Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "A foursome";
 		now sortorder entry is 1;
@@ -216,21 +213,23 @@ instead of fucking Thunderbolt:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "A foursome"):
 					say "[ThunderboltSex1]";
-				if (nam is "Get fucked (pussy)"):
+				else if (nam is "Get fucked (pussy)"):
 					say "[ThunderboltSex2]";
-				if (nam is "Get fucked (ass)"):
+				else if (nam is "Get fucked (ass)"):
 					say "[ThunderboltSex3]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the feral horse, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say ThunderboltSex1:
@@ -317,17 +316,16 @@ to say ArianaDesc:
 instead of conversing the Ariana:
 	say "     You walk up and say hello to the lovely lioness. 'Hey how have you been sweetie?' After some casual talk you eventually broach asking her about herself. She looks a little surprised but gives you a toothy smile. 'Well, I used to be a gymnast here, but now I sort of just hang around campus, beating sis at sports, annoying the football team and fucking the stallion,' she says, biting a finger and chuckling.";
 
-instead of fucking Ariana when Player is female: [if Player is not female, "fuck Ariana" only displays default text now]
+instead of fucking Ariana:
 	say "     What exactly do you plan on doing with the young lioness?";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if Ariana is in Thunderbolt's Stable:
+	if Eres is in Thunderbolt's Stable and Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "A foursome";
 		now sortorder entry is 1;
-		now description entry is "Involve Ariana and Eres in your fun with Thunderbolt";
+		now description entry is "Involve Eres and Thunderbolt in your fun with Ariana";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -342,17 +340,19 @@ instead of fucking Ariana when Player is female: [if Player is not female, "fuck
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "A foursome"):
 					say "[ThunderboltSex1]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the young lioness, shaking your head slightly as she gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 Section 5 - Eres NPC
@@ -407,17 +407,16 @@ to say EresDesc:
 instead of conversing the Eres:
 	say "     You walk up and say hello to the lovely lioness. Eres pokes her head up from a small journal she was writing in and gives you a shy smile. [first time]'Oh, hello there I don't think we've actually formally met. I'm Eres.' [only]She lays a paw out to shake, which you do. After some casual talk you ask her about herself. She flashes you a coy smile. 'I used to study economics here, you know before everything happened. I suppose now I just take it day by day, usually in the library reading about the past.' She gazes back down to her journal smiling fondly.";
 
-instead of fucking Eres when Player is female: [if Player is not female, "fuck Eres" only displays default text for now]
+instead of fucking Eres:
 	say "     What exactly do you plan on doing with the young lioness?";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if Eres is in Thunderbolt's Stable:
+	if Ariana is in Thunderbolt's Stable and Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "A foursome";
 		now sortorder entry is 1;
-		now description entry is "Involve Ariana and Eres in your fun with Thunderbolt";
+		now description entry is "Involve Ariana and Thunderbolt in your fun with Eres";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -432,17 +431,19 @@ instead of fucking Eres when Player is female: [if Player is not female, "fuck E
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "A foursome"):
 					say "[ThunderboltSex1]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the young lioness, shaking your head slightly as she gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 Thunderbolt ends here.

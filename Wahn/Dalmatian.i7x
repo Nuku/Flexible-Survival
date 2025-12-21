@@ -201,14 +201,13 @@ dalmatian fur is a grab object. [define early to resolve name conflicts]
 
 dalmatian male fur is a grab object.
 It is temporary.
-Usedesc of dalmatian male fur is "[DalmatianMaleFurUse]";
+Usedesc of dalmatian male fur is "[DalmatianMaleFurUse]".
 
 to say DalmatianMaleFurUse:
-	say "Pouring the pile of fur into your cupped palm, you rub it with a fingertip. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	say "     Pouring the pile of fur into your cupped palm, you rub it with a fingertip. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Dalmatian Male";
 
-instead of sniffing dalmatian male fur:
-	say "The fur has a pleasing, not too strong, animal-like scent.";
+Scent of dalmatian male fur is "The fur has a pleasing, not too strong, animal-like scent.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -218,15 +217,14 @@ dalmatian male cum is a grab object.
 dalmatian male cum is cum.
 dalmatian male cum is infectious.
 Strain of dalmatian male cum is "Dalmatian Bitch".
-Usedesc of dalmatian male cum is "[dalmatian male cum use]";
+Usedesc of dalmatian male cum is "[dalmatian male cum use]".
 
 to say dalmatian male cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
-instead of sniffing dalmatian male cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+Scent of dalmatian male cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.".
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -959,16 +957,11 @@ Definition: a person is DalSkinned:
 to SetMonsterRandomDalOffspring:
 	let randomnumber be a random number from 1 to 5;
 	if randomnumber is:
-		-- 1:
-			setmonster "Dalmatian Male";
-		-- 2:
-			setmonster "Dalmatian Bitch";
-		-- 3:
-			setmonster "Dalmatian Herm";
-		-- 4:
-			setmonster "Dalmatian Transman";
-		-- 5:
-			setmonster "Dalmatian Transbitch";
+		-- 1: setmonster "Dalmatian Male";
+		-- 2: setmonster "Dalmatian Bitch";
+		-- 3: setmonster "Dalmatian Herm";
+		-- 4: setmonster "Dalmatian Transman";
+		-- 5: setmonster "Dalmatian Transbitch";
 
 Section 3 - Items
 
@@ -976,17 +969,17 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "dalmatian cum"	"A tiny plastic shampoo bottle as you might find in a motel, filled with something milky white, thick and creamy. If you didn't know where it's from, you'd almost think it to be liquid soap rather than Darius's cum. You could drink it to quench your thirst, but who knows what else it might do to you..."	1	dalmatian cum
 
-instead of sniffing dalmatian cum:
-	say "You open the lid for a moment and take a sniff. Smells rather tasty actually, kinda nutty. You can't help but be tempted to take a swallow of it.";
+Scent of dalmatian cum is "You open the lid for a moment and take a sniff. Smells rather tasty actually, kinda nutty. You can't help but be tempted to take a swallow of it.".
 
 [dalmatian cum is a grab object.] [defined in Cum Items to prevent name conflicts]
 dalmatian cum is cum.
 dalmatian cum is infectious. Strain of dalmatian cum is "Dalmatian Bitch".
-Usedesc of dalmatian cum is "[dalmatian cum use]";
+Usedesc of dalmatian cum is "[dalmatian cum use]".
 
 to say dalmatian cum use:
 	say "     Lifting the tiny plastic bottle to your mouth, you let Darius's creamy cum run over your tongue and down your throat. Mmmmh, this stuff actually tastes fairly nice and your body calls for more. You can't help yourself and keep pouring cum into your mouth, right until you're hungrily sucking at the mouth of the bottle with it turned upside down.";
 	if Darius is visible:
+		project Figure of Darius_face_icon;
 		say "     Glancing over at you slurping down his cum, Darius lets out a hearty laugh. ";
 		if Player is female:
 			say "'Yeah babe, just swallow it all! If you like that one, I've got a whole lot more here for you...' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";
@@ -999,16 +992,16 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "dalmatian fur"	"A small tuft of white and black fur, held together by a rubber band. You bought it from Darius."	1	dalmatian fur
 
-instead of sniffing dalmatian fur:
-	say "     You sniff at the tuft of fur. It has a definitive smell of dog to it.";
+Scent of dalmatian fur is "You sniff at the tuft of fur. It has a definitive smell of dog to it.".
 
 [dalmatian fur is a grab object.] [defined earlier to prevent name conflicts]
 dalmatian fur is temporary.
-Usedesc of dalmatian fur is "[dalmatian fur use]";
+Usedesc of dalmatian fur is "[dalmatian fur use]".
 
 to say dalmatian fur use:
 	say "     Lifting the small tuft of fur with your fingers holding on to the rubber band around it, you brush the hairs over the inside of your other arm. It feels soft and tickles a little, then a lot, as the strands seem to slowly crumble away, leaving minute traces of silvery dust that vanishes into your skin.";
 	if Darius is visible:
+		project Figure of Darius_face_icon;
 		say "     Glancing over at you playing around with the fur you bought, Darius lets out a hearty laugh. ";
 		if Player is female:
 			say "'Damn babe, are you trying to become a dude? How about you rather come here and let me show you a good time? Then you'll have a nice spotted coat too and be much more fun all around.' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";

@@ -178,8 +178,8 @@ to say losetokoboldgang:
 to say beatthekoboldgang:
 	if Player is male:
 		say "     The last kobold, the leader with the blue scales, shakes as he falls to the ground on his back. 'This is... inconceivable! We were all beaten by a whelp like... you,' he groans. An idea comes to your head, that maybe you could show their 'leader' his place by taking him right here and now.";
-		say "     [bold type]Do you want to have some fun with the Kobold Gang?[roman type][line break]";
 		LineBreak;
+		say "     [bold type]Do you want to have some fun with the kobold gang?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Fuck the kobold!";
 		say "     ([link]N[as]n[end link]) - No, this defeat was humiliating enough.";
 		if Player consents:
@@ -193,7 +193,6 @@ to say beatthekoboldgang:
 
 to say KoboldGangSexMenu:
 	say "     What shall you do with them?";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -222,19 +221,21 @@ to say KoboldGangSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Fuck the Leader"):
 					say "[FuckKoboldGangLeader]";
-				if (nam is "Start an Orgy"):
+				else if (nam is "Start an Orgy"):
 					say "[KoboldGangOrgy]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You back away and shake your head.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say FuckKoboldGangLeader:

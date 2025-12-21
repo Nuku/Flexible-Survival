@@ -14,6 +14,11 @@ Version 1 of Joey by Qazarar begins here.
 [	1: warrior Joey, sexable                                   ]
 [	2: slut Joey, sexable                                      ]
 
+[ Energy of Joey                                             ]
+[	0: not accepted                                          ]
+[	1: never trained                                         ]
+[	2: in training                                           ]
+
 Section 1 - Basic Setup
 
 Table of GameCharacterIDs (continued)
@@ -74,13 +79,11 @@ instead of conversing the Joey:
 		say "     As you walk up to Joey, he gives a confident grin. 'Hey coach. Up for some more training?'";
 	else:
 		say "     As you walk up to Joey, he gives a seductive smile. 'Hey coach, is it time for more training?'";
-	WaitLineBreak;
 	say "[JoeyTalkMenu]";
 
 	[set up different talks for naive Joey, slut Joey, and warrior Joey]
 to say JoeyTalkMenu:
-	LineBreak;
-	say "What do you want to talk with Joey about?";
+	say "     What do you want to talk with Joey about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -113,21 +116,24 @@ to say JoeyTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Himself"):
 					say "[JoeyTalk1]";
-				if (nam is "Training"):
+					wait for any key;
+				else if (nam is "Training"):
 					say "[JoeyTalk2]";
-				if (name is "Attitude"):
+				else if (nam is "Attitude"):
 					say "[JoeyTalk3]";
-				wait for any key;
+					wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
-			say "     You step back from the Joey, shaking your head slightly as he gives a questioning look.";
+			say "     You step back from Joey, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JoeyTalk1: [talk about him]
@@ -150,18 +156,17 @@ to say JoeyTalk3: [attitude]
 Section 3 - Sex
 
 instead of fucking the Joey:
-	say "     'I don't know, maybe we should just focus on my training right now.'";
-	if (lastfuck of Joey - turns < 6): [he got fucked in the last 18 hours = 6 turns]
+	if Energy of Joey is 1: [never trained]
+		say "     'I don't know, maybe we should just focus on my training right now.'";
+	else if (lastfuck of Joey - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     Joey looks somewhat apologetic. 'Sorry, I'm still worn out from last time. You're almost more than I can handle. Definitely later though.'";
 	else if Libido of Joey is 0: [not convinced yet]
 		say "     'I know you pretty well now and all, but I don't think I'm quite ready for that.'";
 	else: [ready for sex]
 		say "     As you ask about getting intimate, Joey immediately looks interested, and waits for you to say more.";
-		WaitLineBreak;
 		say "[JoeySexMenu]";
 
 to say JoeySexMenu:
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -210,27 +215,29 @@ to say JoeySexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Get a blowjob"):
 					say "[JoeySex1]";
-				if (nam is "Suck Joey off"):
+				else if (nam is "Suck Joey off"):
 					say "[JoeySex2]";
-				if (nam is "Fuck the catboy"):
+				else if (nam is "Fuck the catboy"):
 					say "[JoeySex3]";
-				if (nam is "Get fucked by Joey"):
+				else if (nam is "Get fucked by Joey"):
 					say "[JoeySex4]";
-				if (nam is "Jerk each other off"):
+				else if (nam is "Jerk each other off"):
 					say "[JoeySex5]";
-				if (nam is "Tease Joey"):
+				else if (nam is "Tease Joey"):
 					say "[JoeySex6]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the catboy, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JoeySex1: [oral on the player]
@@ -277,10 +284,14 @@ ResolveFunction of Stray Catboy is "[ResolveEvent Stray Catboy]".
 The level of Stray Catboy is 5.
 Sarea of Stray Catboy is "Outside".
 
+when play begins:
+	add Stray Catboy to BadSpots of FurryList;
+	add Stray Catboy to BadSpots of MaleList;
+
 to say ResolveEvent Stray Catboy:
 	say "     While exploring the area, your attention is drawn by the sounds of battle. Curious about what is going on, you head in that direction, rounding a corner just in time to see the end of the fight, with a short feline lying prone on the ground, clearly worse for wear, and a feral wolf looming over him. From the rigid member hanging below the wolf, you can clearly tell what is about to happen. If you stepped in, you could almost certainly do something.";
-	say "     [bold type]Do you want to save the cat from their fate?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Do you want to save the cat from their fate?[roman type][line break]";
 	if Player consents: [Protecting Joey]
 		LineBreak;
 		now inasituation is true;
@@ -288,16 +299,19 @@ to say ResolveEvent Stray Catboy:
 		challenge "Feral Wolf Male";
 		if fightoutcome < 20: [Winning the fight]
 			say "     With the feral wolf defeated, you turn your attention to the feline on the ground, who is only just starting to climb to their feet. No longer occupied in battling the mutant, you notice much more detail about the cat before you. They are a little shorter than most you see around the city, and their overall features seem somewhat feminine, though the completely flat chest makes it more difficult to say for certain. That, combined with the slight bulge visible around his crotch, leads you to assume the feline is male. Finally the feline seems to gather his wits, and looks at you. 'Can you teach me?' You're thrown off slightly by the sudden statement, but before you can respond, he speaks again. 'Okay, let me try that again. I'm Joey, and I'm sick of getting beaten up by everything in this city. You really seem to know what you're doing, can you train me, please?' The catboy looks at you pleadingly.";
-			say "     [bold type]Do you want to train Joey?[roman type][line break]";
 			LineBreak;
+			say "     [bold type]Do you want to train Joey?[roman type][line break]";
 			if Player consents: [Agreeing to train Joey]
+				LineBreak;
 				say "     You nod, and tell the catboy that you will help train him. He claps his hands together, and looks at you expectantly. 'Fantastic! I can't wait to learn from someone as awesome as you.' He darts forward and hugs you, his head against your shoulder. 'If you have space for me, I'll come with you, so that you can train with me as often as possible. The best would be somewhere higher up, if there's a spot like that.' After several minutes of Joey expressing thanks and clinging to you, you finally get on your way, taking him to the library.";
-				now HP of Joey is 1;
+				AttemptToWait;
+				now Energy of Joey is 1;
 				move Joey to Grey Abbey 2F;
 				move Player to Grey Abbey Library;
 				now Resolution of Stray Catboy is 1; [won, training J]
 				now Stray Catboy is resolved;
 			else: [Denying training]
+				LineBreak;
 				say "     You shake your head and tell the catboy that you're too busy handling other things right now, and won't be able to train him. He looks crestfallen, and you think you see a glimmer of tears in the corners of his eyes, but he turns away before you can be sure. After that, he goes running off into the city. You doubt you'll be seeing him again soon.";
 				now Resolution of Stray Catboy is 2; [won, not training J]
 				now Stray Catboy is resolved;
@@ -316,11 +330,12 @@ to say ResolveEvent Stray Catboy:
 	now inasituation is false;
 
 to say JoeyTraining: [Training Joey] [{]
-	if HP of Joey is 3:
+	if Energy of Joey is 1:
 		say "     The first thing you do is explain to Joey exactly how the training is going to work. You'll definitely teach him some things the normal way, but that isn't enough to really learn how to fight. For that, he needs practical experience. Because of that, the main thing you'll be doing is taking him to fight creatures out in the city, and telling him how to improve, to let him put his skills to use. Once the catboy understands the purpose of the combat, you move on and explain the other major thing. If the fight doesn't feel real, if there are no consequences, he won't be able to learn anywhere near as well. Because of that, you won't step in for any of his fights or what may follow, unless his life is in serious danger. Joey is a bit more nervous about that, but you eventually convince him, and are ready to take him for his first day of training.";
+		now Energy of Joey is 2;
 	say "     When you tell him you're going to take him out for training, it doesn't take long at all for Joey to get ready, and to meet you at the door. He looks at you expectantly, leaving the training up to you. You know that the best way for him to get better at fighting is to fight something he can beat, though the thought of taking him to fight something he can't handle to watch what would happen is tempting.";
 	LineBreak;
-	say "What do you want to take Joey to fight?";
+	say "     What do you want to take Joey to fight?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -357,23 +372,25 @@ to say JoeyTraining: [Training Joey] [{]
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "A Latex Fox"):
 					say "[FoxTraining]";
-				if (nam is "A Centaur"):
+				else if (nam is "A Centaur"):
 					say "[CentaurTraining]";
-				if (nam is "A Feral Wolf"):
+				else if (nam is "A Feral Wolf"):
 					say "[WolfTraining]";
-				if (nam is "A Minotaur"):
+				else if (nam is "A Minotaur"):
 					say "[MinotaurTraining]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You tell Joey that you aren't going to be able to train him right now. He looks disappointed, but says he understands.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say FoxTraining:

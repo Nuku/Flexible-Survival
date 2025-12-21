@@ -12,7 +12,7 @@ Taur-compatible of garbage can shield is true.
 The AC of garbage can shield is 28.
 The effectiveness of garbage can shield is 30.
 Traits of garbage can shield is {"adventurous"}.
-The placement of garbage can shield is "body".
+The placement of garbage can shield is "shield".
 The descmod of garbage can shield is "You hold an aluminum garbage can lid strapped to your forearm as an improvised shield. It is painted gold with a bold, crimson [']V['] across the surface. Looks like the paint ran down its front a bit before drying, giving the [']V['] a bleeding look.".
 The slot of garbage can shield is "shield".
 
@@ -31,8 +31,8 @@ to say ResolveEvent Fallen Survivor:
 	say "     The sudden metallic noise from behind you makes you jump out of your boots almost, whirling around to see what caused it. You see the tail end of a large house-cat zip around the nearby corner, leaving behind a large disc of metal that must have fallen over as it pushed past it. Upon further examination, you see that it is a garbage can lid - one that has been used to create an improvised shield. There are loops of leather riveted to the inside to slip your forearm through, as well as a painted front. Seems like the survivor had a DIY streak before he succumbed to... whatever got to him. Looking back over to the guy, you realize that you were on the best way to join him in his mind-broken state. Getting into contact seems to have negative side effects. That cat really saved your bacon!";
 	WaitLineBreak;
 	say "     Glancing back over to the mind-broken survivor, you resolve not to get anywhere close to him again. Hmpf, but hey - at least you got a nice shield out of this dreary situation. Then you notice what seems to be a pale, translucent 'grease' stubbornly smeared across the shield, including on the inside. Could this be what put the guy into the state he is in? Possibly... which means even the shield is useless to you. Or could you wipe it off with some of the scattered and ripped articles of clothing ever-present on the abandoned streets? It'd be risky, as you can't know if you'll manage to get it all off, but that still might be worth it, in the current situation.";
-	say "     [bold type]Do you want to take the shield with you?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Do you want to take the shield with you?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure, it might be useful.";
 	say "     ([link]N[as]n[end link]) - Nah, leave it. Surely it also carries his deadly contagion!";
 	if Player consents:
@@ -64,6 +64,7 @@ to say ResolveEvent Sword Nest:
 	if Humanity of Player < 60: [falling to the nanites]
 		say "     Your mind feels fuzzy, and you have a strange desire to roll in the muck. Do you submit?";
 		if Player consents:
+			LineBreak;
 			say "     You run and jump into the slimy muck, a sick splosh sounding and echoing between the nearby buildings. The slime coats you as you roll with enthusiasm, losing your mind to the infection faster by the minute.";
 			SanLoss 15;
 			weakrandominfect; [most of first set don't affect researcher]
@@ -81,6 +82,7 @@ to say ResolveEvent Sword Nest:
 			say "     You feel another desire rear its head, to drink from the giant puddle.";
 			say "     Do you submit?";
 			if Player consents:
+				LineBreak;
 				SanLoss 15;
 				say "     You dip your [FaceSpeciesName of Player in lower case] head into the slime and suck greedily. It sates your hunger and thirst.";
 				PlayerDrink 15;
@@ -102,6 +104,7 @@ to say ResolveEvent Sword Nest:
 				say "     Another desire roars inside your head, causing you to start pulling the sludge up into your hands.";
 				say "     You manage to stop it, but will you let it continue?";
 				if Player consents:
+					LineBreak;
 					say "     You lose the will to resist and proceed to follow every desire and lust.";
 					say "     You grab the slime in your hands and pour it over your head, and then grab some more, and think about what to do with it next.";
 					if Cunt Count of Player is 1:
@@ -122,14 +125,18 @@ to say ResolveEvent Sword Nest:
 					follow the turnpass rule;
 					stop the action;
 				else:
+					LineBreak;
 					say "     You rein in your lusts and desires almost too late.";
 			else:
+				LineBreak;
 				say "     You wisely rein in your desires before they get away with you.";
 		else:
+			LineBreak;
 			say "     You master the desire, and look around paying more attention to detail.";
 	if a random number between one and 20 < Perception of Player:
 		say "     You spot a sword in the middle of the mess, coated so thoroughly with the juices that you suspect it was the target for the raids, and the source of the jubilation of victory. Its metal is cloudy and coated with thick slime, and the pommel is dried cum of some unknown creature, glowing white. It looks like a powerful, but dangerous weapon. Do you want to walk into the mess and take it?";
 		if Player consents:
+			LineBreak;
 			say "     You slosh through the mess, leaving a trail that fills after a couple of seconds. You get to the sword, and place it in your backpack, and trudge back.";
 			now fellforward is 1;
 			if a random number between 1 and 25 > Dexterity of Player:
@@ -149,6 +156,7 @@ to say ResolveEvent Sword Nest:
 			now Sword Nest is resolved;
 			now Resolution of Sword Nest is 1; [player waded in to get the sword]
 		else:
+			LineBreak;
 			say "     You leave the mess and its sword there without touching it.";
 			now Sword Nest is resolved;
 			now Resolution of Sword Nest is 2; [player left the sword]
@@ -158,9 +166,9 @@ to say ResolveEvent Sword Nest:
 
 An everyturn rule:
 	if the infected sword is wielded:
-		say "[line break]The sword feels slimy in your hand. Maybe you shouldn't be using it.[line break]";
+		say "[line break]The sword feels slimy in your hand. Maybe you shouldn't be using it.";
 		randominfect;
-		say "The infected sword changes you.[line break]";
+		say "The infected sword changes you.";
 
 Section 3 - Dirty Whip
 
@@ -197,10 +205,12 @@ to say ResolveEvent Destroyed Bushes:
 			say "You leave them alone.";
 	say "     Do you wish to look around?";
 	if Player consents:
+		LineBreak;
 		say "     In a nearby bush you find a riding saddle and riding boots, both women's. It seems as if a woman went riding in the park when the infection broke out. Her horse changed, and raped her. Since the clearing is larger than if the horse just fucked her, you assume she changed and submitted as well.";
 		if Perception of Player > a random number between one and 20:
 			say "     In one of the puddles of cum you find a whip with metal bits strung throughout it. It looks as if the rider carried it, and lost it in the fray. It is currently covered with cum, but if you have enough water, you could change that. Do you wish to?";
 			if Player consents:
+				LineBreak;
 				if carried of water bottle >= 3:
 					say "     You have to use a few bottles to wash off the whip, but you manage to get it clean and safe to use.";
 					say "     You pick up the now clean whip, and place it in your backpack. It looks like a good weapon.";
@@ -211,8 +221,10 @@ to say ResolveEvent Destroyed Bushes:
 				else:
 					say "     You don't have enough water. Maybe you could come back when you find more?";
 			if Resolution of Destroyed Bushes is 0:
+				LineBreak;
 				say "     Do you wish to pick it up anyway?";
 				if Player consents:
+					LineBreak;
 					say "     You pick up the dirty, cum soaked whip with difficulty as it slips about in your hand, the cum getting all over. You finally manage to get it into your backpack.";
 					infect "Black Equinoid";
 					infect "Black Equinoid";
@@ -221,8 +233,10 @@ to say ResolveEvent Destroyed Bushes:
 					now Resolution of Destroyed Bushes is 2; [grabbed the dirty whip]
 					now the Destroyed Bushes is resolved;
 				else:
+					LineBreak;
 					say "     You leave the whip where it is.";
 	else:
+		LineBreak;
 		say "     You leave the scene, avoiding the puddles, and make a mental note to not come back here again.";
 		now Resolution of Destroyed Bushes is 3; [didn't investigate the bushes / whip]
 		now Destroyed Bushes is resolved;
@@ -230,7 +244,7 @@ to say ResolveEvent Destroyed Bushes:
 An everyturn rule:
 	if the dirty whip is wielded:
 		now researchbypass is 1;
-		say "     The cum on the dirty whip slips down onto your hand.";
+		say "The cum on the dirty whip slips down onto your hand.";
 		infect "Black Equinoid";
 		now researchbypass is 0;
 

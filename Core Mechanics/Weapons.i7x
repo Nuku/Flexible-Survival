@@ -68,7 +68,7 @@ Weapon Damage of sharp screw is 6.
 Weapon Type of sharp screw is "Melee".
 Objsize of sharp screw is 1.
 Hitbonus of sharp screw is -1. [not a weapon]
-Scent of sharp screw is "The screw smells of metal, with a hint of sawdust."
+Scent of sharp screw is "The screw smells of metal, with a hint of sawdust.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -95,7 +95,7 @@ Weapon Damage of cleaver is 7.
 Weapon Type of cleaver is "Melee".
 Objsize of cleaver is 3.
 Hitbonus of cleaver is 0. [nothing special]
-Scent of the cleaver is "The heavy blade smells faintly of blood."
+Scent of the cleaver is "The heavy blade smells faintly of blood.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -333,7 +333,7 @@ Weapon Damage of dildo club is 5.
 Weapon Type of dildo club is "Melee".
 Objsize of dildo club is 3.
 Hitbonus of dildo club is 0. [nothing special]
-Scent of the dildo club is "The sex-toy club smells of latex and your humiliated foes."
+Scent of the dildo club is "The sex-toy club smells of latex and your humiliated foes.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -393,7 +393,7 @@ Weapon Damage of metal baseball bat is 8.
 Weapon Type of metal baseball bat is "Melee".
 Objsize of metal baseball bat is 3.
 Hitbonus of metal baseball bat is 0. [nothing special]
-Scent of metal baseball bat is  "The bat smells of metal and traces of smoke.".
+Scent of metal baseball bat is "The bat smells of metal and traces of smoke.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -405,7 +405,7 @@ Weapon Damage of nightstick is 6.
 Weapon Type of nightstick is "Melee".
 Objsize of nightstick is 3.
 Hitbonus of nightstick is 0. [nothing special]
-Scent of nightstick is "     The nightstick smells faintly of violent authority.".
+Scent of nightstick is "The nightstick smells faintly of violent authority.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -414,6 +414,7 @@ name	desc	weight	object
 wukongStaff is an armament. It is not temporary.
 understand "Wukong's staff" as wukongStaff.
 understand "staff" as wukongStaff.
+printed name of wukongStaff is "Wukong's staff".
 It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]".
 Weapon Damage of wukongStaff is 18.
 Weapon Type of wukongStaff is "Melee".
@@ -520,21 +521,21 @@ Hitbonus of zephyr bashing riot shield is 0. [nothing special]
 Scent of the zephyr bashing riot shield is "The Zephyr bashing riot shield smells faintly of suppressive authority.".
 
 to say RiotShieldAttackDesc:
-	say "     A black shield that Zephyr's riot security uses to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]RSProtectMode[end link] though, and direct your shield to more defensive purposes instead. ";
+	say "A black shield that Zephyr's riot security uses to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]RSProtectMode[end link] though, and direct your shield to more defensive purposes instead. ";
 
 riotshieldProtectMode is an action applying to one topic.
 
 understand "RSProtectMode" as riotshieldProtectMode.
 
 check riotshieldProtectMode:
-	if carried of zephyr bashing riot shield < 1, say "     What shield? You're not holding one right now." instead;
+	if carried of zephyr bashing riot shield < 1, say "What shield? You're not holding one right now." instead;
 
 carry out riotshieldProtectMode:
 	if zephyr bashing riot shield is wielded:
 		unwield zephyr bashing riot shield silently;
-		say "     You lower your shield and look at it, contemplating how you can defend yourself instead of using it as a blunt weapon.";
+		say "You lower your shield and look at it, contemplating how you can defend yourself instead of using it as a blunt weapon.";
 	else:
-		say "     You look at your shield, contemplating how you can defend yourself instead of using it as a blunt weapon.";
+		say "You look at your shield, contemplating how you can defend yourself instead of using it as a blunt weapon.";
 	ItemLoss zephyr bashing riot shield by 1;
 	ItemGain zephyr protective riot shield by 1;
 

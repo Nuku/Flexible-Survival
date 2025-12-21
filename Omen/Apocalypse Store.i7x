@@ -13,8 +13,8 @@ Sarea of Clothing Store is "Outside".
 
 to say ResolveEvent Clothing Store:
 	say "     As you explore the city, you come across an outlet mall. Most of the buildings have been destroyed, the area is littered with debris. Trash cans are blown over, spilling their contents into the streets. All the cars here are damaged beyond repair, though one of them has somehow maintained its car alarm which continues to go off. Most of the cars are simply smoldering chunks of metal, fire having stripped them of anything useful. You keep your distance from these cars, doing your best to avoid the strong smell of burning tires. Some of the buildings are still standing, for now at least; you could try to enter one if you wish.";
-	say "     [bold type]Do you try and enter one of the stores?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Do you try and enter one of the stores?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure - there might be something useful.";
 	say "     ([link]N[as]n[end link]) - No, its too dangerous.";
 	if Player consents:
@@ -28,7 +28,6 @@ to say ResolveEvent Clothing Store:
 		ItemGain Apocalypse Scarf by 1;
 		WaitLineBreak;
 		say "     [bold type]Do you try to look around some more, or take what you have and head back?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - There's a equipment section on the right side of the store, it's possible something survived the fire.";
 		say "     ([link]N[as]n[end link]) - No, you're satisfied with what you found.";
 		if Player consents:
@@ -56,9 +55,9 @@ It is not temporary.
 The AC of Apocalypse Skirt is 0.
 The effectiveness of Apocalypse Skirt is 0.
 Traits of Apocalypse Skirt is {"slutty", "grungy"}.
-The placement of Apocalypse Skirt is "waist".
+The placement of Apocalypse Skirt is "body".
 The descmod of Apocalypse Skirt is "A torn and burnt mini skirt barely covers your lower [BodyName of Player in lower case] body.".
-The slot of Apocalypse Skirt is "waist".
+The slot of Apocalypse Skirt is "legs".
 the scent of Apocalypse Skirt is "There is a faint smell of smoke lingering on the item of clothing.".
 
 Apocalypse Shorts is a grab object.
@@ -68,9 +67,9 @@ Plural of Apocalypse Shorts is true.
 The AC of Apocalypse Shorts is 0.
 The effectiveness of Apocalypse Shorts is 0.
 Traits of Apocalypse Shorts is {"sporty", "grungy"}.
-The placement of Apocalypse Shorts is "waist".
-The descmod of Apocalypse Shorts is "A torn and burnt pair of running shorts covers your legs.".
-The slot of Apocalypse Shorts is "waist".
+The placement of Apocalypse Shorts is "body".
+The descmod of Apocalypse Shorts is "A torn and burnt pair of running shorts cover your legs.".
+The slot of Apocalypse Shorts is "legs".
 the scent of Apocalypse Shorts is "There is a faint smell of smoke lingering on the item of clothing.".
 
 Apocalypse Hoodie is a grab object.
@@ -80,9 +79,9 @@ Taur-compatible of Apocalypse Hoodie is true.
 The AC of Apocalypse Hoodie is 0.
 The effectiveness of Apocalypse Hoodie is 0.
 Traits of Apocalypse Hoodie is {"grungy"}.
-The placement of Apocalypse Hoodie is "chest".
+The placement of Apocalypse Hoodie is "body".
 The descmod of Apocalypse Hoodie is "A torn and burnt hoodie covers your [bodydesc of Player] body.".
-The slot of Apocalypse Hoodie is "chest".
+The slot of Apocalypse Hoodie is "back".
 the scent of Apocalypse Hoodie is "There is a faint smell of smoke lingering on the item of clothing.".
 
 Apocalypse Scarf is a grab object.
@@ -92,7 +91,7 @@ Taur-compatible of Apocalypse Scarf is true.
 The AC of Apocalypse Scarf is 0.
 The effectiveness of Apocalypse Scarf is 0.
 Traits of Apocalypse Scarf is {"grungy"}.
-The placement of Apocalypse Scarf is "face".
+The placement of Apocalypse Scarf is "head".
 The descmod of Apocalypse Scarf is "A torn and burnt scarf covers your [FaceSpeciesName of Player in lower case] face.".
 The slot of Apocalypse Scarf is "face".
 the scent of Apocalypse Scarf is "There is a faint smell of smoke lingering on the item of clothing.".

@@ -49,14 +49,14 @@ to say ResolveEvent Campus Lovers:
 		say "     [link](3)[as]3[end link] - Slip away, and avoid these two from now on. (Will lock all further content with these two.)";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link] to watch, [link]2[end link] to leave or [link]3[end link] to avoid all further contact.";
+		LineBreak;
 		if calcnumber is 1:
-			LineBreak;
 			say "     You sneak closer to the two and hide around a corner within earshot, slowly peeking your head out to see. 'I never thought I'd see you again after all of this, Coach!' the feline expresses with relief. Coach Weber nods his head. 'Well, I'm glad you found me. Question is, how did you recognize me? I don't exactly look the same as I used to, I'm a dog!' the canine chuckles, his solid chest shaking with each laugh. Jadako lets out a little laugh, pointing to the large man's jacket. 'It's kinda hard to mistake your jacket.' 'Hey, speaking of clothes, don't you think you should put something on?' the transformed teacher asks with concern, gesturing to the former student's exposed crotch. 'No way, I feel great like this! Here...' The cat places his hands around his teacher's waist, pulling down his athletic shorts. You're sure the hound's face would be blushing if he were still human as his former pupil disrobes him, although he seems to enjoy it. His un-erect member slowly twitches, as it begins to swell and push out of its sheath. His baseball-sized nuts hang low in a full sack, already churning with cum.";
 			say "     The transformed teen leans closer to the well-built anthro, running a hand down his chiseled, muscular chest. 'You know, sir, I always thought you were kind of... hot... With everything going on, we could always, you know...' he suggests, his own penis already at full erection. It looks much smaller than the dog's, only half as thick and a couple inches shorter, but still solid in its own right. Coach Weber's throat rumbles, as he places a hand on the side of the young man's face. 'You were always such a good student, Jadako... Why don't I give you a reward for all your hard work?' Tossing his jacket aside, the canine walks a few steps to where a nearby wall has a small decorative landing, sitting down on the low ledge and leaning back against the wall. With his muscular legs spread and his shaft standing proudly erect, the man pats the tops of his thighs invitingly. 'Come and get it, Jadako... Come and get your extra credit,' the dog commands, laughing a bit at his own joke.";
 			WaitLineBreak;
@@ -68,19 +68,17 @@ to say ResolveEvent Campus Lovers:
 			now CampusLoversTrackingVariable is 1;
 			now Resolution of Campus Lovers is 1; [watched them #1]
 		else if calcnumber is 2:
-			LineBreak;
 			say "     Not wanting to risk these two unknown morphs, you slowly back away. After you get far enough away and it seems they haven't noticed you, you take a slight jog to put a greater distance between you and them. As you look back to make sure they aren't following you, you see the two against the wall, the cat slowly sliding onto the dog's cock. At least they aren't after you.";
 			now Resolution of Campus Lovers is 2; [didn't watch them #1]
 		else:
-			LineBreak;
 			say "     Something just doesn't sit right with you about these two. You make sure to get away without being detected, before making a mental note to avoid all further contact with the two.";
 			now CampusCoupleRelationship is 100;
 			now Resolution of Campus Lovers is 100; [avoiding them]
 			now Campus Lovers is resolved;
 	else if CampusLoversTrackingVariable is 1: [second time]
 		say "     You're out exploring the campus when you spot a group of people, most likely students, conversing next to the fountain. They seem sane enough, considering they're all fully clothed. The students are too far away for you to hear the specifics of their conversation, but the way they keep looking over their shoulders seems to imply they're gossiping.";
-		say "     [bold type]Do you want to eavesdrop on their gossip?[roman type][line break]";
 		LineBreak;
+		say "     [bold type]Do you want to eavesdrop on their gossip?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - A little listen couldn't hurt...";
 		say "     ([link]N[as]n[end link]) - No way, who knows what they'd do if they caught you!";
 		if Player consents:
@@ -97,8 +95,8 @@ to say ResolveEvent Campus Lovers:
 		now CampusLoversTrackingVariable is 2; [second event done]
 	else if CampusLoversTrackingVariable is 2: [third time]
 		say "     Setting out on the campus in search of anything interesting, your ventures bring you close to the dorms of the college. Some of the rooms are probably abandoned, so it might not be too bad of an idea to peek through the windows for any supplies. Unfortunately, it seems most of the rooms have nothing of value. Just as you are about to give up, you hear the faint sound of someone moaning from one of the windows ahead of you. You sneak along the side of the building to where you heard the noise, and have a little peek. Inside, you see a familiar looking feline and canine going at it. The cat is on his back, legs sticking out on both sides, while the dog is between them, thrusting inside of Jadako. 'O-oh yeah! Take me harder, Coach!' the lithe anthro moans, as you pull your head away from the window.";
-		say "     [bold type]It looks pretty steamy in there. While you don't think you'll get anything out of it, do you want to stay and watch the action?[roman type][line break]";
 		LineBreak;
+		say "     [bold type]It looks pretty steamy in there. While you don't think you'll get anything out of it, do you want to stay and watch the action?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Watch the two lovers get each other off.";
 		say "     ([link]N[as]n[end link]) - Scram. It's a private moment!";
 		if Player consents:

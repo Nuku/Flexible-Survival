@@ -33,16 +33,16 @@ Sarea of Old Record Store is "Outside".
 to say ResolveEvent Old Record Store:
 	say "     Walking along and scouting for danger around every other turn, you find your steps taking you to someplace that you aren't particularly familiar with. Surprised by the fact that your body has suddenly gained an awareness all its own, you don't think to stop yourself as you follow an unseen path to an old music store that looks as though it has seen much, much better days. Even before the so-called apocalypse, you don't actually remember having seen a music shop in the neighborhood where you lived, not even in the big city really. After iPods, cell phones and the likes started to come out and the internet became a hospice for people pirating bootleg music via unsecure web links, music stores like this one had become a relic of a past no one remembered or cared about.";
 	say "     A queer smile slips across your [FaceSpeciesName of Player in lower case] face as you make your way over to the window of the shop. Trying to peek to the best of your ability, you can't really get a good look of what's inside of the building[if CityPowerOn is true], despite having restored power to the city[end if]. Grunting and then shrugging, you prepare to turn away from the music store when you hear the telltale -click- of the front door being opened. Hastily, you crouch down to get on your guard and wonder if this is about to turn into some kind of devious mutant trick. When nothing happens after several seconds, you feel your nerves start to calm and your muscles unclench as a sense of safety washes over you. Not knowing what's going on here, you find yourself wondering if you should take a chance and go into the darkened storefront.";
-	say "     [bold type]Should you go in?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Should you go in?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
 		LineBreak;
 		say "     'Nothing ventured, nothing gained', someone once told you, and you can't help but think that said person might have been right for once. Taking a deep breath to draw up some confidence, you make your way over to the opened door, pull the barrier open, and then take a few timid steps inside. You instantly find yourself swarmed with the sounds of a weird style of music playing - a strange mix of bluegrass and acid jazz that somehow seems to work - as well as whispered words from unseen people having some sort of important discussion. At least you would guess the argument is significant by the tone of the utterances. Eyes swiftly tracking the area of the store from left to right and then up to down, you find yourself growing very confused when you don't actually see anybody. The lights are flicking on above you, illuminating the surrounding area, yet this is kinda confusing since it didn't look like this was so from the outside. A trick of the light perhaps?";
 		say "     Despite this, however, the whispers seem to grow somewhat quieter around you, as if your presence has become an inquiry to those unseen. Not believing in ghosts, since no such things could possibly exist, you wonder if this is some kind of strange mutant ploy. That's when the screech of a record needle scratching across a vinyl surface causes you to hiss in pain. Grunting in annoyance, you shake your head, wanting desperately to forget that noise ever happened, before you see a flicker from the back room that draws your attention. Not knowing what to do, you find yourself at the crossroads of yet another decision.";
-		say "     [bold type]Should you go in or should you turn tail and flee?[roman type][line break]";
 		LineBreak;
+		say "     [bold type]Should you go in or should you turn tail and flee?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Go in.";
 		say "     ([link]N[as]n[end link]) - Turn tail and flee.";
 		if Player consents:
@@ -63,6 +63,7 @@ to say ResolveEvent Old Record Store:
 			say "     No one ever does.";
 			WaitLineBreak;
 			say "     Not knowing what's going on, but not liking this craziness anymore, you decide to split while the getting's good. Rushing out of the front door, the old boombox in hand, you make your way down the street and back to the bunker at top speeds. Behind you, the door to the music shops quietly shuts and then locks itself, but only after the figure of an old man walks by the window. Obviously, you've just been become the butt of someone's elaborate prank... right?";
+			AttemptToWait;
 			now BoomBox is in the Bunker;
 			move player to the Bunker;
 			now Resolution of Old Record Store is 1; [found boombox]
@@ -83,10 +84,9 @@ Section 4 - Playing Music
 Boombox is a object.
 It is fixed in place.
 
-Description of BoomBox is "An old jam machine that looks as though it had once been something very popular. Strangely enough, and despite the age of the machine, there is little wear and tear on the outside covering of the device. Perhaps whoever owned it kept the machine in a secure place so as to make sure that it wouldn't get damaged? Even more strange, the music player works... without power. Maybe if you pressed [bold type]play[roman type] the machine might start to work?".
+Description of BoomBox is "     An old jam machine that looks as though it had once been something very popular. Strangely enough, and despite the age of the machine, there is little wear and tear on the outside covering of the device. Perhaps whoever owned it kept the machine in a secure place so as to make sure that it wouldn't get damaged? Even more strange, the music player works... without power. Maybe if you pressed [bold type]play[roman type] the machine might start to work?[line break]".
 
-instead of sniffing BoomBox:
-	say "     The faint scent of good old times seem to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.";
+Scent of BoomBox is "     The faint scent of good old times seem to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.".
 
 Instead of using BoomBox:
 	say "[bold type]Play[roman type]";
@@ -98,8 +98,8 @@ Understand "music" as BoomBoxPlay.
 Understand "turn on" as BoomBoxPlay.
 
 Check BoomBoxPlay:
-	if BoomBox is in the bunker and the BoomBox is not visible, say "     Want music, go to the Bunker! :D" instead;
-	if BoomBox is not in the bunker, say "     You have nothing to play." instead;
+	if BoomBox is in the bunker and the BoomBox is not visible, say "Want music, go to the Bunker! :D" instead;
+	if BoomBox is not in the bunker, say "You have nothing to play." instead;
 
 Carry out BoomBoxPlay:
 	say "     Looking over the old styled machine you find yourself wondering what flavor of music would be good to listen to right now. There are several switches, all with certain types of music on them, so you have options.";
@@ -109,7 +109,7 @@ musicmessage is a text that varies.
 
 to say musicsession:
 	say "     Today you feel like some...";
-	wait for any key;
+	AttemptToWait;
 	sort the table of Music Selection in sortorder order;
 	change the current menu to table of Music Selection;
 	carry out the displaying activity;
@@ -142,19 +142,19 @@ This is the musiclisten rule:
 	else if title entry is "R&B":
 		now musicmessage is "     Looking at the working jam box, you find yourself going over the knobs before finally coming to [italic type]R&B[roman type] and then pressing the button. Like a storm coming in from the sea, the bunker is soon filled with the mournful sounds of rhythmic blues music spilling out into the small area. Going to sit down on one of the cots in the room, you let your head bob in time with the instruments, and you can almost hear someone singing in time with the melody. The music makes you imagine yourself driving down the road in a pop-top car while letting your hair dance in the wind as you speed down the highway.[line break][line break][R&Bfriends]";
 		follow the turnpass rule;
-	If title entry is "Rock and Roll":
+	else if title entry is "Rock and Roll":
 		now musicmessage is "     The sounds of Rock and Roll soon pulse out from the beat machine as you press the button denoted as R&R. The sounds coming from the jam machine are a mix of electric guitars and drums, and you find that it actually takes you a while to get used to this kind of [italic type]noise[roman type] before you can stand the sounds.[line break]     When you do, however, you find yourself imagining yourself around a large number of screaming fans, all cheering for a leather-clad group of musicians working in sync together to jam their hearts out. A slight snap of your hips follows a hop and before you know it you are dancing your own heart out as your blood begins to quicken within your veins. Maybe this isn't so bad after all.[line break][line break][RockandRollfriends]";
 		follow the turnpass rule;
-	If title entry is "Ocean":
+	else if title entry is "Ocean":
 		now musicmessage is "     Pressing the button marked as [italic type]ocean[roman type], you find yourself somewhat confused as you notice that the swaying rhythm of the sea lapping at the shore starts to play out across the room. Instantly, you feel somewhat sleepy and you go over to one of the cots in the room and then start to close your eyes to sleep.[line break]     The instant you shut your eyes, you can see the sights of calm blue waters rushing across clear white sands, while dolphins flip around up and down inside of these waters. Whales spray water from their blowholes, and you can't help but smile as you suddenly feel so warm and content within yourself. The feeling that someone is calling you makes you arch an eyebrow as you wonder if you had heard right...[line break][line break][Oceanfriends]";
 		follow the turnpass rule;
-	If title entry is "Insert Tape A":
-		now musicmessage is "     Realizing that you [']borrowed['] both of those tapes from the music shop without meaning to, you shrug and think that you'll take them back later before popping one into the boombox and then pressing PLAY. Quietly, the background music of the song plays and you find yourself nodding your head as you recall the song. A man's voice fills up the bunker and soon you are silently mouthing the words to his song in time with the lyrics being sung.[line break]     Old memories come flooding back into you from years ago, and without meaning to you start to sway back and forth while nodding your head around almost drunkenly. Amazing what old music can do to someone. This would be a good time for you to go out and find some music, preferably with a male singer, that you (the player) likes to listen to as well. It would make this scene much better. (Thanks for playing Flexible Survival by the way!)[line break]";
+	else if title entry is "Insert Tape A":
+		now musicmessage is "     Realizing that you [']borrowed['] both of those tapes from the music shop without meaning to, you shrug and think that you'll take them back later before popping one into the boombox and then pressing PLAY. Quietly, the background music of the song plays and you find yourself nodding your head as you recall the song. A man's voice fills up the bunker and soon you are silently mouthing the words to his song in time with the lyrics being sung.[line break]     Old memories come flooding back into you from years ago, and without meaning to you start to sway back and forth while nodding your head around almost drunkenly. Amazing what old music can do to someone. This would be a good time for you to go out and find some music, preferably with a male singer, that you (the player) likes to listen to as well. It would make this scene much better. (Thanks for playing Flexible Survival by the way!)";
 		follow the turnpass rule;
-	If title entry is "Insert Tape B":
-		now musicmessage is "     Seeing that you've accidentally pocketed both of the cassettes from the old music shop, you smile sheepishly before reminding yourself to go and return them soon. Figuring that you've already eaten the [']poison['] on this one, you shrug as you go over to pop the cassette into the boombox and then hit the PLAY button.[line break]     Like a flash, the sounds of something slightly ambient come over the speakers of the jam box, and without thinking you let your body move along with the rhythm of the music echoing out at you.[line break]     A woman's voice soon follows the instrument's rhythm, and you laugh before you can stop yourself as her voice just washes over you like a wave. Shaking your hips and singing in time with her, this would be a good time for you (the player) to go out and find your favorite female artist to listen to. It would make this experience so much better for you. (Thanks for playing Flexible Survival by the way!)[line break]";
+	else if title entry is "Insert Tape B":
+		now musicmessage is "     Seeing that you've accidentally pocketed both of the cassettes from the old music shop, you smile sheepishly before reminding yourself to go and return them soon. Figuring that you've already eaten the [']poison['] on this one, you shrug as you go over to pop the cassette into the boombox and then hit the PLAY button.[line break]     Like a flash, the sounds of something slightly ambient come over the speakers of the jam box, and without thinking you let your body move along with the rhythm of the music echoing out at you.[line break]     A woman's voice soon follows the instrument's rhythm, and you laugh before you can stop yourself as her voice just washes over you like a wave. Shaking your hips and singing in time with her, this would be a good time for you (the player) to go out and find your favorite female artist to listen to. It would make this experience so much better for you. (Thanks for playing Flexible Survival by the way!)";
 		follow the turnpass rule;
-	If title entry is "Off":
+	else if title entry is "Off":
 		now musicmessage is "     Not feeling like listening to any music right now, you decide to turn the boombox off. However, what you come to find is that there is no Off button on the machine. What the heck?";
 	decrease the menu depth by 1;
 	rule succeeds;
@@ -247,7 +247,7 @@ to say R&Bfriends:
 
 to say RockandRollfriends:
 	if Sarah is in the bunker:
-		say "     You find yourself getting down with Sarah as you and she dance together[if Player is HasTail] while shaking your tails in time with each other[end if]. Listening to the other bark and then whip her head around as though caught in a frenzy, you have to laugh as you notice the once somewhat uptight female letting herself go in a therapeutic release of inhibitions.";
+		say "     You find yourself getting down with Sarah as you and she dance together[if tail of Player is not empty] while shaking your tails in time with each other[end if]. Listening to the other bark and then whip her head around as though caught in a frenzy, you have to laugh as you notice the once somewhat uptight female letting herself go in a therapeutic release of inhibitions.";
 		say "     Brushing up beside her to feel Sarah's furry body rolling against your own, you suddenly wish that both of you were in a normal bar doing this while getting drunk off of shared vodka and rum while dance lights flash around both your bodies. Maybe when all of this is over you and she could have your own private dance session together. Whether that will be with the husky female dancing on your lap or in your bed, well, the jury is out on that one.";
 		if SarahPups > 0:
 			say "     All around you, the puppies seem to be watching their mother curiously as the older female just moves and sways without her usual flustering or timid mannerisms embellishing her actions. Some of the pups try and mimic the older husky's maneuvers, but in the end they mostly seem to just fall over each other cutely.";

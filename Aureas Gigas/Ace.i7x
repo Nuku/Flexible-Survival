@@ -12,7 +12,7 @@ Refueling is a situation.
 ResolveFunction of Refueling is "[ResolveEvent Refueling]".
 Prereq1 of Refueling is Avian Tent.
 The Prereq1Resolution of Refueling is { 1, 2 }.
-Sarea of Refueling is "Forest";
+Sarea of Refueling is "Forest".
 
 when play begins:
 	add Refueling to BadSpots of MaleList;
@@ -22,7 +22,7 @@ when play begins:
 to say ResolveEvent Refueling:
 	say "     As you travel down a dusty path through the forest you come across the ruins of an aged dollar store, the outside looks thoroughly ransacked with shards of glass from broken car windshields and shredded cardboard lies strewn all around. Some plastic bags flutter listlessly about in the wind. A massive eighteen-wheeler in the back has been flipped on its side by a large redwood and two elms. One of the back doors is open, indicating that the truck was being unloaded when P-Day started. Hoping to find something useful you peek inside to see a variety of boxes that have been shredded to bits. Based on the bite and scratch marks it would seem like a pack of wolves found cargo before you. The few boxes that seem relatively untouched contain items like laundry detergent, brooms, and paper towels. Makes sense that the feral beasts would ignore those remnants of society no longer useful in this post-apocalyptic environment. With the truck a scavenging bust you venture in the back area of the store hoping to have more luck inside the storage room in back of the store.";
 	say "     The faintly rusted hinges creak as you open the heavy metal door. Interestingly the storage room seems relatively untouched. Looks like the wolves weren't able to find a way inside this room. You prop open the door with a box of detergent and begin searching inside the storeroom. To your disappointment, the backroom seems relatively bereft of supplies, with only items like toys, electronic fans, and some cleaning products remaining. Unfortunately, it looks like you came here too late, and some other somewhat sane scavengers found and looted the place before you came in. With the way the world is now, it makes sense that all the places known to have tons of supplies sitting out would be some of the first targets to get looted. As you walk by the door to the storefront, you hear some grunts and moans coming from the other side of the door. It seems like you are not the only one inside the store!";
-	WaitLineBreak;
+	wait for any key;
 	project Figure of Ace_icon;
 	say "     Keeping a low profile, you step slowly and carefully as you try to find a vantage point to view the origin of the sounds. Due to the way the sounds echo off the walls, the individuals responsible for the carnal sounds are in the front of the store. As you carefully walk down the frozen foods aisle, you can now see the figures responsible for making all the commotion by the checkout station, Izzy the cuckooess who has a penchant for getting pounded by hot studs, and 'Ace' the former fighter jet pilot turned anthro osprey who was convinced by Izzy and her mate Gray to join their small settlement. The pair are engaged in a serious make out session, their beaks pressed close and tongues sensually moving together. Not content with simply some oral action, the couple's hands begin to roam across each other's bodies.";
 	say "     With a domineering tone, the former military man exclaims, 'So the horny little slut couldn't wait until she got back to camp to serve her master's cock.' His taloned hand squeezes one of her breasts then runs it down her slim waist and the small of her back before firmly grabbing the needy femme's ass. The licentious woman moans and replies cheekily, 'I always get what I want, flyboy.' She then unzips his flight suit and reaches for his crotch while whispering, 'And I think you want what I want as well...' She then pulls out the hunky male's girthy ten inch cock and starts stroking it. Once his cock is fully erect, the osprey pushes his submissive partner onto the checkout counter and spreads her legs. The brown and white feathered pilot then lines his cock to rub up against the folds of the vivacious damsel's cunt. 'Beg for it... I need to know who owns this pussy,' commands the raptor as he wraps a hand around his pliant paramour. Pleading with a sense of desperate need, the slender female begs, 'You... Sir!'";
@@ -31,11 +31,12 @@ to say ResolveEvent Refueling:
 	say "     Opening her eyes, the lustful damsel gets a mischievous look and taunts, 'That all you can do? And here I thought fighter pilots were experts at hitting things fast and hard.' Inflamed by the biting comments, the ex-pilot forcefully grabs the back of his companion's head and utters, 'Oh I can do fast and hard...' He then slams his rod back into her womanhood and delivers a fierce swat to her booty. The cuckooess flinches from the pain, but that does not prevent the dommy raptor from continuing to spank her ass. The sound of the strong strikes echoes through the store. You see a hint of redness on the skin underneath the feathers. Once he feels his female partner's impudence has been fully punished, he orders her to give him a good view of her holes. Wincing in pain, the femme spreads her cheeks, giving her bull the sight of her dripping pussy and asshole.";
 	WaitLineBreak;
 	say "     Emboldened by seeing his bratty sub turned into a lusty pliant mess, the athletic pilot begins fucking full force. The cuckoldress underneath him moans loudly and exclaims, 'Don't stop master! Keep going!' This encouragement is accompanied by the hotwife rocking her hips. The birdlike hunk's muscles start to tense up as the pair climax. Letting out a loud cry the masculine avian unleashes his load into the adulteress's depths. The two take a short moment to catch their breath before looking around and noticing your presence. Recognizing you, the cuckoo female greets you warmly, 'Nice seeing you again! Did you like the view?' You walk over and explain how you were scouting the location for supplies and heard some noises and wanted to investigate. The pair look at two shopping carts filled with supplies, Ace says, 'Sorry we kinda took all the supplies here. Though if you were willing, I'd pay you to escort us back to camp with a bit of the food.' It seems like an easy job to get a bit of food, if you are interested.";
-	say "     [bold type]Do you want help the pair haul the food back to their camp?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Do you want help the pair haul the food back to their camp?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Help.";
 	say "     ([link]N[as]n[end link]) - Don't help.";
 	if Player consents:
+		LineBreak;
 		say "     The prospect of food for a quick deviation sounds pretty good so you agree. 'Let's get this show on the road then,' the osprey cheerily commands. While walking down a trail back to their settlement, the former pilot and you get to talking about your background with the city. Curious about his background you ask him about it. Nostalgia echoes through his voice as he begins, 'Flying has always been a big part of my life. My mom was a flight attendant for Blue Jay Airways and dad was a mechanic at an airport. We used to go to a lot of air shows back when I was kid. The flight maneuvers were amazing to watch, and I imagined pulling some of the crazy tricks. I figured the best way to do that would be a pilot for the Air Force. I hope I'm still able to fly after all this.' The tone of his voice indicates the passion he has for his profession.";
 		say "     While Ace and you chat further, a rustling in a bush puts you on edge, but when a tiny rabbit hops out, the three of you relax. Feeling a little left out Izzy asks, 'Hey Ace, you never told me how you ended up crashed here.' The osprey's eyes gaze into the distance as he replies, 'My wingman Kaye and I were off on a recon mission checking on some unusual movement on radar. Keeping track of the movements of some of the bigger threats to a containment breach like behemoths, sea dragons and wyverns is important. I saw a duo of the dragons flying circles around a group of individuals hiding inside of a minivan. I decided to save them. I shot a missile at one, while the other was gunned down by my wing mate. We started to leave when a third one ambushed us from behind, trying to gunk up Kayes['] engines. I decided to take the drake on at close range to save my friend. I was successful but the hull got scratched up pretty bad so I had to eject.' The bold actions in his story seem to make Izzy have even more desire for the stud.";
 		WaitLineBreak;
@@ -46,6 +47,7 @@ to say ResolveEvent Refueling:
 		ItemGain food by 2;
 		now Resolution of Refueling is 1;
 	else:
+		LineBreak;
 		say "     Deciding that this much food will dramatically increase your chances at getting attacked. You decline the invitation. Bidding the pair farewell you head back down the path towards another destination.";
 		now CuckooWatched is 99; [did not watch the couple. Izzy won ]
 		now Resolution of Refueling is 2;
@@ -69,7 +71,7 @@ to say ResolveEvent Jetlagged:
 	WaitLineBreak;
 	say "     As you approach the main entrance to the upgraded settlement, a tall anthro ostrich femme blocks your way. Wielding a long sharp spear with a hunk of scrap metal sharpened to a point for the spearhead, the gangly dame barks, 'State your intentions for coming to Staghorn!' You reply that Ace wished to speak with you about the city. Skeptical the seven foot tall guardian scoffs, 'A likely story.' However, to your luck, Gray comes walking by carrying a couple of water bottles. Noticing how the guard is hassling you, the male cuckoo greets you warmly stating, 'Hey there, it's been a little while since I last saw you.' He moves his arms affably to get the warden of the entrance to ease up. Moving you past the guard and into the camp your slim wayfarer whispers, 'Sorry about that. The camp is a bit on edge after a pair of miscreants attempted to rob from our food stash.' You tell him that you understand.";
 	say "     As you are guided through the bustling campground, you see a multitude of avians engaged in different activities. You see an anthro archaeopteryx smoking a cigarette while examining some plans of the expanding settlement. With a cheery tone, the guide chimes, 'Remember to take a break every once in a while, Mr. Vogel.' The workaholic dinosaur mutters under his breath, 'I'm not that old, you worrywart,' then gives an acknowledging handwave and once again focuses upon his task. Moving past the proto-bird's tent you see an anthro turkey unloading a load of lumber from a small four wheel trailer designed to be hauled by ATVs. However instead of being hauled by a machine, the vehicle is towed by a giant twelve foot tall bird. You ask your companion about the strange bird that seems to come out of an old travelers['] tale. Shrugging, Gray says glibly, 'Apparently it's called a Moa. It was from New Zealand before they went extinct. I dunno how one got here.' The two of you finally arrive at Ace's tent.";
-	WaitLineBreak;
+	wait for any key;
 	project Figure of Ace_icon;
 	say "     Stepping inside the tent, you see Ace sitting in a foldable chair with Izzy in his lap, the two are engaged in a bit of foreplay, the femme's arms are wrapped over the stud's broad shoulders while he cradles her hips. Noticing you and Gray come in, the pilot turns his head and focuses his attention on you, warmly belting out, 'Welcome back! Please have a seat and tell me about what your travels are like.' Sitting on a scavenged leather ottoman, you share what has happened since last meeting him. After explaining your expeditions, you note that the camp looks pretty different than when you first started coming around. Ace lets out a mild laugh as he responds, 'The lovely couple Gray and Izzy had a big part in making that happen. Given their habit of having fun with plenty of the sane survivors in the area, traders started coming through this area more often, encouraging more people to stay close by and develop the camp further.' You look at an embarrassed Gray, who absentmindedly puts a hand behind his head.";
 	say "     You then notice that there seem to be a lot of avians in the camp. Izzy snarkily retorts, 'As opposed to the city where you can't throw a stone without hitting a canine, feline, or dragon?' Her mild mannered partner responds, 'What about the gryphons?' to which the female replies, 'They're part feline, that doesn't count.' While the cuckolding couple argues about whether a gryphon counts as mostly avian or not, the former pilot provides a real answer, 'Izzy is somewhat astute with her observation, canines have great team dynamics, felines have great stealth attack capabilities, and the dragons have both good defense and offense. Us avians tend to have more fragile bodies, meaning we can't handle sustained combat. Most of the feathered folk here have been trying to lay low and stay alive. I don't doubt that Staghorn has helped out a lot of the birds living here now.' This sense of community is rare in the current environment.";
@@ -78,7 +80,7 @@ to say ResolveEvent Jetlagged:
 	say "     Ace whispers in your ear, 'Staghorn was also a way to help the non-avians feel at ease. A couple of the feathered newcomers were wanting to name the place the Nest. Besides being a cliche, I put the kibosh on that idea to keep our other inhabitants from feeling unwelcome. There has been a bit of tension between the new and old settler groups that I've had to keep defusing. One of the worst things that could happen to this place is getting fractured.' His eyes darting to outside the tent remind of his duty of leading the town. A taloned hand strokes his face as the female cuckoo soothingly speaks, 'Sir, when you're in here with me, you don't have to worry about that.' The focus of the raptor's eyes eases up and his muscles relax. Heavy is the head that wears the crown, and Izzy's methods seem to help erase the former military officer's burdens.";
 	WaitLineBreak;
 	say "     Deciding that some lighthearted conversation is needed, Ace shares a story of his youth in the Pacific northwest and how one day when he was fishing at a lake with his family, he was reeling in a whopper of a trout when an osprey snatched the fish out of the water breaking the line and leaving a feather in its wake. Taking the feather out of one of his pockets, the fighter pilot surmises, 'Maybe this good luck charm is what shaped my current form. Not that I'm complaining, I think my body works well for me.' You begin to feel restless, which can be sensed by the stud. 'You seem like you're itching to get back on the trail. I'll see you out.' Exiting the tent, the former pilot states, 'I have to travel to work out some deals with some seagulls at the beach trading supplies for food. I might see you out and about.' He then moves close and whispers, 'And if you're ever in the mood for the type of fun that Gray and Izzy have, I offer my services.' He then gives you happy parting words.";
-	wait for any key;
+	AttemptToWait;
 	move player to Staghorn;
 	AddNavPoint Staghorn;
 	now battleground is "void";
@@ -91,7 +93,7 @@ Staghorn	"Staghorn"
 
 Staghorn is a room. It is fasttravel. It is private. It is sleepsafe.
 Description of Staghorn is "[staghorndesc]".
-the scent of Staghorn is "The settlement smells of a hearty stew that is cooking somewhere nearby. There is also the smell of some freshly chopped lumber from freshly built fences.".
+the scent of Staghorn is "     The settlement smells of a hearty stew that is cooking somewhere nearby. There is also the smell of some freshly chopped lumber from freshly built fences.".
 
 to say staghorndesc:
 	say "     The campsite turned small settlement has a bustling atmosphere. Some of the interior tents and canopies have been decorated with various knickknacks that make each of them feel a bit more homey. Many of the inhabitants are busy working on tasks to sustain the community, while others rest in mattresses, sleeping bags or other furniture that has been scavenged from the wrecked homes. Most of the settlers are avian, with the rest being a mixture of anthro mammals. In the middle of the campsite stands a hunter's blind that seems to have been taken from an outdoor sporting goods store that serves as a watch tower for potential threats. Standing in the middle of the camp is the town leader Ace.";
@@ -138,7 +140,7 @@ Sterile of Ace is true. [steriles can't knock people up]
 MainInfection of Ace is "". [since there is no fitting infection for him, he's sterile for now]
 Description of Ace is "[acedesc]".
 Conversation of Ace is { "Skypilot!" }.
-the scent of the Ace is "The avian has a strangely masculine scent that reminds you of the sea.".
+the scent of the Ace is "     The avian has a strangely masculine scent that reminds you of the sea.".
 
 to say acedesc:
 	project Figure of Ace_icon;
@@ -156,11 +158,10 @@ Instead of fucking the Ace:
 		say "     Chuckling mildly, the osprey states, 'Sorry I can't have more fun right now, I need to keep an eye on the camp.'";
 	else: [ready for sex]
 		say "     As you walk up to Ace, he has a cocky look in his eyes as he asks, 'You need me for anything special?'";
-		WaitLineBreak;
+		LineBreak;
 		say "[AceSexMenu]";
 
 to say AceSexMenu:
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -188,19 +189,21 @@ to say AceSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Suck Ace off"):
 					say "[AceSex1]";
-				if (nam is "Take Ace's shaft in your pussy"):
+				else if (nam is "Take Ace's shaft in your pussy"):
 					say "[AceSex2]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the anthro bird, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say AceSex1: [oral on Ace]
@@ -236,9 +239,8 @@ to say VanssaAceOralCuckScene:
 	WaitLineBreak;
 	say "     The birdlike male's eyes look around the nearby area and then he whispers into the taur's pointed ears, 'What do you think our dear friend will say if he sees what we are doing, beautiful?' One of his finger talons traces around the dark areolae of his partner. Moaning softly, the paratrooper smiles as she rubs her hands along the bulge that the rugged airman's clothes conceal. Then she utters in a provocative tone, 'I'm not really in a mood to care what they think. Besides, [if Player is female]she[else]he[end if] has let the Doberman woman have her fun with that wolf that's been acting as our guard dog. Now lean against the wall if you want to keep this going.' You are not sure if the woman knows that you are here, but are also pretty sure that wouldn't matter to her as you see her begin to unzip the horny guy's flight suit.";
 	say "     The sound of the zipper being pulled down echoes through the room. Ace's stance relaxes slightly, as if not needing to be the one to take the lead in this encounter. Lowering the mostly white colored equine half of her body to the ground, it's soon quite evident what the boisterous lady wants to do next.";
-	WaitLineBreak;
-	say "     [bold type]Will you simply stand back and let her give the avian pilot a blowjob?[roman type][line break]";
 	LineBreak;
+	say "     [bold type]Will you simply stand back and let her give the avian pilot a blowjob?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Endure the tantalizing humiliation of watching Vanessa go down on him.";
 	say "     ([link]N[as]n[end link]) - Stop the centaur woman's advances. Ace is a honorable guy, so it wouldn't take much to end this.";
 	if Player consents: [they fuck]
@@ -269,9 +271,8 @@ to say SnowAceCuckScene1:
 	WaitLineBreak;
 	say "     The squirrel woman stands up and moves her curvy body close up against the masculine aquiline man, her hard nipples poking up against the osprey's well defined torso. With a salacious grin Snow states, 'Since it seems like you are good with my work on the knife, let's talk about payment...' Fully understanding what the mechanic is getting at, Ace responds, 'I've got some food or water in my pack, but I think we can come to another type of arrangement though if you'd like.' He then runs one hand along the small of her back. Raising an eyebrow, the busty rodent gal amusedly chutters then leans in close and murmurs in a hushed tone, 'That all depends on how well you do, soldier boy... Now strip.' Not one to turn down an offer like this the studlike male follows the command.";
 	say "     The pilot and the former student start stripping each other's clothes off. When Ace begins taking off the girl's tight pants, the sizable cock bulging inside them pops out. Attempting to provoke the former military man, Snow says, 'Hope you're not afraid of the equipment I'm packing...' With a soft chuckle the osprey runs a finger along the head of the dickgirl's member and responds, 'Oh please, with all the missiles that they strapped to my plane, this thing's not gonna scare me off.' The two begin moving their hands reciprocally to each other's loins, the pilot's hand switching between the herm's throbbing cunt and her hardening cock. Seeing as the two are fully prepped, the raptor sits down in the chair appearing ready to start the fun.";
-	WaitLineBreak;
-	say "     Snow is about to hop on Ace's lap, then start fucking him! [bold type]Will you simply let this happen?[roman type][line break]";
 	LineBreak;
+	say "     Snow is about to hop on Ace's lap, then start fucking him! [bold type]Will you simply let this happen?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Become a voyeur to their coupling.";
 	say "     ([link]N[as]n[end link]) - Lay down the law on this! You may have allowed Ace to spend some time at your abbey, but this type of behavior is unacceptable.";
 	if Player consents: [they fuck]

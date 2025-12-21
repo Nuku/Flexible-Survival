@@ -18,7 +18,7 @@ heatdrive is a number that varies. heatdrive is usually 0. [heatdrive controls h
 
 Table of infection heat
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
-"Default"	7	1	"You shift uncomfortably, a warmth spreading between your legs, seeming to build rapidly. It's not until you feel the warm trickle down your leg that you realize with a start what's happening. Glancing down to see your sex become swollen and red as your body advertises its fertility and readiness. [line break][line break]You are in heat."	--	--	--	"[defaultheat]"	true	true	"Your lower belly quivers as some hidden part of you wakens to a heated need. Your bowels squeeze and throb, feeling empty and needing to be filled, preferably by something large and virile.[line break]Your altered body is in heat."
+"Default"	7	1	"You shift uncomfortably, a warmth spreading between your legs, seeming to build rapidly. It's not until you feel the warm trickle down your leg that you realize with a start what's happening, glancing down to see your sex become swollen and red as your body advertises its fertility and readiness. You are in heat."	--	--	--	"[defaultheat]"	true	true	"Your lower belly quivers as some hidden part of you wakens to a heated need. Your bowels squeeze and throb, feeling empty and needing to be filled, preferably by something large and virile. Your altered body is in heat."
 "Husky Bitch"	400	400	"A sharp strike of pain in your lower belly makes you clutch at it and drop to your knees with a gasp. As you struggle for breath through the fading pain, you can feel a hot trickle from between your legs. Looking down you watch in horrified fascination as your sex twists and warps into that of a bitch's, then begins to swell and puff up rapidly. Your dripping nethers throb with the fertility and lust of canine heat."	"swollen and dripping husky bitch twat "	"[huskyheatstart]"	"[huskyheatend]"	"[huskyheat]"	true	true	"A sharp strike of pain in your lower belly makes you clutch it and drop to your knees with a gasp. As you struggle for breath through the fading pain, you can feel a pulsing emptiness in your ass. Your anus quivers and darkens, relaxing as it becomes more accommodating in its need to be filled as a strange [if Player is male]male [end if]heat overtakes you."
 
 [  note -
@@ -57,12 +57,15 @@ to say huskyheat: 	[Husky stays in heat permanently. Let's make an interesting e
 	increase Libido of Player by 5;
 	if Libido of Player > 99, now Libido of Player is 99;
 	if (Libido of Player > 90) and (location of Player is fasttravel or there is a dangerous door in location of Player) and (slutfucked > 8):
-		say "A waft on the breeze catches your nose, your head snapping around as the need between your legs throbs. Unable to control your lust, you strike out in the direction of the infected monster.";
+		say "     A waft on the breeze catches your nose, your head snapping around as the need between your legs throbs. Unable to control your lust, you strike out in the direction of the infected monster.";
 		now slutfucked is 0;
 		let hmonlist be a list of numbers;
 		let heatzone be "Outside";
 		let zz be a random visible dangerous door;
-		if zz is not nothing, now heatzone is the marea of zz;
+		if zz is not nothing:
+			now heatzone is the marea of zz;
+		else if the earea of location of Player is not "void":
+			now heatzone is the earea of location of Player;
 		repeat with X running from 1 to number of filled rows in Table of Random Critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ]
 			choose row X from the Table of Random Critters;
 			if there is no area entry, next;
@@ -81,11 +84,12 @@ to say huskyheat: 	[Husky stays in heat permanently. Let's make an interesting e
 		sort hmonlist in random order;
 		now MonsterID is entry 1 of hmonList;
 		choose row MonsterID from the Table of Random Critters;
-		say "The enticing scent leads to a [Name entry]. Immediately upon seeing the infected monster, you immediately submit, offering yourself freely in the hopes of satisfying your body's lustful, heat-fueled needs.";
-		wait for any key;
+		say "     The enticing scent leads to [a Name entry in lower case]. Immediately upon seeing the infected monster, you immediately submit, offering yourself freely in the hopes of satisfying your body's lustful, heat-fueled needs.";
+		say "[run paragraph on]";
 		follow the cock descr rule;
 		follow the cunt descr rule;
 		follow the breast descr rule;
+		AttemptToWait;
 		say "[victory entry]";
 		infect;
 		decrease the score by 5;
@@ -96,12 +100,13 @@ to say huskyheat: 	[Husky stays in heat permanently. Let's make an interesting e
 		if heatlevel is 3:
 			increase Libido of Player by 2;
 			if a random chance of 1 in 4 succeeds, increase slutfucked by 1;
+		if Libido of Player > 100, now Libido of Player is 100;
 
 
 This is the check heat rule:
 	if heat enabled is true and heatlevel is not 1:
 		if humanity of Player > 0 and skipturnblocker is 0:	[Effects don't occur if turns are skipped.]
-			if Player is female and (CockName of Player is not "Human") and player is impreg_able:	[Only run if female w/groin infection and able to get preggers]
+			if Player is female and (CockName of Player is not "Human") and player is fpreg_able:	[Only run if female w/groin infection and able to get preggers]
 				if animal heat is not True:	[Check if it's just triggered]
 					say "You feel a warning tingle deep within yourself, as a part of your body deep within alters to suit your more tainted sexuality.";
 					now turns in heat is 0;
@@ -112,9 +117,9 @@ This is the check heat rule:
 				if CockName of Player is a infect name listed in Table of infection heat:	[If the species is in the table use it]
 					choose a row with a infect name of (CockName of Player) in Table of infection heat;
 					if fheat entry is false:	[no female heat for that form]
-						choose row 1 in table of infection heat;
+						choose a row with infect name of "Default" in Table of infection heat;
 				else: [No specific Data, use Generic entry.]
-					choose a row 1 in Table of infection heat;
+					choose a row with infect name of "Default" in Table of infection heat;
 				if turns in heat > (heat cycle entry times 8):
 					now turns in heat is 0;
 					[say "reset!";]
@@ -150,9 +155,9 @@ This is the check heat rule:
 				if CockName of Player is a infect name listed in Table of infection heat:	[If the species is in the table use it]
 					choose a row with a infect name of (CockName of Player) in Table of infection heat;
 					if mpregheat entry is false:	[no mpreg heat for that form]
-						choose row 1 in table of infection heat;
+						choose a row with infect name of "Default" in Table of infection heat;
 				else: [No specific Data, use Generic entry.]
-					choose a row 1 in Table of infection heat;
+					choose a row with infect name of "Default" in Table of infection heat;
 				if turns in heat > (heat cycle entry times 8):
 					now turns in heat is 0;
 					[ say "reset!"; ]
@@ -163,7 +168,7 @@ This is the check heat rule:
 					if there is heat start entry, say "[heat start entry]"; [Heat start Trigger]
 				else if turns in heat >= ( heat cycle entry - heat duration entry ) * 8 and inheat is True:	[still in heat, previously triggered.]
 					if heatform is 0:		[last turn was female heat]
-						say "That heated need you've been feeling doesn't go away with your pussy, instead sinking inside you to smolder in your lower belly. You are left still wanting to be mounted and filled despite being [if Player is male]male[else]neuter[end if].";
+						say "That heated need you've been feeling doesn't go away with your pussy, instead sinking inside you to smolder in your lower belly. You are left still wanting to be mounted and filled despite being [if Player is male]male[else]a neuter[end if].";
 						now heatform is 1; [swap to mpreg-heat]
 					else:
 						if there is inheat entry, say "[inheat entry]"; [inheat Trigger]
@@ -180,7 +185,7 @@ This is the check heat rule:
 						increase turns in heat by 1; [20% duration of non-heated period lost]
 			else:
 				if animal heat is True:
-					say "As your body shifts you feel a cool sensation deep within, you will no longer be at the mercy of an animal heat anymore.";
+					say "As your body shifts you feel a cool sensation deep within; you will no longer be at the mercy of an animal heat anymore.";
 					now turns in heat is 0;
 					now animal heat is False;
 					now inheat is False;
@@ -188,20 +193,20 @@ This is the check heat rule:
 [This accelerates a new heat or extends the duration of a current heat. If the trigger is during combat, post-combat or otherwise during an event that might be thrown off by heat effects occurring, make sure heatdrive is set to 0 before running.]
 to drive heat:
 	if animal heat is true:
-		if Player is female and (CockName of Player is not "Human") and player is impreg_able:
+		if Player is female and (CockName of Player is not "Human") and player is fpreg_able:
 			if CockName of Player is a infect name listed in Table of infection heat:	[If the species is in the table use it]
 				choose a row with a infect name of (CockName of Player) in Table of infection heat;
 				if fheat entry is false:	[no female heat for that form]
-					choose row 1 in table of infection heat;
+					choose a row with infect name of "Default" in Table of infection heat;
 			else: [No specific Data, use Generic entry.]
-				choose a row 1 in Table of infection heat;
+				choose a row with infect name of "Default" in Table of infection heat;
 		else if Player is not female and CockName of Player is not "Human" and player is mpreg_able:
 			if CockName of Player is a infect name listed in Table of infection heat:	[If the species is in the table use it]
 				choose a row with a infect name of (CockName of Player) in Table of infection heat;
 				if mpregheat entry is false:	[no mpreg heat for that form]
-					choose row 1 in table of infection heat;
+					choose a row with infect name of "Default" in Table of infection heat;
 			else: [No specific Data, use Generic entry.]
-				choose a row 1 in Table of infection heat;
+				choose a row with infect name of "Default" in Table of infection heat;
 		if inheat is false:
 			increase turns in heat by 1; [accelerate beginning of heat]
 		else if inheat is true and ( turns in heat is ( heat cycle entry - heat duration entry ) * 8 ):

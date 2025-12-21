@@ -121,7 +121,7 @@ FurryList is a flag.
 DemonList is a flag.
 FeralList is a flag.
 HumorousList is a flag.
-HumanoidList is a flag.
+HumanoidList is a flag. [not currently available for ban/ward]
 
 FemaleList is a flag.
 HermList is a flag.
@@ -141,8 +141,8 @@ The player has a list of text called BanList.
 Section 2 - Ban Menu
 
 to new ban menu:
-	let FlagList be { "Body Horror", "Furry", "Males", "Females", "Transgender", "Hermaphrodite", "Humorous", "Humanoid", "Hellspawn", "Feral"};
-	let TagList be {"Noncon", "Cuck", "Incest", "Vore", "Cockvore", "Mindcontrol"};
+	let FlagList be {"Body Horror", "Females", "Feral", "Furry", "Hellspawn", "Hermaphrodite", "Humorous", "Males", "Transgender"};
+	let TagList be {"Cockvore", "Cuck", "Incest", "Mindcontrol", "Noncon", "Vore"};
 	let countnumber be 1;
 	let nbmexit be 0;
 	while nbmexit is 0:
@@ -151,27 +151,29 @@ to new ban menu:
 		say "[bold type](Banning/warding is sure to choke off MANY threads of the story and quests as well. Use with caution. You have been warned.)[roman type][line break]";
 		say "[line break][bold type]FLAGS[roman type][line break]";
 		while countnumber <= number of entries in FlagList:
-			say "[link][countnumber] - [entry countnumber of FlagList][as][countnumber][end link]: [run paragraph on]";
+			linkfind "[countnumber]";
+			say "[set link hyperindex][countnumber] - [entry countnumber of FlagList][terminate link]: ";
 			bancheck entry countnumber of FlagList;
 			increase countnumber by 1;
 		say "[line break][bold type]TAGS[roman type][line break]";
 		while countnumber <= (number of entries in FlagList + number of entries in TagList):
-			say "[link][countnumber] - [entry (countnumber - number of entries in FlagList) of TagList][as][countnumber][end link]: [run paragraph on]";
+			linkfind "[countnumber]";
+			say "[set link hyperindex][countnumber] - [entry (countnumber - number of entries in FlagList) of TagList][terminate link]: ";
 			bancheck entry (countnumber - number of entries in FlagList) of TagList;
 			increase countnumber by 1;
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-[countnumber - 1])>[run paragraph on]";
+			say "Choice? (0-[countnumber - 1])> [run paragraph on]";
 			get a number;
-			if (calcnumber >= 0 and calcnumber <= countnumber):
+			if (calcnumber >= 0 and calcnumber < countnumber):
 				break;
 			else:
-				say "Invalid Entry";
-		let turq be number of entries in FlagList;
+				say "Invalid Entry. Pick from 0 to [countnumber - 1].";
+		LineBreak;
 		if calcnumber is 0:
 			now nbmexit is 1;
-		else if calcnumber <= turq:
+		else if calcnumber <= number of entries in FlagList:
 			banchange entry calcnumber of FlagList;
 		else:
 			banchange entry (calcnumber - number of entries in FlagList) of TagList;
@@ -179,12 +181,11 @@ to new ban menu:
 
 to bancheck (name - text):
 	if name is listed in BanList of Player:
-		say "[bold type]BANNED[roman type]";
+		say "[special-style-2]Banned[roman type][line break]";
 	else if name is listed in WardList of Player:
-		say "[bold type]WARDED[roman type]";
+		say "[special-style-1]Warded[roman type][line break]";
 	else:
-		say "[bold type]Normal[roman type]";
-	say "[line break]";
+		say "[bold type]Normal[roman type][line break]";
 
 to banchange (name - text):
 	if name is listed in BanList of Player:

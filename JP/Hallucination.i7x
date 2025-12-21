@@ -42,7 +42,7 @@ When Play begins: [This is Cyn's default creature encounter]
 	now HP entry is 125;
 	now lev entry is 25; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 20; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now Cock Length entry is 0; [ Length in inches infection will make cock grow to if cocks. ]
 	now Ball Size entry is 0; [ Cock width, more commonly used for ball size. ]

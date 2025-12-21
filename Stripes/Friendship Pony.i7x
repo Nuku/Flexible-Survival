@@ -230,11 +230,11 @@ to setrfpdesc:
 
 to say fpattack:
 	if rfponytype is 1:
-		say "[one of]The pony[or]She[or]The happy pony[or]The eager equine[or]The overly-friendly pony[at random] [one of]turns around and kicks you hard with her hind legs[or]bashes herself against you, trying to knock you over[or]grinds her body against yours[or]turns around and rubs her wet pussy against you excitedly[at random].";
+		say "[one of]The pony[or]She[or]The happy pony[or]The eager equine[or]The overly-friendly pony[at random] [one of]turns around and kicks you hard with her hind legs[or]bashes herself against you, trying to knock you over[or]grinds her body against yours[or]turns around and rubs her wet pussy against you excitedly[at random].[no line break]";
 	else if rfponytype is 2:
-		say "[one of]The pony[or]The pegasus[or]She[or]The flying pony[or]The overly-friendly pegasus[at random] [one of]pushes a cartoonishly puffy cloud over you and gives it a hard kick, sending a lightning bolt down onto you[or]gives you a hard kick[or]zips behind you and knocks you with one of her front legs[or]zooms into you hard, trying to push you over[or]flies quickly around you, making a brief whirlwind that batters you with rubble until she's too dizzy to maintain it any longer[or]grinds her body against yours[at random].";
+		say "[one of]The pony[or]The pegasus[or]She[or]The flying pony[or]The overly-friendly pegasus[at random] [one of]pushes a cartoonishly puffy cloud over you and gives it a hard kick, sending a lightning bolt down onto you[or]gives you a hard kick[or]zips behind you and knocks you with one of her front legs[or]zooms into you hard, trying to push you over[or]flies quickly around you, making a brief whirlwind that batters you with rubble until she's too dizzy to maintain it any longer[or]grinds her body against yours[at random].[no line break]";
 	else if rfponytype is 3:
-		say "[one of]The pony[or]The unicorn[or]She[or]The horned pony[or]The overly-friendly unicorn[at random] [one of]shoots a beam of sparkles at your chest[or]levitates some rubble to throw at you[or]stomps on your foot with a hoof[or]uses her magic to make the ground slippery, dropping you on your ass[or]gives you a hard kick[or]jabs you in the belly with her horn, making you cough up some flowers[at random].";
+		say "[one of]The pony[or]The unicorn[or]She[or]The horned pony[or]The overly-friendly unicorn[at random] [one of]shoots a beam of sparkles at your chest[or]levitates some rubble to throw at you[or]stomps on your foot with a hoof[or]uses her magic to make the ground slippery, dropping you on your ass[or]gives you a hard kick[or]jabs you in the belly with her horn, making you cough up some flowers[at random].[no line break]";
 
 to say losetofpony:
 	now nofponysex is 0;

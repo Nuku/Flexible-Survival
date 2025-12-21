@@ -6,7 +6,7 @@ Version 1 of Microwave by Core Mechanics begins here.
 Section 1 - Basic Functionality
 
 Lab Microwave is an object. It is in Primary Lab. It is fixed in place. Understand "microwave" as Lab Microwave.
-Description of Lab Microwave is "A small microwave lays, almost hidden, in the corner, perhaps you could [bold type]microwave[roman type] something.".
+Description of Lab Microwave is "     A small microwave lays, almost hidden, in the corner, perhaps you could [bold type]microwave[roman type] something.[line break]".
 
 Purifying is an action applying to one thing.
 
@@ -61,10 +61,8 @@ to say DistilledBoozeUse:
 	if Libido of Player > 100, now Libido of Player is 100;
 	SanLoss 5;
 
-instead of sniffing distilled cum:
-	say "You might want to be careful about sniffing this, you don't want to snort this stuff.";
+Scent of distilled cum is "You might want to be careful about sniffing this, you don't want to snort this stuff.".
 
-instead of sniffing distilled booze:
-	say "Bringing the bottle to your nose to take a cautious sniff, you quickly pull it away as the strong scent of it hits your nose. Whew, definitely some strong stuff. Maybe you should've taken your chances with leaving it infectious instead.";
+Scent of distilled booze is "Bringing the bottle to your nose to take a cautious sniff, you quickly pull it away as the strong scent of it hits your nose. Whew, definitely some strong stuff. Maybe you should've taken your chances with leaving it infectious instead.".
 
 Microwave ends here.

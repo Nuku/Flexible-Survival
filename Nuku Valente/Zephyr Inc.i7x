@@ -49,8 +49,7 @@ to say zephyrlobbydesc:
 		now sblzephyr is true;
 
 
-instead of sniffing the Zephyr Lobby:
-	say "The office that Zephyr's set up here smells rather clean. There is only a faint smell of sex and creatures in the air, probably wafting in from outside.";
+Scent of the Zephyr Lobby is "     The office that Zephyr's set up here smells rather clean. There is only a faint smell of sex and creatures in the air, probably wafting in from outside.".
 
 
 Section 2 - Larissa
@@ -75,7 +74,7 @@ Carry out vialselling:
 	sort Table of LarissaVials in name order;
 	repeat with Y running from 1 to number of filled rows in Table of OwnedVials:
 		choose row Y in the Table of OwnedVials;
-		if Name entry matches the text NamedVial, case insensitively:
+		if Name entry exactly matches the text NamedVial, case insensitively:
 			now found is 1;
 			let InfectionName be Name entry;
 			say "Pulling out the sample vial, you offer to sell it to Larissa";
@@ -119,17 +118,16 @@ Section 4 - Purchasing from Zephyr
 
 The price sign is a backdrop. It is in Zephyr Lobby. Description of the price sign is "[price list]".
 
-Instead of sniffing the price sign:
-	say "The price sign has little in the way of scent of its own.";
+Scent of the price sign is "     The price sign has little in the way of scent of its own.".
 
 to say price list:
-	say "To buy an item, type buy (name here)";
+	say "[line break]To buy an item, type [bold type]buy <name>[roman type].";
 	repeat through table of zephyr goods:
 		follow allowed entry;
 		if rule failed:
 			next;
-		say "[link]Buy[as]buy [object entry][end link] ";
-		say "[Name entry] - [price entry] Creds";
+		linkfind "buy [object entry]";
+		say "[set link hyperindex]Buy [Name entry][terminate link] - [price entry] Creds";
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -142,7 +140,7 @@ pistol is armament. It has a weapon "[one of]a quick shot[or]speedy pistol play[
 nanite collector is equipment. It is not temporary.
 The placement of it is "back".
 The size of nanite collector is 0. [anyone can wear this]
-The descmod of it is " A great contraption rests across your back, with many valves and pipes. It looks more like a steampunk jetpack than anything else. Still, it has the Zephyr logo displayed boldly."
+The descmod of it is " A great contraption rests across your back, with many valves and pipes. It looks more like a steampunk jetpack than anything else. Still, it has the Zephyr logo displayed boldly.".
 
 to say nanitecolldesc:
 	say "A great and ponderous object that is worn on the back and can draw in nanites to produce infection vials. Interesting[if nanitemeter is 1]. It has been modified to be lighter, somewhat dropping its effectiveness[else if nanitemeter is 3]. It has been modified with an additional pump and larger tank, increasing its effectiveness and its overall weight[end if].";
@@ -260,7 +258,7 @@ to say ResolveEvent Beach Detector Site:
 			say "     With the creature defeated, you make it to the rocky spire. You now must climb the wet stone to get to the top. While parts of it are fairly easy to scale, there are a few difficult sections that make the climbing treacherous.";
 			let bonus be ( dexterity of Player + strength of Player minus 20 ) divided by 2;
 			let dice be a random number from 1 to 20;
-			say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+			say "     You roll 1d20([dice])+[bonus]: [dice + bonus] - ";
 			if bonus + dice > 16:
 				say "You manage to safely make it up to the top!";
 			else:
