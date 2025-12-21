@@ -1,4 +1,4 @@
- # How To Contribute!
+# How To Contribute!
 
 ## 1. Register on GitHub
 Flexible Survival is hosted on GitHub, so you'll have to make an account to push changes.

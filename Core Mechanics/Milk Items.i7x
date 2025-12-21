@@ -461,6 +461,28 @@ Scent of ceryneian deer-taur milk is "[breastmilk smell]".
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"Champion's Milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Champion's Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Champion's milk
+
+Champion's Milk is a grab object.
+Champion's Milk is milky.
+Champion's milk is infectious.
+Strain of Champion's Milk is "Ipotane".
+Usedesc of Champion's Milk is "[Champion's Milk use]".
+
+to say Champion's Milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+	if HP of Best Pony >= 1:
+		decrease gestation of child by a random number from 3 to 5;
+		if gestation of child < 1, now gestation of Child is 1;
+
+instead of sniffing Champion's milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "chinchilla milk"	"[breastmilk Strain of chinchilla milk]"	1	chinchilla milk
 
 chinchilla milk is a infectious milky grab object.
@@ -2443,7 +2465,23 @@ Scent of ogre male milk is "[breastmilk smell]".
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"opossum herm milk"	"[breastmilk Strain of opossum herm milk]"	1	opossum herm milk
+"Onna Uma Milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Onna Uma Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Onna Uma Milk
+
+Onna Uma Milk is a grab object.
+Onna Uma Milk is milky.
+Onna Uma Milk is infectious.
+Strain of Onna Uma Milk is "Onna Uma".
+Usedesc of Onna Uma Milk is "[Onna Uma milk use]".
+
+to say Onna Uma Milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"opossum herm milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Opossum Herm Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	opossum herm milk
 
 opossum herm milk is a infectious milky grab object.
 Strain of opossum herm milk is "Opossum Herm".

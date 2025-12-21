@@ -323,7 +323,7 @@ Description of Drink bar is "[drinkbardesc]".
 
 to say drinkbardesc:
 	say "     This well-stocked bar is full of a number of drinks you have never seen before. Some of them obviously were made on site or probably nearby, as they are stored in all sorts of different bottles that were clearly scavenged and cleaned for the purpose with their labels removed. A small sign on the bar lists the available drinks. To order a specific drink from the bar, merely [']Order <drink name>['], although a small notation on the drink sign does say that there is a daily drink limit. The list of drinks is as follows:";
-	say "     [link]Equestrian Ale[as]order Equestrian Ale[end link], [link]Black Wolf Beer[as]order Black Wolf Beer[end link], [link]Cheetah Chaser[as]order Cheetah Chaser[end link], [link]Succubi Delight[as]order Succubi Delight[end link], [link]Gryphon Gulp[as]order Gryphon Gulp[end link], [link]Satyr Special[as]order Satyr Special[end link], [link]Panda Pint[as]order Panda Pint[end link], [link]Harpy Heaven[as]order Harpy Heaven[end link], [link]Jaguar Lager[as]order Jaguar Lager[end link], [link]Sabre Savager[as]order Sabre Savager[end link], [link]Chocolate Rum[as]order Chocolate Rum[end link], [link]Tigress Tequila[as]order Tigress Tequila[end link], and [link]Zebra Vodka[as]order Zebra Vodka[end link].";
+	say "     [link]Equestrian Ale[as]order Equestrian Ale[end link], [link]Black Wolf Beer[as]order Black Wolf Beer[end link], [link]Cheetah Chaser[as]order Cheetah Chaser[end link], [link]Succubi Delight[as]order Succubi Delight[end link], [link]Gryphon Gulp[as]order Gryphon Gulp[end link], [link]Satyr Special[as]order Satyr Special[end link], [link]Panda Pint[as]order Panda Pint[end link], [link]Harpy Heaven[as]order Harpy Heaven[end link], [link]Jaguar Lager[as]order Jaguar Lager[end link], [link]Sabre Savager[as]order Sabre Savager[end link], [link]Chocolate Rum[as]order Chocolate Rum[end link], [link]Tigress Tequila[as]order Tigress Tequila[end link], [link]Zebra Vodka[as]order Zebra Vodka[end link], and [link]Champion Juice[as]order Champion Juice[end link].";
 
 the scent of Drink bar is "The drink bar smells of a myriad of alcoholic drinks. Past the regular scents of booze, there are faint traces of several of the creatures you've seen in the city in the air here.".
 
@@ -600,5 +600,39 @@ carry out Tequiladrinking:
 		SanLoss 5;
 		PlayerDrink 5;
 		now LastDrinkserved is turns;
+
+
+Championdrinking is an action applying to nothing.
+
+understand "Order Champion Juice" as Championdrinking.
+understand "Order Juice" as Championdrinking.
+
+check Championdrinking:
+	if Drink bar is not visible, say "You must have already had one drink too many to try that here." instead;
+
+
+carry out Championdrinking:
+	if LastDrinkserved - turns < 6:
+		say "     Harold looks at you for a minute thoughtfully, before sighing and shaking his head sadly. 'Sorry friend, I can only give you so much at a time. It's so you can have a drink or two to loosen up a bit, but not enough to get drunk hopefully,' the bartender says with an amused chuckle at the idea. 'Besides, it's actually pretty hard to keep stock up since there haven't been any deliveries from the outside world for a while. We have to be careful how much we give out in a day.' He gives an apologetic shrug, and you sigh and realize you will have to come back again later if you want another drink from the bar.";
+	else:
+		if humanity of Best Pony is 0:
+			say "     'Feeling adventurous eh?' Harold smirks as you rattle off your order, pulling out an unlabeled bottle of clear liquor bottles out from behind the bar and sets them down before you. Raising an inquisitive eyebrow to the jovial barman, you ask what he means by adventurous as he fishes out two jiggers, and a brilliant crystal cup. 'Well,' he shrugs, measuring out a finger's worth of some clear, sweet smelling booze into the first jigger, 'a couple of the patrons had the idea to distill a bit of produce they were scavenging from around town. Mind you, we're still hammering out the kinks in the still, but this stuff will get you good and drunk as anything else,' he hums, dexterously pouring the contents into the glass. 'Flavor needs some work too, but we get plenty of syrups laying around, and I've even added some of my own [italic type]special sauce[roman type] to the mix to really spice things up.' He chuffs, as he's cream white sheath seems throb before your eyes while he takes out a crumpled plastic water bottle packed to the bursting with off-white fluids.";
+			say "     Right, you titter, rolling your eyes in knowing amusement, watching as he adds full jiggers worthy of fragrant nutty cream into the second measuring cup, then slowly empties it atop the first layer with a practiced ease, ensuring the two liquids don't mix. 'Hey, don't knock it till you try it bud,' the barman teases, extracting a stopper bottle of blueberry syrup from the counter, and gingerly empties a bit of the top of his 'special sauce'. 'Now of the coup de grace,' he whickers, extracting a third vessel, packed with a bright orange liquid and eye dropper from the bar. Filling the dropper, he dexterously levels it over the top of your drink, and squirts several rivets into glass, strangely the little streaks of orange and blue surges to the bottle of glass without disturbing the rest of the mixture. Here, they leisurely swirl along the glass's edge in a spiraling pinwheel of white, blue, orange fluids. 'Drink up,' Harold says, playfully flicking his ears as gently pushes the glass into front of you with an expectant smile.";
+			WaitLineBreak;
+			say "      Raising your glass to Harold, you take a long drink, savoring the sweet notes of blueberry mixing with the earthy carrot and musky salty tang, followed by a cold rush of harsh gin-like tonic hitting the back of your mouth. Slowly draining the glass, you smack your lips in appreciation as you savor the lingering taste of the tall unique brew. Before pushing the glass back his way as a pleasant buzz starts to set in. 'Good?' he asks, plucking the empty of the counter. Very, you reply, patting your duly warmed stomach, as your body begins to thrum with the first little note of change slightly. Though, in your mildly inebriated state, it is hard to think why that would be a problem.";
+			now humanity of Best Pony is 1;
+			infect "Ipotane";
+			infect "Ipotane";
+			PlayerDrink 5;
+			PlayerEat 5;
+			now LastDrinkserved is turns;
+		else if Humanity of Best Pony is 1:
+			say "     'Back for another?' Harold beams, pulling the usual couple of bottles out from behind the bar and mixing your drink with an expert's touch, then slides the odd cocktail over to you with a cheeky winks. You know it, you smirk, raising your glass to Harold, as you take a long drink from the rich beverage letting is exotic sapor coat your mouth in a welcomed sheen of invigorating tangs. You smack your lips in appreciation, then slide the glass over to him, thanking the fine man for his generosity. 'No problem bud,' the barman hums, plucking the glass of the count as a pleasant buzz starts and the now familiar thrum of change resonates through your body. Too happy to care, you whip any excess from your lips and sit back to watch the show.";
+			infect "Ipotane";
+			infect "Ipotane";
+			PlayerDrink 5;
+			PlayerEat 5;
+			now LastDrinkserved is turns;
+
 
 Harold ends here.
