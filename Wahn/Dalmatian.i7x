@@ -51,7 +51,7 @@ When Play begins:
 	now body change entry is "strong muscle-spasms go through your form, soon followed by the crunching noise of re-forming bone. Feeling like you want to curl into a ball, you can't even manage that much in coordinated movements, instead just swaying rather drunkenly as your body reshapes itself. After long moments of painful transformation you'd rather forget, your body now resembles an anthro Dalmatian, complete with digitigrade paws to stand on";
 	now skin change entry is "white fur pushes free from out of your pores. The new growth quickly works to cover your entire body, bringing with it a random pattern of black dots on it";
 	now ass change entry is "your buttcheeks tighten into a firm pair of buttocks and a thin and wiry tail sprouts from your lower back";
-	now cock change entry is "it takes on a canine shape, complete with a furred sheath as well as a pair of weighty balls. Lust bubbles up inside you and the dog's cock that you now call your own hardens within seconds, showing off the thick knot swelling up at its base. Then you cum, spraying out what seems like a celebratory load from the newly formed cock.";
+	now cock change entry is "it takes on a canine shape, complete with a furred sheath as well as a pair of weighty balls. Lust bubbles up inside you and the dog's cock that you now call your own hardens within seconds, showing off the thick knot swelling up at its base. Then you cum, spraying out what seems like a celebratory load from the newly formed cock";
 	now str entry is 15; [ These are now the creature's stats... ]
 	now dex entry is 22; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 20; [ These values may be used as part of alternate combat.]
@@ -76,7 +76,7 @@ When Play begins:
 	now libido entry is 55; [ Target libido the infection will rise towards. ]
 	now loot entry is "dalmatian male fur"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 60; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "dalmatian male milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "dalmatian male man-milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is "dalmatian male cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -197,16 +197,17 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "dalmatian male fur"	"Some black and white fur that looks like it has been pulled out of the coat of a Dalmatian. It's not so much a tuft of it, but rather a small pile of fairly short hairs."	0	dalmatian male fur
 
+dalmatian fur is a grab object. [define early to resolve name conflicts]
+
 dalmatian male fur is a grab object.
 It is temporary.
-Usedesc of dalmatian male fur is "[DalmatianMaleFurUse]";
+Usedesc of dalmatian male fur is "[DalmatianMaleFurUse]".
 
 to say DalmatianMaleFurUse:
-	say "Pouring the pile of fur into your cupped palm, you rub it with a fingertip. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	say "     Pouring the pile of fur into your cupped palm, you rub it with a fingertip. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Dalmatian Male";
 
-instead of sniffing dalmatian male fur:
-	say "The fur has a pleasing, not too strong, animal-like scent.";
+Scent of dalmatian male fur is "The fur has a pleasing, not too strong, animal-like scent.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -216,33 +217,14 @@ dalmatian male cum is a grab object.
 dalmatian male cum is cum.
 dalmatian male cum is infectious.
 Strain of dalmatian male cum is "Dalmatian Bitch".
-Usedesc of dalmatian male cum is "[dalmatian male cum use]";
+Usedesc of dalmatian male cum is "[dalmatian male cum use]".
 
 to say dalmatian male cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
-instead of sniffing dalmatian male cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"dalmatian male man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Dalmatian Male Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	dalmatian male man-milk
-
-dalmatian male man-milk is a grab object.
-dalmatian male man-milk is milky.
-Purified of dalmatian male man-milk is "distilled milk".
-dalmatian male man-milk is infectious.
-Strain of dalmatian male man-milk is "Dalmatian Male".
-Usedesc of dalmatian male man-milk is "[dalmatian male man-milk use]";
-
-to say dalmatian male man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing dalmatian male man-milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+Scent of dalmatian male cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.".
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -285,7 +267,7 @@ When Play begins:
 	now body change entry is "strong muscle-spasms go through your form, soon followed by the crunching noise of re-forming bone. Feeling like you want to curl into a ball, you can't even manage that much in coordinated movements, instead just swaying rather drunkenly as your body reshapes itself. After long moments of painful transformation you'd rather forget, your body now resembles an anthro Dalmatian, complete with digitigrade paws to stand on";
 	now skin change entry is "white fur pushes free from out of your pores. The new growth quickly works to cover your entire body, bringing with it a random pattern of black dots on it";
 	now ass change entry is "your buttcheeks tighten into a firm pair of buttocks and a thin and wiry tail sprouts from your lower back";
-	now cock change entry is "it takes on a canine shape, complete with a furred sheath as well as a pair of weighty balls. Lust bubbles up inside you and the dog's cock that you now call your own hardens within seconds, showing off the thick knot swelling up at its base. Then you cum, spraying out what seems like a celebratory load from the newly formed cock.";
+	now cock change entry is "it takes on a canine shape, complete with a furred sheath as well as a pair of weighty balls. Lust bubbles up inside you and the dog's cock that you now call your own hardens within seconds, showing off the thick knot swelling up at its base. Then you cum, spraying out what seems like a celebratory load from the newly formed cock";
 	now str entry is 15; [ These are now the creature's stats... ]
 	now dex entry is 22; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 20; [ These values may be used as part of alternate combat.]
@@ -311,7 +293,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "dalmatian bitch milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now CumItem entry is "dalmatian bitch cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -466,7 +448,7 @@ When Play begins:
 	now body change entry is "strong muscle-spasms go through your form, soon followed by the crunching noise of re-forming bone. Feeling like you want to curl into a ball, you can't even manage that much in coordinated movements, instead just swaying rather drunkenly as your body reshapes itself. After long moments of painful transformation you'd rather forget, your body now resembles an anthro Dalmatian, complete with digitigrade paws to stand on";
 	now skin change entry is "white fur pushes free from out of your pores. The new growth quickly works to cover your entire body, bringing with it a random pattern of black dots on it";
 	now ass change entry is "your buttcheeks tighten into a firm pair of buttocks and a thin and wiry tail sprouts from your lower back";
-	now cock change entry is "it takes on a canine shape, complete with a furred sheath as well as a pair of weighty balls. Lust bubbles up inside you and the dog's cock that you now call your own hardens within seconds, showing off the thick knot swelling up at its base. Then you cum, spraying out what seems like a celebratory load from the newly formed cock.";
+	now cock change entry is "it takes on a canine shape, complete with a furred sheath as well as a pair of weighty balls. Lust bubbles up inside you and the dog's cock that you now call your own hardens within seconds, showing off the thick knot swelling up at its base. Then you cum, spraying out what seems like a celebratory load from the newly formed cock";
 	now str entry is 15; [ These are now the creature's stats... ]
 	now dex entry is 22; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 20; [ These values may be used as part of alternate combat.]
@@ -492,7 +474,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "dalmatian herm milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now CumItem entry is "dalmatian herm cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -673,7 +655,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "dalmatian transman milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now CumItem entry is "dalmatian transman cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -854,7 +836,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "dalmatian transbitch milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is "";
+	now CumItem entry is "dalmatian transbitch cum";
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -975,34 +957,29 @@ Definition: a person is DalSkinned:
 to SetMonsterRandomDalOffspring:
 	let randomnumber be a random number from 1 to 5;
 	if randomnumber is:
-		-- 1:
-			setmonster "Dalmatian Male";
-		-- 2:
-			setmonster "Dalmatian Bitch";
-		-- 3:
-			setmonster "Dalmatian Herm";
-		-- 4:
-			setmonster "Dalmatian Transman";
-		-- 5:
-			setmonster "Dalmatian Transbitch";
+		-- 1: setmonster "Dalmatian Male";
+		-- 2: setmonster "Dalmatian Bitch";
+		-- 3: setmonster "Dalmatian Herm";
+		-- 4: setmonster "Dalmatian Transman";
+		-- 5: setmonster "Dalmatian Transbitch";
 
 Section 3 - Items
 
-[
 Table of Game Objects (continued)
 name	desc	weight	object
 "dalmatian cum"	"A tiny plastic shampoo bottle as you might find in a motel, filled with something milky white, thick and creamy. If you didn't know where it's from, you'd almost think it to be liquid soap rather than Darius's cum. You could drink it to quench your thirst, but who knows what else it might do to you..."	1	dalmatian cum
 
-instead of sniffing dalmatian cum:
-	say "You open the lid for a moment and take a sniff. Smells rather tasty actually, kinda nutty. You can't help but be tempted to take a swallow of it.";
+Scent of dalmatian cum is "You open the lid for a moment and take a sniff. Smells rather tasty actually, kinda nutty. You can't help but be tempted to take a swallow of it.".
 
-dalmatian cum is a grab object. dalmatian cum is cum.
+[dalmatian cum is a grab object.] [defined in Cum Items to prevent name conflicts]
+dalmatian cum is cum.
 dalmatian cum is infectious. Strain of dalmatian cum is "Dalmatian Bitch".
-Usedesc of dalmatian cum is "[dalmatian cum use]";
+Usedesc of dalmatian cum is "[dalmatian cum use]".
 
 to say dalmatian cum use:
 	say "     Lifting the tiny plastic bottle to your mouth, you let Darius's creamy cum run over your tongue and down your throat. Mmmmh, this stuff actually tastes fairly nice and your body calls for more. You can't help yourself and keep pouring cum into your mouth, right until you're hungrily sucking at the mouth of the bottle with it turned upside down.";
 	if Darius is visible:
+		project Figure of Darius_face_icon;
 		say "     Glancing over at you slurping down his cum, Darius lets out a hearty laugh. ";
 		if Player is female:
 			say "'Yeah babe, just swallow it all! If you like that one, I've got a whole lot more here for you...' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";
@@ -1015,16 +992,16 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "dalmatian fur"	"A small tuft of white and black fur, held together by a rubber band. You bought it from Darius."	1	dalmatian fur
 
-instead of sniffing dalmatian fur:
-	say "     You sniff at the tuft of fur. It has a definitive smell of dog to it.";
+Scent of dalmatian fur is "You sniff at the tuft of fur. It has a definitive smell of dog to it.".
 
-dalmatian fur is a grab object.
+[dalmatian fur is a grab object.] [defined earlier to prevent name conflicts]
 dalmatian fur is temporary.
-Usedesc of dalmatian fur is "[dalmatian fur use]";
+Usedesc of dalmatian fur is "[dalmatian fur use]".
 
 to say dalmatian fur use:
 	say "     Lifting the small tuft of fur with your fingers holding on to the rubber band around it, you brush the hairs over the inside of your other arm. It feels soft and tickles a little, then a lot, as the strands seem to slowly crumble away, leaving minute traces of silvery dust that vanishes into your skin.";
 	if Darius is visible:
+		project Figure of Darius_face_icon;
 		say "     Glancing over at you playing around with the fur you bought, Darius lets out a hearty laugh. ";
 		if Player is female:
 			say "'Damn babe, are you trying to become a dude? How about you rather come here and let me show you a good time? Then you'll have a nice spotted coat too and be much more fun all around.' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";
@@ -1032,7 +1009,27 @@ to say dalmatian fur use:
 			say "'Let's hope the stuff mans you up a bit. I could use some reliable help later on, when I expand this operation.' The anthro canine steps up to give you a fist bump.";
 	SanLoss 2;
 	infect "Dalmatian Male";
-]
+
+[The player won't be able to interact with dalmatian cum or fur if they also own a variant with a more specific name, so we need to tell the game to prioritize these when resolving ambiguity.]
+Does the player mean grabbing dalmatian cum: it is likely.	[get dalmatian cum]
+Does the player mean using dalmatian cum when Darius is visible: it is very likely.
+Does the player mean using dalmatian cum: it is likely.	[use dalmatian cum]
+Does the player mean examining dalmatian cum: it is likely.	[look dalmatian cum]
+Does the player mean sniffing dalmatian cum: it is likely.	[smell dalmatian cum]
+Does the player mean littering dalmatian cum: it is likely.	[drop dalmatian cum]
+Does the player mean burninating dalmatian cum: it is likely.	[junk dalmatian cum]
+Does the player mean stashing dalmatian cum: it is likely.	[stash dalmatian cum]
+Does the player mean retrieving dalmatian cum: it is likely.	[retrieve dalmatian cum]
+
+Does the player mean grabbing dalmatian fur when dalmatian male fur is visible: it is likely.	[get dalmatian fur]
+Does the player mean using dalmatian fur when Darius is visible: it is very likely.
+Does the player mean using dalmatian fur when dalmatian male fur is visible: it is likely.	[use dalmatian fur]
+Does the player mean examining dalmatian fur when dalmatian male fur is visible: it is likely.	[look dalmatian fur]
+Does the player mean sniffing dalmatian fur when dalmatian male fur is visible: it is likely.	[smell dalmatian fur]
+Does the player mean littering dalmatian fur when dalmatian male fur is visible: it is likely.	[drop dalmatian fur]
+Does the player mean burninating dalmatian fur when dalmatian male fur is visible: it is likely.	[junk dalmatian fur]
+Does the player mean stashing dalmatian fur when dalmatian male fur is visible: it is likely.	[stash dalmatian fur]
+Does the player mean retrieving dalmatian fur when dalmatian male fur is visible: it is likely.	[retrieve dalmatian fur]
 
 Section 4 - Endings
 

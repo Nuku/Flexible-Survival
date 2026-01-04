@@ -708,6 +708,7 @@ to DwarfFucksOral:
 	WaitLineBreak;
 	say "     At some point, he pulls out of your mouth, your face flushed and released altogether as gravity wins over your strength to avoid hitting the ground with the back of your head. Standing and looking down at you is the dwarf with his still half-hard length, shaking any leftovers of his cum still oozing down his cock towards your face as he lets out a mischievous chuckle. 'Damn... I would keep you... but you know... I have no place of my own and I don't wanna share you with anyone else who ends up passing by, so... I'll let you go. You can always come back for me by yourself, ain't that right?' Laughing, he gets ready to leave by shoving his wide cock out of view back into his underwear, pulling his pants back up and tightening the belt, all this while eyeing you from above. 'See you later, bitch [boygirl]!' he shouts, carrying his stone hammer by his shoulder and walking away.";
 	say "     You're left lying on the ground with a belly filled with dwarf cum for some time before you can stand up.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Dwarf Male";
 
 to DwarfFucksPussy:
 	say "     'Now I'm gonna make you bend over for me. I need a tight place to shove my cock inside, and I bet you've got just the thing.' he says while forcing you to crawl on all fours, [if Player is not naked]and the burly dwarf doesn't take any ceremony in lowering your clothes to expose your rear [end if]then taking a time to stroke himself while watching your naked butt. He makes you wait[if Player is submissive], your eagerness to please making you wiggle your backside at him invitingly, [end if] until his manhood stands up hard and proud, already out of his pants and ready to drill your hole deep. 'You're certainly going to feel this when I'm stretching your pussy.' he taunts you, and a look over your shoulder shows you why he's so confident. A good sized cock of about nine inches long, thick as a beer can, is going to enter your cunt and pound it without mercy.";
@@ -955,7 +956,7 @@ When Play begins:
 	now face entry is "a weathered middle-aged man's, rugged and long-bearded, with short and shaggy dark brown hair hugging the top of your head";
 	now body entry is "that of a short and burly man, musclebound and covered in hair. Your legs are fairly shorter than an average human's, making you stand half one's height";
 	now skin entry is "peach toned and rough"; [ format as "Your body is covered in (your text) skin"]
-	now tail entry is "You have a hairy, compact muscled butt"; [ write a whole Sentence or leave blank. ]
+	now tail entry is "You have a hairy, compact muscled butt."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "it shapes itself into a weathered male visage, rugged features and a long full beard growing out of your jaw and chin. Your hair becomes very short and dyed in a dark brown color"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a that of a middle-aged man, with a stocky and muscular build. Looking down, you notice your legs being much shorter than the rest of your body, making you standing half the height of an average human"; [ format as "Your body feels funny as (your text)." ]
@@ -987,7 +988,7 @@ When Play begins:
 	now loot entry is "dwarven ale"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "dwarf male milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now CumItem entry is "dwarf male cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "stocky"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -1197,7 +1198,7 @@ Section 4-1 - Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"dwarven ale"	"a canteen bottle with some sort of strong alcoholic beverage inside. It's obviously dwarven in origin."	1	dwarven ale
+"dwarven ale"	"A canteen bottle with some sort of strong alcoholic beverage inside. It's obviously dwarven in origin."	1	dwarven ale
 
 dwarven ale is a grab object.
 
@@ -1214,7 +1215,7 @@ instead of sniffing dwarven ale:
 
 to say DwarfMaleTF:
 	now TailName of Player is "Dwarf Male";
-	now Tail of Player is "You have a hairy, compact muscled butt";
+	now Tail of Player is "You have a hairy, compact muscled butt.";
 	now FaceName of Player is "Dwarf Male";
 	now Face of Player is "a weathered middle-aged man's, rugged and long-bearded, with short and shaggy dark brown hair hugging the top of your head";
 	now SkinName of Player is "Dwarf Male";

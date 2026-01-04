@@ -207,7 +207,7 @@ to say ZoeSecondTime:
 		say "     You are at it for barely more than a minute when Zoe starts to pant loudly, and tenses up. 'Oh fuck, this is too m-much. I'm gonna... Ahh... Nggg!' The bunny girl's tight cunt squeezes on your fingers as she goes into the quickest and the most intense orgasm in her life yet. You keep moving your fingers inside her, and make sure that she rides her climax as long as possible. When you finally pull them off, they are drenched in fem-cum. 'Ahh... Oh...' Zoe pants. 'S-Sorry. I didn't mean to, to come so quickly,' she starts saying. You reassure her and say that having fun is the most important and that she'll get used to it pretty quickly. 'B-But what about you?' she asks. You smile, and say that if she is still up for it, she could finish what she started.";
 		say "     Wanting to encourage her, you sit on the cot and spread your legs, inviting her to approach. Zoe gives you a timid smile, then crawl towards you. She puts her mouth against your pussy and resumes licking. Under your directions, and your encouragements, she does a great job, and gets bolder and bolder. Eventually, she finds herself running her small tongue all the way your [cunt size desc of Player] cunt, ending it with a series of strong suckings on your clit. This eventually brings you over the edge. Your body folds around the bunny's head as you go through your own, noisy climax.";
 		NPCSexAftermath Zoe receives "OralPussy" from Player;
-		NPCSexAftermath Zoe receives "DildoPussyFuck" from Player;
+		NPCSexAftermath Zoe receives "PussyDildoFuck" from Player;
 		NPCSexAftermath Player receives "OralPussy" from Zoe;
 	else:
 		say "     'Okay. I... I want to try a blowjob,' Zoe asks as she gets to her knees. You smile and stop her, instructing her to lie on her side, telling her that you want to make her feel good too. After she lies down, you do the same, in the opposite direction. Under your instructions, Zoe starts by kissing and licking your [if Cock Count of Player > 2]main cock while one of her hands holds one of your other shafts[else if Cock Count of Player > 1]main cock while one of her hands holds your other shaft[else][Cock of Player] cock[end if]. Her first attempts are clumsy, but she quickly becomes bolder, and before you know it, she is wrapping her bunny lips around the head of your cock. After your warn her to be careful with the teeth[if Zoe is PlayerCumLoadInflates], and to not take too much of your [cock size desc of Player] member[end if], you focus on her own intimate parts. Your fingers run along her virgin vagina while you shower her small pleasure button with sucks and kisses, using the resonances of her moans on your cock as an indicator.";
@@ -396,10 +396,10 @@ to say ZoeSexPeg:
 	WaitLineBreak;
 	if Player is not female or anallevel is 3:
 		say "     [if anallevel is 3 and Player is female]As you turn around and present your bare butt to the bunny, you ask her to use your ass. 'In the ass? Well, sure, if that's your kink.' [else]You turn around and present your bare butt to the bunny 'Only one way to go, but here,' she says as she pats your [Skin of Player] butt. [end if]Zoe starts pushing in. You let out a long moan as the rubbery strap-on slowly advances into your ass. 'You okay, [if Player is defaultnamed]sugar[else][name of Player][end if]?' You nod and take her wrist, encouraging her to go further. Once she bottoms out, the bunny girl seems a little lost. She begins giving little pumps, only to be surprised by the resistance she encounters, which reverberates on her own end. 'Oh, damn.' She picks up in rhythm and intensity little by little while you [if Player is male]jerk off[else if Player is female]finger yourself[end if]. You eventually cum and splatter the carpet with your sexual fluids. Looking back and seeing Zoe's elated face, you can tell that she reached her own climax not long after you.";
-		NPCSexAftermath Player receives "DildoAssFuck" from Zoe;
+		NPCSexAftermath Player receives "AssDildoFuck" from Zoe;
 	else:
 		say "     Zoe starts pushing in. You let out a long moan as the rubbery strap-on slowly advances into your [cunt size desc of Player] pussy. 'You okay, [if Player is defaultnamed]sugar[else][name of Player][end if]?' You nod and take her wrist, encouraging her to go further. Once she bottoms out, the bunny girl seems a little lost. She begins giving little pumps, only to be surprised by the resistance she encounters, which reverberates on her own end. 'Oh, damn.' She picks up in rhythm and intensity little by little while you [if Player is male]jerk off[else if Player is female]play with your clit[end if]. You eventually cum and splatter the carpet with your sexual fluids. Looking back and seeing Zoe's elated face, you can tell that she reached her own climax not long after you.";
-		NPCSexAftermath Player receives "DildoPussyFuck" from Zoe;
+		NPCSexAftermath Player receives "PussyDildoFuck" from Zoe;
 	say "     Zoe grins while she pulls out of you. 'This was fun. We should do this more often.' You help Zoe clean her toy and the mess you made, then head back with her Zoe to the library.";
 
 to say ZoeSexRPSub:
@@ -488,7 +488,7 @@ to say ZoeMolest:
 				now sextablerun is 1;
 				if nam is "Mouth":
 					say "[ZoeMolestMouth]";
-					NPCSexAftermath Zoe receives "OralFuck" from Player;
+					NPCSexAftermath Zoe receives "OralCock" from Player;
 				if nam is "Pussy":
 					say "[ZoeMolestVag]";
 					NPCSexAftermath Zoe receives "PussyFuck" from Player;

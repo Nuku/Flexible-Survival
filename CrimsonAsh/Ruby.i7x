@@ -9,14 +9,11 @@ Version 1 of Ruby by CrimsonAsh begins here.
 "Adds the NPC Ruby to Flexible Survival's Capitol District"
 
 
-RubyRoomConnection is a number that varies.[@Tag:NotSaved]
-
-an everyturn rule:
-	if Urban Cliff is resolved and Resolution of Urban Cliff is 3 and RubyRoomConnection is 0:
-		change the northeast exit of Path of Ashes to Ashen Cliff;
-		change the southwest exit of Ashen Cliff to Path of Ashes;
-		now RubyRoomConnection is 1; [room connected]
-	if Urban Cliff is resolved and Ruby is not in Ruby's Cave: [bugfix]
+a postimport rule: [bugfixing rules for players that import savegames]
+	if Urban Cliff is resolved:
+		if Resolution of Urban Cliff is 3:
+			change the northeast exit of Path of Ashes to Ashen Cliff;
+			change the southwest exit of Ashen Cliff to Path of Ashes;
 		now Ruby is in Ruby's Cave;
 
 Section 1 - Events
@@ -28,65 +25,68 @@ Urban Cliff	"Urban Cliff"
 Urban Cliff is a situation.
 ResolveFunction of Urban Cliff is "[ResolveEvent Urban Cliff]".
 Sarea of Urban Cliff is "Capitol".
+Level of Urban Cliff is 9.
 
 when play begins:
+	add Urban Cliff to BadSpots of FurryList;
 	add Urban Cliff to BadSpots of FemaleList;
 
 to say ResolveEvent Urban Cliff:
 	if Resolution of Urban Cliff is 0 or Resolution of Urban Cliff is 99: [first encounter or repeat after postponing]
-		say "     While exploring and walking along the heat scorched, barren ground of the capitol district you turn a corner and find yourself standing at the top end of a steep slope of rock and volcanic ash. Looks like the quakes and eruptions tore up this section of the district particularly bad, creating a cliff that's about 300 feet wide in the middle of the fallen city. A little ways to the side and down the slope, you spot a narrow fissure gaping in the surrounding rock. Curiosity drives you check it out, carefully talking down over the ash and peeking at the opening. The crack in the rock continues into the earth as a sort of tunnel that bends and twists, making it quite hard to tell how deep it will go. Looks dangerous, but it could also be an exciting place to explore...";
+		say "     While exploring and walking along the heat scorched, barren ground of the capitol district you turn a corner and find yourself standing at the top end of a steep slope of rock and volcanic ash. Looks like the quakes and eruptions tore up this section of the district particularly bad, creating a cliff that's about 300 feet wide in the middle of the fallen city. A little ways to the side and down the slope, you spot a narrow fissure gaping in the surrounding rock. Curiosity drives you to check it out, carefully walking down over the ash and peeking at the opening. The crack in the rock continues into the earth as a sort of tunnel that bends and twists, making it quite hard to tell how deep it will go. Looks dangerous, but it could also be an exciting place to explore...";
+		LineBreak;
 		say "     [bold type]Do you want to journey underground?[roman type][line break]";
-		say "     [link](1)[as]1[end link] - Yes, Exploration!";
+		say "     [link](1)[as]1[end link] - Yes, exploration!";
 		say "     [link](2)[as]2[end link] - Not right now.";
 		say "     [link](3)[as]3[end link] - Nope, not ever!";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link] to go in, [link]2[end link] to leave for now or [link]3[end link] to avoid this place.";
+		LineBreak;
 		if calcnumber is 1:
-			LineBreak;
-			say "     Might as well see what lies within the cave for you, and hopefully it'll be nothing bad. Stepping into the opening, you duck under a protruding piece of rock and continue down the natural passage, careful not to lose your balance on the uneven ground. Soon, you reach the bend in the tunnel you saw from outside and it is revealed that it indeed continues on beyond that. Thankfully, there also seems to be some reddish glow illuminating the further passage, as you won't be able to count for light from the outside after this. Moving on, soon arrive at the start of a larger cave. There are some irregular patches of glowing volcanic rock on the walls, floor and ceiling, providing dim lighting that allows you to make out the extent of the roughly sixty foot long and thirty foot wide open space.";
+			say "     Might as well see what lies within the cave for you, and hopefully it'll be nothing bad. Stepping into the opening, you duck under a protruding piece of rock and continue down the natural passage, careful not to lose your balance on the uneven ground. Soon, you reach the bend in the tunnel you saw from outside and it is revealed that it indeed continues on beyond that. Thankfully, there also seems to be some reddish glow illuminating the further passage, as you won't be able to count on light from the outside after this. Moving on, you soon arrive at the start of a larger cave. There are some irregular patches of glowing volcanic rock on the walls, floor and ceiling, providing dim lighting that allows you to make out the extent of the roughly sixty foot long and thirty foot wide open space.";
 			say "     Your eyes get more and more used to the semi-darkness, allowing you to make out some household objects organized deeper into the back of the cave. There's a makeshift bed made of what looks like multiple bear pelts, a couch that seems to be a bit worse for wear after having been shoved and scraped through the passage that led you here, and... that's how far you get before you're suddenly snatched and flung into the middle of the cave by a solidly built red figure coming seemingly out of nowhere. But no, as you spin around and stumble not to fall over, you see that there's a mid-sized alcove just a step or two from where you stood, not easily apparent unless one knows it's there. Your assailant is a tall humanoid, a dragon woman with violet hair running down her head and spine while ending at the point of a long tail. The rest of her is covered in mostly reddish scales while her chest and tummy area sports an orange/red texture.";
 			WaitLineBreak;
 			say "     The female dragon's eyes glow an amber-yellow as she studies you with disdain, which gives you the time to check her out too. She's nearly seven feet tall with clear musculature and definition rippling on her naked body, yet still clearly feminine with shapely curves, D-cup breasts and a draconic slit tucked between her legs. Snapping a muzzle filled with sharp teeth at you, she growls loudly, exuding a plume of dark smoke from her reptilian-like nostrils. 'Looking for a quick score in my home, huh dickhead?! Well you won't find it here!' the angry woman shouts in a rough but feminine voice. Before you can even think of replying, she's already lunging at you, scaled fists raised to punch you into submission!";
 			challenge "Crimson Dragon";
 			if fightoutcome < 20: [player won]
-				say "     The furred dragon stumbles back against one of the walls, scowling as she blinks as if to drive away the starts dancing in front of her eyes. 'Agh! Bastard! You won't... Ugh! Steal from me,' she growls, trying to back away further so she can regain her strength - but with the wall right behind, there is no way to go. Looks like she's at your mercy right now.";
+				say "     The furred dragon stumbles back against one of the walls, scowling as she blinks as if to drive away the stars dancing in front of her eyes. 'Agh! Bastard! You won't... Ugh! Steal from me,' she growls, trying to back away further so she can regain her strength - but with the wall right behind, there is no way to go. Looks like she's at your mercy right now.";
+				LineBreak;
 				say "     [bold type]What do you do now?[roman type][line break]";
 				say "     [link](1)[as]1[end link] - Rape the bitch!";
 				say "     [link](2)[as]2[end link] - Leave. You just wanted to explore anyways.";
 				say "     [link](3)[as]3[end link] - Talk to her and clear up the misunderstanding.";
 				now calcnumber is 0;
 				while calcnumber < 1 or calcnumber > 3:
-					say "Choice? (1-3)>[run paragraph on]";
+					say "Choice? (1-3)> [run paragraph on]";
 					get a number;
 					if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 						break;
 					else:
 						say "Invalid choice. Type [link]1[end link] to rape her, [link]2[end link] to leave or [link]3[end link] to talk to her.";
+				LineBreak;
 				if calcnumber is 1:
-					LineBreak;
 					say "[RubyCombatFuck]";
 					now Resolution of Urban Cliff is 10; [won, rape]
 					now Urban Cliff is resolved;
 				else if calcnumber is 2:
-					LineBreak;
 					say "     You turn and walk away, not wanting anything from the dragon creature. A clearly surprised huff can be heard behind you, followed by the woman's voice shouting angrily, 'W-what? You come into my home and beat me up, then just fuck off? Good riddance, bastard! Leave and don't come back, you hear me?!' As you start climbing back up the slope, you wonder if you'll see the furry, scaled woman again, maybe under better circumstances. Surprise visits to her home seem to be out for sure, given her reaction this time, so you make a note not to come here again.";
+					now Resolution of Urban Cliff is 11; [won, left]
 					now Urban Cliff is resolved;
 				else if calcnumber is 3:
-					LineBreak;
-					say "     You back up, holding your hands out in a consoling gesture and quickly declare that you had no intention of fighting, hurting or stealing from her. She grimaces and huffs out a puff of smoke, 'Could'a fooled me jerk. Buttering me up won't make me bend over for you either. I'm not one of those husky sluts whoring around.' Again trying to strike a reasonable tone, you explain that you were only curious about the cave and had no sinister motives beyond that. The dragoness growls in disbelief, still staring at you with hostility, yet as you continue to stand there with open hands, she becomes a little bit less sure about her assumptions. While you wait, your eyes roam over her naked body all of their own accord, taking in the glistening sheen of sweat on her, the taunt abs lined with droplets of perspiration as well as a few cuts and scrapes from your fight. This wakes a little bit of regret at your unneeded fight in you, so you cautiously ask if she needs any help patching up or something.";
-					say "     The dragoness snaps at you, whipping her head up to look directly at you and baring her teeth. 'I don't need your goddamn help asshole,' she says, even while wincing as she pushes herself off from the wall to stand before proud and erect you. 'Hear that?! I do not need you, or anyone else! In this world, one can rely only on themselves!' she says with a snarl, a bit of fiery steam shooting forth from her nostrils as her amber eyes fixate on yours in defiance and anger. Defying her clear hostility you state things are usually easier with friends and those you trust close by. She gives you a mystified look for a moment before returning to her previous anger-filled gaze. 'Pfft, trust what would you know about trust?'";
+					say "     You back up, holding your hands out in a consoling gesture and quickly declare that you had no intention of fighting, hurting or stealing from her. She grimaces and huffs out a puff of smoke, 'Could'a fooled me jerk. Buttering me up won't make me bend over for you either. I'm not one of those husky sluts whoring around.' Again trying to strike a reasonable tone, you explain that you were only curious about the cave and had no sinister motives beyond that. The dragoness growls in disbelief, still staring at you with hostility, yet as you continue to stand there with open hands, she becomes a little bit less sure about her assumptions. While you wait, your eyes roam over her naked body all of their own accord, taking in the glistening sheen of sweat on her, the taut abs lined with droplets of perspiration as well as a few cuts and scrapes from your fight. This wakes a little bit of regret at your unneeded fight in you, so you cautiously ask if she needs any help patching up or something.";
+					say "     The dragoness snaps at you, whipping her head up to look directly at you and baring her teeth. 'I don't need your goddamn help asshole,' she says, even while wincing as she pushes herself off from the wall to stand proud and erect before you. 'Hear that?! I do not need you, or anyone else! In this world, one can rely only on themselves!' she says with a snarl, a bit of fiery steam shooting forth from her nostrils as her amber eyes fixate on yours in defiance and anger. Defying her clear hostility you state things are usually easier with friends and those you trust close by. She gives you a mystified look for a moment before returning to her previous anger-filled gaze. 'Pfft, trust - what would you know about trust?'";
 					WaitLineBreak;
-					say "     Figuring you found a good segue to talk more with her, you begin asking her if you'd like to try being friends, but she cuts you off quickly. 'Enough chat. If you're not here to steal or rape, then leave me alone,' she says abruptly, stepping up to shoo you away. 'And don't come back unless you're bringing a truck of food as an apology for this fucking lump on my head!' she yells mockingly, scowling at you all the way until you pass the bend in the entrance tunnel. Deciding it best to leave for the time being, you keep going until you reach the exit and make your way back up the slope of rocks and ash. Perhaps it'd be best if you returned to the [bold type]Urban Cliff[roman type] with a peace offering. Some food might work, to fit the mocking request she made at the end. Something tells you it's not too late to hopefully make her a friend.";
+					say "     Figuring you found a good segue to talk more with her, you begin asking her if she'd like to try being friends, but she cuts you off quickly. 'Enough chat. If you're not here to steal or rape, then leave me alone,' she says abruptly, stepping up to shoo you away. 'And don't come back unless you're bringing a truck of food as an apology for this fucking lump on my head!' she yells mockingly, scowling at you all the way until you pass the bend in the entrance tunnel. Deciding it best to leave for the time being, you keep going until you reach the exit and make your way back up the slope of rocks and ash. Perhaps it'd be best if you returned to the [bold type]Urban Cliff[roman type] with a peace offering. Some food might work, to fit the mocking request she made at the end. Something tells you it's not too late to hopefully make her a friend.";
 					now Resolution of Urban Cliff is 1; [won, talk]
 					now PlayerMet of Ruby is true;
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
-				say "     You're pushed over and fall onto the cave floor, too exhausted or demoralized to continue the struggle. The dragon woman comes to stand over you, growling and muttering curses under her breath. Your about to explain yourself when a sharp kick hits you in the side. The dragon woman then picks you up by the scruff of your neck and begins to drag you back out of the cave. 'Fucking thieves,' you hear her mumble angrily to herself, and with a small puff of smoke that accompanies a disgusted snort from her, the strong woman tosses you down the slope of ash and rock. You curl up to roll and hopefully minimize the bruises that your undignified descent creates, though the landing at the bottom still leaves you seeing stars for a little while.";
+				say "     You're pushed over and fall onto the cave floor, too exhausted or demoralized to continue the struggle. The dragon woman comes to stand over you, growling and muttering curses under her breath. You're about to explain yourself when a sharp kick hits you in the side. The dragon woman then picks you up by the scruff of your neck and begins to drag you back out of the cave. 'Fucking thieves,' you hear her mumble angrily to herself, and with a small puff of smoke that accompanies a disgusted snort from her, the strong woman tosses you down the slope of ash and rock. You curl up to roll and hopefully minimize the bruises that your undignified descent creates, though the landing at the bottom still leaves you seeing stars for a little while.";
 				say "     Intruder dealt with, the crimson dragoness vanishes back inside what you assume is her home, growling to herself all the way. Well, she didn't rob or rape you, so it could have been worse, you think to yourself as you get up and stumble away in a bit of pain. Making a mental note to avoid this area in the future, you hope you won't run into that furious female anywhere else either...";
 				now Resolution of Urban Cliff is 20; [lost]
 				now Urban Cliff is resolved;
@@ -95,44 +95,40 @@ to say ResolveEvent Urban Cliff:
 				now Resolution of Urban Cliff is 21; [fled]
 				now Urban Cliff is resolved;
 		else if calcnumber is 2:
-			LineBreak;
 			say "     What's that old saying? 'Discretion is the better part of valor.' Maybe that's wise here considering you'd be wandering into an unknown volcanic cave, in the background of a city overrun by nanobots, mutants and other mythical creatures, almost all of which are looking to rob or screw you silly. You shake your head and turn around to keep moving. Still, might be interesting to return here sometime when you feel ready for a bit of exploration.";
 			now Resolution of Urban Cliff is 99; [player didn't want to go in right now]
 		else if calcnumber is 3:
-			LineBreak;
 			say "     What's that old saying? 'Discretion is the better part of valor.' Maybe that's wise here considering you'd be wandering into an unknown volcanic cave, in the background of a city overrun by nanobots, mutants and other mythical creatures, almost all of which are looking to rob or screw you silly. You shake your head and turn around to keep moving, making a mental note to avoid this place in the future too.";
 			now Resolution of Urban Cliff is 100; [player avoids the place]
 			now Urban Cliff is resolved;
 	else if Resolution of Urban Cliff is 1:
 		if carried of Food > 0:
 			say "     Arriving back at one of the torn-up sections of the capitol district, you stand at the upper end of a sloping cliff that's about 300 feet wide. A little ways to the side and down the slope lies the cave where you met that red anthro dragoness a while ago. You remember your fight with her, and the grudging talk you had afterwards, ending with her mockingly demanding a whole lot of food as restitution. Knowing that you've got some food you might spare, you wonder if you maybe should visit the woman and give it to her to hopefully make good after your disastrous first meeting.";
+			LineBreak;
 			say "     [bold type]Do you want to visit the dragon in her cave?[roman type][line break]";
 			say "     [link](1)[as]1[end link] - Sure, give her some food.";
 			say "     [link](2)[as]2[end link] - Not right now.";
 			say "     [link](3)[as]3[end link] - Nope, not ever!";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
 				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 					break;
 				else:
 					say "Invalid choice. Type [link]1[end link] to go in, [link]2[end link] to leave for now or [link]3[end link] to avoid this place.";
+			LineBreak;
 			if calcnumber is 1:
-				LineBreak;
 				say "     You start down the slope, fishing some nutrition from your pack while you do. When you reach the entrance you call out, greeting a loud 'hello?' for anyone inside to hear. A moment later a scaly, red and fairly irritated looking dragon head pokes around the corner to look at you. Irritation is replaced with recognition, then confusion at your outstretched arms bearing food. 'Y-you! What-.' You cut her off. 'It's not a truck, but it's a good start, right?' you say, bearing as charming a smile as you can muster. She looks bewildered for a moment before surprisingly enough cracking a small smile. 'Pfft, you freakin['] jerk I was kidding. Why the hell are you back here huh? Can't be to just annoy me, and poisoned food wouldn't really make sense. So what the hell?'";
 				say "     You introduce yourself and carefully explain to her that you were hoping to make a friend, maybe cheer her up from whatever anger is holding her down. She shakes her head when you say that. 'Hardly, my anger makes me stronger, stronger than anyone I've faced before!' she says a bit indignantly, but her voice has lost a bit of its hostile luster. You give her a defiant look and smile, causing a bit of steam to trail out of her thin nostrils. 'Doesn't count.' You open your mouth to protest but she speaks louder this time. 'Doesn't. Count.' You nod your head after a moment finally. Then, you hold your offering up higher and walk a bit closer. She puts a hand on her naked hip and reaches out to take it. Her body heat is radiating its warmth even to where you stand, and her naked breasts perking out leave nothing to the imagination.";
 				WaitLineBreak;
 				say "     She takes a moment to look over your gift before looking back at you, expression slightly softer. '...Thanks, I guess, not too many people would let someone who attacked them walk only to come back with a gift.' She shifts uncomfortably. 'S-still not just gonna bend over for you like half the freakin['] sluts in the city would but... yeah, thanks,' she finishes, starting to back up into her cave. Before she goes you hear her call back 'Ruby by the way. May as well as know my name if you're gonna come by and pester me. Your about to call out and ask her something else but you figure for now it's best to wait, she has something to mull over and think about. You look on into the cave curiously but eventually you turn around, maybe she'll be more amicable next time you talk. You think heading away from the rock face and back to where you came down from.";
-				LineBreak;
 				ItemLoss food by 1;
 				now Resolution of Urban Cliff is 2; [food delivered]
-			if calcnumber is 2:
-				LineBreak;
+			else if calcnumber is 2:
 				say "     With a shrug to yourself, you continue on. You can always visit her another time after all.";
-			if calcnumber is 3:
-				LineBreak;
-				say "     You shrug to yourself and put the idea of trying to befriend the dragon out of your mind. Hell, the two of you fight before, how likely is it that she'd just accept you now? Making a mental note to avoid the area in the future, you wander off again.";
+			else if calcnumber is 3:
+				say "     You shrug to yourself and put the idea of trying to befriend the dragon out of your mind. Hell, the two of you fought before, how likely is it that she'd just accept you now? Making a mental note to avoid the area in the future, you wander off again.";
 				now Resolution of Urban Cliff is 100; [player avoids the place]
 				now Urban Cliff is resolved;
 	else if Resolution of Urban Cliff is 2: [gave her food previously]
@@ -141,13 +137,12 @@ to say ResolveEvent Urban Cliff:
 		WaitLineBreak;
 		say "     You tell her to just start with the basics. You already know each other's names so you start to tell her a bit about yourself, what you did before the apocalypse, what your passions are and your struggle for survival in this new land. She surprisingly listens intently to you talk, and when you finish she nods, yet stays silent. You and her exchange glances after your story as you wait for her to say something. 'What?' she asks genuinely. You explain it's usually courtesy to then tell her story... if she wants, of course. 'Oh... I told you I'm not used to this!' she says defensively before thinking pensively. Ruby sighs after thinking and mumbling some curse to herself or another. 'Agh, fine, haven't shared my life story since this whole freakin['] thing went down. So I hope you appreciate it!'";
 		say "     You smile and nod appreciatively and wait for her to answer. 'Hm... truth is I don't really remember what I was or what I did before this... I-I'm not sure, it's kind of fuzzy. I remember loving to workout, and I remember... a girl I was with, a girlfriend...' She sighs heavily. 'Doesn't matter, she's gone, can't even remember her face now. And... now I'm just here.' You lay a hand on her shoulder comfortingly, her scaly skin is incredibly warm to the touch and she tenses up when you touch her but doesn't pull away. You comfort her silently for a few moments before she continues. 'Clearest time back I can remember is me stumbling around the city holding my gut, I was wounded I think. Found an abandoned house to rest in. I was confused, careless and so, so tired. Then...' she stops and looks down, face turning from that of a stony warrior to that of a hurt, and sorrow filled woman. 'I... think that's enough talking for now. I want to go lay down.'";
-		LineBreak;
+		WaitLineBreak;
 		say "     She quickly gets up and heads behind her into her cave and disappears from sight. Perhaps it's best to come back later, so you leave for now and make note of the way to the [bold type]Path of Ashes[roman type] and [bold type]Ashen Cliff[roman type] for the future.";
 		now Resolution of Urban Cliff is 3; [visited and talked once]
 		now Charisma of Ruby is 1; [visited and talked once]
 		change the northeast exit of Path of Ashes to Ashen Cliff;
 		change the southwest exit of Ashen Cliff to Path of Ashes;
-		now RubyRoomConnection is 1; [room connected]
 		now Urban Cliff is resolved;
 
 to say RubyCombatFuck:
@@ -186,7 +181,7 @@ name(text)	PrepFunction(text)
 "Crimson Dragon"	"[PrepCombat_Crimson Dragon]"
 
 to say PrepCombat_Crimson Dragon:
-	say "";
+	setmongender 4; [creature is female]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -410,18 +405,17 @@ Sterile of Ruby is true. [steriles can't knock people up]
 MainInfection of Ruby is "Crimson Dragon".
 Description of Ruby is "[RubyDesc]".
 Conversation of Ruby is { "Growl." }.
-The scent of Ruby is "     Ruby smells of brimstone, spicy-sweet alcohol and pleasant feminine musk. It's strangely intoxicating."
+The scent of Ruby is "     Ruby smells of brimstone, spicy-sweet alcohol and pleasant feminine musk. It's strangely intoxicating.".
 
 to say RubyDesc:
 	say "     Ruby is a tall humanoid, a dragon woman with violet hair running down her head and spine while ending at the point of a long tail. The rest of her is covered in mostly reddish scales while her chest and tummy area sports an orange/red texture. Her eyes glow an amber-yellow and in the middle, surrounded by blood red irises. She's nearly seven feet tall with clear musculature and definition rippling on her naked body, yet still clearly feminine with steady curves, D-cup breasts and a draconic slit tucked between her legs.";
 
-instead of conversing the Ruby:
-	say "     <WIP>";
+[instead of conversing the Ruby:
+	say "     <WIP>";]
 
 
 instead of fucking Ruby:
 	say "     What exactly do you plan on doing with the anthro dragoness?";
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -443,17 +437,19 @@ instead of fucking Ruby:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
+				LineBreak;
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Fuck her"):
 					say "[RubySex1]";
 				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
-			say "     You step back from the Ruby, shaking your head slightly as she gives a questioning look.";
+			say "     You step back from Ruby, shaking your head slightly as she gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say RubySex1:
@@ -463,20 +459,24 @@ to say RubySex1:
 		WaitLineBreak;
 		say "     After a mini assjob session, Ruby lifts herself up and plants the tip of your member to her dragon cunt. She grinds her hips down and presses your cock tip into her, slowly sliding you into her. Ruby pulls her head back and moans out loud while one of your hands fall to her breasts, caressing and kneading them as she hilts you inside her. 'Ah! God... that feels so fuckin['] good. Haven't felt this good for as long as I can remember,' she admits, flashing you a genuine toothy grin. Her claws move to your shoulder and digs into them, causing a slight pinch of pain in each of your shoulders and driving you to push further into your scaly lover. The dragoness then starts to bounce on your crotch, sliding your length in and out of her fiery, gripping cunt.";
 		say "     Grunting and driving into Ruby, you pull your head forward against her claws and nuzzle at her neck, inhaling a thick drought of her intoxicating scent. One of her claws reaches back to keep your head there, against her neck as Ruby's hips go into overdrive. Speeding up in a way you didn't expect from Ruby, you hold on tight to this bucking reptilian-mammal as claws dig into you and girl bum splashed on your lap. During her ride you slip a digit between the two of you and use it to brush against her protruding clit bouncing against your hips. At that she throws her head back and cums. Squeezing down on your cock to the point of it being near painful. Hot dragon juice spills across your groin, soaking you and the air itself with the fragrance of the sex. You follow a few thrusts after Ruby, grinding deeply into her until you shoot your plentiful load, rocketing inside her and painting her red womb with your seed. She moans, and screams in pleasure along with you as you both ride the tide of orgasms that wash over both of you.";
+		NPCSexAftermath Ruby receives "PussyFuck" from Player;
 		WaitLineBreak;
-		say "     After who knows how long, you find yourself dribbling what remains of your load across her taut belly. Ruby has a blissed out look on her face and blushes when she catches you staring. 'Daaamn that was good sex if I've ever seen it,' she says, smiling broadly. 'God damn...' You give her a pat on the ass and agree wholeheartedly, she's a hell of a ride! You both stand and you dress silently, exchanging a few kisses with your lovely dragon lover as you do. Ruby has a glow about her as she rests herself against a wall, eyeing you and fingering her sloppy cunny causally. Eventually, after some temptation, your up and ready to continue your apocalypse.";
+		say "     After who knows how long, you find yourself dribbling what remains of your load across her taut belly. Ruby has a blissed out look on her face and blushes when she catches you staring. 'Daaamn that was good sex if I've ever seen it,' she says, smiling broadly. 'God damn...' You give her a pat on the ass and agree wholeheartedly, she's a hell of a ride! You both stand and you dress silently, exchanging a few kisses with your lovely dragon lover as you do. Ruby has a glow about her as she rests herself against a wall, eyeing you and fingering her sloppy cunny causally. Eventually, after some temptation, you're up and ready to continue your apocalypse.";
 	else if Player is female:
 		say "     You embrace the dragoness, returning her sweet kiss. Pressing your lips against Ruby's while running your tongue along her scaly lips, begging to deepen your kiss. Her tongue reaches out to meet yours as her strong arms press you tightly against her, scaly hands reaching down to caress your ass and lower back. She moves forward, pushing you up against the back wall of her cave while her hands play at your body and her breathing intensifies. Her burning hot mouth seems to suck at your very breath, and pressed up so closely to this fiery dragoness your beginning to feel the heat! She pulls back, looking at you with devilishly lusty eyes. She then throws you behind her and onto her many piles of fur scraps. 'Oh god... I haven't felt like this in... so long. Everything off, I need you now, right now!' she says before pouncing on top of you, planting both her claws on either side of your head.";
 		say "     Ruby straddles herself above you, panting a little as she does, clearly well beyond aroused at this point as she grinds against your prone form. She trails kisses and licks down and up your body, drooling warm saliva over your vulnerable body until her long, reptilian tongue slurps upward and collides with the crest of your neck, running up your jaw and against your lips. Ruby then moves to straddle your face. She plants her hot dragon-cunt directly onto your waiting mouth. And while your vision is blocked by a plush, scaly ass, you can hear Ruby moan out as she makes contact with your lips. She gyrates her hips against your face and your hands come up to grab and caress Ruby's warm thighs. 'Fuuuck, you're so hot, you know that? Can't believe how damn wet you've gotten me, big girl.' She punctuates this by turning around on your face and once again plants her ass on your face.";
 		WaitLineBreak;
 		say "     You shove your nose right between her tight, muscular ass cheeks and your tongue right back into her tasty sex. Your hands reach up and spread her soft cheeks wide as you dive in, enthusiastically eating out the dragon woman you've come to know so well. 'Can't just let you have all the fun,' you hear under the dragon's ass. And a moment later you feel a long, hot tongue being dragged across your midriff, running down to your cunt and sliding in like it was made to match your pussy. You arch your back and redouble your cunt-munching efforts, sliding one finger against her front to caress Ruby's clit, which has been rubbing itself against your chin until now. You feel groans being blown into your sex and clawed hand trailing light red love-marks across your skin. The two of you are caught in a cycle of sixty nine love making, completely enraptured by the other's juicy, feminine sex.";
 		say "     Each of your climaxes explode all at once. A wave of musky dragon love splashes across your face as you hear a loud moan being pushed into your spasming cunny. For your part Ruby latches onto your crotch, planting her entire mouth over your sex and drinking every drop of climax that leaks out of your blissed out body. You each ride the other's high, drawing out the other's climax for a long while before you're both laying there, she on top of you, dragon cunt simply resting on your face until Ruby lifts herself off of you and plants her body next to yours. 'Damn, that was hot. Haven't felt that good in... well, as long as I can remember,' she says, smiling cutely and giving you a smooch on the cheek. 'Hope we can do this again, lover.' You wholeheartedly agree as you stand slowly on shaky legs and get dressed, exchanging a few small kisses with the dragoness as you do.";
+		NPCSexAftermath Player receives "OralPussy" from Ruby;
+		NPCSexAftermath Ruby receives "OralPussy" from Player;
 	else:
 		say "     You embrace the dragoness, returning her sweet kiss. Pressing your lips against Ruby's while running your tongue along her scaly lips, begging to deepen your kiss. Her tongue reaches out to meet yours as her strong arms press you tightly against her, scaly hands reaching down to caress your ass and lower back. She moves forward, pushing you up against the back wall of her cave while her hands play at your body and her breathing intensifies. Her burning hot mouth seems to suck at your very breath, and pressed up so closely to this fiery dragoness your beginning to feel the heat! She pulls back, looking at you with devilishly lusty eyes. She then throws you behind her and onto her many piles of fur scraps. 'Oh god... I haven't felt like this in... so long. Everything off, I need you now, right now!' she says before pouncing on top of you, planting both her claws on either side of your head.";
 		say "     Rudy straddles herself above you, panting a little as she does, clearly well beyond aroused at this point as she grinds against your prone form. She trails kisses and licks down and up your body, drooling warm saliva over your vulnerable body until her long, reptilian tongue slurps upward and collides with the crest of your neck, running up your jaw and against your lips. Ruby then moves to straddle your face. She plants her hot dragon-cunt directly onto your waiting mouth. And while your vision is blocked by a plush scaly ass you can hear Ruby moan out as she makes contact with your lips. She gyrates her hips against your face and your hands come up to grab and caress Ruby's warm thighs. 'Fuuuck, you're so hot, you know that? Can't believe how damn wet you've gotten me.' She punctuates this by turning around on your face and once again plants her ass on your face.";
-		say "     You shove your nose right between her tight muscular ass cheeks and your tongue right back into her tasty sex. Your hands reach up and spread her soft cheeks wide as you dive in, enthusiastically eating out the dragon woman you've come to know so well. 'Can't just let you have all the fun,' you hear under the dragon's ass. And a moment later you feel a long, hot tongue being dragged across your midriff running down to your sexless crotch and sliding it across the sensitive skin like lapping at ice cream. You arch your back from the stimuli and redouble your cunt-munching efforts, sliding one finger against her front to caress Ruby's clit, which has been rubbing itself against your chin until now. You feel groans being blown into your sex and clawed hand trailing light red love-marks across your skin. The two of you are caught in a cycle of sixty nine love making, you taken by her juicy dragon cunny and she by your wonderfully sensitive, sexless flesh.";
 		WaitLineBreak;
+		say "     You shove your nose right between her tight muscular ass cheeks and your tongue right back into her tasty sex. Your hands reach up and spread her soft cheeks wide as you dive in, enthusiastically eating out the dragon woman you've come to know so well. 'Can't just let you have all the fun,' you hear under the dragon's ass. And a moment later you feel a long, hot tongue being dragged across your midriff running down to your sexless crotch and sliding it across the sensitive skin like lapping at ice cream. You arch your back from the stimuli and redouble your cunt-munching efforts, sliding one finger against her front to caress Ruby's clit, which has been rubbing itself against your chin until now. You feel groans being blown into your sex and clawed hand trailing light red love-marks across your skin. The two of you are caught in a cycle of sixty nine love making, you taken by her juicy dragon cunny and she by your wonderfully sensitive, sexless flesh.";
 		say "     Each of your climaxes explode all at once. A wave of musky dragon love splashed across your face has you hear a loud moan being pushed into you spasming cunny. For your part Ruby latches onto your crotch, planting her entire mouth over it and using her long tongue to send the bundles of nerves downy here into major overdrive, drawing a long drawn out gasp from your lips. You each ride the other's high, drawing out the other's climax for a long while before you're both laying there, she on top of you, dragon cunt simply resting on your face until Ruby lifts herself off you and plants her body next to yours. 'Damn, that was hot. Haven't felt that good in... well, as long as I can remember,' she says, smiling cutely and giving you a smooch on the cheek. 'Hope we can do this again lover.' You wholeheartedly agree as you stand slowly on shaky legs and get dressed. Exchanging a few small kisses with the dragoness as you do.";
+		NPCSexAftermath Player receives "OralPussy" from Ruby;
 
 Section 4 - Location
 
@@ -492,19 +492,21 @@ instead of going down from Ashen Cliff while (Ruby is in Ruby's Cave):
 		say "     You return to Ruby's cave, your mind is on what the dragon said last you met her. You wonder silently to yourself in thought as you walk to the entrance of her home and call out for her. You hear nothing for a long while, then her familiar voice rings out. 'Yeah... come in,' she calls meekly. Officially curious you enter her home. Inside you see Ruby has her back turned to you and stays silent as you approach. 'Ruby?' you ask, rounding to the other side of her to face her. Her arms are crossed and her expression is one of conflict. She looks directly at you, her jaw locked for a long moment before she speaks. 'Ah hell, never had to do this before, I...' She shifts her posture, moving her thighs together as she does. A pleasant musk reaches your senses. Ruby huffs. 'To hell with it, I never was subtle.' She moves forward to press her thick scaly lips to yours.";
 		LineBreak;
 		say "     [bold type]How do you react?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Return her affections.";
 		say "     ([link]N[as]n[end link]) - Reject the dragoness's approach.";
 		if Player consents:
 			LineBreak;
 			say "[RubySex1]";
 			now PlayerRomanced of Ruby is true;
+			now PlayerFriended of Ruby is false;
 		else:
 			LineBreak;
 			say "     You put your hands out and hold her shoulders, your lips only brush briefly. She stops instantly, looking a little heartbroken. You brush your hand across her shoulder and reassure her that she's an amazing person but you don't want her in that way. She backs up and looks down, clearly hurt. 'Ouch. Well at least you made it gentle.' She gives a sad smile. 'Ah, don't worry about it, it's stupid anyway. Umm, I need to go out and scavenge for some stuff, clear out if you will. I'll ah, talk to you later,' she finishes and walks out without another word before you can even respond. You follow shortly after, leaving the dragon's home...";
 			now PlayerFriended of Ruby is true;
+			now PlayerRomanced of Ruby is false;
+		[now Charisma of Ruby is 3;]
 	else if PlayerRomanced of Ruby is true: [romance]
-		say "     You enter into Ruby's cave and after a few seconds your eyes adjust to the dim lighting inside. The dragoness currently is [one of]on the far side of the room fumbling with a hot stew[or]just preparing a large furry hide[at random], but puts aside what she's doing as she notices your presence. With a broad smile on her toothy maw, she says, 'Hey good lookin.'";
+		say "     You enter into Ruby's cave and after a few seconds your eyes adjust to the dim lighting inside. The dragoness currently is [one of]on the far side of the room fumbling with a hot stew[or]just preparing a large furry hide[at random], but puts aside what she's doing as she notices your presence. With a broad smile on her toothy maw, she says, 'Hey good lookin['].'";
 		LineBreak;
 		move Player to Ruby's Cave;
 	else if PlayerFriended of Ruby is true: [friendzone]
@@ -524,16 +526,16 @@ Table of GameRoomIDs (continued)
 Object	Name
 Ruby's Cave	"Ruby's Cave"
 
-Ruby's Cave is a room.
+Ruby's Cave is a room. It is sleepsafe.
 Ruby's Cave is down from Ashen Cliff.
-Description of Ruby's Cave is "Ruby's humble abode consists of a short tunnel that leads into a natural cave, about sixty by thirty feet in its farthest extent. It is dimly lit by glowing volcanic rock formations and holds some scavenged furniture brought in by the dragoness.".
+Description of Ruby's Cave is "     Ruby's humble abode consists of a short tunnel that leads into a natural cave, about sixty by thirty feet in its farthest extent. It is dimly lit by glowing volcanic rock formations and holds some scavenged furniture brought in by the dragoness.[line break]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Ashen Cliff	"Ashen Cliff"
 
 Ashen Cliff is a room.
-Description of Ashen Cliff is "You stand at the upper end of creating a sloping cliff that's about 300 feet wide. Some titanic force sundered the very ground here, with either your half rising, the lower end being shoved down, or both, afterwards. This has torn apart countless buildings and streets, creating the new cliff whose steep slope consists of bare rock, debris and volcanic ash. A little distance from where you are is the opening that leads to Ruby's cave. You could go into that if you want to visit her.".
+Description of Ashen Cliff is "     You stand at the upper end of creating a sloping cliff that's about 300 feet wide. Some titanic force sundered the very ground here, with either your half rising, the lower end being shoved down, or both, afterwards. This has torn apart countless buildings and streets, creating the new cliff whose steep slope consists of bare rock, debris and volcanic ash. A little distance from where you are is the opening that leads to Ruby's cave. You could go into that if you want to visit her.[line break]".
 
 
 Ruby ends here.

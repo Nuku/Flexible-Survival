@@ -215,7 +215,7 @@ When Play begins:
 	now libido entry is 50; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "sharkman brute scale"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "sharkman brute milk";
+	now MilkItem entry is "sharkman brute man-milk";
 	now CumItem entry is "sharkman brute cum";
 	now TrophyFunction entry is "[GenerateTrophyList_SharkmanBrute]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -348,24 +348,6 @@ instead of sniffing sharkman brute scale:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"sharkman brute cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'sharkman brute cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	sharkman brute cum
-
-sharkman brute cum is a grab object.
-sharkman brute cum is cum.
-sharkman brute cum is infectious.
-Strain of sharkman brute cum is "Sharkman Brute".
-Usedesc of sharkman brute cum is "[sharkman brute cum use]";
-
-to say sharkman brute cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing sharkman brute cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
 "sharkman brute man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'sharkman brute man-milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	sharkman brute man-milk
 
 sharkman brute man-milk is a grab object.
@@ -376,7 +358,7 @@ Strain of sharkman brute man-milk is "Sharkman Brute".
 Usedesc of sharkman brute man-milk is "[sharkman brute man-milk use]";
 
 to say sharkman brute man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the reptilian man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the selachian man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
 instead of sniffing sharkman brute man-milk:

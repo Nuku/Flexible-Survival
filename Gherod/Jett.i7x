@@ -375,7 +375,7 @@ to say JettAlphaSexRimming:
 		WaitLineBreak;
 		say "     It eventually all ends once Jett grunts loudly, having been jerking himself off all this time. A brief moment of clariy is brought to you due to this sudden moan, and you realize he is shooting his load all over himself, his hole blinking and pulsating against your face with every single burst of cum that leaves his throbbing shaft. Once his orgasm subsides, however, he pulls you away from his ass, needing a bit more force than he probably expected he would need. 'Hey hey, enough now... You've pleased me greatly, pup. But maybe you gotta give it a break from being down there, yeah?' You are dizzy, lightheaded and very confused at how strong of an effect this had on you, but once you take a few whiffs of fresh air, your senses begin to return to you.";
 		say "     That was certainly an experience. You thank him for letting you service him, and with a smile, he puts you down and lets you go. 'But you can always come back to lick my ass some more later...' he adds with a grin on his muzzle.";
-		NPCSexAftermath Jett receives "DildoAssFuck" from Player;
+		NPCSexAftermath Jett receives "Other" from Player;
 	else:
 		say "     It is best that you propose something else, the scent is a bit too strong for you. The werewolf nods as he readjusts himself in his couch, 'Hah! Being careful now? I'm sure you'd be fine, but I get that it ain't for everyone. Maybe we could do something else, then? He waits for you to reply.";
 		WaitLineBreak;

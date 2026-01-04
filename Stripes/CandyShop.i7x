@@ -109,7 +109,7 @@ to say Sweet Tooth scene:
 	else if ferretvisit is 1:
 		[puts Sugar Ferret as lead monster for impregnation]
 		choose row with name of "Sugar Ferret" in Table of Random Critters;
-		if "Female Preferred" is listed in feats of Player:
+		if Player is FemalePreferred:
 			now sex entry is "Female";
 		else if "Herm Preferred" is listed in feats of Player:
 			now sex entry is "Both";
@@ -168,7 +168,7 @@ to say Sweet Tooth scene:
 	else:
 		[puts Sugar Ferret as lead monster for impregnation]
 		setmonster "Sugar Ferret";
-		if "Female Preferred" is listed in feats of Player:
+		if Player is FemalePreferred:
 			now sex entry is "Female";
 		else if "Herm Preferred" is listed in feats of Player:
 			now sex entry is "Both";

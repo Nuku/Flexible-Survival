@@ -302,7 +302,7 @@ to say mrevent08:
 			setmonster "Clockwork Fox";
 			choose row MonsterID from the Table of Random Critters;
 			now sex entry is "Female";
-			if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
+			if Player is MalePreferred, now sex entry is "Male";
 			if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
 			say "     The clockwork fox guy runs his paws over your [bodydesc of Player] body, caressing and cuddling you. His motions are smooth and precise thanks to his recent oiling, only soft whirrs and clicks as the gears move inside him. His cool muzzle slides across your neck, giving you soft nips as he helps you out of your gear and guides you to one of the workbenches. Val gives you a quick wave and tells you to have fun, though you have little chance to respond before the fox's muzzle is pressed to your lips in a kiss. A curved brass tongue slides out to brush across yours while the lustful tod [if Player is female]dips a pair of fingers into your pussy[else]grabs your ass and fingers your tight pucker[end if]. Once the kiss is broken, the fox gets you to lean over the bench, chirring in a soft, musically chiming voice about how he'll give you a winding you'll never forget.";
 			say "     The brassworks fox runs his paws down your back and grabs your ass as he moves to get his mechanical cock lined up with your [if Player is female]juicy pussy[else]puckered hole[end if]. He starts slow, letting his cool, brass erection brush against you a few times so it may leak its oily precum onto it. His paws wander back up your [bodytype of Player] body as he thrusts into you with a happy chiming. The brass rod warms up quickly as he pumps into you, making you moan in pleasure. His oily pre leaks into you, making the metallic flesh's passing smooth and sensual.";
@@ -341,7 +341,7 @@ to say mrevent08:
 			setmonster "Clockwork Fox";
 			choose row MonsterID from the Table of Random Critters;
 			now sex entry is "Male";
-			if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
+			if Player is FemalePreferred, now sex entry is "Female";
 			if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
 			say "     The clockwork fox girl runs her paws over your [bodydesc of Player] body, caressing and cuddling you. Her motions are smooth and precise thanks to her recent oiling, only soft whirrs and clicks as the gears move inside her. Her cool muzzle slides across your neck, giving you soft nips as she helps you out of your gear and tugs you over to one of the workbenches. Val gives you a quick wave and tells you to have fun, though you have little chance to respond before the vixen's muzzle is pressed to your lips in a kiss. A curved brass tongue slides out to brush across yours while the lustful fox girl [if Player is female]dips a pair of fingers into your pussy[else]takes hold of your cock and strokes it[end if]. Once the kiss is broken, the fox gets you to lean over the bench, chirring in a soft, musically chiming voice about how she [if Player is male]wants you to wind her so tight she'll scream when her mainspring pops[else]wants you to get her pussy nice and lubed up so one of the tods can wind her up[end if].";
 			if Player is male:

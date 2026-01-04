@@ -395,14 +395,15 @@ to say libraryexplore:
 		setmonster "Harpy" silently;
 		turn the Player into a "Harpy" silently; [NOTE: Avoid attributeinfect output in a game over (@Stadler#3007)]
 		if hellHoundLevel is 0:
-			if "Male Preferred" is not listed in feats of Player and "Herm Preferred" is not listed in feats of Player and "One Way" is not listed in feats of Player and "Always Cocky" is not listed in feats of Player:
+			if Player is not MalePreferred and "Herm Preferred" is not listed in feats of Player and "One Way" is not listed in feats of Player and "Always Cocky" is not listed in feats of Player:
 				now Cock Count of Player is 0;
 				now Cock Length of Player is 0;
 				now Ball Size of Player is 0;
-			if "Male Preferred" is not listed in feats of Player:
+			if Player is not MalePreferred:
 				if Player is not female, now Cunt Count of Player is 1;
 				if Cunt Depth of Player < 6, now Cunt Depth of Player is 6;
 				if Cunt Tightness of Player < 4, now Cunt Tightness of Player is 4;
+			if Player is not MalePreferred or "Breasts" is listed in feats of Player:
 				if Nipple Count of Player is 0, now Nipple Count of Player is 2;
 				if Breast Size of Player < 3, now Breast Size of Player is 3;
 		WaitLineBreak;

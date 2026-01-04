@@ -843,7 +843,7 @@ to say BastetShrineFuck:
 	if Player is male:
 		NPCSexAftermath Bastet receives "PussyFuck" from Player;
 	else:
-		NPCSexAftermath Player receives "DildoPussyFuck" from Bastet;
+		NPCSexAftermath Player receives "PussyDildoFuck" from Bastet;
 
 Instead of fucking the Bastet:
 	say "[BastetSexMenu]";

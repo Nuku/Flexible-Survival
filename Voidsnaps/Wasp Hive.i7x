@@ -444,7 +444,7 @@ when play begins:
 	now loot entry is "";
 	now lootchance entry is 50;
 	now MilkItem entry is "wasp warrior milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now CumItem entry is "wasp warrior cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4;
 	now body descriptor entry is "[one of]smooth[or]chitinous[at random]";
@@ -513,7 +513,7 @@ when play begins:
 	now loot entry is "";
 	now lootchance entry is 50;
 	now MilkItem entry is "wasp drone milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now CumItem entry is "wasp drone cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4;
 	now body descriptor entry is "[one of]fuzzy[or]chitinous[at random]";
@@ -581,7 +581,7 @@ when play begins:
 	now loot entry is "";
 	now lootchance entry is 50;
 	now MilkItem entry is "wasp king milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now CumItem entry is "wasp king cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4;
 	now body descriptor entry is "[one of]Smooth[or]Fuzzy[or]Chitinous[at random]";

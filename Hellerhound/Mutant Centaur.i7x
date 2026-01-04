@@ -23,27 +23,25 @@ to say ResolveEvent Apple Tree:
 	say "     Wandering across the plains, you come to one of the few trees scattered throughout it. As you approach, you can see a centaur stallion plucking the apples from the tree and stuffing them into his pack and his mouth. A little wary, but hopeful at the prospect of food, you continue forward cautiously and approach from behind. As you get nearer, you can see that the centaur has become strange and twisted by the apples he's gathering and eating. Each time he gobbles one down, fresh green tentacles under his equine belly writhe and his large cock and balls become greener. Some roots from the tree have started to slide up his legs, moving to further corrupt him.";
 	say "     Shall you call out and continue to approach this tainted centaur?";
 	if Player consents:
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Mutant Centaur":
-				now MonsterID is y;
-				break;
-		choose row MonsterID in Table of Random Critters;
+		LineBreak;
+		choose a row with Name of "Mutant Centaur" in Table of Random Critters;
 		now area entry is "Plains";
 		now non-infectious entry is false;
 		say "     Noticing you, the centaur whinnies excitedly and pulls away from the tree roots with some effort. The roots writhe on the ground, as if searching for their prey, before finally slipping back under the earth to await another hungry victim. The centaur, not noticing what was starting to happen to him, trots over to you, cock swelling and tentacles writhing beside that throbbing, leaf-green meat. His sheath and ballsack are a dark green in color. He looks you over and, with a booming voice, asks: 'Are you going to submit to me?' You have a feeling that if you don't agree, he'll try to take what he wants by force.";
 		if Player consents:
-			say "You bow down your head and he laughs, approaching you with lust in his eyes.";
+			LineBreak;
+			say "     You bow down your head and he laughs, approaching you with lust in his eyes.";
 			now centaurmate is 1;
 			say "[Mutant Centaur Wins]";
 			increase score by 20;
 			now Resolution of Apple Tree is 1; [fought the apple tree mutant centaur]
 		else:
-			say "The centaur roars 'Fine then, be unwilling, but by the end you will want to be mine anyway!'";
+			LineBreak;
+			say "     The centaur roars 'Fine then, be unwilling, but by the end you will want to be mine anyway!'";
 			now centaurmate is 2;
 			challenge "Mutant Centaur";
 			if lost is 1:
-				say "     'I'm glad you accepted by gifts so willingly,' he says cruelly. 'I must now go off to find others to be my mare. There are plenty of other centaurs to fill with my tainted seed,' he laughs as he gallops off. It seems you've unleashed a new blight upon the plains.";
+				say "     'I'm glad you accepted my gifts so willingly,' he says cruelly. 'I must now go off to find others to be my mare. There are plenty of other centaurs to fill with my tainted seed,' he laughs as he gallops off. It seems you've unleashed a new blight upon the plains.";
 				decrease score by 5;
 			else:
 				say "     'If you're going to be so mule-headed about accepting my gifts, I will go find others to be my mare. There are plenty of other centaurs to fill with my tainted seed,' he laughs as he gallops off. It seems you've unleashed a new blight upon the plains.";
@@ -51,6 +49,7 @@ to say ResolveEvent Apple Tree:
 			now Resolution of Apple Tree is 2; [submitted to the apple tree mutant centaur]
 		extend game by 8;
 	else:
+		LineBreak;
 		say "     Deciding not to risk the attention of this corrupted creature, you move back quietly. As you do, the tree roots sink into his flesh and entwine with his own forming tentacles. The mutant centaur moans and whinnies in pleasure as tendrils grow and sprout from his back and torso. When he finally climaxes, it is a thick, sap-like fluid that stains the ground green. When the tree roots withdraw from him, he staggers off slowly, hooves slowly changing into roots that cling at the ground as he steps. The growing tendrils reach up and branch out, starting to grow leaves and apple blossoms. Quite certain that the tainted centaur will take root soon and become another of these strange apple trees, you resolve to stay away from any more of these trees you find.";
 		now Resolution of Apple Tree is 99; [disinterest]
 		increase score by 1;
@@ -108,7 +107,7 @@ To say Mutant Centaur Loses:
 			say "     The sight of the tentacles doesn't bother your fuzzy mind in the least as you leap onto the centaur's furry belly and rub yourself forward and back, arousing yourself and trying to raise yourself to orgasm. Your dripping pussy leaves streaks of wetness on the centaur's fur, and after a short while, something wet and large pokes at your back, breaking your concentration. You stop and turn back in surprise to see the huge green cock starkly erect, its precum-dripping tip a few inches from your face. A trail of precum leads along your body to your back. It isn't done growing, and pushes you forwards a few inches before it is fully ready.";
 			say "     You turn and place the cock at your waiting entrance, smearing your hole with precum as you try and force it in.";
 			if Cunt Tightness of Player < 16:[too small, cock won't fit]
-				say "     The cock doesn't go in, no matter how hard you try, so you bend over and start to lick it eagerly. It spams more precum in response, and your mouth becomes hot and gooey in an instant.";
+				say "     The cock doesn't go in, no matter how hard you try, so you bend over and start to lick it eagerly. It spasms more precum in response, and your mouth becomes hot and gooey in an instant.";
 				say "     You open your mouth wide and fit as much of it in as you can, which means only the soft head. You start to lick it and suck at the hole, drinking in the juices, until it climaxes.";
 				say "     The spray of fluid begins slowly, but increases in flow rapidly until you cannot swallow it all, and it shoves your face back, and sprays of hot green cum soak your whole body in a few seconds.";
 				say "     After cleaning up the centaur as well as yourself, you go on your way, with an apple as payment.";
@@ -118,7 +117,7 @@ To say Mutant Centaur Loses:
 			else: [cock will fit]
 				say "     After pulling at it for a moment, the head goes in. Your walls contract, bringing more of it inside you, and you closer to the monstrous testicles. All of a sudden, the two tentacles that had been lying limp on the ground dart into your ass, causing you to gasp from addictive pleasure.";
 				say "     At the noise, the centaur seems to wake up, and begins to bend its powerful muscles. You feel the giant cock pumping in and out of your cunt, soaking your insides in precum and bottoming out at each thrust.";
-				say "     You drift off into a haze of pleasure, filled with slapping noises of the centaur's balls. You come out of the haze into your orgasm, pleasure flooding your senses and hot cum flooding your insides, filling them until you look overdue for triplets. When your belly can stretch no more, cum sprays out of the tight seal between your lips and its shaft, covering what is in the way with green seed.[line break]";
+				say "     You drift off into a haze of pleasure, filled with slapping noises of the centaur's balls. You come out of the haze into your orgasm, pleasure flooding your senses and hot cum flooding your insides, filling them until you look overdue for triplets. When your belly can stretch no more, cum sprays out of the tight seal between your lips and its shaft, covering what is in the way with green seed.";
 				say "     The centaur pulls out of you with a splotchy noise, green cum running like a small stream from your abused lips, and walks off, leaving you to clean up and be on your way, an apple or two in your bag.";
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Mutant Centaur";
 				if a random chance of one in two succeeds:
@@ -137,7 +136,7 @@ To say Mutant Centaur Loses:
 to say centaur fuck female:
 	say "     You turn and place the twisted, equine shaft at your waiting entrance, smearing your vagina with precum as you try and force it in. After pulling on it for awhile, and pulling some more, the head finally goes in. Your inner walls shiver and convulse, dragging more of it inside you, and you closer to the monstrous testicles. All of a sudden, the two tentacles that had been lying limp on the ground dart into your ass, causing you to gasp from the sudden penetration. Being double teamed by one being brings a sort of addictive need, something you can't get enough of, drawing you to slam down as hard as you can.";
 	say "     Your sudden movement wakes the centaur fully, and he begins to bend the powerful muscles all over his body. You feel the giant cock pumping in and out of your cunt, filling you with precum as it bottoms out with each thrust. You simply stay crouched where you are, letting the beast defile you as fully as it desires.";
-	say "     You drift off into a haze of pleasure, mind filled with the slapping of the centaur's balls. You only come out of the haze when your orgasm rips through your body, pleasure flooding your senses as hot cum floods your insides, filling them until you look overdue for triplets. When your belly can stretch no more, cum sprays out of the tight seal between your lips and the twisted shaft, covering both your lower bodies with green seed.[line break]";
+	say "     You drift off into a haze of pleasure, mind filled with the slapping of the centaur's balls. You only come out of the haze when your orgasm rips through your body, pleasure flooding your senses as hot cum floods your insides, filling them until you look overdue for triplets. When your belly can stretch no more, cum sprays out of the tight seal between your lips and the twisted shaft, covering both your lower bodies with green seed.";
 	say "     The centaur pulls out of you with a sickeningly arousing squelch, green cum running like a small stream from your abused lips. He then saunters off, leaving you to clean up and be on your way, an apple or two in your bag.";
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Mutant Centaur";
 	if a random chance of 1 in 2 succeeds:
@@ -164,12 +163,12 @@ To say centaur fuck male:
 
 To say Mutant Centaur Wins:
 	if Cock Count of Player is not 0:
-		say "     The centaur flips you over, then looks you over as you go limp. He snarls at the sight of your cock. 'Little bastard,' he growls, twin green tentacles from his underside reaching out and wrapping around the base of your [Cock of Player] member. They tighten, sealing a ring around the base of your cock almost to the point of pain. 'I'll just have to use another hole'";
+		say "     The centaur flips you over, then looks you over as you go limp. He snarls at the sight of your cock. 'Little bastard,' he growls, twin green tentacles from his underside reaching out and wrapping around the base of your [Cock of Player] member. They tighten, sealing a ring around the base of your cock almost to the point of pain. 'I'll just have to use another hole.'";
 		WaitLineBreak;
 		say "[centaur fuck male]";
-	if Player is female:
+	else if Player is female:
 		say "[centaur fuck female]";
-	if Player is neuter and "Male Preferred" is not listed in feats of Player:
+	else if Player is neuter and Player is not MalePreferred:
 		say "     The centaur looks at you with apprehension. 'Nothing at all?' he groans, and kicks his front hoof, opening a hole in your body, which quickly heals into a vagina. 'See me next time, and don't lose it.'";
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 2;
@@ -188,7 +187,7 @@ to say centaurgrowtorso:
 	increase hunger of Player by 10;
 	say "You feel hungry, the energy being sapped out of you by the new growth.";
 	LineBreak;
-	say "Your feet grow hooves, large and noisy as they clatter on the road. They also change direction and stature as they begin to look truly like those of a horses";
+	say "Your feet grow hooves, large and noisy as they clatter on the road. They also change direction and stature as they begin to look truly like those of a horse's";
 
 
 to say Mutant Centaur Desc:
@@ -224,7 +223,7 @@ When Play begins:
 	now enemy title entry is "Mutant Centaur"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The Centaur punches your face with its hand[or]The Centaur headbutts you[or]The Centaur's green tentacles rise from under him and slap you[or]The Centaur rears up and slams you with his one of its hooves[at random]!";
+	now attack entry is "[one of]The centaur punches your face with its hand[or]The centaur headbutts you[or]The centaur's green tentacles rise from under him and slap you[or]The centaur rears up and slams you with one of its hooves[at random]!";
 	now defeated entry is "[Mutant Centaur Loses]";
 	now victory entry is "[Mutant Centaur Wins]";
 	now desc entry is "[Mutant Centaur Desc]"; [ Description of the creature when you encounter it.]
@@ -263,7 +262,7 @@ When Play begins:
 	now loot entry is "fresh apple";
 	now lootchance entry is 20; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "mutant centaur milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now CumItem entry is "mutant centaur cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[or]corrupted[at random]";

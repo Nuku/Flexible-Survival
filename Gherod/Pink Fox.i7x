@@ -68,7 +68,7 @@ When Play begins:
 	now face entry is "short muzzle filled with sharp teeth set below deep brilliant rose red eyes and pointed fox-like ears, all giving you a very elegant and alluring look";
 	now body entry is "tall and fit, with ample curves and powerful thighs. You have fox-like digitigrade legs that end in sharp claws";
 	now skin entry is "fluffy pink pearl fur covering your whole body, gaining a stronger bubblegum pink tone at the extremeties of your limbs"; [ format as "You have (your text) skin"]
-	now tail entry is "You have powerful, plump glutes, with a long fluffy tail that swings back and forth behind you, changing from pink pearl fur to a stronger pink towards the tip"; [ write a whole Sentence or leave blank. ]
+	now tail entry is "You have powerful, plump glutes, with a long fluffy tail that swings back and forth behind you, changing from pink pearl fur to a stronger pink towards the tip."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canid[or]vulpine[or]knotted[or]pointed[at random]"; [ format as "You have a 'size' (your text) cock ]
 	now face change entry is "your mouth pushes out into a slim muzzle. Your ears taper to points and seem to stretch out above your head as your face begins to reshape itself into the narrow, sexy visage of a fox, your slim, new muzzle full of sharp teeth and your bright, shining eyes seeing the world around you in an entirely new and more sexual light"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "you find yourself falling to the floor, your muscles twitching as your body reshapes into a slimmer and more streamlined form. Your feet shift and compress into small, dainty vulpine paws, even as your hands seem to narrow, and your fingers grow closer together as soft claws push their way out of your new, slightly paw-like hands"; [ format as "Your body feels funny as (your text)." ]
@@ -236,7 +236,7 @@ instead of sniffing pink fox fur:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"pink fox cum"	"The white, gooey seed of one of your past lovers. Comes inside a plastic water bottle that could be mistaken for some sort of buttermilk, if someone hadn't written 'Pink Fox' across the label. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	pink fox cum
+"pink fox cum"	"The white, gooey seed of one of your past lovers. Comes inside a plastic water bottle that could be mistaken for some sort of buttermilk, if someone hadn't written 'Pink Fox Cum' across the label. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	pink fox cum
 
 pink fox cum is a grab object.
 pink fox cum is cum.
@@ -262,15 +262,15 @@ name	desc	weight	object
 pink fox milk is a grab object.
 pink fox milk is milky.
 Purified of pink fox milk is "distilled milk".
-pink fox milk is infectious.
-Strain of pink fox milk is "Pink Fox".
+[pink fox milk is infectious.
+Strain of pink fox milk is "Pink Fox".]
 Usedesc of pink fox milk is "[pink fox milk use]";
 
 to say pink fox milk use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the pink fox milk run over your tongue and down your throat. Tastes rich and oddly sweet. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 	if "Iron Stomach" is not listed in Feats of Player:
-		say "     It seems to cause a raction with the nanites in your system...";
+		say "     It seems to cause a reaction with the nanites in your system...";
 		infect "Pink Fox";
 
 instead of sniffing pink fox milk:

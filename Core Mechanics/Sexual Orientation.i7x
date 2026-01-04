@@ -23,22 +23,22 @@ to PlayerSexualOrientationMenu:
 	let OrientationMenuExit be 0;
 	while OrientationMenuExit is 0:
 		clear the screen;
-		say "[bold type]Interested in: (select Yes for all that apply)[roman type][line break]";
+		say "[bold type]Interested in (select Yes for all that apply):[roman type][line break]";
 		say "(1) [link]Males (cock)[as]1[end link] - [if MaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
 		say "(2) [link]Trans Males (flat chest, pussy)[as]2[end link] - [if TransMaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
 		say "(3) [link]Females (pussy)[as]3[end link] - [if FemaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
 		say "(4) [link]Trans Females (breasts, cock)[as]4[end link] - [if TransFemaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
-		say "(5) [link]MaleHerms (flat chest, cock, pussy)[as]5[end link] - [if MaleHermInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
-		say "(6) [link]FemaleHerms (breasts, cock, pussy)[as]6[end link] - [if FemaleHermInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
-		say "[line break]";
-		say "(0) [link]Return to previous menu[as]0[end link][line break]";
+		say "(5) [link]Male Herms (flat chest, cock, pussy)[as]5[end link] - [if MaleHermInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
+		say "(6) [link]Female Herms (breasts, cock, pussy)[as]6[end link] - [if FemaleHermInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
+		say "[line break](0) [link]Return to previous menu[as]0[end link][line break]";
 		while 2 is 2:
-			say "Choice? (0-6)>[run paragraph on]";
+			say "Choice? (0-6)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 6:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 6.";
+		LineBreak;
 		if calcnumber is 1:
 			if MaleInterest of Player is true:
 				now MaleInterest of Player is false;

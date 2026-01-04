@@ -15,8 +15,11 @@ Description of Sunny Snacks is "[sunnysnacksdesc]".
 
 the scent of Sunny Snacks is "The scent of the beach hangs in the air, though there's the tasty smells of snacks in the air as well.".
 
+after looking while Player is in Sunny Snacks:
+	project the Figure of Map_Beach_6_icon;
+
 to say sunnysnacksdesc:
-	say "     Build onto a shelf of rock on the cliffside, this small building is located partway between the sandy beach below and the plaza above. Aside from likely providing some protection from the tides and storms, it also provides an excellent view of the beachgoers. The shop itself is a mix between a restaurant and a concession stand, having a wide window and counter with a few stools in front and the shopkeeper behind. There's also a couple of patio tables with parasols set out on the small plateau in front of it. The building is white with sky-blue trim while the sign above the window declares the place to be 'Sunny Snacks' and has a bright sun rising above the words. To either side of the service counter are the [link]menu[as]look menu[end link]. The person inside running the place is a surprisingly human woman, a definite oddity these days, especially for one so out in the open.";
+	say "     Built onto a shelf of rock on the cliffside, this small building is located partway between the sandy beach below and the plaza above. Aside from likely providing some protection from the tides and storms, it also provides an excellent view of the beachgoers. The shop itself is a mix between a restaurant and a concession stand, having a wide window and counter with a few stools in front and the shopkeeper behind. There's also a couple of patio tables with parasols set out on the small plateau in front of it. The building is white with sky-blue trim while the sign above the window declares the place to be 'Sunny Snacks' and has a bright sun rising above the words. To either side of the service counter are the [link]menu[as]look menu[end link]. The person inside running the place is a surprisingly human woman, a definite oddity these days, especially for one so out in the open.";
 
 
 Section 2 - Cindy
@@ -78,7 +81,7 @@ instead of conversing Cindy:
 		say "     'Hello there. Welcome to the [']Sunny Snacks[']. What can I get you?' She motions to the [link]menu[as]look menu[end link] boards on either side of the concession window.";
 		now HP of Cindy is 1;
 	else if HP of Cindy is 1 and a random chance of 1 in 3 succeeds:
-		say "     Cindy chats up a cute otter who's come to the counter. He's wearing nothing but a plastic whistle around his neck. With a wink and a playful teasing of his headfur, she invites him to come into the back for a bit. She temporarily closes the counter window and you can hear the sounds of them fucking inside. After he leaves and she opens up again, there's she shows no signs of infection at all. She looks just as human as before.";
+		say "     Cindy chats up a cute otter who's come to the counter. He's wearing nothing but a plastic whistle around his neck. With a wink and a playful teasing of his headfur, she invites him to come into the back for a bit. She temporarily closes the counter window and you can hear the sounds of them fucking inside. After he leaves and she opens up again, she shows no signs of infection at all. She looks just as human as before.";
 		increase HP of Cindy by 1;
 	else if HP of Cindy is 2 and a random chance of 1 in 3 succeeds:
 		say "     Decide to ask Cindy if she knows why she's not become infected like the others, but she shushes you[if Player is male] sharply[end if]. Leaning over the counter to get a better look, she gazes down at the beach where a cat-eared guy's been lured onto a sun-bathing pantheress's blanket. What starts out friendly enough with talking and light touches, soon goes from a seemingly innocent kiss to the dark female petting and then groping the reluctant male as she strips his clothes off.";

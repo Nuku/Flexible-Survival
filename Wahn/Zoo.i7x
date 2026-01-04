@@ -67,7 +67,7 @@ Border Wall is a room.
 Description of Border Wall is "[BorderWallDesc]".
 
 to say BorderWallDesc:
-	say "     The outer boundary of the zoo in the [Bold Type]north[roman type] is formed by a huge wall that extends far in both directions, cutting the city off from what lies beyond. You vaguely remember reading about its construction at the start of the last century - apparently a fair bit of the countryside towards the [Bold Type]north[roman type] was owned by a single rich man then, who was mad as a hatter with germophobia and whatnot. At some point the guy decided he never wanted to see another human in his life, resulting in the construction of the 'Great Wall of the West'. It doesn't even have any openings, just arches around an area a dozen miles in circumference which borders the ocean. No one has been on the other side of since then, as the land is held by a trust and has been declared a nature sanctuary. Which means that it would actually make it a good place to flee to, escaping the creature-infested inner city.";
+	say "     The outer boundary of the zoo in the [Bold Type]north[roman type] is formed by a huge wall that extends far in both directions, cutting the city off from what lies beyond. You vaguely remember reading about its construction at the start of the last century - apparently a fair bit of the countryside towards the [Bold Type]north[roman type] was owned by a single rich man then, who was mad as a hatter with germophobia and whatnot. At some point the guy decided he never wanted to see another human in his life, resulting in the construction of the 'Great Wall of the West'. It doesn't even have any openings, just arches around an area a dozen miles in circumference which borders the ocean. No one has been on the other side of it since then, as the land is held by a trust and has been declared a nature sanctuary. Which means that it would actually make it a good place to flee to, escaping the creature-infested inner city.";
 
 after looking while player is in Border Wall:
 	project the Figure of Map_Zoo_6_icon;
@@ -92,7 +92,7 @@ the scent of Cheetah Habitat is "A very strong scent of aroused cheetah hangs in
 to say CheetahLickChance:
 	LineBreak;
 	if a random chance of 1 in 3 succeeds and inafight is not 1:
-		say "     A throaty sound makes you look behind you and freeze, as a large spotted cat prowling towards you. You stand motionless as it walks up, inspecting you with interested eyes and sniffing at your legs, then even rearing up and placing its paws on your body to check your upper half out. Remembering from TV that the best thing to do in this situation is to remain still, you hope that it'll leave you alone, but the cat clearly has other plans.";
+		say "     A throaty sound makes you look behind you and freeze, as a large spotted cat is prowling towards you. You stand motionless as it walks up, inspecting you with interested eyes and sniffing at your legs, then even rearing up and placing its paws on your body to check your upper half out. Remembering from TV that the best thing to do in this situation is to remain still, you hope that it'll leave you alone, but the cat clearly has other plans.";
 		say "     The cheetah nuzzles up to you, running a rough tongue over your exposed skin and pawing at your clothes to expose more - especially around your crotch. Getting lapped and played with by the wild beast, you relax a little after a while, as this seems to be about as far as it intends to go with you right now. Eventually, the big cat seems satisfied and leaves you alone, stalking away to a good spot and taking a nap there.";
 		infect "Feral Cheetah";
 		follow the turnpass rule;
@@ -178,7 +178,7 @@ Zoo Rest Area is east of Main Path 2. The earea of Zoo Rest Area is "Zoo".
 Description of Zoo Rest Area is "[ZooRestAreaDesc]".
 
 to say ZooRestAreaDesc:
-	say "     This plaza in the midst of the zoo was meant to serve as a rest area for the visitors. Surrounding a bronze statue of a tiger in the middle, there are benches, several picnic tables and a number of food stands - thoroughly looted now, and one even has been completely flattened. Even those stands that sold non-edible goods were ransacked, the shreds of white fluff scattered about them attesting to the gruesome end of quite a few stuffed toys. Seeing this scene of devastation reminds you strongly that this isn't a safe and peaceful place anymore. Clearly, there are wild beasts out and roaming the area and you should take care if you want to explore any of the many paths leading off in all directions, leading to the expansive grounds of the zoo. It might just be a good idea to go back [Bold Type]west[roman type] towards to the entrance.";
+	say "     This plaza in the midst of the zoo was meant to serve as a rest area for the visitors. Surrounding a bronze statue of a tiger in the middle, there are benches, several picnic tables and a number of food stands - thoroughly looted now, and one even has been completely flattened. Even those stands that sold non-edible goods were ransacked, the shreds of white fluff scattered about them attesting to the gruesome end of quite a few stuffed toys. Seeing this scene of devastation reminds you strongly that this isn't a safe and peaceful place anymore. Clearly, there are wild beasts out and roaming the area and you should take care if you want to explore any of the many paths leading off in all directions, leading to the expansive grounds of the zoo. It might just be a good idea to go back [Bold Type]west[roman type] towards the entrance.";
 
 after looking while player is in Zoo Rest Area:
 	project the Figure of Map_Zoo_15_icon;
@@ -256,7 +256,7 @@ to say BirdExposureChance:
 			say "     A blue bird with a white belly comes swooping down and pecks you on the head. You have no idea what you did to annoy it, but the spot it hit hurts!";
 			infect "Blue Gryphon Herm";
 		else:
-			say "A light brown bird more commonly known as a wren flies over and pulls up, headed to the ceiling in from of you. As it does this, it lets loose and hits you full in the chest with a big splatter of bird poop.[line break]Disgusting!";
+			say "     A light brown bird more commonly known as a wren flies over and pulls up, headed to the ceiling in front of you. As it does this, it lets loose and hits you full in the chest with a big splatter of bird poop.[line break]Disgusting!";
 			infect "Harpy";
 	else:
 		say "     There is an ominous feeling about here, and you feel real uncomfortable.";

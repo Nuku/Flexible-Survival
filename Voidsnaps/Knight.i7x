@@ -34,7 +34,7 @@ playercrestnum is a number that varies. playercrestnum is usually 0.
 to say knightdesc:
 	[Sets target gender of Knight infection according to Player preferences]
 	choose row MonsterID from Table of Random Critters;
-	if "Female Preferred" is listed in feats of Player:
+	if Player is FemalePreferred:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
@@ -480,7 +480,7 @@ When Play begins:
 	now libido entry is 25; [ Target libido the infection will rise towards. ]
 	now loot entry is "stray links"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 44; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "knight milk";
+	now MilkItem entry is "knightly man-milk";
 	now CumItem entry is "knightly seed";
 	now TrophyFunction entry is "[GenerateTrophyList_Knight]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

@@ -64,7 +64,7 @@ When Play begins:
 	now body change entry is "[CheesecakeBodyTF]"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "it becomes soft and blemish free, shifting to a creamy white with rosy red highlights[if Breast Size of Player > 0 and Nipple Count of Player > 0 and player is cheesecakebodied]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you, boosting your breasts up into full view[else if Player is cheesecakebodied]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you[end if]"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "it becomes [if cheesecakemode is 1]tight and firm[else]plump and luscious[end if]"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
-	now cock change entry is "shifts to a mostly human form, except for the strawberry red color"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
+	now cock change entry is "it shifts to a mostly human form, except for the strawberry red color"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 12; [ These are now the creature's stats... ]
 	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 12; [ These values may be used as part of alternate combat.]
@@ -90,7 +90,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "cheesecake milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now CumItem entry is "cheesecake cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if cheesecakemode is 1 and a random chance of 1 in 2 succeeds]slim[else if cheesecakemode is 1]delicate[else if a random chance of 1 in 2 succeeds]plump[else]luscious[end if]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -112,14 +112,13 @@ cheesecake milk is milky.
 Purified of cheesecake milk is "distilled milk".
 cheesecake milk is infectious.
 Strain of cheesecake milk is "Cheesecake".
-Usedesc of cheesecake milk is "[cheesecake milk use]";
+Usedesc of cheesecake milk is "[cheesecake milk use]".
 
 to say cheesecake milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and cream cheese-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and cream cheese-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
-instead of sniffing cheesecake milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+Scent of cheesecake milk is "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -130,15 +129,14 @@ cheesecake cum is cum.
 Purified of cheesecake cum is "distilled cum".
 cheesecake cum is infectious.
 Strain of cheesecake cum is "Cheesecake".
-Usedesc of cheesecake cum is "[cheesecake cum use]";
+Usedesc of cheesecake cum is "[cheesecake cum use]".
 
 to say cheesecake cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, cheesy aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, cheesy aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
-instead of sniffing cheesecake cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.";
+Scent of cheesecake cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.".
 
 [
 Table of New Infection Parts (continued)
@@ -271,8 +269,8 @@ When Play begins:
 	now face change entry is "it is pressed flat, all your features disappearing except for your eyes and mouth which shift uncomfortably as they are overtaken by an icing-like appearance"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "your joints suddenly start to become stiff. A powerful pressure builds as your body is pressed into a flattened human-like form, leaving you in the flat, featureless shape of a gingerbread [if Player is male]man[else if Player is female]woman[else]person[end if]"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "it becomes dry and crusty like gingerbread. While the cracking noises it makes are a little disconcerting at first, you still seem to be able to move without causing any damage"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
-	now Ass Change entry is "as it becomes uncomfortably tight, losing all form and definition as your backside becomes completely flat"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
-	now cock change entry is "shifts to a mostly human form before becoming strange, gingerbread-like flesh. It feels rough and dry, despite being perfectly soft and flexible"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
+	now Ass Change entry is "it becomes uncomfortably tight, losing all form and definition as your backside becomes completely flat"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it shifts to a mostly human form before becoming strange, gingerbread-like flesh. It feels rough and dry, despite being perfectly soft and flexible"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 12; [ These are now the creature's stats... ]
 	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 12; [ These values may be used as part of alternate combat.]
@@ -298,7 +296,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "gingerbread milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now CumItem entry is "gingerbread cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]flat[or]confectionery[or]gingerbread[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -320,33 +318,31 @@ gingerbread milk is milky.
 Purified of gingerbread milk is "distilled milk".
 gingerbread milk is infectious.
 Strain of gingerbread milk is "Gingerbread".
-Usedesc of gingerbread milk is "[gingerbread milk use]";
+Usedesc of gingerbread milk is "[gingerbread milk use]".
 
 to say gingerbread milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the gingerbread milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the gingerbread milk run over your tongue and down your throat. Tastes rich and sweet, with a gingery aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
-instead of sniffing gingerbread milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+Scent of gingerbread milk is "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"gingerbread cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'gingerbread Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	gingerbread cum
+"gingerbread cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Gingerbread Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	gingerbread cum
 
 gingerbread cum is a grab object.
 gingerbread cum is cum.
 gingerbread cum is infectious.
 Purified of gingerbread cum is "distilled cum".
 Strain of gingerbread cum is "Gingerbread".
-Usedesc of gingerbread cum is "[gingerbread cum use]";
+Usedesc of gingerbread cum is "[gingerbread cum use]".
 
 to say gingerbread cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, gingery aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, gingery aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
-instead of sniffing gingerbread cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.";
+Scent of gingerbread cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.".
 
 [
 Table of New Infection Parts (continued)

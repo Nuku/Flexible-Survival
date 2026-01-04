@@ -81,7 +81,7 @@ instead of conversing the Mary:
 				say "     You continue to talk about a number of subjects as you both relax, eventually Mary falling asleep in your lap. Softly moving her into a more comfortable position, you realize how much your comfortable time with your new flock member seems to have changed you, even making you smell a bit like her.";
 				increase Libido of Player by 10;
 				increase Libido of Mary by 1;
-				if MaleList is not banned and "Female Preferred" is not listed in feats of Player:
+				if MaleList is not banned and Player is not FemalePreferred:
 					infect "Ram";
 					infect "Ram";
 				else:
@@ -113,7 +113,7 @@ to say sexwithmary:
 			say "     Mary's sheep-like face pouts slightly as she takes in your female form. 'It looks like you aren't quite ready to be the ram of the flock yet,' she says as she runs her hands over your body, 'but that doesn't mean we can't have a little bonding time in the flock anyways.' She leans over you to lick the side of your face erotically. Wasting no time she begins running her hands up and down your body, teasing and exciting you as she begins to lick and kiss her way down your body. She pays special attention to your nipples and stomach, before finally lowering her head to your wet pussy, which she begins to nibble and tease with her soft lips and flexible tongue. Unable to help yourself you bury your hands in the soft fleece around her head as you moan and writhe underneath her, her marvelously skilled tongue quickly bringing you to the edge of orgasm, before finally making you cry out as you cum, your juices eagerly licked up by her wonderful tongue.";
 			WaitLineBreak;
 			say "     As you collapse back onto the couch from your amazing orgasm, Mary slowly moves back up your body in order to kiss you again, the taste of your own sexual fluids exploding into your mouth from the deep kiss. Eventually breaking the kiss off, she lies next to you as you drift off into an exhausted sleep. You can vaguely here her comment as you drift off, something about not being able to wait for next time...";
-		if MaleList is not banned and "Female Preferred" is not listed in feats of Player:
+		if MaleList is not banned and Player is not FemalePreferred:
 			infect "Ram";
 		else:
 			infect "Ewe";

@@ -31,7 +31,6 @@ to say Herm Hyena wins:
 	project the Figure of Herm_Hyena_naked_icon;
 	if wslevel is not 1 and ( a random chance of ( wslevel * wslevel ) in 25 succeeds ):
 		say "     [if HP of Player > 0]Having given up[else]Unable to continue[end if] the fight, you are thrown to the ground by the victorious hyena as she gives a barking laugh. Grabbing your head, she pulls your face to her crotch and shoves her manhood into your mouth. The dark penis has a strong taste to it that is soon overwhelmed by the acrid flow of her piss into your mouth. You try to pull back in surprise, but she's got too firm a grip on your head. In the end, you're forced to swallow down her salty, bitter urine while she laughs mockingly. When she's done, she makes it a point to smear her wet cock across your cheeks, further marking you with her scent. It is quite some time before you're able to clear the taste of her from your mouth.";
-		CreatureSexAftermath "Player" receives "OralCock" from "Hyena Herm";
 	else if Player is female:
 		say "     She lets out a victorious laugh and quickly throws you to the ground, stripping you as you fall. You can only stare wide-eyed as she slowly strips, enjoying the anticipation (and the look on your face) as much as possible. When her black, knotted spear finally pops free she gasps with pleasure and grabs your legs, pulling you cunt-first toward her waiting shaft. She begins pumping torturously slowly, ponderously drawing her cock out before slamming it back in while her paws roam over your [bodytype of Player] form. Eventually, you can't take it anymore and begin whimpering for release. Taking that as the sign of your complete submission, she begins fucking you with wild abandon. Very soon you are both howling with pleasure as she is pounding your [cunt size desc of Player] snatch like a jackhammer, knot pressing urgently against your entrance with each thrust. With one final thrust she slips her knot inside you, bringing you both to a screaming orgasm as she paints your womb white with her seed. 'You're pretty good, come and see me again some time if you wanna fool around some more,' she says as she slips her clothes back on and walks off, leaving you panting in a puddle of fluids.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Hyena Herm";
@@ -358,24 +357,6 @@ to say HyenaHermFurUse:
 
 instead of sniffing hyena herm fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"hyena herm cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Hyena Herm Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	hyena herm cum
-
-hyena herm cum is a grab object.
-hyena herm cum is cum.
-hyena herm cum is infectious.
-Strain of hyena herm cum is "Hyena Herm".
-Usedesc of hyena herm cum is "[hyena herm cum use]";
-
-to say hyena herm cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing hyena herm cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
 Table of Game Objects (continued)
 name	desc	weight	object

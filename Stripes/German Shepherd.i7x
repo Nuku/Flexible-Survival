@@ -267,12 +267,12 @@ to say losetogsd:
 				say "     The German shepherd wuffs and eagerly approaches as you signal your submission. His arms slip around you as he hugs you close, licking at your face, nuzzling at your neck, his paw-like hands sliding down, rubbing and squeezing provocatively.";
 				say "     'Ooooh, such a good little bitch. It's much nicer if you just say yes, isn't it? So much more enjoyable for both of us.'";
 				now gsd_slut is true;
-				if Player is not female and "Male Preferred" is not listed in feats of Player:	[male/neuter and player can become female]
+				if Player is not female and Player is not MalePreferred:	[male/neuter and player can become female]
 					say "     He gives an extra little sniff, taking in your [if Player is male]male [end if]scent, then chuckles as he licks your cheek.";
 					say "     'Mmm, bitch in spirit and mind, but not in body, it seems. Don't worry, I can help solve that for you, make you into what you really are.'";
 					say "     He slowly breaks off the hug, turning you around and pushing your shoulders down to make you get on all fours, then moves behind you.";
 					now gsd_var is 2;
-				else if Player is not female and "Male Preferred" is listed in feats of Player: [male/neuter and player can't become female]
+				else if Player is not female and Player is MalePreferred: [male/neuter and player can't become female]
 					say "     He gives an extra little sniff, taking in your [if Player is male]male [end if]scent, then chuckles as he licks your cheek.";
 					say "     'No juicy pussy for your alpha, but I think I'll have fun making you my bitch all the same. You'll be begging me to fuck your ass in the end.' That said, he presses his muzzle against your lips, canine tongue pressing in as he forces the kiss, paws slipping around to squeeze your rump. Then, satisfied that the 'foreplay' has been accomplished, he breaks the embrace and turns you around, gently but firmly pushing you down onto all fours.";
 					now gsd_var is 2;
@@ -322,7 +322,7 @@ to say gsd_special_lsex_00:
 	else: [ Male Triggers ]
 		say "     You feel him make one or two tentative thrusts into your arse, just to make sure he's inside you before you hear him growl and begin humping in earnest, eagerly grinding his hips into you, that rigid dog cock driving easily into your rear. He doesn't waste any further time, building up his pace to an energetic fucking, the small bump of his knot sliding through your ring and starting to swell as you feel his sheath bunch up and rub over the sensitive skin. With a soft growl, he drives in one last time, panting heavily in your ear as you feel his shaft swell, the knot at its base doubling, then tripling in size, tying you beneath the possessive male and letting you feel each spurt of his tainted canine seed.[mimpregchance]";
 		if gsd_var is 2:
-			if "Male Preferred" is listed in feats of Player:
+			if Player is MalePreferred:
 				say "     The dog rumbles, lapping affectionately at your cheek as the tainted seed floods and spreads in your rear. 'Such a good bitch...' He turns your head with one paw-like hand and presses his tongue forcefully into your mouth, kissing passionately as he shifts and tugs on the tie, shifting his knot inside you, letting some of his seed dribble and ooze out over your balls, starting a strange itching sensation. He continues to ladle on the affection, nuzzling and licking till his knot goes down and he can pull free. Once he can, he does so suddenly enough to make you yelp in pain, smirking and swatting your rear before walking off.";
 			else:
 				say "     The dog rumbles, lapping affectionately at your cheek as the tainted seed floods and spreads in your rear. 'Such a good bitch... How about we start making you a proper girl?' He turns your head with one paw-like hand and presses his tongue forcefully into your mouth, kissing passionately as he shifts and tugs on the tie, shifting his knot inside you, letting some of his seed dribble and ooze out over your balls, starting a strange itching sensation. He continues to ladle on the affection, nuzzling and licking till his knot goes down and he can pull free. Once he can, he does so suddenly enough to make you yelp in pain, smirking and swatting your rear before walking off. 'Be a good girl now. I'll be back when you're ready to carry my pups like a proper bitch should.'";

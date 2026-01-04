@@ -26,7 +26,7 @@ ResolveFunction of Nightmarish Horse Business is "[ResolveEvent Nightmarish Hors
 Sarea of Nightmarish Horse Business is "Stable".
 
 to say NightmareStablemasterInfection:
-	if "Male Preferred" is listed in feats of Player: [only male infections]
+	if Player is MalePreferred: [only male infections]
 		if Player is submissive:
 			infect "Stallionboi";
 			infect "Stallionboi";
@@ -154,7 +154,7 @@ to NightmarishHorseBusinessStablemaster:
 			WaitLineBreak;
 			say "     The same happens to every drop of cum that assails your throat, coming at full force directly into your stomach as he now buries his cock deeper down, giving you no choice but to, indeed, swallow everything he gives you. 'Mmmh... yeah... Good [boygirl]... Take it all... Let that cum work your insides...' This warm, thick liquid feels almost too hot inside you, and soon, your whole body begins to tingle as its effects begin to take place...";
 			WaitLineBreak;
-			if "Male Preferred" is listed in feats of Player: [only male infections]
+			if Player is MalePreferred: [only male infections]
 				if Player is submissive:
 					infect "Stallionboi";
 					infect "Stallionboi";

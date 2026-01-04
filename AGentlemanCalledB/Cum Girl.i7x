@@ -8,33 +8,32 @@ Section 1 - Creature Responses
 cumgirlfed is a number that varies. cumgirlfed is usually -1.
 
 to say losetoCumGirl:
-	let CGFC be 0;
-	let CGFB be 0;
-	let cumgrowth be cumgirlfed / 5;
-	if cumgrowth > 10, now cumgrowth is 10;
 	say "     Unable to resist the cum girl's attacks, you stumble back and fall to the ground. The cum girl strides over to your fallen form, quickly freeing your groin of any obstructions as she kneels before you.";
 	if Player is male:
 		if a random chance of 1 in 2 succeeds:
-			say "     A smile creeps across her blank face as she strokes you to full erection before she sinks to the ground, her legs and lower torso melting into a shapeless mass as she leans forward, allowing her to bury your cock in her wet, slimy mouth. Her entire face undulates and pulses as her malleable flesh sucks and milks your member. You rapidly approach climax under her expert ministrations, your hands sinking into the back of her head as you try and grip her, causing her form to further deform into a pulsing mass of cum engulfing your groin. You climax powerfully, blowing your [Cum Load Size of Player] load into the shapeless mass as it continues milking you for all it can. Once you're finally spent, the creature pulls off your groin with a sickening slurp, reshaping itself into a feminine form once again. She licks her lips as she stands up, leaving your drained form without a second glance, wandering off in search of her next meal. As she leaves, you can't help but notice that her [one of]ass[or]bust[or]belly[or]form[at random] seems [if Ball Size of Player > 5]significantly [else if Ball Size of Player < 11]slightly [end if]larger thanks to your contribution.";
-			CreatureSexAftermath "Cum Girl" receives "PussyFuck" from "Player";
+			say "     A smile creeps across her blank face as she strokes you to full erection before she sinks to the ground, her legs and lower torso melting into a shapeless mass as she leans forward, allowing her to bury your cock in her wet, slimy mouth. Her entire face undulates and pulses as her malleable flesh sucks and milks your member. You rapidly approach climax under her expert ministrations, your hands sinking into the back of her head as you try and grip her, causing her form to further deform into a pulsing mass of cum engulfing your groin. You climax powerfully, blowing your [Cum Load Size of Player] load into the shapeless mass as it continues milking you for all it can. Once you're finally spent, the creature pulls off your groin with a sickening slurp, reshaping itself into a feminine form once again. She licks her lips as she stands up, leaving your drained form without a second glance, wandering off in search of her next meal. As she leaves, you can't help but notice that her [one of]ass[or]bust[or]belly[or]form[at random] seems [if Ball Size of Player > 5]significantly [else if Ball Size of Player < 4]slightly [end if]larger thanks to your contribution.";
+			CreatureSexAftermath "Cum Girl" receives "OralCock" from "Player";
 		else:
-			say "     A faint smile creeps across her blank face as she strokes you to full erection, her hand beginning to lose definition as she strokes, soon nothing more than a pulsing tendril of cum milking your cock as her other hand begins engulfing your balls. Her face stares down at you, expressionless, as she continues to work your member and massage your balls, pushing you rapidly towards climax with her expert ministrations. With a groan you orgasm powerfully, blasting your [Cum Load Size of Player] load into the tendril milking your member. You watch the mass travel up her tendril-like arm and into the larger mass of her body as the licks her lips. Once you're finally spent, she pulls away from your groin, her hands returning to a mostly human shape as she stands up, leaving your drained form without a second glance, wandering off in search of her next meal. As she leaves, you can't help but notice that her [one of]ass seems[or]breasts seem[or]thighs seem[or]form seems[at random] [if Ball Size of Player > 5]significantly [else if Ball Size of Player < 11]slightly [end if]larger thanks to your contribution.";
-		if Ball Size of Player > 5:
-			increase CumGirlFed by 6;
+			say "     A faint smile creeps across her blank face as she strokes you to full erection, her hand beginning to lose definition as she strokes, soon nothing more than a pulsing tendril of cum milking your cock as her other hand begins engulfing your balls. Her face stares down at you, expressionless, as she continues to work your member and massage your balls, pushing you rapidly towards climax with her expert ministrations. With a groan you orgasm powerfully, blasting your [Cum Load Size of Player] load into the tendril milking your member. You watch the mass travel up her tendril-like arm and into the larger mass of her body as she licks her lips. Once you're finally spent, she pulls away from your groin, her hands returning to a mostly human shape as she stands up, leaving your drained form without a second glance, wandering off in search of her next meal. As she leaves, you can't help but notice that her [one of]ass seems[or]breasts seem[or]thighs seem[or]form seems[at random] [if Ball Size of Player > 5]significantly [else if Ball Size of Player < 4]slightly [end if]larger thanks to your contribution.";
+		if Ball Size of Player > 1:
+			increase CumGirlFed by Ball Size of Player;
 		else:
-			increase CumGirlFed by ( Ball Size of Player + 10 ) / 5;
-		if "Modest Organs" is not listed in feats of Player and "Female Preferred" is not listed in feats of Player:
-			if Cock Length of Player < ( 18 + cumgirlfed ):
-				increase Cock Length of Player by a random number from 1 to 2;
-				now CGFC is 1;
-			if Ball Size of Player < 7:
-				BallsGrow Player by 1;
-				now CGFB is 1;
-		Follow the cock descr rule;
-		if CGFC is 1:
-			say "     Your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random] [one of]engorges[or]swells[or]throbs[at random] as it gains[else][one of]cocks[or]penises[or]shafts[or]malenesses[at random] [one of]engorge[or]swell[or]throb[at random] as they gain[end if] in length, becoming [descr].";
-		if CGFB is 1:
-			say "     Your [one of]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, your skin becoming taut with the expansion, leaving you with [Ball Size Adjective of Player] [Balls].";
+			increase CumGirlFed by 2;
+		let CGFC be 0;
+		let CGFB be 0;
+		if "Modest Organs" is not listed in feats of Player and Player is not FemalePreferred:
+			if Cock Length of Player < ( 5 + cumgirlfed ): [range 6-40]
+				now CGFC is a random number from 0 to 2;
+				increase Cock Length of Player by CGFC;
+			if Ball Size of Player < 7 and a random chance of 1 in 2 succeeds:
+				now CGFB is a random number from 0 to 1;
+				BallsGrow Player by CGFB;
+		if CGFC > 0 or CGFB > 0:
+			Follow the cock descr rule;
+			if CGFC > 0:
+				say "     Your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random] [one of]engorges[or]swells[or]throbs[at random] as it gains[else][one of]cocks[or]penises[or]shafts[or]malenesses[at random] [one of]engorge[or]swell[or]throb[at random] as they gain[end if] in length, becoming [descr].";
+			if CGFB > 0:
+				say "     Your [one of]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, your skin becoming taut with the expansion, leaving you with [Ball Size Adjective of Player] [Balls].";
 	else if Player is female:
 		say "     A faint smile crosses the cum girl's usually expressionless face as she strokes a pair of fingers across your outer folds, sending shivers of delight through you. Without hesitation she slips a pair of fingers inside you, then a third, and soon her entire slick hand is pumping into your body. With each thrust her limb loses more and more definition, soon little more than a warm, gooey mass that continues to surge into your cunt, working its way deeper inside you until you feel her pooling in your womb.";
 		say "     Eventually the stimulation from the warm, pulsating mass filling your body becomes too much and you are struck by a powerful orgasm. None of your feminine honey is allowed to escape, instead drawn into the mass of living cum filling your inner passages. The cum girl licks her lips contently as she pulls out of your body with a wet slurp. She stands up slowly before leaving your drained form without a second glance, wandering off in search of her next meal, the long, tendril-like appendage dragging behind her as it slowly shifts back to its original feminine form. As she leaves, you can't help but notice that her [one of]ass[or]bust[or]tummy[or]form[at random] seems slightly larger thanks to your contribution.";
@@ -55,7 +54,6 @@ to say beattheCumGirl:
 
 to say CumGirldesc:
 	let cumgrowth be cumgirlfed / 5;
-	if cumgrowth > 10, now cumgrowth is 10;
 	say "     Before you is a creature that appears, at a glance, to be a pale-looking female human, but as she steps out of the shadows you quickly realize something is very wrong. Her entire form is slick and white, her flesh seeming to run slightly as she moves, as if reshaping itself with each motion. However, the most disturbing feature is the creature's face. While vaguely human in shape, it is almost mannequin like, devoid of any features other than her expressionless mouth and the flat, empty depressions where her eyes should be.";
 	if cumgirlfed is -1:
 		say "     The overwhelming smell of sex hits you as the creature gets within striking distance, and you realize this sickening creature appears to be made entirely of animate cum and other bodily fluids.";
@@ -91,6 +89,10 @@ to say PrepCombat_Cum Girl:
 		increase HP entry by ( 2 * cumgrowth * lev entry ) / 3;
 		increase dex entry by cumgrowth;
 		increase wdam entry by ( ( cumgrowth + 1 ) / 2 );
+	if cumgrowth > 5:
+		now scale entry is 4;
+	else:
+		now scale entry is 3;
 	now monsterHP is HP entry;
 
 Section 2 - Creature Insertion
@@ -105,6 +107,7 @@ When Play begins:
 	now Species Name entry is "Cum Goo"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Cum Girl" to infections of SlimeList;
 	add "Cum Girl" to infections of FemaleList;
+	add "Cum Girl" to infections of BipedalList;
 	add "Cum Girl" to infections of SlidingList;
 	now Name entry is "Cum Girl"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
@@ -148,7 +151,7 @@ When Play begins:
 	now libido entry is 95; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "cum girl milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

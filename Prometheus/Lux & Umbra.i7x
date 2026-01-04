@@ -1468,9 +1468,9 @@ to say ResolveEvent Umbra & Player First Mating: [Umbra has sex with player] [Ev
 			say "     You are just beginning to doze off when you feel something shift and have a split-second to turn your head to watch as Umbra's shaft is suddenly unable to remain locked within you any longer. As his penis slips from your cunt, the crimson flesh glistening with pearlescent liquid, a healthy gush of semen follows behind, the pressure in your tummy abating little by little as your son's essence leaks from your gaping hole. You're not sure whether you are surprised or not when Umbra leans in and begins to lick his load from your pussy, his warm tongue against your sensitive flesh making you quiver, but also strangely comforting. Once no more cum dribbles out, he moves his attention to cleaning his cock, tasting a mixture of his own seed and your juices. A quick glance at Fang and Lux suggests that they have enjoyed their front-row seats of watching you be bred, [if Fang is Male]Fang sporting an erection while his daughter struggles to surreptitiously grind her spade against the floor[else]both struggling to surreptitiously grind their spades against the floor[end if].";
 			WaitLineBreak;
 			say "     The sound of Umbra's voice draws your attention back to him. 'Thank you. This bond that we share is most precious to me,' he says, licking his lips to swallow the last of the cum smeared there. 'But don't think that this means you can't love other people too. Just as long as you always love me, I shall do the same. Forever.' Your son snuggles up against you and rests his head on your shoulder. 'I know that you have places to be. But stay with us a moment. Know that your family loves you.' With a smile, you agree, your happiness only growing when Fang and Lux join the pile, lending their warmth, both literally and figuratively. Who would have thought that such affection could come so close on the heels of passionate coupling? As you relax into the fluff, you wonder who else may have witnessed you being vigorously bred by Umbra...";
-		NPCSexAftermath Umbra receives "OralPussy" from Player;
-		NPCSexAftermath Player receives "OralCock" from Umbra;
-		NPCSexAftermath Player receives "PussyFuck" from Umbra;
+			NPCSexAftermath Umbra receives "OralPussy" from Player;
+			NPCSexAftermath Player receives "OralCock" from Umbra;
+			NPCSexAftermath Player receives "PussyFuck" from Umbra;
 	if HP of Umbra < 5:
 		now HP of Umbra is 5;
 		now hunger of Umbra is 3;

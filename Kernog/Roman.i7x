@@ -429,9 +429,9 @@ to say RomanFuck1Vag:
 	else:
 		say "     Roman's eyes bulge. Is someone trying to fist him, like last time? You grin, all teeth bared, as he realizes the size of your [cock size desc of Player] maleness. Grabbing the sides of the bench for leverage, you ram your member as far as you can, rearranging the poor ape's insides. Everyone around you stops what they are doing to look at you. They can all witness Roman's bulging belly, the shape of your [Cock of Player] cock deforming the layer of fat and muscles, which retreats then plunges further as you push it into his rapidly stretching womb. The sight is both shocking and alluring, especially when you manage to push your dick almost all the way in. Roman is in his own world, his eyes empty and his body limp, but you can tell from the many tremors that reverberate through your rod that the nanites make him go through orgasm after orgasm.";
 	WaitLineBreak;
-	if Ball Size of Player < 12:
+	if Ball Size of Player < 4:
 		say "     You feel your [Ball Size Adjective of Player] balls churn, and a powerful orgasm overtakes you. Your cock spurts your [Cum Load Size of Player] load inside Roman's womb, mixing it with the many already present.";
-	else if Ball Size of Player < 25:
+	else if Ball Size of Player < 6:
 		say "     You feel your [Ball Size Adjective of Player] balls churn, and a powerful orgasm overtakes you. Your cock floods Roman's womb with your [Cum Load Size of Player] load, the overfill spilling out quickly.";
 	else:
 		say "     You feel your [Ball Size Adjective of Player] balls churn, and a powerful orgasm overtakes you. Your cock cums, and cums, and cums. Roman's belly bulges obscenely, as your cock acts as a plug and as the ape's body cannot keep up with the quantity of your [Cum Load Size of Player] release. When you pull out, it is followed by a flush of thick seminal fluid pooling on the locker-room's floor.";
@@ -450,9 +450,9 @@ to say RomanFuck1Blow:
 	else:
 		say "     Roman whines, as you stretch his mouth to the limits with your [cock size desc of Player] cock. You have barely pushed the head in, when you already feel his uvula. The gorilla coughs and wheezes, but still does his best. He suckles your tip, and tries to use his tongue. Eventually, you have enough. You pull out, and using Roman's attached legs as lever, you frot your dick against the furry chest. 'Mmf! Wmmf! Nnnf!' Roman whimpers. Your [Ball Size Adjective of Player] pouch smacks him like a metronome, smothering his protests. Eventually, you feel the need to cum and push your glans back inside Roman for the finale.";
 	WaitLineBreak;
-	if Ball Size of Player < 12:
+	if Ball Size of Player < 4:
 		say "     You unload your [Cum Load Size of Player] release inside Roman's mouth. The thick male juice trickles down his throat, mixing it with the many already present in his stomach. You ensure that Roman has taken all of your seed, one way or another, then put the sock back in his mouth and let the big ape digest his meal.";
-	else if Ball Size of Player < 25:
+	else if Ball Size of Player < 6:
 		say "     You block Roman's throat for several seconds as you empty [Cum Load Size of Player] load inside his stomach, filling it to the brim. When you finally pull out, Roman coughs violently, strands of cum escaping his mouth, having followed your [Cock of Player] dick on the way out. You ensure that Roman has taken all of your seed, one way or another, then put the sock back in his mouth and let the big ape digest his meal.";
 	else:
 		say "     You drown Roman with your [Cum Load Size of Player] release. His belly bulges more and more as you overload it with your cum. The sheer quantity makes the gorilla throw up cum through his mouth and nose, and after you pull out, each of his coughs is accompanied by a glob of semen. You ensure that Roman has taken all of your seed, one way or another, then put the sock back in his mouth and let the big ape digest his meal.";
@@ -524,12 +524,10 @@ to say RomanFuck2:
 					NPCSexAftermath Roman receives "OralCock" from player;
 				if nam is "Tribadism":
 					say "[RomanFuck2Trib]";
-					NPCSexAftermath Player receives "PussyFuck" from Roman;
-					NPCSexAftermath Roman receives "PussyFuck" from player;
+					NPCSexAftermath Player receives "Stroking" from Roman;
+					NPCSexAftermath Roman receives "Stroking" from player;
 				if nam is "Cunt-boy special":
 					say "[RomanFuck2Cunt]";
-					NPCSexAftermath Player receives "PussyFuck" from Roman;
-					NPCSexAftermath Roman receives "PussyFuck" from player;
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -546,7 +544,7 @@ to say RomanFuck2Vag:
 	else:
 		say "     Roman tries his best to accommodate your [cock size desc of Player] maleness. You want to tell him that he does not have to try so hard, but the primate uses your pinned body as a leverage, and keeps trying to push more and more of your [Cock Length of Player] inches cock inside of him. The nanites helping, he eventually manages to fit all of it inside, and you have a close view of his distended belly, showing the silhouette of your cock behind the short black fur. Roman seems ready to cum at any moment, and you are already seeing stars, but the gorilla carries on and uses his well-built legs to lift his stretched body up and down as much as he can. The both of you do not last very long.";
 	WaitLineBreak;
-	if Ball Size of Player < 12:
+	if Ball Size of Player < 5:
 		say "     You feel your [Ball Size Adjective of Player] balls churn, and a powerful orgasm overtakes you. You spurt your [Cum Load Size of Player] load inside Roman's womb, his own inner muscles milking your cock for all it is worth. Roman moans loudly and keeps your member as deep as he can inside you, while you give your last squirts of semen. Roman and you look at each other. After one last, deep kiss, you head for the showers. As you get out, you notice a crowd hurriedly going back to its own business, as if you had interrupted something. It looks like you had your own peepers.";
 	else:
 		say "     You feel your [Ball Size Adjective of Player] balls churn, and a powerful orgasm overtakes you. You flood Roman's womb with your [Cum Load Size of Player] load, the overfill spilling out quickly. Roman's pussy milks you for all you are worth, but even he cannot hold out everything, and the pressure soon obliges him to pull out. You squirt the rest of your load all over his chest. Roman and you look at each other. After one last, deep kiss, you head for the showers. As you get out, you notice a crowd hurriedly going back to its own business, as if you had interrupted something. It looks like you had your own peepers.";
@@ -585,13 +583,17 @@ to say RomanFuck2Cunt:
 			say "     You sit up alongside Roman, and the both of you give spread your legs, and give access to the jock and the footballer. They crouch down in front you and, after having set you properly with their big arms, start eating your pussy. They seem to make a game of it, as they give as many playful looks towards each other as to their respective playmate. You and Roman bask on the almost-professional tongue bath the two jocks grant you. Roman seems to take even more pleasure than you; feeling empowered and complimented has done wonders on his confidence, and in turn his pleasure. The memories of his molestation and transformation seem to have faded away, and you can feel him squeeze your hand tightly.";
 			WaitLineBreak;
 			say "     You share kisses and caresses, which become more and more erratic as the both of you get close to orgasm. Roman comes first. He almost crushes your hand as his body tenses up and his breath accelerates. You try to accompany him in his climax, but you reach your limit shortly after him, and you two squirt your pussy juice onto the smiling male's face.";
+			CreatureSexAftermath "Bunny Jock" receives "OralPussy" from "Player";
+			CreatureSexAftermath "Football Wolfman" receives "OralPussy" from "Roman";
 		-- 2:
 			say "     'Okay,' Roman replies. 'I mean, you look... Hot'";
 			say "     'You too, big guy,' the wolfman compliments. 'And a nice change from all these big-dicked apes from the football field.' The bunny jock sits on the ground, and pulls you gently on his lap. While your pair French kisses and fondle each other's privates, Roman's lupine partner leans over him, letting the big ape grab his muscular body with his arms and legs, while he grinds his knotted cock against Roman's entrance. 'Ready?' the wolf asks. 'Y-yes, do it,' Roman replies. The wolfman spreads Roman's folds apart, as he plunges into his pussy. The gorilla squeezes his partner tight with his arms and legs. 'Yeah, push it deep, big guy,' the wolf encourages him.";
 			WaitLineBreak;
-			say "     Roman is given a slow, deep fuck. The bunny jock claims your own pussy, and lets your body sink on his large cock. With the sight of Roman being mated by the wolfman, [if daytimer is day]under the soft rays of the sun[else]under the pale moonlight[end if], you slide up and down the jock's maleness with wild abandon. The both of you cum quickly, and as you ride your orgasm, savoring the feeling of lapine cum flooding your womb, you enjoy Roman pair's finish. 'I-I'm gonna cum', the wolf say. 'Fuck... My knot. Take it!'";
+			say "     Roman is given a slow, deep fuck. The bunny jock claims your own pussy, and lets your body sink on his large cock. With the sight of Roman being mated by the wolfman, [if daytimer is day]under the soft rays of the sun[else]under the pale moonlight[end if], you slide up and down the jock's maleness with wild abandon. The both of you cum quickly, and as you ride your orgasm, savoring the feeling of lapine cum flooding your womb, you enjoy Roman pair's finish. 'I-I'm gonna cum', the wolf says. 'Fuck... My knot. Take it!'";
 			say "     'Yes! Yes! Ah! Yes!' Roman howls.";
 			say "     The pop of the wolf's knot in his tight pussy turns his chant into a silent gasp. His body clamps down on the wolf's as he goes through an intense orgasm. 'F-fffuuuck!' The wolf gives his last throes into Roman. From your position, you can see his balls spasm, as they deliver their load into the climaxing ape.";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Bunny Jock";
+			CreatureSexAftermath "Roman" receives "PussyFuck" from "Football Wolfman";
 		-- 3:
 			say "     'Actually,' Roman says, blushing profusely, 'I-I wanted to try something with... Several peoples. You know...'";
 			say "     'Oh, we [italic type]do[roman type] know,' the wolfman says, winking. 'How come a gorgeous guy like you never got this kind of attention on the football field?'.";
@@ -602,6 +604,9 @@ to say RomanFuck2Cunt:
 			say "     The bunny lets gravity make Roman's ass fall slowly on his cock. The gorilla winces at first, but additional attention from you and the wolf helps him relax. Very quickly, the nanites relay the both of you, and the bunny resumes the ape's controlled descent on his rod. The wolf takes his turn, and slips in dick in Roman's awaiting pussy. 'Fuck, he's tight,' the wolf says. 'Yeah, here too. Feels godly.' Smiling, you approach from Roman's face and give him access to your crotch. The ape, encouraged by the bunny jock, immediately begins to give your pussy a licking, mere inches from the lapine's horny gaze.";
 			say "     The four of you wave on the sea of grass, like a living boat. True to their promise, your two new friends['] thrusts are slow, but firm. To your amusement, you can see Roman's eyes roll in their sockets, as he got his fantasy granted, and even more. He's the captain of that boat, and you and the other two cater to his pleasure, stepping up the pace, to throw him out of rhythm, slowing down when you feel he is reaching his limits, and more generally making this a moment to remember.";
 			say "     You can tell that Roman went through several orgasms during the foursome, judging by the two males['] reactions, when his insides squeezed their dicks like vices. Eventually, the rest of you cum as well. You can hear the wolfman behind you grunt, and the bunny jock in front of you close his eyes and grit his teeth, as they paint Roman's holes white with their cum.";
+			CreatureSexAftermath "Roman" receives "AssFuck" from "Bunny Jock";
+			CreatureSexAftermath "Roman" receives "PussyFuck" from "Football Wolfman";
+			NPCSexAftermath Roman receives "OralPussy" from Player;
 	say "     Spent, the four of you lie down on the grass. Everyone has a smile on their face, and Roman's is probably the happiest. Eventually, you part ways with the two males. 'See you soon, babe,' the bunny says.";
 	say "     'We should stay in contact, Roman. Have a [']private match['], just the two of us, one of these days,' the wolfman picks up.";
 	say "     You walk back an elated Roman back to the football field. 'These were among the best hours of my life. Actually, the times when you are around are all the best hours of my life.' Roman accompanies his thanks with a warm kiss. 'Gotta go back to supervise training. See you around, [if Player is not defaultnamed][name of Player][else]champ[end if].'";

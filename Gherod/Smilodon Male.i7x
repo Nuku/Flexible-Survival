@@ -779,8 +779,8 @@ When Play begins:
 	now libido entry is 30; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "smilodon male fur"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "smilodon male milk";
-	now CumItem entry is "smilodon cum";
+	now MilkItem entry is "smilodon man-milk";
+	now CumItem entry is "smilodon male cum";
 	now TrophyFunction entry is "[GenerateTrophyList_Smilodon_Male]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]furry[or]muscled[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -911,24 +911,6 @@ to say SmilodonMaleFurUse:
 
 instead of sniffing smilodon male fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"smilodon male cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Smilodon Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	smilodon male cum
-
-smilodon male cum is a grab object.
-smilodon male cum is cum.
-smilodon male cum is infectious.
-Strain of smilodon male cum is "Smilodon Male".
-Usedesc of smilodon male cum is "[smilodon male cum use]";
-
-to say smilodon male cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing smilodon male cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
 Table of Game Objects (continued)
 name	desc	weight	object

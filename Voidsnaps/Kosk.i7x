@@ -119,7 +119,7 @@ When Play begins:
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "lizardman milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now CumItem entry is "lizardman cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]muscular[at random]";
@@ -359,7 +359,7 @@ When Play begins:
 	now libido entry is 25; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "nightmarish mutant milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -488,7 +488,7 @@ to say KoskBreeding:
 			NPCSexAftermath Player receives "PussyFuck" from Kosk;
 		else if player is male: [gay anal]
 			say "[KoskAnalFuck]";
-			NPCSexAftermath Player receives "PussyFuck" from Kosk;
+			NPCSexAftermath Player receives "AssFuck" from Kosk;
 
 to say KoskPussyFuck:
 	say "     [if Player is not barecrotch]Trailing his fingers over your hips and slowly tugging down the garments covering your sex from his view [else]Trailing his fingers over your bare sex [end if]Kosk nuzzles into you from behind, flicking his fingers over your lower lips and lavishing care on your sex until you drip with excitement. 'You're a bit tight. I hope you don't mind getting stretched out.' He coos as one thick finger pierces your sex, slurping deep enough that you barely suppress a moan. 'I'm not one to rush things, though. I'll ease into it.' You can barely think as a finger fucks your pussy open with slow pumps, their dextrous neighbor swirling over your clit. A second finger slips in once you've gotten wet enough, then a third, gently seeking all the spots that make you whimper and push back, until just before you feel like you'll finish, they withdraw, leaving you empty and wanting. You wiggle your hips like a bitch in heat, indignantly demanding more stimulation. 'I know, I know. Don't worry.' Kosk chuckles at your wanton behavior as he lines up one of his prodigious cocks, spearing you open on his tapered length and sliding in on your drooling wetness. The other shaft splits your cheeks, hotdogging your ass while he explores your needy cunt.";

@@ -412,6 +412,7 @@ to SpitRoast_Blake_End_Loyalty5Refused:
 
 
 after going to Dirty Alley while Logan is in Dirty Alley:
+	try looking;
 	[generalized start]
 	say "     As you walk into the Alley, you see Logan [one of]casually leaning against a nearby wall, his arms crossed before his broad chest[or]sitting in his chair, relaxedly slouched backwards as he keeps the entrance of the alley and Blake in view[or]standing behind a dumpster deeper in the alley, then zipping up and coming out from behind it[or]saunter away from where Blake is lying on the mattress, pulling up his zipper[or]crouched next to Blake, holding the rat by the back of his neck and saying something into his ear[at random]. ";
 	if Loyalty of Logan is 10: [Player is his friend]

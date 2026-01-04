@@ -935,7 +935,7 @@ to say XaedihrTalkEnchanting:
 to say XaedihrTalkHimself: [Himself]
 	if loyalty of Xaedihr < 10: [NOT a good impression of player-neutral]
 		say "     Facing him, you ask if there is any chance Xaedihr will tell a little more about himself. He shrugs at your request, but doesn't leave you hanging for long. 'Well, I'm pale, tall, pretty strong, ridiculously handsome, have red hair, green eyes, and my favorite color is maroon.' You tell him that's not exactly what you meant, to which he rolls is eyes in annoyance. 'Please. There are more interesting matters to talk about rather than what my hobbies are or whatever you're asking about. I'm stuck in your world, and that's enough as it is. The deal was to aid you while I try to find a way to go back.' With this, he turns his face away and crosses his arms. Looks like he's not very keen on discussing this subject in the current circumstances. Maybe if he trusted you more? Right now, he doesn't have a good impression of you.";
-	else if loyalty of Xaedihr > 9: [good impression of player]
+	else if loyalty of Xaedihr < 30: [good impression of player]
 		say "     Facing him, you ask if there is any chance Xaedihr will tell a little more about himself. He turns to you, hesitant of his answer. 'There's not really much to know... I'm an half-demon, son of a demon of lust who came from a different world. Even I don't know a lot of things about myself. I was hoping for this trip here to help me understand a few things about my homeworld, but so far... No luck.' he replies in a tone of disappointment, though you're ready to cheer him up. 'Thank you for caring, though. That's more than I had in my entire life.' he adds, with a little smile on his face. You know this one is sincere.";
 		say "     Clearly Xaedihr must have been through a lot, and you feel like he's not telling you everything. Maybe if you've gotten closer to him, you could understand him better. Perhaps he'll even let you in his story, although you'll have to make him trust you.";
 	else if loyalty of Xaedihr > 29: [trusts player]
@@ -1075,7 +1075,7 @@ to DomXaedihr1:
 		now libido of Xaedihr is 99; [nothing else will happen]
 	else if calcnumber is 3:
 		LineBreak;
-		say "     With hesitation, you try telling him that you're really not very sure about this, but he then stops you immediately. 'Don't worry, it isn't anything definitive... We don't have to do it if you don't want to. But in any case, there's this thing I wanted to try with you, however it might be a little more... hardcore than what our usual stuff. If you're up for it, let me know whenever you're ready to give it a go... alright? No rush.'  he lets you know, respecting your pacing and letting you decide how far you're willing to submit to him. All you've got to do now is bring it up when you approach him for sex, if you're willing to give it a try.";
+		say "     With hesitation, you try telling him that you're really not very sure about this, but he then stops you immediately. 'Don't worry, it isn't anything definitive... We don't have to do it if you don't want to. But in any case, there's this thing I wanted to try with you, however it might be a little more... hardcore than what our usual stuff. If you're up for it, let me know whenever you're ready to give it a go... alright? No rush,' he lets you know, respecting your pacing and letting you decide how far you're willing to submit to him. All you've got to do now is bring it up when you approach him for sex, if you're willing to give it a try.";
 		now libido of Xaedihr is 4; [unlocked 1st Dom scene, but player is uncertain]
 
 to DomXaedihr2:
@@ -1637,9 +1637,9 @@ to say XSubmitTentacleEdging:
 		say "     [bold type]The time you've spent with Xaedihr made him open up more to you.[roman type][line break]";
 		increase loyalty of Xaedihr by 1;
 	if Player is female:
-		NPCSexAftermath Player receives "DildoPussyFuck" from Xaedihr;
+		NPCSexAftermath Player receives "PussyDildoFuck" from Xaedihr;
 	else:
-		NPCSexAftermath Player receives "DildoAssFuck" from Xaedihr;
+		NPCSexAftermath Player receives "AssDildoFuck" from Xaedihr;
 
 to say XSubmitBodyWorship:
 	say "     Having a good look at the half-demon's great physique, despite him being quite a bookworm, you let him know that it would be proper if you gave his muscles loads of attention, which they deserve. You start by complimenting them, especially his arms and chest, all well-built with a lot of muscle mass to love. It makes one wonder how such a person can maintain a body like this when all they do is read and cast spells... Xaedihr chuckles, then gently grabs you by the chin and makes you look into his eyes. 'Being half a demon has its perks... Big brain, big muscles...' He seems to have stopped there, but you know exactly what else is big, too. But, right now, you would prefer to feel up his body, and the sorcerer clearly does not stop you.";

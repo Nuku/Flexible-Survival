@@ -56,6 +56,7 @@ Scenario is a text that varies. [chosen scenario]
 Started is a number that varies.
 
 RestoreMode is a truth state that varies. RestoreMode is usually false. [for restoring a save directly from the start menu]
+RestoreSide is a number that varies. [default graphics window side for restore using default settings]
 
 Part 1 - Game Start Autofires
 
@@ -79,45 +80,38 @@ To regularstart: [normal start method]
 		say "(3) [link]Main Stat[as]3[end link] - [bold type][if MainStat is 1]Strength[else if MainStat is 2]Dexterity[else if MainStat is 3]Stamina[else if MainStat is 4]Charisma[else if MainStat is 5]Intelligence[else if MainStat is 6]Perception[else]Random[end if][roman type][line break]";
 		say "(4) [link]Main Feat[as]4[end link] - [bold type][freefeatgeneral][roman type][line break]";
 		say "(5) [link]Fun Feat[as]5[end link] - [bold type][freefeatfun][roman type][line break]";
-		say "[line break]";
-		say "[bold type]Gameplay Options:[roman type][line break]";
+		say "[line break][bold type]Gameplay Options:[roman type][line break]";
 		say "(6) [link]Game Scenario[as]6[end link] - [bold type][scenario][roman type][line break]";
 		say "(7) [link]Difficulty Modes[as]7[end link] - [if HardMode is false and NoHealMode is false and BlindMode is false][bold type]Normal[roman type][else if HardMode is true][bold type]Hard[roman type][end if][if HardMode is true and ( NoHealMode is true or BlindMode is true )] | [end if][if NoHealMode is true][bold type]No-Heal[roman type][end if][if NoHealMode is true and BlindMode is true] | [end if][if BlindMode is true][bold type]Blind[roman type][end if][line break]";
 		say "(8) [link]Content Restrictions[as]8[end link][line break]";
-		say "[line break]";
-		say "[bold type]Display Options:[roman type][line break]";
+		say "[line break][bold type]Display Options:[roman type][line break]";
 		say "(9) [link]Hyperlinks[as]9[end link] - [bold type][if hypernull is 0]On[else if hypernull is 1]Off[end if][roman type][line break]";
 		say "(10) [link]Waiting for Input[as]10[end link] - [bold type][if waiterhater is 0]On[else if waiterhater is 1]Off[end if][roman type][line break]";
 		say "(11) [link]Screen Clearing[as]11[end link] - [bold type][if clearnomore is 0]On[else if clearnomore is 1]Off[end if][roman type][line break]";
-		say "(12) [link]Graphics[as]12[end link] - [bold type][if NewGraphicsInteger is 1]Inline[else if NewGraphicsInteger is 2]Side-Window[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
+		say "(12) [link]Graphics[as]12[end link] - [bold type][if NewGraphicsInteger is 1]Inline[else if NewGraphicsInteger is 2]Side-Window[else if NewGraphicsInteger is 0]Disabled[end if][roman type][line break]";
 		say "(13) [link]Inventory Columns[as]13[end link] - [bold type][invcolumns][roman type][line break]";
-		say "[line break]";
-		say "(99) [link]Restore a save[as]99[end link][line break]";
-		say "(0) [link]Start Game[as]0[end link][line break]";
+		say "[line break][bold type]Saved Games:[roman type][line break]";
+		say "(97) [link]Restore Using Default Graphics[as]97[end link] (Right)[line break]";
+		say "(98) [link]Restore Using Default Graphics[as]98[end link] (Left)[line break]";
+		say "(99) [link]Restore A Save[as]99[end link][line break]";
+		say "[line break](0) [link]Start Game[as]0[end link][line break]";
 		while 1 is 1:
-			say "(0-13)>[run paragraph on]";
+			say "(0-13)> [run paragraph on]";
 			get a number;
-			if ( calcnumber >= 0 and calcnumber <= 13 ) or calcnumber is 99:
+			if ( calcnumber >= 0 and calcnumber <= 13 ) or ( calcnumber >= 97 and calcnumber <= 99 ):
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 13 or 97 to 99.";
+		LineBreak;
 		if calcnumber is:
-			-- 1:
-				playernaming;
-			-- 2:
-				newplayercustomizationmenu;
-			-- 3:
-				say "[gsopt_1]"; [Main Stat]
-			-- 4:
-				startFeatget;
-			-- 5:
-				startFunFeatget;
-			-- 6:
-				say "[gsopt_3]"; [Game Scenario]
-			-- 7:
-				say "[gsopt_4]"; [Difficulty Modes]
-			-- 8:
-				contentrestrictionmenu;
+			-- 1: playernaming;
+			-- 2: newplayercustomizationmenu;
+			-- 3: say "[gsopt_1]"; [Main Stat]
+			-- 4: startFeatget;
+			-- 5: startFunFeatget;
+			-- 6: say "[gsopt_3]"; [Game Scenario]
+			-- 7: say "[gsopt_4]"; [Difficulty Modes]
+			-- 8: contentrestrictionmenu;
 			-- 9:
 				if hypernull is 0:
 					now hypernull is 1;
@@ -147,21 +141,56 @@ To regularstart: [normal start method]
 					now NewGraphics is true;
 					now NewGraphicsInteger is 2; [side window]
 			-- 13:
-				say "[set_invcolumns]";
-			-- 99:
+				if invcolumns > 0 and invcolumns < 4:
+					increase invcolumns by 1;
+				else:
+					now invcolumns is 1;
+			-- 97:
 				say "Confirm restore?";
 				if Player consents:
+					LineBreak;
 					now RestoreMode is true;
+					now RestoreSide is 1;
 					say "[silent_start]";
 					now Trixieexit is 1;
 					if RestoreMode is true:
 						now RestoreMode is false;
+						now RestoreSide is 0;
+						try restoring the game;
+						if MaxHP of Player is 0:
+							try restarting the game;
+			-- 98:
+				say "Confirm restore?";
+				if Player consents:
+					LineBreak;
+					now RestoreMode is true;
+					now RestoreSide is 2;
+					say "[silent_start]";
+					now Trixieexit is 1;
+					if RestoreMode is true:
+						now RestoreMode is false;
+						now RestoreSide is 0;
+						try restoring the game;
+						if MaxHP of Player is 0:
+							try restarting the game;
+			-- 99:
+				say "Confirm restore?";
+				if Player consents:
+					LineBreak;
+					now RestoreMode is true;
+					now RestoreSide is 0;
+					say "[silent_start]";
+					now Trixieexit is 1;
+					if RestoreMode is true:
+						now RestoreMode is false;
+						now RestoreSide is 0;
 						try restoring the game;
 						if MaxHP of Player is 0:
 							try restarting the game;
 			-- 0:
 				say "Confirm game start?";
 				if Player consents:
+					LineBreak;
 					if Name of Player is not "DebugTesting": [nullifies Human new infection parts until the new system goes live]
 						now HeadName of Player is "";
 						now TorsoName of Player is "";
@@ -209,38 +238,36 @@ to say gsopt_start:
 	[Code for letting player select graphics window size]
 	if NewGraphics is true:
 		say "[bold type]Graphic Window Position and Proportion[roman type][line break]";
-		say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.[line break]";
-		say "Please choose the position value now. (0 = right side, 1 = left side, 2 = above, 3 = below)[line break]";
+		say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.";
+		say "Please choose the position value now ([link]0 - right side[as]0[end link], [link]1 - left side[as]1[end link], [link]2 - above[as]2[end link], [link]3 - below[as]3[end link]).";
 		while 1 is 1:
-			say "(0-3)>[run paragraph on]";
+			say "(0-3)> [run paragraph on]";
 			get a number;
 			if calcnumber > -1 and calcnumber < 4:
 				break;
 			else:
 				say "Invalid Entry. Please enter a number between 0 and 3.";
+		LineBreak;
 		now NewGraphicsPosition is calcnumber;
-		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
+		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.";
 		while 1 is 1:
-			say "(5-90)>[run paragraph on]";
+			say "(5-90)> [run paragraph on]";
 			get a number;
 			if calcnumber > 4 and calcnumber < 91:
 				break;
 			else:
 				say "Invalid Entry. Please enter a number between 5 and 90.";
+		LineBreak;
 		now NewGraphicsRatio is calcnumber;
 		now the graphics window proportion is NewGraphicsRatio;
 		if NewGraphicsPosition is:
-			-- 0:
-				now graphics window position is g-right;
-			-- 1:
-				now graphics window position is g-left;
-			-- 2:
-				now graphics window position is g-above;
-			-- 3:
-				now graphics window position is g-below;
+			-- 0: now graphics window position is g-right;
+			-- 1: now graphics window position is g-left;
+			-- 2: now graphics window position is g-above;
+			-- 3: now graphics window position is g-below;
 		reconstruct graphics window;
 		clear the screen;
-	say "Want more details on the game and updates? ----- [bold type]https://blog.flexiblesurvival.com[roman type]  ------[line break][line break]";
+	say "Want more details on the game and updates? ----- [bold type]https://blog.flexiblesurvival.com[roman type]  -----[line break][line break]";
 	WaitLineBreak;
 	if scenario is "Bunker":
 		ItemGain black t-shirt by 1 silently;
@@ -287,39 +314,35 @@ to say gsopt_start:
 		now black boxer briefs are equipped;
 		ItemGain black combat boots by 1 silently;
 		now black combat boots is equipped;
+		ItemGain Broken Smartphone by 1 silently;
 	if scenario is not "Bunker":
 		if scenario is "Caught Outside":
 			add "Spartan Diet" to feats of Player;
-		if scenario is "Rescuer Stranded":
+		else if scenario is "Rescuer Stranded":
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
 			increase score by 300;
-		if scenario is "Forgotten":
+		else if scenario is "Forgotten":
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
-			now Description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now Description of Doctor Matt is "     A small recorder labeled 'Doctor Matt' remains abandoned.[line break]";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Deer":
-					now area entry is "Park";
-					break;
+			if there is a Name of "Deer" in Table of Random Critters:
+				choose a row with Name of "Deer" in Table of Random Critters;
+				now area entry is "Park";
 			increase score by 600;
 			extend game by 240;
 	if HardMode is true: [Hard mode alteration]
 		increase score by 300;
 	if NoHealMode is true: [No-heal mode alteration]
 		increase score by 150;
-		now NoHealMode is true;
 	if BlindMode is true: [Blind mode alteration]
 		increase score by 100;
-		now BlindMode is true;
 	if scenario is "Bunker":
-		ItemGain Broken Smartphone by 1 silently;
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. You managed to escape to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
 		say "     You've waited in the dark for others or rescue to come, but to no avail. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type] and your [bold type]watch[roman type]. How bad could it be?";
 	else if scenario is "Caught Outside":
@@ -328,39 +351,42 @@ to say gsopt_start:
 	else if scenario is "Rescuer Stranded":
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. There were growing reports of monsters and freaks spreading across the city, attacking the citizens. You had been part of the military's fast response team sent in just hours after the outbreak. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors. You were sent in with little preparation and no idea at all of what you were truly in for.";
 		say "     Your team was moving on foot through the streets of downtown when you were set upon by creatures out of a pervert's nightmare. All discipline was lost as your team disintegrated into panic and fled unthinkingly into the city, pursued by the nightmares...";
-		say "     You awoke in what appears to be a disused bunker. You have no idea how you even got here or how long you've been out of it, but you are uninfected. In your panicked flight, you lost all of your supplies. No food. No water. No weapons. No radio. At least you have your backpack and your watch. Heaven only knows what awaits you outside, but you have to find a way back.";
+		say "     You awoke in what appears to be a disused bunker. You have no idea how you even got here or how long you've been out of it, but you are uninfected. In your panicked flight, you lost all of your supplies. No food. No water. No weapons. No radio. At least you have your [bold type]backpack[roman type] and your [bold type]watch[roman type]. Heaven only knows what awaits you outside, but you have to find a way back.";
 	else if scenario is "Forgotten":
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. You managed to escape to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
-		say "     Terrified, you've waited in the dark, subsisting as long as you've can on your supplies for as long as you've been able. While the noise of chaos died away for a long time, they picked up again with the addition of explosions and gunfire. Fearing to exit, you remained in the safety of the bunker until it was peaceful again. You wish you could continue to remain hidden, but you're finished off the very last of your supplies and you'll have to risk venturing out with only your [bold type]backpack[roman type], and your [bold type]watch[roman type]. Still... how bad could it be?";
+		say "     Terrified, you've waited in the dark, subsisting on your supplies for as long as you've been able. While the noise of chaos died away for a long time, they picked up again with the addition of explosions and gunfire. Fearing to exit, you remained in the safety of the bunker until it was peaceful again. You wish you could continue to remain hidden, but you've finished off the very last of your supplies and you'll have to risk venturing out with only your [bold type]backpack[roman type], and your [bold type]watch[roman type]. Still... how bad could it be?";
 	else if scenario is "Researcher":
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go. Thankfully, you weren't in one of the outbreak zones when it happened, but your life's been thrown upside down like everyone else's by the ensuing chaos. Seeing an opportunity to help, or at least make some money off the situation, you agreed to enter one of the hotspots through a military contractor. The city's been cordoned off by the military while they gather intel and plan, giving you some time to gather samples and investigate what's happening.";
 		say "     The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they'd take it back. You only have so much time to investigate, and you plan to make the most of it.";
 		say "     You're let down beside an old bunker. It would serve as your base of operations, and would be where they'd pick you up when it was over. You should be scared, but you just can't seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
 	else if scenario is "Running with Wolves":
-		say "     Hearing a massive racket, you find yourself waking up next to a fallen tree in your bed. It completely destroyed your house while you slept, thankfully you find that you are completely unharmed despite what happened. You have been living in this city since you were born, but this is the first time your house has been totaled by a fallen tree. You find that all the places where you store your clothes are blocked or totally smashed through leaving you with only your pajamas and what was hanging nearby that also was miraculously spared that you immediately grab and put on, your backpack and the watch inside of it. Climbing out of the wreckage of your former home and walking out onto the sidewalk in your bare feet, you find that your home isn't the only one that was ruined by tree damage. Looking around you notice that in the space of a single night huge trees had grown through many of the houses, lawns, and even in the middle of the street. As you stand awestruck by the incredibly surreal sight of a forest having appeared from out of nowhere, you are brought back to your senses by many of your neighbors coming from their houses and their hysterical screaming about the damages.";
-		say "     And then it happens, the sound of howling echoing through the forest air. At first you wonder if someone's dog got loose, but then you hear the sound of many paws and growls letting you know that these aren't just any ordinary dogs. A pack of wolves running full force ambushes you and your neighbors, your mind temporarily blanks out. Snapping back to reality, you find that a wolf has jumped at you, biting your shoulder and using its claws to shred your pajama top. As you fall over shaking your arm to try and dislodge it, the wolf lets go of your shoulder and uses its teeth to catch your pants and underwear ripping it shreds with its claws.";
+		say "     Hearing a massive racket, you find yourself waking up next to a fallen tree in your bed. It completely destroyed your house while you slept, thankfully you find that you are completely unharmed despite what happened. You have been living in this city since you were born, but this is the first time your house has been totaled by a fallen tree. You find that all the places where you store your clothes are blocked or totally smashed through leaving you with only your pajamas and what was hanging nearby that also was miraculously spared that you immediately grab and put on - your backpack and the watch inside of it. Climbing out of the wreckage of your former home and walking out onto the sidewalk in your bare feet, you find that your home isn't the only one that was ruined by tree damage. Looking around you notice that in the space of a single night huge trees had grown through many of the houses, lawns, and even in the middle of the street. As you stand awestruck by the incredibly surreal sight of a forest having appeared from out of nowhere, you are brought back to your senses by many of your neighbors coming from their houses and their hysterical screaming about the damages.";
+		say "     And then it happens, the sound of howling echoing through the forest air. At first you wonder if someone's dog got loose, but then you hear the sound of many paws and growls letting you know that these aren't just any ordinary dogs. A pack of wolves running full force ambushes you and your neighbors, your mind temporarily blanks out. Snapping back to reality, you find that a wolf has jumped at you, biting your shoulder and using its claws to shred your pajama top. As you fall over shaking your arm to try and dislodge it, the wolf lets go of your shoulder and uses its teeth to catch your pants and underwear ripping them to shreds with its claws.";
 		WaitLineBreak;
 		if MaleList is warded or MaleList is banned:
 			say "     You find that your shoulder is healing itself, that being a cold comfort, being that you have fallen on your ass in terror as the wolf that shredded your clothes stalks closer, out of the corner of your eye you notice that one of your neighbors is getting their head wedged into the cunt of a nearby wolf, being transformed into looking just like the wolf on top of them. Your eyes move forwards towards the wolf that is now standing above you, its cunt slick in ready anticipation, obviously looking forward to doing to you the same as what was done to your neighbor. It puts its paws around your head, brutally humping your face, practically jilling itself with your nose and mouth, this activity doesn't last long before the wolf reaches its climax, spraying the inside of your nose holes and all over your front with her girlcum.";
+			CreatureSexAftermath "Player" receives "OralPussy" from "Feral Wolf Bitch";
 		else:
-			say "     You find your shoulder is rapidly mending itself, one good thing at least, with you being bare-ass nude and prostrating in hopes that you won't be totally ripped to shreds like your pajamas were, offhandedly noticing out of the side of your vision one of your neighbors getting a wolf's red rocket shoved into their ass. You watch in horror as the neighbor's body starts to change to look the same as the wolf that is fucking them, however now they seem to be enjoying themselves. As you return your eyes to look at the wolf that was assaulting you, you find that it is now standing over you it's cock completely at the ready, it's length menacing you. The wolf wastes no time in shoving its dick into your mouth and roughly face fucking you for all your worth, however it doesn't take all that long before it begins to shudder as it climaxes and sprays some of its seed down your throat, ungently pulling itself out and covering your back and face with its semen.";
-		say "     Realizing that what happened with your neighbor is going to happen to you, you get up and run for all your worth, heading for anywhere but here, not even looking back to see if you are being chased. After running what feels to be a marathon, avoiding and escaping from the various mutants, you find yourself in an alley near a library. As you start to recall something, your thoughts are interrupted by a massive pain resounding throughout your entire body causing you to black out. Waking up, you find that not much time has passed, you try to stand up only to find that your legs no longer work the same way that they did before you passed out. Looking back you find that while you slept your body had changed into that of a fluffy feral wolf, all the way from your paws down to the tip of your tail, looks like you are going to have to get used to walking on all fours from now on. Just to be sure you pad over to a nearby puddle and take a look at the surface, you find that your face is that of a feral wolf with matching eyes and a wolfish tongue to go with it.";
+			say "     You find your shoulder is rapidly mending itself, one good thing at least, with you being bare-ass nude and prostrating in hopes that you won't be totally ripped to shreds like your pajamas were, offhandedly noticing out of the side of your vision one of your neighbors getting a wolf's red rocket shoved into their ass. You watch in horror as the neighbor's body starts to change to look the same as the wolf that is fucking them, however now they seem to be enjoying themselves. As you return your eyes to look at the wolf that was assaulting you, you find that it is now standing over you, its cock completely at the ready, its length menacing you. The wolf wastes no time in shoving its dick into your mouth and roughly face fucking you for all your worth, however it doesn't take all that long before it begins to shudder as it climaxes and sprays some of its seed down your throat, ungently pulling itself out and covering your back and face with its semen.";
+			CreatureSexAftermath "Player" receives "OralCock" from "Feral Wolf Male";
+		say "     Realizing that what happened with your neighbor is going to happen to you, you get up and run for all your worth, heading for anywhere but here, not even looking back to see if you are being chased. After running what feels to be a marathon, avoiding and escaping from the various mutants, you find yourself in an alley near a library. As you start to recall something, your thoughts are interrupted by a massive pain resounding throughout your entire body causing you to black out. Waking up, you find that not much time has passed, you try to stand up only to find that your legs no longer work the same way that they did before you passed out. Looking back you find that while you slept your body had changed into that of a fluffy feral wolf, all the way from your paws down to the tip of your tail; looks like you are going to have to get used to walking on all fours from now on. Just to be sure you pad over to a nearby puddle and take a look at the surface, you find that your face is that of a feral wolf with matching eyes and a wolfish tongue to go with it.";
 		WaitLineBreak;
 		say "     Looking up from the puddle you realize that you managed to find your way to what you think will be safety, an old bunker located under a library. Once upon a time it was an abbey but was renovated into a library. You remember seeing that stupid bunker sign for years, you never thought it would actually come in handy, but now that the shit hit the fan, you find that you are actually happy, overjoyed even to see that sign and the safety it promotes. You make your way up to the library entrance, almost the happiest you've ever been as you open one of the dual doors and enter. As you enter the library, you find that it looks very much intact, no signs of damage or habitation by crazed infected. Moving inwards and taking a few steps, you notice a shadowy figure lurking amidst the bookshelves. You can feel what could only be described as terror charging down your spine as you realize that it is a feral wolf much like the ones you just got done fleeing from. Instinct taking over, your legs moving to the ready, your back and tail up, your face twisted as you growl. Your opponent responds in kind, growling and barking in much the same manner, their stance showing they have no intention of backing down or retreating.";
 		say "     Both you and the stranger start circling each other, sizing each other up and looking for potential openings. The tension is so thick between the two of you, it could be cut with a knife. Any mistake could lead to being completely defeated, with that in mind, you meet them head on. A fury of claws and teeth, scratching and biting, tackles and barrel rolls, neither side giving an inch, as both of you battle for the bunker. Eventually though, one must win, and the other will have lost.";
-		say "     [bold type]By the time the dust clears, who has won?[roman type][line break]";
 		LineBreak;
+		say "     [bold type]By the time the dust clears, who has won?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - You lost completely. The wolf is now your Alpha.";
 		say "     [link](2)[as]2[end link] - You won. Barely. The wolf answers to you. At least for now...";
 		say "     [link](3)[as]3[end link] - Your victory was convincing. The wolf must accept its place as your Omega.";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
-			say "Choice? (1-3)>[run paragraph on]";
+			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
 			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link], [link]2[end link], or [link]3[end link].";
+		LineBreak;
 		if calcnumber is 1: [Alpha Fang]
 			now HP of Fang is 4;
 		else if calcnumber is 2: [Vanilla Fang]
@@ -368,10 +394,10 @@ to say gsopt_start:
 		else if calcnumber is 3: [Omega Fang]
 			now HP of Fang is 2;
 		say "     [bold type]It is only after the battle is over that you have time to see what sex they are. After a quick look you see that they are...[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Male.";
 		say "     ([link]N[as]n[end link]) - Female.";
 		if Player consents: [Male Fang]
+			LineBreak;
 			now Fang is Male;
 			if HP of Fang is 4: [Alpha]
 				increase ScaleValue of Fang by 1;
@@ -385,6 +411,7 @@ to say gsopt_start:
 				decrease Tongue Length of Fang by 2;
 			SetMalePronouns for Fang;
 		else: [Female Fang]
+			LineBreak;
 			now Fang is Female;
 			if HP of Fang is 4: [Alpha]
 				increase ScaleValue of Fang by 1;
@@ -433,10 +460,10 @@ to say gsopt_start:
 				now PenileVirgin of Fang is true;
 			SetFemalePronouns for Fang;
 		say "     [bold type]Is the victory consummated with sex?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents: [Sex]
+			LineBreak;
 			if HP of Fang is 4: [Alpha Fang]
 				if Fang is Male: [Male Fang]
 					if Player is male: [Anal]
@@ -496,27 +523,28 @@ to say gsopt_start:
 						say "     Having defeated your opponent and proven yourself the victor, you are left with the question on what to do next as you survey them. Coming to a conclusion you roll her onto her back, pausing a moment to take in the beauty of the wolfess in a way that you weren't able to in the midst of the brawl, in a moment of instinctual driven curiosity you lower your head and begin sniffing slightly at her exposed belly fur in an attempt to pick up on something that your mind hasn't yet put into cognitive thought on what you are looking for. Regardless of the private musing going through your mind on why you are sniffing someone you met for the first time ever, you move your head lower and get to winding and prepping your partner up by lubricating her exposed pussy with your saliva drenched tongue, probing here and there while enjoying her reactionary shudders, making sure to coat it with a layer thick enough for the both of you.";
 						say "     After being sure of the outside, you begin to dig deeper, with slow yet full strokes of the tongue, making sure not only to get everywhere but also to probe her depths in an attempt to find her sweet spot and get some sexy moans out of her. Feeling that you managed to work her up enough, you pull your face from between her pussy lips and position yourself until being face-to-face and cunt-to-cunt with the sexy wolfess, looking into her eyes for a prolonged moment before inflicting a sudden tickle attack, causing her to burst into a fit of laughter. Using that moment of her muzzle being open, you lock muzzles with her, making her gasp in surprise, despite her initial surprise she returns the kiss. Now that your partner is getting into the swing of things you decide to get to the main event as you begin to hump her fast and furiously, making sure that most of the grinding goes to her cunt, both of your muzzles resound with moans as she starts to hump in return. Both of you being wound up means that both the sloppy sounds of sex and the heavy breathing wont last for much longer before things come to a peak as you can feel your muscles tensing and your partner shuddering as you and her begin to squirt your girlcum onto each other, robbing you both of energy, leaving you both limp and embracing each other.";
 		else:
+			LineBreak;
 			if HP of Fang is 4:
-				say "     You find yourself on your back, completely battered, bruised and ultimately defeated. Realizing that you are probably not going to walk out of this intact or at all, you look around for some means of escape and try to lift yourself up, only to have your opponents paw come crashing down next to your muzzle, as [PosPro of Fang] maw momentarily clamps around your neck softly enough to act as a warning, letting you know that there is no escape. Fearfully looking up at the wolf situated above you, meeting [PosPro of Fang] gaze as you find yourself momentarily mesmerized by [PosPro of Fang] luminous yellow eyes as [SubjectPro of Fang] examines your own, as if looking for something that isn't readily apparent by examining other parts of you. With a low growl, you could almost swear [SubjectPro of Fang] mumbles something like 'this will do' as [SubjectPro of Fang] decides that [SubjectPro of Fang] is finished staring you down. You think that perhaps [SubjectPro of Fang] will let you up after finding that you no longer have the will to fight, you are apparently wrong as [PosPro of Fang] paw moves from beside your head to hold down your chest as [SubjectPro of Fang] says with a deep growl, 'Be mine or be gone.' [PosProCap of Fang] message clear in that if you want to live in the library and its bunker, it will be under [ObjectPro of Fang]. Not wanting to be left to the mercy of the mutants rampaging outside, you nod your head in agreement.";
+				say "     You find yourself on your back, completely battered, bruised and ultimately defeated. Realizing that you are probably not going to walk out of this intact or at all, you look around for some means of escape and try to lift yourself up, only to have your opponent's paw come crashing down next to your muzzle, as [PosPro of Fang] maw momentarily clamps around your neck softly enough to act as a warning, letting you know that there is no escape. Fearfully looking up at the wolf situated above you, meeting [PosPro of Fang] gaze as you find yourself momentarily mesmerized by [PosPro of Fang] luminous yellow eyes as [SubjectPro of Fang] examines your own, as if looking for something that isn't readily apparent by examining other parts of you. With a low growl, you could almost swear [SubjectPro of Fang] mumbles something like 'this will do' as [SubjectPro of Fang] decides that [SubjectPro of Fang] is finished staring you down. You think that perhaps [SubjectPro of Fang] will let you up after finding that you no longer have the will to fight, you are apparently wrong as [PosPro of Fang] paw moves from beside your head to hold down your chest as [SubjectPro of Fang] says with a deep growl, 'Be mine or be gone.' [PosProCap of Fang] message clear in that if you want to live in the library and its bunker, it will be under [ObjectPro of Fang]. Not wanting to be left to the mercy of the mutants rampaging outside, you nod your head in agreement.";
 			else if HP of Fang is 1:
-				say "     As the battle seemed to come to a head, you begin to worry that you might be done for. Just as the thoughts cross your mind, your opponent loses their footing, nearly collapsing on the spot. Being that you both are at your limits and ready to keel over, you try to think of a way to finish this without the both of you ending in a double knockout. After a brief moment of silence that seems to stretch uncomfortably long, you decide that it would be best to try and persuade [ObjectPro of Fang] that any further fighting would end badly for the both of us. Thinking on the best words to continue with, you proceed to claim that it would actually be better to work together to survive than weaken each other to the point of the both of us being easy prey for anything that should decide to enter between now and when we finally recover. Falling silent, you wonder if you managed to make your case well enough as the silence grows uncomfortably long, so long in fact that you worry that your opponent might notice that you are beginning to break out into a cold sweat. A few more tense minutes of [ObjectPro of Fang] looking you over pass in silence before [SubjectPro of Fang] finally comes to a conclusion as [SubjectPro of Fang] fully collapses, looking up at you with obvious frustration as [SubjectPro of Fang] grumbles and agrees to work together. With a sigh of relief you also end up collapsing in a tired sweaty heap to rest, happy that you are no longer alone in the midst of the apocalypse.";
+				say "     As the battle seemed to come to a head, you begin to worry that you might be done for. Just as the thoughts cross your mind, your opponent loses their footing, nearly collapsing on the spot. Being that you both are at your limits and ready to keel over, you try to think of a way to finish this without the both of you ending in a double knockout. After a brief moment of silence that seems to stretch uncomfortably long, you decide that it would be best to try and persuade [ObjectPro of Fang] that any further fighting would end badly for the both of you. Thinking on the best words to continue with, you proceed to claim that it would actually be better to work together to survive than weaken each other to the point of the both of you being easy prey for anything that should decide to enter between now and when you finally recover. Falling silent, you wonder if you managed to make your case well enough as the silence grows uncomfortably long, so long in fact that you worry that your opponent might notice that you are beginning to break out into a cold sweat. A few more tense minutes of [ObjectPro of Fang] looking you over pass in silence before [SubjectPro of Fang] finally comes to a conclusion as [SubjectPro of Fang] fully collapses, looking up at you with obvious frustration as [SubjectPro of Fang] grumbles and agrees to work together. With a sigh of relief you also end up collapsing in a tired sweaty heap to rest, happy that you are no longer alone in the midst of the apocalypse.";
 			else if HP of Fang is 2:
-				say "     As the once opponent collapses into unconsciousness on the floor in front of you, the flood of beastial insticts almost completely subside except for the little whisper that tells you that you should dominate [ObjectPro of Fang] sexually and completely, letting [ObjectPro of Fang] know what exactly what [PosPro of Fang] place will consist of from now on. You push that thought away as you decide how you want to go about dealing with [ObjectPro of Fang] as you look [ObjectPro of Fang] over, slightly feeling apologetic about drowning in the flow of your instincts earlier and its violent outcome. Hiding your guilt behind a poker face, you rouse [ObjectPro of Fang] from [PosPro of Fang] slumber by lightly smacking the side of [PosPro of Fang] muzzle with your paw, intently staring at [ObjectPro of Fang] as [SubjectPro of Fang] slowly wakes with a disoriented-yet-silent contemplation. The moment [SubjectPro of Fang] partially opens [PosPro of Fang] eyes, you put one of your paws on [PosPro of Fang] chest, holding [ObjectPro of Fang] down and staring at [ObjectPro of Fang] intently, letting [ObjectPro of Fang] know that there isn't going to be any escape from [PosPro of Fang] current situation. At the look you give, [SubjectPro of Fang] seems to decide that being calm and listening to what you have to say would be a good idea. Clearing your throat, you tell [ObjectPro of Fang] that despite the fight both of you just had, you don't really have any hard feelings against [ObjectPro of Fang]. Being that it's insanely dangerous outside, it feels like it would be unusually cruel to toss [ObjectPro of Fang] out just because [SubjectPro of Fang] lost. Considering that it is safer together than alone, It would be a good idea to at least give [ObjectPro of Fang] the opportunity to live here and serve under you.' as you look at [ObjectPro of Fang] slightly wondering what [PosPro of Fang] answer will be. With a soft sigh, [SubjectPro of Fang] nods in agreement to be your omega.";
+				say "     As the once opponent collapses into unconsciousness on the floor in front of you, the flood of bestial insticts almost completely subsides except for the little whisper that tells you that you should dominate [ObjectPro of Fang] sexually and completely, letting [ObjectPro of Fang] know exactly what [PosPro of Fang] place will consist of from now on. You push that thought away as you decide how you want to go about dealing with [ObjectPro of Fang] as you look [ObjectPro of Fang] over, slightly feeling apologetic about drowning in the flow of your instincts earlier and its violent outcome. Hiding your guilt behind a poker face, you rouse [ObjectPro of Fang] from [PosPro of Fang] slumber by lightly smacking the side of [PosPro of Fang] muzzle with your paw, intently staring at [ObjectPro of Fang] as [SubjectPro of Fang] slowly wakes with a disoriented-yet-silent contemplation. The moment [SubjectPro of Fang] partially opens [PosPro of Fang] eyes, you put one of your paws on [PosPro of Fang] chest, holding [ObjectPro of Fang] down and staring at [ObjectPro of Fang] intently, letting [ObjectPro of Fang] know that there isn't going to be any escape from [PosPro of Fang] current situation. At the look you give, [SubjectPro of Fang] seems to decide that being calm and listening to what you have to say would be a good idea. Clearing your throat, you tell [ObjectPro of Fang] that despite the fight both of you just had, you don't really have any hard feelings against [ObjectPro of Fang]. Being that it's insanely dangerous outside, it feels like it would be unusually cruel to toss [ObjectPro of Fang] out just because [SubjectPro of Fang] lost. Considering that it is safer together than alone, it would be a good idea to at least give [ObjectPro of Fang] the opportunity to live here and serve under you, as you look at [ObjectPro of Fang] slightly wondering what [PosPro of Fang] answer will be. With a soft sigh, [SubjectPro of Fang] nods in agreement to be your omega.";
 		now lastfuck of Fang is turns;
 	if scenario is "Running with Wolves":
 		WaitLineBreak;
 		if HP of Fang is 4:
 			say "     Having been beaten in battle and dominated completely, you meekly stare back at [ObjectPro of Fang] waiting for [ObjectPro of Fang] to give [PosPro of Fang] first order, that... never came. You both sit there and awkwardly stare at each other in silence, wondering what to do next. After a bit more silent staring, you decide to break the silence by introducing your name and asking for [PosPro of Fang]. [SubjectProCap of Fang] is silent for a few more moments. You gather your thoughts and ask whether he has forgotten his name. [SubjectProCap of Fang] nods once in affirmative. Having gotten the answer, you ask permission to give him a name so that you have something to call him by. [SubjectProCap of Fang] thinks for another moment or two and nods in affirmative. You, having your alpha's consent, decide to call [ObjectPro of Fang], rather uncreatively, Fang. [SubjectProCap of Fang] thinks in silence for a few more moments, and nods [PosPro of Fang] approval. Fang, noticing that you are about to pass out, tells you to go rest in the bunker, Fang stays and watches the entrance in case any more survivors show up. You then pad your way down into the bunker, swaying all the way, and pass out on one of the cots.";
 			WaitLineBreak;
-			say "     You finally manage to open your eyes, but your vision is blurry and unfocused, your body filled with the echoes of aches and pains from yesterday's events of getting beaten and raped by a wolf, a tiring sprint of desperation, your sudden transformation into a feral wolf, and getting beaten further and getting heavily dominated, claimed, and shown your place by your new alpha. The first thing you notice after your vision scans the room is a large black and grayish form, trying to focus, your vision finally clears to show you that it is actually your alpha who was waiting for you to awaken. You slowly sit up and move off the cot until you are looking up at Fang attentively. Seeing that you are recovered, Fang continues to say to you 'if you go outside, be on the lookout for other survivors.' apparently finished, Fang pads out of the bunker.";
+			say "     You finally manage to open your eyes, but your vision is blurry and unfocused, your body filled with the echoes of aches and pains from yesterday's events of getting beaten and raped by a wolf, a tiring sprint of desperation, your sudden transformation into a feral wolf, and getting beaten further and getting heavily dominated, claimed, and shown your place by your new alpha. The first thing you notice after your vision scans the room is a large black and grayish form, trying to focus, your vision finally clears to show you that it is actually your alpha who was waiting for you to awaken. You slowly sit up and move off the cot until you are looking up at Fang attentively. Seeing that you are recovered, Fang continues to say to you, 'If you go outside, be on the lookout for other survivors.' Apparently finished, Fang pads out of the bunker.";
 		else if HP of Fang is 1:
-			say "     After proving yourself as Alpha, you ask [ObjectPro of Fang] what [PosPro of Fang] name is, to which [SubjectPro of Fang] looks down onto the floor and hesitantly states that [SubjectPro of Fang] cannot remember [PosPro of Fang] old name. You being really tired from everything and of everything, decide to uncreatively call [ObjectPro of Fang] Fang, taking a nearby rope and using your paw-hands to clumsily fashion it into a make-shift leash, and tie it to a nearby post telling [ObjectPro of Fang] to guard the entrance. [SubjectProCap of Fang] silently does as [ObjectPro of Fang] is told, also taking a few moments to clean [if Fang is Male]himself [else if HP of Fang is 1]herself [end if]off. You pad your way down to the bunker where you immediately pass out the moment you lay on a cot.";
+			say "     After proving yourself as alpha, you ask [ObjectPro of Fang] what [PosPro of Fang] name is, to which [SubjectPro of Fang] looks down onto the floor and hesitantly states that [SubjectPro of Fang] cannot remember [PosPro of Fang] old name. You being really tired from everything and of everything, decide to uncreatively call [ObjectPro of Fang] Fang, taking a nearby rope and using your paw-hands to clumsily fashion it into a make-shift leash, and tie it to a nearby post telling [ObjectPro of Fang] to guard the entrance. [SubjectProCap of Fang] silently does as [ObjectPro of Fang] is told, also taking a few moments to clean [ReflexPro of Fang] off. You pad your way down to the bunker where you immediately pass out the moment you lay on a cot.";
 			WaitLineBreak;
-			say "     You wake up in the same position you went to sleep in, yawning while still slightly drowsy yet still able to look around at your surroundings. You suppose it isn't really a dream as you find yourself still in a bunker, as you look around you hear something padding down the stairs, that being your new lupine beta, sitting down in front of you, Fang begins to speak 'things quieted down after last night.' pausing for a moment before continuing 'it would be a good idea to bring back other survivors.', Fang clearly finished, pads back towards the entrance.";
+			say "     You wake up in the same position you went to sleep in, yawning while still slightly drowsy yet still able to look around at your surroundings. You suppose it isn't really a dream as you find yourself still in a bunker, as you look around you hear something padding down the stairs, that being your new lupine beta. Sitting down in front of you, Fang begins to speak, 'Things quieted down after last night,' pausing for a moment before continuing, 'It would be a good idea to bring back other survivors.' Fang clearly finished, pads back towards the entrance.";
 		else if HP of Fang is 2:
-			say "     Having thoroughly proven your dominance as the alpha, you ask [ObjectPro of Fang] what [PosPro of Fang] name is, [SubjectPro of Fang] hesitantly tells you that [SubjectPro of Fang] is unable to remember [PosPro of Fang] name. So you do your first duty as alpha and name [ObjectPro of Fang] a rather uncreative name, the name being Fang. Having given [ObjectPro of Fang], [PosPro of Fang] name, you give [ObjectPro of Fang] [PosPro of Fang] first order and duty, to guard the entrance. Fang barks an affirmative and goes to a nearby spot to lick him/her self clean and watch over the door. You, being incredibly exhausted from everything that went on, pad your way to the bunker where you pass out on one of the cots.";
+			say "     Having thoroughly proven your dominance as the alpha, you ask [ObjectPro of Fang] what [PosPro of Fang] name is, [SubjectPro of Fang] hesitantly tells you that [SubjectPro of Fang] is unable to remember [PosPro of Fang] name. So you do your first duty as alpha and name [ObjectPro of Fang] a rather uncreative name, the name being Fang. Having given [ObjectPro of Fang] [PosPro of Fang] name, you give [ObjectPro of Fang] [PosPro of Fang] first order and duty, to guard the entrance. Fang barks an affirmative and goes to a nearby spot to lick [ReflexPro of Fang] clean and watch over the door. You, being incredibly exhausted from everything that went on, pad your way to the bunker where you pass out on one of the cots.";
 			WaitLineBreak;
-			say "     You wake up to your omega sitting on the floor next to your cot, with [PosPro of Fang] paws holding onto one of your paws, [PosPro of Fang] bright yellow eyes filled with worry. Once you open your eyes, [PosPro of Fang] tail starts to wag, as [PosPro of Fang] awaits your eventual morning greeting. Despite being half asleep you still acknowledge Fang with a yawn filled greeting as you try and rub the previous day's exhaustion from your eyes. Fang seeing you now awake, tells you 'things quieted down outside.', after a short silence [PosPro of Fang] continues with 'if you happen to find any survivors while out and about, it would be a good idea to let them know this place is safe.' having made sure you were all right and said [PosPro of Fang] piece, Fang pads [PosPro of Fang] way back to the entrance.";
+			say "     You wake up to your omega sitting on the floor next to your cot, with [PosPro of Fang] paws holding onto one of your paws, [PosPro of Fang] bright yellow eyes filled with worry. Once you open your eyes, [PosPro of Fang] tail starts to wag, as [PosPro of Fang] awaits your eventual morning greeting. Despite being half asleep you still acknowledge Fang with a yawn filled greeting as you try and rub the previous day's exhaustion from your eyes. Fang seeing you now awake, tells you, 'Things quieted down outside.' After a short silence [PosPro of Fang] continues with, 'If you happen to find any survivors while out and about, it would be a good idea to let them know this place is safe.' Having made sure you were all right and said [PosPro of Fang] piece, Fang pads [PosPro of Fang] way back to the entrance.";
 		if MaleList is warded or MaleList is banned:
 			turn Player into "Feral Wolf Bitch" silently;
 		else if FemaleList is warded or FemaleList is banned:
@@ -562,65 +590,70 @@ to say silent_start:
 		weakrandominfect;
 		weakrandominfect;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-	[Code for letting player select graphics window size]
-	say "[bold type]Graphic Settings[roman type][line break]";
-	say "Before restoring, please specify the graphic settings.[line break]";
-	say "[bold type] No graphics - 1 [roman type][line break]";
-	say "[bold type] Old inline graphics only - 2 [roman type][line break]";
-	say "[bold type] New graphics side-window - 3 [roman type][line break]";
-	while 1 is 1:
-		say "Please enter the number that matches your choice (1-3)>[run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber < 4:
-			break;
-		else:
-			say "Invalid Entry. Please enter a number between 1 and 3";
-	now NewGraphicsInteger is calcnumber - 1; [Direct set]
-	if NewGraphicsInteger is 1: [now evaluate]
-		now graphics is true;
-		now NewGraphics is false;
-	else if NewGraphicsInteger is 2:
+	if RestoreMode is true and RestoreSide > 0: [use default graphics window size and position]
 		now graphics is true;
 		now NewGraphics is true;
-	else if NewGraphicsInteger is 0:
-		now graphics is false;
-		now NewGraphics is false;
+		now NewGraphicsPosition is RestoreSide - 1;
+		now NewGraphicsRatio is 30;
+		now RestoreSide is 0;
+	else:
+		[Code for letting player select graphics window size]
+		say "[bold type]Graphic Settings[roman type][line break]";
+		say "Before restoring, please specify the graphic settings.";
+		say "[link]1 - No graphics[as]1[end link][line break]";
+		say "[link]2 - Old inline graphics only[as]2[end link][line break]";
+		say "[link]3 - New graphics side-window[as]3[end link][line break]";
+		while 1 is 1:
+			say "Please enter the number that matches your choice (1-3)> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber < 4:
+				break;
+			else:
+				say "Invalid Entry. Please enter a number between 1 and 3.";
+		LineBreak;
+		now NewGraphicsInteger is calcnumber - 1; [Direct set]
+		if NewGraphicsInteger is 1: [now evaluate]
+			now graphics is true;
+			now NewGraphics is false;
+		else if NewGraphicsInteger is 2:
+			now graphics is true;
+			now NewGraphics is true;
+		else if NewGraphicsInteger is 0:
+			now graphics is false;
+			now NewGraphics is false;
+		if NewGraphics is true: [Defined when play begins below, but MUST be here to alter the view when restoring from the menu]
+			say "[bold type]Graphic Window Position and Proportion[roman type][line break]";
+			say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.";
+			say "Please choose the position value now ([link]0 - right side[as]0[end link], [link]1 - left side[as]1[end link], [link]2 - above[as]2[end link], [link]3 - below[as]3[end link]).";
+			while 1 is 1:
+				say "(0-3)> [run paragraph on]";
+				get a number;
+				if calcnumber > -1 and calcnumber < 4:
+					break;
+				else:
+					say "Invalid Entry. Please enter a number between 0 and 3.";
+			LineBreak;
+			now NewGraphicsPosition is calcnumber;
+			say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.";
+			while 1 is 1:
+				say "(5-90)> [run paragraph on]";
+				get a number;
+				if calcnumber > 4 and calcnumber < 91:
+					break;
+				else:
+					say "Invalid Entry. Please enter a number between 5 and 90.";
+			now NewGraphicsRatio is calcnumber;
 	if NewGraphics is true: [Defined when play begins below, but MUST be here to alter the view when restoring from the menu]
-		say "[bold type]Graphic Window Position and Proportion[roman type][line break]";
-		say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.[line break]";
-		say "Please choose the position value now. (0 = right side, 1 = left side, 2 = above, 3 = below)[line break]";
-		while 1 is 1:
-			say "(0-3)>[run paragraph on]";
-			get a number;
-			if calcnumber > -1 and calcnumber < 4:
-				break;
-			else:
-				say "Invalid Entry. Please enter a number between 0 and 3.";
-		now NewGraphicsPosition is calcnumber;
-		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
-		while 1 is 1:
-			say "(5-90)>[run paragraph on]";
-			get a number;
-			if calcnumber > 4 and calcnumber < 91:
-				break;
-			else:
-				say "Invalid Entry. Please enter a number between 5 and 90.";
-		now NewGraphicsRatio is calcnumber;
-		clear the screen;
 		now the graphics window proportion is NewGraphicsRatio;
 		if NewGraphicsPosition is:
-			-- 0:
-				now graphics window position is g-right;
-			-- 1:
-				now graphics window position is g-left;
-			-- 2:
-				now graphics window position is g-above;
-			-- 3:
-				now graphics window position is g-below;
+			-- 0: now graphics window position is g-right;
+			-- 1: now graphics window position is g-left;
+			-- 2: now graphics window position is g-above;
+			-- 3: now graphics window position is g-below;
 		reconstruct graphics window;
 		[now the graphics window pixel count is 1;]
 		follow the ngraphics_blank rule;
-		follow the current graphics drawing rule;
+		[follow the current graphics drawing rule;]
 		now NewGraphicsOpened is true;
 	clear the screen;
 	say "Just a moment. There are a few more things to prepare...";
@@ -669,24 +702,22 @@ to say silent_start:
 	if scenario is not "Bunker":
 		if scenario is "Caught Outside":
 			add "Spartan Diet" to feats of Player;
-		if scenario is "Rescuer Stranded":
+		else if scenario is "Rescuer Stranded":
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
 			increase score by 300;
-		if scenario is "Forgotten":
+		else if scenario is "Forgotten":
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
-			now Description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now Description of Doctor Matt is "     A small recorder labeled 'Doctor Matt' remains abandoned.[line break]";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Deer":
-					now area entry is "Park";
-					break;
+			if there is a Name of "Deer" in Table of Random Critters:
+				choose a row with Name of "Deer" in Table of Random Critters;
+				now area entry is "Park";
 			increase score by 600;
 			extend game by 240;
 	if HardMode is true: [Hard mode alteration]
@@ -695,8 +726,7 @@ to say silent_start:
 		increase score by 150;
 	if BlindMode is true: [Blind mode alteration]
 		increase score by 100;
-	AddNavPoint Zephyr Lobby;
-	WaitLineBreak;
+	AddNavPoint Zephyr Lobby silently;
 
 Chapter 2 - Player Name
 
@@ -715,20 +745,19 @@ to newplayercustomizationmenu:
 		let charactermenuexit be 0;
 		while charactermenuexit is 0:
 			clear the screen;
-			say "[line break][bold type]Character Customization:[roman type][line break]";
+			say "[bold type]Character Customization:[roman type][line break]";
 			say "(1) [link]Player Starting Gender[as]1[end link] - [bold type][if StartingGender is 1]Male[else if StartingGender is 2]Female[else if StartingGender is 3]Trans-Woman[else if StartingGender is 4]Trans-Man[else if StartingGender is 5]Male Herm[else if StartingGender is 6]Female Herm[end if][roman type][line break]";
-			say "(2) [link]Player Sexual Experience[as]2[end link]: [playervirginsay][line break]";
-			say "(3) [link]Body Configuration Lock[as]3[end link] - [bold type][if GenderLock is 1]None[else if GenderLock is 2]Random[else if GenderLock is 3]Unchanging[else if GenderLock is 4]Always Cocky[else if GenderLock is 5]Always a Pussy[else if GenderLock is 6]Single Sexed[else if GenderLock is 7]Flat Chested[else if GenderLock is 8]Simplified Masculine[else]ERROR[end if][roman type][line break]";
+			say "(2) [link]Player Sexual Experience[as]2[end link]: [bold type][playervirginsay][roman type][line break]";
+			say "(3) [link]Body Configuration Lock[as]3[end link] - [bold type][if GenderLock is 1]None[else if GenderLock is 2]Random[else if GenderLock is 3]Unchanging[else if GenderLock is 4]Always Cocky[else if GenderLock is 5]Always A Pussy[else if GenderLock is 6]Single Sexed[else if GenderLock is 7]Flat Chested[else if GenderLock is 8]Simplified Masculine[else]ERROR[end if][roman type][line break]";
 			say "(4) [link]Player Pronouns[as]4[end link] - [bold type][PronounChoice of Player][roman type][line break]";
-			say "[line break]";
-			say "(0) [link]Return to main menu[as]0[end link][line break]";
+			say "[line break](0) [link]Return to main menu[as]0[end link][line break]";
 			while 1 is 1:
-				say "Choice? (0-4)>[run paragraph on]";
+				say "Choice? (0-4)> [run paragraph on]";
 				get a number;
 				if calcnumber >= 0 and calcnumber <= 4:
 					break;
 				else:
-					say "Invalid Entry";
+					say "Invalid Entry. Pick from 0 to 4.";
 			LineBreak;
 			if calcnumber is 1:
 				PlayerStartingGenderSetting;
@@ -737,6 +766,7 @@ to newplayercustomizationmenu:
 			else if calcnumber is 3:
 				genderlockmenu;
 			else if calcnumber is 4:
+				say "[run paragraph on]";
 				try pronounsetting;
 			else:
 				now charactermenuexit is 1;
@@ -757,7 +787,7 @@ to newplayercustomizationmenu:
 			say "[line break]";
 			say "(0) [link]Return to main menu[as]0[end link][line break]";
 			while 1 is 1:
-				say "Choice? (0-9)>[run paragraph on]";
+				say "Choice? (0-9)> [run paragraph on]";
 				get a number;
 				if calcnumber >= 0 and calcnumber <= 9:
 					break;
@@ -787,7 +817,7 @@ to PlayerStartingGenderSetting:
 	now calcnumber is -1;
 	let gsexit be 0;
 	while gsexit is 0:
-		say "[bold type]Select a starting gender: (exact sizes for all parts are randomized in human ranges)[roman type][line break]";
+		say "[bold type]Select a starting gender (exact sizes for all parts are randomized in human ranges):[roman type][line break]";
 		say "(1) [link]Male[as]1[end link] - You have a penis and flat chest.";
 		say "(2) [link]Female[as]2[end link] - You have a vagina and breasts.";
 		say "(3) [link]Trans-Woman[as]3[end link] - You have a penis and breasts.";
@@ -797,17 +827,16 @@ to PlayerStartingGenderSetting:
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-6)>[run paragraph on]";
+			say "Choice? (0-6)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 6:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 6.";
+		LineBreak;
 		if calcnumber is not 0:
 			now StartingGender is calcnumber;
-			now gsexit is 1;
-		else:
-			now gsexit is 1;
+		now gsexit is 1;
 
 to startgenderget:
 	say "Assigning Gender...";
@@ -864,20 +893,20 @@ to playersexsetting: [OralVirgin of Player, Virgin of Player, AnalVirgin of Play
 	while menuexit is 0:
 		clear the screen;
 		say "[bold type]Sexual Experience[roman type][line break]";
-		say "     Sexual Experience: [if SexuallyExperienced of Player is true]Yes[else]No[end if][line break]";
-		say "(1) [link]Oral Virgin[as]1[end link]: [if OralVirgin of Player is true]Yes[else]No[end if][line break]";
-		say "(2) [link]Vaginal Virgin[as]2[end link]: [if Virgin of Player is true]Yes[else]No[end if][line break]";
-		say "(3) [link]Penile Virgin[as]3[end link]: [if PenileVirgin of Player is true]Yes[else]No[end if][line break]";
-		say "(4) [link]Anal Virgin[as]4[end link]: [if AnalVirgin of Player is true]Yes[else]No[end if][line break]";
-		say "[line break]";
-		say "(0) [link]Return to previous menu[as]0[end link][line break]";
+		say "     Sexually Experienced: [bold type][if SexuallyExperienced of Player is true]Yes[else]No[end if][roman type][line break]";
+		say "(1) [link]Oral Virgin[as]1[end link]: [bold type][if OralVirgin of Player is true]Yes[else]No[end if][roman type][line break]";
+		say "(2) [link]Vaginal Virgin[as]2[end link]: [bold type][if Virgin of Player is true]Yes[else]No[end if][roman type][line break]";
+		say "(3) [link]Penile Virgin[as]3[end link]: [bold type][if PenileVirgin of Player is true]Yes[else]No[end if][roman type][line break]";
+		say "(4) [link]Anal Virgin[as]4[end link]: [bold type][if AnalVirgin of Player is true]Yes[else]No[end if][roman type][line break]";
+		say "[line break](0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-4)>[run paragraph on]";
+			say "Choice? (0-4)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 4:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 4.";
+		LineBreak;
 		if calcnumber is 1:
 			if OralVirgin of Player is true:
 				now OralVirgin of Player is false;
@@ -902,7 +931,7 @@ to playersexsetting: [OralVirgin of Player, Virgin of Player, AnalVirgin of Play
 			now menuexit is 1;
 		if (OralVirgin of Player is true and Virgin of Player is true and PenileVirgin of Player is true and AnalVirgin of Player is true):
 			now SexuallyExperienced of player is false;
-		else if (OralVirgin of Player is false or Virgin of Player is false or PenileVirgin of Player is false or AnalVirgin of Player is false):
+		else:
 			now SexuallyExperienced of player is true;
 		now calcnumber is -1;
 
@@ -910,10 +939,11 @@ to say playervirginsay:
 	if SexuallyExperienced of player is false:
 		say "Virgin";
 	else:
-		if StartingGender is 1:
-			say "[if OralVirgin of Player is false]Orally Experienced[else]Oral Virgin[end if], [if AnalVirgin of Player is false]Anally Experience[else]Anal Virgin[end if], [if PenileVirgin of Player is false]Penally Experienced[else]Penile Virgin[end if]";
-		else:
-			say "[if OralVirgin of Player is false]Orally Experienced[else]Oral Virgin[end if], [if AnalVirgin of Player is false]Anally Experience[else]Anal Virgin[end if], [if Virgin of Player is false]Vaginally Experienced[else]Vaginal Virgin[end if]";
+		say "[if OralVirgin of Player is false]Orally Experienced[else]Oral Virgin[end if], [if AnalVirgin of Player is false]Anally Experienced[else]Anal Virgin[end if]";
+		if StartingGender is 1 or StartingGender is 3 or StartingGender is 5 or StartingGender is 6:
+			say ", [if PenileVirgin of Player is false]Penilely Experienced[else]Penile Virgin[end if]";
+		if StartingGender is 2 or StartingGender is 4 or StartingGender is 5 or StartingGender is 6:
+			say ", [if Virgin of Player is false]Vaginally Experienced[else]Vaginal Virgin[end if]";
 
 to genderlockmenu:
 	now calcnumber is -1;
@@ -922,27 +952,26 @@ to genderlockmenu:
 		say "[bold type]Select a body configuration lock:[roman type][line break]";
 		say "(1) [link]None[as]1[end link] - There is no restriction to your gender-transformation. You receive a 5% point bonus from this selection at game end.";
 		say "(2) [link]Random[as]2[end link] - Enjoy a loss of control? A random lock (4-8) is chosen for you at game start!";
-		say "[line break]";
 		say "(3) [link]Unchanging[as]3[end link] - Preserve selected starting gender.";
+		say "[line break]";
 		say "(4) [link]Always Cocky[as]4[end link] - Your body will never give up its cock (if it has one, or gains one).";
-		say "(5) [link]Always a Pussy[as]5[end link] - Your body will never give up its pussy (if it has one, or gains one).";
+		say "(5) [link]Always A Pussy[as]5[end link] - Your body will never give up its pussy (if it has one, or gains one).";
 		say "(6) [link]Single Sexed[as]6[end link] - Regardless of mutation, you will never be a herm but remain male or female, with the right chest to match.";
 		say "(7) [link]Flat Chested[as]7[end link] - Regardless of mutation, you never gain breasts.";
-		say "(8) [link]Simplified Masculine[as]8[end link] - Flat Chested + Single-Sexed.";
+		say "(8) [link]Simplified Masculine[as]8[end link] - Your body will never give up one of either its cock or pussy, and you never gain breasts.";
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-8)>[run paragraph on]";
+			say "Choice? (0-8)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 8:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 8.";
+		LineBreak;
 		if calcnumber is not 0:
 			now GenderLock is calcnumber;
-			now gsexit is 1;
-		else:
-			now gsexit is 1;
+		now gsexit is 1;
 
 to startgenderlockget:
 	say "Locking Gender...";
@@ -971,10 +1000,14 @@ to startgenderlockget:
 			add "Flat Chested" to feats of Player;
 		else if StartingGender is 5:
 			say "Locked to body configuration: flat chested, both genitals.";
+			add "Always Cocky" to feats of Player;
+			add "Always A Pussy" to feats of Player;
 			add "Herm Preferred" to feats of Player;
 			add "Flat Chested" to feats of Player;
 		else if StartingGender is 6:
 			say "Locked to body configuration: breasts, both genitals.";
+			add "Always Cocky" to feats of Player;
+			add "Always A Pussy" to feats of Player;
 			add "Herm Preferred" to feats of Player;
 			add "Breasts" to feats of Player;
 	else if GenderLock is 4:
@@ -992,7 +1025,12 @@ to startgenderlockget:
 		now Breast Size of Player is 0;
 	else if GenderLock is 8:
 		say "Locked to flat-chested male or trans-male.";
-		add "Single Sexed" to feats of Player;
+		if StartingGender is odd: [male, trans-woman, male herm]
+			add "Always Cocky" to feats of Player;
+		else: [female, trans-man, female herm]
+			add "Always A Pussy" to feats of Player;
+		if StartingGender < 5:
+			add "Single Sexed" to feats of Player;
 		add "Flat Chested" to feats of Player;
 		now Breast Size of Player is 0;
 
@@ -1006,28 +1044,28 @@ to say gsopt_1:
 	while gsexit is 0:
 		clear the screen;
 		say "[bold type]Select your main stat (+5 bonus):[roman type][line break]";
-		say "(1) [link]Strength[as]1[end link] = [if MainStat is 1][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Represents your raw physical might and your ability to deal damage.";
-		say "(2) [link]Dexterity[as]2[end link] = [if MainStat is 2][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Affects your likelihood to hit and dodge.";
-		say "(3) [link]Stamina[as]3[end link] = [if MainStat is 3][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Increases your total health pool and your overall endurance.";
-		say "(4) [link]Charisma[as]4[end link] = [if MainStat is 4][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Deals with social interactions with NPCs and your pets, and affects your morale.";
-		say "(5) [link]Intelligence[as]5[end link] = [if MainStat is 5][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping.";
-		say "(6) [link]Perception[as]6[end link] = [if MainStat is 6][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Influences your success while scavenging and hunting, success with ranged weapons and affects your morale.";
-		say "(7) [link]Random[as]7[end link] - Randomize your stat points upon creation.";
+		say "(1) [link]Strength[as]1[end link]: [if MainStat is 1][bold type]17[roman type][else if MainStat is 7]??[no line break][else]12[end if] - Represents your raw physical might and your ability to deal damage.";
+		say "(2) [link]Dexterity[as]2[end link]: [if MainStat is 2][bold type]17[roman type][else if MainStat is 7]??[no line break][else]12[end if] - Affects your likelihood to hit and dodge.";
+		say "(3) [link]Stamina[as]3[end link]: [if MainStat is 3][bold type]17[roman type][else if MainStat is 7]??[no line break][else]12[end if] - Increases your total health pool and your overall endurance.";
+		say "(4) [link]Charisma[as]4[end link]: [if MainStat is 4][bold type]17[roman type][else if MainStat is 7]??[no line break][else]12[end if] - Deals with social interactions with NPCs and your pets, and affects your morale.";
+		say "(5) [link]Intelligence[as]5[end link]: [if MainStat is 5][bold type]17[roman type][else if MainStat is 7]??[no line break][else]12[end if] - Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping.";
+		say "(6) [link]Perception[as]6[end link]: [if MainStat is 6][bold type]17[roman type][else if MainStat is 7]??[no line break][else]12[end if] - Influences your success while scavenging and hunting, success with ranged weapons and affects your morale.";
 		say "[line break]";
+		say "(7) [link]Random[as]7[end link] - Randomize your stat points upon creation.";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-7)>[run paragraph on]";
+			say "Choice? (0-7)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 7:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 7.";
+		LineBreak;
 		if calcnumber is not 0:
 			now MainStat is calcnumber;
+			say "[run paragraph on]";
 			gs_stats;
-			now gsexit is 1;
-		else:
-			now gsexit is 1;
+		now gsexit is 1;
 
 To gs_stats: [apply stat bonus]
 	follow the starting stats rule; [resets all to 12]
@@ -1060,28 +1098,28 @@ to randomstatstart:	[same total points, but spread randomly between 10 to 18]
 	let T be a random number between 1 and 6;
 	if T is 1:
 		increase strength of Player by 3;
-	if T is 2:
+	else if T is 2:
 		increase dexterity of Player by 3;
-	if T is 3:
+	else if T is 3:
 		increase stamina of Player by 3;
-	if T is 4:
+	else if T is 4:
 		increase charisma of Player by 3;
-	if T is 5:
+	else if T is 5:
 		increase intelligence of Player by 3;
-	if T is 6:
+	else if T is 6:
 		increase perception of Player by 3;
 	now T is a random number between 1 and 6;
 	if T is 1:
 		increase strength of Player by 2;
-	if T is 2:
+	else if T is 2:
 		increase dexterity of Player by 2;
-	if T is 3:
+	else if T is 3:
 		increase stamina of Player by 2;
-	if T is 4:
+	else if T is 4:
 		increase charisma of Player by 2;
-	if T is 5:
+	else if T is 5:
 		increase intelligence of Player by 2;
-	if T is 6:
+	else if T is 6:
 		increase perception of Player by 2;
 	now tempnum is 12; [remaining 12 points applied randomly one at a time]
 	while tempnum is not 0:
@@ -1092,27 +1130,27 @@ to randomstatstart:	[same total points, but spread randomly between 10 to 18]
 			if strength of Player > 18:
 				now strength of Player is 18;
 				increase tempnum by 1;
-		if T is 2:
+		else if T is 2:
 			increase dexterity of Player by 1;
 			if dexterity of Player > 18:
 				now dexterity of Player is 18;
 				increase tempnum by 1;
-		if T is 3:
+		else if T is 3:
 			increase stamina of Player by 1;
 			if stamina of Player > 18:
 				now stamina of Player is 18;
 				increase tempnum by 1;
-		if T is 4:
+		else if T is 4:
 			increase charisma of Player by 1;
 			if charisma of Player > 18:
 				now charisma of Player is 18;
 				increase tempnum by 1;
-		if T is 5:
+		else if T is 5:
 			increase intelligence of Player by 1;
 			if intelligence of Player > 18:
 				now intelligence of Player is 18;
 				increase tempnum by 1;
-		if T is 6:
+		else if T is 6:
 			increase perception of Player by 1;
 			if perception of Player > 18:
 				now perception of Player is 18;
@@ -1176,6 +1214,7 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 	clear the screen;
 	say "Select a basic feat. This represents a skill or innate ability you have.";
 	blank out the whole of table of gainable feats;
+	say "[run paragraph on]";
 	repeat with x running through functional featsets:
 		try addfeating x;
 	if there is no title in row 1 of table of gainable feats:
@@ -1187,26 +1226,31 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
 				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Abort[as]0[end link][line break]";
 			say "Type the number corresponding to the feat you want> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
 				choose row current menu selection from the table of gainable feats;
-				say "[title entry]: [description entry]?";
+				say "[bold type][title entry][roman type]: [description entry]?";
 				if Player consents:
 					now freefeatgeneral is the title in row calcnumber of table of gainable feats; [important change from regular featget]
 					now featqualified is 0;
-				break; [if featqualified is 0, ]
-			else if Playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+				if featqualified is 0, break;
+				if clearnomore is 0:
+					clear the screen;
+					say "Select a basic feat. This represents a skill or innate ability you have.";
+			else if calcnumber is 0:
 				say "Selection aborted.";
 				continue the action;
 			else:
-				say "Invalid Feat.";
+				say "Invalid Feat. Pick from 0 to [number of filled rows in table of gainable feats].";
 
 To startFunFeatget: [alternate funfeatget used for start]
 	clear the screen;
 	say "Select a fun feat. This represents some strange quirk or effect induced by the nanites.";
 	blank out the whole of table of gainable feats;
+	say "[run paragraph on]";
 	repeat with x running through not functional featsets:
 		try addfeating x;
 	if there is no title in row 1 of table of gainable feats:
@@ -1218,21 +1262,25 @@ To startFunFeatget: [alternate funfeatget used for start]
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
 				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Abort[as]0[end link][line break]";
 			say "Type the number corresponding to the feat you want> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
 				choose row current menu selection from the table of gainable feats;
-				say "[title entry]: [description entry]?";
+				say "[bold type][title entry][roman type]: [description entry]?";
 				if Player consents:
 					now freefeatfun is the title in row calcnumber of table of gainable feats; [important change from regular featget]
 					now featqualified is 0;
-				break; [if featqualified is 0, ]
-			else if Playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+				if featqualified is 0, break;
+				if clearnomore is 0:
+					clear the screen;
+					say "Select a fun feat. This represents some strange quirk or effect induced by the nanites.";
+			else if calcnumber is 0:
 				say "Selection aborted.";
 				continue the action;
 			else:
-				say "Invalid Feat.";
+				say "Invalid Feat. Pick from 0 to [number of filled rows in table of gainable feats].";
 
 
 Chapter 6 - Scenario Choices
@@ -1243,47 +1291,41 @@ to say gsopt_3:
 	while gsexit is 0:
 		clear the screen;
 		say "[bold type]Game Scenario:[roman type][line break]";
-		say "(1) [link]Bunker[as]1[end link]: You managed to find your way to a bunker, where you hid away for some time. No special perks, default start.[bold type][if ScenarioChosen is 1]-Set[end if][roman type][line break]";
-		say "(2) [link]Caught Outside[as]2[end link]: You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you (Gain Spartan Diet, slowing gain of hunger and thirst).[bold type][if ScenarioChosen is 2]-Set[end if][roman type][line break]";
-		say "(3) [link]Rescuer Stranded[as]3[end link]: You arrived late, looking for survivors, when you got cut off from your teammates. Now you just want to survive! (Start with no supplies)[bold type][if ScenarioChosen is 3]-Set[end if][roman type][line break]";
-		say "(4) [link]Forgotten[as]4[end link]: You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![bold type][if ScenarioChosen is 4]-Set[end if][roman type][line break]";
-		say "(5) [link]Researcher[as]5[end link]: You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection (you won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat.[bold type][if ScenarioChosen is 5]-Set[end if][roman type][line break]";
+		say "(1) [link]Bunker[as]1[end link]: You managed to find your way to a bunker, where you hid away for some time. No special perks, default start. [if ScenarioChosen is 1][bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		say "(2) [link]Caught Outside[as]2[end link]: You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you. (Gain Spartan Diet, slowing gain of hunger and thirst.) [if ScenarioChosen is 2][bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		say "(3) [link]Rescuer Stranded[as]3[end link]: You arrived late, looking for survivors, when you got cut off from your teammates. Now you just want to survive! (Start with no supplies.) [if ScenarioChosen is 3][bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		say "(4) [link]Forgotten[as]4[end link]: You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive! [if ScenarioChosen is 4][bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		say "(5) [link]Researcher[as]5[end link]: You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection (you won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat. [if ScenarioChosen is 5][bold type][bracket]Set[close bracket][roman type][end if][line break]";
 		say "[line break]";
-		say "(6) [link]Running with Wolves[as]6[end link]: You were a resident of the city before you fled to the bunker after your neighbors were claimed by wolves. However, you were infected and one of the wolves pursued you... (Start with Fang)[bold type][if ScenarioChosen is 6]-Set[end if][roman type][line break]";
+		say "(6) [link]Running with Wolves[as]6[end link]: You were a resident of the city before you fled to the bunker after your neighbors were claimed by wolves. However, you were infected and one of the wolves pursued you... (Start with Fang.) [if ScenarioChosen is 6][bold type][bracket]Set[close bracket][roman type][end if][line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-6)>[run paragraph on]";
+			say "Choice? (0-6)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 6:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 6.";
+		LineBreak;
 		if calcnumber is 1:
 			now scenario is "Bunker";
 			now ScenarioChosen is 1;
-			now gsexit is 1;
 		else if calcnumber is 2:
 			now scenario is "Caught Outside";
 			now ScenarioChosen is 2;
-			now gsexit is 1;
 		else if calcnumber is 3:
 			now scenario is "Rescuer Stranded";
 			now ScenarioChosen is 3;
-			now gsexit is 1;
 		else if calcnumber is 4:
 			now scenario is "Forgotten";
 			now ScenarioChosen is 4;
-			now gsexit is 1;
 		else if calcnumber is 5:
 			now scenario is "Researcher";
 			now ScenarioChosen is 5;
-			now gsexit is 1;
 		else if calcnumber is 6:
 			now scenario is "Running with Wolves";
 			now ScenarioChosen is 6;
-			now gsexit is 1;
-		else:
-			now gsexit is 1;
+		now gsexit is 1;
 
 Chapter 7 - Difficulty Mode
 
@@ -1298,12 +1340,13 @@ to say gsopt_4:
 		say "(3) [link]Blind Mode[as]3[end link]: [bold type][if BlindMode is true]On[else]Off[end if][roman type][line break]     Blind Mode prevents hunting and scavenging for supplies. You have a significantly increased chance of encountering something of interest while exploring though.";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-3)>[run paragraph on]";
+			say "Choice? (0-3)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 3:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 3.";
+		LineBreak;
 		if calcnumber is 1:
 			if HardMode is false:
 				now HardMode is true;
@@ -1335,31 +1378,36 @@ to contentrestrictionmenu:
 	let contentrestrictionmenuexit be 0;
 	while contentrestrictionmenuexit is 0:
 		clear the screen;
-		say "(1) [link]Banned/Warded Types[as]1[end link] - [menuwardlist] & [menubanlist] [line break]";
+		say "(1) [link]Banned/Warded Types[as]1[end link] - [menuwardlist] & [menubanlist][line break]";
 		say "(2) [link]Anal Content[as]2[end link] - [bold type][if AnalLevel is 1]Less[else if AnalLevel is 2]Normal[else if AnalLevel is 3]More[end if][roman type][line break]";
 		say "(3) [link]WS Content[as]3[end link] - [bold type][if WSLevel is 1]None[else if WSLevel is 2]Normal[else if WSLevel is 3]Full[end if][roman type][line break]";
 		say "(4) [link]Vore/UB Content[as]4[end link] - Vore: [bold type][if vorelevel is 1]None[else if vorelevel is 2]Normal[else if vorelevel is 3]Full[end if][roman type] - Unbirth: [bold type][if UBLevel is 1]None[else if UBLevel is 2]Normal[else if UBLevel is 3]Full[end if][roman type][line break]";
 		say "(5) [link]Ovi Pregnancy[as]5[end link] - [bold type][if OvipregLevel is 1]Never[else]Normal[end if][roman type][line break]";
-		say "(6) Player character is [if Player is CoA]the [else]NOT the [end if][link]Center of Attention[as]6[end link] of relationships in the library/bunker (disables NPC sexual relations independent of the player character). [roman type][line break]";
 		say "[line break]";
+		say "(6) Player character [if Player is CoA][special-style-1]IS[roman type][else]is [special-style-2]NOT[roman type][end if] the [link]Center of Attention[as]6[end link] of relationships in the library/bunker (disables NPC sexual relations independent of the player character).[roman type][line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-6)>[run paragraph on]";
+			say "Choice? (0-6)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 6:
 				break;
 			else:
-				say "Invalid Entry";
+				say "Invalid Entry. Pick from 0 to 6.";
+		LineBreak;
 		if calcnumber is 1:
 			if clearnomore is 0, clear the screen;
 			new ban menu; [see Core Mechanics/Lists and Banning.i7x]
 		else if calcnumber is 2:
+			say "[run paragraph on]";
 			try analadjusting; [see Core Mechanics/Settings Menus.i7x]
 		else if calcnumber is 3:
+			say "[run paragraph on]";
 			try WSadjusting; [see Core Mechanics/Settings Menus.i7x]
 		else if calcnumber is 4:
+			say "[run paragraph on]";
 			try voremenuing; [see Core Mechanics/Settings Menus.i7x]
 		else if calcnumber is 5:
+			say "[run paragraph on]";
 			try oviadjusting; [see Core Mechanics/Settings Menus.i7x]
 		else if calcnumber is 6:
 			if "Center of Attention" is listed in Feats of player:
@@ -1370,99 +1418,74 @@ to contentrestrictionmenu:
 			now contentrestrictionmenuexit is 1;
 
 to say menuwardlist:
-	if CockVoreList is warded or FurryList is warded or MaleList is warded or FemaleList is warded or HumorousList is warded or DemonList is warded or HermList is warded or CuckList is warded or IncestList is warded or TransList is warded or MindcontrolList is warded or NonconList is warded or VoreList is warded:
-		say "[bold type]Warded: [bracket] ";
-		if CockVoreList is warded:
-			say "Cockvore ";
-		if FeralList is warded:
-			say "Feral ";
-		if FurryList is warded:
-			say "Furry ";
-		if MaleList is warded:
-			say "Male ";
-		if FemaleList is warded:
-			say "Female ";
-		if HermList is warded:
-			say "Herm ";
-		if HumorousList is warded:
-			say "Humorous ";
-		if DemonList is warded:
-			say "Hellspawn ";
-		if TransList is warded:
-			say "Transgender ";
-		if CuckList is warded:
-			say "Cuck ";
-		if IncestList is warded:
-			say "Incest ";
-		if NonconList is warded:
-			say "Noncon ";
-		if MindcontrolList is warded:
-			say "Mindcontrol ";
-		if VoreList is warded:
-			say "Vore ";
-		say "[close bracket][roman type][line break]";
+	if number of warded flags > 0 or number of warded tags > 0:
+		let L be a list of text;
+		say "[bold type]Warded: [bracket]";
+		if CockVoreList is warded, add "Cockvore" to L;
+		if CuckList is warded, add "Cuck" to L;
+		if FemaleList is warded, add "Female" to L;
+		if FeralList is warded, add "Feral" to L;
+		if FurryList is warded, add "Furry" to L;
+		if DemonList is warded, add "Hellspawn" to L;
+		if HermList is warded, add "Herm" to L;
+		if BodyHorrorList is warded, add "Horror" to L;
+		if HumorousList is warded, add "Humorous" to L;
+		if MindcontrolList is warded, add "Hypnosis" to L;
+		if IncestList is warded, add "Incest" to L;
+		if MaleList is warded, add "Male" to L;
+		if NonconList is warded, add "Noncon" to L;
+		if TransList is warded, add "Transgender" to L;
+		if VoreList is warded, add "Vore" to L;
+		say "[L][close bracket][roman type]";
 	else:
-		say "[bold type]None Warded[roman type][line break]";
+		say "[bold type]None Warded[roman type]";
 
 to say menubanlist:
-	if CockVoreList is banned or FurryList is banned or MaleList is banned or FemaleList is banned or HumorousList is banned or DemonList is banned or HermList is banned or CuckList is banned or IncestList is banned or TransList is banned or MindcontrolList is banned or NonconList is banned or VoreList is banned:
-		say "[bold type]Banned: [bracket] ";
-		if CockVoreList is banned:
-			say "Cockvore ";
-		if FeralList is banned:
-			say "Feral ";
-		if FurryList is banned:
-			say "Furry ";
-		if MaleList is banned:
-			say "Male ";
-		if FemaleList is banned:
-			say "Female ";
-		if HermList is banned:
-			say "Herm ";
-		if HumorousList is banned:
-			say "Humorous ";
-		if DemonList is banned:
-			say "Hellspawn ";
-		if TransList is banned:
-			say "Transgender ";
-		if CuckList is banned:
-			say "Cuck ";
-		if IncestList is banned:
-			say "Incest ";
-		if NonconList is banned:
-			say "Noncon ";
-		if MindcontrolList is banned:
-			say "Mindcontrol ";
-		if VoreList is banned:
-			say "Vore ";
-		say "[close bracket][roman type][line break]";
+	if number of banned flags > 0 or number of banned tags > 0:
+		let L be a list of text;
+		say "[bold type]Banned: [bracket]";
+		if CockVoreList is banned, add "Cockvore" to L;
+		if CuckList is banned, add "Cuck" to L;
+		if FemaleList is banned, add "Female" to L;
+		if FeralList is banned, add "Feral" to L;
+		if FurryList is banned, add "Furry" to L;
+		if DemonList is banned, add "Hellspawn" to L;
+		if HermList is banned, add "Herm" to L;
+		if BodyHorrorList is banned, add "Horror" to L;
+		if HumorousList is banned, add "Humorous" to L;
+		if MindcontrolList is banned, add "Hypnosis" to L;
+		if IncestList is banned, add "Incest" to L;
+		if MaleList is banned, add "Male" to L;
+		if NonconList is banned, add "Noncon" to L;
+		if TransList is banned, add "Transgender" to L;
+		if VoreList is banned, add "Vore" to L;
+		say "[L][close bracket][roman type]";
 	else:
-		say "[bold type]None Banned[roman type][line break]";
+		say "[bold type]None Banned[roman type]";
 
 To startcreatureban: [bans creatures, as requested]
 	say "Banning creatures...";
 	repeat through the Table of Random Critters:
-		let bad be 0;
-		repeat with n running through all banned flags:
-			if Name entry is listed in infections of n:
-				now bad is 1;
-		if bad is 1:
-			now BannedStatus entry is true;
+		if BannedStatus entry is false:
+			repeat with n running through all banned flags:
+				if Name entry is listed in infections of n:
+					say "[Name entry] removed due to [n].";
+					now BannedStatus entry is true;
+					break;
 	say "Banning situations...";
 	repeat with n running through situations:
-		let bad be 0;
 		repeat with q running through all banned flags:
-			if n is listed in BadSpots of q:
+			if n is listed in BadSpots of q and n is active:
 				say "[n] removed due to [q].";
-				now bad is 1;
+				now n is inactive;
+			if n is inactive:
+				break;
 		repeat with q running through all banned tags:
-			if n is listed in BadSpots of q:
+			if n is listed in BadSpots of q and n is active:
 				say "[n] removed due to [q].";
-				now bad is 1;
-		if bad is 1:
-			now n is inactive;
-	say "Sorting creatures...";
-	sort Table of Random Critters in lev order;
+				now n is inactive;
+			if n is inactive:
+				break;
 
 Part 3 - New Infection System Functions
 
@@ -1487,7 +1510,7 @@ to gendersetting:
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-10)>[run paragraph on]";
+			say "Choice? (0-10)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 10:
 				break;
@@ -1672,7 +1695,7 @@ to bodytypesetting:
 		say "[line break][line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-3)>[run paragraph on]";
+			say "Choice? (0-3)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 3:
 				break;
@@ -1741,7 +1764,7 @@ to skincolorsetting:
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-6)>[run paragraph on]";
+			say "Choice? (0-6)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 6:
 				break;
@@ -1829,7 +1852,7 @@ to hairsetting:
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-5)>[run paragraph on]";
+			say "Choice? (0-5)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 5:
 				break;
@@ -1869,7 +1892,7 @@ to HairShapeSetting:
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-3)>[run paragraph on]";
+			say "Choice? (0-3)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 3:
 				break;
@@ -1997,7 +2020,7 @@ to HairStyleSetting: [Afro, Bangs, Bob Cut, Bowl Cut, Braid, Bun, Buzzcut, Combo
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-26)>[run paragraph on]";
+			say "Choice? (0-26)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 26:
 				break;
@@ -2100,7 +2123,7 @@ to HairColorSetting: [brown, blond, black, auburn, red, gray, white]
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-7)>[run paragraph on]";
+			say "Choice? (0-7)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 7:
 				break;
@@ -2199,7 +2222,7 @@ to BeardStyleSetting:
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-17)>[run paragraph on]";
+			say "Choice? (0-17)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 17:
 				break;
@@ -2271,7 +2294,7 @@ to BodyHairLengthSetting:
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (1-5)>[run paragraph on]";
+			say "Choice? (1-5)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 1 and calcnumber <= 5:
 				break;
@@ -2306,7 +2329,7 @@ to eyecolorsetting: [ Green, Blue, Gray, Brown, Hazel, Amber, Red]
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-7)>[run paragraph on]";
+			say "Choice? (0-7)> [run paragraph on]";
 			get a number;
 			if calcnumber >= 0 and calcnumber <= 7:
 				break;

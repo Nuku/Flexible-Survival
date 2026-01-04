@@ -182,7 +182,7 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"brown rat cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Brown Rat Male Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	brown rat cum
+"brown rat cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Brown Rat Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	brown rat cum
 
 brown rat cum is a grab object.
 brown rat cum is cum.
@@ -200,7 +200,7 @@ instead of sniffing brown rat cum:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"brown rat milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Brown Rat Male Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	brown rat milk
+"brown rat milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Brown Rat Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	brown rat milk
 
 brown rat milk is a grab object.
 brown rat milk is milky.

@@ -106,7 +106,7 @@ instead of conversing Leon:
 					increase Libido of Player by 10;
 					increase Hunger of Leon by 1;
 					now PlayerMet of Leon is true;
-					if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
+					if FemaleList is not banned and Player is not MalePreferred:
 						infect "Ewe";
 						infect "Ewe";
 					else:
@@ -264,6 +264,7 @@ to say SexWithLeon:
 			say "     When Leon cums, he forces his entire length past your lips, thrusting hard enough that your poor, abused throat protests with rolling gags. Unfortunately, he doesn't heed your body's warning, and you can only struggle against his grip as the first firehose blast of seed soaks the entirety of your throat, so forceful that it blasts through your nose. Thick, creamy masculinity fills your stomach until you're sure you'll burst, and you gulp every drop, escorting each load down his shaft with your overworked tongue until the last dregs paint your tastebuds. More affectionate in the afterglow, Leon slips from your lips, stroking the top of your head as he brings your messy mouth to his balls, nodding in approval as you kiss and nuzzle their slick fur. 'Clean up your mess. I've got a shop to get back to.' He asks, releasing his grip on you and spreading his legs so you can lick up the mess he made.";
 			WaitLineBreak;
 			say "     You spend what feels like an hour polishing those fat nuts, only stopping once he's gone completely soft. Cock and balls still shiny with your spit and cock still leaking the occasional dribble of seed, he leaves you there to gather your things, heading back to the shop and leaving you to contemplate your submission. Shivering as you clean yourself off, you lick your lips, wondering if Leon will let you do that again. Maybe being his 'male ewe' isn't so bad... You'll have to come back later and see what other perks it entails.";
+			NPCSexAftermath Player receives "OralCock" from Leon;
 			say "[LeonInfect]";
 		else if Lust of Leon < 3 and Lust of Leon > 0: [1-2 lust]
 			if Lust of Leon is 1: [only happens the first time]
@@ -364,13 +365,13 @@ to say LeonInfect:
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 2;
 	if Lust of Leon < 5:
 		increase Lust of Leon by 1;
-	if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
+	if FemaleList is not banned and Player is not MalePreferred:
 		infect "Ewe";
 	else:
 		infect "Ram";
 
 to say RamEweSplit:
-	if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
+	if FemaleList is not banned and Player is not MalePreferred:
 		turn the Player into an "Ewe" silently;
 	else:
 		turn the Player into a "Ram" silently;

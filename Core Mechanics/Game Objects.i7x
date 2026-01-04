@@ -88,10 +88,14 @@ before examining the grab object (called x):
 
 instead of examining a grab object (called x):
 	say "[the desc corresponding to a object of x in the table of game objects][line break]";
+	let found be 0;
 	repeat through the table of game art:
 		if printed name of x exactly matches the text title entry, case insensitively:
 			project icon entry;
+			now found is 1;
 			break;
+	if found is 0 and x is cum:
+		project Figure of Item_Bottle_Cum;
 	if "Weaponsmaster" is listed in feats of Player and x is an armament:
 		say "     Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
 	if x is an armament:
@@ -130,15 +134,12 @@ understand "write in [owned grab object]" as using.
 
 Check using a grab object (called x):
 	if HardMode is true and x is journal and (LastJournaluse minus 8) < turns:
-		say "You can't use your [x] for another [(remainder after dividing (turns minus (LastJournaluse minus 8)) by 8 ) times 3] hours.";
-		stop the action;
-	continue the action;
+		say "You can't use your [x] for another [(remainder after dividing (turns minus (LastJournaluse minus 8)) by 8 ) times 3] hours." instead;
+	if x is not owned:
+		say "You don't see any [x] in your backpack." instead;
 
 Carry out using a grab object (called x):
-	if x is owned:
-		process x;
-	else:
-		say "You don't see any [x] in your backpack.";
+	process x;
 
 [
 instead of wearing something:
@@ -147,15 +148,17 @@ instead of wearing something:
 ]
 
 To process (x - a grab object):
+	let found be 0;
 	repeat through the table of game art:
 		if printed name of x exactly matches the text title entry, case insensitively:
 			project icon entry;
+			now found is 1;
 			break;
+	if found is 0 and x is cum:
+		project Figure of Item_Bottle_Cum;
 	let tempHungerValue be Hunger of Player;
 	if x is temporary and x is owned:
 		say "You eagerly use the [x]!";
-		let found be 0;
-		let num be 0;
 		ItemLoss x by 1 silently;
 	else:
 		say "You use the [x].";
@@ -164,14 +167,12 @@ To process (x - a grab object):
 	else:
 		say "[Usedesc of x]";
 	if x is infectious and "Iron Stomach" is not listed in feats of Player:
-		let found be 0;
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
-			if Name entry is strain of x:
+			if strain of x exactly matches the text Name entry, case insensitively:
 				now MonsterID is y;
-				now found is 1;
+				infect;
 				break;
-		if found is 1, infect;
 	else if x is an armament:
 		if weapon object of Player is x: [unequip]
 			unwield x;
@@ -191,7 +192,7 @@ To process (x - a grab object):
 					if slot of z is slot of x:
 						say "     [bold type]Your [z] is in the way![roman type][line break]";
 						continue the action;
-			if (slot of x is "feet" or slot of x is "waist") and (BodyName of Player is listed in infections of TaurList or BodyName of Player is listed in infections of NoLegList):
+			if (slot of x is "feet" or slot of x is "legs" or slot of x is "waist") and (BodyName of Player is listed in infections of TaurList or BodyName of Player is listed in infections of NoLegList):
 				say "     [bold type]Sadly, the [x] [if plural of x is true]are[else]is[end if] incompatible with your body type![roman type][line break]";
 				continue the action;
 			if size of x > 0: [objects with size restrictions]
@@ -221,10 +222,10 @@ To process (x - a grab object):
 		if inafight is 1:
 			say "[line break][usepepperspray]";
 		else:
-			say "It would not be good idea to use that on yourself. Spicy eyes!";
-	if tempHungerValue > Hunger of Player and "Tanuki Salts" is listed in Feats of Player:
-		say "Dashing a little tanuki salts helped things along. Mmm, divinely tasty.";
+			say "It would not be a good idea to use that on yourself. Spicy eyes!";
+	if tempHungerValue > Hunger of Player and "Tanuki Salts" is listed in Feats of Player and x is not milky and x is not cum:
 		PlayerEat 5;
+		say "Dashing a little tanuki salts helped things along. Mmm, divinely tasty.";
 		increase Morale of Player by 5;
 
 
@@ -235,7 +236,7 @@ Definition: A grab object (called x) is wielded:
 	no;
 
 Definition: A grab object (called x) is unwieldy:		[applies to armaments only]
-	if grab object is journal, no;
+	if x is not an armament, no;
 	if (absolute value of ( scalevalue of Player - objsize of x )) > 0, yes;
 	no;
 
@@ -253,12 +254,12 @@ Usedesc of journal is "[journal use]".
 
 to say journal use:
 	follow the brain descr rule;
-	say "You settle down and start scribbling in your journal about your [descr]. ";
+	say "You settle down and start scribbling in your journal about your [descr] ";
 	if Humanity of Player < 100:
 		let healed be 10 + ( ( level of Player + perception of Player - 10 ) / 2 );
 		if caffeinehigh of Player > 0:
 			now healed is healed / 2;
-			say " Filled with excess, manic energy, you have difficulty sitting still and focusing on your journal. ";
+			say "[line break]Filled with excess, manic energy, you have difficulty sitting still and focusing on your journal. ";
 		if ssmb is true:
 			now healed is ( healed * 3 ) / 2;
 		SanBoost healed;

@@ -112,12 +112,13 @@ Description of Flooded Mall is "[FloodedMallDesc]".
 earea of Flooded Mall is "void".
 
 to say FloodedMallDesc:
-	say "     Like something out of a post apocalyptic story, the ruined mall is flooded, covered in moss and pond scum. A broken skylight lets in the sun from above during the day, bathing the area in glowing warmth, while at night, it provides a nice view of the stars, unfettered by the lights of the city. While most of the stores surrounding the multiple stories have been repurposed into makeshift camps, the bottom floor is completely flooded, acting as a swimming pool for the various amphibian inhabitants, some of which are currently tossing a ball back and forth as carefree giggles reverberate through the open air. ";
+	say "     Like something out of a post apocalyptic story, the ruined mall is flooded, covered in moss and pond scum. A broken skylight lets in the sun from above during the day, bathing the area in glowing warmth, while at night, it provides a nice view of the stars, unfettered by the lights of the city. While most of the stores surrounding the multiple stories have been repurposed into makeshift camps, the bottom floor is completely flooded, acting as a swimming pool for the various amphibian inhabitants, some of which are currently tossing a ball back and forth as carefree giggles reverberate through the open air";
 	if "Hostile" is listed in traits of Ignacio:
-		say "The place is less sinister than you'd expect from a tribe of kidnappers.";
+		say ". The place is less sinister than you'd expect from a tribe of kidnappers";
+	say ".";
 
 instead of navigating Flooded Mezzanine when "Guilty Coward" is listed in Traits of Player:
-	say "    You don't think it's a good idea to go anywhere near the flooded mall after you left Ignacio and Matteo to their doom. Coward's guilt aside, you don't know how they'll react if they find out what you did. You don't want any enemies...";
+	say "     You don't think it's a good idea to go anywhere near the flooded mall after you left Ignacio and Matteo to their doom. Coward's guilt aside, you don't know how they'll react if they find out what you did. You don't want any enemies...";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -128,7 +129,7 @@ Description of Flooded Mezzanine is "[FloodedMezzDesc]".
 earea of Flooded Mezzanine is "Sinking Swamps".
 
 to say FloodedMezzDesc:
-	say "     Overtaken by muck and stagnant water, the lowest floor of the mall's outer area is rather hard to navigate. On one side, the parking garage has already sank into the waters, leaving nothing but some lonely concrete monoliths, but on the other, the mall still stands relatively intact, only tilting slightly and holding strong against gentle waves.";
+	say "     Overtaken by muck and stagnant water, the lowest floor of the mall's outer area is rather hard to navigate. On one side, the parking garage has already sunk into the waters, leaving nothing but some lonely concrete monoliths, but on the other, the mall still stands relatively intact, only tilting slightly and holding strong against gentle waves.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -155,7 +156,7 @@ Description of Algae-Covered Atrium is "[AlgaeAtriumDesc]".
 earea of Algae-Covered Atrium is "void".
 
 to say AlgaeAtriumDesc:
-	say "      Besides a thick coating of duckweed and algae stained walls, the bottom floor of the mall looks like a giant swimming pool, complete with various pool toys. Young frogs play with water guns while adults watch from the sides, going about their days. It's quite peaceful, and you could while away hours people-watching.";
+	say "     Besides a thick coating of duckweed and algae stained walls, the bottom floor of the mall looks like a giant swimming pool, complete with various pool toys. Young frogs play with water guns while adults watch from the sides, going about their days. It's quite peaceful, and you could while away hours people-watching.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -167,7 +168,7 @@ Description of Amphibian Chieftain's Room is "[AmphibianChieftainRoomDesc]".
 earea of Amphibian Chieftain's Room is "void".
 
 to say AmphibianChieftainRoomDesc:
-	say "     The mall's security room has been repurposed. Darkened tv screens peer back at you from all the nearby walls, and a desk has been dragged in, while a cot sits nearby, showing obvious signs of use. The Chieftain, a tired-looking crested newt with a red, bare chest looks back at you over the desk, adjusting glasses with no lenses. A plaque on the desk says 'Keiran.'";
+	say "     The mall's security room has been repurposed. Darkened TV screens peer back at you from all the nearby walls, and a desk has been dragged in, while a cot sits nearby, showing obvious signs of use. The Chieftain, a tired-looking crested newt with a red, bare chest looks back at you over the desk, adjusting glasses with no lenses. A plaque on the desk says 'Keiran.'";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -181,7 +182,7 @@ earea of Rundown Cabin is "void".
 
 to say MudCabinRoomDesc:
 	if "Burned Down" is listed in Traits of Riker:
-		say "    There's almost no sign of the cabin. Instead, a pile of ashes and twisted timber sits in its place. It seems that either Kosk or Riker burned down the place after the lizard village's posse stormed it. At the least, you know that no one else will be locked up and trained to be a mindless sex slave inside...";
+		say "     There's almost no sign of the cabin. Instead, a pile of ashes and twisted timber sits in its place. It seems that either Kosk or Riker burned down the place after the lizard village's posse stormed it. At the least, you know that no one else will be locked up and trained to be a mindless sex slave inside...";
 	else:
 		say "     A lone cabin juts out of a small island surrounded by water. It looks both hastily constructed and extremely worn down, as though it's stood there for years, and it's surrounded by so much brush that you have a hard time believing this place was once a city. ";
 		if "Matteo Quest" is listed in Traits of Ignacio:

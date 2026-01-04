@@ -7,10 +7,10 @@ Use memory economy.
 Use slow route-finding.
 [ The following adjust Informs compiler settings so that it allocates enough space. If these values are incorrect, inform will fail to compile.]
 [ To determine if one of these is your issue, use the Errors tab in the inform 7 window. ]
-Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
-Use MAX_PROP_TABLE_SIZE of 8000000.
+use MAX_INDIV_PROP_TABLE_SIZE of 500000.
+use MAX_PROP_TABLE_SIZE of 8000000.
 use MAX_STATIC_DATA of 12500000.
-Use MAX_OBJ_PROP_COUNT of 1700.
+use MAX_OBJ_PROP_COUNT of 1700.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
 use MAX_NUM_STATIC_STRINGS of 500000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 250000. [ Code 10 ]
@@ -20,10 +20,10 @@ use MAX_ACTIONS of 30000.
 use MAX_VERBS of 30000.
 use MAX_VERBSPACE of 50000.
 use MAX_ARRAYS of 1000000.
-Use MAX_ZCODE_SIZE of 10000000.
-Use MAX_DICT_ENTRIES OF 60000.
-Use maximum text length of at least 4000.
-Use Scoring.
+use MAX_ZCODE_SIZE of 10000000.
+use MAX_DICT_ENTRIES OF 60000.
+use maximum text length of at least 4000.
+use Scoring.
 [ End compiler settings. ]
 
 [To decide which number is the absolute value of (N - a number):
@@ -162,8 +162,7 @@ Include Fighting by Core Mechanics.
 Include Fucking by Core Mechanics.
 Include Game Endings by Core Mechanics.
 Include Gender Pronouns by Core Mechanics.
-Include giving in by Core Mechanics.
-Include Inventory by Core Mechanics.
+Include Giving in by Core Mechanics.
 Include Masturbate by Core Mechanics.
 Include Microwave by Core Mechanics.
 Include Microwaveable Objects by Core Mechanics.
@@ -189,7 +188,6 @@ Include Text Capture by Eric Eve.
 Include Vending Machine by Core Mechanics.
 Include Weapons by Core Mechanics.
 Include Zephyr Phone by Core Mechanics.
-
 Include Milk Items by Core Mechanics.
 Include Cum Items by Core Mechanics.
 
@@ -307,11 +305,11 @@ Include Exploration Events by Kurainyx.
 Include Extra Added Scenes by Kaleem mcintyre.
 Include Extra College Events by Speedlover.
 Include Fair Events by Sarokcat.
-Include Fair Events by Sarokcat.
 Include Female Dorm Events by Prometheus.
 Include Feral Events by Guest Writers.
-Include Firbolgs by OrangeHorned.
 Include Fire House by Kaleem Mcintyre.
+Include Firbolg Quests by Orangehorned.
+Include Firbolg Tapes by Orangehorned.
 Include Food and Water Finding by Nuku Valente.
 Include Forest Events by Aureas Gigas.
 Include Forest Events by Defth.
@@ -423,12 +421,14 @@ Include Anthro Rabbit by Rikaeus.
 Include Arctic Fox by Sarokcat.
 Include Army Ant by Guest Writers.
 Include Avalon Kobold by Taelyn.
+Include Eggy Salamander by Voidsnaps.
 Include Ember Breeder by Stripes.
 Include Automaton by Stripes.
 Include Awesome Tree by Damaged.
 Include Badger by StripeGuy.
 Include Bald Eagle by Stripes.
 Include Batcubus by Blaydrex.
+Include Beag Infection by OrangeHorned.
 Include Biolizardman Brute by Gherod.
 Include Brown Bear by Nuku Valente.
 Include Beaver by Stripes.
@@ -493,8 +493,8 @@ Include Elf by Nuku Valente.
 Include Elk by Stripes.
 Include Elven Hunter by Wahn.
 Include Enhanced Chimera by Stripes.
-Include Erica by Wahn.
 Include Ewe by Luneth.
+Include Fathnach Infection by OrangeHorned.
 Include Feline Gymnast by Guest Writers.
 Include Female Husky by Nuku Valente.
 Include Fennec by Stripes.
@@ -573,6 +573,7 @@ Include Impala by UrsaOmega.
 Include Incubus by Stripes.
 Include Inflatable Snake by Kernog.
 Include Inflatable Vulpine by Stripes.
+Include Ipotane by Sundered Dragon.
 Include Jackal Alpha by Gherod.
 Include Jackal Femboy by Gherod.
 Include Jackal Guard by Xenophiliac.
@@ -632,6 +633,7 @@ Include Nerdy Mouse by Wahn.
 Include Nightmare by Sarokcat.
 Include Ocelot by Stripes.
 Include Ogres by Lyall.
+Include Onna Uma by Sundered Dragon.
 Include Opossum Sailor by StripeGuy.
 Include Orc Infections by Wahn.
 Include otter by Nuku Valente.
@@ -751,10 +753,10 @@ Include Zebra by Luneth.
 
 Part 4 - NPCs
 
+
 Include Absinthe by Bigfish15079.
 Include Ace by Aureas Gigas.
 Include Adam by Wahn.
-Include Addicted Breeder by Voidsnaps.
 Include Aeca by Wahn.
 Include Aerana by Gherod.
 Include Alex by Stripes.
@@ -788,6 +790,7 @@ Include Azari by Dys.
 Include Baron by Voidsnaps.
 Include Bastet by Wahn.
 Include Bernard by Prometheus.
+Include Best Pony by Sundered Dragon.
 Include Bianca by Prometheus.
 Include Bjorn by Rikaeus.
 Include Blake by Wahn.
@@ -867,8 +870,8 @@ Include Galaxite by Sundered Dragon.
 Include Genevieve by Prometheus.
 Include Garrett by SgtPepper234.
 Include Gerty by Qazarar.
-Include Giving Firbolg by OrangeHorned.
 Include Glory by Wahn.
+Include Giving by Orangehorned.
 Include Good Alexandra by Prometheus.
 Include Gordon by Rikaeus.
 Include Gregory by Wahn.
@@ -920,6 +923,7 @@ Include Kathy by Sundered Dragon.
 Include Keiran by Voidsnaps.
 Include Kerr & Talov by Wahn.
 Include Kerry by Voidsnaps.
+Include Knott by Orangehorned.
 Include Kosk by Voidsnaps.
 Include Krampus by Wahn.
 Include Kristen by Stripes.
@@ -936,6 +940,7 @@ Include Lindsey by Prometheus.
 Include Lingau by Wahn.
 Include Logan by Wahn.
 Include Lucy by Stripes.
+Include Luke by Alexeo.
 Include Lumi by Prometheus.
 Include Lux & Umbra by Prometheus.
 Include Mack by Stripes.
@@ -1058,6 +1063,7 @@ Include Zephias by Wahn.
 Include Zigor by Stripes.
 Include Ziix by Voidsnaps.
 Include Zoe by Kernog.
+
 
 Part 5 - Companions and Allies
 

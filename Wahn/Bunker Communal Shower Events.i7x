@@ -32,7 +32,7 @@ understand "shower me" as Showering.
 
 Check Showering:
 	if Bunker Shower Knob is not visible, say "Now how do you want to shower here?" instead;
-	if Player is in Communal Shower and findwires is not 2 and fixedgens is not 2, say "No water is coming from the shower heads. Seems like the power for the pumps isn't on." instead;
+	if Player is in Communal Shower and (findwires is not 2 or fixedgens is not 3), say "No water is coming from the shower heads. Seems like the power for the pumps isn't on." instead;
 
 Carry out Showering:
 	if Eric is in bunker and (HP of Eric > 41 and HP of Eric < 99) and (TimekeepingVar is 0 or TimekeepingVar is 1 or TimekeepingVar is -7 or TimekeepingVar is -8) and Energy of Eric < 49 and a random chance of 2 in 4 succeeds: [Eric present, orc cocked and non virgin, midnight or early morning, not driven away before, 33% chance]

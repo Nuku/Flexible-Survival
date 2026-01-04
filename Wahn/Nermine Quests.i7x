@@ -259,7 +259,8 @@ to say ResolveEvent Hyena Challenge:
 							say "     After even more sex in form of a prolonged gangbang, you are finally left alone to recover while the orgy continues without you, and eventually you manage to recover enough from the matriarch's dominant use of your all too willing body, and slowly drag yourself away from the gang's territory. As you stagger down the streets of the city, the cum of many different hyenas matting your thick black fur, you groan as you realize that you certainly don't have a chance of recovering the items Nermine wants from the hyena stronghold now... even as the part of you that the hyena matriarch brought out is wondering if maybe you shouldn't just give up on your silly quest and go back and become a nice little submissive hyena for the much more powerful gang of hyenas...";
 							CreatureSexAftermath "Player" receives "OralCock" from "Hyena Herm";
 							CreatureSexAftermath "Player" receives "OralPussy" from "Hyena Herm";
-							CreatureSexAftermath "Player" receives "PussyFuck" from "Hyena Herm";
+							if Player is female:
+								CreatureSexAftermath "Player" receives "PussyFuck" from "Hyena Herm";
 							if anallevel is not 1:
 								CreatureSexAftermath "Hyena Herm" receives "AssFuck" from "Player";
 							now matriarchdefeated is 0;

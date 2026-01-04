@@ -432,7 +432,7 @@ to say ResolveEvent Difficult Quarry:
 				move player to Garden View;
 				now Resolution of Difficult Quarry is 1; [Powerful enough to save Altus without a fight]
 			else:
-				say "Perhaps. Bold words and we shall see you back them up. You shall fight this stranger alone. If you defeat them, you may have first coupling with the gryphon and I will permit you the chance to challenge me to fair combat. But should they defeat you, they shall take the beast with them and you shall remain wanting,' the woman declares. Immediately, several nearby hunters begin to protest the chance to lose their quarry, but a sharp glare from their leader makes them still their tongues. Wordlessly, the hunter turns to you and drops into a ready-stance, a ring of people forming around you as they prepare for the two of you to decide the fate of the gryphon.";
+				say "'Perhaps. Bold words and we shall see you back them up. You shall fight this stranger alone. If you defeat them, you may have first coupling with the gryphon and I will permit you the chance to challenge me to fair combat. But should they defeat you, they shall take the beast with them and you shall remain wanting,' the woman declares. Immediately, several nearby hunters begin to protest the chance to lose their quarry, but a sharp glare from their leader makes them still their tongues. Wordlessly, the hunter turns to you and drops into a ready-stance, a ring of people forming around you as they prepare for the two of you to decide the fate of the gryphon.";
 				now inasituation is true;
 				challenge "Homo Sapiens";
 				now inasituation is false;

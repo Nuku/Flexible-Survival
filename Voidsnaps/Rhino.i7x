@@ -32,13 +32,12 @@ to say losetorhino:
 		say "     You feel the rhino's weight come crashing down on your back as his efforts renew themselves, showing stamina that matches his aggression. Unbidden, desperate mewls for mercy slip from your lips, but they fall on deaf ears as the rhino churns his earlier load into dripping foam, crushing your poor hips against the ground with each battering thrust. Your pussy clenches needily despite your squirming attempts to escape, and you're growing more sensitive by the second. This time, the rhino doesn't even stop as he spurts another load into your messy cunt, slamming deep and hard as he bastes your womb in yet another coating. You lose count of how many times you cum around that sloppy horn, lying in a spreading pool of mixed juices, but by the time you feel his cock slip out of you, you can't feel your limbs. The only sensation left is tingling electric shocks racing through your midsection and the cooling sensation of well-churned cum drooling from your ruined cunt.";
 		say "     A final shot of cum paints your ass cheeks, and lumbering footsteps disappear into the distance as the rhino abandons his conquest, leaving you to sleep off your defeat. When you awaken, you're still drooling cum, but the bulge in your stomach has gone down, allowing you to pull your clothes on, carefully avoiding your sensitive pussy lips brushing against the fabric.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Rhino";
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Rhino";
 	else:
 		say "     Bowling you over, the Rhino man snorts angrily as his meaty hands pin you. Wordlessly he tears at your clothes and backpack, throwing them to the side as he climbs atop you, smearing his throbbing masculinity between your cheeks. You wince at his size, but thankfully, a river of precum rolls down its underside, slickening you for whatever the brutish male has in mind. The rhino trails his cockhead over your asshole, then lower, seeking a hole that isn't there. An annoyed grunt follows, but that spitting head doesn't leave, repositioning itself to threaten your pucker. The slow smear of pre doesn't last, and when he pushes in, he's anything but gentle, slamming his first few inches into your wildly clenching innards without a care for the sharp ache that shoots through your body.";
 		say "     The tightness of your hole works against you, increasing the rhino's frustration as he tries in vain to stuff himself to the root. Increasingly violent thrusts spread you bit by bit, and leaking virility eases the way, but your inner walls still suffer his abuse, his balls slapping [If ball count of Player is 0]your rump [else if ball count of Player > 0]against your balls [else if Player is female]your pussy [else if Player is neuter]your nullified mound [end if]hard enough to sting. As you feel his hips slam into your ass, finally fully sheathed, you swear you've been fucked a few inches into the ground [if Player is male]dripping and throbbing as his abuse of your prostate sets your cock drooling[else if Player is female]dripping feminine juices into the dirt[end if]. With his savage version of foreplay over, the rhino deep-dicks your spread ass, grunting with each slap and pulling you back with both meaty hands, his rough fingers digging into your hips. It isn't long before his breathing grows ragged, and you clench hard, hoping to end this before his heavy body breaks something the nanites can't fix.";
 		WaitLineBreak;
 		say "     The rhino's cock HEAVES, pulsing hard enough that it jabs your inner walls, then unloads, spitting rope after rope of rhino cream deep into your poor, abused guts. You can't help but shudder through your finish as his throbbing cock hits sensitive spots deep inside you, and as he finishes, you quiver[if Player is male] as your cock bounces, messing the ground beneath you[else if Player is female] as your pussy dribbles fem-cum to the dirt below[end if]. [line break]";
-		say "     As you take a moment to catch your breath, you can't help but notice that the rhino's cock is still inside of you. Odd, the brute doesn't seem like the cuddling type. Widening your eyes as you feel it twitch, still steely hard, you realize that the creature hasn't finished with you. Legs spread against yours, and stifling weight leans over you as the rhino breathes a steaming puff of breath against your ear. With a grunt, the monstrous male pulls out, slamming himself home hard enough that you see stars.Coherent thought becomes impossible as you're fucked into a limp pile of overstimulated, twitching limbs, pulled into all sorts of positions, and taking that cock in a relentless rhythm that doesn't slow even when he finishes, adding to the sloppy mess swelling your belly. It isn't until the rhino's last orgasm squirts weakly over your back, and you feel his soft cock wipe itself over your cheeks, that you finally come to your senses, weakly crawling to your belongings. Lumbering footsteps disappear into the distance as you doze off, exhausted and drooling from your ruined ass.";
+		say "     As you take a moment to catch your breath, you can't help but notice that the rhino's cock is still inside of you. Odd, the brute doesn't seem like the cuddling type. Widening your eyes as you feel it twitch, still steely hard, you realize that the creature hasn't finished with you. Legs spread against yours, and stifling weight leans over you as the rhino breathes a steaming puff of breath against your ear. With a grunt, the monstrous male pulls out, slamming himself home hard enough that you see stars. Coherent thought becomes impossible as you're fucked into a limp pile of overstimulated, twitching limbs, pulled into all sorts of positions, and taking that cock in a relentless rhythm that doesn't slow even when he finishes, adding to the sloppy mess swelling your belly. It isn't until the rhino's last orgasm squirts weakly over your back, and you feel his soft cock wipe itself over your cheeks, that you finally come to your senses, weakly crawling to your belongings. Lumbering footsteps disappear into the distance as you doze off, exhausted and drooling from your ruined ass.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Rhino";
 
 to say beattherhino:
@@ -271,24 +270,6 @@ to say RhinoHornFragmentUse:
 instead of sniffing rhino horn fragment:
 	say "The fragment has a wild, musky animalistic scent.";
 
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"rhino milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Rhino Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	rhino milk
-
-rhino milk is a grab object.
-rhino milk is milky.
-rhino milk is infectious.
-Strain of rhino milk is "Rhino".
-Usedesc of rhino milk is "[rhino milk use]".
-
-to say rhino milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing rhino milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Table of Game Objects (continued)
 name	desc	weight	object

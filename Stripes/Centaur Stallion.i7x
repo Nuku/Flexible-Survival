@@ -60,7 +60,7 @@ to say losetocentaurstallion:
 			say "     With a lot of licking and rubbing, the centaur's climax finally gives signs as his precum flow becomes more steady. With a loud grunt, blast after blast of centaur cum splatters onto you, leaving you soaked in his semen as he pulls back. He snorts again and trots off, giving you no further words, frustrated and only a little satisfied.";
 			CreatureSexAftermath "Player" receives "OralCock" from "Centaur Stallion";
 			decrease HP of Player by 10;
-		if "Female Preferred" is listed in feats of Player and FemaleList is not banned:		[change target to Mare for infection]
+		if Player is FemalePreferred and FemaleList is not banned:		[change target to Mare for infection]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if Name entry is "Centaur Mare":
@@ -459,14 +459,14 @@ It is temporary.
 to say centaurcumuse:
 	say "     With a little shrug, you tilt your head back and slam down the centaur cum, letting the thick, gooey contents of the jar slide down your throat. While it does slake your thirst a little, it also floods your body with infection.";
 	PlayerDrink 6;
-	if "Female Preferred" is listed in feats of Player and FemaleList is not banned:		[change target to Mare for infection]
+	if Player is FemalePreferred and FemaleList is not banned:		[change target to Mare for infection]
 		infect "Centaur Mare";
 	else:
 		infect "Centaur Stallion";
 
 to say centaurhairuse:
 	say "     You take the long strands of thick horsehair and stare at them. Feeling a growing compulsion, you place the roots of the tail at [one of]the base of your spine[or]at the back of your head[at random] and feel them start to grow into you.";
-	if "Male Preferred" is listed in feats of Player and MaleList is not banned:			[change target to Stallion for infection]
+	if Player is MalePreferred and MaleList is not banned:			[change target to Stallion for infection]
 		infect "Centaur Stallion";
 	else:
 		infect "Centaur Mare";
