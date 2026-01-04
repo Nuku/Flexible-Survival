@@ -18,14 +18,14 @@ to say ResolveEvent Stuck:
 	say "     [italic type] Do you want to help him?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Try to save the poor guy.";
 	say "     ([link]N[as]n[end link]) - Walk away.";
-	Linebreak;
+	LineBreak;
 	if Player consents:
 		say "     Shaking away your desire to run off before you join the wretch, you inspect the stone fingers encircling his limbs, wincing at the reddened marks left by his struggles. Strangely, he seems none the worse for the wear despite his obviously 'fucked silly' appearance, though even your tugs can't free him from that horny stone embrace. Wiping the sweat from your brow, you circle the man's predicament, wondering aloud how he placed himself so precisely on both statues. Did something put him there? 'Not. Me.' The captive groans out, his voice going up an octave. Slack and defeated, he regards you with a gaze that seems to stare right past you, but why do you get the impression that the statues have moved slightly despite him giving up? 'Well, well.' Causing you to jump with a sudden growl, a masculine voice comes next to your ear, accompanied by the soft rumble of stone on stone. One of the horned gargoyle faces contorts into a grin as its stone flesh slowly de-petrifies, becoming more like living marble than cold rock. Re-solidifying its grip on its captive, it stretches its body, its tail whipping from side to side as it grinds its still erect cock into his ruined hole. 'Looks like we've found another toy.'";
 		say "     Surprised, you attempt to back away, only to stop as an iron grip grabs your wrist, trapping you within easy reach. The second gargoyle isn't far behind its playmate, and as sharp teeth show through a crooked grin, you can only guess that he's up to no good. His voice is less gravelly and sexually charged than his partner's, but he seems just as excited by your presence, dragging you in until you can smell the unmistakable scent of stone and cum wafting from their coupling. 'Two in one day? Maybe we won't have to keep using this little bitch.' Unceremoniously dumping their original victim to the ground, the pair set their sights on you, their erections looming as they drag you into a lewd embrace. Groping hands give you no chance to escape, and a glance down at the man you attempted to help shows he's passed out, his legs spread and a veritable river of seed staining the concrete from his overfucked colon. You doubt you'll receive any help from that poor bastard. Swallowing, you attempt to take in the situation as it unfolds. It seems like there are two options. Struggle, like the poor soul by your feet, or give in and hope they release you before you're as far gone as he is. Judging by the exhausted man's still throbbing erection, the second option will probably be great fun, even if they don't release you.";
 		say "     [italic type] Do you want to fight back?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Let them have their way with you.";
 		say "     ([link]N[as]n[end link]) - Fuck these guys. Attempt to break their grip and leave.";
-		Linebreak;
+		LineBreak;
 		if Player consents:
 			say "[GargoyleStuckFuck]";
 		else:

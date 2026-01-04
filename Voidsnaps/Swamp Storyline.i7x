@@ -35,12 +35,12 @@ to say ResolveEvent Kidnapped Lizards:
 	say "     [link]Y[as]y[end link]Ask whether you can help.";
 	say "     [link]N[as]n[end link]Shrug and let Kosk handle it.";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "Shaking your head, you tell Kosk that he shouldn't worry about involving you. If he doesn't mind, you'd like to help him out. Since you don't have a village to guard, maybe you could check things out in his place? You're pretty handy in a fight, after all! 'I suppose if you've survived so long, you can't be exaggerating. The city was a hellhole back when we fled here. If the dam hadn't busted and washed out half the buildings, who knows how many monsters would have followed us?' Sighing, Kosk walks with you back to his post, busying himself with checking his fishing line and tending to the dying fire. 'Fine. I can't seem to get the others to realize how dangerous it is, but there's this nice little swimming hole a little bit east of here, surrounded by thorn bushes. Half a dozen of our people have gone missing around there. We searched a few times but couldn't find any of them. The goblins would have just taken their stuff, maybe fucked them a couple of times, and nothing else poses a threat when you have claws like these.' Holding up a wicked set of fingers tipped with sharp reptile claws, Kosk mimics a slash in midair. 'Maybe you'll see something we can't.' After a few minutes spent asking for exact directions to the swimming hole, you thank Kosk for trusting you, shouldering your pack and looking out over the water. You'll be more wary of the still surface from now on.";
 		TraitGain "Kidnapping Quest" for Kosk;
 		connect Suspicious Swimming Hole;
 	else:
-		Linebreak;
+		LineBreak;
 		say "     Shrugging, you tell Kosk that you don't feel like butting into things that aren't your business. If he doesn't want to tell you what's going on, you won't pry. He seems grateful that you don't press the matter, settling into everyday chit-chat about his latest recipes and grilling you on your adventures, clearly wondering if you've found any other food-related things for him. Before you know it, you've walked with him back to his post, promising to let him know if you stumble upon any more supplies as he checks his fishing line, silently letting you know you've finished talking.";
 	now Kidnapped Lizards is Resolved;
 
@@ -75,27 +75,27 @@ Sarea of Still Water is "Nowhere".
 to say ResolveEvent Still Water:
 	say "     As you part the dense foliage around an idyllic clearing, you instantly recognize the area that Kosk described- A relatively clean patch of water emptied of the muck and aquatic plants that infest most of the water around the village. The popular swimming spot's still faintly murky but doesn't give off the same sense of danger as the rest of the swamp. Of course, you're not here to go swimming, but you still take a moment to cool your feet, sitting on the water's edge as you look around for clues.";
 	if an intelligence check passes 12:
-		Linebreak;
+		LineBreak;
 		say "     Looking around, you inspect the bushes with a keen eye, noticing that, other than a well-trod path you entered through, the thick brush is unbroken. Knowing that, you now realize that the only way someone could have attacked in this remote place is- From beneath the water! Cursing your stupidity, you stand up as quickly as you can, watching as a shadow appears below the water and streaks toward where your feet were a moment ago, clarifying into a pair of large, slit pupiled eyes and a brightly colored, wide-mouthed visage.";
 		say "     Readying yourself, you prepare to face the culprit, stepping back from the water's edge, hoping that they'll follow you into more advantageous terrain. ";
 		say "[AmphibianQuestFirstFight]";
 	else if a perception check passes 12:
-		Linebreak;
+		LineBreak;
 		say "     Looking around, you fail to notice anything out of the ordinary. It's almost as if an assailant appeared out of nowhere. They couldn't have come from beneath the water, could they? You look between your legs, only to catch a faint shine below the water's surface. Coming closer, it nearly reaches your legs before you can pull them free! Thank goodness you noticed in time!";
 		say "     Readying yourself, you prepare to face the culprit, stepping back from the water's edge. ";
 		say "[AmphibianQuestFirstFight]";
 	else if a dexterity check passes 12:
-		Linebreak;
+		LineBreak;
 		say "     Kicking your feet idly, you stare off into space and sigh. Why did you think you could help Kosk investigate what happened to his fellow villagers? You've yet to notice anything and can't see below the water's surface! Any clues would have disappeared by now, taken away by the gentle flow swirling around your feet. Suddenly, you recoil as something wraps around your ankle, barely managing to wrench yourself free and jumping to your feet, readying yourself to meet whatever touched you with its slimy extremity.";
 		say "     Readying yourself, you prepare to face the culprit, stepping back from the water's edge to give yourself room to dodge any further attacks. ";
 		say "[AmphibianQuestFirstFight]";
 	else if a strength check passes 12:
-		Linebreak;
+		LineBreak;
 		say "     Kicking your feet and idly playing with a nearby stick, you aimlessly look around, trying- and failing- to glean anything from the overgrown brush. Minutes pass, and you start to wonder how you'll explain to Kosk that you found nothing when suddenly something slimy wraps around your ankle, tugging you toward the water. Quickly, you dig your hands into the dirt nearby, heaving yourself to stop your quick slide, then grip the offending appendage, breaking its hold on you with sheer brute strength and sending it flying back into the water.";
 		say "     Readying yourself, you prepare to face the culprit, stepping back from the water's edge hoping that they'll come onto land where you can use your full strength. ";
 		say "[AmphibianQuestFirstFight]";
 	else: [failed all checks]
-		Linebreak;
+		LineBreak;
 		say "[AmphibianCaptureScene]";
 	now Still Water is Resolved;
 
@@ -115,11 +115,11 @@ to say AmphibianQuestFirstFight:
 		say "     [link]Y[as]y[end link] - Let him go and trust him.";
 		say "     [link]N[as]n[end link] - Drag him back to Kosk.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			say "     Interrupting the frog before he can jump back into the water, you tell him that he'd better bring back the villager. If not, you're going to be searching for him. He won't have a second chance- next time, you'll make sure he makes good on his promise. 'Yeah, yeah. You don't have to twist my arm.' Scoffing at your words, the frog finally manages to stand, turning his back to you. 'Maybe you're not so bad. After all this is over, we can have a drink or something. I'll make it up to you.' His voice wavers, and you get the feeling that the frog's a little embarassed by what he's saying. There's no doubt in your mind. He's not the kidnapper.";
 			TraitGain "Trusted" for Ignacio;
 		else:
-			Linebreak;
+			LineBreak;
 			say "     Shaking your head, you stop the frog before he can climb back into the water. You won't let him off this easily- he'll have to explain what he means to Kosk before you'll trust him! After all, he appears to know more than he's letting on. He doesn't want more people to disappear, does he? 'Fuck. There's no time!' Pulling weakly against your grip, the frog attempts to escape, aided by the thin coat of slime across his skin. 'Shit. Don't blame me for what happens next.' Growling his words, the frog suddenly reverses his movements, pressing close and ramming his tongue down your throat, mashing his lips against yours hard enough that you worry he'll split your lower lip.";
 			say "     You attempt to push the frog away, but a sudden tingling numbness where his lips meet yours spreads quickly across your body. Your limbs have stopped working! The only part of you that seems immune to the poisonous smooch is your chest, slowly rising and falling with even breaths. Frozen with a surprised expression, you can only watch as the frog breaks the hasty kiss, wiping his lips across his arm and staring regretfully at you. 'Not the best first impression, but I can't afford to be locked up. It might be too late for Matty if you don't let me out. Maybe we can have a beer after this is all over.' Diving into the water, he leaves you to lapse into unconsciousness, unable to feel your limbs.";
 			TraitGain "Broken Trust" for Ignacio;
@@ -343,7 +343,7 @@ to say ResolveEvent Faustian Bargain:
 		say "     [link]Y[as]y[end link] Kick it down!";
 		say "     [link]N[as]n[end link] Try your luck with the lock.";
 		if Player consents:
-			Linebreak;
+			LineBreak;
 			if a strength check passes 15:
 				say "    Summoning all your strength, you attempt to break down the door, splintering it into several pieces and falling to the floor past it. You make quite a bit of noise in the process, but as you dust yourself off, you notice that the cabin's empty. Rather, outside of a few snake trails in the dust, it appears that no one's lived there in years. Bewildered, you look around the dingy interior with a confused expression. Wasn't this where Riker dragged Ignacio off?";
 				if an intelligence check passes 14:
@@ -383,7 +383,7 @@ to say ResolveEvent Faustian Bargain:
 							say "     [link]N[as]n[end link] Perhaps he's as perverse as your first impression led you to believe? Offer him sex!";
 							if Player consents: [bad end]
 								say "     Deflating as you realize there's no other way- and partially because of the intense pressure working up your body- you take a deep breath and steel yourself. Summoning what courage you can, you offer to take Ignacio's place. After all, it's your fault the naga caught him in the first place, so it's only fair that you take responsibility. 'Interesting. What's to stop me from taking you? It doesn't seem like you're going anywhere without my say-so.' Tightening his grip, the snake nearly breaks your ribs as he speaks, taking your breath away with sheer strength. 'Three new slaves ready for market, or one. Such a predicament.' Taunting you with his words, Riker seems to have dollar signs in his eyes. Gasping for air and grasping at straws, you wrack your brain before settling on something that must set you apart from the rest of Riker's 'products.' On the verge of blacking out from lack of oxygen, you squeak a hurried explanation of your unique ability to change form. Other than mutants you've seen changed forcibly in the street, you're one of the few you've ever met that can change form and remain yourself. Wouldn't that mean you could maintain any training you receive while changing your form to match your new 'master's' ever-changing proclivities? You're a prize worth a small fortune at LEAST.";
-								Linebreak;
+								LineBreak;
 								if a charisma check passes 12: [saved Ignacio and Matteo through self sacrifice.]
 									say "     Loosening his grip with a skeptical expression, Riker seems to weigh the risk that you're lying against potential profit. A toothy grin spreads across his face as he judges your words to be truthful, and the naga sets you down, though a clawed hand remains on your shoulder, close enough to your neck that you don't dare step out of line. 'Well. Isn't that a surprise?' He coos as he tilts your face upward, seemingly inspecting 'the goods.' Ignacio's eyes widen across the room as the snake leads you to him. It seems he realized what you're about to do, and as the naga deftly chains you next to him, he growls around the duct tape covering his mouth, impotently shaking his chains. 'Don't. I'll fucking kill you. As soon as I get back, I'm going-' Grunting in pain, he doubles over as the naga's fist contacts his diaphragm, knocking the air out of his lungs.";
 									say "     'You'll do what? Make me pay? Do somethin' heroic? What'll happen to your poor, sweet little brother if you do somethin' that colossally stupid?' Caressing your head as though you were a favored pet, Riker flicks his finger against a nearby wall, opening a panel to reveal a treefrog with glazed eyes and skin covered with what could only be layers upon layers of cum. 'He's already well-trained. You should thank your friend here for volunteering- otherwise, this slut would be on the next flight to the far east. Some wealthy CEO wanted a new secretary to tie up beneath his desk. A pity. He's so WILLING.' Waving his hand dismissively at Ignacio, Riker turns his attention back to you, clearly unbothered and unthreatened by the freed frog. 'Take him and go home, kid. And don't even think about returning. I'll be long gone before your posse grabs their torches and pitchforks.' Sparing you one last glance but finally caving to his desire to save his battered, overfucked sibling, Ignacio looks away, limping out with the groggy frog slumped over his back. You doubt you'll ever see him again, but you're glad for the opportunity to keep your word- in a way, you DID help him save his brother.";
@@ -460,7 +460,7 @@ to say PlayerBeatRiker: [Defeated Naga Trafficker(Riker). Opens up the ability t
 	say "     You can say that Riker has discerning taste. An athletic body quivers with every breath, with a broad chest and thick legs spread apart by twin manacles. A log of amphibian cock pulses with the tied man's heartbeat, dripping to the floor below, and his thighs drip with what must be cum- no doubt Riker's- matching the drooling frog's chin. The naga must have used him countless times before you came to his rescue. Shaking your head, you quash the rising desire to add your mess to what already exists. After all, it would be rude to interrupt the froggy reunion! The image of both naked brothers burns itself into your vision, though, and you can't help but imagine a less innocent interaction between the concerned brother and his insensate sibling.";
 	WaitLineBreak;
 	say "     'Mmm.' Shaking his head, the former captive looks around with glazed eyes, settling on you before shuffling over and licking his lips, ignoring Ignacio for the moment. 'Are you my new owner? I'll be good. Just tell me what you want.' He says as he blatantly fawns over your crotch, his long tongue lolling out just before Ignacio stops him. Confused, he looks over his shoulder with a mildly annoyed expression, his face dawning into confusion. 'Iggy? Why are you here? My head.' Collapsing forward, Matteo inadvertently shoves you backward, his face buried in your crotch. It seems exhaustion has gotten the better of him! 'What the fuck happened to you?' Ignacio says as he picks up the larger male by one arm, swinging him around to lean against his side. 'Let's get you home.' He murmurs as he hobbles toward the door. Addressing you over his shoulder with an air of embarrassment, Ignacio grumbles. 'Come and see me soon. I'll thank you properly.'";
-	Linebreak;
+	LineBreak;
 	say "     Now that Matteo and Ignacio are gone, is there anything else you'd like to do in this place?";
 	let Riker_Defeat_Choices be a list of text;
 	add "Leave." to Riker_Defeat_Choices;

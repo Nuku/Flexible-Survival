@@ -413,14 +413,14 @@ to say ResolveEvent Melancholy Melody:
 	say "      [link](Y)[as](y)[end link] Yes, you want to listen.";
 	say "      [link](N)[as](n)[end link] No, let him have his privacy";
 	if Player consents:
-		Linebreak;
+		LineBreak;
 		say "     Finding a place where you hope you won't disturb the gator, you settle in to listen for a while, closing your eyes and focusing on the music. Within moments, his voice joins the guitar in a surprisingly smooth transition.";
 		say "'Met a boy once [Line Break]with the prettiest blue eyes. [Line Break]Told me that he loved me [Line Break]but much to my surprise, [Line Break]all the pretty words [Line Break]turned out to be lies. [Line Break]Left me when I needed him, [Line Break]and I nearly died. [Line Break]Saw him years later. [Line Break]Wife, two kids, happy as can be. [Line Break]Swear he looked right through, [Line Break]didn't recognize me. [Line Break]At first it hurt a little, [Line Break]but now I realize. [Line Break]Don't trust a pretty boy. [Line Break]He'll kill you with his lies. [Line Break]And all you'll see, [Line Break]once you've gotten wise, [Line Break]is nothing but empty, [Line Break]cold blue eyes.'";
 		say "     Lazaros's voice fades out at the end, wavering slightly, and as you open your eyes, you notice him sagging forward as he plays a last few half-hearted notes. It must have been quite the emotional release to sing that, and from what you know about his past, it might have been based on a true story. Walking to his side, you pat his shoulder, then sit down next to him in silence, ignoring the wetness on his cheeks and patting his knee. You can't think of anything to say, and judging by his silence, he can't either, but the gentle scrape of scales across your knuckles tells you he's appreciative.";
 		say "     It takes a while for Lazaros to regain his voice, but when he does, it's like nothing ever happened. Describing his lazy day of nudity on the beach, he offers you some canned hot dogs he's cooked over the fire, and you enjoy each other's company until it's time for you to leave. You can't help but feel that you've grown closer to him when he hugs you goodbye and whispers 'Thanks for listening.'";
 		now Resolution of Melancholy Melody is 1; [Listened in. He might sing again later.]
 	else:
-		Linebreak;
+		LineBreak;
 		say "     Shaking your head, you turn your back on the music and make your way back down the cliff. It sounds like this is a private moment and you're not sure that you have the right sort of relationship with Lazaros to intrude on it. You'll come back later.";
 		now Resolution of Melancholy Melody is 2; [Didn't listen in. Further songs blocked.]
 		move player to Rocky Cliff;

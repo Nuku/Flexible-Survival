@@ -250,7 +250,7 @@ instead of conversing Helios:
 	if OffspringCount of Helios is 0: [first interaction. Only available before you fuck him for the first time.]
 		if Resolution of Hard Bargain is 1: [Fuck yeah! Fuck dragons!]
 			say "     Helios stands his ground when you approach him, the slightest amount of steam billowing from his nostrils. He still seems to be under the impression that he's in charge, despite Soot's magic keeping him weakened and compliant, and he won't even speak to you when you greet him, turning up his nose at you.";
-			Linebreak;
+			LineBreak;
 			let Helios_Unsure_Choices be a list of text;
 			add "Ask whether Helios whether he's ready to create a clutch for Soot." to Helios_Unsure_Choices;
 			add "Ask Helios what his plans were for your world." to Helios_Unsure_Choices;
