@@ -13,30 +13,30 @@ to say armyantdesc:
 	say "     The knuckles have thicker knots of chitin while his digits end in fine-honed talons. His legs are like his arms, segmented and chitin-plated and are built powerfully. The fit form of his legs are broad in the quads and calves, but narrow at the joints with arced and barbed, bug-like feet. Behind him is the long, insect abdomen of an ant, bulbous and encased in shiny chitin. Between his legs, his groin sports segmented plates that conceal his pocketed genitals.";
 
 to say losetoarmyant:
-	if NonconList is not banned:
-		if anal is not banned and anallevel > 1:
+	if Libido of Player > 29 and NonconList is not banned:
+		if anallevel > 1 and a random chance of anallevel in 4 succeeds:
 			say "     Sliding his arms up under your own from behind, the army ant pulls you back into a full nelson. With your current state, the powerful restraint keeps you locked in even as his lower pair of arms dip down, venturing over your hips and back. The breadth of his palms clap to your ass, groping the mounds firmly, feeling their shape before his thumbs dig into the cleft between buttocks and spread you wide. The ant man's lips peel into a leer between those pincers, and you can hear a wet 'snikt' sound from between his legs. The slippery shape of his retractable cock slaps its curved underbelly into your spread valley, sawing to smear its juiciness all over your lining and across your star. Pitching forwards, the insectile assailant drives the point in deep, thrusting.";
 			say "     Hot fire boils through your backside as he forces your ring around the girth of his need, and his lower hands release your cheeks only to grab at your hips to prevent you from pulling away. Sinew creaks as his abdomen's taut muscles crunch and flex in rapid succession, his piston-like thrusts forcing your bowels to throttle his plunging organ again and again. The wet slap of his balls crack against your rump and the backs of your thighs while he takes what he wants. Every burning thrust is like a brand, penetrating your depths, filling you with his heat until the rock hard cock bloats, and you can feel the rush of his seed saturating your bowels. His guttural groan floods as free as his seed, and when he pulls out, the flowery stench of his spunk mixes with the fresh fucked smell.";
 			CreatureSexAftermath "Player" receives "AssFuck" from "Army Ant";
 			if a random chance of 1 in 3 succeeds:
-				LineBreak;
+				WaitLineBreak;
 				say "     But, that is not the end of it as you can hear in the surrounding area several moist pops. It's the juicy release of more insectile arousals, and their aromatic perfume billows through the air. Already addled by the recent encounter, there's little you can do as they surround you, a fringe of alien faces cast in lurid shadows, anonymous masses. What light falls into the gang's circumference falls on glistening cocks, highlighting the twitching array of erections picketed all around your cum-spattered form. It must have been that spunk, so rich with their pheromones, that drew the horde in, and like onto a mass of zombies, they fall upon you with reaching hands and slathering, dripping cockflesh all about.";
 				say "     You are tugged this way and that as pricks mash up against your face to smother you in slick sacs and throbbing manmeat. More grind in against your sides, and your ass-cheeks are parted as not one, but two pricks take the sloppy seconds and slam their slick shafts home. Their cocks grind together inside of you, an internal frot of aching need. Your mouth is breached by one of the face-grinders, the tips of two others hungrily smearing against your stretched lips, occasionally dipping in to share your mouth with the throat-thrusting brother. Every portion of your body is ground up against by hard bodies and twitching pricks or brushed along by slick balls. The army of arousal reigns over your body, and as hot ropes of seed stretch over your body, fresh pricks move in to take the places of the spent.";
 				say "     The two that have been assailing your ass have been replaced a couple times with fresh intruders, and with the pressing bodies, a third manages to wedge in and obscenely stretch you just that bit more. Your body is bathed in the seed of the army of ants, and their insectile figures continue to crowd. Every bit of you is coated in the nectar-like seed, and as consciousness fades from your senses, you are but a gooey puddle amongst the rest of the hard bodies and jizz.";
-				SanLoss 10;
 				CreatureSexAftermath "Player" receives "OralCock" from "Army Ant";
 				CreatureSexAftermath "Player" receives "AssFuck" from "Army Ant";
+				SanLoss 10;
 		else:
 			say "     The army ant's taloned digits slide against your scalp, gripping firmly with two hands while his feet fiercely kick your support out from beneath you. The wet pop of his crotch's plates parting and the slippery shine of his cock retracting from within and distending out is palpable to your senses. The nectar-like fragrance of his musk is bitten with masculine spice, pungent when wet like this. With his lower pair of hands, the army ant works his thumbs in between your jaws, spreading your mouth open just before the gleaming barb of his organ rams home. Every inch of the hardened meat drags over your tongue and bucks against the back of your throat, forcing you to gag with its initial punch. The heat of his thighs is ground against your face.";
 			say "     His damp sac drags against your chin while he holds within, reveling in how your throat convulses to try and expel the intruder, your slick insides grinding in futility across the savory, musk-drenched meat. While his talons dig deeper to hold your head in place, his hips roughly buck, a piston-like shove slamming him in after a brief pull back, like the plunger of a pinball machine. The wet slap of his nuts audibly resounds, and he takes your throat again and again. The husky grunts that click from his maw mingle with the juicy ravishing of your esophagus, combined with the obscene squelch of your throat juices forced around that driving scepter. It is not long before a guttural cry roars from his throat, and his organ bloats thickly.";
 			say "     The salty rush of his honeysuckle spunk overwhelms your throat, spilling out past your lips faster than you could spit or swallow, and he pulls out roughly. Several ropes of his seed slap across your face, but he is finished, leaving both you and your mouth a mess.";
 			CreatureSexAftermath "Player" receives "OralCock" from "Army Ant";
 			if a random chance of 1 in 3 succeeds:
-				LineBreak;
+				WaitLineBreak;
 				say "     But, that is not the end of it as you can hear in the surrounding area several moist pops. It's the juicy release of more insectile arousals, and their aromatic perfume billows through the air. Already addled by the recent encounter, there's little you can do as they surround you, a fringe of alien faces cast in lurid shadows, anonymous masses. What light falls into the gang's circumference falls on glistening cocks, highlighting the twitching array of erections picketed all around your cum-spattered form. It must have been that spunk, so rich with their pheromones, that drew the horde in, and like onto a mass of zombies, they fall upon you with reaching hands and slathering, dripping cockflesh all about.";
 				say "     Everywhere, there is cock. The sight, the smell, the flavor, even the tangible palpitations of each throbbing length surrounding you. Taloned hands reach out, grabbing at you, jerking your face in close and mashing your face into first one dick, soon joined by a couple brothers. They saw against your face as hard bodies press down against you. Nothing is safe from them, grinding against your back, your front, against your limbs. The sweat-drenching miasma topples your senses, a kaleidoscope of virile lascivity reigning over your world. Hot pulses are followed by ropes of spunk arcing and showering over your body, spent cocks moved aside only for a fresh comer to join the army of fraternal fuckers. All fades into the sea of wet, juicy wads raining over you.";
-				SanLoss 10;
 				CreatureSexAftermath "Player" receives "OralCock" from "Army Ant";
+				SanLoss 10;
 	else:
 		say "     Once you are no longer able to fight, the army ant looks over you, antennae twitching. Not finding much of interest in either your bearing or just something else, he backs away with an air of menace still about him, as if ready to strike again should you take any untoward action.";
 
@@ -65,6 +65,7 @@ When Play begins:
 	add "Army Ant" to infections of NatureList;
 	add "Army Ant" to infections of MaleList;
 	add "Army Ant" to infections of InternalCockList;
+	add "Army Ant" to infections of InternalBallsList;
 	add "Army Ant" to infections of HexapedalList;
 	add "Army Ant" to infections of TailList;
 	add "Army Ant" to infections of OviImpregnatorList;
@@ -226,7 +227,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Loot
 
 Table of Game Objects (continued)
@@ -234,15 +234,13 @@ name	desc	weight	object
 "Army Ant chitin"	"A small piece of hard chitin that looks like it has been pulled off of an army ant. It's hard and unyielding."	1	Army Ant chitin
 
 Army Ant chitin is a grab object.
-It is temporary.
 Usedesc of Army Ant chitin is "[Army Ant chitin use]".
 
 to say Army Ant chitin use:
-	say "Holding the piece of chitin in your hand, you rub over it, marvelling in its strength. Strangely, the chitin disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	say "     Holding the piece of chitin in your hand, you rub over it, marvelling in its strength. Strangely, the chitin disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	Infect "Army Ant";
 
-instead of sniffing Army Ant chitin:
-	say "The chitin smells of earth and strength.";
+Scent of Army Ant chitin is "The chitin smells of earth and strength.".
 
 Section 4 - Endings
 
@@ -256,10 +254,7 @@ This is the Army Ant Infection rule:
 		if humanity of Player < 10:
 			say "     You succumb to your army ant infection. Life is far easier when the decisions are made by others. It was easy enough to find other army ants by the scent your kind leaves, instinctively drawn to the rest of the Hive. It's quite nice, not worrying about nervous, stressful things like what tomorrow brings because the Hive is what takes priority, what all is done to maintain, and you are but one cog in that living machine. You live for the Hive, and the Hive provides, whether it be sustenance or pleasures, companions or security.";
 		else:
-			say "     You survive, but were infected by the army ant.";
-			if Cock Count of Player > 0:							[MALE/HERM]
-				say "     Living with an internalized cock will be just something you will have to adjust to.";
-				say "     Though you still have your humanity, it's difficult to go beyond your physical limitations at times when coordinating with others. There's always that drive to be part of something bigger than yourself, greater than yourself, but the differences between you and others drives a wedge through that sort of camaraderie. Struggle as you might in this new, changed world, you are an ant without a hive, a cog without a machine mixed in with all the screws and bolts.";
-
+			say "     You survive, but were infected by the army ant[if Player is male]. Living with an internalized cock will be just something you will have to adjust to[end if].";
+			say "     Though you still have your humanity, it's difficult to go beyond your physical limitations at times when coordinating with others. There's always that drive to be part of something bigger than yourself, greater than yourself, but the differences between you and others drives a wedge through that sort of camaraderie. Struggle as you might in this new, changed world, you are an ant without a hive, a cog without a machine mixed in with all the screws and bolts.";
 
 Army Ant ends here.

@@ -1315,7 +1315,6 @@ Figure of emap_PAN_Frat_East_Hallway is the file "emap_PAN_Frat_East_Hallway.png
 Figure of emap_PAN_Frat_West_Hallway is the file "emap_PAN_Frat_West_Hallway.png".
 Figure of emap_PAN_Frat_South_Hallway is the file "emap_PAN_Frat_South_Hallway.png".
 
-
 before examining a thing (called t):
 	if the icon of t is figure of pixel:
 		continue the action;
@@ -1415,7 +1414,6 @@ to project (x - a figure name):
 			if icon entry is x and artist entry is not listed in BlockList of Player:
 				display x;
 				break;]
-
 
 Table of game art
 title	icon(figure name)	artist	backgroundcolor	formatrule
@@ -2725,7 +2723,6 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "emap - PAN Frat Richards Room"	Figure of emap_PAN_Frat_Richards_Room	"Wolfram Rolf"	g-black	"normal"
 
 artistcredits is an action applying to nothing.
-
 understand "artwork credits" as artistcredits.
 understand "artworkcredits" as artistcredits.
 understand "art credits" as artistcredits.
@@ -3097,7 +3094,6 @@ carry out artistcredits:
 	say "     Red Light District Maps by Goncalo @ https://artstation.com/beepe[line break]";
 
 ArtistBanning is an action applying to nothing.
-
 understand "artist block/ban/disable" as ArtistBanning.
 understand "artistblocking" as ArtistBanning.
 understand "artistsblocking" as ArtistBanning.
@@ -3155,7 +3151,7 @@ to artistbanswitch (name - text):
 			clear the screen;
 		else:
 			say "[name] Blocked!";
-	else if name is listed in Blocklist of Player:
+	else:
 		remove name from Blocklist of Player;
 		if clearnomore is 0:
 			clear the screen;
@@ -3163,7 +3159,6 @@ to artistbanswitch (name - text):
 			say "[name] Unblocked!";
 	if clearnomore is not 0:
 		wait for any key;
-
 
 ArtworkTest is an action applying to nothing.
 understand "art test" as ArtworkTest.

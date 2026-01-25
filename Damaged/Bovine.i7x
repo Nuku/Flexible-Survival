@@ -9,20 +9,22 @@ Section 1 - Creature Responses
 Mooing is a number that varies. [The inverse of how addicted to cow milk you are.]
 CowBully is a number that varies. [Beating up cows makes a bull ornery.]
 Mooed is a number that varies. [How cowed you are by the feral bull. Not sure if it really does anything.]
-Bovine_type is a number that varies. [0 = not chosen, 1 = anthro cow, 2 = feral bull, 3 = anthro bull]
+Bovine_type is a number that varies.[@Tag:NotSaved] [0 = not chosen, 1 = anthro cow, 2 = feral bull, 3 = anthro bull]
 VictoryOverDaBull is a number that varies. [Defeating the feral bull three times gives you the option to make the beast into an anthro.]
-BullMaster is a number that varies. [You showed the feral bull who's boss. What kind of milk did you make him drink?]
+[BullMaster is a number that varies. [You showed the feral bull who's boss. What kind of milk did you make him drink?]]
 
 to say bovine desc:
 	if Bovine_type is 1:	[Anthro Cow]
-		say "[cow desc]";
+		say "     A twelve foot tall cow giant stands before you. 'Mmmmoooo,' she says. '[if Mooed is 0]Are you thirsty?[else]Oh, he found you then? Come here little one,[end if] I have all the milk you will ever want,' she exclaims, holding one of her four large breasts, milk slowly dribbling from her teat-like nipple.";
 	else:						[Feral Bull]
-		say "[feral bull desc]";
+		say "     A [if CowBully is 0]huge bull creature stands on four hooves before you, looking more like an enormous minotaur that forgot how to stand up than the dumb brute he is. Glancing at you as he grazes, 'Mmmmoooo' is all he says[else]monstrous bull beast stands on four hooves in front of you grazing. As you watch he sniffs the air, the huge muscles in his neck flex, and you witness the creature figuratively transform from docile to murderous rage in moments[end if].";
+		if Mooing > 0:
+			say "     You do notice a member of truly epic proportions slowly start to slide out from beneath the animal's belly.";
 
 to say losetobovine:
 	if Bovine_type is 1:
 		say "[LoseToCow]";
-	else if bovine_type is 2:
+	else:
 		say "[LoseToFeralBull]";
 	[else if bovine_type is 3:
 		say "[LoseToAnthroBull]";]
@@ -30,56 +32,47 @@ to say losetobovine:
 to say LoseToCow:
 	if Mooing < 1:
 		say "     The cow grabs you and pulls you closer, sitting down in the process. Her strong bovine arms lift you up, pressing your lips to one engorged teat. 'Drink, little calf. Sate yourself,' she says softly, motherly[one of]. The smell of the milk calls to your thirst and[or]. One little drop of milk leaks from the engorged teat and it drips down onto your lips, without thinking your tongue snakes out and pulls it into your mouth. Gasping,[or]. Giving her teat a squeeze, a spray of milk wets your lips and[at random] you push your head forward, latching onto the nipple with your lips and begin sucking happily at her breast. 'See, it's not so bad,' the cow says softly again, rocking you back and forth in her arms as you drink.";
-		now thirst of Player is 0;
-		now hunger of Player is 0;
-		infect "Bovine";
 		now Mooing is 6;
 	else:
 		say "     [one of]The cow sits down and you run into her waiting arms, mouth reaching to find a spare nipple[or]You see the cow smile down at you. 'You wanted to play a little first. Come on now, it's time for your meal,' she moos softly to you and you race over, leaping into her waiting arms to grip a teat and begin sucking[or]The bovine woman rubs her breasts and gives her teat-like nipples a squeeze, coaxing some of her delicious milk to flow. Licking your lips, you rush over to her and start suckling[at random]. The flood of pure contentment as the milk begins to flow into your throat causes you to grow sleepy, soon causing you to fall asleep completely, still drinking from her.";
 		WaitLineBreak;
 		say "     You wake up, stomach bulging slightly, the taste of her milk still in your mouth. You let out a breath that sounds more like a [']Moo['] and wander off.";
-		now thirst of Player is 0;
-		now hunger of Player is 0;
-		infect "Bovine";
 		if Mooing < 6:
 			now Mooing is 6;
 		else if Mooing < 15:
 			increase Mooing by 3;
+	if "Iron Stomach" is not listed in feats of Player, infect "Bovine";
+	now thirst of Player is 0;
+	now hunger of Player is 0;
 
 to say LoseToFeralBull:
 	setmonster "Bovine";
-	let antimoo be 16 - Mooing;
-	if Mooing > 15:
-		now antimoo is 1;
+	let antimoo be 16 - Mooing - Cunt Count of Player;
+	if antimoo < 1, now antimoo is 1;
 	if CowBully > 0:
 		if Player is female:
-			say "     The big bull grunts fiercely, breathing hard after his maddened fight. He prods you with his sharp horns until you huddle on all fours. He scrabbles at your rear with his hooves and you have a few moments to wrench your clothes out of the way before you feel the animal's huge member thrust into you, [if Cunt Depth of Player < 28]feeling like it will split you in half. Your cries, when you hear them, sound almost as pitiful as the cow you defeated earlier as you try in vain to brace yourself against the crazed beast's rutting[else]filling your cavernous pussy like few can. Your cries of ecstasy unknowingly echo the pitiful cries of the cow girl you defeated. All of your attention, however, is focused on bracing yourself against the magnificent brute's powerful rutting thrusts[end if]. He bellows as you feel his burning seed pour into you, filling you up, and making you look very pregnant. Finally done with you, calm after his release, he wanders off to graze.";
+			say "     The big bull grunts fiercely, breathing hard after his maddened fight. He prods you with his sharp horns until you huddle on all fours. He scrabbles at your rear with his hooves and you have a few moments to wrench your clothes out of the way before you feel the animal's huge member thrust into you, [if Cunt Depth of Player < 28]feeling like it will split you in half. Your cries, when you hear them, sound almost as pitiful as the cow you defeated earlier as you try in vain to brace yourself against the crazed beast's rutting[else]filling your cavernous pussy like few can. Your cries of ecstasy unknowingly echo the pitiful cries of the cow girl you defeated. All of your attention, however, is focused on bracing yourself against the magnificent brute's powerful rutting thrusts[end if]. He bellows as you feel his burning seed pour into you, filling you up[if gestation of child is 0 or gestation of child > 20], and making you look very pregnant[end if]. Finally done with you, calm after his release, he wanders off to graze.";
 			CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Bovine";
-			infect;
-			now CowBully is 0;
 			if Mooing > 0:
 				fimpregchance;
-			now Mooed is 1;
-		else if Player is mpreg_ok:
-			say "     The huge beast bellows one last time and flies at you, turning away at the last second to your surprise. As he turns around to face you, you see his nostrils flaring; it seems he's scented something about you that's piqued his interest. He knocks you over shoving his face against your rear, and you hear the bull take a big whiff. He snorts and scrabbles at your rear with his hooves. You have a few moments to wrench your clothes down before you feel the beast's huge member thrust into you, [if scalevalue of Player < 4 and player is not twistcapped]feeling like it will split you in half. Your cries, when you hear them, sound almost as pitiful as the cow you defeated earlier as you try in vain to brace yourself against the crazed beast's rutting[else]filling your cavernous depths like few can. Your cries of ecstasy unknowingly echo the pitiful cries of the cow girl you defeated. All of your attention, however, is focused on bracing yourself against the magnificent brute's powerful rutting thrusts[end if]. He bellows as you feel his burning seed pour into you, filling you up, and making you look very pregnant. Finally done with you, calm after his release, he wanders off to graze.";
-			CreatureSexAftermath "Player" receives "AssDildoFuck" from "Bovine";
 			infect;
 			now CowBully is 0;
+		else if Player is mpreg_ok:
+			say "     The huge beast bellows one last time and flies at you, turning away at the last second to your surprise. As he turns around to face you, you see his nostrils flaring; it seems he's scented something about you that's piqued his interest. He knocks you over shoving his face against your rear, and you hear the bull take a big whiff. He snorts and scrabbles at your rear with his hooves. You have a few moments to wrench your clothes down before you feel the beast's huge member thrust into you, [if scalevalue of Player < 4 and player is not twistcapped]feeling like it will split you in half. Your cries, when you hear them, sound almost as pitiful as the cow you defeated earlier as you try in vain to brace yourself against the crazed beast's rutting[else]filling your cavernous depths like few can. Your cries of ecstasy unknowingly echo the pitiful cries of the cow girl you defeated. All of your attention, however, is focused on bracing yourself against the magnificent brute's powerful rutting thrusts[end if]. He bellows as you feel his burning seed pour into you, filling you up[if gestation of child is 0 or gestation of child > 20], and making you look very pregnant[end if]. Finally done with you, calm after his release, he wanders off to graze.";
+			CreatureSexAftermath "Player" receives "AssDildoFuck" from "Bovine";
 			if Mooing > 0:
 				mimpregchance;
-			now Mooed is 1;
+			infect;
+			now CowBully is 0;
 		else:
 			say "     The huge beast bellows one last time and flies at you, his head crashing hard into your side. As you cry out, a small part of your brain not overwhelmed with pain remembers a fallen cow, threatening to tattle to her bull. A threat, it seems, you should have taken more seriously. Lying on the ground in a pained daze, you don't resist when the beast shoves his dick in your face. Between the awkward angle and the bull's gigantic member, you can't fit more than the tip in your mouth, let alone the rest of his massive length. Whether the bull grasps this is unclear as he continues to rut against your face, frustrated snorts accompanied by hoof stomps dangerously close to your head. Despite the situation, the bovine male eventually cums, mercifully pulling back as he does, so you're only drenched with his seed rather than drowned by it. The bull, having shown you your place, wanders off to graze. It takes you more than a few minutes to recover, wipe yourself off and leave as quietly as you can.";
 			CreatureSexAftermath "Player" receives "OralCock" from "Bovine";
-			infect;
-			infect;
+			MultiInfect "Bovine" repeats 2;
 			decrease CowBully by 1;
-			now Mooed is 1;
+		now Mooed is 1;
 	else if vorelevel > 1 and a random chance of vorelevel in 5 succeeds and (a random chance of antimoo in 20 succeeds) and scalevalue of Player < 5 and CockVoreList is not banned:
 		say "     The bull snorts after knocking you down and stomps overtop of you. His cock, semi-engorged after the fight, slaps against your face, leaving a streak of bovine pre across your face. [if HP of Player > 0]Feeling aroused[else]Still dazed from the fight[end if], you turn your head towards it to get a proper taste, but are instead surprised as the bull pushes his large cock forward. The thick cock slams into you and stretches surprisingly wide, engulfing your whole head. Your initial shock allows the beast a chance to press his advantage and his cock gulps around you, pulling in your shoulders as well. Surrounded by the hot, squeezing flesh of his bestial manhood, you are assaulted by the strong, musky scent of his virility. Any struggles you make are futile and seem to only further excite the big bovine as you are pulled inches at a time along that meaty tunnel. More and more of your [bodytype of Player] body is drawn into that bulging bovine penis.";
-		say "     You are eventually deposited into his ballsack and left to bathe in his virile semen while his cum factories churn away. You lose track of time, falling into a lustful haze in the heated chamber, only to be roused much later by some rubbing from the outside. As this continues, you can hear the faint mooing of the excited bull growing louder before you are finally blasted free along with a sticky load of bull semen. Landing in the grassy field, you are set upon by the cow who masturbated the bull to climax. She licks you clean, her sloppy tongue getting as much bovine seed as she can get before you make your getaway.[mooplus]";
-		infect;
-		infect;
+		say "     You are eventually deposited into his ballsack and left to bathe in his virile semen while his cum factories churn away. You lose track of time, falling into a lustful haze in the heated chamber, only to be roused much later by some rubbing from the outside. As this continues, you can hear the faint mooing of the excited bull growing louder before you are finally blasted free along with a sticky load of bull semen. Landing in the grassy field, you are set upon by the cow who masturbated the bull to climax. She licks you clean, her sloppy tongue getting as much bovine seed as she can get before you make your getaway.[line break][mooplus][infect][infect]";
 	else:
 		if Mooing < 1:
 			say "     The bull seems to lose interest in you and wanders off to find some grass to eat.";
@@ -120,50 +113,37 @@ to say BeatTheBovine:
 					say "     You grin and tell the cow you've got a slight change of plans. Ordering her onto her back, you lean forward, taking one of her nipples into your mouth, flicking your tongue across it, the rich taste of milk driving you to begin sucking on it. The cow girl moans and her chest heaves as she begs you to fuck her. Still sucking, you shift position on top of her so that your now hard cock is resting against her folds. You pull your hips back, lining the tip of your [Cock of Player] cock up with her wet lips and then slamming into her, groaning in pleasure. As you pound away at the cow girl's cunt, she [if Cock Length of Player < 28]slowly gets more and more into it, her legs wrapping around you, drawing you deeper into her. Soon enough you feel your climax building, your balls swelling with cum. With one final thrust, you bury your [cock size desc of Player] length as deep as you can[else]screams her pleasure, her large hands firmly on your ass, making sure you fuck her fully with each stroke. Soon enough you feel your climax building, your balls swelling with cum. With one final thrust, you bury your [cock size desc of Player] length in her, knowing you are filling her utterly[end if], [if Ball Size of Player < 6]giving her your fertile seed[else]flooding her womb with your fertile seed, excess cum leaking out around your dick[end if]. You nearly black out when she reaches her peak, her snatch squeezing your rod tightly and the two of you squirm in ecstasy.";
 					say "     After you pump the last of your cum into her, you lie atop the cow girl, nursing from her breast, a warm feeling radiating out from your stomach. The two of you doze briefly in your post-orgasmic stupor, but after a while you get up to head out. As you do, the bovine woman calls out after you, 'That was fun, but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.[mooplus]";
 					CreatureSexAftermath "Bovine" receives "PussyFuck" from "Player";
-					PlayerEat 5;
-					PlayerDrink 10;
-					infect;
-					increase CowBully by 1;
 				else if Player is female:
 					say "     You grin and tell the cow you've got a slight change of plans. Ordering her onto her back, you lean forward, taking one of her nipples into your mouth, flicking your tongue across it, the rich taste of milk driving you to begin sucking on it. The cow girl moans and her chest heaves as she begs you to fuck her. Still sucking, you slide your hand down between her legs and begin to stroke her wet pussy. The cow girl shivers and groans as you play with her cunt, first stroking it and then slowly sliding a finger or four into her. Soon enough, the cow girl returns the favor, her large fingers finding your own tender folds, expertly locating your g-spot and working you up to climax rather quickly. You continue on like this for a while, suckling on the cow girl's tits while the two of you fingerblast each other, until she is finally pushed over the edge and into orgasm, cunt clamping down on your fingers, her body shaking in pleasure.";
 					say "     Your own orgasm isn't far behind and you collapse onto the cow as she relentlessly fingers you through your climax. The two of you doze briefly in your post-orgasmic stupor, but you rouse yourself, rubbing your belly, a warm tingle coming from your stomach full of milk. As you stand up to leave, the bovine woman calls out after you, 'That was fun, but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.[mooplus]";
 					CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Bovine";
-					PlayerEat 5;
-					PlayerDrink 10;
-					infect;
-					increase CowBully by 1;
 				else:
 					say "     You look down at yourself and realize that you don't really have any proper equipment to play with the cow girl, but that doesn't mean you can't still sate your thirst. You climb up on top of her and take hold of her breasts, clamping your mouth down over one and beginning to suckle from it. You grin slightly as the cow girl moos lustfully, taking pleasure in your suckling. You gulp down her milk, teasing her squirting teat with your tongue and teeth, squeezing and pulling on the ones not currently in your mouth. When the first one starts to run dry you just switch to another, happily drinking your fill.";
 					say "     Once your belly is completely full of the cow girl's delicious milk, you get up and stretch, a warm fuzzy feeling spreading throughout you. You shrug it off, gather your gear and head back out along the path. As you do, the bovine woman calls out after you, 'That was fun, but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.[mooplus]";
-					PlayerEat 5;
-					PlayerDrink 10;
-					infect;
-					increase CowBully by 1;
+				PlayerEat 5;
+				PlayerDrink 10;
+				if "Iron Stomach" is not listed in feats of Player, infect;
 			else:
 				LineBreak;
 				if Player is male:
 					say "     You take hold of the cow girl's legs and nudge them apart, grinning and licking your lips at the sight of her massive bovine pussy. The cow girl shivers and whimpers in anticipation as you pull yourself up against her, your [Cock of Player] cock grinding against her wet snatch. You line yourself up and thrust in, ramming your length [if Cock Length of Player < 28]as deep inside her as you can manage. Gripping the cow girl's hips tightly as you pound away at her cunt, you can't stop yourself from moaning in pleasure. She groans and begs, 'Please fuck me deeper! I need more!' Annoyed that she seems unfazed by your efforts so far, you hilt yourself in one go to try and satisfy her. She grunts a little, but she says, 'I need more, please, I'm so empty.' You start bucking harder and faster into her, hoping to make up for your size with your passion[else]deep inside her. Gripping the cow girl's hips tightly as you pound away at her cunt, you can't stop yourself from moaning in pleasure. She groans and says, 'Oh yeah, just like that! I want everything you've got!' Pleased that she's loving your efforts so far, you hilt yourself in one go to push her over. She grunts and lets out a loud moo, unable to articulate her approval. You start bucking harder and faster into her[end if], feeling your climax building. You lean forward and wrap your arms underneath her body, your hands taking hold of her shoulders.";
 					say "     With one last hard thrust, you bury your [cock size desc of Player] shaft in her depths and cum hard, [if Ball Size of Player < 5]dumping your seed into this cow girl, as she moos her orgasm[else]filling this cow girl up with every last bit of fertile seed you've got, making her moo loudly in orgasm[end if]. When you're finished with her, you get up and wipe your cock off on her ass, a few last spurts of cum splattering on her back. You take a bit of perverse pride at the state you've left the cow in and gather your things before heading back along the path. As you do, the bovine woman calls out after you, 'That was fun, but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.";
 					CreatureSexAftermath "Bovine" receives "PussyFuck" from "Player";
-					increase CowBully by 1;
+				else if Player is female:
+					say "     You take hold of the cow girl's legs and nudge them apart, grinning and licking your lips at the sight of her massive bovine pussy. The cow girl shivers and whimpers in anticipation as you walk towards her front, drawing your hand along your flank as you do, and shoving your cunt right in her face. You order the cow to lick your snatch, to make you happy, just like she wanted. Her eyes are half-lidded in lust and she quickly begins licking at your pussy, doing her best to try and get you off. You groan and push your cunt back against her muzzle, grinding it up and down. You feel her moan, the cow taking pleasure in your control of the situation, and she falters for a second before resuming her attention on your pussy. Soon enough, she has you on the edge, but you hold her back, waiting until you're ready to orgasm. A 12-foot cow woman is hard to stop however, and you cry out as your femcum covers her face. You hold her to your pussy, and she slurps up as much of your juices as she can get.";
+					say "     You step back and stretch a little before gathering your things and heading back along the path, leaving the cow to finish herself off. As you do, the bovine woman calls out after you, 'That was fun, but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.";
+					CreatureSexAftermath "Bovine" receives "OralPussy" from "Player";
 				else:
-					if Player is female:
-						say "     You take hold of the cow girl's legs and nudge them apart, grinning and licking your lips at the sight of her massive bovine pussy. The cow girl shivers and whimpers in anticipation as you walk towards her front, drawing your hand along your flank as you do, and shoving your cunt right in her face. You order the cow to lick your snatch, to make you happy, just like she wanted. Her eyes are half-lidded in lust and she quickly begins licking at your pussy, doing her best to try and get you off. You groan and push your cunt back against her muzzle, grinding it up and down. You feel her moan, the cow taking pleasure in your control of the situation, and she falters for a second before resuming her attention on your pussy. Soon enough, she has you on the edge, but you hold her back, waiting until you're ready to orgasm. A 12-foot cow woman is hard to stop however, and you cry out as your femcum covers her face. You hold her to your pussy, and she slurps up as much of your juices as she can get.";
-						say "     You step back and stretch a little before gathering your things and heading back along the path, leaving the cow to finish herself off. As you do, the bovine woman calls out after you, 'That was fun, but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.";
-						CreatureSexAftermath "Bovine" receives "OralPussy" from "Player";
-						increase CowBully by 1;
-					else:
-						say "     You take hold of the cow girl's legs and nudge them apart, grinning and licking your lips at the sight of her massive bovine pussy. The cow girl moos in lust as you dive in, burying your face in your prize. Your face is almost lost in her dripping folds, your tongue barely plumbing her depths. Still, the bovine woman seems pleased with your skills, mooing loudly as she thrusts back into your face. You slip a hand down to your smooth crotch, rubbing it as you eat out the cow, taking pleasure in her scent, taste, and moans. Too soon, she lets out a loud cry and her snatch clenches around your face, femcum soaking you utterly. The feeling of almost literally drowning in pussy pushes you into ecstasy, strong waves of pleasure coursing through your body, emanating from your flat groin. You fall back in a daze, a stupid grin on your face as you wait for the intense feelings to fade.";
-						say "     Eventually they do and you get up, brushing yourself off to leave. As you do, the bovine woman calls out after you, 'That was fun, but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.";
-						CreatureSexAftermath "Player" receives "OralPussy" from "Bovine";
-						increase CowBully by 1;
+					say "     You take hold of the cow girl's legs and nudge them apart, grinning and licking your lips at the sight of her massive bovine pussy. The cow girl moos in lust as you dive in, burying your face in your prize. Your face is almost lost in her dripping folds, your tongue barely plumbing her depths. Still, the bovine woman seems pleased with your skills, mooing loudly as she thrusts back into your face. You slip a hand down to your smooth crotch, rubbing it as you eat out the cow, taking pleasure in her scent, taste, and moans. Too soon, she lets out a loud cry and her snatch clenches around your face, femcum soaking you utterly. The feeling of almost literally drowning in pussy pushes you into ecstasy, strong waves of pleasure coursing through your body, emanating from your flat groin. You fall back in a daze, a stupid grin on your face as you wait for the intense feelings to fade.";
+					say "     Eventually they do and you get up, brushing yourself off to leave. As you do, the bovine woman calls out after you, 'That was fun, but I don't think my bull is going to like you very much.' You stop in your tracks, wondering whether you should ask for more information on this bull of hers, but some loud crashing noises nearby send you running as fast as you can before the source of the crashing reaches you.";
+					CreatureSexAftermath "Player" receives "OralPussy" from "Bovine";
 		else:
 			LineBreak;
 			say "     You shake your head and get rid of those tempting thoughts. You remove the cow's hands from your waist to release yourself and turn around, heading back along the path. As she picks herself up, she calls after you, saying something about going to tell the bull about how mean you were. Uh oh!";
-			increase CowBully by 1;
+		increase CowBully by 1;
 	else if Bovine_type is 2:
 		say "     The large bull collapses to the ground, causing a slight shake as his mass settles as he thumps heavily onto his side.";
-		if VictoryOverDaBull is not 3:
+		if VictoryOverDaBull is not 3 and (VictoryOverDaBull > 0 or CowBully > 0):
 			if BodyName of Player is "Bovine":
 				say "     You look over the fallen body of the large bull, your body drawing you to him, urges within your bovine form calling to you. It would be such a shame to waste such a virile specimen.";
 				LineBreak;
@@ -178,26 +158,25 @@ to say BeatTheBovine:
 						WaitLineBreak;
 						say "     You collapse on top of the large bull and just let him fill you up, your belly swelling up so much from all his cum that it looks like you're pregnant. You pant and lie there for a while, too tired to get up. Eventually though, you push yourself up off his shaft and roll off his massive form, cum pouring out of your cunt. You get up and grab your things, looking back one last time at the bull that fucked you so full, still resting on his side and tongue lolling out of his mouth as he lays on the grass, and smile before you head back along the path.";
 						CreatureSexAftermath "Player" receives "PussyFuck" from "Bovine";
+						fimpregchance;
+						fimpregchance;
 						infect;
-						fimpregchance;
-						fimpregchance;
 					else if Player is mpreg_ok:
 						say "     You groan as you feel a heat in your butt grow, quickly becoming a fiery need. You shiver and drop to your knees, quickly stripping down and crawling up to the bull creature. Your eyes lock onto the bull's massive [if Mooing > 0]shaft, already erect and leaking pre. You reach forward and take the bull's length in one hand and his giant balls in another, gently stroking his shaft and massaging his balls[else]balls and sheath. You lick your lips and reach forward, taking his balls in one hand and his shaft in another. You begin stroking his shaft and massaging his balls, making the large bull groan as his bovine shaft quickly slides out and swells up[end if]. Soon the large bull's cock is pulsing and leaking a steady flow of pre. You shiver and moan at his scent, your prick dripping with your need. You climb up on top of the large bull and lower your ass onto his thick shaft, grinding up and down its length.";
 						say "     This makes the bull creature beneath you squirm and groan, bucking his hips as much as his weakened body will let him. You whimper and moo a little, unable to hold back any longer. You grab his shaft and line it up with your hole before pushing back hard and sliding it deeply into your [bodytype of Player] body. You gasp and groan at the size of it, the way it spreads you wide open and fills you up. It takes some effort to get it in, but the bull beneath you moans out loud, bucking up into you and forcing his shaft in deeper. You gasp and let out a loud moo, quickly recovering from the initial thrust and beginning to ride this bull's huge length. The size of his shaft plus how horny and needy his scent is making you means you won't last long, and soon enough you're cumming hard. This in turn sets off the bull's own massive orgasm. His shaft pulses with each blast of thick fertile cum he pumps into you, emptying his massive balls into your rear.";
 						WaitLineBreak;
 						say "     You collapse on top of the large bull and just let him fill you up, your belly swelling up so much from all his cum that it looks like you're pregnant. You pant and lie there for a while, too tired to get up. Eventually though, you push yourself up off his shaft and roll off his massive form, cum pouring out of your ass. You get up and grab your things, looking back one last time at the bull that fucked you so full, still resting on his side and tongue lolling out of his mouth as he lays on the grass, and smile before you head back along the path.";
 						CreatureSexAftermath "Player" receives "AssFuck" from "Bovine";
+						mimpregchance;
+						mimpregchance;
 						infect;
-						mimpregchance;
-						mimpregchance;
 					else:
 						say "     You shiver and groan, realizing that you can't fulfill the desire to be mated by this huge bull, but you could easily get a belly full of the creature's thick cum. Licking your lips and dropping to your knees, you strip naked and crawl up to the big male bovine. Your eyes lock onto the bull's massive [if Mooing > 0]shaft, already erect and leaking pre. You reach forward and take the bull's length in one hand and his giant balls in another, gently stroking his shaft and massaging his balls[else]balls and sheath. You lick your lips and reach forward, taking his balls in one hand and his shaft in another. You begin stroking his shaft and massaging his balls, making the large bull groan as his bovine shaft quickly slides out and swells up[end if]. Soon the large bull's cock is pulsing and leaking a steady flow of pre. You position yourself between his legs and lean forward, taking the tip of his massive length into your mouth. You groan and start sucking on it, bobbing your head and stroking his length while your other hand tends to his balls.";
 						say "     The bull moans in response and bucks against your mouth, a large spurt of pre being blasted down your throat. You gulp it down and keep working on getting this big beast off. You work as much of the bull's massive dick head into your mouth as you can, but it's just too big for you to take all of it. You run your mouth all over his cock head, swallowing as much pre as the big male will give you. Soon though, you feel his body tense up and his balls clench. You ram his head as deep as it'll go into your mouth and brace yourself for his orgasm. It hits you like a wave, a torrent of cum blasting out of his shaft and down your gullet. You try as best you can to gulp it all down, but it is soon spilling out of your mouth. You keep stroking his shaft and balls, trying to coax every last bit of his cum out. You groan and shiver, your belly starting to swell up with all the cum that he's pumping into you. Your eyes shut as you savor the taste of such a virile stud's cum.";
+						CreatureSexAftermath "Player" receives "OralCock" from "Bovine";
 						WaitLineBreak;
 						say "     Eventually his orgasm tapers of, his balls empty and your [bodytype of Player] belly stuffed full. You lie back, panting hard and grinning like a fool. You stretch out a bit before getting back up, your belly tingling with warmth. You look back at the bull passed out on his side, tongue lolling out of his mouth, and realize that his cum was probably rather infectious, and taking such a large amount might not have been such a good idea. Shrugging and picking up your stuff you realize that what's done is done and you're just going to have to live with it. You turn around and head back along the path.";
-						CreatureSexAftermath "Player" receives "OralCock" from "Bovine";
-						infect;
-						infect;
+						MultiInfect "Bovine" repeats 2;
 				else:
 					LineBreak;
 					say "     Shaking your head clear of those thoughts you turn away from the bull and head back along the path.";
@@ -258,46 +237,27 @@ to say BeatTheBovine:
 			say "     You step back from the fallen beast, amazed you've managed to defeat it. You leave your foe with an added spring in your step, confident in your ability to protect yourself from the dangers of this new world.";
 			increase VictoryOverDaBull by 1;]
 
-to say cow desc:
-	project the figure of Bovine_F_icon;
-	if Mooed is 0:
-		say "     A twelve foot tall cow giant stands before you. 'Mmmmoooo,' she says. 'Are you thirsty? I have all the milk you will ever want,' she exclaims, holding one of her four large breasts, milk slowly dribbling from her teat-like nipple.";
-	else:
-		say "     A twelve foot tall cow giant stands before you. 'Mmmmoooo,' she says. 'Oh, he found you then? Come here little one, I have all the milk you will ever want,' she exclaims, holding one of her four large breasts, milk slowly dribbling from her teat-like nipple.";
-
-to say feral bull desc:
-	if CowBully is 0:
-		say "     A huge bull creature stands on four hooves before you, looking more like an enormous minotaur that forgot how to stand up than the dumb brute he is. Glancing at you as he grazes, 'Mmmmoooo' is all he says.";
-	else:
-		say "     A monstrous bull beast stands on four hooves in front of you grazing. As you watch he sniffs the air, the huge muscles in his neck flex, and you witness the creature figuratively transform from docile to murderous rage in moments.";
-	if Mooing > 0:
-		say "     You do notice a member of truly epic proportions slowly start to slide out from beneath the animal's belly.";
-
 to say bovine attack:
 	if Bovine_type is 1:
-		say "[cow attack]";
+		if a random number from 1 to 20 is 1:
+			say "The cow sprays wildly with milk, drenching you, making you cry out as it seems to soak your clothing. All of a sudden a precise follow up spray hits you in the mouth, the pressure forcing you to swallow or drown in it.[line break][infect][line break]";
+			say "With a gulp you get a tingling feeling from your belly and are suddenly washed in contentment.[no line break][if Mooing < 5][mooplus][else][CowMilkAddict][end if]";
+		else:
+			say "[one of]The cow reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your arm, causing it to sting at the pressure[or]The cow reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your stomach, causing you to become short of breath and bend over wheezing as the focused stream hits[or]Moving in close, she slams her big milk jugs into your face, trying to make you drink, but ends up knocking you back[at random].[no line break]";
 	else:
-		say "[feral bull attack]";
+		if CowBully > 0:
+			say "[one of]The bull lowers his horns, bellowing wildly and charges at you, raking your side painfully[or]Screaming and bucking around you the huge animal lashes out with his back hooves, knocking you aside like a tin can[or]Shaking his huge head as he bolts around wildly, he catches you with a horn, dragging you for a while before swinging his head up and throwing you into the air. As you hit the ground you feel real pain blossom into your legs[at random].[no line break]";
+		else:
+			choose row MonsterID from the Table of Random Critters;
+			if monsterHP < ( HP entry / 4 ):			[ < 20 for regular play ]
+				say "The bull flicks his tail at you. You have finally annoyed him so much he has moved.[no line break][combat abort]";
+				continue the action;
+			say "[one of]The big bull snorts softly, trying to eat grass and completely ignoring you[or]The bull looks up from his grazing for a moment, making a mooing sound at you, before returning to his meal[at random].";
+			if monsterHP < ( ( HP entry * 7 ) / 10 ):		[ < 56 for regular play ]
+				increase monsterHP by 9 + ( HP entry / 5 ); [ +25 HP for regular play ]
+			say "You notice that the big animal is almost completely ignoring your attacks as they fail to pierce his tough hide.[no line break]";
 
-to say cow attack:
-	if a random number from 1 to 20 is 1:
-		say "The cow sprays wildly with milk, drenching you, making you cry out as it seems to soak your clothing. All of a sudden a precise follow up spray hits you in the mouth, the pressure forcing you to swallow or drown in it.[infect][line break]";
-		say "With a gulp you get a tingling feeling from your belly and are suddenly washed in contentment.[no line break][if Mooing < 5][mooplus][else][CowMilkAddict][end if]";
-	else:
-		say "[one of]The cow reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your arm, causing it to sting at the pressure[or]The cow reaches up to her chest, squeezing down on a teat expertly, spraying milk at you, hitting your stomach, causing you to become short of breath and bend over wheezing as the focused stream hits[or]Moving in close, she slams her big milk jugs into your face, trying to make you drink, but ends up knocking you back[at random].[no line break]";
-
-to say feral bull attack:
-	if CowBully > 0:
-		say "[one of]The bull lowers his horns, bellowing wildly and charges at you, raking your side painfully[or]Screaming and bucking around you the huge animal lashes out with his back hooves, knocking you aside like a tin can[or]Shaking his huge head as he bolts around wildly, he catches you with a horn, dragging you for a while before swinging his head up and throwing you into the air. As you hit the ground you feel real pain blossom into your legs[at random].[no line break]";
-	else:
-		choose row MonsterID from the Table of Random Critters;
-		if monsterHP < ( HP entry / 4 ):			[ < 20 for regular play ]
-			say "The bull flicks his tail at you. You have finally annoyed him so much he has moved.[combat abort]";
-			continue the action;
-		say "[one of]The big bull snorts softly, trying to eat grass and completely ignoring you[or]The bull looks up from his grazing for a moment, making a mooing sound at you, before returning to his meal[at random].";
-		if monsterHP < ( ( HP entry * 7 ) / 10 ):		[ < 56 for regular play ]
-			increase monsterHP by 9 + ( HP entry / 5 ); [ +25 HP for regular play ]
-		say "You notice that the big animal is almost completely ignoring your attacks as they fail to pierce his tough hide.[no line break]";
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -309,6 +269,7 @@ to say PrepCombat_Bovine:
 	choose row MonsterID from the Table of Random Critters;
 	if a random number from 1 to 10 > 3 or MaleList is banned:	[Anthro Cow]
 		setmongender 4; [creature is female]
+		project the figure of Bovine_F_icon;
 		now Bovine_type is 1;
 		now wdam entry is 5 + ( debit / 4 ); [Amount of Damage cow Does when attacking.]
 		now lootchance entry is 20;
@@ -349,9 +310,7 @@ to say PrepCombat_Bovine:
 			now wdam entry is 0; [Passive bull is 0, even in hard mode]
 		else:
 			now wdam entry is 28 + ( ( 2 * debit ) / 5 ); [Check for if the player has beaten up a cow (female bovine), if they have, it's time to roll out the punishment]
-		now lootchance entry is 20;
-
-Section 2 - Creature Insertion
+		now lootchance entry is 0;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -529,7 +488,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Monster Heat
 
 Table of infection heat (continued)
@@ -549,10 +507,8 @@ To say mooplus:			[The more you moo, the less you need milk.]
 		increase Mooing by 3;
 
 To say CowMilkAddict:			[Getting a direct hit feeds you. This seems like a lot of extra steps for a one off thing.]
-	decrease hunger of Player by 5;
-	decrease thirst of Player by 10;
-	if hunger of Player < 0, now hunger of Player is 0;
-	if thirst of Player < 0, now thirst of Player is 0;
+	PlayerEat 5 silently;
+	PlayerDrink 10 silently;
 
 When Play begins:
 	Choose a blank row from Table of infection heat;

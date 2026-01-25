@@ -3,17 +3,15 @@ Version 1 of Dreamcatcher by Qazarar begins here.
 
 Section 1 - Item Description
 
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "dreamcatcher"	"A quaint dreamcatcher."	1	dreamcatcher
 
 dreamcatcher is a grab object. It is not temporary.
 
-instead of sniffing dreamcatcher:
-	say "It has a faint, unidentifiable scent that reminds you at once of a warm cup of tea and a cozy pillow.";
+Scent of dreamcatcher is "It has a faint, unidentifiable scent that reminds you at once of a warm cup of tea and a cozy pillow.".
 
-Usedesc of dreamcatcher is "[perchance to dream]";
+Usedesc of dreamcatcher is "[perchance to dream]".
 
 Section 2 - Dreamevent Defintions
 
@@ -29,9 +27,6 @@ Definition: A dreamevent (called x) is dreamable:
 	else if the level of x < (level of Player + 1):
 		yes;
 	no;
-
-
-
 
 Section 3 - Events
 

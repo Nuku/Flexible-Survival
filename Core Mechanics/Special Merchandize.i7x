@@ -10,7 +10,6 @@ name	desc	weight	object
 
 bliss tablet is a grab object.
 Usedesc of bliss tablet is "[blissUse]".
-It is temporary.
 
 to say blissUse:
 	say "     You throw the little tablet into your mouth and swallow it with a little effort. It takes a few moments to kick in, but soon you're feeling hot and uninhibited, ready for sex. At the same time, it makes you kinda thirsty.";
@@ -43,7 +42,6 @@ name	desc	weight	object
 
 powerup tablet is a grab object.
 Usedesc of powerup tablet is "[PowerUpUse]".
-It is temporary.
 
 to say PowerUpUse:
 	say "     You throw the little tablet into your mouth and swallow it with a little effort. It takes a few moments to kick in, but soon you can literally feel your muscles swelling up and you feel like you can punch through a wall. At the same time, it makes you really thirsty.";
@@ -71,14 +69,13 @@ an everyturn rule:
 			StatChange "Strength" by -6;
 			FeatLoss "Roided Up";
 
-
 Section 3 - Pixie Dust
 
 Table of Game Objects(continued)
 name	desc	weight	object
 "pixie dust"	"A little handful of what looks like glitter, but is actually genuine magic pixie dust. It is in a small throwaway plastic container."	0	pixie dust
 
-pixie dust is a grab object. It is temporary.
+pixie dust is a grab object.
 
 Usedesc of pixie dust is "[pixie dust use]".
 

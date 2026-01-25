@@ -1,8 +1,8 @@
 Version 1 of Basic Shops by Core Mechanics begins here.
 
 understand the command "buy" as something new.
-BuyingAction is an action applying to one topic.
 
+BuyingAction is an action applying to one topic.
 Understand "buy [text]" as BuyingAction.
 
 Check BuyingAction:

@@ -12,12 +12,14 @@ Sugar Shack	"Sugar Shack"
 Sugar Shack is a situation.
 ResolveFunction of Sugar Shack is "[ResolveEvent Sugar Shack]".
 Sarea of Sugar Shack is "Fair".
+
 when play begins:
 	add Sugar Shack to BadSpots of FurryList;
 	add Sugar Shack to BadSpots of FemaleList;
 	add Sugar Shack to BadSpots of HumorousList;
 
 to say ResolveEvent Sugar Shack:
+	setmonster "Sugar Glider";
 	say "     Turning a corner you see a rather curious sight ahead down the midway, one of those brightly colored sugar glider girls scampering around a large stall at the end of the row. As you're considering turning back to avoid a confrontation with the excited marsupial, she spots you watching and calls out to you, waving you over eagerly. Finding yourself curious what she's up to you approach slowly, wary of some sort of trap the giggling girl may have set up, but you reach the stall without incident and find it to be, unsurprisingly, a candy stall.";
 	say "     When you step up to the counter there's no sign of the glider who was here moments ago. Peering over the counter, you see the shelves of the stall have been picked clean, but there is a large cotton candy machine in the back that appears mostly undisturbed. 'Isn't it great!?' You whip around to find the source of the voice behind you, finding yourself face to face with the grinning sugar glider. 'And it still works!' she cheers, grabbing your arm and pulling you around to the door at the back of the stall, then inside.";
 	WaitLineBreak;
@@ -46,7 +48,7 @@ to say ResolveEvent Sugar Shack:
 		if Player is male:
 			say "     She breaks your kiss with a giggle and slowly begins descending down your body, her long slick tongue teasing your [if Nipple Count of Player > 0 and Breast Size of Player > 0]breasts[else if Nipple Count of Player > 0]nipples[else]body[end if] [if Nipple Count of Player > 0 and Breast Size of Player > 0 and player is not sugargliderskinned]as the cotton candy fur creeps over them[else if Nipple Count of Player > 0 and player is not sugargliderskinned]as the cotton candy fur spreads past them[else if Player is not sugargliderskinned]as the cotton candy fur spreads[end if], continuing downwards until her muzzle is buried in your groin. Her dexterous tongue slides along your eager cock, wrapping around it and teasing your balls before her muzzle descends down your length. You moan in delight and run your paws through the sugar glider's thick fur as her head bobs up and down your maleness, her gentle sucking and squeezing sending tingles of pleasure through your shaft[if Player is female] while her tongue slips out past your shaft[smn] to tease the outer folds of your moistening puss[yfn][end if], but before you reach climax, she releases you. Pulling her muzzle from your shaft with a wet slurp, she kisses the tip of your [if Player is not sugarglidercocked]now bright pink [end if]cock before smiling up at you and spreading herself out on the stall floor, teasing her syrupy drooling cunt[smn] with a pair of fingers as her long tail pulls you closer.";
 			say "     You eagerly jump on your supine companion, quickly aligning your already excited shaft[smn] with her ready cunt[smn]. She squeals with delight as you press into her, her long tail wrapping tightly around your own as her paws grip at the thick cotton candy fur descending down your back. Your eager fucking quickly builds to a steady rhythm as sweet nectars spill out around your member[smn], and soon the sugar glider cries out in delight beneath you, her spasming cunt[smn] gripping you tightly as orgasm rolls through her, pushing you to your own peak as you cum with a groan of ecstasy.";
-			if Player is herm:
+			if Player is female:
 				CreatureSexAftermath "Sugar Glider" receives "OralPussy" from "Player";
 			CreatureSexAftermath "Sugar Glider" receives "OralCock" from "Player";
 			CreatureSexAftermath "Sugar Glider" receives "PussyFuck" from "Player";
@@ -90,10 +92,10 @@ to say ResolveEvent Sugar Shack:
 	now Sugar Shack is resolved;
 
 to say fullSugarGliderTF:
-	[puts Sugar Glider as lead monster in case of impregnation]
 	setmonster "Sugar Glider" silently;
 	turn the Player into a "Sugar Glider";
 	if hellHoundLevel is 0:
+		[say "[run paragraph on]";]
 		follow the sex change rule;
 		follow the sex change rule;
 

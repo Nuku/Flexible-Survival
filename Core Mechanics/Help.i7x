@@ -1,7 +1,6 @@
 Version 1 of Help by Core Mechanics begins here.
 [ Version 1 - Extracted during dissection of the Story.ni - Wahn]
 
-
 Table of Basic Help Options (continued)
 title	description
 "Getting Started"	"Welcome to Flexible Survival! To get started with playing there are a few commands you need to know.[line break]In order to move around, you can use the compass directions (north, south, east, west, etc.), move 'in' and 'out' of buildings, and 'nav' or 'navigate' between areas.[line break]You can 'explore' the world to find events, monsters, and new areas, or 'hunt' for something specific.[line break]To interact with things around you, you can 'look', 'get', 'smell', 'fuck', 'talk' to, or 'drop' items. If you do pick things up, you can access your inventory with 'inv'.[line break]If you find yourself running low on food or water, you may need to 'scavenge' around the city."
@@ -27,6 +26,5 @@ To adjustdefaulthelp: [changes table from Basic Help Menu by Emily Short to bett
 	now the description in row 2 of Table of Instruction Options is "The > sign is where the game says, 'Okay, what do you want to do now?' You may respond by typing an instruction - usually an imperative verb, possibly followed by prepositions and objects. So, for instance, LOOK, LOOK AT FISH, TAKE FISH.";
 	now the title in row 1 of Table of Basic Help Options is "Q to quit help, Enter to select entry";
 	now the description in row 1 of Table of Basic Help Options is "Use arrows to navigate the help menu.[line break]Enter selects the entry that is marked with the >.[line break]Q will take you back one level of help, or leave the help system if you're at the top.";
-
 
 Help ends here.

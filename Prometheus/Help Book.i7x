@@ -61,17 +61,18 @@ to say HelpBookDesc:
 	say "     The book looks like a normal book with the title 'Prometheus['] Guide to Surviving the Apocalypse'. It seems to emit an aura of comfort as though it wants to help those in need and you get the impression that it doesn't much care for the rules of this reality.";
 
 HelpBookLookup is an action applying to nothing.
-
 understand "HelpBookLookup" as HelpBookLookup.
 
 carry out HelpBookLookup:
 	say "     You pull out a copy of 'Prometheus['] Guide to Surviving the Apocalypse'. It seems to emit an aura of comfort as though it wants to help those in need and you get the impression that it doesn't much care for the rules of this reality.";
+	LineBreak;
 	say "[HelpBookTalkMenu]";
 
 Section 2 - Talking with Help Book
 
 Instead of conversing the Help Book:
 	say "     You open the book and decide what you wish to know about.";
+	LineBreak;
 	say "[HelpBookTalkMenu]";
 
 to say HelpBookTalkMenu:
@@ -119,26 +120,25 @@ to say HelpBookTalkMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Basic Needs"):
-					say "[HelpBookTalk1]";
-				else if (nam is "Stats"):
-					say "[HelpBookTalk2]";
-				else if (nam is "Combat"):
-					say "[HelpBookTalk3]";
-				else if (nam is "Commands"):
-					say "[HelpBookTalk4]";
-				else if (nam is "Remove Book"):
-					say "[HelpBookTalk5]";
-				WaitLineBreak;
+				if title entry is:
+					-- "Basic Needs":
+						say "[HelpBookTalk1]";
+					-- "Stats":
+						say "[HelpBookTalk2]";
+					-- "Combat":
+						say "[HelpBookTalk3]";
+					-- "Commands":
+						say "[HelpBookTalk4]";
+					-- "Remove Book":
+						say "[HelpBookTalk5]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You close the book again, ready to get on with your adventure.";
-			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say HelpBookTalk1: [Needs]

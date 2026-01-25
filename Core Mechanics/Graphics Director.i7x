@@ -4,7 +4,6 @@ Version 2 of Graphics Director by Core Mechanics begins here.
 
 "Provides functions that link the new window based graphics."
 
-
 Section - Special commands (for use with Simple Graphical Window by Emily Short)
 
 To close the/-- graphics window:
@@ -17,13 +16,12 @@ To reconstruct the/-- graphics window:
 	close the graphics window;
 	build graphics window.
 
-
 Section 1 - Declarations and variables
 
 [New Graphics modifier]
 The graphics window position is g-right. The graphics window proportion is 30.
 ngraphics_currentartist is a text that varies.[@Tag:NotSaved] ngraphics_currentartist is usually "None".
-TempClearBypass is a number that varies. TempClearBypass is usually 0.
+TempClearBypass is a number that varies.[@Tag:NotSaved] TempClearBypass is usually 0.
 [Because of new system, setting this to 1 is needed for making projections work when applied in a 'look' order]
 
 Section 2 - Rules and Functions
@@ -161,13 +159,13 @@ carry out graphicmoding:
 					-- 2: now graphics window position is g-above;
 					-- 3: now graphics window position is g-below;
 
-
 Section 5 - Debug Commands - Not for release
 
 [DEBUG Commands]
 [Cheat for enabling inline debug stuff]
 graphicsdebugtoggle is an action applying to nothing.
 understand "devgraphicsdebug" as graphicsdebugtoggle.
+
 carry out graphicsdebugtoggle:
 	if NewGraphicsDebugMode is false:
 		say "[bold type]DEBUG:[roman type] Graphics debug information is now [bold type]enabled[roman type] (NewGraphicsDebugMode = True)[line break]";
@@ -178,6 +176,7 @@ carry out graphicsdebugtoggle:
 
 graphicsdebugreport is an action applying to nothing.
 understand "devgraphicsreport" as graphicsdebugreport.
+
 carry out graphicsdebugreport:
 	say "[bold type]Grabbing Graphics Variables, please standby.[roman type][line break]";
 	clear the screen;

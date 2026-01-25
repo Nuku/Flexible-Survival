@@ -1,6 +1,5 @@
 Catapult Encounter by Hellerhound begins here.
 
-
 Section 1 - Catapult Encounter
 
 Table of GameEventIDs (continued)
@@ -10,24 +9,18 @@ Loaded Catapult	"Loaded Catapult"
 Loaded Catapult is a situation.
 ResolveFunction of Loaded Catapult is "[ResolveEvent Loaded Catapult]".
 catafire is a number that varies.
-
+gotcatares is a number that varies.
+catadiff is a number that varies.
+catadiff is 20.
 
 to say catapult fire:
 	now catafire is 1;
 	say "     The catapult lurches as the bag is lifted into the air and thrown. Almost immediately there is a commotion among the armed men; they start firing at it, big bullets ripping through the bag and releasing the mess inside. You realize the maker probably intended this to happen, and watch as the spraying mess soaks most of the soldiers. They immediately begin to moan and sprout multiple infections after a couple seconds.";
-	if a random chance of one in two succeeds:
-		say "     The nearby soldiers shoot the changing ones, bringing down some but not enough. The lines are broken, and hordes of the infected charge through the defenses and take down the soldiers.";
-	else:
-		say "     The nearby soldiers are overtaken with surprise, and the lines fall.";
+	say "     [one of]The nearby soldiers shoot the changing ones, bringing down some but not enough. The lines are broken, and hordes of the infected charge through the defenses and take down the soldiers[or]The nearby soldiers are overtaken with surprise, and the lines fall[at random].";
 	say "     The rescue just got set back REALLY far.";
 	extend game by (14 times 8);
 	now Resolution of Loaded Catapult is 1; [fired]
 	now loaded catapult is resolved;
-
-gotcatares is a number that varies.
-
-catadiff is a number that varies.
-catadiff is 20.
 
 to say ResolveEvent loaded catapult:
 	say "     You find a loaded catapult, a large plastic grocery bag filled with a thick liquid in the cup, and the arms just waiting to let fly.";
@@ -35,8 +28,7 @@ to say ResolveEvent loaded catapult:
 	say "     Do you want to check out what the bags are filled with?";
 	if Player consents:
 		LineBreak;
-		say "     You tear a bag open at random, and find they are containing large volumes of cum, milk, and piss. Whoever did this was not on the side of the rescuers. ";
-		say "You could drink some of the reeking liquids, though that would not be without consequences for your health.";
+		say "     You tear a bag open at random, and find they are containing large volumes of cum, milk, and piss. Whoever did this was not on the side of the rescuers. You could drink some of the reeking liquids, though that would not be without consequences for your health.";
 		if Player consents:
 			LineBreak;
 			say "     Overcoming your disgust, you dip your [FaceSpeciesName of Player in lower case] head into the mess, slurping it up.";
@@ -45,13 +37,13 @@ to say ResolveEvent loaded catapult:
 			if "Iron Stomach" is not listed in feats of Player:
 				weakrandominfect;
 				weakrandominfect;
-			wait for any key;
 		else:
 			LineBreak;
 			say "     You leave the bag where it is.";
 	else:
 		LineBreak;
 		say "     You watch your step, careful not to get too close to the bags lest they pop.";
+	WaitLineBreak;
 	say "     Do you wish to fire the catapult?";
 	if Player consents:
 		LineBreak;
@@ -67,18 +59,17 @@ to say ResolveEvent loaded catapult:
 			LineBreak;
 			say "     You begin to wriggle into the tangle of ropes.";
 			if a random number between one and catadiff > Dexterity of Player:[the catapult fires]
-				say "     You accidentally bump a trigger rope, and the contraption begins to swing. You get out of there fast.[line break][catapult fire]";
+				say "     You accidentally bump a trigger rope, and the contraption begins to swing. You get out of there fast.";
+				WaitLineBreak;
+				say "[catapult fire]";
 			else:
 				say "     You manage to get the resources without touching the ropes.";
 				now Resolution of Loaded Catapult is 2; [got some supplies]
-				repeat with T running from one to three:
-					ItemGain food by 1 silently;
-					ItemGain water bottle by 1 silently;
-					now gotcatares is 1;
+				ItemGain food by catadiff / 10;
+				ItemGain water bottle by catadiff / 10;
+				now gotcatares is 1;
 		else:
 			LineBreak;
 			say "     You look at the resources, tortured by their nearness, but decide to leave them be.";
-
-
 
 Catapult Encounter ends here.

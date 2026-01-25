@@ -48,7 +48,6 @@ Section 2 - Infected Sword
 
 [infected sword moved to Core Mechanics/Weapons.i7x]
 
-
 Table of GameEventIDs (continued)
 Object	Name
 Sword Nest	"Sword Nest"
@@ -153,13 +152,12 @@ to say ResolveEvent Sword Nest:
 				say "     The infected slime changes you.";
 				wait for any key;
 			ItemGain infected sword by 1;
-			now Sword Nest is resolved;
 			now Resolution of Sword Nest is 1; [player waded in to get the sword]
 		else:
 			LineBreak;
 			say "     You leave the mess and its sword there without touching it.";
-			now Sword Nest is resolved;
 			now Resolution of Sword Nest is 2; [player left the sword]
+		now Sword Nest is resolved;
 	else:
 		say "     You leave the mess behind, pondering the reason why this occurred here and nowhere else.";
 		now Resolution of Sword Nest is 3; [didn't spot the sword]
@@ -182,7 +180,6 @@ Does the player mean grabbing the clean whip when the clean whip is visible: it 
 ]
 [Whip moved to Core Mechanics/Weapons.i7x]
 
-
 Table of GameEventIDs (continued)
 Object	Name
 Destroyed Bushes	"Destroyed Bushes"
@@ -190,7 +187,7 @@ Destroyed Bushes	"Destroyed Bushes"
 Destroyed Bushes is a situation.
 ResolveFunction of Destroyed Bushes is "[ResolveEvent Destroyed Bushes]".
 Sarea of Destroyed Bushes is "Park".
-numwater is a number that varies.
+[numwater is a number that varies.]
 
 to say ResolveEvent Destroyed Bushes:
 	say "     You come across a circle of bushes crushed flat against the ground, large pools of cum and juices in the revealed space. Horse hoof prints cover the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
@@ -198,10 +195,10 @@ to say ResolveEvent Destroyed Bushes:
 		say "     Do you want to drink from the puddles?";
 		if Player consents:
 			if "Iron Stomach" is not listed in feats of Player:
-				infect "Black Equinoid";
-				infect "Black Equinoid";
+				MultiInfect "Black Equinoid" repeats 2;
 			PlayerDrink 75;
 		else:
+			LineBreak;
 			say "You leave them alone.";
 	say "     Do you wish to look around?";
 	if Player consents:
@@ -226,9 +223,7 @@ to say ResolveEvent Destroyed Bushes:
 				if Player consents:
 					LineBreak;
 					say "     You pick up the dirty, cum soaked whip with difficulty as it slips about in your hand, the cum getting all over. You finally manage to get it into your backpack.";
-					infect "Black Equinoid";
-					infect "Black Equinoid";
-					infect "Black Equinoid";
+					MultiInfect "Black Equinoid" repeats 3;
 					ItemGain dirty whip by 1;
 					now Resolution of Destroyed Bushes is 2; [grabbed the dirty whip]
 					now the Destroyed Bushes is resolved;
@@ -247,6 +242,5 @@ An everyturn rule:
 		say "The cum on the dirty whip slips down onto your hand.";
 		infect "Black Equinoid";
 		now researchbypass is 0;
-
 
 Odd Weapons ends here.

@@ -10,7 +10,7 @@ Version 1 of Werewolf by CrimsonAsh begins here.
 [  81: fought off, fucked + bred                     ]
 [  90: fought off, not fucked                        ]
 
-LastWerewolfFuck is a number that varies. LastWerewolfFuck is usually 10000.
+[LastWerewolfFuck is a number that varies. LastWerewolfFuck is usually 10000.]
 WerewolfWatching is a truth state that varies. WerewolfWatching is usually false.
 WerewolfRelationship is a number that varies.
 
@@ -37,19 +37,17 @@ an everyturn rule:
 				if WerewolfWatching is false: [initial message]
 					say "     Here between the untamed trees of the Urban Forest, the shadows seem especially deep and seem to play tricks on your eyes. Every little movement of branches and leaves draws your gaze, and the ominous feeling of being watched fills you with tension. The sensation of something's predatory gaze resting on you can't be all in your head, can it?";
 					now WerewolfWatching is true;
-				else: [repeat message for following turns]
-					if a random chance of 1 in 3 succeeds:
-						say "     You [italic type]still[roman type] can't shake the feeling that something is watching you. A cold shiver runs down your back.";
+				else if a random chance of 1 in 3 succeeds: [repeat message for following turns]
+					say "     You [italic type]still[roman type] can't shake the feeling that something is watching you. A cold shiver runs down your back.";
 		else if WerewolfWatching is true:
 			now WerewolfWatching is false;
 
 Section 1 - Meeting Event
 
 instead of resting while Player is in Urban Forest and WerewolfWatching is true and WerewolfRelationship is 0 and Werewolf Surprise is not resolved and Werewolf Surprise is not inactive:
-	project the Figure of Werewolf_female_icon;
 	say "     Finding a comfortable enough spot under a large oak, you lay down to rest and slowly begin to drift off to sleep. All of a sudden, a heavy weight is thrown against you, and your eyes shoot open to the darkness around you. Finding yourself pinned down, you realize that what is on top of you is furry, warm, and... very well muscled as it presses against you. Your face is buried in that fuzzy warmth, and as you pull your head up to identify your assailant, your gaze is met by two yellow, wolf-like eyes, burning brightly with a ferocious need that is obvious even without any words. You can feel two large mounds pressing against your body, also covered in soft fur, as well as the two hard nubs of your assailant's nipples. Further down your body, a warm wetness drips on and soaks your leg.";
 	say "     As your eyes adjust to the darkness around you, you can make out more of the creature on top of you than just the glowing eyes and their intense look. You see the canine features of a she-wolf, a snarling muzzle dripping saliva down her furred chin and onto your neck, with two furry wolf ears atop her black-coated head. With her pressed right up against your form, you are enveloped in the strong, musky aroma that emanates from the wolf. The scent of her feral heat almost overwhelms your senses, and you can feel your body start to warm up. Her two muscular arms are at your side, holding you in place with long, sharp claws which prod and poke into your prone form. Having studied you while you did the same, the werewolf decides to make her move in that moment. Her powerful hind legs spread your own while her right claw begins to pull and wrench at your clothes and equipment to strip you naked. If you're going to stop her, now is the time, although she likely won't take it well.";
-	LineBreak;
+	project the Figure of Werewolf_female_icon;
 	say "     [bold type]What do you do?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Submit to her affections.";
 	say "     ([link]N[as]n[end link]) - Fight her off.";
@@ -93,7 +91,13 @@ instead of resting while Player is in Urban Forest and WerewolfWatching is true 
 	else:
 		LineBreak;
 		say "     You attempt to halt the werewolf molesting you and push against her chest to get her off - resulting in the expected violent reaction to your resistance. With a snarl, she slams you down and moves to pin your arms to the ground. You manage to kick the wolf woman off, sending her scrambling to her feet and growling menacingly at you. She circles you for a moment allowing you to get your bearings and stand up, before charging forward with claws extended and teeth bared.";
+		now inasituation is true;
 		challenge "Werewolf";
+		if fightoutcome >= 10 and fightoutcome <= 19:
+			say "[BeatWerewolf]";
+		else if fightoutcome >= 20 and fightoutcome <= 29:
+			say "[LoseToWerewolf]";
+		now inasituation is false;
 		now Resolution of Werewolf Surprise is 2; [fought]
 	now Werewolf Surprise is resolved;
 
@@ -139,7 +143,6 @@ to say BeatWerewolf:
 		say "     You decide against trying anything with the wolf woman and decide to just back away and leave once you're a comfortable distance away. Her needy whines are the last thing you hear as you leave.";
 		now WerewolfRelationship is 90; [fought off, not fucked]
 
-
 to say LoseToWerewolf:
 	say "     The wolf woman slashes again with her claw, ripping whatever shirt you had and knocking you to the ground. You don't have time to recover this time before she leaps on you and lets out a terrifying dominant roar in your face, spitting and washing warm breath across your cheeks. As her body flushes against yours you notice it's damp and unnaturally warm, the werewolf herself is panting heavily with her tongue out, like a dog on a hot day. Her long claws scrape your shoulders and she tears back before lurching forward and biting into your shoulder. You feel blood stream down your back from the wound and as you begin to fear for your life she pulls back. She licks her blood stained lips and howls to the sky, declaring her victory in the most primal way.";
 	say "     Without wasting any more time, she gets up off you and turns around, showing off her impressively muscular ass and fine, fluffy tail. And then drops it on your face. You feel your head slam into the ground as you're overcome by the wolf woman's musk. She smells feral and of sexual heat that draws out your own lust. She grinds her canine muff into your mouth while her tail hole presses against your nose. Suffocated by her ass and cunt you sigh and submit to your current state. Retracting your tongue you start to lap at her fiery lips while one of your hands strokes her firm ass cheek. She growls, letting out whines of approval as her quivering pussy squirts more juices into your lapping lips.";
@@ -174,8 +177,10 @@ to say LoseToWerewolf:
 		say "     When you awake some time later you're alone. Your shoulder and face ache pretty badly but otherwise you're unharmed. It seems she licked your face clean before leaving you here...";
 	now WerewolfRelationship is 90; [fought & lost]
 
-to say WerewolfDesc:
-	say ""; [currently unused, only event encounters with her]
+[to say WerewolfDesc:
+	say ""; [currently unused, only event encounters with her]]
+
+Section 3 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -184,10 +189,6 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Werewolf:
 	setmongender 4;
 	project the Figure of Werewolf_female_icon;
-
-
-
-Section 3 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -215,7 +216,7 @@ When Play begins:
 	now attack entry is "[one of]The werewolf bites at you, wounding you with razor sharp teeth![or]Leaping at you the werewoman slices her claws into you.[or]The wolf woman batters you with her claws.[at random]";
 	now defeated entry is "[BeatWerewolf]";
 	now victory entry is "[LoseToWerewolf]";
-	now desc entry is "[WerewolfDesc]";
+	now desc entry is "";
 	now face entry is "";
 	now body entry is "";
 	now skin entry is "";
@@ -365,6 +366,5 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Werewolf ends here.

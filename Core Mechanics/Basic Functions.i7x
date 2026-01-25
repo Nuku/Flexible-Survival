@@ -7,7 +7,7 @@ To change the current menu to (X - table name):
 
 to clear the screen and hyperlink list:
 	clear the screen;
-	now invlinklistfilled is zero; [this changes the inventorying mode to not look for existing inventory links again]
+	now invlinklistfilled is false; [this changes the inventorying mode to not look for existing inventory links again]
 	now hyperlink list is {};
 [This must remain whole or errors from cleared hyperlinks can occur!]
 
@@ -28,15 +28,12 @@ To keypause:
 	(- KeyPause(); -)
 
 To say a/an (T - text):
-	let Txt be indexed text;
-	let Txt be T;
-	if Txt matches the regular expression "^<aeiouAEIOU>":
-		say "an ";
+	if T matches the regular expression "^<aeiou>", case insensitively:
+		say "an [T]";
 	else:
-		say "a ";
-	say T.
+		say "a [T]";
 
-hyperindex is a number that varies. [the index of a link in the hyperlink list that was found or added]
+hyperindex is a number that varies.[@Tag:NotSaved] [the index of a link in the hyperlink list that was found or added]
 
 to linkfind (T - text): [sets hyperindex to the index of an entry in the hyperlink list matching T after finding or adding it]
 	let link be the substituted form of "[T]";
@@ -57,7 +54,7 @@ to linkfind (T - text): [sets hyperindex to the index of an entry in the hyperli
 		add link to hyperlink list;
 		now hyperindex is number of entries in hyperlink list;
 
-checkresult is a number that varies.
+checkresult is a number that varies.[@Tag:NotSaved]
 
 To check (X - text):
 	let stat be 0;
@@ -78,36 +75,6 @@ To check (X - text):
 	say " [die]!";
 	now checkresult is die;
 
-Instead of sniffing something (called x):
-	if the scent of x is empty:
-		say "It smells pretty normal for [a printed name of x].";
-	else:
-		say "[scent of x][line break]";
-
-To wait for any key:
-	if hypernull is 0:
-		say "[link]more[as] [end link][run paragraph on][line break]";
-	keypause;
-	if hypernull is 0:
-		LineBreak;
-
-to say WaitLineBreak: [little bit of often used code]
-	LineBreak;
-	WaitLineBreak;
-
-to WaitLineBreak: [little bit of often used code]
-	if waiterhater is 0: [skips waiting if it's not wanted]
-		wait for any key;
-		if hypernull is 0, LineBreak; [adds a break after the 'more']
-	else:
-		LineBreak; [people who don't want to wait at least get a break]
-
-to LineBreak:
-	say "[line break]";
-
-to DoubleLineBreak:
-	say "[line break][line break]";
-
 to HungerReset:
 	if hunger of Player > 0:
 		LineBreak;
@@ -115,12 +82,19 @@ to HungerReset:
 		now hunger of Player is 0;
 
 to PlayerEat (N - number):
-	if hunger of Player > 0:
-		LineBreak;
-		say "     [bold type]Your hunger is reduced by [N]![roman type][line break]";
+	if N > 0:
+		if hunger of Player > N:
+			LineBreak;
+			say "     [bold type]Your hunger is reduced by [N]![roman type][line break]";
+			decrease hunger of Player by N;
+		else:
+			HungerReset;
+
+to PlayerEat (N - number) silently:
+	if hunger of Player > N:
 		decrease hunger of Player by N;
-		if hunger of Player < 0:
-			now hunger of Player is 0;
+	else:
+		now hunger of Player is 0;
 
 to PlayerHunger (N - number):
 	if hunger of Player < 100:
@@ -137,16 +111,18 @@ to ThirstReset:
 		now thirst of Player is 0;
 
 to PlayerDrink (N - number):
-	if thirst of Player > 0:
-		LineBreak;
-		say "     [bold type]Your thirst is reduced by [N]![roman type][line break]";
-		decrease thirst of Player by N;
-		if thirst of Player < 0:
-			now thirst of Player is 0;
+	if N > 0:
+		if thirst of Player > N:
+			LineBreak;
+			say "     [bold type]Your thirst is reduced by [N]![roman type][line break]";
+			decrease thirst of Player by N;
+		else:
+			ThirstReset;
 
 to PlayerDrink (N - number) silently:
-	decrease thirst of Player by N;
-	if thirst of Player < 0:
+	if thirst of Player > N:
+		decrease thirst of Player by N;
+	else:
 		now thirst of Player is 0;
 
 to PlayerThirst (N - number):
@@ -228,15 +204,16 @@ to PlayerMaxHeal:
 		now HP of Player is MaxHP of Player;
 
 to PlayerHealed (N - number):
-	if N is not 0 and HP of Player < MaxHP of Player:
-		LineBreak;
-		say "     [bold type]Your hitpoints increase by [N]![roman type][line break]";
-		increase HP of Player by N;
-		if HP of Player > MaxHP of Player:
-			now HP of Player is MaxHP of Player;
+	if N > 0:
+		if MaxHP of Player > HP of Player + N:
+			LineBreak;
+			say "     [bold type]Your hitpoints increase by [N]![roman type][line break]";
+			increase HP of Player by N;
+		else:
+			PlayerMaxHeal;
 
 to PlayerWounded (N - number): [wounded, not killed - this won't kill a player]
-	if N is not 0:
+	if N > 0:
 		LineBreak;
 		say "     [bold type]Your hitpoints are reduced by [N]![roman type][line break]";
 		decrease HP of Player by N;
@@ -244,18 +221,19 @@ to PlayerWounded (N - number): [wounded, not killed - this won't kill a player]
 			now HP of Player is 0;
 
 to SanLoss (N - number):
-	if N is not 0:
+	if N > 0:
 		LineBreak;
 		say "     [bold type]Your sanity has decreased by [N]![roman type][line break]";
 		decrease humanity of Player by N;
 
 to SanBoost (N - number):
-	if N is not 0 and humanity of Player < 100:
-		LineBreak;
-		say "     [bold type]Your sanity has increased by [N]![roman type][line break]";
-		increase humanity of Player by N;
-		if humanity of Player > 100:
-			now humanity of Player is 100;
+	if N > 0:
+		if humanity of Player < 100 - N:
+			LineBreak;
+			say "     [bold type]Your sanity has increased by [N]![roman type][line break]";
+			increase humanity of Player by N;
+		else:
+			SanReset;
 
 to SanReset:
 	if humanity of Player < 100:
@@ -263,21 +241,32 @@ to SanReset:
 		say "     [bold type]Your sanity is completely restored![roman type][line break]";
 		now humanity of Player is 100;
 
-to LibidoLoss (N - number):
-	if N is not 0 and Libido of Player > 0:
-		LineBreak;
-		say "     [bold type]Your libido has decreased by [N]![roman type][line break]";
+to raise Player/-- Libido by (N - number):
+	if Libido of Player < 100 - N or inafight is 1:
+		increase Libido of Player by N;
+	else:
+		now Libido of Player is 100;
+
+to lower Player/-- Libido by (N - number):
+	if Libido of Player > N:
 		decrease Libido of Player by N;
-		if Libido of Player < 0:
-			now Libido of Player is 0;
+	else:
+		now Libido of Player is 0;
+
+to LibidoLoss (N - number):
+	if N > 0:
+		if Libido of Player > N:
+			LineBreak;
+			say "     [bold type]Your libido has decreased by [N]![roman type][line break]";
+			decrease Libido of Player by N;
+		else:
+			LibidoReset;
 
 to LibidoBoost (N - number):
-	if N is not 0 and Libido of Player < 100:
+	if N > 0 and Libido of Player < 100:
 		LineBreak;
 		say "     [bold type]Your libido has increased by [N]![roman type][line break]";
-		increase Libido of Player by N;
-		if Libido of Player > 100:
-			now Libido of Player is 100;
+		raise Libido by N;
 
 to LibidoReset:
 	if Libido of Player > 0:
@@ -286,80 +275,87 @@ to LibidoReset:
 		now Libido of Player is 0;
 
 to ScoreLoss (N - number):
-	LineBreak;
-	say "     [bold type]Your score has decreased by [N]![roman type][line break]";
-	decrease the score by N;
+	if N > 0:
+		LineBreak;
+		say "     [bold type]Your score has decreased by [N]![roman type][line break]";
+		decrease the score by N;
 
 to ScoreGain (N - number):
-	LineBreak;
-	say "     [bold type]Your score has increased by [N]![roman type][line break]";
-	increase the score by N;
+	if N > 0:
+		LineBreak;
+		say "     [bold type]Your score has increased by [N]![roman type][line break]";
+		increase the score by N;
 
 to XPGain (N - number):
-	LineBreak;
-	say "     [bold type]You have gained [N] XP![roman type][line break]";
-	increase XP of Player by N;
+	if N > 0:
+		LineBreak;
+		say "     [bold type]You have gained [N] XP![roman type][line break]";
+		increase XP of Player by N;
 
 to CreditLoss (N - number):
-	if freecred > 0:
+	if N > 0 and freecred > 0:
 		LineBreak;
-		say "     [bold type][N] freecred [if N is 1]has[else]have[end if] been deducted from your Zephyr account![roman type][line break]";
-		decrease freecred by N;
-		if freecred < 0:
+		say "     [bold type][if freecred > N][N][else][freecred][end if] freecred [if N is 1]has[else]have[end if] been deducted from your Zephyr account![roman type][line break]";
+		if freecred > N:
+			decrease freecred by N;
+		else:
 			now freecred is 0;
 
 to CreditGain (N - number):
-	LineBreak;
-	say "     [bold type][N] freecred [if N is 1]has[else]have[end if] been added to your Zephyr account![roman type][line break]";
-	increase freecred by N;
+	if N > 0:
+		LineBreak;
+		say "     [bold type][N] freecred [if N is 1]has[else]have[end if] been added to your Zephyr account![roman type][line break]";
+		increase freecred by N;
 
 to FeatLoss (Featname - text):
-	LineBreak;
 	if Featname is listed in feats of Player:
+		LineBreak;
 		say "     [bold type]'[Featname]' has been removed from your feats![roman type][line break]";
 		remove Featname from feats of Player;
-		if Featname is "Sterile":
-			now Sterile of Player is false;
-		else if Featname is "Strong Back":
-			decrease capacity of Player by 50;
-		else if Featname is "Expert Medic":
-			if CurrentMedkitSupplies > 1:
-				decrease CurrentMedkitSupplies by 1;
-		else if Featname is "Vampiric":
-			now vampiric is false;
+		if Featname is:
+			-- "Sterile":
+				now Sterile of Player is false;
+			-- "Strong Back":
+				decrease capacity of Player by 50;
+			-- "Expert Medic":
+				if CurrentMedkitSupplies > 1:
+					decrease CurrentMedkitSupplies by 1;
+			-- "Vampiric":
+				now vampiric is false;
 	else if debugactive is 1:
 		say "ERROR: Trying to remove '[Featname]', which the player does not have.";
 
 to FeatGain (Featname - text):
-	LineBreak;
 	if Featname is not listed in feats of Player:
+		LineBreak;
 		say "     [bold type]'[Featname]' has been added to your feats![roman type][line break]";
 		add Featname to feats of Player;
 		sort feats of Player;
-		if Featname is "City Map":
-			say "[BestowCityMapFeat]";
-		else if Featname is "Sterile":
-			now Sterile of Player is true;
-		else if Featname is "Strong Back":
-			increase capacity of Player by 50;
-		else if Featname is "More Time":
-			extend game by 24;
-		else if Featname is "Hardy":
-			increase MaxHP of Player by 8;
-			increase HP of Player by 8;
-		else if Featname is "Expert Medic":
-			increase CurrentMedkitSupplies by 1;
-		else if Featname is "Instinctive Combat":
-			say "[line break]Having gained the [']Instinctive Combat['] feat, you now have access to the [']Auto Attack['] commands. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.";
-			say "Type [link][bold type]auto attack normal[roman type][end link] for the default method of combat (choose each action). Type [link][bold type]auto attack berserk[roman type][end link] to always attack in combat. Type [link][bold type]auto attack seduce[roman type][end link] to always seduce in combat. Type [link][bold type]auto attack pass[roman type][end link] to always pass in combat. Type [link][bold type]auto attack coward[roman type][end link] to always flee in combat. Type [link][bold type]auto attack submit[roman type][end link] to always submit in combat.";
-			say "You may review these commands at any time by using the [link][bold type]help[roman type][end link] command.";
-		else if Featname is "Vore Predator":
-			say "[line break]Having gained the [']Vore Predator['] feat, you can now access the [link][bold type]vore menu[roman type][end link] command. It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]). It is used for adjusting vore-related game settings.";
-		else if Featname is "Mugger":
-			say "[line break]You will now get a flat rate increase to item drops from monsters based on your perception. This ability can be can turned on or off by using the [link][bold type]mugger[roman type][as]muggering[end link] command and is currently [bold type][if muggerison is true]On[else]Off[end if][roman type].";
-		else if Featname is "Vampiric":
-			say "[line break]You will now recover a small amount of health, thirst and hunger after every victory as you get in a blood-sucking bite after your final blow or at some other point during the victory scene.";
-			now vampiric is true;
+		if Featname is:
+			-- "City Map":
+				say "[BestowCityMapFeat]";
+			-- "Sterile":
+				now Sterile of Player is true;
+			-- "Strong Back":
+				increase capacity of Player by 50;
+			-- "More Time":
+				extend game by 24;
+			-- "Hardy":
+				increase MaxHP of Player by 8;
+				increase HP of Player by 8;
+			-- "Expert Medic":
+				increase CurrentMedkitSupplies by 1;
+			-- "Instinctive Combat":
+				say "[line break]Having gained the [']Instinctive Combat['] feat, you now have access to the [']Auto Attack['] commands. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.";
+				say "Type [link][bold type]auto attack normal[roman type][end link] for the default method of combat (choose each action). Type [link][bold type]auto attack berserk[roman type][end link] to always attack in combat. Type [link][bold type]auto attack seduce[roman type][end link] to always seduce in combat. Type [link][bold type]auto attack pass[roman type][end link] to always pass in combat. Type [link][bold type]auto attack coward[roman type][end link] to always flee in combat. Type [link][bold type]auto attack submit[roman type][end link] to always submit in combat.";
+				say "You may review these commands at any time by using the [link][bold type]help[roman type][end link] command.";
+			-- "Vore Predator":
+				say "[line break]Having gained the [']Vore Predator['] feat, you can now access the [link][bold type]vore menu[roman type][end link] command. It can also be accessed using Trixie's cheat menu ([bold type]iwannacheat[roman type]). It is used for adjusting vore-related game settings.";
+			-- "Mugger":
+				say "[line break]You will now get a flat rate increase to item drops from monsters based on your perception. This ability can be can turned on or off by using the [link][bold type]mugger[roman type][as]muggering[end link] command and is currently [bold type][if muggerison is true]On[else]Off[end if][roman type].";
+			-- "Vampiric":
+				say "[line break]You will now recover a small amount of health, thirst and hunger after every victory as you get in a blood-sucking bite after your final blow or at some other point during the victory scene.";
+				now vampiric is true;
 	else if debugactive is 1:
 		say "ERROR: Trying to add '[Featname]', which the player already has.";
 
@@ -413,12 +409,13 @@ to SubVsDomChange (SDChange - a number) for (SDChar - a person):
 		say "     [bold type][SDChar] becomes more submissive ([SubVsDom of SDChar] in a -100 to 100 range)![roman type][line break]";
 
 to MoraleLoss (N - number):
-	LineBreak;
-	say "     [bold type]Your morale has decreased by [N]![roman type][line break]";
-	decrease morale of Player by N;
+	if N > 0:
+		LineBreak;
+		say "     [bold type]Your morale has decreased by [N]![roman type][line break]";
+		decrease morale of Player by N;
 
 to MoraleBoost (N - number):
-	if morale of Player < 100:
+	if N > 0 and morale of Player < 100:
 		LineBreak;
 		say "     [bold type]Your morale has increased by [N]![roman type][line break]";
 		increase morale of Player by N;
@@ -440,10 +437,8 @@ to BehaviorCount (TraitCountName - text):
 		-- "Vore":
 			increase BehaviorCount_Vore of Player by 1;
 
-
-understand "rename" as PlayerRenaming.
-
 PlayerRenaming is an action applying to nothing.
+understand "rename" as PlayerRenaming.
 
 carry out PlayerRenaming:
 	playernaming; []
@@ -455,9 +450,8 @@ to playernaming:
 	get typed command as playerinput;
 	if "[playerinput]" is not "", now name of Player is playerinput;
 
-understand "observe room/surroundings/--" as ObserveRoom.
-
 ObserveRoom is an action applying to nothing.
+understand "observe room/surroundings/--" as ObserveRoom.
 
 check ObserveRoom:
 	if ObserveAvailable of Location of Player is false, say "Somehow, you feel that there's nothing interesting to observe in this location (yet)." instead;
@@ -465,30 +459,17 @@ check ObserveRoom:
 carry out ObserveRoom:
 	say "[ObserveString of Location of Player]";
 
-understand "SexStats" as SexStatsOverview.
-
 SexStatsOverview is an action applying to nothing.
+understand "SexStats" as SexStatsOverview.
 
 carry out SexStatsOverview:
 	say "Sex Stats:[paragraph break]";
-	if OralVirgin of Player is true:
-		say "You have a [special-style-1]virgin[roman type] mouth.";
-	else:
-		say "Your mouth has seen some use.";
+	say "[if OralVirgin of Player is true]You have a [special-style-1]virgin[roman type] mouth[else]Your mouth has seen some use[end if].";
 	if Player is male:
-		if PenileVirgin of Player is true:
-			say "You have a [special-style-1]virgin[roman type] cock.";
-		else:
-			say "Your cock has seen some use.";
+		say "[if PenileVirgin of Player is true]You have a [special-style-1]virgin[roman type] cock[else]Your cock has seen some use[end if].";
 	if Player is female:
-		if Virgin of Player is true:
-			say "You have a [special-style-1]virgin[roman type] pussy.";
-		else:
-			say "Your pussy has seen some use.";
-	if AnalVirgin of Player is true:
-		say "You have a [special-style-1]virgin[roman type] ass.";
-	else:
-		say "Your asshole has seen some use.";
+		say "[if Virgin of Player is true]You have a [special-style-1]virgin[roman type] pussy[else]Your pussy has seen some use[end if].";
+	say "[if AnalVirgin of Player is true]You have a [special-style-1]virgin[roman type] ass[else]Your asshole has seen some use[end if].";
 	LineBreak;
 	say "Since the beginning of the nanite apocalypse, you have had the following sexual encounters:[Line Break]";
 	say "[OralPussyGiven of Player] times having your pussy orally pleasured, making you [SexP OralPussyGiven of Player] at receiving pussy oral.";
@@ -518,9 +499,8 @@ to say SexP (N - number):
 	else:
 		say "a [special-style-1]legendary [one of]pornstar[or]sex machine[at random][roman type]";
 
-understand "testNPCSexAftermath" as NPCSexAftermathAction.
-
 NPCSexAftermathAction is an action applying to nothing.
+understand "testNPCSexAftermath" as NPCSexAftermathAction.
 
 carry out NPCSexAftermathAction:
 	if AnalVirgin of Player is true:
@@ -836,9 +816,8 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 	now Lastfuck of GivingChar is turns;
 	now Lastfuck of TakingChar is turns;
 
-understand "testCreatureSexAftermath" as CreatureSexAftermathAction.
-
 CreatureSexAftermathAction is an action applying to nothing.
+understand "testCreatureSexAftermath" as CreatureSexAftermathAction.
 
 carry out CreatureSexAftermathAction:
 	say "Testing: Alpha Husky fucks player:";
@@ -1100,7 +1079,6 @@ carry out StatLossAction:
 to say NonCombatError:
 	say "ERROR! This is a noncombat creature that you should never see in a fight. Please report how you saw this on the FS Discord or Forum.";
 
-
 HighestPlayerStat is a text that varies.
 
 to FindHighestPlayerStat:
@@ -1157,24 +1135,24 @@ to wield ( x - a grab object ) silence state is (Silence - a number):
 				now weapon type of Player is weapon type of x;
 		if Silence is 0:
 			if (ScaleValue of Player - objsize of x) is:
-			-- 4: [4 size categories difference - huge player (5), size 1 weapon]
-				say "     [bold type]You try to ready your [x], but there really is no way you could realistically use this in combat![roman type][line break]";
-			-- 3: [3 categories difference]
-				say "     [bold type]You try to ready your [x], but there really is no way you could realistically use this in combat![roman type][line break]";
-			-- 2: [2 categories difference]
-				say "     [bold type]Carefully taking the far too small [x] in one hand, you can't help but ask yourself if this won't hinder more than help in a fight.[roman type][line break]";
-			-- 1: [1 category difference]
-				say "     [bold type]You grab the [x] with your comparatively large hand, finding it somewhat uncomfortable to wield.[roman type][line break]";
-			-- 0: [proper size for the player]
-				say "     [bold type]You ready your [x].[roman type][line break]";
-			-- -1: [1 categories difference]
-				say "     [bold type]You grab your [x] with your comparatively small hand, finding it somewhat uncomfortable to wield.[roman type][line break]";
-			-- -2: [2 categories difference]
-				say "     [bold type]Clutching onto your [x] with both hands, you have trouble controlling its momentum. This will be intensely difficult to use.[roman type][line break]";
-			-- -3: [3 categories difference]
-				say "     [bold type]Trying to use your [x] as a weapon is fairly ridiculous, given your size.[roman type][line break]";
-			-- -4: [4 size categories difference - tiny player (1), size 5 weapon]
-				say "     [bold type]There is simply no way you could use your [x] as a weapon, given your small stature.[roman type][line break]";
+				-- 4: [4 size categories difference - huge player (5), size 1 weapon]
+					say "     [bold type]You try to ready your [x], but there really is no way you could realistically use this in combat![roman type][line break]";
+				-- 3: [3 categories difference]
+					say "     [bold type]You try to ready your [x], but there really is no way you could realistically use this in combat![roman type][line break]";
+				-- 2: [2 categories difference]
+					say "     [bold type]Carefully taking the far too small [x] in one hand, you can't help but ask yourself if this won't hinder more than help in a fight.[roman type][line break]";
+				-- 1: [1 category difference]
+					say "     [bold type]You grab the [x] with your comparatively large hand, finding it somewhat uncomfortable to wield.[roman type][line break]";
+				-- 0: [proper size for the player]
+					say "     [bold type]You ready your [x].[roman type][line break]";
+				-- -1: [1 categories difference]
+					say "     [bold type]You grab your [x] with your comparatively small hand, finding it somewhat uncomfortable to wield.[roman type][line break]";
+				-- -2: [2 categories difference]
+					say "     [bold type]Clutching onto your [x] with both hands, you have trouble controlling its momentum. This will be intensely difficult to use.[roman type][line break]";
+				-- -3: [3 categories difference]
+					say "     [bold type]Trying to use your [x] as a weapon is fairly ridiculous, given your size.[roman type][line break]";
+				-- -4: [4 size categories difference - tiny player (1), size 5 weapon]
+					say "     [bold type]There is simply no way you could use your [x] as a weapon, given your small stature.[roman type][line break]";
 
 Section 2 - Stripping
 
@@ -1222,7 +1200,6 @@ to say StripCrotch:
 			else:
 				say "[CrotchItem] and bares";
 		say " your crotch";
-
 
 [
 understand "zTSelfStripCrotch" as SSCRAction.
@@ -1276,7 +1253,6 @@ SDCRAction is an action applying to nothing.
 
 carry out SDCRAction:
 	say "[SelfDressCrotch]";
-
 
 Example Use:
 say "     You [SelfDressCrotch], then get ready to move out again.";
@@ -1470,7 +1446,6 @@ SDCAction is an action applying to nothing.
 carry out SDCAction:
 	say "[SelfDressChest]";
 
-
 Example Use:
 say "     You [SelfDressChest], then get ready to move out again.";
 ]
@@ -1574,26 +1549,6 @@ to say feetDesc:
 	else:
 		say "[FeetItem]";
 
-To MultiInfect (x - text) repeats (repeatCount - number):
-	if scenario is "Researcher" and researchbypass is 0:
-		vialchance x;
-		continue the action;
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry exactly matches the text x, case insensitively:
-			now MonsterID is y;
-			let reset be 0;
-			if researchbypass is 1 and non-infectious entry is true:
-				now reset is 1;
-				now non-infectious entry is false;
-			let repeatVar be 0;
-			while repeatVar < repeatCount:
-				infect;
-				increase repeatVar by 1;
-			if reset is 1:
-				now non-infectious entry is true;
-			break;
-
 to say nameOrDefault:
 	if Player is defaultnamed:
 		if Player is male:
@@ -1602,7 +1557,6 @@ to say nameOrDefault:
 			say "[one of]girl[or]babe[or]sweetie[at random]";
 	else:
 		say "[name of Player]";
-
 
 [Used to break up large blocks of introduction reactions when a new npc is introduced in the library, etc.]
 IntroReactionCounter is a number that varies. [@Tag:NotSaved]
@@ -1613,7 +1567,6 @@ to WaitBreakReactions:
 		WaitLineBreak;
 	else:
 		LineBreak;
-
 
 [These are a series of ability checks that can be used to simplify the process of a standard ability check.
 This code can be copied and customized for any special use cases in situations and events. The difficulty can
@@ -1695,7 +1648,5 @@ to decide which text is what the player chooses from (choices - a list of text):
 					say "[link][choice order][end link] to select '[option]', ";
 				increase choice order by 1;
 	decide on entry calcnumber of choices;
-
-
 
 Basic Functions ends here.

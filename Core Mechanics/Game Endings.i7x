@@ -109,10 +109,10 @@ to decide if all of the/-- endings in ( Endings - a list of texts ) are triggere
 	decide yes;
 ]
 
+vetcheater is a number that varies.
+
 vetcheat is an action applying to nothing.
 understand "i am a pro" as vetcheat.
-
-vetcheater is a number that varies.
 
 check vetcheat:
 	if vetcheater is not 0:
@@ -174,7 +174,6 @@ when play ends:
 	say "https://flexiblesurvival.com[line break]";
 	say "Once you have a character, click [']direct control['], and we'll be there, waiting to give a hand!";
 	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2222";
-
 
 to ratetheplayer:
 	if GenderLock is 1 and score > 0:

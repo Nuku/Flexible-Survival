@@ -16,8 +16,8 @@ emap is a number that varies. emap is usually 0.
 zpc_inzone is a truth state that varies. zpc_inzone is false.
 [ true if Player is currenting displaying an image. This is referenced to display the no signal 'error' message when the player leaves ]
 
-zpc_Zc is a number that varies.[true if players location is listed on table of Zpc Location reference]
-zpc_Zf is a figure name that varies.[@Tag:NotSaved][contains the Icon entry of the figure to be displayed]
+zpc_Zc is a number that varies.[@Tag:NotSaved] [true if players location is listed on table of Zpc Location reference]
+zpc_Zf is a figure name that varies.[@Tag:NotSaved] [contains the Icon entry of the figure to be displayed]
 
 Section 2 - Master Referencing Table
 
@@ -434,7 +434,6 @@ name	desc	weight	object
 to say zpcdesc:
 	say "     The Zephyr Personal Communicator is essentially a slightly oversized smartphone. It is a surprisingly sleek piece of technology that almost feels out of place considering the environment around you, no doubt a display of Zephyr's dominance and power. Flipping the device over, you notice that its white rubber back is lined with solar panels. It seems that you don't have to worry about charging the device. The onyx black front display is smooth and glossy save for the Zephyr company logo on the top. You see a small orange button on the side of the device. Perhaps you could try to [bold type]use the ZPC[roman type]? ";
 
-
 zpc is a grab object. zpc is not temporary.
 understand "zephyr personal communicator" as zpc.
 
@@ -464,14 +463,14 @@ to say zpc_use:
 			if debug is at level 2:
 				say "Following the ngraphics_blank rule";
 			follow the ngraphics_blank rule; [clear pic after WLB user response]
-		else if zpc_Zc is 1:
+		else:
 			say "     The device will now track and display your current location, until you exit the satellite coverage region. If you wish to terminate tracking while still in the coverage region, simply switch the device off.";
 			now emap is 1;
 			AttemptToWait;
 			if debug is at level 2:
 				say "Following the zpc_lookoverride rule.";
 			follow the zpc_lookoverride rule; [fill with respective pic]
-	else if emap is 1:
+	else:
 		project the figure of emap_special_shutdown_icon; [off]
 		say "     After holding the power button for a few seconds, the display fades out as an accompanying chime completes its shutdown.";
 		now emap is 0;
@@ -479,8 +478,6 @@ to say zpc_use:
 		if debug is at level 2:
 			say "Following the ngraphics_blank rule";
 		follow the ngraphics_blank rule; [clear pic after WLB user response]
-
-
 
 Section 4.1 - Internal functions
 
@@ -513,6 +510,7 @@ Section 6 - DEBUG - Not for release
 [Cheat for enabling variable]
 cheat_emap is an action applying to nothing.
 understand "emap_cheat" as cheat_emap.
+
 carry out cheat_emap:
 	say "CHEAT: Map Navigation is now enabled (emap = 1)";
 	now emap is 1;
@@ -520,6 +518,7 @@ carry out cheat_emap:
 [Cheat that gives ZPC]
 cheat_zpc_give is an action applying to nothing.
 understand "zpc_cheat" as cheat_zpc_give.
+
 carry out cheat_zpc_give:
 	say "CHEAT: ZPC added to inventory";
 	ItemGain zpc by 1;
@@ -527,9 +526,9 @@ carry out cheat_zpc_give:
 [Cheat that gives freecred]
 cheat_freecred_give is an action applying to nothing.
 understand "freecred_cheat" as cheat_freecred_give.
+
 carry out cheat_freecred_give:
 	say "CHEAT: Added 100 freecred.";
 	increase freecred by 200;
-
 
 Zephyr Phone ends here.

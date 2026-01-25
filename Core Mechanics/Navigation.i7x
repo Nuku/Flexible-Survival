@@ -142,7 +142,6 @@ to AddNavPoint (RoomObj - room) silence state is (Silence - a number):
 				say "[line break][bold type]['][printed name of RoomObj]['][roman type] has been added to your list of available navpoints. You will now be able to [bold type]navigate[roman type] there from any of the fast travel locations in the city by using the command [bold type]nav [printed name of RoomObj][roman type].";
 
 destinationcheck is an action applying to nothing.
-
 understand "navigate" as destinationcheck.
 understand "nav" as destinationcheck.
 
@@ -238,7 +237,6 @@ carry out destinationcheck:
 	LineBreak;
 
 navigating is an action applying to one thing.
-
 understand "navigate to/-- [any known fasttravel room]" as navigating.
 understand "nav to/-- [any known fasttravel room]" as navigating.
 understand "travel to/-- [any known fasttravel room]" as navigating.
@@ -274,7 +272,7 @@ carry out navigating:
 	NavInEvent_Check noun;
 	now inasituation is false; [cleaning up possible open ended flags]
 
-NavCheckReturn is a truth state that varies.
+NavCheckReturn is a truth state that varies.[@Tag:NotSaved]
 
 to say NavCheck (CheckRoom - a room): [check if a nav attempt can go through]
 	if debugactive is 1:

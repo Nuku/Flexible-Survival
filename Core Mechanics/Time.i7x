@@ -10,7 +10,7 @@ TimekeepingVar is a number that varies. [helps determine which turn in a given d
 Lastjournaluse is a number that varies. Lastjournaluse is usually 248.
 skipturnblocker is a number that varies.
 balloversize is a number that varies.
-restoration is a number that varies. [part of the "Physical Booster" feat]
+restoration is a number that varies.[@Tag:NotSaved] [part of the "Physical Booster" feat]
 TurnsCount is a number that varies. TurnsCount is usually 0.[Represents the number of turns that have passed]
 
 [Default starting date is 2008-04-11]
@@ -28,25 +28,25 @@ This is the turnpass rule:
 	now showlocale is true;
 	if the story has ended:
 		rule succeeds;
+	say "[run paragraph on]";
 	follow the cock descr rule;
-	if "Sanity Saver" is listed in the feats of Player:
-		now humanity of Player is 100;
 	follow the cunt descr rule;
 	follow the breast descr rule;
+	if "Sanity Saver" is listed in the feats of Player:
+		now humanity of Player is 100;
 	if HP of Velos > 2:
 		if Velos is not in the Location of Player:		[traveling w/player]
 			now Velos is in the Location of Player;
 	if Breast Size of Player > 26, now Breast Size of Player is 26;
 	let oldlib be Libido of Player;
 	if Libido of Player < 100 and "Horny Bastard" is listed in feats of Player:
-		increase Libido of Player by square root of ( 55 - ( Libido of Player / 2 ) );
-		if Libido of Player > 100, now Libido of Player is 100;
+		raise Player Libido by square root of ( 55 - ( Libido of Player / 2 ) );
 	if Libido of Player > 20 and "Cold Fish" is listed in feats of Player and Libido of Player < 100:
 		decrease Libido of Player by square root of ( Libido of Player - 15 );
 	if oldlib < 80 and Libido of Player > 79:
-		say "You now have trouble thinking of anything but sexual satisfaction![no line break][if Player is male] Your cock[smn] [ismv] fully erect constantly and drool[smv] precum steadily.[no line break][end if][if Player is female] Your cunt[sfn] overflow[sfv] with hot juices that run down your thighs.[no line break][end if][line break]";
+		say "[line break]You now have trouble thinking of anything but sexual satisfaction![no line break][if Player is male] Your cock[smn] [ismv] fully erect constantly and drool[smv] precum steadily.[no line break][end if][if Player is female] Your cunt[sfn] overflow[sfv] with hot juices that run down your thighs.[no line break][end if][line break]";
 	else if oldlib < 50 and Libido of Player > 49:
-		say "Your thoughts have sunk to almost constant depravity![no line break][if Player is male] Your cock[smn] remain[smv] perpetually hard and leaking precum.[no line break][end if][if Cunt Count of Player is 1] Your cunt[sfn] [isfv] hot and dripping juices as your arousal builds.[no line break][end if][line break]";
+		say "[line break]Your thoughts have sunk to almost constant depravity![no line break][if Player is male] Your cock[smn] remain[smv] perpetually hard and leaking precum.[no line break][end if][if Cunt Count of Player is 1] Your cunt[sfn] [isfv] hot and dripping juices as your arousal builds.[no line break][end if][line break]";
 	if hunger of Player < 0, now hunger of Player is 0;
 	if thirst of Player < 0, now thirst of Player is 0;
 	if HP of Player < MaxHP of Player and NoHealMode is false:
@@ -70,56 +70,60 @@ This is the turnpass rule:
 				choose row y from the Table of Random Critters;
 				if Name entry exactly matches the text BodyName of Player, case insensitively:
 					if ( there is no resbypass in row y of Table of Random Critters or resbypass entry is false ) and ( there is no non-infectious in row y of Table of Random Critters or non-infectious entry is false ):
-						say "You can feel the nanites inside you working voraciously to convert your flesh to one whole form.";
+						now monstermemory is MonsterID;
+						now MonsterID is y;
+						say "[line break]You can feel the nanites inside you working voraciously to convert your flesh to one whole form.";
 						now researchbypass is 1;
 						infect;
 						now researchbypass is 0;
+						now MonsterID is monstermemory;
 					break;
 	if "Passing Grade Chest" is listed in feats of Player and Breast Size of Player > 4:
 		now Breast Size of Player is 4;
-		say "You feel the pressure in your chest suddenly abate with a rush of relief.";
+		say "[line break]You feel the pressure in your chest suddenly abate with a rush of relief.";
 	if "Always Cocky" is listed in feats of Player and Cock Count of Player is 0:
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 5;
 		now Ball Size of Player is 3;
-		say "You feel a pressure at your groin that soon bursts forth as a brand new cock. This [Cock of Player] shaft spurts and dribbles with cum from its orgasmic formation.";
+		say "[line break]You feel a pressure at your groin that soon bursts forth as a brand new cock. This [Cock of Player] shaft spurts and dribbles with cum from its orgasmic formation.";
 	else if "Always A Pussy" is listed in feats of Player and Cunt Count of Player is 0:
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 5;
 		now Cunt Tightness of Player is 3;
-		say "You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy. This dripping cunny is sopping with feminine juices from its orgasmic formation.";
+		say "[line break]You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy. This dripping cunny is sopping with feminine juices from its orgasmic formation.";
 	if balloversize is 0:
 		if ( scalevalue of Player is 1 or scalevalue of Player is 2 ) and Ball Size of Player >= 4:
 			if CockName of Player is not "Tanuki" and player is not internalBalls:
 				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
 				now balloversize is 1 + (dexterity of Player / 10 );
-				say "Your balls, so huge when compared to your [Body Size Adjective of Player] frame, are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
+				say "[line break]Your balls, so huge when compared to your [Body Size Adjective of Player] frame, are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
 		else if ( scalevalue of Player is 3 or scalevalue of Player is 4 ) and Ball Size of Player >= 6:
 			if CockName of Player is not "Tanuki" and player is not internalBalls:
 				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
 				now balloversize is 1 + (dexterity of Player / 10 );
-				say "Your balls are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
+				say "[line break]Your balls are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
 		else if Ball Size of Player >= 7:
 			if CockName of Player is not "Tanuki" and player is not internalBalls:
 				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
 				now balloversize is 1 + (dexterity of Player / 10 );
-				say "Your balls, huge even when compared to your huge frame, are so massive and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
+				say "[line break]Your balls, huge even when compared to your huge frame, are so massive and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
 	else:
 		if ( ( scalevalue of Player is 1 or scalevalue of Player is 2 ) and Ball Size of Player < 4 ) or ( ( scalevalue of Player is 3 or scalevalue of Player is 4 ) and Ball Size of Player < 6 ) or ( scalevalue of Player > 4 and Ball Size of Player < 7 ):
 			increase dexterity of Player by balloversize;
 			now balloversize is 0;
-			say "Your balls, no longer quite so huge compared to your [if scalevalue of Player is not 3][Body Size Adjective of Player] [end if]body, no longer hinder you. Your legs definitely feel better for not having to carry such a heavy weight anymore.";
+			say "[line break]Your balls, no longer quite so huge compared to your [if scalevalue of Player is not 3][Body Size Adjective of Player] [end if]body, no longer hinder you. Your legs definitely feel better for not having to carry such a heavy weight anymore.";
 		else if CockName of Player is "Tanuki":
 			increase dexterity of Player by balloversize;
 			now balloversize is 0;
-			say "Your mystical, Tanuki nature allows you to carry your oversized balls with ease, no longer hindered by their massive size.";
+			say "[line break]Your mystical, Tanuki nature allows you to carry your oversized balls with ease, no longer hindered by their massive size.";
 		else if Player is internalBalls:
 			increase dexterity of Player by balloversize;
 			now balloversize is 0;
-			say "Your massive balls, having become internalized, no longer hinder your movement quite so much. You can still feel them there, heavily resting inside you, but they're no longer in the way at least.";
+			say "[line break]Your massive balls, having become internalized, no longer hinder your movement quite so much. You can still feel them there, heavily resting inside you, but they're no longer in the way at least.";
+	say "[run paragraph on]";
 	follow the check heat rule;
 	if Libido of Player >= 99 and humanity of Player > 0 and skipturnblocker is 0:
-		say "[spontaneousorgasm]";
+		say "[line break][spontaneousorgasm]";
 		decrease humanity of Player by a random number between 1 and 2;
 		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
 		now Libido of Player is 75;
@@ -140,7 +144,7 @@ This is the turnpass rule:
 		increase thirst of Player by 3;
 		if number of filled rows in Table of PlayerChildren > 0, increase thirst of Player by 1;
 		if "Spartan Diet" is listed in feats of Player and thirst of Player > 0:
-			PlayerDrink 1 silently;
+			decrease thirst of Player by 1;
 	if "Automatic Survival" is listed in feats of Player:
 		now thirst of Player is 0;
 		now hunger of Player is 0;
@@ -148,74 +152,71 @@ This is the turnpass rule:
 		if "Perky" is listed in feats of Player:
 			increase morale of Player by 1;
 		now restoration is 0;
-		if "Physical Booster" is listed in feats of Player and wrcursestatus is not 5:
-			if Strength of Player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+		if "Physical Booster" is listed in feats of Player and wrcursestatus is not 5 and restoration is 0:
+			if Strength of Player < 14 and a random chance of 1 in 2 succeeds:
 				increase Strength of Player by 1;
 				increase capacity of Player by 5;
-				increase hunger of Player by 6;
-				say "Your body strives to restore its lost might and rebuilds your muscles. Your stomach grumbles with hunger at this sudden effort. [bold type]Strength increased by 1.[roman type][line break]";
+				say "[line break]Your body strives to restore its lost might and rebuilds your muscles. Your stomach grumbles with hunger at this sudden effort. [bold type]Strength increased by 1.[roman type][line break]";
 				now restoration is 1;
-			if Stamina of Player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+			else if Stamina of Player < 14 and a random chance of 1 in 2 succeeds:
 				increase Stamina of Player by 1;
 				if remainder after dividing stamina of Player by 2 is 0:
 					increase MaxHP of Player by level of Player plus 1;
-				increase hunger of Player by 6;
-				say "Your body strives to restore its lost hardiness and toughens your body. Your stomach grumbles with hunger at this sudden effort. [bold type]Stamina increased by 1.[roman type][line break]";
+				say "[line break]Your body strives to restore its lost hardiness and toughens your body. Your stomach grumbles with hunger at this sudden effort. [bold type]Stamina increased by 1.[roman type][line break]";
 				now restoration is 1;
-			if Dexterity of Player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+			else if Dexterity of Player < 14 and a random chance of 1 in 2 succeeds:
 				increase Dexterity of Player by 1;
+				say "[line break]Your body strives to regain its lost agility and restores your flexibility. Your stomach grumbles with hunger at this sudden effort. [bold type]Dexterity increased by 1.[roman type][line break]";
+				now restoration is 1;
+			if restoration is 1 and "Automatic Survival" is not listed in feats of Player:
 				increase hunger of Player by 6;
-				say "Your body strives to regain its lost agility and restores your flexibility. Your stomach grumbles with hunger at this sudden effort. [bold type]Dexterity increased by 1.[roman type][line break]";
-				now restoration is 1;
-		if "Mental Booster" is listed in feats of Player and wrcursestatus is not 5:
-			if Intelligence of Player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+		if "Mental Booster" is listed in feats of Player and wrcursestatus is not 5 and restoration is 0:
+			if Intelligence of Player < 14 and a random chance of 1 in 2 succeeds:
 				increase Intelligence of Player by 1;
-				increase hunger of Player by 3;
-				increase thirst of Player by 5;
-				say "Your body strives to restore your mental functions. Your stomach churns and you sweat profusely from the effort of this process. [bold type]Intelligence increased by 1.[roman type][line break]";
+				say "[line break]Your body strives to restore your mental functions. Your stomach churns and you sweat profusely from the effort of this process. [bold type]Intelligence increased by 1.[roman type][line break]";
 				now restoration is 1;
-			if Charisma of Player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+			else if Charisma of Player < 14 and a random chance of 1 in 2 succeeds:
 				increase Charisma of Player by 1;
-				increase hunger of Player by 3;
-				increase thirst of Player by 5;
 				now restoration is 1;
-				say "Your body strives to restore your natural charm and allure. Your stomach churns and you sweat profusely from the effort of this process. [bold type]Charisma increased by 1.[roman type][line break]";
+				say "[line break]Your body strives to restore your natural charm and allure. Your stomach churns and you sweat profusely from the effort of this process. [bold type]Charisma increased by 1.[roman type][line break]";
 				now restoration is 1;
-			if Perception of Player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+			else if Perception of Player < 14 and a random chance of 1 in 2 succeeds:
 				increase Perception of Player by 1;
+				say "[line break]Your body strives to restore your enhanced perceptive abilities. Your stomach churns and you sweat profusely from the effort of this process. [bold type]Perception increased by 1.[roman type][line break]";
+				now restoration is 1;
+			if restoration is 1 and "Automatic Survival" is not listed in feats of Player:
 				increase hunger of Player by 3;
 				increase thirst of Player by 5;
-				say "Your body strives to restore your enhanced perceptive abilities. Your stomach churns and you sweat profusely from the effort of this process. [bold type]Perception increased by 1.[roman type][line break]";
-				now restoration is 1;
-		LineBreak;
-		if hunger of Player > 90:
-			say "You will die if you don't eat soon.";
-		else if hunger of Player > 50:
-			say "Your stomach feels like a black hole of pain.";
-		else if hunger of Player > 30:
-			say "You're famished.";
-		else if hunger of Player > 3:
-			say "You feel a little hungry.";
-		if hunger of Player > 30:
-			decrease Morale of Player by ( hunger of Player minus 30 ) divided by 5;
-			if hunger of Player > 99:
-				now HP of Player is -9999;
-				end the story saying "You have died of hunger.";
-		if thirst of Player > 90:
-			say "You will die if you don't drink something soon.";
-		else if thirst of Player > 50:
-			say "Your throat is parched and your lips cracking.";
-		else if thirst of Player > 30:
-			say "You're really thirsty!";
-		else if thirst of Player > 12:
-			say "You feel a little thirsty.";
-		if thirst of Player > 30:
-			decrease Morale of Player by ( thirst of Player minus 30 ) divided by 5;
-			if thirst of Player > 99:
-				now HP of Player is -9999;
-				end the story saying "You have died of thirst.";
-		if hunger of Player > 50 or thirst of Player > 50:
-			say "Maybe you should [bold type]scavenge[roman type] for food! Go to a quick travel location and find something quick.";
+		if hunger of Player > 3 or thirst of Player > 12:
+			LineBreak;
+			if hunger of Player > 90:
+				say "You will die if you don't eat soon.";
+			else if hunger of Player > 50:
+				say "Your stomach feels like a black hole of pain.";
+			else if hunger of Player > 30:
+				say "You're famished.";
+			else if hunger of Player > 3:
+				say "You feel a little hungry.";
+			if hunger of Player > 30:
+				decrease Morale of Player by ( hunger of Player minus 30 ) divided by 5;
+				if hunger of Player > 99:
+					now HP of Player is -9999;
+					end the story saying "You have died of hunger.";
+			if thirst of Player > 90:
+				say "You will die if you don't drink something soon.";
+			else if thirst of Player > 50:
+				say "Your throat is parched and your lips cracking.";
+			else if thirst of Player > 30:
+				say "You're really thirsty!";
+			else if thirst of Player > 12:
+				say "You feel a little thirsty.";
+			if thirst of Player > 30:
+				decrease Morale of Player by ( thirst of Player minus 30 ) divided by 5;
+				if thirst of Player > 99:
+					now HP of Player is -9999;
+					end the story saying "You have died of thirst.";
+			if hunger of Player > 50 or thirst of Player > 50:
+				say "Maybe you should [bold type]scavenge[roman type] for food! Go to a quick travel location and find something quick.";
 		let maxmorale be ( Charisma of Player plus Perception of Player );
 		let moralereset be ( maxmorale plus Level of Player );
 		if "Perky" is listed in feats of Player:
@@ -226,8 +227,8 @@ This is the turnpass rule:
 			if SP > 20, now SP is 20;
 			increase moralereset by SP;
 			increase maxmorale by SP;
-		else if Morale of Player > moralereset:
-			say "The rush of giddiness leaves you as your morale normalizes, leaving you feeling confident but no longer manic.";
+		if Morale of Player > moralereset:
+			say "[line break]The rush of giddiness leaves you as your morale normalizes, leaving you feeling confident but no longer manic.";
 			now Morale of Player is maxmorale;
 	let corruption be 0;
 	if SkinName of Player is not "Human", increase corruption by a random number from 0 to 1;
@@ -245,8 +246,9 @@ This is the turnpass rule:
 		decrease corruption by a random number from 0 to ( ( Charisma of Player minus 10) divided by 2 );
 	if corruption > 0:
 		decrease Humanity of Player by corruption;
+		say "[run paragraph on]";
 		follow the brain descr rule;
-		say "The nanites inside you work at rewiring your stubborn brain, leaving you with [descr] ([humanity of Player]/100)[line break]";
+		say "[line break]The nanites inside you work at rewiring your stubborn brain, leaving you with [descr] ([humanity of Player]/100)[line break]";
 		if humanity of Player < 50:
 			say "Maybe you should [bold type]use[roman type] that [bold type]journal[roman type] to help collect your thoughts.";
 	pregprotocol; [Moved to pregnancy in core mechanics]
@@ -257,9 +259,11 @@ This is the turnpass rule:
 	if ( turns minus targetturns ) <= 0 and playon is 0 and skipturnblocker is 0:
 		end the story saying "You survived until the rescue came.";
 	else if ( turns minus targetturns ) < 20 and a random chance of 1 in 3 succeeds and skipturnblocker is 0 and playon is 0:
-		say "[one of]You see an airplane soar overhead at jet speeds.[or]A peek from a roof shows what looks like some kind of vehicle approaching the city.[or]You have an unending sense of anticipation.[or]It's all coming to a close soon, just hang in there![at random]";
+		say "[line break][one of]You see an airplane soar overhead at jet speeds.[or]A peek from a roof shows what looks like some kind of vehicle approaching the city.[or]You have an unending sense of anticipation.[or]It's all coming to a close soon, just hang in there![at random]";
+	[say "[run paragraph on]";]
 	follow the everyturn rules;
 	now inasituation is false; [cleaning up possible open ended flags]
+	[say "";]
 	rule succeeds;
 
 Part 2 - Time Functions
@@ -394,7 +398,7 @@ an everyturn rule:
 			if HP of Blake > 50 and HP of Blake < 90 and a random chance of 1 in 2 succeeds and Energy of Blake < 9: [Blake whoring]
 				increase Energy of Blake by 1; [add on one profit share of whoring him out]
 		now LastTurnDay is true;
-	else if daytimer is night: [currently night]
+	else: [currently night]
 		if LastTurnDay is true: [last turn was day]
 			say "[bold type]The sun sets and darkness covers the city.[roman type][line break]";
 		now LastTurnDay is false;
@@ -625,20 +629,24 @@ Chapter 8 - Endless Play
 Playing on is an action applying to nothing.
 understand "play on" as playing on.
 
+check playing on:
+	if playon is 1, say "You are already in extended play mode. The rescue will never come." instead;
+
 carry out playing on:
 	now playon is 1;
 	say "You are now in extended play mode. The rescue will never come.";
 
 Chapter 9 - Early End
 
-Early Birding is an action applying to nothing.
-understand "end now" and "end game" as early birding.
 quitter is a number that varies.
 
+Early Birding is an action applying to nothing.
+understand "end now" and "end game" as early birding.
+
+check early birding:
+	if playon is 1, say "You are already in play on mode. There is no rescue to wait for." instead;
+
 carry out early birding:
-	if playon is 1:
-		say "You are already in play on mode. There is no rescue to wait for.";
-		stop the action;
 	decrease the score by 100;
 	now quitter is 1;
 	end the story saying "You waited for rescue.";

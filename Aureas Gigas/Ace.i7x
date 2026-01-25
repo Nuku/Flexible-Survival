@@ -190,20 +190,19 @@ to say AceSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Suck Ace off"):
-					say "[AceSex1]";
-				else if (nam is "Take Ace's shaft in your pussy"):
-					say "[AceSex2]";
-				wait for any key;
+				if title entry is:
+					-- "Suck Ace off":
+						say "[AceSex1]";
+					-- "Take Ace's shaft in your pussy":
+						say "[AceSex2]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the anthro bird, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say AceSex1: [oral on Ace]

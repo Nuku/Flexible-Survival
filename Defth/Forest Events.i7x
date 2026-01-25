@@ -10,6 +10,7 @@ Small Cave is a situation.
 ResolveFunction of Small Cave is "[ResolveEvent Small Cave]".
 Sarea of Small Cave is "Forest".
 Level of Small Cave is 5.
+
 When play begins:
 	add Small Cave to BadSpots of HermList;
 	add Small Cave to BadSpots of FeralList;
@@ -51,7 +52,6 @@ to say ResolveEvent Small Cave:
 					else:
 						LineBreak;
 						say "     It doesn't matter now. You just travel down her digestive system until you finally fall into her stomach. The place is deserted, as you would expect. There are no signs of any other meal, so it looks like you have the place all to yourself. Her stomach grumbles and presses against you. Looks like this is the end. There is now only one way out, and you won't experience it alive...";
-						wait for any key;
 						now battleground is "void";
 						the Player was ended by "Shrinking Shrooms eaten alive";
 						trigger ending "Player has died";
@@ -73,11 +73,10 @@ to say ResolveEvent Small Cave:
 					else:
 						LineBreak;
 						say "     You keep traveling down to her balls, your curious mind pushing you to know what is going to happen. Her flesh tightens around you with the pleasure coming from her prostate, and even some semen stains your body, but it's not enough to push you out. You keep traveling inwards until you are in her balls, swimming in her cum. The taste of cum is everything you can discern right now. You push against the flesh, but it doesn't look like it will do anything anymore. Right now, the only thing you can do is wait for the end as you're turned into cum inside some feline's ball...";
-						wait for any key;
 						now battleground is "void";
-						the Player was ended by "Shrinking Shrooms eaten alive";
+						the Player was ended by "Cock Vore by Cougar";
 						trigger ending "Player has died";
-						end the story saying "You were eaten alive!";
+						end the story saying "You just got melted into cum while stuck inside some feline's balls.";
 						now Small cave is resolved;
 		else:
 			LineBreak;

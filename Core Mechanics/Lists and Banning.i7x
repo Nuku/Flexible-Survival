@@ -149,20 +149,19 @@ to new ban menu:
 		say "[bold type]Select which categories you want banned/warded:[roman type][line break]";
 		say "[bold type]Warding or banning a category will permanently disable any associated events. Warding a category will mean you can only find a matching monster by hunting for them, while banning removes them from the game entirely.[roman type][line break]";
 		say "[bold type](Banning/warding is sure to choke off MANY threads of the story and quests as well. Use with caution. You have been warned.)[roman type][line break]";
-		say "[line break][bold type]FLAGS[roman type][line break]";
+		say "[line break][bold type]Flags:[roman type][line break]";
 		while countnumber <= number of entries in FlagList:
 			linkfind "[countnumber]";
 			say "[set link hyperindex][countnumber] - [entry countnumber of FlagList][terminate link]: ";
 			bancheck entry countnumber of FlagList;
 			increase countnumber by 1;
-		say "[line break][bold type]TAGS[roman type][line break]";
+		say "[line break][bold type]Tags:[roman type][line break]";
 		while countnumber <= (number of entries in FlagList + number of entries in TagList):
 			linkfind "[countnumber]";
 			say "[set link hyperindex][countnumber] - [entry (countnumber - number of entries in FlagList) of TagList][terminate link]: ";
 			bancheck entry (countnumber - number of entries in FlagList) of TagList;
 			increase countnumber by 1;
-		say "[line break]";
-		say "(0) [link]Return to main menu[as]0[end link][line break]";
+		say "[line break](0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-[countnumber - 1])> [run paragraph on]";
 			get a number;
@@ -216,134 +215,74 @@ to banchange (name - text):
 
 to oldflagban (flagname - text):
 	if flagname is:
-		-- "Body Horror":
-			now BodyHorrorList is banned;
-		-- "Cockvore":
-			now CockVoreList is banned;
-		-- "Furry":
-			now FurryList is banned;
-		-- "Males":
-			now MaleList is banned;
-		-- "Females":
-			now FemaleList is banned;
-		-- "Humorous":
-			now HumorousList is banned;
-		-- "Hermaphrodite":
-			now HermList is banned;
-		-- "Hellspawn":
-			now DemonList is banned;
-		-- "Feral":
-			now FeralList is banned;
-		-- "Transgender":
-			now TransList is banned;
-		-- "Cuck":
-			now CuckList is banned;
-		-- "Incest":
-			now IncestList is banned;
-		-- "Noncon":
-			now NonconList is banned;
-		-- "Mindcontrol":
-			now MindcontrolList is banned;
-		-- "Vore":
-			now VoreList is banned;
+		-- "Body Horror": now BodyHorrorList is banned;
+		-- "Cockvore": now CockVoreList is banned;
+		-- "Furry": now FurryList is banned;
+		-- "Males": now MaleList is banned;
+		-- "Females": now FemaleList is banned;
+		-- "Humorous": now HumorousList is banned;
+		-- "Hermaphrodite": now HermList is banned;
+		-- "Hellspawn": now DemonList is banned;
+		-- "Feral": now FeralList is banned;
+		-- "Transgender": now TransList is banned;
+		-- "Cuck": now CuckList is banned;
+		-- "Incest": now IncestList is banned;
+		-- "Noncon": now NonconList is banned;
+		-- "Mindcontrol": now MindcontrolList is banned;
+		-- "Vore": now VoreList is banned;
 
 to oldflagward (flagname - text):
 	if flagname is:
-		-- "Body Horror":
-			now BodyHorrorList is warded;
-		-- "Cockvore":
-			now CockVoreList is warded;
-		-- "Furry":
-			now FurryList is warded;
-		-- "Males":
-			now MaleList is warded;
-		-- "Females":
-			now FemaleList is warded;
-		-- "Humorous":
-			now HumorousList is warded;
-		-- "Hermaphrodite":
-			now HermList is warded;
-		-- "Hellspawn":
-			now DemonList is warded;
-		-- "Feral":
-			now FeralList is warded;
-		-- "Transgender":
-			now TransList is warded;
-		-- "Cuck":
-			now CuckList is warded;
-		-- "Incest":
-			now IncestList is warded;
-		-- "Noncon":
-			now NonconList is warded;
-		-- "Mindcontrol":
-			now MindcontrolList is warded;
-		-- "Vore":
-			now VoreList is warded;
+		-- "Body Horror": now BodyHorrorList is warded;
+		-- "Cockvore": now CockVoreList is warded;
+		-- "Furry": now FurryList is warded;
+		-- "Males": now MaleList is warded;
+		-- "Females": now FemaleList is warded;
+		-- "Humorous": now HumorousList is warded;
+		-- "Hermaphrodite": now HermList is warded;
+		-- "Hellspawn": now DemonList is warded;
+		-- "Feral": now FeralList is warded;
+		-- "Transgender": now TransList is warded;
+		-- "Cuck": now CuckList is warded;
+		-- "Incest": now IncestList is warded;
+		-- "Noncon": now NonconList is warded;
+		-- "Mindcontrol": now MindcontrolList is warded;
+		-- "Vore": now VoreList is warded;
 
 to oldflagunban (flagname - text):
 	if flagname is:
-		-- "Body Horror":
-			now BodyHorrorList is not banned;
-		-- "Cockvore":
-			now CockVoreList is not banned;
-		-- "Furry":
-			now FurryList is not banned;
-		-- "Males":
-			now MaleList is not banned;
-		-- "Females":
-			now FemaleList is not banned;
-		-- "Humorous":
-			now HumorousList is not banned;
-		-- "Hermaphrodite":
-			now HermList is not banned;
-		-- "Hellspawn":
-			now DemonList is not banned;
-		-- "Feral":
-			now FeralList is not banned;
-		-- "Transgender":
-			now TransList is not banned;
-		-- "Cuck":
-			now CuckList is not banned;
-		-- "Incest":
-			now IncestList is not banned;
-		-- "Noncon":
-			now NonconList is not banned;
-		-- "Mindcontrol":
-			now MindcontrolList is not banned;
-		-- "Vore":
-			now VoreList is not banned;
+		-- "Body Horror": now BodyHorrorList is not banned;
+		-- "Cockvore": now CockVoreList is not banned;
+		-- "Furry": now FurryList is not banned;
+		-- "Males": now MaleList is not banned;
+		-- "Females": now FemaleList is not banned;
+		-- "Humorous": now HumorousList is not banned;
+		-- "Hermaphrodite": now HermList is not banned;
+		-- "Hellspawn": now DemonList is not banned;
+		-- "Feral": now FeralList is not banned;
+		-- "Transgender": now TransList is not banned;
+		-- "Cuck": now CuckList is not banned;
+		-- "Incest": now IncestList is not banned;
+		-- "Noncon": now NonconList is not banned;
+		-- "Mindcontrol": now MindcontrolList is not banned;
+		-- "Vore": now VoreList is not banned;
 
 to oldflagunward (flagname - text):
 	if flagname is:
-		-- "Body Horror":
-			now BodyHorrorList is not warded;
-		-- "Cockvore":
-			now CockVoreList is not warded;
-		-- "Furry":
-			now FurryList is not warded;
-		-- "Males":
-			now MaleList is not warded;
-		-- "Females":
-			now FemaleList is not warded;
-		-- "Humorous":
-			now HumorousList is not warded;
-		-- "Hermaphrodite":
-			now HermList is not warded;
-		-- "Hellspawn":
-			now DemonList is not warded;
-		-- "Feral":
-			now FeralList is not warded;
-		-- "Transgender":
-			now TransList is not warded;
-		-- "Incest":
-			now IncestList is not warded;
-		-- "Cuck":
-			now CuckList is not warded;
-		-- "Noncon":
-			now NonconList is not warded;
-		-- "Mindcontrol":
-			now MindcontrolList is not warded;
-		-- "Vore":
-			now VoreList is not warded;
+		-- "Body Horror": now BodyHorrorList is not warded;
+		-- "Cockvore": now CockVoreList is not warded;
+		-- "Furry": now FurryList is not warded;
+		-- "Males": now MaleList is not warded;
+		-- "Females": now FemaleList is not warded;
+		-- "Humorous": now HumorousList is not warded;
+		-- "Hermaphrodite": now HermList is not warded;
+		-- "Hellspawn": now DemonList is not warded;
+		-- "Feral": now FeralList is not warded;
+		-- "Transgender": now TransList is not warded;
+		-- "Incest": now IncestList is not warded;
+		-- "Cuck": now CuckList is not warded;
+		-- "Noncon": now NonconList is not warded;
+		-- "Mindcontrol": now MindcontrolList is not warded;
+		-- "Vore": now VoreList is not warded;
 
 Lists and Banning ends here.

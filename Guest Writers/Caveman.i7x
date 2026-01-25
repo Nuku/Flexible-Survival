@@ -8,20 +8,19 @@ Version 1 of Caveman by Guest Writers begins here.
 Section 1 - Creature Responses
 
 to say CavemanDesc:
-	say "     A caveman straight out of the prehistoric exhibit stands before you. This large, hunched over man is not made of wood or wax however. Even with the cromagnon posture, the hairy humanoid stands at about six feet tall and would be much taller if he stood straight. Massively muscular arms hang down with oversized hands scraping the floor. His feet are gigantic, with toes that are long and nimble. His face is almost human, with a shaggy haircut that almost covers up his trademark heavy brow ridge and large nose. His enormous barrel chest is covered in hair, somewhere between body hair and fur. He wears nothing but a loin cloth and you can see a huge soft cock and enormous hairy nuts hanging from below its ragged hem. He sees you and grunts loudly. Somewhere he has found a huge wooden club and he bashes it against the floor threateningly.";
+	say "     A caveman straight out of the prehistoric exhibit stands before you. This large, hunched over man is not made of wood or wax however. Even with the cromagnon posture, the hairy humanoid stands at about six feet tall and would be much taller if he stood straight. Massively muscular arms hang down with oversized hands scraping the floor. His feet are gigantic, with toes that are long and nimble. His face is almost human, with a shaggy haircut that almost covers up his trademark heavy brow ridge and large nose. His enormous barrel chest is covered in hair, somewhere between body hair and fur. He wears nothing but a loincloth and you can see a huge soft cock and enormous hairy nuts hanging from below its ragged hem. He sees you and grunts loudly. Somewhere he has found a huge wooden club and he bashes it against the floor threateningly.";
 
 to say Caveman wins:
 	say "     The massively muscled beastman swipes your feet out from under you and plants his large hairy feet on either side of your head. He raises his arms above his head in triumph, the oversized biceps bigger than his own head as he roars in victory";
 	if Player is impreg_ok and a random chance of 1 in 3 succeeds:
 		say " before bashing you over the head with his club. The blow fills your vision with stars before it all fades to black.";
-		say "     As you gradually start to come back to your senses, you become aware of your pounding headache. It is a steady, rhythm that makes you groan. It takes a few moments to realize that the pounding is in time to other things - a motion of your body, a series of slick sounds and that pleasant fullness inside you that comes and goes. Opening your eyes to look around, your vision is still quite hazy, but it seems you're somewhere else in the museum. After a few moments, you become aware that you're on your side on some soft furs with another figure atop you in some cramped [one of]corner of a display[or]storage space[or]cubby hole[at random].";
-		say "     A grunt from the figure atop you turns your attention to him and you recognize him as the caveman from earlier. Full realization sets in slowly, but you gradually become aware that the rhythmic pounding you're feeling is all coming cromagnon male fucking you with his huge penis. The sound you've been hearing is the wet slurps of sex, the caveman fucking your well-used hole for what must be the third or fourth time to judge from the amount of semen that's already leaked out of you. Your [if Player is female]womb[else]belly[end if] feels full and warm with it, a sensation you find quite pleasurable once you realize it.";
+		say "     As you gradually start to come back to your senses, you become aware of your pounding headache. It is a steady rhythm that makes you groan. It takes a few moments to realize that the pounding is in time to other things - a motion of your body, a series of slick sounds and that pleasant fullness inside you that comes and goes. Opening your eyes to look around, your vision is still quite hazy, but it seems you're somewhere else in the museum. After a few moments, you become aware that you're on your side on some soft furs with another figure atop you in some cramped [one of]corner of a display[or]storage space[or]cubby hole[at random].";
+		WaitLineBreak;
+		say "     A grunt from the figure atop you turns your attention to him and you recognize him as the caveman from earlier. Full realization sets in slowly, but you gradually become aware that the rhythmic pounding you're feeling is all coming from the cromagnon male fucking you with his huge penis. The sound you've been hearing is the wet slurps of sex, the caveman fucking your well-used hole for what must be the third or fourth time to judge from the amount of semen that's already leaked out of you. Your [if Player is female]womb[else]belly[end if] feels full and warm with it, a sensation you find quite pleasurable once you realize it.";
 		say "     Despite his rough [']courtship['] and striking appearance, you find yourself quite attracted to the caveman fucking you. Certainly having proven himself quite the stud, you're eager for another load from him. With your nanites on the job, your headache disappears quickly and you're able to become a more active participant in the mating. Pulling him down for some sloppy kisses, you grind yourself onto his pulsing rod[if Player is female and Cunt Depth of Player < 13], taking as much of it as you can into your well-stuffed cunny[else if Player is female], taking the whole of it into your well-stuffed cunny[else], taking the whole of it into your well-stuffed ass[end if]. He grunts and grabs your [if Breast Size of Player > 0]breast[else]ass[end if] roughly, cumming hard into you, claiming you as his mate once again. Already having drained his balls repeatedly, there's less to give this time, but it is still an impressive amount that fills your [if Player is female]cunt[else]rectum[end if] with a fresh blast of warmth[if Player is not neuter]. You moan and cry out in your own orgasmic release[end if]. Thoroughly exhausted now, the caveman's cock slips from you as he rolls over onto the furs and passes out.";
-		say "     You lay there for a time, needing to recover your strength after all of this and enjoying basking in the afterglow and the pleasure of having been so thoroughly fucked. Looking over at the caveman, you find yourself quite tempted to just stay with the burly stud. [if humanity of Player > 70]Some small[else if humanity of Player > 40]A[else]A large[end if] part of you toying with the idea of remaining in this [']cave['] of his and simply giving yourself over to him to be his mate. You stretch out on the animal skins and lay there in well-fucked bliss, only roused from this when the caveman grunts, rolls over in his sleep and [one of]drools messily onto the furs[or]farts noisily[or]picks his nose[or]belches raucously[at random]. That a moment of disgust shocks you into realizing you were about to drift off yourself. You shake the thoughts of staying out of your head long enough to make your escape.";
-		if Player is Female:
-			CreatureSexAftermath "Player" receives "PussyFuck" from "Caveman";
-		else:
-			CreatureSexAftermath "Player" receives "AssFuck" from "Caveman";
+		CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Caveman";
+		WaitLineBreak;
+		say "     You lay there for a time, needing to recover your strength after all of this and enjoying basking in the afterglow and the pleasure of having been so thoroughly fucked. Looking over at the caveman, you find yourself quite tempted to just stay with the burly stud. [if humanity of Player > 70]Some small[else if humanity of Player > 40]A[else]A large[end if] part of you toying with the idea of remaining in this [']cave['] of his and simply giving yourself over to him to be his mate. You stretch out on the animal skins and lay there in well-fucked bliss, only roused from this when the caveman grunts, rolls over in his sleep and [one of]drools messily onto the furs[or]farts noisily[or]picks his nose[or]belches raucously[at random]. That moment of disgust shocks you into realizing you were about to drift off yourself. You shake the thoughts of staying out of your head long enough to make your escape.";
 	else:
 		say ".";
 		say "     Having announced his win to any creature within ear shot, the cromagnon stud has other ideas for you. You look up and see him tear off his loincloth, exposing a huge, erect penis. He tugs on it with his giant fist, his freakishly proportioned hand making the dick look smaller than it is. It is not small. ";
@@ -37,17 +36,19 @@ to say Caveman wins:
 to say Caveman loses:
 	say "     You defeat the caveman, who collapses to the ground after dropping his club with a sad grunt. The big muscular brute looks strangely inviting lying on the ground nursing his wounds, being more human than many of those you've encountered around lately. Do you take advantage of the defeated caveman?";
 	if Player consents:
+		LineBreak;
 		say "     You smile down at the caveman and tease him with a grunt of your own before having your way with him.";
-		if Player is female:
+		if Player is female and a random chance of 2 in 3 succeeds:
 			say "     You rip off the devolved man's loincloth, exposing his throbbing meat, over a foot of caveman cock for you to ride. He gives out a questioning grunt, unsure of your intentions. Showing him exactly what you want as you stroke his huge cock a few times, spreading his precum over it, making it nice and wet before you straddle it and ease the thick head into your [cunt size desc of Player] vagina. His cromagnon grunts turn to moans as you bounce up and down on his big prehistoric dong, using it for your own pleasure. It's a luxury being with a creature so well built and strong, he can take a nice rough rider on top of him with ease. You explode with ecstasy on top of him as he begins to cum inside of you, filling you with prehistoric spunk. Still too beat up to move, you lift yourself off him and leave him moaning on the ground, his dick still hard.";
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Caveman";
-		else if Player is male:
+		else if Player is male and anallevel > 1 and a random chance of 2 in 3 succeeds:
 			say "     You rip off his loincloth and slap his tight, muscular, and hairy ass. You massage the beefy muscles of his prehistoric butt and place your [cock size desc of Player] [Cock of Player] cock in between the massive cheeks. The caveman grunts beneath you nervously, knowing what comes next. You shove into him hard, spreading out that ass as you fill him with your [Cock of Player] dick. Wasting no time in using the warm chute of the caveman, pistoning in and out, using him like he wanted to use you. You shove deep and hard, hilting into that sweet ass as you pump your cum deep into the caveman's guts.";
 			CreatureSexAftermath "Caveman" receives "AssFuck" from "Player";
 		else:
 			say "     You can't pass up the throbbing dick barely contained by the loincloth. You rip it off and go down on the caveman, greedily licking and sucking the huge meat, your moans drowned out only by the moans of the cromagnon man. Soon you are rewarded with a powerful blast of caveman cum in your mouth and you swallow down the gift before moving on.";
 			CreatureSexAftermath "Player" receives "OralCock" from "Caveman";
 	else:
+		LineBreak;
 		say "     You leave the caveman on the ground, having no interest in the brute.";
 
 Section 2 - Creature Insertion
@@ -69,6 +70,7 @@ When Play begins:
 	now Species Name entry is "Neandertal";
 	add "Caveman" to infections of HumanList;
 	add "Caveman" to infections of HistoricalList;
+	add "Caveman" to infections of NatureList;
 	add "Caveman" to infections of MaleList;
 	add "Caveman" to infections of BipedalList;
 	now Name entry is "Caveman";
@@ -79,14 +81,14 @@ When Play begins:
 	now defeated entry is "[Caveman loses]";
 	now victory entry is "[Caveman wins]";
 	now desc entry is "[CavemanDesc]";
-	now face entry is "humanlike, but beetle-browed and hypermasculine, with a lantern jaw and much stubble"; [ Face description, format as "Your face is [Face of Player]." ]
+	now face entry is "human-like, but beetle-browed and hypermasculine, with a lantern jaw and much stubble"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "that of a caveman, strongly muscled, with massive, overly long arms";
-	now skin entry is "leathery, incredibly hirsute and humanlike"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
+	now skin entry is "leathery, incredibly hirsute and human-like"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "prehistoric caveman";
-	now face change entry is "your brow ridges grows thick and heavy, the bones becoming larger and more prominent, giving you the face of a cromagnon man"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now face change entry is "your brow ridge grows thick and heavy, the bones becoming larger and more prominent, giving you the face of a cromagnon man"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "your body becomes human-like, but freakishly proportioned, with huge arms that touch the ground. Hands and feet grow larger and larger to match, and end up becoming massive and powerful. Your muscles increase with new prehistoric size. With creaks and cracks in your back, you hunch over, feeling much more comfortable in that position now";
-	now skin change entry is "it becomes thick and leathery, an enormous amount of human hair growing on it, making it seems almost furlike";
+	now skin change entry is "it becomes thick and leathery, an enormous amount of human hair growing on it, making it seem almost furlike";
 	now ass change entry is "it grows incredibly hairy and muscular"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
 	now cock change entry is "it grows into human-like shape, thick with veins"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 18;
@@ -228,7 +230,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Section 3 - Endings
 

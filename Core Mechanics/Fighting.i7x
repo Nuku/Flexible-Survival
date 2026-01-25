@@ -2,7 +2,7 @@ Version 2 of Fighting by Core Mechanics begins here.
 [- Originally Authored By: Nuku Valente -]
 [Version 2 - Transplant and partial rewrite from story.ni - Wahn]
 
-BeforeCombat is a number that varies.
+BeforeCombat is a number that varies.[@Tag:NotSaved]
 
 To fight:
 	let PossibleEncounters be a list of text;

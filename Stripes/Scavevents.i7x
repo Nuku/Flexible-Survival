@@ -82,18 +82,17 @@ to say ResolveEvent Tight Fit:
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		if scalevalue of Player is 2, increase bonus by 5;
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus] = [dice plus bonus] vs [difficulty]: ";
+		say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
 		if difficulty > dice:
-			say "     You try your best to squeeze into the tunnel, but you aren't able make it more than a couple of feet before it becomes impossible to move forward. Rather than risk getting completely stuck and vulnerable to any lusty mutant who comes by, you work your way back out and head off.";
+			say "You try your best to squeeze into the tunnel, but you aren't able make it more than a couple of feet before it becomes impossible to move forward. Rather than risk getting completely stuck and vulnerable to any lusty mutant who comes by, you work your way back out and head off.";
 		else:
-			say "     It is a tight fit at a few spots, but you manage to wriggle your way in and out of the tunnel, snagging the [y] to add to your backpack's contents.";
+			say "It is a tight fit at a few spots, but you manage to wriggle your way in and out of the tunnel, snagging the [y] to add to your backpack's contents.";
 			ItemGain y by 1;
 	else if scalevalue of Player > 3:
 		say "     You look at the [y] sitting deep in that hidey-hole and know there's no way your [Body Size Adjective of Player] body is going to be able to go in after it. Too far to reach or snag with anything you have around, you have to leave it behind.";
 	increase tightfitcount by 1;
 	if tightfitcount is 5, now Tight Fit is resolved;
-
 
 Section 2 - Protected Supplies
 
@@ -170,7 +169,7 @@ to say ResolveEvent Protected Supplies:
 			HardModeboost;
 		say "     In your searching through the city, you come across some [y] and move to get it.";
 		say "     It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of the street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from some rather messy cum stains[purely at random].";
-		AttemptToWait;
+		WaitLineBreak;
 		let scavfight be 0;
 		say "     But as you move to get it, a [Name entry in lower case] moves to cut you off, probably wanting to take it for themselves. ";
 		if a random chance of 1 in 2 succeeds:
@@ -201,7 +200,6 @@ to say ResolveEvent Protected Supplies:
 			decrease morale of Player by 1;
 	else:
 		say "     You come across the scenes of a scuffle between two creatures. There are tufts of fur, feathers and blood scattered about, as well as other bodily fluids. In the middle of this mess [one of]are the few crumbs left from whatever food they appear to have been fighting over[or]the empty soda can they appear to have been fighting over[or]the empty and crushed water bottle they appear to have been fighting over[at random]. Unsure if you're disappointed that you got here too late or pleased that you didn't need to fight one or both of these vicious creatures to get it, you move on.";
-
 
 Section 3 - Dropped Handbag
 
@@ -250,7 +248,6 @@ to say ResolveEvent Dropped Handbag:
 		say "     Deciding not to bother, you continue on your way.";
 	now Dropped Handbag is resolved;
 
-
 Section 4 - Dented Bike (by Wahn)
 
 Table of GameEventIDs (continued)
@@ -284,7 +281,6 @@ to say ResolveEvent Dented Bike:
 	say "Looking around, you find a few more tufts of fur and some messy splatters of cum leading away, but that's it.";
 	increase dentedbikecount by 1;
 	if dentedbikecount is 3, now Dented Bike is resolved;
-
 
 Section 5 - Looted Supermarket (by Wahn)
 
@@ -355,7 +351,6 @@ to say ResolveEvent Looted Supermarket:
 	increase supermarketcount by 1;
 	if supermarketcount is 3, now Looted Supermarket is resolved;
 
-
 Section 6 - Abandoned Cars (by Wahn)
 
 Table of GameEventIDs (continued)
@@ -377,7 +372,7 @@ to say ResolveEvent Abandoned Cars:
 		increase bonus by 3;
 		let x be 1;
 	let dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus] = [dice plus bonus] vs [difficulty]: ";
+	say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs [difficulty]: ";
 	if bonus + dice >= difficulty:
 		say "No problem - you grab the lid and wrench it open with [if x is 1]your crowbar[else]your superior strength[end if]. Inside you find several shopping bags, filled with a smelly mess of mostly rotting food. At least you manage to salvage a can of [one of]tomato soup[or]baked beans[or]spaghetti[or]pineapple[at random] and a soda bottle from it.";
 		ItemGain food by 1;
@@ -386,16 +381,13 @@ to say ResolveEvent Abandoned Cars:
 		say "Try as you might, the trunk of this car is too damaged for you to break into it. You'll have to try looking elsewhere.";
 	now Abandoned Cars is resolved;
 
-
 Section 7 - Gryphon Milkman (by Wahn)
 
 [Moved to Garrett.i7x file]
 
-
 Section 8 - Free Milk (by Wahn)
 
 [Moved to Garrett.i7x file]
-
 
 Section 9 - Manna from Heaven (by Wahn)
 
@@ -412,7 +404,6 @@ to say ResolveEvent Manna from Heaven:
 	say "     Moving through the city, you suddenly hear cawing and shouting from somewhere above. It's a harpy flying in your direction, clutching something in her claws - closely followed by another who keeps insulting her. Sounds like they're having a disagreement of the ownership of the can of peaches the first one has in her talons. Before long, that dissolves into a furious mid-flight clawing match during which the fought-over can is knocked out of the claw holding it - and literally falls into your hands. You quickly dash off with it before the harpies team up and attack you.";
 	ItemGain food by 1;
 	now Manna from Heaven is resolved;
-
 
 Section 10 - Plains Scavenging (by Kaleem)
 
@@ -533,7 +524,6 @@ to say ResolveEvent Plains Scavenging:
 				say "You successfully manage to move across the collapsing [one of]store[or]building[or]home[or]structure[at random] and snag the [y], stuffing it into your backpack.";
 				ItemGain y by 1;
 
-
 Section 11 - Garden Veggies
 
 Table of GameEventIDs (continued)
@@ -545,9 +535,9 @@ ResolveFunction of Garden Veggies is "[ResolveEvent Garden Veggies]".
 Sarea of Garden Veggies is "Outside".
 gardenveg is a number that varies.
 lastgardenveg is a number that varies. lastgardenveg is usually 255.
+
 when play begins:
 	add Garden Veggies to BadSpots of FurryList;
-
 
 to say ResolveEvent Garden Veggies:
 	if FemaleList is banned and MaleList is banned:
@@ -588,7 +578,6 @@ to say ResolveEvent Garden Veggies:
 			say "     As you're making a break for it, you catch a glimpse of another sheep exiting the home, this time with a shotgun. As you push through the back gate, it goes off. 'You stay away, you veggie thief, or we'll fill you full of lead next time.'";
 		now Garden Veggies is resolved;
 
-
 Section 12 - Free Drink
 
 [moved to Wahn/Kerr & Talov.i7x]
@@ -609,9 +598,6 @@ to say ResolveEvent DbLD:
 	ItemGain shoulder pad by 1;
 	increase score by 5;
 	now DbLD is resolved;
-
-
-
 
 Section 14 - Hospital Scavenging
 
@@ -693,7 +679,6 @@ to say ResolveEvent Patient Rooms:
 			say "     But as you turn to leave, you find that your activity's attracted the attention of one of the creatures roaming the hospital and it now blocks your way out of the patient's room. You'll have to fight to get past them.";
 			fight;
 
-
 Section 15 - Shattered House
 
 Table of GameEventIDs (continued)
@@ -719,10 +704,10 @@ to say ResolveEvent Shattered House:
 		say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs 14:[line break]";
 		increase dice by bonus;
 		if dice >= 14:
-			say "     Taking a quick look inside, you manage to spot some food wrappers and empty water bottles in one corner where some debris has fallen down. Seeing more underneath, you manage to lift up the rubble with some effort and retrieve a single water bottle that's not been crushed before an ominous creaking sound sends you back before more of the house collapses.";
+			say "Taking a quick look inside, you manage to spot some food wrappers and empty water bottles in one corner where some debris has fallen down. Seeing more underneath, you manage to lift up the rubble with some effort and retrieve a single water bottle that's not been crushed before an ominous creaking sound sends you back before more of the house collapses.";
 			ItemGain water bottle by 1;
 		else:
-			say "     Taking a quick look inside, you manage to spot some food wrappers and empty water bottles in one corner where some debris has fallen down. Seeing more underneath, you try to lift up the rubble to search for more, but it's too heavy to move before an ominous creaking sound sends you back before more of the house collapses.";
+			say "Taking a quick look inside, you manage to spot some food wrappers and empty water bottles in one corner where some debris has fallen down. Seeing more underneath, you try to lift up the rubble to search for more, but it's too heavy to move before an ominous creaking sound sends you back before more of the house collapses.";
 	else if x is 4:
 		say ".";
 		let bonus be ( Dexterity of Player plus Level of Player minus 10 ) divided by 2;
@@ -732,11 +717,11 @@ to say ResolveEvent Shattered House:
 		say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs 16:[line break]";
 		increase dice by bonus;
 		if dice >= 16:
-			say "     Taking a quick look inside, you luckily feel the kitchen floor starting to give way out from under you and manage to back away before the middle of the kitchen floor caves in and that section of the damaged house collapses into the basement. You move on after that unsuccessful venture and remind yourself to be more careful inside damaged buildings from now on.";
+			say "Taking a quick look inside, you luckily feel the kitchen floor starting to give way out from under you and manage to back away before the middle of the kitchen floor caves in and that section of the damaged house collapses into the basement. You move on after that unsuccessful venture and remind yourself to be more careful inside damaged buildings from now on.";
 		else:
 			let dam be ( ( HP of Player + MaxHP of Player ) ) / 7;
 			decrease HP of Player by dam;
-			say "     Taking a quick look inside, you yell in surprise as the kitchen floor collapses out from under you, dropping you into the basement as more of the room falls in around you. You avoid a close call as the appliances come tumbling in. Once the dust settles, you grab a few items that fell out of the cubbard and climb out before the whole place collapses on top of you, much more wary about damaged buildings now.";
+			say "Taking a quick look inside, you yell in surprise as the kitchen floor collapses out from under you, dropping you into the basement as more of the room falls in around you. You avoid a close call as the appliances come tumbling in. Once the dust settles, you grab a few items that fell out of the cubbard and climb out before the whole place collapses on top of you, much more wary about damaged buildings now.";
 			ItemGain chips by 2;
 	else if x is 5:
 		say ".";
@@ -747,11 +732,11 @@ to say ResolveEvent Shattered House:
 		say "     You roll 1d20([dice])+[bonus] = [dice plus bonus] vs 14:[line break]";
 		increase dice by bonus;
 		if dice >= 14:
-			say "     As you're searching through the rubble, you luckily notice some creaking and some plaster dust falling out of the corner of your eye. You get out quickly, avoiding the sudden collapse of the house. Scared but safe, you leave the place behind before the noise can attract anything dangerous.";
+			say "As you're searching through the rubble, you luckily notice some creaking and some plaster dust falling out of the corner of your eye. You get out quickly, avoiding the sudden collapse of the house. Scared but safe, you leave the place behind before the noise can attract anything dangerous.";
 		else:
 			let dam be ( ( HP of Player + MaxHP of Player ) ) / 7;
 			decrease HP of Player by dam;
-			say "     As you're searching through the rubble, you are too focused on looking for something you can take that you don't notice the growing groans of the building until it's too late and it starts collapsing around you. Debris falls down atop you, hurting you quite a bit and pinning you beneath it. You eventually dig yourself out, but you're left tired and bruised.";
+			say "As you're searching through the rubble, you are too focused on looking for something you can take that you don't notice the growing groans of the building until it's too late and it starts collapsing around you. Debris falls down atop you, hurting you quite a bit and pinning you beneath it. You eventually dig yourself out, but you're left tired and bruised.";
 			if a random chance of 2 in 3 succeeds:
 				say "     As you're pulling yourself out, you see that the collapse has also attracted one of the local creatures, eager to take advantage of the situation.";
 				fight;
@@ -787,29 +772,29 @@ to say ResolveEvent Scattered Clothing:
 		-- 4: [Feet Item]
 			say "[GiveRandomFeetItem]";
 
-WaistItemsList is a list of objects that varies.[@Tag:NotSaved]
-the WaistItemsList is {ripped black jeans, black jeans, black skinny jeans, scarlet hot pants, gray slacks, green camo pants, black jogging pants, beige bermuda shorts, black miniskirt, light-blue pencil skirt, gypsy floral skirt}.
+[WaistItemsList is a list of objects that varies.[@Tag:NotSaved]]
+the WaistItemsList is always {ripped black jeans, black jeans, black skinny jeans, scarlet hot pants, gray slacks, green camo pants, black jogging pants, beige bermuda shorts, black miniskirt, light-blue pencil skirt, gypsy floral skirt}.
 
 to say GiveRandomWaistItem:
 	now RandomItemPick is a random number from 1 to the number of entries in WaistItemsList;
 	ItemGain entry RandomItemPick of WaistItemsList by 1;
 
-ChestItemsList is a list of objects that varies.[@Tag:NotSaved]
-the ChestItemsList is {black t-shirt, white t-shirt, maroon pullover, camo shirt, black sleeveless shirt, mesh shirt}.
+[ChestItemsList is a list of objects that varies.[@Tag:NotSaved]]
+the ChestItemsList is always {black t-shirt, white t-shirt, maroon pullover, camo shirt, black sleeveless shirt, mesh shirt}.
 
 to say GiveRandomChestItem:
 	now RandomItemPick is a random number from 1 to the number of entries in ChestItemsList;
 	ItemGain entry RandomItemPick of ChestItemsList by 1;
 
-FeetItemsList is a list of objects that varies.[@Tag:NotSaved]
-the FeetItemsList is {black combat boots, brown loafers, brown leather sandals, bright-red pumps, black stiletto heels, blue running shoes, dark-brown cowboy boots}.
+[FeetItemsList is a list of objects that varies.[@Tag:NotSaved]]
+the FeetItemsList is always {black combat boots, brown loafers, brown leather sandals, bright-red pumps, black stiletto heels, blue running shoes, dark-brown cowboy boots}.
 
 to say GiveRandomFeetItem:
 	now RandomItemPick is a random number from 1 to the number of entries in FeetItemsList;
 	ItemGain entry RandomItemPick of FeetItemsList by 1;
 
-CrotchItemsList is a list of objects that varies.[@Tag:NotSaved]
-the CrotchItemsList is {ragged brown loincloth, simple white loincloth, black boxer briefs, white briefs, orange jockstrap, black mesh briefs, pink panties}.
+[CrotchItemsList is a list of objects that varies.[@Tag:NotSaved]]
+the CrotchItemsList is always {ragged brown loincloth, simple white loincloth, black boxer briefs, white briefs, orange jockstrap, black mesh briefs, pink panties}.
 
 to say GiveRandomCrotchItem:
 	now RandomItemPick is a random number from 1 to the number of entries in CrotchItemsList;

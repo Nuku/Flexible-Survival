@@ -12,8 +12,7 @@ Entrance to the Red Light District is a room. It is fasttravel.
 The earea of Entrance to the Red Light District is "Red".
 Description of Entrance to the Red Light District is "[RedLightDesc]".
 
-
-Red Light Street is a door. "To the south is the rest of the city." It is dangerous.
+Red Light Street is a door. "To the south is the rest of the city.". It is dangerous.
 
 Red Light Street is south of Entrance to the Red Light District.
 
@@ -40,8 +39,7 @@ to say RedLightDesc:
 	say "     This street corner marks the beginning of the city's Red Light District. Normal buildings, stores and offices give way to an area that seems old, grimy and somewhat abandoned[if findwires < 2 or fixedgens < 3], given that the colorful neon lights of numerous adult establishments hang dark and powerless on their buildings[end if]. Caution seems advised hereabouts, as the area is an obvious hive of perverts and sex addicts, with the infection outbreak just having pushed things to new extremes.";
 	say "     To the [Bold Type]south[roman type], you could wander back out into the surrounding city and possibly find a safer place to be. Alternatively, the way [Bold Type]east[roman type] and [Bold Type]west[roman type] along the boundary road seems relatively safe - or you could [bold type][link]explore[as]explore[end link][roman type] the twisting streets of this old part of the city that lie [Bold Type]north[roman type] of where you stand, with all the dangers that may hold.";
 
-instead of sniffing Entrance to the Red Light District:
-	say "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.";
+Scent of Entrance to the Red Light District is "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -61,8 +59,7 @@ after looking while player is in Boundary Street East:
 to say RedLightBoundaryEastDesc:
 	say "     You're on a road that runs along the border to the Red Light District, marked by prominent [']SEX SEX SEX['] neon signs along the facades of a number of buildings on one street side[if findwires < 2 or fixedgens < 3]. Though without power to support the alluring shine of all the signage, it just seems kinda dingy[end if]. Some piles of uncollected trash litter the street, and towards the [Bold Type]east[roman type], a modestly sized chapel rises above the surrounding buildings. Sadly, its white walls are marred by the signs of a recent fire within, with the flames having licked out of the shattered windows to blacken areas above and besides them. The large inverted pentagram that someone has clawed into the timbers of the wooden front door tells you that what befell the chapel wasn't an accident either. To the [Bold Type]southeast[roman type] lies an apartment building with a busted front door, which nevertheless looks more lived-in than most of the other buildings all around.";
 
-instead of sniffing Boundary Street East:
-	say "     The aroma of fire and ash is ever-present in your nose, so close to the burned chapel. Of course, this doesn't reduce the other scents present, so you can also smell sex, with a musky scent of arousal hanging thick in the air.";
+Scent of Boundary Street East is "     The aroma of fire and ash is ever-present in your nose, so close to the burned chapel. Of course, this doesn't reduce the other scents present, so you can also smell sex, with a musky scent of arousal hanging thick in the air.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -71,7 +68,7 @@ Dingy Alley	"Dingy Alley"
 Dingy Alley is a room.
 Dingy Alley is north of Boundary Street East.
 The earea of Dingy Alley is "Red".
-Description of Dingy Alley is "[DingyAlleyDesc]";
+Description of Dingy Alley is "[DingyAlleyDesc]".
 
 after looking while player is in Dingy Alley:
 	if findwires < 2 or fixedgens < 3:
@@ -97,8 +94,7 @@ after looking while player is in Burned-Out Chapel:
 	else:
 		project the Figure of Map_RedLight_2_icon;
 
-instead of sniffing Burned-Out Chapel:
-	say "The heavy scent of burned wood hangs in the room, mixed with a trace of blood and [if HP of Elijah is 100]the all-pervading stench of [end if]demonic cum.";
+Scent of Burned-Out Chapel is "     The heavy scent of burned wood hangs in the room, mixed with a trace of blood and [if HP of Elijah is 100]the all-pervading stench of [end if]demonic cum.".
 
 to say chapelplacedesc:
 	if (Elijah is not in Burned-Out Chapel and HP of Elijah is 0): [if the player got here before Elijah was captured]
@@ -125,8 +121,7 @@ after looking while player is in Sacristy:
 
 Description of Sacristy is "     This sacristy has been... redecorated recently. You're pretty sure it didn't originally have red silk drapes and a large bed, currently bathed in the light of about a hundred candles. There's a fire going in a brazier with a large stack of bibles beside it to provide additional fuel. In between various dildos and sex toys strewn about on the bed, there's a golden chalice and a few crosses, which got used for the same purpose as the rest, from their sticky state...".
 
-instead of sniffing Sacristy:
-	say "The heavy scent of burned wood hangs in the room, mixed with a trace of blood and [if HP of Elijah is 100]the all-pervading stench of [end if]demonic cum.";
+Scent of Sacristy is "     The heavy scent of burned wood hangs in the room, mixed with a trace of blood and [if HP of Elijah is 100]the all-pervading stench of [end if]demonic cum.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -150,13 +145,13 @@ The Darius's Inventory is a backdrop. It is in Darius's Crib. Description of the
 to say Darius's Inventory List:
 	if Darius is visible: [he's in right now]
 		say "     Darius has a spread of various little baggies spread on his kitchen counter. A handwritten sign tells you that you need to pay with food for anything you want.";
-		say "To buy an item, type buy (name here)";
+		say "     To buy an item, type [bold type]buy <name>[roman type].";
 		repeat through table of Darius Inventory:
 			follow allowed entry;
 			if rule failed:
 				next;
-			say "[link]Buy[as]buy [object entry][end link] ";
-			say "[Name entry] - [price entry] food";
+			linkfind "buy [object entry]";
+			say "[set link hyperindex]Buy [Name entry][terminate link] - [price entry] food";
 	else:
 		say "     A handwritten sign on the kitchen counter tells you that you need to pay with food for anything you want, but it seems that Darius put away his stash before leaving the house. You'll have to wait till he is back if you want to buy something.";
 
@@ -186,8 +181,7 @@ after looking while player is in Boundary Street West:
 to say RedLightBoundaryWestDesc:
 	say "     You're on a road that runs along the border to the Red Light District, marked by prominent [']SEX SEX SEX['] neon signs along the facades of a number of buildings on one street side[if findwires < 2 or fixedgens < 3]. Though without power to support the alluring shine of all the signage, it just seems kinda dingy[end if]. The area you are in is dominated by a big rig truck lying on its side, wedging its bulky length between the buildings on both sides and creating a formidable barrier that impedes any further progress west. In all likelihood, the driver crashed it sometime during the initial outbreak of the nanite contagion. Towards the [Bold Type]northwest[roman type], just short of where the cab of the truck has buried itself halfway in a wall, you can see the door of a store that survived the devastation seemingly intact.";
 
-instead of sniffing Boundary Street West:
-	say "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.";
+Scent of Boundary Street West is "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -207,8 +201,7 @@ after looking while player is in Northern Street 1:
 to say RedLightNorthStreet1Desc:
 	say "     You're on a road that runs along the border to the Red Light District, past the prominent [']SEX SEX SEX['] neon signs along the facades of a number of buildings on the street sides before you[if findwires < 2 or fixedgens < 3]. Though without power to support the alluring shine of all the signage, it just seems kinda dingy[end if]. Some piles of uncollected trash litter the street, and the way splits into a few thin and shady alleys, though they seem to have nothing of interest. However, the road extends a bit further, onto a building with a neon sign saying [']TOYS['], alongside a pair of handcuffs, and further beyond where an ominous, faint red light shines through a thinner street just around the corner to the right.";
 
-instead of sniffing Northern Street 1:
-	say "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.";
+Scent of Northern Street 1 is "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -228,8 +221,7 @@ after looking while player is in Northern Street 2:
 to say RedLightNorthStreet2Desc:
 	say "     You're in the middle of the northern road, coming across a building with neon signs saying [']TOYS['], alongside a pair of handcuffs, indicating this must have been some kind of store for the kinky fans of sex toys. Beside it, there's still a small pile of uncollected trash. Towards the [Bold Type]northeast[roman type], there is a thinner street where an ominous, faint red light dims through. Traveling [Bold Type]south[roman type] would lead you towards the crossroad marking the entrance to the Red Light District.";
 
-instead of sniffing Northern Street 2:
-	say "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.";
+Scent of Northern Street 2 is "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -251,8 +243,7 @@ to say RedLightCrimsonStreetDesc:
 	if Hellfire Club is known:
 		say "     The Hellfire Club stands at a visible range from your position, to the [Bold Type]north[roman type], and you could enter it at any point.";
 
-instead of sniffing Crimson Street:
-	say "     There's an unsettling sweet smell around here, rather captivating the more you try to feel it. It's not perfume, nor anything of the sort, but it strikes you as something seductively demonic in nature.";
+Scent of Crimson Street is "     There's an unsettling sweet smell around here, rather captivating the more you try to feel it. It's not perfume, nor anything of the sort, but it strikes you as something seductively demonic in nature.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -266,8 +257,7 @@ Description of Dark Alley is "[RedLightDarkAlleyDesc]".
 to say RedLightDarkAlleyDesc:
 	say "     You arrive at an oddly dark alleyway, in which you can see a few garbage containers and plenty of trash scattered all along the path. One of the very first few things you notice is that it does not smell particularly good, and that is quite understandable given the amount of junk within your proximity. You can head deeper inside and turn [Bold Type]southwest[roman type] to arrive at an extension of the alleyway, or make your way towards the Crimson Street, to the [Bold Type]northwest[roman type].";
 
-instead of sniffing Dark Alley:
-	say "     The smell is bad, like piles of garbage that remained here for a long time.";
+Scent of Dark Alley is "     The smell is bad, like piles of garbage that remained here for a long time.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -283,7 +273,6 @@ Description of Narrow Alley is "[RedLightNarrowAlleyDesc]".
 to say RedLightNarrowAlleyDesc:
 	say "     This is one particularly narrow alley, with nothing out of the ordinary despite its low width. It is quite silent in here, as well, and the path seems relatively clean, with only a few useless objects lying around the walls, some damaged beyond recognition. If you walk deeper ahead, you can make a turn into another alleyway, to the [Bold Type]northeast[roman type]. This area also connects back to the Northern Street in the [Bold Type]southwest[roman type] and [Bold Type]northwest[roman type], if you wish to return to a broader area.";
 
-instead of sniffing Narrow Alley:
-	say "     You cannot pick any specific scent in here... other than a very strong musky scent. This must be one of those frequent sex encounter spots.";
+Scent of Narrow Alley is "     You cannot pick any specific scent in here... other than a very strong musky scent. This must be one of those frequent sex encounter spots.".
 
 Red Light District ends here.

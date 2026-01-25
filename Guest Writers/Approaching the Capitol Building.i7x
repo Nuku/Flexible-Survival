@@ -4,7 +4,6 @@ Version 2 of Approaching the Capitol Building by Guest Writers begins here.
 
 "This is an area which begins the player approach to the Capitol building. A skyscraper overrun with the Ebonflame Brood, and the supposed nesting grounds for the largest dragons and the Ebonflame God. Can you tell me how to make it so the monsters will appear randomly when the areas are explored?"
 
-
 Section 1 - Discovering the Capitol Building Area
 
 Table of GameEventIDs (continued)
@@ -15,12 +14,11 @@ Government Assistance is a situation.
 ResolveFunction of Government Assistance is "[ResolveEvent Government Assistance]". The level of Government Assistance is 6.
 
 to say ResolveEvent Government Assistance:
-[	say "     As you are traveling through the city, you recognize a couple of government buildings and offices, largely in ruin. The air is heavy with smoke and soot, but you start to run regardless. You recall that you're close to the State Capitol Building. If there's anywhere they'll know what's going on and where you can get assistance, it'll be there. You cough as you keep pushing through the smoky air, turning a corner to see what has become of the Capitol Building and the surrounding area, dashing your hopes instantly.";
-	say "     The devastation here is extensive, with burnt out and smashed buildings all around. Several of the streets are cracked and broken, spewing flames. It looks almost like some twisted war zone. The creatures here must be particularly dangerous and devastating. From the look of the destruction, these creatures are probably roaming around the whole area, making traveling here quite risky. You'd best be extra cautious if you plan on looking around here.";]
+	say "     As you are traveling through the city, you recognize a couple of government buildings and offices, largely in ruin. The air is heavy with smoke and soot, but you start to run regardless. You recall that you're close to the State Capitol Building. If there's anywhere they'll know what's going on and where you can get assistance, it'll be there. You cough as you keep pushing through the smoky air, turning a corner to see what has become of the Capitol Building and the surrounding area, dashing your hopes instantly.";
+	say "     The devastation here is extensive, with burnt out and smashed buildings all around. Several of the streets are cracked and broken, spewing flames. It looks almost like some twisted war zone. The creatures here must be particularly dangerous and devastating. From the look of the destruction, these creatures are probably roaming around the whole area, making traveling here quite risky. You'd best be extra cautious if you plan on looking around here.";
 	AddNavPoint Approaching the Capitol Building;
-	move player to Approaching the Capitol Building;
 	now Government Assistance is resolved;
-
+	move player to Approaching the Capitol Building;
 
 Section 2 - Rooms
 
@@ -41,62 +39,56 @@ to say app_cap_bldg_desc:
 		now Government Assistance is resolved;
 	say "     The air here has grown thick with smoke and dust, kicked up by the constant scuffles and the fires. Along the street are the skeletal hulls of cars and many other vehicles which have been burnt out. The structures of the area are all partially collapsed and broken buildings. They look like giants have fought amidst them. To the north, you can see the Capitol Building itself in the distance. It stands amidst the wreckage of surrounding skyscrapers, the lower half lit up by the surrounding flames. The whole structure is blackened and wreathed in smoke. Either some miracle or dark force has kept the broken building from falling.";
 
-
-instead of sniffing Approaching the Capitol Building:
-	say "This area smells strongly of acrid smoke, soot and volcanic ash.";
+Scent of Approaching the Capitol Building is "     This area smells strongly of acrid smoke, soot and volcanic ash.".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Charred Streets	"Charred Streets"
 
-The Charred Streets is a Room. "     The damage to the roads and the buildings grow worse as you approach the Capitol Building. Most of the buildings here are semi-recognizable. You see what once may have been a designer underwear shop now burnt out with the windows smashed. You also spot one of your favorite video game retailers, what used to be a small family business. Now the storefront is totally wrecked. You jump over a ditch in the middle of the street. It is flooded with gray, soot-filled sludge. A water main nearby must have been cracked.".
+The Charred Streets is a Room. "     The damage to the roads and the buildings grow worse as you approach the Capitol Building. Most of the buildings here are semi-recognizable. You see what once may have been a designer underwear shop now burnt out with the windows smashed. You also spot one of your favorite video game retailers, what used to be a small family business. Now the storefront is totally wrecked. You jump over a ditch in the middle of the street. It is flooded with gray, soot-filled sludge. A water main nearby must have been cracked.[line break]".
 Charred Streets is north of Approaching the Capitol Building.
 The earea of Charred Streets is "Capitol".
 
-instead of sniffing Charred Streets:
-	say "This area smells strongly of acrid smoke, soot and volcanic ash.";
+Scent of Charred Streets is "     This area smells strongly of acrid smoke, soot and volcanic ash.".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Path of Ashes	"Path of Ashes"
 
-Path of Ashes is a Room. "     The air here is thick with stinging smoke and ash. The worst of it seems to be drifting from the hellish capitol building itself. To your west, you see standing buildings in somewhat good repair. Some structures are hung between them over the street. To the east, a few buildings partially stand before the ground seems to give way. Rubble blocks the way to Capitol Building itself.".
+Path of Ashes is a Room. "     The air here is thick with stinging smoke and ash. The worst of it seems to be drifting from the hellish capitol building itself. To your west, you see standing buildings in somewhat good repair. Some structures are hung between them over the street. To the east, a few buildings partially stand before the ground seems to give way. Rubble blocks the way to Capitol Building itself.[line break]".
 Path of Ashes is north of Charred Streets.
 The earea of Path of Ashes is "Capitol".
 
-instead of sniffing Approaching the Capitol Building:
-	say "This area smells strongly of acrid smoke, soot and volcanic ash.";
+Scent of Approaching the Capitol Building is "     This area smells strongly of acrid smoke, soot and volcanic ash.".
 
 Table of GameRoomIDs (continued)
 Object	Name
 A Volcanic Crater	"A Volcanic Crater"
 
-The A Volcanic Crater is a Room. "     Before you is an enormous, circular pit. It looks almost as if a meteor landed here, yet there is no trace of any debris. Lava and magma ooze into the pit's lower reaches. Close to the crater's lowest point, you see the entrance way to a tunnel system. The heat from the open magma is very intense and your nanites struggle to adapt your perspiration and breathing to better cope with the primordial scene.".
+The A Volcanic Crater is a Room. "     Before you is an enormous, circular pit. It looks almost as if a meteor landed here, yet there is no trace of any debris. Lava and magma ooze into the pit's lower reaches. Close to the crater's lowest point, you see the entrance way to a tunnel system. The heat from the open magma is very intense and your nanites struggle to adapt your perspiration and breathing to better cope with the primordial scene.[line break]".
 A Volcanic Crater is east of Path of Ashes.
 The earea of A Volcanic Crater is "Capitol".
 
-instead of sniffing A Volcanic Crater:
-	say "The smell of smoke, soot and volcanic gasses is particularly strong here.";
+Scent of A Volcanic Crater is "     The smell of smoke, soot and volcanic gasses is particularly strong here.".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Rusty Walkways	"Rusty Walkways"
 
-The Rusty Walkways is a Room. "     Rusty, makeshift bridges hang between the tall buildings here. Constructed from scavenged metal and parts, there are scattered little shelters inside the buildings or on the street. As you walk down the road, the bridges cast an ominous web-like shadow over you. Occasionally, you swear you see something or someone darting out of view each time you turn a corner. Whatever feral civilization exists here, it may be based out of the more intact building to the west of here.".
+The Rusty Walkways is a Room. "     Rusty, makeshift bridges hang between the tall buildings here. Constructed from scavenged metal and parts, there are scattered little shelters inside the buildings or on the street. As you walk down the road, the bridges cast an ominous web-like shadow over you. Occasionally, you swear you see something or someone darting out of view each time you turn a corner. Whatever feral civilization exists here, it may be based out of the more intact building to the west of here.[line break]".
 Rusty Walkways is west of Path of Ashes.
 The earea of Rusty Walkways is "Capitol".
 
-instead of sniffing Rusty Walkways:
-	say "This area smells strongly of acrid smoke, soot and volcanic ash.";
+Scent of Rusty Walkways is "     This area smells strongly of acrid smoke, soot and volcanic ash.".
 
-Fiery Ruins is a door. "     To the west is a section of buildings that seems somewhat more intact. Some smolder or are quite smashed, but others seem to have been partially spared from the extensive devastation that took place here. You may be able to find something of interest in that direction.". It is dangerous. Fiery Ruins is west of Rusty Walkways and east of Capitol Ruins.
-the marea of Fiery Ruins is "Capitol";
+Fiery Ruins is a door. "To the west is a section of buildings that seems somewhat more intact. Some smolder or are quite smashed, but others seem to have been partially spared from the extensive devastation that took place here. You may be able to find something of interest in that direction.". It is dangerous. Fiery Ruins is west of Rusty Walkways and east of Capitol Ruins.
+the marea of Fiery Ruins is "Capitol".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Capitol Ruins	"Capitol Ruins"
 
-The Capitol Ruins is a room. "     This area once housed numerous government offices as well as some businesses, but now it lies in partial ruin, devastated by whatever happened here.".
+The Capitol Ruins is a room. "     This area once housed numerous government offices as well as some businesses, but now it lies in partial ruin, devastated by whatever happened here.[line break]".
 The earea of Capitol Ruins is "Capitol".
 
 [Wolfrape event moved to Blanche file. (Stripes)]

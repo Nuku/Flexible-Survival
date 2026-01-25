@@ -1,6 +1,6 @@
 Version 1 of AlcoholMechanics by Core Mechanics begins here.
 
-PreviousAlcState is a text that varies.[@Tag:NotSaved]
+PreviousAlcState is a text that varies.
 
 to say AlcState:
 	if "Delirious" is listed in Traits of Player:
@@ -18,14 +18,13 @@ to say AlcState:
 
 to addAlcPoints (num - a number):
 	let alcoholpoints be num + Energy of Player;
-	if alcoholpoints < 0:
-		now alcoholpoints is 0;
+	if alcoholpoints < 0, now alcoholpoints is 0;
 	now Energy of Player is alcoholpoints;
 	UpdateAlcStatus;
 
 an everyturn rule:
 	if Energy of Player > 0:
-		now Energy of Player is Energy of Player - 1; [sobering up slowly]
+		decrease Energy of Player by 1; [sobering up slowly]
 		UpdateAlcStatus;
 		if Energy of Player is 0:
 			now PreviousAlcState is "None"; [reset message for Drinking State]
@@ -34,25 +33,25 @@ to UpdateAlcStatus:
 	removeDrinkStatus; [removed to apply the new status]
 	if Energy of Player >= 15:
 		alcoholDeath;
-	else if Energy of Player >= 11 and Energy of Player <= 14: [Delirious - seeing things and getting close to death]
+	else if Energy of Player >= 11: [Delirious - seeing things and getting close to death]
 		AddDeliriousState;
 		if a random chance of 1 in 4 succeeds:
 			say "[line break]You feel your stomach contract violently, making you heave on the spot. Chunks of your last meal spew to the floor, and leave a taste of acid in your mouth and burning in your throat, leaving you dehydrated and hungry.";
 			PlayerThirst 20;
 			PlayerHunger 30;
 			PlayerWounded 5; [losing HP, but not dying]
-			now Energy of Player is Energy of Player - 3;
-	else if Energy of Player >= 8 and Energy of Player <= 10: [Wasted - barely functional]
+			decrease Energy of Player by 3;
+	else if Energy of Player >= 8: [Wasted - barely functional]
 		AddWastedState;
 		if a random number between 1 and 100 > (stamina of Player * 4):[Stamina increases chances to not vomit]
 			say "[line break]You feel your stomach contract violently, making you heave on the spot. Chunks of your last meal spew to the floor, and leave a taste of acid in your mouth and burning in your throat.";
 			PlayerThirst 10;
 			PlayerHunger 15;
 			PlayerWounded 2; [losing HP, but not dying]
-			now Energy of Player is Energy of Player - 1;
-	else if Energy of Player >= 5 and Energy of Player <= 7: [Drunk - pretty incoherent]
+			decrease Energy of Player by 1;
+	else if Energy of Player >= 5: [Drunk - pretty incoherent]
 		AddDrunkState;
-	else if Energy of Player is 3 or Energy of Player is 4: [Tipsy - swaying a bit, but still in good spirits]
+	else if Energy of Player >= 3: [Tipsy - swaying a bit, but still in good spirits]
 		AddTipsyState;
 	else if Energy of Player is 2: [Buzzed - feeling well]
 		AddBuzzedState;
@@ -65,9 +64,9 @@ to removeDrinkStatus: [Alc Reset]
 	RemoveBuzzedState;
 
 to alcoholDeath:
-	wait for any key;
 	now battleground is "void";
 	trigger ending "Player has died";
+	the Player was ended by "Alcohol Poisoning";
 	end the story saying "You have fallen to alcohol poisoning.";
 
 to AddDeliriousState:

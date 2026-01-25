@@ -9,6 +9,7 @@ Pack Bang	"Pack Bang"
 Pack Bang is a situation.
 ResolveFunction of Pack Bang is "[ResolveEvent Pack Bang]".
 Sarea of Pack bang is "Forest".
+
 When play begins:
 	add Pack Bang to BadSpots of FeralList;
 	add Pack Bang to BadSpots of MaleList;
@@ -40,10 +41,7 @@ to say ResolveEvent Pack Bang:
 		let FeralWolfFightCounter be 0;
 		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and FeralWolfFightCounter < 5: [runs for 3 times or until the player loses or flees]
-			if FeralWolfFightCounter < 4:
-				say "     A member of the wolf-pack steps forward, growling as he closes up to you. He is a feral-looking wolf on four feet, almost three quarters your height, with great muscles under dense black fur. He has dark [one of]red[or]yellow[or]blue[at random] eyes and white, sharp, canine teeth. His legs are thick and powerful looking, his whole form obviously built for hunting fast prey. His fur is matted with grime, muck, and some other substance, giving him a very rugged look. As his pack's chosen prey, the beast doesn't hesitate one second before he pounces on you, lips peeled back to expose his dangerous teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], a look of feral rage in his eyes.";
-			else: [pack leader]
-				say "     Finally the last member steps forward, growling as he closes up to you. He looks bigger than the other ones, almost a third of your height, with great muscles under dense white fur. He has icy blue eyes and white, sharp, canine teeth. His legs are thick and powerful looking, his whole form obviously built for hunting fast prey. His fur is almost as dark as coal, and it doesn't shine, almost as if absorbing all the light around him. As his pack's last standing predator, the beast doesn't hesitate one second before he pounces on you, lips peeled back to expose his dangerous teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], a look of feral rage in his eyes.";
+			say "     [if FeralWolfFightCounter < 4]A member of the wolf-pack steps forward, growling as he closes up to you. He is a feral-looking wolf on four feet, almost three quarters your height, with great muscles under dense black fur. He has dark [one of]red[or]yellow[or]blue[at random] eyes and white, sharp, canine teeth. His legs are thick and powerful looking, his whole form obviously built for hunting fast prey. His fur is matted with grime, muck, and some other substance, giving him a very rugged look. As his pack's chosen prey[else]Finally the last member steps forward, growling as he closes up to you. He looks bigger than the other ones, almost a third of your height, with great muscles under dense white fur. He has icy blue eyes and white, sharp, canine teeth. His legs are thick and powerful looking, his whole form obviously built for hunting fast prey. His fur is almost as dark as coal, and it doesn't shine, almost as if absorbing all the light around him. As his pack's last standing predator[end if], the beast doesn't hesitate one second before he pounces on you, lips peeled back to expose his dangerous teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], a look of feral rage in his eyes.";
 			challenge "Feral Wolf Male";
 			increase FeralWolfFightCounter by 1;
 		if fightoutcome < 20: [player won]
@@ -53,7 +51,7 @@ to say ResolveEvent Pack Bang:
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "[FeralWolfGangBang]";
 		else if fightoutcome is 30: [fled]
-			say "You finally run away from the wolves, leaving this part of the forest for good this time.";
+			say "     You finally run away from the wolves, leaving this part of the forest for good this time.";
 			now Resolution of Pack Bang is 2; [fled]
 		wait for any key;
 	now Pack bang is resolved;
@@ -65,7 +63,7 @@ to say FeralWolfGangBang:
 	WaitLineBreak;
 	say "     The other wolves look angry and are fighting the one [if Player is female]knotted in your pussy[else]newly buried in your ass[end if]. You are pulled and pushed to your limits, and in a vain struggle to scream, your mouth is penetrated by another of the pack who hasn't had a turn yet. You feel hot cum filling your intestines as the one on your ass finally cums, but he doesn't get a chance to knot you as [if Player is female]both wolves on your back are pushed from you. Your holes gape[else]the wolf on your back is pushed from you. Your hole gapes[end if] without a cock[if Player is female], especially a knotted cock[end if], and the cold wind of the forest sends chills down your spine. The pack fighting for a turn is now just background noise, but your rest doesn't last long as other wolves finally fuck you.";
 	say "     You are always used by at least two of the horny wolves. In fact, sometimes, you feel more than two cocks penetrating your now-loose asshole[if Player is female] and another one inside of your drenched pussy[end if]. Your mouth hurts from all of the use, and all that you can taste right now is wolf cum. Your stomach is aching with how full it is, since it was filled from both ends. But the wolves are now long gone, leaving you in a pool of cum. This finally gives you enough time to rest, until you are finally good enough to go back to your adventures.[impregchance]";
-	CreatureSexAftermath "Player" receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from "Feral Wolf Male";
+	CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Feral Wolf Male";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Feral Wolf Male";
 	CreatureSexAftermath "Player" receives "OralCock" from "Feral Wolf Male";
 	now Resolution of Pack Bang is 1; [gangbang]

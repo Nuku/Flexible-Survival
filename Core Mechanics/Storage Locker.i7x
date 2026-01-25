@@ -5,6 +5,7 @@ Version 1 of Storage Locker by Core Mechanics begins here.
 Section 1 - Storage Locker Setup
 
 There is a storage locker in Bunker. It is fixed in place. It has a description "[stlockerdesc]".
+
 understand "use [storage locker]" as examining.
 
 instead of examining the storage locker, say stlockerdesc.
@@ -40,13 +41,11 @@ to say stlockerdesc:
 	else:
 		say "[line break]You close the storage locker.";
 
-
 instead of using storage locker:
 	say "[stlockerdesc]";
 
 instead of opening storage locker:
 	say "[stlockerdesc]";
-
 
 Section 2 - Displaying Contents
 
@@ -117,20 +116,8 @@ to say stlockercom:
 	say "[bold type]retrieveall <object>[roman type] - Take all copies of the named object from the locker.";
 	say "[bold type]massretrieve[roman type] - Take everything from the locker.";
 
-
 Stashing is an action applying to one thing.
-Retrieving is an action applying to one thing.
-Allstashing is an action applying to one thing.
-Allretrieving is an action applying to one thing.
-Massstashing is an action applying to nothing.
-Massretrieving is an action applying to nothing.
-
 understand "stash [grab object]" as stashing.
-understand "stashall [grab object]" as allstashing.
-understand "massstash" as massstashing.
-understand "retrieve [grab object]" as retrieving.
-understand "retrieveall [grab object]" as allretrieving.
-understand "massretrieve" as massretrieving.
 
 Check stashing a grab object (called x):
 	if storage locker is not visible, say "Stash it where?" instead;
@@ -143,6 +130,9 @@ Carry out stashing a grab object (called x):
 	increase stashed of x by 1;
 	say "You put [x] into the locker for storage.";
 
+Retrieving is an action applying to one thing.
+understand "retrieve [grab object]" as retrieving.
+
 Check retrieving a grab object (called x):
 	if storage locker is not visible, say "Retrieve from where?" instead;
 	if stashed of x <= 0, say "There doesn't seem to be any [x] in the storage locker right now." instead;
@@ -152,6 +142,8 @@ Carry out retrieving a grab object (called x):
 	ItemGain x by 1 silently;
 	say "You take [x] from the storage locker.";
 
+Allstashing is an action applying to one thing.
+understand "stashall [grab object]" as allstashing.
 
 Check allstashing a grab object (called x):
 	if storage locker is not visible, say "Stash them where?" instead;
@@ -165,6 +157,9 @@ Carry out allstashing a grab object (called x):
 	ItemLoss all x silently;
 	say "You put [num] of [x] into the locker for storage.";
 
+Allretrieving is an action applying to one thing.
+understand "retrieveall [grab object]" as allretrieving.
+
 Check allretrieving a grab object (called x):
 	if storage locker is not visible, say "Stash them where?" instead;
 	if stashed of x <= 0, say "There doesn't seem to be any [x] in the storage locker right now" instead;
@@ -174,6 +169,9 @@ Carry out allretrieving a grab object (called x):
 	ItemGain x by num silently;
 	now stashed of x is 0;
 	say "You take [num] of [x] from the storage locker.";
+
+Massstashing is an action applying to nothing.
+understand "massstash" as massstashing.
 
 Check massstashing:
 	if storage locker is not visible, say "Stash them where?" instead;
@@ -189,10 +187,10 @@ Carry out massstashing:
 			increase zz by carried of x;
 			increase stashed of x by carried of x;
 			ItemLoss all x silently;
-	if zz is 0:
-		say "You have nothing you can store.";
-	else:
-		say "You stash [zz] things ([yy] different objects) in the storage locker.";
+	say "[if zz is 0]You have nothing you can store[else]You stash [zz] things ([yy] different objects) in the storage locker[end if].";
+
+Massretrieving is an action applying to nothing.
+understand "massretrieve" as massretrieving.
 
 check massretrieving:
 	if storage locker is not visible, say "Stash them where?" instead;
@@ -205,11 +203,6 @@ carry out massretrieving:
 		increase zz by stashed of x;
 		ItemGain x by stashed of x silently;
 		now stashed of x is 0;
-	if zz is 0:
-		say "The storage locker is already empty.";
-	else:
-		say "You retrieve [zz] things ([yy] different objects) from the storage locker.";
-
-
+	say "[if zz is 0]The storage locker is already empty[else]You retrieve [zz] things ([yy] different objects) from the storage locker[end if].";
 
 Storage Locker ends here.

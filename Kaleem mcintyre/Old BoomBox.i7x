@@ -1,6 +1,5 @@
 Old BoomBox by Kaleem mcintyre begins here.
 
-
 [	Section 0 - Table of Game Objects
 
 Table of Game Objects (continued)
@@ -92,7 +91,6 @@ Instead of using BoomBox:
 	say "[bold type]Play[roman type]";
 
 BoomBoxPlay is an action applying to nothing.
-
 Understand "play" as BoomBoxPlay.
 Understand "music" as BoomBoxPlay.
 Understand "turn on" as BoomBoxPlay.
@@ -105,17 +103,17 @@ Carry out BoomBoxPlay:
 	say "     Looking over the old styled machine you find yourself wondering what flavor of music would be good to listen to right now. There are several switches, all with certain types of music on them, so you have options.";
 	say "[musicsession][line break]";
 
-musicmessage is a text that varies.
+musicmessage is a text that varies.[@Tag:NotSaved]
 
 to say musicsession:
 	say "     Today you feel like some...";
-	AttemptToWait;
+	wait for any key;
 	sort the table of Music Selection in sortorder order;
 	change the current menu to table of Music Selection;
 	carry out the displaying activity;
 	clear the screen;
-	say "[musicmessage]";
-	wait for any key;
+	say "     [musicmessage]";
+	WaitLineBreak;
 	try looking;
 
 Table of Music Selection
@@ -130,35 +128,34 @@ title					sortorder		toggle
 "Off"					100		musiclisten rule
 with two blank rows.
 
-
 This is the musiclisten rule:
 	choose row current menu selection in the current menu;
-	if title entry is "Jazz":
-		now musicmessage is "     Looking over the old jam machine, you press the [italic type]jazz[roman type] button. Slowly, you find the soft sounds of trumpets and bass guitars and pianos rushing out at you in a soothing, almost laid back kind of rhythm. Without you noticing them doing so, your feet begin tapping in time with the smooth music as you bob your head, imagining yourself sitting back on a sofa and watching the sun set with a glass of wine in your hands.[line break][line break][jazzfriends]";
-		follow the turnpass rule;
-	else if title entry is "Tango":
-		now musicmessage is "     Looking at the knobs on the old jam machine, you find yourself hitting the [italic type]tango[roman type] button and instantly the room is filled with the living sounds of violins, pianos, guitars and flutes all working in time together to fill the bunker with a smooth kind of ballroom-like music. Not really sure how to feel about this, you find yourself swaying with the notes as the instruments slowly work in concert to energize the bunker.[line break]     The feeling that you want to suddenly start dancing around passionately has you nearly shivering when the music takes on a sudden lively flare. You can almost see yourself swirling around while in the arms of a strong male lead as he guides you on the dance floor.[line break][line break][tangofriends]";
-		follow the turnpass rule;
-	else if title entry is "R&B":
-		now musicmessage is "     Looking at the working jam box, you find yourself going over the knobs before finally coming to [italic type]R&B[roman type] and then pressing the button. Like a storm coming in from the sea, the bunker is soon filled with the mournful sounds of rhythmic blues music spilling out into the small area. Going to sit down on one of the cots in the room, you let your head bob in time with the instruments, and you can almost hear someone singing in time with the melody. The music makes you imagine yourself driving down the road in a pop-top car while letting your hair dance in the wind as you speed down the highway.[line break][line break][R&Bfriends]";
-		follow the turnpass rule;
-	else if title entry is "Rock and Roll":
-		now musicmessage is "     The sounds of Rock and Roll soon pulse out from the beat machine as you press the button denoted as R&R. The sounds coming from the jam machine are a mix of electric guitars and drums, and you find that it actually takes you a while to get used to this kind of [italic type]noise[roman type] before you can stand the sounds.[line break]     When you do, however, you find yourself imagining yourself around a large number of screaming fans, all cheering for a leather-clad group of musicians working in sync together to jam their hearts out. A slight snap of your hips follows a hop and before you know it you are dancing your own heart out as your blood begins to quicken within your veins. Maybe this isn't so bad after all.[line break][line break][RockandRollfriends]";
-		follow the turnpass rule;
-	else if title entry is "Ocean":
-		now musicmessage is "     Pressing the button marked as [italic type]ocean[roman type], you find yourself somewhat confused as you notice that the swaying rhythm of the sea lapping at the shore starts to play out across the room. Instantly, you feel somewhat sleepy and you go over to one of the cots in the room and then start to close your eyes to sleep.[line break]     The instant you shut your eyes, you can see the sights of calm blue waters rushing across clear white sands, while dolphins flip around up and down inside of these waters. Whales spray water from their blowholes, and you can't help but smile as you suddenly feel so warm and content within yourself. The feeling that someone is calling you makes you arch an eyebrow as you wonder if you had heard right...[line break][line break][Oceanfriends]";
-		follow the turnpass rule;
-	else if title entry is "Insert Tape A":
-		now musicmessage is "     Realizing that you [']borrowed['] both of those tapes from the music shop without meaning to, you shrug and think that you'll take them back later before popping one into the boombox and then pressing PLAY. Quietly, the background music of the song plays and you find yourself nodding your head as you recall the song. A man's voice fills up the bunker and soon you are silently mouthing the words to his song in time with the lyrics being sung.[line break]     Old memories come flooding back into you from years ago, and without meaning to you start to sway back and forth while nodding your head around almost drunkenly. Amazing what old music can do to someone. This would be a good time for you to go out and find some music, preferably with a male singer, that you (the player) likes to listen to as well. It would make this scene much better. (Thanks for playing Flexible Survival by the way!)";
-		follow the turnpass rule;
-	else if title entry is "Insert Tape B":
-		now musicmessage is "     Seeing that you've accidentally pocketed both of the cassettes from the old music shop, you smile sheepishly before reminding yourself to go and return them soon. Figuring that you've already eaten the [']poison['] on this one, you shrug as you go over to pop the cassette into the boombox and then hit the PLAY button.[line break]     Like a flash, the sounds of something slightly ambient come over the speakers of the jam box, and without thinking you let your body move along with the rhythm of the music echoing out at you.[line break]     A woman's voice soon follows the instrument's rhythm, and you laugh before you can stop yourself as her voice just washes over you like a wave. Shaking your hips and singing in time with her, this would be a good time for you (the player) to go out and find your favorite female artist to listen to. It would make this experience so much better for you. (Thanks for playing Flexible Survival by the way!)";
-		follow the turnpass rule;
-	else if title entry is "Off":
-		now musicmessage is "     Not feeling like listening to any music right now, you decide to turn the boombox off. However, what you come to find is that there is no Off button on the machine. What the heck?";
+	if title entry is:
+		-- "Jazz":
+			now musicmessage is "Looking over the old jam machine, you press the [italic type]jazz[roman type] button. Slowly, you find the soft sounds of trumpets and bass guitars and pianos rushing out at you in a soothing, almost laid back kind of rhythm. Without you noticing them doing so, your feet begin tapping in time with the smooth music as you bob your head, imagining yourself sitting back on a sofa and watching the sun set with a glass of wine in your hands.[line break][line break][jazzfriends]";
+			follow the turnpass rule;
+		-- "Tango":
+			now musicmessage is "Looking at the knobs on the old jam machine, you find yourself hitting the [italic type]tango[roman type] button and instantly the room is filled with the living sounds of violins, pianos, guitars and flutes all working in time together to fill the bunker with a smooth kind of ballroom-like music. Not really sure how to feel about this, you find yourself swaying with the notes as the instruments slowly work in concert to energize the bunker.[line break]     The feeling that you want to suddenly start dancing around passionately has you nearly shivering when the music takes on a sudden lively flare. You can almost see yourself swirling around while in the arms of a strong male lead as he guides you on the dance floor.[line break][line break][tangofriends]";
+			follow the turnpass rule;
+		-- "R&B":
+			now musicmessage is "Looking at the working jam box, you find yourself going over the knobs before finally coming to [italic type]R&B[roman type] and then pressing the button. Like a storm coming in from the sea, the bunker is soon filled with the mournful sounds of rhythmic blues music spilling out into the small area. Going to sit down on one of the cots in the room, you let your head bob in time with the instruments, and you can almost hear someone singing in time with the melody. The music makes you imagine yourself driving down the road in a pop-top car while letting your hair dance in the wind as you speed down the highway.[line break][line break][R&Bfriends]";
+			follow the turnpass rule;
+		-- "Rock and Roll":
+			now musicmessage is "The sounds of Rock and Roll soon pulse out from the beat machine as you press the button denoted as R&R. The sounds coming from the jam machine are a mix of electric guitars and drums, and you find that it actually takes you a while to get used to this kind of [italic type]noise[roman type] before you can stand the sounds.[line break]     When you do, however, you find yourself imagining yourself around a large number of screaming fans, all cheering for a leather-clad group of musicians working in sync together to jam their hearts out. A slight snap of your hips follows a hop and before you know it you are dancing your own heart out as your blood begins to quicken within your veins. Maybe this isn't so bad after all.[line break][line break][RockandRollfriends]";
+			follow the turnpass rule;
+		-- "Ocean":
+			now musicmessage is "Pressing the button marked as [italic type]ocean[roman type], you find yourself somewhat confused as you notice that the swaying rhythm of the sea lapping at the shore starts to play out across the room. Instantly, you feel somewhat sleepy and you go over to one of the cots in the room and then start to close your eyes to sleep.[line break]     The instant you shut your eyes, you can see the sights of calm blue waters rushing across clear white sands, while dolphins flip around up and down inside of these waters. Whales spray water from their blowholes, and you can't help but smile as you suddenly feel so warm and content within yourself. The feeling that someone is calling you makes you arch an eyebrow as you wonder if you had heard right...[line break][line break][Oceanfriends]";
+			follow the turnpass rule;
+		-- "Insert Tape A":
+			now musicmessage is "Realizing that you [']borrowed['] both of those tapes from the music shop without meaning to, you shrug and think that you'll take them back later before popping one into the boombox and then pressing PLAY. Quietly, the background music of the song plays and you find yourself nodding your head as you recall the song. A man's voice fills up the bunker and soon you are silently mouthing the words to his song in time with the lyrics being sung.[line break]     Old memories come flooding back into you from years ago, and without meaning to you start to sway back and forth while nodding your head around almost drunkenly. Amazing what old music can do to someone. This would be a good time for you to go out and find some music, preferably with a male singer, that you (the player) likes to listen to as well. It would make this scene much better. (Thanks for playing Flexible Survival by the way!)";
+			follow the turnpass rule;
+		-- "Insert Tape B":
+			now musicmessage is "Seeing that you've accidentally pocketed both of the cassettes from the old music shop, you smile sheepishly before reminding yourself to go and return them soon. Figuring that you've already eaten the [']poison['] on this one, you shrug as you go over to pop the cassette into the boombox and then hit the PLAY button.[line break]     Like a flash, the sounds of something slightly ambient come over the speakers of the jam box, and without thinking you let your body move along with the rhythm of the music echoing out at you.[line break]     A woman's voice soon follows the instrument's rhythm, and you laugh before you can stop yourself as her voice just washes over you like a wave. Shaking your hips and singing in time with her, this would be a good time for you (the player) to go out and find your favorite female artist to listen to. It would make this experience so much better for you. (Thanks for playing Flexible Survival by the way!)";
+			follow the turnpass rule;
+		-- "Off":
+			now musicmessage is "Not feeling like listening to any music right now, you decide to turn the boombox off. However, what you come to find is that there is no Off button on the machine. What the heck?";
 	decrease the menu depth by 1;
 	rule succeeds;
-
 
 To say jazzfriends:
 	if Sarah is in the bunker:
@@ -205,8 +202,7 @@ to say tangofriends:
 	if Alexandra is booked:
 		say "     Coming in to investigate the noise, Alexandra pokes her head inside, growls softly to herself and heads back out, clearly uninterested in what's playing.";
 	SanBoost 4;
-	increase Libido of Player by 2;
-	if Libido of Player > 100, now Libido of Player is 100;
+	raise Player Libido by 2;
 
 to say R&Bfriends:
 	If Fang is in the Grey Abbey Library:
@@ -272,8 +268,7 @@ to say RockandRollfriends:
 	if house cat is tamed:
 		say "     The little calico house cat you found earlier rolls around the music box before purring and shaking her head somewhat wildly while yowling happily. You chuckle at this as you wonder if her former owner listened to this type of music a lot.";
 	SanBoost 4;
-	increase Libido of Player by 15;
-	if Libido of Player > 100, now Libido of Player is 100;
+	raise Player Libido by 15;
 
 to say Oceanfriends:
 	if Sarah is in the bunker:
@@ -320,8 +315,6 @@ to say Oceanfriends:
 		say "     Noticing [if fang is booked]that Fang's not at the door[else]the lack of activity[end if], Alexandra pokes her head inside to see if anything's up. Hearing the soft music and beach sounds, she rolls her eyes with a huff and heads back out to stand watch.";
 		now lastfuck of Alexandra is lastfuck of Alexandra - 2;
 	SanBoost 4;
-	decrease Libido of Player by 18;
-	if Libido of Player < 0, now Libido of Player is 0;
-
+	lower Player Libido by 18;
 
 Old BoomBox ends here.

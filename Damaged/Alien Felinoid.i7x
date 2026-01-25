@@ -6,7 +6,7 @@ Version 8 of Alien Felinoid by Damaged begins here.
 Section 1 - Creature Responses
 
 catnum is a number that varies.
-mateable is a number that varies.
+[mateable is a number that varies.]
 
 to say Felinoid_Desc:
 	say "     What looks like a full-sized maned lion paces up before you, nose raised in the air, sniffing at the wind. You hear the big cat purr and look your way, with a sinking feeling you realize that not only was it your scent he was following, but that he is very pleased to see you at last.";
@@ -23,12 +23,9 @@ to say felinoid wins:
 			say "     The great cat, as if accepting your submission, pads up to you and nuzzles against you firmly, his short fur tickling your cheek. Suddenly the feline butts you over onto all fours, purring in anticipation. With his strong and masculine scent filling your senses, you don't resist, wanting to keep the big cat pleased. You gasp as he paces behind you and, reaching a foreleg over your shoulder, leans his weight into you. The feline forces your [bodydesc of Player] chest to lower down into the dirt and licks slowly along your neck, sending shivers down your spine.";
 			say "     He rumbles softly into your ear and you end up raising your rear as he moves to mount you fully, sinking his feline shaft into your [if Player is female]wet pussy[else]tight ass[end if], spreading you open with his feline member. Keeping a paw at your back as a reminder of who's in charge, he starts thrusting, sliding those spines covering his cock along your inner walls. They send waves of pleasure through you as he pounds into you, thrusting harder and faster.";
 			WaitLineBreak;
-			if catnum < 3:
-				say "     Grinding your ass back against him, you moan softly, wanting the big cat to drive his full length into you again and again. With your chest pressed to the ground, you do your best to work your inner walls around his throbbing member, struggling to maintain control with those delightful barbs rubbing inside you. You mewl softly beneath him, hoping more and more to have this large feline pump his hot, virile load into you. The mere thought is exciting, making you want to be his mate, seeded and claimed as his.";
-			else:
-				say "     Grinding your ass back against him, you moan softly, needing the big cat to drive his full length into you again and again. With your chest pressed to the ground, you do your best to work your inner walls around his throbbing member, struggling to maintain control with those delightful barbs rubbing inside you. You pant and mrowl beneath him like a cat in heat, eager to have this large feline take you and claim you fully. The mere thought is exciting, your mind and body longing to be mated to this powerful male so that you may be used like this again and again. You would be his sex toy, his breeding hole, his to fuck as much as he wants wherever he wanted.";
+			say "     Grinding your ass back against him, you moan softly, [if catnum < 3]wanting[else]needing[end if] the big cat to drive his full length into you again and again. With your chest pressed to the ground, you do your best to work your inner walls around his throbbing member, struggling to maintain control with those delightful barbs rubbing inside you. You [if catnum < 3]mewl softly beneath him, hoping more and more to have this large feline pump his hot, virile load into you. The mere thought is exciting, making you want to be his mate, seeded and claimed as his[else]pant and mrowl beneath him like a cat in heat, eager to have this large feline take you and claim you fully. The mere thought is exciting, your mind and body longing to be mated to this powerful male so that you may be used like this again and again. You would be his sex toy, his breeding hole, his to fuck as much as he wants wherever he wanted[end if].";
 			say "     Those thoughts [if Player is not neuter]push you over the edge, causing you to cry out again as you climax[else]fill your mind as the big kitty continues to plow into you, dominantly fucking you[end if][if Player is female], squeezing your cunt down around his pulsing rod[else if Player is male], spraying your unneeded seed across the ground as your anus clamps down around his pulsing cock[end if]. The beast continues to pound into you[if Player is not neuter] while you cum[end if] before finally sinking his shaft fully inside you and unleashing his hot load with a triumphant growl. As his hot seed floods your [if Player is female]womb[else]bowels[end if], you feel wonderful to have been claimed by such a powerful beast.";
-			CreatureSexAftermath "Player" receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from "Felinoid";
+			CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Felinoid";
 			WaitLineBreak;
 			say "     Spent, the feline pulls his cock from your [if Player is female]creamy pussy[else]abused anus[end if] and releases you. He nuzzles at your neck and purrs softly, nudging you to get up and leave now that he's done with you. At least for the time being. Still feeling the effects of his musk and your recent pounding, you are reluctant to leave, but you obediently gather your things and head on your way, hoping you might let him, or another of these great cats, take you again soon.";
 			increase catnum by 1;
@@ -106,14 +103,14 @@ to say felinoid wins:
 				else:
 					say "     The big cat rubs himself against you, purring deeply; without thinking your hand reaches to scritch his ears. 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin making you whine and whimper softly into his fur, breathing in more of the big animal's suddenly fiery smelling musk.";
 
+Section 2 - Creature Insertion
+
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Felinoid"	"[PrepCombat_Felinoid]"
 
 to say PrepCombat_Felinoid:
 	setmongender 3;
-
-Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -138,7 +135,7 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]He rakes at you wildly, leaving you in intense pain.[or]He leaps at you, digging his teeth into your arm.[or]He leaps at you, digging his teeth into your leg.[at random]";
-	now defeated entry is "With a last roar the big cat claws out wildly, trying to hit you one last time before collapsing to the ground.[line break]";
+	now defeated entry is "     With a last roar the big cat claws out wildly, trying to hit you one last time before collapsing to the ground.[line break]";
 	now victory entry is "[felinoid wins]";
 	now desc entry is "[Felinoid_Desc]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a short muzzled, female lion"; [ Face description, format as "Your face is [Face of Player]." ]
@@ -291,7 +288,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Monster Heat
 
 Table of infection heat (continued)
@@ -299,18 +295,13 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 --	--	--	--	--	--	--	--	--	--	--
 
 to say felinoidheat:
-	if Player is female:
-		if heatform is 0:
-			say "You whine as you find yourself fingering your pussy in abandon before managing to snap out of your needy haze for a brief moment. Looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you and you begin lapping at your fingers, tasting your musk, needing more.";
-		else:
-			say "You whine as you find yourself fingering your sopping asshole in abandon, before managing to snap out of your needy haze for a brief moment. Looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you, so like a wild cat in heat, you can't help but push those fingers back in for a few more minutes before you're able to move on.";
+	say "You whine as you find yourself fingering your [if heatform is 0]pussy in abandon before managing to snap out of your needy haze for a brief moment. Looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you and you begin lapping at your fingers, tasting your musk, needing more[else]sopping asshole in abandon, before managing to snap out of your needy haze for a brief moment. Looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you, so like a wild cat in heat, you can't help but push those fingers back in for a few more minutes before you're able to move on[end if].";
 	infect "Felinoid";
-	increase Libido of Player by 15;
+	raise Player Libido by 15;
 
 to say felinoidheat end:
 	say "The pressing need to find a mate fades slowly, leaving you whimpering in relief.";
-	decrease Libido of Player by 40;
-	if Libido of Player < 0, now Libido of Player is 0;
+	if Libido of Player > 60, decrease Libido of Player by 40;
 
 When Play begins:
 	Choose a blank row from Table of infection heat;

@@ -6,7 +6,7 @@ Feral Shaft Beast by Guest Writers begins here.
 Section 1 - Creature Responses
 
 to say feral shaft beast victory:[Defeat scenes]
-	if Player is female:
+	if Player is female and a random chance of 3 in 4 succeeds and (anallevel < 3 or a random chance of 1 in 2 succeeds):
 		say "     The beast charges and tackles you, knocking you down on your rear. Incapacitated, you're rolled over onto your stomach, shivering as the twisted creature appraises you with a soft, lustful hiss. She caresses your rear with her massive cock head, then slowly moves over your body, her strong paws tugging and ripping away piece by piece of your clothing as she leaks over your body with her thick, heavy, sticky goo. With nothing left in her way, she mounts you and begins to grind against your rear, rubbing her gigantic equipment between your legs, searching for the right angle and then pressing her cock against your [cunt size desc of Player] cunt.";
 		say "     Her spire throbs hard and adjusts in size to better please you, to make it fit tightly and slightly stretch you wider than your current limits. She gives no second thoughts and thrusts to the hilt after the adjustment, making you cry out in bliss as her spire rubs against all the right places. After the initial thrust, she lowers her cock-like head to yours, pressing it against your face. She begins to lick all around, lapping and drooling over your neck and back as she pumps her spire back and forth with such a gentle pace that you can't help but relax and enjoy yourself at the hands of the now loving beast. You swear you hear a song in the distance, but among the pleasure this creature gives you, it doesn't matter.";
 		WaitLineBreak;
@@ -35,7 +35,7 @@ to say feral shaft beast defeat:[Victory scenes]
 			say "     In a blink, your [bodytype of Player] form is atop her and thrusting your spire deep into the willing monster without any inhibitions, pumping roughly and slamming against her on every powerful thrust. The beast throbs and leaks heavily from her head's slit, every throbbing spire and nipple on her body drooling and spurting in excitement, her scent driving you mad with lust. At the climax of it all, you release your seed deep within the beast, who pulses and throbs in ecstasy as her own body is shaken by a blissful orgasm, making a huge mess like no other, your body splattered from head to toe in her many juices.";
 			say "     Once you are done, you pull out and kiss the creature's urethral slit lustfully, suckling on some of her cocktongues for a little while. She nuzzles back at your face and lets you go. For some reason, the beast must have allowed you to walk away unchanged; you are certain that they could infect with just a touch, but it seems they have control over to whom and when infection happens. You just go on your way, satisfied.";
 			CreatureSexAftermath "Feral Shaft Beast" receives "PussyFuck" from "Player";
-		else if Player is female:
+		else:
 			say "     The creature hisses and lands on her rear after your last strike, panting and exhausted. She just lays there, exposing her features to you submissively. The sight and the powerful scents prove too much for your own need, and the creature wiggles softly as you approach, the skin of her head growing darker as she blushes. Undressing and moving over the large pillar of flesh between her legs, you prepare to slide down the beast's gigantic spire. It throbs hard and spurts sticky juices against your slit and thighs, the mess spreading over your crotch.";
 			say "     You don't mind a bit as you begin to lower yourself on her flaring glans, moaning out loud as your nethers grind against the drooling cocktip. Generously lubricated by her essence, your folds wrap around her cock like they're made of rubber, yet it still feels like a very tight and enjoyable fit. You lower more of yourself down that huge, pulsing rod, sliding smoothly down her slickened flesh. It seems to grow even bigger inside you, and before you notice how much you've taken, your cunt is kissing the beast's crotch and the veins of her massive rod can be seen through your stretched and bloated belly. You pant and moan lustfully as the creature takes hold of your hips, and together you begin to hump and bounce against each other. Soon, the two of you are subsumed in your lusts, and it's not long until your [bodydesc of Player] body shakes in the throes of a powerful orgasm. Wrenching around her throbbing cock, the creature doesn't hold any longer, blasting your insides with buckets of her seed, making your belly swell with her output until it protrudes in a large, round dome.";
 			say "     Eventually able to contain no more, the powerful blasts push you off her turgid spire, landing on the ground in a quickly-forming pool of sticky, musky cum. Your legs shake as you fall against the creature, you smile widely. Once her orgasm begins to taper down, you lean your weight into the creature and kiss her urethral slit, suckling on her cocktongues lustfully. She nuzzles back at your face and lets you go. For some reason, the beast must have allowed you to walk away unchanged; you are certain that they could infect with just a touch, but it seems they have control over to whom and when infection happens. You just go on your way, satisfied and with a large, full, sloshing belly that sometimes wiggles oddly...";
@@ -44,12 +44,12 @@ to say feral shaft beast defeat:[Victory scenes]
 	else:
 		say "     The creature hisses and steps away from you after your last strike. In a last-ditch effort, she spurts her seed and larvae everywhere. You're forced to retreat or risk being contaminated, and the beast uses the opening to escape.";
 
-Section 2 - Creature Insertion
-
 to say FeralShaftBeast_Desc:
 	say "     As you walk, you find a powerful musk filling your lungs. Your skin tingles and a chill run downs your spine as wet sounds resonate behind you, and when you turn to face the source, you lay your eyes on a beast like no other.";
 	say "     Standing on all fours, the purple-skinned monster is an abomination of breasts and phalluses. Her veiny skin throbs, looking slick and moist with a thin layer of her own liquid musk. Her head is a massive, thick-necked shaft with a glans-like tip that reminds you of a dragon's snout. The toes on her front and rear paws terminate in penis-like protrusions that drool on the ground as she walks. Stretching out from her rear is a massive tail with a dribbling crown that's as large as her head, and the tail's underside is covered from base to tip with two rows of heavy, dripping breasts. Eight massive, cock-like tentacles wriggle around on the monster's back, each as thick as one of your arms and five feet in length. The creature's head is pointed at you, and the urethra stretches open to reveal three massive cocktongues that slide out and wiggle in your direction, just as dexterous as the tentacles on her back.";
 	say "     As the creature moves closer to fight you, you can't help but balk at the eight H cup breasts on her front and the massive, four foot long spire between her legs, the underside of which is lined with twin rows of orange-sized tits. Behind that imposing pillar of flesh rests a huge ballsack with four watermelon-sized testicles. You can't even begin to fathom how such a thing could be created, much less be able to move, but she's clearly eager to play with you as she prepares to take what she wants by force.";
+
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -231,12 +231,11 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 to sharethelust:
 	infect "Feral Shaft Beast";
-	increase Libido of Player by 25;
-	if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 4;
-	if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 4;
+	raise Player Libido by 25;
+	if "Horny Bastard" is listed in feats of Player, raise Player Libido by 4;
+	if "Cold Fish" is listed in feats of Player, lower Player Libido by 4;
 	decrease humanity of Player by a random number between 0 and 1;
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
@@ -263,9 +262,8 @@ name	desc	weight	object
 
 psionic larva is a grab object.
 psionic larva is infectious. Strain of psionic larva is "Feral Shaft Beast".
-Usedesc of psionic larva is "You feel compelled to devour the wiggling grub, and you repress your inhibitions as you bite off its head. Surprisingly, it has a really good, tangy, familiar taste, and you waste no time in devouring the rest of your 'snack'. After you've finished, you gag a bit at the musky aroma still clinging to your palate, feeling equal parts repulsed and aroused by what you just ate.";
+Usedesc of psionic larva is "     You feel compelled to devour the wiggling grub, and you repress your inhibitions as you bite off its head. Surprisingly, it has a really good, tangy, familiar taste, and you waste no time in devouring the rest of your 'snack'. After you've finished, you gag a bit at the musky aroma still clinging to your palate, feeling equal parts repulsed and aroused by what you just ate.[line break]".
 
 the scent of psionic larva is "The musky scent of sex wafts from the wriggling grub.".
-
 
 Feral Shaft Beast ends here.

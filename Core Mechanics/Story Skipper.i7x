@@ -33,8 +33,8 @@ The File of NoteSave (owned by another project) is called "FSNoteSave".
 The File of StorageSave (owned by another project) is called "FSStorageSave".
 The File of VialData (owned by another project) is called "FSVialDataSave".
 
-PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
-PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "Rubber Tigress companion", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger companion", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder", "Best Wolf", "submissive demonic prince", "White Wolf Zero", "White Wolf One", "White Wolf Two", "White Wolf Three", "White Wolf Four", "White Wolf Five", "White Wolf Six", "White Wolf Seven", "White Wolf Eight", "White Wolf Nine", "White Wolf Ten"}.
+[PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
+PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "Rubber Tigress companion", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger companion", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder", "Best Wolf", "submissive demonic prince", "White Wolf Zero", "White Wolf One", "White Wolf Two", "White Wolf Three", "White Wolf Four", "White Wolf Five", "White Wolf Six", "White Wolf Seven", "White Wolf Eight", "White Wolf Nine", "White Wolf Ten"}.]
 
 an everyturn rule:
 	if Player is in NPC Nexus:
@@ -85,42 +85,36 @@ a postimport rule:
 [----------------------------------------------------------------------------------]
 
 StashEvent is an action applying to nothing.
-
 understand "StashEvent" as StashEvent.
 
 carry out StashEvent:
 	EventSave;
 
 StashRoom is an action applying to nothing.
-
 understand "StashRoom" as StashRoom.
 
 carry out StashRoom:
 	RoomSave;
 
 StashPossession is an action applying to nothing.
-
 understand "StashPossession" as StashPossession.
 
 carry out StashPossession:
 	PossessionSave;
 
 StashCharacter is an action applying to nothing.
-
 understand "StashCharacter" as StashCharacter.
 
 carry out StashCharacter:
 	CharacterSave;
 
 StashPlayer is an action applying to nothing.
-
 understand "StashPlayer" as StashPlayer.
 
 carry out StashPlayer:
 	PlayerSave;
 
 StashBeast is an action applying to nothing.
-
 understand "StashBeast" as StashBeast.
 
 carry out StashBeast:
@@ -129,49 +123,42 @@ carry out StashBeast:
 [----------------------------------------------------------------------------------]
 
 EventRestoration is an action applying to nothing.
-
 understand "EventLoad" as EventRestoration.
 
 carry out EventRestoration:
 	EventRestore;
 
 RoomRestoration is an action applying to nothing.
-
 understand "RoomLoad" as RoomRestoration.
 
 carry out RoomRestoration:
 	RoomRestore;
 
 PossessionRestoration is an action applying to nothing.
-
 understand "PossessionLoad" as PossessionRestoration.
 
 carry out PossessionRestoration:
 	PossessionRestore;
 
 CharacterRestoration is an action applying to nothing.
-
 understand "CharacterLoad" as CharacterRestoration.
 
 carry out CharacterRestoration:
 	CharacterRestore;
 
 PlayerRestoration is an action applying to nothing.
-
 understand "PlayerRestoration" as PlayerRestoration.
 
 carry out PlayerRestoration:
 	PlayerRestore;
 
 BeastRestoration is an action applying to nothing.
-
 understand "BeastRestoration" as BeastRestoration.
 
 carry out BeastRestoration:
 	BeastRestore;
 
 TraitRestoration is an action applying to nothing.
-
 understand "TraitRestoration" as TraitRestoration.
 
 carry out TraitRestoration:
@@ -321,8 +308,7 @@ to RoomRestore:
 			let ItemIdName be ItemName entry;
 			[some small bugfixes due to items that got renamed]
 			if ItemIdName is:
-				-- "Sundered Codex": [automatically given on import now, so don't restore it]
-					next;
+				-- "Sundered Codex": next; [automatically given on import now, so don't restore it]
 				-- "sturdy jeans": now ItemIdName is "dark-blue jeans";
 				-- "tenvale gorillas football helmet": now ItemIdName is "tenvale silverbacks football helmet";
 				-- "tenvale gorillas baseball cap": now ItemIdName is "tenvale silverbacks baseball cap";
@@ -1009,7 +995,7 @@ to TraitRestore:
 			if there is a name of TraitOwner in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of TraitOwner in the Table of GameCharacterIDs;
 				if TraitText entry is not listed in Traits of CharacterObject:
-					if TraitText entry in lower case exactly matches the text "tamed": [pets]
+					if TraitText entry exactly matches the text "tamed", case insensitively: [pets]
 						now TraitText entry is "Tamed"; [bugfix for the lower case typo]
 						if CharacterObject is not tamed, now CharacterObject is tamed;
 					else if TraitText entry is "currentCompanion":
@@ -1302,7 +1288,8 @@ to PlayerRestore:
 		read File of PlayerListsSave into the Table of PlayerLists;
 		repeat through Table of PlayerLists:
 			if ListName entry is:
-				-- "Vial": VialGain EntryText entry by 1 silently;
+				-- "Vial":
+					VialGain EntryText entry by 1 silently;
 				-- "Tape":
 					if EntryText entry is not listed in Tapes of Player:
 						add EntryText entry to Tapes of Player;
@@ -1559,14 +1546,14 @@ to BeastRestore:
 			let BeastSex be sex entry;
 			let BeastType be enemy type entry;
 			[some small bugfixes due to renamed creatures]
-			if Beastname is:
+			if Beastname in lower case is:
 				-- "dullahan": now Beastname is "Dullahan";
-				-- "Ogre": now Beastname is "Ogre Male";
-				-- "Elven Hunter": now Beastname is "Elven Male";
+				-- "ogre": now Beastname is "Ogre Male";
+				-- "elven hunter": now Beastname is "Elven Male";
 				-- "rubber tigress": now Beastname is "Rubber Tigress";
-				-- "Football Gorilla": now Beastname is "Football Gorilla Male";
-				-- "Feral Wolf": now Beastname is "Feral Wolf Male";
-				-- "Skunk": now Beastname is "Skunk Female";
+				-- "football gorilla": now Beastname is "Football Gorilla Male";
+				-- "feral wolf": now Beastname is "Feral Wolf Male";
+				-- "skunk": now Beastname is "Skunk Female";
 			if there is a Name of BeastName in the Table of Random Critters:
 				choose row with Name of BeastName in Table of Random Critters;
 				if Area entry is not BeastArea, now Area entry is BeastArea;
@@ -1665,7 +1652,6 @@ to BanListRestore:
 	if number of warded flags > 0 or number of banned flags > 0 or number of warded tags > 0 or number of banned tags > 0:
 		startcreatureban; [re-run the ban action to disable blocked creatures/situations]
 
-
 to RunPostImportRules:
 	say "Running Post Import Rules...";
 	sort Table of Random Critters in lev order;
@@ -1674,8 +1660,8 @@ to RunPostImportRules:
 
 Section 2 - Trixie
 
-understand "export progress" as ProgressExport.
 ProgressExport is an action applying to nothing.
+understand "export progress" as ProgressExport.
 
 Carry out ProgressExport:
 	say "[ProgressionExport]";
@@ -1707,8 +1693,8 @@ To SaveEverything:
 	StorageSave;
 	VariableSave;
 
-understand "Import Progress" as ProgressImport.
 ProgressImport is an action applying to nothing.
+understand "Import Progress" as ProgressImport.
 
 Carry out ProgressImport:
 	LineBreak;
@@ -1735,6 +1721,7 @@ to say ProgressionImport:
 	VariableLoad;
 	BanListRestore;
 	RunPostImportRules;
+	LineBreak;
 	try looking; [start the player off in their new playthrough]
 
 Table of GameCharacterIDs (continued)

@@ -1,7 +1,6 @@
 Version 1 of Infection Vials by Core Mechanics begins here.
 [ Version 1 - Extracted during dissection of the Story.ni - Wahn]
 
-
 Part 1 - Vial Harvesting
 
 Table of OwnedVials
@@ -32,7 +31,7 @@ to VialGain (VialName - text) by (N - number) silence state is (Silence - a numb
 			now Name entry is VialName;
 			now PlayerOwned entry is N;
 		if Silence is 0:
-			say "You manage to extract a vial of [special-style-1][VialName][roman type] nanites for study and use.";
+			say "[line break]You manage to extract a vial of [special-style-1][VialName][roman type] nanites for study and use.";
 		sort Table of OwnedVials in name order;
 	else: [infection does not exist]
 		say "ERROR! '[VialName]' is not a valid infection to gain infection vials for. Please report this message and the context you saw it in on the FS Discord!";
@@ -108,17 +107,14 @@ To Vialchance (x - a text):
 			else if "Expert Researcher" is listed in feats of Player and a random number between 1 and 100 <= vialcollectible:
 				now vcoll is 1;
 			if vcoll is 1:
-				LineBreak;
 				VialGain x by 1;
 				now vcoll is 0;
 	else:
 		say "ERROR! '[x]' is not a valid infection to gain infection vials for. Please report this message and the context you saw it in on the FS Discord!";
 
-
 Part 2 - Vial Inventory
 
 VialInventorying is an action applying to nothing.
-
 understand "vint" as VialInventorying.
 understand "vinv" as VialInventorying.
 understand "vial inventory/inv" as VialInventorying.
@@ -155,11 +151,10 @@ carry out VialInventorying:
 
 Part 3 - Vial Commands
 
-understand "vial [text]" as vialing.
+Researchbypass is a number that varies.[@Tag:NotSaved] Researchbypass is normally 0.
 
 Vialing is an action applying to one topic.
-
-Researchbypass is a number that varies. Researchbypass is normally 0.
+understand "vial [text]" as vialing.
 
 carry out vialing:
 	let NamedVial be the topic understood;
@@ -191,9 +186,8 @@ carry out vialing:
 to deletevial (x - text):	[removes 1 vial of a given type from the player's inventory]
 	VialLoss x by 1;
 
-understand "vialdrop [text]" as vialdropping.
-
 Vialdropping is an action applying to one topic.
+understand "vialdrop [text]" as vialdropping.
 
 Carry out vialdropping:
 	let NamedVial be the topic understood;
@@ -203,9 +197,8 @@ Carry out vialdropping:
 		say "DEBUG: [NamedVialCap] in title case[line break]";
 	VialLoss NamedVialCap by 1;
 
-understand "vialalldrop [text]" as vialalldropping.
-
 Vialalldropping is an action applying to one topic.
+understand "vialalldrop [text]" as vialalldropping.
 
 Carry out vialalldropping:
 	let NamedVial be the topic understood;
@@ -215,9 +208,8 @@ Carry out vialalldropping:
 		say "DEBUG: [NamedVialCap] in title case[line break]";
 	VialLoss all NamedVialCap;
 
-understand "vialeverythingdrop" as VialEverythingDropping.
-
 VialEverythingDropping is an action applying to nothing.
+understand "vialeverythingdrop" as VialEverythingDropping.
 
 Check VialEverythingDropping:
 	if the number of filled rows in the Table of OwnedVials is 0, say "You don't even have any vials!" instead;
@@ -230,6 +222,5 @@ Carry out VialEverythingDropping:
 	if Player consents:
 		blank out the whole of Table of OwnedVials; [cleaning out everything]
 	LineBreak;
-
 
 Infection Vials ends here.

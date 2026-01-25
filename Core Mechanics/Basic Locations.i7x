@@ -66,6 +66,8 @@ Grey Abbey Library is east of Library Door.
 Bunker is below Grey Abbey Library.
 The player is in Bunker.
 
+the scent of Bunker is "     The air in the bunker smells a little stale from being sealed so long, but is quite breathable.".
+
 after looking while player is in Bunker:
 	project the Figure of Map_Bunker_Main_icon;
 
@@ -93,10 +95,7 @@ after looking while player is in Communal Shower:
 
 to say bshower desc:
 	say "     The bunker has a small communal shower with a pretty simple setup. The first thing one sees when entering is that everything is covered in smooth, checkered tile. There's a short bench near the entrance for people to sit on as they undress. This is separated from the shower area proper by a concrete dividing wall, serving as a privacy screen for those entering and drying off. Turning the corner, you see that five showerheads have been affixed to the back wall for several people to wash themselves at once. There's a subtle depression in the floor - enough to direct water to a central drain, but not enough to feel unsteady when standing on it. Around the shower is a raised border that serves as an additional safeguard from flooding the surrounding area.";
-	if library computer is powered:
-		say "     Experimentally turning the knobs under one of the showerheads, a light spray of water comes out of it. Seems like you can at least wash here now. Drinking the water wouldn't be advisable though, as you vaguely remember mentions of the use of lead piping from the tour you once took through the place. As corroded as that has to be by now, you decide not to risk lead poisoning on top of all your other problems.";
-	else:
-		say "     Experimentally turning the knobs under one of the showerheads, you get... nothing. Seems like the showers are out of commission at the moment. Thinking back to the tour of the place you joined a year back (which is why you knew of the bunker in the first place), you remember them saying that there is a large water tank somewhere in the underground nearby. A pump powered by batteries is supposed to supply the bunker, but those have probably deteriorated by now. Maybe you can get the water running by [bold type]supplying the library with power[roman type] instead.";
+	say "     Experimentally turning the knobs under one of the showerheads, [if library computer is powered]a light spray of water comes out of it. Seems like you can at least wash here now. Drinking the water wouldn't be advisable though, as you vaguely remember mentions of the use of lead piping from the tour you once took through the place. As corroded as that has to be by now, you decide not to risk lead poisoning on top of all your other problems[else]you get... nothing. Seems like the showers are out of commission at the moment. Thinking back to the tour of the place you joined a year back (which is why you knew of the bunker in the first place), you remember them saying that there is a large water tank somewhere in the underground nearby. A pump powered by batteries is supposed to supply the bunker, but those have probably deteriorated by now. Maybe you can get the water running by [bold type]supplying the library with power[roman type] instead[end if].";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -143,13 +142,11 @@ Carry out UnclutterStoreroom:
 	say "     Taking a deep breath, you look around and can't help but feel good about what you've accomplished. This'll be a much nicer place to stay in now.";
 	SanBoost 10;
 
-
 [
 now Memento Collection is in Maintenance Storeroom;
 ]
 Memento Collection is a container. Memento Collection is transparent. Memento Collection is not openable. Memento Collection is not lockable. Memento Collection is not enterable.
 Description of Memento Collection is "     You've made room to stash mementos of your time in the city in the shelves here.".
-
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -163,6 +160,8 @@ Description of Grey Abbey Library is "[abbey desc]".
 earea of Grey Abbey Library is "Outside".
 ObserveAvailable of Grey Abbey Library is true.
 ObserveString of Grey Abbey Library is "[GreyAbbeyLibrary_ObserveMenu]".
+
+the scent of Grey Abbey library is "     The smell of books permeates the air in the library. Smelling outside the doors, you can smell the scents of the city. You catch numerous scents of lust and arousal on the breeze, including that of [one of]several lupine creatures[or]some sulfurous stink[or]a variety of canines[or]something like latex[or]a feline in heat[at random].".
 
 after looking while player is in Grey Abbey Library:
 	project the Figure of Map_Library_Front_icon;
@@ -221,17 +220,18 @@ to say GreyAbbeyLibrary_ObserveMenu:
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Urik"):
-				say "[GreyAbbeyLibraryObservation_Urik]"; [see file Wahn/Urik.i7x]
-			else if (nam is "General"):
-				say "[GreyAbbeyLibraryObservation_General]";
+			if title entry is:
+				-- "Urik":
+					say "[GreyAbbeyLibraryObservation_Urik]"; [see file Wahn/Urik.i7x]
+				-- "General":
+					say "[GreyAbbeyLibraryObservation_General]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say GreyAbbeyLibraryObservation_General:
@@ -260,12 +260,12 @@ to say GreyAbbeyLibraryObservation_General:
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Entrance Door"):
-				say "     You decide to take a seat at the front desk, watching the entrance door of the library. Minutes pass, then some more minutes, with no one even trying to open the unlocked door from outside. Seems like the mere fact that this is a library is discouraging people from coming anywhere close to it. Somehow, you're no longer surprised by the three inch tall stack of crossword puzzle magazines in one of the drawers of the desk...";
-			else if (nam is "Zoomba #1"):
-				say "     Waiting for a few minutes, you see a small vacuum robot, shaped like an oversized hockey puck, emerge from behind the front desk. The little device is colored black and silver, with the red letter [']1['] emblazoned on the front half. Glancing where it is coming from, you see a charging port there. Someone must have hooked it up to the emergency power supply that is also responsible for the lights in the bunker. Having nothing much better to do, you follow Zoomba #1 around, watching it patrol with a quiet hum and effectively wipe out any dust-bunnies that dare appear in these hallowed halls.";
+			if title entry is:
+				-- "Entrance Door":
+					say "     You decide to take a seat at the front desk, watching the entrance door of the library. Minutes pass, then some more minutes, with no one even trying to open the unlocked door from outside. Seems like the mere fact that this is a library is discouraging people from coming anywhere close to it. Somehow, you're no longer surprised by the three inch tall stack of crossword puzzle magazines in one of the drawers of the desk...";
+				-- "Zoomba #1":
+					say "     Waiting for a few minutes, you see a small vacuum robot, shaped like an oversized hockey puck, emerge from behind the front desk. The little device is colored black and silver, with the red letter [']1['] emblazoned on the front half. Glancing where it is coming from, you see a charging port there. Someone must have hooked it up to the emergency power supply that is also responsible for the lights in the bunker. Having nothing much better to do, you follow Zoomba #1 around, watching it patrol with a quiet hum and effectively wipe out any dust-bunnies that dare appear in these hallowed halls.";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
@@ -383,6 +383,8 @@ to say LibraryMicrowaveDesc:
 		say "Sadly, without power it doesn't work.";
 	else:
 		say "Now that you have restored power to the library, you can make use of it. All you need to do is put stuff in and [bold type]microwave[roman type] whatever you want!";
+
+the scent of Library Microwave is "     Despite lack of upkeep, the microwave smells rather clean.".
 
 after looking while player is in Breakroom:
 	project the Figure of Map_Library_North2_icon;
@@ -605,6 +607,8 @@ understand "lab" or "labs" as Outside Trevor Labs.
 Outside Trevor Labs is fasttravel.
 earea of Outside Trevor Labs is "Outside".
 
+the scent of Outside Trevor Labs is "     The air out here smells no different than the rest of the city.".
+
 Away from Labs is a door. "To the [link]east[end link] of here lays the rest of the city.". It is dangerous. The marea of Away from Labs is "Outside". Away from labs is east of Outside Trevor Labs and west of Wandering the City.
 
 Table of GameRoomIDs (continued)
@@ -617,6 +621,8 @@ Trevor Labs Lobby is sleepsafe.
 
 Trevor Labs Lobby is west of Outside Trevor Labs.
 
+the scent of Trevor Labs Lobby is "     The air is better in here, without the excess scents of sex and arousal of the city.".
+
 Table of GameRoomIDs (continued)
 Object	Name
 2F Trevor Labs	"2F Trevor Labs"
@@ -625,6 +631,7 @@ Object	Name
 2F Trevor Labs is above Trevor Labs Lobby.
 2F Trevor Labs is sleepsafe.
 
+the scent of 2F Trevor Labs is "     The air smells pretty clear up here. It doesn't seem that roaming creatures have been getting in here.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -641,6 +648,9 @@ Primary Lab	"Primary Lab"
 Primary Lab is a room. "     One of the few places in the city with working power, this lab is brilliantly lit, showing off just about all the medical and technological gear you can imagine. Trevor Labs really didn't spare any cost equipping their scientists, which isn't too surprising, as their work is what made the company money. A whole bank of computer terminals is arrayed towards the left side of the room, with monitors displaying dizzying amounts of information, largely obscure and technical. Overhead, soft humming of air conditioning is the likely reason that the room feels just a bit chilly. Towards the back of the room, you can see what appears to be some kind of multi-stage airlock, leading into a separated off smaller room behind a large, thick and reinforced window. The large warning sign reading 'Biosafety Level 3' on the window might have something to do with it. Within, what looks to be a comfortable camp has been set up, with a bed, supplies and everything. You can leave the lab by going [link]south[end link], back into the hallway that brought you here.[line break]".
 Primary Lab is north of Second Floor Lab Hallway.
 There is an Infection Terminal in Primary Lab. "A glowing infection terminal quietly lists all the infections in the corner.".
+the scent of Infection Terminal is "     The infection terminal smells like old, vintage electronics from the time of DOS and dinosaurs.".
+
+the scent of Primary Lab is "     The lab smells of Dr. Matt's experiments.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -650,6 +660,8 @@ Park Entrance is a room. "     Ah, the city park. Smell that fresh pine air, and
 Park Entrance is fasttravel.
 The earea of Park Entrance is "Park".
 Park Entrance is sleepsafe.
+
+the scent of Park Entrance is "     The park entrance smells of trees and flowers and a myriad of lustful creatures.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -665,6 +677,8 @@ to say ParkTraiLDesc:
 
 Park Trail is north of Park Entrance.
 Park Exit is a door. Park Exit is dangerous. The marea of Park Exit is "Outside". Park Exit is undescribed. Park Exit is south of Park Entrance. Outside Exploration is south of Park Exit.
+
+the scent of Park Trail is "     Now in the park, the scents of the creatures are stronger. You can tell that there are many different ones around. You manage to catch a whiff of [one of]some felines[or]a lupine creature[or]an equine scent[or]the farm scent of dairy cows[or]a strong, female scent[at random]. You'd best be careful.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -691,7 +705,6 @@ Description of Hiking Trail Bend is "[HikingTrailBendDesc]".
 to say HikingTrailBendDesc:
 	say "     You're on a severely overgrown hiking trail through the city park, standing on well-trodden bare earth. It feels like you're in the middle of wilderness, as there is no sight or sound of the city visible anywhere around you. With how lush and vibrant all of the plants are growing, the area has become akin to a centuries-old, undisturbed forest. Sounds of nature surround you, from wind blowing through the trees, rustling in the underbrush, birds singing, all the way to other noises from more human-like throats that sometimes crop up in the mix. Given what's happening everywhere else in the city, you guess that hearing moans and ecstatic shouting in the moderate distance isn't much of a surprise anymore.";
 	say "     The trail makes a bend here, leading further [Bold Type]west[roman type] and also [Bold Type]northeast[roman type], ever deeper into the woods.";
-
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -733,8 +746,6 @@ Hiking Direction 4 is southeast of Hiking Trail Split.
 Hiking Direction 5 is south of Hiking Trail Split.
 Hiking Direction 6 is northwest of Hiking Trail Split.
 Hiking Direction 7 is west of Hiking Trail Split.
-
-
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -836,8 +847,6 @@ Dry Plains	"Dry Plains"
 
 understand "plains" as Dry Plains.
 
-LastTrashSearchTurn is a number that varies. [@Tag:NotSaved]
-
 Dry Plains is a room. It is fasttravel. "     At this edge of the city, the thinning buildings have collapsed before opening up to the great plain stretching away from you, all the way to the harsh and insurmountable cliff-faces of Mount Shirley, the northern barrier of the wide river valley the city was originally founded in. You don't see any kind of military cordon here, making you suspect those already infected have spread out here before the military was mobilized to close it off. Smoke rising far in the northwest makes you guess that their lines are probably there, at the chokepoint between the mountain and the expansive Pacifica Nature Preserve. Some hoof prints you spot in a sandy patch nearby furthers the assumption that it is no longer human civilization that rules here. As for the open grasslands, it looks like something leveled just about all of the scattered buildings further out. Now all that is left of them among the dirt and grassland are mounds of rubble. The plains are dry and brown with only a few trees or bushes scattered across the rolling plains before you.[line break]".
 The earea of Dry Plains is "Plains".
 Plains Door is a door. The marea of plains door is "Plains". "The plains stretch out before you, with slight rolls in the landscape and dotted with fallen buildings and other rare features.". Plains Door is dangerous. Plains door is east of dry plains.
@@ -853,9 +862,6 @@ Wandering the Plains	"wandering the plains"
 Wandering the Plains is a room.
 
 the scent of the Wandering the Plains is "     The dry plains smell lightly of dry grasses and disturbed earth. There is little of man-made origin to smell on the air except the scents coming from the city behind you.".
-
-
-
 
 Table of GameRoomIDs (continued)
 Object	Name

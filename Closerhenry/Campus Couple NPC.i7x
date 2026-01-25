@@ -177,20 +177,20 @@ to say JadakoTalkMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[JadakoTalk1]";
-				else if (nam is "Coach Weber"):
-					say "[JadakoTalk2]";
-				else if (nam is "Sports"):
-					say "[JadakoTalk3]";
+				if title entry is:
+					-- "Himself":
+						say "[JadakoTalk1]";
+					-- "Coach Weber":
+						say "[JadakoTalk2]";
+					-- "Sports":
+						say "[JadakoTalk3]";
 				wait for any key;
 				say "[JadakoTalkMenu]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
-			say "     You step back from Jadako, who looks at you a little funny. 'OK, nevermind, I guess?' he questions.";
+			say "     You step back from Jadako, who looks at you a little funny. 'OK, never mind, I guess?' he questions.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
@@ -247,14 +247,14 @@ to say JosephTalkMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[JosephTalk1]";
-				else if (nam is "Jadako"):
-					say "[JosephTalk2]";
-				else if (nam is "Sports"):
-					say "[JosephTalk3]";
+				if title entry is:
+					-- "Himself":
+						say "[JosephTalk1]";
+					-- "Jadako":
+						say "[JosephTalk2]";
+					-- "Sports":
+						say "[JosephTalk3]";
 				wait for any key;
 				say "[JosephTalkMenu]";
 		else if calcnumber is 0:
@@ -327,22 +327,21 @@ to say CampusCoupleSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Be Spitroasted"):
-					say "[CampusCoupleSex1]";
-				else if (nam is "Spitroast Jadako"):
-					say "[CampusCoupleSex2]";
-				else if (nam is "Cockworship"):
-					say "[CampusCoupleSex3]";
-				wait for any key;
+				if title entry is:
+					-- "Be Spitroasted":
+						say "[CampusCoupleSex1]";
+					-- "Spitroast Jadako":
+						say "[CampusCoupleSex2]";
+					-- "Cockworship":
+						say "[CampusCoupleSex3]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You change your mind, deciding now isn't a good time. The two understand, since they can always fuck each other later.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say CampusCoupleSex1:

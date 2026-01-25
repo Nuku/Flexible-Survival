@@ -262,10 +262,10 @@ Instead of fucking the Dmitri:
 		say "     Chuckling softly, the peacock states, 'I know you're enthusiastic to have some more fun with me, but I'd rather you wait a little while so that we can savor the experience.'";
 	else: [ready for sex]
 		say "     As you walk up to Dmitri, he smiles and asks, 'I wonder what you are thinking about...'";
-		project Figure of Dmitri_naked_icon;
 		say "[DmitriSexMenu]";
 
 to say DmitriSexMenu:
+	project Figure of Dmitri_naked_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -274,20 +274,17 @@ to say DmitriSexMenu:
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
 		now description entry is "Let the amorous bird suck you off";
+		[
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck the captivating bird";
+		now sortorder entry is 3;
+		now description entry is "Take Dmitri's ass for a ride";
+		]
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Dmitri off"; [anyone can blow him]
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the peacock's avian rod";
-	[]
-[
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck the captivating bird";
-		now sortorder entry is 3;
-		now description entry is "Take Dmitri's ass for a ride";
-]
-[ The above content is commented out until written to prevent frustrating placeholder text. ]
 	[]
 	if Player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
@@ -314,26 +311,25 @@ to say DmitriSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Get a blowjob"):
-					say "[DmitriSex1]";
-				else if (nam is "Suck Dmitri off"):
-					say "[DmitriSex2]";
-				else if (nam is "Fuck the captivating bird"):
-					say "[DmitriSex3]";
-				else if (nam is "Take Dmitri's shaft in your pussy"):
-					say "[DmitriSex4]";
-				else if (nam is "Take Dmitri's shaft in your ass"):
-					say "[DmitriSex5]";
-				wait for any key;
+				if title entry is:
+					-- "Get a blowjob":
+						say "[DmitriSex1]";
+					-- "Suck Dmitri off":
+						say "[DmitriSex2]";
+					[-- "Fuck the captivating bird":
+						say "[DmitriSex3]";]
+					-- "Take Dmitri's shaft in your pussy":
+						say "[DmitriSex4]";
+					-- "Take Dmitri's shaft in your ass":
+						say "[DmitriSex5]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the anthro bird, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say DmitriSex1: [oral on the player]
@@ -352,8 +348,8 @@ to say DmitriSex2: [oral on Dmitri]
 	say "     Having caught your breath, you swiftly wrap your mouth around the hunk's awaiting dick. Redoubling your efforts, you go hard and deep on the shopkeep's shaft, saliva and precum leaking out the sides of your lips and trickling down your torso. Meanwhile, your tongue frantically massages both the top and underside of his penis. Soon you feel both of Dmitri's hands placed on the back of your head. Feeling well-attuned to the girth of the domineering fowl, you can tell that he is going to spill his seed soon. With a singsong-like cry, the stud pushes your mouth as far down on his cock as you can manage, then vigorously cums. His semen flows down your throat while a sense of euphoria courses through your system, leaving you lost in the fog of pleasure for a short while. When you become fully conscious again, you see the peacock cradling you in his arms, praising you for a job well done.";
 	NPCSexAftermath Player receives "OralCock" from Dmitri;
 
-to say DmitriSex3: [non-virgin Dmitri fucked]
-	say "     (<WIP: Please be patient while further content for this character is being prepared. There is more to come soon>";
+[to say DmitriSex3: [non-virgin Dmitri fucked]
+	say "     (<WIP: Please be patient while further content for this character is being prepared. There is more to come soon>";]
 
 to say DmitriSex4: [Dmitri fucks player pussy]
 	say "     A curious idea pops into your head of wanting to feel the shopowner's cock in your pussy. Given how many times Dmitri has conditioned your mind, a minuscule part of you wonders whether this thought was even inspired by your own volition. Regardless, the desire to be filled outweighs any other option. With a needy look in your eyes, you approach the peacock and beg for him to press his cock in you. Raising an eyebrow, then uttering an amused laugh, the captivating gentleman commands, 'Strip off anything covering your needy cunt, then lie down with your torso on the arm of the divan.' You begin to seductively remove any clothing or equipment off of your body, putting on a quasi-burlesque show for your appreciative host. Emboldened by your display, the slender stud begins to sing a lyricless tune which helps to increase the sway of your hips. Once completely nude, you sit on the comfy divan and spread your cheeks wide, offering a tempting target for the trim anthro bird.";

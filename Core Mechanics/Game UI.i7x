@@ -4,7 +4,7 @@ Version 1 of Game UI by Core Mechanics begins here.
 Part 0 - Variables
 
 looknow is a number that varies.[@Tag:NotSaved]
-showlocale is a truth state that varies. showlocale is usually true.
+showlocale is a truth state that varies.[@Tag:NotSaved] showlocale is usually true.
 calcnumber is a number that varies.[@Tag:NotSaved] [used in all sorts of multi-choice points]
 freecred is a number that varies.
 
@@ -15,13 +15,12 @@ Chapter 1 - Wide/Narrow Version Adjustment Command
 StatusBarSetting is a number that varies.
 
 statusbarchange is an action applying to nothing.
-
 understand "statusbarchange" as statusbarchange.
 
 carry out statusbarchange:
 	if StatusBarSetting is 0:
 		now StatusBarSetting is 1;
-	else if StatusBarSetting is 1:
+	else:
 		now StatusBarSetting is 0;
 
 Chapter 2 - Status Bar Construction
@@ -53,7 +52,7 @@ When play begins:
 To say level up needed:
 	say "[if Player is fastlearning][((level of Player plus 1) times 8)][else][(level of Player plus 1) times 10][end if]";
 
-statusindex is a list of numbers that varies. [stores the hyperlink list index for every link in the status bar]
+statusindex is a list of numbers that varies.[@Tag:NotSaved] [stores the hyperlink list index for every link in the status bar]
 statuslinks is always {"nav", "rename", "set pronouns", "i", "FeatList", "Allies", "SexStats", "HelpBookLookup", "art credits"}.
 
 to say statuslink (N - number):
@@ -71,7 +70,6 @@ Part 2 - Command Prompt
 Chapter 1 - Definitions
 
 Definition: a direction (called D) is valid if the room D from the Location of Player is a room.
-
 
 Chapter 2 - Prompt
 
@@ -148,7 +146,7 @@ to say promptsay:
 	say "[promptlink 18]area[terminate link]";
 	say "[line break]> [run paragraph on]";
 
-promptindex is a list of numbers that varies. [stores the hyperlink list index for most of the static links in the prompt menu, but not the more conditional or variable ones]
+promptindex is a list of numbers that varies.[@Tag:NotSaved] [stores the hyperlink list index for most of the static links in the prompt menu, but not the more conditional or variable ones]
 promptlinks is always {"eat food", "drink water", "use journal", "inventory", "Vial Inventory", "rest", "observe", "save", "restore", "export progress", "import progress", "huntinglist", "situationslist", "nav", "scavenge", "explore", "look me", "look"}.
 
 to say promptlink (N - number):
@@ -161,7 +159,7 @@ to say promptlink (N - number):
 		now entry N of promptindex is hyperindex;
 	say "[set link entry N of promptindex]";
 
-compassindex is a list of numbers that varies. [stores the hyperlink list index for all of the default navigation direction links]
+compassindex is a list of numbers that varies.[@Tag:NotSaved] [stores the hyperlink list index for all of the default navigation direction links]
 compasslinks is always {"west", "northwest", "north", "northeast", "east", "southeast", "south", "southwest", "up", "down", "inside", "outside"}.
 
 to say compasslink (L - list of text):
@@ -194,6 +192,30 @@ To Plot:
 
 Chapter 4 - Display Functions
 
+To wait for any key:
+	if hypernull is 0:
+		say "[link]more[as] [end link][run paragraph on][line break]";
+	keypause;
+	if hypernull is 0:
+		LineBreak;
+
+to say WaitLineBreak: [little bit of often used code]
+	LineBreak;
+	WaitLineBreak;
+
+to WaitLineBreak: [little bit of often used code]
+	if waiterhater is 0: [skips waiting if it's not wanted]
+		wait for any key;
+		if hypernull is 0, LineBreak; [adds a break after the 'more']
+	else:
+		LineBreak; [people who don't want to wait at least get a break]
+
+to LineBreak:
+	say "[line break]";
+
+to DoubleLineBreak:
+	say "[line break][line break]";
+
 To AttemptToWait: [use where you want a wait (which might be turned off by player settings)]
 	if waiterhater is 0:
 		wait for any key; [waits if waiting is active]
@@ -201,7 +223,7 @@ To AttemptToWait: [use where you want a wait (which might be turned off by playe
 To AttemptToClearHyper: [use where you want a clear (which might be turned off by player settings)]
 	if clearnomore is 0:
 		clear the screen; [clears if clearing is active]
-	now invlinklistfilled is zero; [this changes the inventorying mode to not look for existing inventory links again]
+	now invlinklistfilled is false; [this changes the inventorying mode to not look for existing inventory links again]
 	now hyperlink list is {}; [empties hyperlink list regardless of clear status]
 
 To AttemptToWaitBeforeClear: [use where you want a wait, which happens directly before a separate clear]
@@ -214,17 +236,17 @@ To AttemptToWaitAndClearHyper: [use where you want a wait and clear. Much like A
 	if clearnomore plus waiterhater is not 2: [waits if either waiting or clearing is active, only skips them if both are turned off]
 		wait for any key;
 		clear the screen;
-	now invlinklistfilled is zero; [this changes the inventorying mode to not look for existing inventory links again]
+	now invlinklistfilled is false; [this changes the inventorying mode to not look for existing inventory links again]
 	now hyperlink list is {}. [empties hyperlink list regardless of clear status]
 
 Chapter 5 - Text Color
-
 
 To say special-style-1: [name can be changed if desired, just adjust calls to it as well]
 	say first custom style;
 
 To say special-style-2: [name can be changed if desired, just adjust calls to it as well]
 	say second custom style;
+
 [
 To say alert-style: [already used for end game text]
 	(- glk_set_style(style_Alert); -)
@@ -281,7 +303,6 @@ Part 3 - Player Information Readouts
 Chapter 1 - Stats
 
 Showstatting is an action applying to nothing.
-
 Understand "stat" as showstatting.
 Understand "stats" as showstatting.
 
@@ -523,7 +544,7 @@ check ListFollowingChildren:
 carry out ListFollowingChildren:
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
 		say "Trailing behind come your children:[line break][line break]";
-	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
+	else: [exactly one child]
 		say "Trailing behind comes your child:[line break][line break]";
 	if the number of entries in childrenfaces > 0: [player has old style children]
 		if the number of entries in childrenfaces is 1:
@@ -574,7 +595,7 @@ carry out ListFollowingChildren:
 			say "You have [a PlayerRelationship entry] relationship with [ObjectPro of Offspring], and [PosAdj of Offspring] personality is rather [Personality entry].";
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
 		say "[line break]They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
-	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
+	else: [exactly one child]
 		say "[SubjectProCap of Offspring] look[if Offspring is not NProN]s[end if] as alert and human as you are, taking after you eagerly. Despite [PosAdj of Offspring] age, [SubjectPro of Offspring] [if Offspring is NProN]have[else]has[end if] already grown to young adult stature, both physically and in apparent emotional and mental development.";
 
 Chapter 3 - Linkaction
@@ -582,7 +603,6 @@ Chapter 3 - Linkaction
 Afterexamine rules is a rulebook.
 
 linkactioning is an action applying to one thing.
-
 understand "linkaction [person]" as linkactioning.
 
 carry out linkactioning:

@@ -48,7 +48,6 @@ name	desc	weight	object
 "Apocalypse Hoodie"	"A large zippable hoodie that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Hoodie
 "Apocalypse Scarf"	"A long scarf that has been torn and burnt from an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Scarf
 
-
 Apocalypse Skirt is a grab object.
 Apocalypse Skirt is equipment.
 It is not temporary.
@@ -97,6 +96,5 @@ The slot of Apocalypse Scarf is "face".
 the scent of Apocalypse Scarf is "There is a faint smell of smoke lingering on the item of clothing.".
 
 [Metal Baseball Bat moved to Core Mechanics/Weapons.i7x]
-
 
 Apocalypse Store ends here.

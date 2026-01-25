@@ -1,4 +1,4 @@
-Version 1 of Luke by Alexeo begins here
+Version 1 of Luke by Alexeo begins here.
 [Written by Alexeo in March 2025, coded by Testerboy]
 
 Section 1 - Encounter
@@ -124,10 +124,10 @@ to say luke_opt1: [gay sex]
 	WaitLineBreak;
 	say "     Fucking you hard and fast, he rocks your body back and forth with your face still shoved against the cool bricks of the wall, while you keep your ass pressed back into his groin, your back arching in glee while you let the assertive leopard man dominate you in both body and mind. Continuing to growl, he keeps on pounding you at the same rapid-fire pace, his preseed now leaking liberally into your hot hole, the warm liquid cooling the scratching his spiked cock makes inside you, if only slightly. As he uses your ass for his pleasure, you eventually feel his pace become a bit erratic, and some small part of you can feel his large, full balls tense up more as they slap against your taint. 'Fuck yeah! I'm getting close, whore! Gonna fill this hot bitch-hole with my jizz! Gonna claim your slutty ass as my property, for me to breed any time I need to bust a nut! Get ready sexy good little cumdump! Here comes your reward!'";
 	say "     Grabbing your hip in one paw and your chest in the other, he pulls your back against his chest and latches his teeth on the back of your neck in a mating bite, while giving deep, rough thrusts against your ass, only the base of his dick leaving your back door with each hump against you. Then, all at once, he peaks, and his tip begins gushing rope after rope of hot, creamy, leopard spunk deep into your guts. As he fills you, your own orgasm hits, and your cock spews its load onto the wall in front of you. Meanwhile, he keeps on shoving his hips against your rear, milking more and more of his steaming kitty cream into your intestines, still not giving you any chance to rest.";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Leopardman";
 	WaitLineBreak;
 	say "     Finally, however, the fuck session ends and the feline releases your neck from his jowls, both of you panting deeply as the last of his seed seeps inside you, and the tail end of your own cum dribbles onto the ground between your feet. He just holds you there for a minute, the two of you basking in the afterglow of your post-orgasm bliss. Then, unceremoniously, he shoves you to the ground, his lust slaked. Turning around to look up at him from your position with your back in the dirt, your hole gapes and leaks his jizz down the back of your balls and thighs, the feline grinning down at you. 'Don't get me wrong, you're a good fuck, but that's about all you're useful to me for. Don't expect me to be all cuddly and romantic. Your role is to accept my kitty batter in your hot little sluthole. You're more than welcome to come back again as long as you know your place.' With that, the leopard steps over your prone form and leaps up the wall, vaulting himself over it and out of sight, while you go about standing up and collecting your things, preparing to head out, on your way. Part of you thinks what an asshole the feline is, but another small part of you is already aching to see him again.";
 	LibidoReset;
-	CreatureSexAftermath "Player" receives "AssFuck" from "Leopardman";
 	now Resolution of Returned_Spots is 10; [player got fucked]
 	now Returned_Spots is resolved;
 

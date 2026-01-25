@@ -12,15 +12,13 @@ to say losetoRetriever:
 		if Player is male:
 			say ". You find yourself becoming increasingly aroused as she strips your clothes and gear from your [bodydesc of Player] body, intent on reaching the prize underneath. As soon as she has access, the sexy canine starts licking at your [cock size desc of Player] [Cock of Player] cock with her large canine tongue, quickly bringing it to full erection.";
 			say "     Once she's satisfied that you're as ready as she is, the retriever moves to bring her needy slit into position over your erect meat and slowly lowers herself onto you with a whimpering yip. As she raises and lowers herself against you, you find yourself slipping into a lust-filled haze, lost in the pleasure this sexy canine is forcing on you. Before long you feel yourself approaching your peak as the retriever quickens her pace, but just before you climax she reaches it first, howling in pleasure as she convulses above you, pushing you over the edge until you fill her needy body with your seed.";
-			CreatureSexAftermath "Retriever Female" receives "PussyFuck" from "Player";
-			WaitLineBreak;
 			say "     Afterwards, she collapses atop you, almost as exhausted as you are. The two of you lay there for some time, lost in the afterglow of your lovemaking, before she raises herself off you. She rubs her belly contently as she pads away, leaving you to recover on your own.";
+			CreatureSexAftermath "Retriever Female" receives "PussyFuck" from "Player";
 		else:
 			say ". As she strips you of your clothing and gear, you see her face overcome with disappointment as she discovers you lack the prize she's looking for. Her expression brightens again a moment later and she dives face-first into your crotch, clearly intent on making sure you're satisfied even if she quite doesn't get what she wanted.";
 			say "     As she drags her wet canine tongue across your feminine slit you can't help but shiver in delight. As her licking and nibbling continues you quickly find yourself approaching climax and as a final push to bring you over the edge the lustful canine drives her muzzle into you, licking at your depths as you scream in pleasure, soaking her muzzle and face in your juices.";
-			CreatureSexAftermath "Retriever Female" receives "OralPussy" from "Player";
-			WaitLineBreak;
 			say "     Before getting up to leave your canine playmate gives you one last long doggy kiss, giving you a taste of your own juices then leaves you to recover alone; you watch her tail wag happily behind her as she walks away still licking your juices from her muzzle.";
+			CreatureSexAftermath "Retriever Female" receives "OralPussy" from "Player";
 
 to say beattheRetriever:
 	if HP of Karen is 4:
@@ -63,14 +61,14 @@ to say RetrieverAttack:
 	else:
 		say "[one of]The female retriever rushes you, clipping your side as you try and dive out of her way[or]The female retriever rushes you, bowling you over as she catches you off guard, assaulting you with licks and small nibbles before you are able to push her off[or]You find yourself awe struck by the sexy female canine's body momentarily, long enough for her to close in and plant a wet doggy kiss on your cheek[or]The retriever bitch moves in quickly, raking across your shoulder and arm with her short claws before you can react[at random].[no line break]";
 
+Section 2 - Creature Insertion
+
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Retriever Female"	"[PrepCombat_Retriever Female]"
 
 to say PrepCombat_Retriever Female:
 	setmongender 4; [creature is female]
-
-Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -253,7 +251,6 @@ name	desc	weight	object
 
 [retriever cum is a grab object.] [defined in Cum Items to prevent name conflicts]
 retriever cum is cum.
-Purified of retriever cum is "distilled cum".
 retriever cum is infectious.
 Strain of retriever cum is "Retriever Male".
 Usedesc of retriever cum is "[retriever cum use]".
@@ -271,7 +268,6 @@ name	desc	weight	object
 
 [retriever milk is a grab object.] [defined in Milk Items to prevent name conflicts]
 retriever milk is milky.
-Purified of retriever milk is "distilled milk".
 retriever milk is infectious.
 Strain of retriever milk is "Retriever Female".
 Usedesc of retriever milk is "[retriever milk use]".
@@ -281,7 +277,6 @@ to say retriever milk use:
 	PlayerDrink 15;
 
 Scent of retriever milk is "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.".
-
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -471,7 +466,6 @@ name	desc	weight	object
 
 retriever man-milk is a grab object.
 retriever man-milk is milky.
-Purified of retriever man-milk is "distilled milk".
 retriever man-milk is infectious.
 Strain of retriever man-milk is "Retriever Male".
 Usedesc of retriever man-milk is "[retriever man-milk use]".
@@ -481,6 +475,8 @@ to say retriever man-milk use:
 	PlayerDrink 15;
 
 Scent of retriever man-milk is "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.".
+
+Section 3 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
@@ -496,19 +492,13 @@ This is the Retriever Female Infection rule:
 			else if HP of Rex is 10:
 				say "     Your life as Rex's happy sexpet is a simple but strangely fulfilling one. Rex proves to be a kind owner, always ensuring you and Karen are both well cared for, with a safe home, plenty of food and water, the lustful needs instilled in you by the infection and Rex's training never go unattended.";
 				say "     Eventually when the military moves through the city they are greeted at the door by Rex, who manages to convince them none of you are dangerous. After a short stay at their camp you are allowed to leave and you move to a small, quiet home outside the city where you continue your peaceful existence for many years.";
-				if Player is impreg_ok:
-					say "     You frequently find your belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away to live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just as loving and caring as your own.";
-				else:
-					say "     Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off to new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
+				say "     [if Player is impreg_ok]You frequently find your belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away to live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just[else]Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off to new families of their own, despite Karen's reassurances that Rex ensures each pup find a home[end if] as loving and caring as your own.";
 			else if Retriever Girl is Tamed:
 				say "     As the last of your resistance fades and the bestial needs of the retriever bitch take full control you bound off happily into the city and Karen quickly follows suit. The two of you eventually catch a familiar male scent, and your bodies, eager for an alpha's touch, soon lead you to him. With your minds gone none of you are ever entirely aware of your previous relationships, but somehow you know you belong together. And so your small retriever pack sets off into the city, eager to bolster your numbers and enjoy your carefree lives as lusty canines.";
 			else if HP of Rex > 5:
 				say "     As your mental resistance begins to slip away you find yourself becoming more and more the retriever bitch your body is urging you to be. Soon you end up back at Rex's home and noting your failing struggle to maintain control he takes advantage of your weakened state of mind, offering you the collar and a place in his home once again.";
 				say "     This turns out to be the final push your mind needed, and as you reach to accept the collar the last of your resistance fades away, finally surrendering yourself to a simple life as one of Rex's happy pets.";
-				if Player is impreg_ok:
-					say "     You frequently find your belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away to live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just as loving and caring as your own.";
-				else:
-					say "     Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off to new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
+				say "     [if Player is impreg_ok]You frequently find your belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away to live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just[else]Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off to new families of their own, despite Karen's reassurances that Rex ensures each pup find a home[end if] as loving and caring as your own.";
 			else:
 				say "     As the last of your resistance fades and the bestial needs of the retriever bitch take full control you bound off happily into the city in search of new playmates to sate your canine lusts with.";
 				if HP of Rex is 4:
@@ -540,10 +530,7 @@ This is the Rex' and Karen's Epilogue rule:
 		if (HP of Rex > 9 and HP of Rex < 50) or (HP of Rex is 4) or (Retriever Girl is tamed):
 			trigger ending "Rex['] and Karen's Epilogue";
 		if HP of Rex > 9 and HP of Rex < 50:
-			if humanity of Player < 10:
-				say "     With your mind lost to another infection out in the city, you quickly forget your submission to Rex, and your place as his pet. He and Karen search the city for you for some time, even enlisting the aid of any other survivor they can find in exchange for a share of Rex's stockpiled supplies. Despite their titanic effort the pair is never able to find you among the horde of mindless mutants in the city, eventually leaving you and it behind to find a new home outside once the military moves in.";
-			else:
-				say "     When the military finally moves into the city and the retriever infection still hasn't taken hold Rex takes you aside for a private moment, realizing that, despite convincing you to submit to him and accept a place as his pet, his 'training' still hasn't managed to take hold of you. With tears welling up in his puppydog eyes Rex reaches behind your neck and unfastens the blue collar, he tenderly places it in your palms, and closes your hands tightly around it. Finally he informs you that you are free to leave and do what you wish in this new world, but you will always have a place in his home should you every truly desire it.";
+			say "     [if humanity of Player < 10]With your mind lost to another infection out in the city, you quickly forget your submission to Rex, and your place as his pet. He and Karen search the city for you for some time, even enlisting the aid of any other survivor they can find in exchange for a share of Rex's stockpiled supplies. Despite their titanic effort the pair is never able to find you among the horde of mindless mutants in the city, eventually leaving you and it behind to find a new home outside once the military moves in[else]When the military finally moves into the city and the retriever infection still hasn't taken hold Rex takes you aside for a private moment, realizing that, despite convincing you to submit to him and accept a place as his pet, his 'training' still hasn't managed to take hold of you. With tears welling up in his puppydog eyes Rex reaches behind your neck and unfastens the blue collar, he tenderly places it in your palms, and closes your hands tightly around it. Finally he informs you that you are free to leave and do what you wish in this new world, but you will always have a place in his home should you every truly desire it[end if].";
 		else if HP of Rex is 4:
 			say "     As the last of the retriever infection is worked out of your system you find the powerful urges caused by that strange bone seem to diminish as well.";
 		if Retriever Girl is tamed:

@@ -61,12 +61,11 @@ an everyturn rule:
 
 Chapter 2 - Adding Combat Companions
 
-AddCompanion is an action applying to one topic.
+SummonFailure is a truth state that varies.[@Tag:NotSaved] SummonFailure is usually false.
 
+AddCompanion is an action applying to one topic.
 understand "pet [text]" as AddCompanion.
 understand "ally [text]" as AddCompanion.
-
-SummonFailure is a truth state that varies.[@Tag:NotSaved] SummonFailure is usually false.
 
 carry out AddCompanion:
 	let InputName be the topic understood;
@@ -109,19 +108,17 @@ Chapter 3 - Removing Combat Companions
 
 DismissFailure is a truth state that varies.[@Tag:NotSaved] DismissFailure is usually false.
 
-understand "dismiss [text]" as DismissCompanion.
-
 DismissCompanion is an action applying to one topic.
+understand "dismiss [text]" as DismissCompanion.
 
 carry out DismissCompanion:
 	let InputName be the topic understood;
 	DismissFunction InputName;
 
+DismissFirstCompanion is an action applying to nothing.
 understand "dismiss" as DismissFirstCompanion.
 understand "ally dismiss" as DismissFirstCompanion.
 understand "pet dismiss" as DismissFirstCompanion.
-
-DismissFirstCompanion is an action applying to nothing.
 
 check DismissFirstCompanion:
 	if number of entries in CompanionList of Player is 0, say "You don't have any allies following you right now!" instead;

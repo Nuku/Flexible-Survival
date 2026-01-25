@@ -33,14 +33,6 @@ tsw_fsd is a number that varies.	[registers if the player is a feral sea dragon.
 tsw_fsd is 0.
 tsw_relationship is a number that varies.	[The standing of the shark warrior towards you. Currently it memorizes last actions]
 
-to TigerSharkInfect:	[Function to infect the player. By default the Tiger Shark is non-infective because of the Tiger Shark Warrior]
-	Setmonster "Tiger Shark Male";
-	choose row MonsterID from the Table of Random Critters;
-	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
-	infect;
-	now non-infectious entry is true;
-
 Section 1 - Events
 
 Table of GameEventIDs (continued)
@@ -50,6 +42,8 @@ Shark Warrior	"Shark Warrior"
 Shark Warrior is a situation.
 ResolveFunction of Shark Warrior is "[ResolveEvent Shark Warrior]".
 Sarea of Shark Warrior is "Beach".
+Level of Shark Warrior is 10.
+
 when play begins:
 	add Shark Warrior to BadSpots of MaleList;
 	add Shark Warrior to BadSpots of FurryList;
@@ -119,21 +113,9 @@ Section 2 - Creature Responses
 
 to say TigerSharkDesc:
 	if ts_warrior is true:
-		if BodyName of Player is "Feral Sea Dragon":	[Check Body of Player]
-			now tsw_fsd is 1;
-		else:
-			now tsw_fsd is 2;
-		say "     You are faced with a [bold type]scarred[roman type] tiger shark. His front is white, while the rest is ochre and striped. If it wasn't obvious from his bulging muscles alone that he's a fighter, the rest of his body would be enough to convince anyone, as the guy bears a number of impressive scars. He doesn't wear anything that would cover the slit at his groin, almost daring you to check him out in the pose he strikes. A pair of small anal fins are paired around the genital slit to each side. Clothes-wise, the aquatic anthro is almost naked, with just a rope tied around his hips with a few small bags and some kelp fastened to it. What catches your eye in addition to that is a necklace around his neck - with the teeth of his past conquests strung up on a knotted cord";
-		if tsw_relationship is 1:
-			say ". You feel a shiver running down your spine; the familiar shark believes that you are nothing more than another sea dragon now. Before you get a chance to speak up, the dragon-wrestler grabs at his necklace and boasts, 'These aren't the only ones I beat. Many more have fallen before me, and you will too!'";
-		else if tsw_relationship is 52:
-			say ". The sight of the trophies makes you growl deeply at your opponent. How dare this guy defile other dragons and go unpunished? Despite having been beaten, the brawler doesn't seem any less confident in his stance or attitude. 'The last time was a ruse. I will get your ass this time, dragon!'";
-		else if tsw_relationship > 49:
-			say ". Even though he didn't harm you last time, you still can't shake being unsettled by these trophies. 'Oh, it's you again. Bad dragon! I told you not to walk out of the water!'";
-		else:
-			say ". Noticing you staring at his neck with your draconic visage, the shark shows you a toothy grin. 'These aren't the only ones I beat. Many more have fallen before me, and you will too!'";
-	else:
-		say "     REMOVE ME";
+		say "     You are faced with a [bold type]scarred[roman type] tiger shark. His front is white, while the rest is ochre and striped. If it wasn't obvious from his bulging muscles alone that he's a fighter, the rest of his body would be enough to convince anyone, as the guy bears a number of impressive scars. He doesn't wear anything that would cover the slit at his groin, almost daring you to check him out in the pose he strikes. A pair of small anal fins are paired around the genital slit to each side. Clothes-wise, the aquatic anthro is almost naked, with just a rope tied around his hips with a few small bags and some kelp fastened to it. What catches your eye in addition to that is a necklace around his neck - with the teeth of his past conquests strung up on a knotted cord. [if tsw_relationship is 1]You feel a shiver running down your spine; the familiar shark believes that you are nothing more than another sea dragon now. Before you get a chance to speak up, the dragon-wrestler grabs at his necklace and boasts, 'These aren't the only ones I beat. Many more have fallen before me, and you will too[else if tsw_relationship is 52]The sight of the trophies makes you growl deeply at your opponent. How dare this guy defile other dragons and go unpunished? Despite having been beaten, the brawler doesn't seem any less confident in his stance or attitude. 'The last time was a ruse. I will get your ass this time, dragon[else if tsw_relationship > 49]Even though he didn't harm you last time, you still can't shake being unsettled by these trophies. 'Oh, it's you again. Bad dragon! I told you not to walk out of the water[else]Noticing you staring at his neck with your draconic visage, the shark shows you a toothy grin. 'These aren't the only ones I beat. Many more have fallen before me, and you will too[end if]!'";
+	[else:
+		say "     REMOVE ME";]
 
 to say Tiger Shark wins:
 	if ts_warrior is true:
@@ -143,20 +125,10 @@ to say Tiger Shark wins:
 			say "     You cower and sink your head submissively to the sand. The shark seems stumped, as he just stares at you quizzingly. Wanting to give him the right idea, you even turn around to show him your backside. 'That is unusual. But okay. Fine by me!' The dragon-wrestler gets back to his old self in a heartbeat, showing you his toothy grin again. 'Don't worry, I'll still take good care of you!'";
 		else:
 			now tsw_relationship is 50;
-			say "     You are knocked to your back[if scalevalue of Player > 3] despite your considerable size[end if]. 'Hah!' the victor exclaims, ";
-			if tsw_fsd is 1:	[if Player is FSD]
-				say "'You dragons walk around here and think you can conquer everyone";
-			else:	[Player is FSDess]
-				say "'You are pathetic! You walk around the beach and probably hope to find another one of these dragons, hunting for prey";
-			say ". I think you need to be taught a lesson, before I send you back.'";
-		say "     The brawler is now on top of you, stroking along your belly. You can't say that you were expecting this, but find yourself calming down a bit as he does nothing else but feel along you. He grins at you as he feels your tension leaving your body. His hands trace down from your chest towards your crotch. ";
+			say "     You are knocked to your back[if scalevalue of Player > 3] despite your considerable size[end if]. 'Hah!' the victor exclaims, 'you [if tsw_fsd is 1]dragons walk around here and think you can conquer everyone[else]are pathetic! You walk around the beach and probably hope to find another one of these dragons, hunting for prey[end if]. I think you need to be taught a lesson, before I send you back.'";
+		say "     The brawler is now on top of you, stroking along your belly. You can't say that you were expecting this, but find yourself calming down a bit as he does nothing else but feel along you. He grins at you as he feels your tension leaving your body. His hands trace down from your chest towards your crotch. You meekly let out a protesting squeal as he pushes your legs apart";
 		if anallevel > 1:
-			say "You meekly let out a protesting squeal as he pushes your legs apart and probes your asshole, spreading it with two fingers. ";
-			if tsw_fsd > 0:
-				say "Raising your long neck, you take a look at your partner to find ";
-			else:
-				say "Raising your head you see ";
-			say "that he sports two erections that poke out of his genital slit. The muscular fish jerks one of his girthy cocks, making you gulp, all the while his other hand is kept on your anus. When the tiger shark feels satisfied with the preparations, he aligns his twin dicks and ";
+			say " and probes your asshole, spreading it with two fingers. Raising your [if tsw_fsd > 0]long neck, you take a look at your partner to find[else]head you see[end if] that he sports two erections that poke out of his genital slit. The muscular fish jerks one of his girthy cocks, making you gulp, all the while his other hand is kept on your anus. When the tiger shark feels satisfied with the preparations, he aligns his twin dicks and ";
 			if Player is female: [female and herm]
 				say "pushes them into your pussy and asshole at the same time.";
 				WaitLineBreak;
@@ -171,7 +143,7 @@ to say Tiger Shark wins:
 				say "     Your tailhole feels stuffed with his thick length pulsing inside you. Convinced that you are ready, the brawler starts to hump away at you, leaving you a lust-addled wreck on the sand. The firm love-making feels wonderful and you feel like you were made for this exact moment; to be fucked into the coarse sand by this shark hunk. The aquatic warrior has your legs locked around his shoulders, your toes curling up in your pleasured state. His length continuously prodding your anal walls eventually does send you over the edge, making you claw at the sand. Satisfied with driving his partner towards a climax, the shark picks up his pace. You gasp when you feel his dick twitching inside you, delivering throb after heavy throb of fertile seed to fill your ass, at the same time as also creaming your body from the outside with his other cock.";
 			CreatureSexAftermath "Player" receives "AssFuck" from "Tiger Shark Male";
 		else: ["less anal" players]
-			say "You meekly let out a protesting squeal as he pushes your legs apart. When he probes your asshole, you growl angrily at the shark, not wanting him to touch you there. With a little shrug of his muscular shoulders, your victor moves on to knead your inner thighs in response, a little further away from where you didn't want him to go. 'Don't worry, I won't hurt you. I think you'll enjoy this.'";
+			say ". When he probes your asshole, you growl angrily at the shark, not wanting him to touch you there. With a little shrug of his muscular shoulders, your victor moves on to knead your inner thighs in response, a little further away from where you didn't want him to go. 'Don't worry, I won't hurt you. I think you'll enjoy this.'";
 			if Player is male:
 				say "     The shark moves on to grab your [CockName of Player in lower case] cock, lifting it up. For a second, you are worried as he gets his teeth-filled mouth closer and closer - but he only licks along your tip. ";
 				if CockName of Player is "Feral Sea Dragon" or CockName of Player is "Feral Sea Dragoness":
@@ -191,7 +163,6 @@ to say Tiger Shark wins:
 		say "'Alright, that'll teach you to walk around this area you fucking lizard.'";
 	else:
 		say "     REMOVE ME";
-
 
 To say Tiger Shark loses:
 	if ts_warrior is true:
@@ -236,22 +207,21 @@ to say TSWSexSelection:	[The Sex menu that shows up]
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Suck on his cocks"):
-					say "[tsw_oral]";
-				else if (nam is "Bend him over"):
-					say "[tsw_fuck]";
-				else if (nam is "Ride one of his cocks"):
-					say "[tsw_ride]";
-				wait for any key;
+				if title entry is:
+					-- "Suck on his cocks":
+						say "[tsw_oral]";
+					-- "Bend him over":
+						say "[tsw_fuck]";
+					-- "Ride one of his cocks":
+						say "[tsw_ride]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You give the shark a cold glare and even kick some sand onto him, as you turn around to leave.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 Section 3 - Dominant Sex Scenes
@@ -287,21 +257,14 @@ To say tsw_fuck:
 To say tsw_ride:
 	if tsw_fsd is 0:
 		say "     Biting your lower lip, you look at these wonderful cocks. You need them inside you. 'Sure dude,' the scaly hunk chimes, laying down on the sand. Not bothering with much more foreplay, you take a seat on his lap, feeling the skin slightly graze your behind. Convinced that his slippery dicks are lubricated enough, you rise and slowly grab one of his dicks and align your [if Player is female]cunt[else]own pucker[end if] slowly sitting down on it. You gasp as the tip of his length slowly enters you. Taking your time to get used to his girth, you let gravity do its work and keep sinking down on his tapering cock. The cock really is slippery, maybe he had fucked somebody else just before he engaged you. As you hilt on the shark's dick, you slowly rise again, dictating the pace of the ride. The muscular fish puts his hands on your hips, his claws teasing the skin on your ass. The aquatic warrior helps you rise and sink on his cock, but over time he's getting carried away and ends up bucking his hips and holding you in place instead. Too lost in pleasure, you don't stop him and instead take the firm fucking.";
-		say "     You gasp and moan as ";
-		if Player is female:
-			say "your pussy gets battered by the shark-like dick. This heavenly fuck goes on long enough that you lose track of time, your world being reduced to your cunt being distended over and over again by the slimy manhood. Eventually you hit the point of no return, making you quiver and grab onto him in your orgasm; your vaginal walls contracting on your partner's cock. ";
-		else if Player is male:
-			say "your prostate gets battered by the shark-like dick. This heavenly fuck goes on long enough that you lose track of time, your world being reduced to your anus being distended over and over again by the slimy manhood. Eventually you hit the point of no return, making you cry out in pleasure as your cock pushes string after string of cum onto the shark, tainting his chest and also face. He doesn't seem too bothered by that, more keen on finishing himself. ";
-		else:
-			say "your anal walls get pounded on. This heavenly fuck goes on long enough that you lose track of time, your world being reduced to your anus being distended over and over again by the slimy manhood. Eventually you hit the point of no return, making you quiver and grab onto him in your orgasm; your anal walls contracting on your partner's cock. ";
-		say "The tiger shark is determined, driving his length into you in earnest with his other dick reaching up to your groin. You grab his second leaking dick and stroke along it, feeling the blood pumping through its veins. With your added help, he cries out in climax, driving his claws into your ass. His dicks squirt their voluminous load into you[if Player is female]; squirt after squirt was slowly forced into your womb, flooding it[else], filling your anal cavity to the brim, making you feel stuffed[end if]. Meanwhile, the other cock is unloading onto you, painting your chest and belly with its fertile batter.";
+		say "     You gasp and moan as your [if Player is female]pussy gets battered by the shark-like dick. This heavenly fuck goes on long enough that you lose track of time, your world being reduced to your cunt being distended over and over again by the slimy manhood. Eventually you hit the point of no return, making you quiver and grab onto him in your orgasm; your vaginal walls contracting on your partner's cock[else if Player is male]prostate gets battered by the shark-like dick. This heavenly fuck goes on long enough that you lose track of time, your world being reduced to your anus being distended over and over again by the slimy manhood. Eventually you hit the point of no return, making you cry out in pleasure as your cock pushes string after string of cum onto the shark, tainting his chest and also face. He doesn't seem too bothered by that, more keen on finishing himself[else]anal walls get pounded on. This heavenly fuck goes on long enough that you lose track of time, your world being reduced to your anus being distended over and over again by the slimy manhood. Eventually you hit the point of no return, making you quiver and grab onto him in your orgasm; your anal walls contracting on your partner's cock[end if]. The tiger shark is determined, driving his length into you in earnest with his other dick reaching up to your groin. You grab his second leaking dick and stroke along it, feeling the blood pumping through its veins. With your added help, he cries out in climax, driving his claws into your ass. His dicks squirt their voluminous load into you[if Player is female]; squirt after squirt was slowly forced into your womb, flooding it[else], filling your anal cavity to the brim, making you feel stuffed[end if]. Meanwhile, the other cock is unloading onto you, painting your chest and belly with its fertile batter.";
 	else:
 		say "     Reaching down with your long neck, you give the lengths poking out of his slit an experimental lick. The tips are slimy and leak precum already. His smell permeates your taste buds, but reminds you of those wonderful sea dragons. Driving you almost mad, you keep licking and sucking on his slit, coaxing out his hidden dicks. You need them inside you. Darting forward, you don't want to waste more time and align your behind with his crotch. Letting out a frustrated growl, you crouch down, trying to get his cock into your [if Player is female]pussy[else]tailhole[end if]. Lost in your instincts, you keep squatting down several times, trying to drive one of his erection into you. Unfortunately all that ends up happening is his lengths slapping against your butt, dampening it with its sticky gunk. Realizing that dry humping him with your ass won't do anything, you do overcome yourself to muster up some patience. Swiftly you grab one of his dicks and push their tip into your [if Player is female]lips[else]pucker[end if].";
 		say "     While his cocks are lubricated, you still need some time to push the length into you the first time. Gritting your teeth, you keep pushing downwards, groaning at the swift intrusion. Forcing your tight hole on his girthy dick also seems to cause some discomfort to your shark-toy. At some point your legs give and you end up dropping, causing both of you yell out in pleasure. You pick yourself up, causing the shark to exhale. Again you dropped your hips, impaling yourself on his dick. With a rough pace, you keep fucking yourself on this marvelous rod, poking you in all the right spots. At some point, the shark tries to grab your hips but you react in time, pinning his arms to his sides. This is your moment and you want him to know that he isn't in control, affirming your position with an angry growl. You keep fucking him for quite some time, causing him to climax several times but you don't care, you are doing this for your own pleasure.";
 		WaitLineBreak;
 		say "     Thankfully his refractory period seems to be short enough that his dick doesn't go entirely limp. Using that to your advantage, you just keep fucking him after each climax. The aquatic hunk still writhes in painful pleasure from all of this overstimulation. His torture ends as with quivering legs you drop one final time, roaring out in your own orgasm. Your [if Player is female]cunt squeezes him tightly, soaking his groin with your juices[else if Player is male]anal walls squeeze his dick tightly as you shoot your load and aim for his face[else]anal walls squeeze his dick tightly while you drive your claws into the shark[end if]. Being finished, you pull yourself off him and glance over the aftermath. The former cocky warrior is now just a mess, overwhelmed by all the orgasms he's had.";
 		say "     Licking your lips at the smell of sex, you reach down with your long neck again to lap at his dicks, wanting more of his salty, sticky cum. The aquatic hunk, feeling sensitive because of your abundant attention, can only whimper in response. Knowing that you can't go on forever, you overcome yourself again to let go. Despite how you treated him before, you wait until the brawler recovers. As you are watching over the tiger shark you are concerned about how he was able to bring the worst out of you.";
-	CreatureSexAftermath "Player" receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from "Tiger Shark Male";
+	CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Tiger Shark Male";
 
 Section 4 - Creature Insertion
 
@@ -312,6 +275,10 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Tiger Shark Male:
 	setmongender 3; [male]
 	project the Figure of TSW_icon;
+	if BodyName of Player is "Feral Sea Dragon":	[Check Body of Player]
+		now tsw_fsd is 1;
+	else if BodyName of Player is "Feral Sea Dragoness":
+		now tsw_fsd is 2;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -327,6 +294,7 @@ When Play begins:
 	add "Tiger Shark Male" to infections of MaleList;
 	add "Tiger Shark Male" to infections of TaperedCockList;
 	add "Tiger Shark Male" to infections of InternalCockList;
+	add "Tiger Shark Male" to infections of InternalBallsList;
 	add "Tiger Shark Male" to infections of BipedalList;
 	add "Tiger Shark Male" to infections of SwimList;
 	add "Tiger Shark Male" to infections of TailList;
@@ -490,7 +458,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 5 - Endings
 
 [
@@ -537,6 +504,13 @@ The slot of Teeth Necklace is "neck".
 The damagebonus of Teeth Necklace is 0.
 The dodgebonus of Teeth Necklace is 0.
 
+to TigerSharkInfect:	[Function to infect the player. By default the Tiger Shark is non-infective because of the Tiger Shark Warrior]
+	Setmonster "Tiger Shark Male";
+	choose row MonsterID from the Table of Random Critters;
+	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	infect;
+	now non-infectious entry is true;
 
 Section 7 - NPC
 [He is going to walk around the beach areas.]

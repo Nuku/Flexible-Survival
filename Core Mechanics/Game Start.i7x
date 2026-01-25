@@ -55,8 +55,8 @@ GenderLock is a number that varies. [locks gender according to player preference
 Scenario is a text that varies. [chosen scenario]
 Started is a number that varies.
 
-RestoreMode is a truth state that varies. RestoreMode is usually false. [for restoring a save directly from the start menu]
-RestoreSide is a number that varies. [default graphics window side for restore using default settings]
+RestoreMode is a truth state that varies.[@Tag:NotSaved] RestoreMode is usually false. [for restoring a save directly from the start menu]
+RestoreSide is a number that varies.[@Tag:NotSaved] [default graphics window side for restore using default settings]
 
 Part 1 - Game Start Autofires
 
@@ -332,7 +332,7 @@ to say gsopt_start:
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
 			if there is a Name of "Deer" in Table of Random Critters:
-				choose a row with Name of "Deer" in Table of Random Critters;
+				choose row with Name of "Deer" from Table of Random Critters;
 				now area entry is "Park";
 			increase score by 600;
 			extend game by 240;
@@ -475,7 +475,7 @@ to say gsopt_start:
 						say "     He stops momentarily, takes his mouth off your neck, and instead looks into your eyes with his beautiful yellow eyes and uses his paws to hold onto the side of the bookcase and to hold himself steady as he pulls his hips back until only the tip of his cock remains inside your cunt, pre dribbling onto the walls of your vagina, he begins to thrust in earnest, his balls now making an audible smack from hitting your ass as he begins a steady tempo. You could almost swear his dick is getting bigger, his balls feel like they are also fuller as they bounce against your ass, and his body feels like it's overall getting heavier as he pins you against the side of the bookshelf. Your bestial lover now completely lost in his fervor from fucking your vagina, firmly growls a single word, 'Mine.'";
 						say "     Minutes pass by as he continues thrusting into you. As things continue, his thrusts begin to become erratic, almost desperate, until he grunts and thrusts one final time, penetrating all the way to the hilt and knotting the both of you together, his large balls pulling upwards as he unloads into your womanhood filling your with as much cream as his newly enlarged balls can produce. After what feels like an eternity his knot finally softens enough for him to pull out. However your alpha isn't done yet, he hold one paw on the bookcase to hold himself steady and uses his other to do a makeshift masturbatory movement adding just enough stimulation to cause a minor orgasm causing his balls to produce enough to paint your stomach with his rich seed, marking you as his.";
 						NPCSexAftermath Player receives "PussyFuck" from Fang;
-				else if Fang is Female: [Female Fang]
+				else: [Female Fang]
 					if Player is male: [Face Sitting]
 						say "     Your opponent claiming victory, silently looks you over, thinking what to do from here. You however are completely unable to move after getting your ass handed to you, leaving yourself vulnerable to whatever whims that your opponent may have for you. Finally making up her mind she grunts as she uses her paws to roll your unresponsive body onto your back, taking a moment to look you over fully. She then pads her way over you until your muzzle is level with her pussy, hesitating for a moment she then jams her cunt down. Now using your muzzle as a makeshift dildo, slightly gasping as she uses her paws to angle your head in just the right way as to hit her G-spot. You are currently a passenger in your own body, unable to move, unable to speak, only able to wait and hope that the wolf on top of you remembers that living things need to breathe eventually. Which thankfully she does, as she momentarily lifts herself up off your muzzle and lowers her head growling a single word into your ear 'Mine.'";
 						say "     Now no longer having your vision obscured by pussy, you breathe once more and notice that her body has grown larger, her eight breasts seem fuller, and her thighs seem thicker, more built for child birth and dominating others through snu snu. After making her claim, she returns your muzzle into her pussy and starts really going at it, desperately trying to bring herself to climax, in which very soon she does arrive, spraying her girlcum all over your face and body, covering you in her scent and marking you as hers. You still can't move though and now that you are finally done, your last remains of energy leave you as your body finally says it doesn't want do any more, and you pass out for a while.";
@@ -492,7 +492,7 @@ to say gsopt_start:
 					else if Player is female:
 						say "     Although the battle was fierce, you managed to keep yourself from falling apart while your opponent slumps over in exhaustion and is no longer able to battle. Keeping your poker face up, you raise a howl of victory and move in to examine your prone rival. Sniffing him here and there, your mind being spurred on by your canine instincts, drift towards ways that you could dominate the vulnerable rival in front of you. After having a moment of thinking how fun it would be to mess with him, you roll him on to his back. Taking a moment to admire his soft underfur, finding yourself unable to resist lowering your nose and inhaling his scent. Being down there already, you start to lick his sheath and balls attempting to bring his dick from its furry home so you can begin in earnest. After a bit of licking and teasing his shaft finally shows itself, you don't waste any time using your saliva and tongue to coat it thoroughly making sure that its nice and moist for the ride ahead.";
 						say "     After making absolutely sure that it is lubed to perfection, you move your body over him and position yourself to where you are resting your cunt on top of his dick without actually reaching the tip. Starting out slowly, you begin to hump his dick, frotting your cookie with the side of his rocket, building in momentum and tempo. Hitting a stable pace, you take your eyes off your two sexes in their rendition of hot dogging and instead look into the luminous yellow eyes of your captive audience. Watching as his eyes begin to well up in frustration as his canine instincts cause him to unintentionally hump forwards. Noticing his movements, you grind your pussy down the side of his shaft in order to both add to the tension and give yourself more pleasure. After minutes roll by of this you both start shuddering, hips locking up, two kinds of cum launching themselves on to your underwolf, bathing him in both your scents, draining you of the last of your energy as you slump down on top of him, covering yourself in the shared bodily fluids.";
-				else if Fang is Female: [Female Fang]
+				else: [Female Fang]
 					if Player is male: [Blowjob]
 						say "     With you emerging as the victor, you sigh in relief as you examine your fainted rival, thinking about what you want to do with her. As you look her over, different scenarios play through your mind, causing your cock to become partially erect as it slips from your sheath. Coming to a conclusion, you roll her away from the desk and onto her back, four limbs spread open revealing her soft underfur and feminine bits to you. The feeling of being rolled seems to have brought her back to the waking world, as her eyes start to open, you however are one step ahead of her, being that you already have your muzzle lightly locked around her neck in a display of dominance. Seeing this, she realizes that she doesn't have much choice in the matter and abides by your whims, for now anyway. Now that that is sorted out, you move yourself until your hind legs and flaccid cock is less than an inch from her face as you look back at her from in between your legs, she looks back up at you, slightly irritated, but begins to lick your exposed shaft anyway.";
 						say "     She moves her tongue this way and that, in an attempt to cover everything in saliva, after minutes of trying to work with her current position, she pushes you out of the way, gets up, and moves over to lay down on the stairs with her head resting on the first step, giving you an expectant look as she lays there. Getting the hint, you also pad your way to the stairs, moving your body over hers while resting your forepaws further up the stairs. Once you are in position, the wolfess uses her paws to move your shaft towards her maw where she continues her earlier work of covering your flaccid shaft in her saliva while moving her head forwards and back, adding friction into the mix in an effort to bring you to orgasm. Feeling how much work she is putting into this, you bend your hind legs and attempt to slide your shaft across her tongue, as the motions of a face humping begin in earnest as you attempt to get off as fast as possible in order to keep the wolf under you from choking.";
@@ -513,7 +513,7 @@ to say gsopt_start:
 						say "     After taking a few moments to imagine in-depth on how you want to go about making your idea a reality, you move your body until your partner is face-to-face with your pussy and you are face-to-face with his knotty cock, after a moment of giving it the stare-down you wrap your tongue around it here and there as you lick it slowly, savoring the slightly musky-yet-salty flavor of his exertion from the previous battle. Getting into the spirit of things, your once-opponent begins to work his tongue into your pussy, both of you now working each others sexes, every once and a while twitching and gasping when the other hits a sensitive spot as the sloppy wet sounds created by the tryst moving apace in earnest flood the library, should there be anyone around to listen. As the minutes float by both you and your partner get more into the act and deeper into each others privates, your motions growing faster and more desperate, two sets of hips begin to spasm as both reach their orgasms, you attempt to swallow your share while the wolf down under tries to do the same, until you both disconnect, rolling to rest on the side of each other breathing heavily after the momentary air deprivation.";
 						NPCSexAftermath Fang receives "OralPussy" from Player;
 						NPCSexAftermath Player receives "OralCock" from Fang;
-				else if Fang is Female: [Female Fang]
+				else: [Female Fang]
 					if Player is male: [Anal]
 						say "     As the once-opponent falls to the floor, you know that you managed to claim victory over your opponent after the furious storm of paws and claws subsided, leaving you with an opportunity to get a better look at her and decide what happens next. You flip the prone wolfess until her soft underfur is exposed, giving you the full view of her privates in all their beautiful glory, a sight that sends lust filled warmth into your erecting knotty cock as instincts as old as the first lupine resound inside of your skull telling you to see the female in front of you filled with pups. Despite what your instincts scream, you decide not to go for the most obvious route, but instead decide to go lower, gazing into her anal passage before gathering saliva in your maw and spitting it into your paw-hand, using it to coat your still-raging lupine boner in eager anticipation for the task ahead.";
 						say "     However excited you may feel for what is coming up next, you decide it would be better if you both were awake for it,  you maneuver yourself and begin licking your partner's nose in a weirdly canine way in an attempt to wake her up. As she rouses from her after-battle slumber you interject with a surprise kiss and nose-on-nose boop combo as a way of greeting followed by your best (in your imagination) winning smile, she looks at you for a moment, unsure on what her reaction should be as you move on to the next phase. Using the left over saliva on your paw-hand you decide to start by testing the waters of her anal level by first inserting a saliva covered padded digit into her vulnerable asshole inspiring a low moan, then you put in another, and stir a little, causing her to let out a rather cute little yelp from the sensations, you then add another thinking this would be the correct way to prepare her for what you have in mind next.";
@@ -716,7 +716,7 @@ to say silent_start:
 			now the icon of Doctor Matt is figure of pixel;
 			now Orthas is nowhere;
 			if there is a Name of "Deer" in Table of Random Critters:
-				choose a row with Name of "Deer" in Table of Random Critters;
+				choose row with Name of "Deer" from Table of Random Critters;
 				now area entry is "Park";
 			increase score by 600;
 			extend game by 240;
@@ -1069,23 +1069,18 @@ to say gsopt_1:
 
 To gs_stats: [apply stat bonus]
 	follow the starting stats rule; [resets all to 12]
-	if MainStat is 1:
-		increase strength of Player by 5;
-	else if MainStat is 2:
-		increase dexterity of Player by 5;
-	else if MainStat is 3:
-		increase stamina of Player by 5;
-	else if MainStat is 4:
-		increase charisma of Player by 5;
-	else if MainStat is 5:
-		increase intelligence of Player by 5;
-	else if MainStat is 6:
-		increase perception of Player by 5;
-	else if MainStat is 7 and started is 1:
-		randomstatstart;
-	else if started is 1:
-		say "Invalid stat choice - defaulting to random.";
-		randomstatstart;
+	if MainStat is:
+		-- 1: increase strength of Player by 5;
+		-- 2: increase dexterity of Player by 5;
+		-- 3: increase stamina of Player by 5;
+		-- 4: increase charisma of Player by 5;
+		-- 5: increase intelligence of Player by 5;
+		-- 6: increase perception of Player by 5;
+		-- otherwise:
+			if started is 1:
+				if MainStat is not 7:
+					say "Invalid stat choice - defaulting to random.";
+				randomstatstart;
 
 to randomstatstart:	[same total points, but spread randomly between 10 to 18]
 	now Strength of Player is 10;
@@ -1095,66 +1090,47 @@ to randomstatstart:	[same total points, but spread randomly between 10 to 18]
 	now Intelligence of Player is 10;
 	now Perception of Player is 10;
 	[Boost two stats for increased spread in results]
-	let T be a random number between 1 and 6;
-	if T is 1:
-		increase strength of Player by 3;
-	else if T is 2:
-		increase dexterity of Player by 3;
-	else if T is 3:
-		increase stamina of Player by 3;
-	else if T is 4:
-		increase charisma of Player by 3;
-	else if T is 5:
-		increase intelligence of Player by 3;
-	else if T is 6:
-		increase perception of Player by 3;
-	now T is a random number between 1 and 6;
-	if T is 1:
-		increase strength of Player by 2;
-	else if T is 2:
-		increase dexterity of Player by 2;
-	else if T is 3:
-		increase stamina of Player by 2;
-	else if T is 4:
-		increase charisma of Player by 2;
-	else if T is 5:
-		increase intelligence of Player by 2;
-	else if T is 6:
-		increase perception of Player by 2;
+	if a random number between 1 and 6 is:
+		-- 1: increase strength of Player by 3;
+		-- 2: increase dexterity of Player by 3;
+		-- 3: increase stamina of Player by 3;
+		-- 4: increase charisma of Player by 3;
+		-- 5: increase intelligence of Player by 3;
+		-- 6: increase perception of Player by 3;
+	if a random number between 1 and 6 is:
+		-- 1: increase strength of Player by 2;
+		-- 2: increase dexterity of Player by 2;
+		-- 3: increase stamina of Player by 2;
+		-- 4: increase charisma of Player by 2;
+		-- 5: increase intelligence of Player by 2;
+		-- 6: increase perception of Player by 2;
 	now tempnum is 12; [remaining 12 points applied randomly one at a time]
 	while tempnum is not 0:
-		now T is a random number between 1 and 6;
-		decrease tempnum by 1;
-		if T is 1:
-			increase strength of Player by 1;
-			if strength of Player > 18:
-				now strength of Player is 18;
-				increase tempnum by 1;
-		else if T is 2:
-			increase dexterity of Player by 1;
-			if dexterity of Player > 18:
-				now dexterity of Player is 18;
-				increase tempnum by 1;
-		else if T is 3:
-			increase stamina of Player by 1;
-			if stamina of Player > 18:
-				now stamina of Player is 18;
-				increase tempnum by 1;
-		else if T is 4:
-			increase charisma of Player by 1;
-			if charisma of Player > 18:
-				now charisma of Player is 18;
-				increase tempnum by 1;
-		else if T is 5:
-			increase intelligence of Player by 1;
-			if intelligence of Player > 18:
-				now intelligence of Player is 18;
-				increase tempnum by 1;
-		else if T is 6:
-			increase perception of Player by 1;
-			if perception of Player > 18:
-				now perception of Player is 18;
-				increase tempnum by 1;
+		if a random number between 1 and 6 is:
+			-- 1:
+				if strength of Player < 18:
+					increase strength of Player by 1;
+					decrease tempnum by 1;
+			-- 2:
+				if dexterity of Player < 18:
+					increase dexterity of Player by 1;
+					decrease tempnum by 1;
+			-- 3:
+				if stamina of Player < 18:
+					increase stamina of Player by 1;
+					decrease tempnum by 1;
+			-- 4:
+				if charisma of Player < 18:
+					increase charisma of Player by 1;
+					decrease tempnum by 1;
+			-- 5:
+				if intelligence of Player < 18:
+					increase intelligence of Player by 1;
+					decrease tempnum by 1;
+			-- 6:
+				if perception of Player < 18:
+					increase perception of Player by 1;
+					decrease tempnum by 1;
 
 This is the starting stats rule:
 	[default stats]
@@ -1282,7 +1258,6 @@ To startFunFeatget: [alternate funfeatget used for start]
 			else:
 				say "Invalid Feat. Pick from 0 to [number of filled rows in table of gainable feats].";
 
-
 Chapter 6 - Scenario Choices
 
 to say gsopt_3:
@@ -1307,24 +1282,25 @@ to say gsopt_3:
 			else:
 				say "Invalid Entry. Pick from 0 to 6.";
 		LineBreak;
-		if calcnumber is 1:
-			now scenario is "Bunker";
-			now ScenarioChosen is 1;
-		else if calcnumber is 2:
-			now scenario is "Caught Outside";
-			now ScenarioChosen is 2;
-		else if calcnumber is 3:
-			now scenario is "Rescuer Stranded";
-			now ScenarioChosen is 3;
-		else if calcnumber is 4:
-			now scenario is "Forgotten";
-			now ScenarioChosen is 4;
-		else if calcnumber is 5:
-			now scenario is "Researcher";
-			now ScenarioChosen is 5;
-		else if calcnumber is 6:
-			now scenario is "Running with Wolves";
-			now ScenarioChosen is 6;
+		if calcnumber is:
+			-- 1:
+				now scenario is "Bunker";
+				now ScenarioChosen is 1;
+			-- 2:
+				now scenario is "Caught Outside";
+				now ScenarioChosen is 2;
+			-- 3:
+				now scenario is "Rescuer Stranded";
+				now ScenarioChosen is 3;
+			-- 4:
+				now scenario is "Forgotten";
+				now ScenarioChosen is 4;
+			-- 5:
+				now scenario is "Researcher";
+				now ScenarioChosen is 5;
+			-- 6:
+				now scenario is "Running with Wolves";
+				now ScenarioChosen is 6;
 		now gsexit is 1;
 
 Chapter 7 - Difficulty Mode

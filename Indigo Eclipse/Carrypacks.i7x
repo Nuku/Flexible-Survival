@@ -24,7 +24,6 @@ to say UnequipHBP:
 to say EquipHBP:
 	increase capacity of Player by 10;
 
-
 Table of GameEventIDs (continued)
 Object	Name
 Happy Trails	"Happy Trails"
@@ -48,6 +47,5 @@ to say ResolveEvent Happy Trails:
 		LineBreak;
 		say "     Since nothing in this city comes without a price, you decide that the reward may not be worth the risk and continue on your way.";
 	now Happy Trails is resolved;
-
 
 Carrypacks ends here.

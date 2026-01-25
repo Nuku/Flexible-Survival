@@ -8,7 +8,6 @@ Version 1 of Nala by CrimsonAsh begins here.
 
 Section 1 - Events
 
-
 [Update for WalkinEvents table]
 Table of NavInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
@@ -90,9 +89,9 @@ after resting while (Fool Me Twice is active and Fool Me Twice is not resolved a
 	else if calcnumber is 2:
 		say "[RapeNala]";
 		now Resolution of Fool Me Twice is 2; [fucked her]
-	else:
+	else if calcnumber is 3:
 		LineBreak;
-		say "[KickNala]";
+		say "     You pick up the struggling bundle of imp and carry the yelling girl out of the bunker and library. As you reach outside you give the little ball of cloth a kick and watch it tumble and fall into the streets. The imp girl dazedly crawls out from under the blanket and gets to shaky feet as she looks your way with a pouty face before taking off to the sky. You have a feeling that's the last you'll see of the little troublemaker.";
 		now Resolution of Fool Me Twice is 3; [threw her out]
 	now Fool Me Twice is resolved;
 
@@ -115,9 +114,6 @@ to say RapeNala:
 		say "     You wrap her lower body and tail tightly in the blanket leaving only her struggling head and chest exposed before you. You remove what underclothes you have and expose your damp womanhood for her viewing. She lets out a 'Meep!' in realization as you shove your sex down into her face. She wiggles against your wet lips but seeing as her arms and tail are firmly trapped she relents and stares up at you with reluctant acceptance. Withdrawing her tongue to flick across your lips you moan out in surprise as she thrusts into your tender love-hole with her slick muscle. Her tongue seems to form a point near its tip and is impossibly long as it ravishes your now soaking sex, reaching and wiggling places where no cock could. As she eats your cunt, you ride and move yourself against her soft mouth and grind your engorged clit against her button nose.";
 		say "     The little imp suddenly pulls her tongue away and before you can reprimand her she thrusts her entire tongue into your juicy sex. Now seeming to get into the motions her tongue hits the very depths of your cervix before finding your sensitive G-spot and attacking it with brutal intent. Throwing your head back the demon grasps your thighs with newly freed hands and digs into your skin as she munches eagerly on your sex. Quickly brought to your peak by her magical tongue, you let out a wail of pleasure as you soak her entire face with your climax before catching yourself from falling backward. Before realizing it, the little imp has used her freed hands to shimmy herself free. She quickly bolts out of the room and down the hall before exiting the bunker. You could hardly care as you bask in your afterglow, deeming to let the little demon go free, knowing that she learned her lesson.";
 		NPCSexAftermath Nala receives "OralPussy" from Player;
-
-to say KickNala:
-	say "     You pick up the struggling bundle of imp and carry the yelling girl out of the bunker and library. As you reach outside you give the little ball of cloth a kick and watch it tumble and fall into the streets. The imp girl dazedly crawls out from under the blanket and gets to shaky feet as she looks your way with a pouty face before taking off to the sky. You have a feeling that's the last you'll see of the little troublemaker.";
 
 Section 2 - NPC
 
@@ -202,14 +198,14 @@ instead of conversing the Nala:
 			say "[NalaKiss]";
 		else if calcnumber is 2:
 			say "[NalaFuck]";
-		else:
+		else if calcnumber is 3:
 			LineBreak;
 			say "     You quickly back off much to the dismay of the imp girl's whining. She looks at you surprised with slightly flushed cheeks. 'Oh! I thought umm... Sorry thought you'd be up for some fun.' She grabs her right arm, looking sheepishly at the ground before flying back over to her bed, avoiding eye contact with you.";
 		now Libido of Nala is 2;
 	else if Libido of Nala is 2:
 		say "     Approaching Nala she eagerly gets to her feet, and then flaps her wings to greet you face to face. 'Heya big [if Player is male]boy[else]girl[end if], how goes things?' You ask her if she could tell you more about her. 'Me?' she asks, slightly surprised. 'Are you sure?' You nod and tell her you would like to know more about your friend with benefits. She leans back and smiles. 'Well aren't you sweet, but I'm afraid I don't have much of a past, at least not one I remember. I... can't remember much before all this went down, except my name and that I love comedy and sex, sometimes both at the same time. Aside from that I don't have much going for me, just trying to eek out a living and have some fun doing it.' You nod again and thank Nala for the talk to which she gives you a toothy smile and a thumbs up before flying back to where she was.";
 		now Libido of Nala is 3;
-	else if Libido of Nala > 2:
+	else:
 		say "     You stride up to Nala and sit down next to her, deciding to rest for a moment and see if you can't spark up a conversation. You ask her how she's been. Giving you a smile she answers, 'Everything's been pretty swell, especially since I moved in here. You've been fun and this is a great spot to lay low at.' Lay low? You query her. She grabs her shoulder and looks slightly sheepish. 'Weeeell, you know me and how I love my mischief. Well, some people like to hold grudges.' She chuckles to herself. 'Not like you, buddy. You're one of the good ones,' she finishes, slugging you on the shoulder with surprising strength. You rest for a little while and talk idly with Nala before getting up and continuing onwards.";
 
 to say NalaKiss:
@@ -251,10 +247,10 @@ instead of fucking the Nala:
 		say "     'Sorry buddy, I know I'm demonic and all, but I got an agenda to keep. I'm a busy bee, but maybe come find me later,' she finishes with a wink.";
 	else: [ready for sex]
 		say "     As you walk up to Nala with your proposition she clasps her hands together, 'Ooh, I thought you'd never ask sweetie.'";
-		project Figure of Nala_naked_icon;
 		say "[NalaSexMenu]";
 
 to say NalaSexMenu:
+	project Figure of Nala_naked_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -263,18 +259,17 @@ to say NalaSexMenu:
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
 		now description entry is "Let Nala suck you off";
+		[] [possibly add on a "and Cock Length of Player < X" if you wanna cap her capacity somewhere]
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck Nala";
+		now sortorder entry is 3;
+		now description entry is "Slide your cock into the bubbly imp";
 	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Eat Nala out";
 		now sortorder entry is 2;
 		now description entry is "Lap at the imp's pussy";
-	[]
-	if Player is male: [possibly add on a "and Cock Length of Player < X" if you wanna cap her capacity somewhere]
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck Nala";
-		now sortorder entry is 3;
-		now description entry is "Slide your cock into the bubbly imp";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -290,22 +285,21 @@ to say NalaSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Get a blowjob"):
-					say "[NalaSex1]";
-				else if (nam is "Eat Nala out"):
-					say "[NalaSex2]";
-				else if (nam is "Fuck Nala"):
-					say "[NalaSex3]";
-				wait for any key;
+				if title entry is:
+					-- "Get a blowjob":
+						say "[NalaSex1]";
+					-- "Eat Nala out":
+						say "[NalaSex2]";
+					-- "Fuck Nala":
+						say "[NalaSex3]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the imp, shaking your head slightly as she gives a questioning look.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say NalaSex1: [oral on the player]

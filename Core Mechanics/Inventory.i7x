@@ -1,7 +1,5 @@
 Version 1 of Inventory by Core Mechanics begins here.
 
-invcolumns is a number that varies. invcolumns is usually 2.
-
 Part 1 - Inventory
 
 Chapter 1 - Basic Functionality
@@ -9,7 +7,6 @@ Chapter 1 - Basic Functionality
 understand the command "i" and "inv" and "inventory" as something new.
 
 Inventorying is an action applying to nothing.
-
 understand "item" as Inventorying.
 understand "i" as Inventorying.
 understand "inv" as Inventorying.
@@ -292,17 +289,17 @@ carry out Inventorying:
 	if the number of entries in tapes of Player > 0:
 		say "(You may see your collection of video tapes using [link][bold type]tape inventory[roman type][end link] or [link][bold type]tinv[roman type][end link] for short.)";
 	say "(You can adjust the number of inventory columns with the command [link]set columns[end link].)";
-	now invlinklistfilled is one;
+	now invlinklistfilled is true;
 
 [used to speed up link command lookup in between clears on the hyperlink list, because we know something about the list: the order of items is in all likelihood the same that we are now creating links in]
-lastinvfoundindex is a number that varies.
+lastinvfoundindex is a number that varies.[@Tag:NotSaved]
 [another speed up: if we know that the link list is empty (or at least not filled with inventory links) we can skipping searching through it]
-invlinklistfilled is a number that varies.
+invlinklistfilled is a truth state that varies.[@Tag:NotSaved]
 
 To say invquicklink (itemname - a text) for (itemaction - a list of text):
 	let linkcommand be the substituted form of "[entry 2 of itemaction] [itemname]";
 	let the invlinkindex be zero;
-	if invlinklistfilled is zero:
+	if invlinklistfilled is false:
 		add linkcommand to hyperlink list;
 		let invlinkindex be the number of entries of hyperlink list;
 	else:
@@ -323,13 +320,12 @@ To say invquicklink (itemname - a text) for (itemaction - a list of text):
 
 Chapter 2 - Settings
 
-settinginvcolumns is an action applying to nothing.
+invcolumns is a number that varies. invcolumns is usually 2.
 
+settinginvcolumns is an action applying to nothing.
 understand "set inventory columns" as settinginvcolumns.
 understand "inventory columns" as settinginvcolumns.
 understand "set inventory/columns" as settinginvcolumns.
-
-invcolumns is a number that varies. [invcolumns is usually 2. - set as part of Presets in Core Mechanics]
 
 carry out settinginvcolumns:
 	say "[set_invcolumns]";
@@ -381,7 +377,6 @@ Understand the command "get" as something new.
 Understand the command "take" as something new.
 
 Grabbing is an action applying to one thing.
-
 understand "get [present grab object]" as grabbing.
 understand "take [present grab object]" as grabbing.
 understand "grab [present grab object]" as grabbing.
@@ -405,7 +400,6 @@ carry out grabbing something (called x):
 		if x is owned, say "You do see one in your backpack though. Did you mean to [bold type]use[roman type] it?";
 
 Looting is an action applying to nothing.
-
 understand "get all/everything" as looting.
 understand "take all/everything" as looting.
 understand "grab all" as looting.
@@ -425,17 +419,16 @@ Understand the command "trash" as something new.
 Understand the command "junk" as something new.
 
 burninating is an action applying to one thing.
-
 understand "trash [owned grab object]" as burninating.
 understand "junk [owned grab object]" as burninating.
 
 check burninating something (called x):
 	if x is journal, say "You really don't think that's a good idea." instead;
 	if x is not owned, say "You don't seem to be holding any." instead;
-	if x is an armament and carried of x is 1:
-		if x is wielded, say "You're wielding that, take it off first." instead;
-	else if x is an equipment and carried of x is 1:
-		if x is equipped, say "You're using that right now. Stop using it before you trash it." instead;
+	if x is an armament and x is wielded:
+		if carried of x is 1, say "You're wielding that, take it off first." instead;
+	else if x is an equipment and x is equipped:
+		if carried of x is 1, say "You're using that right now. Stop using it before you trash it." instead;
 
 carry out burninating something (called x):
 	ItemLoss x by 1;
@@ -444,17 +437,16 @@ Understand the command "trashall" as something new.
 Understand the command "junkall" as something new.
 
 allburninating is an action applying to one thing.
-
 understand "trashall [owned grab object]" as allburninating.
 understand "junkall [owned grab object]" as allburninating.
 
 check allburninating something (called x):
 	if x is journal, say "You really don't think that's a good idea." instead;
 	if x is not owned, say "You don't seem to be holding any." instead;
-	if x is an armament and carried of x is 1:
-		if x is wielded, say "You're wielding that, so you'd best stop using it first." instead;
-	else if x is an equipment and carried of x is 1:
-		if x is equipped, say "You're using that right now. You need to take it off to trash it." instead;
+	if x is an armament and x is wielded:
+		if carried of x is 1, say "You're wielding that, so you'd best stop using it first." instead;
+	else if x is an equipment and x is equipped:
+		if carried of x is 1, say "You're using that right now. You need to take it off to trash it." instead;
 
 carry out allburninating something (called x):
 	say "Do you wish to permanently trash all of the '[x]' you have?";
@@ -486,15 +478,14 @@ Section 3 - Dropping
 Understand the command "drop" as something new.
 
 littering is an action applying to one thing.
-
 understand "drop [owned grab object]" as littering.
 
 check littering something (called x):
 	if x is not owned, say "You don't seem to be holding that." instead;
-	if x is an armament and carried of x is 1:
-		if x is wielded, say "You're wielding that, take it off first." instead;
-	else if x is an equipment and carried of x is 1:
-		if x is equipped, say "You're using that right now. Stop using it before you drop it." instead;
+	if x is an armament and x is wielded:
+		if carried of x is 1, say "You're wielding that, take it off first." instead;
+	else if x is an equipment and x is equipped:
+		if carried of x is 1, say "You're using that right now. Stop using it before you drop it." instead;
 
 carry out littering something (called x):
 	repeat through table of game objects:
@@ -504,7 +495,6 @@ carry out littering something (called x):
 	ItemLoss x by 1;
 
 masslittering is an action applying to one thing.
-
 Understand "dropall [owned grab object]" as masslittering.
 Understand "drop all [owned grab object]" as masslittering.
 
@@ -528,7 +518,6 @@ Carry out masslittering something (called x):
 		say "You set down [found] x [x].";
 
 criminallittering is an action applying to nothing.
-
 Understand "dropitall" as criminallittering.
 Understand "drop all/everything" as criminallittering.
 
@@ -552,7 +541,6 @@ Section 4 - Trading
 understand the command "give" and "offer" as something new.
 
 Trading is an action applying to two things.
-
 Understand "give [owned grab object] to [person]" as trading.
 
 Check trading:
@@ -569,7 +557,5 @@ Carry out trading:
 		say "[line break]You get a second one free with your amazing negotiating skills! ";
 		ItemGain trade of the noun by 1;
 	ItemLoss noun by 1;
-
-
 
 Inventory ends here.

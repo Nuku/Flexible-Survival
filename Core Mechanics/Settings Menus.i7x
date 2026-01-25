@@ -4,9 +4,9 @@ Version 3 of Settings Menus by Core Mechanics begins here.
 
 Section 1 - Trixie's Setting and Cheat Menu
 
-Trixiecheating is an action applying to nothing.
 weakwilled is a truth state that varies.
 
+Trixiecheating is an action applying to nothing.
 understand "Trixiecheat" as Trixiecheating.
 understand "iwannacheat" as Trixiecheating.
 understand "i wanna cheat" as Trixiecheating.
@@ -213,7 +213,6 @@ carry out Trixiecheating:
 Chapter 1 - AnalLevel Adjustment
 
 analadjusting is an action applying to nothing.
-
 understand "adjust anal" as analadjusting.
 understand "adjustanal" as analadjusting.
 understand "anal adjust" as analadjusting.
@@ -253,7 +252,6 @@ carry out analadjusting:
 Chapter 2 - WSLevel Adjustment
 
 WSadjusting is an action applying to nothing.
-
 understand "adjust WS" as WSadjusting.
 understand "adjustWS" as WSadjusting.
 understand "WS adjust" as WSadjusting.
@@ -287,7 +285,6 @@ carry out WSadjusting:
 Chapter 3 - VoreLevel Adjustment
 
 voremenuing is an action applying to nothing.
-
 understand "voremenu" as voremenuing.
 understand "vore menu" as voremenuing.
 
@@ -388,7 +385,7 @@ carry out voremenuing:
 			else:
 				now ubchoice is 0;
 				say "The option to use your unbirthing ability has been reset to 'Player choice'.";
-		else if calcnumber is 0:
+		else:
 			say "Exiting menu.";
 			now voreexit is 1;
 		if voreexit is 0, AttemptToWait;
@@ -396,7 +393,6 @@ carry out voremenuing:
 Chapter 4 - OviPregLevel Adjustment
 
 oviadjusting is an action applying to nothing.
-
 understand "adjust ovi" as oviadjusting.
 understand "adjustovi" as oviadjusting.
 understand "ovi adjust" as oviadjusting.
@@ -435,7 +431,6 @@ carry out oviadjusting:
 Chapter 5 - Ban/Ward Flag Adjustment
 
 Flagadjusting is an action applying to nothing.
-
 understand "adjust flags" as Flagadjusting.
 understand "adjustflags" as Flagadjusting.
 understand "flagsadjust" as Flagadjusting.
@@ -453,7 +448,7 @@ carry out Flagadjusting:
 	let flagexit be 0;
 	while flagexit is 0:
 		if clearnomore is 0, clear the screen;
-		say "This menu will allow you to adjust whether certain categories of content will be warded or not now that the game has started. Warded content will not appear unless it is specifically hunted for or is called upon by events or quests. If a creature has multiple gender forms, which gender will appear may be adjusted based on the warded flags. Now that the game has started, you cannot change whether something is banned outright.";
+		say "     This menu will allow you to adjust whether certain categories of content will be warded or not now that the game has started. Warded content will not appear unless it is specifically hunted for or is called upon by events or quests. If a creature has multiple gender forms, which gender will appear may be adjusted based on the warded flags. Now that the game has started, you cannot change whether something is banned outright.";
 		let x be 0;
 		repeat with Q running through flags:
 			if Q is HumanoidList, next; [skip over unused HumanoidList for now]

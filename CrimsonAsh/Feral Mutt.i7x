@@ -5,44 +5,37 @@ Version 1 of Feral Mutt by CrimsonAsh begins here.
 FeralMuttCurrentBreed is a text that varies.
 FeralMuttDetailedLook is a text that varies.
 FeralMuttFurColor is a text that varies.
-FeralMuttFurColorNumber is a number that varies.
+[FeralMuttFurColorNumber is a number that varies.]
 FeralMuttDominance is a number that varies.
 
 Section 1 - Creature Responses
 
-
-PetMuttBreed is a text that varies.
-PetMuttColor is a text that varies.
-PetMuttDetailedlook is a text that varies.
-
 to RandomizeFeralMutt:
-	now FeralMuttFurColorNumber is a random number between 1 and 2;
-	let randomnumber be a random number from 1 to 6; [adjust the latter number for the number of options]
-	if randomnumber is:
-	-- 1:
-		now FeralMuttFurColor is "[if FeralMuttFurColorNumber is 1]brown[else]gray[end if]";
-		now FeralMuttCurrentBreed is "Malamute";
-		now FeralMuttDetailedLook is "a well-muscled [FeralMuttFurColor] [FeralMuttCurrentBreed]";
-	-- 2:
-		now FeralMuttFurColor is "[if FeralMuttFurColorNumber is 1]brown[else]yellow[end if]";
-		now FeralMuttCurrentBreed is "Labrador";
-		now FeralMuttDetailedLook is "a sleek and fast [FeralMuttFurColor] [FeralMuttCurrentBreed]";
-	-- 3:
-		now FeralMuttFurColor is "[if FeralMuttFurColorNumber is 1]brown[else]black[end if]";
-		now FeralMuttCurrentBreed is "Mastiff";
-		now FeralMuttDetailedLook is "a strong looking [FeralMuttFurColor] [FeralMuttCurrentBreed]";
-	-- 4:
-		now FeralMuttFurColor is "[if FeralMuttFurColorNumber is 1]brown[else]golden-brown[end if]";
-		now FeralMuttCurrentBreed is "Goldador";
-		now FeralMuttDetailedLook is "a stray and rugged [FeralMuttFurColor] [FeralMuttCurrentBreed]";
-	-- 5:
-		now FeralMuttFurColor is "[if FeralMuttFurColorNumber is 1]brown[else]reddish-brown[end if]";
-		now FeralMuttCurrentBreed is "Blood Hound";
-		now FeralMuttDetailedLook is "a well-muscled [FeralMuttFurColor] [FeralMuttCurrentBreed]";
-	-- 6:
-		now FeralMuttFurColor is "[if FeralMuttFurColorNumber is 1]brown[else]white and brown[end if]";
-		now FeralMuttCurrentBreed is "Bulldog";
-		now FeralMuttDetailedLook is "a large snarling [FeralMuttFurColor] [FeralMuttCurrentBreed]";
+	if a random number from 1 to 6 is: [adjust the latter number for the number of options]
+		-- 1:
+			now FeralMuttFurColor is "[if a random chance of 1 in 2 succeeds]brown[else]gray[end if]";
+			now FeralMuttCurrentBreed is "Malamute";
+			now FeralMuttDetailedLook is "a well-muscled [FeralMuttFurColor] [FeralMuttCurrentBreed]";
+		-- 2:
+			now FeralMuttFurColor is "[if a random chance of 1 in 2 succeeds]brown[else]yellow[end if]";
+			now FeralMuttCurrentBreed is "Labrador";
+			now FeralMuttDetailedLook is "a sleek and fast [FeralMuttFurColor] [FeralMuttCurrentBreed]";
+		-- 3:
+			now FeralMuttFurColor is "[if a random chance of 1 in 2 succeeds]brown[else]black[end if]";
+			now FeralMuttCurrentBreed is "Mastiff";
+			now FeralMuttDetailedLook is "a strong looking [FeralMuttFurColor] [FeralMuttCurrentBreed]";
+		-- 4:
+			now FeralMuttFurColor is "[if a random chance of 1 in 2 succeeds]brown[else]golden-brown[end if]";
+			now FeralMuttCurrentBreed is "Goldador";
+			now FeralMuttDetailedLook is "a stray and rugged [FeralMuttFurColor] [FeralMuttCurrentBreed]";
+		-- 5:
+			now FeralMuttFurColor is "[if a random chance of 1 in 2 succeeds]brown[else]reddish-brown[end if]";
+			now FeralMuttCurrentBreed is "Blood Hound";
+			now FeralMuttDetailedLook is "a well-muscled [FeralMuttFurColor] [FeralMuttCurrentBreed]";
+		-- 6:
+			now FeralMuttFurColor is "[if a random chance of 1 in 2 succeeds]brown[else]white and brown[end if]";
+			now FeralMuttCurrentBreed is "Bulldog";
+			now FeralMuttDetailedLook is "a large snarling [FeralMuttFurColor] [FeralMuttCurrentBreed]";
 
 to say FeralMuttDesc:
 	say "     From behind, you hear the telltale growl of an animal. Whirling around, you spot a large feral dog, growling and approaching predatorily towards you. The mutt seems to be a mixed breed, most closely resembling [FeralMuttDetailedLook]. As he approaches, you spot the red rocket that is his cock already half-poking out of his furry sheath, before it then slides into full view as the dog winds himself up to fuck you. Seconds later, the mutt leaps forward, barking and planning to take what he wants!";
@@ -87,7 +80,6 @@ to say LoseToFeralDog:
 		now Mutt Pack Attack is inactive; [inactive when they're not dominant enough]
 	if FeralMuttDominance > -3:
 		now Mutt Pack Submission is inactive; [inactive when they're not subby enough]
-
 
 to say BeatTheFeralMutt:
 	say "     After your assault, the dog collapses and whines sadly. As he struggles to stand, he wavers and falls over. You then notice his still hard cock poking out of his sheath, the tip drooling a bit of pre.";
@@ -137,14 +129,14 @@ to say FeralDogSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Suck him off"):
-					say "[SuckFeralMutt]";
-				else if (nam is "Ride his cock"):
-					say "[RideFeralMutt]";
-				else if (nam is "Fuck his ass"):
-					say "[FuckFeralMutt]";
+				if title entry is:
+					-- "Suck him off":
+						say "[SuckFeralMutt]";
+					-- "Ride his cock":
+						say "[RideFeralMutt]";
+					-- "Fuck his ass":
+						say "[FuckFeralMutt]";
 				decrease FeralMuttDominance by 1;
 				if FeralMuttDominance > -3:
 					now Mutt Pack Submission is inactive; [inactive when they are less than 3x submissive]
@@ -152,14 +144,13 @@ to say FeralDogSexMenu:
 					now Mutt Pack Submission is active; [active when they're sufficiently subby]
 				if FeralMuttDominance < 3:
 					now Mutt Pack Attack is inactive; [inactive when they're not dominant enough]
-				wait for any key;
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the [FeralMuttFurColor] [FeralMuttCurrentBreed], shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say RideFeralMutt:
@@ -227,48 +218,21 @@ to Pet MuttRecruitment:
 			say "[bold type]Please enter a name for your [FeralMuttFurColor] [FeralMuttCurrentBreed] (must be one or more letters)[roman type]> [run paragraph on]";
 			get typed command as playerinput;
 		now PetMuttName is playerinput;
-		if FeralMuttCurrentBreed is "Malamute":
-			now PetMuttBreed is "Malamute";
-			if FeralMuttFurColorNumber is 1:
-				now PetMuttColor is "brown";
-			else:
-				now PetMuttColor is "gray";
-			now PetMuttDetailedlook is "a well-muscled [PetMuttColor] [PetMuttBreed]";
-		else if FeralMuttCurrentBreed is "Labrador":
-			now PetMuttBreed is "Labrador";
-			if FeralMuttFurColorNumber is 1:
-				now PetMuttColor is "brown";
-			else:
-				now PetMuttColor is "yellow";
-			now PetMuttDetailedlook is "a sleek and fast [PetMuttColor] [PetMuttBreed]";
-		else if FeralMuttCurrentBreed is "Mastiff":
-			now PetMuttBreed is "Mastiff";
-			if FeralMuttFurColorNumber is 1:
-				now PetMuttColor is "brown";
-			else:
-				now PetMuttColor is "black";
-			now PetMuttDetailedlook is "a strong looking [PetMuttColor] [PetMuttBreed]";
-		else if FeralMuttCurrentBreed is "Goldador":
-			now PetMuttBreed is "Goldador";
-			if FeralMuttFurColorNumber is 1:
-				now PetMuttColor is "brown";
-			else:
-				now PetMuttColor is "golden-brown";
-			now PetMuttDetailedlook is "a rugged [PetMuttColor] [PetMuttBreed]";
-		else if FeralMuttCurrentBreed is "Blood Hound":
-			now PetMuttBreed is "Blood Hound";
-			if FeralMuttFurColorNumber is 1:
-				now PetMuttColor is "brown";
-			else:
-				now PetMuttColor is "reddish-brown";
-			now PetMuttDetailedlook is "a well-muscled [PetMuttColor] [PetMuttBreed]";
-		else if FeralMuttCurrentBreed is "Bulldog":
-			now PetMuttBreed is "Bulldog";
-			if FeralMuttFurColorNumber is 1:
-				now PetMuttColor is "brown";
-			else:
-				now PetMuttColor is "white and brown";
-			now PetMuttDetailedlook is "a large [PetMuttColor] [PetMuttBreed]";
+		now PetMuttBreed is FeralMuttCurrentBreed;
+		now PetMuttColor is FeralMuttFurColor;
+		if PetMuttBreed is:
+			-- "Malamute":
+				now PetMuttDetailedlook is "a well-muscled [PetMuttColor] [PetMuttBreed]";
+			-- "Labrador":
+				now PetMuttDetailedlook is "a sleek and fast [PetMuttColor] [PetMuttBreed]";
+			-- "Mastiff":
+				now PetMuttDetailedlook is "a strong looking [PetMuttColor] [PetMuttBreed]";
+			-- "Goldador":
+				now PetMuttDetailedlook is "a rugged [PetMuttColor] [PetMuttBreed]";
+			-- "Blood Hound":
+				now PetMuttDetailedlook is "a well-muscled [PetMuttColor] [PetMuttBreed]";
+			-- "Bulldog":
+				now PetMuttDetailedlook is "a large [PetMuttColor] [PetMuttBreed]";
 		AttemptToWait;
 		move Pet Mutt to Main & 7th Street;
 		move Player to Main & 7th Street;
@@ -492,9 +456,9 @@ When Play begins:
 	add "Mutt Pack" to infections of TailList;
 	add "Mutt Pack" to infections of PackmindList;
 	now Name entry is "Mutt Pack";
-	now enemy title entry is "Mutt Pack";
+	now enemy title entry is "";
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
-	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
+	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]A feral mutt snaps at you and wounds you with his teeth![or]Jumping up at you, a feral mutt leaves scratches with his claws.[or]One of the feral mutts bites you in the leg.[at random]";
 	now defeated entry is "[BeatTheMuttPack]";
 	now victory entry is "[LoseToMuttPack]";
@@ -648,8 +612,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
-
 
 Section 4 - Mutt Pack Events
 

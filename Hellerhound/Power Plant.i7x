@@ -1,7 +1,6 @@
 Version 2 of Power Plant by Hellerhound begins here.
 [Version 2.1 - Computer tweaks - by Stripes]
 
-
 [Include Computers by Hellerhound.]
 
 CityPowerOn is a truth state that varies. CityPowerOn is usually false.
@@ -10,7 +9,6 @@ a postimport rule:
 	if findwires is 2 and fixedgens > 2:
 		now CityPowerOn is true;
 		now library computer is powered;
-
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -92,12 +90,7 @@ control panels is a thing. A control panels is in Control Room.
 Description of control panels is "[ControlPanelDesc]".
 
 to say ControlPanelDesc:
-	if fixedgens < 2:
-		say "     The panels are glowing softly, every light red. A small schematic shows that the intact generator is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [link][bold type]reactivate[roman type][as]reactivate control panels[end link] them?";
-	else if fixedgens is 2:
-		say "     The panels are glowing softly, all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [link][bold type]reactivate[roman type][as]reactivate control panels[end link] them?";
-	else:
-		say "     The panels are glowing softly, all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, with at least those few lights now shining green. You doubt you'll have as much luck with getting the rest of the city supplied with power again.";
+	say "     The panels are glowing softly, [if fixedgens < 2]every light red. A small schematic shows that the intact generator is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [link][bold type]reactivate[roman type][as]reactivate control panels[end link] them?[else if fixedgens is 2]all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [link][bold type]reactivate[roman type][as]reactivate control panels[end link] them?[else]all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, with at least those few lights now shining green. You doubt you'll have as much luck with getting the rest of the city supplied with power again.[end if]";
 
 catwalk door is a door.
 catwalk door is lockable and locked.
@@ -116,7 +109,6 @@ Description of Administration Offices is "     There isn't much left of the corr
 Scent of Administration Offices is "     The scent of wet ash hangs in the air.".
 
 cat key is a grab object.
-
 It is not temporary.
 
 instead of using cat key:
@@ -151,21 +143,18 @@ to say catwalkstuff:
 	LineBreak;
 	if fixedgens is 1:
 		say "The parts you found match this generator perfectly. You fix the generator, and the malfunction light on the generator turns green to show the generator could work. You wait with bated breath for it to work.";
-		AttemptToWait;
+		WaitLineBreak;
 		now fixedgens is 2;
 		if findwires is 2:
 			say "The generator begins to hum, and the green lights indicating that power is flowing begin to flash. Hooray!";
 			increase score by 200;
 		else:
 			say "The generator is not running, so maybe there is nothing for it to power? Maybe you should check the control panels.";
-	else if fixedgens > 1:
-		say "The hum of the fixed generator sounds like music to your ears.";
 	else:
-		say "The intact generator is missing some key parts. The claw marks on the generator make it look like something stole them, so maybe they are out in the city?";
+		say "The [if fixedgens > 1]hum of the fixed generator sounds like music to your ears.[else]intact generator is missing some key parts. The claw marks on the generator make it look like something stole them, so maybe they are out in the city?[end if]";
 
 findwires is a number that varies.
 fixedgens is a number that varies.
-
 
 activating is an action applying to nothing.
 understand "activate controls" as activating.
@@ -209,7 +198,6 @@ the earea of Power Lines is "Outside".
 towerfixing is an action applying to nothing.
 understand "fix tower" and "repair tower" and "fix wires" and "fix top" and "repair top" as towerfixing.
 
-
 check towerfixing:
 	if the player is not in power lines, say "Fix what?" instead;
 	if findwires is 0: [haven't tried to turn on the power]
@@ -242,7 +230,6 @@ the library computer can be on or off. the library computer is off.
 the library computer can be powered or unpowered. the library computer is unpowered.
 
 computerpowering is an action applying to nothing.
-
 understand "switch on computer" as computerpowering.
 understand "turn on computer" as computerpowering.
 understand "power up/on the/-- library/-- computer" as computerpowering.
@@ -259,6 +246,5 @@ carry out computerpowering:
 
 to activatecomputers:
 	now library computer is powered;
-
 
 Power Plant ends here.

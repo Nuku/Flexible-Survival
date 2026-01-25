@@ -5,7 +5,7 @@ Part 0 - Variables
 tempnum is a number that varies.[@Tag:NotSaved]
 tempnum2 is a number that varies.[@Tag:NotSaved]
 MonsterID is a number that varies.[@Tag:NotSaved] [line number chosen in the table of random critters]
-JournalNotes is a list of text that varies. [player-made journal notes]
+[JournalNotes is a list of text that varies. [player-made journal notes]]
 Allobjs is a list of text that varies.[@NotSaved] [list of all objects in the game]
 
 Part 1 - Table of Game Objects (+Initial Object)
@@ -61,7 +61,6 @@ with 1000 blank rows
 	now Resistant entry is false;
 	now Sluttyness entry is 1;
 ]
-
 
 Part 6 - ID Tables (for the Export/Import System)
 
@@ -186,9 +185,9 @@ with 1 blank row
 
 Table of GameVariableIDs
 Name(text)	Type(text)
-"bcupsize"	"indexed text"
+["bcupsize"	"indexed text"
 "bmagic"	"indexed text"
-"cupsize"	"indexed text"
+"cupsize"	"indexed text"]
 "AlexandraNPC"	"list of numbers"
 "bookcollection"	"list of numbers"
 "campuswander"	"list of numbers"
@@ -208,7 +207,7 @@ Name(text)	Type(text)
 "StoredSluts_Female"	"list of text"
 "StoredSluts_Male"	"list of text"
 "StoredSluts_Other"	"list of text"
-"absorb"	"number"
+["absorb"	"number"]
 "addedlibido"	"number"
 "afsmread"	"number"
 "aidKenaz"	"number"
@@ -241,7 +240,7 @@ Name(text)	Type(text)
 "Alpha Wolfdefeat"	"number"
 "Alphahuskypet"	"number"
 "alphawolfbeaten"	"number"
-"altattackmade"	"number"
+["altattackmade"	"number"]
 "AmirRelationship"	"number"
 "AmmyAffection"	"number"
 "AmmyLastEvent"	"number"
@@ -261,15 +260,15 @@ Name(text)	Type(text)
 "ArenaBattleCounter"	"number"
 "AresDannyEncounters"	"number"
 "artattempt"	"number"
-"artleopardfight"	"number"
+["artleopardfight"	"number"]
 "auto2entry"	"number"
 "autoattackmode"	"number"
 "autogender"	"number"
-"automaticcombatcheck"	"number"
+["automaticcombatcheck"	"number"]
 "automatonending"	"number"
-"avoidance"	"number"
+["avoidance"	"number"]
 "Awesome_boredom"	"number"
-"Awesome_counter"	"number"
+["Awesome_counter"	"number"]
 "Awesome_forcesex"	"number"
 "Awesome_noreward"	"number"
 "Awesome_sex"	"number"
@@ -284,13 +283,13 @@ Name(text)	Type(text)
 "BarryMotive"	"number"
 "BastetApproval"	"number"
 "BastetSexBattleCount"	"number"
-"battleitem"	"number"
+["battleitem"	"number"]
 "bclatearrival"	"number"
 "bcuntethered"	"number"
 "beatgrnymph"	"number"
 "beatsatyr"	"number"
-"beatSatyress"	"number"
-"BeforeCombat"	"number"
+["beatSatyress"	"number"
+"BeforeCombat"	"number"]
 "BehaviorandCustoms"	"number"
 "Bevkitty"	"number"
 "Bevtalk"	"number"
@@ -304,35 +303,35 @@ Name(text)	Type(text)
 "BoghrimHuntingTrip"	"number"
 "BoghrimMet"	"number"
 "bonelust"	"number"
-"bonusattack"	"number"
+["bonusattack"	"number"]
 "bookfound"	"number"
 "boosterfeats"	"number"
 "bopdefeated"	"number"
-"bopsongcount"	"number"
-"borisfucked"	"number"
+["bopsongcount"	"number"
+"borisfucked"	"number"]
 "Borismate"	"number"
 "Borisquest"	"number"
 "boristalk"	"number"
-"boundcounter"	"number"
+["boundcounter"	"number"
 "boundmod"	"number"
 "boundmod2"	"number"
 "boundsegment"	"number"
-"Bovine_type"	"number"
+"Bovine_type"	"number"]
 "bradfordbounty"	"number"
 "bradfordBountyNum"	"number"
-"bradfordstory"	"number"
+["bradfordstory"	"number"]
 "BrennanRelationship"	"number"
 "BrianOral"	"number"
 "BrianRelationship"	"number"
-"BrianVisit"	"number"
+["BrianVisit"	"number"]
 "BridgetPowellEventVar"	"number"
 "brookeanal"	"number"
 "BrutusAmySex"	"number"
 "BrutusEscalationTimer"	"number"
 "BryceFucked"	"number"
-"BryonyBearFuckWatched"	"number"
+["BryonyBearFuckWatched"	"number"
 "bsextimer"	"number"
-"BullMaster"	"number"
+"BullMaster"	"number"]
 "BullTerrierSiblingsVar"	"number"
 "bunnyjocknosex"	"number"
 "ButterflyBabyGestation"	"number"
@@ -343,7 +342,7 @@ Name(text)	Type(text)
 "CampusCoupleRelationship"	"number"
 "CampusLoversProgressTurn"	"number"
 "CampusLoversTrackingVariable"	"number"
-"candytalk"	"number"
+["candytalk"	"number"]
 "CandyUrikInteraction"	"number"
 "CaneFurSuspicion"	"number"
 "CaneMotive"	"number"
@@ -371,13 +370,13 @@ Name(text)	Type(text)
 "centrallib"	"number"
 "cerberusarousal"	"number"
 "cerbmaulcount"	"number"
-"cfgmode"	"number"
+["cfgmode"	"number"]
 "charcounter"	"number"
-"chargeup"	"number"
+["chargeup"	"number"]
 "ChaseMarking"	"number"
 "ChaseOffspring"	"number"
 "ChasePetplay"	"number"
-"ChasePetplayTraining"	"number"
+["ChasePetplayTraining"	"number"]
 "ChaseSexCounter"	"number"
 "CheerleaderFirstEncounter"	"number"
 "Cheesecakemode"	"number"
@@ -399,8 +398,8 @@ Name(text)	Type(text)
 "CollegeLibraryBrutusEncounter"	"number"
 "CollegeLibraryRyouseiEncounter"	"number"
 "colliedefeat"	"number"
-"combat abort"	"number"
-"compressedcock"	"number"
+["combat abort"	"number"
+"compressedcock"	"number"]
 "ConclaveKnowledge"	"number"
 "ConfSvenEricInteraction"	"number"
 "consortinsight"	"number"
@@ -418,12 +417,13 @@ Name(text)	Type(text)
 "CoyoteTricks"	"number"
 "CuckooWatched"	"number"
 "cumgirlfed"	"number"
-"cuntsmall"	"number"
+["cuntsmall"	"number"]
+"CurrentMedkitSupplies"	"number"
 "daisyimpreg"	"number"
 "Daisytalk"	"number"
-"Dam"	"number"
+["Dam"	"number"
 "damagein"	"number"
-"damageout"	"number"
+"damageout"	"number"]
 "DariusLostItems"	"number"
 "DateDay"	"number"
 "DateMonth"	"number"
@@ -436,7 +436,7 @@ Name(text)	Type(text)
 "demandIndex"	"number"
 "DemonBruteStatus"	"number"
 "DemonFoxInteractions"	"number"
-"DemonFoxStatus"	"number"
+["DemonFoxStatus"	"number"]
 "dentedbikecount"	"number"
 "didsubmit"	"number"
 "Diegobitched"	"number"
@@ -444,18 +444,18 @@ Name(text)	Type(text)
 "Diegochanged"	"number"
 "Diegofucked"	"number"
 "dinonest"	"number"
-"dnfightresult"	"number"
+["dnfightresult"	"number"]
 "dobielibido"	"number"
 "dobieresist"	"number"
 "DoctorMouseProgress"	"number"
 "dogfoodcount"	"number"
-"doggyboned"	"number"
+["doggyboned"	"number"]
 "doggyness"	"number"
 "dolinfloss"	"number"
 "dollfound"	"number"
 "dolphinbundle"	"number"
 "dolphinconsent"	"number"
-"dolphindefeat"	"number"
+["dolphindefeat"	"number"]
 "dolphinmode"	"number"
 "dolphintricked"	"number"
 "dolphinwantmate"	"number"
@@ -464,8 +464,8 @@ Name(text)	Type(text)
 "DoranAutofireIntensity"	"number"
 "DoranBallModStatus"	"number"
 "DoranDiscussion_var1"	"number"
-"DoranDiscussionExit"	"number"
-"DoranDiscussionExit2"	"number"
+["DoranDiscussionExit"	"number"
+"DoranDiscussionExit2"	"number"]
 "DoranDiscussionProgress"	"number"
 "DoranDominanceTopic"	"number"
 "DoranFoodTimer"	"number"
@@ -494,13 +494,13 @@ Name(text)	Type(text)
 "dragonessfuck"	"number"
 "dragontaurcatch"	"number"
 "dragontype"	"number"
-"Dre"	"number"
+["Dre"	"number"]
 "Drinkserved"	"number"
 "dronevict"	"number"
 "DVtaurcatch"	"number"
 "DylanFucked"	"number"
 "DylanSucked"	"number"
-"eagledefeatnum"	"number"
+["eagledefeatnum"	"number"]
 "ebgatorcarrying"	"number"
 "ebgatord"	"number"
 "ebgatorhijack"	"number"
@@ -531,7 +531,7 @@ Name(text)	Type(text)
 "erminecolor"	"number"
 "Fancyaroused"	"number"
 "fancyffcount"	"number"
-"Fancyfucked"	"number"
+["Fancyfucked"	"number"]
 "fancymfcount"	"number"
 "Fancyquest"	"number"
 "Fancytalk"	"number"
@@ -547,7 +547,7 @@ Name(text)	Type(text)
 "Feline_encountered"	"number"
 "Feline_meow"	"number"
 "feline_status"	"number"
-"Feline_type"	"number"
+["Feline_type"	"number"]
 "FelinoidRescued"	"number"
 "FelixSaved"	"number"
 "fellforward"	"number"
@@ -555,19 +555,19 @@ Name(text)	Type(text)
 "femonyxq"	"number"
 "FeralBirths"	"number"
 "FeralMuttDominance"	"number"
-"FeralMuttFurColorNumber"	"number"
+["FeralMuttFurColorNumber"	"number"]
 "ferretvisit"	"number"
 "fertiletime"	"number"
 "ffrivalry"	"number"
 "fgryphon_TFcount"	"number"
-"fightoutcome"	"number"
+["fightoutcome"	"number"]
 "Fin"	"number"
 "findablestairs"	"number"
-"Findfirefighter"	"number"
+["Findfirefighter"	"number"]
 "findwires"	"number"
 "FinnTrackingProgress"	"number"
-"firebreathcount"	"number"
-"FireSpritemode"	"number"
+["firebreathcount"	"number"
+"FireSpritemode"	"number"]
 "FirstAtlantisVisit"	"number"
 "FirstDescOuter"	"number"
 "FirstMannequinTalk"	"number"
@@ -600,12 +600,12 @@ Name(text)	Type(text)
 "FuckedBySpartan"	"number"
 "FYDM"	"number"
 "FYDTBMM"	"number"
-"gameplay"	"number"
+["gameplay"	"number"]
 "gardenveg"	"number"
 "GarthRelationship"	"number"
-"gascloud"	"number"
+["gascloud"	"number"]
 "gatorconsent"	"number"
-"gatordefeat"	"number"
+["gatordefeat"	"number"]
 "gazellesbeaten"	"number"
 "gb_gatling_chance"	"number"
 "gb_gatling_counter"	"number"
@@ -616,16 +616,16 @@ Name(text)	Type(text)
 "GertyQuest"	"number"
 "GertyRelationship"	"number"
 "gettinglee"	"number"
-"giantheight"	"number"
+["giantheight"	"number"]
 "GibsonRelationship"	"number"
-"ginafucked"	"number"
+["ginafucked"	"number"]
 "Ginaslut"	"number"
 "Ginatalk"	"number"
 "givingupton"	"number"
 "GloryFate"	"number"
-"gobgender"	"number"
+["gobgender"	"number"]
 "GooColossusProgress"	"number"
-"GordonApprehended"	"number"
+["GordonApprehended"	"number"]
 "GordonFurSuspicion"	"number"
 "GordonMotive"	"number"
 "GorillasMember"	"number"
@@ -655,10 +655,10 @@ Name(text)	Type(text)
 "hagfeat"	"number"
 "halodestroyed"	"number"
 "Haroldaroused"	"number"
-"Haroldfucked"	"number"
+["Haroldfucked"	"number"]
 "Haroldtalk"	"number"
 "Harpyconsent"	"number"
-"Harpydefeat"	"number"
+["Harpydefeat"	"number"]
 "hasgills"	"number"
 "HasParts"	"number"
 "hawkmanbeaten"	"number"
@@ -675,8 +675,8 @@ Name(text)	Type(text)
 "hellgatherquest"	"number"
 "hellHoundLevel"	"number"
 "HelpKenazOut"	"number"
-"HermaidSub"	"number"
-"hermlvconsent"	"number"
+["HermaidSub"	"number"
+"hermlvconsent"	"number"]
 "hermlvmeet"	"number"
 "hfgbread"	"number"
 "HG_Flashback_Turns"	"number"
@@ -691,7 +691,7 @@ Name(text)	Type(text)
 "hobo-medical-gift"	"number"
 "hobo-water-reminder"	"number"
 "Homarusearch"	"number"
-"Homarusearching"	"number"
+["Homarusearching"	"number"]
 "Homarutalk"	"number"
 "hospbattlelost"	"number"
 "hospcountdown"	"number"
@@ -720,13 +720,13 @@ Name(text)	Type(text)
 "icarussex6_variant"	"number"
 "impalamode"	"number"
 "ImpPlayerMarkingTurn"	"number"
-"inafight"	"number"
+["inafight"	"number"]
 "incubusnosex"	"number"
 "InflatableOtterSuitBindStage"	"number"
 "InflatableOtterSuitMode"	"number"
 "infvulpstate"	"number"
 "invcolumns"	"number"
-"invlinklistfilled"	"number"
+["invlinklistfilled"	"number"]
 "isTwinHere"	"number"
 "JackalBoyTF"	"number"
 "JackalManTF"	"number"
@@ -749,7 +749,7 @@ Name(text)	Type(text)
 "joannatalk"	"number"
 "junknum"	"number"
 "JustinRelationship"	"number"
-"kangaroodefeat"	"number"
+["kangaroodefeat"	"number"]
 "KatyaDildoTaken"	"number"
 "KatyaRelationship"	"number"
 "KatyaResistance"	"number"
@@ -761,7 +761,7 @@ Name(text)	Type(text)
 "Kenazaroused"	"number"
 "Kenazdes"	"number"
 "Kenaztalk"	"number"
-"keycollection"	"number"
+["keycollection"	"number"]
 "KinksandFetishes"	"number"
 "Kitsunearoused"	"number"
 "Kitsunetalk"	"number"
@@ -770,14 +770,14 @@ Name(text)	Type(text)
 "KoballoonLossCounter"	"number"
 "KoballoonMet"	"number"
 "koboldgangmet"	"number"
-"koboldgangsubs"	"number"
+["koboldgangsubs"	"number"]
 "KoboldScaleColor"	"number"
 "Koghhstatus"	"number"
 "KorvinSubmitCounter"	"number"
 "kpstatus"	"number"
 "KTO"	"number"
 "KitsuneEventStage"	"number"
-"ktspeciesbonus"	"number"
+["ktspeciesbonus"	"number"]
 "KurtEvent"	"number"
 "KurtRelationship"	"number"
 "KyleRelationship"	"number"
@@ -811,7 +811,7 @@ Name(text)	Type(text)
 "last_infvulp_airhead"	"number"
 "lastABEncounter"	"number"
 "lastAlexandraPast"	"number"
-"lastAlexandraSarahInteraction"	"number"
+["lastAlexandraSarahInteraction"	"number"]
 "lastAmySpotted"	"number"
 "lastAndreTalk"	"number"
 "LastAngieLearned"	"number"
@@ -822,6 +822,7 @@ Name(text)	Type(text)
 "lastbcduobeaten"	"number"
 "lastBodyShopEvent"	"number"
 "lastbookshelves"	"number"
+"lastBreastMilking"	"number"
 "lastBrennanWolfScene"	"number"
 "LastCampusWalkin"	"number"
 "lastCandyfucked"	"number"
@@ -832,7 +833,8 @@ Name(text)	Type(text)
 "lastCarlSarahInteraction"	"number"
 "lastcheetahturns"	"number"
 "lastChristyfucked"	"number"
-"lastchurchattempt"	"number"
+["lastchurchattempt"	"number"]
+"lastCockMilking"	"number"
 "lastColleenSarahInteraction"	"number"
 "lastconfession"	"number"
 "lastConfSvenEricInteraction"	"number"
@@ -841,7 +843,7 @@ Name(text)	Type(text)
 "lastdenevent"	"number"
 "lastdobiemess"	"number"
 "LastDrinkserved"	"number"
-"lastDrMousefucked"	"number"
+["lastDrMousefucked"	"number"]
 "lastEricSarahInteraction"	"number"
 "lastFangSarahInteraction"	"number"
 "lastFelixTalk"	"number"
@@ -854,18 +856,18 @@ Name(text)	Type(text)
 "lastgardenveg"	"number"
 "lastGuardBeg"	"number"
 "LastHelenTalk"	"number"
-"LastHelpKenazOut"	"number"
+["LastHelpKenazOut"	"number"]
 "lasthgryphon_TG"	"number"
 "LastImpMeeting"	"number"
-"lastinvfoundindex"	"number"
+["lastinvfoundindex"	"number"]
 "LastJaksEncounter"	"number"
 "LastJenniferSoda"	"number"
 "lastjoannajuice"	"number"
 "Lastjournaluse"	"number"
-"LastKenazdes"	"number"
+["LastKenazdes"	"number"]
 "lastleomidcoitus"	"number"
 "lastlibrarybrowse"	"number"
-"lastLilithTalk"	"number"
+["lastLilithTalk"	"number"]
 "LastLockerroomTrioMeet"	"number"
 "lastMallInteriorScene"	"number"
 "Lastmarefed"	"number"
@@ -894,9 +896,9 @@ Name(text)	Type(text)
 "lastRyouseiEricInteraction"	"number"
 "lastSallyfucked"	"number"
 "lastsealfight"	"number"
-"lastSeptusfucked"	"number"
+["lastSeptusfucked"	"number"]
 "lastShowerUse"	"number"
-"Lastskunkfuck"	"number"
+["Lastskunkfuck"	"number"]
 "LastSlutslavefucked"	"number"
 "lastSlutslavelearned"	"number"
 "lastSnowStarGiven"	"number"
@@ -905,16 +907,18 @@ Name(text)	Type(text)
 "LastTehuantlCarlScene"	"number"
 "LastTehuantlKorvinScene"	"number"
 "lasttentaclebattleoutcome"	"number"
+"LastTentacleFuck"	"number"
 "lastThomasTalk"	"number"
 "LastTimothymilked"	"number"
 "lastTomeInteraction"	"number"
+"LastTrashSearchTurn"	"number"
 "Lasttreasurehunt"	"number"
 "LastTSEvent"	"number"
 "lastturn"	"number"
 "lastUrikEricInteraction"	"number"
 "Lastvixenposing"	"number"
 "Lastwaterrun"	"number"
-"LastWerewolfFuck"	"number"
+["LastWerewolfFuck"	"number"]
 "lastworkout"	"number"
 "LastXerxesTalk"	"number"
 "laundryProgress"	"number"
@@ -949,25 +953,25 @@ Name(text)	Type(text)
 "lostToHorseman"	"number"
 "LostToZebra"	"number"
 "loversbench"	"number"
-"lustadjust"	"number"
-"lustatt"	"number"
+["lustadjust"	"number"
+"lustatt"	"number"]
 "lwcounter"	"number"
 "MalakhiRelationship"	"number"
 "malecatHP"	"number"
 "mammoth_cv_count"	"number"
-"marefed"	"number"
+["marefed"	"number"]
 "margaydancecount"	"number"
 "margaymet"	"number"
 "margayubed"	"number"
 "MarkedSeraphisCum"	"number"
 "MarketVisits"	"number"
-"mateable"	"number"
+["mateable"	"number"]
 "matriarchdefeated"	"number"
 "matriarchowned"	"number"
 "mattcollection"	"number"
 "mattintel"	"number"
 "mdasslevel"	"number"
-"mdl"	"number"
+["mdl"	"number"]
 "mdmaxlossscene"	"number"
 "mdrakeanal"	"number"
 "mdrakebeaten"	"number"
@@ -978,10 +982,10 @@ Name(text)	Type(text)
 "metalskin"	"number"
 "micaela_bf"	"number"
 "MichaelGholeMeetings"	"number"
-"Midnightmimiced"	"number"
+["Midnightmimiced"	"number"]
 "midnightsighted"	"number"
 "MiltonRelationship"	"number"
-"missskip"	"number"
+["missskip"	"number"]
 "MiyukiRelationship"	"number"
 "MKloss"	"number"
 "MKmet"	"number"
@@ -990,13 +994,13 @@ Name(text)	Type(text)
 "mlamialoss"	"number"
 "MMC"	"number"
 "MMP"	"number"
-"mondodgebonus"	"number"
+["mondodgebonus"	"number"
 "monmindbonus"	"number"
 "monstercom"	"number"
 "monsterHP"	"number"
 "monstermemory"	"number"
 "monsterpoison"	"number"
-"monsterpowerup"	"number"
+"monsterpowerup"	"number"]
 "Mooed"	"number"
 "Mooing"	"number"
 "Mothdefeat"	"number"
@@ -1018,13 +1022,9 @@ Name(text)	Type(text)
 "MTP"	"number"
 "mtrp"	"number"
 "MulAnalAcceptance"	"number"
-"multicunt"	"number"
+["multicunt"	"number"]
 "MurderMystery"	"number"
 "MushroomCaveVisited"	"number"
-"PetMuttBreed"	"text"
-"PetMuttName"	"text"
-"PetMuttColor"	"text"
-"PetMuttDetailedlook"	"text"
 "MYDAM"	"number"
 "MYDGM"	"number"
 "MYDTBMM"	"number"
@@ -1032,7 +1032,7 @@ Name(text)	Type(text)
 "NadiaChickCounter"	"number"
 "NadiaDescription"	"number"
 "NadiaFertilityCounter"	"number"
-"NadiaintCounter"	"number"
+["NadiaintCounter"	"number"]
 "NadiaPregCounter1"	"number"
 "NadiaPregCounter2"	"number"
 "NadiaPregCounter3"	"number"
@@ -1041,15 +1041,15 @@ Name(text)	Type(text)
 "NatalieFucked"	"number"
 "ndmhigh"	"number"
 "NerdMeetings"	"number"
-"NermineAroused"	"number"
+["NermineAroused"	"number"]
 "NermineBukkakeTurn"	"number"
 "NermineFeat"	"number"
 "NermineFennecTurn"	"number"
-"NermineFucked"	"number"
+["NermineFucked"	"number"]
 "Nerminehelpstatus"	"number"
 "nerminepackage"	"number"
 "nerminepackagematt"	"number"
-"NermineQuest"	"number"
+["NermineQuest"	"number"]
 "NermineTalk"	"number"
 "NESProgress"	"number"
 "nesteddino"	"number"
@@ -1063,17 +1063,17 @@ Name(text)	Type(text)
 "noamazoniansex"	"number"
 "noanimebabesex"	"number"
 "nobeaversex"	"number"
-"nobirdofparadisesex"	"number"
+["nobirdofparadisesex"	"number"]
 "nobluechaffinchsex"	"number"
 "nocandycoonsex"	"number"
 "nochinchillasex"	"number"
 "nodonkeywomansex"	"number"
-"noeaglesex"	"number"
+["noeaglesex"	"number"]
 "noelksex"	"number"
 "nofponysex"	"number"
 "nogiraffesex"	"number"
 "nogunbunnysex"	"number"
-"nohawkmansex"	"number"
+["nohawkmansex"	"number"]
 "nohgryphonsex"	"number"
 "NoIntroduction"	"number"
 "nolatexerminesex"	"number"
@@ -1089,12 +1089,12 @@ Name(text)	Type(text)
 "novicsex"	"number"
 "NPCintCounter"	"number"
 "nsgained"	"number"
-"numOfBountiesLeft"	"number"
-"numwater"	"number"
+["numOfBountiesLeft"	"number"
+"numwater"	"number"]
 "ocelotchoice"	"number"
 "ocelotsize"	"number"
-"OfficeGirlsDominance"	"number"
-"OfficeGirlsFriendship"	"number"
+["OfficeGirlsDominance"	"number"
+"OfficeGirlsFriendship"	"number"]
 "OliverRelationship"	"number"
 "Onyxboislut"	"number"
 "onyxdma"	"number"
@@ -1106,22 +1106,22 @@ Name(text)	Type(text)
 "orcadom"	"number"
 "orcafdom"	"number"
 "orcaintense"	"number"
-"OrcFemSpecialFightNumber"	"number"
+["OrcFemSpecialFightNumber"	"number"]
 "OrcSlaverCaptureTime"	"number"
 "OrcSlaverStatus"	"number"
 "Otterconsent"	"number"
-"Otterdefeat"	"number"
+["Otterdefeat"	"number"]
 "OttoForm"	"number"
 "ovipreglevel"	"number"
-"partner1Choice"	"number"
-"partner2Choice"	"number"
+["partner1Choice"	"number"
+"partner2Choice"	"number"]
 "patrooms"	"number"
 "peacockcontrol"	"number"
 "Peacocked"	"number"
 "pepped"	"number"
-"peppereyes"	"number"
+["peppereyes"	"number"]
 "PericlesRelationship"	"number"
-"petchance"	"number"
+["petchance"	"number"
 "pethitbonus"	"number"
 "pewterassocc"	"number"
 "pewterassvar1"	"number"
@@ -1139,7 +1139,7 @@ Name(text)	Type(text)
 "pewterheadocc"	"number"
 "pewterheadvar1"	"number"
 "pewterheadvar2"	"number"
-"pewterheadvar3"	"number"
+"pewterheadvar3"	"number"]
 "pfptype"	"number"
 "PhilipMudWrestleCount"	"number"
 "PhilipWrestleEnd"	"number"
@@ -1149,36 +1149,36 @@ Name(text)	Type(text)
 "Pigfed"	"number"
 "Pigfucked"	"number"
 "piginitiation"	"number"
-"pitbullgender"	"number"
+["pitbullgender"	"number"]
 "plantdefeat"	"number"
-"plantwin"	"number"
+["plantwin"	"number"]
 "playercrestnum"	"number"
 "PlayerInformed"	"number"
 "playermetalskin"	"number"
-"playerpoison"	"number"
+["playerpoison"	"number"]
 "playon"	"number"
-"pldamagebonus"	"number"
+["pldamagebonus"	"number"
 "pldodgebonus"	"number"
 "plfleebonus"	"number"
-"plhitbonus"	"number"
+"plhitbonus"	"number"]
 "plionvic"	"number"
 "plionvored"	"number"
-"plmindbonus"	"number"
-"plnatarmor"	"number"
+["plmindbonus"	"number"
+"plnatarmor"	"number"]
 "PLRLooted"	"number"
 "plushleoloss"	"number"
-"plweaknatarmor"	"number"
+["plweaknatarmor"	"number"]
 "policerepair"	"number"
 "PoliceStationTwelveInfpop"	"number"
 "PoliceStationTwelvePopulation"	"number"
-"poodleapproved"	"number"
+["poodleapproved"	"number"]
 "PoseidonRelationship"	"number"
 "PowerUpDrugTrip"	"number"
 "pquest"	"number"
 "pr_completion"	"number"
 "pregtype"	"number"
 "provingstallionhood"	"number"
-"psycheadjust"	"number"
+["psycheadjust"	"number"]
 "pubvisit"	"number"
 "purfeat"	"number"
 "quitter"	"number"
@@ -1196,17 +1196,17 @@ Name(text)	Type(text)
 "ratdartcount"	"number"
 "RazorbackBoarEvents"	"number"
 "ReceptionistTalk"	"number"
-"recoverchance"	"number"
+["recoverchance"	"number"]
 "Recoveredhardware"	"number"
-"RegChaseHelp"	"number"
-"Researchbypass"	"number"
+["RegChaseHelp"	"number"
+"Researchbypass"	"number"]
 "ResidentialVisits"	"number"
 "restaurantpig"	"number"
-"restoration"	"number"
-"riddlesphinx"	"number"
+["restoration"	"number"
+"riddlesphinx"	"number"]
 "Riddlewin"	"number"
 "RomanceBooksFound"	"number"
-"rondahosp"	"number"
+["rondahosp"	"number"]
 "rsc"	"number"
 "RTWinCounter"	"number"
 "RyanFucked"	"number"
@@ -1228,7 +1228,7 @@ Name(text)	Type(text)
 "SatyressStage"	"number"
 "SatyrFratPartyStage"	"number"
 "SatyrFratRichardRelationship"	"number"
-"scaledr"	"number"
+["scaledr"	"number"]
 "scopnum"	"number"
 "Score"	"number"
 "ScottyRelationship"	"number"
@@ -1241,7 +1241,7 @@ Name(text)	Type(text)
 "SerenityHunger"	"number"
 "SethFucked"	"number"
 "SethTempleNumber"	"number"
-"sextablerun"	"number"
+["sextablerun"	"number"]
 "sgtimer"	"number"
 "sgtmarkstalk"	"number"
 "shadowy"	"number"
@@ -1254,13 +1254,13 @@ Name(text)	Type(text)
 "SkarnothMasterSlave"	"number"
 "skipturnblocker"	"number"
 "skrp"	"number"
-"Skunk_type"	"number"
+["Skunk_type"	"number"]
 "skunkbeaststatus"	"number"
-"skunkfucked"	"number"
-"skunkmulticock"	"number"
+["skunkfucked"	"number"
+"skunkmulticock"	"number"]
 "skunkready"	"number"
-"skunksister"	"number"
-"skunkspot"	"number"
+["skunksister"	"number"
+"skunkspot"	"number"]
 "SlaveRaidEncounters"	"number"
 "Sleeptimercount"	"number"
 "slutfucked"	"number"
@@ -1268,8 +1268,8 @@ Name(text)	Type(text)
 "SlutRatDenPoolTable"	"number"
 "SlutRatDenVisitTimes"	"number"
 "SlutratSub"	"number"
-"Slutslavefucked"	"number"
-"Slutslavelearned"	"number"
+["Slutslavefucked"	"number"
+"Slutslavelearned"	"number"]
 "Slutslavetalk"	"number"
 "smf"	"number"
 "snakecap"	"number"
@@ -1288,7 +1288,7 @@ Name(text)	Type(text)
 "SonnyRelationship"	"number"
 "SpidertaurRelationship"	"number"
 "Spriteconsent"	"number"
-"Spritedefeat"	"number"
+["Spritedefeat"	"number"]
 "SquadEncounters"	"number"
 "squidcolor"	"number"
 "squirefeature"	"number"
@@ -1299,6 +1299,7 @@ Name(text)	Type(text)
 "staircaselocation"	"number"
 "Started"	"number"
 "statuequest"	"number"
+"StatusBarSetting"	"number"
 "steriletime"	"number"
 "Stevenfood"	"number"
 "StevenFuckcount"	"number"
@@ -1311,7 +1312,7 @@ Name(text)	Type(text)
 "StewartRelationship"	"number"
 "stiffedpayment"	"number"
 "strangebottledrink"	"number"
-"struggleatt"	"number"
+["struggleatt"	"number"]
 "supermarketcount"	"number"
 "survfeat"	"number"
 "Susanfirsttime"	"number"
@@ -1319,7 +1320,7 @@ Name(text)	Type(text)
 "SvenCandyMsg"	"number"
 "SylviaConv"	"number"
 "SylviaTrapVar"	"number"
-"SylviaVirginCheck"	"number"
+["SylviaVirginCheck"	"number"]
 "TaniClassMemory"	"number"
 "TaniRecommendation"	"number"
 "Tanukigender"	"number"
@@ -1334,15 +1335,15 @@ Name(text)	Type(text)
 "TehuantlKorvinRelationship"	"number"
 "TehuantlSnowStatus"	"number"
 "TehuantlStatus"	"number"
-"TempClearBypass"	"number"
+["TempClearBypass"	"number"]
 "templust"	"number"
-"tempnum"	"number"
-"tempnum2"	"number"
+["tempnum"	"number"
+"tempnum2"	"number"]
 "tempthirst"	"number"
 "TentacleInteractions"	"number"
 "tentaclerape"	"number"
 "TentacleStatus"	"number"
-"tentsubmit"	"number"
+["tentsubmit"	"number"]
 "thabread"	"number"
 "ThomasPregnancy"	"number"
 "ThomasQuestVar"	"number"
@@ -1354,7 +1355,7 @@ Name(text)	Type(text)
 "tigresswinner"	"number"
 "TimekeepingVar"	"number"
 "timetillrampage"	"number"
-"Timothyfucked"	"number"
+["Timothyfucked"	"number"]
 "tmapfound"	"number"
 "tmonster"	"number"
 "TomeFound"	"number"
@@ -1363,7 +1364,7 @@ Name(text)	Type(text)
 "TomeInteractions"	"number"
 "TomeTimer"	"number"
 "Treasurefound"	"number"
-"treasurehunt"	"number"
+["treasurehunt"	"number"]
 "triclamped"	"number"
 "triclampedmatt"	"number"
 "TritonRelationship"	"number"
@@ -1416,11 +1417,11 @@ Name(text)	Type(text)
 "violinfound"	"number"
 "vixcountdown"	"number"
 "vixentaurcatch"	"number"
-"vixgender"	"number"
+["vixgender"	"number"]
 "vorechoice"	"number"
 "vorecount"	"number"
 "vorelevel"	"number"
-"vpostmusenum"	"number"
+["vpostmusenum"	"number"]
 "waiterhater"	"number"
 "WallStanding"	"number"
 "WarLossCounter"	"number"
@@ -1442,7 +1443,7 @@ Name(text)	Type(text)
 "WhoringExperience"	"number"
 "WineFound"	"number"
 "wolfhermdefeat"	"number"
-"wolfhermvictory"	"number"
+["wolfhermvictory"	"number"]
 "WolfHorseMallCouple"	"number"
 "workoutprice"	"number"
 "wrcurseholdback"	"number"
@@ -1459,9 +1460,9 @@ Name(text)	Type(text)
 "wrwolfanal"	"number"
 "wrwolfbeaten"	"number"
 "WSlevel"	"number"
-"wwheal"	"number"
+["wwheal"	"number"]
 "wyvernbias"	"number"
-"WYVGEN"	"number"
+["WYVGEN"	"number"
 "wyvkin1att"	"number"
 "wyvkin1gen"	"number"
 "wyvkin1lib"	"number"
@@ -1477,7 +1478,7 @@ Name(text)	Type(text)
 "wyvkinassign"	"number"
 "wyvkinatt"	"number"
 "wyvkinocc"	"number"
-"WYVLEV"	"number"
+"WYVLEV"	"number"]
 "wyvorgyroll"	"number"
 "WYVSF"	"number"
 "yamatdom"	"number"
@@ -1490,7 +1491,7 @@ Name(text)	Type(text)
 "zephyrtask"	"number"
 "ZieraFucked"	"number"
 "zigseat"	"number"
-"zpc_Zc"	"number"
+["zpc_Zc"	"number"]
 "battleground"	"text"
 "bcfinalchairform"	"text"
 "bcfinalpillarform"	"text"
@@ -1545,7 +1546,7 @@ Name(text)	Type(text)
 "Hope-BornDragonName"	"text"
 "horndata"	"text"
 "JenniferFirstKidSpecialStat"	"text"
-"keychar"	"text"
+["keychar"	"text"]
 "LarissaBody"	"text"
 "LarissaBodyDesc"	"text"
 "LarissaBodyType"	"text"
@@ -1561,7 +1562,7 @@ Name(text)	Type(text)
 "LarissaTail"	"text"
 "LarissaTFText"	"text"
 "Lusting"	"text"
-"musicmessage"	"text"
+["musicmessage"	"text"]
 "NadiaChar-A"	"text"
 "NadiaChar-B"	"text"
 "NadiaChar-C"	"text"
@@ -1575,6 +1576,10 @@ Name(text)	Type(text)
 "NadiaChar-K"	"text"
 "NadiaChar-L"	"text"
 "NadiaChar-M"	"text"
+"PetMuttBreed"	"text"
+"PetMuttName"	"text"
+"PetMuttColor"	"text"
+"PetMuttDetailedlook"	"text"
 "pfpbootymark"	"text"
 "pfpcock"	"text"
 "pfphair"	"text"
@@ -1582,13 +1587,14 @@ Name(text)	Type(text)
 "PlayerClass"	"text"
 "PlayerName"	"text"
 "ppcolor"	"text"
+"PreviousAlcState"	"text"
 "PronounChoice"	"text"
 "sangr"	"text"
 "Scenario"	"text"
 "sh-descr"	"text"
 "siamesegender"	"text"
 "slutname"	"text"
-"StellaNPCInt"	"text"
+["StellaNPCInt"	"text"]
 "ubpreg"	"text"
 "VikingKidShape"	"text"
 "wolvloc"	"text"
@@ -1664,15 +1670,15 @@ Name(text)	Type(text)
 "bcswordplay"	"truth state"
 "beachrape"	"truth state"
 "beauceronmet"	"truth state"
-"birthedwhelp"	"truth state"
+["birthedwhelp"	"truth state"]
 "blanchetalk1"	"truth state"
 "blanchetalk2"	"truth state"
 "blanchetalk3"	"truth state"
 "BlindMode"	"truth state"
 "bopseen"	"truth state"
 "BorisArtemistalk"	"truth state"
-"boundrecover"	"truth state"
-"boundstate"	"truth state"
+["boundrecover"	"truth state"
+"boundstate"	"truth state"]
 "bradfordstory1"	"truth state"
 "bradfordstory2"	"truth state"
 "bradfordstory3"	"truth state"
@@ -1704,7 +1710,7 @@ Name(text)	Type(text)
 "DemonFox_PlayerSubmitted"	"truth state"
 "DemonFox_PlayerWon"	"truth state"
 "DemonFox_PlayerWon_Fucked"	"truth state"
-"DemonFoxRead"	"truth state"
+["DemonFoxRead"	"truth state"]
 "dobieanal"	"truth state"
 "DoranAnnoyed"	"truth state"
 "DoranAutofired"	"truth state"
@@ -1718,27 +1724,27 @@ Name(text)	Type(text)
 "DoranRefusedSex"	"truth state"
 "DoranSelfGender"	"truth state"
 "drutah_msg1"	"truth state"
-"duckyactive"	"truth state"
+["duckyactive"	"truth state"]
 "ebheat_msg"	"truth state"
 "ebneuterswitch"	"truth state"
-"enduring"	"truth state"
+["enduring"	"truth state"]
 "eprodused"	"truth state"
-"facecheck"	"truth state"
+["facecheck"	"truth state"]
 "fangsidney"	"truth state"
 "FangToy"	"truth state"
 "fangvelos1"	"truth state"
 "featherready"	"truth state"
 "feline_pride_defeat"	"truth state"
 "FFSDUBM"	"truth state"
-"firebreathready"	"truth state"
-"firstgarg"	"truth state"
+["firebreathready"	"truth state"
+"firstgarg"	"truth state"]
 "floatertaken"	"truth state"
 "flotmarked"	"truth state"
-"Francoismixcleaned"	"truth state"
+["Francoismixcleaned"	"truth state"]
 "Francoistalk1"	"truth state"
 "fsnakevalid"	"truth state"
 "garrettinfo1"	"truth state"
-"gobdem"	"truth state"
+["gobdem"	"truth state"]
 "grhouse"	"truth state"
 "gsd_attack"	"truth state"
 "gsd_fled"	"truth state"
@@ -1763,14 +1769,14 @@ Name(text)	Type(text)
 "icarusrim"	"truth state"
 "icarusscene1"	"truth state"
 "icarusscene2"	"truth state"
-"impregnatevalid"	"truth state"
-"inasituation"	"truth state"
+["impregnatevalid"	"truth state"
+"inasituation"	"truth state"]
 "inheat"	"truth state"
 "insectlarva"	"truth state"
 "internalCockbypass"	"truth state"
 "internalBallsbypass"	"truth state"
 "isHellhound"	"truth state"
-"ishunting"	"truth state"
+["ishunting"	"truth state"]
 "joannadogsaved"	"truth state"
 "karahbtalk"	"truth state"
 "kristenmsg1"	"truth state"
@@ -1779,9 +1785,9 @@ Name(text)	Type(text)
 "kristenmsg4"	"truth state"
 "kristenmsg5"	"truth state"
 "kristentf3fuck"	"truth state"
-"ktcockmatch"	"truth state"
+["ktcockmatch"	"truth state"]
 "KyrverthItemStealable"	"truth state"
-"KyrverthItemTaken"	"truth state"
+["KyrverthItemTaken"	"truth state"]
 "KyrverthQuestHairGiven"	"truth state"
 "KyrverthUsedArtifact"	"truth state"
 "LarissaTailed"	"truth state"
@@ -1805,16 +1811,16 @@ Name(text)	Type(text)
 "medeapanda"	"truth state"
 "medeapill"	"truth state"
 "medeaub"	"truth state"
-"Meredith_anal"	"truth state"
+["Meredith_anal"	"truth state"]
 "Meredith_Colleen_fun1"	"truth state"
 "Meredith_Vanessa_fun1"	"truth state"
 "Meredith_Vanessa_fun2"	"truth state"
 "messypigaltorgasm"	"truth state"
 "MFSDUBM"	"truth state"
 "MKunleashed"	"truth state"
-"mlamiaboobmash"	"truth state"
+["mlamiaboobmash"	"truth state"]
 "mlamiamet"	"truth state"
-"monsterhit"	"truth state"
+["monsterhit"	"truth state"]
 "MoreauDiscount"	"truth state"
 "MoreauPaymentAccepted"	"truth state"
 "mpreghijack"	"truth state"
@@ -1822,12 +1828,12 @@ Name(text)	Type(text)
 "msnakevalid"	"truth state"
 "muggerison"	"truth state"
 "nagawarning"	"truth state"
-"NavCheckReturn"	"truth state"
+["NavCheckReturn"	"truth state"]
 "ndmLisa"	"truth state"
 "nmformswitch"	"truth state"
 "NoHealMode"	"truth state"
 "nosquirrelanal"	"truth state"
-"obliging"	"truth state"
+["obliging"	"truth state"]
 "onyxhappytalk"	"truth state"
 "onyxsmra"	"truth state"
 "onyxsmro"	"truth state"
@@ -1835,7 +1841,7 @@ Name(text)	Type(text)
 "ovipregalways"	"truth state"
 "ovipregmedeatalk"	"truth state"
 "ovipregnant"	"truth state"
-"pewtertorsosuppress"	"truth state"
+["pewtertorsosuppress"	"truth state"]
 "PlayerPigBodied"	"truth state"
 "ppatt"	"truth state"
 "pr_task01"	"truth state"
@@ -1846,10 +1852,10 @@ Name(text)	Type(text)
 "rabbitified"	"truth state"
 "rambjvirg"	"truth state"
 "ramslut"	"truth state"
-"RestoreMode"	"truth state"
-"rkrcheck"	"truth state"
+["RestoreMode"	"truth state"
+"rkrcheck"	"truth state"]
 "rlingfound"	"truth state"
-"roughing"	"truth state"
+["roughing"	"truth state"]
 "rowing"	"truth state"
 "sa_otteress"	"truth state"
 "sa_redvixen"	"truth state"
@@ -1861,15 +1867,15 @@ Name(text)	Type(text)
 "sblzephyr"	"truth state"
 "SerenityVore"	"truth state"
 "sidneyanal"	"truth state"
-"sidneyformtalk"	"truth state"
+["sidneyformtalk"	"truth state"]
 "sidneytalk1"	"truth state"
 "sidneytalk2"	"truth state"
 "sidneytalk3"	"truth state"
 "sidneytalk4"	"truth state"
-"sierramale"	"truth state"
+["sierramale"	"truth state"
 "sierrapure"	"truth state"
 "skipcockchange"	"truth state"
-"skipretaliate"	"truth state"
+"skipretaliate"	"truth state"]
 "spidergirlBountyState"	"truth state"
 "ssbpg"	"truth state"
 "ssgbii"	"truth state"
@@ -1909,7 +1915,7 @@ Name(text)	Type(text)
 "weakwilled"	"truth state"
 "WerewolfWatching"	"truth state"
 "wrcurseactivity"	"truth state"
-"wrdinoskel"	"truth state"
+["wrdinoskel"	"truth state"]
 "wrwolfseen"	"truth state"
 "yolandakeyfob"	"truth state"
 "yolandaqytat"	"truth state"

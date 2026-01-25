@@ -35,7 +35,7 @@ Sarea of Pet_Mutt_Looting is "Nowhere".
 
 to say ResolveEvent Pet_Mutt_Looting:
 	let randomnumber be a random number from 1 to 5;
-	say "     As you walk onto the street, you can see [PetMuttName] as he quickly dashes out from under his small makeshift home. His tail is wagging wildly and he seems more eager than normal as he sprints in your direction. Before you can ask or even wonder if something's amiss he stops, skidding a foot or so and stopping before you. A [if randomnumber is 1]bottle of soda[else if randomnumber is 2]can of food[else]medkit[end if] drops from his maw and at your feet with a clatter. He pants and looks at you simply. Now it's your turn to cock your head to the side at your hound. You lean down and pick it up, examining the item for a moment before smiling and placing it in your pack after wiping some drool and grime from its surface. 'Such a good boy,' you praise, leaning down and giving both his ears a ruffle, patting and scruffing over his fur. Which quickly turns into a chest and belly rub when he lays down. His leg kicks as you scratch his tummy and his tongue lolls out happily. What an adorable pooch!";
+	say "     As you walk onto the street, you can see [PetMuttName] as he quickly dashes out from under his small makeshift home. His tail is wagging wildly and he seems more eager than normal as he sprints in your direction. Before you can ask or even wonder if something's amiss he stops, skidding a foot or so and stopping before you. A [if randomnumber < 3]bottle of soda[else if randomnumber < 5]can of food[else]medkit[end if] drops from his maw and at your feet with a clatter. He pants and looks at you simply. Now it's your turn to cock your head to the side at your hound. You lean down and pick it up, examining the item for a moment before smiling and placing it in your pack after wiping some drool and grime from its surface. 'Such a good boy,' you praise, leaning down and giving both his ears a ruffle, patting and scruffing over his fur. Which quickly turns into a chest and belly rub when he lays down. His leg kicks as you scratch his tummy and his tongue lolls out happily. What an adorable pooch!";
 	if randomnumber < 3: [1-2]
 		ItemGain soda by 1;
 	else if randomnumber < 5: [3-4]
@@ -177,19 +177,19 @@ to say Pet MuttTalkMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Pet him"):
-					say "[Pet MuttPetting]";
-				else if (nam is "Say hello"):
-					say "[Pet MuttTalk1]";
-				else if (nam is "Play with him"):
-					say "[Pet MuttTalk2]";
-				else if (nam is "Ask if anyone has fallen in a well"):
-					say "[Pet MuttTalk3]";
-				else if (nam is "Kiss him"):
-					say "[Pet MuttKiss]";
-					now TalkDone is true;
+				if title entry is:
+					-- "Pet him":
+						say "[Pet MuttPetting]";
+					-- "Say hello":
+						say "[Pet MuttTalk1]";
+					-- "Play with him":
+						say "[Pet MuttTalk2]";
+					-- "Ask if anyone has fallen in a well":
+						say "[Pet MuttTalk3]";
+					-- "Kiss him":
+						say "[Pet MuttKiss]";
+						now TalkDone is true;
 				if TalkDone is false:
 					wait for any key;
 					say "[Pet MuttTalkMenu]";
@@ -212,7 +212,7 @@ to say Pet MuttTalk2:
 	say "     Clapping your palms together and giving a sharp whistle your mutt leaps to you. 'How ya doing buddy?' you ask with a laugh. Leading him around, playing with him by running around in circles and leaping back and forth with him while staying just out of his reach, [PetMuttName] seems very enthusiastic and excited to play with his master! Eventually you two wind down and you command him to heel, which he does with a slight whine, sitting down before you.";
 
 to say Pet MuttTalk3:
-	say "     Giving a smile you ask [PetMuttName] how he's doing. He gives a loud bark, before panting and wagging his tail eagerly. 'Any little Johnnys down the well boy?' you ask with a laugh, which he responds to with a low howl. 'Heh, or maybe your own little Johnny is just eager to be saved, huh boy?' you ask with a grin, hand placed on your hip. He cocks his head to the side, panting, a bit of drool hanging from his toothy maw.";
+	say "     Giving a smile you ask [PetMuttName] how he's doing. He gives a loud bark, before panting and wagging his tail eagerly. 'Any little Timmys down the well boy?' you ask with a laugh, which he responds to with a low howl. 'Heh, or maybe your own little Johnny is just eager to be saved, huh boy?' you ask with a grin, hand placed on your hip. He cocks his head to the side, panting, a bit of drool hanging from his toothy maw.";
 
 to say Pet MuttKiss:
 	say "     You smile and lean down to your dog, your strong, virile canine needs some proper attention. Moving to pet his head gently, [PetMuttName] wags his tail excitedly, leaning into your palm as you stroke his furry head. Moving your head close to his you smile and lean forward to lick him across his muzzle. [PetMuttName] responds immediately, licking back and slobbering across your lips and face, leaving warm drool in his wake. Deciding to deepen the smooch, you open your mouth to your canine stud and allow his long, wet tongue to lap inside your own eager maw. Trailing thick dog slobber down your chin as he messily laps, licks and kisses at his master's willing mouth.";
@@ -259,18 +259,17 @@ to say Pet MuttSexMenu:
 		now title entry is "Ride his cock";
 		now sortorder entry is 2;
 		now description entry is "Roll [PetMuttName] over and mount him";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Blow him";
+		now sortorder entry is 4;
+		now description entry is "Suck [PetMuttName]'s cock";
 	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him";
 		now sortorder entry is 3;
 		now description entry is "Pound [PetMuttName]'s ass";
-	[]
-	if Player is not neuter:
-		choose a blank row in table of fucking options;
-		now title entry is "Blow him";
-		now sortorder entry is 4;
-		now description entry is "Suck [PetMuttName]'s cock";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -286,24 +285,23 @@ to say Pet MuttSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Be bred like a bitch"):
-					say "[Pet MuttSex1]";
-				else if (nam is "Ride his cock"):
-					say "[RidePet Mutt]";
-				else if (nam is "Fuck him"):
-					say "[FuckPet Mutt]";
-				else if (nam is "Blow him"):
-					say "[SuckPet Mutt]";
-				wait for any key;
+				if title entry is:
+					-- "Be bred like a bitch":
+						say "[Pet MuttSex1]";
+					-- "Ride his cock":
+						say "[RidePet Mutt]";
+					-- "Fuck him":
+						say "[FuckPet Mutt]";
+					-- "Blow him":
+						say "[SuckPet Mutt]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the [PetMuttColor] [PetMuttBreed], shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say Pet MuttSex1: [breeding fuck on the player]

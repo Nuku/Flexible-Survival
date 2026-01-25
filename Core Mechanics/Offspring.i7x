@@ -15,7 +15,6 @@ Table of PlayerRoamingChildren
 Name (text)	BirthTurn (number)	Gender (text)	Head (text)	Torso (text)	Back (text)	Arms (text)	Legs (text)	Ass (text)	Tail (text)	ShowTail (truth state)	ShowLegs (truth state)	Pureblood (truth state)	Albino (truth state)	Melanism (truth state)	Feral (truth state)	Personality (text)	PlayerRelationship (text)
 with 1000 blank rows
 
-
 Table of GameCharacterIDs (continued)
 object	name
 Offspring	"offspring"
@@ -24,23 +23,14 @@ Offspring is a person. [bunker children]
 Description of Offspring is "[OffspringDesc]".
 
 instead of conversing the Offspring:
-	if (number of filled rows in Table of PlayerBunkerChildren) > 1:
-		say "     You have a nice little talk with your children. Knowing that they're safe here while you're roaming the city makes you feel better about the grim reality of life in the city.";
-	else if (number of filled rows in Table of PlayerBunkerChildren) is 1: [exactly one child]
-		say "     You have a nice little talk with your child. Knowing that they're safe here while you're roaming the city makes you feel better about the grim reality of life in the city.";
-	SanBoost 5;
+	say "     You have a nice little talk with your [if number of filled rows in Table of PlayerBunkerChildren > 1]children[else]child[end if]. Knowing that they're safe here while you're roaming the city makes you feel better about the grim reality of life in the city.";
+	if humanity of Player < 80, SanBoost 5;
 
 instead of fucking the Offspring:
-	if (number of filled rows in Table of PlayerBunkerChildren) > 1:
-		say "     For a second, lewd thoughts flare up in your mind and you almost open your mouth to say something to one of your children, but then you manage to control yourself and suppress the urge.";
-	else if (number of filled rows in Table of PlayerBunkerChildren) is 1: [exactly one child]
-		say "     For a second, lewd thoughts flare up in your mind and you almost open your mouth to say something to your child, but then you manage to control yourself and suppress the urge.";
+	say "     For a second, lewd thoughts flare up in your mind and you almost open your mouth to say something to [if number of filled rows in Table of PlayerBunkerChildren > 1]one of your children[else]your child[end if], but then you manage to control yourself and suppress the urge.";
 
 to say OffspringDesc:
-	if (number of filled rows in Table of PlayerBunkerChildren) > 1:
-		say "Your children live in the safety of the bunker:[line break]";
-	else if (number of filled rows in Table of PlayerBunkerChildren) is 1: [exactly one child]
-		say "Your child lives in the safety of the bunker:[line break]";
+	say "Your [if number of filled rows in Table of PlayerBunkerChildren > 1]children live[else]child lives[end if] in the safety of the bunker:[line break]";
 	[new style children]
 	if number of filled rows in Table of PlayerBunkerChildren > 0: [player has new style children]
 		repeat through Table of PlayerBunkerChildren:
@@ -76,7 +66,7 @@ to say OffspringDesc:
 			say "You have [a PlayerRelationship entry] relationship with [ObjectPro of Offspring], and [PosAdj of Offspring] personality is rather [Personality entry].";
 	if (number of filled rows in Table of PlayerBunkerChildren) > 1:
 		say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
-	else if (number of filled rows in Table of PlayerBunkerChildren) is 1: [exactly one child]
+	else:
 		say "[SubjectProCap of Offspring] look[if Offspring is not NProN]s[end if] as alert and human as you are, taking after you eagerly. Despite [PosAdj of Offspring] age, [SubjectPro of Offspring] [if Offspring is NProN]are[else]is[end if] already grown to a young adult, both physically and in apparent emotional and mental development.";
 
 Table of Game Objects (continued)
@@ -106,10 +96,8 @@ to say offspring present use:
 	else if RandomChance is 14:
 		say "a baseball cap inside!";
 		ItemGain baseball cap by 1;
-	else if RandomChance is 15:
+	else:
 		say "a red herring plushie!";
 		ItemGain red herring by 1;
-
-
 
 Offspring ends here.

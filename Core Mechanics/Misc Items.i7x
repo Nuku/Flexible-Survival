@@ -176,7 +176,7 @@ name	desc	weight	object
 "medkit"	"A small, white, plastic box with a red cross on it. It has all the things needed for basic medical needs on the go! Using it will restore a lot of HP, more with good intelligence."	3	medkit
 
 medkit is a grab object. It is fast. It is not temporary.
-CurrentMedkitSupplies is a number that varies.[@Tag:NotSaved] [uses left in the currently open medkit]CurrentMedkitSupplies is usually 5.
+CurrentMedkitSupplies is a number that varies. CurrentMedkitSupplies is usually 5. [uses left in the currently open medkit]
 
 Usedesc of medkit is "[medkit use]".
 
@@ -247,7 +247,6 @@ to say clean bandages use:
 
 Scent of clean bandages is "Smells like clean fabric.".
 
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "adhesive bandage"	"A little strip of fabric in a sterile package. Ripping it open, you can stick this little thing on a not too large wound and help it heal."	0	adhesive bandage
@@ -286,8 +285,6 @@ to say indigo potion use:
 
 Scent of indigo potion is "Just sniffing this stuff makes your nose itch. It's got a sharp, chemical smell.".
 
-
-
 Section 4 - Resting
 
 Table of Game Objects (continued)
@@ -325,7 +322,6 @@ to say tennis ball use:
 
 Scent of tennis ball is "Smells like rubber.".
 
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "wad of cash"	"A big wad of cash, held in a roll-shape by a rubber band. Odd, how useless it feels in your current situation."	0	wad of cash
@@ -352,27 +348,25 @@ Usedesc of bag of wallets is "[bag of wallets use]".
 to say bag of wallets use:
 	say "Digging your hand into the bag of wallets, you feel around a little and ";
 	let randomnumber be a random number from 1 to 8;
-	if randomnumber < 3:
+	if randomnumber < 3: [1-2]
 		say "pull a man's [one of]brown[or]black[or]tan[at random] leather wallet out. Flicking it open, you see a [one of]bearded[or]goateed[or]smooth-shaven[at random] [one of]black[or]white[or]Asian[or]Latino[at random] man stare out at you from his driver's license with a [one of]neutral[or]slightly bored[at random] expression. Casually rifling through the wallet, you find [one of]a moderate amount[or]it empty[or]a fair bit[at random] of money, with a credit card and a [one of]library card[or]picture of what must be his family[or]fitness studio member card[or]coffee club card - just one more and you get a free one[or]condom[or]business card[at random]. For a little while, you try to imagine what happened to this person, then shrug and stuff the wallet back in the bag.";
 	else if randomnumber is 3:
 		say "feel something wet and squishy against your skin. Ugh, seems like that one hadn't dried out fully before it was added to the collection! Pulling your hand out, you do your best to wipe it clean quickly.";
 		weakrandominfect;
-	else if randomnumber < 6:
+	else if randomnumber < 6: [4-5]
 		say "pull a woman's [one of]blue[or]colorful[or]flowery[or]white[at random] [one of]leather[or]canvas[at random] wallet out. Flicking it open, you see a [one of]young[or]middle-aged[or]mature[at random] [one of]black[or]white[or]Asian[or]Latino[at random] woman stare out at you from her driver's license with a [one of]neutral[or]slightly bored[at random] expression. Casually rifling through the wallet, you find [one of]a moderate amount[or]it empty[or]a fair bit[at random] of money, with a credit card and a [one of]library card[or]picture of what must be her family[or]fitness studio member card[or]coffee club card - just one more and you get a free one[or]business card[at random]. For a little while, you try to imagine what happened to this person, then shrug and stuff the wallet back in the bag.";
 	else if randomnumber is 6:
 		say "feel something that is more plastic-y and solid than expected. Taking hold and pulling it out, you are pleasantly surprised at having found a chocolate bar in an unopened package - it's even got extra nuts!";
 		ItemGain chips by 1;
-	else:
+	else: [7-8]
 		say "pull a plastic wallet covered with a prominently placed [one of]robot[or]superhero[or]pattern[or]alien[at random] printed on it. Flicking it open, you see a [one of]student ID card[or]learner's permit driver's license with a young-looking face on it[or]cute picture of a dog[or]cute picture of a cat[at random], as well as [one of]a moderate amount[or]a total absence[or]a little bit[at random] of money, and a [one of]library card[or]fitness studio member card[or]coffee club card - just one more and you get a free one[or]condom[at random]. For a little while, you try to imagine what happened to this person, then shrug and stuff the wallet back in the bag.";
 
 Scent of bag of wallets is "Opening up the bag, you hold your nose over the opening and sniff a wild mixture of scents, given the mixed contents. Underlying it all, a faint scent of cum is always present.".
-
 
 [
 "heuristic processor"	"A small electronic circuit. You've been told it's amazingly adaptive and can learn anything. Probably nonsense, but maybe you can find a use for it, somehow."	1	heuristic processor
 "reprogramming device"	"An attempt by Dr. Mouse to build a device to reprogram the nanites. It's too bulky, and doesn't have the processing capacity to be of any use in the field. Perhaps you could find a way around those limitations?"	13	reprogramming device
 "infection scanner"	"Upgraded Infection Monitor. Or it would have been, it's clearly not finished. It's missing any sort of display to show what it finds. Perhaps you could use it's scanner parts elsewhere?"	7	infection scanner
 ]
-
 
 Misc Items ends here.

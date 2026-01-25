@@ -10,9 +10,10 @@ to say FrostDrakeDesc:
 	say "     Walking along the forest landscape, you hear an aggressive, reptilian-like bark. Turning around, you manage to quickly move to the side as a large figure shoots past you until it slows to a stop and turns to face you. The creature before you is a quadrupedal drake that moves with wicked sharp claws. It stands nearly six feet off the ground and is about ten feet in length, including another six feet of tail. It has silver-white scales, glowing yellow eyes, and is definitely a [']he['] if his slowly hardening, foot-long dragon cock is anything to go off of. He lets out another bark and a low growl before pouncing forward toward you.";
 
 to say LoseToFrostDrake:
-	if HP of Player > 0: 								  [DID THE PLAYER SUBMIT? - YES]
+	if Player is not neuter and HP of Player > 0: 								  [DID THE PLAYER SUBMIT? - YES]
+		say "     You back down and drop your weapon, raising your hands in surrender and hoping that the creature understands the concept. The large drake leaps toward you, tackling and pinning you to the ground. With strong claws on either side of your shoulders, the drake stares down at you with two burning eyes, brimming with both ferocity and intelligence, as well as an intense, wanting lust. The drake above you slides his tongue out of his toothy maw and across your face, down your cheek and over your lips, briefly flicking into your mouth before trailing down your chin and neck. Covering your face in warm saliva, the drake then moves down your body, letting free your sore shoulders. You briefly consider fleeing, but then the drake grips your lower clothes in his teeth, yanking them down before ";
 		if Player is herm: 			  [Yes = HERM Identified!]
-			say "     You back down and drop your weapon, raising your hands in surrender and hoping that the creature understands the concept. The large drake leaps toward you, tackling and pinning you to the ground. With strong claws on either side of your shoulders, the drake stares down at you with two burning eyes, brimming with both ferocity and intelligence, as well as an intense, wanting lust. The drake above you slides his tongue out of his toothy maw and across your face, down your cheek and over your lips, briefly flicking into your mouth before trailing down your chin and neck. Covering your face in warm saliva, the drake then moves down your body, letting free your sore shoulders. You briefly consider fleeing, but then the drake grips your lower clothes in his teeth, yanking them down before thrusting his long, thin, reptilian tongue into your now-exposed sex.";
+			say "thrusting his long, thin, reptilian tongue into your now-exposed sex.";
 			say "     You throw your head back and grip the small, pointed horns on the drake's smooth, scaly head and stare down into the lust-burning yellow eyes piercing back at you. The drake thrusts nearly a foot of tongue into your spit-slicked quim while his sharp teeth poke and scrape pleasurably against your tender skin and hard clit. His oral muscle radiates intense heat and you feel his tongue moving inside you like a tendril of burning pleasure. The drake's long, wet tongue twists and squeezes at your shaft and sack causing you to moan out and grip tighter to the drake's head. More skillful than his feral looks would suggest, the drake then redoubles his efforts and nips at your clit while his front claws move to grip your lower half and lift you up slightly as the drake furiously eats you out, all the while staring intensely back at you. You don't last, the frost drake brings you to a swift orgasm, and you clench around his warm, wet muscle. He draws out your orgasm before you come down from the sexual high, panting and gasping in pleasure.";
 			WaitLineBreak;
 			say "     You stare up at his burning yellow eyes and give a slightly dazed smile, spreading your legs and wrapping them around his scaly hips before giving him a nod. Taking that as invitation enough, the drake moves his hips and drooling dragon cock to the entrance of your nether lips. Wasting no more time, the drake thrusts into you, burying his large, foot-long length into your slick pussy. You let out a loud moan at the penetration and throw your head back, giving the drake an opportunity to run his tongue predatorily down your neck. It's not long before the drake's more feral nature takes over, his thrusts speeding up and his movements becoming more erratic and wild. Soon you're much the same, panting and yelping at every thrust, a servant to pleasure, letting instinct take over as you hold onto your drake for dear life. He moves back and forth, slowly building up both your climaxes. His heavy claws lie nearby in the dirt, digging deeply into the earth as he fucks you raw.";
@@ -20,7 +21,7 @@ to say LoseToFrostDrake:
 			CreatureSexAftermath "Frost Drake" receives "OralPussy" from "Player";
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Frost Drake";
 		else if Player is female: 	  [Yes = FEMALE Identified!]
-			say "     You back down and drop your weapon, raising your hands in surrender and hoping that the creature understands the concept. The large drake leaps toward you, tackling and pinning you to the ground. With strong claws on either side of your shoulders, the drake stares down at you with two burning eyes, brimming with both ferocity and intelligence, as well as an intense, wanting lust. The drake above you slides his tongue out of his toothy maw and across your face, down your cheek and over your lips, briefly flicking into your mouth before trailing down your chin and neck. Covering your face in warm saliva, the drake then moves down your body, letting free your sore shoulders. You briefly consider fleeing, but then the drake grips your lower clothes in his teeth, yanking them down before thrusting his long, thin, reptilian tongue into your now-exposed sex.";
+			say "thrusting his long, thin, reptilian tongue into your now-exposed sex.";
 			say "     You throw your head back and grip the small, pointed horns on the drake's scaly smooth head and stare down into the lust-burning yellow eyes piercing back at you. The drake thrusts nearly a foot of tongue into your spit-slicked quim while his sharp teeth poke and scrape pleasurably against your tender skin and hard clit. His oral muscle radiates intense heat and you feel his tongue moving inside you like a tendril of burning pleasure. More skillful than his feral looks would suggest, the drake redoubles his efforts and nips at your clit while his front claws move to grip your lower half and lift you up slightly as the drake furiously eats you out, all the while staring intensely back at you. You don't last, the frost drake brings you to a swift orgasm and you clench around his warm, wet muscle. He draws out your orgasm before you come down from the sexual high, panting and gasping in pleasure.";
 			WaitLineBreak;
 			say "     You stare up at his burning yellow eyes and give a slightly dazed smile, spreading your legs and wrapping them around his scaly hips before giving him a nod. Taking that as invitation enough, the drake moves his hips and drooling dragon cock to the entrance of your nether lips. Wasting no more time, the drake thrusts into you, burying his large, foot-long length into your slick pussy. You let out a loud moan at the penetration and throw your head back, giving the drake an opportunity to run his tongue predatorily down your neck. It's not long before the drake's more feral nature takes over, his thrusts speeding up and his movements becoming more erratic and wild. Soon you're much the same, panting and yelping at every thrust, a servant to pleasure, letting instinct take over as you hold onto your drake for dear life. He moves back and forth, slowly building up both your climaxes. His heavy claws lie nearby in the dirt, digging deeply into the earth as he fucks you raw.";
@@ -28,7 +29,7 @@ to say LoseToFrostDrake:
 			CreatureSexAftermath "Frost Drake" receives "OralPussy" from "Player";
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Frost Drake";
 		else if Player is male: [Yes = MALE Identified!]
-			say "     You back down and drop your weapon, raising your hands in surrender and hoping that the creature understands the concept. The large drake leaps toward you, tackling and pinning you to the ground. With strong claws on either side of your shoulders, the drake stares down at you with two burning eyes, brimming with both ferocity and intelligence, as well as an intense, wanting lust. The drake above you slides his tongue out of his toothy maw and across your face, down your cheek and over your lips, briefly flicking into your mouth before trailing down your chin and neck. Covering your face in warm saliva, the drake then moves down your body, letting free your sore shoulders. You briefly consider fleeing, but then the drake grips your lower clothes in his teeth, yanking them down before running his tongue across your shaft and around your testicles. You worry about his sharp fangs, but he seems more interested in molesting you rather than eating or maiming you. You only have a moment of thought before the drake twists his tongue around your shaft and pulls tight.";
+			say "running his tongue across your shaft and around your testicles. You worry about his sharp fangs, but he seems more interested in molesting you rather than eating or maiming you. You only have a moment of thought before the drake twists his tongue around your shaft and pulls tight.";
 			say "     You throw your head back and grip the small, pointed horns on the drake's smooth, scaly head and stare down into the lust-burning yellow eyes piercing back at you. The drake's long, wet tongue twists and squeezes at your shaft and sack, causing you to moan out and grip tighter to the drake's head. You don't last as the tongue flicks across your tip once more, shooting your load onto and around his squirming tongue. Your seed coats his maw and his tongue lashes out to catch your shooting spunk. You collapse back onto the icy ground huffing and puffing as you slowly recover. You stare up at his burning yellow eyes and give a slightly dazed smile, spreading your legs and wrapping them around his scaly hips and giving him a nod. Taking that as invitation enough, the drake moves his hips and drooling dragon cock to the entrance of your winking anal ring.";
 			WaitLineBreak;
 			say "     Wasting no more time, the drake thrusts into you, burying his large, foot-long length into your grasping ass. You let out a loud moan at the penetration and throw your head back, giving the drake an opportunity to run his tongue predatorily down your neck. It's not long before the drake's more feral nature takes over, his thrusts speeding up and his movements becoming more erratic and wild. Soon you're much the same, panting and yelping at every thrust, a servant to pleasure, letting instinct take over as you hold onto the drake for dear life. He moves back and forth, slowly building up both your climaxes. His heavy claws lie nearby in the dirt, digging deeply into the earth as he fucks you raw. The drake hammers into your ass, your anal walls spasming around his rod as your own member bounces back and forth in between your two bodies.";
@@ -36,22 +37,23 @@ to say LoseToFrostDrake:
 			CreatureSexAftermath "Frost Drake" receives "OralCock" from "Player";
 			CreatureSexAftermath "Player" receives "AssFuck" from "Frost Drake";
 	else: 										  [PLAYER LOST THE FIGHT!]
-		if a random chance of 1 in 2 succeeds:
+		if Player is not neuter and (Player is female or anallevel > 1) and a random chance of 1 in 2 succeeds:
 			say "[FrostDrakeFuck]";
 		else:
 			say "[FrostDrakeFaceFuck]";
 
 to say FrostDrakeFuck:
+	say "     Shoved down to all fours, the large drake leaps onto your exposed back, fully pinning you to the ground below. With his hind legs, he yanks down any obstructions as you feel his heavy malehood rest on your lower back. You're soon surrounded by his warm, leathery scales as the drake drapes his large form over yours. His pointed tip pokes and prods at your ass cheeks before grazing your ";
 	if Player is herm: 			  [Yes = HERM Identified!]
-		say "     Shoved down to all fours, the large drake leaps onto your exposed back, fully pinning you to the ground below. With his hind legs, he yanks down any obstructions as you feel his heavy malehood rest on your lower back. You're soon surrounded by his warm, leathery scales as the drake drapes his large form over yours. His pointed tip pokes and prods at your ass cheeks before grazing your pussy lips and thrusting in. You nearly fall forward at the power of the movement. Bottoming out in you after the first thrust, the drake lets out a high-pitched roar of dominance and pulls out before hammering back into your vulnerable cunt.";
+		say "pussy lips and thrusting in. You nearly fall forward at the power of the movement. Bottoming out in you after the first thrust, the drake lets out a high-pitched roar of dominance and pulls out before hammering back into your vulnerable cunt.";
 		say "     The drake's claws dig deeply into the dirt below, right near where you've dug your own fingers into the earth. You look down between your legs to where the draconic beast and yourself are joined. His reddish-pink member speeds up, smashing back and forth into your abused lips when a sudden rush of warmth fills your womb. You shriek as a sudden orgasm shoots through you and you clamp down around the cock filling you up. Despite the circumstances, you feel yourself shooting your hot load onto the earth below. You can feel hot dragon seed splatter your walls and flow out of your thoroughly creamed quim as the drake lets out another bark of victory. Suddenly yanking his meat from your oozing cunt, you let out a soft moan as the drake climbs off you. You find yourself missing his warm leathery hide as he gets up, shakes himself off and leans down to sniff you once before bounding off into the tree line, disappearing from sight.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Frost Drake";
 	else if Player is female: 	  [Yes = FEMALE Identified!]
-		say "     Shoved down to all fours, the large drake leaps onto your exposed back, fully pinning you to the ground below. With his hind legs, he yanks down any obstructions as you feel his heavy malehood rest on your lower back. You're soon surrounded by his warm, leathery scales as the drake drapes his large form over yours. His pointed tip pokes and prods at your ass cheeks before grazing your pussy lips and thrusting in. You nearly fall forward at the power of the movement. Bottoming out in you after the first thrust, the drake lets out a high-pitched roar of dominance and pulls out before hammering back into your vulnerable cunt.";
+		say "pussy lips and thrusting in. You nearly fall forward at the power of the movement. Bottoming out in you after the first thrust, the drake lets out a high-pitched roar of dominance and pulls out before hammering back into your vulnerable cunt.";
 		say "     The drake's claws dig deeply into the dirt below, right near where you've dug your own fingers into the earth. You look down between your legs to where the draconic beast and yourself are joined. His reddish-pink member speeds up, smashing back and forth into your abused lips when a sudden rush of warmth fills your womb. You shriek as a sudden orgasm shoots through you and you clamp down around the cock filling you up. You can feel hot dragon seed splatter your walls and flow out of your thoroughly creamed quim as the drake lets out another bark of victory. Suddenly yanking his meat from your oozing cunt, you let out a soft moan as the drake climbs off you. You find yourself missing his warm leathery hide as he gets up, shakes himself off and leans down to sniff you once before bounding off into the tree line, disappearing from sight.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Frost Drake";
 	else if Player is male: [Yes = MALE Identified!]
-		say "     Shoved down to all fours, the large drake leaps onto your exposed back, fully pinning you to the ground below. With his hind legs, he yanks down any obstructions as you feel his heavy malehood rest on your lower back. You're soon surrounded by his warm, leathery scales as the drake drapes his large form over yours. His pointed tip pokes and prods at your ass cheeks before grazing your puckering asshole and thrusting in. You nearly fall forward at the power of the movement. Bottoming out in you after the first thrust, the drake lets out a high-pitched roar of dominance and pulls out before hammering back into your vulnerable ass.";
+		say "puckering asshole and thrusting in. You nearly fall forward at the power of the movement. Bottoming out in you after the first thrust, the drake lets out a high-pitched roar of dominance and pulls out before hammering back into your vulnerable ass.";
 		say "     The drake's claws dig deeply into the dirt below, right near where you've dug your own fingers into the earth. You look down between your legs to where the draconic beast and yourself are joined. His reddish-pink member speeds up, smashing back and forth into your abused hole when a sudden rush of warmth fills your inner tunnel. You shriek as a sudden orgasm shoots through you and you clamp down around the cock filling you up. Despite the circumstances, you feel yourself shooting your hot load onto the earth below. You can feel hot dragon seed splatter your walls and flow out of your thoroughly creamed anus as the drake lets out another bark of victory. Suddenly yanking his meat from your oozing ass, you let out a soft moan as the drake climbs off you. You find yourself missing his warm leathery hide as he gets up, shakes himself off and leans down to sniff you once before bounding off into the tree line, disappearing from sight.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Frost Drake";
 
@@ -73,7 +75,6 @@ to say BeatTheFrostDrake:
 		else:
 			LineBreak;
 			say "     You think for a moment but decide against your licentious impulse and turn to leave.";
-		now FrostDrakeBeaten is 1;
 	else: [repeat encounters]
 		say "     You've knocked the fight out of another of these draconic monsters and he collapses in front of you. The large white-scaled creature shifts and makes a low groan trying to stand but eventually just lays there in defeat and exhaustion. Unable to move he resigns to waiting for what you do next. His dark eyes glare at you with curiosity, a little malice... as well as a glint of intelligence. Maybe you can talk to him?";
 		LineBreak;
@@ -98,6 +99,7 @@ to say BeatTheFrostDrake:
 			say "[Frost DrakeSexMenu]";
 		else:
 			say "     It's probably best to move on and not risk provoking the big defeated beast into round two. With a shrug, you move on and leave the drake behind.";
+	increase FrostDrakeBeaten by 1;
 
 to say Frost DrakeSexMenu:
 	say "     What shall you do with the big draconic being?";
@@ -109,10 +111,11 @@ to say Frost DrakeSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Give the frost drake a blowjob";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Demand oral";
-	now sortorder entry is 2;
-	now description entry is "Have the big drake service you";
+	if Player is not neuter:
+		choose a blank row in table of fucking options;
+		now title entry is "Demand oral";
+		now sortorder entry is 2;
+		now description entry is "Have the big drake service you";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ride the drake";
@@ -139,24 +142,23 @@ to say Frost DrakeSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Suck him off"):
-					say "[SuckFrostDrake]";
-				else if (nam is "Demand oral"):
-					say "[OralFrostDrake]";
-				else if (nam is "Fuck his ass"):
-					say "[FuckFrostDrake]";
-				else if (nam is "Ride the drake"):
-					say "[FrostDrakeRide]";
-				wait for any key;
+				if title entry is:
+					-- "Suck him off":
+						say "[SuckFrostDrake]";
+					-- "Demand oral":
+						say "[OralFrostDrake]";
+					-- "Fuck his ass":
+						say "[FuckFrostDrake]";
+					-- "Ride the drake":
+						say "[FrostDrakeRide]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You back away and shake your head.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say SuckFrostDrake:
@@ -425,14 +427,14 @@ to say FrostDrakeTalkMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "His species"):
-					say "[FrostDrakeTalk1]";
-				else if (nam is "His origin"):
-					say "[FrostDrakeTalk2]";
-				else if (nam is "His plans"):
-					say "[FrostDrakeTalk3]";
+				if title entry is:
+					-- "His species":
+						say "[FrostDrakeTalk1]";
+					-- "His origin":
+						say "[FrostDrakeTalk2]";
+					-- "His plans":
+						say "[FrostDrakeTalk3]";
 				wait for any key;
 				say "[FrostDrakeTalkMenu]";
 		else if calcnumber is 0:

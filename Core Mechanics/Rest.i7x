@@ -1,14 +1,13 @@
 Version 1 of Rest by Core Mechanics begins here.
 [ Version 1.0 - Initial file - Speedlover ]
 
-
 Part 0 - Variables
 
 Terminatorsleep is a truth state that varies. Terminatorsleep is usually false.
 TerminatorSleepActivated is a truth state that varies. TerminatorSleepActivated is usually false. [For the cheat in Settings Menus.i7x, this way you only lose score once when you toggle on/off insomniac]
 Sleeptimercount is a number that varies. Sleeptimercount is usually 0.
 WellRestedTimer is a number that varies. WellRestedTimer is usually 0.
-roughing is a truth state that varies. roughing is usually false.
+roughing is a truth state that varies.[@Tag:NotSaved] roughing is usually false.
 
 Part 1 - Rest Action
 
@@ -87,12 +86,12 @@ carry out resting:
 to Rest:
 	let num1 be MaxHP of Player divided by 4;
 	let num2 be ( ( Stamina of Player * 3 ) / 2 ) + Level of Player;
-	if (cot is owned or cot is present) or (silk hammock is owned or silk hammock is present) or (player is collected):
+	if (cot is owned or cot is present) or (silk hammock is owned or silk hammock is present) or (Player is in Bunker or Player is in Police Lockerroom):
 		if num2 > num1: [best value chosen]
 			increase HP of Player by num2;
 		else:
 			increase HP of Player by num1;
-	else if "Roughing It" is listed in feats of Player:
+	else if (sleeping bag is owned or sleeping bag is present) or "Roughing It" is listed in feats of Player or (Player is in Slave Cell 1 or Player is in Slave Cell 2):
 		increase HP of Player by ( num1 + num2 ) / 2; [average value chosen]
 	else: [accessible only when events induce resting]
 		if num2 < num1: [lowest value chosen]
@@ -106,10 +105,10 @@ to Rest:
 				decrease Sleeptimercount by 6;
 			else:
 				decrease Sleeptimercount by 5;
-		else if Sleeptimercount <= 9: [Player is tired, and will wake up refreshed with the well rested feat.]
+		else: [Player is tired, and will wake up refreshed with the well rested feat.]
 			if silk hammock is owned or silk hammock is present:
 				now Sleeptimercount is -3;
-			else: [Turnpass rule fires immediately after this and adds 1 to each, so it becomes -1 and 0.]
+			else: [Turnpass rule fires immediately after this and adds 2 to each, so it becomes -1 and 0.]
 				now Sleeptimercount is -2;
 			if "Well Rested" is not listed in feats of Player:
 				FeatGain "Well Rested";
@@ -150,34 +149,20 @@ an everyturn rule:
 				decrease WellRestedTimer by 1;
 		else: [Not slept recently, getting tired.]
 			if Sleeptimercount >= 12: [Player MUST sleep]
-				let randomnumber be a random number from 1 to 2;
-				if randomnumber is 1:
-					say "Your sluggish body barely responds to your commands, and you can barely think straight with your weary mind. You don't even know how or when you had ended up on the floor. Darkness creeps up on your vision until you finally pass out from exhaustion.";
-				if randomnumber is 2:
-					say "You have been awake for too long and haven't had enough sleep, you thought you could tough it out but it all catches up to you. Collapsing to the ground, you fall asleep where you stand.";
+				say "[one of]Your sluggish body barely responds to your commands, and you can barely think straight with your weary mind. You don't even know how or when you had ended up on the floor. Darkness creeps up on your vision until you finally pass out from exhaustion[or]You have been awake for too long and haven't had enough sleep, you thought you could tough it out but it all catches up to you. Collapsing to the ground, you fall asleep where you stand[at random].";
 				now Sleeptimercount is 3;
 				follow the turnpass rule;
 				follow the turnpass rule; [Doing this twice adds 2 to sleeptimer count, making sleeptimer up to 5.]
-				say "When you wake up you still feel tired, looking at the sky it looks like 6 hours have passed.";
-			else if Sleeptimercount <= 11 and Sleeptimercount >= 6: [Player is getting tired, 6 turns = 18 hours]
-				let randomnumber be a random number from 1 to 2;
+				say "When you wake up you still feel tired. Looking at the sky it looks like 6 hours have passed.";
+			else if Sleeptimercount >= 6: [Player is getting tired, 6 turns = 18 hours]
 				if Sleeptimercount is 11:
-					say "Your reflexes are starting to slow and you are struggling to stay awake, maybe you should get some rest before you collapse.";
+					say "Your reflexes are starting to slow and you are struggling to stay awake. Maybe you should get some rest before you collapse.";
 				else if Sleeptimercount is 10:
-					if randomnumber is 1:
-						say "You stifle a yawn and stretch a bit, being awake for so long is really taking a toll on you.";
-					else:
-						say "You are exhausted and nearing your limits. You really should get some rest before you collapse.";
+					say "You [one of]stifle a yawn and stretch a bit. Being awake for so long is really taking a toll on you[or]are exhausted and nearing your limits. You really should get some rest before you collapse[at random].";
 				else if Sleeptimercount is 9:
-					if randomnumber is 1:
-						say "You are starting to feel weary after a day's worth of exploring. Perhaps you should take a nap.";
-					else:
-						say "While taking a break for a second your eyes slowly close. A noise nearby quickly startles you and you look around, before you realize you almost fell asleep.";
+					say "[one of]You are starting to feel weary after a day's worth of exploring. Perhaps you should take a nap[or]While taking a break for a second your eyes slowly close. A noise nearby quickly startles you and you look around, before you realize you almost fell asleep[at random].";
 				else if Sleeptimercount is 6:
-					if randomnumber is 1:
-						say "You slow for a second and yawn, maybe you should rest for a while?";
-					else:
-						say "A yawn escapes you, reminding you of your weariness after a day's worth of exploring. Perhaps you should take a nap.";
+					say "[one of]You slow for a second and yawn, maybe you should rest for a while?[or]A yawn escapes you, reminding you of your weariness after a day's worth of exploring. Perhaps you should take a nap.[at random]";
 			increase Sleeptimercount by 1;
 
 Rest ends here.
