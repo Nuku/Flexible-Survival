@@ -4,11 +4,15 @@ Version 2 of Power Plant by Hellerhound begins here.
 [Include Computers by Hellerhound.]
 
 CityPowerOn is a truth state that varies. CityPowerOn is usually false.
+findwires is a number that varies.
+fixedgens is a number that varies.
 
 a postimport rule:
 	if findwires is 2 and fixedgens > 2:
 		now CityPowerOn is true;
 		now library computer is powered;
+
+Section 1 - Events
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -22,14 +26,13 @@ to say ResolveEvent Ravaged Power Plant:
 	AddNavPoint Plant Overview;
 	now Ravaged Power Plant is resolved;
 
-foundparts is a number that varies.
-
 Table of GameEventIDs (continued)
 Object	Name
 Generator Parts	"Generator Parts"
 
 Generator Parts is a situation.
 ResolveFunction of Generator Parts is "[ResolveEvent Generator Parts]".
+foundparts is a number that varies.
 
 to say ResolveEvent Generator Parts:
 	if foundparts is 0:
@@ -43,62 +46,28 @@ to say ResolveEvent Generator Parts:
 		now foundparts is 2;
 		now fixedgens is 1;
 
-[Scents of rooms]
-the scent of Plant Lobby is "     The power plant lobby smells of smoke, ash and cum.".
-
-the scent of Control Room is "     The control room smells of burnt electronics and ozone along with the harsh, sulfurous scents from the magma.".
-
-the scent of Plant Overview is "     There is a faint scent of smoke coming from the power plant.".
-
-the scent of Cat Walk is "     The sulfurous scent of the lava rises up to mix with the scent of ozone and machinery up here.".
-
-Broken Fence is a door. "Through the shattered remnants of the main entrance, you see a flattened fence and gate to the east, allowing easy access to and from the inner city.".
-
-Table of GameRoomIDs (continued)
-Object	Name
-Plant Lobby	"Plant Lobby"
-
-Plant Lobby is a room. "     Claw marks cover the floor here, and small puddles of what seem to be seed litter the floor. The receptionist desk is upturned, and smashed into small splinters. The whole area is also blackened, like a fire ran through here. An intact, but blackened, flight of stairs in the back leads up to the control room.[line break]".
-The earea of Plant Lobby is "Outside".
-Plant Lobby is west of Broken Fence.
+Section 2 - Rooms
 
 Table of GameRoomIDs (continued)
 Object	Name
 Wandering Around	"Wandering Around"
 
 Wandering Around is a room.
+
+Broken Fence is a door. "Through the shattered remnants of the main entrance, you see a flattened fence and gate to the east, allowing easy access to and from the inner city.".
 Broken Fence is west of Wandering Around.
 Broken Fence is dangerous.
 The marea of Broken Fence is "Outside".
 
 Table of GameRoomIDs (continued)
 Object	Name
-Plant Overview	"Plant Overview"
+Plant Lobby	"Plant Lobby"
 
-Plant Overview is a room. It is fasttravel. "     The city's main power plant rises before you, a great accomplishment of geothermal engineering. Though it seems that someone - or rather something - went on a rampage here. The outside walls of the huge structure are burnt and blackened in arcs and spots, as if someone spent a while going at it with a flamethrower. On the long side of the building, a massive rend in the wall allows entry to the inside - for those who have no problem walking through the bubbling pit of lava in front of it at least. You on the other hand will have to use the side entrance of the administration annex to the north if you want to explore the power plant.[line break]".
-Plant Overview is south of Plant Lobby.
-the earea of Plant Overview is "Outside".
+Plant Lobby is a room. "     Claw marks cover the floor here, and small puddles of what seem to be seed litter the floor. The receptionist desk is upturned, and smashed into small splinters. The whole area is also blackened, like a fire ran through here. An intact, but blackened, flight of stairs in the back leads up to the control room.[line break]".
+Plant Lobby is west of Broken Fence.
+The earea of Plant Lobby is "Outside".
 
-Table of GameRoomIDs (continued)
-Object	Name
-Control Room	"Control Room"
-
-Control Room is a room. "     The Control Room overlooks the plant's generators. Surprisingly, this room is intact, and you wonder why no monsters ever got in. The walls are covered with control panels and there is a whole bank of control stations in front of the windows. A door in the west wall leads out on a catwalk going from generator to generator. There is power here, and the panels glow softly. Looking out into the main hall of the power plant, you see that the generators are in miserable condition, most are smashed, and several are half-melted and covered in what looks like lava. However, one appears to be in working condition, near the middle.[line break]".
-Control Room is above Plant Lobby.
-
-control panels is a thing. A control panels is in Control Room.
-Description of control panels is "[ControlPanelDesc]".
-
-to say ControlPanelDesc:
-	say "     The panels are glowing softly, [if fixedgens < 2]every light red. A small schematic shows that the intact generator is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [link][bold type]reactivate[roman type][as]reactivate control panels[end link] them?[else if fixedgens is 2]all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [link][bold type]reactivate[roman type][as]reactivate control panels[end link] them?[else]all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, with at least those few lights now shining green. You doubt you'll have as much luck with getting the rest of the city supplied with power again.[end if]";
-
-catwalk door is a door.
-catwalk door is lockable and locked.
-catwalk door is west of Control Room.
-Description of catwalk door is "     A door in the west wall allows access to the catwalks in the main power plant hall. It's made from metal and looks pretty solid and thick, most likely to stop the uncomfortably loud noise of a whole power plant's worth of huge generators from damaging the hearing of the operators in here. Several hooks on the wall beside the door hold ear protectors - though you won't need one of those, with most generators destroyed now.[line break]".
-
-when play begins:
-	add { "yellow construction helmet" } to invent of control room;
+the scent of Plant Lobby is "     The power plant lobby smells of smoke, ash and cum.".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -108,27 +77,38 @@ Administration Offices is a room. Administration Offices is north of Plant Lobby
 Description of Administration Offices is "     There isn't much left of the corridor and adjoining offices that formed the administration of the power plant. Looks like some sort of pyromaniac scattered papers and trashed furniture all throughout and set them ablaze. Thankfully the automatic sprinklers seem to have worked and stopped the whole building from burning down.[line break]".
 Scent of Administration Offices is "     The scent of wet ash hangs in the air.".
 
-cat key is a grab object.
-It is not temporary.
+Table of GameRoomIDs (continued)
+Object	Name
+Plant Overview	"Plant Overview"
 
-instead of using cat key:
-	if Catwalk door is not adjacent to the player:
-		say "You don't know how to use this.";
-	else:
-		say "The lock clicks, and the door opens a little.";
-		now the Catwalk door is unlocked;
+Plant Overview is a room. It is fasttravel. "     The city's main power plant rises before you, a great accomplishment of geothermal engineering. Though it seems that someone - or rather something - went on a rampage here. The outside walls of the huge structure are burnt and blackened in arcs and spots, as if someone spent a while going at it with a flamethrower. On the long side of the building, a massive rend in the wall allows entry to the inside - for those who have no problem walking through the bubbling pit of lava in front of it at least. You on the other hand will have to use the side entrance of the administration annex to the north if you want to explore the power plant.[line break]".
+Plant Overview is south of Plant Lobby.
+the earea of Plant Overview is "Outside".
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"cat key"	"A key with a picture of a cat attached to it. Odd. What does this unlock?"	1	cat key
+the scent of Plant Overview is "     There is a faint scent of smoke coming from the power plant.".
 
-the scent of cat key is "There is a faint scent of ozone lingering to the key fob.".
+Table of GameRoomIDs (continued)
+Object	Name
+Control Room	"Control Room"
+
+Control Room is a room. "     The Control Room overlooks the plant's generators. Surprisingly, this room is intact, and you wonder why no monsters ever got in. The walls are covered with control panels and there is a whole bank of control stations in front of the windows. A door in the west wall leads out on a catwalk going from generator to generator. There is power here, and the panels glow softly. Looking out into the main hall of the power plant, you see that the generators are in miserable condition, most are smashed, and several are half-melted and covered in what looks like lava. However, one appears to be in working condition, near the middle.[line break]".
+Control Room is above Plant Lobby.
+
+the scent of Control Room is "     The control room smells of burnt electronics and ozone along with the harsh, sulfurous scents from the magma.".
 
 when play begins:
-	add { "cat key" } to invent of Entrance to the Red Light District;
+	add { "yellow construction helmet" } to invent of control room;
+
+control panels is a thing. A control panels is in Control Room.
+Description of control panels is "     The panels are glowing softly, [if fixedgens < 2]every light red. A small schematic shows that the intact generator is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [link][bold type]reactivate[roman type][as]reactivate control panels[end link] them?[else if fixedgens is 2]all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [link][bold type]reactivate[roman type][as]reactivate control panels[end link] them?[else]all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, with at least those few lights now shining green. You doubt you'll have as much luck with getting the rest of the city supplied with power again.[end if][line break]";
+
+catwalk door is a door.
+catwalk door is lockable and locked.
+catwalk door is west of Control Room.
+Description of catwalk door is "     A door in the west wall allows access to the catwalks in the main power plant hall. It's made from metal and looks pretty solid and thick, most likely to stop the uncomfortably loud noise of a whole power plant's worth of huge generators from damaging the hearing of the operators in here. Several hooks on the wall beside the door hold ear protectors - though you won't need one of those, with most generators destroyed now.[line break]".
 
 before opening Catwalk Door:
-	if cat key is owned:
+	if cat key is owned and Catwalk Door is locked:
 		now Catwalk Door is unlocked;
 		say "The cat key unlocks the door. Seems like the manager here had a sense of humor.";
 
@@ -136,25 +116,49 @@ Table of GameRoomIDs (continued)
 Object	Name
 Cat Walk	"Cat Walk"
 
-Cat Walk is a room. "     The catwalk rises high above the floor next to the rows of large generators, allowing access to them for maintenance. It's pretty warm in here - no wonder, with all the patches of lava still glowing red hot beside and on top of the busted generators. The floor is a metal grate, and thin metal pipes form the handrails. A nearby metal sign reads: 'Danger, electrocution hazard'. You can reach the intact generator from here.[line break][catwalkstuff]".
+Cat Walk is a room. "[catwalkstuff]".
 Cat Walk is west of Catwalk Door.
 
 to say catwalkstuff:
-	LineBreak;
+	say "     The catwalk rises high above the floor next to the rows of large generators, allowing access to them for maintenance. It's pretty warm in here - no wonder, with all the patches of lava still glowing red hot beside and on top of the busted generators. The floor is a metal grate, and thin metal pipes form the handrails. A nearby metal sign reads: 'Danger, electrocution hazard'. You can reach the intact generator from here.[paragraph break]";
 	if fixedgens is 1:
-		say "The parts you found match this generator perfectly. You fix the generator, and the malfunction light on the generator turns green to show the generator could work. You wait with bated breath for it to work.";
+		say "     The parts you found match this generator perfectly. You fix the generator, and the malfunction light on the generator turns green to show the generator could work. You wait with bated breath for it to work.";
 		WaitLineBreak;
 		now fixedgens is 2;
 		if findwires is 2:
-			say "The generator begins to hum, and the green lights indicating that power is flowing begin to flash. Hooray!";
+			say "     The generator begins to hum, and the green lights indicating that power is flowing begin to flash. Hooray!";
 			increase score by 200;
 		else:
-			say "The generator is not running, so maybe there is nothing for it to power? Maybe you should check the control panels.";
+			say "     The generator is not running, so maybe there is nothing for it to power? Maybe you should check the control panels.";
 	else:
 		say "The [if fixedgens > 1]hum of the fixed generator sounds like music to your ears.[else]intact generator is missing some key parts. The claw marks on the generator make it look like something stole them, so maybe they are out in the city?[end if]";
 
-findwires is a number that varies.
-fixedgens is a number that varies.
+the scent of Cat Walk is "     The sulfurous scent of the lava rises up to mix with the scent of ozone and machinery up here.".
+
+Section 3 - Cat Key
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"cat key"	"A key with a picture of a cat attached to it. Odd. What does this unlock?"	1	cat key
+
+cat key is a grab object.
+It is not temporary.
+
+instead of using cat key:
+	if Catwalk door is not visible:
+		say "This doesn't seem to have any use here.";
+	else if Catwalk Door is unlocked:
+		say "The door to the catwalk isn't locked.";
+	else:
+		say "The lock clicks, and the door opens a little.";
+		now the Catwalk door is unlocked;
+
+the scent of cat key is "There is a faint scent of ozone lingering to the key fob.".
+
+when play begins:
+	add { "cat key" } to invent of Entrance to the Red Light District;
+
+Section 4 - Control Panel Activation
 
 activating is an action applying to nothing.
 understand "activate controls" as activating.
@@ -176,16 +180,18 @@ check activating:
 carry out activating:
 	if findwires is 0:
 		if a random number between one and 20 > Intelligence of Player:
-			say "The lights stay red, even though you are trying hard to understand the buttons.";
+			say "     The lights stay red, even though you are trying hard to understand the buttons.";
 		else:
-			say "You use your superior intelligence to turn off the emergency shutdown.";
-			say "No matter how hard you try, none of the power lights for the different city areas seem to turn on and after some futile button-pushing, the system falls back into shutdown mode. Maybe there is something wrong with the power lines? Or the generator? It doesn't look too good, but at least you now know how to reactivate the system quickly.";
+			say "     You use your superior intelligence to turn off the emergency shutdown.";
+			say "     No matter how hard you try, none of the power lights for the different city areas seem to turn on and after some futile button-pushing, the system falls back into shutdown mode. Maybe there is something wrong with the power lines? Or the generator? It doesn't look too good, but at least you now know how to reactivate the system quickly.";
 			now findwires is 1;
 	else If findwires is 2 and fixedgens is 2: [turning the power on]
-		say "Flipping several switches on the control panel, you manage to get the power light for the part of the city with the library to turn on! Yay! Maybe now the computers there will work again?";
-		activatecomputers;
+		say "     Flipping several switches on the control panel, you manage to get the power light for the part of the city with the library to turn on! Yay! Maybe now the computers there will work again?";
+		now library computer is powered;
 		now fixedgens is 3;
 		now CityPowerOn is true;
+
+Section 5 - Power Lines
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -206,25 +212,25 @@ check towerfixing:
 		say "The power lines are already fixed." instead;
 
 carry out towerfixing:
-	say "After reattaching one power line that must have ripped off when the tower was damaged, you lift the tower top, grunting even though it's somewhat lighter than you expected. You tilt it, and try to align the bottom of the top to the top of the bottom.";
+	say "     After reattaching one power line that must have ripped off when the tower was damaged, you lift the tower top, grunting even though it's somewhat lighter than you expected. You tilt it, and try to align the bottom of the top to the top of the bottom.";
 	if a random number between one and 20 > Strength of Player:
-		say "The tower top slips, and falls. Maybe you could try to fix it again?";
+		say "     The tower top slips, and falls. Maybe you could try to fix it again?";
 	else:
-		say "The tower top slides into place, and the stress on the wires is released.";
+		say "     The tower top slides into place, and the stress on the wires is released.";
 		now findwires is 2; [cables reconnected]
 		if fixedgens > 1:
-			say "A red light on the uppermost tip of the tower blinks a few times, then stays on continuously, indicating power is up and running. Hooray!";
+			say "[line break]     A red light on the uppermost tip of the tower blinks a few times, then stays on continuously, indicating power is up and running. Hooray!";
 			increase score by 200;
-			activatecomputers;
+			now library computer is powered;
 
 Section X - Library Computer
-
-library computer is a thing.
-library computer is in Grey Abbey Library. "[if library computer is off]A computer rests nearby, powerless. You can try to [link][bold type]turn on the computer[roman type][as]turn on computer[end link][else]One of the nearby computers is on, but unused. Its screen shows a somewhat garbled screen saver[end if].".
 
 an everyturn rule:
 	if library computer is unpowered and findwires is 2 and fixedgens > 2:
 		now library computer is powered;
+
+library computer is a thing.
+library computer is in Grey Abbey Library. "[if library computer is off]A computer rests nearby, powerless. You can try to [link][bold type]turn on the computer[roman type][as]turn on computer[end link][else]One of the nearby computers is on, but unused. Its screen shows a somewhat garbled screen saver[end if].".
 
 the library computer can be on or off. the library computer is off.
 the library computer can be powered or unpowered. the library computer is unpowered.
@@ -240,11 +246,11 @@ check computerpowering:
 	if library computer is on, say "It's already on." instead;
 
 carry out computerpowering:
-	say "     The computer screen flashes a few times before the computer manages to initiate a start-up. The letters keeps jostling about and there are several flickering pixels on the screen. It seems the poor thing is rather ailing. As the boot-up nears completion, an error message appears: ERROR_NO_NET_ACCESS. Doesn't look like you'll be getting internet access here. Oh well, at least there are some simple games on the computer. What better to do during the nanite apocalypse than to play some Solitaire[if the number of bunkered people + the number of booked people > 2]? At least it'll provide something for the others to do aside from sex while you're out.[else]?[end if]";
+	say "     The computer screen flashes a few times before the computer manages to initiate a start-up. The letters keeps jostling about and there are several flickering pixels on the screen. It seems the poor thing is rather ailing. As the boot-up nears completion, an error message appears: ERROR_NO_NET_ACCESS. Doesn't look like you'll be getting internet access here. Oh well, at least there are some simple games on the computer. What better to do during the nanite apocalypse than to play some Solitaire[if the number of collected people > 2]? At least it'll provide something for the others to do aside from sex while you're out.[else]?[end if]";
 	now library computer is on;
 	increase score by 25;
 
-to activatecomputers:
-	now library computer is powered;
+[to activatecomputers:
+	now library computer is powered;]
 
 Power Plant ends here.

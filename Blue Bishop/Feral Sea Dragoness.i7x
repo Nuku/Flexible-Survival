@@ -17,11 +17,10 @@ to say fsdf attack:
 	project Figure of SeaDragoness_NSFW_icon;
 	if vorelevel is 3 and scalevalue of Player < 4 and (A random chance of 1 in 4 succeeds or (Player is kinky and a random chance of 1 in 3 succeeds)):
 		if HP of Player > 0:
-			say "     You immediately throw up your arms and lower your guard, showing you don't wish to fight. She doesn't seem inclined to very much regard your submission as anything more than the opening for her and she betrays her innocent demeanor to immediately dive for";
+			say "     You immediately throw up your arms and lower your guard, showing you don't wish to fight. She doesn't seem inclined to very much regard your submission as anything more than the opening for her and she betrays her innocent demeanor to immediately dive for you, maw wide open!";
 		else:
-			say "     Having enough of this fight, her head lunges towards";
+			say "     Having enough of this fight, her head lunges towards you, maw wide open!";
 			now struggleatt is 1;
-		say " you, maw wide open!";
 		say "     Before you can react, you're engulfed in darkness, the sea dragoness's slick, supple flesh enveloping you. Awash in the beast's acrid breath, she pulls you into the air by her lips";
 		if a random chance of 1 in 2 succeeds:
 			say ", allowing gravity to aid her as she audibly gulps you down, powerful muscles plunging you down her slick depths.";
@@ -123,10 +122,10 @@ to say fsdf attack:
 					else:
 						MultiInfect "Feral Sea Dragon" repeats 2;
 					WaitLineBreak;
-					say "     After what seems like forever, you can see the familiar light of the outside coming through the translucent walls of your prison, compelling you to finally break free, and once you acclimate to the open air it's made very clear -why- you were forced within those confines longer than natural";
+					say "     After what seems like forever, you can see the familiar light of the outside coming through the translucent walls of your prison, compelling you to finally break free, and once you acclimate to the open air it's made very clear -why- you were forced within those confines longer than natural. ";
 					if a random chance of 1 in 2 succeeds and MaleList is not banned:
+						say "A male sea dragon is before you; looking at his somewhat tired and lust-addled form, it's clear that he happened upon your egg and was compelled to use it for his own sexual gratification - much to your expense.";
 						if ( ( Player is kinky and a random chance of 3 in 8 succeeds) or a random chance of 1 in 5 succeeds):
-							say ". A male sea dragon is before you; looking at his somewhat tired and lust-addled form, it's clear that he happened upon your egg and was compelled to use it for his own sexual gratification - much to your expense.";
 							say "     Looking at him now, he doesn't appear fully satisfied, and looks as though he might concede to using -you- instead of your prior residence. You don't think you can take another fight, so your choice is to run or submit. Run for it?";
 							if Player consents:
 								LineBreak;
@@ -152,7 +151,7 @@ to say fsdf attack:
 							say "     Doubtlessly exhausted as he is he turns to depart, leaving you to retreat and gather your belongings - strewn across the beach as they are - along the way.";
 							now FSDOPEN is 0;
 					else:
-						say ". Another sea dragoness is before you, [one of]though you instinctively know that it's[or]fairly certain that it's not[at random] the same one that first trapped you. Looking at her somewhat tired and lust-addled form, it's clear that she was compelled to use your egg for her own sexual gratification - much to your expense.";
+						say "Another sea dragoness is before you, [one of]though you instinctively know that it's[or]fairly certain that it's not[at random] the same one that first trapped you. Looking at her somewhat tired and lust-addled form, it's clear that she was compelled to use your egg for her own sexual gratification - much to your expense.";
 						if (Player is kinky and a random chance of 3 in 8 succeeds) or a random chance of 1 in 5 succeeds:
 							say "     Looking at her now, she doesn't appear fully satisfied, and looks as though she might concede to using -you- instead of your prior residence. You don't think you can take another fight, so your choice is to run or submit. Run for it?";
 							if Player consents:
@@ -268,11 +267,11 @@ To say fsdf loss:
 		else:
 			infect "Feral Sea Dragon";
 	else:
-		say "     Before you can land the final blow, the dragoness suddenly backs away and concedes to you. Having asserted your dominance, it's clear she intends to offer herself to you";
+		say "     Before you can land the final blow, the dragoness suddenly backs away and concedes to you. Having asserted your dominance, it's clear she intends to offer herself to you. ";
 		if Libido of Player < 40 and "Dominant" is not listed in feats of Player:
-			say ". In no mood to humor her need, you send her off, slowly retreating back into the water's depths. You go about your business once more, now that the matter has been attended to.";
+			say "In no mood to humor her need, you send her off, slowly retreating back into the water's depths. You go about your business once more, now that the matter has been attended to.";
 		else:
-			say ". Shall you oblige her desire? Otherwise, you'll shoo her off.";
+			say "Shall you oblige her desire? Otherwise, you'll shoo her off.";
 			if Player consents:
 				LineBreak;
 				fsdfvicmenu;
@@ -534,9 +533,9 @@ to say FSDF_4: [Oral Receiving Cunt]
 		LineBreak;
 		now tempnum is 0;
 	say "     [if tempnum is 1]Eager to begin[else if tempnum is 2]Eager and drooling to begin[else]With little effort[end if], she obliges your need, scaled lips parting to envelop [if Cunt Count of Player > 1]one of [end if]your puss[yfn] within its embrace. Thick tongue slathering along its supple entrance, [if Cunt Depth of Player > 17]she easily thrusts the slick, writhing organ into your pliable depths[else]she thrusts the slick, writhing organ into your depths, quickly straining you with its impressive size[end if]. The touch of her saliva[if tempnum is 2], along with that lingering in your maw,[end if] [one of]seeming to intensify[or]intensifying[stopping] your arousal, you can't help but press against her snout, the dragoness churring in approval.";
-	say "     Writhing against the beast's touch, happily making you twitch and gasp with each motion of her worming appendage, you find it difficult to keep a clear head as you rapidly approach ecstasy";
+	say "     Writhing against the beast's touch, happily making you twitch and gasp with each motion of her worming appendage, you find it difficult to keep a clear head as you rapidly approach ecstasy. ";
 	if Player is male:
-		say ". You don't think you'll be able to hold back for any longer, dick[smn] drooling against the open air. Shall you pull out at the last second and shame the sea dragoness with your cum? Otherwise, you'll spare her the humiliation.";
+		say "You don't think you'll be able to hold back for any longer, dick[smn] drooling against the open air. Shall you pull out at the last second and shame the sea dragoness with your cum? Otherwise, you'll spare her the humiliation.";
 		if Player consents:
 			LineBreak;
 			say "     Immediately, you wrench yourself free of her tongue, strings of saliva trailing from the creature's maw following the organ's loud departure. A couple seconds of grinding your throbbing, [cock size desc of Player] cock[smn] against her snout and you finally cry out, unleashing your [Cum Load Size of Player] load against the beast's obliging and lust-hazed visage. Whining softly, the beast idly licks at her face as she's shamed like this.";
@@ -544,7 +543,7 @@ to say FSDF_4: [Oral Receiving Cunt]
 			LineBreak;
 			say "     It's not long before you finally cry out in bliss, firing your [Cum Load Size of Player] load into the open air as your stuffed hole throbs against the creature's obliging tongue. Whining softly, she revels in tasting your juices. After a fair length of time lost in the throes of your lust, your need dies down, allowing you a moment to catch your breath.";
 	else:
-		say ". Lost in a haze of your need, you cling tightly to the beast, driving her to attend you ever-harder.";
+		say "Lost in a haze of your need, you cling tightly to the beast, driving her to attend you ever-harder.";
 		WaitLineBreak;
 		say "     It's not long before you finally cry out in bliss, your stuffed hole throbbing against the creature's obliging tongue. Whining softly, she revels in tasting your juices. After a fair length of time lost in the throes of your lust, your need dies down, allowing you a moment to catch your breath.";
 	say "     Satisfied, you finally step away from the dragoness, writhing against the sand with a need to satisfy her own, lingering lust in the wake of your task. No doubt the beast will have to attend to her own need after you turn and depart.";
@@ -637,6 +636,7 @@ When Play begins:
 	add "Feral Sea Dragoness" to infections of OviImpregnatorList;
 	add "Feral Sea Dragoness" to infections of FirebreathList;
 	add "Feral Sea Dragoness" to infections of TailweaponList;
+	add "Feral Sea Dragoness" to infections of FeralmindList;
 	now Name entry is "Feral Sea Dragoness";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
@@ -867,7 +867,6 @@ to fsdfvore:
 					now boundmod is 0;
 					now boundsegment is 0;
 					now struggleatt is -1;
-					wait for any key;
 				increase struggleatt by 1;
 				if boundcounter > 0, decrease boundcounter by 1;
 				if boundsegment is 2:
@@ -898,12 +897,12 @@ to fsdfvore:
 							now tempnum2 is 0;
 							now Trixieexit is 1;
 							follow the turnpass rule;
-				else:
-					if struggleatt < 3 and struggleatt is not 0:
+				else if struggleatt is not 0:
+					if struggleatt < 3:
 						say "     You continue to struggle and protest against these twisted confines, trying to upset the beast's stomach enough to free you. [if struggleatt is 1]You don't seem to make any headway[else]She begins to groan as your prison rumbles[end if]...";
 						increase lustatt by 7 + (lustadjust * 2);
 						wyvhumanityroll;
-					else if struggleatt is not 0:
+					else:
 						if boundmod2 is not 1:
 							say "     Body finally churning, it can no longer take your protests, constricting around you as it squeezes you back up the sea dragoness's gullet. Whining lowly in discontent, the beast has little interest in letting you go so easy, even if it's a struggle for her to keep you down. You still have a ways to go!";
 							now boundsegment is 1;

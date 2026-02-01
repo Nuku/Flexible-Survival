@@ -243,8 +243,6 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "batcubus milk"	"A small plastic bottle, filled with fresh batcubus milk."	1	batcubus milk
 
-Scent of batcubus milk is "You open the lid of the bottle and smell the milk. Seems fresh and drinkable, even though it isn't refrigerated. Must be a side effect of the nanites in it.".
-
 batcubus milk is a grab object.
 batcubus milk is milky.
 batcubus milk is infectious.
@@ -254,6 +252,8 @@ Usedesc of batcubus milk is "[batcubus milk use]".
 to say batcubus milk use:
 	say "     Taking the cap off the bottle of milk, you greedily drink down its contents, swallowing the tasty milk.";
 	PlayerDrink 6;
+
+Scent of batcubus milk is "You open the lid of the bottle and smell the milk. Seems fresh and drinkable, even though it isn't refrigerated. Must be a side effect of the nanites in it.".
 
 Section 4 - Endings
 

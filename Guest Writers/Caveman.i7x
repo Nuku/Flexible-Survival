@@ -77,7 +77,7 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The caveman swings his huge club and smashes you in the head.[or]The caveman grabs you easily in a massive hand and tosses you to the ground.[or]The caveman kicks you with a giant hairy foot![at random]"; [ Successful attack message ]
+	now attack entry is "The caveman [one of]swings his huge club and smashes you in the head.[or]grabs you easily in a massive hand and tosses you to the ground.[or]kicks you with a giant hairy foot![at random]"; [ Successful attack message ]
 	now defeated entry is "[Caveman loses]";
 	now victory entry is "[Caveman wins]";
 	now desc entry is "[CavemanDesc]";

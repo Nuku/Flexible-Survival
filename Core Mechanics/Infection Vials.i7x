@@ -146,7 +146,7 @@ carry out VialInventorying:
 			if remainder after dividing x by invcolumns is 0:
 				LineBreak;
 			else:
-				say "  ||  ";
+				say "  --  ";
 	LineBreak;
 
 Part 3 - Vial Commands

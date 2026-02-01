@@ -182,18 +182,18 @@ to say BeatTheVixenNurse:
 	now sortorder entry is 2;
 	now description entry is "Play with her using your hand";
 	[
-	if Player is female and vixgender is 1:
-		choose a blank row in table of fucking options;
-		now title entry is "Ride her cock";
-		now sortorder entry is 3;
-		now description entry is "Take her knotted cock on your own terms?";
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Let her fuck your pussy";
-		now sortorder entry is 4;
-		now description entry is "Let her breed your pussy";
-	[]
 	if vixgender is 1:
+		if Player is female:
+			choose a blank row in table of fucking options;
+			now title entry is "Ride her cock";
+			now sortorder entry is 3;
+			now description entry is "Take her knotted cock on your own terms?";
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Let her fuck your pussy";
+			now sortorder entry is 4;
+			now description entry is "Let her breed your pussy";
+		[]
 		Choose a blank row in table of fucking options;
 		now title entry is "Let her fuck your ass";
 		now sortorder entry is 5;
@@ -473,9 +473,7 @@ name	desc	weight	object
 "healing booster"	"A small syringe filled with a clear, blue fluid."	1	healing booster
 
 healing booster is a grab object. It is fast.
-
 the scent of the healing booster is "The healing booster smells of chemicals and medicine.".
-
 Usedesc of healing booster is "[healing booster use]".
 
 to say healing booster use:

@@ -480,8 +480,8 @@ to NumberVariableSave:
 		-- "dolinfloss": now NumberVarValue entry is dolinfloss;
 		-- "dollfound": now NumberVarValue entry is dollfound;
 		-- "dolphinbundle": now NumberVarValue entry is dolphinbundle;
-		-- "dolphinconsent": now NumberVarValue entry is dolphinconsent;
-		[-- "dolphindefeat": now NumberVarValue entry is dolphindefeat;]
+		[-- "dolphinconsent": now NumberVarValue entry is dolphinconsent;
+		-- "dolphindefeat": now NumberVarValue entry is dolphindefeat;]
 		-- "dolphinmode": now NumberVarValue entry is dolphinmode;
 		-- "dolphintricked": now NumberVarValue entry is dolphintricked;
 		-- "dolphinwantmate": now NumberVarValue entry is dolphinwantmate;
@@ -790,7 +790,7 @@ to NumberVariableSave:
 		-- "Kitsunearoused": now NumberVarValue entry is Kitsunearoused;
 		-- "Kitsunetalk": now NumberVarValue entry is Kitsunetalk;
 		-- "kittyness": now NumberVarValue entry is kittyness;
-		-- "knightcrestnum": now NumberVarValue entry is knightcrestnum;
+		[-- "knightcrestnum": now NumberVarValue entry is knightcrestnum;]
 		-- "KoballoonLossCounter": now NumberVarValue entry is KoballoonLossCounter;
 		-- "KoballoonMet": now NumberVarValue entry is KoballoonMet;
 		-- "koboldgangmet": now NumberVarValue entry is koboldgangmet;
@@ -798,7 +798,7 @@ to NumberVariableSave:
 		-- "KoboldScaleColor": now NumberVarValue entry is KoboldScaleColor;
 		-- "Koghhstatus": now NumberVarValue entry is Koghhstatus;
 		-- "KorvinSubmitCounter": now NumberVarValue entry is KorvinSubmitCounter;
-		-- "kpstatus": now NumberVarValue entry is kpstatus;
+		[-- "kpstatus": now NumberVarValue entry is kpstatus;]
 		-- "KTO": now NumberVarValue entry is KTO;
 		-- "KitsuneEventStage": now NumberVarValue entry is KitsuneEventStage;
 		[-- "ktspeciesbonus": now NumberVarValue entry is ktspeciesbonus;]
@@ -951,7 +951,7 @@ to NumberVariableSave:
 		-- "Leonardtimer": now NumberVarValue entry is Leonardtimer;
 		-- "leosupplies": now NumberVarValue entry is leosupplies;
 		-- "lessontime": now NumberVarValue entry is lessontime;
-		-- "lgnumber": now NumberVarValue entry is lgnumber;
+		[-- "lgnumber": now NumberVarValue entry is lgnumber;]
 		-- "libidomemory": now NumberVarValue entry is libidomemory;
 		-- "libstealth": now NumberVarValue entry is libstealth;
 		-- "libsuppcount": now NumberVarValue entry is libsuppcount;
@@ -1315,7 +1315,7 @@ to NumberVariableSave:
 		[-- "Spritedefeat": now NumberVarValue entry is Spritedefeat;]
 		-- "SquadEncounters": now NumberVarValue entry is SquadEncounters;
 		-- "squidcolor": now NumberVarValue entry is squidcolor;
-		-- "squirefeature": now NumberVarValue entry is squirefeature;
+		[-- "squirefeature": now NumberVarValue entry is squirefeature;]
 		-- "squirrelfucked": now NumberVarValue entry is squirrelfucked;
 		-- "squirrelspot": now NumberVarValue entry is squirrelspot;
 		-- "ssstash": now NumberVarValue entry is ssstash;
@@ -1394,7 +1394,7 @@ to NumberVariableSave:
 		-- "TritonRelationship": now NumberVarValue entry is TritonRelationship;
 		-- "TryoutScore": now NumberVarValue entry is TryoutScore;
 		-- "TSEventCounter": now NumberVarValue entry is TSEventCounter;
-		-- "tsw_fsd": now NumberVarValue entry is tsw_fsd;
+		[-- "tsw_fsd": now NumberVarValue entry is tsw_fsd;]
 		-- "tsw_relationship": now NumberVarValue entry is tsw_relationship;
 		-- "tti_scene": now NumberVarValue entry is tti_scene;
 		-- "ttIcarus": now NumberVarValue entry is ttIcarus;
@@ -1812,8 +1812,8 @@ to TruthVariableSave:
 		-- "TomeEventPending": now TruthVarValue entry is TomeEventPending;
 		-- "toystoreoverride": now TruthVarValue entry is toystoreoverride;
 		-- "toystoreseen": now TruthVarValue entry is toystoreseen;
-		-- "ts_warrior": now TruthVarValue entry is ts_warrior;
-		-- "tsw_victory": now TruthVarValue entry is tsw_victory;
+		[-- "ts_warrior": now TruthVarValue entry is ts_warrior;
+		-- "tsw_victory": now TruthVarValue entry is tsw_victory;]
 		-- "twistedPimpBountyState": now TruthVarValue entry is twistedPimpBountyState;
 		-- "twistfsdfeedmemory": now TruthVarValue entry is twistfsdfeedmemory;
 		-- "TyrTraining": now TruthVarValue entry is TyrTraining;
@@ -2736,9 +2736,9 @@ to VariableNumberLoad:
 					if dollfound is not NumberVarValue entry, now dollfound is NumberVarValue entry;
 				-- "dolphinbundle":
 					if dolphinbundle is not NumberVarValue entry, now dolphinbundle is NumberVarValue entry;
-				-- "dolphinconsent":
+				[-- "dolphinconsent":
 					if dolphinconsent is not NumberVarValue entry, now dolphinconsent is NumberVarValue entry;
-				[-- "dolphindefeat":
+				-- "dolphindefeat":
 					if dolphindefeat is not NumberVarValue entry, now dolphindefeat is NumberVarValue entry;]
 				-- "dolphinmode":
 					if dolphinmode is not NumberVarValue entry, now dolphinmode is NumberVarValue entry;
@@ -3360,8 +3360,8 @@ to VariableNumberLoad:
 					if Kitsunetalk is not NumberVarValue entry, now Kitsunetalk is NumberVarValue entry;
 				-- "kittyness":
 					if kittyness is not NumberVarValue entry, now kittyness is NumberVarValue entry;
-				-- "knightcrestnum":
-					if knightcrestnum is not NumberVarValue entry, now knightcrestnum is NumberVarValue entry;
+				[-- "knightcrestnum":
+					if knightcrestnum is not NumberVarValue entry, now knightcrestnum is NumberVarValue entry;]
 				-- "KoballoonLossCounter":
 					if KoballoonLossCounter is not NumberVarValue entry, now KoballoonLossCounter is NumberVarValue entry;
 				-- "KoballoonMet":
@@ -3376,8 +3376,8 @@ to VariableNumberLoad:
 					if Koghhstatus is not NumberVarValue entry, now Koghhstatus is NumberVarValue entry;
 				-- "KorvinSubmitCounter":
 					if KorvinSubmitCounter is not NumberVarValue entry, now KorvinSubmitCounter is NumberVarValue entry;
-				-- "kpstatus":
-					if kpstatus is not NumberVarValue entry, now kpstatus is NumberVarValue entry;
+				[-- "kpstatus":
+					if kpstatus is not NumberVarValue entry, now kpstatus is NumberVarValue entry;]
 				-- "KTO":
 					if KTO is not NumberVarValue entry, now KTO is NumberVarValue entry;
 				-- "KitsuneEventStage":
@@ -3682,8 +3682,8 @@ to VariableNumberLoad:
 					if leosupplies is not NumberVarValue entry, now leosupplies is NumberVarValue entry;
 				-- "lessontime":
 					if lessontime is not NumberVarValue entry, now lessontime is NumberVarValue entry;
-				-- "lgnumber":
-					if lgnumber is not NumberVarValue entry, now lgnumber is NumberVarValue entry;
+				[-- "lgnumber":
+					if lgnumber is not NumberVarValue entry, now lgnumber is NumberVarValue entry;]
 				-- "libidomemory":
 					if libidomemory is not NumberVarValue entry, now libidomemory is NumberVarValue entry;
 				-- "libstealth":
@@ -4414,8 +4414,8 @@ to VariableNumberLoad:
 					if SquadEncounters is not NumberVarValue entry, now SquadEncounters is NumberVarValue entry;
 				-- "squidcolor":
 					if squidcolor is not NumberVarValue entry, now squidcolor is NumberVarValue entry;
-				-- "squirefeature":
-					if squirefeature is not NumberVarValue entry, now squirefeature is NumberVarValue entry;
+				[-- "squirefeature":
+					if squirefeature is not NumberVarValue entry, now squirefeature is NumberVarValue entry;]
 				-- "squirrelfucked":
 					if squirrelfucked is not NumberVarValue entry, now squirrelfucked is NumberVarValue entry;
 				-- "squirrelspot":
@@ -4572,8 +4572,8 @@ to VariableNumberLoad:
 					if TryoutScore is not NumberVarValue entry, now TryoutScore is NumberVarValue entry;
 				-- "TSEventCounter":
 					if TSEventCounter is not NumberVarValue entry, now TSEventCounter is NumberVarValue entry;
-				-- "tsw_fsd":
-					if tsw_fsd is not NumberVarValue entry, now tsw_fsd is NumberVarValue entry;
+				[-- "tsw_fsd":
+					if tsw_fsd is not NumberVarValue entry, now tsw_fsd is NumberVarValue entry;]
 				-- "tsw_relationship":
 					if tsw_relationship is not NumberVarValue entry, now tsw_relationship is NumberVarValue entry;
 				-- "tti_scene":
@@ -5423,10 +5423,10 @@ to VariableTruthLoad:
 					if toystoreoverride is not TruthVarValue entry, now toystoreoverride is TruthVarValue entry;
 				-- "toystoreseen":
 					if toystoreseen is not TruthVarValue entry, now toystoreseen is TruthVarValue entry;
-				-- "ts_warrior":
+				[-- "ts_warrior":
 					if ts_warrior is not TruthVarValue entry, now ts_warrior is TruthVarValue entry;
 				-- "tsw_victory":
-					if tsw_victory is not TruthVarValue entry, now tsw_victory is TruthVarValue entry;
+					if tsw_victory is not TruthVarValue entry, now tsw_victory is TruthVarValue entry;]
 				-- "twistedPimpBountyState":
 					if twistedPimpBountyState is not TruthVarValue entry, now twistedPimpBountyState is TruthVarValue entry;
 				-- "twistfsdfeedmemory":

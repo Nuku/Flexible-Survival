@@ -74,9 +74,9 @@ to setending ( Ending - text ) silence state is ( Silence - a number ): [sets th
 			now found is 1;
 			now EndingID is y;
 			break;
-	if found is 0:
+	if found is 0 and Silence is 0:
 		say "ERROR - Ending '[Ending]' not found. (setending)[line break]";
-	else if debug is at level 6 and Silence is 0:
+	else if debug is at level 6:
 		say "DEBUG: Current [']ending['] set to: [EndingID] = [name entry][line break]";
 
 to trigger the/-- ending ( Ending - a text ):
@@ -142,10 +142,8 @@ when play ends:
 	clear the screen;
 	say "[bold type]Game Over![roman type][line break]";
 	ratetheplayer;
-	say "[bracket][link]Restart[end link][close bracket] [bracket][link]Restore[end link][close bracket] [bracket][link]Undo[end link][close bracket]";
-	say "----------";
+	say "[bracket][link]Restart[end link][close bracket] [bracket][link]Restore[end link][close bracket] [bracket][link]Undo[end link][close bracket] ----------[line break]";
 	follow the self examine rule;
-	LineBreak;
 	[Go through the Table of GameEndings]
 	sort the Table of GameEndings in Priority order;
 	repeat with N running from 1 to the number of rows in the Table of GameEndings:
@@ -169,22 +167,25 @@ when play ends:
 				say "DEBUG: The Player is either dead or imprisoned, enslaved and so on. Finishing here![line break]";
 			break;
 	[FS Multiplayer AD here]
-	say "----------[line break]";
+	say "[line break][bracket][link]Restart[end link][close bracket] [bracket][link]Restore[end link][close bracket] [bracket][link]Undo[end link][close bracket] ----------[line break]";
 	say "I hope you enjoyed playing that as much as we enjoyed coding/writing it! It doesn't have to end here though! Come join other mutants and play in the Multiplayer Flexible Survival universe with us!";
 	say "https://flexiblesurvival.com[line break]";
 	say "Once you have a character, click [']direct control['], and we'll be there, waiting to give a hand!";
 	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2222";
 
 to ratetheplayer:
-	if GenderLock is 1 and score > 0:
-		now tempnum is (score / 20);
-		increase score by tempnum;
-	if "Ultimatum" is listed in feats of Player and score > 0:
-		now tempnum2 is (score / 10);
-		increase score by tempnum2;
+	now tempnum is 0;
+	now tempnum2 is 0;
+	if score > 0:
+		if GenderLock is 1:
+			now tempnum is (score / 20);
+			increase score by tempnum;
+		if "Ultimatum" is listed in feats of Player:
+			now tempnum2 is (score / 10);
+			increase score by tempnum2;
 	say "In Scenario: [bold type][scenario][roman type], you have achieved a score of [bold type][score][roman type].";
-	if GenderLock is 1 and score > 0, say "For choosing no gender lock, you received a bonus of [tempnum] points.";
-	if "Ultimatum" is listed in feats of Player and score > 0, say "Your Ultimatum perk grants you a bonus of [tempnum2] points.";
+	if tempnum > 0, say "For choosing no gender lock, you received a bonus of [tempnum] points.";
+	if tempnum2 > 0, say "Your Ultimatum perk grants you a bonus of [tempnum2] points.";
 	say "You've achieve the rank of: [bold type]";
 	if score < 0:
 		say "A used, broken condom!";
@@ -210,19 +211,8 @@ to ratetheplayer:
 	if the score > 999:
 		say "Your performance was so excellent, we'll give you a little... help, for your next run through. Type 'I am a pro' to gain 200 XP. It only works once per character";
 		if bookfound is not 0:
-			let tempnum be 0;
-			sort table of library books in booknum order;
-			repeat with y running from 1 to number of rows in table of library books:
-				choose row y in table of library books;
-				if booknum entry is bookfound:
-					now tempnum is y;
-					break;
-			choose row tempnum from table of library books;
-			if humanity of Player < 10:
-				say ". Your confused, instinctual thoughts are sometimes broken by strange thoughts or images from a book you once read";
-			else:
-				say ". With all the excitement you went through at the library, the book you found remains firmly in your mind";
-			say ". In the Abbey, type ['][bold type]dewey [bookcode entry][roman type]['] to find it again in your next game";
+			choose row with booknum of bookfound in Table of library books;
+			say "[if humanity of Player < 10]. Your confused, instinctual thoughts are sometimes broken by strange thoughts or images from a book you once read[else]. With all the excitement you went through at the library, the book you found remains firmly in your mind[end if]. In the Abbey, type ['][bold type]dewey [bookcode entry][roman type]['] to find it again in your next game";
 		say ".";
 	LineBreak;
 

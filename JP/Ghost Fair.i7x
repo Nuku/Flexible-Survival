@@ -7,11 +7,8 @@ Object	Name
 Fair's Edge	"Fair's Edge"
 
 Fair's Edge is a room.
-Description of Fair's Edge is "[Fair's Edgedesc]".
+Description of Fair's Edge is "     You are at the Fair's Edge, marked by a small fence. You can see multiple trailers and small, colorful tents. This must have been where the staff used to rest, but now it's empty of life. Not even those wild sex-crazed creatures seem to wander around here.[line break]".
 the scent of Fair's Edge is "     The scents of popcorn, cotton candy, and other treats are still faintly present, and so are the scents of arousal. Weirdly enough, you can't detect the scent of any creatures around this area.".
-
-to say Fair's Edgedesc:
-	say "     You are at the Fair's Edge, marked by a small fence. You can see multiple trailers and small, colorful tents. This must have been where the staff used to rest, but now it's empty of life. Not even those wild sex-crazed creatures seem to wander around here.";
 
 Fair's Edge is north of State Fair.
 
@@ -30,6 +27,5 @@ to say GhostFairdesc:
 		say "     You seem to be in an abandoned part of the fair. You can see some damaged, old game booths and shops through the thick fog of unknown origin.";
 
 Ghost Fair is west of Fair's Edge.
-
 
 Ghost Fair ends here.

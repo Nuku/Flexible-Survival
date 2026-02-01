@@ -76,7 +76,6 @@ name	desc	weight	object
 "pixie dust"	"A little handful of what looks like glitter, but is actually genuine magic pixie dust. It is in a small throwaway plastic container."	0	pixie dust
 
 pixie dust is a grab object.
-
 Usedesc of pixie dust is "[pixie dust use]".
 
 to say pixie dust use:

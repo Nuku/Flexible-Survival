@@ -191,6 +191,12 @@ instead of purifying an infected sword:
 	say "That doesn't even fit in the microwave. Also, putting metal in one is a really bad idea.";
 	stop the action;
 
+An everyturn rule:
+	if the infected sword is wielded:
+		say "[line break]The sword feels slimy in your hand. Maybe you shouldn't be using it.";
+		randominfect;
+		say "The infected sword changes you.";
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "ancient gladius"	"A somewhat old-looking sword, only about 25 inches long, with a double edge on its blade and a cutting tip. It is, however, very sturdy and easy to wield, good to stab and slash any foe in close range."	4	ancient gladius
@@ -342,6 +348,13 @@ Weapon Type of dirty whip is "Melee".
 Objsize of dirty whip is 3.
 Hitbonus of dirty whip is -1. [slick and goopy]
 Scent of dirty whip is "The sticky whip smells of equine cum.".
+
+An everyturn rule:
+	if the dirty whip is wielded:
+		now researchbypass is 1;
+		say "The cum on the dirty whip slips down onto your hand.";
+		infect "Black Equinoid";
+		now researchbypass is 0;
 
 Table of Game Objects (continued)
 name	desc	weight	object

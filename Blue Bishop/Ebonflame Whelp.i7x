@@ -46,8 +46,7 @@ to say ebwhelpvic:
 		say "     Completely spent, the whelp chirps weakly and eventually flops off of you and onto the ground, the audibly wet sound of his oversized cock pulling free of your hole filling the air. After a few seconds, crawling away from it, he slowly pulls himself up and flies off into the distance. Apparently satisfied[if birthedwhelp is true] with fucking his own parent[end if], he leaves you to recover from being so thoroughly filled.";
 		CreatureSexAftermath "Player" receives "Ass[if ebneuterswitch is false]Dildo[end if]Fuck" from "Ebonflame Whelp";
 		if ebneuterswitch is false:
-			LineBreak;
-			say "     [italic type]Forced to feel your bloated[if scalevalue of Player < 3], practically pregnant-looking[end if] belly, the effect of the creature's cum [one of]seems to linger[or]lingers[stopping] longer than it normally should. [one of]You have a bad feeling about what just happened[or][if HP of Player > 0]Here we go[else]Not[end if] again[stopping]...[roman type][line break]";
+			say "[line break]     [italic type]Forced to feel your bloated[if scalevalue of Player < 3], practically pregnant-looking[end if] belly, the effect of the creature's cum [one of]seems to linger[or]lingers[stopping] longer than it normally should. [one of]You have a bad feeling about what just happened[or][if HP of Player > 0]Here we go[else]Not[end if] again[stopping]...[roman type][line break]";
 			now mpreghijack is true;
 			now ebwhelphijack is 2;
 			now hijackgestation is 8;
@@ -62,8 +61,7 @@ to say ebwhelpvic:
 		say "     Completely spent, the whelp chirps weakly and eventually flops off of you and onto the ground, the audibly wet sound of his oversized cock pulling free of your hole filling the air. After a few seconds, crawling away from it, he slowly pulls himself up and flies off into the distance. Apparently satisfied[if birthedwhelp is true] with fucking his own parent[end if], he leaves you to recover from being so thoroughly filled.";
 		CreatureSexAftermath "Player" receives "Pussy[if ebneuterswitch is false]Dildo[end if]Fuck" from "Ebonflame Whelp";
 		if ebneuterswitch is false:
-			LineBreak;
-			say "     [italic type]Forced to feel your bloated[if scalevalue of Player < 3], practically pregnant-looking[end if] belly, the effect of the creature's cum [one of]seems to linger[or]lingers[stopping] longer than it normally should. [one of]You have a bad feeling about what just happened[or][if HP of Player > 0]Here we go[else]Not[end if] again[stopping]...[roman type][line break]";
+			say "[line break]     [italic type]Forced to feel your bloated[if scalevalue of Player < 3], practically pregnant-looking[end if] belly, the effect of the creature's cum [one of]seems to linger[or]lingers[stopping] longer than it normally should. [one of]You have a bad feeling about what just happened[or][if HP of Player > 0]Here we go[else]Not[end if] again[stopping]...[roman type][line break]";
 			now preghijack is true;
 			now ebwhelphijack is 1;
 			now hijackgestation is 8;
@@ -77,12 +75,8 @@ to say ebwhelpvic:
 		WaitLineBreak;
 		say "     So exhausted and spent, the whelp chittering feebly as he catches his breath, he doesn't seem to notice or care that you're still being forced to deepthroat his entire organ, only choosing to finally pull free when he flies off into the distance. Finally left to recover and gasp for air, you groan and writhe from the excessive amount of cum you were forced to swallow. Eventually, you climb to your feet finally free to go about your business once more.";
 		if ebwhelphijack > 0:
-			LineBreak;
-			say "     [italic type]Still bloated from the original whelp's violation, consuming all this burning fluid seems to have worsened your situation by accelerating your twisted offspring's growth...[roman type][line break]";
+			say "[line break]     [italic type]Still bloated from the original whelp's violation, consuming all this burning fluid seems to have worsened your situation by accelerating your twisted offspring's growth...[roman type][line break]";
 			decrease hijackgestation by 1;
-
-to say ebwhelpdef:
-	say "     [if birthedwhelp is true]Your child lets out a mournful cry before weakly making a break for it, clumsily darting off into the distance. Though you may have fended yourself off from your offspring, you're not sure adding to those whelps['] numbers is much of a victory...[else]Letting out one last, mournful cry, the whelp finally falls to the ground with a soft thud. Faintly chirping and stirring, it looks like it'll take a while to recover. You choose this time to go about your business once more, before it wakes.[end if]";
 
 to say ebwhelpdesc:
 	if birthedwhelp is false:
@@ -126,12 +120,13 @@ When Play begins:
 	add "Ebonflame Whelp" to infections of OviImpregnatorList;
 	add "Ebonflame Whelp" to infections of FirebreathList;
 	add "Ebonflame Whelp" to infections of TailweaponList;
+	add "Ebonflame Whelp" to infections of FeralmindList;
 	now Name entry is "Ebonflame Whelp";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The ebonflame whelp[or]The creature[or]The whelp[or]It[at random] [one of]clings to your [bodytype of Player] form, nipping and clawing at you until you pry it free and send it flying back[or]immediately tries to fuck you, forcing you to pull it from your back and toss it away[or]holds onto one of your limbs, biting and screeching at you until you fling it off[at random].";
-	now defeated entry is "[ebwhelpdef]";
+	now defeated entry is "     [if birthedwhelp is true]Your child lets out a mournful cry before weakly making a break for it, clumsily darting off into the distance. Though you may have fended yourself off from your offspring, you're not sure adding to those whelps['] numbers is much of a victory...[else]Letting out one last, mournful cry, the whelp finally falls to the ground with a soft thud. Faintly chirping and stirring, it looks like it'll take a while to recover. You choose this time to go about your business once more, before it wakes.[end if][line break]";
 	now victory entry is "[ebwhelpvic]";
 	now desc entry is "[ebwhelpdesc]";
 	now face entry is "NA";

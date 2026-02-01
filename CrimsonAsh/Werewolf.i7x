@@ -31,7 +31,7 @@ an everyturn rule:
 	if daytimer is day: [currently day]
 		if WerewolfWatching is true: [she's only out at night]
 			now WerewolfWatching is false;
-	else: [currently night]
+	else if Werewolf Surprise is unresolved: [currently night]
 		if Player is in Urban Forest and WerewolfRelationship is 0 and level of Player > 5:
 			if FemaleList is not banned and FurryList is not banned and FeralList is not banned:
 				if WerewolfWatching is false: [initial message]
@@ -44,7 +44,7 @@ an everyturn rule:
 
 Section 1 - Meeting Event
 
-instead of resting while Player is in Urban Forest and WerewolfWatching is true and WerewolfRelationship is 0 and Werewolf Surprise is not resolved and Werewolf Surprise is not inactive:
+instead of resting while Player is in Urban Forest and WerewolfWatching is true and WerewolfRelationship is 0:
 	say "     Finding a comfortable enough spot under a large oak, you lay down to rest and slowly begin to drift off to sleep. All of a sudden, a heavy weight is thrown against you, and your eyes shoot open to the darkness around you. Finding yourself pinned down, you realize that what is on top of you is furry, warm, and... very well muscled as it presses against you. Your face is buried in that fuzzy warmth, and as you pull your head up to identify your assailant, your gaze is met by two yellow, wolf-like eyes, burning brightly with a ferocious need that is obvious even without any words. You can feel two large mounds pressing against your body, also covered in soft fur, as well as the two hard nubs of your assailant's nipples. Further down your body, a warm wetness drips on and soaks your leg.";
 	say "     As your eyes adjust to the darkness around you, you can make out more of the creature on top of you than just the glowing eyes and their intense look. You see the canine features of a she-wolf, a snarling muzzle dripping saliva down her furred chin and onto your neck, with two furry wolf ears atop her black-coated head. With her pressed right up against your form, you are enveloped in the strong, musky aroma that emanates from the wolf. The scent of her feral heat almost overwhelms your senses, and you can feel your body start to warm up. Her two muscular arms are at your side, holding you in place with long, sharp claws which prod and poke into your prone form. Having studied you while you did the same, the werewolf decides to make her move in that moment. Her powerful hind legs spread your own while her right claw begins to pull and wrench at your clothes and equipment to strip you naked. If you're going to stop her, now is the time, although she likely won't take it well.";
 	project the Figure of Werewolf_female_icon;
@@ -97,6 +97,8 @@ instead of resting while Player is in Urban Forest and WerewolfWatching is true 
 			say "[BeatWerewolf]";
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "[LoseToWerewolf]";
+		else if fightoutcome >= 30:
+			now WerewolfRelationship is 91; [fought & fled]
 		now inasituation is false;
 		now Resolution of Werewolf Surprise is 2; [fought]
 	now Werewolf Surprise is resolved;
@@ -245,7 +247,7 @@ When Play begins:
 	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ number of pussies if sex is 'Female' or 'Both' ]
-	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 16; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 4;
 	now SeductionImmune entry is false;
 	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]

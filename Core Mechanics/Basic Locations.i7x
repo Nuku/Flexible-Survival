@@ -346,10 +346,7 @@ Object	Name
 Henry's Brewery	"Henry's Brewery"
 
 Henry's Brewery is a room.
-Description of Henry's Brewery is "[BreweryDesc]".
-
-to say BreweryDesc:
-	say "     After you and Urik saved him and brought him here, Henry the Hercules beetle appears to have set right to rebuilding. The wrecked interior of the flower shop has been cleaned out, with the display tables now surrounded by a mixed selection of chairs and barstools scrounged up somewhere. A sign on the wall declares his prices for beer, and there are even [one of]two[or]three[or]four[at random] customers sitting around. The door to the back room stands open, as Henry often ducks in there to check his brewing setup and supplies.";
+Description of Henry's Brewery is "     After you and Urik saved him and brought him here, Henry the Hercules beetle appears to have set right to rebuilding. The wrecked interior of the flower shop has been cleaned out, with the display tables now surrounded by a mixed selection of chairs and barstools scrounged up somewhere. A sign on the wall declares his prices for beer, and there are even [one of]two[or]three[or]four[at random] customers sitting around. The door to the back room stands open, as Henry often ducks in there to check his brewing setup and supplies.[line break]".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -550,10 +547,7 @@ after looking while player is in Sitting Area:
 to say usittingarea desc:
 	say "     Obviously meant for small study groups, the area around you has only a few tables and couches spread about. Most of the nearby shelves have been knocked down, leaving their books strewn across the floor. Although disorganized, the area also has a very lived-in feel to it, helping you relax your nerves and reflect on your next move. Heading [link]southwest[end link] will take you back to the second floor landing, and a huge window overlooks the back of the library to the [link]southeast[end link].";
 	if doberman companion is tamed:
-		say "     At the edge of the open floor area, Spike has made a little man-cave for himself, dragging a mattress up from the bunker and setting a desk on its side to block the passage between two bookshelves. The little nook that created contains a number of posters of scantily dressed women";
-		if Spike is visible:
-			say ". The dobie frequently strokes himself off while looking at them";
-		say ".";
+		say "     At the edge of the open floor area, Spike has made a little man-cave for himself, dragging a mattress up from the bunker and setting a desk on its side to block the passage between two bookshelves. The little nook that created contains a number of posters of scantily dressed women[if Spike is visible]. The Dobie frequently strokes himself off while looking at them[end if].";
 
 Table of GameRoomIDs (continued)
 Object	Name

@@ -13,8 +13,8 @@ to say tauruswon:
 	else:
 		say "     The bull sniffs your crotch, but with the lack of any female genitalia, he swiftly loses sexual interest in you. Problem is... if you're not a mate for him, you are competition. Kicking you with a large hoof, he throws you on the grass, and you roll a few times before coming to a rest. Despite the pain, you count yourself lucky to have survived the encounter.";
 
-to say tauruslost:
-	say "     Almost losing consciousness, the instincts of the now-weak bull are everything that is pushing him now, and it looks like they were screaming at him to run away from you. Trying to ram you for a final time, he fails miserably as all the wounds from the fight make him slow and really easy to dodge. But the bull doesn't stop, running away to the horizon as he makes his escape.";
+[to say tauruslost:
+	say "     Almost losing consciousness, the instincts of the now-weak bull are everything that is pushing him now, and it looks like they were screaming at him to run away from you. Trying to ram you for a final time, he fails miserably as all the wounds from the fight make him slow and really easy to dodge. But the bull doesn't stop, running away to the horizon as he makes his escape.";]
 	[Maybe there is a way to bound the bull instead, you could do something with him]
 
 to say taurusdesc:
@@ -50,7 +50,7 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The mighty bull charges at you.[or]Swinging his horns, the bull tries to impale you on their pointy ends.[or]He takes a step back, tensing his muscles, then charges at you.[or]The bull groans and moos like a mad cow before going for a frantic attack.[or]The bull's horns gleam with ecstasy as he readies his next attack, then tries to spear you with one of them, giving you a bleeding scratch.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[tauruslost]"; [ Text or say command used when Monster is defeated.]
+	now defeated entry is "     Almost losing consciousness, the instincts of the now-weak bull are everything that is pushing him now, and it looks like they were screaming at him to run away from you. Trying to ram you for a final time, he fails miserably as all the wounds from the fight make him slow and really easy to dodge. But the bull doesn't stop, running away to the horizon as he makes his escape.[line break]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[tauruswon]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[taurusdesc]";
 [	to be decided if Taurus will have an infection:
@@ -82,8 +82,8 @@ When Play begins:
 	now Breast Size entry is 0; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity] [ Length of female sex infection will attempt to give you. ]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex infection will try and give you ]
+	now Cunt Depth entry is 28; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity] [ Length of female sex infection will attempt to give you. ]
+	now Cunt Tightness entry is 8; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex infection will try and give you ]
 	now SeductionImmune entry is false;
 	now libido entry is 70; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "food"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]

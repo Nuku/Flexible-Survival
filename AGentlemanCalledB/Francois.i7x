@@ -256,7 +256,7 @@ Instead of conversing the Francois:
 		say "     'I was having such difficulty before you came along. I don't know if your coming around is scaring them off now, but I was having no end of trouble before. These hands, they were made for the baking and for the love, not the fighting,' he says, momentarily forgetting he's got paws now. 'Zut alors! How most of them were rude lovers! No passion, no care for their lover, just raw lust.";
 		say "     'Even from the girls. I tried to refuse them, but would they listen? Non! They would get what they wanted in the end, but it was always so hollow. I am sad for them. [if Player is male]But I have found a good lover in you, mon délice,' he adds, running his paws over you as he gives you a passionate kiss full of doggy tongue in your mouth[else if Player is female]But now I have found you, mon amie,' he says with a smile before giving you a kiss on the cheek[else]But now I have found you, mon ami,' he says with a smile before giving you a kiss on the cheek[end if].";
 		now Francoistalk1 is true;
-	else if a random chance of 3 in 5 succeeds and Francois_Undiscovered is not empty:
+	else if Francois_Undiscovered is not empty and a random chance of 3 in 5 succeeds:
 		say "[FrancoisHint]";
 	else if a random chance of 1 in 3 succeeds:
 		say "     '[if daytimer is day]Bonjour[else]Bonsoir[end if], [one of]mon ami[if Player is purefemale]e[end if][or]my friend[at random]. [one of]Comment ça va[or]Comment allez-vous[or]How are you[at random]?'";
@@ -291,7 +291,6 @@ instead of fucking the Francois:
 			now lastfuck of Francois is turns;
 		else:
 			say "[Francoissexmenu]";
-			now lastfuck of Francois is turns;
 
 to say Francoissexmenu:
 	now sextablerun is 0;
@@ -788,7 +787,7 @@ to say bleuettonneGet:
 	if Player consents:
 		LineBreak;
 		say "[bleuettonne Use][line break]";
-		if Player is FemalePreferred or (Player is male and "Modest Organs" is listed in feats of Player):
+		if Player is FemalePreferred or (Player is male and ("Modest Organs" is listed in feats of Player or Ball Size of Player > 6)):
 			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do your best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
 			say "     'Oh my, what a magnifique result,' Francois says with a grin as he watches your groin change.";
@@ -833,8 +832,7 @@ to say lollicockGet:
 		else:
 			say " a rumbling builds in your belly. Clearly your body doesn't agree with something about the treat.";
 		PlayerEat 5;
-		LineBreak;
-		say "     [if lollicockCheck is 0]When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do your best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again[else]'Mon dieu! What an unexpected result!' Francois says, licking his lips as he eyes up your new candy member. 'I certainly would like to give that a taste,' he says with a naughty smirk[end if].";
+		say "[line break]     [if lollicockCheck is 0]When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do your best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again[else]'Mon dieu! What an unexpected result!' Francois says, licking his lips as he eyes up your new candy member. 'I certainly would like to give that a taste,' he says with a naughty smirk[end if].";
 	else:
 		LineBreak;
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";
@@ -875,12 +873,10 @@ to say cheesecakeGet:
 		cheesecakeinfect;
 		cheesecakeinfect;
 		if cheesecakemode is 1 and player is cheesecakebodied:
-			LineBreak;
-			say "     After your large serving of the delicious cake, your belly rumbles as your cheesecake body shifts and swells, becoming plump and Rubenesque.";
+			say "[line break]     After your large serving of the delicious cake, your belly rumbles as your cheesecake body shifts and swells, becoming plump and Rubenesque.";
 		now cheesecakemode is 0;
 		PlayerEat 6;
-		LineBreak;
-		say "     'Oh là!' Francois says as he watches your changes slow to an end. 'I guess what they say is true. You really are what you eat,' he says with a silly grin.";
+		say "[line break]     'Oh là!' Francois says as he watches your changes slow to an end. 'I guess what they say is true. You really are what you eat,' he says with a silly grin.";
 	else:
 		LineBreak;
 		say "     Accepting the treat from Francois, he looks quite disappointed as you stash the snack away in your bag. You assure him you'll eat it later and let him know how it was, but he still seems a little saddened that you aren't going to try it right away.";

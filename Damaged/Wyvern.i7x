@@ -20,16 +20,13 @@ to say WYVDESC:
 	else:
 		say "     It sets upon you with a hail of its goop, but by this point you're so adept that you easily outmaneuver it. [if scalevalue of Player < 4]You feel that same crazed compulsion to take on the creature so much larger than you. [end if]You raise your [if weapon object of Player is journal]fists[else]weapon in the air[end if] and give a wild battle cry before rushing at it.";
 
-to say WYVATK:
-	say "[if WYVLEV is 0][one of]Again the beast sprays you, slowly building up more and more layers of the goop[or]More of the adhesive, thickening stuff hits you. You can barely stand as the weight starts to drag you down[or]You are assaulted by a volley of the wyvern's goop[at random][else]The [one of]wyvern[or]massive beast[at random] [one of]slashes at you with its vicious wing-talons[or]swipes at you with its impressive tail[or]bites at you with its fierce teeth[or]assaults you with a barrage of its goop[at random][end if].[no line break]";
-
 to say WYVDEF:
 	if WYVLEV is 0:
 		say "     You manage to pull free of the goop, granting you the chance to retreat into one of the nearby buildings. You listen on, for a while, as the beast tries to break through these confines, the sound of its presence dying down before it eventually retreats entirely, leaving you to go about your business once more.";
 	else:
-		say "     With one final blow, you manage to fell the massive wyvern, crying out before it crumples to the earth, too weak to contest your will any longer";
+		say "     With one final blow, you manage to fell the massive wyvern, crying out before it crumples to the earth, too weak to contest your will any longer. ";
 		if Libido of Player > 40 or "Dominant" is listed in feats of Player:
-			say ". Shall you have some fun with beast?";
+			say "Shall you have some fun with beast?";
 			if Player consents:
 				if WYVGEN is 0:
 					LineBreak;
@@ -41,9 +38,11 @@ to say WYVDEF:
 				LineBreak;
 				say "     You choose to leave the creature as-is, turning to depart.";
 		else:
-			say ". Satisfied in your supreme victory, you turn to depart.";
+			say "Satisfied in your supreme victory, you turn to depart.";
 
 to say WYVVIC:
+	if WYVGEN is 1: [female]
+		project the figure of Wyvern_female_icon;
 	if boundstate is false:
 		if HP of Player > 0:
 			say "     You decide surrender is the best course of action, leaving yourself at the whims of the massive beast. [gche] doesn't really regard this gesture - [ghe] either doesn't trust you, doesn't care, or is simply not all that bright - and you are quickly struck with a hail of the wyvern's adhesive fluid, pinning you completely to the ground";
@@ -117,11 +116,11 @@ to say WYVVIC:
 			if Libido of Player > 30 and Player is not neuter:
 				say "it's not long before you cry out in orgasm, [if Cock Count of Player > 1]cocks smearing their [Cum Load Size of Player] load against both your torsos[else if Player is male]cock smearing its [Cum Load Size of Player] load across both your torsos[else]neglected cunt[sfn] oozing down onto the invading organ[end if]. He doesn't seem to even notice this, relentlessly eager to rail for a seemingly endless length of time before the wyvern finally lets out an ear-splitting screech. At first, the initial gouts of the beast's thick, virile seed are slow, but they very quickly intensify until it feels like you're being utterly hosed by them, [if scalevalue of Player < 4]forced to watch as each gout balloons out your stomach even further[else if scalevalue of Player is 4]visibly swelling with each gout[else]wholly filling you[end if] until it sputters from your hole.";
 			else:
-				say "you're railed by the relentlessly eager wyvern for what seems like forever, finally letting out an ear-splitting screech in bliss. At first, the initial gouts of the beast's thick, virile seed are slow, but they very quickly intensify until it feels like you're being utterly hosed by them, [if scalevalue of Player < 4]forced to watch each gout balloon out your stomach even further[else if scalevalue of Player is 4]visibly swelling with each gout[else]wholly filling you[end if] until it sputters from your hole";
+				say "you're railed by the relentlessly eager wyvern for what seems like forever, finally letting out an ear-splitting screech in bliss. At first, the initial gouts of the beast's thick, virile seed are slow, but they very quickly intensify until it feels like you're being utterly hosed by them, [if scalevalue of Player < 4]forced to watch each gout balloon out your stomach even further[else if scalevalue of Player is 4]visibly swelling with each gout[else]wholly filling you[end if] until it sputters from your hole. ";
 				if Player is not neuter:
-					say ". The sensation is intense enough that you're driven to cry out in your own orgasm, [if Cock Count of Player > 1]cocks smearing their [Cum Load Size of Player] load against both your torsos[else if Player is male]cock smearing its [Cum Load Size of Player] load across both your torsos[else]neglected cunt[sfn] oozing down onto the invading organ[end if], not that the beast even seems to notice.";
+					say "The sensation is intense enough that you're driven to cry out in your own orgasm, [if Cock Count of Player > 1]cocks smearing their [Cum Load Size of Player] load against both your torsos[else if Player is male]cock smearing its [Cum Load Size of Player] load across both your torsos[else]neglected cunt[sfn] oozing down onto the invading organ[end if], not that the beast even seems to notice.";
 				else:
-					say ". Without an outlet, strained hole milking its invading organ, you are forced to struggle against this twisted, wanton fervor, not that the beast cares about or even notices your plight.";
+					say "Without an outlet, strained hole milking its invading organ, you are forced to struggle against this twisted, wanton fervor, not that the beast cares about or even notices your plight.";
 			CreatureSexAftermath "Player" receives "AssFuck" from "Wyvern";
 			WaitLineBreak;
 			if boundstate is true:
@@ -154,7 +153,6 @@ to say WYVVIC:
 				say "     With little ceremony or care, you watch as the beast's dick retreats back from whence it hid before he pulls away, taking to the sky once more. It takes you several moments to figure out up from down after the whole ordeal before you start pulling yourself free of your primitive bondage. Once free, it takes quite a while to clean yourself off and just as long to not feel completely sore all over.";
 			CreatureSexAftermath "Player" receives "OralCock" from "Wyvern";
 	else: [female]
-		project the figure of Wyvern_female_icon;
 		if "Touched by Madness" is listed in feats of Player and ((scalevalue of Player is 3 and player is twistcapped) or scalevalue of Player > 3) and ((Player is kinky and a random chance of 1 in 2 succeeds) or (player is not kinky and a random chance of 1 in 4 succeeds)) and boundstate is false:
 			say ". The monster circles around you for a moment, intent on asserting her dominance by screeching at you as she eyes you over, sizing you up with a rather peculiar expression...";
 			say "     Her eventual approach reveals she is already heavy with eggs, making you wonder [if scalevalue of Player is 3]how she exactly intends to fit you in there[else]why she'd bother dealing with you in the first place[end if]. [if scalevalue of Player is 3]Moving over[else]Climbing on top of[end if] you, bestial vent poised against [if Cunt Count of Player > 1 and Cunt Depth of Player > 14 and anallevel < 3]one of your exposed cunts[else if Player is female and Cunt Depth of Player > 14 and anallevel < 3]your exposed cunt[else]anal ring[end if], her pained low grunts elucidate on her twisted intent.";
@@ -245,16 +243,14 @@ to say WYVVIC:
 			if WYVSF is 0:
 				now WYVSF is 3;
 			else if WYVSF < 3:
-				LineBreak;
 				increase WYVSF by 1;
-				say "     [italic type]Your infection seems to be influencing your mind and making you more inclined towards female wyverns, [if WYVSF < 3]though you could really go either way at this point[else]to the exclusion of all others[end if].[roman type][line break]";
+				say "[line break]     [italic type]Your infection seems to be influencing your mind and making you more inclined towards female wyverns, [if WYVSF < 3]though you could really go either way at this point[else]to the exclusion of all others[end if].[roman type][line break]";
 		else:
 			if WYVSF is 0:
 				now WYVSF is 1;
 			else if WYVSF > 1:
-				LineBreak;
 				decrease WYVSF by 1;
-				say "     [italic type]Your infection seems to be influencing your mind and making you more inclined towards male wyverns, [if WYVSF > 1]though you could really go either way at this point[else]to the exclusion of all others[end if].[roman type][line break]";
+				say "[line break]     [italic type]Your infection seems to be influencing your mind and making you more inclined towards male wyverns, [if WYVSF > 1]though you could really go either way at this point[else]to the exclusion of all others[end if].[roman type][line break]";
 
 Section 1-2 - Victory Sex Trees
 
@@ -401,7 +397,7 @@ to say wyvgen_1: [Anal Pitching]
 				if Cock Length of Player > 19:
 					now tempnum is 2;
 				else:
-					say "Shall you penetrate [ghis] ass exclusively? Otherwise, you'll make use of both holes.";
+					say "     Shall you penetrate [ghis] ass exclusively? Otherwise, you'll make use of both holes.";
 					if Player consents:
 						now tempnum is 1;
 					else:
@@ -416,18 +412,18 @@ to say wyvgen_1: [Anal Pitching]
 	say "     The wyvern growling lowly, [if scalevalue of Player < 4][ghe]'s no doubt a shameful sight to see, being railed by [ghis] diminutive prey, [end if][if WYVGEN is 0]his proud, unattended dick bobbing slightly against open air[else if WYVGEN is 1 and tempnum is not 2]her unattended cunt oozing against the open air[else]her twin holes throbbing needily against your dicks[end if]. As time goes on, your pace continuing to pick up, it's clear that you won't be able to hold back for much longer. Shall you pull out at the last second?";
 	if Player consents:
 		LineBreak;
-		say "     You wrench [if tempnum > 0]both of your cocks[else]your cock[end if] free of the wyvern, furiously pumping [if Cock Count of Player > 2]two of them[else if Cock Count of Player is 2]both of them[else]it[end if] before you're finally overtaken with bliss, pumping your [Cum Load Size of Player] load all over the[if scalevalue of Player < 4] massive[end if] beast[if Ball Size of Player > 5], making a glaring mess of [ghim][end if]";
+		say "     You wrench [if tempnum > 0]both of your cocks[else]your cock[end if] free of the wyvern, furiously pumping [if Cock Count of Player > 2]two of them[else if Cock Count of Player is 2]both of them[else]it[end if] before you're finally overtaken with bliss, pumping your [Cum Load Size of Player] load all over the[if scalevalue of Player < 4] massive[end if] beast[if Ball Size of Player > 5], making a glaring mess of [ghim][end if]. ";
 		if tempnum2 is 1:
-			say ". This shaming is enough to set [ghim] off as well, roaring out as [ghis] [if WYVGEN is 0]own, monstrous and unattended dick twitches and sputters his seed across the earth[else if tempnum is 2]oozing portals ache against the open air[else]oozing, unattended pussy aches for attention[end if].";
+			say "This shaming is enough to set [ghim] off as well, roaring out as [ghis] [if WYVGEN is 0]own, monstrous and unattended dick twitches and sputters his seed across the earth[else if tempnum is 2]oozing portals ache against the open air[else]oozing, unattended pussy aches for attention[end if].";
 		else:
-			say ". [gche] can only twitch and groan as [ghe]'s shamed so, growling weakly as [ghis] [if WYVGEN is 0]own, unattended dick throbbing and oozing[else if tempnum is 2]oozing portals ache for additional attention[else]oozing, unattended pussy aching for attention[end if] against the open air.";
+			say "[gche] can only twitch and groan as [ghe]'s shamed so, growling weakly as [ghis] [if WYVGEN is 0]own, unattended dick throbbing and oozing[else if tempnum is 2]oozing portals ache for additional attention[else]oozing, unattended pussy aching for attention[end if] against the open air.";
 	else:
 		LineBreak;
-		say "     With one final thrust, you [if Player is knotted]tie[else]hilt[end if] your cock[if tempnum > 0]s[end if] within the wyvern, gripping [ghim] tightly as the[if scalevalue of Player < 4] massive[end if] beast's tight hole[if tempnum is 2]s are[else] is[end if] pumped full with your [Cum Load Size of Player] load[if Ball Size of Player > 5], quickly beginning to leak with your excess seed[end if]";
+		say "     With one final thrust, you [if Player is knotted]tie[else]hilt[end if] your cock[if tempnum > 0]s[end if] within the wyvern, gripping [ghim] tightly as the[if scalevalue of Player < 4] massive[end if] beast's tight hole[if tempnum is 2]s are[else] is[end if] pumped full with your [Cum Load Size of Player] load[if Ball Size of Player > 5], quickly beginning to leak with your excess seed[end if]. ";
 		if tempnum2 is 1:
-			say ". This is enough to set [ghim] off as well, roaring out as [ghis] [if WYVGEN is 0]own, monstrous and unattended dick twitches and sputters his seed across the earth[else if tempnum is 2]greedy portals squeeze and milk your invading dicks of every last drop[else]greedy pucker squeezes and milks you tightly of every last drop[end if].";
+			say "This is enough to set [ghim] off as well, roaring out as [ghis] [if WYVGEN is 0]own, monstrous and unattended dick twitches and sputters his seed across the earth[else if tempnum is 2]greedy portals squeeze and milk your invading dicks of every last drop[else]greedy pucker squeezes and milks you tightly of every last drop[end if].";
 		else:
-			say ". [gche] can only twitch and groan as [ghe]'s shamed so, growling weakly as [ghis] [if WYVGEN is 0]own, unattended dick throbs and oozes[else if tempnum is 2]stuffed portals ache for additional attention[else]oozing, unattended pussy aches for attention[end if] against the open air.";
+			say "[gche] can only twitch and groan as [ghe]'s shamed so, growling weakly as [ghis] [if WYVGEN is 0]own, unattended dick throbs and oozes[else if tempnum is 2]stuffed portals ache for additional attention[else]oozing, unattended pussy aches for attention[end if] against the open air.";
 	say "     You need a moment to catch your breath, but you eventually pull away from the monster, observing the mess you've made, [ghis] form a writhing, lust-hazed, and exhausted pile of scales. No doubt it'll take the beast a while to recover from that, and you choose to depart, leaving [ghim] to the mercy of those in the vicinity who might risk the opportunity for some sloppy seconds.";
 	CreatureSexAftermath "Wyvern" receives "AssFuck" from "Player";
 	if tempnum is 2: [Double penetration: Player fucked both holes]
@@ -641,11 +637,11 @@ to say wyvfem_1: [Cunt Pitching]
 		say "     You wrench [if tempnum > 0]both of your cocks[else]your cock[end if] free of the wyvern, furiously jerking [if Cock Count of Player > 2]two of them[else if Cock Count of Player is 2]both of them[else]it[end if] before you're finally overtaken with bliss, pumping your [Cum Load Size of Player] load all over the[if scalevalue of Player < 4] massive[end if] beast[if Ball Size of Player > 5], making a glaring mess of her[end if]. [if tempnum2 is 1]This shaming is enough to set her off as well, roaring out as her oozing portal aches[else]She can only twitch and groan as she's shamed so, growling weakly as her oozing portal aches for additional attention[end if] against the open air.";
 	else:
 		LineBreak;
-		say "     With one final thrust, you [if Player is knotted]tie[else]hilt[end if] your cock[if tempnum > 0]s[end if] within the wyvern, gripping her tightly as the[if scalevalue of Player < 4] massive[end if] beast's tight hole[if tempnum is 2]s are[else] is[end if] pumped full with your [Cum Load Size of Player] load[if Ball Size of Player > 5], quickly beginning to leak with your excess seed[end if]";
+		say "     With one final thrust, you [if Player is knotted]tie[else]hilt[end if] your cock[if tempnum > 0]s[end if] within the wyvern, gripping her tightly as the[if scalevalue of Player < 4] massive[end if] beast's tight hole[if tempnum is 2]s are[else] is[end if] pumped full with your [Cum Load Size of Player] load[if Ball Size of Player > 5], quickly beginning to leak with your excess seed[end if]. ";
 		if tempnum2 is 1:
-			say ". This is enough to set her off as well, roaring out as her [if tempnum is 2]greedy portals squeeze and milk your invading dicks of every last drop[else]greedy portal squeezes and milks you tightly of every last drop[end if].";
+			say "This is enough to set her off as well, roaring out as her [if tempnum is 2]greedy portals squeeze and milk your invading dicks of every last drop[else]greedy portal squeezes and milks you tightly of every last drop[end if].";
 		else:
-			say ". She can only twitch and groan as she's shamed so, growling weakly as her [if tempnum is 2]stuffed, barely sated portals ache for additional attention[else]stuffed, barely sated portal aches for additional attention[end if] against the open air.";
+			say "She can only twitch and groan as she's shamed so, growling weakly as her [if tempnum is 2]stuffed, barely sated portals ache for additional attention[else]stuffed, barely sated portal aches for additional attention[end if] against the open air.";
 		CreatureSexAftermath "Wyvern" receives "PussyFuck" from "Player";
 	say "     You need a moment to catch your breath, but you eventually pull away from the monster, observing the mess you've made, her form a writhing, lust-hazed, and exhausted pile of scales. No doubt it'll take the beast a while to recover from that, and you choose to depart, leaving her to the mercy of those in the vicinity who might risk the opportunity for some sloppy seconds.";
 	if tempnum is 2: [Double penetration: Player fucked both holes]
@@ -796,7 +792,7 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[WYVATK]"; [Text used when the monster makes an Attack]
+	now attack entry is "[if WYVLEV is 0][one of]Again the beast sprays you, slowly building up more and more layers of the goop[or]More of the adhesive, thickening stuff hits you. You can barely stand as the weight starts to drag you down[or]You are assaulted by a volley of the wyvern's goop[at random][else]The [one of]wyvern[or]massive beast[at random] [one of]slashes at you with its vicious wing-talons[or]swipes at you with its impressive tail[or]bites at you with its fierce teeth[or]assaults you with a barrage of its goop[at random][end if]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[WYVDEF]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[WYVVIC]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[WYVDESC]"; [ Description of the creature when you encounter it.]
@@ -1083,13 +1079,13 @@ to wyvore:
 				now enduring is true;
 				if boundrecover is true:
 					if boundsegment is 1:
-						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity";
+						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity. ";
 						if a random chance of 1 in 2 succeeds:
-							say ". However, the beast exploits this moment of vulnerability, plunging you[if tempnum2 is 1] back[end if] into the depths of [ghis] stomach with a single, powerful gulp, the beast growling in approval of its [if tempnum2 is 1]returning[else]new[end if] meal. Your body tingles as you begin to feel yourself being slowly drained by these [if tempnum2 is 1]familiar[else]new[end if] confines.";
+							say "However, the beast exploits this moment of vulnerability, plunging you[if tempnum2 is 1] back[end if] into the depths of [ghis] stomach with a single, powerful gulp, the beast growling in approval of its [if tempnum2 is 1]returning[else]new[end if] meal. Your body tingles as you begin to feel yourself being slowly drained by these [if tempnum2 is 1]familiar[else]new[end if] confines.";
 							now tempnum2 is 0;
 							now boundsegment is 0;
 						else:
-							say ". Given your stubbornness, he seems to have some brief difficulty swallowing you down, buying you some time as his powerful muscles squeezes tightly against you.";
+							say "Given your stubbornness, he seems to have some brief difficulty swallowing you down, buying you some time as his powerful muscles squeezes tightly against you.";
 					else:
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 					SanBoost 3;
@@ -1101,13 +1097,13 @@ to wyvore:
 					now boundrecover is false;
 				else:
 					if boundsegment is 1:
-						say "     You actively attempt to endure the wyvern's influence on you";
+						say "     You actively attempt to endure the wyvern's influence on you. ";
 						if a random chance of 1 in 2 succeeds:
-							say ". However, the beast manages to overcome your resistance, you're plunged[if tempnum2 is 1] back[end if] into the depths of [ghis] stomach with a single, powerful gulp, the beast growling in approval of its [if tempnum2 is 1]returning[else]new[end if] meal. Your body tingles as you begin to feel yourself being slowly drained by these [if tempnum2 is 1]familiar[else]new[end if] confines.";
+							say "However, the beast manages to overcome your resistance, you're plunged[if tempnum2 is 1] back[end if] into the depths of [ghis] stomach with a single, powerful gulp, the beast growling in approval of its [if tempnum2 is 1]returning[else]new[end if] meal. Your body tingles as you begin to feel yourself being slowly drained by these [if tempnum2 is 1]familiar[else]new[end if] confines.";
 							now tempnum2 is 0;
 							now boundsegment is 0;
 						else:
-							say ". Given your stubbornness, he seems to have some brief difficulty swallowing you down, buying you some time as his powerful muscles squeezes tightly against you.";
+							say "Given your stubbornness, he seems to have some brief difficulty swallowing you down, buying you some time as his powerful muscles squeezes tightly against you.";
 					else:
 						say "     You oblige your fate as a meal for the wyvern for a little longer. Your captor [one of]choosing to mull around for a bit as [ghe] drains you[or]taunting you with [ghis] talon's caress over [ghis] slightly bulging belly[or]half-heartedly pursuing other potential victims who have the proper sense to run and hide[at random].";
 				LineBreak;
@@ -2028,16 +2024,24 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "wyvern goop"	"Thick, whitish-yellow ooze. You've kept the stuff wrapped up so that it doesn't completely harden."	1	wyvern goop
 
-the scent of wyvern goop is "The sticky gel has an acrid, spicy scent.".
+wyvern goop is a grab object. wyvern goop is infectious. Strain of wyvern goop is "Wyvern".
+wyvern goop has a Usedesc "[wyvern goop use]".
 
 To say wyvern goop use:
+	if "Iron Stomach" is not listed in feats of Player:
+		choose a row with Name of "Wyvern" in Table of Random Critters;
+		if Player is FemalePreferred:
+			now sex entry is "Female";
+		else if Player is HermPreferred:
+			now sex entry is "Both";
+		else if Player is MalePreferred:
+			now sex entry is "Male";
 	say "     Consuming the goop does seem to sate your hunger slightly, though you quickly find your thoughts wracked with a more feral need.";
 	PlayerEat 3;
 	PlayerDrink 4;
 	SanLoss 4;
 	raise Player Libido by 1;
 
-wyvern goop is a grab object. wyvern goop is infectious. Strain of wyvern goop is "Wyvern".
-wyvern goop has a Usedesc "[wyvern goop use]".
+the scent of wyvern goop is "The sticky gel has an acrid, spicy scent.".
 
 Wyvern ends here.

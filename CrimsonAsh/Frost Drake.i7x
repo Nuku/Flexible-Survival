@@ -116,17 +116,17 @@ to say Frost DrakeSexMenu:
 		now title entry is "Demand oral";
 		now sortorder entry is 2;
 		now description entry is "Have the big drake service you";
+		[]
+		if Player is male:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck his ass";
+			now sortorder entry is 4;
+			now description entry is "Fuck the drake's ass raw";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ride the drake";
 	now sortorder entry is 3;
 	now description entry is "Ride the drake's dick";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck his ass";
-		now sortorder entry is 4;
-		now description entry is "Fuck the drake's ass raw";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

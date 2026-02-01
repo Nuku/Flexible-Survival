@@ -34,19 +34,18 @@ to say LoseToWhiptail: [Will she find a vagina? If she doesn't, she's disappoint
 			ItemLoss food by 1;
 		if carried of water bottle > 2:
 			ItemLoss water bottle by 1;
+	if WhiptailLossCount > 2, decrease WhiptailLossCount by 1;
 
 to say BeatTheWhiptail: [Catch her if you can. Beware, she's got no time for penis.]
 	if WhiptailLossCount is 0:
 		say "     The reptilian beauty takes a step back, breathing heavily after your fight. She pivots and takes off running; as you begin to chase after her, you feel a strong tug on your ankles, and you stumble, falling to the ground. Looking behind you, you see a disembodied tail wrapping itself around your legs, realizing that the lizard woman must have detached her tail to stop your pursuit. You eventually disentangle yourself, but by then, the whiptail is long gone.";
-		increase WhiptailLossCount by 1;
 	else if WhiptailLossCount is 1:
 		say "     The reptilian beauty takes a step back, breathing heavily after your fight. She pivots and takes off running, but this time, you're prepared for her trap. Or so you think; while looking down to avoid getting caught, you end up running slightly off course. When you attempt to correct your course, you feel a familiar pressure around your ankles. As the striped, brown back of your foe disappears into the distance, you sigh and begin working your legs out of the tail's hold.";
-		increase WhiptailLossCount by 1;
 	else:
 		say "     The reptilian beauty takes a step back, but you're wise to her tricks now, lunging forward to grab her before she takes off.";
 		let bonus be (( Strength of Player minus 10 ) divided by 2);
 		let xx be WhiptailLossCount / 2;
-		if xx > 8, now xx is 8;
+		if xx > 6, now xx is 6;
 		increase bonus by xx;
 		let diceroll be a random number from 1 to 20;
 		say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]19[roman type] (Strength Check):[line break]";
@@ -56,6 +55,7 @@ to say BeatTheWhiptail: [Catch her if you can. Beware, she's got no time for pen
 			say "[WhiptailVanquishedSexMenu]";
 		else:
 			say "     You grab her wrist, but she moves her arm in a circular motion and is able to break free. She turns to run, and you get an excellent view of her tail detaching as it flies at your face. Blinded and breathless as her tail constricts your neck, you spend the next few minutes trying to free yourself from its grasp. By the time you do, the whiptail is long gone. Perhaps you'll have better luck next time.";
+	increase WhiptailLossCount by 1;
 
 to say WhiptailVanquishedSexMenu:
 	now sextablerun is 0;

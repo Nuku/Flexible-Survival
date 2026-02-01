@@ -2732,8 +2732,7 @@ understand "artcred" as artistcredits.
 
 carry out artistcredits:
 	say "[bold type]Artwork Credits for Flexible Survival:[roman type][line break]";
-	LineBreak;
-	say "[bold type]Infections:[roman type][line break]";
+	say "[line break][bold type]Infections:[roman type][line break]";
 	say "     Ace by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
 	say "     Alpha Wolf by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
 	say "     Amazon by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
@@ -2874,8 +2873,7 @@ carry out artistcredits:
 	say "     Yamato Dragoness by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
 	say "     Yuppie Mink by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
 	say "     Zebra by Purplepardus @ https://furaffinity.net/user/purplepardus[line break]";
-	LineBreak;
-	say "[bold type]NPCs:[roman type][line break]";
+	say "[line break][bold type]NPCs:[roman type][line break]";
 	say "     Alexandra by Lyttathebug @ https://deviantart.com/lyttathebug[line break]";
 	say "     Amy by Sususmiles @ https://furaffinity.net/user/sususmiles[line break]";
 	say "     Andrew by Rukis @ https://furaffinity.net/user/rukis[line break]";
@@ -3062,8 +3060,7 @@ carry out artistcredits:
 	say "     Yolanda by SandySchreiber @ https://furaffinity.net/user/sandyschreiber[line break]";
 	say "     Zigor by AugurMew @ https://furaffinity.net/user/augurmew[line break]";
 	say "     Zoe Headshot by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
-	LineBreak;
-	say "[bold type]Scenes:[roman type][line break]";
+	say "[line break][bold type]Scenes:[roman type][line break]";
 	say "     Bottlenose Trapped by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
 	say "     Brutus & David by Rocketman @ (Dead Link) https://rocketmenstudio.tumblr.com[line break]";
 	say "     Boy to Fox Shampoo by Watsup @ https://furaffinity.net/user/watsup[line break]";
@@ -3085,8 +3082,7 @@ carry out artistcredits:
 	say "     Spidertaur by CrashBurnDraw @ https://furaffinity.net/user/demicrash[line break]";
 	say "     Talov & Kerr by Kupo Klein @ https://kupo-klein.tumblr.com[line break]";
 	say "     Title Screen by SonikkuDashu @ https://deviantart.com/s-dash[line break]";
-	LineBreak;
-	say "[bold type]Maps:[roman type][line break]";
+	say "[line break][bold type]Maps:[roman type][line break]";
 	say "     Mall Map by Anonymous[line break]";
 	say "     Beach Map by Goncalo @ https://artstation.com/beepe[line break]";
 	say "     City Map by Goncalo @ https://artstation.com/beepe[line break]";

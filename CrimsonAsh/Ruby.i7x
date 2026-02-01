@@ -408,8 +408,8 @@ The scent of Ruby is "     Ruby smells of brimstone, spicy-sweet alcohol and ple
 to say RubyDesc:
 	say "     Ruby is a tall humanoid, a dragon woman with violet hair running down her head and spine while ending at the point of a long tail. The rest of her is covered in mostly reddish scales while her chest and tummy area sports an orange/red texture. Her eyes glow an amber-yellow and in the middle, surrounded by blood red irises. She's nearly seven feet tall with clear musculature and definition rippling on her naked body, yet still clearly feminine with steady curves, D-cup breasts and a draconic slit tucked between her legs.";
 
-instead of conversing the Ruby:
-	say "     <WIP>";
+[instead of conversing the Ruby:
+	say "     <WIP>";]
 
 instead of fucking Ruby:
 	say "     What exactly do you plan on doing with the anthro dragoness?";

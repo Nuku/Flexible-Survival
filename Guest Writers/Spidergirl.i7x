@@ -9,15 +9,12 @@ Section 1 - Creature Responses
 to say spidergirl attack:
 	say "     [if HP of Player > 0]The spider girl does not accept your peaceful surrender and you[else]You[end if] are pinned to the ground by the spider's webbing, your struggles ineffectual! The creature slowly approaches you, a gleam of desire in her eight eyes...";
 	[ We're going to choose what kind of scene to do, male-ish (player has a cock which is used) or female-ish (player has a cunt which is used) or neither. ]
-	[let spider_choice be "neither";]
-	if a random chance of 1 in 4 succeeds and player is not impreg_able:
+	if (a random chance of 1 in 4 succeeds and player is not impreg_able) or (Player is neuter and Player is FemalePreferred):
 		say "[spidergirl_oral]";
-	if Player is herm and a random chance of 1 in 2 succeeds:
+	else if Player is male and (Cunt Count of Player is 0 or a random chance of 1 in 2 succeeds):
 		say "[spidergirl_male]";
 	else if Player is female:
 		say "[spidergirl_female]";
-	else if Player is male:
-		say "[spidergirl_male]";
 	else:
 		say "[spidergirl_neuter]";
 
@@ -29,20 +26,19 @@ to say spidergirl_oral:
 to say spidergirl_male:
 	if Cock Length of Player >= 8: [ male-ish scene; best scene ]
 		say "     She tears off your clothes and gasps in delight as your large cock is exposed. Scrabbling forward, the spider positions herself above you; then you see the armor plates between her front legs sliding apart, revealing the soft folds of a very human-like pussy. She lowers herself, and the warm wetness touches your upraised cock...";
-		say "     The softness engulfs your sensitive member, making you groan. The spider girl lets out a screech of pleasure and she begins to rock her torso; you can feel internal muscles massaging and teasing your shaft, pulling you deeply into the spider girl, until your shaft is completely surrounded by her quivering tunnel, able to take in even your massive length. The pleasure is intense, building quickly to a peak - your member tenses and suddenly jerks with orgasm. You can't help writhing in your bonds as you helplessly pump your seed into the spider girl's waiting womb. She purrs and gently rocks atop you, milking your organ until you're completely dry. Then she pulls off with a soft pop, and her sex disappears behind the armored plates again. Smiling, she turns and walks off into the shadows.";
+		WaitLineBreak;
+		say "     The softness engulfs your sensitive member, making you groan. The spider girl lets out a screech of pleasure and she begins to rock her torso; you can feel internal muscles massaging and teasing your shaft, pulling you deeply into the spider girl, until your shaft is completely surrounded by her quivering tunnel, able to take in even your[if Cock Length of Player > 12] massive[end if] length. The pleasure is intense, building quickly to a peak - your member tenses and suddenly jerks with orgasm. You can't help writhing in your bonds as you helplessly pump your seed into the spider girl's waiting womb. She purrs and gently rocks atop you, milking your organ until you're completely dry. Then she pulls off with a soft pop, and her sex disappears behind the armored plates again. Smiling, she turns and walks off into the shadows.";
 		say "     After a few minutes the webbing turns brittle, letting you free.";
 		CreatureSexAftermath "Spidergirl" receives "PussyFuck" from "Player";
 	else: [ male-ish scene, small penis; oral ]
-		if Player is female: [ player also has pussy ]
-			say "     The spider girl tears off your clothes and stares at you. Then she growls and reaches out to play with your member. Her touches quickly bring your body to full arousal, but she still seems unsatisfied. Finally she leans down and slips your cock into her mouth.";
-			say "     You can't help but groan as the arachnid female bobs her head, sucking relentlessly. Held fast by the webbing, you can do nothing but lay there and take it as her mouth teases you closer and closer to orgasm... Then she increases the stimulation by pushing a couple of fingers into your pussy! The spider girl moans around your cock, fingering and sucking you relentlessly. Finally you can take no more - you buck your hips and spray your cum into her mouth. She swallows the first spurt, then she pulls back and lets the rest decorate her face and tits. Smiling, she gives your cock one last kiss and rubs your pussy one more time, then she turns and scurries off. Your member is so swollen with attention, it even appears to be growing...";
-		else: [ no pussy ]
-			say "     The spider girl tears off your clothes and stares at you. Then she growls and reaches out to play with your member. Her touches quickly bring your body to full arousal, but she still seems unsatisfied. Finally she leans down and slips your cock into her mouth.";
-			say "     You can't help but groan as the arachnid female bobs her head, sucking relentlessly. She lets you slip from her mouth for a moment and nestles your organ between her breasts, cooing at you; then she resumes suckling the head of your shaft. Held fast by the webbing, you can do nothing but lay there and take it as her mouth teases you closer and closer to orgasm. Finally you buck your hips and spray your cum into her mouth - she swallows the first spurt, then she pulls back and lets the rest decorate her face and tits. Smiling, she gives your cock one last kiss, then she turns and scurries off. Your member is so swollen with attention, it even appears to be growing...";
+		say "     The spider girl tears off your clothes and stares at you. Then she growls and reaches out to play with your member. Her touches quickly bring your body to full arousal, but she still seems unsatisfied. Finally she leans down and slips your cock into her mouth.";
+		say "     You can't help but groan as the arachnid female bobs her head, sucking relentlessly. [if Player is female]Held fast by the webbing, you can do nothing but lay there and take it as her mouth teases you closer and closer to orgasm... Then she increases the stimulation by pushing a couple of fingers into your pussy! The spider girl moans around your cock, fingering and sucking you relentlessly. Finally you can take no more - you buck your hips and spray your cum into her mouth. She swallows the first spurt, then she pulls back and lets the rest decorate her face and tits. Smiling, she gives your cock one last kiss and rubs your pussy one more time[else]She lets you slip from her mouth for a moment and nestles your organ between her breasts, cooing at you, then she resumes suckling the head of your shaft. Held fast by the webbing, you can do nothing but lay there and take it as her mouth teases you closer and closer to orgasm. Finally you buck your hips and spray your cum into her mouth - she swallows the first spurt, then she pulls back and lets the rest decorate her face and tits. Smiling, she gives your cock one last kiss[end if], then she turns and scurries off. Your member is so swollen with attention it even appears to be growing...";
 		CreatureSexAftermath "Spidergirl" receives "OralCock" from "Player";
+		if Player is female:
+			CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Spidergirl";
 		[ since penis was small, increase it ]
 		increase Cock Length of Player by 1;
-		if a random chance of 1 in 2 succeeds:
+		if "Modest Organs" is not listed in feats of Player and a random chance of 1 in Ball Size of Player succeeds:
 			BallsGrow Player by 1;
 
 to say spidergirl_female:
@@ -51,24 +47,17 @@ to say spidergirl_female:
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Spidergirl";
 	else: [ Vagina too small ]
 		if a random chance of 1 in 2 succeeds: [ random choice of two scenes ]
-			say "     The spider girl tears off your clothes and stares at you. Then she growls, examining your genitals closely. ";
-			if Player is male:
-				say "Seeming uninterested in your male member, she pokes down below at your pussy lips, ";
-			else:
-				say "Leaning down, she strokes at your wet pussy lips, ";
-			say "even extending her tongue to lick at them. Finally she steps up to place her hips against yours; you see the armored plates between her legs part, revealing both a feminine slit and a pulsing masculine organ. The purple shaft swells and stretches down toward you... but it swells far too wide for your pussy to accept! The huge cockhead shoves up against your entrance; the spider girl rocks her hips, jabbing between your legs, making you wince as she tries to mount you. Finally she growls in frustration and turns, stalking off into the city. Your exposed genitals are left stained with spider precum... it seems to be making them quiver and tingle, strange feelings rippling through them.";
+			say "     The spider girl tears off your clothes and stares at you. Then she growls, examining your genitals closely. [if Player is male]Seeming uninterested in your male member, she pokes down below at your[else]Leaning down, she strokes at your wet[end if] pussy lips, even extending her tongue to lick at them. Finally she steps up to place her hips against yours; you see the armored plates between her legs part, revealing both a feminine slit and a pulsing masculine organ. The purple shaft swells and stretches down toward you... but it swells far too wide for your pussy to accept! The huge cockhead shoves up against your entrance; the spider girl rocks her hips, jabbing between your legs, making you wince as she tries to mount you. Finally she growls in frustration and turns, stalking off into the city. Your exposed genitals are left stained with spider precum... it seems to be making them quiver and tingle, strange feelings rippling through them.";
 			[ increase pussy size ]
 			increase Cunt Tightness of Player by 1;
-			if a random chance of 1 in 2 succeeds:
+			if ("Modest Organs" is not listed in feats of Player or Cunt Depth of Player < 8) and a random chance of 1 in 2 succeeds:
 				increase Cunt Depth of Player by 1;
 		else: [ second female small-vagina scene ]
-			say "     The spider girl tears off your clothes and stares at you. Then she growls, examining your genitals closely. ";
-			if Player is male:
-				say "She positions your male member up and out of the way, focusing her attention on your pussy lips. ";
-			say "Finally she steps up to place her hips against yours; you see the armored plates between her legs part, revealing both a feminine slit and a pulsing masculine organ. The purple shaft swells and stretches down toward you... swelling to an impossible thickness! Despite the mismatch, the spider girl jabs herself against you, making you whimper with pain as she tries to mount you. Finally she pushes hard... setting herself... and it pops in! Her shriek of delight mingles with your gasp of pain, but there's no stopping her now as she bucks her torso with abandon, pounding into your cunt. Warm fluid slops from her organ to lubricate her way, dulling the pain slightly, but it's still hard to take. Finally the spider girl lets out a screech and sprays your womb with her arachnid seed. After your tunnel is painted with her cum, she pulls out and sprays the rest over your helpless body. With a growl of satisfaction, the arachnid creature turns and walks off into the city.";
+			say "     The spider girl tears off your clothes and stares at you. Then she growls, examining your genitals closely[if Player is male]. She positions your male member up and out of the way, focusing her attention on your pussy lips[end if]. Finally she steps up to place her hips against yours; you see the armored plates between her legs part, revealing both a feminine slit and a pulsing masculine organ. The purple shaft swells and stretches down toward you... swelling to an impossible thickness! Despite the mismatch, the spider girl jabs herself against you, making you whimper with pain as she tries to mount you. Finally she pushes hard... setting herself... and it pops in! Her shriek of delight mingles with your gasp of pain, but there's no stopping her now as she bucks her torso with abandon, pounding into your cunt. Warm fluid slops from her organ to lubricate her way, dulling the pain slightly, but it's still hard to take. Finally the spider girl lets out a screech and sprays your womb with her arachnid seed. After your tunnel is painted with her cum, she pulls out and sprays the rest over your helpless body. With a growl of satisfaction, the arachnid creature turns and walks off into the city.";
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Spidergirl";
-			increase Cunt Depth of Player by 1;
 			increase Cunt Tightness of Player by 1;
+			if "Modest Organs" is not listed in feats of Player or Cunt Depth of Player < 8:
+				increase Cunt Depth of Player by 1;
 
 to say spidergirl_neuter:
 	say "     The spider creature pushes you down onto your back and strips off your clothes... then she gasps as she sees your sexless groin. Staring at you in astonishment, she hesitates for a moment. Then she leans down and starts to lick between your legs. The sensation is odd, but pleasant, and then you feel a tingling in your lower body. Without warning your flesh stretches upward, forming a small but definitely masculine organ. The spider girl coos happily and kisses your cock, then she flashes you a smile and turns to scuttle off.";
@@ -77,27 +66,29 @@ to say spidergirl_neuter:
 	now Ball Size of Player is 3;
 
 to say spidergirl defeat:
-	say "     The insectile creature lets out a whining cry and slumps to the ground, all eight of her legs going limp. ";
 	if Player is male and Cock Length of Player >= 8: [ if Player has cock, spidergirl tempts them ]
-		say "She looks up at you and blinks pitifully; then you see the armor plates between her front pair of legs slide apart, exposing the soft pink folds of a very human-like pussy.[line break]Do you give her what she wants?";
+		say "     The insectile creature lets out a whining cry and slumps to the ground, all eight of her legs going limp. She looks up at you and blinks pitifully; then you see the armor plates between her front pair of legs slide apart, exposing the soft pink folds of a very human-like pussy.";
+		say "     Do you give her what she wants?";
 		if Player consents:
-			say "     You can feel your cock swell mightily as the spider creature presents herself to you. You push her down onto her back, bringing a soft, somehow happy screech from her throat. The thick head of your shaft easily finds her entrance, and you plunge inward without delay, sinking deeply into the spider's tunnel. She shrieks and grabs at your shoulders, squirming beneath you; your lust is already taking you over, your body nestling against hers, your hips pounding against her lower body. The spider's inner warmth grabs and massages you with startling strength and skill; your turgid cock is groped and squeezed even as you shove as far into her cunt as you can - before your orgasm swells up and bursts into her, pumping the spider's pussy full of your hot cum. You groan and finally pull out of her; she lays there, exposed and used, her human skin sweaty and flushed and her cunny trickling fluid. Suddenly her skin and face redden, and she quickly gets to her feet and scurries off, looking almost shy.";
+			LineBreak;
+			say "     You can feel your cock swell mightily as the spider creature presents herself to you. You push her down onto her back, bringing a soft, somehow happy screech from her throat. The thick head of your shaft easily finds her entrance, and you plunge inward without delay, sinking deeply into the spider's tunnel. She shrieks and grabs at your shoulders, squirming beneath you; your lust is already taking you over, your body nestling against hers, your hips pounding against her lower body. The spider's inner warmth grabs and massages you with startling strength and skill; your turgid cock is groped and squeezed even as you shove as far into her cunt as you can before your orgasm swells up and bursts into her, pumping the spider's pussy full of your hot cum. You groan and finally pull out of her; she lays there, exposed and used, her human skin sweaty and flushed and her cunny trickling fluid. Suddenly her skin and face redden, and she quickly gets to her feet and scurries off, looking almost shy.";
 			CreatureSexAftermath "Spidergirl" receives "PussyFuck" from "Player";
 		else:
+			LineBreak;
 			if Libido of Player >= 50: [ Player can't resist if libido is high ]
-				say "     You can feel your heart pound and your cock swell mightily as the spider creature presents herself to you. It's no use, you can't contain your lustful feelings. You push the spider girl down onto her back, bringing a soft, somehow happy screech from her throat. The thick head of your shaft easily finds her entrance, and you plunge inward without delay, sinking deeply into the spider's tunnel. She shrieks and grabs at your shoulders, squirming beneath you; you pound against her eagerly, rocking her body. Her inner warmth grabs and massages you with startling strength and skill; your turgid cock is groped and squeezed even as you shove as far into her cunt as you can - before your orgasm swells up and bursts into her, pumping the spider's pussy full of your heat. You groan and finally pull out of her, squirting the last of your cum over her heaving breasts, decorating her obscenely. The spider girl reddens, whimpering under your gaze; finally she gets to her feet, hunched over submissively, and she slowly scurries off into the shadows.";
+				say "     You can feel your heart pound and your cock swell mightily as the spider creature presents herself to you. It's no use, you can't contain your lustful feelings. You push the spider girl down onto her back, bringing a soft, somehow happy screech from her throat. The thick head of your shaft easily finds her entrance, and you plunge inward without delay, sinking deeply into the spider's tunnel. She shrieks and grabs at your shoulders, squirming beneath you; you pound against her eagerly, rocking her body. Her inner warmth grabs and massages you with startling strength and skill; your turgid cock is groped and squeezed even as you shove as far into her cunt as you can before your orgasm swells up and bursts into her, pumping the spider's pussy full of your heat. You groan and finally pull out of her, squirting the last of your cum over her heaving breasts, decorating her obscenely. The spider girl reddens, whimpering under your gaze; finally she gets to her feet, hunched over submissively, and she slowly scurries off into the shadows.";
 				CreatureSexAftermath "Spidergirl" receives "PussyFuck" from "Player";
 			else:
 				say "     You are able to control your urges, and you turn away. You can hear the spider girl scrabble to her feet and scuttle off, whimpering.";
 	else: [ Penis not big enough ]
-		say "After a few moments she drags herself to her feet and scuttles off, whimpering.";
+		say "     The insectile creature lets out a whining cry and slumps to the ground, all eight of her legs going limp. After a few moments she drags herself to her feet and scuttles off, whimpering.";
 	if bradfordBountyNum is 6:
 		if bradfordbounty > 0:
 			LineBreak;
 			decrease bradfordbounty by 1;
-			say "     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
+			say "     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
 		else:
-			say "     This encounter reminds you of your deal with the bounty hunter, Bradford. You should go see him about getting your share of the reward.";
+			say "     This encounter reminds you of your deal with the bounty hunter Bradford. You should go see him about getting your share of the reward.";
 
 Section 2 - Creature Insertion [ Huh huh, insertion ]
 
@@ -119,24 +110,27 @@ When Play begins:
 	add "Spidergirl" to infections of InsectList;
 	add "Spidergirl" to infections of HybridList;
 	add "Spidergirl" to infections of FurryList;
+	add "Spidergirl" to infections of FeralList;
 	add "Spidergirl" to infections of MythologicalList;
-	add "Spidergirl" to infections of FemaleList;
 	add "Spidergirl" to infections of HermList;
 	add "Spidergirl" to infections of InternalCockList;
+	add "Spidergirl" to infections of InternalBallsList;
+	add "Spidergirl" to infections of TaurList;
 	add "Spidergirl" to infections of OctapedalList;
 	add "Spidergirl" to infections of OviImpregnatorList;
 	add "Spidergirl" to infections of TailweaponList;
+	add "Spidergirl" to infections of FeralmindList;
 	now Name entry is "Spidergirl";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]She skitters up the wall and over the ceiling. As you try to follow, she sprays webbing down onto you![or]She leaps to one side and turns her abdomen to face you, and sticky strands spray over your form![or]She suddenly charges and knocks you down with the weight of her body, then she stands over you and sprays webbing over your prone form![at random]";
+	now attack entry is "[one of]She skitters up the wall and over the ceiling. As you try to follow, she sprays webbing down onto you[or]She leaps to one side and turns her abdomen to face you, and sticky strands spray over your form[or]She suddenly charges and knocks you down with the weight of her body, then she stands over you and sprays webbing over your prone form[at random]!";
 	now defeated entry is "[spidergirl defeat]";
 	now victory entry is "[spidergirl attack]";
-	now desc entry is "A hybrid of human and arachnid. From the waist up, the picture of a voluptuous woman, with smooth skin and heavy breasts topped with delicate pink nipples; she also has eight luminous [one of]violet[or]green[or]orange[or]magenta[at random] pupil-less eyes blinking from behind her [one of]short gray[or]long golden[or]raven-black[at random] hair. Down below she is a giant spider, with eight hairy, twitching legs and an abdomen armored with [one of]dull brown[or]shiny black[or]black and red[at random] chitin. At the tip of her abdomen can be seen an opening with spinnerets, and between the front pair of legs a set of armor plates look like they might be hiding something...";
+	now desc entry is "     A hybrid of human and arachnid. From the waist up, the picture of a voluptuous woman, with smooth skin and heavy breasts topped with delicate pink nipples; she also has eight luminous [one of]violet[or]green[or]orange[or]magenta[at random] pupil-less eyes blinking from behind her [one of]short gray[or]long golden[or]raven-black[at random] hair. Down below she is a giant spider, with eight hairy, twitching legs and an abdomen armored with [one of]dull brown[or]shiny black[or]black and red[as decreasingly likely outcomes] chitin. At the tip of her abdomen can be seen an opening with spinnerets, and between the front pair of legs a set of armor plates look like they might be hiding something...[line break]";
 	now face entry is "multi-eyed, but otherwise human";
 	now body entry is "curved and feminine from the waist up, but your legs have been replaced with the abdomen of a great spider, twitching with hairy legs";
-	now skin entry is "[one of]shiny black[or]dull brown[or]black and red[at random] chitin-armored";
+	now skin entry is "[one of]shiny black[or]dull brown[or]black and red[as decreasingly likely outcomes] chitin-armored";
 	now tail entry is "Nestled in your backside are several spinnerets, ready to spin a web at a moment's notice.";
 	now cock entry is "armor-protected";
 	now face change entry is "swellings grow on your head, suddenly bursting open into new eyes, expanding your field of vision";
@@ -284,8 +278,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Spidergirl Infection"	"Infection"	""	Spidergirl Infection rule	1000	false
@@ -294,7 +286,7 @@ This is the Spidergirl Infection rule:
 	if Player has a body of "Spidergirl":
 		trigger ending "Spidergirl Infection";
 		if humanity of Player < 10:
-			say "     Your predatory instincts take over and you scurry off into the ruins of the city, drinking the blood of other outcasts and forcing them to bear your eggs. It is a rough existence, but eventually you acquire a sort of 'harem' of lovers who enjoy the rough imprisonment you offer...";
+			say "     Your predatory instincts take over and you scurry off into the ruins of the city, drinking the blood of other outcasts[if Player is not sterile] and forcing them to bear your eggs[end if]. It is a rough existence, but eventually you acquire a sort of 'harem' of lovers who enjoy the rough imprisonment you offer...";
 		else:
 			say "     Your arachnid form proves perfect for exploring ruined buildings. You are immediately recruited into the armed forces, eventually rescuing hundreds of people from disasters, often lowering them from great heights on web ropes. On your off days you help out with construction projects, ultimately becoming known the world over as a hero.";
 
@@ -302,16 +294,13 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "spider webbing"	"A swatch of tough spider webbing. It seems pretty sticky."	1	spider webbing
 
-instead of sniffing spider webbing:
-	say "The spider webbing has a faintly enticing scent.";
-
 spider webbing is a grab object.
-Usedesc of spider webbing is "[spider webbing use]";
+Usedesc of spider webbing is "[spider webbing use]".
 
 to say spider webbing use:
-	say "You pull and tug at the spider webbing. It's surprisingly tough! But it's also quite sticky. You try to clean it off, but eventually it just seems to melt into your skin...";
+	say "     You pull and tug at the spider webbing. It's surprisingly tough! But it's also quite sticky. You try to clean it off, but eventually it just seems to melt into your skin...";
 	infect "Spidergirl";
 
-[spider webbing is infectious. Strain of spider webbing is "Spidergirl".]
+Scent of spider webbing is "The spider webbing has a faintly enticing scent.".
 
 Spidergirl ends here.

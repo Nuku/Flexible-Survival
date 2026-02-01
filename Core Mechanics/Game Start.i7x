@@ -560,8 +560,7 @@ to say gsopt_start:
 	else:
 		say "     No one else ever arrived, so you're on your own out here. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what you have, you break the seal and prepare to set out.";
 	WaitLineBreak;
-	LineBreak;
-	say "Welcome to...";
+	say "[line break]Welcome to...";
 	[display the figure of title_graphic;]
 	zephyrad rule in 1 turn from now;
 
@@ -910,22 +909,22 @@ to playersexsetting: [OralVirgin of Player, Virgin of Player, AnalVirgin of Play
 		if calcnumber is 1:
 			if OralVirgin of Player is true:
 				now OralVirgin of Player is false;
-			else if OralVirgin of Player is false:
+			else:
 				now OralVirgin of Player is true;
 		else if calcnumber is 2:
 			if Virgin of Player is true:
 				now Virgin of Player is false;
-			else if Virgin of Player is false:
+			else:
 				now Virgin of Player is true;
 		else if calcnumber is 3:
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
-			else if PenileVirgin of Player is false:
+			else:
 				now PenileVirgin of Player is true;
 		else if calcnumber is 4:
 			if AnalVirgin of Player is true:
 				now AnalVirgin of Player is false;
-			else if AnalVirgin of Player is false:
+			else:
 				now AnalVirgin of Player is true;
 		else:
 			now menuexit is 1;

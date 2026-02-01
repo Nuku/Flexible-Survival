@@ -17,36 +17,39 @@ to say chinvic:
 	else:
 		say "     Banging on you one last time, you finally succumb to exhaustion, falling to the earth. The rodent backs away from you, appearing a little surprised she managed to take you down.";
 		say "     [if chindem is false]Squeaking incomprehensibly at you, no[else]'[one of]S-so tempting[or]M-maybe just a little[or]I-I won? O-oh, I could[at random]...' No[end if] doubt in need to sate her infection's wanton influence, she quickly climbs on top of you, giddily fondling over you and inspecting what you have to offer, freeing you of any obstruction in her way all the while.";
+	WaitLineBreak;
 	if Player is male and Cock Length of Player < 17 and a random chance of 1 in 2 succeeds:
 		if chindem is false:
-			say "     [if scalevalue of Player > 3]Chittering in awe over your physical scale[else]Chittering eagerly[end if] as she crawls";
+			say "     Chittering[if scalevalue of Player > 3]in awe over your physical scale[else]eagerly[end if] as she crawls";
 		else:
 			say "     '[if scalevalue of Player > 3][one of]S-so big[or]W-wow, you're massive[or]T-there's too much body here for me to use[at random][else][one of]A-ah, yes[or]Y-yes, let's have some fun[or]P-plenty for me to play with here[at random][end if]!' Crawling";
-		say " all over you, the creature eventually forces you onto your back, exposing your [cock size desc of Player] dick[smn] into the open air. Squeezing and slowly pumping [if Cock Count of Player > 2]two of them[else if Cock Count of Player is 2]both of them[else]it[end if], her influence eventually [if HP of Player < 1]forces[else]drives[end if] you hard before the rodent's eager gaze. Once you're ready for her, she repositions herself over [if Cock Count of Player > 1]one of your throbbing organs[else]your throbbing organ[end if] before slowly sinking its head between her supple folds, squeaking lowly in lewd approval.";
+		say " all over you, the creature eventually forces you onto your back, exposing your [cock size desc of Player] dick[smn] into the open air. Squeezing and slowly pumping [if Cock Count of Player > 2]two of them[else if Cock Count of Player is 2]both of them[else]it[end if], her influence eventually [if HP of Player < 1]forces[else]drives[end if] you hard before the rodent's eager gaze. Once you're ready for her, she repositions herself over [if Cock Count of Player > 1]one of [end if]your throbbing organ[smn] before slowly sinking its head between her supple folds, squeaking lowly in lewd approval.";
 		say "     '[if chindem is false][one of]Tssk, tcht[or]Tcht, ssk[or]Ksk, tsk[at random][else][one of]A-ah, I needed this[or]O-h, I n-need more[or]F-feels so good[at random][end if]...' Tightly embracing you, you're left to feel her immensely soft fur's caress against your [bodytype of Player] form as she takes her time to acclimate to your tool[if Cock Length of Player > 8], no doubt a fair bit strained by its size[end if]. Ready to proceed, she gradually builds up a motion of riding against your cock, the air quickly filled with the loud sound of her constant squeaking. Powerful hind legs [if scalevalue of Player < 4]pinning you down[else]pressing against you[end if], the beast's supple teats grind firmly against you as she rolls ever-closer to ecstasy.";
+		WaitLineBreak;
 		if Libido of Player > 30:
 			say "     Unable to [if HP of Player < 1]resist[else]hold back[end if] any longer, you finally cry out, pumping your [Cum Load Size of Player] load into the rodent's tight hole[if Cock Count of Player > 2], your exposed, unattended dicks staining your torso and hers[else if Cock Count of Player is 2], your exposed, unattended dick staining your torso and hers[end if], and she's quick to respond with a gleeful screech, [if Player is knotted]tieing with[else]hilting[end if] your tool, its squeezing passage milking you of every last drop[if Ball Size of Player > 4]. However, quickly underestimating your capacity, she's eventually forced free of your cock, the remaining load spilling all over to make a substantial mess[end if].";
 		else:
 			say "     It's but a few short moments before she cries out in a gleeful screech, [if Player is knotted]tieing with[else]hilting[end if] your tool, its squeezing passage milking you of every last drop. Unable to [if HP of Player < 1]resist[else]hold back[end if] any longer, this act is more than enough to make you cry out, pumping your [Cum Load Size of Player] load into the rodent's greedy hole[if Cock Count of Player > 2], your exposed, unattended dicks staining your torso and hers[else if Cock Count of Player is 2], your exposed, unattended dick staining your torso and hers[end if][if Ball Size of Player > 4]. Quickly underestimating your capacity, she's eventually forced free of your cock, the remaining load spilling all over to make a substantial mess[end if].";
-		say "     [if chindem is false]Chittering happily, she takes a brief moment to catch[else]'[one of]Ah, I needed that[or]Oh, that felt too good[or]Mm, what a ride[or]Oh, that'll do[at random]...' she says, taking only a brief moment to catch[end if] her breath before happily hopping off of you, observing her surroundings for a moment before skittering off into the distance. You eventually manage to recover from the [if HP of Player < 1]ordeal[else]bout[end if], climbing back to your feet and gathering your things before departing yourself.";
+		say "     [if chindem is false]Chittering happily, she takes[else]'[one of]Ah, I needed that[or]Oh, that felt too good[or]Mm, what a ride[or]Oh, that'll do[at random]...' she says, taking only[end if] a brief moment to catch her breath before happily hopping off of you, observing her surroundings for a moment before skittering off into the distance. You eventually manage to recover from the [if HP of Player < 1]ordeal[else]bout[end if], climbing back to your feet and gathering your things before departing yourself.";
 		CreatureSexAftermath "Chinchilla" receives "PussyFuck" from "Player";
 	else:
-		say "     With little further restraint, she presses the supple, soft-furred lips of her cunt against your face, blatantly expecting you to satisfy her orally. [if HP of Player < 1]You're not inclined in the slightest to oblige her, and she pleads constantly for you to, until her infectious influence eventually drives you to comply, gasping in pleasure at the feel of your tongue finally flooding her depths[else]Curiously probing her yielding entrance, you're met with cooing approval, compelling you to plunge your slick organ into her depths, the creature gasping loudly in response[end if]. The stout critter writhes and squeaks against your tongue's influence[if scalevalue of Player < 3], its substantial size no doubt quite straining on her[end if], the taste of her bestial sex flooding your senses.";
+		say "     With little further restraint, she presses the supple, soft-furred lips of her cunt against your face, blatantly expecting you to satisfy her orally. [if HP of Player < 1]You're not inclined in the slightest to oblige her, and she pleads constantly for you to, until her infectious influence eventually drives you to comply, gasping in pleasure at the feel of your tongue finally flooding her depths[else]Curiously probing her yielding entrance, you're met with cooing approval, compelling you to plunge your slick organ into her depths, the creature gasping loudly in response[end if]. The stout critter writhes and squeaks against your tongue's influence[if scalevalue of Player > 3], its substantial size no doubt quite straining on her[end if], the taste of her bestial sex flooding your senses.";
 		if chindem is false:
-			say "     Chittering incomprehensibly, it's clear she requires of her [if HP of Player < 1]victim[else]assistant[end if] to go harder, squeezing you tightly until you oblige. Your ";
+			say "     Chittering incomprehensibly, it's clear she requires of her [if HP of Player < 1]victim[else]assistant[end if] to go harder, squeezing you tightly until you oblige. Your";
 		else:
-			say "     '[one of]A-ah[or]O-oh[or]N-ng[at random], [one of]so g-good[or]h-harder[or][if scalevalue of Player < 3]so b-big[else]I need m-more[end if][at random]...!' Squeezing her [if HP of Player < 1]victim[else]assistant[end if] tighter until you intensify your endeavor, your ";
-		say "arousal becomes increasingly apparent, [if Player is male]unattended, [cock size desc of Player] cock[smn] standing achingly in attention[else if Player is female]unattended, [cunt size desc of Player] cunt[sfn] aching for attention[else]in spite your lack of visible outlet[end if]; however, the rodent is clearly too distracted to regard it, the speed at which she writhes against your irreverent appendage becoming more desperate.";
-		say "     [if HP of Player < 1]Subjected to[else]Attending[end if] this creature's wanton need, the wet, loud endeavor brings her to ecstasy, squeaking out weakly as she clings to you, [if HP of Player < 1]forced to[else]having you[end if] swallow down a flood of her subsequent sexual fluids. Exhausted as she now is, [if HP of Player < 1]you toss the rodent free of you[else]you pull yourself free of the rodent[end if], who weakly scrambles off into the distance, leaving you to recover from the ordeal and retreat back from whence you came.";
+			say "     '[one of]A-ah[or]O-oh[or]N-ng[at random], [one of]so g-good[or]h-harder[or][if scalevalue of Player > 3]so b-big[else]I need m-more[end if][at random]...!' Squeezing her [if HP of Player < 1]victim[else]assistant[end if] tighter until you intensify your endeavor, your";
+		say " arousal becomes increasingly apparent, [if Player is male]unattended, [cock size desc of Player] cock[smn] standing achingly in attention[else if Player is female]unattended, [cunt size desc of Player] cunt[sfn] aching for attention[else]in spite your lack of visible outlet[end if]; however, the rodent is clearly too distracted to regard it, the speed at which she writhes against your irreverent appendage becoming more desperate.";
+		say "     [if HP of Player < 1]Subjected to[else]Attending[end if] this creature's wanton need, the wet, loud endeavor brings her to ecstasy, squeaking out weakly as she clings to you, [if HP of Player < 1]forced to[else]having you[end if] swallow down a flood of her subsequent sexual fluids. Exhausted as she now is, you [if HP of Player < 1]toss the rodent free of you[else]pull yourself free of the rodent[end if], who weakly scrambles off into the distance, leaving you to recover from the ordeal and retreat back from whence you came.";
 		CreatureSexAftermath "Player" receives "OralPussy" from "Chinchilla";
 
 to say chinloss: [Chinchilla, player victory scenes expected to be added in later]
 	if Player is not male or ( nochinchillasex > 2 and the remainder after dividing nochinchillasex by 5 is not 0 ):
-		say "     Eventually, the critter collapses, too exhausted to fight back any further. With nothing more to gain from this exchange, you choose to depart, letting the rodent retreat back from whence it came.";
+		say "     Eventually, the critter collapses, too exhausted to fight back any further. With nothing more to gain from this exchange, you choose to depart, letting the rodent retreat back from whence she came.";
 		if Player is male, increase nochinchillasex by 1;
 	else:
 		say "     Eventually, the critter collapses, too exhausted to fight back any further. With the energetic creature down, you're free to take advantage of the situation if you'd like. You can see traces of a sexy female figure beneath the little fuzzball's fluffy fur. Shall you [if Cock Length of Player > 16]have some naughty fun with her[else]fuck her[end if]?";
 		if Player consents:
+			LineBreak;
 			if Cock Length of Player > 16:
 				say "     Given her diminutive size, especially when compared to your [cock size desc of Player] cock, you pass on outright fucking the little cutie and instead go for some other fun. Having no problem pinning her down, you press your drooling glans to her face and tell her to start licking. The small [if chindem is true][one of]fluffball grumbles something about how you don't have to be so mean about it, but[or]fluffball giggles that you should've just said so in the first place. She[or]fluffball's eyes go wide with desire at the size of your manhood. With such a prize, she[at random][else][one of]fluffball chitters indignantly, but[or]fluffball releases a chittering giggle of excitement. She[or]fluffball's eyes go wide with desire at the size of your manhood. With such a prize, she[at random][end if] relents and slides her tongue slowly along several inches of cock before twirling it across the tip. Soon more licks follow along with her fuzzy paws joining in on caressing your [if Cock Length of Player < 30]comparatively [end if]huge penis.";
 				say "     With her thus occupied, you slip your hands into her fuzzy fur and start caressing her curvaceous body. While it's hard to see buried under all that fluff, she's got a sexy (if rather animalistic) body hidden under her fur. You rub her breasts and tease her hidden nipples, drawing chitters of delight from her. You then let a hand slide down between her legs and slip [if scalevalue of Player < 4]a pair of digits[else]a finger[end if] into her cunt. Her cunny's quite hot and wet, clearly excited from her fun with your cock.";
@@ -63,12 +66,13 @@ to say chinloss: [Chinchilla, player victory scenes expected to be added in late
 				CreatureSexAftermath "Chinchilla" receives "PussyFuck" from "Player";
 			now nochinchillasex is 0;
 		else:
-			say "     Resisting the temptation and with nothing more to gain from this exchange, you choose to depart, leaving the rodent to retreat back from whence it came.";
+			LineBreak;
+			say "     Resisting the temptation and with nothing more to gain from this exchange, you choose to depart, leaving the rodent to retreat back from whence she came.";
 			increase nochinchillasex by 1;
 
 to say chindesc:
-	say "     [if showlocale is true]Popping up from a nearby [one of]crevice[or]alcove[at random] you are met with[else]You run up against[end if] what appears a female who's succumbed to the appearance of a chinchilla. Now no more than a few feet tall, very little in the way of human attributes remain. The diminutive creature squeaks distressingly in regards to your presence, [if a random chance of 1 in 2 succeeds and chindem is true]dressed in naught but a makeshift, canvas cloak[else]stark naked before you[end if], its pelt extraordinarily soft and inviting to your sight.";
-	say "     '[if chindem is true][one of]Don't think I can't take you on[or]Leave this place, please[or]I'll get what I need, one way or another[at random][else][one of]Tcht, kst kst[or]Scree, tcht tcht[or]Kst, tcht[at random][end if]!' [if chindem is true]Still somewhat lucid[else]Completely lost to its feral influence[end if], the little beast stands on its hindpaws, bearing its forepaws threateningly at you... Though, the gesture comes off as more adorable than threatening.";
+	say "     [if showlocale is true]Popping up from a nearby [one of]crevice[or]alcove[at random] you are met with[else]You run up against[end if] what appears a female who's succumbed to the appearance of a chinchilla. Now no more than a few feet tall, very little in the way of human attributes remain. The diminutive creature squeaks distressingly in regards to your presence, [if a random chance of 1 in 2 succeeds and chindem is true]dressed in naught but a makeshift, canvas cloak[else]stark naked before you[end if], her pelt extraordinarily soft and inviting to your sight.";
+	say "     '[if chindem is true][one of]Don't think I can't take you on[or]Leave this place, please[or]I'll get what I need, one way or another[at random][else][one of]Tcht, kst kst[or]Scree, tcht tcht[or]Kst, tcht[at random][end if]!' [if chindem is true]Still somewhat lucid[else]Completely lost to her feral influence[end if], the little beast stands on her hindpaws, bearing her forepaws threateningly at you... Though, the gesture comes off as more adorable than threatening.";
 
 Section 2 - Creature Insertion
 
@@ -78,8 +82,7 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Chinchilla:
 	setmongender 3; [creature is male]
-	setmonster "Chinchilla";
-	choose row MonsterID from Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	if a random chance of 1 in 2 succeeds:
 		now chindem is true;
 	else:
@@ -111,20 +114,20 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]She[or]The chinchilla[at random] [one of]pounces onto you, clinging to your [bodydesc of Player] form. You manage to pry her off, but not before she assails you with a barrage of clawing and nipping[or]manages to get close to one of your legs, chomping down and holding on for dear life until you finally kick her free[or]swipes at you with her tiny claws[or]manages to kick you with one of her more powerful hindpaws[or]finds and rock and manages to throw it at you[at random].";
-	now defeated entry is "[chinloss].";
+	now attack entry is "[one of]She[or]The chinchilla[at random] [one of]pounces onto you, clinging to your [bodydesc of Player] form. You manage to pry her off, but not before she assails you with a barrage of clawing and nipping[or]manages to get close to one of your legs, chomping down and holding on for dear life until you finally kick her free[or]swipes at you with her tiny claws[or]manages to kick you with one of her more powerful hindpaws[or]finds a rock and manages to throw it at you[at random].";
+	now defeated entry is "[chinloss]";
 	now victory entry is "[chinvic]";
 	now desc entry is "[chindesc]";
-	now face entry is "short chinchilla muzzle, small gray mouse-like ears, and cute, little whiskers adorned on it"; [ Face description, format as "Your face is [Face of Player]." ]
+	now face entry is "a short chinchilla muzzle, with small gray mouse-like ears, and cute, little whiskers adorned on it"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "voluptuous and somewhat bestial. You have powerful hindpaws that allow you to move with some speed and grace"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]gray fur[or]downy soft fur[at random] in place of"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a fairly long tail which fluffs out quite a bit."; [ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]tapered[or]chinchilla[at random], pinkish"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it draws forward into a chinchilla muzzle, sprouting soft, twitchy whiskers. Your ears migrating to the top of your head twisting into a more round, rodent-like shape"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
-	now body change entry is "a soft heat sweeps over you. Your feet grow to leave you with plump, distinctive hind paws, tipped with little black claws. While your hands and arms shrink, as very small claws sprout from your new paw tips"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now cock entry is "[one of]tapered[or]chinchilla[at random]pinkish"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it draws forward into a chinchilla muzzle, sprouting soft, twitchy whiskers. Your ears migrate to the top of your head twisting into a more round, rodent-like shape"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "a soft heat sweeps over you. Your feet grow to leave you with plump, distinctive hind paws, tipped with little black claws while your hands and arms shrink, as very small claws sprout from your new paw tips"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "gray fur spreads rapidly over your form, a lighter gray stripe covering your chest. Feeling yourself following the change, the fur is extremely soft to the touch"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
-	now ass change entry is "A long, sprig-like tail grows from you, hair sprouting across its length to give it a distinctly fluffy appearance"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
-	now cock change entry is "Your shaft tingles with sudden arousal as it is engulfed in a soft gray sheath, the tool itself looking pinkish and tapered before your prying eyes"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now ass change entry is "a long, sprig-like tail grows from you, hair sprouting across its length to give it a distinctly fluffy appearance"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
+	now cock change entry is "it is engulfed in a soft gray sheath, the tool itself looking pinkish and tapered before your prying eyes"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 10;
 	now dex entry is 20;
 	now sta entry is 10;
@@ -265,7 +268,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Chinchilla Infection"	"Infection"	""	Chinchilla Infection rule	1000	false
@@ -283,11 +285,7 @@ name	desc	weight	object
 "tuft of chin fur"	"A soft piece of chinchilla fur."	1	tuft of chin fur
 
 tuft of chin fur is a grab object.
-
-instead of sniffing tuft of chin fur:
-	say "This soft fur smells a little dusty, but quite nice.";
-
-Usedesc of tuft of chin fur is "[tuft of chin fur use]";
+Usedesc of tuft of chin fur is "[tuft of chin fur use]".
 
 to say tuft of chin fur use:
 	setmonster "Chinchilla";
@@ -299,7 +297,9 @@ to say tuft of chin fur use:
 	else:
 		now sex entry is "Female";
 	say "     You feel inclined to rub the chinchilla tuft against your [bodytype of Player] form. The material is exceedingly soft, and makes you feel a little better, though doing this has caused the infectious fur to dissipate into your skin...";
+	infect;
 	if morale of Player < 30, increase morale of Player by 5;
-	infect "Chinchilla";
+
+Scent of tuft of chin fur is "This soft fur smells a little dusty, but quite nice.".
 
 Cute Chinchilla Girl ends here.

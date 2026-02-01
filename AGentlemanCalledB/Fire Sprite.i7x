@@ -11,8 +11,6 @@ Version 1 of Fire Sprite by AGentlemanCalledB begins here.
 
 "Adds a Fire Sprite creature to Flexible Survival's Wandering Monsters table"
 
-Section 0 - Flags and Tags
-
 Section 1 - Creature Responses
 
 FireSpritemode is a number that varies.[@Tag:NotSaved] FireSpritemode is usually 0.
@@ -448,15 +446,22 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "glowing ember"	"A small glowing ember, which seems to stay warm regardless of how you store it."	0	glowing ember
 
-glowing ember is a grab object. [glowing ember is infectious. Strain of glowing ember is "Fire Sprite".]
-
+glowing ember is a grab object.
 Usedesc of glowing ember is "[glowingemberuse]".
 
 to say glowingemberuse:
+	setmonster "Fire Sprite";
+	choose row MonsterID from Table of Random Critters;
+	if Player is MalePreferred:
+		now sex entry is "Male";
+	else if Player is HermPreferred:
+		now sex entry is "Both";
+	else:
+		now sex entry is "Female";
 	say "     Rolling the small, warm ember between your fingers you begin to find it difficult to focus on anything but its warm light. You hear the crackling of flame in the distance as you slip further and further out of focus, your vision filling with nothing but the pleasant light and flickering of flames...";
+	infect;
 	WaitLineBreak;
 	say "     You come to your senses some time later. Glancing around, you find the small ember missing. It is hard to shake the strange desire to light something on fire.";
-	infect "Fire Sprite";
 
 Scent of glowing ember is "The small ember smells faintly smoky.".
 

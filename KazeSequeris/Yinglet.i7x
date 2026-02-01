@@ -18,10 +18,10 @@ to say Yinglets wins:
 
 to say Yinglets loses:
 	say "     The trio of yinglets collapse in haphazard shapes. You toss one that lands on his back and lies there with his limbs in the air, another tumbles over and folds in half, getting a face full of his own butt. The last noodle lands face-first and bends over backwards. If they weren't the most flexible creatures you'd ever seen, you might've worried that you went a little overboard. As they recover though, they immediately surrender and beg for mercy.";
+	LineBreak;
 	say "[YingletsSexMenu]";
 
 to say YingletsSexMenu:
-	LineBreak;
 	say "     [bold type]What do you do with the little troublemakers?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -51,19 +51,20 @@ to say YingletsSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Be fucked by them"):
-					say "[YingletsFuck1]";
-				else if (nam is "Fuck them"):
-					say "[YingletsFuck2]";
-				wait for any key;
+				if title entry is:
+					-- "Be fucked by them":
+						say "[YingletsFuck1]";
+					-- "Fuck them":
+						say "[YingletsFuck2]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You've had enough of their antics for one day. You assure them you won't harm them any further, and tell them they're in for another beatdown if they tangle with you again. You continue on your way, leaving the needy yinglets in one part relief and two parts disappointment.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say YingletsFuck1:
@@ -85,7 +86,8 @@ to say YingletsFuck2:
 		WaitLineBreak;
 		say "     You bully his smaller member back into its genital slit, pushing your superior length in that labia-like opening. His inner walls are wet and soft, just like a female, with the added bonus of his hardened shaft frotting against yours inside. It's a lovely feeling, and you can't help but thrust into it again and again. All too soon, you feel your climax upon you. You moan aloud and give one final thrust, pumping your load into that tight space. ";
 	say "You pull out and unload the rest across the three, as a final goodbye to your would-be assailants. Despite having been on the receiving end, the trio seem to have at least found some relief. Maybe they enjoyed getting used by a stronger male. You warn them about attacking strangers in the future, and take your leave.";
-	CreatureSexAftermath "Yinglet" receives "OralCock" from "Player";
+	if Cock Length of Player > 24:
+		CreatureSexAftermath "Yinglet" receives "OralCock" from "Player";
 
 to say YingletsDesc:
 	say "     You come to a stop and listen carefully. Something tells you you're not alone... and sure enough, you hear the pitter-patter of little feet as three small rodent-like creatures jump out at you! 'Haha, you have fallen for our soclever ambush! Surrender, or get stabby-stabbed!";
@@ -266,8 +268,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "barnacle encrusted gem"	"A shiny green gem that seems to have spent some time underwater. The bits that aren't crusted over are nice to look at, and it seems like something's sloshing around inside..."	1	barnacle encrusted gem
 
-barnacle encrusted gem is a grab object. it is temporary.
-[barnacle encrusted gem is infectious. Strain of barnacle encrusted gem is "Yinglet".]
+barnacle encrusted gem is a grab object.
 Usedesc of barnacle encrusted gem is "[EncrustedGemUsing]".
 
 to say EncrustedGemUsing:

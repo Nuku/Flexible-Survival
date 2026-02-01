@@ -6,8 +6,7 @@ name	desc	weight	object
 "mothers milk"	"Delicious milk made from your own tender breasts."	1	mothers milk
 "distilled milk"	"Some creature's milk boiled down to a concentrated, powdery form? That can't be dangerous!"	1	distilled milk
 
-distilled milk is a grab object. It is not milky.
-
+distilled milk is a grab object.
 Usedesc of distilled milk is "[distilled milk use]".
 
 to say distilled milk use:
@@ -19,7 +18,6 @@ Scent of distilled milk is "The powder smells faintly of milk.".
 
 mothers milk is a grab object. Understand "milk" as mothers milk.
 mothers milk is milky.
-
 Usedesc of mothers milk is "[mothers milk use]".
 
 to say mothers milk use:

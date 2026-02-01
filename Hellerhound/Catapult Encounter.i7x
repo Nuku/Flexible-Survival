@@ -37,6 +37,7 @@ to say ResolveEvent loaded catapult:
 			if "Iron Stomach" is not listed in feats of Player:
 				weakrandominfect;
 				weakrandominfect;
+			if Player is kinky, raise Player Libido by 10;
 		else:
 			LineBreak;
 			say "     You leave the bag where it is.";
@@ -63,10 +64,12 @@ to say ResolveEvent loaded catapult:
 				WaitLineBreak;
 				say "[catapult fire]";
 			else:
+				let x be catadiff / 10;
+				if x > 5, now x is 5;
 				say "     You manage to get the resources without touching the ropes.";
 				now Resolution of Loaded Catapult is 2; [got some supplies]
-				ItemGain food by catadiff / 10;
-				ItemGain water bottle by catadiff / 10;
+				ItemGain food by x;
+				ItemGain water bottle by x;
 				now gotcatares is 1;
 		else:
 			LineBreak;

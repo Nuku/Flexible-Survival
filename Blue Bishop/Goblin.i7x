@@ -22,11 +22,11 @@ to say losetogob_f:
 	else:
 		say "     '[if scalevalue of Player > 3 and HP of Player > 0][one of]Oh, this is embarrassing, submitting to little ol['] me[or]Hm, I wouldn't imagine so large as a bottom[or]I see my charm can fell even those so large[at random][else if scalevalue of Player > 3][one of]What a shame, I figured someone your size would put up a better fight[or]Clearly you underestimated me, don't let my size fool you[or]I'd steal my new trophy away, but clearly you won't fit in my hole[at random][else if HP of Player > 0][one of]Oh, if everyone just gave up as quickly as you[or]Clearly you couldn't resist my charm[or]I think my friend wants to play a little game[at random][else][one of]Shouldn't've underestimated me, bub[or]Should've ran when you could[or]That's what ya get for trespassing my turf[at random][end if]";
 	if Player is male and Cock Length of Player < 14 and a random chance of 1 in 2 succeeds:
-		say "!' She moves a hand to grab [if Cock Count of Player > 1]one of [end if]your cock[smn], stroking it as she shifts closer, her tongue lewdly caressing the [cock size desc of Player] tool until you are[if HP of Player < 1] forcibly[end if] made hard[if Cock Count of Player > 2], its brothers soon following thereafter[else if Cock Count of Player > 1], its brother soon following thereafter[end if]";
+		say "!' She moves a hand to grab [if Cock Count of Player > 1]one of [end if]your cock[smn], stroking it as she shifts closer, her tongue lewdly caressing the [cock size desc of Player] tool until you are[if HP of Player < 1] forcibly[end if] made hard[if Cock Count of Player > 2], its brothers soon following thereafter[else if Cock Count of Player > 1], its brother soon following thereafter[end if]. ";
 		if scalevalue of Player > 3:
-			say ". You can't refuse to admit to yourself that it's a little embarrassing when such a small [if HP of Player > 0]creature[else]assailant[end if] is forced to scale your sizable, [bodytype of Player] form to position herself over you";
+			say "You can't refuse to admit to yourself that it's a little embarrassing when such a small [if HP of Player > 0]creature[else]assailant[end if] is forced to scale your sizable, [bodytype of Player] form to position herself over you";
 		else:
-			say ". Satisfied, she scrambles to position herself on top of your [bodytype of Player] form";
+			say "Satisfied, she scrambles to position herself on top of your [bodytype of Player] form";
 		say ". The spry lady shifting her tattered loincloth over so that it won't get in the way of impaling herself with your throbbing organ, she grinds her shapely ass along its length.";
 		WaitLineBreak;
 		say "     Now ready for you, the creature slowly sinks [if Cock Count of Player > 2]one of your cocks within the folds of her cunt, your remaining organs left neglected in the open air[else if Cock Count of Player is 2]one of your cocks within the folds of her cunt, the remaining organ left neglected in the open air[else]your cock within the folds of her cunt[end if]. She moans loudly in satisfaction, savoring the[if HP of Player < 1] forced[end if] intrusion upon her wanton hole, inching it deeper in until it becomes fully engulfed[if Player is knotted] save for the knot[end if][if Cock Length of Player > 8], no doubt strained by its comparatively large size[end if]. The goblin's revels in this lewd ceremony remain fairly brief, however, as she soon shifts gears to using you properly.";
@@ -36,12 +36,12 @@ to say losetogob_f:
 			say "     '[if Cock Length of Player > 8][one of]Nng, this is going to be a challenge[or]Ah, oh, don't think I can't handle you[or]Ah, ooh, this is going to take a bit of work[at random][else][one of]Oh, this'll be a fun ride[or]Ah, I couldn't resist taking this bad boy out for a ride[or]Ooh, the fun's just started here[at random][end if]";
 		say "!' Hands stroking your [bodydesc of Player] torso as she builds up a motion, she's quick to illustrate a manic fervor in pumping herself against your hardened organ[if scalevalue of Player > 3]; though such a diminutive creature barely registers against your substantially larger form, her sickeningly rapid motion against your member nonetheless has an effect on you[else], her dizzying motions pushing you back and forth with sickening rapidity[end if][if Cock Count of Player > 3]. In her endeavors, she instinctively grabs two of your free dicks, pumping them wildly in her wanton fury[else if Cock Count of Player is 3]. In her endeavors, she instinctively grabs both of your free dicks, pumping them wildly in her wanton fury[else if Cock Count of Player is 2]. In her endeavors, she instinctively grabs your free dick, pumping it wildly in her wanton fury[end if].";
 		WaitLineBreak;
-		say "     The wet sound of her continued motion filling the air for but a few short minutes later, she finally cries out in ecstasy, [if Player is knotted]tying with you as her cunt tightens[else]her cunt tightening[end if] further around your cock until you're [if HP of Player > 0]compelled[else]forced[end if] to find bliss as well, pumping her voracious womb with your [Cum Load Size of Player] spurts of cum[if Cock Count of Player > 2]. Not so lost in lust as to relent in humiliating you further, she aims both free tools in her hold to your face, spraying you with your own seed[else if Cock Count of Player is 2]. Not so lost in lust as to relent in humiliating you further, she aims the free tool in her hold to your face, spraying you with your own seed[end if]";
+		say "     The wet sound of her continued motion filling the air for but a few short minutes later, she finally cries out in ecstasy, [if Player is knotted]tying with you as her cunt tightens[else]her cunt tightening[end if] further around your cock until you're [if HP of Player > 0]compelled[else]forced[end if] to find bliss as well, pumping her voracious womb with your [Cum Load Size of Player] spurts of cum[if Cock Count of Player > 2]. Not so lost in lust as to relent in humiliating you further, she aims both free tools in her hold to your face, spraying you with your own seed[else if Cock Count of Player is 2]. Not so lost in lust as to relent in humiliating you further, she aims the free tool in her hold to your face, spraying you with your own seed[end if]. ";
 		if Ball Size of Player > 5:
-			say ". Her moans becoming weak and disoriented, she wasn't at all prepared for how much you'd unload into her. Her quickly beleaguered belly is bloating with your immense sexual fluids until each successive spurt shoots out from the lips of her stuffed hole[if Cock Count of Player > 1]. You're not spared any shame either, your front getting absolutely drenched in your own cum[end if].";
+			say "Her moans becoming weak and disoriented, she wasn't at all prepared for how much you'd unload into her. Her quickly beleaguered belly is bloating with your immense sexual fluids until each successive spurt shoots out from the lips of her stuffed hole[if Cock Count of Player > 1]. You're not spared any shame either, your front getting absolutely drenched in your own cum[end if].";
 			say "     '[if gobdem is true][one of]Nng, uhh, too much[or]Ooh, urg, hoo[or]Ah, m-mine, so much mine[at random][else][one of]Uegh, I think I bit off more than I could chew[or]Oh, am I going to be sore now[or]Urgh, I'm not going to get anywhere with all this[at random][end if]";
 		else:
-			say ". Approving moans escaping her lips, her tight hole milks you of every last drop you have to offer. Still on the high of her own lust, she continues to ride you until you're too soft to sate her needs any further.";
+			say "Approving moans escaping her lips, her tight hole milks you of every last drop you have to offer. Still on the high of her own lust, she continues to ride you until you're too soft to sate her needs any further.";
 			say "     '[if gobdem is true][one of]Ah, m-mine, ah[or]Ah, whew, hm[or]Ah, ha, mine[at random][else][one of]Whew, nothing I couldn't handle[or]Oh, that was some ride[or]Ah, I just need a second to catch my breath[at random][end if]";
 		say "...' She eventually pulls herself free of your organ, a trail of seed in its wake, before she [if scalevalue of Player > 3]makes the slow descent[else]climbs[end if] off of you. Still disoriented from lust, it takes a while for her to readjust her paltry attire before she dizzily wanders off, [if Ball Size of Player > 5]leaving a trail of seed in her wake[else]abandoning you[end if]. You eventually manage to pull yourself to your feet, [if Cock Count of Player > 1]taking a moment to clean yourself of your own sexual fluids[else]taking a moment to clean yourself of the mix of sexual fluids[end if] as best you can before leaving this place as well before the scent of sex draw others near.";
 		CreatureSexAftermath "Goblin" receives "PussyFuck" from "Player";
@@ -76,11 +76,11 @@ to say losetogob_m:
 	else:
 		say "     '[if scalevalue of Player > 3 and HP of Player > 0][one of]Oh, this is embarrassing, submitting to little ol['] me[or]Ah, I'm not one to assume someone so large as a bottom[or]I see my charm can fell even those so large[at random][else if scalevalue of Player > 3][one of]What a shame, I figured someone your size would put up a better fight[or]Clearly you underestimated me, don't let my size fool you[or]I'd steal my new trophy away, but clearly you won't fit in my hole[at random][else if HP of Player > 0][one of]Oh, if everyone just gave up as quickly as you[or]Clearly you couldn't resist my charm[or]I think my friend wants to play a little game[at random][else][one of]Shouldn't've underestimated me, bub[or]Should've ran when you could[or]That's what ya get for trespassing my turf[at random][end if]";
 	if anallevel > 1 and Player is male and Cock Length of Player < 15 and a random chance of 1 in 6 succeeds:
-		say "!' He moves a hand to grab [if Cock Count of Player > 1]one of [end if]your cock[smn], stroking it as he shifts closer, his tongue lewdly caressing the [cock size desc of Player] tool until you are[if HP of Player < 1] forcibly[end if] made hard[if Cock Count of Player > 2], its brothers soon following thereafter[else if Cock Count of Player > 1], its brother soon following thereafter[end if]";
+		say "!' He moves a hand to grab [if Cock Count of Player > 1]one of [end if]your cock[smn], stroking it as he shifts closer, his tongue lewdly caressing the [cock size desc of Player] tool until you are[if HP of Player < 1] forcibly[end if] made hard[if Cock Count of Player > 2], its brothers soon following thereafter[else if Cock Count of Player > 1], its brother soon following thereafter[end if]. ";
 		if scalevalue of Player > 3:
-			say ". You can't refuse to admit to yourself that it's a little embarrassing when such a small [if HP of Player > 0]creature[else]assailant[end if] is forced to scale your sizable, [bodytype of Player] form to position himself over you";
+			say "You can't refuse to admit to yourself that it's a little embarrassing when such a small [if HP of Player > 0]creature[else]assailant[end if] is forced to scale your sizable, [bodytype of Player] form to position himself over you";
 		else:
-			say ". Satisfied, he scrambles to position himself on top of your [bodytype of Player] form";
+			say "Satisfied, he scrambles to position himself on top of your [bodytype of Player] form";
 		say ", the spry lad shifting his tattered loincloth over so that it won't get in the way of impaling himself with your throbbing organ, his own standing proudly to attention as he grinds his shapely ass along its length. Apparently, this particular goblin is rather fond of going on a ride.";
 		say "     Quickly in position, the creature slowly sinks [if Cock Count of Player > 2]one of your cocks past his supple anal ring, your remaining organs left neglected in the open air[else if Cock Count of Player is 2]one of your cocks past his supple anal ring, the remaining organ left neglected in the open air[else]your cock past his supple anal ring[end if]. He moans loudly in satisfaction, savoring the[if HP of Player < 1] forced[end if] intrusion upon his wanton hole, inching it deeper in until it becomes fully engulfed[if Player is knotted] save for the knot[end if][if Cock Length of Player > 8], no doubt strained by its comparatively large size[end if]. The goblin's revels in this lewd ceremony remain fairly brief, however, as he soon shifts gears to using you properly.";
 		WaitLineBreak;
@@ -89,12 +89,12 @@ to say losetogob_m:
 		else:
 			say "     '[if Cock Length of Player > 8][one of]Nng, this is going to be a challenge[or]Ah, oh, don't think I can't handle you[or]Ah, ooh, this is going to take a bit of work[at random][else][one of]Oh, this'll be a fun ride[or]Ah, I couldn't resist taking this bad boy out for a ride[or]Ooh, the fun's just started here[at random][end if]";
 		say "!' Hands stroking your [bodydesc of Player] torso as he builds up a motion, he's quick to illustrate a manic fervor in pumping himself against your hardened organ[if scalevalue of Player > 3]; though such a diminutive creature barely registers against your substantially larger form, his sickeningly rapid motion against your member nonetheless has an effect on you[else], his dizzying motions pushing you back and forth with sickening rapidity[end if][if Cock Count of Player > 3]. In his endeavors, he instinctively grabs two of your free dicks, frotting them wildly against his own in wanton fury[else if Cock Count of Player is 3]. In his endeavors, he instinctively grabs both of your free dicks, frotting them wildly against his own in wanton fury[else if Cock Count of Player is 2]. In his endeavors, he instinctively grabs your free dick, frotting it wildly against his own in wanton fury[end if].";
-		say "     The wet sound of his continued motion filling the air for but a few short minutes later, he finally cries out in ecstasy, [if Player is knotted]tying with you as his ass tightens[else]his ass tightening[end if] further around your cock until you're [if HP of Player > 0]compelled[else]forced[end if] to find bliss as well, pumping his taut bowels with your [Cum Load Size of Player] spurts of cum. Not so lost in lust as to relent in humiliating you further, he aims [if Cock Count of Player > 2]both free tools in his hold to your face, spraying you with your seed, along with his own[else if Cock Count of Player is 2]the free tool in his hold to your face, spraying you with your seed, along with his own[else]his tool to spray you with his own seed[end if]";
+		say "     The wet sound of his continued motion filling the air for but a few short minutes later, he finally cries out in ecstasy, [if Player is knotted]tying with you as his ass tightens[else]his ass tightening[end if] further around your cock until you're [if HP of Player > 0]compelled[else]forced[end if] to find bliss as well, pumping his taut bowels with your [Cum Load Size of Player] spurts of cum. Not so lost in lust as to relent in humiliating you further, he aims [if Cock Count of Player > 2]both free tools in his hold to your face, spraying you with your seed, along with his own[else if Cock Count of Player is 2]the free tool in his hold to your face, spraying you with your seed, along with his own[else]his tool to spray you with his own seed[end if]. ";
 		if Ball Size of Player > 5:
-			say ". His moans becoming weak and disoriented, he wasn't at all prepared for how much you'd unload into him. His quickly beleaguered belly is bloating with your immense sexual fluids until each successive spurt shoots out from the lip of his stuffed hole[if Cock Count of Player > 1]. You're not spared any shame either, your front getting absolutely drenched in your own cum[end if].";
+			say "His moans becoming weak and disoriented, he wasn't at all prepared for how much you'd unload into him. His quickly beleaguered belly is bloating with your immense sexual fluids until each successive spurt shoots out from the lip of his stuffed hole[if Cock Count of Player > 1]. You're not spared any shame either, your front getting absolutely drenched in your own cum[end if].";
 			say "     '[if gobdem is true][one of]Nng, uhh, too much[or]Ooh, urg, hoo[or]Ah, m-mine, so much mine[at random][else][one of]Uegh, I think I bit off more than I could chew[or]Oh, am I going to be sore now[or]Urgh, I'm not going to get anywhere with all this[at random][end if]";
 		else:
-			say ". Approving moans escaping his lips, his tight hole milks you of every last drop you have to offer. Still on the high of his own lust, he continues to ride you until you're too soft to sate his needs any further.";
+			say "Approving moans escaping his lips, his tight hole milks you of every last drop you have to offer. Still on the high of his own lust, he continues to ride you until you're too soft to sate his needs any further.";
 			say "     '[if gobdem is true][one of]Ah, m-mine, ah[or]Ah, whew, hm[or]Ah, ha, mine[at random][else][one of]Whew, nothing I couldn't handle[or]Oh, that was some ride[or]Ah, I just need a second to catch my breath[at random][end if]";
 		say "...' He eventually pulls himself free of your organ, a trail of seed in its wake, before he [if scalevalue of Player > 3]makes the slow descent[else]climbs[end if] off of you. Still disoriented from lust, it takes a while for him to readjust his paltry attire before he dizzily wanders off, [if Ball Size of Player > 5]leaving a trail of seed in his wake[else]abandoning you[end if]. You eventually manage to pull yourself to your feet, taking a moment to clean yourself of the mix of sexual fluids as best you can before leaving this place as well before the scent of sex draws others near.";
 		CreatureSexAftermath "Goblin" receives "AssFuck" from "Player";
@@ -190,7 +190,7 @@ to say losetogob_m:
 					say "     '[if scalevalue of Player > 3][one of]Whew, ah, what a ride[or]Ah, give me a second, big one[or]Heh, shame my big new friend had nothing else for me to play with[at random][else][one of]Heh, shame my new friend had nothing else for me to play with[or]Whew, I'm going to need a second[or]Ho boy, what a ride[at random][end if]";
 				say "...' Taking a moment to catch his breath, the creature eventually pulls himself free from you, casually wiping his spent tool clean against your behind before he crawls back into the hole from whence he came, regarding you with a sly grin as he departs, allowing you to recover and go about your business once more.";
 		else:
-			say "!' Slowly building up a pace of fucking you proper, he starts causing you to tremble in[if HP of Player < 1] forcibly imposed[end if] pleasure as he abuses your hole ";
+			say "!' Slowly building up a pace of fucking you proper, he starts causing you to tremble in[if HP of Player < 1] forcibly imposed[end if] pleasure as he abuses your hole";
 			if Player is male:
 				say "[if Cock Count of Player > 2]. He continues to stroke your dicks, now using both hands to pump two of them[else if Cock Count of Player > 1]. He continues to stroke your dicks, now using both hands to pump the two of them[else], further exacerbating your arousal as he continues to pump your dick[end if]. Quite the tenacious goblin, [if HP of Player > 0]you can't help but credit him for his[else]he's certainly not lacking in[end if] ability to multitask, at least";
 			else if Cunt Count of Player > 1:
@@ -446,11 +446,11 @@ to say mgob_vicsex1:	[m-gob vaginal sex]
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Goblin";
 
 to say mgob_vicsex2:	[m-gob anal sex]
-	say "     Approaching him, you immediately rip free his tattered loincloth, leaving his diminutive behind naked in the middle of the open air. [if scalevalue of Player > 3]You can see him visibly tremble, clearly not sure what to expect from someone as large as you[else]Perhaps too weak to contend your assault, he doesn't give you any trouble when you assess your inevitable angle of descent[end if]. Freeing yourself of any bindings, you ";
+	say "     Approaching him, you immediately rip free his tattered loincloth, leaving his diminutive behind naked in the middle of the open air. [if scalevalue of Player > 3]You can see him visibly tremble, clearly not sure what to expect from someone as large as you[else]Perhaps too weak to contend your assault, he doesn't give you any trouble when you assess your inevitable angle of descent[end if]. Freeing yourself of any bindings, you grab ";
 	if scalevalue of Player > 4:
-		say "grab the small creature, stroking [if Cock Count of Player > 1]one of your now-exposed dicks[else]your now-exposed dick[end if] before driving your hardened cock into his hole.";
+		say "the small creature, stroking [if Cock Count of Player > 1]one of your now-exposed dicks[else]your now-exposed dick[end if] before driving your hardened cock into his hole.";
 	else:
-		say "grab him by his sides and grind [if Cock Count of Player < 1]one of your now-exposed dicks[else]your now-exposed dick[end if] between his asscheeks before driving your hardened cock into his hole.";
+		say "him by his sides and grind [if Cock Count of Player < 1]one of your now-exposed dicks[else]your now-exposed dick[end if] between his asscheeks before driving your hardened cock into his hole.";
 	say "     [if Cock Length of Player > 8]He immediately cries out in protest, his tight ring giving you a fair amount of resistance, but with a bit of work his passage inevitably abides your invading flesh, regardless of your victim's compliance[else]He flinches and struggles against the sensation of your invading flesh, his anal passage tight and ill-suited to abide even a reasonable intrusion, a resistance - as it may be - quickly diminished with a bit of force[end if]. [if scalevalue of Player > 3]He's dragged across the ground with each successive thrust, trying in vain to anchor himself against the overwhelming storm of your rising fervor[else]Gripping at the ground, he can barely hold himself in place as your thrusting reaches a feverish pace[end if], until you find blissful relief.";
 	WaitLineBreak;
 	say "     [if Cock Length of Player >= 9]Your [cock size desc of Player] intrusion triggering his own orgasm, you[else]You[end if] ";
@@ -538,6 +538,7 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Goblin:
 	choose row MonsterID from the Table of Random Critters;
 	now gobgender is a random number between 1 and 2;
+	now gobdem is false;
 	if MaleList is banned and FemaleList is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     You are stared at by an angry little goblin creature. It shifts from one foot to another, as if sizing you up. Eventually it decides to leave you alone, heading back to hide among the junk. Well, that was odd. Hopefully it'll tell the others to leave you alone as well.";
 		now BannedStatus entry is true;
@@ -545,15 +546,18 @@ to say PrepCombat_Goblin:
 		now combat abort is 1;
 		now gobgender is 0;
 	else:
-		if MaleList is banned:
-			now gobgender is 1;
-		else if FemaleList is banned:
-			now gobgender is 2;
-		else if MaleList is not warded or FemaleList is not warded:	[hunting results in 2/3rds chance to get unwarded option]
-			if MaleList is warded and (ishunting is false or a random chance of 1 in 3 succeeds):
+		if inasituation is false:
+			if MaleList is banned:
 				now gobgender is 1;
-			else if FemaleList is warded and (ishunting is false or a random chance of 1 in 3 succeeds):
+			else if FemaleList is banned:
 				now gobgender is 2;
+			else if MaleList is not warded or FemaleList is not warded:	[hunting results in 2/3rds chance to get unwarded option]
+				if MaleList is warded and (ishunting is false or a random chance of 1 in 3 succeeds):
+					now gobgender is 1;
+				else if FemaleList is warded and (ishunting is false or a random chance of 1 in 3 succeeds):
+					now gobgender is 2;
+			if a random chance of 1 in 4 succeeds:
+				now gobdem is true;
 		if Player is FemalePreferred:
 			now sex entry is "Female";
 		else if Player is HermPreferred:
@@ -564,10 +568,6 @@ to say PrepCombat_Goblin:
 			setmongender 4; [creature is female]
 		else:
 			setmongender 3; [creature is male]
-		if a random chance of 1 in 4 succeeds and inasituation is false:
-			now gobdem is true;
-		else:
-			now gobdem is false;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

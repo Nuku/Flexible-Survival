@@ -83,7 +83,7 @@ to say beattheSugarGlider:
 				say "     Her saliva smells sweet and is a little sticky, but that tongue of hers is a delight. The long, dexterous tongue slips out and runs across your maleness, licking your manhood and balls. You are soon fully hard and dripping precum across your lustful prize's lips. She welcomes your [cock size desc of Player] cock into her muzzle, sucking at it greedily while her paws grip your ass. The sugary scent of the horny girl has gotten you quite excited and you thrust firmly into her slick muzzle while running your fingers through her cotton-candy fur until you cum with a groan of ecstasy. The sexy marsupial swallows down your load, the scent of her arousal growing much stronger in the air as she orgasms as well, leaving wet patches of her juices on the ground and running down her thighs as she fingers her twin pussies to satisfy herself.";
 				CreatureSexAftermath "Sugar Glider" receives "OralCock" from "Player";
 				WaitLineBreak;
-				say "     Having been feed a tasty treat and had a crashing climax of her own, the sugar glider's soft form goes limp, her long tail slipping off your body as she basks in the afterglow of her orgasm. Pulling your still-twitching member from her syrupy muzzle, you take a moment to wipe it across her soft fur. You gather up your things, give her unfucked holes a teasing fingering and grin at her needy moans. You head off with a noticeable spring in your step after the sugary encounter.";
+				say "     Having been fed a tasty treat and had a crashing climax of her own, the sugar glider's soft form goes limp, her long tail slipping off your body as she basks in the afterglow of her orgasm. Pulling your still-twitching member from her syrupy muzzle, you take a moment to wipe it across her soft fur. You gather up your things, give her unfucked holes a teasing fingering and grin at her needy moans. You head off with a noticeable spring in your step after the sugary encounter.";
 			else if Player is male:
 				say " supine form. With a cheer she spreads her legs before you, and with her dual cunts now on full display, you quickly move over the giggling glider and find yourself pulled into a tight hug. Her long, sugary sweet tongue slips into your mouth as she kisses you deeply, her sickly sweet taste making you a bit lightheaded and giggly.";
 				if Cock Count of Player is 1: [Male w/single cock]
@@ -332,10 +332,17 @@ name	desc	weight	object
 "crushed candies"	"A small pile of broken bits of candy."	0	crushed candies
 
 crushed candies is a grab object. crushed candies is infectious. Strain of crushed candies is "Sugar Glider".
-
 Usedesc of crushed candies is "[crushedcandiesuse]".
 
 to say crushedcandiesuse:
+	if "Iron Stomach" is not listed in feats of Player:
+		choose a row with Name of "Sugar Glider" in Table of Random Critters;
+		if Player is FemalePreferred:
+			now sex entry is "Female";
+		else if Player is HermPreferred:
+			now sex entry is "Both";
+		else:
+			now sex entry is "Male";
 	say "     Pouring the crumbled candy into your mouth, you crunch away happily at the sweet treat. As you finish your snack you can't help but feel a little giddy, thanks to the burst of sugar induced energy.";
 	increase morale of Player by 1;
 	raise Player Libido by 8;

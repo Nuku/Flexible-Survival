@@ -12,50 +12,41 @@ Astroslide Field Showers is a room.
 Astroslide Field Showers is north of Astroslide Field Locker-room.
 
 [Not used as a classic room]
-Description of Astroslide Field Showers is "".
+[Description of Astroslide Field Showers is "".]
 
 instead of going to Astroslide Field Showers:
-	say "[astroslideShowersStart]";
-
-to say astroslideShowersStart:
 	say "     You peer into the showers. The room is filled with water vapor, and the laughter and moans of footballers and fans alike. You could use a moment of relaxation, although [bold type]there is a good chance that the water is infectious[roman type]. There are several stalls and spaces to choose.";
 	LineBreak;
 	say "     [bold type]Do you want to take a shower, and if so where?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - In one of the unoccupied stalls.";
 	say "     [link](2)[as]2[end link] - In the group shower.";
 	say "     [link](3)[as]3[end link] - Join someone in an occupied stall.";
-	say "     [link](4)[as]4[end link] - Renounce to a shower.";
+	say "     [link](4)[as]4[end link] - Renounce a shower.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 			break;
 		else:
 			say "Invalid choice. Type [link]1[end link] to shower in one of the unoccupied stalls, [link]2[end link] to shower in the group shower, [link]3[end link] to join someone in one of the stalls, or [link]4[end link] to renounce using the showers.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
 		say "[astroslideShowers1]";
-		WaitLineBreak;
 		say "[astroslideShowerResult]";
 	else if calcnumber is 2:
-		LineBreak;
 		say "[astroslideShowers2]";
-		WaitLineBreak;
 		say "[astroslideShowerResult]";
 	else if calcnumber is 3:
-		LineBreak;
 		say "[astroslideShowers3]";
-		WaitLineBreak;
 		say "[astroslideShowerResult]";
 	else:
 		say "     As tempting as the showers are, you do not want to risk a nanite infection. You turn around, and return to the locker-room.";
-	WaitLineBreak;
 
 to say astroslideShowers1:
 	say "     You pull off your clothes and place them on a bench, then enter one of the stalls. The water runs on your [BodyType of Player] body. You know you will regret it later, but for now, you enjoy the warm shower and the scented soap on your body. You feel something poke your leg. Intrigued, you look down, and see a gorilla cock coming out from a hole in the wall separating your stall from the next. The black dick pokes you once more. It seems someone wants to have some glory hole fun with you.";
 	if Player is male:
-		say "     Having a male equipment yourself, you have the choice between sucking dicks poking in your glory hole, or putting your own cock on display for someone else. [bold type]What do you choose?[roman type][line break]";
+		say "     Having male equipment yourself, you have the choice between sucking dicks poking in your glory hole, or putting your own cock on display for someone else. [bold type]What do you choose?[roman type][line break]";
 		say "     ([link]Suck[as]y[end link]) - Practice fellatio.";
 		say "     ([link]Be sucked[as]n[end link]) - Receive fellatio from other people.";
 		if Player consents:
@@ -73,7 +64,7 @@ to say astroslideShowers1:
 		say "[astroslideShowers1Give]";
 
 to say astroslideShowers1Give:
-	say "     You kneel on the tiled floor, while the water keeps flowing on your head, and you get to work on the large humanoid cock in front of you. The gorilla in the other stall obligingly keeps his thick shaft still, letting you go at your rhythm. You take great pleasure in playing with the glans and the foreskin, and alternate licks and nibbles with long swallows inside your cock. You hear the ape groan and moan. [one of]'Oh fuuuck.'[or]'Whoever you are, don't stop.'[or]'Uhhn yeaaah...'[at random] You find this terribly exciting, and you start masturbating yourself at the same time. It becomes a sort of game between you two. You make sure that the owner of the cock you are servicing is as noisy as you can, a very successful mission. You can hear the eyes of onlookers, who get to watch the entire scene thanks to the lack of door on the stalls. You play with your new pal, making sure to keep it on edge every time you hear his breath accelerate. Suddenly, you hear someone else step in the other shower. Looking down, you see another pair of gorilla feet standing behind your partner. Your hear some whispers, then the first ape almost shout. 'Yes, give it to me. He's gonna make me mad.'";
+	say "     You kneel on the tiled floor, while the water keeps flowing on your head, and you get to work on the large humanoid cock in front of you. The gorilla in the other stall obligingly keeps his thick shaft still, letting you go at your rhythm. You take great pleasure in playing with the glans and the foreskin, and alternate licks and nibbles with long swallows inside your cock. You hear the ape groan and moan. [one of]'Oh fuuuck.' [or]'Whoever you are, don't stop.' [or]'Uhhn yeaaah...' [at random]You find this terribly exciting, and you start masturbating yourself at the same time. It becomes a sort of game between you two. You make sure that the owner of the cock you are servicing is as noisy as you can, a very successful mission. You can hear the eyes of onlookers, who get to watch the entire scene thanks to the lack of door on the stalls. You play with your new pal, making sure to keep it on edge every time you hear his breath accelerate. Suddenly, you hear someone else step in the other shower. Looking down, you see another pair of gorilla feet standing behind your partner. Your hear some whispers, then the first ape almost shout. 'Yes, give it to me. He's gonna make me mad.'";
 	say "     'Ooooh fuck!' the gorilla howls, shortly followed by a small slap. A large dose of salty precum lands in your mouth. The first slap is quickly followed by a series of uninterrupted sex noises as your partner receives an intense buttfuck. You keep up the assault on your end. He has yet to know what [']mad['] means yet. The footballer does not resist your double-team and slams his hips against the stall's wall as he climaxes hard. 'Oh fuck! Oh fuck! Ooooh! Aaaah!' Ape cum launches into your mouth, then your face as you pull out and stroke the thick cock, making sure to milk every last drop. The ape can only submit and go through your ministrations, pinned against the wall by his other partner. You quickly finish yourself, helped by the noises of the second gorilla finishing himself into the first one. Your cum slowly goes down the drain, alongside his. The hot water stops running, and you take it as your cue to leave. You notice on your way out that you attracted quite a crowd, and cannot help but have a small smirk on your face.";
 	CreatureSexAftermath "Player" receives "OralCock" from "Football Gorilla Male";
 
@@ -115,7 +106,8 @@ to say astroslideShowers3:
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Football Gorilla Male";
 
 to say astroslideShowerResult:
-	say "The shower refreshed you. [bold type]Your HP, your libido and your thirst recover[roman type]. However, [bold type]the water propagates the nanites in your body, [bold type]infecting you with the Football Gorilla strain[roman type].";
+	WaitLineBreak;
+	say "     The shower refreshed you. [italic type]Your HP, your libido and your thirst recover. However, the water propagates the nanites in your body, infecting you.[roman type][line break]";
 	PlayerHealed 20;
 	LibidoLoss 40;
 	PlayerDrink 25;

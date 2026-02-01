@@ -72,7 +72,8 @@ to say LoseToFeralBull:
 		now Mooed is 1;
 	else if vorelevel > 1 and a random chance of vorelevel in 5 succeeds and (a random chance of antimoo in 20 succeeds) and scalevalue of Player < 5 and CockVoreList is not banned:
 		say "     The bull snorts after knocking you down and stomps overtop of you. His cock, semi-engorged after the fight, slaps against your face, leaving a streak of bovine pre across your face. [if HP of Player > 0]Feeling aroused[else]Still dazed from the fight[end if], you turn your head towards it to get a proper taste, but are instead surprised as the bull pushes his large cock forward. The thick cock slams into you and stretches surprisingly wide, engulfing your whole head. Your initial shock allows the beast a chance to press his advantage and his cock gulps around you, pulling in your shoulders as well. Surrounded by the hot, squeezing flesh of his bestial manhood, you are assaulted by the strong, musky scent of his virility. Any struggles you make are futile and seem to only further excite the big bovine as you are pulled inches at a time along that meaty tunnel. More and more of your [bodytype of Player] body is drawn into that bulging bovine penis.";
-		say "     You are eventually deposited into his ballsack and left to bathe in his virile semen while his cum factories churn away. You lose track of time, falling into a lustful haze in the heated chamber, only to be roused much later by some rubbing from the outside. As this continues, you can hear the faint mooing of the excited bull growing louder before you are finally blasted free along with a sticky load of bull semen. Landing in the grassy field, you are set upon by the cow who masturbated the bull to climax. She licks you clean, her sloppy tongue getting as much bovine seed as she can get before you make your getaway.[line break][mooplus][infect][infect]";
+		say "     You are eventually deposited into his ballsack and left to bathe in his virile semen while his cum factories churn away. You lose track of time, falling into a lustful haze in the heated chamber, only to be roused much later by some rubbing from the outside. As this continues, you can hear the faint mooing of the excited bull growing louder before you are finally blasted free along with a sticky load of bull semen. Landing in the grassy field, you are set upon by the cow who masturbated the bull to climax. She licks you clean, her sloppy tongue getting as much bovine seed as she can get before you make your getaway.[mooplus]";
+		MultiInfect "Bovine" repeats 2;
 	else:
 		if Mooing < 1:
 			say "     The bull seems to lose interest in you and wanders off to find some grass to eat.";
@@ -239,7 +240,7 @@ to say BeatTheBovine:
 
 to say bovine attack:
 	if Bovine_type is 1:
-		if a random number from 1 to 20 is 1:
+		if a random chance of 1 in 20 succeeds:
 			say "The cow sprays wildly with milk, drenching you, making you cry out as it seems to soak your clothing. All of a sudden a precise follow up spray hits you in the mouth, the pressure forcing you to swallow or drown in it.[line break][infect][line break]";
 			say "With a gulp you get a tingling feeling from your belly and are suddenly washed in contentment.[no line break][if Mooing < 5][mooplus][else][CowMilkAddict][end if]";
 		else:
@@ -529,9 +530,7 @@ name	desc	weight	object
 "cow milk"	"A fresh bottle of delicious cow milk straight from the source. There is a cork in the top to keep it closed."	1	cow milk
 
 cow milk is a grab object. It is milky. cow milk is infectious. Strain of cow milk is "Bovine".
-
 the scent of cow milk is "The cow milk smells delicious and mouth watering.".
-
 Usedesc of cow milk is "[cow milk use]".
 
 to say cow milk use:

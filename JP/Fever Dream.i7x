@@ -38,7 +38,7 @@ When Play begins: [This is Cyn's Boss version encounter]
 	now per entry is 20;
 	now int entry is 15;
 	now cha entry is 15;
-	now sex entry is "both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 333;
 	now lev entry is 30; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 30; [ Monster's average damage when attacking. ]
@@ -61,7 +61,7 @@ When Play begins: [This is Cyn's Boss version encounter]
 	now TrophyFunction entry is "-"; [The dash will tell inform to ignore this function.]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]ghostly[or]chaotic[or]willowy[or]eldritch[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "Anomaly"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "anomaly"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]

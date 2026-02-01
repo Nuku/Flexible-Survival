@@ -72,10 +72,7 @@ Object	Name
 Campus Pool	"Campus Pool"
 
 Campus Pool is a room.
-Description of Campus Pool is "[CampusPoolDesc]";
-
-to say CampusPoolDesc:
-	say "     The campus pool is truly pristine and marvelous. Its waters are a beautiful shining blue, and its tile floors are spotless. Despite the apocalypse, it seems the staff and clientele of the pool have taken excellent care of the area.";
+Description of Campus Pool is "     The campus pool is truly pristine and marvelous. Its waters are a beautiful shining blue, and its tile floors are spotless. Despite the apocalypse, it seems the staff and clientele of the pool have taken excellent care of the area.[line break]";
 
 Section 3 - NPC Declaration
 

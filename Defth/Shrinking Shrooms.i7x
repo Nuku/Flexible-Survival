@@ -55,16 +55,14 @@ name	desc	weight	object
 "glowing mushroom"	"A weird mushroom that you found. Faintly glows with a green light (shrinking item)."	0	glowing mushroom
 
 glowing mushroom is a grab object.
-
+Understand "mushroom" as glowing mushroom.
+Understand "shrooms" as glowing mushroom.
+Understand "glowing shrooms" as glowing mushroom.
 Usedesc of glowing mushroom is "[glowing mushroom use]".
 
 To say glowing mushroom use:
 	say "     You quickly shrink, your body getting smaller and smaller by the second. Meanwhile, the clothes and gear you carry stay the same size, quickly outgrowing your diminishing stature. Looking at the now giant world with awe, you wonder how you will be able to survive while being small as a mouse. And should you just leave your equipment behind? Not seeing too much hope for making it far like this, you decide to wait. Thankfully, after some time, you feel yourself growing back to normal. Looks like the effects weren't permanent - this time, at least.";
-	ItemLoss glowing mushroom by 1;
-
-Understand "mushroom" as glowing mushroom.
-Understand "shrooms" as glowing mushroom.
-Understand "glowing shrooms" as glowing mushroom.
+	[ItemLoss glowing mushroom by 1;]
 
 Section 3 - Events
 
@@ -954,6 +952,7 @@ to say BHHFuckCock:
 		if Player consents:
 			LineBreak;
 			say "     You find yourself wanting this, in fact. Looking at that huge cock yearning for you makes you feel wanted, in a rather weird way. Giving it some thought, you decide to walk towards the horseman, whose expression turns into pure bliss as he understands that you want to feed yourself to his massive dong. 'Yeah, why fight the urge? Of course you wanna feel this huge and warm cock sucking you in... slowly and nicely.'";
+			WaitLineBreak;
 			BBHFuckCockCV;
 		else:
 			LineBreak;
@@ -964,13 +963,13 @@ to say BHHFuckCock:
 			if Player consents:
 				LineBreak;
 				say "     The way he speaks sort of turns your mind around as you find yourself suddenly wanting this. Looking at that huge cock yearning for you makes you feel wanted, in a rather weird way. Giving it some thought, you decide to walk towards the horseman, whose expression turns into pure bliss as he understands that you want to feed yourself to his massive dong. 'I knew you'd come around. Why would you waste the chance to feel this huge and warm cock sucking you in... slowly and nicely...'";
+				WaitLineBreak;
 				BBHFuckCockCV;
 			else:
 				LineBreak;
 				say "     As you already said, a [']no['] is what it is, a [']no[']. You deny his invitation a second time and proceed to just walk away, lest you would risk him attempting to persuade you into another time. 'Fine. I'll find a more cooperative meal for my cock, then.' You leave the horseman to his grunting as you simply walk away with your stuff, onto more important matters.";
 
 to BBHFuckCockCV:
-	WaitLineBreak;
 	say "     Before you know it, you are standing in front of that massive horsecock, steadily rising to attention, caressing it as it begins to drool, eager to receive your attention. Your hands slide over its mostly flat head as you proceed to lean over and kiss it, moving your fingers into the horseman's slit and pulling it gently. The orifice begins to open, freeing your way ahead, and the equine man almost cannot hold his excitement as he observes you beginning to crawl inside. You press your hands deeper and see your arms slowly sinking into the cavernous body, then follow up with your head and begin to push yourself into it. 'Yeah, keep going... Oh, it feels so good...'";
 	say "     Soon, your whole face is smothered against the giant horsecock's flat head and immediately pulled in as the entire world around you becomes a hot mess of precum and darkness. Eventually, the rest of your body follows, the throbbing flesh swallowing your torso inch by inch with every pulse until your feet are lifted off the ground. The horseman loses himself in ecstasy as he feels you going deeper inside his gigantic meat, which is drooling all over your legs, before he lifts it, so that even gravity comes to assist you in this endeavor. 'You're doing so well... Yeah... Keep going in... Deeper!'";
 	WaitLineBreak;

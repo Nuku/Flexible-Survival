@@ -16,8 +16,7 @@ Tyr is in Tyr's Club.
 FightPit is west of Tyr's Club.
 Club Lockerroom is north of Tyr's Club.
 
-Instead of sniffing Tyr's Club:
-	say "     The club smells heavily of sweat, tension, concentrated focus and lots of testosterone and estrogen.";
+Scent of Tyr's Club is "     The club smells heavily of sweat, tension, concentrated focus and lots of testosterone and estrogen.".
 
 Section 2 - Tyr
 
@@ -164,70 +163,85 @@ to TyrSexMenu:
 	say "     Having beaten Tyr consistently, you've learned his technique and are able to beat him... if you want. Will you put the Doberman down and take your prize again, or will you ease up and let him pin you down?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Win: Receive Anal";
 	now sortorder entry is 3;
 	now description entry is "Beat him and take it in the ass";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Win: Give Fellatio";
 	now sortorder entry is 6;
 	now description entry is "Beat him and suck him off";
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Win: Fuck Him";
 		now sortorder entry is 1;
 		now description entry is "Beat him and fuck his ass";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Win: Receive Fellatio";
 		now sortorder entry is 4;
 		now description entry is "Beat him and get a blowjob";
+		[]
 		if lust of Tyr >= 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Lose: Fuck Him";
 			now sortorder entry is 13;
 			now description entry is "Lose and fuck his ass";
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Win: Vaginal";
 		now sortorder entry is 2;
 		now description entry is "Beat him and ask to get fucked";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Win: Receive Cunnilingus";
 		now sortorder entry is 5;
 		now description entry is "Beat him and have him eat you out";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Lose: Vaginal";
 		now sortorder entry is 11;
 		now description entry is "Let him win and fuck you";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Lose: Cunnilingus";
 		now sortorder entry is 14;
 		now description entry is "Let him win and eat you out";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Lose: Training Massage";
 		now sortorder entry is 15;
 		now description entry is "Let him win and do some training";
+	[]
 	if Player is puremale:
 		if anallevel is 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Lose: Anal Play + Handjob";
 			now sortorder entry is 16;
 			now description entry is "Let him win and jerk you off";
+	[]
 	if Player is neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "Win: No Sex";
 		now sortorder entry is 10;
 		now description entry is "Beat him and leave it at that";
+	[]
 	if Player is not female:
 		if Libido of Tyr >= 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Lose: Receive Anal";
 			now sortorder entry is 12;
 			now description entry is "Lose and get fucked in the ass";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Lose: No Sex";
 		now sortorder entry is 18;
 		now description entry is "Let him win and leave it at that";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -569,8 +583,7 @@ Description of Receptionist is "     Off to the side out of the way a young boy 
 Conversation of Receptionist is { "Everyone Have Fun Today!" }.
 Receptionist is in FightPit.
 
-Instead of linkactioning Receptionist:
-	say "Possible Actions: [link]talk[as]talk Receptionist[end link], [link]smell[as]smell Receptionist[end link], [link]fuck[as]fuck Receptionist[end link], [link]battle[as]duel[end link][line break]";
+linkaction of Receptionist is "Possible Actions: [link]talk[as]talk Receptionist[end link], [link]smell[as]smell Receptionist[end link], [link]fuck[as]fuck Receptionist[end link], [link]battle[as]duel[end link][line break]".
 
 Scent of the Receptionist is "     The young pup smells like a cute young boy who's got a big secret! Oh and cookies!".
 
@@ -617,34 +630,42 @@ Carry out PitBattle:
 to say ArenaFightCheck:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	if FurryList is not banned and MaleList is not banned:
-		choose a blank row in table of fucking options;
-		now title entry is "Wolftaur";
-		now sortorder entry is 1;
-		now description entry is "lupine taur";
-		choose a blank row in table of fucking options;
-		now title entry is "Alpha Wolf";
-		now sortorder entry is 2;
-		now description entry is "dominant wolf";
-		choose a blank row in table of fucking options;
-		now title entry is "Husky Alpha";
-		now sortorder entry is 5;
-		now description entry is "dominant canine";
+	[]
+	if FurryList is not banned:
+		if MaleList is not banned:
+			choose a blank row in table of fucking options;
+			now title entry is "Wolftaur";
+			now sortorder entry is 1;
+			now description entry is "lupine taur";
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Alpha Wolf";
+			now sortorder entry is 2;
+			now description entry is "dominant wolf";
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Husky Alpha";
+			now sortorder entry is 5;
+			now description entry is "dominant canine";
+		[]
+		if FemaleList is not banned:
+			choose a blank row in table of fucking options;
+			now title entry is "Great Dane";
+			now sortorder entry is 4;
+			now description entry is "female canine fighter";
+		[]
+		if HermList is not banned:
+			choose a blank row in table of fucking options;
+			now title entry is "Wildcat";
+			now sortorder entry is 6;
+			now description entry is "armored herm feline";
+	[]
 	if MaleList is not banned:
 		choose a blank row in table of fucking options;
 		now title entry is "Minotaur";
 		now sortorder entry is 3;
 		now description entry is "mythological monstrosity";
-	if FurryList is not banned and FemaleList is not banned:
-		choose a blank row in table of fucking options;
-		now title entry is "Great Dane";
-		now sortorder entry is 4;
-		now description entry is "female canine fighter";
-	if FurryList is not banned and HermList is not banned:
-		choose a blank row in table of fucking options;
-		now title entry is "Wildcat";
-		now sortorder entry is 6;
-		now description entry is "armored herm feline";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

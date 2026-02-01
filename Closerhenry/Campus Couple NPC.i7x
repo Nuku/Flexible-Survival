@@ -8,8 +8,6 @@ Version 1 of Campus Couple NPC by Closerhenry begins here.
 [   1: Have learned where the couple's room                             ]
 [   100: Permanently locked out of the two                              ]
 
-CampusCoupleRelationship is a number that varies.
-
 An everyturn rule:
 	if CampusCoupleRelationship > 0:
 		if daytimer is day and (Jadako is in Jadako's Room or Joseph is in Jadako's Room):
@@ -28,10 +26,7 @@ Object	Name
 Jadako's Room	"Jadako's Room"
 
 Jadako's Room is a room.
-Description of Jadako's Room is "[jadakoroomdesc]".
-
-To say jadakoroomdesc:
-	say "     Jadako's room is a standard college dorm room. It's got different video game and anime posters hanging throughout, most depicting buff male characters. A television sits on a table with a collection of different DVDs, all of some anime or movie. A large, open glass window is on the other end of the room. Atop its windowsill is a collection of exotic sex toys, all proudly on display. The sheets to Jadako's bed are thrown about, suggesting he doesn't do a great job of staying tidy.";
+Description of Jadako's Room is "     Jadako's room is a standard college dorm room. It's got different video game and anime posters hanging throughout, most depicting buff male characters. A television sits on a table with a collection of different DVDs, all of some anime or movie. A large, open glass window is on the other end of the room. Atop its windowsill is a collection of exotic sex toys, all proudly on display. The sheets to Jadako's bed are thrown about, suggesting he doesn't do a great job of staying tidy.[line break]".
 
 to connect Jadako's Room:
 	change the south exit of Jadako's Room to Tenvale College Male Dorms;

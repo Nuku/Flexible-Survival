@@ -216,10 +216,10 @@ This is the sex change rule:
 			[removes additional cunts if the player has more than the infection, no "One Way" and no "All the things"]
 			say "[line break]An odd, wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] has vanished!";
 			decrease Cunt Count of Player by 1;
-	[say "[run paragraph on]";]
+	say "[run paragraph on]";
 	follow the cock descr rule;
 	follow the cunt descr rule;
-	[say "";]
+	say "";
 	now skipcockchange is false;
 	follow the SetPlayerPronouns rule;
 
@@ -465,7 +465,7 @@ To Infect:
 					say "[line break]Your head aches as the infection spreads through you.";
 					decrease Intelligence of Player by 1;
 		else if Intelligence of Player < Int entry:
-			say "[line break]You feel your mind swelling with [Name entry in lower case] [one of]Intelligence[or]wit[or]complexity[at random].";
+			say "[line break]You feel your mind swelling with [Name entry in lower case] [one of]intelligence[or]wit[or]complexity[at random].";
 			increase Intelligence of Player by 1;
 	else if x is xdex:
 		if Dexterity of Player > Dex entry and a random chance of 1 in 10 succeeds:
@@ -476,7 +476,7 @@ To Infect:
 					say "[line break]Your coordination feels weaker as the infection spreads through you.";
 					decrease Dexterity of Player by 1;
 		else if Dexterity of Player < Dex entry:
-			say "[line break]You feel your hand eye coordination swelling with [Name entry in lower case] [one of]Dexterity[or]physique[or]accuracy[at random].";
+			say "[line break]You feel your hand eye coordination swelling with [Name entry in lower case] [one of]dexterity[or]precision[or]accuracy[at random].";
 			increase Dexterity of Player by 1;
 	else if x is xsta:
 		if Stamina of Player > Sta entry and a random chance of 1 in 10 succeeds:
@@ -489,7 +489,7 @@ To Infect:
 			if remainder after dividing stamina of Player by 2 is 1:
 				decrease MaxHP of Player by level of Player plus 1;
 		else if Stamina of Player < Sta entry:
-			say "[line break]You feel your body toughening with [Name entry in lower case] [one of]Stamina[or]physique[or]power[at random].";
+			say "[line break]You feel your body toughening with [Name entry in lower case] [one of]stamina[or]endurance[or]vitality[at random].";
 			increase Stamina of Player by 1;
 			if remainder after dividing stamina of Player by 2 is 0:
 				increase MaxHP of Player by level of Player plus 1;
@@ -502,7 +502,7 @@ To Infect:
 					say "[line break]Your senses dull as the infection spreads through you.";
 					decrease Perception of Player by 1;
 		else if Perception of Player < Per entry:
-			say "[line break]You feel your senses swelling with [Name entry in lower case] [one of]Perception[or]aptitude[or]feral attention[at random].";
+			say "[line break]You feel your senses swelling with [Name entry in lower case] [one of]perception[or]aptitude[or]feral attention[at random].";
 			increase Perception of Player by 1;
 	else if x is xcha:
 		if Charisma of Player > Cha entry and a random chance of 1 in 10 succeeds:
@@ -513,7 +513,7 @@ To Infect:
 					say "[line break]You feel more isolated as the infection spreads through you.";
 					decrease Charisma of Player by 1;
 		else if Charisma of Player < Cha entry:
-			say "[line break]You feel your social sense swelling with [Name entry in lower case] [one of]Charisma[or]natural charm[or]pheromones[at random].";
+			say "[line break]You feel your social sense swelling with [Name entry in lower case] [one of]charisma[or]natural charm[or]pheromones[at random].";
 			increase Charisma of Player by 1;
 	if Libido of Player < libido entry:
 		let oldlib be Libido of Player;
@@ -628,7 +628,7 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 			now AssName of Player is ""; [wiping out the new style parts]
 			now AssSpeciesName of Player is ""; [wiping out the new style parts]
 	else if x is 4: [body]
-		[say "[run paragraph on]";]
+		say "[run paragraph on]";
 		follow the breast change rule;
 		if BodyName of Player is not Name entry:
 			say "[line break]Your [one of][bodytype of Player] [or][bodydesc of Player] [or][bodydesc of Player] [or][bodytype of Player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
@@ -647,11 +647,11 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 			now ArmsName of Player is ""; [wiping out the new style parts]
 			now ArmsSpeciesName of Player is ""; [wiping out the new style parts]
 		attributeinfect; [sets the new attributes]
-		[say "[run paragraph on]";]
+		say "[run paragraph on]";
 		follow the sex change rule;
-		[say "";]
+		say "";
 	else if x is 5: [genitals]
-		[say "[run paragraph on]";]
+		say "[run paragraph on]";
 		follow the sex change rule;
 		if CockName of Player is not Name entry:
 			if Player is male, say "[line break]Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
@@ -667,7 +667,7 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 			now Cunt Description of Player is ""; [wiping out the new style parts]
 			if Name entry is listed in infections of InternalBallsList and internalBallsbypass is true:
 				say "[italic type]... After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type][line break]";
-		[say "";]
+		say "";
 	else: [resistant]
 		say "[line break]Your nanites['] programmed resistance to change prevents further mutation.";
 

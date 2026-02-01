@@ -64,18 +64,14 @@ carry out Inventorying:
 			now baseavailcolumns is 41;
 		let owneditemindex be a number;
 		[go through all the stuff]
-		say "[line break]";
-		say "[bold type]Equipment:[roman type]";
+		say "[line break][bold type]Equipment:[roman type]";
 		repeat through Table of Game Objects:
 			let ownedCount be carried of object entry;
 			if ownedCount > 0 and object entry is equipment:
 				increase owneditemindex by 1;
 				let itemname be Name entry;
 				[line feed or switch to next column]
-				if (invcolumns is 1) or (remainder after dividing owneditemindex by invcolumns is 1):
-					say "[line break]";
-				else:
-					say "  --  ";
+				say "[if invcolumns is 1 or remainder after dividing owneditemindex by invcolumns is 1][line break][else]  --  [end if]";
 				[new (old) linking without text capturing]
 				say "[variable letter spacing]";
 				if hypernull is not 1:
@@ -97,40 +93,35 @@ carry out Inventorying:
 				else if traderavailable is 1:
 					linkfind "give [itemname] to [tradeguy]";
 					say "[if hypernull is not 1] [end if][set link hyperindex][bracket]T[close bracket][terminate link] ";
-				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
+				if ((AC of object entry > 0 and effectiveness of object entry > 0 and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
 					linkfind "upgrade [itemname]";
 					say "[if hypernull is not 1 and traderavailable is 0] [end if][set link hyperindex][bracket]I[close bracket][terminate link] ";
 				[get available columns, plus 6 to show the increase to the original value]
 				let availcolumns be baseavailcolumns;
 				[add use and improve indicators which will reduce the available width for the item name]
 				let useindicator be "";
-				if (object entry is wielded and object entry is armament) or (object entry is equipment and object entry is equipped):
+				if object entry is equipped:
 					now useindicator is " (*)";
 					now availcolumns is availcolumns minus 4;
 				let improveindicator be "";
-				if object entry is improved and ( object entry is armament or object entry is equipment ):
+				if object entry is improved:
 					now improveindicator is " (+)";
 					now availcolumns is availcolumns minus 4;
 				[print item name and indicators]
 				say "[fixed letter spacing][itemname formatted to (availcolumns) characters][useindicator][improveindicator]";
-				let weighttxt be text;
 				let weightnum be weight entry times ownedCount;
 				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum][if weightnum < 100] [end if]lbs)";
 				increase weight by weightnum;
 		LineBreak;
 		now owneditemindex is 0;
-		say "[line break]";
-		say "[bold type]Armaments:[roman type]";
+		say "[line break][bold type]Armaments:[roman type]";
 		repeat through Table of Game Objects:
 			let ownedCount be carried of object entry;
 			if ownedCount > 0 and object entry is armament:
 				increase owneditemindex by 1;
 				let itemname be Name entry;
 				[line feed or switch to next column]
-				if (invcolumns is 1) or (remainder after dividing owneditemindex by invcolumns is 1):
-					say "[line break]";
-				else:
-					say "  --  ";
+				say "[if invcolumns is 1 or remainder after dividing owneditemindex by invcolumns is 1][line break][else]  --  [end if]";
 				[new (old) linking without text capturing]
 				say "[variable letter spacing]";
 				if hypernull is not 1:
@@ -152,40 +143,35 @@ carry out Inventorying:
 				else if traderavailable is 1:
 					linkfind "give [itemname] to [tradeguy]";
 					say "[if hypernull is not 1] [end if][set link hyperindex][bracket]T[close bracket][terminate link] ";
-				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
+				if (object entry is not improved or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
 					linkfind "upgrade [itemname]";
 					say "[if hypernull is not 1 and traderavailable is 0] [end if][set link hyperindex][bracket]I[close bracket][terminate link] ";
 				[get available columns, plus 6 to show the increase to the original value]
 				let availcolumns be baseavailcolumns;
 				[add use and improve indicators which will reduce the available width for the item name]
 				let useindicator be "";
-				if (object entry is wielded and object entry is armament) or (object entry is equipment and object entry is equipped):
+				if object entry is wielded:
 					now useindicator is " (*)";
 					now availcolumns is availcolumns minus 4;
 				let improveindicator be "";
-				if object entry is improved and ( object entry is armament or object entry is equipment ):
+				if object entry is improved:
 					now improveindicator is " (+)";
 					now availcolumns is availcolumns minus 4;
 				[print item name and indicators]
 				say "[fixed letter spacing][itemname formatted to (availcolumns) characters][useindicator][improveindicator]";
-				let weighttxt be text;
 				let weightnum be weight entry times ownedCount;
 				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum][if weightnum < 100] [end if]lbs)";
 				increase weight by weightnum;
 		LineBreak;
 		now owneditemindex is 0;
-		say "[line break]";
-		say "[bold type]Consumables:[roman type]";
+		say "[line break][bold type]Consumables:[roman type]";
 		repeat through Table of Game Objects:
 			let ownedCount be carried of object entry;
 			if ownedCount > 0 and object entry is temporary:
 				increase owneditemindex by 1;
 				let itemname be Name entry;
 				[line feed or switch to next column]
-				if (invcolumns is 1) or (remainder after dividing owneditemindex by invcolumns is 1):
-					say "[line break]";
-				else:
-					say "  --  ";
+				say "[if invcolumns is 1 or remainder after dividing owneditemindex by invcolumns is 1][line break][else]  --  [end if]";
 				[new (old) linking without text capturing]
 				say "[variable letter spacing]";
 				if hypernull is not 1:
@@ -207,40 +193,35 @@ carry out Inventorying:
 				else if traderavailable is 1:
 					linkfind "give [itemname] to [tradeguy]";
 					say "[if hypernull is not 1] [end if][set link hyperindex][bracket]T[close bracket][terminate link] ";
-				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
+				[if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
 					linkfind "upgrade [itemname]";
-					say "[if hypernull is not 1 and traderavailable is 0] [end if][set link hyperindex][bracket]I[close bracket][terminate link] ";
+					say "[if hypernull is not 1 and traderavailable is 0] [end if][set link hyperindex][bracket]I[close bracket][terminate link] ";]
 				[get available columns, plus 6 to show the increase to the original value]
 				let availcolumns be baseavailcolumns;
 				[add use and improve indicators which will reduce the available width for the item name]
 				let useindicator be "";
-				if (object entry is wielded and object entry is armament) or (object entry is equipment and object entry is equipped):
+				[if (object entry is wielded and object entry is armament) or (object entry is equipment and object entry is equipped):
 					now useindicator is " (*)";
-					now availcolumns is availcolumns minus 4;
+					now availcolumns is availcolumns minus 4;]
 				let improveindicator be "";
-				if object entry is improved and ( object entry is armament or object entry is equipment ):
+				[if object entry is improved and ( object entry is armament or object entry is equipment ):
 					now improveindicator is " (+)";
-					now availcolumns is availcolumns minus 4;
+					now availcolumns is availcolumns minus 4;]
 				[print item name and indicators]
 				say "[fixed letter spacing][itemname formatted to (availcolumns) characters][useindicator][improveindicator]";
-				let weighttxt be text;
 				let weightnum be weight entry times ownedCount;
 				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum][if weightnum < 100] [end if]lbs)";
 				increase weight by weightnum;
 		LineBreak;
 		now owneditemindex is 0;
-		say "[line break]";
-		say "[bold type]Other:[roman type]";
+		say "[line break][bold type]Other:[roman type]";
 		repeat through Table of Game Objects:
 			let ownedCount be carried of object entry;
 			if ownedCount > 0 and object entry is not armament and object entry is not equipment and object entry is not temporary:
 				increase owneditemindex by 1;
 				let itemname be Name entry;
 				[line feed or switch to next column]
-				if (invcolumns is 1) or (remainder after dividing owneditemindex by invcolumns is 1):
-					say "[line break]";
-				else:
-					say "  --  ";
+				say "[if invcolumns is 1 or remainder after dividing owneditemindex by invcolumns is 1][line break][else]  --  [end if]";
 				[new (old) linking without text capturing]
 				say "[variable letter spacing]";
 				if hypernull is not 1:
@@ -262,23 +243,22 @@ carry out Inventorying:
 				else if traderavailable is 1:
 					linkfind "give [itemname] to [tradeguy]";
 					say "[if hypernull is not 1] [end if][set link hyperindex][bracket]T[close bracket][terminate link] ";
-				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
+				[if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
 					linkfind "upgrade [itemname]";
-					say "[if hypernull is not 1 and traderavailable is 0] [end if][set link hyperindex][bracket]I[close bracket][terminate link] ";
+					say "[if hypernull is not 1 and traderavailable is 0] [end if][set link hyperindex][bracket]I[close bracket][terminate link] ";]
 				[get available columns, plus 6 to show the increase to the original value]
 				let availcolumns be baseavailcolumns;
 				[add use and improve indicators which will reduce the available width for the item name]
 				let useindicator be "";
-				if (object entry is wielded and object entry is armament) or (object entry is equipment and object entry is equipped):
+				[if (object entry is wielded and object entry is armament) or (object entry is equipment and object entry is equipped):
 					now useindicator is " (*)";
-					now availcolumns is availcolumns minus 4;
+					now availcolumns is availcolumns minus 4;]
 				let improveindicator be "";
-				if object entry is improved and ( object entry is armament or object entry is equipment ):
+				[if object entry is improved and ( object entry is armament or object entry is equipment ):
 					now improveindicator is " (+)";
-					now availcolumns is availcolumns minus 4;
+					now availcolumns is availcolumns minus 4;]
 				[print item name and indicators]
 				say "[fixed letter spacing][itemname formatted to (availcolumns) characters][useindicator][improveindicator]";
-				let weighttxt be text;
 				let weightnum be weight entry times ownedCount;
 				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum][if weightnum < 100] [end if]lbs)";
 				increase weight by weightnum;

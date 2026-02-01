@@ -35,7 +35,7 @@ To say dryad defeat:
 			say "     You move closer to the dryad and thrust your [Cock of Player] cock into her. To your surprise, you are able to push yourself balls deep inside of the dryad without any effort, and you begin to suspect something is wrong when you start to feel vines creeping along her inner walls. You try to pull out, but they grab hold and draw you all the way in. The dryad murmurs, 'Silly mortal, thinking you could rape me. Well, let me teach you a thing or two.' She leans into you, the vines along her internal walls stroking and milking at your cock insistently.";
 			let bonus be (( Strength of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
-			say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
+			say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
 			if diceroll + bonus >= 16:
 				say "     Due to your high level of strength, you are certain you could regain control again over the situation. Only if you truly wanted to, of course.";
 				LineBreak;
@@ -61,6 +61,7 @@ To say dryad defeat:
 				ItemGain dryad cum by 1;
 				if "Iron Stomach" is not listed in feats of Player, infect "Dryad";
 		else:
+			LineBreak;
 			say "     Shaking your head to clear your mind, you grab the wood nymph by the shoulders and shove her roughly to the side. She gives an angry hiss like cracking bark and slips away into the trees.";
 	else:
 		say "     The dryad [if Libido of Player < 25]stumbles back from the fight, and rather than give her a chance to recover, you throw a final blow. This manages to break off [one of]an arm[or]a leg[or]a limb[at random] with a sharp snap, like a tree limb with ragged splinters of wood. The skin around it goes rough and turns brown as it morphs into bark. She shouts at you that she will return, her unbroken remains setting down roots into the ground as she transforms back into a tree, and a visibly damaged one at that[else]screams in rage and her skin turns bark-like. In an instant, she becomes a true tree, unmoving and covered in vines[end if].";
@@ -81,7 +82,7 @@ To say dryad attack:
 		say "     After you finish, she shoves one of her breasts into your face. 'Still not had a drink, eh?' she quips as one of the green tendrils twining around her body squeezes the tit, milk spraying into your face and down your throat.";
 		if "Iron Stomach" is not listed in feats of Player, infect "Dryad";
 		WaitLineBreak;
-		say "     The dryad unceremoniously drops your cum-and-milk-covered form to the ground and leaves. As you clean yourself off, you collect the cum on you and place it into an empty water bottle. Maybe there is a use for it?";
+		say "     The dryad unceremoniously drops your cum- and milk-covered form to the ground and leaves. As you clean yourself off, you collect the cum on you and place it into an empty water bottle. Maybe there is a use for it?";
 		ItemGain dryad cum by 1;
 	else:
 		say "     She looks at you with horror. 'Nothing? Nothing for me to play with?' she exclaims. Well, you will just have to fix that and come back later. She turns toward the trees with a huff, leaving you to pick yourself up.";

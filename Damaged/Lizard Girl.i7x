@@ -170,7 +170,7 @@ When Play begins:
 	now wdam entry is 5; [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Park"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now Cock Length entry is 0; [ Length infection will make cock grow to if cocks]
+	now Cock Length entry is 8; [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 1; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
 	now Breast Size entry is 1; [Size of breasts infection will try to attain ]

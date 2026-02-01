@@ -66,6 +66,7 @@ to say ResolveEvent Snake Charmer:
 		if Player consents:
 			LineBreak;
 			say "     The naga's face develops into a smile, genuine yet somewhat predatory. It would seem the naga is pleased that you've accepted his advances. The naga approaches you once again, looking deep into your eyes, 'Then come, my mate, and show me your acceptance.'";
+			LineBreak;
 			NagaSex;
 			now Resolution of Snake Charmer is 4;
 		else:
@@ -100,13 +101,13 @@ to say ResolveEvent Naga Mate:
 	if Player consents:
 		LineBreak;
 		say "     'Well, my mate. After our first session together, I'm curious as to what you have in mind this time.' Letting you decide once again, he eagerly waits.";
+		LineBreak;
 		NagaSex;
 	else:
 		LineBreak;
 		say "     'I understand.' The naga nods, starting to pull his coils out and away from you. 'The world is cruel at the moment. Dangerous. Stay safe, my mate.' With that said, he gently slithers past you, rubbing your shoulder as he passes before disappearing whence he came into the zoo.";
 
 to NagaSex:
-	LineBreak;
 	say "     The naga calls on you to show him you are his mate. How will you do so?";
 	[Define a list of choices to display to the player]
 	let NagaSex_Choices be a list of text;

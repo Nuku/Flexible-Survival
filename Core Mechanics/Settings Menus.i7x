@@ -234,18 +234,18 @@ carry out analadjusting:
 	if calcnumber is 1:
 		say "You are now set to receive Less Anal.";
 		now anallevel is 1;
-		if "More Anal" is listed in feats of Player, remove "More Anal" from feats of Player;
-		if "Less Anal" is not listed in feats of Player, add "Less Anal" to feats of Player;
+		remove "More Anal" from feats of Player, if present;
+		add "Less Anal" to feats of Player, if absent;
 	else if calcnumber is 2:
 		say "You are now set to receive the standard amount of anal sex.";
 		now anallevel is 2;
-		if "More Anal" is listed in feats of Player, remove "More Anal" from feats of Player;
-		if "Less Anal" is listed in feats of Player, remove "Less Anal" from feats of Player;
+		remove "More Anal" from feats of Player, if present;
+		remove "Less Anal" from feats of Player, if present;
 	else if calcnumber is 3:
 		say "You are now set to receive More Anal.";
 		now anallevel is 3;
-		if "Less Anal" is listed in feats of Player, remove "Less Anal" from feats of Player;
-		if "More Anal" is not listed in feats of Player, add "More Anal" to feats of Player;
+		remove "Less Anal" from feats of Player, if present;
+		add "More Anal" to feats of Player, if absent;
 	else:
 		say "Exiting menu.";
 

@@ -73,6 +73,7 @@ When Play begins:
 	add "Feral Shaft Beast" to infections of QuadrupedalList;
 	add "Feral Shaft Beast" to infections of TailList;
 	add "Feral Shaft Beast" to infections of TailweaponList;
+	add "Feral Shaft Beast" to infections of FeralmindList;
 	now Name entry is "Feral Shaft Beast";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
@@ -263,7 +264,6 @@ name	desc	weight	object
 psionic larva is a grab object.
 psionic larva is infectious. Strain of psionic larva is "Feral Shaft Beast".
 Usedesc of psionic larva is "     You feel compelled to devour the wiggling grub, and you repress your inhibitions as you bite off its head. Surprisingly, it has a really good, tangy, familiar taste, and you waste no time in devouring the rest of your 'snack'. After you've finished, you gag a bit at the musky aroma still clinging to your palate, feeling equal parts repulsed and aroused by what you just ate.[line break]".
-
 the scent of psionic larva is "The musky scent of sex wafts from the wriggling grub.".
 
 Feral Shaft Beast ends here.

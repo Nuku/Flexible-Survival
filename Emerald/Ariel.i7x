@@ -78,20 +78,14 @@ Ariel's Aria	"Ariel's Aria"
 
 Ariel's Aria is a room. It is fasttravel.
 Ariel's Aria is private.
-Description of Ariel's Aria is "[Ariel'sAriaDesc]"
-
-to say Ariel'sAriaDesc:
-	say "     The building in front of you seems to have once been a music store, once a part of the thriving city. The encroaching forest has overrun the surrounding buildings, but through some machination of fate, the store still maintains much of its former structure. To the right of the entryway, a large broken display window allows you to see into the store, although it would be foolish to enter through it due to all the glass. Above the doorway is a metal sign with the store's name, although all that remains of the original is the word [']Aria[']. Ariel has replaced the first half with her name cobbled together from any letters she could scavenge from the nearby buildings.";
+Description of Ariel's Aria is "     The building in front of you seems to have once been a music store, once a part of the thriving city. The encroaching forest has overrun the surrounding buildings, but through some machination of fate, the store still maintains much of its former structure. To the right of the entryway, a large broken display window allows you to see into the store, although it would be foolish to enter through it due to all the glass. Above the doorway is a metal sign with the store's name, although all that remains of the original is the word [']Aria[']. Ariel has replaced the first half with her name cobbled together from any letters she could scavenge from the nearby buildings.[line break]"
 
 Table of GameRoomIDs (continued)
 Object	Name
 Ariel's Home	"Ariel's Home"
 
 Ariel's Home is a room. Ariel's Home is east of Ariel's Aria.
-Description of Ariel's Home is "[Ariel'sHomeDesc]"
-
-to say Ariel'sHomeDesc:
-	say "     The music store is [if HP of Ariel < 6]chaotic, with few intact instruments, and some unknown violence has shattered the plate glass window in the storefront. You can still see various fliers tacked onto the walls, bearing the previous name of the store. There's a stockroom in the back where the energetic sylph stays when she's not out watching creatures in the city or enjoying the skies[else]more orderly now that Ariel can move things around quickly with her human form. She's even dragged a couch and some chairs in from one of the nearby buildings to make it look more homely. The fliers on the wall have been redecorated, with creative drawings around the border and the old store name stricken through with [']Ariel's['] written above it. The stockroom in the back is still where the sylph has her bed, with curtains hung to hide the shelving. Next to the bed is a nightstand where she leaves the ribbon Eos gifted her when not being used to tie up her hair[end if].";
+Description of Ariel's Home is "     The music store is [if HP of Ariel < 6]chaotic, with few intact instruments, and some unknown violence has shattered the plate glass window in the storefront. You can still see various fliers tacked onto the walls, bearing the previous name of the store. There's a stockroom in the back where the energetic sylph stays when she's not out watching creatures in the city or enjoying the skies[else]more orderly now that Ariel can move things around quickly with her human form. She's even dragged a couch and some chairs in from one of the nearby buildings to make it look more homely. The fliers on the wall have been redecorated, with creative drawings around the border and the old store name stricken through with [']Ariel's['] written above it. The stockroom in the back is still where the sylph has her bed, with curtains hung to hide the shelving. Next to the bed is a nightstand where she leaves the ribbon Eos gifted her when not being used to tie up her hair[end if].[line break]"
 
 Section 3 - NPC Declaration
 
@@ -258,23 +252,23 @@ to say ArielSexMenu:
 		now title entry is "Mutual Masturbation";
 		now sortorder entry is 1;
 		now description entry is "See if the nymph will use her dexterous hands on you, while you return the favor";
-	[]
-	if Player is Male:
-		choose a blank row in table of fucking options;
-		now title entry is "Blowjob";
-		now sortorder entry is 2;
-		now description entry is "Ask the sylph to blow somewhere else, namely your dick";
 		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Vaginal";
-		now sortorder entry is 3;
-		now description entry is "Lay her down and show her how you feel";
-	[]
-	if Player is Female:
-		choose a blank row in table of fucking options;
-		now title entry is "Cunnilingus";
-		now sortorder entry is 4;
-		now description entry is "See how long the air spirit can hold her breath while she licks your pussy";
+		if Player is Male:
+			choose a blank row in table of fucking options;
+			now title entry is "Blowjob";
+			now sortorder entry is 2;
+			now description entry is "Ask the sylph to blow somewhere else, namely your dick";
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Vaginal";
+			now sortorder entry is 3;
+			now description entry is "Lay her down and show her how you feel";
+		[]
+		if Player is Female:
+			choose a blank row in table of fucking options;
+			now title entry is "Cunnilingus";
+			now sortorder entry is 4;
+			now description entry is "See how long the air spirit can hold her breath while she licks your pussy";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Lick Her";

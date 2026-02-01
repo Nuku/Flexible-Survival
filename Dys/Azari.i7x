@@ -81,8 +81,8 @@ to say Azari_Scent:
 to say ShagShackAlley_Desc:
 	if PlayerMet of Azari is false:
 		say "     Stepping around the corner, you take in your new surroundings. It's clear that the alley hasn't been touched since the start of all of this mayhem, the dumpster nearly completely empty and the ground surprisingly clutter-free. Despite all this, you can't help but feel slightly unnerved by being here. Something about the dim, narrow space makes you tense up, expecting something to come at you at any moment, despite this being well within the safe area around the mall.";
-	else:
-		say "     <Description you get when Azari is here.>";
+	[else:
+		say "     <Description you get when Azari is here.>";]
 
 [to say ShagShackAlley_Scent:
 	say "<placeholder>.";]

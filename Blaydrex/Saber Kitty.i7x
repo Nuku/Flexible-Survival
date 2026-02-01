@@ -44,9 +44,9 @@ to say saber_loses:
 		LineBreak;
 		if bradfordbounty > 0:
 			decrease bradfordbounty by 1;
-			say "     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter, Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
+			say "     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
 		else:
-			say "     This encounter reminds you of your deal with the bounty hunter, Bradford. You should go see him about getting your share of the reward.";
+			say "     This encounter reminds you of your deal with the bounty hunter Bradford. You should go see him about getting your share of the reward.";
 
 to say SaberKittyDesc:
 	say "     As you're walking you hear a faint dripping on the ground behind you. You rapidly spin around to see a sexy anthro saber-toothed tiger in front of you. It doesn't take long to find the source of the dripping sound as you look down to see her red, swollen pussy dripping copious amounts of fluids onto the ground. She is obviously in heat, and the smell hits you hard in seconds. Her body is beautiful and athletic, with abs and faint but powerful muscles. 'Don't worry, love. You'll learn to enjoy the heat and being knocked up,' she adds before pouncing.";
@@ -239,8 +239,6 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "smilodon cum"	"A small amount of Smilodon cum you've gathered. You just collect everything, don't you?"	1	smilodon cum
 
-Scent of smilodon cum is "The cum has a strong, somewhat nutty scent.".
-
 smilodon cum is a grab object. smilodon cum is cum.
 smilodon cum is infectious. Strain of smilodon cum is "Saber Kitty".
 Usedesc of smilodon cum is "[smilodon cum use]".
@@ -249,6 +247,8 @@ to say smilodon cum use:
 	say "     Taking out the small bottle you keep your Smilodon cum in, you put it to your lips and chug down the creamy liquid. Tasty, and somehow you feel the need for more of it...";
 	PlayerDrink 5;
 	SanLoss 5;
+
+Scent of smilodon cum is "The cum has a strong, somewhat nutty scent.".
 
 Section 3 - Endings
 

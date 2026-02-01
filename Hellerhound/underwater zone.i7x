@@ -15,21 +15,22 @@ to say ResolveEvent Gill Fruits Tree:
 	say "     You come across an odd tree, half in and half out of the water, with slitted fruits on the branches. This must be the elusive gill fruit tree.";
 	say "     Do you wish to pick some?";
 	if Player consents:
-		ItemGain gill fruit by 1 silently;
+		LineBreak;
 		say "     As you pick some of the fruit, the rest falls off into the water, overripe. Odd.";
+		ItemGain gill fruit by 1;
 		now Resolution of Gill Fruits Tree is 1; [got a fruit]
 		now gill fruits tree is resolved;
 	else:
 		LineBreak;
 		say "     You leave the tree alone.";
 
-gill fruit is a grab object.
-gill fruit has a Usedesc "[gill fruit use]".
-hasgills is a number that varies.
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "Gill Fruit"	"An oddly slitted fruit, green-blue and ripe to eat."	1	gill fruit
+
+gill fruit is a grab object.
+gill fruit has a Usedesc "[gill fruit use]".
+hasgills is a number that varies.
 
 to say gill fruit use:
 	say "     You eagerly gulp the fruit.";
@@ -60,6 +61,8 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "sea dragon cum"	"Thick seed from one of the dangerous sea dragons that marauds the coast. It is rarely found concentrated like this."	1	sea dragon cum
 
+sea dragon cum is a grab object. sea dragon cum is cum.
+sea dragon cum has a Usedesc "[sea dragon cum use]".
 the scent of sea dragon cum is "The cum smells powerfully of a male sea dragon.".
 
 to say sea dragon cum use:
@@ -85,9 +88,6 @@ to say sea dragon cum use:
 			infect "Feral Sea Dragon";
 		else:
 			infect "Feral Sea Dragoness";
-
-sea dragon cum is a grab object. sea dragon cum is cum.
-sea dragon cum has a Usedesc "[sea dragon cum use]".
 
 Section 4 - Fighting
 

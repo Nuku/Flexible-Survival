@@ -32,14 +32,14 @@ to say losetopewter:
 	let facecheck be false;
 	if FaceName of Player is "Pewter Consort":
 		now facecheck is true;
-	say "     [if HP of Player > 0]You choose to surrender to the lithe assailant, compelling him to back away for a second to assess your action[else]Too exhausted to fight back any further, you fall to your knees, leaving yourself at the assailant's mercy[end if]";
+	say "     [if HP of Player > 0]You choose to surrender to the lithe assailant, compelling him to back away for a second to assess your action[else]Too exhausted to fight back any further, you fall to your knees, leaving yourself at the assailant's mercy[end if]. ";
 	if a random chance of 1 in 6 succeeds or (Player is kinky and a random chance of 1 in 3 succeeds):
-		say ". Pondering what to subject you to for a moment, his maw eventually widens into a bright grin, bouncing up and down with excitement. Circling around to your back, he shoves and nips at you until you're forced to move forward, pushed along down a ruined path by the creature's assertive insistence.";
-		say "     In the distance, you begin to hear a cacophony of wanton, muffled sounds, suggesting that the beast intends to subject you to his kin";
+		say "Pondering what to subject you to for a moment, his maw eventually widens into a bright grin, bouncing up and down with excitement. Circling around to your back, he shoves and nips at you until you're forced to move forward, pushed along down a ruined path by the creature's assertive insistence.";
+		say "     In the distance, you begin to hear a cacophony of wanton, muffled sounds, suggesting that the beast intends to subject you to his kin. ";
 		if HP of Player < 1 and Player is not submissive:
-			say ". Having recovered slightly, you suddenly attempt to run and avoid what may come to pass. However, the consort is right on your heels, pinning your [if scalevalue of Player > 3]larger [end if]form to the ground and compelling you into compliance once more by lashing you with his tail, each sharp, loud smack causing you to tense and writhe. Eventually, he starts compelling you back to your feet and going along again, closer to the sounds.";
+			say "Having recovered slightly, you suddenly attempt to run and avoid what may come to pass. However, the consort is right on your heels, pinning your [if scalevalue of Player > 3]larger [end if]form to the ground and compelling you into compliance once more by lashing you with his tail, each sharp, loud smack causing you to tense and writhe. Eventually, he starts compelling you back to your feet and going along again, closer to the sounds.";
 		else:
-			say ". No doubt eager and excited, the consort clearly feels you're moving too slowly, and you're made to jump when the [if scalevalue of Player > 3]smaller [end if]creature lashes you with his tail, its audible smack filling the air, the sting certainly enough motivation for you to pick up the pace.";
+			say "No doubt eager and excited, the consort clearly feels you're moving too slowly, and you're made to jump when the [if scalevalue of Player > 3]smaller [end if]creature lashes you with his tail, its audible smack filling the air, the sting certainly enough motivation for you to pick up the pace.";
 		WaitLineBreak;
 		say "     Once you reach your destination, you see before you [one of]the remnants of a private swimming pool[or]a basement collapsed in on itself, leaving an alcove[or]a hole, carved from the ruins[at random], its contents a writhing, silvery mass of similar creatures, their wanton excess filling what sparse empty space remains with sexual fluids, slicking their dizzying, perpetual motions[if facecheck is true] while your altered vision blinds you with so many colors[end if]. Briefly distracted, the beast that led you here pushes you forward into the mass, stumbling and falling to meet with the hole's twisted contents.";
 		say "     You're given no chance to react before the monsters respond to their new occupant, gripping and folding along your [bodytype of Player] form as they pull you deeper into their depths, the remnant onlooker jumping in along with you. What attire you might've had prior pulled from you and flung from the alcove, you're overwhelmed by the feel of a seemingly countless number of hands and bodies writhing and touching shamelessly over the entirety of your exposed form.";
@@ -48,10 +48,10 @@ to say losetopewter:
 		if HP of Player < 1, now struggleatt is 1;
 		pewterbind;
 	else if anallevel > 1 and (Cunt Count of Player is 0 or anallevel is 3) and (a random chance of 1 in 3 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds)):
-		say ". Almost immediately, the creature hops around to find a good angle of approach before immediately pouncing your ass, [if scalevalue of Player < 4]pinning[else]forcing[end if] you to the ground and pulling away any obstruction in his path. You'd assume the ensuing grinding of his throbbing rod against your behind is an illustration of the creature's over-eagerness causing him to fumble, but it quickly becomes clear that the beast is instead marking you by smearing his precum across your [if scalevalue of Player > 3]substantial, [end if][bodytype of Player] cheeks.";
+		say "Almost immediately, the creature hops around to find a good angle of approach before immediately pouncing your ass, [if scalevalue of Player < 4]pinning[else]forcing[end if] you to the ground and pulling away any obstruction in his path. You'd assume the ensuing grinding of his throbbing rod against your behind is an illustration of the creature's over-eagerness causing him to fumble, but it quickly becomes clear that the beast is instead marking you by smearing his precum across your [if scalevalue of Player > 3]substantial, [end if][bodytype of Player] cheeks.";
 		say "     This feral foreplay doesn't last particularly long, as he shows just as much eager expedience in shoving his dick past your anal ring, the slick tool slipping its way into your fleshy abyss with zero resistance[if HP of Player < 1], much in spite your impotent protests[end if]. A low, approving growl escaping the beast as he revels in the warmth of these supple confines, you feel his long, slick tongue lavish feverish approval on his new fucktoy. Initially asserting his primal ownership with a few firm thrusts, each motion punctuated with the sound of his balls slapping loudly against your [if Player is male and CockName of Player is not listed in infections of InternalCockList]own[else]crotch[end if], he braces himself once he's satisfied, the sound of his ensuing thrusts completely filling the air.";
 		WaitLineBreak;
-		say "     [if scalevalue of Player < 4]Body rocking against this constant pounding[else]The smaller beast utterly pounding you[end if], he pants and hisses in wanton approval, drooling shamelessly against his plaything as his digits squeeze you more and more tightly. [if HP of Player < 1]Unable to resist this persisting assault[else]Overtaken by your own lust[end if], you quickly find yourself aroused as well, [if Player is male]unattended dick[smn] grinding against the barren earth[else if Player is female]unattended cunt[sfn] oozing against the open air[else]much in spite your lack of proper outlet[end if]. The beast's motions becoming increasingly erratic in the ensuing minutes, he eventually hisses out in tainted ecstasy, pulling his dick free of you and painting your ass [if scalevalue of Player < 4]and back [end if]with successive spurts of his silvery seed";
+		say "     [if scalevalue of Player < 4]Body rocking against this constant pounding[else]The smaller beast utterly pounding you[end if], he pants and hisses in wanton approval, drooling shamelessly against his plaything as his digits squeeze you more and more tightly. [if HP of Player < 1]Unable to resist this persisting assault[else]Overtaken by your own lust[end if], you quickly find yourself aroused as well, [if Player is male]unattended dick[smn] grinding against the barren earth[else if Player is female]unattended cunt[sfn] oozing against the open air[else]much in spite your lack of proper outlet[end if]. The beast's motions becoming increasingly erratic in the ensuing minutes, he eventually hisses out in tainted ecstasy, pulling his dick free of you and painting your ass [if scalevalue of Player < 4]and back [end if]with successive spurts of his silvery seed[if Player is neuter].[end if]";
 		if Player is not neuter:
 			if facecheck is true:
 				say ". Feeling his bliss radiate out from him, you can't help but immediately follow suit, [if Player is male]cock[smn] wasting your [Cum Load Size of Player] load against the ground[else]cunt[sfn] throbbing against the open air, staining the ground with your sexual fluids[end if], the beast thrusting against you in the moment to ride the waves of your orgasm just a little bit longer.";
@@ -59,25 +59,27 @@ to say losetopewter:
 			else:
 				say ". No doubt a little exhausted, he goes limp against your cum-sullied body, loudly panting as he nonetheless impishly revels in grinding his sweat and now ejaculate-slicked torso against yours.";
 				say "     However, the creature doesn't seem quite satisfied with you yet, as once he catches his breath he goes right back to pounding your now fairly loose hole. No doubt he's already quite spent and satisfied, but that doesn't stop him from repeating the same ritual once more, this overly prolonged sex quickly becoming exhausting. Nonetheless, eventually all the stimulation is enough to set you off, [if Player is male]cock[smn] wasting your [Cum Load Size of Player] load against the ground[else]cunt[sfn] throbbing against the open air, staining the ground with your sexual fluids[end if].";
+				WaitLineBreak;
 				say "     The creature hisses and licks at you, trembling and utterly overtaken in the wake of your bliss. Eventually, this[if HP of Player < 1] thankfully[end if] seems to be what he was interested in and he finally departs, leaving you a sweat and seed-stained mess. [if showlocale is true]You hear sounds in the distance, no doubt the sordid affair catching some attention, compelling you to gather your things and quickly flee[else]Eventually, you recover enough to gather your things, clean yourself off to the best of your ability, and depart[end if].";
 		else:
 			say "     Appearing somewhat satisfied by making a mess of you, the creature eventually pulls off of you, leaving off into the distance. [if showlocale is true]You hear sounds in the distance, no doubt the sordid affair catching some attention, compelling you to gather your things and quickly flee[else]Eventually, you recover enough to gather your things, clean yourself off to the best of your ability, and move forward[end if].";
 		CreatureSexAftermath "Player" receives "AssDildoFuck" from "Pewter Consort";
 	else if Player is female and a random chance of 1 in 2 succeeds:
-		say ". Almost immediately, the creature hops around to find a good angle of approach before immediately pouncing your ass, [if scalevalue of Player < 4]pinning[else]forcing[end if] you to the ground and pulling away any obstruction in his path. You'd assume the ensuing grinding of his throbbing rod against your behind is an illustration of the creature's over-eagerness causing him to fumble, but it quickly becomes clear that he is instead marking you by smearing his precum across your [if scalevalue of Player > 3]substantial, [end if][bodytype of Player] cheeks.";
+		say "Almost immediately, the creature hops around to find a good angle of approach before immediately pouncing your ass, [if scalevalue of Player < 4]pinning[else]forcing[end if] you to the ground and pulling away any obstruction in his path. You'd assume the ensuing grinding of his throbbing rod against your behind is an illustration of the creature's over-eagerness causing him to fumble, but it quickly becomes clear that he is instead marking you by smearing his precum across your [if scalevalue of Player > 3]substantial, [end if][bodytype of Player] cheeks.";
 		say "     This feral foreplay doesn't last particularly long, and he shows just as much eager expedience in burying his dick into the supple folds of [if Cunt Count of Player > 1]one of [end if]your cunt[sfn], the slick tool slipping its way into your eager hole with zero resistance[if HP of Player < 1], much in spite your protests[end if]. A low, approving growl as he revels in the warmth of your throbbing confines, you feel his long, slick tongue lavish feverish approval on his new fucktoy. Initially asserting his primal ownership with a few firm thrusts, each motion punctuated with the sound of his balls slapping loudly against your [if Player is male and CockName of Player is not listed in infections of InternalCockList]own[else]crotch[end if], he braces himself once he's satisfied, the sound of his ensuing thrusts completely filling the air.";
 		WaitLineBreak;
-		say "     [if scalevalue of Player < 4]Body rocking against this constant pounding[else]The smaller beast utterly pounding you[end if], he pants and hisses in wanton approval, drooling shamelessly against his plaything as his digits squeeze you more and more tightly. [if HP of Player < 1]Unable to resist this persisting assault[else]Overtaken by your own lust[end if], you quickly find yourself aroused as well, [if Player is male]unattended dick[smn] grinding against the barren earth[else]stuffed portal squeezing its intrusion needily[end if]. The beast's motions becoming increasingly erratic in the ensuing minutes; he eventually hisses out in tainted ecstasy, pulling his dick free of you and painting your ass [if scalevalue of Player < 4]and back [end if]with successive spurts of his silvery seed";
+		say "     [if scalevalue of Player < 4]Body rocking against this constant pounding[else]The smaller beast utterly pounding you[end if], he pants and hisses in wanton approval, drooling shamelessly against his plaything as his digits squeeze you more and more tightly. [if HP of Player < 1]Unable to resist this persisting assault[else]Overtaken by your own lust[end if], you quickly find yourself aroused as well, [if Player is male]unattended dick[smn] grinding against the barren earth[else]stuffed portal squeezing its intrusion needily[end if]. The beast's motions becoming increasingly erratic in the ensuing minutes; he eventually hisses out in tainted ecstasy, pulling his dick free of you and painting your ass [if scalevalue of Player < 4]and back [end if]with successive spurts of his silvery seed. ";
 		if facecheck is true:
-			say ". Feeling his bliss radiate out from him, you can't help but immediately follow suit, [if Player is male]cock[smn] wasting your [Cum Load Size of Player] load against the ground[else]used cunt throbbing against the open air, staining the ground with your sexual fluids[end if], the beast thrusting against you in the moment to ride the waves of your orgasm just a little bit longer.";
+			say "Feeling his bliss radiate out from him, you can't help but immediately follow suit, [if Player is male]cock[smn] wasting your [Cum Load Size of Player] load against the ground[else]used cunt throbbing against the open air, staining the ground with your sexual fluids[end if], the beast thrusting against you in the moment to ride the waves of your orgasm just a little bit longer.";
 			say "     The creature hisses and licks at you, trembling and utterly spent in the wake of your shared bliss. Eventually, he[if HP of Player < 1] thankfully[end if] recovers enough to pull off you and depart, leaving you a sweat and seed-stained mess. [if showlocale is true]You hear sounds in the distance, no doubt the sordid affair catching some attention, compelling you to gather your things and quickly flee[else]Eventually, you recover enough to gather your things, clean yourself off to the best of your ability, and depart[end if].";
 		else:
-			say ". No doubt a little exhausted, he goes limp against your cum-sullied body, loudly panting as he nonetheless impishly revels in grinding his sweat and now ejaculate-slicked torso against yours.";
+			say "No doubt a little exhausted, he goes limp against your cum-sullied body, loudly panting as he nonetheless impishly revels in grinding his sweat and now ejaculate-slicked torso against yours.";
 			say "     However, the creature doesn't seem quite satisfied with you yet, as once he catches his breath he goes [if Cunt Count of Player > 2]on to pound one of your previously unused pussies[else if Cunt Count of Player is 2]on to pound your previously unused pussy[else]right back to pounding your now fairly loose pussy[end if]. No doubt he's already quite spent and satisfied, but that doesn't stop him from repeating the same ritual once more, this overly prolonged sex quickly becoming exhausting. Nonetheless, eventually all the stimulation is enough to set you off, [if Player is male]cock[smn] wasting your [Cum Load Size of Player] load against the ground[else]cunt squeezing greedily around the spent cock[end if].";
+			WaitLineBreak;
 			say "     The creature hisses and licks at you, trembling and utterly overtaken in the wake of your bliss. Eventually, this[if HP of Player < 1] thankfully[end if] seems to be what he was interested in and he finally departs, leaving you a sweat and seed-soaked mess. [if showlocale is true]You hear sounds in the distance, no doubt the sordid affair catching some attention, compelling you to gather your things and quickly flee[else]Taking a moment to catch your breath, you recover enough to gather your things, clean yourself off to the best of your ability, and move forward[end if].";
 		CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Pewter Consort";
 	else:
-		say ". Eagerly, the beast approaches, forcing you down onto all fours before he climbs onto your back, intent on giving you an optimum vantage point of his drooling dick to your face. The throbbing organ staring at you as it is, it's apparently quite human, uncut head half exposed from under its gray, taut foreskin. Eager though he may be, he doesn't see your attendance as an immediate issue, as he seems rather insistent on moving one of your arms to your own[if Player is neuter], genderless[end if] crotch. Clearly, he wants you to please yourself while attending to him[if Player is neuter], not that it'll do you much good[end if].";
+		say "Eagerly, the beast approaches, forcing you down onto all fours before he climbs onto your back, intent on giving you an optimum vantage point of his drooling dick to your face. The throbbing organ staring at you as it is, it's apparently quite human, uncut head half exposed from under its gray, taut foreskin. Eager though he may be, he doesn't see your attendance as an immediate issue, as he seems rather insistent on moving one of your arms to your own[if Player is neuter], genderless[end if] crotch. Clearly, he wants you to please yourself while attending to him[if Player is neuter], not that it'll do you much good[end if].";
 		say "     [if HP of Player < 1]You're not particularly inclined to humor the beast's insistence, but he doesn't seem interested in progressing until you do so, his infection's influence - further exacerbated by the scent of his slightly overpowering, male odor - eventually forcing you to oblige[else]Scent flooded with that of the beast's slightly overpowering, male odor, you ultimately oblige his insistence[end if], free hand [if Cock Count of Player > 1]pumping one of your cocks[else if Cock Count of Player is 1]pumping your cock[else if Cunt Count of Player > 1]fondling one of your cunts[else if Cunt Count of Player is 1]fondling your cunt[else]fondling your empty groin[end if]. Satisfied, your attention is quickly split when he begins to prod his oozing rod against you, compelled by your rising lust to reciprocate by lavishing it with your tongue's affection, taste quickly flooded with that of the creature's heady precum. On cue, the second he has an opening, he shows no restraint in thrusting his dick into your maw, pounding your face with his crotch.";
 		WaitLineBreak;
 		say "     The feel of the creature's tongue's slick approval against your back, he begins to pant more loudly, his wanton, reckless fervor compelling you to follow this dizzying descent in line. The wet sound of his persisting motion filling the air for a few short minutes, he eventually pulls his tool free of your mouth's influence, this throbbing organ soon spurting its silvery seed all over your face";
@@ -93,9 +95,6 @@ to say losetopewter:
 		say "     Appearing somewhat satisfied by making a mess of you, the creature eventually pulls off of you, leaving you an embarrassing, cum-stained mess. [if showlocale is true]You hear sounds in the distance, no doubt the sordid affair catching some attention, compelling you to gather your things and quickly flee[else]Eventually, you recover enough to gather your things, clean yourself off to the best of your ability, and depart[end if].";
 		CreatureSexAftermath "Player" receives "OralCock" from "Pewter Consort";
 
-to say beattheconsort:
-	say "     Hissing and growling, it immediately chooses to turn and run the second things turn sour for them, running off into the distance and freeing you to go about your business once more."; [Pewter Consort]
-
 Section 1.1 - Pewter Consort Bind
 
 pewtertorsosuppress is a truth state that varies.[@Tag:NotSaved]
@@ -110,9 +109,7 @@ to pewterbind:
 		if HP of Player > 0 or humanity of Player < 50:
 			now obliging is true;
 		checkboundrecover;
-		if clearnomore is 0:
-			clear the screen;
-			LineBreak;
+		if clearnomore is 0, clear the screen;
 		pewtercapassess;
 		if Breast Size of Player is 0 or Nipple Count of Player is 0:
 			now pewtertorsosuppress is true;
@@ -120,7 +117,7 @@ to pewterbind:
 			now pewtertorsosuppress is false;
 		if pewterheadocc is 0 and pewterbodyocc is 0 and pewtercockocc is 0 and pewtercuntocc is 0 and pewterassocc is 0:
 			pewteroccupyroll;
-			LineBreak;
+		LineBreak;
 		pewterlustapply;
 		if enduring is true:
 			increase lustatt by 2 + lustadjust;
@@ -179,6 +176,7 @@ to pewterbind:
 							infect;
 					else if a random chance of 1 in 5 succeeds:
 						infect;
+					LineBreak;
 					wait for any key;
 				else:
 					say "     You finally manage to pull yourself free and climb out of the pool. Crawling away and catching your breath, the lot of them appear too preoccupied with attending to each other to pursue you, allowing you to gather your things strewn about and get some additional distance. Eventually, you recover enough from the messy and exhausting ordeal to go about your business once more.";
@@ -205,6 +203,7 @@ to pewterbind:
 							infect;
 					else if a random chance of 1 in 5 succeeds:
 						infect;
+				LineBreak;
 				wait for any key;
 				next;
 			else:
@@ -227,6 +226,7 @@ to pewterbind:
 							infect;
 					else if a random chance of 1 in 6 succeeds:
 						infect;
+				LineBreak;
 				wait for any key;
 				next;
 			say "Invalid action.";
@@ -269,7 +269,7 @@ to pewterlustsate:
 				else:
 					say "[if Cunt Count of Player > 1]one [end if]cunt tightening around the [if pewtercuntvar2 is 1]lone consort[else][pewtercuntvar2 in words][end if] fucking it";
 		else:
-			say "unattended cunt[sfn] aching with overwhelming need.";
+			say "unattended cunt[sfn] aching with overwhelming need";
 	else:
 		say "causing you to writhe in insatiable bliss";
 	say ". Your own orgasm quickly sparks a cascade of cries and hisses, rippling outward until, in mere seconds, the rest of them begin to fire off. Your surroundings become rigid and firm, met with a hot rush of cum ";
@@ -375,26 +375,20 @@ to pewtergenitalapply:
 				say "     You shudder at the sensation of a consort's tongue along the length of [if Cock Count of Player > 1]one of [end if]your [cock size desc of Player] dick[smn], his teasing only brief before his lips envelop its head, eager to taste your emergent sexual fluids as he continues to attend you.";
 			else:
 				say "     Another consort moves to suck off [if Cock Count of Player - pewtercockocc is 1]your lone, unattended dick[else]one of your unattended dicks[end if], joining the ";
-				if pewtercockvar1 > 0 and pewtercockvar2 > 0:
-					say "[pewtercockvar1 in words] other[if pewtercockvar1 > 1]s[end if] and the [pewtercockvar2 in words] riding you";
-				else if pewtercockvar1 > 0:
-					say "[pewtercockvar1 in words] other[if pewtercockvar1 > 1]s[end if] attending you";
+				if pewtercockvar1 > 0:
+					say "[pewtercockvar1 in words] other[if pewtercockvar1 > 1]s[end if] [if pewtercockvar2 > 0]and the [pewtercockvar2 in words] riding[else]attending[end if] you, all eager to milk you dry.";
 				else:
-					say "[pewtercockvar2 in words] riding you";
-				say ", all eager to milk you dry.";
+					say "[pewtercockvar2 in words] riding you, all eager to milk you dry.";
 			increase pewtercockvar1 by 1;
 		else:
 			if pewtercockocc is 0:
 				say "     You writhe at the sensation of a consort's toned ass grinding along the length of [if Cock Count of Player > 1]one of [end if]your [cock size desc of Player] dick[smn], his teasing only brief before he shoves its head past his tight anal ring, eager to take their new guest out for a ride.";
 			else:
 				say "     Another consort moves to ride [if Cock Count of Player - pewtercockocc is 1]your lone, unattended dick[else]one of your unattended dicks[end if], joining the ";
-				if pewtercockvar1 > 0 and pewtercockvar2 > 0:
-					say "[pewtercockvar2 in words] other[if pewtercockvar2 > 1]s[end if] and the [pewtercockvar1 in words] sucking you off";
-				else if pewtercockvar2 > 0:
-					say "[pewtercockvar2 in words] other[if pewtercockvar2 > 1]s[end if] taking you";
+				if pewtercockvar2 > 0:
+					say "[pewtercockvar2 in words] other[if pewtercockvar2 > 1]s[end if] [if pewtercockvar1 > 0]and the [pewtercockvar1 in words] sucking you off[else]taking you[end if], all eager to milk you dry.";
 				else:
-					say "[pewtercockvar1 in words] sucking you off";
-				say ", all eager to milk you dry.";
+					say "[pewtercockvar1 in words] sucking you off, all eager to milk you dry.";
 			increase pewtercockvar2 by 1;
 		increase pewtercockocc by 1;
 	else if Player is female and (a random chance of 1 in anallevel succeeds or (anallevel < 3 and pewterassocc > 0)):
@@ -406,13 +400,10 @@ to pewtergenitalapply:
 					say "     Another creature joins in on the fun, his tongue forcing its way into [if Cunt Count of Player - pewtercuntocc is 1]your lone, unattended cunt[else]one of your unattended cunts[end if], joining the ";
 				else:
 					say "     Another creature joins in on the fun, his tongue forcing its way into [if Cunt Count of Player > 1]one of [end if]your already-stuffed cunt[sfn], joining the ";
-				if pewtercuntvar1 > 0 and pewtercuntvar2 > 0:
-					say "[pewtercuntvar1 in words] other[if pewtercuntvar1 > 1]s[end if] and the [pewtercuntvar2 in words] fucking you";
-				else if pewtercuntvar1 > 0:
-					say "[pewtercuntvar1 in words] other[if pewtercuntvar1 > 1]s[end if] tonguing you";
+				if pewtercuntvar1 > 0:
+					say "[pewtercuntvar1 in words] other[if pewtercuntvar1 > 1]s[end if] [if pewtercuntvar2 > 0]and the [pewtercuntvar2 in words] fucking[else]tonguing[end if] you, [if Cunt Count of Player > pewtercuntocc]stuffing another of your holes[else]further putting a strain on your beleaguered hole[sfn][end if].";
 				else:
-					say "[pewtercuntvar2 in words] fucking you";
-				say ", [if Cunt Count of Player > pewtercuntocc]stuffing another of your holes[else]further putting a strain on your beleaguered hole[sfn][end if].";
+					say "[pewtercuntvar2 in words] fucking you, [if Cunt Count of Player > pewtercuntocc]stuffing another of your holes[else]further putting a strain on your beleaguered hole[sfn][end if].";
 			increase pewtercuntvar1 by 1;
 		else:
 			if pewtercuntocc is 0:
@@ -422,13 +413,10 @@ to pewtergenitalapply:
 					say "     Another creature joins in on the fun, his cock forcing its way into [if Cunt Count of Player - pewtercuntocc is 1]your lone, unattended cunt[else]one of your unattended cunts[end if], joining the ";
 				else:
 					say "     Another creature joins in on the fun, his cock forcing its way into [if Cunt Count of Player > 1]one of [end if]your already-stuffed cunt[sfn], joining the ";
-				if pewtercuntvar1 > 0 and pewtercuntvar2 > 0:
-					say "[pewtercuntvar2 in words] other[if pewtercuntvar2 > 1]s[end if] and the [pewtercuntvar1 in words] tonguing you";
-				else if pewtercuntvar2 > 0:
-					say "[pewtercuntvar2 in words] other[if pewtercuntvar2 > 1]s[end if] riding you";
+				if pewtercuntvar2 > 0:
+					say "[pewtercuntvar2 in words] other[if pewtercuntvar2 > 1]s[end if] [if pewtercuntvar1 > 0]and the [pewtercuntvar1 in words] tonguing[else]riding[end if] you, [if Cunt Count of Player > pewtercuntocc]stuffing another of your holes[else]further putting a strain on your stuffed hole[sfn][end if].";
 				else:
-					say "[pewtercuntvar1 in words] tonguing you";
-				say ", [if Cunt Count of Player > pewtercuntocc]stuffing another of your holes[else]further putting a strain on your stuffed hole[sfn][end if].";
+					say "[pewtercuntvar1 in words] tonguing you, [if Cunt Count of Player > pewtercuntocc]stuffing another of your holes[else]further putting a strain on your stuffed hole[sfn][end if].";
 			increase pewtercuntvar2 by 1;
 		increase pewtercuntocc by 1;
 	else:
@@ -437,26 +425,20 @@ to pewtergenitalapply:
 				say "     You suddenly feel a consort's tongue force its way past your anal ring, worming shamelessly into your tight hole, its motion slicked by the overwhelming prevalence of sexual fluids encompassing you and its saliva.";
 			else:
 				say "     Another creature joins in on the fun being had with your tailpipe, squeezing his writhing tongue past the ";
-				if pewterassvar1 > 0 and pewterassvar2 > 0:
-					say "[pewterassvar1 in words] other[if pewterassvar1 > 1]s[end if] and the [pewterassvar2 in words] fucking you";
-				else if pewterassvar1 > 0:
-					say "[pewterassvar1 in words] other[if pewterassvar1 > 1]s[end if] attending you";
+				if pewterassvar1 > 0:
+					say "[pewterassvar1 in words] other[if pewterassvar1 > 1]s[end if] [if pewterassvar2 > 0]and the [pewterassvar2 in words] fucking[else]attending[end if] you, further putting a strain on your beleaguered hole.";
 				else:
-					say "[pewterassvar2 in words] fucking you";
-				say ", further putting a strain on your beleaguered hole.";
+					say "[pewterassvar2 in words] fucking you, further putting a strain on your beleaguered hole.";
 			increase pewterassvar1 by 1;
 		else:
 			if pewterassocc is 0:
 				say "     You suddenly feel a consort's dick squeeze its way past your anal ring, thrusting shamelessly into your tight hole, its motion slicked by the overwhelming prevalence of sexual fluids encompassing you.";
 			else:
 				say "     Another creature joins in on the fun being had with your tailpipe, squeezing his cock past the ";
-				if pewterassvar1 > 0 and pewterassvar2 > 0:
-					say "[pewterassvar2 in words] other[if pewterassvar2 > 1]s[end if] and the [pewterassvar1 in words] tonguing you";
-				else if pewterassvar2 > 0:
-					say "[pewterassvar2 in words] other[if pewterassvar2 > 1]s[end if] riding you";
+				if pewterassvar2 > 0:
+					say "[pewterassvar2 in words] other[if pewterassvar2 > 1]s[end if] [if pewterassvar1 > 0]and the [pewterassvar1 in words] tonguing[else]riding[end if] you, further putting a strain on your stuffed hole.";
 				else:
-					say "[pewterassvar1 in words] tonguing you";
-				say ", further putting a strain on your stuffed hole.";
+					say "[pewterassvar1 in words] tonguing you, further putting a strain on your stuffed hole.";
 			increase pewterassvar2 by 1;
 		increase pewterassocc by 1;
 
@@ -481,37 +463,32 @@ to pewterlustapply:
 
 to pewterdisengage:
 	if pewterheadocc > 0 and a random chance of 1 in 4 succeeds:
-		LineBreak;
-		say "     [if tempnum is 1]In the frenzy[else]With some effort[end if], you're jostled free of one of the consorts attending your head.";
+		say "[line break]     [if tempnum is 1]In the frenzy[else]With some effort[end if], you're jostled free of one of the consorts attending your head.";
 		if pewterheadvar1 > 0 and (pewterheadvar2 is 0 or a random chance of 1 in 2 succeeds):
 			decrease pewterheadvar1 by 1;
 		else:
 			decrease pewterheadvar2 by 1;
 		decrease pewterheadocc by 1;
 	else if pewterbodyocc > 0 and a random chance of 1 in 3 succeeds:
-		LineBreak;
-		say "     [if tempnum is 1]In the frenzy[else]With some effort[end if], you're jostled free of one of the consorts attending your torso.";
+		say "[line break]     [if tempnum is 1]In the frenzy[else]With some effort[end if], you're jostled free of one of the consorts attending your torso.";
 		decrease pewterbodyocc by 1;
 	else if (pewtercockocc + pewtercuntocc + pewterassocc) > 0 and a random chance of 1 in 2 succeeds:
 		if pewtercockocc > 0 and ((pewtercuntocc is 0 and pewterassocc is 0) or (pewtercuntocc is 0 and a random chance of 1 in 2 succeeds) or (pewterassocc is 0 and a random chance of 1 in 2 succeeds) or (pewterassocc > 0 and pewtercuntocc > 0 and a random chance of 1 in 3 succeeds)):
-			LineBreak;
-			say "     [if tempnum is 1]In the frenzy[else]With some effort[end if], you're jostled free of one of the consorts attending your cock.";
+			say "[line break]     [if tempnum is 1]In the frenzy[else]With some effort[end if], you're jostled free of one of the consorts attending your cock.";
 			if pewtercockvar1 > 0 and (pewtercockvar2 is 0 or a random chance of 1 in 2 succeeds):
 				decrease pewtercockvar1 by 1;
 			else:
 				decrease pewtercockvar2 by 1;
 			decrease pewtercockocc by 1;
 		else if pewtercuntocc > 0 and (pewterassocc is 0 or a random chance of 1 in 2 succeeds):
-			LineBreak;
-			say "     [if tempnum is 1]In the frenzy[else]With some effort[end if], you're jostled free of one of the consorts attending your cunt.";
+			say "[line break]     [if tempnum is 1]In the frenzy[else]With some effort[end if], you're jostled free of one of the consorts attending your cunt.";
 			if pewtercuntvar1 > 0 and (pewtercuntvar2 is 0 or a random chance of 1 in 2 succeeds):
 				decrease pewtercuntvar1 by 1;
 			else:
 				decrease pewtercuntvar2 by 1;
 			decrease pewtercuntocc by 1;
 		else if pewterassocc > 0:
-			LineBreak;
-			say "     [if tempnum is 1]In the frenzy[else]With some effort[end if], you're jostled free of one of the consorts attending your ass.";
+			say "[line break]     [if tempnum is 1]In the frenzy[else]With some effort[end if], you're jostled free of one of the consorts attending your ass.";
 			if pewterassvar1 > 0 and (pewterassvar2 is 0 or a random chance of 1 in 2 succeeds):
 				decrease pewterassvar1 by 1;
 			else:
@@ -593,18 +570,15 @@ to say pewtercharacterassess:
 
 Section 2 - Creature Insertion
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	choose a row with Name of "Pewter Consort" in Table of Random Critters;
+	now sex entry is "Male";
+
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Pewter Consort"	"[PrepCombat_Pewter Consort]"
 
 to say PrepCombat_Pewter Consort:
-	choose row MonsterID from Table of Random Critters;
-	if Player is FemalePreferred:
-		now sex entry is "Female";
-	else if Player is HermPreferred:
-		now sex entry is "Both";
-	else:
-		now sex entry is "Male";
 	psycheeval;
 	libidoeval;
 	setmongender 3; [creature is male]
@@ -629,7 +603,7 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "The [one of]beast[or]creature[or]consort[at random] [one of]pounces onto you, lashing and nipping you into submission until you finally pry it off[or]bounds nearby to lash you sharply with its tail, driving you backwards[or]clings on to you in an attempt to pin you to the ground, forcing you to pull yourself free[or]grabs one of your appendages with its tail and you stumble to the ground, quickly scrambling back to your feet[at random].";
-	now defeated entry is "[beattheconsort]";
+	now defeated entry is "     Hissing and growling, it immediately chooses to turn and run the second things turn sour for them, running off into the distance and freeing you to go about your business once more.[line break]";
 	now victory entry is "[losetopewter]";
 	now desc entry is "[pewterdesc]";
 	now face entry is "featureless save for a toothy maw. Your vision is strangely grayscale, save for the alluring, entrancing hues emitted from other living beings";
@@ -783,18 +757,14 @@ When Play begins:
 ]
 
 to say consortfacechange:
-	say "the infection overtakes it. All facial features save for your mouth meld into it, ";
 	if consortinsight is 0:
-		say "[if boundstate is true]your sight going from darkness to an overwhelming wave of vivid colors, your rounded and smooth head fondled by the creatures[else]leaving your sight in utter blackness and compelling you to fondle your rounded and smooth head. In a scant few seconds, your sight returns to you, but the world around you is now desaturated to the point of being almost entirely gray; however, when you look at your hands they shimmer and glow with a shifting cascade of colors[end if]. ";
-		now consortinsight is 1;
-		say "From what you can gather, this strain can somehow sense the emotions of a living thing. The way it radiates from ";
+		say "the infection overtakes it. All facial features save for your mouth meld into it, [if boundstate is true]your sight going from darkness to an overwhelming wave of vivid colors, your rounded and smooth head fondled by the creatures[else]leaving your sight in utter blackness and compelling you to fondle your rounded and smooth head. In a scant few seconds, your sight returns to you, but the world around you is now desaturated to the point of being almost entirely gray; however, when you look at your hands they shimmer and glow with a shifting cascade of colors[end if]. From what you can gather, this strain can somehow sense the emotions of a living thing. The way it radiates from [if boundstate is true]the writhing bodies surrounding you is overwhelming, making it even more difficult to keep a clear head, exacerbated by the faintly reflective surface of their flesh and their silvery seed[else]others is strangely affecting, making it difficult for you not to obsessively fondle your head in idle revels of your own radiance[end if]";
 		if boundstate is true:
-			say "the writhing bodies surrounding you is overwhelming, making it even more difficult to keep a clear head, exacerbated by the faintly reflective surface of their flesh and their silvery seed";
 			now consortinsight is 2;
 		else:
-			say "others is strangely affecting, making it difficult for you not to obsessively fondle your head in idle revels of your own radiance";
+			now consortinsight is 1;
 	else:
-		say "[if boundstate is true]your sight going from darkness to an overwhelming wave of vivid colors, your rounded and smooth head fondled by the creatures and exposed once more to their strange empathy[else]leaving your sight in utter blackness and compelling you to fondle your rounded and smooth head. In a scant few seconds, your sight returns to you, exposing you once more to the strange and empathic senses of these creatures[end if]";
+		say "the infection overtakes it. All facial features save for your mouth meld into it, [if boundstate is true]your sight going from darkness to an overwhelming wave of vivid colors, your rounded and smooth head fondled by the creatures and exposed once more to their strange empathy[else]leaving your sight in utter blackness and compelling you to fondle your rounded and smooth head. In a scant few seconds, your sight returns to you, exposing you once more to the strange and empathic senses of these creatures[end if]";
 	if SkinName of Player is "Pewter Consort" and consortinsight is 1:
 		say ". You find this quickly exacerbated by your faintly metallic skin, which seems to magnify the effect. It takes you a moment to control yourself";
 		now consortinsight is 2;
@@ -817,14 +787,20 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "pewter seed"	"[pewterseeddesc]"	1	pewter seed
 
-pewter seed is a grab object. pewter seed is infectious. Strain of pewter seed is "Pewter Consort". pewter seed is cum.
-the scent of pewter seed is "There's a slight, metallic sweetness hidden under its more masculine aroma.".
-Usedesc of pewter seed is "     You have little difficulty downing the warm fluid. It makes you a little tingly all over...[line break]".
-
 to say pewterseeddesc:
 	say "The silvery seed of a strange, eyeless monster. ";
 	if FaceName of Player is "Pewter Consort":
 		say "It shimmers mesmerizingly. ";
+
+pewter seed is a grab object. pewter seed is infectious. Strain of pewter seed is "Pewter Consort". pewter seed is cum.
+the scent of pewter seed is "There's a slight, metallic sweetness hidden under its more masculine aroma.".
+Usedesc of pewter seed is "[pewter seed use]".
+
+to say pewter seed use:
+	say "     You have little difficulty downing the warm fluid. It makes you a little tingly all over...";
+	PlayerDrink 5;
+	SanLoss 5;
+	raise Player Libido by 2;
 
 Section 4 - Endings
 

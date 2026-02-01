@@ -359,9 +359,13 @@ to wwpowerslam:
 	else:
 		say "The Wrestling Wolf rushes in to grab you, clearly ready to unleash a crowd-pleasing maneuver, but you barely manage to squirm out of his reach and whip him into the ropes. That was a close one.";
 	now peppereyes is 0; [pepperspray wears off]
-	if HP of Player > 0:
+	if HP of Player > 0 and Libido of Player < 110:
 		AttemptToWait;
 	else:
+		if HP of Player <= 0:
+			now fightoutcome is 20;
+		else:
+			now fightoutcome is 21;
 		Lose;
 	rule succeeds;
 

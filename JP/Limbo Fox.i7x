@@ -10,8 +10,9 @@ When Play begins: [This is Cyn's default creature encounter]
 	now Species Name entry is "Limbo Fox";
 	add "Limbo Fox" to infections of VulpineList;
 	add "Limbo Fox" to infections of FurryList;
-	add "Limbo Fox" to infections of FemaleList;
+	add "Limbo Fox" to infections of HermList;
 	add "Limbo Fox" to infections of BipedalList;
+	add "Limbo Fox" to infections of TaperedCockList;
 	add "Limbo Fox" to infections of SheathedCockList;
 	Add "Limbo Fox" to infections of KnottedCockList;
 	add "Limbo Fox" to infections of TailList;
@@ -29,7 +30,7 @@ When Play begins: [This is Cyn's default creature encounter]
 	now skin entry is "smooth, black-colored fur over your body, with a white colored underbelly"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "From the base of your spine, you have two long, black-colored fox's luxurious tails."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "grey, knotted vulpine";
-	now face change entry is "it shifts and stretches, gaining a long, slender muzzle which ends in a black nose and whiskers, black fur covers your muzzle as your ears move upwards and grow into pointed, vulpine ears"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now face change entry is "it shifts and stretches, gaining a long, slender muzzle which ends in a black nose and whiskers. Black fur covers your muzzle as your ears move upwards and grow into pointed, vulpine ears"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "it becomes a slender and seductively curved one. You can feel your butt shift as it becomes a taut bubble butt. Your hands become paw-like, with long, sharp, black claws at the tips of your fingers. You can hear cracks and pops as your ankles and feet change, becoming digitigrade paws"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "it grows a soft, fluffy layer of black fur, with a white underbelly"; [ Skin change text, format as "Your skin feels cold as [skin change entry]." ]
 	now ass change entry is "two long, floofy fox tails extend from your spine. They are covered in soft, black fur"; [ Ass/tail change text, format as "Your ass feels slightly painful as [ass change entry]." ]
@@ -63,7 +64,7 @@ When Play begins: [This is Cyn's default creature encounter]
 	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]ghostly[or]ethereal[or]willowy[or]eldritch[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "Anomaly"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "anomaly"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]

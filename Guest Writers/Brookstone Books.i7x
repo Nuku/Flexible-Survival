@@ -15,10 +15,7 @@ Brookstone Books is a room. Brookstone Books entrance is a door. It is south of 
 Instead of examining the Brookstone Books entrance:
 	say "Through the store front windows and entrance, you make out [the other side of the Brookstone Books entrance].";
 
-Description of Brookstone Books is "[bstonebooks]".
-
-To say bstonebooks:
-	say "     [if findwires is 2 and fixedgens is 3]The store seems bright and cheery with all of the lights on. You remember needing to come here on occasion to find an odd book or two. What it lacked in size in comparison to the big chain of bookstores, it made up for it in the wealth of older, hard to find, and out of print books and magazines in addition to newer releases. All the shelves in the store are crammed to capacity with books as well as the tables scattered around the store. Milling about are mall rats and other infected reading a book while either standing near a bookshelf or occupying a chair or little sofa in one of the seating groups[else]You head into the bookstore, attracted by the light of lanterns inside. As you walk in, you remember needing to come here on occasion to find an odd book or two. What it lacked in size in comparison to the big chain of bookstores, it made up for it in the wealth of older, hard to find, and out of print books and magazines in addition to newer releases. All the shelves in the store are crammed to capacity with books as well as the tables scattered around the store. Milling about are a mall rat or three reading a book while either standing near a bookshelf or occupying a chair or little sofa in one of the seating groups. Of what you can see from the glow of several candles and lanterns, all the books seem to still be in good condition[end if].";
+Description of Brookstone Books is "     [if findwires is 2 and fixedgens is 3]The store seems bright and cheery with all of the lights on. You remember needing to come here on occasion to find an odd book or two. What it lacked in size in comparison to the big chain of bookstores, it made up for it in the wealth of older, hard to find, and out of print books and magazines in addition to newer releases. All the shelves in the store are crammed to capacity with books as well as the tables scattered around the store. Milling about are mall rats and other infected reading a book while either standing near a bookshelf or occupying a chair or little sofa in one of the seating groups[else]You head into the bookstore, attracted by the light of lanterns inside. As you walk in, you remember needing to come here on occasion to find an odd book or two. What it lacked in size in comparison to the big chain of bookstores, it made up for it in the wealth of older, hard to find, and out of print books and magazines in addition to newer releases. All the shelves in the store are crammed to capacity with books as well as the tables scattered around the store. Milling about are a mall rat or three reading a book while either standing near a bookshelf or occupying a chair or little sofa in one of the seating groups. Of what you can see from the glow of several candles and lanterns, all the books seem to still be in good condition[end if].[line break]";
 
 Beverly is in Brookstone Books.
 Bookshelves is in Brookstone Books.
@@ -87,6 +84,8 @@ Bookshelves is a man.
 Description of bookshelves is "     All around the store are bookshelves and tables loaded with old, used, and new books that run the gamut of subjects. Even after having visited the store in the past, you are still amazed by the amount of books the store has to [link][bold type]browse[roman type][as]browse books[end link] and [link][bold type]read[roman type][as]read books[end link] through.[line break]".
 
 the scent of the bookshelves is "     The books smell of musty tomes mingling with the scent of new papers and the burning candles.".
+
+linkaction of Bookshelves is "Possible Actions: [link]smell[as]smell Bookshelves[end link], [link]browse[as]browse books[end link][line break]".
 
 lastbookshelves is a number that varies. lastbookshelves is usually 255.
 

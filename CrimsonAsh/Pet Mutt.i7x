@@ -260,16 +260,16 @@ to say Pet MuttSexMenu:
 		now sortorder entry is 2;
 		now description entry is "Roll [PetMuttName] over and mount him";
 		[]
+		if Player is male:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck him";
+			now sortorder entry is 3;
+			now description entry is "Pound [PetMuttName]'s ass";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Blow him";
 		now sortorder entry is 4;
 		now description entry is "Suck [PetMuttName]'s cock";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck him";
-		now sortorder entry is 3;
-		now description entry is "Pound [PetMuttName]'s ass";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

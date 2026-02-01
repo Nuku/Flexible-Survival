@@ -485,9 +485,7 @@ name	desc	weight	object
 "skunk goo"	"Black skunk goo on a stick."	1	skunk goo
 
 skunk goo is a grab object.
-
 skunk goo is infectious. Strain of skunk goo is "Skunk Female".
-
 Usedesc of skunk goo is "[skunk goo use]".
 
 to say skunk goo use:

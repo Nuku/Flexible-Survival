@@ -9,7 +9,6 @@ name	desc	weight	object
 "rubber sneakers"	"Dark blue sport shoes made of a shiny rubbery material. A stylized feline figure is painted on the side."	2	rubber sneakers
 
 When play begins:
-	add "Rubber Puma" to infections of FurryList;
 	add "rubber sneakers" to invent of Astroslide Field Locker-room;
 
 rubber sneakers is a grab object.
@@ -26,21 +25,19 @@ The slot of rubber sneakers is "feet".
 
 the scent of rubber sneakers is "The rubber sneakers smell mostly of rubber, with a faint hint of sweat.".
 
-rubber sneakers is in Astroslide Field Locker-room.
+[rubber sneakers is in Astroslide Field Locker-room.]
 
 Section 2 - Usage specifics
 
 check grabbing rubber sneakers:
 	if FurryList is banned or FurryList is warded:
 		say "     As you are about to pick up the shoes, you notice the puma motif on the sides. The sight makes you have second thoughts, and you step away from the footwear." instead;
-	else if Player is in Astroslide Field Locker-room:
+	if Player is in Astroslide Field Locker-room:
 		say "     As you bend to pick up the pair of sport shoes, you notice that they are made of rubber. You have never seen footwear such as this. You pick them up and turn around, in order to ask whose shoes these are. The locker-room being in its usual state of chaotic orgy and football chatter, you abandon the idea and stash the shoes in your bag.";
-		[ItemGain rubber sneakers by 1;]
 
 check looting when "rubber sneakers" is listed in invent of location of Player:
 	try grabbing rubber sneakers;
 	if invent of location of Player is empty, stop the action;
-
 
 Instead of using the rubber sneakers:
 	if the rubber sneakers are equipped:
@@ -86,7 +83,7 @@ Instead of using the rubber sneakers:
 			say "     ([link]N[as]n[end link]) - Better listen to your instinct.";
 			if Player consents:
 				LineBreak;
-				say "     You put the rubber sneakers on. [one of]The shoes are surprisingly comfortable. Your feet feel warm, comfortable and, most of all, so light. Your mind fills with confidence. As you take a few steps, you feel small tingles going up your legs. Is it because you need to get used to them? At least it does not feel uncomfortable or painful. Actually, it feels quite pleasurable.[or]The pleasurable tingles come back as soon as you take a few steps in your rubbery footwear.[stopping]";
+				say "     You put the rubber sneakers on. The [one of]shoes are surprisingly comfortable. Your feet feel warm, comfortable and, most of all, so light. Your mind fills with confidence. As you take a few steps, you feel small tingles going up your legs. Is it because you need to get used to them? At least it does not feel uncomfortable or painful. Actually, it feels quite pleasurable[or]pleasurable tingles come back as soon as you take a few steps in your rubbery footwear[stopping].";
 				say "     [bold type]With these rubber sneakers on, you feel like you can outrun anything.[roman type][line break]";
 				now the rubber sneakers are equipped;
 				stop the action;
@@ -125,8 +122,8 @@ an everyturn rule:
 			now Face of Player is "feline, and in the distinctive shape of a puma";
 		else:
 			say "     The rubber puma infection, having spread to your entire body, now starts to affect your mind, and sexually stimulates you. [bold type]Your libido increases.[roman type][line break]";
-			LibidoBoost 20;
-			if Libido of Player > 100:
+			increase Libido of Player by 20;
+			if Libido of Player >= 100:
 				say "     The arousal becomes too strong for you to resist. Abiding to the stimulation of the sneakers, you keep walking, hoping to orgasm quickly. But this is not enough stimulation for the shoes, which keep you tantalizingly on the edge. Groaning, you cede and begin to jog at a brisk pace. The tingles raise in intensity, until it feels like your [if Player is male]cock[smn] [ismv][else]cunt[sfn] [isfv][end if] covered with electrodes, shocking you each time one of your feet hits the ground. You unconsciously run faster and faster, until a final stride manages to make you go. You arch your back and roar in orgasmic joy as you cum hard, splashing the floor under and in front of you with your sexual fluids. You eventually stop feeling the need to run, and stop your jogging. While you get your breath back, you look back, and can only admire the long trail you made during your climax.";
 				SanLoss 15;
 				now Libido of Player is 20;
@@ -154,7 +151,7 @@ name(text)	PrepFunction(text)
 "Rubber Puma"	"[PrepCombat_Rubber Puma]"
 
 to say PrepCombat_Rubber Puma:
-	say "";
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -329,6 +326,5 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Rubber Sneakers ends here.

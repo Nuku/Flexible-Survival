@@ -190,12 +190,12 @@ to say RyanTalk5:
 		say "     As you ask your question, Ryan looks up at you, worried. 'A trip to the beach, sir? Are you sure it'll be safe? I'd love to go with you, but the city isn't a place I want to wander around,' he frets anxiously. Stroking the fearful fennec's head and gently rubbing his ears, you assure him that the beach is safe and that you'll protect him during the journey. Ryan hesitates a bit more, torn between his usual caution and fear and his excitement toward the prospect of a beach date with you before finally he nervously agrees. 'A-alright, sir, you lead the way.' Grinning at him, you grab Ryan's hand and lead him out of the library with you. It's a relatively peaceful trip right up until the final stretch. You're only a couple blocks away from the promenade when a large orca decides to ambush you and your fox. Diving out of an alleyway, he breathes in deeply, taking in the scent of Ryan's heat, and rushes at you! Yelling at Ryan to get behind you and hide, you hurry to confront your attacker.";
 		now inasituation is true;
 		challenge "Killer Whale";
-		if fightoutcome >= 20 and fightoutcome <= 30: [lost or submitted]
+		if fightoutcome >= 20 and fightoutcome <= 29: [lost or submitted]
 			if fightoutcome is 22: [submitted]
 				say "[RyanBeachDateSubmit]";
 			else: [lost]
 				say "[RyanBeachDateLoss]";
-		else if fightoutcome > 30: [fled]
+		else if fightoutcome >= 30: [fled]
 			say "[RyanBeachDateFlee]";
 		else if fightoutcome < 20: [player won]
 			say "[RyanBeachDateVictory]";
@@ -205,12 +205,12 @@ to say RyanTalk5:
 to say RyanBeachDateSubmit:
 	say "     The thought of submitting crosses your mind momentarily, but you quickly beat the idea from your mind knowing that the orca will show neither you nor Ryan any mercy. Unfortunately, your indecision seems to give your foe time to recover.";
 	challenge "Killer Whale";
-	if fightoutcome >= 20 and fightoutcome <= 30: [lost or submitted]
+	if fightoutcome >= 20 and fightoutcome <= 29: [lost or submitted]
 		if fightoutcome is 22: [submitted]
 			say "[RyanBeachDateSubmit]";
 		else: [lost]
 			say "[RyanBeachDateLoss]";
-	else if fightoutcome > 30: [fled]
+	else if fightoutcome >= 30: [fled]
 		say "[RyanBeachDateFlee]";
 	else if fightoutcome < 20: [player won]
 		say "[RyanBeachDateVictory]";

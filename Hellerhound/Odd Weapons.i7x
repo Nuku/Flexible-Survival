@@ -66,15 +66,11 @@ to say ResolveEvent Sword Nest:
 			LineBreak;
 			say "     You run and jump into the slimy muck, a sick splosh sounding and echoing between the nearby buildings. The slime coats you as you roll with enthusiasm, losing your mind to the infection faster by the minute.";
 			SanLoss 15;
-			weakrandominfect; [most of first set don't affect researcher]
-			weakrandominfect;
-			weakrandominfect;
-			weakrandominfect;
-			weakrandominfect;
-			weakrandominfect;
-			randominfect;
-			randominfect;
-			LineBreak;
+			repeat with T running from one to 6:
+				weakrandominfect; [most of first set don't affect researcher]
+				if remainder after dividing T by 3 is 0:
+					randominfect;
+					wait for any key;
 			say "...";
 			WaitLineBreak;
 			say "     The sludge covering you releases that desire, as you orgasm intensely in the muck.";
@@ -86,41 +82,40 @@ to say ResolveEvent Sword Nest:
 				say "     You dip your [FaceSpeciesName of Player in lower case] head into the slime and suck greedily. It sates your hunger and thirst.";
 				PlayerDrink 15;
 				PlayerEat 6;
-				weakrandominfect; [more from second batch affect researcher]
-				weakrandominfect;
-				weakrandominfect;
-				weakrandominfect;
-				randominfect;
-				randominfect;
-				if "Iron Stomach" is not listed in feats of Player:
-					weakrandominfect;
-					weakrandominfect;
-					weakrandominfect;
-					weakrandominfect;
-					randominfect;
-					randominfect;
-				WaitLineBreak;
+				repeat with T running from one to 4:
+					weakrandominfect; [more from second batch affect researcher]
+					if T is even, randominfect;
+					if "Iron Stomach" is not listed in feats of Player:
+						weakrandominfect;
+						if T is odd, randominfect;
+					if T is even, wait for any key;
 				say "     Another desire roars inside your head, causing you to start pulling the sludge up into your hands.";
 				say "     You manage to stop it, but will you let it continue?";
 				if Player consents:
 					LineBreak;
 					say "     You lose the will to resist and proceed to follow every desire and lust.";
 					say "     You grab the slime in your hands and pour it over your head, and then grab some more, and think about what to do with it next.";
-					if Cunt Count of Player is 1:
-						say "     You take your slime-filled hands and shove them up your waiting cunt, filling it with the sludge.";
+					WaitLineBreak;
+					if Cunt Count of Player > 0:
+						say "     You take your slime-filled hands and shove them up your waiting cunt[sfn], filling [itthemf] with the sludge.";
 						say "[randomfimpreg][randomfimpreg][randomfimpreg]";
-						say "     You then shove them up your rear, filling it as well.";
+						if anallevel > 1:
+							say "     You then shove them up your rear, filling it as well.";
+							say "[randommimpreg][randommimpreg][randommimpreg]";
+					else if Player is mpreg_ok:
+						say "     You take your slime-filled hands and shove them up your waiting rear, filling it with the sludge.";
 						say "[randommimpreg][randommimpreg][randommimpreg]";
+						say "     You then try to drink all of the slime you can, tasting its deliciously dirty flavor.";
 					else:
 						say "     You decide to try and drink all of the slime you can, tasting its deliciously dirty flavor.";
 					say "     After a short while, you collapse, corrupt pleasure roaring through your body.";
 					repeat with T running from one to 15:
 						randominfect;
-					wait for any key;
+						if remainder after dividing T by 3 is 0:
+							wait for any key;
 					now Humanity of Player is 0;
 					end the story saying "Your humanity submits to the sludge nanites, and you go feral.";
 					now battleground is "void";
-					wait for any key;
 					follow the turnpass rule;
 					stop the action;
 				else:
@@ -129,10 +124,12 @@ to say ResolveEvent Sword Nest:
 			else:
 				LineBreak;
 				say "     You wisely rein in your desires before they get away with you.";
+				now Libido of Player is ( Libido of Player * 9 ) / 10;
 		else:
 			LineBreak;
 			say "     You master the desire, and look around paying more attention to detail.";
 	if a random number between one and 20 < Perception of Player:
+		WaitLineBreak;
 		say "     You spot a sword in the middle of the mess, coated so thoroughly with the juices that you suspect it was the target for the raids, and the source of the jubilation of victory. Its metal is cloudy and coated with thick slime, and the pommel is dried cum of some unknown creature, glowing white. It looks like a powerful, but dangerous weapon. Do you want to walk into the mess and take it?";
 		if Player consents:
 			LineBreak;
@@ -149,7 +146,7 @@ to say ResolveEvent Sword Nest:
 				weakrandominfect;
 				weakrandominfect;
 				randominfect;
-				say "     The infected slime changes you.";
+				say "[line break]     The infected slime changes you.";
 				wait for any key;
 			ItemGain infected sword by 1;
 			now Resolution of Sword Nest is 1; [player waded in to get the sword]
@@ -162,22 +159,8 @@ to say ResolveEvent Sword Nest:
 		say "     You leave the mess behind, pondering the reason why this occurred here and nowhere else.";
 		now Resolution of Sword Nest is 3; [didn't spot the sword]
 
-An everyturn rule:
-	if the infected sword is wielded:
-		say "[line break]The sword feels slimy in your hand. Maybe you shouldn't be using it.";
-		randominfect;
-		say "The infected sword changes you.";
-
 Section 3 - Dirty Whip
 
-[
-understand "whip" as clean whip.
-Does the player mean using the dirty whip when the dirty whip is owned: it is likely.
-Does the player mean littering the dirty whip when the dirty whip is owned: it is likely.
-Does the player mean littering the clean whip when the clean whip is owned: it is very likely.
-Does the player mean grabbing the dirty whip when the dirty whip is visible: it is likely.
-Does the player mean grabbing the clean whip when the clean whip is visible: it is very likely.
-]
 [Whip moved to Core Mechanics/Weapons.i7x]
 
 Table of GameEventIDs (continued)
@@ -194,12 +177,14 @@ to say ResolveEvent Destroyed Bushes:
 	if Humanity of Player < 50:
 		say "     Do you want to drink from the puddles?";
 		if Player consents:
+			PlayerDrink 75;
 			if "Iron Stomach" is not listed in feats of Player:
 				MultiInfect "Black Equinoid" repeats 2;
-			PlayerDrink 75;
+			raise Player Libido by 10;
 		else:
 			LineBreak;
 			say "You leave them alone.";
+		LineBreak;
 	say "     Do you wish to look around?";
 	if Player consents:
 		LineBreak;
@@ -235,12 +220,5 @@ to say ResolveEvent Destroyed Bushes:
 		say "     You leave the scene, avoiding the puddles, and make a mental note to not come back here again.";
 		now Resolution of Destroyed Bushes is 3; [didn't investigate the bushes / whip]
 		now Destroyed Bushes is resolved;
-
-An everyturn rule:
-	if the dirty whip is wielded:
-		now researchbypass is 1;
-		say "The cum on the dirty whip slips down onto your hand.";
-		infect "Black Equinoid";
-		now researchbypass is 0;
 
 Odd Weapons ends here.

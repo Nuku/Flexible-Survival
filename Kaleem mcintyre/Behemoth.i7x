@@ -276,15 +276,14 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "behemoth horn"	"A large piece of a Behemoth's horn that was knocked off during battle."	1	  behemoth horn
 
-behemoth horn is a grab object. Understand "horn" as behemoth horn. [behemoth horn is infectious. Strain of behemoth horn is "Behemoth".]
-
-Scent of behemoth horn is "The scent coming from the Behemoth horn is heavy with musk, both male and female, and somehow filled with pride.".
-
+behemoth horn is a grab object. Understand "horn" as behemoth horn.
 Usedesc of behemoth horn is "[behemoth horn use]".
 
 to say behemoth horn use:
 	say "     Taking the Behemoth horn and rolling it around inside of your hand you find you have the sudden strange urge to place the onyx piece of bone up against your skull. Not seeing any reason why you shouldn't, you place the horn on top of your head, right between your scalp and forehead. When nothing immediately happens you shrug and think nothing more of it, but when you remove your hand and the horn continues to stay in place you realize that something is about to happen to you. The onset of a throbbing in your skull and at your backside are definitely clues towards this assumption as you find yourself grunting somewhat in discomfort as your body goes to shifting around on its own.";
 	infect "Behemoth";
+
+Scent of behemoth horn is "The scent coming from the Behemoth horn is heavy with musk, both male and female, and somehow filled with pride.".
 
 Section 3 - Endings
 

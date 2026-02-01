@@ -7,6 +7,8 @@ Version 1 of Ebonflame Dragator by Blue Bishop begins here.
 Section 1 - Creature Responses
 
 ebgatord is a number that varies. [Ebonflame Gator dick memory. 1 = been described, 2 = egglaying described]
+impregnatevalid is a truth state that varies.[@Tag:NotSaved] impregnatevalid is usually false.
+ebgatorcarrying is a number that varies. ebgatorcarrying is usually 1.
 
 to say ebgatorvic:
 	if HP of Player > 0:
@@ -76,15 +78,11 @@ to say ebgatorvic:
 		say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Dragator";
 
-impregnatevalid is a truth state that varies.[@Tag:NotSaved] impregnatevalid is usually false.
-ebgatorcarrying is a number that varies. ebgatorcarrying is usually 1.
-
 to say ebgatordesc:
 	say "     A loud, low hissing sound echoes from the open air as a monstrous, feral alligator lurches from the shadows. Twisted by an unholy influence, the six-legged beast is an abyssal shade of purple, hard scales and ridges jutting from its coarse frame, a soft red flame visibly glowing in the cracks and crevices.";
 	say "     Twin pairs of eyes fixated on your [bodytype of Player] form, its drooling maw is agape, revealing its two rows of razor-sharp teeth. Without warning, it charges directly at you!";
 	if impregnatevalid is true:
-		LineBreak;
-		say "     [bold type]...The creature has a slightly awkward gait, as if bloated with something...[roman type][line break]";
+		say "[line break]     [bold type]...The creature has a slightly awkward gait, as if bloated with something...[roman type][line break]";
 
 Section 2 - Creature Insertion
 
@@ -127,6 +125,7 @@ When Play begins:
 	add "Ebonflame Dragator" to infections of OviImpregnatorList;
 	add "Ebonflame Dragator" to infections of FirebreathList;
 	add "Ebonflame Dragator" to infections of TailweaponList;
+	add "Ebonflame Dragator" to infections of FeralmindList;
 	now Name entry is "Ebonflame Dragator";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]

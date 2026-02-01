@@ -101,19 +101,18 @@ to say lion def:
 	if z is 1:
 		if Player consents:
 			LineBreak;
-			now tempnum is 0;
 			if Player is male and Feline_meow < 8:
 				say "     Looking over the defeated lion, you wonder if you'd prefer to [link]stuff his furry ass (Y)[as]y[end link] or have a [link]ride on that feline cock (N)[as]n[end link].";
 				if Player consents:
 					LineBreak;
-					now tempnum is 1;
+					now z is 2;
 					decrease Feline_meow by 1;
 					say "     Deciding to take this opportunity to turn the tables on the lion man, you shove the big kitty onto his front. He tries to struggle, thinking you intend to keep fighting, but you grab his wrists and keep him pinned down. Once you start grinding your [cock size desc of Player] [Cock of Player] erection against his ass, he whimpers and attempts to pull away, but you keep your grip[if HP of Leonard >= 15 and HP of Leonard < 100], rumbling that he needs to learn to properly respect Leonard's pride and his mate[end if]. Lining up your cock under his tail, you press your glans against his tailstar and sink slowly into his tight, unyielding hole. His initial mrowl of discomfort soon turns to rumbles of pleasure as you pound into him, stuffing his golden-furred ass with your meat. Soon enough, he's pushing back into your thrusts and mewling needfully like a lustful kitty.";
 					say "     You fuck him like this for several minutes before finally driving your full length into him and groaning loudly as you cum. Your [if Cock Length of Player > 24]giant cock stretches the lion man out, but he takes it all even as your spurting seed stuffs him even further[else if Cock Length of Player > 12]huge cock stretches out the lion man nicely and he takes it all as your hot seed flows into him[else]pulsing cock sends your hot seed deep into the lustful lion[end if]. Finished with him, you pull out and give his ass a spank, sending him on his way. He is rather wobbly as he staggers off. As you watch him go, you notice him shrinking down and his figure changing, becoming more girlish and feminine. It looks like there may be another of those cat girls [if HP of Leonard >= 15 and HP of Leonard < 100]and one less upstart lion [end if]around soon.";
 					CreatureSexAftermath "Feline" receives "AssFuck" from "Player";
 				else:
 					LineBreak;
-			if tempnum is 0:
+			if z is 1:
 				decrease Feline_meow by 3;
 				say "     Deciding you can't let such a lovely, hard cock go to waste, you shove the big kitty onto his back. He tries to struggle, thinking you intend to keep fighting, but you grab his wrists and pin him down. Once you start grinding your ass down onto his waning erection, his attitude changes and his angry growls turn to a rumble of pleasure. His cock quickly stiffens back to full hardness, ready for you.";
 				if HP of Leonard >= 15 and HP of Leonard < 100 and BodyName of Player is "Feline":

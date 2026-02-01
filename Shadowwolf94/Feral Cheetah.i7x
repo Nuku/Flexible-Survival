@@ -37,6 +37,7 @@ To say cheetah defeat:
 		now sortorder entry is 4;
 		now description entry is "Make the kitty blow you";
 		]
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride the cheetah's cock - vaginal";
@@ -54,6 +55,7 @@ To say cheetah defeat:
 		now sortorder entry is 5;
 		now description entry is "Get the kitty to lick your pussy";
 		]
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ride the cheetah's cock - anal";
 	now sortorder entry is 3;
@@ -108,9 +110,8 @@ to say beatthecheetah01:	[player tops]
 	say "     Going at it slowly, you show your feline novice at anal sex a good time with first one, then two fingers until he's loudly purring and completely relaxed in an aroused haze. At that point, you decide that it's time to get your own manhood into action. Pulling your fingers out of the cheetah's hole, you watch it flex closed again, then set the tip of your [Cock of Player] manhood against the cheetah's pucker and move forward until it yields to your pressure and you slide into the warm and tight embrace of his body. You slide into the panting cheetah's ass until your balls touch the base of his tail, then start pulling back and thrusting back in, and soon you're pounding in and out of the spotted kitty's tight hole.";
 	WaitLineBreak;
 	say "     Confronted with all kinds of new sensations, it doesn't take all that long until you fucking him drives the cheetah over the edge and he starts to cum, squirting long strings of cum from his spined cock to land all over his furred chest. The twitches and convulsions of each shot run through his whole body, including the muscles in his ass, making an already quite tight hole grip and squeeze your shaft until you join him in orgasm, with a full load of your seed being blasted into this sexy furball's butt. Breathing heavily, you bask a while in the afterglow and rub the cheetah's fur a moment, then pull out of his hole and watch it flex closed before too much of your cum can run out of it.";
-	CreatureSexAftermath "Feral Cheetah" receives "AssFuck" from "Player";
-	LineBreak;
 	say "     Rolling back over and standing back up, the cheetah gives you a strange look, as if he can't believe you fucked his ass and he enjoyed it. 'I - er - got to go,' comes from lips that aren't too well shaped for human words, then the large cat dashes off without allowing for a reply.";
+	CreatureSexAftermath "Feral Cheetah" receives "AssFuck" from "Player";
 	infect "Feral Cheetah";
 
 to say beatthecheetah02:	[ride - vaginal]
@@ -156,9 +157,8 @@ To say cheetah victory:
 	if specialcheetah is True and cheetahmate > 0:
 		if Player is female:
 			say "     Giving a pleased rumble that he's gotten the upper hand over his mate this time, your handsome cheetah pounces, driving himself home into you with one quick, fluid motion. He pounds at you, his balls slapping your ass as you thrust back, trying to get him as deep as you can. A haze of pleasure begins to cloud your eyes, and by the time your climax comes, you are no longer in conscious control. The feeling of his warm seed filling your insides is welcome, and his little barbs tickle as his cock pulses.";
-			CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Cheetah";
-			LineBreak;
 			say "     His cock slides out with much pleasure and dripping of seed, and you lick-kiss him in the cheek for doing you such a service.";
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Cheetah";
 		else if Player is mpreg_able:
 			if cheetah_mpreg is false:
 				say "     Giving a pleased rumble that he's gotten the upper hand over his mate this time, your handsome cheetah gives you a kiss. Though as he bends his head to your crotch and notices your lack of feminine features there, he gives a saddened sigh. 'What happened to you, my love?' He goes to lick your crotch sadly, but a tickle of your scent draws his tongue to continue back to your anus. Having caught the scent of your hidden womb, he gives a confused sound and takes another noseful. The cheetah gives your pucker several more licks, his raspy tongue playing across your crinkled hole in search of that arousing smell. He starts to purr and rumble, becoming captivated of your unusual nature, which he shows by mounting you.";

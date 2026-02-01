@@ -74,7 +74,7 @@ to displayplinv:
 				if the remainder after dividing y by invcolumns is 0:
 					LineBreak;
 				else:
-					say "  ||  ";
+					say "  --  ";
 		LineBreak;
 
 to displaystorage:
@@ -102,7 +102,7 @@ to displaystorage:
 				if the remainder after dividing y by invcolumns is 0:
 					LineBreak;
 				else:
-					say "  ||  ";
+					say "  --  ";
 		LineBreak;
 
 Section 3 - Commands

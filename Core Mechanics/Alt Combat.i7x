@@ -1559,7 +1559,6 @@ to TrophyLootFunction: [generates either a trophy prompt or loot for the player]
 					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 			wait for any key;
 			clear the screen and hyperlink list;
-			LineBreak;
 	else: [Defaulting back to the old Loot System]
 		if Debug is at level 10:
 			say "Debug: Loot Fork activated.";

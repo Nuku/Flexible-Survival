@@ -2,11 +2,27 @@ Version 1 of Phantom Dolphin by Blue Bishop begins here.
 [Version 1 - Commissioned]
 "When in Rome..."
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	now OralVirgin of Discarded Dolphin is false;
+	now Virgin of Discarded Dolphin is false;
+	now AnalVirgin of Discarded Dolphin is false;
+	now PenileVirgin of Discarded Dolphin is false;
+	now SexuallyExperienced of Discarded Dolphin is true;
+	now Sterile of Discarded Dolphin is true;
+	now MainInfection of Discarded Dolphin is "Bottlenose Toy";
+
 Table of GameCharacterIDs (continued)
 object	name
 Discarded Dolphin	"Discarded Dolphin"
 
 Discarded Dolphin is a person. Discarded Dolphin is in Bouncy Castle.
+OralVirgin of Discarded Dolphin is false.
+Virgin of Discarded Dolphin is false.
+AnalVirgin of Discarded Dolphin is false.
+PenileVirgin of Discarded Dolphin is false.
+SexuallyExperienced of Discarded Dolphin is true.
+Sterile of Discarded Dolphin is true.
+MainInfection of Discarded Dolphin is "Bottlenose Toy".
 Description of Discarded Dolphin is "[flotlook]".
 the fuckscene of Discarded Dolphin is "[flotfuck]".
 Scent of Discarded Dolphin is "     The object smells faintly of fresh synthetics and saltwater.".
@@ -155,7 +171,6 @@ to flotbind:
 			flotsanityorgasm;
 			flotprogress;
 		if humanity of Player < 1:
-			LineBreak;
 			say "     [if flotintense < 3]Though it's pretty much inanimate, you've reached such a point of becoming deranged that you simply cannot control yourself any longer, riding the inflatable dolphin until it eventually changes. Drawing you inside itself, you're perpetually milked within the vinyl prison[else if flotintense < 8]Losing yourself to your overwhelming need on the inflatable dolphin, you're unable to fight back as it eventually draws you inside itself, perpetually milked within the vinyl prison[else]Losing yourself to your overwhelming need, trapped within this vinyl prison, the inflatable dolphin shows no relent in perpetually milking you[end if].";
 			say "     Eventually, you completely lose track of time. From your limited vision through the toy's eyes, you watch on as it finally wrenches itself free of the castle, doomed to constant abuse by this tainted suit as it carries you into the dark depths...";
 			wait for any key;
@@ -244,14 +259,14 @@ to flotprogress: [passable]
 			say "coat your cunt[sfn] and ass. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further.";
 		say "     By the looks of things, this peculiar toy is only just getting started. Should you persist, things are clearly going to get a lot worse...[paragraph break]";
 	else if flotintense is 4:
-		say "     You're forced to realize that your limbs have partially submerged into the inflatable dolphin! You're now completely at the whim of the vinyl construct's influence, of which it seems eager now to exploit";
+		say "     You're forced to realize that your limbs have partially submerged into the inflatable dolphin! You're now completely at the whim of the vinyl construct's influence, of which it seems eager now to exploit. The undulating material ";
 		if Player is male:
-			say ". The undulating material pumps your [cock size desc of Player] dick[smn] with such force that you rock against the toy with each motion, slicked by your own cum and exaggerated by the waves[if Player is female and anallevel > 1]. Moreover, you feel something large and hard force its way into your cunt[sfn] and ass, the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[else if Player is female]. Moreover, you feel something large and hard force its way into your cunt[sfn], the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[else if anallevel > 1]. Moreover, you feel something large and hard force its way into your ass, the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[end if].";
+			say "pumps your [cock size desc of Player] dick[smn] with such force that you rock against the toy with each motion, slicked by your own cum and exaggerated by the waves[if Player is female and anallevel > 1]. Moreover, you feel something large and hard force its way into your cunt[sfn] and ass, the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[else if Player is female]. Moreover, you feel something large and hard force its way into your cunt[sfn], the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[else if anallevel > 1]. Moreover, you feel something large and hard force its way into your ass, the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[end if].";
 		else:
-			say ". The undulating material grinds against your [cunt size desc of Player] cunt[sfn] with such force that you rock against the toy with each motion, slicked by your own honey and exaggerated by the waves. [if anallevel > 1]Moreover, you feel something large and hard force its way into your holes, the shape shifting around until it appears satisfied with a tapered, worming tendrils to rail you with[else]Moreover, you feel something large and hard force its way into your hole[sfn], the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[end if].";
+			say "grinds against your [cunt size desc of Player] cunt[sfn] with such force that you rock against the toy with each motion, slicked by your own honey and exaggerated by the waves. [if anallevel > 1]Moreover, you feel something large and hard force its way into your holes, the shape shifting around until it appears satisfied with a tapered, worming tendrils to rail you with[else]Moreover, you feel something large and hard force its way into your hole[sfn], the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[end if].";
 		say "     It's becoming extremely difficult to keep a clear head and in control of the situation. If there was any wiser time to get off this crazy thing, it'd be right about now...";
 		if flotmarked is false:
-			say "     ...[bold type]Moreover[italic type], you get the impression that you've been touched in some strange, intangible way - an extraordinary feat given how distracted your senses are now - though not in any overtly malevolent sense. You imagine you've gained some lingering benefit from this experience, though you doubt there'll be much more to gain beyond this[roman type].";
+			say "[line break]     ...[bold type]Moreover[italic type], you get the impression that you've been touched in some strange, intangible way - an extraordinary feat given how distracted your senses are now - though not in any overtly malevolent sense. You imagine you've gained some lingering benefit from this experience, though you doubt there'll be much more to gain beyond this[roman type].";
 			now flotmarked is true;
 		LineBreak;
 	else if flotintense is 6:

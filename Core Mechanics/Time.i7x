@@ -260,10 +260,10 @@ This is the turnpass rule:
 		end the story saying "You survived until the rescue came.";
 	else if ( turns minus targetturns ) < 20 and a random chance of 1 in 3 succeeds and skipturnblocker is 0 and playon is 0:
 		say "[line break][one of]You see an airplane soar overhead at jet speeds.[or]A peek from a roof shows what looks like some kind of vehicle approaching the city.[or]You have an unending sense of anticipation.[or]It's all coming to a close soon, just hang in there![at random]";
-	[say "[run paragraph on]";]
+	say "[run paragraph on]";
 	follow the everyturn rules;
 	now inasituation is false; [cleaning up possible open ended flags]
-	[say "";]
+	say "";
 	rule succeeds;
 
 Part 2 - Time Functions

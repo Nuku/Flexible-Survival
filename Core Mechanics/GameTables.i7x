@@ -454,8 +454,8 @@ Name(text)	Type(text)
 "dolinfloss"	"number"
 "dollfound"	"number"
 "dolphinbundle"	"number"
-"dolphinconsent"	"number"
-["dolphindefeat"	"number"]
+["dolphinconsent"	"number"
+"dolphindefeat"	"number"]
 "dolphinmode"	"number"
 "dolphintricked"	"number"
 "dolphinwantmate"	"number"
@@ -766,7 +766,7 @@ Name(text)	Type(text)
 "Kitsunearoused"	"number"
 "Kitsunetalk"	"number"
 "kittyness"	"number"
-"knightcrestnum"	"number"
+["knightcrestnum"	"number"]
 "KoballoonLossCounter"	"number"
 "KoballoonMet"	"number"
 "koboldgangmet"	"number"
@@ -774,7 +774,7 @@ Name(text)	Type(text)
 "KoboldScaleColor"	"number"
 "Koghhstatus"	"number"
 "KorvinSubmitCounter"	"number"
-"kpstatus"	"number"
+["kpstatus"	"number"]
 "KTO"	"number"
 "KitsuneEventStage"	"number"
 ["ktspeciesbonus"	"number"]
@@ -927,7 +927,7 @@ Name(text)	Type(text)
 "Leonardtimer"	"number"
 "leosupplies"	"number"
 "lessontime"	"number"
-"lgnumber"	"number"
+["lgnumber"	"number"]
 "libidomemory"	"number"
 "libstealth"	"number"
 "libsuppcount"	"number"
@@ -1291,7 +1291,7 @@ Name(text)	Type(text)
 ["Spritedefeat"	"number"]
 "SquadEncounters"	"number"
 "squidcolor"	"number"
-"squirefeature"	"number"
+["squirefeature"	"number"]
 "squirrelfucked"	"number"
 "squirrelspot"	"number"
 "ssstash"	"number"
@@ -1370,7 +1370,7 @@ Name(text)	Type(text)
 "TritonRelationship"	"number"
 "TryoutScore"	"number"
 "TSEventCounter"	"number"
-"tsw_fsd"	"number"
+["tsw_fsd"	"number"]
 "tsw_relationship"	"number"
 "tti_scene"	"number"
 "ttIcarus"	"number"
@@ -1895,8 +1895,8 @@ Name(text)	Type(text)
 "TomeEventPending"	"truth state"
 "toystoreoverride"	"truth state"
 "toystoreseen"	"truth state"
-"ts_warrior"	"truth state"
-"tsw_victory"	"truth state"
+["ts_warrior"	"truth state"
+"tsw_victory"	"truth state"]
 "twistedPimpBountyState"	"truth state"
 "twistfsdfeedmemory"	"truth state"
 "TyrTraining"	"truth state"

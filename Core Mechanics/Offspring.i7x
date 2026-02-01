@@ -75,7 +75,6 @@ name	desc	weight	object
 
 offspring present is a grab object.
 Usedesc of offspring present is "[offspring present use]".
-
 Scent of offspring present is "The box smells very mysterious.".
 
 to say offspring present use:

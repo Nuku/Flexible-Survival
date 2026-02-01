@@ -16,6 +16,7 @@ a postimport rule: [bugfixing rules for players that import savegames]
 		change the west exit of Greek Street to Thunderbolt's Stable;
 	now SexuallyExperienced of Thunderbolt is true;
 	now Sterile of Thunderbolt is false;
+	now MainInfection of Thunderbolt is "Wild Mustang";
 
 Section 1 - Events
 
@@ -101,10 +102,7 @@ Object	Name
 Thunderbolt's Stable	"Thunderbolt's Stable"
 
 Thunderbolt's Stable is a room.
-Description of Thunderbolt's Stable is "[TStableDesc]".
-
-to say TStableDesc:
-	say "     Thunderbolt's stable is a mid-sized pen thrown together by the lioness sisters Ariana and Eres. It has all the basic amenities to keep a horse well cared for: a trough, a few bales of hay and a wooden lean-to big enough for the big stallion to sleep under.";
+Description of Thunderbolt's Stable is "     Thunderbolt's stable is a mid-sized pen thrown together by the lioness sisters Ariana and Eres. It has all the basic amenities to keep a horse well cared for: a trough, a few bales of hay and a wooden lean-to big enough for the big stallion to sleep under.[line break]".
 
 instead of going to Thunderbolt's Stable:
 	move player to Thunderbolt's Stable;
@@ -162,7 +160,7 @@ PenileVirgin of Thunderbolt is false.
 SexuallyExperienced of Thunderbolt is true.
 TwistedCapacity of Thunderbolt is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Thunderbolt is false. [steriles can't knock people up]
-MainInfection of Thunderbolt is "".
+MainInfection of Thunderbolt is "Wild Mustang".
 Description of Thunderbolt is "[ThunderboltDesc]".
 Conversation of Thunderbolt is { "<This is nothing but a placeholder!>" }.
 The scent of Thunderbolt is "     You sniff the feral horse. He smells like cut hay and soap, the sisters must keep him well bathed.".

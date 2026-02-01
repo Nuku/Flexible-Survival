@@ -279,7 +279,6 @@ name	desc	weight	object
 
 awesomest fruit is a grab object.
 awesomest fruit has a Usedesc "[awesomest fruit use]".
-
 the scent of the awesomest fruit is "The strange fruit [if Player is MalePreferred or Player is FemalePreferred]smells rancid and turns your stomach just to have close[else]has a rich mix of male and female scents that seems mouth-wateringly sweet[end if].";
 
 To say awesomest fruit use:
@@ -302,7 +301,6 @@ To say awesomest fruit use:
 
 awesomer fruit is a grab object.
 awesomer fruit has a Usedesc "[awesomer fruit use]".
-
 the scent of the awesomer fruit is "The strange fruit [if Player is MalePreferred or Player is HermPreferred]smells rancid and turns your stomach just to have close[else]has a lovely, feminine scent that seems mouth-wateringly sweet[end if].";
 
 To say awesomer fruit use:
@@ -323,10 +321,9 @@ To say awesomer fruit use:
 		now MonsterID is monstermemory;
 		PlayerEat 5;
 
-the scent of the awesome fruit is "The strange fruit [if Player is FemalePreferred or Player is HermPreferred]smells rancid and turns your stomach just to have close[else]has a strong, manly scent that seems mouth-wateringly sweet[end if].";
-
 awesome fruit is a grab object.
 awesome fruit has a Usedesc "[awesome fruit use]".
+the scent of the awesome fruit is "The strange fruit [if Player is FemalePreferred or Player is HermPreferred]smells rancid and turns your stomach just to have close[else]has a strong, manly scent that seems mouth-wateringly sweet[end if].";
 
 To say awesome fruit use:
 	if Player is FemalePreferred or Player is HermPreferred:

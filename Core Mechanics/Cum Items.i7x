@@ -3383,6 +3383,8 @@ name	desc	weight	object
 
 Limbo Fox Cum is a grab object.
 Limbo Fox Cum is cum.
+Limbo Fox Cum is infectious.
+Strain of Limbo Fox Cum is "Limbo Fox".
 Usedesc of Limbo Fox Cum is "[Limbo Fox Cum use]".
 
 to say Limbo Fox Cum use:
@@ -3390,12 +3392,9 @@ to say Limbo Fox Cum use:
 	PlayerDrink 5;
 	PlayerEat 25;
 	SanLoss 5;
-	if Ball size of Player >= 1:
-		increase Ball Size of Player by 1;
-	if Cock Count of Player >= 1:
+	if Player is male and "Modest Organs" is not listed in feats of Player:
+		BallsGrow Player by a random number from 0 to 1;
 		increase Cock Length of Player by 1;
-	if "Iron Stomach" is not listed in feats of Player:
-		infect "Limbo Fox";
 
 Scent of Limbo Fox Cum is "[cumjar smell]".
 

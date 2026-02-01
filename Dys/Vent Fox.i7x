@@ -222,7 +222,7 @@ Sterile of Vent is true. [steriles can't knock people up]
 MainInfection of Vent is "Latex Fox".
 Description of Vent is "[VentDescription]".
 Conversation of Vent is { "blah blah blarg" }.
-The scent of Vent is "[VentScent]".
+The scent of Vent is "     Vent has a sort of chemical aroma to him that reminds you of freshly cured latex. You can pick up faint hints of a foxy musk as well.".
 Vent is in Maintenance Garage.
 The linkaction of Vent is "Possible Actions: [link]talk[as]talk vent[end link], [link]smell[as]smell vent[end link], [link]fuck[as]fuck vent[end link][if VentFoxContentLevel > 2], [link]request[as]request vent[end link][end if][line break]".
 
@@ -242,9 +242,6 @@ Instead of fucking the Vent:
 to say VentDescription:
 	say "     Vent is now only a bit smaller than a horse normally; however, he can change his size at will. His rubber body is a mixture of red, white, and black latex. The red covers his back and legs, as well as most of his face and tail. The white color is found on the tip of his tail, along his underbelly and chin, and inside his ears. The black covers his four paws like gloves, and the tips of his ears. Looking at his [']equipment['], you can see he has a plump, white sheath, and a set of baseball-sized balls.";
 
-to say VentScent:
-	say "     Vent has a sort of chemical aroma to him that reminds you of freshly cured latex. You can pick up faint hints of a foxy musk as well.";
-
 instead of conversing the Vent:
 	say "     You speak to Vent casually, and he seems to listen attentively, even giving a nod here and there.";
 
@@ -253,10 +250,7 @@ Object	Name
 Maintenance Garage	"Maintenance Garage"
 
 Maintenance Garage is a room.
-Description of Maintenance Garage is "[MaintenanceGarageDescription]".
-
-to say MaintenanceGarageDescription:
-	say "     Vent's new home is sparsely decorated. A few workbenches line the rear wall, and a hydraulic lift is off to one side of the room. Aside from that, there's not much to see. Off to one corner, you can see Vent. He gives you a toothy grin as he sees you, eager to spend time with you.";
+Description of Maintenance Garage is "     Vent's new home is sparsely decorated. A few workbenches line the rear wall, and a hydraulic lift is off to one side of the room. Aside from that, there's not much to see. Off to one corner, you can see Vent. He gives you a toothy grin as he sees you, eager to spend time with you.[line break]".
 
 to connect Maintenance Garage:
 	change the North exit of Smith Haven Mall Lot West to Maintenance Garage;
@@ -454,7 +448,7 @@ to say VentFoxPrefsMenu:[Menu for setting preferences.]
 			-- 0: say "     Changing your mind, you tell Vent things are fine how they are now.";
 
 to say VentUnavailable:
-	clear the screen and hyperlink list;
+	[clear the screen and hyperlink list;]
 	say "     [bold type]Vent shakes his head at your request. It seems he can't change this yet...[roman type][line break]";
 
 Chapter 2 - Sub Menus
@@ -782,7 +776,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 					say "     Vent rims you.";
 				else: [Giant player]
 					say "     Vent rims you.";
-			else if VentDomSize is 4:
+			[else if VentDomSize is 4:
 				if scalevalue of Player is 1: [Tiny player]
 					say "     Vent rims you.";
 				else if scalevalue of Player is 2: [Small player]
@@ -803,7 +797,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 				else if scalevalue of Player is 4: [Large player]
 					say "     Vent rims you.";
 				else: [Giant player]
-					say "     Vent rims you.";
+					say "     Vent rims you.";]
 			else:
 				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
 			WaitLineBreak;
@@ -819,7 +813,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 					say "     Vent hotdogs you.";
 				else: [giant player]
 					say "     Vent hotdogs you.";
-			else if VentDomSize is 4:
+			[else if VentDomSize is 4:
 				if scalevalue of Player is 1: [tiny player]
 					say "     Vent hotdogs you.";
 				else if scalevalue of Player is 2: [small player]
@@ -840,7 +834,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 				else if scalevalue of Player is 4: [large player]
 					say "     Vent hotdogs you.";
 				else: [giant player]
-					say "     Vent hotdogs you.";
+					say "     Vent hotdogs you.";]
 			else:
 				say "     ERROR! You shouldn't be seeing this. If you are, contact @Dys on the FS Discord with the message: VENTDOMSIZE-[VentDomSize]";
 			WaitLineBreak;
@@ -860,7 +854,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 			else: [Giant player]
 				say "     Vent penetrates the player with ease.";
 				say "     Vent knots the player with ease.";
-		else if VentDomSize is 4: [Large Vent fuck and tie]
+		[else if VentDomSize is 4: [Large Vent fuck and tie]
 			if scalevalue of Player is 1: [Tiny player]
 				say "     Vent penetrates the player with a good amount of effort, stretching them a lot.";
 				say "     Vent knots the player, subjecting them to some pain.";
@@ -891,7 +885,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 				say "     Vent knots the player, stretching them a little more.";
 			else: [Giant player]
 				say "     Vent penetrates the player, stretching the barely.";
-				say "     Vent knots the player, stretching them a little more.";
+				say "     Vent knots the player, stretching them a little more.";]
 		WaitLineBreak;
 		say "[VentAnalWS]";
 		say "     His knot eventually shrinks enough that he can pull out of your hole, his rubbery tool slipping out with a gentle pop. A trickle of his fluids flows out of your stretched hole, and you can't help but let out a small shudder from the feeling of emptiness you've suddenly been subjected to. Vent gives you a lick on the cheek with his latex tongue before he dismounts you.";
@@ -899,7 +893,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 		WaitLineBreak;
 		[say "[VentPostSexWS]";]
 		say "     Now that the two of you have been satisfied, Vent gives you a lick goodbye before heading back to his home.";
-	else if VentFluidAmount is 1: [Above average Fluid]
+	[else if VentFluidAmount is 1: [Above average Fluid]
 		if anallevel is 3: [Player gets rimmed by Vent]
 			if VentDomSize is 3:
 				say "     Vent rims you with a normal tongue, average drool.";
@@ -1126,7 +1120,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 		NPCSexAftermath Player receives "AssFuck" from Vent;
 		WaitLineBreak;
 		say "[VentPostSexWS]";
-		say "     Post sex shit.";
+		say "     Post sex shit.";]
 
 [to say SuckVentFoxCock:[Player gives Vent a blowjob.]
 	say "     Placeholder.";
@@ -1161,12 +1155,12 @@ to say VentAnalWS:
 		else if VentDomSize is 5 and scalevalue of Player <= 4: [Vent is huge and player is average]
 			say "     With your tiny body still stuck on his knot, Vent holds you close until his knot deflates.";
 
-to say VentPostSexWS:
+[to say VentPostSexWS:
 	if (VentWSAmount is 2 and a random chance of 1 in 3 succeeds) or (VentWSAmount is 3):
 		if Vent is smaller than player or Vent is equalsized with player: [Vent is similar in size to the player]
 			say "     <placeholder junk.>";
 		else: [Player is significantly smaller than Vent]
-			say "     <smaller placeholder junk.>";
+			say "     <smaller placeholder junk.>";]
 
 Section 6 - Dev Tools (Not for release)
 

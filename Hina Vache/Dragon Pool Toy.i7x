@@ -4,6 +4,7 @@ Version 1 of Dragon Pool Toy by Hina Vache begins here.
 
 "Adds a Dragon Pool Toy creature to Flexible Survival's Wandering Monsters table"
 
+dragonpooltoyfound is a truth state that varies. dragonpooltoyfound is usually false.
 
 Section 1 - Creature Responses
 
@@ -13,21 +14,22 @@ to say DragonPoolToyDesc:
 	else:   [First time meeting. Surprises player with a sneak attack]
 		now dragonpooltoyfound is true;
 		say "     As you explore the surrounding area, you are forced to stifle a laugh. Before you, lying on a pile of junk, is a fully-inflated and very cartoonish dragon toy. The thing is positively massive, standing a good ten feet tall, being the kind of pool toy people place in the waters of a lake or beach to ride on. The object is a neon-purple with fins instead of normal legs, a 'sail' atop its head, and a long tail. Deciding that it is safe to check out, you begin to walk around the toy, inspecting it closely. As you make your way to its rear, you groan and slap your hand into your face, shaking your head slightly. Either this crazy infection got to an innocent toy, or some sick company decided to get real creative by adding both a vagina and a penis, both impressively sized, to the toy. Against your better judgment, you decide to push your hand into the large slit experimentally. Grimacing as you feel the damp walls of the toy, you begin to remove your hand only to see the toy swing at you with its rear flipper.";
+		WaitLineBreak;
 		choose row MonsterID from the Table of Random Critters;
 		let bonus be ( perception of Player + dexterity of Player - 20 ) divided by 2;
-		let featbonus be 0;
 		if "Wary Watcher" is listed in feats of Player:
-			increase featbonus by 3;
+			increase bonus by 3;
+		let target be 13 + ( ( dex entry - 10 ) / 2 );
 		let dice be a random number from 1 to 20;
-		say "     You roll 1d20: [dice]+[bonus]+[featbonus] = [dice + bonus + featbonus][line break]";
-		if dice + bonus + featbonus > 12 + ( ( dex entry - 10 ) / 2 ):
-			say "     You deftly dodge the blow.";
+		say "     You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [special-style-1][dice + bonus][roman type] vs [special-style-2][target][roman type] (Perception + Dexterity Check): ";
+		if dice + bonus >= target:
+			say "You deftly dodge the blow.";
 		else:
 			let dammy be 8;
 			if HardMode is true:
 				increase dammy by ( square root of lev entry );
 			decrease HP of Player by dammy;
-			say "     You are smacked right in the face, and you groan as you take [dammy] from the attack.";
+			say "You are smacked right in the face, and you groan as you take [special-style-2][dammy][roman type] damage from the attack.";
 		say "     Seems that the plague did more than give this toy a set of genitals, it also gave it life. As you ready yourself for combat, you once again prevent yourself from laughing due to the toy rearing up for a powerful roar, only for a cute squeak to come out.";
 
 to say LoseToDragonPoolToy:
@@ -49,21 +51,15 @@ to say LoseToDragonPoolToy:
 	else if Player is female:	[Vaginal sex]
 		say "     The beast takes its time looking over your prone figure before letting out a series of happy squeaks as it finds what it is looking for. It knocks you onto your stomach before jumping somewhat clumsily on top of you. Given its sheer size, you expect to be crushed instantly, but being full of air, it is fairly light as it lay atop you, shifting nonstop. You wonder what it is doing before you soon have your answer as you feel a prod against your cunt. The beast clearly is eager to use a pussy, and it has found one. It wastes no time in thrusting desperately to try and begin its sexual assault on your much smaller body, though most of the thrusts miss their mark entirely before one finally manages to sink part of the tip into your sex. Before you can prepare yourself, the toy thrusts in extra hard, sinking as much of its tool into you as your body can take.";
 		say "     Given how [if Cunt Depth of Player < 11]small you are, you're unable to take more than half of the cock[else if Cunt Depth of Player < 20]positively deep your sex goes, you find it fairly easy to take most of his tool, practically the entirety of it[else]impossibly deep you are, you completely engulf his cock in your depths, making the beast squeak happily that it found a mate that could take it so completely[end if]. Wasting no time, the monster begins to pound away in earnest, seeking to breed its newest victim. Each thrust quickly becomes more brutal and bestial than the last, soon having you pushed into the sand below you despite the lack of real weight above you. It does not take long for the beast to reach its climax though as you feel a warm liquid rush into your waiting womb. You begin to wonder which of you two is really the inflatable as you are forced to watch your belly swell before your eyes, soon looking like a woman deep into pregnancy with quadruplets. After what seems like an hour, you finally feel a stop to the increasing pressure in your womb. Looking up, you notice that the toy has shrunken to an easily manageable size, to which you throw it as far as you can. Squatting, you push out as much of the liquid plastic cum as you can onto the ground before leaving[if Player is fpreg_able], hoping that the fact that it isn't real sperm will prevent you from getting knocked up[end if].";
-		LibidoLoss 40;
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Dragon Pool Toy";
+		LibidoLoss 40;
 	else:	[Anal]
 		say "     The beast takes its time looking over your prone figure before squeaking out in frustration, clearly not finding what it is looking for. It knocks you onto your stomach before jumping somewhat clumsily on top of you. Given its sheer size, you expect to be crushed instantly, but being full of air, it is fairly light as it lay atop you, shifting nonstop. You wonder what it is doing before you soon have your answer as you feel a prod against your bum. The beast clearly is eager to use a hole, and it has found one. You bite your lip as the massive member pokes your rectum time and again before finally finding purchase as the tight hole gives in and opens up to allow a bit of the dragon in. Given the inch, the monster takes the mile as it lets out its squeaky roar and thrusts in hard, giving you no time to get accustomed to its girth as it forces you to take as much of the plasticky tool as your body can handle at once. The pool toy remains still for a moment before beginning to thrust hard, over and over, as it seeks to breed your tight hole, each thrust more bestial than the last.";
 		say "     You're forced to take the brutal breeding for what seems like hours as it pounds away. After what seems like an eternity, you start to detect a strange scent, and you can feel the plastic-like, balloony member start pulsing in your tail hole. The pool toy must be getting close to cumming. With one final squeaky roar of triumph, the beast begins to pump its load into your gut, massive bout after massive bout of a liquid plastic-like substance gushing into your colon. The dragon continues to pump its cum into you for a few minutes, the barely noticeable weight becoming lighter by the second as your stomach grows from the burden it must contain before you finally feel it stop. Looking up, the once massive pool toy has now shrunken to a much smaller size and is clearly unable to move by its own devices in its current state. Throwing the deflated toy off of yourself, you groan as you take your gravid belly, pushing out as much of the cum out of you as you can before you leave.";
-		LibidoLoss 40;
 		CreatureSexAftermath "Player" receives "AssFuck" from "Dragon Pool Toy";
-
-to say BeatTheDragonPoolToy:
-	say "     The dragon starts to deflate under your assault, forcing it to retreat and leave you to your exploration.";
-
+		LibidoLoss 40;
 
 Section 2 - Creature Insertion
-
-dragonpooltoyfound is a truth state that varies. dragonpooltoyfound is usually false.
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -96,7 +92,7 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "The [one of]living [or]animated [or][at random][one of]inflatable[or]plastic dragon[or]pool[or][at random] toy [one of]flicks its tail at you, making a loud slap![or]snaps its jaws at you, biting down hard on your [one of]leg[or]arm[or]head[at random]! Fortunately the teeth are inflatable, although it still hurts![or]charges at you. Unable to avoid you brace yourself, only to be bounced off the inflatable toy down onto the ground.[at random]";
-	now defeated entry is "[BeatTheDragonPoolToy]";
+	now defeated entry is "     The dragon starts to deflate under your assault, forcing it to retreat and leaves you to your exploration.[line break]";
 	now victory entry is "[LoseToDragonPoolToy]";
 	now desc entry is "[DragonPoolToyDesc]";
 	now face entry is "very dragon-like, with a snout full of sharp teeth, a long serpentine tongue, pointed fin-like ears, and a cute pair of horns";
@@ -115,7 +111,7 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 9;
 	now cha entry is 9;
-	now sex entry is "Herm";
+	now sex entry is "Both";
 	now HP entry is 100;
 	now lev entry is 10;
 	now wdam entry is 10;
@@ -249,30 +245,33 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
-
 Section 3 - Bound State
 
 to DragonPoolToyBind:		[Modified bound state that does not use lust or sanity]
+	setmonster "Dragon Pool Toy";
 	now calcnumber is -1;
 	let Trixieexit be 0;
 	while Trixieexit is 0:
-		if clearnomore is 0, clear the screen;
+		if clearnomore is 0:
+			clear the screen;
+			LineBreak;
 		now obliging is true;
 		checkboundrecover;
 		if boundcounter is 3:
 			say "     You groan as the yellow soon completely encapsulates you, no amount of the purple innards of the dragon's cunt visible anymore. Knocking on the object confirms your suspicions. The dragon has created some sort of plastic egg around you, golden in color. You're unsure what the purpose of this egg is, but it cannot be good. Good news is, you hear a soft thump as your surroundings shake. The beast must have laid you and is walking away, if the muffled squeaks are any indication.";
+			LineBreak;
 			now boundsegment is 0;
 			now boundcounter is 0;
 			now struggleatt is 0;
 		if boundsegment is 1:
-			say "     You're stuck inside of the dragon's cunt. A quick glance around shows some hard yellow spots separate from the walls of the faux vagina are starting to form. You'd best act quick if you don't want to end up in some strange egg. You imagine your only active options are to [bold type]S[roman type]truggle enough until they let you go, or just [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them.[line break]";
+			say "     You're stuck inside of the dragon's cunt. A quick glance around shows some hard yellow spots separate from the walls of the faux vagina are starting to form. You'd best act quick if you don't want to end up in some strange egg. You imagine your only active options are to [bold type]S[roman type]truggle enough until it lets you go, or just [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] it.";
 		else:
-			say "     You're completely engulfed by some strange golden egg laid by the dragon pool toy. The plastic is hard but clearly brittle, easy to break through given enough effort. You imagine your only active options are to [bold type]S[roman type]truggle your way out, or just [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] yourself to remain in confinement.[line break]";
+			say "     You're completely engulfed by some strange golden egg laid by the dragon pool toy. The plastic is hard but clearly brittle, easy to break through given enough effort. You imagine your only active options are to [bold type]S[roman type]truggle your way out, or just [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] yourself to remain in confinement.";
 		now enduring is false;
-		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
-		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break][run paragraph on]";
-		say "Struggle: [DragonPoolToyStruggleBar][line break][run paragraph on]";
+		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
+		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
+		say "Struggle: [DragonPoolToyStruggleBar][line break]";
+		say "> [run paragraph on]";
 		let k be 0;
 		now keychar is "INVALID";
 		change the text of the player's command to "";
@@ -281,15 +280,14 @@ to DragonPoolToyBind:		[Modified bound state that does not use lust or sanity]
 			translate k;
 			if the player's command matches "[number]":
 				now keychar is "[number understood]";
+		LineBreak;
 		if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-			LineBreak;
 			increase struggleatt by 1;
 			if boundsegment is 1:
 				if struggleatt is 1:
 					say "     You squirm about furiously, hoping that with enough effort, you will make your way back to the entrance.";
 					if a random chance of 1 in 5 succeeds:
 						infect;
-					wait for any key;
 				else:
 					say "     With enough struggling, you feel your feet make their way out of the dragon. Using all of your might, you manage to wiggle out your hands as well and soon push yourself free. The dragon lets out a sad squeak before waddling away, clearly not interested in trying to put you back in... this time.";
 					cleanboundmemory;
@@ -300,15 +298,16 @@ to DragonPoolToyBind:		[Modified bound state that does not use lust or sanity]
 					say "     You use what little room you have available in your housing to punch and kick at a spot in the wall of the egg, hearing soft cracks with each smack.";
 					if a random chance of 2 in 5 succeeds:
 						infect;
-					wait for any key;
 				else:
 					say "     You let out a triumphant cry of freedom as the shell finally gives way, allowing [if daytimer is day]sunlight[else]moonlight[end if] to pour in. You continue to smash away at the egg, eager to be free now that the hole in the shell makes it more simple to damage your confines. Soon enough, you spill out, panting in utter exhaustion before taking stock of yourself.";
 					cleanboundmemory;
 					now Trixieexit is 1;
 					follow the turnpass rule;
+			if Trixieexit is 0:
+				LineBreak;
+				wait for any key;
 			next;
 		else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-			LineBreak;
 			if obliging is true:
 				if boundsegment is 1:
 					say "     You decide that you are actually in a spot that you would like to be. Maybe being in an egg wouldn't be so bad.";
@@ -326,20 +325,12 @@ to DragonPoolToyBind:		[Modified bound state that does not use lust or sanity]
 			LineBreak;
 			wait for any key;
 			next;
-		else:
-			LineBreak;
-			say "     Invalid command. Please report this error on the Discord server.";
-			cleanboundmemory;
-			now Trixieexit is 1;
-			follow the turnpass rule;
 		say "Invalid action.";
-
 
 to say DragonPoolToyStruggleBar:
 	if boundsegment is 1:
-		say "[bracket]-[if struggleatt > 0][bold type]X[roman type][else]-[end if]";
+		say "[bracket]-[if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket]";
 	else:
-		say "[bracket]-[if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket][line break][run paragraph on]";
-
+		say "[bracket]-[if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket]";
 
 Dragon Pool Toy ends here.

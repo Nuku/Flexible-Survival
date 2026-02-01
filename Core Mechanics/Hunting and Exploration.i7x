@@ -560,8 +560,7 @@ This is the explore rule:
 	if something is 0:
 		if battleground is "Smith Haven": [populated, crowded haven]
 			say "     Wandering around a bit, you stroll through the overfilled Smith Haven Mall and ";
-			let randomnumber be a random number from 1 to 10;
-			if randomnumber is:
+			if a random number from 1 to 10 is:
 				-- 1: say "happen upon a group of dogs of varying breeds playing cards on a collapsible table. They seem to be playing for dog treats. You contemplate joining them, but you feel out of place as a bulldog in a visor stares at you expectantly. Finally, you return to the [location of Player].";
 				-- 2: say "pass by an anthro fox and rat, dressed in somewhat threadbare, but well-patched clothes. They've got backpacks and gear, complete with melee weapons, and apparently are preparing for an expedition out into the city. Brave plans, as they're not looking like the most hard-boiled fighters. But then, maybe they don't need to be, if they're stealthy. You stop and give them some tips from your own forays in the city, then return to the [location of Player].";
 				-- 3: say "see a dejected man with curly blonde hair, wearing a diaper and nothing else. As he holds a pink bow and arrow in his hands, he sobs into a colorful bunny's chest. You catch a snippet of their conversation, but all you can make out is, 'I'm useless! Everyone's already fucking all the time. I barely have time to nock an arrow before they're on the ground, humping away!' Deciding to leave the poor thing to his woes, you return to the [location of Player].";
@@ -574,8 +573,7 @@ This is the explore rule:
 				-- 10: say "walk past what appears to be a group of people in futuristic uniforms, carrying some metallic object that chirps and beeps as they move it over nearby mutants. You can vaguely make out a conversation about a 'directive,' but not much else. Knowing how most interactions turn out in the city, you let them be, returning to the [location of Player] and not sparing them another thought.";
 		else: [everywhere else]
 			say "     Wandering the ruined, monster-infested city, you ";
-			let randomnumber be a random number from 1 to 15;
-			if randomnumber is:
+			if a random number from 1 to 15 is:
 				-- 1: say "come across an excessively large splattering of cum, with the clear outline of a person in the middle. You can only imagine what happened to them after that. Thinking that it might be best to watch out for whatever did that, you make your way back to the [location of Player].";
 				-- 2: say "come across a pile of filled water balloons coated in cum. Somehow you don't think they're filled with water... Deciding not to stick around, you hurry back to the [location of Player], making a mental note to watch out for whatever plans to throw those.";
 				-- 3: say "find one of those commercial dumpsters, which has been re-used as a nest by... something. Inside are the broken fragments of what look like several eggs, large enough to have held a person. Who knows what hatched, and if that brood is still around, so you quickly make your way back to the [location of Player].";

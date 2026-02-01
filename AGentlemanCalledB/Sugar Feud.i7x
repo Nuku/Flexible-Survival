@@ -95,7 +95,7 @@ to say fullSugarGliderTF:
 	setmonster "Sugar Glider" silently;
 	turn the Player into a "Sugar Glider";
 	if hellHoundLevel is 0:
-		[say "[run paragraph on]";]
+		say "[run paragraph on]";
 		follow the sex change rule;
 		follow the sex change rule;
 
