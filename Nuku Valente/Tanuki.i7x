@@ -27,14 +27,10 @@ Shinto Shrine has a Grab Object called Demand.
 The demand of Shinto Shrine is usually journal.
 Tanuki Mom is a female person.
 
-tanukiList is a list of objects that varies. [@Tag:NotSaved]
-the tanukiList is {medkit, dirty water, water bottle, dog milk, soda, chips, glob of goo, food, gryphon milk, distilled milk, libido pill, acid milk, batcubus milk, cheetah milk, cow milk, margay milk, blue gel, cheese, musky cock flower, lembas bread, mammoth jerky, pink gel, pita bread, purple gel, psionic egg, psionic larva, skunk goo, sticky sushi, tentacle tip, awesome fruit, awesomer fruit, awesomest fruit, wyvern goop, centaur cum, earthen seed, demon seed, fennec semen, gecko cum, hawkman male cum, orc cum, gryphon cum, pewter seed, rhino cum, sea dragon cum, smilodon cum, wolf cum, orc femcum, mead horn, orc brew, pony cider, satyr wine, Satyress Wine, egg nog, sports drink, chocolate milk, tasty peach, birth control pill, fertile pill, pepperspray, glowing mushroom, estosterogen pill, eagle feather, honeycomb, behemoth horn, testosterone pill, centaur hair, corota venom, tuft of chin fur, dolphin milk, dryad cum, ebonflame scale, elk antler, lucky horseshoe, glowing ember, foul scuttler spit, red fur, hermaid kelp, libido suppressant, stray links, Spotted fur, peacock feather, nullifying powder, cock pill, healing booster, Tasty Fish, Pegasus Quill, pirate bandana, tousky quill, tainted wool, Tiger patch, Chipped tooth, spider webbing, spidertaur hair, pixie dust, crushed candies, estrogen pill, dragon scale, dragon hair, zebra fur, lizard juice}.
+[tanukiList is a list of objects that varies. [@Tag:NotSaved]]
+the tanukiList is always {medkit, dirty water, water bottle, dog milk, soda, chips, glob of goo, food, gryphon milk, distilled milk, libido pill, acid milk, batcubus milk, cheetah milk, cow milk, margay milk, blue gel, cheese, musky cock flower, lembas bread, mammoth jerky, pink gel, pita bread, purple gel, psionic egg, psionic larva, skunk goo, sticky sushi, tentacle tip, awesome fruit, awesomer fruit, awesomest fruit, wyvern goop, centaur cum, earthen seed, demon seed, fennec semen, gecko cum, hawkman male cum, orc cum, gryphon cum, pewter seed, rhino cum, sea dragon cum, smilodon cum, wolf cum, orc femcum, mead horn, orc brew, pony cider, satyr wine, Satyress Wine, egg nog, sports drink, chocolate milk, tasty peach, birth control pill, fertile pill, pepperspray, glowing mushroom, estosterogen pill, eagle feather, honeycomb, behemoth horn, testosterone pill, centaur hair, corota venom, tuft of chin fur, dolphin milk, dryad cum, ebonflame scale, elk antler, lucky horseshoe, glowing ember, foul scuttler spit, red fur, hermaid kelp, libido suppressant, stray links, Spotted fur, peacock feather, nullifying powder, cock pill, healing booster, Tasty Fish, Pegasus Quill, pirate bandana, tousky quill, tainted wool, Tiger patch, Chipped tooth, spider webbing, spidertaur hair, pixie dust, crushed candies, estrogen pill, dragon scale, dragon hair, zebra fur, lizard juice}.
 demandIndex is a number that varies.
 Tanukigender is a number that varies. Tanukigender is usually -1.
-
-ringing is an action applying to nothing.
-
-understand "rung" and "ring" and "ring ornate/-- bell" and "ring ornate/-- bell with hammer" as ringing.
 
 There is a donation box and ornate bell in Shinto Shrine.
 
@@ -54,10 +50,6 @@ Tanukibell	"Tanukibell"
 Tanukibell is a situation.
 ResolveFunction of Tanukibell is "[ResolveEvent Tanukibell]".
 Sarea of Tanukibell is "Nowhere".
-
-check ringing:
-	if the player is not in Shinto Shrine, say "I see nothing to ring here." instead;
-	if SatisfiedTanuki < 1, say "[ResolveFunction of Tanukibell]" instead;
 
 to say ResolveEvent Tanukibell:
 	if Tanukigender is -1:
@@ -83,8 +75,12 @@ to say ResolveEvent Tanukibell:
 		wait for any key;
 		now the player is in bunker;
 
+ringing is an action applying to nothing.
+understand "rung" and "ring" and "ring ornate/-- bell" and "ring ornate/-- bell with hammer" as ringing.
 
-
+check ringing:
+	if the player is not in Shinto Shrine, say "I see nothing to ring here." instead;
+	if SatisfiedTanuki < 1, say "[ResolveFunction of Tanukibell]" instead;
 
 Carry out ringing:
 	say "     You strike the bell, and it rings out like a gong, echoing through the shrine quite loudly!";
@@ -102,7 +98,6 @@ Carry out ringing:
 	say "     With this said, the spirit grabs between its legs and pulls out its scrotum in a great furry blanket, curling up into it before vanishing in a puff.";
 
 sacrificing is an action applying to one thing.
-
 understand "sacrifice [grab object]" as sacrificing.
 
 check sacrificing:
@@ -123,20 +118,15 @@ carry out sacrificing:
 		try ringing;
 
 leafing is an action applying to nothing.
-
 understand "leaf" as leafing.
 
 check leafing:
 	if SatisfiedTanuki > 0, say "What?" instead;
 
-
 carry out leafing:
 	say "     Concentrating intently on leaves, you feel a large one appear over you and settle on your head. Suddenly erotic pulses rock your form as you begin to assume your natural form!";
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Tanuki":
-			now MonsterID is y;
-			break;
+	setmonster "Tanuki";
+	choose row MonsterID from Table of Random Critters;
 	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ] [swap to allow infection...]
 	infect;
@@ -150,7 +140,6 @@ carry out leafing:
 	say "     With the changes complete, you feel you could [bold type]grow balls[roman type] and [bold type]shrink balls[roman type] and also grow or shrink your cock or breasts!";
 
 ballgrowing is an action applying to nothing.
-
 understand "expand balls" and "grow balls" as ballgrowing.
 
 check ballgrowing:
@@ -165,7 +154,6 @@ carry out ballgrowing:
 	say "Your tanuki magic surges down into your balls as they begin to swell rapidly! Your balls feel like they have become [Ball Size Adjective of Player] balls!";
 
 ballshrinking is an action applying to nothing.
-
 understand "shrink balls" and "contract balls" as ballshrinking.
 
 check ballshrinking:
@@ -183,7 +171,6 @@ carry out ballshrinking:
 		say "Your tanuki magic surges down into your balls as they begin to shrink rapidly! Your balls feel like they have become [Ball Size Adjective of Player] balls!";
 
 cockgrowing is an action applying to nothing.
-
 understand "expand cock" and "grow cock" as cockgrowing.
 
 check cockgrowing:
@@ -199,7 +186,6 @@ carry out cockgrowing:
 	say "Your tanuki magic surges down into your male meat as it begins to swell rapidly! Your [descr] [Cock of Player] organ twitches excitedly!";
 
 cockshrinking is an action applying to nothing.
-
 understand "shrink cock" and "contract cock" as cockshrinking.
 
 check cockshrinking:
@@ -218,7 +204,6 @@ carry out cockshrinking:
 		say "Your tanuki magic surges down into your male meat as it begins to shrink rapidly! Your [descr] [Cock of Player] cock settles with a last twitch!";
 
 breastgrowing is an action applying to nothing.
-
 understand "expand breasts" and "grow breasts" as breastgrowing.
 
 check breastgrowing:
@@ -232,7 +217,6 @@ carry out breastgrowing:
 	say "Your tanuki magic surges up into your chest as it begins to swell rapidly, leaving you with [descr] breasts!";
 
 breastshrinking is an action applying to nothing.
-
 understand "shrink breasts" and "contract breasts" as breastshrinking.
 
 check breastshrinking:
@@ -273,7 +257,7 @@ When Play begins:
 	add "Tanuki" to infections of BipedalList;
 	add "Tanuki" to infections of TailList;
 	now Name entry is "Tanuki";
-	now enemy title entry is "Tanuki"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "";
@@ -430,7 +414,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Tanuki Satisfaction"	"Special"	""	Tanuki Satisfaction rule	600	false
@@ -576,28 +559,24 @@ instead of conversing the Tanuki Dad:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Survival"):
-					say "[TanukiSurvivalTalk]";
-				else if (nam is "Romance"):
-					say "[TanukiRomanceTalk]";
-				else if (nam is "Hunting"):
-					say "[TanukiHuntingTalk]";
-				else if (nam is "Balls"):
-					say "[TanukiBallsTalk]";
-				wait for any key;
+				if title entry is:
+					-- "Survival":
+						say "[TanukiSurvivalTalk]";
+					-- "Romance":
+						say "[TanukiRomanceTalk]";
+					-- "Hunting":
+						say "[TanukiHuntingTalk]";
+					-- "Balls":
+						say "[TanukiBallsTalk]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     The tanuki gives you a rather big grin, patting his round belly.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
-
-
-
 
 to say TanukiRomanceTalk:
 	say "...";
@@ -661,7 +640,6 @@ instead of sniffing Tanuki Mom:
 	say "     She smells as if she applied some slightly over-strong perfume with a mixture of flowers and vanilla. Your sniffing of her prompts a casual flick of her tail. 'Don't make it odd,' she laughs out.";
 	add "TanukiPerfume" to TanukiTopics;
 
-
 instead of conversing the Tanuki Mom:
 	LineBreak;
 	say "What do you want to talk with Tanuki about?";
@@ -710,27 +688,26 @@ instead of conversing the Tanuki Mom:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
 				if HP of tanuki mom is 0, now HP of tanuki mom is 1;
-				if (nam is "Survival"):
-					say "[TanukiSurvivalTalk]";
-				else if (nam is "Romance"):
-					say "[TanukiRomanceTalk]";
-				else if (nam is "Ladel"):
-					say "[TanukiLadelTalk]";
-				else if (nam is "Perfume"):
-					say "[TanukiPerfumeTalk]";
-				else if (nam is "Cooking"):
-					say "[TanukiCookingTalk]";
-				wait for any key;
+				if title entry is:
+					-- "Survival":
+						say "[TanukiSurvivalTalk]";
+					-- "Romance":
+						say "[TanukiRomanceTalk]";
+					-- "Ladel":
+						say "[TanukiLadelTalk]";
+					-- "Perfume":
+						say "[TanukiPerfumeTalk]";
+					-- "Cooking":
+						say "[TanukiCookingTalk]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     The tanuki gives you a rather big grin, patting her round belly.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 To say TanukiSurvivalTalk:
@@ -748,7 +725,7 @@ To say TanukiSurvivalTalk:
 				LineBreak;
 				say "     'Aw, be that way, but the offer's open, champ!' When he thinks you aren't looking at him directly, he speaks more quietly to himself, 'Nailed it, I'm a great dad.'";
 		if scalevalue of Player < 4:
-			say "     He tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original dad, and that's alright. My biologicals are all off that way.' He points to the East. 'I invited them to come along, but they said this place was too far. Maybe I'll find another place that's closer to them? Nevermind me, this is about you!' He pats your shoulders softly. 'Now let's see...'";
+			say "     He tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original dad, and that's alright. My biologicals are all off that way.' He points to the East. 'I invited them to come along, but they said this place was too far. Maybe I'll find another place that's closer to them? Never mind me, this is about you!' He pats your shoulders softly. 'Now let's see...'";
 		else:
 			say "     He cranes his head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good father is a good father, no matter how big or small he might be.' He wags a finger as he talks, nodding to himself. 'Now as for advice...'";
 	else: [Tanuki Mom!]
@@ -765,7 +742,7 @@ To say TanukiSurvivalTalk:
 				LineBreak;
 				say "     'Aw, be that way, but the offer's open, champ!' When she thinks you aren't looking at her directly, she speaks more quietly to herself, 'Nailed it, I'm a great mom.'";
 		if scalevalue of Player < 4:
-			say "     She tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original mom, and that's alright. My biologicals are all off that way.' She points to the East. 'I invited them to come along, but they said this place was too far. Maybe I'll find another place that's closer to them? Nevermind me, this is about you!' She pats your shoulders softly. 'Now let's see...'";
+			say "     She tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original mom, and that's alright. My biologicals are all off that way.' She points to the East. 'I invited them to come along, but they said this place was too far. Maybe I'll find another place that's closer to them? Never mind me, this is about you!' She pats your shoulders softly. 'Now let's see...'";
 		else:
 			say "     She cranes her head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good mother is a good mother, no matter how big or small she might be.' She wags a finger as she talks, nodding to herself. 'Now as for advice...'";
 
@@ -785,7 +762,7 @@ to say TanukiCookingTalk:
 		say "     'You already have my salts. I'm Tanuki, not a cooking spirit.' She shakes her ladle at you lightly, flecks of fluid littering the area. 'I don't have other cooking tips for you.'";
 	else:
 		say "     'Cooking?' Her face lights up in a great jovial smile. 'Eating is one of my favorite things, and cooking leads to eating, so it makes sense that I happen to enjoy that too.' She waves her ladel at you lightly. 'Now, I prefer when someone else cooks for me, but sometimes you just have to do it yourself, and doing it with someone you like is almost as good. Fortunately, you're here.'";
-		say "     She turns away, her [']coon tail swaying behind her. 'Now, this is where you expect me to say something about [']cooking with love['], but you can forget that.' She produces a small paper packet from her apron and shakes it towards you, producing a rattle that implies it's filled with some small particles, like salt perhaps? 'This has run in the family... Mmm...' She taps her chin with a single finger, her voice dipping a moment. 'When did I steal these...? Oh, nevermind. I've had them for ages!'";
+		say "     She turns away, her [']coon tail swaying behind her. 'Now, this is where you expect me to say something about [']cooking with love['], but you can forget that.' She produces a small paper packet from her apron and shakes it towards you, producing a rattle that implies it's filled with some small particles, like salt perhaps? 'This has run in the family... Mmm...' She taps her chin with a single finger, her voice dipping a moment. 'When did I steal these...? Oh, never mind. I've had them for ages!'";
 		WaitLineBreak;
 		say "     She flings the packet at you suddenly. 'And now, I entrust them to you. Don't worry, I have a spare.' She jiggles a packet that hadn't been in her hand a moment before. 'But what use is a spice you don't know how to use? Let's get to cooking.' She whistles cheerfully as she pulls out a massive wok and slams it down on a fire that sprouts into being just in time and she begins tossing in all manner of vegetables and fish, frying it all up as she sprinkles the seasoning in time with the song she sings. 'The song is not optional,' she reminds before continuing the ballad to the food, rocking left and right as she works. 'Get that for me.' She points to a shelf just behind you that surely hadn't been there.";
 		WaitLineBreak;
@@ -795,7 +772,6 @@ to say TanukiCookingTalk:
 		increase score by 20;
 		add "Tanuki Salts" to feats of Player;
 
-
 to say TanukiLadelTalk:
 	say "     'This thing?' She waves it at you, whatever strange goopy stuff was clinging to it sent in arcs through the area. 'It's a bit of a... secret? No, that's the wrong word. How about... I'll tell you when you get older?'";
 	say "     Do you insist?";
@@ -803,8 +779,8 @@ to say TanukiLadelTalk:
 		LineBreak;
 		say "     'Naughty boy, you'll get no dessert if you don't stop that.' Her voice strains as she plays keepaway with the ladel, bits of goop getting everywhere, including on you. Where it lands, it's warm and tingly. She seems to notice a spot as it dissolves into you. 'You did that on purpose, didn't you?' She puts her hands on her hips, foot tapping on the air she's floating on. 'I swear, having a child is such a test.'";
 		decrease humanity of player by 10;
-		increase Libido of Player by 10;
-		say "Your libido has increased and your humanity decreased.";
+		raise Player Libido by 10;
+		say "[line break]Your libido has increased and your humanity decreased.";
 	else:
 		LineBreak;
 		say "     'Good. Now what else can momma help you with?' She flutters her lashes a little too much, smiling at you.";

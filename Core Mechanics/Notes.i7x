@@ -1,8 +1,6 @@
 Version 1 of Notes by Core Mechanics begins here.
 [ Version 1 - Allows the player to note down stuff in their journal]
 
-WriteANote is an action applying to nothing.
-
 To get a long line of input:
 	(- GetLongInput(); -).
 
@@ -54,6 +52,7 @@ Array long_buffer buffer LONG_BUFFER_LEN;
 
 -)
 
+WriteANote is an action applying to nothing.
 understand "write a/-- note" as WriteANote.
 
 check WriteANote:
@@ -72,7 +71,6 @@ carry out WriteANote:
 		now Note entry is the current long line of input;
 
 BroweseNotes is an action applying to nothing.
-
 understand "browse through/-- your/my/-- notes" as BroweseNotes.
 
 check BroweseNotes:
@@ -94,7 +92,6 @@ carry out BroweseNotes:
 		say "[if hypernull is not 1][set link hyperindex][bracket]X[close bracket][terminate link] [end if]([X]) [Date entry converted to tmonths]/[Date entry converted to tdays]/[Date entry converted to tyears]: [Note entry][line break]";
 
 CrossOutNote is an action applying to one number.
-
 understand "crossoutnote [a number]" as CrossOutNote.
 
 check CrossOutNote:
@@ -112,7 +109,6 @@ carry out CrossOutNote:
 	say "You cross out and scribble over the note, making it impossible to understand.";
 
 TearNotes is an action applying to nothing.
-
 understand "rip out/my/-- notes" as TearNotes.
 understand "tear out/my/-- notes" as TearNotes.
 
@@ -125,6 +121,5 @@ check TearNotes:
 carry out TearNotes:
 	say "You open your journal and grab the last few pages, ripping them out and shredding them to little pieces. Who needs notes anways?!";
 	blank out the whole of Table of JournalNotes; [empty out all data]
-
 
 Notes ends here.

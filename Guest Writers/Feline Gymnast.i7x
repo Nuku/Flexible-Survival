@@ -30,57 +30,45 @@ to say felinegymnastdesc:
 
 to say losetofelinegymnast:
 	say "     You let out one last, pained groan as you slump onto the ground in front of the bench, too battered to move.";
-	let cattysceneindex be a number;
-	[Herm - can get any scene]
-	if Player is herm:
-		if anallevel > 1:
-			now cattysceneindex is a random number between 1 and 5;
-		else:
-			now cattysceneindex is a random number between 2 and 5;
-	[Male - Gets a footjob for 3]
-	else if Player is male:
-		if anallevel > 1:
-			now cattysceneindex is a random number between 1 and 4;
-		else:
-			now cattysceneindex is a random number between 2 and 4;
-	[Female - Gets penised for 3]
-	else if Player is female:
-		if anallevel > 1:
-			now cattysceneindex is a random number between 1 and 3;
-		else:
-			now cattysceneindex is a random number between 2 and 3;
-	[Genderless - Can get oral or anal (if more/normal)]
-	else:
-		if anallevel > 1:
-			now cattysceneindex is a random number between 1 and 2;
-		else:
-			now cattysceneindex is 2;
+	let cattysceneindex be { 2 };
+	if anallevel > 1: [Genderless - Can get oral or anal (if more/normal)]
+		add 1 to cattysceneindex;
+	if Player is male: [Male - Gets a footjob for 3]
+		add { 3, 4 } to cattysceneindex;
+		if Player is female: [Herm - can get any scene]
+			add 5 to cattysceneindex;
+	else if Player is female: [Female - Gets penised for 3]
+		add 3 to cattysceneindex;
+	sort cattysceneindex in random order;
 	[Now actually say the scene]
-	if cattysceneindex is 1:
-		if anallevel is 3 and a random chance of 1 in 2 succeeds:
-			say "[felinelosemoreanal]";
-		else if Player is male:
-			say "[felinelosenormalanal]";
-		else:
-			say "[felineloseoral]";
-	else if cattysceneindex is 2:
-		say "[felineloseoral]";
-	else if cattysceneindex is 3 and Cock Count of Player < 1:
-		say "[felinelosefemale]";
-	else if cattysceneindex is 3:
-		say "[felinelosefoot]";
-	else if cattysceneindex is 4:
-		say "[felinelosevaginal]";
-	else if cattysceneindex is 5:
-		say "[felinelosefemale]";
-	infect "Feline Gymnast"
+	if entry 1 of cattysceneindex is:
+		-- 1:
+			if anallevel is 3 and a random chance of 1 in 2 succeeds:
+				say "[felinelosemoreanal]";
+			else if Player is male:
+				say "[felinelosenormalanal]";
+			else:
+				say "[felineloseoral]";
+		-- 2: say "[felineloseoral]";
+		-- 3:
+			if Cock Count of Player is 0:
+				say "[felinelosefemale]";
+			else:
+				say "[felinelosefoot]";
+		-- 4: say "[felinelosevaginal]";
+		-- 5: say "[felinelosefemale]";
 
 [Anal scene with "more anal"
 Summary: Playful licking, then rimming, then player gets anal]
 to say felinelosemoreanal:
 	say "     Grinning mischievously, the cat-like girl kneels down next to you, removing your clothing. She appraises your now naked form, [if Player is male]giving your cock some playful strokes [end if]as she suddenly gets an idea, rolling you onto your stomach. You feel her lie down on top of you as your butt is tickled by her whiskers. Her smooth tongue makes a few playful licks around your lower back and thighs. With a giggle, she grabs your cheeks, spreading them. You let out a startled gasp as she licks your now exposed anus. Giggling even more at your surprise, she pushes her face further between your cheeks, her whiskers tickling you as they move in with her. She slowly circles your pucker with her tongue, making light presses at it every once in a while. You can't help but moan at the odd sensations. Just as you were starting to enjoy it, she pulls her face out of your ass and stands up. Looking back, you give her a pleading look to continue.";
-	say "     'Aw, does my little [if BodyName of Player is listed in infections of FelineList]kitty[else]slut[end if] enjoy having their ass toyed with?' You [if Libido of Player > 75]nod, too aroused to think of denying it[else]blush, looking away as you try to hide the enjoyment you got[end if]. Letting out another giggle, she grabs your hips, pulling you onto all fours. 'Well, it was fun to play with, but I bet that ass of yours is even more fun to be inside,' the lusty cat says as she starts to rub her slick penis against your pucker. Now lubricated from her copious amounts of precum, her barbed penis easily slides into your pucker, the barbs further increasing the pleasure. You both moan as she bends over, nipping at your neck and ears while slowly pumping at you. She reaches one of her arms around you, [if Player is male]gently stroking your [Cock of Player] penis[else if Nipple Count of Player > 0 and Breast Size of Player > 0]caressing your [breast size desc of Player] breasts, teasingly pulling at your nipples[else if Breast Size of Player > 0]caressing your [breast size desc of Player] breasts[else]rubbing up and down your torso with her furred hand[end if]. After drawing a few more moans from you, she straightens up, putting both hands on your ass as she starts fucking you harder and faster. [if Player is male]Your [cock size desc of Player] cock bounces around with the ferocity of her thrusts. [end if]With a loud groan, followed by a yell, you feel your bowels fill with a warm liquid. [if Player is male]She slows down, but keeps fucking your ass until you feel your own orgasm approaching. With one last, lustful groan, your balls churn as they deposit their [Cum Load Size of Player] load onto the ground below you[else]She keeps pounding at your ass as you feel your own orgasm building. With a long, drawn out moan, you're pushed past your limit as your thighs grow wet with your own juices[end if]. Looking back, you watch her pull out of you as globs of her semen drip out of your ass onto the ground.";
-	say "     'Isn't it wonderful to cum without touching your [if Player is male]cock?'[else if Player is female]cunt?'[else]... um... I actually don't know how you get off like that,'[end if] she says, giving your ass a playful smack before going on her way, leaving you panting on the ground.";
+	say "     'Aw, does my little [if BodyName of Player is listed in infections of FelineList]kitty[else]slut[end if] enjoy having their ass toyed with?' You [if Libido of Player > 75]nod, too aroused to think of denying it[else]blush, looking away as you try to hide the enjoyment you got[end if]. Letting out another giggle, she grabs your hips, pulling you onto all fours. 'Well, it was fun to play with, but I bet that ass of yours is even more fun to be inside,' the lusty cat says as she starts to rub her slick penis against your pucker. Now lubricated from her copious amounts of precum, her barbed penis easily slides into your pucker, the barbs further increasing the pleasure. You both moan as she bends over, nipping at your neck and ears while slowly pumping at you. She reaches one of her arms around you, [if Player is male]gently stroking your [Cock of Player] penis[else if Nipple Count of Player > 0 and Breast Size of Player > 0]caressing your [breast size desc of Player] breasts, teasingly pulling at your nipples[else if Breast Size of Player > 0]caressing your [breast size desc of Player] breasts[else]rubbing up and down your torso with her furred hand[end if]. After drawing a few more moans from you, she straightens up, putting both hands on your ass as she starts fucking you harder and faster. [if Player is male]Your [cock size desc of Player] cock bounces around with the ferocity of her thrusts. [end if]With a loud groan, followed by a yell, you feel your bowels fill with a warm liquid. She ";
+	if Player is male:
+		say "slows down, but keeps fucking your ass until you feel your own orgasm approaching. With one last, lustful groan, your balls churn as they deposit their [Cum Load Size of Player] load onto the ground below you";
+	else:
+		say "keeps pounding at your ass as you feel your own orgasm building. With a long, drawn out moan, you're pushed past your limit as [if Player is female]your thighs grow wet with your own juices[else]you writhe in insatiable bliss[end if]";
+	say ". Looking back, you watch her pull out of you as globs of her semen drip out of your ass onto the ground.";
+	say "     'Isn't it wonderful to cum without touching your[if Player is male] cock?' [else if Player is female] cunt?' [else]... um... I actually don't know how you get off like that,' [end if]she says, giving your ass a playful smack before going on her way, leaving you panting on the ground.";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Feline Gymnast";
 
 [Anal scene for "normal anal"
@@ -89,7 +77,7 @@ to say felinelosenormalanal:
 	[TODO: also bad...]
 	say "     The small kitty is on top of you in a flash, fiddling with your gear and clothes. Unable to do anything about the situation, she makes short work of exposing your [bodydesc of Player] body. 'Now then, what should we do with you?' she ponders, giving a fake quizzical look. This quickly turns into a wide grin as she sits down, still fully clothed, onto your cock. She leans back, shifting forward a bit so you slide between her small ass cheeks. [if Cock Length of Player > 15]She swishes her tail back and forth, rubbing against the stretch of your penis poking out past her butt. [end if]It doesn't take much of this rubbing to get your member to full attention. With it ready for action, she lines it up with her tail, pushing it through the torn hole in her leotard and up against her anus. After prepping herself with some of your precum, she slowly pushes herself onto your [cock size desc of Player] cock. She groans, lowering herself until she [if Cock Length of Player > 20]can't fit any more of you inside[else]rests on your lap[end if].";
 	if a random chance of 2 in 3 succeeds:
-		say "     The thin feline pulls her cock out of her leotard, revealing its pink, barbed shape, soaked with her precum. With amazing flexibility, she bends forward and starts licking it clean. Obviously extremely aroused, she begins moving up and down your [Cock of Player] penis. As she rises, she keeps her head in the same position, thrusting into her mouth. The sight of her sucking herself off, and the slow, tight pumps on your dick make you moan in pleasure, already getting close to an orgasm. The hermaphrodite riding you must be close as well, because she picks up the pace, slamming her ass down onto your thighs and then swallowing her barbed shaft as she thrust upwards. She suddenly straightens back up, crying in pleasure as cum bursts out of her pink penis, splattering all over your [breast size desc of Player] [if Breast Size of Player > 0]breasts[else]chest[end if] and face. With her tight ass wringing your [cock size desc of Player] cock, you can't hold back much longer either, and pump your [Cum Load Size of Player] load into her bowels.";
+		say "     The thin feline pulls her cock out of her leotard, revealing its pink, barbed shape, soaked with her precum. With amazing flexibility, she bends forward and starts licking it clean. Obviously extremely aroused, she begins moving up and down your [Cock of Player] penis. As she rises, she keeps her head in the same position, thrusting into her mouth. The sight of her sucking herself off, and the slow, tight pumps on your dick make you moan in pleasure, already getting close to an orgasm. The hermaphrodite riding you must be close as well, because she picks up the pace, slamming her ass down onto your thighs and then swallowing her barbed shaft as she thrusts upwards. She suddenly straightens back up, crying in pleasure as cum bursts out of her pink penis, splattering all over your [breast size desc of Player] [if Breast Size of Player > 0]breasts[else]chest[end if] and face. With her tight ass wringing your [cock size desc of Player] cock, you can't hold back much longer either, and pump your [Cum Load Size of Player] load into her bowels.";
 	else:
 		say "     The thin feline pulls her cock out of her leotard, revealing its pink, barbed shape, soaked with her precum. She starts to stroke it slowly with one of her furry hands, moaning as a large drop of pre makes its way out. With her other hand, she lifts her tiny balls out of the way and pushes a finger into her leaking folds. Turned on by the show above you, you find yourself quite close to your limit. Your partner stops masturbating, placing her hands on the ground next to you, giving her more leverage to ride you wildly. Unable to keep up with herself, you hear a cry of pleasure, followed by warm wads of her cum splattering your face. Startled by her yelling, and further stimulated by her now squeezing ass, you quickly follow, spurting your [Cum Load Size of Player] load into her.";
 	say "     Both of you groan as she lifts herself off of your sensitive tool. 'Have you ever had an orgasm without touching yourself? It's quite an experience. Maybe I'll let you try it some other time,' she promises, walking away from you[if Cock Length of Player > 20] with a little less grace than usual[end if].";
@@ -100,15 +88,13 @@ Summary: random vaginal/penis oral, will give oral to men/herms]
 to say felineloseoral:
 	say "     As you lie on the ground, the furry gymnast steps over you, standing over your head. You can see the underside of her leotard, soaked with sexual fluids, as it's lowered towards your face. She stops just before reaching it, forcing you to smell her strong odor. 'It's no fun getting myself off, so I wait for cuties like you to stop by and help.' She fumbles around at your crotch as if searching for something. [if Player is male]Judging from the giggling you hear coming from your crotch, she found what she was looking for. Standing erect from the arousal her musk is bringing you, you feel furry hands free your cock from any clothing impeding it. 'Well, what a lovely find,' she says, circling a finger around the tip. 'I wonder how badly it needs to be released[else]You hear a sigh of disappointment from your groin. 'Hmm... I thought not. Well, perhaps we can fix your lack of equipment with some work[end if]...' she remarks, ominously.";
 	if a random chance of 1 in 2 succeeds:
-		say "     [if Player is male]'I bet it's just as needy as my cock. Maybe if you help the poor thing out, I'll give you a nice reward...'[else]'Why don't you start with my cock? I'll be sure to reward you if you do well.'[end if] Before you can think of saying yes or no, she slips her leotard to the side, letting her erect, barbed penis free before pressing it to your lips. With the clothing out of the way, her scent is far too powerful, driving you crazy. With your lust skyrocketing, you gladly open for her feline penis, and you both moan as it slides into your mouth. Finding the position difficult, you bob your head back and forth clumsily, but your efforts seem to be working as she grasps onto your [if Player is male]cock[else]thighs[end if], moaning. Her shaft begins to twitch in your mouth, and you double your efforts to get the kitty off. [if Player is male]Losing her self-control, she starts stroking your cock, licking up any pre that comes out of the tip. Wanting even more, she practically swallows your cock in one motion. You give a stifled moan as she sucks you off with as much ferocity as you give her. She draws her head off of your penis for a moment to tease you a bit. [end if]'Oh, keep that up and you'll get a nice, creamy reward!' Apparently not wanting you to waste any of this reward, she puts all of her weight onto you. Unable to move your head anymore, you massage her throbbing pink cock with your tongue[if Player is male] as she puts your shaft back into her greedy mouth[end if]. Moments later, your efforts pay off, as her penis gives one mighty twitch before filling your mouth with her cum. [if Player is male]She lifts her head off of your cock, yelling in pleasure. Keeping her word, she grabs your [cock size desc of Player] shaft with her paws, pumping you until you reach your own orgasm. [end if]'Wasn't that a delicious [if Player is male]and relieving [end if]treat?' she says through her panting. Swallowing your treat, you lie back in exhaustion from the fight and sex. The blue kitty turns around, licking some of the mess off of your face before smiling at you and leaving.";
+		say "     '[if Player is male]I bet it's just as needy as my cock. Maybe if you help the poor thing out, I'll give you a nice reward...' [else]Why don't you start with my cock? I'll be sure to reward you if you do well.' [end if]Before you can think of saying yes or no, she slips her leotard to the side, letting her erect, barbed penis free before pressing it to your lips. With the clothing out of the way, her scent is far too powerful, driving you crazy. With your lust skyrocketing, you gladly open for her feline penis, and you both moan as it slides into your mouth. Finding the position difficult, you bob your head back and forth clumsily, but your efforts seem to be working as she grasps onto your [if Player is male]cock[else]thighs[end if], moaning. Her shaft begins to twitch in your mouth, and you double your efforts to get the kitty off. [if Player is male]Losing her self-control, she starts stroking your cock, licking up any pre that comes out of the tip. Wanting even more, she practically swallows your cock in one motion. You give a stifled moan as she sucks you off with as much ferocity as you give her. She draws her head off of your penis for a moment to tease you a bit. [end if]'Oh, keep that up and you'll get a nice, creamy reward!' Apparently not wanting you to waste any of this reward, she puts all of her weight onto you. Unable to move your head anymore, you massage her throbbing pink cock with your tongue[if Player is male] as she puts your shaft back into her greedy mouth[end if]. Moments later, your efforts pay off, as her penis gives one mighty twitch before filling your mouth with her cum. [if Player is male]She lifts her head off of your cock, yelling in pleasure. Keeping her word, she grabs your [cock size desc of Player] shaft with her paws, pumping you until you reach your own orgasm. [end if]'Wasn't that a delicious [if Player is male]and relieving [end if]treat?' she says through her panting. Swallowing your treat, you lie back in exhaustion from the fight and sex. The blue kitty turns around, licking some of the mess off of your face before smiling at you and leaving.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Feline Gymnast";
-		if Player is male:
-			CreatureSexAftermath "Feline Gymnast" receives "OralCock" from "Player";
-	else:
-		say "     '[if Player is male]I bet it's just as needy as my pussy. Why don't you help my poor little cunt out, and I'll think about a reward for you[else]Why don't you give me some relief, and I'll see about getting you some proper equipment[end if],' she says before shoving her leotard aside, revealing her dripping folds. The scent is overpowering with it out of the way, and you find yourself almost rising up the last few inches to get a taste. This turns out to be unnecessary, though, as she lowers herself to your waiting lips. Your first few licks get pleased moans of approval from the kitty above you. Her fluids taste slightly sweet, and begin to flow out of her cunt after a few more licks. Unable to control herself, she begins stroking her cock as you continue to lap at her delicious folds. With the combined pleasure, it isn't long before you hear a scream of pleasure along with the feeling of warm liquid covering your [breast size desc of Player] chest. She gets up, giggling at the sight of your wet face. [if Player is male]'I thought of a reward for you! Your face is soaked, so I'll help you clean it off!'[else]'You're absolutely soaked. A few more rounds like that and I'll be surprised if you don't get the proper [']equipment['],'[end if] she says before licking your face clean. 'That was delicious. Be sure to come back!' you hear as she stands up and walks away from your exhausted body.";
-		CreatureSexAftermath "Player" receives "OralPussy" from "Feline Gymnast";
-		if Libido of Player < 60:
+		if Cock Count of Player is 0 and Libido of Player < 60:
 			now Libido of Player is 60;
+	else:
+		say "     '[if Player is male]I bet it's just as needy as my pussy. Why don't you help my poor little cunt out, and I'll think about a reward for you[else]Why don't you give me some relief, and I'll see about getting you some proper equipment[end if],' she says before shoving her leotard aside, revealing her dripping folds. The scent is overpowering with it out of the way, and you find yourself almost rising up the last few inches to get a taste. This turns out to be unnecessary, though, as she lowers herself to your waiting lips. Your first few licks get pleased moans of approval from the kitty above you. Her fluids taste slightly sweet, and begin to flow out of her cunt after a few more licks. Unable to control herself, she begins stroking her cock as you continue to lap at her delicious folds. With the combined pleasure, it isn't long before you hear a scream of pleasure along with the feeling of warm liquid covering your [breast size desc of Player] chest. She gets up, giggling at the sight of your wet face. '[if Player is male]I thought of a reward for you! Your face is soaked, so I'll help you clean it off!' [else]You're absolutely soaked. A few more rounds like that and I'll be surprised if you don't get the proper [']equipment['],' [end if]she says before licking your face clean. 'That was delicious. Be sure to come back!' you hear as she stands up and walks away from your exhausted body.";
+		CreatureSexAftermath "Player" receives "OralPussy" from "Feline Gymnast";
 
 [Female scene
 Presents a list of options to the player]
@@ -119,6 +105,7 @@ to say felinelosefemale:
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Feline Gymnast";
 	else:
 		say "     You yell in pain as a few bones crackle and pop under the stress. The blue furred woman looks at you with a disappointing stare. 'You need to practice stretching, otherwise it will be hard to have fun.' She stands over your chest, sitting down as she pulls aside her leotard to reveal her set of genitals. 'I have something that might help you with those harder ones...' she says, beginning to stroke her light pink, feline penis. Feminine juices begin flowing down your chest as she rubs faster and faster, moaning as she masturbates over you. She cries out in pleasure as ropes of cum fall onto your face and chest. 'Let's get this rubbed in. Wouldn't want any of it to go to waste!' Her hands massage your face and [if Breast Size of Player > 0]breasts[else]chest[end if], working her semen into you. 'Be sure to come back later, after some practice!' she teases, hopping off of you and walking away.";
+		infect "Feline Gymnast";
 
 [Footjob scene
 Summary: rubbing, then very rough rubbing, but no release for the player (+libido)]
@@ -142,25 +129,29 @@ M/H - Vaginal]
 to say beatthefelinegymnast:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	choose a blank row in table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ignore";
 	now description entry is "leave the kinky gymnast alone";
 	now sortorder entry is 10;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Give oral";
 	now description entry is "bury your face in her crotch";
 	now sortorder entry is 1;
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride her";
 		now description entry is "have her fuck your pussy";
 		now sortorder entry is 2;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her";
 		now description entry is "fuck her vaginally";
 		now sortorder entry is 3;
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to the number of filled rows in the table of fucking options:
 		choose row y from the table of fucking options;
@@ -170,36 +161,41 @@ to say beatthefelinegymnast:
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			choose row calcnumber in table of fucking options;
-			say "Confirmation: Would you like to [description entry]?";
+			say "[title entry]: Would you like to [description entry]?";
 			if Player consents:
+				LineBreak;
 				now sextablerun is 1;
 				now lastfuck of Leonard is turns;
-				if title entry is "Ignore":
-					say "[felinewinignore]";
-				else if title entry is "Give oral":
-					say "[felinewingiveoral]";
-				else if title entry is "Ride her":
-					say "[felinewinvagride]";
-				else if title entry is "Fuck her":
-					say "[felinewinvagfuck]";
-				wait for any key;
+				if title entry is:
+					-- "Ignore":
+						say "     You decide to leave well enough alone.";
+					-- "Give oral":
+						say "[felinewingiveoral]";
+					-- "Ride her":
+						say "[felinewinvagride]";
+					-- "Fuck her":
+						say "[felinewinvagfuck]";
 		else:
-			say "Invalid Option.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	wait for any key;
+	clear the screen and hyperlink list;
 
 [Victory scene - Give oral
 Player is given the option to:
 y - suck her cock, getting aroused by her taste + smell
 n - lick her cunt, getting aroused by her taste + smell if the player has a penis]
 to say felinewingiveoral:
-	say "Would you like to suck her cock or eat her out? (Y for cock, N for pussy)[line break]";
+	say "     Would you like to suck her cock or eat her out? (Y=Cock, N=Pussy)[line break]";
 	[Suck her off - players with a cock or pussy will masturbate (cock takes priority)]
 	if Player consents:
+		LineBreak;
 		say "     You eye the bulge in her leotard, throbbing even as she lies defeated. Deciding she could use some relief, you kneel down over her crotch, rubbing her needy bulge with one of your hands. It pulses and twitches, sensitive even through the layer of clothing. Moving closer, you push aside the tight fabric, making her penis and small orbs available to you. Moving closer to them, you smell the buildup of fluids that was happening behind her clothing. The scent is overpowering and arousing, making [if Player is male]your [Cock of Player] penis harden in anticipation[else if Player is female]your cunt slick with need[else]you anticipate what you're about to do even more[end if]. You bring your face right next to those cute balls of hers, giving each a few licks before moving upwards.";
 		say "     With small licks, you work your way up her shaft, catching several dollops of pre on your tongue. It tastes rather unfamiliar, but does drive you deeper into lust. It takes every ounce of self-control not to shove her entirety in your mouth immediately. Straining against your arousal, you tease her further, kissing around the tip and sucking on some of the barbs. With each little tease, even more of the clear fluid leaks out of her cock and finds its way into your mouth. It quickly becomes too much, and you wrap your lips around the tip of her cock, pushing forward until your nose is buried in her luxurious coat of fur. She lets out a long moan as several more spurts of precum drip out into your throat. Driven crazy by lust, you [if Player is male]grab your own cock and begin to furiously stroke it as you [else if Player is female]shove a few fingers into your needy cunt and begin fingering yourself furiously as you [end if]begin working her shaft at an amazing pace.";
-		say "     Despite all of the prior teasing, the lust-filled cat girl manages to hold on for a while, constantly moaning under you. The combination of her powerful scent and arousing pre do a number on your own restraint, and before long you're moaning onto her cock as and orgasm hits you like a wave. [if Player is male]Frantically stroking your [cock size desc of Player] cock, you release a [Cum Load Size of Player] load onto the ground. [else if Player is female]Your cunt clenches around your fingers, dripping your own fluids onto the ground below. [end if]Your moaning around her barbed shaft is enough to trigger her own orgasm, flooding your mouth with her delicious cream. Letting your mouth fill up with it, you slide off of her cock and go up to give her a kiss. She gladly returns it, and you give her the treat she just poured into your mouth. You tell her to swallow, and she does so enthusiastically, even licking up some of the dribbles around your mouth afterwards. Satisfied with the result of your encounter, you readjust your clothing and gear before leaving the blue gymnast panting on the bench.";
+		say "     Despite all of the prior teasing, the lust-filled cat girl manages to hold on for a while, constantly moaning under you. The combination of her powerful scent and arousing pre do a number on your own restraint, and before long you're moaning onto her cock as an orgasm hits you like a wave[if Player is male]. Frantically stroking your [cock size desc of Player] cock, you release a [Cum Load Size of Player] load onto the ground[else if Player is female]. Your cunt clenches around your fingers, dripping your own fluids onto the ground below[end if]. Your moaning around her barbed shaft is enough to trigger her own orgasm, flooding your mouth with her delicious cream. Letting your mouth fill up with it, you slide off of her cock and go up to give her a kiss. She gladly returns it, and you give her the treat she just poured into your mouth. You tell her to swallow, and she does so enthusiastically, even licking up some of the dribbles around your mouth afterwards. Satisfied with the result of your encounter, you readjust your clothing and gear before leaving the blue gymnast panting on the bench.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Feline Gymnast";
 	[Eat her out - players with a cock become aroused and masturbate]
 	else:
+		LineBreak;
 		say "     Your eyes wander to the almost painfully tight cameltoe, soaking with fluids. Deciding she could blow off some steam, you tell her to kneel on the bench and present herself to you. 'Of course, master,' she says before climbing onto the bench and spreading her thighs for you. Moving behind her, you slide her leotard out of your way, and are greeted with her powerful, feminine scent. [if Player is male]Responding to the wondrous smell, your cock becomes uncomfortably hard, making you pull it out of your clothing. [end if]Drawn closer by the odor, you give a few teasing licks and nibbles to the inside of her thighs, eliciting needful moans from the now-submissive kitty. With a veritable river of juices coming from her cunt, you decide the little bit of teasing you did was enough and after some begging from her you give a long lick to her lips. The waterfall coming from her pussy is slightly sweet, making you drive your tongue into her for more[if Player is male]. Precum begins leaking out of your cock from the taste of her juices. You reach down unconsciously and begin stroking yourself, unbelievably turned on by this[end if].";
 		say "     Moaning uncontrollably, it doesn't take very long for the furry gymnast to climax under your licks and kisses. You are greeted with even more fluids soaking your face. [if Player is male]The gush of liquid helps push you over the edge as you orgasm, spurting your [Cum Load Size of Player] load onto the ground below. [end if]You order the thin woman to turn around and clean you up. She eagerly rises her face to yours, licking up all of her juices from your face. Satisfied with her work, you readjust your clothes and gear before leaving her to catch her breath.";
 		CreatureSexAftermath "Player" receives "OralPussy" from "Feline Gymnast";
@@ -220,9 +216,6 @@ to say felinewinvagfuck:
 	say "     Not wanting to waste any more time, you lean over the cat girl, putting your hands on the back of the bench next to hers. You rub your erect [cock size desc of Player] shaft against her waiting folds, coating it with the waterfall of liquid. Preparations complete, you make one agonizingly slow thrust into her. She lets out a moan, muffled by the furry tail in her mouth. As easy as it was to slip into her, it's almost painfully tight inside. As if reading your mind, her walls ease up on your [Cock of Player] cock, letting you thrust in and out with much more ferocity. The furry gymnast gives out continuous groans at your treatment, letting out one final, loud one as her walls clench around you again. The sensation nearly drives you over the edge as well. That's when the powerful scent of her cum hits you, driving you mad with lust. You start to rapidly fuck her sopping wet pussy once again, ignoring the nearly painful sensation of her pulsing walls. You don't hold on for very long, depositing your [Cum Load Size of Player] load into her waiting womb.";
 	say "     Satisfied with your work, you pull out of the slutty cat. You tell her to clean up and begin to go on your way. She immediately dips her head between her thighs and laps at any stray cum. As you turn around to leave, you see her start lapping at the pool of cum she left on the bench.";
 	CreatureSexAftermath "Feline Gymnast" receives "PussyFuck" from "Player";
-
-to say felinewinignore:
-	say "     You decide to leave well enough alone.";
 
 Section 2 - Creature Insertion
 
@@ -250,10 +243,10 @@ When Play begins:
 	add "Feline Gymnast" to infections of BipedalList;
 	add "Feline Gymnast" to infections of TailList;
 	now Name entry is "Feline Gymnast"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "Feline Gymnast"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The gymnast leaps at you, but instead of hitting you, she vaults over you, slashing at your back.[or]She slashes quickly at any part of you she can reach.[at random]";
+	now attack entry is "[one of]The gymnast leaps at you, but instead of hitting you, she vaults over you, slashing at your back[or]She slashes quickly at any part of you she can reach[at random].";
 	now defeated entry is "[beatthefelinegymnast]"; [ Text when monster loses. ]
 	now victory entry is "[losetofelinegymnast]"; [ Text when monster wins. ]
 	now desc entry is "[felinegymnastdesc]";
@@ -406,7 +399,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-
 
 Section 3 - Endings
 

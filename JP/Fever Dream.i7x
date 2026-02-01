@@ -18,7 +18,7 @@ When Play begins: [This is Cyn's Boss version encounter]
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]She swings her many unnaturally long, sharp claws wildly at you while laughing maniacally, leaving multiple thin red lines as she cuts your [SkinName of Player] body[or]Her three eyes start looking in different directions at random as she lunges at you. You manage to dodge her lunge, and she falls to the floor, but starts crawling back to you with her many arms at high speed like a spider and bites your leg[or]She swings one of her claws at you but stops inches away from your face, trembling violently. She then lets out a distorted laughter before, suddenly, her top half contorts full 360, and you barely manage to dodge her attack, leaving a bleeding red line on your face[or]Multiple shadowy hands and tentacles emerge from the ground beneath you. They grab, whip and scratch your [SkinName of Player] body, leaving multiple cuts before you manage to get away from them[or]A giant red eye appears in the now dark gray sky, staring right at you as you feel like some intense invisible force is trying to tear you apart from the inside. You eventually snap out of it, but not without suffering some mental damage[at random].";
+	now attack entry is "[one of]She swings her many unnaturally long, sharp claws wildly at you while laughing maniacally, leaving multiple thin red lines as she cuts your [SkinName of Player in lower case] body[or]Her three eyes start looking in different directions at random as she lunges at you. You manage to dodge her lunge, and she falls to the floor, but starts crawling back to you with her many arms at high speed like a spider and bites your leg[or]She swings one of her claws at you but stops inches away from your face, trembling violently. She then lets out a distorted laughter before, suddenly, her top half contorts full 360, and you barely manage to dodge her attack, leaving a bleeding red line on your face[or]Multiple shadowy hands and tentacles emerge from the ground beneath you. They grab, whip and scratch your [SkinName of Player in lower case] body, leaving multiple cuts before you manage to get away from them[or]A giant red eye appears in the now dark gray sky, staring right at you as you feel like some intense invisible force is trying to tear you apart from the inside. You eventually snap out of it, but not without suffering some mental damage[at random].";
 	now defeated entry is "";
 	now victory entry is "";
 	now desc entry is "";
@@ -38,7 +38,7 @@ When Play begins: [This is Cyn's Boss version encounter]
 	now per entry is 20;
 	now int entry is 15;
 	now cha entry is 15;
-	now sex entry is "both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 333;
 	now lev entry is 30; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 30; [ Monster's average damage when attacking. ]
@@ -61,7 +61,7 @@ When Play begins: [This is Cyn's Boss version encounter]
 	now TrophyFunction entry is "-"; [The dash will tell inform to ignore this function.]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]ghostly[or]chaotic[or]willowy[or]eldritch[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "Anomaly"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "anomaly"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
@@ -69,6 +69,5 @@ When Play begins: [This is Cyn's Boss version encounter]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
-
 
 Fever Dream ends here.

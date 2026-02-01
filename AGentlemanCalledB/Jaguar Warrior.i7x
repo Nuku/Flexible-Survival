@@ -3,7 +3,6 @@ Version 3 of Jaguar Warrior by AGentlemanCalledB begins here.
 [Version 3.0 - Male Tehuantl added]
 [Version 2.4 - Interaction with Sarah]
 
-
 [ HP values of Tehuantl                                            ]
 [ 1-9: Jaguar Warrior creature in Museum                           ]
 [  10: Just brought Tehuantl home                                  ]
@@ -91,9 +90,8 @@ to say JagWarVic_Oral:
 	NPCSexAftermath Player receives "OralCock" from Tehuantl;
 
 to say JaguarWarriorCaptured: [TODO: Add tracking to the way the player took him]
-	project the Figure of Tehuantl_Male_hard_icon;
 	say "     The jaguar's weapon and shield clatter to the floor as your last blow sends him reeling. He stumbles backwards, barely managing to catch himself on a nearby display case. Trembling slightly, the large feline looks you in the eyes for a moment before his head drops in submission. You feel a surge of energy rush through you as the jaguar warrior finally acknowledges you as his better and you step forward to claim your hard-earned prize. You knock the jaguar's arm away from the display case he's supporting himself with and watch with satisfaction as he falls to one knee. With a low rumble emanating from somewhere inside you, you step around the beaten feline and press your foot against the middle of his back, pushing him to his hands and knees. Seeing himself be put in this position, Tehuantl himself actually pulls his spotted tail aside, exposing his tight ass to you in a submissive gesture.";
-	LineBreak;
+	project the Figure of Tehuantl_Male_hard_icon;
 	say "     [bold type]Feeling like you could do... something to cement your mastery over this muscled feline, you let your thoughts wander through all the possibilities.[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -105,31 +103,29 @@ to say JaguarWarriorCaptured: [TODO: Add tracking to the way the player took him
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Dominate him and emasculate him (nonsexually)"; [-> female T]
-	now sortorder entry is 1;
+	now sortorder entry is 2;
 	now description entry is "Grab him by the scruff of the neck and make him acknowledge you as his [master]";
 	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Rub his balls and then fuck his ass"; [-> male T]
-		now sortorder entry is 2;
+		now sortorder entry is 3;
+		now description entry is "Get the kitty hot and ready, then pound him";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Tease his nipples and then fuck his ass"; [-> female T]
+		now sortorder entry is 5;
 		now description entry is "Get the kitty hot and ready, then pound him";
 	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Rub his balls and then ride his cock"; [-> male T]
-		now sortorder entry is 3;
-		now description entry is "Get the kitty hot and ready, then ride him";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "Tease his nipples and then fuck his ass"; [-> female T]
 		now sortorder entry is 4;
-		now description entry is "Get the kitty hot and ready, then pound him";
-	[]
-	if Player is female:
+		now description entry is "Get the kitty hot and ready, then ride him";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Tease his nipples and then ride his cock"; [-> female T]
-		now sortorder entry is 5;
+		now sortorder entry is 6;
 		now description entry is "Get the kitty hot and ready, then ride him";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -146,28 +142,27 @@ to say JaguarWarriorCaptured: [TODO: Add tracking to the way the player took him
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Dominate him (nonsexually)":
-					say "[TehuantlTameNonSexM]";
-				else if nam is "Dominate him and emasculate him (nonsexually)":
-					say "[TehuantlTameNonSexF]";
-				else if (nam is "Rub his balls and then fuck his ass"):
-					say "[TehuantlTameSex1]";
-				else if (nam is "Rub his balls and then ride his cock"):
-					say "[TehuantlTameSex2]";
-				else if (nam is "Tease his nipples and then fuck his ass"):
-					say "[TehuantlTameSex3]";
-				else if (nam is "Tease his nipples and then ride his cock"):
-					say "[TehuantlTameSex4]";
-				wait for any key;
+				if title entry is:
+					-- "Dominate him (nonsexually)":
+						say "[TehuantlTameNonSexM]";
+					-- "Dominate him and emasculate him (nonsexually)":
+						say "[TehuantlTameNonSexF]";
+					-- "Rub his balls and then fuck his ass":
+						say "[TehuantlTameSex1]";
+					-- "Rub his balls and then ride his cock":
+						say "[TehuantlTameSex2]";
+					-- "Tease his nipples and then fuck his ass":
+						say "[TehuantlTameSex3]";
+					-- "Tease his nipples and then ride his cock":
+						say "[TehuantlTameSex4]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You change your mind, just pushing him over to sprawl confusedly on the ground as you walk off without a word. The sudden rejection makes the feline hiss after you as he slowly gets to his feet afterwards.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say TehuantlTameNonSexM:
@@ -254,10 +249,11 @@ to say TameTehuantl:
 	increase score by 20;
 	move Tehuantl to Grey Abbey 2F;
 	move player to Grey Abbey 2F;
-	choose a row with Name of "Jaguar Warrior" in Table of Random Critters;
+	choose row with Name of "Jaguar Warrior" from Table of Random Critters;
 	now area entry is "Nowhere";
 	now Energy of Tehuantl is turns;
 
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name	PrepFunction
@@ -266,9 +262,6 @@ name	PrepFunction
 to say PrepCombat_Jaguar Warrior:
 	setmongender 3; [creature is male]
 	project the Figure of Tehuantl_Male_clothed_icon;
-
-
-Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -287,7 +280,7 @@ When Play begins:
 	add "Jaguar Warrior" to infections of BipedalList;
 	add "Jaguar Warrior" to infections of TailList; [TODO: Male Female Jaguar infection]
 	now Name entry is "Jaguar Warrior"; [ The creature's name as displayed and used in naming descriptions]
-	now enemy title entry is "Jaguar Warrior";
+	now enemy title entry is "";
 	now enemy Name entry is "Tehuantl";
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "The jaguar warrior [one of]raises his shield and charges forward, knocking you off balance as he smashes it into your chest[or]strikes at you with his obsidian-edged sword[or]knocks your feet out from under you with a sweeping low kick[or]knocks you off balance with his shield before following up with a quick sword strike[at random]!"; [ Text used when the monster succeeds on an attack]
@@ -300,7 +293,7 @@ When Play begins:
 	now tail entry is "You have a tight, sexy bottom, accentuated by your elegant jaguar tail lashing back and forth as you move."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]red[or]barbed[or]spined[or]feline[at random]"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
 	now face change entry is "everything goes fuzzy, your senses struggling to keep up as your head shifts to that of an attractive jungle cat"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
-	now body change entry is "[JagBodyTF]"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now body change entry is "it shifts to a feline shape, [if hoodequipped is false]gaining the sleek, alluring form of a beautiful jungle cat[else]surging with power as you gain the physique of a seasoned warrior, a sleek and agile jungle predator[end if]"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "golden yellow fur spreads across your body, adorned by elegant black rosettes and spots"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "it becomes tight and sexy. Your balance seems to shift slightly as you gain a long, spotted jaguar's tail, which lashes back and forth excitedly even as it helps you maintain a sexy, graceful stride"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
 	now cock change entry is "it shifts to a feline form, complete with menacing-looking barbs"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
@@ -451,12 +444,6 @@ to say JagBodyDesc:
 	else:
 		say "sleek and agile, with the build of a powerful jungle predator. Your feline form is that of a seasoned warrior, fit and toned [if Player is female]while still carrying the alluring feminine curves of an exotic[else]with the striking physique of a dangerous[end if] jungle cat";
 
-to say JagBodyTF:
-	if hoodequipped is false:
-		say "it shifts to a feline shape, gaining the sleek, alluring form of a beautiful jungle cat";
-	else:
-		say "it shifts to a feline shape, surging with power as you gain the physique of a seasoned warrior, a sleek and agile jungle predator";
-
 Section 3 - Jaguar Headdress and loot
 
 Table of Game Objects (continued)
@@ -484,14 +471,14 @@ to say JaguarHeaddressUse:
 			if BodyName of Player is "Jaguar Warrior":
 				say "[line break]     You drop to a knee as you feel a surge of heat roll through you, your feline physique shifting as the power of the jaguar headdress you're wearing ripples through your feline body, remaking you into a powerful jungle predator.";
 			if Player is not FemalePreferred:
-				choose a row with Name of "Jaguar Warrior" in Table of Random Critters;
+				choose row with Name of "Jaguar Warrior" from Table of Random Critters;
 				now sex entry is "Both";
 			now hoodequipped is true;
 	else if hoodequipped is true:
 		if BodyName of Player is "Jaguar Warrior":
 			say "[line break]     No longer under the influence of the jaguar headdress, you feel your warrior's physique burning away, leaving your feline form lithe and more delicate as the last of its power drains out of you.";
 		if Player is not MalePreferred:
-			choose a row with Name of "Jaguar Warrior" in Table of Random Critters;
+			choose row with Name of "Jaguar Warrior" from Table of Random Critters;
 			now sex entry is "Female";
 		now hoodequipped is false;
 
@@ -501,7 +488,7 @@ An everyturn rule:
 			if BodyName of Player is "Jaguar Warrior":
 				say "     You drop to a knee as you feel a surge of heat roll through you, your feline physique shifting as the power of the jaguar headdress you're wearing ripples through your feline body, remaking you into a powerful jungle predator.";
 			if Player is not FemalePreferred:
-				choose a row with Name of "Jaguar Warrior" in Table of Random Critters;
+				choose row with Name of "Jaguar Warrior" from Table of Random Critters;
 				now sex entry is "Both";
 			now hoodequipped is true;
 		infect "Jaguar Warrior";
@@ -509,7 +496,7 @@ An everyturn rule:
 		if BodyName of Player is "Jaguar Warrior":
 			say "     No longer under the influence of the jaguar headdress, you feel your warrior's physique burning away, leaving your feline form lithe and more delicate as the last of its power drains out of you.";
 		if Player is not MalePreferred:
-			choose a row with Name of "Jaguar Warrior" in Table of Random Critters;
+			choose row with Name of "Jaguar Warrior" from Table of Random Critters;
 			now sex entry is "Female";
 		now hoodequipped is false;
 
@@ -518,7 +505,6 @@ name	desc	weight	object
 "jaguar warrior fur"	"A tuft of spotted fur that looks like it has been pulled out of the coat of a jaguar. It's nicely soft."	0	jaguar warrior fur
 
 jaguar warrior fur is a grab object.
-It is temporary.
 Usedesc of jaguar warrior fur is "[JaguarWarriorFurUse]".
 
 to say JaguarWarriorFurUse:

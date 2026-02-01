@@ -54,7 +54,6 @@ Equipment has a number called skillcheck value. The skillcheck value of equipmen
 Equipment has a text called EquipFunction. EquipFunction is usually "".
 Equipment has a text called UnequipFunction. UnequipFunction is usually "".
 
-
 Part 2 - Definitions and Functions
 
 Chapter 1 - Grab Objects
@@ -100,27 +99,26 @@ instead of examining a grab object (called x):
 		say "     Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
 	if x is an armament:
 		if (ScaleValue of Player - objsize of x) is:
-		-- 4: [4 size categories difference - huge player (5), size 1 weapon]
-			say "     Trying to use this as a weapon is utterly ridiculous, given your size. Don't even try it!";
-		-- 3: [3 categories difference]
-			say "     Trying to use this as a weapon is fairly ridiculous, given your size.";
-		-- 2: [2 categories difference]
-			say "     Trying to use this as a weapon is incredibly difficult, as it is far to small for you to comfortably hold.";
-		-- 1: [1 category difference]
-			say "     Given that it is made for someone smaller than you, this isn't all that easy to use as a weapon.";
-		-- 0: [proper size for the player]
-			say "     This is just the right size for you to wield comfortably.";
-		-- -1: [1 categories difference]
-			say "     A bit big for comfortable use, but with both hands and some effort, you'll manage.";
-		-- -2: [2 categories difference]
-			say "     Trying to use this as a weapon is incredibly difficult, as its sheer size threatens to pull you over.";
-		-- -3: [3 categories difference]
-			say "     Trying to use this as a weapon is fairly ridiculous, given your size.";
-		-- -4: [4 size categories difference - tiny player (1), size 5 weapon]
-			say "     Don't even think about using this in combat! Well, you might hide under its bulk, but that's about it.";
+			-- 4: [4 size categories difference - huge player (5), size 1 weapon]
+				say "     Trying to use this as a weapon is utterly ridiculous, given your size. Don't even try it!";
+			-- 3: [3 categories difference]
+				say "     Trying to use this as a weapon is fairly ridiculous, given your size.";
+			-- 2: [2 categories difference]
+				say "     Trying to use this as a weapon is incredibly difficult, as it is far to small for you to comfortably hold.";
+			-- 1: [1 category difference]
+				say "     Given that it is made for someone smaller than you, this isn't all that easy to use as a weapon.";
+			-- 0: [proper size for the player]
+				say "     This is just the right size for you to wield comfortably.";
+			-- -1: [1 categories difference]
+				say "     A bit big for comfortable use, but with both hands and some effort, you'll manage.";
+			-- -2: [2 categories difference]
+				say "     Trying to use this as a weapon is incredibly difficult, as its sheer size threatens to pull you over.";
+			-- -3: [3 categories difference]
+				say "     Trying to use this as a weapon is fairly ridiculous, given your size.";
+			-- -4: [4 size categories difference - tiny player (1), size 5 weapon]
+				say "     Don't even think about using this in combat! Well, you might hide under its bulk, but that's about it.";
 
 Using is an action applying to one thing.
-
 understand "dequip [owned grab object]" as using.
 understand "take off [owned grab object]" as using.
 understand "use [owned grab object]" as using.
@@ -228,7 +226,6 @@ To process (x - a grab object):
 		say "Dashing a little tanuki salts helped things along. Mmm, divinely tasty.";
 		increase Morale of Player by 5;
 
-
 Chapter 2 - Armaments
 
 Definition: A grab object (called x) is wielded:
@@ -241,9 +238,6 @@ Definition: A grab object (called x) is unwieldy:		[applies to armaments only]
 	no;
 
 Chapter 3 - Equipment
-
-
-
 
 journal is a grab object. It is not temporary.
 The carried of journal is 1. [starting item]
@@ -265,6 +259,5 @@ to say journal use:
 		SanBoost healed;
 		now Lastjournaluse is turns;
 	follow turnpass rule;
-
 
 Game Objects ends here.

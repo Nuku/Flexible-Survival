@@ -1,13 +1,11 @@
 Version 1 of Scavenging by Core Mechanics begins here.
 [ Version 1 - Extracted during dissection of the Story.ni - Wahn]
 
-
 A scavevent is a kind of situation.
 
 Part 1 - Untargeted Scavenging
 
 ScavengingAction is an action applying to nothing.
-
 understand "Scavenge" as ScavengingAction.
 understand "Scav" as ScavengingAction.
 
@@ -27,7 +25,7 @@ carry out ScavengingAction:
 	if "Survivalist" is listed in feats of Player, increase bonus by 4;
 	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	let the dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus] = [dice plus bonus] vs 10: ";
+	say "You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [special-style-1][dice plus bonus][roman type] vs [special-style-2]10[roman type] (Perception Check): ";
 	if dice plus bonus > 9:
 		now inasituation is true;
 		if a random chance of 3 in 4 succeeds:
@@ -41,19 +39,18 @@ carry out ScavengingAction:
 			else:
 				say "[ResolveFunction of Potential Resources]";
 		now inasituation is false;
-		say "[line break]";
+		[say "[line break]";]
 	else:
 		say "Your search turns up empty.";
-	now inasituation is false;
 	if battleground is "", now battleground is "Outside";
 	randomfightchance;
 	follow turnpass rule;
 
-Part 2 - Targeted Scavenging (nonfunctional)
+Part 2 - Targeted Scavenging (nonfunctional) - Not for release
 
-tscavenging is an action applying to one topic.
 Scavengetarget is an indexed text that varies.[@Tag:NotSaved]
 
+tscavenging is an action applying to one topic.
 [
 understand "Scavenge [text]" as tscavenging.
 understand "Scav [text]" as tscavenging.
@@ -67,6 +64,5 @@ Carry out tscavenging:
 	now scavengetarget is the topic understood;
 	try ScavengingAction;
 	now scavengetarget is "";
-
 
 Scavenging ends here.

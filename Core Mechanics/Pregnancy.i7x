@@ -338,10 +338,7 @@ to detailpregnancy:
 		else:
 			say "Your [bodydesc of Player] body is somewhat rounded with the effects of [if ovipregnant is true]what feels like an egg growing inside you[else]your oncoming pregnancy[end if]. It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
 	else if gestation of child > 0:
-		if Player is not female:
-			say "[one of]You feel a soft shifting of something inside your lower belly[or]Warm tingles gently run through your lower belly[at random].";
-		else:
-			say "[one of]You feel a soft shifting of something inside your lower belly[or]Warm tingles gently run through your lower belly[at random][if ovipregnant is true] as something hard and heavy shifts around inside you[end if].";
+		say "[one of]You feel a soft shifting of something inside your lower belly[or]Warm tingles gently run through your lower belly[at random][if Player is female and ovipregnant is true] as something hard and heavy shifts around inside you[end if].";
 
 to say detailbirth:
 	detailbirth;

@@ -92,11 +92,8 @@ Object	Name
 Staghorn	"Staghorn"
 
 Staghorn is a room. It is fasttravel. It is private. It is sleepsafe.
-Description of Staghorn is "[staghorndesc]".
+Description of Staghorn is "     The campsite turned small settlement has a bustling atmosphere. Some of the interior tents and canopies have been decorated with various knickknacks that make each of them feel a bit more homey. Many of the inhabitants are busy working on tasks to sustain the community, while others rest in mattresses, sleeping bags or other furniture that has been scavenged from the wrecked homes. Most of the settlers are avian, with the rest being a mixture of anthro mammals. In the middle of the campsite stands a hunter's blind that seems to have been taken from an outdoor sporting goods store that serves as a watch tower for potential threats. Standing in the middle of the camp is the town leader Ace.[line break]".
 the scent of Staghorn is "     The settlement smells of a hearty stew that is cooking somewhere nearby. There is also the smell of some freshly chopped lumber from freshly built fences.".
-
-to say staghorndesc:
-	say "     The campsite turned small settlement has a bustling atmosphere. Some of the interior tents and canopies have been decorated with various knickknacks that make each of them feel a bit more homey. Many of the inhabitants are busy working on tasks to sustain the community, while others rest in mattresses, sleeping bags or other furniture that has been scavenged from the wrecked homes. Most of the settlers are avian, with the rest being a mixture of anthro mammals. In the middle of the campsite stands a hunter's blind that seems to have been taken from an outdoor sporting goods store that serves as a watch tower for potential threats. Standing in the middle of the camp is the town leader Ace.";
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -190,20 +187,19 @@ to say AceSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Suck Ace off"):
-					say "[AceSex1]";
-				else if (nam is "Take Ace's shaft in your pussy"):
-					say "[AceSex2]";
-				wait for any key;
+				if title entry is:
+					-- "Suck Ace off":
+						say "[AceSex1]";
+					-- "Take Ace's shaft in your pussy":
+						say "[AceSex2]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the anthro bird, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say AceSex1: [oral on Ace]

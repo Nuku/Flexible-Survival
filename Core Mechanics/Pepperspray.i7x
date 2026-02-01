@@ -1,9 +1,8 @@
 Version 3 of Pepperspray by Core Mechanics begins here.
 [version 3.5 - Bonus fixes]
 
-
-battleitem is a number that varies.
-peppereyes is a number that varies.
+battleitem is a number that varies.[@Tag:NotSaved]
+peppereyes is a number that varies.[@Tag:NotSaved]
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -19,7 +18,6 @@ to say pepperspraydrain:
 		say "Uh oh! That used up the last of that can and you drop it to the ground, empty.";
 		ItemLoss pepperspray by 1;
 
-
 to say usepepperspray:
 	select an option from the table of pepperspraychoice;
 
@@ -27,7 +25,6 @@ Table of pepperspraychoice
 title	subtable	description	toggle
 "Spray and Attack"	--	"Spicy Eyes!!!"	peppersprayattack rule
 "Spray and Flee"	--	"Run Away!"	peppersprayflee rule
-
 
 this is the peppersprayflee rule:
 	[Perform an attempt to flee from the weakened enemy]
@@ -45,7 +42,6 @@ this is the peppersprayflee rule:
 	increase monmindbonus by 5;
 	decrease plfleebonus by 3;
 	rule succeeds;
-
 
 this is the peppersprayattack rule:
 	[Perform enhanced double-attack with creature penalized by 5!]
@@ -79,7 +75,6 @@ this is the peppersprayattack rule:
 	increase monmindbonus by 5;
 	rule succeeds;
 
-
 [
 	[Perform an attempt to flee at +4 from the weakened enemy & +5 to dodge (if needed)]
 	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
@@ -105,7 +100,6 @@ this is the peppersprayattack rule:
 		follow the retaliation rule;
 	rule succeeds;
 
-
 this is the peppersprayattack rule:
 	[Perform enhanced double-attack +3 to hit & dodge!]
 	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
@@ -124,7 +118,6 @@ this is the peppersprayattack rule:
 		now fightoutcome is 10;
 		win;
 	rule succeeds;
-
 
 to say enhancedattack:
 	choose row MonsterID from the Table of Random Critters;
@@ -276,7 +269,6 @@ to say enhancedattack:
 				decrease monsterHP by dam;
 			else:
 				say "Your [companion] misses!";
-
 
 to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Combat]
 	now avoidance is 0;

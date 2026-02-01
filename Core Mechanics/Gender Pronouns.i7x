@@ -603,7 +603,7 @@ This is the SetPlayerPronouns rule:
 				SetMalePronouns for player;
 			else if Player is female:
 				SetFemalePronouns for player;
-			else if Player is neuter:
+			else:
 				SetNeutralPronouns for player;
 
 A person can be MProN. A person is usually not MProN.
@@ -657,7 +657,6 @@ Definition: A person (called x) is pronounNeuter:
 [Menu]
 
 pronounsetting is an action applying to nothing.
-
 understand "set pronouns" as pronounsetting.
 understand "pronoun menu" as pronounsetting.
 
@@ -689,7 +688,6 @@ carry out pronounsetting:
 		say "You are now set to automatic pronoun handling.";
 
 pronountesting is an action applying to nothing.
-
 understand "testpronouns" as pronountesting.
 
 carry out pronountesting:
@@ -763,7 +761,6 @@ to say dude:
 	else:
 		say "dude";
 
-
 [Being verbs]
 
 to say isare:
@@ -794,6 +791,5 @@ To say ObjectProCap: say "[ObjectProCap of Player]";
 To say PosAdjCap: say "[PosAdjCap of Player]";
 To say PosProCap: say "[PosProCap of Player]";
 To say ReflexProCap: say "[ReflexProCap of Player]";
-
 
 Gender Pronouns ends here.

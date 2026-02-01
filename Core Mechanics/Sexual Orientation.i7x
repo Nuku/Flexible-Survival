@@ -42,35 +42,34 @@ to PlayerSexualOrientationMenu:
 		if calcnumber is 1:
 			if MaleInterest of Player is true:
 				now MaleInterest of Player is false;
-			else if MaleInterest of Player is false:
+			else:
 				now MaleInterest of Player is true;
 		else if calcnumber is 2:
 			if TransMaleInterest of Player is true:
 				now TransMaleInterest of Player is false;
-			else if TransMaleInterest of Player is false:
+			else:
 				now TransMaleInterest of Player is true;
 		else if calcnumber is 3:
 			if FemaleInterest of Player is true:
 				now FemaleInterest of Player is false;
-			else if FemaleInterest of Player is false:
+			else:
 				now FemaleInterest of Player is true;
 		else if calcnumber is 4:
 			if TransFemaleInterest of Player is true:
 				now TransFemaleInterest of Player is false;
-			else if TransFemaleInterest of Player is false:
+			else:
 				now TransFemaleInterest of Player is true;
 		else if calcnumber is 5:
 			if MaleHermInterest of Player is true:
 				now MaleHermInterest of Player is false;
-			else if MaleHermInterest of Player is false:
+			else:
 				now MaleHermInterest of Player is true;
 		else if calcnumber is 6:
 			if FemaleHermInterest of Player is true:
 				now FemaleHermInterest of Player is false;
-			else if FemaleHermInterest of Player is false:
+			else:
 				now FemaleHermInterest of Player is true;
 		else:
 			now OrientationMenuExit is 1;
-
 
 Sexual Orientation ends here.

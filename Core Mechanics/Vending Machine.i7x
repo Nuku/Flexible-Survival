@@ -5,6 +5,8 @@ There is a Cola Vending Machine in Mall Foodcourt. "A broken down vending machin
 Cola Vending Machine has a number called dispensed.
 understand "vending machine" as Cola Vending machine.
 
+the scent of Cola Vending Machine is "     The vending machine smells of burnt electronics and is busted. Guess you'll have to hit it to get anything out.".
+
 Vending is an action applying to one thing.
 understand "use [cola vending machine]" as vending.
 
@@ -15,7 +17,7 @@ Instead of attacking the Cola Vending machine:
 	say "You give the soda machine a solid whack.";
 	let the bonus be (( Strength of Player minus 10 ) divided by 2);
 	let the dice be a random number from 1 to 20;
-	say "[line break]You roll 1d20([dice])+[bonus] = [dice plus bonus]: ";
+	say "[line break]You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [dice plus bonus]: ";
 	increase dice by bonus;
 	if dice > 15:
 		say "A soda can pops out!";

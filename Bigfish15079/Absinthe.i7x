@@ -9,41 +9,46 @@ name	desc	weight	object
 "Large Grain Alcohol Bottle"	"A clear bottle of alcohol, quite strong for the regular person. Might have been looted from a liquor store. 75% alcohol."	1	large Grain Alcohol Bottle
 "Dwarven spirit"	"A large black container filled with alcohol, only for the bravest or most hearty of drinkers. 90% alcohol."	1	Dwarven Spirit
 
-small whiskey bottle is a grab object. Understand "small whiskey bottle" as small whiskey bottle.
+small whiskey bottle is a grab object. Understand "small whiskey" as small whiskey bottle.
 Usedesc of small whiskey bottle is "[small whiskey alcohol use]".
 Scent of small whiskey bottle is "The strong smell of alcohol flows into your nose.".
+
 to say small whiskey alcohol use:
 	say "     You feel the burn of the whiskey down your throat as you drink.";
 	PlayerDrink 5;
 	addAlcPoints 2;
 
-Big Whiskey bottle is a grab object. Understand "Big whiskey bottle" as Big Whiskey bottle.
+Big Whiskey bottle is a grab object. Understand "Big Whiskey" as Big Whiskey bottle.
 Usedesc of Big Whiskey bottle is "[Big Whiskey bottle use]".
 Scent of Big Whiskey bottle is "The strong smell of alcohol flows into your nose.".
+
 to say Big Whiskey bottle use:
 	say "     Your drink the full bottle, its strong alcohol burning on the way down.";
 	PlayerDrink 10;
 	addAlcPoints 4;
 
-TodtGrains Beer is a grab object. Understand "TodtGrains Beer" as TodtGrains Beer.
+TodtGrains Beer is a grab object. Understand "Beer" as TodtGrains Beer.
 Usedesc of TodtGrains Beer is "[TodtGrainsBeer use]".
 Scent of TodtGrains Beer is "A light scent of alcohol flows into your nose.".
+
 to say TodtGrainsBeer use:
 	say "     You drink the nice refreshing beer, its dark grain taste lingering on your tongue.";
 	PlayerDrink 6;
 	addAlcPoints 1;
 
-Small Grain Alcohol Bottle is a grab object. Understand "Small Grain Alcohol Bottle" as Small Grain Alcohol Bottle.
+Small Grain Alcohol Bottle is a grab object. Understand "Small Grain Alcohol" as Small Grain Alcohol Bottle.
 Usedesc of Small Grain Alcohol Bottle is "[Small Grain use]".
 Scent of Small Grain Alcohol Bottle is "The strong smell of pure alcohol flows into your nose.".
+
 to say Small Grain use:
 	say "     You feel the burn of the alcohol leaving your throat numb.";
 	PlayerDrink 5;
 	addAlcPoints 3;
 
-large Grain Alcohol Bottle is a grab object. Understand "Large Grain Alcohol Bottle" as large Grain Alcohol Bottle.
+large Grain Alcohol Bottle is a grab object. Understand "large Grain Alcohol" as large Grain Alcohol Bottle.
 Usedesc of large Grain Alcohol Bottle is "[large Grain Alcohol Bottle use]".
 Scent of large Grain Alcohol Bottle is "A strong smell of pure alcohol flows into your nose.".
+
 to say large Grain Alcohol Bottle use:
 	say "     You feel the burn of the alcohol leaving your throat numb.";
 	PlayerDrink 10;
@@ -52,6 +57,7 @@ to say large Grain Alcohol Bottle use:
 Dwarven Spirit is a grab object. Understand "Dwarven Spirit" as Dwarven Spirit.
 Usedesc of Dwarven Spirit is "[Dwarven Spirit use]".
 Scent of Dwarven Spirit is "A strong floral smell from the spirit flows into your nose.".
+
 to say Dwarven Spirit use:
 	say "     A dark hearty taste lingers in your mouth.";
 	PlayerDrink 10;

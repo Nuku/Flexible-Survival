@@ -27,7 +27,6 @@ check looting when "porn collection" is listed in invent of location of Player a
 
 Section 2 - Masturbation
 
-
 instead of using porn collection:
 	if Player is neuter:
 		say "     Lacking any real gender of your own, you find the magazines rather unsatisfying and put them away.";
@@ -42,7 +41,7 @@ instead of using porn collection:
 			say "[simplemast]";
 		else:
 			LineBreak;
-			say "     You settle yourself down to really enjoy some personal time and relieve your excess arousal. You pull out a selection of the hard core magazines and begin playing with yourself[if Breast Size of Player > 8]. You start by rubbing over your [BodyType of Player] body and playing with your nipples and teasing your huge breasts, running your fingers over their sensitive flesh[else if Breast Size of Player > 5]. You start by rubbing over your [BodyType of Player] body and playing with your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else if Breast Size of Player > 2]. You start by rubbing over your [BodyType of Player] body and playing with your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else]. You start by rubbing over your [BodyType of Player] body and teasing your nipples[end if][if Nipple Count of Player > 2]. You lavish attention upon each pair in turn, helping to get yourself wound up for a bigger release[end if].";
+			say "     You settle yourself down to really enjoy some personal time and relieve your excess arousal. You pull out a selection of the hard core magazines and begin playing with yourself. You start by rubbing over your [BodyType of Player] body and [if Breast Size of Player > 8]playing with your nipples and teasing your huge breasts, running your fingers over their sensitive flesh[else if Breast Size of Player > 5]playing with your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else if Breast Size of Player > 2]playing with your nipples and teasing your large breasts, running your fingers over their sensitive flesh[else]teasing your nipples[end if][if Nipple Count of Player > 2]. You lavish attention upon each pair in turn, helping to get yourself wound up for a bigger release[end if].";
 			if Player is herm:
 				say "     Being a herm, you place a hand at your cock[smn] and the other at your cunt[sfn] and start playing with them. You stroke your [cock size desc of Player] [Cock of Player] shaft slowly at first while fingering the wet folds of your puss[yfn]. Precum dribbles onto you while your feminine juices soak your other hand. You move your hand away from time to time to rub your [Ball Size Adjective of Player] [Balls], feeling the pressure build up in them.";
 				WaitLineBreak;
@@ -90,7 +89,6 @@ instead of using porn collection:
 					decrease muskwave by 75;
 			follow the turnpass rule;
 
-
 to say simplemast:
 	say "     You settle yourself down to [if Player is herm]play around with your junk for a bit[else if Player is male]jerk yourself off briefly[else]give yourself a quick fingering[end if]. You grab one of the magazines for added inspiration and get yourself off, relieving some of your excess arousal";
 	if mouse girl is listed in companionList of Player:
@@ -105,6 +103,5 @@ to say simplemast:
 	else:
 		say ".";
 	now Libido of Player is ( 4 * Libido of Player ) / 5;
-
 
 Masturbate ends here.

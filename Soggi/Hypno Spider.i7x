@@ -4,14 +4,10 @@ Version 1 of Hypno Spider by Soggi begins here.
 
 [ Version 1 by Soggi.]
 
-
 Section 1 - Creature Responses
 
 to say Hypno Spider Wins:
-	if HP of Player > 0: [player submitted]
-		say "     Instead of looking away, you stare intently into the spider's sparkling eyes.";
-	else:
-		say "     Weakened physically, you slump to your knees as the Hypno Spider approaches. You find yourself staring into its eyes as a sparkling pattern emerges behind their occasional shimmers.";
+	say "     [if HP of Player > 0]Instead of looking away, you stare intently into the spider's sparkling eyes[else]Weakened physically, you slump to your knees as the Hypno Spider approaches. You find yourself staring into its eyes as a sparkling pattern emerges behind their occasional shimmers[end if].";
 	say "     The Hypno Spider rises up on its hind legs and flashes of light wash over your face. You feel your mind slipping away, and your body relaxes as you give in to strange pulsing lights. You moan blankly while the spider starts to move quickly around you and a thick sticky layer of silk wraps around your arms and chest. The silk tightens around you, squeezing your [short breast size desc of player] breasts and making you gasp for breath. The spider maneuvers your limp body on the ground and wraps strong silken ropes around your legs, then you feel yourself being lifted up into the air, suspended in the air by the silk, legs slightly apart. You're twisted again and again as the silk wraps around your body... and you feel the last of your willpower fading as a thick sticky sheet wraps around your face, just barely permeated enough to breathe shallowly through.";
 	WaitLineBreak;
 	say "     The hypnotic trance starts to fade but you soon realize you're unable to move, dangling from silken strings feeling the legs of the spider skittering over your ensnared and bound body. It waits patiently, watching you wriggle for a few minutes trying to get free, but struggling is just making you more and more exhausted.";
@@ -28,16 +24,12 @@ to say Hypno Spider Wins:
 	say "     You wait in panic for the inevitable eggs to squeeze out of the spider's long ovipositor, but seemingly satisfied for now, the spider pulls out of you and leaves you wrapped snugly in your sticky cocoon. In your mind you can picture the spider so easily wrapping you tighter and dragging you to its lair to be used over and over... but no other spiders arrive. After many minutes the cocoon becomes dry enough for you to tear through and escape, and you quickly flee the scene.";
 
 to say Hypno Spider Loses:
-	if fightoutcome is 11: [submitted by libido victory]
-		say "     As the Hypno Spider becomes more and more aroused it seems increasingly confused, unsure whether to attack or submit to your advances. Flustered, the spider escapes quickly down the nearby sewer drain. You consider following, but decide to move on for now.";
-	else:
-		say "     Striking a final decisive blow to the Hypno Spider, the creature curls its legs up on itself and a puddle of sticky slime oozes out from its erect ovipositor. Examining the creature it seems entirely desiccated. You decide to move on for now.";
-	LineBreak;
-
-Section 2 - Creature Insertion
+	say "     [if fightoutcome is 11]As the Hypno Spider becomes more and more aroused it seems increasingly confused, unsure whether to attack or submit to your advances. Flustered, the spider escapes quickly down the nearby sewer drain. You consider following, but[else]Striking a final decisive blow to the Hypno Spider, the creature curls its legs up on itself and a puddle of sticky slime oozes out from its erect ovipositor. Examining the creature it seems entirely desiccated. You[end if] decide to move on for now.";
 
 to say Hypno Spider Desc:
 	say "     Walking down a dark alley that seems infrequently traveled, you step into invisible strands of a spiderweb. Much stickier and stronger than you expect, it takes a few moments for you to break free. You hear a noise and step away just in time to avoid a massive black spider the size of a medium dog dropping down from the ceiling. Its body is covered in a thick layer of hair, and its eyes seem to sparkle with a strange mesmerizing light.";
+
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -117,6 +109,5 @@ When Play begins:
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "hump"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
-
 
 Hypno Spider ends here.

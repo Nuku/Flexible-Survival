@@ -8,8 +8,6 @@ Version 1 of Campus Couple NPC by Closerhenry begins here.
 [   1: Have learned where the couple's room                             ]
 [   100: Permanently locked out of the two                              ]
 
-CampusCoupleRelationship is a number that varies.
-
 An everyturn rule:
 	if CampusCoupleRelationship > 0:
 		if daytimer is day and (Jadako is in Jadako's Room or Joseph is in Jadako's Room):
@@ -28,10 +26,7 @@ Object	Name
 Jadako's Room	"Jadako's Room"
 
 Jadako's Room is a room.
-Description of Jadako's Room is "[jadakoroomdesc]".
-
-To say jadakoroomdesc:
-	say "     Jadako's room is a standard college dorm room. It's got different video game and anime posters hanging throughout, most depicting buff male characters. A television sits on a table with a collection of different DVDs, all of some anime or movie. A large, open glass window is on the other end of the room. Atop its windowsill is a collection of exotic sex toys, all proudly on display. The sheets to Jadako's bed are thrown about, suggesting he doesn't do a great job of staying tidy.";
+Description of Jadako's Room is "     Jadako's room is a standard college dorm room. It's got different video game and anime posters hanging throughout, most depicting buff male characters. A television sits on a table with a collection of different DVDs, all of some anime or movie. A large, open glass window is on the other end of the room. Atop its windowsill is a collection of exotic sex toys, all proudly on display. The sheets to Jadako's bed are thrown about, suggesting he doesn't do a great job of staying tidy.[line break]".
 
 to connect Jadako's Room:
 	change the south exit of Jadako's Room to Tenvale College Male Dorms;
@@ -177,20 +172,20 @@ to say JadakoTalkMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[JadakoTalk1]";
-				else if (nam is "Coach Weber"):
-					say "[JadakoTalk2]";
-				else if (nam is "Sports"):
-					say "[JadakoTalk3]";
+				if title entry is:
+					-- "Himself":
+						say "[JadakoTalk1]";
+					-- "Coach Weber":
+						say "[JadakoTalk2]";
+					-- "Sports":
+						say "[JadakoTalk3]";
 				wait for any key;
 				say "[JadakoTalkMenu]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
-			say "     You step back from Jadako, who looks at you a little funny. 'OK, nevermind, I guess?' he questions.";
+			say "     You step back from Jadako, who looks at you a little funny. 'OK, never mind, I guess?' he questions.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
@@ -247,14 +242,14 @@ to say JosephTalkMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[JosephTalk1]";
-				else if (nam is "Jadako"):
-					say "[JosephTalk2]";
-				else if (nam is "Sports"):
-					say "[JosephTalk3]";
+				if title entry is:
+					-- "Himself":
+						say "[JosephTalk1]";
+					-- "Jadako":
+						say "[JosephTalk2]";
+					-- "Sports":
+						say "[JosephTalk3]";
 				wait for any key;
 				say "[JosephTalkMenu]";
 		else if calcnumber is 0:
@@ -327,22 +322,21 @@ to say CampusCoupleSexMenu:
 			say "[title entry]: [description entry]?";
 			if Player consents:
 				LineBreak;
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Be Spitroasted"):
-					say "[CampusCoupleSex1]";
-				else if (nam is "Spitroast Jadako"):
-					say "[CampusCoupleSex2]";
-				else if (nam is "Cockworship"):
-					say "[CampusCoupleSex3]";
-				wait for any key;
+				if title entry is:
+					-- "Be Spitroasted":
+						say "[CampusCoupleSex1]";
+					-- "Spitroast Jadako":
+						say "[CampusCoupleSex2]";
+					-- "Cockworship":
+						say "[CampusCoupleSex3]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You change your mind, deciding now isn't a good time. The two understand, since they can always fuck each other later.";
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say CampusCoupleSex1:

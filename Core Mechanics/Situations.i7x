@@ -22,7 +22,7 @@ A situation has a text called sarea. Sarea of a situation is usually "Outside".
 A situation has a number called level. The level of a situation is usually 0. [minimum level to encounter randomly]
 A situation has a number called minscore. The minscore of a situation is usually -2147483648.
 A featset is a kind of thing.
-inasituation is a truth state that varies. inasituation is normally false. [used to bypass standard combat start / win / loss messages when fighting a creature]
+inasituation is a truth state that varies.[@Tag:NotSaved] inasituation is normally false. [used to bypass standard combat start / win / loss messages when fighting a creature]
 Does the player mean examining a situation: it is very unlikely.
 
 to say ResolveError:
@@ -82,12 +82,9 @@ Definition: A scavevent (called x) is scavable:
 			yes;
 	no;
 
-
-
-
-CurrentWalkinEvent_ConditionsMet is a truth state that varies. CurrentWalkinEvent_ConditionsMet is usually false. [@Tag:NotSaved]
-CurrentWalkinEvent_WalkArrival is a truth state that varies. CurrentWalkinEvent_WalkArrival is usually false. [@Tag:NotSaved]
-CurrentWalkinEvent_NavArrival is a truth state that varies. CurrentWalkinEvent_NavArrival is usually false. [@Tag:NotSaved]
+CurrentWalkinEvent_ConditionsMet is a truth state that varies.[@Tag:NotSaved] CurrentWalkinEvent_ConditionsMet is usually false.
+CurrentWalkinEvent_WalkArrival is a truth state that varies.[@Tag:NotSaved] CurrentWalkinEvent_WalkArrival is usually false.
+CurrentWalkinEvent_NavArrival is a truth state that varies.[@Tag:NotSaved] CurrentWalkinEvent_NavArrival is usually false.
 
 Table of NavInEvents
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
@@ -98,7 +95,6 @@ Table of WalkInEvents
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
 1	"ExampleEvent"	ExampleEvent	"[EventConditions_ExampleEvent]"	Grey Abbey Library	2500	2	100
 with 1000 blank rows
-
 
 [ Priority Examples                                                                            ]
 [  1 - ASAP, Life or Death Situations (NOT REPEATABLE!)                                        ]
@@ -186,7 +182,6 @@ to WalkInEvent_Check:
 		if debug is at level 5:
 			say "     DEBUG: No WalkInEvents found in [CurrentRoom].";
 
-
 to NavInEvent_Check (NavTarget - a room):
 	if debug is at level 5:
 		say "     DEBUG: Starting to check [NavTarget] for NavInEvents.";
@@ -221,7 +216,6 @@ to NavInEvent_Check (NavTarget - a room):
 	else:
 		if debug is at level 5:
 			say "     DEBUG: No NavInEvents found in [NavTarget].";
-
 
 to say LibraryEntry_NavOrWalk:
 	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]

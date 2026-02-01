@@ -70,7 +70,7 @@ to say ResolveEvent Campus Lovers:
 		else if calcnumber is 2:
 			say "     Not wanting to risk these two unknown morphs, you slowly back away. After you get far enough away and it seems they haven't noticed you, you take a slight jog to put a greater distance between you and them. As you look back to make sure they aren't following you, you see the two against the wall, the cat slowly sliding onto the dog's cock. At least they aren't after you.";
 			now Resolution of Campus Lovers is 2; [didn't watch them #1]
-		else:
+		else if calcnumber is 3:
 			say "     Something just doesn't sit right with you about these two. You make sure to get away without being detected, before making a mental note to avoid all further contact with the two.";
 			now CampusCoupleRelationship is 100;
 			now Resolution of Campus Lovers is 100; [avoiding them]
@@ -107,24 +107,17 @@ to say ResolveEvent Campus Lovers:
 			say "     Now seems like a perfect opportunity to leave, with the two knotted together. You turn to begin sneaking away, but in a horrible turn of luck, a heavy object hits you on the side of your head. Letting out a cry of surprise, you realize it's just a football. 'Sorry, dude! Could you throw that back to me?' a far off athlete yells to you. A grumble escapes your throat as you angrily throw the leather ball back. The athlete flashes you a thumbs up before running off. You turn your head back towards the window to the couple both looking toward you. The Coach is trying to avoid eye-contact with you, clearly embarrassed, however Jadako has a wide smile as he waves to you as he grinds on his lover's knot. 'Hey there, did you enjoy the show?' he asks humorously. You rub the back of your head as you apologize for peeping but the feline shakes his head. 'Nah, it's fine. If you wanna see more like this, you could always stop by again. Maybe do a little more than watch next time...' he suggests flirtatiously.";
 			say "     'As soon as you enter the dorms, it's the room to your north. Come on by, we'll be happy to entertain you...' the slutty feline states. Coach Weber begins to protest, but Jadako turns and silences him with a kiss. The two seem to forget, or at least disregard, your presence as they roll around on the bed hugging and making out. You leave the two to their business, wondering when you might stop by again.";
 			NPCSexAftermath Jadako receives "AssFuck" from Joseph;
-			now Campus Lovers is resolved;
 			now Resolution of Campus Lovers is 5; [watched them #3]
-			now CampusCoupleRelationship is 1;
-			if daytimer is night:
-				move Joseph to Jadako's Room;
-				move Jadako to Jadako's Room;
-			connect Jadako's Room;
 		else:
 			LineBreak;
 			say "     As hot as this is, you don't really have time to watch the two fuck. You take care to break away without causing too much noise. As you leave, you hear the two moaning loudly. At least they are having a good time...";
-			now Campus Lovers is resolved;
 			now Resolution of Campus Lovers is 6; [didn't watch them #3]
-			now CampusCoupleRelationship is 1;
-			if daytimer is night:
-				move Joseph to Jadako's Room;
-				move Jadako to Jadako's Room;
-			connect Jadako's Room;
+		now Campus Lovers is resolved;
+		now CampusCoupleRelationship is 1;
+		if daytimer is night:
+			move Joseph to Jadako's Room;
+			move Jadako to Jadako's Room;
+		connect Jadako's Room;
 	now CampusLoversProgressTurn is turns; [saves the last turn in which their story progressed]
-
 
 Campus Lovers ends here.

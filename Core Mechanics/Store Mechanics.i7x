@@ -1,9 +1,7 @@
 Version 1 of Store Mechanics by Core Mechanics begins here.
 [Written by Luneth]
 
-
 [This will showcase all of the official stores that are in-game. The purpose of this file is of course to make the stores accessible, but also to help creators make their own stores if needed. Keep in mind, not all stores work the same way, so find a template that works for you.]
-
 
 Book 1 - The Black Market [Store within the zephyr building]
 
@@ -154,18 +152,18 @@ to say TPC male clothing selector: [Main male clothing Menu (level 1)]
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Browse the male headwear"):
-				say "[browse_TPK_male_headwear]";
-			else if (nam is "Browse the male jackets"):
-				say "[browse_TPK_male_jackets]";
-			else if (nam is "Browse the male legwear"):
-				say "[browse_TPK_male_legwear]";
-			else if (nam is "Browse the male underwear"):
-				say "[browse_TPK_male_underwear]";
-			else if (nam is "Browse the male shoes"):
-				say "[browse_TPK_male_shoes]";
+			if title entry is:
+				-- "Browse the male headwear":
+					say "[browse_TPK_male_headwear]";
+				-- "Browse the male jackets":
+					say "[browse_TPK_male_jackets]";
+				-- "Browse the male legwear":
+					say "[browse_TPK_male_legwear]";
+				-- "Browse the male underwear":
+					say "[browse_TPK_male_underwear]";
+				-- "Browse the male shoes":
+					say "[browse_TPK_male_shoes]";
 		else if calcnumber is 100:
 			LineBreak;
 			now sextablerun is 1;
@@ -200,9 +198,8 @@ to say browse_TPK_male_headwear: [Male clothing category submenu (level 2 under 
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Bike Helmets"):
+			if title entry is "Bike Helmets":
 				say "[TPK_Male_BikeHelmetMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
 			LineBreak;
@@ -239,9 +236,8 @@ to say TPK_Male_BikeHelmetMenu: [Male clothing category sub-submenu (level 3 und
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Dragon Bike Helmet"):
+			if title entry is "Dragon Bike Helmet":
 				say "[DragonBikeHelmetTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -304,9 +300,8 @@ to say browse_TPK_male_jackets: [Male clothing category submenu (level 2 under t
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Greatcoats"):
+			if title entry is "Greatcoats":
 				say "[TPK_Male_GreatcoatMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
 			LineBreak;
@@ -348,12 +343,12 @@ to say TPK_Male_GreatcoatMenu: [Male clothing category sub-submenu (level 3 unde
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Black Greatcoat"):
-				say "[BlackGreatcoatTalk]"; [choose level 4 item selection]
-			else if (nam is "Gray Greatcoat"):
-				say "[GrayGreatcoatTalk]"; [choose level 4 item selection]
+			if title entry is:
+				-- "Black Greatcoat":
+					say "[BlackGreatcoatTalk]"; [choose level 4 item selection]
+				-- "Gray Greatcoat":
+					say "[GrayGreatcoatTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
 			say "[browse_TPK_male_jackets]"; [return to level 2 submenu]
@@ -439,9 +434,8 @@ to say browse_TPK_male_legwear: [Male clothing category submenu (level 2 under t
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Camo Pants"):
+			if title entry is "Camo Pants":
 				say "[TPK_Male_CamoPantsMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
 			LineBreak;
@@ -478,9 +472,8 @@ to say TPK_Male_CamoPantsMenu: [Male clothing category sub-submenu (level 3 unde
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Green Camo Pants"):
+			if title entry is "Green Camo Pants":
 				say "[GreenCamoPantsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -553,14 +546,14 @@ to say browse_TPK_male_underwear: [Male clothing category submenu (level 2 under
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Briefs"):
-				say "[TPK_Male_BriefsMenu]"; [choose level 3 item sub-submenu]
-			else if (nam is "Boxer Briefs"):
-				say "[TPK_Male_BoxerBriefsMenu]"; [choose level 3 item sub-submenu]
-			else if (nam is "Jockstraps"):
-				say "[TPK_Male_JockstrapsMenu]"; [choose level 3 item sub-submenu]
+			if title entry is:
+				-- "Briefs":
+					say "[TPK_Male_BriefsMenu]"; [choose level 3 item sub-submenu]
+				-- "Boxer Briefs":
+					say "[TPK_Male_BoxerBriefsMenu]"; [choose level 3 item sub-submenu]
+				-- "Jockstraps":
+					say "[TPK_Male_JockstrapsMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
 			LineBreak;
 			say "[TPC male clothing selector]"; [return to level 1 selector]
@@ -596,9 +589,8 @@ to say TPK_Male_BriefsMenu: [Male clothing category sub-submenu (level 3 under t
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "White Briefs"):
+			if title entry is "White Briefs":
 				say "[WhiteBriefsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -659,9 +651,8 @@ to say TPK_Male_BoxerBriefsMenu: [Male clothing category sub-submenu (level 3 un
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Black Boxer Briefs"):
+			if title entry is "Black Boxer Briefs":
 				say "[BlackBoxerBriefsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -722,9 +713,8 @@ to say TPK_Male_JockstrapsMenu: [Male clothing category sub-submenu (level 3 und
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Orange Jockstrap"):
+			if title entry is "Orange Jockstrap":
 				say "[OrangeJockstrapTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -787,9 +777,8 @@ to say browse_TPK_male_shoes: [Male clothing category submenu (level 2 under the
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Combat Boots"):
+			if title entry is "Combat Boots":
 				say "[browse_TPK_Male_CombatBootsMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
 			LineBreak;
@@ -826,9 +815,8 @@ to say browse_TPK_Male_CombatBootsMenu: [Male clothing category sub-submenu (lev
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Black Combat Boots"):
+			if title entry is "Black Combat Boots":
 				say "[BlackCombatBootsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -923,16 +911,16 @@ to say TPC female clothing selector: [Main female clothing Menu (level 1)]
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Browse the female headwear"):
-				say "[browse_TPK_female_headwear]";
-			else if (nam is "Browse the female legwear"):
-				say "[browse_TPK_female_legwear]";
-			else if (nam is "Browse the female underwear"):
-				say "[browse_TPK_female_underwear]";
-			else if (nam is "Browse the female shoes"):
-				say "[browse_TPK_female_shoes]";
+			if title entry is:
+				-- "Browse the female headwear":
+					say "[browse_TPK_female_headwear]";
+				-- "Browse the female legwear":
+					say "[browse_TPK_female_legwear]";
+				-- "Browse the female underwear":
+					say "[browse_TPK_female_underwear]";
+				-- "Browse the female shoes":
+					say "[browse_TPK_female_shoes]";
 		else if calcnumber is 100:
 			LineBreak;
 			now sextablerun is 1;
@@ -977,14 +965,14 @@ to say browse_TPK_female_headwear: [Female clothing category submenu (level 2 un
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Bike Helmets"):
-				say "[browse_TPK_Female_BikeHelmetsMenu]"; [choose level 3 item sub-submenu]
-			else if (nam is "Large Bows"):
-				say "[browse_TPK_Female_LargeBowsMenu]"; [choose level 3 item sub-submenu]
-			else if (nam is "Glasses"):
-				say "[browse_TPK_Female_GlassesMenu]"; [choose level 3 item sub-submenu]
+			if title entry is:
+				-- "Bike Helmets":
+					say "[browse_TPK_Female_BikeHelmetsMenu]"; [choose level 3 item sub-submenu]
+				-- "Large Bows":
+					say "[browse_TPK_Female_LargeBowsMenu]"; [choose level 3 item sub-submenu]
+				-- "Glasses":
+					say "[browse_TPK_Female_GlassesMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
 			LineBreak;
 			say "[TPC female clothing selector]"; [return to level 1 selector]
@@ -1020,9 +1008,8 @@ to say browse_TPK_Female_BikeHelmetsMenu: [Female clothing category sub-submenu 
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Princess Bike Helmet"):
+			if title entry is "Princess Bike Helmet":
 				say "[PrincessBikeHelmetTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -1098,16 +1085,16 @@ to say browse_TPK_Female_LargeBowsMenu: [Female clothing category sub-submenu (l
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Large White Bow"):
-				say "[LargeWhiteBowTalk]"; [choose level 4 item selection]
-			else if (nam is "Large Black Bow"):
-				say "[LargeBlackBowTalk]"; [choose level 4 item selection]
-			else if (nam is "Large Pink Bow"):
-				say "[LargePinkBowTalk]"; [choose level 4 item selection]
-			else if (nam is "Large Polka Dot Bow"):
-				say "[LargePolkaDotBowTalk]"; [choose level 4 item selection]
+			if title entry is:
+				-- "Large White Bow":
+					say "[LargeWhiteBowTalk]"; [choose level 4 item selection]
+				-- "Large Black Bow":
+					say "[LargeBlackBowTalk]"; [choose level 4 item selection]
+				-- "Large Pink Bow":
+					say "[LargePinkBowTalk]"; [choose level 4 item selection]
+				-- "Large Polka Dot Bow":
+					say "[LargePolkaDotBowTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
 			say "[browse_TPK_female_headwear]"; [return to level 2 submenu]
@@ -1239,9 +1226,8 @@ to say browse_TPK_Female_GlassesMenu: [Female clothing category sub-submenu (lev
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Rose-tinted Glasses"):
+			if title entry is "Rose-tinted Glasses":
 				say "[Rose-tintedGlassesTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -1314,14 +1300,14 @@ to say browse_TPK_female_legwear: [Female clothing category submenu (level 2 und
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Jogging Pants"):
-				say "[browse_TPK_Female_JoggingPantsMenu]"; [choose level 3 item sub-submenu]
-			else if (nam is "Shorts"):
-				say "[browse_TPK_Female_ShortsMenu]"; [choose level 3 item sub-submenu]
-			else if (nam is "Skirts"):
-				say "[browse_TPK_Female_SkirtsMenu]"; [choose level 3 item sub-submenu]
+			if title entry is:
+				-- "Jogging Pants":
+					say "[browse_TPK_Female_JoggingPantsMenu]"; [choose level 3 item sub-submenu]
+				-- "Shorts":
+					say "[browse_TPK_Female_ShortsMenu]"; [choose level 3 item sub-submenu]
+				-- "Skirts":
+					say "[browse_TPK_Female_SkirtsMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
 			LineBreak;
 			say "[TPC female clothing selector]"; [return to level 1 selector]
@@ -1357,9 +1343,8 @@ to say browse_TPK_Female_JoggingPantsMenu: [Female clothing category sub-submenu
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Pink Jogging Pants"):
+			if title entry is "Pink Jogging Pants":
 				say "[PinkJoggingPantsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -1420,9 +1405,8 @@ to say browse_TPK_Female_ShortsMenu: [Female clothing category sub-submenu (leve
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Flowered Bermuda Shorts"):
+			if title entry is "Flowered Bermuda Shorts":
 				say "[FloweredBermudaShortsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -1493,14 +1477,14 @@ to say browse_TPK_Female_SkirtsMenu: [Female clothing category sub-submenu (leve
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Pencil Skirts"):
-				say "[browse_TPK_Female_PencilSkirtsMenu]"; [choose level 4 item selection]
-			else if (nam is "Mini Skirts"):
-				say "[browse_TPK_Female_MiniSkirtsMenu]"; [choose level 4 item selection]
-			else if (nam is "Gypsy Skirts"):
-				say "[browse_TPK_Female_GypsySkirtsMenu]"; [choose level 4 item selection]
+			if title entry is:
+				-- "Pencil Skirts":
+					say "[browse_TPK_Female_PencilSkirtsMenu]"; [choose level 4 item selection]
+				-- "Mini Skirts":
+					say "[browse_TPK_Female_MiniSkirtsMenu]"; [choose level 4 item selection]
+				-- "Gypsy Skirts":
+					say "[browse_TPK_Female_GypsySkirtsMenu]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
 			say "[browse_TPK_female_legwear]"; [return to level 2 submenu]
@@ -1536,9 +1520,8 @@ to say browse_TPK_Female_PencilSkirtsMenu: [Female clothing category sub-submenu
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Light-blue Pencil Skirt"):
+			if title entry is "Light-blue Pencil Skirt":
 				say "[Light-bluePencilSkirtTalk]"; [choose level 5 item selection]
 			wait for any key;
 		else if calcnumber is 99:
@@ -1605,12 +1588,12 @@ to say browse_TPK_Female_MiniSkirtsMenu: [Female clothing category sub-submenu (
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Black Mini Skirt"):
-				say "[BlackMiniSkirtTalk]"; [choose level 5 item selection]
-			else if (nam is "Pink Mini Skirt"):
-				say "[PinkMiniSkirtTalk]"; [choose level 5 item selection]
+			if title entry is:
+				-- "Black Mini Skirt":
+					say "[BlackMiniSkirtTalk]"; [choose level 5 item selection]
+				-- "Pink Mini Skirt":
+					say "[PinkMiniSkirtTalk]"; [choose level 5 item selection]
 			wait for any key;
 		else if calcnumber is 99:
 			LineBreak;
@@ -1695,9 +1678,8 @@ to say browse_TPK_Female_GypsySkirtsMenu: [Female clothing category sub-submenu 
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Gypsy Floral Skirt"):
+			if title entry is "Gypsy Floral Skirt":
 				say "[GypsyFloralSkirtTalk]"; [choose level 5 item selection]
 			wait for any key;
 		else if calcnumber is 99:
@@ -1766,12 +1748,12 @@ to say browse_TPK_female_underwear: [Female clothing category submenu (level 2 u
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Bras"):
-				say "[TPK_Female_BrasMenu]"; [choose level 3 item sub-submenu]
-			else if (nam is "Panties"):
-				say "[TPK_Female_PantiesMenu]"; [choose level 3 item sub-submenu]
+			if title entry is:
+				-- "Bras":
+					say "[TPK_Female_BrasMenu]"; [choose level 3 item sub-submenu]
+				-- "Panties":
+					say "[TPK_Female_PantiesMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
 			LineBreak;
 			say "[TPC female clothing selector]"; [return to level 1 selector]
@@ -1807,9 +1789,8 @@ to say TPK_Female_BrasMenu: [Female clothing category sub-submenu (level 3 under
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Simple Black Bra"):
+			if title entry is "Simple Black Bra":
 				say "[SimpleBlackBraTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -1870,9 +1851,8 @@ to say TPK_Female_PantiesMenu: [Female clothing category sub-submenu (level 3 un
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Pink Panties"):
+			if title entry is "Pink Panties":
 				say "[PinkPantiesTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -1940,12 +1920,12 @@ to say browse_TPK_female_shoes: [Female clothing category submenu (level 2 under
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Pumps"):
-				say "[TPK_Female_PumpsMenu]"; [choose level 3 item sub-submenu]
-			else if (nam is "Stilettos"):
-				say "[TPK_Female_StilettosMenu]"; [choose level 3 item sub-submenu]
+			if title entry is:
+				-- "Pumps":
+					say "[TPK_Female_PumpsMenu]"; [choose level 3 item sub-submenu]
+				-- "Stilettos":
+					say "[TPK_Female_StilettosMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
 			LineBreak;
 			say "[TPC female clothing selector]"; [return to level 1 selector]
@@ -1981,9 +1961,8 @@ to say TPK_Female_PumpsMenu: [Female clothing category sub-submenu (level 3 unde
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Bright-red Pumps"):
+			if title entry is "Bright-red Pumps":
 				say "[Bright-redPumpsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -2044,9 +2023,8 @@ to say TPK_Female_StilettosMenu: [Female clothing category sub-submenu (level 3 
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Black Stiletto Heels"):
+			if title entry is "Black Stiletto Heels":
 				say "[BlackStilettoHeelsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -2148,18 +2126,18 @@ to say RD costume clothing selector: [Main costume clothing Menu (level 1)]
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Browse the biker section"):
-				say "[browse_RD_biker_section]";
-			else if (nam is "Browse the underwear section"):
-				say "[browse_RD_underwear_section]";
-			else if (nam is "Browse the wild west section"):
-				say "[browse_RD_wildwest_section]";
-			[
-			if (nam is "Browse the BDSM section"):
-				say "[browse_RD_BDSM_section]";
-			]
+			if title entry is:
+				-- "Browse the biker section":
+					say "[browse_RD_biker_section]";
+				-- "Browse the underwear section":
+					say "[browse_RD_underwear_section]";
+				-- "Browse the wild west section":
+					say "[browse_RD_wildwest_section]";
+				[
+				-- "Browse the BDSM section":
+					say "[browse_RD_BDSM_section]";
+				]
 		else if calcnumber is 100:
 			now sextablerun is 1;
 			say "     You step back from the section that you were investigating.";
@@ -2193,9 +2171,8 @@ to say browse_RD_biker_section: [costume clothing category submenu (level 2 unde
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Biker Helmets"):
+			if title entry is "Biker Helmets":
 				say "[RD_Biker_HelmetsMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
 			LineBreak;
@@ -2247,16 +2224,16 @@ to say RD_Biker_HelmetsMenu: [Costume clothing category sub-submenu (level 3 und
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Black Motorcycle Helmet"):
-				say "[BlackMotorcycleHelmetTalk]"; [choose level 4 item selection]
-			else if (nam is "Flaming Motorcycle Helmet"):
-				say "[FlamingMotorcycleHelmetTalk]"; [choose level 4 item selection]
-			else if (nam is "Succubus Motorcycle Helmet"):
-				say "[SuccubusMotorcycleHelmetTalk]"; [choose level 4 item selection]
-			else if (nam is "Incubus Motorcycle Helmet"):
-				say "[IncubusMotorcycleHelmetTalk]"; [choose level 4 item selection]
+			if title entry is:
+				-- "Black Motorcycle Helmet":
+					say "[BlackMotorcycleHelmetTalk]"; [choose level 4 item selection]
+				-- "Flaming Motorcycle Helmet":
+					say "[FlamingMotorcycleHelmetTalk]"; [choose level 4 item selection]
+				-- "Succubus Motorcycle Helmet":
+					say "[SuccubusMotorcycleHelmetTalk]"; [choose level 4 item selection]
+				-- "Incubus Motorcycle Helmet":
+					say "[IncubusMotorcycleHelmetTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
 			say "[browse_RD_biker_section]"; [return to level 2 submenu]
@@ -2390,9 +2367,8 @@ to say browse_RD_underwear_section: [costume clothing category submenu (level 2 
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Briefs"):
+			if title entry is "Briefs":
 				say "[RD_BriefsMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
 			LineBreak;
@@ -2429,9 +2405,8 @@ to say RD_BriefsMenu: [Costume clothing category sub-submenu (level 3 under the 
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Black Mesh Briefs"):
+			if title entry is "Black Mesh Briefs":
 				say "[BlackMeshBriefsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -2499,12 +2474,12 @@ to say browse_RD_wildwest_section: [costume clothing category submenu (level 2 u
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Cowboy Hats"):
-				say "[RD_CowboyHatsMenu]"; [choose level 3 item sub-submenu]
-			else if (nam is "Cowboy Boots"):
-				say "[RD_CowboyBootsMenu]"; [choose level 3 item sub-submenu]
+			if title entry is:
+				-- "Cowboy Hats":
+					say "[RD_CowboyHatsMenu]"; [choose level 3 item sub-submenu]
+				-- "Cowboy Boots":
+					say "[RD_CowboyBootsMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
 			LineBreak;
 			say "[RD costume clothing selector]"; [return to level 1 selector]
@@ -2540,9 +2515,8 @@ to say RD_CowboyHatsMenu: [Costume clothing category sub-submenu (level 3 under 
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Cow-print Cowboy Hat"):
+			if title entry is "Cow-print Cowboy Hat":
 				say "[Cow-printCowboyHatTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -2603,9 +2577,8 @@ to say RD_CowboyBootsMenu: [Costume clothing category sub-submenu (level 3 under
 			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Cow-print Cowgirl Boots"):
+			if title entry is "Cow-print Cowgirl Boots":
 				say "[Cow-printCowgirlBootsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
 			LineBreak;
@@ -2675,7 +2648,8 @@ to say browse_RD_BDSM_section: [costume clothing category submenu (level 2 under
 			]
 			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Masks"):
+			if title entry is:
+			-- "Masks":
 				say "[RD_MasksMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
 			say "[RD costume clothing selector]"; [return to level 1 selector]
@@ -2716,7 +2690,8 @@ to say RD_MasksMenu: [Costume clothing category sub-submenu (level 3 under the c
 			]
 			let nam be title entry;
 			now sextablerun is 1;
-			if (nam is "Latex Mouse Mask"):
+			if title entry is:
+			-- "Latex Mouse Mask":
 				say "[LatexMouseMaskTalk]"; [choose level 4 item selection]
 			wait for any key;
 		else if calcnumber is 99:
@@ -2753,10 +2728,6 @@ to say LatexMouseMaskTalk: [item selection (level 4)]
 
 Part 5 - Night Walker Section
 
-
-
 Book 4 - The Painted Dragon [Store found through Harolds quests]
-
-
 
 Store Mechanics ends here.

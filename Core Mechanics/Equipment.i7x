@@ -124,7 +124,6 @@ An everyturn rule:
 		say "[bold type]Your scalp tingles a little where it touches the incubus motorcycle helmet.[roman type][line break]";
 		infect "Incubus";
 
-
 Part 2 - Bike Helmets
 
 Table of Game Objects (continued)
@@ -811,7 +810,6 @@ Placement of fur-lined armguards is "body".
 Descmod of fur-lined armguards is "A set of black leather arm guards protect your forearms.".
 Slot of fur-lined armguards is "arms".
 Scent of fur-lined armguards is "Smells like leather and fur.".
-
 
 Part 2 - Lab Gloves
 
@@ -2158,7 +2156,6 @@ Descmod of light-blue skinny jeans is "A pair of light-blue jeans cover your hip
 Slot of light-blue skinny jeans is "legs".
 Scent of light-blue skinny jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
-
 Part 5 - Hot Pants
 
 Table of Game Objects (continued)
@@ -2652,7 +2649,6 @@ Slot of brown leather sandals is "feet".
 Scent of brown leather sandals is "The sandals smell like leather.".
 
 Part 2 - Loafers
-
 
 Table of Game Objects (continued)
 name	desc	weight	object

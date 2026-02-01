@@ -7,7 +7,7 @@ Things have a text called scent.
 Lusting is a text that varies. [used in the brain description rule]
 descr is a text that varies. [usually filled with various description snippets in all sorts of situations]
 sh-descr is a text that varies.
-cupsize is an indexed text that varies. Cupsize is "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
+[cupsize is an indexed text that varies.] Cupsize is always "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
 
 Part 1 - Declarations
 
@@ -97,7 +97,6 @@ A person has a text called PlayerOriginalgender. PlayerOriginalGender is usually
 A person has a text called PlayerLastGender. PlayerLastGender is usually "Undefined". [gender of the player during the last meeting]
 A person has a text called PlayerLastBodytype. PlayerLastBodytype is usually "Undefined". [bodytype of the player during the last meeting]
 
-
 A person has a truth state called OralVirgin. OralVirgin is usually true.
 A person has a truth state called Virgin. Virgin is usually true.
 A person has a truth state called AnalVirgin. AnalVirgin is usually true.
@@ -111,8 +110,6 @@ A person has a list of text called conversation.
 A person has a list of text called Traits. [list of traits/memories, invisible to the player]
 
 A person can be a trader.
-
-
 
 Chapter 2 - The Player Object
 
@@ -163,9 +160,9 @@ Player has a number called BehaviorCount_Vore.
 
 to say Player name:
 	if name of Player is "Player":
-		say("Alias D");
+		say "Alias D";
 	else:
-		say("[name of Player]");
+		say "[name of Player]";
 
 Section 2 - Body Parts
 
@@ -290,7 +287,6 @@ A creature has a text called AssSpeciesName. AssSpeciesName is usually "Human".
 A creature has a text called TailSpeciesName. TailSpeciesName is usually "Human".
 A creature has a text called CockSpeciesName. CockSpeciesName is usually "Human".
 A creature has a text called CuntSpeciesName. CuntSpeciesName is usually "Human".
-
 
 Part 2 - Definitions
 
@@ -808,7 +804,6 @@ Definition: A person (called x) is TorsoSkinned:
 	if x is TorsoFurred, no;
 	yes;
 
-
 A person can be ArmsFurred. A person is usually not ArmsFurred.
 
 Definition: A person (called x) is ArmsFurred:
@@ -904,7 +899,6 @@ Definition: A person (called x) is LegsSkinned:
 	if x is LegsFeathered, no;
 	if x is LegsFurred, no;
 	yes;
-
 
 A person can be AssFurred. A person is usually not AssFurred.
 
@@ -1104,7 +1098,6 @@ Definition: A person (called x) is HasLegsSkinAdjective:
 	if Legs Skin Adjective of x is not "", yes;
 	no;
 
-
 A person can be HasAssSkinAdjective. A person is usually not HasAssSkinAdjective.
 
 Definition: A person (called x) is HasAssSkinAdjective:
@@ -1154,7 +1147,6 @@ Definition: A person (called x) is sliding:
 	no;
 
 Part 3 - Descriptive Elements
-
 
 to say Body Size Adjective of ( x - a person ):
 	if scalevalue of x is 1: [~3 ft in height or less]
@@ -1361,7 +1353,6 @@ to say Limbs Adjective of ( x - a person ):
 		else: [high muscle group]
 			say "rippling";
 
-
 [ TODO - Coding Idea: Body changes at high noon]
 [ Hunger < 20: -1 weight; Hunger > 80: +1 weight]
 [ Definition - Working out at the fitness studio]
@@ -1518,7 +1509,6 @@ to say Clit Size Adjective of ( x - a person ):
 		-- 5:
 			say "[one of]very large[or]very big[or]huge[at random]";
 
-
 This is the brain descr rule:
 	if humanity of Player > 90:
 		now descr is "[one of]clean[or]pristine[or]perfectly normal[at random][lusting]";
@@ -1641,10 +1631,9 @@ This is the cunt descr rule:
 Part 4 - Actions
 
 [This is generally not used and bypassed by an "instead of conversing" - talk menus are more useful]
+Conversing is an action applying to one thing.
 understand "talk to/with/-- [person]" as conversing.
 understand "chat with/-- [person]" as conversing.
-
-Conversing is an action applying to one thing.
 
 Check Conversing:
 	if the noun is the player, say "I know this is stressful, but talking to yourself will not help." instead;
@@ -1653,6 +1642,5 @@ Check Conversing:
 carry out conversing:
 	sort conversation of the noun in random order;
 	say "     [Noun] says, '[entry 1 of conversation of noun]'[line break]";
-
 
 Characters ends here.

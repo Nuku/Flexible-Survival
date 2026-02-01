@@ -130,7 +130,6 @@ To Featget:
 				say "Invalid Feat.";
 
 featgrabbing is an action applying to one topic.
-
 understand "featgrab [text]" as featgrabbing.
 
 Check featgrabbing:
@@ -456,62 +455,67 @@ autoattackmode is a number that varies.
 autoattacknormal is an action applying to nothing.
 understand "auto attack normal" as autoattacknormal.
 
+check autoattacknormal:
+	if "Instinctive Combat" is not listed in feats of Player:
+		say "You feel you are missing the instincts to do this." instead;
+
+carry out autoattacknormal:
+	now autoattackmode is 0; [default combat, make choices at normal]
+	say "You calm your instincts and regain control of your actions.";
+
 autoattackberserk is an action applying to nothing.
 understand "auto attack berserk" as autoattackberserk.
+
+check autoattackberserk:
+	if "Instinctive Combat" is not listed in feats of Player:
+		say "You feel you are missing the instincts to do this." instead;
+
+carry out autoattackberserk:
+	now autoattackmode is 1; [autoattack, no choice, always attack]
+	say "You let your aggressive instincts take the forefront, knowing you will attack at any chance.";
 
 autoattackseduce is an action applying to nothing.
 understand "auto attack seduce" as autoattackseduce.
 
+check autoattackseduce:
+	if "Instinctive Combat" is not listed in feats of Player:
+		say "You feel you are missing the instincts to do this." instead;
+
+carry out autoattackseduce:
+	now autoattackmode is 2; [autoseduce, no choice, always seduce]
+	say "You know they want it at least as much as you do. Make them come and get it.";
+
 autoattackpass is an action applying to nothing.
 understand "auto attack pass" as autoattackpass.
+
+check autoattackpass:
+	if "Instinctive Combat" is not listed in feats of Player:
+		say "You feel you are missing the instincts to do this." instead;
+
+carry out autoattackpass:
+	now autoattackmode is 3; [autopass, no choice, always pass]
+	say "You feel calm. You're sure everything will work out in the end. Don't mind the monsters attacking you.";
 
 autoattackcoward is an action applying to nothing.
 understand "auto attack coward" as autoattackcoward.
 
+check autoattackcoward:
+	if "Instinctive Combat" is not listed in feats of Player:
+		say "You feel you are missing the instincts to do this." instead;
+
+carry out autoattackcoward:
+	now autoattackmode is 4; [autoflee, no choice, always flee]
+	say "You focus on the need to escape the monsters, the need to run away.";
+
 autoattacksubmit is an action applying to nothing.
 understand "auto attack submit" as autoattacksubmit.
 
-carry out autoattacknormal:
-	if "Instinctive Combat" is listed in feats of Player:
-		now autoattackmode is 0; [default combat, make choices at normal]
-		say "You calm your instincts and regain control of your actions.";
-	else:
-		say "You feel you are missing the instincts to do this.";
-
-carry out autoattackberserk:
-	if "Instinctive Combat" is listed in feats of Player:
-		now autoattackmode is 1; [autoattack, no choice, always attack]
-		say "You let your aggressive instincts take the forefront, knowing you will attack at any chance.";
-	else:
-		say "You feel you are missing the instincts to do this.";
-
-carry out autoattackseduce:
-	if "Instinctive Combat" is listed in feats of Player:
-		now autoattackmode is 2; [autoseduce, no choice, always seduce]
-		say "You know they want it at least as much as you do. Make them come and get it.";
-	else:
-		say "You feel you are missing the instincts to do this.";
-
-carry out autoattackpass:
-	if "Instinctive Combat" is listed in feats of Player:
-		now autoattackmode is 3; [autopass, no choice, always pass]
-		say "You feel calm. You're sure everything will work out in the end. Don't mind the monsters attacking you.";
-	else:
-		say "You feel you are missing the instincts to do this.";
-
-carry out autoattackcoward:
-	if "Instinctive Combat" is listed in feats of Player:
-		now autoattackmode is 4; [autoflee, no choice, always flee]
-		say "You focus on the need to escape the monsters, the need to run away.";
-	else:
-		say "You feel you are missing the instincts to do this.";
+check autoattacksubmit:
+	if "Instinctive Combat" is not listed in feats of Player:
+		say "You feel you are missing the instincts to do this." instead;
 
 carry out autoattacksubmit:
-	if "Instinctive Combat" is listed in feats of Player:
-		now autoattackmode is 5; [autosubmit, no choice, always submit]
-		say "Your increased libido clouds your thinking. Wouldn't it be fun to let the monsters play with you?";
-	else:
-		say "You feel you are missing the instincts to do this.";
-
+	now autoattackmode is 5; [autosubmit, no choice, always submit]
+	say "Your increased libido clouds your thinking. Wouldn't it be fun to let the monsters play with you?";
 
 Feats ends here.

@@ -18,7 +18,7 @@ When Play begins: [This is Cyn's default creature encounter]
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "She [one of]swings her unnaturally long, sharp claws wildly at you, leaving thin red lines as they cut your [SkinName of Player] body[or]dashes towards you, using her elongated arms to propel herself and kneeing you in the stomach with great force[or]vanishes from view with a little giggle, and before you have time to react, she reappears behind you and kicks you in the back[at random].";
+	now attack entry is "She [one of]swings her unnaturally long, sharp claws wildly at you, leaving thin red lines as they cut your [SkinName of Player in lower case] body[or]dashes towards you, using her elongated arms to propel herself and kneeing you in the stomach with great force[or]vanishes from view with a little giggle, and before you have time to react, she reappears behind you and kicks you in the back[at random].";
 	now defeated entry is "";
 	now victory entry is "";
 	now desc entry is "";
@@ -61,7 +61,7 @@ When Play begins: [This is Cyn's default creature encounter]
 	now TrophyFunction entry is "-";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]ghostly[or]ethereal[or]willowy[or]eldritch[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "Anomaly"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "anomaly"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
@@ -69,6 +69,5 @@ When Play begins: [This is Cyn's default creature encounter]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
-
 
 Hallucination ends here.

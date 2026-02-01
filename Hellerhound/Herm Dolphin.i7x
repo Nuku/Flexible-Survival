@@ -5,8 +5,8 @@ Version 1 of Herm Dolphin by Hellerhound begins here.
 
 Section 1 - Creature Responses
 
-dolphindefeat is a number that varies.
-dolphinconsent is a number that varies.
+[dolphindefeat is a number that varies.
+dolphinconsent is a number that varies.]
 dolphinwantmate is a number that varies.
 dolphintricked is a number that varies.
 
@@ -18,32 +18,36 @@ to say Dolphin wins:
 		say "     ([link]Y[as]y[end link]) - Agree to be the dolphin's mate.";
 		say "     ([link]N[as]n[end link]) - Reject the dolphin, even if it might make her angry.";
 		if Player consents:
+			LineBreak;
 			now dolphinwantmate is 1;
 		else:
+			LineBreak;
 			say "     She seems put off by your denial and screams, 'You will be brought down!'";
 			decrease dolphinwantmate by 1;
 	if dolphinwantmate is -2:
 		say "     She grabs you harshly, fingers biting into your skin, drawing blood. She then flips you over so hard that your head spins. She then reaches into her top slit, dragging her cock out with her hand, and strokes it hard against your back. She then bends back and slams forward, ripping open your ass. You pass out from the pain.";
 		say "     When you are conscious again, it seems that the nanites have repaired the damage to your body, but there is still piss floating out of your ass, along with clumps of blood. You can't be her mate any longer. It looks like she is still too pissed to even think in that direction.";
 		CreatureSexAftermath "Player" receives "AssDildoFuck" from "Dolphin Herm";
-		decrease HP of Player by 40;
-	say "     She strokes your entire body, beginning at your head, and moves slowly down your body. The changes begin in the wake of her flipper-like hands.";
-	infect "Dolphin Herm";
-	LineBreak;
-	now dolphinconsent is 0;
-	say "[dolphin fuck]";
+		PlayerWounded 40;
+	else:
+		say "     She strokes your entire body, beginning at your head, and moves slowly down your body. The changes begin in the wake of her flipper-like hands.";
+		infect "Dolphin Herm";
+		[now dolphinconsent is 0;]
+		WaitLineBreak;
+		say "[dolphin fuck]";
 
 To say Dolphin loses:
 	say "     You hit the blue dolphinoid human over the head with a final blow, and she floats in the water, unmoving. From here, however, you can see that she has at least three slits, and it looks like she wants you to take her. ";
 	if Libido of Player < 40 and "Dominant" is not listed in feats of Player:
 		say "You do not have the desire to mate with her though, so you leave her there.";
 	else if dolphintricked < 2:
-		LineBreak;
+		DoubleLineBreak;
 		say "     [bold type]Do you want to have your way with the creature?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Have some fun with the dolphin.";
 		say "     ([link]N[as]n[end link]) - Leave the dolphin be.";
 		if Player consents:
-			now dolphinconsent is 1;
+			LineBreak;
+			[now dolphinconsent is 1;]
 			say "     You uncover yourself and swim closer.";
 			WaitLineBreak;
 			say "     Closer.";
@@ -53,55 +57,63 @@ To say Dolphin loses:
 			say "     She then whips her body up and sprays you with a different bunch of clicks, totally stunning your body. 'Now it is my turn to play with you...' she mutters.";
 			say "[dolphin fuck]";
 		else:
+			LineBreak;
 			say "     You decide against exploiting this opportunity, leaving the creature as she is.";
 		increase dolphintricked by 1;
 	else:
 		increase dolphintricked by 1;
 		say "You are tempted by the sight of the prone dolphin, but you are wise to their tricks, so you manage to hold yourself back. Leaving her before she can make her final, sonic strike, you head off in search of another means to quell your raging hormones.";
+	if dolphinwantmate < -1, increase dolphinwantmate by 1;
 
 to say dolphin fuck:
 	if Player is female: [prefer male action]
 		say "     The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. ";
 		if scalevalue of Player > 3:
 			say "She eagerly slams her cock into your cunt. In spite of her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first. She continues to ram your eager hole. You can feel her prehensile member worming around in the depths of your cunt, but even this impressive rod can only barely fill your expansive hole. Up to her hilt, she can only just barely tickle your cervix. She seems a little surprised by this, suggesting that she might not be used to handling a beast of your magnitude. 'I should be - unf - enjoying this. It's - urgh - rare for someone - Ah! - to handle me so well...' she trails off. You get the impression that while she is certainly enjoying the ride, she's likely used to the 'challenge' of far less accommodating females.";
-			say "Regardless, her assault on your hole reaches a fever pitch, and it's not long before she lets out a chittering scream in climax, unloading her cum into your womb. You feel her passionate fluids flood the depths of your cunt, though her equally expansive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release. She's quick to yank her rod from your snatch and tends to you and her potential offspring only briefly before departing.";
+			say "     Regardless, her assault on your hole reaches a fever pitch, and it's not long before she lets out a chittering scream in climax, unloading her cum into your womb. You feel her passionate fluids flood the depths of your cunt, though her equally expansive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release. She's quick to yank her rod from your snatch and tends to you and her potential offspring only briefly before departing.";
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Dolphin Herm";
 			continue the action;
 		if Cunt Tightness of Player < 6:
-			say "She shoves her cock into you, more coming out of her top slit, but it is unable to go further than the tapered head. She looks at you with horror. 'Your cunt can't be that tight. Let's fix it.' She starts slamming her pointed cock into your small pussy, widening it by a bunch every smash, at the expense of your pleasure. Your mind is so full of pain that you are having trouble staying conscious, and as she finally manages to slam inside of you, you feel a twinge as the nanites 'fix' your cunt. ";
-			now Cunt Tightness of Player is 6;
+			say "She shoves her cock into you, more coming out of her top slit, but it is unable to go further than the tapered head. She looks at you with horror. 'Your cunt can't be that tight. Let's fix it.' She starts slamming her pointed cock into your small pussy, widening it by a bunch every smash, at the expense of your pleasure. Your mind is so full of pain that you are having trouble staying conscious, and as she finally manages to slam inside of you, you feel a twinge as the nanites 'fix' your cunt.";
+			if "Modest Organs" is not listed in feats of Player:
+				now Cunt Tightness of Player is 6;
+			else if Cunt Tightness of Player < 5:
+				now Cunt Tightness of Player is 5;
 		else if Cunt Tightness of Player < 8:
-			say "She shoves her cock head into you, but it is rough going, giving you much pleasure as she moans and groans. She continues to shove, turn, and wriggle the beginning of her large member inside of you. ";
+			say "She shoves her cock head into you, but it is rough going, giving you much pleasure as she moans and groans. She continues to shove, turn, and wriggle the beginning of her large member inside of you.";
 			increase Cunt Tightness of Player by 1;
 		else:
-			say "Her cock head slides into your lubricated tunnel with ease, and she prepares to pump the rest into you. ";
+			say "Her cock head slides into your lubricated tunnel with ease, and she prepares to pump the rest into you.";
 		if Cunt Depth of Player < 10:[won't go in far, must extend you]
-			say "She slams her cock into you with a cry of success, but it is cut off as she realizes that she can't go halfway inside. She thinks for a moment, her member stimulating your pussy as it wriggles. 'I am going to have to lengthen your cunt, small one. It may hurt.' She begins to slam her cock into you and grunts when it smashes open your cervix. ";
+			say "     She slams her cock into you with a cry of success, but it is cut off as she realizes that she can't go halfway inside. She thinks for a moment, her member stimulating your pussy as it wriggles. 'I am going to have to lengthen your cunt, small one. It may hurt.' She begins to slam her cock into you and grunts when it smashes open your cervix. You wince and hope that ";
 			if Humanity of Player < 60:
-				say "You wince and hope that your infected body can repair the damage she, no, it, is doing so that you may have children.";
+				say "your infected body can repair the damage she, no, it, is doing[if Player is not sterile] so that you may have children[end if].";
 			else:
-				say "You wince and hope that the damage can be fixed if you wish not to miscarry.";
-			increase Cunt Depth of Player by 3;
+				say "the damage can be fixed[if Player is not sterile] if you wish not to miscarry[end if].";
+			if "Modest Organs" is not listed in feats of Player:
+				increase Cunt Depth of Player by 3;
+			else if Cunt Depth of Player < 8:
+				increase Cunt Depth of Player by 1;
 		if Cunt Depth of Player < 10:[god, still too small]
-			say "She pulls out of you, looking saddened. You are too small still. You will have to come back again later.";
+			say "     She pulls out of you, looking saddened. You are too small still. You will have to come back again later.";
 		else if Cunt Depth of Player < 24:[won't go in far enough, will pry open womb for more space]
-			say "She then slams her overly long member into the wall of your womb, stretching your womb and pussy as deep as they can go, and further. The pain mixes with the pleasure of her inside of you, bringing you to climax as she keeps fucking. ";
+			say "     She then slams her overly long member into the wall of your womb, stretching your womb and pussy as deep as they can go, and further. The pain mixes with the pleasure of her inside of you, bringing you to climax as she keeps fucking. She then ";
 			increase Cunt Depth of Player by 2;
 			if Cunt Depth of Player < 14:
-				say "She then pulls out of you, and you look at her, disappointed. You were halfway to another orgasm. She tells you, 'You are still too small. I will have to 'fix' you later as well. Anymore stretching, and you will rip. Since I need to do more, you can't have my child. She then blows her load all over your front, the thick cum spraying through the water as if in slow motion, landing and sticking to you.";
+				say "pulls out of you, and you look at her, disappointed. You were halfway to another orgasm. She tells you, 'You are still too small. I will have to 'fix' you later as well. Anymore stretching, and you will rip. Since I need to do more, you can't have my child. She then blows her load all over your front, the thick cum spraying through the water as if in slow motion, landing and sticking to you.";
 			else:
-				say "She then moans and slams extra hard, as she manages to fit the rest of her member inside by doubling back and forming a ring in your womb. Her gargantuan cock seems to be making a huge, ring-shaped bulge in your belly, visible from the outside, as she begins to orgasm. She lets out a chittering scream as she cums hard inside of you, stunning you and leaving you floating in the water. You can only watch, unreasoningly, as your belly gets bigger and bigger until you look positively bloated. A little while and expansion later, she begins to remove her cock with much wriggling and squirming to watch the cum inside of you get forced out into a cloud in the water once your entrance is clear.";
+				say "moans and slams extra hard, as she manages to fit the rest of her member inside by doubling back and forming a ring in your womb. Her gargantuan cock seems to be making a huge, ring-shaped bulge in your belly, visible from the outside, as she begins to orgasm. She lets out a chittering scream as she cums hard inside of you, stunning you and leaving you floating in the water. You can only watch, unreasoningly, as your belly gets bigger and bigger until you look positively bloated. A little while and expansion later, she begins to remove her cock with much wriggling and squirming to watch the cum inside of you get forced out into a cloud in the water once your entrance is clear.";
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Dolphin Herm";
 		else:[cunt is finally big enough]
-			say "She shrieks with joy, 'Your pussy is finally big enough for me. I bet that took a lot of doing.' She then proceeds to push deeper, slowly wriggling and twisting her prehensile member into your wet cunt. She bottoms out before she can get to your cervix, and looks relieved. 'I am so big, none of the others in my pod can totally cover me without assistance, but you...' she says, awed and relieved. She begins to wriggle her cock, pulling in and out and forming rings inside of you, causing immense pleasure. As you start humping back, she screams in climax, the sound carrying you to yours. After what seems like hours of her filling you, she begins to pull out, cum flowing around her now-shrinking cock out of your cunt and into the water.";
+			say "     She shrieks with joy, 'Your pussy is finally big enough for me. I bet that took a lot of doing.' She then proceeds to push deeper, slowly wriggling and twisting her prehensile member into your wet cunt. She bottoms out before she can get to your cervix, and looks relieved. 'I am so big, none of the others in my pod can totally cover me without assistance, but you...' she says, awed and relieved. She begins to wriggle her cock, pulling in and out and forming rings inside of you, causing immense pleasure. As you start humping back, she screams in climax, the sound carrying you to yours. After what seems like hours of her filling you, she begins to pull out, cum flowing around her now-shrinking cock out of your cunt and into the water.";
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Dolphin Herm";
 	else if Player is not MalePreferred:[do female next]
-		say "She looks at your male genitals, surprised. 'Why not a girl?' she mutters, and kisses the base of your cock. Maybe next time you will be ready for me. Make sure to be nice and large!";
+		say "     She looks at your male genitals, surprised. 'Why not a girl?' she mutters, and kisses the base of your cock. Maybe next time you will be ready for me. Make sure to be nice and large!";
+		LineBreak;
 		if "Microwaved" is listed in feats of Player:
 			say "WARNING: Sex shifting nanites detected! Allow?";
 			if Player consents:
 				LineBreak;
-				say "OK.";
 				say "Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
 				increase Cunt Count of Player by 1;
 				increase Cunt Depth of Player by 6;
@@ -115,19 +127,16 @@ to say dolphin fuck:
 			increase Cunt Depth of Player by 6;
 			increase Cunt Tightness of Player by 4;
 	else:
-		say "The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. ";
-		if scalevalue of Player is 1:
-			say "She shoves her cock into your ass, more coming out of her top slit, but it is unable to go further than the tapered head. She briefly looks at you with horror before realizing the obvious. You're way too small! 'I think we should wait until you're in a form suited for a lady of my... [']needs.[']' And with that, she departs, dejected and disappointed.";
-		else if scalevalue of Player is 2:
-			say "She slams her cock into your ass rather carelessly, but her endeavors are cut off when she realizes that she can't go any more than halfway inside. She, rather rashly, continues to ram you in vain as it just won't go any deeper. She thinks for a moment, but it doesn't take her long to figure out what the problem is. She tells you, 'I'm afraid that you need to a much larger form to be able to take me, small one.' She then disengages from you, leaving you to your own devices for the time being.";
+		say "     The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. She ";
+		if scalevalue of Player < 3:
+			say "[if scalevalue of Player is 1]shoves her cock into your ass, more coming out of her top slit, but it is unable to go further than the tapered head. She briefly looks at you with horror before realizing the obvious. You're way too small! 'I think we should wait until you're in a form suited for a lady of my... [']needs.[']' And with that, she departs, dejected and disappointed[else]slams her cock into your ass rather carelessly, but her endeavors are cut off when she realizes that she can't go any more than halfway inside. She, rather rashly, continues to ram you in vain as it just won't go any deeper. She thinks for a moment, but it doesn't take her long to figure out what the problem is. She tells you, 'I'm afraid that you need to a much larger form to be able to take me, small one.' She then disengages from you, leaving you to your own devices for the time being[end if].";
 		else if scalevalue of Player is 3:
-			say "She slams her cock into your ass rather carelessly, her overlarge tool squeezing through your tight confines. It's clearly much too large for you, but that doesn't stop her from making a mess of your intestines. Her prehensile member worms its way into the depths of your bowels. A victim of this creature's ungodly length, you soon feel her malehood's intrusion invade your stomach where it relents, and you fear that if she were any longer, she could rightly impale you with her dick. She continues to thoroughly fuck you brains out, slamming your ass with dogged determination. You can visibly see the length of her rod bulge from your belly as she soon begins to orgasm.";
-			say "She lets out a chittering scream as she cums hard inside of you, stunning you and leaving you floating in the water. You can only watch, unreasoningly, as your belly gets bigger and bigger until you look positively bloated. A little while and expansion later, she begins to remove her cock with much wriggling and squirming to watch the cum inside of you get forced out into a cloud in the water once your entrance is clear. She then departs from you, clearly satisfied with her work on your poor soul, leaving you to float in the water, a mess of a person.";
+			say "slams her cock into your ass rather carelessly, her overlarge tool squeezing through your tight confines. It's clearly much too large for you, but that doesn't stop her from making a mess of your intestines. Her prehensile member worms its way into the depths of your bowels. A victim of this creature's ungodly length, you soon feel her malehood's intrusion invade your stomach where it relents, and you fear that if she were any longer, she could rightly impale you with her dick. She continues to thoroughly fuck you brains out, slamming your ass with dogged determination. You can visibly see the length of her rod bulge from your belly as she soon begins to orgasm.";
+			say "     She lets out a chittering scream as she cums hard inside of you, stunning you and leaving you floating in the water. You can only watch, unreasoningly, as your belly gets bigger and bigger until you look positively bloated. A little while and expansion later, she begins to remove her cock with much wriggling and squirming to watch the cum inside of you get forced out into a cloud in the water once your entrance is clear. She then departs from you, clearly satisfied with her work on your poor soul, leaving you to float in the water, a mess of a person.";
 			CreatureSexAftermath "Player" receives "AssFuck" from "Dolphin Herm";
 		else:
-			say "She eagerly slams her cock into your ass. In spite of her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first. Her prehensile member worms its way into the depths of your bowels, but even this sizable intruder can only wander so far into your labyrinth of flesh. She seems a little surprised by this, suggesting that she might not be used to handling a beast of your magnitude. You get the impression that she might be a little disappointed by this as well, perhaps used to the 'challenge' of contending with much smaller victims. Regardless, she continues fervently ramming you with her impressive dick. It's not long before she lets out a chittering scream in climax, unloading her cum into you. You feel her passionate fluids flood your inner depths, though her equally impressive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release, and rather unceremoniously, she pulls her length from you in brisk departure.";
+			say "eagerly slams her cock into your ass. In spite of her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first. Her prehensile member worms its way into the depths of your bowels, but even this sizable intruder can only wander so far into your labyrinth of flesh. She seems a little surprised by this, suggesting that she might not be used to handling a beast of your magnitude. You get the impression that she might be a little disappointed by this as well, perhaps used to the 'challenge' of contending with much smaller victims. Regardless, she continues fervently ramming you with her impressive dick. It's not long before she lets out a chittering scream in climax, unloading her cum into you. You feel her passionate fluids flood your inner depths, though her equally impressive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release, and rather unceremoniously, she pulls her length from you in brisk departure.";
 			CreatureSexAftermath "Player" receives "AssFuck" from "Dolphin Herm";
-
 
 Section 2 - Creature Insertion
 
@@ -153,6 +162,7 @@ When Play begins:
 	add "Dolphin Herm" to infections of TaperedCockList;
 	add "Dolphin Herm" to infections of PrehensileCockList;
 	add "Dolphin Herm" to infections of InternalCockList;
+	add "Dolphin Herm" to infections of InternalBallsList;
 	add "Dolphin Herm" to infections of BipedalList;
 	add "Dolphin Herm" to infections of SwimList;
 	add "Dolphin Herm" to infections of TailList;
@@ -164,7 +174,7 @@ When Play begins:
 	now attack entry is "The dolphin takes her fist and punches you with her immense strength."; [Text used when the monster makes an Attack]
 	now defeated entry is "[Dolphin loses]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Dolphin wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "     As you [if the Location of Player is not Public Beach]swim along[else]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying, 'Another for my pod! Yes!'"; [ Description of the creature when you encounter it.]
+	now desc entry is "     As you [if the Location of Player is not Public Beach]swim along[else]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying, 'Another for my pod! Yes!'[line break]"; [ Description of the creature when you encounter it.]
 	now face entry is "dominated by a long dolphin snout";
 	now body entry is "silvery with a blue back. A dorsal fin sits on top, and strong muscles contract underneath the surface"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]wet, glistening[or]smooth, silver[or]thick, blubbered[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -315,7 +325,7 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
+Section 3 - Alt Combat
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
@@ -326,33 +336,32 @@ this is the dolattack rule:		[possible sonic attack and sets upcoming strike]
 	if a random chance of 1 in 6 succeeds:
 		say "The dolphin lets off a really loud pulse of high-pitched clicks which weakens you ([special-style-2][ ( 6 + lev entry ) / 2 ][roman type] dmg) and stuns you just long enough for her to attack again.";
 		decrease HP of Player by ( ( 6 + lev entry ) / 2 );
-	now tempnum is a random number between 1 and 5; [picks one of the attacks]
-	if tempnum is 1:
-		now attack entry is "The dolphin bites your hand with her sharp, little teeth. It hurts!";
-		now wdam entry is 8;
-	else if tempnum is 2:
-		now attack entry is "The dolphin puts her feet together into what resembles a dolphin's tail and whacks you over the head.";
-		now wdam entry is 18;
-	else if tempnum is 3:
-		now attack entry is "The dolphin headbutts you in the stomach, causing bubbles to rise from your mouth.";
-		now wdam entry is 6;
-	else if tempnum is 4:
-		now attack entry is "The dolphin takes her fist and punches you with her immense strength.";
-		now wdam entry is 12;
-	else if tempnum is 5:
-		now attack entry is "The dolphin takes her small breasts and shoves your face into them roughly. You struggle, and she slams you harder before you manage to escape.";
-		now wdam entry is 14;
-	else if tempnum is 6:		[was closed in the original version, left closed]
-		if Player is male:
-			now attack entry is "The dolphin darts down to your nethers, grabs your cock, and TWISTS IT OMG THAT HURT!";
+	if a random number between 1 and 5 is: [picks one of the attacks]
+		-- 1:
+			now attack entry is "The dolphin bites your hand with her sharp, little teeth. It hurts!";
+			now wdam entry is 8;
+		-- 2:
+			now attack entry is "The dolphin puts her feet together into what resembles a dolphin's tail and whacks you over the head.";
 			now wdam entry is 18;
-		else if Player is female:
-			now attack entry is "The dolphin darts down to your nethers and chomps on your clit. YOWCH.";
-			now wdam entry is 10;
-		else:
-			now attack entry is "The dolphin darts down to your nethers and is shocked to see nothing there. She bites you anyway.";
-			now wdam entry is 4;
-
+		-- 3:
+			now attack entry is "The dolphin headbutts you in the stomach, causing bubbles to rise from your mouth.";
+			now wdam entry is 6;
+		-- 4:
+			now attack entry is "The dolphin takes her fist and punches you with her immense strength.";
+			now wdam entry is 12;
+		-- 5:
+			now attack entry is "The dolphin takes her small breasts and shoves your face into them roughly. You struggle, and she slams you harder before you manage to escape.";
+			now wdam entry is 14;
+		[-- 6:		[was closed in the original version, left closed]
+			if Player is male:
+				now attack entry is "The dolphin darts down to your nethers, grabs your cock, and TWISTS IT OMG THAT HURT!";
+				now wdam entry is 18;
+			else if Player is female:
+				now attack entry is "The dolphin darts down to your nethers and chomps on your clit. YOWCH.";
+				now wdam entry is 10;
+			else:
+				now attack entry is "The dolphin darts down to your nethers and is shocked to see nothing there. She bites you anyway.";
+				now wdam entry is 4;]
 
 Section 4 - Endings
 
@@ -369,22 +378,18 @@ This is the Dolphin Herm Infection rule:
 			say "     You find yourself visiting the beach more often over the days, swimming in the waves with your changed form.";
 			if dolphinwantmate is -1:
 				say "     One day, the pod of dolphins surfaces around you, and being uncleaned by the nanite masters in the human network, they proceed to change you into one of them and maim you intensely.";
-				dolphinify;
-				dolphinify;
-				dolphinify;
-				dolphinify;
+				MultiInfect "Dolphin Herm" repeats 4;
 				say "     You spend a long time in the hospital, but eventually you emerge, scarred, but alive.";
 			else:
 				say "     You spend some time at the end of each swim looking for the one that changed you, eager to bring her back as your mate. One day, you find her and entice her to remain with you. She becomes your lifelong mate[if Player is not sterile], and you bear each other many dolphinoid children[end if].";
 
-
-to dolphinify:
+[to dolphinify:
 	repeat with y running from 1 to number of rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
 		if Name entry is "Dolphin Herm":
 			now MonsterID is y;
 			break;
-	infect;
+	infect;]
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -393,9 +398,7 @@ name	desc	weight	object
 [dolphin milk is a grab object.] [defined in Milk Items to prevent name conflicts]
 dolphin milk is milky. Understand "milk" as dolphin milk.
 dolphin milk is infectious. Strain of dolphin milk is "Dolphin Herm".
-Purified of dolphin milk is "distilled milk".
 Usedesc of dolphin milk is "[dolphin milk use]".
-
 the scent of dolphin milk is "The dolphin milk smells like milk with an odd, fishy scent mixed in.".
 
 to say dolphin milk use:

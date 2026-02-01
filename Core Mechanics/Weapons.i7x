@@ -4,11 +4,9 @@ Version 1 of Weapons by Core Mechanics begins here.
 
 [X moved to Core Mechanics/Weapons.i7x]
 
-
 Book 1 - Blades
 
 Section 1 - Small Blades
-
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -135,7 +133,6 @@ Scent of the elven knife is "The knife smells pretty nice. The handle must be so
 
 Section 3 - Large Blades
 
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "abyssal edge"	"The enhanced version of what used to be a completely useless hilt. The Abyssal Edge is now a respectable sword with a dark blade, so sharp it can cut through almost anything."	7	abyssal edge
@@ -194,6 +191,12 @@ instead of purifying an infected sword:
 	say "That doesn't even fit in the microwave. Also, putting metal in one is a really bad idea.";
 	stop the action;
 
+An everyturn rule:
+	if the infected sword is wielded:
+		say "[line break]The sword feels slimy in your hand. Maybe you shouldn't be using it.";
+		randominfect;
+		say "The infected sword changes you.";
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "ancient gladius"	"A somewhat old-looking sword, only about 25 inches long, with a double edge on its blade and a cutting tip. It is, however, very sturdy and easy to wield, good to stab and slash any foe in close range."	4	ancient gladius
@@ -217,7 +220,6 @@ Weapon Type of viking sword is "Melee".
 Objsize of viking sword is 3.
 Hitbonus of viking sword is 1. [mastercraft]
 Scent of the viking sword is "The blade smells of nothing but metal. Sonya always kept it clean without fail, and you've done the same since you got it.".
-
 
 Book 2 - Impact Weapons
 
@@ -347,6 +349,13 @@ Objsize of dirty whip is 3.
 Hitbonus of dirty whip is -1. [slick and goopy]
 Scent of dirty whip is "The sticky whip smells of equine cum.".
 
+An everyturn rule:
+	if the dirty whip is wielded:
+		now researchbypass is 1;
+		say "The cum on the dirty whip slips down onto your hand.";
+		infect "Black Equinoid";
+		now researchbypass is 0;
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "golf club"	"To an overpaid sports star, it is a piece of high-quality equipment meant for a game of style and skill. To you, a blunt instrument."	4	golf club
@@ -436,6 +445,14 @@ Objsize of awesome bat is 4.
 Hitbonus of awesome bat is 0. [nothing special]
 Scent of awesome bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.".
 
+to say awesome bat proc:
+	choose row MonsterID from the Table of Random Critters;
+	if Name entry is "Pod Person":
+		say "...[line break]Your bat resounds against the tree, causing the world itself to shake. The unstoppable force and the immovable object meet, however your strength behind the bat is the deciding factor";
+		now dam is 60;
+		now monsterHP is 0;
+		increase Awesome_noreward by 1;
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "Broke-Ass Hoe"	"This garden hoe has seen better days. The end has been broken off, but the long, hard shaft should still be usable as a weapon."	4	Broke-Ass Hoe
@@ -524,7 +541,6 @@ to say RiotShieldAttackDesc:
 	say "A black shield that Zephyr's riot security uses to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]RSProtectMode[end link] though, and direct your shield to more defensive purposes instead. ";
 
 riotshieldProtectMode is an action applying to one topic.
-
 understand "RSProtectMode" as riotshieldProtectMode.
 
 check riotshieldProtectMode:
@@ -553,7 +569,6 @@ Objsize of bronze trident is 4.
 Hitbonus of bronze trident is 1. [magic]
 Scent of bronze trident is "The trident smells like the sea, the moon, the stars and... a strong merman? Weird.".
 
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "Makeshift-Spear"	"Made by binding the blade of your old pocket knife to a sturdy wooden rod, this Makeshift-Spear is a much better choice for combat than its two separate parts."	3	Makeshift-Spear
@@ -565,7 +580,6 @@ Weapon Type of Makeshift-Spear is "Melee".
 Objsize of Makeshift-Spear is 4.
 Hitbonus of Makeshift-Spear is -1. [improvised]
 Scent of the Makeshift-Spear is "The wood smells a little musty. It brings back memories of the Urban Forest.".
-
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -604,8 +618,5 @@ Hitbonus of rusty nail is -1. [not a weapon]
 Scent of rusty nail is "The rusty nail smells like iron.".
 
 Book 4 - Ranged Weapons
-
-
-
 
 Weapons ends here.

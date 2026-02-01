@@ -3,7 +3,6 @@ Version 1 of Tape Inventory by Core Mechanics begins here.
 "Adds the Tape Inventory to the Flexible Survival game"
 
 TapeInventorying is an action applying to nothing.
-
 understand "tint" as TapeInventorying.
 understand "tinv" as TapeInventorying.
 understand "tape inventory/inv" as TapeInventorying.
@@ -23,16 +22,12 @@ carry out TapeInventorying:
 				say "[set link hyperindex][bracket][entry 1 of linktext][close bracket][terminate link] ";
 		say "[x][line break]";
 
-understand "tape [text]" as tapeing.
-
 Tapeing is an action applying to one topic.
+understand "tape [text]" as tapeing.
 
 check tapeing:
 	if carried of video camera < 1:
-		say "You do not have a camera with you that you could watch the tape on";
-		if Lost Camera is resolved: [camera was found already]
-			say ". Thinking back to the lost camera you found, you wonder where you put it last..[no line break]";
-		say "." instead;
+		say "You do not have a camera with you that you could watch the tape on[if Lost Camera is resolved]. Thinking back to the lost camera you found, you wonder where you put it last..[no line break][end if]." instead;
 
 carry out tapeing:
 	sort tapes of Player;
@@ -90,9 +85,8 @@ to deletetape (x - text):	[removes 1 tape of a given type from the player's inve
 	say "You dig out the tape [entry z of tapes of Player] from your backpack and throw it away.";
 	remove entry z from tapes of Player;
 
-understand "tapedrop [text]" as tapedropping.
-
 Tapedropping is an action applying to one topic.
+understand "tapedrop [text]" as tapedropping.
 
 Carry out tapedropping:
 	let t be the topic understood;

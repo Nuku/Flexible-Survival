@@ -8,7 +8,6 @@ A person has a number called lastfuck. lastfuck is usually 2500.
 A person has a text called fuckscene. fuckscene is usually "".
 
 Fucking is an action applying to one thing.
-
 Understand "fuck [person]" as fucking.
 
 before fucking:
@@ -38,8 +37,7 @@ with 40 blank rows.
 This is the sexytable rule:
 	say "I'm a placeholder! :)";
 
-sextablerun is a number that varies. sextablerun is usually 0.
-
+sextablerun is a number that varies.[@Tag:NotSaved] sextablerun is usually 0.
 
 Section 2 - Demonstration Example
 

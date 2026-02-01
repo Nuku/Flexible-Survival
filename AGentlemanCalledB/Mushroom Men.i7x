@@ -14,13 +14,7 @@ to say losetoMushroomMen:
 	WaitLineBreak;
 	say "     You can't help but moan as the two large mushrooms begin working their phallic brother like a bizarre living dildo, driving him into your body over and over again while he teases your inner walls with his ungentle hands. As the fucking continues the rest of the group begins to drift to the rest of your body teasing any erogenous spots they can find as you fall deeper and deeper in your lust-filled haze. [if Player is female]When one of the mushrooms finally begins pinching and tweaking your clit, it all becomes too much and you scream in ecstasy as you cum hard, soaking the two large mushrooms at your crotch in your feminine juices as your spasming tunnel clamps tightly around the fungal intruder, attempting to milk his soft body as if it were a real cock. You feel him squirming inside you, either trying to escape your tight grip or further pleasure you, drawing your orgasm out as each movement sends shivers of pleasure through you[else if Player is male]As the fungal fucking builds to a rapid pace, you find your hands drawn to your unattended cock, stroking your erect length in time with the movement of the phallic mushroom. You groan loudly as you finally climax, blowing your load onto the ground beneath you as the mushrooms make a few final thrusts[end if].";
 	say "     When the mushroom man is finally pulled from your body[if Player is female] with a wet slurp and rush of fluids[end if], he takes a moment to shake himself off before giving each of his larger companions a high five. [one of]'Catch ya later, hun,'[or]'Can't wait to do this again, babe,'[or]'Let's do this again some time, honey,'[at random] your unusual lover shouts over his shoulder as he waves the rest of the group over, leading them back into the forest and leaving you in a well-fucked heap on the ground[if Player is mushroombodied]. As you lay there, recovering, you feel a warm tingling welling up inside you as the mushroom man's fungal spores settle within, exciting your mushroom body[end if].";
-	if Player is mushroombodied:
-		CreatureSexAftermath "Player" receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from "Mushroom Man";
-	else:
-		CreatureSexAftermath "Player" receives "[if Player is female]PussyDildoFuck[else]AssDildoFuck[end if]" from "Mushroom Man";
-
-to say beattheMushroomMen:
-	say "     With their numbers dwindling, the few mushroom men who remain standing begin to lose their brazen confidence. Seeing them falter, you move forwards aggressively, chasing the last of them off into the surrounding forest.";
+	CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if][if Player is not mushroombodied]Dildo[end if]Fuck" from "Mushroom Man";
 
 to say MushroomMendesc:
 	say "     While walking [one of]down a path[or]through some overgrown brush[or]through a dimly lit clearing[at random] you hear [one of]'Hey toots!' [or]'Hey hot stuff!' [or]'Hey cutie!' [or]a sharp wolf whistle [at random][one of]behind you[or]to your right[or]to your left[or]just ahead of you[at random]. Glancing around you try and locate the source of the call, spotting some movement in a large cluster of mushrooms at the base of a nearby tree. Slowly the pack of mushrooms pull themselves from the ground and turn to face you, giving you a clear view of the partially humanoid forms.";
@@ -31,6 +25,7 @@ to say MushroomMenFaceTF:
 	now MMP is a random number between 1 and 3;
 	say "the color drains out of it and all your hair falls away. Weight begins building at the top of your head as the pale, smooth flesh begins to expand, growing into a large mushroom cap covered in [if MMC is 1]white[else if MMC is 2]red[else if MMC is 3]pale yellow[else if MMC is 4]pale orange[else if MMC is 5]brown[end if] flesh[if MMP is 1] with off-white spots[else if MMP is 2] with off-white splotches[else if MMP is 3] of varying shades[end if]";
 
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -39,8 +34,6 @@ name(text)	PrepFunction(text)
 to say PrepCombat_Mushroom Man:
 	setmongender 13; [creatures are male]
 	now SporeCloud is 0;
-
-Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -59,7 +52,7 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The group cheers as several of their members run out towards you, shouting lewd comments and offers as they strike at your lower body.[or]Several of the larger mushrooms grab one of their smaller brethren and toss him at you. 'How [']bout a kiss, hun?' shouts the flying mushroom man, just before he bounces off your face.[or]Several of the larger mushrooms grab one of the smaller members of their group and fling him at you, much to his disapproval. He makes several rude comments and gestures at his brethren as he flies through the air before bouncing off the top of your head.[or]'Why don't you let us show you a good time, hot stuff?' one of the mushrooms asks with a smirk, before several of them leap out of the pack and grab onto your legs, pinching and squeezing you wherever they can.[or]There is a sharp wolf whistle behind you, and you realize some of the group have split off to flank you. Before you have a chance to react several fungi from each group are launched into the air towards you. While most of them miss their target, one lands safely on your shoulder, grabbing your face and pulling you into a rough kiss before you can shake him off.[at random]"; [ Successful attack message ]
-	now defeated entry is "[beattheMushroomMen]"; [ Text when monster loses. ]
+	now defeated entry is "     With their numbers dwindling, the few mushroom men who remain standing begin to lose their brazen confidence. Seeing them falter, you move forwards aggressively, chasing the last of them off into the surrounding forest.[line break]"; [ Text when monster loses. ]
 	now victory entry is "[losetoMushroomMen]"; [ Text when monster wins. ]
 	now desc entry is "[MushroomMendesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "mostly human looking with cute[if Player is female], feminine[end if] features and a smooth, pale complexion. The large mushroom cap atop your head, however, is far more unusual. It has [if MMC is 1]white[else if MMC is 2]red[else if MMC is 3]pale yellow[else if MMC is 4]pale orange[else if MMC is 5]brown[end if] flesh[if MMP is 1] with off-white spots[else if MMP is 2] with off-white splotches[else if MMP is 3] of varying shades[end if]"; [ Face description, format as "Your face is [Face of Player]." ]
@@ -212,7 +205,6 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
-
 Section 3 - Alt Combat
 
 Table of Critter Combat (continued)
@@ -251,7 +243,7 @@ this is the sporecloud rule: [Spore aura following spore blast attack]
 			say "The air is still filled with fungal spores, but your face mask [one of]prevents you from breathing them in[or]protects you from their influence[or]keeps you from inhaling them[at random].";
 			decrease SporeCloud by 1;
 			if SporeCloud is 0:
-				say "[one of]With a merciful gust of wind[or]As the battle continues[or]As your fighting begins to move away[at random], the lingering spore cloud finally dissipates.";
+				say "[line break][one of]With a merciful gust of wind[or]As the battle continues[or]As your fighting begins to move away[at random], the lingering spore cloud finally dissipates.";
 		else:
 			let dam be wdam entry / 4;
 			increase dam by a random number between 0 and 1;
@@ -262,12 +254,14 @@ this is the sporecloud rule: [Spore aura following spore blast attack]
 				increase Libido of Player by a random number between 1 and 3;
 			decrease SporeCloud by 1;
 			if SporeCloud is 0:
-				say "[one of]With a merciful gust of wind[or]As the battle continues[or]As your fighting begins to move away[at random] the lingering spore cloud finally dissipates.";
+				say "[line break][one of]With a merciful gust of wind[or]As the battle continues[or]As your fighting begins to move away[at random] the lingering spore cloud finally dissipates.";
 			follow the player injury rule;
 			say "You are [descr].";
 			if HP of Player < 1 or Libido of Player > 109:
-				if HP of Player <= 0, now fightoutcome is 20;
-				if Libido of Player >= 110, now fightoutcome is 21;
+				if HP of Player <= 0:
+					now fightoutcome is 20;
+				else:
+					now fightoutcome is 21;
 				lose;
 
 Section 4 - Definitions

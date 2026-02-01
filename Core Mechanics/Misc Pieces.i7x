@@ -25,7 +25,7 @@ To decide which number is numeric/numerical value of (T - indexed text):
 	if negated is true, let result be 0 - result;
 	decide on result.
 
-keychar is a text that varies.
+keychar is a text that varies.[@Tag:NotSaved]
 
 To translate (k - a number):
 	if k is 13 or k is -6:
@@ -107,7 +107,6 @@ To translate (k - a number):
 	else:
 		now keychar is "INVALID";
 
-
 [
 Punying is an action applying to nothing.
 understand "Puny" as punying.
@@ -185,8 +184,6 @@ To startgenderlockshift:
 			now Breast Size of Player is 0;
 ]
 
-
-
 [to be determined if this is even used anymore]
 [
 Table of Start Game
@@ -220,7 +217,6 @@ title	subtable	description	toggle
 "Researcher"	--	--	location choice rule
 "Hard mode"	--	--	location choice rule
 
-
 Table of combat items
 title(indexed text)	subtable	description	toggle
 "Nothing"	--	"Nothing here."	combat item rule
@@ -241,7 +237,6 @@ title	subtable	description	toggle
 "Is this all?"	--	"Yep, more to come later, promise!"
 "Exit"	--	"Previous Menu"	menu exit rule
 ]
-
 
 [
 This is the location choice rule:
@@ -369,8 +364,6 @@ This is the female choice rule:
 ]
 
 [
-
-
 This is the Menu Exit Rule:
 	decrease the menu depth by 1;
 	rule succeeds.
@@ -457,8 +450,6 @@ This is the finish stats rule:
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	rule succeeds;
 
-
-
 This is the d18 rule:
 	now d18 is 0;
 	increase d18 by a random number from 1 to 6;
@@ -481,7 +472,6 @@ This is the random stats rule:
 	now Perception of Player is d18;
 	decrease the score by 1;
 	rule succeeds.
-
 
 understand the command "feed" as something new.
 ]
