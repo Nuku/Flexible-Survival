@@ -997,6 +997,7 @@ Include RexxyEvent by Prometheus.
 Include Rhidall by Voidsnaps.
 Include Richard by Wahn.
 Include Riker by Voidsnaps.
+Include Robin by Wahn.
 Include RodAndRonda by Wahn.
 Include Roman by Kernog.
 Include Ryan by Fuxi.
