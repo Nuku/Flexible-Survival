@@ -3383,7 +3383,6 @@ name	desc	weight	object
 
 Limbo Fox Cum is a grab object.
 Limbo Fox Cum is cum.
-Limbo Fox Cum is infectious.
 Strain of Limbo Fox Cum is "Limbo Fox".
 Usedesc of Limbo Fox Cum is "[Limbo Fox Cum use]".
 

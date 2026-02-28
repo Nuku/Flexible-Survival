@@ -3600,7 +3600,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Limbo Fox Milk"	"A glass bottle filled to the brim with suspiciously normal-looking milk, considering it's the product of an eldritch fox. Oddly, the bottle and its contents never seem to get warm or even go off when left out in the sun."	1	Limbo Fox Milk
 
-Limbo Fox Milk is a infectious milky grab object.
+Limbo Fox Milk is a milky grab object.
 Strain of Limbo Fox Milk is "Limbo Fox".
 Usedesc of Limbo Fox Milk is "[Limbo Fox Milk use]".
 
