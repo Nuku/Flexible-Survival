@@ -624,6 +624,9 @@ Figure of Orbul_naked_icon is the file "Orbul_naked.jpg".
 Figure of Orthas_face_icon is the file "Orthas_face.jpg".
 Figure of Paula_icon is the file "Paula_ig.jpg".
 Figure of Penny_icon is the file "Penny.jpg".
+Figure of Priestess_clothed_icon is the file "Priestess_clothed.jpg".
+Figure of Priestess_hard_icon is the file "Priestess_hard.jpg".
+Figure of Priestess_soft_icon is the file "Priestess_soft.jpg".
 Figure of Rachel_icon is the file "Rachel_ig.jpg".
 Figure of Ranae_naked_icon is the file "Ranae_naked.jpg".
 Figure of Ranae_rags_icon is the file "Ranae_rags.jpg".
@@ -684,6 +687,8 @@ Figure of Segis_muscular_hard_32_icon is the file "Segis_muscular_hard_32.png".
 Figure of Segis_muscular_hard_33_icon is the file "Segis_muscular_hard_33.png".
 Figure of Septus_icon is the file "Septus.jpg".
 Figure of Septus_face_icon is the file "Septus_face.jpg".
+Figure of Seradodovah_hard_icon is the file "Seradovah_hard.jpg".
+Figure of Seradodovah_soft_icon is the file "Seradovah_soft.jpg".
 Figure of SgtMarks_clothed_icon is the file "Sgt. Marks_clothed.jpg".
 Figure of SgtMarks_hard_icon is the file "Sgt. Marks_hard.jpg".
 Figure of SgtMarks_soft_icon is the file "Sgt. Marks_soft.jpg".
@@ -1942,6 +1947,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Pink Gel"	Figure of PinkGel_icon	"Rastear"	g-black	"normal"
 "Pink Poodle"	Figure of PinkPoodle_icon	"Anymouse1968"	g-white	"normal"
 "Pewter Consort"	Figure of Pewter_Consort_icon	"Xilrayne"	g-black	"normal"
+"Priestess_clothed"	Figure of Priestess_clothed_icon	"Gherod"	g-dark-gray	"normal"
+"Priestess_hard"	Figure of Priestess_hard_icon	"Gherod"	g-dark-gray	"normal"
+"Priestess_soft"	Figure of Priestess_soft_icon	"Gherod"	g-dark-gray	"normal"
 "Shark Herm"	Figure of PirateShark_icon	"Zealot"	g-white	"normal"
 "Queen Bee"	Figure of QueenBee_icon	"Caltroplay"	g-white	"normal"
 "Rachel"	Figure of Rachel_icon	"o-kemono"	g-white	"normal"
@@ -2027,6 +2035,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Segis Muscular Hard 33"	Figure of Segis_muscular_hard_33_icon	"Gherod"	g-dark-gray	"normal"
 "Septus"	Figure of Septus_icon	"Feralise"	g-black	"normal"
 "Septus_face"	Figure of Septus_face_icon	"Cirrusthecloud"	g-black	"normal"
+"Seradovah_hard "	Figure of Seradodovah_hard_icon	"Gherod"	g-dark-gray	"normal"
+"Seradovah_soft "	Figure of Seradodovah_soft_icon	"Gherod"	g-dark-gray	"normal"
 "Sgt Marks_clothed"	Figure of SgtMarks_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Sgt Marks_soft"	Figure of SgtMarks_soft_icon	"SteppeCrow"	g-white	"normal"
 "Sgt Marks_hard"	Figure of SgtMarks_hard_icon	"SteppeCrow"	g-white	"normal"
@@ -2957,6 +2967,7 @@ carry out artistcredits:
 	say "     Hadiya w/Gobby by SandySchreiber @ https://furaffinity.net/user/sandyschreiber[line break]";
 	say "     Helen by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
 	say "     Henry (Adopt) by CastBound @ https://furaffinity.net/user/castbound[line break]";
+	say "     Hermacore Gherod  @ https://x.com/gherodv[line break]";
 	say "     Hayato by Darian821 @ https://x.com/Darian821Jai821[line break]";
 	say "     Harold by Hufnaar @ https://furaffinity.net/user/hufnaar[line break]";
 	say "     Hobo by Conchi @ https://artisticconch.tumblr.com[line break]";
@@ -3005,6 +3016,9 @@ carry out artistcredits:
 	say "     Orthas (face) by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
 	say "     Paula by Kikeri-arts @ https://deviantart.com/kikeri-arts[line break]";
 	say "     Penny by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
+	say "     Priestess_clothed Gherod @ https://x.com/gherodv[line break]";
+	say "     Priestess_hard Gherod @ https://x.com/gherodv[line break]";
+	say "     Priestess_soft Gherod @ https://x.com/gherodv[line break]";
 	say "     Rachel by o-kemono @ https://furaffinity.net/user/o-kemono[line break]";
 	say "     Ranae by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
 	say "     Rane Headshot by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
@@ -3027,6 +3041,8 @@ carry out artistcredits:
 	say "     Segis by Gherod @ https://x.com/gherodv[line break]";
 	say "     Septus by Feralise @ https://furaffinity.net/user/feralise[line break]";
 	say "     Septus (face) by Cirrusthecloud @ https://furaffinity.net/user/cirrusthecloud[line break]";
+	say "     Seradovah_hard Gherod  @ https://x.com/gherodv[line break]";
+	say "     Seradovah_soft Gherod  @ https://x.com/gherodv[line break]";
 	say "     Sgt Marks by Anyare @ https://furaffinity.net/user/anyare[line break]";
 	say "     Stella by Furball @ https://furaffinity.net/user/furball[line break]";
 	say "     Sidney by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";

@@ -218,6 +218,7 @@ Include Camp Of The Snake by Gherod.
 Include Tenvale College Campus by Rikaeus.
 Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
+Include Dragon Temple Map by Sundered Dragon.
 Include Equinoid Camp by Song.
 Include Farm by Wahn.
 Include Ghost Fair by JP.
@@ -779,6 +780,7 @@ Include Anthony by Wahn.
 Include Anton by Wahn.
 Include Araqiel by Gherod.
 Include Ares by Wahn.
+Include Arlene by Sundered Dragon.
 Include Ariel by Emerald.
 Include Arthur by Luneth.
 Include Anastasia by Stripes.
@@ -842,6 +844,7 @@ Include Diego by Wahn.
 Include Doctor Mouse by Voidsnaps.
 Include Dominick by Stripes.
 Include Doran by Blue Bishop.
+Include Dragon Cultist by Sundered Dragon.
 Include Drelgoth by Gherod.
 Include DrMoffatt by Stripes.
 Include DrUtah by Stripes.
