@@ -627,7 +627,6 @@ Figure of Paula_icon is the file "Paula_ig.jpg".
 Figure of Penny_icon is the file "Penny.jpg".
 Figure of Pirate_Shark_Herm_hard_icon is the file "Pirate_Shark_Herm_hard.png".
 Figure of Pirate_Shark_Herm_soft_icon is the file "Pirate_Shark_Herm_soft.png".
-Figure of Priestess_soft_icon is the file "Priestess_soft.jpg".
 Figure of Priestess_clothed_icon is the file "Priestess_clothed.jpg".
 Figure of Priestess_hard_icon is the file "Priestess_hard.jpg".
 Figure of Priestess_soft_icon is the file "Priestess_soft.jpg".
