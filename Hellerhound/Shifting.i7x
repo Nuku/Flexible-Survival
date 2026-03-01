@@ -2,13 +2,14 @@ Shifting by Hellerhound begins here.
 
 Section 1 - Secure Area Situation
 
+halodestroyed is a number that varies.
+
 Table of GameEventIDs (continued)
 Object	Name
 Secure Area	"Secure Area"
 
 Secure Area is a situation.
 ResolveFunction of Secure Area is "[ResolveEvent Secure Area]". The level of Secure Area is 12.
-halodestroyed is a number that varies.
 
 to say ResolveEvent Secure Area:
 	say "     On your jaunt through the city, you come across a yard, mostly intact, covered with barbed wire and odd defensive technology you could have sworn was science fiction. Behind the barriers, one of which is a shimmering halo in midair, stand two creatures, tall, but their silhouette is blurred by the halo, and you cannot make out if they are human or not. You can still make out the huge doors, made of something clearish white...";
@@ -23,7 +24,7 @@ to say ResolveEvent Secure Area:
 	if Player consents:
 		LineBreak;
 		say "     You run towards the barriers, determined to get inside.";
-		if a random number between 5 and 35 < Dexterity of Player:[player gets through to halo]
+		if a random number between 5 and 35 < Dexterity of Player: [player gets through to halo]
 			say "     Running and jumping and twisting, you manage to get thorough to the halo, which you approach with caution.";
 			if a random number between one and 35 < Strength of Player: [breaks halo]
 				now halodestroyed is 1;
@@ -149,15 +150,15 @@ To transform:
 		now BodyName of Player is Name entry;
 		now BodySpeciesName of Player is Species Name entry;
 		now Body of Player is body entry;
-		if there is a scale in row tmonster of the Table of Random Critters:
+		if there is a scale entry:
 			now scalevalue of Player is scale entry;
 		else:
 			now scalevalue of Player is 3;
-		if there is a body descriptor in row tmonster of the Table of Random Critters:
+		if there is a body descriptor entry:
 			now bodydesc of Player is body descriptor entry;
 		else:
 			now bodydesc of Player is Name entry in lower case;
-		if there is a type in row tmonster of the Table of Random Critters:
+		if there is a type entry:
 			now bodytype of Player is type entry;
 		else:
 			now bodytype of Player is Name entry in lower case;

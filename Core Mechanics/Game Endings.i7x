@@ -68,9 +68,7 @@ to setending ( Ending - text ) silence state is ( Silence - a number ): [sets th
 	let found be 0;
 	repeat with y running from 1 to number of filled rows in Table of GameEndings:
 		choose row y in Table of GameEndings;
-		if priority entry <= 0:
-			next;
-		if Name entry exactly matches the text Ending, case insensitively:
+		if priority entry > 0 and Name entry exactly matches the text Ending, case insensitively:
 			now found is 1;
 			now EndingID is y;
 			break;
@@ -142,19 +140,17 @@ when play ends:
 	clear the screen;
 	say "[bold type]Game Over![roman type][line break]";
 	ratetheplayer;
-	say "[bracket][link]Restart[end link][close bracket] [bracket][link]Restore[end link][close bracket] [bracket][link]Undo[end link][close bracket] ----------[line break]";
+	say "[line break][bracket][link]Restart[end link][close bracket] [bracket][link]Restore[end link][close bracket] [bracket][link]Undo[end link][close bracket] ----------[line break]";
 	follow the self examine rule;
 	[Go through the Table of GameEndings]
 	sort the Table of GameEndings in Priority order;
 	repeat with N running from 1 to the number of rows in the Table of GameEndings:
-		if there is no Priority in row N of the Table of GameEndings:
-			next; [Failsafe. Should never happen.]
 		choose row N in the Table of GameEndings;
-		if Priority entry is 0:
+		if there is no Priority entry or Priority entry is 0:
 			next; [Skip the initial row.]
 		if debug is at level 9:
 			let SubtypeString be "";
-			if Subtype entry is not "":
+			if Subtype entry is not empty:
 				now SubtypeString is " ([Subtype entry])";
 			say "DEBUG: Handling ending ['][Name entry]['], Type: [Type entry][SubtypeString], Priority: [Priority entry], Triggered: [if Triggered entry is true]yes[else]no[end if].[no line break]";
 		if Type entry endings are excluded:
@@ -167,7 +163,7 @@ when play ends:
 				say "DEBUG: The Player is either dead or imprisoned, enslaved and so on. Finishing here![line break]";
 			break;
 	[FS Multiplayer AD here]
-	say "[line break][bracket][link]Restart[end link][close bracket] [bracket][link]Restore[end link][close bracket] [bracket][link]Undo[end link][close bracket] ----------[line break]";
+	say "[line break]---------- [bracket][link]Restart[end link][close bracket] [bracket][link]Restore[end link][close bracket] [bracket][link]Undo[end link][close bracket][paragraph break]";
 	say "I hope you enjoyed playing that as much as we enjoyed coding/writing it! It doesn't have to end here though! Come join other mutants and play in the Multiplayer Flexible Survival universe with us!";
 	say "https://flexiblesurvival.com[line break]";
 	say "Once you have a character, click [']direct control['], and we'll be there, waiting to give a hand!";
@@ -186,35 +182,32 @@ to ratetheplayer:
 	say "In Scenario: [bold type][scenario][roman type], you have achieved a score of [bold type][score][roman type].";
 	if tempnum > 0, say "For choosing no gender lock, you received a bonus of [tempnum] points.";
 	if tempnum2 > 0, say "Your Ultimatum perk grants you a bonus of [tempnum2] points.";
-	say "You've achieve the rank of: [bold type]";
 	if score < 0:
-		say "A used, broken condom!";
+		say "You've achieved the rank of: [bold type]A used, broken condom![roman type][line break]";
 	else if score < 120:
-		say "A used condom!";
+		say "You've achieved the rank of: [bold type]A used condom![roman type][line break]";
 	else if the score < 240:
-		say "Post-Apocalyptic Passaround!";
+		say "You've achieved the rank of: [bold type]Post-Apocalyptic Passaround![roman type][line break]";
 	else if the score < 500:
-		say "Salacious Scavenger!";
+		say "You've achieved the rank of: [bold type]Salacious Scavenger![roman type][line break]";
 	else if the score < 1000:
-		say "Wanton Wastewanderer!";
+		say "You've achieved the rank of: [bold type]Wanton Wastewanderer![roman type][line break]";
 	else if the score < 1500:
-		say "Serpent Blisskin!";
+		say "You've achieved the rank of: [bold type]Serpent Blisskin![roman type][line break]";
 	else if the score < 2000:
-		say "Maester Baster!";
+		say "You've achieved the rank of: [bold type]Maester Baster![roman type][line break]";
 	else if the score < 2500:
-		say "Baude Warrior!";
+		say "You've achieved the rank of: [bold type]Baude Warrior![roman type][line break]";
 	else if score > 9000:
-		say "Th- What, 9000?!";
+		say "You've achieved the rank of: [bold type]Th- What, 9000?![roman type][line break]";
 	else:
-		say "The Lord Humungus!";
-	say "[roman type]";
+		say "You've achieved the rank of: [bold type]The Lord Humungus![roman type][line break]";
 	if the score > 999:
-		say "Your performance was so excellent, we'll give you a little... help, for your next run through. Type 'I am a pro' to gain 200 XP. It only works once per character";
+		say "Your performance was so excellent, we'll give you a little... help, for your next run through. Type [bold type]I am a pro[roman type] to gain 200 XP. It only works once per character";
 		if bookfound is not 0:
 			choose row with booknum of bookfound in Table of library books;
 			say "[if humanity of Player < 10]. Your confused, instinctual thoughts are sometimes broken by strange thoughts or images from a book you once read[else]. With all the excitement you went through at the library, the book you found remains firmly in your mind[end if]. In the Abbey, type ['][bold type]dewey [bookcode entry][roman type]['] to find it again in your next game";
 		say ".";
-	LineBreak;
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
@@ -252,7 +245,7 @@ This is the Epilogue Intro rule: [The player didn't die or bad ended]
 			increase score by 0;
 		else:
 			say "     Your unnatural [Skin of Player] flesh makes you stand out in a crowd. You find it difficult to keep friends outside of other infected, even after you're declared safe for contact.";
-		if "Fertile" is listed in feats of Player and Player is not sterile and ( number of filled rows in the Table of PlayerChildren + FeralBirths) > 5:
+		if "Fertile" is listed in feats of Player and Player is not sterile and number of filled rows in the Table of PlayerChildren + FeralBirths > 5:
 			if Player is female:
 				say "     You've been pregnant so many times and given birth to so many children that the nanites make a very strange change to your reproductive organs. Your body automatically stored a large amount of cum from the last creature that screwed you. Each time you give birth, a small amount of the cum is used to re-impregnate you automatically. You spend the rest of your life in a constant state of pregnancy. At first, you're alarmed by this, but your ever-growing brood of children cares for your every whim so you quickly begin to enjoy your new life.";
 			else if "MPreg" is listed in feats of Player and mpregcount >= 6:

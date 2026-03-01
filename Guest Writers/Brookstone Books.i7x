@@ -10,17 +10,14 @@ Table of GameRoomIDs (continued)
 Object	Name
 Brookstone Books	"Brookstone Books"
 
-Brookstone Books is a room. Brookstone Books entrance is a door. It is south of Brookstone Books and north of Mall East Wing. The Brookstone Books entrance is open.
+Brookstone Books is a room.
+Description of Brookstone Books is "     [if findwires is 2 and fixedgens is 3]The store seems bright and cheery with all of the lights on. You remember needing to come here on occasion to find an odd book or two. What it lacked in size in comparison to the big chain of bookstores, it made up for it in the wealth of older, hard to find, and out of print books and magazines in addition to newer releases. All the shelves in the store are crammed to capacity with books as well as the tables scattered around the store. Milling about are mall rats and other infected reading a book while either standing near a bookshelf or occupying a chair or little sofa in one of the seating groups[else]You head into the bookstore, attracted by the light of lanterns inside. As you walk in, you remember needing to come here on occasion to find an odd book or two. What it lacked in size in comparison to the big chain of bookstores, it made up for it in the wealth of older, hard to find, and out of print books and magazines in addition to newer releases. All the shelves in the store are crammed to capacity with books as well as the tables scattered around the store. Milling about are a mall rat or three reading a book while either standing near a bookshelf or occupying a chair or little sofa in one of the seating groups. Of what you can see from the glow of several candles and lanterns, all the books seem to still be in good condition[end if].[line break]".
+the scent of Brookstone Books is "     The store smells of musty tomes mingling with the burning scented candles.".
+
+Brookstone Books entrance is a door. It is south of Brookstone Books and north of Mall East Wing. The Brookstone Books entrance is open.
 
 Instead of examining the Brookstone Books entrance:
 	say "Through the store front windows and entrance, you make out [the other side of the Brookstone Books entrance].";
-
-Description of Brookstone Books is "     [if findwires is 2 and fixedgens is 3]The store seems bright and cheery with all of the lights on. You remember needing to come here on occasion to find an odd book or two. What it lacked in size in comparison to the big chain of bookstores, it made up for it in the wealth of older, hard to find, and out of print books and magazines in addition to newer releases. All the shelves in the store are crammed to capacity with books as well as the tables scattered around the store. Milling about are mall rats and other infected reading a book while either standing near a bookshelf or occupying a chair or little sofa in one of the seating groups[else]You head into the bookstore, attracted by the light of lanterns inside. As you walk in, you remember needing to come here on occasion to find an odd book or two. What it lacked in size in comparison to the big chain of bookstores, it made up for it in the wealth of older, hard to find, and out of print books and magazines in addition to newer releases. All the shelves in the store are crammed to capacity with books as well as the tables scattered around the store. Milling about are a mall rat or three reading a book while either standing near a bookshelf or occupying a chair or little sofa in one of the seating groups. Of what you can see from the glow of several candles and lanterns, all the books seem to still be in good condition[end if].[line break]";
-
-Beverly is in Brookstone Books.
-Bookshelves is in Brookstone Books.
-
-the scent of Brookstone Books is "     The store smells of musty tomes mingling with the burning scented candles.".
 
 Section 2 - Beverly
 
@@ -32,9 +29,10 @@ object	name
 Beverly	"Beverly"
 
 Beverly is a woman.
+Beverly is in Brookstone Books.
 Description of Beverly is "     Behind a register counter is what looks like a mouse with green eyes intently reading a book, having not noticed you yet. The thick locks of blonde, curly hair on their head fall cutely around their large ears and flow down to frame their slender neck. From the glow of the candles you can make out that the fur of their face and muzzle appears to be a dark, golden-cream in color, and seems to shine even in the low light. Pierced in their right gray ear are a couple of medium-sized gold hooped earrings.[line break]".
-Conversation of Beverly is { "Squeak!" }.
-
+[Conversation of Beverly is { "Squeak!" }.]
+fuckscene of Beverly is "     '[if bevtalk > 1]You're a nice person and all, but I'm not up for any kind of relationship right now. Do you mind if we just stick to platonic love?'[else]You look like a nice person and all, but I'm not ready for any kind of relationship.'[end if][line break]".
 the scent of Beverly is "     She smells like the books surrounding her mixed with a hint of hay.".
 
 instead of conversing the Beverly:
@@ -70,24 +68,19 @@ instead of conversing the Beverly:
 	else:
 		say "     [one of]'I hope Dinah is behaving herself.'[or]'I would like to resume teaching, even if I can't be transformed back.'[or]'It's good to see you safe and sane.'[or]'I heard the rats talk about seeing weird things below the mall. Is it true?'[or]'Dinah has always been a pretty smart kitty.'[or]'I remembered there was a class field trip planned for the zoo.'[or]'The jackal lady down the way is beautiful, but kind of strange, don't you think?'[or]'How are things going for you out there?'[or]'Maybe when you have some time we can try one of the role playing games.'[or]'I hope Dinah is alright.'[or]'I have a lot of interesting books. You might find something useful among them.'[or]She smiles at you. 'This new look of mine is growing on me... What do you think?'[at random]";
 
-Instead of fucking the Beverly:
-	say "     '[if bevtalk > 1]You're a nice person and all, but I'm not up for any kind of relationship right now. Do you mind if we just stick to platonic love?'[else]You look like a nice person and all, but I'm not ready for any kind of relationship.'[end if]";
-
 Section 3 - Book Browsing
+
+lastbookshelves is a number that varies. lastbookshelves is usually 255.
 
 Table of GameCharacterIDs (continued)
 object	name
 Bookshelves	"Bookshelves"
 
 Bookshelves is a man.
-
+Bookshelves is in Brookstone Books.
 Description of bookshelves is "     All around the store are bookshelves and tables loaded with old, used, and new books that run the gamut of subjects. Even after having visited the store in the past, you are still amazed by the amount of books the store has to [link][bold type]browse[roman type][as]browse books[end link] and [link][bold type]read[roman type][as]read books[end link] through.[line break]".
-
 the scent of the bookshelves is "     The books smell of musty tomes mingling with the scent of new papers and the burning candles.".
-
 linkaction of Bookshelves is "Possible Actions: [link]smell[as]smell Bookshelves[end link], [link]browse[as]browse books[end link][line break]".
-
-lastbookshelves is a number that varies. lastbookshelves is usually 255.
 
 Browsebooks is an action applying to nothing.
 understand "browse books/shelves" as browsebooks.
@@ -101,14 +94,13 @@ check browsebooks:
 	if lastbookshelves - turns < 8, say "You should really go take care of other stuff instead of spending all your time reading." instead;
 
 carry out browsebooks:
-	say "     In no particular hurry you decide to browse through a few books in the hopes of finding something interesting to read. Who knows, you may end up finding some information that will help you out in the wilds of the city.";
-	LineBreak;
+	say "     In no particular hurry you decide to browse through a few books in the hopes of finding something interesting to read. Who knows, you may end up finding some information that will help you out in the wilds of the city.[paragraph break]";
 	Let X be a random number between 1 and 10;
 	If X is 1:
 		If bevtalk > 1:
 			say "     Not finding anything of interest right now in the bookstore, you walk over to Beverly to see what she is reading. When you approach, she looks up and smiles at you. 'How's it going?' When you ask what she is reading, she giggles softly. 'Just doing a crossword in this magazine of puzzles I found. Want to help?' Nodding, you help her out with the current crossword she is working on. When it's completed you realize, as you yawn and stretch, that the time just flew by. 'Thanks for your help. Some of those clues were pretty tough, weren't they?'";
 			If intelligence of Player < 20:
-				Let bonus be ((Intelligence of Player minus 10) divided by 2);
+				Let bonus be (Intelligence of Player minus 10) divided by 2;
 				Let diceroll be a random number from 1 to 20;
 				say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]12[roman type] (Intelligence Check):[line break]";
 				Increase diceroll by bonus;

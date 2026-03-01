@@ -5,10 +5,8 @@ Section 1 - Creature Responses
 
 MMC is a number that varies. MMC is usually 1.
 MMP is a number that varies. MMP is usually 1.
-SporeCloud is a number that varies.[@Tag:NotSaved] SporeCloud is usually 0.
 
 to say losetoMushroomMen:
-	now SporeCloud is 0;
 	say "     With your strength worn down by the mushroom men's assault, you are unable to resist as they drag you to the ground, pushing you onto your [if Player is female]back[else]stomach[end if]. The small crowd erupts into cheers, shouts and sharp whistles as they begin stripping you of your gear, leaving your body on display for them. Soon there are dozens of tiny hands on your exposed body, stroking and teasing you[if Breast Size of Player > 0 and a random chance of 1 in 2 succeeds]. 'Mmm, they're even better face to face,' one of the mushroom men shouts as he nestles himself between your breasts, stroking one roughly while he pinches the other's nipple, causing you to moan[else if Player is mushroombodied or player is mushroomskinned]. 'Just couldn't stay away, huh babe?' comments one of the mushroom men as he rubs against your mushroom form[end if].";
 	say "     Eventually the mushroom men begin to congregate at your [if Player is female]groin, several of them pulling your legs apart as a small group from the back of the crowd pushes forward[else]ass. One of the larger mushrooms gives it a firm smack, complimenting your [one of]firm[or]cute[or]sexy[or]hot[at random] bottom before waving a group from the back of the crowd over[end if]. Leading this group is a rather large-looking mushroom with a disturbingly phallic look to his cap and body. The two following him look relatively normal, but they are significantly larger than the rest of the group. [one of]'I'm gonna show you a good time, babe,'[or]'I hope you're ready for this, toots,'[or]'I bet you can't wait for this, hun,'[at random] says the cock-shaped shroom as he lines the tip of his cap up with your [if Player is female]dripping cunt[else]clenched pucker[end if] before his two large companions lift him into the air by his legs, slowly pushing his cap into your body.";
 	WaitLineBreak;
@@ -19,11 +17,6 @@ to say losetoMushroomMen:
 to say MushroomMendesc:
 	say "     While walking [one of]down a path[or]through some overgrown brush[or]through a dimly lit clearing[at random] you hear [one of]'Hey toots!' [or]'Hey hot stuff!' [or]'Hey cutie!' [or]a sharp wolf whistle [at random][one of]behind you[or]to your right[or]to your left[or]just ahead of you[at random]. Glancing around you try and locate the source of the call, spotting some movement in a large cluster of mushrooms at the base of a nearby tree. Slowly the pack of mushrooms pull themselves from the ground and turn to face you, giving you a clear view of the partially humanoid forms.";
 	say "     The mushroom men come in significant variety, with several distinct shapes and colors, the most concerning among those being the group of strangely phallic-looking ones. While most of them are roughly a foot tall, there are a couple of larger fungi among them, peaking at nearly two feet. While lacking any visible gender, they all seem to carry a distinctly male presence. They begin shouting and cheering crudely as they move towards you.";
-
-to say MushroomMenFaceTF:
-	now MMC is a random number between 1 and 5;
-	now MMP is a random number between 1 and 3;
-	say "the color drains out of it and all your hair falls away. Weight begins building at the top of your head as the pale, smooth flesh begins to expand, growing into a large mushroom cap covered in [if MMC is 1]white[else if MMC is 2]red[else if MMC is 3]pale yellow[else if MMC is 4]pale orange[else if MMC is 5]brown[end if] flesh[if MMP is 1] with off-white spots[else if MMP is 2] with off-white splotches[else if MMP is 3] of varying shades[end if]";
 
 Section 2 - Creature Insertion
 
@@ -55,7 +48,7 @@ When Play begins:
 	now defeated entry is "     With their numbers dwindling, the few mushroom men who remain standing begin to lose their brazen confidence. Seeing them falter, you move forwards aggressively, chasing the last of them off into the surrounding forest.[line break]"; [ Text when monster loses. ]
 	now victory entry is "[losetoMushroomMen]"; [ Text when monster wins. ]
 	now desc entry is "[MushroomMendesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "mostly human looking with cute[if Player is female], feminine[end if] features and a smooth, pale complexion. The large mushroom cap atop your head, however, is far more unusual. It has [if MMC is 1]white[else if MMC is 2]red[else if MMC is 3]pale yellow[else if MMC is 4]pale orange[else if MMC is 5]brown[end if] flesh[if MMP is 1] with off-white spots[else if MMP is 2] with off-white splotches[else if MMP is 3] of varying shades[end if]"; [ Face description, format as "Your face is [Face of Player]." ]
+	now face entry is "mostly human looking with cute[if Player is female], feminine[end if] features and a smooth, pale complexion. The large mushroom cap atop your head, however, is far more unusual. It has [if MMC is 1]white[else if MMC is 2]red[else if MMC is 3]pale yellow[else if MMC is 4]pale orange[else]brown[end if] flesh[if MMP is 1] with off-white spots[else if MMP is 2] with off-white splotches[else] of varying shades[end if]"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "that of a small mushroom person, with a slim[if Player is female], feminine[end if] build and compact features. You are roughly three and a half feet tall from the ground to the top of your [if Player is mushroomfaced]cap[else]head[end if]. While your hands are still mostly human, with the notable exception of your missing fingernails, your feet have lost much of their definition, leaving them looking not unlike the stalk of a mushroom"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "pale, spongy"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "Despite its tight appearance, your cute little ass is actually quite soft and spongy feeling[if Player is mushroombodied], much like the rest of your mushroom body[end if]."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
@@ -205,7 +198,14 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+to say MushroomMenFaceTF:
+	now MMC is a random number between 1 and 5;
+	now MMP is a random number between 1 and 3;
+	say "the color drains out of it and all your hair falls away. Weight begins building at the top of your head as the pale, smooth flesh begins to expand, growing into a large mushroom cap covered in [if MMC is 1]white[else if MMC is 2]red[else if MMC is 3]pale yellow[else if MMC is 4]pale orange[else]brown[end if] flesh[if MMP is 1] with off-white spots[else if MMP is 2] with off-white splotches[else] of varying shades[end if]";
+
 Section 3 - Alt Combat
+
+SporeCloud is a number that varies.[@Tag:NotSaved] SporeCloud is usually 0.
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
@@ -219,8 +219,8 @@ this is the swarmattack rule:		[damage bonus based on remaining health]
 	let dam be dam + basicdam;
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
-		say "The enemy finds a particular vulnerability in your defense - [bold type]Critical Hit![roman type][line break]";
-	say "The [EnemyNameOrTitle] [one of]attack[or]swarm[or]rush[at random] you as a group, [one of]grabbing at your limbs, trying to drag you down[or]attacking you from all sides[or]groping and teasing your body as they swarm over you[at random]. With [if (( monsterHP * 100 ) / HP entry ) > 75]the group still at full strength, the attack easily overwhelms your defenses[else if (( monsterHP * 100 ) / HP entry ) > 50]the majority of the group still fighting, the assault is quite effective[else if (( monsterHP * 100 ) / HP entry ) > 25]most of their group injured or defeated, the attack is only somewhat effective[else]the majority of the group defeated, the attack is severely weakened[end if]. You suffer [special-style-2][dam][roman type] damage.";
+		say "The enemy finds a particular vulnerability in your defense - [italic type]Critical Hit![roman type][line break]";
+	say "The [EnemyNameOrTitle] [one of]attack[or]swarm[or]rush[at random] you as a group, [one of]grabbing at your limbs, trying to drag you down[or]attacking you from all sides[or]groping and teasing your body as they swarm over you[at random]. With [if ( monsterHP * 100 ) / HP entry > 75]the group still at full strength, the attack easily overwhelms your defenses[else if ( monsterHP * 100 ) / HP entry > 50]the majority of the group still fighting, the assault is quite effective[else if ( monsterHP * 100 ) / HP entry > 25]most of their group injured or defeated, the attack is only somewhat effective[else]the majority of the group defeated, the attack is severely weakened[end if]. You suffer [special-style-2][dam][roman type] damage.";
 	now damagein is dam;
 	say "[noshieldabsorbancy]"; [unable to use shield effectively - attacked from multiple angles]
 	if absorb > dam:
@@ -235,9 +235,8 @@ this is the swarmattack rule:		[damage bonus based on remaining health]
 this is the sporecloud rule: [Spore aura following spore blast attack]
 	choose row MonsterID from Table of Random Critters;
 	if SporeCloud is 0 and a random chance of 1 in 5 succeeds:
-		say "As the [EnemyNameOrTitle] continue fighting, their excited movements begin releasing fungal spores into the air!";
+		say "As the [EnemyNameOrTitle] continue fighting, their excited movements begin releasing fungal spores into the air![paragraph break]";
 		increase SporeCloud by a random number between 2 and 4;
-		LineBreak;
 	if SporeCloud > 0:
 		if face mask is equipped:
 			say "The air is still filled with fungal spores, but your face mask [one of]prevents you from breathing them in[or]protects you from their influence[or]keeps you from inhaling them[at random].";
@@ -254,7 +253,7 @@ this is the sporecloud rule: [Spore aura following spore blast attack]
 				increase Libido of Player by a random number between 1 and 3;
 			decrease SporeCloud by 1;
 			if SporeCloud is 0:
-				say "[line break][one of]With a merciful gust of wind[or]As the battle continues[or]As your fighting begins to move away[at random] the lingering spore cloud finally dissipates.";
+				say "[line break][one of]With a merciful gust of wind[or]As the battle continues[or]As your fighting begins to move away[at random], the lingering spore cloud finally dissipates.";
 			follow the player injury rule;
 			say "You are [descr].";
 			if HP of Player < 1 or Libido of Player > 109:

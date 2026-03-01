@@ -391,7 +391,7 @@ to DescriptionDisplay:
 		else:
 			say "A private peek shows that you [cocktext]";
 			say " Also, you[cunttext]";
-	else if cunttext is not "":
+	else if cunttext is not empty:
 		say " You[cunttext]";
 	follow the breast descr rule;
 	if Nipple Count of Player > 0:
@@ -869,8 +869,7 @@ check PlayerSizeChange:
 		stop the action;
 
 carry out PlayerSizeChange:
-	LineBreak;
-	say "     [bold type]What size do you want your character to be?[roman type][line break]";
+	say "[line break]     [bold type]What size do you want your character to be?[roman type][line break]";
 	say "     [link](1)[as]1[end link] Tiny.";
 	say "     [link](2)[as]2[end link] Small.";
 	say "     [link](3)[as]3[end link] Average.";
@@ -915,8 +914,7 @@ check SetPlayerGenitals:
 
 carry out SetPlayerGenitals:
 	now tempnum is number understood;
-	LineBreak;
-	say "[bold type]Change Genitals:[roman type][line break]";
+	say "[line break][bold type]Change Genitals:[roman type][line break]";
 	say "(1) [link]Change cock[as]1[end link] (length or count) using [bold type][tempnum][roman type].";
 	say "(2) [link]Change cunt[as]2[end link] (depth, diameter, or count) using [bold type][tempnum][roman type].";
 	say "(3) [link]Change balls[as]3[end link] (size only) using [bold type][tempnum][roman type].";
@@ -925,9 +923,7 @@ carry out SetPlayerGenitals:
 	while calcnumber < 1 or calcnumber > 4:
 		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 4:
 			say "Invalid choice. Pick from 1 to 4.";
 	LineBreak;
 	if calcnumber is 1:
@@ -938,18 +934,16 @@ carry out SetPlayerGenitals:
 		while calcnumber < 1 or calcnumber > 2:
 			say "Choice? (1-2)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 2:
 				say "Invalid choice. Pick from 1 to 2.";
 		LineBreak;
 		if calcnumber is 1:
 			if tempnum is 0:
-				if Cock Count of Player > 0:
+				if Player is male:
 					say "Cock[smn] removed!";
 					now Cock Count of Player is 0;
 					now Ball Size of Player is 0;
-			else if Cock Count of Player is 0:
+			else if Player is not male:
 				say "Cock added!";
 				now Cock Count of Player is 1;
 				now Ball Size of Player is 2;
@@ -960,7 +954,7 @@ carry out SetPlayerGenitals:
 				say "Cock[smn] removed!";
 				now Cock Length of Player is 0;
 				now Ball Size of Player is 0;
-			else if Cock Count of Player is 0:
+			else if Player is not male:
 				say "Cock[if tempnum > 1]s[end if] added!";
 				now Cock Length of Player is 5;
 				now Ball Size of Player is 2;
@@ -975,18 +969,16 @@ carry out SetPlayerGenitals:
 		while calcnumber < 1 or calcnumber > 3:
 			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 3:
 				say "Invalid choice. Pick from 1 to 3.";
 		LineBreak;
 		if calcnumber is 1:
 			if tempnum is 0:
-				if Cunt Count of Player > 0:
+				if Player is female:
 					say "Cunt[sfn] removed!";
 					now Cunt Count of Player is 0;
 					now Cunt Tightness of Player is 0;
-			else if Cunt Count of Player is 0:
+			else if Player is not female:
 				say "Cunt added!";
 				now Cunt Count of Player is 1;
 				now Cunt Tightness of Player is 4;
@@ -994,11 +986,11 @@ carry out SetPlayerGenitals:
 			now Cunt Depth of Player is tempnum;
 		else if calcnumber is 2:
 			if tempnum is 0:
-				if Cunt Count of Player > 0:
+				if Player is female:
 					say "Cunt[sfn] removed!";
 					now Cunt Count of Player is 0;
 					now Cunt Depth of Player is 0;
-			else if Cunt Count of Player is 0:
+			else if Player is not female:
 				say "Cunt added!";
 				now Cunt Count of Player is 1;
 				now Cunt Depth of Player is 5;
@@ -1009,7 +1001,7 @@ carry out SetPlayerGenitals:
 				say "Cunt[sfn] removed!";
 				now Cunt Depth of Player is 0;
 				now Cunt Tightness of Player is 0;
-			else if Cunt Count of Player is 0:
+			else if Player is not female:
 				say "Cunt[if tempnum > 1]s[end if] added!";
 				now Cunt Depth of Player is 5;
 				now Cunt Tightness of Player is 4;
@@ -1023,7 +1015,7 @@ carry out SetPlayerGenitals:
 			say "Cock[smn] removed!";
 			now Cock Count of Player is 0;
 			now Cock Length of Player is 0;
-		else if Cock Count of Player is 0:
+		else if Player is not male:
 			say "Cock added!";
 			now Cock Count of Player is 1;
 			now Cock Length of Player is 5;
@@ -1037,9 +1029,7 @@ carry out SetPlayerGenitals:
 		while calcnumber < 1 or calcnumber > 2:
 			say "Choice? (1-2)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 2:
 				say "Invalid choice. Pick from 1 to 2.";
 		LineBreak;
 		if calcnumber is 1:

@@ -5,10 +5,9 @@ Version 1 of Store Mechanics by Core Mechanics begins here.
 
 Book 1 - The Black Market [Store within the zephyr building]
 
-Section 1 - Zephyr Black Market Medicine Case [Modification Items]
+Part 1 - Zephyr Black Market Medicine Case [Modification Items]
 
 The medicine case is a backdrop. It is in Zephyr Storeroom. Description of the medicine case is "[medicine case list]".
-
 Scent of the medicine case is "     The medicine case has little in the way of a scent of its own.".
 
 to say medicine case list:
@@ -47,10 +46,9 @@ name	price	object	allowed
 "nullifying powder"	50	nullifying powder	true rule
 "libido suppressant"	100	libido suppressant	true rule
 
-Section 2 - Zephyr Black Market Outfitters Rack [Equipment]
+Part 2 - Zephyr Black Market Outfitters Rack [Equipment]
 
 The outfitters rack is a backdrop. It is in Zephyr Storeroom. Description of the outfitters rack is "[outfitters rack list]".
-
 Scent of the outfitters rack is "     The outfitters rack has little in the way of a scent of its own.".
 
 to say outfitters rack list:
@@ -73,7 +71,7 @@ name	price	object	allowed
 "zephyr riot shin guards"	120	zephyr riot shin guards	true rule
 "zephyr protective riot shield"	150	zephyr protective riot shield	true rule
 
-Section 3 - Zephyr Black Market Catalogue [Sexual Items]
+Part 3 - Zephyr Black Market Catalogue [Sexual Items]
 
 [Table of Zephyr Black Market Catalogue
 "canine dildo"	350	canine dildo	true rule
@@ -90,13 +88,9 @@ rule succeeds;
 
 Book 2 - The Pretty Kitty [Store within the mall]
 
-Section 1 - TPK male clothing section [Clothing That Increases Masculinity]
+Part 1 - TPK male clothing section [Clothing That Increases Masculinity]
 
-TPK male clothing section is a backdrop. It is in Pretty Kitty. Description of TPK male clothing section is "[TPK male clothing section desc]".
-
-to say TPK male clothing section desc:
-	say "     The male clothing section holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed in terms of freecred. You can [link]browse[as]browse TPK male clothing[end link] in the male clothing section if you want.";
-
+TPK male clothing section is a backdrop. It is in Pretty Kitty. Description of TPK male clothing section is "     The male clothing section holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed in terms of freecred. You can [link]browse[as]browse TPK male clothing[end link] in the male clothing section if you want.[line break]".
 the scent of TPK male clothing section is "     The male clothing section smells the same as the rest of the store.".
 
 BrowseTPKMaleClothing is an action applying to nothing.
@@ -106,12 +100,12 @@ check BrowseTPKMaleClothing:
 	If TPK male clothing section is not visible, say "What is it you want to browse?" instead;
 
 carry out BrowseTPKMaleClothing:
-	say "[line break][TPC male clothing selector]";
+	say "[TPC male clothing selector]";
 
-Part 1 - Base
+Chapter 1 - Base
 
 to say TPC male clothing selector: [Main male clothing Menu (level 1)]
-	say "     [bold type]You look at the available items and then decide to...[roman type][line break]";
+	say "[line break]     [bold type]You look at the available items and then decide to...[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -149,7 +143,6 @@ to say TPC male clothing selector: [Main male clothing Menu (level 1)]
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
@@ -173,10 +166,10 @@ to say TPC male clothing selector: [Main male clothing Menu (level 1)]
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
 
-Part 2 - Headwear
+Chapter 2 - Headwear
 
 to say browse_TPK_male_headwear: [Male clothing category submenu (level 2 under the male clothing selector)]
-	say "     Which style of headwear would you like to check out?";
+	say "[line break]     Which style of headwear would you like to check out?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -195,14 +188,12 @@ to say browse_TPK_male_headwear: [Male clothing category submenu (level 2 under 
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
 			if title entry is "Bike Helmets":
 				say "[TPK_Male_BikeHelmetMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[TPC male clothing selector]"; [return to level 1 selector]
 		else if calcnumber is 100:
 			LineBreak;
@@ -214,7 +205,7 @@ to say browse_TPK_male_headwear: [Male clothing category submenu (level 2 under 
 	clear the screen and hyperlink list;
 
 to say TPK_Male_BikeHelmetMenu: [Male clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which type of bike helmet would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which type of bike helmet would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -240,7 +231,6 @@ to say TPK_Male_BikeHelmetMenu: [Male clothing category sub-submenu (level 3 und
 			if title entry is "Dragon Bike Helmet":
 				say "[DragonBikeHelmetTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_male_headwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -253,15 +243,13 @@ to say TPK_Male_BikeHelmetMenu: [Male clothing category sub-submenu (level 3 und
 
 to say DragonBikeHelmetTalk: [item selection (level 4)]
 	say "     A plastic foam bicycle helmet, complete with a green shell covered with dragons spewing red flames, as well as a strap to fasten it to the wearer's head. Judging by the helmet's appearance, it's [']masculine['] and pretty [']cool[']. It has a price sign that reads '10 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 10:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[TPK_Male_BikeHelmetMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 10;
@@ -272,13 +260,12 @@ to say DragonBikeHelmetTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[TPK_Male_BikeHelmetMenu]"; [return to level 3 sub-submenu]
 
-Part 3 - Jackets
+Chapter 3 - Jackets
 
 to say browse_TPK_male_jackets: [Male clothing category submenu (level 2 under the male clothing selector)]
-	say "     Which style of jacket would you like to check out?";
+	say "[line break]     Which style of jacket would you like to check out?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -297,14 +284,12 @@ to say browse_TPK_male_jackets: [Male clothing category submenu (level 2 under t
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
 			if title entry is "Greatcoats":
 				say "[TPK_Male_GreatcoatMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[TPC male clothing selector]"; [return to level 1 selector]
 		else if calcnumber is 100:
 			LineBreak;
@@ -316,7 +301,7 @@ to say browse_TPK_male_jackets: [Male clothing category submenu (level 2 under t
 	clear the screen and hyperlink list;
 
 to say TPK_Male_GreatcoatMenu: [Male clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which color of greatcoat would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which color of greatcoat would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -350,7 +335,6 @@ to say TPK_Male_GreatcoatMenu: [Male clothing category sub-submenu (level 3 unde
 				-- "Gray Greatcoat":
 					say "[GrayGreatcoatTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_male_jackets]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -363,15 +347,13 @@ to say TPK_Male_GreatcoatMenu: [Male clothing category sub-submenu (level 3 unde
 
 to say BlackGreatcoatTalk: [item selection (level 4)]
 	say "     A full-body black coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight. Judging by the coat's appearance, it's [']masculine['] and pretty [']smart['] looking. It has a price sign that reads '30 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 30:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[TPK_Male_GreatcoatMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 30;
@@ -382,20 +364,17 @@ to say BlackGreatcoatTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[TPK_Male_GreatcoatMenu]"; [return to level 3 sub-submenu]
 
 to say GrayGreatcoatTalk: [item selection (level 4)]
 	say "     A full-body gray coat made from thick wool. It will certainly protect you from bad weather, but the sturdy material should also be some help in a close-combat fight. Judging by the coat's appearance, it's [']masculine['] and pretty [']smart['] looking. It has a price sign that reads '30 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 30:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[TPK_Male_GreatcoatMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 30;
@@ -406,13 +385,12 @@ to say GrayGreatcoatTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[TPK_Male_GreatcoatMenu]"; [return to level 3 sub-submenu]
 
-Part 4 - Legwear
+Chapter 4 - Legwear
 
 to say browse_TPK_male_legwear: [Male clothing category submenu (level 2 under the male clothing selector)]
-	say "     Which style of pants would you like to check out?";
+	say "[line break]     Which style of pants would you like to check out?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -431,14 +409,12 @@ to say browse_TPK_male_legwear: [Male clothing category submenu (level 2 under t
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
 			if title entry is "Camo Pants":
 				say "[TPK_Male_CamoPantsMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[TPC male clothing selector]"; [return to level 1 selector]
 		else if calcnumber is 100:
 			LineBreak;
@@ -450,7 +426,7 @@ to say browse_TPK_male_legwear: [Male clothing category submenu (level 2 under t
 	clear the screen and hyperlink list;
 
 to say TPK_Male_CamoPantsMenu: [Male clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which color of camo pants would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which color of camo pants would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -476,7 +452,6 @@ to say TPK_Male_CamoPantsMenu: [Male clothing category sub-submenu (level 3 unde
 			if title entry is "Green Camo Pants":
 				say "[GreenCamoPantsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_male_legwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -489,15 +464,13 @@ to say TPK_Male_CamoPantsMenu: [Male clothing category sub-submenu (level 3 unde
 
 to say GreenCamoPantsTalk: [item selection (level 4)]
 	say "     A pair of camo pants in various shades of green. Judging by the pants['] appearance, they're [']masculine['] and pretty [']cool['] looking. They have a price sign that reads '20 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 20:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[TPK_Male_CamoPantsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 20;
@@ -508,13 +481,12 @@ to say GreenCamoPantsTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[TPK_Male_CamoPantsMenu]"; [return to level 3 sub-submenu]
 
-Part 5 - Underwear
+Chapter 5 - Underwear
 
 to say browse_TPK_male_underwear: [Male clothing category submenu (level 2 under the male clothing selector)]
-	say "     Which style of underwear would you like to check out?";
+	say "[line break]     Which style of underwear would you like to check out?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -525,12 +497,12 @@ to say browse_TPK_male_underwear: [Male clothing category submenu (level 2 under
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Boxer Briefs";
-	now sortorder entry is 1;
+	now sortorder entry is 2;
 	now description entry is "See what boxer briefs are available";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Jockstraps";
-	now sortorder entry is 1;
+	now sortorder entry is 3;
 	now description entry is "See what jockstraps are available";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -543,7 +515,6 @@ to say browse_TPK_male_underwear: [Male clothing category submenu (level 2 under
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
@@ -555,7 +526,6 @@ to say browse_TPK_male_underwear: [Male clothing category submenu (level 2 under
 				-- "Jockstraps":
 					say "[TPK_Male_JockstrapsMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[TPC male clothing selector]"; [return to level 1 selector]
 		else if calcnumber is 100:
 			LineBreak;
@@ -567,7 +537,7 @@ to say browse_TPK_male_underwear: [Male clothing category submenu (level 2 under
 	clear the screen and hyperlink list;
 
 to say TPK_Male_BriefsMenu: [Male clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which color of briefs would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which color of briefs would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -593,7 +563,6 @@ to say TPK_Male_BriefsMenu: [Male clothing category sub-submenu (level 3 under t
 			if title entry is "White Briefs":
 				say "[WhiteBriefsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_male_underwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -606,15 +575,13 @@ to say TPK_Male_BriefsMenu: [Male clothing category sub-submenu (level 3 under t
 
 to say WhiteBriefsTalk: [item selection (level 4)]
 	say "     A pair of tight white briefs. Simple, yet functional. Judging by the appearance of the underwear, it's [']masculine['] and pretty [']basic['] looking. It has a price sign that reads '10 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 10:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[TPK_Male_BriefsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 10;
@@ -625,11 +592,10 @@ to say WhiteBriefsTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[TPK_Male_BriefsMenu]"; [return to level 3 sub-submenu]
 
 to say TPK_Male_BoxerBriefsMenu: [Male clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which color of boxer briefs would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which color of boxer briefs would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -655,7 +621,6 @@ to say TPK_Male_BoxerBriefsMenu: [Male clothing category sub-submenu (level 3 un
 			if title entry is "Black Boxer Briefs":
 				say "[BlackBoxerBriefsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_male_underwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -668,15 +633,13 @@ to say TPK_Male_BoxerBriefsMenu: [Male clothing category sub-submenu (level 3 un
 
 to say BlackBoxerBriefsTalk: [item selection (level 4)]
 	say "     A pair of black boxer briefs with a gray band of elastic at the top. Simple, yet functional. Judging by the appearance of the underwear, it's [']masculine['] and pretty [']basic['] looking. It has a price sign that reads '10 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 10:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[TPK_Male_BoxerBriefsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 10;
@@ -687,11 +650,10 @@ to say BlackBoxerBriefsTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[TPK_Male_BoxerBriefsMenu]"; [return to level 3 sub-submenu]
 
 to say TPK_Male_JockstrapsMenu: [Male clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which color of jockstrap would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which color of jockstrap would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -717,7 +679,6 @@ to say TPK_Male_JockstrapsMenu: [Male clothing category sub-submenu (level 3 und
 			if title entry is "Orange Jockstrap":
 				say "[OrangeJockstrapTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_male_underwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -730,15 +691,13 @@ to say TPK_Male_JockstrapsMenu: [Male clothing category sub-submenu (level 3 und
 
 to say OrangeJockstrapTalk: [item selection (level 4)]
 	say "     A jockstrap in bright orange, clearly made for people who do not mind showing off quite a bit. Judging by the appearance of the jockstrap, it's [']masculine['] and pretty [']sexy['] while [']sporty['] looking. It has a price sign that reads '20 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 20:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[TPK_Male_JockstrapsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 20;
@@ -749,13 +708,12 @@ to say OrangeJockstrapTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[TPK_Male_JockstrapsMenu]"; [return to level 3 sub-submenu]
 
-Part 6 - Shoes
+Chapter 6 - Shoes
 
 to say browse_TPK_male_shoes: [Male clothing category submenu (level 2 under the male clothing selector)]
-	say "     Which style of shoes would you like to check out?";
+	say "[line break]     Which style of shoes would you like to check out?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -774,14 +732,12 @@ to say browse_TPK_male_shoes: [Male clothing category submenu (level 2 under the
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
 			if title entry is "Combat Boots":
 				say "[browse_TPK_Male_CombatBootsMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[TPC male clothing selector]"; [return to level 1 selector]
 		else if calcnumber is 100:
 			LineBreak;
@@ -793,7 +749,7 @@ to say browse_TPK_male_shoes: [Male clothing category submenu (level 2 under the
 	clear the screen and hyperlink list;
 
 to say browse_TPK_Male_CombatBootsMenu: [Male clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which color of combat boots would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which color of combat boots would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -819,7 +775,6 @@ to say browse_TPK_Male_CombatBootsMenu: [Male clothing category sub-submenu (lev
 			if title entry is "Black Combat Boots":
 				say "[BlackCombatBootsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_male_shoes]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -832,15 +787,13 @@ to say browse_TPK_Male_CombatBootsMenu: [Male clothing category sub-submenu (lev
 
 to say BlackCombatBootsTalk: [item selection (level 4)]
 	say "     A pair of black combat boots. They are quite sturdy and fairly heavy because of the steel caps in them. Judging by the appearance of the boots, they're [']masculine['] and pretty [']rebellious['] looking. They have a price sign that reads '30 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 30:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[browse_TPK_Male_CombatBootsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 30;
@@ -851,16 +804,11 @@ to say BlackCombatBootsTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[browse_TPK_Male_CombatBootsMenu]"; [return to level 3 sub-submenu]
 
-Section 2 - TPK female clothing section [Clothing That Increases Femininity]
+Part 2 - TPK female clothing section [Clothing That Increases Femininity]
 
-The TPK female clothing section is a backdrop. It is in Pretty Kitty. Description of the TPK female clothing section is "[TPK female clothing section desc]".
-
-to say TPK female clothing section desc:
-	say "     The female clothing section holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed in terms of freecred. You can [link]browse[as]browse TPK female clothing[end link] in the female clothing section if you want.";
-
+The TPK female clothing section is a backdrop. It is in Pretty Kitty. Description of the TPK female clothing section is "     The female clothing section holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed in terms of freecred. You can [link]browse[as]browse TPK female clothing[end link] in the female clothing section if you want.[line break]".
 the scent of TPK female clothing section is "     The female clothing section smells the same as the rest of the store.".
 
 BrowseTPKFemaleClothing is an action applying to nothing.
@@ -870,12 +818,12 @@ check BrowseTPKFemaleClothing:
 	If TPK female clothing section is not visible, say "What is it you want to browse?" instead;
 
 carry out BrowseTPKFemaleClothing:
-	say "[line break][TPC female clothing selector]";
+	say "[TPC female clothing selector]";
 
-Part 1 - Base
+Chapter 1 - Base
 
 to say TPC female clothing selector: [Main female clothing Menu (level 1)]
-	say "     [bold type]You look at the available items and then decide to...[roman type][line break]";
+	say "[line break]     [bold type]You look at the available items and then decide to...[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -896,7 +844,7 @@ to say TPC female clothing selector: [Main female clothing Menu (level 1)]
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Browse the female shoes"; [line 1850]
-	now sortorder entry is 3;
+	now sortorder entry is 4;
 	now description entry is "Check out shoes for women";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -908,7 +856,6 @@ to say TPC female clothing selector: [Main female clothing Menu (level 1)]
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
@@ -930,10 +877,10 @@ to say TPC female clothing selector: [Main female clothing Menu (level 1)]
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 	clear the screen and hyperlink list;
 
-Part 2 - Headwear
+Chapter 2 - Headwear
 
 to say browse_TPK_female_headwear: [Female clothing category submenu (level 2 under the female clothing selector)]
-	say "     Which style of headwear would you like to check out?";
+	say "[line break]     Which style of headwear would you like to check out?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -962,7 +909,6 @@ to say browse_TPK_female_headwear: [Female clothing category submenu (level 2 un
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
@@ -974,7 +920,6 @@ to say browse_TPK_female_headwear: [Female clothing category submenu (level 2 un
 				-- "Glasses":
 					say "[browse_TPK_Female_GlassesMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[TPC female clothing selector]"; [return to level 1 selector]
 		else if calcnumber is 100:
 			LineBreak;
@@ -986,7 +931,7 @@ to say browse_TPK_female_headwear: [Female clothing category submenu (level 2 un
 	clear the screen and hyperlink list;
 
 to say browse_TPK_Female_BikeHelmetsMenu: [Female clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which style of bike helmet would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which style of bike helmet would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1012,7 +957,6 @@ to say browse_TPK_Female_BikeHelmetsMenu: [Female clothing category sub-submenu 
 			if title entry is "Princess Bike Helmet":
 				say "[PrincessBikeHelmetTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_female_headwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -1025,15 +969,13 @@ to say browse_TPK_Female_BikeHelmetsMenu: [Female clothing category sub-submenu 
 
 to say PrincessBikeHelmetTalk: [item selection (level 4)]
 	say "     A plastic foam bicycle helmet, complete with a pink shell covered with rainbows and unicorns, as well as a strap to fasten it to the wearer's head. Judging by the helmet's appearance, it's [']feminine['] and pretty [']cute[']. It has a price sign that reads '10 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 10:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[browse_TPK_Female_BikeHelmetsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 10;
@@ -1044,11 +986,10 @@ to say PrincessBikeHelmetTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[browse_TPK_Female_BikeHelmetsMenu]"; [return to level 3 sub-submenu]
 
 to say browse_TPK_Female_LargeBowsMenu: [Female clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which color of large bow would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which color of large bow would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1096,7 +1037,6 @@ to say browse_TPK_Female_LargeBowsMenu: [Female clothing category sub-submenu (l
 				-- "Large Polka Dot Bow":
 					say "[LargePolkaDotBowTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_female_headwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -1109,15 +1049,13 @@ to say browse_TPK_Female_LargeBowsMenu: [Female clothing category sub-submenu (l
 
 to say LargeWhiteBowTalk: [item selection (level 4)]
 	say "     A large white bow with a glossy finish. Its appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bow's appearance, it's [']feminine['] and pretty [']cute[']. It has a price sign that reads '10 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 10:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[browse_TPK_Female_LargeBowsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 10;
@@ -1128,20 +1066,17 @@ to say LargeWhiteBowTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[browse_TPK_Female_LargeBowsMenu]"; [return to level 3 sub-submenu]
 
 to say LargeBlackBowTalk: [item selection (level 4)]
 	say "     A large black bow with a glossy finish. Its appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bow's appearance, it's [']feminine['] and pretty [']cute[']. It has a price sign that reads '10 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 10:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[browse_TPK_Female_LargeBowsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 10;
@@ -1152,20 +1087,17 @@ to say LargeBlackBowTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[browse_TPK_Female_LargeBowsMenu]"; [return to level 3 sub-submenu]
 
 to say LargePinkBowTalk: [item selection (level 4)]
 	say "     A large pink bow with a glossy finish. Its appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bow's appearance, it's [']feminine['] and pretty [']cute[']. It has a price sign that reads '10 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 10:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[browse_TPK_Female_LargeBowsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 10;
@@ -1176,20 +1108,17 @@ to say LargePinkBowTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[browse_TPK_Female_LargeBowsMenu]"; [return to level 3 sub-submenu]
 
 to say LargePolkaDotBowTalk: [item selection (level 4)]
 	say "     A large polka dot bow with a glossy finish. Its appearance seems more fitting for someone of a much younger age, or someone who simply loves cartoons and anime. Judging by the bow's appearance, it's [']feminine['] and pretty [']cute[']. It has a price sign that reads '10 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 10:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[browse_TPK_Female_LargeBowsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 10;
@@ -1200,11 +1129,10 @@ to say LargePolkaDotBowTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[browse_TPK_Female_LargeBowsMenu]"; [return to level 3 sub-submenu]
 
 to say browse_TPK_Female_GlassesMenu: [Female clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which style of glasses would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which style of glasses would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1230,7 +1158,6 @@ to say browse_TPK_Female_GlassesMenu: [Female clothing category sub-submenu (lev
 			if title entry is "Rose-tinted Glasses":
 				say "[Rose-tintedGlassesTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_female_headwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -1243,15 +1170,13 @@ to say browse_TPK_Female_GlassesMenu: [Female clothing category sub-submenu (lev
 
 to say Rose-tintedGlassesTalk: [item selection (level 4)]
 	say "     A pair of rose-tinted glasses with frilly edges. There even are some glass gemstones with reflective backing glued to them. Judging by the glasses['] appearance, it's [']feminine['] and pretty [']stylish[']. It has a price sign that reads '10 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 10:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[browse_TPK_Female_GlassesMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 10;
@@ -1262,13 +1187,12 @@ to say Rose-tintedGlassesTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[browse_TPK_Female_GlassesMenu]"; [return to level 3 sub-submenu]
 
-Part 3 - Legwear
+Chapter 3 - Legwear
 
 to say browse_TPK_female_legwear: [Female clothing category submenu (level 2 under the female clothing selector)]
-	say "     Which style of legwear would you like to check out?";
+	say "[line break]     Which style of legwear would you like to check out?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1297,7 +1221,6 @@ to say browse_TPK_female_legwear: [Female clothing category submenu (level 2 und
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
@@ -1309,7 +1232,6 @@ to say browse_TPK_female_legwear: [Female clothing category submenu (level 2 und
 				-- "Skirts":
 					say "[browse_TPK_Female_SkirtsMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[TPC female clothing selector]"; [return to level 1 selector]
 		else if calcnumber is 100:
 			LineBreak;
@@ -1321,7 +1243,7 @@ to say browse_TPK_female_legwear: [Female clothing category submenu (level 2 und
 	clear the screen and hyperlink list;
 
 to say browse_TPK_Female_JoggingPantsMenu: [Female clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which color of jogging pants would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which color of jogging pants would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1347,7 +1269,6 @@ to say browse_TPK_Female_JoggingPantsMenu: [Female clothing category sub-submenu
 			if title entry is "Pink Jogging Pants":
 				say "[PinkJoggingPantsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_female_legwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -1360,15 +1281,13 @@ to say browse_TPK_Female_JoggingPantsMenu: [Female clothing category sub-submenu
 
 to say PinkJoggingPantsTalk: [item selection (level 4)]
 	say "     A pair of pink jogging pants made from fairly soft and stretchy fabric, it also has swirling hearts across the material. Judging by the pants['] appearance, it's [']feminine['] and pretty [']sporty['] looking. It has a price sign that reads '20 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 20:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[browse_TPK_Female_JoggingPantsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 20;
@@ -1379,11 +1298,10 @@ to say PinkJoggingPantsTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[browse_TPK_Female_JoggingPantsMenu]"; [return to level 3 sub-submenu]
 
 to say browse_TPK_Female_ShortsMenu: [Female clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which style of shorts would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which style of shorts would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1409,7 +1327,6 @@ to say browse_TPK_Female_ShortsMenu: [Female clothing category sub-submenu (leve
 			if title entry is "Flowered Bermuda Shorts":
 				say "[FloweredBermudaShortsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_female_legwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -1422,15 +1339,13 @@ to say browse_TPK_Female_ShortsMenu: [Female clothing category sub-submenu (leve
 
 to say FloweredBermudaShortsTalk: [item selection (level 4)]
 	say "     A pair of wide shorts covered in patterns of leaves and bright flowers. They look fitting to be worn by a tourist or vacationer. Judging by the shorts['] appearance, it's [']feminine['] and pretty [']basic['] looking. It has a price sign that reads '20 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 20:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[browse_TPK_Female_ShortsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 20;
@@ -1441,11 +1356,10 @@ to say FloweredBermudaShortsTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[browse_TPK_Female_ShortsMenu]"; [return to level 3 sub-submenu]
 
 to say browse_TPK_Female_SkirtsMenu: [Female clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which style of skirt would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which style of skirt would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1456,12 +1370,12 @@ to say browse_TPK_Female_SkirtsMenu: [Female clothing category sub-submenu (leve
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Mini Skirts";
-	now sortorder entry is 1;
+	now sortorder entry is 2;
 	now description entry is "Check out the mini skirts";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Gypsy Skirts";
-	now sortorder entry is 1;
+	now sortorder entry is 3;
 	now description entry is "Check out the gypsy skirts";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -1474,7 +1388,6 @@ to say browse_TPK_Female_SkirtsMenu: [Female clothing category sub-submenu (leve
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
@@ -1486,7 +1399,6 @@ to say browse_TPK_Female_SkirtsMenu: [Female clothing category sub-submenu (leve
 				-- "Gypsy Skirts":
 					say "[browse_TPK_Female_GypsySkirtsMenu]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_female_legwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -1498,7 +1410,7 @@ to say browse_TPK_Female_SkirtsMenu: [Female clothing category sub-submenu (leve
 	clear the screen and hyperlink list;
 
 to say browse_TPK_Female_PencilSkirtsMenu: [Female clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which color of pencil skirt would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which color of pencil skirt would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1525,7 +1437,6 @@ to say browse_TPK_Female_PencilSkirtsMenu: [Female clothing category sub-submenu
 				say "[Light-bluePencilSkirtTalk]"; [choose level 5 item selection]
 			wait for any key;
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_female_legwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -1538,15 +1449,13 @@ to say browse_TPK_Female_PencilSkirtsMenu: [Female clothing category sub-submenu
 
 to say Light-bluePencilSkirtTalk: [item selection (level 5)]
 	say "     A light-blue pencil skirt, long enough to cover an average person's whole thighs, down to the knees. Judging by the skirt's appearance, it's [']feminine['] and pretty [']stylish['] looking. It has a price sign that reads '20 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 20:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[browse_TPK_Female_SkirtsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 20;
@@ -1557,11 +1466,10 @@ to say Light-bluePencilSkirtTalk: [item selection (level 5)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[browse_TPK_Female_SkirtsMenu]"; [return to level 3 sub-submenu]
 
 to say browse_TPK_Female_MiniSkirtsMenu: [Female clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which color of mini skirt would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which color of mini skirt would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1572,7 +1480,7 @@ to say browse_TPK_Female_MiniSkirtsMenu: [Female clothing category sub-submenu (
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Pink Mini Skirt";
-	now sortorder entry is 1;
+	now sortorder entry is 2;
 	now description entry is "Check out the pink mini skirt";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -1596,7 +1504,6 @@ to say browse_TPK_Female_MiniSkirtsMenu: [Female clothing category sub-submenu (
 					say "[PinkMiniSkirtTalk]"; [choose level 5 item selection]
 			wait for any key;
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_female_legwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -1609,15 +1516,13 @@ to say browse_TPK_Female_MiniSkirtsMenu: [Female clothing category sub-submenu (
 
 to say BlackMiniSkirtTalk: [item selection (level 5)]
 	say "     A simple black miniskirt, barely long enough to cover someone's thighs even halfway. Judging by the skirt's appearance, it's [']feminine['] and pretty [']sexy['] and [']slutty['] looking. It has a price sign that reads '20 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 20:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[browse_TPK_Female_SkirtsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 20;
@@ -1628,20 +1533,17 @@ to say BlackMiniSkirtTalk: [item selection (level 5)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[browse_TPK_Female_SkirtsMenu]"; [return to level 3 sub-submenu]
 
 to say PinkMiniSkirtTalk: [item selection (level 5)]
 	say "     A simple pink miniskirt, barely long enough to cover someone's thighs even halfway. Judging by the skirt's appearance, it's [']feminine['] and pretty [']basic['] and [']slutty['] looking. It has a price sign that reads '20 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 20:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[browse_TPK_Female_SkirtsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 20;
@@ -1652,11 +1554,10 @@ to say PinkMiniSkirtTalk: [item selection (level 5)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[browse_TPK_Female_SkirtsMenu]"; [return to level 3 sub-submenu]
 
 to say browse_TPK_Female_GypsySkirtsMenu: [Female clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which color of gypsy skirt would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which color of gypsy skirt would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1683,7 +1584,6 @@ to say browse_TPK_Female_GypsySkirtsMenu: [Female clothing category sub-submenu 
 				say "[GypsyFloralSkirtTalk]"; [choose level 5 item selection]
 			wait for any key;
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_female_legwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -1696,15 +1596,13 @@ to say browse_TPK_Female_GypsySkirtsMenu: [Female clothing category sub-submenu 
 
 to say GypsyFloralSkirtTalk: [item selection (level 5)]
 	say "     A light full length skirt, covered with a floral print that depicts cherry blossoms. Judging by the skirt's appearance, it's [']feminine['] and pretty [']sexy['] looking. It has a price sign that reads '20 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 20:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[browse_TPK_Female_SkirtsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 20;
@@ -1715,13 +1613,12 @@ to say GypsyFloralSkirtTalk: [item selection (level 5)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[browse_TPK_Female_SkirtsMenu]"; [return to level 3 sub-submenu]
 
-Part 4 - Underwear
+Chapter 4 - Underwear
 
 to say browse_TPK_female_underwear: [Female clothing category submenu (level 2 under the female clothing selector)]
-	say "     Which type of underwear would you like to check out?";
+	say "[line break]     Which type of underwear would you like to check out?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1745,7 +1642,6 @@ to say browse_TPK_female_underwear: [Female clothing category submenu (level 2 u
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
@@ -1755,7 +1651,6 @@ to say browse_TPK_female_underwear: [Female clothing category submenu (level 2 u
 				-- "Panties":
 					say "[TPK_Female_PantiesMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[TPC female clothing selector]"; [return to level 1 selector]
 		else if calcnumber is 100:
 			LineBreak;
@@ -1767,7 +1662,7 @@ to say browse_TPK_female_underwear: [Female clothing category submenu (level 2 u
 	clear the screen and hyperlink list;
 
 to say TPK_Female_BrasMenu: [Female clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which color of bras would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which color of bras would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1793,7 +1688,6 @@ to say TPK_Female_BrasMenu: [Female clothing category sub-submenu (level 3 under
 			if title entry is "Simple Black Bra":
 				say "[SimpleBlackBraTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_female_underwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -1806,15 +1700,13 @@ to say TPK_Female_BrasMenu: [Female clothing category sub-submenu (level 3 under
 
 to say SimpleBlackBraTalk: [item selection (level 4)]
 	say "     A simple black bra made of a firm and glossy material. As far as bras go this one is fairly comfortable to move around in. Judging by the bra's appearance, it's [']feminine['] and pretty [']basic['] looking. It has a price sign that reads '10 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 10:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[TPK_Female_BrasMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 10;
@@ -1825,11 +1717,10 @@ to say SimpleBlackBraTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[TPK_Female_BrasMenu]"; [return to level 3 sub-submenu]
 
 to say TPK_Female_PantiesMenu: [Female clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which color of panties would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which color of panties would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1855,7 +1746,6 @@ to say TPK_Female_PantiesMenu: [Female clothing category sub-submenu (level 3 un
 			if title entry is "Pink Panties":
 				say "[PinkPantiesTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_female_underwear]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -1868,15 +1758,13 @@ to say TPK_Female_PantiesMenu: [Female clothing category sub-submenu (level 3 un
 
 to say PinkPantiesTalk: [item selection (level 4)]
 	say "     A pair of pink panties with frilly edges. Judging by the appearance of the underwear, it's [']feminine['] and pretty [']basic['] looking. It has a price sign that reads '10 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 10:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[TPK_Female_PantiesMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 10;
@@ -1887,13 +1775,12 @@ to say PinkPantiesTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[TPK_Female_PantiesMenu]"; [return to level 3 sub-submenu]
 
-Part 5 - Shoes
+Chapter 5 - Shoes
 
 to say browse_TPK_female_shoes: [Female clothing category submenu (level 2 under the female clothing selector)]
-	say "     Which type of shoes would you like to check out?";
+	say "[line break]     Which type of shoes would you like to check out?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1917,7 +1804,6 @@ to say browse_TPK_female_shoes: [Female clothing category submenu (level 2 under
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
@@ -1927,7 +1813,6 @@ to say browse_TPK_female_shoes: [Female clothing category submenu (level 2 under
 				-- "Stilettos":
 					say "[TPK_Female_StilettosMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[TPC female clothing selector]"; [return to level 1 selector]
 		else if calcnumber is 100:
 			LineBreak;
@@ -1939,7 +1824,7 @@ to say browse_TPK_female_shoes: [Female clothing category submenu (level 2 under
 	clear the screen and hyperlink list;
 
 to say TPK_Female_PumpsMenu: [Female clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which color of pumps would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which color of pumps would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1965,7 +1850,6 @@ to say TPK_Female_PumpsMenu: [Female clothing category sub-submenu (level 3 unde
 			if title entry is "Bright-red Pumps":
 				say "[Bright-redPumpsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_female_shoes]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -1978,15 +1862,13 @@ to say TPK_Female_PumpsMenu: [Female clothing category sub-submenu (level 3 unde
 
 to say Bright-redPumpsTalk: [item selection (level 4)]
 	say "     A pair of bright-red woman's pumps, with moderately high heels. Not exactly the best thing to run around wearing at top speed. Judging by the appearance of the heels, it's [']feminine['] and pretty [']stylish['] looking. It has a price sign that reads '10 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 10:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[TPK_Female_PumpsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 10;
@@ -1997,11 +1879,10 @@ to say Bright-redPumpsTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[TPK_Female_PumpsMenu]"; [return to level 3 sub-submenu]
 
 to say TPK_Female_StilettosMenu: [Female clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which color of stilettos would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which color of stilettos would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -2027,7 +1908,6 @@ to say TPK_Female_StilettosMenu: [Female clothing category sub-submenu (level 3 
 			if title entry is "Black Stiletto Heels":
 				say "[BlackStilettoHeelsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_TPK_female_shoes]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -2040,15 +1920,13 @@ to say TPK_Female_StilettosMenu: [Female clothing category sub-submenu (level 3 
 
 to say BlackStilettoHeelsTalk: [item selection (level 4)]
 	say "     A pair of black slingbacks with very high heels, each shoe exposing your toes. Not exactly the best thing to run around wearing at top speed. Judging by the appearance of the heels, it's [']feminine['] and pretty [']sexy['] looking. It has a price sign that reads '20 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 20:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[TPK_Female_StilettosMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 20;
@@ -2059,17 +1937,14 @@ to say BlackStilettoHeelsTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[TPK_Female_StilettosMenu]"; [return to level 3 sub-submenu]
 
 Book 3 - Restrained Desire [Store formally known as the "pornstore" within the redlight district]
 
-Section 1 - RD costume clothing section
+Part 1 - RD costume clothing section
 
-The RD costume clothing section is a backdrop. It is in Restrained Desire. Description of the RD costume clothing section is "[RD costume clothing section desc]".
-
-to say RD costume clothing section desc:
-	say "     The costume clothing section holds many pieces of clothing and individual outfits, many of these are part of roleplay outfits. Price tags on each of the articles of clothing have been darkened with black nail polish, with the new price listed in terms of freecred. You can [link]browse[as]browse RD costume clothing[end link] in the costume clothing section if you want.";
+The RD costume clothing section is a backdrop. It is in Restrained Desire. Description of the RD costume clothing section is "     The costume clothing section holds many pieces of clothing and individual outfits, many of these are part of roleplay outfits. Price tags on each of the articles of clothing have been darkened with black nail polish, with the new price listed in terms of freecred. You can [link]browse[as]browse RD costume clothing[end link] in the costume clothing section if you want.[line break]".
+the scent of RD costume clothing section is "     The costume clothing section smells the same as the rest of the store.".
 
 BrowseRDCostumeClothing is an action applying to nothing.
 understand "browse RD/-- costume clothing selection/--" as BrowseRDCostumeClothing.
@@ -2078,14 +1953,12 @@ check BrowseRDCostumeClothing:
 	If RD costume clothing section is not visible, say "What is it you want to browse?" instead;
 
 carry out BrowseRDCostumeClothing:
-	say "[line break][RD costume clothing selector]";
+	say "[RD costume clothing selector]";
 
-the scent of RD costume clothing section is "     The costume clothing section smells the same as the rest of the store.".
-
-Part 1 - Base
+Chapter 1 - Base
 
 to say RD costume clothing selector: [Main costume clothing Menu (level 1)]
-	say "     [bold type]You look at the available items and then decide to...[roman type][line break]";
+	say "[line break]     [bold type]You look at the available items and then decide to...[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -2123,7 +1996,6 @@ to say RD costume clothing selector: [Main costume clothing Menu (level 1)]
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
@@ -2139,6 +2011,7 @@ to say RD costume clothing selector: [Main costume clothing Menu (level 1)]
 					say "[browse_RD_BDSM_section]";
 				]
 		else if calcnumber is 100:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the section that you were investigating.";
 			wait for any key;
@@ -2146,10 +2019,10 @@ to say RD costume clothing selector: [Main costume clothing Menu (level 1)]
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
 		clear the screen and hyperlink list;
 
-Part 2 - Biker Section
+Chapter 2 - Biker Section
 
 to say browse_RD_biker_section: [costume clothing category submenu (level 2 under the costume clothing selector)]
-	say "     Which type of biker gear would you like to check out?";
+	say "[line break]     Which type of biker gear would you like to check out?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -2168,14 +2041,12 @@ to say browse_RD_biker_section: [costume clothing category submenu (level 2 unde
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
 			if title entry is "Biker Helmets":
 				say "[RD_Biker_HelmetsMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[RD costume clothing selector]"; [return to level 1 selector]
 		else if calcnumber is 100:
 			LineBreak;
@@ -2187,7 +2058,7 @@ to say browse_RD_biker_section: [costume clothing category submenu (level 2 unde
 	clear the screen and hyperlink list;
 
 to say RD_Biker_HelmetsMenu: [Costume clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which type of biker helmet would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which type of biker helmet would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -2235,7 +2106,6 @@ to say RD_Biker_HelmetsMenu: [Costume clothing category sub-submenu (level 3 und
 				-- "Incubus Motorcycle Helmet":
 					say "[IncubusMotorcycleHelmetTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_RD_biker_section]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -2248,15 +2118,13 @@ to say RD_Biker_HelmetsMenu: [Costume clothing category sub-submenu (level 3 und
 
 to say BlackMotorcycleHelmetTalk: [item selection (level 4)]
 	say "     A black motorcycle helmet with a clear visor. Heavy, but protective. Judging by the helmet's appearance, it's [']unisex['] and pretty [']cool[']. It has a price sign that reads '20 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 20:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[RD_Biker_HelmetsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 20;
@@ -2267,20 +2135,17 @@ to say BlackMotorcycleHelmetTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[RD_Biker_HelmetsMenu]"; [return to level 3 sub-submenu]
 
 to say FlamingMotorcycleHelmetTalk: [item selection (level 4)]
 	say "     A black motorcycle helmet with a clear visor and painted flames rising along the sides. Heavy, but protective. Judging by the helmet's appearance, it's [']unisex['] and pretty [']rebellious[']. It has a price sign that reads '20 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 20:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[RD_Biker_HelmetsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 20;
@@ -2291,20 +2156,17 @@ to say FlamingMotorcycleHelmetTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[RD_Biker_HelmetsMenu]"; [return to level 3 sub-submenu]
 
 to say SuccubusMotorcycleHelmetTalk: [item selection (level 4)]
 	say "     A black motorcycle helmet with a clear visor and a picture of a sexy succubus with her legs spread over your face. Heavy, but protective. Judging by the helmet's appearance, it's [']feminine['] and pretty [']sexy[']. It has a price sign that reads '30 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 30:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[RD_Biker_HelmetsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 30;
@@ -2315,20 +2177,17 @@ to say SuccubusMotorcycleHelmetTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[RD_Biker_HelmetsMenu]"; [return to level 3 sub-submenu]
 
 to say IncubusMotorcycleHelmetTalk: [item selection (level 4)]
 	say "     A black motorcycle helmet with a clear visor and a picture of a sexy incubus jerking off over your face. Heavy, but protective. Judging by the helmet's appearance, it's [']masculine['] and pretty [']sexy[']. It has a price sign that reads '30 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 30:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[RD_Biker_HelmetsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 30;
@@ -2339,13 +2198,12 @@ to say IncubusMotorcycleHelmetTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[RD_Biker_HelmetsMenu]"; [return to level 3 sub-submenu]
 
-Part 2 - Underwear Section
+Chapter 2 - Underwear Section
 
 to say browse_RD_underwear_section: [costume clothing category submenu (level 2 under the costume clothing selector)]
-	say "     Which type of underwear would you like to check out?";
+	say "[line break]     Which type of underwear would you like to check out?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -2364,14 +2222,12 @@ to say browse_RD_underwear_section: [costume clothing category submenu (level 2 
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
 			if title entry is "Briefs":
 				say "[RD_BriefsMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[RD costume clothing selector]"; [return to level 1 selector]
 		else if calcnumber is 100:
 			LineBreak;
@@ -2383,7 +2239,7 @@ to say browse_RD_underwear_section: [costume clothing category submenu (level 2 
 	clear the screen and hyperlink list;
 
 to say RD_BriefsMenu: [Costume clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which type of briefs would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which type of briefs would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -2409,7 +2265,6 @@ to say RD_BriefsMenu: [Costume clothing category sub-submenu (level 3 under the 
 			if title entry is "Black Mesh Briefs":
 				say "[BlackMeshBriefsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_RD_underwear_section]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -2422,15 +2277,13 @@ to say RD_BriefsMenu: [Costume clothing category sub-submenu (level 3 under the 
 
 to say BlackMeshBriefsTalk: [item selection (level 4)]
 	say "     Briefs made of sheer black mesh. You can literally see right through it. Judging by the appearance of the briefs, it's [']masculine['] and pretty [']sexy['] looking. It has a price sign that reads '10 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 10:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[RD_BriefsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 10;
@@ -2441,13 +2294,12 @@ to say BlackMeshBriefsTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[RD_BriefsMenu]"; [return to level 3 sub-submenu]
 
-Part 3 - Wild West Section
+Chapter 3 - Wild West Section
 
 to say browse_RD_wildwest_section: [costume clothing category submenu (level 2 under the costume clothing selector)]
-	say "     Which type of wild west would you like to check out?";
+	say "[line break]     Which type of wild west would you like to check out?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -2458,7 +2310,7 @@ to say browse_RD_wildwest_section: [costume clothing category submenu (level 2 u
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Cowboy Boots";
-	now sortorder entry is 1;
+	now sortorder entry is 2;
 	now description entry is "See what cowboy boots are available";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -2471,7 +2323,6 @@ to say browse_RD_wildwest_section: [costume clothing category submenu (level 2 u
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			LineBreak;
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			now sextablerun is 1;
@@ -2481,7 +2332,6 @@ to say browse_RD_wildwest_section: [costume clothing category submenu (level 2 u
 				-- "Cowboy Boots":
 					say "[RD_CowboyBootsMenu]"; [choose level 3 item sub-submenu]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[RD costume clothing selector]"; [return to level 1 selector]
 		else if calcnumber is 100:
 			LineBreak;
@@ -2493,7 +2343,7 @@ to say browse_RD_wildwest_section: [costume clothing category submenu (level 2 u
 	clear the screen and hyperlink list;
 
 to say RD_CowboyHatsMenu: [Costume clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which style of cowboy hat would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which style of cowboy hat would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -2519,7 +2369,6 @@ to say RD_CowboyHatsMenu: [Costume clothing category sub-submenu (level 3 under 
 			if title entry is "Cow-print Cowboy Hat":
 				say "[Cow-printCowboyHatTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_RD_wildwest_section]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -2532,15 +2381,13 @@ to say RD_CowboyHatsMenu: [Costume clothing category sub-submenu (level 3 under 
 
 to say Cow-printCowboyHatTalk: [item selection (level 4)]
 	say "     A cowboy hat that is covered in cow hide, the top has two small bull horns sticking out of the side. They are sure to make you look like a real fancy cowpoke. Judging by the appearance of the boots, it's [']masculine['] and pretty [']sporty['] yet [']cool['] looking. It has a price sign that reads '30 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 30:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[RD_CowboyHatsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 30;
@@ -2551,11 +2398,10 @@ to say Cow-printCowboyHatTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[RD_CowboyHatsMenu]"; [return to level 3 sub-submenu]
 
 to say RD_CowboyBootsMenu: [Costume clothing category sub-submenu (level 3 under the category submenu)]
-	say "     [bold type]Which style of cowboy boots would you like to check out?[roman type][line break]";
+	say "[line break]     [bold type]Which style of cowboy boots would you like to check out?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -2581,7 +2427,6 @@ to say RD_CowboyBootsMenu: [Costume clothing category sub-submenu (level 3 under
 			if title entry is "Cow-print Cowgirl Boots":
 				say "[Cow-printCowgirlBootsTalk]"; [choose level 4 item selection]
 		else if calcnumber is 99:
-			LineBreak;
 			say "[browse_RD_wildwest_section]"; [return to level 2 submenu]
 		else if calcnumber is 100:
 			LineBreak;
@@ -2594,15 +2439,13 @@ to say RD_CowboyBootsMenu: [Costume clothing category sub-submenu (level 3 under
 
 to say Cow-printCowgirlBootsTalk: [item selection (level 4)]
 	say "     A pair of cowgirl boots that are covered in cow hide, the tops of each boot are covered in fringe and bedazzled in rhinestones. They are sure to make using stirrups easier, and can protect against rattlesnake bites. Judging by the appearance of the boots, it's [']feminine['] and pretty [']sporty['] yet [']sexy['] looking. It has a price sign that reads '30 freecred'.";
-	LineBreak;
-	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
+	say "[line break]     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
 	if Player consents:
 		LineBreak;
 		if freecred < 30:
 			say "     You don't seem to have enough freecred to buy that.";
-			LineBreak;
 			say "[RD_CowboyBootsMenu]"; [return to level 3 sub-submenu]
 		else:
 			decrease freecred by 30;
@@ -2613,11 +2456,10 @@ to say Cow-printCowgirlBootsTalk: [item selection (level 4)]
 	else:
 		LineBreak;
 		say "     You put the item back and look over the selection again.";
-		LineBreak;
 		say "[RD_CowboyBootsMenu]"; [return to level 3 sub-submenu]
 
 [
-Part 4 - BDSM Section
+Chapter 4 - BDSM Section
 
 to say browse_RD_BDSM_section: [costume clothing category submenu (level 2 under the costume clothing selector)]
 	say "     Which type of BDSM gear would you like to check out?";
@@ -2726,7 +2568,7 @@ to say LatexMouseMaskTalk: [item selection (level 4)]
 		say "[RD_MasksMenu]"; [return to level 3 sub-submenu]
 ]
 
-Part 5 - Night Walker Section
+Chapter 5 - Night Walker Section
 
 Book 4 - The Painted Dragon [Store found through Harolds quests]
 

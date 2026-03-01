@@ -23,7 +23,7 @@ To decide which number is numeric/numerical value of (T - indexed text):
 		let result be (result * 10) + D;
 	end repeat;
 	if negated is true, let result be 0 - result;
-	decide on result.
+	decide on result;
 
 keychar is a text that varies.[@Tag:NotSaved]
 
@@ -59,51 +59,51 @@ To translate (k - a number):
 	else if k is 67 or k is 99:
 		now keychar is "c";
 	else if k is 68 or k is 100:
-		now keychar is "D";
+		now keychar is "d";
 	else if k is 69 or k is 101:
-		now keychar is "E";
+		now keychar is "e";
 	else if k is 70 or k is 102:
-		now keychar is "F";
+		now keychar is "f";
 	else if k is 71 or k is 103:
-		now keychar is "G";
+		now keychar is "g";
 	else if k is 72 or k is 104:
-		now keychar is "H";
+		now keychar is "h";
 	else if k is 73 or k is 105:
-		now keychar is "I";
+		now keychar is "i";
 	else if k is 74 or k is 106:
-		now keychar is "J";
+		now keychar is "j";
 	else if k is 75 or k is 107:
-		now keychar is "K";
+		now keychar is "k";
 	else if k is 76 or k is 108:
-		now keychar is "L";
+		now keychar is "l";
 	else if k is 77 or k is 109:
-		now keychar is "M";
+		now keychar is "m";
 	else if k is 78 or k is 110:
-		now keychar is "N";
+		now keychar is "n";
 	else if k is 79 or k is 111:
-		now keychar is "O";
+		now keychar is "o";
 	else if k is 80 or k is 112:
-		now keychar is "P";
+		now keychar is "p";
 	else if k is 81 or k is 113:
-		now keychar is "Q";
+		now keychar is "q";
 	else if k is 82 or k is 114:
-		now keychar is "R";
+		now keychar is "r";
 	else if k is 83 or k is 115:
-		now keychar is "S";
+		now keychar is "s";
 	else if k is 84 or k is 116:
-		now keychar is "T";
+		now keychar is "t";
 	else if k is 85 or k is 117:
-		now keychar is "U";
+		now keychar is "u";
 	else if k is 86 or k is 118:
-		now keychar is "V";
+		now keychar is "v";
 	else if k is 87 or k is 119:
-		now keychar is "W";
+		now keychar is "w";
 	else if k is 88 or k is 120:
-		now keychar is "X";
+		now keychar is "x";
 	else if k is 89 or k is 121:
-		now keychar is "Y";
+		now keychar is "y";
 	else if k is 90 or k is 122:
-		now keychar is "Z";
+		now keychar is "z";
 	else:
 		now keychar is "INVALID";
 

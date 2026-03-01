@@ -90,6 +90,7 @@ Beach Plaza	"Beach Plaza"	"Beach Plaza"	"Seaside"
 Bouncy Castle	"Bouncy Castle"	"Bouncy Castle"	"Seaside"
 Island Pier	"Island Pier"	"Island Pier"	"Seaside"
 Kai's Campsite	"Kai's Campsite"	"Kai's Campsite"	"Seaside"
+Moon Pool	"Moon Pool"	"Moon Pool"	"Seaside"
 Pirate Island	"Pirate Island"	"Pirate Island"	"Seaside"
 Viking Ship	"Viking Ship"	"Viking Ship"	"Seaside"
 Sinking Swamps	"Sinking Swamps"	"Sinking Swamps"	"Swamp"
@@ -256,7 +257,7 @@ carry out navigating:
 			if NPCObject of y is not Nullpet:
 				now NPCObject of y is in location of Player;
 	follow turnpass rule;
-	let the bonus be (( Perception of Player minus 10 ) divided by 2);
+	let the bonus be ( Perception of Player minus 10 ) divided by 2;
 	now battleground is "Outside";
 	if a random number from 1 to 20 < 10 minus bonus and battleground is not "void":
 		if there is a area of Battleground in the Table of Random Critters:

@@ -7,7 +7,6 @@ Version 3 of Wrestling Wolf by Guest Writers begins here.
 Section 1 - Creature Responses
 
 wrestlingwolfdefeat is a number that varies.
-wwheal is a number that varies.[@Tag:NotSaved]
 wrwolfanal is a number that varies.
 wrwolfbeaten is a number that varies.
 wrwolfseen is a truth state that varies. wrwolfseen is usually false.
@@ -20,11 +19,10 @@ to say wrestlingwolfattack:
 		say "     With a howl the Wrestling Wolf unloads his load all over your [BodyType of Player] body. The wrestler grins in satisfaction as he watches some of his cum seep through your [SkinSpeciesName of Player in lower case] hide. 'This will make finding you a lot easier,' the wrestler says pulling back up his briefs. He picks you up and tosses you out of his makeshift ring. 'Next time you're definitely gonna give me a workout. One way or another,' the Wrestling Wolf says, eyeing you lustfully as you walk away, still a bit sore and covered in his hot seed.";
 		if "Male Preferred" is not listed in feats of Player:
 			if Player is not female:
-				LineBreak;
 				if "Single Sexed" is listed in feats of Player and Player is male:
-					say "Thankfully, your body resists growing a new vagina since you already have male parts.";
+					say "[line break]Thankfully, your body resists growing a new vagina since you already have male parts.";
 				else if "Microwaved" is listed in feats of Player:
-					say "WARNING: Sex shifting nanites detected! Allow?";
+					say "[line break]WARNING: Sex shifting nanites detected! Allow?";
 					if Player consents:
 						LineBreak;
 						say "     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
@@ -35,7 +33,7 @@ to say wrestlingwolfattack:
 						LineBreak;
 						say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
 				else:
-					say "     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
+					say "[line break]     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
 					now Cunt Count of Player is 1;
 					now Cunt Tightness of Player is 1;
 					now Cunt Depth of Player is 2;
@@ -43,12 +41,12 @@ to say wrestlingwolfattack:
 				if Cunt Tightness of Player < 15, increase Cunt Tightness of Player by 2;
 				if Cunt Depth of Player < 20, increase Cunt Depth of Player by 2;
 		now wrestlingwolfdefeat is 1;
-	else if ( wrestlingwolfdefeat is 2 or wrestlingwolfdefeat is 3 ) and Cunt Count of Player is 0:		[now open for M/M]
+	else if ( wrestlingwolfdefeat is 2 or wrestlingwolfdefeat is 3 ) and Player is not female:		[now open for M/M]
 		say "     Pinned down by the lupine wrestler, he gives you a growling skronk. 'Another bad showing. Come on, I'm starting tah think that yur losing on purpose or somethin['],' he growls. 'Always losing and not getting no pussy for me. Picked a little pansy tah fight,' he jibes, giving you a poke in the side to show he's just ribbing you. 'Guess I'm gonna have tah treat ya to another dose of deep wolf action,' he rumbles, lining up his big cock with your backside again.";
 		say "     His large, lupine cock pushes into your [if scalevalue of Player < 4]smaller [bodytype of Player] body slowly, entering with somewhat more ease this time as he's more used to it and you're better prepared for[else]large [bodytype of Player] body with relative ease, the big wolf more used to it and you better prepared to take[end if] him. He nips at your shoulders as he starts pounding into you, driving himself into you again and again with increasing force. You moan and pant beneath him, soon howling like one of his fans as he buggers you deep with his thick cock[if wrestlingwolfdefeat is 3 and Player is male]. The wolf's paw slides underneath you to take a hold of your cock and stroke it[else if Player is male]. The wolf's paw moves tentatively beneath you, and after some brief hesitation, wraps around your cock. He pauses for a moment as he grows used to the idea before resuming his thrusts and stroking your penis in time to his motions[end if][if Player is male]. All of this soon becomes too much for you and you cum hard, splattering your seed across the floor of the ring as he[else], then[end if] [if scalevalue of Player < 4 and Player is not twistcapped]grinds his knot against your pucker[else]pops his thick knot into you[end if] and blasts a heavy load of lupine seed inside you once again.";
 		say "     As his erection comes down, he pulls out of you and wipes it against your bottom. 'Mmm... not too bad, but I still want ya to try trainin['] up to put up a better fight next time, ya hear?' he says with a chuckle, giving your ass a hard spank as you're grabbing your stuff to flee the ring.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Wrestling Wolf";
-		now wrestlingwolfdefeat is 3;
+		if wrestlingwolfdefeat is 2, now wrestlingwolfdefeat is 3;
 	else:
 		if HP of Player > 0 or a random chance of 1 in 3 succeeds: 	[impatient - rough fuck]
 			if Player is female:
@@ -91,11 +89,10 @@ to say wrestlingwolfattack:
 				say "     'Tch, looks like ya haven't the right type of equipment for this,' he sighs, pulling down his wrestling briefs and revealing his erect shaft. 'Guess the last time wasn't enough,' he says as he begins to rub his shaft above you. 'Ya see, I've noticed that whenever my seed gets onto or into someone, they grow a nice little pussy for me to use,' he says, pumping his shaft even harder. With a howl, the Wrestling Wolf unloads his load all over your [BodyType of Player] body. The wrestler grins in satisfaction as he watches ome of his cum seep through your [Skin of Player] skin.";
 				say "     'There we go. Maybe now you'll grow a nice little pussy for me,' the wrestler says before pulling his briefs back up. He picks you up and tosses you out of his makeshift ring. 'I'll be expecting a little something from ya the next time we fight,' the Wrestling Wolf says, eyeing you lustfully as you walk away, still a bit sore and covered in his hot seed.";
 				if "Male Preferred" is not listed in feats of Player:
-					LineBreak;
 					if "Single Sexed" is listed in feats of Player and Player is male:
-						say "Thankfully, your body resists growing a new vagina since you already have male parts.";
+						say "[line break]Thankfully, your body resists growing a new vagina since you already have male parts.";
 					else:
-						say "     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
+						say "[line break]     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
 						now Cunt Count of Player is 1;
 						now Cunt Tightness of Player is 1;
 						now Cunt Depth of Player is 2;
@@ -103,7 +100,7 @@ to say wrestlingwolfattack:
 to say beatthewrwolf:
 	project Figure of WrestlingWolf_hard_icon;
 	increase wrwolfbeaten by 1;
-	if wrwolfbeaten < 3 or Cock Count of Player is 0:	[currently M/M only]
+	if wrwolfbeaten < 3 or Player is not male:	[currently M/M only]
 		say "     'HAHAHA! Now that was a fight!' he shouts between hysterical laughter while lying on the ground in defeat. 'You're not too shabby there,' he says as he springs right back up, almost as if he wasn't hurt at all. 'Heh, maybe next time I won't have ta hold back on ya. So make sure ta come back when you're ready ta have another go,' he calls out to you as you walk away from the ring.";
 	else:
 		say "     Seeing your muscular foe stagger a little, you can sense victory fast approaching. Moving in, you need to decide how to end your match against the wrestler. Shall you go for a [link]submission hold (Y)[as]y[end link] or [link]pin him to the mat (N)[as]n[end link] and get it over with?";
@@ -316,6 +313,10 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 3 - Alt Combat
+
+wwheal is a number that varies.[@Tag:NotSaved]
+
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
 "wrwolf"	wrestlew rule	--	wrwolfpose rule	bearhug rule	12	--	--	--	--	--
@@ -337,10 +338,10 @@ to wwpowerslam:
 	decrease dex entry by 6;
 	if monsterhit is true:			[ boosted dmg, dampened by pepperspray, also small humanity loss ]
 		let boostdam be ( str entry + dex entry + ( lev entry * 2 ) - ( peppereyes * 6 ) ) * 3;
-		let dam be ( ( wdam entry times ( ( a random number from 80 to 120 ) + boostdam ) ) / 100 );
+		let dam be ( wdam entry times ( ( a random number from 80 to 120 ) + boostdam ) ) / 100;
 		if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
-			say "The enemy finds a particular vulnerability in your defense - [bold type]Critical Hit![roman type][line break]";
+			say "The enemy finds a particular vulnerability in your defense - [italic type]Critical Hit![roman type][line break]";
 		say "The Wrestling Wolf suddenly moves in, grabbing you to execute his signature maneuver. Hefting you high above his head with both arms, you are given a brief view of the [if daytimer is day]sunny[else]night[end if] sky as you are held aloft on your back. He howls and slams you powerfully onto the mat. You are slammed down with great force, rattling your brains so hard you swear you can feel the infection buzzing in your ringing ears. But you only have a moment to listen to this before a great shadow passes over you and the big wolf comes slamming down atop you, having jumped off the top rope to land on you. You take a massive [special-style-2][dam][roman type] damage and lose a grip on a corner of your battered mind.";
 		now damagein is dam;
 		say "[noshieldabsorbancy]"; [shield doesn't help against being bodyslammed]
@@ -360,7 +361,7 @@ to wwpowerslam:
 		say "The Wrestling Wolf rushes in to grab you, clearly ready to unleash a crowd-pleasing maneuver, but you barely manage to squirm out of his reach and whip him into the ropes. That was a close one.";
 	now peppereyes is 0; [pepperspray wears off]
 	if HP of Player > 0 and Libido of Player < 110:
-		AttemptToWait;
+		if BeforeCombat is 0, AttemptToWaitBeforeClear;
 	else:
 		if HP of Player <= 0:
 			now fightoutcome is 20;
@@ -371,9 +372,9 @@ to wwpowerslam:
 
 this is the wrwolfpose rule:
 	choose row MonsterID from Table of Random Critters;
-	if HP entry > ( monsterHP * 5 ) and a random chance of 3 in 5 succeeds and wwheal < 4:
+	if HP entry > monsterHP * 5 and a random chance of 3 in 5 succeeds and wwheal < 4:
 		say "After his successful attack, the [one of]big wolf howls for the crowd[or]powerful wolf makes a show of struggling to stay standing, ears perked as if listening to the crowd[or]wrestler finds a shirt from somewhere to tear from his body[or]lupine wrestler's body shakes with the power of the Wolfamaniacs cheering him on in his mind[at random], helping him draw on a hidden reserve of strength.";
-		increase monsterHP by ( HP entry / 12 );
+		increase monsterHP by HP entry / 12;
 		increase wwheal by 1;
 
 Wrestling Wolf ends here.

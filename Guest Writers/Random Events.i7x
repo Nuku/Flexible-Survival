@@ -16,7 +16,7 @@ ResolveFunction of Wet Clothes is "[ResolveEvent Wet Clothes]".
 Sarea of Wet Clothes is "Warehouse".
 
 to say ResolveEvent Wet Clothes:
-	say "     While exploring the city, you discover several small piles of shredded clothes. The clothes, a large part of the sidewalk, and several nearby parked cars are completely soaked in spooge. Whatever did this, sprayed gallons of the stuff everywhere, soaking, and probably mutating, all the humans nearby. You decide to leave before whatever did this 'cums' back.";
+	say "     While exploring the city, you discover several small piles of shredded clothes. The clothes, a large part of the sidewalk, and several nearby parked cars are completely soaked in spooge. Whatever did this sprayed gallons of the stuff everywhere, soaking - and probably mutating - all the humans nearby. You decide to leave before whatever did this 'cums' back.";
 	increase the score by 1;
 	now Wet Clothes is Resolved;
 
@@ -32,12 +32,11 @@ Sarea of Failed Survivor is "Junkyard".
 
 to say ResolveEvent Failed Survivor:
 	say "     While exploring the junkyard, you discover a discarded backpack that looks very similar to yours. You open it up and see that the only thing inside is a journal. You look at the journal and start to read it.";
-	LineBreak;
 	say "     Day 1: When the mutants first appeared I took shelter in an old basement for several days, but I can't stand waiting any longer. I'm going to get out of this crazy city!";
 	say "     Day 2: Oh god, why did I ever leave the safety of that basement?! As soon as I stepped outside, some strange creature jumped me and started fucking me! I think it impregnated me, which is very distressing because I was a man before it filled me with its seed.";
+	WaitLineBreak;
 	say "     Day 3: My pregnant belly has grown huge in an impossibly short amount of time, but I can't worry about that right now. I've been having trouble thinking straight recently and my mind is being filled with dirty fantasies. That's the least of my problems however, because I think that the creature that fucked me yesterday is following me.";
 	say "     Day 4: Can't... think straight... must... fuck.";
-	LineBreak;
 	say "     The rest of the journal is soaked with so much cum that it's unreadable. You discard it.";
 	increase the score by 1;
 	now Failed Survivor is Resolved;
@@ -55,8 +54,6 @@ to say ResolveEvent Tracks:
 	increase the score by 1;
 	now Tracks is Resolved;
 
-
 [School Spirit, Another Survivor, Masturbating Fox and Giant Egg moved to Consolidated Outside Events in Song's folder]
-
 
 Random Events ends here.

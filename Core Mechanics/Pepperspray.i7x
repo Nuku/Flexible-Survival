@@ -9,17 +9,16 @@ name	desc	weight	object
 "pepperspray"	"A small canister of pepperspray."	1	pepperspray
 
 pepperspray is a grab object. It is fast. It is not temporary.
-
 the scent of the pepperspray is "Smelling the pepperspray canister makes your eyes water.".
+
+to say usepepperspray:
+	select an option from the table of pepperspraychoice;
 
 to say pepperspraydrain:
 	now peppereyes is 3;
 	if a random chance of 3 in 10 succeeds:		[average 3-4 uses]
 		say "Uh oh! That used up the last of that can and you drop it to the ground, empty.";
 		ItemLoss pepperspray by 1;
-
-to say usepepperspray:
-	select an option from the table of pepperspraychoice;
 
 Table of pepperspraychoice
 title	subtable	description	toggle
@@ -64,7 +63,7 @@ this is the peppersprayattack rule:
 		say "[line break]Having partially recovered, your enemy attempts to retaliate.";
 		choose row monstercom from table of Critter Combat;
 		if Playerpoison > 0, follow the playerpoisoned rule;
-		if there is a continuous in row monstercom of the table of Critter Combat:
+		if there is a continuous entry:
 			follow the continuous entry;
 		if combat abort is 0 and skipretaliate is false, follow the combat entry;
 	else:

@@ -19,7 +19,7 @@ This is the sex change rule:
 			let singlesexadjust be 3; [currently female]
 	if sex entry in lower case is "male" or sex entry in lower case is "both":
 		[COCK GROWTH/SHRINKAGE]
-		if Cock Length of Player < Cock Length entry and Cock Count of Player is not 0 and Player is not FemalePreferred:
+		if Cock Length of Player < Cock Length entry and Player is male and Player is not FemalePreferred:
 			[Grows existing cock, unless "Female Preferred" is selected]
 			let prevcock be Cock Length of Player;
 			increase Cock Length of Player by 1;
@@ -30,7 +30,7 @@ This is the sex change rule:
 				say "[run paragraph on]";
 				follow the cock descr rule;
 				say "[line break]You can see your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if Cock Count of Player > 1]they gain[else]it gains[end if] in length, becoming [descr]!";
-		else if Cock Length of Player > ( ( Cock Length entry times 150 ) / 100 ) and "One Way" is not listed in feats of Player:
+		else if Cock Length of Player > ( Cock Length entry times 150 ) / 100 and "One Way" is not listed in feats of Player:
 			[Shrinks existing cock, unless "One Way" is selected]
 			let prevcock be Cock Length of Player;
 			decrease Cock Length of Player by 1;
@@ -44,7 +44,7 @@ This is the sex change rule:
 				follow the cock descr rule;
 				say "[line break]Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your impressive [CockName of Player in lower case] [if Cock Count of Player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[else][one of]cock[or]penis[or]shaft[or]pole[at random] as it begins[end if] to diminish somewhat to better suit your new infection. [if Cock Count of Player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr].";
 		[BALL GROWTH/SHRINKAGE]
-		if Ball Size of Player < Ball Size entry and Cock Count of Player is not 0 and Player is not FemalePreferred:
+		if Ball Size of Player < Ball Size entry and Player is male and Player is not FemalePreferred:
 			[Grows existing balls, unless "Female Preferred" is selected]
 			let prevcock2 be Ball Size of Player;
 			BallsGrow Player by 1;
@@ -71,10 +71,10 @@ This is the sex change rule:
 			[Adds extra cocks if the player has less than the infection, unless "Female Preferred" is selected or a single sexed Player is female]
 			let prevcock be Cock Count of Player;
 			if Player is not male or Cock Length of Player is 0 or Ball Size of Player is 0: [adds a cock if the player has none]
-				if Cock Count of Player is 0, increase Cock Count of Player by 1;
+				if Player is not male, increase Cock Count of Player by 1;
 				now Cock Length of Player is 1;
 				now the Ball Size of Player is 1;
-				increase Cock Length of Player by ( Cock Length entry ) divided by 3;
+				increase Cock Length of Player by Cock Length entry divided by 3;
 				if skipcockchange is false:
 					now CockName of Player is Name entry;
 					now Cock of Player is cock entry;
@@ -90,7 +90,7 @@ This is the sex change rule:
 				follow the cock descr rule;
 				say "[line break]Your groin throbs with intense sensations as a [descr] [cock entry] [one of]cock[or]penis[or]shaft[or]maleness[at random] erupts from you, spurting a few excited streams of fluid as it settles into place.";
 	[COCK & BALL SHRINKAGE/SUBSTRACTIONS]
-	if Cock Count of Player is not 0 and "One Way" is not listed in feats of Player: [player currently male]
+	if Player is male and "One Way" is not listed in feats of Player: [player currently male]
 		if sex entry in lower case is "female" or sex entry in lower case is "neuter":
 			[shrinks & removes cocks if the player has one, infection is female/neuter and "One Way" is not listed]
 			let prevcock be Cock Length of Player;
@@ -120,7 +120,7 @@ This is the sex change rule:
 			decrease Cock Count of Player by 1;
 	if sex entry in lower case is "female" or sex entry in lower case is "both":
 		[CUNT GROWTH/SHRINKAGE]
-		if Cunt Depth of Player < Cunt Depth entry and Cunt Count of Player is not 0 and Player is not MalePreferred:
+		if Cunt Depth of Player < Cunt Depth entry and Player is female and Player is not MalePreferred:
 			let prevcunt be Cunt Depth of Player;
 			increase Cunt Depth of Player by 1;
 			increase Cunt Depth of Player by ( Cunt Depth entry minus Cunt Depth of Player ) divided by 3;
@@ -130,7 +130,7 @@ This is the sex change rule:
 				say "[run paragraph on]";
 				follow the cunt descr rule;
 				say "[line break]You can see your [if Cunt Count of Player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random][else][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]pulse[or]quiver[or]throb[at random][end if] as [if Cunt Count of Player is 1]it grows[else]they grow[end if] deeper into your body, becoming [descr]!";
-		else if Cunt Depth of Player > ( ( Cunt Depth entry times 150 ) / 100 ) and "One Way" is not listed in feats of Player:
+		else if Cunt Depth of Player > ( Cunt Depth entry times 150 ) / 100 and "One Way" is not listed in feats of Player:
 			let prevcunt be Cunt Depth of Player;
 			decrease Cunt Depth of Player by 1;
 			decrease Cunt Depth of Player by ( Cunt Depth of Player - ( ( Cunt Depth entry times 150 ) / 100 ) ) divided by 3;
@@ -143,7 +143,7 @@ This is the sex change rule:
 				follow the cunt descr rule;
 				say "[line break]Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] flow into your ample [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins[end if] to diminish somewhat to better suit your new infection. [if Cunt Count of Player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr].";
 		[CUNT TIGHTNESS GROWTH/SHRINKAGE]
-		if Cunt Tightness of Player < Cunt Tightness entry and Cunt Count of Player is not 0 and Player is not MalePreferred:
+		if Cunt Tightness of Player < Cunt Tightness entry and Player is female and Player is not MalePreferred:
 			let prevcunt2 be Cunt Tightness of Player;
 			increase Cunt Tightness of Player by 1;
 			increase Cunt Tightness of Player by ( Cunt Tightness entry minus Cunt Tightness of Player ) divided by 3;
@@ -153,7 +153,7 @@ This is the sex change rule:
 				say "[run paragraph on]";
 				follow the cunt descr rule;
 				say "[line break]You can see your [if Cunt Count of Player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random][else][one of]cunts[or]pussies[or]vaginas[or]clefts[at random][end if] [one of]engorge[or]swell[or]throb[at random] as your thighs are nudged apart to make room for those thickening lips, growing wider!";
-		else if Cunt Tightness of Player > ( ( Cunt Tightness entry times 150 ) / 100 ) and "One Way" is not listed in feats of Player:
+		else if Cunt Tightness of Player > ( Cunt Tightness entry times 150 ) / 100 and "One Way" is not listed in feats of Player:
 			let prevcunt be Cunt Tightness of Player;
 			decrease Cunt Tightness of Player by 1;
 			decrease Cunt Tightness of Player by ( Cunt Tightness of Player - ( ( Cunt Tightness entry times 150 ) / 100 ) ) divided by 3;
@@ -170,11 +170,11 @@ This is the sex change rule:
 			[adds cunt if player has less than the infection, no "Male Preferred" and no single sexed males]
 			let prevcunt be Cunt Count of Player;
 			if Player is not female or Cunt Depth of Player is 0 or Cunt Tightness of Player is 0:
-				if Cunt Count of Player is 0, increase Cunt Count of Player by 1;
+				if Player is not female, increase Cunt Count of Player by 1;
 				now Cunt Depth of Player is 1;
 				now Cunt Tightness of Player is 1;
-				increase Cunt Depth of Player by ( Cunt Depth entry ) divided by 3;
-				increase Cunt Tightness of Player by ( Cunt Tightness entry ) divided by 3;
+				increase Cunt Depth of Player by Cunt Depth entry divided by 3;
+				increase Cunt Tightness of Player by Cunt Tightness entry divided by 3;
 				if "Modest Organs" is listed in feats of Player:
 					if Cunt Depth of Player > 8, now Cunt Depth of Player is 8;
 					if Cunt Tightness of Player > 5, now Cunt Tightness of Player is 5;
@@ -185,7 +185,7 @@ This is the sex change rule:
 				follow the cunt descr rule;
 				say "[line break]Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, leaking along a thigh as you quiver.";
 	[CUNT SHRINKAGE/SUBSTRACTION]
-	if Cunt Count of Player is not 0 and "One Way" is not listed in feats of Player: [player currently female]
+	if Player is female and "One Way" is not listed in feats of Player: [player currently female]
 		if sex entry in lower case is "male" or sex entry in lower case is "neuter":
 			[removes cunt if player has 1+, no "One Way"]
 			let prevcunt be Cunt Depth of Player;
@@ -206,7 +206,7 @@ This is the sex change rule:
 				follow the cunt descr rule;
 				say "[line break]Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin to shrink. They dwindle[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins to shrink. It dwindles[end if] in size, becoming [descr]";
 				if Cunt Depth of Player < 1 or Cunt Tightness of Player < 1:
-					say ". With a sickening noise, you cease to be female all together";
+					say ". With a sickening noise, you cease to be female altogether";
 					remove womanhood from Player;
 				say ".";
 			if Cunt Count of Player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of Player:
@@ -227,7 +227,7 @@ to grow cock by (x - a number):
 	if Player is FemalePreferred:
 		continue the action;
 	if "Single Sexed" is listed in feats of Player and Player is female:
-		say "[line break]Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[sfn][or]puss[yfn][or]vagina[sfn][or]cleft[sfn][at random] as [ittheyf] begin[sfv] to shrink. [ItTheyf] dwindle[sfv] in size before vanishing with a sickening noise as you cease to be female all together.";
+		say "[line break]Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[sfn][or]puss[yfn][or]vagina[sfn][or]cleft[sfn][at random] as [ittheyf] begin[sfv] to shrink. [ItTheyf] dwindle[sfv] in size before vanishing with a sickening noise as you cease to be female altogether.";
 		remove womanhood from Player;
 	let prevcock be Cock Length of Player;
 	increase Cock Length of Player by a random number from 1 to x;
@@ -240,7 +240,7 @@ to grow cock by (x - a number):
 	follow the SetPlayerPronouns rule;
 
 to grow balls by (x - a number):
-	if Player is FemalePreferred or Cock Count of Player is 0 or Ball Size of Player > 6:
+	if Player is FemalePreferred or Player is not male or Ball Size of Player > 6:
 		continue the action;
 	let prevballs be Ball Size of Player;
 	BallsGrow Player by x;
@@ -279,7 +279,7 @@ This is the breast change rule:
 			increase score by 0; [do nothing]
 		else if the sex entry is "Female" or the sex entry is "Both":
 			let breast_change_text be "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your ";
-			if Breast Size of Player < Breast Size entry and ( ( "Male Preferred" is not listed in feats of Player and "Flat Chested" is not listed in feats of Player and singlesexadjust is not 2) or "Breasts" is listed in feats of Player ):
+			if Breast Size of Player < Breast Size entry and ( ( "Male Preferred" is not listed in feats of Player and "Flat Chested" is not listed in feats of Player and singlesexadjust is not 2 ) or "Breasts" is listed in feats of Player ):
 				follow the breast descr rule;
 				now breast_change_text is "[breast_change_text][descr] breasts ";
 				increase Breast Size of Player by 1;
@@ -399,11 +399,11 @@ to say infect:
 
 To Infect:
 	choose row MonsterID from the Table of Random Critters;
-	if there is no Name entry or ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true):
+	if there is no Name entry or ( there is a non-infectious entry and non-infectious entry is true ):
 		continue the action;
-	if ( scenario is "Researcher" or nanite collector is equipped ) and ( there is no resbypass in row MonsterID of Table of Random Critters or resbypass entry is false ):
+	if ( scenario is "Researcher" or nanite collector is equipped ) and ( there is no resbypass entry or resbypass entry is false ):
 		vialchance Name entry;
-	if scenario is "Researcher" and researchbypass is 0 and ( there is no resbypass in row MonsterID of the Table of Random Critters or resbypass entry is false ):
+	if scenario is "Researcher" and researchbypass is 0 and ( there is no resbypass entry or resbypass entry is false ):
 		continue the action;
 	if NewTypeInfection entry is true and NewTypeInfectionActive is true:
 		if debugactive is 1:
@@ -415,106 +415,71 @@ To Infect:
 		OldInfectionRoll;
 	if "Mutable" is listed in feats of Player and a random chance of 1 in 2 succeeds:		[** Repeat of above code for physical change]
 		OldInfectionRoll;
-	let xc be 0;
-	let xstr be -1;
-	if strength of Player is not str entry:
-		increase xc by 1;
-		now xstr is xc;
-	let xint be -1;
-	if Intelligence of Player is not Int entry:
-		increase xc by 1;
-		now xint is xc;
-	let xdex be -1;
-	if Dexterity of Player is not Dex entry:
-		increase xc by 1;
-		now xdex is xc;
-	let xsta be -1;
-	if Stamina of Player is not Sta entry:
-		increase xc by 1;
-		now xsta is xc;
-	let xper be -1;
-	if Perception of Player is not Per entry:
-		increase xc by 1;
-		now xper is xc;
-	let xcha be -1;
-	if Charisma of Player is not Cha entry:
-		increase xc by 1;
-		now xcha is xc;
-	let x be 0;
-	if "Mighty Mutation" is listed in feats of Player and xc is not 0:
-		now x is a random number from 1 to xc;
-	if x is xstr:
-		if strength of Player > str entry and a random chance of 1 in 10 succeeds:
-			if "Bestial Power" is not listed in feats of Player:
-				if "Mighty Mutation" is listed in feats of Player and a random chance of 1 in 2 succeeds:
-					now x is 0; [do nothing placeholder]
-				else:
-					say "[line break]Your muscles feel weaker as the infection spreads through you.";
-					decrease strength of Player by 1;
-					decrease capacity of Player by 5;
-		else if strength of Player < str entry:
-			say "[line break]You feel your muscles swelling with [Name entry in lower case] [one of]strength[or]physique[or]power[at random].";
-			increase strength of Player by 1;
-			increase capacity of Player by 5;
-	else if x is xint:
-		if Intelligence of Player > Int entry and a random chance of 1 in 10 succeeds:
-			if "Bestial Power" is not listed in feats of Player:
-				if "Mighty Mutation" is listed in feats of Player and a random chance of 1 in 2 succeeds:
-					now x is 0; [do nothing placeholder]
-				else:
-					say "[line break]Your head aches as the infection spreads through you.";
-					decrease Intelligence of Player by 1;
-		else if Intelligence of Player < Int entry:
-			say "[line break]You feel your mind swelling with [Name entry in lower case] [one of]intelligence[or]wit[or]complexity[at random].";
-			increase Intelligence of Player by 1;
-	else if x is xdex:
-		if Dexterity of Player > Dex entry and a random chance of 1 in 10 succeeds:
-			if "Bestial Power" is not listed in feats of Player:
-				if "Mighty Mutation" is listed in feats of Player and a random chance of 1 in 2 succeeds:
-					now x is 0; [do nothing placeholder]
-				else:
-					say "[line break]Your coordination feels weaker as the infection spreads through you.";
-					decrease Dexterity of Player by 1;
-		else if Dexterity of Player < Dex entry:
-			say "[line break]You feel your hand eye coordination swelling with [Name entry in lower case] [one of]dexterity[or]precision[or]accuracy[at random].";
-			increase Dexterity of Player by 1;
-	else if x is xsta:
-		if Stamina of Player > Sta entry and a random chance of 1 in 10 succeeds:
-			if "Bestial Power" is not listed in feats of Player:
-				if "Mighty Mutation" is listed in feats of Player and a random chance of 1 in 2 succeeds:
-					now x is 0; [do nothing placeholder]
-				else:
-					say "[line break]Your constitution feels weaker as the infection spreads through you.";
-					decrease Stamina of Player by 1;
-			if remainder after dividing stamina of Player by 2 is 1:
-				decrease MaxHP of Player by level of Player plus 1;
-		else if Stamina of Player < Sta entry:
-			say "[line break]You feel your body toughening with [Name entry in lower case] [one of]stamina[or]endurance[or]vitality[at random].";
-			increase Stamina of Player by 1;
-			if remainder after dividing stamina of Player by 2 is 0:
-				increase MaxHP of Player by level of Player plus 1;
-	else if x is xper:
-		if Perception of Player > Per entry and a random chance of 1 in 10 succeeds:
-			if "Bestial Power" is not listed in feats of Player:
-				if "Mighty Mutation" is listed in feats of Player and a random chance of 1 in 2 succeeds:
-					now x is 0; [do nothing placeholder]
-				else:
-					say "[line break]Your senses dull as the infection spreads through you.";
-					decrease Perception of Player by 1;
-		else if Perception of Player < Per entry:
-			say "[line break]You feel your senses swelling with [Name entry in lower case] [one of]perception[or]aptitude[or]feral attention[at random].";
-			increase Perception of Player by 1;
-	else if x is xcha:
-		if Charisma of Player > Cha entry and a random chance of 1 in 10 succeeds:
-			if "Bestial Power" is not listed in feats of Player:
-				if "Mighty Mutation" is listed in feats of Player and a random chance of 1 in 2 succeeds:
-					now x is 0; [do nothing placeholder]
-				else:
-					say "[line break]You feel more isolated as the infection spreads through you.";
-					decrease Charisma of Player by 1;
-		else if Charisma of Player < Cha entry:
-			say "[line break]You feel your social sense swelling with [Name entry in lower case] [one of]charisma[or]natural charm[or]pheromones[at random].";
-			increase Charisma of Player by 1;
+	if "Mighty Mutation" is listed in feats of Player: [feat causes stat growth/decay from infection]
+		let xc be a list of numbers;
+		if strength of Player is not str entry, add 1 to xc;
+		if Intelligence of Player is not Int entry, add 2 to xc;
+		if Dexterity of Player is not Dex entry, add 3 to xc;
+		if Stamina of Player is not Sta entry, add 4 to xc;
+		if Perception of Player is not Per entry, add 5 to xc;
+		if Charisma of Player is not Cha entry, add 6 to xc;
+		if xc is not empty:
+			sort xc in random order;
+			if entry 1 of xc is:
+				-- 1: [strength]
+					if strength of Player > str entry and a random chance of 1 in 10 succeeds:
+						if "Bestial Power" is not listed in feats of Player and a random chance of 1 in 2 succeeds:
+							say "[line break]Your muscles feel weaker as the infection spreads through you.";
+							decrease strength of Player by 1;
+							decrease capacity of Player by 5;
+					else if strength of Player < str entry:
+						say "[line break]You feel your muscles swelling with [Name entry in lower case] [one of]strength[or]physique[or]power[at random].";
+						increase strength of Player by 1;
+						increase capacity of Player by 5;
+				-- 2: [intelligence]
+					if Intelligence of Player > Int entry and a random chance of 1 in 10 succeeds:
+						if "Bestial Power" is not listed in feats of Player and a random chance of 1 in 2 succeeds:
+							say "[line break]Your head aches as the infection spreads through you.";
+							decrease Intelligence of Player by 1;
+					else if Intelligence of Player < Int entry:
+						say "[line break]You feel your mind swelling with [Name entry in lower case] [one of]intelligence[or]wit[or]complexity[at random].";
+						increase Intelligence of Player by 1;
+				-- 3: [dexterity]
+					if Dexterity of Player > Dex entry and a random chance of 1 in 10 succeeds:
+						if "Bestial Power" is not listed in feats of Player and a random chance of 1 in 2 succeeds:
+							say "[line break]Your coordination feels weaker as the infection spreads through you.";
+							decrease Dexterity of Player by 1;
+					else if Dexterity of Player < Dex entry:
+						say "[line break]You feel your hand eye coordination swelling with [Name entry in lower case] [one of]dexterity[or]precision[or]accuracy[at random].";
+						increase Dexterity of Player by 1;
+				-- 4: [stamina]
+					if Stamina of Player > Sta entry and a random chance of 1 in 10 succeeds:
+						if "Bestial Power" is not listed in feats of Player and a random chance of 1 in 2 succeeds:
+							say "[line break]Your constitution feels weaker as the infection spreads through you.";
+							decrease Stamina of Player by 1;
+							if remainder after dividing stamina of Player by 2 is 1:
+								decrease MaxHP of Player by level of Player plus 1;
+					else if Stamina of Player < Sta entry:
+						say "[line break]You feel your body toughening with [Name entry in lower case] [one of]stamina[or]endurance[or]vitality[at random].";
+						increase Stamina of Player by 1;
+						if remainder after dividing stamina of Player by 2 is 0:
+							increase MaxHP of Player by level of Player plus 1;
+				-- 5: [perception]
+					if Perception of Player > Per entry and a random chance of 1 in 10 succeeds:
+						if "Bestial Power" is not listed in feats of Player and a random chance of 1 in 2 succeeds:
+							say "[line break]Your senses dull as the infection spreads through you.";
+							decrease Perception of Player by 1;
+					else if Perception of Player < Per entry:
+						say "[line break]You feel your senses swelling with [Name entry in lower case] [one of]perception[or]aptitude[or]feral attention[at random].";
+						increase Perception of Player by 1;
+				-- 6: [charisma]
+					if Charisma of Player > Cha entry and a random chance of 1 in 10 succeeds:
+						if "Bestial Power" is not listed in feats of Player and a random chance of 1 in 2 succeeds:
+							say "[line break]You feel more isolated as the infection spreads through you.";
+							decrease Charisma of Player by 1;
+					else if Charisma of Player < Cha entry:
+						say "[line break]You feel your social sense swelling with [Name entry in lower case] [one of]charisma[or]natural charm[or]pheromones[at random].";
+						increase Charisma of Player by 1;
 	if Libido of Player < libido entry:
 		let oldlib be Libido of Player;
 		increase Libido of Player by 1;
@@ -550,48 +515,39 @@ To MultiInfect (x - text) repeats (repeatCount - number):
 
 to OldInfectionRoll: [old infections with less body parts made before 07.05.2019]
 	choose row MonsterID from the Table of Random Critters;
-	let x be a random number from 1 to 5;
-	let bodyparts be { 1, 2, 3, 4, 5 };
-	sort bodyparts in random order;
-	let found be 0;
-	repeat with y running through bodyparts:
-		now x is y;
-		if y is 1:
-			if SkinName of Player is not Name entry:
-				now found is 1;
-				break;
-		else if y is 2:
-			if FaceName of Player is not Name entry:
-				now found is 1;
-				break;
-		else if y is 3:
-			if TailName of Player is not Name entry:
-				now found is 1;
-				break;
-		else if y is 4:
-			if BodyName of Player is not Name entry:
-				now found is 1;
-				break;
-		else if y is 5:
-			if CockName of Player is not Name entry:
-				now found is 1;
-				break;
+	let x be 4;
 	if "Resistant" is listed in feats of Player and a random chance of 1 in 3 succeeds:
 		now x is 6; [33% chance of no mutation]
-	else if found is 0:
-		now x is 4;
+	else:
+		let bodyparts be { 1, 2, 3, 4, 5 };
+		sort bodyparts in random order;
+		repeat with y running through bodyparts:
+			if y is:
+				-- 1: [skin]
+					if SkinName of Player is not Name entry:
+						now x is y;
+						break;
+				-- 2: [face]
+					if FaceName of Player is not Name entry:
+						now x is y;
+						break;
+				-- 3: [ass]
+					if TailName of Player is not Name entry:
+						now x is y;
+						break;
+				-- 4: [body]
+					if BodyName of Player is not Name entry:
+						now x is y;
+						break;
+				-- 5: [cock]
+					if CockName of Player is not Name entry:
+						now x is y;
+						break;
 	if "Microwaved" is listed in feats of Player and x < 6:
-		say "WARNING: [Name entry] nanites detected!";
-		if x is:
-			-- 1: say "Skin infection imminent";
-			-- 2: say "Head infection imminent";
-			-- 3: say "Posterior infection imminent";
-			-- 4: say "Torso infection imminent";
-			-- 5: say "Genital infection imminent";
-		say ". Allow?";
+		say "[line break]WARNING: [Name entry] nanites detected!";
+		say "[if x is 1]Skin[else if x is 2]Head[else if x is 3]Posterior[else if x is 4]Torso[else]Genital[end if] infection imminent. Allow?";
 		if Player consents:
 			LineBreak;
-			[say "OK.";]
 		else:
 			LineBreak;
 			say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
@@ -600,7 +556,7 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 		if SkinName of Player is not Name entry:
 			say "[line break]Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
 			now SkinName of Player is Name entry;
-			if Species Name entry is not "":
+			if Species Name entry is not empty:
 				now SkinSpeciesName of Player is Species Name entry;
 			else:
 				now SkinSpeciesName of Player is Name entry;
@@ -609,7 +565,7 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 		if FaceName of Player is not Name entry:
 			say "[line break]Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
 			now FaceName of Player is Name entry;
-			if Species Name entry is not "":
+			if Species Name entry is not empty:
 				now FaceSpeciesName of Player is Species Name entry;
 			else:
 				now FaceSpeciesName of Player is Name entry;
@@ -620,7 +576,7 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 		if TailName of Player is not Name entry:
 			say "[line break]Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
 			now TailName of Player is Name entry;
-			if Species Name entry is not "":
+			if Species Name entry is not empty:
 				now TailSpeciesName of Player is Species Name entry;
 			else:
 				now TailSpeciesName of Player is Name entry;
@@ -633,7 +589,7 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 		if BodyName of Player is not Name entry:
 			say "[line break]Your [one of][bodytype of Player] [or][bodydesc of Player] [or][bodydesc of Player] [or][bodytype of Player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 			now BodyName of Player is Name entry;
-			if Species Name entry is not "":
+			if Species Name entry is not empty:
 				now BodySpeciesName of Player is Species Name entry;
 			else:
 				now BodySpeciesName of Player is Name entry;
@@ -646,7 +602,7 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 			now LegsSpeciesName of Player is ""; [wiping out the new style parts]
 			now ArmsName of Player is ""; [wiping out the new style parts]
 			now ArmsSpeciesName of Player is ""; [wiping out the new style parts]
-		attributeinfect; [sets the new attributes]
+		attributeinfect; [sets the new body scale]
 		say "[run paragraph on]";
 		follow the sex change rule;
 		say "";
@@ -656,7 +612,7 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 		if CockName of Player is not Name entry:
 			if Player is male, say "[line break]Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 			now CockName of Player is Name entry;
-			if Species Name entry is not "":
+			if Species Name entry is not empty:
 				now CockSpeciesName of Player is Species Name entry;
 				now CuntSpeciesName of Player is Species Name entry;
 			else:
@@ -666,8 +622,9 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 			now Cock Description of Player is ""; [wiping out the new style parts]
 			now Cunt Description of Player is ""; [wiping out the new style parts]
 			if Name entry is listed in infections of InternalBallsList and internalBallsbypass is true:
-				say "[italic type]... After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type][line break]";
-		say "";
+				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type][line break]";
+		else:
+			say "";
 	else: [resistant]
 		say "[line break]Your nanites['] programmed resistance to change prevents further mutation.";
 
@@ -996,32 +953,32 @@ to attributeinfect silence state is ( Silence - a number ): [sets the player val
 				if Silence is 0:
 					say "     [bold type]Sadly, the [z] [if plural of z is true]are incompatible with your new body type, so you can do nothing but take them off[else]is incompatible with your new body type, so you can do nothing but take it off[end if].[roman type][line break]";
 				now z is not equipped;
-	if there is a scale in row MonsterID of the Table of Random Critters:
+	if there is a scale entry:
 		if scalevalue of Player is not scale entry:
 			now scalevalue of Player is scale entry;
 			repeat with z running through equipped equipment:
 				if size of z > 0: [size restricted equipment]
-					if (scalevalue of Player - size of z > 1):
+					if scalevalue of Player - size of z > 1:
 						if Silence is 0:
 							say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if].[roman type][line break]";
 						now z is not equipped;
-					else if (scalevalue of Player - size of z is 1):
+					else if scalevalue of Player - size of z is 1:
 						if Silence is 0:
 							say "     [bold type]Your [z] [if plural of z is true]stretch a bit as they are forced to conform to a larger body[else]stretches a bit as it is forced to conform to a larger body[end if].[roman type][line break]";
-					else if (scalevalue of Player - size of z < -1):
+					else if scalevalue of Player - size of z < -1:
 						if Silence is 0:
 							say "     [bold type]As you shrink, [z] [if plural of z is true]become far too big to fit you. You have little choice but to take them off[else]becomes far too big to fit you. You have little choice but to take it off[end if].[roman type][line break]";
 						now z is not equipped;
-					else if (scalevalue of Player - size of z is -1):
+					else if scalevalue of Player - size of z is -1:
 						if Silence is 0:
 							say "     [bold type]Your [z] [if plural of z is true]hang[else]hangs[end if] fairly loose on your now smaller frame.[roman type][line break]";
 	else:
 		now scalevalue of Player is 3;
-	if there is a body descriptor in row MonsterID of the Table of Random Critters:
+	if there is a body descriptor entry:
 		now bodydesc of Player is body descriptor entry;
 	else:
 		now bodydesc of Player is Name entry in lower case;
-	if there is a type in row MonsterID of the Table of Random Critters:
+	if there is a type entry:
 		now bodytype of Player is type entry;
 	else:
 		now bodytype of Player is Name entry in lower case;
@@ -1053,16 +1010,13 @@ to weakrandominfect: [does not bypass researcher protection]
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
-	while there is a non-infectious in row MonsterID of Table of Random Critters and (non-infectious entry is true or area entry is "Nowhere"):
+	while there is a non-infectious entry and (non-infectious entry is true or area entry is "Nowhere"):
 		increase MonsterID by 1; [checking the next creature]
 		choose row MonsterID from Table of Random Critters; [selecting the next row]
-		if there is a non-infectious in row MonsterID of Table of Random Critters and (non-infectious entry is true or area entry is "Nowhere"):
-			next;
 		if BannedStatus entry is true: [banned creatures can't be used to infect]
 			if debugactive is 1:
 				say "DEBUG -> Can't infect with creature [Name entry] because it has Banned: [BannedStatus entry][line break]";
 			next;
-		break;
 	choose row MonsterID from Table of Random Critters;
 	if non-infectious entry is false and area entry is not "Nowhere": [last check that it selected something fitting]
 		infect;

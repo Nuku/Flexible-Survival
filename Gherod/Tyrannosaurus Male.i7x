@@ -5,19 +5,6 @@ Version 2 of Tyrannosaurus Male by Gherod begins here.
 [ Version 1 - Created File ]
 [ Version 2 - Lust Victory variant and more sex scenes ]
 
-to say GenerateTrophyList_Tyrannosaurus_Male:
-	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
-	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
-		add "tyrannosaurus male tooth" to CombatTrophyList;
-	if a random chance of (30 + LootBonus) in 100 succeeds: [common drop]
-		add "dirty water" to CombatTrophyList;
-	if a random chance of (25 + LootBonus) in 100 succeeds: [uncommon drop]
-		add "food" to CombatTrophyList;
-	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
-		add "iron pipe" to CombatTrophyList;
-	if Debug is at level 10:
-		say "DEBUG: Trophy List: [CombatTrophyList].";
-
 Section 1 - Creature Responses
 
 to say Tyrannosaurus Male Wins:
@@ -35,8 +22,7 @@ to say Tyrannosaurus Male Wins:
 	else:
 		say "     As you drop to your knees in front of the t-rex man, he immediately stops as he observes you; looking at him from a lower perspective, declaring your surrender intent, as you are left with no choice. 'That's where you should be, bitch. A much more fitting position for someone like you,' he says with a mocking tone, bringing his hand over his crotch and unzipping his pants before you, releasing his thick and veiny cock which pops out heavily from its confines, hardening by each passing second.";
 	WaitLineBreak;
-	let randomnumber be a random number from 1 to 3; [adjust the latter number for the number of options]
-	if randomnumber is:
+	if a random number from 1 to 3 is: [adjust the latter number for the number of options]
 		-- 1: [facefuck]
 			say "     His large and powerful hand slips onto the backside of your head and pulls you to him, your lips coming to touch the gleaming tip of the muscular reptile's cock, which is throbbing hard by now. 'Open up, slut. Gotta take it all in,' he orders, now squeezing your jaw while grabbing his dick to slap you in the face repeatedly. It's a heavy one, and it does hurt slightly as he does it. 'It ain't gonna suck itself, bitch. Get to work!' The strong tyrannosaurus impatiently begins to thrust his member past your lips, pushing them apart with his length as it sinks inside, rubbing against your tongue and traveling deeper towards your throat as your skull is held in place.";
 			say "     'Mmh... You like that dick, little slut?' His veiny cock continues to throb, its girth forcing your jaw to nearly dislocate in order to take its whole size, and you have no choice but to endure the whole ordeal. He continues to push it all the way in until his nutsack pokes at your chin and his meat threatens to occupy your esophagus, then slaps your face a bit too hard for your comfort. 'Yeah... you can take it all in, eh? Well, if you couldn't, I'd force it in, anyway.' Once he is done feeling up your oral depths, he pulls out, only to thrust in again, holding you still as he gets started on fucking your mouth. With your lips wrapped tight around the strong dinosaur man's meatlog, he takes a great amount of pleasure shoving it in and out of your mouth.";
@@ -64,10 +50,7 @@ to say Tyrannosaurus Male Wins:
 			say "     The persistent dino man's stamina seems quite sizable as he makes use of your [if Player is female]womanhood[else]hole[end if] with all the vigor he can muster, calling you all sorts of nasty names from [']bitch['] to [']cocksucker['], and every time he does either of those, you can feel his member throbbing and pulsing, immensely turned on by all of it. It is certain that he gets off from treating you rough and dominating you, as his pounding movements continue to increase in speed and force. 'You're such a good slut... How does that dick feel in you? Could make you my sex slave... I bet you'd like that, you little bitch!' he goes on, still fucking you as hard as he can, slapping your asscheeks hard and treating you like a total [if Player is male]man [end if]whore.";
 			WaitLineBreak;
 			say "     But all things have to come to an end, and his draws near. Eventually, the anthro tyrannosaurus['] cock begins to throb massively, and his rhythm does not break for even a second, not until you feel his warm load coating your insides as it is so generously shot, spurt after spurt, as the dino man grunts and moans, enjoying his climax to the last moment. After you have earned a good fuck and a hard spanking from the t-rex man, he pulls out and stands up to leave. 'Bet you're gonna come back for more like the cock addicted bitch you are. Don't worry, once you do, there's a lot more of that in these big balls, here, to breed you.' Then, the dino man simply walks away, leaving you alone as his man juices leak from your [if Player is female]lower lips[else]hole[end if], used and forgotten.";
-			if Player is female:
-				CreatureSexAftermath "Player" receives "PussyFuck" from "Tyrannosaurus Male";
-			else:
-				CreatureSexAftermath "Player" receives "AssFuck" from "Tyrannosaurus Male";
+			CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Tyrannosaurus Male";
 
 to say Tyrannosaurus Male Loses:
 	project the Figure of TyrannosaurusMale_hard_icon;
@@ -76,8 +59,7 @@ to say Tyrannosaurus Male Loses:
 		say "     You could do as he says, but it is you who is in total control of the situation...";
 	else:
 		say "     After delivering the final strike on the dino man, he grunts in frustration, as he is unable to fight back due to how much you have done to hinder him. 'Grr! How can a little bitch like you do so much...! This time you've won, but the next... I'm gonna make you bend over...!' he taunts you, amidst more grunting, but those are no longer threats you should worry about. After all, you have defeated him, and that means you get to have your way with the anthro tyrannosaurus man.";
-	LineBreak;
-	say "     [bold type]What do you want to do with him, if anything?[roman type][line break]";
+	say "[line break]     [bold type]What do you want to do with him, if anything?[roman type][line break]";
 	say "[TyrannosaurusMaleVictorySexMenu]";
 
 to say TyrannosaurusMaleVictorySexMenu:
@@ -112,21 +94,22 @@ to say TyrannosaurusMaleVictorySexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Tie him up and edge him"):
-					say "[TyrannosaurusMaleVictorySexEdging]";
-				else if (nam is "Give him a pity blowjob"):
-					say "[TyrannosaurusMaleVictorySexBlowjob]";
-				else if (nam is "Ride his cock"):
-					say "[TyrannosaurusMaleVictorySexRideCock]";
-				wait for any key;
+				if title entry is:
+					-- "Tie him up and edge him":
+						say "[TyrannosaurusMaleVictorySexEdging]";
+					-- "Give him a pity blowjob":
+						say "[TyrannosaurusMaleVictorySexBlowjob]";
+					-- "Ride his cock":
+						say "[TyrannosaurusMaleVictorySexRideCock]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     Maybe he is not worth your attention at all, so you just leave him ranting and shouting all he wants, not even minding any additional words he says, and just continue what you were doing before all this.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say TyrannosaurusMaleVictorySexEdging:
@@ -161,15 +144,13 @@ to say TyrannosaurusMaleVictorySexRideCock:
 	WaitLineBreak;
 	say "     As his orgasm goes on, yours is also set off, eventually. You cannot help but [if Player is male]cum all over yourself and the dino man as you stroke your own [Cock of Player] dick[else]quiver as this powerful wave of pleasure shakes you around and all over[end if]... and right until he finishes his generous deposit of creamy seed. 'Mmh... fuck... Why did you fight me, then? Could've just said you wanted my dick, I'd have given it to you... gladly,' he says with a mischievous chuckle. For now, you are pretty much done with the male anthro tyrannosaurus, so you prepare to get up and be on your way.";
 	say "     Seems like your former enemy was left happy and satisfied, he does not even curse at you as you leave him behind.";
-	if Player is female:
-		CreatureSexAftermath "Player" receives "PussyFuck" from "Tyrannosaurus Male";
-	else:
-		CreatureSexAftermath "Player" receives "AssFuck" from "Tyrannosaurus Male";
+	CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Tyrannosaurus Male";
 
 to say Tyrannosaurus Male Desc:
-	project the Figure of TyrannosaurusMale_clothed_icon;
 	say "     In front of you stands a tall anthropomorphic dinosaur man, with the head of a tyrannosaurus, to be precise. His musclebound figure is covered by a black tank top, green camo pants below and combat boots, and as he seems to be carrying his tags, he could have been a soldier or someone who simply scavenged some unfortunate human's equipment. He seems to have found an iron pipe, which he is arming himself with, walking towards you ready to strike. With a cocky, toothy grin, which actually looks quite scary given the fact his mouth features many sharp teeth, he eyes you from head to feet as he throws a taunt. 'Looking to get beaten up and fucked like the rest of them? You should just be on your knees now, bitch.'";
 	say "     The dino man does not waste any time and rushes to attack you!";
+
+Section 2 - Creature Insertion
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -177,8 +158,20 @@ name(text)	PrepFunction(text)
 
 to say PrepCombat_Tyrannosaurus Male:
 	setmongender 3; [creature is male]
+	project the Figure of TyrannosaurusMale_clothed_icon;
 
-Section 2 - Creature Insertion
+to say GenerateTrophyList_Tyrannosaurus_Male:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "tyrannosaurus male tooth" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [common drop]
+		add "dirty water" to CombatTrophyList;
+	if a random chance of (25 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "food" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "iron pipe" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -195,7 +188,7 @@ When Play begins:
 	add "Tyrannosaurus Male" to infections of BipedalList;
 	add "Tyrannosaurus Male" to infections of TailList;
 	now Name entry is "Tyrannosaurus Male";
-	now enemy title entry is "";
+	now enemy title entry is "Male Tyrannosaurus";
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]He leaps forward and goes for a bite on you with a big chomp.[or]The dinosaur man charges and swipes towards you with one clawed hand.[or]The anthro tyrannosaurus swings his large steel pipe towards you![or]He surprises you with an unexpected kick on your leg joint, which nearly knocks you over.[or]The dino man snaps at you with a fast bite, his many sharp teeth cutting through your skin like needles.[or]He slips behind you, grabs you with his arm around your neck and tries to incapacitate you! Fortunately, you manage to escape his grasp, for now.[at random]";
@@ -352,57 +345,18 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 3 - Drop Item
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "tyrannosaurus male tooth"	"A single sharp tooth from an anthro male tyrannosaurus. Just rubbing the tip slightly leaves a lingering sensation of pain."	0	tyrannosaurus male tooth
 
 tyrannosaurus male tooth is a grab object.
-It is temporary.
-[tyrannosaurus male tooth is infectious.
-Strain of tyrannosaurus male tooth is "Tyrannosaurus Male".]
-Usedesc of tyrannosaurus male tooth is "[TyrMToothUse]";
+Usedesc of tyrannosaurus male tooth is "[TyrMToothUse]".
+Scent of tyrannosaurus male tooth is "It smells like the inside of a beast's mouth. Not very pleasant.".
 
 to say TyrMToothUse:
-	say "Holding the tooth between your fingers, you gently press your fingertip against its sharp tip. It pierces through your skin like a needle, and strangely, it disintegrates after a while, your skin having absorbed some of its properties.";
+	say "     Holding the tooth between your fingers, you gently press your fingertip against its sharp tip. It pierces through your skin like a needle, and strangely, it disintegrates after a while, your skin having absorbed some of its properties.";
 	infect "Tyrannosaurus Male";
-
-instead of sniffing tyrannosaurus male tooth:
-	say "It smells like the inside of a beast's mouth. Not very pleasant.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"tyrannosaurus cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Tyrannosaurus Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	tyrannosaurus cum
-
-tyrannosaurus cum is a grab object.
-tyrannosaurus cum is cum.
-tyrannosaurus cum is infectious.
-Strain of tyrannosaurus cum is "Tyrannosaurus Male".
-Usedesc of tyrannosaurus cum is "[tyrannosaurus cum use]";
-
-to say tyrannosaurus cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing tyrannosaurus cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"tyrannosaurus man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Tyrannosaurus Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	tyrannosaurus man-milk
-
-tyrannosaurus man-milk is a grab object.
-tyrannosaurus man-milk is milky.
-Purified of tyrannosaurus man-milk is "distilled milk".
-tyrannosaurus man-milk is infectious.
-Strain of tyrannosaurus man-milk is "Tyrannosaurus Male".
-Usedesc of tyrannosaurus man-milk is "[tyrannosaurus man-milk use]";
-
-to say tyrannosaurus man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the reptilian man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing tyrannosaurus man-milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Tyrannosaurus Male ends here.

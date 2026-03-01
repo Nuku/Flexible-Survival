@@ -2,6 +2,8 @@ Apartment 319 by Kaleem mcintyre begins here.
 
 Section 1 - Apartment 319
 
+AptAid is a number that varies.
+
 Table of GameEventIDs (continued)
 Object	Name
 Apartment 319	"Apartment 319"
@@ -10,7 +12,6 @@ Apartment 319 is a situation.
 ResolveFunction of Apartment 319 is "[ResolveEvent Apartment 319]".
 Apartment 319 is inactive.
 Sarea of Apartment 319 is "High".
-AptAid is a number that varies.
 
 to say ResolveEvent Apartment 319:
 	if AptAid is 0:
@@ -22,7 +23,7 @@ to say ResolveEvent Apartment 319:
 			WaitLineBreak;
 			say "     'Wow. That's... something. I didn't know Kenaz and Birch were...' The Dalmatian seems to consider something while rubbing a hand against the back of his head before finally shrugging, almost helplessly so. 'Well, I guess I have a reason to hope in this city again. Heh, if you wouldn't mind I've got some things to think over while I finish up my run so...' Asking the anthro if he's going back to the fire station, you get a slow nod from him. 'Y-yeah, I just, have some things to finish up back home so after I deal with that, I'll head on over there a little later.' With a slow lick over the end of his muzzle, the firefighter looks at you and then moves past you to go off about his way. Faintly, you realize that it's almost as if he's trying to run away from you.";
 			say "     Not sure what that was about, you don't think it's worth the hassle of trying to figure out as you've done your duty towards Kenaz by finding another member of his team. Time to head back to Homaru to ask the informant if he's found anyone else.";
-			[say "     (This content requires the guy, hellspawn, furry and hermaphrodite flags.)";]
+			say "[line break]     [italic type](This content requires the males, hellspawn, furry and hermaphrodite flags.)[roman type][line break]";
 			now Resolution of Apartment 319 is 100; [essential parts banned]
 			now Apartment 319 is resolved;
 			now HomaruSearch is 4;
@@ -37,8 +38,7 @@ to say ResolveEvent Apartment 319:
 			say "     'You know what, let me stop. Tell Kenaz that I'll be around later to check on things.' The Dal man takes a step to turn around but before he can get too far, you spot something on the firefighter's rump. From the shape and look of it, you can only guess that it's a... but that couldn't be right. Opening your mouth to ask Dagaz about it, you get a sharp rebuke from the Dalmatian after he turns to glare at you. 'That's none of your business!' Dagaz's shout makes you jump back slightly. 'Look, I'm grateful and all for coming to look for us and whatever, but you need to mind your own business and keep out of mine.' And with that, Dagaz pulls himself fully into his current residence and then loudly slams the door in your face.";
 			WaitLineBreak;
 			say "     Now out of all the odd things you've seen in the city as of late... that had to have been the oddest thing of all. [if intelligence of Player > 15][']Knowing['] that something is seriously wrong here, you go over what you've just seen and heard several times before nodding to the now closed door in front of you[else]If you didn't know any better, you could almost swear that the anthro man is hiding something[end if]. Dagaz looked as though something was bothering him... and that mark on his butt... it kind of looked like a brand or something... Quickly, you find yourself wondering if maybe you should come back later on in the evening to try and see if you can learn anything more about what's going on with the Dalmatian.";
-			LineBreak;
-			say "     [bold type]Though you were told it was none of your business, can you really turn a blind eye on this one?[roman type][line break]";
+			say "[line break]     [bold type]Though you were told it was none of your business, can you really turn a blind eye on this one?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Come back later.";
 			say "     ([link]N[as]n[end link]) - Don't return.";
 			if Player consents:
@@ -62,8 +62,7 @@ to say ResolveEvent Apartment 319:
 		say "     Coughing nervously, you try to call out for the firefighter to grab his attention. Sadly, Dagaz's only answer comes in the form of a dull whimper as the Dalmatian lolls his head around almost drunkenly while hovering across the floor in the sling. 'This here is our little playmate, friend. Step off and get out before you find yourself in a world of hurt,' the unknown mutant says somewhat unrepentantly as he looks to you with bored, luminescent green-blue eyes. Picking yourself up off the ground, you completely ignore the anthro as you try to call out to Dagaz once again to ask him if he's alright. The Dalmatian simply whimpers at you before turning his head in shame. He sounds like he's hurting, but... not quite.";
 		WaitLineBreak;
 		say "     'I see someone doesn't listen. So I'll explain things for you,' the unknown creature says, after getting up from his seat to step in front of the bound Dalmatian. 'Dagaz here is our little playmate of the hour. He belongs to us, both body and mind, because of a contract he signed between the two of us. As such, he's ours to do with as we please. Now, if that answers your question... Get. Out.' Looking to the shuddering Dalmatian and then to the assorted group, you weigh your options. The assembled mutants look pretty tough, but then again, you've fought worse, right?";
-		LineBreak;
-		say "     [bold type]Should you try and fight the group for the firefighter or back out gracefully?[roman type][line break]";
+		say "[line break]     [bold type]Should you try and fight the group for the firefighter or back out gracefully?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Fight.";
 		say "     ([link]N[as]n[end link]) - Back out.";
 		if Player consents:
@@ -91,8 +90,7 @@ to say ResolveEvent Apartment 319:
 									say "     Patting the Dalmatian on the cheek to get his attention, you try and ask Dagaz how to get him down from this weird thing. 'Please... just leave me alone. Gods, this is so embarrassing!' Obviously, the anthro is more than just a little okay if he can grumble and bemoan the way he is doing right now. Trying to tell him that you don't care about his strange hobbies and you just wanted to make sure he is alright, you find the Dalmatian whimpering up at you in complete shame. 'Please... just go away. Can't you see that you ruined everything? Those guys were just about to...' A shudder halts whatever Dagaz was about to say as the Dalmatian unexpectedly lets out a carnal snarl of both want and need.";
 									WaitLineBreak;
 									say "     Looking down at the canine man, your eyes widen just a tick as you look over Dagaz's ten inch red rocket poking completely out of his sheath. From the bubbles of pre at the head of the tapered tip, it would seem that the Dalmatian is but seconds away from popping his load. Seeing this and looking around the room at the paddles and whips that had been left behind on the floor, you wonder if you should try and finish up what the others started?";
-									LineBreak;
-									say "     [bold type]It would definitely be kinky as hell and would serve as a mild apology to the other man.[roman type][line break]";
+									say "[line break]     [bold type]It would definitely be kinky as hell and would serve as a mild apology to the other man.[roman type][line break]";
 									say "     ([link]Y[as]y[end link]) - Yes.";
 									say "     ([link]N[as]n[end link]) - No.";
 									if Player consents:
@@ -103,8 +101,7 @@ to say ResolveEvent Apartment 319:
 										say "     Another attack by the paddle, this time across the flat of the Dalmatian's chest, has Dagaz crying out as he thrusts his hips wildly into the air. When your fourth strike lights a bolt of pain across the outer edge of the firefighter's right butt cheek, Dagaz is nearly howling his praise, or maybe submission, to the night sky outside as he shudders and shakes while humping his cock up at nothing. The red, tapered mass of flesh is now leaking pre almost like a broke water fountain, and from both the smell and then look of the gooey mess dripping onto the hardwood floor, you can tell it won't be long now.";
 										WaitLineBreak;
 										say "     Hitting the Dalmatian over and over with the paddle - up over his left pectoral muscle, down across his arm, up over his torso and then across his other butt cheek - you beat the anthro man until Dagaz is soon nothing more than a yowling mess of fur, sweat and free flowing precum. Looking at the Dalmatian's pulsating cock, you don't fight the perverted smirk that creeps onto your lips as you watch the bulb of the spotted canine's knot swelling up to its full girth. Turning your head to look to the paddle in your hands, you chuckle before lifting your eyes to look intently up at Dagaz's whimpering form.";
-										LineBreak;
-										say "     [bold type]Should you?[roman type][line break]";
+										say "[line break]     [bold type]Should you?[roman type][line break]";
 										say "     ([link]Y[as]y[end link]) - Yes.";
 										say "     ([link]N[as]n[end link]) - No.";
 										if Player consents:
@@ -187,7 +184,7 @@ to say ResolveEvent Apartment 319:
 			now Homarusearch is 4;
 			now AptAid is 3;
 			increase score by 2;
-	else if AptAid is 3:
+	else:
 		say "     Coming back to apartment 319, you worriedly knock on Dagaz's door while calling out for the canine man. When a barking voice from the canine tells you to [italic type]shut up[roman type], you sigh happily as you realize that the Dalmatian is still very much alive. Healthy might be another story altogether, for when the Dalmatian opens the door, you find that the guy looks rather... rough. And that might be an understatement. Fur tangled and stuck into knots, eyes somewhat bleary, and cum soaked across his chest and torso, the firefighter looks like he had been through an orgy.";
 		say "     'Well, if it isn't my supposed rescuer. Heh... uhm...' The man looks somewhat conflicted as he rubs at the back of his head while looking at you somewhat unsurely. Asking him if he's alright, you watch as the Dalmatian nods at you before blushing somewhat sheepishly. 'Look, I appreciate everything you tried to do, but please, for my sake [italic type]don't[roman type] tell anybody about what happened the night before, okay?' Promising that you won't, you get a bitten off chuckle as Dagaz looks to you with something akin to embarrassment written on his muzzle.";
 		WaitLineBreak;
@@ -196,6 +193,7 @@ to say ResolveEvent Apartment 319:
 		say "     Feeling like you've done all you can here, it's time to head back to Homaru's place!";
 		now Resolution of Apartment 319 is 5; [checked in with Dagaz after his SM session]
 		now Homarusearch is 4;
+		now Apartment 319 is resolved;
 		increase score by 20;
 
 Apartment 319 ends here.

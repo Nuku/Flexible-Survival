@@ -16,6 +16,8 @@ Description of Pirate Island is "     Finally, the island with the treasure mark
 instead of sniffing Pirate Island:
 	say "The island smells of the ocean and fetid sea caves.";
 
+Pirate Island is west of Sandbar.
+
 Table of GameCharacterIDs (continued)
 object	name
 Treasure cave	"Treasure cave"

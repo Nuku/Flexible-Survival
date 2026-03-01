@@ -11,40 +11,45 @@ name	desc	weight	object
 
 food is a grab object. The trade of food is "soda".
 the scent of food is "The food smells [one of]good[or]appetizing[or]tasty[or]edible[at random].".
-
 Usedesc of food is "[food use]".
 
 to say food use:
-	if "Junk Food Junky" is listed in feats of Player:
-		if hunger of Player > 8:
-			increase score by 2;
-		PlayerEat 9;
-		say "You eat the food, feeling a little disappointed it's not junk food!";
-		if morale of Player < 0:
-			increase morale of Player by 10;
-			if morale of Player > 0, now morale of Player is 0;
-			say "You feel a little better having eaten some boring food.";
+	if hunger of Player > 0:
+		if "Junk Food Junky" is listed in feats of Player:
+			if hunger of Player > 8:
+				increase score by 2;
+			PlayerEat 9;
+			say "You eat the food, feeling a little disappointed it's not junk food!";
+			if morale of Player < 0:
+				increase morale of Player by 10;
+				if morale of Player > 0, now morale of Player is 0;
+				say "You feel a little better having eaten some boring food.";
+		else:
+			if hunger of Player > 11:
+				increase score by 4;
+			PlayerEat 12;
+			say "You feel less hungry after wolfing down some food, yum!";
+			if morale of Player < 0:
+				increase morale of Player by 30;
+				if morale of Player > 0, now morale of Player is 0;
+				say "You feel better having eaten.";
+		if "Tanuki Salts" is listed in feats of player:
+			PlayerEat 4;
+			say "Ah, those secret spices help so much!";
 	else:
-		if hunger of Player > 11:
-			increase score by 4;
-		PlayerEat 12;
-		say "You feel less hungry after wolfing down some food, yum!";
-		if morale of Player < 0:
-			increase morale of Player by 30;
-			if morale of Player > 0, now morale of Player is 0;
-			say "You feel better having eaten.";
-	if "Tanuki Salts" is listed in feats of player:
-		PlayerEat 4;
-		say "Ah, those secret spices help so much!";
+		say "As you go to eat the food, you realize you're not even hungry and decide to save it for later instead.";
+		ItemGain food by 1 silently; [quietly giving back the auto-destroyed item]
 
 chips is a grab object.
 the scent of chips is "The chips smell [one of]good[or]appetizing[or]tasty[or]edible[at random].".
-
 Usedesc of chips is "[chips use]".
 
 to say chips use:
 	if labhost > 0 and BodyName of Player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
 		say "     As you begin unwrapping your snack a powerful rumbling begins in your stomach; you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[else]lab[end if] clearly excited about something. There is a sudden pressure at your chest as you feel the churning begin to focus at a single point; before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole. You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body. Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
+	else if hunger of Player is 0:
+		say "As you begin unwrapping your snack, you realize you've recently eaten. Better to save it for later.";
+		ItemGain chips by 1 silently; [quietly giving back the auto-destroyed item]
 	else if "Junk Food Junky" is listed in feats of Player:
 		if hunger of Player > 14:
 			increase score by 5;
@@ -74,68 +79,74 @@ name	desc	weight	object
 "soda"	"A can of some soda or another. Somehow, it is still cool to the touch."	1	soda
 
 dirty water is a grab object. The trade of dirty water is "chips".
+understand "water" as dirty water.
 the scent of dirty water is "The water smells a little off, but is still potable.".
-
 Usedesc of dirty water is "[dirty water use]".
 
 to say dirty water use:
-	if "Junk Food Junky" is listed in feats of Player:
-		if thirst of Player > 0:
-			increase score by thirst of Player divided by 3;
-			if thirst of Player > 15:
-				decrease score by ( thirst of Player minus 15 ) divided by 3;
-		PlayerDrink 15;
-		say "You feel a little less thirty after drinking some bland water!";
-		if morale of Player < 0:
-			increase morale of Player by 20;
-			if morale of Player > 0, now morale of Player is 0;
-			say "After drinking something, you feel a little better.";
+	if thirst of Player > 0:
+		if "Junk Food Junky" is listed in feats of Player:
+			if thirst of Player > 0:
+				increase score by thirst of Player divided by 3;
+				if thirst of Player > 15:
+					decrease score by ( thirst of Player minus 15 ) divided by 3;
+			PlayerDrink 15;
+			say "You feel a little less thirty after drinking some bland water!";
+			if morale of Player < 0:
+				increase morale of Player by 20;
+				if morale of Player > 0, now morale of Player is 0;
+				say "After drinking something, you feel a little better.";
+		else:
+			if thirst of Player > 0:
+				increase score by thirst of Player divided by 3;
+				if thirst of Player > 25:
+					decrease score by ( thirst of Player minus 25 ) divided by 3;
+			PlayerDrink 25;
+			say "You feel less thirsty after guzzling some water, yum!";
+			if morale of Player < 0:
+				increase morale of Player by 62;
+				if morale of Player > 0, now morale of Player is 0;
+				say "After drinking something, you feel better.";
+		if "Iron Stomach" is not listed in feats of Player:
+			weakrandominfect;
 	else:
-		if thirst of Player > 0:
-			increase score by thirst of Player divided by 3;
-			if thirst of Player > 25:
-				decrease score by ( thirst of Player minus 25 ) divided by 3;
-		PlayerDrink 25;
-		say "You feel less thirsty after guzzling some water, yum!";
-		if morale of Player < 0:
-			increase morale of Player by 62;
-			if morale of Player > 0, now morale of Player is 0;
-			say "After drinking something, you feel better.";
-	if "Iron Stomach" is not listed in feats of Player:
-		weakrandominfect;
+		say "Not being even a little thirsty, you instead decide to save the suspicious water for a true emergency.";
+		ItemGain dirty water by 1 silently; [quietly giving back the auto-destroyed item]
 
 water bottle is a grab object. The trade of water bottle is "chips".
 the scent of water bottle is "The water bottle smells like plastic.".
-
 Usedesc of water bottle is "[water bottle use]".
 
 to say water bottle use:
-	if "Junk Food Junky" is listed in feats of Player:
-		if thirst of Player > 0:
-			increase score by thirst of Player divided by 3;
-			if thirst of Player > 15:
-				decrease score by ( thirst of Player minus 15 ) divided by 3;
-		PlayerDrink 15;
-		say "You feel a little less thirty after drinking some bland water!";
-		if morale of Player < 0:
-			increase morale of Player by 20;
-			if morale of Player > 0, now morale of Player is 0;
-			say "After drinking something, you feel a little better.";
+	if thirst of Player > 0:
+		if "Junk Food Junky" is listed in feats of Player:
+			if thirst of Player > 0:
+				increase score by thirst of Player divided by 3;
+				if thirst of Player > 15:
+					decrease score by ( thirst of Player minus 15 ) divided by 3;
+			PlayerDrink 15;
+			say "You feel a little less thirty after drinking some bland water!";
+			if morale of Player < 0:
+				increase morale of Player by 20;
+				if morale of Player > 0, now morale of Player is 0;
+				say "After drinking something, you feel a little better.";
+		else:
+			if thirst of Player > 0:
+				increase score by thirst of Player divided by 3;
+				if thirst of Player > 25:
+					decrease score by ( thirst of Player minus 25 ) divided by 3;
+			PlayerDrink 25;
+			say "You feel less thirsty after guzzling some water, yum!";
+			if morale of Player < 0:
+				increase morale of Player by 62;
+				if morale of Player > 0, now morale of Player is 0;
+				say "After drinking something, you feel better.";
 	else:
-		if thirst of Player > 0:
-			increase score by thirst of Player divided by 3;
-			if thirst of Player > 25:
-				decrease score by ( thirst of Player minus 25 ) divided by 3;
-		PlayerDrink 25;
-		say "You feel less thirsty after guzzling some water, yum!";
-		if morale of Player < 0:
-			increase morale of Player by 62;
-			if morale of Player > 0, now morale of Player is 0;
-			say "After drinking something, you feel better.";
+		say "Realizing you're not thirsty right now, you return the sealed bottle to your pack.";
+		ItemGain water bottle by 1 silently; [quietly giving back the auto-destroyed item]
 
 soda is a grab object.
 the scent of soda is "Smells of sugary goodness and all the artificial flavors you crave!".
-
 Usedesc of soda is "[soda use]".
 
 to say soda use:
@@ -164,7 +175,6 @@ to say soda use:
 			say "You feel better having drunk something.";
 	sfsodadrink;
 
-understand "water" as dirty water.
 Does the player mean using the dirty water: it is unlikely.
 Does the player mean stashing the dirty water: it is unlikely.
 Does the player mean retrieving the dirty water: it is unlikely.
@@ -176,12 +186,12 @@ name	desc	weight	object
 "medkit"	"A small, white, plastic box with a red cross on it. It has all the things needed for basic medical needs on the go! Using it will restore a lot of HP, more with good intelligence."	3	medkit
 
 medkit is a grab object. It is fast. It is not temporary.
+Usedesc of medkit is "[medkit use]".
+Scent of medkit is "Smells like plastic.".
 CurrentMedkitSupplies is a number that varies. CurrentMedkitSupplies is usually 5. [uses left in the currently open medkit]
 
-Usedesc of medkit is "[medkit use]".
-
 to say medkit use:
-	if HP of Player < MaxHP of Player:
+	if HP of Player < MaxHP of Player or inafight is 1:
 		let healed be 10 + level of Player + ( ( intelligence of Player minus 10 ) divided by 2 );
 		if "Expert Medic" is listed in the feats of Player:
 			if Paula is visible:
@@ -209,23 +219,22 @@ to say medkit use:
 		say "Using your medkit, [if Paula is visible]Paula helps you [one of]treat the worst of your wounds[or]bandage up the worst of your wounds[or]spray your cuts with anesthetic[or]clean and dress your wounds[at random], making sure to kiss them to make it all better[else if Sarah is visible and SarahCured > 3]Sarah expertly helps you [one of]treat the worst of your wounds[or]bandage up the worst of your wounds[or]spray your cuts with anesthetic[or]clean and dress your wounds[at random][else][one of]you spray your cuts with anesthetic[or]you bandage your worst wounds[at random][end if]. You regain [special-style-1][healed][roman type] HP.";
 		decrease CurrentMedkitSupplies by 1;
 		if CurrentMedkitSupplies < 1:
-			say "You have used up the last of the medkit.";
+			say "[bold type]You have used up the last of the medkit.[roman type][line break]";
 			ItemLoss medkit by 1 silently;
-			now CurrentMedkitSupplies is 5;
 			if "Expert Medic" is listed in feats of Player:
-				increase CurrentMedkitSupplies by 1;
+				now CurrentMedkitSupplies is 6;
+			else:
+				now CurrentMedkitSupplies is 5;
 	else:
 		say "Since you're not hurt at all, you decide to keep your medical supplies intact for later.";
-
-Scent of medkit is "Smells like plastic.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "clean bandages"	"A roll of clean, white bandages. They come with a little rubbery strap with hooks on the ends, to fixate the bandage once applied."	1	clean bandages
 
 clean bandages is a grab object.
-
 Usedesc of clean bandages is "[clean bandages use]".
+Scent of clean bandages is "Smells like clean fabric.".
 
 to say clean bandages use:
 	if HP of Player < MaxHP of Player:
@@ -245,26 +254,22 @@ to say clean bandages use:
 		say "You're not hurt, so you decide to keep your bandages for when you actually need them.";
 		ItemGain clean bandages by 1 silently; [quietly giving back the auto-destroyed item]
 
-Scent of clean bandages is "Smells like clean fabric.".
-
 Table of Game Objects (continued)
 name	desc	weight	object
 "adhesive bandage"	"A little strip of fabric in a sterile package. Ripping it open, you can stick this little thing on a not too large wound and help it heal."	0	adhesive bandage
 
 adhesive bandage is a grab object.
 adhesive bandage is fast.
-
 Usedesc of adhesive bandage is "[adhesive bandage use]".
+Scent of adhesive bandage is "Smells like glue and clean fabric.".
 
 to say adhesive bandage use:
-	if HP of Player < MaxHP of Player:
+	if HP of Player < MaxHP of Player or inafight is 1:
 		say "Moving quickly, you apply the bandage to your wound. That should help at least a little bit with healing.";
 		PlayerHealed 5;
 	else:
 		say "You're not hurt, so you decide to keep your bandage for when you actually need it.";
 		ItemGain adhesive bandage by 1 silently; [quietly giving back the auto-destroyed item]
-
-Scent of adhesive bandage is "Smells like glue and clean fabric.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -272,18 +277,16 @@ name	desc	weight	object
 
 indigo potion is a grab object.
 indigo potion is fast.
-
 Usedesc of indigo potion is "[indigo potion use]".
+Scent of indigo potion is "Just sniffing this stuff makes your nose itch. It's got a sharp, chemical smell.".
 
 to say indigo potion use:
-	if HP of Player < MaxHP of Player:
+	if HP of Player < MaxHP of Player or inafight is 1:
 		say "You pop the cork and down the potion in a single gulp. NNNGggghhhaaAHH! Its sour taste has you pulling a pained grimace, but somehow you feel better for having drunk that stuff.";
 		PlayerHealed 20;
 	else:
 		say "You're not hurt, so you decide to keep your potion for when you actually need it.";
 		ItemGain indigo potion by 1 silently; [quietly giving back the auto-destroyed item]
-
-Scent of indigo potion is "Just sniffing this stuff makes your nose itch. It's got a sharp, chemical smell.".
 
 Section 4 - Resting
 
@@ -314,12 +317,7 @@ name	desc	weight	object
 
 tennis ball is a grab object.
 It is not temporary.
-
-Usedesc of tennis ball is "[tennis ball use]".
-
-to say tennis ball use:
-	say "Unsure what exactly to do with the tennis ball, you throw it from hand to hand a few times and bounce it off the ground.";
-
+Usedesc of tennis ball is "Unsure what exactly to do with the tennis ball, you throw it from hand to hand a few times and bounce it off the ground.[line break]".
 Scent of tennis ball is "Smells like rubber.".
 
 Table of Game Objects (continued)
@@ -328,12 +326,7 @@ name	desc	weight	object
 
 wad of cash is a grab object.
 It is not temporary.
-
-Usedesc of wad of cash is "[wad of cash use]".
-
-to say wad of cash use:
-	say "Pulling off the rubber band, you run your finger over the end of the paper money. It is a properly impressive concentration of wealth, small enough to fit into someone's pocket. If only you could buy anything with it here and now...";
-
+Usedesc of wad of cash is "Pulling off the rubber band, you run your finger over the end of the paper money. It is a properly impressive concentration of wealth, small enough to fit into someone's pocket. If only you could buy anything with it here and now...[line break]".
 Scent of wad of cash is "Smells green. Definitely green.".
 
 Table of Game Objects (continued)
@@ -342,8 +335,8 @@ name	desc	weight	object
 
 bag of wallets is a grab object.
 It is not temporary.
-
 Usedesc of bag of wallets is "[bag of wallets use]".
+Scent of bag of wallets is "Opening up the bag, you hold your nose over the opening and sniff a wild mixture of scents, given the mixed contents. Underlying it all, a faint scent of cum is always present.".
 
 to say bag of wallets use:
 	say "Digging your hand into the bag of wallets, you feel around a little and ";
@@ -360,8 +353,6 @@ to say bag of wallets use:
 		ItemGain chips by 1;
 	else: [7-8]
 		say "pull a plastic wallet covered with a prominently placed [one of]robot[or]superhero[or]pattern[or]alien[at random] printed on it. Flicking it open, you see a [one of]student ID card[or]learner's permit driver's license with a young-looking face on it[or]cute picture of a dog[or]cute picture of a cat[at random], as well as [one of]a moderate amount[or]a total absence[or]a little bit[at random] of money, and a [one of]library card[or]fitness studio member card[or]coffee club card - just one more and you get a free one[or]condom[at random]. For a little while, you try to imagine what happened to this person, then shrug and stuff the wallet back in the bag.";
-
-Scent of bag of wallets is "Opening up the bag, you hold your nose over the opening and sniff a wild mixture of scents, given the mixed contents. Underlying it all, a faint scent of cum is always present.".
 
 [
 "heuristic processor"	"A small electronic circuit. You've been told it's amazingly adaptive and can learn anything. Probably nonsense, but maybe you can find a use for it, somehow."	1	heuristic processor

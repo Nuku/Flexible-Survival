@@ -3,6 +3,8 @@ Version 2 of Underwater Zone by Hellerhound begins here.
 
 Section 1 - Gill Fruit Tree
 
+hasgills is a number that varies.
+
 Table of GameEventIDs (continued)
 Object	Name
 Gill Fruits Tree	"Gill Fruits Tree"
@@ -30,7 +32,7 @@ name	desc	weight	object
 
 gill fruit is a grab object.
 gill fruit has a Usedesc "[gill fruit use]".
-hasgills is a number that varies.
+the scent of gill fruit is "The strange fruit has a faint, fishy scent.".
 
 to say gill fruit use:
 	say "     You eagerly gulp the fruit.";
@@ -41,19 +43,15 @@ to say gill fruit use:
 	say "     You feel a tingling in your neck, and somehow understand that if you were to go underwater you could breathe.";
 	follow the turnpass rule;
 
-the scent of gill fruit is "The strange fruit has a faint, fishy scent.".
-
 Section 2 - Underwater Beach
 
-instead of going down from Open Ocean:
+check going down from Open Ocean:
 	if hasgills is 1:
 		say "     You dive into the water, making your way to the sunken ship, feeling the gills appear on your neck to allow you to breathe. It doesn't take you that long to get there thankfully, so you quite quickly arrive at the ship.";
-		move player to Sunken Ship;
 	else if FaceName of Player is listed in infections of SwimList:
 		say "     With your natural ability to breathe underwater due to your infection, you dart under and swim towards the sunken ship. Thankfully for your patience, it doesn't take you long to reach the ship.";
-		move player to Sunken Ship;
 	else:
-		say "     You shake your head furiously as you realize that you'd probably drown without any ability to breathe underwater. Perhaps you should find a way to do so before you start diving into deep waters.";
+		say "     You shake your head furiously as you realize that you'd probably drown without any ability to breathe underwater. Perhaps you should find a way to do so before you start diving into deep waters." instead;
 
 Section 3 - Sea Dragon Cum
 
@@ -67,24 +65,24 @@ the scent of sea dragon cum is "The cum smells powerfully of a male sea dragon."
 
 to say sea dragon cum use:
 	if Player is impreg_able:
-		say "     Do you wish to [link]drink the seed (Y)[as]y[end link] or [link]impregnate yourself with it (N)[as]n[end link]?";
+		say "     Do you wish to [link]drink (Y)[as]y[end link] the seed or [link]impregnate yourself (N)[as]n[end link] with it?";
 		if Player consents:
 			LineBreak;
-			if (a random chance of one in two succeeds and MaleList is not banned) or FemaleList is banned:
+			if ((Player is MalePreferred or a random chance of one in two succeeds) and MaleList is not banned) or FemaleList is banned:
 				infect "Feral Sea Dragon";
 			else:
 				infect "Feral Sea Dragoness";
 		else:
 			LineBreak;
 			say "     You rub the thick stuff into your waiting [if Player is female]cunt[else]asshole[end if], massaging it in. You moan in pleasure as you work the thick cum deep inside you.";
-			if (a random chance of one in two succeeds and MaleList is not banned) or FemaleList is banned:
+			if ((Player is MalePreferred or a random chance of one in two succeeds) and MaleList is not banned) or FemaleList is banned:
 				infect "Feral Sea Dragon";
 				impregnate with "Feral Sea Dragon";
 			else:
 				infect "Feral Sea Dragoness";
 				impregnate with "Feral Sea Dragoness";
 	else:
-		if (a random chance of one in two succeeds and MaleList is not banned) or FemaleList is banned:
+		if ((Player is MalePreferred or a random chance of one in two succeeds) and MaleList is not banned) or FemaleList is banned:
 			infect "Feral Sea Dragon";
 		else:
 			infect "Feral Sea Dragoness";

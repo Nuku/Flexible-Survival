@@ -18,8 +18,7 @@ to say Yinglets wins:
 
 to say Yinglets loses:
 	say "     The trio of yinglets collapse in haphazard shapes. You toss one that lands on his back and lies there with his limbs in the air, another tumbles over and folds in half, getting a face full of his own butt. The last noodle lands face-first and bends over backwards. If they weren't the most flexible creatures you'd ever seen, you might've worried that you went a little overboard. As they recover though, they immediately surrender and beg for mercy.";
-	LineBreak;
-	say "[YingletsSexMenu]";
+	say "[line break][YingletsSexMenu]";
 
 to say YingletsSexMenu:
 	say "     [bold type]What do you do with the little troublemakers?[roman type][line break]";
@@ -29,7 +28,7 @@ to say YingletsSexMenu:
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Be fucked by them";
-		now sortorder entry is 0;
+		now sortorder entry is 1;
 		now description entry is "Make it up to the poor guys";
 	[]
 	if Player is male:
@@ -78,19 +77,13 @@ to say YingletsFuck1:
 
 to say YingletsFuck2:
 	say "     You feel these little upstarts need a little lesson, and with your own lust demanding attention, you're the perfect person to teach it. You give the 'alpha' a shove onto his back and squat down over him. 'Please, forgive, forgiiive!' He stops fearing for his life when you grab his head and shove his muzzle up against the tip of your cock. He understands his place now... He timidly opens his maw and starts lashing his tongue against your tip, which gives you opportunity to shove some of your shaft inside. He squeaks, but accepts his fate. With their leader submitting so fully to you, the other yinglets are at your beck and call. You call out to them and insist they get to work. They scurry up next to you, eager to avoid your wrath. They stand there looking like idiots, not exactly sure what to do. You roll your eyes and grab them each by the head.";
-	say "     You pose them on either side of their leader, muzzles pushed against your groin. They figure it out pretty quick after that... Soon, you've got three tongues lapping over your shaft and balls. While they're certainly unpracticed and lack any sort of technique, it feels wonderful and you find yourself enjoying it immensely. ";
 	if Cock Length of Player > 24:
-		say "You're far too big to ever fit yourself in one of these creatures, even if they're hella-stretchy. You settle for the next best thing though, and let those tongues and maws lick and suckle you to completion. You give them a sturdy thrust, cock slipping just a bit further into the maw on your tip before blasting it with a heavy dose of cum. Luckily these things seem designed to swallow their food mostly whole, so the one at the end manages to keep up with the flow. ";
+		say "     You pose them on either side of their leader, muzzles pushed against your groin. They figure it out pretty quick after that... Soon, you've got three tongues lapping over your shaft and balls. While they're certainly unpracticed and lack any sort of technique, it feels wonderful and you find yourself enjoying it immensely. You're far too big to ever fit yourself in one of these creatures, even if they're hella-stretchy. You settle for the next best thing though, and let those tongues and maws lick and suckle you to completion. You give them a sturdy thrust, cock slipping just a bit further into the maw on your tip before blasting it with a heavy dose of cum. Luckily these things seem designed to swallow their food mostly whole, so the one at the end manages to keep up with the flow. You pull out and unload the rest across the three, as a final goodbye to your would-be assailants. Despite having been on the receiving end, the trio seem to have at least found some relief. Maybe they enjoyed getting used by a stronger male. You warn them about attacking strangers in the future, and take your leave.";
 	else:
-		say "Before you let them get too carried away with licking and suckling your malehood, you decide to proceed with the next part of the punishment. You give them all a shove away from your length. [if Cock Length of Player > 12]You pin the largest yinglet to the ground with one hand and line up your sizable member with his. Given your size, he'll probably be a much better fit than his companions[else]You grab one of the smaller yinglets and pin him to the ground beneath you. His smaller size will make for a much tighter fit for you[end if].";
-		WaitLineBreak;
-		say "     You bully his smaller member back into its genital slit, pushing your superior length in that labia-like opening. His inner walls are wet and soft, just like a female, with the added bonus of his hardened shaft frotting against yours inside. It's a lovely feeling, and you can't help but thrust into it again and again. All too soon, you feel your climax upon you. You moan aloud and give one final thrust, pumping your load into that tight space. ";
-	say "You pull out and unload the rest across the three, as a final goodbye to your would-be assailants. Despite having been on the receiving end, the trio seem to have at least found some relief. Maybe they enjoyed getting used by a stronger male. You warn them about attacking strangers in the future, and take your leave.";
+		say "     You pose them on either side of their leader, muzzles pushed against your groin. They figure it out pretty quick after that... Soon, you've got three tongues lapping over your shaft and balls. While they're certainly unpracticed and lack any sort of technique, it feels wonderful and you find yourself enjoying it immensely. Before you let them get too carried away with licking and suckling your malehood, you decide to proceed with the next part of the punishment. You give them all a shove away from your length. [if Cock Length of Player > 12]You pin the largest yinglet to the ground with one hand and line up your sizable member with his. Given your size, he'll probably be a much better fit than his companions[else]You grab one of the smaller yinglets and pin him to the ground beneath you. His smaller size will make for a much tighter fit for you[end if].";
+		say "     You bully his smaller member back into its genital slit, pushing your superior length in that labia-like opening. His inner walls are wet and soft, just like a female, with the added bonus of his hardened shaft frotting against yours inside. It's a lovely feeling, and you can't help but thrust into it again and again. All too soon, you feel your climax upon you. You moan aloud and give one final thrust, pumping your load into that tight space. You pull out and unload the rest across the three, as a final goodbye to your would-be assailants. Despite having been on the receiving end, the trio seem to have at least found some relief. Maybe they enjoyed getting used by a stronger male. You warn them about attacking strangers in the future, and take your leave.";
 	if Cock Length of Player > 24:
 		CreatureSexAftermath "Yinglet" receives "OralCock" from "Player";
-
-to say YingletsDesc:
-	say "     You come to a stop and listen carefully. Something tells you you're not alone... and sure enough, you hear the pitter-patter of little feet as three small rodent-like creatures jump out at you! 'Haha, you have fallen for our soclever ambush! Surrender, or get stabby-stabbed!";
 
 Section 2 - Creature Insertion
 
@@ -124,7 +117,7 @@ When Play begins:
 	now attack entry is "[one of]One of the creatures takes slashes at you from a few feet away, and you wonder how he plans on landing a hit with those little arms until one of his friends sticks you from behind![Or]The yinglet mob rushes you. You manage to knock some of them away, but one gets in a lucky hit![Or]The yinglets pounce on you all at once! They latch on and start biting and scratching. You throw them off, but not before they manage to deal some damage.[at random]";
 	now defeated entry is "[Yinglets loses]";
 	now victory entry is "[Yinglets wins]";
-	now desc entry is "[YingletsDesc]";
+	now desc entry is "     You come to a stop and listen carefully. Something tells you you're not alone... and sure enough, you hear the pitter-patter of little feet as three small rodent-like creatures jump out at you! 'Haha, you have fallen for our soclever ambush! Surrender, or get stabby-stabbed![line break]";
 	now face entry is "pointed and rodent-like, but with ears resembling that of a bat. You only have four needle-like teeth in the back of your mouth and a single, over-sized tooth at the front. Your tongue within is thin and birdlike, and your eyes are large and round. Little whisker-like feelers sprout from your brow. Your head is supported on a long, flexible neck"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "very curvy... but less like an hourglass, and more like a noodle. Rather than stand up straight, your body is slouched forward like a raptor, relying on your tail for balance. Your arms are an almost comical mix of super-thin and extra-long. The majority of muscle and fat rests in your shortened upper arms, which very quickly give way to your stick-like forearms. The narrow, clawed digits at the end are surprisingly dexterous, and yet somehow a little clumsy. Your legs feel less like legs, and more like a set of stilts. Your thighs are the thickest where all your legs['] springy muscle resides. Past that point, your legs are very thin, almost stick-like, ending in hands identical to the ones on your arms. Between your legs lies a little slit that houses your genitals"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "fluffy-furred"; [Looking at yourself, your body is covered in (your text) skin.]
@@ -270,12 +263,11 @@ name	desc	weight	object
 
 barnacle encrusted gem is a grab object.
 Usedesc of barnacle encrusted gem is "[EncrustedGemUsing]".
+Scent of barnacle encrusted gem is "The small object smells vaguely like the sea, or more specifically, saltwater. It's musty, but not all that unpleasant.".
 
 to say EncrustedGemUsing:
 	say "     You hold out the gem and examine it closely. It's so shiny, catching the light in just the right way. The liquid inside seems to swirl about, adding to how pretty it is. Suddenly, it shatters. At first you're confused, wondering how it broke open so easy, but it's short lived when the fluid splashes your face. You try to wipe it off, but it seems to be soaking into your skin!";
 	infect "Yinglet";
-
-Scent of barnacle encrusted gem is "The small object smells vaguely like the sea, or more specifically, saltwater. It's musty, but not all that unpleasant.".
 
 Section 4 - Endings
 

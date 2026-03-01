@@ -95,26 +95,18 @@ Section 3 - Plurals
 to say smn: [stick an s on if multiple male - noun]
 	if Cock Count of Player > 1:
 		say "s";
-	else:
-		say "";
 
 to say sfn: [stick an s on if multiple female - noun]
 	if Cunt Count of Player > 1:
 		say "s";
-	else:
-		say "";
 
 to say esmn: [stick an es on if multiple male - noun]
 	if Cock Count of Player > 1:
 		say "es";
-	else:
-		say "";
 
 to say esfn: [stick an es on if multiple female - noun]
 	if Cunt Count of Player > 1:
 		say "es";
-	else:
-		say "";
 
 to say ymn: [sticks y/ies on if multiple male - noun]
 	if Cock Count of Player > 1:
@@ -129,27 +121,19 @@ to say yfn: [sticks y/ies on if multiple female - noun]
 		say "y";
 
 to say smv: [stick an s on if single male - verb]
-	if Cock Count of Player > 1:
-		say "";
-	else:
+	if Cock Count of Player < 2:
 		say "s";
 
 to say sfv: [stick an s on if single female - verb]
-	if Cunt Count of Player > 1:
-		say "";
-	else:
+	if Cunt Count of Player < 2:
 		say "s";
 
 to say esmv: [stick an es on if single male - verb]
-	if Cock Count of Player > 1:
-		say "";
-	else:
+	if Cock Count of Player < 2:
 		say "es";
 
 to say esfv: [stick an es on if single female - verb]
-	if Cunt Count of Player > 1:
-		say "";
-	else:
+	if Cunt Count of Player < 2:
 		say "es";
 
 to say ymv: [sticks y/ies on if single male - verb]
@@ -346,13 +330,7 @@ to setmongender (x - a number):
 		neutpronouns;
 
 to say mongendernum (x - a number):
-	now mongender of currentmonster is x;
-	if currentmonster is malepro:
-		malepronouns;
-	else if currentmonster is femalepro:
-		femalepronouns;
-	else:
-		neutpronouns;
+	setmongender x;
 
 Definition: currentmonster is malepro: [creature referred to as male]
 	if mongender of currentmonster is 1, yes;
@@ -575,12 +553,12 @@ To SetNeutralPronouns for (x - a person):
 	now ObjectPro of x is "them";
 	now PosAdj of x is "their";
 	now PosPro of x is "theirs";
-	now ReflexPro of x is "themselves";
+	now ReflexPro of x is "themself";
 	now SubjectProCap of x is "They";
 	now ObjectProCap of x is "Them";
 	now PosAdjCap of x is "Their";
 	now PosProCap of x is "Theirs";
-	now ReflexProCap of x is "Themselves";
+	now ReflexProCap of x is "Themself";
 	now PronounSet of x is "Neutral";
 
 This is the SetPlayerPronouns rule:

@@ -41,7 +41,6 @@ to say ResolveEvent Snake Charmer:
 	else if Resolution of Snake Charmer is 1:
 		say "     Wandering through the zoo once again, you find your pace slowing to a crawl until you stop entirely. Momentarily confused, you see a vision of a hypnotic gaze in your mind, and realization floods through you. Turning on the spot, you find your eyes once again settling upon serpentine scales. The naga from before, the one who'd locked eyes with you, is staring at you through the bars of a nearby cage. They are coiled up with their arms resting upon their tail, staring at you as you stand there in confusion. As you notice them, their tongue flicks out of their mouth, waggling in the air for a moment before disappearing back within. You're nigh-instantly enraptured by their eyes, and at this close distance - only a few feet between you and the bars - you're able to note their coloration. A deep, rich emerald, almost glowing in your mind, embedding themselves into your senses.";
 		say "     The door to the cage is right in front of you and you idly think that perhaps this situation had been orchestrated by the naga. You're unable to think on the matter as a tingling suggestion fills your thoughts. 'Open the cage'. [bold type]You get the feeling that opening the cage would be a good idea, but with those emerald eyes staring so deeply into yours, you can't really be sure if that is true or not.[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Open the cage. You should open the cage.";
 		say "     ([link]N[as]n[end link]) - Don't open the cage. Walk away before you do.";
 		if Player consents:
@@ -60,13 +59,11 @@ to say ResolveEvent Snake Charmer:
 	else if Resolution of Snake Charmer is 3:
 		say "     Once again you find yourself wandering in the zoo, though this time with a creeping sense of anticipation. Your instincts prove to be correct when the sound of scales sliding rapidly across the ground comes from behind you. Before you can react, your [bodytype of player] body is wrapped up in strong serpentine coils, trapping your arms against your side and preventing you from mounting any sort of resistance. 'No running away this time, little prey,' the slight hiss of the naga's voice speaks directly into your ear. 'Though perhaps that title isn't quite accurate.' Moving around in front of you, you're once again face-to-face with the hypnotic naga, closer than you'd ever been before. You try to avert your eyes, but those emerald orbs are once again taking most of your focus. 'You're the first I've met able to resist my gaze.' The serpent approaches, tongue flicking against your face. 'And as such, I believe you worthy to be my mate.'";
 		say "     You feel the grip of the naga's coils tighten for a bit, becoming almost painfully tight, before suddenly relaxing. The naga moves his face a bit away from yours, giving you room to free your arms from his coils. As well as physical release, your mind also seems to be freed from the naga's hypnotic influence - for the moment, allowing you to think freely. It's clear the Naga finds your resistance attractive, enough to desire you as more than just prey. The question then becomes if you're willing to reciprocate that desire, or reject him. [bold type]You're certain that you won't see him again if you reject him.[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Accept his advances, and everything that entails.";
 		say "     ([link]N[as]n[end link]) - Reject his advances; you're not interested.";
 		if Player consents:
 			LineBreak;
 			say "     The naga's face develops into a smile, genuine yet somewhat predatory. It would seem the naga is pleased that you've accepted his advances. The naga approaches you once again, looking deep into your eyes, 'Then come, my mate, and show me your acceptance.'";
-			LineBreak;
 			NagaSex;
 			now Resolution of Snake Charmer is 4;
 		else:
@@ -95,20 +92,18 @@ Sarea of Naga Mate is "Zoo".
 
 to say ResolveEvent Naga Mate:
 	say "     'Hello, my mate,' you hear a slightly hissing voice speak from behind you. Turning to look, you smile slightly as you see the naga approaching. 'It's been a short while.' You nod, responding that it has as he slithers up, letting his coils gather around you as he circles you, before soon settling in front of you. 'So, my mate, now that we're together once again, shall we show each other that we are still mates?'";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - It's time to mate.";
 	say "     ([link]N[as]n[end link]) - Not right now.";
 	if Player consents:
 		LineBreak;
 		say "     'Well, my mate. After our first session together, I'm curious as to what you have in mind this time.' Letting you decide once again, he eagerly waits.";
-		LineBreak;
 		NagaSex;
 	else:
 		LineBreak;
 		say "     'I understand.' The naga nods, starting to pull his coils out and away from you. 'The world is cruel at the moment. Dangerous. Stay safe, my mate.' With that said, he gently slithers past you, rubbing your shoulder as he passes before disappearing whence he came into the zoo.";
 
 to NagaSex:
-	say "     The naga calls on you to show him you are his mate. How will you do so?";
+	say "[line break]     The naga calls on you to show him you are his mate. How will you do so?";
 	[Define a list of choices to display to the player]
 	let NagaSex_Choices be a list of text;
 	if player is female:

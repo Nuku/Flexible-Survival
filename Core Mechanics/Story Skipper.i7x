@@ -164,7 +164,7 @@ understand "TraitRestoration" as TraitRestoration.
 carry out TraitRestoration:
 	TraitRestore;
 
-Section 1 - Functions
+Chapter 2 - Functions
 
 to EventSave:
 	say "Saving Events...";
@@ -987,7 +987,7 @@ to TraitRestore:
 		say "Restoring Traits...";
 		read File of TraitSave into the Table of GameTraits;
 		if companionList of Player is not empty, truncate companionList of Player to 0 entries;
-		repeat with y running through persons:[cleaning out the old data]
+		repeat with y running through persons: [cleaning out the old data]
 			if Traits of y is not empty, truncate Traits of y to 0 entries;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTraits:
 			choose row x in the Table of GameTraits;
@@ -1634,8 +1634,7 @@ to BanListRestore:
 	say "Restoring Ban Lists...";
 	if clearnomore is 0, clear the screen;
 	if "Imported" is not listed in WardList of Player or "Imported" is not listed in BanList of Player: [exported from older version]
-		LineBreak;
-		say "     Content banning and warding information wasn't found in the imported data. You can choose to pick new restrictions to remove enemies and events from the game. [bold type]Note that previously banned events have remained banned after import and will be cumulative with any bans you choose now.[roman type][line break]";
+		say "[line break]     Content banning and warding information wasn't found in the imported data. You can choose to pick new restrictions to remove enemies and events from the game. [bold type]Note that previously banned events have remained banned after import and will be cumulative with any bans you choose now.[roman type][line break]";
 		say "     [bold type]Pick content restrictions?[roman type][line break]";
 		if Player consents:
 			if clearnomore is 0, clear the screen;
@@ -1658,7 +1657,7 @@ to RunPostImportRules:
 	if clearnomore is 0, clear the screen;
 	follow the postimport rules;
 
-Section 2 - Trixie
+Chapter 3 - Trixie
 
 ProgressExport is an action applying to nothing.
 understand "export progress" as ProgressExport.
@@ -1667,8 +1666,7 @@ Carry out ProgressExport:
 	say "[ProgressionExport]";
 
 To say ProgressionExport:
-	LineBreak;
-	say "     [bold type]Do you really want to start the export process?[roman type][line break]";
+	say "[line break]     [bold type]Do you really want to start the export process?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure, I'll wait a minute (or five) to write files containing my progress!";
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
 	if Player consents:
@@ -1697,8 +1695,7 @@ ProgressImport is an action applying to nothing.
 understand "Import Progress" as ProgressImport.
 
 Carry out ProgressImport:
-	LineBreak;
-	say "     [bold type]Do you really want to start the import process?[roman type][line break]";
+	say "[line break]     [bold type]Do you really want to start the import process?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure, I'll wait a minute (or ten) to reclaim my progress!";
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
 	if Player consents:
@@ -1729,16 +1726,13 @@ object	name
 Trixie	"Trixie"
 
 Trixie is a person. Trixie is in Grey Abbey Library.
-
 The scent of Trixie is "     Trixie smells of broken universes and rewritten fate. How anything can smell like that or how you can even know that smell disturbs you to your very core.".
-
 Description of Trixie is "[Trixiedesc]".
+Conversation of Trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [link]Import Progress[end link]. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm [']Out of Character['], so you really don't see me. Confused yet? Good!" }.
 
 to say Trixiedesc:
 	say "     Look, it's Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Support us at: https://patreon.com/FS'[line break]";
 	say "     Trixie's got a button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it, and a second one that says 'Check out the [link]artwork credits[end link]'. Hmmm.";
 	say "     She's also got a ballcap on that says 'Using [link]Export Progress[end link] will save your progress for transfer to a new game version. [link]Import Progress[end link] should restore everything in the new version.' That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
-
-Conversation of Trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [link]Import Progress[end link]. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm [']Out of Character['], so you really don't see me. Confused yet? Good!" }.
 
 Story Skipper ends here.

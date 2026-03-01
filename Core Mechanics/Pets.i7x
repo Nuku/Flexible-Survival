@@ -178,11 +178,10 @@ Carry out CountPlayerPets:
 				say " [set link hyperindex][Pet][terminate link]";
 		else:
 			say " [PetList]";
-	LineBreak;
 	if companionList of Player is empty:
-		say "Active Ally: None";
+		say "[line break]Active Ally: None";
 	else:
-		say "Active [if number of entries in CompanionList of Player is 1]Ally[else]Allies[end if]:";
+		say "[line break]Active [if number of entries in CompanionList of Player is 1]Ally[else]Allies[end if]:";
 		repeat with z running through CompanionList of Player:
 			say " [link][z][as]look [z][end link]";
 	say "[line break]Commands:[line break]";

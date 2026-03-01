@@ -3,7 +3,7 @@ Version 1 of Velos by Blue Bishop begins here.
 [Version 1.1 - Musings on Beta Fang added by Prometheus]
 "Adds an opinionated serpent to the Flexible Survival game"
 
-Section 1 - Event
+Part 1 - Event
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -31,19 +31,18 @@ to say ResolveEvent Strange Serpent:
 			WaitLineBreak;
 			if anallevel is 1:
 				say "     'Hm... Right...' He seems to stop briefly for a moment. 'There's something about you that suggests I'd get into all sorts of trouble if I beat around the bush with this... Alright, no games, then. I need your ass, in just about the worst way imaginable.'";
-				say "     His particular request is clearly incongruous with your general desires. [link]Make him the exception (Y)[as]y[end link] or [link]rightfully decline (N)[as]n[end link]?";
+				say "     His particular request is clearly incongruous with your general desires. Make him the [link]exception (Y)[as]y[end link] or rightfully [link]decline (N)[as]n[end link]?";
 			else:
 				say "     'Oh, but what would be the fun in that, I really must ask?' He's clearly intent on dancing around the topic, coaxing you to try and get a more appropriate answer. You ask if he means your pack, or under your clothing. 'Oh, something like that wouldn't nearly be as uncomfortable as what I require, but what I require more than that is your consent; I am nothing if not polite.'";
-				say "     You're not going to get a straight answer out of this creature, you could [link]agree to his request (Y)[as]y[end link] or [link]decline it outright (N)[as]n[end link].";
+				say "     You're not going to get a straight answer out of this creature, you could [link]agree (Y)[as]y[end link] to his request or [link]decline (N)[as]n[end link] it outright.";
 			if Player consents:
 				LineBreak;
 				now lastfuck of Velos is turns;
 				say "     Deciding to agree in taking him with you, he seems a little taken off guard by this.";
 				say "     'Oh, huh, what a pleasant surprise! Well then, your job is quite simple; could you turn around for me? Yeah, like that, facing the other wall...' A bit unsure of what he exactly plans to do, but you slowly oblige. You're not sure what you're supposed to be waiting for before his plans are made blatantly obvious.";
 				WaitLineBreak;
-				say "     Like a bolt of lightning, you're struck with the blindingly intense sensation of the serpentine creature worming its way past any attire that might obstruct him, his strangely slicked head driving past your anal ring with surprisingly little resistance, the rest of him soon following. ";
 				If scalevalue of Player < 3:
-					say "Your bowels, on the other hand, are another matter altogether regarding these turn of events. There's quite a lot of him, especially when you consider your diminutive size, and your belly bloats almost immediately to abide his slippery frame.";
+					say "     Like a bolt of lightning, you're struck with the blindingly intense sensation of the serpentine creature worming its way past any attire that might obstruct him, his strangely slicked head driving past your anal ring with surprisingly little resistance, the rest of him soon following. Your bowels, on the other hand, are another matter altogether regarding these turn of events. There's quite a lot of him, especially when you consider your diminutive size, and your belly bloats almost immediately to abide his slippery frame.";
 					if insectlarva is true:
 						say "     Even as you fully engulf the serpent, his endeavors fail to relent, as it's made apparent that some manner of conflict is waged within you. Soon, you're wracked with the sensation of another mass passing through your anal ring, soon made apparent to be your previous parasite, who - after leaving your body - is relegated to rolling around in a confused daze before retreating from the sewers. It is a pale creature, looking much like a bloated, insect larva with several tiny legs and phallic back end[if larvaegg is 1]. Its expulsion is followed by that of the unfertilized insect eggs[end if]. You'd imagine that its kin will find and retrieve the thing, no doubt to be inflicted upon another.";
 						WaitLineBreak;
@@ -54,7 +53,7 @@ to say ResolveEvent Strange Serpent:
 						say "     Bulge twitching as you must contend with his irreverent movements, you're forced to elicit a weakened moan as you feel his head retreat from the hole it once invaded, pulling just enough of itself out that you might see him before you.";
 					say "     'Quite the tight fit, if I do say so myself! But I like to think that cozy is often an attribute falsely regarded as poor.' He seems rather pleased with himself, try pulling him out?";
 				else if scalevalue of Player > 3:
-					say "Struck with twisted pleasure as his form floods your bowels, and though you're more than large enough to handle him that doesn't quite change the fact that he's got a fair amount of himself to put into you, forcing you onto your knees and, inevitably, to roll over onto your back.";
+					say "     Like a bolt of lightning, you're struck with the blindingly intense sensation of the serpentine creature worming its way past any attire that might obstruct him, his strangely slicked head driving past your anal ring with surprisingly little resistance, the rest of him soon following. Struck with twisted pleasure as his form floods your bowels, and though you're more than large enough to handle him that doesn't quite change the fact that he's got a fair amount of himself to put into you, forcing you onto your knees and, inevitably, to roll over onto your back.";
 					if insectlarva is true:
 						say "     Even as you fully engulf the serpent, his endeavors fail to relent, as it's made apparent that some manner of conflict is waged within you. Soon, you're wracked with the sensation of another mass passing through your anal ring, soon made apparent to be your previous parasite, who - after leaving your body - is relegated to rolling around in a confused daze before retreating from the sewers. It is a pale creature, looking much like a bloated, insect larva with several tiny legs and phallic back end[if larvaegg is 1]. Its expulsion is followed by that of the unfertilized insect eggs[end if]. You'd imagine that its kin will find and retrieve the thing, no doubt to be inflicted upon another.";
 						WaitLineBreak;
@@ -63,7 +62,7 @@ to say ResolveEvent Strange Serpent:
 						say "     Weakly prodding your slightly bloated belly, now having fully engulfed the serpent, you're met with the strong pangs of his irreverent movement. He would only hide in his dwelling briefly before you can see the outline of his head emerge from your hole, exposing him just enough to continue the dialogue.";
 					say "     'Oh, quite the roomy fare, I'm surprised if I even phase you in the slightest! I certainly hope I don't get lost in here...' He seems rather pleased with himself, try pulling him out?";
 				else:
-					say "Taken aback by these sudden turn of events, you can find that you can tolerate him flooding your bowels only momentarily. There's quite a lot of him, and you're forced to watch as your belly bloats further and further to abide his slippery frame.";
+					say "     Like a bolt of lightning, you're struck with the blindingly intense sensation of the serpentine creature worming its way past any attire that might obstruct him, his strangely slicked head driving past your anal ring with surprisingly little resistance, the rest of him soon following. Taken aback by these sudden turn of events, you can find that you can tolerate him flooding your bowels only momentarily. There's quite a lot of him, and you're forced to watch as your belly bloats further and further to abide his slippery frame.";
 					if insectlarva is true:
 						say "     Even as you fully engulf the serpent, his endeavors fail to relent, as it's made apparent that some manner of conflict is waged within you. Soon, you're wracked with the sensation of another mass passing through your anal ring, soon made apparent to be your previous parasite, who - after leaving your body - is relegated to rolling around in a confused daze before retreating from the sewers. It is a pale creature, looking much like a bloated, insect larva with several tiny legs and phallic back end[if larvaegg is 1]. Its expulsion is followed by that of the unfertilized insect eggs[end if]. You'd imagine that its kin will find and retrieve the thing, no doubt to be inflicted upon another.";
 						WaitLineBreak;
@@ -72,7 +71,7 @@ to say ResolveEvent Strange Serpent:
 						say "     Driven to your knees by this wracking sensation, its raising intensity inevitably relents when he's forcibly trapped the whole of himself inside you. Even finished as he is now it's a struggle for clarity, weighty and distended torso strained to abide its occupancy. In due time, you can compel yourself to your feet, your infection twisting these circumstances in such a way that you can move reasonably in spite of these circumstances.";
 						WaitLineBreak;
 						say "     Bulge twitching with his irreverent movements, you're forced to elicit a weakened moan as you feel his head retreat from the hole it once invaded, pulling just enough of itself out that you might see him once more before you.";
-					say "     'Doubtlessly you play victim to this praise all the time, but it'd be rude of me to not highlight the quality of this dwelling! What's your secret?' He seems rather pleased with himself, try pulling him out?";
+					say "     'Doubtlessly you play victim to this praise all the time, but it'd be rude of me to not highlight the quality of this dwelling! What's your secret?' He seems rather pleased with himself; try pulling him out?";
 				if insectlarva is true:			[freed from parasite]
 					now insectlarva is false;
 					now larvacounter is 0;
@@ -107,7 +106,14 @@ to say ResolveEvent Strange Serpent:
 				now Resolution of Strange Serpent is 3; [Velos rejected]
 			now Strange Serpent is resolved;
 
-Section 2 - Velos the AssSSSSssserpent
+Part 2 - Velos the AssSSSSssserpent
+
+velospostmusings is a list of numbers that varies. velospostmusings is usually {}.
+velosfleepenalty is a truth state that varies. velosfleepenalty is usually false.
+velossavedtalk is a truth state that varies. velossavedtalk is usually false.
+velosparasitetalk is a truth state that varies. velosparasitetalk is usually false.
+velosapology is a truth state that varies. velosapology is usually false.
+velosheadstalk is a truth state that varies. velosheadstalk is usually false.
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -150,17 +156,9 @@ TwistedCapacity of Velos is false. [Twisted Characters can take any penetration,
 Sterile of Velos is true. [steriles can't knock people up]
 MainInfection of Velos is "".
 Description of Velos is "[velosdesc]".
-Conversation of Velos is { "Snipe." }.
-velospostmusings is a list of numbers that varies. velospostmusings is usually {}.
-[vpostmusenum is a number that varies.]
-velosfleepenalty is a truth state that varies. velosfleepenalty is usually false.
-velossavedtalk is a truth state that varies. velossavedtalk is usually false.
-velosparasitetalk is a truth state that varies. velosparasitetalk is usually false.
-velosapology is a truth state that varies. velosapology is usually false.
-velosheadstalk is a truth state that varies. velosheadstalk is usually false.
-
+[Conversation of Velos is { "Snipe." }.]
+fuckscene of Velos is "     [one of]I don't think you two have that kind of relationship at this point.[or]Isn't that what he's doing to you already?[or]I don't think you two have that kind of relationship at this point.[or]Isn't that what he's doing to you already?[or]You try to bring this topic up to him, but he doesn't seem even remotely interested, in spite his peculiar circumstances.[stopping][line break]".
 the scent of Velos is "     [one of]Velos, thankfully, has little odor about him[or]The strange serpent doesn't have much of a scent, surprisingly[or]Velos, thankfully, has little odor about him[or]The strange serpent doesn't have much of a scent, surprisingly[or]He smells slightly of discomfort, incited by you always sniffing at him[stopping].".
-
 linkaction of Velos is "Possible Actions: [link]talk[as]talk Velos[end link], [link]smell[as]smell Velos[end link], [link]fuck[as]fuck Velos[end link], [link]muse[as]muselist[end link][line break]".
 
 to say velosdesc:
@@ -168,7 +166,7 @@ to say velosdesc:
 	say "     A pure, pearl white in color, his form seems scaled, though you're not sure if the scales are false, as you've never seen him shed them, to say nothing of the difficulty in determining its proper texture, given his perpetually slick frame. Thankfully, the odorless lubricant is not overly abundant, and only becomes a slight mess around where it accumulates - particularly, your anal ring.";
 	say "     He generally doesn't like being touched all that much, but your occasional prodding does seem to offer a reciprocal sensation onto you, inferring that your senses are tied - at least at the base level. This would also infer that any harm done to him would be received in kind, and it's unclear if it works both ways; that he feels what you feel.";
 	if level of Velos > 0:
-		say "[line break][italic type]Demeanor-wise, he [if level of Velos is 1]doesn't seem to regard you all that well, and is otherwise a little belligerent towards you[else if level of Velos is 2]seems to regard you fairly well, and is a bit less perturbed by having himself be summoned before you[else if level of Velos is 3]seems to put you in high regard, more than happy to be on the receiving end of your attention[end if].[roman type][line break]";
+		say "[line break][italic type]Demeanor-wise, he [if level of Velos < 2]doesn't seem to regard you all that well, and is otherwise a little belligerent towards you[else if level of Velos is 2]seems to regard you fairly well, and is a bit less perturbed by having himself be summoned before you[else]seems to put you in high regard, more than happy to be on the receiving end of your attention[end if].[roman type][line break]";
 
 Instead of conversing the Velos:
 	if Odd Green Patches is not resolved and Odd Green Patches is inactive:
@@ -176,7 +174,6 @@ Instead of conversing the Velos:
 	if player is in Grey Abbey Garden:
 		if "Inside Player" is not listed in traits of Velos:
 			say "     You look at Velos's improvised home in the library's garden and consider whether you should take him in you. Almost as if sensing your presence once you approach the rather odd-looking plant, his head pops out to look at you. 'Ah, so my bigger portable home has arrived. Were you interested in taking me for a stroll? How considerate of you...!' He seems to want to come back to you, but that decision is ultimately yours.";
-			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Allow him to wiggle his way into your ass.";
 			say "     ([link]N[as]n[end link]) - Tell him you simply came to check on him.";
 			if Player consents:
@@ -190,8 +187,7 @@ Instead of conversing the Velos:
 				LineBreak;
 				say "     You have no plans on taking him in you yet, and simply decide to ask how he is doing. 'Not too shabby, I'd say. This isn't as exciting, but it isn't uncomfortable. Still, I much prefer to be in something that moves around and does things, has thoughts and... You get what I mean.' Despite his loneliness, he seems alright. Perhaps sometime you should take him on a stroll.";
 		else:
-			say "     You look at Velos's improvised home in the library's garden and consider whether you should ask him to stay here for a while. However, almost as if he could sense your thoughts, you hear his little voice speaking to you before you can even utter a word. 'Are you wanting me to stay here? All you have to do is ask, I don't bite... Often,' he says, awaiting a response from you.";
-			LineBreak;
+			say "     You look at Velos's improvised home in the library's garden and consider whether you should ask him to stay here for a while. However, almost as if he could sense your thoughts, you hear his little voice speaking to you before you can even utter a word. 'Are you wanting me to stay here? All you have to do is ask, I don't bite... often,' he says, awaiting a response from you.";
 			say "     ([link]Y[as]y[end link]) - Ask him to stay here.";
 			say "     ([link]N[as]n[end link]) - No, you do not want him out. Tell him you are just passing by.";
 			if Player consents:
@@ -206,7 +202,7 @@ Instead of conversing the Velos:
 				LineBreak;
 				say "     You tell him it is nothing, as you are simply walking by the garden.";
 	else:
-		if FaceName of Player is "Cerberus" or skrp > 0 and velosheadstalk is false:		[multiple heads]
+		if (FaceName of Player is "Cerberus" or skrp > 0) and velosheadstalk is false:		[multiple heads]
 			add -3 to velospostmusings, if absent;
 		else if -3 is listed in velospostmusings:		[remove if unused and doesn't apply]
 			remove -3 from velospostmusings;
@@ -221,17 +217,14 @@ Instead of conversing the Velos:
 			postmuse entry 1 of velospostmusings;
 		else if a random chance of 2 in 5 succeeds:
 			say "     '[one of][if location of Player is Volcanic Cave]Ughh... it's terribly hot in here!'[else if location of Player is Volcanic Crater]Now the temperature's almost bearable, but these wretched fumes are getting to me!'[else if location of Player is Slut Rat Den]With you to support me, this place is almost comfortable. But now we're back into the sewers again. How is that progress?'[else]It's right freezing out here!'[end if][or]I'm feeling queasy already...'[or]What's that over there? Bring me a little closer... Yeah, never mind, it was nothing. My apologies.'[or]You're probably curious as to how I can anchor myself within you and yet still hang out like this... a magician never shares his secrets!'[or]I sometimes long to eat on my own again...'[or]Oh, I think I see a quarter on the ground! Though I wager it'll be of little use.'[or]Wait... Did you hear something? Hm... Probably nothing.'[or]Why is it that I sometimes feel like I'm the only sane person here?'[at random]";
-		else if level of Velos is 1:
+		else if level of Velos < 2:
 			say "     '[one of]Hope you're fond of playing tour guide, because I would very much prefer you take me around the place, perhaps letting me muse over other people - assuming they don't flee in terror, of course.'[or]Don't give me that look. What do you want?'[or]I assure you, if you're just going to stare at me, I'm just going to go right back in.'[or]What?'[or]No, I won't go away, stop asking.'[or]If you gaze long into an abyss, the abyss will gaze back into you.'[or]You have the worst eating habits. Do you know that?'[or]Try not to get raped too much; it's very disconcerting for me when it happens!'[or]Can I go back in now?'[or]I'm sorry, I don't like this arrangement as much as you do.'[or]You're stuck with me, so you'll just have to learn to deal with me.'[at random]";
 		else if level of Velos is 2:
 			say "     '[one of]Things look like they're rubbish all over. What are your plans?'[or]I'm fairly certain things couldn't get any worse around here.'[or]What do you wager is taking the military so long?'[or]I really do wish I didn't need someone to carry me around, but I suppose my predicament could be worse...'[or]You're not a bad kid... Unless you're doing something you shouldn't be when I'm not looking?'[or]Try to stay out of trouble, please?'[or]You have any idea how infuriating it is for me to watch all this happening and not be able to do anything about it?'[or]Such desolation...'[at random]";
-		else if level of Velos is 3:
+		else:
 			say "     '[one of]I hate to admit it, but I don't think I was going to linger on for much longer until you came along.'[or]I'm glad it was you who found me.'[or]Take care of yourself out there, and I'm not saying that because I must share your pain.'[or]I don't care what you look like, I appreciate you for what's inside... Heh, sorry, that was quite the bad joke.'[or]I'd try to make less of a mess of things if I could, really.'[or]I'll probably be able to find someone else to have me carry around when this is through. I-If that's what you want, I mean.'[or]I feel a bit ill at ease when outside like this; I feel a lot safer when I'm inside...'[or]Try to stay out of the sewers, terrible things scheme at its deepest depths.'[or]I wish I could protect you as well as you for me.'[at random]";
 
-instead of fucking the Velos:
-	say "     [one of]I don't think you two have that kind of relationship at this point.[or]Isn't that what he's doing to you already?[or]I don't think you two have that kind of relationship at this point.[or]Isn't that what he's doing to you already?[or]You try to bring this topic up to him, but he doesn't seem even remotely interested, in spite his peculiar circumstances.[stopping]";
-
-Section 3 - Dragging him Around + Effects
+Part 3 - Dragging him Around + Effects
 
 a postimport rule:
 	if Resolution of Strange Serpent is 2 and HP of Velos > 2:
@@ -294,8 +287,7 @@ to say ResolveEvent Odd Green Patches:
 	AttemptToWait;
 	move player to Grey Abbey Garden;
 	say "     After a harduous way back to the Library, and fortunately without any other issues, you rush to the garden in order to... plant, you guess, this weird thing. You find it some soil and get some moisture on it, which does not take much out of your personal supplies. As you place it down, it seems to throb lively... a slightly disturbing sight that you are wary of. Velos perks up as soon as you finish the job. 'Yeah, that should do it. Let me into it again,' he asks, and once more, you let him exit your butt and reach for the odd trunk. You wait... and, eventually, Velos returns, popping his head out. 'Works. I guess you can enjoy your lonely time for a while, but make sure to keep coming back for me for at least a chat. I wouldn't mind a walk on occasion, either. Unless you miss me so much you want me back in you indefinitely...' For some reason, you feel like he really would not mind the latter.";
-	LineBreak;
-	say "     [bold type]You suppose you could always just let him in before you go, unless you would rather have him stay in there.[roman type][line break]";
+	say "[line break]     [bold type]You suppose you could always just let him in before you go, unless you would rather have him stay in there.[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Allow him to wiggle his way back into your ass.";
 	say "     ([link]N[as]n[end link]) - Leave him be, for now.";
 	if Player consents:
@@ -311,7 +303,7 @@ to say ResolveEvent Odd Green Patches:
 		move Velos to Grey Abbey Garden;
 	now Odd Green Patches is resolved;
 
-Section 4 - Musing w/Velos
+Part 4 - Musing w/Velos
 
 Chapter 0 - Mechanics of Musing
 
@@ -340,11 +332,12 @@ understand "muse" as muselisting.
 
 check muselisting:
 	if Velos is not visible, say "Do what now?" instead;
+	if "Inside Player" is not listed in traits of Velos, say "Velos doesn't respond." instead;
 
 carry out muselisting:
 	let L be a list of people;
 	repeat with Q running through visible people:
-		if q is not mused and vmusings of q is not "":
+		if q is not mused and vmusings of q is not empty:
 			add q to L;
 	if the number of entries in L is 0:
 		say "There is no one Velos is interested in talking with here.";
@@ -359,10 +352,11 @@ understand "muse with/upon/about/to/on/-- [any person]" as musing.
 
 check musing someone (called x):
 	if Velos is not visible, say "Do what now?" instead;
+	if "Inside Player" is not listed in traits of Velos, say "Velos doesn't respond." instead;
 	if x is not visible, say "I don't see them here." instead;
 	if x is not a person, say "I don't think that'd be very talkative." instead;
 	if x is mused, say "Velos has spoken to this individual and he seems to have nothing else to talk to them about." instead;
-	if vmusings of x is "", say "It would appear that [if level of Velos is 1]the freeloading serpent[else if level of Velos is 2]the serpent[else]your friend[end if] has nothing to say to this individual." instead;
+	if vmusings of x is empty, say "It would appear that [if level of Velos < 2]the freeloading serpent[else if level of Velos is 2]the serpent[else]your friend[end if] has nothing to say to this individual." instead;
 
 carry out musing someone (called x):
 	say "[vmusings of x]";
@@ -371,7 +365,7 @@ carry out musing someone (called x):
 
 Chapter 1 - Musings
 
-Part 1 - Sgt Alexander
+Section 1 - Sgt Alexander
 
 the vmusings of Sergeant Alexander is "[sgtalexmusing]".
 
@@ -384,7 +378,8 @@ to say sgtalexmusing:
 	say "     'Oh - wait, the what?'";
 	say "     'The cure. Well, we hope to make a cure out of it. But it has to be transported at body temperature so, uh...' He gestures to a nearby set of anal plugs, then to a set of soldiers in the distance, 'carrying' said 'cure'.";
 	say "     '...What? Who told you this?'";
-	say "     'One of our top scientist in the area. I believe Padgett said it was Dr. Garcia... Er... Dr. Diego Garcia - that was it. Weren't you brief- forget I said that.' The serpent requires a moment to really calculate what has transpired here and, well, um...[paragraph break]";
+	say "     'One of our top scientist in the area. I believe Padgett said it was Dr. Garcia... Er... Dr. Diego Garcia - that was it. Weren't you brief- forget I said that.' The serpent requires a moment to really calculate what has transpired here and, well, um...";
+	WaitLineBreak;
 	if vmusedone of diego is true:
 		say "     'W-... Y-... Ah-... Oooh-... DIEGOOOOOOOOOO!' Such a yell is enough to send a jolt down everyone's spine.";
 		say "     'What? Who? Calm down, er... Sir?'";
@@ -404,7 +399,7 @@ to say sgtalexmusing:
 	say "     'I think I might be going crazy... I'm going to pretend I didn't see what I just saw. But if what I saw did just happen, I urge you not to show it to anyone else.' Nodding silently, Tiny Tim just gazes at you, still horror-struck, as you depart.";
 	add 1 to velospostmusings, if absent;
 
-Part 2 - Candy
+Section 2 - Candy
 
 the vmusings of Candy is "[candymusing]".
 
@@ -423,7 +418,7 @@ to say candymusing:
 	say "     'You're a nice kid. Try to stay out of trouble.'";
 	say "     'I'd say the same to you, hon, but I doubt you could, with that mouth of yours.' This is enough to elicit a slight chuckle from Velos, and he decides to conclude the conversation at that, letting you return to your own matters.";
 
-Part 3 - Doctor Moffatt
+Section 3 - Doctor Moffatt
 
 the vmusings of Doctor Moffatt is "[drmoffattmusing]".
 
@@ -442,7 +437,7 @@ to say drmoffattmusing:
 	say "     'Heavens, for a psychologist you're quite easy to manipulate into anger. I'm beginning to think your credibility might be compromised.' His final remark causes her to retreat back to her seat with an overly exasperated sigh, no doubt giving up on this whole argument altogether. Pleased with himself, and a little embarrassed yourself, you start pushing the snake back from whence it came, to which he complies.";
 	add 3 to velospostmusings, if absent;
 
-Part 4 - Doctor Mouse
+Section 4 - Doctor Mouse
 
 the vmusings of Doctor Mouse is "[drmousemusing]".
 
@@ -460,7 +455,7 @@ to say drmousemusing:
 	say "     'You -really- have a one-track mind, don't you?' The scientist doesn't regard that statement, and is already mumbling to himself, scribbling notes on a mess of papers. 'Hmpf, even a pragmatic approach can become unreasonable, at a point...' When the mouse doesn't regard this remark either, instead reaching for a syringe, Velos concedes to retreating from the discussion altogether, leaving you to your own business here.";
 	add 4 to velospostmusings, if absent;
 
-Part 5 - Brian
+Section 5 - Brian
 
 the vmusings of Brian is "[brianmusing]".
 
@@ -478,11 +473,12 @@ to say brianmusing:
 	say "     'But, I don't drink coffee.' By this point Brian looks right confused.";
 	say "     'And what makes you think the guards haven't noticed the growing crack from the other side of the wall, and the constant thumping of your thick head?'";
 	say "     'I wish my head was a bit thicker...' Velos could probably revel in that statement, but he's just too fixated on illuminating the ludicrousness of his endeavors.";
-	say "     'What I'm trying to say is that you have no plan and no goals, you're just hitting a wall and hoping that resolves all your problems for you.' This finally does sink into the rhino, who stops and is stricken with a rare instance of contemplation. His increasingly troubled expression seems to infer that he's on the cusp of an existential breakdown before he yells out in blind rage, charging the wall once more, so hard that he bounces back a few feet and falls right over. Possibly blacking out for a few seconds, he eventually does crawl back up on his feet, before looking at Velos with abject confusion.[paragraph break]";
+	say "     'What I'm trying to say is that you have no plan and no goals, you're just hitting a wall and hoping that resolves all your problems for you.' This finally does sink into the rhino, who stops and is stricken with a rare instance of contemplation. His increasingly troubled expression seems to infer that he's on the cusp of an existential breakdown before he yells out in blind rage, charging the wall once more, so hard that he bounces back a few feet and falls right over. Possibly blacking out for a few seconds, he eventually does crawl back up on his feet, before looking at Velos with abject confusion.";
+	WaitLineBreak;
 	say "     'What... What are you doing in... there?' It would seem Brian completely lost his memory of the last minute, doubtlessly annoying the serpent to no end.";
 	say "     'Ugh, you know what? Never mind me, that wall isn't going to topple itself.' The rhino slowly nods in agreement before he returns to charging the wall, Velos mumbling to himself, 'Sometimes I wonder why I even bother...' before retreating once more inside you.";
 
-Part 6 - Alex
+Section 6 - Alex
 
 the vmusings of Alex is "[alexmusing]".
 
@@ -512,7 +508,7 @@ to say alexmusing:
 	say "     'Isn't that always the way?' Alex responds with a chuckle, who now seems a bit more comfortable with this situation.";
 	say "     'Anyways, as pleasant as your home and company is, I can't stay. Farewell.' The snake retreats back into your hole, leaving the ferret to straighten himself out and nod you off in departure.";
 
-Part 7 - Frank
+Section 7 - Frank
 
 the vmusings of Frank is "[frankmusing]".
 
@@ -542,7 +538,7 @@ to say frankmusing:
 	say "     'Fair enough, try to stay out of trouble. I should leave you to your own matters.'";
 	say "     'Yeah...' Velos retreating from whence he came, Frank still seems a little shaken by what just happened, though you imagine he'll be fine. 'That's one strange familiar you've got,' he mumbles.";
 
-Part 8 - Valerie
+Section 8 - Valerie
 
 the vmusings of Valerie is "[valeriemusing]".
 
@@ -567,7 +563,7 @@ to say valeriemusing:
 	say "     'Sure... Though I think this disaster does so much to deface this place that there's little point.' The sphinx's contemplative state seems decidedly more sullen in the observation of this fact, an expression Velos is quick to pick up on.";
 	say "     'There's no question in my mind that this place needs you. I shudder to think how worse it might be off otherwise.' This does seem to brighten her mood a bit. 'And with that I should probably go. Take care, okay?' And with a nod by Valerie, the serpent retreats back within you, leaving you and the lady to your own matters.";
 
-Part 9 - Fang
+Section 9 - Fang
 
 the vmusings of Fang is "[fangmusing]".
 fangvelos1 is a truth state that varies. fangvelos1 is usually false.
@@ -593,7 +589,7 @@ to say fangmusing:
 		say "     [if fangvelos1 is true]Once more[else]Reluctantly[end if], you conjure up Velos from his confines, Fang raising an eyebrow at his appearance[if fangvelos1 is false]. You find it strange that he would be so fine with his presence but decide that perhaps he already knew the snake was in there, or maybe he was just keeping his composure[end if]. 'Oh, hello[if fangvelos1 is true] again[end if], little doggie. Who's a cute pooch? You are!' Velos's attempt at condescension is met with a disinterested glance. '[if fangvelos1 is true]Oh, what's this? You were frightened by me a while ago. Have you undergone some manner of change when I wasn't looking[else]Oh, you're a lot braver than I thought you would be, or perhaps you lack the cognitive capacity to understand what I could do to you while you're having your [']fun['][end if]?'";
 		say "     'You talk a lot but say little.' Velos is a bit at odds with the wolf's curt response, but ultimately attempts to coax more out of him. 'Oh, that's right rude! Surely you could offer me a more elaborate response? I wouldn't want to make you too uncomfortable, and we're all friends here.' The wolf looks skeptical at this. 'You earn friendship, not take it. Some might call you a parasite. I'll reserve judgment for now, but if you hurt [ObjectPro of Player]...' Fang emphasizes this last comment with a brief glimpse of his teeth before walking away. Velos remains silent for a moment before speaking again. 'He seemed nice. I'll try not to give him any more reason to dislike me. As well as try to prove him wrong about my usefulness.'";
 
-Part 10 - Harold
+Section 10 - Harold
 
 the vmusings of Harold is "[haroldmusing]".
 
@@ -615,7 +611,7 @@ to say haroldmusing:
 	say "     'I should probably go off, too, these lights are making me dizzy... Hey, try not to get -too- drunk now, okay?' Velos prods you, a little teasingly, before he retreats back from whence he came, leaving you to attend to yourself.";
 	add 10 to velospostmusings, if absent;
 
-Part 11 - Hadiya
+Section 11 - Hadiya
 
 [Note: Does not open until the player's been fucked by Hadiya.]
 
@@ -636,7 +632,7 @@ to say hadiyamusing:
 	say "     'But you come out here again and ask me a dumbass question like that and you'll see just how quickly I can break you.' Velos seems to pause at this, inevitably conceding to urging your retreat, but she stops you just before the two of you depart. '...And I'm fine, thank you for asking.' The serpent regarding her final remark with a slight grin, she then lets you off. Discourse concluded, your resident returns back from whence he came, letting you go about your business.";
 	add 11 to velospostmusings, if absent;
 
-Part 12 - Philip
+Section 12 - Philip
 
 the vmusings of Philip is "[philipmusing]".
 
@@ -656,7 +652,7 @@ to say philipmusing:
 	say "     'Bye!' The snake grumbles as he retreats back to his home, leaving you to ponder what just happened, and Philip goes back to his own business.";
 	add 12 to velospostmusings, if absent;
 
-Part 13 - Sandra
+Section 13 - Sandra
 
 the vmusings of Sandra is "[sandramusing]".
 
@@ -676,7 +672,7 @@ to say sandramusing:
 	say "     'Certainly not, but it's easy to lose perspective; you might be fine with what's happened to you now, but a lot of people have paid too steep a price. Do you think that makes it worth it?' Sandra shrugs, but before she can come up with a response Velos moves to depart. 'You'll have to excuse me. Consider my argument, if you will.'";
 	say "     Retreating back inside you, it takes you a moment to adjust yourself. Still a little lost in thought, Sandra moves back to where she was, letting you return to your own matters at hand.";
 
-Part 14 - Diego
+Section 14 - Diego
 
 the vmusings of Diego is "[diegomusing]".
 
@@ -694,7 +690,8 @@ to say diegomusing:
 	say "     'I don't catch your drift.' Velos's previous jovial regard is tinged with slight confusion at the coyote's claim. 'I mean, I'm glad you're not completely weirded out by me, but I think you're inferring I'm some weapon you can thrust on people.'";
 	say "     'It's not like that, but it pays to be a bit pragmatic in my line of work.'";
 	say "     'Which is?'";
-	say "     'Causing all sorts of trouble, it's in my nature! Oh boy, I can't wait to see your face when you see what I have planned for the military.' The snake is struck silent, his expression now wholly baffled, and he apparently requires a moment to really take in that statement. With a jolt, however, he suddenly reverts to normal.[paragraph break]";
+	say "     'Causing all sorts of trouble, it's in my nature! Oh boy, I can't wait to see your face when you see what I have planned for the military.' The snake is struck silent, his expression now wholly baffled, and he apparently requires a moment to really take in that statement. With a jolt, however, he suddenly reverts to normal.";
+	WaitLineBreak;
 	say "     'I see. So, I assume you're what's giving the military trouble around here, yes?'";
 	say "     'Of course. You must have seen some of my work, then?'";
 	say "     'Maybe; might have heard about it.'";
@@ -706,11 +703,12 @@ to say diegomusing:
 	say "     'You've got men, leaving their wives and children to protect the people they love, only to succumb to a fate worse than death. I feel sorry for the poor sap who has to walk up to that same wife and tell her that - no - she's not a widow, but instead her husband is now a sex-craved monstrosity with no memory of her or his kin, and if he were to encounter them again he would attempt to inflict the same fate as his own.'";
 	say "     'Don't you start preaching to me, you tricked a person into carrying you around like that!' By this point Diego is beginning to fume, Velos not relenting for a second.";
 	say "     'I did what I had to survive. You, on the other hand? You had a choice. And if you - for a second - even begin to repeat that it's in your nature then you only prove you're no better than an animal; a mangy dog.'";
-	say "     'Come out here and say that to my face you-' By this point the both of them look like they're about to fight, with you stuck in the middle. You're ultimately forced to end the conversation, splitting the two of them, and they do eventually recede back to their opposing corners, both visibly livid with the circumstances that just played out.[paragraph break]";
+	say "     'Come out here and say that to my face you-' By this point the both of them look like they're about to fight, with you stuck in the middle. You're ultimately forced to end the conversation, splitting the two of them, and they do eventually recede back to their opposing corners, both visibly livid with the circumstances that just played out.";
+	WaitLineBreak;
 	say "     With Velos, grumbling to himself all along the way, returning back inside you, you find yourself not quite sure what had just transpired here - given how rapidly things descended into the way they became.";
 	add 14 to velospostmusings, if absent;
 
-Part 15 - Leonard
+Section 15 - Leonard
 
 the vmusings of Leonard is "[Leonardmusing]".
 
@@ -746,7 +744,8 @@ to say Leonardmusing:
 		say "     'What are you insinuating, 'sir'?' Fur transparently ruffled, he puts down his glass and is drawn away from the bar to better face the serpent.";
 	say "     'At first it wasn't immediately clear to me; a strange artifice that constantly tugged at my better judgment, but you've made it very apparent what that is now: You possess some power of coercion.' Leonard is a bit taken aback by this reveal, clearly not prepared for it, and subsequently going on the defensive.";
 	say "     'That claim is preposterous! Do you dare take me as some manner of... snake!?'";
-	say "     'You're doing it right now! Maybe you have no control over it, hm? I'd tell you that such outside influence has no power over me, if it'd dissuade you from committing this rather bothersome distraction.' The pressure of these circumstances crack his composure further with each inch gained, the lion's posture devolving into something increasingly feral and desperate.[paragraph break]";
+	say "     'You're doing it right now! Maybe you have no control over it, hm? I'd tell you that such outside influence has no power over me, if it'd dissuade you from committing this rather bothersome distraction.' The pressure of these circumstances crack his composure further with each inch gained, the lion's posture devolving into something increasingly feral and desperate.";
+	WaitLineBreak;
 	if HP of Leonard >= 4:
 		say "     'Ah, [if HP of Leonard >= 16]mate[else if HP of Leonard >= 9]love[else]my pet[end if] - love...' He attempts to circumnavigate Velos's position in the argument by vying for your favor, moving to you, though trying to keep his distance from your occupant. 'Don't listen to this... ludicrous creature's deception. He cannot even conceive my feelings for you.'";
 		say "     Staring into his eyes, you can't help but be pulled along by his words; however, before he can go any further, you're hit with a sharp jolt that tremors through your spine, Velos pulling you away from the lion's influence. Your attention drawn from Leonard, he moves to pull the lion's attention from you, prodding the feline in the torso, smearing his immaculate fur with the serpent's bodily lubricant.";
@@ -762,7 +761,7 @@ to say Leonardmusing:
 	say "     'How rude of him!' He offers up a slight remark before retreating back inside you, leaving you to your own matters. Hopefully, Leonard'll cool down, and it's probably best that you don't bring up Velos to him again.";
 	add 15 to velospostmusings, if absent;
 
-Part 16 - Lisa
+Section 16 - Lisa
 
 the vmusings of Lisa is "[lisamusing]".
 
@@ -786,7 +785,7 @@ to say lisamusing:
 	say "     'I know...' She puts the portrait back, 'Thank you. I can see you're trying your best in far worse circumstances than mine.'";
 	say "     'Oh, it's not as bad as you think it is. Anyways, I need to depart. Take care.' Saying her farewells, she waves the two of you off before attending to another matter, letting Velos recede back into the depths of your bowels. Looking at Lisa again, she seems a bit lost in thought in the wake of the recent discussion.";
 
-Part 17 - Sven
+Section 17 - Sven
 
 the vmusings of Sven is "[svenmusing]".
 
@@ -809,7 +808,7 @@ to say svenmusing:
 	say "     'Just another perk of being you, yes?'";
 	say "     'Now you're getting it! I think that's enough rambling from me, I'll leave you at that.' Sven, nodding, says his farewell before Velos returns back within your depths. You go back to moving on your own, Sven himself a bit lost in thought.";
 
-Part 18 - Beverly
+Section 18 - Beverly
 
 the vmusings of Beverly is "[beverlymusing]".
 
@@ -820,7 +819,7 @@ to say beverlymusing:
 	say "     'No, no, it's fine. That's probably the most reasonable response I've got to date. I think I can take comfort in knowing some people still have a right head between their shoulders... Problematic as it may prove for me.' With that he slides back into your depths. Hopefully Beverly will get over the whole thing.";
 	add 18 to velospostmusings, if absent;
 
-Part 19 - Christy
+Section 19 - Christy
 
 the vmusings of Christy is "[Christymusing]".
 
@@ -841,7 +840,8 @@ to say Christymusing:
 		say "     'I... suppose I might as well address your first point by highlighting the fact that our friend is pretty much stuck with me.'";
 		say "     'How? Are you attached to each other?'";
 		say "     'I suppose you could say that.'";
-	say "     'Hmm...' She seems to ponder this predicament for a moment before abruptly grabbing the serpent by his slippery frame, and with a firm grip she starts yanking the poor thing free of you, much to his clear distress. She goes so far as lift you [if scalevalue of Player > 3]partially[else]clean off[end if] the ground, bouncing you up and down until his cries of protest become your own, as each successive bounce sends bolts of harsh pleasure across your form.[paragraph break]";
+	say "     'Hmm...' She seems to ponder this predicament for a moment before abruptly grabbing the serpent by his slippery frame, and with a firm grip she starts yanking the poor thing free of you, much to his clear distress. She goes so far as lift you [if scalevalue of Player > 3]partially[else]clean off[end if] the ground, bouncing you up and down until his cries of protest become your own, as each successive bounce sends bolts of harsh pleasure across your form.";
+	WaitLineBreak;
 	say "     'Oh, hm!' She relents at the sound of your discontent, letting you down and releasing the beleaguered and rather dizzied serpent from her grasp. Panting as he might be, he hasn't budged an inch.";
 	say "     'Heavens, madam, you're right nuts!'";
 	say "     'Sorry, I was helping!'";
@@ -850,7 +850,7 @@ to say Christymusing:
 	say "     'You sting me! Though I suppose I set myself up for that one... I should probably go now, I feel like I've been stretched a couple inches longer after all this, uegh.'";
 	say "     And with that, your companion departs back inside you, shifting uncomfortably in the wake of Velos's retreat. Christy simply offers you a shrug before letting you off.";
 
-Part 20 - Nermine
+Section 20 - Nermine
 
 the vmusings of Nermine is "[nerminemusing]".
 
@@ -861,7 +861,8 @@ to say nerminemusing:
 	say "     'If the gracious visitor will allow, Nermine will go into the back, to see if she has a book for this.' The snake grumbles a bit as the jackaless leaves, looking around the strange shop.";
 	say "     'What tacky fare... Did that statue just wink at me back there? I'm really not sure we should be here.' He clams up when Nermine returns, this time with some dusty tome.";
 	say "     'Okay, let Nermine see if she can fix her poor guest's infestation.'";
-	say "     'INFESTATION? Lady, I'm standing right here! Well, okay, admittedly our friend is standing for me...' She waves off Velos's complaints, and begins to list off various strange afflictions, none of which seem to really match the circumstances you're currently subject to, Velos's grumbling discontent made apparent throughout until she's at odds with finding anything else that might be remotely related before she's hit with a possible revelation.[paragraph break]";
+	say "     'INFESTATION? Lady, I'm standing right here! Well, okay, admittedly our friend is standing for me...' She waves off Velos's complaints, and begins to list off various strange afflictions, none of which seem to really match the circumstances you're currently subject to, Velos's grumbling discontent made apparent throughout until she's at odds with finding anything else that might be remotely related before she's hit with a possible revelation.";
+	WaitLineBreak;
 	say "     'Ah, a thought comes to mind - maybe Nermine is looking at this the wrong way?'";
 	say "     'You go about this whole matter like I'm some sort of curse you can wave a magic wand at and make disappear.'";
 	say "     Shaking her head, the storekeeper focuses her gaze on Velos, seemingly regarding him as his own being for the first time. Then she glances back up torwards you. 'Maybe the gracious visitor is not the one who is cursed, yes? Nermine suspects that the snake is possibly the real victim, being forced to a shameful existence. She suspects it angered a powerful being to be left to such a fate.'";
@@ -869,7 +870,7 @@ to say nerminemusing:
 	say "     'Sadly, Nermine cannot help in this case. If the pale snake is cursed, this curse is unique. Too dangerous to meddle with, lacking important knowledge.' Nermine returns to her own business, leaving you on your own once more.";
 	add 20 to velospostmusings, if absent;
 
-Part 21 - Onyx
+Section 21 - Onyx
 
 [Do not open until rescued to Library]
 
@@ -895,7 +896,7 @@ to say onyxmusing:
 	say "     'Trust me when I recommend you take the silly answer instead.' His otherwise cordial demeanor shifts slightly into something more serious, an illustration showing that he means what he says, and a gesture Onyx picks up on. 'You'll have to forgive me, but this is where I have to depart.'";
 	say "     'Whew...' the equine breaths a sigh of relief once the serpent has returned to its confines within you. 'I'm sure as hell glad I don't go out there nearly as much as you do.' Acknowledging his parting words, you let him off to his own matters for now.";
 
-Part 22 - Boris
+Section 22 - Boris
 
 the vmusings of Boris is "[borismusing]".
 
@@ -923,7 +924,7 @@ to say borismusing:
 	say "     'Right. In any case, I'm afraid I have to depart. Try to keep your head together.'";
 	say "     'Yeah...' The mascot returns to where he was standing, lost in thought. With a sigh, Velos retreats back within your depths, leaving you to go on your way.";
 
-Part 23 - Anastasia
+Section 23 - Anastasia
 
 the vmusings of Anastasia is "[Anastasiamusing]".
 
@@ -944,7 +945,7 @@ to say Anastasiamusing:
 	say "     'We all have our secrets. A serpent like yourself can appreciate that sentiment.' The avian seems to shift to a slight defensive stance, perhaps inferring that this is a subject that could be pressed against her, but Velos seems to not pursue it.";
 	say "     'Very well. I think we'll cut this short - this place puts an even larger strain on me than usual. Take care.' Ending his discussion on a more polite note, Anastasia seems to calm a bit down as he retreats back into your hole, leaving you to your own matters.";
 
-Part 23 - Doctor Matt
+Section 23 - Doctor Matt
 
 the vmusings of Doctor Matt is "[drmattmusing]".
 
@@ -1068,7 +1069,7 @@ to postmuse (x - a number):
 [ 39 - xxx				]
 [ 40 - xxx				]
 
-Section 3 - Endings
+Part 5 - Endings
 
 [to come later]
 

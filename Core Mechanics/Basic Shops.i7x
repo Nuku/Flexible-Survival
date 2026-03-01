@@ -12,11 +12,7 @@ Carry out BuyingAction:
 	let SoughtItem be "";
 	now SoughtItem is topic understood;
 	if the medicine case is visible: [Black Market in Zephyr Storeroom/Library Shop; see file Black Market.i7x]
-		if SoughtItem is a name listed in the table of zephyr black market medicine case:
-			if price entry > freecred:
-				say "You can't afford the [Name entry], it costs [price entry] freecred.";
-				continue the action;
-		else if SoughtItem is a name listed in the Table of Zephyr Black Market Outfitters Rack:
+		if SoughtItem is a name listed in the table of zephyr black market medicine case or SoughtItem is a name listed in the Table of Zephyr Black Market Outfitters Rack:
 			if price entry > freecred:
 				say "You can't afford the [Name entry], it costs [price entry] freecred.";
 				continue the action;

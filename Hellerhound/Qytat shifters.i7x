@@ -12,6 +12,7 @@ Shifting Room is a room. "[shiftingroom]".
 It is private.
 It is fasttravel.
 It is sleepsafe.
+the scent of shifting room is "     The scent in here is very strange and otherworldly, but also heavy with the many musky scents you've encountered in the city.".
 
 to connect Shifting Room:
 	change the southeast exit of Qytat Plaza to Shifting Room;
@@ -25,7 +26,5 @@ to say shiftingroom:
 		WaitLineBreak;
 	say "     A room in a tent. The walls are covered with glowing glyphs, each representing an infection you have seen outside. There are a few rows of them, with images of a human body on the top right. It looks like this is where shifting was invented. The text on the walls suggests you can concentrate on becoming a different creature of your choice.";
 	say "     (You can now [bold type]shift[roman type] into another infection.)";
-
-the scent of shifting room is "     The scent in here is very strange and otherworldly, but also heavy with the many musky scents you've encountered in the city.".
 
 Qytat shifters ends here.

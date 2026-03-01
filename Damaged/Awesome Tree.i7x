@@ -11,18 +11,6 @@ Awesome_boredom is a number that varies.
 Awesome_forcesex is a number that varies.
 Awesome_noreward is a number that varies.
 
-to say Give Awesome:
-	if a random number between 1 and 100 > 40:
-		ItemGain awesome fruit by 1;
-		if a random number between 1 and 100 > 60:
-			ItemGain awesomer fruit by 1;
-	else if a random number between 1 and 100 > 40:
-		ItemGain awesomer fruit by 1;
-		if a random number between 1 and 100 > 60:
-			ItemGain awesome fruit by 1;
-	if a random number between 1 and 100 > 85:
-		ItemGain awesomest fruit by 1;
-
 to say awesome attack:
 	if Awesome_boredom is 4:
 		say "The tree seems to vibrate. Whether your fervent attacks or the breeze caused it, a branch falls and thumps you on the arm. You notice some fruit on the branch, and without hesitation you put one in your pocket. As you look at the remaining two, you feel a sudden hunger and eat them uncontrollably.";
@@ -56,9 +44,12 @@ to say awesome defeat:
 				unwield awesome bat silently;
 			say "     Walking away, you get a sudden urge and dig a hole in some soft ground, pushing your bat in deeply. You can sense, with your most awesome senses, the wood taking root and beginning to grow.";
 			ItemLoss awesome bat by 1;
+			decrease humanity of Player by 1;
 			WaitLineBreak;
 		say "     With good feelings coursing through you at your good deed, a warmth seems to spread from the core of awesome that the tree's fruit seems to have implanted into your being.";
 		infect "Pod Person";
+		decrease humanity of Player by 1;
+		increase morale of Player by 1;
 		now fightoutcome is 19;
 	else:
 		say "     Somehow you manage to strike the tree in such a way that it collapses, breaking along the fault line in its trunk you had made. You notice the branches are riddled with fruit and you make an effort to gather as many ripe ones as you can.";
@@ -72,8 +63,17 @@ to say awesome vict:
 	WaitLineBreak;
 	say "     As you wake up, you look around and wonder how the tree got away. Guess that's just another awesome mystery for this messed up new world.";
 
-to say awesome desc:
-	say "     You turn a corner and see it. Looking up you realize due to the shape of the branches you are unable to actually see just how tall this monstrous and truly awesome tree is. Its branches are long and you see, among the foliage some fruits that look unbelievably tasty, if you could just shake the tree enough to get one to fall...";
+to say Give Awesome:
+	if a random chance of 3 in 5 succeeds:
+		ItemGain awesome fruit by 1;
+		if a random chance of 2 in 5 succeeds:
+			ItemGain awesomer fruit by 1;
+	else if a random chance of 3 in 5 succeeds:
+		if a random chance of 2 in 5 succeeds:
+			ItemGain awesome fruit by 1;
+		ItemGain awesomer fruit by 1;
+	if a random chance of 3 in 20 succeeds:
+		ItemGain awesomest fruit by 1;
 
 Section 2 - Creature Insertion
 
@@ -116,7 +116,7 @@ When Play begins:
 	now attack entry is "[awesome attack]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[awesome defeat]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[awesome vict]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[awesome desc]"; [ Description of the creature when you encounter it.]
+	now desc entry is "     You turn a corner and see it. Looking up you realize due to the shape of the branches you are unable to actually see just how tall this monstrous and truly awesome tree is. Its branches are long and you see, among the foliage some fruits that look unbelievably tasty, if you could just shake the tree enough to get one to fall...[line break]"; [ Description of the creature when you encounter it.]
 	now face entry is "completely human"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "human-looking"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[if looknow is 1]human[else]normal human, lovely, healthy-looking[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]
@@ -269,17 +269,17 @@ When Play begins:
 
 Section 3 - Drop Item
 
+[awesome bat moved to Core Mechanics/Weapons.i7x]
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "awesomest fruit"	"The most awesomest fruit you ever ate!"	1	awesomest fruit
 "awesomer fruit"	"The most awesomer fruit you ever ate, now with a funky pink logo!"	1	awesomer fruit
 "awesome fruit"	"The most awesome fruit you ever ate, now with a funky blue logo!"	1	awesome fruit
 
-[awesome bat moved to Core Mechanics/Weapons.i7x]
-
 awesomest fruit is a grab object.
 awesomest fruit has a Usedesc "[awesomest fruit use]".
-the scent of the awesomest fruit is "The strange fruit [if Player is MalePreferred or Player is FemalePreferred]smells rancid and turns your stomach just to have close[else]has a rich mix of male and female scents that seems mouth-wateringly sweet[end if].";
+the scent of the awesomest fruit is "The strange fruit [if Player is MalePreferred or Player is FemalePreferred]smells rancid and turns your stomach just to have close[else]has a rich mix of male and female scents that seems mouth-wateringly sweet[end if].".
 
 To say awesomest fruit use:
 	if Player is MalePreferred or Player is FemalePreferred:
@@ -301,7 +301,7 @@ To say awesomest fruit use:
 
 awesomer fruit is a grab object.
 awesomer fruit has a Usedesc "[awesomer fruit use]".
-the scent of the awesomer fruit is "The strange fruit [if Player is MalePreferred or Player is HermPreferred]smells rancid and turns your stomach just to have close[else]has a lovely, feminine scent that seems mouth-wateringly sweet[end if].";
+the scent of the awesomer fruit is "The strange fruit [if Player is MalePreferred or Player is HermPreferred]smells rancid and turns your stomach just to have close[else]has a lovely, feminine scent that seems mouth-wateringly sweet[end if].".
 
 To say awesomer fruit use:
 	if Player is MalePreferred or Player is HermPreferred:
@@ -323,7 +323,7 @@ To say awesomer fruit use:
 
 awesome fruit is a grab object.
 awesome fruit has a Usedesc "[awesome fruit use]".
-the scent of the awesome fruit is "The strange fruit [if Player is FemalePreferred or Player is HermPreferred]smells rancid and turns your stomach just to have close[else]has a strong, manly scent that seems mouth-wateringly sweet[end if].";
+the scent of the awesome fruit is "The strange fruit [if Player is FemalePreferred or Player is HermPreferred]smells rancid and turns your stomach just to have close[else]has a strong, manly scent that seems mouth-wateringly sweet[end if].".
 
 To say awesome fruit use:
 	if Player is FemalePreferred or Player is HermPreferred:

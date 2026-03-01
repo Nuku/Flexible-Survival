@@ -3287,6 +3287,20 @@ Section 3 - Custom Cum Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"cheesecake cum"	"[cumjar Strain of cheesecake cum]"	1	cheesecake cum
+
+cheesecake cum is a infectious cum grab object.
+Strain of cheesecake cum is "Cheesecake".
+Usedesc of cheesecake cum is "[cheesecake cum use]".
+Scent of cheesecake cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.".
+
+to say cheesecake cum use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, cheesy aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "Dragon Breeder cum"	"A nondescript clear plastic bottle overflowing with your virile draconic seed. To the unobservant, this vessel could be mistaken for some sort of off-brand synthetic creamer, had you not taken the time to write [']Dragon Breeder Cum['] across the label on the bottle. True, there is nothing preventing you from drinking it, yet it's anyone's guess what the consequence of such flagrant hedonism would be."	1	Dragon Breeder cum
 
 Dragon Breeder cum is a grab object.
@@ -3301,7 +3315,7 @@ to say Dragon Breeder cum use:
 		decrease the gestation of child by 4;
 	PlayerDrink 5;
 	Playereat 5;
-	if Cock Count of Player < 1:
+	if Player is not male:
 		Increase Cock Count of Player by 1;
 	increase Cock Length of Player by 2;
 	increase Ball Size of Player by 1;
@@ -3315,20 +3329,17 @@ instead of sniffing Dragon Breeder cum:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"felinoid cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort off-white cream or buttermilk, if someone hadn't written [']Felinoid Cum['] across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	felinoid cum
+"gingerbread cum"	"[cumjar Strain of gingerbread cum]"	1	gingerbread cum
 
-felinoid cum is a grab object.
-felinoid cum is cum.
-felinoid cum is infectious.
-Strain of felinoid cum is "Felinoid".
-Usedesc of felinoid cum is "[felinoid cum use]".
+gingerbread cum is a infectious cum grab object.
+Strain of gingerbread cum is "Gingerbread".
+Usedesc of gingerbread cum is "[gingerbread cum use]".
+Scent of gingerbread cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.".
 
-to say felinoid cum use:
-	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+to say gingerbread cum use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, gingery aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
-	PlayerEat 5;
-
-Scent of felinoid cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty with a hint of mint.".
+	SanLoss 5;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -3337,6 +3348,7 @@ name	desc	weight	object
 Glitchy Cum is a grab object.
 Glitchy Cum is cum.
 Usedesc of Glitchy Cum is "[Glitchy Cum use]".
+Scent of Glitchy Cum is "You open the lid for a moment and take a sniff. But you can't seem to pick up on any particular smell.".
 
 to say Glitchy Cum use:
 	say "     Lifting the plastic bottle to your mouth, you take a dr1nk fr0m it, leTting th£ cr£@my cu-um run run 0VeR /0ur t0N6u£ and dddddddown IoUr 7hroAt. An aaaaaa-alien yet plea@Nt-nttttttttt- [bold type][one of]I-IT BURNS [or]1I-IT T HURTS [at random]![roman type] Still in extreme mental and physical pain, you feel your body temperature climb1ng and steam pours from your cuts as they [one of]cinch[or]knit[at random] thEmselves §Hut. N0t ev£n fuLly finishing the bottle, you instinctively empty the rest of it somewhere, then stuff the empty bottle with difficulty back into your collection of 'empties'.";
@@ -3346,7 +3358,22 @@ to say Glitchy Cum use:
 	PlayerDrink 100;
 	PlayerEat 100;
 
-Scent of Glitchy Cum is "You open the lid for a moment and take a sniff. But you can't seem to pick up on any particular smell.".
+Table of Game Objects (continued)
+name	desc	weight	object
+"hellfire seed"	"The white, gooey seed of one of your past demonic lovers. It smells very sweet, a little like burnt cream, and feels really hot. Comes inside a plastic water bottle that could be mistaken for some sort of buttermilk, if someone hadn't written 'Hellfire Demon Seed' across the label. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	hellfire seed
+
+hellfire seed is a cum grab object.
+Usedesc of hellfire seed is "[hellfire seed use]".
+Scent of hellfire seed is "The demonic semen smells sweet, a little like burnt cream.".
+
+to say hellfire seed use:
+	say "     The warm, sticky liquid tastes almost too hot, but very sweet, as you drink it. You feel the warm seed going down your throat, leaving the delightful sensation of a tasty and hot beverage. It leaves a lingering lust for sex...";
+	PlayerDrink 5;
+	SanLoss 10;
+	raise Player Libido by 15;
+	if "Iron Stomach" is not listed in Feats of Player:
+		say "[line break]     It seems to cause a reaction with the nanites in your system...";
+		HellfireDemonInfect;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -3383,9 +3410,9 @@ name	desc	weight	object
 
 Limbo Fox Cum is a grab object.
 Limbo Fox Cum is cum.
-Limbo Fox Cum is infectious.
 Strain of Limbo Fox Cum is "Limbo Fox".
 Usedesc of Limbo Fox Cum is "[Limbo Fox Cum use]".
+Scent of Limbo Fox Cum is "[cumjar smell]".
 
 to say Limbo Fox Cum use:
 	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. An alien yet pleasant taste hits your tongue. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
@@ -3396,7 +3423,30 @@ to say Limbo Fox Cum use:
 		BallsGrow Player by a random number from 0 to 1;
 		increase Cock Length of Player by 1;
 
-Scent of Limbo Fox Cum is "[cumjar smell]".
+Table of Game Objects (continued)
+name	desc	weight	object
+"pink fox cum"	"The white, gooey seed of one of your past lovers. Comes inside a plastic water bottle that could be mistaken for some sort of buttermilk, if someone hadn't written 'Pink Fox Cum' across the label. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	pink fox cum
+
+pink fox cum is a infectious cum grab object.
+Strain of pink fox cum is "Pink Fox".
+Usedesc of pink fox cum is "[pink fox cum use]".
+Scent of pink fox cum is "It smells a bit like you would expect cum to smell, but there is something different about it that you cannot identify.".
+
+to say pink fox cum use:
+	say "     The warm, sticky liquid tastes very sweet as you drink it. You feel the warm seed going down your throat, leaving the delightful sensation of a tasty and hot beverage. It kind of leaves you craving for more...";
+	PlayerDrink 5;
+	SanLoss 5;
+	raise Player Libido by 10;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"retriever cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Retriever Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	retriever cum
+
+[retriever cum is a grab object.] [defined early to resolve name conflicts]
+retriever cum is infectious cum.
+Strain of retriever cum is "Retriever Male".
+Usedesc of retriever cum is "[cumjar use]".
+Scent of retriever cum is "[cumjar smell]".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -3406,6 +3456,15 @@ skunk cum is a infectious cum grab object.
 Strain of skunk cum is "Skunk Male".
 Usedesc of skunk cum is "[cumjar use]".
 Scent of skunk cum is "[cumjar smell]".
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"tyrannosaurus cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Tyrannosaurus Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	tyrannosaurus cum
+
+tyrannosaurus cum is a infectious cum grab object.
+Strain of tyrannosaurus cum is "Tyrannosaurus Male".
+Usedesc of tyrannosaurus cum is "[cumjar use]".
+Scent of tyrannosaurus cum is "[cumjar smell]".
 
 Section 4 - Priorities
 

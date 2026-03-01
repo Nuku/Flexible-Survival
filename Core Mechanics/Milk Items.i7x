@@ -4,7 +4,7 @@ Milk Items by Core Mechanics begins here.
 
 [In general, these are not used as loot but given when player self-milks and follow self-infection rules (strain of object should be strain of infection that links the item).]
 
-Section 1 - Common Text Definitions
+Chapter 1 - Common Text Definitions
 
 to say breastmilk (T - text):
 	say "A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written '[T] Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though... ";
@@ -24,7 +24,9 @@ to say manmilk use:
 to say breastmilk smell:
 	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really. ";
 
-Section 2 - Standard Milk Items
+Chapter 2 - Standard Items
+
+Section 1 - Standard Milk
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -413,28 +415,6 @@ ceryneian deer-taur milk is a infectious milky grab object.
 Strain of ceryneian deer-taur milk is "Ceryneian Deer-taur".
 Usedesc of ceryneian deer-taur milk is "[breastmilk use]".
 Scent of ceryneian deer-taur milk is "[breastmilk smell]".
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"Champion's Milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Champion's Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	Champion's milk
-
-Champion's Milk is a grab object.
-Champion's Milk is milky.
-Champion's milk is infectious.
-Strain of Champion's Milk is "Ipotane".
-Usedesc of Champion's Milk is "[Champion's Milk use]".
-
-to say Champion's Milk use:
-	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-	if HP of Best Pony >= 1:
-		decrease gestation of child by a random number from 3 to 5;
-		if gestation of child < 1, now gestation of Child is 1;
-	if HP of Best Pony >= 2:
-		now scalevalue of Player is 4;
-
-instead of sniffing Champion's milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2231,18 +2211,12 @@ Scent of ogre male milk is "[breastmilk smell]".
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Onna Uma Milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Onna Uma Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	Onna Uma Milk
+"Onna Uma Milk"	"[breastmilk Strain of Onna Uma Milk]"	1	Onna Uma Milk
 
-Onna Uma Milk is a grab object.
-Onna Uma Milk is milky.
-Onna Uma Milk is infectious.
+Onna Uma Milk is a infectious milky grab object.
 Strain of Onna Uma Milk is "Onna Uma".
-Usedesc of Onna Uma Milk is "[Onna Uma milk use]".
-
-to say Onna Uma Milk use:
-	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
+Usedesc of Onna Uma Milk is "[breastmilk use]".
+Scent of Onna Uma Milk is "[breastmilk smell]".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -3359,7 +3333,7 @@ Strain of zebra stallion milk is "Zebra Stallion".
 Usedesc of zebra stallion milk is "[breastmilk use]".
 Scent of zebra stallion milk is "[breastmilk smell]".
 
-Section 3 - Standard Man-Milk Items
+Section 2 - Standard Man-Milk
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -3442,34 +3416,38 @@ Strain of Swamp Goblin man-milk is "Swamp Goblin".
 Usedesc of Swamp Goblin man-milk is "[manmilk use]".
 Scent of Swamp Goblin man-milk is "[breastmilk smell]".
 
-Section 4 - Custom Milk Items
+Chapter 3 - Custom Items
+
+Section 1 - Custom Milk
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"chocolate milk"	"Creamy milk with a white chocolate taste."	1	chocolate milk
+"cheesecake milk"	"[breastmilk Strain of cheesecake milk]"	1	cheesecake milk
 
-chocolate milk is a infectious milky grab object.
-Strain of chocolate milk is "Chocolate Lab".
-Usedesc of chocolate milk is "[breastmilk use]".
+cheesecake milk is a infectious milky grab object.
+Strain of cheesecake milk is "Cheesecake".
+Usedesc of cheesecake milk is "[cheesecake milk use]".
+Scent of cheesecake milk is "[breastmilk smell]".
 
-Scent of chocolate milk is "The chocolate milk smells of fine, white chocolate.".
+to say cheesecake milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and cream cheese-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "Dragon Breeder milk"	"A tall glass vessel packed to the rim with pearly white perfection, a normal unassuming person could easily mistake your scrumptious draconic cream for a banal dairy product at first glance, had you not written the words [']Dragon Breeder milk['] on the side. Though should someone gaze too deeply or too long at its content, their unworthy eyes would be treated to an ever-shifting collage of unnatural colors and enthralling dark shapes fluttering in the alabaster waters."	1	Dragon Breeder milk
 
-Dragon Breeder milk is a grab object.
-Dragon Breeder milk is milky.
-Dragon Breeder milk is infectious.
+Dragon Breeder milk is a infectious milky grab object.
 Strain of Dragon Breeder milk is "Dragon Breeder".
 Usedesc of Dragon Breeder milk is "[Dragon Breeder milk use]".
+Scent of Dragon Breeder milk is "You open the lid for a moment and take a sniff, your senses are greet by the subtle scent of cloves and Plumeria.".
 
 to say Dragon Breeder milk use:
 	say "     Bringing the glistening your lips, you swallow down your succulent cream with eager abandon. Delighting in the warm, rich, soothing balm coating your palate in a heady sheen of heavy vanilla and some crisp, almost herbal, bite as you swish the thick ambrosial liquid along the roof mouth before swallowing. Ah delicious, you preen self-indulgently as the potent draconic energies infuse you with a raw rush of fertile excess.";
 	PlayerDrink 15;
 	PlayerEat 15;
 	increase Breast Size of Player by 3;
-	if Cunt Count of Player < 1:
+	if Player is not female:
 		increase Cunt Count of Player by 1;
 	increase Cunt Depth of Player by 3;
 	increase Cunt Tightness of Player by 3;
@@ -3480,8 +3458,18 @@ to say Dragon Breeder milk use:
 	if scalevalue of Player < 5:
 		now scalevalue of Player is 5;
 
-instead of sniffing Dragon Breeder milk:
-	say "You open the lid for a moment and take a sniff, your senses are greet by the subtle scent of cloves and Plumeria.";
+Table of Game Objects (continued)
+name	desc	weight	object
+"gingerbread milk"	"[breastmilk Strain of gingerbread milk]"	1	gingerbread milk
+
+gingerbread milk is a infectious milky grab object.
+Strain of gingerbread milk is "Gingerbread".
+Usedesc of gingerbread milk is "[gingerbread milk use]".
+Scent of gingerbread milk is "[breastmilk smell]".
+
+to say gingerbread milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the gingerbread milk run over your tongue and down your throat. Tastes rich and sweet, with a gingery aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -3489,6 +3477,7 @@ name	desc	weight	object
 
 Glitchy Milk is a milky grab object.
 Usedesc of Glitchy Milk is "[Glitchy Milk use]".
+Scent of Glitchy Milk is "You open the lid for a moment and take a sniff. But you can't seem to pick up on any particular smell.".
 
 to say Glitchy Milk use:
 	say "     Lifting the plastic bottle to your mouth, you take a dr1nk fr0m it, leTting th£ m1/k run run 0VeR /0ur t0N6u£ and dddddddown IoUr 7hroAt. T@st£§ r1ch and-nd s74@wbeeeeee- [bold type][one of]I-IT BURNS [or]1I-IT T HURTS [at random]![roman type] Still in extreme mental and phys1cal pain, you feel your body-y temperature climbing and steam pours from your cuTs as they [one of]cinch[or]knit[at random] themselves §Hut. N0t ev£n fuLly finishing the bottle, you instinctively empty the rest of it somewhere, then stuff the empty bottle with difficulty back into your collection of 'empties'.";
@@ -3498,42 +3487,48 @@ to say Glitchy Milk use:
 	PlayerDrink 100;
 	PlayerEat 100;
 
-Scent of Glitchy Milk is "You open the lid for a moment and take a sniff. But you can't seem to pick up on any particular smell.".
+Table of Game Objects (continued)
+name	desc	weight	object
+"hyena herm milk"	"[breastmilk Strain of hyena herm milk]"	1	hyena herm milk
+
+hyena herm milk is a infectious milky grab object.
+Strain of hyena herm milk is "Hyena Herm".
+Usedesc of hyena herm milk is "[hyena herm milk use]".
+Scent of hyena herm milk is "[breastmilk smell]".
+
+to say hyena herm milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "Hermacore Cream"	"A generic plastic bottle filled to the rim with your unique one-of-a-kind cream, that could almost pass for regular milk. Were it not for the unusual prismatic oily hues reflected in the alabaster liquid's surface, or the words [']Hermacore Cream['] you wrote on the side."	1	Hermacore Cream
 
-Hermacore Cream is a grab object.
-Hermacore Cream is milky.
-Hermacore Cream is infectious.
+Hermacore Cream is a infectious milky grab object.
 Strain of Hermacore Cream is "Hermacore".
 Usedesc of Hermacore Cream is "[Hermacore Cream use]".
+Scent of Hermacore Cream is "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.".
 
 to say Hermacore Cream use:
 	say "     Tilting the creamy vessel to lips, you take a deep greedy pull of your exotic milk. Your inner sommelier detects hints of subtle oaks, interspliced with effervescent spear mints, and a light undercurrent of fresh vanilla playing across your palate. Swallowing, your tastebuds note aftertaste leaves an uncanny but not wholly unwelcome sour bite evocative of some high proof liquor.";
 	PlayerDrink 7;
 	PlayerEat 7;
 	increase Breast Size of Player by 3;
-	if Cunt Count of Player is 0:
+	if Player is not female:
 		increase Cunt Count of Player by 1;
 	increase Cunt Depth of Player by 3;
 	increase Cunt Tightness of Player by 3;
 	decrease turns in heat by 8;
-	if "Iron Stomach" is not listed in feats of Player:
-		infect "Hermacore";
 	SanLoss 5;
-
-instead of sniffing Hermacore Cream:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "Limbo Fox Milk"	"A glass bottle filled to the brim with suspiciously normal-looking milk, considering it's the product of an eldritch fox. Oddly, the bottle and its contents never seem to get warm or even go off when left out in the sun."	1	Limbo Fox Milk
 
-Limbo Fox Milk is a infectious milky grab object.
+Limbo Fox Milk is a milky grab object.
 Strain of Limbo Fox Milk is "Limbo Fox".
 Usedesc of Limbo Fox Milk is "[Limbo Fox Milk use]".
+Scent of Limbo Fox Milk is "You open the lid for a moment and take a sniff. Smells kinda like Strawberry.".
 
 to say Limbo Fox Milk use:
 	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and Strawberry-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
@@ -3544,8 +3539,6 @@ to say Limbo Fox Milk use:
 	if Cunt Count of Player >= 1:
 		increase Cunt Depth of Player by 1;
 		increase Cunt Tightness of Player by 1;
-
-Scent of Limbo Fox Milk is "You open the lid for a moment and take a sniff. Smells kinda like Strawberry.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -3563,13 +3556,14 @@ name	desc	weight	object
 margay taur milk is a grab object.
 margay taur milk is milky.
 Usedesc of margay taur milk is "[margay taur milk use]".
+Scent of margay taur milk is "[breastmilk smell]".
 
 to say margay taur milk use:
 	say "     Noticing a mild dryness on the roof of your mouth, you pop open a bottle of tauric cream and hungrily slurp up its rich contents. Though you feel somewhat sated, you can't help but take note of a strange tingling sensation coming from your chest and groin as your body shifts towards a radically more feminine bend.";
 	PlayerDrink 15;
 	PlayerEat 15;
 	increase Breast Size of Player by 3;
-	if Cunt Count of Player < 1:
+	if Player is not female:
 		increase Cunt Count of Player by 1;
 	increase Cunt Depth of Player by 3;
 	increase Cunt Tightness of Player by 3;
@@ -3584,23 +3578,51 @@ name	desc	weight	object
 panther milk is a infectious milky grab object.
 Strain of panther milk is "Panther Taur".
 Usedesc of panther milk is "[breastmilk use]".
-
 Scent of panther milk is "This milk has a feline scent to it.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"rodeo clown milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Rodeo Clown Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	rodeo clown milk
+"pink fox milk"	"[breastmilk Strain of pink fox milk]"	1	pink fox milk
+
+pink fox milk is a infectious milky grab object.
+Strain of pink fox milk is "Pink Fox".
+Usedesc of pink fox milk is "[pink fox milk use]".
+Scent of pink fox milk is "[breastmilk smell]".
+
+to say pink fox milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the vulpine milk run over your tongue and down your throat. Tastes rich and oddly sweet. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	if "Iron Stomach" is not listed in Feats of Player:
+		say "     It seems to cause a reaction with the nanites in your system...";
+	PlayerDrink 15;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"retriever milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Retriever Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	retriever milk
+
+[retriever milk is a grab object.] [defined early to resolve name conflicts]
+retriever milk is milky.
+retriever milk is infectious.
+Strain of retriever milk is "Retriever Female".
+Usedesc of retriever milk is "[retriever milk use]".
+Scent of retriever milk is "[breastmilk smell]".
+
+to say retriever milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"rodeo clown milk"	"[breastmilk Strain of rodeo clown milk]"	1	rodeo clown milk
 
 rodeo clown milk is a infectious milky grab object.
 Strain of rodeo clown milk is "Rodeo Clown".
 Usedesc of rodeo clown milk is "[rodeo clown milk use]".
+Scent of rodeo clown milk is "You open the lid for a moment and take a sniff. Smells kinda funny.".
 
 to say rodeo clown milk use:
 	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes funny. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
-
-Scent of rodeo clown milk is "You open the lid for a moment and take a sniff. Smells kinda funny.".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -3628,10 +3650,118 @@ vixen milk is milky.
 vixen milk is infectious.
 Strain of vixen milk is "Vixen Nurse".
 Usedesc of vixen milk is "[breastmilk use]".
-
 Scent of vixen milk is "The milk has a mediciny smell to it.".
 
-Section 4 - Priorities
+Section 2 - Custom Man-Milk
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"biolizardman brute man-milk"	"[manmilk Strain of biolizardman brute man-milk]"	1	biolizardman brute man-milk
+
+biolizardman brute man-milk is a infectious milky grab object.
+Strain of biolizardman brute man-milk is "Biolizardman Brute".
+Usedesc of biolizardman brute man-milk is "[biolizardman brute man-milk use]".
+Scent of biolizardman brute man-milk is "[breastmilk smell]".
+
+to say biolizardman brute man-milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the reptilian man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"hellfire demon man-milk"	"[manmilk Strain of hellfire demon man-milk]"	1	hellfire demon man-milk
+
+hellfire demon man-milk is a milky grab object.
+Strain of hellfire demon man-milk is "Hellfire Demon".
+Usedesc of hellfire demon man-milk is "[hellfire demon man-milk use]".
+Scent of hellfire demon man-milk is "[breastmilk smell]".
+
+to say hellfire demon man-milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the demonic man-milk run over your tongue and down your throat. Tastes rich and oddly sweet. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+	if "Iron Stomach" is not listed in Feats of Player:
+		say "[line break]     It seems to cause a raction with the nanites in your system...";
+		HellfireDemonInfect;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"retriever man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Retriever Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	retriever man-milk
+
+retriever man-milk is a infectious milky grab object.
+Strain of retriever man-milk is "Retriever Male".
+Usedesc of retriever man-milk is "[retriever man-milk use]".
+Scent of retriever man-milk is "[breastmilk smell]".
+
+to say retriever man-milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"sharkman brute man-milk"	"[manmilk Strain of sharkman brute man-milk]"	1	sharkman brute man-milk
+
+sharkman brute man-milk is a infectious milky grab object.
+Strain of sharkman brute man-milk is "Sharkman Brute".
+Usedesc of sharkman brute man-milk is "[sharkman brute man-milk use]".
+Scent of sharkman brute man-milk is "[breastmilk smell]".
+
+to say sharkman brute man-milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the selachian man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"smilodon man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Smilodon Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	smilodon man-milk
+
+smilodon man-milk is a infectious milky grab object.
+Strain of smilodon man-milk is "Smilodon Male".
+Usedesc of smilodon man-milk is "[smilodon man-milk use]".
+Scent of smilodon man-milk is "[breastmilk smell]".
+
+to say smilodon man-milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the feline man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"triceratops man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Triceratops Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	triceratops man-milk
+
+triceratops man-milk is a infectious milky grab object.
+Strain of triceratops man-milk is "Triceratops Male".
+Usedesc of triceratops man-milk is "[triceratops man-milk use]".
+Scent of triceratops man-milk is "[breastmilk smell]".
+
+to say triceratops man-milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the reptilian man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"tyrannosaurus man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Tyrannosaurus Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	tyrannosaurus man-milk
+
+tyrannosaurus man-milk is a infectious milky grab object.
+Strain of tyrannosaurus man-milk is "Tyrannosaurus Male".
+Usedesc of tyrannosaurus man-milk is "[tyrannosaurus man-milk use]".
+Scent of tyrannosaurus man-milk is "[breastmilk smell]".
+
+to say tyrannosaurus man-milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the reptilian man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"werewolf brute man-milk"	"[manmilk Strain of werewolf brute man-milk]"	1	werewolf brute man-milk
+
+werewolf brute man-milk is a infectious milky grab object.
+Strain of werewolf brute man-milk is "Werewolf Brute".
+Usedesc of werewolf brute man-milk is "[werewolf brute man-milk use]".
+Scent of werewolf brute man-milk is "[breastmilk smell]".
+
+to say werewolf brute man-milk use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the lupine man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+Chapter 4 - Priorities
 
 [Just changing object names won't do anything if the printed name stays the same, so we have to work around the ambiguity by hinting that the least specific item name is preferred to be able to interact with it when more specific item names are also owned. A side effect of this will be the game preferring these names to resolve the ambiguity of just "milk", but it's the best we can do for now.]
 

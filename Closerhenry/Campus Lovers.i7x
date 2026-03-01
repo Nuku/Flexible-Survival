@@ -10,10 +10,6 @@ CampusLoversTrackingVariable is a number that varies.
 CampusLoversProgressTurn is a number that varies.
 CampusCoupleRelationship is a number that varies.
 
-a postimport rule: [bugfixing rules for players that import savegames]
-	if CampusCoupleRelationship is 1: [event resolved the right way, room not connected yet]
-		connect Jadako's Room;
-
 Table of WalkinEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
 3	"Campus Lovers"	Campus Lovers	"[EventConditions_Campus Lovers1]"	College Fountain	2500	3	100
@@ -42,8 +38,7 @@ when play begins:
 to say ResolveEvent Campus Lovers:
 	if CampusLoversTrackingVariable is 0:
 		say "     You are walking around the campus searching for anything interesting when you hear a yell. Thinking someone may be in trouble, you turn in the direction to see a lithe feline running up to a tall dog morph. The sleek cat has a mixture of orange and black fur colors, surrounding the white fur on his belly. He looks young, maybe just short of twenty. Must have been one of the students here. He wears no clothes, allowing you to easily see his flaccid penis and golf-ball-sized testes. The burly canine has scruffy, brown fur which highlights his chest, rippling with muscles. He wears an unzipped jacket with the college's logo on it, as well as some athletic shorts. The anthro student tries to embrace his older acquaintance, exclaiming, 'Coach Weber!' but the canine softly pushes the cat away. 'Oh, Jadako! I, uh, don't think we should do that. I'm your teacher, and... well... you're naked...' he stutters sheepishly.";
-		LineBreak;
-		say "     [bold type]This sounds pretty juicy. Do you want to try to get closer and listen?[roman type][line break]";
+		say "[line break]     [bold type]This sounds pretty juicy. Do you want to try to get closer and listen?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Try to edge closer while staying out of eyesight.";
 		say "     [link](2)[as]2[end link] - Slip away before they see you.";
 		say "     [link](3)[as]3[end link] - Slip away, and avoid these two from now on. (Will lock all further content with these two.)";
@@ -51,9 +46,7 @@ to say ResolveEvent Campus Lovers:
 		while calcnumber < 1 or calcnumber > 3:
 			say "Choice? (1-3)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 3:
 				say "Invalid choice. Type [link]1[end link] to watch, [link]2[end link] to leave or [link]3[end link] to avoid all further contact.";
 		LineBreak;
 		if calcnumber is 1:
@@ -70,15 +63,14 @@ to say ResolveEvent Campus Lovers:
 		else if calcnumber is 2:
 			say "     Not wanting to risk these two unknown morphs, you slowly back away. After you get far enough away and it seems they haven't noticed you, you take a slight jog to put a greater distance between you and them. As you look back to make sure they aren't following you, you see the two against the wall, the cat slowly sliding onto the dog's cock. At least they aren't after you.";
 			now Resolution of Campus Lovers is 2; [didn't watch them #1]
-		else if calcnumber is 3:
+		else:
 			say "     Something just doesn't sit right with you about these two. You make sure to get away without being detected, before making a mental note to avoid all further contact with the two.";
 			now CampusCoupleRelationship is 100;
 			now Resolution of Campus Lovers is 100; [avoiding them]
 			now Campus Lovers is resolved;
 	else if CampusLoversTrackingVariable is 1: [second time]
 		say "     You're out exploring the campus when you spot a group of people, most likely students, conversing next to the fountain. They seem sane enough, considering they're all fully clothed. The students are too far away for you to hear the specifics of their conversation, but the way they keep looking over their shoulders seems to imply they're gossiping.";
-		LineBreak;
-		say "     [bold type]Do you want to eavesdrop on their gossip?[roman type][line break]";
+		say "[line break]     [bold type]Do you want to eavesdrop on their gossip?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - A little listen couldn't hurt...";
 		say "     ([link]N[as]n[end link]) - No way, who knows what they'd do if they caught you!";
 		if Player consents:
@@ -93,10 +85,9 @@ to say ResolveEvent Campus Lovers:
 			say "     You decide you don't want to risk finding out what these three students would do to you if they noticed you eavesdropping, so you quietly back off. Eventually, the group seems to get into a short argument and one of them storms off, leaving the other two alone. Huh, wonder what that was about.";
 			now Resolution of Campus Lovers is 4; [didn't listen in #2]
 		now CampusLoversTrackingVariable is 2; [second event done]
-	else if CampusLoversTrackingVariable is 2: [third time]
+	else: [third time]
 		say "     Setting out on the campus in search of anything interesting, your ventures bring you close to the dorms of the college. Some of the rooms are probably abandoned, so it might not be too bad of an idea to peek through the windows for any supplies. Unfortunately, it seems most of the rooms have nothing of value. Just as you are about to give up, you hear the faint sound of someone moaning from one of the windows ahead of you. You sneak along the side of the building to where you heard the noise, and have a little peek. Inside, you see a familiar looking feline and canine going at it. The cat is on his back, legs sticking out on both sides, while the dog is between them, thrusting inside of Jadako. 'O-oh yeah! Take me harder, Coach!' the lithe anthro moans, as you pull your head away from the window.";
-		LineBreak;
-		say "     [bold type]It looks pretty steamy in there. While you don't think you'll get anything out of it, do you want to stay and watch the action?[roman type][line break]";
+		say "[line break]     [bold type]It looks pretty steamy in there. While you don't think you'll get anything out of it, do you want to stay and watch the action?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Watch the two lovers get each other off.";
 		say "     ([link]N[as]n[end link]) - Scram. It's a private moment!";
 		if Player consents:

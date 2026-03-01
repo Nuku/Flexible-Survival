@@ -63,7 +63,7 @@ carry out WriteANote:
 	say "[bold type]You open your journal and write...[roman type][line break][line break]";
 	get a long line of input;
 	if "[current long line of input]" is not "":
-		let DayCount be (240 - turns ) divided by 8; [starting turn (240) minus current turn divided by 8 (the amount of turns in a day)]
+		let DayCount be (240 - turns) divided by 8; [starting turn (240) minus current turn divided by 8 (the amount of turns in a day)]
 		choose a blank row in the table of JournalNotes;
 		now Date entry is Daycount;
 		if debugactive is 1:

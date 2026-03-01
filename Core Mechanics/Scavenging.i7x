@@ -21,7 +21,7 @@ carry out ScavengingAction:
 	else:
 		now battleground is "Outside";
 	say "You set out in the desperate search of food and water.";
-	let the bonus be (( Perception of Player minus 10 ) divided by 2);
+	let the bonus be ( Perception of Player minus 10 ) divided by 2;
 	if "Survivalist" is listed in feats of Player, increase bonus by 4;
 	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	let the dice be a random number from 1 to 20;

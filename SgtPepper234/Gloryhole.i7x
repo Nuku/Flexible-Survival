@@ -9,126 +9,75 @@ Bathroom Stalls	"Bathroom Stalls"
 
 Bathroom Stalls is a room.
 Bathroom Stalls is inside of Mall Restroom.
-
-Description of Bathroom Stalls is "     These dingy bathroom stalls are separated by cheap plasticized chipboard barriers. Slick patches of white gunk cover the floors and the musty odor of sex fills the air. The doors that still have latches actually have some degree of functionality, though a few stalls are without any doors at all. There is gap beneath the doors, barriers and the floor, as is usual for a cheaply constructed mall bathroom. Holes of varying sizes have been drilled into the stall walls and made less hazardous by the addition of duct tape. Their purpose is obvious.";
+Description of Bathroom Stalls is "     These dingy bathroom stalls are separated by cheap plasticized chipboard barriers. Slick patches of white gunk cover the floors and the musty odor of sex fills the air. The doors that still have latches actually have some degree of functionality, though a few stalls are without any doors at all. There is a gap beneath the doors, barriers and the floor, as is usual for a cheaply constructed mall bathroom. Holes of varying sizes have been drilled into the stall walls and made less hazardous by the addition of duct tape. Their purpose is obvious.[line break]".
 
 Gloryhole is an object. It is in the Bathroom Stalls. It is fixed in place. Understand "hole" as Gloryhole.
-Description of Gloryhole is "The gloryholes are drilled in both barriers either side of you, at varying heights so anyone can use them. Though this is clearly not the most sanitary of places, it maintains anonymity. Do you want to [link]have some fun[as]use Gloryhole[end link] and get your rocks off with some anonymous partners?";
+Description of Gloryhole is "     The gloryholes are drilled in both barriers to either side of you, at varying heights so anyone can use them. Though this is clearly not the most sanitary of places, it maintains anonymity. Do you want to [link]have some fun[as]use Gloryhole[end link] and get your rocks off with some anonymous partners?[line break]".
 
 UseGloryhole is an action applying to nothing.
-understand "use hole" and "fuck hole" and "fuck gloryhole" and "use gloryhole" and "use ass" and "use cock" and "use pussy" as UseGloryhole.
+understand "use hole/gloryhole/ass/cock/pussy" and "fuck hole/gloryhole" as UseGloryhole.
 
 check UseGloryhole:
 	if Gloryhole is not visible, say "What? There is nothing like that here." instead;
 
 carry out UseGloryhole:
-	say "     [bold type]Looking at the dingy surroundings and patches of dried cum does bring up some second thoughts. Are you really sure, and what exactly do you want to do?[roman type][line break]";
+	say "[line break]     [bold type]Looking at the dingy surroundings and patches of dried cum does bring up some second thoughts. Are you really sure, and what exactly do you want to do?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Put your crotch up against the hole and have someone pleasure you.";
 	say "     [link](2)[as]2[end link] - Put your ass up against the hole and offer yourself to fuck.";
 	say "     [link](3)[as]3[end link] - Kneel in front of the hole and offer your mouth to a willing stranger.";
 	say "     [link](4)[as]4[end link] - Nope, get the hell out of this filthy cesspool.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-			break;
-		else:
-			say "Invalid choice. Type [link]1[end link] to put your crotch against the hole, [link]2[end link] to offer yourself to fuck, [link]3[end link] to give a blowjob or [link]4[end link] to leave..";
+		if calcnumber < 1 or calcnumber > 4:
+			say "Invalid choice. Type [link]1[end link] to put your crotch against the hole, [link]2[end link] to offer yourself to fuck, [link]3[end link] to give a blowjob or [link]4[end link] to leave.";
+	LineBreak;
 	if calcnumber is 1:
-		LineBreak;
-		say "[GholeGiverRandomChoice]";
+		say "[one of][GholeGiverScene0][or][GholeGiverScene1][purely at random]";
 	else if calcnumber is 2:
-		LineBreak;
-		say "[GholeFuckRandomChoice]";
+		say "[one of][GholeFuckCollie][or][GholeFuckHorse][purely at random]";
 	else if calcnumber is 3:
-		LineBreak;
-		say "[GholeBJRandomChoice]";
+		if a random number from 1 to 4 is:
+			-- 1: say "[GholeBJDog]";
+			-- 2: say "[GholeBJHorse]";
+			-- 3: say "[GholeBJMichael]";
+			-- 4: say "[GholeBJNaga]";
 	else:
-		LineBreak;
 		say "     Deciding you want no part of what this disgusting bathroom has to offer today, you turn tail and leave the gloryholes, taking note of its location... Just so you know to avoid it later of course.";
 
-to say GholeGiverRandomChoice:
-	let randomnumber be a random number from 1 to 2;
-	if randomnumber is:
-		-- 1:
-			say "[GholeGiverScene1]";
-		-- 2:
-			say "[GholeGiverScene1]";
-
-to say GholeFuckRandomChoice:
-	let randomnumber be a random number from 1 to 2;
-	if randomnumber is:
-		-- 1:
-			say "[GholeFuckCollie]";
-		-- 2:
-			say "[GholeFuckHorse]";
-
-to say GholeBJRandomChoice:
-	let randomnumber be a random number from 1 to 4;
-	if randomnumber is:
-		-- 1:
-			say "[GholeBJDog]";
-		-- 2:
-			say "[GholeBJHorse]";
-		-- 3:
-			say "[GholeBJMichael]";
-		-- 4:
-			say "[GholeBJNaga]";
-
-
-to say GholeGiverScene1:
-	let RandomBJPartner be a random number from 1 to 10;
-	let RandomBJInfection be "Doberman Male";
-	if RandomBJPartner is:
-		-- 1:
-			now RandomBJInfection is "Doberman Male";
-		-- 2:
-			now RandomBJInfection is "German Shepherd Male";
-		-- 3:
-			now RandomBJInfection is "Husky Alpha";
-		-- 4:
-			now RandomBJInfection is "Horseman";
-		-- 5:
-			now RandomBJInfection is "Donkeyman";
-		-- 6:
-			now RandomBJInfection is "Stallionboi";
-		-- 7:
-			now RandomBJInfection is "Leopardman";
-		-- 8:
-			now RandomBJInfection is "Wolverine Guard";
-		-- 9:
-			now RandomBJInfection is "Mall Rat";
-		-- 10:
-			now RandomBJInfection is "Alpha Wolf";
+to say GholeGiverScene0:
+	let RandomBJInfection be "Alpha Wolf";
+	if a random number from 1 to 10 is:
+		-- 1: now RandomBJInfection is "Doberman Male";
+		-- 2: now RandomBJInfection is "German Shepherd Male";
+		-- 3: now RandomBJInfection is "Husky Alpha";
+		-- 4: now RandomBJInfection is "Horseman";
+		-- 5: now RandomBJInfection is "Donkeyman";
+		-- 6: now RandomBJInfection is "Stallionboi";
+		-- 7: now RandomBJInfection is "Leopardman";
+		-- 8: now RandomBJInfection is "Wolverine Guard";
+		-- 9: now RandomBJInfection is "Mall Rat";
+	say "     The bathrooms are quiet at the moment and you're sure no one saw you enter. Shutting the barely functional latch on the door, you [SelfStripCrotch], then step up to the hole. Pressed against the flimsy wall, you wait with trepidation and increasing arousal for someone to enter the adjacent stall.";
+	say "     .";
+	say "     ..";
+	say "     ...";
+	say "     ....";
+	say "     .....";
+	say "     ......";
+	WaitLineBreak;
 	if Player is male: [male + herm]
-		say "     The bathrooms are quiet at the moment and you're sure no one saw you enter. Shutting the barely functional latch on the door, you [SelfStripCrotch], then step up to the hole. Pressed against the flimsy wall, you wait with trepidation and increasing arousal for someone to enter the adjacent stall.";
-		say "     .";
-		say "     ..";
-		say "     ...";
-		say "     ....";
-		say "     .....";
-		say "     ......";
-		WaitLineBreak;
 		say "     Although your cock is turgid with excitement, you're starting to lose hope of anonymously getting your wick wet when suddenly someone enters the bathroom and the stall next to yours. Two knocks at the wall means they're ready to receive. With some trepidation you slide your cock through the hole, and into the warm waiting mouth of whoever is on the other side. A sharp intake of breath is all the indication they need to start sucking, and boy are they enthusiastic about it! You are practically sucked flush against the stall wall as pleasurable sensations wrack your member while the skillful tongue explores the engorged cock head in its mouth. Moans of delight mirror your own, exciting you even more with the knowledge that the stranger in the next cubicle gets as much enjoyment from this depraved act as you do. Your hands grip tightly at the top of the cubicle walls, knuckles whitening as you fight to hold back the explosion that has been building in the base of your groin.";
-		say "     The cocksucker on the other side is only becoming more eager to receive your powerful seed, as evidenced by the expert ministrations of their tongue as it slips through the hole to lick at your throbbing balls/underside of your throbbing meat pole. The groaning from next door reaches its peak and you realize that your eager cock holster has just cum. This is confirmed by the ropes of jizz that erupt from the partition to cover your feet and ankles in a gloriously sticky white mess. The sensations become too much for you to hold back any more and, knees quaking with ecstatic frenzy, you explode into the eagerly sucking mouth. Your hips crash against the wall trying to force the geyser like eruptions of pleasure further down your anonymous partners throat. Throughout your release the eager slut in the next stall doesn't spill a drop of your alabaster cream, instead relishing every small eruption of seed in their mouth and swallowing eagerly.";
+		say "     The cocksucker on the other side is only becoming more eager to receive your powerful seed, as evidenced by the expert ministrations of their tongue as it slips through the hole to lick at [if Player is not internalBalls]your throbbing balls[else]the underside of your throbbing meat pole[end if]. The groaning from next door reaches its peak and you realize that your eager cock holster has just cum. This is confirmed by the ropes of jizz that erupt from the partition to cover your feet and ankles in a gloriously sticky white mess. The sensations become too much for you to hold back any more and, knees quaking with ecstatic frenzy, you explode into the eagerly sucking mouth. Your hips crash against the wall trying to force the geyser like eruptions of pleasure further down your anonymous partner's throat. Throughout your release the eager slut in the next stall doesn't spill a drop of your alabaster cream, instead relishing every small eruption of seed in their mouth and swallowing eagerly.";
+		CreatureSexAftermath "[RandomBJInfection]" receives "OralCock" from "Player";
 		WaitLineBreak;
 		say "     Knees still shaking slightly from the aftershock of your orgasm, you can't help but be a little sad when you feel the lips of your partner slide silkily down your pole and kiss the dribbling tip of your cock before standing to leave the bathroom. You [SelfDressCrotch], then exit the bathroom, wondering what pleasures your next visit may bring.";
-		CreatureSexAftermath "[RandomBJPartner]" receives "OralCock" from "Player";
 	else:
-		say "     The bathrooms are quiet at the moment and you're sure no one saw you enter. Shutting the barely functional latch on the door, you [SelfStripCrotch], then step up to the hole. Pressed against the flimsy wall, you wait with trepidation and increasing arousal for someone to enter the adjacent stall.";
-		say "     .";
-		say "     ..";
-		say "     ...";
-		say "     ....";
-		say "     .....";
-		say "     ......";
-		WaitLineBreak;
 		say "     Although your pussy is wet with excitement, you're starting to lose hope of anonymously getting your bean flicked when suddenly someone enters the bathroom and the stall next to yours. Two knocks at the wall means they're ready to receive. With some trepidation, you press your pelvis against the hole, where the warm waiting mouth of the stranger next door is ready for you. A sharp intake of breath is all the indication they need to start licking, and boy are they enthusiastic about it! Two fingers press inside your slick passage as the skillful tongue explores your engorged clitoris locked between the stranger's lips. Moans of delight mirror your own, exciting you even more with the knowledge that the stranger in the next cubicle gets as much enjoyment from this depraved act as you do. Your hands grip tightly at the top of the cubicle walls, knuckles whitening as you fight to hold back the explosion that has been building in the base of your groin.";
-		say "     The muff-diver on the other side is only becoming more eager to give you release, as evidenced by the expert ministrations of their tongue as it slips through the folds of your labia to lick at your twitching hole. The groaning from next door reaches its peak and you realize that your eager partner has just cum. This is confirmed by the ropes of jizz that erupt from the partition to cover your feet and ankles in a gloriously sticky white mess. The sensations become too much for you to hold back any more and, knees quaking with ecstatic frenzy, you explode into the eagerly sucking mouth. Your hips crash against the wall trying to force the geyser like eruptions of pleasure to drench your partners face. Throughout your release the eager slut in the next stall doesn't spill a drop of your honey-like femcum, instead relishing every small eruption of ejaculate in their mouth and swallowing eagerly.";
+		say "     The muff-diver on the other side is only becoming more eager to give you release, as evidenced by the expert ministrations of their tongue as it slips through the folds of your labia to lick at your twitching hole. The groaning from next door reaches its peak and you realize that your eager partner has just cum. This is confirmed by the ropes of jizz that erupt from the partition to cover your feet and ankles in a gloriously sticky white mess. The sensations become too much for you to hold back any more and, knees quaking with ecstatic frenzy, you explode into the eagerly sucking mouth. Your hips crash against the wall trying to force the geyser like eruptions of pleasure to drench your partner's face. Throughout your release the eager slut in the next stall doesn't spill a drop of your honey-like femcum, instead relishing every small eruption of ejaculate in their mouth and swallowing eagerly.";
+		CreatureSexAftermath "[RandomBJInfection]" receives "OralPussy" from "Player";
 		WaitLineBreak;
-		say "     Knees still shaking slightly from the aftershock of your orgasm, you can't help but be a little sad when you feel your partners tongue slide silkily along your sopping wet slit and kiss the twitching tip of your clit before standing to leave the bathroom. You [SelfDressCrotch], then exit the bathroom, wondering what pleasures your next visit may bring.";
-		CreatureSexAftermath "[RandomBJPartner]" receives "OralPussy" from "Player";
+		say "     Knees still shaking slightly from the aftershock of your orgasm, you can't help but be a little sad when you feel your partner's tongue slide silkily along your sopping wet slit and kiss the twitching tip of your clit before standing to leave the bathroom. You [SelfDressCrotch], then exit the bathroom, wondering what pleasures your next visit may bring.";
 
 to say GholeGiverScene1:
 	if Player is male: [male + herm]
@@ -150,8 +99,7 @@ to say GholeFuckCollie:
 		say "     Backing off the cock makes your eager shemale whine in frustration. The steel-hard cock twitches and spurts pre at you, dripping wet from your oral attention. You don't want to keep your mate waiting and you turn to present your eager quim to the canine morph. Pressing back into it causes her to moan in appreciation. The heat from the puppy pecker is intense between your labia. The pointed tip presses against your opening, firm and ready to fuck you. You arch your back and press against the stiff pecker, sliding it easily into your slick tunnel. The sounds of panting can be heard from the other stall, mirrored by your own moans of pleasure as she penetrates you deeply. Eager to get her rocks off in your sweet cunt, the collie begins to fuck your hole in earnest, rutting hard against the stall barrier. You in turn press eagerly against her thrusts, relishing the feeling of the dog's hot cock sliding through your tight passage.";
 		WaitLineBreak;
 		say "     A constant supply of precum keeps your pussy greased, allowing the collie access to the deepest part of you. Her hammering is relentless and your knees quake as you try keep your senses about you. The intense stimulation of the hot dick pressing against your g-spot over and over makes you squirt clear lust juices all over the floor and toilet. Adding to the sweet sensation of getting fucked is an insistent pressure at you opening each time the dog dick slides deep enough, clearly the shemale wishes to knot you.";
-		say "     [bold type]Let her knot you? You could be here for some time.[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Let her knot you? You could be here for some time.[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yeah, take that canine cock to the fullest.";
 		say "     ([link]N[as]n[end link]) - Nah, keep the knot outside.";
 		if Player consents:
@@ -169,8 +117,7 @@ to say GholeFuckCollie:
 		say "     A yelp of delight can be heard from the opposing stall as you throat the member, earning you a spray of salty precum that makes you salivate even more on the canine rod. You continue to suck and slobber all over the dog-dick, preparing it for the main course. The fortunate soul next door to you is groaning and yipping in their ecstasy, humping forcefully into your wet mouth and adding to the slick with more precum. The collie groans and becomes erratic in her movements, clearly she is getting close. Backing off the cock makes your eager shemale whine in frustration. The steel-hard cock twitches and spurts pre at you, dripping wet from your oral attention. You don't want to keep your mate waiting and you turn to present your eager hole to the canine morph. Pressing back into it causes her to moan in appreciation. The heat from the puppy pecker is intense between your cheeks. The pointed tip presses against your ring, firm and ready to fuck you.";
 		WaitLineBreak;
 		say "     You arch your back and press against the stiff pecker, sliding it easily into your ass. The sounds of panting can be heard from the other stall, mirrored by your own moans of pleasure as she penetrates you deeply. Eager to get her rocks off in your sweet ass, the collie begins to fuck your hole in earnest, rutting hard against the stall barrier. You in turn press eagerly against her thrusts, relishing the feeling of the dog's hot cock sliding through your tight passage. A constant supply of precum keeps your anus greased, allowing the collie access to the deepest part of you. Her hammering is relentless and your knees quake as you try keep your senses about you. The intense stimulation of the hot dick pressing against your prostate over and over makes your own cock spray ropes of cum over the floor and toilet. Adding to the sweet sensation of getting fucked is an insistent pressure at you ring each time the dog dick slides deep enough, clearly the shemale wishes to knot you.";
-		say "     [bold type]Let her knot you? You could be here for some time.[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Let her knot you? You could be here for some time.[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yeah, take that canine cock to the fullest.";
 		say "     ([link]N[as]n[end link]) - Nah, keep the knot outside.";
 		if Player consents:
@@ -186,7 +133,6 @@ to say GholeFuckCollie:
 		CreatureSexAftermath "Player" receives "AssFuck" from "Smooth Collie Shemale";
 
 to say GholeFuckHorse:
-	setmonster "Horseman";
 	if Player is female:
 		say "     A powerful male musk hits you full in the face even before you see what kind of cock you'll be servicing. Following on the heels of its own scent is a horse cock as thick as your arm with a head like a balled fist. The beast twitches and jumps in front of your eyes, and you bend over instinctively to give it a long luxurious lick from the head to the medial ring. The equine cock has a salty tang that makes your head spin, and upon reaching the ring you catch a glimpse of the beast's balls behind the gloryhole opening. Two massive globes as big around as a melon each, sit pendulously waiting to empty themselves inside you.";
 		say "     Excitedly you return to the head of the member and rub the flat face into your lips and open mouth, savoring the heady flavor that overrides all other senses. You want to make sure the cock is good and slippery when you take it inside you, so you use your tongue to explore the wide urethral opening, tasting the horse pre that collects inside it. Pushing forward you manage to get the whole head into your wide-open mouth relatively easily. The powerful stallion in the opposite stall grunts his appreciation, thrusting forward a little into your welcoming cock holster. With effort you straighten your gullet and move forward along the massive pole. The thick horse rod is difficult to swallow, but you muster your strength and successfully take the beast past your esophageal sphincter, allowing him to delve deeper.";
@@ -220,7 +166,7 @@ to say GholeFuckHorse:
 		say "     Too weak to move out of the way, you catch your breath while he finishes over you, actually enjoying the cum bath. Finally, the virile stallion removes his now flaccid cock from the gloryhole and leaves without saying a word to you. Ungrateful bastard you think with a smirk, but still, at least you had fun. You creep out of the stalls to find some old towels to wipe clean with before changing and going about your merry way, your gaping ass still leaking cum into your gear as you walk.";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Horseman";
 
-to say GholeFuckGryphon:
+[to say GholeFuckGryphon:
 	if Player is female:
 		if anallevel is 3 and a random chance of 1 in 2 succeeds: [more anal active, 50% chance]
 			say "     <Player ass-fucked by Blue Gryphon>";
@@ -242,7 +188,7 @@ to say GholeFuckHyena:
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Hyena Herm";
 	else:
 		say "     <Player ass-fucked by Herm Hyena>";
-		CreatureSexAftermath "Player" receives "AssFuck" from "Hyena Herm";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Hyena Herm";]
 
 to say GholeBJDog:
 	say "     The bathrooms are quiet at the moment and you're sure no one saw you enter. After shutting the barely functional latch on the door, it isn't long before someone enters. You kneel down on the grimy floor and knock twice at the hole, signaling you willingness to receive. There is some shuffling and moving about as your partner readies themselves. Your heart is beating in your chest, and you are eager to see what kind of dick you'll be sucking today. Through the hole comes a glistening canine pecker. Its veined shaft and throbbing girth look so inviting, and you lick your lips in anticipation of what it will taste like. It must belong to a shemale collie, or perhaps one of the German shepherd or husky morphs, you don't really care either way so long as you get to suck on it. It twitches slightly and seems to throb with excitement as your stare. A small drop of pre leaks from the tip.";
@@ -253,16 +199,11 @@ to say GholeBJDog:
 	WaitLineBreak;
 	say "     Reaching your peak as a result of this delightfully debauched situation, you drench your bottoms as your own powerful orgasm takes you. Shaking and convulsing, you almost forget about the thick doggie cock resting in your throat, powerfully squirting ropes of cum into your hungry stomach. The knot held steady by your hand has swollen so much, it can no longer be removed from the hole. The pulsing pole in your mouth eventually slows to the occasional twitch and spurt, so you pull back until the tip is just resting in your mouth.";
 	say "     You are patient with your trapped companion, allowing the knot to slowly deflate while you continue to suckle at the still-squirting cock head. After a quarter hour or so the knot deflates enough to be pulled out. With a final kiss on the softening tip, you bid farewell to your companion as you quickly and quietly exit the bathroom.";
-	let randomBJPartner be a random number from 1 to 4;
-	if randomBJPartner is:
-		-- 1:
-			CreatureSexAftermath "Player" receives "OralCock" from "Smooth Collie Shemale";
-		-- 2:
-			CreatureSexAftermath "Player" receives "OralCock" from "Husky Alpha";
-		-- 3:
-			CreatureSexAftermath "Player" receives "OralCock" from "German Shepherd Male";
-		-- 4:
-			CreatureSexAftermath "Player" receives "OralCock" from "Doberman Male";
+	if a random number from 1 to 4 is:
+		-- 1: CreatureSexAftermath "Player" receives "OralCock" from "Smooth Collie Shemale";
+		-- 2: CreatureSexAftermath "Player" receives "OralCock" from "Husky Alpha";
+		-- 3: CreatureSexAftermath "Player" receives "OralCock" from "German Shepherd Male";
+		-- 4: CreatureSexAftermath "Player" receives "OralCock" from "Doberman Male";
 
 to say GholeBJHorse:
 	say "     The bathrooms are quiet at the moment and you're sure no one saw you enter. After shutting the barely functional latch on the door, it isn't long before someone enters. You kneel down on the grimy floor and knock twice at the hole, signaling you willingness to receive. There is some shuffling and moving about as your partner readies themselves. Your heart is beating in your chest, and you are eager to see what kind of dick you'll be sucking today. The hole is a large one and you easily peek through to see a large stallion-morph on the other side. He glances down, catching your eye and grinning he says, 'I hope you're able to handle me in that little mouth of yours.' You gasp as his three-inch-thick cock slides out of his sheath and just keeps coming. A foot of mottled pink and black equine power passes through the hole, not including the medial ring. It isn't even hard yet. 'Get to it glory-whore!' comes a commanding whinny from the adjacent stall.";
@@ -285,7 +226,7 @@ to say GholeBJMichael:
 		WaitLineBreak;
 		say "     Through all his stuttering and apologizing you manage to assure him that you really enjoyed it and are actually quite pleased he was able to let loose like he did. He continues to thank you multiple times as he gets dressed. Before he leaves he bends down to the hole and whispers, 'I kn-kn-know this is s-s-supposed to be an-an-an-anonymous and all b-but... M-M-M-Michael, m-my name is M-Michael.' You wonder whether you'll see Michael again.";
 		now MichaelGholeMeetings is 1;
-	else if MichaelGholeMeetings is 1: [repeat]
+	else: [repeat]
 		say "     'Uh hi,' you hear from the adjacent box. 'Can you, umm, p-p-please su-su-suck me?' Looking through the hole in the wall, you see Michael, the same nervous mall rat from before. Whispering through the hole, you tell him that you look forward to tasting his delicious cock again. 'Oh, i-i-it's you again!' he says with a smile, dropping his pants and eagerly pushing his pink rod through the gloryhole.";
 		say "     Gripping the twitching pink length in your hand, you smile to hear your fretful partners sharp intake of breath. You begin to gently stroke his cock, eliciting a moan from the other side. The shaky rat releases a generous amount of precum, which you use to add slickness to the rock-hard pole in your hand, before descending to take the whole member into your mouth in one smooth motion.";
 		WaitLineBreak;
@@ -300,35 +241,30 @@ to say GholeBJNaga:
 	if Player is male: [male + herm]
 		say "     The bathrooms are quiet at the moment and you're sure no one saw you enter. After shutting the barely functional latch on the door, it isn't long before someone enters. You kneel down on the grimy floor and knock twice at the hole, signaling you willingness to receive. There is some shuffling and moving about as your partner readies themselves. Your heart is beating in your chest, and you are eager to see what kind of dick you'll be sucking today. A musky familiar smell fills your nostrils as you wait eagerly for something to come through the hole. It is one of the bigger gloryholes and you're about to steal a peek at your stall partner when the glistening scaly cloaca of a naga appears pressed against the opening. 'Lick me, pleassse!' comes the eager plea from the adjacent booth. Not one to keep your public waiting, you press your lips eagerly against her wet cloaca.";
 		say "     The naga hisses in pleasured bliss as your tongue slides inside the sweet canal and laps eagerly at her flowing juices. He powerful scaled body presses against the stall walls trying to give you more access to her most tender of places. You in turn try your best to please the scaly woman with your tongue, delving deep in repetitive strokes before lapping gently at her outer opening. Her cloaca has become red and engorged with arousal. 'Pleassse,' you hear her ask, 'let me insssside witttth you.'";
-		say "     [bold type]Do you want to let the lusty reptile join you in your stall?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you want to let the lusty reptile join you in your stall?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Let her join you.";
 		say "     ([link]N[as]n[end link]) - Refuse.";
 		if Player consents:
 			LineBreak;
 			say "     Excitedly you tell her you'd love for her to join you, and you move back to sit on the toilet. With an elated hiss the snake woman presses her beautiful head through the hole and begins to slither into your cramped little bathroom stall. You watch with amazement as her body contracts and shifts to allow her reptilian bulk through such a relatively small opening. It is with some trepidation that watch her uncoil before you, realizing just how built this naga really is. Her tail must be fifteen long alone. She towers over you in this cramped space - hanging onto either side of the stall walls as she brings her dripping cloaca to your face once more.";
-			say "     'Thank you my ssssssweet, now where were weeee?' she says before bearing her sex down upon your face. Once more you are licking at her swollen opening. The reptile tastes sweet, but there is a salty familiarity in her sex too, though you ignore it because you are eager to please. The scaled beastess gyrates powerfully against you, mashing her slick cloaca against your face in her pleasure. The reptilian tail uncoils under and thrashes wildly in the stall, almost uncontrolled. Suddenly she backs off your face, heaving and breathing hard. You can see her cloaca is pulsating, letting off rivulets of snake oil in its eagerness to be pleasured. 'My sssweet playmate,' she hisses, grinning down at you with her beautiful eyes. 'Perhapsssss you would like sssome pleassssure of your own?' It occurs to you that she could hypnotize you if she wanted, but she isn't doing so. Perhaps she prefers a willing partner.";
-			LineBreak;
-			say "     [bold type]This amorous reptile clearly wants to step it up a notch. Will you take her up on the offer?[roman type][line break]";
+			say "     'Thank you, my ssssssweet, now where were weeee?' she says before bearing her sex down upon your face. Once more you are licking at her swollen opening. The reptile tastes sweet, but there is a salty familiarity in her sex too, though you ignore it because you are eager to please. The scaled beastess gyrates powerfully against you, mashing her slick cloaca against your face in her pleasure. The reptilian tail uncoils under and thrashes wildly in the stall, almost uncontrolled. Suddenly she backs off your face, heaving and breathing hard. You can see her cloaca is pulsating, letting off rivulets of snake oil in its eagerness to be pleasured. 'My sssweet playmate,' she hisses, grinning down at you with her beautiful eyes. 'Perhapsssss you would like sssome pleassssure of your own?' It occurs to you that she could hypnotize you if she wanted, but she isn't doing so. Perhaps she prefers a willing partner.";
+			say "[line break]     [bold type]This amorous reptile clearly wants to step it up a notch. Will you take her up on the offer?[roman type][line break]";
 			say "     [link](1)[as]1[end link] - Let her ride your cock.";
-			say "     [link](2)[as]2[end link] - Let her shove that scaly tail deep inside you. ([italic type]Extreme Content Warning[roman type])";
+			say "     [link](2)[as]2[end link] - Let her shove that scaly tail deep inside you. ([italic type]Extreme Content Warning[roman type])[line break]";
 			say "     [link](3)[as]3[end link] - Refuse.";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Type [link]1[end link] to fuck her, [link]2[end link] to be tail-fucked or [link]3[end link] to refuse.";
+			LineBreak;
 			if calcnumber is 1:
-				LineBreak;
 				say "     You quickly undress, exposing your erect cock and indicating that you want her to ride you. The horny beastess doesn't need asking twice, and lowers her dripping hot cloaca onto your eager fuck-stick. 'Yessss my ssssweeeet,' she groans as her love channel undulates and shifts to hug your cock tightly in its velvety embrace, before the muscled reptilian woman begins to rhythmically fuck herself with your dick. The naga's motions are fluid and constant, just like her cloaca which shifts and squeezes your thick rod in a way you didn't think possible for a living creature. Such control is unheard of in any other of your partners. You are a slave to her pleasure, not needing to move or thrust or adjust yourself in any way. This lithe reptile predicts every move, and it isn't long before you are both moaning in sweet ecstasy. The naga's tail continues thrashing behind her, more wildly than before - An indicator of her approaching orgasm, as well as yours.";
 				say "     Your orgasm comes first as the reptilian channel enveloping your cock grips tightly around your pulsating manhood, seeming to suck the cum from your very balls. No sound exits your mouth as no sound can best vocalize this climax. Your face is set in a silent scream - a picture of bliss. The naga isn't far behind - gripping the stalls in her powerful arms she presses her bulk tightly against your spasming form, a gush of juices splashing against your pelvis, hissing as she rides out her own ecstasy. She collapses into a coiled heap as you both catch your breath, before slipping away under the door. 'Thanksssss amigo!' she says before slithering back down to her sewers. What a friendly naga, you think to yourself.";
 				CreatureSexAftermath "Player" receives "OralPussy" from "Naga";
 				CreatureSexAftermath "Naga" receives "PussyFuck" from "Player";
 			else if calcnumber is 2:
-				LineBreak;
 				say "     You look at the snake woman's powerful tail. Thin at the tip, but gradually growing in girth until it becomes her torso. A blush fills your cheeks and you bite your lower lip, imagining what it would feel like to have it penetrate you, wondering how much of it you could take. The naga follows your gaze to her tail, understanding dawning upon her sublime features. 'Oh that is precioussss, my sssssweeet.' She smiles sweetly. 'It will feel ssssssoooo good, yessssss?' Nodding and still blushing scarlet, you remove your clothes and scoot down so your ass hangs off the toilet seat. The powerful appendage has ceased thrashing in its uncontrolled expression of pleasure and moves its tip to rest against your clenching asshole, pressing only ever so slightly. 'Are you ready for thissssss?' your scaled lover asks. You are ready for it and you press your ass against the pressure of her tail tip, feeling its smooth scales slide easily into your anus.";
 				say "     You open your mouth to moan only to find it filled with wet cloaca once more. So you begin to work at it again, eager to provide the naga with as much pleasure as you hope she will give you. The armored tail slips deeper into your rectum, moving rhythmically out then back in faster than it left. Each new thrust sends it a little bit deeper, each new thrust stretches you a little bit wider. Your mouth works its magic on the dripping sex at your lips, causing your lover to bear down on your face in her excitement. The tail in your ass presses hard against your prostate and fountain of cum erupts from your neglected cock, though you didn't orgasm. Your slick salty fluid drips down, moistening the tail in your tail hole. She does it again and you grunt in her cloaca from the pleasure. Again and again she milks cum from your prostate, each time slickening the scaly appendage that seeks to bury itself inside you. When she thinks she has enough cum lube she resumes her violation of your tender rear.";
 				WaitLineBreak;
@@ -338,11 +274,10 @@ to say GholeBJNaga:
 				say "     Your reaction to being impaled goes unnoticed as the naga reaches a rutting frenzy on your sopping wet face. Her tail trashes inside your ass. Your legs are up off the ground, wide open to accommodate what feels like the girth of an arm inside you. The appendage thrashing inside you is holding you up and pushes deeper still. You move your hands to your abdomen, feeling the writhing tail find its way into your stomach. It is all too much and you cum, powerfully, although you barely notice it with all the other sensations vying for attention - your destroyed asshole, your lack of air, your writhing abdomen. Finally, mercifully, the ecstatic reptile cums screaming as she does so, drenching your face in her lust before slumping back against the door - tail still lodged deep in your ass though thankfully it no longer moves.";
 				say "     You glance down at your belly which still writhes gently though the sensation is not entirely un-pleasurable. The girth of tail at your ass is so broad you are forced to hold your legs apart as if you were in stirrups. The naga finally catches her breath and opens her eyes to see you impaled on nearly half her body. 'Sssssssssso sssssorry my dear, I sssseem to have gotten carried away.' Slowly, deliberately you're sure, the scaled appendage is withdrawn from your asshole. Your eyes gape in amazement. The thickest part was as wide around as your thigh. One foot, two feet - you feel the tip slip out of your stomach - three feet, four, five, six, seven! Seven feet of tail buried inside you. It feels as though a new highway has been built inside your colon, and the gape hasn't yet closed.";
 				WaitLineBreak;
-				say "     'You'll be okay yessssss?' she asks with genuine concern. You nod your head, grateful for the restorative nature of the nanites. She smiles before slipping away under the door. 'Thanksssss amigo!' she says before slithering back down to her sewers. What a friendly naga, you think to yourself.";
+				say "     'You'll be okay, yessssss?' she asks with genuine concern. You nod your head, grateful for the restorative nature of the nanites. She smiles before slipping away under the door. 'Thanksssss amigo!' she says before slithering back down to her sewers. What a friendly naga, you think to yourself.";
 				CreatureSexAftermath "Player" receives "OralPussy" from "Naga";
-				CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Naga";
+				CreatureSexAftermath "Player" receives "AssDildoFuck" from "Naga";
 			else:
-				LineBreak;
 				say "     You politely decline her offer, saying instead that you prefer to focus on her. Dutifully you return to lapping at her pulsating sex, and soon her thrusting becomes more insistent as she approaches her orgasm. The sultry snake rhythmically grinds her pelvis into your face, erupting a sweet and salty nectar into your mouth, which you swallow eagerly. She collapses into a coiled heap as you both catch your breath, before slipping away under the door. 'Thanksssss amigo!' she says before slithering back down to her sewers. What a friendly naga, you think to yourself.";
 				CreatureSexAftermath "Player" receives "OralPussy" from "Naga";
 		else:
@@ -352,35 +287,30 @@ to say GholeBJNaga:
 	else:
 		say "     A musky familiar smell fills your nostrils as you wait eagerly for something to come through the hole. It is one of the bigger gloryholes and you're about to steal a peek at your stall partner when the glistening scaly cloaca of a naga appears pressed against the opening. 'Lick me pleassse,' comes the eager plea from the adjacent booth. Not one to keep your public waiting, you press your lips eagerly against her wet cloaca.";
 		say "     The naga hisses in pleasured bliss as your tongue slides inside the sweet canal and laps eagerly at her flowing juices. He powerful scaled body presses against the stall walls trying to give you more access to her most tender of places. You in turn try your best to please the scaly woman with your tongue, delving deep in repetitive strokes before lapping gently at her outer opening. Her cloaca has become red and engorged with arousal. 'Pleassse,' you hear her ask, 'let me insssside witttth you.'";
-		say "     [bold type]Do you want to let the lusty reptile join you in your stall?[roman type][line break]";
-		LineBreak;
+		say "[line break]     [bold type]Do you want to let the lusty reptile join you in your stall?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Let her join you.";
 		say "     ([link]N[as]n[end link]) - Refuse.";
 		if Player consents:
 			LineBreak;
 			say "     Excitedly you tell her you'd love for her to join you, and you move back to sit on the toilet. With an elated hiss the snake woman presses her beautiful head through the hole and begins to slither into your cramped little bathroom stall. You watch with amazement as her body contracts and shifts to allow her reptilian bulk through such a relatively small opening. It is with some trepidation that watch her uncoil before you, realizing just how built this naga really is. Her tail must be fifteen long alone. She towers over you in this cramped space - hanging onto either side of the stall walls as she brings her dripping cloaca to your face once more. 'Thank you my ssssssweet, now where were weeee?' she says before bearing her sex down upon your face. Once more you are licking at her swollen opening.";
 			say "     The reptile tastes sweet, but there is a salty familiarity in her sex too, though you ignore it because you are eager to please. The scaled beastess gyrates powerfully against you, mashing her slick cloaca against your face in her pleasure. The reptilian tail uncoils under and thrashes wildly in the stall, almost uncontrolled. Suddenly she backs off your face, heaving and breathing hard. You can see her cloaca is pulsating, letting off rivulets of snake oil in its eagerness to be pleasured. 'My sssweet playmate,' she hisses, grinning down at you with her beautiful eyes. 'Perhapsssss you would like sssome pleassssure of your own?' It occurs to you that she could hypnotize you if she wanted, but she isn't doing so. Perhaps she prefers a willing partner.";
-			LineBreak;
-			say "     [bold type]This amorous reptile clearly wants to step it up a notch. Will you take her up on the offer?[roman type][line break]";
+			say "[line break]     [bold type]This amorous reptile clearly wants to step it up a notch. Will you take her up on the offer?[roman type][line break]";
 			say "     [link](1)[as]1[end link] - Let her grind against your wet cunt.";
-			say "     [link](2)[as]2[end link] - Let her shove that scaly tail deep inside you. ([italic type]Extreme Content Warning[roman type])";
+			say "     [link](2)[as]2[end link] - Let her shove that scaly tail deep inside you. ([italic type]Extreme Content Warning[roman type])[line break]";
 			say "     [link](3)[as]3[end link] - Refuse.";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
+				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Type [link]1[end link] to grind with her, [link]2[end link] to get a tail fuck or [link]3[end link] to refuse.";
+			LineBreak;
 			if calcnumber is 1:
-				LineBreak;
 				say "     You quickly undress, spreading your legs wide and exposing your sopping cunt. The horny beastess doesn't need further instructions and pushes her dripping hot cloaca against your leaking pussy. 'Yessss my ssssweeeet,' she groans as her love channel undulates and seemingly sucks at your soft labia, before beginning to rhythmically gyrate against your slick pelvis. The naga's motions are fluid and constant, just like her cloaca which shifts and squeezes your labia and clit in a way you didn't think possible for a living creature. Such control is unheard of in any other of your partners. You are a slave to her pleasure, not needing to move or thrust or adjust yourself in any way. This lithe reptile predicts every move, and it isn't long before you are both moaning in sweet ecstasy. The naga's tail continues thrashing behind her, more wildly than before - an indicator of her approaching orgasm, as well as yours.";
 				say "     Your orgasm comes first as the reptilian woman grinds and manipulated your love button with the most unfathomable skill. No sound exits your mouth as no sound can best vocalize this climax. Your face is set in a silent scream - a picture of bliss as the only sound is of the shaking stall and gushing fluids spilling from your sensitive cunt. The naga isn't far behind - gripping the stalls in her powerful arms she presses her bulk tightly against your spasming form, a gush of juices splashing against your pelvis, hissing as she rides out her own ecstasy. She collapses into a coiled heap as you both catch your breath, before slipping away under the door. 'Thanksssss amigo!' she says before slithering back down to her sewers. What a friendly naga, you think to yourself.";
 				CreatureSexAftermath "Player" receives "OralPussy" from "Naga";
 				CreatureSexAftermath "Player" receives "Stroking" from "Naga";
 			else if calcnumber is 2:
-				LineBreak;
 				say "     You look at the snake woman's powerful tail. Thin at the tip, but gradually growing in girth until it becomes her torso. A blush fills your cheeks and you bite your lower lip, imagining what it would feel like to have it penetrate you, wondering how much of it you could take. The naga follows your gaze to her tail, understanding dawning upon her sublime features. 'Oh that is precioussss, my sssssweeet.' She smiles sweetly. 'It will feel ssssssoooo good, yessssss?' Nodding and still blushing scarlet, you remove your clothes and scoot down so your ass hangs off the toilet seat. The powerful appendage has ceased thrashing in its uncontrolled expression of pleasure and moves its tip to rest against your glistening love channel, pressing only ever so slightly. 'Are you ready for thissssss?' your scaled lover asks. You are ready for it and you press your pelvis against the pressure of her tail tip, feeling its smooth scales slide easily into your vagina.";
 				say "     You open your mouth to moan only to find it filled with wet cloaca once more. So you begin to work at it again, eager to provide the naga with as much pleasure as you hope she will give you. The armored tail slips deeper into your love channel, moving rhythmically out then back in faster than it left. Each new thrust sends it a little bit deeper, each new thrust stretches you a little bit wider. Your mouth works its magic on the dripping sex at your lips, causing your lover to bear down on your face in her excitement. The tail in your cunt presses hard against your g-spot and you feel a sudden gush of fluids as your body responds to the pleasure, even if it's not enough to make you orgasm. Your slick femcum slides down the tail in your hole, lubricating just a little bit more of it. She does it again, and you moan into her cloaca from the sensation. Again and again she manipulates your abused love spot, until your pussy is sopping wet and practically drooling down her tail. When she thinks she has enough lube she resumes her violation of your tender lips.";
 				WaitLineBreak;
@@ -388,11 +318,10 @@ to say GholeBJNaga:
 				say "     Still you focus on the task at hand, though it's getting more difficult. However, as the snake becomes more excited, so does the tail become more erratic. The naga is becoming less focused the closer she draws to orgasm. You gasp as you feel the writhing appendage shove itself deeper inside you, the sudden intrusion stretching your cervix even wider. The snake woman seems to have forgotten your tongue is even there, choosing instead to press her bulging wet opening against your flustered face, grinding against you. The tail seems to have a mind of its own and you are thankful when you feel it slide out almost to the tip, only cry out in surprise as it shoots back inside, eager to open up your most intimate of places.";
 				WaitLineBreak;
 				say "     Your reaction to being impaled goes unnoticed as the naga reaches a rutting frenzy on your sopping wet face. Her tail trashes inside your abused hole. Your legs are up off the ground, wide open to accommodate what feels like the girth of an arm inside you. The appendage thrashing inside you is holding you up and pushes deeper still. It is all too much and you cum, powerfully, blacking out briefly as a result of the intense stimulation. Finally, mercifully, the ecstatic reptile cums screaming as she does so, drenching your face in her lust before slumping back against the door - tail still lodged in your pussy though thankfully it no longer moves. You glance down at your abdomen which still writhes gently though the sensation is not entirely un-pleasurable. The girth of tail in your vagina is so broad you are forced to hold your legs apart as if you were in stirrups.";
-				say "     The naga finally catches her breath and opens her eyes to see you stuffed with her wriggling tail. 'Sssssssssso sssssorry my dear, I sssseem to have gotten carried away.' Slowly, deliberately you're sure, the scaled appendage is withdrawn from you, leaving a gaping pussy and really sore uterus. You imagine it would be possible for an average girth cock to actually penetrate your cervix at this width, though you hope it rights itself. 'You'll be okay, yessssss?' she asks with genuine concern. You nod your head, grateful for the restorative nature of the nanites. She smiles before slipping away under the door. 'Thanksssss amigo!' she says before slithering back down to her sewers. What a friendly naga, you think to yourself.";
+				say "     The naga finally catches her breath and opens her eyes to see you stuffed with her wriggling tail. 'Sssssssssso sssssorry, my dear, I sssseem to have gotten carried away.' Slowly, deliberately you're sure, the scaled appendage is withdrawn from you, leaving a gaping pussy and really sore uterus. You imagine it would be possible for an average girth cock to actually penetrate your cervix at this width, though you hope it rights itself. 'You'll be okay, yessssss?' she asks with genuine concern. You nod your head, grateful for the restorative nature of the nanites. She smiles before slipping away under the door. 'Thanksssss, amigo!' she says before slithering back down to her sewers. What a friendly naga, you think to yourself.";
 				CreatureSexAftermath "Player" receives "OralPussy" from "Naga";
 				CreatureSexAftermath "Player" receives "PussyDildoFuck" from "Naga";
 			else:
-				LineBreak;
 				say "     You politely decline her offer, saying instead that you prefer to focus on her. Dutifully you return to lapping at her pulsating sex, and soon her thrusting becomes more insistent as she approaches her orgasm. The sultry snake rhythmically grinds her pelvis into your face, erupting a sweet and salty nectar into your mouth, which you swallow eagerly. She collapses into a coiled heap as you both catch your breath, before slipping away under the door. 'Thanksssss amigo!' she says before slithering back down to her sewers. What a friendly naga, you think to yourself.";
 				CreatureSexAftermath "Player" receives "OralPussy" from "Naga";
 		else:

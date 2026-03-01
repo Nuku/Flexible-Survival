@@ -3,20 +3,7 @@ Version 3 of Odd Weapons by Hellerhound begins here.
 
 Section 1 - Garbage Can Shield (Fallen Survivor Event)
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"Garbage Can Shield"	"This aluminum garbage can lid has been transformed into an improvised shield by riveting two loops of leather to the inside, perfect for sticking your forearm through. It is painted gold with a bold, crimson [']V['] across the surface. Looks like the paint ran down its front a bit before drying, giving the [']V['] a bleeding look."	4	garbage can shield
-
-garbage can shield is equipment. It is not temporary.
-Taur-compatible of garbage can shield is true.
-The AC of garbage can shield is 28.
-The effectiveness of garbage can shield is 30.
-Traits of garbage can shield is {"adventurous"}.
-The placement of garbage can shield is "shield".
-The descmod of garbage can shield is "You hold an aluminum garbage can lid strapped to your forearm as an improvised shield. It is painted gold with a bold, crimson [']V['] across the surface. Looks like the paint ran down its front a bit before drying, giving the [']V['] a bleeding look.".
-The slot of garbage can shield is "shield".
-
-the scent of garbage can shield is "Despite everything that you try to do about it, a slight scent of garbage seems to be an inescapable part of this makeshift shield. But hey... one makes use of what you get.".
+[garbage can shield moved to Core Mechanics/Equipment.i7x]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -31,8 +18,7 @@ to say ResolveEvent Fallen Survivor:
 	say "     The sudden metallic noise from behind you makes you jump out of your boots almost, whirling around to see what caused it. You see the tail end of a large house-cat zip around the nearby corner, leaving behind a large disc of metal that must have fallen over as it pushed past it. Upon further examination, you see that it is a garbage can lid - one that has been used to create an improvised shield. There are loops of leather riveted to the inside to slip your forearm through, as well as a painted front. Seems like the survivor had a DIY streak before he succumbed to... whatever got to him. Looking back over to the guy, you realize that you were on the best way to join him in his mind-broken state. Getting into contact seems to have negative side effects. That cat really saved your bacon!";
 	WaitLineBreak;
 	say "     Glancing back over to the mind-broken survivor, you resolve not to get anywhere close to him again. Hmpf, but hey - at least you got a nice shield out of this dreary situation. Then you notice what seems to be a pale, translucent 'grease' stubbornly smeared across the shield, including on the inside. Could this be what put the guy into the state he is in? Possibly... which means even the shield is useless to you. Or could you wipe it off with some of the scattered and ripped articles of clothing ever-present on the abandoned streets? It'd be risky, as you can't know if you'll manage to get it all off, but that still might be worth it, in the current situation.";
-	LineBreak;
-	say "     [bold type]Do you want to take the shield with you?[roman type][line break]";
+	say "[line break]     [bold type]Do you want to take the shield with you?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Sure, it might be useful.";
 	say "     ([link]N[as]n[end link]) - Nah, leave it. Surely it also carries his deadly contagion!";
 	if Player consents:
@@ -48,14 +34,15 @@ Section 2 - Infected Sword
 
 [infected sword moved to Core Mechanics/Weapons.i7x]
 
+washerenest is a number that varies.
+[fellforward is a number that varies.]
+
 Table of GameEventIDs (continued)
 Object	Name
 Sword Nest	"Sword Nest"
 
 Sword Nest is a situation.
 ResolveFunction of Sword Nest is "[ResolveEvent Sword Nest]".
-washerenest is a number that varies.
-fellforward is a number that varies.
 
 to say ResolveEvent Sword Nest:
 	say "     You come across the remains of a giant nest [if washerenest is 1]again[end if], probably belonging to gryphons. It is scattered, and sexual fluids of all kinds, not all from gryphons, cover the ground. It looks as if several gangs of different species fought here... or maybe 'played' as well. The ground is so thoroughly coated with it that you cannot enter without touching it.";
@@ -96,15 +83,12 @@ to say ResolveEvent Sword Nest:
 					say "     You lose the will to resist and proceed to follow every desire and lust.";
 					say "     You grab the slime in your hands and pour it over your head, and then grab some more, and think about what to do with it next.";
 					WaitLineBreak;
-					if Cunt Count of Player > 0:
-						say "     You take your slime-filled hands and shove them up your waiting cunt[sfn], filling [itthemf] with the sludge.";
-						say "[randomfimpreg][randomfimpreg][randomfimpreg]";
+					if Player is female:
+						say "     You take your slime-filled hands and shove them up your waiting cunt[sfn], filling [itthemf] with the sludge.[randomfimpreg][randomfimpreg][randomfimpreg]";
 						if anallevel > 1:
-							say "     You then shove them up your rear, filling it as well.";
-							say "[randommimpreg][randommimpreg][randommimpreg]";
+							say "     You then shove them up your rear, filling it as well.[randommimpreg][randommimpreg][randommimpreg]";
 					else if Player is mpreg_ok:
-						say "     You take your slime-filled hands and shove them up your waiting rear, filling it with the sludge.";
-						say "[randommimpreg][randommimpreg][randommimpreg]";
+						say "     You take your slime-filled hands and shove them up your waiting rear, filling it with the sludge.[randommimpreg][randommimpreg][randommimpreg]";
 						say "     You then try to drink all of the slime you can, tasting its deliciously dirty flavor.";
 					else:
 						say "     You decide to try and drink all of the slime you can, tasting its deliciously dirty flavor.";
@@ -134,7 +118,7 @@ to say ResolveEvent Sword Nest:
 		if Player consents:
 			LineBreak;
 			say "     You slosh through the mess, leaving a trail that fills after a couple of seconds. You get to the sword, and place it in your backpack, and trudge back.";
-			now fellforward is 1;
+			let fellforward be 1;
 			if a random number between 1 and 25 > Dexterity of Player:
 				say "     On the way, you fall headlong into the slime, and it takes a while to get up. After you emerge, you cough up slime and wipe it off your body.";
 				increase fellforward by 2;
@@ -163,6 +147,8 @@ Section 3 - Dirty Whip
 
 [Whip moved to Core Mechanics/Weapons.i7x]
 
+[numwater is a number that varies.]
+
 Table of GameEventIDs (continued)
 Object	Name
 Destroyed Bushes	"Destroyed Bushes"
@@ -170,7 +156,6 @@ Destroyed Bushes	"Destroyed Bushes"
 Destroyed Bushes is a situation.
 ResolveFunction of Destroyed Bushes is "[ResolveEvent Destroyed Bushes]".
 Sarea of Destroyed Bushes is "Park".
-[numwater is a number that varies.]
 
 to say ResolveEvent Destroyed Bushes:
 	say "     You come across a circle of bushes crushed flat against the ground, large pools of cum and juices in the revealed space. Horse hoof prints cover the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
@@ -184,7 +169,6 @@ to say ResolveEvent Destroyed Bushes:
 		else:
 			LineBreak;
 			say "You leave them alone.";
-		LineBreak;
 	say "     Do you wish to look around?";
 	if Player consents:
 		LineBreak;
@@ -203,7 +187,6 @@ to say ResolveEvent Destroyed Bushes:
 				else:
 					say "     You don't have enough water. Maybe you could come back when you find more?";
 			if Resolution of Destroyed Bushes is 0:
-				LineBreak;
 				say "     Do you wish to pick it up anyway?";
 				if Player consents:
 					LineBreak;

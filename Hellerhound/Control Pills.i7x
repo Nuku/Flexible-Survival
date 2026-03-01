@@ -1,5 +1,9 @@
 Control Pills by Hellerhound begins here.
 
+fertiletime is a number that varies.
+wasfertilef is a number that varies.
+wassterilef is a number that varies.
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "fertile pill"	"A small blue pill, with the words 'Fertile 9h' on it. You've never seen the like before."	1	fertile pill
@@ -7,16 +11,12 @@ name	desc	weight	object
 fertile pill is a grab object. Usedesc of fertile pill is "[fertilepilluse]".
 understand "Fertile" and "Pill" as fertile pill.
 
-fertiletime is a number that varies.
-wasfertilef is a number that varies.
-wassterilef is a number that varies.
-
 to say fertilepilluse:
 	say "     You pop the odd pill into your mouth and swallow.";
 	if child is not born and gestation of child > 0:
 		decrease the gestation of child by 4;
 		say "[line break]     Your pregnant belly feels odd as it expands quickly. Looks like the child will be coming a little sooner.";
-	if inheat is true:[extend heat]
+	if inheat is true: [extend heat]
 		decrease turns in heat by 8;
 		say "[line break]     Your [if heatform is 0]cunt[else]anus[end if] seems to be getting even [if heatform is 0]wetter[else]looser[end if], and the heat more intense. Looks like it'll last a bit longer now.";
 	if fertiletime is 0:
@@ -34,16 +34,16 @@ to say fertilepilluse:
 	add "Fertile" to the feats of Player, if absent;
 	now Sterile of Player is false;
 
+steriletime is a number that varies.
+wasfertile is a number that varies.
+wassterile is a number that varies.
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "birth control pill"	"A small red pill, supposed to prevent accidental conception. It says 'lasts for 30 days', but with the nanites around, it's probably more like 3..."	1	birth control pill
 
 birth control pill is a grab object. Usedesc of birth control pill is "[controlpilluse]".
 understand "Control" and "Birth" and "Birth Control" and "Pill" as birth control pill.
-
-steriletime is a number that varies.
-wasfertile is a number that varies.
-wassterile is a number that varies.
 
 to say controlpilluse:
 	say "     You pop the pill into your mouth and swallow.";
@@ -72,34 +72,34 @@ to say controlpilluse:
 an everyturn rule:
 	if steriletime > 0:
 		decrease steriletime by 3;
-		LineBreak;
 		if steriletime > 0:
-			say "You feel odd, the nanites fighting your birth control.";
+			say "[line break]You feel odd, the nanites fighting your birth control.";
 		else:
-			say "Your odd feeling goes away, and you realize that you are no longer protected by the pill.";
+			say "[line break]Your odd feeling goes away, and you realize that you are no longer protected by the pill.";
 			if wassterile is 0:
 				remove "Sterile" from the feats of Player;
 				now Sterile of Player is false;
+			else:
+				now wassterile is 0;
 			if wasfertile is 1:
 				add "Fertile" to the feats of Player, if absent;
 				now wasfertile is 0;
-			now wassterile is 0;
 			now steriletime is 0;
 	if fertiletime > 0:
 		decrease fertiletime by 3;
-		LineBreak;
 		if fertiletime > 0:
-			say "You feel ready for a mate, and a mental pressure urging for sex distracts you.";
+			say "[line break]You feel ready for a mate, and a mental pressure urging for sex distracts you.";
 			raise Player Libido by 5;
 		else:
-			say "Your mating desire fades, and you realize the fertility pill has worn off.";
+			say "[line break]Your mating desire fades, and you realize the fertility pill has worn off.";
 			if wasfertilef is 0:
 				remove "Fertile" from the feats of Player;
+			else:
+				now wasfertilef is 0;
 			if wassterilef is 1:
 				add "Sterile" to the feats of Player, if absent;
 				now Sterile of Player is true;
 				now wassterilef is 0;
-			now wasfertilef is 0;
 			now fertiletime is 0;
 
 Control Pills ends here.

@@ -29,8 +29,7 @@ to say ResolveEvent Spartan Intimidation:
 	WaitLineBreak;
 	say "     'Pericles won't be hearing about this. You've been a conceited bitch and a thorn in my men's side for quite some time now, Daphne. Naiad or not, you're still a woman, and we will show you your place under us men, open for sex and ready for breeding. You're good for nothing else.' The canine Spartan speaks coldly, emboldening his lackeys who press closer to the naiad you now know as Daphne. She seems far less confident at his speech, managing to uphold her brave front and staring up defiantly at the large middle Spartan, but no longer is it the men beside him shifting nervously; instead, it is her squirming in place and trying to subtlety scout out ways to run from the Greeks surrounding her. 'You can't do this to me. I'm divine! I'm a nymph. You're just a bunch of mortals!' Daphne yells, trying to seem indignant and wrathful but failing to keep a bit of tremor from entering her voice. Again the Spartans to her side demonstrate their weakness by backing away, and again their leader jumps in to steel their hearts.";
 	say "     'Divine indeed though you may be, you're no Artemis or Athena, merely a lowly naiad, a water spirit with naught but a pool to her name. Besides, what proof do we have that you're truly divine? These nanites change people into what they're not. How do we know you're not a liar?! And if you are a liar, a heretic claiming godhood, I think your claims are more than enough to justify what comes next, isn't that right, boys?' This time it's the Spartan group's turn to look smug, gripping their weapons tight as they close in on Daphne, gazing upon her body hungrily, eyeing up her breasts and curves like wolves stumbling upon fresh meat. The water spirit tries to back away but finds cold concrete to her back, but just as you can see Daphne's fear, you can also see her anger and defiance burning bright as she clenches her fist. 'You fucking bastards!' The naiad's decided to go out with a bang rather than a whimper and throws a surprisingly hard punch knocking the Spartan to her left to the ground and tries to make a break for it but is immediately set upon by the other two Spartans. No matter how spirited Daphne is, she probably won't last when it's her alone against three experienced warriors. It's only a matter of time until she's overwhelmed, and the Spartans can do as they wish with her. From what you've heard, you doubt it's anything good, but if you were so inclined, perhaps you could help Daphne and save her from an unfortunate fate.";
-	LineBreak;
-	say "     [bold type]Would you like to intervene?[roman type][line break]";
+	say "[line break]     [bold type]Would you like to intervene?[roman type][line break]";
 	let Daphne_Spartan_Choices be a list of text;
 	add "Save the young woman from her soon-to-be rapists. It's the right thing to do!" to Daphne_Spartan_Choices;
 	if Player is male:
@@ -72,7 +71,7 @@ Object	Name
 Campus Pool	"Campus Pool"
 
 Campus Pool is a room.
-Description of Campus Pool is "     The campus pool is truly pristine and marvelous. Its waters are a beautiful shining blue, and its tile floors are spotless. Despite the apocalypse, it seems the staff and clientele of the pool have taken excellent care of the area.[line break]";
+Description of Campus Pool is "     The campus pool is truly pristine and marvelous. Its waters are a beautiful shining blue, and its tile floors are spotless. Despite the apocalypse, it seems the staff and clientele of the pool have taken excellent care of the area.[line break]".
 
 Section 3 - NPC Declaration
 
@@ -116,13 +115,10 @@ SexuallyExperienced of Daphne is true.
 TwistedCapacity of Daphne is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Daphne is false. [steriles can't knock people up]
 MainInfection of Daphne is "Naiad".
-Description of Daphne is "[DaphneDesc]".
-Conversation of Daphne is { "Hmph" }.
+Description of Daphne is "     Daphne is an absolutely stunning naiad woman currently [one of]sitting on the edge of the pool[or]swimming laps inside the pool[or]practicing her diving inside the pool[at random]. She's a blonde bombshell with bright blue eyes, a perfect hourglass figure, and muscles that show the swimmer's dedication to her sport. Currently, the water spirit is wearing a one-piece swimsuit cutting off at her upper arm and thigh while tightly framing Daphne's body, leaving nothing to the imagination. The red and white sides and short sleeves of her outfit accentuate her curves and nicely complement her mesmerizing eyes while also pleasantly contrasting the rest of the piece's blue coloring. There's also a zipper at the chest of the one-piece area for more easy removal. Noticing your staring, Daphne calls out to you. 'Are ya just gonna stare all day, or are you gonna come over?!' she questions playfully.[line break]".
+[Conversation of Daphne is { "Hmph." }.]
+icon of Daphne is Figure of Daphne_clothed_icon.
 The scent of Daphne is "     Daphne smells like chlorinated water and flowers, an odd but certainly not unpleasant combination of scents.".
-
-to say DaphneDesc:
-	project Figure of Daphne_clothed_icon;
-	say "     Daphne is an absolutely stunning naiad woman currently [one of]sitting on the edge of the pool[or]swimming laps inside the pool[or]practicing her diving inside the pool[at random]. She's a blonde bombshell with bright blue eyes, a perfect hourglass figure, and muscles that show the swimmer's dedication to her sport. Currently, the water spirit is wearing a one-piece swimsuit cutting off at her upper arm and thigh while tightly framing Daphne's body, leaving nothing to the imagination. The red and white sides and short sleeves of her outfit accentuate her curves and nicely complement her mesmerizing eyes while also pleasantly contrasting the rest of the piece's blue coloring. There's also a zipper at the chest of the one-piece area for more easy removal. Noticing your staring, Daphne calls out to you. 'Are ya just gonna stare all day, or are you gonna come over?!' she questions playfully.";
 
 Section 4 - Talking
 
@@ -210,7 +206,7 @@ to say DaphneTalk3:
 Section 5 - Sex
 
 instead of fucking Daphne:
-	if (lastfuck of Daphne - turns < 6): [she got fucked in the last 18 hours = 6 turns]
+	if lastfuck of Daphne - turns < 6: [she got fucked in the last 18 hours = 6 turns]
 		project Figure of Daphne_clothed_icon;
 		say "     'Slow down there, tiger. Not all of us have the time or the energy to fuck around all day. You're just going to have to find somebody else for now,' Daphne says sternly.";
 	else if Daphne & Alyssa Tentacle Fun is not resolved:
@@ -290,7 +286,6 @@ Daphne & Alyssa Tentacle Fun is a situation.
 ResolveFunction of Daphne & Alyssa Tentacle Fun is "[ResolveEvent Daphne & Alyssa Tentacle Fun]".
 Prereq1 of Daphne & Alyssa Tentacle Fun is Spartan Intimidation.
 Prereq1Resolution of Daphne & Alyssa Tentacle Fun is { 1 }.
-The level of Daphne & Alyssa Tentacle Fun is 0.
 The sarea of Daphne & Alyssa Tentacle Fun is "Nowhere".
 
 when play begins:
@@ -325,7 +320,6 @@ to say EventConditions_SpartanIntervention:
 Spartan Intervention is a situation.
 ResolveFunction of Spartan Intervention is "[ResolveEvent Spartan Intervention]".
 Prereq1 of Spartan Intervention is Daphne & Alyssa Tentacle Fun.
-The level of Spartan Intervention is 0.
 The sarea of Spartan Intervention is "Nowhere".
 
 to say ResolveEvent Spartan Intervention:

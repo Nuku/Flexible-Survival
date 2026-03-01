@@ -122,7 +122,7 @@ to TextVariableSave:
 		-- "BlancheNonBinaryMomDad": now TextVarValue entry is BlancheNonBinaryMomDad;
 		-- "BlancheNonBinaryMommyDaddy": now TextVarValue entry is BlancheNonBinaryMommyDaddy;
 		-- "BlueDesignator": now TextVarValue entry is BlueDesignator;
-		-- "bodyselector": now TextVarValue entry is bodyselector;
+		[-- "bodyselector": now TextVarValue entry is bodyselector;]
 		-- "BodyShopGuaranteedBody": now TextVarValue entry is BodyShopGuaranteedBody;
 		-- "BodyShopGuaranteedCrotch": now TextVarValue entry is BodyShopGuaranteedCrotch;
 		-- "BodyShopGuaranteedFace": now TextVarValue entry is BodyShopGuaranteedFace;
@@ -185,8 +185,8 @@ to TextVariableSave:
 		-- "LarissaSkin": now TextVarValue entry is LarissaSkin;
 		-- "LarissaTail": now TextVarValue entry is LarissaTail;
 		-- "LarissaTFText": now TextVarValue entry is LarissaTFText;
-		-- "Lusting": now TextVarValue entry is Lusting;
-		[-- "musicmessage": now TextVarValue entry is musicmessage;]
+		[-- "Lusting": now TextVarValue entry is Lusting;
+		-- "musicmessage": now TextVarValue entry is musicmessage;]
 		-- "NadiaChar-A": now TextVarValue entry is NadiaChar-A;
 		-- "NadiaChar-B": now TextVarValue entry is NadiaChar-B;
 		-- "NadiaChar-C": now TextVarValue entry is NadiaChar-C;
@@ -235,8 +235,8 @@ to NumberVariableSave:
 	now NumberVarName entry is CurrentVariableName;
 	if CurrentVariableName is:
 		-- "featgained": now NumberVarValue entry is featgained of Player;
-		[-- "absorb": now NumberVarValue entry is absorb;]
-		-- "addedlibido": now NumberVarValue entry is addedlibido;
+		[-- "absorb": now NumberVarValue entry is absorb;
+		-- "addedlibido": now NumberVarValue entry is addedlibido;]
 		-- "afsmread": now NumberVarValue entry is afsmread;
 		-- "aidKenaz": now NumberVarValue entry is aidKenaz;
 		-- "AlanaRelationship": now NumberVarValue entry is AlanaRelationship;
@@ -284,6 +284,10 @@ to NumberVariableSave:
 		-- "AngryHorguth": now NumberVarValue entry is AngryHorguth;
 		-- "anubisrequest": now NumberVarValue entry is anubisrequest;
 		-- "AptAid": now NumberVarValue entry is AptAid;
+		-- "AraqielCaptureTimer": now NumberVarValue entry is AraqielCaptureTimer;
+		-- "AraqielTrackerCollege": now NumberVarValue entry is AraqielTrackerCollege;
+		-- "AraqielTrackerMall": now NumberVarValue entry is AraqielTrackerMall;
+		-- "AraqielTrackerRedLight": now NumberVarValue entry is AraqielTrackerRedLight;
 		-- "ArcherFucked": now NumberVarValue entry is ArcherFucked;
 		-- "ArenaBattleCounter": now NumberVarValue entry is ArenaBattleCounter;
 		-- "AresDannyEncounters": now NumberVarValue entry is AresDannyEncounters;
@@ -339,6 +343,8 @@ to NumberVariableSave:
 		-- "Borismate": now NumberVarValue entry is Borismate;
 		-- "Borisquest": now NumberVarValue entry is Borisquest;
 		-- "boristalk": now NumberVarValue entry is boristalk;
+		-- "BouncyCorruption": now NumberVarValue entry is BouncyCorruption;
+		-- "BouncyTemptation": now NumberVarValue entry is BouncyTemptation;
 		[-- "boundcounter": now NumberVarValue entry is boundcounter;
 		-- "boundmod": now NumberVarValue entry is boundmod;
 		-- "boundmod2": now NumberVarValue entry is boundmod2;
@@ -574,7 +580,7 @@ to NumberVariableSave:
 		[-- "Feline_type": now NumberVarValue entry is Feline_type;]
 		-- "FelinoidRescued": now NumberVarValue entry is FelinoidRescued;
 		-- "FelixSaved": now NumberVarValue entry is FelixSaved;
-		-- "fellforward": now NumberVarValue entry is fellforward;
+		[-- "fellforward": now NumberVarValue entry is fellforward;]
 		-- "femalecatHP": now NumberVarValue entry is femalecatHP;
 		-- "femonyxq": now NumberVarValue entry is femonyxq;
 		-- "FeralBirths": now NumberVarValue entry is FeralBirths;
@@ -777,11 +783,11 @@ to NumberVariableSave:
 		-- "KatyaDildoTaken": now NumberVarValue entry is KatyaDildoTaken;
 		-- "KatyaRelationship": now NumberVarValue entry is KatyaRelationship;
 		-- "KatyaResistance": now NumberVarValue entry is KatyaResistance;
-		-- "keepbody": now NumberVarValue entry is keepbody;
+		[-- "keepbody": now NumberVarValue entry is keepbody;
 		-- "keepcock": now NumberVarValue entry is keepcock;
 		-- "keepface": now NumberVarValue entry is keepface;
 		-- "keepskin": now NumberVarValue entry is keepskin;
-		-- "keeptail": now NumberVarValue entry is keeptail;
+		-- "keeptail": now NumberVarValue entry is keeptail;]
 		-- "Kenazaroused": now NumberVarValue entry is Kenazaroused;
 		-- "Kenazdes": now NumberVarValue entry is Kenazdes;
 		-- "Kenaztalk": now NumberVarValue entry is Kenaztalk;
@@ -1555,6 +1561,7 @@ to TruthVariableSave:
 		-- "animal heat": now TruthVarValue entry is animal heat;
 		-- "animeclubfight": now TruthVarValue entry is animeclubfight;
 		-- "artemisstatefairrt": now TruthVarValue entry is artemisstatefairrt;
+		-- "asbeastseen": now TruthVarValue entry is asbeastseen;
 		-- "AT_Diego": now TruthVarValue entry is AT_Diego;
 		-- "AT_Jimmy": now TruthVarValue entry is AT_Jimmy;
 		-- "AT_Lisa": now TruthVarValue entry is AT_Lisa;
@@ -1612,10 +1619,10 @@ to TruthVariableSave:
 		-- "ButterflyPregnant": now TruthVarValue entry is ButterflyPregnant;
 		-- "ButterflyProcreated": now TruthVarValue entry is ButterflyProcreated;
 		-- "ButterflyRevenge": now TruthVarValue entry is ButterflyRevenge;
-		-- "callovi": now TruthVarValue entry is callovi;
+		[-- "callovi": now TruthVarValue entry is callovi;]
 		-- "cclosttarget": now TruthVarValue entry is cclosttarget;
 		-- "cheetah_mpreg": now TruthVarValue entry is cheetah_mpreg;
-		-- "chindem": now TruthVarValue entry is chindem;
+		[-- "chindem": now TruthVarValue entry is chindem;]
 		-- "christysausage": now TruthVarValue entry is christysausage;
 		-- "ClassPaymentAccepted": now TruthVarValue entry is ClassPaymentAccepted;
 		-- "cuptrick": now TruthVarValue entry is cuptrick;
@@ -1982,8 +1989,8 @@ to VariableTextLoad:
 		say "Restoring Texts...";
 		read File of TextSave into the Table of GameTexts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTexts:
-			if there is no TextVarValue in row x of the Table of GameTexts, next;
 			choose row x in the Table of GameTexts;
+			if there is no TextVarValue entry, next;
 			[
 			if debug is at level 10:
 				say "Restoring text [TextVarName entry].";
@@ -2011,8 +2018,8 @@ to VariableTextLoad:
 					if BlancheNonBinaryMommyDaddy is not TextVarValue entry, now BlancheNonBinaryMommyDaddy is TextVarValue entry;
 				-- "BlueDesignator":
 					if BlueDesignator is not TextVarValue entry, now BlueDesignator is TextVarValue entry;
-				-- "bodyselector":
-					if bodyselector is not TextVarValue entry, now bodyselector is TextVarValue entry;
+				[-- "bodyselector":
+					if bodyselector is not TextVarValue entry, now bodyselector is TextVarValue entry;]
 				-- "BodyShopGuaranteedBody":
 					if BodyShopGuaranteedBody is not TextVarValue entry, now BodyShopGuaranteedBody is TextVarValue entry;
 				-- "BodyShopGuaranteedCrotch":
@@ -2137,9 +2144,9 @@ to VariableTextLoad:
 					if LarissaTail is not TextVarValue entry, now LarissaTail is TextVarValue entry;
 				-- "LarissaTFText":
 					if LarissaTFText is not TextVarValue entry, now LarissaTFText is TextVarValue entry;
-				-- "Lusting":
+				[-- "Lusting":
 					if Lusting is not TextVarValue entry, now Lusting is TextVarValue entry;
-				[-- "musicmessage":
+				-- "musicmessage":
 					if musicmessage is not TextVarValue entry, now musicmessage is TextVarValue entry;]
 				-- "NadiaChar-A":
 					if NadiaChar-A is not TextVarValue entry, now NadiaChar-A is TextVarValue entry;
@@ -2237,8 +2244,8 @@ to VariableNumberLoad:
 		say "Restoring Numbers...";
 		read File of NumberSave into the Table of GameNumbers;
 		repeat with x running from 1 to the number of filled rows in the Table of GameNumbers:
-			if there is no NumberVarValue in row x of the Table of GameNumbers, next;
 			choose row x in the Table of GameNumbers;
+			if there is no NumberVarValue entry, next;
 			[
 			if debug is at level 10:
 				say "Restoring Number [NumberVarName entry].";
@@ -2249,9 +2256,9 @@ to VariableNumberLoad:
 				-- "featgained":
 					if featgained of Player is not NumberVarValue entry, now featgained of Player is NumberVarValue entry;
 				[-- "absorb":
-					if absorb is not NumberVarValue entry, now absorb is NumberVarValue entry;]
+					if absorb is not NumberVarValue entry, now absorb is NumberVarValue entry;
 				-- "addedlibido":
-					if addedlibido is not NumberVarValue entry, now addedlibido is NumberVarValue entry;
+					if addedlibido is not NumberVarValue entry, now addedlibido is NumberVarValue entry;]
 				-- "afsmread":
 					if afsmread is not NumberVarValue entry, now afsmread is NumberVarValue entry;
 				-- "aidKenaz":
@@ -2346,6 +2353,14 @@ to VariableNumberLoad:
 					if anubisrequest is not NumberVarValue entry, now anubisrequest is NumberVarValue entry;
 				-- "AptAid":
 					if AptAid is not NumberVarValue entry, now AptAid is NumberVarValue entry;
+				-- "AraqielCaptureTimer":
+					if AraqielCaptureTimer is not NumberVarValue entry, now AraqielCaptureTimer is NumberVarValue entry;
+				-- "AraqielTrackerCollege":
+					if AraqielTrackerCollege is not NumberVarValue entry, now AraqielTrackerCollege is NumberVarValue entry;
+				-- "AraqielTrackerMall":
+					if AraqielTrackerMall is not NumberVarValue entry, now AraqielTrackerMall is NumberVarValue entry;
+				-- "AraqielTrackerRedLight":
+					if AraqielTrackerRedLight is not NumberVarValue entry, now AraqielTrackerRedLight is NumberVarValue entry;
 				-- "ArcherFucked":
 					if ArcherFucked is not NumberVarValue entry, now ArcherFucked is NumberVarValue entry;
 				-- "ArenaBattleCounter":
@@ -2456,6 +2471,10 @@ to VariableNumberLoad:
 					if Borisquest is not NumberVarValue entry, now Borisquest is NumberVarValue entry;
 				-- "boristalk":
 					if boristalk is not NumberVarValue entry, now boristalk is NumberVarValue entry;
+				-- "BouncyCorruption":
+					if BouncyCorruption is not NumberVarValue entry, now BouncyCorruption is NumberVarValue entry;
+				-- "BouncyTemptation":
+					if BouncyTemptation is not NumberVarValue entry, now BouncyTemptation is NumberVarValue entry;
 				[-- "boundcounter":
 					if boundcounter is not NumberVarValue entry, now boundcounter is NumberVarValue entry;]
 				[-- "boundmod":
@@ -2926,8 +2945,8 @@ to VariableNumberLoad:
 					if FelinoidRescued is not NumberVarValue entry, now FelinoidRescued is NumberVarValue entry;
 				-- "FelixSaved":
 					if FelixSaved is not NumberVarValue entry, now FelixSaved is NumberVarValue entry;
-				-- "fellforward":
-					if fellforward is not NumberVarValue entry, now fellforward is NumberVarValue entry;
+				[-- "fellforward":
+					if fellforward is not NumberVarValue entry, now fellforward is NumberVarValue entry;]
 				-- "femalecatHP":
 					if femalecatHP is not NumberVarValue entry, now femalecatHP is NumberVarValue entry;
 				-- "femonyxq":
@@ -3334,7 +3353,7 @@ to VariableNumberLoad:
 					if KatyaRelationship is not NumberVarValue entry, now KatyaRelationship is NumberVarValue entry;
 				-- "KatyaResistance":
 					if KatyaResistance is not NumberVarValue entry, now KatyaResistance is NumberVarValue entry;
-				-- "keepbody":
+				[-- "keepbody":
 					if keepbody is not NumberVarValue entry, now keepbody is NumberVarValue entry;
 				-- "keepcock":
 					if keepcock is not NumberVarValue entry, now keepcock is NumberVarValue entry;
@@ -3343,7 +3362,7 @@ to VariableNumberLoad:
 				-- "keepskin":
 					if keepskin is not NumberVarValue entry, now keepskin is NumberVarValue entry;
 				-- "keeptail":
-					if keeptail is not NumberVarValue entry, now keeptail is NumberVarValue entry;
+					if keeptail is not NumberVarValue entry, now keeptail is NumberVarValue entry;]
 				-- "Kenazaroused":
 					if Kenazaroused is not NumberVarValue entry, now Kenazaroused is NumberVarValue entry;
 				-- "Kenazdes":
@@ -4836,8 +4855,8 @@ to VariableTruthLoad:
 		say "Restoring Truths...";
 		read File of TruthSave into the Table of GameTruths;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTruths:
-			if there is no TruthVarValue in row x of the Table of GameTruths, next;
 			choose row x in the Table of GameTruths;
+			if there is no TruthVarValue entry, next;
 			[
 			if debug is at level 10:
 				say "Restoring Truth [TruthVarName entry].";
@@ -4907,6 +4926,8 @@ to VariableTruthLoad:
 					if animeclubfight is not TruthVarValue entry, now animeclubfight is TruthVarValue entry;
 				-- "artemisstatefairrt":
 					if artemisstatefairrt is not TruthVarValue entry, now artemisstatefairrt is TruthVarValue entry;
+				-- "asbeastseen":
+					if asbeastseen is not TruthVarValue entry, now asbeastseen is TruthVarValue entry;
 				-- "AT_Diego":
 					if AT_Diego is not TruthVarValue entry, now AT_Diego is TruthVarValue entry;
 				-- "AT_Jimmy":
@@ -5019,14 +5040,14 @@ to VariableTruthLoad:
 					if ButterflyProcreated is not TruthVarValue entry, now ButterflyProcreated is TruthVarValue entry;
 				-- "ButterflyRevenge":
 					if ButterflyRevenge is not TruthVarValue entry, now ButterflyRevenge is TruthVarValue entry;
-				-- "callovi":
-					if callovi is not TruthVarValue entry, now callovi is TruthVarValue entry;
+				[-- "callovi":
+					if callovi is not TruthVarValue entry, now callovi is TruthVarValue entry;]
 				-- "cclosttarget":
 					if cclosttarget is not TruthVarValue entry, now cclosttarget is TruthVarValue entry;
 				-- "cheetah_mpreg":
 					if cheetah_mpreg is not TruthVarValue entry, now cheetah_mpreg is TruthVarValue entry;
-				-- "chindem":
-					if chindem is not TruthVarValue entry, now chindem is TruthVarValue entry;
+				[-- "chindem":
+					if chindem is not TruthVarValue entry, now chindem is TruthVarValue entry;]
 				-- "christysausage":
 					if christysausage is not TruthVarValue entry, now christysausage is TruthVarValue entry;
 				-- "ClassPaymentAccepted":
@@ -5491,8 +5512,8 @@ to VariableIndexedTextLoad:
 		say "Restoring Indexed Texts...";
 		read File of IndexedTextSave into the Table of GameIndexedTexts;
 		repeat with x running from 1 to the number of filled rows in the Table of GameIndexedTexts:
-			if there is no IndexedTextVarValue in row x of the Table of GameIndexedTexts, next;
 			choose row x in the Table of GameIndexedTexts;
+			if there is no IndexedTextVarValue entry, next;
 			[
 			if debug is at level 10:
 				say "Restoring IndexedText [IndexedTextVarName entry].";
@@ -5525,8 +5546,8 @@ to VariableTextListLoad:
 		truncate StoredSluts_Male to 0 entries; [cleaning out the old data]
 		truncate StoredSluts_Other to 0 entries; [cleaning out the old data]
 		repeat with x running from 1 to the number of filled rows in the Table of GameTextLists:
-			if there is no TextListVarValue in row x of the Table of GameTextLists, next;
 			choose row x in the Table of GameTextLists;
+			if there is no TextListVarValue entry, next;
 			if TextListVarName entry is:
 				-- "Childrenbodies": add TextListVarValue entry to Childrenbodies;
 				-- "Childrenfaces": add TextListVarValue entry to Childrenfaces;
@@ -5559,8 +5580,8 @@ to VariableNumberListLoad:
 		truncate pfpclist to 0 entries; [cleaning out the old data]
 		truncate velospostmusings to 0 entries; [cleaning out the old data]
 		repeat with x running from 1 to the number of filled rows in the Table of GameNumberLists:
-			if there is no NumberListVarValue in row x of the Table of GameNumberLists, next;
 			choose row x in the Table of GameNumberLists;
+			if there is no NumberListVarValue entry, next;
 			if NumberListVarName entry is:
 				-- "AlexandraNPC": add NumberListVarValue entry to AlexandraNPC;
 				-- "bookcollection": add NumberListVarValue entry to bookcollection;

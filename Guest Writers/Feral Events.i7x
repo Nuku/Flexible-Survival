@@ -21,8 +21,7 @@ to say ResolveEvent Breeding Pack:
 	say "     The members of the pack look like normal dogs as far as you can tell. German shepherds, Rottweilers, Dobermans, pit bulls, retrievers, and even a few mastiffs are part of that dog pack. In the midst between them, you notice someone or something else. Whatever it is, they all are very intrigued and totally focused on it. You dare not risk getting a closer look in case one of the dogs smells or spots you. They don't look like overgrown transformed beasts, but you seriously doubt you can outrun a whole dog pack, even if they are just regular animals. As if fate is smiling on you, the dogs shuffle around a moment later and you get to see what all the commotion is about. There is a lone, naked human with the dogs. He has pale skin and looks to be of average height. The question of what they might be doing with this man becomes moot as you notice a Rottweiler real close to his butt and facing away from him.";
 	WaitLineBreak;
 	say "     You've seen lots of sex in this infected city so it doesn't take much to understand that the dog is tied with the human, ass to ass. And clearly, the man is enjoying this quite a bit, a broad smile on his face despite being exhausted and covered in dog cum. He even moans when the dog shuffles his paws and tugs at the knot. Despite everything you've seen in this city, you can't help but smile at the fact that this is a voluntary act, just a man sharing the physical love of more than a dozen canines.";
-	LineBreak;
-	say "     [bold type]Do you want to keep watching the dog gang-bang?[roman type][line break]";
+	say "[line break]     [bold type]Do you want to keep watching the dog gangbang?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Observe the feral fun.";
 	say "     ([link]N[as]n[end link]) - Leave the man and his canine friends behind.";
 	if Player consents:

@@ -251,10 +251,8 @@ name	desc	weight	object
 "egg nog"	"AKA chicken milk. That holiday drink, spiked rather heavily with brandy by the smell of it."	1	egg nog
 
 egg nog is a grab object. egg nog is infectious. understand "chicken milk" as egg nog. Strain of egg nog is "Reindeer".
-
-the scent of egg nog is "The eggnog smells fresh and strongly of good brandy, making you want to drink it and remember Christmases past.".
-
 Usedesc of egg nog is "[nogging]".
+the scent of egg nog is "The eggnog smells fresh and strongly of good brandy, making you want to drink it and remember Christmases past.".
 
 to say nogging:
 	say "     You drink down the tasty eggnog, feeling the warmth of the brandy-rich liquid flowing into you. You are filled with a burst of the holiday spirit and a lustful longing for someone to share this feeling with. You feel a little better all around because of it even as the warmth changes from that of the alcohol to the warmth of your activated infection.";
@@ -347,7 +345,7 @@ to say reindeerbreastheat:
 		say "You moan lustfully and fondle your chest, teasing your nipples. Your heat is quite unbearable, with your sweet juices running down your legs and filling the air with the scent of your arousal. As you continue to play with yourself, your nipples start to leak milk, rich and scented like brandy eggnog. Delighted at this, you continue to milk yourself until this surge of lust passes.";
 		[copied entirely from the 'milk me' section]
 		now lastBreastMilking is turns;
-		ItemGain egg nog by ( ( Nipple Count of Player ) / 2 );
+		ItemGain egg nog by ( Nipple Count of Player ) / 2;
 		increase Libido of Player by a random number from 3 to 8;
 		raise Player Libido by a random number from 3 to 8;
 		if "Horny Bastard" is listed in feats of Player, raise Player Libido by a random number between 1 and 3;
