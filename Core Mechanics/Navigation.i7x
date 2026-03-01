@@ -103,6 +103,7 @@ Astroslide Football Field	"Astroslide Football Field"	"Astroslide Football Field
 Campus Gym	"Campus Gym"	"Campus Gym"	"Tenvale College"
 Paleontology Office	"Paleontology Office"	"Paleontology Office"	"Tenvale College"
 Phi Iota Gamma	"Phi Iota Gamma"	"Phi Iota Gamma"	"Tenvale College"
+Encampment Tree	"Encampment Tree"	"Encampment Tree"	"Urban Forest"
 Urban Forest	"Urban Forest"	"Urban Forest"	"Urban Forest"
 Ariel's Aria	"Ariel's Aria"	"Ariel's Aria"	"Urban Forest"
 Bunny House	"Bunny House"	"Bunny House"	"Urban Forest"
