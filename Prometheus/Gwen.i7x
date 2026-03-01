@@ -81,7 +81,8 @@ to say gwendesc:
 		if "Succutaur" is listed in Traits of Gwen:
 			say "     Gwen's matured into a beautiful and sexy centaur mare. She's a blend of her old self and her mare mother, but more than a hand taller than her - nearly Vanessa's height even. She's got a lovely face with an alluring smile and has grown out her curly red hair so it hangs to her shoulders. Her upper body's matured back into the super-appealing succubus from when you first met her. Her body has a perfect hourglass figure, plump breasts and flawless chocolate brown skin. She wears a red bikini top that struggles to contain her bountiful melons. Her equine lower body has the same russet-red coat with chestnut socks as her mother has. Her demonic red tail flicks around as another reminder of her earlier self. Her voice is smooth and sultry whenever she speaks. Beautiful and knowing it, the sexy mare is eager to show off her sexy body and shares it often with [if ( ColleenSlut > 0 or ColleenAlpha > 0 or ColleenCollared > 0 )]Vanessa and Colleen[else]Vanessa[end if] when not helping her mother with her research.";
 		else if "Centaur" is listed in Traits of Gwen:
-			say "     Gwen's matured into a beautiful and sexy centaur mare. She's a blend of her old self and her mare mother, but more than a hand taller than her - nearly Vanessa's height even. She's got a lovely face with an alluring smile and has grown out her curly red hair so it hangs to her shoulders. Her upper body's both curvy and toned, with plump breasts and flawless chocolate brown skin. She wears a red bikini top that struggles to contain her bountiful melons. Her equine lower body has the same russet-red coat with chestnut socks as her mother has. Her equine tail flicks around occasionally giving a view of her throbbing vulva. Her voice is smooth and sultry whenever she speaks. Beautiful and knowing it, the sexy mare is eager to show off her sexy body and shares it often with [if ( ColleenSlut > 0 or ColleenAlpha > 0 or ColleenCollared > 0 )]Vanessa and Colleen[else]Vanessa[end if] when not helping her mother with her research.";
+			project Figure of Gwen_clothed_icon;
+			say "     Gwen's matured into a beautiful and sexy centaur mare. She's a blend of her old self and her mare mother, but more than a hand taller than her - nearly Vanessa's height even. She's got a lovely face with an alluring smile and has grown out her curly red hair so it hangs to her shoulders. Her upper body's both curvy and toned, with plump breasts and flawless chocolate brown skin. She wears a black bikini top that struggles to contain her bountiful melons. Her equine lower body has the same russet-red coat with chestnut socks as her mother has. Her equine tail flicks around occasionally giving a view of her throbbing vulva. Her voice is smooth and sultry whenever she speaks. Beautiful and knowing it, the sexy mare is eager to show off her sexy body and shares it often with [if ( ColleenSlut > 0 or ColleenAlpha > 0 or ColleenCollared > 0 )]Vanessa and Colleen[else]Vanessa[end if] when not helping her mother with her research.";
 		else if "Succubus" is listed in Traits of Gwen:
 			say "     Gwen looks fit to be a demon prince's concubine, or perhaps the succubus that a prince would trade his riches away for but a few minutes in her presence. Now a full succubus, she is now a little over six feet tall and easily noticeable in a room. She's got a sensuous face with an alluring smile and has grown out her curly red hair so it hangs to her shoulders. Her body has a perfect hourglass figure, plump breasts and flawless chocolate brown skin. She wears a red bikini top that struggles to contain her bountiful melons, and a matching thong to keep herself barely decent. Her demonic red tail is very expressive, capable of flicking around when she is agitated or excited, but equally able to weave around almost hypnotically or in a pinch as an extra limb. Her voice is smooth and sultry whenever she speaks. Beautiful and knowing it, the sexy demoness is eager to show off her sexy body and shares it often with [if ( ColleenSlut > 0 or ColleenAlpha > 0 or ColleenCollared > 0 )]Vanessa and Colleen[else]Vanessa[end if] when not helping Meredith with her research.";
 		else:
@@ -101,6 +102,8 @@ Instead of conversing the Gwen:
 		say "[GwenTalkMenu]";
 
 to say GwenTalkMenu:
+	if "Centaur" is listed in Traits of Gwen:
+		project Figure of Gwen_clothed_icon;
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -246,6 +249,8 @@ to say sexwithGwen:
 
 
 to say Gwensexmenu:
+	if "Centaur" is listed in Traits of Gwen:
+		project Figure of Gwen_naked_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	if Player is male:

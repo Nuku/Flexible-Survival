@@ -42,7 +42,7 @@ to ActofKindnessEvent:
 					else if Random_Enemy_Number is 2:
 						challenge "Gargoyle";
 					else:
-						challenge "Alpha Husky";
+						challenge "Husky Alpha";
 					now inasituation is false;
 					if fightoutcome < 20: [player won]
 						say "     Having defeated the tryst-stoppers, you turn back to see... well something somewhat unexpected? You don't know what part of you expected Giving to be the one to top, but there they were on the pavement- pressed in missionary- his mancunt wetly squirts on their new cock. A passionate lovemaking that cares not for the world around them. 'OOoooooh i-its ok... just let it out' the giant calloused hand comforts their back, their clit squirts enough cum to cover the road around them in thick cum that's masculine pheromones warmed the air. 'T-this lust... so... vile... How can one feel like this and hold themselves back? It feels too good...' In any other circumstance, you would look at this scene in solemn regret, another claimed by the madness. You partly wonder from all the clear cum and stray milk if the cowmen had even pleasured themselves in a long time, or even how their cunt can even take such a womb-churning cock with ease.";

@@ -188,7 +188,6 @@ Figure of Satyr_soft_icon is the file "Satyr_soft.jpg".
 Figure of Satyress_naked_icon is the file "Satyress.jpg".
 Figure of ShadowBeast_icon is the file "ShadowBeast.jpg".
 Figure of Pewter_Consort_icon is the file "Pewter_Consort.jpg".
-Figure of PirateShark_icon is the file "sharkpirate.png".
 Figure of Ram_naked_icon is the file "Ram_naked.jpg".
 Figure of Saber_Kitty_icon is the file "Saber Kitty.jpg".
 Figure of Sabretooth_soft_icon is the file "Sabretooth_soft.jpg".
@@ -505,6 +504,8 @@ Figure of Gobby_icon is the file "gobby_ig.jpg".
 Figure of Grant_face_icon is the file "Grant_face.jpg".
 Figure of Grant_icon is the file "grant_ig.jpg".
 Figure of Grant2_icon is the file "grant_ig2.jpg".
+Figure of Gwen_clothed_icon is the file "Gwen_clothed.png".
+Figure of Gwen_naked_icon is the file "Gwen_naked.png".
 Figure of Hadiya_0_icon is the file "hadiya_0_ig.jpg".
 Figure of Hadiya_icon is the file "Hadiya_ig.jpg".
 Figure of Hayato_icon is the file "Hayato_reading.jpg".
@@ -1725,6 +1726,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Grant"	Figure of Grant_icon	"Uniformvixen"	g-white	"normal"
 "Grant2"	Figure of Grant2_icon	"Familliar"	g-light-gray	"normal"
 "Gunbunny"	Figure of Gunbunny_icon	"HBruton"	g-white	"normal"
+"Gwen_clothed"	Figure of Gwen_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Gwen_naked"	Figure of Gwen_naked_icon	"SteppeCrow"	g-white	"normal"
 "Friendship Pony"	Figure of FrPony_icon	"Anymouse1968"	g-white	"normal"
 "Goo Girl"	Figure of GooGirl_icon	"Rastear"	g-black	"normal"
 "Hadiya"	Figure of Hadiya_0_icon	"lionsilverwolf"	g-white	"normal"
@@ -1950,7 +1953,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Priestess_clothed"	Figure of Priestess_clothed_icon	"Gherod"	g-dark-gray	"normal"
 "Priestess_hard"	Figure of Priestess_hard_icon	"Gherod"	g-dark-gray	"normal"
 "Priestess_soft"	Figure of Priestess_soft_icon	"Gherod"	g-dark-gray	"normal"
-"Shark Herm"	Figure of PirateShark_icon	"Zealot"	g-white	"normal"
+["Shark Herm"	Figure of PirateShark_icon	"Zealot"	g-white	"normal"]
 "Queen Bee"	Figure of QueenBee_icon	"Caltroplay"	g-white	"normal"
 "Rachel"	Figure of Rachel_icon	"o-kemono"	g-white	"normal"
 "Ram_hunk"	Figure of Ram_naked_icon	"Vashaa"	g-white	"normal"

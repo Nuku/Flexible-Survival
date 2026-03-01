@@ -9,6 +9,7 @@ Section 1 - Creature Responses
 nopiratesharksex is a number that varies.
 
 to say shark attack:
+	project Figure of Priestess_hard_icon;
 	if Player is female and ( anallevel < 3 or a random chance of 3 in 4 succeeds ):
 		say "     The piratical shark grins down at you as you fall before her might, her sharp teeth flashing threateningly as she looks down at your defeated form. 'Ah now here is some fine booty just waiting to be had,' the shark says with a smug look as it moves over you, her rough body pressing your back into the ground and making you shudder as she rubs her slightly damp rough skin up against you, and you can feel something soft rubbing against your wet entrance. You stare in a mixture of horror and increasing arousal as you look down to see that a rather unusually shaped shark-like cock is probing at your body, while the shark beast holds you helpless underneath her. Soon her strange member works its way into you, making you squirm as it probes your depths, then the tip and sides of her cock seem to expand, locking her tightly within you. 'Now you can't escape me my little treasure,' the shark above you says as she relaxes her grip, letting her webbed hands rub along your sides teasingly. 'And I think it's time for me to [']bury['] a little treasure of my own inside you...' the pirate shark adds with evil satisfaction, as her cock moves and twitches within you in time to her short soft thrusts, causing you to writhe underneath her helplessly as her cock sends waves of pleasure through your body. Soon you can barely think as the shark-like beast increases speed, her cock twisting and twitching inside you in ways you never imagined possible, bringing you to orgasm several times before she finally shoots her own load deep into you. You can hear her chuckle slightly as she plunders your tired body, her cock pumping its warm seed into you, and then it finally releases you as she pulls out, leaving you lying there on the ground as little more than a helpless incubator for her fertile seed. 'I do hope it takes, but you should come back later anyways little pet,' the smug shark says as she stands over you. 'I'm sure I can find some more [']treasure['] to bury within you next time you visit,' the piratical shark says, tossing you a grin as she pets your stomach full of her seed with her webbed hand for a second, before turning and diving back into the water.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Shark Herm";
@@ -21,6 +22,7 @@ to say shark attack:
 		CreatureSexAftermath "Shark Herm" receives "PussyFuck" from "Player";
 
 To say shark loss:
+	project Figure of Priestess_hard_icon;
 	choose row MonsterID from the Table of Random Critters;
 	if ( HardMode is false and level of Player < ( lev entry + 2 ) ) or dexterity of Player < ( dex entry + 2 ) or Cock Count of Player is 0:
 		say "     Your blows send the pirate shark reeling backwards, making the strange beast cry out in pain. Before you can press the advantage though, the shark-like pirate turns and dives into the water again, her tail and her fin cutting through the water as she flees. Somehow though, you don't think you have seen the last of these shark pirates...";
@@ -49,7 +51,7 @@ name(text)	PrepFunction(text)
 "Shark Herm"	"[PrepCombat_Shark Herm]"
 
 to say PrepCombat_Shark Herm:
-	project Figure of PirateShark_icon;
+	project Figure of Priestess_clothed_icon;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

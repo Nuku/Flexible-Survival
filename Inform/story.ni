@@ -219,6 +219,7 @@ Include Tenvale College Campus by Rikaeus.
 Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
 Include Dragon Temple Map by Sundered Dragon.
+Include Encampment Tree by OrangeHorned.
 Include Equinoid Camp by Song.
 Include Farm by Wahn.
 Include Ghost Fair by JP.
@@ -323,6 +324,7 @@ Include High Rise Events by Stripes.
 Include High Rise Events by Wahn.
 Include Horus by Rikaeus.
 Include How High by Kaleem mcintyre.
+Include Husky BadEnd by Gherod.
 Include Hyena Bikers by Stripes.
 Include Hyena Shoppers by Guest Writers.
 Include Hyena Situations by Hellerhound.
