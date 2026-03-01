@@ -15,6 +15,7 @@ to say losetoCumGirl:
 			CreatureSexAftermath "Cum Girl" receives "OralCock" from "Player";
 		else:
 			say "     A faint smile creeps across her blank face as she strokes you to full erection, her hand beginning to lose definition as she strokes, soon nothing more than a pulsing tendril of cum milking your cock as her other hand begins engulfing your balls. Her face stares down at you, expressionless, as she continues to work your member and massage your balls, pushing you rapidly towards climax with her expert ministrations. With a groan you orgasm powerfully, blasting your [Cum Load Size of Player] load into the tendril milking your member. You watch the mass travel up her tendril-like arm and into the larger mass of her body as she licks her lips. Once you're finally spent, she pulls away from your groin, her hands returning to a mostly human shape as she stands up, leaving your drained form without a second glance, wandering off in search of her next meal. As she leaves, you can't help but notice that her [one of]ass seems[or]breasts seem[or]thighs seem[or]form seems[at random] [if Ball Size of Player > 5]significantly [else if Ball Size of Player < 4]slightly [end if]larger thanks to your contribution.";
+			CreatureSexAftermath "Player" receives "Stroking" from "Cum Girl";
 		if Ball Size of Player > 2:
 			increase CumGirlFed by Ball Size of Player;
 		else:
@@ -22,7 +23,7 @@ to say losetoCumGirl:
 		let CGFC be 0;
 		let CGFB be 0;
 		if "Modest Organs" is not listed in feats of Player and Player is not FemalePreferred:
-			if Cock Length of Player < ( 5 + cumgirlfed ): [range 6-40]
+			if Cock Length of Player < 5 + cumgirlfed: [range 6-40]
 				now CGFC is a random number from 0 to 2;
 				increase Cock Length of Player by CGFC;
 			if Ball Size of Player < 7 and a random chance of 1 in 2 succeeds:
@@ -31,9 +32,9 @@ to say losetoCumGirl:
 		if CGFC > 0 or CGFB > 0:
 			Follow the cock descr rule;
 			if CGFC > 0:
-				say "     Your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random] [one of]engorges[or]swells[or]throbs[at random] as it gains[else][one of]cocks[or]penises[or]shafts[or]malenesses[at random] [one of]engorge[or]swell[or]throb[at random] as they gain[end if] in length, becoming [descr].";
+				say "Your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random] [one of]engorges[or]swells[or]throbs[at random] as it gains[else][one of]cocks[or]penises[or]shafts[or]malenesses[at random] [one of]engorge[or]swell[or]throb[at random] as they gain[end if] in length, becoming [descr].";
 			if CGFB > 0:
-				say "     Your [one of]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, your skin becoming taut with the expansion, leaving you with [Ball Size Adjective of Player] [Balls].";
+				say "Your [one of]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, your skin becoming taut with the expansion, leaving you with [Ball Size Adjective of Player] [Balls].";
 	else if Player is female:
 		say "     A faint smile crosses the cum girl's usually expressionless face as she strokes a pair of fingers across your outer folds, sending shivers of delight through you. Without hesitation she slips a pair of fingers inside you, then a third, and soon her entire slick hand is pumping into your body. With each thrust her limb loses more and more definition, soon little more than a warm, gooey mass that continues to surge into your cunt, working its way deeper inside you until you feel her pooling in your womb.";
 		say "     Eventually the stimulation from the warm, pulsating mass filling your body becomes too much and you are struck by a powerful orgasm. None of your feminine honey is allowed to escape, instead drawn into the mass of living cum filling your inner passages. The cum girl licks her lips contently as she pulls out of your body with a wet slurp. She stands up slowly before leaving your drained form without a second glance, wandering off in search of her next meal, the long, tendril-like appendage dragging behind her as it slowly shifts back to its original feminine form. As she leaves, you can't help but notice that her [one of]ass[or]bust[or]tummy[or]form[at random] seems slightly larger thanks to your contribution.";
@@ -91,7 +92,7 @@ to say PrepCombat_Cum Girl:
 	if cumgrowth > 0:
 		increase HP entry by ( 2 * cumgrowth * lev entry ) / 3;
 		increase dex entry by cumgrowth;
-		increase wdam entry by ( ( cumgrowth + 1 ) / 2 );
+		increase wdam entry by ( cumgrowth + 1 ) / 2;
 	if cumgrowth > 5:
 		now scale entry is 4;
 	else:
@@ -114,20 +115,20 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The cum girl's arm quickly elongates as she strikes at you with a whip-like motion[or]The cum girl pulls you into a warm, sticky hug, planting several kisses on your face before you manage to push her away[or]The cum girl's arousing aroma of sex distracts you momentarily, allowing her to strike you quickly[or]The cum girl lashes out with both arms, quickly forming long gooey tendrils that wrap themselves around your legs, tripping you[at random]!"; [ Successful attack message ]
+	now attack entry is "The cum [one of]girl's arm quickly elongates as she strikes at you with a whip-like motion[or]girl pulls you into a warm, sticky hug, planting several kisses on your face before you manage to push her away[or]girl's arousing aroma of sex distracts you momentarily, allowing her to strike you quickly[or]girl lashes out with both arms, quickly forming long gooey tendrils that wrap themselves around your legs, tripping you[at random]!"; [ Successful attack message ]
 	now defeated entry is "[beattheCumGirl]"; [ Text when monster loses. Change 'Cum Girl' as above. ]
 	now victory entry is "[losetoCumGirl]"; [ Text when monster wins. Change 'Cum Girl' as above. ]
 	now desc entry is "[CumGirldesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "N/A - Non-infectious"; [ Face description, format as "Your face is [Face of Player]." ]
-	now body entry is "N/A - Non-infectious"; [ Body description, format as "Your body is [Body of Player]." ]
-	now skin entry is "N/A - Non-infectious"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
-	now tail entry is "N/A - Non-infectious"; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
-	now cock entry is "N/A - Non-infectious"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
-	now face change entry is "N/A - Non-infectious"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
-	now body change entry is "N/A - Non-infectious"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
-	now skin change entry is "N/A - Non-infectious"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
-	now ass change entry is "N/A - Non-infectious"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
-	now cock change entry is "N/A - Non-infectious"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
+	now face entry is ""; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is ""; [ Body description, format as "Your body is [Body of Player]." ]
+	now skin entry is ""; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
+	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is ""; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
+	now face change entry is ""; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is ""; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is ""; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is ""; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is ""; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 12; [ These are now the creature's stats... ]
 	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 12; [ These values may be used as part of alternate combat.]

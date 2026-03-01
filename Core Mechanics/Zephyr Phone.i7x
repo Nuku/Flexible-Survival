@@ -17,7 +17,7 @@ zpc_inzone is a truth state that varies. zpc_inzone is false.
 [ true if Player is currenting displaying an image. This is referenced to display the no signal 'error' message when the player leaves ]
 
 zpc_Zc is a number that varies.[@Tag:NotSaved] [true if players location is listed on table of Zpc Location reference]
-zpc_Zf is a figure name that varies.[@Tag:NotSaved] [contains the Icon entry of the figure to be displayed]
+[zpc_Zf is a figure name that varies.[@Tag:NotSaved] [contains the Icon entry of the figure to be displayed]]
 
 Section 2 - Master Referencing Table
 
@@ -426,6 +426,7 @@ to say zpcdesc2:
 	say "     Your smartphone is toast. Its screen is smashed, and while you hoped the damage was cosmetic after you tripped and smashed it against the sidewalk on your way to your present location, it has since proven to be bricked. Zephyr is known to sell many tech gadgets. Maybe one of their shops and such can repair it? You doubt a new phone is an option at this point, but it'd certainly help with navigation. ";
 
 Broken Smartphone is a grab object. Broken Smartphone is not temporary.
+Usedesc of Broken Smartphone is "     It's bricked.[line break]".
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -436,21 +437,15 @@ to say zpcdesc:
 
 zpc is a grab object. zpc is not temporary.
 understand "zephyr personal communicator" as zpc.
+Usedesc of zpc is "[zpc_use]".
+
+Section 4 - Handling (Internal)
 
 zpcturnon is an action applying to nothing.
 Understand "turn on the/-- zpc" as zpcturnon.
 
 Carry out zpcturnon:
 	try using the zpc;
-
-Section 4 - Handling (Internal)
-
-Usedesc of Broken Smartphone is "[sp_use]".
-
-to say sp_use:
-	say "     It's bricked.";
-
-Usedesc of zpc is "[zpc_use]".
 
 to say zpc_use:
 	if emap is 0:
@@ -459,14 +454,14 @@ to say zpc_use:
 			project the figure of emap_special_signalnotfound_icon;
 			say "     You turn on the device. It appears that your current location is not yet part of the Zephyr satellite coverage region... Perhaps you could try the device in one of Zephyr's published compatible locations, such as the Smith Haven Mall?";
 			now emap is 1;
-			AttemptToWait;
+			WaitLineBreak;
 			if debug is at level 2:
 				say "Following the ngraphics_blank rule";
 			follow the ngraphics_blank rule; [clear pic after WLB user response]
 		else:
 			say "     The device will now track and display your current location, until you exit the satellite coverage region. If you wish to terminate tracking while still in the coverage region, simply switch the device off.";
 			now emap is 1;
-			AttemptToWait;
+			WaitLineBreak;
 			if debug is at level 2:
 				say "Following the zpc_lookoverride rule.";
 			follow the zpc_lookoverride rule; [fill with respective pic]
@@ -474,7 +469,7 @@ to say zpc_use:
 		project the figure of emap_special_shutdown_icon; [off]
 		say "     After holding the power button for a few seconds, the display fades out as an accompanying chime completes its shutdown.";
 		now emap is 0;
-		AttemptToWait;
+		WaitLineBreak;
 		if debug is at level 2:
 			say "Following the ngraphics_blank rule";
 		follow the ngraphics_blank rule; [clear pic after WLB user response]
@@ -487,11 +482,11 @@ to zpc_checklocation: [returns Zc value of 1 or 0]
 	else:
 		now zpc_Zc is 0;
 
-to zpc_getfigure: [returns Zf value of respective figure name]
+[to zpc_getfigure: [returns Zf value of respective figure name]
 	if location of Player is a location listed in Table of Zpc Location Reference:
 		now zpc_Zf is icon entry;
 	else:
-		now zpc_Zf is Figure of pixel;
+		now zpc_Zf is Figure of pixel;]
 
 Section 5 - Handling (External)
 

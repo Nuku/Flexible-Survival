@@ -8,9 +8,7 @@ name	desc	weight	object
 "dreamcatcher"	"A quaint dreamcatcher."	1	dreamcatcher
 
 dreamcatcher is a grab object. It is not temporary.
-
 Scent of dreamcatcher is "It has a faint, unidentifiable scent that reminds you at once of a warm cup of tea and a cozy pillow.".
-
 Usedesc of dreamcatcher is "[perchance to dream]".
 
 Section 2 - Dreamevent Defintions
@@ -22,10 +20,7 @@ Definition: A dreamevent (called x) is dreamable:
 	if x is inactive, no;
 	if x is resolved, no;
 	if x is not PrereqComplete, no;
-	if HardMode is true:
-		yes;
-	else if the level of x < (level of Player + 1):
-		yes;
+	if HardMode is true or level of x < level of Player + 1, yes;
 	no;
 
 Section 3 - Events
@@ -52,10 +47,7 @@ Good Dreams	"Good Dreams"
 
 Good Dreams is a dreamevent. [ensures one generic dream is always available]
 Sarea of Good Dreams is "Dreamland".
-ResolveFunction of Good Dreams is "[DreamEvent Good Dreams]".
-
-to say DreamEvent Good Dreams:
-	say "     As you sleep, you find your mind filled only with gentle dreams, mere fading pleasantries. These good dreams grace you until you wake up, when they disperse to the winds, so easily forgotten in the waking world.";
+ResolveFunction of Good Dreams is "     As you sleep, you find your mind filled only with gentle dreams, mere fading pleasantries. These good dreams grace you until you wake up, when they disperse to the winds, so easily forgotten in the waking world.[line break]".
 
 to say perchance to dream: [checks if you can sleep]
 	if caffeinehigh of Player > 0:
@@ -94,6 +86,6 @@ to say dream a little dream: [calls an available dream event]
 			follow the player injury rule;
 			say "You are [descr] ([HP of Player]/[MaxHP of Player]).";
 	else:
-		say "     You toss and turn, but it seems the dreamcatcher is unable to help you rest.";
+		say "You toss and turn, but it seems the dreamcatcher is unable to help you rest.";
 
 Dreamcatcher ends here.

@@ -7,11 +7,10 @@ Version 1 of Male Dorm Events by Rikaeus begins here.
 
 JustinRelationship is a number that varies.
 
-instead of going to Tenvale College Male Dorms while (a random chance of 1 in 3 succeeds): [33% chance for some event]
+instead of going to Tenvale College Male Dorms while a random chance of 1 in 3 succeeds: [33% chance for some event]
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the mall locker room (random).[line break]";
-	let randomnumber be a random number from 1 to 5;
-	if randomnumber is:
+	if a random number from 1 to 5 is:
 		-- 1:
 			say "[StudyingDormStudents]"; [Leads to group of students studying]
 		-- 2:
@@ -25,7 +24,7 @@ instead of going to Tenvale College Male Dorms while (a random chance of 1 in 3 
 				say "[MaleDormSlut2]"; [Leads to a repeat of scene one with Justin's name replaced in throughout the scene as well as a few sentences changed]
 		-- 5:
 			say "[FratPartyShameWalk]"; [Leads to a scene of the player seeing wasted/hungover students slowly head to their rooms]
-	wait for any key;
+	AttemptToWait;
 	move player to Tenvale College Male Dorms;
 
 to say StudyingDormStudents:
@@ -34,8 +33,7 @@ to say StudyingDormStudents:
 
 to say PublicDormFucking:
 	say "     On your way through the dorms you can hear the sounds of moans and groans. Out of curiosity you edge closer towards where they're coming from but as you reach the source of everything you realize two things. One, the voices are male, and two the door is wide open. So, you ask yourself a question.";
-	say "     [bold type]Do you peep on the obvious public sex?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you peep on the obvious public sex?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - You're really curious, so of course.";
 	say "     ([link]N[as]n[end link]) - No, you'd rather not at the moment.";
 	if Player consents:
@@ -52,8 +50,7 @@ to say CoupleDormFight:
 
 to say MaleDormSlut1:
 	say "     When you walk through the dorm building you swear you notice sexual sounds and all male by the tone of it. However, you're unsure if you want to continue going forward, so you ask yourself a question.";
-	say "     [bold type]Do you go forward despite the sounds you hear?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you go forward despite the sounds you hear?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - You're really curious, so of course.";
 	say "     ([link]N[as]n[end link]) - No, you'd rather not at the moment.";
 	if Player consents:
@@ -67,8 +64,7 @@ to say MaleDormSlut1:
 
 to say MaleDormSlut2:
 	say "     When you walk through the dorm building you swear you notice sexual sounds and all male by the tone of it. However, you're unsure if you want to continue going forward, so you ask yourself a question.";
-	say "     [bold type]Do you go forward despite the sounds you hear?[roman type][line break]";
-	LineBreak;
+	say "[line break]     [bold type]Do you go forward despite the sounds you hear?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - You're really curious, so of course.";
 	say "     ([link]N[as]n[end link]) - No, you'd rather not at the moment.";
 	if Player consents:

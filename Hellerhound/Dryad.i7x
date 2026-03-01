@@ -15,30 +15,27 @@ dryad milk is milky.
 dryad milk is infectious.
 Strain of dryad milk is "Dryad".
 Usedesc of dryad milk is "[dryad milk use]".
+Scent of dryad milk is "You open the lid for a moment and take a sniff. Smells kinda like any other milk, but with a hint of maple syrup.".
 
 to say dryad milk use:
 	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes sweet and honey-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
-
-Scent of dryad milk is "You open the lid for a moment and take a sniff. Smells kinda like any other milk, but with a hint of maple syrup.".
 
 Section 2 - Creature Insertion
 
 To say dryad defeat:
 	if Libido of Player > 25 and Player is male:
 		say "     The dryad staggers back and stumbles into a tree. Trapped between you and it, she moans weakly. With her nude form on display, you can't help but run your eyes over her slender body, going from her lovely bosom and down to her syrupy pussy. You find her quite tantalizing to look at, and you're tempted to do much more than look. [bold type]Shall you try to have your way with her?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Have some fun with the dryad.";
 		say "     ([link]N[as]n[end link]) - No, not right now.";
 		if Player consents:
 			LineBreak;
 			say "     You move closer to the dryad and thrust your [Cock of Player] cock into her. To your surprise, you are able to push yourself balls deep inside of the dryad without any effort, and you begin to suspect something is wrong when you start to feel vines creeping along her inner walls. You try to pull out, but they grab hold and draw you all the way in. The dryad murmurs, 'Silly mortal, thinking you could rape me. Well, let me teach you a thing or two.' She leans into you, the vines along her internal walls stroking and milking at your cock insistently.";
-			let bonus be (( Strength of Player minus 10 ) divided by 2);
+			let bonus be ( Strength of Player minus 10 ) divided by 2;
 			let diceroll be a random number from 1 to 20;
 			say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
 			if diceroll + bonus >= 16:
 				say "     Due to your high level of strength, you are certain you could regain control again over the situation. Only if you truly wanted to, of course.";
-				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Turn the tables back in your favor, and dominate the dryad.";
 				say "     ([link]N[as]n[end link]) - Don't resist the dryad, letting her dominate you.";
 				if Player consents:

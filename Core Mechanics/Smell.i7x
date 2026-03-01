@@ -4,6 +4,8 @@ Version 2 of Smell by Core Mechanics begins here.
 
 "Adds the sense of smell to Flexible Survival"
 
+Things have a text called scent.
+
 Section 1 - Command
 
 understand the command smell as something new.
@@ -12,16 +14,6 @@ understand the command sniff as something new.
 sniffing is an action applying to one thing.
 understand "sniff [something]" as sniffing.
 understand "smell [something]" as sniffing.
-
-check sniffing:
-	if the Location of Player is noun, continue the action;
-	if noun is not visible, say "What? I don't see any [noun] around here to smell." instead;
-	if noun is listed in companionList of Player:
-		continue the action;
-	else if noun is a pet:
-		say "You don't have one of those with you right now." instead;
-	if noun is a situation:
-		say "It smells strangely existential, like cats, radioisotopes and poison. It gives you a headache. Perhaps you should stick to smelling more concrete, physical things." instead;
 
 before sniffing:
 	if noun is a situation:
@@ -41,6 +33,16 @@ before sniffing:
 		say "You sniff [noun].";
 	else:
 		say "You sniff the [noun].";
+
+check sniffing:
+	if the Location of Player is noun, continue the action;
+	if noun is not visible, say "What? I don't see any [noun] around here to smell." instead;
+	if noun is listed in companionList of Player:
+		continue the action;
+	if noun is a pet:
+		say "You don't have one of those with you right now." instead;
+	if noun is a situation:
+		say "It smells strangely existential, like cats, radioisotopes and poison. It gives you a headache. Perhaps you should stick to smelling more concrete, physical things." instead;
 
 carry out sniffing:
 	if noun is a person:
@@ -95,9 +97,7 @@ the scent of Doctor Matt is "     [if HP of Doctor Matt is not 100]Safely encaps
 [instead of sniffing Mall Foodcourt:
 	say "The food court smells of fast food from a little restaurant some of the rats are running to feed themselves. It doesn't smell very appetizing to you, but they seem to like the garbagy smell. A similar stink rises up from the small grate in one corner that leads to the underground tunnels.";]
 
-the scent of Faint Trail is "     The scents of the creatures roaming the park are stronger this way. You can tell that there are many different ones around. You manage to catch a whiff of [one of]some felines[or]a lupine creature[or]an equine scent[or]the farm scent of dairy cows[or]a strong, female scent[at random]. You'd best be careful.".
-
-the scent of journal is "The journal smells of cheap leather, paper and ink.".
+[the scent of Faint Trail is "     The scents of the creatures roaming the park are stronger this way. You can tell that there are many different ones around. You manage to catch a whiff of [one of]some felines[or]a lupine creature[or]an equine scent[or]the farm scent of dairy cows[or]a strong, female scent[at random]. You'd best be careful.".]
 
 Section 4 - Priorities
 

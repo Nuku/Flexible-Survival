@@ -32,11 +32,8 @@ To fight:
 			if debugactive is 1:
 				say "DEBUG -> Can't fight with creature [Name entry] because it has Banned: [BannedStatus entry][line break]";
 			next;
-		if there is no lev entry, next;
-		if lev entry > level of Player + 1 and HardMode is false:
-			next;
-		if there is no area entry, next;
-		if area entry exactly matches the text battleground, case insensitively:
+		if there is no lev entry or (lev entry > level of Player + 1 and HardMode is false), next;
+		if there is a area entry and area entry exactly matches the text battleground, case insensitively:
 			if (DayCycle entry is 2 and daytimer is day) or (DayCycle entry is 1 and daytimer is night), next; [skips if day/night doesn't match]
 			let skipit be 0;
 			repeat with s running through warded flags:
@@ -79,9 +76,11 @@ To fight:
 				say "The creature gets the drop on you!";
 				follow the monster combat mode rule; [select the combat mode for first-strike]
 				choose row monstercom from table of Critter Combat;
-				if there is a continuous in row monstercom of the table of Critter Combat:
+				now BeforeCombat is 1;
+				if there is a continuous entry:
 					follow the continuous entry;
 				follow the combat entry;
+				now BeforeCombat is 0;
 				if HP of Player < 1 or lost is 1, stop the action;
 		choose row MonsterID from Table of Random Critters;
 		if weapon object of Player is ranged:
@@ -106,9 +105,9 @@ To fight:
 		if companionList of Player is not empty:
 			repeat with x running through companionList of Player:
 				if x is not NullPet:
-					now needed is ( level of x ) times 10;
+					now needed is level of x times 10;
 					if "Good Teacher" is listed in feats of Player:
-						now needed is ( level of x ) times 6;
+						now needed is level of x times 6;
 					if XP of x >= needed and level of x < level of Player and humanity of Player > 0:
 						pet level up x;
 	else:

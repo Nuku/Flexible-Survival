@@ -7,6 +7,8 @@ Version 1 of Help Book by Prometheus begins here.
 a postimport rule: [bugfixing rules for players that import savegames]
 	if HP of Help Book is 0:
 		move Help Book to Grey Abbey Library;
+	else if HP of Help Book is 1:
+		now Help Book is nowhere;
 
 Section 1 - NPC
 
@@ -52,7 +54,8 @@ TwistedCapacity of Help Book is false. [Twisted Characters can take any penetrat
 Sterile of Help Book is true. [steriles can't knock people up]
 MainInfection of Help Book is "".
 Description of Help Book is "[HelpBookDesc]".
-Conversation of Help Book is { "Words, words, words." }.
+[Conversation of Help Book is { "Words, words, words." }.]
+fuckscene of Help Book is "     You decide that perhaps that isn't a good idea. You wouldn't want a paper cut. Letters shift around on the page until it says, 'Horny mutants and their deviant ways'. You are sure that the book is mocking you.[line break]".
 The scent of Help Book is "     The book smells of knowledge and a desire to help. Somehow.".
 
 to say HelpBookDesc:
@@ -132,13 +135,15 @@ to say HelpBookTalkMenu:
 						say "[HelpBookTalk4]";
 					-- "Remove Book":
 						say "[HelpBookTalk5]";
+				wait for any key;
+				say "[HelpBookTalkMenu]";
 		else if calcnumber is 0:
 			LineBreak;
 			now sextablerun is 1;
 			say "     You close the book again, ready to get on with your adventure.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
-	wait for any key;
 	clear the screen and hyperlink list;
 
 to say HelpBookTalk1: [Needs]
@@ -157,10 +162,5 @@ to say HelpBookTalk5: [Remove Book]
 	say "     As you decide that you don't need the book anymore, it crumbles to dust in your hands before blowing away on a nonexistent wind. You get the impression that it has gone on to help the next person that needs it and won't be back again.";
 	now Help Book is nowhere;
 	now HP of Help Book is 1;
-
-Section 3 - Sex
-
-Instead of fucking the Help Book:
-	say "     You decide that perhaps that isn't a good idea. You wouldn't want a paper cut. Letters shift around on the page until it says, 'Horny mutants and their deviant ways'. You are sure that the book is mocking you.";
 
 Help Book ends here.

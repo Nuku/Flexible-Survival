@@ -89,7 +89,7 @@ Table of GamePossessions
 Name(text)	CarriedNumber(number)	StoredNumber(number)	EquippedStatus(truth state)	CurseStatus(truth state)
 with 1000 blank rows
 
-Table of GameEndings[ (continued)]
+Table of GameEndings
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 --	--	--	--	0	false
 
@@ -207,8 +207,8 @@ Name(text)	Type(text)
 "StoredSluts_Female"	"list of text"
 "StoredSluts_Male"	"list of text"
 "StoredSluts_Other"	"list of text"
-["absorb"	"number"]
-"addedlibido"	"number"
+["absorb"	"number"
+"addedlibido"	"number"]
 "afsmread"	"number"
 "aidKenaz"	"number"
 "AlanaRelationship"	"number"
@@ -256,6 +256,10 @@ Name(text)	Type(text)
 "AngryHorguth"	"number"
 "anubisrequest"	"number"
 "AptAid"	"number"
+"AraqielCaptureTimer"	"number"
+"AraqielTrackerCollege"	"number"
+"AraqielTrackerMall"	"number"
+"AraqielTrackerRedLight"	"number"
 "ArcherFucked"	"number"
 "ArenaBattleCounter"	"number"
 "AresDannyEncounters"	"number"
@@ -312,6 +316,8 @@ Name(text)	Type(text)
 "Borismate"	"number"
 "Borisquest"	"number"
 "boristalk"	"number"
+"BouncyCorruption"	"number"
+"BouncyTemptation"	"number"
 ["boundcounter"	"number"
 "boundmod"	"number"
 "boundmod2"	"number"
@@ -550,7 +556,7 @@ Name(text)	Type(text)
 ["Feline_type"	"number"]
 "FelinoidRescued"	"number"
 "FelixSaved"	"number"
-"fellforward"	"number"
+["fellforward"	"number"]
 "femalecatHP"	"number"
 "femonyxq"	"number"
 "FeralBirths"	"number"
@@ -753,11 +759,11 @@ Name(text)	Type(text)
 "KatyaDildoTaken"	"number"
 "KatyaRelationship"	"number"
 "KatyaResistance"	"number"
-"keepbody"	"number"
+["keepbody"	"number"
 "keepcock"	"number"
 "keepface"	"number"
 "keepskin"	"number"
-"keeptail"	"number"
+"keeptail"	"number"]
 "Kenazaroused"	"number"
 "Kenazdes"	"number"
 "Kenaztalk"	"number"
@@ -1498,7 +1504,7 @@ Name(text)	Type(text)
 "BlancheNonBinaryMomDad"	"text"
 "BlancheNonBinaryMommyDaddy"	"text"
 "BlueDesignator"	"text"
-"bodyselector"	"text"
+["bodyselector"	"text"]
 "BodyShopGuaranteedBody"	"text"
 "BodyShopGuaranteedCrotch"	"text"
 "BodyShopGuaranteedFace"	"text"
@@ -1561,8 +1567,8 @@ Name(text)	Type(text)
 "LarissaSkin"	"text"
 "LarissaTail"	"text"
 "LarissaTFText"	"text"
-"Lusting"	"text"
-["musicmessage"	"text"]
+["Lusting"	"text"
+"musicmessage"	"text"]
 "NadiaChar-A"	"text"
 "NadiaChar-B"	"text"
 "NadiaChar-C"	"text"
@@ -1640,6 +1646,7 @@ Name(text)	Type(text)
 "animal heat"	"truth state"
 "animeclubfight"	"truth state"
 "artemisstatefairrt"	"truth state"
+"asbeastseen"	"truth state"
 "AT_Diego"	"truth state"
 "AT_Jimmy"	"truth state"
 "AT_Lisa"	"truth state"
@@ -1695,10 +1702,10 @@ Name(text)	Type(text)
 "ButterflyPregnant"	"truth state"
 "ButterflyProcreated"	"truth state"
 "ButterflyRevenge"	"truth state"
-"callovi"	"truth state"
+["callovi"	"truth state"]
 "cclosttarget"	"truth state"
 "cheetah_mpreg"	"truth state"
-"chindem"	"truth state"
+["chindem"	"truth state"]
 "christysausage"	"truth state"
 "ClassPaymentAccepted"	"truth state"
 "cuptrick"	"truth state"

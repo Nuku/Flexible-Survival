@@ -15,6 +15,10 @@ Section 1 - NPC
 [   5: Getting there                                           ]
 [   6+: added later                                            ]
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	now SexuallyExperienced of Darren is true;
+	now Sterile of Darren is false;
+
 Table of GameCharacterIDs (continued)
 object	name
 Darren	"Darren"
@@ -54,12 +58,12 @@ OralVirgin of Darren is true.
 Virgin of Darren is true.
 AnalVirgin of Darren is true.
 PenileVirgin of Darren is false.
-SexuallyExperienced of Darren is false.
+SexuallyExperienced of Darren is true.
 TwistedCapacity of Darren is false. [Twisted Characters can take any penetration, no matter the size]
-Sterile of Darren is true. [steriles can't knock people up]
+Sterile of Darren is false. [steriles can't knock people up]
 MainInfection of Darren is "Salamander".
 Description of Darren is "[DarrenDesc]".
-Conversation of Darren is { "<This is nothing but a placeholder!>" }.
+fuckscene of Darren is "[SexWithDarren]".
 The scent of Darren is "     He smells of smoke and fire.".
 
 to say DarrenDesc:
@@ -73,6 +77,7 @@ instead of conversing the Darren:
 	say "[DarrenTalkMenu]";
 
 to say DarrenTalkMenu:
+	let TalkDone be false;
 	say "     What do you want to talk about with Darren?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -92,116 +97,6 @@ to say DarrenTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "See if he needs any help";
 	[]
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[DarrenTalk1]";
-				if (nam is "Salamander"):
-					say "[DarrenTalk2]";
-				if (nam is "Help"):
-					say "[DarrenTalk3]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step back from the salamander, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
-
-to say DarrenTalk1: [himself]
-	say "     You ask Darren to tell you a little more about himself, and what he's doing here. He shuffles around somewhat nervously, but seems to muster enough courage to start speaking. 'Well, I used to just be an intern in the area, nothing particularly special. I mostly just answered phones and sorted mail, like some sort of glorified secretary. Eventually all of, well, this happened, and when I saw what was going on I locked myself in my apartment, tried to just ride it out, you know? It worked for a few days, but eventually I ran out of canned soup and had to start leaving to find supplies. Then the ineveitable happened and I was changed, until I eventually found this little hidey-hole, and have been cleaning it up since. Not as pretty as my apartment was, but it's a lot safer.'";
-	if Loyalty of Darren < 1:
-		now Loyalty of Darren is 1;
-
-to say DarrenTalk2: [his form]
-	say "     You've seen salamanders around the area, but nothing quite like Darren. You ask him about his new body, and he stammers, making an expression you're sure would have a blush if his skin were'nt already red. Eventually he gathers the nerve to go into detail. 'Well, on a trip to forage some supplies, I apparently wasn't as stealthy as I thought, because three of the salamanders had followed my back. They broke down my door and dragged me away, to some sort of... nest, I guess. I didn't really understand all of what they said at the time, I was a bit too panicked, but it seems they thought I'd be easy pickings for what they wanted, and with what happened I can't say they were exactly wrong.'";
-	say "     'Eventually I did find out what they had taken me for. All of the other salamanders as you may have noticed were female, and they were looking for a breeding stud of their own. In a way it would sound kind of cool if it wasn't so terrifying. At this point the actual moment itself is a blur, but once it was over I woke up looking like this, their perfect idea of a stud in body, and for the next few days they made sure to take full advantage of it.' For a moment he pauses, and gestures to his erect shaft. 'That's how I learned that this thing never actually goes down, at least that I've seen. No matter how much they used me like a toy or how long since then it's just been erect the whole time. It even gets painful if I don't get, well, relief practically every couple of hours. It's certainly been an experience being like this, but now that I've gotten away from them, I'm hoping things will be a bit different.'";
-	if Loyalty of Darren < 1:
-		now Loyalty of Darren is 1;
-
-to say DarrenTalk3: [helping]
-	if Loyalty of Darren < 2:
-		say "     After seeing the state of the room, and how on edge Darren has been looking, you decide to ask him if he needs any help. He glances around, before looking straight at you again. 'Well, as much as I try to make it on my own out here, I have had a bit of trouble finding enough food supplies. There's some, of course, but it seems harder to find sealed things every day. If you'd be able to bring me [bold type]three packages of food[roman type] that would help a lot.' You nod, and tell him you'll see what you can do.";
-		now Loyalty of Darren is 2;
-	else if Loyalty of Darren is 2:
-		if carried of food > 2:
-			say "     Thinking of what you have in your pack, you realize you have enough food to give Darren what he asked for, should you choose. [bold type]Do you give him your food?[roman type]";
-			LineBreak;
-			if Player consents:
-				say "     This time when you return to the little hideaway, you have a gift for Darren. When you speak to him about helping him out, you show him some of the preserved food you've found scavenging, and offer him three portions. He takes it from you gratefully and steps aside to store it in a small cabinet in the corner, more intact than the others nearby it. 'Thanks so much, friend. I've been too nervous to really go as far as I probably should when looking for food, after some close calls, so this makes a huge difference.' When he returns over to you, he seems to pause for a moment before he darts in and gives you a quick hug. 'I think the worst part has been how alone I've felt out here. I'm glad to know that there's at least one person I can trust right now.'";
-				ItemLoss food by 3;
-				now Loyalty of Darren is 3;
-			else:
-				say "     You decide against giving the food to Darren for the moment, for your own reasons.";
-		else:
-			say "     'Hey, thanks for offering to help me out, it's really a load off my shoulders to know that I'm not totally alone out here.' You don't have anything to give him right now, but you nod your head in agreement, and tell him you'll bring him some supplies when you can.";
-	else: [placeholder text until update]
-		say "     'Things have been okay at the moment, but I might need some more help from you eventually.'";
-		[say "[DarrenRebuilding]";]
-
-to say DarrenRebuilding: [assorted tasks to improve the hideaway and get closer to Darren]
-	if HP of Darren is 0: [basic scene, cleaning things up]
-		say "     A";
-	else if HP of Darren < 5:
-		say "     A";
-		[insert talk style table with different tasks]
-	else:
-		say "     A";
-
-Section 3 - Fucking
-
-instead of fucking the Darren:
-	say "[SexWithDarren]";
-
-to say SexWithDarren:
-	if (lastfuck of Darren - turns < 2): [he got fucked in the last 6 hours = 2 turns]
-		say "     'I'm still a bit worn out from last time, but I'd be happy to chat with you instead.' Darren gives you a light smile.";
-	if Loyalty of Darren is 0:
-		say "     You haven't even spoken to him yet!";
-	else:
-		say "     'Well, I'm sure we can think of something to do together, but nothing too wild, okay?'";
-		say "[DarrenSexMenu]";
-
-to say DarrenSexMenu:
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Offer a BJ";
-	now sortorder entry is 1;
-	now description entry is "Volunteer some oral action";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Ask him to fuck you";
-	now sortorder entry is 2;
-	now description entry is "See about getting some salamander dick";
-	[]
-	if Player is male and (Loyalty of Darren > 2):
-		choose a blank row in table of fucking options;
-		now title entry is "Ask to fuck him";
-		now sortorder entry is 3;
-		now description entry is "Ask if you can test out his ass";
-	[]
-	if (Loyalty of Darren > 3) and (Player is female or "MPreg" is listed in the feats of Player):
-		choose a blank row in table of fucking options;
-		now title entry is "Get bred";
-		now sortorder entry is 3;
-		now description entry is "Have the salamander stud breed you";
-	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -215,23 +110,137 @@ to say DarrenSexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Offer a BJ"):
-					say "[DarrenSex1]";
-				if (nam is "Ask him to fuck you"):
-					say "[DarrenSex2]";
-				if (nam is "Ask to fuck him"):
-					say "[DarrenSex3]";
-				if (name is "Get bred"):
-					say "[DarrenSex4]";
+				if title entry is:
+					-- "Himself":
+						say "[DarrenTalk1]";
+					-- "Salamander":
+						say "[DarrenTalk2]";
+					-- "Help":
+						say "[DarrenTalk3]";
+						now TalkDone is true;
 				wait for any key;
+				if TalkDone is false:
+					say "[DarrenTalkMenu]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
-			say "     You step back from the salamander, and tell him you've reconsidered for now.";
+			say "     You step back from the salamander, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say DarrenTalk1: [himself]
+	say "     You ask Darren to tell you a little more about himself, and what he's doing here. He shuffles around somewhat nervously, but seems to muster enough courage to start speaking. 'Well, I used to just be an intern in the area, nothing particularly special. I mostly just answered phones and sorted mail, like some sort of glorified secretary. Eventually all of, well, this happened, and when I saw what was going on I locked myself in my apartment, tried to just ride it out, you know? It worked for a few days, but eventually I ran out of canned soup and had to start leaving to find supplies. Then the inevitable happened and I was changed, until I eventually found this little hidey-hole, and have been cleaning it up since. Not as pretty as my apartment was, but it's a lot safer.'";
+	if Loyalty of Darren < 1:
+		now Loyalty of Darren is 1;
+
+to say DarrenTalk2: [his form]
+	say "     You've seen salamanders around the area, but nothing quite like Darren. You ask him about his new body, and he stammers, making an expression you're sure would have a blush if his skin weren't already red. Eventually he gathers the nerve to go into detail. 'Well, on a trip to forage some supplies, I apparently wasn't as stealthy as I thought, because three of the salamanders had followed me back. They broke down my door and dragged me away, to some sort of... nest, I guess. I didn't really understand all of what they said at the time, I was a bit too panicked, but it seems they thought I'd be easy pickings for what they wanted, and with what happened I can't say they were exactly wrong.'";
+	say "     'Eventually I did find out what they had taken me for. All of the other salamanders as you may have noticed were female, and they were looking for a breeding stud of their own. In a way it would sound kind of cool if it wasn't so terrifying. At this point the actual moment itself is a blur, but once it was over I woke up looking like this, their perfect idea of a stud in body, and for the next few days they made sure to take full advantage of it.' For a moment he pauses, and gestures to his erect shaft. 'That's how I learned that this thing never actually goes down, at least that I've seen. No matter how much they used me like a toy or how long since then it's just been erect the whole time. It even gets painful if I don't get, well, relief practically every couple of hours. It's certainly been an experience being like this, but now that I've gotten away from them, I'm hoping things will be a bit different.'";
+	if Loyalty of Darren < 1:
+		now Loyalty of Darren is 1;
+
+to say DarrenTalk3: [helping]
+	if Loyalty of Darren < 2:
+		say "     After seeing the state of the room, and how on edge Darren has been looking, you decide to ask him if he needs any help. He glances around, before looking straight at you again. 'Well, as much as I try to make it on my own out here, I have had a bit of trouble finding enough food supplies. There's some, of course, but it seems harder to find sealed things every day. If you'd be able to bring me [bold type]three packages of food[roman type] that would help a lot.' You nod, and tell him you'll see what you can do.";
+		now Loyalty of Darren is 2;
+	else if Loyalty of Darren is 2:
+		if carried of food > 2:
+			say "     Thinking of what you have in your pack, you realize you have enough food to give Darren what he asked for, should you choose. [bold type]Do you give him your food?[roman type][line break]";
+			if Player consents:
+				LineBreak;
+				say "     This time when you return to the little hideaway, you have a gift for Darren. When you speak to him about helping him out, you show him some of the preserved food you've found scavenging, and offer him three portions. He takes it from you gratefully and steps aside to store it in a small cabinet in the corner, more intact than the others nearby it. 'Thanks so much, friend. I've been too nervous to really go as far as I probably should when looking for food, after some close calls, so this makes a huge difference.' When he returns over to you, he seems to pause for a moment before he darts in and gives you a quick hug. 'I think the worst part has been how alone I've felt out here. I'm glad to know that there's at least one person I can trust right now.'";
+				ItemLoss food by 3;
+				now Loyalty of Darren is 3;
+			else:
+				LineBreak;
+				say "     You decide against giving the food to Darren for the moment, for your own reasons.";
+		else:
+			say "     'Hey, thanks for offering to help me out, it's really a load off my shoulders to know that I'm not totally alone out here.' You don't have anything to give him right now, but you nod your head in agreement, and tell him you'll bring him some supplies when you can.";
+	else: [placeholder text until update]
+		say "     'Things have been okay for the moment, but I might need some more help from you eventually.'";
+		[say "[DarrenRebuilding]";]
+
+[to say DarrenRebuilding: [assorted tasks to improve the hideaway and get closer to Darren]
+	if HP of Darren is 0: [basic scene, cleaning things up]
+		say "     A";
+	else if HP of Darren < 5:
+		say "     A";
+		[insert talk style table with different tasks]
+	else:
+		say "     A";]
+
+Section 3 - Fucking
+
+to say SexWithDarren:
+	if lastfuck of Darren - turns < 2: [he got fucked in the last 6 hours = 2 turns]
+		say "     'I'm still a bit worn out from last time, but I'd be happy to chat with you instead.' Darren gives you a light smile.";
+	if Loyalty of Darren is 0:
+		say "     You haven't even spoken to him yet!";
+	else:
+		say "     'Well, I'm sure we can think of something to do together, but nothing too wild, okay?'";
+		say "[DarrenSexMenu]";
+
+to say DarrenSexMenu:
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Offer a BJ";
+	now sortorder entry is 1;
+	now description entry is "Volunteer some oral action";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ask him to fuck you";
+	now sortorder entry is 2;
+	now description entry is "See about getting some salamander dick";
+	[]
+	if Player is male and Loyalty of Darren > 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask to fuck him";
+		now sortorder entry is 3;
+		now description entry is "Ask if you can test out his ass";
+	[
+	if Loyalty of Darren > 3 and (Player is female or "MPreg" is listed in the feats of Player):
+		choose a blank row in table of fucking options;
+		now title entry is "Get bred";
+		now sortorder entry is 4;
+		now description entry is "Have the salamander stud breed you";
+	]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				LineBreak;
+				now sextablerun is 1;
+				if title entry is:
+					-- "Offer a BJ":
+						say "[DarrenSex1]";
+					-- "Ask him to fuck you":
+						say "[DarrenSex2]";
+					-- "Ask to fuck him":
+						say "[DarrenSex3]";
+					[-- "Get bred":
+						say "[DarrenSex4]";]
+		else if calcnumber is 0:
+			LineBreak;
+			now sextablerun is 1;
+			say "     You step back from the salamander, and tell him you've reconsidered for now.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say DarrenSex1: [blow him]
@@ -263,13 +272,13 @@ to say DarrenSex3: [do the fucking]
 		say "     'That... that was really something. I definitely didn't expect to like it quite that much, but apparently I've become just a bit of a natural, huh? Either way, this was great, and I'd be happy to do this again, or maybe experiment in some other ways.' You give Darren a brief hug, and thank him for being so open, looking forward to the next chance you have to try something like this. Maybe you can even try out some entirely new things with him in the future, and give him even more chances to learn his new preferences.";
 	NPCSexAftermath Darren receives "AssFuck" from Player;
 
-to say DarrenSex4: [breeding, currently not accessible]
+[to say DarrenSex4: [breeding, currently not accessible]
 	if Player is female:
 		say "     A";
 		NPCSexAftermath Player receives "PussyFuck" from Darren;
 	else:
 		say "     A";
-		NPCSexAftermath Player receives "AssFuck" from Darren;
+		NPCSexAftermath Player receives "AssFuck" from Darren;]
 
 Section 5 - Location
 
@@ -278,23 +287,25 @@ Object	Name
 Salamander Hideaway	"Salamander Hideaway"
 
 Salamander Hideaway is a room.
-Description of Salamander Hideaway is "     This small service building has clearly been repurposed into a living space, with a number of comfortable pieces of furniture scattered around the space, and a makeshift kitchen set up in one corner.".
-Approaching the Capitol Building is northwest of Salamander Hideaway.
+Description of Salamander Hideaway is "     This small service building has clearly been repurposed into a living space, with a number of comfortable pieces of furniture scattered around the space, and a makeshift kitchen set up in one corner.[line break]".
 Salamander Hideaway is southeast of Approaching the Capitol Building.
+Approaching the Capitol Building is northwest of Salamander Hideaway.
 
 instead of going southeast from Approaching the Capitol Building while Loyalty of Darren is 0:
 	say "     While walking through the Capitol district, you spot a pair of luminous eyes examining you through a narrow gap in a doorway. When you focus your gaze to examine more closely, you can see them move out of visibility as you hear a small crashing sound. A moment later, a small panel seems to cover the gap you'd just seen. It seems like someone might be hiding back there, though they aren't being quite as stealthy about it as they think.";
-	say "     [bold type]Do you want to go check it out?[roman type][line break]";
+	say "[line break]     [bold type]Do you want to go check it out?[roman type][line break]";
 	if Player consents:
-		if BodyName of Player is "Salamander":
+		LineBreak;
+		if BodyName of Player is "Salamander" or FaceName of Player is "Salamander":
 			say "     You approach the door you saw a moment ago, and knock firmly. For a second, the panel opens back up, revealing the same eyes you saw before, but scarcely a moment later you can see those eyes widen before the opening is slammed closed again. You blink, surprised by the reaction they had, before trying to figure out what happened. You didn't even have a chance to speak, so the only thing that might have turned them off of you would be your appearance. Maybe you'd have better luck trying again if you came back looking different...";
 		else:
-			say "     You approach the door you saw a moment ago, and knock firmly. For a second, the panel opens back up, revealing the same eyes you saw before, but scarcely a moment later you can see those eyes widen before the opening is slammed closed again. Before you can react further, you hear a voice coming through the door. 'Okay, you get a few points for not being with them, but I think you should tell me who you are and why you're here before I even think about letting you in.' You explain your situation as a survivor, and how you were out exploring. Several seconds pass in silence, and finally the peephole opens again, once more revealing the same bright eyes. 'Okay, you seem trustworthy, but please don't make me regret this.";
-			say "     From the other side of the door, you can hear several clanking sounds before the door itself slides open. On the other side is a tall, vaguely lizardlike figure. At a second glance, you realize that maybe that isn't quite right, as he more closely resembles the salamanders that sometimes stalk this area than any reptile. And he is clearly the correct term, as unlike those creatures this new face is very clearly male, with one of the most masculine physiques you've seen outside of bodybuilders, and a shaft that seems to already be shockingly hard. Contrary to what you'd expect from someone looking like that, however, his face seems to be significantly uncertain and nervous when looking at you.";
+			say "     You approach the door you saw a moment ago, and knock firmly. For a second, the panel opens back up, revealing the same eyes you saw before, but scarcely a moment later you can see those eyes widen before the opening is slammed closed again. Before you can react further, you hear a voice coming through the door. 'Okay, you get a few points for not being with them, but I think you should tell me who you are and why you're here before I even think about letting you in.' You explain your situation as a survivor, and how you were out exploring. Several seconds pass in silence, and finally the peephole opens again, once more revealing the same bright eyes. 'Okay, you seem trustworthy, but please don't make me regret this.'";
+			say "     From the other side of the door, you can hear several clanking sounds before the door itself slides open. On the other side is a tall, vaguely lizardlike figure. At a second glance, you realize that maybe that isn't quite right, as he more closely resembles the salamanders that sometimes stalk this area than any reptile. And [']he['] is clearly the correct term, as unlike those creatures this new face is very clearly male, with one of the most masculine physiques you've seen outside of bodybuilders, and a shaft that seems to already be shockingly hard. Contrary to what you'd expect from someone looking like that, however, his face seems to be significantly uncertain and nervous when looking at you.";
 			WaitLineBreak;
 			say "     'Uh, hello. Sorry about all this, things have been kind of crazy lately, and I haven't had many visitors who weren't trying to assault me. I'm Darren, by the way.' He rubs the back of his head awkwardly, and you return the favor and give him your name. During the exchange you take a moment to look around, and you see that you're in a fairly small room, one that may have simply been some sort of storage space before, but is now fitted into a reasonably cozy space to stay. 'I don't exactly have a lot to offer right now, but you're welcome to come in, now that I know you aren't, well, gonna attack me or anything.'";
 			move player to Salamander Hideaway;
 	else:
+		LineBreak;
 		say "     Well, it's not really your problem, so you decide to just leave it alone. Maybe some other day you'd be interested, but for now you return to your adventures.";
 
 Darren ends here.

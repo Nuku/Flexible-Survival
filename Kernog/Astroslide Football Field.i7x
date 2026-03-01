@@ -10,7 +10,6 @@ Astroslide Football Field is a room. It is fasttravel. It is private.
 Astroslide Football Field is west of Athletic Street.
 Astroslide Football Field is east of Astroslide Field Locker-room.
 earea of Astroslide Football Field is "Campus".
-
 Description of Astroslide Football Field is "[AstroslideFootFielddesc]".
 
 to say AstroslideFootFielddesc:
@@ -35,7 +34,7 @@ Football Game is a scenery in the Astroslide Football Field. "[footballGameDesc]
 to say footballGameDesc:
 	say "     You take a seat in the stadium, among the small, but regular audience. The game is yet another play-off between the Tenvale Silverbacks, and a team of wolfmen. They are dressed in shoulder pads and helmets, but are completely naked underneath, and you have a hunch that it will not be a classic game of football[if HP of Roman >= 11]. On the side of the field, the Husky cheerleaders dance furiously in their mini-skirts, offering encouragement for the players, and eye-candy for the spectators[end if]. The Silverbacks seem to be on the [one of]offense. After the usual preparation, the down starts. Immediately, players start pushing and tackling each other, but instead of simple contact, hands reach for cocks, pussies or nipples, and rapidly, groups of three or more players of various composition form, and several gangbangs or orgies ensue. However, one of the apes escaped the starting frenzy, and begins to sprint forward. The carrier of the ball vigorously launches the ball towards the player. Before he can do anything, the ape is tackled by two wolfmen, but the primate manages to catch the ball with one of his feet. While the gorilla is spitroasted by the two canines, the referee whistles and validates the down, under the cheers of the crowd[or]defense. After the usual preparation, the down starts. Immediately, players start pushing and tackling each other, but instead of simple contact, hands reach for cocks, pussies or nipples, and rapidly, groups of three or more players of various composition form, and several gangbangs or orgies ensue. One of the wolfmen manages to clear from the mess in the middle of the field, and the quarterback lobs a pass in his direction. But the pass is too slow, allowing the canine to be grabbed from behind by a gorilla, who has the pair fall on the ground. The ape's arms lock around the wolf's, and their prehensile feet grab his opponent's cock and start masturbating. The referee signals that the attempt was unsuccessful, while the wolfman howls in arousal, as he receives this unusual footjob[at random].";
 	say "     You watch the game some more. The downs and the phases follow one after the other, and the audience around you become rowdier and hornier each passing minute. You wisely slip away from your seat, before you get dragged into this impromptu orgy.";
-	raise Player Libido by 20;
+	raise Player Libido by a random number from 10 to 20;
 
 [NPC]
 [Team captain Roman is here - see Roman extension by Kernog]

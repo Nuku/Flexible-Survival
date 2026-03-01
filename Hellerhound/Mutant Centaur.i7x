@@ -10,6 +10,8 @@ Section 1 - Dry Plains
 
 Section 2 - Tainted Centaur Event
 
+centaurmate is a number that varies.
+
 Table of GameEventIDs (continued)
 Object	Name
 Apple Tree	"Apple Tree"
@@ -17,7 +19,6 @@ Apple Tree	"Apple Tree"
 Apple Tree is a situation.
 ResolveFunction of Apple Tree is "[ResolveEvent Apple Tree]". The level of Apple Tree is 6.
 Sarea of Apple Tree is "Plains".
-centaurmate is a number that varies.
 
 to say ResolveEvent Apple Tree:
 	say "     Wandering across the plains, you come to one of the few trees scattered throughout it. As you approach, you can see a centaur stallion plucking the apples from the tree and stuffing them into his pack and his mouth. A little wary, but hopeful at the prospect of food, you continue forward cautiously and approach from behind. As you get nearer, you can see that the centaur has become strange and twisted by the apples he's gathering and eating. Each time he gobbles one down, fresh green tentacles under his equine belly writhe and his large cock and balls become greener. Some roots from the tree have started to slide up his legs, moving to further corrupt him.";
@@ -62,12 +63,11 @@ name	desc	weight	object
 "fresh apple"	"A rosy red apple."	1	fresh apple
 
 fresh apple is a grab object. Understand "apple" and "fresh" as fresh apple. fresh apple is infectious. Strain of fresh apple is "Mutant Centaur".
+the scent of fresh apple is "The apple smells fresh and juicy at first, though you notice a strange, sickly sweet smell hidden beneath that.".
 Usedesc of fresh apple is "[fresh apple use]".
 
 to say fresh apple use:
 	PlayerEat 5;
-
-the scent of fresh apple is "The apple smells fresh and juicy at first, though you notice a strange, sickly sweet smell hidden beneath that.".
 
 Section 4 - Creature Responses
 
@@ -109,7 +109,7 @@ To say Mutant Centaur Loses:
 			say "     The sight of the tentacles doesn't bother your fuzzy mind in the least as you leap onto the centaur's furry belly and rub yourself forward and back, arousing yourself and trying to raise yourself to orgasm. Your dripping pussy leaves streaks of wetness on the centaur's fur, and after a short while, something wet and large pokes at your back, breaking your concentration. You stop and turn back in surprise to see the huge green cock starkly erect, its precum-dripping tip a few inches from your face. A trail of precum leads along your body to your back. It isn't done growing, and pushes you forwards a few inches before it is fully ready.";
 			say "     You turn and place the cock at your waiting entrance, smearing your hole with precum as you try and force it in.";
 			WaitLineBreak;
-			if Cunt Tightness of Player < 16:[too small, cock won't fit]
+			if Cunt Tightness of Player < 16: [too small, cock won't fit]
 				say "     The cock doesn't go in, no matter how hard you try, so you bend over and start to lick it eagerly. It spasms more precum in response, and your mouth becomes hot and gooey in an instant.";
 				say "     You open your mouth wide and fit as much of it in as you can, which means only the soft head. You start to lick it and suck at the hole, drinking in the juices, until it climaxes.";
 				say "     The spray of fluid begins slowly, but increases in flow rapidly until you cannot swallow it all, and it shoves your face back, and sprays of hot green cum soak your whole body in a few seconds.";
@@ -178,19 +178,6 @@ To say Mutant Centaur Wins:
 	else:
 		say "     The centaur looks at you with apprehension. 'Nothing at all?' he groans, and kicks his front hoof, knocking you over. He looks at you as if expecting something to happen, but it doesn't. He huffs and turns around, kicking dirt and dry grass onto you before riding off. 'Useless creature.'";
 
-[to say centaurgrowtorso:
-	say "you tip forwards, face first as a pair of new legs grows out from your behind, and an equine torso follows";
-	if SkinName of Player is "Mutant Centaur":
-		say ", covered with black fur, newly grown muscles rippling underneath.";
-	else if SkinName of Player is "Human":
-		say ", the human skin contorting and stretching, leaving pink streaks as it expands to support the required muscles.";
-	increase hunger of Player by 10;
-	say "You feel hungry, the energy being sapped out of you by the new growth.";
-	say "Your feet grow hooves, large and noisy as they clatter on the road. They also change direction and stature as they begin to look truly like those of a horse's";]
-
-to say Mutant Centaur Desc:
-	say "     As you walk in the plain, a dust cloud becomes visible. You look at it with fear, and attempt to run, but fail to escape. As the dust cloud engulfs you and settles to the ground, it reveals an equine form with a powerful human torso. As it turns to slow down and stop in front of you, you catch a glimpse of a green thing under his belly, as it is very definitely a male. It seems you've encountered one of the tainted centaurs created by the one you released. The creature whinnies lustfully and makes a grab for you.";
-
 Section 5 - Creature Insertion
 
 Table of CombatPrep (continued)
@@ -223,7 +210,7 @@ When Play begins:
 	now attack entry is "[one of]The centaur punches your face with its hand[or]The centaur headbutts you[or]The centaur's green tentacles rise from under him and slap you[or]The centaur rears up and slams you with one of its hooves[at random]!";
 	now defeated entry is "[Mutant Centaur Loses]";
 	now victory entry is "[Mutant Centaur Wins]";
-	now desc entry is "[Mutant Centaur Desc]"; [ Description of the creature when you encounter it.]
+	now desc entry is "     As you walk in the plain, a dust cloud becomes visible. You look at it with fear, and attempt to run, but fail to escape. As the dust cloud engulfs you and settles to the ground, it reveals an equine form with a powerful human torso. As it turns to slow down and stop in front of you, you catch a glimpse of a green thing under his belly, as it is very definitely a male. It seems you've encountered one of the tainted centaurs created by the one you released. The creature whinnies lustfully and makes a grab for you.[line break]"; [ Description of the creature when you encounter it.]
 	now face entry is "human, with horse ears"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "that of a centaur, with a muscled, human upper torso. Your body has well-defined muscles, but they seem a little strange and don't quite move right. Your arms are strong and muscular, and roughly human in appearance as well. Your lower body is that of a horse, with a muscular equine form and slender legs leading to a set of bottle green hooves";
 	now skin entry is "human on your upper body and blending smoothly into black horsehair on your bottom half to cover your"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -373,6 +360,16 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
+
+[to say centaurgrowtorso:
+	say "you tip forwards, face first as a pair of new legs grows out from your behind, and an equine torso follows";
+	if SkinName of Player is "Mutant Centaur":
+		say ", covered with black fur, newly grown muscles rippling underneath.";
+	else if SkinName of Player is "Human":
+		say ", the human skin contorting and stretching, leaving pink streaks as it expands to support the required muscles.";
+	increase hunger of Player by 10;
+	say "You feel hungry, the energy being sapped out of you by the new growth.";
+	say "Your feet grow hooves, large and noisy as they clatter on the road. They also change direction and stature as they begin to look truly like those of a horse's";]
 
 Section 6 - Centaur Heat
 

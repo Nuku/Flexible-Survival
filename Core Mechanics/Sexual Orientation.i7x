@@ -19,7 +19,6 @@ carry out UsePlayerSexualOrientationMenu:
 	PlayerSexualOrientationMenu;
 
 to PlayerSexualOrientationMenu:
-	now calcnumber is -1;
 	let OrientationMenuExit be 0;
 	while OrientationMenuExit is 0:
 		clear the screen;
@@ -31,12 +30,11 @@ to PlayerSexualOrientationMenu:
 		say "(5) [link]Male Herms (flat chest, cock, pussy)[as]5[end link] - [if MaleHermInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
 		say "(6) [link]Female Herms (breasts, cock, pussy)[as]6[end link] - [if FemaleHermInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
 		say "[line break](0) [link]Return to previous menu[as]0[end link][line break]";
-		while 2 is 2:
+		now calcnumber is -1;
+		while calcnumber < 0 or calcnumber > 6:
 			say "Choice? (0-6)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 6:
-				break;
-			else:
+			if calcnumber < 0 or calcnumber > 6:
 				say "Invalid Entry. Pick from 0 to 6.";
 		LineBreak;
 		if calcnumber is 1:

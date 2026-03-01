@@ -17,15 +17,16 @@ before fucking:
 
 check fucking:
 	if noun is not visible, say "Who?" instead;
-
-Carry out fucking:
 	if fuckscene of noun is empty:
 		if noun is a pet:
-			say "You cannot initiate sex with this companion.";
+			say "     You cannot initiate sex with this companion." instead;
 		else:
-			say "They don't seem very interested.";
-	else:
-		say "[fuckscene of noun]";
+			say "     They don't seem very interested." instead;
+
+Carry out fucking:
+	if icon of noun is not Figure of pixel:
+		project icon of noun;
+	say "[fuckscene of noun]";
 
 [Fucking v2.0 table]
 
@@ -49,7 +50,7 @@ object	name
 Testerbot	"Testerbot"
 
 Testerbot is a person.
-[ Testerbot is in Primary Lab.	]			[Removed again - testing over]
+[[ Testerbot is in Primary Lab.	]			[Removed again - testing over]
 Description of Testerbot is "[testerbotdesc]".
 Conversation of Testerbot is { "Disgusting!" }.
 lastfuck of Testerbot is usually 555.
@@ -161,9 +162,9 @@ to say testerbotselection:
 
 [The below method no longer needs to use this rule, but some older implementations still use this column]
 This is the testerbotsexy rule:
-	say "I'm now redundant! :)";
+	say "I'm now redundant! :)";]
 
-Part 2 - Spontaneous Orgasm
+Section 3 - Spontaneous Orgasm
 
 to say spontaneousorgasm:
 	if Player is herm:
@@ -171,7 +172,7 @@ to say spontaneousorgasm:
 	else if Player is male:
 		say "Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously and knocks you to your knees. Your cock[smn] spray[smv] your hot seed across your clothes and the ground. Your blasted cum leaves a [if Ball Size of Player < 3]messy splotch[else if Ball Size of Player < 5]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
 	else if Player is female:
-		say "Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously and knocks you to your knees. Your cunt[sfn] overflow[sfv] with hot, feminine juices that soak your thighs. You leave a [if ( 2 * Cunt Tightness of Player ) < 12]messy splotch[else if ( 2 * Cunt Tightness of Player ) < 20]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
+		say "Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously and knocks you to your knees. Your cunt[sfn] overflow[sfv] with hot, feminine juices that soak your thighs. You leave a [if 2 * Cunt Tightness of Player < 12]messy splotch[else if 2 * Cunt Tightness of Player < 20]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
 	else:		[neuter]
 		say "Your body, consumed with a lust it is unable to satisfy, drops to its knees and trembles with a painful, aching need. Lacking any other means, you rub over your [bodytype of Player] body until it finally passes, leaving you weak, tired and largely unsatisfied.";
 		now HP of Player is ( 3 * HP of Player ) / 4;

@@ -6,7 +6,7 @@ boundmod is a number that varies.
 boundcounter is a number that varies.
 boundmod2 is a number that varies.
 
-lustatt is a number that varies. lustatt is usually 0.[lustatt is a temporary libido variable to be modified and used for deciding when the player reaches orgasm so that player libido doesn't change or wind up increasing uncontrollably at the end of the bound state. it is usually set to the players libido before the bound loop begins and after orgasm. At the end of the loop, authors can decide how actual player libido should be affected.]
+lustatt is a number that varies. lustatt is usually 0. [lustatt is a temporary libido variable to be modified and used for deciding when the player reaches orgasm so that player libido doesn't change or wind up increasing uncontrollably at the end of the bound state. it is usually set to the players libido before the bound loop begins and after orgasm. At the end of the loop, authors can decide how actual player libido should be affected.]
 struggleatt is a number that varies. struggleatt is usually 0. [represents the amount the player has struggled, which can be compared to determine if freedom should be obtained]
 bsextimer is a number that varies. bsextimer is usually 0.
 boundstate is a truth state that varies. boundstate is usually false.
@@ -26,7 +26,7 @@ to checkboundrecover:
 	if a random chance of recoverchance in 9 succeeds:
 		now boundrecover is true;
 		now recoverchance is -1;
-	if "Sanity Saver" is listed in the feats of Player, now humanity of Player is 100;[NOTE: Why is this here? makes this feat provide immunity to sanity loss durring bound states, and can be used to increase sanity to max by entering a bound state voluntarily.]
+	if "Sanity Saver" is listed in the feats of Player, now humanity of Player is 100; [NOTE: Why is this here? makes this feat provide immunity to sanity loss durring bound states, and can be used to increase sanity to max by entering a bound state voluntarily.]
 
 to cleanboundmemory: [Zeroes out all variables used in bound states]
 	now boundstate is false;

@@ -8,9 +8,6 @@ Section 1 - Creature Responses
 catnum is a number that varies.
 [mateable is a number that varies.]
 
-to say Felinoid_Desc:
-	say "     What looks like a full-sized maned lion paces up before you, nose raised in the air, sniffing at the wind. You hear the big cat purr and look your way, with a sinking feeling you realize that not only was it your scent he was following, but that he is very pleased to see you at last.";
-
 to say felinoid wins:
 	if HP of Player > 0:
 		let mchance be 0;
@@ -19,7 +16,7 @@ to say felinoid wins:
 			if Player is submissive, increase mchance by 2;
 			if anallevel is 3, increase mchance by 2;
 			if Player is mpreg_ok, increase mchance by 2;
-		if ( Player is female and Cunt Depth of Player > 7 ) or ( a random chance of mchance in 12 succeeds and Cunt Count of Player is 0 ):
+		if ( Player is female and Cunt Depth of Player > 7 ) or ( a random chance of mchance in 12 succeeds and Player is not female ):
 			say "     The great cat, as if accepting your submission, pads up to you and nuzzles against you firmly, his short fur tickling your cheek. Suddenly the feline butts you over onto all fours, purring in anticipation. With his strong and masculine scent filling your senses, you don't resist, wanting to keep the big cat pleased. You gasp as he paces behind you and, reaching a foreleg over your shoulder, leans his weight into you. The feline forces your [bodydesc of Player] chest to lower down into the dirt and licks slowly along your neck, sending shivers down your spine.";
 			say "     He rumbles softly into your ear and you end up raising your rear as he moves to mount you fully, sinking his feline shaft into your [if Player is female]wet pussy[else]tight ass[end if], spreading you open with his feline member. Keeping a paw at your back as a reminder of who's in charge, he starts thrusting, sliding those spines covering his cock along your inner walls. They send waves of pleasure through you as he pounds into you, thrusting harder and faster.";
 			WaitLineBreak;
@@ -71,15 +68,13 @@ to say felinoid wins:
 					if catnum < 3:
 						say "     At first he simply nuzzles against you, but pretty soon he begins pushing you around, trying to get you to move. You feel odd, his friendliness making something within you warm up, and without thinking, you lower yourself onto your hands and knees, breasts pushing down into the ground. He rips at your clothing, tearing it to shreds. His weight pins you down and you moan out loud, your body ready for what the feline is about to give you. Hips meet yours, but his aim is off and his cock messily smears pre across your thigh. On his third try he finds his mark and you cry out, feeling yourself filled and stretched around him. He doesn't take it slow, he breeds you as though you were his very own mate. Your needy moans can only agree with him. You are his mate.";
 						say "     Deeper and faster, the barbs on his cock cause the growing friction to alternate between agony and bliss as they scrape and then soothe sensitive parts deep within you. You are panting heavily, unsure if you can take much more. After a few more blissful seconds, he thrusts deep once more and roars above you, finally deigning it the right time to clamp his jaws down on your neck, extending your own orgasm as his seed floods into you. Curling up as he paces off, you can't help but think how wonderful it was to just be his.";
-						CreatureSexAftermath "Player" receives "PussyFuck" from "Felinoid";
-						increase catnum by 1;
 					else:
 						say "     You gasp as he paces beside you and, reaching a fore-leg over your shoulder, leans his weight into you, forcing your [bodydesc of Player] chest to lower down into the dirt. He grips at your neck tightly, a reminder of who's in control. Obediently your body gives in to his implied threat and you feel your rear raise up under him, pressing the small of your back hard against his underbelly. Gripping a little tighter at your neck, he pulls himself forward, finding his mark in a single thrust as he sinks deep inside. You whine loudly, the feeling of his spines dragging along your walls, his girth now swelling further to stretch your depths.";
 						say "     The feline arches your back further, trying to maximize how much he has worked into you, you feel your breasts push down and into the ground, nipples still rock hard. He begins working his hips slowly at first, then with increasing speed, those spines now buried far within your love cavern. Each thrust is both torturous and pleasurable, alternating from moment to moment as he works himself deeper and faster into you. And then, without warning, you open your mouth and let out a feral scream that echoes across the park, your release making you blank out for a long blissful minute. Panting hard, his cock still buried deep inside your breeding cavern you knew then, that in this moment at least, you are completely and utterly his, his sex toy, his breeding hole, his to fuck as much as he wants, wherever he wants. The thought of that, as much as the constant stimulation drags you to another satisfying climax. This time, he had released your neck at some point releasing you from his grip, partially at least. With this new freedom of movement, and along with the afterglow of pleasure still saturating you, you act in one definitive way, by rocking your hips to meet his driving thrusts.";
 						WaitLineBreak;
 						say "     He was purring, you feel it through your shoulder muscles, he was purring because you are such a good mate for him. That thought flows through you, a feeling of ascent accompanying it. This time you can feel yourself building, no longer enslaved to the explosive release you had earlier. You feel him grip back down on your scruff and rumble a growl low into your body, shaking your very bones. His member begins to flare, pushing the spines out further, almost painfully so into your soft, delicate insides, and with one final heave of his muscles he send his shaft, his spines and his seed burning into you. He releases your neck again, crying his dominance out loud and you feel your own voice rise through the breaking surf of pleasure to join his in one drawn out, simultaneous release. So much, he had put so much of himself into you. You lay there, now fully on your belly, his member still buried deep, both of you too tired to want to move. After what seems like an eternity, he pulls loose and affectionately licks you a few times before pacing off.";
-						CreatureSexAftermath "Player" receives "PussyFuck" from "Felinoid";
-						increase catnum by 1;
+					CreatureSexAftermath "Player" receives "PussyFuck" from "Felinoid";
+					increase catnum by 1;
 				else:
 					if (Nipple Count of Player is 0 or Breast Size of Player is 0) and "Flat Chested" is not listed in feats of Player:
 						say "     The big cat rubs himself against you, purring deeply; without thinking your hand reaches to scritch his ears. 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin and chest. Quickly, two large breasts swell into existence, pressing against the remnants of your clothing, making you gasp at the feeling of the cloth against the sensitive flesh.";
@@ -137,7 +132,7 @@ When Play begins:
 	now attack entry is "[one of]He rakes at you wildly, leaving you in intense pain.[or]He leaps at you, digging his teeth into your arm.[or]He leaps at you, digging his teeth into your leg.[at random]";
 	now defeated entry is "     With a last roar the big cat claws out wildly, trying to hit you one last time before collapsing to the ground.[line break]";
 	now victory entry is "[felinoid wins]";
-	now desc entry is "[Felinoid_Desc]"; [ Description of the creature when you encounter it.]
+	now desc entry is "     What looks like a full-sized maned lion paces up before you, nose raised in the air, sniffing at the wind. You hear the big cat purr and look your way, with a sinking feeling you realize that not only was it your scent he was following, but that he is very pleased to see you at last.[line break]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a short muzzled, female lion"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "sleek, muscled, built for surviving, just like the large feline that gave it to you"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[if looknow is 1]a thick pelt of coarse yellow-gold fur covering your thick, pliable[else]yellow-gold fur covered[end if]"; [ skin Description, format as "Your body is covered in (your text) skin."]
@@ -315,5 +310,23 @@ When Play begins:
 	now fheat entry is true;
 	now mpregheat entry is true;
 	now mpregtrigger entry is "His hips connect again and again, pounding into your depths, you feel him bite down on your neck and find yourself roaring in bliss moments later. Gasping, you shake your head, trying to clear the mental images and scenes that keep replaying over and over. Noticing you were stuffing your ass with a few fingers, you pull them free only to feel a needy quiver from your vacated hole. It longs to be filled again, desiring a powerful felinoid inside it. 'I'm in heat...' you murmur under your breath as your mind tries to cope with the strange state of your [if Player is male]male[else]neuter[end if] body while trying to keep those images at bay.";
+
+Section 4 - Drop Item
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"felinoid cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort off-white cream or buttermilk, if someone hadn't written [']Felinoid Cum['] across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	felinoid cum
+
+felinoid cum is a grab object.
+felinoid cum is cum.
+felinoid cum is infectious.
+Strain of felinoid cum is "Felinoid".
+Usedesc of felinoid cum is "[felinoid cum use]".
+Scent of felinoid cum is "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty with a hint of mint.".
+
+to say felinoid cum use:
+	say "     Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	PlayerEat 5;
 
 Alien Felinoid ends here.

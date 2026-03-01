@@ -4,17 +4,6 @@ Version 1 of Biolizardman Brute by Gherod begins here.
 
 [ Version 1 - Created File ]
 
-to say GenerateTrophyList_BiolizardmanBrute:
-	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
-	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
-		add "biolizardman brute scale" to CombatTrophyList;
-	if a random chance of (30 + LootBonus) in 100 succeeds: [common drop]
-		add "dirty water" to CombatTrophyList;
-	if a random chance of (25 + LootBonus) in 100 succeeds: [uncommon drop]
-		add "food" to CombatTrophyList;
-	if Debug is at level 10:
-		say "DEBUG: Trophy List: [CombatTrophyList].";
-
 Table of GameEventIDs (continued)
 Object	Name
 CampOfTheSnakeEvent	"CampOfTheSnakeEvent"
@@ -26,10 +15,7 @@ Sarea of CampOfTheSnakeEvent is "Nowhere".
 Section 1 - Creature Responses
 
 to say Biolizardman Brute Wins:
-	if HP of Player > 0: [player submitted]
-		say "     Seeing this almost fascinating, yet intimidating, large and strong lizardman, you opt to drop your stance and surrender. He seems suspicious of this at first, and that does not seem to change even after brief moments. As you offer no further resistance, the reptilian charges at you and pushes you to the ground, following this by mounting your torso and keep you immobilized with his weight and legs on each side of your body. With that done, he then plunges his quarterstaff into the dirt and holds onto it, looking down at you with clear distrust. 'You are intruding in our territory. These grounds belong to us, so I recommend you a hasty retreat.'";
-	else:
-		say "     With one final blow, this large and strong lizardman manages to placate you and cause you to collapse on the ground. With inhuman agility, he quickly mounts your torso and keeps you immobilized with his weight and legs on each side of your body. With that done he then plunges his quarterstaff into the dirt and holds onto it, looking down at you with clear distrust. 'You are intruding in our territory. These grounds belong to us, so I recommend you a hasty retreat.'";
+	say "     [if HP of Player > 0]Seeing this almost fascinating, yet intimidating, large and strong lizardman, you opt to drop your stance and surrender. He seems suspicious of this at first, and that does not seem to change even after brief moments. As you offer no further resistance, the reptilian charges at you and pushes you to the ground, following this by mounting your torso and keeping[else]With one final blow, this large and strong lizardman manages to placate you and cause you to collapse on the ground. With inhuman agility, he quickly mounts your torso and keeps[end if] you immobilized with his weight and legs on each side of your body. With that done, he then plunges his quarterstaff into the dirt and holds onto it, looking down at you with clear distrust. 'You are intruding in our territory. These grounds belong to us, so I recommend you a hasty retreat.'";
 	say "     Moving does not seem to be an option, and you find yourself simply at the lizardman's mercy as he stares at you in the eyes. His loincloth barely covers anything from your perspective, as the way he moved into this position led the cloth to curve in a way that reveals his crotch, there being a slit from where you suppose his member would poke out. As you cannot really move, you simply look back at the big reptilian with pleading eyes. 'It is utterly disrespectful to invade someone's home uninvited. And as you are so lacking in manners, I feel I must discipline you.' Your eyes shift away from his and into the slit on his crotch, where his slick red meat begins to show itself and grow forward.";
 	WaitLineBreak;
 	say "     'I shall teach you the virtue of selflessness,' he says as he puts his loincloth to the side, fully revealing his throbbing reptilian cock right in front of your face, 'One that will serve you for a lifetime. 'You must learn to be considerate. I shall let you go only once you bring me to a bliss.' Staying where he is, the reptilian simply lets his erection take full shape, and due to his huge size, it is not so strange that his cock looks equally sizable. You can measure it by eye for roughly a few inches above a foot of length, and it is particularly girthy the more it goes towards the base. This hung lizardman then loosens the grip he has on you with his legs and allows you to move your arms above them, though as soon as you do that, he tightens them around you once more.";
@@ -50,20 +36,20 @@ to say Biolizardman Brute Loses:
 		say "     Using your best abilities at seducing the large reptilian, you manage to cause a certain lethargy in his movements as he seems to lose his focus on the battle. At this point, and whenever his loincloth gives way, you notice a large red lizard cock poking out of its protective slit, his cerulean gaze often dawdling over your many attributes. 'It seems you are quite effective with this seduction dance of yours...' he says as he drops to his knees and lowers his head, no longer interested in fighting. 'I concede, you've shown superior abilities. Is there perhaps something I ought to learn from you, o'great charmer? Perhaps I could win future fights without any need for violence...' He places his quarterstaff on the ground and does not resist your approach.";
 	else:
 		say "     Fighting with the best of your abilities, you manage to deliver a final blow that leaves the lizardman stunned. He looks back at you, barely able to stand, and before you can cause him any more damage, he beckons your attention. 'I admit, you are a far better fighter than I've anticipated. My apologies, I shall concede this battle and ask of your mercy,' he says as he drops to his knees and lowers his head, no longer wanting to struggle against you. 'Though, if it is not asking too much, I would request to receive wisdom from you, o'great warrior. Teach me your ways so I can vanquish my foes and better serve my people...' He places his quarterstaff on the ground and does not resist your approach.";
-	WaitLineBreak;
 	say "[BiolizardmanBruteLosesVictorySexMenu]";
 	if Camp Of The Snake is not known and Resolution of CampOfTheSnakeEvent is 0:
+		WaitLineBreak;
 		say "[TravelToCampOfTheSnakeEvent]";
 
 to say BiolizardmanBruteLosesVictorySexMenu:
-	say "     [bold type]Seeing as the big lizardman chose to submit to your will, how shall you treat him? You could always just leave him be, it is up to you.[roman type][line break]";
+	say "[line break]     [bold type]Seeing as the big lizardman chose to submit to your will, how shall you treat him? You could always just leave him be, it is up to you.[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Sit on his handsome lizard face";
 	now sortorder entry is 1;
-	now description entry is "Have him train his reach... by licking either of your orifices";
+	now description entry is "Have him train his reach... by licking [if Player is female]either of your orifices[else]your anus[end if]";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -78,26 +64,25 @@ to say BiolizardmanBruteLosesVictorySexMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Sit on his handsome lizard face"):
+				if title entry is "Sit on his handsome lizard face":
 					say "[BiolizardmanBruteLosesSitOnFace]";
 				now WerewolfBruteSubmitCount is 0; [resetting Submit Count]
-				wait for any key;
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You tell him he has much to learn, but that you will not be the one who is going to teach him. Stating that you have other places to be, you bid the lizardman goodbye and walk away. No further words are exchanged between the two of you.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say BiolizardmanBruteLosesSitOnFace:
 	say "     Wanting to get some pleasure for yourself using one of the characteristics lizardmen are very well known for, you walk up to him and forward your intentions, arguing that his reach may need some practicing. Regarding you as the wiser one for having emerged victorious, he nods and lets you call the shots. In order to get him in the best position possible, you tell him to follow your directions and lie down so that you can get on top of him. Before that, you remove any obstructions that may be between your intimate parts and his face, so that you can finally take a seat on that face of his. He seems a bit surprised at first, but then you tell him what he should do, and he complies. Sooner than you expect, you find a nimble and long tongue prodding your [if Player is female]labia[else]anus[end if] rather pleasantly.";
-	say "     Having done this, you notice the lizardman's cock fully reveals itself from its protective slit in its complete glory, all hard and throbbing with the excitement of this situation. It seems this is something he really is into, and deep down, you are happy to provide and receive an equal amount of satisfaction. He does not let you down at all, with a tongue game that would put a hissing snake to shame, but more than that, he seems to really show that he has a lot of [italic type]reach[roman type]. The large reptilian grabs you by the hips and pulls you to him, only so that you can truly feel how far he gets his tongue in you, licking at your [if Player is female]feminine[end if] insides in such a way that you can only quiver in delight.";
-	WaitLineBreak;
-	say "     As you experience this and see that your formerly-an-opponent has got a considerable erection of his own, do you wish to lean forward and grab his cock for some reciprocal oral sex? Or would you rather continue to feel all the pleasure he is giving you?";
+	say "     Having done this, you notice the lizardman's cock fully reveals itself from its protective slit in its complete glory, all hard and throbbing with the excitement of this situation. It seems this is something he really is into, and deep down, you are happy to provide and receive an equal amount of satisfaction. He does not let you down at all, with a tongue game that would put a hissing snake to shame, but more than that, he seems to really show that he has a lot of [italic type]reach[roman type]. The large reptilian grabs you by the hips and pulls you to him, only so that you can truly feel how far he gets his tongue in you, licking at your [if Player is female]feminine [end if]insides in such a way that you can only quiver in delight.";
 	LineBreak;
+	say "     As you experience this and see that your formerly-an-opponent has got a considerable erection of his own, do you wish to lean forward and grab his cock for some reciprocal oral sex? Or would you rather continue to feel all the pleasure he is giving you?";
 	say "     ([link]Y[as]y[end link]) - Turn this into a 69 and pleasure his cock.";
 	say "     ([link]N[as]n[end link]) - Just keep still, you are enjoying riding his face.";
 	if Player consents:
@@ -123,23 +108,11 @@ to say BiolizardmanBruteLosesSitOnFace:
 		else:
 			CreatureSexAftermath "Player" receives "Other" from "Biolizardman Brute";
 
-to say Biolizardman Brute Desc:
-	say "     You are standing before a very large, tall lizardman with cerulean eyes and a quite impressive physique. His features and whole body are covered with dark teal scales, except on the inner regions of his torso and thighs, which attain a color that is closer to white. However, the shade created by the forest's trees reveals a second property of these otherwise ordinary scales, as various dim glows of green are seen springing up in a pattern, almost mesmerizingly so. The big reptilian seems to be wearing only a loincloth to cover his crotch, as well as several accessories, such as bracelets and necklaces with odd-looking wooden objects and symbols engraved into them, the whole outfit being reminiscent of a tribal costume. Moreover, he employs a large makeshit quarterstaff as a weapon, one that only someone his size could wield effectively, and his defensive combative stance suggests he knows his way around a fight, besides also regarding you as a threat.";
-
-Table of CombatPrep (continued)
-name(text)	PrepFunction(text)
-"Biolizardman Brute"	"[PrepCombat_Biolizardman Brute]"
-
-to say PrepCombat_Biolizardman Brute:
-	setmongender 3; [creature is male]
-
 Section 2 - Camp Of The Snake Pre-Event
 
 to say TravelToCampOfTheSnakeEvent:
-	WaitLineBreak;
 	say "     Though, right before you move away definitely, the lizardman asks you to stop. 'Wait! There is something I forgot to ask...' He then runs to catch up to you, and seeing him rushing prompts you to stop in place and turn towards him. 'Thank you, my apologies for keeping you. I merely wished to ask... Would you like to come with me and meet our tribe?' The sudden request makes you question its purpose, to which the bioluminescent scaled man replies, 'You are no ordinary traveler. You have great strength... And I think you would make a good ally of my people. This, I won't impose on you, though I would humbly request a bit of your time to at least meet our god, Uzial.' He bows when he says his name.";
 	say "     Hearing this, you can only ask if you heard that right, as you were under the impression he called him a god. 'Yes, God Uzial. He is our leader and our protector. If you get in His good graces, you will have protection in our swamps. And if you find Him deserving of your worship, I'm sure He would grant you many boons.' You are not so sure about this god he talks about, but at least you could accept following him into his tribe. There are no signs of this being a trap, at least, so you are pretty confident you will be fine. Or, you can simply tell him this does not interest you and proceed to walk away. You do not think he will insist if you express your will to leave.";
-	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Accept to go with him and meet his tribe.";
 	say "     ([link]N[as]n[end link]) - Tell him you have no interest in such a thing.";
 	if Player consents:
@@ -152,9 +125,8 @@ to say TravelToCampOfTheSnakeEvent:
 		WaitLineBreak;
 		say "     'You can go now, I shall take over.' With this, he dismisses the common lizardman and beckons you to approach him. 'Come now, let's have a good look at you.' The fashionable scaly man once again inspects you, this time from up close, and even walks around you, nimbly leaning his body forward and circling you as you would expect a reptilian to be able to do. 'My, fascinating find! My name is Sevik, and I'm the Prince of this tribe, second to none other but God Uzial, whom you shall be meeting soon. However, you cannot go meet Him in your current conditions! You stink.' He was direct, but truthful, as the stench of wilderness is very present in you, while he seems to smell of flowers.";
 		say "     'Here we bathe and take care of ourselves, which God Uziel seems to really appreciate. He even likes to watch... But who wouldn't. We are beautiful creatures, after all... Therefore, I recommend you to do the same.' He then extends his hand towards you gently. 'Come now, to my tent. We can be in relative privacy there, as I sympathize that bathing in public might come as a shock for beginners.' This stranger lizardman is asking you to bathe in his tent, and while that would not be necessarily unpleasant, it is a sensible request. These people have customs and habits that you would have to adapt to, as you are expected to, and you believe it is going to be hard to avoid potentially embarrassing situations. Or, perhaps you will get along with their ways of living and there is a chance you could enjoy yourself quite a lot.";
-		WaitLineBreak;
-		say "     Still, you have now the opportunity to back down. If you choose to do so, you doubt you can ever return, as this would be taken as disrespectful, but it is a choice you can make. Alternatively, you can follow through with whatever is happening with an open mind. Note to yourself that these lizardmen seem to be quite of the exhibitionist types, and you do not know yet what this so called god could be.";
 		LineBreak;
+		say "     Still, you have now the opportunity to back down. If you choose to do so, you doubt you can ever return, as this would be taken as disrespectful, but it is a choice you can make. Alternatively, you can follow through with whatever is happening with an open mind. Note to yourself that these lizardmen seem to be quite of the exhibitionist types, and you do not know yet what this so called god could be.";
 		say "     ([link]Y[as]y[end link]) - Continue through this.";
 		say "     ([link]N[as]n[end link]) - Wait until he turns around and leave, never to return.";
 		if Player consents:
@@ -180,14 +152,15 @@ to say TravelToCampOfTheSnakeEvent:
 			say "     'Earning Sevik's favor is way harder than earning mine. If he approves of you, so do I,' declares Uzial as he leans back against his throne. 'You shall address me as a God outside of these walls or in presence of any other lizardmen, and Sevik as Lord Prince. You may also return whenever you wish, and any companion you bring along is welcome as long as they remain loyal to you. And if you're wondering...' he pauses for a few seconds, looking intensely at you, 'No, I'm not a god, nor is Sevik a prince. But these lizardmen believe we are, and we don't think they're from our timeline. This is necessary to keep order. In any case, any question you may have, you can simply come to me and I'll explain. Now, I have my business to attend to, so allow me to simply sprinkle some magic onto you.'";
 			say "     There are so many questions lingering in your mind that you do not know even when to start, but Uzial just leans over towards you and presses your forehead with his large thumb. His enormous size makes you flinch at first, but once his magic washes over you, you feel more centered. 'Sevik, please take [ObjectPro] with you and address any questions [SubjectPro] may have, for the time being. I'll be busy providing the escort of our newcomer a well-deserved reward.' Sevik smirks and winks at his giant lover, then proceeds to lead you outside.";
 			WaitLineBreak;
-			AddNavPoint Camp Of The Snake;
 			move player to Temple Of The Snake Entrance;
 			say "     'Feel free to explore our encampment on your own, if you prefer. I'll be in my tent, so come find me there if you wish to talk. And don't worry about the other lizardmen around here, the aphrodisiac should've worn off by now.' That... Explains it. Well, at least one question is out of the way. For now, you are left at the entrance of this enormous temple as Sevik heads back to his humble abode on his own. This was certainly something else... There is a lot about this place and tribe that you do not yet know or understand, but at least their leaders seem to have you in good consideration.";
+			AddNavPoint Camp Of The Snake;
 			now Resolution of CampOfTheSnakeEvent is 1; [Successfully entered the camp]
 		else:
 			LineBreak;
 			say "     As soon as the lizardman turns his back to you, the chance provides itself. You easily sneak out of this place, leaving the camp to disappear in plain sight, and suddenly... You feel lost in the swamp. It takes you some time to find some familiar path and trace your steps back to where you were, but your mind is foggy. What were you doing, just now? Why were you in the swamp? How long have you been here... Confusion lingers for quite a while, and a significant amount of time has passed...";
 			follow the turnpass rule;
+			AttemptToWait;
 			SanLoss 10;
 			now Resolution of CampOfTheSnakeEvent is 98; [Refused after entering the camp]
 	else:
@@ -196,6 +169,24 @@ to say TravelToCampOfTheSnakeEvent:
 		now Resolution of CampOfTheSnakeEvent is 99; [Refused]
 
 Section 3 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Biolizardman Brute"	"[PrepCombat_Biolizardman Brute]"
+
+to say PrepCombat_Biolizardman Brute:
+	setmongender 3; [creature is male]
+
+to say GenerateTrophyList_BiolizardmanBrute:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "biolizardman brute scale" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [common drop]
+		add "dirty water" to CombatTrophyList;
+	if a random chance of (25 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "food" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -219,7 +210,7 @@ When Play begins:
 	now attack entry is "[one of]He leaps forward and, with a show of athleticism, he delivers you a precise kick on the side of your torso.[or]The tall lizardman swings his quarterstaff at you, hitting you right on the ribs with the shaft.[or]The big reptilian thrusts his quarterstaff in your direction, hitting you on the front of your torso.[or]He tries to tackle you in order to subdue you, the impact alone hurting you. However, you still manage to keep your balance.[or]His scales begin to glow in a mesmerizing manner, drawing your gaze to them and causing you to get distracted long enough for him to deliver a surprise strike with his quarterstaff. This time, he got your head... and it hurts![or]The large reptilian hits you quite competently with a combo of strikes with his quarterstaff, leaving your affected impact areas now burning in pain.[at random]";
 	now defeated entry is "[Biolizardman Brute Loses]";
 	now victory entry is "[Biolizardman Brute Wins]";
-	now desc entry is "[Biolizardman Brute Desc]";
+	now desc entry is "     You are standing before a very large, tall lizardman with cerulean eyes and a quite impressive physique. His features and whole body are covered with dark teal scales, except on the inner regions of his torso and thighs, which attain a color that is closer to white. However, the shade created by the forest's trees reveals a second property of these otherwise ordinary scales, as various dim glows of green are seen springing up in a pattern, almost mesmerizingly so. The big reptilian seems to be wearing only a loincloth to cover his crotch, as well as several accessories, such as bracelets and necklaces with odd-looking wooden objects and symbols engraved into them, the whole outfit being reminiscent of a tribal costume. Moreover, he employs a large makeshit quarterstaff as a weapon, one that only someone his size could wield effectively, and his defensive combative stance suggests he knows his way around a fight, besides also regarding you as a threat.[line break]";
 	now face entry is "longer and thinner as dark teal colored scales cover your short muzzle, lending your earless features a very reptilian look";
 	now body entry is "athletic and bolstered by considerably sized muscles, all covered in dark teal scales with a dry and tough aspect, but otherwise soft to the touch";
 	now skin entry is "dark teal scales that glow with some other color in the dark";
@@ -375,32 +366,11 @@ name	desc	weight	object
 "biolizardman brute scale"	"A textured scale that has a dim colorful glow when covered in darkness. It feels tough and dry when you touch it, but smooth if you rub it."	0	biolizardman brute scale
 
 biolizardman brute scale is a grab object.
-It is temporary.
-Usedesc of biolizardman brute scale is "[BiolizardmanBruteScaleUse]";
+Usedesc of biolizardman brute scale is "[BiolizardmanBruteScaleUse]".
+Scent of biolizardman brute scale is "The scale has a faint reptilian scent.".
 
 to say BiolizardmanBruteScaleUse:
-	say "Holding the glowing scale between your fingers, you stroke over it, surprised by how soft it feels despite its dry texture. Strangely, the scale disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	say "     Holding the glowing scale between your fingers, you stroke over it, surprised by how soft it feels despite its dry texture. Strangely, the scale disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Biolizardman Brute";
-
-instead of sniffing biolizardman brute scale:
-	say "The scale has a faint reptilian scent.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"biolizardman brute man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Biolizardman Brute Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	biolizardman brute man-milk
-
-biolizardman brute man-milk is a grab object.
-biolizardman brute man-milk is milky.
-Purified of biolizardman brute man-milk is "distilled milk".
-biolizardman brute man-milk is infectious.
-Strain of biolizardman brute man-milk is "Biolizardman Brute".
-Usedesc of biolizardman brute man-milk is "[biolizardman brute man-milk use]";
-
-to say biolizardman brute man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the reptilian man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing biolizardman brute man-milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Biolizardman Brute ends here.

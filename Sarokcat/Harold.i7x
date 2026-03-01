@@ -361,7 +361,7 @@ carry out Beerdrinking:
 		say "     Harold looks at you for a minute thoughtfully, before sighing and shaking his head sadly. 'Sorry friend, I can only give you so much at a time. It's so you can have a drink or two to loosen up a bit, but not enough to get drunk hopefully,' the bartender says with an amused chuckle at the idea. 'Besides, it's actually pretty hard to keep stock up since there haven't been any deliveries from the outside world for a while. We have to be careful how much we give out in a day.' He gives an apologetic shrug, and you sigh and realize you will have to come back again later if you want another drink from the bar.";
 	else:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets a frothing mug of dark, spicy smelling beer in front of you. Raising your mug to Harold, you take a long drink, the rich, flavorful beer going down easily. Its smooth taste evokes images of wolves partying and hunting in packs. Draining the mug, you nod with appreciation as you set it back down on the bar. You find yourself grinning with amusement as you note that the canny bartender already has another mug of the frothy beer set out on the bar for you. Saluting him again with your glass, you drink some more of the amazingly smooth beer as you enjoy the sights of the busy club. A pleasant buzz starts to set in, even as you realize that your body is beginning to change slightly. Though, in your mildly inebriated state, it is hard to think why that would be a problem.";
-		andrewinfect;
+		infect "Black Wolf";
 		SanLoss 5;
 		PlayerDrink 5;
 		now LastDrinkserved is turns;

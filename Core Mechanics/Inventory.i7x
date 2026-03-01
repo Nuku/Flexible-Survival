@@ -57,11 +57,8 @@ carry out Inventorying:
 		let itemactions be {{"U", "use"}, {"L", "look"}, {"S", "smell"}, {"D", "drop"}, {"J", "junk"}, {"X", "junkall"}};
 		let weight be 0;
 		[5 more than in the original version, but therefore the indicators will not add to it anymore]
-		let baseavailcolumns be a number;
-		if invcolumns > 1:
-			now baseavailcolumns is 32;
-		else:
-			now baseavailcolumns is 41;
+		let baseavailcolumns be 32;
+		if invcolumns is 1, now baseavailcolumns is 41;
 		let owneditemindex be a number;
 		[go through all the stuff]
 		say "[line break][bold type]Equipment:[roman type]";
@@ -102,19 +99,18 @@ carry out Inventorying:
 				let useindicator be "";
 				if object entry is equipped:
 					now useindicator is " (*)";
-					now availcolumns is availcolumns minus 4;
+					decrease availcolumns by 4;
 				let improveindicator be "";
 				if object entry is improved:
 					now improveindicator is " (+)";
-					now availcolumns is availcolumns minus 4;
+					decrease availcolumns by 4;
 				[print item name and indicators]
 				say "[fixed letter spacing][itemname formatted to (availcolumns) characters][useindicator][improveindicator]";
 				let weightnum be weight entry times ownedCount;
 				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum][if weightnum < 100] [end if]lbs)";
 				increase weight by weightnum;
-		LineBreak;
 		now owneditemindex is 0;
-		say "[line break][bold type]Armaments:[roman type]";
+		say "[paragraph break][bold type]Armaments:[roman type]";
 		repeat through Table of Game Objects:
 			let ownedCount be carried of object entry;
 			if ownedCount > 0 and object entry is armament:
@@ -152,19 +148,18 @@ carry out Inventorying:
 				let useindicator be "";
 				if object entry is wielded:
 					now useindicator is " (*)";
-					now availcolumns is availcolumns minus 4;
+					decrease availcolumns by 4;
 				let improveindicator be "";
 				if object entry is improved:
 					now improveindicator is " (+)";
-					now availcolumns is availcolumns minus 4;
+					decrease availcolumns by 4;
 				[print item name and indicators]
 				say "[fixed letter spacing][itemname formatted to (availcolumns) characters][useindicator][improveindicator]";
 				let weightnum be weight entry times ownedCount;
 				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum][if weightnum < 100] [end if]lbs)";
 				increase weight by weightnum;
-		LineBreak;
 		now owneditemindex is 0;
-		say "[line break][bold type]Consumables:[roman type]";
+		say "[paragraph break][bold type]Consumables:[roman type]";
 		repeat through Table of Game Objects:
 			let ownedCount be carried of object entry;
 			if ownedCount > 0 and object entry is temporary:
@@ -212,9 +207,8 @@ carry out Inventorying:
 				let weightnum be weight entry times ownedCount;
 				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum][if weightnum < 100] [end if]lbs)";
 				increase weight by weightnum;
-		LineBreak;
 		now owneditemindex is 0;
-		say "[line break][bold type]Other:[roman type]";
+		say "[paragraph break][bold type]Other:[roman type]";
 		repeat through Table of Game Objects:
 			let ownedCount be carried of object entry;
 			if ownedCount > 0 and object entry is not armament and object entry is not equipment and object entry is not temporary:
@@ -313,20 +307,19 @@ carry out settinginvcolumns:
 to say set_invcolumns:
 	now calcnumber is -1;
 	let gsexit be 0;
-	say "     How many columns would you like the inventory to display (1 - 4, or 0 to abort)?";
+	say "     How many columns would you like the inventory to display (1-4, or 0 to abort)?";
 	say "     [if invcolumns is not 1][link][bracket]1[close bracket][as]1[end link][else][bold type][bracket]1[close bracket][roman type][end if]  [if invcolumns is not 2][link][bracket]2[close bracket][as]2[end link][else][bold type][bracket]2[close bracket][roman type][end if]  [if invcolumns is not 3][link][bracket]3[close bracket][as]3[end link][else][bold type][bracket]3[close bracket][roman type][end if]  [if invcolumns is not 4][link][bracket]4[close bracket][as]4[end link][else][bold type][bracket]4[close bracket][roman type][end if]  [link][bracket]0[close bracket] - Abort[as]0[end link][line break]";
 	while gsexit is 0:
 		say "Choice? (0-4)> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber < 5:
-			LineBreak;
 			now invcolumns is calcnumber;
 			now gsexit is 1;
 		else if calcnumber is 0:
-			LineBreak;
 			now gsexit is 1;
 		else:
 			say "Invalid: Choose between 0 and 4.";
+	LineBreak;
 
 Chapter 3 - Definitions
 
@@ -337,7 +330,7 @@ definition: A person is overburdened:
 		repeat through Table of Game Objects:
 			if object entry is owned:
 				increase weight by weight entry times carried of object entry;
-	if weight > capacity of Player, yes;
+			if weight > capacity of Player, yes;
 	no;
 
 instead of going somewhere while player is overburdened:
@@ -407,7 +400,7 @@ check burninating something (called x):
 	if x is not owned, say "You don't seem to be holding any." instead;
 	if x is an armament and x is wielded:
 		if carried of x is 1, say "You're wielding that, take it off first." instead;
-	else if x is an equipment and x is equipped:
+	if x is an equipment and x is equipped:
 		if carried of x is 1, say "You're using that right now. Stop using it before you trash it." instead;
 
 carry out burninating something (called x):
@@ -423,26 +416,28 @@ understand "junkall [owned grab object]" as allburninating.
 check allburninating something (called x):
 	if x is journal, say "You really don't think that's a good idea." instead;
 	if x is not owned, say "You don't seem to be holding any." instead;
-	if x is an armament and x is wielded:
-		if carried of x is 1, say "You're wielding that, so you'd best stop using it first." instead;
-	else if x is an equipment and x is equipped:
-		if carried of x is 1, say "You're using that right now. You need to take it off to trash it." instead;
+	if x is an armament:
+		if x is wielded and carried of x is 1:
+			say "You're wielding that, so you'd best stop using it first." instead;
+	else if x is an equipment:
+		if x is equipped and carried of x is 1:
+			say "You're using that right now. You need to take it off to trash it." instead;
 
 carry out allburninating something (called x):
-	say "Do you wish to permanently trash all of the '[x]' you have?";
+	say "[line break]Do you wish to permanently trash all of the '[x]' you have?";
 	if Player consents:
 		LineBreak;
 		if x is an armament:
 			if x is wielded:
 				say "You trash all of them but the [x] you're using. Bye-bye.";
-				ItemLoss x by (carried of x - 1) silently;
+				ItemLoss x by carried of x - 1 silently;
 			else:
 				say "You trash all of your [x]. Bye-bye.";
 				ItemLoss all x silently;
 		else if x is an equipment:
 			if x is equipped:
 				say "You trash all of them but the [x] you're wearing. Bye-bye.";
-				ItemLoss x by (carried of x - 1) silently;
+				ItemLoss x by carried of x - 1 silently;
 			else:
 				say "You trash all of your [x]. Bye-bye.";
 				ItemLoss all x silently;
@@ -464,7 +459,7 @@ check littering something (called x):
 	if x is not owned, say "You don't seem to be holding that." instead;
 	if x is an armament and x is wielded:
 		if carried of x is 1, say "You're wielding that, take it off first." instead;
-	else if x is an equipment and x is equipped:
+	if x is an equipment and x is equipped:
 		if carried of x is 1, say "You're using that right now. Stop using it before you drop it." instead;
 
 carry out littering something (called x):
@@ -504,9 +499,7 @@ Understand "drop all/everything" as criminallittering.
 Carry out criminallittering:
 	let droptotal be 0;
 	repeat with x running through owned grab objects:
-		if x is journal or x is equipped or x is wielded:
-			next;
-		else:
+		if x is not journal and x is not equipped and x is not wielded:
 			repeat with z running from 1 to carried of x:
 				add printed name of x to invent of location of Player;
 			increase droptotal by carried of x;
@@ -528,7 +521,7 @@ Check trading:
 	if the noun is libido pill, say "Use the [bold type]libpill <name>[roman type] command instead." instead;
 	if second noun is not a trader, say "They do not look interested in trading." instead;
 	if the noun is not owned, say "You can't offer what you don't have." instead;
-	if trade of the noun is "", say "They don't seem interested in that specific item." instead;
+	if trade of the noun is empty, say "They don't seem interested in that specific item." instead;
 
 Carry out trading:
 	say "You offer up the [the noun] to [second noun] and they look it over for a moment before nodding and drawing out a [trade of the noun] and handing it to you. A fair trade, right? ";

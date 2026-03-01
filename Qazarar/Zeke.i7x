@@ -52,7 +52,6 @@ TwistedCapacity of Zeke is false. [Twisted Characters can take any penetration, 
 Sterile of Zeke is false. [steriles can't knock people up]
 MainInfection of Zeke is "Red Fox".
 Description of Zeke is "[ZekeDesc]".
-Conversation of Zeke is { "<This is nothing but a placeholder!>" }.
 The scent of Zeke is "     Zeke smells a little bit musky and furry, kinda like a humanoid fox is always bound to be.".
 
 to say ZekeDesc:
@@ -71,12 +70,12 @@ instead of conversing the Zeke:
 		now ZekeRelationship is 2;
 	else:
 		say "     As you walk up to Zeke, he brightens up a bit. 'Hey, nice to see you. Ready for some games?'";
-		WaitLineBreak;
+		LineBreak;
 		say "[ZekeTalkMenu]";
 
 to say ZekeTalkMenu:
-	LineBreak;
-	say "What do you want to talk with Zeke about?";
+	let TalkDone be false;
+	say "     What do you want to talk with Zeke about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -108,21 +107,26 @@ to say ZekeTalkMenu:
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Himself"):
-					say "[ZekeTalk1]";
-				if (nam is "Playing Games"):
-					say "[ZekeTalk2]";
-				if (nam is "Generator"):
-					say "[ZekeTalk3]";
+				if title entry is:
+					-- "Himself":
+						say "[ZekeTalk1]";
+					-- "Playing Games":
+						say "[ZekeTalk2]";
+						now TalkDone is true;
+					-- "Generator":
+						say "[ZekeTalk3]";
 				wait for any key;
+				if TalkDone is false:
+					say "[ZekeTalkMenu]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from Zeke, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say ZekeTalk1: [talk about him]
@@ -130,9 +134,9 @@ to say ZekeTalk1: [talk about him]
 
 to say ZekeTalk2: [playing games]
 	say "     Zeke takes very little time to set up a game for the two of you to play. This time his pick is a fighting game, though not one you're overly familiar with. He gives you a brief while to practice before taking you right into a longer tournament mode, where he immediately gets very focused every time the gameplay starts.";
-	let bonus be (( Intelligence of Player minus 10 ) divided by 2);
+	let bonus be ( Intelligence of Player minus 10 ) divided by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Intelligence Check):[line break]";
+	say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]20[roman type] (Intelligence Check):[line break]";
 	increase diceroll by bonus;
 	if diceroll > 19:
 		say "     Once you start playing, it feels somewhat familiar, and you find yourself able to apply some skills you'd almost forgotten you had to it, and end up soundly trouncing Zeke at his own game. He is completely speechless at your victory, simply sitting with a shocked look for several moments, before he laughs heartily. 'Impressive stuff! Even I could hardly beat you at that. Play that impressive deserves a reward.' Zeke stands, and walks over to a cupboard, rifling through it for a few moments. Soon after, he tosses you a bag of chips. 'You earned it. Now come back some time, you hear? I need a rematch against that.'";
@@ -148,28 +152,26 @@ to say ZekeTalk3: [generator]
 Section 3 - Sex
 
 instead of fucking the Zeke:
-	if (lastfuck of Zeke - turns < 5): [he got fucked in the last 18 hours = 6 turns]
+	if lastfuck of Zeke - turns < 5: [he got fucked in the last 18 hours = 6 turns]
 		say "     'I can only handle so much fucking. I'd dig more, but I need a rest first.'";
 	else if ZekeRelationship < 2: [not talked to enough]
 		say "     'I'm as horny as the next guy, but I'd like to at least talk first.'";
 	else: [ready for sex]
 		say "     Zeke looks rather excited at the prospect of getting frisky with you, but asks a question. 'Hey, there's a lot of things we could do, but I need to narrow it down. Do you want to do this co-op, or competitive?'";
-		say "     [bold type]Do you want to compete with Zeke?[roman type][line break]";
-		WaitLineBreak;
+		say "[line break]     [bold type]Do you want to compete with Zeke?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Get competitive.";
 		say "     ([link]N[as]n[end link]) - Keep it cooperative.";
-		LineBreak;
 		if Player consents:
+			LineBreak;
 			say "     'Alright then, time to see who's the better player.' Zeke quickly sets up for your competition, turning on the various parts of his gaming hub, and choosing a game. In no time at all, you're both seated comfortably in front of the television, controllers in hand, ready to go.";
-			say "     [bold type]Do you want to play your hardest, or throw the match?[roman type][line break]";
-			WaitLineBreak;
+			say "[line break]     [bold type]Do you want to play your hardest, or throw the match?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Do your best.";
 			say "     ([link]N[as]n[end link]) - Lose and get dominated.";
-			LineBreak;
 			if Player consents:
-				let bonus be (( Intelligence of Player minus 10 ) divided by 2);
+				LineBreak;
+				let bonus be ( Intelligence of Player minus 10 ) divided by 2;
 				let diceroll be a random number from 1 to 20;
-				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Intelligence Check):[line break]";
+				say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Intelligence Check):[line break]";
 				increase diceroll by bonus;
 				if diceroll > 15:
 					say "     Both of you play your hardest, and though the matches are close, in the end you pull out more wins, your superior skills and strategy bringing you the victory. As the winner, it becomes your right to choose how to play with your newly earned prize.";
@@ -178,16 +180,15 @@ instead of fucking the Zeke:
 					say "     You do your best to defeat Zeke in the digital arena, but your skills aren't quite up to the task. Your playing wasn't a total failure, but it just wasn't enough to beat his practiced skills at the game. As a result, the fox is the victor, and it's up to him what to do with you.";
 					say "[ZekeSexMenu3]";
 			else:
+				LineBreak;
 				say "     You give the impression of playing to your best abilities, but let the games turn in Zeke's favor, knowing what will come after you lose and looking forward to it. Soon enough he wins, and is able to decide how he'll play with you.";
 				say "[ZekeSexMenu3]";
 		else:
 			LineBreak;
 			say "     'So you feel like keeping it casual, and just helping each other out? I can get behind that. I'll let you pick what to do.'";
-			WaitLineBreak;
 			say "[ZekeSexMenu1]";
 
 to say ZekeSexMenu1: [Cooperative]
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -196,17 +197,16 @@ to say ZekeSexMenu1: [Cooperative]
 		now title entry is "Frotting";
 		now sortorder entry is 1;
 		now description entry is "Make your penises touch";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Sixty-nine"; [only males and herms can 69 with him]
+		now sortorder entry is 3;
+		now description entry is "Sixty-nine with Zeke";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Zeke off"; [anyone can blow him]
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the fox's vulpine shaft";
-	[]
-	if Player is male: [only males and herms can 69 with him]
-		choose a blank row in table of fucking options;
-		now title entry is "Sixty-nine";
-		now sortorder entry is 3;
-		now description entry is "Sixty-nine with Zeke";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -221,25 +221,25 @@ to say ZekeSexMenu1: [Cooperative]
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Frotting"):
-					say "[ZekeSex1]";
-				if (nam is "Suck Zeke off"):
-					say "[ZekeSex2]";
-				if (nam is "Sixty-nine"):
-					say "[ZekeSex3]";
-				wait for any key;
+				if title entry is:
+					-- "Frotting":
+						say "[ZekeSex1]";
+					-- "Suck Zeke off":
+						say "[ZekeSex2]";
+					-- "Sixty-nine":
+						say "[ZekeSex3]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the fox, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say ZekeSexMenu2: [Domming Zeke]
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -248,18 +248,18 @@ to say ZekeSexMenu2: [Domming Zeke]
 		now title entry is "Facefuck Zeke";
 		now sortorder entry is 1;
 		now description entry is "Take control of the fox's mouth";
-	[]
-	[choose a blank row in table of fucking options;
-	now title entry is "Power bottom";
-	now sortorder entry is 2;
-	now description entry is "Dominantly ride the fox";]
-	[]
-	[if Player is male:
+		[
 		choose a blank row in table of fucking options;
 		now title entry is "Pound him";
 		now sortorder entry is 3;
-		now description entry is "Take the fox's rear end";]
-	[]
+		now description entry is "Take the fox's rear end";
+		]
+	[
+	choose a blank row in table of fucking options;
+	now title entry is "Power bottom";
+	now sortorder entry is 2;
+	now description entry is "Dominantly ride the fox";
+	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -273,33 +273,31 @@ to say ZekeSexMenu2: [Domming Zeke]
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Facefuck Zeke"):
-					say "[ZekeSex4]";
-				if (nam is "Power bottom"):
-					say "[ZekeSex5]";
-				if (nam is "Pound him"):
-					say "[ZekeSex6]";
-				wait for any key;
+				if title entry is:
+					-- "Facefuck Zeke":
+						say "[ZekeSex4]";
+					[-- "Power bottom":
+						say "[ZekeSex5]";
+					-- "Pound him":
+						say "[ZekeSex6]";]
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the fox, shaking your head slightly as he gives a questioning look. 'If you don't feel like it anymore, that's fine. Maybe another time.'";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say ZekeSexMenu3: [Dommed by Zeke]
-	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	[]
-	[choose a blank row in table of fucking options;
+	[
+	choose a blank row in table of fucking options;
 	now title entry is "Get facefucked";
 	now sortorder entry is 1;
-	now description entry is "Have your mouth used by the horny fox";]
-	[]
+	now description entry is "Have your mouth used by the horny fox";
+	]
 	choose a blank row in table of fucking options;
 	now title entry is "Get fucked";
 	now sortorder entry is 2;
@@ -318,19 +316,20 @@ to say ZekeSexMenu3: [Dommed by Zeke]
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
 			if Player consents:
-				let nam be title entry;
+				LineBreak;
 				now sextablerun is 1;
-				if (nam is "Get facefucked"):
-					say "[ZekeSex7]";
-				if (nam is "Get fucked"):
-					say "[ZekeSex8]";
-				wait for any key;
+				if title entry is:
+					[-- "Get facefucked":
+						say "[ZekeSex7]";]
+					-- "Get fucked":
+						say "[ZekeSex8]";
 		else if calcnumber is 0:
+			LineBreak;
 			now sextablerun is 1;
 			say "     You step back from the fox, shaking your head slightly as he gives a questioning look. 'If you don't feel like it anymore, that's fine. Maybe another time.'";
-			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options], or 0 to exit.";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say ZekeSex1: [frotting]
@@ -359,7 +358,7 @@ to say ZekeSex4: [facefuck Zeke]
 	say "     After you have completely pulled back from Zeke, he finally becomes fully aware again, shaking himself out of his daze. He sits up, and looks over at you. 'Wow, you really took charge there, didn't you? Guess the competition was good for you. But next time, I'll win, and then it'll be my turn.' He laughs, before going over to the corner of the room, and cleaning himself off. You follow suit, and clean yourself up as well, enjoying the last fleeting remnants of the pleasure as they last.";
 	NPCSexAftermath Zeke receives "OralCock" from Player;
 
-to say ZekeSex5: [power bottom Zeke]
+[to say ZekeSex5: [power bottom Zeke]
 	say "     A";
 	NPCSexAftermath Player receives "AssFuck" from Zeke;
 
@@ -369,10 +368,9 @@ to say ZekeSex6: [fuck Zeke]
 
 to say ZekeSex7: [being facefucked]
 	say "     A";
-	NPCSexAftermath Player receives "OralCock" from Zeke;
+	NPCSexAftermath Player receives "OralCock" from Zeke;]
 
 to say ZekeSex8: [being fucked]
-	setmonster "Red Fox";
 	say "     You've lost, and that means Zeke gets to do what he wants with you. And after that contest, he makes it very clear what it is he wants to do to you. In no time at all, he has you bent over one side of the couch, with him standing naked behind you. A thrill runs through you at the knowledge of what is about to happen, knowledge that is confirmed further as you feel the vulpine cock come to rest on top of your ass, moving back and forth ever so slightly. You feel a warmth on your back as the fox leans further over you, his chest pressed against your back. A shift in the position of his member, bringing the tip to a stop right up against your hole, tells you exactly what comes next.";
 	say "     You receive a sudden shock when Zeke slams forward, the tapered head of his dick making the entry smooth and easy, until he rests about halfway into you. For several moments, he holds that position, his cock stretching you open, but as intense as the sensations flooding through you are, this is only the beginning. The fox starts pumping in and out, his cock ending up deeper inside you on each thrust, stretching you yet further. Once he gets even deeper in you, his thrusts are enough that his knot begins to collide with your ass on each thrust. As the action continues, your attentions focus further and further on the pleasure you're getting from being fucked, and nothing else.";
 	WaitLineBreak;
@@ -383,12 +381,11 @@ to say ZekeSex8: [being fucked]
 Section 4 - Events
 
 after going to Game Store while ZekeRelationship is 0 and FurryList is not banned:
-	[move player to Game Store;]
-	try looking;
 	say "     As you enter the game shop, you notice that there is someone else browsing the shelves, currently leaning over and unintentionally showing off a fluffy tail poking out through a hole in a pair of jeans. After a few moments of watching it swish around, he stands up, a case in hand, and turns away from the shelf. Now that he is fully visible, you can see that he is clearly a fox, albeit on two legs, and in addition to a pair of jeans is wearing a slightly worn shirt displaying the text <MESSAGE REDACTED>. When he realizes that you're there, he starts briefly, and then speaks. 'Oh, hey. You here for some games too? Wait, that's a silly question. Why else would you be in the game shop, after all?'";
 	say "     The fox takes a momentary pause, and extends his hand. 'I'm Zeke, by the way. And you are?' You shake his hand, and introduce yourself. 'Well, nice to meet you. You might have guessed, but I tend to play a lot of video games. Even with this whole disaster going on, I still have a pretty nice setup. If you ever want to hang out and play some games, you should visit. I haven't had a lot of opportunity for anything multiplayer lately, and it's nice to have a little variety. Plus, I don't know why, but you seem to me like the sort of person who enjoys video games. Actually, hang on a moment.' Zeke takes off a backpack, which you hadn't noticed he was wearing, and puts the game he was carrying into it. Then he digs out a scrap of paper and scribbles something on it, before handing it to you. It seems to contain directions. 'Now you should be able to find my place, when you want. See you around, I hope.' With that the fox picks up his backpack, and leaves the store.";
 	AddNavPoint Gaming Den;
 	now ZekeRelationship is 1;
+	try looking;
 
 Section 5 - Location
 
@@ -396,16 +393,15 @@ Table of GameRoomIDs (continued)
 Object	Name
 Gaming Den	"Gaming Den"
 
-Gaming Den is a room. It is a fasttravel. It is private. Gaming Den is sleepsafe.
-Description of Gaming Den is "     The basement is surprisingly spacious, with a large entertainment center set up on one wall. Other walls feature shelves, packed with games, movies, books, and miscellaneous paraphernalia. The center space around the room is taken up by several couches, chairs, and beanbags, set up facing the television.".
-The scent of Gaming Den is "<text>".
+Gaming Den is a room. It is a fasttravel. It is private. It is sleepsafe.
+Description of Gaming Den is "     The basement is surprisingly spacious, with a large entertainment center set up on one wall. Other walls feature shelves, packed with games, movies, books, and miscellaneous paraphernalia. The center space around the room is taken up by several couches, chairs, and beanbags, set up facing the television.[line break]".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Game Store	"Game Store"
 
 Game Store is a room.
-Description of Game Store is "     The store is almost nothing but shelves and shelves full of games and game accessories. There are plenty of places that have been cleaned out on the shelves, but for the most part it all still seems to be there. It seems there have been other priorities to collecting video games.".
+Description of Game Store is "     The store is almost nothing but shelves and shelves full of games and game accessories. There are plenty of places that have been cleaned out on the shelves, but for the most part it all still seems to be there. It seems there have been other priorities to collecting video games.[line break]".
 Mall East Wing is north of Game Store.
 
 Zeke ends here.

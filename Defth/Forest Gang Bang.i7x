@@ -17,8 +17,7 @@ When play begins:
 
 to say ResolveEvent Pack Bang:
 	say "     Going around what appears to be a darker path in the south part of the forest, you find a place that looks abandoned. Leaves crack under your feet, and branches that have overgrown onto the path get in your way. The only sign that something was here is the path in itself that's big enough for walks or bicycles. It looks really peaceful, but the noises in the background mean that you are not alone in here. Howls permeate the place, echoing in the dark part where your eyes can't discern, but you know that you are now likely the prey of a pack of wolves.";
-	LineBreak;
-	say "     [bold type]You feel your heart beating faster. Quick, you need to make a choice: Do you run away, or stay and confront your enemies?[roman type][line break]";
+	say "[line break]     [bold type]You feel your heart beating faster. Quick, you need to make a choice: Do you run away, or stay and confront your enemies?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Run away.";
 	say "     ([link]N[as]n[end link]) - Stay and fight.";
 	if Player consents:
@@ -29,7 +28,7 @@ to say ResolveEvent Pack Bang:
 			say "     You are thrown to the ground by the pack-leader, defeated. Your only chance of escaping is now gone. You can hear the others closing in on you two. Looks like they will have a nice prey.";
 			say "[FeralWolfGangBang]"; [pack gangbang scene]
 		else if fightoutcome >= 30: [fled]
-			say "You manage to make your escape from the wolf, leaving him and the rest of his pack behind.";
+			say "     You manage to make your escape from the wolf, leaving him and the rest of his pack behind.";
 			now Resolution of Pack Bang is 2; [fled]
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     As you beat the wolf that attacked you, and he collapses with a loud pitiful whine, you hear the rustling in the underbrush behind you suddenly stop. Glancing into the woods, you spot one of the pack wolves, looking at you with a hostile stare but not daring to come forward alone. Seems like you frightened the beast by defeating his pack's alpha... which is something you make use of a second later. Running at him, you shout and wave your arms, which sends the wolf fleeing out of sight. You wait a moment to see if others are coming, but it looks like you're rid of them for now. This leaves you behind, alone with the dazed wolf.";
@@ -63,7 +62,8 @@ to say FeralWolfGangBang:
 	WaitLineBreak;
 	say "     The other wolves look angry and are fighting the one [if Player is female]knotted in your pussy[else]newly buried in your ass[end if]. You are pulled and pushed to your limits, and in a vain struggle to scream, your mouth is penetrated by another of the pack who hasn't had a turn yet. You feel hot cum filling your intestines as the one on your ass finally cums, but he doesn't get a chance to knot you as [if Player is female]both wolves on your back are pushed from you. Your holes gape[else]the wolf on your back is pushed from you. Your hole gapes[end if] without a cock[if Player is female], especially a knotted cock[end if], and the cold wind of the forest sends chills down your spine. The pack fighting for a turn is now just background noise, but your rest doesn't last long as other wolves finally fuck you.";
 	say "     You are always used by at least two of the horny wolves. In fact, sometimes, you feel more than two cocks penetrating your now-loose asshole[if Player is female] and another one inside of your drenched pussy[end if]. Your mouth hurts from all of the use, and all that you can taste right now is wolf cum. Your stomach is aching with how full it is, since it was filled from both ends. But the wolves are now long gone, leaving you in a pool of cum. This finally gives you enough time to rest, until you are finally good enough to go back to your adventures.[impregchance]";
-	CreatureSexAftermath "Player" receives "[if Player is female]Pussy[else]Ass[end if]Fuck" from "Feral Wolf Male";
+	if Player is female:
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Wolf Male";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Feral Wolf Male";
 	CreatureSexAftermath "Player" receives "OralCock" from "Feral Wolf Male";
 	now Resolution of Pack Bang is 1; [gangbang]

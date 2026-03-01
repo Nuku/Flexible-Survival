@@ -69,16 +69,14 @@ to say huskyheat: 	[Husky stays in heat permanently. Let's make an interesting e
 				now heatzone is the earea of location of Player;
 			repeat with X running from 1 to number of filled rows in Table of Random Critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ]
 				choose row X from the Table of Random Critters;
-				if there is no area entry, next;
-				if area entry is heatzone:
+				if there is a area entry and area entry is heatzone:
 					add X to hmonList;
 					if Name entry is "Husky Alpha" or Name entry is "Husky Bitch":		[Huskies are more likely]
 						add X to hmonList;
 			if hmonlist is empty and heatzone is not "Outside":		[if none valid found, default back to Outside]
 				repeat with X running from 1 to number of filled rows in Table of Random Critters:	[Loop through and select all monsters that appear nearby (Outside by default)]
 					choose row X from the Table of Random Critters;
-					if there is no area entry, next;
-					if area entry is "Outside":
+					if there is a area entry and area entry is "Outside":
 						add X to hmonList;
 						if Name entry is "Husky Alpha" or Name entry is "Husky Bitch":		[Huskies are more likely]
 							add X to hmonList;
@@ -86,6 +84,14 @@ to say huskyheat: 	[Husky stays in heat permanently. Let's make an interesting e
 			if hmonlist is not empty:
 				now MonsterID is entry 1 of hmonList;
 				choose row MonsterID from the Table of Random Critters;
+				if Name entry is listed in infections of MaleList:
+					setmongender 3;
+				else if Name entry is listed in infections of FemaleList:
+					setmongender 4;
+				else if Name entry is listed in infections of HermList:
+					setmongender 5;
+				else:
+					setmongender 0;
 				say "     A waft on the breeze catches your nose, your head snapping around as the need between your legs throbs. Unable to control your lust, you strike out in the direction of the infected monster.";
 				say "     The enticing scent leads to [a Name entry in lower case]. Immediately upon seeing the infected monster, you immediately submit, offering yourself freely in the hopes of satisfying your body's lustful, heat-fueled needs.";
 				say "[run paragraph on]";

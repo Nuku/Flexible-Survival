@@ -56,7 +56,7 @@ a postimport rule: [bugfixing rules for players that import savegames]
 	if VentFoxContentLevel is 3:
 		connect Maintenance Garage;
 
-Section 0 - Variables
+Chapter 0 - Variables
 
 VentFoxRelationship is a number that varies.
 VentFoxContentLevel is a number that varies.
@@ -67,7 +67,7 @@ VentOviAmount is a number that varies. VentOviAmount is usually 0.
 VentWSAmount is a number that varies. VentWSAmount is usually 0.
 VentFluidAmount is a number that varies. VentFluidAmount is usually 0.
 
-Section 1 - Event
+Chapter 1 - Event
 
 Table of WalkinEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
@@ -82,7 +82,6 @@ Vent_Noises	"Vent_Noises"
 
 Vent_Noises is a situation.
 ResolveFunction of Vent_Noises is "[ResolveEvent Vent_Noises]".
-The level of Vent_Noises is 0.
 Sarea of Vent_Noises is "Nowhere".
 
 when play begins:
@@ -92,8 +91,7 @@ when play begins:
 to say ResolveEvent Vent_Noises:
 	if Resolution of Vent_Noises is 0: [first encounter with the derpy fox]
 		say "     As you make your way to the east wing, you hear a squeaking noise coming from one of the abandoned storefronts.";
-		LineBreak;
-		say "     [bold type]Do you want to investigate?[roman type][line break]";
+		say "[line break]     [bold type]Do you want to investigate?[roman type][line break]";
 		let Vent_Initial_Choices be a list of text;
 		add "Check out the source of the sounds." to Vent_Initial_Choices;
 		add "Continue past without looking. Maybe you can check it out later." to Vent_Initial_Choices;
@@ -103,8 +101,7 @@ to say ResolveEvent Vent_Noises:
 		if Vent_Initial_Choice is:
 			-- "Check out the source of the sounds.": [check it out]
 				say "     Opting to investigate the strange noises, you step through the doorway of the store. Looking around, most of it looks like it's been looted already, with shelves and displays being left barren. Towards the back of the shop, you can make out a vent. Looking closer, you see a red and white latex paw poking through the grating! The foreleg wiggles back and forth, its owner seeming to have gotten stuck. The squeaks you were hearing are louder now, and there's a definite distressed sound to them that makes you feel almost bad for the stuck feral. Looking at the ground directly in front of the vent, you see what looks like a bike tire inner tube. It's just a few feet away from the fox's paw, and it's clear he was attempting to get a snack for himself when he got stuck.";
-				LineBreak;
-				say "     [bold type]Do you help the stuck feral out?[roman type][line break]";
+				say "[line break]     [bold type]Do you help the stuck feral out?[roman type][line break]";
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
 				if Player consents:
@@ -125,16 +122,24 @@ to say ResolveEvent Vent_Noises:
 				say "     Deciding it's probably best to just move along, you continue making your way to the East Wing.";
 				now ventcover is nowhere;
 				now Vent_Noises is resolved;
-	else if Resolution of Vent_Noises is 1: [second time]
+	else: [second time]
 		say "     As you head to the East Wing, you hear squeaking coming from the same shop you'd found [']Vent['] in. Sighing, you decide to make your way to the store to help the silly latex vulpine. Stepping inside, you don't even bother looking around before you go to the vent. You unfasten the cover again, pulling it, and the fox towards you. This time, he doesn't seem startled or scared. As a matter of fact, he almost looks relieved. You gently free him from the grate, but this time, he doesn't dash back into the ductwork immediately. Instead, the little creature leans down to pick up the bike wheel tubing that is still laying there with his teeth, dragging it along. He turns to look at you before running back into the vents.";
 		say "     Not bothering to put the cover back in place, you continue heading to the East Wing, a small smile on your [FaceSpeciesName of Player in lower case] face. [bold type]Perhaps you could search around the mall to find how the fox got inside in the first place...[roman type][line break]";
 		now VentFoxRelationship is 2;
 		now Vent_Noises is resolved;
 
-Section 2 - Location
+Chapter 2 - Location
 
 ventcover is an object. It is in Smith Haven Mall Lot West. It is fixed in place. Understand "cover" as ventcover.
 Description of ventcover is "[VentCoverDescription]".
+
+To say VentCoverDescription: [Description of the vent for various states of relationship.]
+	if VentFoxRelationship < 3 or VentFoxRelationship is 100: [not known / disliked by Vent.]
+		say "     You can see a large, grated vent on the wall of the building. It's close enough to the ground that a creature could conceivably climb inside. One of the metal slats covering the opening is bent open, providing a narrow but workable hole for that to have already happened too. Maybe you could try [link]knocking on it[as]knock on it[end link] to draw something out?";
+	else if VentFoxRelationship is 101: [let Logan rape him.]
+		say "     You can see a large, grated vent cover that once used to be inhabited by your companion. You could try knocking on it, but you're fairly certain that Vent is no longer around.";
+	else:
+		say "     You can see a large, grated vent on the wall of the building. You know it [if VentFoxContentLevel is 3]used to be Vent's hideaway, but now that the fox has gotten too big for it, he's moved to the garage you found once while searching for food with him[else]as Vent's hideaway. You can [link]knock on it[end link] to get his attention[end if].";
 
 KnockOnVent is an action applying to nothing.
 Understand "knock on it" as KnockOnVent.
@@ -144,47 +149,36 @@ Understand "knock on the/-- vent cover/--" as KnockOnVent.
 
 Check KnockOnVent:
 	if ventcover is not visible, say "What?" instead;
+	if VentFoxRelationship is 0: [not met]
+		say "     You tentatively knock on the vent cover, seeing if you can draw the attention of... well, you don't really know what. A few seconds of silence pass before you decide to go do something else." instead;
+	if VentFoxRelationship is 1: [met & helped]
+		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you hear a soft shuffling, moving away from you through the vents. It's pretty obvious that [italic type]something[roman type] is in there." instead;
+	if VentFoxRelationship is 100: [met, didn't help]
+		say "     You decided to knock on the vent grating, trying to draw the attention of whatever creature may be residing inside it. However, you're almost instantly met with a soft growl. Frowning, you continue on your way." instead;
+	if VentFoxRelationship is 101:
+		say "     You rap your knuckles against the vent cover lightly, hoping for some sort of response. Nothing makes a noise in response, and you're left to wonder if things could've gone differently." instead;
 
-Carry out KnockOnVent:
-	say "[KnockedOnVent]";
-
-To say VentCoverDescription:[Description of the vent for various states of relationship.]
-	if VentFoxRelationship < 3 or VentFoxRelationship is 100:[not known / disliked by Vent.]
-		say "     You can see a large, grated vent on the wall of the building. It's close enough to the ground that a creature could conceivably climb inside. One of the metal slats covering the opening is bent open, providing a narrow but workable hole for that to have already happened too. Maybe you could try [link]knocking on it[as]knock on it[end link] to draw something out?";
-	else if VentFoxRelationship is 101: [let Logan rape him.]
-		say "     You can see a large, grated vent cover that once used to be inhabited by your companion. You could try knocking on it, but you're fairly certain that Vent is no longer around.";
-	else:
-		say "     You can see a large, grated vent on the wall of the building. You know it [if VentFoxContentLevel is 3]used to be Vent's hideaway, but now that the fox has gotten too big for it, he's moved to the garage you found once while searching for food with him[else]as Vent's hideaway. You can [link]knock on it[end link] to get his attention[end if].";
-
-To say KnockedOnVent:[Various reactions to knocking on the vent.]
-	if VentFoxRelationship is 0:[not met]
-		say "     You tentatively knock on the vent cover, seeing if you can draw the attention of... well, you don't really know what. A few seconds of silence pass before you decide to go do something else.";
-	else if VentFoxRelationship is 1:[met & helped]
-		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you hear a soft shuffling, moving away from you through the vents. It's pretty obvious that [italic type]something[roman type] is in there.";
-	else if VentFoxRelationship is 100:[met, didn't help]
-		say "     You decided to knock on the vent grating, trying to draw the attention of whatever creature may be residing inside it. However, you're almost instantly met with a soft growl. Frowning, you continue on your way.";
-	else if VentFoxRelationship is 101:
-		say "     You rap your knuckles against the vent cover lightly, hoping for some sort of response. Nothing makes a noise in response, and you're left to wonder if things could've gone differently.";
-	else if VentFoxRelationship is 2:[met, helped twice.]
+Carry out KnockOnVent: [Various reactions to knocking on the vent.]
+	if VentFoxRelationship is 2: [met, helped twice.]
 		say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the hole in the grating with a determined squeak. Seeing that you're his visitor, the vent fox yips happily before moving back into the vent. Maybe next time you visit you could [']play['] with him...";
 		now VentFoxRelationship is 3; [vent known]
-	else if VentFoxRelationship is 3:[vent known]
+	else if VentFoxRelationship is 3: [vent known]
 		if VentFoxContentLevel is 3:
 			say "     You bring your fist up to knock on the cover, but you pause at the last second, remembering that Vent has since moved from this location. [bold type]Vent can be found in the Maintenance Garage north of here...[roman type][line break]";
 		else:
 			say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the hole in the grating with a determined squeak. After seeing who his visitor is, the latex vulpine yips happily in greeting before his body flows into a liquid blob, dripping out of the vent and onto the ground. Why he couldn't have done that when he was stuck inside, you're really not sure. Once all of his mass is outside, he quickly reforms into his normal shape, staring at you patiently, as if asking you what you wanted to do.";
-			LineBreak;
 			say "[VentFoxMenu]";
 	else:
 		say "     DEBUG: You shouldn't be able to see this! If you are, report this error code: VentFox:[VentFoxRelationship]";
 
-Section 3 - NPC and Location
+Chapter 3 - NPC and Location
 
 Table of GameCharacterIDs (continued)
 object	name
 Vent	"Vent"
 
 Vent is a man. The HP of Vent is usually 0.
+Vent is in Maintenance Garage.
 ScaleValue of Vent is 4. [horse sized]
 Body Weight of Vent is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Vent is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -220,10 +214,9 @@ SexuallyExperienced of Vent is false.
 TwistedCapacity of Vent is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Vent is true. [steriles can't knock people up]
 MainInfection of Vent is "Latex Fox".
-Description of Vent is "[VentDescription]".
-Conversation of Vent is { "blah blah blarg" }.
+Description of Vent is "     Vent is now only a bit smaller than a horse normally; however, he can change his size at will. His rubber body is a mixture of red, white, and black latex. The red covers his back and legs, as well as most of his face and tail. The white color is found on the tip of his tail, along his underbelly and chin, and inside his ears. The black covers his four paws like gloves, and the tips of his ears. Looking at his [']equipment['], you can see he has a plump, white sheath, and a set of baseball-sized balls.[line break]".
+fuckscene of Vent is "[VentFoxSexMenu]".
 The scent of Vent is "     Vent has a sort of chemical aroma to him that reminds you of freshly cured latex. You can pick up faint hints of a foxy musk as well.".
-Vent is in Maintenance Garage.
 The linkaction of Vent is "Possible Actions: [link]talk[as]talk vent[end link], [link]smell[as]smell vent[end link], [link]fuck[as]fuck vent[end link][if VentFoxContentLevel > 2], [link]request[as]request vent[end link][end if][line break]".
 
 RequestVent is an action applying to nothing.
@@ -235,12 +228,6 @@ Check RequestVent:
 
 Carry out RequestVent:
 	say "[VentFoxPrefsMenu]";
-
-Instead of fucking the Vent:
-	say "[VentFoxSexMenu]";
-
-to say VentDescription:
-	say "     Vent is now only a bit smaller than a horse normally; however, he can change his size at will. His rubber body is a mixture of red, white, and black latex. The red covers his back and legs, as well as most of his face and tail. The white color is found on the tip of his tail, along his underbelly and chin, and inside his ears. The black covers his four paws like gloves, and the tips of his ears. Looking at his [']equipment['], you can see he has a plump, white sheath, and a set of baseball-sized balls.";
 
 instead of conversing the Vent:
 	say "     You speak to Vent casually, and he seems to listen attentively, even giving a nod here and there.";
@@ -256,12 +243,12 @@ to connect Maintenance Garage:
 	change the North exit of Smith Haven Mall Lot West to Maintenance Garage;
 	change the South exit of Maintenance Garage to Smith Haven Mall Lot West;
 
-Section 4 - Menus
+Chapter 4 - Menus
 
-Chapter 1 - Main Menus
+Section 1 - Main Menus
 
-to say VentFoxMenu:[Menu for interacting with Vent.]
-	say "     Well, what do you do with the fox?";
+to say VentFoxMenu: [Menu for interacting with Vent.]
+	say "[line break]     Well, what do you do with the fox?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -306,7 +293,6 @@ to say VentFoxMenu:[Menu for interacting with Vent.]
 						say "[VentFoxPrefsMenu]";
 						wait for any key;
 		else if calcnumber is 0:
-			LineBreak;
 			say "     Change your mind and do something else?";
 			if Player consents:
 				LineBreak;
@@ -320,7 +306,7 @@ to say VentFoxMenu:[Menu for interacting with Vent.]
 			say "Invalid selection made. Please pick an option from 1 to [the number of filled rows in the table of fucking options], or 0 to exit.";
 	clear the screen and hyperlink list;
 
-to say VentFoxSexMenu:[Pretty self explanatory.]
+to say VentFoxSexMenu: [Pretty self explanatory.]
 	if Player is male:
 		say "     What kind of sex do you want to have?";
 		now sextablerun is 0;
@@ -341,12 +327,12 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 			if anallevel > 1:
 				choose a blank row from table of fucking options;
 				now title entry is "Get rimmed by Vent";
-				now sortorder entry is 5;
+				now sortorder entry is 3;
 				now description entry is "Have the fox shove that latex tongue inside you";
 			[
 			choose a blank row from table of fucking options;
 			now title entry is "Suck Vent's cock";
-			now sortorder entry is 8;
+			now sortorder entry is 6;
 			now description entry is "Take that rubber shaft into your mouth";
 			]
 		[]
@@ -354,21 +340,21 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 			if VentFoxContentLevel > 1:
 				choose a blank row from table of fucking options;
 				now title entry is "Get Vent to rim you with his tongue extended";
-				now sortorder entry is 6;
+				now sortorder entry is 4;
 				now description entry is "Have Vent use his more dexterous organ to thoroughly rim you";
 			[
 			if VentFoxContentLevel > 2 and Player is kinky:
 				choose a blank row from table of fucking options;
 				now title entry is "Get tongue-fucked by Vent";
-				now sortorder entry is 7;
+				now sortorder entry is 5;
 				now description entry is "Get Vent to use his shapeshifting abilities to fuck you with a cock-tongue";
 			]
-		[]
+		[
 		choose a blank row from table of fucking options;
 		now title entry is "Get Vent to suck your dick";
-		now sortorder entry is 9;
+		now sortorder entry is 7;
 		now description entry is "Have the rubber vulpine give you a blowjob.";
-		[]
+		]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows from table of fucking options:
 			choose row y from the table of fucking options;
@@ -400,7 +386,6 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 						-- "Get Vent to suck your dick":
 							say "[VentFoxSuckCock]";]
 			else if calcnumber is 0:
-				LineBreak;
 				say "     Change your mind and do something else?";
 				if Player consents:
 					LineBreak;
@@ -417,10 +402,9 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 		say "     As you make your offer to the latex vulpine, he shakes his head, indicating that he isn't interested in having sex with you. It seems you lack the equipment he prefers...";
 		if sextablerun is 1, wait for any key;
 
-to say VentFoxPrefsMenu:[Menu for setting preferences.]
+to say VentFoxPrefsMenu: [Menu for setting preferences.]
 	clear the screen and hyperlink list;
 	say "     Vent has acquired enough mass to do lots of things to his body. The fox listens attentively as you speak to him. What should you ask him to change?";
-	now calcnumber is -1;
 	while calcnumber is not 0:
 		say "[line break][bold type]Size:[roman type][line break]";
 		say "[link](1)[as]1[end link] - Size during submissive sex[line break]";
@@ -434,9 +418,7 @@ to say VentFoxPrefsMenu:[Menu for setting preferences.]
 		while calcnumber < 0 or calcnumber > 5:
 			say "Choice? (0-5)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 5:
-				break;
-			else:
+			if calcnumber < 0 or calcnumber > 5:
 				say "Invalid choice. Pick from 0 to 5.";
 		LineBreak;
 		if calcnumber is:
@@ -448,49 +430,41 @@ to say VentFoxPrefsMenu:[Menu for setting preferences.]
 			-- 0: say "     Changing your mind, you tell Vent things are fine how they are now.";
 
 to say VentUnavailable:
-	[clear the screen and hyperlink list;]
+	clear the screen and hyperlink list;
 	say "     [bold type]Vent shakes his head at your request. It seems he can't change this yet...[roman type][line break]";
 
-Chapter 2 - Sub Menus
+Section 2 - Sub Menus
 
-to say DomSexSizeMenu:[Menu for setting Vent's size during dominant sex.]
+to say DomSexSizeMenu: [Menu for setting Vent's size during dominant sex.]
 	clear the screen and hyperlink list;
 	say "     You tell him that you want him to change his size while he dominates you. He nods, and waits for you to tell him what size he should be.";
-	say "[link](1)[as]1[end link] - Average Latex Fox[line break]";
-	say "[link](2)[as]2[end link] - Lion-sized Latex Fox[line break]";
-	say "[link](3)[as]3[end link] - Direwolf-sized Latex Fox[line break]";
+	say "[link](1)[as]1[end link] - Average Latex Fox[if VentDomSize is 3] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+	say "[link](2)[as]2[end link] - Lion-sized Latex Fox[if VentDomSize is 4] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+	say "[link](3)[as]3[end link] - Direwolf-sized Latex Fox[if VentDomSize is 5] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
 		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber >= 1 and calcnumber <= 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Pick from 1 to 3.";
 	LineBreak;
-	if calcnumber is 1:
-		say "     Vent nods at your request. He'll now be average in size when he dominates you.";
-		now VentDomSize is 3;
-	else if calcnumber is 2:
-		say "     Vent nods at your request. He'll now be lion-sized when he dominates you.";
-		now VentDomSize is 4;
-	else if calcnumber is 3:
-		say "     Vent nods at your request. He'll now be larger than a horse when he dominates you.";
-		now VentDomSize is 5;
+	if calcnumber is:
+		-- 1: say "     Vent nods at your request. He'll now be average in size when he dominates you.";
+		-- 2: say "     Vent nods at your request. He'll now be lion-sized when he dominates you.";
+		-- 3: say "     Vent nods at your request. He'll now be larger than a horse when he dominates you.";
+	now VentDomSize is calcnumber + 2;
 
-to say SubSexSizeMenu:[Menu for setting Vent's size during submissive sex.]
+to say SubSexSizeMenu: [Menu for setting Vent's size during submissive sex.]
 	clear the screen and hyperlink list;
 	say "     You tell him that you want him to change his size while you dominate him. He nods, and waits for you to tell him what size he should be.";
-	say "[italic type](1) - Not yet available[roman type][line break]";
-	say "[link](2)[as]2[end link] - Small Latex Fox[line break]";
-	say "[link](3)[as]3[end link] - Average Latex Fox[line break]";
+	say "[italic type](1) - Not yet available[roman type][if VentSubSize is 1] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+	say "[link](2)[as]2[end link] - Small Latex Fox[if VentSubSize is 2] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+	say "[link](3)[as]3[end link] - Average Latex Fox[if VentSubSize is 3] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
 		say "Choice? (1-3)> [run paragraph on]";
 		get a number;
-		if calcnumber >= 1 and calcnumber <= 3:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 3:
 			say "Invalid choice. Pick from 1 to 3.";
 	LineBreak;
 	if calcnumber is 1:
@@ -499,92 +473,86 @@ to say SubSexSizeMenu:[Menu for setting Vent's size during submissive sex.]
 	else if calcnumber is 2:
 		say "     Vent nods at your request. He'll now be small in size when he is dominated by you.";
 		now VentSubSize is 2;
-	else if calcnumber is 3:
+	else:
 		say "     Vent nods at your request. He'll now be average in size when he is dominated by you.";
 		now VentSubSize is 3;
 
-to say FluidLevelMenu:[Menu for setting Vent's fluid production levels.]
+to say FluidLevelMenu: [Menu for setting Vent's fluid production levels.]
 	clear the screen and hyperlink list;
 	say "     You tell the rubber vulpine you want him to change the amount of fluids he produces. He nods at you and waits for you to tell him how much he should be making.";
-	say "[link](0)[as]0[end link] - Average amount[line break]";
-	say "[link](1)[as]1[end link] - Above average amount[line break]";
-	say "[link](2)[as]2[end link] - Excessive amount[line break]";
-	say "[link](3)[as]3[end link] - Extreme amount[line break]";
-	now calcnumber is -1;
-	while calcnumber < 0 or calcnumber > 3:
-		say "Choice? (0-3)> [run paragraph on]";
+	say "[link](1)[as]1[end link] - Average amount[if VentFluidAmount is 0] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+	say "[link](2)[as]2[end link] - Above average amount[if VentFluidAmount is 1] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+	say "[link](3)[as]3[end link] - Excessive amount[if VentFluidAmount is 2] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+	say "[link](4)[as]4[end link] - Extreme amount[if VentFluidAmount is 3] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)> [run paragraph on]";
 		get a number;
-		if calcnumber >= 0 and calcnumber <= 3:
-			break;
-		else:
-			say "Invalid choice. Pick from 0 to 3.";
+		if calcnumber < 1 or calcnumber > 4:
+			say "Invalid choice. Pick from 1 to 4.";
 	LineBreak;
 	if calcnumber is:
-		-- 0: say "     Nodding, Vent adjusts his body to produce normal amounts of everything from semen to saliva.";
-		-- 1: say "     Vent gives you an affirmative yip as he adjusts his body to produce more fluids than normal.";
-		-- 2: say "     Vent nods at your request. He'll now make rather excessive amounts of bodily fluids.";
-		-- 3: say "     Vent nods at you, changing himself so he produces insane amounts of everything from cum, to saliva.";
-	now VentFluidAmount is calcnumber;
+		-- 1: say "     Nodding, Vent adjusts his body to produce normal amounts of everything from semen to saliva.";
+		-- 2: say "     Vent gives you an affirmative yip as he adjusts his body to produce more fluids than normal.";
+		-- 3: say "     Vent nods at your request. He'll now make rather excessive amounts of bodily fluids.";
+		-- 4: say "     Vent nods at you, changing himself so he produces insane amounts of everything from cum, to saliva.";
+	now VentFluidAmount is calcnumber - 1;
 
-to say WSLevelMenu:[Menu for setting WS amount of Vent.]
+to say WSLevelMenu: [Menu for setting WS amount of Vent.]
 	clear the screen and hyperlink list;
 	if WSLevel is 3:
 		say "     You tell the rubber vulpine you want him to change how much and how often he marks you. He nods at you and waits for you to elaborate.";
-		say "[link](0)[as]0[end link] - No marking[line break]";
-		say "[link](1)[as]1[end link] - No marking unless requested[line break]";
-		say "[link](2)[as]2[end link] - Marking at any time[line break]";
-		say "[link](3)[as]3[end link] - Marking at any time, especially during penetration[line break]";
-		now calcnumber is -1;
-		while calcnumber < 0 or calcnumber > 3:
-			say "Choice? (0-3)> [run paragraph on]";
+		say "[link](1)[as]1[end link] - No marking[if VentWSAmount is 0] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		say "[link](2)[as]2[end link] - No marking unless requested[if VentWSAmount is 1] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		say "[link](3)[as]3[end link] - Marking at any time[if VentWSAmount is 2] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		say "[link](4)[as]4[end link] - Marking at any time, especially during penetration[if VentWSAmount is 3] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 4:
+			say "Choice? (1-4)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 3:
-				break;
-			else:
-				say "Invalid choice. Pick from 0 to 3.";
+			if calcnumber < 1 or calcnumber > 4:
+				say "Invalid choice. Pick from 1 to 4.";
 		LineBreak;
 		if calcnumber is:
-			-- 0: say "     Nodding, Vent agrees to no longer mark you.";
-			-- 1: say "     Vent gives you an affirmative yip to show he'll only mark you if you specifically request it.";
-			-- 2: say "     Vent nods at your request. He'll now mark you at any time, sometimes during sex. [bold type]He may even mark you while penetrating you...[roman type][line break]";
-			-- 3: say "     Vent nods at you. He'll now mark you at any time, [italic type]especially[roman type] during sex. He'll make sure that he produces excessive urine as well. [bold type]He'll mark you while penetrating you, as well...[roman type][line break]";
-		now VentWSAmount is calcnumber;
+			-- 1: say "     Nodding, Vent agrees to no longer mark you.";
+			-- 2: say "     Vent gives you an affirmative yip to show he'll only mark you if you specifically request it.";
+			-- 3: say "     Vent nods at your request. He'll now mark you at any time, sometimes during sex. [bold type]He may even mark you while penetrating you...[roman type][line break]";
+			-- 4: say "     Vent nods at you. He'll now mark you at any time, [italic type]especially[roman type] during sex. He'll make sure that he produces excessive urine as well. [bold type]He'll mark you while penetrating you, as well...[roman type][line break]";
+		now VentWSAmount is calcnumber - 1;
 	else:
 		say "     You ask Vent to change how he marks you, but even he seems to know you aren't a fan of watersports... [italic type]To gain access to this, you need to change your watersports level to Full.[roman type][line break]";
 
-to say OviLevelMenu:[Menu for setting Oviposition amount of Vent.]
+to say OviLevelMenu: [Menu for setting Oviposition amount of Vent.]
 	clear the screen and hyperlink list;
 	if Player is kinky:
 		say "     With his excellent control over his own body, Vent is capable of putting sterile gooey eggs inside you. How do you want this to be done?";
-		say "[link](0)[as]0[end link] - No egging[line break]";
-		say "[link](1)[as]1[end link] - No egging unless requested[line break]";
-		say "[link](2)[as]2[end link] - Egging during supported scenes[line break]";
-		say "[link](3)[as]3[end link] - Excessive egging during supported scenes[line break]";
-		now calcnumber is -1;
-		while calcnumber < 0 or calcnumber > 3:
-			say "Choice? (0-3)> [run paragraph on]";
+		say "[link](1)[as]1[end link] - No egging[if VentOviAmount is 0] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		say "[link](2)[as]2[end link] - No egging unless requested[if VentOviAmount is 1] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		say "[link](3)[as]3[end link] - Egging during supported scenes[if VentOviAmount is 2] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		say "[link](4)[as]4[end link] - Excessive egging during supported scenes[if VentOviAmount is 3] [bold type][bracket]Set[close bracket][roman type][end if][line break]";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 4:
+			say "Choice? (1-4)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 3:
-				break;
-			else:
-				say "Invalid choice. Pick from 0 to 3.";
+			if calcnumber < 1 or calcnumber > 4:
+				say "Invalid choice. Pick from 1 to 4.";
 		LineBreak;
 		if calcnumber is:
-			-- 0: say "     Nodding, Vent agrees to no longer [']impregnate['] you.";
-			-- 1: say "     Vent gives you an affirmative yip to show he'll only egg you if you specifically request it.";
-			-- 2: say "     Vent nods at your request. He may now decide to perform oviposition during some scenes.";
-			-- 3: say "     Vent nods at you. He will now perform oviposition during some scenes. [bold type]He also produces an excessive amount of eggs now.[roman type][line break]";
-		now VentOviAmount is calcnumber;
+			-- 1: say "     Nodding, Vent agrees to no longer [']impregnate['] you.";
+			-- 2: say "     Vent gives you an affirmative yip to show he'll only egg you if you specifically request it.";
+			-- 3: say "     Vent nods at your request. He may now decide to perform oviposition during some scenes.";
+			-- 4: say "     Vent nods at you. He will now perform oviposition during some scenes. [bold type]He also produces an excessive amount of eggs now.[roman type][line break]";
+		now VentOviAmount is calcnumber - 1;
 	else:
 		say "     Even as you make the suggestion to Vent, you realize that you're honestly not kinky enough for that. [italic type]You need the 'Kinky' fun feat for this option.[roman type][line break]";
 
-Section 5 - Scenes
+Chapter 5 - Scenes
 
-Chapter 1 - Scavving Scenes
+Section 1 - Scavving Scenes
 
-to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
+to say VentFoxScavengeFood: [Player helps the fox find some rubber to eat.]
 	if VentFoxLastFed - turns >= 8:
-		if VentFoxContentLevel is 0:[first time scavving.]
+		if VentFoxContentLevel is 0: [first time scavving.]
 			say "     You happily suggest to the fox that you two can go look for some food together, not really expecting any form of comprehension. To your surprise, however, the rubber vulpine swishes his tail happily and nods his head. His body then shrinks down to be roughly the size of a lap-dog, and he hops up onto your shoulder. You can't help but let a smile grace your [if FaceName of Player is BodyName of Player][bodytype of Player] [end if]face as you begin walking aimlessly. It's very apparent to you that this feral is at least a little intelligent.";
 			say "     You make your way around the building with no real destination in mind when you spot a garage on the other side of the surrounding parking lot. It looks like it used to be used for maintenance vehicles, with jacks and tools scattered around on workbenches pushed up against the walls. As you're taking in the room, Vent yips, startling you slightly. You look at the small fox on your shoulder to see his gaze is firmly locked with a stack of tires in the corner of the room. It seems he wants to eat those. You decide that no real harm can come from it, and you take him over to the stack of rubber. He hops off your shoulder, squeaking quietly as he lands. Deciding that he can handle it from there, you continue looking around the room, trying to see if there's anything you could use in here...";
 			WaitLineBreak;
@@ -594,51 +562,45 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			now VentFoxLastFed is turns;
 		else if VentFoxContentLevel is 1:
 			say "     You suggest to your rubber friend that you could go find some food together. He yips to show his approval before he shrinks down once more. However, he isn't quite able to become as small as he was last time, so he elects to simply walk in your shadow as you cross the parking lot, heading to a shed you can see in the distance. Your vulpine companion trots behind you, squeaking quietly every so often. As you come closer to the freestanding structure, you notice that the door still has a padlock barring entry. That could be a bit of a problem.";
-			LineBreak;
-			say "     [bold type]Should you try to find another way in? Otherwise, you'll just try to pry the lock off the door.[roman type][line break]";
+			say "[line break]     [bold type]Should you try to find another way in? Otherwise, you'll just try to pry the lock off the door.[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Find another entrance.";
 			say "     ([link]N[as]n[end link]) - Break the lock off.";
 			if Player consents:
 				LineBreak;
-				let bonus be ((perception of Player - 10) / 2);
+				let bonus be (perception of Player - 10) / 2;
 				let diceroll be a random number between 1 and 20;
 				say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Perception Check):[line break]";
 				if diceroll + bonus >= 16:
 					say "     You see a stray piece of sheet metal leaning up against the rear wall of the shack. Moving it to the side, you can make out a hole just big enough for you to get through. Stepping inside, you look around before your eyes land on a large container of liquid rubber and its catalyzer. That should be perfect for Vent!";
-					WaitLineBreak;
 					say "[VentShedEatScene]";
 				else:
 					say "     You look around the building but you're unable to find any obvious entrance. Shaking your head in disappointment, you head back to Vent's vent, the fox seeming rather sad all the while.";
 			else:
 				LineBreak;
-				let bonus be ((strength of Player - 10) / 2);
+				let bonus be (strength of Player - 10) / 2;
 				let diceroll be a random number between 1 and 20;
 				say "You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
 				if diceroll + bonus >= 16:
 					say "     Grasping the lock by its hasp with one hand, and the body with the other, you tug hard. With a fair amount of effort, you feel the locking mechanism shearing and breaking before it finally snaps apart. You drop the two halves to the ground before you push the door open and step through it. Looking around the small space, your eyes eventually land on a large container of liquid latex along with a container of catalyzer. That should be perfect for Vent!";
-					WaitLineBreak;
 					say "[VentShedEatScene]";
 				else:
 					say "     You try as hard as you can, pulling and tugging on the lock, but you're unable to break it away from the door. Shaking your head in disappointment, you step away, heading back to Vent's hideaway vent. The rubber vulpine walks with you, looking slightly sad.";
 		else if VentFoxContentLevel is 2:
 			say "     Vent lets out a happy sound at your suggestion before bounding off ahead of you for once. It seems he's very eager to find something to eat today. Shaking your head in amusement, you follow a few feet behind him watching him prance through the parking lot. He dashes around the deserted cars, every so often disappearing from your eyesight. He hops around an SUV, once more disappearing from view before you hear him let out a yelp. You quickly run to him, skidding around the corner, your eyes falling on Logan, the wolverine guard you've seen around holding the fox up by his rubber tail.";
 			say "     'What have we got here?' he asks rhetorically. 'Looks like a little chew toy found his way past our security...' The guard is facing away from you, and he doesn't seem to have noticed your presence yet. Perhaps you could take him by surprise and help your friend?";
-			LineBreak;
-			say "     [bold type]Do you help Vent?[roman type][line break]";
+			say "[line break]     [bold type]Do you help Vent?[roman type][line break]";
 			say "     [link](1)[as]1[end link] - Yes, sneak attack Logan!";
 			if LoganCommand is 2:
 				say "     [link](2)[as]2[end link] - Yes, use the command on him!";
 				if Player is male:
 					say "     [link](3)[as]3[end link] - Yes, use the command and fuck Logan!";
 			say "     [link](0)[as]0[end link] - Do nothing.";
-			now calcnumber is -1;
-			while calcnumber < 0 or calcnumber > 3 or (Cock Count of Player is 0 and calcnumber > 2) or (LoganCommand is not 2 and calcnumber > 1):
+			while 1 is 1:
 				say "Choice? (0-[if LoganCommand is 2 and Player is male]3[else if LoganCommand is 2]2[else]1[end if])> [run paragraph on]";
 				get a number;
-				if (LoganCommand is 2 and (calcnumber is 2 or (calcnumber is 3 and Player is male))) or calcnumber is 1 or calcnumber is 0:
+				if (calcnumber >= 0 and calcnumber < 2) or (LoganCommand is 2 and (calcnumber is 2 or (Player is male and calcnumber is 3))):
 					break;
-				else:
-					say "Invalid choice. Pick from 0 to [if LoganCommand is 2 and Player is male]3[else if LoganCommand is 2]2[else]1[end if].";
+				say "Invalid choice. Pick from 0 to [if LoganCommand is 2 and Player is male]3[else if LoganCommand is 2]2[else]1[end if].";
 			LineBreak;
 			if calcnumber is:
 				-- 1: say "[VentLoganStopByAttacking]";
@@ -651,6 +613,7 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 		say "     You make your suggestions to Vent, but he simply shakes his head, still too full from his last meal.";
 
 to say VentShedEatScene:
+	WaitLineBreak;
 	say "     The vulpine comes in after you, and he gives the air a few sniffs before he dashes over to the containers of latex. He lets out a happy yip and looks at you expectantly, an excited gleam in his eyes. You grin and step over towards him, leaning down and unfastening the lids of the containers before tossing them aside. Now that he can get to the material, he extends his tail, forking it into two separate tendrils. Each one dips into each respective container, and you watch as the fluids flow up his tail and into his body. As it gets absorbed into his system, he grows larger. Once he's completely drained the containers, he's near the size of a lion. He gives you a grin as he shrinks his body back down again, before you both make your way back to the vent.";
 	now VentFoxContentLevel is 2;
 	now VentFoxLastFed is turns;
@@ -689,9 +652,9 @@ to say VentFoxLastScavScene:
 	now VentFoxLastFed is turns;
 	connect Maintenance Garage;
 
-Chapter 2 - Sex Scenes
+Section 2 - Sex Scenes
 
-to say FuckVentFoxAss:[Player fucks the fox's ass.]
+to say FuckVentFoxAss: [Player fucks the fox's ass.]
 	now scalevalue of Vent is VentSubSize;
 	if VentSubSize is 3:
 		if Player is knotted:
@@ -699,8 +662,7 @@ to say FuckVentFoxAss:[Player fucks the fox's ass.]
 		else:
 			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[smn] to harden [itthemm], before you line [if Cock Count of Player > 1]one of them [end if]up with Vent's tailhole. Sparing one last glance to make sure no one is around, you slowly begin to push your [cock size desc of Player] penis into his tight hole. [if Cock Length of Player < 10]After a bit of pushing, you manage to bottom out, brushing your hips against him, the fox taking your length without any problem[else if Cock Length of Player < 20]After a fair amount of pushing, you manage to bottom out to the base of your shaft. Vent's belly is stretching outward slightly, highlighting the size difference between the two of you[else if Cock Length of Player < 30]As you push deeper into his hole, you begin to notice Vent's stomach bulging. You stop for a moment, but the fox simply looks back on you, begging you with his eyes to keep going. You concede, and push more of your length into the fox, stretching him rather significantly before you manage to press all of your shaft into him[else]As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your hips are brushing against him, his stomach forming to the shape of your [Cock of Player] cock, showing just how elastic he actually is[end if].";
 		say "     With your shaft fully inside him[if Player is knotted], excluding the knot[end if], you begin to draw back, his latex hole squeezing and rippling around your shaft in the most amazing of ways. Eventually, only your tip remains inside him, and you pause for just a second before pressing back into him, faster this time. On your next withdrawal, Vent lets out a pleasured growl. He's clearly enjoying this, and you've barely started. You begin to build a rhythm, and you notice Vent's own throbbing cock, fully out of its sheath and dripping pre.";
-		LineBreak;
-		say "     [bold type]Do you lend him a helping hand?[roman type][line break]";
+		say "[line break]     [bold type]Do you lend him a helping hand?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Jack the fox off as you take him.";
 		say "     ([link]N[as]n[end link]) - Leave his cock unattended.";
 		if Player consents:
@@ -720,8 +682,7 @@ to say FuckVentFoxAss:[Player fucks the fox's ass.]
 		else:
 			say "     You make your suggestion to Vent, and he yips happily before turning around and raising his tail for you. You quickly strip, stroking your own cock[smn] to harden [itthemm], before you line [if Cock Count of Player > 1]one of them [end if]up with Vent's tailhole. Sparing one last glance to make sure no one is around, you slowly begin to push your [cock size desc of Player] penis into his tight hole. [if Cock Length of Player < 8]After a bit of pushing, you manage to bottom out, brushing your hips against him, the fox taking your length without any problem, his stomach stretching out slightly[else if Cock Length of Player < 12]After a fair amount of pushing, you manage to bottom out to the base of your shaft. Vent's belly is stretching outward rather noticeably, highlighting the size difference between the two of you[else if Cock Length of Player < 16]As you push deeper into his hole, you begin to notice Vent's stomach bulging rather significantly. You stop for a moment, but the fox simply looks back on you, begging you with his eyes to keep going. You concede, and push more of your length into the fox, stretching him rather significantly before you manage to press all of your shaft into him[else]As you push more of your length into the vulpine's hole, you notice his stomach bulging outwards. Concerned for his safety, you stop and look at him. He looks back at you, a hungry look in his eyes and whines, begging you to push the rest into him. Obliging, you begin moving again, and soon enough, your hips are brushing against him, his stomach forming to the shape of your [Cock of Player] cock, showing just how elastic he actually is[end if].";
 		say "     With your shaft fully inside him[if Player is knotted], excluding the knot[end if], you begin to draw back, his latex hole squeezing and rippling around your shaft in the most amazing of ways. Eventually, only your tip remains inside him, and you pause for just a second before pressing back into him, faster this time. On your next withdrawal, Vent lets out a pleasured growl. He's clearly enjoying this, and you've barely started. You begin to build a rhythm, and you notice Vent's own throbbing cock, fully out of its sheath and dripping pre.";
-		LineBreak;
-		say "     [bold type]Do you lend him a helping hand?[roman type][line break]";
+		say "[line break]     [bold type]Do you lend him a helping hand?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Jack the fox off as you take him.";
 		say "     ([link]N[as]n[end link]) - Leave his cock unattended.";
 		if Player consents:
@@ -760,7 +721,7 @@ to say VentFoxRimsPlayerExtend: [Player gets rimmed by the fox w/ extended tongu
 [to say VentFoxTongueFucksPlayer:[Player gets fucked by fox's cock-tongue]
 	say "     Placeholder.";]
 
-to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
+to say VentFoxFucksPlayer: [Player gets fucked by the fox.]
 	now scalevalue of Vent is VentDomSize;
 	say "     The fox seems eager to take you, based on the wagging of his tail. Not wanting to keep him waiting, you quickly [if player is not naked]strip out of your clothes and [end if]get onto all fours. As you present your [bodydesc of Player] ass to him, he walks toward you sniffing the air quietly. He presses his nose into your balls, gently sniffing them before he moves his nose up to your ass. The vulpine gives a few sniffs there as well before continuing with his plan.";
 	if VentFluidAmount is 0: [Average Fluid]
@@ -1128,7 +1089,7 @@ to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 to say VentFoxSuckCock:[Vent gives player a blowjob.]
 	say "     Placeholder.";]
 
-Chapter 3 - Watersports
+Section 3 - Watersports
 
 to say VentAnalWS:
 	if (VentWSAmount is 2 and a random chance of 1 in 7 succeeds) or (VentWSAmount is 3 and a random chance of 2 in 5 succeeds):
@@ -1139,7 +1100,7 @@ to say VentAnalWS:
 				say "     Vent pees in your bum while he's knotted to you, inflating you a decent bit.";
 			else if VentFluidAmount is 2: [Excessive levels of urine.]
 				say "     Vent pees in your butt while he's knotted to you, distending your belly with an excessive amount of piss.";
-			else if VentFluidAmount is 3: [Extreme levels of urine.]
+			else: [Extreme levels of urine.]
 				say "     Vent takes a leak in your ass, making you look like you're ready to give birth.";
 	else: [No WS.]
 		if VentDomSize is 3 and scalevalue of Player > 2: [Vent is average sized and player is not tiny]
@@ -1150,9 +1111,9 @@ to say VentAnalWS:
 			say "     Vent lays atop your form, sighing as he comes down from his climax. His tail sways gently behind him.";
 		else if VentDomSize is 4 and scalevalue of Player <= 3: [Vent is large and player is small]
 			say "     With your tiny body still stuck on his knot, Vent holds you close until his knot deflates.";
-		else if VentDomSize is 5 and scalevalue of Player > 4: [Vent is huge and player is not average]
+		else if scalevalue of Player > 4: [Vent is huge and player is not average]
 			say "     Vent lays atop your form, sighing as he comes down from his climax. His tail sways gently behind him.";
-		else if VentDomSize is 5 and scalevalue of Player <= 4: [Vent is huge and player is average]
+		else: [Vent is huge and player is average]
 			say "     With your tiny body still stuck on his knot, Vent holds you close until his knot deflates.";
 
 [to say VentPostSexWS:
@@ -1162,7 +1123,7 @@ to say VentAnalWS:
 		else: [Player is significantly smaller than Vent]
 			say "     <smaller placeholder junk.>";]
 
-Section 6 - Dev Tools (Not for release)
+Chapter 6 - Dev Tools (Not for release)
 
 LearnAboutVent is an action applying to nothing.
 Understand "learnvent" as LearnAboutVent.

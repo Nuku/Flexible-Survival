@@ -2,7 +2,7 @@ Version 3 of Settings Menus by Core Mechanics begins here.
 [Version 3.3 - Inventory columns option added]
 [- Originally Authored By: Stripes -]
 
-Section 1 - Trixie's Setting and Cheat Menu
+Part 1 - Trixie's Setting and Cheat Menu
 
 weakwilled is a truth state that varies.
 
@@ -20,8 +20,7 @@ carry out Trixiecheating:
 	let Open World be "Open World";
 	let Lil Better be "Lil Better";
 	let Remove Carry Limits be "Remove Carry Limits";
-	say "     'Now, this stuff here is outright cheating, but if you really want to do it, I can help you out with that. It doesn't come for free though. You'll take a knock to your score, though I'll give half that back if you turn the cheat off later.'";
-	LineBreak;
+	say "     'Now, this stuff here is outright cheating, but if you really want to do it, I can help you out with that. It doesn't come for free though. You'll take a knock to your score, though I'll give half that back if you turn the cheat off later.'[paragraph break]";
 	let Trixieexit be 0;
 	while Trixieexit is 0:
 		say "[bold type]Unerring Hunter[roman type] will let you automatically succeed while hunting as long as your target exists in the area. You'll also be able to call up lists of all local enemies and active situations. [bold type]Automatic Survival[roman type] removes your need for food and water. [bold type]Open World[roman type] grants you access to all nav points which aren't private (locked by event or NPC). [bold type]Lil Better[roman type] gives +1 to all stats. [bold type]Booster Feats[roman type] gives you one additional basic and fun feat. [bold type]Play On[roman type] removes the time limit to the game. [bold type]Weak-Willed[roman type] makes you prone to spontaneously surrendering during combat. [bold type]Insomniac[roman type] removes your need for rest. [bold type]Remove Carry Limits[roman type] allows you to carry as many things as you want. You can also set your [bold type]humanity[roman type] or [bold type]libido[roman type] to any number from 0 to 100.";
@@ -42,16 +41,15 @@ carry out Trixiecheating:
 		say "(13) [link]Set watersports (WS) content level[as]13[end link] - Currently: [bold type][if WSlevel is 1]No WS[else if WSlevel is 2]Standard[else]Full WS[end if][roman type][line break]";
 		say "(14) [link]Access the vore menu[as]14[end link] - Player victim: [bold type][if vorelevel is 1]No Vore[else if vorelevel is 2]Standard[else]More Vore[end if][roman type] & [bold type][if UBlevel is 1]No UB[else if UBlevel is 2]Standard[else]Full UB[end if][roman type][line break]";
 		if Player can vore or Player can UB:
-			say "-- Player predator: [bold type][if vorechoice is 0]Player choice vore[else if vorechoice is 1]Automatic vore[else]Never vore[end if][roman type] w/Hard Vore frequency: [bold type][if hvorelevel is 1]None[else if hvorelevel is 2]Basic (25%)[else if hvorelevel is 3]High (56%)[end if][roman type] & [bold type][if Player cannot UB]Inactive UB[else if ubchoice is 0]Player choice UB[else if ubchoice is 1]Automatic UB[else]Never UB[end if][roman type][line break]";
+			say "-- Player predator: [bold type][if vorechoice is 0]Player choice vore[else if vorechoice is 1]Automatic vore[else]Never vore[end if][roman type] w/Hard Vore frequency: [bold type][if hvorelevel is 1]None[else if hvorelevel is 2]Basic (25%)[else]High (56%)[end if][roman type] & [bold type][if Player cannot UB]Inactive UB[else if ubchoice is 0]Player choice UB[else if ubchoice is 1]Automatic UB[else]Never UB[end if][roman type][line break]";
 		say "(15) [link]Set egg-pregnancy (ovi) content level[as]15[end link] - Currently: [bold type][if ovipreglevel is 1]No Ovi[else if ovipreglevel is 2]Standard[else]Always Ovi[end if][roman type][line break]";
 		[say "[link](16) Adjust flags[as]16[end link] - View/change warding settings[line break]";]
 		say "[line break](0) [link]Abort[as]0[end link][line break]";
-		while 1 is 1:
+		now calcnumber is -1;
+		while calcnumber < 0 or calcnumber > 15:
 			say "Choice? (0-15)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 15:
-				break;
-			else:
+			if calcnumber < 0 or calcnumber > 15:
 				say "Invalid choice. Pick from 0 to 15.";
 		LineBreak;
 		if calcnumber is:
@@ -319,12 +317,11 @@ carry out voremenuing:
 		else:
 			say "(9) UB by player - Inactive.";
 		say "[line break](0) [link]Exit[as]0[end link]: Leave this menu.";
-		while 1 is 1:
+		now calcnumber is -1;
+		while calcnumber < 0 or calcnumber > 9:
 			say "Choice? (0-9)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 9:
-				break;
-			else:
+			if calcnumber < 0 or calcnumber > 9:
 				say "Invalid choice. Pick from 0 to 9.";
 		LineBreak;
 		if calcnumber is 1:

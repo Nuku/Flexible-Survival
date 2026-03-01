@@ -4,28 +4,10 @@ Rubber Sneakers by Kernog begins here.
 
 Section 1 - Object Declaration
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"rubber sneakers"	"Dark blue sport shoes made of a shiny rubbery material. A stylized feline figure is painted on the side."	2	rubber sneakers
-
 When play begins:
 	add "rubber sneakers" to invent of Astroslide Field Locker-room;
 
-rubber sneakers is a grab object.
-rubber sneakers is equipment.
-rubber sneakers is not temporary.
-Plural of rubber sneakers is true.
-Taur-compatible of rubber sneakers is false.
-The size of rubber sneakers is 0.
-The AC of rubber sneakers is 0.
-The effectiveness of rubber sneakers is 0.
-The placement of rubber sneakers is "body".
-The descmod of rubber sneakers is "You wear rubbery, dark blue sport shoes. Each step you take sends a small tingle throughout your body.".
-The slot of rubber sneakers is "feet".
-
-the scent of rubber sneakers is "The rubber sneakers smell mostly of rubber, with a faint hint of sweat.".
-
-[rubber sneakers is in Astroslide Field Locker-room.]
+[rubber sneakers moved to Core Mechanics/Equipment.i7x]
 
 Section 2 - Usage specifics
 
@@ -71,35 +53,31 @@ Instead of using the rubber sneakers:
 	else:
 		repeat with z running through equipped equipment:
 			if slot of z is "feet":
-				[say "     [bold type]Your [z] is in the way![roman type][line break]";]
 				continue the action;
-		if (BodyName of Player is listed in infections of TaurList or BodyName of Player is listed in infections of NoLegList):
-			[say "     [bold type]Sadly, the rubber sneakers are incompatible with your body type![roman type][line break]";]
+		if BodyName of Player is listed in infections of TaurList or BodyName of Player is listed in infections of NoLegList:
 			continue the action;
-		else:
-			say "     [one of]As you ponder putting the shoes on, you have a bad feeling about this[or]You remember how useful, yet dangerous these shoes can be[stopping]. [bold type]Should you really put them on?[roman type][line break]";
+		say "     [one of]As you ponder putting the shoes on, you have a bad feeling about this[or]You remember how useful, yet dangerous these shoes can be[stopping]. [bold type]Should you really put them on?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - What's the worst that could happen?";
+		say "     ([link]N[as]n[end link]) - Better listen to your instinct.";
+		if Player consents:
 			LineBreak;
-			say "     ([link]Y[as]y[end link]) - What's the worst that could happen?";
-			say "     ([link]N[as]n[end link]) - Better listen to your instinct.";
-			if Player consents:
-				LineBreak;
-				say "     You put the rubber sneakers on. The [one of]shoes are surprisingly comfortable. Your feet feel warm, comfortable and, most of all, so light. Your mind fills with confidence. As you take a few steps, you feel small tingles going up your legs. Is it because you need to get used to them? At least it does not feel uncomfortable or painful. Actually, it feels quite pleasurable[or]pleasurable tingles come back as soon as you take a few steps in your rubbery footwear[stopping].";
-				say "     [bold type]With these rubber sneakers on, you feel like you can outrun anything.[roman type][line break]";
-				now the rubber sneakers are equipped;
-				stop the action;
-			else:
-				LineBreak;
+			say "     You put the rubber sneakers on. The [one of]shoes are surprisingly comfortable. Your feet feel warm, comfortable and, most of all, so light. Your mind fills with confidence. As you take a few steps, you feel small tingles going up your legs. Is it because you need to get used to them? At least it does not feel uncomfortable or painful. Actually, it feels quite pleasurable[or]pleasurable tingles come back as soon as you take a few steps in your rubbery footwear[stopping].";
+			say "     [bold type]With these rubber sneakers on, you feel like you can outrun anything.[roman type][line break]";
+			now the rubber sneakers are equipped;
+			stop the action;
+		else:
+			LineBreak;
 
 Section 3 - Everyturn rule
 
 an everyturn rule:
-	if the rubber sneakers are equipped:
+	if the rubber sneakers are equipped and a random chance of 2 in 3 succeeds:
 		if SkinName of Player is not "Rubber Puma":
-			say "     The tingles coming from your rubber shoes, which you got used to until now, suddenly peak. You get goosebumps, while the rubber quickly spreads over your entire body, save your face. The goosebumps are then replaced by the comfortable warmth of dark blue rubber clinging to your body, and having you lose your [SkinSpeciesName of Player in lower case] skin.";
+			say "[line break]     The tingles coming from your rubber shoes, which you got used to until now, suddenly peak. You get goosebumps, while the rubber quickly spreads over your entire body, save your face. The goosebumps are then replaced by the comfortable warmth of dark blue rubber clinging to your body, and having you lose your [SkinSpeciesName of Player in lower case] skin.";
 			now SkinName of Player is "Rubber Puma";
 			now Skin of Player is "shiny blue";
 		else if CockName of Player is not "Rubber Puma":
-			say "     A sudden pang of pain in your genital area makes you double over. The pain recedes as fast as it came and, when you remove your hands from your crotch, you feel changed[if Player is male]. Your [Cock of Player] cock[smn] changed into a single human-sized, feline-shape rubber penis, which quickly retracts, barbs and all, into a smooth and shiny latex sheath[end if][if Player is female]. A quick prodding of your cunt[sfn] indicates that the rubber slipped inside, covering your entire vagina with very sensitive latex[end if].";
+			say "[line break]     A sudden pang of pain in your genital area makes you double over. The pain recedes as fast as it came and, when you remove your hands from your crotch, you feel changed[if Player is male]. Your [Cock of Player] cock[smn] changed into a single human-sized, feline-shape rubber penis, which quickly retracts, barbs and all, into a smooth and shiny latex sheath[end if][if Player is female]. A quick prodding of your cunt[sfn] indicates that the rubber slipped inside, covering your entire vagina with very sensitive latex[end if].";
 			now CockName of Player is "Rubber Puma";
 			now Cock of Player is "feline";
 			if Cock Count of Player > 1:
@@ -108,23 +86,23 @@ an everyturn rule:
 				now Cock Length of Player is 7;
 				now Ball Size of Player is 5;
 		else if TailName of Player is not "Rubber Puma":
-			say "     This time, the tingles focus on the small of your back, then your coccyx. A long blue tail sprouts out, a flexible rubbery tube, which feels like a natural part of your body, as the electric tingles running back to your brain tell you as soon as you grab it.";
+			say "[line break]     This time, the tingles focus on the small of your back, then your coccyx. A long blue tail sprouts out, a flexible rubbery tube, which feels like a natural part of your body, as the electric tingles running back to your brain tell you as soon as you grab it.";
 			now TailName of Player is "Rubber Puma";
 			now tail of Player is "You have a feline-like tail, thin, long and rubbery.";
 		else if BodyName of Player is not "Rubber Puma":
-			say "     Your body shifts and changes. You feel your body become a little smaller and more flexible. Muscles grow all over the place, especially on your thighs, giving you legs made for running. Overall, you take a more feline stance.";
+			say "[line break]     Your body shifts and changes. You feel your body become a little smaller and more flexible. Muscles grow all over the place, especially on your thighs, giving you legs made for running. Overall, you take a more feline stance.";
 			now BodyName of Player is "Rubber Puma";
 			now Body of Player is "slim and flexible, akin to a feline";
 			attributeinfect "Rubber Puma";
 		else if FaceName of Player is not "Rubber Puma":
-			say "     The rubber suddenly creeps up to your head and closes around it. The substance melds with your skin, then your skull, which shapes into a puma head. You palp it, and realize that it is entirely made of rubber, even your teeth. The need for running begins to addle your mind.";
+			say "[line break]     The rubber suddenly creeps up to your head and closes around it. The substance melds with your skin, then your skull, which shapes into a puma head. You palp it, and realize that it is entirely made of rubber, even your teeth. The need for running begins to addle your mind.";
 			now FaceName of Player is "Rubber Puma";
 			now Face of Player is "feline, and in the distinctive shape of a puma";
 		else:
-			say "     The rubber puma infection, having spread to your entire body, now starts to affect your mind, and sexually stimulates you. [bold type]Your libido increases.[roman type][line break]";
+			say "[line break]     The rubber puma infection, having spread to your entire body, now starts to affect your mind, and sexually stimulates you. [bold type]Your libido increases.[roman type][line break]";
 			increase Libido of Player by 20;
 			if Libido of Player >= 100:
-				say "     The arousal becomes too strong for you to resist. Abiding to the stimulation of the sneakers, you keep walking, hoping to orgasm quickly. But this is not enough stimulation for the shoes, which keep you tantalizingly on the edge. Groaning, you cede and begin to jog at a brisk pace. The tingles raise in intensity, until it feels like your [if Player is male]cock[smn] [ismv][else]cunt[sfn] [isfv][end if] covered with electrodes, shocking you each time one of your feet hits the ground. You unconsciously run faster and faster, until a final stride manages to make you go. You arch your back and roar in orgasmic joy as you cum hard, splashing the floor under and in front of you with your sexual fluids. You eventually stop feeling the need to run, and stop your jogging. While you get your breath back, you look back, and can only admire the long trail you made during your climax.";
+				say "[line break]     The arousal becomes too strong for you to resist. Abiding to the stimulation of the sneakers, you keep walking, hoping to orgasm quickly. But this is not enough stimulation for the shoes, which keep you tantalizingly on the edge. Groaning, you cede and begin to jog at a brisk pace. The tingles raise in intensity, until it feels like your [if Player is male]cock[smn] [ismv][else]cunt[sfn] [isfv][end if] covered with electrodes, shocking you each time one of your feet hits the ground. You unconsciously run faster and faster, until a final stride manages to make you go. You arch your back and roar in orgasmic joy as you cum hard, splashing the floor under and in front of you with your sexual fluids. You eventually stop feeling the need to run, and stop your jogging. While you get your breath back, you look back, and can only admire the long trail you made during your climax.";
 				SanLoss 15;
 				now Libido of Player is 20;
 
@@ -138,7 +116,7 @@ This is the Rubber Puma Infection rule:
 	if Player has a body of "Rubber Puma":
 		trigger ending "Rubber Puma Infection";
 		if humanity of Player < 10:
-			say "     Having never found a way to remove the infected sneakers (or tried to), you succumb, body and mind, to the Rubber Puma infection. You elude the military countless times, thanks to your extraordinary athletic abilities, until your very existence becomes an urban legend. Soon, every jogger and sportsman of the area know of the Rubber Puma. They say that, if you run or exercise alone, during the night, the Puma chases you. [subjpro_cap of Player] outruns you; [subjpro of Player] always does. Then, [subjpro of Player] molests you all night, before leaving by your body a pair of rubber sport shoes. They say that those who choose to wear these shoes never come back.";
+			say "     Having never found a way to remove the infected sneakers (or tried to), you succumb, body and mind, to the Rubber Puma infection. You elude the military countless times, thanks to your extraordinary athletic abilities, until your very existence becomes an urban legend. Soon, every jogger and sportsman of the area know of the Rubber Puma. They say that, if you run or exercise alone, during the night, the Puma chases you. [SubjectProCap of Player] outruns you; [SubjectPro of Player] always does. Then, [SubjectPro of Player] molests you all night, before leaving by your body a pair of rubber sport shoes. They say that those who choose to wear these shoes never come back.";
 		else:
 			say "     The infected rubber sneakers forced you to remain trapped in the form of a Rubber Puma. Fortunately, you managed to remain in control of your sanity, thanks to a careful planning of your physical efforts, convincing the military to let you go, under surveillance. During a particularly intense session on your treadmill, you discover that your rubber body begins to exude pools of latex which quickly reform as new pairs of sport shoes. This gives you a great idea, and you rush to your phone, to make some calls to your bank. Several months later, 'Rubber Pumas' become the new fashion among youngsters and sportsmen alike. Most of your sells comes from your microwaved line, which presents no risk of infection, but you let slip, from time to time, 'original' versions, which sell for gold on the black market, ensuring your company a steady flow of money from 'thankful' investors.";
 
@@ -146,12 +124,12 @@ Section 5 - Creature Insertion
 
 [The Rubber Puma is not an enemy proper (yet), but I leave the code there for the infection]
 
-Table of CombatPrep (continued)
+[Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
 "Rubber Puma"	"[PrepCombat_Rubber Puma]"
 
 to say PrepCombat_Rubber Puma:
-	setmongender 3; [creature is male]
+	say "";]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -173,10 +151,10 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "";
-	now defeated entry is "";
-	now victory entry is "";
-	now desc entry is "";
+	now attack entry is "[NonCombatError]";
+	now defeated entry is "[NonCombatError]";
+	now victory entry is "[NonCombatError]";
+	now desc entry is "[NonCombatError]";
 	now face entry is "feline, and in the distinctive shape of a puma";
 	now body entry is "slim and flexible, akin to a feline";
 	now skin entry is "shiny black";

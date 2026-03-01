@@ -8,14 +8,18 @@ Version 1 of Campus Couple NPC by Closerhenry begins here.
 [   1: Have learned where the couple's room                             ]
 [   100: Permanently locked out of the two                              ]
 
-An everyturn rule:
-	if CampusCoupleRelationship > 0:
-		if daytimer is day and (Jadako is in Jadako's Room or Joseph is in Jadako's Room):
+a postimport rule: [bugfixing rules for players that import savegames]
+	if CampusCoupleRelationship is 1: [event resolved the right way, room not connected yet]
+		connect Jadako's Room;
+		if daytimer is day:
 			now Jadako is nowhere;
 			now Joseph is nowhere;
-		else if daytimer is night and (Jadako is not in Jadako's Room or Joseph is not in Jadako's Room):
+		else:
 			move Jadako to Jadako's Room;
 			move Joseph to Jadako's Room;
+	now Sterile of Jadako is false;
+	now MainInfection of Jadako is "Feline";
+	now Sterile of Joseph is false;
 
 Section 1 - Declaring the Room
 
@@ -31,6 +35,15 @@ Description of Jadako's Room is "     Jadako's room is a standard college dorm r
 to connect Jadako's Room:
 	change the south exit of Jadako's Room to Tenvale College Male Dorms;
 	change the north exit of Tenvale College Male Dorms to Jadako's Room;
+
+An everyturn rule:
+	if CampusCoupleRelationship > 0:
+		if daytimer is day and (Jadako is in Jadako's Room or Joseph is in Jadako's Room):
+			now Jadako is nowhere;
+			now Joseph is nowhere;
+		else if daytimer is night and (Jadako is not in Jadako's Room or Joseph is not in Jadako's Room):
+			move Jadako to Jadako's Room;
+			move Joseph to Jadako's Room;
 
 Section 2 - Declaring Jadako and Joseph
 
@@ -72,14 +85,10 @@ AnalVirgin of Jadako is false.
 PenileVirgin of Jadako is false.
 SexuallyExperienced of Jadako is true.
 TwistedCapacity of Jadako is false. [Twisted Characters can take any penetration, no matter the size]
-Sterile of Jadako is true. [steriles can't knock people up]
-MainInfection of Jadako is "".
-Description of Jadako is "[jadakodesc]".
-Conversation of Jadako is { "<This is nothing but a placeholder!>" }.
+Sterile of Jadako is false. [steriles can't knock people up]
+MainInfection of Jadako is "Feline".
+Description of Jadako is "     Jadako is an anthro feline. His fur has a variety of different colors, mostly oranges, blacks, and whites. His large cat ears stand straight up, with a single piercing in his left ear. His frame is thin and wiry, but not without muscle. He wears no clothes, displaying his sheathed cock and long tail. You can't currently see it, but you know it is a bright red shaft, humanoid looking but covered in smooth barbs. His golfball sized testicles hang below the sheath, covered in his orange fur. Jadako notices you checking him out, as he flexes and performs a couple of poses to show off his body more. He lets out a smooth purr, clearly enjoying the attention.[line break]".
 Scent of Jadako is "     The lithe feline smells of exotic cologne, covering a heavy scent of sex and sweat.".
-
-To say jadakodesc:
-	say "     Jadako is an anthro feline. His fur has a variety of different colors, mostly oranges, blacks, and whites. His large cat ears stand straight up, with a single piercing in his left ear. His frame is thin and wiry, but not without muscle. He wears no clothes, displaying his sheathed cock and long tail. You can't currently see it, but you know it is a bright red shaft, humanoid looking but covered in smooth barbs. His golfball sized testicles hang below the sheath, covered in his orange fur. Jadako notices you checking him out, as he flexes and performs a couple of poses to show off his body more. He lets out a smooth purr, clearly enjoying the attention.";
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -119,14 +128,10 @@ AnalVirgin of Joseph is false.
 PenileVirgin of Joseph is false.
 SexuallyExperienced of Joseph is true.
 TwistedCapacity of Joseph is false. [Twisted Characters can take any penetration, no matter the size]
-Sterile of Joseph is true. [steriles can't knock people up]
+Sterile of Joseph is false. [steriles can't knock people up]
 MainInfection of Joseph is "".
-Description of Joseph is "[josephdesc]".
-Conversation of Joseph is { "<This is nothing but a placeholder!>" }.
+Description of Joseph is "     Joseph is an anthro canine. He has shaggy brown fur covering his body, uniform in color. Stemming from the sides of his head are floppy canine ears. The man is muscular and bulky, without a single hint of fat. His thighs are thick with muscle, showing how much he works out. The coach wears his official jacket, colored a bright green with gold colored cuffs, zipper collar, and a gold [']W['] on the back, most likely standing for Weber. He also wears a pair of short, black athletic shorts which go down a little more than halfway down his thighs. A small hole is cut in the back for Joseph's fluffy tail. You can see a large bulge in his shorts however, which seems to occasionally twitch. Looking up, you see Joseph staring at Jadako's bare ass, tail raised up. Joseph sees that you notice, and looks away with embarrassment.[line break]".
 Scent of Joseph is "     The bulky canine smells of sweat and potent male musk.".
-
-To say josephdesc:
-	say "     Joseph is an anthro canine. He has shaggy brown fur covering his body, uniform in color. Stemming from the sides of his head are floppy canine ears. The man is muscular and bulky, without a single hint of fat. His thighs are thick with muscle, showing how much he works out. The coach wears his official jacket, colored a bright green with gold colored cuffs, zipper collar, and a gold [']W['] on the back, most likely standing for Weber. He also wears a pair of short, black athletic shorts which go down a little more than halfway down his thighs. A small hole is cut in the back for Joseph's fluffy tail. You can see a large bulge in his shorts however, which seems to occasionally twitch. Looking up, you see Joseph staring at Jadako's bare ass, tail raised up. Joseph sees that you notice, and looks away with embarrassment.";
 
 Section 3 - Talking to the Couple
 
@@ -135,8 +140,7 @@ Instead of conversing the Jadako:
 		say "     ERROR: Jadako shouldn't be where a player can see him yet and said player should not be able to be in the Jadako's Room! Please report to Closerhenry on the FS Discord and quote this tracking number for easier bugfixing: [CampusCoupleRelationship]";
 	else:
 		say "     You approach the colorful feline, who places his hand on his hip and stands waiting.";
-		LineBreak;
-		say "[JadakoTalkMenu]";
+		say "[line break][JadakoTalkMenu]";
 
 to say JadakoTalkMenu:
 	say "     What do you want to talk with Jadako about?";
@@ -205,8 +209,7 @@ Instead of conversing the Joseph:
 		say "     ERROR: Joseph shouldn't be where a player can see him yet and said player should not be able to be in the Jadako's Room! Please report to Closerhenry on the FS Discord and quote this tracking number for easier bugfixing: [CampusCoupleRelationship]";
 	else:
 		say "     You approach the muscular canine, who looks at you warmly. 'Is there something you want to talk about?'";
-		LineBreak;
-		say "[JosephTalkMenu]";
+		say "[line break][JosephTalkMenu]";
 
 to say JosephTalkMenu:
 	say "     What do you want to talk with Joseph about?";
@@ -273,19 +276,17 @@ to say JosephTalk3:
 Section 4 - Fucking the Couple
 
 Instead of fucking the Jadako:
-	if (lastfuck of Jadako - turns < 3): [he got fucked in the last 9 hours = three turns]
+	if lastfuck of Jadako - turns < 3: [he got fucked in the last 9 hours = three turns]
 		say "     'Hey, sorry to be a bummer, but I'm not really up to it right now... maybe later? Sorry, I'm still a bit worn out from last time,' Jadako sighs.";
 	else:
 		say "     You ask Jadako how he and Joseph feel about going for a round, who both agree they're up for it.";
-		LineBreak;
 		say "[CampusCoupleSexMenu]";
 
 Instead of fucking the Joseph:
-	if (lastfuck of Joseph - turns < 3): [he got fucked in the last 9 hours = three turns]
+	if lastfuck of Joseph - turns < 3: [he got fucked in the last 9 hours = three turns]
 		say "     'Sorry to disappoint, but Jadako is still recovering. You can wait until he's ready, right?' he asks, turning you down.";
 	else:
 		say "     You ask Joseph how he and Jadako feel about going for a round, who both agree they're up for it.";
-		LineBreak;
 		say "[CampusCoupleSexMenu]";
 
 to say CampusCoupleSexMenu:
@@ -355,8 +356,7 @@ to say CampusCoupleSex1:
 
 to say CampusCoupleSex2:
 	say "     You ask Joseph if he would be okay with sharing his boy toy, Jadako. He murmurs his approval, asking which side you want to take.";
-	LineBreak;
-	say "     [bold type]Which side of Jadako do you take?[roman type][line break]";
+	say "[line break]     [bold type]Which side of Jadako do you take?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Give Jadako a good old face-fuck.";
 	say "     ([link]N[as]n[end link]) - Take Jadako's back hole for yourself.";
 	if Player consents:

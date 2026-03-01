@@ -14,6 +14,23 @@ Version 1 of Werewolf by CrimsonAsh begins here.
 WerewolfWatching is a truth state that varies. WerewolfWatching is usually false.
 WerewolfRelationship is a number that varies.
 
+an everyturn rule:
+	if daytimer is day: [currently day]
+		if WerewolfWatching is true: [she's only out at night]
+			now WerewolfWatching is false;
+	else if Werewolf Surprise is unresolved: [currently night]
+		if Player is in Urban Forest and WerewolfRelationship is 0 and level of Player > 5:
+			if FemaleList is not banned and FurryList is not banned and FeralList is not banned:
+				if WerewolfWatching is false: [initial message]
+					say "[line break]     Here between the untamed trees of the Urban Forest, the shadows seem especially deep and seem to play tricks on your eyes. Every little movement of branches and leaves draws your gaze, and the ominous feeling of being watched fills you with tension. The sensation of something's predatory gaze resting on you can't be all in your head, can it?";
+					now WerewolfWatching is true;
+				else if a random chance of 1 in 3 succeeds: [repeat message for following turns]
+					say "[line break]     You [italic type]still[roman type] can't shake the feeling that something is watching you. A cold shiver runs down your back.";
+		else if WerewolfWatching is true:
+			now WerewolfWatching is false;
+
+Section 1 - Meeting Event
+
 Table of GameEventIDs (continued)
 Object	Name
 Werewolf Surprise	"Werewolf Surprise"
@@ -26,23 +43,6 @@ when play begins:
 	add Werewolf Surprise to BadSpots of FemaleList;
 	add Werewolf Surprise to BadSpots of FurryList;
 	add Werewolf Surprise to BadSpots of FeralList;
-
-an everyturn rule:
-	if daytimer is day: [currently day]
-		if WerewolfWatching is true: [she's only out at night]
-			now WerewolfWatching is false;
-	else if Werewolf Surprise is unresolved: [currently night]
-		if Player is in Urban Forest and WerewolfRelationship is 0 and level of Player > 5:
-			if FemaleList is not banned and FurryList is not banned and FeralList is not banned:
-				if WerewolfWatching is false: [initial message]
-					say "     Here between the untamed trees of the Urban Forest, the shadows seem especially deep and seem to play tricks on your eyes. Every little movement of branches and leaves draws your gaze, and the ominous feeling of being watched fills you with tension. The sensation of something's predatory gaze resting on you can't be all in your head, can it?";
-					now WerewolfWatching is true;
-				else if a random chance of 1 in 3 succeeds: [repeat message for following turns]
-					say "     You [italic type]still[roman type] can't shake the feeling that something is watching you. A cold shiver runs down your back.";
-		else if WerewolfWatching is true:
-			now WerewolfWatching is false;
-
-Section 1 - Meeting Event
 
 instead of resting while Player is in Urban Forest and WerewolfWatching is true and WerewolfRelationship is 0:
 	say "     Finding a comfortable enough spot under a large oak, you lay down to rest and slowly begin to drift off to sleep. All of a sudden, a heavy weight is thrown against you, and your eyes shoot open to the darkness around you. Finding yourself pinned down, you realize that what is on top of you is furry, warm, and... very well muscled as it presses against you. Your face is buried in that fuzzy warmth, and as you pull your head up to identify your assailant, your gaze is met by two yellow, wolf-like eyes, burning brightly with a ferocious need that is obvious even without any words. You can feel two large mounds pressing against your body, also covered in soft fur, as well as the two hard nubs of your assailant's nipples. Further down your body, a warm wetness drips on and soaks your leg.";
@@ -93,13 +93,13 @@ instead of resting while Player is in Urban Forest and WerewolfWatching is true 
 		say "     You attempt to halt the werewolf molesting you and push against her chest to get her off - resulting in the expected violent reaction to your resistance. With a snarl, she slams you down and moves to pin your arms to the ground. You manage to kick the wolf woman off, sending her scrambling to her feet and growling menacingly at you. She circles you for a moment allowing you to get your bearings and stand up, before charging forward with claws extended and teeth bared.";
 		now inasituation is true;
 		challenge "Werewolf";
+		now inasituation is false;
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "[BeatWerewolf]";
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "[LoseToWerewolf]";
 		else if fightoutcome >= 30:
 			now WerewolfRelationship is 91; [fought & fled]
-		now inasituation is false;
 		now Resolution of Werewolf Surprise is 2; [fought]
 	now Werewolf Surprise is resolved;
 
@@ -107,8 +107,7 @@ Section 2 - Scenes
 
 to say BeatWerewolf:
 	say "     As you strike a final blow against the werewolf assailing you, she stumbles back and falls on her muscular ass. She lets out a whine of need and tries to get up, but can't seem to find the energy to satiate her heat. The strong predator before you has been reduced to a bitch in desperate heat. You must admit, seeing the feral beauty splayed out before you and the adrenaline of the fight has gotten you more than a little hot and bothered.";
-	LineBreak;
-	say "     [bold type]Should you satisfy both your needs?[roman type][line break]";
+	say "[line break]     [bold type]Should you satisfy both your needs?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Have sex with her.";
 	say "     ([link]N[as]n[end link]) - Just leave.";
 	if Player consents:
@@ -178,9 +177,6 @@ to say LoseToWerewolf:
 		WaitLineBreak;
 		say "     When you awake some time later you're alone. Your shoulder and face ache pretty badly but otherwise you're unharmed. It seems she licked your face clean before leaving you here...";
 	now WerewolfRelationship is 90; [fought & lost]
-
-[to say WerewolfDesc:
-	say ""; [currently unused, only event encounters with her]]
 
 Section 3 - Creature Insertion
 

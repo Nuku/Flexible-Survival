@@ -10,18 +10,18 @@ to say spidergirl attack:
 	say "     [if HP of Player > 0]The spider girl does not accept your peaceful surrender and you[else]You[end if] are pinned to the ground by the spider's webbing, your struggles ineffectual! The creature slowly approaches you, a gleam of desire in her eight eyes...";
 	[ We're going to choose what kind of scene to do, male-ish (player has a cock which is used) or female-ish (player has a cunt which is used) or neither. ]
 	if (a random chance of 1 in 4 succeeds and player is not impreg_able) or (Player is neuter and Player is FemalePreferred):
-		say "[spidergirl_oral]";
-	else if Player is male and (Cunt Count of Player is 0 or a random chance of 1 in 2 succeeds):
+		say "     She takes delight in binding you up slowly, making sure that you both know you're thoroughly caught and immobile. She suspends your bound body in the air and skitters around you, poking her prize with her many feet. After the amusement of this wears off, she climbs onto the cocoon of webs holding you and grinds her plated crotch against your face. You are forced to watch as the armor plates at her crotch slide aside, revealing the juicy pussy beneath them. But that's not all that is there, a thick, purple tendril cock squirming free and into your mouth.";
+		say "     Restrained as you are, you have little choice but to let the creature use your mouth as a fuckhole while she chuckles darkly. The spider creature works her squirming shaft in and out of your mouth, drooling gooey precum onto your tongue. It has a strong taste that isn't unappealing, but isn't tasty either... and yet you can't stop yourself from sucking for more. You lick and suckle at that pulsating rod, growing more aroused but unable to do anything to sate yourself. Finally you're rewarded by a goopy blast of spider cum so thick and sticky that it fills your mouth like a gluey mess. It's difficult to fully swallow the stuff down even after several attempts. As you're struggling to get it all down, the spider girl climbs up the web strand and slices you free, dropping you the ground with a hard *thump*. You crawl away while she laughs, your mouth still dealing with the last of her thick seed.";
+		CreatureSexAftermath "Player" receives "OralCock" from "Spidergirl";
+	else if Player is male and (Player is not female or a random chance of 1 in 2 succeeds):
 		say "[spidergirl_male]";
 	else if Player is female:
 		say "[spidergirl_female]";
 	else:
-		say "[spidergirl_neuter]";
-
-to say spidergirl_oral:
-	say "     She takes delight in binding you up slowly, making sure that you both know you're thoroughly caught and immobile. She suspends your bound body in the air and skitters around you, poking her prize with her many feet. After the amusement of this wears off, she climbs onto the cocoon of webs holding you and grinds her plated crotch against your face. You are forced to watch as the armor plates at her crotch slide aside, revealing the juicy pussy beneath them. But that's not all that is there, a thick, purple tendril cock squirming free and into your mouth.";
-	say "     Restrained as you are, you have little choice but to let the creature use your mouth as a fuckhole while she chuckles darkly. The spider creature works her squirming shaft in and out of your mouth, drooling gooey precum onto your tongue. It has a strong taste that isn't unappealing, but isn't tasty either... and yet you can't stop yourself from sucking for more. You lick and suckle at that pulsating rod, growing more aroused but unable to do anything to sate yourself. Finally you're rewarded by a goopy blast of spider cum so thick and sticky that it fills your mouth like a gluey mess. It's difficult to fully swallow the stuff down even after several attempts. As you're struggling to get it all down, the spider girl climbs up the web strand and slices you free, dropping you the ground with a hard *thump*. You crawl away while she laughs, your mouth still dealing with the last of her thick seed.";
-	CreatureSexAftermath "Player" receives "OralCock" from "Spidergirl";
+		say "     The spider creature pushes you down onto your back and strips off your clothes... then she gasps as she sees your sexless groin. Staring at you in astonishment, she hesitates for a moment. Then she leans down and starts to lick between your legs. The sensation is odd, but pleasant, and then you feel a tingling in your lower body. Without warning your flesh stretches upward, forming a small but definitely masculine organ. The spider girl coos happily and kisses your cock, then she flashes you a smile and turns to scuttle off.";
+		now Cock Count of Player is 1;
+		now Cock Length of Player is 2;
+		now Ball Size of Player is 3;
 
 to say spidergirl_male:
 	if Cock Length of Player >= 8: [ male-ish scene; best scene ]
@@ -59,12 +59,6 @@ to say spidergirl_female:
 			if "Modest Organs" is not listed in feats of Player or Cunt Depth of Player < 8:
 				increase Cunt Depth of Player by 1;
 
-to say spidergirl_neuter:
-	say "     The spider creature pushes you down onto your back and strips off your clothes... then she gasps as she sees your sexless groin. Staring at you in astonishment, she hesitates for a moment. Then she leans down and starts to lick between your legs. The sensation is odd, but pleasant, and then you feel a tingling in your lower body. Without warning your flesh stretches upward, forming a small but definitely masculine organ. The spider girl coos happily and kisses your cock, then she flashes you a smile and turns to scuttle off.";
-	now Cock Count of Player is 1;
-	now Cock Length of Player is 2;
-	now Ball Size of Player is 3;
-
 to say spidergirl defeat:
 	if Player is male and Cock Length of Player >= 8: [ if Player has cock, spidergirl tempts them ]
 		say "     The insectile creature lets out a whining cry and slumps to the ground, all eight of her legs going limp. She looks up at you and blinks pitifully; then you see the armor plates between her front pair of legs slide apart, exposing the soft pink folds of a very human-like pussy.";
@@ -84,11 +78,10 @@ to say spidergirl defeat:
 		say "     The insectile creature lets out a whining cry and slumps to the ground, all eight of her legs going limp. After a few moments she drags herself to her feet and scuttles off, whimpering.";
 	if bradfordBountyNum is 6:
 		if bradfordbounty > 0:
-			LineBreak;
 			decrease bradfordbounty by 1;
-			say "     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
+			say "[line break]     You hear a soft [if bradfordbounty is 0]double-[end if]ding from your pack. Reminded of your deal with the bounty hunter Bradford, you pull out the contract he's splitting with you. Looking at it, you can see that the printed value denoting the number remaining has gone down to [bold type][bradfordbounty][roman type]. You can't discern how this was accomplished; the paper and the printing on it seem entirely ordinary[if bradfordbounty is 0]. Seeing how that's completed it, you should be able to see him about getting your cut of the reward[end if].";
 		else:
-			say "     This encounter reminds you of your deal with the bounty hunter Bradford. You should go see him about getting your share of the reward.";
+			say "[line break]     This encounter reminds you of your deal with the bounty hunter Bradford. You should go see him about getting your share of the reward.";
 
 Section 2 - Creature Insertion [ Huh huh, insertion ]
 
@@ -278,6 +271,8 @@ When Play begins:
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Section 3 - Miscellaneous
+
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Spidergirl Infection"	"Infection"	""	Spidergirl Infection rule	1000	false
@@ -296,11 +291,10 @@ name	desc	weight	object
 
 spider webbing is a grab object.
 Usedesc of spider webbing is "[spider webbing use]".
+Scent of spider webbing is "The spider webbing has a faintly enticing scent.".
 
 to say spider webbing use:
 	say "     You pull and tug at the spider webbing. It's surprisingly tough! But it's also quite sticky. You try to clean it off, but eventually it just seems to melt into your skin...";
 	infect "Spidergirl";
-
-Scent of spider webbing is "The spider webbing has a faintly enticing scent.".
 
 Spidergirl ends here.

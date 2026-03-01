@@ -12,9 +12,7 @@ Version 2 of Ancient Tentacles by Dys begins here.
 
 TentacleInteractions is a number that varies. TentacleInteractions is usually 0.
 TentacleStatus is a number that varies. TentacleStatus is usually 0.
-
-LastTentacleFuck is a number that varies.
-LastTentacleFuck is usually 20000.
+LastTentacleFuck is a number that varies. LastTentacleFuck is usually 20000.
 
 Section 1 - Scenes
 
@@ -23,8 +21,7 @@ to say TentacleSex:
 		say "     You look over the instructions on how to summon the tentacle beast before shaking your head. You've had enough time with that thing for now.";
 	else if demonologist is listed in companionList of Player or (player is booked and Xaedihr is booked): [player summons tentacles with the demonologist present, being offered a way to control the tentacles' behavior]
 		say "     Looking over the instructions on how to summon the tentacle beast, you're thinking about giving it another try with the ancient creature. However, there are a few things to note about its behavior. As you have previously read about this horrifying mass of tendrils, it is unclear on when they will lay eggs on their victims, often seeming like a random action rather than anything predictable. Turning to Xaedihr, who's standing nearby, you bring up the subject about wanting to summon them, and ask if there is some way to prevent the demonic tentacles from breeding you full of their eggs. 'There's a simple ward for that,' he informs, leaning over to look at the tome's pages. 'If you want, I can cast it on you, and they will see you as an undesirable host. Can also reverse it to have the opposite effect. That is, if you're really keen on offering yourself to these things... I suppose I can see the fun in it... I mean, I share a similar power, just without the [']eggs['] part.' He gives you an unsubtle wink.";
-		LineBreak;
-		say "     Thanks to your sorcerer friend, there seems to be a way to have some control over the outcome of this encounter. Now the only question is, [bold type]should you accept the protecting ward, reverse it, refuse the spell or just give up on the idea?[roman type][line break]";
+		say "[line break]     Thanks to your sorcerer friend, there seems to be a way to have some control over the outcome of this encounter. Now the only question is, [bold type]should you accept the protecting ward, reverse it, refuse the spell or just give up on the idea?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Take the protective ward, denying any breeding.";
 		say "     [link](2)[as]2[end link] - Reverse it, allowing yourself to be filled with eggs with an increased chance.";
 		say "     [link](3)[as]3[end link] - Forget the spell and throw yourself to chance.";
@@ -33,9 +30,7 @@ to say TentacleSex:
 		while calcnumber < 1 or calcnumber > 4:
 			say "Choice? (1-4)> [run paragraph on]";
 			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-				break;
-			else:
+			if calcnumber < 1 or calcnumber > 4:
 				say "Invalid choice. Type [link]1[end link] to protect yourself, [link]2[end link] to reverse the spell, [link]3[end link] to go in without any magical interference, or [link]4[end link] to drop the idea of summoning the ancient tentacles.";
 		LineBreak;
 		if calcnumber is 1:
@@ -56,11 +51,10 @@ to say TentacleSex:
 				TentacleBreed;
 			else:
 				TentacleFuck;
-		else if calcnumber is 4:
+		else:
 			say "     Shaking your head, you thank Xaedihr for the information, but you won't proceed with this ritual. With this in mind, you close the tome and put it down.";
 	else: [player is alone]
 		say "     Looking over the instructions on how to summon the tentacle beast, you're thinking about giving it another try with the ancient creature. However, there are a few things to note about its behavior. As you have previously read about this horrifying mass of tendrils, it is unclear on when they will lay eggs in their victims, often seeming like a random action rather than anything predictable. This means that summoning the tentacles will be a gamble of either you get filled with their eggs or just raped by them for who knows how long. With this in mind, [bold type]are you sure you wish to offer yourself to the demonic tendrils, risking getting egg-filled by them?[roman type][line break]";
-		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, you're fine with this.";
 		say "     ([link]N[as]n[end link]) - Just drop the idea for now.";
 		if Player consents:
@@ -109,8 +103,7 @@ Section 2 - Initial Events
 
 to say TentaclesFirstEncounter:
 	say "     As you're going about your business, something suddenly wraps around your legs. You're harshly yanked backwards, and you fling out your arms in a desperate attempt to avoid smashing your face on the ground. Once that's been taken care of, you whirl around to look at what's ensnared you. The sight that greets you makes your skin go cold. A writhing mass of purple tentacles are jutting out of the ground, each coated in a slick, sticky slime. Desperately, you yank your foot away, managing to get it out of the tendril's grasp.";
-	LineBreak;
-	say "     [bold type]You need to take advantage of your momentary freedom! What do you do?[roman type][line break]";
+	say "[line break]     [bold type]You need to take advantage of your momentary freedom! What do you do?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Run away as fast as you can!";
 	say "     ([link]N[as]n[end link]) - See if you can find some sort of central mass.";
 	if Player consents:

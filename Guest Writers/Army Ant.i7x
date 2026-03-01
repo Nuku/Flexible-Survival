@@ -70,7 +70,7 @@ When Play begins:
 	now enemy title entry is "Ant Warrior";
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "[one of]The army ant slides in close, striking with balled knuckles in repeated blows to your body.[or]The army ant closes the distance, hands grabbing at your shoulders before his head snaps forwards in a swift but heinous headbutt.[or]With a swift motion, the army ant delivers a knee to your gut and follows through with a bludgeoning strike downwards with several fists when you bow from the blow.[or]Crouching low when he's closed the distance, the army ant uppercuts solidly with a bodily spring, following through with a second from the lower arm's fist.[or]The army ant delivers a sweeping blow, stooping low with the strike while his leg kicks out.[or]With his sinews creaking tightly, the army ant checks you with a quick shoulder rush, following the maneuver with a fierce gut punch.[or]In rapid succession, the army ant lashes out with his finger talons in a series of surgical strikes to lacerate you multiple times.[at random]"; [ Text when monster loses. Change 'template' as above. ]
+	now attack entry is "[one of]The army ant slides in close, striking with balled knuckles in repeated blows to your body[or]The army ant closes the distance, hands grabbing at your shoulders before his head snaps forwards in a swift but heinous headbutt[or]With a swift motion, the army ant delivers a knee to your gut and follows through with a bludgeoning strike downwards with several fists when you bow from the blow[or]Crouching low when he's closed the distance, the army ant uppercuts solidly with a bodily spring, following through with a second from the lower arm's fist[or]The army ant delivers a sweeping blow, stooping low with the strike while his leg kicks out[or]With his sinews creaking tightly, the army ant checks you with a quick shoulder rush, following the maneuver with a fierce gut punch[or]In rapid succession, the army ant lashes out with his finger talons in a series of surgical strikes to lacerate you multiple times[at random]."; [ Text when monster loses. Change 'template' as above. ]
 	now defeated entry is "     Staggering back and taking a knee, the army ant shows little weakness otherwise. He glares with those alien, insect eyes before backing away, rising from the stooped position slowly. Soon as there's an exit, he ducks out of sight.[line break]"; [ Text when monster loses. ]
 	now victory entry is "[losetoarmyant]"; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[armyantdesc]"; [ Description of the creature when you encounter it. ]
@@ -232,12 +232,11 @@ name	desc	weight	object
 
 Army Ant chitin is a grab object.
 Usedesc of Army Ant chitin is "[Army Ant chitin use]".
+Scent of Army Ant chitin is "The chitin smells of earth and strength.".
 
 to say Army Ant chitin use:
 	say "     Holding the piece of chitin in your hand, you rub over it, marvelling in its strength. Strangely, the chitin disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	Infect "Army Ant";
-
-Scent of Army Ant chitin is "The chitin smells of earth and strength.".
 
 Section 4 - Endings
 

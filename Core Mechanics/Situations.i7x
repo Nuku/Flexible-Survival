@@ -21,7 +21,6 @@ A situation has a text called PrereqTime. The PrereqTime of a situation is usual
 A situation has a text called sarea. Sarea of a situation is usually "Outside".
 A situation has a number called level. The level of a situation is usually 0. [minimum level to encounter randomly]
 A situation has a number called minscore. The minscore of a situation is usually -2147483648.
-A featset is a kind of thing.
 inasituation is a truth state that varies.[@Tag:NotSaved] inasituation is normally false. [used to bypass standard combat start / win / loss messages when fighting a creature]
 Does the player mean examining a situation: it is very unlikely.
 
@@ -41,19 +40,16 @@ Definition: A situation (called x) is available:
 	if x is resolved, no; [the player has played through these]
 	if x is not PrereqComplete, no;
 	if x is close:
-		if score < minscore of x:
-			no;
-		else if HardMode is true:
-			yes;
-		else if the level of x < (level of Player + 1):
-			yes;
+		if score < minscore of x, no;
+		if HardMode is true, yes;
+		if the level of x < level of Player + 1, yes;
 	no;
 
 Definition: A situation (called x) is WalkinAvailable:
 	if x is inactive, no; [for banning]
 	if x is resolved, no; [the player has played through these]
 	if x is not PrereqComplete, no; [prereqcompanion, time and situations]
-	if level of x > (level of Player + 1), no; [nothing more than one level higher than the player]
+	if level of x > level of Player + 1, no; [nothing more than one level higher than the player]
 	yes;
 
 Definition: A situation (called x) is PrereqComplete:
@@ -68,18 +64,15 @@ Definition: A situation (called x) is PrereqComplete:
 	yes;
 
 Definition: A situation (called x) is close:
-	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( (battleground is "Outside" or battleground is "High" or battleground is "Capitol" or battleground is "Park" or battleground is "Forest" or battleground is "Beach") and ( Sarea of x is "Allzones" or Sarea of x is "allzones" ) ):
+	if sarea of x exactly matches the text battleground, case insensitively or ((battleground is "Outside" or battleground is "High" or battleground is "Capitol" or battleground is "Park" or battleground is "Forest" or battleground is "Beach") and Sarea of x in lower case is "allzones"):
 		yes;
 	no;
 
 Definition: A scavevent (called x) is scavable:
-	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( (battleground is "Outside" or battleground is "High" or battleground is "Capitol" or battleground is "Park" or battleground is "Forest" or battleground is "Beach") and ( sarea of x is "Allzones" or Sarea of x is "allzones" ) ):
-		if score < minscore of x:
-			no;
-		else if HardMode is true:
-			yes;
-		else if the level of x < (level of Player + 1):
-			yes;
+	if x is close:
+		if score < minscore of x, no;
+		if HardMode is true, yes;
+		if the level of x < level of Player + 1, yes;
 	no;
 
 CurrentWalkinEvent_ConditionsMet is a truth state that varies.[@Tag:NotSaved] CurrentWalkinEvent_ConditionsMet is usually false.
@@ -176,8 +169,6 @@ to WalkInEvent_Check:
 				now CurrentWalkinEvent_WalkArrival is true; [Player walked into the event, vs Nav'ing to it]
 				say "[ResolveFunction of EventObject entry]";
 				break;
-			else:
-				next;
 	else:
 		if debug is at level 5:
 			say "     DEBUG: No WalkInEvents found in [CurrentRoom].";
@@ -211,8 +202,6 @@ to NavInEvent_Check (NavTarget - a room):
 				now CurrentWalkinEvent_NavArrival is true; [Player Nav'd into the event, vs walking to it]
 				say "[ResolveFunction of EventObject entry]";
 				break;
-			else:
-				next;
 	else:
 		if debug is at level 5:
 			say "     DEBUG: No NavInEvents found in [NavTarget].";

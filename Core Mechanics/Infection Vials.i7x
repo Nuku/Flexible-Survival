@@ -72,11 +72,10 @@ to VialLoss (VialName - text) by (N - number) silence state is (Silence - a numb
 	if there is a Name of VialName in the Table of OwnedVials:
 		choose a row with name of VialName in the Table of OwnedVials;
 		if Silence is 0:
-			LineBreak;
 			if N is 1:
-				say "     [bold type]You lose [if PlayerOwned entry is 1]your[else]1[end if] [VialName] infection vial![roman type][line break]";
+				say "[line break]     [bold type]You lose [if PlayerOwned entry is 1]your[else]1[end if] [VialName] infection vial![roman type][line break]";
 			else:
-				say "     [bold type]You lose [if PlayerOwned entry <= N]all your[else][N][end if] [VialName] infection vials![roman type][line break]";
+				say "[line break]     [bold type]You lose [if PlayerOwned entry <= N]all your[else][N][end if] [VialName] infection vials![roman type][line break]";
 		decrease PlayerOwned entry by N;
 		if PlayerOwned entry < 1:
 			blank out the whole row; [removing vials from the list that the player no longer has]
@@ -129,8 +128,7 @@ carry out VialInventorying:
 	say "Your infection vial collection consists of:[line break]";
 	say "Type [bold type]vial <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a vial, [bold type]vialdrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a vial, [bold type]vialalldrop <name>[roman type] to [bold type][bracket]X[close bracket][roman type]Destroy all of a vial";
 	if Larissa is visible, say ", [bold type]vialsell <name>[roman type] to [bold type][bracket]S[close bracket][roman type]ell a vial";
-	say " or [bold type]vialeverythingdrop[roman type] to [link][bold type][bracket]C[close bracket][roman type][as]vialeverythingdrop[end link]lean out every last vial you have.";
-	LineBreak;
+	say " or [bold type]vialeverythingdrop[roman type] to [link][bold type][bracket]C[close bracket][roman type][as]vialeverythingdrop[end link]lean out every last vial you have.[paragraph break]";
 	sort Table of OwnedVials in name order;
 	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
 	let linkparts be {{"U", "vial"}, {"D", "vialdrop"}, {"X", "vialalldrop"}, {"S", "vialsell"}};
@@ -143,10 +141,7 @@ carry out VialInventorying:
 					say "[set link hyperindex][bracket][entry 1 of linktext][close bracket][terminate link] ";
 		say "[Name entry] x[PlayerOwned entry]";
 		if x < number of filled rows in Table of OwnedVials:
-			if remainder after dividing x by invcolumns is 0:
-				LineBreak;
-			else:
-				say "  --  ";
+			say "[if remainder after dividing x by invcolumns is 0][line break][else]  --  ";
 	LineBreak;
 
 Part 3 - Vial Commands
@@ -215,8 +210,7 @@ Check VialEverythingDropping:
 	if the number of filled rows in the Table of OwnedVials is 0, say "You don't even have any vials!" instead;
 
 Carry out VialEverythingDropping:
-	LineBreak;
-	say "     [bold type]Do you really want to destroy all vials you have?[roman type][line break]";
+	say "[line break]     [bold type]Do you really want to destroy all vials you have?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes, out with this junk!";
 	say "     ([link]N[as]n[end link]) - Err, on second thought...";
 	if Player consents:

@@ -257,7 +257,7 @@ carry out navigating:
 			if NPCObject of y is not Nullpet:
 				now NPCObject of y is in location of Player;
 	follow turnpass rule;
-	let the bonus be (( Perception of Player minus 10 ) divided by 2);
+	let the bonus be ( Perception of Player minus 10 ) divided by 2;
 	now battleground is "Outside";
 	if a random number from 1 to 20 < 10 minus bonus and battleground is not "void":
 		if there is a area of Battleground in the Table of Random Critters:

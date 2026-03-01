@@ -23,7 +23,7 @@ Usedesc of Big Whiskey bottle is "[Big Whiskey bottle use]".
 Scent of Big Whiskey bottle is "The strong smell of alcohol flows into your nose.".
 
 to say Big Whiskey bottle use:
-	say "     Your drink the full bottle, its strong alcohol burning on the way down.";
+	say "     You drink the full bottle, its strong alcohol burning on the way down.";
 	PlayerDrink 10;
 	addAlcPoints 4;
 
@@ -59,14 +59,16 @@ Usedesc of Dwarven Spirit is "[Dwarven Spirit use]".
 Scent of Dwarven Spirit is "A strong floral smell from the spirit flows into your nose.".
 
 to say Dwarven Spirit use:
-	say "     A dark hearty taste lingers in your mouth.";
+	say "     A dark, hearty taste lingers in your mouth.";
 	PlayerDrink 10;
 	addAlcPoints 6;
 
 [Beginning of Absinthe]
 
+[
 to say AbsintheWasted:
 	say "You hear the fluttering of wings behind your ear, you turn around to see the black wings of a pixie along with a dark green dress. 'You sure do know how to hold your drink.' she says, fluttering on top of your hand. 'Someone as capable of you should be able to take a few more, why don't you join me in your next one.' blowing a kiss towards you as she takes off and disappears into the air. 'Did she have horns on top of her head' you think to yourself, before being distracted from the thought.";[absinthe pixie dialogue]
 	[say "     You hear the familiar sounds of the pixie wings again. "Hello, my names Absinthe "";]
+]
 
 Absinthe ends here.

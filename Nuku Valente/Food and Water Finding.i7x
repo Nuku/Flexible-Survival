@@ -23,24 +23,20 @@ Sarea of Potential Resources is "Allzones".
 to say ResolveEvent Potential Resources:
 	let difficulty be a random number from 6 to 16;
 	if HardMode is true, increase difficulty by a random number between 0 and 3;
-	let y be "food";
+	let y be "dirty water";
 	let x be a random number from 1 to 8;
-	if x is 1 or x is 2:
+	if x < 3: [1-2]
 		now y is "food";
-	if x is 3 or x is 4:
+	else if x < 5: [3-4]
 		now y is "water bottle";
-	if x is 5:
+	else if x is 5:
 		if "Survivalist" is listed in feats of Player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
 		else if "Three Bags Full" is listed in feats of Player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
-		else:
-			now y is "dirty water";
-	if x is 6:
-		now y is "dirty water";
-	if x is 7:
+	else if x is 7:
 		now y is "chips";
-	if x is 8:
+	else if x is 8:
 		now y is "soda";
 	[if scavengetarget is "food" or scavengetarget is "water bottle" or scavengetarget is "chips" or scavengetarget is "soda":
 		if scavengetarget matches the text y:
@@ -63,18 +59,7 @@ to say ResolveEvent Potential Resources:
 		say "It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of a street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from the some rather messy cum stains[purely at random].";
 		ItemGain y by 1;
 	else if x is 2:
-		say "It is up high, forcing you to climb up after it. It looks ";
-		if difficulty < 8:
-			say "easy";
-		else if difficulty < 10:
-			say "not too bad";
-		else if difficulty < 12:
-			say "hard";
-		else if difficulty < 14:
-			say "very difficult";
-		else:
-			say "extremely difficult";
-		say " to climb.";
+		say "It is up high, forcing you to climb up after it. It looks [if difficulty < 8]easy[else if difficulty < 10]not too bad[else if difficulty < 12]hard[else if difficulty < 14]very difficult[else]extremely difficult[end if] to climb.";
 		if bee girl is listed in companionList of Player:
 			say "As you prepare to make the treacherous climb, Honey grabs your hand and pulls you back. 'Don't risk it. I can get it for you, honeybunch.' And with that, her translucent wings start to buzz, flying her up into the air to grab the [y] and brings it to you with a happy smile.";
 			ItemGain y by 1;
@@ -88,9 +73,10 @@ to say ResolveEvent Potential Resources:
 		else:
 			let bonus be ( dexterity of Player plus level of Player minus 10 ) divided by 2;
 			if HardMode is true and bonus > 10, now bonus is 10;
-			if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
-			if "Three Bags Full" is listed in feats of Player and BodyName of Player is "Ewe", increase bonus by 1;
-			if "Three Bags Full" is listed in feats of Player and BodyName of Player is "Ram", increase bonus by 1;
+			if "Three Bags Full" is listed in feats of Player:
+				increase bonus by 1;
+				if BodyName of Player is "Ewe" or BodyName of Player is "Ram":
+					increase bonus by 1;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] = [dice plus bonus] vs [difficulty]: ";
 			increase dice by bonus;
@@ -101,18 +87,7 @@ to say ResolveEvent Potential Resources:
 				say "Successfully shimmying up, you snag the [y] triumphantly and stuff it into your backpack.";
 				ItemGain y by 1;
 	else if x is 3:
-		say "It is up stuck under something heavy. It looks ";
-		if difficulty < 8:
-			say "easy";
-		else if difficulty < 10:
-			say "not too bad";
-		else if difficulty < 12:
-			say "hard";
-		else if difficulty < 14:
-			say "very difficult";
-		else:
-			say "extremely difficult";
-		say " to lift.";
+		say "It is up stuck under something heavy. It looks [if difficulty < 8]easy[else if difficulty < 10]not too bad[else if difficulty < 12]hard[else if difficulty < 14]very difficult[else]extremely difficult[end if] to lift.";
 		let bonus be ( strength of Player plus level of Player minus 10 ) divided by 2;
 		if HardMode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
@@ -125,18 +100,7 @@ to say ResolveEvent Potential Resources:
 			say "Successfully hoisting the obstacle up, you snag the [y] triumphantly and stuff it into your backpack.";
 			ItemGain y by 1;
 	else if x is 4:
-		say "It is in the hands of a sentient! Though mutant, perhaps you could convince them to give it up. It looks like they have enough for themselves. They appear ";
-		if difficulty < 8:
-			say "easy";
-		else if difficulty < 10:
-			say "not too bad";
-		else if difficulty < 12:
-			say "hard";
-		else if difficulty < 14:
-			say "very difficult";
-		else:
-			say "extremely difficult";
-		say " to sway.";
+		say "It is in the hands of a sentient! Though mutant, perhaps you could convince them to give it up. It looks like they have enough for themselves. They appear [if difficulty < 8]easy[else if difficulty < 10]not too bad[else if difficulty < 12]hard[else if difficulty < 14]very difficult[else]extremely difficult[end if] to sway.";
 		let petbonus be false;
 		let bonus be ( charisma of Player plus level of Player minus 10 ) divided by 2;
 		if equinoid warrior is listed in companionList of Player or felinoid companion is listed in companionList of Player or demon brute is listed in companionList of Player or royal tiger companion is listed in companionList of Player:
@@ -159,9 +123,7 @@ to say ResolveEvent Potential Resources:
 				if aa >= bb:
 					ItemGain y by 1;
 					say ". You even manage to haggle a second one from the mutant";
-			if petbonus is true:
-				say ", though having an intimidating guard by your side may have helped a little";
-			say ".";
+			say "[if petbonus is true], though having an intimidating guard by your side may have helped a little[end if].";
 	else if x is 5:
 		if MaleList is banned or a random chance of 1 in 2 succeeds:	[female mutant]
 			say "It is in the hands of a sentient! Seeming peaceful enough, you try to convince her to part with it since she and her nearby friends seem to have enough. You try to negotiate a trade, but she has no interest in anything you have to offer, instead suggesting you might earn your reward with your tongue. Spreading her legs and lifting the scraps of her clothes, the transformed person bares her pussy to you and tells you to start licking. Shall you whore yourself out for a [y]?";
@@ -187,6 +149,7 @@ to say ResolveEvent Potential Resources:
 					raise Player Libido by 5;
 					decrease morale of Player by 1;
 				weakrandominfect;
+				increase OralPussyGiven of Player by 1;
 			else:
 				LineBreak;
 				say "     Deciding it and any possible infection that might come with it aren't worth getting a [y]. You decide to look elsewhere for the supplies you need.";
@@ -214,6 +177,7 @@ to say ResolveEvent Potential Resources:
 					raise Player Libido by 5;
 					decrease morale of Player by 1;
 				weakrandominfect;
+				increase OralCockGiven of Player by 1;
 			else:
 				LineBreak;
 				say "     Deciding it and any possible infection that might come with it aren't worth getting a [y]. You decide to look elsewhere for the supplies you need.";
@@ -221,7 +185,7 @@ to say ResolveEvent Potential Resources:
 
 to say scavsex_f01:
 	say "     Deciding that there's worse ways to get by, you drop to your knees and bury your face between her legs. She moans and giggles as you lick her pussy. Her friends, watching nearby, giggle as well and move in closer to enjoy the show. Knowing your reward is on the line, you work to make it speedy but pleasurable. You stuff a pair of fingers into her [one of]dripping[or]quivering[or]furry[or]scaly[or]super-wide[or]tentacle-rimmed[as decreasingly likely outcomes] vagina while your tongue sets to lashing across her clit. In a few minutes, you've got her pressing your face to her groin while she cums with a loud cry of ecstasy.";
-	say "     When released, you gasp to catch your breath after being smothered against her crotch. Her excess juices run down your chin and neck";
+	say "     When released, you gasp to catch your breath after being smothered against her crotch. Her excess juices run down your chin and neck.";
 
 to say scavsex_m01:
 	say "     Deciding that there's worse ways to get by, you drop to your knees and take hold of his cock. He moans softly and laughs as you stuff his shaft into your mouth. His friends, watching nearby, chuckle as well and move in closer to enjoy the show. Knowing your reward is on the line, you work to make it speedy but pleasurable. You bob your head over his [one of]thick[or]dribbling[or]knotted[or]ridged[or]oversized[or]tentacle[as decreasingly likely outcomes] penis while stroking his [one of][or]plump [or]pulsating [or]fist-sized [as decreasingly likely outcomes]balls in your hand. Your tongue slides along his shaft and teases his glans, working him to a fast climax that has him groan in much-needed release.";
