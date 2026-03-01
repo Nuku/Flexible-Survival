@@ -10,6 +10,7 @@ name	desc	weight	object
 
 bliss tablet is a grab object.
 Usedesc of bliss tablet is "[blissUse]".
+Scent of bliss tablet is "The tablet smells of sugar.".
 
 to say blissUse:
 	say "     You throw the little tablet into your mouth and swallow it with a little effort. It takes a few moments to kick in, but soon you're feeling hot and uninhibited, ready for sex. At the same time, it makes you kinda thirsty.";
@@ -22,8 +23,6 @@ to say blissUse:
 		PlayerThirst 20;
 		SanLoss 10;
 	increase BlissDrugTrip by 8;
-
-Scent of bliss tablet is "The tablet smells of sugar.".
 
 an everyturn rule:
 	if BlissDrugTrip > 0:
@@ -42,6 +41,7 @@ name	desc	weight	object
 
 powerup tablet is a grab object.
 Usedesc of powerup tablet is "[PowerUpUse]".
+Scent of powerup tablet is "The tablet smells of sugar.".
 
 to say PowerUpUse:
 	say "     You throw the little tablet into your mouth and swallow it with a little effort. It takes a few moments to kick in, but soon you can literally feel your muscles swelling up and you feel like you can punch through a wall. At the same time, it makes you really thirsty.";
@@ -57,8 +57,6 @@ to say PowerUpUse:
 		increase PowerUpDrugTrip by 8;
 		StatChange "Strength" by 6;
 		FeatGain "Roided Up";
-
-Scent of powerup tablet is "The tablet smells of sugar.".
 
 an everyturn rule:
 	if PowerUpDrugTrip > 0:
@@ -80,7 +78,6 @@ Usedesc of pixie dust is "[pixie dust use]".
 
 to say pixie dust use:
 	say "     You get the pixie dust out and let a few specks of it trickle between your fingers and back into the container. To use it, you have to choose what size you want to be, then sprinkle the glittery stuff over your body.";
-	LineBreak;
 	say "     [link](1)[as]1[end link] - Become as small as a cat.";
 	say "     [link](2)[as]2[end link] - Become about half as big as a human.";
 	say "     [link](3)[as]3[end link] - Become just regular human-sized.";
@@ -90,37 +87,27 @@ to say pixie dust use:
 	while calcnumber < 1 or calcnumber > 5:
 		say "Choice? (1-5)> [run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
-			break;
-		else:
+		if calcnumber < 1 or calcnumber > 5:
 			say "Invalid choice. Type [link]1[end link] to become very small, [link]2[end link] to become small, [link]3[end link] to become human-sized, [link]4[end link] to become much larger than human or [link]5[end link] to become as big as a delivery van.";
 	LineBreak;
-	if calcnumber is 1:
-		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on just about the level of a large house cat.";
-		now scalevalue of Player is 1;
-	else if calcnumber is 2:
-		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on just about the level of a half-sized human.";
-		now scalevalue of Player is 2;
-	else if calcnumber is 3:
-		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on just about the level of a regular human.";
-		now scalevalue of Player is 3;
-	else if calcnumber is 4:
-		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you above the level of even the tallest basketball player.";
-		now scalevalue of Player is 4;
-	else:
-		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on the level of a small delivery van.";
-		now scalevalue of Player is 5;
+	if calcnumber is:
+		-- 1: say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on just about the level of a large house cat.";
+		-- 2: say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on just about the level of a half-sized human.";
+		-- 3: say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on just about the level of a regular human.";
+		-- 4: say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you above the level of even the tallest basketball player.";
+		-- 5: say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on the level of a small delivery van.";
+	now scalevalue of Player is calcnumber;
 	repeat with z running through equipped equipment:
 		if size of z > 0: [size restricted equipment]
-			if (scalevalue of Player - size of z > 1):
+			if scalevalue of Player - size of z > 1:
 				say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if].[roman type][line break]";
 				now z is not equipped;
-			else if (scalevalue of Player - size of z is 1):
+			else if scalevalue of Player - size of z is 1:
 				say "     [bold type]Your [z] stretch[if plural of z is false]es[end if] a bit as [if plural of z is true]they are[else]it is[end if] forced to conform to a larger body.[roman type][line break]";
-			else if (scalevalue of Player - size of z < -1):
+			else if scalevalue of Player - size of z < -1:
 				say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
 				now z is not equipped;
-			else if (scalevalue of Player - size of z is -1):
+			else if scalevalue of Player - size of z is -1:
 				say "     [bold type]Your [z] hang[if plural of z is false]s[end if] fairly loose on your now smaller frame.[roman type][line break]";
 
 Special Merchandize ends here.

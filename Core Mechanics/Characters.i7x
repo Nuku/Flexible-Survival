@@ -3,8 +3,9 @@ Version 1 of Characters by Core Mechanics begins here.
 
 Part 0 - Variables
 
-Things have a text called scent.
-Lusting is a text that varies. [used in the brain description rule]
+internalcockbypass is a truth state that varies. internalcockbypass is usually false.
+internalBallsBypass is a truth state that varies. internalBallsBypass is usually false.
+[Lusting is a text that varies. [used in the brain description rule]]
 descr is a text that varies. [usually filled with various description snippets in all sorts of situations]
 sh-descr is a text that varies.
 [cupsize is an indexed text that varies.] Cupsize is always "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
@@ -73,9 +74,8 @@ A person has a number called Clit Size. Clit Size is usually 3.
 A person has a number called Asshole Depth. Asshole Depth is usually 9.
 A person has a number called Asshole Tightness. Asshole Tightness is usually 2.
 
-A person has a text called linkaction.
 A person has a text called MainInfection. MainInfection is usually "Human". [just to have something valid in this, the variable should be overwritten for every NPC]
-A person has a text called ImpregFunction. ImpregFunction is usually "".[@Tag:NotSaved][just to have something valid in this, the variable should be overwritten for every NPC]
+A person has a text called ImpregFunction. ImpregFunction is usually "".[@Tag:NotSaved] [just to have something valid in this, the variable should be overwritten for every NPC]
 A person has a text called LastSexualPartner.[@Tag:NotSaved]
 A person has a text called FirstAnalPartner.
 A person has a text called FirstVaginalPartner.
@@ -117,19 +117,19 @@ Chapter 2 - The Player Object
 
 Section 1 - Basics
 
+The player is in Bunker.
+[The invent of Player is { "journal" }. [starting item]]
+The player is wearing a backpack. Description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.".
+The player is wearing a watch.
+
+instead of examining a watch:
+	say "Time Remaining: [( turns minus targetturns ) divided by 8] days, [( remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours. It is currently [time of day].";
+
 Player has text called name. The name of Player is usually "Player".
 
 Player has a text called weapon. Weapon is usually "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]".
 Player has a text called weapon type. Weapon type is usually "Melee".
 Player has a grab object called weapon object. A weapon object is usually journal.
-The invent of Player is { "journal" }. [starting item]
-
-The player is wearing a backpack. Description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.".
-
-The player is wearing a watch.
-
-instead of examining a watch:
-	say "Time Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours. It is currently [time of day].";
 
 Player has a list of text called Feats. [list of feats, visible to Player]
 Player has a list of text called EncounteredEnemies. [running list of all creatures encountered]
@@ -610,20 +610,20 @@ Definition: A person (called x) is purehuman:
 		no;
 
 Definition: A person (called x) is perminfected:
-	if ( JackalManTF > 0 or JackalBoyTF > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
+	if (JackalManTF > 0 and JackalManTF < 5) or JackalBoyTF > 0, yes;
+	if nightmaretf > 0, yes;
+	if HellHoundlevel > 0 and isHellhound is true, yes;
+	if wrcursestatus >= 7 and wrcursestatus < 100, yes;
+	if "Ceryneian Blessed - Anthro" is listed in traits of Player or "Ceryneian Blessed - Feral" is listed in traits of Player or "Ceryneian Blessed - Taur" is listed in traits of Player, yes;
 	no;
 
 A person can be internalcock. A person is usually not internalcock.
-
-internalcockbypass is a truth state that varies. internalcockbypass is usually false.
 
 Definition: A person (called x) is internalcock:
 	if CockName of x is listed in infections of InternalCockList and internalcockbypass is false, yes;
 	no;
 
 A person can be internalBalls. A person is usually not internalBalls.
-
-internalBallsBypass is a truth state that varies. internalBallsBypass is usually false.
 
 Definition: A person (called x) is internalBalls:
 	if CockName of x is listed in infections of InternalBallsList and internalBallsBypass is false, yes;
@@ -1510,6 +1510,14 @@ to say Clit Size Adjective of ( x - a person ):
 			say "[one of]very large[or]very big[or]huge[at random]";
 
 This is the brain descr rule:
+	let lusting be " thoughts.";
+	if Libido of Player > 80:
+		let RandomCreature be a random number from 1 to number of entries in EncounteredEnemies of Player;
+		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] [a entry RandomCreature of EncounteredEnemies of Player in lower case] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
+	else if Libido of Player > 40:
+		now lusting is " thoughts. You are [one of]distracted by doodling a big breasted monster[or]distracted by doodling a big cocked monster[or]distracted by taking a moment to rub at yourself[at random].";
+	else if Libido of Player > 20:
+		now lusting is " thoughts. You are riddled with occasionally dirty lapses.";
 	if humanity of Player > 90:
 		now descr is "[one of]clean[or]pristine[or]perfectly normal[at random][lusting]";
 	else if humanity of Player > 70:
@@ -1529,14 +1537,6 @@ This is the brain descr rule:
 			now descr is "increasingly corrupted perspective[lusting]";
 	else:
 		now descr is "almost entirely subsumed[lusting]";
-	if Libido of Player < 21, now lusting is " thoughts.";
-	if Libido of Player > 80:
-		let RandomCreature be a random number from 1 to number of entries in EncounteredEnemies of Player;
-		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] [a entry RandomCreature of EncounteredEnemies of Player in lower case] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
-	else if Libido of Player > 40:
-		now lusting is " thoughts. You are [one of]distracted by doodling a big breasted monster[or]distracted by doodling a big cocked monster[or]distracted by taking a moment to rub at yourself[at random].";
-	else if Libido of Player > 20:
-		now lusting is " thoughts. You are riddled with occasionally dirty lapses.";
 
 This is the breast descr rule:
 	if Breast Size of Player < 1:
@@ -1637,9 +1637,11 @@ understand "chat with/-- [person]" as conversing.
 
 Check Conversing:
 	if the noun is the player, say "I know this is stressful, but talking to yourself will not help." instead;
-	if the number of entries in conversation of noun is 0, say "They have nothing to say." instead.
+	if the number of entries in conversation of noun is 0, say "They have nothing to say." instead;
 
 carry out conversing:
+	if icon of noun is not Figure of pixel:
+		project icon of noun;
 	sort conversation of the noun in random order;
 	say "     [Noun] says, '[entry 1 of conversation of noun]'[line break]";
 

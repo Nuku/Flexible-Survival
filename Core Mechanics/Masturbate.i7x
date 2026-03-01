@@ -11,7 +11,6 @@ name	desc	weight	object
 "porn collection"	"A sizable stack of pornographic magazines of various levels of tastelessness for a myriad of lurid preferences."	2	porn collection
 
 porn collection is a grab object. It is not temporary.
-
 the scent of the porn collection is "The bundle of pornographic magazines have a lingering scent of sex to them.".
 
 when play begins:
@@ -54,7 +53,7 @@ instead of using porn collection:
 				if mouse girl is listed in companionList of Player:
 					say "     As you continue to play with yourself, your mind wanders to thoughts of sexy mice and all the fun things you could do with them. Glancing over, you spot Rachel sitting nearby, playing with herself as she watches you. She grins at you knowingly as fresh images of you surrounded by horny mice fill your mind. Moaning, you become even more aroused and play with yourself even more vigorously. You even start to share in the mouse girl's sensations as well.";
 				say "     You keep teasing yourself, holding back your orgasm a little longer, wanting to really enjoy it... until finally you moan loudly and cum hard, blasting a [if Ball Size of Player < 4]sizable blast[else if Ball Size of Player < 6]stream[else]veritable torrent[end if] of thick semen, creating a messy pool of your musky seed as you spray it onto yourself and the ground nearby. You keep stroking and pumping until you're left panting and moaning, almost passing out from the much-needed release.";
-			else if Player is female:
+			else:
 				say "     You move your hands down to start fingering the wet folds of your [if Cunt Count of Player is 1]pussy[else]pussies[end if]. You work [if Cunt Tightness of Player is 1]a finger[else if Cunt Tightness of Player < 4]a pair of fingers[else if Cunt Tightness of Player < 6]a trio of fingers[else]a trio of fingers and eventually your whole hand[end if] into your gripping, squeezing vagina. You rub and tease along your inner walls and make sure to pay proper attention to your sensitive clit.";
 				WaitLineBreak;
 				if mouse girl is listed in companionList of Player:
@@ -74,7 +73,7 @@ instead of using porn collection:
 					decrease humanity of Player by 1;
 					now researchbypass is 0;
 				now Libido of Player is ( 5 * Libido of Player ) / 6;
-			if the location of Player is not sleepsafe:
+			if (there is a dangerous door in location of Player or location of Player is fasttravel or earea of location of Player is not "void") and location of Player is not sleepsafe:
 				while muskwave > 50:
 					if a random number between 1 and 200 < muskwave:
 						say "     As you're resting and recovering from your massive orgasm, a nearby creature is drawn in by the musky aroma of your sexual fluids before the scent can dissipate.";
@@ -92,7 +91,7 @@ instead of using porn collection:
 to say simplemast:
 	say "     You settle yourself down to [if Player is herm]play around with your junk for a bit[else if Player is male]jerk yourself off briefly[else]give yourself a quick fingering[end if]. You grab one of the magazines for added inspiration and get yourself off, relieving some of your excess arousal";
 	if mouse girl is listed in companionList of Player:
-		say ". Partway into your masturbatory session, thoughts of sexy mice slip into your mind.";
+		say ". Partway into your masturbatory session, thoughts of sexy mice slip into your mind";
 		decrease humanity of Player by 1;
 		if a random chance of 1 in 2 succeeds:
 			if a random chance of 1 in 2 succeeds, now researchbypass is 1;
@@ -100,8 +99,7 @@ to say simplemast:
 			decrease humanity of Player by 1;
 			now researchbypass is 0;
 		now Libido of Player is ( 9 * Libido of Player ) / 10;
-	else:
-		say ".";
+	say ".";
 	now Libido of Player is ( 4 * Libido of Player ) / 5;
 
 Masturbate ends here.

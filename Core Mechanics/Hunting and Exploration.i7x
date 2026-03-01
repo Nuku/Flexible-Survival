@@ -89,7 +89,7 @@ carry out HuntAction:
 		else:
 			say "It should be somewhere...";
 			if "Unerring Hunter" is not listed in feats of Player:
-				let bonus be (( Perception of Player minus 10 ) divided by 2);
+				let bonus be ( Perception of Player minus 10 ) divided by 2;
 				if "Curious" is listed in feats of Player, increase bonus by 2;
 				let diceroll be a random number from 1 to 20;
 				say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check): ";
@@ -139,7 +139,7 @@ carry out HuntAction:
 			now Found is 30; [event found]
 			say "It should be somewhere...";
 			if "Unerring Hunter" is not listed in feats of Player:
-				let bonus be (( Perception of Player minus 10 ) divided by 2);
+				let bonus be ( Perception of Player minus 10 ) divided by 2;
 				if "Curious" is listed in feats of Player, increase bonus by 2;
 				let diceroll be a random number from 1 to 20;
 				say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check): ";
@@ -169,7 +169,7 @@ carry out HuntAction:
 			if area entry exactly matches the text battleground:
 				if Enemy Type entry is 2: [named and name known]
 					say "You are almost certain you saw some of [Enemy Name entry]'s tracks...";
-				else if Enemy Title Entry is not "":
+				else if Enemy Title Entry is not empty:
 					say "You are almost certain you saw some [Enemy Title entry in lower case] tracks...";
 				else:
 					say "You are almost certain you saw some [Name entry in lower case] tracks...";
@@ -211,7 +211,7 @@ carry out HuntAction:
 			now Found is 14; [banned creatures]
 			if debugactive is 1:
 				say "DEBUG -> The creature has been banned from the game![line break]";
-	if Found is 0:[no exact matches for creatures/rooms/events so far]
+	if Found is 0: [no exact matches for creatures/rooms/events so far]
 		if debugactive is 1:
 			say "DEBUG -> No Exact Matches Found.[line break]";
 			say "DEBUG -> Checking [HuntId] against fasttravel rooms now. (SIMPLE MATCH)[line break]";
@@ -220,7 +220,7 @@ carry out HuntAction:
 			if printed name of z matches the text HuntId, case insensitively:
 				say "It should be somewhere...";
 				if "Unerring Hunter" is not listed in feats of Player:
-					let bonus be (( Perception of Player minus 10 ) divided by 2);
+					let bonus be ( Perception of Player minus 10 ) divided by 2;
 					if "Curious" is listed in feats of Player, increase bonus by 2;
 					let diceroll be a random number from 1 to 20;
 					say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check): ";
@@ -244,8 +244,7 @@ carry out HuntAction:
 				break;
 		if Found is 0 or Found is 10 or (Found > 30 and Found < 40): [last ditch effort to find the target, also fills the random encounter list]
 			repeat through Table of Random Critters:
-				if there is no area entry, next; [broken creatures / empty lines get ignored]
-				if area entry is "Nowhere", next; [nowhere creatures can't be hunted]
+				if there is no area entry or area entry is "Nowhere", next; [nowhere creatures can't be hunted]
 				if there is no Name entry, next; [broken creatures / empty lines get ignored]
 				if Found is not 10 and (Name entry matches the text HuntId, case insensitively or enemy title entry matches the text HuntId, case insensitively or enemy Name entry matches the text HuntId, case insensitively): [no target creature found yet]
 					if debugactive is 1:
@@ -256,7 +255,7 @@ carry out HuntAction:
 						now Found is 10; [creature found, right area and time]
 						if Enemy Type entry is 2: [named and name known]
 							say "You are almost certain you saw some of [Enemy Name entry]'s tracks...";
-						else if Enemy Title Entry is not "":
+						else if Enemy Title Entry is not empty:
 							say "You are almost certain you saw some [Enemy Title entry in lower case] tracks...";
 						else:
 							say "You are almost certain you saw some [Name entry in lower case] tracks...";
@@ -295,10 +294,7 @@ carry out HuntAction:
 							repeat with N running from 1 to ( perception of Player / 3 ):
 								add Name entry to PossibleEncounters;
 				if "Unerring Hunter" is not listed in feats of Player and (area entry exactly matches the text battleground, case insensitively or area entry is "Everywhere"): [only adds random monsters if the player isn't an unerring hunter, and the area matches]
-					if there is a lev entry:
-						if lev entry > level of Player + 1, next;
-					else:
-						next;
+					if there is no lev entry or lev entry > level of Player + 1, next;
 					if (DayCycle entry is 1 and daytimer is day) or (DayCycle entry is 2 and daytimer is night), next; [wrong time of day for that creature]
 					if "Expert Hunter" is listed in feats of Player and a random chance of 1 in 3 succeeds: [chance to avoid random critters]
 						next;
@@ -345,7 +341,7 @@ carry out HuntAction:
 						now Found is 30; [event found]
 						say "It should be somewhere...";
 						if "Unerring Hunter" is not listed in feats of Player:
-							let bonus be (( Perception of Player minus 10 ) divided by 2);
+							let bonus be ( Perception of Player minus 10 ) divided by 2;
 							if "Curious" is listed in feats of Player, increase bonus by 2;
 							let diceroll be a random number from 1 to 20;
 							say "[line break]You roll 1d20([diceroll])[if bonus >= 0]+[end if][bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check): ";
@@ -380,7 +376,7 @@ carry out HuntAction:
 		if debugactive is 1:
 			say "DEBUG -> Randomly chosen creature is: [Name entry][line break]";
 		now monsterHP is HP entry;
-		if (Name entry matches the text HuntId, case insensitively or enemy title entry matches the text HuntId, case insensitively or enemy Name entry matches the text HuntId, case insensitively):
+		if Name entry matches the text HuntId, case insensitively or enemy title entry matches the text HuntId, case insensitively or enemy Name entry matches the text HuntId, case insensitively:
 			now ishunting is true;
 		challenge;
 		now ishunting is false;
@@ -447,10 +443,9 @@ carry out huntinglisting:
 	now battleground is the earea of location of Player;
 	let huntinglist be a list of text;
 	repeat through Table of Random Critters:
-		if there is no area entry, next;
 		if there is no Name entry, next;
-		if area entry exactly matches the text battleground, case insensitively:
-			if enemy title entry is empty or enemy title entry is "":
+		if there is a area entry and area entry exactly matches the text battleground, case insensitively:
+			if enemy title entry is empty:
 				add Name Entry to huntinglist, if absent;
 			else:
 				add Enemy Title Entry to huntinglist, if absent;
@@ -501,7 +496,7 @@ carry out exploring:
 This is the explore rule:
 	let something be 0;
 	let roomfirst be 1;
-	let the bonus be (( Perception of Player minus 10 ) divided by 2);
+	let the bonus be ( Perception of Player minus 10 ) divided by 2;
 	if "Curious" is listed in feats of Player, increase bonus by 3;
 	if BlindMode is true, increase bonus by 3; [increased odds of finding something interesting]
 	if a random chance of 2 in 5 succeeds, now roomfirst is 0; [Will it check for a room or situation first?]
@@ -590,10 +585,10 @@ This is the explore rule:
 				-- 14: say "see the shadow of... something creep out of an alley, a little distance ahead of you. Curious what would be making [italic type]that[roman type] shape as its shadow, you stop and watch, before realizing that with the light coming from further down the road, there couldn't be anything in the alley that throws this dark blotch - and there's nothing ahead on the road either! The source-less shadow oozes across the asphalt, then vanishes underneath a car wreck, almost as if waiting for prey. You decide it best to turn around and return to the [location of Player].";
 				-- 15: say "hear a screeching sound, similar to a tea kettle at full boil. Strangely it seems to be coming from a latex creature's mouth as it stands in front of an abandoned store. You contemplate offering to help the strange thing, but you know better by now. Instead, you return to the [location of Player] and continue exploring.";
 	follow the turnpass rule;
-	rule succeeds.
+	rule succeeds;
 
 to randomfightchance:
-	let the bonus be (( Perception of Player minus 10 ) divided by 2);
+	let the bonus be ( Perception of Player minus 10 ) divided by 2;
 	if "Stealthy" is listed in feats of Player, now bonus is -1;
 	if "Curious" is listed in feats of Player, increase bonus by 2;
 	if "Bad Luck" is listed in feats of Player, increase bonus by 1;

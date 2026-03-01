@@ -29,6 +29,7 @@ Version 1 of Equipment by Core Mechanics begins here.
 [Pussy Accessory: Cunt Slot                                                     ]
 [Socks: Calf Slot                                                               ]
 [Shoes: Feet Slot                                                               ]
+[Shields: Shield Slot]
 
 [                   Expanded Slot Placements (not implemented yet)              ]
 [Earring: Ear Slot                                                              ]
@@ -43,9 +44,9 @@ Version 1 of Equipment by Core Mechanics begins here.
 
 Book 1 - Gear & Equipment
 
-Section 1 - Hats
+Part 1 - Hats
 
-Part 1 - Motorcycle Helmets
+Chapter 1 - Motorcycle Helmets
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -124,7 +125,7 @@ An everyturn rule:
 		say "[bold type]Your scalp tingles a little where it touches the incubus motorcycle helmet.[roman type][line break]";
 		infect "Incubus";
 
-Part 2 - Bike Helmets
+Chapter 2 - Bike Helmets
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -177,13 +178,13 @@ Descmod of dragon bike helmet is "A plastic dragon bike helmet encases the upper
 Slot of dragon bike helmet is "head".
 Scent of dragon bike helmet is "The helmet smells like plastic.".
 
-Part 3 - Construction Helmets
+Chapter 3 - Construction Helmets
 [Intending for inclusion of protective helmet and the yellow helmet since both are described as pretty much the same object just different colors,]
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "white industrial helmet"	"A white protection helmet as might be worn by industrial workers. That should certainly ward off some bumps to the wearer's head. Judging by the appearance of the helmet, it's [']unisex['] and pretty [']basic['] looking."	1	white industrial helmet
-"yellow construction helmet"	"A yellow helmet with the word 'Supervisor' printed on the front. It should provide some minor protection while worn. Judging by the appearance of the helmet, it's [']unisex['] and pretty [']authoritive['] looking."	1	yellow construction helmet
+"yellow construction helmet"	"A yellow helmet with the word 'Supervisor' printed on the front. It should provide some minor protection while worn. Judging by the appearance of the helmet, it's [']unisex['] and pretty [']authoritative['] looking."	1	yellow construction helmet
 
 white industrial helmet is a grab object.
 white industrial helmet is equipment.
@@ -215,7 +216,7 @@ Descmod of yellow construction helmet is "A yellow construction helmet sits on y
 Slot of yellow construction helmet is "head".
 Scent of yellow construction helmet is "The helmet smells like plastic.".
 
-Part 4 - Football Helmets
+Chapter 4 - Football Helmets
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -278,7 +279,7 @@ An everyturn rule:
 		say "[bold type]Your scalp tingles a little where it touches Roman's stolen football helmet.[roman type][line break]";
 		infect "Football Gorilla Male";
 
-Part 5 - Urban Explorer Helmets
+Chapter 5 - Urban Explorer Helmets
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -315,11 +316,11 @@ Descmod of cobalt urban explorer helmet is "Your head is encased in a protective
 Slot of cobalt urban explorer helmet is "head".
 Scent of cobalt urban explorer helmet is "The helmet smells of plastic and fabric.".
 
-Part 6 - Riot Helmets
+Chapter 6 - Riot Helmets
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"zephyr riot helmet"	"A helmet that Zephyr has its security team use when dealing with emergencies. Judging by the appearance of the helmet, it's [']unisex['] and pretty [']authoritive['] looking."	3	zephyr riot helmet
+"zephyr riot helmet"	"A helmet that Zephyr has its security team use when dealing with emergencies. Judging by the appearance of the helmet, it's [']unisex['] and pretty [']authoritative['] looking."	3	zephyr riot helmet
 
 zephyr riot helmet is a grab object.
 zephyr riot helmet is equipment.
@@ -336,7 +337,7 @@ Descmod of zephyr riot helmet is "A jet black helmet with the Zephyr logo on it 
 Slot of zephyr riot helmet is "head".
 Scent of zephyr riot helmet is "The riot gear smells of metal and plastic.".
 
-Part 7 - Cowboy Hats
+Chapter 7 - Cowboy Hats
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -362,11 +363,31 @@ An everyturn rule:
 		say "[bold type]Your scalp tingles a little bit where it touches the cowboy hat.[roman type][line break]";
 		infect "Cow-boi Male";
 
-Section 2 - Hair Accessories
+Chapter 8 - Combat Helmet
 
-Section 3 - Glasses
+Table of Game Objects (continued)
+name	desc	weight	object
+"combat helmet"	"A basic army helmet. It should provide some minor protection while worn."	4	combat helmet
 
-Part 1 - Goggles
+combat helmet is a grab object.
+combat helmet is equipment.
+It is not temporary.
+Plural of combat helmet is false.
+Taur-compatible of combat helmet is true.
+Size of combat helmet is 3.
+AC of combat helmet is 25.
+Effectiveness of combat helmet is 60.
+GA of combat helmet is 0.
+Traits of combat helmet is {"basic"}.
+Placement of combat helmet is "head".
+Descmod of combat helmet is "A green and brown camo army helmet rests atop your head.".
+Slot of combat helmet is "head".
+
+Part 2 - Hair Accessories
+
+Part 3 - Glasses
+
+Chapter 1 - Goggles
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -403,7 +424,7 @@ Descmod of lab goggles is "A pair of lab goggles cover your eyes, protecting the
 Slot of lab goggles is "eyes".
 Scent of lab goggles is "The goggles don't smell like anything really.".
 
-Section 4 - Masks
+Part 4 - Masks
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -424,9 +445,9 @@ Descmod of face mask is "A filtered mask covers nose and mouth in a vain attempt
 Slot of face mask is "face".
 Scent of face mask is "The face mask doesn't smell like anything really.".
 
-Section 5 - Neckwear
+Part 5 - Neckwear
 
-Section 6 - Necklaces
+Part 6 - Necklaces
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -441,7 +462,7 @@ Size of police badge necklace is 0.
 AC of police badge necklace is 0.
 Effectiveness of police badge necklace is 0.
 GA of police badge necklace is 0.
-Traits of police badge necklace is {"authorative"}.
+Traits of police badge necklace is {"authoritive"}.
 Placement of police badge necklace is "neck".
 Descmod of police badge necklace is "A shining police badge dangles from a chain laid around your neck.".
 Slot of police badge necklace is "neck".
@@ -523,9 +544,9 @@ Descmod of arrowhead pendant is "An obsidian arrowhead with golden edges dangles
 Slot of arrowhead pendant is "neck".
 Scent of arrowhead pendant is "Smells like metal.".
 
-Section 7 - Jackets
+Part 7 - Jackets
 
-Part 1 - Leather Jackets
+Chapter 1 - Leather Jackets
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -578,7 +599,7 @@ Descmod of leather biker jacket is "A beat-up black leather jacket with a large 
 Slot of leather biker jacket is "back".
 Scent of leather biker jacket is "The jacket smells like smoke and leather.".
 
-Part 2 - Greatcoat
+Chapter 2 - Greatcoats
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -615,11 +636,11 @@ Descmod of gray greatcoat is "A full length gray woolen greatcoat covers your bo
 Slot of gray greatcoat is "back".
 Scent of gray greatcoat is "The coat smells like wool.".
 
-Part 3 - Breastplates
+Chapter 3 - Breastplates
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"medieval breastplate"	"A shiny medieval breastplate. It is either a historical artifact or a quite good reproduction - either way, this should allow for some serious protection for someone who wants to survive the nanite apocalypse. Judging by the breastplate's appearance, it's [']masculine['] and pretty [']authorative['] looking."	20	medieval breastplate
+"medieval breastplate"	"A shiny medieval breastplate. It is either a historical artifact or a quite good reproduction - either way, this should allow for some serious protection for someone who wants to survive the nanite apocalypse. Judging by the breastplate's appearance, it's [']masculine['] and pretty [']authoritative['] looking."	20	medieval breastplate
 "roadsign breastplate"	"A breastplate that someone fairly large seems to have crafted from things that were available - namely road signs. The front is formed by a STOP sign that has been hammered into a slight curve, with further signs bolted to its edges to curve around the sides of the body. Heavy leather straps for over the shoulders hold another stop sign forming the back plate. Judging by the breastplate's appearance, it's [']masculine['] and pretty [']violent['] looking."	30	roadsign breastplate
 
 medieval breastplate is a grab object.
@@ -631,7 +652,7 @@ Size of medieval breastplate is 3.
 AC of medieval breastplate is 65.
 Effectiveness of medieval breastplate is 60.
 GA of medieval breastplate is 1.
-Traits of medieval breastplate is {"authorative"}.
+Traits of medieval breastplate is {"authoritive"}.
 Placement of medieval breastplate is "body".
 Descmod of medieval breastplate is "A medieval breastplate covers your chest and back with shiny metal.".
 Slot of medieval breastplate is "back".
@@ -652,7 +673,7 @@ Descmod of roadsign breastplate is "A road sign breastplate covers your chest an
 Slot of roadsign breastplate is "back".
 Scent of roadsign breastplate is "The breastplate smells like metal".
 
-Part 4 - Pads
+Chapter 4 - Pads
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -689,13 +710,14 @@ Descmod of shoulder pad is "A single, armored pad is strapped to your shoulder."
 Slot of shoulder pad is "back".
 Scent of shoulder pad is "The shoulder pad stinks of the [']90s.".
 
-Part 5 - Special Jackets
+Chapter 5 - Special Jackets
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "life jacket"	"A bright orange life jacket. It'll help normal humans stay afloat and comes with an attached whistle and light. Judging by the jacket's appearance, it's [']unisex['] and pretty [']sporty[']."	2	life jacket
-"zephyr riot chest piece"	"A chest piece that Zephyr has its security team use when dealing with emergencies. Judging by the chest piece's appearance, it's [']unisex['] and pretty [']authoritive[']."	6	zephyr riot chest piece
+"zephyr riot chest piece"	"A chest piece that Zephyr has its security team use when dealing with emergencies. Judging by the chest piece's appearance, it's [']unisex['] and pretty [']authoritative[']."	6	zephyr riot chest piece
 "zephyr armored lab coat"	"A lab coat specifically modified by Zephyr for their researchers out in the field. It has underpadding and a sheet of bendable plastic woven inside the fabric. Judging by the coat's appearance, it's [']unisex['] and looks pretty [']smart[']."	4	zephyr armored lab coat
+"firefighter coat"	"A thick yellow firefighting coat that looks as though it's not been used quite that often."	5	firefighter coat
 
 life jacket is a grab object.
 life jacket is equipment.
@@ -742,13 +764,27 @@ Descmod of zephyr armored lab coat is "A white and black lab coat rests upon you
 Slot of zephyr armored lab coat is "back".
 Scent of zephyr armored lab coat is "The lab coat smells of chemicals and synthetic fibers.".
 
-Section 8 - Shirts
+firefighter coat is a grab object.
+firefighter coat is equipment.
+It is not temporary.
+Plural of firefighter coat is false.
+Taur-compatible of firefighter coat is true.
+Size of firefighter coat is 3.
+AC of firefighter coat is 12.
+Effectiveness of firefighter coat is 65.
+GA of firefighter coat is 0.
+Traits of firefighter coat is {"authoritive"}.
+Placement of firefighter coat is "body".
+Descmod of firefighter coat is "You have a thick and slightly musky firefighter's coat on.".
+Slot of firefighter coat is "back".
 
-Part 1 - Vests
+Part 8 - Shirts
+
+Chapter 1 - Vests
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"bulletproof vest"	"A heavy-duty bulletproof vest, complete with metal plates for extra protection. Judging by the vest's appearance, it's [']unisex['] and pretty [']authorative[']."	10	bulletproof vest
+"bulletproof vest"	"A heavy-duty bulletproof vest, complete with metal plates for extra protection. Judging by the vest's appearance, it's [']unisex['] and pretty [']authoritative[']."	10	bulletproof vest
 
 bulletproof vest is a grab object.
 bulletproof vest is equipment.
@@ -759,23 +795,23 @@ Size of bulletproof vest is 3.
 AC of bulletproof vest is 70.
 Effectiveness of bulletproof vest is 60.
 GA of bulletproof vest is 0.
-Traits of bulletproof vest is {"authorative"}.
+Traits of bulletproof vest is {"authoritive"}.
 Placement of bulletproof vest is "body".
 Descmod of bulletproof vest is "A reinforced bulletproof vest covers your upper body.".
 Slot of bulletproof vest is "back".
 Scent of bulletproof vest is "The vest smells slightly of sweat, which isn't too wondrous as these things usually are put on in times of great stress.".
 
-Section 9 - Bras
+Part 9 - Bras
 
-Section 10 - Stomach Trainers
+Part 10 - Stomach Trainers
 
-Section 11 - Gloves
+Part 11 - Gloves
 
-Part 1 - Arm Guards
+Chapter 1 - Arm Guards
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"zephyr riot arm guards"	"A set of arm guards that cover the back of your hands all the way up to your shoulders. Zephyr has its security team use these when dealing with emergencies. Judging by the arm guards['] appearance, it's [']unisex['] and pretty [']authorative[']."	3	zephyr riot arm guards
+"zephyr riot arm guards"	"A set of arm guards that cover the back of your hands all the way up to your shoulders. Zephyr has its security team use these when dealing with emergencies. Judging by the arm guards['] appearance, it's [']unisex['] and pretty [']authoritative[']."	3	zephyr riot arm guards
 
 zephyr riot arm guards is a grab object.
 zephyr riot arm guards is equipment.
@@ -786,7 +822,7 @@ Size of zephyr riot arm guards is 3.
 AC of zephyr riot arm guards is 30.
 Effectiveness of zephyr riot arm guards is 60.
 GA of zephyr riot arm guards is 0.
-Traits of zephyr riot arm guards is {"authorative"}.
+Traits of zephyr riot arm guards is {"authoritive"}.
 Placement of zephyr riot arm guards is "body".
 Descmod of zephyr riot arm guards is "A set of jet black arm guards encases your arms with the Zephyr logo on them.".
 Slot of zephyr riot arm guards is "arms".
@@ -811,7 +847,7 @@ Descmod of fur-lined armguards is "A set of black leather arm guards protect you
 Slot of fur-lined armguards is "arms".
 Scent of fur-lined armguards is "Smells like leather and fur.".
 
-Part 2 - Lab Gloves
+Chapter 2 - Lab Gloves
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -832,7 +868,7 @@ Descmod of zephyr armored lab gloves is "A pair of white rubber lab gloves are f
 Slot of zephyr armored lab gloves is "hands".
 Scent of zephyr armored lab gloves is "The lab gloves smell of chemicals and rubber.".
 
-Part 3 - Tactical Gloves
+Chapter 3 - Tactical Gloves
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -847,31 +883,31 @@ Size of tactical gloves is 3.
 AC of tactical gloves is 20.
 Effectiveness of tactical gloves is 15.
 GA of tactical gloves is 0.
-Traits of tactical gloves is {"authoritative "}.
+Traits of tactical gloves is {"authoritive "}.
 Placement of tactical gloves is "body".
 Descmod of tactical gloves is "A pair of fingerless black gloves are fitted over your hands.".
 Slot of tactical gloves is "hands".
 Scent of tactical gloves is "The tactical gloves smell of synthetic fabric and rubber.".
 
-Section 12 - Rings
+Part 12 - Rings
 
-Section 13 - Belts
+Part 13 - Belts
 
-Section 14 - Pants
+Part 14 - Pants
 
-Section 15 - Skirts
+Part 15 - Skirts
 
-Section 16 - Underwear
+Part 16 - Underwear
 
-Section 17 - Cock Accessories
+Part 17 - Cock Accessories
 
-Section 18 - Cunt Accessories
+Part 18 - Cunt Accessories
 
-Section 19 - Socks
+Part 19 - Socks
 
-Section 20 - Shoes
+Part 20 - Shoes
 
-Part 1 - Cowboy Boots
+Chapter 1 - Cowboy Boots
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -913,7 +949,7 @@ An everyturn rule:
 		say "[bold type]Your skin tingles a little bit where it touches the cowgirl boots.[roman type][line break]";
 		infect "Cow-babe Female";
 
-Part 2 - Combat Boots
+Chapter 2 - Combat Boots
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -934,11 +970,11 @@ Descmod of black combat boots is "You are wearing sturdy black combat boots. The
 Slot of black combat boots is "feet".
 Scent of black combat boots is "The boots smell like leather and rubber.".
 
-Part 3 - Shin Guards
+Chapter 3 - Shin Guards
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"zephyr riot shin guards"	"A set of shin guards that cover your legs from your feet up to your thighs. Zephyr has its security team use these when dealing with emergencies. Judging by the shin guards['] appearance, it's [']unisex['] and pretty [']authorative[']."	4	zephyr riot shin guards
+"zephyr riot shin guards"	"A set of shin guards that cover your legs from your feet up to your thighs. Zephyr has its security team use these when dealing with emergencies. Judging by the shin guards['] appearance, it's [']unisex['] and pretty [']authoritative[']."	4	zephyr riot shin guards
 
 zephyr riot shin guards is a grab object.
 zephyr riot shin guards is equipment.
@@ -949,13 +985,13 @@ Size of zephyr riot shin guards is 3.
 AC of zephyr riot shin guards is 30.
 Effectiveness of zephyr riot shin guards is 60.
 GA of zephyr riot shin guards is 0.
-Traits of zephyr riot shin guards is {"authorative"}.
+Traits of zephyr riot shin guards is {"authoritive"}.
 Placement of zephyr riot shin guards is "body".
 Descmod of zephyr riot shin guards is "A set of jet black shin guards encase your legs with the Zephyr logo on them.".
 Slot of zephyr riot shin guards is "feet".
 Scent of zephyr riot shin guards is "The riot gear smells of metal and plastic.".
 
-Part 4 - Lab Boots
+Chapter 4 - Lab Boots
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -976,11 +1012,34 @@ Descmod of zephyr armored lab boots is "A pair of black rubber lab boots are fit
 Slot of zephyr armored lab boots is "feet".
 Scent of zephyr armored lab boots is "The lab boots smells of chemicals and rubber.".
 
+Part 21 - Shields
+
+Chapter 1 - Combat Shield
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Garbage Can Shield"	"This aluminum garbage can lid has been transformed into an improvised shield by riveting two loops of leather to the inside, perfect for sticking your forearm through. It is painted gold with a bold, crimson [']V['] across the surface. Looks like the paint ran down its front a bit before drying, giving the [']V['] a bleeding look."	4	garbage can shield
+
+garbage can shield is a grab object.
+garbage can shield is equipment.
+It is not temporary.
+Plural of garbage can shield is false.
+Taur-compatible of garbage can shield is true.
+Size of garbage can shield is 3.
+AC of garbage can shield is 28.
+Effectiveness of garbage can shield is 30.
+GA of garbage can shield is 0.
+Traits of garbage can shield is {"adventurous"}.
+Placement of garbage can shield is "shield".
+Descmod of garbage can shield is "You hold an aluminum garbage can lid strapped to your forearm as an improvised shield. It is painted gold with a bold, crimson [']V['] across the surface. Looks like the paint ran down its front a bit before drying, giving the [']V['] a bleeding look.".
+Slot of garbage can shield is "shield".
+Scent of garbage can shield is "Despite everything that you try to do about it, a slight scent of garbage seems to be an inescapable part of this makeshift shield. But hey... one makes use of what you get.".
+
 Book 2 - Clothing
 
-Section 1 - Hats
+Part 1 - Hats
 
-Part 1 - Fedoras
+Chapter 1 - Fedoras
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1033,7 +1092,7 @@ Descmod of gray wool fedora is "A gray wool fedora covers your head, making you 
 Slot of gray wool fedora is "head".
 Scent of gray wool fedora is "The hat smells like wool.".
 
-Part 2 - Knitted Skullcaps
+Chapter 2 - Knitted Skullcaps
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1198,7 +1257,7 @@ Descmod of skull knitted skullcap is "A black knitted skullcap covers the top of
 Slot of skull knitted skullcap is "head".
 Scent of skull knitted skullcap is "The cap smells like wool.".
 
-Part 3 - Baseball Caps
+Chapter 3 - Baseball Caps
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1235,7 +1294,7 @@ Descmod of tenvale silverbacks baseball cap is "A black and silver Tenvale Silve
 Slot of tenvale silverbacks baseball cap is "head".
 Scent of tenvale silverbacks baseball cap is "The cap smells like fabric and plastic".
 
-Part 4 - Specialty Hats
+Chapter 4 - Specialty Hats
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1256,9 +1315,9 @@ Descmod of tin-foil hat is "A tin-foil hat covers your head, providing a dubious
 Slot of tin-foil hat is "head".
 Scent of tin-foil hat is "The hat smells a bit like metal".
 
-Section 2 - Hair Accessories
+Part 2 - Hair Accessories
 
-Part 1 - Large Bows
+Chapter 1 - Large Bows
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1327,9 +1386,9 @@ Descmod of large polka dot bow is "A large polka dot bow is attached to your hai
 Slot of large polka dot bow is "hair".
 Scent of large polka dot bow is "The bow smells a bit like satin".
 
-Section 3 - Glasses
+Part 3 - Glasses
 
-Part 1 - Sunglasses
+Chapter 1 - Sunglasses
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1366,7 +1425,7 @@ Descmod of designer sunglasses is "An expensive set of sunglasses sit on your no
 Slot of designer sunglasses is "eyes".
 Scent of designer sunglasses is "The glasses don't smell like anything really.".
 
-Part 2 - Regular Glasses
+Chapter 2 - Regular Glasses
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1387,7 +1446,7 @@ Descmod of horn-rimmed glasses is "A pair of horn-rimmed glasses on your nose gi
 Slot of horn-rimmed glasses is "eyes".
 Scent of horn-rimmed glasses is "The glasses don't smell like anything really.".
 
-Part 3 - Specialty Glasses
+Chapter 3 - Specialty Glasses
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1424,7 +1483,9 @@ Descmod of rose-tinted glasses is "A pair of somewhat kitschy glasses on your no
 Slot of rose-tinted glasses is "eyes".
 Scent of rose-tinted glasses is "The glasses don't smell like anything really.".
 
-Section 4 - Masks
+Part 4 - Masks
+
+Chapter 1 - Face Masks
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1445,15 +1506,57 @@ Descmod of latex mouse mask is "A latex mouse mask on your face makes you look b
 Slot of latex mouse mask is "face".
 Scent of latex mouse mask is "The mask smells of latex and bodily fluids.".
 
-Section 5 - Neckwear
+Chapter 2 - Scarves
 
-Section 6 - Necklaces
+Table of Game Objects (continued)
+name	desc	weight	object
+"Apocalypse Scarf"	"A long scarf that has been torn and burnt from an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Scarf
 
-Section 7 - Jackets
+Apocalypse Scarf is a grab object.
+Apocalypse Scarf is equipment.
+It is not temporary.
+Plural of Apocalypse Scarf is false.
+Taur-compatible of Apocalypse Scarf is true.
+Size of Apocalypse Scarf is 0.
+AC of Apocalypse Scarf is 0.
+Effectiveness of Apocalypse Scarf is 0.
+GA of Apocalypse Scarf is 0.
+Traits of Apocalypse Scarf is {"grungy"}.
+Placement of Apocalypse Scarf is "head".
+Descmod of Apocalypse Scarf is "A torn and burnt scarf covers your [FaceSpeciesName of Player in lower case] face.".
+Slot of Apocalypse Scarf is "face".
+Scent of Apocalypse Scarf is "There is a faint smell of smoke lingering on the item of clothing.".
 
-Section 8 - Shirts
+Part 5 - Neckwear
 
-Part 1 - T-shirts
+Part 6 - Necklaces
+
+Part 7 - Jackets
+
+Chapter 1 - Hoodies
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Apocalypse Hoodie"	"A large zippable hoodie that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Hoodie
+
+Apocalypse Hoodie is a grab object.
+Apocalypse Hoodie is equipment.
+It is not temporary.
+Plural of Apocalypse Hoodie is false.
+Taur-compatible of Apocalypse Hoodie is true.
+Size of Apocalypse Hoodie is 3.
+AC of Apocalypse Hoodie is 0.
+Effectiveness of Apocalypse Hoodie is 0.
+GA of Apocalypse Hoodie is 0.
+Traits of Apocalypse Hoodie is {"grungy"}.
+Placement of Apocalypse Hoodie is "body".
+Descmod of Apocalypse Hoodie is "A torn and burnt hoodie covers your [bodydesc of Player] body.".
+Slot of Apocalypse Hoodie is "back".
+Scent of Apocalypse Hoodie is "There is a faint smell of smoke lingering on the item of clothing.".
+
+Part 8 - Shirts
+
+Chapter 1 - T-shirts
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1634,7 +1737,7 @@ Descmod of camo shirt is "Your upper body is covered by a camo pattern t-shirt i
 Slot of camo shirt is "chest".
 Scent of camo shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
-Part 2 - Pullovers
+Chapter 2 - Pullovers
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1799,15 +1902,10 @@ Descmod of maroon pullover is "Your upper body is covered by a maroon pullover."
 Slot of maroon pullover is "chest".
 Scent of maroon pullover is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
-Part 3 - Zephyr Shirts
+Chapter 3 - Zephyr Shirts
 [Want to have a cute animal mascot on each of these shirts one for every different form that you can give Larissa]
 
-[
-Table of Game Objects (continued)
-name	desc	weight	object
-]
-
-Part 4 - Sleeveless Shirts
+Chapter 4 - Sleeveless Shirts
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1956,7 +2054,7 @@ Descmod of orange sleeveless shirt is "Your upper body is covered by a orange sl
 Slot of orange sleeveless shirt is "chest".
 Scent of orange sleeveless shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
-Part 5 - Specialty Shirts
+Chapter 5 - Specialty Shirts
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1977,7 +2075,7 @@ Descmod of mesh shirt is "Your upper body is covered by a black mesh shirt. With
 Slot of mesh shirt is "chest".
 Scent of mesh shirt is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
-Section 9 - Bras
+Part 9 - Bras
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1998,17 +2096,17 @@ Descmod of simple black bra is "Your breasts are covered by a simple black bra. 
 Slot of simple black bra is "breast".
 Scent of simple black bra is "The fabric has the typical faintly musky scent of clothing that has been worn a few days. Still, it's good enough for a few more, at least. During the nanite apocalypse, one can give some leeway in terms of body hygiene - survival comes first...".
 
-Section 10 - Stomach Trainers
+Part 10 - Stomach Trainers
 
-Section 11 - Gloves
+Part 11 - Gloves
 
-Section 12 - Rings
+Part 12 - Rings
 
-Section 13 - Belts
+Part 13 - Belts
 
-Section 14 - Pants
+Part 14 - Pants
 
-Part 1 - Slacks
+Chapter 1 - Slacks
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2045,7 +2143,8 @@ Descmod of gray slacks is "A pair of gray slacks cover your hips and legs. They 
 Slot of gray slacks is "legs".
 Scent of gray slacks is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
-Part 2 - Jeans [sturdy jeans have been replaced with the dark-blue jeans since the name and color was the only difference between them and the black jeans]
+Chapter 2 - Jeans
+[sturdy jeans have been replaced with the dark-blue jeans since the name and color was the only difference between them and the black jeans]
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2082,7 +2181,7 @@ Descmod of dark-blue jeans is "A pair of dark-blue jeans cover your hips and leg
 Slot of dark-blue jeans is "legs".
 Scent of dark-blue jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
-Part 3 - ripped blue jeans
+Chapter 3 - Ripped Jeans
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2119,7 +2218,7 @@ Descmod of ripped blue jeans is "A pair of blue ripped and torn jeans cover your
 Slot of ripped blue jeans is "legs".
 Scent of ripped blue jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
-Part 4 - Skinny Jeans
+Chapter 4 - Skinny Jeans
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2156,7 +2255,7 @@ Descmod of light-blue skinny jeans is "A pair of light-blue jeans cover your hip
 Slot of light-blue skinny jeans is "legs".
 Scent of light-blue skinny jeans is "The jeans have the typical faintly musky scent of pants that have been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
-Part 5 - Hot Pants
+Chapter 5 - Hot Pants
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2209,12 +2308,12 @@ Descmod of amethyst hot pants is "A pair of glittering amethyst hot pants cover 
 Slot of amethyst hot pants is "legs".
 Scent of amethyst hot pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
-Part 6 - Camo Pants
+Chapter 6 - Camo Pants
 
 Table of Game Objects (continued) [These need to be altered as army pants since camo pants can be bought and worn by anyone]
 name	desc	weight	object
 "green camo pants"	"A pair of camo pants in various shades of green. Judging by the pants['] appearance, it's [']masculine['] and pretty [']cool['] looking."	1	green camo pants
-"green army camo pants"	"A pair of army camo pants in various shades of green. Clearly, these belong to the uniform of a soldier of the US army. Judging by the pants['] appearance, it's [']unisex['] and pretty [']authoritive['] looking."	1	green army camo pants
+"green army camo pants"	"A pair of army camo pants in various shades of green. Clearly, these belong to the uniform of a soldier of the US army. Judging by the pants['] appearance, it's [']unisex['] and pretty [']authoritative['] looking."	1	green army camo pants
 
 green camo pants is a grab object.
 green camo pants is equipment.
@@ -2246,7 +2345,7 @@ Descmod of green army camo pants is "A pair of green army camo pants cover your 
 Slot of green army camo pants is "legs".
 Scent of green army camo pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
-Part 7 - Jogging Pants
+Chapter 7 - Jogging Pants
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2283,7 +2382,7 @@ Descmod of pink jogging pants is "A pair of pink jogging pants with swirling hea
 Slot of pink jogging pants is "legs".
 Scent of pink jogging pants is "The pants have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
-Part 8 - Bermuda Shorts
+Chapter 8 - Bermuda Shorts
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2320,11 +2419,12 @@ Descmod of flowered bermuda shorts is "A pair of colorful flowered bermuda short
 Slot of flowered bermuda shorts is "legs".
 Scent of flowered bermuda shorts is "The shorts have the typical faintly musky scent of clothing that has been worn a few days. But surely they're clean enough to wear another week or two at least...".
 
-Part 9 - Shorts
+Chapter 9 - Shorts
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "striped board shorts"	"A pair of striped board shorts. They have three broad stripes that are red, white, and beige. Judging by the appearance of the shorts, they're [']masculine['] and pretty [']sporty['] looking."	1	striped board shorts
+"Apocalypse Shorts"	"A pair of stretchy running shorts that have been singed and torn by an explosion. They're still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Shorts
 
 striped board shorts is a grab object.
 striped board shorts is equipment.
@@ -2341,14 +2441,30 @@ Descmod of striped board shorts is "A pair of striped board shorts cover your hi
 Slot of striped board shorts is "legs".
 Scent of striped board shorts is "The shorts smell faintly of the ocean.".
 
-Section 15 - Skirts
+Apocalypse Shorts is a grab object.
+Apocalypse Shorts is equipment.
+It is not temporary.
+Plural of Apocalypse Shorts is true.
+Taur-compatible of Apocalypse Shorts is false.
+Size of Apocalypse Shorts is 3.
+AC of Apocalypse Shorts is 0.
+Effectiveness of Apocalypse Shorts is 0.
+GA of Apocalypse Shorts is 0.
+Traits of Apocalypse Shorts is {"sporty", "grungy"}.
+Placement of Apocalypse Shorts is "body".
+Descmod of Apocalypse Shorts is "A torn and burnt pair of running shorts cover your legs.".
+Slot of Apocalypse Shorts is "legs".
+Scent of Apocalypse Shorts is "There is a faint smell of smoke lingering on the item of clothing.".
 
-Part 1 - Miniskirts
+Part 15 - Skirts
+
+Chapter 1 - Miniskirts
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "black miniskirt"	"A simple black miniskirt, barely long enough to cover someone's thighs even halfway. Judging by the skirt's appearance, it's [']feminine['] and pretty [']sexy['] and [']slutty['] looking."	1	black miniskirt
 "pink miniskirt"	"A simple pink miniskirt, barely long enough to cover someone's thighs even halfway. Judging by the skirt's appearance, it's [']feminine['] and pretty [']basic['] and [']slutty['] looking."	1	pink miniskirt
+"Apocalypse Skirt"	"A very short skirt that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Skirt
 
 black miniskirt is a grab object.
 black miniskirt is equipment.
@@ -2380,7 +2496,22 @@ Descmod of pink miniskirt is "A simple pink miniskirt covers your hips and legs.
 Slot of pink miniskirt is "legs".
 Scent of pink miniskirt is "The skirt has the typical faintly musky scent of clothing that has been worn a few days. But surely it is clean enough to wear another week or two at least...".
 
-Part 2 - Pencil Skirts
+Apocalypse Skirt is a grab object.
+Apocalypse Skirt is equipment.
+It is not temporary.
+Plural of Apocalypse Skirt is false.
+Taur-compatible of Apocalypse Skirt is false.
+Size of Apocalypse Skirt is 3.
+AC of Apocalypse Skirt is 0.
+Effectiveness of Apocalypse Skirt is 0.
+GA of Apocalypse Skirt is -1.
+Traits of Apocalypse Skirt is {"slutty", "grungy"}.
+Placement of Apocalypse Skirt is "body".
+Descmod of Apocalypse Skirt is "A torn and burnt miniskirt barely covers your lower [BodyName of Player in lower case] body.".
+Slot of Apocalypse Skirt is "legs".
+Scent of Apocalypse Skirt is "There is a faint smell of smoke lingering on the item of clothing.".
+
+Chapter 2 - Pencil Skirts
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2401,7 +2532,7 @@ Descmod of light-blue pencil skirt is "A light-blue pencil skirt covers your hip
 Slot of light-blue pencil skirt is "legs".
 Scent of light-blue pencil skirt is "The skirt has the typical faintly musky scent of clothing that has been worn a few days. But surely it is clean enough to wear another week or two at least...".
 
-Part 3 - Gypsy Skirts
+Chapter 3 - Gypsy Skirts
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2422,9 +2553,9 @@ Descmod of gypsy floral skirt is "A light floor length skirt covers your hips an
 Slot of gypsy floral skirt is "legs".
 Scent of gypsy floral skirt is "The skirt has the typical faintly musky scent of clothing that has been worn a few days. But surely it is clean enough to wear another week or two at least...".
 
-Section 16 - Underwear
+Part 16 - Underwear
 
-Part 1 - Briefs
+Chapter 1 - Briefs
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2445,12 +2576,9 @@ Descmod of white briefs is "A pair of tight white briefs cover your crotch.".
 Slot of white briefs is "crotch".
 Scent of white briefs is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
 
-Part 2 - Boxers
+Chapter 2 - Boxers
 
-[Table of Game Objects (continued)
-name	desc	weight	object
-]
-Part 3 - Boxer Briefs
+Chapter 3 - Boxer Briefs
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2471,17 +2599,11 @@ Descmod of black boxer briefs is "A pair of black boxer briefs cover your crotch
 Slot of black boxer briefs is "crotch".
 Scent of black boxer briefs is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
 
-Part 4 - Thongs
+Chapter 4 - Thongs
 
-[Table of Game Objects (continued)
-name	desc	weight	object
-]
-Part 5 - G-strings
+Chapter 5 - G-strings
 
-[Table of Game Objects (continued)
-name	desc	weight	object
-]
-Part 6 - Panties
+Chapter 6 - Panties
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2502,7 +2624,7 @@ Descmod of pink panties is "A frilly pair of pink panties cover your crotch.".
 Slot of pink panties is "crotch".
 Scent of pink panties is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
 
-Part 7 - Loinclothes
+Chapter 7 - Loinclothes
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2571,7 +2693,7 @@ Descmod of simple white loincloth is "A simple white loincloth is tied around yo
 Slot of simple white loincloth is "crotch".
 Scent of simple white loincloth is "Smells a little bit musky. Apparently the loincloth has been worn before, but is fairly clean.".
 
-Part 8 - Jockstraps
+Chapter 8 - Jockstraps
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2592,7 +2714,7 @@ Descmod of orange jockstrap is "An orange jockstrap covers your crotch while lea
 Slot of orange jockstrap is "crotch".
 Scent of orange jockstrap is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
 
-Part 9 - Mesh Briefs
+Chapter 9 - Mesh Briefs
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2613,21 +2735,17 @@ Descmod of black mesh briefs is "A pair of black mesh briefs around your hips ex
 Slot of black mesh briefs is "crotch".
 Scent of black mesh briefs is "Smells a little bit musky. Apparently the underwear has been worn before, but is fairly clean.".
 
-Part 10 - Mesh Panties
+Chapter 10 - Mesh Panties
 
-[Table of Game Objects (continued)
-name	desc	weight	object
-]
+Part 17 - Cock Accessories
 
-Section 17 - Cock Accessories
+Part 18 - Cunt Accessories
 
-Section 18 - Cunt Accessories
+Part 19 - Socks
 
-Section 19 - Socks
+Part 20 - Shoes
 
-Section 20 - Shoes
-
-Part 1 - Sandals
+Chapter 1 - Sandals
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2648,7 +2766,7 @@ Descmod of brown leather sandals is "Two brown leather sandals are strapped to y
 Slot of brown leather sandals is "feet".
 Scent of brown leather sandals is "The sandals smell like leather.".
 
-Part 2 - Loafers
+Chapter 2 - Loafers
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2669,7 +2787,7 @@ Descmod of brown loafers is "You are wearing comfortable brown loafers.".
 Slot of brown loafers is "feet".
 Scent of brown loafers is "The loafers smell like leather.".
 
-Part 3 - Pumps
+Chapter 3 - Pumps
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2690,7 +2808,7 @@ Descmod of bright-red pumps is "You are wearing two bright-red pumps. It won't b
 Slot of bright-red pumps is "feet".
 Scent of bright-red pumps is "The shoes smell a bit of laquer and plastic.".
 
-Part 4 - Stiletto Heels
+Chapter 4 - Stiletto Heels
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2711,7 +2829,7 @@ Descmod of black stiletto heels is "You are wearing two black stiletto heels. Th
 Slot of black stiletto heels is "feet".
 Scent of black stiletto heels is "The shoes smell a bit of laquer and plastic.".
 
-Part 5 - Running Shoes
+Chapter 5 - Running Shoes
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -2732,7 +2850,28 @@ Descmod of blue running shoes is "You are wearing fairly new blue running shoes.
 Slot of blue running shoes is "feet".
 Scent of blue running shoes is "The shoes smell like plastic and not much else. Good thing these are new.".
 
-Book 3
+Chapter 6 - Rubber Sneakers
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"rubber sneakers"	"Dark blue sport shoes made of a shiny rubbery material. A stylized feline figure is painted on the side."	2	rubber sneakers
+
+rubber sneakers is a grab object.
+rubber sneakers is equipment.
+It is not temporary.
+Plural of rubber sneakers is true.
+Taur-compatible of rubber sneakers is false.
+Size of rubber sneakers is 3.
+AC of rubber sneakers is 0.
+Effectiveness of rubber sneakers is 0.
+GA of rubber sneakers is 0.
+Traits of rubber sneakers is {"sporty"}.
+Placement of rubber sneakers is "body".
+Descmod of rubber sneakers is "You wear rubbery, dark blue sport shoes. Each step you take sends a small tingle throughout your body.".
+Slot of rubber sneakers is "feet".
+Scent of rubber sneakers is "The rubber sneakers smell mostly of rubber, with a faint hint of sweat.".
+
+Book 3 - Priorities
 
 [Try to let the player manipulate the 'black jeans' object when black ripped or skinny jeans are also owned. Only covers the main interaction types for items, which should be sufficient.]
 Does the player mean grabbing black jeans when ripped black jeans are visible or black skinny jeans are visible: it is likely.	[get black jeans]

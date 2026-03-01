@@ -29,7 +29,7 @@ an everyturn rule:
 	if Libido of Impregnated Feral > 0: [knocked up by the player]
 		decrease Libido of Impregnated Feral by 1; [counting down]
 		if Libido of Impregnated Feral is 0: [birthing time]
-			say "     [bold type]Out of the blue, a sudden thought strikes you, making you remember the [MainInfection of Impregnated Feral in lower case] you recently had carnal relations with. You don't know how or why exactly, but you feel certain that your encounter resulted in them becoming pregnant and giving birth to your offspring. Somewhere out there in the city, a new life has entered the world.[roman type][line break]";
+			say "[line break]     [bold type]Out of the blue, a sudden thought strikes you, making you remember the [MainInfection of Impregnated Feral in lower case] you recently had carnal relations with. You don't know how or why exactly, but you feel certain that your encounter resulted in them becoming pregnant and giving birth to your offspring. Somewhere out there in the city, a new life has entered the world.[roman type][line break]";
 			say "     While it is very unlikely that you will ever encounter your child - or the two of you will even recognize each other - you can't help but feel that they'll [one of]do great things[or]be an unholy terror[or]spread your genes far and wide[or]give you grandkids before long[or]dominate their surroundings[at random]. And whatever else, this is one more wild and feral inhabitant for the city, making it all the harder for the military to move in and regain control.";
 			BehaviorCount "Breeder";
 			extend game by a random number between 3 and 12;
@@ -56,11 +56,17 @@ A person can be total_vacant. A person is usually total_vacant.
 Childrenfaces is a list of text that varies.
 Childrenskins is a list of text that varies.
 Childrenbodies is a list of text that varies.
-
+FeralBirths is a number that varies. FeralBirths is usually 0.
 ovipregnant is a truth state that varies. ovipregnant is usually false.		[marks if ovi-pregnant now]
 ovipregalways is a truth state that varies. ovipregalways is usually false.	[marks if allowed to pick always ovi]
-
 mpregcount is a number that varies. [mpreg experience]
+preghijack is a truth state that varies. preghijack is usually false. [General-purpose variable for detailing a hijacked pregnancy]
+mpreghijack is a truth state that varies. mpreghijack is usually false. [male/anal version]
+hijackgestation is a number that varies.
+ebwhelphijack is a number that varies. [ 0 = none, 1 = cunt, 2 = anal]
+ebgatorhijack is a number that varies.
+pregtype is a number that varies. [1 = female, 2 = male, 0 = guess]
+callovi is a truth state that varies.[@Tag:NotSaved] callovi is usually false; [true = ovi pregnant]
 
 [Male and/or Female]
 
@@ -86,100 +92,75 @@ Definition: A person (called X) is total_vacant: [if BOTH male AND female vacant
 
 [Female/vaginal-particular]
 Definition: A person (called X) is fpreg_ok: [Can the player become pregnant in general. Female]
-	if X is Player:
-		if Player is sterile, no; [not fertile]
-		if Player is female, yes; [has pussy]
-		no;
-	else:
-		if X is sterile, no; [not fertile]
-		if X is female, yes; [has pussy]
-		no;
+	if X is sterile, no; [not fertile]
+	if X is female, yes; [has pussy]
+	no;
 
 Definition: A person (called X) is fpreg_able: [Can X be impregnated RIGHT NOW. Female]
+	if X is sterile, no; [not fertile]
+	if X is not female, no; [no pussy]
 	if X is Player:
-		if Player is sterile, no; [not fertile]
-		if Player is not female, no; [no pussy]
 		if gestation of child > 0 or child is born, no; [currently pregnant]
 		if preghijack is true, no; [Velos]
 		if insectlarva is true and larvaegg is 2, no; [parasites]
-		yes;
 	else:
-		if X is sterile, no; [not fertile]
-		if X is not female, no; [no pussy]
 		if ImpregTimer of X > 0, no; [currently pregnant]
-		yes;
+	yes;
 
 Definition: A person (called X) is fpreg_now: [Is X currently pregnant. Female]
 	if X is Player:
 		if gestation of child > 0 and pregtype is 1, yes; [currently pregnant]
-		no;
 	else:
 		if X is not female, no; [no pussy]
 		if ImpregTimer of X > 0, yes; [currently pregnant]
-		no;
+	no;
 
 Definition: A person (called X) is fem_vacant: [Disregarding fertility, is X's cunt occupied by something]
+	if X is not female, no;
 	if X is Player:
-		if Player is not female, no;
 		if (gestation of child > 0 or child is born) and pregtype is 1, no;
 		if preghijack is true, no;
 		if insectlarva is true and larvaegg is 2, no;
-		yes;
 	else:
-		if X is not female, no;
 		if ImpregTimer of X > 0, no; [currently pregnant]
-		yes;
+	yes;
 
 [Male/Anal-particular]
 Definition: A person (called X) is mpreg_ok: [Can X become pregnant in general. Male]
+	if X is sterile, no; [not fertile]
 	if X is Player:
-		if Player is sterile, no; [not fertile]
 		if "MPreg" is listed in feats of Player, yes;
-		no;
 	else:
-		if X is sterile, no;
 		if "MPreg" is listed in traits of X, yes; [mpreg capable]
-		no;
+	no;
 
 Definition: A person (called X) is mpreg_able: [Can X be impregnated RIGHT NOW. Male]
+	if X is sterile, no; [not fertile]
 	if X is Player:
-		if Player is sterile, no; [not fertile]
 		if gestation of child > 0 or child is born, no; [currently pregnant]
 		if mpreghijack is true, no; [Velos]
 		if insectlarva is true and larvaegg is 2, no; [parasites]
 		if "MPreg" is listed in feats of Player, yes; [mpreg capable]
-		no;
 	else:
-		if X is sterile, no; [not fertile]
 		if ImpregTimer of X > 0, no; [currently pregnant]
 		if "MPreg" is listed in traits of X, yes; [mpreg capable]
-		no;
+	no;
 
 Definition: A person (called X) is mpreg_now: [Is X currently pregnant. Male]
 	if X is Player:
 		if gestation of child > 0 and pregtype is 2, yes; [currently pregnant]
-		no;
 	else:
 		if "MPreg" is listed in traits of X and ImpregTimer of X > 0, yes; [currently pregnant]
-		no;
+	no;
 
 Definition: A person (called X) is male_vacant: [Disregarding fertility, is X's ass occupied by something]
 	if X is Player:
 		if mpreghijack is true, no; [Velos]
 		if insectlarva is true and larvaegg is 2, no; [parasites]
 		if (gestation of child > 0 or child is born) and pregtype is 2, no;
-		yes;
 	else:
 		if "MPreg" is listed in traits of X and ImpregTimer of X > 0, no; [currently pregnant]
-		yes;
-
-preghijack is a truth state that varies. preghijack is usually false. [General-purpose variable for detailing a hijacked pregnancy]
-mpreghijack is a truth state that varies. mpreghijack is usually false. [male/anal version]
-hijackgestation is a number that varies.
-ebwhelphijack is a number that varies. [ 0 = none, 1 = cunt, 2 = anal]
-ebgatorhijack is a number that varies.
-pregtype is a number that varies. [1 = female, 2 = male, 0 = guess]
-callovi is a truth state that varies. callovi is usually false; [true = ovi pregnant]
+	yes;
 
 Chapter 2 - Pregnancy/Birth Detailing and Protocols
 
@@ -193,20 +174,20 @@ to decide which text is random child gender:
 		add { "herm", "herm" } to GenderList;
 	if TransList is not warded and TransList is not banned:
 		add { "trans male", "trans female" } to GenderList;
-	let ChildGenderRoll be a random number from 1 to the number of entries in GenderList;
-	decide on "[entry ChildGenderRoll of GenderList]";
+	sort GenderList in random order;
+	decide on "[entry 1 of GenderList]";
 
 to decide which text is random child personality:
 	let PersonalityList be { "friendly", "playful", "mean", "curious", "stubborn", "independent", "sassy", "assertive", "meek", "extroverted", "introverted", "mischievous" };
-	let ChildPersonalityRoll be a random number from 1 to the number of entries in PersonalityList;
-	decide on "[entry ChildPersonalityRoll of PersonalityList]";
+	sort PersonalityList in random order;
+	decide on "[entry 1 of PersonalityList]";
 
 to pregprotocol:
 	if ebgatorhijack > 0 or ebwhelphijack > 0:
 		decrease hijackgestation by 1;
 		if ebwhelphijack > 0:
 			ebwhelphijackroutine;
-		else if ebgatorhijack > 0:
+		else:
 			ebgatorhijackroutine;
 	if Player is impreg_now:
 		if child is not born and gestation of child > 0:
@@ -217,7 +198,7 @@ to pregprotocol:
 				if ovipregnant is true and ovipreglevel is 1, now ovipregnant is false;
 				if ovipregnant is false and ovipreglevel is 3, now ovipregnant is true;
 				if gestation of child > 0, say "[detailpregnancy]";
-				if a random chance of 1 in 10 succeeds and ( Breast Size of Player > 0 ): [cut the cunt requirement for cuntboys, breast size is enough]
+				if a random chance of 1 in 10 succeeds and Breast Size of Player > 0 and "Flat Chested" is not listed in feats of Player: [cut the cunt requirement for cuntboys, breast size is enough]
 					increase Breast Size of Player by 1;
 					follow breast descr rule;
 					if Player is not female:
@@ -226,7 +207,7 @@ to pregprotocol:
 						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of Player], the mammary flesh stretched lightly. Pinching your nipples causes a little of the milk for feeding the child growing inside you to dribble out.";
 			else if gestation of child < 15:
 				say "[detailpregnancy]";
-				if a random chance of 1 in 20 succeeds and ( Breast Size of Player > 0 ):
+				if a random chance of 1 in 20 succeeds and Breast Size of Player > 0 and "Flat Chested" is not listed in feats of Player:
 					increase Breast Size of Player by 1;
 					follow breast descr rule;
 					if Player is not female:
@@ -235,7 +216,7 @@ to pregprotocol:
 						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of Player], the mammary flesh stretched lightly.";
 			else if gestation of child < 30 or (gestation of child > 0 and a random chance of 1 in 3 succeeds):
 				say "[detailpregnancy]";
-				if a random chance of 1 in 30 succeeds and ( Breast Size of Player > 0 ):
+				if a random chance of 1 in 30 succeeds and Breast Size of Player > 0 and "Flat Chested" is not listed in feats of Player:
 					increase Breast Size of Player by 1;
 					follow breast descr rule;
 					if Player is not female:
@@ -243,7 +224,7 @@ to pregprotocol:
 					else:
 						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of Player], the mammary flesh stretched lightly.";
 			if gestation of child < 1 and ( Player is female or Player is mpreg_ok ) and skipturnblocker is 0:
-				if pregtype is 1 and Cunt Count of Player is 0:
+				if pregtype is 1 and Player is not female:
 					now pregtype is 2;
 				say "[detailbirth]";
 				if snakehijack is 0:
@@ -274,16 +255,13 @@ to pregprotocol:
 						else:
 							if a random chance of 1 in 8 succeeds:
 								now z is 4;
-								now FangNewPuppies is 4;
 							else if a random chance of 1 in 4 succeeds:
 								now z is 3;
-								now FangNewPuppies is 3;
 							else if a random chance of 1 in 2 succeeds:
 								now z is 2;
-								now FangNewPuppies is 2;
 							else:
 								now z is 1;
-								now FangNewPuppies is 1;
+							now FangNewPuppies is z;
 					if z is 2:
 						say "[line break][Bold Type]It's twins![Roman Type][line break]";
 						if pregtype is 2, increase mpregcount by 1; [more mpreg practice]
@@ -326,31 +304,29 @@ to say detailpregnancy:
 	detailpregnancy;
 
 to detailpregnancy:
-	LineBreak;
 	if gestation of child < 5:
 		if Player is not female:
-			say "Your [bodytype of Player] belly protrudes in a firm dome from your [if Player is male]male[else]neuter[end if] pregnancy, full with [if snakehijack > 0][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][else]growing life[end if][if snakeocc > 1]s[end if] which will soon emerge into the world. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
+			say "[line break]Your [bodytype of Player] belly protrudes in a firm dome from your [if Player is male]male[else]neuter[end if] pregnancy, full with [if snakehijack > 0][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][else]growing life[end if][if snakeocc > 1]s[end if] which will soon emerge into the world. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
 		else:				[MPreg]
-			say "Your [bodytype of Player] belly protrudes in a firm dome of pregnancy, full of [if snakehijack > 0][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][else if ovipregnant is true]the growing egg[else]some unborn being[end if][if snakeocc > 1]s[end if], waiting to see the world, such as it is. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
+			say "[line break]Your [bodytype of Player] belly protrudes in a firm dome of pregnancy, full of [if snakehijack > 0][one of]your serpentine hijacker[or]the illegitimate occupant[or]the sneaky snake[as decreasingly likely outcomes][else if ovipregnant is true]the growing egg[else]some unborn being[end if][if snakeocc > 1]s[end if], waiting to see the world, such as it is. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
 	else if gestation of child < 10:
 		if Player is not female:
-			say "Your [bodydesc of Player] body is somewhat enlarged by the effects of your unusual pregnancy. It is progressing with worrying speed, but a strange sense of fulfillment keeps fear at bay.";
+			say "[line break]Your [bodydesc of Player] body is somewhat enlarged by the effects of your unusual pregnancy. It is progressing with worrying speed, but a strange sense of fulfillment keeps fear at bay.";
 		else:
-			say "Your [bodydesc of Player] body is somewhat rounded with the effects of [if ovipregnant is true]what feels like an egg growing inside you[else]your oncoming pregnancy[end if]. It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
+			say "[line break]Your [bodydesc of Player] body is somewhat rounded with the effects of [if ovipregnant is true]what feels like an egg growing inside you[else]your oncoming pregnancy[end if]. It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
 	else if gestation of child > 0:
-		say "[one of]You feel a soft shifting of something inside your lower belly[or]Warm tingles gently run through your lower belly[at random][if Player is female and ovipregnant is true] as something hard and heavy shifts around inside you[end if].";
+		say "[line break][one of]You feel a soft shifting of something inside your lower belly[or]Warm tingles gently run through your lower belly[at random][if Player is female and ovipregnant is true] as something hard and heavy shifts around inside you[end if].";
 
 to say detailbirth:
 	detailbirth;
 	BehaviorCount "Breeder";
 
 to detailbirth:
-	LineBreak;
 	if Fang is Male and "Fang's Mate" is listed in feats of Player:
 		if Player is female and pregtype < 2:
-			say "     With a sudden pouring of fluids, the time of [if ovipregnant is true]egg laying[else]birth[end if] arrives. You settle down without much choice, breathing quickly as your body spasms in readiness. As if he had sensed the imminent [if ovipregnant is true]egg laying[else]birth[end if], Fang appears beside you, his warm fur comforting in your grasp. You have no idea how he got here so quickly, but now isn't the time to question it.";
+			say "[line break]     With a sudden pouring of fluids, the time of [if ovipregnant is true]egg laying[else]birth[end if] arrives. You settle down without much choice, breathing quickly as your body spasms in readiness. As if he had sensed the imminent [if ovipregnant is true]egg laying[else]birth[end if], Fang appears beside you, his warm fur comforting in your grasp. You have no idea how he got here so quickly, but now isn't the time to question it.";
 		else: [mpreg]
-			say "     There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels. With the completion of your unusual pregnancy fast approaching, you settle down without much choice, breathing quickly as your body spasms in readiness. As if he had sensed the imminent egg laying, Fang appears beside you, his warm fur comforting in your grasp. You have no idea how he got here so quickly, but now isn't the time to question it.";
+			say "[line break]     There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels. With the completion of your unusual pregnancy fast approaching, you settle down without much choice, breathing quickly as your body spasms in readiness. As if he had sensed the imminent egg laying, Fang appears beside you, his warm fur comforting in your grasp. You have no idea how he got here so quickly, but now isn't the time to question it.";
 		follow cunt descr rule;
 		if Player is female and pregtype < 2:
 			if "All-Mother's Blessing" is listed in feats of Player:
@@ -386,9 +362,9 @@ to detailbirth:
 				increase mpregcount by 1;
 	else:
 		if Player is female and pregtype < 2:
-			say "     With a sudden pouring of fluids, [if ovipregnant is true]egglaying[else]birth[end if] is upon you. You settle without much choice, breathing quickly as your body spasms in readiness.";
+			say "[line break]     With a sudden pouring of fluids, [if ovipregnant is true]egglaying[else]birth[end if] is upon you. You settle without much choice, breathing quickly as your body spasms in readiness.";
 		else: [mpreg]
-			say "     There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels. With the completion of your unusual pregnancy fast approaching, you settle without much choice, breathing quickly as your body spasms in readiness.";
+			say "[line break]     There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels. With the completion of your unusual pregnancy fast approaching, you settle without much choice, breathing quickly as your body spasms in readiness.";
 		follow cunt descr rule;
 		if Player is female and pregtype < 2:
 			if Player can UB and ubpreg is not "false":
@@ -445,26 +421,27 @@ To Birth:
 							now IsPureblood is true;
 	[gender]
 	let ChildGender be random child gender;
+	[override for special species with gender bias - expand HERE for new species]
+	if Child has a body of "Platypus" and a random chance of 9 in 10 succeeds:
+		now ChildGender is "male";
+	else if (Child has a body of "Orc Warrior" or Child has a body of "Orc Breeder") and a random chance of 9 in 10 succeeds:
+		now ChildGender is "male";
+	else if Child has a body of "Harpy" and a random chance of 3 in 4 succeeds:
+		now ChildGender is "female";
+	else if Child has a body of "Blue Gryphon Herm" and a random chance of 3 in 4 succeeds:
+		now ChildGender is "herm";
+	[pronouns]
 	if ChildGender is "male":
 		SetMalePronouns for Child;
 	else if ChildGender is "female":
 		SetFemalePronouns for Child;
 	else:
 		SetNeutralPronouns for Child;
-	[override for special species with gender bias - expand HERE for new species]
-	if Child has a body of "Platypus" and a random chance of 9 in 10 succeeds:
-		now ChildGender is "male";
-	else if (Child has a body of "Orc Warrior" or Child has a body of "Orc Breeder") and a random chance of 9 in 10 succeeds:
-		now ChildGender is "male";
-	else if Child has a body of "Harpy" and a random chance of 15 in 20 succeeds:
-		now ChildGender is "female";
-	else if Child has a body of "Blue Gryphon Herm" and a random chance of 15 in 20 succeeds:
-		now ChildGender is "herm";
 	[Checking for visible tails]
 	let ShowTail be false;
 	if there is a name of TailName of Child in the Table of New Infection Parts: [creature already in the new table]
 		choose a row with Name of TailName of Child in the Table of New Infection Parts;
-		if Tail Description entry is not "":
+		if Tail Description entry is not empty:
 			now ShowTail is true;
 	[Checking for visible legs]
 	let ShowLegs be true;
@@ -480,14 +457,9 @@ To Birth:
 	let PlayerRelationship be "indifferent";
 	if IsFeral is true:
 		if a random chance of 1 in 2 succeeds:
-			now PlayerRelationship is "indifferent";
-		else:
 			now PlayerRelationship is "wary";
 	else:
-		if a random chance of 1 in 2 succeeds:
-			now PlayerRelationship is "loving";
-		else:
-			now PlayerRelationship is "affectionate";
+		now PlayerRelationship is "[one of]loving[or]affectionate[purely at random]";
 	[genetic abnormalities]
 	let IsAlbino be false;
 	let HasMelanism be false;
@@ -522,18 +494,18 @@ To Birth:
 					say "Your child has [if ShowTail is true][ArmsSpeciesName of Child in lower case] arms, [LegsSpeciesName of Child in lower case] legs and a [TailSpeciesName of Child in lower case] tail[else][ArmsSpeciesName of Child in lower case] arms and [LegsSpeciesName of Child in lower case] legs[end if]";
 				else:
 					say "Your child has [ArmsSpeciesName of Child in lower case] arms[if ShowTail is true] and a [TailSpeciesName of Child in lower case] tail[end if]";
-		if snakehijack > 0 and "They Have Your Eyes" is listed in feats of Player:
-			say ". It's clear that your influence has forcibly altered the once-snake to take on your appearance, a twisted fate for such a creature, who now assumes itself to be your legitimate offspring.";
-		else if snakehijack > 0:
-			say ". It's apparent that its prior act has caused the serpent to assume itself as one of your legitimate offspring, a twisted fate for such a creature.";
+		if snakehijack > 0:
+			if "They Have Your Eyes" is listed in feats of Player:
+				say ". It's clear that your influence has forcibly altered the once-snake to take on your appearance, a twisted fate for such a creature, who now assumes itself to be your legitimate offspring.";
+			else:
+				say ". It's apparent that its prior act has caused the serpent to assume itself as one of your legitimate offspring, a twisted fate for such a creature.";
 		else:
 			say ".";
 		if IsAlbino is true:
 			say "     Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type][line break]";
 		else if HasMelanism is true:
 			say "     Their pigmentation is almost pure black. [bold type]They've got melanism![roman type][line break]";
-		LineBreak;
-		say "     As you spend a little time with your 'offspring', you get the feeling that they have [a ChildPersonality] personality.";
+		say "[line break]     As you spend a little time with your 'offspring', you get the feeling that they have [a ChildPersonality] personality.";
 	else if "Chase's Breeder" is listed in feats of Player: [special NPC impregnation]
 		now IsFeral is false;
 		if Player is female and pregtype < 2:
@@ -544,7 +516,7 @@ To Birth:
 			say "     Anal birth of the chosen one - no boobs.";
 		if ChaseOffspring is 0:
 			say "twin1";
-		if ChaseOffspring is 1:
+		else if ChaseOffspring is 1:
 			say "twin2";
 		else:
 			say "regulars";
@@ -560,16 +532,15 @@ To Birth:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms, feeling a strong affection for your bizarrely born child. It starts to suckle at your [breast size desc of Player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of Player] body. ";
 		else:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. As it feeds, it grows rapidly against you as strange sensations sweep over your body. ";
-		say "Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. ";
+		say "Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their ";
 		if IsPureblood is true:
-			say "With a slow turn, they show off their pureblood [HeadSpeciesName of Child in lower case] form.";
+			say "pureblood [HeadSpeciesName of Child in lower case] form.";
 		else:
-			say "With a slow turn, they show off their [HeadSpeciesName of Child in lower case] head, their [TorsoSpeciesName of Child in lower case] front and [BackSpeciesName of Child in lower case] back. Your child has [ArmsSpeciesName of Child in lower case] arms, [LegsSpeciesName of Child in lower case] legs[if ShowTail is false] and a [AssSpeciesName of Child in lower case] behind[else], a [AssSpeciesName of Child in lower case] behind and a [TailSpeciesName of Child in lower case] tail[end if].";
-		LineBreak;
+			say "[HeadSpeciesName of Child in lower case] head, their [TorsoSpeciesName of Child in lower case] front and [BackSpeciesName of Child in lower case] back. Your child has [ArmsSpeciesName of Child in lower case] arms, [LegsSpeciesName of Child in lower case] legs[if ShowTail is false] and a [AssSpeciesName of Child in lower case] behind[else], a [AssSpeciesName of Child in lower case] behind and a [TailSpeciesName of Child in lower case] tail[end if].";
 		if Player is in Sitting Area and Chris is in Sitting Area:
-			say "     The young buck of an orc warrior looks at you with a broad grin as he continues to show off a bit more, stroking his large hands over the muscle-packed form of his body, then finally gravitating to his crotch. Experimentally wrapping his fingers around the thick shaft, he gives it a few strokes and grunts in pleasure as it fills out to an impressive length of green-skinned man-meat. Winking at you as he lets go and the huge cock swings down between his legs, he then turns to Chris, who'd been watching the birth of his son from a few steps away up until now. 'That's my boy!' Chris bellows out for the world to hear as he steps up to embrace the young orc warrior. 'Time for some male bonding with dad. See ya later!' your green-skinned offspring says over his shoulder, then the two of them walk off, boasting and chatting like frat brothers with each other.";
+			say "[line break]     The young buck of an orc warrior looks at you with a broad grin as he continues to show off a bit more, stroking his large hands over the muscle-packed form of his body, then finally gravitating to his crotch. Experimentally wrapping his fingers around the thick shaft, he gives it a few strokes and grunts in pleasure as it fills out to an impressive length of green-skinned man-meat. Winking at you as he lets go and the huge cock swings down between his legs, he then turns to Chris, who'd been watching the birth of his son from a few steps away up until now. 'That's my boy!' Chris bellows out for the world to hear as he steps up to embrace the young orc warrior. 'Time for some male bonding with dad. See ya later!' your green-skinned offspring says over his shoulder, then the two of them walk off, boasting and chatting like frat brothers with each other.";
 		else:
-			say "     The young buck of an orc warrior looks at you with a broad grin as he continues to show off a bit more, stroking his large hands over the muscle-packed form of his body, then finally gravitating to his crotch. Experimentally wrapping his fingers around the thick shaft, he gives it a few strokes and grunts in pleasure as it fills out to an impressive length of green-skinned man-meat. Winking at you as he lets go and the huge cock swings down between his legs, he says, [if Player is collected]'I'll go say hello to dad now. See ya later!' [else]'I'll go say hello to dad now. Maybe fuck a guy or two on the way too. See ya later!' [end if]With that said, he wanders off, naked as a jaybird and erect, in an open challenge to anyone who might see him.";
+			say "[line break]     The young buck of an orc warrior looks at you with a broad grin as he continues to show off a bit more, stroking his large hands over the muscle-packed form of his body, then finally gravitating to his crotch. Experimentally wrapping his fingers around the thick shaft, he gives it a few strokes and grunts in pleasure as it fills out to an impressive length of green-skinned man-meat. Winking at you as he lets go and the huge cock swings down between his legs, he says, [if Player is collected]'I'll go say hello to dad now. See ya later!' [else]'I'll go say hello to dad now. Maybe fuck a guy or two on the way too. See ya later!' [end if]With that said, he wanders off, naked as a jaybird and erect, in an open challenge to anyone who might see him.";
 		increase Stamina of Chris by 1;
 		increase ChrisPlayerOffspring by 1;
 	else if "Hive Breeder" is listed in feats of Player: [Special Pregnancy from wasp warrors]
@@ -584,22 +555,21 @@ To Birth:
 		else:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. As it feeds, it grows rapidly from a featureless lump of pale flesh into something more wasp-like against you as strange sensations sweep over your body. ";
 		say "Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their pureblood [HeadSpeciesName of Child in lower case] form.";
-		LineBreak;
 		if Player is inWaspHive:
-			say "     Stretching his wings, your offspring checks on you, entwining his antennae with yours before wandering off to take his place within the hive, [if thirst of Zant > 1]joining his brothers hard at work on repairing and expanding the walls[else] wandering off to find a way to make himself useful within your hive[end if].";
+			say "[line break]     Stretching his wings, your offspring checks on you, entwining his antennae with yours before wandering off to take his place within the hive, [if thirst of Zant > 1]joining his brothers hard at work on repairing and expanding the walls[else] wandering off to find a way to make himself useful within your hive[end if].";
 		else:
-			say "     Stretching his wings, your offspring entwines antennae with you as if thanking you for his birth, then buzzes off in the direction of the hive, his nude body glistening in the [if daytimer is day]sunlight[else]moonlight[end if], still smooth and devoid of any of the fuzz you've grown used to seeing on yourself.";
+			say "[line break]     Stretching his wings, your offspring entwines antennae with you as if thanking you for his birth, then buzzes off in the direction of the hive, his nude body glistening in the [if daytimer is day]sunlight[else]moonlight[end if], still smooth and devoid of any of the fuzz you've grown used to seeing on yourself.";
 		increase thirst of Zant by 1;
 	else if Fang is Male and "Fang's Mate" is listed in feats of Player: [Special Pregnancy from Fang]
 		now IsFeral is false;
 		if hunger of Fang is 1:
 			if "All-Mother's Blessing" is listed in feats of Player: [Appeared in arms]
-				say "You and Fang watch in wonder as [if ovipregnant is true]the egg disintegrates, revealing a pair of wolf pups huddled together, [else]the pair of wolf pups disentangle themselves from each other in your arms, [end if]the two of you sharing a loving glance with each other. [if scalevalue of Player > 1]You hold them against your chest, their mouths eagerly searching for a nipple. [else]They appear to still be growing, and you are forced to place them on the ground as they reach a size similar to your own, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
+				say "     You and Fang watch in wonder as [if ovipregnant is true]the egg disintegrates, revealing a pair of wolf pups huddled together, [else]the pair of wolf pups disentangle themselves from each other in your arms, [end if]the two of you sharing a loving glance with each other. [if scalevalue of Player > 1]You hold them against your chest, their mouths eagerly searching for a nipple. [else]They appear to still be growing, and you are forced to place them on the ground as they reach a size similar to your own, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
 			else if ovipregnant is true: [Hatched from Egg]
-				say "As the shell of the egg slowly cracks, you and Fang watch in anticipation, occasionally sharing a loving glance at each other. Seemingly reaching a critical point, the egg crumbles, revealing the two infants huddled together inside, their fur coated in viscous fluid. [if scalevalue of Player > 1]You lift them from the fragile shell, each fitting easily in your palm and gently hold them against your chest, their mouths eagerly searching for a nipple. [else]You approach your newborns, each only slightly smaller than you, but likely not for long, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. You have no idea how that egg managed to fit inside of you. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
+				say "     As the shell of the egg slowly cracks, you and Fang watch in anticipation, occasionally sharing a loving glance at each other. Seemingly reaching a critical point, the egg crumbles, revealing the two infants huddled together inside, their fur coated in viscous fluid. [if scalevalue of Player > 1]You lift them from the fragile shell, each fitting easily in your palm and gently hold them against your chest, their mouths eagerly searching for a nipple. [else]You approach your newborns, each only slightly smaller than you, but likely not for long, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. You have no idea how that egg managed to fit inside of you. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
 			else if pregtype is 1: [Normal Birth]
-				say "Fang presses himself against your side as you both gaze adoringly at the two bundles of fur that are held in your hands after sharing a brief but intense kiss. The second one born seems to be grasping the other's tail in his mouth, bringing a small smile to your face. [if scalevalue of Player > 1]You hold them against your chest, their mouths eagerly searching for a nipple. [else]They appear to still be growing, and you are forced to place them on the ground as they reach a size similar to your own, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
-			else if pregtype is 2: [Anal Birth]
+				say "     Fang presses himself against your side as you both gaze adoringly at the two bundles of fur that are held in your hands after sharing a brief but intense kiss. The second one born seems to be grasping the other's tail in his mouth, bringing a small smile to your face. [if scalevalue of Player > 1]You hold them against your chest, their mouths eagerly searching for a nipple. [else]They appear to still be growing, and you are forced to place them on the ground as they reach a size similar to your own, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
+			else: [Anal Birth]
 				say "     As the shell of the egg slowly cracks, you and Fang watch in anticipation, occasionally sharing a loving glance at each other. Seemingly reaching a critical point, the egg crumbles, revealing the two infants huddled together inside, their fur coated in viscous fluid. [if scalevalue of Player > 1]You lift them from the fragile shell, each fitting easily in your palm and gently hold them against your chest, their mouths eagerly searching for a nipple. [else]You approach your newborns, each only slightly smaller than you, but likely not for long, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. You have no idea how that egg managed to fit inside of you. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
 			say "     You carefully slump to the ground, exhausted from childbirth, but elated at bringing such adorable puppies into the world. Fang lies down next to you, equally as proud of his children as you are, and you are sure that his bond with you will be even greater than it was before, especially if the heartfelt look that he is giving you is anything to go by. You begin to stroke your children's backs as you look at them for who they are. A quick inspection reveals that one of your puppies is male while the other is female, your son having dark-gray fur and being slightly larger than his pale-gray-furred sister. Their eyes have yet to open, and they don't even seem capable of making any noise, mouthing silently at the air as they try to express something that is not understandable to you. Seeming to know what they want, Fang nudges them against your chest and guides each to an exposed nipple. With gusto, they begin to suckle, gulping down mouthful after mouthful of rich milk. They let out soft sighs as they continue to feed, a steady dribble of milky bubbles spilling from the corners of their mouths.";
 			now hunger of Fang is 2;
@@ -629,17 +599,16 @@ To Birth:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It starts to suckle at your [breast size desc of Player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of Player] body. ";
 		else:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. ";
-		say "A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. ";
+		say "A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. They pop free and stand, a feral look of wanton desire on their [HeadSpeciesName of Child in lower case] ";
 		if IsPureblood is true:
-			say "They pop free and stand, a feral look of wanton desire on their [HeadSpeciesName of Child in lower case] face as they stretch their limbs. Taking your offspring in, you see that it is a pureblood [HeadSpeciesName of Child in lower case]. ";
+			say "face as they stretch their limbs. Taking your offspring in, you see that it is a pureblood [HeadSpeciesName of Child in lower case]. ";
 		else:
-			say "They pop free and stand, a feral look of wanton desire on their [HeadSpeciesName of Child in lower case] head as they stretch [if ShowLegs is true][ArmsSpeciesName of Child in lower case] arms and [LegsSpeciesName of Child in lower case] legs. [else]their [ArmsSpeciesName of Child in lower case] arms. [end if]You see that your child has a [TorsoSpeciesName of Child in lower case] front and [BackSpeciesName of Child in lower case] back, with a [AssSpeciesName of Child in lower case] behind[if ShowTail is true] and a [TailSpeciesName of Child in lower case] tail[end if]. ";
+			say "head as they stretch [if ShowLegs is true][ArmsSpeciesName of Child in lower case] arms and [LegsSpeciesName of Child in lower case] legs. [else]their [ArmsSpeciesName of Child in lower case] arms. [end if]You see that your child has a [TorsoSpeciesName of Child in lower case] front and [BackSpeciesName of Child in lower case] back, with a [AssSpeciesName of Child in lower case] behind[if ShowTail is true] and a [TailSpeciesName of Child in lower case] tail[end if]. ";
 		if IsAlbino is true:
 			say "Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type][line break]";
 		else if HasMelanism is true:
 			say "Their pigmentation is almost pure black. [bold type]They've got melanism![roman type][line break]";
-		LineBreak;
-		say "     In the little time you spend with your offspring, you get the feeling that they have [a ChildPersonality] personality.";
+		say "[line break]     In the little time you spend with your offspring, you get the feeling that they have [a ChildPersonality] personality.";
 	else: ["normal pregnancies"]
 		if Player is female and pregtype < 2:
 			if Nipple Count of Player > 0 and Breast Size of Player > 0:
@@ -650,11 +619,11 @@ To Birth:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms, feeling a strong affection for your bizarrely born child. It starts to suckle at your [breast size desc of Player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of Player] body. ";
 		else:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. As it feeds, it grows rapidly against you as strange sensations sweep over your body. ";
-		say "Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. ";
+		say "Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their ";
 		if IsPureblood is true:
-			say "With a slow turn, they show off their pureblood [HeadSpeciesName of Child in lower case] form. ";
+			say "pureblood [HeadSpeciesName of Child in lower case] form. ";
 		else:
-			say "With a slow turn, they show off their [HeadSpeciesName of Child in lower case] head, their [TorsoSpeciesName of Child in lower case] front and [BackSpeciesName of Child in lower case] back. ";
+			say "[HeadSpeciesName of Child in lower case] head, their [TorsoSpeciesName of Child in lower case] front and [BackSpeciesName of Child in lower case] back. ";
 			if Showlegs is true:
 				say "Your child has [if ShowTail is true][ArmsSpeciesName of Child in lower case] arms, [LegsSpeciesName of Child in lower case] legs and a [TailSpeciesName of Child in lower case] tail[else][ArmsSpeciesName of Child in lower case] arms and [LegsSpeciesName of Child in lower case] legs[end if]. ";
 			else:
@@ -663,19 +632,17 @@ To Birth:
 			say "Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type][line break]";
 		else if HasMelanism is true:
 			say "Their pigmentation is almost pure black. [bold type]They've got melanism![roman type][line break]";
-		LineBreak;
-		say "     As you spend a little time with your offspring, you get the feeling that they have [a ChildPersonality] personality.";
+		say "[line break]     As you spend a little time with your offspring, you get the feeling that they have [a ChildPersonality] personality.";
 		increase hunger of Player by 3;
 		increase thirst of Player by 3;
 	if IsFeral is false:
-		if ("Chase's Breeder" is not listed in feats of Player) and ("Fang's Mate" is not listed in feats of Player) and ("Chris's Breeder Slut" is not listed in feats of Player) and ("Hive Breeder" is not listed in feats of Player): [kids that run off to their fathers]
+		if "Chase's Breeder" is not listed in feats of Player and "Fang's Mate" is not listed in feats of Player and "Chris's Breeder Slut" is not listed in feats of Player and "Hive Breeder" is not listed in feats of Player: [kids that run off to their fathers]
 			say "[line break][bold type]Please name your ([ChildPersonality], [ChildGender]) child[roman type]> [run paragraph on]";
 			get typed command as playerinput;
 			now Name of Child is playerinput;
 			let ChildName be Name of Child;
 			if Name of Child is "", now ChildName is "your child";
-			LineBreak;
-			say "     [bold type]Do you want to keep [ChildName] with you as you roam the streets?[roman type][line break]";
+			say "[line break]     [bold type]Do you want to keep [ChildName] with you as you roam the streets?[roman type][line break]";
 			say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
 			say "     [link](2)[as]2[end link] - Send [ObjectPro of Child] to safety in the bunker.";
 			say "     [link](3)[as]3[end link] - [SubjectProCap of Child] need[if Child is not NProN]s[end if] to make [PosAdj of Child] own way.";
@@ -683,19 +650,17 @@ To Birth:
 			while calcnumber < 1 or calcnumber > 3:
 				say "Choice? (1-3)> [run paragraph on]";
 				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
+				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice. Type [link]1[end link] to take [ObjectPro of Child] along, [link]2[end link] to send [ObjectPro of Child] into the bunker or [link]3[end link] to send [ObjectPro of Child] away.";
 			LineBreak;
 			if calcnumber is 1: [coming along]
-				say "     With a hug and a kiss on [ChildName]'s forehead, you tell [ObjectPro of Child] to stay with you, for all of your safety.";
+				say "     With a hug and a kiss on [ChildName]'s forehead, you tell [ObjectPro of Child] to stay with you, for [if number of filled rows in Table of PlayerChildren > 0]all[else]both[end if] of your safety.";
 				choose a blank row in the Table of PlayerChildren;
 			else if calcnumber is 2: [bunker]
 				say "     With a hug and a kiss on [ChildName]'s forehead, you tell [ObjectPro of Child] to go to the bunker under the Grey Abbey Library. There, [SubjectPro of Child][']ll be safe.";
 				choose a blank row in the Table of PlayerBunkerChildren;
-			else if calcnumber is 3: [send away]
-				say "     After a long hug and with a heavy heart, you send [ChildName] to fend for [ObjectPro of Child][if Child is not NProN]self[else]selves[end if] out on the streets.";
+			else: [send away]
+				say "     After a long hug and with a heavy heart, you send [ChildName] to fend for [ReflexPro of Child] out on the streets.";
 				choose a blank row in the Table of PlayerRoamingChildren;
 				now PlayerRelationship is "indifferent";
 			now Name entry is Name of Child;
@@ -764,7 +729,7 @@ To Birth:
 Chapter 3-1 - Impregnation and Ovi-Impreg Subroutines
 
 To impregnate with (x - text):
-	if child is born or gestation of child > 0 or "Sterile" is listed in feats of Player or larvaegg is 2 or ( Cunt Count of Player is 0 and player is not mpreg_ok ):
+	if child is born or gestation of child > 0 or "Sterile" is listed in feats of Player or larvaegg is 2 or ( Player is not female and player is not mpreg_ok ):
 		stop the action;
 	if Player is not female and "MPreg" is listed in feats of Player and ( level of Velos is 1 and HP of Velos > 2 ):
 		stop the action;
@@ -775,20 +740,22 @@ To impregnate with (x - text):
 		stop the action;
 	if "Cheerbreeder" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
-			say "Do you wish to be impregnated with a Football Wolfman child?";
+			say "[line break]Do you wish to be impregnated with a football wolfman child?";
 			if Player consents:
 				increase score by 0;
 			else:
+				LineBreak;
 				say "You choose not to accept the seed.";
 				stop the action;
 		now gestation of Child is a random number from 24 to 48;
 		SetInfectionsOf Child to "Football Wolfman";
 	else if "Chase's Breeder" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
-			say "Do you wish to be impregnated with a Tiger child?";
+			say "[line break]Do you wish to be impregnated with a tiger child?";
 			if Player consents:
 				increase score by 0;
 			else:
+				LineBreak;
 				say "You choose not to accept the seed.";
 				remove "Chase's Breeder" from feats of Player;
 				stop the action;
@@ -796,10 +763,11 @@ To impregnate with (x - text):
 		SetInfectionsOf Child to "Tiger";
 	else if "Fang's Mate" is listed in feats of Player and Fang is Male:
 		if "Selective Mother" is listed in feats of Player:
-			say "Do you wish to be impregnated with Fang's child?";
+			say "[line break]Do you wish to be impregnated with Fang's child?";
 			if Player consents:
 				increase score by 0;
 			else:
+				LineBreak;
 				say "You choose not to accept the seed.";
 				remove "Fang's Mate" from feats of Player;
 				if hunger of Fang < 3:
@@ -809,10 +777,11 @@ To impregnate with (x - text):
 		SetInfectionsOf Child to "Feral Wolf Male";
 	else if "Chris's Breeder Slut" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
-			say "Do you wish to be impregnated with an Orc Warrior child?";
+			say "[line break]Do you wish to be impregnated with an orc warrior child?";
 			if Player consents:
 				increase score by 0;
 			else:
+				LineBreak;
 				say "You choose not to accept the seed.";
 				remove "Chris's Breeder Slut" from feats of Player;
 				stop the action;
@@ -820,20 +789,22 @@ To impregnate with (x - text):
 		SetInfectionsOf Child to "Orc Warrior";
 	else if "Hive Breeder" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
-			say "Do you wish to be impregnated with a Wasp Warrior child?";
+			say "[line break]Do you wish to be impregnated with a wasp warrior child?";
 			if Player consents:
 				increase score by 0;
 			else:
+				LineBreak;
 				say "You choose not to accept the seed.";
 				stop the action;
 		now gestation of Child is a random number from 24 to 48;
 		SetInfectionsOf Child to "Wasp Warrior";
 	else if "Human Carrier" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
-			say "Do you wish to be impregnated with a human child?";
+			say "[line break]Do you wish to be impregnated with a human child?";
 			if Player consents:
 				increase score by 0;
 			else:
+				LineBreak;
 				say "You choose not to accept the seed.";
 				remove "Human Carrier" from feats of Player;
 				stop the action;
@@ -841,13 +812,11 @@ To impregnate with (x - text):
 		SetInfectionsOf Child to "Human";
 	else: [normal pregnancy]
 		if "Selective Mother" is listed in feats of Player:
-			if Species Name entry is not "":
-				say "Do you wish to be impregnated with [a Species Name entry in lower case] child?";
-			else:
-				say "Do you wish to be impregnated with [a Name entry in lower case] child?";
+			say "[line break]Do you wish to be impregnated with [if Species Name entry is not empty][a Species Name entry in lower case][else][a Name entry in lower case][end if] child?";
 			if Player consents:
 				increase score by 0;
 			else:
+				LineBreak;
 				say "You choose not to accept the seed.";
 				stop the action;
 		now gestation of Child is a random number from 24 to 48;
@@ -908,9 +877,9 @@ to fimpregchance:		[Female-particular Pregnancy Roll]
 			now pregtype is 1; [fpreg]
 			impregnate with Name entry;
 			if Libido of Player > 49:
-				now Libido of Player is (Libido of Player) / 2;
+				now Libido of Player is Libido of Player / 2;
 			else if Libido of Player > 25:
-				decrease Libido of Player by (Libido of Player / 10);
+				decrease Libido of Player by Libido of Player / 10;
 	now callovi is false;
 
 to say mimpregchance:		[MPreg-particular Pregnancy Roll]
@@ -939,9 +908,9 @@ to mimpregchance:		[MPreg-particular Pregnancy Roll]
 			now pregtype is 2; [mpreg]
 			impregnate with Name entry;
 			if Libido of Player > 49:
-				now Libido of Player is (Libido of Player) / 2;
+				now Libido of Player is Libido of Player / 2;
 			else if Libido of Player > 25:
-				decrease Libido of Player by (Libido of Player / 10);
+				decrease Libido of Player by Libido of Player / 10;
 	now callovi is false;
 
 to say selfimpregchance:
@@ -961,16 +930,12 @@ to selfimpregchance:
 		if a random chance of 2 in target succeeds:
 			if debug is at level 5:
 				say "     DEBUG: SelfPreg Successful.";
-			if callovi is true or ovipreglevel is 3:
-				now ovipregnant is true;
-			else:
-				now ovipregnant is false;
 			now ovipregnant is false;
 			selfimpregnate;
 			if Libido of Player > 49:
-				now Libido of Player is (Libido of Player) / 2;
+				now Libido of Player is Libido of Player / 2;
 			else if Libido of Player > 25:
-				decrease Libido of Player by (Libido of Player / 10);
+				decrease Libido of Player by Libido of Player / 10;
 	now callovi is false;
 
 to selfimpregnate:
@@ -979,19 +944,21 @@ to selfimpregnate:
 	if Player is not mpreg_able and player is not fpreg_able:
 		stop the action;
 	if "Selective Mother" is listed in feats of Player:
-		say "Do you wish to be self-impregnated?";
+		say "[line break]Do you wish to be self-impregnated?";
 		if Player consents:
 			increase score by 0;
 		else:
+			LineBreak;
 			say "You choose not to accept the seed.";
 			stop the action;
 	now gestation of Child is a random number from 24 to 48;
 	SetInfectionsOf Child to infections of Player;
 	say "[line break]     There is an odd sensation of warmth inside you and you get a pleasantly perverse feeling.";
-	if Player is not female:
-		if pregtype is 0, now pregtype is 2; [mpreg]
-	else:
-		if pregtype is 0, now pregtype is 1; [fpreg]
+	if pregtype is 0:
+		if Player is not female:
+			now pregtype is 2; [mpreg]
+		else:
+			now pregtype is 1; [fpreg]
 
 to say ovichance:		[to be used when either female or MPreg would work]
 	ovichance;
@@ -1044,12 +1011,9 @@ to randomimpreg:		[Use when either would work]
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
-	while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
+	while (there is a non-infectious entry and non-infectious entry is true) or BannedStatus entry is true:
 		increase MonsterID by 1;
 		choose row MonsterID from Table of Random Critters;
-		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
-			next;
-		break;
 	impregchance;
 
 to say randommimpreg:		[Use when only MPreg would work]
@@ -1061,12 +1025,9 @@ to randommimpreg:		[Use when only MPreg would work]
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
-	while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
+	while (there is a non-infectious entry and non-infectious entry is true) or BannedStatus entry is true:
 		increase MonsterID by 1;
 		choose row MonsterID from Table of Random Critters;
-		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
-			next;
-		break;
 	mimpregchance;
 
 to say randomfimpreg:		[Use when only female pregnancy would work]
@@ -1078,12 +1039,9 @@ to randomfimpreg:		[Use when only female pregnancy would work]
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
-	while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
+	while (there is a non-infectious entry and non-infectious entry is true) or BannedStatus entry is true:
 		increase MonsterID by 1;
 		choose row MonsterID from Table of Random Critters;
-		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
-			next;
-		break;
 	fimpregchance;
 
 to say randomovi:		[random ovi-impregnation - use when either would work]
@@ -1095,12 +1053,9 @@ to randomovi:		[random ovi-impregnation - use when either would work]
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
-	while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
+	while (there is a non-infectious entry and non-infectious entry is true) or BannedStatus entry is true:
 		increase MonsterID by 1;
 		choose row MonsterID from Table of Random Critters;
-		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
-			next;
-		break;
 	ovichance;
 
 to say randommovi:		[random ovi-impregnation - use when only MPreg would work]
@@ -1112,12 +1067,9 @@ to randommovi:		[random ovi-impregnation - use when only MPreg would work]
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
-	while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
+	while (there is a non-infectious entry and non-infectious entry is true) or BannedStatus entry is true:
 		increase MonsterID by 1;
 		choose row MonsterID from Table of Random Critters;
-		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
-			next;
-		break;
 	movichance;
 
 to say randomfovi:		[random ovi-impregnation - use when only female pregnancy would work]
@@ -1129,12 +1081,9 @@ to randomfovi:		[random ovi-impregnation - use when only female pregnancy would 
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
-	while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
+	while (there is a non-infectious entry and non-infectious entry is true) or BannedStatus entry is true:
 		increase MonsterID by 1;
 		choose row MonsterID from Table of Random Critters;
-		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
-			next;
-		break;
 	fovichance;
 
 Pregnancy ends here.

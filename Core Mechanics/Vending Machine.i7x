@@ -15,7 +15,7 @@ Carry out vending:
 
 Instead of attacking the Cola Vending machine:
 	say "You give the soda machine a solid whack.";
-	let the bonus be (( Strength of Player minus 10 ) divided by 2);
+	let the bonus be ( Strength of Player minus 10 ) divided by 2;
 	let the dice be a random number from 1 to 20;
 	say "[line break]You roll 1d20([dice])[if bonus >= 0]+[end if][bonus] = [dice plus bonus]: ";
 	increase dice by bonus;
@@ -26,7 +26,7 @@ Instead of attacking the Cola Vending machine:
 		increase dispensed of cola vending machine by 1;
 	else:
 		say "Nothing happens...";
-	if ( a random chance of 5 in 100 succeeds ) or dispensed of noun > 9:
+	if a random chance of 5 in 100 succeeds or dispensed of noun > 9:
 		say "[line break]The machine gives a final spark of defeat. You are certain there is no more soda to be had.";
 		now Cola Vending Machine is nowhere;
 

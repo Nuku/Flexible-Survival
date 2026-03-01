@@ -10,8 +10,8 @@ TimekeepingVar is a number that varies. [helps determine which turn in a given d
 Lastjournaluse is a number that varies. Lastjournaluse is usually 248.
 skipturnblocker is a number that varies.
 balloversize is a number that varies.
-restoration is a number that varies.[@Tag:NotSaved] [part of the "Physical Booster" feat]
-TurnsCount is a number that varies. TurnsCount is usually 0.[Represents the number of turns that have passed]
+[restoration is a number that varies. [part of the "Physical Booster" feat]]
+TurnsCount is a number that varies. TurnsCount is usually 0. [Represents the number of turns that have passed]
 
 [Default starting date is 2008-04-11]
 DateDay is a number that varies. DateDay is usually 11.
@@ -69,7 +69,7 @@ This is the turnpass rule:
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y from the Table of Random Critters;
 				if Name entry exactly matches the text BodyName of Player, case insensitively:
-					if ( there is no resbypass in row y of Table of Random Critters or resbypass entry is false ) and ( there is no non-infectious in row y of Table of Random Critters or non-infectious entry is false ):
+					if ( there is no resbypass entry or resbypass entry is false ) and ( there is no non-infectious entry or non-infectious entry is false ):
 						now monstermemory is MonsterID;
 						now MonsterID is y;
 						say "[line break]You can feel the nanites inside you working voraciously to convert your flesh to one whole form.";
@@ -81,34 +81,32 @@ This is the turnpass rule:
 	if "Passing Grade Chest" is listed in feats of Player and Breast Size of Player > 4:
 		now Breast Size of Player is 4;
 		say "[line break]You feel the pressure in your chest suddenly abate with a rush of relief.";
-	if "Always Cocky" is listed in feats of Player and Cock Count of Player is 0:
+	if "Always Cocky" is listed in feats of Player and Player is not male:
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 5;
 		now Ball Size of Player is 3;
 		say "[line break]You feel a pressure at your groin that soon bursts forth as a brand new cock. This [Cock of Player] shaft spurts and dribbles with cum from its orgasmic formation.";
-	else if "Always A Pussy" is listed in feats of Player and Cunt Count of Player is 0:
+	else if "Always A Pussy" is listed in feats of Player and Player is not female:
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 5;
 		now Cunt Tightness of Player is 3;
 		say "[line break]You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy. This dripping cunny is sopping with feminine juices from its orgasmic formation.";
 	if balloversize is 0:
-		if ( scalevalue of Player is 1 or scalevalue of Player is 2 ) and Ball Size of Player >= 4:
-			if CockName of Player is not "Tanuki" and player is not internalBalls:
-				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
-				now balloversize is 1 + (dexterity of Player / 10 );
+		if CockName of Player is not "Tanuki" and player is not internalBalls:
+			if scalevalue of Player < 3 and Ball Size of Player >= 4:
+				decrease Dexterity of Player by 1 + ( dexterity of Player / 10 );
+				now balloversize is 1 + ( dexterity of Player / 10 );
 				say "[line break]Your balls, so huge when compared to your [Body Size Adjective of Player] frame, are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
-		else if ( scalevalue of Player is 3 or scalevalue of Player is 4 ) and Ball Size of Player >= 6:
-			if CockName of Player is not "Tanuki" and player is not internalBalls:
-				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
-				now balloversize is 1 + (dexterity of Player / 10 );
+			else if scalevalue of Player < 5 and Ball Size of Player >= 6:
+				decrease Dexterity of Player by 1 + ( dexterity of Player / 10 );
+				now balloversize is 1 + ( dexterity of Player / 10 );
 				say "[line break]Your balls are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
-		else if Ball Size of Player >= 7:
-			if CockName of Player is not "Tanuki" and player is not internalBalls:
-				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
-				now balloversize is 1 + (dexterity of Player / 10 );
+			else if Ball Size of Player >= 7:
+				decrease Dexterity of Player by 1 + ( dexterity of Player / 10 );
+				now balloversize is 1 + ( dexterity of Player / 10 );
 				say "[line break]Your balls, huge even when compared to your huge frame, are so massive and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
 	else:
-		if ( ( scalevalue of Player is 1 or scalevalue of Player is 2 ) and Ball Size of Player < 4 ) or ( ( scalevalue of Player is 3 or scalevalue of Player is 4 ) and Ball Size of Player < 6 ) or ( scalevalue of Player > 4 and Ball Size of Player < 7 ):
+		if ( scalevalue of Player < 3 and Ball Size of Player < 4 ) or ( ( scalevalue of Player is 3 or scalevalue of Player is 4 ) and Ball Size of Player < 6 ) or ( scalevalue of Player > 4 and Ball Size of Player < 7 ):
 			increase dexterity of Player by balloversize;
 			now balloversize is 0;
 			say "[line break]Your balls, no longer quite so huge compared to your [if scalevalue of Player is not 3][Body Size Adjective of Player] [end if]body, no longer hinder you. Your legs definitely feel better for not having to carry such a heavy weight anymore.";
@@ -131,7 +129,7 @@ This is the turnpass rule:
 		if "Cold Fish" is listed in feats of Player, now Libido of Player is 60;
 	if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 	if HP of Player < 0, now HP of Player is 1;
-	if ( a random number from 1 to 20 ) > ( a random number between 1 and ( stamina of Player + 1 ) ):
+	if a random number from 1 to 20 > a random number between 1 and ( stamina of Player + 1 ):
 		increase hunger of Player by 1;
 		if number of filled rows in Table of PlayerChildren > 0 and a random chance of 1 in 2 succeeds, increase hunger of Player by 1;
 		if "Spartan Diet" is listed in feats of Player and hunger of Player > 0 and a random chance of 1 in 2 succeeds:
@@ -140,7 +138,7 @@ This is the turnpass rule:
 		increase hunger of Player by a random number between 1 and (1 + scalevalue of Player);
 		if "Spartan Diet" is listed in feats of Player and hunger of Player > 0 and a random chance of 1 in 2 succeeds:
 			decrease hunger of Player by 1;
-	if a random number from 1 to 25 > ( a random number between 1 and ( stamina of Player + 1 ) ):
+	if a random number from 1 to 25 > a random number between 1 and ( stamina of Player + 1 ):
 		increase thirst of Player by 3;
 		if number of filled rows in Table of PlayerChildren > 0, increase thirst of Player by 1;
 		if "Spartan Diet" is listed in feats of Player and thirst of Player > 0:
@@ -151,7 +149,7 @@ This is the turnpass rule:
 	if the remainder after dividing turns by 3 is 0:
 		if "Perky" is listed in feats of Player:
 			increase morale of Player by 1;
-		now restoration is 0;
+		let restoration be 0;
 		if "Physical Booster" is listed in feats of Player and wrcursestatus is not 5 and restoration is 0:
 			if Strength of Player < 14 and a random chance of 1 in 2 succeeds:
 				increase Strength of Player by 1;
@@ -217,11 +215,11 @@ This is the turnpass rule:
 					end the story saying "You have died of thirst.";
 			if hunger of Player > 50 or thirst of Player > 50:
 				say "Maybe you should [bold type]scavenge[roman type] for food! Go to a quick travel location and find something quick.";
-		let maxmorale be ( Charisma of Player plus Perception of Player );
-		let moralereset be ( maxmorale plus Level of Player );
+		let maxmorale be Charisma of Player plus Perception of Player;
+		let moralereset be maxmorale plus Level of Player;
 		if "Perky" is listed in feats of Player:
-			increase moralereset by ( moralereset divided by 5);
-			increase maxmorale by ( maxmorale divided by 5);
+			increase moralereset by moralereset divided by 5;
+			increase maxmorale by maxmorale divided by 5;
 		if "Proud Parent" is listed in feats of Player:
 			let SP be SarahPups / 5;
 			if SP > 20, now SP is 20;
@@ -242,8 +240,8 @@ This is the turnpass rule:
 			increase corruption by a random number from 0 to 1;
 		if "Strong Psyche" is listed in feats of Player:
 			decrease corruption by a random number from 0 to 2;
-		decrease corruption by a random number from 0 to ( ( Perception of Player minus 10) divided by 2 );
-		decrease corruption by a random number from 0 to ( ( Charisma of Player minus 10) divided by 2 );
+		decrease corruption by a random number from 0 to ( ( Perception of Player minus 10 ) divided by 2 );
+		decrease corruption by a random number from 0 to ( ( Charisma of Player minus 10 ) divided by 2 );
 	if corruption > 0:
 		decrease Humanity of Player by corruption;
 		say "[run paragraph on]";
@@ -256,9 +254,9 @@ This is the turnpass rule:
 		end the story saying "Your mind is lost to the infection.";
 	if Humanity of Player < 1 and scenario is "Researcher", now humanity of Player is 1;
 	decrease turns by 1;
-	if ( turns minus targetturns ) <= 0 and playon is 0 and skipturnblocker is 0:
+	if turns minus targetturns <= 0 and playon is 0 and skipturnblocker is 0:
 		end the story saying "You survived until the rescue came.";
-	else if ( turns minus targetturns ) < 20 and a random chance of 1 in 3 succeeds and skipturnblocker is 0 and playon is 0:
+	else if turns minus targetturns < 20 and a random chance of 1 in 3 succeeds and skipturnblocker is 0 and playon is 0:
 		say "[line break][one of]You see an airplane soar overhead at jet speeds.[or]A peek from a roof shows what looks like some kind of vehicle approaching the city.[or]You have an unending sense of anticipation.[or]It's all coming to a close soon, just hang in there![at random]";
 	say "[run paragraph on]";
 	follow the everyturn rules;
@@ -279,7 +277,9 @@ an everyturn rule:
 Chapter 2 - Time of Day
 
 To say time of day:
-	if TimekeepingVar is:
+	let N be TimekeepingVar;
+	if N < 0, increase N by 8;
+	if N is:
 		-- 7: say "early morning";
 		-- 6: say "morning";
 		-- 5: say "afternoon";
@@ -288,33 +288,11 @@ To say time of day:
 		-- 2: say "night";
 		-- 1: say "post midnight";
 		-- 0: say "pre dawn";
-		-- -1: say "early morning";
-		-- -2: say "morning";
-		-- -3: say "afternoon";
-		-- -4: say "evening";
-		-- -5: say "early night";
-		-- -6: say "night";
-		-- -7: say "post midnight";
-		-- -8: say "pre dawn";
 
 To say short time of day:
-	if TimekeepingVar is:
-		-- 7: say "morning";
-		-- 6: say "morning";
-		-- 5: say "day";
-		-- 4: say "afternoon";
-		-- 3: say "evening";
-		-- 2: say "evening";
-		-- 1: say "evening";
-		-- 0: say "evening";
-		-- -1: say "evening";
-		-- -2: say "evening";
-		-- -3: say "day";
-		-- -4: say "afternoon";
-		-- -5: say "evening";
-		-- -6: say "evening";
-		-- -7: say "evening";
-		-- -8: say "evening";
+	let N be TimekeepingVar;
+	if N < 0, increase N by 8;
+	say "[if N < 3]night[else if N < 5]evening[else if N is 5]afternoon[else]morning[end if]";
 
 Chapter 3 - Day/Night
 
@@ -322,16 +300,16 @@ daytimer is a thing.
 daytimer can be day or night. [daytimer is normally true.	[True/False variable for to indicate if day or night] ]
 
 definition: Daytimer is day:
-	if remainder after dividing turns by 8 > 3 or ( remainder after dividing turns by 8 < 0 and remainder after dividing turns by 8 > -5 ):
-		yes;
-	else:
-		no;
+	if TimekeepingVar > 3, yes;
+	if TimekeepingVar < 0 and TimekeepingVar + 8 > 3, yes;
+	no;
 
 definition: Daytimer is night:
-	if remainder after dividing turns by 8 > 3 or ( remainder after dividing turns by 8 < 0 and remainder after dividing turns by 8 > -5 ):
-		no;
+	if TimekeepingVar < 0:
+		if TimekeepingVar + 8 < 4, yes;
 	else:
-		yes;
+		if TimekeepingVar < 4, yes;
+	no;
 
 to decide if the time is post midnight:
 	if TimekeepingVar is 1 or TimekeepingVar is -7:
@@ -383,16 +361,8 @@ an everyturn rule:
 			say "[bold type]The sun rises over the city.[roman type][line break]";
 			if Offspring is in bunker and number of filled rows in the Table of PlayerBunkerChildren > 0: [chance for presents!]
 				let PresentChance be 1;
-				if number of filled rows in the Table of PlayerBunkerChildren > 10:
-					increase PresentChance by 5;
-				else if number of filled rows in the Table of PlayerBunkerChildren > 7:
-					increase PresentChance by 4;
-				else if number of filled rows in the Table of PlayerBunkerChildren > 5:
-					increase PresentChance by 3;
-				else if number of filled rows in the Table of PlayerBunkerChildren > 3:
-					increase PresentChance by 2;
-				else if number of filled rows in the Table of PlayerBunkerChildren > 1:
-					increase PresentChance by 1;
+				increase PresentChance by number of filled rows in Table of PlayerBunkerChildren / 3;
+				if PresentChance > 5, now PresentChance is 5; [maximum 33% at 12 children]
 				if a random chance of PresentChance in 15 succeeds: [got a present]
 					add "offspring present" to invent of Bunker;
 			if HP of Blake > 50 and HP of Blake < 90 and a random chance of 1 in 2 succeeds and Energy of Blake < 9: [Blake whoring]
@@ -407,60 +377,15 @@ Chapter 5 - Date
 
 [Passage of Days, Months and Years. keeps track of date directly]
 an everyturn rule:
-	if TimekeepingVar is 0 or TimekeepingVar is -8: [early dawn, 0:00-3:00]
+	if time is pre dawn: [early dawn, 0:00-3:00]
 		increase DateDay by 1;
-		if DateMonth is 1: [January]
-			if DateDay is 32:
-				now DateDay is 1;
-				now DateMonth is 2;
-		else if DateMonth is 2: [February]
-			if DateYear is 2008:
-				if DateDay is 30:
-					now DateDay is 1;
-					now DateMonth is 3;
+		let MonthDays be {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; [number of days in each month]
+		if DateMonth is 2 and DateYear is 2008, now entry 2 of MonthDays is 29; [leap year]
+		if DateDay > entry DateMonth of MonthDays:
+			now DateDay is 1;
+			if DateMonth < 12:
+				increase DateMonth by 1;
 			else:
-				if DateDay is 29:
-					now DateDay is 1;
-					now DateMonth is 3;
-		else if DateMonth is 3: [March]
-			if DateDay is 32:
-				now DateDay is 1;
-				now DateMonth is 4;
-		else if DateMonth is 4: [April]
-			if DateDay is 31:
-				now DateDay is 1;
-				now DateMonth is 5;
-		else if DateMonth is 5: [May]
-			if DateDay is 32:
-				now DateDay is 1;
-				now DateMonth is 6;
-		else if DateMonth is 6: [June]
-			if DateDay is 31:
-				now DateDay is 1;
-				now DateMonth is 7;
-		else if DateMonth is 7: [July]
-			if DateDay is 32:
-				now DateDay is 1;
-				now DateMonth is 8;
-		else if DateMonth is 8: [August]
-			if DateDay is 32:
-				now DateDay is 1;
-				now DateMonth is 9;
-		else if DateMonth is 9: [September]
-			if DateDay is 31:
-				now DateDay is 1;
-				now DateMonth is 10;
-		else if DateMonth is 10: [October]
-			if DateDay is 32:
-				now DateDay is 1;
-				now DateMonth is 11;
-		else if DateMonth is 11: [November]
-			if DateDay is 31:
-				now DateDay is 1;
-				now DateMonth is 12;
-		else if DateMonth is 12: [December]
-			if DateDay is 32:
-				now DateDay is 1;
 				now DateMonth is 1;
 				increase DateYear by 1;
 
@@ -622,7 +547,7 @@ Chapter 7 - Extra Play-Time
 
 To Extend game by (x - a number):
 	decrease targetturns by x;
-	say "[bold type](You have earned additional time: [x divided by 8] days, [(remainder after dividing x by 8) times 3] hours.)[roman type][line break]";
+	say "[line break][bold type](You have earned additional time: [x divided by 8] days, [(remainder after dividing x by 8) times 3] hours.)[roman type][line break]";
 
 Chapter 8 - Endless Play
 

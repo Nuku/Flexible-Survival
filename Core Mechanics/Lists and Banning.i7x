@@ -156,7 +156,7 @@ to new ban menu:
 			bancheck entry countnumber of FlagList;
 			increase countnumber by 1;
 		say "[line break][bold type]Tags:[roman type][line break]";
-		while countnumber <= (number of entries in FlagList + number of entries in TagList):
+		while countnumber <= number of entries in FlagList + number of entries in TagList:
 			linkfind "[countnumber]";
 			say "[set link hyperindex][countnumber] - [entry (countnumber - number of entries in FlagList) of TagList][terminate link]: ";
 			bancheck entry (countnumber - number of entries in FlagList) of TagList;

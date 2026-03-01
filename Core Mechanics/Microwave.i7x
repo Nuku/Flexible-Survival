@@ -7,7 +7,6 @@ Section 1 - Basic Functionality
 
 Lab Microwave is an object. It is in Primary Lab. It is fixed in place. Understand "microwave" as Lab Microwave.
 Description of Lab Microwave is "     A small microwave lays, almost hidden, in the corner, perhaps you could [bold type]microwave[roman type] something.[line break]".
-
 the scent of Lab Microwave is "     The microwave smells a little from the dried stains inside. It seems Dr. Matt is too lazy or busy to clean it.".
 
 Purifying is an action applying to one thing.
@@ -41,11 +40,9 @@ name	desc	weight	object
 "distilled cum"	"Some creature's seed boiled down to a concentrated, powdery form? That can't be dangerous!"	1	distilled cum
 "distilled booze"	"The results of purifying some tainted booze you found around the city. It might be a bit strong, but hopefully shouldn't be infectious." 	1	distilled booze
 
-distilled cum is a grab object. understand "cum" as distilled cum. understand "distilled" as distilled cum. distilled cum is cum.
-distilled booze is a grab object. understand "booze" as distilled booze. understand "distilled" as distilled booze.
-
+distilled cum is a grab object. understand "cum" as distilled cum. understand "distilled" as distilled cum.
 Usedesc of distilled cum is "[DistilledCumUse]".
-Usedesc of distilled booze is "[DistilledBoozeUse]".
+Scent of distilled cum is "You might want to be careful about sniffing this, you don't want to snort this stuff.".
 
 to say DistilledCumUse:
 	say "    Or not so eagerly, as you don't think eating this powder will be the most pleasant experience... And you're gonna want something to wash it down with. It takes some effort to force the slightly bitter powder down your throat, but once it hits your belly, your body is filled with a sudden warmth that quickly pools and focuses between your legs...";
@@ -55,15 +52,15 @@ to say DistilledCumUse:
 	else:
 		grow balls by 1;
 
+distilled booze is a grab object. understand "booze" as distilled booze. understand "distilled" as distilled booze.
+Usedesc of distilled booze is "[DistilledBoozeUse]".
+Scent of distilled booze is "Bringing the bottle to your nose to take a cautious sniff, you quickly pull it away as the strong scent of it hits your nose. Whew, definitely some strong stuff. Maybe you should've taken your chances with leaving it infectious instead.".
+
 to say DistilledBoozeUse:
 	say "     The liquid burns your throat as you swallow it down, but a very pleasant warmth spreads through your body as it hits your stomach, making you shudder as you grow more aroused and are hit by a small urge to giggle. Strong stuff, this.";
 	PlayerDrink 5;
 	addAlcPoints 3;
 	raise Player Libido by 10;
 	SanLoss 5;
-
-Scent of distilled cum is "You might want to be careful about sniffing this, you don't want to snort this stuff.".
-
-Scent of distilled booze is "Bringing the bottle to your nose to take a cautious sniff, you quickly pull it away as the strong scent of it hits your nose. Whew, definitely some strong stuff. Maybe you should've taken your chances with leaving it infectious instead.".
 
 Microwave ends here.

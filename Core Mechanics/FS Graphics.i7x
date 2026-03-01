@@ -3147,7 +3147,7 @@ to artistbanmenu: [more compact version]
 		LineBreak;
 		if calcnumber is 0:
 			now abmexit is 1;
-		else if calcnumber >= 1 and calcnumber <= number of entries in artistlist:
+		else:
 			artistbanswitch entry calcnumber of artistList;
 
 to BlockCheck (x - text):

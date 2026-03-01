@@ -86,12 +86,12 @@ carry out resting:
 to Rest:
 	let num1 be MaxHP of Player divided by 4;
 	let num2 be ( ( Stamina of Player * 3 ) / 2 ) + Level of Player;
-	if (cot is owned or cot is present) or (silk hammock is owned or silk hammock is present) or (Player is in Bunker or Player is in Police Lockerroom):
+	if cot is owned or cot is present or silk hammock is owned or silk hammock is present or Player is in Bunker or Player is in Police Lockerroom:
 		if num2 > num1: [best value chosen]
 			increase HP of Player by num2;
 		else:
 			increase HP of Player by num1;
-	else if (sleeping bag is owned or sleeping bag is present) or "Roughing It" is listed in feats of Player or (Player is in Slave Cell 1 or Player is in Slave Cell 2):
+	else if sleeping bag is owned or sleeping bag is present or "Roughing It" is listed in feats of Player or Player is in Slave Cell 1 or Player is in Slave Cell 2:
 		increase HP of Player by ( num1 + num2 ) / 2; [average value chosen]
 	else: [accessible only when events induce resting]
 		if num2 < num1: [lowest value chosen]

@@ -35,7 +35,7 @@ Table of Fancy Status
 left	central	right
 "Location: [Location of Player][if Location of Player is fasttravel] ([statuslink 1]Navpoint[terminate link])[end if]"	"Name: [if Player is not defaultnamed][Name of Player][else][statuslink 2]Pick one?[terminate link][end if] | Pronouns: [statuslink 3][PronounChoice of Player][terminate link] - [SubjectPro of Player]/[PosAdj of Player] | Condition: [SleepMessage], [AlcState][if hypernull is not 1] | [statuslink 4]Inventory[terminate link] | [statuslink 5]Feats[terminate link] | [statuslink 6]Allies[terminate link] | [statuslink 7]Sex Stats[terminate link][end if]"	"HP: [HP of Player]/[MaxHP of Player]"
 "Date: [DateYear]-[DateMonth]-[DateDay], Time: [time of day]"	"STR: [strength of Player] | DEX: [dexterity of Player] | STA: [stamina of Player] | CHA: [Charisma of Player] | INT: [intelligence of Player] | PER: [perception of Player]"	"XP: [XP of Player]/[level up needed]"
-"Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"Hunger: [hunger of Player]/100 | Thirst: [thirst of Player]/100 | Libido: [Libido of Player]/100 | Humanity: [humanity of Player]/100"	"LVL: [level of Player]"
+"Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [( remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"Hunger: [hunger of Player]/100 | Thirst: [thirst of Player]/100 | Libido: [Libido of Player]/100 | Humanity: [humanity of Player]/100"	"LVL: [level of Player]"
 "Freecred: [freecred]"	"[statuslink 8]Help[terminate link] | Game Version (Serial): [serial number][if NewGraphicsInteger is not 0] | Art by: [ngraphics_currentartist] ([statuslink 9]art credits[terminate link])[end if]"	"Score: [score]/[maximum score]"
 
 [Optional Version for narrower screens]
@@ -43,14 +43,14 @@ Table of Narrow Status
 left	right
 "Location: [Location of Player][if Location of Player is fasttravel] ([statuslink 1]Navpoint[terminate link])[end if]"	"HP: [HP of Player]/[MaxHP of Player]"
 "Date: [DateYear]-[DateMonth]-[DateDay], Time: [time of day]"	"XP: [XP of Player]/[level up needed]"
-"Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"LVL: [level of Player]"
+"Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [( remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"LVL: [level of Player]"
 "Freecred: [freecred]"	"Score: [score]/[maximum score]"
 
 When play begins:
 	now right alignment depth is 18; [default of 14 is too small to keep maximum score from getting cut off once score exceeds 3 chars]
 
 To say level up needed:
-	say "[if Player is fastlearning][((level of Player plus 1) times 8)][else][(level of Player plus 1) times 10][end if]";
+	say "[if Player is fastlearning][(level of Player plus 1) times 8][else][(level of Player plus 1) times 10][end if]";
 
 statusindex is a list of numbers that varies.[@Tag:NotSaved] [stores the hyperlink list index for every link in the status bar]
 statuslinks is always {"nav", "rename", "set pronouns", "i", "FeatList", "Allies", "SexStats", "HelpBookLookup", "art credits"}.
@@ -83,14 +83,14 @@ to say promptsay:
 				now NPCObject of y is in location of Player;
 	[invisibly attaching the carried objects to keep the rickety FS inventory system going]
 	repeat through Table of Game Objects:
-		if object entry is owned or (Player is in Bunker and object entry is stored):
+		if object entry is owned or (Player is in Bunker and object entry is stored): [owned/stored items need to be accessible to player commands]
 			if object entry is nowhere, now object entry is part of Player;
-		else if object entry is part of Player:
+		else if object entry is part of Player: [all other items get consigned to the void]
 			now object entry is nowhere;
 	if number of entries in invent of location of Player > 0:
 		say "Visible Objects: ";
 		repeat with q running through invent of location of Player:
-			if q is a name listed in Table of Game Objects:
+			if q is a name listed in Table of Game Objects: [make it accessible to player commands]
 				now object entry is part of Player;
 			linkfind "get [q]";
 			say "[set link hyperindex][q][terminate link] ";
@@ -127,12 +127,13 @@ to say promptsay:
 	repeat with vdir running through valid directions:
 		add printed name of vdir to vdirections;
 	say "[compasslink vdirections]";
-	if location of Player is fasttravel and earea of location of Player is "void":
-		say " [bracket][promptlink 14]nav[terminate link][close bracket]";
-	else if location of Player is fasttravel:
-		say " [bracket][promptlink 14]nav[terminate link],";
-		say " [promptlink 15]scavenge[terminate link],";
-		say " [promptlink 16]explore[terminate link][close bracket]";
+	if location of Player is fasttravel:
+		if earea of location of Player is "void":
+			say " [bracket][promptlink 14]nav[terminate link][close bracket]";
+		else:
+			say " [bracket][promptlink 14]nav[terminate link],";
+			say " [promptlink 15]scavenge[terminate link],";
+			say " [promptlink 16]explore[terminate link][close bracket]";
 	else if earea of location of Player is not "void":
 		say " [bracket][promptlink 16]explore[terminate link][close bracket]";
 	say ", Visible Things: ";
@@ -314,17 +315,16 @@ To showstats (x - Person):
 	sort Traits of Player;
 	say "Strength: [strength of x], Dexterity: [dexterity of x], Stamina: [stamina of x], Charisma: [Charisma of x], Intelligence: [intelligence of x], Perception: [perception of x][line break]";
 	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [HP of x]/[MaxHP of x], Libido: [Libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100[line break]";
-	let z be ( level of x plus one) times 10;
+	let z be ( level of x plus one ) times 10;
 	if "Fast Learner" is listed in feats of x:
-		now z is ( level of x plus one) times 8;
+		now z is ( level of x plus one ) times 8;
 	say "Level: [level of x], XP: [XP of x]/[z]";
 	if the number of entries in feats of the x > 0:
 		say ", [link]Feats[as]FeatsList[end link]";
 	say ", [link]Orientation[as]adjust player orientation[end link]";
-	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0: [more than zero children of both types combined]
+	if number of filled rows in Table of PlayerChildren + number of entries in childrenfaces > 0: [more than zero children of both types combined]
 		say ", [link]Offspring[as]ListOffspring[end link]";
-	say ", [link]Sex Stats[as]SexStats[end link]";
-	LineBreak;
+	say ", [link]Sex Stats[as]SexStats[end link][line break]";
 	if debugactive is 1:
 		say "DEBUG -> Traits: [Traits of Player][line break]";
 	LineBreak;
@@ -343,16 +343,12 @@ instead of examining a person (called x):
 This is the self examine rule:
 	now looknow is 1;
 	showstats player;
-	if name of Player is not "Player":
-		say "Your name is [name of Player] and you ";
-	else:
-		say "You ";
 	if ScaleValue of Player is:
-		-- 1: say "are quite small, about the size of a housecat.";
-		-- 2: say "are fairly small, about half as tall as a regular human.";
-		-- 3: say "are about as big as a regular human.";
-		-- 4: say "are superhumanly tall.";
-		-- 5: say "are enormous in size, a lot larger than any regular human ever could be.";
+		-- 1: say "[if Player is defaultnamed]You[else]Your name is [name of Player] and you[end if] are quite small, about the size of a housecat.";
+		-- 2: say "[if Player is defaultnamed]You[else]Your name is [name of Player] and you[end if] are fairly small, about half as tall as a regular human.";
+		-- 3: say "[if Player is defaultnamed]You[else]Your name is [name of Player] and you[end if] are about as big as a regular human.";
+		-- 4: say "[if Player is defaultnamed]You[else]Your name is [name of Player] and you[end if] are superhumanly tall.";
+		-- 5: say "[if Player is defaultnamed]You[else]Your name is [name of Player] and you[end if] are enormous in size, a lot larger than any regular human ever could be.";
 	[ Infection Descriptions Below   ]
 	if Player is FullyNewTypeInfected and NewTypeInfectionActive is true: [new infection on player and activated]
 		say "Pulling out a small mirror, you check yourself over from head to toe, attempting to make sense of your current form. Your head and face resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance. [if Player is HasBeard]You have a [Hair Color of Player] [Beard Style of Player]. [end if][if Player is HasHeadHair]On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style. [end if]Inspecting your [Mouth Length Adjective of Player] mouth with both the mirror and your digits, you attempt to look past your [Tongue Length of Player] inch long, [Tongue Color of Player], [Tongue Adjective of Player] tongue and into your [Mouth Length Adjective of Player] throat. [if Player is HasHeadAdornments]Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress. [end if][line break]";
@@ -399,20 +395,16 @@ This is the self examine rule:
 			say "[if Body Hair Length of Player > 1], covered in [Legs Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Legs Color of Player] skin[end if]";
 		say ".";
 	else: [old infection]
-		if tail of Player is empty:
-			say "";
-		else:
+		if tail of Player is not empty:
 			say "[tail of Player] ";
 	[Pregnancy Descriptions below]
 	if child is not born and gestation of child > 0:
 		if gestation of child < 10:
-			now looknow is 0;
-			say "Your [Torso Adjective of Player] swollen belly looks ready to spill forth life at any moment. ";
-			now looknow is 1;
+			say "Your [Bodydesc of Player] swollen belly looks ready to spill forth life at any moment. ";
 		else if gestation of child < 20:
 			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child. ";
 		else if gestation of child < 30:
-			say "You feel a soft subtle glow somewhere in your belly. ";
+			say "You feel a soft, subtle glow somewhere in your belly. ";
 	else if heat enabled is true:
 		if inheat is true:
 			say "You also feel [if heatlevel is 3]an intense[else]a[end if] need to be on the receiving end of a good, hard fuck because of your presently heated state. ";
@@ -430,44 +422,41 @@ This is the self examine rule:
 		say "Your neck bears the tooth-marks from when Fang became your alpha, marking you as a member of his pack and family. ";
 	[ ^^ Infection Descriptions Done ]
 	let cocktext be "";
+	follow the cock descr rule;
 	if Cock Description of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated] [new parts]
-		follow the cock descr rule;
 		if Player is male:
 			if Cock Count of Player > 1:
-				now cocktext is "have [Cock Count of Player] [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [one of]cocks[or]penises[or]shafts[or]manhoods[at random] that [cock Description of Player]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [if ball count of Player is 1]a single[else if ball count of Player is 2][one of]a pair of[or]a set of[at random][else if ball count of Player is 4]a grouping of four[end if] [Ball Size Adjective of Player] [if Player is internalBalls and ball count of Player > 1]internal balls. [else if Player is internalBalls]internal ball. [else][Ball Description of Player]. [end if]";
+				now cocktext is "have [Cock Count of Player] [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [one of]cocks[or]penises[or]shafts[or]manhoods[at random] that [cock Description of Player]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [if ball count of Player is 1]a single[else if ball count of Player is 2][one of]a pair of[or]a set of[at random][else if ball count of Player is 4]a grouping of four[end if] [Ball Size Adjective of Player] [if Player is internalBalls and ball count of Player > 1]internal balls[else if Player is internalBalls]internal ball[else][Ball Description of Player][end if]. ";
 			else:
-				now cocktext is "have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [if Ball Count of Player is 1]a single[else if Ball Count of Player is 2][one of]a pair of[or]a set of[at random][else if Ball Count of Player is 4]a grouping of four[end if] [Ball Size Adjective of Player] [if Player is internalBalls and ball count of Player > 1]internal balls. [else if Player is internalBalls]internal ball. [else][Ball Description of Player]. [end if]";
+				now cocktext is "have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [if Ball Count of Player is 1]a single[else if Ball Count of Player is 2][one of]a pair of[or]a set of[at random][else if Ball Count of Player is 4]a grouping of four[end if] [Ball Size Adjective of Player] [if Player is internalBalls and ball count of Player > 1]internal balls[else if Player is internalBalls]internal ball[else][Ball Description of Player][end if]. ";
 	else: [old style]
-		follow the cock descr rule;
 		if Player is male:
 			if Cock Count of Player > 1:
 				now cocktext is "have [Cock Count of Player] [Cock Size Desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] balls. ";
 			else:
 				now cocktext is "have a [Cock Size Desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] balls. ";
 	let cunttext be "";
+	follow the cunt descr rule;
 	if Cunt Description of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
-		follow the cunt descr rule;
 		if Player is female:
 			if Cunt Count of Player > 1:
 				now cunttext is "have [Cunt Count of Player] [Cunt Tightness Adjective of Player] [one of]cunts[or]pussies[or]vaginas[at random] that are [Cunt Description of Player]. Further probing shows them to be [Cunt Depth of Player] inches deep and [Cunt Tightness Adjective of Player]. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. You have a [Clit Size Adjective of Player] clitoris that is extremely sensitive. ";
 			else:
 				now cunttext is "have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]. Further probing shows it to be [Cunt Depth of Player] inches deep and [Cunt Tightness Adjective of Player]. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. You have a [Clit Size Adjective of Player] clitoris that is extremely sensitive. ";
 	else: [old style]
-		let cunttext be "";
-		follow the cunt descr rule;
 		if Player is female:
 			if Cunt Count of Player > 1:
 				now cunttext is "have [Cunt Count of Player] [Cunt Size Desc of Player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [Cunt Depth of Player] inches deep and able to stretch to about [Cunt Tightness of Player] inches in diameter. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 			else:
 				now cunttext is "have a [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that looks [Cunt Size Desc of Player], and further probing shows it to be [Cunt Depth of Player] inches deep and able to stretch to [Cunt Tightness of Player] inches in diameter. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 	[displaying the texts]
-	if cocktext is not "":
-		if cunttext is "":
+	if cocktext is not empty:
+		if cunttext is empty:
 			say "A private peek shows that you [cocktext]";
 		else:
 			say "A private peek shows that you [cocktext]";
 			say "Also, you [cunttext]";
-	else if cunttext is not "":
+	else if cunttext is not empty:
 		say "You [cunttext]";
 [ ^^ Genital Descriptions Done ]
 	[ Equipment Descriptions Below ]
@@ -497,7 +486,7 @@ This is the self examine rule:
 					now CrotchVisible is false; [no pants, so undies might be visible]
 				else if equipslot is "feet":
 					now Barefoot is false;
-				if descmod of x is not "":
+				if descmod of x is not empty:
 					say "[descmod of x] ";
 				break;
 	if Barefoot is true:
@@ -507,19 +496,19 @@ This is the self examine rule:
 		now newline is true;
 		say "[line break]You are carrying [a printed name of weapon object of Player] just in case of trouble. ";
 		if weapon object of Player is unwieldy:
-			say "Due to its comparatively [if scalevalue of Player > objsize of weapon object of Player]small[else]big[end if] size, it is [if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) > 3]very unwieldy[else if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) is 3]rather unwieldy[else]somewhat unwieldy[end if] for you to use at the moment. ";
+			say "Due to its comparatively [if scalevalue of Player > objsize of weapon object of Player]small[else]big[end if] size, it is [if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) > 3]very[else if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) is 3]rather[else]somewhat[end if] unwieldy for you to use at the moment. ";
 	let places be {"shield", "back", "end"};
 	repeat with place running through places:
 		repeat with x running through equipped owned equipment:
 			if placement of x is place and slot of x is place:
-				if descmod of x is not "":
+				if descmod of x is not empty:
 					if newline is false:
 						LineBreak;
 						now newline is true;
 					say "[descmod of x] ";
 				break;
 			else if placement of x is place and place is "end":
-				if descmod of x is not "":
+				if descmod of x is not empty:
 					say "[descmod of x] ";
 	[ ^^ Eqipment Descriptions Done ]
 	LineBreak;
@@ -538,24 +527,24 @@ understand "List Offspring" as ListFollowingChildren.
 understand "ListOffspring" as ListFollowingChildren.
 
 check ListFollowingChildren:
-	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 0: [no children following]
+	if number of filled rows in Table of PlayerChildren + number of entries in childrenfaces is 0: [no children following]
 		say "You do not have any offspring trailing after you." instead;
 
 carry out ListFollowingChildren:
-	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
+	if number of filled rows in Table of PlayerChildren + number of entries in childrenfaces > 1: [more than one child of both types combined]
 		say "Trailing behind come your children:[line break][line break]";
 	else: [exactly one child]
 		say "Trailing behind comes your child:[line break][line break]";
 	if the number of entries in childrenfaces > 0: [player has old style children]
 		if the number of entries in childrenfaces is 1:
-			if ( entry 1 of childrenskins is not entry 1 of childrenbodies ) or ( entry 1 of childrenskins is not entry 1 of childrenfaces ):
+			if entry 1 of childrenskins is not entry 1 of childrenbodies or entry 1 of childrenskins is not entry 1 of childrenfaces:
 				say "Your child has a [entry 1 of childrenfaces] face, and a [entry 1 of childrenbodies] body covered in [entry 1 of childrenskins] skin.";
 			else:
 				say "Your child is a pureblood [entry 1 of childrenfaces].";
 			say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 		else:
 			repeat with x running from 1 to number of entries in childrenfaces:
-				if ( entry x of childrenskins is not entry x of childrenbodies ) or ( entry x of childrenskins is not entry x of childrenfaces ):
+				if entry x of childrenskins is not entry x of childrenbodies or entry x of childrenskins is not entry x of childrenfaces:
 					say "One has a [entry x of childrenfaces] face, and a [entry x of childrenbodies] body covered in [entry x of childrenskins] skin.";
 				else:
 					say "One is a pureblood [entry x of childrenfaces].";
@@ -563,7 +552,7 @@ carry out ListFollowingChildren:
 	[new style children]
 	if number of filled rows in Table of PlayerChildren > 0: [player has new style children]
 		repeat through Table of PlayerChildren:
-			let Childage be ((Birthturn entry - turns ) divided by 8);
+			let Childage be (Birthturn entry - turns) divided by 8;
 			if Gender entry is "male":
 				SetMalePronouns for Offspring;
 			else if Gender entry is "female":
@@ -571,29 +560,19 @@ carry out ListFollowingChildren:
 			else:
 				SetNeutralPronouns for Offspring;
 			if Pureblood entry is false:
-				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
-				if Name entry is "":
-					say "child";
-				else:
-					say "child '[Name entry]'";
-				say " has [a Head entry in lower case] head, [Torso entry in lower case] front and [Back entry in lower case] back. ";
+				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] child[if Name entry is not empty] '[Name entry]'[end if] has [a Head entry in lower case] head, [Torso entry in lower case] front and [Back entry in lower case] back. ";
 				if ShowLegs entry is true:
 					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry in lower case] arms, [Legs entry in lower case] legs[if ShowTail entry is false] and [a Ass entry in lower case] behind[else], [a Ass entry in lower case] behind and [a Tail entry in lower case] tail[end if]. ";
 				else:
 					say "[SubjectProCap of Offspring] [if Offspring is NProN]have[else]has[end if] [Arms entry in lower case] arms[if ShowTail entry is false] and [a Ass entry in lower case] behind[else], [a Ass entry in lower case] behind and [a Tail entry in lower case] tail[end if]. ";
 			else:
-				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] ";
-				if Name entry is "":
-					say "child";
-				else:
-					say "child '[Name entry]'";
-				say " is a pureblood [Head entry in lower case]. ";
+				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old [Gender entry] child[if Name entry is not empty] '[Name entry]'[end if] is a pureblood [Head entry in lower case]. ";
 			if Albino entry is true:
 				say "[bold type][PosAdjCap of Offspring] pigmentation is muted and almost white, except for the eyes that appear red.[roman type][line break]";
 			else if Melanism entry is true:
 				say "[bold type][PosAdjCap of Offspring] pigmentation is almost pure black.[roman type][line break]";
 			say "You have [a PlayerRelationship entry] relationship with [ObjectPro of Offspring], and [PosAdj of Offspring] personality is rather [Personality entry].";
-	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
+	if number of filled rows in Table of PlayerChildren + number of entries in childrenfaces > 1: [more than one child of both types combined]
 		say "[line break]They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	else: [exactly one child]
 		say "[SubjectProCap of Offspring] look[if Offspring is not NProN]s[end if] as alert and human as you are, taking after you eagerly. Despite [PosAdj of Offspring] age, [SubjectPro of Offspring] [if Offspring is NProN]have[else]has[end if] already grown to young adult stature, both physically and in apparent emotional and mental development.";
@@ -601,6 +580,11 @@ carry out ListFollowingChildren:
 Chapter 3 - Linkaction
 
 Afterexamine rules is a rulebook.
+
+linkcheck is a person that varies.[@Tag:NotSaved]
+
+A person has a text called linkaction.
+The linkaction of a person is usually "Possible Actions: [link]talk[as]talk [linkcheck][end link], [link]smell[as]smell [linkcheck][end link][PetdismissCheck linkcheck], [link]fuck[as]fuck [linkcheck][end link][line break]".
 
 linkactioning is an action applying to one thing.
 understand "linkaction [person]" as linkactioning.
@@ -613,19 +597,12 @@ to linkaction (x - Person):
 	now linkcheck is x;
 	say "[linkaction of x]";
 
-linkcheck is a person that varies.[@Tag:NotSaved]
-The linkaction of a person is usually "Possible Actions: [if number of entries of conversation of linkcheck > 0][link]talk[as]talk [linkcheck][end link], [end if][link]smell[as]smell [linkcheck][end link][PetdismissCheck linkcheck], [link]fuck[as]fuck [linkcheck][end link][line break]".
-
 to say PetdismissCheck (linkcheck - a person):
 	if number of entries in companionList of Player is greater than 0:
-		let linkname be "";
-		now linkname is printed name of linkcheck;
+		let linkname be printed name of linkcheck;
 		repeat with companion running through companionList of Player:
 			if printed name of companion exactly matches the text linkname, case insensitively:
 				say ", [link]dismiss[as]dismiss [linkcheck][end link]";
-
-instead of linkactioning Doctor Matt when HP of Doctor Matt > 0:
-	say "Possible Actions: [link]talk[as]talk Doctor Matt[end link], [link]smell[as]smell Doctor Matt[end link], [link]fuck[as]fuck Doctor Matt[end link], [link]volunteer[end link][line break]";
 
 Chapter 4 - Player Input
 

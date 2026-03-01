@@ -19,12 +19,11 @@ to say stlockerdesc:
 	say "[link](4) Retrieve everything[as]4[end link][line break]";
 	say "[link](5) Command list[as]5[end link][line break]";
 	say "[link](0) Exit[as]0[end link][line break]";
-	while 1 is 1:
+	now calcnumber is -1;
+	while calcnumber < 0 or calcnumber > 5:
 		say "Choice? (0-5)> [run paragraph on]";
 		get a number;
-		if calcnumber >= 0 and calcnumber <= 5:
-			break;
-		else:
+		if calcnumber < 0 or calcnumber > 5:
 			say "Invalid choice. Pick from 0 to 5.";
 	if calcnumber is 1:
 		displayplinv;
@@ -54,8 +53,7 @@ to displayplinv:
 		say "There is nothing currently in your inventory.";
 	else:
 		say "Your backpack contains:[line break]";
-		say "Type [bold type]stash <name>[roman type] to [bold type][bracket]S[close bracket][roman type]tash an item or [bold type]stashall <name>[roman type] to Stash [bold type][bracket]A[close bracket][roman type]ll of an item.";
-		LineBreak;
+		say "Type [bold type]stash <name>[roman type] to [bold type][bracket]S[close bracket][roman type]tash an item or [bold type]stashall <name>[roman type] to Stash [bold type][bracket]A[close bracket][roman type]ll of an item.[paragraph break]";
 		let L be a list of grab objects;
 		repeat with x running through all owned grab objects:
 			add x to L, if absent;
@@ -71,10 +69,7 @@ to displayplinv:
 					say "[set link hyperindex][bracket][entry 1 of linktext][close bracket][terminate link] ";
 			say "[x] x[carried of x]";
 			if y < number of entries in L:
-				if the remainder after dividing y by invcolumns is 0:
-					LineBreak;
-				else:
-					say "  --  ";
+				say "[if the remainder after dividing y by invcolumns is 0][line break][else]  --  ";
 		LineBreak;
 
 to displaystorage:
@@ -82,8 +77,7 @@ to displaystorage:
 		say "There is nothing currently in the storage locker.";
 	else:
 		say "The storage locker contains:[line break]";
-		say "Type [bold type]retrieve <name>[roman type] to [bold type][bracket]R[close bracket][roman type]etrieve an item or [bold type]retrieveall <name>[roman type] to Retrieve [bold type][bracket]A[close bracket][roman type]ll of an item.";
-		LineBreak;
+		say "Type [bold type]retrieve <name>[roman type] to [bold type][bracket]R[close bracket][roman type]etrieve an item or [bold type]retrieveall <name>[roman type] to Retrieve [bold type][bracket]A[close bracket][roman type]ll of an item.[paragraph break]";
 		let L be a list of grab objects;
 		repeat with x running through all stored grab objects:
 			add x to L, if absent;
@@ -99,10 +93,7 @@ to displaystorage:
 					say "[set link hyperindex][bracket][entry 1 of linktext][close bracket][terminate link] ";
 			say "[x] x[stashed of x]";
 			if y < number of entries in L:
-				if the remainder after dividing y by invcolumns is 0:
-					LineBreak;
-				else:
-					say "  --  ";
+				say "[if the remainder after dividing y by invcolumns is 0][line break][else]  --  ";
 		LineBreak;
 
 Section 3 - Commands
@@ -180,9 +171,7 @@ Carry out massstashing:
 	let yy be 0;
 	let zz be 0;
 	repeat with x running through all owned grab objects:
-		if x is journal or x is equipped or x is wielded:
-			next;
-		else:
+		if x is not journal and x is not equipped and x is not wielded:
 			increase yy by 1;
 			increase zz by carried of x;
 			increase stashed of x by carried of x;
